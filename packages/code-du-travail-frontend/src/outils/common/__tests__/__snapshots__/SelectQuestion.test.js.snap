@@ -1,23 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SelectQuestion /> should render with default value 1`] = `
+.c3 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c4 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c2 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.6rem;
-  font-weight: 400;
-  all: revert;
-  margin: 0;
-}
-
-.c5 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -37,7 +28,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
   text-align: center;
 }
 
-.c8 {
+.c7 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -47,7 +38,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
   pointer-events: none;
 }
 
-.c7 {
+.c6 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -68,37 +59,48 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
   appearance: none;
 }
 
-.c7::-ms-expand {
+.c6::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c7 *::-ms-backdrop,
-.c7 {
+.c6 *::-ms-backdrop,
+.c6 {
   padding-right: 1.6rem;
 }
 
-.c7:invalid {
+.c6:invalid {
   border-color: #eb5757;
 }
 
-.c7:disabled {
+.c6:disabled {
   background-color: #e4e8ef;
 }
 
 .c1 {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  position: relative;
+}
+
+.c2 {
   font-size: 1.8rem;
-  cursor: pointer;
+  font-weight: 600;
+  margin: 0;
 }
 
-.c3 {
-  font-weight: 600 !important;
-}
-
-.c6 {
+.c5 {
   width: 40rem;
 }
 
@@ -107,19 +109,19 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c4 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c1 {
+  .c2 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c5 {
     width: 100%;
   }
 }
@@ -128,27 +130,29 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
   <div
     class="c0"
   >
-    <label
-      class="c1"
-      for="input-foo"
-    >
-      <p
-        class="c2 c3"
+    <div>
+      <div
+        class="c1"
       >
-        Une question ?
-         
-        <span
-          class="c4"
+        <label
+          class="c2"
+          for="input-foo"
         >
-           (obligatoire)
-        </span>
-      </p>
-    </label>
+          Une question ?
+           
+          <span
+            class="c3"
+          >
+             (obligatoire)
+          </span>
+        </label>
+      </div>
+    </div>
     <div
-      class="c5 c6"
+      class="c4 c5"
     >
       <select
-        class="c7"
+        class="c6"
         id="input-foo"
         name="foo"
       >
@@ -171,7 +175,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="c8"
+        class="c7"
       >
         <svg
           aria-hidden="true"
@@ -205,23 +209,14 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 `;
 
 exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
+.c3 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c4 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c2 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.6rem;
-  font-weight: 400;
-  all: revert;
-  margin: 0;
-}
-
-.c5 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -241,7 +236,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
   text-align: center;
 }
 
-.c8 {
+.c7 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -251,7 +246,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
   pointer-events: none;
 }
 
-.c7 {
+.c6 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -272,37 +267,48 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
   appearance: none;
 }
 
-.c7::-ms-expand {
+.c6::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c7 *::-ms-backdrop,
-.c7 {
+.c6 *::-ms-backdrop,
+.c6 {
   padding-right: 1.6rem;
 }
 
-.c7:invalid {
+.c6:invalid {
   border-color: #eb5757;
 }
 
-.c7:disabled {
+.c6:disabled {
   background-color: #e4e8ef;
 }
 
 .c1 {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  position: relative;
+}
+
+.c2 {
   font-size: 1.8rem;
-  cursor: pointer;
+  font-weight: 600;
+  margin: 0;
 }
 
-.c3 {
-  font-weight: 600 !important;
-}
-
-.c6 {
+.c5 {
   width: 40rem;
 }
 
@@ -311,19 +317,19 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c4 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c1 {
+  .c2 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c5 {
     width: 100%;
   }
 }
@@ -332,27 +338,29 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
   <div
     class="c0"
   >
-    <label
-      class="c1"
-      for="input-foo"
-    >
-      <p
-        class="c2 c3"
+    <div>
+      <div
+        class="c1"
       >
-        Une question ?
-         
-        <span
-          class="c4"
+        <label
+          class="c2"
+          for="input-foo"
         >
-           (obligatoire)
-        </span>
-      </p>
-    </label>
+          Une question ?
+           
+          <span
+            class="c3"
+          >
+             (obligatoire)
+          </span>
+        </label>
+      </div>
+    </div>
     <div
-      class="c5 c6"
+      class="c4 c5"
     >
       <select
-        class="c7"
+        class="c6"
         id="input-foo"
         name="foo"
       >
@@ -375,7 +383,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="c8"
+        class="c7"
       >
         <svg
           aria-hidden="true"

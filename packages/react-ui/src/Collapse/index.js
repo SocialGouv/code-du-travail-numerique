@@ -26,7 +26,7 @@ export const Collapse = ({ title, children, onClickHandler, textProps }) => {
         role="button"
       >
         <AccordionArrow aria-hidden="true" />
-        <StyledText fontSize="hsmall" fontWeight="600" {...textProps}>
+        <StyledText isLikeSpan fontSize="hsmall" {...textProps}>
           {title}
         </StyledText>
       </StyledLink>
@@ -63,9 +63,9 @@ const StyledLink = styled.div`
 `;
 const StyledText = styled(Paragraph)`
   margin-left: ${spacings.small};
-  margin-top: 0;
-  margin-bottom: 0;
+  font-weight: 600 !important;
 `;
+
 Collapse.propTypes = {
   children: PropTypes.node.isRequired,
   onClickHandler: PropTypes.func,

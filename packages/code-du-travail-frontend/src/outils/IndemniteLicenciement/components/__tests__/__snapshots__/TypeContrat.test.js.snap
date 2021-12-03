@@ -1,23 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TypeContrat /> should render 1`] = `
-.c3 {
+.c2 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c1 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.6rem;
-  font-weight: 400;
-  all: revert;
-  margin: 0;
-}
-
-.c7 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,7 +17,7 @@ exports[`<TypeContrat /> should render 1`] = `
   cursor: pointer;
 }
 
-.c5 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -36,7 +27,7 @@ exports[`<TypeContrat /> should render 1`] = `
   flex-direction: row;
 }
 
-.c6 {
+.c5 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -57,7 +48,7 @@ exports[`<TypeContrat /> should render 1`] = `
   appearance: none;
 }
 
-.c6:before {
+.c5:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -72,28 +63,39 @@ exports[`<TypeContrat /> should render 1`] = `
   content: "";
 }
 
-.c6:checked {
+.c5:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c6:checked:before {
+.c5:checked:before {
   display: block;
 }
 
 .c0 {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  position: relative;
+}
+
+.c1 {
   font-size: 1.8rem;
-  cursor: default;
+  font-weight: 600;
+  margin: 0;
 }
 
-.c2 {
-  font-weight: 600 !important;
-}
-
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -113,59 +115,61 @@ exports[`<TypeContrat /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c0 {
+  .c1 {
     font-size: 1.6rem;
   }
 }
 
 <div>
-  <p
-    class="c0"
-  >
-    <p
-      class="c1 c2"
+  <div>
+    <div
+      class="c0"
     >
-      Quel est le type du contrat de travail ?
-       
-      <span
-        class="c3"
+      <p
+        class="c1"
       >
-         (obligatoire)
-      </span>
-    </p>
-  </p>
+        Quel est le type du contrat de travail ?
+         
+        <span
+          class="c2"
+        >
+           (obligatoire)
+        </span>
+      </p>
+    </div>
+  </div>
   <div
-    class="c4"
+    class="c3"
   >
     <div
-      class="c5"
+      class="c4"
     >
       <input
-        class="c6"
+        class="c5"
         id="contrat-cdd"
         name="contrat"
         type="radio"
         value="cdd"
       />
       <label
-        class="c7"
+        class="c6"
         for="contrat-cdd"
       >
         Contrat à durée determiné (CDD) ou contrat d’intérim
       </label>
     </div>
     <div
-      class="c5"
+      class="c4"
     >
       <input
-        class="c6"
+        class="c5"
         id="contrat-cdi"
         name="contrat"
         type="radio"
         value="cdi"
       />
       <label
-        class="c7"
+        class="c6"
         for="contrat-cdi"
       >
         Contrat à durée indeterminé (CDI)

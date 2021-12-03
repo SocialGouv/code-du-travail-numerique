@@ -44,7 +44,9 @@ exports[`<StepResult /> should render with O duration 1`] = `
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
 }
 
 .c8 {
@@ -81,8 +83,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
 
 .c7 {
   margin-left: 1rem;
-  margin-top: 0;
-  margin-bottom: 0;
+  font-weight: 600 !important;
 }
 
 .c11 {
@@ -409,7 +410,9 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
 }
 
 .c8 {
@@ -446,8 +449,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
 
 .c7 {
   margin-left: 1rem;
-  margin-top: 0;
-  margin-bottom: 0;
+  font-weight: 600 !important;
 }
 
 .c11 {
@@ -734,7 +736,9 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
 }
 
 .c8 {
@@ -771,8 +775,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 
 .c7 {
   margin-left: 1rem;
-  margin-top: 0;
-  margin-bottom: 0;
+  font-weight: 600 !important;
 }
 
 .c11 {
@@ -1058,7 +1061,9 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
 }
 
 .c8 {
@@ -1095,8 +1100,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 
 .c7 {
   margin-left: 1rem;
-  margin-top: 0;
-  margin-bottom: 0;
+  font-weight: 600 !important;
 }
 
 .c11 {
@@ -1371,7 +1375,9 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
 }
 
 .c8 {
@@ -1408,8 +1414,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 
 .c7 {
   margin-left: 1rem;
-  margin-top: 0;
-  margin-bottom: 0;
+  font-weight: 600 !important;
 }
 
 .c11 {

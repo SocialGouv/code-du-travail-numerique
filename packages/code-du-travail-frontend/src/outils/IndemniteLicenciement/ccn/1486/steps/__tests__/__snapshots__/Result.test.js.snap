@@ -26,7 +26,9 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
 }
 
 .c13 {
@@ -63,8 +65,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 
 .c12 {
   margin-left: 1rem;
-  margin-top: 0;
-  margin-bottom: 0;
+  font-weight: 600 !important;
 }
 
 .c16 {
@@ -1167,7 +1168,9 @@ exports[`<Result /> renders legal indemnite 1`] = `
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
 }
 
 .c13 {
@@ -1204,8 +1207,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
 
 .c12 {
   margin-left: 1rem;
-  margin-top: 0;
-  margin-bottom: 0;
+  font-weight: 600 !important;
 }
 
 .c0 {

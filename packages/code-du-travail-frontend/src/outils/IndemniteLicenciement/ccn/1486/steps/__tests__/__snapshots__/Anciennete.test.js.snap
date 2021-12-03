@@ -17,20 +17,11 @@ exports[`<Anciennete /> renders AncienneteCE component with initialValues CATEGO
 `;
 
 exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
-.c7 {
+.c6 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-}
-
-.c5 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.6rem;
-  font-weight: 400;
-  all: revert;
-  margin: 0;
 }
 
 .c1 {
@@ -68,7 +59,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   text-align: left;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -77,7 +68,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   cursor: pointer;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -87,7 +78,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   flex-direction: row;
 }
 
-.c10 {
+.c9 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -108,7 +99,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   appearance: none;
 }
 
-.c10:before {
+.c9:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -123,28 +114,39 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   content: "";
 }
 
-.c10:checked {
+.c9:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c10:checked:before {
+.c9:checked:before {
   display: block;
 }
 
 .c4 {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  position: relative;
+}
+
+.c5 {
   font-size: 1.8rem;
-  cursor: default;
+  font-weight: 600;
+  margin: 0;
 }
 
-.c6 {
-  font-weight: 600 !important;
-}
-
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -183,7 +185,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c5 {
     font-size: 1.6rem;
   }
 }
@@ -223,53 +225,55 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
       Dans le cas de la démission, l’employeur peut accepter de prendre en compte la durée du contrat de travail correspondant pour l’appréciation de l’ancienneté.
     </div>
   </div>
-  <p
-    class="c4"
-  >
-    <p
-      class="c5 c6"
+  <div>
+    <div
+      class="c4"
     >
-      Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
-       
-      <span
-        class="c7"
+      <p
+        class="c5"
       >
-         (obligatoire)
-      </span>
-    </p>
-  </p>
+        Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
+         
+        <span
+          class="c6"
+        >
+           (obligatoire)
+        </span>
+      </p>
+    </div>
+  </div>
   <div
-    class="c8"
+    class="c7"
   >
     <div
-      class="c9"
+      class="c8"
     >
       <input
-        class="c10"
+        class="c9"
         id="hasBrancheContrat-oui"
         name="hasBrancheContrat"
         type="radio"
         value="true"
       />
       <label
-        class="c11"
+        class="c10"
         for="hasBrancheContrat-oui"
       >
         Oui
       </label>
     </div>
     <div
-      class="c9"
+      class="c8"
     >
       <input
-        class="c10"
+        class="c9"
         id="hasBrancheContrat-non"
         name="hasBrancheContrat"
         type="radio"
         value="false"
       />
       <label
-        class="c11"
+        class="c10"
         for="hasBrancheContrat-non"
       >
         Non
