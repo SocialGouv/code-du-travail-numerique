@@ -626,7 +626,7 @@ exports[`<Convention /> renders 1`] = `
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: -4rem;
   text-align: left;
 }

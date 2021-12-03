@@ -320,7 +320,7 @@ exports[`<Layout /> should render 1`] = `
 
 .c28 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: auto;
   text-align: center;
 }

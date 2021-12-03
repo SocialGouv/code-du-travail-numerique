@@ -285,14 +285,14 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 
 .c9 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: auto;
   text-align: left;
 }
 
 .c14 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: -2.4rem;
   text-align: left;
 }
@@ -595,7 +595,11 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           <span
             class="c17"
           />
-          Que dit votre convention collective ?
+          <p
+            class="c8"
+          >
+            Que dit votre convention collective ?
+          </p>
         </h2>
       </div>
       <label
@@ -925,14 +929,14 @@ exports[`<Contribution /> should render answer references 1`] = `
 
 .c9 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: auto;
   text-align: left;
 }
 
 .c14 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: -2.4rem;
   text-align: left;
 }
@@ -1235,7 +1239,11 @@ exports[`<Contribution /> should render answer references 1`] = `
           <span
             class="c17"
           />
-          Que dit votre convention collective ?
+          <p
+            class="c8"
+          >
+            Que dit votre convention collective ?
+          </p>
         </h2>
       </div>
       <label
@@ -1565,14 +1573,14 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 
 .c9 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: auto;
   text-align: left;
 }
 
 .c14 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: -2.4rem;
   text-align: left;
 }
@@ -1875,7 +1883,11 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           <span
             class="c17"
           />
-          Que dit votre convention collective ?
+          <p
+            class="c8"
+          >
+            Que dit votre convention collective ?
+          </p>
         </h2>
       </div>
       <label
@@ -2205,14 +2217,14 @@ exports[`<Contribution /> should render with both answers 1`] = `
 
 .c9 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: auto;
   text-align: left;
 }
 
 .c14 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: -2.4rem;
   text-align: left;
 }
@@ -2515,7 +2527,11 @@ exports[`<Contribution /> should render with both answers 1`] = `
           <span
             class="c17"
           />
-          Que dit votre convention collective ?
+          <p
+            class="c8"
+          >
+            Que dit votre convention collective ?
+          </p>
         </h2>
       </div>
       <label
@@ -2832,7 +2848,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 
 .c11 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: -2.4rem;
   text-align: left;
 }
@@ -3082,7 +3098,11 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           <span
             class="c14"
           />
-          Que dit votre convention collective ?
+          <p
+            class="c8"
+          >
+            Que dit votre convention collective ?
+          </p>
         </h2>
       </div>
       <label
@@ -3143,7 +3163,7 @@ exports[`<Contribution /> should render with generic answer 1`] = `
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: auto;
   text-align: left;
 }
@@ -3284,7 +3304,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: auto;
   text-align: left;
 }

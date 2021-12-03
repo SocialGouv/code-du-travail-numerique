@@ -316,7 +316,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
 
 .c10 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: auto;
   text-align: left;
 }

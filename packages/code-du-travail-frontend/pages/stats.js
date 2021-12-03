@@ -36,28 +36,28 @@ const Stats = ({ data }) => {
             <Grid columns={3}>
               <Tile variant="dark">
                 <Heading as="h2">Contenus référencés</Heading>
-                <Num variant="secondary" fontSize="xlarge" fontWeight="600">
+                <Num variant="secondary" fontSize="hlarge" fontWeight="600">
                   {data.nbDocuments}
                 </Num>
               </Tile>
 
               <Tile variant="dark">
                 <Heading as="h2">Visites</Heading>
-                <Num variant="secondary" fontSize="xlarge" fontWeight="600">
+                <Num variant="secondary" fontSize="hlarge" fontWeight="600">
                   {data.nbVisits}
                 </Num>
               </Tile>
 
               <Tile variant="dark">
                 <Heading as="h2">Recherches</Heading>
-                <Num variant="secondary" fontSize="xlarge" fontWeight="600">
+                <Num variant="secondary" fontSize="hlarge" fontWeight="600">
                   {data.nbSearches}
                 </Num>
               </Tile>
 
               <Tile variant="dark">
                 <Heading as="h2">Consultations</Heading>
-                <Num variant="secondary" fontSize="xlarge" fontWeight="600">
+                <Num variant="secondary" fontSize="hlarge" fontWeight="600">
                   {data.nbPageViews}
                 </Num>
               </Tile>

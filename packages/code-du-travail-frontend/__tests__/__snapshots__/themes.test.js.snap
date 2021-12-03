@@ -353,14 +353,14 @@ exports[`<Theme /> should render 1`] = `
 
 .c33 {
   margin-top: 0;
-  margin-bottom: 4rem;
+  margin-bottom: spacings.medium;
   margin-left: auto;
   text-align: center;
 }
 
 .c43 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: auto;
   text-align: center;
 }

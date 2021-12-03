@@ -398,21 +398,21 @@ exports[`<MentionLegales /> should render 1`] = `
 
 .c26 {
   margin-top: 0;
-  margin-bottom: 4rem;
+  margin-bottom: spacings.medium;
   margin-left: auto;
   text-align: center;
 }
 
 .c31 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: -4rem;
   text-align: left;
 }
 
 .c40 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: auto;
   text-align: center;
 }

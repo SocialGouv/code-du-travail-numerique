@@ -373,6 +373,7 @@ exports[`<Stats /> should render 1`] = `
 .c37 {
   color: #7994d4;
   line-height: 1.25;
+  font-size: 3.2rem;
   font-weight: 600;
 }
 
@@ -461,14 +462,14 @@ exports[`<Stats /> should render 1`] = `
 
 .c25 {
   margin-top: 0;
-  margin-bottom: 4rem;
+  margin-bottom: spacings.medium;
   margin-left: auto;
   text-align: center;
 }
 
 .c42 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: auto;
   text-align: center;
 }

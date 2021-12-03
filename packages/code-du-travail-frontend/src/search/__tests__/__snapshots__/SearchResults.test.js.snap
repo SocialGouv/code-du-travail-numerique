@@ -410,7 +410,7 @@ exports[`<SearchResults/> should render results 1`] = `
 
 .c23 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: spacings.medium;
   margin-left: auto;
   text-align: left;
 }

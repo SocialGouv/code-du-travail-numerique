@@ -7,7 +7,7 @@ export const Header = styled.header`
   ${({ isFirst, stripe, pageTitle, shift }) => {
     return css`
       margin-top: ${pageTitle || isFirst ? "0" : spacings.large};
-      margin-bottom: ${pageTitle ? spacings.larger : spacings.medium};
+      margin-bottom: spacings.medium;
       margin-left: ${shift ? `-${shift}}` : "auto"};
       text-align: ${stripe === "top" ? "center" : "left"};
       @media (max-width: ${breakpoints.mobile}) {

@@ -165,12 +165,14 @@ const Contribution = ({ answers, content }) => {
               id="customisation"
             >
               {isConventionalAnswer ? (
-                <>
+                <Paragraph isLikeSpan>
                   Que dit la convention <i>{conventionAnswer.shortName}</i>
                   &nbsp;?
-                </>
+                </Paragraph>
               ) : (
-                <>Que dit votre convention collective&nbsp;?</>
+                <Paragraph isLikeSpan>
+                  Que dit votre convention collective&nbsp;?
+                </Paragraph>
               )}
             </StyledTitle>
             {!isConventionDetected && !isConventionalAnswer ? (
