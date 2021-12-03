@@ -93,9 +93,9 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             <div
               class="c2"
             >
-              <b>
+              <strong>
                 foo
-              </b>
+              </strong>
             </div>
           </div>
         </li>
@@ -112,9 +112,9 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             <div
               class="c2"
             >
-              <b>
+              <strong>
                 foo
-              </b>
+              </strong>
               bar
             </div>
           </div>
@@ -132,9 +132,9 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             <div
               class="c2"
             >
-              <b>
+              <strong>
                 foo
-              </b>
+              </strong>
                bar ?
             </div>
           </div>
@@ -152,9 +152,9 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             <div
               class="c2"
             >
-              <b>
+              <strong>
                 foo
-              </b>
+              </strong>
                bazzz
             </div>
           </div>

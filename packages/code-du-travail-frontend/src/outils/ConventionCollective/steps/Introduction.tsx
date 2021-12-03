@@ -41,7 +41,7 @@ const IntroductionStep = (): JSX.Element => {
               trackEvent("cc_search_type_of_users", " click_p1", title, uuid)
             }
           >
-            <Text fontWeight="700">
+            <Text as="p" fontWeight="700">
               Je connais
               <br /> ma convention collective
             </Text>
@@ -61,7 +61,7 @@ const IntroductionStep = (): JSX.Element => {
               trackEvent("cc_search_type_of_users", " click_p2", title, uuid)
             }
           >
-            <Text fontWeight="700">
+            <Text as="p" fontWeight="700">
               Je ne connais <br /> pas ma convention collective
             </Text>
             <ButtonWrapper>

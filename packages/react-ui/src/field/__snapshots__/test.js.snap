@@ -310,13 +310,23 @@ exports[`<InputDate /> should render input date field 1`] = `
 `;
 
 exports[`<InputRadio /> should render input radio field 1`] = `
-.c0 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .c1 {
@@ -365,9 +375,8 @@ exports[`<InputRadio /> should render input radio field 1`] = `
 }
 
 <div>
-  <label
+  <div
     class="c0"
-    for="radio"
   >
     <input
       class="c1"
@@ -375,8 +384,13 @@ exports[`<InputRadio /> should render input radio field 1`] = `
       name="radio"
       type="radio"
     />
-    option
-  </label>
+    <label
+      class="c2"
+      for="radio"
+    >
+      option
+    </label>
+  </div>
 </div>
 `;
 

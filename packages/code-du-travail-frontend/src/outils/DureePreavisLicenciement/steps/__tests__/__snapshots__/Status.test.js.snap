@@ -1,14 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepStatus /> should render 1`] = `
-.c2 {
+.c3 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c4 {
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,6 +27,16 @@ exports[`<StepStatus /> should render 1`] = `
 }
 
 .c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c6 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -38,7 +57,7 @@ exports[`<StepStatus /> should render 1`] = `
   appearance: none;
 }
 
-.c5:before {
+.c6:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -53,12 +72,12 @@ exports[`<StepStatus /> should render 1`] = `
   content: "";
 }
 
-.c5:checked {
+.c6:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c5:checked:before {
+.c6:checked:before {
   display: block;
 }
 
@@ -70,11 +89,11 @@ exports[`<StepStatus /> should render 1`] = `
   cursor: default;
 }
 
-.c1 {
-  font-weight: 600;
+.c2 {
+  font-weight: 600 !important;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,59 +122,77 @@ exports[`<StepStatus /> should render 1`] = `
   <p
     class="c0"
   >
-    <span
-      class="c1"
+    <p
+      class="c1 c2"
     >
       Le licenciement est-il dû à une faute grave (ou lourde) ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
-    </span>
+       
+      <span
+        class="c3"
+      >
+         (obligatoire)
+      </span>
+    </p>
   </p>
   <div
-    class="c3"
+    class="c4"
   >
-    <label
-      class="c4"
-      for="seriousMisconduct-oui"
+    <div
+      class="c5"
     >
       <input
-        class="c5"
+        class="c6"
         id="seriousMisconduct-oui"
         name="seriousMisconduct"
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
-      class="c4"
-      for="seriousMisconduct-non"
+      <label
+        class="c7"
+        for="seriousMisconduct-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
+      class="c5"
     >
       <input
-        class="c5"
+        class="c6"
         id="seriousMisconduct-non"
         name="seriousMisconduct"
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c7"
+        for="seriousMisconduct-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
 </div>
 `;
 
 exports[`<StepStatus /> should render coefficient 1`] = `
-.c2 {
+.c3 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c4 {
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -165,6 +202,16 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 }
 
 .c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c6 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -185,7 +232,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   appearance: none;
 }
 
-.c5:before {
+.c6:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -200,16 +247,16 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   content: "";
 }
 
-.c5:checked {
+.c6:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c5:checked:before {
+.c6:checked:before {
   display: block;
 }
 
-.c9 {
+.c11 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -229,7 +276,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   text-align: center;
 }
 
-.c12 {
+.c14 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -239,7 +286,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   pointer-events: none;
 }
 
-.c11 {
+.c13 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -260,21 +307,21 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   appearance: none;
 }
 
-.c11::-ms-expand {
+.c13::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c11 *::-ms-backdrop,
-.c11 {
+.c13 *::-ms-backdrop,
+.c13 {
   padding-right: 1.6rem;
 }
 
-.c11:invalid {
+.c13:invalid {
   border-color: #eb5757;
 }
 
-.c11:disabled {
+.c13:disabled {
   background-color: #e4e8ef;
 }
 
@@ -286,7 +333,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   cursor: default;
 }
 
-.c7 {
+.c9 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -294,26 +341,26 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   cursor: pointer;
 }
 
-.c1 {
-  font-weight: 600;
+.c2 {
+  font-weight: 600 !important;
 }
 
-.c8 {
+.c10 {
   display: block;
   margin-bottom: 0.4rem;
   font-size: 1.6rem;
   cursor: pointer;
 }
 
-.c10 {
+.c12 {
   width: 40rem;
 }
 
-.c6 {
+.c8 {
   margin-bottom: 3.2rem;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -333,7 +380,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c11 {
     width: 100%;
   }
 }
@@ -345,19 +392,19 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c9 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c10 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c12 {
     width: 100%;
   }
 }
@@ -366,121 +413,140 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   <p
     class="c0"
   >
-    <span
-      class="c1"
+    <p
+      class="c1 c2"
     >
       Le licenciement est-il dû à une faute grave (ou lourde) ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
-    </span>
+       
+      <span
+        class="c3"
+      >
+         (obligatoire)
+      </span>
+    </p>
   </p>
   <div
-    class="c3"
+    class="c4"
   >
-    <label
-      class="c4"
-      for="seriousMisconduct-oui"
+    <div
+      class="c5"
     >
       <input
-        class="c5"
+        class="c6"
         id="seriousMisconduct-oui"
         name="seriousMisconduct"
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
-      class="c4"
-      for="seriousMisconduct-non"
+      <label
+        class="c7"
+        for="seriousMisconduct-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
+      class="c5"
     >
       <input
         checked=""
-        class="c5"
+        class="c6"
         id="seriousMisconduct-non"
         name="seriousMisconduct"
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c7"
+        for="seriousMisconduct-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
   <p
     class="c0"
   >
-    <span
-      class="c1"
+    <p
+      class="c1 c2"
     >
       Le salarié concerné est-il reconnu en tant que travailleur handicapé ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
-    </span>
+       
+      <span
+        class="c3"
+      >
+         (obligatoire)
+      </span>
+    </p>
   </p>
   <div
-    class="c3"
+    class="c4"
   >
-    <label
-      class="c4"
-      for="disabledWorker-oui"
+    <div
+      class="c5"
     >
       <input
         checked=""
-        class="c5"
+        class="c6"
         id="disabledWorker-oui"
         name="disabledWorker"
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
-      class="c4"
-      for="disabledWorker-non"
+      <label
+        class="c7"
+        for="disabledWorker-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
+      class="c5"
     >
       <input
-        class="c5"
+        class="c6"
         id="disabledWorker-non"
         name="disabledWorker"
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c7"
+        for="disabledWorker-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
   <div
-    class="c6"
+    class="c8"
   >
     <label
-      class="c7"
+      class="c9"
       for="input-cdt.ancienneté"
     >
-      <span
-        class="c1"
+      <p
+        class="c1 c2"
       >
         Quelle est l'ancienneté du salarié ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
-      </span>
+         
+        <span
+          class="c3"
+        >
+           (obligatoire)
+        </span>
+      </p>
     </label>
     <label
-      class="c8"
+      class="c10"
     >
       Choissisez parmi les catégories d'ancienneté telles que définies par le Code du travail
     </label>
     <div
-      class="c9 c10"
+      class="c11 c12"
     >
       <select
-        class="c11"
+        class="c13"
         id="input-cdt.ancienneté"
         name="cdt.ancienneté"
       >
@@ -508,7 +574,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="c12"
+        class="c14"
       >
         <svg
           aria-hidden="true"
@@ -542,14 +608,23 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 `;
 
 exports[`<StepStatus /> should render seriousMisconduct 1`] = `
-.c2 {
+.c3 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c4 {
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -559,6 +634,16 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
 }
 
 .c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c6 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -579,7 +664,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
   appearance: none;
 }
 
-.c5:before {
+.c6:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -594,12 +679,12 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
   content: "";
 }
 
-.c5:checked {
+.c6:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c5:checked:before {
+.c6:checked:before {
   display: block;
 }
 
@@ -611,11 +696,11 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
   cursor: default;
 }
 
-.c1 {
-  font-weight: 600;
+.c2 {
+  font-weight: 600 !important;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -644,91 +729,109 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
   <p
     class="c0"
   >
-    <span
-      class="c1"
+    <p
+      class="c1 c2"
     >
       Le licenciement est-il dû à une faute grave (ou lourde) ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
-    </span>
+       
+      <span
+        class="c3"
+      >
+         (obligatoire)
+      </span>
+    </p>
   </p>
   <div
-    class="c3"
+    class="c4"
   >
-    <label
-      class="c4"
-      for="seriousMisconduct-oui"
+    <div
+      class="c5"
     >
       <input
-        class="c5"
+        class="c6"
         id="seriousMisconduct-oui"
         name="seriousMisconduct"
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
-      class="c4"
-      for="seriousMisconduct-non"
+      <label
+        class="c7"
+        for="seriousMisconduct-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
+      class="c5"
     >
       <input
         checked=""
-        class="c5"
+        class="c6"
         id="seriousMisconduct-non"
         name="seriousMisconduct"
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c7"
+        for="seriousMisconduct-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
   <p
     class="c0"
   >
-    <span
-      class="c1"
+    <p
+      class="c1 c2"
     >
       Le salarié concerné est-il reconnu en tant que travailleur handicapé ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
-    </span>
+       
+      <span
+        class="c3"
+      >
+         (obligatoire)
+      </span>
+    </p>
   </p>
   <div
-    class="c3"
+    class="c4"
   >
-    <label
-      class="c4"
-      for="disabledWorker-oui"
+    <div
+      class="c5"
     >
       <input
-        class="c5"
+        class="c6"
         id="disabledWorker-oui"
         name="disabledWorker"
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
-      class="c4"
-      for="disabledWorker-non"
+      <label
+        class="c7"
+        for="disabledWorker-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
+      class="c5"
     >
       <input
-        class="c5"
+        class="c6"
         id="disabledWorker-non"
         name="disabledWorker"
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c7"
+        for="disabledWorker-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
 </div>
 `;

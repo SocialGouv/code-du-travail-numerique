@@ -2617,12 +2617,13 @@ exports[`<FicheMT /> should render 1`] = `
                     <span
                       class="c72"
                     />
-                    <span
+                    <p
                       aria-level="2"
+                      class="c51"
                       role="heading"
                     >
                       Avez-vous trouvé la réponse à votre question ?
-                    </span>
+                    </p>
                   </strong>
                   <p
                     class="c73"

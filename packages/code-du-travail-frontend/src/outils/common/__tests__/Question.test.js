@@ -8,6 +8,15 @@ describe("<Question />", () => {
   it("should render question", () => {
     const { container } = render(<Question>ma question</Question>);
     expect(container).toMatchInlineSnapshot(`
+      .c1 {
+        color: #3e486e;
+        line-height: 1.25;
+        font-size: 1.6rem;
+        font-weight: 400;
+        all: revert;
+        margin: 0;
+      }
+
       .c0 {
         display: block;
         margin-top: 2rem;
@@ -16,8 +25,8 @@ describe("<Question />", () => {
         cursor: pointer;
       }
 
-      .c1 {
-        font-weight: 600;
+      .c2 {
+        font-weight: 600 !important;
       }
 
       @media (max-width:600px) {
@@ -30,11 +39,12 @@ describe("<Question />", () => {
         <label
           class="c0"
         >
-          <span
-            class="c1"
+          <p
+            class="c1 c2"
           >
             ma question
-          </span>
+             
+          </p>
         </label>
       </div>
     `);
@@ -44,11 +54,20 @@ describe("<Question />", () => {
       <Question required>ma question obligatoire</Question>
     );
     expect(container).toMatchInlineSnapshot(`
-      .c2 {
+      .c3 {
         color: #3e486e;
         line-height: 1.25;
         font-size: 1.6rem;
         font-weight: 400;
+      }
+
+      .c1 {
+        color: #3e486e;
+        line-height: 1.25;
+        font-size: 1.6rem;
+        font-weight: 400;
+        all: revert;
+        margin: 0;
       }
 
       .c0 {
@@ -59,8 +78,8 @@ describe("<Question />", () => {
         cursor: pointer;
       }
 
-      .c1 {
-        font-weight: 600;
+      .c2 {
+        font-weight: 600 !important;
       }
 
       @media (max-width:600px) {
@@ -73,16 +92,17 @@ describe("<Question />", () => {
         <label
           class="c0"
         >
-          <span
-            class="c1"
+          <p
+            class="c1 c2"
           >
             ma question obligatoire
-          </span>
-          <span
-            class="c2"
-          >
-             (obligatoire)
-          </span>
+             
+            <span
+              class="c3"
+            >
+               (obligatoire)
+            </span>
+          </p>
         </label>
       </div>
     `);

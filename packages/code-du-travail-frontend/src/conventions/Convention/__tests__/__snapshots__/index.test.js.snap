@@ -259,6 +259,8 @@ exports[`<Convention /> renders 1`] = `
 
 .c25 {
   margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .c14 {
@@ -4210,13 +4212,13 @@ exports[`<Convention /> renders 1`] = `
                                 points="9 18 15 12 9 6"
                               />
                             </svg>
-                            <span
+                            <p
                               aria-level="2"
                               class="c24 c25"
                               role="heading"
                             >
                               Références juridiques concernées :
-                            </span>
+                            </p>
                           </div>
                           <div
                             class="c26"

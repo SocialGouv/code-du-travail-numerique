@@ -1,113 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepInfo /> should display error if contrat cdd 1`] = `
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-.c2 {
-  position: relative;
-  display: inline-block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: calc(1.6rem * 1.25);
-  height: calc(1.6rem * 1.25);
-  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
-  padding: 0;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-  box-shadow: none;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c2:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-  width: calc(1.6rem / 1.5);
-  height: calc(1.6rem / 1.5);
-  background-color: #f66663;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  content: "";
-}
-
-.c2:checked {
-  background-color: #fff;
-  border-color: #f66663;
-}
-
-.c2:checked:before {
-  display: block;
-}
-
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 2rem;
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
 }
 
 @media (max-width:600px) {
 
 }
 
-<div
+<p
   class="c0"
 >
-  <label
-    class="c1"
-    for="contrat-cdd"
-  >
-    <input
-      class="c2"
-      id="contrat-cdd"
-      name="contrat"
-      type="radio"
-      value="cdd"
-    />
-    Contrat à durée determiné (CDD) ou contrat d’intérim
-  </label>
-  <label
-    class="c1"
-    for="contrat-cdi"
-  >
-    <input
-      checked=""
-      class="c2"
-      id="contrat-cdi"
-      name="contrat"
-      type="radio"
-      value="cdi"
-    />
-    Contrat à durée indeterminé (CDI)
-  </label>
   L’indemnité de licenciement n’est pas dûe pour les CDD et contrats de travail temporaires. Sous certaines conditions, le salarié peut avoir le droit à une 
   <a
     aria-label="indemnité de précarité (nouvelle fenêtre) (nouvelle fenêtre)"
@@ -118,7 +27,7 @@ exports[`<StepInfo /> should display error if contrat cdd 1`] = `
     indemnité de précarité (nouvelle fenêtre)
   </a>
   .
-</div>
+</p>
 `;
 
 exports[`<StepInfo /> should display error if fauteGrave 1`] = `
@@ -126,20 +35,29 @@ exports[`<StepInfo /> should display error if fauteGrave 1`] = `
 
 }
 
-<b>
+<strong>
   L’indemnité légale de licenciement n’est pas dûe en cas de faute grave.
-</b>
+</strong>
 `;
 
 exports[`<StepInfo /> should render 1`] = `
-.c2 {
+.c3 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c4 {
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -149,6 +67,16 @@ exports[`<StepInfo /> should render 1`] = `
 }
 
 .c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c6 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -169,7 +97,7 @@ exports[`<StepInfo /> should render 1`] = `
   appearance: none;
 }
 
-.c5:before {
+.c6:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -184,12 +112,12 @@ exports[`<StepInfo /> should render 1`] = `
   content: "";
 }
 
-.c5:checked {
+.c6:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c5:checked:before {
+.c6:checked:before {
   display: block;
 }
 
@@ -201,11 +129,11 @@ exports[`<StepInfo /> should render 1`] = `
   cursor: default;
 }
 
-.c1 {
-  font-weight: 600;
+.c2 {
+  font-weight: 600 !important;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -235,134 +163,161 @@ exports[`<StepInfo /> should render 1`] = `
     <p
       class="c0"
     >
-      <span
-        class="c1"
+      <p
+        class="c1 c2"
       >
         Quel est le type du contrat de travail ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
-      </span>
+         
+        <span
+          class="c3"
+        >
+           (obligatoire)
+        </span>
+      </p>
     </p>
     <div
-      class="c3"
+      class="c4"
     >
-      <label
-        class="c4"
-        for="contrat-cdd"
+      <div
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="contrat-cdd"
           name="contrat"
           type="radio"
           value="cdd"
         />
-        Contrat à durée determiné (CDD) ou contrat d’intérim
-      </label>
-      <label
-        class="c4"
-        for="contrat-cdi"
+        <label
+          class="c7"
+          for="contrat-cdd"
+        >
+          Contrat à durée determiné (CDD) ou contrat d’intérim
+        </label>
+      </div>
+      <div
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="contrat-cdi"
           name="contrat"
           type="radio"
           value="cdi"
         />
-        Contrat à durée indeterminé (CDI)
-      </label>
+        <label
+          class="c7"
+          for="contrat-cdi"
+        >
+          Contrat à durée indeterminé (CDI)
+        </label>
+      </div>
     </div>
     <p
       class="c0"
     >
-      <span
-        class="c1"
+      <p
+        class="c1 c2"
       >
         Le licenciement est-il dû à une faute grave (ou lourde) ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
-      </span>
+         
+        <span
+          class="c3"
+        >
+           (obligatoire)
+        </span>
+      </p>
     </p>
     <div
-      class="c3"
+      class="c4"
     >
-      <label
-        class="c4"
-        for="fauteGrave-oui"
+      <div
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="fauteGrave-oui"
           name="fauteGrave"
           type="radio"
           value="true"
         />
-        Oui
-      </label>
-      <label
-        class="c4"
-        for="fauteGrave-non"
+        <label
+          class="c7"
+          for="fauteGrave-oui"
+        >
+          Oui
+        </label>
+      </div>
+      <div
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="fauteGrave-non"
           name="fauteGrave"
           type="radio"
           value="false"
         />
-        Non
-      </label>
+        <label
+          class="c7"
+          for="fauteGrave-non"
+        >
+          Non
+        </label>
+      </div>
     </div>
     <p
       class="c0"
     >
-      <span
-        class="c1"
+      <p
+        class="c1 c2"
       >
         Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
-      </span>
+         
+        <span
+          class="c3"
+        >
+           (obligatoire)
+        </span>
+      </p>
     </p>
     <div
-      class="c3"
+      class="c4"
     >
-      <label
-        class="c4"
-        for="inaptitude-oui"
+      <div
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="inaptitude-oui"
           name="inaptitude"
           type="radio"
           value="true"
         />
-        Oui
-      </label>
-      <label
-        class="c4"
-        for="inaptitude-non"
+        <label
+          class="c7"
+          for="inaptitude-oui"
+        >
+          Oui
+        </label>
+      </div>
+      <div
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="inaptitude-non"
           name="inaptitude"
           type="radio"
           value="false"
         />
-        Non
-      </label>
+        <label
+          class="c7"
+          for="inaptitude-non"
+        >
+          Non
+        </label>
+      </div>
     </div>
     <button
       data-testid="nextBt"

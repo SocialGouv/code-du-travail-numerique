@@ -2946,12 +2946,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       <span
                         class="c68"
                       />
-                      <span
+                      <p
                         aria-level="2"
+                        class="c59"
                         role="heading"
                       >
                         Avez-vous trouvé la réponse à votre question ?
-                      </span>
+                      </p>
                     </strong>
                     <p
                       class="c83"
@@ -6256,12 +6257,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       <span
                         class="c68"
                       />
-                      <span
+                      <p
                         aria-level="2"
+                        class="c59"
                         role="heading"
                       >
                         Avez-vous trouvé la réponse à votre question ?
-                      </span>
+                      </p>
                     </strong>
                     <p
                       class="c83"

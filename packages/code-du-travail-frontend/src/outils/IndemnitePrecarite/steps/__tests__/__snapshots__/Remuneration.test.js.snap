@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepRemuneration /> should render multiple inputs 1`] = `
-.c12 {
+.c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -39,16 +39,16 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   will-change: transform;
 }
 
-.c12:link,
-.c12:visited {
+.c14:link,
+.c14:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c12:not([disabled]):hover,
-.c12:not([disabled]):active,
-.c12:not([disabled]):focus {
+.c14:not([disabled]):hover,
+.c14:not([disabled]):active,
+.c14:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -57,7 +57,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   border-color: transparent;
 }
 
-.c12[disabled] {
+.c14[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -65,11 +65,573 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   cursor: not-allowed;
 }
 
-.c2 {
+.c3 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
+}
+
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
+}
+
+.c11 {
+  position: relative;
+  display: inline-block;
+}
+
+.c12 {
+  width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 5rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: right;
+  background: #fff;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c12::-webkit-outer-spin-button,
+.c12::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c12::-webkit-calendar-picker-indicator {
+  display: block;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-right: -2rem;
+  color: rgba(0,0,0,0);
+  background-color: #9298af;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
+  mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.c12:invalid {
+  border-color: #eb5757;
+}
+
+.c12::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c12::-moz-placeholder {
+  color: #9298af;
+}
+
+.c12:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c12::placeholder {
+  color: #9298af;
+}
+
+.c12:focus {
+  border-color: #7994d4;
+}
+
+.c12:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c12:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c12:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c12:focus::placeholder {
+  color: transparent;
+}
+
+.c13 {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 100%;
+  max-width: 3.2rem;
+  height: 100%;
+  max-height: 3.2rem;
+  color: #9298af;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c5 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: calc(1.6rem * 1.25);
+  height: calc(1.6rem * 1.25);
+  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
+  padding: 0;
+  line-height: inherit;
+  background: #fff;
+  border: 1px solid #bbcadf;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c5:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: calc(1.6rem / 1.5);
+  height: calc(1.6rem / 1.5);
+  background-color: #f66663;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  content: "";
+}
+
+.c5:checked {
+  background-color: #fff;
+  border-color: #f66663;
+}
+
+.c5:checked:before {
+  display: block;
+}
+
+.c0 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
+.c7 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.c2 {
+  font-weight: 600 !important;
+}
+
+.c10 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 40rem;
+}
+
+.c19 {
+  color: #3e486e;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.c17 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin: 1rem 0;
+  padding-left: 0;
+}
+
+.c16 {
+  width: 2rem;
+  margin-left: 0.4rem;
+  color: #f66663;
+}
+
+.c18 {
+  width: 2rem;
+  margin-right: 0.4rem;
+  color: #f66663;
+}
+
+.c9 {
+  display: inline-block;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  margin-right: 1rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width:600px) {
+  .c14 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c14 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c11 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
+    padding: 0 1rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c10 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:600px) {
+  .c15 {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+}
+
+<div>
+  <p
+    class="c0"
+  >
+    <p
+      class="c1 c2"
+    >
+      Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
+       
+      <span
+        class="c3"
+      >
+         (obligatoire)
+      </span>
+    </p>
+  </p>
+  <div
+    class="c4"
+  >
+    <input
+      class="c5"
+      id="typeRemuneration-amount"
+      name="typeRemuneration"
+      type="radio"
+      value="total"
+    />
+    <label
+      class="c6"
+      for="typeRemuneration-amount"
+    >
+      <span>
+        En indiquant le
+        <strong>
+           montant total 
+        </strong>
+        des rémunérations.
+      </span>
+    </label>
+  </div>
+  <div
+    class="c4"
+  >
+    <input
+      checked=""
+      class="c5"
+      id="typeRemuneration-pay"
+      name="typeRemuneration"
+      type="radio"
+      value="mensuel"
+    />
+    <label
+      class="c6"
+      for="typeRemuneration-pay"
+    >
+      <span>
+        En indiquant le
+        <strong>
+           salaire mensuel 
+        </strong>
+         pour chaque mois.
+      </span>
+    </label>
+  </div>
+  <label
+    class="c7"
+  >
+    <p
+      class="c1 c2"
+    >
+      Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
+       
+      <span
+        class="c3"
+      >
+         (obligatoire)
+      </span>
+    </p>
+  </label>
+  <div
+    class="c8"
+  >
+    <label
+      class="c9"
+      for="2"
+    >
+      Montant :
+    </label>
+    <div
+      class="c10"
+    >
+      <span
+        class="c11"
+      >
+        <input
+          class="c12"
+          id="2"
+          name="salaires[0].salaire"
+          type="number"
+          value="2000"
+        />
+        <div
+          class="c13"
+        >
+          <svg
+            aria-hidden="true"
+            fill="none"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </span>
+    </div>
+    <button
+      class="c14 c15"
+      type="button"
+    >
+      Supprimer
+      <svg
+        aria-hidden="true"
+        class="c16"
+        fill="none"
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+          fill="currentColor"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    class="c8"
+  >
+    <label
+      class="c9"
+      for="4"
+    >
+      Montant :
+    </label>
+    <div
+      class="c10"
+    >
+      <span
+        class="c11"
+      >
+        <input
+          class="c12"
+          id="4"
+          name="salaires[1].salaire"
+          type="number"
+          value="1500"
+        />
+        <div
+          class="c13"
+        >
+          <svg
+            aria-hidden="true"
+            fill="none"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </span>
+    </div>
+    <button
+      class="c14 c15"
+      type="button"
+    >
+      Supprimer
+      <svg
+        aria-hidden="true"
+        class="c16"
+        fill="none"
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+          fill="currentColor"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+  </div>
+  <button
+    class="c14 c17"
+    type="button"
+  >
+    <svg
+      aria-hidden="true"
+      class="c18"
+      fill="none"
+      viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
+        fill="currentColor"
+        fill-rule="evenodd"
+      />
+    </svg>
+    Ajouter un salaire
+  </button>
+  <p
+    class="c19"
+  >
+    Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
+  </p>
+</div>
+`;
+
+exports[`<StepRemuneration /> should render one input 1`] = `
+.c3 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
 }
 
 .c9 {
@@ -171,7 +733,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   color: #9298af;
 }
 
-.c3 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -181,6 +743,16 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 }
 
 .c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c5 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -201,7 +773,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   appearance: none;
 }
 
-.c4:before {
+.c5:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -216,12 +788,12 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   content: "";
 }
 
-.c4:checked {
+.c5:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c4:checked:before {
+.c5:checked:before {
   display: block;
 }
 
@@ -233,7 +805,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   cursor: default;
 }
 
-.c5 {
+.c7 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -241,8 +813,8 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   cursor: pointer;
 }
 
-.c1 {
-  font-weight: 600;
+.c2 {
+  font-weight: 600 !important;
 }
 
 .c8 {
@@ -253,66 +825,10 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   max-width: 40rem;
 }
 
-.c17 {
+.c12 {
   color: #3e486e;
   font-size: 1.4rem;
   font-style: italic;
-}
-
-.c15 {
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  margin: 1rem 0;
-  padding-left: 0;
-}
-
-.c14 {
-  width: 2rem;
-  margin-left: 0.4rem;
-  color: #f66663;
-}
-
-.c16 {
-  width: 2rem;
-  margin-right: 0.4rem;
-  color: #f66663;
-}
-
-.c7 {
-  display: inline-block;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-right: 1rem;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 0.4rem;
-}
-
-@media (max-width:600px) {
-  .c12 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c12 {
-    display: none;
-  }
 }
 
 @media (max-width:600px) {
@@ -335,481 +851,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
-    align-self: center;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
-}
-
-<div>
-  <p
-    class="c0"
-  >
-    <span
-      class="c1"
-    >
-      Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
-    </span>
-  </p>
-  <label
-    class="c3"
-    for="typeRemuneration-amount"
-  >
-    <input
-      class="c4"
-      id="typeRemuneration-amount"
-      name="typeRemuneration"
-      type="radio"
-      value="total"
-    />
-    <span>
-      En indiquant le
-      <strong>
-         montant total 
-      </strong>
-      des rémunérations.
-    </span>
-  </label>
-  <label
-    class="c3"
-    for="typeRemuneration-pay"
-  >
-    <input
-      checked=""
-      class="c4"
-      id="typeRemuneration-pay"
-      name="typeRemuneration"
-      type="radio"
-      value="mensuel"
-    />
-    <span>
-      En indiquant le
-      <strong>
-         salaire mensuel 
-      </strong>
-       pour chaque mois.
-    </span>
-  </label>
-  <label
-    class="c5"
-  >
-    <span
-      class="c1"
-    >
-      Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
-    </span>
-  </label>
-  <div
-    class="c6"
-  >
-    <label
-      class="c7"
-      for="2"
-    >
-      Montant :
-    </label>
-    <div
-      class="c8"
-    >
-      <span
-        class="c9"
-      >
-        <input
-          class="c10"
-          id="2"
-          name="salaires[0].salaire"
-          type="number"
-          value="2000"
-        />
-        <div
-          class="c11"
-        >
-          <svg
-            aria-hidden="true"
-            fill="none"
-            viewBox="0 0 32 32"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
-              fill="currentColor"
-            />
-          </svg>
-        </div>
-      </span>
-    </div>
-    <button
-      class="c12 c13"
-      type="button"
-    >
-      Supprimer
-      <svg
-        aria-hidden="true"
-        class="c14"
-        fill="none"
-        viewBox="0 0 32 32"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          clip-rule="evenodd"
-          d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
-          fill="currentColor"
-          fill-rule="evenodd"
-        />
-      </svg>
-    </button>
-  </div>
-  <div
-    class="c6"
-  >
-    <label
-      class="c7"
-      for="4"
-    >
-      Montant :
-    </label>
-    <div
-      class="c8"
-    >
-      <span
-        class="c9"
-      >
-        <input
-          class="c10"
-          id="4"
-          name="salaires[1].salaire"
-          type="number"
-          value="1500"
-        />
-        <div
-          class="c11"
-        >
-          <svg
-            aria-hidden="true"
-            fill="none"
-            viewBox="0 0 32 32"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
-              fill="currentColor"
-            />
-          </svg>
-        </div>
-      </span>
-    </div>
-    <button
-      class="c12 c13"
-      type="button"
-    >
-      Supprimer
-      <svg
-        aria-hidden="true"
-        class="c14"
-        fill="none"
-        viewBox="0 0 32 32"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          clip-rule="evenodd"
-          d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
-          fill="currentColor"
-          fill-rule="evenodd"
-        />
-      </svg>
-    </button>
-  </div>
-  <button
-    class="c12 c15"
-    type="button"
-  >
-    <svg
-      aria-hidden="true"
-      class="c16"
-      fill="none"
-      viewBox="0 0 16 16"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        clip-rule="evenodd"
-        d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
-        fill="currentColor"
-        fill-rule="evenodd"
-      />
-    </svg>
-    Ajouter un salaire
-  </button>
-  <p
-    class="c17"
-  >
-    Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
-  </p>
-</div>
-`;
-
-exports[`<StepRemuneration /> should render one input 1`] = `
-.c2 {
-  color: #3e486e;
-  line-height: 1.25;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c7 {
-  position: relative;
-  display: inline-block;
-}
-
-.c8 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 5rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: right;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c8::-webkit-outer-spin-button,
-.c8::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c8::-webkit-calendar-picker-indicator {
-  display: block;
-  width: 3.2rem;
-  height: 3.2rem;
-  margin-right: -2rem;
-  color: rgba(0,0,0,0);
-  background-color: #9298af;
-  cursor: pointer;
-  opacity: 1;
-  -webkit-mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-  mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-}
-
-.c8:invalid {
-  border-color: #eb5757;
-}
-
-.c8::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c8::-moz-placeholder {
-  color: #9298af;
-}
-
-.c8:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c8::placeholder {
-  color: #9298af;
-}
-
-.c8:focus {
-  border-color: #7994d4;
-}
-
-.c8:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c8:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c8:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c8:focus::placeholder {
-  color: transparent;
-}
-
-.c9 {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 100%;
-  max-width: 3.2rem;
-  height: 100%;
-  max-height: 3.2rem;
-  color: #9298af;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-.c4 {
-  position: relative;
-  display: inline-block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: calc(1.6rem * 1.25);
-  height: calc(1.6rem * 1.25);
-  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
-  padding: 0;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-  box-shadow: none;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c4:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-  width: calc(1.6rem / 1.5);
-  height: calc(1.6rem / 1.5);
-  background-color: #f66663;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  content: "";
-}
-
-.c4:checked {
-  background-color: #fff;
-  border-color: #f66663;
-}
-
-.c4:checked:before {
-  display: block;
-}
-
-.c0 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c5 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-.c1 {
-  font-weight: 600;
-}
-
-.c6 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-  max-width: 40rem;
-}
-
-.c10 {
-  color: #3e486e;
-  font-size: 1.4rem;
-  font-style: italic;
-}
-
-@media (max-width:600px) {
   .c7 {
-    width: 100%;
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
   .c8 {
-    padding: 0 1rem;
-    padding-right: 5rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -824,86 +872,96 @@ exports[`<StepRemuneration /> should render one input 1`] = `
   <p
     class="c0"
   >
-    <span
-      class="c1"
+    <p
+      class="c1 c2"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
-    </span>
+       
+      <span
+        class="c3"
+      >
+         (obligatoire)
+      </span>
+    </p>
   </p>
-  <label
-    class="c3"
-    for="typeRemuneration-amount"
+  <div
+    class="c4"
   >
     <input
       checked=""
-      class="c4"
+      class="c5"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
       value="total"
     />
-    <span>
-      En indiquant le
-      <strong>
-         montant total 
-      </strong>
-      des rémunérations.
-    </span>
-  </label>
-  <label
-    class="c3"
-    for="typeRemuneration-pay"
+    <label
+      class="c6"
+      for="typeRemuneration-amount"
+    >
+      <span>
+        En indiquant le
+        <strong>
+           montant total 
+        </strong>
+        des rémunérations.
+      </span>
+    </label>
+  </div>
+  <div
+    class="c4"
   >
     <input
-      class="c4"
+      class="c5"
       id="typeRemuneration-pay"
       name="typeRemuneration"
       type="radio"
       value="mensuel"
     />
-    <span>
-      En indiquant le
-      <strong>
-         salaire mensuel 
-      </strong>
-       pour chaque mois.
-    </span>
-  </label>
+    <label
+      class="c6"
+      for="typeRemuneration-pay"
+    >
+      <span>
+        En indiquant le
+        <strong>
+           salaire mensuel 
+        </strong>
+         pour chaque mois.
+      </span>
+    </label>
+  </div>
   <label
-    class="c5"
+    class="c7"
     for="currency-1"
   >
-    <span
-      class="c1"
+    <p
+      class="c1 c2"
     >
       Quelle est la rémunération totale brute perçue durant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
-    </span>
+       
+      <span
+        class="c3"
+      >
+         (obligatoire)
+      </span>
+    </p>
   </label>
   <div
-    class="c6"
+    class="c8"
   >
     <span
-      class="c7"
+      class="c9"
     >
       <input
-        class="c8"
+        class="c10"
         id="currency-1"
         name="salaire"
         type="number"
         value="3000"
       />
       <div
-        class="c9"
+        class="c11"
       >
         <svg
           aria-hidden="true"
@@ -920,7 +978,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </span>
   </div>
   <p
-    class="c10"
+    class="c12"
   >
     Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
   </p>

@@ -1,14 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TypeContrat /> should render 1`] = `
-.c2 {
+.c3 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c3 {
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
+}
+
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,6 +27,16 @@ exports[`<TypeContrat /> should render 1`] = `
 }
 
 .c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c5 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -38,7 +57,7 @@ exports[`<TypeContrat /> should render 1`] = `
   appearance: none;
 }
 
-.c4:before {
+.c5:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -53,12 +72,12 @@ exports[`<TypeContrat /> should render 1`] = `
   content: "";
 }
 
-.c4:checked {
+.c5:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c4:checked:before {
+.c5:checked:before {
   display: block;
 }
 
@@ -70,8 +89,8 @@ exports[`<TypeContrat /> should render 1`] = `
   cursor: default;
 }
 
-.c1 {
-  font-weight: 600;
+.c2 {
+  font-weight: 600 !important;
 }
 
 @media (max-width:600px) {
@@ -84,42 +103,51 @@ exports[`<TypeContrat /> should render 1`] = `
   <p
     class="c0"
   >
-    <span
-      class="c1"
+    <p
+      class="c1 c2"
     >
       Quel est le type du contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
-    </span>
+       
+      <span
+        class="c3"
+      >
+         (obligatoire)
+      </span>
+    </p>
   </p>
-  <label
-    class="c3"
-    for="contrat-cdd"
+  <div
+    class="c4"
   >
     <input
-      class="c4"
+      class="c5"
       id="contrat-cdd"
       name="contrat"
       type="radio"
       value="CDD"
     />
-    Contrat à durée déterminée (CDD)
-  </label>
-  <label
-    class="c3"
-    for="contrat-ci"
+    <label
+      class="c6"
+      for="contrat-cdd"
+    >
+      Contrat à durée déterminée (CDD)
+    </label>
+  </div>
+  <div
+    class="c4"
   >
     <input
-      class="c4"
+      class="c5"
       id="contrat-ci"
       name="contrat"
       type="radio"
       value="CTT"
     />
-    Contrat de travail temporaire (Contrat d’intérim)
-  </label>
+    <label
+      class="c6"
+      for="contrat-ci"
+    >
+      Contrat de travail temporaire (Contrat d’intérim)
+    </label>
+  </div>
 </div>
 `;

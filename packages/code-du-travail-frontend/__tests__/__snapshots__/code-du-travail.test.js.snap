@@ -1778,12 +1778,13 @@ exports[`<CodeDuTravail /> should render 1`] = `
                     <span
                       class="c42"
                     />
-                    <span
+                    <p
                       aria-level="2"
+                      class="c29"
                       role="heading"
                     >
                       Avez-vous trouvé la réponse à votre question ?
-                    </span>
+                    </p>
                   </strong>
                   <p
                     class="c43"

@@ -1,14 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepCTT /> should render 1`] = `
-.c2 {
+.c3 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c4 {
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,6 +27,16 @@ exports[`<StepCTT /> should render 1`] = `
 }
 
 .c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c6 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -38,7 +57,7 @@ exports[`<StepCTT /> should render 1`] = `
   appearance: none;
 }
 
-.c5:before {
+.c6:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -53,12 +72,12 @@ exports[`<StepCTT /> should render 1`] = `
   content: "";
 }
 
-.c5:checked {
+.c6:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c5:checked:before {
+.c6:checked:before {
   display: block;
 }
 
@@ -70,11 +89,11 @@ exports[`<StepCTT /> should render 1`] = `
   cursor: default;
 }
 
-.c1 {
-  font-weight: 600;
+.c2 {
+  font-weight: 600 !important;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -104,182 +123,218 @@ exports[`<StepCTT /> should render 1`] = `
     <p
       class="c0"
     >
-      <span
-        class="c1"
+      <p
+        class="c1 c2"
       >
         S’agit-il d’un contrat de mission-formation ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
-      </span>
+         
+        <span
+          class="c3"
+        >
+           (obligatoire)
+        </span>
+      </p>
     </p>
     <div
-      class="c3"
+      class="c4"
       data-testid="cttFormation"
     >
-      <label
-        class="c4"
-        for="cttFormation-oui"
+      <div
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="cttFormation-oui"
           name="cttFormation"
           type="radio"
           value="true"
         />
-        Oui
-      </label>
-      <label
-        class="c4"
-        for="cttFormation-non"
+        <label
+          class="c7"
+          for="cttFormation-oui"
+        >
+          Oui
+        </label>
+      </div>
+      <div
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="cttFormation-non"
           name="cttFormation"
           type="radio"
           value="false"
         />
-        Non
-      </label>
+        <label
+          class="c7"
+          for="cttFormation-non"
+        >
+          Non
+        </label>
+      </div>
     </div>
     <p
       class="c0"
     >
-      <span
-        class="c1"
+      <p
+        class="c1 c2"
       >
         Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave du salarié, cas de force majeure ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
-      </span>
+         
+        <span
+          class="c3"
+        >
+           (obligatoire)
+        </span>
+      </p>
     </p>
     <div
-      class="c3"
+      class="c4"
       data-testid="ruptureContratFauteGrave"
     >
-      <label
-        class="c4"
-        for="ruptureContratFauteGrave-oui"
+      <div
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="ruptureContratFauteGrave-oui"
           name="ruptureContratFauteGrave"
           type="radio"
           value="true"
         />
-        Oui
-      </label>
-      <label
-        class="c4"
-        for="ruptureContratFauteGrave-non"
+        <label
+          class="c7"
+          for="ruptureContratFauteGrave-oui"
+        >
+          Oui
+        </label>
+      </div>
+      <div
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="ruptureContratFauteGrave-non"
           name="ruptureContratFauteGrave"
           type="radio"
           value="false"
         />
-        Non
-      </label>
+        <label
+          class="c7"
+          for="ruptureContratFauteGrave-non"
+        >
+          Non
+        </label>
+      </div>
     </div>
     <p
       class="c0"
     >
-      <span
-        class="c1"
+      <p
+        class="c1 c2"
       >
         À la fin du contrat d'intérim, le salarié a-t-il été immédiatement embauché en CDI au sein de l'entreprise dans laquelle il effectuait sa mission ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
-      </span>
+         
+        <span
+          class="c3"
+        >
+           (obligatoire)
+        </span>
+      </p>
     </p>
     <div
-      class="c3"
+      class="c4"
       data-testid="propositionCDIFinContrat"
     >
-      <label
-        class="c4"
-        for="propositionCDIFinContrat-oui"
+      <div
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="propositionCDIFinContrat-oui"
           name="propositionCDIFinContrat"
           type="radio"
           value="true"
         />
-        Oui
-      </label>
-      <label
-        class="c4"
-        for="propositionCDIFinContrat-non"
+        <label
+          class="c7"
+          for="propositionCDIFinContrat-oui"
+        >
+          Oui
+        </label>
+      </div>
+      <div
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="propositionCDIFinContrat-non"
           name="propositionCDIFinContrat"
           type="radio"
           value="false"
         />
-        Non
-      </label>
+        <label
+          class="c7"
+          for="propositionCDIFinContrat-non"
+        >
+          Non
+        </label>
+      </div>
     </div>
     <p
       class="c0"
     >
-      <span
-        class="c1"
+      <p
+        class="c1 c2"
       >
         Le salarié a-t-il refusé la mise en œuvre de la souplesse prévue dans le contrat d’intérim ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
-      </span>
+         
+        <span
+          class="c3"
+        >
+           (obligatoire)
+        </span>
+      </p>
     </p>
     <div
-      class="c3"
+      class="c4"
       data-testid="refusSouplesse"
     >
-      <label
-        class="c4"
-        for="refusSouplesse-oui"
+      <div
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="refusSouplesse-oui"
           name="refusSouplesse"
           type="radio"
           value="true"
         />
-        Oui
-      </label>
-      <label
-        class="c4"
-        for="refusSouplesse-non"
+        <label
+          class="c7"
+          for="refusSouplesse-oui"
+        >
+          Oui
+        </label>
+      </div>
+      <div
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="refusSouplesse-non"
           name="refusSouplesse"
           type="radio"
           value="false"
         />
-        Non
-      </label>
+        <label
+          class="c7"
+          for="refusSouplesse-non"
+        >
+          Non
+        </label>
+      </div>
     </div>
     <button
       data-testid="nextBt"

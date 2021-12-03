@@ -1045,12 +1045,13 @@ exports[`<Answer /> should renders 1`] = `
                 <span
                   class="c30"
                 />
-                <span
+                <p
                   aria-level="2"
+                  class="c17"
                   role="heading"
                 >
                   Avez-vous trouvé la réponse à votre question ?
-                </span>
+                </p>
               </strong>
               <p
                 class="c31"
@@ -2370,12 +2371,13 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 <span
                   class="c40"
                 />
-                <span
+                <p
                   aria-level="2"
+                  class="c27"
                   role="heading"
                 >
                   Avez-vous trouvé la réponse à votre question ?
-                </span>
+                </p>
               </strong>
               <p
                 class="c41"
@@ -3445,12 +3447,13 @@ exports[`<Answer /> should renders back to results link 1`] = `
                 <span
                   class="c30"
                 />
-                <span
+                <p
                   aria-level="2"
+                  class="c17"
                   role="heading"
                 >
                   Avez-vous trouvé la réponse à votre question ?
-                </span>
+                </p>
               </strong>
               <p
                 class="c31"
@@ -4631,12 +4634,13 @@ exports[`<Answer /> should renders related content 1`] = `
                 <span
                   class="c30"
                 />
-                <span
+                <p
                   aria-level="2"
+                  class="c17"
                   role="heading"
                 >
                   Avez-vous trouvé la réponse à votre question ?
-                </span>
+                </p>
               </strong>
               <p
                 class="c31"
@@ -5869,12 +5873,13 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 <span
                   class="c30"
                 />
-                <span
+                <p
                   aria-level="2"
+                  class="c17"
                   role="heading"
                 >
                   Avez-vous trouvé la réponse à votre question ?
-                </span>
+                </p>
               </strong>
               <p
                 class="c31"
@@ -6945,12 +6950,13 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 <span
                   class="c30"
                 />
-                <span
+                <p
                   aria-level="2"
+                  class="c17"
                   role="heading"
                 >
                   Avez-vous trouvé la réponse à votre question ?
-                </span>
+                </p>
               </strong>
               <p
                 class="c31"
@@ -8022,12 +8028,13 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 <span
                   class="c30"
                 />
-                <span
+                <p
                   aria-level="2"
+                  class="c17"
                   role="heading"
                 >
                   Avez-vous trouvé la réponse à votre question ?
-                </span>
+                </p>
               </strong>
               <p
                 class="c31"
@@ -9094,12 +9101,13 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 <span
                   class="c30"
                 />
-                <span
+                <p
                   aria-level="2"
+                  class="c17"
                   role="heading"
                 >
                   Avez-vous trouvé la réponse à votre question ?
-                </span>
+                </p>
               </strong>
               <p
                 class="c31"

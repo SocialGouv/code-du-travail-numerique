@@ -108,6 +108,8 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 
 .c12 {
   margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .c0 {
@@ -290,11 +292,11 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
               points="9 18 15 12 9 6"
             />
           </svg>
-          <span
+          <p
             class="c11 c12"
           >
             Voir le détail du calcul
-          </span>
+          </p>
         </div>
         <div
           class="c13"
@@ -505,11 +507,11 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
               points="9 18 15 12 9 6"
             />
           </svg>
-          <span
+          <p
             class="c11 c12"
           >
             Voir le détail du calcul
-          </span>
+          </p>
         </div>
         <div
           class="c13"
@@ -763,6 +765,8 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 
 .c12 {
   margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .c0 {
@@ -945,11 +949,11 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
               points="9 18 15 12 9 6"
             />
           </svg>
-          <span
+          <p
             class="c11 c12"
           >
             Voir le détail du calcul
-          </span>
+          </p>
         </div>
         <div
           class="c13"
@@ -1160,11 +1164,11 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
               points="9 18 15 12 9 6"
             />
           </svg>
-          <span
+          <p
             class="c11 c12"
           >
             Voir le détail du calcul
-          </span>
+          </p>
         </div>
         <div
           class="c13"

@@ -24,12 +24,12 @@ const AgreementSelectionStep = ({
         {enterprise.conventions.length > 1
           ? `${enterprise.conventions.length} conventions collectives trouvées pour `
           : `${enterprise.conventions.length} convention collective trouvée pour `}
-        <b>
+        <strong>
           « {enterprise.simpleLabel}
           {enterprise.address &&
             ` , ${enterprise.matchingEtablissement.address}`}{" "}
           »
-        </b>
+        </strong>
       </Text>
       <FlatList>
         {enterprise.conventions.map((agreement) => (

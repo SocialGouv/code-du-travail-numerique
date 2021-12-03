@@ -21,10 +21,11 @@ const Warning = styled(Alert)`
   margin-top: ${spacings.large};
 `;
 
-const WarningTitle = styled.span`
+const WarningTitle = styled.p`
   color: ${({ theme }) => theme.altText};
   font-weight: 600;
   font-size: ${fonts.sizes.headings.small};
   font-family: "Open Sans", sans-serif;
+  margin: 0;
 `;
 export default Disclaimer;

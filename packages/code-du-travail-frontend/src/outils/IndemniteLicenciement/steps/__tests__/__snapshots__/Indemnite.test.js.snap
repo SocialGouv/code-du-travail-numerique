@@ -81,6 +81,8 @@ exports[`<StepIndemnite /> should render 1`] = `
 
 .c7 {
   margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .c12 {
@@ -128,6 +130,7 @@ exports[`<StepIndemnite /> should render 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
@@ -216,11 +219,11 @@ exports[`<StepIndemnite /> should render 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -576,11 +579,11 @@ exports[`<StepIndemnite /> should render 1`] = `
       <div
         class="c14"
       >
-        <span
+        <p
           class="c15"
         >
           Attention il peut exister un montant plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>

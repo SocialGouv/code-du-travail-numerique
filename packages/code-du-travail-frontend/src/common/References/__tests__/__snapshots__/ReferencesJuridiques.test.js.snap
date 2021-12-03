@@ -120,6 +120,8 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 
 .c5 {
   margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .c7 {
@@ -188,13 +190,13 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
             points="9 18 15 12 9 6"
           />
         </svg>
-        <span
+        <p
           aria-level="2"
           class="c4 c5"
           role="heading"
         >
           Références juridiques concernées :
-        </span>
+        </p>
       </div>
       <div
         class="c6"

@@ -3,6 +3,7 @@ import {
   Container,
   Heading,
   InputCheckbox,
+  Paragraph,
   Section,
   Text,
   Textarea,
@@ -81,11 +82,11 @@ function Feedback({ url = document ? document.location.href : "" }) {
               shift={theme.spacings.xmedium}
             >
               {isSatisfied === null ? (
-                <span role="heading" aria-level="2">
+                <Paragraph isLikeSpan role="heading" aria-level="2">
                   Avez-vous trouvé la réponse à votre question&nbsp;?
-                </span>
+                </Paragraph>
               ) : (
-                <span role="status">Merci pour votre réponse.</span>
+                <Paragraph role="status">Merci pour votre réponse.</Paragraph>
               )}
             </Heading>
             {isSatisfied === null && (

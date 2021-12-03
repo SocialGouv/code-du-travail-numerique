@@ -63,6 +63,8 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 
 .c12 {
   margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .c16 {
@@ -290,11 +292,11 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
               points="9 18 15 12 9 6"
             />
           </svg>
-          <span
+          <p
             class="c11 c12"
           >
             Voir le détail du calcul
-          </span>
+          </p>
         </div>
         <div
           class="c13"
@@ -892,11 +894,11 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
               points="9 18 15 12 9 6"
             />
           </svg>
-          <span
+          <p
             class="c11 c12"
           >
             Voir le détail du calcul
-          </span>
+          </p>
         </div>
         <div
           class="c13"
@@ -1202,6 +1204,8 @@ exports[`<Result /> renders legal indemnite 1`] = `
 
 .c12 {
   margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .c0 {
@@ -1384,11 +1388,11 @@ exports[`<Result /> renders legal indemnite 1`] = `
               points="9 18 15 12 9 6"
             />
           </svg>
-          <span
+          <p
             class="c11 c12"
           >
             Voir le détail du calcul
-          </span>
+          </p>
         </div>
         <div
           class="c13"
@@ -1986,11 +1990,11 @@ exports[`<Result /> renders legal indemnite 1`] = `
               points="9 18 15 12 9 6"
             />
           </svg>
-          <span
+          <p
             class="c11 c12"
           >
             Voir le détail du calcul
-          </span>
+          </p>
         </div>
         <div
           class="c13"

@@ -1,14 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TypeRemuneration /> should render 1`] = `
-.c2 {
+.c3 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c3 {
+.c1 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
+}
+
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,6 +27,16 @@ exports[`<TypeRemuneration /> should render 1`] = `
 }
 
 .c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c5 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -38,7 +57,7 @@ exports[`<TypeRemuneration /> should render 1`] = `
   appearance: none;
 }
 
-.c4:before {
+.c5:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -53,12 +72,12 @@ exports[`<TypeRemuneration /> should render 1`] = `
   content: "";
 }
 
-.c4:checked {
+.c5:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c4:checked:before {
+.c5:checked:before {
   display: block;
 }
 
@@ -70,8 +89,8 @@ exports[`<TypeRemuneration /> should render 1`] = `
   cursor: default;
 }
 
-.c1 {
-  font-weight: 600;
+.c2 {
+  font-weight: 600 !important;
 }
 
 @media (max-width:600px) {
@@ -84,54 +103,63 @@ exports[`<TypeRemuneration /> should render 1`] = `
   <p
     class="c0"
   >
-    <span
-      class="c1"
+    <p
+      class="c1 c2"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
-    </span>
+       
+      <span
+        class="c3"
+      >
+         (obligatoire)
+      </span>
+    </p>
   </p>
-  <label
-    class="c3"
-    for="typeRemuneration-amount"
+  <div
+    class="c4"
   >
     <input
-      class="c4"
+      class="c5"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
       value="total"
     />
-    <span>
-      En indiquant le
-      <strong>
-         montant total 
-      </strong>
-      des rémunérations.
-    </span>
-  </label>
-  <label
-    class="c3"
-    for="typeRemuneration-pay"
+    <label
+      class="c6"
+      for="typeRemuneration-amount"
+    >
+      <span>
+        En indiquant le
+        <strong>
+           montant total 
+        </strong>
+        des rémunérations.
+      </span>
+    </label>
+  </div>
+  <div
+    class="c4"
   >
     <input
-      class="c4"
+      class="c5"
       id="typeRemuneration-pay"
       name="typeRemuneration"
       type="radio"
       value="mensuel"
     />
-    <span>
-      En indiquant le
-      <strong>
-         salaire mensuel 
-      </strong>
-       pour chaque mois.
-    </span>
-  </label>
+    <label
+      class="c6"
+      for="typeRemuneration-pay"
+    >
+      <span>
+        En indiquant le
+        <strong>
+           salaire mensuel 
+        </strong>
+         pour chaque mois.
+      </span>
+    </label>
+  </div>
 </div>
 `;

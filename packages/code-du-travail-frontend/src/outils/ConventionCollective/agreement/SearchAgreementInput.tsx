@@ -30,7 +30,7 @@ export const SearchAgreementInput = React.forwardRef(
           Précisez et sélectionnez votre convention collective
         </SectionTitle>
         <form ref={ref} onSubmit={(event) => event.preventDefault()}>
-          <InlineLabel htmlFor="agreement-search">
+          <InlineLabel htmlFor="agreement-search" as="p">
             Nom de la convention collective ou son numéro d’identification{" "}
             <abbr title="Identifiant de la Convention Collective">IDCC</abbr>{" "}
             <Text fontWeight="400">(champ obligatoire)</Text>

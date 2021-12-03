@@ -81,6 +81,8 @@ exports[`<StepResult /> should render CC answer 1`] = `
 
 .c7 {
   margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .c11 {
@@ -128,6 +130,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
@@ -208,11 +211,11 @@ exports[`<StepResult /> should render CC answer 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -305,11 +308,11 @@ exports[`<StepResult /> should render CC answer 1`] = `
       <div
         class="c13"
       >
-        <span
+        <p
           class="c14"
         >
           Attention il peut exister une autre durée de préavis
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -383,6 +386,7 @@ exports[`<StepResult /> should render with no cc 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
@@ -471,11 +475,11 @@ exports[`<StepResult /> should render with no cc 1`] = `
       <div
         class="c7"
       >
-        <span
+        <p
           class="c8"
         >
           Attention il peut exister une autre durée de préavis
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -567,6 +571,7 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
@@ -664,11 +669,11 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
       <div
         class="c7"
       >
-        <span
+        <p
           class="c8"
         >
           Attention il peut exister une autre durée de préavis
-        </span>
+        </p>
       </div>
     </div>
     <p>

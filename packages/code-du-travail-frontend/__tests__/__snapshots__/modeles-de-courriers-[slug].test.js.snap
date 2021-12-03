@@ -2692,12 +2692,13 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     <span
                       class="c71"
                     />
-                    <span
+                    <p
                       aria-level="2"
+                      class="c66"
                       role="heading"
                     >
                       Avez-vous trouvé la réponse à votre question ?
-                    </span>
+                    </p>
                   </strong>
                   <p
                     class="c72"

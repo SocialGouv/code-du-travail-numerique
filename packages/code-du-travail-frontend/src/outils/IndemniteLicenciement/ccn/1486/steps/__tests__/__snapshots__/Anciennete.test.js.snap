@@ -17,11 +17,20 @@ exports[`<Anciennete /> renders AncienneteCE component with initialValues CATEGO
 `;
 
 exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
-.c6 {
+.c7 {
   color: #3e486e;
   line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
+}
+
+.c5 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
 }
 
 .c1 {
@@ -59,7 +68,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   text-align: left;
 }
 
-.c8 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -69,6 +78,16 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
 }
 
 .c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c10 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -89,7 +108,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   appearance: none;
 }
 
-.c9:before {
+.c10:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -104,12 +123,12 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   content: "";
 }
 
-.c9:checked {
+.c10:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c9:checked:before {
+.c10:checked:before {
   display: block;
 }
 
@@ -121,11 +140,11 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   cursor: default;
 }
 
-.c5 {
-  font-weight: 600;
+.c6 {
+  font-weight: 600 !important;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -207,46 +226,55 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   <p
     class="c4"
   >
-    <span
-      class="c5"
+    <p
+      class="c5 c6"
     >
       Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
-    </span>
-    <span
-      class="c6"
-    >
-       (obligatoire)
-    </span>
+       
+      <span
+        class="c7"
+      >
+         (obligatoire)
+      </span>
+    </p>
   </p>
   <div
-    class="c7"
+    class="c8"
   >
-    <label
-      class="c8"
-      for="hasBrancheContrat-oui"
+    <div
+      class="c9"
     >
       <input
-        class="c9"
+        class="c10"
         id="hasBrancheContrat-oui"
         name="hasBrancheContrat"
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
-      class="c8"
-      for="hasBrancheContrat-non"
+      <label
+        class="c11"
+        for="hasBrancheContrat-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
+      class="c9"
     >
       <input
-        class="c9"
+        class="c10"
         id="hasBrancheContrat-non"
         name="hasBrancheContrat"
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c11"
+        for="hasBrancheContrat-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
 </div>
 `;

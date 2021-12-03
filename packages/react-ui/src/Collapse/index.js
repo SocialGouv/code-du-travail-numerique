@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { AccordionArrow } from "../Accordion";
-import { Text } from "../Text";
+import { Paragraph } from "../Text";
 import { spacings } from "../theme.js";
 
 export const Collapse = ({ title, children, onClickHandler, textProps }) => {
@@ -61,8 +61,10 @@ const StyledLink = styled.div`
     color: ${({ theme }) => theme.paragraph};
   }
 `;
-const StyledText = styled(Text)`
+const StyledText = styled(Paragraph)`
   margin-left: ${spacings.small};
+  margin-top: 0;
+  margin-bottom: 0;
 `;
 Collapse.propTypes = {
   children: PropTypes.node.isRequired,

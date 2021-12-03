@@ -56,7 +56,7 @@ export const base = ({ handler }) => (
             <li>list</li>
             <li>!!!</li>
           </ul>
-          <b>ok</b>
+          <strong>ok</strong>
         </div>
       </Toast>
     </Section>

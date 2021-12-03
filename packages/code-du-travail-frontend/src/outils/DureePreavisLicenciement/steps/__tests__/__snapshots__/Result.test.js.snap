@@ -81,6 +81,8 @@ exports[`<StepResult /> should render with O duration 1`] = `
 
 .c7 {
   margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .c11 {
@@ -128,6 +130,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
@@ -206,11 +209,11 @@ exports[`<StepResult /> should render with O duration 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -348,11 +351,11 @@ exports[`<StepResult /> should render with O duration 1`] = `
       <div
         class="c13"
       >
-        <span
+        <p
           class="c14"
         >
           Attention il peut exister une durée plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -443,6 +446,8 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
 
 .c7 {
   margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .c11 {
@@ -490,6 +495,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
@@ -569,11 +575,11 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -661,11 +667,11 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
       <div
         class="c13"
       >
-        <span
+        <p
           class="c14"
         >
           Attention il peut exister une durée plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -765,6 +771,8 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 
 .c7 {
   margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .c11 {
@@ -812,6 +820,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
@@ -890,11 +899,11 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -982,11 +991,11 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
       <div
         class="c13"
       >
-        <span
+        <p
           class="c14"
         >
           Attention il peut exister une durée plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -1086,6 +1095,8 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 
 .c7 {
   margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .c11 {
@@ -1133,6 +1144,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
@@ -1212,11 +1224,11 @@ exports[`<StepResult /> should render with when no CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -1301,11 +1313,11 @@ exports[`<StepResult /> should render with when no CC 1`] = `
       <div
         class="c13"
       >
-        <span
+        <p
           class="c14"
         >
           Attention il peut exister une durée plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -1396,6 +1408,8 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 
 .c7 {
   margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .c11 {
@@ -1443,6 +1457,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
@@ -1522,11 +1537,11 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -1614,11 +1629,11 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       <div
         class="c13"
       >
-        <span
+        <p
           class="c14"
         >
           Attention il peut exister une durée plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>

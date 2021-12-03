@@ -3,9 +3,9 @@
 exports[`<Html /> should render 1`] = `
 <div>
   <div>
-    <b>
+    <strong>
       Hello
-    </b>
+    </strong>
      World
   </div>
 </div>
