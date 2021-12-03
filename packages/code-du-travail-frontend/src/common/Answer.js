@@ -1,4 +1,10 @@
-import { Alert, Container, theme, Wrapper } from "@socialgouv/cdtn-ui";
+import {
+  Alert,
+  Container,
+  Paragraph,
+  theme,
+  Wrapper,
+} from "@socialgouv/cdtn-ui";
 import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
@@ -63,7 +69,7 @@ function Answer({
             >
               {intro && (
                 <IntroWrapper variant="dark">
-                  <Html>{intro}</Html>
+                  <p>{intro}</p>
                 </IntroWrapper>
               )}
               {html && <Html>{html}</Html>}
@@ -72,7 +78,7 @@ function Answer({
           )}
           {additionalContent}
           <ShareContainer>
-            Partager ce contenu&nbsp;:&nbsp;
+            <Paragraph isLikeSpan>Partager ce contenu&nbsp;:&nbsp;</Paragraph>
             <Share title={title} metaDescription={metaDescription} />
           </ShareContainer>
           <Feedback url={router.asPath} />

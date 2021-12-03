@@ -35,9 +35,10 @@ const StyledLink = styled.a`
   align-items: flex-start;
   text-decoration: none;
 `;
-const StyledChildren = styled.span`
+const StyledChildren = styled.p`
   flex: 0 1 auto;
   width: auto;
+  all: unset;
 `;
 
 // eslint-disable-next-line no-unused-vars

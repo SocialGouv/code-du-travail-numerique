@@ -19,7 +19,7 @@ const sharedStyle = css`
   }}
 `;
 
-const propTypes = {
+const spanPropTypes = {
   children: PropTypes.node,
   fontSize: PropTypes.oneOf([
     "default",
@@ -35,15 +35,25 @@ const propTypes = {
   variant: PropTypes.oneOf(["primary", "secondary", "error", "placeholder"]),
 };
 
-const defaultProps = {
+const defaultSpanPropTypes = {
   fontSize: "default",
   fontWeight: "400",
 };
 
-Text.propTypes = propTypes;
-Text.defaultProps = defaultProps;
-Paragraph.propTypes = propTypes;
-Paragraph.defaultProps = defaultProps;
+const paragraphPropTypes = {
+  ...spanPropTypes,
+  isLikeSpan: PropTypes.bool,
+};
+
+const defaultParagraphPropTypes = {
+  ...defaultSpanPropTypes,
+  isLikeSpan: false,
+};
+
+Text.propTypes = spanPropTypes;
+Text.defaultProps = defaultSpanPropTypes;
+Paragraph.propTypes = paragraphPropTypes;
+Paragraph.defaultProps = defaultParagraphPropTypes;
 
 export function Text({ children, fontSize, fontWeight, variant, ...props }) {
   return (
@@ -62,6 +72,7 @@ export function Paragraph({
   fontSize,
   fontWeight,
   variant,
+  isLikeSpan,
   ...props
 }) {
   return (
@@ -70,6 +81,7 @@ export function Paragraph({
       $fontWeight={fontWeight}
       $fontSize={fontSize}
       $variant={variant}
+      $isLikeSpan={isLikeSpan}
     >
       {children}
     </P>
@@ -81,4 +93,10 @@ const Span = styled.span`
 `;
 const P = styled.p`
   ${sharedStyle}
+  ${({ $isLikeSpan }) =>
+    $isLikeSpan &&
+    css`
+      all: revert;
+      margin: 0;
+    `}
 `;

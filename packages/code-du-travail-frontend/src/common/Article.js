@@ -1,6 +1,7 @@
 import {
   Container,
   PageTitle,
+  Paragraph,
   Subtitle as Suptitle,
   theme,
   Wrapper,
@@ -29,7 +30,7 @@ const Article = ({
           <ShareContainer>
             <Share title={title} metaDescription={metaDescription} />
           </ShareContainer>
-          {suptitle && <OrderedSuptitle>{suptitle}</OrderedSuptitle>}
+          {suptitle && <OrderedSuptitle as="p">{suptitle}</OrderedSuptitle>}
           <StyledPageTitle
             subtitle={subtitle}
             stripe="left"
@@ -40,7 +41,7 @@ const Article = ({
           <Meta>
             {source &&
               (source.url ? (
-                <Span>
+                <Paragraph isLikeSpan>
                   Source:{" "}
                   <A11yLink
                     href={source.url}
@@ -49,18 +50,32 @@ const Article = ({
                   >
                     {source.name}
                   </A11yLink>
-                </Span>
+                  {source && date && (
+                    <HideOnMobile aria-hidden="true">
+                      &nbsp;-&nbsp;
+                    </HideOnMobile>
+                  )}
+                  {date && (
+                    <StyledSpan>
+                      {dateLabel}&nbsp;:&nbsp;{date}
+                    </StyledSpan>
+                  )}
+                </Paragraph>
               ) : (
-                <Span>Source: {source.name}</Span>
+                <Paragraph isLikeSpan>
+                  <StyledSpan>Source: {source.name}</StyledSpan>
+                  {source && date && (
+                    <HideOnMobile aria-hidden="true">
+                      &nbsp;-&nbsp;
+                    </HideOnMobile>
+                  )}
+                  {date && (
+                    <StyledSpan>
+                      {dateLabel}&nbsp;:&nbsp;{date}
+                    </StyledSpan>
+                  )}
+                </Paragraph>
               ))}
-            {source && date && (
-              <HideOnMobile aria-hidden="true">&nbsp;-&nbsp;</HideOnMobile>
-            )}
-            {date && (
-              <Span>
-                {dateLabel}&nbsp;:&nbsp;{date}
-              </Span>
-            )}
           </Meta>
         </Flex>
         <Content>{children}</Content>
@@ -132,7 +147,7 @@ const OrderedSuptitle = styled(Suptitle)`
 
 const StyledPageTitle = styled(PageTitle)`
   order: 3;
-  margin-bottom: ${spacings.small};
+  margin-bottom: ${spacings.xsmall};
   outline: none;
 `;
 
@@ -159,7 +174,7 @@ const HideOnMobile = styled.span`
   }
 `;
 
-const Span = styled.span`
+const StyledSpan = styled.span`
   @media (max-width: ${breakpoints.mobile}) {
     display: block;
   }
