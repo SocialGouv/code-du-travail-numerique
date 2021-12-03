@@ -582,6 +582,7 @@ exports[`<Home /> should render 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .c35 {
@@ -2549,7 +2550,7 @@ exports[`<Home /> should render 1`] = `
                         </h3>
                       </div>
                     </div>
-                    <div
+                    <p
                       class="c52"
                     >
                       <div
@@ -2578,7 +2579,7 @@ exports[`<Home /> should render 1`] = `
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </p>
                   </a>
                 </div>
                 <div
@@ -2648,7 +2649,7 @@ exports[`<Home /> should render 1`] = `
                         </h3>
                       </div>
                     </div>
-                    <div
+                    <p
                       class="c52"
                     >
                       <div
@@ -2677,7 +2678,7 @@ exports[`<Home /> should render 1`] = `
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </p>
                   </a>
                 </div>
                 <div
@@ -2755,7 +2756,7 @@ exports[`<Home /> should render 1`] = `
                         </h3>
                       </div>
                     </div>
-                    <div
+                    <p
                       class="c52"
                     >
                       <div
@@ -2784,7 +2785,7 @@ exports[`<Home /> should render 1`] = `
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </p>
                   </a>
                 </div>
                 <div
@@ -2856,7 +2857,7 @@ exports[`<Home /> should render 1`] = `
                         </h2>
                       </div>
                     </div>
-                    <div
+                    <p
                       class="c52"
                     >
                       <div
@@ -2885,7 +2886,7 @@ exports[`<Home /> should render 1`] = `
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </p>
                   </a>
                 </div>
               </div>
@@ -2942,11 +2943,11 @@ exports[`<Home /> should render 1`] = `
                 Besoin de plus d’informations ?
               </strong>
             </div>
-            <div
+            <p
               class="c66 c67"
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
-            </div>
+            </p>
             <button
               class="c10 c68"
             >

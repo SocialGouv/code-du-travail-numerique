@@ -19,6 +19,7 @@ exports[`<ArrowLink /> renders an arrow on the left 1`] = `
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
+  all: unset;
 }
 
 .c4 {
@@ -56,11 +57,11 @@ exports[`<ArrowLink /> renders an arrow on the left 1`] = `
   <a
     class="c0 c1"
   >
-    <span
+    <p
       class="c2"
     >
       Lorem Ipsum
-    </span>
+    </p>
     <svg
       aria-hidden="true"
       class="c3 c4"
@@ -96,6 +97,7 @@ exports[`<ArrowLink /> renders an arrow on the right 1`] = `
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
+  all: unset;
 }
 
 .c4 {
@@ -133,11 +135,11 @@ exports[`<ArrowLink /> renders an arrow on the right 1`] = `
   <a
     class="c0 c1"
   >
-    <span
+    <p
       class="c2"
     >
       Lorem Ipsum
-    </span>
+    </p>
     <svg
       aria-hidden="true"
       class="c3 c4"

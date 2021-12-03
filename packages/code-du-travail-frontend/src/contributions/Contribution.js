@@ -6,6 +6,7 @@ import {
   icons,
   IconStripe,
   InsertTitle,
+  Paragraph,
   Section,
   theme,
   Title,
@@ -90,10 +91,12 @@ const Contribution = ({ answers, content }) => {
           <Badge />
           <CustomWrapper variant="dark">
             <IconStripe icon={icons.Custom}>
-              <StyledInsertTitle>Page personnalisable</StyledInsertTitle>
+              <StyledInsertTitle as="p">Page personnalisable</StyledInsertTitle>
               {isConventionDetected || isConventionalAnswer ? (
-                <>
-                  Cette page a été personnalisée avec l’ajout des {}
+                <Paragraph isLikeSpan>
+                  <span>
+                    Cette page a été personnalisée avec l’ajout des {}
+                  </span>
                   {isConventionalAnswer ? (
                     <a href="#customisation">
                       informations de la convention collective :{" "}
@@ -105,15 +108,17 @@ const Contribution = ({ answers, content }) => {
                       {convention.shortTitle}
                     </a>
                   )}
-                </>
+                </Paragraph>
               ) : (
-                <>
-                  Le contenu de cette page peut être personnalisé en fonction de
-                  votre situation.
+                <Paragraph isLikeSpan>
+                  <span>
+                    Le contenu de cette page peut être personnalisé en fonction
+                    de votre situation.
+                  </span>
                   <br />
                   <a href="#customisation">Voir en bas de page</a> pour
                   renseigner votre convention collective.
-                </>
+                </Paragraph>
               )}
             </IconStripe>
           </CustomWrapper>

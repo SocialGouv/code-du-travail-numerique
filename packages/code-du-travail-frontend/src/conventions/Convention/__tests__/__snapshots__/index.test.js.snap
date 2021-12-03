@@ -131,6 +131,7 @@ exports[`<Convention /> renders 1`] = `
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
+  all: unset;
 }
 
 .c20 {
@@ -529,6 +530,7 @@ exports[`<Convention /> renders 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .c47 {
@@ -1086,11 +1088,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 5-11
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -1256,11 +1258,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 6.121
-                              </span>
+                              </p>
                             </a>
                           </li>
                           <li>
@@ -1283,11 +1285,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 6.21
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -1450,11 +1452,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article  5-12
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -1669,11 +1671,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.11
-                              </span>
+                              </p>
                             </a>
                           </li>
                           <li>
@@ -1696,11 +1698,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.13
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -1833,11 +1835,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.11
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -1954,11 +1956,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </span>
+                              </p>
                             </a>
                           </li>
                           <li>
@@ -1981,11 +1983,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -2102,11 +2104,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </span>
+                              </p>
                             </a>
                           </li>
                           <li>
@@ -2129,11 +2131,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -2250,11 +2252,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.12
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -2412,11 +2414,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.2
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -2608,11 +2610,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 2-4
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -2781,11 +2783,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.4
-                              </span>
+                              </p>
                             </a>
                           </li>
                           <li>
@@ -2808,11 +2810,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 11-2
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -3000,11 +3002,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 2-3
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -3121,11 +3123,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 2-3
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -3332,11 +3334,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 2-3
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -3625,11 +3627,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 5-25
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -3772,11 +3774,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 5-24
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -4242,11 +4244,11 @@ exports[`<Convention /> renders 1`] = `
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <span
+                                  <p
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-11
-                                  </span>
+                                  </p>
                                 </a>
                               </li>
                               <li>
@@ -4269,11 +4271,11 @@ exports[`<Convention /> renders 1`] = `
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <span
+                                  <p
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-12
-                                  </span>
+                                  </p>
                                 </a>
                               </li>
                               <li>
@@ -4296,11 +4298,11 @@ exports[`<Convention /> renders 1`] = `
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <span
+                                  <p
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-13
-                                  </span>
+                                  </p>
                                 </a>
                               </li>
                               <li>
@@ -4323,11 +4325,11 @@ exports[`<Convention /> renders 1`] = `
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <span
+                                  <p
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-14
-                                  </span>
+                                  </p>
                                 </a>
                               </li>
                               <li>
@@ -4350,11 +4352,11 @@ exports[`<Convention /> renders 1`] = `
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <span
+                                  <p
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-15
-                                  </span>
+                                  </p>
                                 </a>
                               </li>
                             </ul>
@@ -4504,11 +4506,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 6-11
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -4722,19 +4724,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 1-4
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Salaires minimaux
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -4752,19 +4754,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 4-1
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Salaire mensuel
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -4782,19 +4784,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 4-2
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Déduction des heures non travaillées
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -4812,19 +4814,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-8
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Barèmes de salaires minimaux
-                      </div>
+                      </p>
                     </a>
                   </div>
                 </div>
@@ -4916,19 +4918,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-13
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Contingent d'heures supplémentaires non soumis à autorisation
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -4946,19 +4948,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-14
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Heures supplémentaires exceptionnelles
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -4976,19 +4978,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-15
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Plafonds
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5006,19 +5008,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-16
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Définition de la durée du travail
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5036,19 +5038,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-17
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Majoration pour heures supplémentaires.
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5066,19 +5068,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-18
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Equivalences et dérogations permanentes
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5096,19 +5098,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-21
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Semaine de travail en 5 jours
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5126,19 +5128,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-22
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Exceptions à la semaine de travail en 5 jours
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5156,19 +5158,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-24
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Horaires individualisés
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5186,19 +5188,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-25
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Horaires à temps partiel
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5216,19 +5218,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-28
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Récupération des heures perdues pour intempéries
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5246,19 +5248,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-29
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Cas des chefs d'équipe
-                      </div>
+                      </p>
                     </a>
                   </div>
                 </div>
@@ -5350,19 +5352,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-1
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Préambule
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5380,19 +5382,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-2
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Définitions générales des critères et des niveaux
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5410,19 +5412,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-3
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Coefficients hiérarchiques
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5440,19 +5442,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-4
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Prise en compte des diplômes professionnels bâtiment
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5470,19 +5472,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-5
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Polyvalence
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5500,19 +5502,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-6
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Evolution de carrière
-                      </div>
+                      </p>
                     </a>
                   </div>
                   <div
@@ -5530,19 +5532,19 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-7
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
-                      <div
+                      <p
                         class="c44"
                       >
                         Suivi de l'application dans l'entreprise
-                      </div>
+                      </p>
                     </a>
                   </div>
                 </div>

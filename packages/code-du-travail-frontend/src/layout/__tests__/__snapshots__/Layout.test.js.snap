@@ -1190,11 +1190,11 @@ exports[`<Layout /> should render 1`] = `
                 Besoin de plus d’informations ?
               </strong>
             </div>
-            <div
+            <p
               class="c31 c32"
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
-            </div>
+            </p>
             <button
               class="c33"
             >

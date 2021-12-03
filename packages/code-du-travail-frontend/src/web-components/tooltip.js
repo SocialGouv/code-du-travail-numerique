@@ -51,6 +51,7 @@ class WebComponentsTooltip extends LitElement {
         border: 1px solid var(--color-border);
         border-radius: 0.6rem;
         box-shadow: 0 1rem 2rem rgba(121, 148, 212, 0.4);
+        margin: 0;
       }
 
       @media (max-width: 600px) {
@@ -76,14 +77,14 @@ class WebComponentsTooltip extends LitElement {
       @mouseleave="${this.hide}"
     >
       <slot></slot>
-      <div
+      <p
         id="tooltip-definition"
         class="content${this.visible ? " visible" : ""}"
         role="tooltip"
         aria-hidden="${!this.visible}"
       >
         ${decodeURIComponent(this.content).trim()}
-      </div>
+      </p>
     </div>`;
   }
 

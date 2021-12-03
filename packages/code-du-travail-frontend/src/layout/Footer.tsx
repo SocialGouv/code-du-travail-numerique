@@ -42,7 +42,7 @@ const Footer = (): JSX.Element => {
             >
               Besoin de plus d’informations&nbsp;?
             </Title>
-            <StyledContainer narrow noPadding>
+            <StyledContainer narrow noPadding as="p">
               Les services du ministère du Travail en région informent,
               conseillent et orientent les salariés et les employeurs du secteur
               privé sur leurs questions en droit du travail.

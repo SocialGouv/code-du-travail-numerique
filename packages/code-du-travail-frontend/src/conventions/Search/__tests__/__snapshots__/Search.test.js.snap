@@ -598,7 +598,7 @@ exports[`<Search /> should render 1`] = `
 `;
 
 exports[`<Search /> should show no results when no result 1`] = `
-.c7 {
+.c8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -643,10 +643,19 @@ exports[`<Search /> should show no results when no result 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c7:focus,
-.c7:hover,
-.c7:active {
+.c8:focus,
+.c8:hover,
+.c8:active {
   color: #f66663;
+}
+
+.c5 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
 }
 
 .c1 {
@@ -755,16 +764,16 @@ exports[`<Search /> should show no results when no result 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c6 {
   margin-top: 2.4rem;
 }
 
-.c6 {
+.c7 {
   display: block;
   margin-top: 1.6rem;
 }
 
-.c8 {
+.c9 {
   color: #7994d4;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -775,13 +784,13 @@ exports[`<Search /> should show no results when no result 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c7 {
+  .c8 {
     display: none;
   }
 }
@@ -821,21 +830,23 @@ exports[`<Search /> should show no results when no result 1`] = `
   <div
     class="c4"
   >
-    <div>
+    <p
+      class="c5"
+    >
       Aucun résultat n’a été trouvé.
-    </div>
+    </p>
   </div>
   <p
-    class="c5"
+    class="c6"
   >
     Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
     <span
-      class="c6"
+      class="c7"
     >
       Consultez
        
       <button
-        class="c7 c8"
+        class="c8 c9"
         type="button"
       >
         notre aide

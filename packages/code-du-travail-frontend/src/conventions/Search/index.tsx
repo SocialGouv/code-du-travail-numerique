@@ -1,4 +1,4 @@
-import { Button, Input, Label, theme } from "@socialgouv/cdtn-ui";
+import { Button, Input, Label, Paragraph, theme } from "@socialgouv/cdtn-ui";
 import debounce from "debounce-promise";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
@@ -64,7 +64,9 @@ const Search = ({ onSelectConvention }) => {
           {status === "error" && (
             <div>Le service de recherche est indisponible.</div>
           )}
-          {status === "empty" && <div>Aucun résultat n’a été trouvé.</div>}
+          {status === "empty" && (
+            <Paragraph isLikeSpan>Aucun résultat n’a été trouvé.</Paragraph>
+          )}
           {status === "success" && (
             <>
               {conventions.length !== 0 && (

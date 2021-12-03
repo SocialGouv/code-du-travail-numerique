@@ -15,7 +15,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   max-width: 74rem;
 }
 
-.c56 {
+.c55 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -52,7 +52,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c52 {
+.c51 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -60,15 +60,15 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c52 > *:first-child {
+.c51 > *:first-child {
   margin-top: 0;
 }
 
-.c52 > *:last-child {
+.c51 > *:last-child {
   margin-bottom: 0;
 }
 
-.c57 {
+.c56 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -76,11 +76,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   background-color: #fff;
 }
 
-.c57 > *:first-child {
+.c56 > *:first-child {
   margin-top: 0;
 }
 
-.c57 > *:last-child {
+.c56 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -147,7 +147,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c54 {
+.c53 {
   position: absolute;
   top: 0;
   right: 0;
@@ -158,7 +158,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c54:before {
+.c53:before {
   position: absolute;
   display: block;
   width: 0;
@@ -169,7 +169,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   content: "";
 }
 
-.c55 {
+.c54 {
   position: absolute;
   top: 0;
   right: 0;
@@ -293,7 +293,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   color: #f66663;
 }
 
-.c60 {
+.c59 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -331,16 +331,16 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   will-change: transform;
 }
 
-.c60:link,
-.c60:visited {
+.c59:link,
+.c59:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c60:not([disabled]):hover,
-.c60:not([disabled]):active,
-.c60:not([disabled]):focus {
+.c59:not([disabled]):hover,
+.c59:not([disabled]):active,
+.c59:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -349,7 +349,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   border-color: #f99593;
 }
 
-.c60[disabled] {
+.c59[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -357,7 +357,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c65 {
+.c64 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -395,16 +395,16 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   will-change: transform;
 }
 
-.c65:link,
-.c65:visited {
+.c64:link,
+.c64:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c65:not([disabled]):hover,
-.c65:not([disabled]):active,
-.c65:not([disabled]):focus {
+.c64:not([disabled]):hover,
+.c64:not([disabled]):active,
+.c64:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -413,7 +413,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   border-color: #f99593;
 }
 
-.c65[disabled] {
+.c64[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -635,6 +635,15 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   width: 5.4rem;
   height: 5.4rem;
   color: #7994d4;
+}
+
+.c66 {
+  color: #3e486e;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 400;
+  all: revert;
+  margin: 0;
 }
 
 .c42 {
@@ -887,7 +896,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   -webkit-order: 3;
   -ms-flex-order: 3;
   order: 3;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   outline: none;
 }
 
@@ -902,7 +911,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   font-size: 1.4rem;
 }
 
-.c51 {
+.c50 {
   margin: 3.2rem 0 0 0;
 }
 
@@ -1019,19 +1028,19 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   margin-left: 4rem;
 }
 
-.c53 {
+.c52 {
   margin: 1.6rem auto;
 }
 
-.c53 div > *:first-child {
+.c52 div > *:first-child {
   margin-top: 0;
 }
 
-.c53 div > *:last-child {
+.c52 div > *:last-child {
   margin-bottom: 0;
 }
 
-.c66 {
+.c65 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1383,32 +1392,32 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   margin-top: 6rem;
 }
 
-.c59 {
+.c58 {
   position: absolute;
   top: -1rem;
   right: 2rem;
 }
 
-.c58 {
+.c57 {
   position: relative;
   padding-top: 3.2rem;
 }
 
-.c63 {
+.c62 {
   margin-top: 2rem;
   margin-bottom: 3.2rem;
 }
 
-.c61 {
+.c60 {
   width: 3rem;
 }
 
-.c62 {
+.c61 {
   margin-top: -2rem;
   font-size: 1.4rem;
 }
 
-.c64 {
+.c63 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1446,7 +1455,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c56 {
+  .c55 {
     padding: 2.4rem 0;
   }
 }
@@ -1471,26 +1480,26 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c52 {
+  .c51 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c52 {
+  .c51 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c57 {
+  .c56 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c57 {
+  .c56 {
     padding: 0 5pt;
     border: none;
   }
@@ -1540,31 +1549,31 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c60 {
+  .c59 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c60 {
+  .c59 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c65 {
+  .c64 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c65 {
+  .c64 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c65 {
+  .c64 {
     padding: 0 3rem;
   }
 }
@@ -1752,14 +1761,8 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c51 {
-    margin-top: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c50 {
-    display: block;
+    margin-top: 1.6rem;
   }
 }
 
@@ -1836,7 +1839,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c66 {
+  .c65 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
@@ -1845,7 +1848,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 }
 
 @media print {
-  .c66 {
+  .c65 {
     display: none;
   }
 }
@@ -2400,11 +2403,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     </div>
                   </div>
                 </div>
-                <span
+                <p
                   class="c43 c44"
                 >
                   theme
-                </span>
+                </p>
                 <header
                   class="c45 c46"
                 >
@@ -2419,31 +2422,23 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 </header>
                 <div
                   class="c49"
-                >
-                  <span
-                    class="c50"
-                  >
-                    Mis à jour le
-                     : 
-                    01/01/2020
-                  </span>
-                </div>
+                />
               </div>
               <div
-                class="c51"
+                class="c50"
               >
                 <div
-                  class="c52 c53"
+                  class="c51 c52"
                 >
-                  <div>
+                  <p>
                     un description
-                  </div>
+                  </p>
                 </div>
                 <div
-                  class="c54"
+                  class="c53"
                 >
                   <div
-                    class="c55"
+                    class="c54"
                   >
                     <svg
                       aria-hidden="true"
@@ -2467,21 +2462,21 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="c56"
+                  class="c55"
                 >
                   <div
-                    class="c57 c58"
+                    class="c56 c57"
                   >
                     <div
-                      class="c59"
+                      class="c58"
                     >
                       <a
-                        class="c60 no-after"
+                        class="c59 no-after"
                         href="azure.url/cdtn/filename.pdf"
                       >
                         <svg
                           aria-hidden="true"
-                          class="c61"
+                          class="c60"
                           fill="none"
                           viewBox="0 0 32 32"
                           xmlns="http://www.w3.org/2000/svg"
@@ -2518,7 +2513,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </div>
                 </div>
                 <p
-                  class="c62"
+                  class="c61"
                 >
                   Type: Modèle de document - Format: 
                   pdf
@@ -2528,16 +2523,16 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   Ko
                    
                 </p>
-                <div
-                  class="c52 c63"
+                <p
+                  class="c51 c62"
                 >
                   Attention, chaque modèle de document proposé est à personnaliser selon votre situation et est susceptible d’évoluer suite à des changements de règlementation. Assurez-vous d’avoir la dernière version mise à jour avant toute utilisation.
-                </div>
+                </p>
                 <p
-                  class="c64"
+                  class="c63"
                 >
                   <a
-                    class="c65 no-after"
+                    class="c64 no-after"
                     href="azure.url/cdtn/filename.pdf"
                   >
                     Télécharger le modèle (
@@ -2547,7 +2542,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     Ko)  
                     <svg
                       aria-hidden="true"
-                      class="c61"
+                      class="c60"
                       fill="none"
                       viewBox="0 0 32 32"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2563,9 +2558,13 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </div>
           </div>
           <div
-            class="c4 c66"
+            class="c4 c65"
           >
-            Partager ce contenu : 
+            <p
+              class="c66"
+            >
+              Partager ce contenu : 
+            </p>
             <div
               class="c37"
             >
@@ -2676,13 +2675,13 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </div>
           </div>
           <div
-            class="c56 c67"
+            class="c55 c67"
           >
             <div
               class="c4"
             >
               <div
-                class="c57"
+                class="c56"
               >
                 <div
                   class="c68"
@@ -2728,7 +2727,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
         class="c76"
       >
         <div
-          class="c56 c77"
+          class="c55 c77"
         >
           <div
             class="c4"
@@ -2747,11 +2746,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 Besoin de plus d’informations ?
               </strong>
             </div>
-            <div
+            <p
               class="c81 c82"
             >
               Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
-            </div>
+            </p>
             <button
               class="c83"
             >
@@ -2772,7 +2771,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c56 c85"
+          class="c55 c85"
         >
           <div
             class="c4 c86"
