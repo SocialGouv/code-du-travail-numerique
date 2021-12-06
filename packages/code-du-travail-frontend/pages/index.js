@@ -7,6 +7,7 @@ import {
   Grid,
   icons,
   PageTitle,
+  Paragraph,
   Section,
   theme,
 } from "@socialgouv/cdtn-ui";
@@ -27,10 +28,6 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-const StyledParagraph = styled.p`
-  margin: 0;
-`;
-
 export const DocumentsTile = (
   <Link href={`/${getRouteBySource(SOURCES.LETTERS)}`} passHref>
     <CallToActionTile
@@ -40,10 +37,10 @@ export const DocumentsTile = (
       title="Modèles de documents"
       titleTagType="h2"
     >
-      <StyledParagraph>
+      <Paragraph noMargin>
         Téléchargez et utilisez des modèles de lettres et de documents
         personnalisables
-      </StyledParagraph>
+      </Paragraph>
     </CallToActionTile>
   </Link>
 );
@@ -94,7 +91,7 @@ const Home = ({ themes = [], highlights = [] }) => (
                     icon={icons[icon]}
                     title={title}
                   >
-                    <StyledParagraph>{description}</StyledParagraph>
+                    <Paragraph noMargin>{description}</Paragraph>
                   </CallToActionTile>
                 </Link>
               );

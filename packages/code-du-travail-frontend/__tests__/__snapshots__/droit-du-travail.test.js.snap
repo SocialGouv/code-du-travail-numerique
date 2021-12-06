@@ -1054,6 +1054,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
   color: #7994d4;
 }
 
+.c41 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+}
+
 .c105 {
   margin: 0;
   padding: 0;
@@ -1554,10 +1561,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
 .c24 {
   position: relative;
   margin-top: 6rem;
-}
-
-.c41 {
-  margin: 0;
 }
 
 @media (max-width:600px) {

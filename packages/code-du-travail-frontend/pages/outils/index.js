@@ -4,11 +4,11 @@ import {
   Grid,
   icons,
   PageTitle,
+  Paragraph,
   Section,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
-import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
@@ -43,7 +43,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
                     icon={icons[icon]}
                     titleTagType="h2"
                   >
-                    <StyledP>{description}</StyledP>
+                    <Paragraph noMargin>{description}</Paragraph>
                   </CallToActionTile>
                 </Link>
               );
@@ -63,7 +63,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
                 target="_blank"
                 className="no-after"
               >
-                <StyledP>{description}</StyledP>
+                <Paragraph noMargin>{description}</Paragraph>
               </CallToActionTile>
             )
           )}
@@ -81,7 +81,3 @@ export async function getServerSideProps() {
 }
 
 export default Outils;
-
-const StyledP = styled.p`
-  margin: 0;
-`;

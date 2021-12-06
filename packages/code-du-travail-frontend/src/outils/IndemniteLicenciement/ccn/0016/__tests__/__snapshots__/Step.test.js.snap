@@ -3,7 +3,6 @@
 exports[`<Step /> should ask detail about categories 1`] = `
 .c10 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -494,7 +493,6 @@ exports[`<Step /> should ask detail about categories 1`] = `
 exports[`<Step /> should ask detail about retirement 1`] = `
 .c7 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -967,7 +965,6 @@ exports[`<Step /> should ask detail about retirement 1`] = `
 exports[`<Step /> should render 1`] = `
 .c7 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }

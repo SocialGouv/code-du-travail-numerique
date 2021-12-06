@@ -4,6 +4,7 @@ import {
   IconStripe,
   InsertTitle,
   PageTitle,
+  Paragraph,
   Section,
   theme,
   Title,
@@ -66,12 +67,12 @@ const DroitDuTravail = ({ hash }) => (
                 <StyledInsertTitle>
                   Le droit du travail, ce n’est pas…
                 </StyledInsertTitle>
-                <StyledP>
+                <Paragraph noMargin>
                   Le droit du travail ne concerne pas les travailleurs qui sont
                   soumis au droit public (par exemple, les fonctionnaires), les
                   travailleurs indépendants (artisan, commerçant, professions
                   libérales…), les bénévoles et les dirigeants d’entreprise.
-                </StyledP>
+                </Paragraph>
               </IconStripe>
             </Wrapper>
           </Wrapper>
@@ -101,8 +102,4 @@ const DesktopOnlyLineBreak = styled.br`
   @media (max-width: ${breakpoints.desktop}) {
     display: none;
   }
-`;
-
-const StyledP = styled.p`
-  margin: 0;
 `;

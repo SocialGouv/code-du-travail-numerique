@@ -419,6 +419,13 @@ exports[`<Home /> should render 1`] = `
   color: #7994d4;
 }
 
+.c54 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+}
+
 .c76 {
   margin: 0;
   padding: 0;
@@ -1047,10 +1054,6 @@ exports[`<Home /> should render 1`] = `
 
 .c24 {
   max-width: 77rem;
-  margin: 0;
-}
-
-.c54 {
   margin: 0;
 }
 
