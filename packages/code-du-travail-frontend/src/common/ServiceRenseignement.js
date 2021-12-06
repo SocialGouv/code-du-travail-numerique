@@ -100,7 +100,7 @@ function ServiceRenseignement() {
         )}
       />
       {departementData && <DepartementLink departement={departementData} />}
-      <Small>
+      <StyledDiv>
         <p>
           Attention, ces services délivrent une information juridique, ils ne
           sont pas compétents pour :
@@ -111,7 +111,7 @@ function ServiceRenseignement() {
           <li>{"les calculs de droit au chômage"}</li>
           <li>{"vous renseigner sur les cotisations sociales"}</li>
         </ul>
-      </Small>
+      </StyledDiv>
     </>
   );
 }
@@ -222,7 +222,8 @@ const StyledSearchIcon = styled(SearchIcon)`
   height: 3rem;
 `;
 
-const Small = styled.small`
+const StyledDiv = styled.div`
   display: block;
+  font-size: ${fonts.sizes.tiny};
   margin-top: ${spacings.medium};
 `;
