@@ -4,6 +4,7 @@ import {
   IconStripe,
   InsertTitle,
   PageTitle,
+  Paragraph,
   Section,
   theme,
   Title,
@@ -27,11 +28,11 @@ const DroitDuTravail = ({ hash }) => (
       <Container>
         <PageTitle
           subtitle={
-            <span>
+            <>
               Retrouvez la définition du droit du travail, les textes qui en
               sont à l’origine <DesktopOnlyLineBreak />
               ainsi que leur articulation.
-            </span>
+            </>
           }
         >
           Le droit du travail
@@ -41,11 +42,13 @@ const DroitDuTravail = ({ hash }) => (
             <Title shift={spacings.larger}>
               Qu’est-ce que le droit du travail&nbsp;?
             </Title>
-            <strong>
-              Le droit du travail est l’ensemble des règles juridiques
-              applicables aux relations entre employeurs privés et salariés, à
-              l’occasion du travail.
-            </strong>
+            <p>
+              <strong>
+                Le droit du travail est l’ensemble des règles juridiques
+                applicables aux relations entre employeurs privés et salariés, à
+                l’occasion du travail.
+              </strong>
+            </p>
             <p>
               Le droit du travail organise les relations professionnelles de
               travail entre l’employeur et le salarié individuellement et la
@@ -64,12 +67,12 @@ const DroitDuTravail = ({ hash }) => (
                 <StyledInsertTitle>
                   Le droit du travail, ce n’est pas…
                 </StyledInsertTitle>
-                <StyledP>
+                <Paragraph noMargin>
                   Le droit du travail ne concerne pas les travailleurs qui sont
                   soumis au droit public (par exemple, les fonctionnaires), les
                   travailleurs indépendants (artisan, commerçant, professions
                   libérales…), les bénévoles et les dirigeants d’entreprise.
-                </StyledP>
+                </Paragraph>
               </IconStripe>
             </Wrapper>
           </Wrapper>
@@ -99,8 +102,4 @@ const DesktopOnlyLineBreak = styled.br`
   @media (max-width: ${breakpoints.desktop}) {
     display: none;
   }
-`;
-
-const StyledP = styled.p`
-  margin: 0;
 `;

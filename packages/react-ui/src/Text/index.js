@@ -9,7 +9,6 @@ const sharedStyle = css`
     return css`
       color: ${(props) =>
         props.$variant ? theme[props.$variant] : theme.paragraph};
-      line-height: ${fonts.lineHeightTitle};
       font-size: ${(props) =>
         props.$fontSize && props.$fontSize.startsWith("h")
           ? fonts.sizes.headings[props.$fontSize.replace("h", "")]
@@ -32,6 +31,7 @@ const spanPropTypes = {
     "hlarge",
   ]),
   fontWeight: PropTypes.oneOf(["300", "400", "500", "600", "700"]),
+  noMargin: PropTypes.bool,
   variant: PropTypes.oneOf(["primary", "secondary", "error", "placeholder"]),
 };
 
@@ -42,12 +42,12 @@ const defaultSpanPropTypes = {
 
 const paragraphPropTypes = {
   ...spanPropTypes,
-  isLikeSpan: PropTypes.bool,
+  noMargin: PropTypes.bool,
 };
 
 const defaultParagraphPropTypes = {
   ...defaultSpanPropTypes,
-  isLikeSpan: false,
+  noMargin: false,
 };
 
 Text.propTypes = spanPropTypes;
@@ -67,12 +67,13 @@ export function Text({ children, fontSize, fontWeight, variant, ...props }) {
     </Span>
   );
 }
+
 export function Paragraph({
   children,
   fontSize,
   fontWeight,
+  noMargin,
   variant,
-  isLikeSpan,
   ...props
 }) {
   return (
@@ -80,8 +81,8 @@ export function Paragraph({
       {...props}
       $fontWeight={fontWeight}
       $fontSize={fontSize}
+      $noMargin={noMargin}
       $variant={variant}
-      $isLikeSpan={isLikeSpan}
     >
       {children}
     </P>
@@ -93,10 +94,9 @@ const Span = styled.span`
 `;
 const P = styled.p`
   ${sharedStyle}
-  ${({ $isLikeSpan }) =>
-    $isLikeSpan &&
+  ${({ $noMargin }) =>
+    $noMargin &&
     css`
-      all: revert;
       margin: 0;
     `}
 `;

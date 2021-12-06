@@ -3,7 +3,6 @@
 exports[`<SelectQuestion /> should render with default value 1`] = `
 .c3 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -211,7 +210,6 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
 .c3 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }

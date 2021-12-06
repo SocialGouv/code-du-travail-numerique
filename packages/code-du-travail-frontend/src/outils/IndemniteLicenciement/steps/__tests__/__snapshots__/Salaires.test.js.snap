@@ -3,7 +3,6 @@
 exports[`<StepSalaires /> should render lastSalaires 1`] = `
 .c2 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -887,7 +886,6 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
 exports[`<StepSalaires /> should render same salaire 1`] = `
 .c2 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -1353,14 +1351,12 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
 
 .c2 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
 .c9 {
   color: #7994d4;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 400;
 }

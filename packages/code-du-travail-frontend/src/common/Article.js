@@ -41,7 +41,7 @@ const Article = ({
           <Meta>
             {source &&
               (source.url ? (
-                <Paragraph isLikeSpan>
+                <Paragraph noMargin>
                   Source:{" "}
                   <A11yLink
                     href={source.url}
@@ -62,7 +62,7 @@ const Article = ({
                   )}
                 </Paragraph>
               ) : (
-                <Paragraph isLikeSpan>
+                <Paragraph noMargin>
                   <StyledSpan>Source: {source.name}</StyledSpan>
                   {source && date && (
                     <HideOnMobile aria-hidden="true">

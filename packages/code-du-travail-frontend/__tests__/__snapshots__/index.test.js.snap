@@ -7,7 +7,7 @@ exports[`<Home /> should render 1`] = `
   padding: 0 2rem;
 }
 
-.c66 {
+.c67 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -34,7 +34,7 @@ exports[`<Home /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c65 {
+.c66 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -47,7 +47,7 @@ exports[`<Home /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c74 {
+.c75 {
   position: relative;
   display: block;
   margin: 0 0 2rem 0;
@@ -89,7 +89,7 @@ exports[`<Home /> should render 1`] = `
   height: 3rem;
 }
 
-.c78 {
+.c79 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -134,9 +134,9 @@ exports[`<Home /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c78:focus,
-.c78:hover,
-.c78:active {
+.c79:focus,
+.c79:hover,
+.c79:active {
   color: #f66663;
 }
 
@@ -204,7 +204,7 @@ exports[`<Home /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c55 {
+.c56 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -245,14 +245,14 @@ exports[`<Home /> should render 1`] = `
   overflow: visible;
 }
 
-.c55:focus,
-.c55:hover,
-.c55:active {
+.c56:focus,
+.c56:hover,
+.c56:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c68 {
+.c69 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -290,16 +290,16 @@ exports[`<Home /> should render 1`] = `
   will-change: transform;
 }
 
-.c68:link,
-.c68:visited {
+.c69:link,
+.c69:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c68:not([disabled]):hover,
-.c68:not([disabled]):active,
-.c68:not([disabled]):focus {
+.c69:not([disabled]):hover,
+.c69:not([disabled]):active,
+.c69:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -308,7 +308,7 @@ exports[`<Home /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c68[disabled] {
+.c69[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -380,7 +380,7 @@ exports[`<Home /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c57 {
+.c58 {
   width: 2.6rem;
   height: 1.4rem;
   margin: 0 0.4rem 0 1rem;
@@ -389,7 +389,7 @@ exports[`<Home /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c10:hover .c56 {
+.c10:hover .c57 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
@@ -419,7 +419,14 @@ exports[`<Home /> should render 1`] = `
   color: #7994d4;
 }
 
-.c75 {
+.c54 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.c76 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -592,7 +599,7 @@ exports[`<Home /> should render 1`] = `
   text-align: left;
 }
 
-.c63 {
+.c64 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -616,7 +623,7 @@ exports[`<Home /> should render 1`] = `
   padding-left: 3.2rem;
 }
 
-.c64 {
+.c65 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -649,17 +656,17 @@ exports[`<Home /> should render 1`] = `
   font-family: "Open Sans",sans-serif;
 }
 
-.c54 {
+.c55 {
   margin-top: 1.6rem;
 }
 
-.c60 {
+.c61 {
   width: 100%;
   padding-top: 4rem;
   overflow-x: hidden;
 }
 
-.c61 {
+.c62 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -667,7 +674,7 @@ exports[`<Home /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c61:before {
+.c62:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -679,27 +686,27 @@ exports[`<Home /> should render 1`] = `
   content: "";
 }
 
-.c62 {
+.c63 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c67 {
+.c68 {
   margin-bottom: 2rem;
 }
 
-.c69 {
+.c70 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c70 {
+.c71 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c71 {
+.c72 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -710,15 +717,15 @@ exports[`<Home /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c72 + .c72 {
+.c73 + .c73 {
   padding-left: 1.6rem;
 }
 
-.c73 {
+.c74 {
   font-size: 1.6rem;
 }
 
-.c77 {
+.c78 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -727,11 +734,11 @@ exports[`<Home /> should render 1`] = `
   display: inline-block;
 }
 
-.c79 {
+.c80 {
   padding: 0.4rem 0;
 }
 
-.c80 {
+.c81 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -753,11 +760,11 @@ exports[`<Home /> should render 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c81 {
+.c82 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c82 {
+.c83 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1051,11 +1058,11 @@ exports[`<Home /> should render 1`] = `
   margin: 0;
 }
 
-.c58 {
+.c59 {
   text-align: center;
 }
 
-.c59 {
+.c60 {
   width: 2.8rem;
   height: 1.5rem;
   margin-left: 1.6rem;
@@ -1075,13 +1082,13 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c66 {
+  .c67 {
     padding: 0;
   }
 }
 
 @media print {
-  .c66 {
+  .c67 {
     max-width: 100%;
     padding: 0;
   }
@@ -1094,19 +1101,19 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c74 {
+  .c75 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c78 {
+  .c79 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c78 {
+  .c79 {
     display: none;
   }
 }
@@ -1130,31 +1137,31 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c55 {
+  .c56 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c55 {
+  .c56 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c68 {
+  .c69 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c68 {
+  .c69 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c68 {
+  .c69 {
     padding: 0 3rem;
   }
 }
@@ -1282,7 +1289,7 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c63 {
+  .c64 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -1307,7 +1314,7 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c64 {
+  .c65 {
     font-size: 2.2rem;
   }
 }
@@ -1319,26 +1326,26 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media print {
-  .c61 {
+  .c62 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c62 {
+  .c63 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c70 {
+  .c71 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c71 {
+  .c72 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1346,26 +1353,26 @@ exports[`<Home /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c72 + .c72 {
+  .c73 + .c73 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c76 {
+  .c77 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c73 {
+  .c74 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c82 {
+  .c83 {
     display: none;
   }
 }
@@ -2556,17 +2563,21 @@ exports[`<Home /> should render 1`] = `
                       <div
                         class="c53"
                       >
-                        Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC.
-                        <div
+                        <p
                           class="c54"
                         >
-                          <div
-                            class="c10 c55"
+                          Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC.
+                        </p>
+                        <div
+                          class="c55"
+                        >
+                          <p
+                            class="c10 c56"
                           >
                             Consulter
                             <svg
                               aria-hidden="true"
-                              class="c56 c57"
+                              class="c57 c58"
                               fill="none"
                               viewBox="0 0 28 15"
                               xmlns="http://www.w3.org/2000/svg"
@@ -2576,7 +2587,7 @@ exports[`<Home /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </div>
+                          </p>
                         </div>
                       </div>
                     </p>
@@ -2655,17 +2666,21 @@ exports[`<Home /> should render 1`] = `
                       <div
                         class="c53"
                       >
-                        Calculez la durée de préavis à respecter en cas de démission
-                        <div
+                        <p
                           class="c54"
                         >
-                          <div
-                            class="c10 c55"
+                          Calculez la durée de préavis à respecter en cas de démission
+                        </p>
+                        <div
+                          class="c55"
+                        >
+                          <p
+                            class="c10 c56"
                           >
                             Calculer
                             <svg
                               aria-hidden="true"
-                              class="c56 c57"
+                              class="c57 c58"
                               fill="none"
                               viewBox="0 0 28 15"
                               xmlns="http://www.w3.org/2000/svg"
@@ -2675,7 +2690,7 @@ exports[`<Home /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </div>
+                          </p>
                         </div>
                       </div>
                     </p>
@@ -2762,17 +2777,21 @@ exports[`<Home /> should render 1`] = `
                       <div
                         class="c53"
                       >
-                        Estimer le salaire : brut en net, net après impôt, calcul heures supplémentaires, coût total employeur
-                        <div
+                        <p
                           class="c54"
                         >
-                          <div
-                            class="c10 c55"
+                          Estimer le salaire : brut en net, net après impôt, calcul heures supplémentaires, coût total employeur
+                        </p>
+                        <div
+                          class="c55"
+                        >
+                          <p
+                            class="c10 c56"
                           >
                             Estimer
                             <svg
                               aria-hidden="true"
-                              class="c56 c57"
+                              class="c57 c58"
                               fill="none"
                               viewBox="0 0 28 15"
                               xmlns="http://www.w3.org/2000/svg"
@@ -2782,7 +2801,7 @@ exports[`<Home /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </div>
+                          </p>
                         </div>
                       </div>
                     </p>
@@ -2863,17 +2882,21 @@ exports[`<Home /> should render 1`] = `
                       <div
                         class="c53"
                       >
-                        Téléchargez et utilisez des modèles de lettres et de documents personnalisables
-                        <div
+                        <p
                           class="c54"
                         >
-                          <div
-                            class="c10 c55"
+                          Téléchargez et utilisez des modèles de lettres et de documents personnalisables
+                        </p>
+                        <div
+                          class="c55"
+                        >
+                          <p
+                            class="c10 c56"
                           >
                             Découvrir
                             <svg
                               aria-hidden="true"
-                              class="c56 c57"
+                              class="c57 c58"
                               fill="none"
                               viewBox="0 0 28 15"
                               xmlns="http://www.w3.org/2000/svg"
@@ -2883,7 +2906,7 @@ exports[`<Home /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </div>
+                          </p>
                         </div>
                       </div>
                     </p>
@@ -2893,7 +2916,7 @@ exports[`<Home /> should render 1`] = `
             </div>
           </div>
           <div
-            class="c58"
+            class="c59"
           >
             <a
               class="c10 c31"
@@ -2902,7 +2925,7 @@ exports[`<Home /> should render 1`] = `
               Voir tous les outils 
               <svg
                 aria-hidden="true"
-                class="c59"
+                class="c60"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2918,43 +2941,45 @@ exports[`<Home /> should render 1`] = `
       </div>
     </main>
     <div
-      class="c60"
+      class="c61"
     >
       <footer
-        class="c61"
+        class="c62"
       >
         <div
-          class="c16 c62"
+          class="c16 c63"
         >
           <div
             class="c4"
           >
             <div
               aria-level="2"
-              class="c63"
+              class="c64"
               role="heading"
             >
-              <strong
-                class="c64"
+              <p
+                class="c65"
               >
                 <span
-                  class="c65"
+                  class="c66"
                 />
                 Besoin de plus d’informations ?
-              </strong>
+              </p>
             </div>
-            <p
-              class="c66 c67"
+            <div
+              class="c67 c68"
             >
-              Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
-            </p>
+              <p>
+                Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              </p>
+            </div>
             <button
-              class="c10 c68"
+              class="c10 c69"
             >
               Contacter nos services en région
               <svg
                 aria-hidden="true"
-                class="c69"
+                class="c70"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2968,27 +2993,27 @@ exports[`<Home /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c16 c70"
+          class="c16 c71"
         >
           <div
-            class="c4 c71"
+            class="c4 c72"
           >
             <div
-              class="c72 "
+              class="c73 "
             >
               <strong
                 aria-level="2"
-                class="c73 c74"
+                class="c74 c75"
                 role="heading"
               >
                 Code du travail numérique
               </strong>
               <ul
-                class="c75 c76"
+                class="c76 c77"
               >
                 <li>
                   <a
-                    class="c77"
+                    class="c78"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
@@ -2996,7 +3021,7 @@ exports[`<Home /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c77"
+                    class="c78"
                     href="/glossaire"
                   >
                     Glossaire
@@ -3004,7 +3029,7 @@ exports[`<Home /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c77"
+                    class="c78"
                     href="/a-propos"
                   >
                     À propos
@@ -3012,7 +3037,7 @@ exports[`<Home /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c77"
+                    class="c78"
                     href="/mentions-legales"
                   >
                     Mentions légales
@@ -3020,7 +3045,7 @@ exports[`<Home /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c77"
+                    class="c78"
                     href="/accessibilite"
                   >
                     Accessibilité : partiellement conforme
@@ -3028,7 +3053,7 @@ exports[`<Home /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c77"
+                    class="c78"
                     href="/politique-confidentialite"
                   >
                     Politique de confidentialité
@@ -3036,7 +3061,7 @@ exports[`<Home /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c77"
+                    class="c78"
                     href="/stats"
                   >
                     Statistiques d’utilisation
@@ -3044,7 +3069,7 @@ exports[`<Home /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c77"
+                    class="c78"
                     href="/integration"
                   >
                     Intégrer le Code du travail numérique
@@ -3053,21 +3078,21 @@ exports[`<Home /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c72 "
+              class="c73 "
             >
               <strong
                 aria-level="2"
-                class="c73 c74"
+                class="c74 c75"
                 role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="c75 c76"
+                class="c76 c77"
               >
                 <li>
                   <button
-                    class="c10 c78 c79"
+                    class="c10 c79 c80"
                   >
                     Contact
                   </button>
@@ -3075,7 +3100,7 @@ exports[`<Home /> should render 1`] = `
                 <li>
                   <a
                     aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                    class="c77"
+                    class="c78"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3086,7 +3111,7 @@ exports[`<Home /> should render 1`] = `
                 <li>
                   <a
                     aria-label="Journal des modifications (Nouvelle fenêtre)"
-                    class="c77"
+                    class="c78"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3097,22 +3122,22 @@ exports[`<Home /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c72 "
+              class="c73 "
             >
               <strong
                 aria-level="2"
-                class="c73 c74"
+                class="c74 c75"
                 role="heading"
               >
                 En collaboration avec
               </strong>
               <ul
-                class="c75 c76"
+                class="c76 c77"
               >
                 <li>
                   <a
                     aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                    class="c77"
+                    class="c78"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3123,7 +3148,7 @@ exports[`<Home /> should render 1`] = `
                 <li>
                   <a
                     aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                    class="c77"
+                    class="c78"
                     href="https://fabrique.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3134,7 +3159,7 @@ exports[`<Home /> should render 1`] = `
                 <li>
                   <a
                     aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                    class="c77"
+                    class="c78"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -3147,12 +3172,12 @@ exports[`<Home /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="c80"
+          class="c81"
         >
           <li>
             <a
               aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="c77 c81"
+              class="c78 c82"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -3161,7 +3186,7 @@ exports[`<Home /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c82"
+              class="c83"
             >
               |
             </span>
@@ -3169,7 +3194,7 @@ exports[`<Home /> should render 1`] = `
           <li>
             <a
               aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="c77 c81"
+              class="c78 c82"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -3178,7 +3203,7 @@ exports[`<Home /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c82"
+              class="c83"
             >
               |
             </span>
@@ -3186,7 +3211,7 @@ exports[`<Home /> should render 1`] = `
           <li>
             <a
               aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="c77 c81"
+              class="c78 c82"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -3195,7 +3220,7 @@ exports[`<Home /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c82"
+              class="c83"
             >
               |
             </span>
@@ -3203,7 +3228,7 @@ exports[`<Home /> should render 1`] = `
           <li>
             <a
               aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="c77 c81"
+              class="c78 c82"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -3212,7 +3237,7 @@ exports[`<Home /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c82"
+              class="c83"
             >
               |
             </span>
@@ -3220,7 +3245,7 @@ exports[`<Home /> should render 1`] = `
           <li>
             <a
               aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="c77 c81"
+              class="c78 c82"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -3229,7 +3254,7 @@ exports[`<Home /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c82"
+              class="c83"
             >
               |
             </span>
@@ -3237,7 +3262,7 @@ exports[`<Home /> should render 1`] = `
           <li>
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="c77 c81"
+              class="c78 c82"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"

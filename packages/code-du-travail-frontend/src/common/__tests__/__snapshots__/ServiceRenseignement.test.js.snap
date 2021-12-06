@@ -265,7 +265,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 }
 
 .c11 {
-  display: block;
+  font-size: 1.2rem;
   margin-top: 2rem;
 }
 
@@ -404,10 +404,12 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
       </svg>
     </button>
   </form>
-  <small
+  <div
     class="c11"
   >
-    Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
+    <p>
+      Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
+    </p>
     <ul>
       <li>
         les demandes d'intervention en entreprise
@@ -422,6 +424,6 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
         vous renseigner sur les cotisations sociales
       </li>
     </ul>
-  </small>
+  </div>
 </div>
 `;

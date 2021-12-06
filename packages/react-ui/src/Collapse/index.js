@@ -26,7 +26,7 @@ export const Collapse = ({ title, children, onClickHandler, textProps }) => {
         role="button"
       >
         <AccordionArrow aria-hidden="true" />
-        <StyledText isLikeSpan fontSize="hsmall" {...textProps}>
+        <StyledText noMargin fontSize="hsmall" {...textProps}>
           {title}
         </StyledText>
       </StyledLink>

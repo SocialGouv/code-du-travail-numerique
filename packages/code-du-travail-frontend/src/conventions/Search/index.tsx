@@ -65,7 +65,7 @@ const Search = ({ onSelectConvention }) => {
             <div>Le service de recherche est indisponible.</div>
           )}
           {status === "empty" && (
-            <Paragraph isLikeSpan>Aucun résultat n’a été trouvé.</Paragraph>
+            <Paragraph noMargin>Aucun résultat n’a été trouvé.</Paragraph>
           )}
           {status === "success" && (
             <>

@@ -67,7 +67,6 @@ exports[`<Salaires /> should add a salaire 1`] = `
 
 .c2 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -477,7 +476,6 @@ exports[`<Salaires /> should delete a salaires 1`] = `
 
 .c2 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -665,7 +663,6 @@ exports[`<Salaires /> should render 1`] = `
 
 .c2 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }

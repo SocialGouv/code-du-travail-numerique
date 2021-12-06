@@ -78,7 +78,7 @@ function Answer({
           )}
           {additionalContent}
           <ShareContainer>
-            <Paragraph isLikeSpan>Partager ce contenu&nbsp;:&nbsp;</Paragraph>
+            <Paragraph noMargin>Partager ce contenu&nbsp;:&nbsp;</Paragraph>
             <Share title={title} metaDescription={metaDescription} />
           </ShareContainer>
           <Feedback url={router.asPath} />

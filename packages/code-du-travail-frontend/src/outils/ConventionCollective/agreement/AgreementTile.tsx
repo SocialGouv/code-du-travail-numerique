@@ -36,7 +36,7 @@ export function AgreementTile({ agreement }: Props): JSX.Element {
         subtitle={getLabelBySource(SOURCES.CCN)}
         onClick={clickHandler}
       >
-        <Paragraph isLikeSpan>
+        <Paragraph noMargin>
           Retrouvez les questions-réponses les plus fréquentes organisées par
           thème et élaborées par le Ministère du travail concernant cette
           convention collective

@@ -82,7 +82,7 @@ function Feedback({ url = document ? document.location.href : "" }) {
               shift={theme.spacings.xmedium}
             >
               {isSatisfied === null ? (
-                <Paragraph isLikeSpan role="heading" aria-level="2">
+                <Paragraph noMargin role="heading" aria-level="2">
                   Avez-vous trouvé la réponse à votre question&nbsp;?
                 </Paragraph>
               ) : (

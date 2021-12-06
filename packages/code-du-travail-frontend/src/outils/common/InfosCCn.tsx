@@ -92,7 +92,7 @@ function StepInfoCCn({
       if (!idccInfo.fullySupported) {
         return (
           <Alert variant="primary">
-            <Paragraph isLikeSpan>
+            <Paragraph noMargin>
               <p>
                 <Text variant="primary" fontSize="hsmall" fontWeight="700">
                   À noter&nbsp;: convention prochainement traitée

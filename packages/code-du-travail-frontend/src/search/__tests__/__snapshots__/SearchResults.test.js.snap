@@ -701,8 +701,10 @@ exports[`<SearchResults/> should render results 1`] = `
           <p
             class="c9"
           >
-            description
-          </p>
+            <p>
+              description
+            </p>
+          </div>
         </a>
       </li>
       <li
@@ -763,11 +765,13 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c13"
             >
-              description
+              <p>
+                description
+              </p>
               <div
                 class="c14"
               >
-                <div
+                <p
                   class="c15 c16"
                 >
                   Consulter
@@ -783,7 +787,7 @@ exports[`<SearchResults/> should render results 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </div>
+                </p>
               </div>
             </div>
           </p>
@@ -823,11 +827,13 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c13"
             >
-              description
+              <p>
+                description
+              </p>
               <div
                 class="c14"
               >
-                <div
+                <p
                   class="c15 c16"
                 >
                   Consulter
@@ -843,7 +849,7 @@ exports[`<SearchResults/> should render results 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </div>
+                </p>
               </div>
             </div>
           </p>
@@ -907,11 +913,13 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c13"
             >
-              description
+              <p>
+                description
+              </p>
               <div
                 class="c14"
               >
-                <div
+                <p
                   class="c15 c16"
                 >
                   Consulter
@@ -927,7 +935,7 @@ exports[`<SearchResults/> should render results 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </div>
+                </p>
               </div>
             </div>
           </p>
@@ -988,8 +996,10 @@ exports[`<SearchResults/> should render results 1`] = `
           <p
             class="c9"
           >
-            description
-          </p>
+            <p>
+              description
+            </p>
+          </div>
         </a>
       </li>
     </ul>

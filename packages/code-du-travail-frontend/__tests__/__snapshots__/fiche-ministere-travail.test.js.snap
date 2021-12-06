@@ -2663,20 +2663,22 @@ exports[`<FicheMT /> should render 1`] = `
               class="c79"
               role="heading"
             >
-              <strong
-                class="c80"
+              <p
+                class="c79"
               >
                 <span
                   class="c81"
                 />
                 Besoin de plus d’informations ?
-              </strong>
+              </p>
             </div>
             <p
               class="c82 c83"
             >
-              Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
-            </p>
+              <p>
+                Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              </p>
+            </div>
             <button
               class="c84"
             >

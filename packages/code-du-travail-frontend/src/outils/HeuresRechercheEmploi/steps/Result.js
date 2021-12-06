@@ -85,7 +85,7 @@ function NoResult({ idcc, ccn, legalRefs }) {
       <SectionTitle>
         Nombre d’heures d’absence autorisée pour rechercher un emploi
       </SectionTitle>
-      <Paragraph isLikeSpan>
+      <Paragraph noMargin>
         <HighlightResult>Aucun résultat</HighlightResult>&nbsp;:&nbsp;{reason}
       </Paragraph>
       {idcc > 0 && <CCSearchInfo ccn={ccn} />}

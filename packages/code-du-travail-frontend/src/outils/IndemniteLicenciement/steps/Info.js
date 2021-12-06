@@ -13,7 +13,7 @@ function validate(values) {
 
   if (values.contrat && values.contrat !== "cdi") {
     errors.contrat = (
-      <Paragraph isLikeSpan>
+      <Paragraph noMargin>
         L’indemnité de licenciement n’est pas dûe pour les CDD et contrats de
         travail temporaires. Sous certaines conditions, le salarié peut avoir le
         droit à une&nbsp;
@@ -34,7 +34,7 @@ function validate(values) {
     errors.fauteGrave = (
       <Alert variant="primary" role="alert">
         <Title>À noter</Title>
-        <Paragraph isLikeSpan>
+        <Paragraph noMargin>
           <strong>
             L’indemnité légale de licenciement n’est pas dûe en cas de faute
             grave.

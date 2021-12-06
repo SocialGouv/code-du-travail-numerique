@@ -22,7 +22,6 @@ exports[`<StepInformations /> should render 1`] = `
 exports[`<StepInformations /> should render catégorie 1`] = `
 .c4 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -244,7 +243,6 @@ exports[`<StepInformations /> should render catégorie 1`] = `
 exports[`<StepInformations /> should render coefficient 1`] = `
 .c4 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }

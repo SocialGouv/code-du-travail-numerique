@@ -93,7 +93,7 @@ const Contribution = ({ answers, content }) => {
             <IconStripe icon={icons.Custom}>
               <StyledInsertTitle as="p">Page personnalisable</StyledInsertTitle>
               {isConventionDetected || isConventionalAnswer ? (
-                <Paragraph isLikeSpan>
+                <Paragraph noMargin>
                   <span>
                     Cette page a été personnalisée avec l’ajout des {}
                   </span>
@@ -110,7 +110,7 @@ const Contribution = ({ answers, content }) => {
                   )}
                 </Paragraph>
               ) : (
-                <Paragraph isLikeSpan>
+                <Paragraph noMargin>
                   <span>
                     Le contenu de cette page peut être personnalisé en fonction
                     de votre situation.
@@ -165,12 +165,12 @@ const Contribution = ({ answers, content }) => {
               id="customisation"
             >
               {isConventionalAnswer ? (
-                <Paragraph isLikeSpan>
+                <Paragraph noMargin>
                   Que dit la convention <i>{conventionAnswer.shortName}</i>
                   &nbsp;?
                 </Paragraph>
               ) : (
-                <Paragraph isLikeSpan>
+                <Paragraph noMargin>
                   Que dit votre convention collective&nbsp;?
                 </Paragraph>
               )}

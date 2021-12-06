@@ -67,7 +67,6 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 
 .c2 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -612,7 +611,6 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 exports[`<StepRemuneration /> should render one input 1`] = `
 .c2 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }

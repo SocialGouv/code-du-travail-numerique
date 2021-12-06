@@ -43,7 +43,6 @@ exports[`<StepInfo /> should display error if fauteGrave 1`] = `
 exports[`<StepInfo /> should render 1`] = `
 .c2 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }

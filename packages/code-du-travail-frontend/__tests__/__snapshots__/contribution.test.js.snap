@@ -2996,20 +2996,22 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 class="c89"
                 role="heading"
               >
-                <strong
-                  class="c90"
+                <p
+                  class="c89"
                 >
                   <span
                     class="c91"
                   />
                   Besoin de plus d’informations ?
-                </strong>
+                </p>
               </div>
               <p
                 class="c92 c93"
               >
-                Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
-              </p>
+                <p>
+                  Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+                </p>
+              </div>
               <button
                 class="c94"
               >
@@ -6311,20 +6313,22 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 class="c89"
                 role="heading"
               >
-                <strong
-                  class="c90"
+                <p
+                  class="c89"
                 >
                   <span
                     class="c91"
                   />
                   Besoin de plus d’informations ?
-                </strong>
+                </p>
               </div>
               <p
                 class="c92 c93"
               >
-                Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
-              </p>
+                <p>
+                  Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+                </p>
+              </div>
               <button
                 class="c94"
               >

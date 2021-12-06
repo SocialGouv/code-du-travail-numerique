@@ -48,7 +48,7 @@ function OrigineStep({ form }: WizardStepProps): JSX.Element {
           form.getState().values["contrat salarié - mise à la retraite"] ===
             "oui" && (
             <StyledAlert variant="primary">
-              <Paragraph isLikeSpan>
+              <Paragraph noMargin>
                 <TitleAlert
                   variant="primary"
                   fontSize="hsmall"

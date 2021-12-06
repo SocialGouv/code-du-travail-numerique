@@ -24,7 +24,6 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 
 .c11 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 400;
   all: revert;
@@ -1166,7 +1165,6 @@ exports[`<Result /> renders legal indemnite 1`] = `
 
 .c11 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 400;
   all: revert;

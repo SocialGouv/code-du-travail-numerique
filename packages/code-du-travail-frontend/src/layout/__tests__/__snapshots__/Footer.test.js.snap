@@ -448,20 +448,22 @@ exports[`<Footer /> should render 1`] = `
             class="c5"
             role="heading"
           >
-            <strong
+            <p
               class="c6"
             >
               <span
                 class="c7"
               />
               Besoin de plus d’informations ?
-            </strong>
+            </p>
           </div>
           <p
             class="c8 c9"
           >
-            Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
-          </p>
+            <p>
+              Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+            </p>
+          </div>
           <button
             class="c10"
           >
