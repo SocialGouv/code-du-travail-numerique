@@ -1,6 +1,6 @@
 const { SOURCES } = require("@socialgouv/cdtn-sources");
 
-function getIdccBody({ query }) {
+function getIdccBody({ query, idccQuery }) {
   return {
     _source: [
       "id",
@@ -21,6 +21,17 @@ function getIdccBody({ query }) {
         must: {
           bool: {
             should: [
+              // in case of idcc search, we want to boost exact match
+              idccQuery
+                ? {
+                    term: {
+                      num: {
+                        boost: 10,
+                        value: idccQuery,
+                      },
+                    },
+                  }
+                : undefined,
               {
                 match: {
                   "shortTitle.french": {
