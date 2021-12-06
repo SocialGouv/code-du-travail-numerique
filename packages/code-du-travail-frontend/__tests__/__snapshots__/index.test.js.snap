@@ -1680,7 +1680,7 @@ exports[`<Home /> should render 1`] = `
             <h1
               class="c20"
             >
-              Bienvenue sur
+              Bienvenue sur 
               <br />
               <span
                 class="c21"
@@ -2545,7 +2545,7 @@ exports[`<Home /> should render 1`] = `
                       <div
                         class="c50"
                       >
-
+                        
                         <h3
                           class="c51"
                         >
@@ -2648,7 +2648,7 @@ exports[`<Home /> should render 1`] = `
                       <div
                         class="c50"
                       >
-
+                        
                         <h3
                           class="c51"
                         >
@@ -2759,7 +2759,7 @@ exports[`<Home /> should render 1`] = `
                       <div
                         class="c50"
                       >
-
+                        
                         <h3
                           class="c51"
                         >
@@ -2864,7 +2864,7 @@ exports[`<Home /> should render 1`] = `
                       <div
                         class="c50"
                       >
-
+                        
                         <h2
                           class="c51"
                         >
@@ -2918,7 +2918,7 @@ exports[`<Home /> should render 1`] = `
               class="c10 c31"
               href="/outils"
             >
-              Voir tous les outils
+              Voir tous les outils 
               <svg
                 aria-hidden="true"
                 class="c60"
