@@ -1,19 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] = `
-.c16 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c3 {
   position: relative;
   display: block;
@@ -151,6 +138,19 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c16 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c1 {
