@@ -457,7 +457,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
 
 .c49 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }

@@ -194,7 +194,7 @@ exports[`<Answer /> should renders 1`] = `
 
 .c12 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -1314,7 +1314,7 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 .c22 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -2596,7 +2596,7 @@ exports[`<Answer /> should renders back to results link 1`] = `
 
 .c12 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -3730,7 +3730,7 @@ exports[`<Answer /> should renders related content 1`] = `
 
 .c12 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -5021,7 +5021,7 @@ exports[`<Answer /> should renders tooltip 1`] = `
 
 .c12 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -6098,7 +6098,7 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 
 .c12 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -7175,7 +7175,7 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 
 .c12 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -4rem;
   text-align: left;
 }
@@ -8253,7 +8253,7 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 
 .c12 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -4rem;
   text-align: left;
 }

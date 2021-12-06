@@ -1103,35 +1103,35 @@ exports[`<DroitDuTravail /> should render 1`] = `
 
 .c26 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }
 
 .c33 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -4rem;
   text-align: left;
 }
 
 .c45 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
 .c66 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
 .c94 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }

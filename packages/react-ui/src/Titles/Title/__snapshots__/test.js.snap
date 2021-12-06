@@ -16,7 +16,7 @@ exports[`<Title /> renders a H2 title 1`] = `
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
@@ -84,7 +84,7 @@ exports[`<Title /> renders a shifted H2 title (the stripe should be 10rem to the
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -10rem;
   text-align: left;
 }
@@ -139,7 +139,7 @@ exports[`<Title /> renders a shifted H2 title (the stripe should be 10rem to the
 exports[`<Title /> renders a unstriped H2 title 1`] = `
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }

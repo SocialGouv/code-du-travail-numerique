@@ -717,28 +717,28 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 
 .c45 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -4rem;
   text-align: left;
 }
 
 .c60 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
 .c65 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
 
 .c89 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }
@@ -4032,28 +4032,28 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 
 .c45 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -4rem;
   text-align: left;
 }
 
 .c60 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
 .c65 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
 
 .c89 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }

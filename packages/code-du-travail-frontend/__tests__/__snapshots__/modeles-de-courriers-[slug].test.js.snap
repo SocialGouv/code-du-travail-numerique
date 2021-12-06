@@ -702,14 +702,14 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 
 .c45 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -4rem;
   text-align: left;
 }
 
 .c78 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }

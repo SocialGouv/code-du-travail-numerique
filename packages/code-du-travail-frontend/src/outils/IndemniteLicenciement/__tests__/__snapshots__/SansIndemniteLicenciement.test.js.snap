@@ -89,7 +89,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
 
 .c1 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }

@@ -442,21 +442,21 @@ exports[`<CookiePolicy /> should render 1`] = `
 
 .c26 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }
 
 .c30 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -4rem;
   text-align: left;
 }
 
 .c40 {
   margin-top: 0;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }

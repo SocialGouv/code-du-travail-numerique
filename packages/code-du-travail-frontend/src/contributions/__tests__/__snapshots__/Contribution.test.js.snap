@@ -285,14 +285,14 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 
 .c9 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
 .c14 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
@@ -929,14 +929,14 @@ exports[`<Contribution /> should render answer references 1`] = `
 
 .c9 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
 .c14 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
@@ -1573,14 +1573,14 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 
 .c9 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
 .c14 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
@@ -2217,14 +2217,14 @@ exports[`<Contribution /> should render with both answers 1`] = `
 
 .c9 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
 .c14 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
@@ -2848,7 +2848,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 
 .c11 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
@@ -3163,7 +3163,7 @@ exports[`<Contribution /> should render with generic answer 1`] = `
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
@@ -3304,7 +3304,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: spacings.medium;
+  margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
