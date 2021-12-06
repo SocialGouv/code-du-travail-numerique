@@ -223,7 +223,6 @@ const StyledSearchIcon = styled(SearchIcon)`
 `;
 
 const StyledDiv = styled.div`
-  display: block;
   font-size: ${fonts.sizes.tiny};
   margin-top: ${spacings.medium};
 `;
