@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Step /> should ask detail about categories 1`] = `
-.c10 {
+.c11 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.c9 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
@@ -95,7 +101,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
   color: transparent;
 }
 
-.c12 {
+.c13 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -117,15 +123,15 @@ exports[`<Step /> should ask detail about categories 1`] = `
   appearance: none;
 }
 
-.c12::-webkit-outer-spin-button,
-.c12::-webkit-inner-spin-button {
+.c13::-webkit-outer-spin-button,
+.c13::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c12::-webkit-calendar-picker-indicator {
+.c13::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -138,43 +144,43 @@ exports[`<Step /> should ask detail about categories 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c12:invalid {
+.c13:invalid {
   border-color: #eb5757;
 }
 
-.c12::-webkit-input-placeholder {
+.c13::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c12::-moz-placeholder {
+.c13::-moz-placeholder {
   color: #9298af;
 }
 
-.c12:-ms-input-placeholder {
+.c13:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c12::placeholder {
+.c13::placeholder {
   color: #9298af;
 }
 
-.c12:focus {
+.c13:focus {
   border-color: #7994d4;
 }
 
-.c12:focus::-webkit-input-placeholder {
+.c13:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c12:focus::-moz-placeholder {
+.c13:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c12:focus:-ms-input-placeholder {
+.c13:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c12:focus::placeholder {
+.c13:focus::placeholder {
   color: transparent;
 }
 
@@ -270,29 +276,19 @@ exports[`<Step /> should ask detail about categories 1`] = `
 }
 
 .c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  position: relative;
-}
-
-.c9 {
   font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
+  cursor: pointer;
 }
 
-.c11 {
+.c10 {
+  font-weight: 600 !important;
+  display: inline;
+}
+
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -328,7 +324,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c13 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
@@ -341,7 +337,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c8 {
     font-size: 1.6rem;
   }
 }
@@ -469,32 +465,30 @@ exports[`<Step /> should ask detail about categories 1`] = `
       mois
     </div>
   </label>
-  <div>
-    <div
-      class="c8"
+  <label
+    class="c8"
+    for="2"
+  >
+    <p
+      class="c9 c10"
     >
-      <label
-        class="c9"
-        for="2"
+      Quel est l'âge du salarié à la date du licenciement ?
+       
+      <span
+        class="c11"
       >
-        Quel est l'âge du salarié à la date du licenciement ?
-         
-        <span
-          class="c10"
-        >
-           (obligatoire)
-        </span>
-      </label>
-    </div>
-  </div>
+         (obligatoire)
+      </span>
+    </p>
+  </label>
   <div
-    class="c11"
+    class="c12"
   >
     <span
       class="c6"
     >
       <input
-        class="c12"
+        class="c13"
         id="2"
         name="age"
         value=""
@@ -505,18 +499,24 @@ exports[`<Step /> should ask detail about categories 1`] = `
 `;
 
 exports[`<Step /> should ask detail about retirement 1`] = `
-.c7 {
+.c8 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c9 {
+.c6 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.c10 {
   position: relative;
   display: inline-block;
 }
 
-.c10 {
+.c11 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -538,15 +538,15 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   appearance: none;
 }
 
-.c10::-webkit-outer-spin-button,
-.c10::-webkit-inner-spin-button {
+.c11::-webkit-outer-spin-button,
+.c11::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c10::-webkit-calendar-picker-indicator {
+.c11::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -559,47 +559,47 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c10:invalid {
+.c11:invalid {
   border-color: #eb5757;
 }
 
-.c10::-webkit-input-placeholder {
+.c11::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c10::-moz-placeholder {
+.c11::-moz-placeholder {
   color: #9298af;
 }
 
-.c10:-ms-input-placeholder {
+.c11:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c10::placeholder {
+.c11::placeholder {
   color: #9298af;
 }
 
-.c10:focus {
+.c11:focus {
   border-color: #7994d4;
 }
 
-.c10:focus::-webkit-input-placeholder {
+.c11:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c10:focus::-moz-placeholder {
+.c11:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c10:focus:-ms-input-placeholder {
+.c11:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c10:focus::placeholder {
+.c11:focus::placeholder {
   color: transparent;
 }
 
-.c14 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -608,7 +608,7 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   cursor: pointer;
 }
 
-.c12 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -618,7 +618,7 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   flex-direction: row;
 }
 
-.c13 {
+.c15 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -639,7 +639,7 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   appearance: none;
 }
 
-.c13:before {
+.c15:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -654,12 +654,12 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   content: "";
 }
 
-.c13:checked {
+.c15:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c13:checked:before {
+.c15:checked:before {
   display: block;
 }
 
@@ -745,7 +745,7 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   padding: 0;
 }
 
-.c11 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -774,29 +774,27 @@ exports[`<Step /> should ask detail about retirement 1`] = `
 }
 
 .c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  position: relative;
-}
-
-.c6 {
   font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
+  cursor: pointer;
 }
 
-.c8 {
+.c12 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
+.c7 {
+  font-weight: 600 !important;
+  display: inline;
+}
+
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -809,13 +807,13 @@ exports[`<Step /> should ask detail about retirement 1`] = `
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c11 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
@@ -828,7 +826,13 @@ exports[`<Step /> should ask detail about retirement 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c5 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
     font-size: 1.6rem;
   }
 }
@@ -907,87 +911,83 @@ exports[`<Step /> should ask detail about retirement 1`] = `
       </svg>
     </div>
   </div>
-  <div>
-    <div
-      class="c5"
+  <label
+    class="c5"
+    for="3"
+  >
+    <p
+      class="c6 c7"
     >
-      <label
-        class="c6"
-        for="3"
+      Quel est l'âge du salarié à la date du licenciement ?
+       
+      <span
+        class="c8"
       >
-        Quel est l'âge du salarié à la date du licenciement ?
-         
-        <span
-          class="c7"
-        >
-           (obligatoire)
-        </span>
-      </label>
-    </div>
-  </div>
+         (obligatoire)
+      </span>
+    </p>
+  </label>
   <div
-    class="c8"
+    class="c9"
   >
     <span
-      class="c9"
+      class="c10"
     >
       <input
-        class="c10"
+        class="c11"
         id="3"
         name="age"
         value="62"
       />
     </span>
   </div>
-  <div>
-    <div
-      class="c5"
+  <p
+    class="c12"
+  >
+    <p
+      class="c6 c7"
     >
-      <p
-        class="c6"
+      Le salarié pourrait-il bénéficier de la retraite ?
+       
+      <span
+        class="c8"
       >
-        Le salarié pourrait-il bénéficier de la retraite ?
-         
-        <span
-          class="c7"
-        >
-           (obligatoire)
-        </span>
-      </p>
-    </div>
-  </div>
+         (obligatoire)
+      </span>
+    </p>
+  </p>
   <div
-    class="c11"
+    class="c13"
   >
     <div
-      class="c12"
+      class="c14"
     >
       <input
-        class="c13"
+        class="c15"
         id="hasRetirementAge-oui"
         name="hasRetirementAge"
         type="radio"
         value="true"
       />
       <label
-        class="c14"
+        class="c16"
         for="hasRetirementAge-oui"
       >
         Oui
       </label>
     </div>
     <div
-      class="c12"
+      class="c14"
     >
       <input
-        class="c13"
+        class="c15"
         id="hasRetirementAge-non"
         name="hasRetirementAge"
         type="radio"
         value="false"
       />
       <label
-        class="c14"
+        class="c16"
         for="hasRetirementAge-non"
       >
         Non
@@ -998,18 +998,24 @@ exports[`<Step /> should ask detail about retirement 1`] = `
 `;
 
 exports[`<Step /> should render 1`] = `
-.c7 {
+.c8 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c9 {
+.c6 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.c10 {
   position: relative;
   display: inline-block;
 }
 
-.c10 {
+.c11 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -1031,15 +1037,15 @@ exports[`<Step /> should render 1`] = `
   appearance: none;
 }
 
-.c10::-webkit-outer-spin-button,
-.c10::-webkit-inner-spin-button {
+.c11::-webkit-outer-spin-button,
+.c11::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c10::-webkit-calendar-picker-indicator {
+.c11::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -1052,43 +1058,43 @@ exports[`<Step /> should render 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c10:invalid {
+.c11:invalid {
   border-color: #eb5757;
 }
 
-.c10::-webkit-input-placeholder {
+.c11::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c10::-moz-placeholder {
+.c11::-moz-placeholder {
   color: #9298af;
 }
 
-.c10:-ms-input-placeholder {
+.c11:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c10::placeholder {
+.c11::placeholder {
   color: #9298af;
 }
 
-.c10:focus {
+.c11:focus {
   border-color: #7994d4;
 }
 
-.c10:focus::-webkit-input-placeholder {
+.c11:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c10:focus::-moz-placeholder {
+.c11:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c10:focus:-ms-input-placeholder {
+.c11:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c10:focus::placeholder {
+.c11:focus::placeholder {
   color: transparent;
 }
 
@@ -1184,29 +1190,19 @@ exports[`<Step /> should render 1`] = `
 }
 
 .c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  position: relative;
-}
-
-.c6 {
   font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
+  cursor: pointer;
 }
 
-.c8 {
+.c7 {
+  font-weight: 600 !important;
+  display: inline;
+}
+
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1219,13 +1215,13 @@ exports[`<Step /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c11 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
@@ -1238,7 +1234,7 @@ exports[`<Step /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c5 {
     font-size: 1.6rem;
   }
 }
@@ -1317,32 +1313,30 @@ exports[`<Step /> should render 1`] = `
       </svg>
     </div>
   </div>
-  <div>
-    <div
-      class="c5"
+  <label
+    class="c5"
+    for="1"
+  >
+    <p
+      class="c6 c7"
     >
-      <label
-        class="c6"
-        for="1"
+      Quel est l'âge du salarié à la date du licenciement ?
+       
+      <span
+        class="c8"
       >
-        Quel est l'âge du salarié à la date du licenciement ?
-         
-        <span
-          class="c7"
-        >
-           (obligatoire)
-        </span>
-      </label>
-    </div>
-  </div>
+         (obligatoire)
+      </span>
+    </p>
+  </label>
   <div
-    class="c8"
+    class="c9"
   >
     <span
-      class="c9"
+      class="c10"
     >
       <input
-        class="c10"
+        class="c11"
         id="1"
         name="age"
         value=""

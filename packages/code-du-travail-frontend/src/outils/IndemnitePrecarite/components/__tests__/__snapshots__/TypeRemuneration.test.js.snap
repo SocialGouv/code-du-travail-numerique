@@ -1,13 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TypeRemuneration /> should render 1`] = `
-.c2 {
+.c3 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c5 {
+.c1 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,7 +22,7 @@ exports[`<TypeRemuneration /> should render 1`] = `
   cursor: pointer;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,7 +32,7 @@ exports[`<TypeRemuneration /> should render 1`] = `
   flex-direction: row;
 }
 
-.c4 {
+.c5 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -47,7 +53,7 @@ exports[`<TypeRemuneration /> should render 1`] = `
   appearance: none;
 }
 
-.c4:before {
+.c5:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -62,74 +68,62 @@ exports[`<TypeRemuneration /> should render 1`] = `
   content: "";
 }
 
-.c4:checked {
+.c5:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c4:checked:before {
+.c5:checked:before {
   display: block;
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  position: relative;
+  font-size: 1.8rem;
+  cursor: default;
 }
 
-.c1 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
+.c2 {
+  font-weight: 600 !important;
+  display: inline;
 }
 
 @media (max-width:600px) {
-  .c1 {
+  .c0 {
     font-size: 1.6rem;
   }
 }
 
 <div>
-  <div>
-    <div
-      class="c0"
+  <p
+    class="c0"
+  >
+    <p
+      class="c1 c2"
     >
-      <p
-        class="c1"
+      Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
+       
+      <span
+        class="c3"
       >
-        Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
-         
-        <span
-          class="c2"
-        >
-           (obligatoire)
-        </span>
-      </p>
-    </div>
-  </div>
+         (obligatoire)
+      </span>
+    </p>
+  </p>
   <div
-    class="c3"
+    class="c4"
   >
     <input
-      class="c4"
+      class="c5"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
       value="total"
     />
     <label
-      class="c5"
+      class="c6"
       for="typeRemuneration-amount"
     >
       <span>
@@ -142,17 +136,17 @@ exports[`<TypeRemuneration /> should render 1`] = `
     </label>
   </div>
   <div
-    class="c3"
+    class="c4"
   >
     <input
-      class="c4"
+      class="c5"
       id="typeRemuneration-pay"
       name="typeRemuneration"
       type="radio"
       value="mensuel"
     />
     <label
-      class="c5"
+      class="c6"
       for="typeRemuneration-pay"
     >
       <span>

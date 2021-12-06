@@ -1542,7 +1542,7 @@ exports[`<About /> should render 1`] = `
                 Besoin de plus d’informations ?
               </p>
             </div>
-            <p
+            <div
               class="c40 c41"
             >
               <p>

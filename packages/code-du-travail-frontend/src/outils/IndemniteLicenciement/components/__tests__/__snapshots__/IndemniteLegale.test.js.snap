@@ -26,7 +26,6 @@ exports[`<IndemniteLegale /> should render 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 

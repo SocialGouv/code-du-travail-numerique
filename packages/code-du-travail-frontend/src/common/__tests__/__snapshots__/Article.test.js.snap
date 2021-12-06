@@ -53,10 +53,8 @@ exports[`<Article /> should render 1`] = `
 
 .c15 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 

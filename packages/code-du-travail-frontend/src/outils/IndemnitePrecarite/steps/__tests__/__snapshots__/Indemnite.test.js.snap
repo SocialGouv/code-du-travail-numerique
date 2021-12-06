@@ -44,7 +44,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -666,7 +665,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -1280,7 +1278,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -1905,7 +1902,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -2519,7 +2515,6 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 

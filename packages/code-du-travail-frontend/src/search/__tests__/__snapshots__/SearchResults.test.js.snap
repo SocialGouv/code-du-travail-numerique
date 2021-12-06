@@ -704,7 +704,7 @@ exports[`<SearchResults/> should render results 1`] = `
             <p>
               description
             </p>
-          </div>
+          </p>
         </a>
       </li>
       <li
@@ -999,7 +999,7 @@ exports[`<SearchResults/> should render results 1`] = `
             <p>
               description
             </p>
-          </div>
+          </p>
         </a>
       </li>
     </ul>

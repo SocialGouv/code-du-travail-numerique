@@ -1,13 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<YesNoQuestion /> should render 1`] = `
-.c2 {
+.c3 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c6 {
+.c1 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,7 +22,7 @@ exports[`<YesNoQuestion /> should render 1`] = `
   cursor: pointer;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,7 +32,7 @@ exports[`<YesNoQuestion /> should render 1`] = `
   flex-direction: row;
 }
 
-.c5 {
+.c6 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -47,7 +53,7 @@ exports[`<YesNoQuestion /> should render 1`] = `
   appearance: none;
 }
 
-.c5:before {
+.c6:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -62,39 +68,29 @@ exports[`<YesNoQuestion /> should render 1`] = `
   content: "";
 }
 
-.c5:checked {
+.c6:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c5:checked:before {
+.c6:checked:before {
   display: block;
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  position: relative;
-}
-
-.c1 {
   font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
+  cursor: default;
 }
 
-.c3 {
+.c2 {
+  font-weight: 600 !important;
+  display: inline;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -114,61 +110,59 @@ exports[`<YesNoQuestion /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c1 {
+  .c0 {
     font-size: 1.6rem;
   }
 }
 
 <div>
-  <div>
-    <div
-      class="c0"
+  <p
+    class="c0"
+  >
+    <p
+      class="c1 c2"
     >
-      <p
-        class="c1"
+      lorem ipsum ?
+       
+      <span
+        class="c3"
       >
-        lorem ipsum ?
-         
-        <span
-          class="c2"
-        >
-           (obligatoire)
-        </span>
-      </p>
-    </div>
-  </div>
+         (obligatoire)
+      </span>
+    </p>
+  </p>
   <div
-    class="c3"
+    class="c4"
   >
     <div
-      class="c4"
+      class="c5"
     >
       <input
-        class="c5"
+        class="c6"
         id="test-oui"
         name="test"
         type="radio"
         value="true"
       />
       <label
-        class="c6"
+        class="c7"
         for="test-oui"
       >
         Oui
       </label>
     </div>
     <div
-      class="c4"
+      class="c5"
     >
       <input
-        class="c5"
+        class="c6"
         id="test-non"
         name="test"
         type="radio"
         value="false"
       />
       <label
-        class="c6"
+        class="c7"
         for="test-non"
       >
         Non

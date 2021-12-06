@@ -1517,7 +1517,7 @@ exports[`<Theme /> should render 1`] = `
                 Besoin de plus d’informations ?
               </p>
             </div>
-            <p
+            <div
               class="c45 c46"
             >
               <p>

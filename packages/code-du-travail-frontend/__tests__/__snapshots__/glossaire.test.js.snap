@@ -1611,7 +1611,7 @@ exports[`<Glossaire /> should render 1`] = `
                 Besoin de plus d’informations ?
               </p>
             </div>
-            <p
+            <div
               class="c43 c44"
             >
               <p>

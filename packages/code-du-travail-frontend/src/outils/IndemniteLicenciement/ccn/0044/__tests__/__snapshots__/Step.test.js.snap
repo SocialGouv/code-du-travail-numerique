@@ -14,13 +14,19 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   transform: translateY(-50%);
 }
 
-.c10 {
+.c11 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c14 {
+.c4 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,7 +35,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   cursor: pointer;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -39,7 +45,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   flex-direction: row;
 }
 
-.c13 {
+.c14 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -60,7 +66,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   appearance: none;
 }
 
-.c13:before {
+.c14:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -75,16 +81,16 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   content: "";
 }
 
-.c13:checked {
+.c14:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c13:checked:before {
+.c14:checked:before {
   display: block;
 }
 
-.c6 {
+.c7 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -104,7 +110,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   text-align: center;
 }
 
-.c9 {
+.c10 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -114,7 +120,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   pointer-events: none;
 }
 
-.c8 {
+.c9 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -135,21 +141,21 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   appearance: none;
 }
 
-.c8::-ms-expand {
+.c9::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c8 *::-ms-backdrop,
-.c8 {
+.c9 *::-ms-backdrop,
+.c9 {
   padding-right: 1.6rem;
 }
 
-.c8:invalid {
+.c9:invalid {
   border-color: #eb5757;
 }
 
-.c8:disabled {
+.c9:disabled {
   background-color: #e4e8ef;
 }
 
@@ -173,29 +179,19 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  position: relative;
-}
-
-.c4 {
   font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
+  cursor: default;
 }
 
 .c5 {
+  font-weight: 600 !important;
+  display: inline;
+}
+
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -208,7 +204,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   padding: 0;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -227,12 +223,12 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   margin-bottom: 2rem;
 }
 
-.c7 {
+.c8 {
   width: 100%;
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     width: 100%;
   }
 }
@@ -257,7 +253,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c3 {
     font-size: 1.6rem;
   }
 }
@@ -275,31 +271,29 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
       Chimie
     </h3>
   </div>
-  <div>
-    <div
-      class="c3"
+  <p
+    class="c3"
+  >
+    <p
+      class="c4 c5"
     >
-      <p
-        class="c4"
-      >
-        Quel est l’échelon du salarié ?
-        <br />
-        Cette information se trouve sur le bulletin de salaire.
-         
-      </p>
-    </div>
-  </div>
+      Quel est l’échelon du salarié ?
+      <br />
+      Cette information se trouve sur le bulletin de salaire.
+       
+    </p>
+  </p>
   <label
-    class="c5"
+    class="c6"
     for="echelon"
   >
     Sélectionnez un échelon
   </label>
   <div
-    class="c6 c7"
+    class="c7 c8"
   >
     <select
-      class="c8"
+      class="c9"
       id="echelon"
       name="echelon"
     >
@@ -425,7 +419,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
     </select>
     <div
       aria-hidden="true"
-      class="c9"
+      class="c10"
     >
       <svg
         aria-hidden="true"
@@ -454,110 +448,106 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
       </svg>
     </div>
   </div>
-  <div>
-    <div
-      class="c3"
+  <p
+    class="c3"
+  >
+    <p
+      class="c4 c5"
     >
-      <p
-        class="c4"
+      Est-ce que l'entreprise est affiliée à une des organisations patronales employeur ?
+       
+      <span
+        class="c11"
       >
-        Est-ce que l'entreprise est affiliée à une des organisations patronales employeur ?
-         
-        <span
-          class="c10"
-        >
-           (obligatoire)
-        </span>
-      </p>
-    </div>
-  </div>
+         (obligatoire)
+      </span>
+    </p>
+  </p>
   <div
-    class="c11"
+    class="c12"
   >
     <div
-      class="c12"
+      class="c13"
     >
       <input
-        class="c13"
+        class="c14"
         id="hasOpe-oui"
         name="hasOpe"
         type="radio"
         value="true"
       />
       <label
-        class="c14"
+        class="c15"
         for="hasOpe-oui"
       >
         Oui
       </label>
     </div>
     <div
-      class="c12"
+      class="c13"
     >
       <input
-        class="c13"
+        class="c14"
         id="hasOpe-non"
         name="hasOpe"
         type="radio"
         value="false"
       />
       <label
-        class="c14"
+        class="c15"
         for="hasOpe-non"
       >
         Non
       </label>
     </div>
   </div>
-  <div>
-    <div
-      class="c3"
+  <p
+    class="c3"
+  >
+    <p
+      class="c4 c5"
     >
-      <p
-        class="c4"
+      Le motif du licenciement est-il économique ?
+       
+      <span
+        class="c11"
       >
-        Le motif du licenciement est-il économique ?
-         
-        <span
-          class="c10"
-        >
-           (obligatoire)
-        </span>
-      </p>
-    </div>
-  </div>
+         (obligatoire)
+      </span>
+    </p>
+  </p>
   <div
-    class="c11"
+    class="c12"
   >
     <div
-      class="c12"
+      class="c13"
     >
       <input
-        class="c13"
+        class="c14"
         id="isEco-oui"
         name="isEco"
         type="radio"
         value="true"
       />
       <label
-        class="c14"
+        class="c15"
         for="isEco-oui"
       >
         Oui
       </label>
     </div>
     <div
-      class="c12"
+      class="c13"
     >
       <input
-        class="c13"
+        class="c14"
         id="isEco-non"
         name="isEco"
         type="radio"
         value="false"
       />
       <label
-        class="c14"
+        class="c15"
         for="isEco-non"
       >
         Non
@@ -581,18 +571,24 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   transform: translateY(-50%);
 }
 
-.c10 {
+.c11 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c16 {
+.c4 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.c18 {
   position: relative;
   display: inline-block;
 }
 
-.c17 {
+.c19 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -614,15 +610,15 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   appearance: none;
 }
 
-.c17::-webkit-outer-spin-button,
-.c17::-webkit-inner-spin-button {
+.c19::-webkit-outer-spin-button,
+.c19::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c17::-webkit-calendar-picker-indicator {
+.c19::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -635,47 +631,47 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c17:invalid {
+.c19:invalid {
   border-color: #eb5757;
 }
 
-.c17::-webkit-input-placeholder {
+.c19::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c17::-moz-placeholder {
+.c19::-moz-placeholder {
   color: #9298af;
 }
 
-.c17:-ms-input-placeholder {
+.c19:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c17::placeholder {
+.c19::placeholder {
   color: #9298af;
 }
 
-.c17:focus {
+.c19:focus {
   border-color: #7994d4;
 }
 
-.c17:focus::-webkit-input-placeholder {
+.c19:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c17:focus::-moz-placeholder {
+.c19:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c17:focus:-ms-input-placeholder {
+.c19:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c17:focus::placeholder {
+.c19:focus::placeholder {
   color: transparent;
 }
 
-.c14 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -684,7 +680,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   cursor: pointer;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -694,7 +690,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   flex-direction: row;
 }
 
-.c13 {
+.c14 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -715,7 +711,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   appearance: none;
 }
 
-.c13:before {
+.c14:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -730,16 +726,16 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   content: "";
 }
 
-.c13:checked {
+.c14:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c13:checked:before {
+.c14:checked:before {
   display: block;
 }
 
-.c6 {
+.c7 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -759,7 +755,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   text-align: center;
 }
 
-.c9 {
+.c10 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -769,7 +765,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   pointer-events: none;
 }
 
-.c8 {
+.c9 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -790,21 +786,21 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   appearance: none;
 }
 
-.c8::-ms-expand {
+.c9::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c8 *::-ms-backdrop,
-.c8 {
+.c9 *::-ms-backdrop,
+.c9 {
   padding-right: 1.6rem;
 }
 
-.c8:invalid {
+.c9:invalid {
   border-color: #eb5757;
 }
 
-.c8:disabled {
+.c9:disabled {
   background-color: #e4e8ef;
 }
 
@@ -828,29 +824,27 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  position: relative;
-}
-
-.c4 {
   font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
+  cursor: default;
 }
 
-.c15 {
+.c16 {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.c5 {
+  font-weight: 600 !important;
+  display: inline;
+}
+
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -862,7 +856,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   margin-bottom: 2rem;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -875,7 +869,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   padding: 0;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -894,25 +888,25 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   margin-bottom: 2rem;
 }
 
-.c7 {
+.c8 {
   width: 100%;
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c18 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c19 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     width: 100%;
   }
 }
@@ -937,7 +931,13 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c16 {
     font-size: 1.6rem;
   }
 }
@@ -955,31 +955,29 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
       Chimie
     </h3>
   </div>
-  <div>
-    <div
-      class="c3"
+  <p
+    class="c3"
+  >
+    <p
+      class="c4 c5"
     >
-      <p
-        class="c4"
-      >
-        Quel est l’échelon du salarié ?
-        <br />
-        Cette information se trouve sur le bulletin de salaire.
-         
-      </p>
-    </div>
-  </div>
+      Quel est l’échelon du salarié ?
+      <br />
+      Cette information se trouve sur le bulletin de salaire.
+       
+    </p>
+  </p>
   <label
-    class="c5"
+    class="c6"
     for="echelon"
   >
     Sélectionnez un échelon
   </label>
   <div
-    class="c6 c7"
+    class="c7 c8"
   >
     <select
-      class="c8"
+      class="c9"
       id="echelon"
       name="echelon"
     >
@@ -1105,7 +1103,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     </select>
     <div
       aria-hidden="true"
-      class="c9"
+      class="c10"
     >
       <svg
         aria-hidden="true"
@@ -1134,142 +1132,136 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
       </svg>
     </div>
   </div>
-  <div>
-    <div
-      class="c3"
+  <p
+    class="c3"
+  >
+    <p
+      class="c4 c5"
     >
-      <p
-        class="c4"
+      Est-ce que l'entreprise est affiliée à une des organisations patronales employeur ?
+       
+      <span
+        class="c11"
       >
-        Est-ce que l'entreprise est affiliée à une des organisations patronales employeur ?
-         
-        <span
-          class="c10"
-        >
-           (obligatoire)
-        </span>
-      </p>
-    </div>
-  </div>
+         (obligatoire)
+      </span>
+    </p>
+  </p>
   <div
-    class="c11"
+    class="c12"
   >
     <div
-      class="c12"
+      class="c13"
     >
       <input
-        class="c13"
+        class="c14"
         id="hasOpe-oui"
         name="hasOpe"
         type="radio"
         value="true"
       />
       <label
-        class="c14"
+        class="c15"
         for="hasOpe-oui"
       >
         Oui
       </label>
     </div>
     <div
-      class="c12"
+      class="c13"
     >
       <input
-        class="c13"
+        class="c14"
         id="hasOpe-non"
         name="hasOpe"
         type="radio"
         value="false"
       />
       <label
-        class="c14"
+        class="c15"
         for="hasOpe-non"
       >
         Non
       </label>
     </div>
   </div>
-  <div>
-    <div
-      class="c3"
+  <p
+    class="c3"
+  >
+    <p
+      class="c4 c5"
     >
-      <p
-        class="c4"
+      Le motif du licenciement est-il économique ?
+       
+      <span
+        class="c11"
       >
-        Le motif du licenciement est-il économique ?
-         
-        <span
-          class="c10"
-        >
-           (obligatoire)
-        </span>
-      </p>
-    </div>
-  </div>
+         (obligatoire)
+      </span>
+    </p>
+  </p>
   <div
-    class="c11"
+    class="c12"
   >
     <div
-      class="c12"
+      class="c13"
     >
       <input
-        class="c13"
+        class="c14"
         id="isEco-oui"
         name="isEco"
         type="radio"
         value="true"
       />
       <label
-        class="c14"
+        class="c15"
         for="isEco-oui"
       >
         Oui
       </label>
     </div>
     <div
-      class="c12"
+      class="c13"
     >
       <input
-        class="c13"
+        class="c14"
         id="isEco-non"
         name="isEco"
         type="radio"
         value="false"
       />
       <label
-        class="c14"
+        class="c15"
         for="isEco-non"
       >
         Non
       </label>
     </div>
   </div>
-  <div>
-    <div
-      class="c3"
+  <label
+    class="c16"
+    for="1"
+  >
+    <p
+      class="c4 c5"
     >
-      <label
-        class="c4"
-        for="1"
+      Quel était l’âge du salarié à la date du licenciement ?
+       
+      <span
+        class="c11"
       >
-        Quel était l’âge du salarié à la date du licenciement ?
-         
-        <span
-          class="c10"
-        >
-           (obligatoire)
-        </span>
-      </label>
-    </div>
-  </div>
+         (obligatoire)
+      </span>
+    </p>
+  </label>
   <div
-    class="c15"
+    class="c17"
   >
     <span
-      class="c16"
+      class="c18"
     >
       <input
-        class="c17"
+        class="c19"
         id="1"
         name="age"
         value=""
@@ -1293,7 +1285,13 @@ exports[`<Step /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c6 {
+.c4 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.c7 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1313,7 +1311,7 @@ exports[`<Step /> should render 1`] = `
   text-align: center;
 }
 
-.c9 {
+.c10 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -1323,7 +1321,7 @@ exports[`<Step /> should render 1`] = `
   pointer-events: none;
 }
 
-.c8 {
+.c9 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -1344,21 +1342,21 @@ exports[`<Step /> should render 1`] = `
   appearance: none;
 }
 
-.c8::-ms-expand {
+.c9::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c8 *::-ms-backdrop,
-.c8 {
+.c9 *::-ms-backdrop,
+.c9 {
   padding-right: 1.6rem;
 }
 
-.c8:invalid {
+.c9:invalid {
   border-color: #eb5757;
 }
 
-.c8:disabled {
+.c9:disabled {
   background-color: #e4e8ef;
 }
 
@@ -1382,29 +1380,19 @@ exports[`<Step /> should render 1`] = `
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  position: relative;
-}
-
-.c4 {
   font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
+  cursor: default;
 }
 
 .c5 {
+  font-weight: 600 !important;
+  display: inline;
+}
+
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1417,12 +1405,12 @@ exports[`<Step /> should render 1`] = `
   padding: 0;
 }
 
-.c7 {
+.c8 {
   width: 100%;
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     width: 100%;
   }
 }
@@ -1447,7 +1435,7 @@ exports[`<Step /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c3 {
     font-size: 1.6rem;
   }
 }
@@ -1465,31 +1453,29 @@ exports[`<Step /> should render 1`] = `
       Chimie
     </h3>
   </div>
-  <div>
-    <div
-      class="c3"
+  <p
+    class="c3"
+  >
+    <p
+      class="c4 c5"
     >
-      <p
-        class="c4"
-      >
-        Quel est l’échelon du salarié ?
-        <br />
-        Cette information se trouve sur le bulletin de salaire.
-         
-      </p>
-    </div>
-  </div>
+      Quel est l’échelon du salarié ?
+      <br />
+      Cette information se trouve sur le bulletin de salaire.
+       
+    </p>
+  </p>
   <label
-    class="c5"
+    class="c6"
     for="echelon"
   >
     Sélectionnez un échelon
   </label>
   <div
-    class="c6 c7"
+    class="c7 c8"
   >
     <select
-      class="c8"
+      class="c9"
       id="echelon"
       name="echelon"
     >
@@ -1615,7 +1601,7 @@ exports[`<Step /> should render 1`] = `
     </select>
     <div
       aria-hidden="true"
-      class="c9"
+      class="c10"
     >
       <svg
         aria-hidden="true"

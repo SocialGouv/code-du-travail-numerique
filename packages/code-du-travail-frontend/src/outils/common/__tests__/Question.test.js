@@ -8,48 +8,42 @@ describe("<Question />", () => {
   it("should render question", () => {
     const { container } = render(<Question>ma question</Question>);
     expect(container).toMatchInlineSnapshot(`
-      .c0 {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-align-items: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        position: relative;
+      .c1 {
+        color: #3e486e;
+        font-size: 1.6rem;
+        font-weight: 400;
       }
 
-      .c1 {
+      .c0 {
+        display: block;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
         font-size: 1.8rem;
-        font-weight: 600;
-        margin: 0;
+        cursor: pointer;
+      }
+
+      .c2 {
+        font-weight: 600 !important;
+        display: inline;
       }
 
       @media (max-width:600px) {
-        .c1 {
+        .c0 {
           font-size: 1.6rem;
         }
       }
 
       <div>
-        <div>
-          <div
-            class="c0"
+        <label
+          class="c0"
+        >
+          <p
+            class="c1 c2"
           >
-            <label
-              class="c1"
-            >
-              ma question
-               
-            </label>
-          </div>
-        </div>
+            ma question
+             
+          </p>
+        </label>
       </div>
     `);
   });
@@ -58,59 +52,53 @@ describe("<Question />", () => {
       <Question required>ma question obligatoire</Question>
     );
     expect(container).toMatchInlineSnapshot(`
-      .c2 {
+      .c3 {
+        color: #3e486e;
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+
+      .c1 {
         color: #3e486e;
         font-size: 1.6rem;
         font-weight: 400;
       }
 
       .c0 {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-align-items: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
+        display: block;
         margin-top: 2rem;
         margin-bottom: 1rem;
-        position: relative;
+        font-size: 1.8rem;
+        cursor: pointer;
       }
 
-      .c1 {
-        font-size: 1.8rem;
-        font-weight: 600;
-        margin: 0;
+      .c2 {
+        font-weight: 600 !important;
+        display: inline;
       }
 
       @media (max-width:600px) {
-        .c1 {
+        .c0 {
           font-size: 1.6rem;
         }
       }
 
       <div>
-        <div>
-          <div
-            class="c0"
+        <label
+          class="c0"
+        >
+          <p
+            class="c1 c2"
           >
-            <label
-              class="c1"
+            ma question obligatoire
+             
+            <span
+              class="c3"
             >
-              ma question obligatoire
-               
-              <span
-                class="c2"
-              >
-                 (obligatoire)
-              </span>
-            </label>
-          </div>
-        </div>
+               (obligatoire)
+            </span>
+          </p>
+        </label>
       </div>
     `);
   });

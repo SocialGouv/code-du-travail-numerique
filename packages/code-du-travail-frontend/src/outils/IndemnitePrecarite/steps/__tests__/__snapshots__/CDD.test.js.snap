@@ -1,13 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepCDD /> should render 1`] = `
-.c2 {
+.c3 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c6 {
+.c1 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,7 +22,7 @@ exports[`<StepCDD /> should render 1`] = `
   cursor: pointer;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,7 +32,7 @@ exports[`<StepCDD /> should render 1`] = `
   flex-direction: row;
 }
 
-.c5 {
+.c6 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -47,7 +53,7 @@ exports[`<StepCDD /> should render 1`] = `
   appearance: none;
 }
 
-.c5:before {
+.c6:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -62,39 +68,29 @@ exports[`<StepCDD /> should render 1`] = `
   content: "";
 }
 
-.c5:checked {
+.c6:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c5:checked:before {
+.c6:checked:before {
   display: block;
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  position: relative;
-}
-
-.c1 {
   font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
+  cursor: default;
 }
 
-.c3 {
+.c2 {
+  font-weight: 600 !important;
+  display: inline;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -114,231 +110,223 @@ exports[`<StepCDD /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c1 {
+  .c0 {
     font-size: 1.6rem;
   }
 }
 
 <div>
   <form>
-    <div>
-      <div
-        class="c0"
+    <p
+      class="c0"
+    >
+      <p
+        class="c1 c2"
       >
-        <p
-          class="c1"
+        Le CDD a-t-il été rompu pendant la période d’essai du salarié ?
+         
+        <span
+          class="c3"
         >
-          Le CDD a-t-il été rompu pendant la période d’essai du salarié ?
-           
-          <span
-            class="c2"
-          >
-             (obligatoire)
-          </span>
-        </p>
-      </div>
-    </div>
+           (obligatoire)
+        </span>
+      </p>
+    </p>
     <div
-      class="c3"
+      class="c4"
       data-testid="finContratPeriodeDessai"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="finContratPeriodeDessai-oui"
           name="finContratPeriodeDessai"
           type="radio"
           value="true"
         />
         <label
-          class="c6"
+          class="c7"
           for="finContratPeriodeDessai-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c4"
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="finContratPeriodeDessai-non"
           name="finContratPeriodeDessai"
           type="radio"
           value="false"
         />
         <label
-          class="c6"
+          class="c7"
           for="finContratPeriodeDessai-non"
         >
           Non
         </label>
       </div>
     </div>
-    <div>
-      <div
-        class="c0"
+    <p
+      class="c0"
+    >
+      <p
+        class="c1 c2"
       >
-        <p
-          class="c1"
+        À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?
+         
+        <span
+          class="c3"
         >
-          À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?
-           
-          <span
-            class="c2"
-          >
-             (obligatoire)
-          </span>
-        </p>
-      </div>
-    </div>
+           (obligatoire)
+        </span>
+      </p>
+    </p>
     <div
-      class="c3"
+      class="c4"
       data-testid="propositionCDIFindeContrat"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="propositionCDIFindeContrat-oui"
           name="propositionCDIFindeContrat"
           type="radio"
           value="true"
         />
         <label
-          class="c6"
+          class="c7"
           for="propositionCDIFindeContrat-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c4"
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="propositionCDIFindeContrat-non"
           name="propositionCDIFindeContrat"
           type="radio"
           value="false"
         />
         <label
-          class="c6"
+          class="c7"
           for="propositionCDIFindeContrat-non"
         >
           Non
         </label>
       </div>
     </div>
-    <div>
-      <div
-        class="c0"
+    <p
+      class="c0"
+    >
+      <p
+        class="c1 c2"
       >
-        <p
-          class="c1"
+        Le CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave ou faute lourde du salarié, cas de force majeure ?
+         
+        <span
+          class="c3"
         >
-          Le CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave ou faute lourde du salarié, cas de force majeure ?
-           
-          <span
-            class="c2"
-          >
-             (obligatoire)
-          </span>
-        </p>
-      </div>
-    </div>
+           (obligatoire)
+        </span>
+      </p>
+    </p>
     <div
-      class="c3"
+      class="c4"
       data-testid="interruptionFauteGrave"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="interruptionFauteGrave-oui"
           name="interruptionFauteGrave"
           type="radio"
           value="true"
         />
         <label
-          class="c6"
+          class="c7"
           for="interruptionFauteGrave-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c4"
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="interruptionFauteGrave-non"
           name="interruptionFauteGrave"
           type="radio"
           value="false"
         />
         <label
-          class="c6"
+          class="c7"
           for="interruptionFauteGrave-non"
         >
           Non
         </label>
       </div>
     </div>
-    <div>
-      <div
-        class="c0"
+    <p
+      class="c0"
+    >
+      <p
+        class="c1 c2"
       >
-        <p
-          class="c1"
+        Le salarié a-t-il refusé de renouveler le CDD alors que le renouvellement et ses modalités étaient prévus dès l’origine dans son contrat ?
+         
+        <span
+          class="c3"
         >
-          Le salarié a-t-il refusé de renouveler le CDD alors que le renouvellement et ses modalités étaient prévus dès l’origine dans son contrat ?
-           
-          <span
-            class="c2"
-          >
-             (obligatoire)
-          </span>
-        </p>
-      </div>
-    </div>
+           (obligatoire)
+        </span>
+      </p>
+    </p>
     <div
-      class="c3"
+      class="c4"
       data-testid="refusRenouvellementAuto"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="refusRenouvellementAuto-oui"
           name="refusRenouvellementAuto"
           type="radio"
           value="true"
         />
         <label
-          class="c6"
+          class="c7"
           for="refusRenouvellementAuto-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c4"
+        class="c5"
       >
         <input
-          class="c5"
+          class="c6"
           id="refusRenouvellementAuto-non"
           name="refusRenouvellementAuto"
           type="radio"
           value="false"
         />
         <label
-          class="c6"
+          class="c7"
           for="refusRenouvellementAuto-non"
         >
           Non

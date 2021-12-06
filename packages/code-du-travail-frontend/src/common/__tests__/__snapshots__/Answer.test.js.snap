@@ -181,10 +181,8 @@ exports[`<Answer /> should renders 1`] = `
 
 .c17 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -1257,10 +1255,8 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 
 .c27 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -2583,10 +2579,8 @@ exports[`<Answer /> should renders back to results link 1`] = `
 
 .c17 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -3711,10 +3705,8 @@ exports[`<Answer /> should renders related content 1`] = `
 
 .c17 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -5008,10 +5000,8 @@ exports[`<Answer /> should renders tooltip 1`] = `
 
 .c17 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -6085,10 +6075,8 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 
 .c17 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -7162,10 +7150,8 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 
 .c17 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -8240,10 +8226,8 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
 
 .c17 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 

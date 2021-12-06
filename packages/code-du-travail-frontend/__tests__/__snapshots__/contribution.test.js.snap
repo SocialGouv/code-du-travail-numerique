@@ -511,10 +511,8 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 
 .c59 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -2633,9 +2631,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         <p
                           class="c59"
                         >
-                          <span>
-                            Le contenu de cette page peut être personnalisé en fonction de votre situation.
-                          </span>
+                          Le contenu de cette page peut être personnalisé en fonction de votre situation.
                           <br />
                           <a
                             href="#customisation"
@@ -2997,7 +2993,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 role="heading"
               >
                 <p
-                  class="c89"
+                  class="c90"
                 >
                   <span
                     class="c91"
@@ -3005,7 +3001,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   Besoin de plus d’informations ?
                 </p>
               </div>
-              <p
+              <div
                 class="c92 c93"
               >
                 <p>
@@ -3828,10 +3824,8 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 
 .c59 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -5950,9 +5944,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         <p
                           class="c59"
                         >
-                          <span>
-                            Le contenu de cette page peut être personnalisé en fonction de votre situation.
-                          </span>
+                          Le contenu de cette page peut être personnalisé en fonction de votre situation.
                           <br />
                           <a
                             href="#customisation"
@@ -6314,7 +6306,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 role="heading"
               >
                 <p
-                  class="c89"
+                  class="c90"
                 >
                   <span
                     class="c91"
@@ -6322,7 +6314,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   Besoin de plus d’informations ?
                 </p>
               </div>
-              <p
+              <div
                 class="c92 c93"
               >
                 <p>

@@ -94,9 +94,7 @@ const Contribution = ({ answers, content }) => {
               <StyledInsertTitle as="p">Page personnalisable</StyledInsertTitle>
               {isConventionDetected || isConventionalAnswer ? (
                 <Paragraph noMargin>
-                  <span>
-                    Cette page a été personnalisée avec l’ajout des {}
-                  </span>
+                  Cette page a été personnalisée avec l’ajout des {}
                   {isConventionalAnswer ? (
                     <a href="#customisation">
                       informations de la convention collective :{" "}
@@ -111,10 +109,8 @@ const Contribution = ({ answers, content }) => {
                 </Paragraph>
               ) : (
                 <Paragraph noMargin>
-                  <span>
-                    Le contenu de cette page peut être personnalisé en fonction
-                    de votre situation.
-                  </span>
+                  Le contenu de cette page peut être personnalisé en fonction de
+                  votre situation.
                   <br />
                   <a href="#customisation">Voir en bas de page</a> pour
                   renseigner votre convention collective.

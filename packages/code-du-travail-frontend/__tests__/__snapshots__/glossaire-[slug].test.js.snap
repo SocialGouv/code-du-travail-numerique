@@ -1432,7 +1432,7 @@ exports[`<Term /> should render 1`] = `
                 Besoin de plus d’informations ?
               </p>
             </div>
-            <p
+            <div
               class="c38 c39"
             >
               <p>

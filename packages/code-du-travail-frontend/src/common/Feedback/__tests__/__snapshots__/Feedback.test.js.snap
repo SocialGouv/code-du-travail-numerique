@@ -121,10 +121,8 @@ exports[`<Feedback/> should render 1`] = `
 
 .c8 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -537,7 +535,6 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 
 .c8 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -1136,7 +1133,6 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 
 .c8 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }

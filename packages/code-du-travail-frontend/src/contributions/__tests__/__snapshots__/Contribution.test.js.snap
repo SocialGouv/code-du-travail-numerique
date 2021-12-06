@@ -133,10 +133,8 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 
 .c8 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -543,9 +541,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         <p
           class="c8"
         >
-          <span>
-            Le contenu de cette page peut être personnalisé en fonction de votre situation.
-          </span>
+          Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
           <a
             href="#customisation"
@@ -777,10 +773,8 @@ exports[`<Contribution /> should render answer references 1`] = `
 
 .c8 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -1187,9 +1181,7 @@ exports[`<Contribution /> should render answer references 1`] = `
         <p
           class="c8"
         >
-          <span>
-            Le contenu de cette page peut être personnalisé en fonction de votre situation.
-          </span>
+          Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
           <a
             href="#customisation"
@@ -1421,10 +1413,8 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 
 .c8 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -1831,9 +1821,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         <p
           class="c8"
         >
-          <span>
-            Le contenu de cette page peut être personnalisé en fonction de votre situation.
-          </span>
+          Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
           <a
             href="#customisation"
@@ -2065,10 +2053,8 @@ exports[`<Contribution /> should render with both answers 1`] = `
 
 .c8 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -2475,9 +2461,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
         <p
           class="c8"
         >
-          <span>
-            Le contenu de cette page peut être personnalisé en fonction de votre situation.
-          </span>
+          Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
           <a
             href="#customisation"
@@ -2696,10 +2680,8 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 
 .c8 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -3068,9 +3050,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         <p
           class="c8"
         >
-          <span>
-            Le contenu de cette page peut être personnalisé en fonction de votre situation.
-          </span>
+          Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
           <a
             href="#customisation"

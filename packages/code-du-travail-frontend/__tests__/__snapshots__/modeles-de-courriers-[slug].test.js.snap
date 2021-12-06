@@ -639,10 +639,8 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 
 .c66 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -2747,7 +2745,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 Besoin de plus d’informations ?
               </p>
             </div>
-            <p
+            <div
               class="c81 c82"
             >
               <p>

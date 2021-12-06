@@ -438,10 +438,8 @@ exports[`<CodeDuTravail /> should render 1`] = `
 
 .c29 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -1825,7 +1823,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
               role="heading"
             >
               <p
-                class="c49"
+                class="c50"
               >
                 <span
                   class="c51"
@@ -1833,7 +1831,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
                 Besoin de plus d’informations ?
               </p>
             </div>
-            <p
+            <div
               class="c52 c53"
             >
               <p>

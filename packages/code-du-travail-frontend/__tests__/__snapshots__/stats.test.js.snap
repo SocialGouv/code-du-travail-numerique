@@ -1602,7 +1602,7 @@ exports[`<Stats /> should render 1`] = `
                 Besoin de plus d’informations ?
               </p>
             </div>
-            <p
+            <div
               class="c44 c45"
             >
               <p>

@@ -1737,7 +1737,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                 Besoin de plus d’informations ?
               </p>
             </div>
-            <p
+            <div
               class="c42 c43"
             >
               <p>

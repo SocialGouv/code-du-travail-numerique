@@ -71,7 +71,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -728,7 +727,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 

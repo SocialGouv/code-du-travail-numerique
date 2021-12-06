@@ -376,15 +376,10 @@ exports[`<Highlights /> should render 1`] = `
                 <p
                   class="c15"
                 >
-<<<<<<< HEAD
-                  1. Dois-je prévenir mon employeur si je reviens, ou si...
-                </p>
-=======
                   <p>
                     1. Dois-je prévenir mon employeur si je reviens, ou si...
                   </p>
-                </div>
->>>>>>> @{-1}
+                </p>
               </a>
             </div>
             <div
@@ -415,15 +410,10 @@ exports[`<Highlights /> should render 1`] = `
                 <p
                   class="c15"
                 >
-<<<<<<< HEAD
-                  9. Quelles sont les recommandations sanitaires pour...
-                </p>
-=======
                   <p>
                     9. Quelles sont les recommandations sanitaires pour...
                   </p>
-                </div>
->>>>>>> @{-1}
+                </p>
               </a>
             </div>
           </div>

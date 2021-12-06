@@ -1,7 +1,6 @@
 import {
   Input,
   Label,
-  Paragraph,
   Section as SectionUi,
   Text,
   theme,

@@ -559,10 +559,8 @@ exports[`<FicheMT /> should render 1`] = `
 
 .c51 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
-  all: revert;
   margin: 0;
 }
 
@@ -2664,7 +2662,7 @@ exports[`<FicheMT /> should render 1`] = `
               role="heading"
             >
               <p
-                class="c79"
+                class="c80"
               >
                 <span
                   class="c81"
@@ -2672,7 +2670,7 @@ exports[`<FicheMT /> should render 1`] = `
                 Besoin de plus d’informations ?
               </p>
             </div>
-            <p
+            <div
               class="c82 c83"
             >
               <p>
