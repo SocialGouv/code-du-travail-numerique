@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { ScreenReaderOnly } from "../ScreenReaderOnly/index.js";
 import { Heading } from "../Titles/Heading";
 import * as variants from "./components/variants/index.js";
 import { VerticalArrow as AccordionArrow } from "./components/VerticalArrow";
@@ -51,7 +50,6 @@ export const Accordion = ({
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
-              <ScreenReaderOnly>{title}</ScreenReaderOnly>
               <AccordionItemPanelContent>{body}</AccordionItemPanelContent>
             </AccordionItemPanel>
           </AccordionItem>

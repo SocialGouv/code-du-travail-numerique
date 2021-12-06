@@ -1365,7 +1365,9 @@ exports[`<Recherche /> should render 1`] = `
             class="c28 c29"
           >
             <strong
+              aria-level="2"
               class="c30"
+              role="heading"
             >
               <span
                 class="c31"
@@ -1403,7 +1405,9 @@ exports[`<Recherche /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c37"
+              role="heading"
             >
               <p
                 class="c38"
@@ -1450,7 +1454,9 @@ exports[`<Recherche /> should render 1`] = `
               class="c45 "
             >
               <strong
+                aria-level="2"
                 class="c46 c47"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -1527,7 +1533,9 @@ exports[`<Recherche /> should render 1`] = `
               class="c45 "
             >
               <strong
+                aria-level="2"
                 class="c46 c47"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -1569,7 +1577,9 @@ exports[`<Recherche /> should render 1`] = `
               class="c45 "
             >
               <strong
+                aria-level="2"
                 class="c46 c47"
+                role="heading"
               >
                 En collaboration avec
               </strong>

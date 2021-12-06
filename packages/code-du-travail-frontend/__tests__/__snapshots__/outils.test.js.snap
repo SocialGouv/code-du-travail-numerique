@@ -1666,7 +1666,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -1795,7 +1795,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -1898,7 +1898,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -2009,7 +2009,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -2142,7 +2142,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -2248,7 +2248,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -2361,7 +2361,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -2470,7 +2470,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -2576,7 +2576,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -2691,7 +2691,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -2754,7 +2754,9 @@ exports[`<Outils /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c53"
+              role="heading"
             >
               <p
                 class="c54"
@@ -2801,7 +2803,9 @@ exports[`<Outils /> should render 1`] = `
               class="c61 "
             >
               <strong
+                aria-level="2"
                 class="c62 c63"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -2878,7 +2882,9 @@ exports[`<Outils /> should render 1`] = `
               class="c61 "
             >
               <strong
+                aria-level="2"
                 class="c62 c63"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -2920,7 +2926,9 @@ exports[`<Outils /> should render 1`] = `
               class="c61 "
             >
               <strong
+                aria-level="2"
                 class="c62 c63"
+                role="heading"
               >
                 En collaboration avec
               </strong>

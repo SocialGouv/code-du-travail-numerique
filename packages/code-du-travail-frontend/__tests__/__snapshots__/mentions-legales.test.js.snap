@@ -1540,7 +1540,9 @@ exports[`<MentionLegales /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c40"
+              role="heading"
             >
               <p
                 class="c41"
@@ -1587,7 +1589,9 @@ exports[`<MentionLegales /> should render 1`] = `
               class="c48 "
             >
               <strong
+                aria-level="2"
                 class="c49 c50"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -1664,7 +1668,9 @@ exports[`<MentionLegales /> should render 1`] = `
               class="c48 "
             >
               <strong
+                aria-level="2"
                 class="c49 c50"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -1706,7 +1712,9 @@ exports[`<MentionLegales /> should render 1`] = `
               class="c48 "
             >
               <strong
+                aria-level="2"
                 class="c49 c50"
+                role="heading"
               >
                 En collaboration avec
               </strong>

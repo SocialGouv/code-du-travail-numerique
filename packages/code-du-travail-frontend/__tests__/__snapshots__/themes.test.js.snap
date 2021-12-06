@@ -1504,7 +1504,9 @@ exports[`<Theme /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c43"
+              role="heading"
             >
               <p
                 class="c44"
@@ -1551,7 +1553,9 @@ exports[`<Theme /> should render 1`] = `
               class="c50 "
             >
               <strong
+                aria-level="2"
                 class="c51 c52"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -1628,7 +1632,9 @@ exports[`<Theme /> should render 1`] = `
               class="c50 "
             >
               <strong
+                aria-level="2"
                 class="c51 c52"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -1670,7 +1676,9 @@ exports[`<Theme /> should render 1`] = `
               class="c50 "
             >
               <strong
+                aria-level="2"
                 class="c51 c52"
+                role="heading"
               >
                 En collaboration avec
               </strong>

@@ -2449,7 +2449,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             <p
               class="c29"
             >
-              Retrouvez la définition du droit du travail, les textes qui en sont à l’origine 
+              Retrouvez la définition du droit du travail, les textes qui en sont à l’origine
               <br
                 class="c30"
               />
@@ -2515,7 +2515,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     class="c39"
                   >
                     <div
-                      class="c40"
+                      aria-level="4"
+                      class="droit-du-travail__StyledInsertTitle-sc-wr60x8-0 c40"
+                      role="heading"
                     >
                       Le droit du travail, ce n’est pas…
                     </div>
@@ -2703,7 +2705,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         >
                           <p>
                             Le droit du travail en France est influencé par les textes de
-                             
+
                             <a
                               aria-label="l’Organisation internationale du travail (nouvelle fenêtre)"
                               href="https://www.ilo.org/global/lang--fr/index.htm"
@@ -2712,7 +2714,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             >
                               l’Organisation internationale du travail
                             </a>
-                             
+
                             (OIT), agence des Nations Unies pour le monde du travail. L’OIT rédige des recommandations et des conventions.
                           </p>
                           <p>
@@ -2721,7 +2723,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           <p>
                             <i>
                               Exemple de convention :
-                               
+
                               <a
                                 aria-label="la Convention n°158 de l’OIT sur le licenciement (nouvelle fenêtre)"
                                 href="https://www.ilo.org/dyn/normlex/fr/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C158"
@@ -2739,7 +2741,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           <p>
                             <i>
                               Exemples :
-                               
+
                               <a
                                 aria-label="Le Pacte international relatif aux droits civils et politiques de 1966 (nouvelle fenêtre)"
                                 href="https://www.ohchr.org/fr/professionalinterest/pages/ccpr.aspx"
@@ -2748,9 +2750,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               >
                                 Le Pacte international relatif aux droits civils et politiques de 1966
                               </a>
-                               
+
                               et
-                               
+
                               <a
                                 aria-label="le Pacte international relatif aux droits économiques, sociaux et culturels de 1966 (nouvelle fenêtre)"
                                 href="https://www.ohchr.org/FR/ProfessionalInterest/Pages/CESCR.aspx"
@@ -2853,7 +2855,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         >
                           <p>
                             Le droit du travail français est influencé par
-                             
+
                             <a
                               aria-label="l’Union Européenne (nouvelle fenêtre)"
                               href="https://europa.eu/european-union/index_fr"
@@ -2862,9 +2864,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             >
                               l’Union Européenne
                             </a>
-                             
+
                             et par
-                             
+
                             <a
                               aria-label="le Conseil de l’Europe (nouvelle fenêtre)"
                               href="https://www.coe.int/fr/"
@@ -2890,7 +2892,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             </li>
                             <li>
                               des accords collectifs européens négociés par
-                               
+
                               <a
                                 aria-label="la Confédération européenne des syndicats (CES) (nouvelle fenêtre)"
                                 href="https://www.etuc.org/fr"
@@ -2900,7 +2902,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                                 la Confédération européenne des syndicats (CES)
                               </a>
                               ,
-                               
+
                               <a
                                 aria-label="Business Europe (nouvelle fenêtre)"
                                 href="https://www.businesseurope.eu/"
@@ -2909,9 +2911,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               >
                                 Business Europe
                               </a>
-                               
+
                               et
-                               
+
                               <a
                                 aria-label="le Centre européen des entreprises à participation publique (nouvelle fenêtre)"
                                 href="https://www.ceep.eu/"
@@ -2920,7 +2922,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               >
                                 le Centre européen des entreprises à participation publique
                               </a>
-                               
+
                               (CEEP)
                             </li>
                           </ul>
@@ -2937,7 +2939,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               >
                                 La Convention européenne de sauvegarde des droits de l’Homme et des libertés fondamentales
                               </a>
-                               
+
                               qui évoque des droits civils et politiques comme par exemple la liberté syndicale, l’interdiction du travail forcé, des discriminations, le respect de la vie privée et familiale.
                             </li>
                             <li>
@@ -2949,7 +2951,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               >
                                 La Charte sociale européenne
                               </a>
-                               
+
                               qui concerne les droits sociaux et économiques dans les domaines notamment de l’emploi et des conditions de travail.
                             </li>
                           </ul>
@@ -3048,7 +3050,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         >
                           <p>
                             Texte le plus important du système juridique français,
-                             
+
                             <a
                               aria-label="la Constitution du 4 octobre 1958 (nouvelle fenêtre)"
                               href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur"
@@ -3057,12 +3059,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             >
                               la Constitution du 4 octobre 1958
                             </a>
-                             
+
                             est le texte fondateur de la Vème République. La Constitution a pour objectif d’organiser les pouvoirs publics, de définir leur rôle et leurs relations entre eux.
                           </p>
                           <p>
                             Dans son préambule la Constitution de 1958 renvoie explicitement à 3 autres textes fondamentaux :
-                             
+
                             <a
                               aria-label="la Déclaration des Droits de l’Homme et du Citoyen de 1789 (nouvelle fenêtre)"
                               href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/declaration-des-droits-de-l-homme-et-du-citoyen-de-1789"
@@ -3072,7 +3074,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                               la Déclaration des Droits de l’Homme et du Citoyen de 1789
                             </a>
                             ,
-                             
+
                             <a
                               aria-label="le Préambule de la Constitution du 27 octobre 1946 (nouvelle fenêtre)"
                               href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/preambule-de-la-constitution-du-27-octobre-1946"
@@ -3081,9 +3083,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             >
                               le Préambule de la Constitution du 27 octobre 1946
                             </a>
-                             
+
                             et
-                             
+
                             <a
                               aria-label="la Charte de l’environnement de 2004 (nouvelle fenêtre)"
                               href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/charte-de-l-environnement-de-2004"
@@ -3683,7 +3685,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             Le principe général en droit du travail est le suivant : lorsqu’il existe plusieurs textes sur un même sujet, c’est le texte le plus favorable au salarié qui s’applique. Ce principe continue a s’appliquer en droit du travail mais il connaît quelques exceptions.
           </p>
           <p>
-            Pour vous aider à comprendre, vous trouverez ci-dessous un schèma récapitulant 
+            Pour vous aider à comprendre, vous trouverez ci-dessous un schèma récapitulant
             <strong>
               la hiérarchie des textes entre eux
             </strong>
@@ -4484,7 +4486,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             class="c86"
                           >
                             Ce principe ne s’applique pas dans
-                             
+
                             <button
                               class="c14 c87"
                             >
@@ -4502,9 +4504,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                                 />
                               </svg>
                             </button>
-                             
+
                             où la loi reconnaît la primauté à la convention collective de branche et
-                             
+
                             <button
                               class="c14 c87"
                             >
@@ -4522,7 +4524,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                                 />
                               </svg>
                             </button>
-                             
+
                             où la branche elle-même peut reconnaître sa primauté, sauf si l’accord d’entreprise a des garanties au moins équivalentes.
                           </p>
                         </div>
@@ -4902,7 +4904,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c95"
+              role="heading"
             >
               <p
                 class="c96"
@@ -4949,7 +4953,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
               class="c102 "
             >
               <strong
+                aria-level="2"
                 class="c103 c104"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -5026,7 +5032,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
               class="c102 "
             >
               <strong
+                aria-level="2"
                 class="c103 c104"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -5068,7 +5076,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
               class="c102 "
             >
               <strong
+                aria-level="2"
                 class="c103 c104"
+                role="heading"
               >
                 En collaboration avec
               </strong>

@@ -444,7 +444,9 @@ exports[`<Footer /> should render 1`] = `
           class="c4"
         >
           <div
+            aria-level="2"
             class="c5"
+            role="heading"
           >
             <p
               class="c6"
@@ -491,7 +493,9 @@ exports[`<Footer /> should render 1`] = `
             class="c14 "
           >
             <strong
+              aria-level="2"
               class="c15 c16"
+              role="heading"
             >
               Code du travail numérique
             </strong>
@@ -568,7 +572,9 @@ exports[`<Footer /> should render 1`] = `
             class="c14 "
           >
             <strong
+              aria-level="2"
               class="c15 c16"
+              role="heading"
             >
               Aidez-nous à améliorer cet outil
             </strong>
@@ -610,7 +616,9 @@ exports[`<Footer /> should render 1`] = `
             class="c14 "
           >
             <strong
+              aria-level="2"
               class="c15 c16"
+              role="heading"
             >
               En collaboration avec
             </strong>

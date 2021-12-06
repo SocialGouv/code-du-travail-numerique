@@ -135,6 +135,10 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 }
 
 .c19 {
+  margin-left: auto;
+}
+
+.c20 {
   width: 3rem;
   margin-left: 1rem;
 }
@@ -341,11 +345,11 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 
 }
 
-@media (max-width:600px) {
+@media print {
 
 }
 
-@media print {
+@media (max-width:600px) {
 
 }
 
@@ -503,7 +507,9 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
         class="c5 c6"
       >
         <span
+          aria-level="2"
           class="c7"
+          role="heading"
         >
           Étape
           <span
@@ -553,12 +559,12 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
         class="c16"
       >
         <button
-          class="c17 c18 "
+          class="c17 c18 c19"
         >
           Commencer
           <svg
             aria-hidden="true"
-            class="c19"
+            class="c20"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
@@ -651,12 +657,12 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #7994d4;
-  border-color: #7994d4;
-  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
+  height: 4rem;
+  padding: 0 3rem;
+  color: #3e486e;
+  background: #fff;
+  border-color: #bbcadf;
+  box-shadow: none;
   opacity: 1;
   will-change: transform;
 }
@@ -665,7 +671,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
 .c17:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #fff;
+  color: #3e486e;
 }
 
 .c17:not([disabled]):hover,
@@ -675,8 +681,8 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #a0b3e0;
-  border-color: #a0b3e0;
+  background: #fff;
+  border-color: #dee5ef;
 }
 
 .c17[disabled] {
@@ -715,12 +721,12 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 4rem;
-  padding: 0 3rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #7994d4;
+  border-color: #7994d4;
+  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
   opacity: 1;
   will-change: transform;
 }
@@ -729,7 +735,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
 .c19:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e486e;
+  color: #fff;
 }
 
 .c19:not([disabled]):hover,
@@ -739,8 +745,8 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
+  background: #a0b3e0;
+  border-color: #a0b3e0;
 }
 
 .c19[disabled] {
@@ -976,12 +982,6 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
 }
 
 @media (max-width:600px) {
-  .c17 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
   .c19 {
     font-size: 1.4rem;
   }
@@ -990,6 +990,12 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
 @media print {
   .c19 {
     display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c19 {
+    padding: 0 3rem;
   }
 }
 
@@ -1129,7 +1135,9 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
         class="c5 c6"
       >
         <span
+          aria-level="2"
           class="c7"
+          role="heading"
         >
           Étape
           <span
@@ -1193,13 +1201,13 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
           class="c17 c18 "
           type="button"
         >
-          Imprimer le résultat
+          Précédent
         </button>
         <button
           class="c19 c18 "
           type="button"
         >
-          Précédent
+          Imprimer le résultat
         </button>
       </div>
     </form>
@@ -1342,6 +1350,10 @@ exports[`<Wizard /> should handle initialValues 1`] = `
 }
 
 .c19 {
+  margin-left: auto;
+}
+
+.c20 {
   width: 3rem;
   margin-left: 1rem;
 }
@@ -1690,7 +1702,9 @@ exports[`<Wizard /> should handle initialValues 1`] = `
         class="c5 c6"
       >
         <span
+          aria-level="2"
           class="c7"
+          role="heading"
         >
           Étape
           <span
@@ -1750,12 +1764,12 @@ exports[`<Wizard /> should handle initialValues 1`] = `
         class="c16"
       >
         <button
-          class="c17 c18 "
+          class="c17 c18 c19"
         >
           Commencer
           <svg
             aria-hidden="true"
-            class="c19"
+            class="c20"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
@@ -1907,6 +1921,10 @@ exports[`<Wizard /> should inject rules component 1`] = `
 }
 
 .c19 {
+  margin-left: auto;
+}
+
+.c20 {
   width: 3rem;
   margin-left: 1rem;
 }
@@ -2258,7 +2276,9 @@ exports[`<Wizard /> should inject rules component 1`] = `
         class="c5 c6"
       >
         <span
+          aria-level="2"
           class="c7"
+          role="heading"
         >
           Étape
           <span
@@ -2308,12 +2328,12 @@ exports[`<Wizard /> should inject rules component 1`] = `
         class="c16"
       >
         <button
-          class="c17 c18 "
+          class="c17 c18 c19"
         >
           Commencer
           <svg
             aria-hidden="true"
-            class="c19"
+            class="c20"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"
@@ -2406,12 +2426,12 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #7994d4;
-  border-color: #7994d4;
-  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
+  height: 4rem;
+  padding: 0 3rem;
+  color: #3e486e;
+  background: #fff;
+  border-color: #bbcadf;
+  box-shadow: none;
   opacity: 1;
   will-change: transform;
 }
@@ -2420,7 +2440,7 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
 .c17:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #fff;
+  color: #3e486e;
 }
 
 .c17:not([disabled]):hover,
@@ -2430,8 +2450,8 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #a0b3e0;
-  border-color: #a0b3e0;
+  background: #fff;
+  border-color: #dee5ef;
 }
 
 .c17[disabled] {
@@ -2470,12 +2490,12 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 4rem;
-  padding: 0 3rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #7994d4;
+  border-color: #7994d4;
+  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
   opacity: 1;
   will-change: transform;
 }
@@ -2484,7 +2504,7 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
 .c19:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e486e;
+  color: #fff;
 }
 
 .c19:not([disabled]):hover,
@@ -2494,8 +2514,8 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
+  background: #a0b3e0;
+  border-color: #a0b3e0;
 }
 
 .c19[disabled] {
@@ -2743,12 +2763,6 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
 }
 
 @media (max-width:600px) {
-  .c17 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
   .c19 {
     font-size: 1.4rem;
   }
@@ -2757,6 +2771,12 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
 @media print {
   .c19 {
     display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c19 {
+    padding: 0 3rem;
   }
 }
 
@@ -2896,7 +2916,9 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
         class="c5 c6"
       >
         <span
+          aria-level="2"
           class="c7"
+          role="heading"
         >
           Étape
           <span
@@ -2960,13 +2982,13 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
           class="c17 c18 "
           type="button"
         >
-          Imprimer le résultat
+          Précédent
         </button>
         <button
           class="c19 c18 "
           type="button"
         >
-          Précédent
+          Imprimer le résultat
         </button>
       </div>
     </form>
@@ -3109,6 +3131,10 @@ exports[`<Wizard /> should render a step 1`] = `
 }
 
 .c19 {
+  margin-left: auto;
+}
+
+.c20 {
   width: 3rem;
   margin-left: 1rem;
 }
@@ -3457,7 +3483,9 @@ exports[`<Wizard /> should render a step 1`] = `
         class="c5 c6"
       >
         <span
+          aria-level="2"
           class="c7"
+          role="heading"
         >
           Étape
           <span
@@ -3507,12 +3535,12 @@ exports[`<Wizard /> should render a step 1`] = `
         class="c16"
       >
         <button
-          class="c17 c18 "
+          class="c17 c18 c19"
         >
           Commencer
           <svg
             aria-hidden="true"
-            class="c19"
+            class="c20"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"

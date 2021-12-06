@@ -1590,7 +1590,9 @@ exports[`<Stats /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c42"
+              role="heading"
             >
               <p
                 class="c43"
@@ -1637,7 +1639,9 @@ exports[`<Stats /> should render 1`] = `
               class="c50 "
             >
               <strong
+                aria-level="2"
                 class="c51 c52"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -1714,7 +1718,9 @@ exports[`<Stats /> should render 1`] = `
               class="c50 "
             >
               <strong
+                aria-level="2"
                 class="c51 c52"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -1756,7 +1762,9 @@ exports[`<Stats /> should render 1`] = `
               class="c50 "
             >
               <strong
+                aria-level="2"
                 class="c51 c52"
+                role="heading"
               >
                 En collaboration avec
               </strong>

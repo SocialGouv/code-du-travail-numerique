@@ -66,7 +66,10 @@ function StepInfo() {
 StepInfo.validate = validate;
 export { StepInfo };
 
-const Title = styled.p`
+const Title = styled.p.attrs({
+  "aria-level": "2",
+  role: "heading",
+})`
   color: ${({ theme }) => theme.primary};
   font-weight: 600;
 `;

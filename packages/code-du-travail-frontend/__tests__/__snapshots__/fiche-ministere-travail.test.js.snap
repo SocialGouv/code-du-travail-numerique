@@ -2604,7 +2604,10 @@ exports[`<FicheMT /> should render 1`] = `
                     <span
                       class="c71"
                     />
-                    <span>
+                    <span
+                      aria-level="2"
+                      role="heading"
+                    >
                       Avez-vous trouvé la réponse à votre question ?
                     </span>
                   </strong>
@@ -2642,7 +2645,9 @@ exports[`<FicheMT /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c78"
+              role="heading"
             >
               <p
                 class="c79"
@@ -2689,7 +2694,9 @@ exports[`<FicheMT /> should render 1`] = `
               class="c87 "
             >
               <strong
+                aria-level="2"
                 class="c88 c89"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -2766,7 +2773,9 @@ exports[`<FicheMT /> should render 1`] = `
               class="c87 "
             >
               <strong
+                aria-level="2"
                 class="c88 c89"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -2808,7 +2817,9 @@ exports[`<FicheMT /> should render 1`] = `
               class="c87 "
             >
               <strong
+                aria-level="2"
                 class="c88 c89"
+                role="heading"
               >
                 En collaboration avec
               </strong>

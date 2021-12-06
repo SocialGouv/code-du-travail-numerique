@@ -2615,7 +2615,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         class="c57"
                       >
                         <div
-                          class="c58"
+                          aria-level="2"
+                          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c58"
+                          role="heading"
                         >
                           Page personnalisable
                         </div>
@@ -2925,7 +2927,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       <span
                         class="c67"
                       />
-                      <span>
+                      <span
+                        aria-level="2"
+                        role="heading"
+                      >
                         Avez-vous trouvé la réponse à votre question ?
                       </span>
                     </strong>
@@ -2963,7 +2968,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               class="c4"
             >
               <div
+                aria-level="2"
                 class="c88"
+                role="heading"
               >
                 <p
                   class="c89"
@@ -3010,7 +3017,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 class="c97 "
               >
                 <strong
+                  aria-level="2"
                   class="c98 c99"
+                  role="heading"
                 >
                   Code du travail numérique
                 </strong>
@@ -3087,7 +3096,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 class="c97 "
               >
                 <strong
+                  aria-level="2"
                   class="c98 c99"
+                  role="heading"
                 >
                   Aidez-nous à améliorer cet outil
                 </strong>
@@ -3129,7 +3140,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 class="c97 "
               >
                 <strong
+                  aria-level="2"
                   class="c98 c99"
+                  role="heading"
                 >
                   En collaboration avec
                 </strong>
@@ -5895,7 +5908,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         class="c57"
                       >
                         <div
-                          class="c58"
+                          aria-level="2"
+                          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c58"
+                          role="heading"
                         >
                           Page personnalisable
                         </div>
@@ -6205,7 +6220,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       <span
                         class="c67"
                       />
-                      <span>
+                      <span
+                        aria-level="2"
+                        role="heading"
+                      >
                         Avez-vous trouvé la réponse à votre question ?
                       </span>
                     </strong>
@@ -6243,7 +6261,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               class="c4"
             >
               <div
+                aria-level="2"
                 class="c88"
+                role="heading"
               >
                 <p
                   class="c89"
@@ -6290,7 +6310,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 class="c97 "
               >
                 <strong
+                  aria-level="2"
                   class="c98 c99"
+                  role="heading"
                 >
                   Code du travail numérique
                 </strong>
@@ -6367,7 +6389,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 class="c97 "
               >
                 <strong
+                  aria-level="2"
                   class="c98 c99"
+                  role="heading"
                 >
                   Aidez-nous à améliorer cet outil
                 </strong>
@@ -6409,7 +6433,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 class="c97 "
               >
                 <strong
+                  aria-level="2"
                   class="c98 c99"
+                  role="heading"
                 >
                   En collaboration avec
                 </strong>

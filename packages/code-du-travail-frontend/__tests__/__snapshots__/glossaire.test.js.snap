@@ -1598,7 +1598,9 @@ exports[`<Glossaire /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c41"
+              role="heading"
             >
               <p
                 class="c42"
@@ -1645,7 +1647,9 @@ exports[`<Glossaire /> should render 1`] = `
               class="c49 "
             >
               <strong
+                aria-level="2"
                 class="c50 c51"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -1722,7 +1726,9 @@ exports[`<Glossaire /> should render 1`] = `
               class="c49 "
             >
               <strong
+                aria-level="2"
                 class="c50 c51"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -1764,7 +1770,9 @@ exports[`<Glossaire /> should render 1`] = `
               class="c49 "
             >
               <strong
+                aria-level="2"
                 class="c50 c51"
+                role="heading"
               >
                 En collaboration avec
               </strong>

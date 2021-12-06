@@ -1654,7 +1654,9 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c49"
+              role="heading"
             >
               <p
                 class="c50"
@@ -1701,7 +1703,9 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               class="c57 "
             >
               <strong
+                aria-level="2"
                 class="c58 c59"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -1778,7 +1782,9 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               class="c57 "
             >
               <strong
+                aria-level="2"
                 class="c58 c59"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -1820,7 +1826,9 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               class="c57 "
             >
               <strong
+                aria-level="2"
                 class="c58 c59"
+                role="heading"
               >
                 En collaboration avec
               </strong>

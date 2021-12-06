@@ -1680,7 +1680,7 @@ exports[`<Home /> should render 1`] = `
             <h1
               class="c20"
             >
-              Bienvenue sur 
+              Bienvenue sur
               <br />
               <span
                 class="c21"
@@ -2545,7 +2545,7 @@ exports[`<Home /> should render 1`] = `
                       <div
                         class="c50"
                       >
-                        
+
                         <h3
                           class="c51"
                         >
@@ -2648,7 +2648,7 @@ exports[`<Home /> should render 1`] = `
                       <div
                         class="c50"
                       >
-                        
+
                         <h3
                           class="c51"
                         >
@@ -2759,7 +2759,7 @@ exports[`<Home /> should render 1`] = `
                       <div
                         class="c50"
                       >
-                        
+
                         <h3
                           class="c51"
                         >
@@ -2864,7 +2864,7 @@ exports[`<Home /> should render 1`] = `
                       <div
                         class="c50"
                       >
-                        
+
                         <h2
                           class="c51"
                         >
@@ -2918,7 +2918,7 @@ exports[`<Home /> should render 1`] = `
               class="c10 c31"
               href="/outils"
             >
-              Voir tous les outils 
+              Voir tous les outils
               <svg
                 aria-hidden="true"
                 class="c60"
@@ -2949,7 +2949,9 @@ exports[`<Home /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c64"
+              role="heading"
             >
               <p
                 class="c65"
@@ -2996,7 +2998,9 @@ exports[`<Home /> should render 1`] = `
               class="c73 "
             >
               <strong
+                aria-level="2"
                 class="c74 c75"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -3073,7 +3077,9 @@ exports[`<Home /> should render 1`] = `
               class="c73 "
             >
               <strong
+                aria-level="2"
                 class="c74 c75"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -3115,7 +3121,9 @@ exports[`<Home /> should render 1`] = `
               class="c73 "
             >
               <strong
+                aria-level="2"
                 class="c74 c75"
+                role="heading"
               >
                 En collaboration avec
               </strong>
