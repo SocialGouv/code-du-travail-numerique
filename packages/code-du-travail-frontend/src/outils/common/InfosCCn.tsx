@@ -16,8 +16,8 @@ import { required } from "./validators";
 export const CONVENTION_NAME = "ccn";
 
 type IdccInfo = {
-  idcc: number;
   fullySupported: boolean;
+  idcc: number;
 };
 
 type BaseProps = {
