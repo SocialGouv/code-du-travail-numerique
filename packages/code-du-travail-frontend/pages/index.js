@@ -7,6 +7,7 @@ import {
   Grid,
   icons,
   PageTitle,
+  Paragraph,
   Section,
   theme,
 } from "@socialgouv/cdtn-ui";
@@ -36,8 +37,10 @@ export const DocumentsTile = (
       title="Modèles de documents"
       titleTagType="h2"
     >
-      Téléchargez et utilisez des modèles de lettres et de documents
-      personnalisables
+      <Paragraph noMargin>
+        Téléchargez et utilisez des modèles de lettres et de documents
+        personnalisables
+      </Paragraph>
     </CallToActionTile>
   </Link>
 );
@@ -88,7 +91,7 @@ const Home = ({ themes = [], highlights = [] }) => (
                     icon={icons[icon]}
                     title={title}
                   >
-                    {description}
+                    <Paragraph noMargin>{description}</Paragraph>
                   </CallToActionTile>
                 </Link>
               );

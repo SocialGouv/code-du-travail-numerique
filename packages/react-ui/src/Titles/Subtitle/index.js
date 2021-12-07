@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { fonts, spacings } from "../../theme.js";
 
-export const Subtitle = styled.span`
+export const Subtitle = styled.p`
   display: block;
   margin: 0 0 ${spacings.small} 0;
   color: ${({ theme }) => theme.altText};

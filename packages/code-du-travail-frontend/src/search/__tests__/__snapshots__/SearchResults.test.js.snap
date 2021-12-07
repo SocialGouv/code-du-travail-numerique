@@ -685,11 +685,11 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c6"
             >
-              <span
+              <p
                 class="c7 "
               >
                 test theme content
-              </span>
+              </p>
               <h3
                 class="c8"
               >
@@ -700,7 +700,9 @@ exports[`<SearchResults/> should render results 1`] = `
           <div
             class="c9"
           >
-            description
+            <p>
+              description
+            </p>
           </div>
         </a>
       </li>
@@ -744,11 +746,11 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c6"
             >
-              <span
+              <p
                 class="c7 "
               >
                 Outils
-              </span>
+              </p>
               <h3
                 class="c8"
               >
@@ -762,11 +764,13 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c13"
             >
-              description
+              <p>
+                description
+              </p>
               <div
                 class="c14"
               >
-                <div
+                <p
                   class="c15 c16"
                 >
                   Consulter
@@ -782,7 +786,7 @@ exports[`<SearchResults/> should render results 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </div>
+                </p>
               </div>
             </div>
           </div>
@@ -804,11 +808,11 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c6"
             >
-              <span
+              <p
                 class="c7 "
               >
                 Outils externes
-              </span>
+              </p>
               <h3
                 class="c8"
               >
@@ -822,11 +826,13 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c13"
             >
-              description
+              <p>
+                description
+              </p>
               <div
                 class="c14"
               >
-                <div
+                <p
                   class="c15 c16"
                 >
                   Consulter
@@ -842,7 +848,7 @@ exports[`<SearchResults/> should render results 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </div>
+                </p>
               </div>
             </div>
           </div>
@@ -888,11 +894,11 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c6"
             >
-              <span
+              <p
                 class="c7 "
               >
                 test root content
-              </span>
+              </p>
               <h3
                 class="c8"
               >
@@ -906,11 +912,13 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c13"
             >
-              description
+              <p>
+                description
+              </p>
               <div
                 class="c14"
               >
-                <div
+                <p
                   class="c15 c16"
                 >
                   Consulter
@@ -926,7 +934,7 @@ exports[`<SearchResults/> should render results 1`] = `
                       fill="currentColor"
                     />
                   </svg>
-                </div>
+                </p>
               </div>
             </div>
           </div>
@@ -972,11 +980,11 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c6"
             >
-              <span
+              <p
                 class="c7 "
               >
                 test theme content
-              </span>
+              </p>
               <h3
                 class="c8"
               >
@@ -987,7 +995,9 @@ exports[`<SearchResults/> should render results 1`] = `
           <div
             class="c9"
           >
-            description
+            <p>
+              description
+            </p>
           </div>
         </a>
       </li>

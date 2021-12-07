@@ -646,11 +646,11 @@ exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
       <div
         class="c2"
       >
-        <span
+        <p
           class="c3 "
         >
           This is a theme
-        </span>
+        </p>
         <h3
           class="c4"
         >
