@@ -24,24 +24,28 @@ const HeaderBurgerNav = ({ currentPage }: Props): JSX.Element => {
       </AccessibilityModal>
       <Nav id="navigation" aria-label="Navigation du site">
         <Ul>
-          <Li>
-            {currentPage !== "tools" ? (
+          {currentPage !== "tools" ? (
+            <Li>
               <Link href="/outils" passHref>
                 <NavAnchor>Boîte&nbsp;à&nbsp;outils</NavAnchor>
               </Link>
-            ) : (
+            </Li>
+          ) : (
+            <Li title="Page courante">
               <NavCurrent>Boîte&nbsp;à&nbsp;outils</NavCurrent>
-            )}
-          </Li>
-          <Li>
-            {currentPage !== "themes" ? (
+            </Li>
+          )}
+          {currentPage !== "themes" ? (
+            <Li>
               <Link href="/themes" passHref>
                 <NavAnchor>Thèmes</NavAnchor>
               </Link>
-            ) : (
+            </Li>
+          ) : (
+            <Li title={currentPage === "themes" ? "Page courante" : null}>
               <NavCurrent>Thèmes</NavCurrent>
-            )}
-          </Li>
+            </Li>
+          )}
         </Ul>
       </Nav>
     </StyledBurgerNav>

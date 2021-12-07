@@ -45,7 +45,7 @@ export const Accordion = ({
                     {title}
                   </Heading>
                 ) : (
-                  { title }
+                  <p>{title}</p>
                 )}
               </AccordionItemButton>
             </AccordionItemHeading>

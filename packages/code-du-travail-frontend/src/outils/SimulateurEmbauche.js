@@ -24,7 +24,8 @@ class SimulateurEmbauche extends React.PureComponent {
 
   componentDidMount() {
     const script = document.createElement("script");
-    script.src = "https://mon-entreprise.fr/simulateur-iframe-integration.js";
+    script.src =
+      "https://mon-entreprise.urssaf.fr/simulateur-iframe-integration.js";
     script.async = true;
     script.dataset.couleur = "#2975D1";
     script.id = "script-simulateur-embauche";
@@ -59,8 +60,11 @@ class SimulateurEmbauche extends React.PureComponent {
             <br />
             Retrouvez les autres simulateurs autour du thème de l’entreprise,
             sur le site:{" "}
-            <a title="Voir les simulateurs" href="https://mon-entreprise.fr/">
-              https://mon-entreprise.fr/
+            <a
+              title="Voir les simulateurs"
+              href="https://mon-entreprise.urssaf.fr/"
+            >
+              https://mon-entreprise.urssaf.fr/
             </a>
           </p>
         ) : (
@@ -72,4 +76,5 @@ class SimulateurEmbauche extends React.PureComponent {
     );
   }
 }
+
 export { SimulateurEmbauche };

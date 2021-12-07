@@ -16,7 +16,7 @@ import {
   fonts,
   spacings,
 } from "../../../theme.js";
-import { VerticalArrow } from "../VerticalArrow/index.js";
+import { VerticalArrow } from "../VerticalArrow";
 
 export const Accordion = RootAccordion;
 export const Item = styled(({ ...props }) => {
