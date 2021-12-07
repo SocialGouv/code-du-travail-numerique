@@ -131,6 +131,7 @@ exports[`<Convention /> renders 1`] = `
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
+  margin: 0;
 }
 
 .c20 {
