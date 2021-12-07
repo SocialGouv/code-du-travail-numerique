@@ -93,7 +93,7 @@ export function ElementBuilder({ data, headingLevel, parentAttributes }) {
         <ANoter variant="dark">
           <ElementBuilder
             data={data.children}
-            headingLevel={headingLevel + 1}
+            headingLevel={headingLevel}
             parentAttributes={data.attributes}
           />
         </ANoter>
