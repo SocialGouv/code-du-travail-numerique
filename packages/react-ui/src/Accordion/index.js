@@ -20,6 +20,7 @@ export const Accordion = ({
   const AccordionItemButton = variants[variant].ItemButton;
   const AccordionItemPanel = variants[variant].ItemPanel;
   /* eslint-enable */
+  console.log(items);
   return (
     <AccordionVariant allowZeroExpanded allowMultipleExpanded {...props}>
       {items.map(({ body, icon, id, title }, index) => (
@@ -45,7 +46,7 @@ export const Accordion = ({
                     {title}
                   </Heading>
                 ) : (
-                  <div>{title}</div>
+                  <p>{title}</p>
                 )}
               </AccordionItemButton>
             </AccordionItemHeading>

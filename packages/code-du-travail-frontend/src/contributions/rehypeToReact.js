@@ -8,11 +8,11 @@ import Html from "../../src/common/Html";
 //Custom MDX component
 const Tab = (props) => (
   <StyledAccordion
-    titleLevel={3}
+    // titleLevel={3}
     items={[
       {
         body: props.children,
-        title: props.title,
+        title: <h3> {props.title}</h3>,
       },
     ]}
   />
