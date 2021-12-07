@@ -38,7 +38,6 @@ const StyledLink = styled.a`
 const StyledChildren = styled.p`
   flex: 0 1 auto;
   width: auto;
-  all: unset;
 `;
 
 // eslint-disable-next-line no-unused-vars

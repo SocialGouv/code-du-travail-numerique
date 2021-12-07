@@ -44,7 +44,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
 .c10 {
   color: #3e486e;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -82,7 +82,6 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
 
 .c11 {
   margin-left: 1rem;
-  font-weight: 600 !important;
 }
 
 .c1 {

@@ -43,7 +43,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
 .c6 {
   color: #3e486e;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -81,7 +81,6 @@ exports[`<StepResult /> should render CC answer 1`] = `
 
 .c7 {
   margin-left: 1rem;
-  font-weight: 600 !important;
 }
 
 .c11 {

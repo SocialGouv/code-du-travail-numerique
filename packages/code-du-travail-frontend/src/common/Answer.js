@@ -15,6 +15,7 @@ import {
   MainAsideLayout,
   MainContent,
 } from "../layout/AnswerLayout";
+import { isHTML } from "../lib";
 import Article from "./Article";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { Feedback } from "./Feedback";
@@ -69,7 +70,7 @@ function Answer({
             >
               {intro && (
                 <IntroWrapper variant="dark">
-                  <p>{intro}</p>
+                  {isHTML(intro) ? <Html>{intro}</Html> : <p>{intro}</p>}
                 </IntroWrapper>
               )}
               {html && <Html>{html}</Html>}

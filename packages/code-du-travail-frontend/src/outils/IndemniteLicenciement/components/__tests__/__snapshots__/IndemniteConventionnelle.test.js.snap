@@ -70,7 +70,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 .c11 {
   color: #3e486e;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -108,7 +108,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 
 .c12 {
   margin-left: 1rem;
-  font-weight: 600 !important;
 }
 
 .c0 {
@@ -726,7 +725,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 .c11 {
   color: #3e486e;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -764,7 +763,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 
 .c12 {
   margin-left: 1rem;
-  font-weight: 600 !important;
 }
 
 .c0 {

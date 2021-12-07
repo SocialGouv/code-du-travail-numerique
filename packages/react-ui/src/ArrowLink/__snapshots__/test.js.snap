@@ -19,7 +19,6 @@ exports[`<ArrowLink /> renders an arrow on the left 1`] = `
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
-  all: unset;
 }
 
 .c4 {
@@ -97,7 +96,6 @@ exports[`<ArrowLink /> renders an arrow on the right 1`] = `
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
-  all: unset;
 }
 
 .c4 {

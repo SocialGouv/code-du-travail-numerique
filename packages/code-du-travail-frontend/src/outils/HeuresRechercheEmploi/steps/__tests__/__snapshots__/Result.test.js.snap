@@ -43,7 +43,7 @@ exports[`<StepResult /> should render no results 1`] = `
 .c4 {
   color: #3e486e;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -81,7 +81,6 @@ exports[`<StepResult /> should render no results 1`] = `
 
 .c5 {
   margin-left: 1rem;
-  font-weight: 600 !important;
 }
 
 .c9 {
@@ -336,7 +335,7 @@ exports[`<StepResult /> should render with duration 1`] = `
 .c6 {
   color: #3e486e;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -374,7 +373,6 @@ exports[`<StepResult /> should render with duration 1`] = `
 
 .c7 {
   margin-left: 1rem;
-  font-weight: 600 !important;
 }
 
 .c11 {
@@ -669,7 +667,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 .c7 {
   color: #3e486e;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -707,7 +705,6 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 
 .c8 {
   margin-left: 1rem;
-  font-weight: 600 !important;
 }
 
 .c12 {
@@ -976,7 +973,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 .c7 {
   color: #3e486e;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -1014,7 +1011,6 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 
 .c8 {
   margin-left: 1rem;
-  font-weight: 600 !important;
 }
 
 .c12 {

@@ -26,7 +26,7 @@ export const Collapse = ({ title, children, onClickHandler, textProps }) => {
         role="button"
       >
         <AccordionArrow aria-hidden="true" />
-        <StyledText noMargin fontSize="hsmall" {...textProps}>
+        <StyledText noMargin fontSize="hsmall" fontWeight="600" {...textProps}>
           {title}
         </StyledText>
       </StyledLink>
@@ -63,7 +63,6 @@ const StyledLink = styled.div`
 `;
 const StyledText = styled(Paragraph)`
   margin-left: ${spacings.small};
-  font-weight: 600 !important;
 `;
 
 Collapse.propTypes = {

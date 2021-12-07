@@ -57,12 +57,14 @@ const Search = ({ onSelectConvention }) => {
       {query && (
         <ResultsContainer>
           {status === "loading" && (
-            <div>
+            <Paragraph noMargin>
               <Spinner /> Recherche des convention collectives...
-            </div>
+            </Paragraph>
           )}
           {status === "error" && (
-            <div>Le service de recherche est indisponible.</div>
+            <Paragraph noMargin>
+              Le service de recherche est indisponible.
+            </Paragraph>
           )}
           {status === "empty" && (
             <Paragraph noMargin>Aucun résultat n’a été trouvé.</Paragraph>
