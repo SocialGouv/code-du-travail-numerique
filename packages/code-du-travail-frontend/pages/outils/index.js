@@ -4,6 +4,7 @@ import {
   Grid,
   icons,
   PageTitle,
+  Paragraph,
   Section,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
@@ -42,7 +43,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
                     icon={icons[icon]}
                     titleTagType="h2"
                   >
-                    {description}
+                    <Paragraph noMargin>{description}</Paragraph>
                   </CallToActionTile>
                 </Link>
               );
@@ -62,7 +63,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
                 target="_blank"
                 className="no-after"
               >
-                {description}
+                <Paragraph noMargin>{description}</Paragraph>
               </CallToActionTile>
             )
           )}
@@ -72,6 +73,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
     <EventTracker />
   </Layout>
 );
+
 export async function getServerSideProps() {
   return {
     props: getTools(),

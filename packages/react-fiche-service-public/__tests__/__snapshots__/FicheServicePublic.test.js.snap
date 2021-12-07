@@ -939,11 +939,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         <div
                           class="c27"
                         >
-                          <span
+                          <p
                             class="c28 "
                           >
                             Modèle de document
-                          </span>
+                          </p>
                           <h3
                             class="c29"
                           >
@@ -1731,11 +1731,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
         <div
           class="c27"
         >
-          <span
+          <p
             class="c28 "
           >
             Modèle de document
-          </span>
+          </p>
           <h3
             class="c29"
           >

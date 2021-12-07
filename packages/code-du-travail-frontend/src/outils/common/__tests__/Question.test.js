@@ -46,7 +46,6 @@ describe("<Question />", () => {
     expect(container).toMatchInlineSnapshot(`
       .c2 {
         color: #3e486e;
-        line-height: 1.25;
         font-size: 1.6rem;
         font-weight: 400;
       }

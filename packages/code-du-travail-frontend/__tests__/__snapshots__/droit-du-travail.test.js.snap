@@ -158,7 +158,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c103 {
+.c104 {
   position: relative;
   display: block;
   margin: 0 0 2rem 0;
@@ -286,12 +286,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
   user-select: none;
 }
 
-.c89 {
+.c90 {
   position: relative;
   margin-top: 1.6rem;
 }
 
-.c89:after {
+.c90:after {
   position: absolute;
   bottom: -1.4rem;
   left: calc(50% + 8rem / 2);
@@ -412,7 +412,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   content: "";
 }
 
-.c90 {
+.c91 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -426,7 +426,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   align-items: center;
 }
 
-.c90:before {
+.c91:before {
   position: absolute;
   top: -1.6rem;
   left: calc(4rem / 2 - 0.3rem / 2);
@@ -437,7 +437,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   content: "";
 }
 
-.c90:after {
+.c91:after {
   position: absolute;
   top: 4rem;
   left: calc(4rem / 2 - 0.3rem / 2);
@@ -788,7 +788,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c107 {
+.c108 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -833,13 +833,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c107:focus,
-.c107:hover,
-.c107:active {
+.c108:focus,
+.c108:hover,
+.c108:active {
   color: #f66663;
 }
 
-.c86 {
+.c87 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -880,14 +880,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
   overflow: visible;
 }
 
-.c86:focus,
-.c86:hover,
-.c86:active {
+.c87:focus,
+.c87:hover,
+.c87:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c97 {
+.c98 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -925,16 +925,16 @@ exports[`<DroitDuTravail /> should render 1`] = `
   will-change: transform;
 }
 
-.c97:link,
-.c97:visited {
+.c98:link,
+.c98:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c97:not([disabled]):hover,
-.c97:not([disabled]):active,
-.c97:not([disabled]):focus {
+.c98:not([disabled]):hover,
+.c98:not([disabled]):active,
+.c98:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -943,7 +943,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c97[disabled] {
+.c98[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -1015,7 +1015,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c88 {
+.c89 {
   width: 2.6rem;
   height: 1.4rem;
   margin: 0 0.4rem 0 1rem;
@@ -1024,7 +1024,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-.c14:hover .c87 {
+.c14:hover .c88 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
@@ -1054,7 +1054,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
   color: #7994d4;
 }
 
-.c104 {
+.c41 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.c105 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -1129,7 +1136,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   text-align: left;
 }
 
-.c94 {
+.c95 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -1177,7 +1184,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   text-align: left;
 }
 
-.c95 {
+.c96 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -1195,6 +1202,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
 
 .c80 {
   margin-bottom: 2.4rem;
+}
+
+.c86 {
+  margin: 0;
 }
 
 .c47 {
@@ -1218,13 +1229,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
   max-width: 66rem;
 }
 
-.c91 {
+.c92 {
   width: 100%;
   padding-top: 4rem;
   overflow-x: hidden;
 }
 
-.c92 {
+.c93 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -1232,7 +1243,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c92:before {
+.c93:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -1244,27 +1255,27 @@ exports[`<DroitDuTravail /> should render 1`] = `
   content: "";
 }
 
-.c93 {
+.c94 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c96 {
+.c97 {
   margin-bottom: 2rem;
 }
 
-.c98 {
+.c99 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c99 {
+.c100 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c100 {
+.c101 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1275,15 +1286,15 @@ exports[`<DroitDuTravail /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c101 + .c101 {
+.c102 + .c102 {
   padding-left: 1.6rem;
 }
 
-.c102 {
+.c103 {
   font-size: 1.6rem;
 }
 
-.c106 {
+.c107 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1292,11 +1303,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
   display: inline-block;
 }
 
-.c108 {
+.c109 {
   padding: 0.4rem 0;
 }
 
-.c109 {
+.c110 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1318,11 +1329,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c110 {
+.c111 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c111 {
+.c112 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1552,10 +1563,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin-top: 6rem;
 }
 
-.c41 {
-  margin: 0;
-}
-
 @media (max-width:600px) {
   .c4 {
     padding: 0 1rem;
@@ -1671,7 +1678,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c103 {
+  .c104 {
     font-size: 1.6rem;
   }
 }
@@ -1705,11 +1712,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c89 {
+  .c90 {
     margin-top: 0.4rem;
   }
 
-  .c89:after {
+  .c90:after {
     left: calc(50% + 4.6rem / 2);
   }
 }
@@ -1747,14 +1754,14 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c90:before {
+  .c91:before {
     top: -0.4rem;
     height: calc(0.4rem + 5rem);
   }
 
-  .c90,
-  .c90:before,
-  .c90:after {
+  .c91,
+  .c91:before,
+  .c91:after {
     left: calc(3rem / 2 - 0.3rem / 2);
   }
 }
@@ -1881,43 +1888,43 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c107 {
+  .c108 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c107 {
+  .c108 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c86 {
+  .c87 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c86 {
+  .c87 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c97 {
+  .c98 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c97 {
+  .c98 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c97 {
+  .c98 {
     padding: 0 3rem;
   }
 }
@@ -2003,7 +2010,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c94 {
+  .c95 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -2046,7 +2053,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c95 {
+  .c96 {
     font-size: 2.2rem;
   }
 }
@@ -2060,26 +2067,26 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media print {
-  .c92 {
+  .c93 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c93 {
+  .c94 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c99 {
+  .c100 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c100 {
+  .c101 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -2087,26 +2094,26 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c101 + .c101 {
+  .c102 + .c102 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c105 {
+  .c106 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c102 {
+  .c103 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c111 {
+  .c112 {
     display: none;
   }
 }
@@ -2445,13 +2452,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
             <p
               class="c29"
             >
-              <span>
-                Retrouvez la définition du droit du travail, les textes qui en sont à l’origine 
-                <br
-                  class="c30"
-                />
-                ainsi que leur articulation.
-              </span>
+              Retrouvez la définition du droit du travail, les textes qui en sont à l’origine 
+              <br
+                class="c30"
+              />
+              ainsi que leur articulation.
             </p>
           </header>
           <div
@@ -2472,9 +2477,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   Qu’est-ce que le droit du travail ?
                 </h2>
               </div>
-              <strong>
-                Le droit du travail est l’ensemble des règles juridiques applicables aux relations entre employeurs privés et salariés, à l’occasion du travail.
-              </strong>
+              <p>
+                <strong>
+                  Le droit du travail est l’ensemble des règles juridiques applicables aux relations entre employeurs privés et salariés, à l’occasion du travail.
+                </strong>
+              </p>
               <p>
                 Le droit du travail organise les relations professionnelles de travail entre l’employeur et le salarié individuellement et la collectivité des salariés. Il encadre de nombreux domaines tels que le contrat de travail, la rémunération, la durée du travail, les congés, la discipline, le licenciement, l’emploi, la formation, la sécurité et la santé au travail, la négociation collective, la grève et la représentation du personnel.
               </p>
@@ -3834,7 +3841,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   <div
                     class="c60"
                   >
-                    Les textes nationaux doivent être conformes aux textes internationaux et européens.
+                    <p>
+                      Les textes nationaux doivent être conformes aux textes internationaux et européens.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -3940,7 +3949,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   <div
                     class="c60"
                   >
-                    Tous les textes nationaux doivent être conformes à la Constitution française ainsi qu’au bloc de constitutionnalité.
+                    <p>
+                      Tous les textes nationaux doivent être conformes à la Constitution française ainsi qu’au bloc de constitutionnalité.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -4126,7 +4137,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             <div
                               class="c60"
                             >
-                              Il existe des règles dans le Code du travail que les conventions et accords collectifs doivent respecter. Les conventions et accords collectifs peuvent toutefois prévoir des mesures plus avantageuses pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
+                              <p>
+                                Il existe des règles dans le Code du travail que les conventions et accords collectifs doivent respecter. Les conventions et accords collectifs peuvent toutefois prévoir des mesures plus avantageuses pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -4472,47 +4485,51 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         <div
                           class="c39"
                         >
-                          Ce principe ne s’applique pas dans
-                           
-                          <button
-                            class="c14 c86"
+                          <p
+                            class="c86"
                           >
-                            13 matières
-                            <svg
-                              aria-hidden="true"
-                              class="c87 c88"
-                              fill="none"
-                              viewBox="0 0 28 15"
-                              xmlns="http://www.w3.org/2000/svg"
+                            Ce principe ne s’applique pas dans
+                             
+                            <button
+                              class="c14 c87"
                             >
-                              <path
-                                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </button>
-                           
-                          où la loi reconnaît la primauté à la convention collective de branche et
-                           
-                          <button
-                            class="c14 c86"
-                          >
-                            4 matières
-                            <svg
-                              aria-hidden="true"
-                              class="c87 c88"
-                              fill="none"
-                              viewBox="0 0 28 15"
-                              xmlns="http://www.w3.org/2000/svg"
+                              13 matières
+                              <svg
+                                aria-hidden="true"
+                                class="c88 c89"
+                                fill="none"
+                                viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </button>
+                             
+                            où la loi reconnaît la primauté à la convention collective de branche et
+                             
+                            <button
+                              class="c14 c87"
                             >
-                              <path
-                                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </button>
-                           
-                          où la branche elle-même peut reconnaître sa primauté, sauf si l’accord d’entreprise a des garanties au moins équivalentes.
+                              4 matières
+                              <svg
+                                aria-hidden="true"
+                                class="c88 c89"
+                                fill="none"
+                                viewBox="0 0 28 15"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  fill="currentColor"
+                                />
+                              </svg>
+                            </button>
+                             
+                            où la branche elle-même peut reconnaître sa primauté, sauf si l’accord d’entreprise a des garanties au moins équivalentes.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -4656,7 +4673,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   <div
                     class="c60"
                   >
-                    Les usages et les engagements unilatéraux doivent respecter les textes situés en haut. Ils peuvent être plus avantageux pour le salarié. Dans ce cas, ce sont les textes les plus avantageux qui s’appliquent.
+                    <p>
+                      Les usages et les engagements unilatéraux doivent respecter les textes situés en haut. Ils peuvent être plus avantageux pour le salarié. Dans ce cas, ce sont les textes les plus avantageux qui s’appliquent.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -4754,14 +4773,16 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   <div
                     class="c60"
                   >
-                    Le règlement intérieur doit respecter les textes situés en haut. Il peut être plus avantageux pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
+                    <p>
+                      Le règlement intérieur doit respecter les textes situés en haut. Il peut être plus avantageux pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
             <div>
               <div
-                class="c89"
+                class="c90"
                 data-accordion-component="AccordionItem"
               >
                 <div
@@ -4779,7 +4800,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     tabindex="0"
                   >
                     <div
-                      class="c90"
+                      class="c91"
                     >
                       <div
                         class="c70"
@@ -4862,7 +4883,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   <div
                     class="c60"
                   >
-                    Le contrat de travail doit respecter les textes situés en haut. Il peut prévoir des mesures plus avantageuses pour le salarié. Dans ce cas, c’est le contrat de travail qui s’applique.
+                    <p>
+                      Le contrat de travail doit respecter les textes situés en haut. Il peut prévoir des mesures plus avantageuses pour le salarié. Dans ce cas, c’est le contrat de travail qui s’applique.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -4872,43 +4895,45 @@ exports[`<DroitDuTravail /> should render 1`] = `
       </div>
     </main>
     <div
-      class="c91"
+      class="c92"
     >
       <footer
-        class="c92"
+        class="c93"
       >
         <div
-          class="c25 c93"
+          class="c25 c94"
         >
           <div
             class="c4"
           >
             <div
               aria-level="2"
-              class="c94"
+              class="c95"
               role="heading"
             >
-              <strong
-                class="c95"
+              <p
+                class="c96"
               >
                 <span
                   class="c28"
                 />
                 Besoin de plus d’informations ?
-              </strong>
+              </p>
             </div>
             <div
-              class="c31 c96"
+              class="c31 c97"
             >
-              Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              <p>
+                Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              </p>
             </div>
             <button
-              class="c14 c97"
+              class="c14 c98"
             >
               Contacter nos services en région
               <svg
                 aria-hidden="true"
-                class="c98"
+                class="c99"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -4922,27 +4947,27 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c25 c99"
+          class="c25 c100"
         >
           <div
-            class="c4 c100"
+            class="c4 c101"
           >
             <div
-              class="c101 "
+              class="c102 "
             >
               <strong
                 aria-level="2"
-                class="c102 c103"
+                class="c103 c104"
                 role="heading"
               >
                 Code du travail numérique
               </strong>
               <ul
-                class="c104 c105"
+                class="c105 c106"
               >
                 <li>
                   <a
-                    class="c106"
+                    class="c107"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
@@ -4950,7 +4975,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c106"
+                    class="c107"
                     href="/glossaire"
                   >
                     Glossaire
@@ -4958,7 +4983,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c106"
+                    class="c107"
                     href="/a-propos"
                   >
                     À propos
@@ -4966,7 +4991,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c106"
+                    class="c107"
                     href="/mentions-legales"
                   >
                     Mentions légales
@@ -4974,7 +4999,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c106"
+                    class="c107"
                     href="/accessibilite"
                   >
                     Accessibilité : partiellement conforme
@@ -4982,7 +5007,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c106"
+                    class="c107"
                     href="/politique-confidentialite"
                   >
                     Politique de confidentialité
@@ -4990,7 +5015,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c106"
+                    class="c107"
                     href="/stats"
                   >
                     Statistiques d’utilisation
@@ -4998,7 +5023,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c106"
+                    class="c107"
                     href="/integration"
                   >
                     Intégrer le Code du travail numérique
@@ -5007,21 +5032,21 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c101 "
+              class="c102 "
             >
               <strong
                 aria-level="2"
-                class="c102 c103"
+                class="c103 c104"
                 role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="c104 c105"
+                class="c105 c106"
               >
                 <li>
                   <button
-                    class="c14 c107 c108"
+                    class="c14 c108 c109"
                   >
                     Contact
                   </button>
@@ -5029,7 +5054,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <li>
                   <a
                     aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                    class="c106"
+                    class="c107"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -5040,7 +5065,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <li>
                   <a
                     aria-label="Journal des modifications (Nouvelle fenêtre)"
-                    class="c106"
+                    class="c107"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -5051,22 +5076,22 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c101 "
+              class="c102 "
             >
               <strong
                 aria-level="2"
-                class="c102 c103"
+                class="c103 c104"
                 role="heading"
               >
                 En collaboration avec
               </strong>
               <ul
-                class="c104 c105"
+                class="c105 c106"
               >
                 <li>
                   <a
                     aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                    class="c106"
+                    class="c107"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -5077,7 +5102,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <li>
                   <a
                     aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                    class="c106"
+                    class="c107"
                     href="https://fabrique.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -5088,7 +5113,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                 <li>
                   <a
                     aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                    class="c106"
+                    class="c107"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -5101,12 +5126,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="c109"
+          class="c110"
         >
           <li>
             <a
               aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="c106 c110"
+              class="c107 c111"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5115,7 +5140,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c111"
+              class="c112"
             >
               |
             </span>
@@ -5123,7 +5148,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="c106 c110"
+              class="c107 c111"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5132,7 +5157,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c111"
+              class="c112"
             >
               |
             </span>
@@ -5140,7 +5165,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="c106 c110"
+              class="c107 c111"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5149,7 +5174,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c111"
+              class="c112"
             >
               |
             </span>
@@ -5157,7 +5182,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="c106 c110"
+              class="c107 c111"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5166,7 +5191,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c111"
+              class="c112"
             >
               |
             </span>
@@ -5174,7 +5199,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="c106 c110"
+              class="c107 c111"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -5183,7 +5208,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c111"
+              class="c112"
             >
               |
             </span>
@@ -5191,7 +5216,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           <li>
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="c106 c110"
+              class="c107 c111"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"

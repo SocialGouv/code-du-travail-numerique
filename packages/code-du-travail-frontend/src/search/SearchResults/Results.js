@@ -45,7 +45,7 @@ export const ListLink = ({
   }
 
   const tileCommonProps = {
-    children: summarize(description),
+    children: <p>{summarize(description)}</p>,
     onClick: () => reportSelectionToMatomo(source, slug, url, algo),
     onKeyPress: (e) =>
       e.keyCode === 13 && reportSelectionToMatomo(source, slug, url, algo),

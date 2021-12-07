@@ -100,16 +100,18 @@ function ServiceRenseignement() {
         )}
       />
       {departementData && <DepartementLink departement={departementData} />}
-      <Small>
-        Attention, ces services délivrent une information juridique, ils ne sont
-        pas compétents pour :
+      <StyledDiv>
+        <p>
+          Attention, ces services délivrent une information juridique, ils ne
+          sont pas compétents pour :
+        </p>
         <ul>
           <li>{"les demandes d'intervention en entreprise"}</li>
           <li>{"la constitution des dossiers prud’homaux"}</li>
           <li>{"les calculs de droit au chômage"}</li>
           <li>{"vous renseigner sur les cotisations sociales"}</li>
         </ul>
-      </Small>
+      </StyledDiv>
     </>
   );
 }
@@ -220,7 +222,7 @@ const StyledSearchIcon = styled(SearchIcon)`
   height: 3rem;
 `;
 
-const Small = styled.small`
-  display: block;
+const StyledDiv = styled.div`
+  font-size: ${fonts.sizes.tiny};
   margin-top: ${spacings.medium};
 `;
