@@ -16,8 +16,8 @@ import { required } from "./validators";
 export const CONVENTION_NAME = "ccn";
 
 type IdccInfo = {
-  idcc: number;
   fullySupported: boolean;
+  idcc: number;
 };
 
 type BaseProps = {
@@ -52,7 +52,7 @@ function StepInfoCCn({
         onChange(storedConvention, data);
       }
     },
-    [setConvention, onChange]
+    [storedConvention, setConvention, onChange]
   );
   useEffect(() => {
     trackConventionCollective(storedConvention, router.asPath);
@@ -128,7 +128,7 @@ function StepInfoCCn({
                   variant="secondary"
                   onRemove={(event) => {
                     event.preventDefault();
-                    setConvention();
+                    onSelectConvention(undefined);
                   }}
                 >
                   {input.value.shortTitle}
