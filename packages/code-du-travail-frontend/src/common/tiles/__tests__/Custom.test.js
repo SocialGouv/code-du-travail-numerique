@@ -14,7 +14,7 @@ describe("<Article />", () => {
   test("should render", () => {
     const { container } = render(
       <CallToActionTile {...tileProps}>
-        Cette tuile vous fera dire bonjour !
+        <p>Cette tuile vous fera dire bonjour !</p>
       </CallToActionTile>
     );
     expect(container).toMatchSnapshot();

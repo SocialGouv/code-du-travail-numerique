@@ -133,7 +133,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
+  cursor: pointer;
 }
 
 .c6 {
@@ -220,7 +220,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
       Dans le cas de la démission, l’employeur peut accepter de prendre en compte la durée du contrat de travail correspondant pour l’appréciation de l’ancienneté.
     </div>
   </div>
-  <p
+  <label
     class="c4"
   >
     <p
@@ -234,7 +234,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
          (obligatoire)
       </span>
     </p>
-  </p>
+  </label>
   <div
     class="c8"
   >

@@ -120,7 +120,7 @@ exports[`<StepInfo /> should render 1`] = `
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
+  cursor: pointer;
 }
 
 .c2 {
@@ -155,7 +155,7 @@ exports[`<StepInfo /> should render 1`] = `
 
 <div>
   <form>
-    <p
+    <label
       class="c0"
     >
       <p
@@ -169,7 +169,7 @@ exports[`<StepInfo /> should render 1`] = `
            (obligatoire)
         </span>
       </p>
-    </p>
+    </label>
     <div
       class="c4"
     >
@@ -208,7 +208,7 @@ exports[`<StepInfo /> should render 1`] = `
         </label>
       </div>
     </div>
-    <p
+    <label
       class="c0"
     >
       <p
@@ -222,7 +222,7 @@ exports[`<StepInfo /> should render 1`] = `
            (obligatoire)
         </span>
       </p>
-    </p>
+    </label>
     <div
       class="c4"
     >
@@ -261,7 +261,7 @@ exports[`<StepInfo /> should render 1`] = `
         </label>
       </div>
     </div>
-    <p
+    <label
       class="c0"
     >
       <p
@@ -275,7 +275,7 @@ exports[`<StepInfo /> should render 1`] = `
            (obligatoire)
         </span>
       </p>
-    </p>
+    </label>
     <div
       class="c4"
     >

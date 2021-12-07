@@ -421,7 +421,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
+  cursor: pointer;
 }
 
 .c2 {
@@ -512,7 +512,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 }
 
 <div>
-  <p
+  <label
     class="c0"
   >
     <p
@@ -521,7 +521,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
       Quels ont été les durées et les salaires des périodes à temps plein et à temps partiel ?
        
     </p>
-  </p>
+  </label>
   <div
     class="c3"
   >
@@ -1102,7 +1102,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
+  cursor: pointer;
 }
 
 .c2 {
@@ -1202,7 +1202,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
 }
 
 <div>
-  <p
+  <label
     class="c0"
   >
     <p
@@ -1211,7 +1211,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
       Quels ont été les durées et les salaires des périodes à temps plein et à temps partiel ?
        
     </p>
-  </p>
+  </label>
   <div
     class="c3"
   >

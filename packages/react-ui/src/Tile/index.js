@@ -145,7 +145,7 @@ const StyledHeading = styled(Heading)`
   margin: 0;
 `;
 
-const ChildrenWrapper = styled.p`
+const ChildrenWrapper = styled.div`
   flex: 1 1 auto;
   margin-top: ${spacings.small};
   margin-bottom: ${spacings.small};

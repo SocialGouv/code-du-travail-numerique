@@ -82,7 +82,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
+  cursor: pointer;
 }
 
 .c2 {
@@ -98,7 +98,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
 
 <div>
   <form>
-    <p
+    <label
       class="c0"
     >
       <p
@@ -112,7 +112,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
            (obligatoire)
         </span>
       </p>
-    </p>
+    </label>
     <div
       class="c4"
     >
@@ -233,7 +233,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   display: block;
 }
 
-.c9 {
+.c8 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -253,7 +253,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   text-align: center;
 }
 
-.c12 {
+.c11 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -263,7 +263,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   pointer-events: none;
 }
 
-.c11 {
+.c10 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -284,33 +284,25 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   appearance: none;
 }
 
-.c11::-ms-expand {
+.c10::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c11 *::-ms-backdrop,
-.c11 {
+.c10 *::-ms-backdrop,
+.c10 {
   padding-right: 1.6rem;
 }
 
-.c11:invalid {
+.c10:invalid {
   border-color: #eb5757;
 }
 
-.c11:disabled {
+.c10:disabled {
   background-color: #e4e8ef;
 }
 
 .c0 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c8 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -323,7 +315,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   display: inline;
 }
 
-.c10 {
+.c9 {
   width: 40rem;
 }
 
@@ -332,7 +324,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c8 {
     width: 100%;
   }
 }
@@ -344,20 +336,14 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
+  .c9 {
     width: 100%;
   }
 }
 
 <div>
   <form>
-    <p
+    <label
       class="c0"
     >
       <p
@@ -371,7 +357,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
            (obligatoire)
         </span>
       </p>
-    </p>
+    </label>
     <div
       class="c4"
     >
@@ -411,7 +397,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
       class="c7"
     >
       <label
-        class="c8"
+        class="c0"
         for="input-criteria.cddType"
       >
         <p
@@ -427,10 +413,10 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
         </p>
       </label>
       <div
-        class="c9 c10"
+        class="c8 c9"
       >
         <select
-          class="c11"
+          class="c10"
           id="input-criteria.cddType"
           name="criteria.cddType"
         >
@@ -483,7 +469,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
         </select>
         <div
           aria-hidden="true"
-          class="c12"
+          class="c11"
         >
           <svg
             aria-hidden="true"
@@ -599,7 +585,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   display: block;
 }
 
-.c9 {
+.c8 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -619,7 +605,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   text-align: center;
 }
 
-.c12 {
+.c11 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -629,7 +615,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   pointer-events: none;
 }
 
-.c11 {
+.c10 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -650,33 +636,25 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   appearance: none;
 }
 
-.c11::-ms-expand {
+.c10::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c11 *::-ms-backdrop,
-.c11 {
+.c10 *::-ms-backdrop,
+.c10 {
   padding-right: 1.6rem;
 }
 
-.c11:invalid {
+.c10:invalid {
   border-color: #eb5757;
 }
 
-.c11:disabled {
+.c10:disabled {
   background-color: #e4e8ef;
 }
 
 .c0 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c8 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -689,7 +667,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   display: inline;
 }
 
-.c10 {
+.c9 {
   width: 40rem;
 }
 
@@ -698,7 +676,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c8 {
     width: 100%;
   }
 }
@@ -710,20 +688,14 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
 }
 
 @media (max-width:600px) {
-  .c8 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
+  .c9 {
     width: 100%;
   }
 }
 
 <div>
   <form>
-    <p
+    <label
       class="c0"
     >
       <p
@@ -737,7 +709,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
            (obligatoire)
         </span>
       </p>
-    </p>
+    </label>
     <div
       class="c4"
     >
@@ -777,7 +749,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
       class="c7"
     >
       <label
-        class="c8"
+        class="c0"
         for="input-criteria.cddType"
       >
         <p
@@ -793,10 +765,10 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
         </p>
       </label>
       <div
-        class="c9 c10"
+        class="c8 c9"
       >
         <select
-          class="c11"
+          class="c10"
           id="input-criteria.cddType"
           name="criteria.cddType"
         >
@@ -849,7 +821,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
         </select>
         <div
           aria-hidden="true"
-          class="c12"
+          class="c11"
         >
           <svg
             aria-hidden="true"
@@ -970,7 +942,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
+  cursor: pointer;
 }
 
 .c2 {
@@ -1005,7 +977,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
 
 <div>
   <form>
-    <p
+    <label
       class="c0"
     >
       <p
@@ -1019,7 +991,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
            (obligatoire)
         </span>
       </p>
-    </p>
+    </label>
     <div
       class="c4"
     >
@@ -1055,7 +1027,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
         Contrat de travail temporaire (Contrat d’intérim)
       </label>
     </div>
-    <p
+    <label
       class="c0"
     >
       <p
@@ -1069,7 +1041,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
            (obligatoire)
         </span>
       </p>
-    </p>
+    </label>
     <div
       class="c7"
       data-testid="cttFormation"
@@ -1109,7 +1081,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
         </label>
       </div>
     </div>
-    <p
+    <label
       class="c0"
     >
       <p
@@ -1123,7 +1095,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
            (obligatoire)
         </span>
       </p>
-    </p>
+    </label>
     <div
       class="c7"
       data-testid="ruptureContratFauteGrave"
@@ -1163,7 +1135,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
         </label>
       </div>
     </div>
-    <p
+    <label
       class="c0"
     >
       <p
@@ -1177,7 +1149,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
            (obligatoire)
         </span>
       </p>
-    </p>
+    </label>
     <div
       class="c7"
       data-testid="propositionCDIFinContrat"
@@ -1217,7 +1189,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
         </label>
       </div>
     </div>
-    <p
+    <label
       class="c0"
     >
       <p
@@ -1231,7 +1203,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
            (obligatoire)
         </span>
       </p>
-    </p>
+    </label>
     <div
       class="c7"
       data-testid="refusSouplesse"

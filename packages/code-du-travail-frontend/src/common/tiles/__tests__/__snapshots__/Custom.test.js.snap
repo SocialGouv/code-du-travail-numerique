@@ -300,13 +300,15 @@ exports[`<Article /> should render 1`] = `
         </h3>
       </div>
     </div>
-    <p
+    <div
       class="c8"
     >
       <div
         class="c9"
       >
-        Cette tuile vous fera dire bonjour !
+        <p>
+          Cette tuile vous fera dire bonjour !
+        </p>
         <div
           class="c10"
         >
@@ -329,7 +331,7 @@ exports[`<Article /> should render 1`] = `
           </p>
         </div>
       </div>
-    </p>
+    </div>
   </button>
 </div>
 `;

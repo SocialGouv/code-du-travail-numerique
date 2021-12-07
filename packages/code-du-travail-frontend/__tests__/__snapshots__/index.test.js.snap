@@ -2557,7 +2557,7 @@ exports[`<Home /> should render 1`] = `
                         </h3>
                       </div>
                     </div>
-                    <p
+                    <div
                       class="c52"
                     >
                       <div
@@ -2590,7 +2590,7 @@ exports[`<Home /> should render 1`] = `
                           </p>
                         </div>
                       </div>
-                    </p>
+                    </div>
                   </a>
                 </div>
                 <div
@@ -2660,7 +2660,7 @@ exports[`<Home /> should render 1`] = `
                         </h3>
                       </div>
                     </div>
-                    <p
+                    <div
                       class="c52"
                     >
                       <div
@@ -2693,7 +2693,7 @@ exports[`<Home /> should render 1`] = `
                           </p>
                         </div>
                       </div>
-                    </p>
+                    </div>
                   </a>
                 </div>
                 <div
@@ -2771,7 +2771,7 @@ exports[`<Home /> should render 1`] = `
                         </h3>
                       </div>
                     </div>
-                    <p
+                    <div
                       class="c52"
                     >
                       <div
@@ -2804,7 +2804,7 @@ exports[`<Home /> should render 1`] = `
                           </p>
                         </div>
                       </div>
-                    </p>
+                    </div>
                   </a>
                 </div>
                 <div
@@ -2876,7 +2876,7 @@ exports[`<Home /> should render 1`] = `
                         </h2>
                       </div>
                     </div>
-                    <p
+                    <div
                       class="c52"
                     >
                       <div
@@ -2909,7 +2909,7 @@ exports[`<Home /> should render 1`] = `
                           </p>
                         </div>
                       </div>
-                    </p>
+                    </div>
                   </a>
                 </div>
               </div>

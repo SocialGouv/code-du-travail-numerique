@@ -599,7 +599,7 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   color: transparent;
 }
 
-.c16 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -608,7 +608,7 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   cursor: pointer;
 }
 
-.c14 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -618,7 +618,7 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   flex-direction: row;
 }
 
-.c15 {
+.c14 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -639,7 +639,7 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   appearance: none;
 }
 
-.c15:before {
+.c14:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -654,12 +654,12 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   content: "";
 }
 
-.c15:checked {
+.c14:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c15:checked:before {
+.c14:checked:before {
   display: block;
 }
 
@@ -745,7 +745,7 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   padding: 0;
 }
 
-.c13 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -779,14 +779,6 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   margin-bottom: 1rem;
   font-size: 1.8rem;
   cursor: pointer;
-}
-
-.c12 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  cursor: default;
 }
 
 .c7 {
@@ -827,12 +819,6 @@ exports[`<Step /> should ask detail about retirement 1`] = `
 
 @media (max-width:600px) {
   .c5 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
     font-size: 1.6rem;
   }
 }
@@ -941,8 +927,8 @@ exports[`<Step /> should ask detail about retirement 1`] = `
       />
     </span>
   </div>
-  <p
-    class="c12"
+  <label
+    class="c5"
   >
     <p
       class="c6 c7"
@@ -955,39 +941,39 @@ exports[`<Step /> should ask detail about retirement 1`] = `
          (obligatoire)
       </span>
     </p>
-  </p>
+  </label>
   <div
-    class="c13"
+    class="c12"
   >
     <div
-      class="c14"
+      class="c13"
     >
       <input
-        class="c15"
+        class="c14"
         id="hasRetirementAge-oui"
         name="hasRetirementAge"
         type="radio"
         value="true"
       />
       <label
-        class="c16"
+        class="c15"
         for="hasRetirementAge-oui"
       >
         Oui
       </label>
     </div>
     <div
-      class="c14"
+      class="c13"
     >
       <input
-        class="c15"
+        class="c14"
         id="hasRetirementAge-non"
         name="hasRetirementAge"
         type="radio"
         value="false"
       />
       <label
-        class="c16"
+        class="c15"
         for="hasRetirementAge-non"
       >
         Non

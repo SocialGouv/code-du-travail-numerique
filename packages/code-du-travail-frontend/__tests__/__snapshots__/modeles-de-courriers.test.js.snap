@@ -1571,11 +1571,11 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                     </h3>
                   </div>
                 </div>
-                <p
+                <div
                   class="c45"
                 >
                   Pendant la période d’essai, le contrat de travail peut être rompu librement par l'employeur. L'employeur doit dans ce cas informer le salarié et respecter un délai…
-                </p>
+                </div>
               </a>
             </li>
             <h2
@@ -1631,11 +1631,11 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                     </h3>
                   </div>
                 </div>
-                <p
+                <div
                   class="c45"
                 >
                   La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation…
-                </p>
+                </div>
               </a>
             </li>
           </ul>

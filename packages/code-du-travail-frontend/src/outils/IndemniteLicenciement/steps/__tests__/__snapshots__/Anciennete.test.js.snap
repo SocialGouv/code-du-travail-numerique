@@ -105,7 +105,7 @@ exports[`<Anciennete /> should render 1`] = `
   width: 20rem;
 }
 
-.c13 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -114,7 +114,7 @@ exports[`<Anciennete /> should render 1`] = `
   cursor: pointer;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -124,7 +124,7 @@ exports[`<Anciennete /> should render 1`] = `
   flex-direction: row;
 }
 
-.c12 {
+.c11 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -145,7 +145,7 @@ exports[`<Anciennete /> should render 1`] = `
   appearance: none;
 }
 
-.c12:before {
+.c11:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -160,16 +160,16 @@ exports[`<Anciennete /> should render 1`] = `
   content: "";
 }
 
-.c12:checked {
+.c11:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c12:checked:before {
+.c11:checked:before {
   display: block;
 }
 
-.c10 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -203,14 +203,6 @@ exports[`<Anciennete /> should render 1`] = `
   margin-bottom: 1rem;
   font-size: 1.8rem;
   cursor: pointer;
-}
-
-.c9 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  cursor: default;
 }
 
 .c3 {
@@ -251,12 +243,6 @@ exports[`<Anciennete /> should render 1`] = `
 
 @media (max-width:600px) {
   .c1 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
     font-size: 1.6rem;
   }
 }
@@ -375,8 +361,8 @@ exports[`<Anciennete /> should render 1`] = `
     >
       Période d’absence prolongée
     </h2>
-    <p
-      class="c9"
+    <label
+      class="c1"
     >
       <p
         class="c2 c3"
@@ -389,39 +375,39 @@ exports[`<Anciennete /> should render 1`] = `
            (obligatoire)
         </span>
       </p>
-    </p>
+    </label>
     <div
-      class="c10"
+      class="c9"
     >
       <div
-        class="c11"
+        class="c10"
       >
         <input
-          class="c12"
+          class="c11"
           id="hasAbsenceProlonge-oui"
           name="hasAbsenceProlonge"
           type="radio"
           value="true"
         />
         <label
-          class="c13"
+          class="c12"
           for="hasAbsenceProlonge-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <input
-          class="c12"
+          class="c11"
           id="hasAbsenceProlonge-non"
           name="hasAbsenceProlonge"
           type="radio"
           value="false"
         />
         <label
-          class="c13"
+          class="c12"
           for="hasAbsenceProlonge-non"
         >
           Non

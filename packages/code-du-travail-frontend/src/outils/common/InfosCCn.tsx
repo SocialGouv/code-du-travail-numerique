@@ -148,7 +148,7 @@ function StepInfoCCn({
           }
           return (
             <>
-              <Question as="p" required={!isOptional}>
+              <Question required={!isOptional}>
                 Quelle est la convention collective applicable au salarié ?
               </Question>
               <StyledConventionSearch onSelectConvention={onSelectConvention} />

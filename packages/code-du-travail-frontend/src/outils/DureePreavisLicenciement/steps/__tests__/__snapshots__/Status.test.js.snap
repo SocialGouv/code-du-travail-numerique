@@ -82,7 +82,7 @@ exports[`<StepStatus /> should render 1`] = `
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
+  cursor: pointer;
 }
 
 .c2 {
@@ -116,7 +116,7 @@ exports[`<StepStatus /> should render 1`] = `
 }
 
 <div>
-  <p
+  <label
     class="c0"
   >
     <p
@@ -130,7 +130,7 @@ exports[`<StepStatus /> should render 1`] = `
          (obligatoire)
       </span>
     </p>
-  </p>
+  </label>
   <div
     class="c4"
   >
@@ -249,7 +249,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   display: block;
 }
 
-.c11 {
+.c10 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -269,7 +269,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   text-align: center;
 }
 
-.c14 {
+.c13 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -279,7 +279,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   pointer-events: none;
 }
 
-.c13 {
+.c12 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -300,33 +300,25 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   appearance: none;
 }
 
-.c13::-ms-expand {
+.c12::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c13 *::-ms-backdrop,
-.c13 {
+.c12 *::-ms-backdrop,
+.c12 {
   padding-right: 1.6rem;
 }
 
-.c13:invalid {
+.c12:invalid {
   border-color: #eb5757;
 }
 
-.c13:disabled {
+.c12:disabled {
   background-color: #e4e8ef;
 }
 
 .c0 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c9 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -339,14 +331,14 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   display: inline;
 }
 
-.c10 {
+.c9 {
   display: block;
   margin-bottom: 0.4rem;
   font-size: 1.6rem;
   cursor: pointer;
 }
 
-.c12 {
+.c11 {
   width: 40rem;
 }
 
@@ -374,7 +366,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c10 {
     width: 100%;
   }
 }
@@ -387,24 +379,18 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 
 @media (max-width:600px) {
   .c9 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c11 {
     width: 100%;
   }
 }
 
 <div>
-  <p
+  <label
     class="c0"
   >
     <p
@@ -418,7 +404,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
          (obligatoire)
       </span>
     </p>
-  </p>
+  </label>
   <div
     class="c4"
   >
@@ -458,7 +444,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       </label>
     </div>
   </div>
-  <p
+  <label
     class="c0"
   >
     <p
@@ -472,7 +458,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
          (obligatoire)
       </span>
     </p>
-  </p>
+  </label>
   <div
     class="c4"
   >
@@ -516,7 +502,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     class="c8"
   >
     <label
-      class="c9"
+      class="c0"
       for="input-cdt.ancienneté"
     >
       <p
@@ -532,15 +518,15 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       </p>
     </label>
     <label
-      class="c10"
+      class="c9"
     >
       Choissisez parmi les catégories d'ancienneté telles que définies par le Code du travail
     </label>
     <div
-      class="c11 c12"
+      class="c10 c11"
     >
       <select
-        class="c13"
+        class="c12"
         id="input-cdt.ancienneté"
         name="cdt.ancienneté"
       >
@@ -568,7 +554,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="c14"
+        class="c13"
       >
         <svg
           aria-hidden="true"
@@ -683,7 +669,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
+  cursor: pointer;
 }
 
 .c2 {
@@ -717,7 +703,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
 }
 
 <div>
-  <p
+  <label
     class="c0"
   >
     <p
@@ -731,7 +717,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
          (obligatoire)
       </span>
     </p>
-  </p>
+  </label>
   <div
     class="c4"
   >
@@ -771,7 +757,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
       </label>
     </div>
   </div>
-  <p
+  <label
     class="c0"
   >
     <p
@@ -785,7 +771,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
          (obligatoire)
       </span>
     </p>
-  </p>
+  </label>
   <div
     class="c4"
   >

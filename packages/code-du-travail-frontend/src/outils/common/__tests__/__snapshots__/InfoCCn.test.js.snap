@@ -190,7 +190,7 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
+  cursor: pointer;
 }
 
 .c2 {
@@ -231,7 +231,7 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
 
 <div>
   <form>
-    <p
+    <label
       class="c0"
     >
       <p
@@ -245,7 +245,7 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
            (obligatoire)
         </span>
       </p>
-    </p>
+    </label>
     <label
       class="c4"
       for="convention-search"
@@ -474,7 +474,7 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
+  cursor: pointer;
 }
 
 .c2 {
@@ -515,7 +515,7 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
 
 <div>
   <form>
-    <p
+    <label
       class="c0"
     >
       <p
@@ -524,7 +524,7 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
         Quelle est la convention collective applicable au salarié ?
          
       </p>
-    </p>
+    </label>
     <label
       class="c3"
       for="convention-search"

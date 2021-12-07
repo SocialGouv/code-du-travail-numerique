@@ -82,7 +82,7 @@ exports[`<TypeContrat /> should render 1`] = `
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
+  cursor: pointer;
 }
 
 .c2 {
@@ -116,7 +116,7 @@ exports[`<TypeContrat /> should render 1`] = `
 }
 
 <div>
-  <p
+  <label
     class="c0"
   >
     <p
@@ -130,7 +130,7 @@ exports[`<TypeContrat /> should render 1`] = `
          (obligatoire)
       </span>
     </p>
-  </p>
+  </label>
   <div
     class="c4"
   >

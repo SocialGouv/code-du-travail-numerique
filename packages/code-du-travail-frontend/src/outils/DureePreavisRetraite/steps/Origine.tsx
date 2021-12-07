@@ -12,7 +12,7 @@ import { required } from "../../common/validators";
 function OrigineStep({ form }: WizardStepProps): JSX.Element {
   return (
     <>
-      <Question as="p" required>
+      <Question required>
         Qui est à l’origine du départ en retraite&nbsp;?
       </Question>
       <RadioContainer>

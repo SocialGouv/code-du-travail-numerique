@@ -158,11 +158,11 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
         </h3>
       </div>
     </div>
-    <p
+    <div
       class="c6"
     >
       There is text inside
-    </p>
+    </div>
   </a>
 </div>
 `;
@@ -283,11 +283,11 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
         </h3>
       </div>
     </div>
-    <p
+    <div
       class="c5"
     >
       There is text inside
-    </p>
+    </div>
   </a>
 </div>
 `;
@@ -431,11 +431,11 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
         </h3>
       </div>
     </div>
-    <p
+    <div
       class="c5"
     >
       There is text inside
-    </p>
+    </div>
   </a>
 </div>
 `;
@@ -540,11 +540,11 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
         </h3>
       </div>
     </div>
-    <p
+    <div
       class="c4"
     >
       There is text inside
-    </p>
+    </div>
   </a>
 </div>
 `;
@@ -663,11 +663,11 @@ exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
         </h3>
       </div>
     </div>
-    <p
+    <div
       class="c5"
     >
       There is text inside
-    </p>
+    </div>
   </button>
 </div>
 `;

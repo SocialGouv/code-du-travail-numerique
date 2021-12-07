@@ -117,7 +117,7 @@ exports[`<Salaire /> renders 1`] = `
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
+  cursor: pointer;
 }
 
 .c5 {
@@ -202,7 +202,7 @@ exports[`<Salaire /> renders 1`] = `
       sont à considérer comme ceux effectués en temps plein.
     </div>
   </div>
-  <p
+  <label
     class="c3"
   >
     <p
@@ -216,7 +216,7 @@ exports[`<Salaire /> renders 1`] = `
          (obligatoire)
       </span>
     </p>
-  </p>
+  </label>
   <div
     class="c7"
   >
@@ -375,7 +375,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
+  cursor: pointer;
 }
 
 .c5 {
@@ -460,7 +460,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
       sont à considérer comme ceux effectués en temps plein.
     </div>
   </div>
-  <p
+  <label
     class="c3"
   >
     <p
@@ -474,7 +474,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
          (obligatoire)
       </span>
     </p>
-  </p>
+  </label>
   <div
     class="c7"
   >
@@ -514,7 +514,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
       </label>
     </div>
   </div>
-  <p
+  <label
     class="c3"
   >
     <p
@@ -528,7 +528,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
          (obligatoire)
       </span>
     </p>
-  </p>
+  </label>
   <div
     class="c7"
   >
@@ -846,7 +846,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
+  cursor: pointer;
 }
 
 .c5 {
@@ -989,7 +989,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
       sont à considérer comme ceux effectués en temps plein.
     </div>
   </div>
-  <p
+  <label
     class="c3"
   >
     <p
@@ -1003,7 +1003,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
          (obligatoire)
       </span>
     </p>
-  </p>
+  </label>
   <div
     class="c7"
   >
@@ -1043,7 +1043,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
       </label>
     </div>
   </div>
-  <p
+  <label
     class="c3"
   >
     <p
@@ -1057,7 +1057,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
          (obligatoire)
       </span>
     </p>
-  </p>
+  </label>
   <div
     class="c7"
   >
@@ -1393,7 +1393,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
+  cursor: pointer;
 }
 
 .c5 {
@@ -1512,7 +1512,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
       sont à considérer comme ceux effectués en temps plein.
     </div>
   </div>
-  <p
+  <label
     class="c3"
   >
     <p
@@ -1526,7 +1526,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
          (obligatoire)
       </span>
     </p>
-  </p>
+  </label>
   <div
     class="c7"
   >
@@ -1566,7 +1566,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
       </label>
     </div>
   </div>
-  <p
+  <label
     class="c3"
   >
     <p
@@ -1580,7 +1580,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
          (obligatoire)
       </span>
     </p>
-  </p>
+  </label>
   <div
     class="c7"
   >
