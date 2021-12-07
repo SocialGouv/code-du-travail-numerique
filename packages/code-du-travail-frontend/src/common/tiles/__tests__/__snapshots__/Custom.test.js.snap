@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Article /> should render 1`] = `
+exports[`<CallToActionTile /> should render 1`] = `
 .c2 {
   position: absolute;
   top: 0;
@@ -229,8 +229,9 @@ exports[`<Article /> should render 1`] = `
 }
 
 <div>
-  <button
+  <a
     class="c0 c1"
+    href="/test"
   >
     <div
       class="c2"
@@ -312,7 +313,7 @@ exports[`<Article /> should render 1`] = `
         <div
           class="c10"
         >
-          <p
+          <button
             class="c11 c12"
           >
             Bonjour
@@ -328,10 +329,10 @@ exports[`<Article /> should render 1`] = `
                 fill="currentColor"
               />
             </svg>
-          </p>
+          </button>
         </div>
       </div>
     </div>
-  </button>
+  </a>
 </div>
 `;

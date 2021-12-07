@@ -1688,7 +1688,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <p
+                          <button
                             class="c14 c46"
                           >
                             Découvrir
@@ -1704,7 +1704,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </p>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1817,7 +1817,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <p
+                          <button
                             class="c14 c46"
                           >
                             Estimer
@@ -1833,7 +1833,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </p>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1920,7 +1920,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <p
+                          <button
                             class="c14 c46"
                           >
                             Calculer
@@ -1936,7 +1936,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </p>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2031,7 +2031,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <p
+                          <button
                             class="c14 c46"
                           >
                             Estimer
@@ -2047,7 +2047,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </p>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2164,7 +2164,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <p
+                          <button
                             class="c14 c46"
                           >
                             Estimer
@@ -2180,7 +2180,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </p>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2270,7 +2270,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <p
+                          <button
                             class="c14 c46"
                           >
                             Calculer
@@ -2286,7 +2286,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </p>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2383,7 +2383,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <p
+                          <button
                             class="c14 c46"
                           >
                             Calculer
@@ -2399,7 +2399,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </p>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2492,7 +2492,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <p
+                          <button
                             class="c14 c46"
                           >
                             Consulter
@@ -2508,7 +2508,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </p>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2598,7 +2598,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <p
+                          <button
                             class="c14 c46"
                           >
                             Calculer
@@ -2614,7 +2614,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </p>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2713,7 +2713,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <p
+                          <button
                             class="c14 c46"
                           >
                             Consulter
@@ -2729,7 +2729,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </p>
+                          </button>
                         </div>
                       </div>
                     </div>
