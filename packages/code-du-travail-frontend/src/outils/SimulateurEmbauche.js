@@ -27,7 +27,7 @@ class SimulateurEmbauche extends React.PureComponent {
     script.src =
       "https://mon-entreprise.urssaf.fr/simulateur-iframe-integration.js";
     script.async = true;
-    script.dataset.couleur = "#2975D1";
+    script.dataset.couleur = "#004CCE";
     script.id = "script-simulateur-embauche";
     script.onload = this.onLoad;
     script.onerror = this.onError;
