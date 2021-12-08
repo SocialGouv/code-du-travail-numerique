@@ -253,7 +253,7 @@ metadata:
   name: api
   namespace: cdtn
 spec:
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 10
   metrics:
     - resource:
@@ -494,7 +494,7 @@ metadata:
   name: www
   namespace: cdtn
 spec:
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 10
   metrics:
     - resource:

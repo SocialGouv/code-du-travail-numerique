@@ -76,7 +76,7 @@ export default async () => {
   const hpa = new HorizontalPodAutoscaler({
     metadata: deployment.metadata,
     spec: {
-      minReplicas: 1,
+      minReplicas: 2,
       maxReplicas: 10,
 
       metrics: [
