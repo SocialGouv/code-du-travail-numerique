@@ -1404,9 +1404,9 @@ exports[`<MentionLegales /> should render 1`] = `
               39-43 Quai André Citroën
               <br />
               75015 PARIS
-              <br />
-              <br />
-              Tél. : 01 40 56 60 00
+              <p>
+                Tél. : 01 40 56 60 00
+              </p>
             </address>
             <div
               class="c31"
@@ -1450,14 +1450,16 @@ exports[`<MentionLegales /> should render 1`] = `
             <div
               class="c34 c35"
             >
-              Le code du logiciel est libre, et peut donc être vérifié et amélioré par toutes et tous à l’adresse suivante:
-               
-              <a
-                href="https://github.com/SocialGouv/code-du-travail-numerique"
-              >
-                https://github.com/SocialGouv/code-du-travail-numerique
-              </a>
-              .
+              <p>
+                Le code du logiciel est libre, et peut donc être vérifié et amélioré par toutes et tous à l’adresse suivante:
+                 
+                <a
+                  href="https://github.com/SocialGouv/code-du-travail-numerique"
+                >
+                  https://github.com/SocialGouv/code-du-travail-numerique
+                </a>
+                .
+              </p>
             </div>
             <div
               class="c31"
@@ -1542,19 +1544,21 @@ exports[`<MentionLegales /> should render 1`] = `
               class="c40"
               role="heading"
             >
-              <strong
+              <p
                 class="c41"
               >
                 <span
                   class="c28"
                 />
                 Besoin de plus d’informations ?
-              </strong>
+              </p>
             </div>
             <div
               class="c42 c43"
             >
-              Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              <p>
+                Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              </p>
             </div>
             <button
               class="c44"

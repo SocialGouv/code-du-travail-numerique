@@ -42,7 +42,6 @@ exports[`<StepResult /> should render with O duration 1`] = `
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -404,7 +403,6 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -726,7 +724,6 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -1047,7 +1044,6 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -1357,7 +1353,6 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }

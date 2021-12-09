@@ -9,7 +9,7 @@ export const CallToActionTile = React.forwardRef(
       <TileChildren>
         {children}
         <StyledDiv hasContentAbove={Boolean(children)}>
-          <Button variant="link" as="div">
+          <Button variant="link" as="p">
             {action}
           </Button>
         </StyledDiv>

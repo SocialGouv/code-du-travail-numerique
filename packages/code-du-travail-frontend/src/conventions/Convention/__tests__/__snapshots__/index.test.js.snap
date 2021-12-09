@@ -219,7 +219,6 @@ exports[`<Convention /> renders 1`] = `
 
 .c24 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -4762,11 +4761,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 1-4
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -4792,11 +4791,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 4-1
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -4822,11 +4821,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 4-2
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -4852,11 +4851,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-8
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -4956,11 +4955,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-13
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -4986,11 +4985,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-14
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5016,11 +5015,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-15
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5046,11 +5045,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-16
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5076,11 +5075,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-17
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5106,11 +5105,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-18
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5136,11 +5135,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-21
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5166,11 +5165,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-22
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5196,11 +5195,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-24
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5226,11 +5225,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-25
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5256,11 +5255,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-28
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5286,11 +5285,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-29
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5390,11 +5389,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-1
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5420,11 +5419,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-2
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5450,11 +5449,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-3
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5480,11 +5479,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-4
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5510,11 +5509,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-5
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5540,11 +5539,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-6
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5570,11 +5569,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-7
-                          </span>
+                          </p>
                           
                         </div>
                       </div>

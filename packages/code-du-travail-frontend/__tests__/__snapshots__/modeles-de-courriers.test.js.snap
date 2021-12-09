@@ -1658,19 +1658,21 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               class="c49"
               role="heading"
             >
-              <strong
+              <p
                 class="c50"
               >
                 <span
                   class="c28"
                 />
                 Besoin de plus d’informations ?
-              </strong>
+              </p>
             </div>
             <div
               class="c51 c52"
             >
-              Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              <p>
+                Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              </p>
             </div>
             <button
               class="c53"

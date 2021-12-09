@@ -109,11 +109,11 @@ exports[`<ServiceEnLigne /> should render 1`] = `
       <div
         class="c3"
       >
-        <span
+        <p
           class="c4 "
         >
           Se retrouve dans en entête
-        </span>
+        </p>
         <h3
           class="c5"
         >

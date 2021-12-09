@@ -2291,11 +2291,11 @@ exports[`<FicheMT /> should render 1`] = `
                     </div>
                   </div>
                 </div>
-                <span
+                <p
                   class="c44 c45"
                 >
                   Santé, sécurité et conditions de travail
-                </span>
+                </p>
                 <header
                   class="c46 c47"
                 >
@@ -2651,19 +2651,21 @@ exports[`<FicheMT /> should render 1`] = `
               class="c78"
               role="heading"
             >
-              <strong
+              <p
                 class="c79"
               >
                 <span
                   class="c80"
                 />
                 Besoin de plus d’informations ?
-              </strong>
+              </p>
             </div>
             <div
               class="c81 c82"
             >
-              Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              <p>
+                Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              </p>
             </div>
             <button
               class="c83"
