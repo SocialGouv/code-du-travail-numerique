@@ -461,7 +461,7 @@ exports[`<Stats /> should render 1`] = `
 
 .c25 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   margin-left: auto;
   text-align: center;
 }

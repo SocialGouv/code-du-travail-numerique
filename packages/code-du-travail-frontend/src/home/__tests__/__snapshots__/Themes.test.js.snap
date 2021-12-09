@@ -277,14 +277,14 @@ exports[`<Themes /> should render 1`] = `
 
 .c8 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   margin-left: auto;
   text-align: center;
 }
 
 .c19 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   margin-left: auto;
   text-align: left;
 }

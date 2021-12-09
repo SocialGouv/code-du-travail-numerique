@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
 
-import { ConventionModal } from "../../src/conventions/SearchModal";
+import { ConventionModal } from "../conventions/SearchModal";
 import {
   AsideContent,
   MainAsideLayout,
@@ -70,7 +70,11 @@ function Answer({
             >
               {intro && (
                 <IntroWrapper variant="dark">
-                  {isHTML(intro) ? <Html>{intro}</Html> : <p>{intro}</p>}
+                  {isHTML(intro) ? (
+                    <Html>{intro}</Html>
+                  ) : (
+                    <Paragraph noMargin>{intro}</Paragraph>
+                  )}
                 </IntroWrapper>
               )}
               {html && <Html>{html}</Html>}
@@ -109,9 +113,11 @@ const StyledErrorContainer = styled(Container)`
 
 const IntroWrapper = styled(Wrapper)`
   margin: ${spacings.base} auto;
+
   & div > *:first-child {
     margin-top: 0;
   }
+
   & div > *:last-child {
     margin-bottom: 0;
   }

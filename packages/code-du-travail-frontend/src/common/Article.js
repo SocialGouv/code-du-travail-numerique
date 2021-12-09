@@ -39,43 +39,32 @@ const Article = ({
             {title}
           </StyledPageTitle>
           <Meta>
-            {source &&
-              (source.url ? (
-                <Paragraph noMargin>
-                  Source:{" "}
-                  <A11yLink
-                    href={source.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {source.name}
-                  </A11yLink>
-                  {source && date && (
-                    <HideOnMobile aria-hidden="true">
-                      &nbsp;-&nbsp;
-                    </HideOnMobile>
-                  )}
-                  {date && (
-                    <StyledSpan>
-                      {dateLabel}&nbsp;:&nbsp;{date}
-                    </StyledSpan>
-                  )}
-                </Paragraph>
-              ) : (
-                <Paragraph noMargin>
+            <Paragraph noMargin fontSize="small">
+              {source &&
+                (source.url ? (
+                  <StyledSpan>
+                    Source:{" "}
+                    <A11yLink
+                      href={source.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {source.name}
+                    </A11yLink>
+                  </StyledSpan>
+                ) : (
                   <StyledSpan>Source: {source.name}</StyledSpan>
-                  {source && date && (
-                    <HideOnMobile aria-hidden="true">
-                      &nbsp;-&nbsp;
-                    </HideOnMobile>
-                  )}
-                  {date && (
-                    <StyledSpan>
-                      {dateLabel}&nbsp;:&nbsp;{date}
-                    </StyledSpan>
-                  )}
-                </Paragraph>
-              ))}
+                ))}
+
+              {source && date && (
+                <HideOnMobile aria-hidden="true">&nbsp;-&nbsp;</HideOnMobile>
+              )}
+              {date && (
+                <StyledSpan>
+                  {dateLabel}&nbsp;:&nbsp;{date}
+                </StyledSpan>
+              )}
+            </Paragraph>
           </Meta>
         </Flex>
         <Content>{children}</Content>
@@ -147,7 +136,7 @@ const OrderedSuptitle = styled(Suptitle)`
 
 const StyledPageTitle = styled(PageTitle)`
   order: 3;
-  margin-bottom: ${spacings.xsmall};
+  margin-bottom: ${spacings.small};
   outline: none;
 `;
 

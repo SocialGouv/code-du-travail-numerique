@@ -7,7 +7,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding: 0 2rem;
 }
 
-.c92 {
+.c93 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -15,7 +15,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   max-width: 74rem;
 }
 
-.c63 {
+.c64 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -52,7 +52,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin-bottom: 0;
 }
 
-.c53 {
+.c54 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -60,15 +60,15 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c53 > *:first-child {
+.c54 > *:first-child {
   margin-top: 0;
 }
 
-.c53 > *:last-child {
+.c54 > *:last-child {
   margin-bottom: 0;
 }
 
-.c79 {
+.c80 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -76,11 +76,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   background-color: #fff;
 }
 
-.c79 > *:first-child {
+.c80 > *:first-child {
   margin-top: 0;
 }
 
-.c79 > *:last-child {
+.c80 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -97,7 +97,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   transform: translateY(-50%);
 }
 
-.c68 {
+.c69 {
   position: absolute;
   background-color: #f66663;
   border-radius: 0;
@@ -110,7 +110,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   transform: translateY(-50%);
 }
 
-.c91 {
+.c92 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -123,7 +123,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   transform: translateX(-50%);
 }
 
-.c82 {
+.c83 {
   position: relative;
   display: block;
   margin: 3.2rem 0 2rem 0;
@@ -136,7 +136,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding-left: 2.4rem;
 }
 
-.c100 {
+.c101 {
   position: relative;
   display: block;
   margin: 0 0 2rem 0;
@@ -147,7 +147,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   line-height: 1.625;
 }
 
-.c51 {
+.c52 {
   position: absolute;
   top: 0;
   right: 0;
@@ -158,7 +158,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c51:before {
+.c52:before {
   position: absolute;
   display: block;
   width: 0;
@@ -169,7 +169,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   content: "";
 }
 
-.c52 {
+.c53 {
   position: absolute;
   top: 0;
   right: 0;
@@ -242,7 +242,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   cursor: not-allowed;
 }
 
-.c75 {
+.c76 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -287,13 +287,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c75:focus,
-.c75:hover,
-.c75:active {
+.c76:focus,
+.c76:hover,
+.c76:active {
   color: #f66663;
 }
 
-.c84 {
+.c85 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -331,16 +331,16 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   will-change: transform;
 }
 
-.c84:link,
-.c84:visited {
+.c85:link,
+.c85:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c84:not([disabled]):hover,
-.c84:not([disabled]):active,
-.c84:not([disabled]):focus {
+.c85:not([disabled]):hover,
+.c85:not([disabled]):active,
+.c85:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -349,7 +349,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   border-color: #dee5ef;
 }
 
-.c84[disabled] {
+.c85[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -357,7 +357,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   cursor: not-allowed;
 }
 
-.c94 {
+.c95 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -395,16 +395,16 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   will-change: transform;
 }
 
-.c94:link,
-.c94:visited {
+.c95:link,
+.c95:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c94:not([disabled]):hover,
-.c94:not([disabled]):active,
-.c94:not([disabled]):focus {
+.c95:not([disabled]):hover,
+.c95:not([disabled]):active,
+.c95:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -413,7 +413,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   border-color: #a0b3e0;
 }
 
-.c94[disabled] {
+.c95[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -509,7 +509,14 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   color: #7994d4;
 }
 
-.c59 {
+.c50 {
+  color: #3e486e;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.c60 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
@@ -520,7 +527,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   position: relative;
 }
 
-.c101 {
+.c102 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -559,7 +566,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   overflow-x: auto;
 }
 
-.c55 {
+.c56 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -570,7 +577,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   justify-content: stretch;
 }
 
-.c56 {
+.c57 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -580,12 +587,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin-right: 2rem;
 }
 
-.c56 svg {
+.c57 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c57 {
+.c58 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -602,12 +609,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-transform: uppercase;
 }
 
-.c70 {
+.c71 {
   position: relative;
   display: inline-block;
 }
 
-.c72 {
+.c73 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -629,15 +636,15 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   appearance: none;
 }
 
-.c72::-webkit-outer-spin-button,
-.c72::-webkit-inner-spin-button {
+.c73::-webkit-outer-spin-button,
+.c73::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c72::-webkit-calendar-picker-indicator {
+.c73::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -650,47 +657,47 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c72:invalid {
+.c73:invalid {
   border-color: #eb5757;
 }
 
-.c72::-webkit-input-placeholder {
+.c73::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c72::-moz-placeholder {
+.c73::-moz-placeholder {
   color: #9298af;
 }
 
-.c72:-ms-input-placeholder {
+.c73:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c72::placeholder {
+.c73::placeholder {
   color: #9298af;
 }
 
-.c72:focus {
+.c73:focus {
   border-color: #7994d4;
 }
 
-.c72:focus::-webkit-input-placeholder {
+.c73:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c72:focus::-moz-placeholder {
+.c73:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c72:focus:-ms-input-placeholder {
+.c73:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c72:focus::placeholder {
+.c73:focus::placeholder {
   color: transparent;
 }
 
-.c69 {
+.c70 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -704,7 +711,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   cursor: pointer;
 }
 
-.c58 {
+.c59 {
   margin: 0 0 1rem 0;
   color: #f66663;
   font-weight: 600;
@@ -715,26 +722,26 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 
 .c45 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   margin-left: -4rem;
   text-align: left;
 }
 
-.c60 {
+.c61 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
-.c65 {
+.c66 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
 
-.c89 {
+.c90 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -752,7 +759,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding-left: 4rem;
 }
 
-.c61 {
+.c62 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -764,7 +771,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-align: left;
 }
 
-.c67 {
+.c68 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -776,7 +783,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-align: left;
 }
 
-.c90 {
+.c91 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -788,20 +795,20 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-align: center;
 }
 
-.c71 {
+.c72 {
   width: 100%;
 }
 
-.c73 {
+.c74 {
   margin-top: 2.4rem;
 }
 
-.c74 {
+.c75 {
   display: block;
   margin-top: 1.6rem;
 }
 
-.c76 {
+.c77 {
   color: #7994d4;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -966,7 +973,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   -webkit-order: 3;
   -ms-flex-order: 3;
   order: 3;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   outline: none;
 }
 
@@ -981,7 +988,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   font-size: 1.4rem;
 }
 
-.c50 {
+.c51 {
   margin: 3.2rem 0 0 0;
 }
 
@@ -1051,7 +1058,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   color: #7994d4;
 }
 
-.c80 {
+.c81 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1069,7 +1076,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   justify-content: stretch;
 }
 
-.c81 {
+.c82 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -1079,7 +1086,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding-bottom: 1rem;
 }
 
-.c83 {
+.c84 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1094,11 +1101,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin: 0;
 }
 
-.c85 + .c85 {
+.c86 + .c86 {
   margin-left: 4rem;
 }
 
-.c77 {
+.c78 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1116,7 +1123,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   font-weight: bold;
 }
 
-.c62 {
+.c63 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1125,25 +1132,25 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   font-size: 1.4rem;
 }
 
-.c64 {
+.c65 {
   padding-bottom: 0;
 }
 
-.c54 {
+.c55 {
   margin-bottom: 3.2rem;
 }
 
-.c66 {
+.c67 {
   margin-top: 3.2rem;
 }
 
-.c86 {
+.c87 {
   width: 100%;
   padding-top: 4rem;
   overflow-x: hidden;
 }
 
-.c87 {
+.c88 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -1151,7 +1158,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   background-color: #f2f5fa;
 }
 
-.c87:before {
+.c88:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -1163,27 +1170,27 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   content: "";
 }
 
-.c88 {
+.c89 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c93 {
+.c94 {
   margin-bottom: 2rem;
 }
 
-.c95 {
+.c96 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c96 {
+.c97 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c97 {
+.c98 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1194,15 +1201,15 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   justify-content: space-between;
 }
 
-.c98 + .c98 {
+.c99 + .c99 {
   padding-left: 1.6rem;
 }
 
-.c99 {
+.c100 {
   font-size: 1.6rem;
 }
 
-.c103 {
+.c104 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1211,11 +1218,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   display: inline-block;
 }
 
-.c104 {
+.c105 {
   padding: 0.4rem 0;
 }
 
-.c105 {
+.c106 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1237,11 +1244,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c106 {
+.c107 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c107 {
+.c108 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1485,20 +1492,20 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c92 {
+  .c93 {
     padding: 0;
   }
 }
 
 @media print {
-  .c92 {
+  .c93 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c63 {
+  .c64 {
     padding: 2.4rem 0;
   }
 }
@@ -1523,46 +1530,46 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c53 {
+  .c54 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c53 {
+  .c54 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c79 {
+  .c80 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c79 {
+  .c80 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c82 {
+  .c83 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c82 {
+  .c83 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c100 {
+  .c101 {
     font-size: 1.6rem;
   }
 }
@@ -1580,49 +1587,49 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c75 {
+  .c76 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c75 {
+  .c76 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c84 {
+  .c85 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c84 {
+  .c85 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c84 {
+  .c85 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c94 {
+  .c95 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c94 {
+  .c95 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c94 {
+  .c95 {
     padding: 0 3rem;
   }
 }
@@ -1680,33 +1687,33 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c56 {
+  .c57 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c56 svg {
+  .c57 svg {
     width: 3rem;
     height: 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c70 {
+  .c71 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c72 {
+  .c73 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c58 {
+  .c59 {
     font-size: 1.6rem;
   }
 }
@@ -1719,21 +1726,21 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c60 {
+  .c61 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c65 {
+  .c66 {
     margin-bottom: 1rem;
     margin-left: -1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c89 {
+  .c90 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -1752,31 +1759,31 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c61 {
+  .c62 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c61 {
+  .c62 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c67 {
+  .c68 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c67 {
+  .c68 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c90 {
+  .c91 {
     font-size: 2.2rem;
   }
 }
@@ -1844,7 +1851,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c51 {
     margin-top: 1.6rem;
   }
 }
@@ -1874,13 +1881,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media print {
-  .c78 {
+  .c79 {
     display: none;
   }
 }
 
 @media (max-width:1180px) {
-  .c80 {
+  .c81 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1894,20 +1901,20 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c81 {
+  .c82 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c81 {
+  .c82 {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c83 {
+  .c84 {
     -webkit-box-pack: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -1916,13 +1923,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c85 + .c85 {
+  .c86 + .c86 {
     margin-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c77 {
+  .c78 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
@@ -1931,13 +1938,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media print {
-  .c77 {
+  .c78 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c62 {
+  .c63 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1945,32 +1952,32 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c54 {
+  .c55 {
     margin-bottom: 2rem;
   }
 }
 
 @media print {
-  .c87 {
+  .c88 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c88 {
+  .c89 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c96 {
+  .c97 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c97 {
+  .c98 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1978,26 +1985,26 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c98 + .c98 {
+  .c99 + .c99 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c102 {
+  .c103 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c99 {
+  .c100 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c107 {
+  .c108 {
     display: none;
   }
 }
@@ -2543,16 +2550,20 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </header>
                   <div
                     class="c49"
-                  />
+                  >
+                    <p
+                      class="c50"
+                    />
+                  </div>
                 </div>
                 <div
-                  class="c50"
+                  class="c51"
                 >
                   <div
-                    class="c51"
+                    class="c52"
                   >
                     <div
-                      class="c52"
+                      class="c53"
                     >
                       <svg
                         aria-hidden="true"
@@ -2576,13 +2587,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     </div>
                   </div>
                   <div
-                    class="c53 c54"
+                    class="c54 c55"
                   >
                     <div
-                      class="c55"
+                      class="c56"
                     >
                       <div
-                        class="c56"
+                        class="c57"
                       >
                         <svg
                           aria-hidden="true"
@@ -2619,17 +2630,17 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c57"
+                        class="c58"
                       >
                         <p
                           aria-level="2"
-                          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c58"
+                          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c59"
                           role="heading"
                         >
                           Page personnalisable
                         </p>
                         <p
-                          class="c59"
+                          class="c60"
                         >
                           Le contenu de cette page peut être personnalisé en fonction de votre situation.
                           <br />
@@ -2645,10 +2656,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </div>
                   <section>
                     <div
-                      class="c60"
+                      class="c61"
                     >
                       <h2
-                        class="c61"
+                        class="c62"
                       >
                         <span
                           class="c48"
@@ -2657,7 +2668,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       </h2>
                     </div>
                     <div
-                      class="c62"
+                      class="c63"
                     />
                     <div>
                       <p>
@@ -2747,39 +2758,39 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     </div>
                   </section>
                   <div
-                    class="c63 c64"
+                    class="c64 c65"
                   >
                     <div
-                      class="c53"
+                      class="c54"
                     >
                       <div
-                        class="c65 c66"
+                        class="c66 c67"
                         id="customisation"
                       >
                         <h2
-                          class="c67"
+                          class="c68"
                         >
                           <span
-                            class="c68"
+                            class="c69"
                           />
                           <p
-                            class="c59"
+                            class="c60"
                           >
                             Que dit votre convention collective ?
                           </p>
                         </h2>
                       </div>
                       <label
-                        class="c69"
+                        class="c70"
                         for="convention-search"
                       >
                         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
                       </label>
                       <span
-                        class="c70 c71"
+                        class="c71 c72"
                       >
                         <input
-                          class="c72"
+                          class="c73"
                           id="convention-search"
                           name="q"
                           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -2789,16 +2800,16 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       </span>
                       
                       <p
-                        class="c73"
+                        class="c74"
                       >
                         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
                         <span
-                          class="c74"
+                          class="c75"
                         >
                           Consultez
                            
                           <button
-                            class="c75 c76"
+                            class="c76 c77"
                             type="button"
                           >
                             notre aide
@@ -2812,10 +2823,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </div>
             </div>
             <div
-              class="c4 c77"
+              class="c4 c78"
             >
               <p
-                class="c59"
+                class="c60"
               >
                 Partager ce contenu : 
               </p>
@@ -2929,41 +2940,41 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </div>
             </div>
             <div
-              class="c63 c78"
+              class="c64 c79"
             >
               <div
                 class="c4"
               >
                 <div
-                  class="c79"
+                  class="c80"
                 >
                   <div
-                    class="c80"
+                    class="c81"
                   >
                     <strong
-                      class="c81 c82"
+                      class="c82 c83"
                     >
                       <span
-                        class="c68"
+                        class="c69"
                       />
                       <p
                         aria-level="2"
-                        class="c59"
+                        class="c60"
                         role="heading"
                       >
                         Avez-vous trouvé la réponse à votre question ?
                       </p>
                     </strong>
                     <p
-                      class="c83"
+                      class="c84"
                     >
                       <button
-                        class="c84 c85 "
+                        class="c85 c86 "
                       >
                         Non
                       </button>
                       <button
-                        class="c84 c85 "
+                        class="c85 c86 "
                       >
                         Oui
                       </button>
@@ -2976,45 +2987,45 @@ exports[`<FicheContribution /> should render with external content 1`] = `
         </div>
       </main>
       <div
-        class="c86"
+        class="c87"
       >
         <footer
-          class="c87"
+          class="c88"
         >
           <div
-            class="c63 c88"
+            class="c64 c89"
           >
             <div
               class="c4"
             >
               <div
                 aria-level="2"
-                class="c89"
+                class="c90"
                 role="heading"
               >
                 <p
-                  class="c90"
+                  class="c91"
                 >
                   <span
-                    class="c91"
+                    class="c92"
                   />
                   Besoin de plus d’informations ?
                 </p>
               </div>
               <div
-                class="c92 c93"
+                class="c93 c94"
               >
                 <p>
                   Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
                 </p>
               </div>
               <button
-                class="c94"
+                class="c95"
               >
                 Contacter nos services en région
                 <svg
                   aria-hidden="true"
-                  class="c95"
+                  class="c96"
                   fill="none"
                   viewBox="0 0 28 15"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3028,27 +3039,27 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             </div>
           </div>
           <div
-            class="c63 c96"
+            class="c64 c97"
           >
             <div
-              class="c4 c97"
+              class="c4 c98"
             >
               <div
-                class="c98 "
+                class="c99 "
               >
                 <strong
                   aria-level="2"
-                  class="c99 c100"
+                  class="c100 c101"
                   role="heading"
                 >
                   Code du travail numérique
                 </strong>
                 <ul
-                  class="c101 c102"
+                  class="c102 c103"
                 >
                   <li>
                     <a
-                      class="c103"
+                      class="c104"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
@@ -3056,7 +3067,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c103"
+                      class="c104"
                       href="/glossaire"
                     >
                       Glossaire
@@ -3064,7 +3075,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c103"
+                      class="c104"
                       href="/a-propos"
                     >
                       À propos
@@ -3072,7 +3083,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c103"
+                      class="c104"
                       href="/mentions-legales"
                     >
                       Mentions légales
@@ -3080,7 +3091,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c103"
+                      class="c104"
                       href="/accessibilite"
                     >
                       Accessibilité : partiellement conforme
@@ -3088,7 +3099,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c103"
+                      class="c104"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
@@ -3096,7 +3107,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c103"
+                      class="c104"
                       href="/stats"
                     >
                       Statistiques d’utilisation
@@ -3104,7 +3115,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c103"
+                      class="c104"
                       href="/integration"
                     >
                       Intégrer le Code du travail numérique
@@ -3113,21 +3124,21 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 </ul>
               </div>
               <div
-                class="c98 "
+                class="c99 "
               >
                 <strong
                   aria-level="2"
-                  class="c99 c100"
+                  class="c100 c101"
                   role="heading"
                 >
                   Aidez-nous à améliorer cet outil
                 </strong>
                 <ul
-                  class="c101 c102"
+                  class="c102 c103"
                 >
                   <li>
                     <button
-                      class="c75 c104"
+                      class="c76 c105"
                     >
                       Contact
                     </button>
@@ -3135,7 +3146,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   <li>
                     <a
                       aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c104"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3146,7 +3157,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   <li>
                     <a
                       aria-label="Journal des modifications (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c104"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3157,22 +3168,22 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 </ul>
               </div>
               <div
-                class="c98 "
+                class="c99 "
               >
                 <strong
                   aria-level="2"
-                  class="c99 c100"
+                  class="c100 c101"
                   role="heading"
                 >
                   En collaboration avec
                 </strong>
                 <ul
-                  class="c101 c102"
+                  class="c102 c103"
                 >
                   <li>
                     <a
                       aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c104"
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3183,7 +3194,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   <li>
                     <a
                       aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c104"
                       href="https://fabrique.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3194,7 +3205,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   <li>
                     <a
                       aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c104"
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3207,12 +3218,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             </div>
           </div>
           <ul
-            class="c105"
+            class="c106"
           >
             <li>
               <a
                 aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-                class="c103 c106"
+                class="c104 c107"
                 href="https://travail-emploi.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3221,7 +3232,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c107"
+                class="c108"
               >
                 |
               </span>
@@ -3229,7 +3240,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="service-public.fr (Nouvelle fenêtre)"
-                class="c103 c106"
+                class="c104 c107"
                 href="https://www.service-public.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3238,7 +3249,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c107"
+                class="c108"
               >
                 |
               </span>
@@ -3246,7 +3257,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-                class="c103 c106"
+                class="c104 c107"
                 href="https://www.legifrance.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3255,7 +3266,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c107"
+                class="c108"
               >
                 |
               </span>
@@ -3263,7 +3274,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="data.gouv.fr (Nouvelle fenêtre)"
-                class="c103 c106"
+                class="c104 c107"
                 href="https://www.data.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3272,7 +3283,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c107"
+                class="c108"
               >
                 |
               </span>
@@ -3280,7 +3291,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="gouvernement.fr (Nouvelle fenêtre)"
-                class="c103 c106"
+                class="c104 c107"
                 href="https://www.gouvernement.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3289,7 +3300,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c107"
+                class="c108"
               >
                 |
               </span>
@@ -3297,7 +3308,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="cnil.fr (Nouvelle fenêtre)"
-                class="c103 c106"
+                class="c104 c107"
                 href="https://www.cnil.fr/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3320,7 +3331,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding: 0 2rem;
 }
 
-.c92 {
+.c93 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -3328,7 +3339,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   max-width: 74rem;
 }
 
-.c63 {
+.c64 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -3365,7 +3376,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin-bottom: 0;
 }
 
-.c53 {
+.c54 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -3373,15 +3384,15 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c53 > *:first-child {
+.c54 > *:first-child {
   margin-top: 0;
 }
 
-.c53 > *:last-child {
+.c54 > *:last-child {
   margin-bottom: 0;
 }
 
-.c79 {
+.c80 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -3389,11 +3400,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   background-color: #fff;
 }
 
-.c79 > *:first-child {
+.c80 > *:first-child {
   margin-top: 0;
 }
 
-.c79 > *:last-child {
+.c80 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -3410,7 +3421,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   transform: translateY(-50%);
 }
 
-.c68 {
+.c69 {
   position: absolute;
   background-color: #f66663;
   border-radius: 0;
@@ -3423,7 +3434,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   transform: translateY(-50%);
 }
 
-.c91 {
+.c92 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -3436,7 +3447,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   transform: translateX(-50%);
 }
 
-.c82 {
+.c83 {
   position: relative;
   display: block;
   margin: 3.2rem 0 2rem 0;
@@ -3449,7 +3460,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding-left: 2.4rem;
 }
 
-.c100 {
+.c101 {
   position: relative;
   display: block;
   margin: 0 0 2rem 0;
@@ -3460,7 +3471,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   line-height: 1.625;
 }
 
-.c51 {
+.c52 {
   position: absolute;
   top: 0;
   right: 0;
@@ -3471,7 +3482,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c51:before {
+.c52:before {
   position: absolute;
   display: block;
   width: 0;
@@ -3482,7 +3493,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   content: "";
 }
 
-.c52 {
+.c53 {
   position: absolute;
   top: 0;
   right: 0;
@@ -3555,7 +3566,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   cursor: not-allowed;
 }
 
-.c75 {
+.c76 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3600,13 +3611,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c75:focus,
-.c75:hover,
-.c75:active {
+.c76:focus,
+.c76:hover,
+.c76:active {
   color: #f66663;
 }
 
-.c84 {
+.c85 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3644,16 +3655,16 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   will-change: transform;
 }
 
-.c84:link,
-.c84:visited {
+.c85:link,
+.c85:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c84:not([disabled]):hover,
-.c84:not([disabled]):active,
-.c84:not([disabled]):focus {
+.c85:not([disabled]):hover,
+.c85:not([disabled]):active,
+.c85:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -3662,7 +3673,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   border-color: #dee5ef;
 }
 
-.c84[disabled] {
+.c85[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -3670,7 +3681,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   cursor: not-allowed;
 }
 
-.c94 {
+.c95 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3708,16 +3719,16 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   will-change: transform;
 }
 
-.c94:link,
-.c94:visited {
+.c95:link,
+.c95:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c94:not([disabled]):hover,
-.c94:not([disabled]):active,
-.c94:not([disabled]):focus {
+.c95:not([disabled]):hover,
+.c95:not([disabled]):active,
+.c95:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -3726,7 +3737,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   border-color: #a0b3e0;
 }
 
-.c94[disabled] {
+.c95[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -3822,7 +3833,14 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   color: #7994d4;
 }
 
-.c59 {
+.c50 {
+  color: #3e486e;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.c60 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
@@ -3833,7 +3851,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   position: relative;
 }
 
-.c101 {
+.c102 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -3872,7 +3890,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   overflow-x: auto;
 }
 
-.c55 {
+.c56 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3883,7 +3901,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   justify-content: stretch;
 }
 
-.c56 {
+.c57 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -3893,12 +3911,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin-right: 2rem;
 }
 
-.c56 svg {
+.c57 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c57 {
+.c58 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -3915,12 +3933,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-transform: uppercase;
 }
 
-.c70 {
+.c71 {
   position: relative;
   display: inline-block;
 }
 
-.c72 {
+.c73 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -3942,15 +3960,15 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   appearance: none;
 }
 
-.c72::-webkit-outer-spin-button,
-.c72::-webkit-inner-spin-button {
+.c73::-webkit-outer-spin-button,
+.c73::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c72::-webkit-calendar-picker-indicator {
+.c73::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -3963,47 +3981,47 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c72:invalid {
+.c73:invalid {
   border-color: #eb5757;
 }
 
-.c72::-webkit-input-placeholder {
+.c73::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c72::-moz-placeholder {
+.c73::-moz-placeholder {
   color: #9298af;
 }
 
-.c72:-ms-input-placeholder {
+.c73:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c72::placeholder {
+.c73::placeholder {
   color: #9298af;
 }
 
-.c72:focus {
+.c73:focus {
   border-color: #7994d4;
 }
 
-.c72:focus::-webkit-input-placeholder {
+.c73:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c72:focus::-moz-placeholder {
+.c73:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c72:focus:-ms-input-placeholder {
+.c73:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c72:focus::placeholder {
+.c73:focus::placeholder {
   color: transparent;
 }
 
-.c69 {
+.c70 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4017,7 +4035,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   cursor: pointer;
 }
 
-.c58 {
+.c59 {
   margin: 0 0 1rem 0;
   color: #f66663;
   font-weight: 600;
@@ -4028,26 +4046,26 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 
 .c45 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   margin-left: -4rem;
   text-align: left;
 }
 
-.c60 {
+.c61 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
-.c65 {
+.c66 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
 
-.c89 {
+.c90 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -4065,7 +4083,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding-left: 4rem;
 }
 
-.c61 {
+.c62 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -4077,7 +4095,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-align: left;
 }
 
-.c67 {
+.c68 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -4089,7 +4107,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-align: left;
 }
 
-.c90 {
+.c91 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -4101,20 +4119,20 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-align: center;
 }
 
-.c71 {
+.c72 {
   width: 100%;
 }
 
-.c73 {
+.c74 {
   margin-top: 2.4rem;
 }
 
-.c74 {
+.c75 {
   display: block;
   margin-top: 1.6rem;
 }
 
-.c76 {
+.c77 {
   color: #7994d4;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -4279,7 +4297,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   -webkit-order: 3;
   -ms-flex-order: 3;
   order: 3;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   outline: none;
 }
 
@@ -4294,7 +4312,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   font-size: 1.4rem;
 }
 
-.c50 {
+.c51 {
   margin: 3.2rem 0 0 0;
 }
 
@@ -4364,7 +4382,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   color: #7994d4;
 }
 
-.c80 {
+.c81 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4382,7 +4400,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   justify-content: stretch;
 }
 
-.c81 {
+.c82 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -4392,7 +4410,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding-bottom: 1rem;
 }
 
-.c83 {
+.c84 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4407,11 +4425,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin: 0;
 }
 
-.c85 + .c85 {
+.c86 + .c86 {
   margin-left: 4rem;
 }
 
-.c77 {
+.c78 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4429,7 +4447,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   font-weight: bold;
 }
 
-.c62 {
+.c63 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4438,25 +4456,25 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   font-size: 1.4rem;
 }
 
-.c64 {
+.c65 {
   padding-bottom: 0;
 }
 
-.c54 {
+.c55 {
   margin-bottom: 3.2rem;
 }
 
-.c66 {
+.c67 {
   margin-top: 3.2rem;
 }
 
-.c86 {
+.c87 {
   width: 100%;
   padding-top: 4rem;
   overflow-x: hidden;
 }
 
-.c87 {
+.c88 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -4464,7 +4482,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   background-color: #f2f5fa;
 }
 
-.c87:before {
+.c88:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -4476,27 +4494,27 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   content: "";
 }
 
-.c88 {
+.c89 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c93 {
+.c94 {
   margin-bottom: 2rem;
 }
 
-.c95 {
+.c96 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c96 {
+.c97 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c97 {
+.c98 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4507,15 +4525,15 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   justify-content: space-between;
 }
 
-.c98 + .c98 {
+.c99 + .c99 {
   padding-left: 1.6rem;
 }
 
-.c99 {
+.c100 {
   font-size: 1.6rem;
 }
 
-.c103 {
+.c104 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4524,11 +4542,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   display: inline-block;
 }
 
-.c104 {
+.c105 {
   padding: 0.4rem 0;
 }
 
-.c105 {
+.c106 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4550,11 +4568,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c106 {
+.c107 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c107 {
+.c108 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4798,20 +4816,20 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c92 {
+  .c93 {
     padding: 0;
   }
 }
 
 @media print {
-  .c92 {
+  .c93 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c63 {
+  .c64 {
     padding: 2.4rem 0;
   }
 }
@@ -4836,46 +4854,46 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c53 {
+  .c54 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c53 {
+  .c54 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c79 {
+  .c80 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c79 {
+  .c80 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c82 {
+  .c83 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c82 {
+  .c83 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c100 {
+  .c101 {
     font-size: 1.6rem;
   }
 }
@@ -4893,49 +4911,49 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c75 {
+  .c76 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c75 {
+  .c76 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c84 {
+  .c85 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c84 {
+  .c85 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c84 {
+  .c85 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c94 {
+  .c95 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c94 {
+  .c95 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c94 {
+  .c95 {
     padding: 0 3rem;
   }
 }
@@ -4993,33 +5011,33 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c56 {
+  .c57 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c56 svg {
+  .c57 svg {
     width: 3rem;
     height: 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c70 {
+  .c71 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c72 {
+  .c73 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c58 {
+  .c59 {
     font-size: 1.6rem;
   }
 }
@@ -5032,21 +5050,21 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c60 {
+  .c61 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c65 {
+  .c66 {
     margin-bottom: 1rem;
     margin-left: -1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c89 {
+  .c90 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -5065,31 +5083,31 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c61 {
+  .c62 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c61 {
+  .c62 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c67 {
+  .c68 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c67 {
+  .c68 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c90 {
+  .c91 {
     font-size: 2.2rem;
   }
 }
@@ -5157,7 +5175,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c51 {
     margin-top: 1.6rem;
   }
 }
@@ -5187,13 +5205,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media print {
-  .c78 {
+  .c79 {
     display: none;
   }
 }
 
 @media (max-width:1180px) {
-  .c80 {
+  .c81 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -5207,20 +5225,20 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c81 {
+  .c82 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c81 {
+  .c82 {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c83 {
+  .c84 {
     -webkit-box-pack: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -5229,13 +5247,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c85 + .c85 {
+  .c86 + .c86 {
     margin-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c77 {
+  .c78 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
@@ -5244,13 +5262,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media print {
-  .c77 {
+  .c78 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c62 {
+  .c63 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -5258,32 +5276,32 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c54 {
+  .c55 {
     margin-bottom: 2rem;
   }
 }
 
 @media print {
-  .c87 {
+  .c88 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c88 {
+  .c89 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c96 {
+  .c97 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c97 {
+  .c98 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -5291,26 +5309,26 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c98 + .c98 {
+  .c99 + .c99 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c102 {
+  .c103 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c99 {
+  .c100 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c107 {
+  .c108 {
     display: none;
   }
 }
@@ -5856,16 +5874,20 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </header>
                   <div
                     class="c49"
-                  />
+                  >
+                    <p
+                      class="c50"
+                    />
+                  </div>
                 </div>
                 <div
-                  class="c50"
+                  class="c51"
                 >
                   <div
-                    class="c51"
+                    class="c52"
                   >
                     <div
-                      class="c52"
+                      class="c53"
                     >
                       <svg
                         aria-hidden="true"
@@ -5889,13 +5911,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     </div>
                   </div>
                   <div
-                    class="c53 c54"
+                    class="c54 c55"
                   >
                     <div
-                      class="c55"
+                      class="c56"
                     >
                       <div
-                        class="c56"
+                        class="c57"
                       >
                         <svg
                           aria-hidden="true"
@@ -5932,17 +5954,17 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c57"
+                        class="c58"
                       >
                         <p
                           aria-level="2"
-                          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c58"
+                          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c59"
                           role="heading"
                         >
                           Page personnalisable
                         </p>
                         <p
-                          class="c59"
+                          class="c60"
                         >
                           Le contenu de cette page peut être personnalisé en fonction de votre situation.
                           <br />
@@ -5958,10 +5980,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </div>
                   <section>
                     <div
-                      class="c60"
+                      class="c61"
                     >
                       <h2
-                        class="c61"
+                        class="c62"
                       >
                         <span
                           class="c48"
@@ -5970,7 +5992,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       </h2>
                     </div>
                     <div
-                      class="c62"
+                      class="c63"
                     />
                     <div>
                       <p>
@@ -6060,39 +6082,39 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     </div>
                   </section>
                   <div
-                    class="c63 c64"
+                    class="c64 c65"
                   >
                     <div
-                      class="c53"
+                      class="c54"
                     >
                       <div
-                        class="c65 c66"
+                        class="c66 c67"
                         id="customisation"
                       >
                         <h2
-                          class="c67"
+                          class="c68"
                         >
                           <span
-                            class="c68"
+                            class="c69"
                           />
                           <p
-                            class="c59"
+                            class="c60"
                           >
                             Que dit votre convention collective ?
                           </p>
                         </h2>
                       </div>
                       <label
-                        class="c69"
+                        class="c70"
                         for="convention-search"
                       >
                         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
                       </label>
                       <span
-                        class="c70 c71"
+                        class="c71 c72"
                       >
                         <input
-                          class="c72"
+                          class="c73"
                           id="convention-search"
                           name="q"
                           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -6102,16 +6124,16 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       </span>
                       
                       <p
-                        class="c73"
+                        class="c74"
                       >
                         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
                         <span
-                          class="c74"
+                          class="c75"
                         >
                           Consultez
                            
                           <button
-                            class="c75 c76"
+                            class="c76 c77"
                             type="button"
                           >
                             notre aide
@@ -6125,10 +6147,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </div>
             </div>
             <div
-              class="c4 c77"
+              class="c4 c78"
             >
               <p
-                class="c59"
+                class="c60"
               >
                 Partager ce contenu : 
               </p>
@@ -6242,41 +6264,41 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </div>
             </div>
             <div
-              class="c63 c78"
+              class="c64 c79"
             >
               <div
                 class="c4"
               >
                 <div
-                  class="c79"
+                  class="c80"
                 >
                   <div
-                    class="c80"
+                    class="c81"
                   >
                     <strong
-                      class="c81 c82"
+                      class="c82 c83"
                     >
                       <span
-                        class="c68"
+                        class="c69"
                       />
                       <p
                         aria-level="2"
-                        class="c59"
+                        class="c60"
                         role="heading"
                       >
                         Avez-vous trouvé la réponse à votre question ?
                       </p>
                     </strong>
                     <p
-                      class="c83"
+                      class="c84"
                     >
                       <button
-                        class="c84 c85 "
+                        class="c85 c86 "
                       >
                         Non
                       </button>
                       <button
-                        class="c84 c85 "
+                        class="c85 c86 "
                       >
                         Oui
                       </button>
@@ -6289,45 +6311,45 @@ exports[`<FicheContribution /> should render without external content 1`] = `
         </div>
       </main>
       <div
-        class="c86"
+        class="c87"
       >
         <footer
-          class="c87"
+          class="c88"
         >
           <div
-            class="c63 c88"
+            class="c64 c89"
           >
             <div
               class="c4"
             >
               <div
                 aria-level="2"
-                class="c89"
+                class="c90"
                 role="heading"
               >
                 <p
-                  class="c90"
+                  class="c91"
                 >
                   <span
-                    class="c91"
+                    class="c92"
                   />
                   Besoin de plus d’informations ?
                 </p>
               </div>
               <div
-                class="c92 c93"
+                class="c93 c94"
               >
                 <p>
                   Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
                 </p>
               </div>
               <button
-                class="c94"
+                class="c95"
               >
                 Contacter nos services en région
                 <svg
                   aria-hidden="true"
-                  class="c95"
+                  class="c96"
                   fill="none"
                   viewBox="0 0 28 15"
                   xmlns="http://www.w3.org/2000/svg"
@@ -6341,27 +6363,27 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             </div>
           </div>
           <div
-            class="c63 c96"
+            class="c64 c97"
           >
             <div
-              class="c4 c97"
+              class="c4 c98"
             >
               <div
-                class="c98 "
+                class="c99 "
               >
                 <strong
                   aria-level="2"
-                  class="c99 c100"
+                  class="c100 c101"
                   role="heading"
                 >
                   Code du travail numérique
                 </strong>
                 <ul
-                  class="c101 c102"
+                  class="c102 c103"
                 >
                   <li>
                     <a
-                      class="c103"
+                      class="c104"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
@@ -6369,7 +6391,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c103"
+                      class="c104"
                       href="/glossaire"
                     >
                       Glossaire
@@ -6377,7 +6399,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c103"
+                      class="c104"
                       href="/a-propos"
                     >
                       À propos
@@ -6385,7 +6407,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c103"
+                      class="c104"
                       href="/mentions-legales"
                     >
                       Mentions légales
@@ -6393,7 +6415,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c103"
+                      class="c104"
                       href="/accessibilite"
                     >
                       Accessibilité : partiellement conforme
@@ -6401,7 +6423,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c103"
+                      class="c104"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
@@ -6409,7 +6431,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c103"
+                      class="c104"
                       href="/stats"
                     >
                       Statistiques d’utilisation
@@ -6417,7 +6439,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c103"
+                      class="c104"
                       href="/integration"
                     >
                       Intégrer le Code du travail numérique
@@ -6426,21 +6448,21 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 </ul>
               </div>
               <div
-                class="c98 "
+                class="c99 "
               >
                 <strong
                   aria-level="2"
-                  class="c99 c100"
+                  class="c100 c101"
                   role="heading"
                 >
                   Aidez-nous à améliorer cet outil
                 </strong>
                 <ul
-                  class="c101 c102"
+                  class="c102 c103"
                 >
                   <li>
                     <button
-                      class="c75 c104"
+                      class="c76 c105"
                     >
                       Contact
                     </button>
@@ -6448,7 +6470,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   <li>
                     <a
                       aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c104"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6459,7 +6481,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   <li>
                     <a
                       aria-label="Journal des modifications (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c104"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6470,22 +6492,22 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 </ul>
               </div>
               <div
-                class="c98 "
+                class="c99 "
               >
                 <strong
                   aria-level="2"
-                  class="c99 c100"
+                  class="c100 c101"
                   role="heading"
                 >
                   En collaboration avec
                 </strong>
                 <ul
-                  class="c101 c102"
+                  class="c102 c103"
                 >
                   <li>
                     <a
                       aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c104"
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6496,7 +6518,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   <li>
                     <a
                       aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c104"
                       href="https://fabrique.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6507,7 +6529,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   <li>
                     <a
                       aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                      class="c103"
+                      class="c104"
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6520,12 +6542,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             </div>
           </div>
           <ul
-            class="c105"
+            class="c106"
           >
             <li>
               <a
                 aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-                class="c103 c106"
+                class="c104 c107"
                 href="https://travail-emploi.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6534,7 +6556,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c107"
+                class="c108"
               >
                 |
               </span>
@@ -6542,7 +6564,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="service-public.fr (Nouvelle fenêtre)"
-                class="c103 c106"
+                class="c104 c107"
                 href="https://www.service-public.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6551,7 +6573,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c107"
+                class="c108"
               >
                 |
               </span>
@@ -6559,7 +6581,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-                class="c103 c106"
+                class="c104 c107"
                 href="https://www.legifrance.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6568,7 +6590,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c107"
+                class="c108"
               >
                 |
               </span>
@@ -6576,7 +6598,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="data.gouv.fr (Nouvelle fenêtre)"
-                class="c103 c106"
+                class="c104 c107"
                 href="https://www.data.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6585,7 +6607,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c107"
+                class="c108"
               >
                 |
               </span>
@@ -6593,7 +6615,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="gouvernement.fr (Nouvelle fenêtre)"
-                class="c103 c106"
+                class="c104 c107"
                 href="https://www.gouvernement.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6602,7 +6624,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c107"
+                class="c108"
               >
                 |
               </span>
@@ -6610,7 +6632,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="cnil.fr (Nouvelle fenêtre)"
-                class="c103 c106"
+                class="c104 c107"
                 href="https://www.cnil.fr/"
                 rel="noopener noreferrer"
                 target="_blank"
