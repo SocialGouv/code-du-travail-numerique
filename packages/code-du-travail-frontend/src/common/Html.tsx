@@ -14,7 +14,7 @@ type Props = {
  * @type {string[]}
  * webcomponent-tooltip is used as an overlay for the definition of the words
  */
-const whiteListTags = ["webcomponent-tooltip"];
+const whiteListTags = ["webcomponent-tooltip", "webcomponent-tooltip-cc"];
 
 /**
  * List of attributes that are allowed for the tags scan in the HTML
@@ -31,17 +31,13 @@ const Html = ({ children, inline = false, ...props }: Props): JSX.Element => {
       dangerouslySetInnerHTML={{
         __html: xss(htmlParser(children), {
           onIgnoreTag: function (tag, html, _options) {
-            for (let i = 0; i < whiteListTags.length; i++) {
-              if (tag === whiteListTags[i]) {
-                return html;
-              }
+            if (whiteListTags.some((whiteTag) => whiteTag === tag)) {
+              return html;
             }
           },
           onTagAttr: function (_tag, name, value, _isWhiteAttr) {
-            for (let i = 0; i < whiteListAttr.length; i++) {
-              if (name === whiteListAttr[i]) {
-                return name + '="' + escapeAttrValue(value) + '"';
-              }
+            if (whiteListAttr.some((whiteAttr) => whiteAttr === name)) {
+              return name + '="' + escapeAttrValue(value) + '"';
             }
           },
         }),
