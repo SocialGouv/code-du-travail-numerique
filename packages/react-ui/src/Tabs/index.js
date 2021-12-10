@@ -4,9 +4,7 @@ import { Tab, TabList, TabPanel, Tabs as RootTabs } from "react-tabs";
 import styled from "styled-components";
 
 import { OverflowWrapper } from "../OverflowWrapper/index.js";
-import { ScreenReaderOnly } from "../ScreenReaderOnly/index.js";
 import { animations, box, breakpoints, fonts, spacings } from "../theme.js";
-import { getTextFromComponent } from "../utils/getTextFromComponent.js";
 
 export const Tabs = (props) => {
   const { data, defaultIndex, onSelect, selectedIndex } = props;
@@ -25,13 +23,12 @@ export const Tabs = (props) => {
         <StyledOverflowWrapper>
           <StyledTabList>
             {data.map(({ tab }, index) => (
-              <StyledTab key={index}>{getTextFromComponent(tab)}</StyledTab>
+              <StyledTab key={index}>{tab}</StyledTab>
             ))}
           </StyledTabList>
         </StyledOverflowWrapper>
-        {data.map(({ tab, panel }, index) => (
+        {data.map(({ panel }, index) => (
           <StyledTabPanel key={index}>
-            <ScreenReaderOnly>{tab}</ScreenReaderOnly>
             <TabPanelContent>{panel}</TabPanelContent>
           </StyledTabPanel>
         ))}
@@ -87,6 +84,9 @@ const StyledTab = styled(Tab)`
   margin-left: ${spacings.tiny};
   padding: ${spacings.small} ${spacings.base};
   color: ${({ theme }) => theme.altText};
+  > *:first-child {
+    color: ${({ theme }) => theme.altText} !important;
+  }
   font-weight: 600;
   font-size: ${fonts.sizes.headings.small};
   background-color: ${({ theme }) => theme.white};
@@ -96,13 +96,19 @@ const StyledTab = styled(Tab)`
   cursor: pointer;
   opacity: 1;
   transition: opacity ${animations.transitionTiming} linear;
+
   &[aria-selected="false"]:hover {
     opacity: 0.7;
   }
+
   &[aria-selected="true"] {
     color: ${({ theme }) => theme.white};
+    > *:first-child {
+      color: ${({ theme }) => theme.white} !important;
+    }
     background-color: ${({ theme }) => theme.secondary};
   }
+
   @media (max-width: ${breakpoints.tablet}) {
     margin: ${spacings.tiny};
     border-bottom: ${({ theme }) => box.border(theme.border)};
@@ -116,6 +122,7 @@ const StyledTab = styled(Tab)`
 const StyledTabPanel = styled(TabPanel)`
   color: ${({ theme }) => theme.paragraph};
   background-color: ${({ theme }) => theme.white};
+
   &.react-tabs__tab-panel--selected {
     padding: ${spacings.xmedium};
     border: 1px solid ${({ theme }) => theme.border};
@@ -133,6 +140,7 @@ const TabPanelContent = styled.div`
   & > *:first-child {
     margin-top: 0;
   }
+
   & > *:last-child {
     margin-bottom: 0;
   }
