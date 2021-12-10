@@ -2346,7 +2346,9 @@ exports[`<FicheMT /> should render 1`] = `
                 <div
                   class="c54 c55"
                 >
-                  <div>
+                  <div
+                    class=""
+                  >
                     lorem ipsum intro
                   </div>
                 </div>

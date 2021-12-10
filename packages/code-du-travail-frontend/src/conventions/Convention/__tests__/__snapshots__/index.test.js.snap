@@ -1037,7 +1037,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Les jours fériés légaux sont payés dans les conditions prévues par la loi pour le 1er Mai, y compris lorsque les jours fériés tombent pendant une période de chômage-intempéries ou pendant le congé payé.
                         </p>
@@ -1168,7 +1170,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Les salariées ont droit à un maintien de salaire à 100 % du dernier salaire mensuel, après déduction des indemnités de la sécurité sociale ou de tout autre régime de prévoyance, pendant une durée maximale de 6 semaines avant la date présumée de l'accouchement et de 10 semaines après.
                         </p>
@@ -1365,7 +1369,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Les salariés ont droit à des congés exceptionnels avec maintien de la rémunération, pour les événements familiaux suivants :
                         </p>
@@ -1599,7 +1605,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           En cas de licenciement, la durée du préavis est égale à :
                         </p>
@@ -1778,7 +1786,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           En cas de démission, la durée du préavis est égale à :
                         </p>
@@ -1915,7 +1925,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           En cas de départ à la retraite du salarié, la durée du préavis est égale à 2 mois.
                         </p>
@@ -2063,7 +2075,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           En cas de mise à la retraite du salarié, la durée du préavis est égale à 2 mois.
                         </p>
@@ -2211,7 +2225,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Si l'employeur ou le salarié ne respecte pas le préavis de licenciement ou de démission, l'autre partie peut obtenir le paiement d'une indemnité égale au salaire correspondant à la durée du préavis restant à courir.
                         </p>
@@ -2332,7 +2348,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Pendant le préavis, l'ouvrier licencié ou démissionnaire est autorisé, s'il en fait la demande, à s'absenter pour rechercher un nouvel emploi, pendant :
                         </p>
@@ -2561,7 +2579,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           La durée de la période d'essai a été fixée par une convention collective conclue avant le 26 juin 2008.
                         </p>
@@ -2690,7 +2710,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           L'ancienneté du salarié tient compte de :
                         </p>
@@ -2890,7 +2912,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant :
                         </p>
@@ -3082,7 +3106,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant les conditions du poste. Ce document doit être accepté et signé par l'employeur et le salarié.
                         </p>
@@ -3203,7 +3229,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           La convention collective ne prévoit pas le recours au contrat d'usage.
                         </p>
@@ -3293,7 +3321,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Le salarié doit s'engager dans le contrat de travail à ne pas avoir d'activité professionnelle susceptible de concurrencer celle de son employeur ou qui dépasserait le nombre d'heures de travail maximum prévu par le code du travail.
                         </p>
@@ -3481,7 +3511,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           La convention collective ne prévoit pas de prime pour travaux dangereux ni de prime pour travaux insalubres.
                         </p>
@@ -3562,7 +3594,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           La convention collective prévoit une 
                           <strong>
@@ -3707,7 +3741,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           La convention collective ne prévoit pas de prime d'ancienneté.
                         </p>
@@ -3921,7 +3957,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Le salarié a droit à un maintien de salaire pendant l'arrêt maladie dans les conditions suivantes.
                         </p>
@@ -4434,7 +4472,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           En cas d'accident du travail ou de maladie professionnelle, le code du travail s'applique. 
                         </p>

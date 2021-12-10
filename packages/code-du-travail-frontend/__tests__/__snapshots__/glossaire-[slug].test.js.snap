@@ -1384,7 +1384,9 @@ exports[`<Term /> should render 1`] = `
                         Définition
                       </th>
                       <td>
-                        <div>
+                        <div
+                          class=""
+                        >
                           <p>
                             Accord collectif de travail conclu au niveau d'une entreprise.
                           </p>
