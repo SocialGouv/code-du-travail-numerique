@@ -1,11 +1,13 @@
 import slugify from "@socialgouv/cdtn-slugify";
 import { getLabelBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import {
+  Alert,
   Badge,
   Button,
   icons,
   IconStripe,
   InsertTitle,
+  Paragraph,
   Section,
   theme,
   Title,
@@ -185,6 +187,20 @@ const Contribution = ({ answers, content }) => {
                 )}
                 {conventionAnswer ? (
                   <>
+                    {conventionAnswer.highlight && (
+                      <StyledAlert variant="primary">
+                        <Paragraph
+                          variant="primary"
+                          fontSize="small"
+                          fontWeight="700"
+                        >
+                          {conventionAnswer.highlight.title}
+                        </Paragraph>
+                        <Paragraph fontSize="small">
+                          {conventionAnswer.highlight.content}
+                        </Paragraph>
+                      </StyledAlert>
+                    )}
                     <MdxWrapper>
                       <Mdx
                         markdown={conventionAnswer.markdown}
@@ -273,6 +289,11 @@ const ButtonWrapper = styled.div`
 const StyledCloseIcon = styled(icons.Close)`
   width: 2.8rem;
   margin-left: ${spacings.base};
+`;
+
+const StyledAlert = styled(Alert)`
+  margin-top: ${spacings.base};
+  background-color: ${({ theme }) => theme.bgPrimary};
 `;
 
 export default Contribution;

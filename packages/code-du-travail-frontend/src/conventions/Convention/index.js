@@ -1,3 +1,4 @@
+import { Alert, Paragraph } from "@socialgouv/cdtn-ui";
 import React, { useEffect } from "react";
 
 import { useLocalStorage } from "../../lib/useLocalStorage";
@@ -15,6 +16,14 @@ const Convention = ({ convention }) => {
 
   return (
     <>
+      {convention.highlight && (
+        <Alert variant="primary">
+          <Paragraph variant="primary" fontSize="small" fontWeight="700">
+            {convention.highlight.title}
+          </Paragraph>
+          <Paragraph fontSize="small">{convention.highlight.content}</Paragraph>
+        </Alert>
+      )}
       {convention.answers.length > 0 && (
         <Contributions
           contributions={convention.answers}
@@ -28,7 +37,9 @@ const Convention = ({ convention }) => {
           convention={convention}
         />
       )}
-      <TextSearch containerId={convention.id} convention={convention} />
+      {convention.url && (
+        <TextSearch containerId={convention.id} convention={convention} />
+      )}
     </>
   );
 };
