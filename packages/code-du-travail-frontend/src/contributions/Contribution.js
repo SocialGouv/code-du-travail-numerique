@@ -6,6 +6,7 @@ import {
   icons,
   IconStripe,
   InsertTitle,
+  Paragraph,
   Section,
   theme,
   Title,
@@ -180,6 +181,11 @@ const Contribution = ({ answers, content }) => {
                     </StyledDiv>
                     <Toast variant="secondary" onRemove={() => setConvention()}>
                       {convention.shortTitle}
+                      {convention.highlight && (
+                        <Paragraph variant="altText">
+                          {convention.highlight.searchInfo}
+                        </Paragraph>
+                      )}
                     </Toast>
                   </>
                 )}

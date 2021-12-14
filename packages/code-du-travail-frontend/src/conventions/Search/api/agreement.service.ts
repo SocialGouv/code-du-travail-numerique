@@ -2,19 +2,14 @@ import debounce from "debounce-promise";
 import memoizee from "memoizee";
 import getConfig from "next/config";
 
-export type Agreement = {
-  id: string;
-  num: number;
-  shortTitle: string;
-  slug: string;
-  title: string;
-};
+import { Agreement } from "./type";
 
 const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-const formatCCn = ({ num, id, slug, title, shortTitle }) => ({
+const formatCCn = ({ num, id, slug, title, shortTitle, highlight }) => ({
+  ...(highlight ? { highlight } : {}),
   id,
   num,
   shortTitle,

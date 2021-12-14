@@ -11,6 +11,7 @@ function getIdccBody({ query, idccQuery }) {
       "slug",
       "effectif",
       "cdtnId",
+      "highlight",
     ],
     query: {
       bool: {
