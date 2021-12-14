@@ -1,10 +1,11 @@
 import { formatIdcc } from "@cdt/data";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
+import { Paragraph } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
-import { Agreement } from "../../../conventions/Search/api/agreement.service";
+import { Agreement } from "../../../conventions/Search/api/type";
 import { ResultItem } from "../common/ResultList";
 import { useTrackingContext } from "../common/TrackingContext";
 
@@ -27,6 +28,11 @@ export function AgreementLink({
     <Link href={`/${getRouteBySource(SOURCES.CCN)}/${agreement.slug}`} passHref>
       <ResultItem as="a" isFirst={isFirst} onClick={clickHandler}>
         {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
+        {agreement.highlight && (
+          <Paragraph variant="altText">
+            {agreement.highlight.searchInfo}
+          </Paragraph>
+        )}
       </ResultItem>
     </Link>
   );

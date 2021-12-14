@@ -1,6 +1,6 @@
 import { formatIdcc } from "@cdt/data";
 import slugify from "@socialgouv/cdtn-slugify";
-import { Button, theme } from "@socialgouv/cdtn-ui";
+import { Button, Paragraph, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
@@ -18,7 +18,7 @@ export const ConventionLink = ({
   onClick,
   small = false,
 }) => {
-  const { num, shortTitle } = convention;
+  const { num, shortTitle, highlight } = convention;
   const router = useRouter();
 
   const clickHandler = () => {
@@ -35,6 +35,9 @@ export const ConventionLink = ({
   return onClick ? (
     <StyledLink as={Button} variant="navLink" {...commonProps}>
       {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
+      {highlight && (
+        <Paragraph variant="altText">{highlight.searchInfo}</Paragraph>
+      )}
     </StyledLink>
   ) : (
     <Link
@@ -46,6 +49,9 @@ export const ConventionLink = ({
     >
       <StyledLink {...commonProps}>
         {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
+        {highlight && (
+          <Paragraph variant="altText">{highlight.searchInfo}</Paragraph>
+        )}
       </StyledLink>
     </Link>
   );

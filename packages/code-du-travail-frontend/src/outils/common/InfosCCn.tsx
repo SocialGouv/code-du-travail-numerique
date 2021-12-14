@@ -1,4 +1,4 @@
-import { Alert, Text, theme, Toast } from "@socialgouv/cdtn-ui";
+import { Alert, Paragraph, Text, theme, Toast } from "@socialgouv/cdtn-ui";
 import { FormApi } from "final-form";
 import { useRouter } from "next/router";
 import React, { useCallback, useEffect } from "react";
@@ -132,6 +132,11 @@ function StepInfoCCn({
                   }}
                 >
                   {input.value.shortTitle}
+                  {input.value.highlight && (
+                    <Paragraph variant="altText">
+                      {input.value.highlight.searchInfo}
+                    </Paragraph>
+                  )}
                 </Toast>
                 <p>Cliquez sur Suivant pour poursuivre la simulation.</p>
                 {error && <ErrorToast>{error}</ErrorToast>}
