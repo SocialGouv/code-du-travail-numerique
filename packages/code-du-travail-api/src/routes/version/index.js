@@ -1,4 +1,4 @@
-import elasticsearchClient from "../../conf/elasticsearch.js";
+import elasticsearchClient from "../../conf/elasticsearch";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 
 const getVersionsBody = require("./versions.elastic");
