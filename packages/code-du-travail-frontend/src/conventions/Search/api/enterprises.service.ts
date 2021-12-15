@@ -31,6 +31,11 @@ export interface AgreementData {
   texte_de_base?: string;
   url?: string;
   title?: string;
+  highlight?: {
+    title: string;
+    content: string;
+    searchInfo: string;
+  };
 }
 
 export interface MatchingEtablissement {

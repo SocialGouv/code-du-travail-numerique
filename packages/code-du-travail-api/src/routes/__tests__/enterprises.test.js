@@ -124,7 +124,7 @@ describe("Test enterprise endpoint", () => {
     );
   });
 
-  test("Call retrieving agreements with a highlight from an enterprise", async () => {
+  test("Call retrieving agreement with a highlight from an enterprise", async () => {
     const apiEnterpriseResponse = {
       json: () => ({
         entreprises: [
@@ -152,10 +152,165 @@ describe("Test enterprise endpoint", () => {
       `https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?q=AUTOEXPRESS&onlyWithConvention=true`
     );
 
+    expect(response.body.entreprises).toHaveLength(1);
+    expect(response.body.entreprises[0].conventions).toHaveLength(1);
     expect(response.body.entreprises[0].conventions[0].highlight).toEqual({
       content: "Contenu à afficher dans l'alerte",
       searchInfo: "Information complémentaire affichée lors d'une recherche",
       title: "Titre du highlight",
+    });
+  });
+
+  test("Call retrieving agreements with highlight and no highlight from an enterprise", async () => {
+    const apiEnterpriseResponse = {
+      json: () => ({
+        entreprises: [
+          {
+            conventions: [
+              {
+                idcc: 1090,
+              },
+              {
+                idcc: 2120,
+              },
+            ],
+          },
+        ],
+      }),
+      status: 200,
+    };
+
+    fetch.mockResolvedValueOnce(apiEnterpriseResponse);
+
+    const response = await request(app.callback()).get(
+      "/api/v1/enterprises?q=AUTOEXPRESS"
+    );
+
+    expect(response.status).toEqual(200);
+    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledWith(
+      `https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?q=AUTOEXPRESS&onlyWithConvention=true`
+    );
+
+    expect(response.body.entreprises).toHaveLength(1);
+    expect(response.body.entreprises[0].conventions).toHaveLength(2);
+    expect(
+      response.body.entreprises[0].conventions.find(
+        (agreement) => agreement.idcc === 1090
+      ).highlight
+    ).toEqual({
+      content: "Contenu à afficher dans l'alerte",
+      searchInfo: "Information complémentaire affichée lors d'une recherche",
+      title: "Titre du highlight",
+    });
+
+    expect(
+      response.body.entreprises[0].conventions.find(
+        (agreement) => agreement.idcc === 2120
+      ).highlight
+    ).toEqual(undefined);
+  });
+
+  test("Call retrieving agreement not in elastic from an enterprise", async () => {
+    const apiEnterpriseResponse = {
+      json: () => ({
+        entreprises: [
+          {
+            conventions: [
+              {
+                idcc: 123456,
+              },
+            ],
+          },
+        ],
+      }),
+      status: 200,
+    };
+
+    fetch.mockResolvedValueOnce(apiEnterpriseResponse);
+
+    const response = await request(app.callback()).get(
+      "/api/v1/enterprises?q=AUTOEXPRESS"
+    );
+
+    expect(response.status).toEqual(200);
+    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledWith(
+      `https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?q=AUTOEXPRESS&onlyWithConvention=true`
+    );
+
+    expect(response.body).toEqual(apiEnterpriseResponse.json());
+  });
+
+  test("Call retrieving enterprise without conventions", async () => {
+    const apiEnterpriseResponse = {
+      json: () => ({
+        entreprises: [
+          {
+            activitePrincipale:
+              "Entretien et réparation de véhicules automobiles",
+            conventions: [],
+          },
+        ],
+      }),
+      status: 200,
+    };
+
+    fetch.mockResolvedValueOnce(apiEnterpriseResponse);
+
+    const response = await request(app.callback()).get(
+      "/api/v1/enterprises?q=AUTOEXPRESS"
+    );
+
+    expect(response.status).toEqual(200);
+    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledWith(
+      `https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?q=AUTOEXPRESS&onlyWithConvention=true`
+    );
+
+    expect(response.body).toEqual(apiEnterpriseResponse.json());
+  });
+
+  test("Call retrieving agreements for multiple enterprise", async () => {
+    const apiEnterpriseResponse = {
+      json: () => ({
+        entreprises: [
+          {
+            conventions: [
+              {
+                idcc: 1090,
+              },
+            ],
+          },
+          {
+            conventions: [
+              {
+                idcc: 1090,
+              },
+            ],
+          },
+        ],
+      }),
+      status: 200,
+    };
+
+    fetch.mockResolvedValueOnce(apiEnterpriseResponse);
+
+    const response = await request(app.callback()).get(
+      "/api/v1/enterprises?q=AUTOEXPRESS"
+    );
+
+    expect(response.status).toEqual(200);
+    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledWith(
+      `https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?q=AUTOEXPRESS&onlyWithConvention=true`
+    );
+
+    expect(response.body.entreprises).toHaveLength(2);
+    response.body.entreprises.forEach((enterprise) => {
+      expect(enterprise.conventions).toHaveLength(1);
+      expect(enterprise.conventions[0].idcc).toEqual(1090);
+      expect(enterprise.conventions[0].highlight).not.toEqual(undefined);
     });
   });
 });

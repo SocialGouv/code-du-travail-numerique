@@ -9,7 +9,7 @@ const {
 } = getConfig();
 
 const formatCCn = ({ num, id, slug, title, shortTitle, highlight }) => ({
-  highlight,
+  ...(highlight ? { highlight: highlight } : {}),
   id,
   num,
   shortTitle,

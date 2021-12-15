@@ -53,21 +53,21 @@ app.use(async (ctx, next) => {
 app.use(bodyParser());
 
 app.use(enterprisesRoute.routes());
-// app.use(conventionsRoutes.routes());
-// app.use(docsCountRoutes.routes());
-// app.use(highlightRoutes.routes());
-// app.use(idccRoutes.routes());
-// app.use(itemsRoutes.routes());
-// app.use(modelesRoutes.routes());
-// app.use(searchRoutes.routes());
-// app.use(sheetMTRoutes.routes());
-// app.use(statsRoute.routes());
-// app.use(suggestRoute.routes());
-// app.use(themesRoute.routes());
-// app.use(dossiersRoute.routes());
+app.use(conventionsRoutes.routes());
+app.use(docsCountRoutes.routes());
+app.use(highlightRoutes.routes());
+app.use(idccRoutes.routes());
+app.use(itemsRoutes.routes());
+app.use(modelesRoutes.routes());
+app.use(searchRoutes.routes());
+app.use(sheetMTRoutes.routes());
+app.use(statsRoute.routes());
+app.use(suggestRoute.routes());
+app.use(themesRoute.routes());
+app.use(dossiersRoute.routes());
 app.use(glossaryRoute.routes());
-// app.use(versionRoutes.routes());
-// app.use(indexRoute.routes());
+app.use(versionRoutes.routes());
+app.use(indexRoute.routes());
 
 if (process.env.NODE_ENV !== "production") {
   logger.info("--- DEV MODE ---");

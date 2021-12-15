@@ -5,7 +5,7 @@ import {
   getRouteBySource,
   SOURCES,
 } from "@socialgouv/cdtn-sources";
-import { Tile } from "@socialgouv/cdtn-ui";
+import { Tile, Paragraph } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 
@@ -36,6 +36,11 @@ export function AgreementTile({ agreement }: Props): JSX.Element {
         subtitle={getLabelBySource(SOURCES.CCN)}
         onClick={clickHandler}
       >
+        {agreement.highlight && (
+          <Paragraph variant="altText">
+            {agreement.highlight.searchInfo}
+          </Paragraph>
+        )}
         Retrouvez les questions-réponses les plus fréquentes organisées par
         thème et élaborées par le Ministère du travail concernant cette
         convention collective

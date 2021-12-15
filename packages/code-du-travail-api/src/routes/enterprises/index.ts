@@ -1,38 +1,48 @@
 import { DOCUMENTS } from "@socialgouv/cdtn-elasticsearch";
 import Router from "koa-router";
 import fetch from "node-fetch";
-import elasticsearchClient from "../../conf/elasticsearch.js";
+
+import elasticsearchClient from "../../conf/elasticsearch";
+import type { SearchResponse } from "../type";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
+import type {
+  AgreementHighlight,
+  AgreementWithHighlight,
+} from "./enterprises.elastic";
 import getAgreementsHighlight from "./enterprises.elastic";
 
-const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
+const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX ?? "cdtn";
 const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
 const router = new Router({ prefix: API_BASE_URL });
 const ENTERPRISE_API_URL =
   "https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1";
 
+interface EnterpriseApiResponse {
+  entreprises?: {
+    conventions: {
+      idcc: number;
+    }[];
+  }[];
+}
+
 const populateAgreements = async (
-  enterpriseApiResponse: unknown
+  enterpriseApiResponse: EnterpriseApiResponse
 ): Promise<unknown> => {
-  if ((enterpriseApiResponse.entreprises?.length ?? 0) === 0) {
-    return enterpriseApiResponse;
-  }
-  const idccList: number[] = enterpriseApiResponse.entreprises.flatMap(
-    (enterprise) =>
+  const idccList: number[] =
+    enterpriseApiResponse.entreprises?.flatMap((enterprise) =>
       enterprise.conventions.flatMap((convention) => convention.idcc)
-  );
+    ) ?? [];
 
   if (idccList.length > 0) {
     const body = getAgreementsHighlight(idccList);
-    const response = await elasticsearchClient.search(
-      { body, index },
-      // { ignore: [404] }
-    );
+    const response = await elasticsearchClient.search<
+      SearchResponse<AgreementWithHighlight>
+    >({ body, index });
 
-    if (response.statusCode !== 404 && response.body.hits.total.value > 0) {
+    if (response.body.hits.total.value > 0) {
       const ccnListWithHighlight = response.body.hits.hits.reduce(
-        (acc, curr) => {
+        (acc: Record<number, { highlight: AgreementHighlight }>, curr) => {
           acc[curr._source.num] = { highlight: curr._source.highlight };
           return acc;
         },
@@ -40,11 +50,11 @@ const populateAgreements = async (
       );
       return {
         ...enterpriseApiResponse,
-        entreprises: enterpriseApiResponse.entreprises.map((enterprise) => ({
+        entreprises: enterpriseApiResponse.entreprises?.map((enterprise) => ({
           ...enterprise,
           conventions: enterprise.conventions.map((convention) => ({
             ...convention,
-            ...(ccnListWithHighlight[convention.idcc] ?? {}),
+            ...ccnListWithHighlight[convention.idcc],
           })),
         })),
       };
@@ -72,7 +82,7 @@ router.get("/enterprises", async (ctx) => {
     const response = await fetch(url);
 
     if (response.status === 200) {
-      const jsonResponse = await response.json();
+      const jsonResponse: EnterpriseApiResponse = await response.json();
       ctx.body = await populateAgreements(jsonResponse);
     } else {
       ctx.status = response.status;

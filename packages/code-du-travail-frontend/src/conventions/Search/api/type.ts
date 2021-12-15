@@ -4,7 +4,7 @@ export type Agreement = {
   shortTitle: string;
   slug: string;
   title: string;
-  highlight: {
+  highlight?: {
     title: string;
     content: string;
     searchInfo: string;

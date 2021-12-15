@@ -1,31 +1,5 @@
 [
   {
-    "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
-    "longTitle": "Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981.",
-    "shortTitle": "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
-    "title": "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
-    "num": 1090,
-    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635191",
-    "mtime": 1562873918,
-    "effectif": 422715,
-    "highlight": {
-      "title": "Titre du highlight",
-      "content": "Contenu à afficher dans l'alerte",
-      "searchInfo": "Information complémentaire affichée lors d'une recherche"
-    },
-    "date_publi": "1981-04-01T00:00:00.000Z",
-    "breadcrumbs": [],
-    "cdtnId": "98b9c85542",
-    "excludeFromSearch": false,
-    "id": "KALICONT000005635191",
-    "isPublished": true,
-    "metaDescription": "Idcc 1090 : Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
-    "slug": "1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle",
-    "source": "conventions_collectives",
-    "text": "IDCC 1090: Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981. Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
-    "contributions": true
-  },
-  {
     "breadcrumbs": [
       {
         "label": "Départ de l’entreprise",
@@ -2414,6 +2388,29 @@
       }
     ],
     "source": "glossary"
+  },
+  {
+    "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
+    "longTitle": "Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981.",
+    "shortTitle": "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
+    "title": "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
+    "num": 1090,
+    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635191",
+    "highlight": {
+      "title": "Titre du highlight",
+      "content": "Contenu à afficher dans l'alerte",
+      "searchInfo": "Information complémentaire affichée lors d'une recherche"
+    },
+    "date_publi": "1981-04-01T00:00:00.000Z",
+    "cdtnId": "98b9c85542",
+    "excludeFromSearch": false,
+    "id": "KALICONT000005635191",
+    "isPublished": true,
+    "metaDescription": "Idcc 1090 : Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
+    "slug": "1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle",
+    "source": "conventions_collectives",
+    "text": "IDCC 1090: Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981. Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
+    "contributions": true
   },
   {
     "source": "versions",
