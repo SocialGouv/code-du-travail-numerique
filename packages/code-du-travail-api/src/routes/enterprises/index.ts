@@ -1,7 +1,6 @@
 import { DOCUMENTS } from "@socialgouv/cdtn-elasticsearch";
 import Router from "koa-router";
 import fetch from "node-fetch";
-
 import elasticsearchClient from "../../conf/elasticsearch.js";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 import getAgreementsHighlight from "./enterprises.elastic";
@@ -26,9 +25,12 @@ const populateAgreements = async (
 
   if (idccList.length > 0) {
     const body = getAgreementsHighlight(idccList);
-    const response = await elasticsearchClient.search({ body, index });
+    const response = await elasticsearchClient.search(
+      { body, index },
+      // { ignore: [404] }
+    );
 
-    if (response.body.hits.total.value > 0) {
+    if (response.statusCode !== 404 && response.body.hits.total.value > 0) {
       const ccnListWithHighlight = response.body.hits.hits.reduce(
         (acc, curr) => {
           acc[curr._source.num] = { highlight: curr._source.highlight };
@@ -47,9 +49,8 @@ const populateAgreements = async (
         })),
       };
     }
-
-    return enterpriseApiResponse;
   }
+  return enterpriseApiResponse;
 };
 
 router.get("/enterprises", async (ctx) => {
