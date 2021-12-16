@@ -181,8 +181,8 @@ const Contribution = ({ answers, content }) => {
                     </StyledDiv>
                     <Toast variant="secondary" onRemove={() => setConvention()}>
                       {convention.shortTitle}
-                      {convention.highlight && (
-                        <Paragraph variant="altText">
+                      {convention.highlight && convention.highlight.searchInfo && (
+                        <Paragraph variant="altText" noMargin>
                           {convention.highlight.searchInfo}
                         </Paragraph>
                       )}

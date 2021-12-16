@@ -28,8 +28,8 @@ export function AgreementLink({
     <Link href={`/${getRouteBySource(SOURCES.CCN)}/${agreement.slug}`} passHref>
       <ResultItem as="a" isFirst={isFirst} onClick={clickHandler}>
         {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
-        {agreement.highlight && (
-          <Paragraph variant="altText">
+        {agreement.highlight && agreement.highlight.searchInfo && (
+          <Paragraph variant="altText" noMargin>
             {agreement.highlight.searchInfo}
           </Paragraph>
         )}

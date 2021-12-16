@@ -7,6 +7,6 @@ export type Agreement = {
   highlight?: {
     title: string;
     content: string;
-    searchInfo: string;
+    searchInfo?: string;
   };
 };

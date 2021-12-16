@@ -35,8 +35,10 @@ export const ConventionLink = ({
   return onClick ? (
     <StyledLink as={Button} variant="navLink" {...commonProps}>
       {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
-      {highlight && (
-        <Paragraph variant="altText">{highlight.searchInfo}</Paragraph>
+      {highlight && highlight.searchInfo && (
+        <Paragraph variant="altText" noMargin>
+          {highlight.searchInfo}
+        </Paragraph>
       )}
     </StyledLink>
   ) : (
@@ -49,8 +51,10 @@ export const ConventionLink = ({
     >
       <StyledLink {...commonProps}>
         {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
-        {highlight && (
-          <Paragraph variant="altText">{highlight.searchInfo}</Paragraph>
+        {highlight && highlight.searchInfo && (
+          <Paragraph variant="altText" noMargin>
+            {highlight.searchInfo}
+          </Paragraph>
         )}
       </StyledLink>
     </Link>
