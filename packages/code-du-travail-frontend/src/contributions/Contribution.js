@@ -20,6 +20,7 @@ import styled from "styled-components";
 import Mdx from "../../src/common/Mdx";
 import SearchConvention from "../../src/conventions/Search";
 import { A11yLink } from "../common/A11yLink";
+import Html from "../common/Html";
 import References from "../common/References";
 import { useLocalStorage } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
@@ -187,20 +188,22 @@ const Contribution = ({ answers, content }) => {
                 )}
                 {conventionAnswer ? (
                   <>
-                    {conventionAnswer.highlight && (
-                      <StyledAlert variant="primary">
-                        <Paragraph
-                          variant="primary"
-                          fontSize="small"
-                          fontWeight="700"
-                        >
-                          {conventionAnswer.highlight.title}
-                        </Paragraph>
-                        <Paragraph fontSize="small">
-                          {conventionAnswer.highlight.content}
-                        </Paragraph>
-                      </StyledAlert>
-                    )}
+                    {conventionAnswer.highlight &&
+                      conventionAnswer.highlight.content && (
+                        <StyledAlert variant="primary">
+                          <TitleAlert
+                            variant="primary"
+                            fontSize="small"
+                            fontWeight="700"
+                            noMargin
+                          >
+                            {conventionAnswer.highlight.title}
+                          </TitleAlert>
+                          <Paragraph fontSize="small" noMargin>
+                            <Html>{conventionAnswer.highlight.content}</Html>
+                          </Paragraph>
+                        </StyledAlert>
+                      )}
                     <MdxWrapper>
                       <Mdx
                         markdown={conventionAnswer.markdown}
@@ -274,6 +277,10 @@ const CustomWrapper = styled(Wrapper)`
 `;
 
 const StyledDiv = styled.div`
+  margin-bottom: ${spacings.tiny};
+`;
+
+const TitleAlert = styled(Paragraph)`
   margin-bottom: ${spacings.tiny};
 `;
 
