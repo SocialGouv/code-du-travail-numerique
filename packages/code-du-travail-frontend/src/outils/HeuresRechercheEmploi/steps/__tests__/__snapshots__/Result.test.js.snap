@@ -24,7 +24,7 @@ exports[`<StepResult /> should render no results 1`] = `
 
 .c7 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -314,7 +314,7 @@ exports[`<StepResult /> should render with duration 1`] = `
 
 .c9 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -637,7 +637,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 
 .c9 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -930,7 +930,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 
 .c9 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;

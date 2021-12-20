@@ -68,7 +68,10 @@ async function getKoaServer({ nextApp }) {
     },
   };
   if (dev) {
+    // handle local csp
     server.use(bodyParser());
+    cspConfig.directives.defaultSrc.push("http://127.0.0.1:*/");
+    cspConfig.directives.defaultSrc.push("http://localhost:*/");
     cspConfig.directives.scriptSrc.push("'unsafe-eval'");
   }
   server.use(helmet.contentSecurityPolicy(cspConfig));
