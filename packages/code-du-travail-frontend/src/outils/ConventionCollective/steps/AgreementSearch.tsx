@@ -29,10 +29,12 @@ const AgreementSearchStep = ({
 }: AgreementSearchStepProps): JSX.Element => {
   const refInput = useRef<HTMLFormElement>();
   const { trackEvent, title, uuid } = useTrackingContext();
+
   function openModalHandler(openModal: () => void) {
     trackEvent("cc_search_help", "click_cc_search_help_p1", title, uuid);
     openModal();
   }
+
   return (
     <>
       <SearchAgreement
