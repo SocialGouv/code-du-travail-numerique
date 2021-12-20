@@ -24,7 +24,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
 
 .c9 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -321,7 +321,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
 exports[`<StepResult /> should render with no cc 1`] = `
 .c3 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -505,7 +505,7 @@ exports[`<StepResult /> should render with no cc 1`] = `
 exports[`<StepResult /> should render with unhandled cc 1`] = `
 .c3 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
