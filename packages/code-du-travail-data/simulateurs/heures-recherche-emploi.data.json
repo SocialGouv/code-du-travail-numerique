@@ -2683,51 +2683,76 @@
     },
     {
       "criteria": {
-        "ancienneté": "42| 2 ans ou plus"
+        "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
       },
       "type": "heures pour recherche d'emploi",
-      "idcc": 2111,
+      "idcc": 3239,
       "typeRupture": "3| Licenciement",
-      "answer": "2 heures par jour, pendant au maximum 10 jours ouvrables pour un temps complet",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures d'absence seront fixées un jour par l'employeur, un jour par le salarié. Mais l'employeur et le salarié peuvent se mettre d'accord pour une autre répartition. Ils pourront notamment décider de bloquer tout ou partie de ces heures avant la fin du préavis.",
-      "ref": "Article 12a",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=234BBFBEADEC9C5B23051C3F70EEA8CF.tplgfr33s_2?idArticle=KALIARTI000005834194&cidTexte=KALITEXT000005672603&dateTexte=29990101&categorieLien=id"
+      "answer": null,
+      "answer2": null,
+      "answer3": null,
+      "ref": null,
+      "refUrl": null
     },
     {
       "criteria": {
-        "ancienneté": "38| Moins de 2 ans"
+        "ancienneté": "38| Moins de 2 ans",
+        "catégorie professionnelle": "100| Salariés du particulier employeur",
+        "durée du travail": "124| Moins de 40 heures par semaine"
       },
       "type": "heures pour recherche d'emploi",
-      "idcc": 2111,
+      "idcc": 3239,
       "typeRupture": "3| Licenciement",
-      "answer": "2 heures par jour, pendant au maximum 6 jours ouvrables pour un temps complet",
-      "answer2": "Le salaire est maintenu.",
-      "answer3": "Les heures d'absence seront fixées un jour par l'employeur, un jour par le salarié. Mais l'employeur et le salarié peuvent se mettre d'accord pour une autre répartition. Ils pourront notamment décider de bloquer tout ou partie de ces heures avant la fin du préavis.",
-      "ref": "Article 12a",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=234BBFBEADEC9C5B23051C3F70EEA8CF.tplgfr33s_2?idArticle=KALIARTI000005834194&cidTexte=KALITEXT000005672603&dateTexte=29990101&categorieLien=id"
+      "answer": "2 heures par jour pendant 6 jours ouvrables",
+      "answer2": "Le salaire est maintenu. A défaut d'accord entre l'employeur et le salarié,  les périodes de deux heures sont prises alternativement, un jour au choix du  ou des particuliers employeurs et un jour au choix du salarié.",
+      "answer3": null,
+      "ref": null,
+      "refUrl": null
     },
     {
-      "criteria": {},
+      "criteria": {
+        "ancienneté": "38| Moins de 2 ans",
+        "catégorie professionnelle": "100| Salariés du particulier employeur",
+        "durée du travail": "123| 40 heures ou plus par semaine"
+      },
       "type": "heures pour recherche d'emploi",
-      "idcc": 2111,
-      "typeRupture": "1| Démission",
+      "idcc": 3239,
+      "typeRupture": "3| Licenciement",
       "answer": null,
-      "answer2": null,
+      "answer2": "Le salaire est maintenu. A défaut d'accord entre l'employeur et le salarié,  les périodes de deux heures sont prises alternativement, un jour au choix du  ou des particuliers employeurs et un jour au choix du salarié.",
       "answer3": null,
-      "ref": "Article 11a",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005834184&cidTexte=KALITEXT000005672603&dateTexte=20000311"
+      "ref": null,
+      "refUrl": null
     },
     {
-      "criteria": {},
+      "criteria": {
+        "ancienneté": "43| 2 ans ou plus",
+        "catégorie professionnelle": "100| Salariés du particulier employeur",
+        "durée du travail": "124| Moins de 40 heures par semaine"
+      },
       "type": "heures pour recherche d'emploi",
-      "idcc": 2111,
-      "typeRupture": "7| Rupture de la période d'essai",
-      "answer": null,
-      "answer2": null,
+      "idcc": 3239,
+      "typeRupture": "3| Licenciement",
+      "answer": "2 heures par jour pendant 10 jours ouvrables",
+      "answer2": "Le salaire est maintenu. A défaut d'accord entre l'employeur et le salarié,  les périodes de deux heures sont prises alternativement, un jour au choix du  ou des particuliers employeurs et un jour au choix du salarié.",
       "answer3": null,
-      "ref": "Article 8",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005834153&cidTexte=KALITEXT000005672603&dateTexte=20000311"
+      "ref": null,
+      "refUrl": null
+    },
+    {
+      "criteria": {
+        "ancienneté": "44| 2 ans ou plus",
+        "catégorie professionnelle": "100| Salariés du particulier employeur",
+        "durée du travail": "123| 40 heures ou plus par semaine"
+      },
+      "type": "heures pour recherche d'emploi",
+      "idcc": 3239,
+      "typeRupture": "3| Licenciement",
+      "answer": null,
+      "answer2": "Le salaire est maintenu. A défaut d'accord entre l'employeur et le salarié,  les périodes de deux heures sont prises alternativement, un jour au choix du  ou des particuliers employeurs et un jour au choix du salarié.",
+      "answer3": null,
+      "ref": null,
+      "refUrl": null
     },
     {
       "criteria": {},
@@ -2935,28 +2960,6 @@
       "answer3": "Ces heures pourront être prises par demi-journée ou journée entière, dans les conditions fixées d'un commun accord par l'employeur et le salarié.",
       "ref": "Article 46",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801981&cidTexte=KALITEXT000005658770"
-    },
-    {
-      "criteria": {},
-      "type": "heures pour recherche d'emploi",
-      "idcc": 2395,
-      "typeRupture": "6| Rupture de contrat de travail",
-      "answer": null,
-      "answer2": null,
-      "answer3": null,
-      "ref": "Article 18",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005713278&cidTexte=KALITEXT000005669667&idConvention=KALICONT000005635807"
-    },
-    {
-      "criteria": {},
-      "type": "heures pour recherche d'emploi",
-      "idcc": 2395,
-      "typeRupture": "7| Rupture de la période d'essai",
-      "answer": null,
-      "answer2": null,
-      "answer3": null,
-      "ref": "Article 18",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005713278&cidTexte=KALITEXT000005669667&idConvention=KALICONT000005635807"
     },
     {
       "criteria": {},

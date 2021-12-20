@@ -1516,20 +1516,6 @@
       "cddType": "Autres"
     },
     "contractType": "CDD",
-    "idcc": 2111,
-    "hasConventionalProvision": false,
-    "allowBonus": null,
-    "endMessage": null,
-    "rate": null,
-    "bonusLabel": null,
-    "refLabel": "Article 7 de la convention collective",
-    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0D78A4EC0E970BACC4D1DB3C5DE29DAA.tplgfr28s_2?idArticle=KALIARTI000005834142&cidTexte=KALITEXT000005672603&dateTexte=29990101&categorieLien=id"
-  },
-  {
-    "criteria": {
-      "cddType": "Autres"
-    },
-    "contractType": "CDD",
     "idcc": 2120,
     "hasConventionalProvision": false,
     "allowBonus": null,
@@ -1640,8 +1626,8 @@
       "cddType": "Autres"
     },
     "contractType": "CDD",
-    "idcc": 2395,
-    "hasConventionalProvision": false,
+    "idcc": 3239,
+    "hasConventionalProvision": true,
     "allowBonus": null,
     "endMessage": null,
     "rate": null,
