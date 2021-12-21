@@ -19,6 +19,7 @@
     "update-mock-data": "ES_INDEX_PREFIX=cdtn babel-node src/tests/fetch_mock_data.js",
     "pretest": "NODE_ENV=test babel-node src/tests/create_indexes.js",
     "test": "ES_INDEX_PREFIX=cdtn_test jest",
+    "test:update": "yarn pretest && ES_INDEX_PREFIX=cdtn_test jest --updateSnapshot",
     "clean": "rimraf dist && rimraf babel-dist"
   },
   "repository": {
