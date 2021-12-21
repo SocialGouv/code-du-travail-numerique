@@ -182,8 +182,12 @@ router.get("/search", async (ctx) => {
   logger.info(`search: ${query} took ${results.took}ms`);
 
   ctx.body = {
-    articles: articles.map(({ _score, _source }) => ({ _score, ..._source })),
-    documents: documents.map(({ _score, _source }) => ({ _score, ..._source })),
+    articles: articles
+      .map(({ _score, _source }) => ({ _score, ..._source }))
+      .sort((a, b) => b._score - a._score),
+    documents: documents
+      .map(({ _score, _source }) => ({ _score, ..._source }))
+      .sort((a, b) => b._score - a._score),
     // we add source prop since some result might come from dedicataed themes index
     // wich has no source prop
     themes: themes.map(({ _score, _source }) => ({
