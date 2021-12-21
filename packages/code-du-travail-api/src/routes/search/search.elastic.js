@@ -44,7 +44,7 @@ function getSearchBody({ query, size, sources = [] }) {
                   },
                 },
                 {
-                  match_phrase_prefix: {
+                  match: {
                     synonymes: {
                       query,
                     },
