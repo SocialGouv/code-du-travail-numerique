@@ -43,6 +43,13 @@ function getSearchBody({ query, size, sources = [] }) {
                     },
                   },
                 },
+                {
+                  match_phrase_prefix: {
+                    synonymes: {
+                      query,
+                    },
+                  },
+                },
               ],
             },
           },
