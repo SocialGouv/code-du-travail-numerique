@@ -50,7 +50,7 @@
     "koa-bodyparser": "^4.3.0",
     "koa-helmet": "^6.1.0",
     "koa-router": "^10.0.0",
-    "lit-element": "3.0.0",
+    "lit-element": "3.0.2",
     "memoizee": "^0.4.15",
     "next": "^11.1.0",
     "next-transpile-modules": "^8.0.0",
