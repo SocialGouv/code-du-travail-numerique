@@ -7,6 +7,7 @@ import {
   Button,
   Container,
   Heading,
+  Paragraph,
   theme,
   Tile,
   Title,
@@ -45,7 +46,7 @@ export const ListLink = ({
   }
 
   const tileCommonProps = {
-    children: <p>{summarize(description)}</p>,
+    children: <Paragraph noMargin>{summarize(description)}</Paragraph>,
     onClick: () => reportSelectionToMatomo(source, slug, url, algo),
     onKeyPress: (e) =>
       e.keyCode === 13 && reportSelectionToMatomo(source, slug, url, algo),
