@@ -2294,10 +2294,10 @@
   resolved "https://registry.yarnpkg.com/@matejmazur/react-katex/-/react-katex-3.1.3.tgz#f07404c848b93bfef9ed9653a4bb080dc8bf2bf0"
   integrity sha512-rBp7mJ9An7ktNoU653BWOYdO4FoR4YNwofHZi+vaytX/nWbIlmHVIF+X8VFOn6c3WYmrLT5FFBjKqCZ1sjR5uQ==
 
-"@maxgfr/react-accessible-accordion@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@maxgfr/react-accessible-accordion/-/react-accessible-accordion-4.0.0.tgz#4d42292cd593939bf1e9e6088b889e80a2928eff"
-  integrity sha512-JmQLFQFPsT888XxquH3J/FIwXidolDWfq0T1u0xEsrv1xG3OPt9gKUF3MfF6hI0jmyCSvTs5qcVvKwaCH6qkZw==
+"@maxgfr/react-accessible-accordion@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@maxgfr/react-accessible-accordion/-/react-accessible-accordion-4.0.1.tgz#a8ea3727bfbd404456e135435b6818b5b637167c"
+  integrity sha512-GxarHhmQp/qeA4BWhlz+LI+ERn+5wfEAmF1BqeASSA4taaIPJnmysiKCDk0PNvtK5eK9ohFAZjbylhPU3BIWKg==
 
 "@mdx-js/loader@^1.6.22":
   version "1.6.22"
@@ -3912,10 +3912,10 @@
     lz-string "^1.4.4"
     pretty-format "^27.0.2"
 
-"@testing-library/react-hooks@7.0.1":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@testing-library/react-hooks/-/react-hooks-7.0.1.tgz#8429d8bf55bfe82e486bd582dd06457c2464900a"
-  integrity sha512-bpEQ2SHSBSzBmfJ437NmnP+oArQ7aVmmULiAp6Ag2rtyLBLPNFSMmgltUbFGmQOJdPWo4Ub31kpUC5T46zXNwQ==
+"@testing-library/react-hooks@7.0.2":
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/@testing-library/react-hooks/-/react-hooks-7.0.2.tgz#3388d07f562d91e7f2431a4a21b5186062ecfee0"
+  integrity sha512-dYxpz8u9m4q1TuzfcUApqi8iFfR6R0FaMbr2hjZJy1uC8z+bO/K4v8Gs9eogGKYQop7QsrBTFkv/BCF7MzD2Cg==
   dependencies:
     "@babel/runtime" "^7.12.5"
     "@types/react" ">=16.9.0"
@@ -13264,10 +13264,10 @@ listr2@^3.13.3:
     through "^2.3.8"
     wrap-ansi "^7.0.0"
 
-lit-element@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-3.0.0.tgz#0e9e64ddbc3dd6a8da4d6fbfadbc070a54cf0597"
-  integrity sha512-oPqRhhBBhs+AlI62QLwtWQNU/bNK/h2L1jI3IDroqZubo6XVAkyNy2dW3CRfjij8mrNlY7wULOfyyKKOnfEePA==
+lit-element@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-3.0.2.tgz#6422b68ba166a32695f524d6f3eb41712610bf50"
+  integrity sha512-9vTJ47D2DSE4Jwhle7aMzEwO2ZcOPRikqfT3CVG7Qol2c9/I4KZwinZNW5Xv8hNm+G/enSSfIwqQhIXi6ioAUg==
   dependencies:
     "@lit/reactive-element" "^1.0.0"
     lit-html "^2.0.0"
