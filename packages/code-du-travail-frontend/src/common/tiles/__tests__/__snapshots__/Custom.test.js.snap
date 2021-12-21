@@ -309,7 +309,7 @@ exports[`<Article /> should render 1`] = `
         <div
           class="c10"
         >
-          <p
+          <span
             class="c11 c12"
           >
             Bonjour
@@ -325,7 +325,7 @@ exports[`<Article /> should render 1`] = `
                 fill="currentColor"
               />
             </svg>
-          </p>
+          </span>
         </div>
       </div>
     </div>
