@@ -2570,7 +2570,7 @@ exports[`<Home /> should render 1`] = `
                         <div
                           class="c55"
                         >
-                          <p
+                          <span
                             class="c10 c56"
                           >
                             Consulter
@@ -2586,7 +2586,7 @@ exports[`<Home /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -2673,7 +2673,7 @@ exports[`<Home /> should render 1`] = `
                         <div
                           class="c55"
                         >
-                          <p
+                          <span
                             class="c10 c56"
                           >
                             Calculer
@@ -2689,7 +2689,7 @@ exports[`<Home /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -2784,7 +2784,7 @@ exports[`<Home /> should render 1`] = `
                         <div
                           class="c55"
                         >
-                          <p
+                          <span
                             class="c10 c56"
                           >
                             Estimer
@@ -2800,7 +2800,7 @@ exports[`<Home /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -2889,7 +2889,7 @@ exports[`<Home /> should render 1`] = `
                         <div
                           class="c55"
                         >
-                          <p
+                          <span
                             class="c10 c56"
                           >
                             Découvrir
@@ -2905,7 +2905,7 @@ exports[`<Home /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>

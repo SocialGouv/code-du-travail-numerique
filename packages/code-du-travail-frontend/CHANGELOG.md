@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.61.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.3...v4.61.0) (2021-12-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.241.0 ([#4082](https://github.com/SocialGouv/code-du-travail-numerique/issues/4082)) ([614482d](https://github.com/SocialGouv/code-du-travail-numerique/commit/614482d1d9d8b9781bc551047a67afc13d80c9c2))
+* **frontend:** security XSS / image tag ([#4030](https://github.com/SocialGouv/code-du-travail-numerique/issues/4030)) ([28c122d](https://github.com/SocialGouv/code-du-travail-numerique/commit/28c122d52fa919b2f39d1a591d76c3f1c7e1391e))
+* **rgaa:** 8.9 P01 à P04 ([#4083](https://github.com/SocialGouv/code-du-travail-numerique/issues/4083)) ([0c37ac5](https://github.com/SocialGouv/code-du-travail-numerique/commit/0c37ac514f0dd8189b997e102b67072c260b4a15))
+* **rgaa:** add the title "page courante" to the menu ([#4093](https://github.com/SocialGouv/code-du-travail-numerique/issues/4093)) ([673122f](https://github.com/SocialGouv/code-du-travail-numerique/commit/673122fd3c1bc9c2208b62fcdaed6cbcb083b7b9))
+* **simulator:** préavis de retraite => Q° restent à remplir quand je… ([#4072](https://github.com/SocialGouv/code-du-travail-numerique/issues/4072)) ([3d0be81](https://github.com/SocialGouv/code-du-travail-numerique/commit/3d0be814b138c28543bcf96895974ec1a46ddc30))
+
+
+### Features
+
+* **agreement:** add a highlight on search agreements ([#4117](https://github.com/SocialGouv/code-du-travail-numerique/issues/4117)) ([9acd5ab](https://github.com/SocialGouv/code-du-travail-numerique/commit/9acd5abfead3fdcc8fee23c6e160c6c1afbf899e))
+* **agreement:** add an highlight on agreement ([#4115](https://github.com/SocialGouv/code-du-travail-numerique/issues/4115)) ([a29de2a](https://github.com/SocialGouv/code-du-travail-numerique/commit/a29de2a574d3decab43dbaaf7f3ffd722e5dabd5))
+
+
+
+
+
 ## [4.60.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.2...v4.60.3) (2021-12-07)
 
 

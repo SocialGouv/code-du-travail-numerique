@@ -56,12 +56,12 @@ export default async () => {
         },
         resources: {
           requests: {
-            cpu: "200m",
-            memory: "256Mi",
+            cpu: "300m",
+            memory: "512Mi",
           },
           limits: {
             cpu: "500m",
-            memory: "560Mi",
+            memory: "768Mi",
           },
         },
         env: [
@@ -103,7 +103,7 @@ export default async () => {
   const hpa = new HorizontalPodAutoscaler({
     metadata: deployment.metadata,
     spec: {
-      minReplicas: 1,
+      minReplicas: 2,
       maxReplicas: 10,
 
       metrics: [
