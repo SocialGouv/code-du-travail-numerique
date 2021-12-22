@@ -54,6 +54,7 @@ export const ListLink = ({
           <>
             <StyledText>{highlight.searchInfo}</StyledText>
             <br />
+            <br />
           </>
         )}
         {summarize(description)}
