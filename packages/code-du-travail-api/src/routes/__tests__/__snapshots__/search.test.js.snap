@@ -5,7 +5,7 @@ Object {
   "articles": Array [],
   "documents": Array [
     Object {
-      "_score": 27.688023,
+      "_score": 34.50494,
       "algo": "fulltext",
       "breadcrumbs": Array [],
       "cdtnId": "647c224c9b",
@@ -84,6 +84,50 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
+      "_score": 1.3151006,
+      "action": "Calculer",
+      "algo": "both",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 8,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "position": 1,
+          "slug": "/themes/demission",
+        },
+      ],
+      "cdtnId": "1eea193273",
+      "description": "Calculez la durée de préavis à respecter en cas de démission",
+      "slug": "preavis-demission",
+      "source": "outils",
+      "title": "Préavis de démission",
+    },
+    Object {
+      "_score": 1.2952552,
+      "action": "Estimer",
+      "algo": "semantic",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 8,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Licenciement : droits des salariés et procédures",
+          "position": 4,
+          "slug": "/themes/licenciement-droits-des-salaries-et-procedures",
+        },
+      ],
+      "cdtnId": "d8a3605790",
+      "description": "Estimez simplement le montant de l’indemnité de licenciement",
+      "slug": "indemnite-licenciement",
+      "source": "outils",
+      "title": "Indemnité de licenciement",
+    },
+    Object {
       "_score": 36.361824,
       "algo": "both",
       "breadcrumbs": Array [
@@ -143,50 +187,6 @@ Object {
       "source": "fiches_service_public",
       "title": "Certificat de travail",
       "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
-    },
-    Object {
-      "_score": 1.3151006,
-      "action": "Calculer",
-      "algo": "both",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Démission",
-          "position": 1,
-          "slug": "/themes/demission",
-        },
-      ],
-      "cdtnId": "1eea193273",
-      "description": "Calculez la durée de préavis à respecter en cas de démission",
-      "slug": "preavis-demission",
-      "source": "outils",
-      "title": "Préavis de démission",
-    },
-    Object {
-      "_score": 1.2952552,
-      "action": "Estimer",
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Licenciement : droits des salariés et procédures",
-          "position": 4,
-          "slug": "/themes/licenciement-droits-des-salaries-et-procedures",
-        },
-      ],
-      "cdtnId": "d8a3605790",
-      "description": "Estimez simplement le montant de l’indemnité de licenciement",
-      "slug": "indemnite-licenciement",
-      "source": "outils",
-      "title": "Indemnité de licenciement",
     },
     Object {
       "_score": 1.2357258,
@@ -502,45 +502,6 @@ Object {
       "title": "Démission d'une assistante maternelle",
     },
     Object {
-      "_score": 35.71634,
-      "action": "Calculer",
-      "algo": "fulltext",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-      ],
-      "cdtnId": "d8fca710c5",
-      "description": "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
-      "slug": "heures-recherche-emploi",
-      "source": "outils",
-      "title": "Heures pour recherche d’emploi",
-    },
-    Object {
-      "_score": 31.628939,
-      "algo": "both",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Documents à remettre au salarié",
-          "position": 0,
-          "slug": "/themes/documents-a-remettre-au-salarie",
-        },
-      ],
-      "cdtnId": "59a4d4173c",
-      "description": "Le certificat de travail est un document remis par l'employeur au salarié à la date de fin du contrat de travail. Il est remis au salarié pour tout type de contrat de travail (CDI, CDD...), quel que soit le motif de la rupture (démission, licenciement...).",
-      "slug": "certificat-de-travail",
-      "source": "fiches_service_public",
-      "title": "Certificat de travail",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
-    },
-    Object {
       "_score": 1.3151006,
       "action": "Calculer",
       "algo": "both",
@@ -583,6 +544,45 @@ Object {
       "slug": "indemnite-licenciement",
       "source": "outils",
       "title": "Indemnité de licenciement",
+    },
+    Object {
+      "_score": 35.71634,
+      "action": "Calculer",
+      "algo": "fulltext",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 8,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+      ],
+      "cdtnId": "d8fca710c5",
+      "description": "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
+      "slug": "heures-recherche-emploi",
+      "source": "outils",
+      "title": "Heures pour recherche d’emploi",
+    },
+    Object {
+      "_score": 31.628939,
+      "algo": "both",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 8,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Documents à remettre au salarié",
+          "position": 0,
+          "slug": "/themes/documents-a-remettre-au-salarie",
+        },
+      ],
+      "cdtnId": "59a4d4173c",
+      "description": "Le certificat de travail est un document remis par l'employeur au salarié à la date de fin du contrat de travail. Il est remis au salarié pour tout type de contrat de travail (CDI, CDD...), quel que soit le motif de la rupture (démission, licenciement...).",
+      "slug": "certificat-de-travail",
+      "source": "fiches_service_public",
+      "title": "Certificat de travail",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
     },
     Object {
       "_score": 1.2357258,
