@@ -8,6 +8,7 @@ import {
   Container,
   Heading,
   Paragraph,
+  Text,
   theme,
   Tile,
   Title,
@@ -50,7 +51,10 @@ export const ListLink = ({
     children: (
       <Paragraph noMargin>
         {highlight && highlight.searchInfo && (
-          <span>{highlight.searchInfo}</span>
+          <>
+            <StyledText>{highlight.searchInfo}</StyledText>
+            <br />
+          </>
         )}
         {summarize(description)}
       </Paragraph>
@@ -166,7 +170,7 @@ export const Results = ({ id, isSearch, items, query }) => {
   );
 };
 
-const { breakpoints, spacings } = theme;
+const { breakpoints, spacings, colors } = theme;
 
 const StyledListItem = styled.li`
   margin-bottom: ${spacings.medium};
@@ -178,4 +182,8 @@ const StyledButton = styled(Button)`
   @media (max-width: ${breakpoints.mobile}) {
     flex: 1 0 auto;
   }
+`;
+
+const StyledText = styled(Text)`
+  color: ${colors.secondary};
 `;
