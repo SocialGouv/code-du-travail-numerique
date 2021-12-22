@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.62.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.61.0...v4.62.0) (2021-12-21)
+
+
+### Bug Fixes
+
+* **app:** spacing on search results ([#4123](https://github.com/SocialGouv/code-du-travail-numerique/issues/4123)) ([32e5d13](https://github.com/SocialGouv/code-du-travail-numerique/commit/32e5d13d7823c0650fb15a7c029264774be852ea))
+* **deps:** update all dependencies ([#3706](https://github.com/SocialGouv/code-du-travail-numerique/issues/3706)) ([3507c59](https://github.com/SocialGouv/code-du-travail-numerique/commit/3507c59efe0a592f88c48b2f1988ef2d30323691))
+* **sdr:** url grand est ([#4124](https://github.com/SocialGouv/code-du-travail-numerique/issues/4124)) ([b523500](https://github.com/SocialGouv/code-du-travail-numerique/commit/b5235007c971a10a7a4e50252b761960028e7a18))
+
+
+
+
+
 # [4.61.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.3...v4.61.0) (2021-12-20)
 
 
