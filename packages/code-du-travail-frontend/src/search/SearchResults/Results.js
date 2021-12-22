@@ -32,6 +32,7 @@ export const ListLink = ({
     slug,
     title,
     url,
+    highlight,
   },
   showTheme = true,
   query,
@@ -46,7 +47,14 @@ export const ListLink = ({
   }
 
   const tileCommonProps = {
-    children: <Paragraph noMargin>{summarize(description)}</Paragraph>,
+    children: (
+      <Paragraph noMargin>
+        {highlight && highlight.searchInfo && (
+          <span>{highlight.searchInfo}</span>
+        )}
+        {summarize(description)}
+      </Paragraph>
+    ), //TODO
     onClick: () => reportSelectionToMatomo(source, slug, url, algo),
     onKeyPress: (e) =>
       e.keyCode === 13 && reportSelectionToMatomo(source, slug, url, algo),
