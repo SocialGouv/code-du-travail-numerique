@@ -14,6 +14,7 @@ function getSemQuery({ query_vector, size, sources = [], query }) {
       "action",
       "breadcrumbs",
       "cdtnId",
+      "highlight",
     ],
     query: {
       script_score: {
