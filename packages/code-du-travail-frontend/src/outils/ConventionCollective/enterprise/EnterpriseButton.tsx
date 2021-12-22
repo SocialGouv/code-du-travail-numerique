@@ -53,17 +53,15 @@ export function EnterpriseButton({
     >
       <ItemButton isFirst={isFirst} onClick={clickHandler}>
         {showTitleWithHighlight ? (
-          <Title as="div" fontSize="hsmall" fontWeight="600">
+          <Title fontSize="hsmall" fontWeight="600">
             {highlightLabel}
           </Title>
         ) : (
           <>
-            <Title as="div" fontWeight="600" fontSize="hsmall">
+            <Title fontWeight="600" fontSize="hsmall">
               {simpleLabel}
             </Title>
-            <Subtitle as="div" fontSize="small">
-              {highlightLabel}
-            </Subtitle>
+            <Subtitle fontSize="small">{highlightLabel}</Subtitle>
           </>
         )}
         {activitePrincipale && (
