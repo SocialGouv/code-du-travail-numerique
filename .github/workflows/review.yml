@@ -67,7 +67,7 @@ jobs:
     needs: [register, manifests]
     steps:
       - name: Use autodevops deployment
-        uses: SocialGouv/actions/autodevops-deploy@maxgfr/multiple-deployment # set test branch
+        uses: SocialGouv/actions/autodevops-deploy@maxgfr/multiple-deployment # set maxgfr test branch
         with:
           environment: "dev"
           token: ${{ secrets.GITHUB_TOKEN }}
