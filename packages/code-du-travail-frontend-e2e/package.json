@@ -1,6 +1,6 @@
 {
   "name": "@cdt/e2e",
-  "version": "4.60.0",
+  "version": "4.63.0",
   "private": true,
   "description": "",
   "main": "codecept.conf.js",
@@ -19,7 +19,7 @@
   "devDependencies": {
     "@socialgouv/eslint-config-recommended": "^1.75.0",
     "eslint": "^7.31.0",
-    "lint-staged": "^11.2.3"
+    "lint-staged": "^12.1.2"
   },
   "lint-staged": {
     "*.{ts,js}": [

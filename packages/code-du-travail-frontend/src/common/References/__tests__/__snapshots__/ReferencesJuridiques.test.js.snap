@@ -80,7 +80,6 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 
 .c4 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -188,7 +187,9 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           />
         </svg>
         <span
+          aria-level="2"
           class="c4 c5"
+          role="heading"
         >
           Références juridiques concernées :
         </span>

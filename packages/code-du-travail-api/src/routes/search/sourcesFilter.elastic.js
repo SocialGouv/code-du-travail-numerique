@@ -2,7 +2,7 @@ const { SOURCES } = require("@socialgouv/cdtn-sources");
 
 // if convention collectives are required
 // we only return the one with contributions
-const sourcesFilter = (sources) =>
+const sourcesFilter = (sources, query) =>
   sources.includes(SOURCES.CCN)
     ? {
         bool: {
@@ -25,6 +25,26 @@ const sourcesFilter = (sources) =>
                     rank_feature: {
                       boost: 10,
                       field: "effectif",
+                    },
+                  },
+                ],
+                should: [
+                  {
+                    term: {
+                      source: "conventions_collectives",
+                    },
+                  },
+                  {
+                    term: {
+                      contributions: true,
+                    },
+                  },
+                  {
+                    match: {
+                      "title.french": {
+                        boost: 2,
+                        query,
+                      },
                     },
                   },
                 ],

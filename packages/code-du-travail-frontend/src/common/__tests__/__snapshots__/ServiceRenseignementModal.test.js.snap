@@ -1,19 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] = `
-.c16 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c3 {
   position: relative;
   display: block;
@@ -151,6 +138,19 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c16 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c1 {
@@ -374,7 +374,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 .c14 {
-  display: block;
+  font-size: 1.2rem;
   margin-top: 2rem;
 }
 
@@ -595,10 +595,12 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                 </svg>
               </button>
             </form>
-            <small
+            <div
               class="c14"
             >
-              Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
+              <p>
+                Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
+              </p>
               <ul>
                 <li>
                   les demandes d'intervention en entreprise
@@ -613,7 +615,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                   vous renseigner sur les cotisations sociales
                 </li>
               </ul>
-            </small>
+            </div>
             <button
               class="c11 c15"
               title="fermer la modale"

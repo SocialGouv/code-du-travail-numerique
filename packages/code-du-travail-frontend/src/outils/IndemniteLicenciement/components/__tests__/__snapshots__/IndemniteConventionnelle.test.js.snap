@@ -3,7 +3,7 @@
 exports[`<IndemniteCCn /> should render error 1`] = `
 .c1 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -69,7 +69,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 
 .c11 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -724,7 +723,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 
 .c11 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }

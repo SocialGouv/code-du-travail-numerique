@@ -1,11 +1,13 @@
 import slugify from "@socialgouv/cdtn-slugify";
 import { getLabelBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import {
+  Alert,
   Badge,
   Button,
   icons,
   IconStripe,
   InsertTitle,
+  Paragraph,
   Section,
   theme,
   Title,
@@ -18,6 +20,7 @@ import styled from "styled-components";
 import Mdx from "../../src/common/Mdx";
 import SearchConvention from "../../src/conventions/Search";
 import { A11yLink } from "../common/A11yLink";
+import Html from "../common/Html";
 import References from "../common/References";
 import { useLocalStorage } from "../lib/useLocalStorage";
 import rehypeToReact from "./rehypeToReact";
@@ -90,7 +93,7 @@ const Contribution = ({ answers, content }) => {
           <Badge />
           <CustomWrapper variant="dark">
             <IconStripe icon={icons.Custom}>
-              <InsertTitle>Page personnalisable</InsertTitle>
+              <StyledInsertTitle>Page personnalisable</StyledInsertTitle>
               {isConventionDetected || isConventionalAnswer ? (
                 <>
                   Cette page a été personnalisée avec l’ajout des {}
@@ -180,11 +183,32 @@ const Contribution = ({ answers, content }) => {
                     </StyledDiv>
                     <Toast variant="secondary" onRemove={() => setConvention()}>
                       {convention.shortTitle}
+                      {convention.highlight && convention.highlight.searchInfo && (
+                        <Paragraph variant="altText" noMargin>
+                          {convention.highlight.searchInfo}
+                        </Paragraph>
+                      )}
                     </Toast>
                   </>
                 )}
                 {conventionAnswer ? (
                   <>
+                    {conventionAnswer.highlight &&
+                      conventionAnswer.highlight.content && (
+                        <StyledAlert variant="primary">
+                          <TitleAlert
+                            variant="primary"
+                            fontSize="small"
+                            fontWeight="700"
+                            noMargin
+                          >
+                            {conventionAnswer.highlight.title}
+                          </TitleAlert>
+                          <Paragraph fontSize="small" noMargin>
+                            <Html>{conventionAnswer.highlight.content}</Html>
+                          </Paragraph>
+                        </StyledAlert>
+                      )}
                     <MdxWrapper>
                       <Mdx
                         markdown={conventionAnswer.markdown}
@@ -241,6 +265,11 @@ const MdxWrapper = styled.div`
   margin-bottom: ${spacings.medium};
 `;
 
+const StyledInsertTitle = styled(InsertTitle).attrs({
+  "aria-level": "2",
+  role: "heading",
+})``;
+
 const StyledSection = styled(Section)`
   padding-bottom: 0;
 `;
@@ -256,6 +285,10 @@ const StyledDiv = styled.div`
   margin-bottom: ${spacings.tiny};
 `;
 
+const TitleAlert = styled(Paragraph)`
+  margin-bottom: ${spacings.tiny};
+`;
+
 const StyledTitle = styled(Title)`
   margin-top: ${({ hasMarginTop }) => (hasMarginTop ? spacings.large : "0")};
 `;
@@ -268,6 +301,11 @@ const ButtonWrapper = styled.div`
 const StyledCloseIcon = styled(icons.Close)`
   width: 2.8rem;
   margin-left: ${spacings.base};
+`;
+
+const StyledAlert = styled(Alert)`
+  margin-top: ${spacings.base};
+  background-color: ${({ theme }) => theme.bgPrimary};
 `;
 
 export default Contribution;

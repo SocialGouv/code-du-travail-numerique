@@ -67,7 +67,6 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
 
 .c4 {
   color: #7994d4;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 400;
 }
@@ -410,7 +409,9 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
       class="c3"
     >
       <span
+        aria-level="2"
         class="c4"
+        role="heading"
       >
         Absence 
         1
@@ -609,7 +610,6 @@ exports[`<AbsencePeriods /> should render 1`] = `
 
 .c4 {
   color: #7994d4;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 400;
 }
@@ -948,7 +948,9 @@ exports[`<AbsencePeriods /> should render 1`] = `
       class="c3"
     >
       <span
+        aria-level="2"
         class="c4"
+        role="heading"
       >
         Absence 
         1

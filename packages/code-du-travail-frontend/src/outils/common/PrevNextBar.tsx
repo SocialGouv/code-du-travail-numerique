@@ -24,16 +24,16 @@ export const PrevNextBar: FunctionComponent<Props> = ({
   return (
     <>
       <StyledDiv>
-        {printVisible && (
-          <StyledButton type="button" onClick={printResult}>
-            Imprimer le résultat
+        {previousVisible && (
+          <StyledButton small type="button" onClick={onPrev} variant="flat">
+            Précédent
           </StyledButton>
         )}
         {nextVisible && !previousVisible && (
-          <StyledButton disabled={hasError} variant="primary">
+          <StyledButtonReverse disabled={hasError} variant="primary">
             Commencer
             <ArrowIcon />
-          </StyledButton>
+          </StyledButtonReverse>
         )}
         {nextVisible && previousVisible && (
           <StyledButton disabled={hasError} variant="primary" onClick={onNext}>
@@ -41,9 +41,9 @@ export const PrevNextBar: FunctionComponent<Props> = ({
             <ArrowIcon />
           </StyledButton>
         )}
-        {previousVisible && (
-          <StyledButton small type="button" onClick={onPrev} variant="flat">
-            Précédent
+        {printVisible && (
+          <StyledButton type="button" onClick={printResult}>
+            Imprimer le résultat
           </StyledButton>
         )}
       </StyledDiv>
@@ -63,7 +63,6 @@ const StyledButton = styled(Button)`
 
 const StyledDiv = styled.div`
   display: flex;
-  flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
   margin: 5rem 0 ${spacings.large} 0;
@@ -74,6 +73,10 @@ const StyledDiv = styled.div`
   @media print {
     display: none;
   }
+`;
+
+const StyledButtonReverse = styled(StyledButton)`
+  margin-left: auto;
 `;
 
 const ArrowIcon = styled(icons.DirectionRight)`

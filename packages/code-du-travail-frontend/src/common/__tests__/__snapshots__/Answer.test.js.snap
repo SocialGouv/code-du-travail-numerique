@@ -877,11 +877,15 @@ exports[`<Answer /> should renders 1`] = `
             <div
               class="c20 c21"
             >
-              <div>
+              <div
+                class=""
+              >
                 intro de l'article
               </div>
             </div>
-            <div>
+            <div
+              class=""
+            >
               <p
                 class="test-content"
               >
@@ -1028,7 +1032,10 @@ exports[`<Answer /> should renders 1`] = `
                 <span
                   class="c29"
                 />
-                <span>
+                <span
+                  aria-level="2"
+                  role="heading"
+                >
                   Avez-vous trouvé la réponse à votre question ?
                 </span>
               </strong>
@@ -2135,11 +2142,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 </div>
               </div>
             </div>
-            <span
+            <p
               class="c20 c21"
             >
               tag2
-            </span>
+            </p>
             <header
               class="c22 c23"
             >
@@ -2182,11 +2189,15 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             <div
               class="c30 c31"
             >
-              <div>
+              <div
+                class=""
+              >
                 intro de l'article
               </div>
             </div>
-            <div>
+            <div
+              class=""
+            >
               <p
                 class="test-content"
               >
@@ -2333,7 +2344,10 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 <span
                   class="c39"
                 />
-                <span>
+                <span
+                  aria-level="2"
+                  role="heading"
+                >
                   Avez-vous trouvé la réponse à votre question ?
                 </span>
               </strong>
@@ -3237,11 +3251,15 @@ exports[`<Answer /> should renders back to results link 1`] = `
             <div
               class="c20 c21"
             >
-              <div>
+              <div
+                class=""
+              >
                 intro de l'article
               </div>
             </div>
-            <div>
+            <div
+              class=""
+            >
               <p
                 class="test-content"
               >
@@ -3388,7 +3406,10 @@ exports[`<Answer /> should renders back to results link 1`] = `
                 <span
                   class="c29"
                 />
-                <span>
+                <span
+                  aria-level="2"
+                  role="heading"
+                >
                   Avez-vous trouvé la réponse à votre question ?
                 </span>
               </strong>
@@ -4405,11 +4426,15 @@ exports[`<Answer /> should renders related content 1`] = `
             <div
               class="c20 c21"
             >
-              <div>
+              <div
+                class=""
+              >
                 intro de l'article
               </div>
             </div>
-            <div>
+            <div
+              class=""
+            >
               <p
                 class="test-content"
               >
@@ -4553,7 +4578,10 @@ exports[`<Answer /> should renders related content 1`] = `
                 <span
                   class="c29"
                 />
-                <span>
+                <span
+                  aria-level="2"
+                  role="heading"
+                >
                   Avez-vous trouvé la réponse à votre question ?
                 </span>
               </strong>
@@ -4583,7 +4611,9 @@ exports[`<Answer /> should renders related content 1`] = `
         class="c0"
       >
         <div
+          aria-level="2"
           class="c34"
+          role="heading"
         >
           Modèles et outils liés
            :
@@ -4645,7 +4675,9 @@ exports[`<Answer /> should renders related content 1`] = `
           </li>
         </ul>
         <div
+          aria-level="2"
           class="c34"
+          role="heading"
         >
           Articles liés
            :
@@ -5615,11 +5647,15 @@ exports[`<Answer /> should renders tooltip 1`] = `
             <div
               class="c20 c21"
             >
-              <div>
+              <div
+                class=""
+              >
                 intro de l'article
               </div>
             </div>
-            <div>
+            <div
+              class=""
+            >
               <p
                 class="test-content"
               >
@@ -5767,7 +5803,10 @@ exports[`<Answer /> should renders tooltip 1`] = `
                 <span
                   class="c29"
                 />
-                <span>
+                <span
+                  aria-level="2"
+                  role="heading"
+                >
                   Avez-vous trouvé la réponse à votre question ?
                 </span>
               </strong>
@@ -6671,11 +6710,15 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             <div
               class="c20 c21"
             >
-              <div>
+              <div
+                class=""
+              >
                 intro de l'article
               </div>
             </div>
-            <div>
+            <div
+              class=""
+            >
               <p
                 class="test-content"
               >
@@ -6823,7 +6866,10 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                 <span
                   class="c29"
                 />
-                <span>
+                <span
+                  aria-level="2"
+                  role="heading"
+                >
                   Avez-vous trouvé la réponse à votre question ?
                 </span>
               </strong>
@@ -7727,11 +7773,15 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             <div
               class="c20 c21"
             >
-              <div>
+              <div
+                class=""
+              >
                 intro de l'article
               </div>
             </div>
-            <div>
+            <div
+              class=""
+            >
               <p
                 class="test-content"
               >
@@ -7880,7 +7930,10 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                 <span
                   class="c29"
                 />
-                <span>
+                <span
+                  aria-level="2"
+                  role="heading"
+                >
                   Avez-vous trouvé la réponse à votre question ?
                 </span>
               </strong>
@@ -8784,11 +8837,15 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             <div
               class="c20 c21"
             >
-              <div>
+              <div
+                class=""
+              >
                 intro de l'article
               </div>
             </div>
-            <div>
+            <div
+              class=""
+            >
               <p
                 class="test-content"
               >
@@ -8932,7 +8989,10 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                 <span
                   class="c29"
                 />
-                <span>
+                <span
+                  aria-level="2"
+                  role="heading"
+                >
                   Avez-vous trouvé la réponse à votre question ?
                 </span>
               </strong>

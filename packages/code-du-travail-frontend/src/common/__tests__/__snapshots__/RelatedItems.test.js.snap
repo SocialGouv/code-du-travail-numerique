@@ -104,7 +104,9 @@ exports[`<RelatedItems /> should render 1`] = `
     class="c0"
   >
     <div
+      aria-level="2"
       class="c1"
+      role="heading"
     >
       Modèles et outils liés
        :
@@ -164,7 +166,9 @@ exports[`<RelatedItems /> should render 1`] = `
       </li>
     </ul>
     <div
+      aria-level="2"
       class="c1"
+      role="heading"
     >
       Articles liés
        :

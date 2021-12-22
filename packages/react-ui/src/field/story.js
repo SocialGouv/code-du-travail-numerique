@@ -4,9 +4,11 @@ import styled from "styled-components";
 import { Euro, Search } from "../icons/index.js";
 import { Section } from "../layout/Section/index.js";
 import { InputCheckbox } from "./Checkbox.js";
+import { Fieldset } from "./Fieldset.js";
 import { Input } from "./Input.js";
 import { InputDate } from "./InputDate.js";
 import { Label } from "./Label.js";
+import { Legend } from "./Legend.js";
 import { InputRadio } from "./Radio.js";
 import { Select } from "./Select.js";
 import { Textarea } from "./Textarea.js";
@@ -175,6 +177,32 @@ export const inputDate = () => (
     <Section>
       <Label htmlFor="input_date">Input Date</Label>
       <InputDate name="input_date" id="input_date" />
+    </Section>
+  </>
+);
+
+export const fieldsetLegend = () => (
+  <>
+    <Section>
+      <Fieldset>
+        <Legend>This is a legend like john</Legend>
+        <InputRadio
+          label="Option 1 in a fieldset with a legend"
+          name="radio"
+          id="option_1"
+          value="option_1"
+        />
+      </Fieldset>
+      <br />
+      <Fieldset>
+        <Legend isHidden>This is an hidden legend unlike john</Legend>
+        <InputRadio
+          label="Option 1 with an hidden legend"
+          name="radio"
+          id="option_1"
+          value="option_1"
+        />
+      </Fieldset>
     </Section>
   </>
 );

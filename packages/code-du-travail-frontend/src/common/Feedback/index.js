@@ -81,7 +81,9 @@ function Feedback({ url = document ? document.location.href : "" }) {
               shift={theme.spacings.xmedium}
             >
               {isSatisfied === null ? (
-                <span>Avez-vous trouvé la réponse à votre question&nbsp;?</span>
+                <span role="heading" aria-level="2">
+                  Avez-vous trouvé la réponse à votre question&nbsp;?
+                </span>
               ) : (
                 <span role="status">Merci pour votre réponse.</span>
               )}

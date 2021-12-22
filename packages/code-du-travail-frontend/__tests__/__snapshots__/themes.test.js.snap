@@ -21,19 +21,6 @@ exports[`<Theme /> should render 1`] = `
   color: #3e486e;
 }
 
-.c11 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c35 {
   position: absolute;
   background-color: #7994d4;
@@ -299,6 +286,19 @@ exports[`<Theme /> should render 1`] = `
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c11 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c20 {
@@ -1504,21 +1504,25 @@ exports[`<Theme /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c43"
+              role="heading"
             >
-              <strong
+              <p
                 class="c44"
               >
                 <span
                   class="c35"
                 />
                 Besoin de plus d’informations ?
-              </strong>
+              </p>
             </div>
             <div
               class="c45 c46"
             >
-              Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              <p>
+                Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              </p>
             </div>
             <button
               class="c39"
@@ -1549,7 +1553,9 @@ exports[`<Theme /> should render 1`] = `
               class="c50 "
             >
               <strong
+                aria-level="2"
                 class="c51 c52"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -1626,7 +1632,9 @@ exports[`<Theme /> should render 1`] = `
               class="c50 "
             >
               <strong
+                aria-level="2"
                 class="c51 c52"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -1668,7 +1676,9 @@ exports[`<Theme /> should render 1`] = `
               class="c50 "
             >
               <strong
+                aria-level="2"
                 class="c51 c52"
+                role="heading"
               >
                 En collaboration avec
               </strong>

@@ -29,12 +29,12 @@ exports[`<PrevNextBar /> should render 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #f66663;
-  border-color: #f66663;
-  box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
+  height: 4rem;
+  padding: 0 3rem;
+  color: #3e486e;
+  background: #fff;
+  border-color: #bbcadf;
+  box-shadow: none;
   opacity: 1;
   will-change: transform;
 }
@@ -43,7 +43,7 @@ exports[`<PrevNextBar /> should render 1`] = `
 .c1:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #fff;
+  color: #3e486e;
 }
 
 .c1:not([disabled]):hover,
@@ -53,8 +53,8 @@ exports[`<PrevNextBar /> should render 1`] = `
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #f99593;
-  border-color: #f99593;
+  background: #fff;
+  border-color: #dee5ef;
 }
 
 .c1[disabled] {
@@ -65,7 +65,7 @@ exports[`<PrevNextBar /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c4 {
+.c3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -93,35 +93,35 @@ exports[`<PrevNextBar /> should render 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 4rem;
-  padding: 0 3rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #f66663;
+  border-color: #f66663;
+  box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
   opacity: 1;
   will-change: transform;
 }
 
-.c4:link,
-.c4:visited {
+.c3:link,
+.c3:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e486e;
+  color: #fff;
 }
 
-.c4:not([disabled]):hover,
-.c4:not([disabled]):active,
-.c4:not([disabled]):focus {
+.c3:not([disabled]):hover,
+.c3:not([disabled]):active,
+.c3:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
+  background: #f99593;
+  border-color: #f99593;
 }
 
-.c4[disabled] {
+.c3[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -134,9 +134,6 @@ exports[`<PrevNextBar /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -148,7 +145,7 @@ exports[`<PrevNextBar /> should render 1`] = `
   margin: 5rem 0 3.2rem 0;
 }
 
-.c3 {
+.c4 {
   width: 3rem;
   margin-left: 1rem;
 }
@@ -166,20 +163,20 @@ exports[`<PrevNextBar /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c1 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
+  .c3 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c4 {
+  .c3 {
     display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 3rem;
   }
 }
 
@@ -213,11 +210,17 @@ exports[`<PrevNextBar /> should render 1`] = `
   >
     <button
       class="c1 c2 "
+      type="button"
+    >
+      Précédent
+    </button>
+    <button
+      class="c3 c2 "
     >
       Suivant
       <svg
         aria-hidden="true"
-        class="c3"
+        class="c4"
         fill="none"
         viewBox="0 0 28 15"
         xmlns="http://www.w3.org/2000/svg"
@@ -227,12 +230,6 @@ exports[`<PrevNextBar /> should render 1`] = `
           fill="currentColor"
         />
       </svg>
-    </button>
-    <button
-      class="c4 c2 "
-      type="button"
-    >
-      Précédent
     </button>
   </div>
 </div>
@@ -267,12 +264,12 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #f66663;
-  border-color: #f66663;
-  box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
+  height: 4rem;
+  padding: 0 3rem;
+  color: #3e486e;
+  background: #fff;
+  border-color: #bbcadf;
+  box-shadow: none;
   opacity: 1;
   will-change: transform;
 }
@@ -281,7 +278,7 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
 .c1:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #fff;
+  color: #3e486e;
 }
 
 .c1:not([disabled]):hover,
@@ -291,8 +288,8 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #f99593;
-  border-color: #f99593;
+  background: #fff;
+  border-color: #dee5ef;
 }
 
 .c1[disabled] {
@@ -303,7 +300,7 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
   cursor: not-allowed;
 }
 
-.c4 {
+.c3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -331,35 +328,35 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 4rem;
-  padding: 0 3rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #f66663;
+  border-color: #f66663;
+  box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
   opacity: 1;
   will-change: transform;
 }
 
-.c4:link,
-.c4:visited {
+.c3:link,
+.c3:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e486e;
+  color: #fff;
 }
 
-.c4:not([disabled]):hover,
-.c4:not([disabled]):active,
-.c4:not([disabled]):focus {
+.c3:not([disabled]):hover,
+.c3:not([disabled]):active,
+.c3:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
+  background: #f99593;
+  border-color: #f99593;
 }
 
-.c4[disabled] {
+.c3[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -372,9 +369,6 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -386,7 +380,7 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
   margin: 5rem 0 3.2rem 0;
 }
 
-.c3 {
+.c4 {
   width: 3rem;
   margin-left: 1rem;
 }
@@ -404,20 +398,20 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c1 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
+  .c3 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c4 {
+  .c3 {
     display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 3rem;
   }
 }
 
@@ -451,12 +445,18 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
   >
     <button
       class="c1 c2 "
+      type="button"
+    >
+      Précédent
+    </button>
+    <button
+      class="c3 c2 "
       disabled=""
     >
       Suivant
       <svg
         aria-hidden="true"
-        class="c3"
+        class="c4"
         fill="none"
         viewBox="0 0 28 15"
         xmlns="http://www.w3.org/2000/svg"
@@ -466,12 +466,6 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
           fill="currentColor"
         />
       </svg>
-    </button>
-    <button
-      class="c4 c2 "
-      type="button"
-    >
-      Précédent
     </button>
   </div>
 </div>
@@ -506,12 +500,12 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #f66663;
-  border-color: #f66663;
-  box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
+  height: 4rem;
+  padding: 0 3rem;
+  color: #3e486e;
+  background: #fff;
+  border-color: #bbcadf;
+  box-shadow: none;
   opacity: 1;
   will-change: transform;
 }
@@ -520,7 +514,7 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 .c1:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #fff;
+  color: #3e486e;
 }
 
 .c1:not([disabled]):hover,
@@ -530,8 +524,8 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #f99593;
-  border-color: #f99593;
+  background: #fff;
+  border-color: #dee5ef;
 }
 
 .c1[disabled] {
@@ -542,7 +536,7 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   cursor: not-allowed;
 }
 
-.c4 {
+.c3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -570,35 +564,35 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 4rem;
-  padding: 0 3rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
+  height: 5.2rem;
+  padding: 0 4.4rem;
+  color: #fff;
+  background: #f66663;
+  border-color: #f66663;
+  box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
   opacity: 1;
   will-change: transform;
 }
 
-.c4:link,
-.c4:visited {
+.c3:link,
+.c3:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e486e;
+  color: #fff;
 }
 
-.c4:not([disabled]):hover,
-.c4:not([disabled]):active,
-.c4:not([disabled]):focus {
+.c3:not([disabled]):hover,
+.c3:not([disabled]):active,
+.c3:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
   transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
+  background: #f99593;
+  border-color: #f99593;
 }
 
-.c4[disabled] {
+.c3[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -611,9 +605,6 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -625,7 +616,7 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   margin: 5rem 0 3.2rem 0;
 }
 
-.c3 {
+.c4 {
   width: 3rem;
   margin-left: 1rem;
 }
@@ -643,20 +634,20 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c1 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
+  .c3 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c4 {
+  .c3 {
     display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    padding: 0 3rem;
   }
 }
 
@@ -690,11 +681,17 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   >
     <button
       class="c1 c2 "
+      type="button"
+    >
+      Précédent
+    </button>
+    <button
+      class="c3 c2 "
     >
       Suivant
       <svg
         aria-hidden="true"
-        class="c3"
+        class="c4"
         fill="none"
         viewBox="0 0 28 15"
         xmlns="http://www.w3.org/2000/svg"
@@ -704,12 +701,6 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
           fill="currentColor"
         />
       </svg>
-    </button>
-    <button
-      class="c4 c2 "
-      type="button"
-    >
-      Précédent
     </button>
   </div>
 </div>
@@ -785,9 +776,6 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;

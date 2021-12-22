@@ -1,4 +1,4 @@
-import { icons, theme, Wrapper } from "@socialgouv/cdtn-ui";
+import { Fieldset, icons, Legend, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import arrayMutators from "final-form-arrays";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
@@ -167,13 +167,21 @@ function Wizard({
                   icon={icon}
                   duration={duration}
                   stepIndex={stepIndex}
+                  hasFieldset={steps[stepIndex].isForm}
                 />
                 <StepList
                   activeIndex={stepIndex}
                   items={stepItems}
                   anchorRef={anchorRef}
                 />
-                <Step form={form} dispatch={dispatch} />
+                {steps[stepIndex].isForm ? (
+                  <Fieldset>
+                    <Legend isHidden>{steps[stepIndex].label}</Legend>
+                    <Step form={form} dispatch={dispatch} />
+                  </Fieldset>
+                ) : (
+                  <Step form={form} dispatch={dispatch} />
+                )}
                 <PrevNextBar
                   hasError={invalid && submitFailed}
                   onPrev={() => prevStep(form.getState().values)}
@@ -225,10 +233,10 @@ Wizard.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-function WizardTitle({ title, icon, duration, stepIndex }) {
+function WizardTitle({ title, icon, duration, stepIndex, hasFieldset }) {
   const Icon = icons[icon];
   return (
-    <ToolTitle>
+    <ToolTitle hasFieldset={hasFieldset}>
       <StyledTitleBox>
         {Icon && (
           <IconWrapper>
@@ -244,6 +252,7 @@ function WizardTitle({ title, icon, duration, stepIndex }) {
 
 WizardTitle.propTypes = {
   duration: PropTypes.string,
+  hasFieldset: PropTypes.bool,
   icon: PropTypes.string,
   stepIndex: PropTypes.number,
   title: PropTypes.string.isRequired,
@@ -260,7 +269,7 @@ function WizardDuration({ duration }) {
 
 export { Wizard, WizardTitle };
 
-const { breakpoints, spacings, fonts, colors } = theme;
+const { breakpoints, spacings, fonts } = theme;
 
 const StyledForm = styled.form`
   padding: 0 0 0 ${STEP_LIST_WIDTH};
@@ -277,7 +286,8 @@ const ToolTitle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: ${spacings.larger};
+  margin-bottom: ${({ hasFieldset }) =>
+    hasFieldset ? spacings.base : spacings.larger};
   padding-bottom: ${spacings.base};
   border-bottom: 1px solid ${({ theme }) => theme.border};
   @media (max-width: ${breakpoints.tablet}) {

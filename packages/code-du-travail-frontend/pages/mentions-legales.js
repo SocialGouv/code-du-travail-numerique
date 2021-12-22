@@ -38,9 +38,7 @@ const LegalPage = () => {
               39-43 Quai André Citroën
               <br />
               75015 PARIS
-              <br />
-              <br />
-              Tél. : 01 40 56 60 00
+              <p>Tél. : 01 40 56 60 00</p>
             </Address>
             <Title shift={spacings.larger}>Directeur de la publication</Title>
             <p>Pierre RAMAIN, Directeur Général du Travail</p>
@@ -57,12 +55,14 @@ const LegalPage = () => {
               92130 ISSY-LES-MOULINEAUX
             </Address>
             <StyledWrapper variant="dark">
-              Le code du logiciel est libre, et peut donc être vérifié et
-              amélioré par toutes et tous à l’adresse suivante:{" "}
-              <a href="https://github.com/SocialGouv/code-du-travail-numerique">
-                https://github.com/SocialGouv/code-du-travail-numerique
-              </a>
-              .
+              <p>
+                Le code du logiciel est libre, et peut donc être vérifié et
+                amélioré par toutes et tous à l’adresse suivante:{" "}
+                <a href="https://github.com/SocialGouv/code-du-travail-numerique">
+                  https://github.com/SocialGouv/code-du-travail-numerique
+                </a>
+                .
+              </p>
             </StyledWrapper>
             <Title shift={spacings.larger}>Accessibilité</Title>
             <p>

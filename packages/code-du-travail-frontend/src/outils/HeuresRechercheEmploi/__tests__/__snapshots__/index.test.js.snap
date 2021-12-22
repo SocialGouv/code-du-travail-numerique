@@ -123,9 +123,6 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -138,6 +135,10 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
 }
 
 .c19 {
+  margin-left: auto;
+}
+
+.c20 {
   width: 3rem;
   margin-left: 1rem;
 }
@@ -486,7 +487,9 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
         class="c5 c6"
       >
         <span
+          aria-level="2"
           class="c7"
+          role="heading"
         >
           Étape
           <span
@@ -577,12 +580,12 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
         class="c16"
       >
         <button
-          class="c17 c18 "
+          class="c17 c18 c19"
         >
           Commencer
           <svg
             aria-hidden="true"
-            class="c19"
+            class="c20"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"

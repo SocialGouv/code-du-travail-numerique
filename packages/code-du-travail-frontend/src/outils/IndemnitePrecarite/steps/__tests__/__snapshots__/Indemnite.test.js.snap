@@ -24,7 +24,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 
 .c10 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -42,7 +42,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -643,7 +642,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 
 .c10 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -661,7 +660,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -1254,7 +1252,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 
 .c10 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -1272,7 +1270,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -1876,7 +1873,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 
 .c10 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -1894,7 +1891,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -2487,7 +2483,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 
 .c10 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -2505,7 +2501,6 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }

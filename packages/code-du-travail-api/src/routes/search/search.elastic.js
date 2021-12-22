@@ -16,6 +16,7 @@ function getSearchBody({ query, size, sources = [] }) {
       "action",
       "breadcrumbs",
       "cdtnId",
+      "highlight",
     ],
     query: {
       bool: {
@@ -43,10 +44,18 @@ function getSearchBody({ query, size, sources = [] }) {
                     },
                   },
                 },
+                {
+                  match: {
+                    "synonymes.french": {
+                      boost: 15,
+                      query,
+                    },
+                  },
+                },
               ],
             },
           },
-        ].concat(sourcesFilter(sources)),
+        ].concat(sourcesFilter(sources, query)),
         should: [
           {
             match_phrase: {

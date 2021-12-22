@@ -21,6 +21,7 @@ export const initialState = {
     },
     {
       component: StepInformations,
+      isForm: true,
       label: "Informations",
       name: "infos",
       skip: (values) =>

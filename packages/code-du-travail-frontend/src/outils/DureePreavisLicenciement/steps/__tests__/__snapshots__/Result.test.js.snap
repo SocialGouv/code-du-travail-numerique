@@ -24,7 +24,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
 
 .c9 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -42,7 +42,6 @@ exports[`<StepResult /> should render with O duration 1`] = `
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -386,7 +385,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
 
 .c9 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -404,7 +403,6 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -708,7 +706,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 
 .c9 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -726,7 +724,6 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -1029,7 +1026,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 
 .c9 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -1047,7 +1044,6 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -1339,7 +1335,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 
 .c9 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -1357,7 +1353,6 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
 }

@@ -1,4 +1,4 @@
-import { Alert, Text, theme, Toast } from "@socialgouv/cdtn-ui";
+import { Alert, Paragraph, Text, theme, Toast } from "@socialgouv/cdtn-ui";
 import { FormApi } from "final-form";
 import { useRouter } from "next/router";
 import React, { useCallback, useEffect } from "react";
@@ -16,8 +16,8 @@ import { required } from "./validators";
 export const CONVENTION_NAME = "ccn";
 
 type IdccInfo = {
-  idcc: number;
   fullySupported: boolean;
+  idcc: number;
 };
 
 type BaseProps = {
@@ -52,7 +52,7 @@ function StepInfoCCn({
         onChange(storedConvention, data);
       }
     },
-    [setConvention, onChange]
+    [storedConvention, setConvention, onChange]
   );
   useEffect(() => {
     trackConventionCollective(storedConvention, router.asPath);
@@ -128,10 +128,15 @@ function StepInfoCCn({
                   variant="secondary"
                   onRemove={(event) => {
                     event.preventDefault();
-                    setConvention();
+                    onSelectConvention(undefined);
                   }}
                 >
                   {input.value.shortTitle}
+                  {input.value.highlight && (
+                    <Paragraph variant="altText">
+                      {input.value.highlight.searchInfo}
+                    </Paragraph>
+                  )}
                 </Toast>
                 <p>Cliquez sur Suivant pour poursuivre la simulation.</p>
                 {error && <ErrorToast>{error}</ErrorToast>}

@@ -48,9 +48,9 @@ function OrigineStep({ form }: WizardStepProps): JSX.Element {
           form.getState().values["contrat salarié - mise à la retraite"] ===
             "oui" && (
             <StyledAlert variant="primary">
-              <TitleAlert variant="primary" fontSize="hsmall" fontWeight="700">
+              <Text variant="primary" fontSize="hsmall" fontWeight="700">
                 À noter
-              </TitleAlert>
+              </Text>
               <br />
               L&apos;employeur qui décide une mise à la retraite doit en avoir
               informé son salarié.
@@ -76,10 +76,6 @@ const { spacings } = theme;
 const StyledAlert = styled(Alert)`
   margin-top: ${spacings.medium};
   width: 100%;
-`;
-
-const TitleAlert = styled(Text)`
-  margin-bottom: ${spacings.medium};
 `;
 
 export { OrigineStep };

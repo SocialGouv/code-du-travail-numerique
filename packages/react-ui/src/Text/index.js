@@ -9,7 +9,6 @@ const sharedStyle = css`
     return css`
       color: ${(props) =>
         props.$variant ? theme[props.$variant] : theme.paragraph};
-      line-height: ${fonts.lineHeightTitle};
       font-size: ${(props) =>
         props.$fontSize && props.$fontSize.startsWith("h")
           ? fonts.sizes.headings[props.$fontSize.replace("h", "")]
@@ -32,6 +31,7 @@ const propTypes = {
     "hlarge",
   ]),
   fontWeight: PropTypes.oneOf(["300", "400", "500", "600", "700"]),
+  noMargin: PropTypes.bool,
   variant: PropTypes.oneOf(["primary", "secondary", "error", "placeholder"]),
 };
 
@@ -57,10 +57,12 @@ export function Text({ children, fontSize, fontWeight, variant, ...props }) {
     </Span>
   );
 }
+
 export function Paragraph({
   children,
   fontSize,
   fontWeight,
+  noMargin,
   variant,
   ...props
 }) {
@@ -69,6 +71,7 @@ export function Paragraph({
       {...props}
       $fontWeight={fontWeight}
       $fontSize={fontSize}
+      $noMargin={noMargin}
       $variant={variant}
     >
       {children}
@@ -81,4 +84,9 @@ const Span = styled.span`
 `;
 const P = styled.p`
   ${sharedStyle}
+  ${({ $noMargin }) =>
+    $noMargin &&
+    css`
+      margin: 0;
+    `}
 `;

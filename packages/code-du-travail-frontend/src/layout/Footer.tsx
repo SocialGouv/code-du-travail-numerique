@@ -33,13 +33,15 @@ const Footer = (): JSX.Element => {
       <StyledFooter>
         <ServiceSection>
           <Container>
-            <Title as="strong" isFirst stripe="top">
+            <Title as="p" role="heading" aria-level="2" isFirst stripe="top">
               Besoin de plus d’informations&nbsp;?
             </Title>
             <StyledContainer narrow noPadding>
-              Les services du ministère du Travail en région informent,
-              conseillent et orientent les salariés et les employeurs du secteur
-              privé sur leurs questions en droit du travail.
+              <p>
+                Les services du ministère du Travail en région informent,
+                conseillent et orientent les salariés et les employeurs du
+                secteur privé sur leurs questions en droit du travail.
+              </p>
             </StyledContainer>
             <ServiceRenseignementModal>
               {(openModal) => (
@@ -57,7 +59,7 @@ const Footer = (): JSX.Element => {
         <NavSection>
           <Links>
             <Category>
-              <Heading as={StyledStrong} isFirst>
+              <Heading as={StyledHeading} isFirst>
                 Code du travail numérique
               </Heading>
               <StyledList>
@@ -108,7 +110,7 @@ const Footer = (): JSX.Element => {
               </StyledList>
             </Category>
             <Category>
-              <Heading as={StyledStrong} isFirst>
+              <Heading as={StyledHeading} isFirst>
                 Aidez-nous à améliorer cet outil
               </Heading>
               <StyledList>
@@ -165,7 +167,7 @@ const Footer = (): JSX.Element => {
               </StyledList>
             </Category>
             <Category>
-              <Heading as={StyledStrong} isFirst>
+              <Heading as={StyledHeading} isFirst>
                 En collaboration avec
               </Heading>
               <StyledList>
@@ -354,7 +356,10 @@ const StyledList = styled(FlatList)`
   }
 `;
 
-const StyledStrong = styled.strong`
+const StyledHeading = styled.strong.attrs({
+  "aria-level": "2",
+  role: "heading",
+})`
   font-size: ${fonts.sizes.default};
   @media (max-width: ${breakpoints.mobile}) {
     margin-top: ${spacings.small};

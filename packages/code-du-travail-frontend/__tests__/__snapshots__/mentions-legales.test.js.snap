@@ -75,19 +75,6 @@ exports[`<MentionLegales /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c11 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c28 {
   position: absolute;
   background-color: #7994d4;
@@ -377,6 +364,19 @@ exports[`<MentionLegales /> should render 1`] = `
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c11 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c20 {
@@ -1404,9 +1404,9 @@ exports[`<MentionLegales /> should render 1`] = `
               39-43 Quai André Citroën
               <br />
               75015 PARIS
-              <br />
-              <br />
-              Tél. : 01 40 56 60 00
+              <p>
+                Tél. : 01 40 56 60 00
+              </p>
             </address>
             <div
               class="c31"
@@ -1450,14 +1450,16 @@ exports[`<MentionLegales /> should render 1`] = `
             <div
               class="c34 c35"
             >
-              Le code du logiciel est libre, et peut donc être vérifié et amélioré par toutes et tous à l’adresse suivante:
-               
-              <a
-                href="https://github.com/SocialGouv/code-du-travail-numerique"
-              >
-                https://github.com/SocialGouv/code-du-travail-numerique
-              </a>
-              .
+              <p>
+                Le code du logiciel est libre, et peut donc être vérifié et amélioré par toutes et tous à l’adresse suivante:
+                 
+                <a
+                  href="https://github.com/SocialGouv/code-du-travail-numerique"
+                >
+                  https://github.com/SocialGouv/code-du-travail-numerique
+                </a>
+                .
+              </p>
             </div>
             <div
               class="c31"
@@ -1538,21 +1540,25 @@ exports[`<MentionLegales /> should render 1`] = `
             class="c4"
           >
             <div
+              aria-level="2"
               class="c40"
+              role="heading"
             >
-              <strong
+              <p
                 class="c41"
               >
                 <span
                   class="c28"
                 />
                 Besoin de plus d’informations ?
-              </strong>
+              </p>
             </div>
             <div
               class="c42 c43"
             >
-              Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              <p>
+                Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+              </p>
             </div>
             <button
               class="c44"
@@ -1583,7 +1589,9 @@ exports[`<MentionLegales /> should render 1`] = `
               class="c48 "
             >
               <strong
+                aria-level="2"
                 class="c49 c50"
+                role="heading"
               >
                 Code du travail numérique
               </strong>
@@ -1660,7 +1668,9 @@ exports[`<MentionLegales /> should render 1`] = `
               class="c48 "
             >
               <strong
+                aria-level="2"
                 class="c49 c50"
+                role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
@@ -1702,7 +1712,9 @@ exports[`<MentionLegales /> should render 1`] = `
               class="c48 "
             >
               <strong
+                aria-level="2"
                 class="c49 c50"
+                role="heading"
               >
                 En collaboration avec
               </strong>

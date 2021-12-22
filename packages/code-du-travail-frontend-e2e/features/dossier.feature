@@ -13,5 +13,5 @@ Fonctionnalité: Dossier Coronavirus
     Alors je vois "Sommaire"
 
     Quand je clique sur "Covid-19 : Les mesures de protection"
-    Quand j'attends que le titre de page "Covid-19 : Les mesures de protection en entreprise (Protocole national [infographie])" apparaisse
+    Quand j'attends que le titre de page "Covid-19 : Les mesures de protection en entreprise" apparaisse
     Alors je vois "L’employeur doit mettre en place, dans le cadre du dialogue social de proximité, notamment en associant représentants du personnel et représentants syndicaux, des mesures d’hygiène, organisationnelles et de protection collective dans le but de veiller au respect des gestes barrières."

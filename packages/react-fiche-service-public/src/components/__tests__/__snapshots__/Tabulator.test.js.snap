@@ -1,19 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tabulator /> should have two different levels of headings 1`] = `
-.c7 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c10 {
   position: absolute;
   background-color: #7994d4;
@@ -36,6 +23,19 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.625;
+}
+
+.c7 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c1 {
@@ -328,6 +328,17 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 `;
 
 exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
+.c8 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c7 {
   position: absolute !important;
   width: 1px !important;
@@ -339,17 +350,6 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
   border: 0 !important;
   -webkit-clip: rect(0,0,0,0) !important;
   clip: rect(0,0,0,0) !important;
-}
-
-.c8 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c1 {
@@ -597,6 +597,17 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 `;
 
 exports[`<Tabulator /> should render 1`] = `
+.c8 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c7 {
   position: absolute !important;
   width: 1px !important;
@@ -608,17 +619,6 @@ exports[`<Tabulator /> should render 1`] = `
   border: 0 !important;
   -webkit-clip: rect(0,0,0,0) !important;
   clip: rect(0,0,0,0) !important;
-}
-
-.c8 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c1 {

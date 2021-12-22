@@ -84,19 +84,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin-bottom: 0;
 }
 
-.c11 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c48 {
   position: absolute;
   background-color: #7994d4;
@@ -496,6 +483,19 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c11 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c20 {
@@ -2517,11 +2517,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       </div>
                     </div>
                   </div>
-                  <span
+                  <p
                     class="c43 c44"
                   >
                     Autres départs
-                  </span>
+                  </p>
                   <header
                     class="c45 c46"
                   >
@@ -2615,7 +2615,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         class="c57"
                       >
                         <div
-                          class="c58"
+                          aria-level="2"
+                          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c58"
+                          role="heading"
                         >
                           Page personnalisable
                         </div>
@@ -2925,7 +2927,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       <span
                         class="c67"
                       />
-                      <span>
+                      <span
+                        aria-level="2"
+                        role="heading"
+                      >
                         Avez-vous trouvé la réponse à votre question ?
                       </span>
                     </strong>
@@ -2963,21 +2968,25 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               class="c4"
             >
               <div
+                aria-level="2"
                 class="c88"
+                role="heading"
               >
-                <strong
+                <p
                   class="c89"
                 >
                   <span
                     class="c90"
                   />
                   Besoin de plus d’informations ?
-                </strong>
+                </p>
               </div>
               <div
                 class="c91 c92"
               >
-                Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+                <p>
+                  Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+                </p>
               </div>
               <button
                 class="c93"
@@ -3008,7 +3017,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 class="c97 "
               >
                 <strong
+                  aria-level="2"
                   class="c98 c99"
+                  role="heading"
                 >
                   Code du travail numérique
                 </strong>
@@ -3085,7 +3096,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 class="c97 "
               >
                 <strong
+                  aria-level="2"
                   class="c98 c99"
+                  role="heading"
                 >
                   Aidez-nous à améliorer cet outil
                 </strong>
@@ -3127,7 +3140,9 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 class="c97 "
               >
                 <strong
+                  aria-level="2"
                   class="c98 c99"
+                  role="heading"
                 >
                   En collaboration avec
                 </strong>
@@ -3362,19 +3377,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin-bottom: 0;
 }
 
-.c11 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c48 {
   position: absolute;
   background-color: #7994d4;
@@ -3774,6 +3776,19 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.c11 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c20 {
@@ -5795,11 +5810,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       </div>
                     </div>
                   </div>
-                  <span
+                  <p
                     class="c43 c44"
                   >
                     Autres départs
-                  </span>
+                  </p>
                   <header
                     class="c45 c46"
                   >
@@ -5893,7 +5908,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         class="c57"
                       >
                         <div
-                          class="c58"
+                          aria-level="2"
+                          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c58"
+                          role="heading"
                         >
                           Page personnalisable
                         </div>
@@ -6203,7 +6220,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       <span
                         class="c67"
                       />
-                      <span>
+                      <span
+                        aria-level="2"
+                        role="heading"
+                      >
                         Avez-vous trouvé la réponse à votre question ?
                       </span>
                     </strong>
@@ -6241,21 +6261,25 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               class="c4"
             >
               <div
+                aria-level="2"
                 class="c88"
+                role="heading"
               >
-                <strong
+                <p
                   class="c89"
                 >
                   <span
                     class="c90"
                   />
                   Besoin de plus d’informations ?
-                </strong>
+                </p>
               </div>
               <div
                 class="c91 c92"
               >
-                Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+                <p>
+                  Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+                </p>
               </div>
               <button
                 class="c93"
@@ -6286,7 +6310,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 class="c97 "
               >
                 <strong
+                  aria-level="2"
                   class="c98 c99"
+                  role="heading"
                 >
                   Code du travail numérique
                 </strong>
@@ -6363,7 +6389,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 class="c97 "
               >
                 <strong
+                  aria-level="2"
                   class="c98 c99"
+                  role="heading"
                 >
                   Aidez-nous à améliorer cet outil
                 </strong>
@@ -6405,7 +6433,9 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 class="c97 "
               >
                 <strong
+                  aria-level="2"
                   class="c98 c99"
+                  role="heading"
                 >
                   En collaboration avec
                 </strong>

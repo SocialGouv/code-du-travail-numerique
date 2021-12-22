@@ -1,10 +1,16 @@
-import router from "../idcc";
+import router, { parseIdcc } from "../idcc";
 
 const request = require("supertest");
 const Koa = require("koa");
 
 const app = new Koa();
 app.use(router.routes());
+
+test("parse idcc", () => {
+  expect(parseIdcc("aa")).toBeUndefined();
+  expect(parseIdcc("123")).toEqual(123);
+  expect(parseIdcc("0123")).toEqual(123);
+});
 
 test("return idcc results for boulangerie", async () => {
   const response = await request(app.callback()).get(
