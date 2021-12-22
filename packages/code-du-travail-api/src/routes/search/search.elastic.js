@@ -44,8 +44,9 @@ function getSearchBody({ query, size, sources = [] }) {
                   },
                 },
                 {
-                  match_phrase_prefix: {
-                    synonymes: {
+                  match: {
+                    "synonymes.french": {
+                      boost: 15,
                       query,
                     },
                   },
@@ -53,7 +54,7 @@ function getSearchBody({ query, size, sources = [] }) {
               ],
             },
           },
-        ].concat(sourcesFilter(sources)),
+        ].concat(sourcesFilter(sources, query)),
         should: [
           {
             match_phrase: {

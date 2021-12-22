@@ -1,6 +1,6 @@
 const sourcesFilter = require("./sourcesFilter.elastic");
 
-function getSemQuery({ query_vector, size, sources = [] }) {
+function getSemQuery({ query_vector, size, sources = [], query }) {
   if (sources.length === 0) {
     throw new Error("[getSemQuery] sources should not be empty");
   }
@@ -22,7 +22,7 @@ function getSemQuery({ query_vector, size, sources = [] }) {
             filter: [
               { term: { excludeFromSearch: false } },
               { term: { isPublished: true } },
-              sourcesFilter(sources),
+              sourcesFilter(sources, query),
             ],
           },
         },

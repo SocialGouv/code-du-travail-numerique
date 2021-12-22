@@ -102,7 +102,7 @@ router.get("/search", async (ctx) => {
     if (query_vector) {
       searches[DOCUMENTS_SEM] = [
         { index },
-        getSemBody({ query_vector, size, sources }),
+        getSemBody({ query, query_vector, size, sources }),
       ];
     }
   }
@@ -120,6 +120,7 @@ router.get("/search", async (ctx) => {
       searches[THEMES_SEM] = [
         { index },
         getSemBody({
+          query,
           query_vector,
           size: themeNumber,
           sources: [SOURCES.THEMES],
@@ -182,12 +183,8 @@ router.get("/search", async (ctx) => {
   logger.info(`search: ${query} took ${results.took}ms`);
 
   ctx.body = {
-    articles: articles
-      .map(({ _score, _source }) => ({ _score, ..._source }))
-      .sort((a, b) => b._score - a._score),
-    documents: documents
-      .map(({ _score, _source }) => ({ _score, ..._source }))
-      .sort((a, b) => b._score - a._score),
+    articles: articles.map(({ _score, _source }) => ({ _score, ..._source })),
+    documents: documents.map(({ _score, _source }) => ({ _score, ..._source })),
     // we add source prop since some result might come from dedicataed themes index
     // wich has no source prop
     themes: themes.map(({ _score, _source }) => ({
