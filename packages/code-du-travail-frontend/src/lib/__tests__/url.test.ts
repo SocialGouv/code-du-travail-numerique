@@ -1,47 +1,27 @@
 import { removeQueryParameters, toUrl } from "..";
 
 describe("toUrl", () => {
-  test("should return a url for a file", () => {
-    expect(toUrl("io.md")).toBe("azure.url/cdtn/io.md");
-  });
-
-  test("should return a url from a url", () => {
-    expect(toUrl("complete.url/dev/io.md")).toBe("azure.url/cdtn/io.md");
-  });
-
-  test("should return input if no match", () => {
-    expect(toUrl("")).toBe("");
+  test.each`
+    input                       | expected
+    ${"io.md"}                  | ${"azure.url/cdtn/io.md"}
+    ${"complete.url/dev/io.md"} | ${"azure.url/cdtn/io.md"}
+    ${""}                       | ${""}
+  `("should return $expected for $input", ({ input, expected }) => {
+    expect(toUrl(input)).toBe(expected);
   });
 });
 
 describe("removeQueryParameters", () => {
-  test("should transform a url to a canonical url", () => {
-    const parsedUrl = removeQueryParameters(
-      "/contribution/44-les-conges-pour-evenements-familiaux"
-    );
-    expect(parsedUrl).toBe(
-      "/contribution/44-les-conges-pour-evenements-familiaux"
-    );
-
-    const parsedUrlWithParams = removeQueryParameters(
-      "https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux?q=m&m=p"
-    );
-    expect(parsedUrlWithParams).toBe(
-      "https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux"
-    );
-
-    const parsedUrlWithDoubleQuestion = removeQueryParameters(
-      "https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux??"
-    );
-    expect(parsedUrlWithDoubleQuestion).toBe(
-      "https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux"
-    );
-
-    const parsedUrlWithDoubleQuestionAndtext = removeQueryParameters(
-      "https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux?ds=ds?"
-    );
-    expect(parsedUrlWithDoubleQuestionAndtext).toBe(
-      "https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux"
-    );
-  });
+  test.each`
+    input                                                                                          | expected
+    ${"/contribution/44-les-conges-pour-evenements-familiaux"}                                     | ${"/contribution/44-les-conges-pour-evenements-familiaux"}
+    ${"https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux?q=m&m=p"} | ${"https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux"}
+    ${"https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux??"}       | ${"https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux"}
+    ${"https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux?ds=ds?"}  | ${"https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux"}
+  `(
+    "should transform $input to this canonical url: $input",
+    ({ input, expected }) => {
+      expect(removeQueryParameters(input)).toBe(expected);
+    }
+  );
 });
