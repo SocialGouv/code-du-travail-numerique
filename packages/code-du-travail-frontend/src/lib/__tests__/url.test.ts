@@ -1,4 +1,4 @@
-import { removeQueryParameters, toUrl, urlIdccReplacement } from "..";
+import { removeQueryParameters, toUrl, urlRulesReplacement } from "..";
 
 describe("toUrl", () => {
   test.each`
@@ -37,11 +37,11 @@ describe("replaceSlug", () => {
     ${"https://code.travail.gouv.fr/convention-collective/2111-salaries-du-particulier-employeur?q=test"}      | ${"https://code.travail.gouv.fr/convention-collective/3239-secteur-des-particuliers-employeurs-et-de-lemploi-a-domicile?q=test"}
     ${"/convention-collective/2111-salaries-du-particulier-employeur?q=test"}                                  | ${"/convention-collective/3239-secteur-des-particuliers-employeurs-et-de-lemploi-a-domicile?q=test"}
     ${"https://code.travail.gouv.fr/convention-collective/2395-assistants-maternels-du-particulier-employeur"} | ${"https://code.travail.gouv.fr/convention-collective/3239-secteur-des-particuliers-employeurs-et-de-lemploi-a-domicile"}
-    ${"https://code.travail.gouv.fr/convention-collective/2395-salaries-du-particulier-employeur"}             | ${"https://code.travail.gouv.fr/convention-collective/2395-salaries-du-particulier-employeur"}
+    ${"https://code.travail.gouv.fr/contribution/2395-salaries-du-particulier-employeur"}                      | ${"https://code.travail.gouv.fr/contribution/3239-salaries-du-particulier-employeur"}
   `(
-    "should transform $input to this canonical url: $input",
-    ({ input, expected }) => {
-      expect(urlIdccReplacement(input)).toBe(expected);
+    "should transform $url to this canonical url: $expected",
+    ({ url, expected }) => {
+      expect(urlRulesReplacement(url)).toBe(expected);
     }
   );
 });

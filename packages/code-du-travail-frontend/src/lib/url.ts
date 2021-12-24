@@ -18,6 +18,20 @@ export const removeQueryParameters = (url: string): string => {
   return index !== -1 ? url.substring(0, index) : url;
 };
 
-export const urlIdccReplacement = (url: string): string => {
-  return url;
+export const urlRulesReplacement = (url: string): string => {
+  let res = url;
+  MappingReplacement.forEach(({ rules }) => {
+    rules.forEach(({ newValue, path, previousValues }) => {
+      path.forEach((v) => {
+        if (url.includes(v)) {
+          previousValues.forEach((pv) => {
+            if (url.includes(pv)) {
+              res = url.replace(pv, newValue);
+            }
+          });
+        }
+      });
+    });
+  });
+  return res;
 };
