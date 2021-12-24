@@ -1627,7 +1627,7 @@
     },
     "contractType": "CDD",
     "idcc": 3239,
-    "hasConventionalProvision": true,
+    "hasConventionalProvision": false,
     "allowBonus": null,
     "endMessage": null,
     "rate": null,

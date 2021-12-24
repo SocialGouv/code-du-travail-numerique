@@ -7017,7 +7017,8 @@
     },
     {
       "criteria": {
-        "ancienneté": "105| Enfant accueilli depuis moins de 3 mois"
+        "ancienneté": "105| Enfant accueilli depuis moins de 3 mois",
+        "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
       },
       "type": "préavis de Démission",
       "idcc": 3239,
@@ -7030,7 +7031,8 @@
     },
     {
       "criteria": {
-        "ancienneté": "106| Enfant accueilli de 3 mois à moins d'un an"
+        "ancienneté": "106| Enfant accueilli de 3 mois à moins d'un an",
+        "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
       },
       "type": "préavis de Démission",
       "idcc": 3239,
@@ -7043,7 +7045,8 @@
     },
     {
       "criteria": {
-        "ancienneté": "107| Enfant accueilli depuis 1 an et plus"
+        "ancienneté": "107| Enfant accueilli depuis 1 an et plus",
+        "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
       },
       "type": "préavis de Démission",
       "idcc": 3239,
@@ -7056,7 +7059,8 @@
     },
     {
       "criteria": {
-        "ancienneté": "38| Moins de 2 ans"
+        "ancienneté": "38| Moins de 2 ans",
+        "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
       },
       "type": "préavis de Licenciement",
       "idcc": 2420,
