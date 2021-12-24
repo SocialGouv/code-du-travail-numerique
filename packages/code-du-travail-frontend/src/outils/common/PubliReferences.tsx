@@ -14,22 +14,20 @@ const PubliReferences: React.FC<Props> = ({ references }) => (
       <>
         <SectionTitle>Sources</SectionTitle>
         <ul>
-          {references.map(({ article, url }, id) => (
-            <>
-              {article && (
-                <li key={`${url}-${id}`}>
-                  <A11yLink
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={`Consultez l’${article.toLowerCase()}`}
-                  >
-                    {article}
-                  </A11yLink>
-                </li>
-              )}
-            </>
-          ))}
+          {references
+            .filter(({ article }) => article !== null)
+            .map(({ article, url }, id) => (
+              <li key={`${url}-${id}`}>
+                <A11yLink
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`Consultez l’${article.toLowerCase()}`}
+                >
+                  {article}
+                </A11yLink>
+              </li>
+            ))}
         </ul>
       </>
     )}
