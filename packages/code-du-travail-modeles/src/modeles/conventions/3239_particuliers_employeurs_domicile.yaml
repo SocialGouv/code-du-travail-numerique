@@ -32,7 +32,7 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
     Article 162-4-1: ""
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle . assistantes maternelle:
-  applicable si: catégorie professionnelle = 'Salariés du particulier employeur'
+  applicable si: catégorie professionnelle = 'Assistants maternels du particulier employeur'
   remplace: préavis de retraite collective
   grille:
     assiette: ancienneté
