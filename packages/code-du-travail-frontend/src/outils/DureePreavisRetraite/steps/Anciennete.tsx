@@ -17,6 +17,9 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
       &nbsp;?
     </>
   );
+  const [seniorityLabel, setSeniorityLabel] = useState(
+    "Quelle est l'ancienneté du salarié dans l’entreprise en mois ?"
+  );
 
   useEffect(() => {
     if (
@@ -32,6 +35,18 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
         </>
       );
       form.change("seniorityValue", SeniorityMaximum.GREATER_THAN_5_YEARS);
+    } else if (
+      form.getState().values.ccn &&
+      form.getState().values.ccn.num === 3239 &&
+      form.getState().values.infos[
+        "contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle"
+      ] === "'Assistants maternels du particulier employeur'"
+    ) {
+      setQuestion(
+        <>Gardez-vous le ou les enfants depuis plus d&apos;un an ?</>
+      );
+      setSeniorityLabel("Depuis combien de temps gardez-vous le ou les ?");
+      form.change("seniorityValue", SeniorityMaximum.GREATER_THAN_1_YEAR);
     } else {
       setQuestion(
         <>
@@ -71,7 +86,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
       {form.getState().values.seniorityMaximum === false && (
         <TextQuestion
           name="contrat salarié - ancienneté"
-          label="Quelle est l'ancienneté du salarié dans l’entreprise en mois&nbsp;?"
+          label={seniorityLabel}
           inputType="number"
           validate={isPositiveNumber}
           validateOnChange
