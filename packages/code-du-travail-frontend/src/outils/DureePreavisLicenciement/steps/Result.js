@@ -11,7 +11,11 @@ import {
   getSituationsFor,
   recapSituation,
 } from "../../common/situations.utils";
-import { HighlightResult, SectionTitle } from "../../common/stepStyles";
+import {
+  HighlightResult,
+  SectionTitle,
+  SmallText,
+} from "../../common/stepStyles";
 import { formatRefs } from "../../publicodes/Utils";
 import DisclaimerText from "./DisclaimerText";
 
@@ -47,12 +51,12 @@ function DurationResult({ duration, durationCC, durationCDT, note }) {
         À partir des éléments que vous avez saisis, la durée du préavis de
         licenciement est estimée à :{" "}
         <HighlightResult>{duration}</HighlightResult>
-        {note && <span>{"*"}</span>}.
+        {note && <sup>*</sup>}.
       </p>
       {note && (
-        <p>
-          {"* "} <i>{note}</i>
-        </p>
+        <SmallText>
+          <sup>*</sup> {note}
+        </SmallText>
       )}
     </>
   );
