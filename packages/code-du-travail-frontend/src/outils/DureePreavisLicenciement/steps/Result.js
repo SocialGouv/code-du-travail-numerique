@@ -149,7 +149,7 @@ function StepResult({ form }) {
         duration={duration}
         durationCC={durationCC}
         durationCDT={durationCDT}
-        note={situationCC.note}
+        note={situationCC?.note}
       />
 
       <ShowDetails>
