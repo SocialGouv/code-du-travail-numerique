@@ -17,7 +17,7 @@ import DisclaimerText from "./DisclaimerText";
 
 const { situations: allSituations } = data;
 
-function DurationResult({ duration, durationCC, durationCDT }) {
+function DurationResult({ duration, durationCC, durationCDT, note }) {
   if (parseInt(durationCDT, 10) === 0) {
     if (durationCC === undefined) {
       return (
@@ -42,11 +42,19 @@ function DurationResult({ duration, durationCC, durationCDT }) {
     }
   }
   return (
-    <p>
-      À partir des éléments que vous avez saisis, la durée du préavis de
-      licenciement est estimée à : <HighlightResult>{duration}</HighlightResult>
-      .
-    </p>
+    <>
+      <p>
+        À partir des éléments que vous avez saisis, la durée du préavis de
+        licenciement est estimée à :{" "}
+        <HighlightResult>{duration}</HighlightResult>
+        {note && <span>{"*"}</span>}.
+      </p>
+      {note && (
+        <p>
+          {"* "} <i>{note}</i>
+        </p>
+      )}
+    </>
   );
 }
 
@@ -141,6 +149,7 @@ function StepResult({ form }) {
         duration={duration}
         durationCC={durationCC}
         durationCDT={durationCDT}
+        note={situationCC.note}
       />
 
       <ShowDetails>

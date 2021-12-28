@@ -71,12 +71,19 @@ function StepResult({ form }) {
       <p>
         À partir des éléments que vous avez saisis, la durée du préavis de
         démission est estimée à&nbsp;:{" "}
-        <HighlightResult>{situation.answer}</HighlightResult>.
+        <HighlightResult>{situation.answer}</HighlightResult>
+        {situation.note && <span>{"*"}</span>}.
       </p>
       {parseInt(situation.answer3, 10) === 0 && (
         <p>
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.
+        </p>
+      )}
+
+      {situation.note && (
+        <p>
+          {"* "} <i>{situation.note}</i>
         </p>
       )}
 
