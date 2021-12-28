@@ -13,9 +13,17 @@ export const htmlParser = (html: string): string => {
       : $(this).html();
   });
 
-  $("a").each(() => {
-    const content = decodeURIComponent($(this).text());
-    $(this).text(content);
+  // FIXME: Admin regex
+  $("webcomponent-tooltip").each(function (_i, elem) {
+    const text = $(elem).text();
+    if (text === "1") {
+      $(elem).replaceWith(text);
+    }
+  });
+
+  $("a").each(function (_i, elem) {
+    const content = decodeURIComponent($(elem).text());
+    $(elem).text(content);
   });
 
   return $.html();
