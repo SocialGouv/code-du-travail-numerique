@@ -313,11 +313,7 @@ exports[`<CallToActionTile /> should render 1`] = `
         <div
           class="c10"
         >
-<<<<<<< HEAD
-          <button
-=======
           <span
->>>>>>> master
             class="c11 c12"
           >
             Bonjour
@@ -333,11 +329,7 @@ exports[`<CallToActionTile /> should render 1`] = `
                 fill="currentColor"
               />
             </svg>
-<<<<<<< HEAD
-          </button>
-=======
           </span>
->>>>>>> master
         </div>
       </div>
     </div>

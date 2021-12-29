@@ -5,7 +5,7 @@ exports[`<Html /> should render 1`] = `
   <div
     class=""
   >
-    <b>
+    <strong>
       Hello
     </strong>
      World
