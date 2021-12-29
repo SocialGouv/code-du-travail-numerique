@@ -47,6 +47,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   margin: 0;
 }
 
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c8 {
   max-height: 0px;
   opacity: 0;
@@ -150,7 +156,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -595,7 +601,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         class="c14"
       >
         <p
-          class="c15"
+          class="c15 c16"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -665,6 +671,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   font-size: 1.8rem;
   font-weight: 600;
   margin: 0;
+}
+
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -770,7 +782,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1204,7 +1216,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         class="c14"
       >
         <p
-          class="c15"
+          class="c15 c16"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -1277,6 +1289,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   font-size: 1.8rem;
   font-weight: 600;
   margin: 0;
+}
+
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -1382,7 +1400,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1827,7 +1845,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         class="c14"
       >
         <p
-          class="c15"
+          class="c15 c16"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -1900,6 +1918,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   font-size: 1.8rem;
   font-weight: 600;
   margin: 0;
+}
+
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -2005,7 +2029,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -2439,7 +2463,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         class="c14"
       >
         <p
-          class="c15"
+          class="c15 c16"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -2512,6 +2536,12 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   font-size: 1.8rem;
   font-weight: 600;
   margin: 0;
+}
+
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -2617,7 +2647,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -3051,7 +3081,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         class="c14"
       >
         <p
-          class="c15"
+          class="c15 c16"
         >
           Attention il peut exister un montant plus favorable
         </p>

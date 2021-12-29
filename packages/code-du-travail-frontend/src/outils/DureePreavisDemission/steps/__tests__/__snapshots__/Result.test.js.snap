@@ -47,6 +47,12 @@ exports[`<StepResult /> should render CC answer 1`] = `
   margin: 0;
 }
 
+.c14 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c8 {
   max-height: 0px;
   opacity: 0;
@@ -123,7 +129,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
   margin-top: 3.2rem;
 }
 
-.c14 {
+.c15 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -307,7 +313,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
         class="c13"
       >
         <p
-          class="c14"
+          class="c14 c15"
         >
           Attention il peut exister une autre durée de préavis
         </p>
@@ -337,6 +343,12 @@ exports[`<StepResult /> should render with no cc 1`] = `
 
 .c3 > *:last-child {
   margin-bottom: 0;
+}
+
+.c8 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c5 {
@@ -379,7 +391,7 @@ exports[`<StepResult /> should render with no cc 1`] = `
   margin-top: 3.2rem;
 }
 
-.c8 {
+.c9 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -474,7 +486,7 @@ exports[`<StepResult /> should render with no cc 1`] = `
         class="c7"
       >
         <p
-          class="c8"
+          class="c8 c9"
         >
           Attention il peut exister une autre durée de préavis
         </p>
@@ -524,6 +536,12 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
   margin-bottom: 0;
 }
 
+.c8 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -564,7 +582,7 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
   margin-top: 3.2rem;
 }
 
-.c8 {
+.c9 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -668,7 +686,7 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
         class="c7"
       >
         <p
-          class="c8"
+          class="c8 c9"
         >
           Attention il peut exister une autre durée de préavis
         </p>

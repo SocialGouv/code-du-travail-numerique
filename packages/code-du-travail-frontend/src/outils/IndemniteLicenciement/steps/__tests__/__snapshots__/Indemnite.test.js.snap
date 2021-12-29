@@ -47,6 +47,12 @@ exports[`<StepIndemnite /> should render 1`] = `
   margin: 0;
 }
 
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c8 {
   max-height: 0px;
   opacity: 0;
@@ -123,7 +129,7 @@ exports[`<StepIndemnite /> should render 1`] = `
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -578,7 +584,7 @@ exports[`<StepIndemnite /> should render 1`] = `
         class="c14"
       >
         <p
-          class="c15"
+          class="c15 c16"
         >
           Attention il peut exister un montant plus favorable
         </p>

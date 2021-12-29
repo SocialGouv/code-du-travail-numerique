@@ -47,6 +47,12 @@ exports[`<StepResult /> should render no results 1`] = `
   margin: 0;
 }
 
+.c12 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c6 {
   max-height: 0px;
   opacity: 0;
@@ -123,7 +129,7 @@ exports[`<StepResult /> should render no results 1`] = `
   margin-top: 3.2rem;
 }
 
-.c12 {
+.c13 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -279,7 +285,7 @@ exports[`<StepResult /> should render no results 1`] = `
         class="c11"
       >
         <p
-          class="c12"
+          class="c12 c13"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -337,6 +343,12 @@ exports[`<StepResult /> should render with duration 1`] = `
   font-size: 1.8rem;
   font-weight: 600;
   margin: 0;
+}
+
+.c14 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -415,7 +427,7 @@ exports[`<StepResult /> should render with duration 1`] = `
   margin-top: 3.2rem;
 }
 
-.c14 {
+.c15 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -604,7 +616,7 @@ exports[`<StepResult /> should render with duration 1`] = `
         class="c13"
       >
         <p
-          class="c14"
+          class="c14 c15"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -669,6 +681,12 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   font-size: 1.8rem;
   font-weight: 600;
   margin: 0;
+}
+
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c9 {
@@ -747,7 +765,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -910,7 +928,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         class="c14"
       >
         <p
-          class="c15"
+          class="c15 c16"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -975,6 +993,12 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   font-size: 1.8rem;
   font-weight: 600;
   margin: 0;
+}
+
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c9 {
@@ -1053,7 +1077,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1225,7 +1249,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         class="c14"
       >
         <p
-          class="c15"
+          class="c15 c16"
         >
           Attention il peut exister une durée plus favorable
         </p>
