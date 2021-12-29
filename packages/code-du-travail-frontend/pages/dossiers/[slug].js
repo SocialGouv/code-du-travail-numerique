@@ -20,7 +20,6 @@ import styled from "styled-components";
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
-import EventTracker from "../../src/lib/tracking/EventTracker";
 
 const { breakpoints, fonts, spacings } = theme;
 
@@ -132,7 +131,6 @@ const Category = ({ id, icon, title, shortTitle, refs = [] }) => {
           </Li>
         ))}
       </ViewMore>
-      <EventTracker />
     </StyledWrapper>
   );
 };
