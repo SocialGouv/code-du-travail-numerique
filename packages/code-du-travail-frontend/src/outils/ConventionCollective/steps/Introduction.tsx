@@ -41,7 +41,7 @@ const IntroductionStep = (): JSX.Element => {
               trackEvent("cc_search_type_of_users", " click_p1", title, uuid)
             }
           >
-            <Paragraph noMarginfontWeight="700">
+            <Paragraph noMargin fontWeight="700">
               Je connais
               <br /> ma convention collective
             </Paragraph>
