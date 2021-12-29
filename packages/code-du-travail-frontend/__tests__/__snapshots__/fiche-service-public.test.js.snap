@@ -89,7 +89,7 @@ exports[`<FicheSP /> should render 1`] = `
 
 .c27 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;

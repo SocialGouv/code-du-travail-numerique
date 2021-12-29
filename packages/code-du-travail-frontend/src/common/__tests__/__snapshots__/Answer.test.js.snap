@@ -895,13 +895,15 @@ exports[`<Answer /> should renders 1`] = `
             <div
               class="c21 c22"
             >
-              <p
-                class="c23"
+              <div
+                class=""
               >
                 intro de l'article
               </p>
             </div>
-            <div>
+            <div
+              class=""
+            >
               <p
                 class="test-content"
               >
@@ -2228,13 +2230,15 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             <div
               class="c31 c32"
             >
-              <p
-                class="c33"
+              <div
+                class=""
               >
                 intro de l'article
               </p>
             </div>
-            <div>
+            <div
+              class=""
+            >
               <p
                 class="test-content"
               >
@@ -3311,13 +3315,15 @@ exports[`<Answer /> should renders back to results link 1`] = `
             <div
               class="c21 c22"
             >
-              <p
-                class="c23"
+              <div
+                class=""
               >
                 intro de l'article
               </p>
             </div>
-            <div>
+            <div
+              class=""
+            >
               <p
                 class="test-content"
               >
@@ -4508,13 +4514,15 @@ exports[`<Answer /> should renders related content 1`] = `
             <div
               class="c21 c22"
             >
-              <p
-                class="c23"
+              <div
+                class=""
               >
                 intro de l'article
               </p>
             </div>
-            <div>
+            <div
+              class=""
+            >
               <p
                 class="test-content"
               >
@@ -5750,13 +5758,15 @@ exports[`<Answer /> should renders tooltip 1`] = `
             <div
               class="c21 c22"
             >
-              <p
-                class="c23"
+              <div
+                class=""
               >
                 intro de l'article
               </p>
             </div>
-            <div>
+            <div
+              class=""
+            >
               <p
                 class="test-content"
               >
@@ -6834,13 +6844,15 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             <div
               class="c21 c22"
             >
-              <p
-                class="c23"
+              <div
+                class=""
               >
                 intro de l'article
               </p>
             </div>
-            <div>
+            <div
+              class=""
+            >
               <p
                 class="test-content"
               >
@@ -7918,13 +7930,15 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             <div
               class="c21 c22"
             >
-              <p
-                class="c23"
+              <div
+                class=""
               >
                 intro de l'article
               </p>
             </div>
-            <div>
+            <div
+              class=""
+            >
               <p
                 class="test-content"
               >
@@ -9003,13 +9017,15 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             <div
               class="c21 c22"
             >
-              <p
-                class="c23"
+              <div
+                class=""
               >
                 intro de l'article
               </p>
             </div>
-            <div>
+            <div
+              class=""
+            >
               <p
                 class="test-content"
               >

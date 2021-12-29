@@ -134,6 +134,11 @@ function StepInfoCCn({
                   }}
                 >
                   {input.value.shortTitle}
+                  {input.value.highlight && (
+                    <Paragraph variant="altText">
+                      {input.value.highlight.searchInfo}
+                    </Paragraph>
+                  )}
                 </Toast>
                 <p>Cliquez sur Suivant pour poursuivre la simulation.</p>
                 {error && <ErrorToast>{error}</ErrorToast>}

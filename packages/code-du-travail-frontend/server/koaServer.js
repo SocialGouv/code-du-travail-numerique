@@ -40,7 +40,6 @@ async function getKoaServer({ nextApp }) {
         "https://mon-entreprise.urssaf.fr",
         "https://matomo.fabrique.social.gouv.fr",
         "*.dailymotion.com",
-        "*.doubleclick.net",
       ],
       imgSrc: [
         "'self'",
@@ -49,17 +48,12 @@ async function getKoaServer({ nextApp }) {
         "https://travail-emploi.gouv.fr",
         "https://mon-entreprise.urssaf.fr",
         AZURE_BASE_URL,
-        "*.doubleclick.net",
-        "*.xiti.com",
       ],
       scriptSrc: [
         "'self'",
         "https://mon-entreprise.urssaf.fr",
         "*.fabrique.social.gouv.fr",
         "https://cdnjs.cloudflare.com",
-        "https://www.googletagmanager.com",
-        "'unsafe-inline'",
-        "*.doubleclick.net",
       ],
       styleSrc: ["'self'", "'unsafe-inline'"],
       ...(process.env.NEXT_PUBLIC_SENTRY_DSN && {
@@ -68,7 +62,10 @@ async function getKoaServer({ nextApp }) {
     },
   };
   if (dev) {
+    // handle local csp
     server.use(bodyParser());
+    cspConfig.directives.defaultSrc.push("http://127.0.0.1:*/");
+    cspConfig.directives.defaultSrc.push("http://localhost:*/");
     cspConfig.directives.scriptSrc.push("'unsafe-eval'");
   }
   server.use(helmet.contentSecurityPolicy(cspConfig));

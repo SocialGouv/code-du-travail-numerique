@@ -7,6 +7,8 @@ import {
   Button,
   Container,
   Heading,
+  Paragraph,
+  Text,
   theme,
   Tile,
   Title,
@@ -31,6 +33,7 @@ export const ListLink = ({
     slug,
     title,
     url,
+    highlight,
   },
   showTheme = true,
   query,
@@ -45,7 +48,18 @@ export const ListLink = ({
   }
 
   const tileCommonProps = {
-    children: <p>{summarize(description)}</p>,
+    children: (
+      <Paragraph noMargin>
+        {highlight && highlight.searchInfo && (
+          <>
+            <StyledText>{highlight.searchInfo}</StyledText>
+            <br />
+            <br />
+          </>
+        )}
+        {summarize(description)}
+      </Paragraph>
+    ), //TODO
     onClick: () => reportSelectionToMatomo(source, slug, url, algo),
     onKeyPress: (e) =>
       e.keyCode === 13 && reportSelectionToMatomo(source, slug, url, algo),
@@ -157,7 +171,7 @@ export const Results = ({ id, isSearch, items, query }) => {
   );
 };
 
-const { breakpoints, spacings } = theme;
+const { breakpoints, spacings, colors } = theme;
 
 const StyledListItem = styled.li`
   margin-bottom: ${spacings.medium};
@@ -169,4 +183,8 @@ const StyledButton = styled(Button)`
   @media (max-width: ${breakpoints.mobile}) {
     flex: 1 0 auto;
   }
+`;
+
+const StyledText = styled(Text)`
+  color: ${colors.secondary};
 `;

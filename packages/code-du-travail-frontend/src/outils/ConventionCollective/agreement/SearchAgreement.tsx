@@ -1,9 +1,7 @@
 import React, { ForwardedRef, useState } from "react";
 
-import {
-  Agreement,
-  searchAgreements,
-} from "../../../conventions/Search/api/agreements.service";
+import { searchAgreements } from "../../../conventions/Search/api/agreements.service";
+import { Agreement } from "../../../conventions/Search/api/type";
 import { createSuggesterHook, FetchReducerState } from "../common/Suggester";
 import { useTrackingContext } from "../common/TrackingContext";
 import { SearchAgreementInput } from "./SearchAgreementInput";
