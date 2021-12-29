@@ -177,10 +177,10 @@ const Contribution = ({ answers, content }) => {
               <>
                 {!isConventionalAnswer && (
                   <>
-                    <StyledDiv>
+                    <StyledParagraph noMargin>
                       Ce contenu est personnalisé avec les informations de la
                       convention collective&nbsp;:
-                    </StyledDiv>
+                    </StyledParagraph>
                     <Toast variant="secondary" onRemove={() => setConvention()}>
                       {convention.shortTitle}
                       {convention.highlight && convention.highlight.searchInfo && (
@@ -281,7 +281,7 @@ const CustomWrapper = styled(Wrapper)`
   }
 `;
 
-const StyledDiv = styled.div`
+const StyledParagraph = styled(Paragraph)`
   margin-bottom: ${spacings.tiny};
 `;
 
