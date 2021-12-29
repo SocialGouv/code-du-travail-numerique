@@ -179,7 +179,7 @@ const Contribution = ({ answers, content }) => {
                   <>
                     <StyledDiv>
                       Ce contenu est personnalisé avec les informations de la
-                      convention collective:
+                      convention collective&nbsp;:
                     </StyledDiv>
                     <Toast variant="secondary" onRemove={() => setConvention()}>
                       {convention.shortTitle}
