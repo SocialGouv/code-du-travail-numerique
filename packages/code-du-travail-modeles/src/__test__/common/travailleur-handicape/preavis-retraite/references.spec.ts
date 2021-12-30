@@ -1,11 +1,11 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
-import { getReferences } from "../../../utils/GetReferences";
+import { mergeModels } from "../../../../internal/merger";
+import { getReferences } from "../../../../utils/GetReferences";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
-} from "../../common/legal-references";
+} from "../../legal-references";
 
 const engine = new Engine(mergeModels());
 
