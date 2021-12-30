@@ -6,6 +6,10 @@ export const htmlParser = (html: string): string => {
   // FIXME: Remove style from docx converter
   $("style").remove();
 
+  // https://travail-emploi.gouv.fr/le-ministere-en-action/coronavirus-covid-19/questions-reponses-par-theme/article/mesures-de-prevention-dans-l-entreprise-contre-la-covid-19
+  $("button").remove();
+  $(".oembed-source").remove();
+
   $("dl").replaceWith(function () {
     const src = $(this).find("source").attr("srcset");
     return src
@@ -13,9 +17,17 @@ export const htmlParser = (html: string): string => {
       : $(this).html();
   });
 
-  $("a").each(() => {
-    const content = decodeURIComponent($(this).text());
-    $(this).text(content);
+  // FIXME: Admin regex
+  $("webcomponent-tooltip").each(function (_i, elem) {
+    const text = $(elem).text();
+    if (text === "1") {
+      $(elem).replaceWith(text);
+    }
+  });
+
+  $("a").each(function (_i, elem) {
+    const content = decodeURIComponent($(elem).text());
+    $(elem).text(content);
   });
 
   return $.html();
