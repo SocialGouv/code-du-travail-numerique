@@ -1,6 +1,6 @@
 {
   "name": "@cdt/api",
-  "version": "4.64.0",
+  "version": "4.65.0",
   "description": "",
   "private": true,
   "main": "dist/index.js",
@@ -37,7 +37,7 @@
     "@koa/cors": "^3.1.0",
     "@socialgouv/cdtn-elasticsearch": "^1.8.10",
     "@socialgouv/cdtn-logger": "^1.8.10",
-    "@socialgouv/cdtn-sources": "^4.64.0",
+    "@socialgouv/cdtn-sources": "^4.65.0",
     "date-fns": "^2.22.1",
     "elastic-apm-node": "^3.17.0",
     "fuzzball": "^2.0.2",
