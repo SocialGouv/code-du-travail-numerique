@@ -45,14 +45,38 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   références:
     Article 120: ""
 
-contrat salarié . convention collective . particuliers employeurs et emploi à domicile . notification de départ à la retraite:
-  applicable si: départ à la retraite
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . notification de départ à la retraite assistante maternelle:
+  applicable si:
+    toutes ces conditions:
+      - départ à la retraite
+      - catégorie professionnelle = 'Assistants maternels du particulier employeur'
   type: notification
-  description: 'Si la lettre de départ à la retraite a été présentée avant le 01/01/2022, la durée de préavis ne correspond pas au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective "Assistants maternels du particulier employeur (IDCC 2395)" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022.'
+  description: 'Si la lettre de départ à la retraite a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective "Assistants maternels du particulier employeur (IDCC 2395)" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022.'
   valeur: oui
 
-contrat salarié . convention collective . particuliers employeurs et emploi à domicile . notification de mise à la retraite:
-  applicable si: mise à la retraite
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . notification de départ à la retraite salarié du particulier employeur:
+  applicable si:
+    toutes ces conditions:
+      - départ à la retraite
+      - catégorie professionnelle = 'Salariés du particulier employeur'
   type: notification
-  description: 'Si la lettre de mise à la retraite a été présentée avant le 01/01/2022, la durée de préavis ne correspond pas au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective "Assistants maternels du particulier employeur (IDCC 2395)" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022.'
+  description: 'Si la lettre de départ à la retraite a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective "Salariés du particulier employeur (IDCC 2111)" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022.'
+  valeur: oui
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . notification de mise à la retraite assistante maternelle:
+  applicable si:
+    toutes ces conditions:
+      - mise à la retraite
+      - catégorie professionnelle = 'Assistants maternels du particulier employeur'
+  type: notification
+  description: 'Si la lettre de mise à la retraite a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective "Assistants maternels du particulier employeur (IDCC 2395)" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022.'
+  valeur: oui
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . notification de mise à la retraite salarié du particulier employeur:
+  applicable si:
+    toutes ces conditions:
+      - mise à la retraite
+      - catégorie professionnelle = 'Salariés du particulier employeur'
+  type: notification
+  description: 'Si la lettre de mise à la retraite a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective "Salariés du particulier employeur (IDCC 2111)" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022.'
   valeur: oui

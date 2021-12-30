@@ -141,32 +141,45 @@ describe("Préavis de retraite de la CC 3239", () => {
 });
 
 describe("Vérification des notifications", () => {
-  test("Pour un salarié en départ à la retraite, une notification doit s'afficher", () => {
-    const notifications = getNotifications(
-      engine.setSituation({
-        "contrat salarié . ancienneté": 5,
-        "contrat salarié . convention collective": "'IDCC3239'",
-        "contrat salarié . mise à la retraite": "non",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
-    expect(notifications).toHaveLength(1);
-    expect(notifications[0].description).toBe(
-      'Si la lettre de départ à la retraite a été présentée avant le 01/01/2022, la durée de préavis ne correspond pas au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective "Assistants maternels du particulier employeur (IDCC 2395)" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022.'
-    );
-  });
-  test("Pour un salarié en mise à la retraite, une notification doit s'afficher", () => {
-    const notifications = getNotifications(
-      engine.setSituation({
-        "contrat salarié . ancienneté": 5,
-        "contrat salarié . convention collective": "'IDCC3239'",
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
-    expect(notifications).toHaveLength(1);
-    expect(notifications[0].description).toBe(
-      'Si la lettre de mise à la retraite a été présentée avant le 01/01/2022, la durée de préavis ne correspond pas au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective "Assistants maternels du particulier employeur (IDCC 2395)" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022.'
-    );
-  });
+  test.each`
+    category                                           | expectedNotification
+    ${"Salariés du particulier employeur"}             | ${'Si la lettre de départ à la retraite a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective "Salariés du particulier employeur (IDCC 2111)" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022.'}
+    ${"Assistants maternels du particulier employeur"} | ${'Si la lettre de départ à la retraite a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective "Assistants maternels du particulier employeur (IDCC 2395)" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022.'}
+  `(
+    "Pour un $category en départ à la retraite, une notification doit s'afficher",
+    ({ category, expectedNotification }) => {
+      const notifications = getNotifications(
+        engine.setSituation({
+          "contrat salarié . ancienneté": 5,
+          "contrat salarié . convention collective": "'IDCC3239'",
+          "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . mise à la retraite": "non",
+          "contrat salarié . travailleur handicapé": "non",
+        })
+      );
+      expect(notifications).toHaveLength(1);
+      expect(notifications[0].description).toBe(expectedNotification);
+    }
+  );
+
+  test.each`
+    category                                           | expectedNotification
+    ${"Salariés du particulier employeur"}             | ${'Si la lettre de mise à la retraite a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective "Salariés du particulier employeur (IDCC 2111)" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022.'}
+    ${"Assistants maternels du particulier employeur"} | ${'Si la lettre de mise à la retraite a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective "Assistants maternels du particulier employeur (IDCC 2395)" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022.'}
+  `(
+    "Pour un salarié en mise à la retraite, une notification doit s'afficher",
+    ({ category, expectedNotification }) => {
+      const notifications = getNotifications(
+        engine.setSituation({
+          "contrat salarié . ancienneté": 5,
+          "contrat salarié . convention collective": "'IDCC3239'",
+          "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . mise à la retraite": "oui",
+          "contrat salarié . travailleur handicapé": "non",
+        })
+      );
+      expect(notifications).toHaveLength(1);
+      expect(notifications[0].description).toBe(expectedNotification);
+    }
+  );
 });
