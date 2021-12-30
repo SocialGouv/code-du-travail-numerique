@@ -135,7 +135,7 @@ exports[`BurgerStyles renders 1`] = `
     >
       <path
         clip-rule="evenodd"
-        d="M7 11a1 1 0 011-1h16a1 1 0 110 2H8a1 1 0 01-1-1zm0 5a1 1 0 011-1h16a1 1 0 110 2H8a1 1 0 01-1-1zm1 4a1 1 0 100 2h16a1 1 0 100-2H8z"
+        d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
         fill="currentColor"
         fill-rule="evenodd"
       />
