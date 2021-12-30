@@ -6978,7 +6978,7 @@
         "ancienneté": "15| Moins de 6 mois",
         "catégorie professionnelle": "100| Salariés du particulier employeur"
       },
-      "type": "préavis de Démission",
+      "type": "préavis de Licenciement",
       "idcc": 3239,
       "typeRupture": null,
       "answer": "1 semaine",
@@ -6993,7 +6993,7 @@
         "ancienneté": "35| 6 mois à 2 ans",
         "catégorie professionnelle": "100| Salariés du particulier employeur"
       },
-      "type": "préavis de Démission",
+      "type": "préavis de Licenciement",
       "idcc": 3239,
       "typeRupture": null,
       "answer": "1 mois",
@@ -7008,7 +7008,7 @@
         "ancienneté": "42| 2 ans ou plus",
         "catégorie professionnelle": "100| Salariés du particulier employeur"
       },
-      "type": "préavis de Démission",
+      "type": "préavis de Licenciement",
       "idcc": 3239,
       "typeRupture": null,
       "answer": "2 mois",
@@ -7023,7 +7023,7 @@
         "ancienneté": "105| Enfant accueilli depuis moins de 3 mois",
         "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
       },
-      "type": "préavis de Démission",
+      "type": "préavis de Licenciement",
       "idcc": 3239,
       "typeRupture": null,
       "answer": "8 jours calendaires",
@@ -7038,7 +7038,7 @@
         "ancienneté": "106| Enfant accueilli de 3 mois à moins d'un an",
         "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
       },
-      "type": "préavis de Démission",
+      "type": "préavis de Licenciement",
       "idcc": 3239,
       "typeRupture": null,
       "answer": "15 jours calendaires",
@@ -7053,7 +7053,7 @@
         "ancienneté": "107| Enfant accueilli depuis 1 an et plus",
         "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
       },
-      "type": "préavis de Démission",
+      "type": "préavis de Licenciement",
       "idcc": 3239,
       "typeRupture": null,
       "answer": "1 mois",

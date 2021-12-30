@@ -2703,8 +2703,8 @@
       "type": "heures pour recherche d'emploi",
       "idcc": 3239,
       "typeRupture": "3| Licenciement",
-      "answer": "2 heures par jour pendant 6 jours ouvrables",
-      "answer2": "Le salaire est maintenu. A défaut d'accord entre l'employeur et le salarié,  les périodes de deux heures sont prises alternativement, un jour au choix du  ou des particuliers employeurs et un jour au choix du salarié.",
+      "answer": null,
+      "answer2": null,
       "answer3": null,
       "ref": null,
       "refUrl": null
@@ -2718,8 +2718,8 @@
       "type": "heures pour recherche d'emploi",
       "idcc": 3239,
       "typeRupture": "3| Licenciement",
-      "answer": null,
-      "answer2": "Le salaire est maintenu. A défaut d'accord entre l'employeur et le salarié,  les périodes de deux heures sont prises alternativement, un jour au choix du  ou des particuliers employeurs et un jour au choix du salarié.",
+      "answer": "2 heures par jour pendant 6 jours ouvrables",
+      "answer2": "Le salaire est maintenu. A défaut d'accord entre l'employeur et le salarié,  les périodes de deux heures sont prises alternativement, un jour au choix du ou des particuliers employeurs et un jour au choix du salarié.",
       "answer3": null,
       "ref": null,
       "refUrl": null
@@ -2733,8 +2733,8 @@
       "type": "heures pour recherche d'emploi",
       "idcc": 3239,
       "typeRupture": "3| Licenciement",
-      "answer": "2 heures par jour pendant 10 jours ouvrables",
-      "answer2": "Le salaire est maintenu. A défaut d'accord entre l'employeur et le salarié,  les périodes de deux heures sont prises alternativement, un jour au choix du  ou des particuliers employeurs et un jour au choix du salarié.",
+      "answer": null,
+      "answer2": "null",
       "answer3": null,
       "ref": null,
       "refUrl": null
@@ -2748,8 +2748,8 @@
       "type": "heures pour recherche d'emploi",
       "idcc": 3239,
       "typeRupture": "3| Licenciement",
-      "answer": null,
-      "answer2": "Le salaire est maintenu. A défaut d'accord entre l'employeur et le salarié,  les périodes de deux heures sont prises alternativement, un jour au choix du  ou des particuliers employeurs et un jour au choix du salarié.",
+      "answer": "2 heures par jour pendant 10 jours ouvrables",
+      "answer2": "Le salaire est maintenu. A défaut d'accord entre l'employeur et le salarié, les périodes de deux heures sont prises alternativement, un jour au choix du ou des particuliers employeurs et un jour au choix du salarié.",
       "answer3": null,
       "ref": null,
       "refUrl": null
