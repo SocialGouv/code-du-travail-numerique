@@ -17,6 +17,9 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
       &nbsp;?
     </>
   );
+  const [seniorityLabel, setSeniorityLabel] = useState(
+    "Quelle est l'ancienneté du salarié dans l’entreprise en mois ?"
+  );
 
   useEffect(() => {
     if (
@@ -71,7 +74,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
       {form.getState().values.seniorityMaximum === false && (
         <TextQuestion
           name="contrat salarié - ancienneté"
-          label="Quelle est l'ancienneté du salarié dans l’entreprise en mois&nbsp;?"
+          label={seniorityLabel}
           inputType="number"
           validate={isPositiveNumber}
           validateOnChange
