@@ -11,6 +11,10 @@ import getConfig from "next/config";
 import React from "react";
 
 import { A11y } from "../src/a11y";
+import {
+  clientSideRedirectMiddleware,
+  serverSideRedirectMiddleware,
+} from "../src/middleware/redirect";
 import { initPiwik } from "../src/piwik";
 import CustomError from "./_error";
 import Custom404 from "./404";
@@ -46,6 +50,7 @@ const {
 export default class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
+    serverSideRedirectMiddleware(ctx.req, ctx.res);
 
     if (Component.getInitialProps) {
       try {
@@ -64,6 +69,7 @@ export default class MyApp extends App {
 
   componentDidMount() {
     initPiwik({ piwikUrl: PIWIK_URL, siteId: PIWIK_SITE_ID });
+    clientSideRedirectMiddleware();
   }
 
   render() {
