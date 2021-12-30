@@ -18,4 +18,37 @@ export const MappingReplacement = [
       },
     ],
   },
+  {
+    id: "3209",
+    rules: [
+      {
+        newValue: "3209",
+        path: ["contribution"],
+        previousValues: ["1375"],
+      },
+      {
+        newValue: "3209-convention-collective-metallurgie-doubs",
+        path: ["convention-collective"],
+        previousValues: ["1375-convention-collective-metallurgie-doubs"],
+      },
+    ],
+  },
+  {
+    id: "3231",
+    rules: [
+      {
+        newValue: "3231",
+        path: ["contribution"],
+        previousValues: ["1809"],
+      },
+      {
+        newValue:
+          "3231-convention-collective-departementale-des-industries-metallurgiques-mecaniq",
+        path: ["convention-collective"],
+        previousValues: [
+          "1809-convention-collective-departementale-des-industries-metallurgiques-mecaniq",
+        ],
+      },
+    ],
+  },
 ];
