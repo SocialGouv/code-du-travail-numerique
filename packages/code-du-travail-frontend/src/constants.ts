@@ -43,7 +43,7 @@ export const MappingReplacement = [
       },
       {
         newValue:
-          "3231-convention-collective-departementale-des-industries-metallurgiques-mecaniq",
+          "3231-convention-collective-territoriale-de-la-metallurgie-du-jura",
         path: ["convention-collective"],
         previousValues: [
           "1809-convention-collective-departementale-des-industries-metallurgiques-mecaniq",
