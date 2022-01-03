@@ -10,13 +10,13 @@ exports[`<SearchResults/> should render results 1`] = `
   max-width: 74rem;
 }
 
-.c23 {
+.c24 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c20 {
+.c21 {
   position: relative;
   margin: 5rem 0;
   padding: 3.2rem 0;
@@ -24,7 +24,7 @@ exports[`<SearchResults/> should render results 1`] = `
   color: #3e486e;
 }
 
-.c21 {
+.c22 {
   position: absolute;
   top: 0;
   right: 30%;
@@ -37,12 +37,12 @@ exports[`<SearchResults/> should render results 1`] = `
   content: "";
 }
 
-.c22 {
+.c23 {
   position: relative;
   z-index: 0;
 }
 
-.c26 {
+.c27 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -55,7 +55,7 @@ exports[`<SearchResults/> should render results 1`] = `
   transform: translateY(-50%);
 }
 
-.c34 {
+.c35 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0;
@@ -79,7 +79,7 @@ exports[`<SearchResults/> should render results 1`] = `
   line-height: 1.625;
 }
 
-.c12 {
+.c13 {
   position: absolute;
   top: 0;
   right: 0;
@@ -90,7 +90,7 @@ exports[`<SearchResults/> should render results 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c12:before {
+.c13:before {
   position: absolute;
   display: block;
   width: 0;
@@ -101,7 +101,7 @@ exports[`<SearchResults/> should render results 1`] = `
   content: "";
 }
 
-.c13 {
+.c14 {
   position: absolute;
   top: 0;
   right: 0;
@@ -110,7 +110,7 @@ exports[`<SearchResults/> should render results 1`] = `
   height: 3rem;
 }
 
-.c17 {
+.c18 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -151,14 +151,14 @@ exports[`<SearchResults/> should render results 1`] = `
   overflow: visible;
 }
 
-.c17:focus,
-.c17:hover,
-.c17:active {
+.c18:focus,
+.c18:hover,
+.c18:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c19 {
+.c20 {
   width: 2.6rem;
   height: 1.4rem;
   margin: 0 0.4rem 0 1rem;
@@ -167,7 +167,7 @@ exports[`<SearchResults/> should render results 1`] = `
   transition: transform 250ms linear;
 }
 
-.c16:hover .c18 {
+.c17:hover .c19 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
@@ -186,13 +186,13 @@ exports[`<SearchResults/> should render results 1`] = `
   list-style-type: none;
 }
 
-.c27 {
+.c28 {
   position: relative;
   overflow: visible;
 }
 
-.c27:before,
-.c27:after {
+.c28:before,
+.c28:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -207,19 +207,19 @@ exports[`<SearchResults/> should render results 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c27:before {
+.c28:before {
   left: -2rem;
 }
 
-.c27:after {
+.c28:after {
   right: -2rem;
 }
 
-.c29 {
+.c30 {
   overflow-x: visible;
 }
 
-.c30 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -246,7 +246,7 @@ exports[`<SearchResults/> should render results 1`] = `
   list-style-type: none;
 }
 
-.c31 {
+.c32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -263,7 +263,7 @@ exports[`<SearchResults/> should render results 1`] = `
   width: calc(100% / 3 - 2 * 1rem - 1px);
 }
 
-.c32 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -342,7 +342,7 @@ exports[`<SearchResults/> should render results 1`] = `
   transform: translateY(-2px);
 }
 
-.c33 {
+.c34 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -383,9 +383,9 @@ exports[`<SearchResults/> should render results 1`] = `
   appearance: none;
 }
 
-.c33:hover,
-.c33:active,
-.c33:focus {
+.c34:hover,
+.c34:active,
+.c34:focus {
   color: #3e486e;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
@@ -414,14 +414,14 @@ exports[`<SearchResults/> should render results 1`] = `
   margin-top: 1rem;
 }
 
-.c24 {
+.c25 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
-.c25 {
+.c26 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -433,7 +433,7 @@ exports[`<SearchResults/> should render results 1`] = `
   text-align: left;
 }
 
-.c14 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -448,13 +448,13 @@ exports[`<SearchResults/> should render results 1`] = `
   height: 100%;
 }
 
-.c11 h2 {
+.c12 h2 {
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
 }
 
-.c15 {
+.c16 {
   margin-top: 1.6rem;
 }
 
@@ -462,6 +462,10 @@ exports[`<SearchResults/> should render results 1`] = `
   margin-bottom: 2rem;
 }
 
+.c11 {
+  margin-top: 0.8rem;
+}
+
 @media (max-width:600px) {
   .c0 {
     padding: 0 1rem;
@@ -476,20 +480,20 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c24 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c23 {
+  .c24 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c21 {
+  .c22 {
     right: 2rem;
   }
 }
@@ -501,89 +505,50 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c18 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c17 {
+  .c18 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     overflow-x: hidden;
   }
 }
 
 @media (max-width:600px) {
-  .c27:before,
-  .c27:after {
+  .c28:before,
+  .c28:after {
     display: block;
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c30 {
     overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c29 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c30 {
+  .c31 {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     margin-right: 0;
     margin-bottom: 2rem;
     margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c31 {
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    min-width: 23rem;
-  }
-
-  .c31:first-of-type {
-    margin-left: 2rem;
-  }
-
-  .c31:last-of-type:after {
-    display: block;
-    width: 2rem;
-    height: 100%;
-    background-color: transparent;
-    content: "";
-  }
-}
-
-@media (max-width:1180px) {
-  .c31 {
-    width: calc( 100% / 2 - 2 * 1rem - 1px );
-  }
-}
-
-@media (max-width:980px) {
-  .c31 {
-    width: calc( 100% / 1 - 2 * 1rem - 1px );
-  }
-}
-
-@media (max-width:600px) {
-  .c31 {
-    width: 80%;
   }
 }
 
@@ -610,18 +575,57 @@ exports[`<SearchResults/> should render results 1`] = `
 
 @media (max-width:1180px) {
   .c32 {
-    width: calc( 100% / 3 - 2 * 1rem - 1px );
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:980px) {
   .c32 {
-    width: calc( 100% / 2 - 2 * 1rem - 1px );
+    width: calc( 100% / 1 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:600px) {
   .c32 {
+    width: 80%;
+  }
+}
+
+@media (max-width:600px) {
+  .c33 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    min-width: 23rem;
+  }
+
+  .c33:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .c33:last-of-type:after {
+    display: block;
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    content: "";
+  }
+}
+
+@media (max-width:1180px) {
+  .c33 {
+    width: calc( 100% / 3 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:980px) {
+  .c33 {
+    width: calc( 100% / 2 - 2 * 1rem - 1px );
+  }
+}
+
+@media (max-width:600px) {
+  .c33 {
     width: 60%;
   }
 }
@@ -634,33 +638,33 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media (max-width:600px) {
-  .c33 {
+  .c34 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c24 {
+  .c25 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c26 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c26 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c11 h2 {
+  .c12 h2 {
     font-size: 1.6rem;
   }
 }
@@ -708,7 +712,7 @@ exports[`<SearchResults/> should render results 1`] = `
             class="c9"
           >
             <p
-              class="c10"
+              class="c10 c11"
             >
               description
             </p>
@@ -719,14 +723,14 @@ exports[`<SearchResults/> should render results 1`] = `
         class="c3"
       >
         <a
-          class="c4 c11"
+          class="c4 c12"
           href="/outils/simulateur-precarite?q=search%20test"
         >
           <div
-            class="c12"
+            class="c13"
           >
             <div
-              class="c13"
+              class="c14"
             >
               <svg
                 aria-hidden="true"
@@ -771,23 +775,23 @@ exports[`<SearchResults/> should render results 1`] = `
             class="c9"
           >
             <div
-              class="c14"
+              class="c15"
             >
               <p
-                class="c10"
+                class="c10 c11"
               >
                 description
               </p>
               <div
-                class="c15"
+                class="c16"
               >
                 <span
-                  class="c16 c17"
+                  class="c17 c18"
                 >
                   Consulter
                   <svg
                     aria-hidden="true"
-                    class="c18 c19"
+                    class="c19 c20"
                     fill="none"
                     viewBox="0 0 28 15"
                     xmlns="http://www.w3.org/2000/svg"
@@ -808,7 +812,7 @@ exports[`<SearchResults/> should render results 1`] = `
       >
         <a
           aria-label="Outils externes telerc description undefined (nouvelle fenêtre)"
-          class="c4 c11 no-after"
+          class="c4 c12 no-after"
           href="https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14"
           rel="noreferer noopener"
           target="_blank"
@@ -835,23 +839,23 @@ exports[`<SearchResults/> should render results 1`] = `
             class="c9"
           >
             <div
-              class="c14"
+              class="c15"
             >
               <p
-                class="c10"
+                class="c10 c11"
               >
                 description
               </p>
               <div
-                class="c15"
+                class="c16"
               >
                 <span
-                  class="c16 c17"
+                  class="c17 c18"
                 >
                   Consulter
                   <svg
                     aria-hidden="true"
-                    class="c18 c19"
+                    class="c19 c20"
                     fill="none"
                     viewBox="0 0 28 15"
                     xmlns="http://www.w3.org/2000/svg"
@@ -871,14 +875,14 @@ exports[`<SearchResults/> should render results 1`] = `
         class="c3"
       >
         <a
-          class="c4 c11"
+          class="c4 c12"
           href="/outils/mer-il-est-fou2?q=search%20test"
         >
           <div
-            class="c12"
+            class="c13"
           >
             <div
-              class="c13"
+              class="c14"
             >
               <svg
                 aria-hidden="true"
@@ -923,23 +927,23 @@ exports[`<SearchResults/> should render results 1`] = `
             class="c9"
           >
             <div
-              class="c14"
+              class="c15"
             >
               <p
-                class="c10"
+                class="c10 c11"
               >
                 description
               </p>
               <div
-                class="c15"
+                class="c16"
               >
                 <span
-                  class="c16 c17"
+                  class="c17 c18"
                 >
                   Consulter
                   <svg
                     aria-hidden="true"
-                    class="c18 c19"
+                    class="c19 c20"
                     fill="none"
                     viewBox="0 0 28 15"
                     xmlns="http://www.w3.org/2000/svg"
@@ -963,10 +967,10 @@ exports[`<SearchResults/> should render results 1`] = `
           href="/contribution/mer-il-est-fou4?q=search%20test"
         >
           <div
-            class="c12"
+            class="c13"
           >
             <div
-              class="c13"
+              class="c14"
             >
               <svg
                 aria-hidden="true"
@@ -1011,7 +1015,7 @@ exports[`<SearchResults/> should render results 1`] = `
             class="c9"
           >
             <p
-              class="c10"
+              class="c10 c11"
             >
               description
             </p>
@@ -1021,40 +1025,40 @@ exports[`<SearchResults/> should render results 1`] = `
     </ul>
   </div>
   <div
-    class="c20"
+    class="c21"
   >
     <div
-      class="c21"
+      class="c22"
     />
     <div
-      class="c22"
+      class="c23"
     >
       <div
-        class="c23"
+        class="c24"
       >
         <div
-          class="c24"
+          class="c25"
         >
           <h2
-            class="c25"
+            class="c26"
           >
             <span
-              class="c26"
+              class="c27"
             />
             Que dit le code du travail ?
           </h2>
         </div>
         <div
-          class="c27 c28"
+          class="c28 c29"
         >
           <div
-            class="c29"
+            class="c30"
           >
             <div
-              class="c30"
+              class="c31"
             >
               <div
-                class="c31"
+                class="c32"
               >
                 <a
                   class="c4"
@@ -1085,38 +1089,38 @@ exports[`<SearchResults/> should render results 1`] = `
           </div>
         </div>
         <div
-          class="c24"
+          class="c25"
         >
           <h2
-            class="c25"
+            class="c26"
           >
             <span
-              class="c26"
+              class="c27"
             />
             Les thèmes suivants peuvent vous intéresser
           </h2>
         </div>
         <div
-          class="c27 c28"
+          class="c28 c29"
         >
           <div
-            class="c29"
+            class="c30"
           >
             <div
-              class="c30"
+              class="c31"
             >
               <div
-                class="c32"
+                class="c33"
               >
                 <a
-                  class="c33"
+                  class="c34"
                   href="/themes/1-contrat?q=search%20test"
                 >
                   <div
                     class="c5"
                   >
                     <span
-                      class="c34"
+                      class="c35"
                     />
                     <div
                       class="c6"
