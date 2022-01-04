@@ -8,12 +8,12 @@ export const MappingReplacement = [
         previousValues: ["2111", "2395"],
       },
       {
-        newValue:
-          "3239-secteur-des-particuliers-employeurs-et-de-lemploi-a-domicile",
+        newValue: "3239-particuliers-employeurs-et-emploi-a-domicile",
         path: ["convention-collective"],
         previousValues: [
           "2111-salaries-du-particulier-employeur",
           "2395-assistants-maternels-du-particulier-employeur",
+          "3239-secteur-des-particuliers-employeurs-et-de-lemploi-a-domicile",
         ],
       },
     ],

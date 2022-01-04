@@ -33,10 +33,10 @@ describe("replaceSlug", () => {
     ${"https://code.travail.gouv.fr/contribution/2111-les-conges-pour-evenements-familiaux?q=m&m=p"}           | ${"https://code.travail.gouv.fr/contribution/3239-les-conges-pour-evenements-familiaux?q=m&m=p"}
     ${"https://code.travail.gouv.fr/contribution/2395-les-conges-pour-evenements-familiaux"}                   | ${"https://code.travail.gouv.fr/contribution/3239-les-conges-pour-evenements-familiaux"}
     ${"https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux"}                     | ${"https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux"}
-    ${"https://code.travail.gouv.fr/convention-collective/2111-salaries-du-particulier-employeur"}             | ${"https://code.travail.gouv.fr/convention-collective/3239-secteur-des-particuliers-employeurs-et-de-lemploi-a-domicile"}
-    ${"https://code.travail.gouv.fr/convention-collective/2111-salaries-du-particulier-employeur?q=test"}      | ${"https://code.travail.gouv.fr/convention-collective/3239-secteur-des-particuliers-employeurs-et-de-lemploi-a-domicile?q=test"}
-    ${"/convention-collective/2111-salaries-du-particulier-employeur?q=test"}                                  | ${"/convention-collective/3239-secteur-des-particuliers-employeurs-et-de-lemploi-a-domicile?q=test"}
-    ${"https://code.travail.gouv.fr/convention-collective/2395-assistants-maternels-du-particulier-employeur"} | ${"https://code.travail.gouv.fr/convention-collective/3239-secteur-des-particuliers-employeurs-et-de-lemploi-a-domicile"}
+    ${"https://code.travail.gouv.fr/convention-collective/2111-salaries-du-particulier-employeur"}             | ${"https://code.travail.gouv.fr/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile"}
+    ${"https://code.travail.gouv.fr/convention-collective/2111-salaries-du-particulier-employeur?q=test"}      | ${"https://code.travail.gouv.fr/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile?q=test"}
+    ${"/convention-collective/2111-salaries-du-particulier-employeur?q=test"}                                  | ${"/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile?q=test"}
+    ${"https://code.travail.gouv.fr/convention-collective/2395-assistants-maternels-du-particulier-employeur"} | ${"https://code.travail.gouv.fr/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile"}
     ${"https://code.travail.gouv.fr/contribution/2395-salaries-du-particulier-employeur"}                      | ${"https://code.travail.gouv.fr/contribution/3239-salaries-du-particulier-employeur"}
   `(
     "should transform $url to this canonical url: $expected",
