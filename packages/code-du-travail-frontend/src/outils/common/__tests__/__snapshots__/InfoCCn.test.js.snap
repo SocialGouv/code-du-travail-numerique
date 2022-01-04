@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
-.c10 {
+.c8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -46,16 +46,10 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c10:focus,
-.c10:hover,
-.c10:active {
+.c8:focus,
+.c8:hover,
+.c8:active {
   color: #f66663;
-}
-
-.c3 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
 }
 
 .c1 {
@@ -64,12 +58,12 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
   font-weight: 400;
 }
 
-.c5 {
+.c3 {
   position: relative;
   display: inline-block;
 }
 
-.c7 {
+.c5 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -91,15 +85,15 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
   appearance: none;
 }
 
-.c7::-webkit-outer-spin-button,
-.c7::-webkit-inner-spin-button {
+.c5::-webkit-outer-spin-button,
+.c5::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c7::-webkit-calendar-picker-indicator {
+.c5::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -112,47 +106,47 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c7:invalid {
+.c5:invalid {
   border-color: #eb5757;
 }
 
-.c7::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c7::-moz-placeholder {
+.c5::-moz-placeholder {
   color: #9298af;
 }
 
-.c7:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c7::placeholder {
+.c5::placeholder {
   color: #9298af;
 }
 
-.c7:focus {
+.c5:focus {
   border-color: #7994d4;
 }
 
-.c7:focus::-webkit-input-placeholder {
+.c5:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c7:focus::-moz-placeholder {
+.c5:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c7:focus:-ms-input-placeholder {
+.c5:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c7:focus::placeholder {
+.c5:focus::placeholder {
   color: transparent;
 }
 
-.c4 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -166,58 +160,54 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
   cursor: pointer;
 }
 
-.c6 {
+.c4 {
   width: 100%;
 }
 
-.c8 {
+.c6 {
   margin-top: 2.4rem;
 }
 
-.c9 {
+.c7 {
   display: block;
   margin-top: 1.6rem;
 }
 
-.c11 {
+.c9 {
   color: #7994d4;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .c0 {
-  display: block;
+  display: inline-block;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.c2 {
-  font-weight: 600 !important;
-  display: inline;
-}
-
 @media (max-width:600px) {
-  .c10 {
+  .c8 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c10 {
+  .c8 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c3 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c5 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
@@ -234,29 +224,24 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
     <label
       class="c0"
     >
-      <p
-        class="c1 c2"
+      Quelle est la convention collective applicable au salarié ?
+      <span
+        class="c1"
       >
-        Quelle est la convention collective applicable au salarié ?
-         
-        <span
-          class="c3"
-        >
-           (obligatoire)
-        </span>
-      </p>
+         (obligatoire)
+      </span>
     </label>
     <label
-      class="c4"
+      class="c2"
       for="convention-search"
     >
       Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
     </label>
     <span
-      class="c5 c6"
+      class="c3 c4"
     >
       <input
-        class="c7"
+        class="c5"
         id="convention-search"
         name="q"
         placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -266,16 +251,16 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
     </span>
     
     <p
-      class="c8"
+      class="c6"
     >
       Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
       <span
-        class="c9"
+        class="c7"
       >
         Consultez
          
         <button
-          class="c10 c11"
+          class="c8 c9"
           type="button"
         >
           notre aide
@@ -291,7 +276,7 @@ exports[`<StepInfoCCnOptionnal /> should render mandatory step 1`] = `
 `;
 
 exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
-.c9 {
+.c7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -336,24 +321,18 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c9:focus,
-.c9:hover,
-.c9:active {
+.c7:focus,
+.c7:hover,
+.c7:active {
   color: #f66663;
 }
 
-.c1 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c4 {
+.c2 {
   position: relative;
   display: inline-block;
 }
 
-.c6 {
+.c4 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -375,15 +354,15 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
   appearance: none;
 }
 
-.c6::-webkit-outer-spin-button,
-.c6::-webkit-inner-spin-button {
+.c4::-webkit-outer-spin-button,
+.c4::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c6::-webkit-calendar-picker-indicator {
+.c4::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -396,47 +375,47 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c6:invalid {
+.c4:invalid {
   border-color: #eb5757;
 }
 
-.c6::-webkit-input-placeholder {
+.c4::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c6::-moz-placeholder {
+.c4::-moz-placeholder {
   color: #9298af;
 }
 
-.c6:-ms-input-placeholder {
+.c4:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c6::placeholder {
+.c4::placeholder {
   color: #9298af;
 }
 
-.c6:focus {
+.c4:focus {
   border-color: #7994d4;
 }
 
-.c6:focus::-webkit-input-placeholder {
+.c4:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c6:focus::-moz-placeholder {
+.c4:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c6:focus:-ms-input-placeholder {
+.c4:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c6:focus::placeholder {
+.c4:focus::placeholder {
   color: transparent;
 }
 
-.c3 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -450,58 +429,54 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
   cursor: pointer;
 }
 
-.c5 {
+.c3 {
   width: 100%;
 }
 
-.c7 {
+.c5 {
   margin-top: 2.4rem;
 }
 
-.c8 {
+.c6 {
   display: block;
   margin-top: 1.6rem;
 }
 
-.c10 {
+.c8 {
   color: #7994d4;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .c0 {
-  display: block;
+  display: inline-block;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.c2 {
-  font-weight: 600 !important;
-  display: inline;
-}
-
 @media (max-width:600px) {
-  .c9 {
+  .c7 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c9 {
+  .c7 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c2 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c4 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
@@ -518,24 +493,19 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
     <label
       class="c0"
     >
-      <p
-        class="c1 c2"
-      >
-        Quelle est la convention collective applicable au salarié ?
-         
-      </p>
+      Quelle est la convention collective applicable au salarié ?
     </label>
     <label
-      class="c3"
+      class="c1"
       for="convention-search"
     >
       Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
     </label>
     <span
-      class="c4 c5"
+      class="c2 c3"
     >
       <input
-        class="c6"
+        class="c4"
         id="convention-search"
         name="q"
         placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -545,16 +515,16 @@ exports[`<StepInfoCCnOptionnal /> should render optionnal step 1`] = `
     </span>
     
     <p
-      class="c7"
+      class="c5"
     >
       Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
       <span
-        class="c8"
+        class="c6"
       >
         Consultez
          
         <button
-          class="c9 c10"
+          class="c7 c8"
           type="button"
         >
           notre aide

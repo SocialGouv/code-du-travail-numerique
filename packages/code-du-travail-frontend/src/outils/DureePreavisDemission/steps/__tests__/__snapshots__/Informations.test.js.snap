@@ -20,19 +20,13 @@ exports[`<StepInformations /> should render 1`] = `
 `;
 
 exports[`<StepInformations /> should render catégorie 1`] = `
-.c5 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
 .c3 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -52,7 +46,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   text-align: center;
 }
 
-.c9 {
+.c7 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -62,7 +56,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   pointer-events: none;
 }
 
-.c8 {
+.c6 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -83,38 +77,34 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   appearance: none;
 }
 
-.c8::-ms-expand {
+.c6::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c8 *::-ms-backdrop,
-.c8 {
+.c6 *::-ms-backdrop,
+.c6 {
   padding-right: 1.6rem;
 }
 
-.c8:invalid {
+.c6:invalid {
   border-color: #eb5757;
 }
 
-.c8:disabled {
+.c6:disabled {
   background-color: #e4e8ef;
 }
 
 .c2 {
-  display: block;
+  display: inline-block;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.c4 {
-  font-weight: 600 !important;
-  display: inline;
-}
-
-.c7 {
+.c5 {
   width: 40rem;
 }
 
@@ -132,7 +122,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c4 {
     width: 100%;
   }
 }
@@ -144,7 +134,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c5 {
     width: 100%;
   }
 }
@@ -162,23 +152,18 @@ exports[`<StepInformations /> should render catégorie 1`] = `
       class="c2"
       for="input-criteria.catégorie professionnelle"
     >
-      <p
-        class="c3 c4"
+      Quelle est la catégorie professionnelle du salarié ?
+      <span
+        class="c3"
       >
-        Quelle est la catégorie professionnelle du salarié ?
-         
-        <span
-          class="c5"
-        >
-           (obligatoire)
-        </span>
-      </p>
+         (obligatoire)
+      </span>
     </label>
     <div
-      class="c6 c7"
+      class="c4 c5"
     >
       <select
-        class="c8"
+        class="c6"
         id="input-criteria.catégorie professionnelle"
         name="criteria.catégorie professionnelle"
       >
@@ -201,7 +186,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="c9"
+        class="c7"
       >
         <svg
           aria-hidden="true"
@@ -235,19 +220,13 @@ exports[`<StepInformations /> should render catégorie 1`] = `
 `;
 
 exports[`<StepInformations /> should render coefficient 1`] = `
-.c5 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
 .c3 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -267,7 +246,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   text-align: center;
 }
 
-.c9 {
+.c7 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -277,7 +256,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   pointer-events: none;
 }
 
-.c8 {
+.c6 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -298,38 +277,34 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   appearance: none;
 }
 
-.c8::-ms-expand {
+.c6::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c8 *::-ms-backdrop,
-.c8 {
+.c6 *::-ms-backdrop,
+.c6 {
   padding-right: 1.6rem;
 }
 
-.c8:invalid {
+.c6:invalid {
   border-color: #eb5757;
 }
 
-.c8:disabled {
+.c6:disabled {
   background-color: #e4e8ef;
 }
 
 .c2 {
-  display: block;
+  display: inline-block;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.c4 {
-  font-weight: 600 !important;
-  display: inline;
-}
-
-.c7 {
+.c5 {
   width: 40rem;
 }
 
@@ -347,7 +322,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c4 {
     width: 100%;
   }
 }
@@ -359,7 +334,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c5 {
     width: 100%;
   }
 }
@@ -377,23 +352,18 @@ exports[`<StepInformations /> should render coefficient 1`] = `
       class="c2"
       for="input-criteria.catégorie professionnelle"
     >
-      <p
-        class="c3 c4"
+      Quelle est la catégorie professionnelle du salarié ?
+      <span
+        class="c3"
       >
-        Quelle est la catégorie professionnelle du salarié ?
-         
-        <span
-          class="c5"
-        >
-           (obligatoire)
-        </span>
-      </p>
+         (obligatoire)
+      </span>
     </label>
     <div
-      class="c6 c7"
+      class="c4 c5"
     >
       <select
-        class="c8"
+        class="c6"
         id="input-criteria.catégorie professionnelle"
         name="criteria.catégorie professionnelle"
       >
@@ -416,7 +386,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="c9"
+        class="c7"
       >
         <svg
           aria-hidden="true"
@@ -453,23 +423,18 @@ exports[`<StepInformations /> should render coefficient 1`] = `
       class="c2"
       for="input-criteria.coefficient"
     >
-      <p
-        class="c3 c4"
+      Quel est le coefficient hiérarchique du salarié ?
+      <span
+        class="c3"
       >
-        Quel est le coefficient hiérarchique du salarié ?
-         
-        <span
-          class="c5"
-        >
-           (obligatoire)
-        </span>
-      </p>
+         (obligatoire)
+      </span>
     </label>
     <div
-      class="c6 c7"
+      class="c4 c5"
     >
       <select
-        class="c8"
+        class="c6"
         id="input-criteria.coefficient"
         name="criteria.coefficient"
       >
@@ -492,7 +457,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="c9"
+        class="c7"
       >
         <svg
           aria-hidden="true"

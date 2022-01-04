@@ -1,4 +1,4 @@
-import { Paragraph, Text, theme } from "@socialgouv/cdtn-ui";
+import { Text, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
@@ -25,10 +25,8 @@ export const Question = ({
   ...otherProps
 }: Props): JSX.Element => (
   <LabelBlock htmlFor={htmlFor} {...otherProps}>
-    <Label isLikeSpan>
-      {children} {required && <Text fontWeight="400">&nbsp;(obligatoire)</Text>}
-    </Label>
-
+    {children}
+    {required && <Text fontWeight="400">&nbsp;(obligatoire)</Text>}
     {tooltip && (
       <InfoBulle
         title={tooltip.help ?? "Plus d'informations"}
@@ -43,17 +41,13 @@ export const Question = ({
 const { breakpoints, fonts, spacings } = theme;
 
 const LabelBlock = styled.label`
-  display: block;
+  display: inline-block;
   margin-top: ${spacings.medium};
   margin-bottom: ${spacings.small};
   font-size: ${fonts.sizes.headings.small};
+  font-weight: 600;
   cursor: ${(props) => (props.as ? "default" : "pointer")};
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};
   }
-`;
-
-const Label = styled(Paragraph)`
-  font-weight: 600 !important;
-  display: inline;
 `;

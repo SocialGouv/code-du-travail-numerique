@@ -69,6 +69,7 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
+  margin: 0;
 }
 
 .c3 {
@@ -112,16 +113,16 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
 }
 
 .c0 {
-  display: block;
+  display: inline-block;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
 .c2 {
-  font-weight: 600 !important;
-  display: inline;
+  margin-bottom: 1rem;
 }
 
 @media (max-width:600px) {
@@ -168,14 +169,11 @@ exports[`<StepInfoCCn /> should render CC infos step 1`] = `
   <label
     class="c0"
   >
-    <p
-      class="c1 c2"
-    >
-      La convention collective
-       
-    </p>
+    La convention collective
   </label>
-  <p>
+  <p
+    class="c1 c2"
+  >
     Vous avez sélectionné la convention collective : 
   </p>
   <div

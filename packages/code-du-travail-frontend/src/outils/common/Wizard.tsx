@@ -167,7 +167,6 @@ function Wizard({
                   icon={icon}
                   duration={duration}
                   stepIndex={stepIndex}
-                  hasFieldset={steps[stepIndex].isForm}
                 />
                 <StepList
                   activeIndex={stepIndex}
@@ -233,10 +232,10 @@ Wizard.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-function WizardTitle({ title, icon, duration, stepIndex, hasFieldset }) {
+function WizardTitle({ title, icon, duration, stepIndex }) {
   const Icon = icons[icon];
   return (
-    <ToolTitle hasFieldset={hasFieldset}>
+    <ToolTitle>
       <StyledTitleBox>
         {Icon && (
           <IconWrapper>
@@ -252,7 +251,6 @@ function WizardTitle({ title, icon, duration, stepIndex, hasFieldset }) {
 
 WizardTitle.propTypes = {
   duration: PropTypes.string,
-  hasFieldset: PropTypes.bool,
   icon: PropTypes.string,
   stepIndex: PropTypes.number,
   title: PropTypes.string.isRequired,
@@ -286,8 +284,7 @@ const ToolTitle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: ${({ hasFieldset }) =>
-    hasFieldset ? spacings.base : spacings.larger};
+  margin-bottom: ${spacings.base};
   padding-bottom: ${spacings.base};
   border-bottom: 1px solid ${({ theme }) => theme.border};
   @media (max-width: ${breakpoints.tablet}) {

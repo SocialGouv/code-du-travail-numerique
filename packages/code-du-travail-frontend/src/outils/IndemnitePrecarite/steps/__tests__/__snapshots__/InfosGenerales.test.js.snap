@@ -1,19 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepInfosGenerales /> should render 1`] = `
-.c3 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
 .c1 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,7 +16,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
   cursor: pointer;
 }
 
-.c4 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -32,7 +26,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
   flex-direction: row;
 }
 
-.c5 {
+.c3 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -53,7 +47,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
   appearance: none;
 }
 
-.c5:before {
+.c3:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -68,26 +62,22 @@ exports[`<StepInfosGenerales /> should render 1`] = `
   content: "";
 }
 
-.c5:checked {
+.c3:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c5:checked:before {
+.c3:checked:before {
   display: block;
 }
 
 .c0 {
-  display: block;
+  display: inline-block;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-weight: 600;
   cursor: pointer;
-}
-
-.c2 {
-  font-weight: 600 !important;
-  display: inline;
 }
 
 @media (max-width:600px) {
@@ -101,47 +91,42 @@ exports[`<StepInfosGenerales /> should render 1`] = `
     <label
       class="c0"
     >
-      <p
-        class="c1 c2"
+      Quel est le type du contrat de travail ?
+      <span
+        class="c1"
       >
-        Quel est le type du contrat de travail ?
-         
-        <span
-          class="c3"
-        >
-           (obligatoire)
-        </span>
-      </p>
+         (obligatoire)
+      </span>
     </label>
     <div
-      class="c4"
+      class="c2"
     >
       <input
-        class="c5"
+        class="c3"
         id="contractType-cdd"
         name="contractType"
         type="radio"
         value="CDD"
       />
       <label
-        class="c6"
+        class="c4"
         for="contractType-cdd"
       >
         Contrat à durée déterminée (CDD)
       </label>
     </div>
     <div
-      class="c4"
+      class="c2"
     >
       <input
-        class="c5"
+        class="c3"
         id="contractType-ci"
         name="contractType"
         type="radio"
         value="CTT"
       />
       <label
-        class="c6"
+        class="c4"
         for="contractType-ci"
       >
         Contrat de travail temporaire (Contrat d’intérim)
@@ -157,19 +142,13 @@ exports[`<StepInfosGenerales /> should render 1`] = `
 `;
 
 exports[`<StepInfosGenerales /> should render with CDD 1`] = `
-.c3 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
 .c1 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -178,7 +157,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   cursor: pointer;
 }
 
-.c4 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -188,7 +167,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   flex-direction: row;
 }
 
-.c5 {
+.c3 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -209,7 +188,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   appearance: none;
 }
 
-.c5:before {
+.c3:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -224,16 +203,16 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   content: "";
 }
 
-.c5:checked {
+.c3:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c5:checked:before {
+.c3:checked:before {
   display: block;
 }
 
-.c8 {
+.c6 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -253,7 +232,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   text-align: center;
 }
 
-.c11 {
+.c9 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -263,7 +242,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   pointer-events: none;
 }
 
-.c10 {
+.c8 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -284,47 +263,43 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   appearance: none;
 }
 
-.c10::-ms-expand {
+.c8::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c10 *::-ms-backdrop,
-.c10 {
+.c8 *::-ms-backdrop,
+.c8 {
   padding-right: 1.6rem;
 }
 
-.c10:invalid {
+.c8:invalid {
   border-color: #eb5757;
 }
 
-.c10:disabled {
+.c8:disabled {
   background-color: #e4e8ef;
 }
 
 .c0 {
-  display: block;
+  display: inline-block;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.c2 {
-  font-weight: 600 !important;
-  display: inline;
-}
-
-.c9 {
+.c7 {
   width: 40rem;
 }
 
-.c7 {
+.c5 {
   margin-bottom: 3.2rem;
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c6 {
     width: 100%;
   }
 }
@@ -336,7 +311,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c7 {
     width: 100%;
   }
 }
@@ -346,77 +321,67 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
     <label
       class="c0"
     >
-      <p
-        class="c1 c2"
+      Quel est le type du contrat de travail ?
+      <span
+        class="c1"
       >
-        Quel est le type du contrat de travail ?
-         
-        <span
-          class="c3"
-        >
-           (obligatoire)
-        </span>
-      </p>
+         (obligatoire)
+      </span>
     </label>
     <div
-      class="c4"
+      class="c2"
     >
       <input
         checked=""
-        class="c5"
+        class="c3"
         id="contractType-cdd"
         name="contractType"
         type="radio"
         value="CDD"
       />
       <label
-        class="c6"
+        class="c4"
         for="contractType-cdd"
       >
         Contrat à durée déterminée (CDD)
       </label>
     </div>
     <div
-      class="c4"
+      class="c2"
     >
       <input
-        class="c5"
+        class="c3"
         id="contractType-ci"
         name="contractType"
         type="radio"
         value="CTT"
       />
       <label
-        class="c6"
+        class="c4"
         for="contractType-ci"
       >
         Contrat de travail temporaire (Contrat d’intérim)
       </label>
     </div>
     <div
-      class="c7"
+      class="c5"
     >
       <label
         class="c0"
         for="input-criteria.cddType"
       >
-        <p
-          class="c1 c2"
+        Quel est le type de CDD ?
+        <span
+          class="c1"
         >
-          Quel est le type de CDD ?
-           
-          <span
-            class="c3"
-          >
-             (obligatoire)
-          </span>
-        </p>
+           (obligatoire)
+        </span>
       </label>
       <div
-        class="c8 c9"
+        class="c6 c7"
       >
         <select
-          class="c10"
+          class="c8"
           id="input-criteria.cddType"
           name="criteria.cddType"
         >
@@ -469,7 +434,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
         </select>
         <div
           aria-hidden="true"
-          class="c11"
+          class="c9"
         >
           <svg
             aria-hidden="true"
@@ -509,19 +474,13 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 `;
 
 exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] = `
-.c3 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
 .c1 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -530,7 +489,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   cursor: pointer;
 }
 
-.c4 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -540,7 +499,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   flex-direction: row;
 }
 
-.c5 {
+.c3 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -561,7 +520,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   appearance: none;
 }
 
-.c5:before {
+.c3:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -576,16 +535,16 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   content: "";
 }
 
-.c5:checked {
+.c3:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c5:checked:before {
+.c3:checked:before {
   display: block;
 }
 
-.c8 {
+.c6 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -605,7 +564,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   text-align: center;
 }
 
-.c11 {
+.c9 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -615,7 +574,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   pointer-events: none;
 }
 
-.c10 {
+.c8 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -636,47 +595,43 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   appearance: none;
 }
 
-.c10::-ms-expand {
+.c8::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c10 *::-ms-backdrop,
-.c10 {
+.c8 *::-ms-backdrop,
+.c8 {
   padding-right: 1.6rem;
 }
 
-.c10:invalid {
+.c8:invalid {
   border-color: #eb5757;
 }
 
-.c10:disabled {
+.c8:disabled {
   background-color: #e4e8ef;
 }
 
 .c0 {
-  display: block;
+  display: inline-block;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.c2 {
-  font-weight: 600 !important;
-  display: inline;
-}
-
-.c9 {
+.c7 {
   width: 40rem;
 }
 
-.c7 {
+.c5 {
   margin-bottom: 3.2rem;
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c6 {
     width: 100%;
   }
 }
@@ -688,7 +643,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c7 {
     width: 100%;
   }
 }
@@ -698,77 +653,67 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
     <label
       class="c0"
     >
-      <p
-        class="c1 c2"
+      Quel est le type du contrat de travail ?
+      <span
+        class="c1"
       >
-        Quel est le type du contrat de travail ?
-         
-        <span
-          class="c3"
-        >
-           (obligatoire)
-        </span>
-      </p>
+         (obligatoire)
+      </span>
     </label>
     <div
-      class="c4"
+      class="c2"
     >
       <input
         checked=""
-        class="c5"
+        class="c3"
         id="contractType-cdd"
         name="contractType"
         type="radio"
         value="CDD"
       />
       <label
-        class="c6"
+        class="c4"
         for="contractType-cdd"
       >
         Contrat à durée déterminée (CDD)
       </label>
     </div>
     <div
-      class="c4"
+      class="c2"
     >
       <input
-        class="c5"
+        class="c3"
         id="contractType-ci"
         name="contractType"
         type="radio"
         value="CTT"
       />
       <label
-        class="c6"
+        class="c4"
         for="contractType-ci"
       >
         Contrat de travail temporaire (Contrat d’intérim)
       </label>
     </div>
     <div
-      class="c7"
+      class="c5"
     >
       <label
         class="c0"
         for="input-criteria.cddType"
       >
-        <p
-          class="c1 c2"
+        Quel est le type de CDD ?
+        <span
+          class="c1"
         >
-          Quel est le type de CDD ?
-           
-          <span
-            class="c3"
-          >
-             (obligatoire)
-          </span>
-        </p>
+           (obligatoire)
+        </span>
       </label>
       <div
-        class="c8 c9"
+        class="c6 c7"
       >
         <select
-          class="c10"
+          class="c8"
           id="input-criteria.cddType"
           name="criteria.cddType"
         >
@@ -821,7 +766,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
         </select>
         <div
           aria-hidden="true"
-          class="c11"
+          class="c9"
         >
           <svg
             aria-hidden="true"
@@ -861,19 +806,13 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
 `;
 
 exports[`<StepInfosGenerales /> should render with CTT 1`] = `
-.c3 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
 .c1 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -882,7 +821,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
   cursor: pointer;
 }
 
-.c4 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -892,7 +831,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
   flex-direction: row;
 }
 
-.c5 {
+.c3 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -913,7 +852,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
   appearance: none;
 }
 
-.c5:before {
+.c3:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -928,29 +867,25 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
   content: "";
 }
 
-.c5:checked {
+.c3:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c5:checked:before {
+.c3:checked:before {
   display: block;
 }
 
 .c0 {
-  display: block;
+  display: inline-block;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.c2 {
-  font-weight: 600 !important;
-  display: inline;
-}
-
-.c7 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -980,48 +915,43 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     <label
       class="c0"
     >
-      <p
-        class="c1 c2"
+      Quel est le type du contrat de travail ?
+      <span
+        class="c1"
       >
-        Quel est le type du contrat de travail ?
-         
-        <span
-          class="c3"
-        >
-           (obligatoire)
-        </span>
-      </p>
+         (obligatoire)
+      </span>
     </label>
     <div
-      class="c4"
+      class="c2"
     >
       <input
-        class="c5"
+        class="c3"
         id="contractType-cdd"
         name="contractType"
         type="radio"
         value="CDD"
       />
       <label
-        class="c6"
+        class="c4"
         for="contractType-cdd"
       >
         Contrat à durée déterminée (CDD)
       </label>
     </div>
     <div
-      class="c4"
+      class="c2"
     >
       <input
         checked=""
-        class="c5"
+        class="c3"
         id="contractType-ci"
         name="contractType"
         type="radio"
         value="CTT"
       />
       <label
-        class="c6"
+        class="c4"
         for="contractType-ci"
       >
         Contrat de travail temporaire (Contrat d’intérim)
@@ -1030,51 +960,46 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     <label
       class="c0"
     >
-      <p
-        class="c1 c2"
+      S’agit-il d’un contrat de mission-formation ?
+      <span
+        class="c1"
       >
-        S’agit-il d’un contrat de mission-formation ?
-         
-        <span
-          class="c3"
-        >
-           (obligatoire)
-        </span>
-      </p>
+         (obligatoire)
+      </span>
     </label>
     <div
-      class="c7"
+      class="c5"
       data-testid="cttFormation"
     >
       <div
-        class="c4"
+        class="c2"
       >
         <input
-          class="c5"
+          class="c3"
           id="cttFormation-oui"
           name="cttFormation"
           type="radio"
           value="true"
         />
         <label
-          class="c6"
+          class="c4"
           for="cttFormation-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c4"
+        class="c2"
       >
         <input
-          class="c5"
+          class="c3"
           id="cttFormation-non"
           name="cttFormation"
           type="radio"
           value="false"
         />
         <label
-          class="c6"
+          class="c4"
           for="cttFormation-non"
         >
           Non
@@ -1084,51 +1009,46 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     <label
       class="c0"
     >
-      <p
-        class="c1 c2"
+      Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave du salarié, cas de force majeure ?
+      <span
+        class="c1"
       >
-        Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave du salarié, cas de force majeure ?
-         
-        <span
-          class="c3"
-        >
-           (obligatoire)
-        </span>
-      </p>
+         (obligatoire)
+      </span>
     </label>
     <div
-      class="c7"
+      class="c5"
       data-testid="ruptureContratFauteGrave"
     >
       <div
-        class="c4"
+        class="c2"
       >
         <input
-          class="c5"
+          class="c3"
           id="ruptureContratFauteGrave-oui"
           name="ruptureContratFauteGrave"
           type="radio"
           value="true"
         />
         <label
-          class="c6"
+          class="c4"
           for="ruptureContratFauteGrave-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c4"
+        class="c2"
       >
         <input
-          class="c5"
+          class="c3"
           id="ruptureContratFauteGrave-non"
           name="ruptureContratFauteGrave"
           type="radio"
           value="false"
         />
         <label
-          class="c6"
+          class="c4"
           for="ruptureContratFauteGrave-non"
         >
           Non
@@ -1138,51 +1058,46 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     <label
       class="c0"
     >
-      <p
-        class="c1 c2"
+      À la fin du contrat d'intérim, le salarié a-t-il été immédiatement embauché en CDI au sein de l'entreprise dans laquelle il effectuait sa mission ?
+      <span
+        class="c1"
       >
-        À la fin du contrat d'intérim, le salarié a-t-il été immédiatement embauché en CDI au sein de l'entreprise dans laquelle il effectuait sa mission ?
-         
-        <span
-          class="c3"
-        >
-           (obligatoire)
-        </span>
-      </p>
+         (obligatoire)
+      </span>
     </label>
     <div
-      class="c7"
+      class="c5"
       data-testid="propositionCDIFinContrat"
     >
       <div
-        class="c4"
+        class="c2"
       >
         <input
-          class="c5"
+          class="c3"
           id="propositionCDIFinContrat-oui"
           name="propositionCDIFinContrat"
           type="radio"
           value="true"
         />
         <label
-          class="c6"
+          class="c4"
           for="propositionCDIFinContrat-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c4"
+        class="c2"
       >
         <input
-          class="c5"
+          class="c3"
           id="propositionCDIFinContrat-non"
           name="propositionCDIFinContrat"
           type="radio"
           value="false"
         />
         <label
-          class="c6"
+          class="c4"
           for="propositionCDIFinContrat-non"
         >
           Non
@@ -1192,51 +1107,46 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     <label
       class="c0"
     >
-      <p
-        class="c1 c2"
+      Le salarié a-t-il refusé la mise en œuvre de la souplesse prévue dans le contrat d’intérim ?
+      <span
+        class="c1"
       >
-        Le salarié a-t-il refusé la mise en œuvre de la souplesse prévue dans le contrat d’intérim ?
-         
-        <span
-          class="c3"
-        >
-           (obligatoire)
-        </span>
-      </p>
+         (obligatoire)
+      </span>
     </label>
     <div
-      class="c7"
+      class="c5"
       data-testid="refusSouplesse"
     >
       <div
-        class="c4"
+        class="c2"
       >
         <input
-          class="c5"
+          class="c3"
           id="refusSouplesse-oui"
           name="refusSouplesse"
           type="radio"
           value="true"
         />
         <label
-          class="c6"
+          class="c4"
           for="refusSouplesse-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c4"
+        class="c2"
       >
         <input
-          class="c5"
+          class="c3"
           id="refusSouplesse-non"
           name="refusSouplesse"
           type="radio"
           value="false"
         />
         <label
-          class="c6"
+          class="c4"
           for="refusSouplesse-non"
         >
           Non

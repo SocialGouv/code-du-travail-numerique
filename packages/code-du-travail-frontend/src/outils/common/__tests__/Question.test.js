@@ -8,23 +8,13 @@ describe("<Question />", () => {
   it("should render question", () => {
     const { container } = render(<Question>ma question</Question>);
     expect(container).toMatchInlineSnapshot(`
-      .c1 {
-        color: #3e486e;
-        font-size: 1.6rem;
-        font-weight: 400;
-      }
-
       .c0 {
-        display: block;
+        display: inline-block;
         margin-top: 2rem;
         margin-bottom: 1rem;
         font-size: 1.8rem;
+        font-weight: 600;
         cursor: pointer;
-      }
-
-      .c2 {
-        font-weight: 600 !important;
-        display: inline;
       }
 
       @media (max-width:600px) {
@@ -37,12 +27,7 @@ describe("<Question />", () => {
         <label
           class="c0"
         >
-          <p
-            class="c1 c2"
-          >
-            ma question
-             
-          </p>
+          ma question
         </label>
       </div>
     `);
@@ -52,12 +37,6 @@ describe("<Question />", () => {
       <Question required>ma question obligatoire</Question>
     );
     expect(container).toMatchInlineSnapshot(`
-      .c3 {
-        color: #3e486e;
-        font-size: 1.6rem;
-        font-weight: 400;
-      }
-
       .c1 {
         color: #3e486e;
         font-size: 1.6rem;
@@ -65,16 +44,12 @@ describe("<Question />", () => {
       }
 
       .c0 {
-        display: block;
+        display: inline-block;
         margin-top: 2rem;
         margin-bottom: 1rem;
         font-size: 1.8rem;
+        font-weight: 600;
         cursor: pointer;
-      }
-
-      .c2 {
-        font-weight: 600 !important;
-        display: inline;
       }
 
       @media (max-width:600px) {
@@ -87,17 +62,12 @@ describe("<Question />", () => {
         <label
           class="c0"
         >
-          <p
-            class="c1 c2"
+          ma question obligatoire
+          <span
+            class="c1"
           >
-            ma question obligatoire
-             
-            <span
-              class="c3"
-            >
-               (obligatoire)
-            </span>
-          </p>
+             (obligatoire)
+          </span>
         </label>
       </div>
     `);

@@ -1,13 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<EchelonChimie /> should render 1`] = `
-.c1 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c4 {
+.c2 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -27,7 +21,7 @@ exports[`<EchelonChimie /> should render 1`] = `
   text-align: center;
 }
 
-.c7 {
+.c5 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -37,7 +31,7 @@ exports[`<EchelonChimie /> should render 1`] = `
   pointer-events: none;
 }
 
-.c6 {
+.c4 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -58,38 +52,34 @@ exports[`<EchelonChimie /> should render 1`] = `
   appearance: none;
 }
 
-.c6::-ms-expand {
+.c4::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c6 *::-ms-backdrop,
-.c6 {
+.c4 *::-ms-backdrop,
+.c4 {
   padding-right: 1.6rem;
 }
 
-.c6:invalid {
+.c4:invalid {
   border-color: #eb5757;
 }
 
-.c6:disabled {
+.c4:disabled {
   background-color: #e4e8ef;
 }
 
 .c0 {
-  display: block;
+  display: inline-block;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.c2 {
-  font-weight: 600 !important;
-  display: inline;
-}
-
-.c3 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -102,12 +92,12 @@ exports[`<EchelonChimie /> should render 1`] = `
   padding: 0;
 }
 
-.c5 {
+.c3 {
   width: 100%;
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c2 {
     width: 100%;
   }
 }
@@ -122,26 +112,21 @@ exports[`<EchelonChimie /> should render 1`] = `
   <label
     class="c0"
   >
-    <p
-      class="c1 c2"
-    >
-      Quel est l’échelon du salarié ?
-      <br />
-      Cette information se trouve sur le bulletin de salaire.
-       
-    </p>
+    Quel est l’échelon du salarié ?
+    <br />
+    Cette information se trouve sur le bulletin de salaire.
   </label>
   <label
-    class="c3"
+    class="c1"
     for="echelon"
   >
     Sélectionnez un échelon
   </label>
   <div
-    class="c4 c5"
+    class="c2 c3"
   >
     <select
-      class="c6"
+      class="c4"
       id="echelon"
       name="echelon"
     >
@@ -267,7 +252,7 @@ exports[`<EchelonChimie /> should render 1`] = `
     </select>
     <div
       aria-hidden="true"
-      class="c7"
+      class="c5"
     >
       <svg
         aria-hidden="true"
@@ -300,13 +285,7 @@ exports[`<EchelonChimie /> should render 1`] = `
 `;
 
 exports[`<EchelonChimie /> should render the selected echelon 1`] = `
-.c1 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c4 {
+.c2 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -326,7 +305,7 @@ exports[`<EchelonChimie /> should render the selected echelon 1`] = `
   text-align: center;
 }
 
-.c7 {
+.c5 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -336,7 +315,7 @@ exports[`<EchelonChimie /> should render the selected echelon 1`] = `
   pointer-events: none;
 }
 
-.c6 {
+.c4 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -357,38 +336,34 @@ exports[`<EchelonChimie /> should render the selected echelon 1`] = `
   appearance: none;
 }
 
-.c6::-ms-expand {
+.c4::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c6 *::-ms-backdrop,
-.c6 {
+.c4 *::-ms-backdrop,
+.c4 {
   padding-right: 1.6rem;
 }
 
-.c6:invalid {
+.c4:invalid {
   border-color: #eb5757;
 }
 
-.c6:disabled {
+.c4:disabled {
   background-color: #e4e8ef;
 }
 
 .c0 {
-  display: block;
+  display: inline-block;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.c2 {
-  font-weight: 600 !important;
-  display: inline;
-}
-
-.c3 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -401,12 +376,12 @@ exports[`<EchelonChimie /> should render the selected echelon 1`] = `
   padding: 0;
 }
 
-.c5 {
+.c3 {
   width: 100%;
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c2 {
     width: 100%;
   }
 }
@@ -421,26 +396,21 @@ exports[`<EchelonChimie /> should render the selected echelon 1`] = `
   <label
     class="c0"
   >
-    <p
-      class="c1 c2"
-    >
-      Quel est l’échelon du salarié ?
-      <br />
-      Cette information se trouve sur le bulletin de salaire.
-       
-    </p>
+    Quel est l’échelon du salarié ?
+    <br />
+    Cette information se trouve sur le bulletin de salaire.
   </label>
   <label
-    class="c3"
+    class="c1"
     for="echelon"
   >
     Sélectionnez un échelon
   </label>
   <div
-    class="c4 c5"
+    class="c2 c3"
   >
     <select
-      class="c6"
+      class="c4"
       id="echelon"
       name="echelon"
     >
@@ -566,7 +536,7 @@ exports[`<EchelonChimie /> should render the selected echelon 1`] = `
     </select>
     <div
       aria-hidden="true"
-      class="c7"
+      class="c5"
     >
       <svg
         aria-hidden="true"

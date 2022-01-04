@@ -1,19 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TypeRemuneration /> should render 1`] = `
-.c3 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
 .c1 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,7 +16,7 @@ exports[`<TypeRemuneration /> should render 1`] = `
   cursor: pointer;
 }
 
-.c4 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -32,7 +26,7 @@ exports[`<TypeRemuneration /> should render 1`] = `
   flex-direction: row;
 }
 
-.c5 {
+.c3 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -53,7 +47,7 @@ exports[`<TypeRemuneration /> should render 1`] = `
   appearance: none;
 }
 
-.c5:before {
+.c3:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -68,26 +62,22 @@ exports[`<TypeRemuneration /> should render 1`] = `
   content: "";
 }
 
-.c5:checked {
+.c3:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c5:checked:before {
+.c3:checked:before {
   display: block;
 }
 
 .c0 {
-  display: block;
+  display: inline-block;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-weight: 600;
   cursor: pointer;
-}
-
-.c2 {
-  font-weight: 600 !important;
-  display: inline;
 }
 
 @media (max-width:600px) {
@@ -100,30 +90,25 @@ exports[`<TypeRemuneration /> should render 1`] = `
   <label
     class="c0"
   >
-    <p
-      class="c1 c2"
+    Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
+    <span
+      class="c1"
     >
-      Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
-       
-      <span
-        class="c3"
-      >
-         (obligatoire)
-      </span>
-    </p>
+       (obligatoire)
+    </span>
   </label>
   <div
-    class="c4"
+    class="c2"
   >
     <input
-      class="c5"
+      class="c3"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
       value="total"
     />
     <label
-      class="c6"
+      class="c4"
       for="typeRemuneration-amount"
     >
       <span>
@@ -136,17 +121,17 @@ exports[`<TypeRemuneration /> should render 1`] = `
     </label>
   </div>
   <div
-    class="c4"
+    class="c2"
   >
     <input
-      class="c5"
+      class="c3"
       id="typeRemuneration-pay"
       name="typeRemuneration"
       type="radio"
       value="mensuel"
     />
     <label
-      class="c6"
+      class="c4"
       for="typeRemuneration-pay"
     >
       <span>

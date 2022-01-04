@@ -39,19 +39,13 @@ exports[`<StepInfo /> should display error if fauteGrave 1`] = `
 `;
 
 exports[`<StepInfo /> should render 1`] = `
-.c3 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
 .c1 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c7 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -60,7 +54,7 @@ exports[`<StepInfo /> should render 1`] = `
   cursor: pointer;
 }
 
-.c5 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -70,7 +64,7 @@ exports[`<StepInfo /> should render 1`] = `
   flex-direction: row;
 }
 
-.c6 {
+.c4 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -91,7 +85,7 @@ exports[`<StepInfo /> should render 1`] = `
   appearance: none;
 }
 
-.c6:before {
+.c4:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -106,29 +100,25 @@ exports[`<StepInfo /> should render 1`] = `
   content: "";
 }
 
-.c6:checked {
+.c4:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c6:checked:before {
+.c4:checked:before {
   display: block;
 }
 
 .c0 {
-  display: block;
+  display: inline-block;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
 .c2 {
-  font-weight: 600 !important;
-  display: inline;
-}
-
-.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -158,50 +148,45 @@ exports[`<StepInfo /> should render 1`] = `
     <label
       class="c0"
     >
-      <p
-        class="c1 c2"
+      Quel est le type du contrat de travail ?
+      <span
+        class="c1"
       >
-        Quel est le type du contrat de travail ?
-         
-        <span
-          class="c3"
-        >
-           (obligatoire)
-        </span>
-      </p>
+         (obligatoire)
+      </span>
     </label>
     <div
-      class="c4"
+      class="c2"
     >
       <div
-        class="c5"
+        class="c3"
       >
         <input
-          class="c6"
+          class="c4"
           id="contrat-cdd"
           name="contrat"
           type="radio"
           value="cdd"
         />
         <label
-          class="c7"
+          class="c5"
           for="contrat-cdd"
         >
           Contrat à durée determiné (CDD) ou contrat d’intérim
         </label>
       </div>
       <div
-        class="c5"
+        class="c3"
       >
         <input
-          class="c6"
+          class="c4"
           id="contrat-cdi"
           name="contrat"
           type="radio"
           value="cdi"
         />
         <label
-          class="c7"
+          class="c5"
           for="contrat-cdi"
         >
           Contrat à durée indeterminé (CDI)
@@ -211,50 +196,45 @@ exports[`<StepInfo /> should render 1`] = `
     <label
       class="c0"
     >
-      <p
-        class="c1 c2"
+      Le licenciement est-il dû à une faute grave (ou lourde) ?
+      <span
+        class="c1"
       >
-        Le licenciement est-il dû à une faute grave (ou lourde) ?
-         
-        <span
-          class="c3"
-        >
-           (obligatoire)
-        </span>
-      </p>
+         (obligatoire)
+      </span>
     </label>
     <div
-      class="c4"
+      class="c2"
     >
       <div
-        class="c5"
+        class="c3"
       >
         <input
-          class="c6"
+          class="c4"
           id="fauteGrave-oui"
           name="fauteGrave"
           type="radio"
           value="true"
         />
         <label
-          class="c7"
+          class="c5"
           for="fauteGrave-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c5"
+        class="c3"
       >
         <input
-          class="c6"
+          class="c4"
           id="fauteGrave-non"
           name="fauteGrave"
           type="radio"
           value="false"
         />
         <label
-          class="c7"
+          class="c5"
           for="fauteGrave-non"
         >
           Non
@@ -264,50 +244,45 @@ exports[`<StepInfo /> should render 1`] = `
     <label
       class="c0"
     >
-      <p
-        class="c1 c2"
+      Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue ?
+      <span
+        class="c1"
       >
-        Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue ?
-         
-        <span
-          class="c3"
-        >
-           (obligatoire)
-        </span>
-      </p>
+         (obligatoire)
+      </span>
     </label>
     <div
-      class="c4"
+      class="c2"
     >
       <div
-        class="c5"
+        class="c3"
       >
         <input
-          class="c6"
+          class="c4"
           id="inaptitude-oui"
           name="inaptitude"
           type="radio"
           value="true"
         />
         <label
-          class="c7"
+          class="c5"
           for="inaptitude-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c5"
+        class="c3"
       >
         <input
-          class="c6"
+          class="c4"
           id="inaptitude-non"
           name="inaptitude"
           type="radio"
           value="false"
         />
         <label
-          class="c7"
+          class="c5"
           for="inaptitude-non"
         >
           Non

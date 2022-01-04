@@ -125,9 +125,9 @@ function StepInfoCCn({
                 <Question required={!isOptional}>
                   La convention collective
                 </Question>
-                <p>
+                <StyledParagraph noMargin>
                   Vous avez sélectionné la convention collective&nbsp;:&nbsp;
-                </p>
+                </StyledParagraph>
                 <Toast
                   variant="secondary"
                   onRemove={(event) => {
@@ -190,4 +190,7 @@ const { spacings } = theme;
 export const ErrorToast = styled(Toast)`
   width: 100%;
   margin-top: ${spacings.medium};
+`;
+const StyledParagraph = styled(Paragraph)`
+  margin-bottom: ${spacings.small};
 `;
