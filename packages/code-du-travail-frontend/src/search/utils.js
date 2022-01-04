@@ -2,8 +2,12 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 
 import { matopush } from "../piwik";
 
-export const summarize = (text = "") =>
-  text.length > 160 ? text.slice(0, text.indexOf(" ", 160)) + "…" : text;
+export const summarize = (text = "") => {
+  const parsedText = text.replace(/<(?:.|\n)*?>/gm, "");
+  return parsedText.length > 160
+    ? parsedText.slice(0, parsedText.indexOf(" ", 160)) + "…"
+    : parsedText;
+};
 
 export const formatUrlMatomo = (source, slug, url) => {
   return source === SOURCES.EXTERNALS

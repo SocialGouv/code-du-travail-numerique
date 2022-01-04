@@ -10,6 +10,9 @@ export const htmlParser = (html: string): string => {
   $("button").remove();
   $(".oembed-source").remove();
 
+  // https://travail-emploi.gouv.fr/emploi-et-insertion/parcours-emploi-competences/cui-cie
+  $(".doc-joint__extension").remove();
+
   $("dl").replaceWith(function () {
     const src = $(this).find("source").attr("srcset");
     return src
