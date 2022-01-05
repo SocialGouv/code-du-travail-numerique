@@ -25,10 +25,5 @@ export const htmlParser = (html: string): string => {
     }
   });
 
-  $("a").each(function (_i, elem) {
-    const content = decodeURIComponent($(elem).text());
-    $(elem).text(content);
-  });
-
   return $.html();
 };
