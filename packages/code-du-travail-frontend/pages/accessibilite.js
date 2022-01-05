@@ -86,10 +86,6 @@ const Accessibilite = () => {
                 d’assistance&nbsp;?
               </li>
               <li>
-                Critère 8.2. Pour chaque page web, le code source généré est-il
-                valide selon le type de document spécifié&nbsp;?
-              </li>
-              <li>
                 Critère 8.7. Dans chaque page web, chaque changement de langue
                 est-il indiqué dans le code source (hors cas
                 particuliers)&nbsp;?
