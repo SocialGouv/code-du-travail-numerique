@@ -407,7 +407,7 @@ exports[`<Layout /> should render 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  padding: 0.4rem 0;
+  padding: 0.8rem 0;
   display: inline-block;
 }
 
@@ -1272,7 +1272,7 @@ exports[`<Layout /> should render 1`] = `
                     class="c42"
                     href="/accessibilite"
                   >
-                    Accessibilité : partiellement conforme
+                    Accessibilité : conforme
                   </a>
                 </li>
                 <li>

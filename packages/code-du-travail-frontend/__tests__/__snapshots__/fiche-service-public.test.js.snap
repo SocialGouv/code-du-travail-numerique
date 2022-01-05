@@ -726,7 +726,7 @@ exports[`<FicheSP /> should render 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  padding: 0.4rem 0;
+  padding: 0.8rem 0;
   display: inline-block;
 }
 
@@ -1908,7 +1908,7 @@ exports[`<FicheSP /> should render 1`] = `
                     class="c62"
                     href="/accessibilite"
                   >
-                    Accessibilité : partiellement conforme
+                    Accessibilité : conforme
                   </a>
                 </li>
                 <li>
