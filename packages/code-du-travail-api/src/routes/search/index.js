@@ -102,7 +102,7 @@ router.get("/search", async (ctx) => {
     if (query_vector) {
       searches[DOCUMENTS_SEM] = [
         { index },
-        getSemBody({ query, query_vector, size, sources }),
+        getSemBody({ query_vector, size, sources }),
       ];
     }
   }
