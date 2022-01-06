@@ -133,7 +133,7 @@ function StepInfoCCn({
                 >
                   {input.value.shortTitle}
                   {input.value.highlight && (
-                    <Paragraph variant="altText">
+                    <Paragraph variant="altText" noMargin>
                       {input.value.highlight.searchInfo}
                     </Paragraph>
                   )}
