@@ -10,7 +10,7 @@ describe("<Question />", () => {
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         display: inline-block;
-        margin-top: 2rem;
+        margin-top: 1rem;
         margin-bottom: 1rem;
         font-size: 1.8rem;
         font-weight: 600;
@@ -45,7 +45,7 @@ describe("<Question />", () => {
 
       .c0 {
         display: inline-block;
-        margin-top: 2rem;
+        margin-top: 1rem;
         margin-bottom: 1rem;
         font-size: 1.8rem;
         font-weight: 600;

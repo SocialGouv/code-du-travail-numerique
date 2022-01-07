@@ -530,7 +530,6 @@ exports[`<Convention /> renders 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .c47 {

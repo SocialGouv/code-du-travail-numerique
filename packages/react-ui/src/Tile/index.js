@@ -148,5 +148,4 @@ const StyledHeading = styled(Heading)`
 const ChildrenWrapper = styled.div`
   flex: 1 1 auto;
   margin-top: ${spacings.small};
-  margin-bottom: ${spacings.small};
 `;

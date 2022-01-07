@@ -42,7 +42,7 @@ const { breakpoints, fonts, spacings } = theme;
 
 const LabelBlock = styled.label`
   display: inline-block;
-  margin-top: ${spacings.medium};
+  margin-top: ${spacings.small};
   margin-bottom: ${spacings.small};
   font-size: ${fonts.sizes.headings.small};
   font-weight: 600;

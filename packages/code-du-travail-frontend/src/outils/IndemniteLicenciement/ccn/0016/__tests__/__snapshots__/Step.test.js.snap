@@ -271,7 +271,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
 
 .c8 {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
   font-weight: 600;
@@ -740,7 +740,7 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
 }
 
 .c0 {
@@ -754,7 +754,7 @@ exports[`<Step /> should ask detail about retirement 1`] = `
 
 .c5 {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
   font-weight: 600;
@@ -1136,7 +1136,7 @@ exports[`<Step /> should render 1`] = `
 
 .c5 {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
   font-weight: 600;

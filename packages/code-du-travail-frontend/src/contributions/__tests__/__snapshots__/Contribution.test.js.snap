@@ -591,11 +591,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           <span
             class="c17"
           />
-          <p
-            class="c8"
-          >
-            Que dit votre convention collective ?
-          </p>
+          Que dit votre convention collective ?
         </h2>
       </div>
       <label
@@ -1231,11 +1227,7 @@ exports[`<Contribution /> should render answer references 1`] = `
           <span
             class="c17"
           />
-          <p
-            class="c8"
-          >
-            Que dit votre convention collective ?
-          </p>
+          Que dit votre convention collective ?
         </h2>
       </div>
       <label
@@ -1871,11 +1863,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           <span
             class="c17"
           />
-          <p
-            class="c8"
-          >
-            Que dit votre convention collective ?
-          </p>
+          Que dit votre convention collective ?
         </h2>
       </div>
       <label
@@ -2511,11 +2499,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
           <span
             class="c17"
           />
-          <p
-            class="c8"
-          >
-            Que dit votre convention collective ?
-          </p>
+          Que dit votre convention collective ?
         </h2>
       </div>
       <label
@@ -3078,11 +3062,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           <span
             class="c14"
           />
-          <p
-            class="c8"
-          >
-            Que dit votre convention collective ?
-          </p>
+          Que dit votre convention collective ?
         </h2>
       </div>
       <label

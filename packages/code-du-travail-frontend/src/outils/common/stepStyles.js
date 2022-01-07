@@ -15,7 +15,7 @@ export const RadioContainer = styled.div`
   flex-direction: ${(props) => (props.direction === "row" ? "row" : "column")};
   align-items: flex-start;
   justify-content: flex-start;
-  margin-bottom: ${spacings.medium};
+  margin-bottom: ${spacings.xsmall};
 `;
 
 export const SectionTitle = styled.h2`

@@ -290,7 +290,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 
 .c4 {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
   font-weight: 600;
@@ -334,7 +334,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
 }
 
 .c0 {
@@ -696,7 +696,7 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
 
 .c4 {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
   font-weight: 600;
@@ -719,7 +719,7 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
 }
 
 .c0 {

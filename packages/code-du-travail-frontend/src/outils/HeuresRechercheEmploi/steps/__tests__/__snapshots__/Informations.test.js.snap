@@ -97,7 +97,7 @@ exports[`<StepInformations /> should render catégorie professionelle 1`] = `
 
 .c2 {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
   font-weight: 600;

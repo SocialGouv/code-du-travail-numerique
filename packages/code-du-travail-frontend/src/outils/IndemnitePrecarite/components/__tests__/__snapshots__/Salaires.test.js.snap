@@ -192,7 +192,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
 
 .c0 {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
   font-weight: 600;
@@ -475,7 +475,7 @@ exports[`<Salaires /> should delete a salaires 1`] = `
 
 .c0 {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
   font-weight: 600;
@@ -746,7 +746,7 @@ exports[`<Salaires /> should render 1`] = `
 
 .c0 {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
   font-weight: 600;

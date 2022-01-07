@@ -2773,11 +2773,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                           <span
                             class="c69"
                           />
-                          <p
-                            class="c60"
-                          >
-                            Que dit votre convention collective ?
-                          </p>
+                          Que dit votre convention collective ?
                         </h2>
                       </div>
                       <label
@@ -6097,11 +6093,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                           <span
                             class="c69"
                           />
-                          <p
-                            class="c60"
-                          >
-                            Que dit votre convention collective ?
-                          </p>
+                          Que dit votre convention collective ?
                         </h2>
                       </div>
                       <label
