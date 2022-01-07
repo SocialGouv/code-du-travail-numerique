@@ -20,7 +20,7 @@ test("Vérification des références juridiques pour un employéen en depart à 
     engine.setSituation({
       "contrat salarié . ancienneté": 6,
       "contrat salarié . convention collective": "'IDCC2941'",
-      "contrat salarié . convention collective .bad . catégorie professionnelle": `'A, B, C ou D'`,
+      "contrat salarié . convention collective . bad . catégorie professionnelle": `'A, B, C ou D'`,
       "contrat salarié . mise à la retraite": "non",
       "contrat salarié . travailleur handicapé": "non",
     })

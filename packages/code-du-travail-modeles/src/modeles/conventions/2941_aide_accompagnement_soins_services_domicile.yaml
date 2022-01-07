@@ -58,7 +58,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle . A 
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D . plus de deux ans:
-  applicable si: ancienneté > 24 mois
+  applicable si: ancienneté >= 25 mois
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D . plus de deux ans . préavis de retaite:
@@ -78,7 +78,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle . E 
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle . E ou F . moins de deux ans:
-  applicable si: ancienneté < 24 mois
+  applicable si: ancienneté < 25 mois
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle . E ou F . moins de deux ans . préavis de retaite:
@@ -94,7 +94,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle . E 
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle . E ou F . plus de deux ans:
-  applicable si: ancienneté >= 24 mois
+  applicable si: ancienneté >= 25 mois
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle . E ou F . plus de deux ans . préavis de retaite:
@@ -114,7 +114,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle . G 
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle . G H ou I . moins de deux ans:
-  applicable si: ancienneté < 24 mois
+  applicable si: ancienneté < 25 mois
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle . G H ou I . moins de deux ans . préavis de retaite:
@@ -130,7 +130,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle . G 
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle . G H ou I . plus de deux ans:
-  applicable si: ancienneté >= 24 mois
+  applicable si: ancienneté >= 25 mois
   valeur: oui
 
 contrat salarié . convention collective . bad . catégorie professionnelle . G H ou I . plus de deux ans . préavis de retaite:
