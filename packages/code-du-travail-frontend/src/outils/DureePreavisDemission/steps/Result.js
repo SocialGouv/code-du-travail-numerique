@@ -11,7 +11,11 @@ import {
   getSituationsFor,
   recapSituation,
 } from "../../common/situations.utils";
-import { HighlightResult, SectionTitle } from "../../common/stepStyles";
+import {
+  HighlightResult,
+  SectionTitle,
+  SmallText,
+} from "../../common/stepStyles";
 import { formatRefs } from "../../publicodes/Utils";
 
 function DisclaimerBox() {
@@ -71,13 +75,20 @@ function StepResult({ form }) {
       <p>
         À partir des éléments que vous avez saisis, la durée du préavis de
         démission est estimée à&nbsp;:{" "}
-        <HighlightResult>{situation.answer}</HighlightResult>.
+        <HighlightResult>{situation.answer}</HighlightResult>
+        {situation.note && <sup>*</sup>}.
       </p>
       {parseInt(situation.answer3, 10) === 0 && (
         <p>
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.
         </p>
+      )}
+
+      {situation.note && (
+        <SmallText>
+          <sup>*</sup> {situation.note}
+        </SmallText>
       )}
 
       <ShowDetails>

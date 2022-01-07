@@ -3507,42 +3507,90 @@
     },
     {
       "criteria": {
-        "ancienneté": "15| Moins de 6 mois"
+        "ancienneté": "15| Moins de 6 mois",
+        "catégorie professionnelle": "100| Salariés du particulier employeur"
       },
       "type": "préavis de Démission",
-      "idcc": 2111,
+      "idcc": 3239,
       "typeRupture": null,
       "answer": "1 semaine",
       "answer2": null,
       "answer3": "7",
-      "ref": "Article 11a",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000005834184&cidTexte=KALITEXT000005672603&dateTexte=29990101&categorieLien=id"
+      "ref": null,
+      "refUrl": null
     },
     {
       "criteria": {
-        "ancienneté": "35| 6 mois à 2 ans"
+        "ancienneté": "35| 6 mois à 2 ans",
+        "catégorie professionnelle": "100| Salariés du particulier employeur"
       },
       "type": "préavis de Démission",
-      "idcc": 2111,
+      "idcc": 3239,
       "typeRupture": null,
       "answer": "2 semaines",
       "answer2": null,
       "answer3": "14",
-      "ref": "Article 11a",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000005834184&cidTexte=KALITEXT000005672603&dateTexte=29990101&categorieLien=id"
+      "ref": null,
+      "refUrl": null
     },
     {
       "criteria": {
-        "ancienneté": "42| 2 ans ou plus"
+        "ancienneté": "42| 2 ans ou plus",
+        "catégorie professionnelle": "100| Salariés du particulier employeur"
       },
       "type": "préavis de Démission",
-      "idcc": 2111,
+      "idcc": 3239,
       "typeRupture": null,
       "answer": "1 mois",
       "answer2": null,
       "answer3": "30",
-      "ref": "Article 11a",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000005834184&cidTexte=KALITEXT000005672603&dateTexte=29990101&categorieLien=id"
+      "ref": null,
+      "refUrl": null
+    },
+    {
+      "criteria": {
+        "ancienneté": "105| Enfant accueilli depuis moins de 3 mois",
+        "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3239,
+      "typeRupture": null,
+      "answer": "8 jours calendaires",
+      "answer2": null,
+      "answer3": "8",
+      "ref": null,
+      "refUrl": null,
+      "note": "Si la lettre de démission a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective \"Assistants maternels du particulier employeur (IDCC 2395)\" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022."
+    },
+    {
+      "criteria": {
+        "ancienneté": "106| Enfant accueilli de 3 mois à moins d'un an",
+        "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3239,
+      "typeRupture": null,
+      "answer": "15 jours calendaires",
+      "answer2": null,
+      "answer3": "15",
+      "ref": null,
+      "refUrl": null,
+      "note": "Si la lettre de démission a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective \"Assistants maternels du particulier employeur (IDCC 2395)\" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022."
+    },
+    {
+      "criteria": {
+        "ancienneté": "107| Enfant accueilli depuis 1 an et plus",
+        "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3239,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": null,
+      "refUrl": null,
+      "note": "Si la lettre de démission a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective \"Assistants maternels du particulier employeur (IDCC 2395)\" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022."
     },
     {
       "criteria": {
@@ -3770,32 +3818,6 @@
       "answer3": "60",
       "ref": "Article 45",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801971&cidTexte=KALITEXT000005658770&dateTexte=20191017"
-    },
-    {
-      "criteria": {
-        "ancienneté": "24| Moins de 1 an"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2395,
-      "typeRupture": null,
-      "answer": "15 jours calendaires",
-      "answer2": null,
-      "answer3": "15",
-      "ref": "article 18 de la convention collective nationale des assistants maternels du par",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=867BC9F600717260E8B27F8B3AB81ACD.tplgfr42s_2?idArticle=KALIARTI000005825552&cidTexte=KALITEXT000005669667&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "ancienneté": "27| Plus de 1 an"
-      },
-      "type": "préavis de Démission",
-      "idcc": 2395,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "article 18 de la convention collective nationale des assistants maternels du par",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=867BC9F600717260E8B27F8B3AB81ACD.tplgfr42s_2?idArticle=KALIARTI000005825552&cidTexte=KALITEXT000005669667&dateTexte=29990101&categorieLien=id"
     },
     {
       "criteria": {

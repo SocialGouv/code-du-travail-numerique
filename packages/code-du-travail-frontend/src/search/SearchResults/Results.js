@@ -8,7 +8,6 @@ import {
   Container,
   Heading,
   Paragraph,
-  Text,
   theme,
   Tile,
   Title,
@@ -49,16 +48,14 @@ export const ListLink = ({
 
   const tileCommonProps = {
     children: (
-      <Paragraph noMargin>
+      <>
         {highlight && highlight.searchInfo && (
-          <>
-            <StyledText>{highlight.searchInfo}</StyledText>
-            <br />
-            <br />
-          </>
+          <Paragraph variant="secondary" noMargin>
+            {highlight.searchInfo}
+          </Paragraph>
         )}
-        {summarize(description)}
-      </Paragraph>
+        <StyledParagraph noMargin>{summarize(description)}</StyledParagraph>
+      </>
     ), //TODO
     onClick: () => reportSelectionToMatomo(source, slug, url, algo),
     onKeyPress: (e) =>
@@ -171,7 +168,7 @@ export const Results = ({ id, isSearch, items, query }) => {
   );
 };
 
-const { breakpoints, spacings, colors } = theme;
+const { breakpoints, spacings } = theme;
 
 const StyledListItem = styled.li`
   margin-bottom: ${spacings.medium};
@@ -185,6 +182,6 @@ const StyledButton = styled(Button)`
   }
 `;
 
-const StyledText = styled(Text)`
-  color: ${colors.secondary};
+const StyledParagraph = styled(Paragraph)`
+  margin-top: ${spacings.xsmall};
 `;
