@@ -19,20 +19,6 @@ contrat salarié . convention collective . coiffure . catégorie professionnelle
       Cadres: "'Cadres'"
       Agents de maîtrise: "'Agents de maîtrise'"
 
-contrat salarié . convention collective . coiffure . départ à la retraite:
-  applicable si: départ à la retraite
-  remplace: préavis de retraite collective
-  grille:
-    assiette: ancienneté
-    tranches:
-      - montant: 0 mois
-        plafond: 6 mois
-      - montant: 1 mois
-        plafond: 24 mois
-      - montant: 2 mois
-  références:
-    Article 7.4.1: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018563843/?idConteneur=KALICONT000018563755
-
 contrat salarié . convention collective . coiffure . catégorie professionnelle . salarié:
   applicable si:
     toutes ces conditions:
