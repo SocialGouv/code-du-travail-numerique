@@ -4,7 +4,7 @@ contrat salarié . convention collective . coiffure:
   valeur: oui
   cdtn:
     idcc: 2596
-    préavis-retraite: false
+    préavis-retraite: true
 
 contrat salarié . convention collective . coiffure . catégorie professionnelle:
   titre: Catégorie professionnelle
