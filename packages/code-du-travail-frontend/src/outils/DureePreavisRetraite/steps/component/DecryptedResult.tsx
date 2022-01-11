@@ -1,5 +1,5 @@
 import { Paragraph } from "@socialgouv/cdtn-ui";
-import { supportedCcn } from "@socialgouv/modeles-social";
+import { SelectedResult, supportedCcn } from "@socialgouv/modeles-social";
 import { AgreementInfo } from "@socialgouv/modeles-social/bin/internal/ExtractSupportedCc";
 import React from "react";
 
@@ -15,11 +15,28 @@ type Props = {
   publicodesContext: PublicodesContextInterface;
 };
 
-const ShowResult: React.FC<{ result: PublicodesResult }> = ({ result }) => {
+const ShowResult: React.FC<{
+  result: PublicodesResult;
+  selectedResult: SelectedResult;
+}> = ({ result, selectedResult }) => {
   if (result.value > 0) {
     return (
       <strong>
-        {result.value} {result.unit}
+        {selectedResult?.rawNode?.cdtn &&
+        selectedResult?.rawNode?.cdtn["valeur maximale"] ? (
+          <>
+            entre&nbsp;
+            {result.value}
+            &nbsp;
+            {result.unit}
+            &nbsp;et&nbsp;
+            {selectedResult.rawNode.cdtn["valeur maximale"]}
+          </>
+        ) : (
+          <>
+            {result.value} {result.unit}
+          </>
+        )}
       </strong>
     );
   }
@@ -29,12 +46,13 @@ const ShowResult: React.FC<{ result: PublicodesResult }> = ({ result }) => {
 const ShowResultAgreement: React.FC<{
   result: PublicodesResult | null;
   detail: Agreement | null;
-}> = ({ result, detail }) => {
+  selectedResult: SelectedResult;
+}> = ({ result, detail, selectedResult }) => {
   if (!result) {
     return <strong>convention collective non renseignée</strong>;
   }
   if (result && result.value > 0) {
-    return <ShowResult result={result} />;
+    return <ShowResult result={result} selectedResult={selectedResult} />;
   }
   if (detail?.status === AgreementStatus.Supported) {
     return <strong>pas de préavis</strong>;
@@ -170,6 +188,8 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
     );
   }
 
+  const selectedResult = publicodesContext.getSelectedResult();
+
   const rootData = createRootData(
     data,
     publicodesContext.result,
@@ -183,7 +203,7 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
       <SectionTitle>Le résultat décrypté</SectionTitle>
       <Paragraph>
         Durée prévue par le code du travail (durée légale)&nbsp;:&nbsp;
-        <ShowResult result={legalResult} />
+        <ShowResult result={legalResult} selectedResult={undefined} />
       </Paragraph>
       <Paragraph>
         Durée prévue par la convention collective (durée
@@ -191,6 +211,7 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
         <ShowResultAgreement
           result={agreementResult}
           detail={rootData.agreement}
+          selectedResult={selectedResult}
         />
       </Paragraph>
       {description && <Paragraph>{description}</Paragraph>}

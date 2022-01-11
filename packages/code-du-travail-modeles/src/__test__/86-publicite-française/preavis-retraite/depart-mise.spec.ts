@@ -85,6 +85,9 @@ const MiseRetraiteReferencesCadres = [
 const NotificationDeMiseALaRetraite =
   "Pour le préavis de mise à la retraite, la convention collective indique une durée minimale et maximale. Il convient donc de se reporter vers l'employeur ou son représentant (ex : service RH) pour déterminer la durée applicable au préavis.";
 
+const NotificationDeDepartALaRetraite =
+  "Le préavis démarre à partir du premier jour du mois suivant la notification par le salarié de sa demande de départ volontaire à la retraite. Exemple: Si le 6 mars 2020 un salarié notifie sa décision de partir à la retraite à son employeur, le préavis à effectuer débutera le 1er avril 2020.";
+
 enum Category {
   employes = "Employés (coefficients 120 à 215 inclus)",
   cadres = "Cadres (à partir du coefficient 400)",
@@ -183,7 +186,7 @@ describe("Préavis de retraite de la CC 86", () => {
 });
 
 describe("Vérification des notifications", () => {
-  test("Pour un départ à la retraite, aucune notification doit s'afficher", () => {
+  test("Pour un départ à la retraite, une notification doit s'afficher", () => {
     const notifications = getNotifications(
       engine.setSituation({
         "contrat salarié . ancienneté": 5,
@@ -193,7 +196,8 @@ describe("Vérification des notifications", () => {
         "contrat salarié . travailleur handicapé": "non",
       })
     );
-    expect(notifications).toHaveLength(0);
+    expect(notifications).toHaveLength(1);
+    expect(notifications[0].description).toBe(NotificationDeDepartALaRetraite);
   });
 
   test("Pour une  mise à la retraite, une notification doit s'afficher", () => {

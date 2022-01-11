@@ -21,6 +21,7 @@ const ShowResult: React.FC<Props> = ({ publicodesContext }) => {
       : "départ";
 
   const notifications = publicodesContext.getNotifications();
+  const selectedResult = publicodesContext.getSelectedResult();
 
   return (
     <>
@@ -32,7 +33,17 @@ const ShowResult: React.FC<Props> = ({ publicodesContext }) => {
           : ""}
         &nbsp;:{" "}
         <HighlightResult>
-          {publicodesContext.result.value > 0 ? (
+          {selectedResult.rawNode.cdtn &&
+          selectedResult.rawNode.cdtn["valeur maximale"] ? (
+            <>
+              entre&nbsp;
+              {publicodesContext.result.value}
+              &nbsp;
+              {publicodesContext.result.unit}
+              &nbsp;et&nbsp;
+              {selectedResult.rawNode.cdtn["valeur maximale"]}
+            </>
+          ) : publicodesContext.result.value > 0 ? (
             <>
               {publicodesContext.result.value}
               &nbsp;
