@@ -149,7 +149,7 @@ const CookiePolicy = (): JSX.Element => (
                 <td>Mesure d’audience anonymisée</td>
                 <td>AT Internet</td>
                 <td>13 mois</td>
-                <td>Mesure d’audience et analyse comportementale</td>
+                <td>Mesure d’audience</td>
                 <td>AT Internet</td>
                 <td>France</td>
               </tr>
