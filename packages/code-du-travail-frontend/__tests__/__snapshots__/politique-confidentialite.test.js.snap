@@ -1632,7 +1632,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                         13 mois
                       </td>
                       <td>
-                        Mesure d’audience et analyse comportementale
+                        Mesure d’audience
                       </td>
                       <td>
                         AT Internet
