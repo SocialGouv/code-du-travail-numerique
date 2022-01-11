@@ -23,18 +23,23 @@ describe("Préavis de retraite de la CC 2596", () => {
       ${"Salariés occupant un emploi technique de la coiffure"}     | ${2}      | ${0}
       ${"Salariés occupant un emploi technique de la coiffure"}     | ${12}     | ${1}
       ${"Salariés occupant un emploi technique de la coiffure"}     | ${24}     | ${2}
+      ${"Salariés occupant un emploi technique de la coiffure"}     | ${25}     | ${2}
       ${"Salariés occupant un emploi non technique de la coiffure"} | ${2}      | ${0}
       ${"Salariés occupant un emploi non technique de la coiffure"} | ${12}     | ${1}
       ${"Salariés occupant un emploi non technique de la coiffure"} | ${24}     | ${2}
+      ${"Salariés occupant un emploi non technique de la coiffure"} | ${25}     | ${2}
       ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${2}      | ${0}
       ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${12}     | ${1}
       ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${24}     | ${2}
+      ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${25}     | ${2}
       ${"Agents de maîtrise"}                                       | ${2}      | ${0}
       ${"Agents de maîtrise"}                                       | ${12}     | ${1}
       ${"Agents de maîtrise"}                                       | ${24}     | ${2}
+      ${"Agents de maîtrise"}                                       | ${25}     | ${2}
       ${"Cadres"}                                                   | ${2}      | ${0}
       ${"Cadres"}                                                   | ${12}     | ${1}
       ${"Cadres"}                                                   | ${24}     | ${2}
+      ${"Cadres"}                                                   | ${25}     | ${2}
     `(
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ category, seniority, expectedResult }) => {
@@ -67,18 +72,23 @@ describe("Préavis de retraite de la CC 2596", () => {
       ${"Salariés occupant un emploi technique de la coiffure"}     | ${2}      | ${7}           | ${"jour"}
       ${"Salariés occupant un emploi technique de la coiffure"}     | ${12}     | ${1}           | ${"mois"}
       ${"Salariés occupant un emploi technique de la coiffure"}     | ${24}     | ${2}           | ${"mois"}
+      ${"Salariés occupant un emploi technique de la coiffure"}     | ${25}     | ${2}           | ${"mois"}
       ${"Salariés occupant un emploi non technique de la coiffure"} | ${2}      | ${7}           | ${"jour"}
       ${"Salariés occupant un emploi non technique de la coiffure"} | ${12}     | ${1}           | ${"mois"}
       ${"Salariés occupant un emploi non technique de la coiffure"} | ${24}     | ${2}           | ${"mois"}
+      ${"Salariés occupant un emploi non technique de la coiffure"} | ${25}     | ${2}           | ${"mois"}
       ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${2}      | ${7}           | ${"jour"}
       ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${12}     | ${1}           | ${"mois"}
       ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${24}     | ${2}           | ${"mois"}
+      ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${25}     | ${2}           | ${"mois"}
       ${"Agents de maîtrise"}                                       | ${2}      | ${3}           | ${"mois"}
       ${"Agents de maîtrise"}                                       | ${12}     | ${3}           | ${"mois"}
       ${"Agents de maîtrise"}                                       | ${24}     | ${3}           | ${"mois"}
+      ${"Agents de maîtrise"}                                       | ${25}     | ${3}           | ${"mois"}
       ${"Cadres"}                                                   | ${2}      | ${3}           | ${"mois"}
       ${"Cadres"}                                                   | ${12}     | ${3}           | ${"mois"}
       ${"Cadres"}                                                   | ${24}     | ${3}           | ${"mois"}
+      ${"Cadres"}                                                   | ${25}     | ${3}           | ${"mois"}
     `(
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ category, seniority, expectedResult, expectedPeriod }) => {
