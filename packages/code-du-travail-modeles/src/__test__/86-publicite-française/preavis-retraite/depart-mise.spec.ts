@@ -1,0 +1,212 @@
+import Engine from "publicodes";
+
+import { getNotifications } from "../../..";
+import { mergeModels } from "../../../internal/merger";
+import { getReferences } from "../../../utils/GetReferences";
+import {
+  DepartRetraiteReferences,
+  MiseRetraiteReferences,
+} from "../../common/legal-references";
+
+const engine = new Engine(mergeModels());
+
+const DepartRetraiteReferencesEmployes = [
+  ...DepartRetraiteReferences,
+  {
+    article: "Article 32.1",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832772/?idConteneur=KALICONT000005635630",
+  },
+  {
+    article: "Article 30",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005857304?idConteneur=KALICONT000005635",
+  },
+];
+
+const DepartRetraiteReferencesTechniciens = [
+  ...DepartRetraiteReferences,
+  {
+    article: "Article 51.1",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832767/?idConteneur=KALICONT000005635630",
+  },
+  {
+    article: "Article 49",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023734748/?idConteneur=KALICONT000005635630",
+  },
+];
+
+const DepartRetraiteReferencesCadres = [
+  ...DepartRetraiteReferences,
+  {
+    article: "Article 70.1",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832762/?idConteneur=KALICONT000005635630",
+  },
+  {
+    article: "Article 68",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005857360/?idConteneur=KALICONT000005635630",
+  },
+];
+
+const MiseRetraiteReferencesEmployes = [
+  ...MiseRetraiteReferences,
+  {
+    article: "Article 32.2",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832772/?idConteneur=KALICONT000005635630",
+  },
+  {
+    article: "Article 30",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005857304?idConteneur=KALICONT000005635",
+  },
+];
+
+const MiseRetraiteReferencesTechniciens = [
+  ...MiseRetraiteReferences,
+  {
+    article: "Article 51.2",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832767/?idConteneur=KALICONT000005635630",
+  },
+  {
+    article: "Article 49",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023734748/?idConteneur=KALICONT000005635630",
+  },
+];
+
+const MiseRetraiteReferencesCadres = [
+  ...MiseRetraiteReferences,
+  {
+    article: "Article 70.2",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832762/?idConteneur=KALICONT000005635630",
+  },
+  {
+    article: "Article 68",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005857360/?idConteneur=KALICONT000005635630",
+  },
+];
+
+const NotificationDeMiseALaRetraite =
+  "Pour le préavis de mise à la retraite, la convention collective indique une durée minimale et maximale. Il convient donc de se reporter vers l'employeur ou son représentant (ex : service RH) pour déterminer la durée applicable au préavis.";
+
+enum Category {
+  employes = "Employés (coefficients 120 à 215 inclus)",
+  cadres = "Cadres (à partir du coefficient 400)",
+  techniciens = "Techniciens et agents de maitrise (coefficients 220 à 390)",
+}
+
+type InputType = {
+  category: Category;
+  seniority: number;
+  expectedResult: number;
+  expectedReferences: { article: string; url: string }[];
+};
+
+describe("Préavis de retraite de la CC 86", () => {
+  describe("Vérification des départs à la retraite et des références juridiques", () => {
+    test.each`
+      category                | seniority | expectedResult | expectedReferences
+      ${Category.employes}    | ${2}      | ${1}           | ${DepartRetraiteReferencesEmployes}
+      ${Category.employes}    | ${6}      | ${1}           | ${DepartRetraiteReferencesEmployes}
+      ${Category.employes}    | ${24}     | ${2}           | ${DepartRetraiteReferencesEmployes}
+      ${Category.techniciens} | ${2}      | ${2}           | ${DepartRetraiteReferencesTechniciens}
+      ${Category.techniciens} | ${6}      | ${1}           | ${DepartRetraiteReferencesTechniciens}
+      ${Category.techniciens} | ${24}     | ${2}           | ${DepartRetraiteReferencesTechniciens}
+      ${Category.cadres}      | ${2}      | ${3}           | ${DepartRetraiteReferencesCadres}
+      ${Category.cadres}      | ${6}      | ${1}           | ${DepartRetraiteReferencesCadres}
+      ${Category.cadres}      | ${24}     | ${2}           | ${DepartRetraiteReferencesCadres}
+    `(
+      "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
+      ({
+        category,
+        seniority,
+        expectedResult,
+        expectedReferences,
+      }: InputType) => {
+        const situation = engine.setSituation({
+          "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC0086'",
+          "contrat salarié . convention collective . publicité française . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . mise à la retraite": "non",
+          "contrat salarié . travailleur handicapé": "non",
+        });
+        const result = situation.evaluate(
+          "contrat salarié . préavis de retraite"
+        );
+        const references = getReferences(situation);
+
+        expect(result.nodeValue).toEqual(expectedResult);
+        expect(result.unit?.numerators).toEqual(["mois"]);
+        expect(result.missingVariables).toEqual({});
+        expect(references).toHaveLength(expectedReferences.length);
+        expect(references).toEqual(expect.arrayContaining(expectedReferences));
+      }
+    );
+  });
+
+  describe("Vérification des mises à la retraite et des références juridiques", () => {
+    test.each`
+      category                | seniority | expectedResult | expectedReferences
+      ${Category.employes}    | ${2}      | ${1}           | ${MiseRetraiteReferencesEmployes}
+      ${Category.employes}    | ${6}      | ${1}           | ${MiseRetraiteReferencesEmployes}
+      ${Category.employes}    | ${24}     | ${2}           | ${MiseRetraiteReferencesEmployes}
+      ${Category.techniciens} | ${2}      | ${2}           | ${MiseRetraiteReferencesTechniciens}
+      ${Category.techniciens} | ${6}      | ${2}           | ${MiseRetraiteReferencesTechniciens}
+      ${Category.techniciens} | ${24}     | ${2}           | ${MiseRetraiteReferencesTechniciens}
+      ${Category.cadres}      | ${2}      | ${3}           | ${MiseRetraiteReferencesCadres}
+      ${Category.cadres}      | ${6}      | ${3}           | ${MiseRetraiteReferencesCadres}
+      ${Category.cadres}      | ${24}     | ${3}           | ${MiseRetraiteReferencesCadres}
+    `(
+      "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
+      ({
+        category,
+        seniority,
+        expectedResult,
+        expectedReferences,
+      }: InputType) => {
+        const situation = engine.setSituation({
+          "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC0086'",
+          "contrat salarié . convention collective . publicité française . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . mise à la retraite": "oui",
+          "contrat salarié . travailleur handicapé": "non",
+        });
+        const result = situation.evaluate(
+          "contrat salarié . préavis de retraite"
+        );
+        const references = getReferences(situation);
+
+        expect(result.nodeValue).toEqual(expectedResult);
+        expect(result.unit?.numerators).toEqual(["mois"]);
+        expect(result.missingVariables).toEqual({});
+        expect(references).toHaveLength(expectedReferences.length);
+        expect(references).toEqual(expect.arrayContaining(expectedReferences));
+      }
+    );
+  });
+});
+
+describe("Vérification des notifications", () => {
+  test("Pour un départ à la retraite, aucune notification doit s'afficher", () => {
+    const notifications = getNotifications(
+      engine.setSituation({
+        "contrat salarié . ancienneté": 5,
+        "contrat salarié . convention collective": "'IDCC0086'",
+        "contrat salarié . convention collective . publicité française . catégorie professionnelle": `'${Category.employes}'`,
+        "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
+      })
+    );
+    expect(notifications).toHaveLength(0);
+  });
+
+  test("Pour une  mise à la retraite, une notification doit s'afficher", () => {
+    const notifications = getNotifications(
+      engine.setSituation({
+        "contrat salarié . ancienneté": 5,
+        "contrat salarié . convention collective": "'IDCC0086'",
+        "contrat salarié . convention collective . publicité française . catégorie professionnelle": `'${Category.employes}'`,
+        "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
+      })
+    );
+    expect(notifications).toHaveLength(1);
+    expect(notifications[0].description).toBe(NotificationDeMiseALaRetraite);
+  });
+});
