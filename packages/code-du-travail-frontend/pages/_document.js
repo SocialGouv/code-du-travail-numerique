@@ -54,6 +54,7 @@ export default class MyDocument extends Document {
             key="webcomponents"
             src="/static/webcomponents-polyfill/loader.js"
           />
+          <script key="smarttag" src="/static/smarttag.js" />
         </Head>
         <body>
           <noscript>

@@ -15,7 +15,7 @@ export interface Enterprise {
   simpleLabel: string;
   siren: string;
   address?: string;
-  matchingEtablissement?: MatchingEtablissement;
+  firstMatchingEtablissement?: MatchingEtablissement;
 }
 
 /**
@@ -47,7 +47,21 @@ const siretNumberError =
   "Veuillez indiquer un numéro Siret (14 chiffres uniquement)";
 
 const ENTERPRISE_API_URL =
-  "https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1";
+  // TODO: restore "https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1";
+  "https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1";
+
+const makeSearchUrl = ({ query, address }) => {
+  // todo : remove legacy params q and a
+  return `${ENTERPRISE_API_URL}/search?query=${encodeURIComponent(
+    query
+  )}&q=${encodeURIComponent(query)}${
+    address
+      ? `&address=${encodeURIComponent(address)}&a=${encodeURIComponent(
+          address
+        )}`
+      : ""
+  }&onlyWithConvention=true&employer=true&open=true`;
+};
 
 const apiEnterprises = memoizee(function createFetcher(query, address) {
   if (/^\d{2,8}$/.test(query.replace(/\s/g, ""))) {
@@ -63,15 +77,7 @@ const apiEnterprises = memoizee(function createFetcher(query, address) {
     return Promise.reject(siretNumberError);
   }
 
-  const url = `${ENTERPRISE_API_URL}/search?q=${encodeURIComponent(query)}${
-    address ? `&a=${encodeURIComponent(address)}` : ""
-  }&onlyWithConvention=true`;
-
-  // if (/^\d{14}$/.test(query.replace(/\s/g, ""))) {
-  //   url = `${ENTERPRISE_API_URL}/etablissement/${query}`;
-  // } else if (/^\d{9}$/.test(query.replace(/\s/g, ""))) {
-  //   url = `${ENTERPRISE_API_URL}/entreprise/${query}`;
-  // }
+  const url = makeSearchUrl({ address, query });
 
   return fetch(url)
     .then(async (response) => {

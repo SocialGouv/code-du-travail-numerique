@@ -18,6 +18,7 @@ export default createGlobalStyle`
       margin-bottom: ${spacings.small};
     }
   }
+
   h1, h2 {
     font-weight: normal;
     font-family: 'Merriweather', serif;
@@ -41,11 +42,26 @@ export default createGlobalStyle`
   }
 
   h3, h4, h5, h6 {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  h3 {
     font-weight: 600;
     font-size: ${fonts.sizes.headings.small};
-    font-family: "Open Sans", sans-serif;
     @media (max-width: ${breakpoints.mobile}) {
       font-size: ${fonts.sizes.default};
     }
+  }
+
+  h4 {
+    font-weight: normal;
+    font-size: ${fonts.sizes.headings.small};
+    @media (max-width: ${breakpoints.mobile}) {
+      font-size: ${fonts.sizes.default};
+    }
+  }
+  h5, h6 {
+    font-weight: 600;
+    font-size: ${fonts.sizes.small};
   }
 `;
