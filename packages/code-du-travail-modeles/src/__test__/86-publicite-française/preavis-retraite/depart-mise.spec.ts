@@ -101,6 +101,8 @@ type InputType = {
   expectedReferences: { article: string; url: string }[];
 };
 
+type MiseInputType = InputType & { maximumValue: number };
+
 describe("Préavis de retraite de la CC 86", () => {
   describe("Vérification des départs à la retraite et des références juridiques", () => {
     test.each`
@@ -132,8 +134,12 @@ describe("Préavis de retraite de la CC 86", () => {
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
         );
+        const maximumResult = situation.evaluate(
+          "contrat salarié . préavis de retraite collective maximum"
+        );
         const references = getReferences(situation);
 
+        expect(maximumResult.nodeValue).toBe(false);
         expect(result.nodeValue).toEqual(expectedResult);
         expect(result.unit?.numerators).toEqual(["mois"]);
         expect(result.missingVariables).toEqual({});
@@ -145,16 +151,16 @@ describe("Préavis de retraite de la CC 86", () => {
 
   describe("Vérification des mises à la retraite et des références juridiques", () => {
     test.each`
-      category                | seniority | expectedResult | expectedReferences
-      ${Category.employes}    | ${2}      | ${1}           | ${MiseRetraiteReferencesEmployes}
-      ${Category.employes}    | ${6}      | ${1}           | ${MiseRetraiteReferencesEmployes}
-      ${Category.employes}    | ${24}     | ${2}           | ${MiseRetraiteReferencesEmployes}
-      ${Category.techniciens} | ${2}      | ${2}           | ${MiseRetraiteReferencesTechniciens}
-      ${Category.techniciens} | ${6}      | ${2}           | ${MiseRetraiteReferencesTechniciens}
-      ${Category.techniciens} | ${24}     | ${2}           | ${MiseRetraiteReferencesTechniciens}
-      ${Category.cadres}      | ${2}      | ${3}           | ${MiseRetraiteReferencesCadres}
-      ${Category.cadres}      | ${6}      | ${3}           | ${MiseRetraiteReferencesCadres}
-      ${Category.cadres}      | ${24}     | ${3}           | ${MiseRetraiteReferencesCadres}
+      category                | seniority | expectedResult | expectedReferences                   | maximumValue
+      ${Category.employes}    | ${2}      | ${1}           | ${MiseRetraiteReferencesEmployes}    | ${3}
+      ${Category.employes}    | ${6}      | ${1}           | ${MiseRetraiteReferencesEmployes}    | ${3}
+      ${Category.employes}    | ${24}     | ${2}           | ${MiseRetraiteReferencesEmployes}    | ${3}
+      ${Category.techniciens} | ${2}      | ${2}           | ${MiseRetraiteReferencesTechniciens} | ${4}
+      ${Category.techniciens} | ${6}      | ${2}           | ${MiseRetraiteReferencesTechniciens} | ${4}
+      ${Category.techniciens} | ${24}     | ${2}           | ${MiseRetraiteReferencesTechniciens} | ${4}
+      ${Category.cadres}      | ${2}      | ${3}           | ${MiseRetraiteReferencesCadres}      | ${6}
+      ${Category.cadres}      | ${6}      | ${3}           | ${MiseRetraiteReferencesCadres}      | ${6}
+      ${Category.cadres}      | ${24}     | ${3}           | ${MiseRetraiteReferencesCadres}      | ${6}
     `(
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({
@@ -162,7 +168,8 @@ describe("Préavis de retraite de la CC 86", () => {
         seniority,
         expectedResult,
         expectedReferences,
-      }: InputType) => {
+        maximumValue,
+      }: MiseInputType) => {
         const situation = engine.setSituation({
           "contrat salarié . ancienneté": seniority,
           "contrat salarié . convention collective": "'IDCC0086'",
@@ -174,7 +181,11 @@ describe("Préavis de retraite de la CC 86", () => {
           "contrat salarié . préavis de retraite"
         );
         const references = getReferences(situation);
+        const maximumResult = situation.evaluate(
+          "contrat salarié . préavis de retraite collective maximum"
+        );
 
+        expect(maximumResult.nodeValue).toBe(maximumValue);
         expect(result.nodeValue).toEqual(expectedResult);
         expect(result.unit?.numerators).toEqual(["mois"]);
         expect(result.missingVariables).toEqual({});
@@ -186,7 +197,7 @@ describe("Préavis de retraite de la CC 86", () => {
 });
 
 describe("Vérification des notifications", () => {
-  test("Pour un départ à la retraite, une notification doit s'afficher", () => {
+  test("Pour un départ à la retraite, une notification doit s'afficher si son ancienneté est inférieur à 6 mois", () => {
     const notifications = getNotifications(
       engine.setSituation({
         "contrat salarié . ancienneté": 5,
@@ -198,6 +209,19 @@ describe("Vérification des notifications", () => {
     );
     expect(notifications).toHaveLength(1);
     expect(notifications[0].description).toBe(NotificationDeDepartALaRetraite);
+  });
+
+  test("Pour un départ à la retraite, une notification doit s'afficher si son ancienneté est  supérieur à 6 mois", () => {
+    const notifications = getNotifications(
+      engine.setSituation({
+        "contrat salarié . ancienneté": 7,
+        "contrat salarié . convention collective": "'IDCC0086'",
+        "contrat salarié . convention collective . publicité française . catégorie professionnelle": `'${Category.employes}'`,
+        "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
+      })
+    );
+    expect(notifications).toHaveLength(0);
   });
 
   test("Pour une  mise à la retraite, une notification doit s'afficher", () => {

@@ -1,5 +1,5 @@
 import { Paragraph } from "@socialgouv/cdtn-ui";
-import { SelectedResult, supportedCcn } from "@socialgouv/modeles-social";
+import { supportedCcn } from "@socialgouv/modeles-social";
 import { AgreementInfo } from "@socialgouv/modeles-social/bin/internal/ExtractSupportedCc";
 import React from "react";
 
@@ -17,20 +17,15 @@ type Props = {
 
 const ShowResult: React.FC<{
   result: PublicodesResult;
-  selectedResult: SelectedResult;
+  selectedResult: PublicodesResult;
 }> = ({ result, selectedResult }) => {
   if (result.value > 0) {
     return (
       <strong>
-        {selectedResult?.rawNode?.cdtn &&
-        selectedResult?.rawNode?.cdtn["valeur maximale"] ? (
+        {selectedResult?.value && selectedResult?.value !== result.value ? (
           <>
-            entre&nbsp;
-            {result.value}
-            &nbsp;
-            {result.unit}
-            &nbsp;et&nbsp;
-            {selectedResult.rawNode.cdtn["valeur maximale"]}
+            entre&nbsp;{result.value}&nbsp;{result.unit}&nbsp;et&nbsp;
+            {selectedResult.value}&nbsp;{result.unit}
           </>
         ) : (
           <>
@@ -46,7 +41,7 @@ const ShowResult: React.FC<{
 const ShowResultAgreement: React.FC<{
   result: PublicodesResult | null;
   detail: Agreement | null;
-  selectedResult: SelectedResult;
+  selectedResult: PublicodesResult | null;
 }> = ({ result, detail, selectedResult }) => {
   if (!result) {
     return <strong>convention collective non renseignée</strong>;
@@ -174,7 +169,6 @@ export const getDescription = (data: RootData): string | null => {
         return null;
     }
   }
-  return null;
 };
 
 const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
@@ -182,13 +176,15 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
     "contrat salarié . préavis de retraite légale en jours"
   );
   let agreementResult = null;
+  let agreementMaximumResult = null;
   if (data.ccn) {
     agreementResult = publicodesContext.execute(
       "contrat salarié . préavis de retraite collective en jours"
     );
+    agreementMaximumResult = publicodesContext.execute(
+      "contrat salarié . préavis de retraite collective maximum"
+    );
   }
-
-  const selectedResult = publicodesContext.getSelectedResult();
 
   const rootData = createRootData(
     data,
@@ -203,7 +199,10 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
       <SectionTitle>Le résultat décrypté</SectionTitle>
       <Paragraph>
         Durée prévue par le code du travail (durée légale)&nbsp;:&nbsp;
-        <ShowResult result={legalResult} selectedResult={undefined} />
+        <ShowResult
+          result={legalResult}
+          selectedResult={agreementMaximumResult}
+        />
       </Paragraph>
       <Paragraph>
         Durée prévue par la convention collective (durée
@@ -211,7 +210,7 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
         <ShowResultAgreement
           result={agreementResult}
           detail={rootData.agreement}
-          selectedResult={selectedResult}
+          selectedResult={agreementMaximumResult}
         />
       </Paragraph>
       {description && <Paragraph>{description}</Paragraph>}

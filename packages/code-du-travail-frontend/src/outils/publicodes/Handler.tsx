@@ -1,8 +1,4 @@
-import {
-  getNotifications,
-  getReferences,
-  getSelectedResult,
-} from "@socialgouv/modeles-social";
+import { getNotifications, getReferences } from "@socialgouv/modeles-social";
 import Engine from "publicodes";
 import { useState } from "react";
 
@@ -107,7 +103,6 @@ const usePublicodesHandler = ({
     execute: handleExecute,
     getNotifications: () => getNotifications(engine),
     getReferences: () => getReferences(engine),
-    getSelectedResult: () => getSelectedResult(engine),
     missingArgs: data.missingArgs,
     result: data.result,
     setSituation: newSituation,

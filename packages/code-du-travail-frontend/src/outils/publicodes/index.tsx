@@ -1,4 +1,4 @@
-import { Notification, SelectedResult } from "@socialgouv/modeles-social";
+import { Notification } from "@socialgouv/modeles-social";
 import { References } from "@socialgouv/modeles-social/bin/utils/GetReferences";
 import Engine, { Rule as PubliRule } from "publicodes";
 import React, { createContext, useMemo } from "react";
@@ -51,7 +51,6 @@ export interface PublicodesContextInterface {
   execute: (rule: string) => PublicodesResult;
   getNotifications: () => Notification[];
   getReferences: () => References[];
-  getSelectedResult: () => SelectedResult;
   result?: PublicodesResult;
   missingArgs: MissingArgs[];
   situation: SituationElement[];
@@ -62,7 +61,6 @@ const PublicodesContext = createContext<PublicodesContextInterface>({
   execute: () => null,
   getNotifications: () => [],
   getReferences: () => [],
-  getSelectedResult: () => undefined,
   missingArgs: [],
   result: null,
   setSituation: () => {
@@ -97,7 +95,6 @@ export const PublicodesProvider: React.FC<
     missingArgs,
     setSituation,
     situation,
-    getSelectedResult,
   } = usePublicodesHandler({
     engine: engine,
     targetRule: targetRule,
@@ -109,7 +106,6 @@ export const PublicodesProvider: React.FC<
         execute,
         getNotifications,
         getReferences,
-        getSelectedResult,
         missingArgs,
         result,
         setSituation,
