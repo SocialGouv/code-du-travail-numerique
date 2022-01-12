@@ -120,7 +120,6 @@ router.get("/search", async (ctx) => {
       searches[THEMES_SEM] = [
         { index },
         getSemBody({
-          query,
           query_vector,
           size: themeNumber,
           sources: [SOURCES.THEMES],
