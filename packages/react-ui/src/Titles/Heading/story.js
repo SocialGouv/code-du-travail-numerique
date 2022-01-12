@@ -1,9 +1,9 @@
 import React from "react";
 
-import { Section } from "../../layout/Section/index.js";
-import { Wrapper } from "../../layout/Wrapper/index.js";
+import { Section } from "../../layout/Section";
+import { Wrapper } from "../../layout/Wrapper";
 import { spacings } from "../../theme.js";
-import { Subtitle } from "../Subtitle/index.js";
+import { Subtitle } from "../Subtitle";
 import { Heading } from "./index.js";
 
 export default {
