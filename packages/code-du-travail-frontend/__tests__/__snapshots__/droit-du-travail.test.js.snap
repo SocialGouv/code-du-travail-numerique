@@ -2517,13 +2517,13 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   <div
                     class="c39"
                   >
-                    <p
+                    <div
                       aria-level="4"
                       class="droit-du-travail__StyledInsertTitle-sc-wr60x8-0 c40"
                       role="heading"
                     >
                       Le droit du travail, ce n’est pas…
-                    </p>
+                    </div>
                     <p
                       class="c41"
                     >

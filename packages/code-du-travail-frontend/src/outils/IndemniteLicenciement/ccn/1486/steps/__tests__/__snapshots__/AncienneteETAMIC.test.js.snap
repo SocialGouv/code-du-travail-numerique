@@ -42,12 +42,12 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   text-align: left;
 }
 
-.c12 {
+.c11 {
   position: relative;
   display: inline-block;
 }
 
-.c13 {
+.c12 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -69,15 +69,15 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   appearance: none;
 }
 
-.c13::-webkit-outer-spin-button,
-.c13::-webkit-inner-spin-button {
+.c12::-webkit-outer-spin-button,
+.c12::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c13::-webkit-calendar-picker-indicator {
+.c12::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -90,47 +90,47 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c13:invalid {
+.c12:invalid {
   border-color: #eb5757;
 }
 
-.c13::-webkit-input-placeholder {
+.c12::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c13::-moz-placeholder {
+.c12::-moz-placeholder {
   color: #9298af;
 }
 
-.c13:-ms-input-placeholder {
+.c12:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c13::placeholder {
+.c12::placeholder {
   color: #9298af;
 }
 
-.c13:focus {
+.c12:focus {
   border-color: #7994d4;
 }
 
-.c13:focus::-webkit-input-placeholder {
+.c12:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c13:focus::-moz-placeholder {
+.c12:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c13:focus:-ms-input-placeholder {
+.c12:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c13:focus::placeholder {
+.c12:focus::placeholder {
   color: transparent;
 }
 
-.c16 {
+.c15 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -152,15 +152,15 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   appearance: none;
 }
 
-.c16::-webkit-outer-spin-button,
-.c16::-webkit-inner-spin-button {
+.c15::-webkit-outer-spin-button,
+.c15::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c16::-webkit-calendar-picker-indicator {
+.c15::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -173,47 +173,47 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c16:invalid {
+.c15:invalid {
   border-color: #eb5757;
 }
 
-.c16::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c16::-moz-placeholder {
+.c15::-moz-placeholder {
   color: #9298af;
 }
 
-.c16:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c16::placeholder {
+.c15::placeholder {
   color: #9298af;
 }
 
-.c16:focus {
+.c15:focus {
   border-color: #7994d4;
 }
 
-.c16:focus::-webkit-input-placeholder {
+.c15:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c16:focus::-moz-placeholder {
+.c15:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c16:focus:-ms-input-placeholder {
+.c15:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c16:focus::placeholder {
+.c15:focus::placeholder {
   color: transparent;
 }
 
-.c17 {
+.c16 {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -224,23 +224,13 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   color: #9298af;
 }
 
-.c10 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
 }
 
 .c9 {
@@ -296,7 +286,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   cursor: default;
 }
 
-.c14 {
+.c13 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -308,7 +298,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   font-weight: 600;
 }
 
-.c15 {
+.c14 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -316,7 +306,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   max-width: 40rem;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -368,20 +358,20 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c11 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c12 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c15 {
     padding: 0 1rem;
     padding-right: 5rem;
   }
@@ -394,13 +384,13 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c13 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c14 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -463,8 +453,9 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   <div
     class="c7"
   >
-    <div
+    <label
       class="c8"
+      for="hasBrancheContrat-oui"
     >
       <input
         checked=""
@@ -474,15 +465,11 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
         type="radio"
         value="true"
       />
-      <label
-        class="c10"
-        for="hasBrancheContrat-oui"
-      >
-        Oui
-      </label>
-    </div>
-    <div
+      Oui
+    </label>
+    <label
       class="c8"
+      for="hasBrancheContrat-non"
     >
       <input
         class="c9"
@@ -491,25 +478,20 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
         type="radio"
         value="false"
       />
-      <label
-        class="c10"
-        for="hasBrancheContrat-non"
-      >
-        Non
-      </label>
-    </div>
+      Non
+    </label>
   </div>
   <label
-    class="c11"
+    class="c10"
     for="duration"
   >
     Durée des contrats de travail précédents (en mois)
   </label>
   <span
-    class="c12"
+    class="c11"
   >
     <input
-      class="c13"
+      class="c12"
       id="duration"
       name="brancheContrat.duration"
       type="number"
@@ -527,7 +509,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     </div>
   </div>
   <label
-    class="c14"
+    class="c13"
     for="currency-1"
   >
     <span
@@ -537,20 +519,20 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     </span>
   </label>
   <div
-    class="c15"
+    class="c14"
   >
     <span
-      class="c12"
+      class="c11"
     >
       <input
-        class="c16"
+        class="c15"
         id="currency-1"
         name="brancheContrat.indemnite"
         type="number"
         value="0"
       />
       <div
-        class="c17"
+        class="c16"
       >
         <svg
           aria-hidden="true"
@@ -578,8 +560,9 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   <div
     class="c7"
   >
-    <div
+    <label
       class="c8"
+      for="brancheContrat.considered-oui"
     >
       <input
         class="c9"
@@ -588,15 +571,11 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
         type="radio"
         value="true"
       />
-      <label
-        class="c10"
-        for="brancheContrat.considered-oui"
-      >
-        Oui
-      </label>
-    </div>
-    <div
+      Oui
+    </label>
+    <label
       class="c8"
+      for="brancheContrat.considered-non"
     >
       <input
         checked=""
@@ -606,13 +585,8 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
         type="radio"
         value="false"
       />
-      <label
-        class="c10"
-        for="brancheContrat.considered-non"
-      >
-        Non
-      </label>
-    </div>
+      Non
+    </label>
   </div>
 </div>
 `;
@@ -659,23 +633,13 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   text-align: left;
 }
 
-.c10 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
 }
 
 .c9 {
@@ -831,8 +795,9 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   <div
     class="c7"
   >
-    <div
+    <label
       class="c8"
+      for="hasBrancheContrat-oui"
     >
       <input
         class="c9"
@@ -841,15 +806,11 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
         type="radio"
         value="true"
       />
-      <label
-        class="c10"
-        for="hasBrancheContrat-oui"
-      >
-        Oui
-      </label>
-    </div>
-    <div
+      Oui
+    </label>
+    <label
       class="c8"
+      for="hasBrancheContrat-non"
     >
       <input
         class="c9"
@@ -858,13 +819,8 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
         type="radio"
         value="false"
       />
-      <label
-        class="c10"
-        for="hasBrancheContrat-non"
-      >
-        Non
-      </label>
-    </div>
+      Non
+    </label>
   </div>
 </div>
 `;

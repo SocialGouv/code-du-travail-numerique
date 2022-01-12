@@ -524,13 +524,13 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
       <div
         class="c6"
       >
-        <p
+        <div
           aria-level="2"
           class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
           role="heading"
         >
           Page personnalisable
-        </p>
+        </div>
         Le contenu de cette page peut être personnalisé en fonction de votre situation.
         <br />
         <a
@@ -1149,13 +1149,13 @@ exports[`<Contribution /> should render answer references 1`] = `
       <div
         class="c6"
       >
-        <p
+        <div
           aria-level="2"
           class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
           role="heading"
         >
           Page personnalisable
-        </p>
+        </div>
         Le contenu de cette page peut être personnalisé en fonction de votre situation.
         <br />
         <a
@@ -1774,13 +1774,13 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       <div
         class="c6"
       >
-        <p
+        <div
           aria-level="2"
           class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
           role="heading"
         >
           Page personnalisable
-        </p>
+        </div>
         Le contenu de cette page peut être personnalisé en fonction de votre situation.
         <br />
         <a
@@ -2399,13 +2399,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
       <div
         class="c6"
       >
-        <p
+        <div
           aria-level="2"
           class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
           role="heading"
         >
           Page personnalisable
-        </p>
+        </div>
         Le contenu de cette page peut être personnalisé en fonction de votre situation.
         <br />
         <a
@@ -2973,13 +2973,13 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
       <div
         class="c6"
       >
-        <p
+        <div
           aria-level="2"
           class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
           role="heading"
         >
           Page personnalisable
-        </p>
+        </div>
         Le contenu de cette page peut être personnalisé en fonction de votre situation.
         <br />
         <a
@@ -3178,7 +3178,6 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
-  margin: 0;
 }
 
 .c13 {
@@ -3387,11 +3386,11 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
                 fill="currentColor"
               />
             </svg>
-            <p
+            <span
               class="c14"
             >
               Article L-1243 du Code du travail
-            </p>
+            </span>
           </a>
         </li>
       </ul>

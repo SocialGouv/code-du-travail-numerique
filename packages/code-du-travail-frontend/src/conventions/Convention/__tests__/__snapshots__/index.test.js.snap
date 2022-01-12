@@ -131,7 +131,6 @@ exports[`<Convention /> renders 1`] = `
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
-  margin: 0;
 }
 
 .c20 {
@@ -222,7 +221,6 @@ exports[`<Convention /> renders 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 0;
 }
 
 .c26 {
@@ -1089,11 +1087,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article 5-11
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -1261,11 +1259,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article 6.121
-                              </p>
+                              </span>
                             </a>
                           </li>
                           <li>
@@ -1288,11 +1286,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article 6.21
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -1457,11 +1455,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article  5-12
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -1678,11 +1676,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.11
-                              </p>
+                              </span>
                             </a>
                           </li>
                           <li>
@@ -1705,11 +1703,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.13
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -1844,11 +1842,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.11
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -1967,11 +1965,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </p>
+                              </span>
                             </a>
                           </li>
                           <li>
@@ -1994,11 +1992,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -2117,11 +2115,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </p>
+                              </span>
                             </a>
                           </li>
                           <li>
@@ -2144,11 +2142,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -2267,11 +2265,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.12
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -2431,11 +2429,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.2
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -2629,11 +2627,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article 2-4
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -2804,11 +2802,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.4
-                              </p>
+                              </span>
                             </a>
                           </li>
                           <li>
@@ -2831,11 +2829,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article 11-2
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -3025,11 +3023,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article 2-3
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -3148,11 +3146,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article 2-3
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -3363,11 +3361,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article 2-3
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -3660,11 +3658,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article 5-25
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -3809,11 +3807,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article 5-24
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>
@@ -4247,13 +4245,13 @@ exports[`<Convention /> renders 1`] = `
                                 points="9 18 15 12 9 6"
                               />
                             </svg>
-                            <p
+                            <span
                               aria-level="2"
                               class="c24 c25"
                               role="heading"
                             >
                               Références juridiques concernées :
-                            </p>
+                            </span>
                           </div>
                           <div
                             class="c26"
@@ -4281,11 +4279,11 @@ exports[`<Convention /> renders 1`] = `
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <p
+                                  <span
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-11
-                                  </p>
+                                  </span>
                                 </a>
                               </li>
                               <li>
@@ -4308,11 +4306,11 @@ exports[`<Convention /> renders 1`] = `
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <p
+                                  <span
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-12
-                                  </p>
+                                  </span>
                                 </a>
                               </li>
                               <li>
@@ -4335,11 +4333,11 @@ exports[`<Convention /> renders 1`] = `
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <p
+                                  <span
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-13
-                                  </p>
+                                  </span>
                                 </a>
                               </li>
                               <li>
@@ -4362,11 +4360,11 @@ exports[`<Convention /> renders 1`] = `
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <p
+                                  <span
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-14
-                                  </p>
+                                  </span>
                                 </a>
                               </li>
                               <li>
@@ -4389,11 +4387,11 @@ exports[`<Convention /> renders 1`] = `
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <p
+                                  <span
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-15
-                                  </p>
+                                  </span>
                                 </a>
                               </li>
                             </ul>
@@ -4545,11 +4543,11 @@ exports[`<Convention /> renders 1`] = `
                                   fill="currentColor"
                                 />
                               </svg>
-                              <p
+                              <span
                                 class="c21"
                               >
                                 IDCC 1596 - Article 6-11
-                              </p>
+                              </span>
                             </a>
                           </li>
                         </ul>

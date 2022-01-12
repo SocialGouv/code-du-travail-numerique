@@ -99,23 +99,13 @@ exports[`<Anciennete /> should render 1`] = `
   width: 20rem;
 }
 
-.c12 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
 }
 
 .c11 {
@@ -382,8 +372,9 @@ exports[`<Anciennete /> should render 1`] = `
     <div
       class="c9"
     >
-      <div
+      <label
         class="c10"
+        for="hasAbsenceProlonge-oui"
       >
         <input
           class="c11"
@@ -392,15 +383,11 @@ exports[`<Anciennete /> should render 1`] = `
           type="radio"
           value="true"
         />
-        <label
-          class="c12"
-          for="hasAbsenceProlonge-oui"
-        >
-          Oui
-        </label>
-      </div>
-      <div
+        Oui
+      </label>
+      <label
         class="c10"
+        for="hasAbsenceProlonge-non"
       >
         <input
           class="c11"
@@ -409,13 +396,8 @@ exports[`<Anciennete /> should render 1`] = `
           type="radio"
           value="false"
         />
-        <label
-          class="c12"
-          for="hasAbsenceProlonge-non"
-        >
-          Non
-        </label>
-      </div>
+        Non
+      </label>
     </div>
     <button
       data-testid="nextBt"

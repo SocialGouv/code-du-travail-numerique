@@ -1,23 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepInfo /> should display error if contrat cdd 1`] = `
-.c3 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
 }
 
 .c2 {
@@ -91,8 +81,9 @@ exports[`<StepInfo /> should display error if contrat cdd 1`] = `
 <div
   class="c0"
 >
-  <div
+  <label
     class="c1"
+    for="contrat-cdd"
   >
     <input
       class="c2"
@@ -101,15 +92,11 @@ exports[`<StepInfo /> should display error if contrat cdd 1`] = `
       type="radio"
       value="cdd"
     />
-    <label
-      class="c3"
-      for="contrat-cdd"
-    >
-      Contrat à durée determiné (CDD) ou contrat d’intérim
-    </label>
-  </div>
-  <div
+    Contrat à durée determiné (CDD) ou contrat d’intérim
+  </label>
+  <label
     class="c1"
+    for="contrat-cdi"
   >
     <input
       checked=""
@@ -119,13 +106,8 @@ exports[`<StepInfo /> should display error if contrat cdd 1`] = `
       type="radio"
       value="cdi"
     />
-    <label
-      class="c3"
-      for="contrat-cdi"
-    >
-      Contrat à durée indeterminé (CDI)
-    </label>
-  </div>
+    Contrat à durée indeterminé (CDI)
+  </label>
   L’indemnité de licenciement n’est pas dûe pour les CDD et contrats de travail temporaires. Sous certaines conditions, le salarié peut avoir le droit à une 
   <a
     aria-label="indemnité de précarité (nouvelle fenêtre) (nouvelle fenêtre)"
@@ -156,23 +138,13 @@ exports[`<StepInfo /> should render 1`] = `
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
 }
 
 .c5 {
@@ -276,8 +248,9 @@ exports[`<StepInfo /> should render 1`] = `
     <div
       class="c3"
     >
-      <div
+      <label
         class="c4"
+        for="contrat-cdd"
       >
         <input
           class="c5"
@@ -286,15 +259,11 @@ exports[`<StepInfo /> should render 1`] = `
           type="radio"
           value="cdd"
         />
-        <label
-          class="c6"
-          for="contrat-cdd"
-        >
-          Contrat à durée determiné (CDD) ou contrat d’intérim
-        </label>
-      </div>
-      <div
+        Contrat à durée determiné (CDD) ou contrat d’intérim
+      </label>
+      <label
         class="c4"
+        for="contrat-cdi"
       >
         <input
           class="c5"
@@ -303,13 +272,8 @@ exports[`<StepInfo /> should render 1`] = `
           type="radio"
           value="cdi"
         />
-        <label
-          class="c6"
-          for="contrat-cdi"
-        >
-          Contrat à durée indeterminé (CDI)
-        </label>
-      </div>
+        Contrat à durée indeterminé (CDI)
+      </label>
     </div>
     <p
       class="c0"
@@ -328,8 +292,9 @@ exports[`<StepInfo /> should render 1`] = `
     <div
       class="c3"
     >
-      <div
+      <label
         class="c4"
+        for="fauteGrave-oui"
       >
         <input
           class="c5"
@@ -338,15 +303,11 @@ exports[`<StepInfo /> should render 1`] = `
           type="radio"
           value="true"
         />
-        <label
-          class="c6"
-          for="fauteGrave-oui"
-        >
-          Oui
-        </label>
-      </div>
-      <div
+        Oui
+      </label>
+      <label
         class="c4"
+        for="fauteGrave-non"
       >
         <input
           class="c5"
@@ -355,13 +316,8 @@ exports[`<StepInfo /> should render 1`] = `
           type="radio"
           value="false"
         />
-        <label
-          class="c6"
-          for="fauteGrave-non"
-        >
-          Non
-        </label>
-      </div>
+        Non
+      </label>
     </div>
     <p
       class="c0"
@@ -380,8 +336,9 @@ exports[`<StepInfo /> should render 1`] = `
     <div
       class="c3"
     >
-      <div
+      <label
         class="c4"
+        for="inaptitude-oui"
       >
         <input
           class="c5"
@@ -390,15 +347,11 @@ exports[`<StepInfo /> should render 1`] = `
           type="radio"
           value="true"
         />
-        <label
-          class="c6"
-          for="inaptitude-oui"
-        >
-          Oui
-        </label>
-      </div>
-      <div
+        Oui
+      </label>
+      <label
         class="c4"
+        for="inaptitude-non"
       >
         <input
           class="c5"
@@ -407,13 +360,8 @@ exports[`<StepInfo /> should render 1`] = `
           type="radio"
           value="false"
         />
-        <label
-          class="c6"
-          for="inaptitude-non"
-        >
-          Non
-        </label>
-      </div>
+        Non
+      </label>
     </div>
     <button
       data-testid="nextBt"

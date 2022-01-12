@@ -7,23 +7,13 @@ exports[`<TypeContrat /> should render 1`] = `
   font-weight: 400;
 }
 
-.c5 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
 }
 
 .c4 {
@@ -104,8 +94,9 @@ exports[`<TypeContrat /> should render 1`] = `
        (obligatoire)
     </span>
   </p>
-  <div
+  <label
     class="c3"
+    for="contrat-cdd"
   >
     <input
       class="c4"
@@ -114,15 +105,11 @@ exports[`<TypeContrat /> should render 1`] = `
       type="radio"
       value="CDD"
     />
-    <label
-      class="c5"
-      for="contrat-cdd"
-    >
-      Contrat à durée déterminée (CDD)
-    </label>
-  </div>
-  <div
+    Contrat à durée déterminée (CDD)
+  </label>
+  <label
     class="c3"
+    for="contrat-ci"
   >
     <input
       class="c4"
@@ -131,12 +118,7 @@ exports[`<TypeContrat /> should render 1`] = `
       type="radio"
       value="CTT"
     />
-    <label
-      class="c5"
-      for="contrat-ci"
-    >
-      Contrat de travail temporaire (Contrat d’intérim)
-    </label>
-  </div>
+    Contrat de travail temporaire (Contrat d’intérim)
+  </label>
 </div>
 `;

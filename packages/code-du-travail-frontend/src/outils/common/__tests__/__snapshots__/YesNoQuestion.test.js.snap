@@ -7,23 +7,13 @@ exports[`<YesNoQuestion /> should render 1`] = `
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
 }
 
 .c5 {
@@ -126,8 +116,9 @@ exports[`<YesNoQuestion /> should render 1`] = `
   <div
     class="c3"
   >
-    <div
+    <label
       class="c4"
+      for="test-oui"
     >
       <input
         class="c5"
@@ -136,15 +127,11 @@ exports[`<YesNoQuestion /> should render 1`] = `
         type="radio"
         value="true"
       />
-      <label
-        class="c6"
-        for="test-oui"
-      >
-        Oui
-      </label>
-    </div>
-    <div
+      Oui
+    </label>
+    <label
       class="c4"
+      for="test-non"
     >
       <input
         class="c5"
@@ -153,13 +140,8 @@ exports[`<YesNoQuestion /> should render 1`] = `
         type="radio"
         value="false"
       />
-      <label
-        class="c6"
-        for="test-non"
-      >
-        Non
-      </label>
-    </div>
+      Non
+    </label>
   </div>
 </div>
 `;

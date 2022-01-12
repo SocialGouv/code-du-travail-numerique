@@ -7,23 +7,13 @@ exports[`<TypeRemuneration /> should render 1`] = `
   font-weight: 400;
 }
 
-.c5 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
 }
 
 .c4 {
@@ -104,8 +94,9 @@ exports[`<TypeRemuneration /> should render 1`] = `
        (obligatoire)
     </span>
   </p>
-  <div
+  <label
     class="c3"
+    for="typeRemuneration-amount"
   >
     <input
       class="c4"
@@ -114,21 +105,17 @@ exports[`<TypeRemuneration /> should render 1`] = `
       type="radio"
       value="total"
     />
-    <label
-      class="c5"
-      for="typeRemuneration-amount"
-    >
-      <span>
-        En indiquant le
-        <strong>
-           montant total 
-        </strong>
-        des rémunérations.
-      </span>
-    </label>
-  </div>
-  <div
+    <span>
+      En indiquant le
+      <strong>
+         montant total 
+      </strong>
+      des rémunérations.
+    </span>
+  </label>
+  <label
     class="c3"
+    for="typeRemuneration-pay"
   >
     <input
       class="c4"
@@ -137,18 +124,13 @@ exports[`<TypeRemuneration /> should render 1`] = `
       type="radio"
       value="mensuel"
     />
-    <label
-      class="c5"
-      for="typeRemuneration-pay"
-    >
-      <span>
-        En indiquant le
-        <strong>
-           salaire mensuel 
-        </strong>
-         pour chaque mois.
-      </span>
-    </label>
-  </div>
+    <span>
+      En indiquant le
+      <strong>
+         salaire mensuel 
+      </strong>
+       pour chaque mois.
+    </span>
+  </label>
 </div>
 `;

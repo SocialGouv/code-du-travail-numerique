@@ -7,23 +7,13 @@ exports[`<StepStatus /> should render 1`] = `
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
 }
 
 .c5 {
@@ -126,8 +116,9 @@ exports[`<StepStatus /> should render 1`] = `
   <div
     class="c3"
   >
-    <div
+    <label
       class="c4"
+      for="seriousMisconduct-oui"
     >
       <input
         class="c5"
@@ -136,15 +127,11 @@ exports[`<StepStatus /> should render 1`] = `
         type="radio"
         value="true"
       />
-      <label
-        class="c6"
-        for="seriousMisconduct-oui"
-      >
-        Oui
-      </label>
-    </div>
-    <div
+      Oui
+    </label>
+    <label
       class="c4"
+      for="seriousMisconduct-non"
     >
       <input
         class="c5"
@@ -153,13 +140,8 @@ exports[`<StepStatus /> should render 1`] = `
         type="radio"
         value="false"
       />
-      <label
-        class="c6"
-        for="seriousMisconduct-non"
-      >
-        Non
-      </label>
-    </div>
+      Non
+    </label>
   </div>
 </div>
 `;
@@ -171,23 +153,13 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
 }
 
 .c5 {
@@ -235,7 +207,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   display: block;
 }
 
-.c10 {
+.c9 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -255,7 +227,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   text-align: center;
 }
 
-.c13 {
+.c12 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -265,7 +237,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   pointer-events: none;
 }
 
-.c12 {
+.c11 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -286,21 +258,21 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   appearance: none;
 }
 
-.c12::-ms-expand {
+.c11::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c12 *::-ms-backdrop,
-.c12 {
+.c11 *::-ms-backdrop,
+.c11 {
   padding-right: 1.6rem;
 }
 
-.c12:invalid {
+.c11:invalid {
   border-color: #eb5757;
 }
 
-.c12:disabled {
+.c11:disabled {
   background-color: #e4e8ef;
 }
 
@@ -312,7 +284,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   cursor: default;
 }
 
-.c8 {
+.c7 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -324,18 +296,18 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   font-weight: 600;
 }
 
-.c9 {
+.c8 {
   display: block;
   margin-bottom: 0.4rem;
   font-size: 1.6rem;
   cursor: pointer;
 }
 
-.c11 {
+.c10 {
   width: 40rem;
 }
 
-.c7 {
+.c6 {
   margin-bottom: 3.2rem;
 }
 
@@ -359,7 +331,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c9 {
     width: 100%;
   }
 }
@@ -371,19 +343,19 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c7 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c8 {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c10 {
     width: 100%;
   }
 }
@@ -406,8 +378,9 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   <div
     class="c3"
   >
-    <div
+    <label
       class="c4"
+      for="seriousMisconduct-oui"
     >
       <input
         class="c5"
@@ -416,15 +389,11 @@ exports[`<StepStatus /> should render coefficient 1`] = `
         type="radio"
         value="true"
       />
-      <label
-        class="c6"
-        for="seriousMisconduct-oui"
-      >
-        Oui
-      </label>
-    </div>
-    <div
+      Oui
+    </label>
+    <label
       class="c4"
+      for="seriousMisconduct-non"
     >
       <input
         checked=""
@@ -434,13 +403,8 @@ exports[`<StepStatus /> should render coefficient 1`] = `
         type="radio"
         value="false"
       />
-      <label
-        class="c6"
-        for="seriousMisconduct-non"
-      >
-        Non
-      </label>
-    </div>
+      Non
+    </label>
   </div>
   <p
     class="c0"
@@ -459,8 +423,9 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   <div
     class="c3"
   >
-    <div
+    <label
       class="c4"
+      for="disabledWorker-oui"
     >
       <input
         checked=""
@@ -470,15 +435,11 @@ exports[`<StepStatus /> should render coefficient 1`] = `
         type="radio"
         value="true"
       />
-      <label
-        class="c6"
-        for="disabledWorker-oui"
-      >
-        Oui
-      </label>
-    </div>
-    <div
+      Oui
+    </label>
+    <label
       class="c4"
+      for="disabledWorker-non"
     >
       <input
         class="c5"
@@ -487,19 +448,14 @@ exports[`<StepStatus /> should render coefficient 1`] = `
         type="radio"
         value="false"
       />
-      <label
-        class="c6"
-        for="disabledWorker-non"
-      >
-        Non
-      </label>
-    </div>
+      Non
+    </label>
   </div>
   <div
-    class="c7"
+    class="c6"
   >
     <label
-      class="c8"
+      class="c7"
       for="input-cdt.ancienneté"
     >
       <span
@@ -514,15 +470,15 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       </span>
     </label>
     <label
-      class="c9"
+      class="c8"
     >
       Choissisez parmi les catégories d'ancienneté telles que définies par le Code du travail
     </label>
     <div
-      class="c10 c11"
+      class="c9 c10"
     >
       <select
-        class="c12"
+        class="c11"
         id="input-cdt.ancienneté"
         name="cdt.ancienneté"
       >
@@ -550,7 +506,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="c13"
+        class="c12"
       >
         <svg
           aria-hidden="true"
@@ -590,23 +546,13 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
 }
 
 .c5 {
@@ -709,8 +655,9 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
   <div
     class="c3"
   >
-    <div
+    <label
       class="c4"
+      for="seriousMisconduct-oui"
     >
       <input
         class="c5"
@@ -719,15 +666,11 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
         type="radio"
         value="true"
       />
-      <label
-        class="c6"
-        for="seriousMisconduct-oui"
-      >
-        Oui
-      </label>
-    </div>
-    <div
+      Oui
+    </label>
+    <label
       class="c4"
+      for="seriousMisconduct-non"
     >
       <input
         checked=""
@@ -737,13 +680,8 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
         type="radio"
         value="false"
       />
-      <label
-        class="c6"
-        for="seriousMisconduct-non"
-      >
-        Non
-      </label>
-    </div>
+      Non
+    </label>
   </div>
   <p
     class="c0"
@@ -762,8 +700,9 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
   <div
     class="c3"
   >
-    <div
+    <label
       class="c4"
+      for="disabledWorker-oui"
     >
       <input
         class="c5"
@@ -772,15 +711,11 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
         type="radio"
         value="true"
       />
-      <label
-        class="c6"
-        for="disabledWorker-oui"
-      >
-        Oui
-      </label>
-    </div>
-    <div
+      Oui
+    </label>
+    <label
       class="c4"
+      for="disabledWorker-non"
     >
       <input
         class="c5"
@@ -789,13 +724,8 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
         type="radio"
         value="false"
       />
-      <label
-        class="c6"
-        for="disabledWorker-non"
-      >
-        Non
-      </label>
-    </div>
+      Non
+    </label>
   </div>
 </div>
 `;

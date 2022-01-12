@@ -44,7 +44,6 @@ exports[`<StepResult /> should render CC answer 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 0;
 }
 
 .c8 {
@@ -208,11 +207,11 @@ exports[`<StepResult /> should render CC answer 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
+      <span
         class="c6 c7"
       >
         Voir le détail du calcul
-      </p>
+      </span>
     </div>
     <div
       class="c8"

@@ -7,23 +7,13 @@ exports[`<StepCDD /> should render 1`] = `
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
 }
 
 .c5 {
@@ -128,8 +118,9 @@ exports[`<StepCDD /> should render 1`] = `
       class="c3"
       data-testid="finContratPeriodeDessai"
     >
-      <div
+      <label
         class="c4"
+        for="finContratPeriodeDessai-oui"
       >
         <input
           class="c5"
@@ -138,15 +129,11 @@ exports[`<StepCDD /> should render 1`] = `
           type="radio"
           value="true"
         />
-        <label
-          class="c6"
-          for="finContratPeriodeDessai-oui"
-        >
-          Oui
-        </label>
-      </div>
-      <div
+        Oui
+      </label>
+      <label
         class="c4"
+        for="finContratPeriodeDessai-non"
       >
         <input
           class="c5"
@@ -155,13 +142,8 @@ exports[`<StepCDD /> should render 1`] = `
           type="radio"
           value="false"
         />
-        <label
-          class="c6"
-          for="finContratPeriodeDessai-non"
-        >
-          Non
-        </label>
-      </div>
+        Non
+      </label>
     </div>
     <p
       class="c0"
@@ -181,8 +163,9 @@ exports[`<StepCDD /> should render 1`] = `
       class="c3"
       data-testid="propositionCDIFindeContrat"
     >
-      <div
+      <label
         class="c4"
+        for="propositionCDIFindeContrat-oui"
       >
         <input
           class="c5"
@@ -191,15 +174,11 @@ exports[`<StepCDD /> should render 1`] = `
           type="radio"
           value="true"
         />
-        <label
-          class="c6"
-          for="propositionCDIFindeContrat-oui"
-        >
-          Oui
-        </label>
-      </div>
-      <div
+        Oui
+      </label>
+      <label
         class="c4"
+        for="propositionCDIFindeContrat-non"
       >
         <input
           class="c5"
@@ -208,13 +187,8 @@ exports[`<StepCDD /> should render 1`] = `
           type="radio"
           value="false"
         />
-        <label
-          class="c6"
-          for="propositionCDIFindeContrat-non"
-        >
-          Non
-        </label>
-      </div>
+        Non
+      </label>
     </div>
     <p
       class="c0"
@@ -234,8 +208,9 @@ exports[`<StepCDD /> should render 1`] = `
       class="c3"
       data-testid="interruptionFauteGrave"
     >
-      <div
+      <label
         class="c4"
+        for="interruptionFauteGrave-oui"
       >
         <input
           class="c5"
@@ -244,15 +219,11 @@ exports[`<StepCDD /> should render 1`] = `
           type="radio"
           value="true"
         />
-        <label
-          class="c6"
-          for="interruptionFauteGrave-oui"
-        >
-          Oui
-        </label>
-      </div>
-      <div
+        Oui
+      </label>
+      <label
         class="c4"
+        for="interruptionFauteGrave-non"
       >
         <input
           class="c5"
@@ -261,13 +232,8 @@ exports[`<StepCDD /> should render 1`] = `
           type="radio"
           value="false"
         />
-        <label
-          class="c6"
-          for="interruptionFauteGrave-non"
-        >
-          Non
-        </label>
-      </div>
+        Non
+      </label>
     </div>
     <p
       class="c0"
@@ -287,8 +253,9 @@ exports[`<StepCDD /> should render 1`] = `
       class="c3"
       data-testid="refusRenouvellementAuto"
     >
-      <div
+      <label
         class="c4"
+        for="refusRenouvellementAuto-oui"
       >
         <input
           class="c5"
@@ -297,15 +264,11 @@ exports[`<StepCDD /> should render 1`] = `
           type="radio"
           value="true"
         />
-        <label
-          class="c6"
-          for="refusRenouvellementAuto-oui"
-        >
-          Oui
-        </label>
-      </div>
-      <div
+        Oui
+      </label>
+      <label
         class="c4"
+        for="refusRenouvellementAuto-non"
       >
         <input
           class="c5"
@@ -314,13 +277,8 @@ exports[`<StepCDD /> should render 1`] = `
           type="radio"
           value="false"
         />
-        <label
-          class="c6"
-          for="refusRenouvellementAuto-non"
-        >
-          Non
-        </label>
-      </div>
+        Non
+      </label>
     </div>
     <button
       data-testid="nextBt"

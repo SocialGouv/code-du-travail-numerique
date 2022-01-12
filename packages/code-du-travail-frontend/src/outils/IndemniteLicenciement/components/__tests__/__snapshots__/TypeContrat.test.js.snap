@@ -7,23 +7,13 @@ exports[`<TypeContrat /> should render 1`] = `
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
 }
 
 .c5 {
@@ -126,8 +116,9 @@ exports[`<TypeContrat /> should render 1`] = `
   <div
     class="c3"
   >
-    <div
+    <label
       class="c4"
+      for="contrat-cdd"
     >
       <input
         class="c5"
@@ -136,15 +127,11 @@ exports[`<TypeContrat /> should render 1`] = `
         type="radio"
         value="cdd"
       />
-      <label
-        class="c6"
-        for="contrat-cdd"
-      >
-        Contrat à durée determiné (CDD) ou contrat d’intérim
-      </label>
-    </div>
-    <div
+      Contrat à durée determiné (CDD) ou contrat d’intérim
+    </label>
+    <label
       class="c4"
+      for="contrat-cdi"
     >
       <input
         class="c5"
@@ -153,13 +140,8 @@ exports[`<TypeContrat /> should render 1`] = `
         type="radio"
         value="cdi"
       />
-      <label
-        class="c6"
-        for="contrat-cdi"
-      >
-        Contrat à durée indeterminé (CDI)
-      </label>
-    </div>
+      Contrat à durée indeterminé (CDI)
+    </label>
   </div>
 </div>
 `;
