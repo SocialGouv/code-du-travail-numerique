@@ -56,6 +56,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
+  margin: 0;
 }
 
 .c13 {
@@ -82,6 +83,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
 }
 
 .c6 {
@@ -186,13 +188,13 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
             points="9 18 15 12 9 6"
           />
         </svg>
-        <span
+        <p
           aria-level="2"
           class="c4 c5"
           role="heading"
         >
           Références juridiques concernées :
-        </span>
+        </p>
       </div>
       <div
         class="c6"
@@ -217,11 +219,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="c14"
               >
                 Article L1244-3 du Code du travail
-              </span>
+              </p>
             </a>
           </li>
           <li>
@@ -241,11 +243,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="c14"
               >
                 Article R1244-4 du Code du travail
-              </span>
+              </p>
             </a>
           </li>
           <li>
@@ -268,11 +270,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="c14"
               >
                 Article L3121-44 du JO
-              </span>
+              </p>
             </a>
           </li>
           <li>
@@ -295,11 +297,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="c14"
               >
                 Article foo du JPO
-              </span>
+              </p>
             </a>
           </li>
           <li>
@@ -322,11 +324,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="c14"
               >
                 Convention foo
-              </span>
+              </p>
             </a>
           </li>
         </ul>

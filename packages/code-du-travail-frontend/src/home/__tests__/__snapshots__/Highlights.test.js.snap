@@ -211,10 +211,6 @@ exports[`<Highlights /> should render 1`] = `
   padding-top: 1.6rem;
 }
 
-.c17 {
-  margin-top: 0.8rem;
-}
-
 @media (max-width:600px) {
   .c1 {
     padding: 0 1rem;
@@ -387,7 +383,7 @@ exports[`<Highlights /> should render 1`] = `
                   class="c15"
                 >
                   <p
-                    class="c16 c17"
+                    class="c16"
                   >
                     1. Dois-je prévenir mon employeur si je reviens, ou si...
                   </p>
@@ -423,7 +419,7 @@ exports[`<Highlights /> should render 1`] = `
                   class="c15"
                 >
                   <p
-                    class="c16 c17"
+                    class="c16"
                   >
                     9. Quelles sont les recommandations sanitaires pour...
                   </p>

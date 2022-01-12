@@ -1,5 +1,5 @@
 import { SOURCES } from "@socialgouv/cdtn-sources";
-import { Button, FlatList, Text, theme } from "@socialgouv/cdtn-ui";
+import { Button, FlatList, Paragraph, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
@@ -20,17 +20,17 @@ const AgreementSelectionStep = ({
   return (
     <>
       <SectionTitle>Convention collective</SectionTitle>
-      <Text as="p" variant="primary">
+      <Paragraph noMargin variant="primary">
         {enterprise.conventions.length > 1
           ? `${enterprise.conventions.length} conventions collectives trouvées pour `
           : `${enterprise.conventions.length} convention collective trouvée pour `}
-        <b>
+        <strong>
           « {enterprise.simpleLabel}
           {enterprise.address &&
             ` , ${enterprise.firstMatchingEtablissement.address}`}{" "}
           »
-        </b>
-      </Text>
+        </strong>
+      </Paragraph>
       <FlatList>
         {enterprise.conventions.map((agreement) => (
           <Li key={agreement.id}>

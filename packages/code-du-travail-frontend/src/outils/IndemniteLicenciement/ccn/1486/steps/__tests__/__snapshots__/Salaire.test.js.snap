@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Salaire /> renders 1`] = `
-.c5 {
+.c4 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
@@ -42,7 +42,7 @@ exports[`<Salaire /> renders 1`] = `
   text-align: left;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -51,7 +51,17 @@ exports[`<Salaire /> renders 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c7 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -72,7 +82,7 @@ exports[`<Salaire /> renders 1`] = `
   appearance: none;
 }
 
-.c8:before {
+.c7:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -87,28 +97,25 @@ exports[`<Salaire /> renders 1`] = `
   content: "";
 }
 
-.c8:checked {
+.c7:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c8:checked:before {
+.c7:checked:before {
   display: block;
 }
 
 .c3 {
-  display: block;
-  margin-top: 2rem;
+  display: inline-block;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
-}
-
-.c4 {
   font-weight: 600;
+  cursor: pointer;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -124,7 +131,7 @@ exports[`<Salaire /> renders 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
 }
 
 .c1 {
@@ -185,55 +192,59 @@ exports[`<Salaire /> renders 1`] = `
       sont à considérer comme ceux effectués en temps plein.
     </div>
   </div>
-  <p
+  <label
     class="c3"
   >
+    De ce fait, avez-vous une modification à faire dans la déclaration du salaire ?
     <span
       class="c4"
     >
-      De ce fait, avez-vous une modification à faire dans la déclaration du salaire ?
-    </span>
-    <span
-      class="c5"
-    >
        (obligatoire)
     </span>
-  </p>
+  </label>
   <div
-    class="c6"
+    class="c5"
   >
-    <label
-      class="c7"
-      for="hasBrancheNewSalaire-oui"
+    <div
+      class="c6"
     >
       <input
-        class="c8"
+        class="c7"
         id="hasBrancheNewSalaire-oui"
         name="hasBrancheNewSalaire"
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
-      class="c7"
-      for="hasBrancheNewSalaire-non"
+      <label
+        class="c8"
+        for="hasBrancheNewSalaire-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
+      class="c6"
     >
       <input
-        class="c8"
+        class="c7"
         id="hasBrancheNewSalaire-non"
         name="hasBrancheNewSalaire"
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c8"
+        for="hasBrancheNewSalaire-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
 </div>
 `;
 
 exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
-.c5 {
+.c4 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
@@ -274,7 +285,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   text-align: left;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -283,7 +294,17 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c7 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -304,7 +325,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   appearance: none;
 }
 
-.c8:before {
+.c7:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -319,28 +340,25 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   content: "";
 }
 
-.c8:checked {
+.c7:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c8:checked:before {
+.c7:checked:before {
   display: block;
 }
 
 .c3 {
-  display: block;
-  margin-top: 2rem;
+  display: inline-block;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
-}
-
-.c4 {
   font-weight: 600;
+  cursor: pointer;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -356,7 +374,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
 }
 
 .c1 {
@@ -417,100 +435,108 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
       sont à considérer comme ceux effectués en temps plein.
     </div>
   </div>
-  <p
+  <label
     class="c3"
   >
+    De ce fait, avez-vous une modification à faire dans la déclaration du salaire ?
     <span
       class="c4"
     >
-      De ce fait, avez-vous une modification à faire dans la déclaration du salaire ?
-    </span>
-    <span
-      class="c5"
-    >
        (obligatoire)
     </span>
-  </p>
+  </label>
   <div
-    class="c6"
+    class="c5"
   >
-    <label
-      class="c7"
-      for="hasBrancheNewSalaire-oui"
+    <div
+      class="c6"
     >
       <input
         checked=""
-        class="c8"
+        class="c7"
         id="hasBrancheNewSalaire-oui"
         name="hasBrancheNewSalaire"
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
-      class="c7"
-      for="hasBrancheNewSalaire-non"
+      <label
+        class="c8"
+        for="hasBrancheNewSalaire-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
+      class="c6"
     >
       <input
-        class="c8"
+        class="c7"
         id="hasBrancheNewSalaire-non"
         name="hasBrancheNewSalaire"
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c8"
+        for="hasBrancheNewSalaire-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
-  <p
+  <label
     class="c3"
   >
+    Le salaire mensuel a-t-il été le même durant les 12 derniers mois ?
     <span
       class="c4"
     >
-      Le salaire mensuel a-t-il été le même durant les 12 derniers mois ?
-    </span>
-    <span
-      class="c5"
-    >
        (obligatoire)
     </span>
-  </p>
+  </label>
   <div
-    class="c6"
+    class="c5"
   >
-    <label
-      class="c7"
-      for="hasBrancheNewRegularSalaire-oui"
+    <div
+      class="c6"
     >
       <input
-        class="c8"
+        class="c7"
         id="hasBrancheNewRegularSalaire-oui"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
-      class="c7"
-      for="hasBrancheNewRegularSalaire-non"
+      <label
+        class="c8"
+        for="hasBrancheNewRegularSalaire-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
+      class="c6"
     >
       <input
-        class="c8"
+        class="c7"
         id="hasBrancheNewRegularSalaire-non"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c8"
+        for="hasBrancheNewRegularSalaire-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
 </div>
 `;
 
 exports[`<Salaire /> renders a table of fields of type number 1`] = `
-.c5 {
+.c4 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
@@ -710,7 +736,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   color: transparent;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -719,7 +745,17 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c7 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -740,7 +776,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   appearance: none;
 }
 
-.c8:before {
+.c7:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -755,28 +791,25 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   content: "";
 }
 
-.c8:checked {
+.c7:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c8:checked:before {
+.c7:checked:before {
   display: block;
 }
 
 .c3 {
-  display: block;
-  margin-top: 2rem;
+  display: inline-block;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
-}
-
-.c4 {
   font-weight: 600;
+  cursor: pointer;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -792,7 +825,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
 }
 
 .c1 {
@@ -911,95 +944,103 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
       sont à considérer comme ceux effectués en temps plein.
     </div>
   </div>
-  <p
+  <label
     class="c3"
   >
+    De ce fait, avez-vous une modification à faire dans la déclaration du salaire ?
     <span
       class="c4"
     >
-      De ce fait, avez-vous une modification à faire dans la déclaration du salaire ?
-    </span>
-    <span
-      class="c5"
-    >
        (obligatoire)
     </span>
-  </p>
+  </label>
   <div
-    class="c6"
+    class="c5"
   >
-    <label
-      class="c7"
-      for="hasBrancheNewSalaire-oui"
+    <div
+      class="c6"
     >
       <input
         checked=""
-        class="c8"
+        class="c7"
         id="hasBrancheNewSalaire-oui"
         name="hasBrancheNewSalaire"
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
-      class="c7"
-      for="hasBrancheNewSalaire-non"
+      <label
+        class="c8"
+        for="hasBrancheNewSalaire-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
+      class="c6"
     >
       <input
-        class="c8"
+        class="c7"
         id="hasBrancheNewSalaire-non"
         name="hasBrancheNewSalaire"
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c8"
+        for="hasBrancheNewSalaire-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
-  <p
+  <label
     class="c3"
   >
+    Le salaire mensuel a-t-il été le même durant les 12 derniers mois ?
     <span
       class="c4"
     >
-      Le salaire mensuel a-t-il été le même durant les 12 derniers mois ?
-    </span>
-    <span
-      class="c5"
-    >
        (obligatoire)
     </span>
-  </p>
+  </label>
   <div
-    class="c6"
+    class="c5"
   >
-    <label
-      class="c7"
-      for="hasBrancheNewRegularSalaire-oui"
+    <div
+      class="c6"
     >
       <input
-        class="c8"
+        class="c7"
         id="hasBrancheNewRegularSalaire-oui"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
-      class="c7"
-      for="hasBrancheNewRegularSalaire-non"
+      <label
+        class="c8"
+        for="hasBrancheNewRegularSalaire-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
+      class="c6"
     >
       <input
         checked=""
-        class="c8"
+        class="c7"
         id="hasBrancheNewRegularSalaire-non"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c8"
+        for="hasBrancheNewRegularSalaire-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
   <div
     class="c9"
@@ -1093,7 +1134,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
 `;
 
 exports[`<Salaire /> renders an input field of type number 1`] = `
-.c5 {
+.c4 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
@@ -1222,7 +1263,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   color: transparent;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1231,7 +1272,17 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c7 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -1252,7 +1303,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   appearance: none;
 }
 
-.c8:before {
+.c7:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1267,28 +1318,25 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   content: "";
 }
 
-.c8:checked {
+.c7:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c8:checked:before {
+.c7:checked:before {
   display: block;
 }
 
 .c3 {
-  display: block;
-  margin-top: 2rem;
+  display: inline-block;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
-}
-
-.c4 {
   font-weight: 600;
+  cursor: pointer;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1304,7 +1352,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
 }
 
 .c1 {
@@ -1399,95 +1447,103 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
       sont à considérer comme ceux effectués en temps plein.
     </div>
   </div>
-  <p
+  <label
     class="c3"
   >
+    De ce fait, avez-vous une modification à faire dans la déclaration du salaire ?
     <span
       class="c4"
     >
-      De ce fait, avez-vous une modification à faire dans la déclaration du salaire ?
-    </span>
-    <span
-      class="c5"
-    >
        (obligatoire)
     </span>
-  </p>
+  </label>
   <div
-    class="c6"
+    class="c5"
   >
-    <label
-      class="c7"
-      for="hasBrancheNewSalaire-oui"
+    <div
+      class="c6"
     >
       <input
         checked=""
-        class="c8"
+        class="c7"
         id="hasBrancheNewSalaire-oui"
         name="hasBrancheNewSalaire"
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
-      class="c7"
-      for="hasBrancheNewSalaire-non"
+      <label
+        class="c8"
+        for="hasBrancheNewSalaire-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
+      class="c6"
     >
       <input
-        class="c8"
+        class="c7"
         id="hasBrancheNewSalaire-non"
         name="hasBrancheNewSalaire"
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c8"
+        for="hasBrancheNewSalaire-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
-  <p
+  <label
     class="c3"
   >
+    Le salaire mensuel a-t-il été le même durant les 12 derniers mois ?
     <span
       class="c4"
     >
-      Le salaire mensuel a-t-il été le même durant les 12 derniers mois ?
-    </span>
-    <span
-      class="c5"
-    >
        (obligatoire)
     </span>
-  </p>
+  </label>
   <div
-    class="c6"
+    class="c5"
   >
-    <label
-      class="c7"
-      for="hasBrancheNewRegularSalaire-oui"
+    <div
+      class="c6"
     >
       <input
         checked=""
-        class="c8"
+        class="c7"
         id="hasBrancheNewRegularSalaire-oui"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
-      class="c7"
-      for="hasBrancheNewRegularSalaire-non"
+      <label
+        class="c8"
+        for="hasBrancheNewRegularSalaire-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
+      class="c6"
     >
       <input
-        class="c8"
+        class="c7"
         id="hasBrancheNewRegularSalaire-non"
         name="hasBrancheNewRegularSalaire"
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c8"
+        for="hasBrancheNewRegularSalaire-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
   <p>
     Salaire mensuel ajusté (primes et temps partiel inclus)

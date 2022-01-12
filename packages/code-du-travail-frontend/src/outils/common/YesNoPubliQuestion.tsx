@@ -16,7 +16,7 @@ type Props = {
 const YesNoPubliQuestion = ({ name, label, tooltip }: Props): JSX.Element => {
   return (
     <>
-      <Question as="p" tooltip={tooltip} required>
+      <Question tooltip={tooltip} required>
         {label}
       </Question>
       <RadioContainer>

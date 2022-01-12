@@ -75,6 +75,7 @@ const ButtonWrapper = styled.div`
   @media (max-width: ${breakpoints.mobile}) {
     justify-content: stretch;
   }
+  margin-bottom: ${spacings.small};
 `;
 
 const StyledButton = styled(Button)`

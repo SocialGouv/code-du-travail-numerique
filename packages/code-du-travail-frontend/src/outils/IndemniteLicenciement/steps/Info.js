@@ -1,5 +1,5 @@
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-import { Alert } from "@socialgouv/cdtn-ui";
+import { Alert, Paragraph } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
@@ -13,7 +13,7 @@ function validate(values) {
 
   if (values.contrat && values.contrat !== "cdi") {
     errors.contrat = (
-      <>
+      <Paragraph noMargin>
         L’indemnité de licenciement n’est pas dûe pour les CDD et contrats de
         travail temporaires. Sous certaines conditions, le salarié peut avoir le
         droit à une&nbsp;
@@ -27,21 +27,23 @@ function validate(values) {
           </A11yLink>
         </Link>
         .
-      </>
+      </Paragraph>
     );
   }
   if (values.fauteGrave) {
     errors.fauteGrave = (
       <Alert variant="primary" role="alert">
         <Title>À noter</Title>
-        <b>
-          L’indemnité légale de licenciement n’est pas dûe en cas de faute
-          grave.
-        </b>
-        <br />
-        Lorsqu’il est invoqué, le motif de faute grave doit apparaître
-        précisément dans le courrier. Reportez vous à la lettre de notification
-        de licenciement.
+        <Paragraph noMargin>
+          <strong>
+            L’indemnité légale de licenciement n’est pas dûe en cas de faute
+            grave.
+          </strong>
+          <br />
+          Lorsqu’il est invoqué, le motif de faute grave doit apparaître
+          précisément dans le courrier. Reportez vous à la lettre de
+          notification de licenciement.
+        </Paragraph>
       </Alert>
     );
   }

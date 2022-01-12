@@ -65,7 +65,7 @@ exports[`<StepPrimes /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c2 {
+.c1 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
@@ -170,7 +170,7 @@ exports[`<StepPrimes /> should render 1`] = `
   color: #9298af;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -179,7 +179,17 @@ exports[`<StepPrimes /> should render 1`] = `
   cursor: pointer;
 }
 
-.c5 {
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c4 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -200,7 +210,7 @@ exports[`<StepPrimes /> should render 1`] = `
   appearance: none;
 }
 
-.c5:before {
+.c4:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -215,28 +225,25 @@ exports[`<StepPrimes /> should render 1`] = `
   content: "";
 }
 
-.c5:checked {
+.c4:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c5:checked:before {
+.c4:checked:before {
   display: block;
 }
 
 .c0 {
-  display: block;
-  margin-top: 2rem;
+  display: inline-block;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
-}
-
-.c1 {
   font-weight: 600;
+  cursor: pointer;
 }
 
-.c3 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -252,7 +259,7 @@ exports[`<StepPrimes /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
 }
 
 .c13 {
@@ -327,50 +334,54 @@ exports[`<StepPrimes /> should render 1`] = `
 }
 
 <div>
-  <p
+  <label
     class="c0"
   >
+    Des primes annuelles ou exceptionnelles ont-elles été perçues au cours des 3 derniers mois ?
     <span
       class="c1"
     >
-      Des primes annuelles ou exceptionnelles ont-elles été perçues au cours des 3 derniers mois ?
-    </span>
-    <span
-      class="c2"
-    >
        (obligatoire)
     </span>
-  </p>
+  </label>
   <div
-    class="c3"
+    class="c2"
   >
-    <label
-      class="c4"
-      for="hasPrimes-oui"
+    <div
+      class="c3"
     >
       <input
         checked=""
-        class="c5"
+        class="c4"
         id="hasPrimes-oui"
         name="hasPrimes"
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
-      class="c4"
-      for="hasPrimes-non"
+      <label
+        class="c5"
+        for="hasPrimes-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
+      class="c3"
     >
       <input
-        class="c5"
+        class="c4"
         id="hasPrimes-non"
         name="hasPrimes"
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c5"
+        for="hasPrimes-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
   <br />
   <br />

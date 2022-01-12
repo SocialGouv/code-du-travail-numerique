@@ -290,19 +290,14 @@ exports[`<Feedback/> should render 1`] = `
         <div
           class="c4"
         >
-          <strong
+          <h2
             class="c5 c6"
           >
             <span
               class="c7"
             />
-            <span
-              aria-level="2"
-              role="heading"
-            >
-              Avez-vous trouvé la réponse à votre question ?
-            </span>
-          </strong>
+            Avez-vous trouvé la réponse à votre question ?
+          </h2>
           <p
             class="c8"
           >
@@ -835,18 +830,14 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
         <div
           class="c4"
         >
-          <strong
+          <h2
             class="c5 c6"
           >
             <span
               class="c7"
             />
-            <span
-              role="status"
-            >
-              Merci pour votre réponse.
-            </span>
-          </strong>
+            Merci pour votre réponse.
+          </h2>
         </div>
         <form>
           <fieldset
@@ -1354,18 +1345,14 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
         <div
           class="c4"
         >
-          <strong
+          <h2
             class="c5 c6"
           >
             <span
               class="c7"
             />
-            <span
-              role="status"
-            >
-              Merci pour votre réponse.
-            </span>
-          </strong>
+            Merci pour votre réponse.
+          </h2>
         </div>
         <form>
           <label

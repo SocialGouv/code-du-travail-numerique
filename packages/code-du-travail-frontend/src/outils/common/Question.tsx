@@ -25,7 +25,7 @@ export const Question = ({
   ...otherProps
 }: Props): JSX.Element => (
   <LabelBlock htmlFor={htmlFor} {...otherProps}>
-    <Label>{children}</Label>
+    {children}
     {required && <Text fontWeight="400">&nbsp;(obligatoire)</Text>}
     {tooltip && (
       <InfoBulle
@@ -41,16 +41,13 @@ export const Question = ({
 const { breakpoints, fonts, spacings } = theme;
 
 const LabelBlock = styled.label`
-  display: block;
-  margin-top: ${spacings.medium};
+  display: inline-block;
+  margin-top: ${spacings.small};
   margin-bottom: ${spacings.small};
   font-size: ${fonts.sizes.headings.small};
+  font-weight: 600;
   cursor: ${(props) => (props.as ? "default" : "pointer")};
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};
   }
-`;
-
-const Label = styled.span`
-  font-weight: 600;
 `;

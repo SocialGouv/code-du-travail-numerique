@@ -93,9 +93,9 @@ const Contribution = ({ answers, content }) => {
           <Badge />
           <CustomWrapper variant="dark">
             <IconStripe icon={icons.Custom}>
-              <StyledInsertTitle>Page personnalisable</StyledInsertTitle>
+              <StyledInsertTitle as="p">Page personnalisable</StyledInsertTitle>
               {isConventionDetected || isConventionalAnswer ? (
-                <>
+                <Paragraph noMargin>
                   Cette page a été personnalisée avec l’ajout des {}
                   {isConventionalAnswer ? (
                     <a href="#customisation">
@@ -108,15 +108,15 @@ const Contribution = ({ answers, content }) => {
                       {convention.shortTitle}
                     </a>
                   )}
-                </>
+                </Paragraph>
               ) : (
-                <>
+                <Paragraph noMargin>
                   Le contenu de cette page peut être personnalisé en fonction de
                   votre situation.
                   <br />
                   <a href="#customisation">Voir en bas de page</a> pour
                   renseigner votre convention collective.
-                </>
+                </Paragraph>
               )}
             </IconStripe>
           </CustomWrapper>
