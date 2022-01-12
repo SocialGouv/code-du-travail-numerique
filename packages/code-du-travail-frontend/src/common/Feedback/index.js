@@ -3,7 +3,6 @@ import {
   Container,
   Heading,
   InputCheckbox,
-  Paragraph,
   Section,
   Text,
   Textarea,
@@ -76,17 +75,15 @@ function Feedback({ url = document ? document.location.href : "" }) {
         <Wrapper variant="light">
           <Flex>
             <Heading
-              as={StyledStrong}
+              as={StyledH2}
               variant="primary"
               stripe="left"
               shift={theme.spacings.xmedium}
             >
               {isSatisfied === null ? (
-                <Paragraph noMargin role="heading" aria-level="2">
-                  Avez-vous trouvé la réponse à votre question&nbsp;?
-                </Paragraph>
+                <>Avez-vous trouvé la réponse à votre question&nbsp;?</>
               ) : (
-                <Paragraph role="status">Merci pour votre réponse.</Paragraph>
+                <>Merci pour votre réponse.</>
               )}
             </Heading>
             {isSatisfied === null && (
@@ -239,7 +236,7 @@ const Flex = styled.div`
     margin-left: auto;
   }
 `;
-const StyledStrong = styled.strong`
+const StyledH2 = styled.h2`
   flex: 0 1 auto;
   margin-top: 0;
   margin-bottom: 0;

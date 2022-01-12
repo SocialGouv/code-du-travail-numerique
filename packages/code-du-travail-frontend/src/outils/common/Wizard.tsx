@@ -284,7 +284,7 @@ const ToolTitle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: ${spacings.base};
+  margin-bottom: ${spacings.large};
   padding-bottom: ${spacings.base};
   border-bottom: 1px solid ${({ theme }) => theme.border};
   @media (max-width: ${breakpoints.tablet}) {
