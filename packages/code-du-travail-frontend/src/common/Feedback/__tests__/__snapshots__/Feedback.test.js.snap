@@ -55,7 +55,7 @@ exports[`<Feedback/> should render 1`] = `
   padding-left: 2.4rem;
 }
 
-.c10 {
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -93,16 +93,16 @@ exports[`<Feedback/> should render 1`] = `
   will-change: transform;
 }
 
-.c10:link,
-.c10:visited {
+.c9:link,
+.c9:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c10:not([disabled]):hover,
-.c10:not([disabled]):active,
-.c10:not([disabled]):focus {
+.c9:not([disabled]):hover,
+.c9:not([disabled]):active,
+.c9:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -111,19 +111,12 @@ exports[`<Feedback/> should render 1`] = `
   border-color: #dee5ef;
 }
 
-.c10[disabled] {
+.c9[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
-}
-
-.c8 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
 }
 
 .c4 {
@@ -154,7 +147,7 @@ exports[`<Feedback/> should render 1`] = `
   padding-bottom: 1rem;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -169,7 +162,7 @@ exports[`<Feedback/> should render 1`] = `
   margin: 0;
 }
 
-.c11 + .c11 {
+.c10 + .c10 {
   margin-left: 4rem;
 }
 
@@ -219,19 +212,19 @@ exports[`<Feedback/> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c9 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c10 {
+  .c9 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c9 {
     padding: 0 3rem;
   }
 }
@@ -270,7 +263,7 @@ exports[`<Feedback/> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c9 {
+  .c8 {
     -webkit-box-pack: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -279,7 +272,7 @@ exports[`<Feedback/> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c11 + .c11 {
+  .c10 + .c10 {
     margin-left: 0;
   }
 }
@@ -297,30 +290,24 @@ exports[`<Feedback/> should render 1`] = `
         <div
           class="c4"
         >
-          <strong
+          <h2
             class="c5 c6"
           >
             <span
               class="c7"
             />
-            <p
-              aria-level="2"
-              class="c8"
-              role="heading"
-            >
-              Avez-vous trouvé la réponse à votre question ?
-            </p>
-          </strong>
+            Avez-vous trouvé la réponse à votre question ?
+          </h2>
           <p
-            class="c9"
+            class="c8"
           >
             <button
-              class="c10 c11 "
+              class="c9 c10 "
             >
               Non
             </button>
             <button
-              class="c10 c11 "
+              class="c9 c10 "
             >
               Oui
             </button>
@@ -387,7 +374,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   padding-left: 2.4rem;
 }
 
-.c20 {
+.c19 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -425,16 +412,16 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   will-change: transform;
 }
 
-.c20:link,
-.c20:visited {
+.c19:link,
+.c19:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c20:not([disabled]):hover,
-.c20:not([disabled]):active,
-.c20:not([disabled]):focus {
+.c19:not([disabled]):hover,
+.c19:not([disabled]):active,
+.c19:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -443,7 +430,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   border-color: #dee5ef;
 }
 
-.c20[disabled] {
+.c19[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -451,7 +438,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   cursor: not-allowed;
 }
 
-.c22 {
+.c21 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -492,14 +479,14 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   overflow: visible;
 }
 
-.c22:focus,
-.c22:hover,
-.c22:active {
+.c21:focus,
+.c21:hover,
+.c21:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c24 {
+.c23 {
   width: 2.6rem;
   height: 1.4rem;
   margin: 0 0.4rem 0 1rem;
@@ -508,13 +495,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   transition: transform 250ms linear;
 }
 
-.c19:hover .c23 {
+.c18:hover .c22 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
 }
 
-.c17 {
+.c16 {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
@@ -527,19 +514,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
-.c16 {
+.c15 {
   color: #9298af;
   font-size: 1.2rem;
   font-weight: 400;
 }
 
-.c8 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -548,7 +529,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   cursor: pointer;
 }
 
-.c12 {
+.c11 {
   position: relative;
   display: block;
   -webkit-flex-shrink: 0;
@@ -566,7 +547,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   appearance: none;
 }
 
-.c12:before {
+.c11:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -581,15 +562,15 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   content: "";
 }
 
-.c12:checked {
+.c11:checked {
   background-color: #f66663;
 }
 
-.c12:checked:before {
+.c11:checked:before {
   display: block;
 }
 
-.c14 {
+.c13 {
   width: 100%;
   min-height: 12rem;
   padding: 2rem;
@@ -606,56 +587,56 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   appearance: none;
 }
 
-.c14::-webkit-input-placeholder {
+.c13::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c14::-moz-placeholder {
+.c13::-moz-placeholder {
   color: #9298af;
 }
 
-.c14:-ms-input-placeholder {
+.c13:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c14::placeholder {
+.c13::placeholder {
   color: #9298af;
 }
 
-.c14::-webkit-outer-spin-button,
-.c14::-webkit-inner-spin-button {
+.c13::-webkit-outer-spin-button,
+.c13::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c14:focus {
+.c13:focus {
   border-color: #7994d4;
 }
 
-.c14:focus::-webkit-input-placeholder {
+.c13:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c14:focus::-moz-placeholder {
+.c13:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c14:focus:-ms-input-placeholder {
+.c13:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c14:focus::placeholder {
+.c13:focus::placeholder {
   color: transparent;
 }
 
-.c9 {
+.c8 {
   border: none;
   padding: 0;
 }
 
-.c10 {
+.c9 {
   font-weight: 600;
   padding: 1rem 0;
 }
@@ -688,21 +669,21 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   padding-bottom: 1rem;
 }
 
-.c21 + .c21 {
+.c20 + .c20 {
   margin-left: 4rem;
 }
 
-.c15 {
+.c14 {
   max-width: 100%;
 }
 
-.c13 {
+.c12 {
   font-weight: 600;
   display: block;
   margin: 2rem 0 1rem 0;
 }
 
-.c18 {
+.c17 {
   margin: 3.2rem 0;
 }
 
@@ -764,31 +745,31 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c19 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c20 {
+  .c19 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c22 {
+  .c21 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c22 {
+  .c21 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c13 {
     width: 100%;
   }
 }
@@ -831,7 +812,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c21 + .c21 {
+  .c20 + .c20 {
     margin-left: 0;
   }
 }
@@ -849,35 +830,30 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
         <div
           class="c4"
         >
-          <strong
+          <h2
             class="c5 c6"
           >
             <span
               class="c7"
             />
-            <p
-              class="c8"
-              role="status"
-            >
-              Merci pour votre réponse.
-            </p>
-          </strong>
+            Merci pour votre réponse.
+          </h2>
         </div>
         <form>
           <fieldset
-            class="c9"
+            class="c8"
           >
             <legend
-              class="c10"
+              class="c9"
             >
               Pouvez-vous nous en dire plus ?
             </legend>
             <label
-              class="c11"
+              class="c10"
               for="unclear"
             >
               <input
-                class="c12"
+                class="c11"
                 id="unclear"
                 name="category"
                 type="checkbox"
@@ -886,11 +862,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               Les informations ne sont pas claires.
             </label>
             <label
-              class="c11"
+              class="c10"
               for="unrelated"
             >
               <input
-                class="c12"
+                class="c11"
                 id="unrelated"
                 name="category"
                 type="checkbox"
@@ -899,11 +875,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               Cette page ne correspond pas à ma recherche ou à ma situation.
             </label>
             <label
-              class="c11"
+              class="c10"
               for="unsatisfied"
             >
               <input
-                class="c12"
+                class="c11"
                 id="unsatisfied"
                 name="category"
                 type="checkbox"
@@ -912,11 +888,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               Je ne suis pas satisfait de cette réglementation.
             </label>
             <label
-              class="c11"
+              class="c10"
               for="wrong"
             >
               <input
-                class="c12"
+                class="c11"
                 id="wrong"
                 name="category"
                 type="checkbox"
@@ -926,13 +902,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             </label>
           </fieldset>
           <label
-            class="c13"
+            class="c12"
             for="suggestion"
           >
             Faire une suggestion pour améliorer cette page
           </label>
           <textarea
-            class="c14 c15"
+            class="c13 c14"
             cols="50"
             id="suggestion"
             maxlength="150"
@@ -942,13 +918,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           />
           <div>
             <span
-              class="c16"
+              class="c15"
             >
               150
                caractères restants
             </span>
             <div
-              class="c17"
+              class="c16"
               role="status"
             >
               150
@@ -956,10 +932,10 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             </div>
           </div>
           <div
-            class="c18"
+            class="c17"
           >
             <button
-              class="c19 c20 c21 "
+              class="c18 c19 c20 "
             >
               Envoyer
             </button>
@@ -969,13 +945,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           Pour obtenir une réponse à votre question de droit du travail, nous vous invitons à joindre
            
           <button
-            class="c19 c22"
+            class="c18 c21"
             type="button"
           >
             les services du ministère du Travail en région
             <svg
               aria-hidden="true"
-              class="c23 c24"
+              class="c22 c23"
               fill="none"
               viewBox="0 0 28 15"
               xmlns="http://www.w3.org/2000/svg"
@@ -1048,7 +1024,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   padding-left: 2.4rem;
 }
 
-.c15 {
+.c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1086,16 +1062,16 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   will-change: transform;
 }
 
-.c15:link,
-.c15:visited {
+.c14:link,
+.c14:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c15:not([disabled]):hover,
-.c15:not([disabled]):active,
-.c15:not([disabled]):focus {
+.c14:not([disabled]):hover,
+.c14:not([disabled]):active,
+.c14:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -1104,7 +1080,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   border-color: #dee5ef;
 }
 
-.c15[disabled] {
+.c14[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -1112,7 +1088,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   cursor: not-allowed;
 }
 
-.c13 {
+.c12 {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
@@ -1125,19 +1101,13 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
-.c12 {
+.c11 {
   color: #9298af;
   font-size: 1.2rem;
   font-weight: 400;
 }
 
-.c8 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c10 {
+.c9 {
   width: 100%;
   min-height: 12rem;
   padding: 2rem;
@@ -1154,47 +1124,47 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   appearance: none;
 }
 
-.c10::-webkit-input-placeholder {
+.c9::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c10::-moz-placeholder {
+.c9::-moz-placeholder {
   color: #9298af;
 }
 
-.c10:-ms-input-placeholder {
+.c9:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c10::placeholder {
+.c9::placeholder {
   color: #9298af;
 }
 
-.c10::-webkit-outer-spin-button,
-.c10::-webkit-inner-spin-button {
+.c9::-webkit-outer-spin-button,
+.c9::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c10:focus {
+.c9:focus {
   border-color: #7994d4;
 }
 
-.c10:focus::-webkit-input-placeholder {
+.c9:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c10:focus::-moz-placeholder {
+.c9:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c10:focus:-ms-input-placeholder {
+.c9:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c10:focus::placeholder {
+.c9:focus::placeholder {
   color: transparent;
 }
 
@@ -1226,21 +1196,21 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   padding-bottom: 1rem;
 }
 
-.c16 + .c16 {
+.c15 + .c15 {
   margin-left: 4rem;
 }
 
-.c11 {
+.c10 {
   max-width: 100%;
 }
 
-.c9 {
+.c8 {
   font-weight: 600;
   display: block;
   margin: 2rem 0 1rem 0;
 }
 
-.c14 {
+.c13 {
   margin: 3.2rem 0;
 }
 
@@ -1302,19 +1272,19 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c14 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c15 {
+  .c14 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c9 {
     width: 100%;
   }
 }
@@ -1357,7 +1327,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c16 + .c16 {
+  .c15 + .c15 {
     margin-left: 0;
   }
 }
@@ -1375,29 +1345,24 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
         <div
           class="c4"
         >
-          <strong
+          <h2
             class="c5 c6"
           >
             <span
               class="c7"
             />
-            <p
-              class="c8"
-              role="status"
-            >
-              Merci pour votre réponse.
-            </p>
-          </strong>
+            Merci pour votre réponse.
+          </h2>
         </div>
         <form>
           <label
-            class="c9"
+            class="c8"
             for="suggestion"
           >
             Faire une suggestion pour améliorer cette page
           </label>
           <textarea
-            class="c10 c11"
+            class="c9 c10"
             cols="50"
             id="suggestion"
             maxlength="150"
@@ -1407,13 +1372,13 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
           />
           <div>
             <span
-              class="c12"
+              class="c11"
             >
               150
                caractères restants
             </span>
             <div
-              class="c13"
+              class="c12"
               role="status"
             >
               150
@@ -1421,10 +1386,10 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
             </div>
           </div>
           <div
-            class="c14"
+            class="c13"
           >
             <button
-              class="c15 c16 "
+              class="c14 c15 "
             >
               Envoyer
             </button>

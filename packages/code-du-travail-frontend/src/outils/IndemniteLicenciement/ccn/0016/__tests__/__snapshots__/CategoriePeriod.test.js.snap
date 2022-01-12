@@ -90,8 +90,8 @@ exports[`<CategoryPeriod /> should render 1`] = `
 }
 
 .c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;

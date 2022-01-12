@@ -1048,20 +1048,14 @@ exports[`<Answer /> should renders 1`] = `
             <div
               class="c28"
             >
-              <strong
+              <h2
                 class="c29 c30"
               >
                 <span
                   class="c31"
                 />
-                <p
-                  aria-level="2"
-                  class="c23"
-                  role="heading"
-                >
-                  Avez-vous trouvé la réponse à votre question ?
-                </p>
-              </strong>
+                Avez-vous trouvé la réponse à votre question ?
+              </h2>
               <p
                 class="c32"
               >
@@ -2383,20 +2377,14 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             <div
               class="c38"
             >
-              <strong
+              <h2
                 class="c39 c40"
               >
                 <span
                   class="c41"
                 />
-                <p
-                  aria-level="2"
-                  class="c33"
-                  role="heading"
-                >
-                  Avez-vous trouvé la réponse à votre question ?
-                </p>
-              </strong>
+                Avez-vous trouvé la réponse à votre question ?
+              </h2>
               <p
                 class="c42"
               >
@@ -3468,20 +3456,14 @@ exports[`<Answer /> should renders back to results link 1`] = `
             <div
               class="c28"
             >
-              <strong
+              <h2
                 class="c29 c30"
               >
                 <span
                   class="c31"
                 />
-                <p
-                  aria-level="2"
-                  class="c23"
-                  role="heading"
-                >
-                  Avez-vous trouvé la réponse à votre question ?
-                </p>
-              </strong>
+                Avez-vous trouvé la réponse à votre question ?
+              </h2>
               <p
                 class="c32"
               >
@@ -4664,20 +4646,14 @@ exports[`<Answer /> should renders related content 1`] = `
             <div
               class="c28"
             >
-              <strong
+              <h2
                 class="c29 c30"
               >
                 <span
                   class="c31"
                 />
-                <p
-                  aria-level="2"
-                  class="c23"
-                  role="heading"
-                >
-                  Avez-vous trouvé la réponse à votre question ?
-                </p>
-              </strong>
+                Avez-vous trouvé la réponse à votre question ?
+              </h2>
               <p
                 class="c32"
               >
@@ -5912,20 +5888,14 @@ exports[`<Answer /> should renders tooltip 1`] = `
             <div
               class="c28"
             >
-              <strong
+              <h2
                 class="c29 c30"
               >
                 <span
                   class="c31"
                 />
-                <p
-                  aria-level="2"
-                  class="c23"
-                  role="heading"
-                >
-                  Avez-vous trouvé la réponse à votre question ?
-                </p>
-              </strong>
+                Avez-vous trouvé la réponse à votre question ?
+              </h2>
               <p
                 class="c32"
               >
@@ -6998,20 +6968,14 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             <div
               class="c28"
             >
-              <strong
+              <h2
                 class="c29 c30"
               >
                 <span
                   class="c31"
                 />
-                <p
-                  aria-level="2"
-                  class="c23"
-                  role="heading"
-                >
-                  Avez-vous trouvé la réponse à votre question ?
-                </p>
-              </strong>
+                Avez-vous trouvé la réponse à votre question ?
+              </h2>
               <p
                 class="c32"
               >
@@ -8085,20 +8049,14 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             <div
               class="c28"
             >
-              <strong
+              <h2
                 class="c29 c30"
               >
                 <span
                   class="c31"
                 />
-                <p
-                  aria-level="2"
-                  class="c23"
-                  role="heading"
-                >
-                  Avez-vous trouvé la réponse à votre question ?
-                </p>
-              </strong>
+                Avez-vous trouvé la réponse à votre question ?
+              </h2>
               <p
                 class="c32"
               >
@@ -9167,20 +9125,14 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             <div
               class="c28"
             >
-              <strong
+              <h2
                 class="c29 c30"
               >
                 <span
                   class="c31"
                 />
-                <p
-                  aria-level="2"
-                  class="c23"
-                  role="heading"
-                >
-                  Avez-vous trouvé la réponse à votre question ?
-                </p>
-              </strong>
+                Avez-vous trouvé la réponse à votre question ?
+              </h2>
               <p
                 class="c32"
               >

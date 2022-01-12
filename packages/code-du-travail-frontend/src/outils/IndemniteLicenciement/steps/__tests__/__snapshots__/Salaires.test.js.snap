@@ -202,6 +202,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   color: #3e486e;
   font-size: 1.4rem;
   font-style: italic;
+  margin-top: 0.8rem;
 }
 
 .c6 {
@@ -1050,6 +1051,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   color: #3e486e;
   font-size: 1.4rem;
   font-style: italic;
+  margin-top: 0.8rem;
 }
 
 @media (max-width:600px) {

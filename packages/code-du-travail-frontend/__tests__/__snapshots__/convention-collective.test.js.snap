@@ -646,20 +646,14 @@ exports[`<ConventionCollective /> should render 1`] = `
             <div
               class="c16"
             >
-              <strong
+              <h2
                 class="c17 c18"
               >
                 <span
                   class="c19"
                 />
-                <p
-                  aria-level="2"
-                  class="c6"
-                  role="heading"
-                >
-                  Avez-vous trouvé la réponse à votre question ?
-                </p>
-              </strong>
+                Avez-vous trouvé la réponse à votre question ?
+              </h2>
               <p
                 class="c20"
               >

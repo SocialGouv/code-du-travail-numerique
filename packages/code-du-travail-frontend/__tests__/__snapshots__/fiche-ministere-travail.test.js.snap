@@ -2622,20 +2622,14 @@ exports[`<FicheMT /> should render 1`] = `
                 <div
                   class="c70"
                 >
-                  <strong
+                  <h2
                     class="c71 c72"
                   >
                     <span
                       class="c73"
                     />
-                    <p
-                      aria-level="2"
-                      class="c57"
-                      role="heading"
-                    >
-                      Avez-vous trouvé la réponse à votre question ?
-                    </p>
-                  </strong>
+                    Avez-vous trouvé la réponse à votre question ?
+                  </h2>
                   <p
                     class="c74"
                   >

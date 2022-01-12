@@ -119,6 +119,7 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
   color: #3e486e;
   font-size: 1.4rem;
   font-style: italic;
+  margin-top: 0.8rem;
 }
 
 .c0 {
@@ -406,6 +407,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
   color: #3e486e;
   font-size: 1.4rem;
   font-style: italic;
+  margin-top: 0.8rem;
 }
 
 .c0 {

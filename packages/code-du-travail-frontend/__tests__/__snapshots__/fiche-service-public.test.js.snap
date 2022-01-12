@@ -1777,20 +1777,14 @@ exports[`<FicheSP /> should render 1`] = `
                 <div
                   class="c39"
                 >
-                  <strong
+                  <h2
                     class="c40 c41"
                   >
                     <span
                       class="c42"
                     />
-                    <p
-                      aria-level="2"
-                      class="c30"
-                      role="heading"
-                    >
-                      Avez-vous trouvé la réponse à votre question ?
-                    </p>
-                  </strong>
+                    Avez-vous trouvé la réponse à votre question ?
+                  </h2>
                   <p
                     class="c43"
                   >
