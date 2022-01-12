@@ -151,8 +151,8 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
 }
 
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;

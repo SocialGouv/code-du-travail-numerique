@@ -19,8 +19,8 @@ export const RadioContainer = styled.div`
 `;
 
 export const SectionTitle = styled.h2`
-  margin-top: ${spacings.medium};
-  margin-bottom: ${spacings.xsmall};
+  margin-top: ${spacings.small};
+  margin-bottom: ${spacings.small};
   color: ${({ theme }) => theme.altText};
   font-weight: 600;
   font-size: ${fonts.sizes.headings.small};

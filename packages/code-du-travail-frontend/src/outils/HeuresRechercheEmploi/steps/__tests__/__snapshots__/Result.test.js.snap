@@ -138,8 +138,8 @@ exports[`<StepResult /> should render no results 1`] = `
 }
 
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -436,8 +436,8 @@ exports[`<StepResult /> should render with duration 1`] = `
 }
 
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -774,8 +774,8 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 }
 
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1086,8 +1086,8 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 }
 
 .c0 {
-  margin-top: 2rem;
-  margin-bottom: 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
