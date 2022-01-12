@@ -36,6 +36,7 @@ exports[`<RelatedItems /> should render 1`] = `
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
+  margin: 0;
 }
 
 .c7 {
@@ -132,11 +133,11 @@ exports[`<RelatedItems /> should render 1`] = `
               fill="currentColor"
             />
           </svg>
-          <span
+          <p
             class="c8"
           >
             externalTool
-          </span>
+          </p>
         </a>
       </li>
       <li
@@ -157,11 +158,11 @@ exports[`<RelatedItems /> should render 1`] = `
               fill="currentColor"
             />
           </svg>
-          <span
+          <p
             class="c8"
           >
             modele de courrier
-          </span>
+          </p>
         </a>
       </li>
     </ul>
@@ -194,11 +195,11 @@ exports[`<RelatedItems /> should render 1`] = `
               fill="currentColor"
             />
           </svg>
-          <span
+          <p
             class="c8"
           >
             fiche sp
-          </span>
+          </p>
         </a>
       </li>
       <li
@@ -219,11 +220,11 @@ exports[`<RelatedItems /> should render 1`] = `
               fill="currentColor"
             />
           </svg>
-          <span
+          <p
             class="c8"
           >
             contrib
-          </span>
+          </p>
         </a>
       </li>
     </ul>

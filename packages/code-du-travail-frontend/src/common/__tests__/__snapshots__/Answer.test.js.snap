@@ -3580,6 +3580,7 @@ exports[`<Answer /> should renders related content 1`] = `
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
+  margin: 0;
 }
 
 .c40 {
@@ -4640,11 +4641,11 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="c41"
               >
                 related external title 1
-              </span>
+              </p>
             </a>
           </li>
           <li
@@ -4666,11 +4667,11 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="c41"
               >
                 related tool title 1
-              </span>
+              </p>
             </a>
           </li>
         </ul>
@@ -4704,11 +4705,11 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="c41"
               >
                 related sheet sp title 1
-              </span>
+              </p>
             </a>
           </li>
           <li
@@ -4730,11 +4731,11 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="c41"
               >
                 related sheet mt title 1
-              </span>
+              </p>
             </a>
           </li>
           <li
@@ -4756,11 +4757,11 @@ exports[`<Answer /> should renders related content 1`] = `
                   fill="currentColor"
                 />
               </svg>
-              <span
+              <p
                 class="c41"
               >
                 related sheet sp title 2
-              </span>
+              </p>
             </a>
           </li>
         </ul>

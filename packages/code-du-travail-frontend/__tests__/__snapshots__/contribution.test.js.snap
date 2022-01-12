@@ -2614,13 +2614,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       <div
                         class="c57"
                       >
-                        <div
+                        <p
                           aria-level="2"
                           class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c58"
                           role="heading"
                         >
                           Page personnalisable
-                        </div>
+                        </p>
                         Le contenu de cette page peut être personnalisé en fonction de votre situation.
                         <br />
                         <a
@@ -5907,13 +5907,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       <div
                         class="c57"
                       >
-                        <div
+                        <p
                           aria-level="2"
                           class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c58"
                           role="heading"
                         >
                           Page personnalisable
-                        </div>
+                        </p>
                         Le contenu de cette page peut être personnalisé en fonction de votre situation.
                         <br />
                         <a

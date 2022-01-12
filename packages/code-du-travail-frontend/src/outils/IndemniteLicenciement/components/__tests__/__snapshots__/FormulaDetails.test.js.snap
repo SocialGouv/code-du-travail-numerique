@@ -26,6 +26,7 @@ exports[`<FormulaDetails /> should render 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
 }
 
 .c5 {
@@ -104,11 +105,11 @@ exports[`<FormulaDetails /> should render 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c3 c4"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c5"

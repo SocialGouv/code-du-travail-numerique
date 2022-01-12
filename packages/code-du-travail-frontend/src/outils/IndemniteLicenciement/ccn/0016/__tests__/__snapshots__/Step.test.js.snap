@@ -585,13 +585,23 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   color: transparent;
 }
 
-.c13 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .c14 {
@@ -932,9 +942,8 @@ exports[`<Step /> should ask detail about retirement 1`] = `
   <div
     class="c12"
   >
-    <label
+    <div
       class="c13"
-      for="hasRetirementAge-oui"
     >
       <input
         class="c14"
@@ -943,11 +952,15 @@ exports[`<Step /> should ask detail about retirement 1`] = `
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
+      <label
+        class="c15"
+        for="hasRetirementAge-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
       class="c13"
-      for="hasRetirementAge-non"
     >
       <input
         class="c14"
@@ -956,8 +969,13 @@ exports[`<Step /> should ask detail about retirement 1`] = `
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c15"
+        for="hasRetirementAge-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
 </div>
 `;
