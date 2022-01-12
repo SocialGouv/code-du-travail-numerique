@@ -50,11 +50,11 @@ export const ListLink = ({
     children: (
       <>
         {highlight && highlight.searchInfo && (
-          <Paragraph variant="secondary" noMargin>
+          <StyledParagraph variant="secondary" noMargin>
             {highlight.searchInfo}
-          </Paragraph>
+          </StyledParagraph>
         )}
-        <StyledParagraph noMargin>{summarize(description)}</StyledParagraph>
+        <Paragraph noMargin>{summarize(description)}</Paragraph>
       </>
     ), //TODO
     onClick: () => reportSelectionToMatomo(source, slug, url, algo),
@@ -183,5 +183,5 @@ const StyledButton = styled(Button)`
 `;
 
 const StyledParagraph = styled(Paragraph)`
-  margin-top: ${spacings.xsmall};
+  margin-bottom: ${spacings.xsmall};
 `;

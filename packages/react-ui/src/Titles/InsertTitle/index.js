@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { breakpoints, fonts, spacings } from "../../theme.js";
 
-export const InsertTitle = styled.div`
+export const InsertTitle = styled.p`
   margin: 0 0 ${spacings.small} 0;
   color: ${({ theme }) => theme.primary};
   font-weight: 600;

@@ -117,7 +117,7 @@ const SuggestionContainer = styled.div`
 `;
 
 const renderSuggestion = (suggestion, query) => {
-  const title = suggestion.replace(query, `<b>${query}</b>`);
+  const title = suggestion.replace(query, `<strong>${query}</strong>`);
   return (
     <SuggestionContainer>
       <Html inline>{title}</Html>

@@ -51,6 +51,13 @@ exports[`<Article /> should render 1`] = `
   transform: translateY(-50%);
 }
 
+.c15 {
+  color: #3e486e;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0;
+}
+
 .c9 {
   position: relative;
 }
@@ -218,7 +225,7 @@ exports[`<Article /> should render 1`] = `
   font-size: 1.4rem;
 }
 
-.c17 {
+.c18 {
   margin: 3.2rem 0 0 0;
 }
 
@@ -324,19 +331,19 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c18 {
     margin-top: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c17 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c16 {
     display: block;
   }
 }
@@ -478,29 +485,33 @@ exports[`<Article /> should render 1`] = `
         <div
           class="c14"
         >
-          <span
+          <p
             class="c15"
           >
-            Source: 
-            Fiche service public
-          </span>
-          <span
-            aria-hidden="true"
-            class="c16"
-          >
-             - 
-          </span>
-          <span
-            class="c15"
-          >
-            Mis à jour le
-             : 
-            26/07/2018
-          </span>
+            <span
+              class="c16"
+            >
+              Source: 
+              Fiche service public
+            </span>
+            <span
+              aria-hidden="true"
+              class="c17"
+            >
+               - 
+            </span>
+            <span
+              class="c16"
+            >
+              Mis à jour le
+               : 
+              26/07/2018
+            </span>
+          </p>
         </div>
       </div>
       <div
-        class="c17"
+        class="c18"
       >
         this is an Article
       </div>
