@@ -27,7 +27,7 @@ const AgreementSelectionStep = ({
         <b>
           « {enterprise.simpleLabel}
           {enterprise.address &&
-            ` , ${enterprise.matchingEtablissement.address}`}{" "}
+            ` , ${enterprise.firstMatchingEtablissement.address}`}{" "}
           »
         </b>
       </Text>

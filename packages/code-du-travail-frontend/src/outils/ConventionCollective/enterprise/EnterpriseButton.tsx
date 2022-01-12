@@ -25,13 +25,13 @@ export function EnterpriseButton({
 }: CompagnyItemProps): JSX.Element {
   const {
     label,
-    etablissements,
+    matching,
     highlightLabel,
     simpleLabel,
     activitePrincipale,
     address,
     siren,
-    matchingEtablissement,
+    firstMatchingEtablissement,
   } = enterprise;
 
   const { trackEvent, title, uuid } = useTrackingContext();
@@ -67,10 +67,10 @@ export function EnterpriseButton({
         {activitePrincipale && (
           <Activity as="div">Activité : {activitePrincipale}</Activity>
         )}
-        {!showAddress && etablissements > 1 ? (
-          <Tag> {etablissements} établissements </Tag>
+        {!showAddress || matching > 1 ? (
+          <Tag> {matching} établissements </Tag>
         ) : (
-          <Text>{address || matchingEtablissement.address}</Text>
+          <Text>{address || firstMatchingEtablissement.address}</Text>
         )}
       </ItemButton>
     </Link>
