@@ -375,7 +375,7 @@ const StyledLink = styled.a.attrs((props) => ({
   font-weight: normal;
   text-decoration: none;
   cursor: pointer;
-  padding: ${spacings.tiny} 0;
+  padding: ${spacings.xsmall} 0;
   display: inline-block;
 `;
 const StyledButton = styled(Button)`
