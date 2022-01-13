@@ -1516,7 +1516,7 @@ exports[`<Term /> should render 1`] = `
                     class="c49"
                     href="/accessibilite"
                   >
-                    Accessibilité : conforme
+                    Accessibilité : partiellement conforme
                   </a>
                 </li>
                 <li>

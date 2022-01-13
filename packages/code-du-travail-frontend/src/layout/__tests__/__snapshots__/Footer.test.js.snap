@@ -539,7 +539,7 @@ exports[`<Footer /> should render 1`] = `
                   class="c19"
                   href="/accessibilite"
                 >
-                  Accessibilité : conforme
+                  Accessibilité : partiellement conforme
                 </a>
               </li>
               <li>

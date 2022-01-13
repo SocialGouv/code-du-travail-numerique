@@ -1776,7 +1776,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                     class="c53"
                     href="/accessibilite"
                   >
-                    Accessibilité : conforme
+                    Accessibilité : partiellement conforme
                   </a>
                 </li>
                 <li>

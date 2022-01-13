@@ -1908,7 +1908,7 @@ exports[`<FicheSP /> should render 1`] = `
                     class="c62"
                     href="/accessibilite"
                   >
-                    Accessibilité : conforme
+                    Accessibilité : partiellement conforme
                   </a>
                 </li>
                 <li>

@@ -2742,7 +2742,7 @@ exports[`<FicheMT /> should render 1`] = `
                     class="c92"
                     href="/accessibilite"
                   >
-                    Accessibilité : conforme
+                    Accessibilité : partiellement conforme
                   </a>
                 </li>
                 <li>

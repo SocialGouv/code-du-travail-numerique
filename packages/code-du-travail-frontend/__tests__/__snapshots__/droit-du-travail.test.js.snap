@@ -5002,7 +5002,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     class="c107"
                     href="/accessibilite"
                   >
-                    Accessibilité : conforme
+                    Accessibilité : partiellement conforme
                   </a>
                 </li>
                 <li>
