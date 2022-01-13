@@ -85,7 +85,9 @@ const Footer = (): JSX.Element => {
                 </li>
                 <li>
                   <Link passHref href="/accessibilite">
-                    <StyledLink>Accessibilité&nbsp;: conforme</StyledLink>
+                    <StyledLink>
+                      Accessibilité&nbsp;: partiellement conforme
+                    </StyledLink>
                   </Link>
                 </li>
                 <li>

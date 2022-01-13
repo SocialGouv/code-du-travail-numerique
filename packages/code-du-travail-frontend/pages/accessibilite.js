@@ -51,9 +51,9 @@ const Accessibilite = () => {
             </p>
             <Title shift={theme.spacings.larger}>État de conformité</Title>
             <p>
-              Le site Internet code.travail.gouv.fr est en conformité avec le
-              référentiel général d’amélioration de l’accessibilité (RGAA) «
-              version 4.1 ».
+              Le site Internet code.travail.gouv.fr est en conformité partielle
+              avec le référentiel général d’amélioration de l’accessibilité
+              (RGAA) « version 4.1 ».
             </p>
             <p>
               Nous tâchons de rendre dès la conception, ce site accessible à
@@ -120,7 +120,7 @@ const Accessibilite = () => {
             </Title>
             <p>
               Cette déclaration a été établie le 12 avril 2021. Elle a été mise
-              à jour le 23/06/2021.
+              à jour le 13/01/2022.
             </p>
             <Title shift={theme.spacings.larger}>
               ​Technologies utilisées pour la réalisation du Code du travail
