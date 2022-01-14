@@ -171,7 +171,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
 }
 
 .c0 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -1020,7 +1020,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
 }
 
 .c0 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -1623,7 +1623,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
 }
 
 .c0 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;

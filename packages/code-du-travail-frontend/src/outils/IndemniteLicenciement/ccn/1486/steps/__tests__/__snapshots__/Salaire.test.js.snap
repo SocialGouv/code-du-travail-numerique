@@ -107,7 +107,7 @@ exports[`<Salaire /> renders 1`] = `
 }
 
 .c3 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -350,7 +350,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
 }
 
 .c3 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -801,7 +801,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
 }
 
 .c3 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -1328,7 +1328,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
 }
 
 .c3 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;

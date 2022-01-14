@@ -72,7 +72,7 @@ exports[`<StepStatus /> should render 1`] = `
 }
 
 .c0 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -298,7 +298,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 }
 
 .c0 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -619,7 +619,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
 }
 
 .c0 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;

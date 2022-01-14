@@ -107,7 +107,7 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
 }
 
 .c2 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -395,7 +395,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
 }
 
 .c2 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;

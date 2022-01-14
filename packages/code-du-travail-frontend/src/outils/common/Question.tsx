@@ -41,7 +41,7 @@ export const Question = ({
 const { breakpoints, fonts, spacings } = theme;
 
 const LabelBlock = styled.label`
-  display: inline-block;
+  display: block;
   margin-top: ${spacings.small};
   margin-bottom: ${spacings.small};
   font-size: ${fonts.sizes.headings.small};
