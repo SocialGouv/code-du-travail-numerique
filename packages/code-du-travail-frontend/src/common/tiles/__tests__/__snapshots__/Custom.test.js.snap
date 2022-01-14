@@ -312,7 +312,7 @@ exports[`<CallToActionTile /> should render 1`] = `
         <div
           class="c10"
         >
-          <span
+          <button
             class="c11 c12"
           >
             Bonjour
@@ -328,7 +328,7 @@ exports[`<CallToActionTile /> should render 1`] = `
                 fill="currentColor"
               />
             </svg>
-          </span>
+          </button>
         </div>
       </div>
     </div>
