@@ -1,6 +1,10 @@
 {
   "questions": [
     {
+      "name": "âge",
+      "question": "Quel est l'âge du salarié ?"
+    },
+    {
       "name": "agents payés à l'heure",
       "question": "L'agent est-il payé à l'heure ?"
     },
@@ -72,13 +76,10 @@
       "name": "échelon",
       "question": "Quel est l'échelon du salarié ?"
     },
+
     {
       "name": "ancienneté",
       "question": "Quelle est l'ancienneté du salarié ?"
-    },
-    {
-      "name": "âge",
-      "question": "Quel est l'âge du salarié ?"
     },
     {
       "name": "secteur d'activité",
@@ -1661,9 +1662,9 @@
     },
     {
       "criteria": {
+        "âge": "1| Moins de 50 ans",
         "position": "1| I",
-        "ancienneté": "38| Moins de 2 ans",
-        "âge": "1| Moins de 50 ans"
+        "ancienneté": "38| Moins de 2 ans"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
@@ -1676,9 +1677,9 @@
     },
     {
       "criteria": {
+        "âge": "1| Moins de 50 ans",
         "position": "1| I",
-        "ancienneté": "42| 2 ans ou plus",
-        "âge": "1| Moins de 50 ans"
+        "ancienneté": "42| 2 ans ou plus"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
@@ -1691,8 +1692,8 @@
     },
     {
       "criteria": {
-        "position": "3| II",
-        "âge": "1| Moins de 50 ans"
+        "âge": "1| Moins de 50 ans",
+        "position": "3| II"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
@@ -1705,8 +1706,8 @@
     },
     {
       "criteria": {
-        "position": "4| III",
-        "âge": "1| Moins de 50 ans"
+        "âge": "1| Moins de 50 ans",
+        "position": "4| III"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
@@ -1719,8 +1720,8 @@
     },
     {
       "criteria": {
-        "ancienneté": "24| Moins de 1 an",
-        "âge": "2| 50 ans à 55 ans"
+        "âge": "2| 50 ans à 55 ans",
+        "ancienneté": "24| Moins de 1 an"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
@@ -1733,8 +1734,8 @@
     },
     {
       "criteria": {
-        "ancienneté": "44| Entre 1 an et moins de 5 ans",
-        "âge": "2| 50 ans à 55 ans"
+        "âge": "2| 50 ans à 55 ans",
+        "ancienneté": "44| Entre 1 an et moins de 5 ans"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
@@ -1747,8 +1748,8 @@
     },
     {
       "criteria": {
-        "ancienneté": "48| 5 ans et plus",
-        "âge": "2| 50 ans à 55 ans"
+        "âge": "2| 50 ans à 55 ans",
+        "ancienneté": "48| 5 ans et plus"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
