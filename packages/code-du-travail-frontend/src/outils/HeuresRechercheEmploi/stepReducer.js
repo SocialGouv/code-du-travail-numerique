@@ -22,6 +22,7 @@ export const initialState = {
     },
     {
       component: StepTypeRupture,
+      hasNoMarginBottom: true,
       isForm: true,
       label: "Type de rupture",
       name: "rupture",
@@ -29,6 +30,7 @@ export const initialState = {
     },
     {
       component: StepInformations,
+      hasNoMarginBottom: true,
       isForm: true,
       label: "Informations",
       name: "infos",

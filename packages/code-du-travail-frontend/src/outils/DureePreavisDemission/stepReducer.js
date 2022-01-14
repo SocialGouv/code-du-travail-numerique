@@ -21,6 +21,7 @@ export const initialState = {
     },
     {
       component: StepInformations,
+      hasNoMarginBottom: true,
       isForm: true,
       label: "Informations",
       name: "infos",

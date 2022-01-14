@@ -20,7 +20,7 @@ exports[`<IndemniteCCn /> should render error 1`] = `
 }
 
 .c0 {
-  margin-top: 1rem;
+  margin-top: 3.2rem;
   margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
@@ -111,7 +111,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 }
 
 .c0 {
-  margin-top: 1rem;
+  margin-top: 3.2rem;
   margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
@@ -766,7 +766,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 }
 
 .c0 {
-  margin-top: 1rem;
+  margin-top: 3.2rem;
   margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;

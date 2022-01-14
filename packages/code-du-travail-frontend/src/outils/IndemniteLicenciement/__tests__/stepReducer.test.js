@@ -19,6 +19,7 @@ describe("initialSteps", () => {
           },
           Object {
             "component": [Function],
+            "hasNoMarginBottom": true,
             "isForm": true,
             "label": "Ancienneté",
             "name": "anciennete",
