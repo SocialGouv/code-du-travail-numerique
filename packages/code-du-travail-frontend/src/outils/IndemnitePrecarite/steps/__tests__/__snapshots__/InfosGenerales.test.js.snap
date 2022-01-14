@@ -72,7 +72,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
 }
 
 .c0 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -282,7 +282,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 }
 
 .c0 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -614,7 +614,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
 }
 
 .c0 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -877,7 +877,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
 }
 
 .c0 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;

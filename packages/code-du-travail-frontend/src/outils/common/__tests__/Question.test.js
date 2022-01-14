@@ -9,7 +9,7 @@ describe("<Question />", () => {
     const { container } = render(<Question>ma question</Question>);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        display: inline-block;
+        display: block;
         margin-top: 1rem;
         margin-bottom: 1rem;
         font-size: 1.8rem;
@@ -44,7 +44,7 @@ describe("<Question />", () => {
       }
 
       .c0 {
-        display: inline-block;
+        display: block;
         margin-top: 1rem;
         margin-bottom: 1rem;
         font-size: 1.8rem;

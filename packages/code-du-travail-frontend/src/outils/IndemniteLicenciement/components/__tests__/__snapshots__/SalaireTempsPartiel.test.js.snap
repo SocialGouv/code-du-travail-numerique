@@ -411,7 +411,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 }
 
 .c0 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -1077,7 +1077,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
 }
 
 .c0 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;

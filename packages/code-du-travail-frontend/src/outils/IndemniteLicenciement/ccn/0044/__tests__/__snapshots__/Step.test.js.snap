@@ -173,7 +173,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
 }
 
 .c3 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -793,7 +793,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
 }
 
 .c3 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -1305,7 +1305,7 @@ exports[`<Step /> should render 1`] = `
 }
 
 .c3 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
