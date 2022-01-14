@@ -138,7 +138,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
 }
 
 .c0 {
-  margin-top: 1rem;
+  margin-top: 3.2rem;
   margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
@@ -507,7 +507,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
 }
 
 .c0 {
-  margin-top: 1rem;
+  margin-top: 3.2rem;
   margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
@@ -837,7 +837,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 }
 
 .c0 {
-  margin-top: 1rem;
+  margin-top: 3.2rem;
   margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
@@ -1165,7 +1165,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 }
 
 .c0 {
-  margin-top: 1rem;
+  margin-top: 3.2rem;
   margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
@@ -1483,7 +1483,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 }
 
 .c0 {
-  margin-top: 1rem;
+  margin-top: 3.2rem;
   margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;

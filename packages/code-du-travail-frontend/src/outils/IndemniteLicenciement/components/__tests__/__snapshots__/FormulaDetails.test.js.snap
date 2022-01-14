@@ -73,7 +73,7 @@ exports[`<FormulaDetails /> should render 1`] = `
 }
 
 .c6 {
-  margin-top: 1rem;
+  margin-top: 3.2rem;
   margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
