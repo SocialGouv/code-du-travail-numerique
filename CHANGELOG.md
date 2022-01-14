@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.66.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.4...v4.66.0) (2022-01-14)
+
+
+### Bug Fixes
+
+* **api:** set search option same as before ([#4161](https://github.com/SocialGouv/code-du-travail-numerique/issues/4161)) ([b5365e6](https://github.com/SocialGouv/code-du-travail-numerique/commit/b5365e6f3bee2823034646595cee2d105e1274bc))
+* **cc-search:** do not display address when multiple match [#90](https://github.com/SocialGouv/code-du-travail-numerique/issues/90) ([#4073](https://github.com/SocialGouv/code-du-travail-numerique/issues/4073)) ([4c2f7ab](https://github.com/SocialGouv/code-du-travail-numerique/commit/4c2f7aba7993eb10bf4ae3b2a402112db04d0d49))
+* **frontend:** remove comment for cheerio ([#4163](https://github.com/SocialGouv/code-du-travail-numerique/issues/4163)) ([c655f79](https://github.com/SocialGouv/code-du-travail-numerique/commit/c655f792538c9e69edab784b0e7bac4c6bb7d0f1))
+* **frontend:** spacing search ([#4145](https://github.com/SocialGouv/code-du-travail-numerique/issues/4145)) ([b67de96](https://github.com/SocialGouv/code-du-travail-numerique/commit/b67de96e4a465691cda824ee48e3a16a4ec9430f))
+* **rgaa:** 8.9 P05 à P14 ([#4076](https://github.com/SocialGouv/code-du-travail-numerique/issues/4076)) ([4321dd5](https://github.com/SocialGouv/code-du-travail-numerique/commit/4321dd5d82dd18a250ebe7d17e9585ece13a2ffe))
+
+
+### Features
+
+* **accessibility:** update accessibility conformity info ([#4159](https://github.com/SocialGouv/code-du-travail-numerique/issues/4159)) ([c8e4fc2](https://github.com/SocialGouv/code-du-travail-numerique/commit/c8e4fc23cdf5d00acf467825ef497d4c68969598))
+* **cc search:** update query params for latest recherche entreprise API WIP ([#3896](https://github.com/SocialGouv/code-du-travail-numerique/issues/3896)) ([855cca7](https://github.com/SocialGouv/code-du-travail-numerique/commit/855cca79ef28bab433699d7f1d62344218acd164))
+* **frontend:** add anonymous at internet tracking ([#4149](https://github.com/SocialGouv/code-du-travail-numerique/issues/4149)) ([1c82da8](https://github.com/SocialGouv/code-du-travail-numerique/commit/1c82da87f94a40836327bc3bc058c6b334a6074e))
+* **heading style:** make headings style different for each heading ([#4167](https://github.com/SocialGouv/code-du-travail-numerique/issues/4167)) ([55b0555](https://github.com/SocialGouv/code-du-travail-numerique/commit/55b05558405467da2f6d4a87bfdad2cd62c2533e))
+
+
+
+
+
 ## [4.65.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.3...v4.65.4) (2022-01-05)
 
 
