@@ -133,7 +133,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 }
 
 .c0 {
-  margin-top: 1rem;
+  margin-top: 3.2rem;
   margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
@@ -759,7 +759,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 }
 
 .c0 {
-  margin-top: 1rem;
+  margin-top: 3.2rem;
   margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
@@ -1377,7 +1377,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 }
 
 .c0 {
-  margin-top: 1rem;
+  margin-top: 3.2rem;
   margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
@@ -2006,7 +2006,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 }
 
 .c0 {
-  margin-top: 1rem;
+  margin-top: 3.2rem;
   margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
@@ -2624,7 +2624,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 }
 
 .c0 {
-  margin-top: 1rem;
+  margin-top: 3.2rem;
   margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
