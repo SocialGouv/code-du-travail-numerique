@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/cdtn-ui",
-  "version": "4.66.1",
+  "version": "4.66.2",
   "description": "Composants ReactJS",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.66.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.1...v4.66.2) (2022-01-14)
+
+
+### Bug Fixes
+
+* **ui:** form select ([#4184](https://github.com/SocialGouv/code-du-travail-numerique/issues/4184)) ([6789ab8](https://github.com/SocialGouv/code-du-travail-numerique/commit/6789ab8fd0442395f580d966ee6fa6c75f8673ea))
+
+
+
+
+
 ## [4.66.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.0...v4.66.1) (2022-01-14)
 
 
