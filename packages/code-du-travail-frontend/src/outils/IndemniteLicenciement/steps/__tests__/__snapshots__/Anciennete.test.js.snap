@@ -192,7 +192,7 @@ exports[`<Anciennete /> should render 1`] = `
 }
 
 .c1 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;

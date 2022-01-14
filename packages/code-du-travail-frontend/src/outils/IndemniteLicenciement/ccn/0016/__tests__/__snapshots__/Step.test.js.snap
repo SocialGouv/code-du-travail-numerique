@@ -270,7 +270,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
 }
 
 .c8 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -753,7 +753,7 @@ exports[`<Step /> should ask detail about retirement 1`] = `
 }
 
 .c5 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -1135,7 +1135,7 @@ exports[`<Step /> should render 1`] = `
 }
 
 .c5 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;

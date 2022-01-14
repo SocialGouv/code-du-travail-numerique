@@ -77,7 +77,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 }
 
 .c1 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -263,7 +263,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
 }
 
 .c1 {
-  display: inline-block;
+  display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
