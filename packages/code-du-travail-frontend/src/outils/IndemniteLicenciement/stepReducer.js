@@ -31,6 +31,7 @@ const initialSteps = [
   },
   {
     component: StepAnciennete,
+    hasNoMarginBottom: true,
     isForm: true,
     label: "Ancienneté",
     name: "anciennete",
