@@ -32,7 +32,8 @@
     "lint:fix": "yarn lint --write",
     "precommit": "lint-staged",
     "prepush": "yarn test",
-    "test": "jest"
+    "test": "jest",
+    "test:update": "jest -u"
   },
   "lint-staged": {
     "{__tests__,components,environments,utils}/**/*.{js,ts,yml,yaml}": [
