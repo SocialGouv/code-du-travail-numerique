@@ -20,8 +20,7 @@ const StepIntro = (): JSX.Element => (
       convention collective applicable et, dans certains cas, des informations
       sur le salarié, comme sa catégorie professionnelle ou son ancienneté. La
       plupart de ces informations se trouvent sur le contrat de travail ou le
-      bulletin de salaire. <br />
-      Prévoyez 2 à 5 minutes pour cette simulation.
+      bulletin de salaire.
     </p>
     <p>Cliquez sur Commencer pour démarrer la simulation.</p>
   </>
