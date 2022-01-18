@@ -58,3 +58,13 @@ contrat salarié . convention collective . télécommunications . notification d
   type: notification
   description: "En cas de mise à la retraite, la durée du préavis des salariés hors classification est fixée dans le contrat de travail sans pouvoir être inférieure à 3 mois."
   valeur: oui
+
+contrat salarié . convention collective . télécommunications . notification de départ a la retraite d'un salarié hors classification:
+  applicable si:
+    toutes ces conditions:
+      - départ à la retraite
+      - catégorie professionnelle = 'Hors classification'
+      - ancienneté < 6 mois
+  type: notification
+  description: "La durée du préavis des salariés hors classification est fixée dans le contrat de travail sans pouvoir être inférieure à 3 mois."
+  valeur: oui

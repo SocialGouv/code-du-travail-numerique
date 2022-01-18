@@ -31,6 +31,8 @@ const MiseRetraiteCcReferences = [...MiseRetraiteReferences, ...ReferencesCc];
 const NotificationMiseRetraiteAutre =
   "En cas de mise à la retraite, la durée du préavis des salariés hors classification est fixée dans le contrat de travail sans pouvoir être inférieure à 3 mois.";
 
+const NotificationDepartRetraiteAutre =
+  "La durée du préavis des salariés hors classification est fixée dans le contrat de travail sans pouvoir être inférieure à 3 mois.";
 enum Category {
   ab = "A et B",
   cd = "C et D",
@@ -142,63 +144,90 @@ describe("Préavis de retraite de la CC 2148", () => {
       }
     );
   });
-});
-
-describe("Vérification des notifications", () => {
-  test("Pour une salarié hors classifié, en cas de mise à la retraite, une notification doit s'afficher", () => {
-    const notifications = getNotifications(
-      engine.setSituation({
-        "contrat salarié . ancienneté": 5,
-        "contrat salarié . convention collective": "'IDCC2148'",
-        "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${Category.autre}'`,
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
-    expect(notifications).toHaveLength(1);
-    expect(notifications[0].description).toBe(NotificationMiseRetraiteAutre);
-  });
-
-  test.each`
-    category
-    ${Category.ab}
-    ${Category.cd}
-    ${Category.efg}
-  `(
-    "Pour un $category en mise à la retraite, aucune notification doit s'afficher",
-    ({ category }) => {
+  describe("Vérification des notifications", () => {
+    test("Pour une salarié hors classifié, en cas de mise à la retraite, une notification doit s'afficher", () => {
       const notifications = getNotifications(
         engine.setSituation({
           "contrat salarié . ancienneté": 5,
           "contrat salarié . convention collective": "'IDCC2148'",
-          "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${Category.autre}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
         })
       );
-      expect(notifications).toHaveLength(0);
-    }
-  );
+      expect(notifications).toHaveLength(1);
+      expect(notifications[0].description).toBe(NotificationMiseRetraiteAutre);
+    });
 
-  test.each`
-    category
-    ${Category.ab}
-    ${Category.cd}
-    ${Category.efg}
-    ${Category.autre}
-  `(
-    "Pour un $category en départ à la retraite, aucune notification doit s'afficher",
-    ({ category }) => {
+    test.each`
+      category
+      ${Category.ab}
+      ${Category.cd}
+      ${Category.efg}
+    `(
+      "Pour un $category en mise à la retraite, aucune notification doit s'afficher",
+      ({ category }) => {
+        const notifications = getNotifications(
+          engine.setSituation({
+            "contrat salarié . ancienneté": 5,
+            "contrat salarié . convention collective": "'IDCC2148'",
+            "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . mise à la retraite": "oui",
+            "contrat salarié . travailleur handicapé": "non",
+          })
+        );
+        expect(notifications).toHaveLength(0);
+      }
+    );
+
+    test("Pour une salarié hors classifié avec une ancienneté < 6 mois en cas de départ à la retraite, une notification doit s'afficher", () => {
       const notifications = getNotifications(
         engine.setSituation({
           "contrat salarié . ancienneté": 5,
           "contrat salarié . convention collective": "'IDCC2148'",
-          "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${Category.autre}'`,
+          "contrat salarié . mise à la retraite": "non",
+          "contrat salarié . travailleur handicapé": "non",
+        })
+      );
+      expect(notifications).toHaveLength(1);
+      expect(notifications[0].description).toBe(
+        NotificationDepartRetraiteAutre
+      );
+    });
+
+    test("Pour une salarié hors classifié avec une ancienneté > 6 mois en cas de départ à la retraite, aucune notification doit s'afficher", () => {
+      const notifications = getNotifications(
+        engine.setSituation({
+          "contrat salarié . ancienneté": 6,
+          "contrat salarié . convention collective": "'IDCC2148'",
+          "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${Category.autre}'`,
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
         })
       );
       expect(notifications).toHaveLength(0);
-    }
-  );
+    });
+
+    test.each`
+      category
+      ${Category.ab}
+      ${Category.cd}
+      ${Category.efg}
+    `(
+      "Pour un $category en départ à la retraite, aucune notification doit s'afficher",
+      ({ category }) => {
+        const notifications = getNotifications(
+          engine.setSituation({
+            "contrat salarié . ancienneté": 5,
+            "contrat salarié . convention collective": "'IDCC2148'",
+            "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . mise à la retraite": "non",
+            "contrat salarié . travailleur handicapé": "non",
+          })
+        );
+        expect(notifications).toHaveLength(0);
+      }
+    );
+  });
 });
