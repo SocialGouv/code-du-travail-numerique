@@ -1721,7 +1721,23 @@
     {
       "criteria": {
         "âge": "2| 50 ans à 55 ans",
-        "ancienneté": "24| Moins de 1 an"
+        "ancienneté": "24| Moins de 1 an",
+        "position": "1| I"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "2| 50 ans à 55 ans",
+        "ancienneté": "24| Moins de 1 an",
+        "position": "3| II"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
@@ -1735,7 +1751,23 @@
     {
       "criteria": {
         "âge": "2| 50 ans à 55 ans",
-        "ancienneté": "44| Entre 1 an et moins de 5 ans"
+        "ancienneté": "24| Moins de 1 an",
+        "position": "4| III"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "2| 50 ans à 55 ans",
+        "ancienneté": "44| Entre 1 an et moins de 5 ans",
+        "position": "1| I"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
@@ -1749,7 +1781,38 @@
     {
       "criteria": {
         "âge": "2| 50 ans à 55 ans",
-        "ancienneté": "48| 5 ans et plus"
+        "ancienneté": "44| Entre 1 an et moins de 5 ans",
+        "position": "3| II"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "4 mois",
+      "answer2": null,
+      "answer3": "120",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "2| 50 ans à 55 ans",
+        "ancienneté": "44| Entre 1 an et moins de 5 ans",
+        "position": "4| III"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "4 mois",
+      "answer2": null,
+      "answer3": "120",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "2| 50 ans à 55 ans",
+        "ancienneté": "48| 5 ans et plus",
+        "position": "1| I"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
@@ -1762,7 +1825,114 @@
     },
     {
       "criteria": {
-        "âge": "4| 55 ans et plus"
+        "âge": "2| 50 ans à 55 ans",
+        "ancienneté": "48| 5 ans et plus",
+        "position": "3| II"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "6 mois",
+      "answer2": null,
+      "answer3": "180",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "2| 50 ans à 55 ans",
+        "ancienneté": "48| 5 ans et plus",
+        "position": "4| III"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "6 mois",
+      "answer2": null,
+      "answer3": "180",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "4| 55 ans et plus",
+        "ancienneté": "24| Moins de 1 an",
+        "position": "1| I"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "4| 55 ans et plus",
+        "ancienneté": "24| Moins de 1 an",
+        "position": "3| II"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "4| 55 ans et plus",
+        "ancienneté": "24| Moins de 1 an",
+        "position": "4| III"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "4| 55 ans et plus",
+        "ancienneté": "27| Plus de 1 an",
+        "position": "1| I"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "6 mois",
+      "answer2": null,
+      "answer3": "180",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "4| 55 ans et plus",
+        "ancienneté": "27| Plus de 1 an",
+        "position": "3| II"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "6 mois",
+      "answer2": null,
+      "answer3": "180",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "4| 55 ans et plus",
+        "ancienneté": "27| Plus de 1 an",
+        "position": "4| III"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
