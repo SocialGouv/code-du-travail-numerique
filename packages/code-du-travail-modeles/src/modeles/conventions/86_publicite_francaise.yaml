@@ -120,6 +120,12 @@ contrat salarié . convention collective . publicité française . catégorie pr
 contrat salarié . convention collective . publicité française . notification de mise à la retraite:
   applicable si: mise à la retraite
   type: notification
+  description: "Le préavis démarre à partir du premier jour du mois suivant la notification par l'employeur de la mise à la retraite au salarié (ou la notification de l’accord par le salarié le cas échéant). Exemple : Si le 6 mars 2020 un employeur notifie au salarié sa mise à la retraite, le préavis à effectuer débutera le 1er avril 2020."
+  valeur: oui
+
+contrat salarié . convention collective . publicité française . notification de mise à la retraite 2:
+  applicable si: mise à la retraite
+  type: notification
   description: "Pour le préavis de mise à la retraite, la convention collective indique une durée minimale et maximale. Il convient donc de se reporter vers l'employeur ou son représentant (ex : service RH) pour déterminer la durée applicable au préavis."
   valeur: oui
 

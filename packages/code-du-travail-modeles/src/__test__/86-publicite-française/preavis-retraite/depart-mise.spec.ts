@@ -83,6 +83,9 @@ const MiseRetraiteReferencesCadres = [
 ];
 
 const NotificationDeMiseALaRetraite =
+  "Le préavis démarre à partir du premier jour du mois suivant la notification par l'employeur de la mise à la retraite au salarié (ou la notification de l’accord par le salarié le cas échéant). Exemple : Si le 6 mars 2020 un employeur notifie au salarié sa mise à la retraite, le préavis à effectuer débutera le 1er avril 2020.";
+
+const NotificationDeMiseALaRetraite2 =
   "Pour le préavis de mise à la retraite, la convention collective indique une durée minimale et maximale. Il convient donc de se reporter vers l'employeur ou son représentant (ex : service RH) pour déterminer la durée applicable au préavis.";
 
 const NotificationDeDepartALaRetraite =
@@ -234,7 +237,8 @@ describe("Vérification des notifications", () => {
         "contrat salarié . travailleur handicapé": "non",
       })
     );
-    expect(notifications).toHaveLength(1);
+    expect(notifications).toHaveLength(2);
     expect(notifications[0].description).toBe(NotificationDeMiseALaRetraite);
+    expect(notifications[1].description).toBe(NotificationDeMiseALaRetraite2);
   });
 });
