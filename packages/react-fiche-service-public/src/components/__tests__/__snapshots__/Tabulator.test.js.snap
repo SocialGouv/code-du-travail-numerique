@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tabulator /> should have two different levels of headings 1`] = `
-.c6 {
+.c8 {
   position: relative;
   display: block;
   margin: 3.2rem 0 2rem 0;
@@ -10,6 +10,19 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.625;
+}
+
+.c7 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c1 {
@@ -88,10 +101,6 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
   transition: opacity 250ms linear;
 }
 
-.c5 > *:first-child {
-  color: #4d73b8 !important;
-}
-
 .c5[aria-selected="false"]:hover {
   opacity: 0.7;
 }
@@ -101,31 +110,27 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
   background-color: #7994d4;
 }
 
-.c5[aria-selected="true"] > *:first-child {
-  color: #fff !important;
-}
-
-.c7 {
+.c6 {
   color: #3e486e;
   background-color: #fff;
 }
 
-.c7.react-tabs__tab-panel--selected {
+.c6.react-tabs__tab-panel--selected {
   padding: 2.4rem;
   border: 1px solid #bbcadf;
   border-radius: 0.6rem;
 }
 
-.c8 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c8 {
     font-size: 1.6rem;
   }
 }
@@ -176,13 +181,13 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 }
 
 @media (max-width:980px) {
-  .c7.react-tabs__tab-panel--selected {
+  .c6.react-tabs__tab-panel--selected {
     margin-top: 0.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c7.react-tabs__tab-panel--selected {
+  .c6.react-tabs__tab-panel--selected {
     padding: 1rem;
   }
 }
@@ -211,12 +216,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
             role="tab"
             tabindex="0"
           >
-            <h1
-              class="c6"
-              style="margin: 0px;"
-            >
-              CDI
-            </h1>
+            CDI
           </li>
           <li
             aria-controls="react-tabs-3"
@@ -226,27 +226,32 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
             id="react-tabs-2"
             role="tab"
           >
-            <h1
-              class="c6"
-              style="margin: 0px;"
-            >
-              CDD
-            </h1>
+            CDD
           </li>
         </ul>
       </div>
     </div>
     <div
       aria-labelledby="react-tabs-0"
-      class="c7 react-tabs__tab-panel--selected"
+      class="c6 react-tabs__tab-panel--selected"
       id="react-tabs-1"
       role="tabpanel"
     >
       <div
-        class="c8"
+        class="c7"
+      >
+        <h1
+          class="c8"
+          style="margin: 0px;"
+        >
+          CDI
+        </h1>
+      </div>
+      <div
+        class="c9"
       >
         <h3
-          class="c6"
+          class="c8"
         >
           titre 1
         </h3>
@@ -257,7 +262,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
     </div>
     <div
       aria-labelledby="react-tabs-2"
-      class="c7"
+      class="c6"
       id="react-tabs-3"
       role="tabpanel"
     />
@@ -266,7 +271,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 `;
 
 exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
-.c6 {
+.c8 {
   position: relative;
   display: block;
   margin: 3.2rem 0 2rem 0;
@@ -275,6 +280,19 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.625;
+}
+
+.c7 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c1 {
@@ -353,10 +371,6 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
   transition: opacity 250ms linear;
 }
 
-.c5 > *:first-child {
-  color: #4d73b8 !important;
-}
-
 .c5[aria-selected="false"]:hover {
   opacity: 0.7;
 }
@@ -366,31 +380,27 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
   background-color: #7994d4;
 }
 
-.c5[aria-selected="true"] > *:first-child {
-  color: #fff !important;
-}
-
-.c7 {
+.c6 {
   color: #3e486e;
   background-color: #fff;
 }
 
-.c7.react-tabs__tab-panel--selected {
+.c6.react-tabs__tab-panel--selected {
   padding: 2.4rem;
   border: 1px solid #bbcadf;
   border-radius: 0.6rem;
 }
 
-.c8 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c8 {
     font-size: 1.6rem;
   }
 }
@@ -441,13 +451,13 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 }
 
 @media (max-width:980px) {
-  .c7.react-tabs__tab-panel--selected {
+  .c6.react-tabs__tab-panel--selected {
     margin-top: 0.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c7.react-tabs__tab-panel--selected {
+  .c6.react-tabs__tab-panel--selected {
     padding: 1rem;
   }
 }
@@ -476,12 +486,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
             role="tab"
             tabindex="0"
           >
-            <h3
-              class="c6"
-              style="margin: 0px;"
-            >
-              CDI
-            </h3>
+            CDI
           </li>
           <li
             aria-controls="react-tabs-7"
@@ -491,27 +496,32 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
             id="react-tabs-6"
             role="tab"
           >
-            <h3
-              class="c6"
-              style="margin: 0px;"
-            >
-              CDD
-            </h3>
+            CDD
           </li>
         </ul>
       </div>
     </div>
     <div
       aria-labelledby="react-tabs-4"
-      class="c7 react-tabs__tab-panel--selected"
+      class="c6 react-tabs__tab-panel--selected"
       id="react-tabs-5"
       role="tabpanel"
     >
       <div
-        class="c8"
+        class="c7"
+      >
+        <h3
+          class="c8"
+          style="margin: 0px;"
+        >
+          CDI
+        </h3>
+      </div>
+      <div
+        class="c9"
       >
         <h5
-          class="c6"
+          class="c8"
         >
           titre 1
         </h5>
@@ -522,7 +532,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
     </div>
     <div
       aria-labelledby="react-tabs-6"
-      class="c7"
+      class="c6"
       id="react-tabs-7"
       role="tabpanel"
     />
@@ -531,7 +541,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 `;
 
 exports[`<Tabulator /> should render 1`] = `
-.c6 {
+.c8 {
   position: relative;
   display: block;
   margin: 3.2rem 0 2rem 0;
@@ -540,6 +550,19 @@ exports[`<Tabulator /> should render 1`] = `
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
   line-height: 1.625;
+}
+
+.c7 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c1 {
@@ -618,10 +641,6 @@ exports[`<Tabulator /> should render 1`] = `
   transition: opacity 250ms linear;
 }
 
-.c5 > *:first-child {
-  color: #4d73b8 !important;
-}
-
 .c5[aria-selected="false"]:hover {
   opacity: 0.7;
 }
@@ -631,31 +650,27 @@ exports[`<Tabulator /> should render 1`] = `
   background-color: #7994d4;
 }
 
-.c5[aria-selected="true"] > *:first-child {
-  color: #fff !important;
-}
-
-.c7 {
+.c6 {
   color: #3e486e;
   background-color: #fff;
 }
 
-.c7.react-tabs__tab-panel--selected {
+.c6.react-tabs__tab-panel--selected {
   padding: 2.4rem;
   border: 1px solid #bbcadf;
   border-radius: 0.6rem;
 }
 
-.c8 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c8 {
     font-size: 1.6rem;
   }
 }
@@ -706,13 +721,13 @@ exports[`<Tabulator /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c7.react-tabs__tab-panel--selected {
+  .c6.react-tabs__tab-panel--selected {
     margin-top: 0.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c7.react-tabs__tab-panel--selected {
+  .c6.react-tabs__tab-panel--selected {
     padding: 1rem;
   }
 }
@@ -741,12 +756,7 @@ exports[`<Tabulator /> should render 1`] = `
             role="tab"
             tabindex="0"
           >
-            <h4
-              class="c6"
-              style="margin: 0px;"
-            >
-              CDI
-            </h4>
+            CDI
           </li>
           <li
             aria-controls="react-tabs-11"
@@ -756,27 +766,32 @@ exports[`<Tabulator /> should render 1`] = `
             id="react-tabs-10"
             role="tab"
           >
-            <h4
-              class="c6"
-              style="margin: 0px;"
-            >
-              CDD
-            </h4>
+            CDD
           </li>
         </ul>
       </div>
     </div>
     <div
       aria-labelledby="react-tabs-8"
-      class="c7 react-tabs__tab-panel--selected"
+      class="c6 react-tabs__tab-panel--selected"
       id="react-tabs-9"
       role="tabpanel"
     >
       <div
-        class="c8"
+        class="c7"
+      >
+        <h4
+          class="c8"
+          style="margin: 0px;"
+        >
+          CDI
+        </h4>
+      </div>
+      <div
+        class="c9"
       >
         <h6
-          class="c6"
+          class="c8"
         >
           titre 1
         </h6>
@@ -787,7 +802,7 @@ exports[`<Tabulator /> should render 1`] = `
     </div>
     <div
       aria-labelledby="react-tabs-10"
-      class="c7"
+      class="c6"
       id="react-tabs-11"
       role="tabpanel"
     />

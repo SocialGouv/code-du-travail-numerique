@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FicheServicePublic /> should render 1`] = `
-.c27 {
+.c28 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -9,15 +9,15 @@ exports[`<FicheServicePublic /> should render 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c27 > *:first-child {
+.c28 > *:first-child {
   margin-top: 0;
 }
 
-.c27 > *:last-child {
+.c28 > *:last-child {
   margin-bottom: 0;
 }
 
-.c8 {
+.c10 {
   position: relative;
   display: block;
   margin: 3.2rem 0 2rem 0;
@@ -28,7 +28,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c14 {
+.c15 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -42,24 +42,24 @@ exports[`<FicheServicePublic /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-[aria-expanded="true"] .c13,
-[aria-selected="true"] .c14 {
+[aria-expanded="true"] .c14,
+[aria-selected="true"] .c15 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c18 {
+.c19 {
   border-top: 1px solid #bbcadf;
 }
 
-.c16 {
+.c17 {
   padding: 1.6rem;
   -webkit-animation: iHsNqv 250ms ease-in;
   animation: iHsNqv 250ms ease-in;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -76,14 +76,14 @@ exports[`<FicheServicePublic /> should render 1`] = `
   cursor: pointer;
 }
 
-.c12:hover,
-.c12:focus,
-.c12:focus-within,
-.c12[aria-expanded="true"] {
+.c13:hover,
+.c13:focus,
+.c13:focus-within,
+.c13[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c15 {
+.c16 {
   margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-weight: 600;
@@ -92,12 +92,25 @@ exports[`<FicheServicePublic /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c17 > *:first-child {
+.c18 > *:first-child {
   margin-top: 0;
 }
 
-.c17 > *:last-child {
+.c18 > *:last-child {
   margin-bottom: 0;
+}
+
+.c9 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c3 {
@@ -176,10 +189,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
   transition: opacity 250ms linear;
 }
 
-.c7 > *:first-child {
-  color: #4d73b8 !important;
-}
-
 .c7[aria-selected="false"]:hover {
   opacity: 0.7;
 }
@@ -189,30 +198,26 @@ exports[`<FicheServicePublic /> should render 1`] = `
   background-color: #7994d4;
 }
 
-.c7[aria-selected="true"] > *:first-child {
-  color: #fff !important;
-}
-
-.c9 {
+.c8 {
   color: #3e486e;
   background-color: #fff;
 }
 
-.c9.react-tabs__tab-panel--selected {
+.c8.react-tabs__tab-panel--selected {
   padding: 2.4rem;
   border: 1px solid #bbcadf;
   border-radius: 0.6rem;
 }
 
-.c10 > *:first-child {
+.c11 > *:first-child {
   margin-top: 0;
 }
 
-.c10 > *:last-child {
+.c11 > *:last-child {
   margin-bottom: 0;
 }
 
-.c24 {
+.c25 {
   display: block;
   margin: 0 0 1rem 0;
   color: #4d73b8;
@@ -223,7 +228,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
   text-transform: uppercase;
 }
 
-.c20 {
+.c21 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -264,9 +269,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
   appearance: none;
 }
 
-.c20:hover,
-.c20:active,
-.c20:focus {
+.c21:hover,
+.c21:active,
+.c21:focus {
   color: #3e486e;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
@@ -274,40 +279,40 @@ exports[`<FicheServicePublic /> should render 1`] = `
   transform: translateY(-2px);
 }
 
-.c22 {
+.c23 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.c23 {
+.c24 {
   padding-right: 1rem;
 }
 
-.c25 {
+.c26 {
   margin: 0;
 }
 
-.c26 {
+.c27 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-top: 1rem;
 }
 
-.c11 {
+.c12 {
   margin-bottom: 3.2rem;
 }
 
-.c19 {
+.c20 {
   margin-bottom: 0.4rem;
 }
 
-.c21 {
+.c22 {
   margin-bottom: 1.6rem;
 }
 
-.c28 {
+.c29 {
   margin-bottom: 1.6rem;
 }
 
@@ -324,32 +329,32 @@ exports[`<FicheServicePublic /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c27 {
+  .c28 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c10 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c17 {
     padding: 1rem 0;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c16 {
     font-size: 1.6rem;
   }
 }
@@ -400,19 +405,19 @@ exports[`<FicheServicePublic /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c9.react-tabs__tab-panel--selected {
+  .c8.react-tabs__tab-panel--selected {
     margin-top: 0.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c9.react-tabs__tab-panel--selected {
+  .c8.react-tabs__tab-panel--selected {
     padding: 1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c21 {
     padding: 1.6rem 1.6rem;
     font-size: 1.4rem;
   }
@@ -460,12 +465,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               role="tab"
               tabindex="0"
             >
-              <h1
-                class="c8"
-                style="margin: 0px;"
-              >
-                CDI
-              </h1>
+              CDI
             </li>
             <li
               aria-controls="react-tabs-3"
@@ -475,12 +475,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               id="react-tabs-2"
               role="tab"
             >
-              <h1
-                class="c8"
-                style="margin: 0px;"
-              >
-                CDD
-              </h1>
+              CDD
             </li>
             <li
               aria-controls="react-tabs-5"
@@ -490,27 +485,32 @@ exports[`<FicheServicePublic /> should render 1`] = `
               id="react-tabs-4"
               role="tab"
             >
-              <h1
-                class="c8"
-                style="margin: 0px;"
-              >
-                Contrat de travail temporaire (intérim)
-              </h1>
+              Contrat de travail temporaire (intérim)
             </li>
           </ul>
         </div>
       </div>
       <div
         aria-labelledby="react-tabs-0"
-        class="c9 react-tabs__tab-panel--selected"
+        class="c8 react-tabs__tab-panel--selected"
         id="react-tabs-1"
         role="tabpanel"
       >
         <div
-          class="c10"
+          class="c9"
+        >
+          <h1
+            class="c10"
+            style="margin: 0px;"
+          >
+            CDI
+          </h1>
+        </div>
+        <div
+          class="c11"
         >
           <div
-            class="c11"
+            class="c12"
             data-accordion-component="Accordion"
           >
             <div>
@@ -526,7 +526,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     aria-controls="accordion__panel-raa-0"
                     aria-disabled="false"
                     aria-expanded="false"
-                    class="c12"
+                    class="c13"
                     data-accordion-component="AccordionItemButton"
                     id="accordion__heading-raa-0"
                     role="button"
@@ -534,7 +534,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="c13 c14"
+                      class="c14 c15"
                       fill="none"
                       height="24"
                       stroke="currentColor"
@@ -550,10 +550,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       />
                     </svg>
                     <div
-                      class="c15"
+                      class="c16"
                     >
                       <h3
-                        class="c8"
+                        class="c10"
                         style="margin: 0px;"
                       >
                         De quoi s'agit-il ?
@@ -563,13 +563,13 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  class="c16"
+                  class="c17"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-0"
                 >
                   <div
-                    class="c17"
+                    class="c18"
                   >
                     <p>
                       La démission est un mode de rupture du contrat de travail qui  vous permet de quitter votre entreprise sans avoir à justifier cette décision.
@@ -589,7 +589,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
             <div>
               <div
-                class="c18"
+                class="c19"
                 data-accordion-component="AccordionItem"
               >
                 <div
@@ -600,7 +600,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     aria-controls="accordion__panel-raa-1"
                     aria-disabled="false"
                     aria-expanded="false"
-                    class="c12"
+                    class="c13"
                     data-accordion-component="AccordionItemButton"
                     id="accordion__heading-raa-1"
                     role="button"
@@ -608,7 +608,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="c13 c14"
+                      class="c14 c15"
                       fill="none"
                       height="24"
                       stroke="currentColor"
@@ -624,10 +624,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       />
                     </svg>
                     <div
-                      class="c15"
+                      class="c16"
                     >
                       <h3
-                        class="c8"
+                        class="c10"
                         style="margin: 0px;"
                       >
                         Conditions
@@ -637,27 +637,27 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  class="c16"
+                  class="c17"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-1"
                 >
                   <div
-                    class="c17"
+                    class="c18"
                   >
                     <p>
                       Le salarié peut mettre fin à son contrat de travail dans les cas suivants :
                     </p>
                     <ul>
                       <li
-                        class="c19"
+                        class="c20"
                       >
                         <p>
                           Dans le cadre d'une rupture volontaire du contrat de travail par le salarié
                         </p>
                       </li>
                       <li
-                        class="c19"
+                        class="c20"
                       >
                         <p>
                           
@@ -670,7 +670,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="c19"
+                        class="c20"
                       >
                         <p>
                           
@@ -680,7 +680,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="c19"
+                        class="c20"
                       >
                         <p>
                           
@@ -690,7 +690,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="c19"
+                        class="c20"
                       >
                         <p>
                           
@@ -706,7 +706,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
             <div>
               <div
-                class="c18"
+                class="c19"
                 data-accordion-component="AccordionItem"
               >
                 <div
@@ -717,7 +717,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     aria-controls="accordion__panel-raa-2"
                     aria-disabled="false"
                     aria-expanded="false"
-                    class="c12"
+                    class="c13"
                     data-accordion-component="AccordionItemButton"
                     id="accordion__heading-raa-2"
                     role="button"
@@ -725,7 +725,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="c13 c14"
+                      class="c14 c15"
                       fill="none"
                       height="24"
                       stroke="currentColor"
@@ -741,10 +741,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       />
                     </svg>
                     <div
-                      class="c15"
+                      class="c16"
                     >
                       <h3
-                        class="c8"
+                        class="c10"
                         style="margin: 0px;"
                       >
                         Volonté de démissionner
@@ -754,13 +754,13 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  class="c16"
+                  class="c17"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-2"
                 >
                   <div
-                    class="c17"
+                    class="c18"
                   >
                     <p>
                       Pour qu'une démission soit valable, vous devez manifester de façon claire et non équivoque votre volonté de mettre fin au contrat de travail.
@@ -807,7 +807,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
             <div>
               <div
-                class="c18"
+                class="c19"
                 data-accordion-component="AccordionItem"
               >
                 <div
@@ -818,7 +818,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     aria-controls="accordion__panel-raa-3"
                     aria-disabled="false"
                     aria-expanded="false"
-                    class="c12"
+                    class="c13"
                     data-accordion-component="AccordionItemButton"
                     id="accordion__heading-raa-3"
                     role="button"
@@ -826,7 +826,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="c13 c14"
+                      class="c14 c15"
                       fill="none"
                       height="24"
                       stroke="currentColor"
@@ -842,10 +842,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       />
                     </svg>
                     <div
-                      class="c15"
+                      class="c16"
                     >
                       <h3
-                        class="c8"
+                        class="c10"
                         style="margin: 0px;"
                       >
                         Procédure
@@ -855,13 +855,13 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  class="c16"
+                  class="c17"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-3"
                 >
                   <div
-                    class="c17"
+                    class="c18"
                   >
                     <p>
                       Pour manifester votre volonté claire et non équivoque de démissionner, vous devez nécessairement prévenir votre employeur.
@@ -871,31 +871,31 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </p>
                     <a
                       aria-label="Modèle de document Lettre de démission du salarié (nouvelle fenêtre)"
-                      class="c20 c21 no-after"
+                      class="c21 c22 no-after"
                       href="https://www.service-public.fr/simulateur/calcul/Demission"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
                       <div
-                        class="c22"
+                        class="c23"
                       >
                         <div
-                          class="c23"
+                          class="c24"
                         >
                           <p
-                            class="c24 "
+                            class="c25 "
                           >
                             Modèle de document
                           </p>
                           <h3
-                            class="c25"
+                            class="c26"
                           >
                             Lettre de démission du salarié
                           </h3>
                         </div>
                       </div>
                       <div
-                        class="c26"
+                        class="c27"
                       >
                         Source: 
                         Direction de l'information légale et administrative (Premier ministre)
@@ -920,7 +920,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
             <div>
               <div
-                class="c18"
+                class="c19"
                 data-accordion-component="AccordionItem"
               >
                 <div
@@ -931,7 +931,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     aria-controls="accordion__panel-raa-4"
                     aria-disabled="false"
                     aria-expanded="false"
-                    class="c12"
+                    class="c13"
                     data-accordion-component="AccordionItemButton"
                     id="accordion__heading-raa-4"
                     role="button"
@@ -939,7 +939,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="c13 c14"
+                      class="c14 c15"
                       fill="none"
                       height="24"
                       stroke="currentColor"
@@ -955,10 +955,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       />
                     </svg>
                     <div
-                      class="c15"
+                      class="c16"
                     >
                       <h3
-                        class="c8"
+                        class="c10"
                         style="margin: 0px;"
                       >
                         Préavis
@@ -968,19 +968,19 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  class="c16"
+                  class="c17"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-4"
                 >
                   <div
-                    class="c17"
+                    class="c18"
                   >
                     <p>
                       Vous ne pouvez pas quitter votre travail dès que vous avez signifié votre démission à votre employeur. Vous continuez de travailler jusqu'à la fin de votre contrat de travail, dans le respect du délai de préavis prévu (sauf en cas de dispense du préavis).
                     </p>
                     <h4
-                      class="c8"
+                      class="c10"
                     >
                       Durée
                     </h4>
@@ -1007,12 +1007,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               role="tab"
                               tabindex="0"
                             >
-                              <h4
-                                class="c8"
-                                style="margin: 0px;"
-                              >
-                                Cas général
-                              </h4>
+                              Cas général
                             </li>
                             <li
                               aria-controls="react-tabs-9"
@@ -1022,12 +1017,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               id="react-tabs-8"
                               role="tab"
                             >
-                              <h4
-                                class="c8"
-                                style="margin: 0px;"
-                              >
-                                Journaliste
-                              </h4>
+                              Journaliste
                             </li>
                             <li
                               aria-controls="react-tabs-11"
@@ -1037,38 +1027,43 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               id="react-tabs-10"
                               role="tab"
                             >
-                              <h4
-                                class="c8"
-                                style="margin: 0px;"
-                              >
-                                VRP
-                              </h4>
+                              VRP
                             </li>
                           </ul>
                         </div>
                       </div>
                       <div
                         aria-labelledby="react-tabs-6"
-                        class="c9 react-tabs__tab-panel--selected"
+                        class="c8 react-tabs__tab-panel--selected"
                         id="react-tabs-7"
                         role="tabpanel"
                       >
                         <div
-                          class="c10"
+                          class="c9"
+                        >
+                          <h4
+                            class="c10"
+                            style="margin: 0px;"
+                          >
+                            Cas général
+                          </h4>
+                        </div>
+                        <div
+                          class="c11"
                         >
                           <p>
                             La durée du préavis de démission est fixée :
                           </p>
                           <ul>
                             <li
-                              class="c19"
+                              class="c20"
                             >
                               <p>
                                 Soit par convention collective ou accord collectif
                               </p>
                             </li>
                             <li
-                              class="c19"
+                              class="c20"
                             >
                               <p>
                                 
@@ -1081,7 +1076,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               </p>
                             </li>
                             <li
-                              class="c19"
+                              class="c20"
                             >
                               <p>
                                 Soit par le droit local (en Alsace-Moselle)
@@ -1095,10 +1090,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
                             Si vous travaillez à temps partiel, la durée calendaire du préavis de démission est la même que celle d'un salarié à temps plein.
                           </p>
                           <div
-                            class="c27 c28"
+                            class="c28 c29"
                           >
                             <h6
-                              class="c8"
+                              class="c10"
                             >
                               À savoir
                             </h6>
@@ -1110,19 +1105,19 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       </div>
                       <div
                         aria-labelledby="react-tabs-8"
-                        class="c9"
+                        class="c8"
                         id="react-tabs-9"
                         role="tabpanel"
                       />
                       <div
                         aria-labelledby="react-tabs-10"
-                        class="c9"
+                        class="c8"
                         id="react-tabs-11"
                         role="tabpanel"
                       />
                     </div>
                     <h4
-                      class="c8"
+                      class="c10"
                     >
                       Dispense de préavis
                     </h4>
@@ -1131,7 +1126,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </p>
                     <ul>
                       <li
-                        class="c19"
+                        class="c20"
                       >
                         <p>
                           
@@ -1141,7 +1136,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="c19"
+                        class="c20"
                       >
                         <p>
                           
@@ -1177,12 +1172,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               role="tab"
                               tabindex="0"
                             >
-                              <h4
-                                class="c8"
-                                style="margin: 0px;"
-                              >
-                                Vous demandez une dispense de préavis
-                              </h4>
+                              Vous demandez une dispense de préavis
                             </li>
                             <li
                               aria-controls="react-tabs-15"
@@ -1192,30 +1182,35 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               id="react-tabs-14"
                               role="tab"
                             >
-                              <h4
-                                class="c8"
-                                style="margin: 0px;"
-                              >
-                                Votre employeur vous dispense de préavis
-                              </h4>
+                              Votre employeur vous dispense de préavis
                             </li>
                           </ul>
                         </div>
                       </div>
                       <div
                         aria-labelledby="react-tabs-12"
-                        class="c9 react-tabs__tab-panel--selected"
+                        class="c8 react-tabs__tab-panel--selected"
                         id="react-tabs-13"
                         role="tabpanel"
                       >
                         <div
-                          class="c10"
+                          class="c9"
+                        >
+                          <h4
+                            class="c10"
+                            style="margin: 0px;"
+                          >
+                            Vous demandez une dispense de préavis
+                          </h4>
+                        </div>
+                        <div
+                          class="c11"
                         >
                           <p>
                             Vous pouvez demander à votre employeur de vous dispenser d'effectuer votre préavis (par écrit ou par oral) :
                           </p>
                           <div
-                            class="c11"
+                            class="c12"
                             data-accordion-component="Accordion"
                           >
                             <div>
@@ -1231,7 +1226,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                     aria-controls="accordion__panel-raa-5"
                                     aria-disabled="false"
                                     aria-expanded="false"
-                                    class="c12"
+                                    class="c13"
                                     data-accordion-component="AccordionItemButton"
                                     id="accordion__heading-raa-5"
                                     role="button"
@@ -1239,7 +1234,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="c13 c14"
+                                      class="c14 c15"
                                       fill="none"
                                       height="24"
                                       stroke="currentColor"
@@ -1255,10 +1250,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                       />
                                     </svg>
                                     <div
-                                      class="c15"
+                                      class="c16"
                                     >
                                       <h6
-                                        class="c8"
+                                        class="c10"
                                         style="margin: 0px;"
                                       >
                                         Accord de l'employeur
@@ -1268,13 +1263,13 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                 </div>
                                 <div
                                   aria-hidden="true"
-                                  class="c16"
+                                  class="c17"
                                   data-accordion-component="AccordionItemPanel"
                                   hidden=""
                                   id="accordion__panel-raa-5"
                                 >
                                   <div
-                                    class="c17"
+                                    class="c18"
                                   >
                                     <p>
                                       
@@ -1291,7 +1286,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                             </div>
                             <div>
                               <div
-                                class="c18"
+                                class="c19"
                                 data-accordion-component="AccordionItem"
                               >
                                 <div
@@ -1302,7 +1297,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                     aria-controls="accordion__panel-raa-6"
                                     aria-disabled="false"
                                     aria-expanded="false"
-                                    class="c12"
+                                    class="c13"
                                     data-accordion-component="AccordionItemButton"
                                     id="accordion__heading-raa-6"
                                     role="button"
@@ -1310,7 +1305,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="c13 c14"
+                                      class="c14 c15"
                                       fill="none"
                                       height="24"
                                       stroke="currentColor"
@@ -1326,10 +1321,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                       />
                                     </svg>
                                     <div
-                                      class="c15"
+                                      class="c16"
                                     >
                                       <h6
-                                        class="c8"
+                                        class="c10"
                                         style="margin: 0px;"
                                       >
                                         Refus de l'employeur
@@ -1339,13 +1334,13 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                 </div>
                                 <div
                                   aria-hidden="true"
-                                  class="c16"
+                                  class="c17"
                                   data-accordion-component="AccordionItemPanel"
                                   hidden=""
                                   id="accordion__panel-raa-6"
                                 >
                                   <div
-                                    class="c17"
+                                    class="c18"
                                   >
                                     <p>
                                       Si votre employeur refuse, vous devez effectuer votre préavis, sous peine de devoir lui verser une indemnité d'un montant égal à la rémunération brute que vous auriez perçue si vous aviez travaillé.
@@ -1359,13 +1354,13 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       </div>
                       <div
                         aria-labelledby="react-tabs-14"
-                        class="c9"
+                        class="c8"
                         id="react-tabs-15"
                         role="tabpanel"
                       />
                     </div>
                     <h4
-                      class="c8"
+                      class="c10"
                     >
                       Report ou suspension du préavis
                     </h4>
@@ -1374,14 +1369,14 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </p>
                     <ul>
                       <li
-                        class="c19"
+                        class="c20"
                       >
                         <p>
                           Accord entre le salarié et l'employeur
                         </p>
                       </li>
                       <li
-                        class="c19"
+                        class="c20"
                       >
                         <p>
                           
@@ -1394,7 +1389,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="c19"
+                        class="c20"
                       >
                         <p>
                           Arrêt de travail
@@ -1404,7 +1399,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                       <li
-                        class="c19"
+                        class="c20"
                       >
                         <p>
                           Dispositions conventionnelles
@@ -1415,7 +1410,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       </li>
                     </ul>
                     <h4
-                      class="c8"
+                      class="c10"
                     >
                       Absence pour recherche d'emploi
                     </h4>
@@ -1437,7 +1432,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
             <div>
               <div
-                class="c18"
+                class="c19"
                 data-accordion-component="AccordionItem"
               >
                 <div
@@ -1448,7 +1443,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     aria-controls="accordion__panel-raa-7"
                     aria-disabled="false"
                     aria-expanded="false"
-                    class="c12"
+                    class="c13"
                     data-accordion-component="AccordionItemButton"
                     id="accordion__heading-raa-7"
                     role="button"
@@ -1456,7 +1451,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="c13 c14"
+                      class="c14 c15"
                       fill="none"
                       height="24"
                       stroke="currentColor"
@@ -1472,10 +1467,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       />
                     </svg>
                     <div
-                      class="c15"
+                      class="c16"
                     >
                       <h3
-                        class="c8"
+                        class="c10"
                         style="margin: 0px;"
                       >
                         Indemnisation
@@ -1485,13 +1480,13 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  class="c16"
+                  class="c17"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-7"
                 >
                   <div
-                    class="c17"
+                    class="c18"
                   >
                     <p>
                       <strong>
@@ -1559,7 +1554,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
             </div>
             <div>
               <div
-                class="c18"
+                class="c19"
                 data-accordion-component="AccordionItem"
               >
                 <div
@@ -1570,7 +1565,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     aria-controls="accordion__panel-raa-8"
                     aria-disabled="false"
                     aria-expanded="false"
-                    class="c12"
+                    class="c13"
                     data-accordion-component="AccordionItemButton"
                     id="accordion__heading-raa-8"
                     role="button"
@@ -1578,7 +1573,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="c13 c14"
+                      class="c14 c15"
                       fill="none"
                       height="24"
                       stroke="currentColor"
@@ -1594,10 +1589,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       />
                     </svg>
                     <div
-                      class="c15"
+                      class="c16"
                     >
                       <h3
-                        class="c8"
+                        class="c10"
                         style="margin: 0px;"
                       >
                         Documents remis au salarié
@@ -1607,41 +1602,41 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 </div>
                 <div
                   aria-hidden="true"
-                  class="c16"
+                  class="c17"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
                   id="accordion__panel-raa-8"
                 >
                   <div
-                    class="c17"
+                    class="c18"
                   >
                     <p>
                       L'employeur doit remettre au salarié les documents suivants :
                     </p>
                     <ul>
                       <li
-                        class="c19"
+                        class="c20"
                       >
                         <p>
                           Certificat de travail
                         </p>
                       </li>
                       <li
-                        class="c19"
+                        class="c20"
                       >
                         <p>
                           Attestation Pôle emploi
                         </p>
                       </li>
                       <li
-                        class="c19"
+                        class="c20"
                       >
                         <p>
                           Solde de tout compte
                         </p>
                       </li>
                       <li
-                        class="c19"
+                        class="c20"
                       >
                         <p>
                           En cas de dispositifs de participation, d'intéressement et des plans d'épargne salariale au sein de l'entreprise, état récapitulatif de l'ensemble des sommes et valeurs mobilières épargnées
@@ -1657,44 +1652,44 @@ exports[`<FicheServicePublic /> should render 1`] = `
       </div>
       <div
         aria-labelledby="react-tabs-2"
-        class="c9"
+        class="c8"
         id="react-tabs-3"
         role="tabpanel"
       />
       <div
         aria-labelledby="react-tabs-4"
-        class="c9"
+        class="c8"
         id="react-tabs-5"
         role="tabpanel"
       />
     </div>
     <a
       aria-label="Modèle de document Lettre de démission du salarié (nouvelle fenêtre)"
-      class="c20 c21 no-after"
+      class="c21 c22 no-after"
       href="https://www.service-public.fr/simulateur/calcul/Demission"
       rel="noopener noreferrer"
       target="_blank"
     >
       <div
-        class="c22"
+        class="c23"
       >
         <div
-          class="c23"
+          class="c24"
         >
           <p
-            class="c24 "
+            class="c25 "
           >
             Modèle de document
           </p>
           <h3
-            class="c25"
+            class="c26"
           >
             Lettre de démission du salarié
           </h3>
         </div>
       </div>
       <div
-        class="c26"
+        class="c27"
       >
         Source: 
         Direction de l'information légale et administrative (Premier ministre)
