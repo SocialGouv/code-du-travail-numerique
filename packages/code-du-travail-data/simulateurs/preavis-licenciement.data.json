@@ -1901,7 +1901,7 @@
     {
       "criteria": {
         "âge": "4| 55 ans et plus",
-        "ancienneté": "27| Plus de 1 an",
+        "ancienneté": "27| 1 an ou plus",
         "position": "1| I"
       },
       "type": "préavis de Licenciement",
@@ -1916,7 +1916,7 @@
     {
       "criteria": {
         "âge": "4| 55 ans et plus",
-        "ancienneté": "27| Plus de 1 an",
+        "ancienneté": "27| 1 an ou plus",
         "position": "3| II"
       },
       "type": "préavis de Licenciement",
@@ -1931,7 +1931,7 @@
     {
       "criteria": {
         "âge": "4| 55 ans et plus",
-        "ancienneté": "27| Plus de 1 an",
+        "ancienneté": "27| 1 an ou plus",
         "position": "4| III"
       },
       "type": "préavis de Licenciement",
