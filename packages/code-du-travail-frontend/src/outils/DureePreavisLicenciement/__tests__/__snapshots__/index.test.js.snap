@@ -644,9 +644,6 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
         </a>
         .
       </p>
-      <p>
-        Cliquez sur commencer pour démarrer la simulation.
-      </p>
       <div
         class="c19"
       >

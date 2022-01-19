@@ -35,11 +35,7 @@ const CalculateurIndemnite = ({ icon, title }: Props): JSX.Element => {
         {async (value) => {
           if (value) {
             const module = await import(`./ccn/${value}`);
-            const steps = module.steps.filter(
-              // eslint-disable-next-line @typescript-eslint/no-unused-vars
-              ({ condition = (values) => true }) => condition(values)
-            );
-            dispatch({ payload: steps, type: "add_branche" });
+            dispatch({ payload: module.steps, type: "add_branche" });
           } else {
             dispatch({ type: "remove_branche" });
           }

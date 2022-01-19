@@ -17,7 +17,6 @@ const StepIntro = (): JSX.Element => (
       Le présent outil vous permet de connaitre la durée du préavis prévue par
       la convention collective en matière de démission.
     </p>
-    <p>Cliquez sur commencer pour démarrer la simulation.</p>
   </>
 );
 

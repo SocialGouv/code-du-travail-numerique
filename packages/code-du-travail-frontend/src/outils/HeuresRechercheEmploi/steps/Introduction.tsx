@@ -22,7 +22,6 @@ const StepIntro = (): JSX.Element => (
       plupart de ces informations se trouvent sur le contrat de travail ou le
       bulletin de salaire.
     </p>
-    <p>Cliquez sur Commencer pour démarrer la simulation.</p>
   </>
 );
 

@@ -17,7 +17,6 @@ const StepIntro = (): JSX.Element => (
       informations relatives au contrat de travail (CDD ou contrat de travail
       temporaire (contrat d’intérim), derniers bulletins de salaire, …).
     </p>
-    <p>Cliquez sur commencer pour démarrer la simulation.</p>
   </>
 );
 

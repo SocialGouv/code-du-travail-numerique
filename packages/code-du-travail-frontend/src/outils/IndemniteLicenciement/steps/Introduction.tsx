@@ -12,7 +12,6 @@ const StepIntro = (): JSX.Element => (
       l’entreprise, courrier de licenciement, derniers bulletins de salaire,
       etc.).
     </p>
-    <p>Cliquez sur commencer pour démarrer la simulation.</p>
   </>
 );
 

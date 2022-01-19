@@ -23,7 +23,6 @@ const StepIntro = (): JSX.Element => (
       </Link>
       .
     </p>
-    <p>Cliquez sur commencer pour démarrer la simulation.</p>
   </>
 );
 

@@ -11,8 +11,5 @@ exports[`<StepIntro /> should render 1`] = `
   <p>
     Afin de pouvoir remplir les renseignements demandés, munissez-vous des informations relatives au contrat de travail (CDD ou contrat de travail temporaire (contrat d’intérim), derniers bulletins de salaire, …).
   </p>
-  <p>
-    Cliquez sur commencer pour démarrer la simulation.
-  </p>
 </div>
 `;

@@ -634,9 +634,6 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
       <p>
         Afin de pouvoir remplir les renseignements demandés, munissez-vous des informations relatives au licenciement (dates d’entrée et de sortie de l’entreprise, courrier de licenciement, derniers bulletins de salaire, etc.).
       </p>
-      <p>
-        Cliquez sur commencer pour démarrer la simulation.
-      </p>
       <div
         class="c19"
       >
