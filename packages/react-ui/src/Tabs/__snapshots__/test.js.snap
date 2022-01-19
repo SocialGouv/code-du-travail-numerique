@@ -57,6 +57,14 @@ exports[`<Tabs /> renders 1`] = `
   list-style-type: none;
 }
 
+.c7 > *:first-child {
+  margin-top: 0;
+}
+
+.c7 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c5 {
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
@@ -103,14 +111,6 @@ exports[`<Tabs /> renders 1`] = `
   padding: 2.4rem;
   border: 1px solid #bbcadf;
   border-radius: 0.6rem;
-}
-
-.c7 > *:first-child {
-  margin-top: 0;
-}
-
-.c7 > *:last-child {
-  margin-bottom: 0;
 }
 
 @media (max-width:600px) {
