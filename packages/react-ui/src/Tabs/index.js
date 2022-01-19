@@ -3,7 +3,7 @@ import React from "react";
 import { Tab, TabList, TabPanel, Tabs as RootTabs } from "react-tabs";
 import styled from "styled-components";
 
-import { OverflowWrapper } from "../OverflowWrapper/index.js";
+import { OverflowWrapper } from "../OverflowWrapper";
 import { animations, box, breakpoints, fonts, spacings } from "../theme.js";
 
 export const Tabs = (props) => {
@@ -77,6 +77,15 @@ const StyledTabList = styled(TabList)`
     padding: 0;
   }
 `;
+const TabPanelContent = styled.div`
+  & > *:first-child {
+    margin-top: 0;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+`;
 
 const StyledTab = styled(Tab)`
   flex: 1 0 auto;
@@ -103,12 +112,11 @@ const StyledTab = styled(Tab)`
 
   &[aria-selected="true"] {
     color: ${({ theme }) => theme.white};
+    background-color: ${({ theme }) => theme.secondary};
     > *:first-child {
       color: ${({ theme }) => theme.white} !important;
     }
-    background-color: ${({ theme }) => theme.secondary};
   }
-
   @media (max-width: ${breakpoints.tablet}) {
     margin: ${spacings.tiny};
     border-bottom: ${({ theme }) => box.border(theme.border)};
@@ -133,15 +141,5 @@ const StyledTabPanel = styled(TabPanel)`
     @media (max-width: ${breakpoints.mobile}) {
       padding: ${spacings.small};
     }
-  }
-`;
-
-const TabPanelContent = styled.div`
-  & > *:first-child {
-    margin-top: 0;
-  }
-
-  & > *:last-child {
-    margin-bottom: 0;
   }
 `;
