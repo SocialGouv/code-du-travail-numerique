@@ -3,6 +3,123 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.66.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.1...v4.66.2) (2022-01-14)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.66.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.0...v4.66.1) (2022-01-14)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.66.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.4...v4.66.0) (2022-01-14)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.65.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.3...v4.65.4) (2022-01-05)
+
+
+### Bug Fixes
+
+* **simulator:** message + tests for 3239 ([#4148](https://github.com/SocialGouv/code-du-travail-numerique/issues/4148)) ([40c7b16](https://github.com/SocialGouv/code-du-travail-numerique/commit/40c7b1627940b67488b501fea820fb8621bb94a6))
+
+
+
+
+
+## [4.65.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.2...v4.65.3) (2022-01-04)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.65.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.1...v4.65.2) (2021-12-31)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.65.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.0...v4.65.1) (2021-12-31)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.65.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.64.0...v4.65.0) (2021-12-30)
+
+
+### Features
+
+* **simulator:** add CC 3239 for all simulators ([#4122](https://github.com/SocialGouv/code-du-travail-numerique/issues/4122)) ([4f251d6](https://github.com/SocialGouv/code-du-travail-numerique/commit/4f251d6f179b74ad08eb8ba0da2e3a8057d19d22))
+
+
+
+
+
+# [4.64.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.63.1...v4.64.0) (2021-12-30)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.63.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.63.0...v4.63.1) (2021-12-22)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.63.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.62.0...v4.63.0) (2021-12-22)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.62.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.61.0...v4.62.0) (2021-12-21)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.61.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.3...v4.61.0) (2021-12-20)
+
+
+### Features
+
+* **simulator:** add CC 1516 (Organismes de formation) ([#4056](https://github.com/SocialGouv/code-du-travail-numerique/issues/4056)) ([3d6feec](https://github.com/SocialGouv/code-du-travail-numerique/commit/3d6feec0acdcdad973daa469d169e721fe661d68))
+* **simulator:** add CC 1606 (Bricolage) ([#4061](https://github.com/SocialGouv/code-du-travail-numerique/issues/4061)) ([c440440](https://github.com/SocialGouv/code-du-travail-numerique/commit/c44044037b72335f2565a134d2b97b34fad3004a))
+* **simulator:** add CC 2420 (Bâtiment cadres) ([#4057](https://github.com/SocialGouv/code-du-travail-numerique/issues/4057)) ([ac2d827](https://github.com/SocialGouv/code-du-travail-numerique/commit/ac2d8276b9c588f219e29214a193ef1ae771720b))
+* **simulator:** add CC 2511 (Sport) ([#4058](https://github.com/SocialGouv/code-du-travail-numerique/issues/4058)) ([1c9838e](https://github.com/SocialGouv/code-du-travail-numerique/commit/1c9838efcbc2678398716df63f57a30af725dcd3))
+* **simulator:** add CC 2614 (Travaux publics) ([#4059](https://github.com/SocialGouv/code-du-travail-numerique/issues/4059)) ([2023c7c](https://github.com/SocialGouv/code-du-travail-numerique/commit/2023c7c87bb3ff3f122a6903d068245a2c2acb9a))
+
+
+
+
+
 ## [4.60.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.2...v4.60.3) (2021-12-07)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

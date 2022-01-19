@@ -1,4 +1,4 @@
-import { Alert, Section, Title, Wrapper } from "@socialgouv/cdtn-ui";
+import { Alert, PageTitle, Section, Wrapper } from "@socialgouv/cdtn-ui";
 import React from "react";
 import Spinner from "react-svg-spinner";
 
@@ -41,11 +41,13 @@ class SimulateurEmbauche extends React.PureComponent {
     const { simulator } = this.state;
     return (
       <Wrapper variant="main">
-        <Title>Salaire brut/net</Title>
+        <PageTitle stripe="left">Salaire brut/net</PageTitle>
         <Alert>
-          Pour information, l’estimation du salaire net après impôt est basée
-          sur la situation d’une personne célibataire sans enfants ni
-          patrimoine.
+          <p>
+            Pour information, l’estimation du salaire net après impôt est basée
+            sur la situation d’une personne célibataire sans enfants ni
+            patrimoine.
+          </p>
         </Alert>
         {simulator === "loading" && (
           <p>

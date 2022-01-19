@@ -310,13 +310,23 @@ exports[`<InputDate /> should render input date field 1`] = `
 `;
 
 exports[`<InputRadio /> should render input radio field 1`] = `
-.c0 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .c1 {
@@ -365,9 +375,8 @@ exports[`<InputRadio /> should render input radio field 1`] = `
 }
 
 <div>
-  <label
+  <div
     class="c0"
-    for="radio"
   >
     <input
       class="c1"
@@ -375,8 +384,13 @@ exports[`<InputRadio /> should render input radio field 1`] = `
       name="radio"
       type="radio"
     />
-    option
-  </label>
+    <label
+      class="c2"
+      for="radio"
+    >
+      option
+    </label>
+  </div>
 </div>
 `;
 
@@ -484,16 +498,16 @@ exports[`<Select /> should render select field 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <g
-          clip-path="url(#arrow-down_svg__clip0)"
+          clip-path="url(#arrow-down_svg__a)"
         >
           <path
-            d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z"
+            d="m8.425 11.573 7.11-6.072a.709.709 0 0 0 .26-.537.709.709 0 0 0-.26-.537.973.973 0 0 0-.629-.223.973.973 0 0 0-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 0 0-.63-.223.973.973 0 0 0-.628.223.708.708 0 0 0-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 0 0 .29.165 1.021 1.021 0 0 0 .68 0 .91.91 0 0 0 .29-.165z"
             fill="currentColor"
           />
         </g>
         <defs>
           <clippath
-            id="arrow-down_svg__clip0"
+            id="arrow-down_svg__a"
           >
             <path
               d="M0 0h16v16H0z"

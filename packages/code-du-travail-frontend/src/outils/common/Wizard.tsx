@@ -22,6 +22,7 @@ function Wizard({
   initialValues = {},
   title,
   icon,
+  hasNoMarginBottom = false,
   Rules = null,
   stepReducer = (step) => step,
   duration,
@@ -167,7 +168,7 @@ function Wizard({
                   icon={icon}
                   duration={duration}
                   stepIndex={stepIndex}
-                  hasFieldset={steps[stepIndex].isForm}
+                  hasNoMarginBottom={steps[stepIndex].hasNoMarginBottom}
                 />
                 <StepList
                   activeIndex={stepIndex}
@@ -217,6 +218,7 @@ function Wizard({
 Wizard.propTypes = {
   Rules: PropTypes.func,
   duration: PropTypes.string,
+  hasNoMarginBottom: PropTypes.bool,
   icon: PropTypes.string,
   initialState: PropTypes.shape({
     stepIndex: PropTypes.number,
@@ -233,10 +235,10 @@ Wizard.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-function WizardTitle({ title, icon, duration, stepIndex, hasFieldset }) {
+function WizardTitle({ title, icon, duration, stepIndex, hasNoMarginBottom }) {
   const Icon = icons[icon];
   return (
-    <ToolTitle hasFieldset={hasFieldset}>
+    <ToolTitle hasNoMarginBottom={hasNoMarginBottom}>
       <StyledTitleBox>
         {Icon && (
           <IconWrapper>
@@ -252,7 +254,7 @@ function WizardTitle({ title, icon, duration, stepIndex, hasFieldset }) {
 
 WizardTitle.propTypes = {
   duration: PropTypes.string,
-  hasFieldset: PropTypes.bool,
+  hasNoMarginBottom: PropTypes.bool,
   icon: PropTypes.string,
   stepIndex: PropTypes.number,
   title: PropTypes.string.isRequired,
@@ -286,8 +288,8 @@ const ToolTitle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: ${({ hasFieldset }) =>
-    hasFieldset ? spacings.base : spacings.larger};
+  margin-bottom: ${(props) =>
+    props.hasNoMarginBottom ? "0px" : spacings.large};
   padding-bottom: ${spacings.base};
   border-bottom: 1px solid ${({ theme }) => theme.border};
   @media (max-width: ${breakpoints.tablet}) {

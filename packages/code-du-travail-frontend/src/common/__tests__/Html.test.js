@@ -5,7 +5,7 @@ import Html from "../Html";
 
 describe("<Html />", () => {
   it("should render", () => {
-    const { container } = render(<Html>{"<b>Hello</b> World"}</Html>);
+    const { container } = render(<Html>{"<strong>Hello</strong> World"}</Html>);
     expect(container).toMatchSnapshot();
   });
 });

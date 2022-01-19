@@ -2,6 +2,7 @@
 import "katex/dist/katex.min.css";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import "react-image-lightbox/style.css";
+import "../public/static/modeles.css";
 
 import * as Sentry from "@sentry/nextjs";
 import { GlobalStyles, ThemeProvider } from "@socialgouv/cdtn-ui";
@@ -10,7 +11,11 @@ import getConfig from "next/config";
 import React from "react";
 
 import { A11y } from "../src/a11y";
-import { initATInternetService } from "../src/AtInternetService";
+import { initATInternetService } from "../src/lib/atinternet";
+import {
+  clientSideRedirectMiddleware,
+  serverSideRedirectMiddleware,
+} from "../src/middleware/redirect";
 import { initPiwik } from "../src/piwik";
 import CustomError from "./_error";
 import Custom404 from "./404";
@@ -46,6 +51,7 @@ const {
 export default class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
+    serverSideRedirectMiddleware(ctx.req, ctx.res);
 
     if (Component.getInitialProps) {
       try {
@@ -64,6 +70,7 @@ export default class MyApp extends App {
 
   componentDidMount() {
     initPiwik({ piwikUrl: PIWIK_URL, siteId: PIWIK_SITE_ID });
+    clientSideRedirectMiddleware();
     if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true") {
       initATInternetService();
     }

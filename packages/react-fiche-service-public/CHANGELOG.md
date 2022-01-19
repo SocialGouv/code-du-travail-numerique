@@ -3,6 +3,116 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.66.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.1...v4.66.2) (2022-01-14)
+
+**Note:** Version bump only for package @socialgouv/react-fiche-service-public
+
+
+
+
+
+## [4.66.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.0...v4.66.1) (2022-01-14)
+
+**Note:** Version bump only for package @socialgouv/react-fiche-service-public
+
+
+
+
+
+# [4.66.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.4...v4.66.0) (2022-01-14)
+
+
+### Bug Fixes
+
+* **rgaa:** 8.9 P05 à P14 ([#4076](https://github.com/SocialGouv/code-du-travail-numerique/issues/4076)) ([4321dd5](https://github.com/SocialGouv/code-du-travail-numerique/commit/4321dd5d82dd18a250ebe7d17e9585ece13a2ffe))
+
+
+
+
+
+## [4.65.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.3...v4.65.4) (2022-01-05)
+
+**Note:** Version bump only for package @socialgouv/react-fiche-service-public
+
+
+
+
+
+## [4.65.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.2...v4.65.3) (2022-01-04)
+
+**Note:** Version bump only for package @socialgouv/react-fiche-service-public
+
+
+
+
+
+## [4.65.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.1...v4.65.2) (2021-12-31)
+
+**Note:** Version bump only for package @socialgouv/react-fiche-service-public
+
+
+
+
+
+## [4.65.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.0...v4.65.1) (2021-12-31)
+
+**Note:** Version bump only for package @socialgouv/react-fiche-service-public
+
+
+
+
+
+# [4.65.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.64.0...v4.65.0) (2021-12-30)
+
+**Note:** Version bump only for package @socialgouv/react-fiche-service-public
+
+
+
+
+
+# [4.64.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.63.1...v4.64.0) (2021-12-30)
+
+**Note:** Version bump only for package @socialgouv/react-fiche-service-public
+
+
+
+
+
+## [4.63.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.63.0...v4.63.1) (2021-12-22)
+
+**Note:** Version bump only for package @socialgouv/react-fiche-service-public
+
+
+
+
+
+# [4.63.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.62.0...v4.63.0) (2021-12-22)
+
+**Note:** Version bump only for package @socialgouv/react-fiche-service-public
+
+
+
+
+
+# [4.62.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.61.0...v4.62.0) (2021-12-21)
+
+**Note:** Version bump only for package @socialgouv/react-fiche-service-public
+
+
+
+
+
+# [4.61.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.3...v4.61.0) (2021-12-20)
+
+
+### Bug Fixes
+
+* **rgaa:** 8.9 P01 à P04 ([#4083](https://github.com/SocialGouv/code-du-travail-numerique/issues/4083)) ([0c37ac5](https://github.com/SocialGouv/code-du-travail-numerique/commit/0c37ac514f0dd8189b997e102b67072c260b4a15))
+
+
+
+
+
 ## [4.60.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.2...v4.60.3) (2021-12-07)
 
 

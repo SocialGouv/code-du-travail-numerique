@@ -131,6 +131,7 @@ exports[`<Convention /> renders 1`] = `
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
+  margin: 0;
 }
 
 .c20 {
@@ -221,6 +222,7 @@ exports[`<Convention /> renders 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
 }
 
 .c26 {
@@ -1037,7 +1039,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Les jours fériés légaux sont payés dans les conditions prévues par la loi pour le 1er Mai, y compris lorsque les jours fériés tombent pendant une période de chômage-intempéries ou pendant le congé payé.
                         </p>
@@ -1081,15 +1085,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 5-11
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -1168,7 +1172,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Les salariées ont droit à un maintien de salaire à 100 % du dernier salaire mensuel, après déduction des indemnités de la sécurité sociale ou de tout autre régime de prévoyance, pendant une durée maximale de 6 semaines avant la date présumée de l'accouchement et de 10 semaines après.
                         </p>
@@ -1251,15 +1257,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 6.121
-                              </span>
+                              </p>
                             </a>
                           </li>
                           <li>
@@ -1278,15 +1284,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 6.21
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -1365,7 +1371,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Les salariés ont droit à des congés exceptionnels avec maintien de la rémunération, pour les événements familiaux suivants :
                         </p>
@@ -1445,15 +1453,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article  5-12
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -1599,7 +1607,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           En cas de licenciement, la durée du préavis est égale à :
                         </p>
@@ -1664,15 +1674,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.11
-                              </span>
+                              </p>
                             </a>
                           </li>
                           <li>
@@ -1691,15 +1701,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.13
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -1778,7 +1788,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           En cas de démission, la durée du préavis est égale à :
                         </p>
@@ -1828,15 +1840,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.11
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -1915,7 +1927,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           En cas de départ à la retraite du salarié, la durée du préavis est égale à 2 mois.
                         </p>
@@ -1949,15 +1963,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </span>
+                              </p>
                             </a>
                           </li>
                           <li>
@@ -1976,15 +1990,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -2063,7 +2077,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           En cas de mise à la retraite du salarié, la durée du préavis est égale à 2 mois.
                         </p>
@@ -2097,15 +2113,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </span>
+                              </p>
                             </a>
                           </li>
                           <li>
@@ -2124,15 +2140,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -2211,7 +2227,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Si l'employeur ou le salarié ne respecte pas le préavis de licenciement ou de démission, l'autre partie peut obtenir le paiement d'une indemnité égale au salaire correspondant à la durée du préavis restant à courir.
                         </p>
@@ -2245,15 +2263,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.12
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -2332,7 +2350,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Pendant le préavis, l'ouvrier licencié ou démissionnaire est autorisé, s'il en fait la demande, à s'absenter pour rechercher un nouvel emploi, pendant :
                         </p>
@@ -2407,15 +2427,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.2
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -2561,7 +2581,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           La durée de la période d'essai a été fixée par une convention collective conclue avant le 26 juin 2008.
                         </p>
@@ -2603,15 +2625,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 2-4
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -2690,7 +2712,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           L'ancienneté du salarié tient compte de :
                         </p>
@@ -2776,15 +2800,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.4
-                              </span>
+                              </p>
                             </a>
                           </li>
                           <li>
@@ -2803,15 +2827,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 11-2
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -2890,7 +2914,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant :
                         </p>
@@ -2995,15 +3021,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 2-3
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -3082,7 +3108,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant les conditions du poste. Ce document doit être accepté et signé par l'employeur et le salarié.
                         </p>
@@ -3116,15 +3144,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 2-3
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -3203,7 +3231,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           La convention collective ne prévoit pas le recours au contrat d'usage.
                         </p>
@@ -3293,7 +3323,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Le salarié doit s'engager dans le contrat de travail à ne pas avoir d'activité professionnelle susceptible de concurrencer celle de son employeur ou qui dépasserait le nombre d'heures de travail maximum prévu par le code du travail.
                         </p>
@@ -3327,15 +3359,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 2-3
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -3481,7 +3513,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           La convention collective ne prévoit pas de prime pour travaux dangereux ni de prime pour travaux insalubres.
                         </p>
@@ -3562,7 +3596,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           La convention collective prévoit une 
                           <strong>
@@ -3620,15 +3656,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 5-25
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -3707,7 +3743,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           La convention collective ne prévoit pas de prime d'ancienneté.
                         </p>
@@ -3767,15 +3805,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 5-24
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -3921,7 +3959,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Le salarié a droit à un maintien de salaire pendant l'arrêt maladie dans les conditions suivantes.
                         </p>
@@ -4207,13 +4247,13 @@ exports[`<Convention /> renders 1`] = `
                                 points="9 18 15 12 9 6"
                               />
                             </svg>
-                            <span
+                            <p
                               aria-level="2"
                               class="c24 c25"
                               role="heading"
                             >
                               Références juridiques concernées :
-                            </span>
+                            </p>
                           </div>
                           <div
                             class="c26"
@@ -4237,15 +4277,15 @@ exports[`<Convention /> renders 1`] = `
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
                                     <path
-                                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <span
+                                  <p
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-11
-                                  </span>
+                                  </p>
                                 </a>
                               </li>
                               <li>
@@ -4264,15 +4304,15 @@ exports[`<Convention /> renders 1`] = `
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
                                     <path
-                                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <span
+                                  <p
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-12
-                                  </span>
+                                  </p>
                                 </a>
                               </li>
                               <li>
@@ -4291,15 +4331,15 @@ exports[`<Convention /> renders 1`] = `
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
                                     <path
-                                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <span
+                                  <p
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-13
-                                  </span>
+                                  </p>
                                 </a>
                               </li>
                               <li>
@@ -4318,15 +4358,15 @@ exports[`<Convention /> renders 1`] = `
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
                                     <path
-                                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <span
+                                  <p
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-14
-                                  </span>
+                                  </p>
                                 </a>
                               </li>
                               <li>
@@ -4345,15 +4385,15 @@ exports[`<Convention /> renders 1`] = `
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
                                     <path
-                                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <span
+                                  <p
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-15
-                                  </span>
+                                  </p>
                                 </a>
                               </li>
                             </ul>
@@ -4434,7 +4474,9 @@ exports[`<Convention /> renders 1`] = `
                     <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           En cas d'accident du travail ou de maladie professionnelle, le code du travail s'applique. 
                         </p>
@@ -4499,15 +4541,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 6-11
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -4580,7 +4622,7 @@ exports[`<Convention /> renders 1`] = `
           >
             <path
               clip-rule="evenodd"
-              d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
+              d="M8 2a1 1 0 0 0-1 1v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3a1 1 0 0 0-1-1z"
               fill="currentColor"
               fill-rule="evenodd"
             />
@@ -5634,7 +5676,7 @@ exports[`<Convention /> renders 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
+            d="M27.319 25.368a.935.935 0 0 1-1.304 1.341l-6.256-6.012a9.797 9.797 0 0 1-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
             fill="currentColor"
           />
         </svg>
@@ -5654,12 +5696,12 @@ exports[`<Convention /> renders 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+          d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 1 1 .838-.545l9.429 14.505a.5.5 0 0 1-.42.773H5.571a.5.5 0 0 1-.419-.773L25.581 5.014a.5.5 0 0 1 .838 0l5.107 7.857a.5.5 0 0 1-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"
           fill="#3E486E"
           stroke="#4E6896"
         />
         <path
-          d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+          d="M26 14.714a1.57 1.57 0 0 0-1.571 1.571v9.429a1.571 1.571 0 0 0 3.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1 0 26 32a1.571 1.571 0 0 0 0-3.143z"
           fill="#FF7067"
         />
       </svg>

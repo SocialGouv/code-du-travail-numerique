@@ -25,7 +25,7 @@ const YesNoQuestion = ({
   ...otherProps
 }: Props): JSX.Element => (
   <>
-    <Question as="p" required={required} tooltip={tooltip}>
+    <Question required={required} tooltip={tooltip}>
       {label}
     </Question>
     <RadioContainer {...otherProps}>

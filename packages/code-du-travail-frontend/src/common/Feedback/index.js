@@ -75,17 +75,15 @@ function Feedback({ url = document ? document.location.href : "" }) {
         <Wrapper variant="light">
           <Flex>
             <Heading
-              as={StyledStrong}
+              as={StyledH2}
               variant="primary"
               stripe="left"
               shift={theme.spacings.xmedium}
             >
               {isSatisfied === null ? (
-                <span role="heading" aria-level="2">
-                  Avez-vous trouvé la réponse à votre question&nbsp;?
-                </span>
+                <>Avez-vous trouvé la réponse à votre question&nbsp;?</>
               ) : (
-                <span role="status">Merci pour votre réponse.</span>
+                <>Merci pour votre réponse.</>
               )}
             </Heading>
             {isSatisfied === null && (
@@ -238,7 +236,7 @@ const Flex = styled.div`
     margin-left: auto;
   }
 `;
-const StyledStrong = styled.strong`
+const StyledH2 = styled.h2`
   flex: 0 1 auto;
   margin-top: 0;
   margin-bottom: 0;

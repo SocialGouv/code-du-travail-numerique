@@ -15,12 +15,13 @@ export const RadioContainer = styled.div`
   flex-direction: ${(props) => (props.direction === "row" ? "row" : "column")};
   align-items: flex-start;
   justify-content: flex-start;
-  margin-bottom: ${spacings.medium};
+  margin-bottom: ${spacings.xsmall};
 `;
 
 export const SectionTitle = styled.h2`
-  margin-top: ${spacings.large};
-  margin-bottom: ${spacings.medium};
+  margin-top: ${(props) =>
+    props.hasSmallMarginTop ? spacings.small : spacings.large};
+  margin-bottom: ${spacings.small};
   color: ${({ theme }) => theme.altText};
   font-weight: 600;
   font-size: ${fonts.sizes.headings.small};
@@ -45,4 +46,5 @@ export const SmallText = styled.p`
   color: ${colors.paragraph};
   font-size: ${fonts.sizes.small};
   font-style: italic;
+  margin-top: ${spacings.xsmall};
 `;

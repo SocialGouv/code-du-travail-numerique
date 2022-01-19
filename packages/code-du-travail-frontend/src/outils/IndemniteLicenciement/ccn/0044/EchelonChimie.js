@@ -34,7 +34,7 @@ function EchelonChimie({ name }) {
   const [labels, setLabels] = useState();
   return (
     <>
-      <Question as="p">
+      <Question>
         Quel est l’échelon du salarié&nbsp;?
         <br />
         Cette information se trouve sur le bulletin de salaire.

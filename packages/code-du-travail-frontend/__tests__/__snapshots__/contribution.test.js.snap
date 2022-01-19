@@ -7,7 +7,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding: 0 2rem;
 }
 
-.c91 {
+.c93 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -15,7 +15,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   max-width: 74rem;
 }
 
-.c62 {
+.c64 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -52,7 +52,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin-bottom: 0;
 }
 
-.c53 {
+.c54 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -60,15 +60,15 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c53 > *:first-child {
+.c54 > *:first-child {
   margin-top: 0;
 }
 
-.c53 > *:last-child {
+.c54 > *:last-child {
   margin-bottom: 0;
 }
 
-.c78 {
+.c80 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -76,11 +76,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   background-color: #fff;
 }
 
-.c78 > *:first-child {
+.c80 > *:first-child {
   margin-top: 0;
 }
 
-.c78 > *:last-child {
+.c80 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -97,7 +97,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   transform: translateY(-50%);
 }
 
-.c67 {
+.c69 {
   position: absolute;
   background-color: #f66663;
   border-radius: 0;
@@ -110,7 +110,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   transform: translateY(-50%);
 }
 
-.c90 {
+.c92 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -123,7 +123,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   transform: translateX(-50%);
 }
 
-.c81 {
+.c83 {
   position: relative;
   display: block;
   margin: 3.2rem 0 2rem 0;
@@ -136,7 +136,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding-left: 2.4rem;
 }
 
-.c99 {
+.c101 {
   position: relative;
   display: block;
   margin: 0 0 2rem 0;
@@ -147,7 +147,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   line-height: 1.625;
 }
 
-.c51 {
+.c52 {
   position: absolute;
   top: 0;
   right: 0;
@@ -158,7 +158,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c51:before {
+.c52:before {
   position: absolute;
   display: block;
   width: 0;
@@ -169,7 +169,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   content: "";
 }
 
-.c52 {
+.c53 {
   position: absolute;
   top: 0;
   right: 0;
@@ -242,7 +242,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   cursor: not-allowed;
 }
 
-.c74 {
+.c76 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -287,13 +287,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c74:focus,
-.c74:hover,
-.c74:active {
+.c76:focus,
+.c76:hover,
+.c76:active {
   color: #f66663;
 }
 
-.c83 {
+.c85 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -331,16 +331,16 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   will-change: transform;
 }
 
-.c83:link,
-.c83:visited {
+.c85:link,
+.c85:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c83:not([disabled]):hover,
-.c83:not([disabled]):active,
-.c83:not([disabled]):focus {
+.c85:not([disabled]):hover,
+.c85:not([disabled]):active,
+.c85:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -349,7 +349,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   border-color: #dee5ef;
 }
 
-.c83[disabled] {
+.c85[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -357,7 +357,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   cursor: not-allowed;
 }
 
-.c93 {
+.c95 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -395,16 +395,16 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   will-change: transform;
 }
 
-.c93:link,
-.c93:visited {
+.c95:link,
+.c95:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c93:not([disabled]):hover,
-.c93:not([disabled]):active,
-.c93:not([disabled]):focus {
+.c95:not([disabled]):hover,
+.c95:not([disabled]):active,
+.c95:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -413,7 +413,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   border-color: #a0b3e0;
 }
 
-.c93[disabled] {
+.c95[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -509,11 +509,25 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   color: #7994d4;
 }
 
+.c50 {
+  color: #3e486e;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.c60 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+}
+
 .c42 {
   position: relative;
 }
 
-.c100 {
+.c102 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -552,7 +566,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   overflow-x: auto;
 }
 
-.c55 {
+.c56 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -563,7 +577,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   justify-content: stretch;
 }
 
-.c56 {
+.c57 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -573,12 +587,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin-right: 2rem;
 }
 
-.c56 svg {
+.c57 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c57 {
+.c58 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -595,12 +609,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-transform: uppercase;
 }
 
-.c69 {
+.c71 {
   position: relative;
   display: inline-block;
 }
 
-.c71 {
+.c73 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -622,15 +636,15 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   appearance: none;
 }
 
-.c71::-webkit-outer-spin-button,
-.c71::-webkit-inner-spin-button {
+.c73::-webkit-outer-spin-button,
+.c73::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c71::-webkit-calendar-picker-indicator {
+.c73::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -643,47 +657,47 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c71:invalid {
+.c73:invalid {
   border-color: #eb5757;
 }
 
-.c71::-webkit-input-placeholder {
+.c73::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c71::-moz-placeholder {
+.c73::-moz-placeholder {
   color: #9298af;
 }
 
-.c71:-ms-input-placeholder {
+.c73:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c71::placeholder {
+.c73::placeholder {
   color: #9298af;
 }
 
-.c71:focus {
+.c73:focus {
   border-color: #7994d4;
 }
 
-.c71:focus::-webkit-input-placeholder {
+.c73:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c71:focus::-moz-placeholder {
+.c73:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c71:focus:-ms-input-placeholder {
+.c73:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c71:focus::placeholder {
+.c73:focus::placeholder {
   color: transparent;
 }
 
-.c68 {
+.c70 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -697,7 +711,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   cursor: pointer;
 }
 
-.c58 {
+.c59 {
   margin: 0 0 1rem 0;
   color: #f66663;
   font-weight: 600;
@@ -713,21 +727,21 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-align: left;
 }
 
-.c59 {
+.c61 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
-.c64 {
+.c66 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
 
-.c88 {
+.c90 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -745,7 +759,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding-left: 4rem;
 }
 
-.c60 {
+.c62 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -757,7 +771,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-align: left;
 }
 
-.c66 {
+.c68 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -769,7 +783,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-align: left;
 }
 
-.c89 {
+.c91 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -781,20 +795,20 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   text-align: center;
 }
 
-.c70 {
+.c72 {
   width: 100%;
 }
 
-.c72 {
+.c74 {
   margin-top: 2.4rem;
 }
 
-.c73 {
+.c75 {
   display: block;
   margin-top: 1.6rem;
 }
 
-.c75 {
+.c77 {
   color: #7994d4;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -974,7 +988,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   font-size: 1.4rem;
 }
 
-.c50 {
+.c51 {
   margin: 3.2rem 0 0 0;
 }
 
@@ -1044,7 +1058,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   color: #7994d4;
 }
 
-.c79 {
+.c81 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1062,7 +1076,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   justify-content: stretch;
 }
 
-.c80 {
+.c82 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -1072,7 +1086,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding-bottom: 1rem;
 }
 
-.c82 {
+.c84 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1087,11 +1101,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   margin: 0;
 }
 
-.c84 + .c84 {
+.c86 + .c86 {
   margin-left: 4rem;
 }
 
-.c76 {
+.c78 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1109,7 +1123,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   font-weight: bold;
 }
 
-.c61 {
+.c63 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1118,25 +1132,25 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   font-size: 1.4rem;
 }
 
-.c63 {
+.c65 {
   padding-bottom: 0;
 }
 
-.c54 {
+.c55 {
   margin-bottom: 3.2rem;
 }
 
-.c65 {
+.c67 {
   margin-top: 3.2rem;
 }
 
-.c85 {
+.c87 {
   width: 100%;
   padding-top: 4rem;
   overflow-x: hidden;
 }
 
-.c86 {
+.c88 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -1144,7 +1158,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   background-color: #f2f5fa;
 }
 
-.c86:before {
+.c88:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -1156,27 +1170,27 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   content: "";
 }
 
-.c87 {
+.c89 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c92 {
+.c94 {
   margin-bottom: 2rem;
 }
 
-.c94 {
+.c96 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c95 {
+.c97 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c96 {
+.c98 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1187,28 +1201,28 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   justify-content: space-between;
 }
 
-.c97 + .c97 {
+.c99 + .c99 {
   padding-left: 1.6rem;
 }
 
-.c98 {
+.c100 {
   font-size: 1.6rem;
 }
 
-.c102 {
+.c104 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  padding: 0.4rem 0;
+  padding: 0.8rem 0;
   display: inline-block;
 }
 
-.c103 {
+.c105 {
   padding: 0.4rem 0;
 }
 
-.c104 {
+.c106 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1230,11 +1244,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c105 {
+.c107 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c106 {
+.c108 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1478,20 +1492,20 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c91 {
+  .c93 {
     padding: 0;
   }
 }
 
 @media print {
-  .c91 {
+  .c93 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c62 {
+  .c64 {
     padding: 2.4rem 0;
   }
 }
@@ -1516,46 +1530,46 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c53 {
+  .c54 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c53 {
+  .c54 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c78 {
+  .c80 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c78 {
+  .c80 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c81 {
+  .c83 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c81 {
+  .c83 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c99 {
+  .c101 {
     font-size: 1.6rem;
   }
 }
@@ -1573,49 +1587,49 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c74 {
+  .c76 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c74 {
+  .c76 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c83 {
+  .c85 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c83 {
+  .c85 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c83 {
+  .c85 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c93 {
+  .c95 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c93 {
+  .c95 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c93 {
+  .c95 {
     padding: 0 3rem;
   }
 }
@@ -1673,33 +1687,33 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c56 {
+  .c57 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c56 svg {
+  .c57 svg {
     width: 3rem;
     height: 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c69 {
+  .c71 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c71 {
+  .c73 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c58 {
+  .c59 {
     font-size: 1.6rem;
   }
 }
@@ -1712,21 +1726,21 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c59 {
+  .c61 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c64 {
+  .c66 {
     margin-bottom: 1rem;
     margin-left: -1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c88 {
+  .c90 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -1745,31 +1759,31 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c60 {
+  .c62 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c60 {
+  .c62 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c66 {
+  .c68 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c66 {
+  .c68 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c89 {
+  .c91 {
     font-size: 2.2rem;
   }
 }
@@ -1837,7 +1851,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c51 {
     margin-top: 1.6rem;
   }
 }
@@ -1867,13 +1881,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media print {
-  .c77 {
+  .c79 {
     display: none;
   }
 }
 
 @media (max-width:1180px) {
-  .c79 {
+  .c81 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1887,20 +1901,20 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c80 {
+  .c82 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c80 {
+  .c82 {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c82 {
+  .c84 {
     -webkit-box-pack: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -1909,13 +1923,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c84 + .c84 {
+  .c86 + .c86 {
     margin-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c76 {
+  .c78 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
@@ -1924,13 +1938,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media print {
-  .c76 {
+  .c78 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c61 {
+  .c63 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1938,32 +1952,32 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c54 {
+  .c55 {
     margin-bottom: 2rem;
   }
 }
 
 @media print {
-  .c86 {
+  .c88 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c87 {
+  .c89 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c95 {
+  .c97 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c96 {
+  .c98 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1971,26 +1985,26 @@ exports[`<FicheContribution /> should render with external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c97 + .c97 {
+  .c99 + .c99 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c101 {
+  .c103 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c98 {
+  .c100 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c106 {
+  .c108 {
     display: none;
   }
 }
@@ -2181,11 +2195,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 fill="#fff"
               />
               <path
-                d="M533.026 159.16H.822V79.824h532.204v79.336zm-.107-79.336H264.98V.488h267.939v79.336zM210.09 186.329l-.155 54.359h-11.616l-10.685-16.339c-.155-.259-1.316-1.936-3.484-5.034-.568-.826-1.677-2.503-3.329-5.033a99.201 99.201 0 00-2.556-3.793l-1.007-1.551h-.155l.078 1.396c.052.362.09 1.007.116 1.936.026.928.038 1.624.038 2.09.104 1.754.182 3.846.232 6.271.052 1.602.079 4.259.079 7.976v11.924h-12.623v-54.124h11.616l11.304 17.113 2.788 4.181c.104.154 1.162 1.704 3.175 4.645.259.414.672 1.046 1.239 1.898a44.728 44.728 0 001.317 1.897l1.084 1.548h.077v-5.652c0-2.477-.026-4.491-.077-6.04-.052-1.548-.077-3.975-.077-7.279v-12.389h12.621zm57.38 0v31.36c0 3.821-.543 7.201-1.627 10.144-1.084 2.995-2.581 5.473-4.491 7.435-1.961 2.012-4.31 3.561-7.046 4.645-2.839 1.032-5.936 1.548-9.292 1.548-3.355 0-6.452-.516-9.292-1.548-2.736-1.084-5.086-2.633-7.047-4.645-1.909-1.962-3.407-4.44-4.491-7.435-1.084-2.943-1.626-6.323-1.626-10.144v-31.36h12.777v31.283c0 4.13.825 7.176 2.477 9.137 1.6 1.911 4.002 2.865 7.202 2.865 3.201 0 5.601-.954 7.201-2.865 1.652-1.961 2.477-5.007 2.477-9.137v-31.283h12.778zm63.186 0l-.155 54.359h-12.389v-14.326c0-5.627.128-10.196.387-13.706.052-1.031.104-1.91.154-2.632.052-.723.078-1.264.078-1.626v-.542h-.078l-.618 1.082c-.516.93-.956 1.757-1.318 2.48l-1.393 2.787-1.007 2.013-5.885 10.996h-6.427l-5.885-10.996a27.177 27.177 0 00-.929-2.013l-1.394-2.787a65.57 65.57 0 00-1.316-2.48l-.62-1.082h-.154c-.052 0-.052.388 0 1.161s.129 1.963.232 3.561c.258 3.511.388 8.08.388 13.707v14.324h-12.312v-54.124h11.924l9.292 16.415c1.652 2.994 2.736 5.137 3.253 6.428.464 1.238.723 1.858.773 1.858h.078l.154-.467c.052-.102.259-.591.62-1.469.414-.929.827-1.808 1.239-2.633a47.654 47.654 0 012.091-3.872l9.292-16.416h11.925zm27.181-2.246l-3.872-6.736 17.268-9.756 4.569 8.593-17.965 7.899zm23.074 44.369v12.08h-36.934v-54.204h36.47v12.004h-23.772v9.059h18.352v11.305h-18.352v9.756h24.236zm25.323-17.035l7.744.155c1.032 0 1.961-.207 2.787-.619a5.35 5.35 0 001.858-1.549c.516-.671.878-1.368 1.084-2.091.259-.877.387-1.678.387-2.401 0-.723-.128-1.523-.387-2.4-.206-.723-.568-1.42-1.084-2.091a5.33 5.33 0 00-1.858-1.549c-.826-.412-1.755-.619-2.787-.619h-7.744v13.164zm14.945 29.192l-9.292-17.577h-5.73v17.655h-12.699v-54.126h19.203c3.046 0 5.885.439 8.518 1.316 2.53.827 4.698 2.066 6.504 3.718a17.238 17.238 0 014.182 5.808c.98 2.166 1.47 4.696 1.47 7.588 0 3.665-.8 6.788-2.4 9.369-1.6 2.632-3.872 4.672-6.813 6.117l11.304 20.132h-14.247zm23.928-54.28h12.699v54.203h-12.699v-54.203zm57.689 38.639c2.22-2.736 3.329-6.608 3.329-11.614 0-5.059-1.109-8.931-3.329-11.616-2.272-2.735-5.318-4.103-9.138-4.103-3.872 0-6.892 1.368-9.06 4.103-2.168 2.736-3.252 6.608-3.252 11.616 0 4.956 1.084 8.828 3.252 11.614 2.168 2.787 5.188 4.182 9.06 4.182 3.82 0 6.866-1.395 9.138-4.182zm-15.487 15.796l-.077.311c-2.736-.568-5.37-1.679-7.899-3.329-2.323-1.498-4.361-3.486-6.117-5.963-1.704-2.427-3.02-5.137-3.95-8.132-.928-2.993-1.393-6.323-1.393-9.988 0-4.336.645-8.208 1.936-11.615 1.291-3.458 3.072-6.426 5.343-8.905a21.995 21.995 0 018.13-5.729 26.519 26.519 0 0110.222-2.014c3.665 0 7.072.671 10.221 2.014 3.149 1.342 5.859 3.226 8.131 5.652 2.27 2.426 4.077 5.394 5.42 8.904 1.29 3.408 1.936 7.28 1.936 11.616 0 3.613-.466 6.969-1.395 10.065-.929 3.097-2.245 5.808-3.948 8.132a24.624 24.624 0 01-6.195 5.807 24.106 24.106 0 01-7.898 3.252v9.834h-12.467v-9.912zm86.262-54.435v31.36c0 3.821-.542 7.201-1.626 10.144-1.084 2.995-2.582 5.473-4.491 7.435-1.961 2.012-4.311 3.561-7.047 4.645-2.838 1.032-5.936 1.548-9.292 1.548-3.354 0-6.452-.516-9.292-1.548-2.736-1.084-5.085-2.633-7.046-4.645-1.91-1.962-3.407-4.44-4.491-7.435-1.084-2.943-1.627-6.323-1.627-10.144v-31.36h12.778v31.283c0 4.13.825 7.176 2.477 9.137 1.6 1.911 4.001 2.865 7.201 2.865 3.202 0 5.602-.954 7.202-2.865 1.652-1.961 2.478-5.007 2.478-9.137v-31.283h12.776zm49.481 42.124v12.078h-36.936v-54.202h36.471v12.002h-23.772v9.06h18.352v11.304h-18.352v9.758h24.237z"
+                d="M533.026 159.16H.822V79.824h532.204v79.336zm-.107-79.336H264.98V.488h267.939v79.336zM210.09 186.329l-.155 54.359h-11.616l-10.685-16.339c-.155-.259-1.316-1.936-3.484-5.034-.568-.826-1.677-2.503-3.329-5.033a99.201 99.201 0 0 0-2.556-3.793l-1.007-1.551h-.155l.078 1.396c.052.362.09 1.007.116 1.936.026.928.038 1.624.038 2.09.104 1.754.182 3.846.232 6.271.052 1.602.079 4.259.079 7.976v11.924h-12.623v-54.124h11.616l11.304 17.113 2.788 4.181c.104.154 1.162 1.704 3.175 4.645.259.414.672 1.046 1.239 1.898a44.728 44.728 0 0 0 1.317 1.897l1.084 1.548h.077v-5.652c0-2.477-.026-4.491-.077-6.04-.052-1.548-.077-3.975-.077-7.279v-12.389h12.621zm57.38 0v31.36c0 3.821-.543 7.201-1.627 10.144-1.084 2.995-2.581 5.473-4.491 7.435-1.961 2.012-4.31 3.561-7.046 4.645-2.839 1.032-5.936 1.548-9.292 1.548-3.355 0-6.452-.516-9.292-1.548-2.736-1.084-5.086-2.633-7.047-4.645-1.909-1.962-3.407-4.44-4.491-7.435-1.084-2.943-1.626-6.323-1.626-10.144v-31.36h12.777v31.283c0 4.13.825 7.176 2.477 9.137 1.6 1.911 4.002 2.865 7.202 2.865 3.201 0 5.601-.954 7.201-2.865 1.652-1.961 2.477-5.007 2.477-9.137v-31.283h12.778zm63.186 0-.155 54.359h-12.389v-14.326c0-5.627.128-10.196.387-13.706.052-1.031.104-1.91.154-2.632.052-.723.078-1.264.078-1.626v-.542h-.078l-.618 1.082c-.516.93-.956 1.757-1.318 2.48l-1.393 2.787-1.007 2.013-5.885 10.996h-6.427l-5.885-10.996a27.177 27.177 0 0 0-.929-2.013l-1.394-2.787a65.57 65.57 0 0 0-1.316-2.48l-.62-1.082h-.154c-.052 0-.052.388 0 1.161s.129 1.963.232 3.561c.258 3.511.388 8.08.388 13.707v14.324h-12.312v-54.124h11.924l9.292 16.415c1.652 2.994 2.736 5.137 3.253 6.428.464 1.238.723 1.858.773 1.858h.078l.154-.467c.052-.102.259-.591.62-1.469.414-.929.827-1.808 1.239-2.633a47.654 47.654 0 0 1 2.091-3.872l9.292-16.416h11.925zm27.181-2.246-3.872-6.736 17.268-9.756 4.569 8.593-17.965 7.899zm23.074 44.369v12.08h-36.934v-54.204h36.47v12.004h-23.772v9.059h18.352v11.305h-18.352v9.756h24.236zm25.323-17.035 7.744.155c1.032 0 1.961-.207 2.787-.619a5.35 5.35 0 0 0 1.858-1.549c.516-.671.878-1.368 1.084-2.091.259-.877.387-1.678.387-2.401 0-.723-.128-1.523-.387-2.4-.206-.723-.568-1.42-1.084-2.091a5.33 5.33 0 0 0-1.858-1.549c-.826-.412-1.755-.619-2.787-.619h-7.744v13.164zm14.945 29.192-9.292-17.577h-5.73v17.655h-12.699v-54.126h19.203c3.046 0 5.885.439 8.518 1.316 2.53.827 4.698 2.066 6.504 3.718a17.238 17.238 0 0 1 4.182 5.808c.98 2.166 1.47 4.696 1.47 7.588 0 3.665-.8 6.788-2.4 9.369-1.6 2.632-3.872 4.672-6.813 6.117l11.304 20.132h-14.247zm23.928-54.28h12.699v54.203h-12.699v-54.203zm57.689 38.639c2.22-2.736 3.329-6.608 3.329-11.614 0-5.059-1.109-8.931-3.329-11.616-2.272-2.735-5.318-4.103-9.138-4.103-3.872 0-6.892 1.368-9.06 4.103-2.168 2.736-3.252 6.608-3.252 11.616 0 4.956 1.084 8.828 3.252 11.614 2.168 2.787 5.188 4.182 9.06 4.182 3.82 0 6.866-1.395 9.138-4.182zm-15.487 15.796-.077.311c-2.736-.568-5.37-1.679-7.899-3.329-2.323-1.498-4.361-3.486-6.117-5.963-1.704-2.427-3.02-5.137-3.95-8.132-.928-2.993-1.393-6.323-1.393-9.988 0-4.336.645-8.208 1.936-11.615 1.291-3.458 3.072-6.426 5.343-8.905a21.995 21.995 0 0 1 8.13-5.729 26.519 26.519 0 0 1 10.222-2.014c3.665 0 7.072.671 10.221 2.014 3.149 1.342 5.859 3.226 8.131 5.652 2.27 2.426 4.077 5.394 5.42 8.904 1.29 3.408 1.936 7.28 1.936 11.616 0 3.613-.466 6.969-1.395 10.065-.929 3.097-2.245 5.808-3.948 8.132a24.624 24.624 0 0 1-6.195 5.807 24.106 24.106 0 0 1-7.898 3.252v9.834h-12.467v-9.912zm86.262-54.435v31.36c0 3.821-.542 7.201-1.626 10.144-1.084 2.995-2.582 5.473-4.491 7.435-1.961 2.012-4.311 3.561-7.047 4.645-2.838 1.032-5.936 1.548-9.292 1.548-3.354 0-6.452-.516-9.292-1.548-2.736-1.084-5.085-2.633-7.046-4.645-1.91-1.962-3.407-4.44-4.491-7.435-1.084-2.943-1.627-6.323-1.627-10.144v-31.36h12.778v31.283c0 4.13.825 7.176 2.477 9.137 1.6 1.911 4.001 2.865 7.201 2.865 3.202 0 5.602-.954 7.202-2.865 1.652-1.961 2.478-5.007 2.478-9.137v-31.283h12.776zm49.481 42.124v12.078h-36.936v-54.202h36.471v12.002h-23.772v9.06h18.352v11.304h-18.352v9.758h24.237z"
                 fill="currentColor"
               />
               <path
-                d="M49.125 135.641l-.312-.156c1.924 0 3.718-.312 5.38-.936 1.664-.623 3.068-1.559 4.212-2.807 1.144-1.248 2.079-2.806 2.807-4.678.676-1.82 1.013-3.952 1.013-6.395 0-2.548-.337-4.731-1.013-6.551-.728-1.924-1.663-3.534-2.807-4.834-1.144-1.299-2.548-2.314-4.212-3.042-1.558-.676-3.326-1.013-5.301-1.013h-8.423v30.412h8.656zm-1.092-42.653h-.077c4.054 0 7.72.649 10.994 1.948 3.38 1.3 6.264 3.172 8.656 5.614 2.495 2.496 4.42 5.407 5.77 8.734 1.404 3.432 2.106 7.2 2.106 11.306 0 4.056-.675 7.799-2.028 11.23-1.3 3.326-3.17 6.161-5.614 8.5-2.443 2.338-5.328 4.132-8.656 5.38-3.327 1.248-6.992 1.87-10.995 1.87H27.37V92.988h20.664zm84.219.155v31.581c0 3.847-.546 7.252-1.637 10.216-1.092 3.015-2.6 5.509-4.523 7.484-1.976 2.028-4.341 3.588-7.096 4.68-2.86 1.039-5.978 1.559-9.357 1.559-3.38 0-6.499-.52-9.359-1.559-2.754-1.092-5.12-2.652-7.096-4.68-1.922-1.975-3.43-4.469-4.522-7.484-1.09-2.964-1.638-6.369-1.638-10.216V93.143h12.867v31.502c0 4.16.832 7.226 2.496 9.202 1.611 1.924 4.028 2.885 7.252 2.885 3.223 0 5.64-.961 7.252-2.885 1.663-1.976 2.495-5.042 2.495-9.202V93.143h12.866zm75.096 0v12.086h-15.206v42.499h-12.789v-42.499h-15.049V93.143h43.044zm23.237 25.264l7.799.156c1.039 0 1.975-.208 2.807-.622a5.36 5.36 0 001.87-1.562c.52-.674.884-1.377 1.092-2.104.26-.884.391-1.69.391-2.418 0-.727-.131-1.534-.391-2.418-.208-.726-.572-1.429-1.092-2.105a5.34 5.34 0 00-1.87-1.559c-.832-.416-1.768-.624-2.807-.624h-7.799v13.256zm15.051 29.398l-9.359-17.7h-5.769v17.78h-12.789V93.377h19.338c3.068 0 5.927.441 8.579 1.325 2.547.832 4.729 2.079 6.549 3.743a17.345 17.345 0 014.211 5.849c.988 2.183 1.483 4.731 1.483 7.641 0 3.692-.807 6.836-2.419 9.435-1.611 2.652-3.899 4.705-6.861 6.16l11.384 20.275h-14.347zm52.871-20.118l-3.743-11.853c-.416-1.351-.703-2.364-.859-3.042a49.832 49.832 0 00-.701-2.65 31.897 31.897 0 00-.273-.975 53.278 53.278 0 00-.272-.897l-.235-.702h-.077l-.156.702c-.054.156-.144.456-.274.897-.13.441-.221.767-.273.975-.052.208-.168.61-.351 1.208-.181.597-.325 1.08-.429 1.442l-.935 3.042-3.821 11.853h12.399zm3.742 11.463h-19.728l-2.729 8.577h-13.569l19.573-54.584h13.256l19.573 54.584h-13.646l-2.73-8.577zm72.99-46.007l-19.105 54.585h-14.582l-18.87-54.585h13.88l9.357 30.1a108.513 108.513 0 012.183 7.876c.468 2.026.728 3.04.78 3.04h.078c.052 0 .312-1.014.78-3.04.571-2.444 1.3-5.07 2.183-7.876l9.357-30.1h13.959zm36.651 34.544l-3.742-11.853c-.416-1.351-.703-2.364-.859-3.042a49.832 49.832 0 00-.701-2.65 32.648 32.648 0 00-.274-.975 38.93 38.93 0 00-.272-.897l-.234-.702h-.078l-.156.702a26.94 26.94 0 00-.273.897c-.131.441-.221.767-.273.975-.052.208-.168.61-.351 1.208-.181.597-.325 1.08-.429 1.442l-.935 3.042-3.821 11.853h12.398zm3.743 11.463h-19.728l-2.729 8.577h-13.57l19.574-54.584h13.256l19.573 54.584h-13.647l-2.729-8.577zm26.124-46.008h12.788v54.586h-12.788V93.142zm64.644 42.42v12.166h-36.416V93.142h12.788v42.42h23.628zM326.66 29.883l-.076.23c-1.121-1.731-2.572-3.03-4.353-3.897-1.833-.865-3.667-1.297-5.5-1.297-3.869 0-6.873 1.375-9.011 4.124-2.138 2.75-3.208 6.517-3.208 11.304 0 4.888 1.146 8.655 3.438 11.303 2.29 2.648 5.269 3.972 8.934 3.972 2.291 0 4.404-.535 6.339-1.604 1.884-1.07 3.336-2.726 4.353-4.964l12.374 3.282c-1.884 4.838-4.863 8.682-8.936 11.534-3.922 2.749-8.656 4.124-14.206 4.124-3.462 0-6.822-.638-10.081-1.91a21.717 21.717 0 01-8.019-5.652c-2.241-2.444-3.997-5.372-5.27-8.782-1.274-3.36-1.91-7.179-1.91-11.456 0-4.278.636-8.096 1.91-11.456 1.273-3.411 3.029-6.339 5.27-8.783a21.717 21.717 0 018.019-5.652 26.167 26.167 0 0110.081-1.985c5.194 0 9.674 1.248 13.442 3.742 3.818 2.546 6.797 6.059 8.936 10.539l-12.526 3.284zm37.883 21.767c2.139 2.75 5.118 4.124 8.936 4.124 3.819 0 6.823-1.374 9.012-4.124 2.19-2.698 3.284-6.517 3.284-11.456 0-4.99-1.094-8.81-3.284-11.456-2.24-2.698-5.245-4.048-9.012-4.048-3.818 0-6.797 1.35-8.936 4.048-2.138 2.647-3.208 6.465-3.208 11.456 0 4.888 1.07 8.707 3.208 11.456zm-16.268-11.303c0-4.277.638-8.096 1.91-11.457 1.273-3.41 3.029-6.338 5.27-8.782a21.717 21.717 0 018.019-5.652 26.192 26.192 0 0110.081-1.986c3.615 0 6.976.663 10.082 1.986 3.105 1.324 5.778 3.182 8.018 5.576 2.24 2.393 4.023 5.32 5.347 8.782 1.273 3.361 1.909 7.179 1.909 11.456 0 4.277-.636 8.096-1.909 11.456-1.324 3.462-3.107 6.39-5.347 8.783s-4.913 4.252-8.018 5.576c-3.158 1.272-6.518 1.91-10.082 1.91-3.462 0-6.822-.638-10.081-1.91a21.717 21.717 0 01-8.019-5.652c-2.241-2.444-3.997-5.372-5.27-8.783-1.272-3.36-1.91-7.178-1.91-11.456v.153zm83.631 14.74l-.306-.152c1.884 0 3.64-.307 5.27-.918 1.629-.61 3.004-1.528 4.124-2.749 1.12-1.221 2.037-2.75 2.749-4.583.663-1.782.993-3.869.993-6.262 0-2.495-.33-4.634-.993-6.416-.712-1.883-1.629-3.462-2.749-4.735-1.12-1.272-2.495-2.265-4.124-2.979-1.527-.661-3.259-.992-5.194-.992h-8.248v29.786h8.478zm-1.07-41.776h-.076c3.971 0 7.56.636 10.768 1.909 3.31 1.272 6.136 3.105 8.478 5.499 2.444 2.444 4.328 5.294 5.652 8.553 1.374 3.361 2.062 7.052 2.062 11.075 0 3.972-.662 7.637-1.986 10.997-1.272 3.259-3.106 6.033-5.499 8.325-2.393 2.291-5.219 4.048-8.477 5.27-3.259 1.221-6.848 1.833-10.768 1.833h-20.392V13.311h20.238zm75.536 41.699v11.914h-36.431V13.462h35.972v11.84h-23.446v8.935h18.101v11.15h-18.101v9.623h23.905z"
+                d="m49.125 135.641-.312-.156c1.924 0 3.718-.312 5.38-.936 1.664-.623 3.068-1.559 4.212-2.807 1.144-1.248 2.079-2.806 2.807-4.678.676-1.82 1.013-3.952 1.013-6.395 0-2.548-.337-4.731-1.013-6.551-.728-1.924-1.663-3.534-2.807-4.834-1.144-1.299-2.548-2.314-4.212-3.042-1.558-.676-3.326-1.013-5.301-1.013h-8.423v30.412h8.656zm-1.092-42.653h-.077c4.054 0 7.72.649 10.994 1.948 3.38 1.3 6.264 3.172 8.656 5.614 2.495 2.496 4.42 5.407 5.77 8.734 1.404 3.432 2.106 7.2 2.106 11.306 0 4.056-.675 7.799-2.028 11.23-1.3 3.326-3.17 6.161-5.614 8.5-2.443 2.338-5.328 4.132-8.656 5.38-3.327 1.248-6.992 1.87-10.995 1.87H27.37V92.988h20.664zm84.219.155v31.581c0 3.847-.546 7.252-1.637 10.216-1.092 3.015-2.6 5.509-4.523 7.484-1.976 2.028-4.341 3.588-7.096 4.68-2.86 1.039-5.978 1.559-9.357 1.559-3.38 0-6.499-.52-9.359-1.559-2.754-1.092-5.12-2.652-7.096-4.68-1.922-1.975-3.43-4.469-4.522-7.484-1.09-2.964-1.638-6.369-1.638-10.216V93.143h12.867v31.502c0 4.16.832 7.226 2.496 9.202 1.611 1.924 4.028 2.885 7.252 2.885 3.223 0 5.64-.961 7.252-2.885 1.663-1.976 2.495-5.042 2.495-9.202V93.143h12.866zm75.096 0v12.086h-15.206v42.499h-12.789v-42.499h-15.049V93.143h43.044zm23.237 25.264 7.799.156c1.039 0 1.975-.208 2.807-.622a5.36 5.36 0 0 0 1.87-1.562c.52-.674.884-1.377 1.092-2.104.26-.884.391-1.69.391-2.418 0-.727-.131-1.534-.391-2.418-.208-.726-.572-1.429-1.092-2.105a5.34 5.34 0 0 0-1.87-1.559c-.832-.416-1.768-.624-2.807-.624h-7.799v13.256zm15.051 29.398-9.359-17.7h-5.769v17.78h-12.789V93.377h19.338c3.068 0 5.927.441 8.579 1.325 2.547.832 4.729 2.079 6.549 3.743a17.345 17.345 0 0 1 4.211 5.849c.988 2.183 1.483 4.731 1.483 7.641 0 3.692-.807 6.836-2.419 9.435-1.611 2.652-3.899 4.705-6.861 6.16l11.384 20.275h-14.347zm52.871-20.118-3.743-11.853c-.416-1.351-.703-2.364-.859-3.042a49.832 49.832 0 0 0-.701-2.65 31.897 31.897 0 0 0-.273-.975 53.278 53.278 0 0 0-.272-.897l-.235-.702h-.077l-.156.702c-.054.156-.144.456-.274.897-.13.441-.221.767-.273.975-.052.208-.168.61-.351 1.208-.181.597-.325 1.08-.429 1.442l-.935 3.042-3.821 11.853h12.399zm3.742 11.463h-19.728l-2.729 8.577h-13.569l19.573-54.584h13.256l19.573 54.584h-13.646l-2.73-8.577zm72.99-46.007-19.105 54.585h-14.582l-18.87-54.585h13.88l9.357 30.1a108.513 108.513 0 0 1 2.183 7.876c.468 2.026.728 3.04.78 3.04h.078c.052 0 .312-1.014.78-3.04.571-2.444 1.3-5.07 2.183-7.876l9.357-30.1h13.959zm36.651 34.544-3.742-11.853c-.416-1.351-.703-2.364-.859-3.042a49.832 49.832 0 0 0-.701-2.65 32.648 32.648 0 0 0-.274-.975 38.93 38.93 0 0 0-.272-.897l-.234-.702h-.078l-.156.702a26.94 26.94 0 0 0-.273.897c-.131.441-.221.767-.273.975-.052.208-.168.61-.351 1.208-.181.597-.325 1.08-.429 1.442l-.935 3.042-3.821 11.853h12.398zm3.743 11.463h-19.728l-2.729 8.577h-13.57l19.574-54.584h13.256l19.573 54.584h-13.647l-2.729-8.577zm26.124-46.008h12.788v54.586h-12.788V93.142zm64.644 42.42v12.166h-36.416V93.142h12.788v42.42h23.628zM326.66 29.883l-.076.23c-1.121-1.731-2.572-3.03-4.353-3.897-1.833-.865-3.667-1.297-5.5-1.297-3.869 0-6.873 1.375-9.011 4.124-2.138 2.75-3.208 6.517-3.208 11.304 0 4.888 1.146 8.655 3.438 11.303 2.29 2.648 5.269 3.972 8.934 3.972 2.291 0 4.404-.535 6.339-1.604 1.884-1.07 3.336-2.726 4.353-4.964l12.374 3.282c-1.884 4.838-4.863 8.682-8.936 11.534-3.922 2.749-8.656 4.124-14.206 4.124-3.462 0-6.822-.638-10.081-1.91a21.717 21.717 0 0 1-8.019-5.652c-2.241-2.444-3.997-5.372-5.27-8.782-1.274-3.36-1.91-7.179-1.91-11.456 0-4.278.636-8.096 1.91-11.456 1.273-3.411 3.029-6.339 5.27-8.783a21.717 21.717 0 0 1 8.019-5.652 26.167 26.167 0 0 1 10.081-1.985c5.194 0 9.674 1.248 13.442 3.742 3.818 2.546 6.797 6.059 8.936 10.539l-12.526 3.284zm37.883 21.767c2.139 2.75 5.118 4.124 8.936 4.124 3.819 0 6.823-1.374 9.012-4.124 2.19-2.698 3.284-6.517 3.284-11.456 0-4.99-1.094-8.81-3.284-11.456-2.24-2.698-5.245-4.048-9.012-4.048-3.818 0-6.797 1.35-8.936 4.048-2.138 2.647-3.208 6.465-3.208 11.456 0 4.888 1.07 8.707 3.208 11.456zm-16.268-11.303c0-4.277.638-8.096 1.91-11.457 1.273-3.41 3.029-6.338 5.27-8.782a21.717 21.717 0 0 1 8.019-5.652 26.192 26.192 0 0 1 10.081-1.986c3.615 0 6.976.663 10.082 1.986 3.105 1.324 5.778 3.182 8.018 5.576 2.24 2.393 4.023 5.32 5.347 8.782 1.273 3.361 1.909 7.179 1.909 11.456 0 4.277-.636 8.096-1.909 11.456-1.324 3.462-3.107 6.39-5.347 8.783s-4.913 4.252-8.018 5.576c-3.158 1.272-6.518 1.91-10.082 1.91-3.462 0-6.822-.638-10.081-1.91a21.717 21.717 0 0 1-8.019-5.652c-2.241-2.444-3.997-5.372-5.27-8.783-1.272-3.36-1.91-7.178-1.91-11.456v.153zm83.631 14.74-.306-.152c1.884 0 3.64-.307 5.27-.918 1.629-.61 3.004-1.528 4.124-2.749 1.12-1.221 2.037-2.75 2.749-4.583.663-1.782.993-3.869.993-6.262 0-2.495-.33-4.634-.993-6.416-.712-1.883-1.629-3.462-2.749-4.735-1.12-1.272-2.495-2.265-4.124-2.979-1.527-.661-3.259-.992-5.194-.992h-8.248v29.786h8.478zm-1.07-41.776h-.076c3.971 0 7.56.636 10.768 1.909 3.31 1.272 6.136 3.105 8.478 5.499 2.444 2.444 4.328 5.294 5.652 8.553 1.374 3.361 2.062 7.052 2.062 11.075 0 3.972-.662 7.637-1.986 10.997-1.272 3.259-3.106 6.033-5.499 8.325-2.393 2.291-5.219 4.048-8.477 5.27-3.259 1.221-6.848 1.833-10.768 1.833h-20.392V13.311h20.238zm75.536 41.699v11.914h-36.431V13.462h35.972v11.84h-23.446v8.935h18.101v11.15h-18.101v9.623h23.905z"
                 fill="#fff"
               />
               <path
@@ -2251,7 +2265,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
+                    d="M27.319 25.368a.935.935 0 0 1-1.304 1.341l-6.256-6.012a9.797 9.797 0 0 1-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
                     fill="currentColor"
                   />
                 </svg>
@@ -2272,7 +2286,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
+                  d="M27.319 25.368a.935.935 0 0 1-1.304 1.341l-6.256-6.012a9.797 9.797 0 0 1-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
                   fill="currentColor"
                 />
               </svg>
@@ -2290,7 +2304,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               >
                 <path
                   clip-rule="evenodd"
-                  d="M7 11a1 1 0 011-1h16a1 1 0 110 2H8a1 1 0 01-1-1zm0 5a1 1 0 011-1h16a1 1 0 110 2H8a1 1 0 01-1-1zm1 4a1 1 0 100 2h16a1 1 0 100-2H8z"
+                  d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
                   fill="currentColor"
                   fill-rule="evenodd"
                 />
@@ -2333,7 +2347,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M12 6.056L8.114 2.197a.166.166 0 00-.228 0L4 6.042v6.802c0 .087.069.153.154.153l7.693.015c.08 0 .153-.069.153-.154V6.056zm1 .88l.03 6.605c0 .254-.057.459-.317.459H3.5a.464.464 0 01-.47-.459L3 6.937l-1.208.993a.474.474 0 01-.662-.016.455.455 0 01.014-.65l6.519-6.132a.498.498 0 01.674 0l6.519 6.131a.455.455 0 01.014.651.472.472 0 01-.662.016L13 6.937z"
+                        d="M12 6.056 8.114 2.197a.166.166 0 0 0-.228 0L4 6.042v6.802c0 .087.069.153.154.153l7.693.015c.08 0 .153-.069.153-.154V6.056zm1 .88.03 6.605c0 .254-.057.459-.317.459H3.5a.464.464 0 0 1-.47-.459L3 6.937l-1.208.993a.474.474 0 0 1-.662-.016.455.455 0 0 1 .014-.65l6.519-6.132a.498.498 0 0 1 .674 0l6.519 6.131a.455.455 0 0 1 .014.651.472.472 0 0 1-.662.016L13 6.937z"
                         fill="currentColor"
                       />
                     </svg>
@@ -2351,7 +2365,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M11.37 7.37L5.296.26A.708.708 0 004.76 0a.708.708 0 00-.537.26A.973.973 0 004 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 00-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 00.537-.26l6.072-7.11a.91.91 0 00.165-.29 1.021 1.021 0 000-.68.91.91 0 00-.165-.29z"
+                      d="M11.37 7.37 5.296.26A.708.708 0 0 0 4.76 0a.708.708 0 0 0-.537.26A.973.973 0 0 0 4 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 0 0-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 0 0 .537-.26l6.072-7.11a.91.91 0 0 0 .165-.29 1.021 1.021 0 0 0 0-.68.91.91 0 0 0-.165-.29z"
                       fill="currentColor"
                     />
                   </svg>
@@ -2374,7 +2388,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M11.37 7.37L5.296.26A.708.708 0 004.76 0a.708.708 0 00-.537.26A.973.973 0 004 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 00-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 00.537-.26l6.072-7.11a.91.91 0 00.165-.29 1.021 1.021 0 000-.68.91.91 0 00-.165-.29z"
+                      d="M11.37 7.37 5.296.26A.708.708 0 0 0 4.76 0a.708.708 0 0 0-.537.26A.973.973 0 0 0 4 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 0 0-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 0 0 .537-.26l6.072-7.11a.91.91 0 0 0 .165-.29 1.021 1.021 0 0 0 0-.68.91.91 0 0 0-.165-.29z"
                       fill="currentColor"
                     />
                   </svg>
@@ -2427,7 +2441,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
+                              d="M11.7 1H9.6a3.5 3.5 0 0 0-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 0 1 .7-.7h2.1V1z"
                               fill="currentColor"
                             />
                           </svg>
@@ -2449,11 +2463,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
+                              d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0 0 13.536 3z"
                               fill="currentColor"
                             />
                             <path
-                              d="M14.93 4.75L8.353 8.726a.75.75 0 01-.776 0L1 4.75v6.666c0 .66.627 1.202 1.393 1.202h11.144c.766 0 1.393-.541 1.393-1.202V4.75z"
+                              d="M14.93 4.75 8.353 8.726a.75.75 0 0 1-.776 0L1 4.75v6.666c0 .66.627 1.202 1.393 1.202h11.144c.766 0 1.393-.541 1.393-1.202V4.75z"
                               fill="currentColor"
                             />
                           </svg>
@@ -2474,7 +2488,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
+                              d="M10.753 5.125a4.21 4.21 0 0 1 2.955 1.208 4.098 4.098 0 0 1 1.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 0 0-1.97 0 1.366 1.366 0 0 0-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 0 1 2.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
                               fill="currentColor"
                             />
                           </svg>
@@ -2505,7 +2519,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                                 stroke-linejoin="round"
                               />
                               <path
-                                d="M5.727 9.057l4.553 2.786m-.006-7.687L5.727 6.942"
+                                d="m5.727 9.057 4.553 2.786m-.006-7.687L5.727 6.942"
                                 stroke="currentColor"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -2536,16 +2550,20 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </header>
                   <div
                     class="c49"
-                  />
+                  >
+                    <p
+                      class="c50"
+                    />
+                  </div>
                 </div>
                 <div
-                  class="c50"
+                  class="c51"
                 >
                   <div
-                    class="c51"
+                    class="c52"
                   >
                     <div
-                      class="c52"
+                      class="c53"
                     >
                       <svg
                         aria-hidden="true"
@@ -2555,13 +2573,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                          d="M11.938 16.5a3.548 3.548 0 0 1 3.562-3.563 3.548 3.548 0 0 1 3.563 3.563 3.548 3.548 0 0 1-3.563 3.563 3.548 3.548 0 0 1-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
                           fill="currentColor"
                           fill-rule="evenodd"
                         />
                         <path
                           clip-rule="evenodd"
-                          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
                           fill="currentColor"
                           fill-rule="evenodd"
                         />
@@ -2569,13 +2587,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     </div>
                   </div>
                   <div
-                    class="c53 c54"
+                    class="c54 c55"
                   >
                     <div
-                      class="c55"
+                      class="c56"
                     >
                       <div
-                        class="c56"
+                        class="c57"
                       >
                         <svg
                           aria-hidden="true"
@@ -2585,12 +2603,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         >
                           <path
                             clip-rule="evenodd"
-                            d="M17 2L6 13v2c0 1 .398 1 1.076 1h9.693C18.554 16 20 14.657 20 13V4h19a1 1 0 011 1v27h2V5a3 3 0 00-3-3H17zm-.23 12H8L18 4v9c0 .552-.636 1-1.23 1z"
+                            d="M17 2 6 13v2c0 1 .398 1 1.076 1h9.693C18.554 16 20 14.657 20 13V4h19a1 1 0 0 1 1 1v27h2V5a3 3 0 0 0-3-3H17zm-.23 12H8L18 4v9c0 .552-.636 1-1.23 1z"
                             fill="#4E6896"
                             fill-rule="evenodd"
                           />
                           <path
-                            d="M27 50v-2H9a1 1 0 01-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 003 3h18zM7 20a1 1 0 100-2 1 1 0 000 2z"
+                            d="M27 50v-2H9a1 1 0 0 1-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 0 0 3 3h18zM7 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
                             fill="#4E6896"
                           />
                           <path
@@ -2599,7 +2617,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                           />
                           <path
                             clip-rule="evenodd"
-                            d="M36.5 37.938a3.548 3.548 0 00-3.563 3.562 3.548 3.548 0 003.563 3.563 3.548 3.548 0 003.563-3.563 3.548 3.548 0 00-3.563-3.563zm0 5.062c-.84 0-1.5-.66-1.5-1.5s.66-1.5 1.5-1.5 1.5.66 1.5 1.5-.66 1.5-1.5 1.5z"
+                            d="M36.5 37.938a3.548 3.548 0 0 0-3.563 3.562 3.548 3.548 0 0 0 3.563 3.563 3.548 3.548 0 0 0 3.563-3.563 3.548 3.548 0 0 0-3.563-3.563zm0 5.062c-.84 0-1.5-.66-1.5-1.5s.66-1.5 1.5-1.5 1.5.66 1.5 1.5-.66 1.5-1.5 1.5z"
                             fill="#FF7067"
                             fill-rule="evenodd"
                           />
@@ -2612,32 +2630,36 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c57"
+                        class="c58"
                       >
-                        <div
+                        <p
                           aria-level="2"
-                          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c58"
+                          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c59"
                           role="heading"
                         >
                           Page personnalisable
-                        </div>
-                        Le contenu de cette page peut être personnalisé en fonction de votre situation.
-                        <br />
-                        <a
-                          href="#customisation"
+                        </p>
+                        <p
+                          class="c60"
                         >
-                          Voir en bas de page
-                        </a>
-                         pour renseigner votre convention collective.
+                          Le contenu de cette page peut être personnalisé en fonction de votre situation.
+                          <br />
+                          <a
+                            href="#customisation"
+                          >
+                            Voir en bas de page
+                          </a>
+                           pour renseigner votre convention collective.
+                        </p>
                       </div>
                     </div>
                   </div>
                   <section>
                     <div
-                      class="c59"
+                      class="c61"
                     >
                       <h2
-                        class="c60"
+                        class="c62"
                       >
                         <span
                           class="c48"
@@ -2646,7 +2668,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       </h2>
                     </div>
                     <div
-                      class="c61"
+                      class="c63"
                     />
                     <div>
                       <p>
@@ -2736,35 +2758,35 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                     </div>
                   </section>
                   <div
-                    class="c62 c63"
+                    class="c64 c65"
                   >
                     <div
-                      class="c53"
+                      class="c54"
                     >
                       <div
-                        class="c64 c65"
+                        class="c66 c67"
                         id="customisation"
                       >
                         <h2
-                          class="c66"
+                          class="c68"
                         >
                           <span
-                            class="c67"
+                            class="c69"
                           />
                           Que dit votre convention collective ?
                         </h2>
                       </div>
                       <label
-                        class="c68"
+                        class="c70"
                         for="convention-search"
                       >
                         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
                       </label>
                       <span
-                        class="c69 c70"
+                        class="c71 c72"
                       >
                         <input
-                          class="c71"
+                          class="c73"
                           id="convention-search"
                           name="q"
                           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -2774,16 +2796,16 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       </span>
                       
                       <p
-                        class="c72"
+                        class="c74"
                       >
                         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
                         <span
-                          class="c73"
+                          class="c75"
                         >
                           Consultez
                            
                           <button
-                            class="c74 c75"
+                            class="c76 c77"
                             type="button"
                           >
                             notre aide
@@ -2797,9 +2819,13 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </div>
             </div>
             <div
-              class="c4 c76"
+              class="c4 c78"
             >
-              Partager ce contenu : 
+              <p
+                class="c60"
+              >
+                Partager ce contenu : 
+              </p>
               <div
                 class="c37"
               >
@@ -2819,7 +2845,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
+                        d="M11.7 1H9.6a3.5 3.5 0 0 0-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 0 1 .7-.7h2.1V1z"
                         fill="currentColor"
                       />
                     </svg>
@@ -2841,11 +2867,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
+                        d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0 0 13.536 3z"
                         fill="currentColor"
                       />
                       <path
-                        d="M14.93 4.75L8.353 8.726a.75.75 0 01-.776 0L1 4.75v6.666c0 .66.627 1.202 1.393 1.202h11.144c.766 0 1.393-.541 1.393-1.202V4.75z"
+                        d="M14.93 4.75 8.353 8.726a.75.75 0 0 1-.776 0L1 4.75v6.666c0 .66.627 1.202 1.393 1.202h11.144c.766 0 1.393-.541 1.393-1.202V4.75z"
                         fill="currentColor"
                       />
                     </svg>
@@ -2866,7 +2892,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
+                        d="M10.753 5.125a4.21 4.21 0 0 1 2.955 1.208 4.098 4.098 0 0 1 1.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 0 0-1.97 0 1.366 1.366 0 0 0-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 0 1 2.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
                         fill="currentColor"
                       />
                     </svg>
@@ -2897,7 +2923,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                           stroke-linejoin="round"
                         />
                         <path
-                          d="M5.727 9.057l4.553 2.786m-.006-7.687L5.727 6.942"
+                          d="m5.727 9.057 4.553 2.786m-.006-7.687L5.727 6.942"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -2910,40 +2936,35 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </div>
             </div>
             <div
-              class="c62 c77"
+              class="c64 c79"
             >
               <div
                 class="c4"
               >
                 <div
-                  class="c78"
+                  class="c80"
                 >
                   <div
-                    class="c79"
+                    class="c81"
                   >
-                    <strong
-                      class="c80 c81"
+                    <h2
+                      class="c82 c83"
                     >
                       <span
-                        class="c67"
+                        class="c69"
                       />
-                      <span
-                        aria-level="2"
-                        role="heading"
-                      >
-                        Avez-vous trouvé la réponse à votre question ?
-                      </span>
-                    </strong>
+                      Avez-vous trouvé la réponse à votre question ?
+                    </h2>
                     <p
-                      class="c82"
+                      class="c84"
                     >
                       <button
-                        class="c83 c84 "
+                        class="c85 c86 "
                       >
                         Non
                       </button>
                       <button
-                        class="c83 c84 "
+                        class="c85 c86 "
                       >
                         Oui
                       </button>
@@ -2956,51 +2977,51 @@ exports[`<FicheContribution /> should render with external content 1`] = `
         </div>
       </main>
       <div
-        class="c85"
+        class="c87"
       >
         <footer
-          class="c86"
+          class="c88"
         >
           <div
-            class="c62 c87"
+            class="c64 c89"
           >
             <div
               class="c4"
             >
               <div
                 aria-level="2"
-                class="c88"
+                class="c90"
                 role="heading"
               >
                 <p
-                  class="c89"
+                  class="c91"
                 >
                   <span
-                    class="c90"
+                    class="c92"
                   />
                   Besoin de plus d’informations ?
                 </p>
               </div>
               <div
-                class="c91 c92"
+                class="c93 c94"
               >
                 <p>
                   Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
                 </p>
               </div>
               <button
-                class="c93"
+                class="c95"
               >
                 Contacter nos services en région
                 <svg
                   aria-hidden="true"
-                  class="c94"
+                  class="c96"
                   fill="none"
                   viewBox="0 0 28 15"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                    d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                     fill="currentColor"
                   />
                 </svg>
@@ -3008,27 +3029,27 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             </div>
           </div>
           <div
-            class="c62 c95"
+            class="c64 c97"
           >
             <div
-              class="c4 c96"
+              class="c4 c98"
             >
               <div
-                class="c97 "
+                class="c99 "
               >
                 <strong
                   aria-level="2"
-                  class="c98 c99"
+                  class="c100 c101"
                   role="heading"
                 >
                   Code du travail numérique
                 </strong>
                 <ul
-                  class="c100 c101"
+                  class="c102 c103"
                 >
                   <li>
                     <a
-                      class="c102"
+                      class="c104"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
@@ -3036,7 +3057,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c102"
+                      class="c104"
                       href="/glossaire"
                     >
                       Glossaire
@@ -3044,7 +3065,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c102"
+                      class="c104"
                       href="/a-propos"
                     >
                       À propos
@@ -3052,7 +3073,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c102"
+                      class="c104"
                       href="/mentions-legales"
                     >
                       Mentions légales
@@ -3060,7 +3081,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c102"
+                      class="c104"
                       href="/accessibilite"
                     >
                       Accessibilité : partiellement conforme
@@ -3068,7 +3089,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c102"
+                      class="c104"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
@@ -3076,7 +3097,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c102"
+                      class="c104"
                       href="/stats"
                     >
                       Statistiques d’utilisation
@@ -3084,7 +3105,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c102"
+                      class="c104"
                       href="/integration"
                     >
                       Intégrer le Code du travail numérique
@@ -3093,21 +3114,21 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 </ul>
               </div>
               <div
-                class="c97 "
+                class="c99 "
               >
                 <strong
                   aria-level="2"
-                  class="c98 c99"
+                  class="c100 c101"
                   role="heading"
                 >
                   Aidez-nous à améliorer cet outil
                 </strong>
                 <ul
-                  class="c100 c101"
+                  class="c102 c103"
                 >
                   <li>
                     <button
-                      class="c74 c103"
+                      class="c76 c105"
                     >
                       Contact
                     </button>
@@ -3115,7 +3136,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   <li>
                     <a
                       aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                      class="c102"
+                      class="c104"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3126,7 +3147,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   <li>
                     <a
                       aria-label="Journal des modifications (Nouvelle fenêtre)"
-                      class="c102"
+                      class="c104"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3137,22 +3158,22 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 </ul>
               </div>
               <div
-                class="c97 "
+                class="c99 "
               >
                 <strong
                   aria-level="2"
-                  class="c98 c99"
+                  class="c100 c101"
                   role="heading"
                 >
                   En collaboration avec
                 </strong>
                 <ul
-                  class="c100 c101"
+                  class="c102 c103"
                 >
                   <li>
                     <a
                       aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                      class="c102"
+                      class="c104"
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3163,7 +3184,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   <li>
                     <a
                       aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                      class="c102"
+                      class="c104"
                       href="https://fabrique.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3174,7 +3195,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   <li>
                     <a
                       aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                      class="c102"
+                      class="c104"
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -3187,12 +3208,12 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             </div>
           </div>
           <ul
-            class="c104"
+            class="c106"
           >
             <li>
               <a
                 aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-                class="c102 c105"
+                class="c104 c107"
                 href="https://travail-emploi.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3201,7 +3222,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c108"
               >
                 |
               </span>
@@ -3209,7 +3230,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="service-public.fr (Nouvelle fenêtre)"
-                class="c102 c105"
+                class="c104 c107"
                 href="https://www.service-public.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3218,7 +3239,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c108"
               >
                 |
               </span>
@@ -3226,7 +3247,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-                class="c102 c105"
+                class="c104 c107"
                 href="https://www.legifrance.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3235,7 +3256,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c108"
               >
                 |
               </span>
@@ -3243,7 +3264,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="data.gouv.fr (Nouvelle fenêtre)"
-                class="c102 c105"
+                class="c104 c107"
                 href="https://www.data.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3252,7 +3273,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c108"
               >
                 |
               </span>
@@ -3260,7 +3281,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="gouvernement.fr (Nouvelle fenêtre)"
-                class="c102 c105"
+                class="c104 c107"
                 href="https://www.gouvernement.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3269,7 +3290,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c108"
               >
                 |
               </span>
@@ -3277,7 +3298,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             <li>
               <a
                 aria-label="cnil.fr (Nouvelle fenêtre)"
-                class="c102 c105"
+                class="c104 c107"
                 href="https://www.cnil.fr/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -3300,7 +3321,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding: 0 2rem;
 }
 
-.c91 {
+.c93 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -3308,7 +3329,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   max-width: 74rem;
 }
 
-.c62 {
+.c64 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -3345,7 +3366,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin-bottom: 0;
 }
 
-.c53 {
+.c54 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -3353,15 +3374,15 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c53 > *:first-child {
+.c54 > *:first-child {
   margin-top: 0;
 }
 
-.c53 > *:last-child {
+.c54 > *:last-child {
   margin-bottom: 0;
 }
 
-.c78 {
+.c80 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -3369,11 +3390,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   background-color: #fff;
 }
 
-.c78 > *:first-child {
+.c80 > *:first-child {
   margin-top: 0;
 }
 
-.c78 > *:last-child {
+.c80 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -3390,7 +3411,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   transform: translateY(-50%);
 }
 
-.c67 {
+.c69 {
   position: absolute;
   background-color: #f66663;
   border-radius: 0;
@@ -3403,7 +3424,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   transform: translateY(-50%);
 }
 
-.c90 {
+.c92 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -3416,7 +3437,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   transform: translateX(-50%);
 }
 
-.c81 {
+.c83 {
   position: relative;
   display: block;
   margin: 3.2rem 0 2rem 0;
@@ -3429,7 +3450,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding-left: 2.4rem;
 }
 
-.c99 {
+.c101 {
   position: relative;
   display: block;
   margin: 0 0 2rem 0;
@@ -3440,7 +3461,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   line-height: 1.625;
 }
 
-.c51 {
+.c52 {
   position: absolute;
   top: 0;
   right: 0;
@@ -3451,7 +3472,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c51:before {
+.c52:before {
   position: absolute;
   display: block;
   width: 0;
@@ -3462,7 +3483,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   content: "";
 }
 
-.c52 {
+.c53 {
   position: absolute;
   top: 0;
   right: 0;
@@ -3535,7 +3556,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   cursor: not-allowed;
 }
 
-.c74 {
+.c76 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3580,13 +3601,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c74:focus,
-.c74:hover,
-.c74:active {
+.c76:focus,
+.c76:hover,
+.c76:active {
   color: #f66663;
 }
 
-.c83 {
+.c85 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3624,16 +3645,16 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   will-change: transform;
 }
 
-.c83:link,
-.c83:visited {
+.c85:link,
+.c85:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c83:not([disabled]):hover,
-.c83:not([disabled]):active,
-.c83:not([disabled]):focus {
+.c85:not([disabled]):hover,
+.c85:not([disabled]):active,
+.c85:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -3642,7 +3663,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   border-color: #dee5ef;
 }
 
-.c83[disabled] {
+.c85[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -3650,7 +3671,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   cursor: not-allowed;
 }
 
-.c93 {
+.c95 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3688,16 +3709,16 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   will-change: transform;
 }
 
-.c93:link,
-.c93:visited {
+.c95:link,
+.c95:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c93:not([disabled]):hover,
-.c93:not([disabled]):active,
-.c93:not([disabled]):focus {
+.c95:not([disabled]):hover,
+.c95:not([disabled]):active,
+.c95:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -3706,7 +3727,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   border-color: #a0b3e0;
 }
 
-.c93[disabled] {
+.c95[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -3802,11 +3823,25 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   color: #7994d4;
 }
 
+.c50 {
+  color: #3e486e;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.c60 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+}
+
 .c42 {
   position: relative;
 }
 
-.c100 {
+.c102 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -3845,7 +3880,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   overflow-x: auto;
 }
 
-.c55 {
+.c56 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3856,7 +3891,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   justify-content: stretch;
 }
 
-.c56 {
+.c57 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -3866,12 +3901,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin-right: 2rem;
 }
 
-.c56 svg {
+.c57 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c57 {
+.c58 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -3888,12 +3923,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-transform: uppercase;
 }
 
-.c69 {
+.c71 {
   position: relative;
   display: inline-block;
 }
 
-.c71 {
+.c73 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -3915,15 +3950,15 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   appearance: none;
 }
 
-.c71::-webkit-outer-spin-button,
-.c71::-webkit-inner-spin-button {
+.c73::-webkit-outer-spin-button,
+.c73::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c71::-webkit-calendar-picker-indicator {
+.c73::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -3936,47 +3971,47 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c71:invalid {
+.c73:invalid {
   border-color: #eb5757;
 }
 
-.c71::-webkit-input-placeholder {
+.c73::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c71::-moz-placeholder {
+.c73::-moz-placeholder {
   color: #9298af;
 }
 
-.c71:-ms-input-placeholder {
+.c73:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c71::placeholder {
+.c73::placeholder {
   color: #9298af;
 }
 
-.c71:focus {
+.c73:focus {
   border-color: #7994d4;
 }
 
-.c71:focus::-webkit-input-placeholder {
+.c73:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c71:focus::-moz-placeholder {
+.c73:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c71:focus:-ms-input-placeholder {
+.c73:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c71:focus::placeholder {
+.c73:focus::placeholder {
   color: transparent;
 }
 
-.c68 {
+.c70 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3990,7 +4025,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   cursor: pointer;
 }
 
-.c58 {
+.c59 {
   margin: 0 0 1rem 0;
   color: #f66663;
   font-weight: 600;
@@ -4006,21 +4041,21 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-align: left;
 }
 
-.c59 {
+.c61 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
-.c64 {
+.c66 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
 
-.c88 {
+.c90 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -4038,7 +4073,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding-left: 4rem;
 }
 
-.c60 {
+.c62 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -4050,7 +4085,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-align: left;
 }
 
-.c66 {
+.c68 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -4062,7 +4097,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-align: left;
 }
 
-.c89 {
+.c91 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -4074,20 +4109,20 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   text-align: center;
 }
 
-.c70 {
+.c72 {
   width: 100%;
 }
 
-.c72 {
+.c74 {
   margin-top: 2.4rem;
 }
 
-.c73 {
+.c75 {
   display: block;
   margin-top: 1.6rem;
 }
 
-.c75 {
+.c77 {
   color: #7994d4;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -4267,7 +4302,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   font-size: 1.4rem;
 }
 
-.c50 {
+.c51 {
   margin: 3.2rem 0 0 0;
 }
 
@@ -4337,7 +4372,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   color: #7994d4;
 }
 
-.c79 {
+.c81 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4355,7 +4390,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   justify-content: stretch;
 }
 
-.c80 {
+.c82 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -4365,7 +4400,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding-bottom: 1rem;
 }
 
-.c82 {
+.c84 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4380,11 +4415,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   margin: 0;
 }
 
-.c84 + .c84 {
+.c86 + .c86 {
   margin-left: 4rem;
 }
 
-.c76 {
+.c78 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4402,7 +4437,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   font-weight: bold;
 }
 
-.c61 {
+.c63 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4411,25 +4446,25 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   font-size: 1.4rem;
 }
 
-.c63 {
+.c65 {
   padding-bottom: 0;
 }
 
-.c54 {
+.c55 {
   margin-bottom: 3.2rem;
 }
 
-.c65 {
+.c67 {
   margin-top: 3.2rem;
 }
 
-.c85 {
+.c87 {
   width: 100%;
   padding-top: 4rem;
   overflow-x: hidden;
 }
 
-.c86 {
+.c88 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -4437,7 +4472,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   background-color: #f2f5fa;
 }
 
-.c86:before {
+.c88:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -4449,27 +4484,27 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   content: "";
 }
 
-.c87 {
+.c89 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c92 {
+.c94 {
   margin-bottom: 2rem;
 }
 
-.c94 {
+.c96 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c95 {
+.c97 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c96 {
+.c98 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4480,28 +4515,28 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   justify-content: space-between;
 }
 
-.c97 + .c97 {
+.c99 + .c99 {
   padding-left: 1.6rem;
 }
 
-.c98 {
+.c100 {
   font-size: 1.6rem;
 }
 
-.c102 {
+.c104 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  padding: 0.4rem 0;
+  padding: 0.8rem 0;
   display: inline-block;
 }
 
-.c103 {
+.c105 {
   padding: 0.4rem 0;
 }
 
-.c104 {
+.c106 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4523,11 +4558,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c105 {
+.c107 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c106 {
+.c108 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4771,20 +4806,20 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c91 {
+  .c93 {
     padding: 0;
   }
 }
 
 @media print {
-  .c91 {
+  .c93 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c62 {
+  .c64 {
     padding: 2.4rem 0;
   }
 }
@@ -4809,46 +4844,46 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c53 {
+  .c54 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c53 {
+  .c54 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c78 {
+  .c80 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c78 {
+  .c80 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c81 {
+  .c83 {
     margin-left: -1rem;
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c81 {
+  .c83 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c99 {
+  .c101 {
     font-size: 1.6rem;
   }
 }
@@ -4866,49 +4901,49 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c74 {
+  .c76 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c74 {
+  .c76 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c83 {
+  .c85 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c83 {
+  .c85 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c83 {
+  .c85 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c93 {
+  .c95 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c93 {
+  .c95 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c93 {
+  .c95 {
     padding: 0 3rem;
   }
 }
@@ -4966,33 +5001,33 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c56 {
+  .c57 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c56 svg {
+  .c57 svg {
     width: 3rem;
     height: 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c69 {
+  .c71 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c71 {
+  .c73 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c58 {
+  .c59 {
     font-size: 1.6rem;
   }
 }
@@ -5005,21 +5040,21 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c59 {
+  .c61 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c64 {
+  .c66 {
     margin-bottom: 1rem;
     margin-left: -1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c88 {
+  .c90 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -5038,31 +5073,31 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c60 {
+  .c62 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c60 {
+  .c62 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c66 {
+  .c68 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c66 {
+  .c68 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c89 {
+  .c91 {
     font-size: 2.2rem;
   }
 }
@@ -5130,7 +5165,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c51 {
     margin-top: 1.6rem;
   }
 }
@@ -5160,13 +5195,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media print {
-  .c77 {
+  .c79 {
     display: none;
   }
 }
 
 @media (max-width:1180px) {
-  .c79 {
+  .c81 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -5180,20 +5215,20 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c80 {
+  .c82 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c80 {
+  .c82 {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c82 {
+  .c84 {
     -webkit-box-pack: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -5202,13 +5237,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c84 + .c84 {
+  .c86 + .c86 {
     margin-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c76 {
+  .c78 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
@@ -5217,13 +5252,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media print {
-  .c76 {
+  .c78 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c61 {
+  .c63 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -5231,32 +5266,32 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c54 {
+  .c55 {
     margin-bottom: 2rem;
   }
 }
 
 @media print {
-  .c86 {
+  .c88 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c87 {
+  .c89 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c95 {
+  .c97 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c96 {
+  .c98 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -5264,26 +5299,26 @@ exports[`<FicheContribution /> should render without external content 1`] = `
 }
 
 @media (max-width:600px) {
-  .c97 + .c97 {
+  .c99 + .c99 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c101 {
+  .c103 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c98 {
+  .c100 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c106 {
+  .c108 {
     display: none;
   }
 }
@@ -5474,11 +5509,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 fill="#fff"
               />
               <path
-                d="M533.026 159.16H.822V79.824h532.204v79.336zm-.107-79.336H264.98V.488h267.939v79.336zM210.09 186.329l-.155 54.359h-11.616l-10.685-16.339c-.155-.259-1.316-1.936-3.484-5.034-.568-.826-1.677-2.503-3.329-5.033a99.201 99.201 0 00-2.556-3.793l-1.007-1.551h-.155l.078 1.396c.052.362.09 1.007.116 1.936.026.928.038 1.624.038 2.09.104 1.754.182 3.846.232 6.271.052 1.602.079 4.259.079 7.976v11.924h-12.623v-54.124h11.616l11.304 17.113 2.788 4.181c.104.154 1.162 1.704 3.175 4.645.259.414.672 1.046 1.239 1.898a44.728 44.728 0 001.317 1.897l1.084 1.548h.077v-5.652c0-2.477-.026-4.491-.077-6.04-.052-1.548-.077-3.975-.077-7.279v-12.389h12.621zm57.38 0v31.36c0 3.821-.543 7.201-1.627 10.144-1.084 2.995-2.581 5.473-4.491 7.435-1.961 2.012-4.31 3.561-7.046 4.645-2.839 1.032-5.936 1.548-9.292 1.548-3.355 0-6.452-.516-9.292-1.548-2.736-1.084-5.086-2.633-7.047-4.645-1.909-1.962-3.407-4.44-4.491-7.435-1.084-2.943-1.626-6.323-1.626-10.144v-31.36h12.777v31.283c0 4.13.825 7.176 2.477 9.137 1.6 1.911 4.002 2.865 7.202 2.865 3.201 0 5.601-.954 7.201-2.865 1.652-1.961 2.477-5.007 2.477-9.137v-31.283h12.778zm63.186 0l-.155 54.359h-12.389v-14.326c0-5.627.128-10.196.387-13.706.052-1.031.104-1.91.154-2.632.052-.723.078-1.264.078-1.626v-.542h-.078l-.618 1.082c-.516.93-.956 1.757-1.318 2.48l-1.393 2.787-1.007 2.013-5.885 10.996h-6.427l-5.885-10.996a27.177 27.177 0 00-.929-2.013l-1.394-2.787a65.57 65.57 0 00-1.316-2.48l-.62-1.082h-.154c-.052 0-.052.388 0 1.161s.129 1.963.232 3.561c.258 3.511.388 8.08.388 13.707v14.324h-12.312v-54.124h11.924l9.292 16.415c1.652 2.994 2.736 5.137 3.253 6.428.464 1.238.723 1.858.773 1.858h.078l.154-.467c.052-.102.259-.591.62-1.469.414-.929.827-1.808 1.239-2.633a47.654 47.654 0 012.091-3.872l9.292-16.416h11.925zm27.181-2.246l-3.872-6.736 17.268-9.756 4.569 8.593-17.965 7.899zm23.074 44.369v12.08h-36.934v-54.204h36.47v12.004h-23.772v9.059h18.352v11.305h-18.352v9.756h24.236zm25.323-17.035l7.744.155c1.032 0 1.961-.207 2.787-.619a5.35 5.35 0 001.858-1.549c.516-.671.878-1.368 1.084-2.091.259-.877.387-1.678.387-2.401 0-.723-.128-1.523-.387-2.4-.206-.723-.568-1.42-1.084-2.091a5.33 5.33 0 00-1.858-1.549c-.826-.412-1.755-.619-2.787-.619h-7.744v13.164zm14.945 29.192l-9.292-17.577h-5.73v17.655h-12.699v-54.126h19.203c3.046 0 5.885.439 8.518 1.316 2.53.827 4.698 2.066 6.504 3.718a17.238 17.238 0 014.182 5.808c.98 2.166 1.47 4.696 1.47 7.588 0 3.665-.8 6.788-2.4 9.369-1.6 2.632-3.872 4.672-6.813 6.117l11.304 20.132h-14.247zm23.928-54.28h12.699v54.203h-12.699v-54.203zm57.689 38.639c2.22-2.736 3.329-6.608 3.329-11.614 0-5.059-1.109-8.931-3.329-11.616-2.272-2.735-5.318-4.103-9.138-4.103-3.872 0-6.892 1.368-9.06 4.103-2.168 2.736-3.252 6.608-3.252 11.616 0 4.956 1.084 8.828 3.252 11.614 2.168 2.787 5.188 4.182 9.06 4.182 3.82 0 6.866-1.395 9.138-4.182zm-15.487 15.796l-.077.311c-2.736-.568-5.37-1.679-7.899-3.329-2.323-1.498-4.361-3.486-6.117-5.963-1.704-2.427-3.02-5.137-3.95-8.132-.928-2.993-1.393-6.323-1.393-9.988 0-4.336.645-8.208 1.936-11.615 1.291-3.458 3.072-6.426 5.343-8.905a21.995 21.995 0 018.13-5.729 26.519 26.519 0 0110.222-2.014c3.665 0 7.072.671 10.221 2.014 3.149 1.342 5.859 3.226 8.131 5.652 2.27 2.426 4.077 5.394 5.42 8.904 1.29 3.408 1.936 7.28 1.936 11.616 0 3.613-.466 6.969-1.395 10.065-.929 3.097-2.245 5.808-3.948 8.132a24.624 24.624 0 01-6.195 5.807 24.106 24.106 0 01-7.898 3.252v9.834h-12.467v-9.912zm86.262-54.435v31.36c0 3.821-.542 7.201-1.626 10.144-1.084 2.995-2.582 5.473-4.491 7.435-1.961 2.012-4.311 3.561-7.047 4.645-2.838 1.032-5.936 1.548-9.292 1.548-3.354 0-6.452-.516-9.292-1.548-2.736-1.084-5.085-2.633-7.046-4.645-1.91-1.962-3.407-4.44-4.491-7.435-1.084-2.943-1.627-6.323-1.627-10.144v-31.36h12.778v31.283c0 4.13.825 7.176 2.477 9.137 1.6 1.911 4.001 2.865 7.201 2.865 3.202 0 5.602-.954 7.202-2.865 1.652-1.961 2.478-5.007 2.478-9.137v-31.283h12.776zm49.481 42.124v12.078h-36.936v-54.202h36.471v12.002h-23.772v9.06h18.352v11.304h-18.352v9.758h24.237z"
+                d="M533.026 159.16H.822V79.824h532.204v79.336zm-.107-79.336H264.98V.488h267.939v79.336zM210.09 186.329l-.155 54.359h-11.616l-10.685-16.339c-.155-.259-1.316-1.936-3.484-5.034-.568-.826-1.677-2.503-3.329-5.033a99.201 99.201 0 0 0-2.556-3.793l-1.007-1.551h-.155l.078 1.396c.052.362.09 1.007.116 1.936.026.928.038 1.624.038 2.09.104 1.754.182 3.846.232 6.271.052 1.602.079 4.259.079 7.976v11.924h-12.623v-54.124h11.616l11.304 17.113 2.788 4.181c.104.154 1.162 1.704 3.175 4.645.259.414.672 1.046 1.239 1.898a44.728 44.728 0 0 0 1.317 1.897l1.084 1.548h.077v-5.652c0-2.477-.026-4.491-.077-6.04-.052-1.548-.077-3.975-.077-7.279v-12.389h12.621zm57.38 0v31.36c0 3.821-.543 7.201-1.627 10.144-1.084 2.995-2.581 5.473-4.491 7.435-1.961 2.012-4.31 3.561-7.046 4.645-2.839 1.032-5.936 1.548-9.292 1.548-3.355 0-6.452-.516-9.292-1.548-2.736-1.084-5.086-2.633-7.047-4.645-1.909-1.962-3.407-4.44-4.491-7.435-1.084-2.943-1.626-6.323-1.626-10.144v-31.36h12.777v31.283c0 4.13.825 7.176 2.477 9.137 1.6 1.911 4.002 2.865 7.202 2.865 3.201 0 5.601-.954 7.201-2.865 1.652-1.961 2.477-5.007 2.477-9.137v-31.283h12.778zm63.186 0-.155 54.359h-12.389v-14.326c0-5.627.128-10.196.387-13.706.052-1.031.104-1.91.154-2.632.052-.723.078-1.264.078-1.626v-.542h-.078l-.618 1.082c-.516.93-.956 1.757-1.318 2.48l-1.393 2.787-1.007 2.013-5.885 10.996h-6.427l-5.885-10.996a27.177 27.177 0 0 0-.929-2.013l-1.394-2.787a65.57 65.57 0 0 0-1.316-2.48l-.62-1.082h-.154c-.052 0-.052.388 0 1.161s.129 1.963.232 3.561c.258 3.511.388 8.08.388 13.707v14.324h-12.312v-54.124h11.924l9.292 16.415c1.652 2.994 2.736 5.137 3.253 6.428.464 1.238.723 1.858.773 1.858h.078l.154-.467c.052-.102.259-.591.62-1.469.414-.929.827-1.808 1.239-2.633a47.654 47.654 0 0 1 2.091-3.872l9.292-16.416h11.925zm27.181-2.246-3.872-6.736 17.268-9.756 4.569 8.593-17.965 7.899zm23.074 44.369v12.08h-36.934v-54.204h36.47v12.004h-23.772v9.059h18.352v11.305h-18.352v9.756h24.236zm25.323-17.035 7.744.155c1.032 0 1.961-.207 2.787-.619a5.35 5.35 0 0 0 1.858-1.549c.516-.671.878-1.368 1.084-2.091.259-.877.387-1.678.387-2.401 0-.723-.128-1.523-.387-2.4-.206-.723-.568-1.42-1.084-2.091a5.33 5.33 0 0 0-1.858-1.549c-.826-.412-1.755-.619-2.787-.619h-7.744v13.164zm14.945 29.192-9.292-17.577h-5.73v17.655h-12.699v-54.126h19.203c3.046 0 5.885.439 8.518 1.316 2.53.827 4.698 2.066 6.504 3.718a17.238 17.238 0 0 1 4.182 5.808c.98 2.166 1.47 4.696 1.47 7.588 0 3.665-.8 6.788-2.4 9.369-1.6 2.632-3.872 4.672-6.813 6.117l11.304 20.132h-14.247zm23.928-54.28h12.699v54.203h-12.699v-54.203zm57.689 38.639c2.22-2.736 3.329-6.608 3.329-11.614 0-5.059-1.109-8.931-3.329-11.616-2.272-2.735-5.318-4.103-9.138-4.103-3.872 0-6.892 1.368-9.06 4.103-2.168 2.736-3.252 6.608-3.252 11.616 0 4.956 1.084 8.828 3.252 11.614 2.168 2.787 5.188 4.182 9.06 4.182 3.82 0 6.866-1.395 9.138-4.182zm-15.487 15.796-.077.311c-2.736-.568-5.37-1.679-7.899-3.329-2.323-1.498-4.361-3.486-6.117-5.963-1.704-2.427-3.02-5.137-3.95-8.132-.928-2.993-1.393-6.323-1.393-9.988 0-4.336.645-8.208 1.936-11.615 1.291-3.458 3.072-6.426 5.343-8.905a21.995 21.995 0 0 1 8.13-5.729 26.519 26.519 0 0 1 10.222-2.014c3.665 0 7.072.671 10.221 2.014 3.149 1.342 5.859 3.226 8.131 5.652 2.27 2.426 4.077 5.394 5.42 8.904 1.29 3.408 1.936 7.28 1.936 11.616 0 3.613-.466 6.969-1.395 10.065-.929 3.097-2.245 5.808-3.948 8.132a24.624 24.624 0 0 1-6.195 5.807 24.106 24.106 0 0 1-7.898 3.252v9.834h-12.467v-9.912zm86.262-54.435v31.36c0 3.821-.542 7.201-1.626 10.144-1.084 2.995-2.582 5.473-4.491 7.435-1.961 2.012-4.311 3.561-7.047 4.645-2.838 1.032-5.936 1.548-9.292 1.548-3.354 0-6.452-.516-9.292-1.548-2.736-1.084-5.085-2.633-7.046-4.645-1.91-1.962-3.407-4.44-4.491-7.435-1.084-2.943-1.627-6.323-1.627-10.144v-31.36h12.778v31.283c0 4.13.825 7.176 2.477 9.137 1.6 1.911 4.001 2.865 7.201 2.865 3.202 0 5.602-.954 7.202-2.865 1.652-1.961 2.478-5.007 2.478-9.137v-31.283h12.776zm49.481 42.124v12.078h-36.936v-54.202h36.471v12.002h-23.772v9.06h18.352v11.304h-18.352v9.758h24.237z"
                 fill="currentColor"
               />
               <path
-                d="M49.125 135.641l-.312-.156c1.924 0 3.718-.312 5.38-.936 1.664-.623 3.068-1.559 4.212-2.807 1.144-1.248 2.079-2.806 2.807-4.678.676-1.82 1.013-3.952 1.013-6.395 0-2.548-.337-4.731-1.013-6.551-.728-1.924-1.663-3.534-2.807-4.834-1.144-1.299-2.548-2.314-4.212-3.042-1.558-.676-3.326-1.013-5.301-1.013h-8.423v30.412h8.656zm-1.092-42.653h-.077c4.054 0 7.72.649 10.994 1.948 3.38 1.3 6.264 3.172 8.656 5.614 2.495 2.496 4.42 5.407 5.77 8.734 1.404 3.432 2.106 7.2 2.106 11.306 0 4.056-.675 7.799-2.028 11.23-1.3 3.326-3.17 6.161-5.614 8.5-2.443 2.338-5.328 4.132-8.656 5.38-3.327 1.248-6.992 1.87-10.995 1.87H27.37V92.988h20.664zm84.219.155v31.581c0 3.847-.546 7.252-1.637 10.216-1.092 3.015-2.6 5.509-4.523 7.484-1.976 2.028-4.341 3.588-7.096 4.68-2.86 1.039-5.978 1.559-9.357 1.559-3.38 0-6.499-.52-9.359-1.559-2.754-1.092-5.12-2.652-7.096-4.68-1.922-1.975-3.43-4.469-4.522-7.484-1.09-2.964-1.638-6.369-1.638-10.216V93.143h12.867v31.502c0 4.16.832 7.226 2.496 9.202 1.611 1.924 4.028 2.885 7.252 2.885 3.223 0 5.64-.961 7.252-2.885 1.663-1.976 2.495-5.042 2.495-9.202V93.143h12.866zm75.096 0v12.086h-15.206v42.499h-12.789v-42.499h-15.049V93.143h43.044zm23.237 25.264l7.799.156c1.039 0 1.975-.208 2.807-.622a5.36 5.36 0 001.87-1.562c.52-.674.884-1.377 1.092-2.104.26-.884.391-1.69.391-2.418 0-.727-.131-1.534-.391-2.418-.208-.726-.572-1.429-1.092-2.105a5.34 5.34 0 00-1.87-1.559c-.832-.416-1.768-.624-2.807-.624h-7.799v13.256zm15.051 29.398l-9.359-17.7h-5.769v17.78h-12.789V93.377h19.338c3.068 0 5.927.441 8.579 1.325 2.547.832 4.729 2.079 6.549 3.743a17.345 17.345 0 014.211 5.849c.988 2.183 1.483 4.731 1.483 7.641 0 3.692-.807 6.836-2.419 9.435-1.611 2.652-3.899 4.705-6.861 6.16l11.384 20.275h-14.347zm52.871-20.118l-3.743-11.853c-.416-1.351-.703-2.364-.859-3.042a49.832 49.832 0 00-.701-2.65 31.897 31.897 0 00-.273-.975 53.278 53.278 0 00-.272-.897l-.235-.702h-.077l-.156.702c-.054.156-.144.456-.274.897-.13.441-.221.767-.273.975-.052.208-.168.61-.351 1.208-.181.597-.325 1.08-.429 1.442l-.935 3.042-3.821 11.853h12.399zm3.742 11.463h-19.728l-2.729 8.577h-13.569l19.573-54.584h13.256l19.573 54.584h-13.646l-2.73-8.577zm72.99-46.007l-19.105 54.585h-14.582l-18.87-54.585h13.88l9.357 30.1a108.513 108.513 0 012.183 7.876c.468 2.026.728 3.04.78 3.04h.078c.052 0 .312-1.014.78-3.04.571-2.444 1.3-5.07 2.183-7.876l9.357-30.1h13.959zm36.651 34.544l-3.742-11.853c-.416-1.351-.703-2.364-.859-3.042a49.832 49.832 0 00-.701-2.65 32.648 32.648 0 00-.274-.975 38.93 38.93 0 00-.272-.897l-.234-.702h-.078l-.156.702a26.94 26.94 0 00-.273.897c-.131.441-.221.767-.273.975-.052.208-.168.61-.351 1.208-.181.597-.325 1.08-.429 1.442l-.935 3.042-3.821 11.853h12.398zm3.743 11.463h-19.728l-2.729 8.577h-13.57l19.574-54.584h13.256l19.573 54.584h-13.647l-2.729-8.577zm26.124-46.008h12.788v54.586h-12.788V93.142zm64.644 42.42v12.166h-36.416V93.142h12.788v42.42h23.628zM326.66 29.883l-.076.23c-1.121-1.731-2.572-3.03-4.353-3.897-1.833-.865-3.667-1.297-5.5-1.297-3.869 0-6.873 1.375-9.011 4.124-2.138 2.75-3.208 6.517-3.208 11.304 0 4.888 1.146 8.655 3.438 11.303 2.29 2.648 5.269 3.972 8.934 3.972 2.291 0 4.404-.535 6.339-1.604 1.884-1.07 3.336-2.726 4.353-4.964l12.374 3.282c-1.884 4.838-4.863 8.682-8.936 11.534-3.922 2.749-8.656 4.124-14.206 4.124-3.462 0-6.822-.638-10.081-1.91a21.717 21.717 0 01-8.019-5.652c-2.241-2.444-3.997-5.372-5.27-8.782-1.274-3.36-1.91-7.179-1.91-11.456 0-4.278.636-8.096 1.91-11.456 1.273-3.411 3.029-6.339 5.27-8.783a21.717 21.717 0 018.019-5.652 26.167 26.167 0 0110.081-1.985c5.194 0 9.674 1.248 13.442 3.742 3.818 2.546 6.797 6.059 8.936 10.539l-12.526 3.284zm37.883 21.767c2.139 2.75 5.118 4.124 8.936 4.124 3.819 0 6.823-1.374 9.012-4.124 2.19-2.698 3.284-6.517 3.284-11.456 0-4.99-1.094-8.81-3.284-11.456-2.24-2.698-5.245-4.048-9.012-4.048-3.818 0-6.797 1.35-8.936 4.048-2.138 2.647-3.208 6.465-3.208 11.456 0 4.888 1.07 8.707 3.208 11.456zm-16.268-11.303c0-4.277.638-8.096 1.91-11.457 1.273-3.41 3.029-6.338 5.27-8.782a21.717 21.717 0 018.019-5.652 26.192 26.192 0 0110.081-1.986c3.615 0 6.976.663 10.082 1.986 3.105 1.324 5.778 3.182 8.018 5.576 2.24 2.393 4.023 5.32 5.347 8.782 1.273 3.361 1.909 7.179 1.909 11.456 0 4.277-.636 8.096-1.909 11.456-1.324 3.462-3.107 6.39-5.347 8.783s-4.913 4.252-8.018 5.576c-3.158 1.272-6.518 1.91-10.082 1.91-3.462 0-6.822-.638-10.081-1.91a21.717 21.717 0 01-8.019-5.652c-2.241-2.444-3.997-5.372-5.27-8.783-1.272-3.36-1.91-7.178-1.91-11.456v.153zm83.631 14.74l-.306-.152c1.884 0 3.64-.307 5.27-.918 1.629-.61 3.004-1.528 4.124-2.749 1.12-1.221 2.037-2.75 2.749-4.583.663-1.782.993-3.869.993-6.262 0-2.495-.33-4.634-.993-6.416-.712-1.883-1.629-3.462-2.749-4.735-1.12-1.272-2.495-2.265-4.124-2.979-1.527-.661-3.259-.992-5.194-.992h-8.248v29.786h8.478zm-1.07-41.776h-.076c3.971 0 7.56.636 10.768 1.909 3.31 1.272 6.136 3.105 8.478 5.499 2.444 2.444 4.328 5.294 5.652 8.553 1.374 3.361 2.062 7.052 2.062 11.075 0 3.972-.662 7.637-1.986 10.997-1.272 3.259-3.106 6.033-5.499 8.325-2.393 2.291-5.219 4.048-8.477 5.27-3.259 1.221-6.848 1.833-10.768 1.833h-20.392V13.311h20.238zm75.536 41.699v11.914h-36.431V13.462h35.972v11.84h-23.446v8.935h18.101v11.15h-18.101v9.623h23.905z"
+                d="m49.125 135.641-.312-.156c1.924 0 3.718-.312 5.38-.936 1.664-.623 3.068-1.559 4.212-2.807 1.144-1.248 2.079-2.806 2.807-4.678.676-1.82 1.013-3.952 1.013-6.395 0-2.548-.337-4.731-1.013-6.551-.728-1.924-1.663-3.534-2.807-4.834-1.144-1.299-2.548-2.314-4.212-3.042-1.558-.676-3.326-1.013-5.301-1.013h-8.423v30.412h8.656zm-1.092-42.653h-.077c4.054 0 7.72.649 10.994 1.948 3.38 1.3 6.264 3.172 8.656 5.614 2.495 2.496 4.42 5.407 5.77 8.734 1.404 3.432 2.106 7.2 2.106 11.306 0 4.056-.675 7.799-2.028 11.23-1.3 3.326-3.17 6.161-5.614 8.5-2.443 2.338-5.328 4.132-8.656 5.38-3.327 1.248-6.992 1.87-10.995 1.87H27.37V92.988h20.664zm84.219.155v31.581c0 3.847-.546 7.252-1.637 10.216-1.092 3.015-2.6 5.509-4.523 7.484-1.976 2.028-4.341 3.588-7.096 4.68-2.86 1.039-5.978 1.559-9.357 1.559-3.38 0-6.499-.52-9.359-1.559-2.754-1.092-5.12-2.652-7.096-4.68-1.922-1.975-3.43-4.469-4.522-7.484-1.09-2.964-1.638-6.369-1.638-10.216V93.143h12.867v31.502c0 4.16.832 7.226 2.496 9.202 1.611 1.924 4.028 2.885 7.252 2.885 3.223 0 5.64-.961 7.252-2.885 1.663-1.976 2.495-5.042 2.495-9.202V93.143h12.866zm75.096 0v12.086h-15.206v42.499h-12.789v-42.499h-15.049V93.143h43.044zm23.237 25.264 7.799.156c1.039 0 1.975-.208 2.807-.622a5.36 5.36 0 0 0 1.87-1.562c.52-.674.884-1.377 1.092-2.104.26-.884.391-1.69.391-2.418 0-.727-.131-1.534-.391-2.418-.208-.726-.572-1.429-1.092-2.105a5.34 5.34 0 0 0-1.87-1.559c-.832-.416-1.768-.624-2.807-.624h-7.799v13.256zm15.051 29.398-9.359-17.7h-5.769v17.78h-12.789V93.377h19.338c3.068 0 5.927.441 8.579 1.325 2.547.832 4.729 2.079 6.549 3.743a17.345 17.345 0 0 1 4.211 5.849c.988 2.183 1.483 4.731 1.483 7.641 0 3.692-.807 6.836-2.419 9.435-1.611 2.652-3.899 4.705-6.861 6.16l11.384 20.275h-14.347zm52.871-20.118-3.743-11.853c-.416-1.351-.703-2.364-.859-3.042a49.832 49.832 0 0 0-.701-2.65 31.897 31.897 0 0 0-.273-.975 53.278 53.278 0 0 0-.272-.897l-.235-.702h-.077l-.156.702c-.054.156-.144.456-.274.897-.13.441-.221.767-.273.975-.052.208-.168.61-.351 1.208-.181.597-.325 1.08-.429 1.442l-.935 3.042-3.821 11.853h12.399zm3.742 11.463h-19.728l-2.729 8.577h-13.569l19.573-54.584h13.256l19.573 54.584h-13.646l-2.73-8.577zm72.99-46.007-19.105 54.585h-14.582l-18.87-54.585h13.88l9.357 30.1a108.513 108.513 0 0 1 2.183 7.876c.468 2.026.728 3.04.78 3.04h.078c.052 0 .312-1.014.78-3.04.571-2.444 1.3-5.07 2.183-7.876l9.357-30.1h13.959zm36.651 34.544-3.742-11.853c-.416-1.351-.703-2.364-.859-3.042a49.832 49.832 0 0 0-.701-2.65 32.648 32.648 0 0 0-.274-.975 38.93 38.93 0 0 0-.272-.897l-.234-.702h-.078l-.156.702a26.94 26.94 0 0 0-.273.897c-.131.441-.221.767-.273.975-.052.208-.168.61-.351 1.208-.181.597-.325 1.08-.429 1.442l-.935 3.042-3.821 11.853h12.398zm3.743 11.463h-19.728l-2.729 8.577h-13.57l19.574-54.584h13.256l19.573 54.584h-13.647l-2.729-8.577zm26.124-46.008h12.788v54.586h-12.788V93.142zm64.644 42.42v12.166h-36.416V93.142h12.788v42.42h23.628zM326.66 29.883l-.076.23c-1.121-1.731-2.572-3.03-4.353-3.897-1.833-.865-3.667-1.297-5.5-1.297-3.869 0-6.873 1.375-9.011 4.124-2.138 2.75-3.208 6.517-3.208 11.304 0 4.888 1.146 8.655 3.438 11.303 2.29 2.648 5.269 3.972 8.934 3.972 2.291 0 4.404-.535 6.339-1.604 1.884-1.07 3.336-2.726 4.353-4.964l12.374 3.282c-1.884 4.838-4.863 8.682-8.936 11.534-3.922 2.749-8.656 4.124-14.206 4.124-3.462 0-6.822-.638-10.081-1.91a21.717 21.717 0 0 1-8.019-5.652c-2.241-2.444-3.997-5.372-5.27-8.782-1.274-3.36-1.91-7.179-1.91-11.456 0-4.278.636-8.096 1.91-11.456 1.273-3.411 3.029-6.339 5.27-8.783a21.717 21.717 0 0 1 8.019-5.652 26.167 26.167 0 0 1 10.081-1.985c5.194 0 9.674 1.248 13.442 3.742 3.818 2.546 6.797 6.059 8.936 10.539l-12.526 3.284zm37.883 21.767c2.139 2.75 5.118 4.124 8.936 4.124 3.819 0 6.823-1.374 9.012-4.124 2.19-2.698 3.284-6.517 3.284-11.456 0-4.99-1.094-8.81-3.284-11.456-2.24-2.698-5.245-4.048-9.012-4.048-3.818 0-6.797 1.35-8.936 4.048-2.138 2.647-3.208 6.465-3.208 11.456 0 4.888 1.07 8.707 3.208 11.456zm-16.268-11.303c0-4.277.638-8.096 1.91-11.457 1.273-3.41 3.029-6.338 5.27-8.782a21.717 21.717 0 0 1 8.019-5.652 26.192 26.192 0 0 1 10.081-1.986c3.615 0 6.976.663 10.082 1.986 3.105 1.324 5.778 3.182 8.018 5.576 2.24 2.393 4.023 5.32 5.347 8.782 1.273 3.361 1.909 7.179 1.909 11.456 0 4.277-.636 8.096-1.909 11.456-1.324 3.462-3.107 6.39-5.347 8.783s-4.913 4.252-8.018 5.576c-3.158 1.272-6.518 1.91-10.082 1.91-3.462 0-6.822-.638-10.081-1.91a21.717 21.717 0 0 1-8.019-5.652c-2.241-2.444-3.997-5.372-5.27-8.783-1.272-3.36-1.91-7.178-1.91-11.456v.153zm83.631 14.74-.306-.152c1.884 0 3.64-.307 5.27-.918 1.629-.61 3.004-1.528 4.124-2.749 1.12-1.221 2.037-2.75 2.749-4.583.663-1.782.993-3.869.993-6.262 0-2.495-.33-4.634-.993-6.416-.712-1.883-1.629-3.462-2.749-4.735-1.12-1.272-2.495-2.265-4.124-2.979-1.527-.661-3.259-.992-5.194-.992h-8.248v29.786h8.478zm-1.07-41.776h-.076c3.971 0 7.56.636 10.768 1.909 3.31 1.272 6.136 3.105 8.478 5.499 2.444 2.444 4.328 5.294 5.652 8.553 1.374 3.361 2.062 7.052 2.062 11.075 0 3.972-.662 7.637-1.986 10.997-1.272 3.259-3.106 6.033-5.499 8.325-2.393 2.291-5.219 4.048-8.477 5.27-3.259 1.221-6.848 1.833-10.768 1.833h-20.392V13.311h20.238zm75.536 41.699v11.914h-36.431V13.462h35.972v11.84h-23.446v8.935h18.101v11.15h-18.101v9.623h23.905z"
                 fill="#fff"
               />
               <path
@@ -5544,7 +5579,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
+                    d="M27.319 25.368a.935.935 0 0 1-1.304 1.341l-6.256-6.012a9.797 9.797 0 0 1-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
                     fill="currentColor"
                   />
                 </svg>
@@ -5565,7 +5600,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
+                  d="M27.319 25.368a.935.935 0 0 1-1.304 1.341l-6.256-6.012a9.797 9.797 0 0 1-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
                   fill="currentColor"
                 />
               </svg>
@@ -5583,7 +5618,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               >
                 <path
                   clip-rule="evenodd"
-                  d="M7 11a1 1 0 011-1h16a1 1 0 110 2H8a1 1 0 01-1-1zm0 5a1 1 0 011-1h16a1 1 0 110 2H8a1 1 0 01-1-1zm1 4a1 1 0 100 2h16a1 1 0 100-2H8z"
+                  d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
                   fill="currentColor"
                   fill-rule="evenodd"
                 />
@@ -5626,7 +5661,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M12 6.056L8.114 2.197a.166.166 0 00-.228 0L4 6.042v6.802c0 .087.069.153.154.153l7.693.015c.08 0 .153-.069.153-.154V6.056zm1 .88l.03 6.605c0 .254-.057.459-.317.459H3.5a.464.464 0 01-.47-.459L3 6.937l-1.208.993a.474.474 0 01-.662-.016.455.455 0 01.014-.65l6.519-6.132a.498.498 0 01.674 0l6.519 6.131a.455.455 0 01.014.651.472.472 0 01-.662.016L13 6.937z"
+                        d="M12 6.056 8.114 2.197a.166.166 0 0 0-.228 0L4 6.042v6.802c0 .087.069.153.154.153l7.693.015c.08 0 .153-.069.153-.154V6.056zm1 .88.03 6.605c0 .254-.057.459-.317.459H3.5a.464.464 0 0 1-.47-.459L3 6.937l-1.208.993a.474.474 0 0 1-.662-.016.455.455 0 0 1 .014-.65l6.519-6.132a.498.498 0 0 1 .674 0l6.519 6.131a.455.455 0 0 1 .014.651.472.472 0 0 1-.662.016L13 6.937z"
                         fill="currentColor"
                       />
                     </svg>
@@ -5644,7 +5679,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M11.37 7.37L5.296.26A.708.708 0 004.76 0a.708.708 0 00-.537.26A.973.973 0 004 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 00-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 00.537-.26l6.072-7.11a.91.91 0 00.165-.29 1.021 1.021 0 000-.68.91.91 0 00-.165-.29z"
+                      d="M11.37 7.37 5.296.26A.708.708 0 0 0 4.76 0a.708.708 0 0 0-.537.26A.973.973 0 0 0 4 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 0 0-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 0 0 .537-.26l6.072-7.11a.91.91 0 0 0 .165-.29 1.021 1.021 0 0 0 0-.68.91.91 0 0 0-.165-.29z"
                       fill="currentColor"
                     />
                   </svg>
@@ -5667,7 +5702,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M11.37 7.37L5.296.26A.708.708 0 004.76 0a.708.708 0 00-.537.26A.973.973 0 004 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 00-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 00.537-.26l6.072-7.11a.91.91 0 00.165-.29 1.021 1.021 0 000-.68.91.91 0 00-.165-.29z"
+                      d="M11.37 7.37 5.296.26A.708.708 0 0 0 4.76 0a.708.708 0 0 0-.537.26A.973.973 0 0 0 4 .89c0 .236.08.462.223.63L9.759 8l-5.536 6.48a.972.972 0 0 0-.223.63c0 .236.08.463.223.63.142.166.335.26.537.26a.709.709 0 0 0 .537-.26l6.072-7.11a.91.91 0 0 0 .165-.29 1.021 1.021 0 0 0 0-.68.91.91 0 0 0-.165-.29z"
                       fill="currentColor"
                     />
                   </svg>
@@ -5720,7 +5755,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
+                              d="M11.7 1H9.6a3.5 3.5 0 0 0-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 0 1 .7-.7h2.1V1z"
                               fill="currentColor"
                             />
                           </svg>
@@ -5742,11 +5777,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
+                              d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0 0 13.536 3z"
                               fill="currentColor"
                             />
                             <path
-                              d="M14.93 4.75L8.353 8.726a.75.75 0 01-.776 0L1 4.75v6.666c0 .66.627 1.202 1.393 1.202h11.144c.766 0 1.393-.541 1.393-1.202V4.75z"
+                              d="M14.93 4.75 8.353 8.726a.75.75 0 0 1-.776 0L1 4.75v6.666c0 .66.627 1.202 1.393 1.202h11.144c.766 0 1.393-.541 1.393-1.202V4.75z"
                               fill="currentColor"
                             />
                           </svg>
@@ -5767,7 +5802,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
+                              d="M10.753 5.125a4.21 4.21 0 0 1 2.955 1.208 4.098 4.098 0 0 1 1.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 0 0-1.97 0 1.366 1.366 0 0 0-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 0 1 2.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
                               fill="currentColor"
                             />
                           </svg>
@@ -5798,7 +5833,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                                 stroke-linejoin="round"
                               />
                               <path
-                                d="M5.727 9.057l4.553 2.786m-.006-7.687L5.727 6.942"
+                                d="m5.727 9.057 4.553 2.786m-.006-7.687L5.727 6.942"
                                 stroke="currentColor"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -5829,16 +5864,20 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </header>
                   <div
                     class="c49"
-                  />
+                  >
+                    <p
+                      class="c50"
+                    />
+                  </div>
                 </div>
                 <div
-                  class="c50"
+                  class="c51"
                 >
                   <div
-                    class="c51"
+                    class="c52"
                   >
                     <div
-                      class="c52"
+                      class="c53"
                     >
                       <svg
                         aria-hidden="true"
@@ -5848,13 +5887,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       >
                         <path
                           clip-rule="evenodd"
-                          d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                          d="M11.938 16.5a3.548 3.548 0 0 1 3.562-3.563 3.548 3.548 0 0 1 3.563 3.563 3.548 3.548 0 0 1-3.563 3.563 3.548 3.548 0 0 1-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
                           fill="currentColor"
                           fill-rule="evenodd"
                         />
                         <path
                           clip-rule="evenodd"
-                          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
                           fill="currentColor"
                           fill-rule="evenodd"
                         />
@@ -5862,13 +5901,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     </div>
                   </div>
                   <div
-                    class="c53 c54"
+                    class="c54 c55"
                   >
                     <div
-                      class="c55"
+                      class="c56"
                     >
                       <div
-                        class="c56"
+                        class="c57"
                       >
                         <svg
                           aria-hidden="true"
@@ -5878,12 +5917,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         >
                           <path
                             clip-rule="evenodd"
-                            d="M17 2L6 13v2c0 1 .398 1 1.076 1h9.693C18.554 16 20 14.657 20 13V4h19a1 1 0 011 1v27h2V5a3 3 0 00-3-3H17zm-.23 12H8L18 4v9c0 .552-.636 1-1.23 1z"
+                            d="M17 2 6 13v2c0 1 .398 1 1.076 1h9.693C18.554 16 20 14.657 20 13V4h19a1 1 0 0 1 1 1v27h2V5a3 3 0 0 0-3-3H17zm-.23 12H8L18 4v9c0 .552-.636 1-1.23 1z"
                             fill="#4E6896"
                             fill-rule="evenodd"
                           />
                           <path
-                            d="M27 50v-2H9a1 1 0 01-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 003 3h18zM7 20a1 1 0 100-2 1 1 0 000 2z"
+                            d="M27 50v-2H9a1 1 0 0 1-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 0 0 3 3h18zM7 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
                             fill="#4E6896"
                           />
                           <path
@@ -5892,7 +5931,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                           />
                           <path
                             clip-rule="evenodd"
-                            d="M36.5 37.938a3.548 3.548 0 00-3.563 3.562 3.548 3.548 0 003.563 3.563 3.548 3.548 0 003.563-3.563 3.548 3.548 0 00-3.563-3.563zm0 5.062c-.84 0-1.5-.66-1.5-1.5s.66-1.5 1.5-1.5 1.5.66 1.5 1.5-.66 1.5-1.5 1.5z"
+                            d="M36.5 37.938a3.548 3.548 0 0 0-3.563 3.562 3.548 3.548 0 0 0 3.563 3.563 3.548 3.548 0 0 0 3.563-3.563 3.548 3.548 0 0 0-3.563-3.563zm0 5.062c-.84 0-1.5-.66-1.5-1.5s.66-1.5 1.5-1.5 1.5.66 1.5 1.5-.66 1.5-1.5 1.5z"
                             fill="#FF7067"
                             fill-rule="evenodd"
                           />
@@ -5905,32 +5944,36 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="c57"
+                        class="c58"
                       >
-                        <div
+                        <p
                           aria-level="2"
-                          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c58"
+                          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c59"
                           role="heading"
                         >
                           Page personnalisable
-                        </div>
-                        Le contenu de cette page peut être personnalisé en fonction de votre situation.
-                        <br />
-                        <a
-                          href="#customisation"
+                        </p>
+                        <p
+                          class="c60"
                         >
-                          Voir en bas de page
-                        </a>
-                         pour renseigner votre convention collective.
+                          Le contenu de cette page peut être personnalisé en fonction de votre situation.
+                          <br />
+                          <a
+                            href="#customisation"
+                          >
+                            Voir en bas de page
+                          </a>
+                           pour renseigner votre convention collective.
+                        </p>
                       </div>
                     </div>
                   </div>
                   <section>
                     <div
-                      class="c59"
+                      class="c61"
                     >
                       <h2
-                        class="c60"
+                        class="c62"
                       >
                         <span
                           class="c48"
@@ -5939,7 +5982,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       </h2>
                     </div>
                     <div
-                      class="c61"
+                      class="c63"
                     />
                     <div>
                       <p>
@@ -6029,35 +6072,35 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                     </div>
                   </section>
                   <div
-                    class="c62 c63"
+                    class="c64 c65"
                   >
                     <div
-                      class="c53"
+                      class="c54"
                     >
                       <div
-                        class="c64 c65"
+                        class="c66 c67"
                         id="customisation"
                       >
                         <h2
-                          class="c66"
+                          class="c68"
                         >
                           <span
-                            class="c67"
+                            class="c69"
                           />
                           Que dit votre convention collective ?
                         </h2>
                       </div>
                       <label
-                        class="c68"
+                        class="c70"
                         for="convention-search"
                       >
                         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
                       </label>
                       <span
-                        class="c69 c70"
+                        class="c71 c72"
                       >
                         <input
-                          class="c71"
+                          class="c73"
                           id="convention-search"
                           name="q"
                           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -6067,16 +6110,16 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       </span>
                       
                       <p
-                        class="c72"
+                        class="c74"
                       >
                         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
                         <span
-                          class="c73"
+                          class="c75"
                         >
                           Consultez
                            
                           <button
-                            class="c74 c75"
+                            class="c76 c77"
                             type="button"
                           >
                             notre aide
@@ -6090,9 +6133,13 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </div>
             </div>
             <div
-              class="c4 c76"
+              class="c4 c78"
             >
-              Partager ce contenu : 
+              <p
+                class="c60"
+              >
+                Partager ce contenu : 
+              </p>
               <div
                 class="c37"
               >
@@ -6112,7 +6159,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
+                        d="M11.7 1H9.6a3.5 3.5 0 0 0-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 0 1 .7-.7h2.1V1z"
                         fill="currentColor"
                       />
                     </svg>
@@ -6134,11 +6181,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
+                        d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0 0 13.536 3z"
                         fill="currentColor"
                       />
                       <path
-                        d="M14.93 4.75L8.353 8.726a.75.75 0 01-.776 0L1 4.75v6.666c0 .66.627 1.202 1.393 1.202h11.144c.766 0 1.393-.541 1.393-1.202V4.75z"
+                        d="M14.93 4.75 8.353 8.726a.75.75 0 0 1-.776 0L1 4.75v6.666c0 .66.627 1.202 1.393 1.202h11.144c.766 0 1.393-.541 1.393-1.202V4.75z"
                         fill="currentColor"
                       />
                     </svg>
@@ -6159,7 +6206,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
+                        d="M10.753 5.125a4.21 4.21 0 0 1 2.955 1.208 4.098 4.098 0 0 1 1.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 0 0-1.97 0 1.366 1.366 0 0 0-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 0 1 2.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
                         fill="currentColor"
                       />
                     </svg>
@@ -6190,7 +6237,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                           stroke-linejoin="round"
                         />
                         <path
-                          d="M5.727 9.057l4.553 2.786m-.006-7.687L5.727 6.942"
+                          d="m5.727 9.057 4.553 2.786m-.006-7.687L5.727 6.942"
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -6203,40 +6250,35 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </div>
             </div>
             <div
-              class="c62 c77"
+              class="c64 c79"
             >
               <div
                 class="c4"
               >
                 <div
-                  class="c78"
+                  class="c80"
                 >
                   <div
-                    class="c79"
+                    class="c81"
                   >
-                    <strong
-                      class="c80 c81"
+                    <h2
+                      class="c82 c83"
                     >
                       <span
-                        class="c67"
+                        class="c69"
                       />
-                      <span
-                        aria-level="2"
-                        role="heading"
-                      >
-                        Avez-vous trouvé la réponse à votre question ?
-                      </span>
-                    </strong>
+                      Avez-vous trouvé la réponse à votre question ?
+                    </h2>
                     <p
-                      class="c82"
+                      class="c84"
                     >
                       <button
-                        class="c83 c84 "
+                        class="c85 c86 "
                       >
                         Non
                       </button>
                       <button
-                        class="c83 c84 "
+                        class="c85 c86 "
                       >
                         Oui
                       </button>
@@ -6249,51 +6291,51 @@ exports[`<FicheContribution /> should render without external content 1`] = `
         </div>
       </main>
       <div
-        class="c85"
+        class="c87"
       >
         <footer
-          class="c86"
+          class="c88"
         >
           <div
-            class="c62 c87"
+            class="c64 c89"
           >
             <div
               class="c4"
             >
               <div
                 aria-level="2"
-                class="c88"
+                class="c90"
                 role="heading"
               >
                 <p
-                  class="c89"
+                  class="c91"
                 >
                   <span
-                    class="c90"
+                    class="c92"
                   />
                   Besoin de plus d’informations ?
                 </p>
               </div>
               <div
-                class="c91 c92"
+                class="c93 c94"
               >
                 <p>
                   Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
                 </p>
               </div>
               <button
-                class="c93"
+                class="c95"
               >
                 Contacter nos services en région
                 <svg
                   aria-hidden="true"
-                  class="c94"
+                  class="c96"
                   fill="none"
                   viewBox="0 0 28 15"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                    d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                     fill="currentColor"
                   />
                 </svg>
@@ -6301,27 +6343,27 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             </div>
           </div>
           <div
-            class="c62 c95"
+            class="c64 c97"
           >
             <div
-              class="c4 c96"
+              class="c4 c98"
             >
               <div
-                class="c97 "
+                class="c99 "
               >
                 <strong
                   aria-level="2"
-                  class="c98 c99"
+                  class="c100 c101"
                   role="heading"
                 >
                   Code du travail numérique
                 </strong>
                 <ul
-                  class="c100 c101"
+                  class="c102 c103"
                 >
                   <li>
                     <a
-                      class="c102"
+                      class="c104"
                       href="/droit-du-travail"
                     >
                       Le droit du travail
@@ -6329,7 +6371,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c102"
+                      class="c104"
                       href="/glossaire"
                     >
                       Glossaire
@@ -6337,7 +6379,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c102"
+                      class="c104"
                       href="/a-propos"
                     >
                       À propos
@@ -6345,7 +6387,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c102"
+                      class="c104"
                       href="/mentions-legales"
                     >
                       Mentions légales
@@ -6353,7 +6395,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c102"
+                      class="c104"
                       href="/accessibilite"
                     >
                       Accessibilité : partiellement conforme
@@ -6361,7 +6403,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c102"
+                      class="c104"
                       href="/politique-confidentialite"
                     >
                       Politique de confidentialité
@@ -6369,7 +6411,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c102"
+                      class="c104"
                       href="/stats"
                     >
                       Statistiques d’utilisation
@@ -6377,7 +6419,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c102"
+                      class="c104"
                       href="/integration"
                     >
                       Intégrer le Code du travail numérique
@@ -6386,21 +6428,21 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 </ul>
               </div>
               <div
-                class="c97 "
+                class="c99 "
               >
                 <strong
                   aria-level="2"
-                  class="c98 c99"
+                  class="c100 c101"
                   role="heading"
                 >
                   Aidez-nous à améliorer cet outil
                 </strong>
                 <ul
-                  class="c100 c101"
+                  class="c102 c103"
                 >
                   <li>
                     <button
-                      class="c74 c103"
+                      class="c76 c105"
                     >
                       Contact
                     </button>
@@ -6408,7 +6450,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   <li>
                     <a
                       aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                      class="c102"
+                      class="c104"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6419,7 +6461,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   <li>
                     <a
                       aria-label="Journal des modifications (Nouvelle fenêtre)"
-                      class="c102"
+                      class="c104"
                       href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6430,22 +6472,22 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 </ul>
               </div>
               <div
-                class="c97 "
+                class="c99 "
               >
                 <strong
                   aria-level="2"
-                  class="c98 c99"
+                  class="c100 c101"
                   role="heading"
                 >
                   En collaboration avec
                 </strong>
                 <ul
-                  class="c100 c101"
+                  class="c102 c103"
                 >
                   <li>
                     <a
                       aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                      class="c102"
+                      class="c104"
                       href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6456,7 +6498,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   <li>
                     <a
                       aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                      class="c102"
+                      class="c104"
                       href="https://fabrique.social.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6467,7 +6509,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   <li>
                     <a
                       aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                      class="c102"
+                      class="c104"
                       href="https://beta.gouv.fr/"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -6480,12 +6522,12 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             </div>
           </div>
           <ul
-            class="c104"
+            class="c106"
           >
             <li>
               <a
                 aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-                class="c102 c105"
+                class="c104 c107"
                 href="https://travail-emploi.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6494,7 +6536,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c108"
               >
                 |
               </span>
@@ -6502,7 +6544,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="service-public.fr (Nouvelle fenêtre)"
-                class="c102 c105"
+                class="c104 c107"
                 href="https://www.service-public.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6511,7 +6553,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c108"
               >
                 |
               </span>
@@ -6519,7 +6561,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-                class="c102 c105"
+                class="c104 c107"
                 href="https://www.legifrance.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6528,7 +6570,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c108"
               >
                 |
               </span>
@@ -6536,7 +6578,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="data.gouv.fr (Nouvelle fenêtre)"
-                class="c102 c105"
+                class="c104 c107"
                 href="https://www.data.gouv.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6545,7 +6587,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c108"
               >
                 |
               </span>
@@ -6553,7 +6595,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="gouvernement.fr (Nouvelle fenêtre)"
-                class="c102 c105"
+                class="c104 c107"
                 href="https://www.gouvernement.fr"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -6562,7 +6604,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               </a>
               <span
                 aria-hidden="true"
-                class="c106"
+                class="c108"
               >
                 |
               </span>
@@ -6570,7 +6612,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             <li>
               <a
                 aria-label="cnil.fr (Nouvelle fenêtre)"
-                class="c102 c105"
+                class="c104 c107"
                 href="https://www.cnil.fr/"
                 rel="noopener noreferrer"
                 target="_blank"

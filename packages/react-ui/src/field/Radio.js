@@ -5,10 +5,12 @@ import styled from "styled-components";
 import { box } from "../theme.js";
 
 export const InputRadio = ({ label, name, id, size, ...props }) => (
-  <StyledLabel htmlFor={id} size={size}>
+  <StyledDiv>
     <StyledRadio type="radio" name={name} id={id} size={size} {...props} />
-    {label}
-  </StyledLabel>
+    <StyledLabel htmlFor={id} size={size}>
+      {label}
+    </StyledLabel>
+  </StyledDiv>
 );
 
 InputRadio.propTypes = {
@@ -26,6 +28,11 @@ const StyledLabel = styled.label`
   display: flex;
   font-size: ${(props) => props.size};
   cursor: pointer;
+`;
+
+const StyledDiv = styled.div`
+  display: flex;
+  flex-direction: row;
 `;
 
 const StyledRadio = styled.input`

@@ -6,15 +6,16 @@ import { CallToActionTile } from "../CallToAction";
 
 const tileProps = {
   action: "Bonjour",
+  href: "/test",
   icon: icons.Salary,
   title: "Saluez moi",
 };
 
-describe("<Article />", () => {
+describe("<CallToActionTile />", () => {
   test("should render", () => {
     const { container } = render(
       <CallToActionTile {...tileProps}>
-        Cette tuile vous fera dire bonjour !
+        <p>Cette tuile vous fera dire bonjour !</p>
       </CallToActionTile>
     );
     expect(container).toMatchSnapshot();
