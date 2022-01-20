@@ -23,16 +23,11 @@ class Tabulator extends React.PureComponent {
         panel: (
           <ElementBuilder
             data={tab.children.filter((el) => el.name !== "Titre")}
-            headingLevel={headingLevel + 1}
+            headingLevel={headingLevel}
           />
         ),
         tab: (
-          <Heading
-            as={"h" + (headingLevel + 1)}
-            stripe="none"
-            style={{ margin: 0 }}
-            variant="none"
-          >
+          <Heading as={"h" + (headingLevel + 1)}>
             {getText(tab.children.find((child) => child.name === "Titre"))}
           </Heading>
         ),

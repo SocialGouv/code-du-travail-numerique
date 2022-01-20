@@ -4,7 +4,9 @@ import { Tab, TabList, TabPanel, Tabs as RootTabs } from "react-tabs";
 import styled from "styled-components";
 
 import { OverflowWrapper } from "../OverflowWrapper";
+import { ScreenReaderOnly } from "../ScreenReaderOnly";
 import { animations, box, breakpoints, fonts, spacings } from "../theme.js";
+import { getTextFromComponent } from "../utils/getTextFromComponent.js";
 
 export const Tabs = (props) => {
   const { data, defaultIndex, onSelect, selectedIndex } = props;
@@ -23,12 +25,13 @@ export const Tabs = (props) => {
         <StyledOverflowWrapper>
           <StyledTabList>
             {data.map(({ tab }, index) => (
-              <StyledTab key={index}>{tab}</StyledTab>
+              <StyledTab key={index}>{getTextFromComponent(tab)}</StyledTab>
             ))}
           </StyledTabList>
         </StyledOverflowWrapper>
-        {data.map(({ panel }, index) => (
+        {data.map(({ tab, panel }, index) => (
           <StyledTabPanel key={index}>
+            <ScreenReaderOnly>{tab}</ScreenReaderOnly>
             <TabPanelContent>{panel}</TabPanelContent>
           </StyledTabPanel>
         ))}
@@ -77,15 +80,6 @@ const StyledTabList = styled(TabList)`
     padding: 0;
   }
 `;
-const TabPanelContent = styled.div`
-  & > *:first-child {
-    margin-top: 0;
-  }
-
-  & > *:last-child {
-    margin-bottom: 0;
-  }
-`;
 
 const StyledTab = styled(Tab)`
   flex: 1 0 auto;
@@ -93,9 +87,6 @@ const StyledTab = styled(Tab)`
   margin-left: ${spacings.tiny};
   padding: ${spacings.small} ${spacings.base};
   color: ${({ theme }) => theme.altText};
-  > *:first-child {
-    color: ${({ theme }) => theme.altText} !important;
-  }
   font-weight: 600;
   font-size: ${fonts.sizes.headings.small};
   background-color: ${({ theme }) => theme.white};
@@ -113,9 +104,6 @@ const StyledTab = styled(Tab)`
   &[aria-selected="true"] {
     color: ${({ theme }) => theme.white};
     background-color: ${({ theme }) => theme.secondary};
-    > *:first-child {
-      color: ${({ theme }) => theme.white} !important;
-    }
   }
   @media (max-width: ${breakpoints.tablet}) {
     margin: ${spacings.tiny};
@@ -141,5 +129,14 @@ const StyledTabPanel = styled(TabPanel)`
     @media (max-width: ${breakpoints.mobile}) {
       padding: ${spacings.small};
     }
+  }
+`;
+
+const TabPanelContent = styled.div`
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
   }
 `;

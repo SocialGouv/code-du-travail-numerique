@@ -34,6 +34,19 @@ exports[`<Tabs /> renders 1`] = `
   overflow-x: auto;
 }
 
+.c7 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
+}
+
 .c0 {
   margin-bottom: 3.2rem;
 }
@@ -57,14 +70,6 @@ exports[`<Tabs /> renders 1`] = `
   list-style-type: none;
 }
 
-.c7 > *:first-child {
-  margin-top: 0;
-}
-
-.c7 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c5 {
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
@@ -85,10 +90,6 @@ exports[`<Tabs /> renders 1`] = `
   transition: opacity 250ms linear;
 }
 
-.c5 > *:first-child {
-  color: #4d73b8 !important;
-}
-
 .c5[aria-selected="false"]:hover {
   opacity: 0.7;
 }
@@ -96,10 +97,6 @@ exports[`<Tabs /> renders 1`] = `
 .c5[aria-selected="true"] {
   color: #fff;
   background-color: #7994d4;
-}
-
-.c5[aria-selected="true"] > *:first-child {
-  color: #fff !important;
 }
 
 .c6 {
@@ -111,6 +108,14 @@ exports[`<Tabs /> renders 1`] = `
   padding: 2.4rem;
   border: 1px solid #bbcadf;
   border-radius: 0.6rem;
+}
+
+.c8 > *:first-child {
+  margin-top: 0;
+}
+
+.c8 > *:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width:600px) {
@@ -217,6 +222,11 @@ exports[`<Tabs /> renders 1`] = `
     >
       <div
         class="c7"
+      >
+        Tab 1
+      </div>
+      <div
+        class="c8"
       >
         This panel can contain nodes
       </div>
