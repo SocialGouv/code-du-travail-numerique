@@ -20,23 +20,13 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   font-weight: 400;
 }
 
-.c13 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
 }
 
 .c12 {
@@ -446,8 +436,9 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   <div
     class="c10"
   >
-    <div
+    <label
       class="c11"
+      for="hasOpe-oui"
     >
       <input
         class="c12"
@@ -456,15 +447,11 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
         type="radio"
         value="true"
       />
-      <label
-        class="c13"
-        for="hasOpe-oui"
-      >
-        Oui
-      </label>
-    </div>
-    <div
+      Oui
+    </label>
+    <label
       class="c11"
+      for="hasOpe-non"
     >
       <input
         class="c12"
@@ -473,13 +460,8 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
         type="radio"
         value="false"
       />
-      <label
-        class="c13"
-        for="hasOpe-non"
-      >
-        Non
-      </label>
-    </div>
+      Non
+    </label>
   </div>
   <label
     class="c3"
@@ -494,8 +476,9 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   <div
     class="c10"
   >
-    <div
+    <label
       class="c11"
+      for="isEco-oui"
     >
       <input
         class="c12"
@@ -504,15 +487,11 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
         type="radio"
         value="true"
       />
-      <label
-        class="c13"
-        for="isEco-oui"
-      >
-        Oui
-      </label>
-    </div>
-    <div
+      Oui
+    </label>
+    <label
       class="c11"
+      for="isEco-non"
     >
       <input
         class="c12"
@@ -521,13 +500,8 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
         type="radio"
         value="false"
       />
-      <label
-        class="c13"
-        for="isEco-non"
-      >
-        Non
-      </label>
-    </div>
+      Non
+    </label>
   </div>
 </div>
 `;
@@ -552,12 +526,12 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   font-weight: 400;
 }
 
-.c15 {
+.c14 {
   position: relative;
   display: inline-block;
 }
 
-.c16 {
+.c15 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -579,15 +553,15 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   appearance: none;
 }
 
-.c16::-webkit-outer-spin-button,
-.c16::-webkit-inner-spin-button {
+.c15::-webkit-outer-spin-button,
+.c15::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c16::-webkit-calendar-picker-indicator {
+.c15::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -600,53 +574,44 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c16:invalid {
+.c15:invalid {
   border-color: #eb5757;
 }
 
-.c16::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c16::-moz-placeholder {
+.c15::-moz-placeholder {
   color: #9298af;
 }
 
-.c16:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c16::placeholder {
+.c15::placeholder {
   color: #9298af;
 }
 
-.c16:focus {
+.c15:focus {
   border-color: #7994d4;
 }
 
-.c16:focus::-webkit-input-placeholder {
+.c15:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c16:focus::-moz-placeholder {
+.c15:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c16:focus:-ms-input-placeholder {
+.c15:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c16:focus::placeholder {
+.c15:focus::placeholder {
   color: transparent;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.6rem;
-  cursor: pointer;
 }
 
 .c11 {
@@ -654,9 +619,8 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
 
 .c12 {
@@ -801,7 +765,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   cursor: pointer;
 }
 
-.c14 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -850,13 +814,13 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c14 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c15 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
@@ -1091,8 +1055,9 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   <div
     class="c10"
   >
-    <div
+    <label
       class="c11"
+      for="hasOpe-oui"
     >
       <input
         class="c12"
@@ -1101,15 +1066,11 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
         type="radio"
         value="true"
       />
-      <label
-        class="c13"
-        for="hasOpe-oui"
-      >
-        Oui
-      </label>
-    </div>
-    <div
+      Oui
+    </label>
+    <label
       class="c11"
+      for="hasOpe-non"
     >
       <input
         class="c12"
@@ -1118,13 +1079,8 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
         type="radio"
         value="false"
       />
-      <label
-        class="c13"
-        for="hasOpe-non"
-      >
-        Non
-      </label>
-    </div>
+      Non
+    </label>
   </div>
   <label
     class="c3"
@@ -1139,8 +1095,9 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   <div
     class="c10"
   >
-    <div
+    <label
       class="c11"
+      for="isEco-oui"
     >
       <input
         class="c12"
@@ -1149,15 +1106,11 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
         type="radio"
         value="true"
       />
-      <label
-        class="c13"
-        for="isEco-oui"
-      >
-        Oui
-      </label>
-    </div>
-    <div
+      Oui
+    </label>
+    <label
       class="c11"
+      for="isEco-non"
     >
       <input
         class="c12"
@@ -1166,13 +1119,8 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
         type="radio"
         value="false"
       />
-      <label
-        class="c13"
-        for="isEco-non"
-      >
-        Non
-      </label>
-    </div>
+      Non
+    </label>
   </div>
   <label
     class="c3"
@@ -1186,13 +1134,13 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
     </span>
   </label>
   <div
-    class="c14"
+    class="c13"
   >
     <span
-      class="c15"
+      class="c14"
     >
       <input
-        class="c16"
+        class="c15"
         id="1"
         name="age"
         value=""

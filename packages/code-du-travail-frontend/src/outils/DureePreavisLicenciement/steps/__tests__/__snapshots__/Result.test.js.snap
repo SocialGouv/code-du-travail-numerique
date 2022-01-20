@@ -44,7 +44,6 @@ exports[`<StepResult /> should render with O duration 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 0;
 }
 
 .c14 {
@@ -213,11 +212,11 @@ exports[`<StepResult /> should render with O duration 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
+      <span
         class="c6 c7"
       >
         Voir le détail du calcul
-      </p>
+      </span>
     </div>
     <div
       class="c8"
@@ -413,7 +412,6 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 0;
 }
 
 .c14 {
@@ -584,11 +582,11 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
+      <span
         class="c6 c7"
       >
         Voir le détail du calcul
-      </p>
+      </span>
     </div>
     <div
       class="c8"
@@ -743,7 +741,6 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 0;
 }
 
 .c14 {
@@ -912,11 +909,11 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
+      <span
         class="c6 c7"
       >
         Voir le détail du calcul
-      </p>
+      </span>
     </div>
     <div
       class="c8"
@@ -1071,7 +1068,6 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 0;
 }
 
 .c14 {
@@ -1242,11 +1238,11 @@ exports[`<StepResult /> should render with when no CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
+      <span
         class="c6 c7"
       >
         Voir le détail du calcul
-      </p>
+      </span>
     </div>
     <div
       class="c8"
@@ -1389,7 +1385,6 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 0;
 }
 
 .c14 {
@@ -1560,11 +1555,11 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
+      <span
         class="c6 c7"
       >
         Voir le détail du calcul
-      </p>
+      </span>
     </div>
     <div
       class="c8"

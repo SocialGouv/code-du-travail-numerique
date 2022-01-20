@@ -7,23 +7,13 @@ exports[`<StepCTT /> should render 1`] = `
   font-weight: 400;
 }
 
-.c5 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
 }
 
 .c4 {
@@ -121,8 +111,9 @@ exports[`<StepCTT /> should render 1`] = `
       class="c2"
       data-testid="cttFormation"
     >
-      <div
+      <label
         class="c3"
+        for="cttFormation-oui"
       >
         <input
           class="c4"
@@ -131,15 +122,11 @@ exports[`<StepCTT /> should render 1`] = `
           type="radio"
           value="true"
         />
-        <label
-          class="c5"
-          for="cttFormation-oui"
-        >
-          Oui
-        </label>
-      </div>
-      <div
+        Oui
+      </label>
+      <label
         class="c3"
+        for="cttFormation-non"
       >
         <input
           class="c4"
@@ -148,13 +135,8 @@ exports[`<StepCTT /> should render 1`] = `
           type="radio"
           value="false"
         />
-        <label
-          class="c5"
-          for="cttFormation-non"
-        >
-          Non
-        </label>
-      </div>
+        Non
+      </label>
     </div>
     <label
       class="c0"
@@ -170,8 +152,9 @@ exports[`<StepCTT /> should render 1`] = `
       class="c2"
       data-testid="ruptureContratFauteGrave"
     >
-      <div
+      <label
         class="c3"
+        for="ruptureContratFauteGrave-oui"
       >
         <input
           class="c4"
@@ -180,15 +163,11 @@ exports[`<StepCTT /> should render 1`] = `
           type="radio"
           value="true"
         />
-        <label
-          class="c5"
-          for="ruptureContratFauteGrave-oui"
-        >
-          Oui
-        </label>
-      </div>
-      <div
+        Oui
+      </label>
+      <label
         class="c3"
+        for="ruptureContratFauteGrave-non"
       >
         <input
           class="c4"
@@ -197,13 +176,8 @@ exports[`<StepCTT /> should render 1`] = `
           type="radio"
           value="false"
         />
-        <label
-          class="c5"
-          for="ruptureContratFauteGrave-non"
-        >
-          Non
-        </label>
-      </div>
+        Non
+      </label>
     </div>
     <label
       class="c0"
@@ -219,8 +193,9 @@ exports[`<StepCTT /> should render 1`] = `
       class="c2"
       data-testid="propositionCDIFinContrat"
     >
-      <div
+      <label
         class="c3"
+        for="propositionCDIFinContrat-oui"
       >
         <input
           class="c4"
@@ -229,15 +204,11 @@ exports[`<StepCTT /> should render 1`] = `
           type="radio"
           value="true"
         />
-        <label
-          class="c5"
-          for="propositionCDIFinContrat-oui"
-        >
-          Oui
-        </label>
-      </div>
-      <div
+        Oui
+      </label>
+      <label
         class="c3"
+        for="propositionCDIFinContrat-non"
       >
         <input
           class="c4"
@@ -246,13 +217,8 @@ exports[`<StepCTT /> should render 1`] = `
           type="radio"
           value="false"
         />
-        <label
-          class="c5"
-          for="propositionCDIFinContrat-non"
-        >
-          Non
-        </label>
-      </div>
+        Non
+      </label>
     </div>
     <label
       class="c0"
@@ -268,8 +234,9 @@ exports[`<StepCTT /> should render 1`] = `
       class="c2"
       data-testid="refusSouplesse"
     >
-      <div
+      <label
         class="c3"
+        for="refusSouplesse-oui"
       >
         <input
           class="c4"
@@ -278,15 +245,11 @@ exports[`<StepCTT /> should render 1`] = `
           type="radio"
           value="true"
         />
-        <label
-          class="c5"
-          for="refusSouplesse-oui"
-        >
-          Oui
-        </label>
-      </div>
-      <div
+        Oui
+      </label>
+      <label
         class="c3"
+        for="refusSouplesse-non"
       >
         <input
           class="c4"
@@ -295,13 +258,8 @@ exports[`<StepCTT /> should render 1`] = `
           type="radio"
           value="false"
         />
-        <label
-          class="c5"
-          for="refusSouplesse-non"
-        >
-          Non
-        </label>
-      </div>
+        Non
+      </label>
     </div>
     <button
       data-testid="nextBt"

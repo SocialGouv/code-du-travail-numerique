@@ -19,7 +19,6 @@ exports[`<ReferenceList /> should render 1`] = `
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
-  margin: 0;
 }
 
 .c6 {
@@ -89,11 +88,11 @@ exports[`<ReferenceList /> should render 1`] = `
             fill="currentColor"
           />
         </svg>
-        <p
+        <span
           class="c7"
         >
           Article L2323-4 du Code du travail
-        </p>
+        </span>
       </a>
     </li>
     <li>
@@ -116,11 +115,11 @@ exports[`<ReferenceList /> should render 1`] = `
             fill="currentColor"
           />
         </svg>
-        <p
+        <span
           class="c7"
         >
           Article yyy du JO
-        </p>
+        </span>
       </a>
     </li>
     <li>
@@ -143,11 +142,11 @@ exports[`<ReferenceList /> should render 1`] = `
             fill="currentColor"
           />
         </svg>
-        <p
+        <span
           class="c7"
         >
           CCN metallurgie
-        </p>
+        </span>
       </a>
     </li>
     <li>
@@ -167,11 +166,11 @@ exports[`<ReferenceList /> should render 1`] = `
             fill="currentColor"
           />
         </svg>
-        <p
+        <span
           class="c7"
         >
           Convention collective: automobile
-        </p>
+        </span>
       </a>
     </li>
     <li>
@@ -191,11 +190,11 @@ exports[`<ReferenceList /> should render 1`] = `
             fill="currentColor"
           />
         </svg>
-        <p
+        <span
           class="c7"
         >
           Article L1234-3 du Code du travail
-        </p>
+        </span>
       </a>
     </li>
   </ul>

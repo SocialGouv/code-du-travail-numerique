@@ -44,7 +44,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 0;
 }
 
 .c15 {
@@ -223,11 +222,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
+      <span
         class="c6 c7"
       >
         Voir le détail du calcul
-      </p>
+      </span>
     </div>
     <div
       class="c8"
@@ -670,7 +669,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 0;
 }
 
 .c15 {
@@ -849,11 +847,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
+      <span
         class="c6 c7"
       >
         Voir le détail du calcul
-      </p>
+      </span>
     </div>
     <div
       class="c8"
@@ -1288,7 +1286,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 0;
 }
 
 .c15 {
@@ -1467,11 +1464,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
+      <span
         class="c6 c7"
       >
         Voir le détail du calcul
-      </p>
+      </span>
     </div>
     <div
       class="c8"
@@ -1917,7 +1914,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 0;
 }
 
 .c15 {
@@ -2096,11 +2092,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
+      <span
         class="c6 c7"
       >
         Voir le détail du calcul
-      </p>
+      </span>
     </div>
     <div
       class="c8"
@@ -2535,7 +2531,6 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 0;
 }
 
 .c15 {
@@ -2714,11 +2709,11 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
+      <span
         class="c6 c7"
       >
         Voir le détail du calcul
-      </p>
+      </span>
     </div>
     <div
       class="c8"

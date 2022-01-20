@@ -44,7 +44,6 @@ exports[`<StepResult /> should render no results 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 0;
 }
 
 .c12 {
@@ -191,11 +190,11 @@ exports[`<StepResult /> should render no results 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
+      <span
         class="c4 c5"
       >
         Voir le détail du calcul
-      </p>
+      </span>
     </div>
     <div
       class="c6"
@@ -342,7 +341,6 @@ exports[`<StepResult /> should render with duration 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 0;
 }
 
 .c14 {
@@ -529,11 +527,11 @@ exports[`<StepResult /> should render with duration 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
+      <span
         class="c6 c7"
       >
         Voir le détail du calcul
-      </p>
+      </span>
     </div>
     <div
       class="c8"
@@ -669,17 +667,16 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   margin-bottom: 0;
 }
 
-.c1 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
 .c7 {
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
+}
+
+.c1 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
   margin: 0;
 }
 
@@ -855,11 +852,11 @@ exports[`<StepResult /> should render with when no CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
+      <span
         class="c7 c8"
       >
         Voir le détail du calcul
-      </p>
+      </span>
     </div>
     <div
       class="c9"
@@ -981,17 +978,16 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   margin-bottom: 0;
 }
 
-.c1 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
 .c7 {
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
+}
+
+.c1 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
   margin: 0;
 }
 
@@ -1176,11 +1172,11 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <p
+      <span
         class="c7 c8"
       >
         Voir le détail du calcul
-      </p>
+      </span>
     </div>
     <div
       class="c9"

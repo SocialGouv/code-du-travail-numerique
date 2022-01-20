@@ -26,7 +26,6 @@ exports[`<Result /> should render 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 0;
 }
 
 .c13 {
@@ -245,11 +244,11 @@ exports[`<Result /> should render 1`] = `
               points="9 18 15 12 9 6"
             />
           </svg>
-          <p
+          <span
             class="c11 c12"
           >
             Voir le détail du calcul
-          </p>
+          </span>
         </div>
         <div
           class="c13"
@@ -847,11 +846,11 @@ exports[`<Result /> should render 1`] = `
               points="9 18 15 12 9 6"
             />
           </svg>
-          <p
+          <span
             class="c11 c12"
           >
             Voir le détail du calcul
-          </p>
+          </span>
         </div>
         <div
           class="c13"
