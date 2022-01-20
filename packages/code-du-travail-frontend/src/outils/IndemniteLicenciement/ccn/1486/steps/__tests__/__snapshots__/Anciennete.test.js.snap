@@ -58,13 +58,23 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   text-align: left;
 }
 
-.c7 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .c8 {
@@ -213,9 +223,8 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   <div
     class="c6"
   >
-    <label
+    <div
       class="c7"
-      for="hasBrancheContrat-oui"
     >
       <input
         class="c8"
@@ -224,11 +233,15 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
+      <label
+        class="c9"
+        for="hasBrancheContrat-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
       class="c7"
-      for="hasBrancheContrat-non"
     >
       <input
         class="c8"
@@ -237,8 +250,13 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c9"
+        for="hasBrancheContrat-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
 </div>
 `;

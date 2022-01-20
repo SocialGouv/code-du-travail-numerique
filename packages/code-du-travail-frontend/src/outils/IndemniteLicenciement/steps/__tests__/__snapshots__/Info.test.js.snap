@@ -45,13 +45,23 @@ exports[`<StepInfo /> should render 1`] = `
   font-weight: 400;
 }
 
-.c3 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .c4 {
@@ -148,9 +158,8 @@ exports[`<StepInfo /> should render 1`] = `
     <div
       class="c2"
     >
-      <label
+      <div
         class="c3"
-        for="contrat-cdd"
       >
         <input
           class="c4"
@@ -159,11 +168,15 @@ exports[`<StepInfo /> should render 1`] = `
           type="radio"
           value="cdd"
         />
-        Contrat à durée determiné (CDD) ou contrat d’intérim
-      </label>
-      <label
+        <label
+          class="c5"
+          for="contrat-cdd"
+        >
+          Contrat à durée determiné (CDD) ou contrat d’intérim
+        </label>
+      </div>
+      <div
         class="c3"
-        for="contrat-cdi"
       >
         <input
           class="c4"
@@ -172,8 +185,13 @@ exports[`<StepInfo /> should render 1`] = `
           type="radio"
           value="cdi"
         />
-        Contrat à durée indeterminé (CDI)
-      </label>
+        <label
+          class="c5"
+          for="contrat-cdi"
+        >
+          Contrat à durée indeterminé (CDI)
+        </label>
+      </div>
     </div>
     <label
       class="c0"
@@ -188,9 +206,8 @@ exports[`<StepInfo /> should render 1`] = `
     <div
       class="c2"
     >
-      <label
+      <div
         class="c3"
-        for="fauteGrave-oui"
       >
         <input
           class="c4"
@@ -199,11 +216,15 @@ exports[`<StepInfo /> should render 1`] = `
           type="radio"
           value="true"
         />
-        Oui
-      </label>
-      <label
+        <label
+          class="c5"
+          for="fauteGrave-oui"
+        >
+          Oui
+        </label>
+      </div>
+      <div
         class="c3"
-        for="fauteGrave-non"
       >
         <input
           class="c4"
@@ -212,8 +233,13 @@ exports[`<StepInfo /> should render 1`] = `
           type="radio"
           value="false"
         />
-        Non
-      </label>
+        <label
+          class="c5"
+          for="fauteGrave-non"
+        >
+          Non
+        </label>
+      </div>
     </div>
     <label
       class="c0"
@@ -228,9 +254,8 @@ exports[`<StepInfo /> should render 1`] = `
     <div
       class="c2"
     >
-      <label
+      <div
         class="c3"
-        for="inaptitude-oui"
       >
         <input
           class="c4"
@@ -239,11 +264,15 @@ exports[`<StepInfo /> should render 1`] = `
           type="radio"
           value="true"
         />
-        Oui
-      </label>
-      <label
+        <label
+          class="c5"
+          for="inaptitude-oui"
+        >
+          Oui
+        </label>
+      </div>
+      <div
         class="c3"
-        for="inaptitude-non"
       >
         <input
           class="c4"
@@ -252,8 +281,13 @@ exports[`<StepInfo /> should render 1`] = `
           type="radio"
           value="false"
         />
-        Non
-      </label>
+        <label
+          class="c5"
+          for="inaptitude-non"
+        >
+          Non
+        </label>
+      </div>
     </div>
     <button
       data-testid="nextBt"

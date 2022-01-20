@@ -3233,6 +3233,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
+  margin: 0;
 }
 
 .c13 {
@@ -3441,11 +3442,11 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
                 fill="currentColor"
               />
             </svg>
-            <span
+            <p
               class="c14"
             >
               Article L-1243 du Code du travail
-            </span>
+            </p>
           </a>
         </li>
       </ul>
