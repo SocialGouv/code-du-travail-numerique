@@ -102,11 +102,11 @@ jobs:
             "@cdt/api",
           ]
     steps:
-      - uses: actions/cache@v2
-        name: Restore build
-        with:
-          path: ./*
-          key: ${{ github.sha }}
+#      - uses: actions/cache@v2
+#        name: Restore build
+#        with:
+#          path: ./*
+#          key: ${{ github.sha }}
       - name: Test ${{ matrix.repositories }}
         run: |
           yarn workspace ${{ matrix.repositories }} test
