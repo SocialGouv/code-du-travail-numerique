@@ -21,7 +21,7 @@ const ShowResult: React.FC<Props> = ({ publicodesContext }) => {
       : "départ";
 
   const notifications = publicodesContext.getNotifications();
-  const selectedResult = publicodesContext.execute(
+  const agreementMaximumResult = publicodesContext.execute(
     "contrat salarié . préavis de retraite collective maximum en jours"
   );
 
@@ -35,12 +35,13 @@ const ShowResult: React.FC<Props> = ({ publicodesContext }) => {
           : ""}
         &nbsp;:{" "}
         <HighlightResult>
-          {selectedResult?.value &&
-          selectedResult?.value !== publicodesContext.result.value ? (
+          {agreementMaximumResult?.value &&
+          agreementMaximumResult?.value !== publicodesContext.result.value ? (
             <>
               entre&nbsp;{publicodesContext.result.value}&nbsp;
               {publicodesContext.result.unit}&nbsp;et&nbsp;
-              {selectedResult?.value}&nbsp;{selectedResult?.unit}
+              {agreementMaximumResult?.value}&nbsp;
+              {agreementMaximumResult?.unit}
             </>
           ) : publicodesContext.result.value > 0 ? (
             <>

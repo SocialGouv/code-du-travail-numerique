@@ -17,15 +17,16 @@ type Props = {
 
 const ShowResult: React.FC<{
   result: PublicodesResult;
-  selectedResult: PublicodesResult;
-}> = ({ result, selectedResult }) => {
+  agreementMaximumResult: PublicodesResult;
+}> = ({ result, agreementMaximumResult }) => {
   if (result.value > 0) {
     return (
       <strong>
-        {selectedResult?.value && selectedResult?.value !== result.value ? (
+        {agreementMaximumResult?.value &&
+        agreementMaximumResult?.value !== result.value ? (
           <>
             entre&nbsp;{result.value}&nbsp;{result.unit}&nbsp;et&nbsp;
-            {selectedResult.value}&nbsp;{selectedResult.unit}
+            {agreementMaximumResult.value}&nbsp;{agreementMaximumResult.unit}
           </>
         ) : (
           <>
@@ -41,13 +42,18 @@ const ShowResult: React.FC<{
 const ShowResultAgreement: React.FC<{
   result: PublicodesResult | null;
   detail: Agreement | null;
-  selectedResult: PublicodesResult | null;
-}> = ({ result, detail, selectedResult }) => {
+  agreementMaximumResult: PublicodesResult | null;
+}> = ({ result, detail, agreementMaximumResult }) => {
   if (!result) {
     return <strong>convention collective non renseignée</strong>;
   }
   if (result && result.value > 0) {
-    return <ShowResult result={result} selectedResult={selectedResult} />;
+    return (
+      <ShowResult
+        result={result}
+        agreementMaximumResult={agreementMaximumResult}
+      />
+    );
   }
   if (detail?.status === AgreementStatus.Supported) {
     return <strong>pas de préavis</strong>;
@@ -201,7 +207,7 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
         Durée prévue par le code du travail (durée légale)&nbsp;:&nbsp;
         <ShowResult
           result={legalResult}
-          selectedResult={agreementMaximumResult}
+          agreementMaximumResult={agreementMaximumResult}
         />
       </Paragraph>
       <Paragraph>
@@ -210,7 +216,7 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
         <ShowResultAgreement
           result={agreementResult}
           detail={rootData.agreement}
-          selectedResult={agreementMaximumResult}
+          agreementMaximumResult={agreementMaximumResult}
         />
       </Paragraph>
       {description && <Paragraph>{description}</Paragraph>}
