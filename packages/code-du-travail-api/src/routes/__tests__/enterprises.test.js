@@ -169,7 +169,7 @@ describe("Test enterprise endpoint", () => {
                 idcc: 1090,
               },
               {
-                idcc: 2120,
+                idcc: 99999,
               },
             ],
           },
@@ -202,7 +202,7 @@ describe("Test enterprise endpoint", () => {
 
     expect(
       response.body.entreprises[0].conventions.find(
-        (agreement) => agreement.idcc === 2120
+        (agreement) => agreement.idcc === 99999
       ).slug
     ).toEqual(undefined);
   });

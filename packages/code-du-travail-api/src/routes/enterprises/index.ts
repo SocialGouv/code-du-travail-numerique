@@ -8,7 +8,7 @@ import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 import type { Agreement } from "./enterprises.elastic";
 import getAgreements from "./enterprises.elastic";
 
-const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX ?? "cdtn_test";
+const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX ?? "cdtn";
 const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
 const router = new Router({ prefix: API_BASE_URL });

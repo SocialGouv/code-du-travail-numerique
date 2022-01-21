@@ -3,6 +3,10 @@
 exports[`return item from its id 1`] = `
 Object {
   "_id": "9",
+  "_ignored": Array [
+    "text.keyword",
+    "html.keyword",
+  ],
   "_index": "cdtn_test-v1_documents",
   "_primary_term": 1,
   "_seq_no": 9,
@@ -11,7 +15,7 @@ Object {
     "breadcrumbs": Array [
       Object {
         "label": "Départ de l’entreprise",
-        "position": 7,
+        "position": 8,
         "slug": "/themes/depart-de-lentreprise",
       },
       Object {
@@ -21,7 +25,6 @@ Object {
       },
     ],
     "description": "En cas d’absence prolongée de l’entreprise sans justification valable (par exemple, un arrêt de travail), ou d’absence de reprise du travail après un arrêt de travail, il n’est pas possible pour l’emp",
-    "excludeFromSearch": false,
     "html": "<p>En cas d’absence prolongée de l’entreprise sans justification valable (par exemple, un arrêt de travail), ou d’absence de reprise du travail après un arrêt de travail, il n’est pas possible pour l’employeur de considérer le salarié comme démissionnaire. Dans ces hypothèses (souvent qualifiées d’abandon de poste), l’employeur doit demander à l’intéressé les raisons de son absence. Si le salarié ne répond pas dans un délai raisonnable, l’employeur peut engager une procédure de licenciement pour absence injustifiée Ainsi, une salariée qui, après une observation, avait quitté son travail et n’avait pas réintégré l’entreprise les jours suivants, n’a pas été considérée par la Cour de cassation comme démissionnaire.</p>",
     "id": "article101095#L-absence-prolongee-du-salarie-est-elle-une-demission",
     "isPublished": true,
