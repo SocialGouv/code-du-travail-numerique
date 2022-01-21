@@ -6,10 +6,7 @@ exports[`<StepIntro /> should render 1`] = `
     Ce simulateur est un outil qui permet d’estimer le montant de l’indemnité minimale de licenciement d’un salarié.
   </p>
   <p>
-    Cette simulation nécessite entre 5 et 10 minutes. Afin de pouvoir remplir les renseignements demandés, munissez-vous des informations relatives au licenciement (dates d’entrée et de sortie de l’entreprise, courrier de licenciement, derniers bulletins de salaire, etc.).
-  </p>
-  <p>
-    Cliquez sur commencer pour démarrer la simulation.
+    Afin de pouvoir remplir les renseignements demandés, munissez-vous des informations relatives au licenciement (dates d’entrée et de sortie de l’entreprise, courrier de licenciement, derniers bulletins de salaire, etc.).
   </p>
 </div>
 `;

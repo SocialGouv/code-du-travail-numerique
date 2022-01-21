@@ -301,12 +301,12 @@ const ToolTitle = styled.div`
 
 const ToolDuration = styled.div`
   position: relative;
-  padding-right: 20px;
+  padding-right: 45px;
 `;
 const ToolDurationLabel = styled.span`
   position: absolute;
   bottom: 3px;
-  right: 0;
+  left: 28px;
   font-size: ${fonts.sizes.tiny};
   color: ${({ theme }) => theme.paragraph};
 `;
