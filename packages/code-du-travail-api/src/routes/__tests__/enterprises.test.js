@@ -103,7 +103,7 @@ describe("Test enterprise endpoint", () => {
     );
 
     expect(response.body).toEqual(apiEnterpriseResponse.json());
-  }, 100000);
+  });
 
   test("Call should pass address if provided", async () => {
     const apiEnterpriseResponse = {
@@ -157,9 +157,9 @@ describe("Test enterprise endpoint", () => {
     expect(response.body.entreprises[0].conventions[0].slug).toEqual(
       "1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle"
     );
-  }, 100000);
+  });
 
-  test("Call retrieving agreements with highlight and no highlight from an enterprise", async () => {
+  test("Call retrieving agreements with slug and no slug from an enterprise", async () => {
     const apiEnterpriseResponse = {
       json: () => ({
         entreprises: [
@@ -203,7 +203,7 @@ describe("Test enterprise endpoint", () => {
     expect(
       response.body.entreprises[0].conventions.find(
         (agreement) => agreement.idcc === 2120
-      ).highlight
+      ).slug
     ).toEqual(undefined);
   });
 

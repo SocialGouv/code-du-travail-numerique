@@ -5,7 +5,7 @@ Object {
   "articles": Array [],
   "documents": Array [
     Object {
-      "_score": 27.688023,
+      "_score": 28.021542,
       "algo": "fulltext",
       "breadcrumbs": Array [],
       "cdtnId": "647c224c9b",
@@ -24,7 +24,7 @@ exports[`returns article results when searching article R1225-18 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 22.143171,
+      "_score": 23.197472,
       "cdtnId": "f13147ec33",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -42,7 +42,7 @@ exports[`returns search results for demission from elastic 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 2.94797,
+      "_score": 3.1069193,
       "cdtnId": "f13147ec33",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -51,7 +51,7 @@ Object {
       "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
     },
     Object {
-      "_score": 2.8290424,
+      "_score": 2.9813397,
       "cdtnId": "ea03713a82",
       "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
       "slug": "l1237-1",
@@ -62,12 +62,12 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 37.678734,
-      "algo": "both",
+      "_score": 38.10901,
+      "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l’entreprise",
-          "position": 8,
+          "position": 7,
           "slug": "/themes/depart-de-lentreprise",
         },
         Object {
@@ -84,13 +84,13 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
-      "_score": 1.3151006,
+      "_score": 37.944126,
       "action": "Calculer",
-      "algo": "both",
+      "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l’entreprise",
-          "position": 8,
+          "position": 7,
           "slug": "/themes/depart-de-lentreprise",
         },
         Object {
@@ -106,34 +106,32 @@ Object {
       "title": "Préavis de démission",
     },
     Object {
-      "_score": 1.2952552,
-      "action": "Estimer",
-      "algo": "semantic",
+      "_score": 37.51144,
+      "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l’entreprise",
-          "position": 8,
+          "position": 7,
           "slug": "/themes/depart-de-lentreprise",
         },
         Object {
-          "label": "Licenciement : droits des salariés et procédures",
-          "position": 4,
-          "slug": "/themes/licenciement-droits-des-salaries-et-procedures",
+          "label": "Démission",
+          "position": 1,
+          "slug": "/themes/demission",
         },
       ],
-      "cdtnId": "d8a3605790",
-      "description": "Estimez simplement le montant de l’indemnité de licenciement",
-      "slug": "indemnite-licenciement",
-      "source": "outils",
-      "title": "Indemnité de licenciement",
+      "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, p",
+      "slug": "la-demission#Comment-presenter-une-demission",
+      "source": "fiches_ministere_travail",
+      "title": "La démission : comment présenter une démission ?",
     },
     Object {
-      "_score": 36.361824,
-      "algo": "both",
+      "_score": 36.73686,
+      "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l’entreprise",
-          "position": 8,
+          "position": 7,
           "slug": "/themes/depart-de-lentreprise",
         },
         Object {
@@ -150,13 +148,13 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
     Object {
-      "_score": 35.71634,
+      "_score": 35.933243,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l’entreprise",
-          "position": 8,
+          "position": 7,
           "slug": "/themes/depart-de-lentreprise",
         },
       ],
@@ -167,12 +165,32 @@ Object {
       "title": "Heures pour recherche d’emploi",
     },
     Object {
-      "_score": 31.628939,
-      "algo": "both",
+      "_score": 32.89065,
+      "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l’entreprise",
-          "position": 8,
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "position": 1,
+          "slug": "/themes/demission",
+        },
+      ],
+      "description": "En cas d’absence prolongée de l’entreprise sans justification valable (par exemple, un arrêt de travail), ou d’absence de reprise du travail après un arrêt de travail, il n’est pas possible pour l’emp",
+      "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
+      "source": "fiches_ministere_travail",
+      "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
+    },
+    Object {
+      "_score": 31.71524,
+      "algo": "fulltext",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
           "slug": "/themes/depart-de-lentreprise",
         },
         Object {
@@ -188,85 +206,13 @@ Object {
       "title": "Certificat de travail",
       "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
     },
-    Object {
-      "_score": 1.2357258,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Embauche et contrat de travail",
-          "position": 1,
-          "slug": "/themes/embauche-et-contrat-de-travail",
-        },
-        Object {
-          "label": "Embauche",
-          "position": 1,
-          "slug": "/themes/embauche",
-        },
-        Object {
-          "label": "Période d’essai",
-          "position": 3,
-          "slug": "/themes/periode-dessai",
-        },
-      ],
-      "cdtnId": "772cb955ce",
-      "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l’employeur. L’employeur doit dans ce cas informer le salarié et respecter un délai de prévenance.",
-      "slug": "rupture-de-periode-dessai-a-linitiative-de-lemployeur",
-      "source": "modeles_de_courriers",
-      "title": "Rupture de période d’essai à l’initiative de l’employeur",
-    },
-    Object {
-      "_score": 1.1560779,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Rupture conventionnelle",
-          "position": 3,
-          "slug": "/themes/rupture-conventionnelle",
-        },
-        Object {
-          "label": "Rupture conventionnelle individuelle",
-          "position": 1,
-          "slug": "/themes/rupture-conventionnelle-individuelle",
-        },
-      ],
-      "cdtnId": "a712ecb976",
-      "description": "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
-      "slug": "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
-      "source": "modeles_de_courriers",
-      "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
-    },
-    Object {
-      "_score": 1.1512249,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Documents à remettre au salarié",
-          "position": 0,
-          "slug": "/themes/documents-a-remettre-au-salarie",
-        },
-      ],
-      "cdtnId": "19837df114",
-      "description": "Le certificat de travail est un document obligatoire remis par l’employeur au salarié à la date de fin du contrat de travail.",
-      "slug": "certificat-de-travail",
-      "source": "modeles_de_courriers",
-      "title": "Certificat de travail",
-    },
   ],
   "themes": Array [
     Object {
-      "_score": 1.912857,
+      "_score": 1.9994254,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
+      "icon": null,
       "slug": "demission",
       "source": "themes",
       "title": "Démission",
@@ -286,6 +232,7 @@ Object {
       "slug": "l1231-1",
       "source": "code_du_travail",
       "title": "L1231-1",
+      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000019071194&cidTexte=LEGITEXT000006072050",
     },
     Object {
       "algo": "pre-qualified",
@@ -295,6 +242,7 @@ Object {
       "slug": "l1237-1",
       "source": "code_du_travail",
       "title": "L1237-1",
+      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901174&cidTexte=LEGITEXT000006072050",
     },
     Object {
       "algo": "pre-qualified",
@@ -304,9 +252,10 @@ Object {
       "slug": "l1237-2",
       "source": "code_du_travail",
       "title": "L1237-2",
+      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901175&cidTexte=LEGITEXT000006072050",
     },
     Object {
-      "_score": 2.94797,
+      "_score": 3.1069193,
       "cdtnId": "f13147ec33",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -321,420 +270,7 @@ Object {
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Démission",
-          "position": 1,
-          "slug": "/themes/demission",
-        },
-      ],
-      "cdtnId": "8c42435f9a",
-      "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
-      "slug": "demission-dun-salarie",
-      "source": "fiches_service_public",
-      "title": "Démission d'un salarié",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Démission",
-          "position": 1,
-          "slug": "/themes/demission",
-        },
-      ],
-      "cdtnId": "5d4a0ee541",
-      "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
-      "slug": "la-demission",
-      "source": "page_fiche_ministere_travail",
-      "title": "La démission",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Démission",
-          "position": 1,
-          "slug": "/themes/demission",
-        },
-      ],
-      "cdtnId": "4e7e702fb5",
-      "description": "Le salarié qui démissionne n'a pas droit aux allocations chômage (ARE), sauf cas particuliers (démission légitime, reliquat de droits...).",
-      "slug": "un-salarie-peut-il-percevoir-lallocation-chomage-en-cas-de-demission",
-      "source": "fiches_service_public",
-      "title": "Un salarié peut-il percevoir l'allocation chômage en cas de démission ?",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Congés et repos",
-          "position": 4,
-          "slug": "/themes/conges-et-repos",
-        },
-        Object {
-          "label": "Congés",
-          "position": 1,
-          "slug": "/themes/conges",
-        },
-        Object {
-          "label": "Congés payés",
-          "position": 0,
-          "slug": "/themes/conges-payes",
-        },
-      ],
-      "cdtnId": "52562fc16f",
-      "description": "Le salarié peut démissionner pendant ses congés payés, mais le préavis commence à courir à l'issue de ses congés (sauf accord avec l'employeur).",
-      "slug": "peut-on-demissionner-pendant-ses-conges-payes",
-      "source": "fiches_service_public",
-      "title": "Peut-on démissionner pendant ses congés payés ?",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Démission",
-          "position": 1,
-          "slug": "/themes/demission",
-        },
-      ],
-      "cdtnId": "6b17d70cd9",
-      "description": "Le salarié peut démissionner pendant un arrêt maladie, sauf s'il est en période d'essai.",
-      "slug": "peut-on-demissionner-pendant-un-arret-maladie",
-      "source": "fiches_service_public",
-      "title": "Peut-on démissionner pendant un arrêt maladie ?",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Démission",
-          "position": 1,
-          "slug": "/themes/demission",
-        },
-      ],
-      "cdtnId": "184ebe1ef6",
-      "description": "Oui. Toute salariée peut démissionner pendant un congé maternité, dans les conditions habituelles prévues en matière de démission.",
-      "slug": "peut-on-demissionner-pendant-un-conge-maternite",
-      "source": "fiches_service_public",
-      "title": "Peut-on démissionner pendant un congé maternité ?",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Démission",
-          "position": 1,
-          "slug": "/themes/demission",
-        },
-      ],
-      "cdtnId": "503c412884",
-      "description": "Le salarié peut démissionner pendant son congé parental, dans le respect de la procédure habituelle prévue en matière de démission.",
-      "slug": "peut-on-demissionner-pendant-un-conge-parental",
-      "source": "fiches_service_public",
-      "title": "Peut-on démissionner pendant un congé parental ?",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Démission",
-          "position": 1,
-          "slug": "/themes/demission",
-        },
-      ],
-      "cdtnId": "4e0dedaa2e",
-      "description": "Le salarié d'un particulier employeur qui souhaite démissionner doit informer son employeur et respecter un préavis. Il peut bénéficier d'une indemnité compensatrice de préavis et éventuellement d'une indemnité compensatrice de congés payés. L'employeur doit lui remettre des documents de fin de contrat.",
-      "slug": "demission-du-salarie-a-domicile-employe-par-un-particulier",
-      "source": "fiches_service_public",
-      "title": "Démission du salarié à domicile employé par un particulier",
-    },
-    Object {
-      "algo": "pre-qualified",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Démission",
-          "position": 1,
-          "slug": "/themes/demission",
-        },
-      ],
-      "cdtnId": "38474d168c",
-      "description": "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis. À la fin de celui-ci, l'employeur remet les documents de fin de contrat.",
-      "slug": "demission-dune-assistante-maternelle",
-      "source": "fiches_service_public",
-      "title": "Démission d'une assistante maternelle",
-    },
-    Object {
-      "_score": 1.3151006,
-      "action": "Calculer",
-      "algo": "both",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Démission",
-          "position": 1,
-          "slug": "/themes/demission",
-        },
-      ],
-      "cdtnId": "1eea193273",
-      "description": "Calculez la durée de préavis à respecter en cas de démission",
-      "slug": "preavis-demission",
-      "source": "outils",
-      "title": "Préavis de démission",
-    },
-    Object {
-      "_score": 1.2952552,
-      "action": "Estimer",
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Licenciement : droits des salariés et procédures",
-          "position": 4,
-          "slug": "/themes/licenciement-droits-des-salaries-et-procedures",
-        },
-      ],
-      "cdtnId": "d8a3605790",
-      "description": "Estimez simplement le montant de l’indemnité de licenciement",
-      "slug": "indemnite-licenciement",
-      "source": "outils",
-      "title": "Indemnité de licenciement",
-    },
-    Object {
-      "_score": 35.71634,
-      "action": "Calculer",
-      "algo": "fulltext",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-      ],
-      "cdtnId": "d8fca710c5",
-      "description": "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
-      "slug": "heures-recherche-emploi",
-      "source": "outils",
-      "title": "Heures pour recherche d’emploi",
-    },
-    Object {
-      "_score": 31.628939,
-      "algo": "both",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Documents à remettre au salarié",
-          "position": 0,
-          "slug": "/themes/documents-a-remettre-au-salarie",
-        },
-      ],
-      "cdtnId": "59a4d4173c",
-      "description": "Le certificat de travail est un document remis par l'employeur au salarié à la date de fin du contrat de travail. Il est remis au salarié pour tout type de contrat de travail (CDI, CDD...), quel que soit le motif de la rupture (démission, licenciement...).",
-      "slug": "certificat-de-travail",
-      "source": "fiches_service_public",
-      "title": "Certificat de travail",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
-    },
-    Object {
-      "_score": 1.2357258,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Embauche et contrat de travail",
-          "position": 1,
-          "slug": "/themes/embauche-et-contrat-de-travail",
-        },
-        Object {
-          "label": "Embauche",
-          "position": 1,
-          "slug": "/themes/embauche",
-        },
-        Object {
-          "label": "Période d’essai",
-          "position": 3,
-          "slug": "/themes/periode-dessai",
-        },
-      ],
-      "cdtnId": "772cb955ce",
-      "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l’employeur. L’employeur doit dans ce cas informer le salarié et respecter un délai de prévenance.",
-      "slug": "rupture-de-periode-dessai-a-linitiative-de-lemployeur",
-      "source": "modeles_de_courriers",
-      "title": "Rupture de période d’essai à l’initiative de l’employeur",
-    },
-    Object {
-      "_score": 1.1560779,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Rupture conventionnelle",
-          "position": 3,
-          "slug": "/themes/rupture-conventionnelle",
-        },
-        Object {
-          "label": "Rupture conventionnelle individuelle",
-          "position": 1,
-          "slug": "/themes/rupture-conventionnelle-individuelle",
-        },
-      ],
-      "cdtnId": "a712ecb976",
-      "description": "La rupture conventionnelle individuelle est une modalité de rupture spécifique du CDI. Elle nécessite le consentement de l’employeur et du salarié, et son homologation par l’administration. La rupture ouvre droit à une indemnité de rupture conventionnelle. Ce modèle permet d’initier la procédure de rupture par l’invitation à un premier entretien.",
-      "slug": "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
-      "source": "modeles_de_courriers",
-      "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
-    },
-    Object {
-      "_score": 1.1512249,
-      "algo": "semantic",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Documents à remettre au salarié",
-          "position": 0,
-          "slug": "/themes/documents-a-remettre-au-salarie",
-        },
-      ],
-      "cdtnId": "19837df114",
-      "description": "Le certificat de travail est un document obligatoire remis par l’employeur au salarié à la date de fin du contrat de travail.",
-      "slug": "certificat-de-travail",
-      "source": "modeles_de_courriers",
-      "title": "Certificat de travail",
-    },
-  ],
-  "themes": Array [
-    Object {
-      "_score": 1.912857,
-      "algo": "fulltext",
-      "cdtnId": "a9ccf1d613",
-      "slug": "demission",
-      "source": "themes",
-      "title": "Démission",
-    },
-  ],
-}
-`;
-
-exports[`returns unique documents from prequalified data (same slug but different source) 1`] = `
-Object {
-  "articles": Array [
-    Object {
-      "_score": 1.173369,
-      "cdtnId": "ea03713a82",
-      "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
-      "slug": "l1237-1",
-      "source": "code_du_travail",
-      "title": "L1237-1",
-      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901174&cidTexte=LEGITEXT000006072050",
-    },
-  ],
-  "documents": Array [
-    Object {
-      "_score": 56.320465,
-      "algo": "fulltext",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Documents à remettre au salarié",
-          "position": 0,
-          "slug": "/themes/documents-a-remettre-au-salarie",
-        },
-      ],
-      "cdtnId": "19837df114",
-      "description": "Le certificat de travail est un document obligatoire remis par l’employeur au salarié à la date de fin du contrat de travail.",
-      "slug": "certificat-de-travail",
-      "source": "modeles_de_courriers",
-      "title": "Certificat de travail",
-    },
-    Object {
-      "_score": 54.965897,
-      "algo": "fulltext",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
-          "slug": "/themes/depart-de-lentreprise",
-        },
-        Object {
-          "label": "Documents à remettre au salarié",
-          "position": 0,
-          "slug": "/themes/documents-a-remettre-au-salarie",
-        },
-      ],
-      "cdtnId": "59a4d4173c",
-      "description": "Le certificat de travail est un document remis par l'employeur au salarié à la date de fin du contrat de travail. Il est remis au salarié pour tout type de contrat de travail (CDI, CDD...), quel que soit le motif de la rupture (démission, licenciement...).",
-      "slug": "certificat-de-travail",
-      "source": "fiches_service_public",
-      "title": "Certificat de travail",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
-    },
-    Object {
-      "_score": 33.820084,
-      "algo": "fulltext",
-      "breadcrumbs": Array [
-        Object {
-          "label": "Départ de l’entreprise",
-          "position": 8,
+          "position": 7,
           "slug": "/themes/depart-de-lentreprise",
         },
         Object {
@@ -751,12 +287,380 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
-      "_score": 33.43704,
+      "algo": "pre-qualified",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "position": 1,
+          "slug": "/themes/demission",
+        },
+      ],
+      "cdtnId": "5d4a0ee541",
+      "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
+      "slug": "la-demission",
+      "source": "page_fiche_ministere_travail",
+      "title": "La démission",
+      "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission",
+    },
+    Object {
+      "algo": "pre-qualified",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "position": 1,
+          "slug": "/themes/demission",
+        },
+      ],
+      "cdtnId": "4e7e702fb5",
+      "description": "Le salarié qui démissionne n'a pas droit aux allocations chômage (ARE), sauf cas particuliers (démission légitime, reliquat de droits...).",
+      "slug": "un-salarie-peut-il-toucher-lallocation-chomage-en-cas-de-demission",
+      "source": "fiches_service_public",
+      "title": "Un salarié peut-il toucher l'allocation chômage en cas de démission ?",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F89",
+    },
+    Object {
+      "algo": "pre-qualified",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Congés et repos",
+          "position": 3,
+          "slug": "/themes/conges-et-repos",
+        },
+        Object {
+          "label": "Congés",
+          "position": 1,
+          "slug": "/themes/conges",
+        },
+        Object {
+          "label": "Congés payés",
+          "position": 0,
+          "slug": "/themes/conges-payes",
+        },
+      ],
+      "cdtnId": "52562fc16f",
+      "description": "Vous pouvez démissionner pendant vos congés payés. Votre préavis débute à la fin de vos congés (sauf accord avec de votre employeur).",
+      "slug": "un-salarie-peut-il-demissionner-pendant-ses-conges-payes",
+      "source": "fiches_service_public",
+      "title": "Un salarié peut-il démissionner pendant ses congés payés ?",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F12598",
+    },
+    Object {
+      "algo": "pre-qualified",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "position": 1,
+          "slug": "/themes/demission",
+        },
+      ],
+      "cdtnId": "6b17d70cd9",
+      "description": "Vous pouvez démissionner pendant votre arrêt maladie ou votre accident du travail, sauf si vous êtes en période d'essai.",
+      "slug": "un-salarie-du-secteur-prive-peut-il-demissionner-pendant-son-arret-de-travail",
+      "source": "fiches_service_public",
+      "title": "Un salarié du secteur privé peut-il démissionner pendant son arrêt de travail ?",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F31679",
+    },
+    Object {
+      "algo": "pre-qualified",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "position": 1,
+          "slug": "/themes/demission",
+        },
+      ],
+      "cdtnId": "184ebe1ef6",
+      "description": "Oui. Toute salariée peut démissionner pendant un congé maternité, dans les conditions habituelles prévues en matière de démission.",
+      "slug": "peut-on-demissionner-pendant-un-conge-maternite",
+      "source": "fiches_service_public",
+      "title": "Peut-on démissionner pendant un congé maternité ?",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F1730",
+    },
+    Object {
+      "algo": "pre-qualified",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "position": 1,
+          "slug": "/themes/demission",
+        },
+      ],
+      "cdtnId": "503c412884",
+      "description": "Vous pouvez démissionner pendant votre congé parental en respectant la procédure habituelle en matière de démission.",
+      "slug": "un-salarie-du-secteur-prive-peut-il-demissionner-pendant-son-conge-parental",
+      "source": "fiches_service_public",
+      "title": "Un salarié du secteur privé peut-il démissionner pendant son congé parental ?",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F540",
+    },
+    Object {
+      "algo": "pre-qualified",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "position": 1,
+          "slug": "/themes/demission",
+        },
+      ],
+      "cdtnId": "4e0dedaa2e",
+      "description": "Le salarié d'un particulier employeur qui souhaite démissionner doit informer son employeur et respecter un préavis. Il peut bénéficier d'une indemnité compensatrice de préavis et éventuellement d'une indemnité compensatrice de congés payés. L'employeur doit lui remettre des documents de fin de contrat.",
+      "slug": "demission-du-salarie-a-domicile-employe-par-un-particulier",
+      "source": "fiches_service_public",
+      "title": "Démission du salarié à domicile employé par un particulier",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F32431",
+    },
+    Object {
+      "algo": "pre-qualified",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "position": 1,
+          "slug": "/themes/demission",
+        },
+      ],
+      "cdtnId": "38474d168c",
+      "description": "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis. À la fin de celui-ci, l'employeur remet les documents de fin de contrat.",
+      "slug": "demission-dune-assistante-maternelle",
+      "source": "fiches_service_public",
+      "title": "Démission d'une assistante maternelle",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
+    },
+    Object {
+      "_score": 37.944126,
+      "action": "Calculer",
+      "algo": "fulltext",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "position": 1,
+          "slug": "/themes/demission",
+        },
+      ],
+      "cdtnId": "1eea193273",
+      "description": "Calculez la durée de préavis à respecter en cas de démission",
+      "slug": "preavis-demission",
+      "source": "outils",
+      "title": "Préavis de démission",
+    },
+    Object {
+      "_score": 37.51144,
+      "algo": "fulltext",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "position": 1,
+          "slug": "/themes/demission",
+        },
+      ],
+      "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, p",
+      "slug": "la-demission#Comment-presenter-une-demission",
+      "source": "fiches_ministere_travail",
+      "title": "La démission : comment présenter une démission ?",
+    },
+    Object {
+      "_score": 35.933243,
+      "action": "Calculer",
+      "algo": "fulltext",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+      ],
+      "cdtnId": "d8fca710c5",
+      "description": "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
+      "slug": "heures-recherche-emploi",
+      "source": "outils",
+      "title": "Heures pour recherche d’emploi",
+    },
+    Object {
+      "_score": 32.89065,
+      "algo": "fulltext",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "position": 1,
+          "slug": "/themes/demission",
+        },
+      ],
+      "description": "En cas d’absence prolongée de l’entreprise sans justification valable (par exemple, un arrêt de travail), ou d’absence de reprise du travail après un arrêt de travail, il n’est pas possible pour l’emp",
+      "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
+      "source": "fiches_ministere_travail",
+      "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
+    },
+    Object {
+      "_score": 31.71524,
+      "algo": "fulltext",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Documents à remettre au salarié",
+          "position": 0,
+          "slug": "/themes/documents-a-remettre-au-salarie",
+        },
+      ],
+      "cdtnId": "59a4d4173c",
+      "description": "Le certificat de travail est un document remis par l'employeur au salarié à la date de fin du contrat de travail. Il est remis au salarié pour tout type de contrat de travail (CDI, CDD...), quel que soit le motif de la rupture (démission, licenciement...).",
+      "slug": "certificat-de-travail",
+      "source": "fiches_service_public",
+      "title": "Certificat de travail",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
+    },
+  ],
+  "themes": Array [
+    Object {
+      "_score": 1.9994254,
+      "algo": "fulltext",
+      "cdtnId": "a9ccf1d613",
+      "icon": null,
+      "slug": "demission",
+      "source": "themes",
+      "title": "Démission",
+    },
+  ],
+}
+`;
+
+exports[`returns unique documents from prequalified data (same slug but different source) 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "_score": 1.2528877,
+      "cdtnId": "ea03713a82",
+      "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
+      "slug": "l1237-1",
+      "source": "code_du_travail",
+      "title": "L1237-1",
+      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006901174&cidTexte=LEGITEXT000006072050",
+    },
+  ],
+  "documents": Array [
+    Object {
+      "_score": 57.52645,
+      "algo": "fulltext",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Documents à remettre au salarié",
+          "position": 0,
+          "slug": "/themes/documents-a-remettre-au-salarie",
+        },
+      ],
+      "cdtnId": "19837df114",
+      "description": "Le certificat de travail est un document obligatoire remis par l’employeur au salarié à la date de fin du contrat de travail.",
+      "slug": "certificat-de-travail",
+      "source": "modeles_de_courriers",
+      "title": "Certificat de travail",
+    },
+    Object {
+      "_score": 56.620514,
+      "algo": "fulltext",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Documents à remettre au salarié",
+          "position": 0,
+          "slug": "/themes/documents-a-remettre-au-salarie",
+        },
+      ],
+      "cdtnId": "59a4d4173c",
+      "description": "Le certificat de travail est un document remis par l'employeur au salarié à la date de fin du contrat de travail. Il est remis au salarié pour tout type de contrat de travail (CDI, CDD...), quel que soit le motif de la rupture (démission, licenciement...).",
+      "slug": "certificat-de-travail",
+      "source": "fiches_service_public",
+      "title": "Certificat de travail",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
+    },
+    Object {
+      "_score": 33.789093,
+      "algo": "fulltext",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "position": 1,
+          "slug": "/themes/demission",
+        },
+      ],
+      "cdtnId": "8c42435f9a",
+      "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
+      "slug": "demission-dun-salarie",
+      "source": "fiches_service_public",
+      "title": "Démission d'un salarié",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
+    },
+    Object {
+      "_score": 33.545944,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "label": "Embauche et contrat de travail",
-          "position": 1,
+          "position": 0,
           "slug": "/themes/embauche-et-contrat-de-travail",
         },
         Object {
@@ -777,13 +681,13 @@ Object {
       "title": "Rupture de période d’essai à l’initiative de l’employeur",
     },
     Object {
-      "_score": 33.29029,
+      "_score": 33.390835,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l’entreprise",
-          "position": 8,
+          "position": 7,
           "slug": "/themes/depart-de-lentreprise",
         },
         Object {
@@ -799,12 +703,12 @@ Object {
       "title": "Préavis de démission",
     },
     Object {
-      "_score": 33.25407,
+      "_score": 33.35202,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l’entreprise",
-          "position": 8,
+          "position": 7,
           "slug": "/themes/depart-de-lentreprise",
         },
         Object {
@@ -825,12 +729,12 @@ Object {
       "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
     },
     Object {
-      "_score": 32.182713,
+      "_score": 32.296238,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
           "label": "Départ de l’entreprise",
-          "position": 8,
+          "position": 7,
           "slug": "/themes/depart-de-lentreprise",
         },
         Object {
@@ -846,10 +750,50 @@ Object {
       "title": "Démission d'une assistante maternelle",
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
+    Object {
+      "_score": 31.37512,
+      "algo": "fulltext",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "position": 1,
+          "slug": "/themes/demission",
+        },
+      ],
+      "description": "En cas d’absence prolongée de l’entreprise sans justification valable (par exemple, un arrêt de travail), ou d’absence de reprise du travail après un arrêt de travail, il n’est pas possible pour l’emp",
+      "slug": "la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
+      "source": "fiches_ministere_travail",
+      "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
+    },
+    Object {
+      "_score": 31.357077,
+      "algo": "fulltext",
+      "breadcrumbs": Array [
+        Object {
+          "label": "Départ de l’entreprise",
+          "position": 7,
+          "slug": "/themes/depart-de-lentreprise",
+        },
+        Object {
+          "label": "Démission",
+          "position": 1,
+          "slug": "/themes/demission",
+        },
+      ],
+      "description": "Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, p",
+      "slug": "la-demission#Comment-presenter-une-demission",
+      "source": "fiches_ministere_travail",
+      "title": "La démission : comment présenter une démission ?",
+    },
   ],
   "themes": Array [
     Object {
-      "_score": 2.601738,
+      "_score": 2.7380137,
       "algo": "fulltext",
       "cdtnId": "5594695039",
       "icon": "Contract",
@@ -858,7 +802,7 @@ Object {
       "title": "Embauche et contrat de travail",
     },
     Object {
-      "_score": 1.1093456,
+      "_score": 1.0915728,
       "algo": "fulltext",
       "cdtnId": "e4982f0aa9",
       "icon": "Depart",

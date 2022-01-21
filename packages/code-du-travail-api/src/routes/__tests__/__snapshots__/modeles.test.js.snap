@@ -6,7 +6,7 @@ Array [
     "breadcrumbs": Array [
       Object {
         "label": "Départ de l’entreprise",
-        "position": 8,
+        "position": 7,
         "slug": "/themes/depart-de-lentreprise",
       },
       Object {
@@ -30,7 +30,7 @@ Array [
     "breadcrumbs": Array [
       Object {
         "label": "Embauche et contrat de travail",
-        "position": 1,
+        "position": 0,
         "slug": "/themes/embauche-et-contrat-de-travail",
       },
       Object {
@@ -54,7 +54,7 @@ Array [
     "breadcrumbs": Array [
       Object {
         "label": "Départ de l’entreprise",
-        "position": 8,
+        "position": 7,
         "slug": "/themes/depart-de-lentreprise",
       },
       Object {
