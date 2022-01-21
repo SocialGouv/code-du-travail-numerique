@@ -11,18 +11,10 @@ Array [
     "title": "Ministère du travail : notre dossier sur le Coronavirus (Covid-19)",
   },
   Object {
-    "breadcrumbs": Array [],
-    "cdtnId": "9bde52414a",
-    "description": "Retrouvez ici l’essentiel des aides au recrutement et des dispositifs d’accompagnement dans le but de maintenir l’emploi, notamment pour les entreprises en difficulté.",
-    "slug": "aides-et-accompagnement-embauche-et-perennisation-des-emplois",
-    "source": "dossiers",
-    "title": "Dossier : Les aides à l'embauche et aux entreprises",
-  },
-  Object {
     "breadcrumbs": Array [
       Object {
         "label": "Salaire et Rémunération",
-        "position": 1,
+        "position": 2,
         "slug": "/themes/salaire-et-remuneration",
       },
       Object {
@@ -41,7 +33,7 @@ Array [
     "breadcrumbs": Array [
       Object {
         "label": "Congés et repos",
-        "position": 3,
+        "position": 4,
         "slug": "/themes/conges-et-repos",
       },
       Object {
@@ -50,7 +42,7 @@ Array [
         "slug": "/themes/conges",
       },
       Object {
-        "label": "Congés pour événement familial",
+        "label": "Congés pour événément familial",
         "position": 3,
         "slug": "/themes/conges-pour-evenement-familial",
       },
@@ -60,6 +52,25 @@ Array [
     "slug": "les-conges-pour-evenements-familiaux",
     "source": "contributions",
     "title": "Les congés pour événements familiaux",
+  },
+  Object {
+    "breadcrumbs": Array [
+      Object {
+        "label": "Départ de l’entreprise",
+        "position": 8,
+        "slug": "/themes/depart-de-lentreprise",
+      },
+      Object {
+        "label": "Licenciement : droits des salariés et procédures",
+        "position": 4,
+        "slug": "/themes/licenciement-droits-des-salaries-et-procedures",
+      },
+    ],
+    "cdtnId": "382462f424",
+    "description": "Tout savoir sur les différents types de licenciement (disciplinaire, économique, inaptitude...) : droits des salariés, procédures, indemnités, préavis, protections spécifiques. ",
+    "slug": "licenciement-droits-des-salaries-et-procedures",
+    "source": "themes",
+    "title": "Licenciement : droits des salariés et procédures",
   },
 ]
 `;

@@ -34,11 +34,11 @@ Object {
     },
   ],
   "description": "C’est la fin de votre contrat de travail, vous souhaitez rompre le contrat de travail d’un salarié et vous vous demandez quels sont les documents obligatoire à remettre ? Vous voulez démissionner, faire une rupture conventionnelle ou connaître les indemnités auxquelles vous avez droit ? Retrouvez toutes nos réponses ici. ",
-  "position": 7,
+  "position": 8,
   "refs": Array [
     Object {
       "cdtnId": "2e481cc0b9",
-      "description": "Le contrat à durée indéterminée (CDI) peut être rompu à tout moment, à l'initiative de l'employeur ou du salarié ou d'un commun accord par une rupture conventionnelle. Des documents doivent être remis au salarié à la fin du contrat de travail (certificat de travail, attestation Pôle emploi, solde de tout compte récapitulatif des dispositifs d'épargne salariale).",
+      "description": "Le CDI peut être rompu à tout moment, à l'initiative de l'employeur ou du salarié ou d'un commun accord par une rupture conventionnelle. Dans tous les cas, certains documents doivent être remis au salarié à la fin du contrat de travail (certificat de travail, attestation Pôle emploi, solde de tout compte récapitulatif des dispositifs d'épargne salariale).",
       "slug": "rupture-du-contrat-de-travail-a-duree-indeterminee-cdi",
       "source": "fiches_service_public",
       "title": "Rupture du contrat de travail à durée indéterminée (CDI)",
@@ -52,7 +52,7 @@ Object {
     },
     Object {
       "cdtnId": "cfecd65985",
-      "description": "Oui, vous pouvez continuer à bénéficier de la mutuelle (complémentaire santé) de votre entreprise à la fin de votre contrat de travail, sous réserve de remplir certaines conditions. C'est ce qu'on appelle la portabilité. Les mêmes règles s'appliquent si vous êtes salarié d'une association.",
+      "description": "Oui, vous pouvez continuer à bénéficier de la mutuelle (complémentaire santé) de votre entreprise à l'issue de votre contrat de travail, sous réserve de remplir certaines conditions. C'est ce qu'on appelle la portabilité. Les mêmes règles s'appliquent si vous êtes salarié d'une association.",
       "slug": "peut-on-garder-la-mutuelle-de-lentreprise-a-la-fin-du-contrat-de-travail",
       "source": "fiches_service_public",
       "title": "Peut-on garder la mutuelle de l'entreprise à la fin du contrat de travail ?",
@@ -67,9 +67,9 @@ Object {
     Object {
       "cdtnId": "39d430e40a",
       "description": "Le salarié qui n'exécute pas son préavis a droit dans certains cas au bénéfice d'une indemnité s'il est dispensé de préavis par son employeur.",
-      "slug": "indemnite-compensatrice-de-preavis-licenciement-demission",
+      "slug": "indemnite-compensatrice-de-preavis",
       "source": "fiches_service_public",
-      "title": "Indemnité compensatrice de préavis (licenciement, démission, ...)",
+      "title": "Indemnité compensatrice de préavis",
     },
     Object {
       "cdtnId": "d8fca710c5",
@@ -127,7 +127,7 @@ Object {
         },
       ],
       "icon": "Contract",
-      "position": 0,
+      "position": 1,
       "slug": "embauche-et-contrat-de-travail",
       "title": "Embauche et contrat de travail",
     },
@@ -163,7 +163,7 @@ Object {
         },
       ],
       "icon": "Depart",
-      "position": 7,
+      "position": 8,
       "slug": "depart-de-lentreprise",
       "title": "Départ de l’entreprise",
     },
