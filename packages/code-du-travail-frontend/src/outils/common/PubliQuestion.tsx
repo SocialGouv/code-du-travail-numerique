@@ -1,7 +1,7 @@
 import React from "react";
 
 import Html from "../../common/Html";
-import { trackHelpQuestionRetraite } from "../../lib/matomo";
+import { trackQuestion } from "../../lib/matomo";
 import { Rule, RuleType } from "../publicodes";
 import { reverseValues } from "../publicodes/Utils";
 import { SelectQuestion } from "./SelectQuestion";
@@ -20,7 +20,7 @@ const PubliQuestion: React.FC<Props> = ({ name, rule, onChange }) => {
         content: <Html>{rule.description}</Html>,
         trackableFn: (visibility: boolean) => {
           if (visibility) {
-            trackHelpQuestionRetraite(rule.titre);
+            trackQuestion(rule.titre);
           }
         },
       }

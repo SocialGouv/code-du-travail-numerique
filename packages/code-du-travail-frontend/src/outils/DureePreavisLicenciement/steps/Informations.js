@@ -13,10 +13,6 @@ import {
 import { SectionTitle } from "../../common/stepStyles";
 
 const { questions, situations: allSituations } = data;
-const questionsMap = questions.reduce(
-  (state, { name, question }) => ({ ...state, [name]: question }),
-  {}
-);
 
 const criteriaOrder = questions.map(({ name }) => name);
 
@@ -42,7 +38,7 @@ function StepInformations({ form }) {
   // Specific sub-label on CC seniority
   const subLabel = (key) =>
     key === "ancienneté"
-      ? "Choissisez parmi les catégories d'ancienneté telles que définies par la convention collective"
+      ? "Choisissez parmi les catégories d'ancienneté telles que définies par la convention collective"
       : undefined;
 
   return (
@@ -53,7 +49,7 @@ function StepInformations({ form }) {
           key={key}
           name={`criteria.${key}`}
           options={answers}
-          label={questionsMap[key]}
+          label={questions.find((v) => v.name === key).name}
           subLabel={subLabel(key)}
           onChange={() =>
             form.batch(() => {
@@ -64,6 +60,14 @@ function StepInformations({ form }) {
               }).forEach((key) => form.change(`criteria.${key}`, undefined));
             })
           }
+          tooltip={{
+            content: <Html>{questions.find((v) => v.name === key).note}</Html>,
+            trackableFn: (visibility) => {
+              if (visibility) {
+                trackQuestion(questions.find((v) => v.name === key).note);
+              }
+            },
+          }}
         />
       ))}
       {nextQuestionKey && nextQuestionOptions && (
