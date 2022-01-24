@@ -47,7 +47,25 @@ const siretNumberError =
   "Veuillez indiquer un numéro Siret (14 chiffres uniquement)";
 
 const ENTERPRISE_API_URL =
-  "https://search-recherche-entreprises-sqlite.dev.fabrique.social.gouv.fr/api/v1";
+  "https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1";
+
+const makeSearchUrl = ({ query, address }) => {
+  const params: { k: string; v: string }[] = [
+    { k: "ranked", v: "true" },
+    { k: "query", v: encodeURIComponent(query) },
+    { k: "address", v: encodeURIComponent(address) },
+    { k: "convention", v: "true" },
+    { k: "employer", v: "true" },
+    { k: "open", v: "true" },
+  ];
+
+  const flattenParams = params
+    .map(({ k, v }) => (k && v ? `${k}=${v}` : undefined))
+    .filter((qp) => qp)
+    .join("&");
+
+  return `${ENTERPRISE_API_URL}/search?${flattenParams}`;
+};
 
 const apiEnterprises = memoizee(function createFetcher(query, address) {
   if (/^\d{2,8}$/.test(query.replace(/\s/g, ""))) {
