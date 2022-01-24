@@ -14,7 +14,9 @@ const CCSearchInfo: React.FC<Props> = ({ ccn }) => {
       {ccn && (
         <p>
           Vous pouvez faire une recherche par mots-clés dans{" "}
-          <Link href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}>
+          <Link
+            href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.selected?.slug}`}
+          >
             <a>votre convention collective</a>
           </Link>
         </p>
