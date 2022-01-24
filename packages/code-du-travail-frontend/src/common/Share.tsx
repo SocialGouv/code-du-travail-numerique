@@ -15,7 +15,7 @@ type Props = {
 };
 
 export const Share = ({ title, metaDescription }: Props): JSX.Element => {
-  const [currentPageUrl, setCurrentPageUrl] = useState(undefined);
+  const [currentPageUrl, setCurrentPageUrl] = useState("");
   const hiddenInputRef = useRef(null);
   const [isUrlCopied, setUrlCopied] = useState(false);
 
