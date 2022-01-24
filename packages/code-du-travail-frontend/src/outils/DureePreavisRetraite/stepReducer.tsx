@@ -18,7 +18,7 @@ export const initialState: State = {
       name: "origine",
     },
     {
-      component: Steps.ConventionCollective,
+      component: Steps.AgreementStep,
       label: "Convention collective",
       name: "ccn",
     },
