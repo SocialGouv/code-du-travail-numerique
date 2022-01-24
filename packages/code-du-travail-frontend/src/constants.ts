@@ -37,12 +37,12 @@ export const MappingReplacement = [
     ],
   },
   {
-    newValue: "pass-vaccinal-et-contrat-de-travail",
+    newValue: "covid-19-pass-vaccinal-et-contrat-de-travail-infographie",
     path: ["information"],
     previousValues: ["pass-sanitaire-et-contrat-de-travail"],
   },
   {
-    newValue: "pass-vaccinal-les-dates-a-retenir",
+    newValue: "pass-vaccinal-les-dates-a-retenir-infographie",
     path: ["information"],
     previousValues: ["vaccination-et-pass-sanitaire-les-dates-a-retenir"],
   },
