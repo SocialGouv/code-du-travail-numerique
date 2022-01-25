@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { trackQuestion } from "../../../lib/matomo";
+import { MatomoActionEvent, trackQuestion } from "../../../lib/matomo";
 import { TextQuestion } from "../../common/TextQuestion";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { isPositiveNumber } from "../../common/validators";
@@ -59,7 +59,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
           ),
           trackableFn: (visibility: boolean) => {
             if (visibility) {
-              trackQuestion("Ancienneté");
+              trackQuestion("Ancienneté", MatomoActionEvent.RETIREMENT);
             }
           },
         }}

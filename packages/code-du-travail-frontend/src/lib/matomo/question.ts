@@ -1,26 +1,25 @@
 import { matopush } from "../../piwik";
-import { MatomoBaseEvent, MatomoMapping, MatomoRetirementEvent } from ".";
+import { MatomoActionEvent, MatomoBaseEvent, MatomoMapping } from ".";
 
 export const trackQuestion = (
   trackTitle: string,
+  simulatorEvent: MatomoActionEvent,
   isTrackingHelp = true
 ): void => {
   MatomoMapping.forEach((v) => {
     if (v.synonyms.includes(trackTitle)) {
       if (v.helpEvent && isTrackingHelp) {
-        console.error("help");
         matopush([
           MatomoBaseEvent.TRACK_EVENT,
           MatomoBaseEvent.OUTIL,
-          MatomoRetirementEvent.ACTION,
+          simulatorEvent,
           v.helpEvent,
         ]);
       } else if (v.selectEvent && !isTrackingHelp) {
-        console.error("select");
         matopush([
           MatomoBaseEvent.TRACK_EVENT,
           MatomoBaseEvent.OUTIL,
-          MatomoRetirementEvent.ACTION,
+          simulatorEvent,
           v.selectEvent,
         ]);
       }

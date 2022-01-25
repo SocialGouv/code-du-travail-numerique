@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo } from "react";
 
-import { trackQuestion } from "../../lib/matomo";
+import { MatomoActionEvent, trackQuestion } from "../../lib/matomo";
 import { Rule, usePublicodes } from "../publicodes";
 import { mapToPublicodesSituation } from "../publicodes/Utils";
 import PubliQuestion from "./PubliQuestion";
@@ -90,7 +90,7 @@ function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
 
   const onTrackDynamicRule = (titleQuestion: string | undefined): void => {
     if (titleQuestion) {
-      trackQuestion(titleQuestion, false);
+      trackQuestion(titleQuestion, MatomoActionEvent.RETIREMENT, false);
     }
   };
 

@@ -2,7 +2,7 @@ import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 import React from "react";
 
 import Html from "../../../common/Html";
-import { trackQuestion } from "../../../lib";
+import { MatomoActionEvent, trackQuestion } from "../../../lib";
 import { SelectQuestion } from "../../common/SelectQuestion";
 import {
   filterSituations,
@@ -54,22 +54,30 @@ function StepInformations({ form }) {
           name={`criteria.${key}`}
           options={answers}
           label={questionsMap[key].question}
-          onChange={() =>
+          onChange={() => {
+            trackQuestion(
+              questionsMap[key].name,
+              MatomoActionEvent.RESIGNATION,
+              false
+            );
             form.batch(() => {
               getFormProps({
                 criteria,
                 key,
                 pastQuestions,
               }).forEach((key) => form.change(`criteria.${key}`, undefined));
-            })
-          }
+            });
+          }}
           tooltip={
             questionsMap[key].note !== undefined
               ? {
                   content: <Html>{questionsMap[key].note}</Html>,
                   trackableFn: (visibility) => {
                     if (visibility) {
-                      trackQuestion(questionsMap[key].note);
+                      trackQuestion(
+                        questionsMap[key].name,
+                        MatomoActionEvent.RESIGNATION
+                      );
                     }
                   },
                 }
@@ -77,15 +85,42 @@ function StepInformations({ form }) {
           }
         />
       ))}
-      {nextQuestionKey && nextQuestionOptions && (
-        <>
-          <SelectQuestion
-            name={`criteria.${nextQuestionKey}`}
-            label={questionsMap[nextQuestionKey].question}
-            options={nextQuestionOptions}
-          />
-        </>
-      )}
+      {nextQuestionKey &&
+        nextQuestionOptions &&
+        questionsMap[nextQuestionKey] &&
+        questionsMap[nextQuestionKey].question && (
+          <>
+            <SelectQuestion
+              name={`criteria.${nextQuestionKey}`}
+              label={questionsMap[nextQuestionKey].question}
+              options={nextQuestionOptions}
+              tooltip={
+                questionsMap[nextQuestionKey].note !== undefined
+                  ? {
+                      content: (
+                        <Html>{questionsMap[nextQuestionKey].note}</Html>
+                      ),
+                      trackableFn: (visibility) => {
+                        if (visibility) {
+                          trackQuestion(
+                            questionsMap[nextQuestionKey].name,
+                            MatomoActionEvent.RESIGNATION
+                          );
+                        }
+                      },
+                    }
+                  : undefined
+              }
+              onChange={() => {
+                trackQuestion(
+                  questionsMap[nextQuestionKey].name,
+                  MatomoActionEvent.RESIGNATION,
+                  false
+                );
+              }}
+            />
+          </>
+        )}
     </>
   );
 }

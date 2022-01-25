@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 
 import Html from "../../../common/Html";
-import { trackQuestion } from "../../../lib/matomo";
+import { MatomoActionEvent, trackQuestion } from "../../../lib/matomo";
 import { SelectQuestion } from "../../common/SelectQuestion";
 import {
   filterSituations,
@@ -69,12 +69,22 @@ function StepStatus({ form }) {
                   content: <Html>{questionsMap[seniorityKey].note}</Html>,
                   trackableFn: (visibility) => {
                     if (visibility) {
-                      trackQuestion(questionsMap[seniorityKey].note);
+                      trackQuestion(
+                        questionsMap[seniorityKey].name,
+                        MatomoActionEvent.DISMISSAL
+                      );
                     }
                   },
                 }
               : undefined
           }
+          onChange={() => {
+            trackQuestion(
+              questionsMap[seniorityKey].name,
+              MatomoActionEvent.DISMISSAL,
+              false
+            );
+          }}
         />
       )}
     </>

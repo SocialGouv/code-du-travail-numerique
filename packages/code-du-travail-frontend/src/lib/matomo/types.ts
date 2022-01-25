@@ -28,11 +28,17 @@ export enum MatomoAgreementEvent {
 }
 
 export enum MatomoRetirementEvent {
-  ACTION = "view_step_Préavis de départ ou de mise à la retraite",
   MISE_RETRAITE = "mise",
   DEPART_RETRAITE = "depart",
   ANCIENNETE_PLUS_2_ANS = "anciennete_plus_2_ans",
   ANCIENNETE_MOINS_2_ANS = "anciennete_moins_2_ans",
+}
+
+export enum MatomoActionEvent {
+  RETIREMENT = "view_step_Préavis de départ ou de mise à la retraite",
+  HOUR = "view_step_Heure recherche emploi",
+  RESIGNATION = "view_step_Préavis de démission",
+  DISMISSAL = "view_step_Préavis de licenciement",
 }
 
 export enum MatomoTrackUrl {
@@ -71,18 +77,22 @@ export const MatomoMapping: Mapping = [
   },
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_NIVEAU,
+    selectEvent: MatomoSimulatorEvent.SELECT_NIVEAU,
     synonyms: ["niveau"],
   },
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_CLASSE,
+    selectEvent: MatomoSimulatorEvent.SELECT_CLASSE,
     synonyms: ["classe"],
   },
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_POSITION,
+    selectEvent: MatomoSimulatorEvent.SELECT_POSITION,
     synonyms: ["position"],
   },
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_COEFFICIENT,
+    selectEvent: MatomoSimulatorEvent.SELECT_COEFFICIENT,
     synonyms: ["coefficient"],
   },
 ];
