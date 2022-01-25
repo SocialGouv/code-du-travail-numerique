@@ -1,6 +1,6 @@
 import React from "react";
 
-const IntroAnnotation: React.VoidFunctionComponent = () => {
+const IntroAnnotation = (): JSX.Element => {
   return (
     <i>
       Attention&nbsp;: Le résultat affiché correspond à la durée légale ou

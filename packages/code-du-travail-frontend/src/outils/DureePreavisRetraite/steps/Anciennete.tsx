@@ -22,8 +22,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
 
   useEffect(() => {
     if (
-      form.getState().values.ccn &&
-      form.getState().values.ccn.num === 2264 &&
+      form.getState().values.ccn?.num === 2264 &&
       form.getState().values["contrat salarié - mise à la retraite"] === "oui"
     ) {
       setQuestion(
@@ -68,7 +67,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
           form.change("contrat salarié - ancienneté", undefined);
         }}
       />
-      {form.getState().values.seniorityMaximum === false && (
+      {!form.getState().values.seniorityMaximum && (
         <TextQuestion
           name="contrat salarié - ancienneté"
           label={seniorityLabel}

@@ -1,8 +1,7 @@
 import { Fieldset, icons, Legend, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import arrayMutators from "final-form-arrays";
 import { useRouter } from "next/router";
-import PropTypes from "prop-types";
-import React, { useEffect, useReducer } from "react";
+import React, { Reducer, useEffect, useReducer } from "react";
 import { Form } from "react-final-form";
 import styled from "styled-components";
 
@@ -14,32 +13,43 @@ import {
 import { matopush } from "../../piwik";
 import { PrevNextBar } from "./PrevNextBar";
 import { STEP_LIST_WIDTH, StepList } from "./StepList";
+import { Action, ActionName, SkipFn, State } from "./type/WizardType";
 
-const anchorRef = React.createRef();
+const anchorRef = React.createRef<HTMLLIElement>();
+
+type Props = {
+  Rules?: any;
+  duration?: string;
+  icon?: string;
+  initialState: State;
+  initialValues?: any;
+  stepReducer?: any;
+  title: string;
+};
 
 function Wizard({
   initialState,
   initialValues = {},
   title,
   icon,
-  hasNoMarginBottom = false,
   Rules = null,
   stepReducer = (step) => step,
   duration,
-}): JSX.Element {
-  const [state, dispatch] = useReducer(stepReducer, initialState);
+}: Props): JSX.Element {
+  const [state, dispatch] = useReducer<Reducer<State, Action>>(
+    stepReducer,
+    initialState
+  );
   const { stepIndex, steps } = state;
   const router = useRouter();
   const setStepIndex = (index) =>
-    //@ts-ignore
-    dispatch({ payload: index, type: "setStepIndex" });
+    dispatch({ payload: index, type: ActionName.setStepIndex });
 
   useEffect(() => {
     const node = anchorRef.current;
     // We only focus on wizzard after wizzard start
     // that way focus is correctly placed on the form
     if (node && stepIndex > 0) {
-      //@ts-ignore
       node.focus();
     }
     if (window) {
@@ -48,12 +58,11 @@ function Wizard({
   });
 
   const prevStep = (values) => {
-    let nextStepIndex = stepIndex;
-    let skipFn = () => true;
-    //@ts-ignore
+    let nextStepIndex: number = stepIndex;
+    let skipFn: SkipFn = () => true;
     while (skipFn(values)) {
       nextStepIndex = Math.max(0, nextStepIndex - 1);
-      skipFn = steps[nextStepIndex].skip || (() => false);
+      skipFn = steps[nextStepIndex].skip ?? (() => false);
     }
     setStepIndex(nextStepIndex);
 
@@ -66,11 +75,10 @@ function Wizard({
   };
   const nextStep = (values) => {
     let nextStepIndex = stepIndex;
-    let skipFn = () => true;
-    //@ts-ignore
+    let skipFn: SkipFn = () => true;
     while (skipFn(values)) {
       nextStepIndex = Math.min(nextStepIndex + 1, steps.length - 1);
-      skipFn = steps[nextStepIndex].skip || (() => false);
+      skipFn = steps[nextStepIndex].skip ?? (() => false);
     }
     setStepIndex(nextStepIndex);
     matopush([
@@ -86,16 +94,15 @@ function Wizard({
   const isLastStep = stepIndex === steps.length - 1;
 
   const validate = (values) => {
-    const Step = steps[stepIndex].component;
+    const Step: any = steps[stepIndex].component;
     return Step.validate ? Step.validate(values) : {};
   };
 
   const handlePageSubmit = (values, form) => {
     // This means the user clicked on a "restart a new simulation" button
     if (stepIndex === steps.length - 1) {
-      //@ts-ignore
       dispatch({
-        type: "reset",
+        type: ActionName.reset,
       });
       setStepIndex(0);
       setTimeout(() => form.reset());
@@ -110,7 +117,7 @@ function Wizard({
   }));
 
   const decorators = steps
-    .map((step) => step.component.decorator)
+    .map((step) => (step.component as any).decorator)
     .filter(Boolean);
 
   const Step = steps[stepIndex].component;
@@ -187,7 +194,6 @@ function Wizard({
                   hasError={invalid && submitFailed}
                   onPrev={() => prevStep(form.getState().values)}
                   nextVisible={nextVisible}
-                  //@ts-ignore
                   printVisible={isLastStep}
                   previousVisible={previousVisible}
                   onNext={() => onClickNext(form)}
@@ -215,27 +221,21 @@ function Wizard({
   );
 }
 
-Wizard.propTypes = {
-  Rules: PropTypes.func,
-  duration: PropTypes.string,
-  hasNoMarginBottom: PropTypes.bool,
-  icon: PropTypes.string,
-  initialState: PropTypes.shape({
-    stepIndex: PropTypes.number,
-    steps: PropTypes.arrayOf(
-      PropTypes.shape({
-        component: PropTypes.func.isRequired,
-        label: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-      })
-    ),
-  }).isRequired,
-  initialValues: PropTypes.object,
-  stepReducer: PropTypes.func,
-  title: PropTypes.string.isRequired,
+type WizardTitleProps = {
+  duration?: string;
+  hasNoMarginBottom?: boolean;
+  icon?: string;
+  stepIndex?: number;
+  title: string;
 };
 
-function WizardTitle({ title, icon, duration, stepIndex, hasNoMarginBottom }) {
+function WizardTitle({
+  title,
+  icon,
+  duration,
+  stepIndex,
+  hasNoMarginBottom,
+}: WizardTitleProps): JSX.Element {
   const Icon = icons[icon];
   return (
     <ToolTitle hasNoMarginBottom={hasNoMarginBottom}>
@@ -251,14 +251,6 @@ function WizardTitle({ title, icon, duration, stepIndex, hasNoMarginBottom }) {
     </ToolTitle>
   );
 }
-
-WizardTitle.propTypes = {
-  duration: PropTypes.string,
-  hasNoMarginBottom: PropTypes.bool,
-  icon: PropTypes.string,
-  stepIndex: PropTypes.number,
-  title: PropTypes.string.isRequired,
-};
 
 function WizardDuration({ duration }) {
   return (
@@ -301,12 +293,12 @@ const ToolTitle = styled.div`
 
 const ToolDuration = styled.div`
   position: relative;
-  padding-right: 20px;
+  padding-right: 45px;
 `;
 const ToolDurationLabel = styled.span`
   position: absolute;
   bottom: 3px;
-  right: 0;
+  left: 28px;
   font-size: ${fonts.sizes.tiny};
   color: ${({ theme }) => theme.paragraph};
 `;

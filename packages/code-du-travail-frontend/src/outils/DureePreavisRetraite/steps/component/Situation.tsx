@@ -13,13 +13,13 @@ type Props = {
 };
 
 export const Situation: React.FC<Props> = ({ content, elements }) => {
-  const overrideSituation = (element: SituationElement) => {
+  const overrideSituation = (element: SituationElement): JSX.Element => {
     if (element.name === "contrat salarié - convention collective") {
-      return <>{content.ccn.shortTitle}</>;
+      return <>{content.ccn?.shortTitle}</>;
     }
     if (
       element.name === "contrat salarié - ancienneté" &&
-      content.seniorityMaximum === true
+      content.seniorityMaximum
     ) {
       return element.value === SeniorityMaximum.GREATER_THAN_5_YEARS ? (
         <>Plus de 5 ans</>
@@ -37,10 +37,15 @@ export const Situation: React.FC<Props> = ({ content, elements }) => {
         </>
       );
     }
+
+    return <></>;
   };
 
   const getAnnotations = (content: FormContent): JSX.Element[] => {
-    if (content.infos["contrat salarié - travailleur handicapé"] === "oui") {
+    if (
+      content.infos &&
+      content.infos["contrat salarié - travailleur handicapé"] === "oui"
+    ) {
       if (content["contrat salarié - mise à la retraite"] === "oui") {
         if (content.ccn && supportedCcn.includes(content.ccn.num)) {
           return [

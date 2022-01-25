@@ -5,8 +5,8 @@ import Disclaimer from "../../../common/Disclaimer";
 import { SmallText } from "../../../common/stepStyles";
 
 type Props = {
-  resultValueInDays: number | null;
-  ccNumber: number | null;
+  resultValueInDays?: number;
+  ccNumber?: number;
   type: "depart" | "mise" | null;
 };
 export const titreFavorable =

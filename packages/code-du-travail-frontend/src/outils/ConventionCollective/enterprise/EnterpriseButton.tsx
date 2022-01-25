@@ -70,7 +70,7 @@ export function EnterpriseButton({
         {!showAddress && etablissements > 1 ? (
           <Tag> {etablissements} établissements </Tag>
         ) : (
-          <Text>{address || matchingEtablissement.address}</Text>
+          <Text>{address || matchingEtablissement?.address}</Text>
         )}
       </ItemButton>
     </Link>
@@ -92,6 +92,7 @@ const ItemButton = styled(ResultItem)`
 
 const Title = styled(Html)`
   padding-bottom: ${spacings.xsmall};
+
   & b {
     font-weight: 700;
   }

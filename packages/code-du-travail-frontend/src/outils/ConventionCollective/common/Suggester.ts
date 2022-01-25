@@ -42,8 +42,8 @@ const dataFetchReducer = <A>(
     case Actions.reset:
       return {
         ...state,
-        data: null,
-        error: null,
+        data: undefined,
+        error: undefined,
         isError: false,
         isLoading: false,
       };
@@ -84,9 +84,13 @@ export function createSuggesterHook<Result>(
   return function (query: string, address?: string): FetchReducerState<Result> {
     const [state, dispatch] = useReducer<
       Reducer<FetchReducerState<Result>, FecthActions<Result>>
-    >(dataFetchReducer, { isError: false, isLoading: false });
+    >(dataFetchReducer, {
+      isError: false,
+      isLoading: false,
+    });
     useEffect(() => {
       let shouldCancel = false;
+
       async function fetchData() {
         if (!query) {
           dispatch({ type: Actions.reset });
@@ -111,6 +115,7 @@ export function createSuggesterHook<Result>(
           dispatch({ payload: error, type: Actions.failure });
         }
       }
+
       fetchData();
       return () => {
         shouldCancel = true;

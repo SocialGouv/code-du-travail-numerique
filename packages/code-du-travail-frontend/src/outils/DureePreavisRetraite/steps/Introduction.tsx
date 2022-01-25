@@ -18,7 +18,6 @@ const IntroductionStep = (): JSX.Element => (
       ces informations se trouvent sur le bulletin de salaire ou le contrat de
       travail.
     </p>
-    <p>Cliquez sur commencer pour démarrer la simulation.</p>
   </>
 );
 

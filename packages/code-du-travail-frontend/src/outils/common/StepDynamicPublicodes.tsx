@@ -88,8 +88,10 @@ function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
     });
   };
 
-  const onTrackDynamicRule = (titleQuestion: string): void => {
-    trackQuestion(titleQuestion, false);
+  const onTrackDynamicRule = (titleQuestion: string | undefined): void => {
+    if (titleQuestion) {
+      trackQuestion(titleQuestion, false);
+    }
   };
 
   return (
