@@ -14,7 +14,10 @@ import {
 import { YesNoQuestion } from "../../common/YesNoQuestion";
 
 const { questions, situations: allSituations } = data;
-const question = questions.find((v) => v.name === "ancienneté");
+const questionsMap = questions.reduce(
+  (state, v) => ({ ...state, [v.name]: v }),
+  {}
+);
 
 function validate({ seriousMisconduct }) {
   const errors: any = {};
@@ -57,17 +60,21 @@ function StepStatus({ form }) {
       {typeof disabledWorker !== "undefined" && !seriousMisconduct && (
         <SelectQuestion
           name={`cdt.${seniorityKey}`}
-          label={question.name}
+          label={questionsMap[seniorityKey].question}
           subLabel="Choisissez parmi les catégories d'ancienneté telles que définies par le Code du travail"
           options={seniorityOptions}
-          tooltip={{
-            content: <Html>{question.note}</Html>,
-            trackableFn: (visibility) => {
-              if (visibility) {
-                trackQuestion(question.name);
-              }
-            },
-          }}
+          tooltip={
+            questionsMap[seniorityKey].note !== undefined
+              ? {
+                  content: <Html>{questionsMap[seniorityKey].note}</Html>,
+                  trackableFn: (visibility) => {
+                    if (visibility) {
+                      trackQuestion(questionsMap[seniorityKey].note);
+                    }
+                  },
+                }
+              : undefined
+          }
         />
       )}
     </>
