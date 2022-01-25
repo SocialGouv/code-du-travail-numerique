@@ -13,24 +13,23 @@ export const mapToPublicodesSituation = (
   const { ccn, infos, seniorityMaximum, seniorityValue, ...formWithoutCcn } =
     form;
   const seniority = {
-    "contrat salarié - ancienneté": seniorityMaximum
-      ? seniorityValue
-      : formatSeniority(form["contrat salarié - ancienneté"]),
+    "contrat salarié - ancienneté":
+      seniorityMaximum && seniorityValue
+        ? seniorityValue
+        : formatSeniority(form["contrat salarié - ancienneté"]),
   };
+  const agreement: Record<string, string> = ccn
+    ? {
+        "contrat salarié - convention collective": `'IDCC${ccn.num
+          .toString()
+          .padStart(4, "0")}'`,
+      }
+    : {};
   return {
     ...infos,
     ...formWithoutCcn,
     ...seniority,
-    ...Object.assign(
-      {},
-      ccn
-        ? {
-            "contrat salarié - convention collective": `'IDCC${ccn.num
-              .toString()
-              .padStart(4, "0")}'`,
-          }
-        : {}
-    ),
+    ...Object.assign({}, agreement),
   };
 };
 

@@ -17,7 +17,7 @@ type Props = {
 
 const ShowResult: React.FC<{
   result: PublicodesResult;
-  agreementMaximumResult: PublicodesResult;
+  agreementMaximumResult: PublicodesResult | null;
 }> = ({ result, agreementMaximumResult }) => {
   if (result.value > 0) {
     return (
@@ -88,7 +88,7 @@ type RootData = {
 };
 
 export const createRootData = (
-  data: FormContent,
+  data: Partial<FormContent>,
   result: PublicodesResult,
   legalResult: PublicodesResult,
   agreementResult: PublicodesResult | null,
@@ -97,7 +97,7 @@ export const createRootData = (
   let agreement: Agreement | null = null;
   if (data.ccn) {
     const agreementFound = supportedCcn.find(
-      (item) => item.idcc === data.ccn.num
+      (item) => item.idcc === data.ccn?.num
     );
     agreement = {
       notice: agreementResult?.valueInDays ?? 0,
@@ -122,13 +122,15 @@ export const createRootData = (
     noticeUsed = NoticeUsed.legal;
   } else if (
     result.valueInDays > 0 &&
-    result.valueInDays === agreementResult.valueInDays
+    result.valueInDays === agreementResult?.valueInDays
   ) {
     noticeUsed = NoticeUsed.agreementLabor;
   }
   return {
     agreement: agreement,
-    handicap: data.infos["contrat salarié - travailleur handicapé"] === "oui",
+    handicap:
+      data.infos !== undefined &&
+      data.infos["contrat salarié - travailleur handicapé"] === "oui",
     isVoluntary: data["contrat salarié - mise à la retraite"] === "non",
     noticeUsed,
     seniorityLessThan6Months: Number(data["contrat salarié - ancienneté"]) < 6,
@@ -181,8 +183,8 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
   const legalResult = publicodesContext.execute(
     "contrat salarié . préavis de retraite légale en jours"
   );
-  let agreementResult = null;
-  let agreementMaximumResult = null;
+  let agreementResult: PublicodesResult | null = null;
+  let agreementMaximumResult: PublicodesResult | null = null;
   if (data.ccn) {
     agreementResult = publicodesContext.execute(
       "contrat salarié . préavis de retraite collective en jours"

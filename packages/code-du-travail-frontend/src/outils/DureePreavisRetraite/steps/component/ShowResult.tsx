@@ -16,7 +16,7 @@ const ShowResult: React.FC<Props> = ({ publicodesContext }) => {
   const type =
     publicodesContext.situation.find(
       (item) => item.name === "contrat salarié - mise à la retraite"
-    ).value === "oui"
+    )?.value === "oui"
       ? "mise"
       : "départ";
 

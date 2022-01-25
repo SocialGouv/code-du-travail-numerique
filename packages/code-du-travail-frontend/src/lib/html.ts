@@ -9,6 +9,7 @@ export const htmlParser = (html: string): string => {
   $("button").remove();
   $(".oembed-source").remove();
 
+  // @ts-ignore
   $("dl").replaceWith(function () {
     const src = $(this).find("source").attr("srcset");
     return src

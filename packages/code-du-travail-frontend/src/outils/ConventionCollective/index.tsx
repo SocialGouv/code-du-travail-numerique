@@ -21,13 +21,15 @@ interface Props {
 }
 
 function AgreementSearchTool({ icon, title }: Props): JSX.Element {
-  const [screen, setScreen] = useState<ScreenType>(null);
+  const [screen, setScreen] = useState<ScreenType | null>(null);
   const { setEnterprise, setSearchParams } = useNavContext();
   const { uuid, trackEvent } = useTrackingContext();
+
   function clearSelection() {
     setEnterprise(null);
     trackEvent("view_step_cc_search_p2", "back_step_cc_select_p2", title, uuid);
   }
+
   function clearSearchType() {
     if (screen === ScreenType.agreement) {
       trackEvent(
@@ -53,12 +55,13 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
   function handleHashNavigation(url) {
     const [, hash = ""] = url.split("#");
     window.scrollTo(0, 0);
-    const main: HTMLDivElement = document.querySelector("[role=main]");
+    const main: HTMLDivElement | null = document.querySelector("[role=main]");
     if (main) {
       main.focus();
     }
     handleSearchType(hash);
   }
+
   function handleSearchType(value) {
     setScreen(value);
   }
@@ -98,7 +101,7 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
 }
 
 const AgreementSearchUI = (props: Props): JSX.Element => {
-  const [enterprise, setEnterprise] = useState<Enterprise>(null);
+  const [enterprise, setEnterprise] = useState<Enterprise | null>(null);
   const [searchParams, setSearchParams] = useState<SearchParams>({
     address: "",
     query: "",
