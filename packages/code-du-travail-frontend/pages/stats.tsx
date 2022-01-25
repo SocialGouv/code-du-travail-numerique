@@ -86,7 +86,7 @@ const Stats = ({ data }: Props): JSX.Element => {
                 </p>
               </>
             ) : (
-              <p>Informations actuellement indisponibles</p>
+              <p>Informations actuellement indisponible</p>
             )}
           </Wrapper>
         </Container>
