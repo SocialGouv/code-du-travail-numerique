@@ -1,6 +1,8 @@
-import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
+import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 import React from "react";
 
+import Html from "../../../common/Html";
+import { trackQuestion } from "../../../lib";
 import { SelectQuestion } from "../../common/SelectQuestion";
 import {
   filterSituations,
@@ -14,29 +16,28 @@ import { SectionTitle } from "../../common/stepStyles";
 
 const { questions, situations: allSituations } = data;
 const questionsMap = questions.reduce(
-  (state, { name, question }) => ({ ...state, [name]: question }),
+  (state, v) => ({ ...state, [v.name]: v }),
   {}
 );
 
 const criteriaOrder = questions.map(({ name }) => name);
+
 function StepInformations({ form }) {
   const { values } = form.getState();
-  const { ccn, typeRupture, criteria = {} } = values;
+  const { ccn, criteria = {} } = values;
   const idcc = ccn ? ccn.num : 0;
 
-  const initialSituations = getSituationsFor(allSituations, {
-    idcc,
-    typeRupture,
-  });
-
+  const initialSituations = getSituationsFor(allSituations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
-
   const nextQuestionKey = getNextQuestionKey(
     possibleSituations,
     criteriaOrder,
     criteria
   );
-  const nextQuestionOptions = getOptions(possibleSituations, nextQuestionKey);
+  const nextQuestionOptions: any = getOptions(
+    possibleSituations,
+    nextQuestionKey
+  );
   const pastQuestions = getPastQuestions(
     initialSituations,
     criteriaOrder,
@@ -51,7 +52,7 @@ function StepInformations({ form }) {
           key={key}
           name={`criteria.${key}`}
           options={answers}
-          label={questionsMap[key]}
+          label={questionsMap[key].name}
           onChange={() =>
             form.batch(() => {
               getFormProps({
@@ -61,13 +62,21 @@ function StepInformations({ form }) {
               }).forEach((key) => form.change(`criteria.${key}`, undefined));
             })
           }
+          tooltip={{
+            content: <Html>{questionsMap[nextQuestionKey].note}</Html>,
+            trackableFn: (visibility) => {
+              if (visibility) {
+                trackQuestion(questionsMap[nextQuestionKey].note);
+              }
+            },
+          }}
         />
       ))}
       {nextQuestionKey && nextQuestionOptions && (
         <>
           <SelectQuestion
             name={`criteria.${nextQuestionKey}`}
-            label={questionsMap[nextQuestionKey]}
+            label={questionsMap[nextQuestionKey].name}
             options={nextQuestionOptions}
           />
         </>

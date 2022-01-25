@@ -56,7 +56,7 @@ describe("Matomo", () => {
       ${"Groupe"}                    | ${1}      | ${[MatomoBaseEvent.TRACK_EVENT, MatomoBaseEvent.OUTIL, MatomoRetirementEvent.ACTION, MatomoSimulatorEvent.SELECT_GROUPE]}
       ${"Echelon"}                   | ${0}      | ${null}
       ${"Cat pro"}                   | ${0}      | ${null}
-      ${"échelon"}                   | ${0}      | ${null}
+      ${"échelon"}                   | ${1}      | ${[MatomoBaseEvent.TRACK_EVENT, MatomoBaseEvent.OUTIL, MatomoRetirementEvent.ACTION, MatomoSimulatorEvent.SELECT_ECHELON]}
       ${null}                        | ${0}      | ${null}
       ${""}                          | ${0}      | ${null}
     `(
@@ -78,7 +78,7 @@ describe("Matomo", () => {
       ${"Groupe"}                    | ${1}      | ${[MatomoBaseEvent.TRACK_EVENT, MatomoBaseEvent.OUTIL, MatomoRetirementEvent.ACTION, MatomoSimulatorEvent.CLICK_HELP_GROUPE]}
       ${"Echelon"}                   | ${0}      | ${null}
       ${"Cat pro"}                   | ${0}      | ${null}
-      ${"échelon"}                   | ${0}      | ${[MatomoBaseEvent.TRACK_EVENT, MatomoBaseEvent.OUTIL, MatomoRetirementEvent.ACTION, MatomoSimulatorEvent.CLICK_HELP_ECHELON]}
+      ${"échelon"}                   | ${1}      | ${[MatomoBaseEvent.TRACK_EVENT, MatomoBaseEvent.OUTIL, MatomoRetirementEvent.ACTION, MatomoSimulatorEvent.CLICK_HELP_ECHELON]}
       ${null}                        | ${0}      | ${null}
       ${""}                          | ${0}      | ${null}
     `(

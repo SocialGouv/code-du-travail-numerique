@@ -63,7 +63,7 @@ export const MatomoMapping: Mapping = [
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_GROUPE,
     selectEvent: MatomoSimulatorEvent.SELECT_GROUPE,
-    synonyms: ["groupe"],
+    synonyms: ["groupe", "Groupe"],
   },
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_NIVEAU,

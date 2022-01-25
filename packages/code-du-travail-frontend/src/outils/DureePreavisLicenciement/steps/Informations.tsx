@@ -1,6 +1,8 @@
-import data from "@cdt/data...simulateurs/preavis-demission.data.json";
+import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
 import React from "react";
 
+import Html from "../../../common/Html";
+import { trackQuestion } from "../../../lib";
 import { SelectQuestion } from "../../common/SelectQuestion";
 import {
   filterSituations,
@@ -13,12 +15,13 @@ import {
 import { SectionTitle } from "../../common/stepStyles";
 
 const { questions, situations: allSituations } = data;
-const questionsMap = questions.reduce(
-  (state, { name, question }) => ({ ...state, [name]: question }),
-  {}
-);
 
 const criteriaOrder = questions.map(({ name }) => name);
+
+const questionsMap = questions.reduce(
+  (state, v) => ({ ...state, [v.name]: v }),
+  {}
+);
 
 function StepInformations({ form }) {
   const { values } = form.getState();
@@ -32,12 +35,21 @@ function StepInformations({ form }) {
     criteriaOrder,
     criteria
   );
-  const nextQuestionOptions = getOptions(possibleSituations, nextQuestionKey);
+  const nextQuestionOptions: any = getOptions(
+    possibleSituations,
+    nextQuestionKey
+  );
   const pastQuestions = getPastQuestions(
     initialSituations,
     criteriaOrder,
     criteria
   );
+
+  // Specific sub-label on CC seniority
+  const subLabel = (key) =>
+    key === "ancienneté"
+      ? "Choisissez parmi les catégories d'ancienneté telles que définies par la convention collective"
+      : undefined;
 
   return (
     <>
@@ -47,7 +59,8 @@ function StepInformations({ form }) {
           key={key}
           name={`criteria.${key}`}
           options={answers}
-          label={questionsMap[key]}
+          label={questionsMap[nextQuestionKey].name}
+          subLabel={subLabel(key)}
           onChange={() =>
             form.batch(() => {
               getFormProps({
@@ -57,13 +70,22 @@ function StepInformations({ form }) {
               }).forEach((key) => form.change(`criteria.${key}`, undefined));
             })
           }
+          tooltip={{
+            content: <Html>{questionsMap[nextQuestionKey].note}</Html>,
+            trackableFn: (visibility) => {
+              if (visibility) {
+                trackQuestion(questionsMap[nextQuestionKey].note);
+              }
+            },
+          }}
         />
       ))}
       {nextQuestionKey && nextQuestionOptions && (
         <>
           <SelectQuestion
             name={`criteria.${nextQuestionKey}`}
-            label={questionsMap[nextQuestionKey]}
+            label={questionsMap[nextQuestionKey].name}
+            subLabel={subLabel(nextQuestionKey)}
             options={nextQuestionOptions}
           />
         </>

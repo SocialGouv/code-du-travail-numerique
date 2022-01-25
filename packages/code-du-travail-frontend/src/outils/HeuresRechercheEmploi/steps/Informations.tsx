@@ -1,6 +1,8 @@
-import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
+import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 import React from "react";
 
+import Html from "../../../common/Html";
+import { trackQuestion } from "../../../lib";
 import { SelectQuestion } from "../../common/SelectQuestion";
 import {
   filterSituations,
@@ -13,33 +15,38 @@ import {
 import { SectionTitle } from "../../common/stepStyles";
 
 const { questions, situations: allSituations } = data;
+const questionsMap = questions.reduce(
+  (state, v) => ({ ...state, [v.name]: v }),
+  {}
+);
 
 const criteriaOrder = questions.map(({ name }) => name);
-
 function StepInformations({ form }) {
   const { values } = form.getState();
-  const { ccn, criteria = {} } = values;
+  const { ccn, typeRupture, criteria = {} } = values;
   const idcc = ccn ? ccn.num : 0;
 
-  const initialSituations = getSituationsFor(allSituations, { idcc });
+  const initialSituations = getSituationsFor(allSituations, {
+    idcc,
+    typeRupture,
+  });
+
   const possibleSituations = filterSituations(initialSituations, criteria);
+
   const nextQuestionKey = getNextQuestionKey(
     possibleSituations,
     criteriaOrder,
     criteria
   );
-  const nextQuestionOptions = getOptions(possibleSituations, nextQuestionKey);
+  const nextQuestionOptions: any = getOptions(
+    possibleSituations,
+    nextQuestionKey
+  );
   const pastQuestions = getPastQuestions(
     initialSituations,
     criteriaOrder,
     criteria
   );
-
-  // Specific sub-label on CC seniority
-  const subLabel = (key) =>
-    key === "ancienneté"
-      ? "Choisissez parmi les catégories d'ancienneté telles que définies par la convention collective"
-      : undefined;
 
   return (
     <>
@@ -49,8 +56,7 @@ function StepInformations({ form }) {
           key={key}
           name={`criteria.${key}`}
           options={answers}
-          label={questions.find((v) => v.name === key).name}
-          subLabel={subLabel(key)}
+          label={questionsMap[key].name}
           onChange={() =>
             form.batch(() => {
               getFormProps({
@@ -61,10 +67,10 @@ function StepInformations({ form }) {
             })
           }
           tooltip={{
-            content: <Html>{questions.find((v) => v.name === key).note}</Html>,
+            content: <Html>{questionsMap[nextQuestionKey].note}</Html>,
             trackableFn: (visibility) => {
               if (visibility) {
-                trackQuestion(questions.find((v) => v.name === key).note);
+                trackQuestion(questionsMap[nextQuestionKey].note);
               }
             },
           }}
@@ -74,8 +80,7 @@ function StepInformations({ form }) {
         <>
           <SelectQuestion
             name={`criteria.${nextQuestionKey}`}
-            label={questionsMap[nextQuestionKey]}
-            subLabel={subLabel(nextQuestionKey)}
+            label={questionsMap[nextQuestionKey].name}
             options={nextQuestionOptions}
           />
         </>
