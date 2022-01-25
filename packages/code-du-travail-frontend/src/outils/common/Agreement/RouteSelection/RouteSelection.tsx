@@ -23,6 +23,7 @@ type Props = {
 };
 
 const RouteSelection = ({ form }: Props): JSX.Element => {
+  const values = form.getState().values;
   return (
     <>
       <Question htmlFor={ROUTE_NAME} required>
@@ -54,9 +55,7 @@ const RouteSelection = ({ form }: Props): JSX.Element => {
           )}
         </Field>
         <ErrorField name={ROUTE_NAME} />
-        {form.getState().values.ccn?.route && (
-          <ShowAlert route={form.getState().values.ccn.route} />
-        )}
+        {values.ccn && <ShowAlert route={values.ccn.route} />}
       </RadioContainer>
     </>
   );
