@@ -480,7 +480,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     <label
       class="c7"
     >
-      Choisissez parmi les catégories d'ancienneté telles que définies par le Code du travail
+      Choissisez parmi les catégories d'ancienneté telles que définies par le Code du travail
     </label>
     <div
       class="c8 c9"

@@ -3,8 +3,6 @@ import { Toast } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 
-import Html from "../../../common/Html";
-import { trackQuestion } from "../../../lib/matomo";
 import { SelectQuestion } from "../../common/SelectQuestion";
 import {
   filterSituations,
@@ -14,10 +12,13 @@ import {
 import { YesNoQuestion } from "../../common/YesNoQuestion";
 
 const { questions, situations: allSituations } = data;
-const question = questions.find((v) => v.name === "ancienneté");
+const questionsMap = questions.reduce(
+  (state, { name, question }) => ({ ...state, [name]: question }),
+  {}
+);
 
 function validate({ seriousMisconduct }) {
-  const errors: any = {};
+  const errors = {};
   if (seriousMisconduct) {
     errors.seriousMisconduct = (
       <Toast>
@@ -40,7 +41,7 @@ function StepStatus({ form }) {
 
   const initialSituations = getSituationsFor(allSituations, { idcc: 0 });
   const possibleSituations = filterSituations(initialSituations, {});
-  const seniorityOptions: any = getOptions(possibleSituations, seniorityKey);
+  const seniorityOptions = getOptions(possibleSituations, seniorityKey);
 
   return (
     <>
@@ -57,17 +58,9 @@ function StepStatus({ form }) {
       {typeof disabledWorker !== "undefined" && !seriousMisconduct && (
         <SelectQuestion
           name={`cdt.${seniorityKey}`}
-          label={question.name}
-          subLabel="Choisissez parmi les catégories d'ancienneté telles que définies par le Code du travail"
+          label={questionsMap[seniorityKey]}
+          subLabel="Choissisez parmi les catégories d'ancienneté telles que définies par le Code du travail"
           options={seniorityOptions}
-          tooltip={{
-            content: <Html>{question.note}</Html>,
-            trackableFn: (visibility) => {
-              if (visibility) {
-                trackQuestion(question.name);
-              }
-            },
-          }}
         />
       )}
     </>
