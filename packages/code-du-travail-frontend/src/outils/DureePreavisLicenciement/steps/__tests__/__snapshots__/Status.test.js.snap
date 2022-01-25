@@ -546,7 +546,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       class="c0"
       for="input-cdt.ancienneté"
     >
-      ancienneté
+      Quelle est l'ancienneté du salarié ?
       <span
         class="c1"
       >
