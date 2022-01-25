@@ -15,10 +15,6 @@ import {
 import { SectionTitle } from "../../common/stepStyles";
 
 const { questions, situations: allSituations } = data;
-const questionsMap = questions.reduce(
-  (state, v) => ({ ...state, [v.name]: v }),
-  {}
-);
 
 const criteriaOrder = questions.map(({ name }) => name);
 
@@ -26,6 +22,11 @@ function StepInformations({ form }) {
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
   const idcc = ccn ? ccn.num : 0;
+
+  const questionsMap = questions.reduce(
+    (state, v) => ({ ...state, [v.name]: v }),
+    {}
+  );
 
   const initialSituations = getSituationsFor(allSituations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
@@ -52,7 +53,7 @@ function StepInformations({ form }) {
           key={key}
           name={`criteria.${key}`}
           options={answers}
-          label={questionsMap[key].name}
+          label={questionsMap[key].question}
           onChange={() =>
             form.batch(() => {
               getFormProps({
@@ -62,21 +63,25 @@ function StepInformations({ form }) {
               }).forEach((key) => form.change(`criteria.${key}`, undefined));
             })
           }
-          tooltip={{
-            content: <Html>{questionsMap[nextQuestionKey].note}</Html>,
-            trackableFn: (visibility) => {
-              if (visibility) {
-                trackQuestion(questionsMap[nextQuestionKey].note);
-              }
-            },
-          }}
+          tooltip={
+            questionsMap[key].note !== undefined
+              ? {
+                  content: <Html>{questionsMap[key].note}</Html>,
+                  trackableFn: (visibility) => {
+                    if (visibility) {
+                      trackQuestion(questionsMap[key].note);
+                    }
+                  },
+                }
+              : undefined
+          }
         />
       ))}
       {nextQuestionKey && nextQuestionOptions && (
         <>
           <SelectQuestion
             name={`criteria.${nextQuestionKey}`}
-            label={questionsMap[nextQuestionKey].name}
+            label={questionsMap[nextQuestionKey].question}
             options={nextQuestionOptions}
           />
         </>

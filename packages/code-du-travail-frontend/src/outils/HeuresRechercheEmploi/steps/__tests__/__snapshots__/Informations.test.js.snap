@@ -152,7 +152,7 @@ exports[`<StepInformations /> should render catégorie professionelle 1`] = `
       class="c2"
       for="input-criteria.catégorie professionnelle"
     >
-      catégorie professionnelle
+      Quelle est la catégorie professionnelle du salarié ?
       <span
         class="c3"
       >

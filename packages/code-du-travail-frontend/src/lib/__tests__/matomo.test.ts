@@ -72,7 +72,7 @@ describe("Matomo", () => {
   describe("Bouton d'aide sur les étapes dynamiques", () => {
     test.each`
       title                          | isTracked | params
-      ${"Catégorie professionnelle"} | ${1}      | ${[MatomoBaseEvent.TRACK_EVENT, MatomoBaseEvent.OUTIL, MatomoRetirementEvent.ACTION, MatomoSimulatorEvent.CLICK_HELP_BUTTON_CAT_PRO]}
+      ${"Catégorie professionnelle"} | ${1}      | ${[MatomoBaseEvent.TRACK_EVENT, MatomoBaseEvent.OUTIL, MatomoRetirementEvent.ACTION, MatomoSimulatorEvent.CLICK_HELP_CAT_PRO]}
       ${"Ancienneté"}                | ${1}      | ${[MatomoBaseEvent.TRACK_EVENT, MatomoBaseEvent.OUTIL, MatomoRetirementEvent.ACTION, MatomoSimulatorEvent.CLICK_HELP_ANCIENNETE]}
       ${"Échelon"}                   | ${1}      | ${[MatomoBaseEvent.TRACK_EVENT, MatomoBaseEvent.OUTIL, MatomoRetirementEvent.ACTION, MatomoSimulatorEvent.CLICK_HELP_ECHELON]}
       ${"Groupe"}                    | ${1}      | ${[MatomoBaseEvent.TRACK_EVENT, MatomoBaseEvent.OUTIL, MatomoRetirementEvent.ACTION, MatomoSimulatorEvent.CLICK_HELP_GROUPE]}

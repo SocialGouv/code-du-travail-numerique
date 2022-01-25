@@ -6,7 +6,7 @@ export enum MatomoBaseEvent {
 export enum MatomoSimulatorEvent {
   CLICK_CALCUL_DETAIL = "click_calcul_detail",
   CLICK_HELP_ANCIENNETE = "click_help_anciennete",
-  CLICK_HELP_BUTTON_CAT_PRO = "click_help_button_categorie_pro",
+  CLICK_HELP_CAT_PRO = "click_help_button_categorie_pro",
   CLICK_HELP_ECHELON = "click_help_echelon",
   CLICK_HELP_GROUPE = "click_help_groupe",
   CLICK_HELP_NIVEAU = "click_help_niveau",
@@ -16,6 +16,10 @@ export enum MatomoSimulatorEvent {
   SELECT_CAT_PRO = "select_value_categorie_pro",
   SELECT_ECHELON = "select_value_echelon",
   SELECT_GROUPE = "select_value_groupe",
+  SELECT_NIVEAU = "select_value_niveau",
+  SELECT_CLASSE = "select_value_classe",
+  SELECT_POSITION = "select_value_position",
+  SELECT_COEFFICIENT = "select_value_coefficient",
 }
 
 export enum MatomoAgreementEvent {
@@ -51,7 +55,7 @@ export const MatomoMapping: Mapping = [
     synonyms: ["Ancienneté", "ancienneté"],
   },
   {
-    helpEvent: MatomoSimulatorEvent.CLICK_HELP_BUTTON_CAT_PRO,
+    helpEvent: MatomoSimulatorEvent.CLICK_HELP_CAT_PRO,
     selectEvent: MatomoSimulatorEvent.SELECT_CAT_PRO,
     synonyms: ["Catégorie professionnelle"],
   },

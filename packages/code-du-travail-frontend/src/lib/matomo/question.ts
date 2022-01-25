@@ -8,6 +8,7 @@ export const trackQuestion = (
   MatomoMapping.forEach((v) => {
     if (v.synonyms.includes(trackTitle)) {
       if (v.helpEvent && isTrackingHelp) {
+        console.error("help");
         matopush([
           MatomoBaseEvent.TRACK_EVENT,
           MatomoBaseEvent.OUTIL,
@@ -15,6 +16,7 @@ export const trackQuestion = (
           v.helpEvent,
         ]);
       } else if (v.selectEvent && !isTrackingHelp) {
+        console.error("select");
         matopush([
           MatomoBaseEvent.TRACK_EVENT,
           MatomoBaseEvent.OUTIL,

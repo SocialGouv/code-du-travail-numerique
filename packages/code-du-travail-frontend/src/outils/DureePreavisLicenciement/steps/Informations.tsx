@@ -18,15 +18,15 @@ const { questions, situations: allSituations } = data;
 
 const criteriaOrder = questions.map(({ name }) => name);
 
-const questionsMap = questions.reduce(
-  (state, v) => ({ ...state, [v.name]: v }),
-  {}
-);
-
 function StepInformations({ form }) {
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
   const idcc = ccn ? ccn.num : 0;
+
+  const questionsMap = questions.reduce(
+    (state, v) => ({ ...state, [v.name]: v }),
+    {}
+  );
 
   const initialSituations = getSituationsFor(allSituations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
@@ -59,7 +59,7 @@ function StepInformations({ form }) {
           key={key}
           name={`criteria.${key}`}
           options={answers}
-          label={questionsMap[nextQuestionKey].name}
+          label={questionsMap[nextQuestionKey].question}
           subLabel={subLabel(key)}
           onChange={() =>
             form.batch(() => {
@@ -70,21 +70,25 @@ function StepInformations({ form }) {
               }).forEach((key) => form.change(`criteria.${key}`, undefined));
             })
           }
-          tooltip={{
-            content: <Html>{questionsMap[nextQuestionKey].note}</Html>,
-            trackableFn: (visibility) => {
-              if (visibility) {
-                trackQuestion(questionsMap[nextQuestionKey].note);
-              }
-            },
-          }}
+          tooltip={
+            questionsMap[key].note !== undefined
+              ? {
+                  content: <Html>{questionsMap[key].note}</Html>,
+                  trackableFn: (visibility) => {
+                    if (visibility) {
+                      trackQuestion(questionsMap[key].note);
+                    }
+                  },
+                }
+              : undefined
+          }
         />
       ))}
       {nextQuestionKey && nextQuestionOptions && (
         <>
           <SelectQuestion
             name={`criteria.${nextQuestionKey}`}
-            label={questionsMap[nextQuestionKey].name}
+            label={questionsMap[nextQuestionKey].question}
             subLabel={subLabel(nextQuestionKey)}
             options={nextQuestionOptions}
           />
