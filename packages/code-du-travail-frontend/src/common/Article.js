@@ -1,6 +1,7 @@
 import {
   Container,
   PageTitle,
+  Paragraph,
   Subtitle as Suptitle,
   theme,
   Wrapper,
@@ -29,7 +30,7 @@ const Article = ({
           <ShareContainer>
             <Share title={title} metaDescription={metaDescription} />
           </ShareContainer>
-          {suptitle && <OrderedSuptitle>{suptitle}</OrderedSuptitle>}
+          {suptitle && <OrderedSuptitle as="p">{suptitle}</OrderedSuptitle>}
           <StyledPageTitle
             subtitle={subtitle}
             stripe="left"
@@ -38,29 +39,32 @@ const Article = ({
             {title}
           </StyledPageTitle>
           <Meta>
-            {source &&
-              (source.url ? (
-                <Span>
-                  Source:{" "}
-                  <A11yLink
-                    href={source.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {source.name}
-                  </A11yLink>
-                </Span>
-              ) : (
-                <Span>Source: {source.name}</Span>
-              ))}
-            {source && date && (
-              <HideOnMobile aria-hidden="true">&nbsp;-&nbsp;</HideOnMobile>
-            )}
-            {date && (
-              <Span>
-                {dateLabel}&nbsp;:&nbsp;{date}
-              </Span>
-            )}
+            <Paragraph noMargin fontSize="small">
+              {source &&
+                (source.url ? (
+                  <StyledSpan>
+                    Source:{" "}
+                    <A11yLink
+                      href={source.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {source.name}
+                    </A11yLink>
+                  </StyledSpan>
+                ) : (
+                  <StyledSpan>Source: {source.name}</StyledSpan>
+                ))}
+
+              {source && date && (
+                <HideOnMobile aria-hidden="true">&nbsp;-&nbsp;</HideOnMobile>
+              )}
+              {date && (
+                <StyledSpan>
+                  {dateLabel}&nbsp;:&nbsp;{date}
+                </StyledSpan>
+              )}
+            </Paragraph>
           </Meta>
         </Flex>
         <Content>{children}</Content>
@@ -159,7 +163,7 @@ const HideOnMobile = styled.span`
   }
 `;
 
-const Span = styled.span`
+const StyledSpan = styled.span`
   @media (max-width: ${breakpoints.mobile}) {
     display: block;
   }

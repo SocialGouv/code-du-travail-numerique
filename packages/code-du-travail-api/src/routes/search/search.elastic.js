@@ -44,18 +44,10 @@ function getSearchBody({ query, size, sources = [] }) {
                     },
                   },
                 },
-                {
-                  match: {
-                    "synonymes.french": {
-                      boost: 15,
-                      query,
-                    },
-                  },
-                },
               ],
             },
           },
-        ].concat(sourcesFilter(sources, query)),
+        ].concat(sourcesFilter(sources)),
         should: [
           {
             match_phrase: {

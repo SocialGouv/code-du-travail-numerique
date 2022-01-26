@@ -11,6 +11,7 @@ import getConfig from "next/config";
 import React from "react";
 
 import { A11y } from "../src/a11y";
+import { initATInternetService } from "../src/lib/atinternet";
 import {
   clientSideRedirectMiddleware,
   serverSideRedirectMiddleware,
@@ -70,6 +71,9 @@ export default class MyApp extends App {
   componentDidMount() {
     initPiwik({ piwikUrl: PIWIK_URL, siteId: PIWIK_SITE_ID });
     clientSideRedirectMiddleware();
+    if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true") {
+      initATInternetService();
+    }
   }
 
   render() {

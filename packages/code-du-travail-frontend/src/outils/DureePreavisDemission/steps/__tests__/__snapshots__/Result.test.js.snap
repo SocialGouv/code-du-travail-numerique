@@ -44,6 +44,13 @@ exports[`<StepResult /> should render CC answer 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c14 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -122,16 +129,17 @@ exports[`<StepResult /> should render CC answer 1`] = `
   margin-top: 3.2rem;
 }
 
-.c14 {
+.c15 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -207,11 +215,11 @@ exports[`<StepResult /> should render CC answer 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -304,11 +312,11 @@ exports[`<StepResult /> should render CC answer 1`] = `
       <div
         class="c13"
       >
-        <span
-          class="c14"
+        <p
+          class="c14 c15"
         >
           Attention il peut exister une autre durée de préavis
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -335,6 +343,12 @@ exports[`<StepResult /> should render with no cc 1`] = `
 
 .c3 > *:last-child {
   margin-bottom: 0;
+}
+
+.c8 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c5 {
@@ -377,16 +391,17 @@ exports[`<StepResult /> should render with no cc 1`] = `
   margin-top: 3.2rem;
 }
 
-.c8 {
+.c9 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -470,11 +485,11 @@ exports[`<StepResult /> should render with no cc 1`] = `
       <div
         class="c7"
       >
-        <span
-          class="c8"
+        <p
+          class="c8 c9"
         >
           Attention il peut exister une autre durée de préavis
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -521,6 +536,12 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
   margin-bottom: 0;
 }
 
+.c8 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -561,16 +582,17 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
   margin-top: 3.2rem;
 }
 
-.c8 {
+.c9 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -663,11 +685,11 @@ exports[`<StepResult /> should render with unhandled cc 1`] = `
       <div
         class="c7"
       >
-        <span
-          class="c8"
+        <p
+          class="c8 c9"
         >
           Attention il peut exister une autre durée de préavis
-        </span>
+        </p>
       </div>
     </div>
     <p>

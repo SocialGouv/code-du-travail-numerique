@@ -566,7 +566,7 @@ exports[`<CookiePolicy /> should render 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  padding: 0.4rem 0;
+  padding: 0.8rem 0;
   display: inline-block;
 }
 
@@ -1616,6 +1616,26 @@ exports[`<CookiePolicy /> should render 1`] = `
                       </td>
                       <td>
                         Matomo & Fabrique numérique
+                      </td>
+                      <td>
+                        France
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Mesure d’audience anonymisée
+                      </td>
+                      <td>
+                        AT Internet
+                      </td>
+                      <td>
+                        13 mois
+                      </td>
+                      <td>
+                        Mesure d’audience
+                      </td>
+                      <td>
+                        AT Internet
                       </td>
                       <td>
                         France

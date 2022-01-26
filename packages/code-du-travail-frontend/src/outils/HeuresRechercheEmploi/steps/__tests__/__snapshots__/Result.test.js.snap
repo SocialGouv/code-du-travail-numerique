@@ -44,6 +44,13 @@ exports[`<StepResult /> should render no results 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c12 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c6 {
@@ -122,16 +129,17 @@ exports[`<StepResult /> should render no results 1`] = `
   margin-top: 3.2rem;
 }
 
-.c12 {
+.c13 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -183,11 +191,11 @@ exports[`<StepResult /> should render no results 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c4 c5"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c6"
@@ -276,11 +284,11 @@ exports[`<StepResult /> should render no results 1`] = `
       <div
         class="c11"
       >
-        <span
-          class="c12"
+        <p
+          class="c12 c13"
         >
           Attention il peut exister une durée plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -334,6 +342,13 @@ exports[`<StepResult /> should render with duration 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c14 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -412,16 +427,17 @@ exports[`<StepResult /> should render with duration 1`] = `
   margin-top: 3.2rem;
 }
 
-.c14 {
+.c15 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -513,11 +529,11 @@ exports[`<StepResult /> should render with duration 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -599,11 +615,11 @@ exports[`<StepResult /> should render with duration 1`] = `
       <div
         class="c13"
       >
-        <span
-          class="c14"
+        <p
+          class="c14 c15"
         >
           Attention il peut exister une durée plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -614,7 +630,7 @@ exports[`<StepResult /> should render with duration 1`] = `
 `;
 
 exports[`<StepResult /> should render with when no CC 1`] = `
-.c5 {
+.c6 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -628,14 +644,14 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   transition: transform 250ms linear;
 }
 
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c5 {
+[aria-expanded="true"] .c5,
+[aria-selected="true"] .c6 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c9 {
+.c10 {
   margin-bottom: 1.6rem;
   padding: 1.6rem 2rem;
   color: #3e486e;
@@ -645,21 +661,35 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   border-radius: 0.6rem;
 }
 
-.c9 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c9 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
-.c6 {
+.c1 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.c7 {
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
 }
 
-.c8 {
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.c9 {
   max-height: 0px;
   opacity: 0;
   overflow: auto;
@@ -667,7 +697,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   transition: opacity 0.5s ease-in-out;
 }
 
-.c3 {
+.c4 {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -684,18 +714,18 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   overflow: hidden;
 }
 
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
+.c4:hover,
+.c4:focus,
+.c4:focus-within,
+.c4[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c7 {
+.c8 {
   margin-left: 1rem;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -710,7 +740,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   justify-content: stretch;
 }
 
-.c12 {
+.c13 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -720,63 +750,64 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   margin-right: 2rem;
 }
 
-.c12 svg {
+.c13 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c13 {
+.c14 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c10 {
+.c11 {
   margin-top: 3.2rem;
 }
 
-.c14 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
 }
 
-.c1 {
+.c2 {
   color: #f66663;
   font-weight: 700;
   font-size: 1.8rem;
   white-space: pre-line;
 }
 
-.c2 {
+.c3 {
   font-size: 1.5em;
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c13 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c12 svg {
+  .c13 svg {
     width: 3rem;
     height: 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c1 {
+  .c2 {
     font-size: 1.6rem;
   }
 }
@@ -787,25 +818,29 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   >
     Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
-  <strong
-    class="c1 c2"
+  <p
+    class="c1"
   >
-    Aucun résultat
-  </strong>
-   : 
-  la convention collective n’a pas été renseignée.
+    <strong
+      class="c2 c3"
+    >
+      Aucun résultat
+    </strong>
+     : 
+    la convention collective n’a pas été renseignée.
+  </p>
   <p>
     Le code du travail ne prévoit pas le droit pour le salarié de s’absenter pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe une exception dans les départements de la Moselle, du Bas-Rhin et du Haut-Rhin où le salarié, qui en fait la demande, a droit à un délai raisonnable pour rechercher un emploi pendant son préavis de licenciement.
   </p>
   <div>
     <div
       aria-expanded="false"
-      class="c3"
+      class="c4"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="c4 c5"
+        class="c5 c6"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -820,14 +855,14 @@ exports[`<StepResult /> should render with when no CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
-        class="c6 c7"
+      <p
+        class="c7 c8"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <h2
         class="c0"
@@ -864,13 +899,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     </div>
   </div>
   <div
-    class="c9 c10"
+    class="c10 c11"
   >
     <div
-      class="c11"
+      class="c12"
     >
       <div
-        class="c12"
+        class="c13"
       >
         <svg
           aria-hidden="true"
@@ -890,13 +925,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         </svg>
       </div>
       <div
-        class="c13"
+        class="c14"
       >
-        <span
-          class="c14"
+        <p
+          class="c15 c16"
         >
           Attention il peut exister une durée plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -907,7 +942,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 `;
 
 exports[`<StepResult /> should render with when unhandled CC 1`] = `
-.c5 {
+.c6 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -921,14 +956,14 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   transition: transform 250ms linear;
 }
 
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c5 {
+[aria-expanded="true"] .c5,
+[aria-selected="true"] .c6 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c9 {
+.c10 {
   margin-bottom: 1.6rem;
   padding: 1.6rem 2rem;
   color: #3e486e;
@@ -938,21 +973,35 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   border-radius: 0.6rem;
 }
 
-.c9 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c9 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
-.c6 {
+.c1 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.c7 {
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
 }
 
-.c8 {
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.c9 {
   max-height: 0px;
   opacity: 0;
   overflow: auto;
@@ -960,7 +1009,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   transition: opacity 0.5s ease-in-out;
 }
 
-.c3 {
+.c4 {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -977,18 +1026,18 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   overflow: hidden;
 }
 
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
+.c4:hover,
+.c4:focus,
+.c4:focus-within,
+.c4[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c7 {
+.c8 {
   margin-left: 1rem;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1003,7 +1052,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   justify-content: stretch;
 }
 
-.c12 {
+.c13 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -1013,63 +1062,64 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   margin-right: 2rem;
 }
 
-.c12 svg {
+.c13 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c13 {
+.c14 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c10 {
+.c11 {
   margin-top: 3.2rem;
 }
 
-.c14 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
 }
 
-.c1 {
+.c2 {
   color: #f66663;
   font-weight: 700;
   font-size: 1.8rem;
   white-space: pre-line;
 }
 
-.c2 {
+.c3 {
   font-size: 1.5em;
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c13 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c12 svg {
+  .c13 svg {
     width: 3rem;
     height: 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c1 {
+  .c2 {
     font-size: 1.6rem;
   }
 }
@@ -1080,13 +1130,17 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   >
     Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
-  <strong
-    class="c1 c2"
+  <p
+    class="c1"
   >
-    Aucun résultat
-  </strong>
-   : 
-  la convention collective n’a pas encore été traitée par nos services.
+    <strong
+      class="c2 c3"
+    >
+      Aucun résultat
+    </strong>
+     : 
+    la convention collective n’a pas encore été traitée par nos services.
+  </p>
   <p>
     Vous pouvez faire une recherche par mots-clés dans
      
@@ -1102,12 +1156,12 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   <div>
     <div
       aria-expanded="false"
-      class="c3"
+      class="c4"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="c4 c5"
+        class="c5 c6"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -1122,14 +1176,14 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
-        class="c6 c7"
+      <p
+        class="c7 c8"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <h2
         class="c0"
@@ -1166,13 +1220,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     </div>
   </div>
   <div
-    class="c9 c10"
+    class="c10 c11"
   >
     <div
-      class="c11"
+      class="c12"
     >
       <div
-        class="c12"
+        class="c13"
       >
         <svg
           aria-hidden="true"
@@ -1192,13 +1246,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         </svg>
       </div>
       <div
-        class="c13"
+        class="c14"
       >
-        <span
-          class="c14"
+        <p
+          class="c15 c16"
         >
           Attention il peut exister une durée plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>

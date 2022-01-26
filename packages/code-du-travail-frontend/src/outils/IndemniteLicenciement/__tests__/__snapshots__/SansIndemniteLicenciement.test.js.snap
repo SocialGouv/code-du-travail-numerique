@@ -45,6 +45,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
 }
 
 .c12 {
@@ -104,7 +105,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
 
 .c4 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -225,11 +226,11 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
             points="9 18 15 12 9 6"
           />
         </svg>
-        <span
+        <p
           class="c10 c11"
         >
           Voir le détail du calcul
-        </span>
+        </p>
       </div>
       <div
         class="c12"

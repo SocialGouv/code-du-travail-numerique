@@ -6,7 +6,7 @@ import { Field } from "react-final-form";
 import styled from "styled-components";
 
 import ConventionSearch from "../../conventions/Search";
-import { trackConventionCollective } from "../../lib/matomo";
+import { trackConventionCollective } from "../../lib";
 import { useLocalStorage } from "../../lib/useLocalStorage";
 import { ErrorField } from "./ErrorField";
 import { Question } from "./Question";
@@ -81,11 +81,13 @@ function StepInfoCCn({
                 À noter&nbsp;: convention collective non traitée
               </Text>
             </p>
-            La convention collective sélectionnée n&apos;a pas été traitée par
-            nos services. Vous pouvez poursuivre la simulation pour connaitre la
-            durée prévue par le code du travail mais nous vous conseillons de
-            vérifier si votre convention collective prévoit un délai plus
-            favorable qui vous serait applicable.
+            <Paragraph noMargin>
+              La convention collective sélectionnée n&apos;a pas été traitée par
+              nos services. Vous pouvez poursuivre la simulation pour connaitre
+              la durée prévue par le code du travail mais nous vous conseillons
+              de vérifier si votre convention collective prévoit un délai plus
+              favorable qui vous serait applicable.
+            </Paragraph>
           </Alert>
         );
       }
@@ -97,12 +99,14 @@ function StepInfoCCn({
                 À noter&nbsp;: convention prochainement traitée
               </Text>
             </p>
-            Cette convention collective n&apos;est pas encore traitée par nos
-            services mais le sera très prochainement. Vous pouvez poursuivre la
-            simulation pour connaitre la durée prévue par le code du travail
-            mais nous vous conseillons de vérifier si votre convention
-            collective prévoit un délai plus favorable qui vous serait
-            applicable.
+            <Paragraph noMargin>
+              Cette convention collective n&apos;est pas encore traitée par nos
+              services mais le sera très prochainement. Vous pouvez poursuivre
+              la simulation pour connaitre la durée prévue par le code du
+              travail mais nous vous conseillons de vérifier si votre convention
+              collective prévoit un délai plus favorable qui vous serait
+              applicable.
+            </Paragraph>
           </Alert>
         );
       }
@@ -113,7 +117,7 @@ function StepInfoCCn({
     <>
       <Field
         name={CONVENTION_NAME}
-        validate={isOptional ? null : required}
+        validate={isOptional ? undefined : required}
         render={({ input, meta: { error } }) => {
           if (input.value) {
             return (
@@ -121,9 +125,9 @@ function StepInfoCCn({
                 <Question required={!isOptional}>
                   La convention collective
                 </Question>
-                <p>
+                <StyledParagraph noMargin>
                   Vous avez sélectionné la convention collective&nbsp;:&nbsp;
-                </p>
+                </StyledParagraph>
                 <Toast
                   variant="secondary"
                   onRemove={(event) => {
@@ -151,7 +155,7 @@ function StepInfoCCn({
           }
           return (
             <>
-              <Question as="p" required={!isOptional}>
+              <Question required={!isOptional}>
                 Quelle est la convention collective applicable au salarié ?
               </Question>
               <StyledConventionSearch onSelectConvention={onSelectConvention} />
@@ -186,4 +190,7 @@ const { spacings } = theme;
 export const ErrorToast = styled(Toast)`
   width: 100%;
   margin-top: ${spacings.medium};
+`;
+const StyledParagraph = styled(Paragraph)`
+  margin-bottom: ${spacings.small};
 `;

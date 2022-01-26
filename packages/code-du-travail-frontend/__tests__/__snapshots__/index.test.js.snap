@@ -729,7 +729,7 @@ exports[`<Home /> should render 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  padding: 0.4rem 0;
+  padding: 0.8rem 0;
   display: inline-block;
 }
 
@@ -2570,7 +2570,7 @@ exports[`<Home /> should render 1`] = `
                         <div
                           class="c55"
                         >
-                          <span
+                          <button
                             class="c10 c56"
                           >
                             Consulter
@@ -2586,7 +2586,7 @@ exports[`<Home /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2673,7 +2673,7 @@ exports[`<Home /> should render 1`] = `
                         <div
                           class="c55"
                         >
-                          <span
+                          <button
                             class="c10 c56"
                           >
                             Calculer
@@ -2689,7 +2689,7 @@ exports[`<Home /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2784,7 +2784,7 @@ exports[`<Home /> should render 1`] = `
                         <div
                           class="c55"
                         >
-                          <span
+                          <button
                             class="c10 c56"
                           >
                             Estimer
@@ -2800,7 +2800,7 @@ exports[`<Home /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2889,7 +2889,7 @@ exports[`<Home /> should render 1`] = `
                         <div
                           class="c55"
                         >
-                          <span
+                          <button
                             class="c10 c56"
                           >
                             Découvrir
@@ -2905,7 +2905,7 @@ exports[`<Home /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </span>
+                          </button>
                         </div>
                       </div>
                     </div>

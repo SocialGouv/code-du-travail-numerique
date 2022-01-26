@@ -9,10 +9,7 @@ exports[`<StepIntro /> should render 1`] = `
     Vous pourrez simuler simplement le montant de la prime de précarité définie par le Code du travail avec la prise en compte des particularités présentes dans certaines branches d’activité.
   </p>
   <p>
-    Cette simulation nécessite environ 5 minutes. Afin de pouvoir remplir les renseignements demandés, munissez-vous des informations relatives au contrat de travail (CDD ou contrat de travail temporaire (contrat d’intérim), derniers bulletins de salaire, …).
-  </p>
-  <p>
-    Cliquez sur commencer pour démarrer la simulation.
+    Afin de pouvoir remplir les renseignements demandés, munissez-vous des informations relatives au contrat de travail (CDD ou contrat de travail temporaire (contrat d’intérim), derniers bulletins de salaire, …).
   </p>
 </div>
 `;

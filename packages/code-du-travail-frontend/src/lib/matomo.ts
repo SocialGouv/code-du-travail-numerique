@@ -10,10 +10,10 @@ import {
   MatomoPreavisRetraiteEvent,
   MatomoPreavisRetraiteTrackTitle,
   MatomoTrackUrl,
-} from "../../outils/common/type/matomo";
-import { ConventionCollective } from "../../outils/common/type/WizardType";
-import { matopush } from "../../piwik";
-import { removeQueryParameters } from "..";
+} from "../outils/common/type/matomo";
+import { ConventionCollective } from "../outils/common/type/WizardType";
+import { matopush } from "../piwik";
+import { removeQueryParameters } from ".";
 
 const MatomoMappingRetraiteHelpEvent = {
   [MatomoPreavisRetraiteTrackTitle.ANCIENNETE]:

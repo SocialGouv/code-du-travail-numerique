@@ -87,6 +87,7 @@ exports[`<ViewMore /> renders with an button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .c3 {

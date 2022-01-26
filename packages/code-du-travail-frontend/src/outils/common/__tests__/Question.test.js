@@ -10,14 +10,11 @@ describe("<Question />", () => {
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         display: block;
-        margin-top: 2rem;
+        margin-top: 1rem;
         margin-bottom: 1rem;
         font-size: 1.8rem;
-        cursor: pointer;
-      }
-
-      .c1 {
         font-weight: 600;
+        cursor: pointer;
       }
 
       @media (max-width:600px) {
@@ -30,11 +27,7 @@ describe("<Question />", () => {
         <label
           class="c0"
         >
-          <span
-            class="c1"
-          >
-            ma question
-          </span>
+          ma question
         </label>
       </div>
     `);
@@ -44,7 +37,7 @@ describe("<Question />", () => {
       <Question required>ma question obligatoire</Question>
     );
     expect(container).toMatchInlineSnapshot(`
-      .c2 {
+      .c1 {
         color: #3e486e;
         font-size: 1.6rem;
         font-weight: 400;
@@ -52,14 +45,11 @@ describe("<Question />", () => {
 
       .c0 {
         display: block;
-        margin-top: 2rem;
+        margin-top: 1rem;
         margin-bottom: 1rem;
         font-size: 1.8rem;
-        cursor: pointer;
-      }
-
-      .c1 {
         font-weight: 600;
+        cursor: pointer;
       }
 
       @media (max-width:600px) {
@@ -72,13 +62,9 @@ describe("<Question />", () => {
         <label
           class="c0"
         >
+          ma question obligatoire
           <span
             class="c1"
-          >
-            ma question obligatoire
-          </span>
-          <span
-            class="c2"
           >
              (obligatoire)
           </span>

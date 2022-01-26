@@ -8,14 +8,15 @@ export enum ScreenType {
   enterprise = "entreprise",
   agreementSelection = "selection",
 }
+
 export type SearchParams = {
   query: string;
   address: string;
 };
 
 type NavContext = {
-  enterprise?: Enterprise;
-  setEnterprise: (enterprise: Enterprise) => void;
+  enterprise: Enterprise | null;
+  setEnterprise: (enterprise: Enterprise | null) => void;
   searchParams: SearchParams;
   setSearchParams: (search: SearchParams) => void;
 };
@@ -23,8 +24,12 @@ type NavContext = {
 export const navContext = createContext<NavContext>({
   enterprise: null,
   searchParams: { address: "", query: "" },
-  setEnterprise: null,
-  setSearchParams: null,
+  setEnterprise: () => {
+    /* nothing to do */
+  },
+  setSearchParams: () => {
+    /* nothing to do */
+  },
 });
 
 export function useNavContext(): NavContext {
@@ -33,12 +38,13 @@ export function useNavContext(): NavContext {
 
 const { Provider } = navContext;
 type Props = {
-  enterprise: Enterprise;
+  enterprise: Enterprise | null;
   setEnterprise: (enterprise: Enterprise) => void;
   children: React.ReactNode;
   searchParams: SearchParams;
   setSearchParams: (search: SearchParams) => void;
 };
+
 export function NavProvider({
   enterprise,
   setEnterprise,

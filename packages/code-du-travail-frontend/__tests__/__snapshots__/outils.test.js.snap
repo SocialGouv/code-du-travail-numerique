@@ -710,7 +710,7 @@ exports[`<Outils /> should render 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  padding: 0.4rem 0;
+  padding: 0.8rem 0;
   display: inline-block;
 }
 
@@ -1687,7 +1687,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <span
+                          <button
                             class="c14 c46"
                           >
                             Découvrir
@@ -1703,7 +1703,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1816,7 +1816,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <span
+                          <button
                             class="c14 c46"
                           >
                             Estimer
@@ -1832,7 +1832,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1919,7 +1919,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <span
+                          <button
                             class="c14 c46"
                           >
                             Calculer
@@ -1935,7 +1935,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2030,7 +2030,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <span
+                          <button
                             class="c14 c46"
                           >
                             Estimer
@@ -2046,7 +2046,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2163,7 +2163,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <span
+                          <button
                             class="c14 c46"
                           >
                             Estimer
@@ -2179,7 +2179,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2269,7 +2269,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <span
+                          <button
                             class="c14 c46"
                           >
                             Calculer
@@ -2285,7 +2285,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2382,7 +2382,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <span
+                          <button
                             class="c14 c46"
                           >
                             Calculer
@@ -2398,7 +2398,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2491,7 +2491,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <span
+                          <button
                             class="c14 c46"
                           >
                             Consulter
@@ -2507,7 +2507,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2597,7 +2597,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <span
+                          <button
                             class="c14 c46"
                           >
                             Calculer
@@ -2613,7 +2613,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2712,7 +2712,7 @@ exports[`<Outils /> should render 1`] = `
                         <div
                           class="c45"
                         >
-                          <span
+                          <button
                             class="c14 c46"
                           >
                             Consulter
@@ -2728,7 +2728,7 @@ exports[`<Outils /> should render 1`] = `
                                 fill="currentColor"
                               />
                             </svg>
-                          </span>
+                          </button>
                         </div>
                       </div>
                     </div>

@@ -15,9 +15,11 @@ export type TrackingContext = {
 };
 
 export const trackingContext = createContext<TrackingContext>({
-  title: null,
-  trackEvent: null,
-  uuid: null,
+  title: "",
+  trackEvent: () => {
+    /* nothing to do */
+  },
+  uuid: "",
 });
 
 export function useTrackingContext(): TrackingContext {

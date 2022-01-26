@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.67.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.0...v4.67.1) (2022-01-24)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# [4.67.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.2...v4.67.0) (2022-01-24)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.66.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.1...v4.66.2) (2022-01-14)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.66.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.0...v4.66.1) (2022-01-14)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# [4.66.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.4...v4.66.0) (2022-01-14)
+
+
+### Bug Fixes
+
+* **api:** set search option same as before ([#4161](https://github.com/SocialGouv/code-du-travail-numerique/issues/4161)) ([b5365e6](https://github.com/SocialGouv/code-du-travail-numerique/commit/b5365e6f3bee2823034646595cee2d105e1274bc))
+
+
+
+
+
 ## [4.65.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.3...v4.65.4) (2022-01-05)
 
 **Note:** Version bump only for package @cdt/api

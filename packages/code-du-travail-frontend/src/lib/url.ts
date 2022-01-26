@@ -20,17 +20,15 @@ export const removeQueryParameters = (url: string): string => {
 
 export const urlRulesReplacement = (url: string): string => {
   let res = url;
-  MappingReplacement.forEach(({ rules }) => {
-    rules.forEach(({ newValue, path, previousValues }) => {
-      path.forEach((v) => {
-        if (url.includes(v)) {
-          previousValues.forEach((pv) => {
-            if (url.includes(pv)) {
-              res = url.replace(pv, newValue);
-            }
-          });
-        }
-      });
+  MappingReplacement.forEach(({ newValue, path, previousValues }) => {
+    path.forEach((v) => {
+      if (url.includes(v)) {
+        previousValues.forEach((pv) => {
+          if (url.includes(pv)) {
+            res = url.replace(pv, newValue);
+          }
+        });
+      }
     });
   });
   return res;

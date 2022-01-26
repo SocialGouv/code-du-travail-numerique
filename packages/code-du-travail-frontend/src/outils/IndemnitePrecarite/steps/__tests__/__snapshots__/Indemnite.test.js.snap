@@ -44,6 +44,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -127,7 +134,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -149,11 +156,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 @media (max-width:600px) {
@@ -215,11 +223,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -592,11 +600,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
       <div
         class="c14"
       >
-        <span
-          class="c15"
+        <p
+          class="c15 c16"
         >
           Attention il peut exister un montant plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -662,6 +670,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -745,7 +760,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -767,11 +782,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 @media (max-width:600px) {
@@ -833,11 +849,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -1199,11 +1215,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
       <div
         class="c14"
       >
-        <span
-          class="c15"
+        <p
+          class="c15 c16"
         >
           Attention il peut exister un montant plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -1272,6 +1288,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -1355,7 +1378,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1377,11 +1400,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 @media (max-width:600px) {
@@ -1443,11 +1467,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -1820,11 +1844,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
       <div
         class="c14"
       >
-        <span
-          class="c15"
+        <p
+          class="c15 c16"
         >
           Attention il peut exister un montant plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -1893,6 +1917,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -1976,7 +2007,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1998,11 +2029,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 @media (max-width:600px) {
@@ -2064,11 +2096,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -2430,11 +2462,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
       <div
         class="c14"
       >
-        <span
-          class="c15"
+        <p
+          class="c15 c16"
         >
           Attention il peut exister un montant plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -2503,6 +2535,13 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -2586,7 +2625,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -2608,11 +2647,12 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 @media (max-width:600px) {
@@ -2674,11 +2714,11 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -3040,11 +3080,11 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
       <div
         class="c14"
       >
-        <span
-          class="c15"
+        <p
+          class="c15 c16"
         >
           Attention il peut exister un montant plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
