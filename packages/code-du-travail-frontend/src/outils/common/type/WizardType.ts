@@ -1,6 +1,8 @@
 import { FormApi } from "final-form";
 import React from "react";
 
+import type { Agreement } from "../../../conventions/Search/api/type";
+
 export type SkipFn = (values: FormContent) => boolean;
 
 export type Step = {
@@ -32,15 +34,7 @@ export type WizardStepProps = {
   dispatch: React.Dispatch<Action>;
 };
 
-export type Agreement = {
-  id: string;
-  num: number;
-  shortTitle: string;
-  slug: string;
-  title: string;
-};
-
-export type AgreementRoute = "not-selected";
+export type AgreementRoute = "not-selected" | "agreement";
 
 export interface ConventionCollective {
   route: AgreementRoute;

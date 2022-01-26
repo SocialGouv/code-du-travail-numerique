@@ -81,7 +81,20 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
   let Step;
   switch (screen) {
     case ScreenType.agreement:
-      Step = <Steps.AgreementSearchStep onBackClick={clearSearchType} />;
+      Step = (
+        <Steps.AgreementSearchStep
+          onBackClick={clearSearchType}
+          onSelectAgreement={(agreement) => {
+            trackEvent(
+              "cc_select_p1",
+              title,
+              `idcc${agreement.num.toString()}`,
+              uuid
+            );
+            router.push(`/convention-collective/${agreement.slug}`);
+          }}
+        />
+      );
       break;
     case ScreenType.enterprise:
       Step = <Steps.EnterpriseSearchStep onBackClick={clearSearchType} />;

@@ -30,6 +30,26 @@ const RouteSelection = ({ form }: Props): JSX.Element => {
         <Field<AgreementRoute>
           type="radio"
           name={ROUTE_NAME}
+          value="agreement"
+          validate={required}
+        >
+          {(props) => (
+            <InputRadio
+              label={
+                <Text>
+                  Je connais ma convention collective.{" "}
+                  <Text variant="primary">Je la saisis</Text>
+                  <StyledArrowRight variant={"primary"} />
+                </Text>
+              }
+              id={`agreement`}
+              {...props.input}
+            />
+          )}
+        </Field>
+        <Field<AgreementRoute>
+          type="radio"
+          name={ROUTE_NAME}
           value="not-selected"
           validate={required}
         >
