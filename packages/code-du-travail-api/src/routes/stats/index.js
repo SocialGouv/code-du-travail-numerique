@@ -79,7 +79,7 @@ router.get("/stats", async (ctx) => {
   const [nbVisitData, infoData] = await Promise.all(promises);
 
   if (!nbVisitData && !infoData) {
-    ctx.status = 404;
+    ctx.status = 502;
     ctx.body = {};
   } else {
     ctx.body = {

@@ -50,7 +50,7 @@ describe("Stats", () => {
       return Promise.reject("MATOMO IS DOWN");
     });
     const response = await request(app.callback()).get(`/api/v1/stats`);
-    expect(response.status).toBe(404);
+    expect(response.status).toBe(502);
     expect(response.body).toStrictEqual({});
     expect(response.ok).toBe(false);
   });
