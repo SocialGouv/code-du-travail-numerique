@@ -1,6 +1,7 @@
 import { Select, theme } from "@socialgouv/cdtn-ui";
-import React, { SyntheticEvent } from "react";
+import React from "react";
 import { Field } from "react-final-form";
+import { OnChange, OnFocus } from "react-final-form-listeners";
 import styled from "styled-components";
 
 import { Error } from "./ErrorField";
@@ -31,52 +32,56 @@ const SelectQuestion = ({
   } else {
     optionsArray = options;
   }
-  return (
-    <Field
-      name={name}
-      validate={required}
-      subscription={{ dirty: true, error: true, value: true }}
-    >
-      {({ input, meta: { error, dirty } }) => {
-        return (
-          <Wrapper>
-            <Question required tooltip={tooltip} htmlFor={uid}>
-              {label}
-            </Question>
-            {subLabel && <SubLabel>{subLabel}</SubLabel>}
-            <StyledSelect
-              {...input}
-              id={uid}
-              onChange={(val: SyntheticEvent) => {
-                if (onChange) {
-                  onChange(val);
-                }
-                input.onChange(val);
-              }}
-            >
-              <option disabled value="">
-                ...
-              </option>
-              {optionsArray.map((option) => {
-                let key, label;
-                if (Array.isArray(option)) {
-                  [key, label] = option;
-                } else {
-                  key = label = option;
-                }
 
-                return (
-                  <option value={key} key={key}>
-                    {label}
-                  </option>
-                );
-              })}
-            </StyledSelect>
-            {error && dirty && <Error>{error}</Error>}
-          </Wrapper>
-        );
-      }}
-    </Field>
+  return (
+    <>
+      <Field
+        name={name}
+        validate={required}
+        subscription={{ dirty: true, error: true, modified: true, value: true }}
+      >
+        {({ input, meta: { error, dirty } }) => {
+          return (
+            <Wrapper>
+              <Question required tooltip={tooltip} htmlFor={uid}>
+                {label}
+              </Question>
+              {subLabel && <SubLabel>{subLabel}</SubLabel>}
+              <StyledSelect {...input} id={uid}>
+                <option disabled value="">
+                  ...
+                </option>
+                {optionsArray.map((option) => {
+                  let key, label;
+                  if (Array.isArray(option)) {
+                    [key, label] = option;
+                  } else {
+                    key = label = option;
+                  }
+
+                  return (
+                    <option value={key} key={key}>
+                      {label}
+                    </option>
+                  );
+                })}
+              </StyledSelect>
+              {error && dirty && <Error>{error}</Error>}
+            </Wrapper>
+          );
+        }}
+      </Field>
+      <OnChange name={name}>
+        {(values, _previous) => {
+          onChange?.(values);
+        }}
+      </OnChange>
+      <OnFocus name={name}>
+        {(values, _previous) => {
+          onChange?.(values);
+        }}
+      </OnFocus>
+    </>
   );
 };
 
