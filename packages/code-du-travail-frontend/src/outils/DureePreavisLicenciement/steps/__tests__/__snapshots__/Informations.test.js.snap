@@ -424,7 +424,7 @@ exports[`<StepInformations /> should render groupe 1`] = `
       class="c2"
       for="input-criteria.catégorie professionnelle"
     >
-      Quel est le groupe professionnel du salarié ?
+      Quelle est la catégorie professionnelle du salarié ?
       <span
         class="c3"
       >

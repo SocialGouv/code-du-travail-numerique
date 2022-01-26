@@ -59,7 +59,7 @@ function StepInformations({ form }) {
           key={key}
           name={`criteria.${key}`}
           options={answers}
-          label={questionsMap[nextQuestionKey].question}
+          label={questionsMap[key].question}
           subLabel={subLabel(key)}
           onChange={() => {
             trackQuestion(
