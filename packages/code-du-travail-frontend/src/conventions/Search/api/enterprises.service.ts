@@ -48,7 +48,8 @@ const siretNumberError =
 
 const ENTERPRISE_API_URL =
   // "https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1";
-  "https://search-recherche-entreprises-remi-siege-n-fields-3x4l.dev.fabrique.social.gouv.fr/api/v1";
+  // "https://search-recherche-entreprises-remi-siege-n-fields-3x4l.dev.fabrique.social.gouv.fr/api/v1";
+  "http://localhost:3001/api/v1";
 
 const makeSearchUrl = ({ query, address }) => {
   const params: { k: string; v: string }[] = [
