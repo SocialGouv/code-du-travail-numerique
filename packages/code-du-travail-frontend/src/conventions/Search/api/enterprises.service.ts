@@ -58,6 +58,7 @@ const makeSearchUrl = ({ query, address }) => {
     { k: "convention", v: "true" },
     { k: "employer", v: "true" },
     { k: "open", v: "true" },
+    { k: "matchingLimit", v: "0" },
   ];
 
   const flattenParams = params
