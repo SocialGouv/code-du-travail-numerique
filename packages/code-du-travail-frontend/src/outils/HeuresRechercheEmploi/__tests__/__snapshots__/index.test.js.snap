@@ -32,7 +32,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c5 {
+.c8 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -40,15 +40,15 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c5 > *:first-child {
+.c8 > *:first-child {
   margin-top: 0;
 }
 
-.c5 > *:last-child {
+.c8 > *:last-child {
   margin-bottom: 0;
 }
 
-.c17 {
+.c20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -86,16 +86,16 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   will-change: transform;
 }
 
-.c17:link,
-.c17:visited {
+.c20:link,
+.c20:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c17:not([disabled]):hover,
-.c17:not([disabled]):active,
-.c17:not([disabled]):focus {
+.c20:not([disabled]):hover,
+.c20:not([disabled]):active,
+.c20:not([disabled]):focus {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -104,7 +104,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   border-color: #f99593;
 }
 
-.c17[disabled] {
+.c20[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -112,13 +112,13 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c10 {
+.c13 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c16 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -134,16 +134,16 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   margin: 5rem 0 3.2rem 0;
 }
 
-.c19 {
+.c22 {
   margin-left: auto;
 }
 
-.c20 {
+.c23 {
   width: 3rem;
   margin-left: 1rem;
 }
 
-.c6 {
+.c9 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -160,16 +160,16 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   border-radius: 0.6rem 0 0 0.6rem;
 }
 
-.c7 {
+.c10 {
   margin: 2rem 0;
   font-weight: 600;
 }
 
-.c9 {
+.c12 {
   display: none;
 }
 
-.c12 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -187,11 +187,11 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   outline: none;
 }
 
-.c11 + .c11 {
+.c14 + .c14 {
   margin-top: 1.6rem;
 }
 
-.c14 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -209,11 +209,11 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   outline: none;
 }
 
-.c11 + .c11 {
+.c14 + .c14 {
   margin-top: 1.6rem;
 }
 
-.c13 {
+.c16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -238,7 +238,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   border-radius: 49%;
 }
 
-.c15 {
+.c18 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -286,6 +286,23 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   border-bottom: 1px solid #bbcadf;
 }
 
+.c5 {
+  position: relative;
+  padding-right: 45px;
+}
+
+.c7 {
+  position: absolute;
+  bottom: 3px;
+  left: 28px;
+  font-size: 1.2rem;
+  color: #3e486e;
+}
+
+.c6 {
+  width: 4.2rem;
+}
+
 .c4 {
   margin: 0;
 }
@@ -321,44 +338,44 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c8 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c5 {
+  .c8 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c20 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c17 {
+  .c20 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c20 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:980px) {
-  .c18 + .c18 {
+  .c21 + .c21 {
     margin-top: 1.6rem;
   }
 }
 
 @media (max-width:980px) {
-  .c16 {
+  .c19 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -370,13 +387,13 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
 }
 
 @media print {
-  .c16 {
+  .c19 {
     display: none;
   }
 }
 
 @media (max-width:980px) {
-  .c6 {
+  .c9 {
     position: relative;
     -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
@@ -397,48 +414,48 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
 }
 
 @media print {
-  .c6 {
+  .c9 {
     display: none;
   }
 }
 
 @media (max-width:980px) {
-  .c7 {
+  .c10 {
     margin: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c8 {
+  .c11 {
     display: none;
   }
 }
 
 @media (max-width:980px) {
-  .c9 {
+  .c12 {
     display: inline-block;
   }
 }
 
 @media (max-width:980px) {
-  .c12 {
+  .c15 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
 
-  .c11 + .c11 {
+  .c14 + .c14 {
     margin-top: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c14 {
+  .c17 {
     display: none;
   }
 
-  .c11 + .c11 {
+  .c14 + .c14 {
     margin-top: 0;
   }
 }
@@ -482,79 +499,128 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
             Heures pour recherche d'emploi
           </h1>
         </div>
+        <div
+          class="c5"
+        >
+          <svg
+            aria-hidden="true"
+            class="c6"
+            fill="none"
+            viewBox="0 0 52 52"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              clip-path="url(#time-with-label_svg__a)"
+            >
+              <path
+                d="M34.71 5.86a21.916 21.916 0 0 1 12.832 15.971 1.016 1.016 0 0 1-1.995.384 19.886 19.886 0 0 0-11.644-14.49 1.016 1.016 0 1 1 .807-1.865zm-4.021-1.295.026.006a1.016 1.016 0 1 1-.442 1.982l-.012-.002a1.016 1.016 0 1 1 .428-1.986zM6.453 29.785a19.853 19.853 0 0 0 11.873 14.589 1.015 1.015 0 1 1-.783 1.874 22.062 22.062 0 0 1-8.521-6.355 21.938 21.938 0 0 1-4.564-9.724 1.016 1.016 0 0 1 1.995-.384zm15.225 15.651.063.014a1.016 1.016 0 0 1-.432 1.985l-.071-.016a1.016 1.016 0 1 1 .44-1.983zm.153-40.978a1.015 1.015 0 1 1 .384 1.995A19.854 19.854 0 0 0 6.55 21.741a1.016 1.016 0 0 1-1.985-.432 21.848 21.848 0 0 1 6.105-11.002 21.836 21.836 0 0 1 11.161-5.849z"
+                fill="#FF7067"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M27.016 22.7v-8.65a1.016 1.016 0 0 0-2.031 0v8.65a3.469 3.469 0 0 0-2.286 2.285h-3.774a1.016 1.016 0 0 0 0 2.031h3.774A3.46 3.46 0 0 0 26 29.453 3.457 3.457 0 0 0 29.453 26a3.46 3.46 0 0 0-2.437-3.3zm-1.037 1.878a1.513 1.513 0 0 0 .042 0A1.423 1.423 0 0 1 26 27.422 1.423 1.423 0 0 1 24.578 26v-.02a1.423 1.423 0 0 1 1.401-1.402z"
+                fill="#FF7067"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M25 5.078a1.016 1.016 0 0 1 2.031 0v2.276a1.016 1.016 0 1 1-2.031 0V5.078zm-.031 38.844a1.016 1.016 0 0 1 2.031 0v3a1.016 1.016 0 0 1-2.031 0v-3zM44.18 25h2.742a1.016 1.016 0 0 1 0 2.031H44.18a1.016 1.016 0 0 1 0-2.031zm-39.102-.031h2.945a1.016 1.016 0 0 1 0 2.031H5.078a1.016 1.016 0 0 1 0-2.031z"
+                fill="#FF7067"
+              />
+              <path
+                d="M44.385 7.615C39.474 2.705 32.945 0 26 0 19.055 0 12.526 2.704 7.615 7.615 2.705 12.526 0 19.055 0 26c0 6.945 2.705 13.474 7.615 18.385C12.526 49.295 19.055 52 26 52c.373 0 .718.003 1.042.005 2.03.016 3.235.025 5.401-.66L31.5 49.5c-1.751.53-2.678.512-4.205.484-.386-.007-.81-.015-1.295-.015C12.784 49.969 2.031 39.216 2.031 26 2.031 12.784 12.784 2.031 26 2.031c13.216 0 23.969 10.753 23.969 23.969 0 .287 0 .56.002.82.01 2.443.015 3.852-.884 6.228L50.5 35c1.414-3.238 1.5-5.36 1.5-9 0-6.945-2.705-13.474-7.615-18.385z"
+                fill="#4E6896"
+              />
+            </g>
+            <defs>
+              <clippath
+                id="time-with-label_svg__a"
+              >
+                <path
+                  d="M0 0h52v52H0z"
+                  fill="#fff"
+                />
+              </clippath>
+            </defs>
+          </svg>
+          <span
+            class="c7"
+          >
+            2 à 5 min
+          </span>
+        </div>
       </div>
       <div
-        class="c5 c6"
+        class="c8 c9"
       >
         <span
           aria-level="2"
-          class="c7"
+          class="c10"
           role="heading"
         >
           Étape
           <span
-            class="c8"
+            class="c11"
           >
             s
           </span>
           <span
-            class="c9"
+            class="c12"
           >
              
             1/5
           </span>
         </span>
         <ol
-          class="c10"
+          class="c13"
         >
           <li
             aria-live="polite"
-            class="c11 c12"
+            class="c14 c15"
             tabindex="-1"
             title="onglet actif"
           >
             <span
-              class="c13"
+              class="c16"
             >
               1
             </span>
             Introduction
           </li>
           <li
-            class="c11 c14"
+            class="c14 c17"
           >
             <span
-              class="c15"
+              class="c18"
             >
               2
             </span>
             Convention collective
           </li>
           <li
-            class="c11 c14"
+            class="c14 c17"
           >
             <span
-              class="c15"
+              class="c18"
             >
               3
             </span>
             Type de rupture
           </li>
           <li
-            class="c11 c14"
+            class="c14 c17"
           >
             <span
-              class="c15"
+              class="c18"
             >
               4
             </span>
             Informations
           </li>
           <li
-            class="c11 c14"
+            class="c14 c17"
           >
             <span
-              class="c15"
+              class="c18"
             >
               5
             </span>
@@ -569,23 +635,18 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
         Le code du travail ne prévoit pas ce droit (sauf cas particulier du droit applicable à l’Alsace Moselle). En revanche, plusieurs conventions collectives fixent un nombre d’heures d’absence autorisée pour rechercher un emploi et leurs conditions d’utilisation.
       </p>
       <p>
-        Afin de réaliser cette simulation, vous aurez besoin de connaître la convention collective applicable et, dans certains cas, des informations sur le salarié, comme sa catégorie professionnelle ou son ancienneté. La plupart de ces informations se trouvent sur le contrat de travail ou le bulletin de salaire. 
-        <br />
-        Prévoyez 2 à 5 minutes pour cette simulation.
-      </p>
-      <p>
-        Cliquez sur Commencer pour démarrer la simulation.
+        Afin de réaliser cette simulation, vous aurez besoin de connaître la convention collective applicable et, dans certains cas, des informations sur le salarié, comme sa catégorie professionnelle ou son ancienneté. La plupart de ces informations se trouvent sur le contrat de travail ou le bulletin de salaire.
       </p>
       <div
-        class="c16"
+        class="c19"
       >
         <button
-          class="c17 c18 c19"
+          class="c20 c21 c22"
         >
           Commencer
           <svg
             aria-hidden="true"
-            class="c20"
+            class="c23"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"

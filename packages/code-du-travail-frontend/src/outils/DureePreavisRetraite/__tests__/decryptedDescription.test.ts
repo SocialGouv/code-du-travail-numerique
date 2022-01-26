@@ -1,4 +1,7 @@
-import { FormContent } from "../../common/type/WizardType";
+import {
+  ConventionCollective,
+  FormContent,
+} from "../../common/type/WizardType";
 import {
   AgreementStatus,
   createRootData,
@@ -138,7 +141,7 @@ describe("Validation de l'aggregation des données", () => {
       expectedNoticeUsed,
       expectedAgreement,
     }) => {
-      let ccn = null;
+      let ccn: ConventionCollective | null = null;
       if (ccnNum) {
         ccn = {
           id: "ID",

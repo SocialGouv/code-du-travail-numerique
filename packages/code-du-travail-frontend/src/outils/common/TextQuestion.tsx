@@ -12,7 +12,7 @@ type Props = {
   name: string;
   label: string;
   inputType?: string;
-  validate?: (unknown) => string;
+  validate?: (unknown) => string | undefined;
   validateOnChange?: boolean;
   tooltip?: Tooltip;
   placeholder?: string;

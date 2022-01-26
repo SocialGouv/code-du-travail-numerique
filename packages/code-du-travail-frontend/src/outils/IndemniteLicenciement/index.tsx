@@ -10,7 +10,12 @@ import {
   stepSalaires,
 } from "./stepReducer";
 
-function CalculateurIndemnite({ icon, title }) {
+interface Props {
+  icon: string;
+  title: string;
+}
+
+const CalculateurIndemnite = ({ icon, title }: Props): JSX.Element => {
   /**
    * The rules defined here allows to manage additionnal steps to the wizard
    */
@@ -30,10 +35,7 @@ function CalculateurIndemnite({ icon, title }) {
         {async (value) => {
           if (value) {
             const module = await import(`./ccn/${value}`);
-            const steps = module.steps.filter(({ condition = () => true }) =>
-              condition(values)
-            );
-            dispatch({ payload: steps, type: "add_branche" });
+            dispatch({ payload: module.steps, type: "add_branche" });
           } else {
             dispatch({ type: "remove_branche" });
           }
@@ -46,12 +48,13 @@ function CalculateurIndemnite({ icon, title }) {
     <Wizard
       icon={icon}
       title={title}
+      duration="5 à 10 min"
       stepReducer={stepReducer}
       initialState={initialState}
       Rules={Rules}
     />
   );
-}
+};
 
 CalculateurIndemnite.propTypes = {
   initialState: PropTypes.object,
