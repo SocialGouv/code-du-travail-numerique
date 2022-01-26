@@ -1,7 +1,6 @@
 import { Select, theme } from "@socialgouv/cdtn-ui";
-import React from "react";
+import React, { SyntheticEvent } from "react";
 import { Field } from "react-final-form";
-import { OnChange } from "react-final-form-listeners";
 import styled from "styled-components";
 
 import { Error } from "./ErrorField";
@@ -45,7 +44,16 @@ const SelectQuestion = ({
               {label}
             </Question>
             {subLabel && <SubLabel>{subLabel}</SubLabel>}
-            <StyledSelect {...input} id={uid}>
+            <StyledSelect
+              {...input}
+              id={uid}
+              onChange={(val: SyntheticEvent) => {
+                if (onChange) {
+                  onChange(val);
+                }
+                input.onChange(val);
+              }}
+            >
               <option disabled value="">
                 ...
               </option>
@@ -65,9 +73,6 @@ const SelectQuestion = ({
               })}
             </StyledSelect>
             {error && dirty && <Error>{error}</Error>}
-            {onChange && (
-              <OnChange name={name}>{(values) => onChange(values)}</OnChange>
-            )}
           </Wrapper>
         );
       }}
