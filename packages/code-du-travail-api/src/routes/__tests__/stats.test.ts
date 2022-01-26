@@ -51,7 +51,7 @@ describe("Stats", () => {
     });
     const response = await request(app.callback()).get(`/api/v1/stats`);
     expect(response.status).toBe(404);
-    expect(response.body).toMatchInlineSnapshot(`Object {}`);
+    expect(response.body).toStrictEqual({});
     expect(response.ok).toBe(false);
   });
 });
