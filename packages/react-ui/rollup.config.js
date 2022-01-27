@@ -24,7 +24,7 @@ export default {
       exclude: ["node_modules/**", "story.js", "test.js"],
       include: "src/**/*.js",
     }),
-    resolve({ preferBuiltins: true }),
+    resolve(),
   ],
   watch: {
     include: "src/**",
