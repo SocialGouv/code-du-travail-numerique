@@ -26,7 +26,7 @@ const SituationInput = ({ element }: PublicodesInputProps): JSX.Element => {
 type Props = {
   situation: SituationElement[];
   annotations?: JSX.Element[];
-  onOverrideInput?: (element: SituationElement) => JSX.Element;
+  onOverrideInput?: (element: SituationElement) => JSX.Element | null;
 };
 
 const PubliSituation = ({

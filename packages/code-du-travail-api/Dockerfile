@@ -33,4 +33,6 @@ COPY --from=node_modules node_modules /app/node_modules
 
 COPY . /app
 
+USER 1000
+
 CMD [ "yarn", "start" ]
