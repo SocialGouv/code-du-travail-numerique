@@ -1,5 +1,5 @@
-import resolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
+import resolve from "@rollup/plugin-node-resolve";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
 const packageJson = require("./package.json");
@@ -24,7 +24,7 @@ export default {
       exclude: ["node_modules/**", "story.js", "test.js"],
       include: "src/**/*.js",
     }),
-    resolve(),
+    resolve({ preferBuiltins: true }),
   ],
   watch: {
     include: "src/**",

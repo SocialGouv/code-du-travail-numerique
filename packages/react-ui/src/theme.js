@@ -113,3 +113,5 @@ export const box = {
 export const animations = {
   transitionTiming: "250ms",
 };
+
+export const input = { height: "5.4rem" };
