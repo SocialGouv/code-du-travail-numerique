@@ -60,12 +60,12 @@
     {
       "name": "classe",
       "question": "Quelle est la classe du salarié ?",
-      "note": "Le classe du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>."
+      "note": "La classe du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "position",
       "question": "Quelle est la position du salarié ?",
-      "note": "Le position du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>."
+      "note": "La position du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "groupe",
@@ -86,7 +86,7 @@
     {
       "name": "ancienneté",
       "question": "Quelle est l'ancienneté du salarié ?",
-      "note": "L'ancienneté du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>."
+      "note": "L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "secteur d'activité",

@@ -18,15 +18,20 @@ const { questions, situations: allSituations } = data;
 
 const criteriaOrder = questions.map(({ name }) => name);
 
+const questionsMap = questions.reduce(
+  (state, v) => ({ ...state, [v.name]: v }),
+  {}
+);
+
+type OpenArray = Array<{
+  key: string;
+  status: boolean;
+}>;
+
 function StepInformations({ form }) {
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
   const idcc = ccn ? ccn.num : 0;
-
-  const questionsMap = questions.reduce(
-    (state, v) => ({ ...state, [v.name]: v }),
-    {}
-  );
 
   const initialSituations = getSituationsFor(allSituations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
@@ -45,6 +50,24 @@ function StepInformations({ form }) {
     criteria
   );
 
+  const [isOpenArray, setIsOpenArray] = React.useState<OpenArray>([]);
+
+  const handleChange = (key: string) => {
+    let isFound = false;
+    const arr = isOpenArray.map((v) => {
+      if (v.key === key) {
+        isFound = true;
+        return { ...v, status: !v.status };
+      }
+      return v;
+    });
+    if (!isFound) {
+      setIsOpenArray([...isOpenArray, { key, status: true }]);
+    } else {
+      setIsOpenArray(arr);
+    }
+  };
+
   return (
     <>
       <SectionTitle>Statut du salarié</SectionTitle>
@@ -57,7 +80,7 @@ function StepInformations({ form }) {
           onChange={() => {
             trackQuestion(
               questionsMap[key].name,
-              MatomoActionEvent.RESIGNATION,
+              MatomoActionEvent.PREAVIS_DEMISSION,
               false
             );
             form.batch(() => {
@@ -68,6 +91,12 @@ function StepInformations({ form }) {
               }).forEach((key) => form.change(`criteria.${key}`, undefined));
             });
           }}
+          isTooltipOpen={
+            isOpenArray.find((v) => v.key === key)
+              ? isOpenArray.find((v) => v.key === key)?.status
+              : false
+          }
+          onSwitchTooltip={() => handleChange(key)}
           tooltip={
             questionsMap[key].note !== undefined
               ? {
@@ -76,7 +105,7 @@ function StepInformations({ form }) {
                     if (visibility) {
                       trackQuestion(
                         questionsMap[key].name,
-                        MatomoActionEvent.RESIGNATION
+                        MatomoActionEvent.PREAVIS_DEMISSION
                       );
                     }
                   },
@@ -104,17 +133,23 @@ function StepInformations({ form }) {
                         if (visibility) {
                           trackQuestion(
                             questionsMap[nextQuestionKey].name,
-                            MatomoActionEvent.RESIGNATION
+                            MatomoActionEvent.PREAVIS_DEMISSION
                           );
                         }
                       },
                     }
                   : undefined
               }
+              isTooltipOpen={
+                isOpenArray.find((v) => v.key === nextQuestionKey)
+                  ? isOpenArray.find((v) => v.key === nextQuestionKey)?.status
+                  : false
+              }
+              onSwitchTooltip={() => handleChange(nextQuestionKey)}
               onChange={() => {
                 trackQuestion(
                   questionsMap[nextQuestionKey].name,
-                  MatomoActionEvent.RESIGNATION,
+                  MatomoActionEvent.PREAVIS_DEMISSION,
                   false
                 );
               }}

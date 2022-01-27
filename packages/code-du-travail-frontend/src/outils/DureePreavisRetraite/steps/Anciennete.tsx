@@ -59,7 +59,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
           ),
           trackableFn: (visibility: boolean) => {
             if (visibility) {
-              trackQuestion("Ancienneté", MatomoActionEvent.RETIREMENT);
+              trackQuestion("Ancienneté", MatomoActionEvent.PREAVIS_RETRAITE);
             }
           },
         }}

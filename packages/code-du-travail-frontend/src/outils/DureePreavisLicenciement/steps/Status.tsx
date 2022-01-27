@@ -71,7 +71,7 @@ function StepStatus({ form }) {
                     if (visibility) {
                       trackQuestion(
                         questionsMap[seniorityKey].name,
-                        MatomoActionEvent.DISMISSAL
+                        MatomoActionEvent.PREAVIS_LICENCIEMENT
                       );
                     }
                   },
@@ -81,7 +81,7 @@ function StepStatus({ form }) {
           onChange={() => {
             trackQuestion(
               questionsMap[seniorityKey].name,
-              MatomoActionEvent.DISMISSAL,
+              MatomoActionEvent.PREAVIS_LICENCIEMENT,
               false
             );
           }}

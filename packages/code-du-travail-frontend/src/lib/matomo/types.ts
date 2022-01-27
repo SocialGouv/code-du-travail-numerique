@@ -35,10 +35,10 @@ export enum MatomoRetirementEvent {
 }
 
 export enum MatomoActionEvent {
-  RETIREMENT = "view_step_Préavis de départ ou de mise à la retraite",
-  HOUR = "view_step_Heure recherche emploi",
-  RESIGNATION = "view_step_Préavis de démission",
-  DISMISSAL = "view_step_Préavis de licenciement",
+  PREAVIS_RETRAITE = "view_step_Préavis de départ ou de mise à la retraite",
+  HEURE_RECHERCHE_EMPLOI = "view_step_Heure recherche emploi",
+  PREAVIS_DEMISSION = "view_step_Préavis de démission",
+  PREAVIS_LICENCIEMENT = "view_step_Préavis de licenciement",
 }
 
 export enum MatomoTrackUrl {
@@ -51,48 +51,48 @@ export enum MatomoTrackUrl {
 
 type Mapping = Array<{
   helpEvent: MatomoSimulatorEvent;
-  synonyms: Array<string>;
+  questionLabels: Array<string>;
   selectEvent?: MatomoSimulatorEvent;
 }>;
 
 export const MatomoMapping: Mapping = [
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_ANCIENNETE,
-    synonyms: ["Ancienneté", "ancienneté"],
+    questionLabels: ["Ancienneté", "ancienneté"],
   },
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_CAT_PRO,
+    questionLabels: ["Catégorie professionnelle", "catégorie professionnelle"],
     selectEvent: MatomoSimulatorEvent.SELECT_CAT_PRO,
-    synonyms: ["Catégorie professionnelle"],
   },
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_ECHELON,
+    questionLabels: ["Échelon", "échelon"],
     selectEvent: MatomoSimulatorEvent.SELECT_ECHELON,
-    synonyms: ["Échelon", "échelon"],
   },
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_GROUPE,
+    questionLabels: ["groupe", "Groupe"],
     selectEvent: MatomoSimulatorEvent.SELECT_GROUPE,
-    synonyms: ["groupe", "Groupe"],
   },
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_NIVEAU,
+    questionLabels: ["niveau"],
     selectEvent: MatomoSimulatorEvent.SELECT_NIVEAU,
-    synonyms: ["niveau"],
   },
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_CLASSE,
+    questionLabels: ["classe"],
     selectEvent: MatomoSimulatorEvent.SELECT_CLASSE,
-    synonyms: ["classe"],
   },
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_POSITION,
+    questionLabels: ["position"],
     selectEvent: MatomoSimulatorEvent.SELECT_POSITION,
-    synonyms: ["position"],
   },
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_COEFFICIENT,
+    questionLabels: ["coefficient"],
     selectEvent: MatomoSimulatorEvent.SELECT_COEFFICIENT,
-    synonyms: ["coefficient"],
   },
 ];

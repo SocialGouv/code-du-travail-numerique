@@ -90,7 +90,7 @@ function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
 
   const onTrackDynamicRule = (titleQuestion: string | undefined): void => {
     if (titleQuestion) {
-      trackQuestion(titleQuestion, MatomoActionEvent.RETIREMENT, false);
+      trackQuestion(titleQuestion, MatomoActionEvent.PREAVIS_RETRAITE, false);
     }
   };
 

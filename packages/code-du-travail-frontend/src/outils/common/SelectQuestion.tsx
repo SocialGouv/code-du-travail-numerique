@@ -14,7 +14,9 @@ type Props = {
   subLabel?: string;
   tooltip?: Tooltip;
   options: Record<string, string> | [string, string][];
-  onChange?: (values: unknown) => void;
+  onChange?: (values?: unknown) => void;
+  isTooltipOpen?: boolean;
+  onSwitchTooltip?: () => void;
 };
 
 const SelectQuestion = ({
@@ -24,14 +26,21 @@ const SelectQuestion = ({
   tooltip,
   options,
   onChange,
+  isTooltipOpen,
+  onSwitchTooltip,
 }: Props): JSX.Element => {
-  const uid = `input-${name}`;
-  let optionsArray: [string, string][];
-  if (!Array.isArray(options)) {
-    optionsArray = Object.entries(options);
-  } else {
-    optionsArray = options;
-  }
+  const [uid] = React.useState(`input-${name}`);
+  const [optionsArray, setOptionsArray] = React.useState<[string, string][]>(
+    []
+  );
+
+  React.useEffect(() => {
+    if (!Array.isArray(options)) {
+      setOptionsArray(Object.entries(options));
+    } else {
+      setOptionsArray(options);
+    }
+  }, [options]);
 
   return (
     <>
@@ -43,7 +52,13 @@ const SelectQuestion = ({
         {({ input, meta: { error, dirty } }) => {
           return (
             <Wrapper>
-              <Question required tooltip={tooltip} htmlFor={uid}>
+              <Question
+                required
+                tooltip={tooltip}
+                htmlFor={uid}
+                isTooltipOpen={isTooltipOpen}
+                onSwitchTooltip={onSwitchTooltip}
+              >
                 {label}
               </Question>
               {subLabel && <SubLabel>{subLabel}</SubLabel>}
@@ -77,8 +92,8 @@ const SelectQuestion = ({
         }}
       </OnChange>
       <OnFocus name={name}>
-        {(values, _previous) => {
-          onChange?.(values);
+        {() => {
+          onChange?.();
         }}
       </OnFocus>
     </>

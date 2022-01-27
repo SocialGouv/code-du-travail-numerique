@@ -6,21 +6,21 @@ export const trackQuestion = (
   simulatorEvent: MatomoActionEvent,
   isTrackingHelp = true
 ): void => {
-  MatomoMapping.forEach((v) => {
-    if (v.synonyms.includes(trackTitle)) {
-      if (v.helpEvent && isTrackingHelp) {
+  MatomoMapping.forEach((mappingElement) => {
+    if (mappingElement.questionLabels.includes(trackTitle)) {
+      if (mappingElement.helpEvent && isTrackingHelp) {
         matopush([
           MatomoBaseEvent.TRACK_EVENT,
           MatomoBaseEvent.OUTIL,
           simulatorEvent,
-          v.helpEvent,
+          mappingElement.helpEvent,
         ]);
-      } else if (v.selectEvent && !isTrackingHelp) {
+      } else if (mappingElement.selectEvent && !isTrackingHelp) {
         matopush([
           MatomoBaseEvent.TRACK_EVENT,
           MatomoBaseEvent.OUTIL,
           simulatorEvent,
-          v.selectEvent,
+          mappingElement.selectEvent,
         ]);
       }
     }

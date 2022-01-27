@@ -18,15 +18,20 @@ const { questions, situations: allSituations } = data;
 
 const criteriaOrder = questions.map(({ name }) => name);
 
+const questionsMap = questions.reduce(
+  (state, v) => ({ ...state, [v.name]: v }),
+  {}
+);
+
+type OpenArray = Array<{
+  key: string;
+  status: boolean;
+}>;
+
 function StepInformations({ form }) {
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
   const idcc = ccn ? ccn.num : 0;
-
-  const questionsMap = questions.reduce(
-    (state, v) => ({ ...state, [v.name]: v }),
-    {}
-  );
 
   const initialSituations = getSituationsFor(allSituations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
@@ -51,6 +56,24 @@ function StepInformations({ form }) {
       ? "Choisissez parmi les catégories d'ancienneté telles que définies par la convention collective"
       : undefined;
 
+  const [isOpenArray, setIsOpenArray] = React.useState<OpenArray>([]);
+
+  const handleChange = (key: string) => {
+    let isFound = false;
+    const arr = isOpenArray.map((v) => {
+      if (v.key === key) {
+        isFound = true;
+        return { ...v, status: !v.status };
+      }
+      return v;
+    });
+    if (!isFound) {
+      setIsOpenArray([...isOpenArray, { key, status: true }]);
+    } else {
+      setIsOpenArray(arr);
+    }
+  };
+
   return (
     <>
       <SectionTitle>Statut du salarié</SectionTitle>
@@ -64,7 +87,7 @@ function StepInformations({ form }) {
           onChange={() => {
             trackQuestion(
               questionsMap[key].name,
-              MatomoActionEvent.DISMISSAL,
+              MatomoActionEvent.PREAVIS_LICENCIEMENT,
               false
             );
             form.batch(() => {
@@ -83,13 +106,19 @@ function StepInformations({ form }) {
                     if (visibility) {
                       trackQuestion(
                         questionsMap[key].name,
-                        MatomoActionEvent.DISMISSAL
+                        MatomoActionEvent.PREAVIS_LICENCIEMENT
                       );
                     }
                   },
                 }
               : undefined
           }
+          isTooltipOpen={
+            isOpenArray.find((v) => v.key === key)
+              ? isOpenArray.find((v) => v.key === key)?.status
+              : false
+          }
+          onSwitchTooltip={() => handleChange(key)}
         />
       ))}
       {nextQuestionKey &&
@@ -112,7 +141,7 @@ function StepInformations({ form }) {
                         if (visibility) {
                           trackQuestion(
                             questionsMap[nextQuestionKey].name,
-                            MatomoActionEvent.DISMISSAL
+                            MatomoActionEvent.PREAVIS_LICENCIEMENT
                           );
                         }
                       },
@@ -122,10 +151,16 @@ function StepInformations({ form }) {
               onChange={() => {
                 trackQuestion(
                   questionsMap[nextQuestionKey].name,
-                  MatomoActionEvent.DISMISSAL,
+                  MatomoActionEvent.PREAVIS_LICENCIEMENT,
                   false
                 );
               }}
+              isTooltipOpen={
+                isOpenArray.find((v) => v.key === nextQuestionKey)
+                  ? isOpenArray.find((v) => v.key === nextQuestionKey)?.status
+                  : false
+              }
+              onSwitchTooltip={() => handleChange(nextQuestionKey)}
             />
           </>
         )}

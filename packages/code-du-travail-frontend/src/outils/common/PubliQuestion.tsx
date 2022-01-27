@@ -21,7 +21,7 @@ const PubliQuestion: React.FC<Props> = ({ name, rule, onChange }) => {
         content: <Html>{rule.description}</Html>,
         trackableFn: (visibility: boolean) => {
           if (visibility && titre) {
-            trackQuestion(titre, MatomoActionEvent.RETIREMENT);
+            trackQuestion(titre, MatomoActionEvent.PREAVIS_RETRAITE);
           }
         },
       }
