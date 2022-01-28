@@ -159,7 +159,7 @@ const SearchInput = styled(DocumentSuggester)`
       ? `2rem ${hasSearchIcon ? "9rem" : "18.5rem"} 2rem ${
           hasSearchIcon ? spacings.xmedium : "6rem"
         }`
-      : `1rem 5.5rem 1rem ${spacings.base}`};
+      : `1rem 4.5rem 1rem ${spacings.base}`};
   color: ${({ theme }) => theme.paragraph};
   font-weight: normal;
   font-size: ${fonts.sizes.default};
@@ -181,7 +181,7 @@ const SearchInput = styled(DocumentSuggester)`
     padding: ${({ hasButton }) =>
       hasButton
         ? `1rem ${spacings.base}`
-        : `1rem 5.5rem 1rem ${spacings.base}`};
+        : `1rem 4.5rem 1rem ${spacings.base}`};
   }
 `;
 

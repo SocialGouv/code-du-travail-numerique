@@ -1208,7 +1208,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
   width: 100%;
   height: 5.4rem;
   margin: 0;
-  padding: 1rem 5.5rem 1rem 1.6rem;
+  padding: 1rem 4.5rem 1rem 1.6rem;
   color: #3e486e;
   font-weight: normal;
   font-size: 1.6rem;
@@ -1928,7 +1928,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
 @media (max-width:600px) {
   .c12 {
     height: 5.4rem;
-    padding: 1rem 5.5rem 1rem 1.6rem;
+    padding: 1rem 4.5rem 1rem 1.6rem;
   }
 }
 
