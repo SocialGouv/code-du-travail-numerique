@@ -63,7 +63,6 @@ export const ComboBoxPopover = styled(({ ...props }) => (
 export const ComboBoxOption = styled(({ ...props }) => (
   <ComboboxOption {...props} />
 ))`
-  padding: ${spacings.medium} ${spacings.xmedium};
   color: ${({ theme }) => theme.paragraph};
   font-family: "Open Sans", sans-serif;
   cursor: pointer;

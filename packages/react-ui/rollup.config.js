@@ -1,6 +1,7 @@
 import babel from "@rollup/plugin-babel";
 import resolve from "@rollup/plugin-node-resolve";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import commonjs from "@rollup/plugin-commonjs";
 
 const packageJson = require("./package.json");
 
@@ -25,6 +26,7 @@ export default {
       include: "src/**/*.js",
     }),
     resolve(),
+    commonjs(),
   ],
   watch: {
     include: "src/**",
