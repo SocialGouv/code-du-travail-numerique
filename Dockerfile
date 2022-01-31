@@ -43,4 +43,6 @@ WORKDIR /app
 
 COPY --from=dist . /app/
 
+USER 1000
+
 CMD [ "yarn", "start"]
