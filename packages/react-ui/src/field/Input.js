@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { box, breakpoints, fonts, input, spacings } from "../theme.js";
+import { box, breakpoints, fonts, spacings } from "../theme.js";
 
 export const Input = ({ icon: Icon, className, ...props }) => {
   return (
@@ -39,7 +39,7 @@ const StyledWrapper = styled.span`
 
 const StyledInput = styled.input`
   width: 100%;
-  height: ${input.height};
+  height: 5.4rem;
   padding: 0 ${spacings.medium};
   padding-right: ${(props) => (props.hasIcon ? "5rem" : spacings.medium)};
   color: ${({ theme }) => theme.paragraph};
