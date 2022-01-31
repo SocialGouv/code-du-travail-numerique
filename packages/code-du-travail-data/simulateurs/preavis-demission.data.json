@@ -10,7 +10,8 @@
     },
     {
       "name": "catégorie professionnelle",
-      "question": "Quelle est la catégorie professionnelle du salarié ?"
+      "question": "Quelle est la catégorie professionnelle du salarié ?",
+      "note": "La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "initiative de la rupture de la période d'essai",
