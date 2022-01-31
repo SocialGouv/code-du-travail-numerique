@@ -4,6 +4,13 @@ import styled from "styled-components";
 import { Euro, Search } from "../icons/index.js";
 import { Section } from "../layout/Section/index.js";
 import { InputCheckbox } from "./Checkbox.js";
+import {
+  ComboBox,
+  ComboBoxInput,
+  ComboBoxList,
+  ComboBoxOption,
+  ComboBoxPopover,
+} from "./ComboBox";
 import { Fieldset } from "./Fieldset.js";
 import { Input } from "./Input.js";
 import { InputDate } from "./InputDate.js";
@@ -154,6 +161,19 @@ export const input = () => (
         value="Avec texte"
         placeholder="Rechercher (Ex : Durée du préavis...)"
       />
+    </Section>
+    <Section>
+      <Label htmlFor="comboBoxInput">Combo Box</Label>
+      <ComboBox aria-label="choose a fruit" id="comboBoxInput">
+        <ComboBoxInput />
+        <ComboBoxPopover>
+          <ComboBoxList>
+            <ComboBoxOption value="Apple" />
+            <ComboBoxOption value="Orange"> My text here </ComboBoxOption>
+            <ComboBoxOption value="Banana" />
+          </ComboBoxList>
+        </ComboBoxPopover>
+      </ComboBox>
     </Section>
     <Section>
       <Label htmlFor="input" autofocus>
