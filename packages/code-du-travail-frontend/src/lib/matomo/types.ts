@@ -58,21 +58,21 @@ type Mapping = Array<{
 export const MatomoMapping: Mapping = [
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_ANCIENNETE,
-    questionLabels: ["Ancienneté", "ancienneté"],
+    questionLabels: ["ancienneté"],
   },
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_CAT_PRO,
-    questionLabels: ["Catégorie professionnelle", "catégorie professionnelle"],
+    questionLabels: ["catégorie professionnelle"],
     selectEvent: MatomoSimulatorEvent.SELECT_CAT_PRO,
   },
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_ECHELON,
-    questionLabels: ["Échelon", "échelon"],
+    questionLabels: ["échelon"],
     selectEvent: MatomoSimulatorEvent.SELECT_ECHELON,
   },
   {
     helpEvent: MatomoSimulatorEvent.CLICK_HELP_GROUPE,
-    questionLabels: ["groupe", "Groupe"],
+    questionLabels: ["groupe"],
     selectEvent: MatomoSimulatorEvent.SELECT_GROUPE,
   },
   {

@@ -1,7 +1,7 @@
 import { Select, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import { Field } from "react-final-form";
-import { OnChange, OnFocus } from "react-final-form-listeners";
+import { OnChange } from "react-final-form-listeners";
 import styled from "styled-components";
 
 import { Error } from "./ErrorField";
@@ -91,11 +91,6 @@ const SelectQuestion = ({
           onChange?.(values);
         }}
       </OnChange>
-      <OnFocus name={name}>
-        {() => {
-          onChange?.();
-        }}
-      </OnFocus>
     </>
   );
 };

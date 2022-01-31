@@ -7,7 +7,7 @@ export const trackQuestion = (
   isTrackingHelp = true
 ): void => {
   MatomoMapping.forEach((mappingElement) => {
-    if (mappingElement.questionLabels.includes(trackTitle)) {
+    if (mappingElement.questionLabels.includes(trackTitle.toLowerCase())) {
       if (mappingElement.helpEvent && isTrackingHelp) {
         matopush([
           MatomoBaseEvent.TRACK_EVENT,
