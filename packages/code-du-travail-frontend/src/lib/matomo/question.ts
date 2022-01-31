@@ -2,12 +2,15 @@ import { matopush } from "../../piwik";
 import { MatomoActionEvent, MatomoBaseEvent, MatomoMapping } from ".";
 
 export const trackQuestion = (
-  trackTitle: string,
+  trackTitle: string | null,
   simulatorEvent: MatomoActionEvent,
   isTrackingHelp = true
 ): void => {
   MatomoMapping.forEach((mappingElement) => {
-    if (mappingElement.questionLabels.includes(trackTitle.toLowerCase())) {
+    if (
+      trackTitle &&
+      mappingElement.questionLabels.includes(trackTitle.toLowerCase())
+    ) {
       if (mappingElement.helpEvent && isTrackingHelp) {
         matopush([
           MatomoBaseEvent.TRACK_EVENT,
