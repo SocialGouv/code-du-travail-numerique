@@ -9,7 +9,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Search } from "../icons/index.js";
-import { box, colors, fonts, input, spacings } from "../theme";
+import { box, colors, fonts, spacings } from "../theme";
 
 export const ComboBox = ({ ...props }) => <Combobox {...props} />;
 
@@ -25,7 +25,7 @@ export const ComboBoxInput = ({ ...props }) => (
 const StyledComboBoxInput = styled(({ ...props }) => (
   <ComboboxInput {...props} />
 ))`
-  height: ${input.height};
+  height: 5.4rem;
   width: 100%;
   padding: 0 4rem 0 ${spacings.medium};
   color: ${({ theme }) => theme.paragraph};
