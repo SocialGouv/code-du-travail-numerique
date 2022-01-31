@@ -1,5 +1,6 @@
+ARG NODE_VERSION=14.17-alpine3.13
 # dist
-FROM node:14.17-alpine3.13 AS dist
+FROM node:$NODE_VERSION AS dist
 
 WORKDIR /
 
@@ -33,25 +34,13 @@ COPY . ./
 
 RUN yarn build
 
-# node_modules
-FROM node:14.17-alpine3.13 AS node_modules
-
-WORKDIR /
-
-COPY package.json ./
-
-RUN yarn install --prod
+RUN yarn --frozen-file --prod
 
 # app
-FROM node:14.17-alpine3.13
+FROM node:$NODE_VERSION
 
 WORKDIR /app
 
 COPY --from=dist . /app/
-
-COPY --from=node_modules node_modules /app/node_modules
-
-COPY . /app
-
 
 CMD [ "yarn", "start"]
