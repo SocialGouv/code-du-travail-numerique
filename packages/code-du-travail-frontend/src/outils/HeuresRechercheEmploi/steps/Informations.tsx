@@ -112,9 +112,7 @@ function StepInformations({ form }) {
               : undefined
           }
           isTooltipOpen={
-            isOpenArray.find((v) => v.key === key)
-              ? isOpenArray.find((v) => v.key === key)?.status
-              : false
+            isOpenArray.find((v) => v.key === key)?.status ?? false
           }
           onSwitchTooltip={() => handleChange(key)}
         />
@@ -153,9 +151,8 @@ function StepInformations({ form }) {
                 );
               }}
               isTooltipOpen={
-                isOpenArray.find((v) => v.key === nextQuestionKey)
-                  ? isOpenArray.find((v) => v.key === nextQuestionKey)?.status
-                  : false
+                isOpenArray.find((v) => v.key === nextQuestionKey)?.status ??
+                false
               }
               onSwitchTooltip={() => handleChange(nextQuestionKey)}
             />
