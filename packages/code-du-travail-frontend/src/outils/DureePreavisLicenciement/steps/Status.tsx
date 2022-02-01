@@ -3,6 +3,8 @@ import { Toast } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 
+import Html from "../../../common/Html";
+import { MatomoActionEvent, trackQuestion } from "../../../lib/matomo";
 import { SelectQuestion } from "../../common/SelectQuestion";
 import {
   filterSituations,
@@ -13,12 +15,12 @@ import { YesNoQuestion } from "../../common/YesNoQuestion";
 
 const { questions, situations: allSituations } = data;
 const questionsMap = questions.reduce(
-  (state, { name, question }) => ({ ...state, [name]: question }),
+  (state, v) => ({ ...state, [v.name]: v }),
   {}
 );
 
 function validate({ seriousMisconduct }) {
-  const errors = {};
+  const errors: any = {};
   if (seriousMisconduct) {
     errors.seriousMisconduct = (
       <Toast>
@@ -41,7 +43,7 @@ function StepStatus({ form }) {
 
   const initialSituations = getSituationsFor(allSituations, { idcc: 0 });
   const possibleSituations = filterSituations(initialSituations, {});
-  const seniorityOptions = getOptions(possibleSituations, seniorityKey);
+  const seniorityOptions: any = getOptions(possibleSituations, seniorityKey);
 
   return (
     <>
@@ -58,9 +60,31 @@ function StepStatus({ form }) {
       {typeof disabledWorker !== "undefined" && !seriousMisconduct && (
         <SelectQuestion
           name={`cdt.${seniorityKey}`}
-          label={questionsMap[seniorityKey]}
-          subLabel="Choissisez parmi les catégories d'ancienneté telles que définies par le Code du travail"
+          label={questionsMap[seniorityKey].question}
+          subLabel="Choisissez parmi les catégories d'ancienneté telles que définies par le Code du travail"
           options={seniorityOptions}
+          tooltip={
+            questionsMap[seniorityKey].note !== undefined
+              ? {
+                  content: <Html>{questionsMap[seniorityKey].note}</Html>,
+                  trackableFn: (visibility) => {
+                    if (visibility) {
+                      trackQuestion(
+                        questionsMap[seniorityKey].name,
+                        MatomoActionEvent.PREAVIS_LICENCIEMENT
+                      );
+                    }
+                  },
+                }
+              : undefined
+          }
+          onChange={() => {
+            trackQuestion(
+              questionsMap[seniorityKey].name,
+              MatomoActionEvent.PREAVIS_LICENCIEMENT,
+              false
+            );
+          }}
         />
       )}
     </>

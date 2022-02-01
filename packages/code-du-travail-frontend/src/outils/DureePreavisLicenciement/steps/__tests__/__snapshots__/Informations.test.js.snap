@@ -1,13 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepInformations /> should render catégorie 1`] = `
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
+}
+
+.c4:focus,
+.c4:hover,
+.c4:active {
+  color: #f66663;
+}
+
 .c3 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c4 {
+.c5 {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #7994d4;
+  margin-left: 0.8rem;
+  padding: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  position: relative;
+  bottom: -0.5rem;
+}
+
+.c6 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -27,7 +91,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   text-align: center;
 }
 
-.c7 {
+.c9 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -37,7 +101,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   pointer-events: none;
 }
 
-.c6 {
+.c8 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -58,21 +122,21 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   appearance: none;
 }
 
-.c6::-ms-expand {
+.c8::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c6 *::-ms-backdrop,
-.c6 {
+.c8 *::-ms-backdrop,
+.c8 {
   padding-right: 1.6rem;
 }
 
-.c6:invalid {
+.c8:invalid {
   border-color: #eb5757;
 }
 
-.c6:disabled {
+.c8:disabled {
   background-color: #e4e8ef;
 }
 
@@ -85,7 +149,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   cursor: pointer;
 }
 
-.c5 {
+.c7 {
   width: 40rem;
 }
 
@@ -104,6 +168,18 @@ exports[`<StepInformations /> should render catégorie 1`] = `
 
 @media (max-width:600px) {
   .c4 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c4 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
     width: 100%;
   }
 }
@@ -115,7 +191,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c7 {
     width: 100%;
   }
 }
@@ -139,12 +215,46 @@ exports[`<StepInformations /> should render catégorie 1`] = `
       >
          (obligatoire)
       </span>
+      <button
+        aria-label="Plus d'informations"
+        class="c4 c5"
+        title="Plus d'informations"
+        type="button"
+      >
+        <svg
+          aria-label="?"
+          fill="none"
+          height="20"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="10"
+          />
+          <path
+            d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+          />
+          <line
+            x1="12"
+            x2="12.01"
+            y1="17"
+            y2="17"
+          />
+        </svg>
+      </button>
     </label>
     <div
-      class="c4 c5"
+      class="c6 c7"
     >
       <select
-        class="c6"
+        class="c8"
         id="input-criteria.catégorie professionnelle"
         name="criteria.catégorie professionnelle"
       >
@@ -182,7 +292,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="c7"
+        class="c9"
       >
         <svg
           aria-hidden="true"
@@ -216,13 +326,77 @@ exports[`<StepInformations /> should render catégorie 1`] = `
 `;
 
 exports[`<StepInformations /> should render groupe 1`] = `
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
+}
+
+.c4:focus,
+.c4:hover,
+.c4:active {
+  color: #f66663;
+}
+
 .c3 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c4 {
+.c5 {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #7994d4;
+  margin-left: 0.8rem;
+  padding: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  position: relative;
+  bottom: -0.5rem;
+}
+
+.c6 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -242,7 +416,7 @@ exports[`<StepInformations /> should render groupe 1`] = `
   text-align: center;
 }
 
-.c7 {
+.c9 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -252,7 +426,7 @@ exports[`<StepInformations /> should render groupe 1`] = `
   pointer-events: none;
 }
 
-.c6 {
+.c8 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -273,21 +447,21 @@ exports[`<StepInformations /> should render groupe 1`] = `
   appearance: none;
 }
 
-.c6::-ms-expand {
+.c8::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c6 *::-ms-backdrop,
-.c6 {
+.c8 *::-ms-backdrop,
+.c8 {
   padding-right: 1.6rem;
 }
 
-.c6:invalid {
+.c8:invalid {
   border-color: #eb5757;
 }
 
-.c6:disabled {
+.c8:disabled {
   background-color: #e4e8ef;
 }
 
@@ -300,7 +474,7 @@ exports[`<StepInformations /> should render groupe 1`] = `
   cursor: pointer;
 }
 
-.c5 {
+.c7 {
   width: 40rem;
 }
 
@@ -319,6 +493,18 @@ exports[`<StepInformations /> should render groupe 1`] = `
 
 @media (max-width:600px) {
   .c4 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c4 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
     width: 100%;
   }
 }
@@ -330,7 +516,7 @@ exports[`<StepInformations /> should render groupe 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c7 {
     width: 100%;
   }
 }
@@ -354,12 +540,46 @@ exports[`<StepInformations /> should render groupe 1`] = `
       >
          (obligatoire)
       </span>
+      <button
+        aria-label="Plus d'informations"
+        class="c4 c5"
+        title="Plus d'informations"
+        type="button"
+      >
+        <svg
+          aria-label="?"
+          fill="none"
+          height="20"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="10"
+          />
+          <path
+            d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+          />
+          <line
+            x1="12"
+            x2="12.01"
+            y1="17"
+            y2="17"
+          />
+        </svg>
+      </button>
     </label>
     <div
-      class="c4 c5"
+      class="c6 c7"
     >
       <select
-        class="c6"
+        class="c8"
         id="input-criteria.catégorie professionnelle"
         name="criteria.catégorie professionnelle"
       >
@@ -397,7 +617,7 @@ exports[`<StepInformations /> should render groupe 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="c7"
+        class="c9"
       >
         <svg
           aria-hidden="true"
@@ -440,12 +660,46 @@ exports[`<StepInformations /> should render groupe 1`] = `
       >
          (obligatoire)
       </span>
+      <button
+        aria-label="Plus d'informations"
+        class="c4 c5"
+        title="Plus d'informations"
+        type="button"
+      >
+        <svg
+          aria-label="?"
+          fill="none"
+          height="20"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="10"
+          />
+          <path
+            d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+          />
+          <line
+            x1="12"
+            x2="12.01"
+            y1="17"
+            y2="17"
+          />
+        </svg>
+      </button>
     </label>
     <div
-      class="c4 c5"
+      class="c6 c7"
     >
       <select
-        class="c6"
+        class="c8"
         id="input-criteria.groupe"
         name="criteria.groupe"
       >
@@ -463,7 +717,7 @@ exports[`<StepInformations /> should render groupe 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="c7"
+        class="c9"
       >
         <svg
           aria-hidden="true"
