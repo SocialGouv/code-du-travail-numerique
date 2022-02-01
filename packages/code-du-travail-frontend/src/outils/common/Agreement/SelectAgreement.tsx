@@ -9,20 +9,22 @@ import { AGREEMENT_NAME, ROUTE_NAME } from "./form-constants";
 import { RouteSelection } from "./RouteSelection";
 import { AgreementSupportInfo } from "./types";
 
-type Props = {
+export type Props = {
   form: FormApi<FormContent>;
   supportedAgreements: AgreementSupportInfo[];
   onChange?: (oldValue: Agreement | null, newValue: Agreement | null) => void;
+  defaultSelectedAgreement?: Agreement;
 };
 
 const SelectAgreement = ({
   form,
   supportedAgreements,
   onChange,
+  defaultSelectedAgreement,
 }: Props): JSX.Element => {
   const [storedConvention, setConvention] = useLocalStorage(
     "convention",
-    undefined
+    defaultSelectedAgreement
   );
 
   const onSelectAgreement = useCallback(

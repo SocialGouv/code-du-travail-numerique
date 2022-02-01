@@ -29,13 +29,41 @@ const dataWithSelectedAgreement: Props = {
   selectedAgreement,
 };
 
+const dataWithSelectedAgreementNotSupported: Props = {
+  ...dataWithoutSelectedAgreement,
+  selectedAgreement,
+  supportedAgreements: [],
+};
+
+const dataWithSelectedAgreementNotFullySupported: Props = {
+  ...dataWithoutSelectedAgreement,
+  selectedAgreement,
+  supportedAgreements: [
+    {
+      fullySupported: false,
+      idcc: selectedAgreement.num,
+    },
+  ],
+};
+
+const dataWithSelectedAgreementSupported: Props = {
+  ...dataWithoutSelectedAgreement,
+  selectedAgreement,
+  supportedAgreements: [
+    {
+      fullySupported: true,
+      idcc: selectedAgreement.num,
+    },
+  ],
+};
+
 describe("AgreementSearch", () => {
   describe("no selected agreement", () => {
     it("should render the mandatory question 'Précisez et sélectionnez votre convention collective'", () => {
       const { getByText } = render(
         <EmbeddedForm<Props>
           Step={AgreementSearch}
-          data={dataWithoutSelectedAgreement}
+          props={dataWithoutSelectedAgreement}
         />
       );
       expect(
@@ -48,7 +76,7 @@ describe("AgreementSearch", () => {
       const { getByPlaceholderText } = render(
         <EmbeddedForm<Props>
           Step={AgreementSearch}
-          data={dataWithoutSelectedAgreement}
+          props={dataWithoutSelectedAgreement}
         />
       );
       expect(
@@ -60,7 +88,7 @@ describe("AgreementSearch", () => {
       const { getByText } = render(
         <EmbeddedForm<Props>
           Step={AgreementSearch}
-          data={dataWithoutSelectedAgreement}
+          props={dataWithoutSelectedAgreement}
         />
       );
       getByText("Submit").click();
@@ -73,7 +101,7 @@ describe("AgreementSearch", () => {
       const { getByText } = render(
         <EmbeddedForm<Props>
           Step={AgreementSearch}
-          data={dataWithSelectedAgreement}
+          props={dataWithSelectedAgreement}
         />
       );
       expect(
@@ -85,7 +113,7 @@ describe("AgreementSearch", () => {
       const { getByText } = render(
         <EmbeddedForm<Props>
           Step={AgreementSearch}
-          data={dataWithSelectedAgreement}
+          props={dataWithSelectedAgreement}
         />
       );
       expect(getByText(selectedAgreement.shortTitle)).toBeInTheDocument();
@@ -95,7 +123,7 @@ describe("AgreementSearch", () => {
       const { getByRole } = render(
         <EmbeddedForm<Props>
           Step={AgreementSearch}
-          data={dataWithSelectedAgreement}
+          props={dataWithSelectedAgreement}
         />
       );
       const button = getByRole("button", { name: "Fermer" });
@@ -106,7 +134,7 @@ describe("AgreementSearch", () => {
       const { getByText } = render(
         <EmbeddedForm<Props>
           Step={AgreementSearch}
-          data={dataWithSelectedAgreement}
+          props={dataWithSelectedAgreement}
         />
       );
       expect(
@@ -118,7 +146,7 @@ describe("AgreementSearch", () => {
       const { getByText, queryByText } = render(
         <EmbeddedForm<Props>
           Step={AgreementSearch}
-          data={dataWithSelectedAgreement}
+          props={dataWithSelectedAgreement}
         />
       );
       getByText("Submit").click();
@@ -131,13 +159,58 @@ describe("AgreementSearch", () => {
       const { getByRole } = render(
         <EmbeddedForm<Props>
           Step={AgreementSearch}
-          data={dataWithSelectedAgreement}
+          props={dataWithSelectedAgreement}
         />
       );
       const button = getByRole("button", { name: "Fermer" });
       button.click();
       expect(onSelectAgreement.mock.calls).toHaveLength(1);
       expect(onSelectAgreement.mock.calls[0][0]).toBeNull();
+    });
+  });
+
+  describe("selected agreement not supported / not fully supported", () => {
+    it("should render a warning about the not supported agreement", () => {
+      const { getByText } = render(
+        <EmbeddedForm<Props>
+          Step={AgreementSearch}
+          props={dataWithSelectedAgreementNotSupported}
+        />
+      );
+      expect(
+        getByText(/À noter : convention collective non traitée/)
+      ).toBeInTheDocument();
+    });
+  });
+
+  describe("selected agreement not fully supported", () => {
+    it("should render a warning about the not fully supported agreement", () => {
+      const { getByText } = render(
+        <EmbeddedForm<Props>
+          Step={AgreementSearch}
+          props={dataWithSelectedAgreementNotFullySupported}
+        />
+      );
+      expect(
+        getByText(/À noter : convention prochainement traitée/)
+      ).toBeInTheDocument();
+    });
+  });
+
+  describe("selected agreement supported", () => {
+    it("should not render a warning", () => {
+      const { queryByText } = render(
+        <EmbeddedForm<Props>
+          Step={AgreementSearch}
+          props={dataWithSelectedAgreementSupported}
+        />
+      );
+      expect(
+        queryByText(/À noter : convention collective non traitée/)
+      ).not.toBeInTheDocument();
+      expect(
+        queryByText(/À noter : convention prochainement traitée/)
+      ).not.toBeInTheDocument();
     });
   });
 });

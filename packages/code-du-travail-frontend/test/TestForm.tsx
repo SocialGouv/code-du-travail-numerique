@@ -2,16 +2,18 @@ import { FormApi } from "final-form";
 import React from "react";
 import { Form } from "react-final-form";
 
-type EmbeddedInjectedFormProps<FormContent> = {
+type EmbeddedInjectedFormProps<FormContent, Props> = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Step: React.ComponentType<{ form: FormApi<FormContent> }>;
   formData?: FormContent;
+  props?: Props;
 };
 
-function EmbeddedInjectedForm<FormContent>({
+function EmbeddedInjectedForm<FormContent, Props>({
   Step,
   formData,
-}: EmbeddedInjectedFormProps<FormContent>): JSX.Element {
+  props,
+}: EmbeddedInjectedFormProps<FormContent, Props>): JSX.Element {
   return (
     <Form<FormContent>
       initialValues={formData ?? {}}
@@ -21,7 +23,7 @@ function EmbeddedInjectedForm<FormContent>({
     >
       {({ form, handleSubmit }) => (
         <form onSubmit={handleSubmit}>
-          <Step form={form} />
+          <Step form={form} {...props} />
           <button>Submit</button>
         </form>
       )}
@@ -32,12 +34,12 @@ function EmbeddedInjectedForm<FormContent>({
 type EmbeddedFormProps<Props> = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Step: React.ComponentType<Props>;
-  data: Props;
+  props: Props;
 };
 
 function EmbeddedForm<FormContent>({
   Step,
-  data,
+  props,
 }: EmbeddedFormProps<FormContent>): JSX.Element {
   return (
     <Form<FormContent>
@@ -48,7 +50,7 @@ function EmbeddedForm<FormContent>({
     >
       {({ handleSubmit }) => (
         <form onSubmit={handleSubmit}>
-          <Step {...data} />
+          <Step {...props} />
           <button>Submit</button>
         </form>
       )}
