@@ -1,8 +1,9 @@
 import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 
+import { MatomoActionEvent } from "../../lib";
 import { StepInfoCCnOptionnal } from "../common/InfosCCn";
 import { isNotYetProcessed } from "../common/situations.utils";
-import { StepInformations } from "./steps/Informations";
+import { StepInformations } from "../common/StepInformations";
 import { StepIntro } from "./steps/Introduction";
 import { StepResult } from "./steps/Result";
 import { StepTypeRupture } from "./steps/TypeRupture";
@@ -30,6 +31,9 @@ export const initialState = {
     },
     {
       component: StepInformations,
+      componentProps: {
+        actionEvent: MatomoActionEvent.HEURE_RECHERCHE_EMPLOI,
+      },
       hasNoMarginBottom: true,
       isForm: true,
       label: "Informations",

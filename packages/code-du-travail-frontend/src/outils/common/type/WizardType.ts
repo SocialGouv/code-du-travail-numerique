@@ -1,10 +1,13 @@
 import { FormApi } from "final-form";
 import React from "react";
 
+import { MatomoActionEvent } from "../../../lib";
+
 export type SkipFn = (values: FormContent) => boolean;
 
 export type Step = {
   component: (props: WizardStepProps) => JSX.Element;
+  componentProps?: { actionEvent: MatomoActionEvent };
   label: string;
   name: string;
   skip?: SkipFn;
