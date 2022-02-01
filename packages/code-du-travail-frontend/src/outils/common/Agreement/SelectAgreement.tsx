@@ -4,16 +4,22 @@ import React, { useCallback, useEffect } from "react";
 import { Agreement } from "../../../conventions/Search/api/type";
 import { useLocalStorage } from "../../../lib/useLocalStorage";
 import { FormContent } from "../type/WizardType";
-import AgreementSearch from "./AgreementSearch";
+import { AgreementSearch } from "./AgreementSearch";
 import { AGREEMENT_NAME } from "./form-constants";
 import { RouteSelection } from "./RouteSelection";
+import { AgreementSupportInfo } from "./types";
 
 type Props = {
   form: FormApi<FormContent>;
+  supportedAgreements: AgreementSupportInfo[];
   onChange?: (oldValue: Agreement | null, newValue: Agreement | null) => void;
 };
 
-const SelectAgreement = ({ form, onChange }: Props): JSX.Element => {
+const SelectAgreement = ({
+  form,
+  supportedAgreements,
+  onChange,
+}: Props): JSX.Element => {
   const [storedConvention, setConvention] = useLocalStorage(
     "convention",
     undefined
@@ -52,6 +58,7 @@ const SelectAgreement = ({ form, onChange }: Props): JSX.Element => {
       <RouteSelection form={form} />
       {values.ccn?.route === "agreement" && (
         <AgreementSearch
+          supportedAgreements={supportedAgreements}
           selectedAgreement={values.ccn.selected}
           onSelectAgreement={onSelectAgreement}
         />

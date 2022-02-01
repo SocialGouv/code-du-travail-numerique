@@ -3,7 +3,8 @@ import React from "react";
 
 import { EmbeddedForm } from "../../../../../test/TestForm";
 import { Agreement } from "../../../../conventions/Search/api/type";
-import AgreementSearch, { Props } from "../AgreementSearch";
+import { AgreementSearch } from "../AgreementSearch";
+import type { Props } from "../AgreementSearch/AgreementSearch";
 
 const callback: (agreement: Agreement | null) => void = () => {
   /* nothing to do */
@@ -20,6 +21,7 @@ const selectedAgreement: Agreement = {
 
 const dataWithoutSelectedAgreement: Props = {
   onSelectAgreement,
+  supportedAgreements: [],
 };
 
 const dataWithSelectedAgreement: Props = {

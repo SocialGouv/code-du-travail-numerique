@@ -3,18 +3,22 @@ import React from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
 
-import { Agreement } from "../../../conventions/Search/api/type";
-import { AgreementSearchStep } from "../../ConventionCollective/steps/AgreementSearch";
-import { ErrorField } from "../ErrorField";
-import { required } from "../validators";
-import { AGREEMENT_NAME } from "./form-constants";
+import { Agreement } from "../../../../conventions/Search/api/type";
+import { AgreementSearchStep } from "../../../ConventionCollective/steps/AgreementSearch";
+import { ErrorField } from "../../ErrorField";
+import { required } from "../../validators";
+import { AGREEMENT_NAME } from "../form-constants";
+import { AgreementSupportInfo } from "../types";
+import ShowAlert from "./ShowAlert";
 
 export type Props = {
+  supportedAgreements: AgreementSupportInfo[];
   selectedAgreement?: Agreement;
   onSelectAgreement: (agreement: Agreement | null) => void;
 };
 
 const AgreementSearch = ({
+  supportedAgreements,
   selectedAgreement,
   onSelectAgreement,
 }: Props): JSX.Element => {
@@ -33,6 +37,10 @@ const AgreementSearch = ({
         >
           {selectedAgreement.shortTitle}
         </SelectedAgreement>
+        <ShowAlert
+          currentIdcc={selectedAgreement.num}
+          supportedAgreements={supportedAgreements}
+        />
         <Paragraph>
           Cliquez sur Suivant pour poursuivre la simulation.
         </Paragraph>
@@ -60,6 +68,7 @@ const { spacings } = theme;
 
 const SelectedAgreement = styled(Toast)`
   width: 100%;
+  margin-bottom: ${spacings.medium};
 `;
 
 const SelectedAgreementTitle = styled(Paragraph)`
