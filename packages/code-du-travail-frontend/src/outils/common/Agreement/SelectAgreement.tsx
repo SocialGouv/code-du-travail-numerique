@@ -41,6 +41,12 @@ const SelectAgreement = ({ form, onChange }: Props): JSX.Element => {
   }, [storedConvention]);
 
   const values = form.getState().values;
+  useEffect(() => {
+    if (values.ccn?.route === "not-selected") {
+      setConvention(null);
+    }
+  }, [setConvention, values.ccn?.route]);
+
   return (
     <>
       <RouteSelection form={form} />

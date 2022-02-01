@@ -1,8 +1,8 @@
 import React from "react";
 
+import type { Agreement } from "../../../conventions/Search/api/type";
 import CCSearchInfo from "../../common/CCSearchInfo";
 import { isNotNearZero } from "../../common/math";
-import { Agreement } from "../../common/type/WizardType";
 
 type Props = {
   durationCC: number;
