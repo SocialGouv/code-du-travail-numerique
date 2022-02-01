@@ -3,9 +3,9 @@ import React, { useCallback, useEffect } from "react";
 
 import { Agreement } from "../../../conventions/Search/api/type";
 import { useLocalStorage } from "../../../lib/useLocalStorage";
-import { FormContent } from "../type/WizardType";
+import { AgreementRoute, FormContent } from "../type/WizardType";
 import { AgreementSearch } from "./AgreementSearch";
-import { AGREEMENT_NAME } from "./form-constants";
+import { AGREEMENT_NAME, ROUTE_NAME } from "./form-constants";
 import { RouteSelection } from "./RouteSelection";
 import { AgreementSupportInfo } from "./types";
 
@@ -42,6 +42,12 @@ const SelectAgreement = ({
   useEffect(() => {
     form.batch(() => {
       form.change(AGREEMENT_NAME, storedConvention);
+      if (
+        storedConvention != null &&
+        form.getState().values.ccn?.route === undefined
+      ) {
+        form.change(ROUTE_NAME, "agreement" as AgreementRoute);
+      }
     });
     // eslint-disable-next-line
   }, [storedConvention]);
