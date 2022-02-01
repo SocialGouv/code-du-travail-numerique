@@ -32,7 +32,7 @@ RUN yarn --frozen-lockfile && yarn cache clean
 
 COPY . ./
 
-RUN yarn build && yarn --frozen-file --prod
+RUN yarn build && yarn --frozen-lockfile --prod
 
 # app
 FROM node:$NODE_VERSION
