@@ -6,7 +6,7 @@ export const trackQuestion = (
   simulatorEvent: MatomoActionEvent,
   isTrackingHelp = true
 ): void => {
-  // FIXME: send event only for preavis de retraite
+  // FIXME: add other simulator events
   if (simulatorEvent !== MatomoActionEvent.PREAVIS_RETRAITE) {
     return;
   }
