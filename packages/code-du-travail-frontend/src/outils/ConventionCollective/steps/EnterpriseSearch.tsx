@@ -83,7 +83,7 @@ const EnterpriseSearchStep = ({
                     return (
                       <ListItem key={item.siren}>
                         <EnterpriseButton
-                          showAddress={params.address.length > 0 || isSiret}
+                          showAddress={isSiret || item.matching == 1}
                           isFirst={index === 0}
                           enterprise={item}
                           onClick={() =>

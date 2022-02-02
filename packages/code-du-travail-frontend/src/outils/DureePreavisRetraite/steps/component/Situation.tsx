@@ -13,7 +13,7 @@ type Props = {
 };
 
 export const Situation: React.FC<Props> = ({ content, elements }) => {
-  const overrideSituation = (element: SituationElement): JSX.Element => {
+  const overrideSituation = (element: SituationElement): JSX.Element | null => {
     if (element.name === "contrat salarié - convention collective") {
       return <>{content.ccn?.shortTitle}</>;
     }
@@ -38,7 +38,7 @@ export const Situation: React.FC<Props> = ({ content, elements }) => {
       );
     }
 
-    return <></>;
+    return null;
   };
 
   const getAnnotations = (content: FormContent): JSX.Element[] => {

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { trackHelpQuestionRetraite } from "../../../lib/matomo";
+import { MatomoActionEvent, trackQuestion } from "../../../lib/matomo";
 import { TextQuestion } from "../../common/TextQuestion";
-import { MatomoPreavisRetraiteTrackTitle } from "../../common/type/matomo";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { isPositiveNumber } from "../../common/validators";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
@@ -60,9 +59,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
           ),
           trackableFn: (visibility: boolean) => {
             if (visibility) {
-              trackHelpQuestionRetraite(
-                MatomoPreavisRetraiteTrackTitle.ANCIENNETE
-              );
+              trackQuestion("Ancienneté", MatomoActionEvent.PREAVIS_RETRAITE);
             }
           },
         }}
@@ -70,7 +67,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
           form.change("contrat salarié - ancienneté", undefined);
         }}
       />
-      {!form.getState().values.seniorityMaximum && (
+      {form.getState().values.seniorityMaximum === false && (
         <TextQuestion
           name="contrat salarié - ancienneté"
           label={seniorityLabel}
