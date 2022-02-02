@@ -1,0 +1,24 @@
+name: Check SDR URLs (CRON)
+on:
+  schedule:
+    - cron: "00 09 * * *"
+  workflow_dispatch:
+
+jobs:
+  services-de-renseignement:
+    name: Check url from service de renseignement
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Test SDR urls
+        run: |
+          jq ".[].url" ./packages/code-du-travail-frontend/src/data/services-de-renseignement.json | xargs -n 1 wget  --spider
+      - name: Create the Mattermost Message
+        if: failure()
+        run: |
+          echo "{\"text\":\"Une ou plusieurs URLs des services de renseignement ne sont plus valides : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"\"}" > mattermost.json
+      - uses: mattermost/action-mattermost-notify@master
+        if: failure()
+        env:
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
