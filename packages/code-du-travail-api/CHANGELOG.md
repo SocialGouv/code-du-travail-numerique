@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.68.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.1...v4.68.0) (2022-02-02)
+
+
+### Bug Fixes
+
+* **frontend:** page stats when matomo is down ([#4193](https://github.com/SocialGouv/code-du-travail-numerique/issues/4193)) ([d038840](https://github.com/SocialGouv/code-du-travail-numerique/commit/d03884029c287a4eea33d690dee69d37afb7398f))
+* **secu:** use non-privilegied docker user ([#4201](https://github.com/SocialGouv/code-du-travail-numerique/issues/4201)) ([9f665df](https://github.com/SocialGouv/code-du-travail-numerique/commit/9f665df5197f3291a4993f002907d7ae9540dbce))
+
+
+
+
+
 ## [4.67.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.0...v4.67.1) (2022-01-24)
 
 **Note:** Version bump only for package @cdt/api

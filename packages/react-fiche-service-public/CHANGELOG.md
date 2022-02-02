@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.68.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.1...v4.68.0) (2022-02-02)
+
+
+### Bug Fixes
+
+* **headings:** on tabs ([#4114](https://github.com/SocialGouv/code-du-travail-numerique/issues/4114)) ([7c155f9](https://github.com/SocialGouv/code-du-travail-numerique/commit/7c155f96e33ed3d1a59bb4a60bcbabe8a5ddf567))
+
+
+
+
+
 ## [4.67.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.0...v4.67.1) (2022-01-24)
 
 **Note:** Version bump only for package @socialgouv/react-fiche-service-public
