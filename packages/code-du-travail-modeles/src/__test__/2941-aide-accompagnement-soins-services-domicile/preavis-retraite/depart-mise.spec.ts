@@ -36,6 +36,7 @@ test.each`
   ${25}     | ${"A, B, C ou D"} | ${2}           | ${"mois"}    | ${"2 mois de date à date"}
   ${1}      | ${"E ou F"}       | ${1}           | ${"mois"}    | ${"1 mois de date à date"}
   ${6}      | ${"E ou F"}       | ${1}           | ${"mois"}    | ${"1 mois de date à date"}
+  ${24}     | ${"E ou F"}       | ${2}           | ${"mois"}    | ${"2 mois de date à date"}
   ${25}     | ${"E ou F"}       | ${2}           | ${"mois"}    | ${"2 mois de date à date"}
   ${1}      | ${"G, H ou I"}    | ${2}           | ${"mois"}    | ${"2 mois de date à date"}
   ${6}      | ${"G, H ou I"}    | ${2}           | ${"mois"}    | ${"2 mois de date à date"}
@@ -63,27 +64,21 @@ test.each`
   }
 );
 
-test.each`
-  seniority | category          | expectedNotice | expectedUnit
-  ${24}     | ${"A, B, C ou D"} | ${2}           | ${"mois"}
-  ${24}     | ${"E ou F"}       | ${2}           | ${"mois"}
-`(
-  "Pour un employé de category $category possédant $seniority mois d'ancienneté, son préavis de mise à la retraite devrait être $expectedNotice mois",
-  ({ seniority, category, expectedNotice, expectedUnit }) => {
-    const situation = engine.setSituation({
-      "contrat salarié . ancienneté": seniority,
-      "contrat salarié . convention collective": "'IDCC2941'",
-      "contrat salarié . convention collective . bad . catégorie professionnelle": `'${category}'`,
-      "contrat salarié . mise à la retraite": "oui",
-      "contrat salarié . travailleur handicapé": "non",
-    });
-    const result = situation.evaluate("contrat salarié . préavis de retraite");
-    const notifications = getNotifications(situation);
+test("Pour un employé de category A, B, C ou D possédant 24 mois d'ancienneté, son préavis de mise à la retraite devrait être 2 mois mais il ne doit pas avoir de notif", () => {
+  const situation = engine.setSituation({
+    "contrat salarié . ancienneté": 24,
+    "contrat salarié . convention collective": "'IDCC2941'",
+    "contrat salarié . convention collective . bad . catégorie professionnelle":
+      "'A, B, C ou D'",
+    "contrat salarié . mise à la retraite": "oui",
+    "contrat salarié . travailleur handicapé": "non",
+  });
+  const result = situation.evaluate("contrat salarié . préavis de retraite");
+  const notifications = getNotifications(situation);
 
-    expect(result.nodeValue).toEqual(expectedNotice);
-    expect(result.unit?.numerators).toEqual([expectedUnit]);
-    expect(result.missingVariables).toEqual({});
+  expect(result.nodeValue).toEqual(2);
+  expect(result.unit?.numerators).toEqual(["mois"]);
+  expect(result.missingVariables).toEqual({});
 
-    expect(notifications).toHaveLength(0);
-  }
-);
+  expect(notifications).toHaveLength(0);
+});
