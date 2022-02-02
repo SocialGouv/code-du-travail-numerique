@@ -17,7 +17,7 @@ jobs:
       - name: Create the Mattermost Message
         if: failure()
         run: |
-          echo "{\"text\":\"Une ou plusieurs URLs des services de renseignement ne sont plus valides : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"\"}" > mattermost.json
+          echo "{\"text\":\"Une ou plusieurs URLs des services de renseignement ne sont plus valides : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}" > mattermost.json
       - uses: mattermost/action-mattermost-notify@master
         if: failure()
         env:
