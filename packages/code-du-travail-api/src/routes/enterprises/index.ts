@@ -79,7 +79,7 @@ const makeSearchUrl = (query: string, address: string) => {
   return `${ENTERPRISE_API_URL}/search?${flattenParams}`;
 };
 
-router.get("/enterprises", async (ctx: any) => {
+router.get("/enterprises", async (ctx) => {
   if (
     !ctx.request.query.q ||
     typeof ctx.request.query.q !== "string" ||
