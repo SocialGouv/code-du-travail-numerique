@@ -1,14 +1,7 @@
-import {
-  AlertWithIcon,
-  icons,
-  InputRadio,
-  Text,
-  theme,
-} from "@socialgouv/cdtn-ui";
+import { AlertWithIcon, InputRadio, Text } from "@socialgouv/cdtn-ui";
 import { FormApi } from "final-form";
 import React from "react";
 import { Field } from "react-final-form";
-import styled from "styled-components";
 
 import { ErrorField } from "../../ErrorField";
 import { Question } from "../../Question";
@@ -44,9 +37,8 @@ const RouteSelection = ({ form }: Props): JSX.Element => {
             <InputRadio
               label={
                 <Text>
-                  Je ne souhaite pas renseigner ma convention collective.{" "}
-                  <Text variant="primary">Je passe l&apos;étape</Text>
-                  <StyledArrowRight variant={"primary"} />
+                  Je ne souhaite pas renseigner ma convention collective (je
+                  passe l&apos;étape)
                 </Text>
               }
               id={`not-selected`}
@@ -60,14 +52,5 @@ const RouteSelection = ({ form }: Props): JSX.Element => {
     </>
   );
 };
-
-const { spacings } = theme;
-
-const StyledArrowRight = styled(icons.DirectionRight)`
-  width: 2.6rem;
-  height: 1.2rem;
-  color: ${({ theme }) => theme.primary};
-  margin: 0 ${spacings.tiny} 0 ${spacings.small};
-`;
 
 export default RouteSelection;

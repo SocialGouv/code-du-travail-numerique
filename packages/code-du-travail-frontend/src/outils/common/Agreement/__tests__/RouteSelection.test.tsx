@@ -9,7 +9,7 @@ describe("RouteSelection: Skip the agreement selection", () => {
     it("should render the mandatory question 'Je ne souhaite pas renseigner ma convention collective.'", () => {
       const { getByText } = render(<TestForm Step={RouteSelection} />);
       expect(
-        getByText("Je ne souhaite pas renseigner ma convention collective.")
+        getByText(/Je ne souhaite pas renseigner ma convention collective/)
       ).toBeInTheDocument();
       expect(getByText("(obligatoire)")).toBeInTheDocument();
     });
@@ -23,7 +23,7 @@ describe("RouteSelection: Skip the agreement selection", () => {
     it("should show an alert when select to skip the agreement selection", () => {
       const { getByText } = render(<TestForm Step={RouteSelection} />);
       getByText(
-        "Je ne souhaite pas renseigner ma convention collective."
+        /Je ne souhaite pas renseigner ma convention collective/
       ).click();
 
       expect(
