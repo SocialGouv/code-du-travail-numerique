@@ -5,14 +5,14 @@ import React, { Reducer, useEffect, useReducer } from "react";
 import { Form } from "react-final-form";
 import styled from "styled-components";
 
+import {
+  MatomoBaseEvent,
+  MatomoRetirementEvent,
+  MatomoTrackUrl,
+} from "../../lib/matomo";
 import { matopush } from "../../piwik";
 import { PrevNextBar } from "./PrevNextBar";
 import { STEP_LIST_WIDTH, StepList } from "./StepList";
-import {
-  MatomoCommonEvent,
-  MatomoPreavisRetraiteEvent,
-  MatomoTrackUrl,
-} from "./type/matomo";
 import { Action, ActionName, SkipFn, State } from "./type/WizardType";
 
 const anchorRef = React.createRef<HTMLLIElement>();
@@ -129,21 +129,21 @@ function Wizard({
       switch (steps[stepIndex].name) {
         case initialState.steps[1].name: // "origine"
           matopush([
-            MatomoCommonEvent.TRACK_EVENT,
-            MatomoCommonEvent.OUTIL,
+            MatomoBaseEvent.TRACK_EVENT,
+            MatomoBaseEvent.OUTIL,
             form.getState().values["contrat salarié - mise à la retraite"] ===
             "oui"
-              ? MatomoPreavisRetraiteEvent.MISE_RETRAITE
-              : MatomoPreavisRetraiteEvent.DEPART_RETRAITE,
+              ? MatomoRetirementEvent.MISE_RETRAITE
+              : MatomoRetirementEvent.DEPART_RETRAITE,
           ]);
           break;
         case initialState.steps[4].name: // "anciennete"
           matopush([
-            MatomoCommonEvent.TRACK_EVENT,
-            MatomoCommonEvent.OUTIL,
+            MatomoBaseEvent.TRACK_EVENT,
+            MatomoBaseEvent.OUTIL,
             form.getState().values.seniorityGreaterThanTwoYears
-              ? MatomoPreavisRetraiteEvent.ANCIENNETE_PLUS_2_ANS
-              : MatomoPreavisRetraiteEvent.ANCIENNETE_MOINS_2_ANS,
+              ? MatomoRetirementEvent.ANCIENNETE_PLUS_2_ANS
+              : MatomoRetirementEvent.ANCIENNETE_MOINS_2_ANS,
           ]);
           break;
         default:
