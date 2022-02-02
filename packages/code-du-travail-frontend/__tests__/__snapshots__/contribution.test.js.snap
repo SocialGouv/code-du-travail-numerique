@@ -2634,7 +2634,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       >
                         <p
                           aria-level="2"
-                          class="c59"
+                          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c59"
                           role="heading"
                         >
                           Page personnalisable
@@ -5948,7 +5948,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       >
                         <p
                           aria-level="2"
-                          class="c59"
+                          class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c59"
                           role="heading"
                         >
                           Page personnalisable
