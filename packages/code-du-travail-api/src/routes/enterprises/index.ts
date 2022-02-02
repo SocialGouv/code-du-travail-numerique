@@ -13,7 +13,7 @@ const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
 const router = new Router({ prefix: API_BASE_URL });
 const ENTERPRISE_API_URL =
-  "https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1";
+  "https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1";
 
 interface EnterpriseApiResponse {
   entreprises?: {
@@ -60,21 +60,38 @@ const populateAgreements = async (
   return enterpriseApiResponse;
 };
 
-router.get("/enterprises", async (ctx) => {
-  const query = ctx.request.query.q;
-  const address = ctx.request.query.a;
+const makeSearchUrl = (query: string, address: string) => {
+  const params: { k: string; v: string }[] = [
+    { k: "ranked", v: "true" },
+    { k: "query", v: encodeURIComponent(query) },
+    { k: "address", v: encodeURIComponent(address) },
+    { k: "convention", v: "true" },
+    { k: "employer", v: "true" },
+    { k: "open", v: "true" },
+    { k: "matchingLimit", v: "0" },
+  ];
+
+  const flattenParams = params
+    .map(({ k, v }) => (k && v ? `${k}=${v}` : undefined))
+    .filter((qp) => qp)
+    .join("&");
+
+  return `${ENTERPRISE_API_URL}/search?${flattenParams}`;
+};
+
+router.get("/enterprises", async (ctx: any) => {
   if (
-    !query ||
-    typeof query !== "string" ||
-    (address && typeof address !== "string")
+    !ctx.request.query.q ||
+    typeof ctx.request.query.q !== "string" ||
+    (ctx.request.query.a && typeof ctx.request.query.a !== "string")
   ) {
     ctx.status = 400;
     return;
   }
+  const query: string = ctx.request.query.q;
+  const address: string = ctx.request.query.a || "";
   if (query) {
-    const url = `${ENTERPRISE_API_URL}/search?q=${encodeURIComponent(query)}${
-      address ? `&a=${encodeURIComponent(address)}` : ""
-    }&onlyWithConvention=true`;
+    const url = makeSearchUrl(query, address);
 
     const response = await fetch(url);
 

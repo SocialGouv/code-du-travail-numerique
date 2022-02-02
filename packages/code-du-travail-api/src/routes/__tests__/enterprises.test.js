@@ -28,7 +28,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(404);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?q=NOT-FOUND&onlyWithConvention=true`
+      `https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=NOT-FOUND&convention=true&employer=true&open=true&matchingLimit=0`
     );
 
     expect(response.text).toEqual("Not found");
@@ -49,7 +49,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      "https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?q=La%20p%C3%AAche%20%C3%A0%20la%20ligne&onlyWithConvention=true"
+      "https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=La%20p%C3%AAche%20%C3%A0%20la%20ligne&convention=true&employer=true&open=true&matchingLimit=0"
     );
   });
 
@@ -99,7 +99,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?q=AUTOEXPRESS&onlyWithConvention=true`
+      `https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=true&employer=true&open=true&matchingLimit=0`
     );
 
     expect(response.body).toEqual(apiEnterpriseResponse.json());
@@ -120,7 +120,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      "https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?q=hello&a=my%20address&onlyWithConvention=true"
+      "https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=hello&a=my%20address&convention=true&employer=true&open=true&matchingLimit=0"
     );
   });
 
@@ -149,7 +149,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?q=AUTOEXPRESS&onlyWithConvention=true`
+      `https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=true&employer=true&open=true&matchingLimit=0`
     );
 
     expect(response.body.entreprises).toHaveLength(1);
@@ -187,7 +187,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?q=AUTOEXPRESS&onlyWithConvention=true`
+      `https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=true&employer=true&open=true&matchingLimit=0`
     );
 
     expect(response.body.entreprises).toHaveLength(1);
@@ -232,7 +232,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?q=AUTOEXPRESS&onlyWithConvention=true`
+      `https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=true&employer=true&open=true&matchingLimit=0`
     );
 
     expect(response.body).toEqual(apiEnterpriseResponse.json());
@@ -261,7 +261,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?q=AUTOEXPRESS&onlyWithConvention=true`
+      `https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=true&employer=true&open=true&matchingLimit=0`
     );
 
     expect(response.body).toEqual(apiEnterpriseResponse.json());
@@ -299,7 +299,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      `https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?q=AUTOEXPRESS&onlyWithConvention=true`
+      `https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=true&employer=true&open=true&matchingLimit=0`
     );
 
     expect(response.body.entreprises).toHaveLength(2);
