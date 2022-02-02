@@ -43,7 +43,7 @@ describe("Test enterprise endpoint", () => {
     fetch.mockResolvedValueOnce(apiEnterpriseResponse);
 
     const response = await request(app.callback()).get(
-      "/api/v1/enterprises?q=La pêche à la ligne"
+      `/api/v1/enterprises?q=${encodeURIComponent("La pêche à la ligne")}`
     );
 
     expect(response.status).toEqual(200);
@@ -114,7 +114,7 @@ describe("Test enterprise endpoint", () => {
     fetch.mockResolvedValueOnce(apiEnterpriseResponse);
 
     const response = await request(app.callback()).get(
-      "/api/v1/enterprises?q=hello&a=my address"
+      "/api/v1/enterprises?q=hello&a=my%20address"
     );
 
     expect(response.status).toEqual(200);
