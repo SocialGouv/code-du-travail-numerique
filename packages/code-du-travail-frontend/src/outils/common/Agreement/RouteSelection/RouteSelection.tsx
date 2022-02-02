@@ -36,11 +36,7 @@ const RouteSelection = ({ form }: Props): JSX.Element => {
           {(props) => (
             <InputRadio
               label={
-                <Text>
-                  Je connais ma convention collective.{" "}
-                  <Text variant="primary">Je la saisis</Text>
-                  <StyledArrowRight variant={"primary"} />
-                </Text>
+                <Text>Je connais ma convention collective (je la saisis)</Text>
               }
               id={`agreement`}
               {...props.input}

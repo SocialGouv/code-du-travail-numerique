@@ -43,7 +43,7 @@ describe("RouteSelection: Skip the agreement selection", () => {
       const { getByText, queryByText } = render(
         <EmbeddedInjectedForm Step={RouteSelection} />
       );
-      getByText("Je connais ma convention collective.").click();
+      getByText(/Je connais ma convention collective/).click();
 
       expect(queryByText(/À noter/)).not.toBeInTheDocument();
     });
