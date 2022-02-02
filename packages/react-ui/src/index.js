@@ -48,13 +48,6 @@ export { ViewMore } from "./ViewMore/index.js";
 
 // Fields
 export { InputCheckbox } from "./field/Checkbox.js";
-export {
-  ComboBox,
-  ComboBoxInput,
-  ComboBoxList,
-  ComboBoxOption,
-  ComboBoxPopover,
-} from "./field/ComboBox";
 export { Fieldset } from "./field/Fieldset.js";
 export { Input } from "./field/Input.js";
 export { InputDate } from "./field/InputDate.js";
