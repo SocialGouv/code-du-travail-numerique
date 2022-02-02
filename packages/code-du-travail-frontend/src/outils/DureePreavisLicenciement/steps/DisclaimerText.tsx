@@ -2,12 +2,12 @@ import React from "react";
 
 import CCSearchInfo from "../../common/CCSearchInfo";
 import { isNotNearZero } from "../../common/math";
-import { ConventionCollective } from "../../common/type/WizardType";
+import { Agreement } from "../../common/type/WizardType";
 
 type Props = {
   durationCC: number;
   durationCDT: string;
-  ccn: ConventionCollective;
+  ccn: Agreement;
 };
 
 const DisclaimerText: React.FC<Props> = ({ durationCC, durationCDT, ccn }) => {

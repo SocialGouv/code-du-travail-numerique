@@ -2,10 +2,10 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import Link from "next/link";
 import React from "react";
 
-import { ConventionCollective } from "./type/WizardType";
+import { Agreement } from "./type/WizardType";
 
 type Props = {
-  ccn: ConventionCollective;
+  ccn: Agreement;
 };
 
 const CCSearchInfo: React.FC<Props> = ({ ccn }) => {

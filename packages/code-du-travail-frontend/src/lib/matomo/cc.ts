@@ -17,33 +17,35 @@ export const trackConventionCollective = (
   let isTreated = false;
   switch (removeQueryParameters(currentPath)) {
     case MatomoTrackUrl.PREAVIS_RETRAITE: {
-      const idccInfo = retraiteData.find((item) => item.idcc == ccn.num);
+      const idccInfo = retraiteData.find(
+        (item) => item.idcc == ccn.selected?.num
+      );
       isTreated = !!(idccInfo && idccInfo.preavisRetraite);
       break;
     }
     case MatomoTrackUrl.PREAVIS_DEMISSION: {
       const idcc = demissionData.situations.find(
-        (item) => item.idcc == ccn.num
+        (item) => item.idcc == ccn.selected?.num
       );
       isTreated = !!idcc;
       break;
     }
     case MatomoTrackUrl.PREAVIS_LICENCIEMENT: {
       const idcc = licenciementData.situations.find(
-        (item) => item.idcc == ccn.num
+        (item) => item.idcc == ccn.selected?.num
       );
       isTreated = !!idcc;
       break;
     }
     case MatomoTrackUrl.HEURE_RECHERCHE_EMPLOI: {
       const idcc = heuresRecherchesEmploiData.situations.find(
-        (item) => item.idcc == ccn.num
+        (item) => item.idcc == ccn.selected?.num
       );
       isTreated = !!idcc;
       break;
     }
     case MatomoTrackUrl.INDEMNITE_PRECARITE: {
-      const idcc = precariteData.find((item) => item.idcc == ccn.num);
+      const idcc = precariteData.find((item) => item.idcc == ccn.selected?.num);
       isTreated = !!idcc;
       break;
     }
@@ -57,6 +59,6 @@ export const trackConventionCollective = (
     isTreated
       ? MatomoAgreementEvent.CC_TREATED
       : MatomoAgreementEvent.CC_UNTREATED,
-    ccn.num,
+    ccn.selected?.num,
   ]);
 };
