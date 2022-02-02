@@ -16,11 +16,11 @@ export const mapToPublicodesSituation = (
     "contrat salarié - ancienneté":
       seniorityMaximum && seniorityValue
         ? seniorityValue
-        : formatSeniority(form["contrat salarié - ancienneté"]),
+        : formatSeniority(form["contrat salarié - ancienneté"] as string),
   };
-  const agreement: Record<string, string> = ccn
+  const agreement: Record<string, string> = ccn?.selected
     ? {
-        "contrat salarié - convention collective": `'IDCC${ccn.num
+        "contrat salarié - convention collective": `'IDCC${ccn.selected.num
           .toString()
           .padStart(4, "0")}'`,
       }

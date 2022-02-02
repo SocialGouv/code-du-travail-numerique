@@ -32,7 +32,7 @@ export type WizardStepProps = {
   dispatch: React.Dispatch<Action>;
 };
 
-export type ConventionCollective = {
+export type Agreement = {
   id: string;
   num: number;
   shortTitle: string;
@@ -40,9 +40,16 @@ export type ConventionCollective = {
   title: string;
 };
 
-export type FormContent = Record<string, string> & {
+export type AgreementRoute = "not-selected";
+
+export interface ConventionCollective {
+  route: AgreementRoute;
+  selected?: Agreement;
+}
+
+export type FormContent = {
   ccn?: ConventionCollective;
-  seniorityMaximum: boolean;
-  seniorityValue: string;
+  seniorityMaximum?: boolean;
+  seniorityValue?: string;
   infos?: Record<string, string>;
-};
+} & Record<string, unknown>;
