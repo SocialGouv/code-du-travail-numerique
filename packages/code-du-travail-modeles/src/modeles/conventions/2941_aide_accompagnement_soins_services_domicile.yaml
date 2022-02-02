@@ -54,7 +54,7 @@ contrat salarié . convention collective . bad . catégorie professionnelle . A 
 
 contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D . moins de deux ans . préavis de retaite . notification:
   type: notification
-  applicable si: ancienneté < 24 mois
+  applicable si: contrat salarié . préavis de retraite = contrat salarié . préavis de retraite collective
   description: "1 mois de date à date"
   valeur: oui
 
