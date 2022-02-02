@@ -10,7 +10,8 @@
     },
     {
       "name": "catégorie professionnelle",
-      "question": "Quelle est la catégorie professionnelle du salarié ?"
+      "question": "Quelle est la catégorie professionnelle du salarié ?",
+      "note": "La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "initiative de la rupture de la période d'essai",
@@ -50,31 +51,38 @@
     },
     {
       "name": "niveau",
-      "question": "Quel est le niveau du salarié ?"
+      "question": "Quel est le niveau du salarié ?",
+      "note": "Le niveau du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "classe",
-      "question": "Quelle est la classe du salarié ?"
+      "question": "Quelle est la classe du salarié ?",
+      "note": "La classe du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "position",
-      "question": "Quelle est la position du salarié ?"
+      "question": "Quelle est la position du salarié ?",
+      "note": "La position du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "groupe",
-      "question": "Quel est le groupe professionnel du salarié ?"
+      "question": "Quel est le groupe professionnel du salarié ?",
+      "note": "Le groupe du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "coefficient",
-      "question": "Quel est le coefficient hiérarchique du salarié ?"
+      "question": "Quel est le coefficient hiérarchique du salarié ?",
+      "note": "La coefficient du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "échelon",
-      "question": "Quel est l'échelon du salarié ?"
+      "question": "Quel est l'échelon du salarié ?",
+      "note": "L'échelon du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "ancienneté",
-      "question": "Quelle est l'ancienneté du salarié ?"
+      "question": "Quelle est l'ancienneté du salarié ?",
+      "note": "L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "âge",
