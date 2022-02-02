@@ -6,7 +6,7 @@ import { Field } from "react-final-form";
 import styled from "styled-components";
 
 import ConventionSearch from "../../conventions/Search";
-import { trackConventionCollective } from "../../lib/matomo";
+import { trackConventionCollective } from "../../lib";
 import { useLocalStorage } from "../../lib/useLocalStorage";
 import { ErrorField } from "./ErrorField";
 import { Question } from "./Question";
@@ -117,7 +117,7 @@ function StepInfoCCn({
     <>
       <Field
         name={CONVENTION_NAME}
-        validate={isOptional ? null : required}
+        validate={isOptional ? undefined : required}
         render={({ input, meta: { error } }) => {
           if (input.value) {
             return (

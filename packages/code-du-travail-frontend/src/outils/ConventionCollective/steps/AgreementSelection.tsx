@@ -21,18 +21,20 @@ const AgreementSelectionStep = ({
     <>
       <SectionTitle>Convention collective</SectionTitle>
       <Paragraph noMargin variant="primary">
-        {enterprise.conventions.length > 1
-          ? `${enterprise.conventions.length} conventions collectives trouvées pour `
-          : `${enterprise.conventions.length} convention collective trouvée pour `}
+        {(enterprise?.conventions?.length ?? 0) > 1
+          ? `${enterprise?.conventions.length} conventions collectives trouvées pour `
+          : `${
+              enterprise?.conventions.length ?? 0
+            } convention collective trouvée pour `}
         <strong>
-          « {enterprise.simpleLabel}
-          {enterprise.address &&
-            ` , ${enterprise.matchingEtablissement.address}`}{" "}
+          « {enterprise?.simpleLabel}
+          {enterprise?.address &&
+            ` , ${enterprise?.firstMatchingEtablissement?.address}`}{" "}
           »
         </strong>
       </Paragraph>
       <FlatList>
-        {enterprise.conventions.map((agreement) => (
+        {enterprise?.conventions.map((agreement) => (
           <Li key={agreement.id}>
             <AgreementTile agreement={agreement} />
           </Li>
@@ -57,6 +59,7 @@ const Li = styled.li`
   & + & {
     margin-top: ${theme.spacings.base};
   }
+
   &:last-child {
     margin-bottom: ${theme.spacings.large};
   }

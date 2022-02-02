@@ -10,6 +10,8 @@ describe("<Tooltip />", () => {
       <DisclosureIcon
         iconTitle="Find out what lies beneath"
         icon={<HelpCircle size="20" aria-label="?" />}
+        isTooltipOpen={true}
+        onVisibilityChange={() => {}}
       >
         Here I am! I am the buried treasure!
       </DisclosureIcon>

@@ -7,7 +7,7 @@ import {
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
-import React, { useRef } from "react";
+import React, { MutableRefObject, useRef } from "react";
 import Spinner from "react-svg-spinner";
 import styled from "styled-components";
 
@@ -30,6 +30,7 @@ const EnterpriseSearchStep = ({
   const { setSearchParams, setEnterprise } = useNavContext();
   const { trackEvent, uuid, title } = useTrackingContext();
   const refInput = useRef<HTMLDivElement>();
+
   function handleEnterpriseSelection(
     enterprise: Enterprise,
     params: SearchParams
@@ -37,14 +38,16 @@ const EnterpriseSearchStep = ({
     setEnterprise(enterprise);
     setSearchParams(params);
   }
+
   function openModalHandler(openModal: () => void) {
     trackEvent("cc_search_help", "click_cc_search_help_p2", title, uuid);
     openModal();
   }
+
   return (
     <>
       <SearchEnterprise
-        inputRef={refInput}
+        inputRef={refInput as MutableRefObject<HTMLDivElement>}
         renderResults={(state, params) => {
           if (refInput.current && state.data && !state.isLoading) {
             refInput.current.scrollIntoView({ behavior: "smooth" });
@@ -80,7 +83,7 @@ const EnterpriseSearchStep = ({
                     return (
                       <ListItem key={item.siren}>
                         <EnterpriseButton
-                          showAddress={params.address.length > 0 || isSiret}
+                          showAddress={isSiret || item.matching == 1}
                           isFirst={index === 0}
                           enterprise={item}
                           onClick={() =>
@@ -145,7 +148,9 @@ const EnterpriseSearchStep = ({
                 </Wrapper>
               </Section>
             )
-          ) : null;
+          ) : (
+            <></>
+          );
         }}
       />
 

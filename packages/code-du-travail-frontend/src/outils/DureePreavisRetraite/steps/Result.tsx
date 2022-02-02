@@ -35,7 +35,7 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
         <PubliReferences references={publicodesContext.getReferences()} />
       </ShowDetails>
       <WarningResult
-        resultValueInDays={publicodesContext.result.valueInDays}
+        resultValueInDays={publicodesContext.result?.valueInDays}
         type={
           formValues["contrat salarié - mise à la retraite"] === "oui"
             ? "mise"

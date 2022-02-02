@@ -22,6 +22,7 @@ import { HeuresRechercheEmploi } from "../../src/outils/HeuresRechercheEmploi";
 import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
 import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
 import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
+import { Tool } from "../../src/outils/types";
 import { matopush } from "../../src/piwik";
 
 const {
@@ -85,9 +86,14 @@ export default Outils;
 export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
-  const { slug, description, icon, title } = tools.find(
-    (tool) => tool.slug === query.slug
-  );
+  const tool = (tools as Tool[]).find((tool) => tool.slug === query.slug);
+  if (!tool) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const { slug, description, icon, title } = tool;
   let relatedItems = [];
   try {
     const response = await fetch(`${API_URL}/items/${SOURCES.TOOLS}/${slug}`);

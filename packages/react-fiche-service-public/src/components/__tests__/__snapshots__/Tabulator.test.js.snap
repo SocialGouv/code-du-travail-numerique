@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tabulator /> should have two different levels of headings 1`] = `
-.c10 {
+.c12 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -14,7 +14,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
   transform: translateY(-50%);
 }
 
-.c12 {
+.c8 {
   position: relative;
   display: block;
   margin: 3.2rem 0 2rem 0;
@@ -134,22 +134,22 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
   border-radius: 0.6rem;
 }
 
-.c11 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c11 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
-.c8 {
+.c10 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
-.c9 {
+.c11 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -162,7 +162,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c8 {
     font-size: 1.6rem;
   }
 }
@@ -225,20 +225,20 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c10 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c11 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c11 {
     font-size: 2.2rem;
   }
 }
@@ -291,27 +291,27 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
       <div
         class="c7"
       >
-        <div
+        <h1
           class="c8"
         >
-          <h2
-            class="c9"
-          >
-            <span
-              class="c10"
-            />
-            CDI
-          </h2>
-        </div>
+          CDI
+        </h1>
       </div>
       <div
-        class="c11"
+        class="c9"
       >
-        <h3
-          class="c12"
+        <div
+          class="c10"
         >
-          titre 1
-        </h3>
+          <h2
+            class="c11"
+          >
+            <span
+              class="c12"
+            />
+            titre 1
+          </h2>
+        </div>
         <p>
           paragraphe 1
         </p>
@@ -567,20 +567,20 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
       <div
         class="c7"
       >
-        <h4
+        <h3
           class="c8"
         >
           CDI
-        </h4>
+        </h3>
       </div>
       <div
         class="c9"
       >
-        <h5
+        <h4
           class="c8"
         >
           titre 1
-        </h5>
+        </h4>
         <p>
           paragraphe 1
         </p>
@@ -836,20 +836,20 @@ exports[`<Tabulator /> should render 1`] = `
       <div
         class="c7"
       >
-        <h5
+        <h4
           class="c8"
         >
           CDI
-        </h5>
+        </h4>
       </div>
       <div
         class="c9"
       >
-        <h6
+        <h5
           class="c8"
         >
           titre 1
-        </h6>
+        </h5>
         <p>
           paragraphe 1
         </p>

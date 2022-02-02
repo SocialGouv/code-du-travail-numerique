@@ -62,9 +62,11 @@ router.get("/stats", async (ctx) => {
     return;
   }
   const promises = methodParams.map((params) =>
-    fetch(getUrl(MATOMO_URL, { ...baseParams, ...params })).then((data) =>
-      data.json()
-    )
+    fetch(getUrl(MATOMO_URL, { ...baseParams, ...params }))
+      .then((data) => data.json())
+      .catch(() => {
+        return null;
+      })
   );
   const {
     body: { aggregations },
@@ -76,12 +78,17 @@ router.get("/stats", async (ctx) => {
   }
   const [nbVisitData, infoData] = await Promise.all(promises);
 
-  ctx.body = {
-    nbDocuments,
-    nbPageViews: infoData.nb_pageviews,
-    nbSearches: infoData.nb_searches,
-    nbVisits: nbVisitData.value,
-  };
+  if (!nbVisitData && !infoData) {
+    ctx.status = 502;
+    ctx.body = {};
+  } else {
+    ctx.body = {
+      nbDocuments,
+      nbPageViews: infoData.nb_pageviews,
+      nbSearches: infoData.nb_searches,
+      nbVisits: nbVisitData.value,
+    };
+  }
 });
 
 export default router;
