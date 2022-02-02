@@ -1,3 +1,4 @@
+import { formatIdcc } from "@cdt/data";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import {
   Button,
@@ -62,8 +63,11 @@ const AgreementSearchStep = ({
               </ScreenReaderOnly>
               <ComboBoxList>
                 {state.data.map((item, index) => {
+                  const value = `${item.shortTitle} (IDCC ${formatIdcc(
+                    item.num
+                  )})`;
                   return (
-                    <ComboBoxOption value={item.shortTitle} key={item.id}>
+                    <ComboBoxOption value={value} key={item.id}>
                       <AgreementLink isFirst={index === 0} agreement={item} />
                     </ComboBoxOption>
                   );

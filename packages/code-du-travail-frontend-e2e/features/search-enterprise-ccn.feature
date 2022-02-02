@@ -10,14 +10,14 @@ Scénario:
   Soit un utilisateur sur la page "/outils/convention-collective"
 
   Quand je clique sur "Je la recherche"
-  Quand je renseigne "michelin" dans le champ "Nom de votre entreprise ou numéro Siret (obligatoire)"
+  Quand je renseigne "michelin" dans le champ "#enterprise-search"
   Quand j'attends que le texte "MANUFACTURE FRANCAISE DES PNEUMATIQUES" apparaisse
   Quand je clique sur "MANUFACTURE FRANCAISE DES PNEUMATIQUES"
   Alors je vois "2 conventions collectives trouvées pour « MANUFACTURE FRANCAISE DES PNEUMATIQUES MICHELIN »"
   Alors le lien "Caoutchouc IDCC0045" pointe sur "/convention-collective/45-caoutchouc"
 
   Quand je clique sur "Précédent"
-  Quand je renseigne "82161143100015" dans le champ "Nom de votre entreprise ou numéro Siret (obligatoire)"
+  Quand je renseigne "82161143100015" dans le champ "#enterprise-search"
   Quand j'attends que le texte "CODEURS" apparaisse
   Quand je clique sur "CODEURS EN LIBERTE"
   Alors je vois "1 convention collective trouvée pour « CODEURS EN LIBERTE »"

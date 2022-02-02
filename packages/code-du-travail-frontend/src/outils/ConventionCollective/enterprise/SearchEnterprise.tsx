@@ -81,7 +81,7 @@ export function SearchEnterprise({
               Ex : 40123778000127
             </p>
           </InfoBulle>
-          <BlockComboBox aria-label="choose a fruit" id="comboBoxInput">
+          <BlockComboBox aria-label="Rechercher mon entreprise">
             <ComboBoxInput
               placeholder="Ex : Café de la gare ou 40123778000127"
               id="enterprise-search"

@@ -69,8 +69,9 @@ export function SearchAgreement({
             l’entreprise (Ex : 4752A).
           </p>
         </InfoBulle>
-        <StyledComboBox aria-label="choose a fruit" id="comboBoxInput">
+        <StyledComboBox aria-label="Rechercher ma Convention Collective">
           <StyledComboBoxInput
+            id="agreement-search"
             placeholder="Ex : Transports routiers ou 1486"
             onChange={searchInputHandler}
           />
