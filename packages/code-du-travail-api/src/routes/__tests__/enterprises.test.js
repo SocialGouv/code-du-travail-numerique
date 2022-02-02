@@ -120,7 +120,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.status).toEqual(200);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      "https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=hello&a=my%20address&convention=true&employer=true&open=true&matchingLimit=0"
+      "https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=hello&address=my%20address&convention=true&employer=true&open=true&matchingLimit=0"
     );
   });
 
