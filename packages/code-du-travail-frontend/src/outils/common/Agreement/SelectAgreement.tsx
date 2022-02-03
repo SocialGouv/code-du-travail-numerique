@@ -5,6 +5,7 @@ import { Agreement } from "../../../conventions/Search/api/type";
 import { useLocalStorage } from "../../../lib/useLocalStorage";
 import { AgreementRoute, FormContent } from "../type/WizardType";
 import { AgreementSearch } from "./AgreementSearch";
+import EnterpriseSearch from "./EnterpriseSearch";
 import { AGREEMENT_NAME, ROUTE_NAME } from "./form-constants";
 import { RouteSelection } from "./RouteSelection";
 import { AgreementSupportInfo } from "./types";
@@ -71,6 +72,7 @@ const SelectAgreement = ({
           onSelectAgreement={onSelectAgreement}
         />
       )}
+      {values.ccn?.route === "enterprise" && <EnterpriseSearch />}
     </>
   );
 };

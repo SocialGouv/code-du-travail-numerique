@@ -22,8 +22,9 @@ interface Props {
 
 function AgreementSearchTool({ icon, title }: Props): JSX.Element {
   const [screen, setScreen] = useState<ScreenType | null>(null);
-  const { setEnterprise, setSearchParams } = useNavContext();
+  const { setEnterprise, setSearchParams, searchParams } = useNavContext();
   const { uuid, trackEvent } = useTrackingContext();
+  const router = useRouter();
 
   function clearSelection() {
     setEnterprise(null);
@@ -66,7 +67,17 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
     setScreen(value);
   }
 
-  const router = useRouter();
+  function handleEnterpriseSelection(
+    enterprise: Enterprise,
+    params: SearchParams
+  ) {
+    setEnterprise(enterprise);
+    setSearchParams(params);
+
+    router.push(
+      `/${SOURCES.TOOLS}/convention-collective#${ScreenType.agreementSelection}`
+    );
+  }
 
   useEffect(() => {
     router.replace(`/${SOURCES.TOOLS}/convention-collective`, undefined, {
@@ -98,7 +109,14 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
       );
       break;
     case ScreenType.enterprise:
-      Step = <Steps.EnterpriseSearchStep onBackClick={clearSearchType} />;
+      Step = (
+        <Steps.EnterpriseSearchStep
+          onSearchParamsChange={(params) => setSearchParams(params)}
+          searchParams={searchParams}
+          handleEnterpriseSelection={handleEnterpriseSelection}
+          onBackClick={clearSearchType}
+        />
+      );
       break;
     case ScreenType.agreementSelection:
       Step = <Steps.AgreementSelectionStep onBackClick={clearSelection} />;

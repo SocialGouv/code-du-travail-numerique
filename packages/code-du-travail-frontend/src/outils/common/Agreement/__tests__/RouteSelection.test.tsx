@@ -62,6 +62,15 @@ describe("RouteSelection: Skip the agreement selection", () => {
 
       expect(queryByText(/À noter/)).not.toBeInTheDocument();
     });
+
+    it("should not show an alert when select i don't know my agreement", () => {
+      const { getByText, queryByText } = render(
+        <EmbeddedInjectedForm Step={RouteSelection} />
+      );
+      getByText(/Je ne connais pas ma convention collective/).click();
+
+      expect(queryByText(/À noter/)).not.toBeInTheDocument();
+    });
   });
 
   describe("with data in form (come back on the step)", () => {

@@ -14,30 +14,29 @@ import styled from "styled-components";
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
 import { InlineError } from "../../common/ErrorField";
 import { HelpModal } from "../common/Modal";
-import { useNavContext } from "../common/NavContext";
 import { ListItem, ResultList } from "../common/ResultList";
 import { useTrackingContext } from "../common/TrackingContext";
 import { EnterpriseButton } from "../enterprise/EnterpriseButton";
 import { SearchEnterprise, SearchParams } from "../enterprise/SearchEnterprise";
 
 type EnterpriseSearchStepProps = {
-  onBackClick: () => void;
+  onBackClick?: () => void;
+  handleEnterpriseSelection: (
+    enterprise: Enterprise,
+    params: SearchParams
+  ) => void;
+  searchParams?: SearchParams;
+  onSearchParamsChange: (params: SearchParams) => void;
 };
 
 const EnterpriseSearchStep = ({
   onBackClick,
+  handleEnterpriseSelection,
+  searchParams,
+  onSearchParamsChange,
 }: EnterpriseSearchStepProps): JSX.Element => {
-  const { setSearchParams, setEnterprise } = useNavContext();
   const { trackEvent, uuid, title } = useTrackingContext();
   const refInput = useRef<HTMLDivElement>();
-
-  function handleEnterpriseSelection(
-    enterprise: Enterprise,
-    params: SearchParams
-  ) {
-    setEnterprise(enterprise);
-    setSearchParams(params);
-  }
 
   function openModalHandler(openModal: () => void) {
     trackEvent("cc_search_help", "click_cc_search_help_p2", title, uuid);
@@ -47,6 +46,13 @@ const EnterpriseSearchStep = ({
   return (
     <>
       <SearchEnterprise
+        searchParams={
+          searchParams ?? {
+            address: "",
+            query: "",
+          }
+        }
+        onSearchParamsChange={onSearchParamsChange}
         inputRef={refInput as MutableRefObject<HTMLDivElement>}
         renderResults={(state, params) => {
           if (refInput.current && state.data && !state.isLoading) {
@@ -154,11 +160,19 @@ const EnterpriseSearchStep = ({
         }}
       />
 
-      <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
-        <Button as="a" small type="button" onClick={onBackClick} variant="flat">
-          Précédent
-        </Button>
-      </Link>
+      {onBackClick && (
+        <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
+          <Button
+            as="a"
+            small
+            type="button"
+            onClick={onBackClick}
+            variant="flat"
+          >
+            Précédent
+          </Button>
+        </Link>
+      )}
     </>
   );
 };
