@@ -109,7 +109,7 @@ export function StepInformations({ form, actionEvent }: Props): JSX.Element {
     <>
       <SectionTitle>Statut du salarié</SectionTitle>
       {memoizedQuestions.map(([key, answers], index) => (
-        <div key={index + key}>
+        <div key={`${index}-${key}`}>
           {questionsMap[key] && (
             <SelectQuestion
               name={`criteria.${key}`}
