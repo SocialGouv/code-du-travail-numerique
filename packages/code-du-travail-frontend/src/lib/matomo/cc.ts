@@ -4,7 +4,7 @@ import demissionData from "@cdt/data...simulateurs/preavis-demission.data.json";
 import licenciementData from "@cdt/data...simulateurs/preavis-licenciement.data.json";
 import { supportedCcn as retraiteData } from "@socialgouv/modeles-social";
 
-import { Agreement } from "../../conventions/Search/api/type";
+import type { Agreement } from "../../conventions/Search/api/type";
 import { matopush } from "../../piwik";
 import { removeQueryParameters } from "..";
 import { MatomoAgreementEvent, MatomoBaseEvent, MatomoTrackUrl } from ".";

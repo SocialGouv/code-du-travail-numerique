@@ -1,6 +1,7 @@
 import { FormApi } from "final-form";
 import React from "react";
 
+import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
 import type { Agreement } from "../../../conventions/Search/api/type";
 
 export type SkipFn = (values: FormContent) => boolean;
@@ -39,6 +40,7 @@ export type AgreementRoute = "not-selected" | "agreement" | "enterprise";
 export interface ConventionCollective {
   route: AgreementRoute;
   selected?: Agreement;
+  enterprise?: Enterprise;
 }
 
 export type FormContent = {

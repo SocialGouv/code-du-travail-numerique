@@ -1,14 +1,15 @@
 import { FormApi } from "final-form";
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
+import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
 import { Agreement } from "../../../conventions/Search/api/type";
 import { useLocalStorage } from "../../../lib/useLocalStorage";
 import { AgreementRoute, FormContent } from "../type/WizardType";
 import { AgreementSearch } from "./AgreementSearch";
 import EnterpriseSearch from "./EnterpriseSearch";
-import { AGREEMENT_NAME, ROUTE_NAME } from "./form-constants";
+import { AGREEMENT_NAME, ENTERPRISE_NAME, ROUTE_NAME } from "./form-constants";
 import { RouteSelection } from "./RouteSelection";
-import { AgreementSupportInfo } from "./types";
+import { AgreementSupportInfo, OnSelectAgreementFn } from "./types";
 
 export type Props = {
   form: FormApi<FormContent>;
@@ -27,16 +28,20 @@ const SelectAgreement = ({
     "convention",
     defaultSelectedAgreement
   );
+  const [enterprise, setEnterprise] = useState<Enterprise | undefined>(
+    form.getState().values.ccn?.enterprise
+  );
 
-  const onSelectAgreement = useCallback(
-    (data) => {
+  const onSelectAgreement = useCallback<OnSelectAgreementFn>(
+    (agreement, enterprise) => {
       const oldData = storedConvention;
-      setConvention(data);
+      setConvention(agreement);
+      setEnterprise(enterprise);
       if (window) {
         window.scrollTo(0, 0);
       }
-      if (oldData !== data && onChange) {
-        onChange(storedConvention, data);
+      if (oldData !== agreement && onChange) {
+        onChange(storedConvention, agreement);
       }
     },
     [storedConvention, setConvention, onChange]
@@ -45,6 +50,7 @@ const SelectAgreement = ({
   useEffect(() => {
     form.batch(() => {
       form.change(AGREEMENT_NAME, storedConvention);
+      form.change(ENTERPRISE_NAME, enterprise);
       if (
         storedConvention != null &&
         form.getState().values.ccn?.route === undefined
@@ -53,7 +59,7 @@ const SelectAgreement = ({
       }
     });
     // eslint-disable-next-line
-  }, [storedConvention]);
+  }, [storedConvention, enterprise]);
 
   const values = form.getState().values;
   useEffect(() => {
@@ -72,7 +78,12 @@ const SelectAgreement = ({
           onSelectAgreement={onSelectAgreement}
         />
       )}
-      {values.ccn?.route === "enterprise" && <EnterpriseSearch />}
+      {values.ccn?.route === "enterprise" && (
+        <EnterpriseSearch
+          selectedEnterprise={enterprise}
+          onSelectAgreement={onSelectAgreement}
+        />
+      )}
     </>
   );
 };
