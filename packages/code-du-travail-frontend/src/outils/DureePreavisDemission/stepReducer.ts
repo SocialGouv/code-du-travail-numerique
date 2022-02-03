@@ -1,6 +1,6 @@
 import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 
-import { MatomoActionEvent } from "../../lib";
+import { MatomoActionEvent } from "../../lib/matomo/types";
 import { isNotYetProcessed } from "../common/situations.utils";
 import { StepInformations } from "../common/StepInformations";
 import { StepInfoCCn } from "./steps/InfosCCn";

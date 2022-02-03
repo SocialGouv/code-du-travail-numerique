@@ -1,6 +1,6 @@
 import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 
-import { MatomoActionEvent } from "../../lib";
+import { MatomoActionEvent } from "../../lib/matomo/types";
 import { StepInfoCCnOptionnal } from "../common/InfosCCn";
 import { isNotYetProcessed } from "../common/situations.utils";
 import { StepInformations } from "../common/StepInformations";
