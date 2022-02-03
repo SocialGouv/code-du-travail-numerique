@@ -26,6 +26,10 @@ function DisclaimerBox() {
         convention collective, un accord d’entreprise ou à défaut, par un usage
         dans l’entreprise.
       </p>
+      <p>
+        L’existence ou la durée du préavis de démission peut être prévue par un
+        accord d’entreprise ou à défaut, par un usage dans l’entreprise.
+      </p>
     </Disclaimer>
   );
 }
@@ -72,25 +76,30 @@ function StepResult({ form }) {
   return (
     <>
       <SectionTitle>Durée du préavis</SectionTitle>
-      <p>
-        À partir des éléments que vous avez saisis, la durée du préavis de
-        démission est estimée à&nbsp;:{" "}
-        <HighlightResult>{situation.answer}</HighlightResult>
-        {situation.note && <sup>*</sup>}.
-      </p>
+      {situation.answer ? (
+        <p>
+          À partir des éléments que vous avez saisis, la durée du préavis de
+          démission est estimée à&nbsp;: AAA
+          <HighlightResult>{situation.answer}</HighlightResult>
+          {situation.note && <sup>*</sup>}.
+        </p>
+      ) : (
+        <p>
+          À partir des éléments que vous avez saisis : il n’y a pas de préavis à
+          effectuer.
+        </p>
+      )}
       {parseInt(situation.answer3, 10) === 0 && (
         <p>
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.
         </p>
       )}
-
       {situation.note && (
         <SmallText>
           <sup>*</sup> {situation.note}
         </SmallText>
       )}
-
       <ShowDetails>
         <SectionTitle>Éléments saisis</SectionTitle>
         {recapSituation({
@@ -99,7 +108,6 @@ function StepResult({ form }) {
         })}
         <PubliReferences references={formatRefs([refLegal, situation])} />
       </ShowDetails>
-
       <DisclaimerBox />
     </>
   );
