@@ -34,7 +34,7 @@ export type WizardStepProps = {
   dispatch: React.Dispatch<Action>;
 };
 
-export type AgreementRoute = "not-selected" | "agreement";
+export type AgreementRoute = "not-selected" | "agreement" | "enterprise";
 
 export interface ConventionCollective {
   route: AgreementRoute;
