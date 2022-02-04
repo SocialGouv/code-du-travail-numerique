@@ -10,7 +10,8 @@ export function getReferences(engine: Engine): References[] {
     .filter(
       (rule) =>
         rule.rawNode.références &&
-        engine.evaluate(rule.dottedName).nodeValue !== false
+        engine.evaluate(rule.dottedName).nodeValue !== false &&
+        engine.evaluate(rule.dottedName).nodeValue !== null
     )
     .flatMap(({ rawNode }) => {
       if (rawNode.références) {
