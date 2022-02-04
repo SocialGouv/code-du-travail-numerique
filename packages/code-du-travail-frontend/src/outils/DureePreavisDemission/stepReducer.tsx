@@ -1,6 +1,7 @@
 import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 
 import { isNotYetProcessed } from "../common/situations.utils";
+import { Action, State } from "../common/type/WizardType";
 import { StepInformations } from "./steps/Informations";
 import { StepInfoCCn } from "./steps/InfosCCn";
 import { StepIntro } from "./steps/Introduction";
@@ -37,16 +38,16 @@ export const initialState = {
   ],
 };
 
-export function stepReducer(state, { type, payload }) {
-  switch (type) {
+export function stepReducer(state: State, action: Action): State {
+  switch (action.type) {
     case "reset": {
       return { ...initialState };
     }
     case "setStepIndex": {
-      return { stepIndex: payload, steps: state.steps };
+      return { stepIndex: action.payload, steps: state.steps };
     }
     default:
-      console.warn("action unknow", type);
+      console.warn("action unknow", action.type);
       return state;
   }
 }

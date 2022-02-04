@@ -10,7 +10,9 @@ describe("initialSteps", () => {
     ]);
   });
   it("handles reset action", () => {
-    expect(stepReducer({}, { type: "reset" })).toEqual(initialState);
+    expect(stepReducer({}, { payload: undefined, type: "reset" })).toEqual(
+      initialState
+    );
   });
   it("handles setIndex action", () => {
     expect(

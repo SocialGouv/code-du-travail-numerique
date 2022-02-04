@@ -16,6 +16,7 @@ import {
   SectionTitle,
   SmallText,
 } from "../../common/stepStyles";
+import { WizardStepProps } from "../../common/type/WizardType";
 import { formatRefs } from "../../publicodes/Utils";
 
 function DisclaimerBox() {
@@ -41,7 +42,7 @@ function DisclaimerBoxNoCC() {
   );
 }
 
-function StepResult({ form }) {
+function StepResult({ form }: WizardStepProps): JSX.Element {
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
   const idcc = ccn ? ccn.num : 0;
@@ -55,8 +56,8 @@ function StepResult({ form }) {
       "https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174",
   };
 
-  // No ccn selected or UunhandledCC
-  if (idcc === 0 || possibleSituations.length === 0) {
+  // No ccn selected or UnhandledCC
+  if (!ccn || possibleSituations.length === 0) {
     let reason =
       "la convention collective n’a pas encore été traitée par nos services.";
     if (idcc === 0) {
@@ -72,7 +73,7 @@ function StepResult({ form }) {
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.
         </p>
-        {possibleSituations.length === 0 && <CCSearchInfo ccn={ccn} />}
+        {possibleSituations.length === 0 && ccn && <CCSearchInfo ccn={ccn} />}
         <DisclaimerBoxNoCC />
         <PubliReferences references={formatRefs([refLegal])} />
       </>
