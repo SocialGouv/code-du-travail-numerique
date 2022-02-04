@@ -22,6 +22,7 @@ import { HeuresRechercheEmploi } from "../../src/outils/HeuresRechercheEmploi";
 import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
 import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
 import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
+import { SimulateurTest } from "../../src/outils/SimulateurTest";
 import { Tool } from "../../src/outils/types";
 import { matopush } from "../../src/piwik";
 
@@ -38,6 +39,7 @@ const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
   "preavis-retraite": SimulateurPreavisRetraite,
   "simulateur-embauche": SimulateurEmbauche,
+  "simulateur-test": SimulateurTest,
 };
 
 interface Props {
