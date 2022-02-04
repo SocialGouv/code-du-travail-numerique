@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import * as React from "react";
 
-import { StepResult } from "../steps/Result";
+import { StepResult } from "../Result";
 
 describe("StepResult", () => {
   it.each`
