@@ -1,8 +1,9 @@
-import routes from "../enterprises";
+import Koa from "koa";
+import fetch from "node-fetch";
+import request from "supertest";
 
-const request = require("supertest");
-const Koa = require("koa");
-const fetch = require("node-fetch");
+import Data from "../../tests/cdtn_document.data.json";
+import routes from "../enterprises";
 
 const app = new Koa();
 app.use(routes.routes());
@@ -54,40 +55,48 @@ describe("Test enterprise endpoint", () => {
   });
 
   test("A call to retrieve agreements from an enterprise", async () => {
-    const apiEnterpriseResponse = {
-      json: () => ({
-        entreprises: [
-          {
-            activitePrincipale:
-              "Entretien et réparation de véhicules automobiles",
-            conventions: [
-              {
-                etat: "VIGUEUR_ETEN",
-                id: "KALICONT000005635191",
-                idcc: 1098,
-                mtime: 1562873918,
-                shortTitle:
-                  "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
-                texte_de_base: "KALITEXT000005685156",
-                title:
-                  "Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981.",
-                url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635191",
-              },
-            ],
-            etablissements: 1,
-            highlightLabel: "<b><u>AUTOEXPRESS</b></u>",
-            label: "AUTOEXPRESS",
-            matching: 1,
-            matchingEtablissement: {
-              address: "1 Rue Clément Ader 08110 Carignan",
-              siret: "75280280100023",
+    const enterpriseApiDataResponse = {
+      entreprises: [
+        {
+          activitePrincipale:
+            "Entretien et réparation de véhicules automobiles",
+          conventions: [
+            {
+              idcc: 1090,
             },
-            simpleLabel: "AUTOEXPRESS",
-            siren: "752802801",
+          ],
+          etablissements: 1,
+          highlightLabel: "<b><u>AUTOEXPRESS</b></u>",
+          label: "AUTOEXPRESS",
+          matching: 1,
+          matchingEtablissement: {
+            address: "1 Rue Clément Ader 08110 Carignan",
+            siret: "75280280100023",
           },
-        ],
-      }),
+          simpleLabel: "AUTOEXPRESS",
+          siren: "752802801",
+        },
+      ],
+    };
+    const apiEnterpriseResponse = {
+      json: () => enterpriseApiDataResponse,
       status: 200,
+    };
+
+    const expectedResponse = {
+      entreprises: enterpriseApiDataResponse.entreprises.map((enterprise) => ({
+        ...enterprise,
+        // Conventions data should be extract from elastic
+        conventions: Data.filter(
+          (doc) => doc.num === enterprise.conventions[0].idcc
+        ).map(({ id, num, shortTitle, slug, title }) => ({
+          id,
+          num,
+          shortTitle,
+          slug,
+          title,
+        })),
+      })),
     };
 
     fetch.mockResolvedValueOnce(apiEnterpriseResponse);
@@ -102,7 +111,7 @@ describe("Test enterprise endpoint", () => {
       `https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=true&employer=true&open=true&matchingLimit=0`
     );
 
-    expect(response.body).toEqual(apiEnterpriseResponse.json());
+    expect(response.body).toEqual(expectedResponse);
   });
 
   test("Call should pass address if provided", async () => {
@@ -194,7 +203,7 @@ describe("Test enterprise endpoint", () => {
     expect(response.body.entreprises[0].conventions).toHaveLength(2);
     expect(
       response.body.entreprises[0].conventions.find(
-        (agreement) => agreement.idcc === 1090
+        (agreement) => agreement.num === 1090
       ).slug
     ).toEqual(
       "1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle"
@@ -202,9 +211,9 @@ describe("Test enterprise endpoint", () => {
 
     expect(
       response.body.entreprises[0].conventions.find(
-        (agreement) => agreement.idcc === 99999
+        (agreement) => agreement.num === 99999
       ).slug
-    ).toEqual(undefined);
+    ).toBeUndefined();
   });
 
   test("Call retrieving agreement not in elastic from an enterprise", async () => {
@@ -223,6 +232,18 @@ describe("Test enterprise endpoint", () => {
       status: 200,
     };
 
+    const expectedResponse = {
+      entreprises: [
+        {
+          conventions: [
+            {
+              num: 123456,
+            },
+          ],
+        },
+      ],
+    };
+
     fetch.mockResolvedValueOnce(apiEnterpriseResponse);
 
     const response = await request(app.callback()).get(
@@ -235,7 +256,7 @@ describe("Test enterprise endpoint", () => {
       `https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1/search?ranked=true&query=AUTOEXPRESS&convention=true&employer=true&open=true&matchingLimit=0`
     );
 
-    expect(response.body).toEqual(apiEnterpriseResponse.json());
+    expect(response.body).toEqual(expectedResponse);
   });
 
   test("Call retrieving enterprise without conventions", async () => {
@@ -305,8 +326,8 @@ describe("Test enterprise endpoint", () => {
     expect(response.body.entreprises).toHaveLength(2);
     response.body.entreprises.forEach((enterprise) => {
       expect(enterprise.conventions).toHaveLength(1);
-      expect(enterprise.conventions[0].idcc).toEqual(1090);
-      expect(enterprise.conventions[0].slug).not.toEqual(undefined);
+      expect(enterprise.conventions[0].num).toEqual(1090);
+      expect(enterprise.conventions[0].slug).not.toBeUndefined();
     });
   });
 });

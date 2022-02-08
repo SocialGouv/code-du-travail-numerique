@@ -1,5 +1,5 @@
 // Complete definition of the Search response
-export interface SearchResponse<T> {
+export type SearchResponse<T> = {
   hits: {
     total: {
       value: number;
@@ -8,4 +8,4 @@ export interface SearchResponse<T> {
       _source: T;
     }[];
   };
-}
+};

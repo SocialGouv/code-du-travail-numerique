@@ -23,7 +23,7 @@ export interface Enterprise {
  * Agreement type from @socialgouv/kali-data/data/index.json
  */
 export interface AgreementData {
-  idcc: number;
+  num: number;
   shortTitle: string;
   etat?: string;
   id?: string;
@@ -31,6 +31,7 @@ export interface AgreementData {
   texte_de_base?: string;
   url?: string;
   title?: string;
+  slug?: string;
 }
 
 export interface MatchingEtablissement {

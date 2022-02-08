@@ -5,8 +5,8 @@ import fetch from "node-fetch";
 import elasticsearchClient from "../../conf/elasticsearch";
 import type { SearchResponse } from "../type";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
-import type { Agreement } from "./enterprises.elastic";
 import getAgreements from "./enterprises.elastic";
+import type { Agreement, ApiEnterpriseData, Enterprise } from "./types";
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX ?? "cdtn";
 const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
@@ -15,17 +15,32 @@ const router = new Router({ prefix: API_BASE_URL });
 const ENTERPRISE_API_URL =
   "https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1";
 
-interface EnterpriseApiResponse {
-  entreprises?: {
-    conventions: {
-      idcc: number;
-    }[];
-  }[];
-}
+/**
+ * Agreement type from @socialgouv/kali-data/data/index.json
+ */
+type Convention = {
+  idcc: number;
+  shortTitle: string;
+  id: string;
+  title: string;
+};
+
+type EnterpriseApiResponse = {
+  entreprises?: (Omit<Enterprise, "conventions"> & {
+    conventions: Convention[];
+  })[];
+};
+
+const toAgreement = (convention: Convention): Agreement => ({
+  id: convention.id,
+  num: convention.idcc,
+  shortTitle: convention.shortTitle,
+  title: convention.title,
+});
 
 const populateAgreements = async (
   enterpriseApiResponse: EnterpriseApiResponse
-): Promise<unknown> => {
+): Promise<ApiEnterpriseData> => {
   const idccList: number[] =
     enterpriseApiResponse.entreprises?.flatMap((enterprise) =>
       enterprise.conventions.flatMap((convention) => convention.idcc)
@@ -38,9 +53,9 @@ const populateAgreements = async (
     >({ body, index });
 
     if (response.body.hits.total.value > 0) {
-      const ccnList = response.body.hits.hits.reduce(
-        (acc: Record<number, { slug: string }>, curr) => {
-          acc[curr._source.num] = { slug: curr._source.slug };
+      const agreements = response.body.hits.hits.reduce(
+        (acc: Record<number, Agreement>, curr) => {
+          acc[curr._source.num] = curr._source;
           return acc;
         },
         {}
@@ -49,15 +64,21 @@ const populateAgreements = async (
         ...enterpriseApiResponse,
         entreprises: enterpriseApiResponse.entreprises?.map((enterprise) => ({
           ...enterprise,
-          conventions: enterprise.conventions.map((convention) => ({
-            ...convention,
-            ...ccnList[convention.idcc],
-          })),
+          conventions: enterprise.conventions.map(
+            (convention): Agreement =>
+              agreements[convention.idcc] ?? toAgreement(convention)
+          ),
         })),
       };
     }
   }
-  return enterpriseApiResponse;
+  return {
+    ...enterpriseApiResponse,
+    entreprises: enterpriseApiResponse.entreprises?.map((enterprise) => ({
+      ...enterprise,
+      conventions: enterprise.conventions.map(toAgreement),
+    })),
+  };
 };
 
 const makeSearchUrl = (query: string, address: string) => {

@@ -1,20 +1,15 @@
 import { SOURCES } from "@socialgouv/cdtn-sources";
 
-export interface Agreement {
-  num: number;
-  slug: string;
-}
-
-export interface SearchAgreementsBody {
+export type SearchAgreementsBody = {
   _source: string[];
   from: number;
   query: unknown;
   size: number;
-}
+};
 
 const getAgreements = (idccList: number[]): SearchAgreementsBody => {
   return {
-    _source: ["num", "slug"],
+    _source: ["id", "title", "shortTitle", "num", "slug", "highlight"],
     from: 0,
     query: {
       bool: {
