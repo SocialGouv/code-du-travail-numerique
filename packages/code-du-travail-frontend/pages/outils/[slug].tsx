@@ -38,8 +38,8 @@ const toolsBySlug = {
   "preavis-demission": DureePreavisDemission,
   "preavis-licenciement": DureePreavisLicenciement,
   "preavis-retraite": SimulateurPreavisRetraite,
-  "simulateur-embauche": SimulateurEmbauche,
-  "simulateur-test": SimulateurTest,
+  // "simulateur-embauche": SimulateurEmbauche,
+  "simulateur-embauche": SimulateurTest,
 };
 
 interface Props {

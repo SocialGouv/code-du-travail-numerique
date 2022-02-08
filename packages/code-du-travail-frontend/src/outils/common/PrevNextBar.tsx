@@ -30,7 +30,11 @@ export const PrevNextBar: FunctionComponent<Props> = ({
           </StyledButton>
         )}
         {nextVisible && !previousVisible && (
-          <StyledButtonReverse disabled={hasError} variant="primary">
+          <StyledButtonReverse
+            disabled={hasError}
+            variant="primary"
+            onClick={onNext}
+          >
             Commencer
             <ArrowIcon />
           </StyledButtonReverse>
