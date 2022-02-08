@@ -21,11 +21,13 @@ import { ListItem, ResultList } from "../common/ResultList";
 import { useTrackingContext } from "../common/TrackingContext";
 
 type AgreementSearchStepProps = {
+  embeddedForm: boolean;
   onSelectAgreement: (agreement) => void;
   onBackClick?: () => void;
 };
 
 const AgreementSearchStep = ({
+  embeddedForm,
   onBackClick,
   onSelectAgreement,
 }: AgreementSearchStepProps): JSX.Element => {
@@ -40,6 +42,7 @@ const AgreementSearchStep = ({
   return (
     <>
       <SearchAgreement
+        embeddedForm={embeddedForm}
         inputRef={refInput as MutableRefObject<HTMLFormElement>}
         renderResults={(state, query) => {
           if (state.isLoading) {

@@ -5,13 +5,14 @@ import {
   Text,
   theme,
 } from "@socialgouv/cdtn-ui";
-import React, { ForwardedRef } from "react";
+import React, { FormEventHandler, ForwardedRef } from "react";
 import styled from "styled-components";
 
 import { InfoBulle } from "../../common/InfoBulle";
 import { SectionTitle } from "../../common/stepStyles";
 
 type Props = {
+  embeddedForm: boolean;
   query?: string;
   onChange: (event: React.ChangeEvent) => void;
   placeholder?: string;
@@ -19,9 +20,34 @@ type Props = {
 
 const defaultPlaceholder = "Ex : Transports routiers ou 1486";
 
+const EmbeddedInForm = ({
+  enable,
+  reference,
+  onSubmit,
+  children,
+}: {
+  enable: boolean;
+  reference: ForwardedRef<HTMLFormElement>;
+  onSubmit: FormEventHandler;
+  children: React.ReactNode;
+}) => {
+  if (enable) {
+    return (
+      <form ref={reference} onSubmit={onSubmit}>
+        {children}
+      </form>
+    );
+  }
+  return <>{children}</>;
+};
 export const SearchAgreementInput = React.forwardRef(
   function _SearchAgreementInput(
-    { query = "", onChange, placeholder = defaultPlaceholder }: Props,
+    {
+      embeddedForm = true,
+      query = "",
+      onChange,
+      placeholder = defaultPlaceholder,
+    }: Props,
     ref: ForwardedRef<HTMLFormElement>
   ): JSX.Element {
     return (
@@ -29,7 +55,11 @@ export const SearchAgreementInput = React.forwardRef(
         <SectionTitle>
           Précisez et sélectionnez votre convention collective
         </SectionTitle>
-        <form ref={ref} onSubmit={(event) => event.preventDefault()}>
+        <EmbeddedInForm
+          enable={embeddedForm}
+          reference={ref}
+          onSubmit={(event) => event.preventDefault()}
+        >
           <InlineLabel htmlFor="agreement-search">
             Nom de la convention collective ou son numéro d’identification{" "}
             <abbr title="Identifiant de la Convention Collective">IDCC</abbr>{" "}
@@ -58,7 +88,7 @@ export const SearchAgreementInput = React.forwardRef(
             onChange={onChange}
             autoComplete="off"
           />
-        </form>
+        </EmbeddedInForm>
       </Section>
     );
   }

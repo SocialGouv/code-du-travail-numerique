@@ -49,7 +49,10 @@ const AgreementSearch = ({
   }
   return (
     <>
-      <AgreementSearchStep onSelectAgreement={onSelectAgreement} />
+      <AgreementSearchStep
+        embeddedForm={false}
+        onSelectAgreement={onSelectAgreement}
+      />
       <ErrorField name={AGREEMENT_NAME} />
       <Field
         type="input"
