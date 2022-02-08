@@ -3,6 +3,7 @@ import { logger } from "@socialgouv/cdtn-logger";
 import conventionsRoutes from "./routes/conventions";
 import docsCountRoutes from "./routes/docs-count";
 import dossiersRoute from "./routes/dossiers";
+import enterprisesRoute from "./routes/enterprises";
 import glossaryRoute from "./routes/glossary";
 import highlightRoutes from "./routes/highlights";
 import idccRoutes from "./routes/idcc";
@@ -51,6 +52,7 @@ app.use(async (ctx, next) => {
 
 app.use(bodyParser());
 
+app.use(enterprisesRoute.routes());
 app.use(conventionsRoutes.routes());
 app.use(docsCountRoutes.routes());
 app.use(highlightRoutes.routes());
