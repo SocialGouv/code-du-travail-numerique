@@ -1,5 +1,4 @@
 import { formatIdcc } from "@cdt/data";
-import slugify from "@socialgouv/cdtn-slugify";
 import {
   getLabelBySource,
   getRouteBySource,
@@ -16,23 +15,17 @@ type Props = {
   agreement: AgreementData;
 };
 
-const getConventionSlug = (convention: AgreementData) =>
-  slugify(`${convention.idcc}-${convention.shortTitle}`.substring(0, 80));
-
 export function AgreementTile({ agreement }: Props): JSX.Element {
   const { trackEvent, title, uuid } = useTrackingContext();
 
   const clickHandler = () => {
-    trackEvent("cc_select_p2", title, `idcc${agreement.idcc.toString()}`, uuid);
+    trackEvent("cc_select_p2", title, `idcc${agreement.num.toString()}`, uuid);
   };
   return (
-    <Link
-      href={`/${getRouteBySource(SOURCES.CCN)}/${getConventionSlug(agreement)}`}
-      passHref
-    >
+    <Link href={`/${getRouteBySource(SOURCES.CCN)}/${agreement.slug}`} passHref>
       <Tile
         wide
-        title={`${agreement.shortTitle} IDCC${formatIdcc(agreement.idcc)}`}
+        title={`${agreement.shortTitle} IDCC${formatIdcc(agreement.num)}`}
         subtitle={getLabelBySource(SOURCES.CCN)}
         onClick={clickHandler}
       >
