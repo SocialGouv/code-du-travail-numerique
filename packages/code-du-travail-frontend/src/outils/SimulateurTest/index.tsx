@@ -12,6 +12,8 @@ interface Props {
 const SimulateurTest = ({ icon, title }: Props): JSX.Element => {
   const localState = useLocalStore((state) => state);
 
+  // L'avantage, on pourra revenir en arriere comme on veut
+
   return (
     //FIXME: on devrait plutôt renommer ce composant layout, le but étant de le rendre compatible avec le reste du code
     <Wizard

@@ -1,23 +1,38 @@
 import React from "react";
 
-const StepInformation = (): JSX.Element => (
-  <>
-    <p>
-      En cas de démission, le salarié ne peut pas quitter l’entreprise
-      immédiatement après avoir informé l’employeur de ses intentions. Il doit
-      rester dans l’entreprise durant une certaine période, qu’on appelle
-      préavis ou parfois délai congé.
-    </p>
-    <p>
-      Les règles encadrant le préavis (droits et obligations, durées, cas de
-      dispense, absences autorisées pour chercher un emploi durant le préavis)
-      sont notamment définies par le code du travail et la branche.
-    </p>
-    <p>
-      Le présent outil vous permet de connaitre la durée du préavis prévue par
-      la convention collective en matière de démission.
-    </p>
-  </>
-);
+import { YesNoQuestion } from "../common/YesNoQuestion";
+import { useSimulatorStore } from "../store";
+
+const StepInformation = (): JSX.Element => {
+  //TODO: faut voir comment on peut améliorer cette partie
+  const simulatorState = useSimulatorStore((state) => state);
+
+  const onChangeCheck1 = (v: boolean): void => {
+    simulatorState.onSetCarrotPrice(!v ? "2€/kg" : "0€/kg");
+  };
+
+  const onChangeCheck2 = (v: boolean): void => {
+    simulatorState.onSetMushRoomPrice(!v ? "5€/kg" : "0€/kg");
+  };
+
+  return (
+    <>
+      <YesNoQuestion
+        label="Les carottes sont gratuites"
+        onChangeYes={() => onChangeCheck1(true)}
+        onChangeNo={() => onChangeCheck1(false)}
+        isYesChecked={simulatorState.carrotPrice === "0€/kg"}
+        isNoChecked={simulatorState.carrotPrice === "2€/kg"} // LE STATE est sorti du composant peut importe si le composant est mounté ou pas
+      />
+      <YesNoQuestion
+        label="Les champignons sont gratuites"
+        onChangeYes={() => onChangeCheck2(true)}
+        onChangeNo={() => onChangeCheck2(false)}
+        isYesChecked={simulatorState.mushroomPrice === "0€/kg"}
+        isNoChecked={simulatorState.mushroomPrice === "5€/kg"}
+      />
+    </>
+  );
+};
 
 export { StepInformation };
