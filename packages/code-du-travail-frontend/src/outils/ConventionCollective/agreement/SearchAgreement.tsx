@@ -7,6 +7,7 @@ import { useTrackingContext } from "../common/TrackingContext";
 import { SearchAgreementInput } from "./SearchAgreementInput";
 
 type Props = {
+  embeddedForm: boolean;
   renderResults: (
     renderProps: FetchReducerState<Agreement[]>,
     query: string
@@ -15,6 +16,7 @@ type Props = {
 };
 
 export function SearchAgreement({
+  embeddedForm,
   renderResults,
   inputRef,
 }: Props): JSX.Element {
@@ -37,6 +39,7 @@ export function SearchAgreement({
   return (
     <>
       <SearchAgreementInput
+        embeddedForm={embeddedForm}
         query={query}
         onChange={searchInputHandler}
         ref={inputRef}

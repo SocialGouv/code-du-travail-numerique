@@ -21,11 +21,15 @@ import { ListItem, ResultList } from "../common/ResultList";
 import { useTrackingContext } from "../common/TrackingContext";
 
 type AgreementSearchStepProps = {
-  onBackClick: () => void;
+  embeddedForm: boolean;
+  onSelectAgreement: (agreement) => void;
+  onBackClick?: () => void;
 };
 
 const AgreementSearchStep = ({
+  embeddedForm,
   onBackClick,
+  onSelectAgreement,
 }: AgreementSearchStepProps): JSX.Element => {
   const refInput = useRef<HTMLFormElement>();
   const { trackEvent, title, uuid } = useTrackingContext();
@@ -38,6 +42,7 @@ const AgreementSearchStep = ({
   return (
     <>
       <SearchAgreement
+        embeddedForm={embeddedForm}
         inputRef={refInput as MutableRefObject<HTMLFormElement>}
         renderResults={(state, query) => {
           if (state.isLoading) {
@@ -68,7 +73,11 @@ const AgreementSearchStep = ({
                   {state.data.map((item, index) => {
                     return (
                       <ListItem key={item.id}>
-                        <AgreementLink isFirst={index === 0} agreement={item} />
+                        <AgreementLink
+                          isFirst={index === 0}
+                          agreement={item}
+                          onClick={onSelectAgreement}
+                        />
                       </ListItem>
                     );
                   })}
@@ -154,11 +163,19 @@ const AgreementSearchStep = ({
           );
         }}
       />
-      <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
-        <Button as="a" small type="button" onClick={onBackClick} variant="flat">
-          Précédent
-        </Button>
-      </Link>
+      {onBackClick && (
+        <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
+          <Button
+            as="a"
+            small
+            type="button"
+            onClick={onBackClick}
+            variant="flat"
+          >
+            Précédent
+          </Button>
+        </Link>
+      )}
     </>
   );
 };
