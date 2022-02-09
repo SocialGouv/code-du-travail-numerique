@@ -14,6 +14,8 @@ import {
 } from "./common/NavContext";
 import { TrackingProvider, useTrackingContext } from "./common/TrackingContext";
 import Steps from "./steps";
+import handleTrackEvent from "./tracking/HandleTrackEvent";
+import { OnUserAction, UserAction } from "./types";
 
 interface Props {
   icon: string;
@@ -25,6 +27,10 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
   const { setEnterprise, setSearchParams, searchParams } = useNavContext();
   const { uuid, trackEvent } = useTrackingContext();
   const router = useRouter();
+
+  const onUserAction: OnUserAction = (action: UserAction, extra?: unknown) => {
+    handleTrackEvent(trackEvent, uuid, title, action, extra);
+  };
 
   function clearSelection() {
     setEnterprise(null);
@@ -105,6 +111,7 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
             );
             router.push(`/convention-collective/${agreement.slug}`);
           }}
+          onUserAction={onUserAction}
         />
       );
       break;
@@ -115,14 +122,20 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
           searchParams={searchParams}
           handleEnterpriseSelection={handleEnterpriseSelection}
           onBackClick={clearSearchType}
+          onUserAction={onUserAction}
         />
       );
       break;
     case ScreenType.agreementSelection:
-      Step = <Steps.AgreementSelectionStep onBackClick={clearSelection} />;
+      Step = (
+        <Steps.AgreementSelectionStep
+          onBackClick={clearSelection}
+          onUserAction={onUserAction}
+        />
+      );
       break;
     default:
-      Step = <Steps.IntroductionStep />;
+      Step = <Steps.IntroductionStep onUserAction={onUserAction} />;
   }
   return (
     <WizardWrapper variant="main">

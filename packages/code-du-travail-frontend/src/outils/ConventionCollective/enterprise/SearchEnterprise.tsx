@@ -5,7 +5,7 @@ import {
   searchEnterprises,
 } from "../../../conventions/Search/api/enterprises.service";
 import { createSuggesterHook, FetchReducerState } from "../common/Suggester";
-import { useTrackingContext } from "../common/TrackingContext";
+import { TrackingProps, UserAction } from "../types";
 import { SearchEnterpriseInput } from "./SearchEnterpriseInput";
 
 type Props = {
@@ -16,7 +16,7 @@ type Props = {
   inputRef: ForwardedRef<HTMLDivElement>;
   searchParams: SearchParams;
   onSearchParamsChange: (params: SearchParams) => void;
-};
+} & TrackingProps;
 
 export type SearchParams = {
   address: string;
@@ -28,13 +28,13 @@ export function SearchEnterprise({
   inputRef,
   searchParams,
   onSearchParamsChange,
+  onUserAction,
 }: Props): JSX.Element {
-  const trackingContext = useTrackingContext();
-
   const useEnterpriseSuggester = createSuggesterHook(
     searchEnterprises,
-    "enterprise_search",
-    trackingContext
+    (query, address) => {
+      onUserAction(UserAction.SearchEnterprise, { address, query });
+    }
   );
 
   const state = useEnterpriseSuggester(

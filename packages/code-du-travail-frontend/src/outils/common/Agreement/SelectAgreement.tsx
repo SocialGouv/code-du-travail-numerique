@@ -47,6 +47,10 @@ const SelectAgreement = ({
     [storedConvention, setConvention, onChange]
   );
 
+  const onUserAction = () => {
+    // TODO handle event
+  };
+
   useEffect(() => {
     form.batch(() => {
       form.change(AGREEMENT_NAME, storedConvention);
@@ -76,12 +80,14 @@ const SelectAgreement = ({
           supportedAgreements={supportedAgreements}
           selectedAgreement={values.ccn.selected}
           onSelectAgreement={onSelectAgreement}
+          onUserAction={onUserAction}
         />
       )}
       {values.ccn?.route === "enterprise" && (
         <EnterpriseSearch
           selectedEnterprise={enterprise}
           onSelectAgreement={onSelectAgreement}
+          onUserAction={onUserAction}
         />
       )}
     </>

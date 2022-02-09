@@ -14,6 +14,9 @@ const callback: (
   /* nothing to do */
 };
 const onSelectAgreement = jest.fn(callback);
+const onUserAction = () => {
+  /* stub */
+};
 
 const agreement1: Agreement = {
   id: "KALICONT000005635093",
@@ -61,6 +64,7 @@ describe("EnterpriseSearch", () => {
   describe("no selected enterprise", () => {
     const dataWithoutSelectedEnterprise: Props = {
       onSelectAgreement,
+      onUserAction,
     };
 
     it("should render the mandatory question 'Nom de votre entreprise ou numéro Siret' and not mandatory 'Code postal ou ville'", () => {
@@ -109,6 +113,7 @@ describe("EnterpriseSearch", () => {
   describe("selected enterprise with one agreement", () => {
     const dataWithSelectedEnterpriseWithOneAgreement: Props = {
       onSelectAgreement,
+      onUserAction,
       selectedEnterprise: selectedEnterpriseOneAgreement,
     };
 
@@ -193,6 +198,7 @@ describe("EnterpriseSearch", () => {
   describe("selected enterprise with two agreements", () => {
     const dataWithSelectedEnterpriseWithTwoAgreements: Props = {
       onSelectAgreement,
+      onUserAction,
       selectedEnterprise: selectedEnterpriseTwoAgreements,
     };
     it("should show the agreements selection", () => {
@@ -282,6 +288,7 @@ describe("EnterpriseSearch", () => {
     it("should render a warning about the not supported agreement", () => {
       const data: Props = {
         onSelectAgreement,
+        onUserAction,
         selectedEnterprise: selectedEnterpriseOneAgreement,
         supportedAgreements: [],
       };
@@ -296,6 +303,7 @@ describe("EnterpriseSearch", () => {
     it("should render a warning about the not supported agreement (multiple agreements)", () => {
       const data: Props = {
         onSelectAgreement,
+        onUserAction,
         selectedEnterprise: selectedEnterpriseTwoAgreements,
         supportedAgreements: [],
       };
@@ -311,6 +319,7 @@ describe("EnterpriseSearch", () => {
     it("should not render a warning about the supported agreement", () => {
       const data: Props = {
         onSelectAgreement,
+        onUserAction,
         selectedEnterprise: selectedEnterpriseOneAgreement,
         supportedAgreements: [
           {
@@ -330,6 +339,7 @@ describe("EnterpriseSearch", () => {
     it("should not render a warning when agreement is supported (multiple agreements)", () => {
       const data: Props = {
         onSelectAgreement,
+        onUserAction,
         selectedEnterprise: selectedEnterpriseTwoAgreements,
         supportedAgreements: [
           {

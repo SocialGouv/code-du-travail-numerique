@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import { Agreement } from "../../../../conventions/Search/api/type";
 import { AgreementSearchStep } from "../../../ConventionCollective/steps/AgreementSearch";
+import { TrackingProps } from "../../../ConventionCollective/types";
 import { ErrorField } from "../../ErrorField";
 import { required } from "../../validators";
 import { AGREEMENT_NAME } from "../form-constants";
@@ -15,12 +16,13 @@ export type Props = {
   supportedAgreements?: AgreementSupportInfo[];
   selectedAgreement?: Agreement;
   onSelectAgreement: (agreement: Agreement | null) => void;
-};
+} & TrackingProps;
 
 const AgreementSearch = ({
   supportedAgreements,
   selectedAgreement,
   onSelectAgreement,
+  onUserAction,
 }: Props): JSX.Element => {
   if (selectedAgreement) {
     return (
@@ -50,6 +52,7 @@ const AgreementSearch = ({
   return (
     <>
       <AgreementSearchStep
+        onUserAction={onUserAction}
         embeddedForm={false}
         onSelectAgreement={onSelectAgreement}
       />
