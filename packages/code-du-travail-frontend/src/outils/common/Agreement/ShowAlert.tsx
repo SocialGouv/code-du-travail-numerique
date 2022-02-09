@@ -12,7 +12,7 @@ const ShowAlert = ({
   currentIdcc,
   supportedAgreements,
 }: Props): JSX.Element => {
-  if (supportedAgreements === undefined) {
+  if (!supportedAgreements) {
     return <></>;
   }
   const idccInfo = supportedAgreements.find((item) => item.idcc == currentIdcc);

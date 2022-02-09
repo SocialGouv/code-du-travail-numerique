@@ -44,7 +44,7 @@ const EnterpriseSearch = ({
             onSelectAgreement(null);
           }}
         />
-        {enterprise.conventions.length == 1 ? (
+        {enterprise.conventions.length === 1 ? (
           <ShowAgreement
             agreement={enterprise.conventions[0]}
             supportedAgreements={supportedAgreements}
