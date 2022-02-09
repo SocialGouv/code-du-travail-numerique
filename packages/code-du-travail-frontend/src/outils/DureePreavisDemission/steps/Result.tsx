@@ -93,8 +93,9 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
         </p>
       ) : (
         <p>
-          À partir des éléments que vous avez saisis : il n’y a pas de préavis à
-          effectuer.
+          À partir des éléments que vous avez saisis :{" "}
+          <HighlightResult>il n’y a pas de préavis à effectuer</HighlightResult>
+          .
         </p>
       )}
       {parseInt(situation.answer3, 10) === 0 && (
