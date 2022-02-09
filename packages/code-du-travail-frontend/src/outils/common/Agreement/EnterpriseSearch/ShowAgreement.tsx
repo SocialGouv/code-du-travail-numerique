@@ -1,7 +1,6 @@
 import { formatIdcc } from "@cdt/data";
-import { Paragraph, theme } from "@socialgouv/cdtn-ui";
+import { Paragraph } from "@socialgouv/cdtn-ui";
 import React from "react";
-import styled from "styled-components";
 
 import { Agreement } from "../../../../conventions/Search/api/type";
 import { SectionTitle } from "../../stepStyles";
@@ -23,9 +22,9 @@ const ShowAgreement = ({
         Une convention collective a été trouvée pour cette
         entreprise&nbsp;:&nbsp;
       </SectionTitle>
-      <SelectedAgreement>
+      <Paragraph fontSize="hsmall" fontWeight="bold">
         {agreement.shortTitle} (IDCC {formatIdcc(agreement.num)})
-      </SelectedAgreement>
+      </Paragraph>
       <ShowAlert
         currentIdcc={agreement.num}
         supportedAgreements={supportedAgreements}
@@ -34,13 +33,5 @@ const ShowAgreement = ({
     </>
   );
 };
-
-const { spacings, fonts } = theme;
-
-const SelectedAgreement = styled(Paragraph)`
-  margin-bottom: ${spacings.small};
-  font-weight: bold;
-  font-size: ${fonts.sizes.headings.small};
-`;
 
 export default ShowAgreement;
