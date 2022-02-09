@@ -20,7 +20,7 @@ const DisclaimerText: React.FC<Props> = ({ durationCC, durationCDT, ccn }) => {
             prévues dans la convention collective, un accord d’entreprise ou à
             défaut par un usage dans l’entreprise.
           </p>
-          <CCSearchInfo ccn={ccn} />
+          {ccn && <CCSearchInfo ccn={ccn} />}
         </>
       );
     } else {
@@ -32,7 +32,7 @@ const DisclaimerText: React.FC<Props> = ({ durationCC, durationCDT, ccn }) => {
             collective, un accord de branche, un accord d’entreprise ou le
             contrat de travail ou les usages.
           </p>
-          <CCSearchInfo ccn={ccn} />
+          {ccn && <CCSearchInfo ccn={ccn} />}
         </>
       );
     }

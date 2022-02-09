@@ -29,10 +29,10 @@ export function ResultList({ query, children }: Props): JSX.Element {
 }
 
 export const ListItem: React.FC = ({ children }) => {
-  return <Div> {children}</Div>;
+  return <Li>{children}</Li>;
 };
 
-const Div = styled.div`
+const Li = styled.li`
   margin-left: 0;
   & + &::before {
     content: "";
@@ -54,7 +54,9 @@ const ViewMoreButton = styled(Button)`
   }
 `;
 
-export const ResultItem = styled.a`
+export const ResultItem = styled.button.attrs({
+  type: "button",
+})`
   display: block;
   appearance: none;
   width: 100%;
