@@ -173,7 +173,7 @@ describe("situations", () => {
   describe("getSupportedCC", () => {
     it("should return all supported CC", () => {
       const supportedCCResult = getSupportedCC(ccList);
-      expect(supportedCCResult).toHaveLength(2);
+      expect(supportedCCResult).toHaveLength(3);
       expect(supportedCCResult.find((item) => item.idcc === 99999)).toBe(
         undefined
       );
