@@ -24,7 +24,7 @@ export function AgreementLink({
   };
 
   return (
-    <ResultItem as="a" isFirst={isFirst} onClick={clickHandler}>
+    <ResultItem as="button" isFirst={isFirst} onClick={clickHandler}>
       {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
       {agreement.highlight && agreement.highlight.searchInfo && (
         <Paragraph variant="altText" noMargin>

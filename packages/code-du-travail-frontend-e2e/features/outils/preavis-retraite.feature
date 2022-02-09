@@ -71,8 +71,6 @@ Fonctionnalité: Outil - Préavis de retraite
     Quand je renseigne "843" dans le champ "Nom de la convention collective ou son numéro d’identification IDCC"
     Alors j'attends que le texte "Boulangerie" apparaisse
     Quand je clique sur "Boulangerie"
-    Alors je vois "Cliquez sur Suivant pour poursuivre la simulation."
-    Quand je clique sur "Suivant"
 
     Alors je vois "Le salarié concerné est-il reconnu en tant que travailleur handicapé ?"
     Quand je choisis "Oui"
