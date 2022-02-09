@@ -1,7 +1,10 @@
 import data from "@cdt/data...prime-precarite/precarite.data.json";
 
 import { getSituationsFor } from "../../../common/situations.utils";
-import { getSupportedCC, validateSituation } from "../situation";
+import {
+  getSupportedCCWithoutConventionalProvision,
+  validateSituation,
+} from "../situation";
 
 jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
   { criteria: { cddType: "1| foo", hasCdiProposal: "baz" }, idcc: 10 },
@@ -61,9 +64,9 @@ describe("situations", () => {
     });
   });
 
-  describe("getSupportedCC", () => {
+  describe("getSupportedCCWithoutConventionalProvision", () => {
     it("should return all supported CC excluding the one with hasConventionalProvision=null", () => {
-      const supportedCCResult = getSupportedCC();
+      const supportedCCResult = getSupportedCCWithoutConventionalProvision();
       expect(supportedCCResult).toHaveLength(2);
       expect(supportedCCResult.find((item) => item.idcc === 99999)).toBe(
         undefined
