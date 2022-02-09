@@ -184,7 +184,6 @@ exports[`<StepResult /> should render CC answer 1`] = `
   </h2>
   <p>
     À partir des éléments que vous avez saisis, la durée du préavis de démission est estimée à :
-     
     <strong
       class="c1 c2"
     >
@@ -320,7 +319,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
       </div>
     </div>
     <p>
-      L’existence ou la durée du préavis de démission peut être prévue par une convention collective, un accord d’entreprise ou à défaut, par un usage dans l’entreprise.
+      L’existence ou la durée du préavis de démission peut être prévue par un accord d’entreprise ou à défaut, par un usage dans l’entreprise.
     </p>
   </div>
 </div>
