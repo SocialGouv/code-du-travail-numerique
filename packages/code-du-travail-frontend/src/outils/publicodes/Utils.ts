@@ -1,13 +1,12 @@
 import { References } from "@socialgouv/modeles-social/bin/utils/GetReferences";
 
 import { FormContent } from "../common/type/WizardType";
-import { formatSeniority } from "../DureePreavisRetraite/steps/utils";
 import { PublicodesResult, PublicodesUnit } from "./index";
 
 /**
  * Take the form values from react-final-form and transform to a flat object for publicodes.
  */
-export const mapToPublicodesSituation = (
+export const mapToPublicodesSituationForPreavisDeRetraite = (
   form: FormContent
 ): Record<string, string> => {
   const { ccn, infos, seniorityMaximum, seniorityValue, ...formWithoutCcn } =
@@ -32,7 +31,33 @@ export const mapToPublicodesSituation = (
     ...Object.assign({}, agreement),
   };
 };
+export const mapToPublicodesSituationForPreavisDeLicenciement = (
+  form: FormContent,
+  salaireRef: number
+): Record<string, string> => {
+  const { ccn, infos, seniorityMaximum, seniorityValue, ...formWithoutCcn } =
+    form;
+  const seniority = {
+    "contrat salarié - ancienneté": formatSeniority(form.formValues.anciennete),
+  };
+  const salary = {
+    "contrat salarié - salaire de référence": formatNumber(salaireRef),
+  };
+  const agreement: Record<string, string> = ccn
+    ? {
+        "contrat salarié - convention collective": `'IDCC${ccn.num
+          .toString()
+          .padStart(4, "0")}'`,
+      }
+    : {};
+  console.log(seniority, salary);
 
+  return {
+    ...seniority,
+    ...salary,
+    ...Object.assign({}, agreement),
+  };
+};
 export const reverseValues = (
   values: Record<string, string>
 ): Record<string, string> =>
@@ -87,4 +112,11 @@ export function formatRefs(refs: Array<OldReference>): Array<References> {
   return refs.map((ref) => {
     return { article: ref.ref, url: ref.refUrl };
   });
+}
+
+function formatNumber(toBeFormmatted: number): string {
+  return isNaN(toBeFormmatted) ? "0" : toBeFormmatted.toString();
+}
+function formatSeniority(initialSeniority: string): string {
+  return formatNumber(parseInt(initialSeniority));
 }

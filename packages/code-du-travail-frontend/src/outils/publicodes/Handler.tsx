@@ -9,7 +9,6 @@ import type {
   SituationElement,
 } from "./index";
 import { PublicodesUnit } from "./index";
-import { convertDaysIntoBetterUnit } from "./Utils";
 
 interface State {
   engine: Engine;
@@ -29,9 +28,9 @@ const usePublicodesHandler = ({
   const [data, setData] = useState<PublicodeData>({
     missingArgs: [],
     result: {
-      unit: PublicodesUnit.DAY,
+      unit: PublicodesUnit.DAY, // specific Preavis de retraite
       value: 0,
-      valueInDays: 0,
+      // valueInDays: 0, // specific Preavis de retraite
     },
     situation: [],
   });
@@ -39,7 +38,9 @@ const usePublicodesHandler = ({
   function handleExecute(rule: string): PublicodesResult {
     engine.setSituation(buildSituation(data.situation));
     const result = engine.evaluate(rule);
-    return convertDaysIntoBetterUnit(result.nodeValue as unknown as string);
+    // return convertDaysIntoBetterUnit(result.nodeValue as unknown as string); // specific Preavis de retraite
+    // return { unit: result.unit, value: result.nodeValue };
+    return { unit: result.unit, value: result.nodeValue };
   }
 
   function newSituation(args: Record<string, string>): void {
@@ -58,6 +59,7 @@ const usePublicodesHandler = ({
         });
       }
     });
+
     // Add the new entries from the form
     Object.entries(args).forEach(([key, value]) => {
       if (!newSituation.find((element) => element.name === key)) {
@@ -76,7 +78,7 @@ const usePublicodesHandler = ({
 
     setData({
       missingArgs: buildMissingArgs(result.missingVariables),
-      result: convertDaysIntoBetterUnit(result.nodeValue as unknown as string),
+      result: { unit: result.unit, value: result.nodeValue },
       situation: newSituation,
     });
   }

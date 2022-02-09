@@ -145,6 +145,12 @@ contrat salarié . préavis de retraite collective maximum pour travailleur hand
 
 # Indemnité de licenciement
 
+contrat salarié . ancienneté total en mois:
+  titre: Ancienneté du salarié
+  question: Quel est votre ancienneté en mois ?
+  cdtn:
+    type: entier
+
 contrat salarié . indemnité de licenciement:
   valeur: 1 / 4 * contrat salarié . salaire de référence * contrat salarié . ancienneté
   unité: €

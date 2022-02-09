@@ -42,7 +42,7 @@ export type ConventionCollective = {
 
 export type FormContent = Record<string, string> & {
   ccn?: ConventionCollective;
-  seniorityMaximum: boolean;
-  seniorityValue: string;
+  seniorityMaximum?: boolean; // specific preavis de retraite ?
+  seniorityValue?: string; // specific preavis de retraite ?
   infos?: Record<string, string>;
 };

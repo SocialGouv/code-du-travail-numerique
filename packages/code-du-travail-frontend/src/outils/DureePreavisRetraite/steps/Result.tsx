@@ -4,7 +4,7 @@ import PubliReferences from "../../common/PubliReferences";
 import ShowDetails from "../../common/ShowDetails";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { usePublicodes } from "../../publicodes";
-import { mapToPublicodesSituation } from "../../publicodes/Utils";
+import { mapToPublicodesSituationForPreavisDeRetraite } from "../../publicodes/Utils";
 import DecryptedResult from "./component/DecryptedResult";
 import ShowResult from "./component/ShowResult";
 import { Situation } from "./component/Situation";
@@ -16,9 +16,9 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
 
   useEffect(() => {
     publicodesContext.setSituation(
-      mapToPublicodesSituation(form.getState().values)
+      mapToPublicodesSituationForPreavisDeRetraite(form.getState().values)
     );
-  }, []);
+  });
 
   return (
     <>

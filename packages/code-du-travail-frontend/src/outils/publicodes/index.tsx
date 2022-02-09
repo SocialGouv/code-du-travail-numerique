@@ -14,6 +14,7 @@ export interface MissingArgs {
 export enum RuleType {
   Liste = "liste",
   OuiNon = "oui-non",
+  SalaireMensuel = "salaire-mensuel",
 }
 
 export interface RuleListe {
@@ -39,12 +40,13 @@ export enum PublicodesUnit {
   WEEK = "semaine",
   WEEKS = "semaines",
   MONTH = "mois",
+  EUROS = "€",
 }
 
 export interface PublicodesResult {
   value: number;
   unit: PublicodesUnit;
-  valueInDays: number;
+  valueInDays?: number | undefined;
 }
 
 export interface PublicodesContextInterface {
@@ -62,7 +64,7 @@ const PublicodesContext = createContext<PublicodesContextInterface>({
     return {
       unit: PublicodesUnit.DAY,
       value: 0,
-      valueInDays: 0,
+      // valueInDays: 0,
     };
   },
   getNotifications: () => [],
@@ -71,7 +73,7 @@ const PublicodesContext = createContext<PublicodesContextInterface>({
   result: {
     unit: PublicodesUnit.DAY,
     value: 0,
-    valueInDays: 0,
+    // valueInDays: 0,
   },
   setSituation: () => {
     throw Error("Not implemented");
@@ -109,7 +111,6 @@ export const PublicodesProvider: React.FC<
     engine: engine,
     targetRule: targetRule,
   });
-
   return (
     <PublicodesContext.Provider
       value={{

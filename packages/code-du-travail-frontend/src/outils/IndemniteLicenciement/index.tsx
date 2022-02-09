@@ -9,13 +9,19 @@ import {
   stepReducer,
   stepSalaires,
 } from "./stepReducer";
+import { PublicodesProvider } from "../publicodes";
 
 interface Props {
   icon: string;
   title: string;
+  publicodesRules: any;
 }
 
-const CalculateurIndemnite = ({ icon, title }: Props): JSX.Element => {
+const CalculateurIndemnite = ({
+  icon,
+  title,
+  publicodesRules,
+}: Props): JSX.Element => {
   /**
    * The rules defined here allows to manage additionnal steps to the wizard
    */
@@ -45,14 +51,19 @@ const CalculateurIndemnite = ({ icon, title }: Props): JSX.Element => {
   );
 
   return (
-    <Wizard
-      icon={icon}
-      title={title}
-      duration="5 à 10 min"
-      stepReducer={stepReducer}
-      initialState={initialState}
-      Rules={Rules}
-    />
+    <PublicodesProvider
+      rules={publicodesRules}
+      targetRule="contrat salarié . indemnité de licenciement"
+    >
+      <Wizard
+        icon={icon}
+        title={title}
+        duration="5 à 10 min"
+        stepReducer={stepReducer}
+        initialState={initialState}
+        Rules={Rules}
+      />
+    </PublicodesProvider>
   );
 };
 

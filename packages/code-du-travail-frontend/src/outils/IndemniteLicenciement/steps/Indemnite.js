@@ -4,16 +4,11 @@ import React from "react";
 
 import Disclaimer from "../../common/Disclaimer";
 import { IndemniteLegale } from "../components/IndemniteLegale";
-import { getIndemniteFromFinalForm } from "../indemnite";
 
 function StepIndemnite({ form }) {
-  const { indemniteLegale, infoCalculLegal } = getIndemniteFromFinalForm(form);
   return (
     <>
-      <IndemniteLegale
-        indemnite={indemniteLegale}
-        infoCalcul={infoCalculLegal}
-      />
+      <IndemniteLegale formValues={form.getState().values} />
       <Disclaimer title={"Attention il peut exister un montant plus favorable"}>
         <p>
           Une convention collective, un accord d’entreprise, le contrat de
