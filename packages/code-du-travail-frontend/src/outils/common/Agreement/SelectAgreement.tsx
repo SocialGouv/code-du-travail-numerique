@@ -6,14 +6,14 @@ import { Agreement } from "../../../conventions/Search/api/type";
 import { useLocalStorage } from "../../../lib/useLocalStorage";
 import { AgreementRoute, FormContent } from "../type/WizardType";
 import { AgreementSearch } from "./AgreementSearch";
-import EnterpriseSearch from "./EnterpriseSearch";
+import { EnterpriseSearch } from "./EnterpriseSearch";
 import { AGREEMENT_NAME, ENTERPRISE_NAME, ROUTE_NAME } from "./form-constants";
 import { RouteSelection } from "./RouteSelection";
 import { AgreementSupportInfo, OnSelectAgreementFn } from "./types";
 
 export type Props = {
   form: FormApi<FormContent>;
-  supportedAgreements: AgreementSupportInfo[];
+  supportedAgreements?: AgreementSupportInfo[];
   onChange?: (oldValue: Agreement | null, newValue: Agreement | null) => void;
   defaultSelectedAgreement?: Agreement;
 };

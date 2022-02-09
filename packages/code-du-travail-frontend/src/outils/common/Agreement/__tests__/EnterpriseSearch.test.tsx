@@ -4,8 +4,8 @@ import React from "react";
 import { EmbeddedForm } from "../../../../../test/TestForm";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
 import { Agreement } from "../../../../conventions/Search/api/type";
-import type { Props } from "../EnterpriseSearch";
-import EnterpriseSearch from "../EnterpriseSearch";
+import type { Props } from "../EnterpriseSearch/EnterpriseSearch";
+import EnterpriseSearch from "../EnterpriseSearch/EnterpriseSearch";
 
 const callback: (
   agreement: Agreement | null,
@@ -185,9 +185,8 @@ describe("EnterpriseSearch", () => {
       );
       const button = getByRole("button", { name: "Fermer" });
       button.click();
-      expect(onSelectAgreement.mock.calls).toHaveLength(2);
-      expect(onSelectAgreement.mock.calls[1][0]).toBeNull();
-      expect(onSelectAgreement.mock.calls[1][1]).toBeNull();
+      expect(onSelectAgreement.mock.calls).toHaveLength(1);
+      expect(onSelectAgreement.mock.calls[0][0]).toBeNull();
     });
   });
 
@@ -197,7 +196,7 @@ describe("EnterpriseSearch", () => {
       selectedEnterprise: selectedEnterpriseTwoAgreements,
     };
     it("should show the agreements selection", () => {
-      const { getByText } = render(
+      const { getByText, queryByText } = render(
         <EmbeddedForm<Props>
           Step={EnterpriseSearch}
           props={dataWithSelectedEnterpriseWithTwoAgreements}
@@ -210,6 +209,9 @@ describe("EnterpriseSearch", () => {
       ).toBeInTheDocument();
       expect(getByText(new RegExp(agreement1.shortTitle))).toBeInTheDocument();
       expect(getByText(new RegExp(agreement2.shortTitle))).toBeInTheDocument();
+      expect(
+        queryByText(/Cliquez sur Suivant pour poursuivre la simulation/)
+      ).not.toBeInTheDocument();
     });
 
     it("should show the enterprise title", () => {
@@ -260,6 +262,89 @@ describe("EnterpriseSearch", () => {
       button.click();
       expect(onSelectAgreement.mock.calls).toHaveLength(1);
       expect(onSelectAgreement.mock.calls[0][0]).toBeNull();
+    });
+
+    it("should show the message to continue the simulation when select the agreement", () => {
+      const { getByText, queryByText } = render(
+        <EmbeddedForm<Props>
+          Step={EnterpriseSearch}
+          props={dataWithSelectedEnterpriseWithTwoAgreements}
+        />
+      );
+      getByText(/Grands magasins et magasins populaires/).click();
+      expect(
+        queryByText(/Cliquez sur Suivant pour poursuivre la simulation/)
+      ).toBeInTheDocument();
+    });
+  });
+
+  describe("selected agreement not supported / not fully supported", () => {
+    it("should render a warning about the not supported agreement", () => {
+      const data: Props = {
+        onSelectAgreement,
+        selectedEnterprise: selectedEnterpriseOneAgreement,
+        supportedAgreements: [],
+      };
+      const { getByText } = render(
+        <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
+      );
+      expect(
+        getByText(/À noter : convention collective non traitée/)
+      ).toBeInTheDocument();
+    });
+
+    it("should render a warning about the not supported agreement (multiple agreements)", () => {
+      const data: Props = {
+        onSelectAgreement,
+        selectedEnterprise: selectedEnterpriseTwoAgreements,
+        supportedAgreements: [],
+      };
+      const { getByText } = render(
+        <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
+      );
+      getByText(/Grands magasins et magasins populaires/).click();
+      expect(
+        getByText(/À noter : convention collective non traitée/)
+      ).toBeInTheDocument();
+    });
+
+    it("should not render a warning about the supported agreement", () => {
+      const data: Props = {
+        onSelectAgreement,
+        selectedEnterprise: selectedEnterpriseOneAgreement,
+        supportedAgreements: [
+          {
+            fullySupported: true,
+            idcc: selectedEnterpriseOneAgreement.conventions[0].num,
+          },
+        ],
+      };
+      const { queryByText } = render(
+        <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
+      );
+      expect(
+        queryByText(/À noter : convention collective non traitée/)
+      ).not.toBeInTheDocument();
+    });
+
+    it("should not render a warning when agreement is supported (multiple agreements)", () => {
+      const data: Props = {
+        onSelectAgreement,
+        selectedEnterprise: selectedEnterpriseTwoAgreements,
+        supportedAgreements: [
+          {
+            fullySupported: true,
+            idcc: selectedEnterpriseTwoAgreements.conventions[0].num,
+          },
+        ],
+      };
+      const { getByText, queryByText } = render(
+        <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
+      );
+      getByText(/Grands magasins et magasins populaires/).click();
+      expect(
+        queryByText(/À noter : convention collective non traitée/)
+      ).not.toBeInTheDocument();
     });
   });
 });

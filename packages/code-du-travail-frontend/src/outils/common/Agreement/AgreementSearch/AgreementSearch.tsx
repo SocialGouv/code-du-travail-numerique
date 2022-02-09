@@ -8,11 +8,11 @@ import { AgreementSearchStep } from "../../../ConventionCollective/steps/Agreeme
 import { ErrorField } from "../../ErrorField";
 import { required } from "../../validators";
 import { AGREEMENT_NAME } from "../form-constants";
+import ShowAlert from "../ShowAlert";
 import { AgreementSupportInfo } from "../types";
-import ShowAlert from "./ShowAlert";
 
 export type Props = {
-  supportedAgreements: AgreementSupportInfo[];
+  supportedAgreements?: AgreementSupportInfo[];
   selectedAgreement?: Agreement;
   onSelectAgreement: (agreement: Agreement | null) => void;
 };

@@ -1,17 +1,20 @@
 import { Alert, Paragraph, Text } from "@socialgouv/cdtn-ui";
 import React from "react";
 
-import { AgreementSupportInfo } from "../types";
+import type { AgreementSupportInfo } from "./types";
 
 type Props = {
   currentIdcc: number;
-  supportedAgreements: AgreementSupportInfo[];
+  supportedAgreements?: AgreementSupportInfo[];
 };
 
 const ShowAlert = ({
   currentIdcc,
   supportedAgreements,
 }: Props): JSX.Element => {
+  if (supportedAgreements === undefined) {
+    return <></>;
+  }
   const idccInfo = supportedAgreements.find((item) => item.idcc == currentIdcc);
   if (!idccInfo) {
     return (
