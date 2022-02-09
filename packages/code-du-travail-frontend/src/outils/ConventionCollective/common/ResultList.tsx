@@ -54,7 +54,9 @@ const ViewMoreButton = styled(Button)`
   }
 `;
 
-export const ResultItem = styled.a`
+export const ResultItem = styled.button.attrs({
+  type: "button",
+})`
   display: block;
   appearance: none;
   width: 100%;
