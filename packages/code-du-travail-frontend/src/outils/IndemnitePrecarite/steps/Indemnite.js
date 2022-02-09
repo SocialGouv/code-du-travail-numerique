@@ -97,7 +97,7 @@ function StepIndemnite({ form }) {
 
   const entries = Object.entries({
     "Convention collective": getConventionCollectiveText(
-      ccn.selected,
+      ccn?.selected,
       situations
     ),
     ...inputs,
