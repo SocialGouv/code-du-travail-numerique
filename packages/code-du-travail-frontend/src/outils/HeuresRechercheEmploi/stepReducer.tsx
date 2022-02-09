@@ -1,6 +1,5 @@
 import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 
-import { SelectAgreementStep } from "../common/Agreement/SelectAgreementStep";
 import { isNotYetProcessed } from "../common/situations.utils";
 import {
   Action,
@@ -8,6 +7,7 @@ import {
   FormContent,
   State,
 } from "../common/type/WizardType";
+import { AgreementStep } from "./steps/AgreementStep";
 import { StepInformations } from "./steps/Informations";
 import { StepIntro } from "./steps/Introduction";
 import { StepResult } from "./steps/Result";
@@ -22,7 +22,7 @@ export const initialState = {
       name: "intro",
     },
     {
-      component: SelectAgreementStep,
+      component: AgreementStep,
       label: "Convention collective",
       name: "info_cc",
     },
@@ -56,6 +56,7 @@ function ccnNotProcessed(values) {
     (values.ccn && isNotYetProcessed(data.situations, values.ccn.num))
   );
 }
+
 function skipTypeRupture(values: FormContent): boolean {
   return (
     ccnNotProcessed(values) ||

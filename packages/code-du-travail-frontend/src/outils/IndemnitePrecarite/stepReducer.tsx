@@ -1,6 +1,6 @@
 import { Action, ActionName, State } from "../common/type/WizardType";
+import { AgreementStep } from "./steps/AgreementStep";
 import { StepIndemnite } from "./steps/Indemnite";
-import { StepInfoCCn } from "./steps/InfosCCn";
 import { StepInfosGenerales } from "./steps/InfosGenerales";
 import { StepIntro } from "./steps/Introduction";
 import { StepRemuneration } from "./steps/Remuneration";
@@ -14,7 +14,7 @@ export const initialState = {
       name: "intro",
     },
     {
-      component: StepInfoCCn,
+      component: AgreementStep,
       label: "Convention collective",
       name: "info_cc",
     },

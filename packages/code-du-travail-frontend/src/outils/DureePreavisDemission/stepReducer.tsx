@@ -1,8 +1,8 @@
 import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 
-import { SelectAgreementStep } from "../common/Agreement/SelectAgreementStep";
 import { isNotYetProcessed } from "../common/situations.utils";
 import { Action, ActionName, State } from "../common/type/WizardType";
+import { AgreementStep } from "./steps/AgreementStep";
 import { StepInformations } from "./steps/Informations";
 import { StepIntro } from "./steps/Introduction";
 import { StepResult } from "./steps/Result";
@@ -16,7 +16,7 @@ export const initialState = {
       name: "intro",
     },
     {
-      component: SelectAgreementStep,
+      component: AgreementStep,
       label: "Convention collective",
       name: "info_cc",
     },

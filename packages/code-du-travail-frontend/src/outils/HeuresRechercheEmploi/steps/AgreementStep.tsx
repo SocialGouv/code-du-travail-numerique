@@ -1,10 +1,11 @@
+import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 import React from "react";
 
 import { SelectAgreement } from "../../common";
+import { getSupportedCC } from "../../common/situations.utils";
 import { WizardStepProps } from "../../common/type/WizardType";
-import { getSupportedCC } from "./situation";
 
-export const StepInfoCCn = (props: WizardStepProps): JSX.Element => {
+export const AgreementStep = (props: WizardStepProps): JSX.Element => {
   return (
     <>
       <SelectAgreement
@@ -13,7 +14,7 @@ export const StepInfoCCn = (props: WizardStepProps): JSX.Element => {
           // Delete infos when change CC
           props.form.change("infos", undefined);
         }}
-        supportedAgreements={getSupportedCC()}
+        supportedAgreements={getSupportedCC(data)}
       />
     </>
   );

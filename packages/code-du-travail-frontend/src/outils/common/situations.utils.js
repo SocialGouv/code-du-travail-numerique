@@ -121,3 +121,15 @@ export const getFormProps = ({ key, criteria, pastQuestions }) =>
         .slice(pastQuestions.findIndex(([k]) => k === key) + 1)
         .map(([key]) => key)
     );
+
+export const getSupportedCC = (data) => {
+  const uniqueIDCC = [
+    ...new Map(data.map((item) => [item["idcc"], item])).values(),
+  ];
+  return uniqueIDCC.map((item) => {
+    return {
+      fullySupported: true,
+      idcc: parseInt(item.idcc),
+    };
+  });
+};

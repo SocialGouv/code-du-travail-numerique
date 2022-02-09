@@ -7,13 +7,14 @@ import {
   getOptions,
   getPastQuestions,
   getSituationsFor,
+  getSupportedCC,
   isNotYetProcessed,
   recapSituation,
 } from "../situations.utils";
 
 const criteriaOrder = ["bar", "foo", "baz", "yolo"];
 
-jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
+const ccList = [
   { criteria: { bar: "baz", foo: "1| foo" }, idcc: "10" },
   { criteria: { bar: "bar", foo: "1| foo" }, idcc: "10" },
   { criteria: { bar: "baz", foo: "2| baz" }, idcc: "10" },
@@ -40,7 +41,8 @@ jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
     hasConventionalProvision: null,
     idcc: "30",
   },
-]);
+];
+jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => ccList);
 
 describe("situations", () => {
   describe("getInitialSituations", () => {
@@ -165,6 +167,20 @@ describe("situations", () => {
           pastQuestions,
         })
       ).toEqual(["foo"]);
+    });
+  });
+
+  describe("getSupportedCC", () => {
+    it("should return all supported CC", () => {
+      const supportedCCResult = getSupportedCC(ccList);
+      expect(supportedCCResult).toHaveLength(2);
+      expect(supportedCCResult.find((item) => item.idcc === 99999)).toBe(
+        undefined
+      );
+      expect(supportedCCResult.find((item) => item.idcc === 20)).toStrictEqual({
+        fullySupported: true,
+        idcc: 20,
+      });
     });
   });
 });
