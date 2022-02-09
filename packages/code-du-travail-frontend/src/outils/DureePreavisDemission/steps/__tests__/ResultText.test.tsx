@@ -15,7 +15,7 @@ describe("StepResult", () => {
         getState() {
           return {
             values: {
-              ccn: { num: ccNumber },
+              ccn: { selected: { num: ccNumber } },
             },
           };
         },
@@ -42,7 +42,7 @@ describe("StepResult", () => {
         getState() {
           return {
             values: {
-              ccn: { num: 675 },
+              ccn: { selected: { num: 675 } },
               criteria: {
                 ancienneté: anciennete,
                 "catégorie professionnelle": catPro,

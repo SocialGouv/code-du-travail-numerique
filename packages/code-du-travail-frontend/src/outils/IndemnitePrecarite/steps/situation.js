@@ -63,12 +63,17 @@ export const hasConventionalProvision = (data, idcc) => {
     .some((situation) => situation.hasConventionalProvision);
 };
 
-export const isNotYetProcessed = (idcc) => {
+export const getSupportedCC = () => {
   const situations = data.filter(
-    (situation) => parseInt(situation.idcc) === parseInt(idcc)
+    (situation) => situation.hasConventionalProvision !== null
   );
-  return (
-    situations.length === 0 ||
-    situations.some((situation) => situation.hasConventionalProvision === null)
-  );
+  const uniqueIDCC = [
+    ...new Map(situations.map((item) => [item["idcc"], item])).values(),
+  ];
+  return uniqueIDCC.map((item) => {
+    return {
+      fullySupported: true,
+      idcc: parseInt(item.idcc),
+    };
+  });
 };

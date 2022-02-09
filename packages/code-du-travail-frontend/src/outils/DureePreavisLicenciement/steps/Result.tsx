@@ -16,6 +16,7 @@ import {
   SectionTitle,
   SmallText,
 } from "../../common/stepStyles";
+import { WizardStepProps } from "../../common/type/WizardType";
 import { formatRefs } from "../../publicodes/Utils";
 import DisclaimerText from "./DisclaimerText";
 
@@ -105,10 +106,10 @@ function DisplayResult({
   );
 }
 
-function StepResult({ form }) {
+function StepResult({ form }: WizardStepProps): JSX.Element {
   const { values } = form.getState();
   const { ccn, cdt, seriousMisconduct, disabledWorker, criteria = {} } = values;
-  const idcc = ccn ? ccn.num : 0;
+  const idcc = ccn?.selected ? ccn.selected.num : 0;
 
   // Situation CDT
   const initialCDTSituations = getSituationsFor(allSituations, {
@@ -177,7 +178,9 @@ function StepResult({ form }) {
             ...(seniorityCC && {
               "Ancienneté selon la convention collective": seniorityCC,
             }),
-            ...(ccn && { "Convention collective": ccn.title }),
+            ...(ccn?.selected && {
+              "Convention collective": ccn.selected.title,
+            }),
           }),
         })}
         {situationCC && (
@@ -192,7 +195,7 @@ function StepResult({ form }) {
         <DisclaimerText
           durationCC={durationCC}
           durationCDT={durationCDT}
-          ccn={ccn}
+          ccn={ccn?.selected}
         />
       </Disclaimer>
     </>
@@ -207,11 +210,11 @@ StepResult.propTypes = {
 
 export { StepResult };
 
-export function getResult({
+function getResult({
   durationCDT = 0,
   durationCC = 0,
   disabledWorker = true,
-}) {
+}): string {
   const durationMax = Math.max(durationCDT, durationCC);
   if (durationMax === 0) {
     return "Aucun préavis";
