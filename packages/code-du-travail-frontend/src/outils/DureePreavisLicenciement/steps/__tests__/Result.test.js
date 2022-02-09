@@ -2,12 +2,14 @@ import { renderForm } from "../../../../../test/renderForm";
 import { StepResult } from "../Result";
 
 const ccn16 = {
-  id: "KALICONT000005635624",
-  num: 16,
-  shortTitle: "Transports routiers et activités auxiliaires du transport",
-  slug: "16-transports-routiers-et-activites-auxiliaires-du-transport",
-  title:
-    "Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950",
+  selected: {
+    id: "KALICONT000005635624",
+    num: 16,
+    shortTitle: "Transports routiers et activités auxiliaires du transport",
+    slug: "16-transports-routiers-et-activites-auxiliaires-du-transport",
+    title:
+      "Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950",
+  },
 };
 
 describe("<StepResult />", () => {
@@ -71,12 +73,14 @@ describe("<StepResult />", () => {
   it("should render with when unhandled CC", () => {
     const { container } = renderForm(StepResult, {
       ccn: {
-        id: "KALICONT000005635662",
-        num: 1561,
-        shortTitle: "Cordonnerie multiservice",
-        slug: "1561-cordonnerie-multiservice",
-        title:
-          "Convention collective nationale de la cordonnerie multiservice du 7 août 1989. Elargie au secteur des cordonniers industriels ",
+        selected: {
+          id: "KALICONT000005635662",
+          num: 1561,
+          shortTitle: "Cordonnerie multiservice",
+          slug: "1561-cordonnerie-multiservice",
+          title:
+            "Convention collective nationale de la cordonnerie multiservice du 7 août 1989. Elargie au secteur des cordonniers industriels ",
+        },
       },
       cdt: {
         ancienneté: "43| plus de 2 ans",

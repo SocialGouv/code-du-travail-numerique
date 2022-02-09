@@ -1,7 +1,7 @@
 import data from "@cdt/data...prime-precarite/precarite.data.json";
 
 import { getSituationsFor } from "../../../common/situations.utils";
-import { isNotYetProcessed, validateSituation } from "../situation";
+import { getSupportedCC, validateSituation } from "../situation";
 
 jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
   { criteria: { cddType: "1| foo", hasCdiProposal: "baz" }, idcc: 10 },
@@ -61,15 +61,20 @@ describe("situations", () => {
     });
   });
 
-  describe("isNotYetProcessed", () => {
-    it("should return true if there no matching cc", () => {
-      expect(isNotYetProcessed("toto")).toBe(true);
-    });
-    it("should return true if cc hasConventionalProvision to null", () => {
-      expect(isNotYetProcessed("30")).toBe(true);
-    });
-    it("should return false if cc hasConventionalProvision to true", () => {
-      expect(isNotYetProcessed("20")).toBe(false);
+  describe("getSupportedCC", () => {
+    it("should return all supported CC", () => {
+      const supportedCCResult = getSupportedCC();
+      expect(supportedCCResult).toHaveLength(2);
+      expect(supportedCCResult.find((item) => item.idcc === 99999)).toBe(
+        undefined
+      );
+      expect(supportedCCResult.find((item) => item.idcc === 30)).toBe(
+        undefined
+      );
+      expect(supportedCCResult.find((item) => item.idcc === 20)).toStrictEqual({
+        fullySupported: true,
+        idcc: 20,
+      });
     });
   });
 });

@@ -1,8 +1,10 @@
 import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
+import React from "react";
 
+import { SelectAgreementStep } from "../common/Agreement/SelectAgreementStep";
 import { isNotYetProcessed } from "../common/situations.utils";
+import { Action, ActionName, State } from "../common/type/WizardType";
 import { StepInformations } from "./steps/Informations";
-import { StepInfoCCn } from "./steps/InfosCCn";
 import { StepIntro } from "./steps/Introduction";
 import { StepResult } from "./steps/Result";
 import { StepStatus } from "./steps/Status";
@@ -21,7 +23,7 @@ export const initialState = {
       name: "situation",
     },
     {
-      component: StepInfoCCn,
+      component: SelectAgreementStep,
       label: "Convention collective",
       name: "info_cc",
     },
@@ -41,16 +43,13 @@ export const initialState = {
   ],
 };
 
-export function stepReducer(state, { type, payload }) {
-  switch (type) {
-    case "reset": {
+export function stepReducer(state: State, action: Action): State {
+  switch (action.type) {
+    case ActionName.reset: {
       return { ...initialState };
     }
-    case "setStepIndex": {
-      return { stepIndex: payload, steps: state.steps };
+    case ActionName.setStepIndex: {
+      return { stepIndex: action.payload, steps: state.steps };
     }
-    default:
-      console.warn("action unknow", type);
-      return state;
   }
 }

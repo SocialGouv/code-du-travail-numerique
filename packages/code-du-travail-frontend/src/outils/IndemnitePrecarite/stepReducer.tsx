@@ -1,3 +1,4 @@
+import { Action, ActionName, State } from "../common/type/WizardType";
 import { StepIndemnite } from "./steps/Indemnite";
 import { StepInfoCCn } from "./steps/InfosCCn";
 import { StepInfosGenerales } from "./steps/InfosGenerales";
@@ -37,16 +38,13 @@ export const initialState = {
   ],
 };
 
-export function stepReducer(state, { type, payload }) {
-  switch (type) {
-    case "reset": {
+export function stepReducer(state: State, action: Action): State {
+  switch (action.type) {
+    case ActionName.reset: {
       return { ...initialState };
     }
-    case "setStepIndex": {
-      return { stepIndex: payload, steps: state.steps };
+    case ActionName.setStepIndex: {
+      return { stepIndex: action.payload, steps: state.steps };
     }
-    default:
-      console.warn("action unknow", type);
-      return state;
   }
 }

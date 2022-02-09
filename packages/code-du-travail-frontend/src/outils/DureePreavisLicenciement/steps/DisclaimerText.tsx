@@ -7,7 +7,7 @@ import { isNotNearZero } from "../../common/math";
 type Props = {
   durationCC: number;
   durationCDT: string;
-  ccn: Agreement;
+  ccn?: Agreement;
 };
 
 const DisclaimerText: React.FC<Props> = ({ durationCC, durationCDT, ccn }) => {
