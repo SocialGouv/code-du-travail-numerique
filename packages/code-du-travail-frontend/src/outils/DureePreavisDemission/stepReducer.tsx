@@ -1,6 +1,6 @@
 import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 
-import { getSupportedCC, skipStep } from "../common/situations.utils";
+import { skipStep } from "../common/situations.utils";
 import {
   Action,
   ActionName,
@@ -32,7 +32,7 @@ export const initialState = {
       label: "Informations",
       name: "infos",
       skip: (values: FormContent): boolean =>
-        skipStep(getSupportedCC(data.situations), values.ccn?.selected?.num),
+        skipStep(data.situations, values.ccn?.selected?.num),
     },
     {
       component: StepResult,

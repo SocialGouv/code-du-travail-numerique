@@ -1,6 +1,6 @@
 import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 
-import { getSupportedCC, skipStep } from "../common/situations.utils";
+import { skipStep } from "../common/situations.utils";
 import {
   Action,
   ActionName,
@@ -51,7 +51,7 @@ export const initialState = {
 };
 
 const ccnNotProcessed = (values: FormContent): boolean =>
-  skipStep(getSupportedCC(data.situations), values.ccn?.selected?.num);
+  skipStep(data.situations, values.ccn?.selected?.num);
 
 function skipTypeRupture(values: FormContent): boolean {
   return (

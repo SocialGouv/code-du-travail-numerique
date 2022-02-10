@@ -33,15 +33,9 @@ const ccList = [
     idcc: "20",
   },
   {
-    criteria: { foo: "4| baz" },
+    criteria: {},
     hasConventionalProvision: null,
     idcc: "30",
-  },
-  {
-    allowBonus: true,
-    criteria: {},
-    hasConventionalProvision: true,
-    idcc: "40",
   },
 ];
 jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => ccList);
@@ -130,18 +124,17 @@ describe("situations", () => {
   });
 
   describe("skipStep", () => {
-    const formattedData = getSupportedCC(data);
     it("should return true if there no  cc", () => {
-      expect(skipStep(formattedData, undefined)).toBe(true);
+      expect(skipStep(data, undefined)).toBe(true);
     });
     it("should return true if there no matching cc", () => {
-      expect(skipStep(formattedData, "toto")).toBe(true);
+      expect(skipStep(data, "toto")).toBe(true);
     });
     it("should return true if there matching cc but only with empty criteria", () => {
-      expect(skipStep(formattedData, "40")).toBe(true);
+      expect(skipStep(data, "30")).toBe(true);
     });
     it("should return false if there matching cc", () => {
-      expect(skipStep(formattedData, "20")).toBe(false);
+      expect(skipStep(data, "20")).toBe(false);
     });
   });
 
@@ -181,9 +174,6 @@ describe("situations", () => {
       const supportedCCResult = getSupportedCC(ccList);
       expect(supportedCCResult).toHaveLength(3);
       expect(supportedCCResult.find((item) => item.idcc === 99999)).toBe(
-        undefined
-      );
-      expect(supportedCCResult.find((item) => item.idcc === 40)).toBe(
         undefined
       );
       expect(supportedCCResult.find((item) => item.idcc === 30)).toStrictEqual({
