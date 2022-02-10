@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.69.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.68.0...v4.69.0) (2022-02-10)
+
+
+### Features
+
+* **simulator:** add new CC 2941 ([#4166](https://github.com/SocialGouv/code-du-travail-numerique/issues/4166)) ([8330d59](https://github.com/SocialGouv/code-du-travail-numerique/commit/8330d59949b592446720173a680e01597d8df2ac))
+
+
+
+
+
 # [4.68.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.1...v4.68.0) (2022-02-02)
 
 **Note:** Version bump only for package @socialgouv/modeles-social
