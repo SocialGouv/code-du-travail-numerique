@@ -45,7 +45,7 @@ function DisclaimerBoxNoCC() {
 function StepResult({ form }: WizardStepProps): JSX.Element {
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
-  const idcc = ccn ? ccn.num : 0;
+  const idcc = ccn?.selected ? ccn.selected.num : 0;
 
   const initialSituations = getSituationsFor(data.situations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
@@ -57,7 +57,7 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
   };
 
   // No ccn selected or UnhandledCC
-  if (!ccn || possibleSituations.length === 0) {
+  if (!ccn?.selected || possibleSituations.length === 0) {
     let reason =
       "la convention collective n’a pas encore été traitée par nos services.";
     if (idcc === 0) {
@@ -73,7 +73,9 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.
         </p>
-        {possibleSituations.length === 0 && ccn && <CCSearchInfo ccn={ccn} />}
+        {possibleSituations.length === 0 && ccn?.selected && (
+          <CCSearchInfo ccn={ccn.selected} />
+        )}
         <DisclaimerBoxNoCC />
         <PubliReferences references={formatRefs([refLegal])} />
       </>
@@ -87,7 +89,7 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
       {situation.answer ? (
         <p>
           À partir des éléments que vous avez saisis, la durée du préavis de
-          démission est estimée à&nbsp;:
+          démission est estimée à&nbsp;:&nbsp;
           <HighlightResult>{situation.answer}</HighlightResult>
           {situation.note && <sup>*</sup>}.
         </p>
@@ -112,7 +114,7 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
       <ShowDetails>
         <SectionTitle>Éléments saisis</SectionTitle>
         {recapSituation({
-          "Convention collective": `${ccn.title} (${idcc})`,
+          "Convention collective": `${ccn.selected.title} (${idcc})`,
           ...situation.criteria,
         })}
         <PubliReferences references={formatRefs([refLegal, situation])} />
