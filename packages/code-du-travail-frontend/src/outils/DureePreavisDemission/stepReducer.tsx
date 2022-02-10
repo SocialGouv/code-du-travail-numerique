@@ -1,9 +1,14 @@
 import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 
-import { isNotYetProcessed } from "../common/situations.utils";
-import { Action, State } from "../common/type/WizardType";
+import { skipStep } from "../common/situations.utils";
+import {
+  Action,
+  ActionName,
+  FormContent,
+  State,
+} from "../common/type/WizardType";
+import { AgreementStep } from "./steps/AgreementStep";
 import { StepInformations } from "./steps/Informations";
-import { StepInfoCCn } from "./steps/InfosCCn";
 import { StepIntro } from "./steps/Introduction";
 import { StepResult } from "./steps/Result";
 
@@ -16,7 +21,7 @@ export const initialState = {
       name: "intro",
     },
     {
-      component: StepInfoCCn,
+      component: AgreementStep,
       label: "Convention collective",
       name: "info_cc",
     },
@@ -26,9 +31,8 @@ export const initialState = {
       isForm: true,
       label: "Informations",
       name: "infos",
-      skip: (values) =>
-        !values.ccn ||
-        (values.ccn && isNotYetProcessed(data.situations, values.ccn.num)),
+      skip: (values: FormContent): boolean =>
+        skipStep(data.situations, values.ccn?.selected?.num),
     },
     {
       component: StepResult,
@@ -40,14 +44,11 @@ export const initialState = {
 
 export function stepReducer(state: State, action: Action): State {
   switch (action.type) {
-    case "reset": {
+    case ActionName.reset: {
       return { ...initialState };
     }
-    case "setStepIndex": {
+    case ActionName.setStepIndex: {
       return { stepIndex: action.payload, steps: state.steps };
     }
-    default:
-      console.warn("action unknow", action.type);
-      return state;
   }
 }

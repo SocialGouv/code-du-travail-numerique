@@ -9,6 +9,10 @@ import { matopush } from "../../piwik";
 import { removeQueryParameters } from "..";
 import { MatomoAgreementEvent, MatomoBaseEvent, MatomoTrackUrl } from ".";
 
+const precariteDataFiltered = precariteData.filter(
+  (situation) => situation.hasConventionalProvision !== null
+);
+
 export const trackConventionCollective = (
   ccn: Agreement | null,
   currentPath: string
@@ -43,7 +47,7 @@ export const trackConventionCollective = (
       break;
     }
     case MatomoTrackUrl.INDEMNITE_PRECARITE: {
-      const idcc = precariteData.find((item) => item.idcc == ccn.num);
+      const idcc = precariteDataFiltered.find((item) => item.idcc == ccn.num);
       isTreated = !!idcc;
       break;
     }

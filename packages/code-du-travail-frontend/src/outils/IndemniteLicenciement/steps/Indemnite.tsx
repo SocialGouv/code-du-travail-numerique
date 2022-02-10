@@ -3,10 +3,11 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import Disclaimer from "../../common/Disclaimer";
+import { WizardStepProps } from "../../common/type/WizardType";
 import { IndemniteLegale } from "../components/IndemniteLegale";
 import { getIndemniteFromFinalForm } from "../indemnite";
 
-function StepIndemnite({ form }) {
+function StepIndemnite({ form }: WizardStepProps): JSX.Element {
   const { indemniteLegale, infoCalculLegal } = getIndemniteFromFinalForm(form);
   return (
     <>

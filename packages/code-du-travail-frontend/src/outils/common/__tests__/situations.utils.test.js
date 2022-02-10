@@ -7,31 +7,28 @@ import {
   getOptions,
   getPastQuestions,
   getSituationsFor,
-  isNotYetProcessed,
+  getSupportedCC,
   recapSituation,
+  skipStep,
 } from "../situations.utils";
 
 const criteriaOrder = ["bar", "foo", "baz", "yolo"];
 
-jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
+const ccList = [
   { criteria: { bar: "baz", foo: "1| foo" }, idcc: "10" },
   { criteria: { bar: "bar", foo: "1| foo" }, idcc: "10" },
   { criteria: { bar: "baz", foo: "2| baz" }, idcc: "10" },
   { criteria: { bar: "bar", foo: "2| baz" }, idcc: "10" },
   {
     allowBonus: false,
-    criteria: {
-      foo: "3| bar",
-    },
+    criteria: { foo: "3| bar" },
     endMessage: "nope",
     hasConventionalProvision: true,
     idcc: "20",
   },
   {
     allowBonus: true,
-    criteria: {
-      foo: "4| baz",
-    },
+    criteria: { foo: "4| baz" },
     hasConventionalProvision: true,
     idcc: "20",
   },
@@ -40,7 +37,8 @@ jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
     hasConventionalProvision: null,
     idcc: "30",
   },
-]);
+];
+jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => ccList);
 
 describe("situations", () => {
   describe("getInitialSituations", () => {
@@ -125,15 +123,18 @@ describe("situations", () => {
     });
   });
 
-  describe("isNotYetProcessed", () => {
+  describe("skipStep", () => {
+    it("should return true if there no  cc", () => {
+      expect(skipStep(data, undefined)).toBe(true);
+    });
     it("should return true if there no matching cc", () => {
-      expect(isNotYetProcessed(data, "toto")).toBe(true);
+      expect(skipStep(data, "toto")).toBe(true);
     });
     it("should return true if there matching cc but only with empty criteria", () => {
-      expect(isNotYetProcessed(data, "30")).toBe(true);
+      expect(skipStep(data, "30")).toBe(true);
     });
     it("should return false if there matching cc", () => {
-      expect(isNotYetProcessed(data, "20")).toBe(false);
+      expect(skipStep(data, "20")).toBe(false);
     });
   });
 
@@ -165,6 +166,24 @@ describe("situations", () => {
           pastQuestions,
         })
       ).toEqual(["foo"]);
+    });
+  });
+
+  describe("getSupportedCC", () => {
+    it("should return all supported CC", () => {
+      const supportedCCResult = getSupportedCC(ccList);
+      expect(supportedCCResult).toHaveLength(3);
+      expect(supportedCCResult.find((item) => item.idcc === 99999)).toBe(
+        undefined
+      );
+      expect(supportedCCResult.find((item) => item.idcc === 30)).toStrictEqual({
+        fullySupported: true,
+        idcc: 30,
+      });
+      expect(supportedCCResult.find((item) => item.idcc === 20)).toStrictEqual({
+        fullySupported: true,
+        idcc: 20,
+      });
     });
   });
 });
