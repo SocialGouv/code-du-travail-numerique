@@ -89,7 +89,7 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
       {situation.answer ? (
         <p>
           À partir des éléments que vous avez saisis, la durée du préavis de
-          démission est estimée à&nbsp;:
+          démission est estimée à&nbsp;:&nbsp;
           <HighlightResult>{situation.answer}</HighlightResult>
           {situation.note && <sup>*</sup>}.
         </p>
