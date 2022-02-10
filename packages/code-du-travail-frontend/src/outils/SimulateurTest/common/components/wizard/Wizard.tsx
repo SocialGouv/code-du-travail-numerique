@@ -1,9 +1,9 @@
-import { theme, Wrapper } from "@socialgouv/cdtn-ui";
+import { Wrapper } from "@socialgouv/cdtn-ui";
 import React from "react";
-import styled from "styled-components";
 
-import { PrevNextBar } from "../../../common/PrevNextBar";
-import { STEP_LIST_WIDTH, StepList } from "../../../common/StepList";
+import { PrevNextBar } from "../../../../common/PrevNextBar";
+import { StepList } from "../../../../common/StepList";
+import { StyledDiv } from "./components";
 import { WizardTitle } from "./WizardTitle";
 
 const anchorRef = React.createRef<HTMLLIElement>();
@@ -55,16 +55,3 @@ export function Wizard({
     </Wrapper>
   );
 }
-
-const { breakpoints } = theme;
-//TODO: mettre dans un autre fichier
-const StyledDiv = styled.div`
-  padding: 0 0 0 ${STEP_LIST_WIDTH};
-  overflow: visible;
-  @media (max-width: ${breakpoints.tablet}) {
-    padding: 0;
-  }
-  @media print {
-    border: 0;
-  }
-`;

@@ -1,8 +1,8 @@
 import { InputRadio } from "@socialgouv/cdtn-ui";
 import React from "react";
 
-import { Question, Tooltip } from "../../common/Question";
-import { RadioContainer } from "../../common/stepStyles";
+import { Question, Tooltip } from "../../../common/Question";
+import { RadioContainer } from "../../../common/stepStyles";
 
 type Props = {
   label: string | JSX.Element;

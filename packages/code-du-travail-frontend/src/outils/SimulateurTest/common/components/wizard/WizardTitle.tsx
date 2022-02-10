@@ -2,7 +2,7 @@ import { icons, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
-import { IconWrapper } from "../components/IconWrapper";
+import { IconWrapper } from "./components/IconWrapper";
 
 type WizardTitleProps = {
   duration?: string;

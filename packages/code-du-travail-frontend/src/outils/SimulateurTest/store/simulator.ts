@@ -9,6 +9,7 @@ type State = {
   carrotPrice: string;
   mushroomPrice: string;
   publiResult: any;
+  hasError: boolean;
 };
 
 engine.setSituation();
@@ -24,6 +25,7 @@ export const useSimulatorStore = create(
       set((state) => ({ ...state, publiResult: result }));
     },
     carrotPrice: "2€/kg",
+    hasError: false,
     mushroomPrice: "5€/kg",
     onSetCarrotPrice: (price: string) =>
       set((state) => ({ ...state, carrotPrice: price })),

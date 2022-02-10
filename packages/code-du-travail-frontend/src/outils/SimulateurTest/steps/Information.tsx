@@ -1,6 +1,6 @@
 import React from "react";
 
-import { YesNoQuestion } from "../common/YesNoQuestion";
+import { YesNoQuestion } from "../common/components/YesNoQuestion";
 import { useSimulatorStore } from "../store";
 
 const StepInformation = (): JSX.Element => {

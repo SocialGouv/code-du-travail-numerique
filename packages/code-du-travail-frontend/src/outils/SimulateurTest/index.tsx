@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Wizard } from "./common/wizard/Wizard";
+import { Wizard } from "./common/components/wizard/Wizard";
 import * as Steps from "./steps";
-import { useLocalStore } from "./store";
+import { useLocalStore, useSimulatorStore } from "./store";
 
 interface Props {
   icon: string;
@@ -11,6 +11,7 @@ interface Props {
 
 const SimulateurTest = ({ icon, title }: Props): JSX.Element => {
   const localState = useLocalStore((state) => state);
+  const simulatorState = useSimulatorStore((state) => state);
 
   // L'avantage, on pourra revenir en arriere comme on veut
 
@@ -23,6 +24,7 @@ const SimulateurTest = ({ icon, title }: Props): JSX.Element => {
       step={localState.step}
       onPrev={localState.onPrev} // ça évite d'avoir de la logique de traitement dans l'ui
       onNext={localState.onNext}
+      hasError={simulatorState.hasError}
       items={[
         { label: "Introduction", name: "Introduction" },
         { label: "Information", name: "information" },
