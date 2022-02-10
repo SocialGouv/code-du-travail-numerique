@@ -13,7 +13,7 @@ import { AgreementSupportInfo, OnSelectAgreementFn } from "./types";
 
 export type Props = {
   form: FormApi<FormContent>;
-  supportedAgreements?: AgreementSupportInfo[];
+  supportedAgreements: AgreementSupportInfo[];
   onChange?: (oldValue: Agreement | null, newValue: Agreement | null) => void;
   defaultSelectedAgreement?: Agreement;
 };
@@ -82,6 +82,7 @@ const SelectAgreement = ({
         <EnterpriseSearch
           selectedEnterprise={enterprise}
           onSelectAgreement={onSelectAgreement}
+          supportedAgreements={supportedAgreements}
         />
       )}
     </>

@@ -16,7 +16,7 @@ import { AgreementSupportInfo } from "../types";
 type Props = {
   enterprise: Enterprise;
   onChange: (enterprise: Enterprise, agreement: Agreement | null) => void;
-  supportedAgreements?: AgreementSupportInfo[];
+  supportedAgreements: AgreementSupportInfo[];
 };
 
 const ShowAgreements = ({
@@ -67,7 +67,7 @@ const ShowAgreements = ({
         </OnChange>
         <ErrorField name={AGREEMENT_ID_NAME} />
       </RadioContainer>
-      {supportedAgreements && agreement && (
+      {agreement && (
         <ShowAlert
           currentIdcc={agreement.num}
           supportedAgreements={supportedAgreements}

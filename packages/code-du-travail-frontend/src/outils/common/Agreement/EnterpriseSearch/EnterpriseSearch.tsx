@@ -15,7 +15,7 @@ import ShowAgreement from "./ShowAgreement";
 import ShowAgreements from "./ShowAgreements";
 
 export type Props = {
-  supportedAgreements?: AgreementSupportInfo[];
+  supportedAgreements: AgreementSupportInfo[];
   selectedEnterprise?: Enterprise;
   selectedAgreement?: Agreement;
   onSelectAgreement: OnSelectAgreementFn;

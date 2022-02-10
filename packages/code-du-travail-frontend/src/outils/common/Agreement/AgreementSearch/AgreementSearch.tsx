@@ -12,7 +12,7 @@ import ShowAlert from "../ShowAlert";
 import { AgreementSupportInfo } from "../types";
 
 export type Props = {
-  supportedAgreements?: AgreementSupportInfo[];
+  supportedAgreements: AgreementSupportInfo[];
   selectedAgreement?: Agreement;
   onSelectAgreement: (agreement: Agreement | null) => void;
 };
