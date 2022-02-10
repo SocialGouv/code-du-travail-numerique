@@ -8,8 +8,8 @@ import {
   getPastQuestions,
   getSituationsFor,
   getSupportedCC,
-  isNotYetProcessed,
   recapSituation,
+  skipStep,
 } from "../situations.utils";
 
 const criteriaOrder = ["bar", "foo", "baz", "yolo"];
@@ -21,25 +21,27 @@ const ccList = [
   { criteria: { bar: "bar", foo: "2| baz" }, idcc: "10" },
   {
     allowBonus: false,
-    criteria: {
-      foo: "3| bar",
-    },
+    criteria: { foo: "3| bar" },
     endMessage: "nope",
     hasConventionalProvision: true,
     idcc: "20",
   },
   {
     allowBonus: true,
-    criteria: {
-      foo: "4| baz",
-    },
+    criteria: { foo: "4| baz" },
     hasConventionalProvision: true,
     idcc: "20",
   },
   {
-    criteria: {},
+    criteria: { foo: "4| baz" },
     hasConventionalProvision: null,
     idcc: "30",
+  },
+  {
+    allowBonus: true,
+    criteria: {},
+    hasConventionalProvision: true,
+    idcc: "40",
   },
 ];
 jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => ccList);
@@ -127,15 +129,19 @@ describe("situations", () => {
     });
   });
 
-  describe("isNotYetProcessed", () => {
+  describe("skipStep", () => {
+    const formattedData = getSupportedCC(data);
+    it("should return true if there no  cc", () => {
+      expect(skipStep(formattedData, undefined)).toBe(true);
+    });
     it("should return true if there no matching cc", () => {
-      expect(isNotYetProcessed(data, "toto")).toBe(true);
+      expect(skipStep(formattedData, "toto")).toBe(true);
     });
     it("should return true if there matching cc but only with empty criteria", () => {
-      expect(isNotYetProcessed(data, "30")).toBe(true);
+      expect(skipStep(formattedData, "40")).toBe(true);
     });
     it("should return false if there matching cc", () => {
-      expect(isNotYetProcessed(data, "20")).toBe(false);
+      expect(skipStep(formattedData, "20")).toBe(false);
     });
   });
 
@@ -177,6 +183,13 @@ describe("situations", () => {
       expect(supportedCCResult.find((item) => item.idcc === 99999)).toBe(
         undefined
       );
+      expect(supportedCCResult.find((item) => item.idcc === 40)).toBe(
+        undefined
+      );
+      expect(supportedCCResult.find((item) => item.idcc === 30)).toStrictEqual({
+        fullySupported: true,
+        idcc: 30,
+      });
       expect(supportedCCResult.find((item) => item.idcc === 20)).toStrictEqual({
         fullySupported: true,
         idcc: 20,

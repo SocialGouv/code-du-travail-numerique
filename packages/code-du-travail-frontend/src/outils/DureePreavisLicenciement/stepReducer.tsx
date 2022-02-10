@@ -1,8 +1,13 @@
 import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
 import React from "react";
 
-import { isNotYetProcessed } from "../common/situations.utils";
-import { Action, ActionName, State } from "../common/type/WizardType";
+import { getSupportedCC, skipStep } from "../common/situations.utils";
+import {
+  Action,
+  ActionName,
+  FormContent,
+  State,
+} from "../common/type/WizardType";
 import { AgreementStep } from "./steps/AgreementStep";
 import { StepInformations } from "./steps/Informations";
 import { StepIntro } from "./steps/Introduction";
@@ -31,9 +36,8 @@ export const initialState = {
       component: StepInformations,
       label: "Informations complémentaires",
       name: "infos",
-      skip: (values) =>
-        !values.ccn ||
-        (values.ccn && isNotYetProcessed(data.situations, values.ccn.num)),
+      skip: (values: FormContent): boolean =>
+        skipStep(getSupportedCC(data.situations), values.ccn?.selected?.num),
     },
     {
       component: StepResult,

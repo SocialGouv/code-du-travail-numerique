@@ -85,15 +85,12 @@ export function getSituationsFor(data, obj) {
   );
 }
 
-const isNotEmpty = (obj) => Object.keys(obj).length > 0;
+function findIddc(data, idcc) {
+  return data.find((situation) => situation.idcc === parseInt(idcc, 10));
+}
 
-export const isNotYetProcessed = (data, idcc) => {
-  const situtation = data.filter(
-    (situation) =>
-      isNotEmpty(situation.criteria) &&
-      parseInt(situation.idcc, 10) === parseInt(idcc, 10)
-  );
-  return !situtation.length;
+export const skipStep = (data, idcc) => {
+  return !idcc || !findIddc(data, idcc);
 };
 
 export function recapSituation(criteria) {
@@ -122,14 +119,18 @@ export const getFormProps = ({ key, criteria, pastQuestions }) =>
         .map(([key]) => key)
     );
 
+const isNotEmpty = (obj) => Object.keys(obj).length > 0;
+
 export const getSupportedCC = (data) => {
+  const situtation = data.filter((situation) => isNotEmpty(situation.criteria));
   const uniqueIDCC = [
-    ...new Map(data.map((item) => [item["idcc"], item])).values(),
+    ...new Map(situtation.map((item) => [item["idcc"], item])).values(),
   ];
+
   return uniqueIDCC.map((item) => {
     return {
       fullySupported: true,
-      idcc: parseInt(item.idcc),
+      idcc: parseInt(item.idcc, 10),
     };
   });
 };
