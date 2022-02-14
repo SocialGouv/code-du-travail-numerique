@@ -136,7 +136,9 @@ export function StepResult({ form }: WizardStepProps): JSX.Element {
   });
   const possibleSituations = filterSituations(initialSituations, criteria);
   if (idcc === 0 || possibleSituations.length === 0) {
-    return <NoResult idcc={idcc} ccn={ccn} legalRefs={[situationCdt]} />;
+    return (
+      <NoResult idcc={idcc} ccn={ccn?.selected} legalRefs={[situationCdt]} />
+    );
   }
 
   const [situation] = possibleSituations;
