@@ -2,10 +2,10 @@ import precariteData from "@cdt/data...prime-precarite/precarite.data.json";
 import heuresRecherchesEmploiData from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 import demissionData from "@cdt/data...simulateurs/preavis-demission.data.json";
 import licenciementData from "@cdt/data...simulateurs/preavis-licenciement.data.json";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { supportedCcn as retraiteData } from "@socialgouv/modeles-social";
 
 import { ConventionCollective } from "../../outils/common/type/WizardType";
-import { matopush } from "../../piwik";
 import { removeQueryParameters } from "..";
 import { MatomoAgreementEvent, MatomoBaseEvent, MatomoTrackUrl } from ".";
 

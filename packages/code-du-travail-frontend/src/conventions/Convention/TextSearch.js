@@ -6,11 +6,10 @@ import {
   theme,
   Title,
 } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import Link from "next/link";
 import React, { useCallback, useState } from "react";
 import styled from "styled-components";
-
-import { matopush } from "../../piwik";
 
 const { spacings } = theme;
 

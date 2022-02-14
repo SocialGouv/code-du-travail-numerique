@@ -5,7 +5,7 @@ import { Feedback } from "..";
 
 global.fetch = jest.fn().mockResolvedValue({ json: () => ({ error: false }) });
 
-jest.mock("../../../piwik", () => {
+jest.mock("@socialgouv/matomo-next", () => {
   let events = [];
   return {
     events,
@@ -15,7 +15,7 @@ jest.mock("../../../piwik", () => {
     matopush: (event) => events.push(event),
   };
 });
-const { events, flushEvents } = require("../../../piwik");
+const { events, flushEvents } = require("@socialgouv/matomo-next");
 
 afterEach(flushEvents);
 

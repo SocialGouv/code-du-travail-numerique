@@ -1,22 +1,11 @@
+import { push as matopush } from "@socialgouv/matomo-next";
 import { render } from "@testing-library/react";
 import React from "react";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
 
-import { matopush } from "../../../piwik";
 import { stepReducer } from "../../IndemniteLicenciement/stepReducer";
 import { Wizard } from "../Wizard";
-
-jest.mock("../../../piwik", () => {
-  let events = [];
-  return {
-    events,
-    flushEvents() {
-      events = [];
-    },
-    matopush: jest.fn().mockImplementation((event) => events.push(event)),
-  };
-});
 
 const FirstStep = () => <p>Premiere Etape</p>;
 FirstStep.validate = jest.fn();

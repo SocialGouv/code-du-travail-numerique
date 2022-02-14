@@ -1,7 +1,6 @@
+import { push as matopush } from "@socialgouv/matomo-next";
 import React, { createContext, useContext } from "react";
 import { v4 as generateUUID } from "uuid";
-
-import { matopush } from "../../../piwik";
 
 export type TrackingContext = {
   trackEvent: (

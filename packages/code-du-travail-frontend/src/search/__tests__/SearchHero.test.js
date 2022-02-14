@@ -8,10 +8,6 @@ jest.mock("../search.service.js", () => ({
   fetchSuggestResults: jest.fn(),
 }));
 
-jest.mock("../../piwik", () => ({
-  matopush: jest.fn(),
-}));
-
 const suggestions = ["foo", "foobar", "foo bar ?", "foo bazzz"];
 
 fetchSuggestResults.mockResolvedValue(suggestions);

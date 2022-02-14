@@ -13,10 +13,6 @@ jest.mock(
   { virtual: true }
 );
 
-jest.mock("../../piwik", () => ({
-  matopush: jest.fn(),
-}));
-
 describe("<ServiceRenseignement />", () => {
   it("should render suggestions", async () => {
     const { container, getByLabelText } = render(<ServiceRenseignement />);

@@ -1,8 +1,8 @@
+import { push as matopush } from "@socialgouv/matomo-next";
 import { fireEvent, render, waitFor } from "@testing-library/react";
 import React from "react";
 import { act } from "react-dom/test-utils";
 
-import { matopush } from "../../piwik";
 import { fetchSuggestResults } from "../search.service";
 import SearchBar from "../SearchBar";
 
@@ -10,10 +10,6 @@ jest.useFakeTimers();
 
 jest.mock("../search.service.js", () => ({
   fetchSuggestResults: jest.fn(),
-}));
-
-jest.mock("../../piwik", () => ({
-  matopush: jest.fn(),
 }));
 
 const q = "foo";

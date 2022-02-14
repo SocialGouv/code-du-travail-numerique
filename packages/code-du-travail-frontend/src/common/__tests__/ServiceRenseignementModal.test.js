@@ -4,10 +4,6 @@ import React from "react";
 
 import { ServiceRenseignementModal } from "../ServiceRenseignementModal";
 
-jest.mock("../../piwik", () => ({
-  matopush: jest.fn(),
-}));
-
 describe("<ServiceRenseignementModal />", () => {
   it("renders the given element", () => {
     const { getByText } = render(

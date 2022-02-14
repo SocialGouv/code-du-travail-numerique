@@ -10,7 +10,7 @@ import {
   MatomoRetirementEvent,
   MatomoTrackUrl,
 } from "../../lib/matomo";
-import { matopush } from "../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { PrevNextBar } from "./PrevNextBar";
 import { STEP_LIST_WIDTH, StepList } from "./StepList";
 import { Action, ActionName, SkipFn, State } from "./type/WizardType";

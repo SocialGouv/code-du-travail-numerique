@@ -6,7 +6,7 @@ import Search from "../";
 global.fetch = jest.fn();
 jest.useFakeTimers();
 
-jest.mock("../../../piwik", () => ({
+jest.mock("@socialgouv/matomo-next", () => ({
   matopush: jest.fn(),
 }));
 
