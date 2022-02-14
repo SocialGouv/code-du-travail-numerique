@@ -61,6 +61,7 @@ describe("EnterpriseSearch", () => {
   describe("no selected enterprise", () => {
     const dataWithoutSelectedEnterprise: Props = {
       onSelectAgreement,
+      supportedAgreements: [],
     };
 
     it("should render the mandatory question 'Nom de votre entreprise ou numéro Siret' and not mandatory 'Code postal ou ville'", () => {
@@ -110,6 +111,7 @@ describe("EnterpriseSearch", () => {
     const dataWithSelectedEnterpriseWithOneAgreement: Props = {
       onSelectAgreement,
       selectedEnterprise: selectedEnterpriseOneAgreement,
+      supportedAgreements: [],
     };
 
     it("should show the default agreement", () => {
@@ -194,6 +196,7 @@ describe("EnterpriseSearch", () => {
     const dataWithSelectedEnterpriseWithTwoAgreements: Props = {
       onSelectAgreement,
       selectedEnterprise: selectedEnterpriseTwoAgreements,
+      supportedAgreements: [],
     };
     it("should show the agreements selection", () => {
       const { getByText, queryByText } = render(
