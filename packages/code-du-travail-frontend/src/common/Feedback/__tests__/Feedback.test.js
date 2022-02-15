@@ -12,9 +12,10 @@ jest.mock("@socialgouv/matomo-next", () => {
     flushEvents() {
       events = [];
     },
-    matopush: (event) => events.push(event),
+    push: (event) => events.push(event),
   };
 });
+
 const { events, flushEvents } = require("@socialgouv/matomo-next");
 
 afterEach(flushEvents);

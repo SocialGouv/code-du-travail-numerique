@@ -12,6 +12,8 @@ jest.mock("../search.service.js", () => ({
   fetchSuggestResults: jest.fn(),
 }));
 
+jest.mock("@socialgouv/matomo-next");
+
 const q = "foo";
 const suggestions = ["foo", "foobar", "foo bar ?", "foo bazzz"];
 

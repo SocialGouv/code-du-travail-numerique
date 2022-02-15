@@ -8,6 +8,12 @@ jest.mock("next/link", () => {
   return ({ children }) => children;
 });
 
+jest.mock("@socialgouv/matomo-next", () => {
+  return {
+    push: jest.fn(),
+  };
+});
+
 const items = [
   {
     slug: "fiche.sp.url",

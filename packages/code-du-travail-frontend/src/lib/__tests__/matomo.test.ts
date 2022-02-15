@@ -8,9 +8,11 @@ import {
   trackQuestion,
 } from "../matomo";
 
-jest.mock("@socialgouv/matomo-next", () => ({
-  matopush: jest.fn(),
-}));
+jest.mock("@socialgouv/matomo-next", () => {
+  return {
+    push: jest.fn(),
+  };
+});
 
 describe("Matomo", () => {
   beforeEach(() => {

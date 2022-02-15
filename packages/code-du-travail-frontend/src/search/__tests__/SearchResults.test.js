@@ -4,6 +4,12 @@ import React from "react";
 
 import { SearchResults } from "../SearchResults";
 
+jest.mock("@socialgouv/matomo-next", () => {
+  return {
+    push: jest.fn(),
+  };
+});
+
 const items = {
   articles: [
     {

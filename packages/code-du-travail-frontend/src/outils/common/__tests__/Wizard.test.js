@@ -10,6 +10,12 @@ import { Wizard } from "../Wizard";
 const FirstStep = () => <p>Premiere Etape</p>;
 FirstStep.validate = jest.fn();
 
+jest.mock("@socialgouv/matomo-next", () => {
+  return {
+    push: jest.fn(),
+  };
+});
+
 const SecondStep = () => (
   <>
     <p>Deuxieme Etape</p>

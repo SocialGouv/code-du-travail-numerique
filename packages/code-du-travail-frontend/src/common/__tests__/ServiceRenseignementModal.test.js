@@ -4,6 +4,12 @@ import React from "react";
 
 import { ServiceRenseignementModal } from "../ServiceRenseignementModal";
 
+jest.mock("@socialgouv/matomo-next", () => {
+  return {
+    push: jest.fn(),
+  };
+});
+
 describe("<ServiceRenseignementModal />", () => {
   it("renders the given element", () => {
     const { getByText } = render(
