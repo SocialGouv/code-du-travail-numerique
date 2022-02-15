@@ -3,7 +3,7 @@ import React from "react";
 import Html from "../../common/Html";
 import { MatomoActionEvent, trackQuestion } from "../../lib/matomo";
 import { Rule, RuleType } from "../publicodes";
-import { reverseValues } from "../publicodes/Utils";
+import { reverseValues } from "../publicodes/old/Utils";
 import { SelectQuestion } from "./SelectQuestion";
 import { TextQuestion } from "./TextQuestion";
 import { YesNoPubliQuestion } from "./YesNoPubliQuestion";

@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import React, { useEffect } from "react";
 
-import { usePublicodes } from "../../publicodes";
-import { mapToPublicodesSituationForPreavisDeLicenciement } from "../../publicodes/Utils";
-import { getSalaireRef } from "../indemnite";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
+import { usePublicodes } from "../../publicodes";
+import { mapToPublicodesSituationForPreavisDeLicenciement } from "../../publicodes/old/Utils";
+import { getSalaireRef } from "../indemnite";
 
 function IndemniteLegale(formValues) {
   const publicodesContext = usePublicodes();

@@ -1,5 +1,5 @@
-import { PublicodesUnit } from "../index";
-import { convertDaysIntoBetterUnit } from "../Utils";
+import { PublicodesUnit } from "../../types/preavis-retraite";
+import { convertDaysIntoBetterUnit } from "..";
 
 describe("Testing the transformation of the unit from publicodes (in days) into a better unit (weeks or months)", () => {
   it.each`
