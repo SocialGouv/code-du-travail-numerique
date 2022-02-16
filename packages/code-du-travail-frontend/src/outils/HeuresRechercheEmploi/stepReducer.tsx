@@ -1,7 +1,13 @@
 import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 
-import { StepInfoCCnOptionnal } from "../common/InfosCCn";
-import { isNotYetProcessed } from "../common/situations.utils";
+import { skipStep } from "../common/situations.utils";
+import {
+  Action,
+  ActionName,
+  FormContent,
+  State,
+} from "../common/type/WizardType";
+import { AgreementStep } from "./steps/AgreementStep";
 import { StepInformations } from "./steps/Informations";
 import { StepIntro } from "./steps/Introduction";
 import { StepResult } from "./steps/Result";
@@ -16,7 +22,7 @@ export const initialState = {
       name: "intro",
     },
     {
-      component: StepInfoCCnOptionnal,
+      component: AgreementStep,
       label: "Convention collective",
       name: "info_cc",
     },
@@ -44,39 +50,35 @@ export const initialState = {
   ],
 };
 
-function ccnNotProcessed(values) {
-  return (
-    !values.ccn ||
-    (values.ccn && isNotYetProcessed(data.situations, values.ccn.num))
-  );
-}
-function skipTypeRupture(values) {
+const ccnNotProcessed = (values: FormContent): boolean =>
+  skipStep(data.situations, values.ccn?.selected?.num);
+
+function skipTypeRupture(values: FormContent): boolean {
   return (
     ccnNotProcessed(values) ||
-    data.situations.filter(({ idcc }) => idcc === values?.ccn.num).length <= 1
+    data.situations.filter(({ idcc }) => idcc === values?.ccn?.selected?.num)
+      .length <= 1
   );
 }
 
-function skipInformations(values) {
+function skipInformations(values: FormContent): boolean {
   return (
     ccnNotProcessed(values) ||
     data.situations.filter(
       ({ idcc, typeRupture }) =>
-        typeRupture === values?.typeRupture && idcc === values?.ccn.num
+        typeRupture === values?.typeRupture &&
+        idcc === values?.ccn?.selected?.num
     ).length <= 1
   );
 }
 
-export function stepReducer(state, { type, payload }) {
-  switch (type) {
-    case "reset": {
+export function stepReducer(state: State, action: Action): State {
+  switch (action.type) {
+    case ActionName.reset: {
       return { ...initialState };
     }
-    case "setStepIndex": {
-      return { stepIndex: payload, steps: state.steps };
+    case ActionName.setStepIndex: {
+      return { stepIndex: action.payload, steps: state.steps };
     }
-    default:
-      console.warn("action unknow", type);
-      return state;
   }
 }

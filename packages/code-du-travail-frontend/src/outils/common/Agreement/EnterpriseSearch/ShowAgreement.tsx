@@ -9,7 +9,7 @@ import { AgreementSupportInfo } from "../types";
 
 type Props = {
   agreement: Agreement;
-  supportedAgreements?: AgreementSupportInfo[];
+  supportedAgreements: AgreementSupportInfo[];
 };
 
 const ShowAgreement = ({

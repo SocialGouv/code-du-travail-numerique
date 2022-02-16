@@ -48,4 +48,7 @@ export type FormContent = {
   seniorityMaximum?: boolean;
   seniorityValue?: string;
   infos?: Record<string, string>;
+  criteria?: Record<string, string>;
+  cdt?: Record<string, string>;
+  disabledWorker?: boolean;
 } & Record<string, unknown>;

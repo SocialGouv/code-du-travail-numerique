@@ -1,5 +1,6 @@
+import { Action, ActionName, State } from "../common/type/WizardType";
+import { AgreementStep } from "./steps/AgreementStep";
 import { StepIndemnite } from "./steps/Indemnite";
-import { StepInfoCCn } from "./steps/InfosCCn";
 import { StepInfosGenerales } from "./steps/InfosGenerales";
 import { StepIntro } from "./steps/Introduction";
 import { StepRemuneration } from "./steps/Remuneration";
@@ -13,7 +14,7 @@ export const initialState = {
       name: "intro",
     },
     {
-      component: StepInfoCCn,
+      component: AgreementStep,
       label: "Convention collective",
       name: "info_cc",
     },
@@ -37,16 +38,13 @@ export const initialState = {
   ],
 };
 
-export function stepReducer(state, { type, payload }) {
-  switch (type) {
-    case "reset": {
+export function stepReducer(state: State, action: Action): State {
+  switch (action.type) {
+    case ActionName.reset: {
       return { ...initialState };
     }
-    case "setStepIndex": {
-      return { stepIndex: payload, steps: state.steps };
+    case ActionName.setStepIndex: {
+      return { stepIndex: action.payload, steps: state.steps };
     }
-    default:
-      console.warn("action unknow", type);
-      return state;
   }
 }

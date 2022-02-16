@@ -50,8 +50,5 @@ export function stepReducer(state: State, action: Action): State {
     case ActionName.setStepIndex: {
       return { stepIndex: action.payload, steps: state.steps };
     }
-    default:
-      console.warn("action unknown", action);
-      return state;
   }
 }

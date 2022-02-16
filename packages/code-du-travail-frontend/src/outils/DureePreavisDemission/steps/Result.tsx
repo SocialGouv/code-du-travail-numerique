@@ -16,9 +16,21 @@ import {
   SectionTitle,
   SmallText,
 } from "../../common/stepStyles";
+import { WizardStepProps } from "../../common/type/WizardType";
 import { formatRefs } from "../../publicodes/Utils";
 
 function DisclaimerBox() {
+  return (
+    <Disclaimer title={"Attention il peut exister une autre durée de préavis"}>
+      <p>
+        L’existence ou la durée du préavis de démission peut être prévue par un
+        accord d’entreprise ou à défaut, par un usage dans l’entreprise.
+      </p>
+    </Disclaimer>
+  );
+}
+
+function DisclaimerBoxNoCC() {
   return (
     <Disclaimer title={"Attention il peut exister une autre durée de préavis"}>
       <p>
@@ -30,10 +42,10 @@ function DisclaimerBox() {
   );
 }
 
-function StepResult({ form }) {
+function StepResult({ form }: WizardStepProps): JSX.Element {
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
-  const idcc = ccn ? ccn.num : 0;
+  const idcc = ccn?.selected ? ccn.selected.num : 0;
 
   const initialSituations = getSituationsFor(data.situations, { idcc });
   const possibleSituations = filterSituations(initialSituations, criteria);
@@ -44,8 +56,8 @@ function StepResult({ form }) {
       "https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174",
   };
 
-  // No ccn selected or UunhandledCC
-  if (idcc === 0 || possibleSituations.length === 0) {
+  // No ccn selected or UnhandledCC
+  if (!ccn?.selected || possibleSituations.length === 0) {
     let reason =
       "la convention collective n’a pas encore été traitée par nos services.";
     if (idcc === 0) {
@@ -61,8 +73,10 @@ function StepResult({ form }) {
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.
         </p>
-        {possibleSituations.length === 0 && <CCSearchInfo ccn={ccn} />}
-        <DisclaimerBox />
+        {possibleSituations.length === 0 && ccn?.selected && (
+          <CCSearchInfo ccn={ccn.selected} />
+        )}
+        <DisclaimerBoxNoCC />
         <PubliReferences references={formatRefs([refLegal])} />
       </>
     );
@@ -72,34 +86,39 @@ function StepResult({ form }) {
   return (
     <>
       <SectionTitle>Durée du préavis</SectionTitle>
-      <p>
-        À partir des éléments que vous avez saisis, la durée du préavis de
-        démission est estimée à&nbsp;:{" "}
-        <HighlightResult>{situation.answer}</HighlightResult>
-        {situation.note && <sup>*</sup>}.
-      </p>
+      {situation.answer ? (
+        <p>
+          À partir des éléments que vous avez saisis, la durée du préavis de
+          démission est estimée à&nbsp;:&nbsp;
+          <HighlightResult>{situation.answer}</HighlightResult>
+          {situation.note && <sup>*</sup>}.
+        </p>
+      ) : (
+        <p>
+          À partir des éléments que vous avez saisis :{" "}
+          <HighlightResult>il n’y a pas de préavis à effectuer</HighlightResult>
+          .
+        </p>
+      )}
       {parseInt(situation.answer3, 10) === 0 && (
         <p>
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.
         </p>
       )}
-
       {situation.note && (
         <SmallText>
           <sup>*</sup> {situation.note}
         </SmallText>
       )}
-
       <ShowDetails>
         <SectionTitle>Éléments saisis</SectionTitle>
         {recapSituation({
-          "Convention collective": `${ccn.title} (${idcc})`,
+          "Convention collective": `${ccn.selected.title} (${idcc})`,
           ...situation.criteria,
         })}
         <PubliReferences references={formatRefs([refLegal, situation])} />
       </ShowDetails>
-
       <DisclaimerBox />
     </>
   );

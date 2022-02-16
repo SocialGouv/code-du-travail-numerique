@@ -16,7 +16,7 @@ import ShowAgreement from "./ShowAgreement";
 import ShowAgreements from "./ShowAgreements";
 
 export type Props = {
-  supportedAgreements?: AgreementSupportInfo[];
+  supportedAgreements: AgreementSupportInfo[];
   selectedEnterprise?: Enterprise;
   selectedAgreement?: Agreement;
   onSelectAgreement: OnSelectAgreementFn;
@@ -46,7 +46,7 @@ const EnterpriseSearch = ({
             onSelectAgreement(null);
           }}
         />
-        {enterprise.conventions.length == 1 ? (
+        {enterprise.conventions.length === 1 ? (
           <ShowAgreement
             agreement={enterprise.conventions[0]}
             supportedAgreements={supportedAgreements}

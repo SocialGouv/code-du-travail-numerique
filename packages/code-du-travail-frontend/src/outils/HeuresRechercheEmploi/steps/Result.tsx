@@ -12,6 +12,7 @@ import {
   recapSituation,
 } from "../../common/situations.utils";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
+import { WizardStepProps } from "../../common/type/WizardType";
 import { formatRefs } from "../../publicodes/Utils";
 
 function Duration({ situation }) {
@@ -121,10 +122,10 @@ function NoResult({ idcc, ccn, legalRefs }) {
   );
 }
 
-export function StepResult({ form }) {
+export function StepResult({ form }: WizardStepProps): JSX.Element {
   const { values } = form.getState();
   const { ccn, criteria = {}, typeRupture } = values;
-  const idcc = ccn ? ccn.num : 0;
+  const idcc = ccn?.selected ? ccn.selected.num : 0;
 
   const [situationCdt] = getSituationsFor(data.situations, {
     idcc: 0,
@@ -136,12 +137,7 @@ export function StepResult({ form }) {
   const possibleSituations = filterSituations(initialSituations, criteria);
   if (idcc === 0 || possibleSituations.length === 0) {
     return (
-      <NoResult
-        idcc={idcc}
-        ccn={ccn}
-        legalRefs={[situationCdt]}
-        typeRupture={typeRupture}
-      />
+      <NoResult idcc={idcc} ccn={ccn?.selected} legalRefs={[situationCdt]} />
     );
   }
 
@@ -155,8 +151,8 @@ export function StepResult({ form }) {
       <ShowDetails>
         <SectionTitle>Éléments saisis</SectionTitle>
         {recapSituation({
-          ...(ccn && {
-            "Convention collective": `${ccn.shortTitle} (IDCC ${idcc})`,
+          ...(ccn?.selected && {
+            "Convention collective": `${ccn.selected.shortTitle} (IDCC ${idcc})`,
           }),
           "Type de rupture du contrat de travail": typeRupture,
           ...situation.criteria,

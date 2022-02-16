@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
 import { Agreement } from "../../../conventions/Search/api/type";
 import { useLocalStorage } from "../../../lib/useLocalStorage";
+import { OnUserAction } from "../../ConventionCollective/types";
 import { AgreementRoute, FormContent } from "../type/WizardType";
 import { AgreementSearch } from "./AgreementSearch";
 import { EnterpriseSearch } from "./EnterpriseSearch";
@@ -13,7 +14,7 @@ import { AgreementSupportInfo, OnSelectAgreementFn } from "./types";
 
 export type Props = {
   form: FormApi<FormContent>;
-  supportedAgreements?: AgreementSupportInfo[];
+  supportedAgreements: AgreementSupportInfo[];
   onChange?: (oldValue: Agreement | null, newValue: Agreement | null) => void;
   defaultSelectedAgreement?: Agreement;
 };
@@ -47,7 +48,7 @@ const SelectAgreement = ({
     [storedConvention, setConvention, onChange]
   );
 
-  const onUserAction = () => {
+  const onUserAction: OnUserAction = (action, extra) => {
     // TODO handle event
   };
 
@@ -87,6 +88,7 @@ const SelectAgreement = ({
         <EnterpriseSearch
           selectedEnterprise={enterprise}
           onSelectAgreement={onSelectAgreement}
+          supportedAgreements={supportedAgreements}
           onUserAction={onUserAction}
         />
       )}
