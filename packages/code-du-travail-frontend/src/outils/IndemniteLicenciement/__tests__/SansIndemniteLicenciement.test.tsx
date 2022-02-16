@@ -1,6 +1,11 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
+import { loadPublicodes } from "../../api/LoadPublicodes";
+import {
+  PublicodesProvider,
+  PublicodesSupportedSimulator,
+} from "../../publicodes";
 import SansIndemniteLicenciement from "../ccn/SansIndemniteLicenciement";
 
 describe("<SansIndemniteLicenciement />", () => {
@@ -28,7 +33,15 @@ describe("<SansIndemniteLicenciement />", () => {
         };
       },
     };
-    const { container } = render(<SansIndemniteLicenciement form={form} />);
+    const { container } = render(
+      <PublicodesProvider
+        rules={loadPublicodes("indemnite-licenciement")}
+        targetRule="contrat salarié . indemnité de licenciement"
+        simulator={PublicodesSupportedSimulator.IndemniteLicenciement}
+      >
+        <SansIndemniteLicenciement form={form} />
+      </PublicodesProvider>
+    );
     expect(container).toMatchSnapshot();
   });
 });

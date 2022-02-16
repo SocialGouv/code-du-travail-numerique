@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
 import {
-  mapToPublicodesSituationForPreavisDeLicenciement,
+  mapToPublicodesSituationForIndemniteLicenciement,
   usePublicodes,
 } from "../../publicodes";
 import { getSalaireRef } from "../indemnite";
@@ -32,7 +32,11 @@ function IndemniteLegale(formValues) {
   });
   useEffect(() => {
     publicodesContext.setSituation(
-      mapToPublicodesSituationForPreavisDeLicenciement(formValues, salaireRef)
+      mapToPublicodesSituationForIndemniteLicenciement(
+        formValues.formValues.ccn,
+        anciennete,
+        salaireRef
+      )
     );
     publicodesContext.execute("contrat salarié . indemnité de licenciement");
   }, [formValues]);
@@ -54,12 +58,12 @@ function IndemniteLegale(formValues) {
   );
 }
 
-IndemniteLegale.propTypes = {
-  indemnite: PropTypes.number.isRequired,
-  infoCalcul: PropTypes.shape({
-    formula: PropTypes.string.isRequired,
-    labels: PropTypes.object.isRequired,
-  }).isRequired,
-};
+// IndemniteLegale.propTypes = {
+//   indemnite: PropTypes.number.isRequired,
+//   infoCalcul: PropTypes.shape({
+//     formula: PropTypes.string.isRequired,
+//     labels: PropTypes.object.isRequired,
+//   }).isRequired,
+// };
 
 export { IndemniteLegale };
