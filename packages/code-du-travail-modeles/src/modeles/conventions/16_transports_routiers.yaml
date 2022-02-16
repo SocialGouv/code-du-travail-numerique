@@ -7,21 +7,6 @@ contrat salarié . convention collective . transports routiers:
     idcc: 16
     préavis-retraite: true
 
-
-#contrat salarié . convention collective . transports routiers . salaire de ref:
-#  titre: salaires
-#  question: Salaire mensuel brut ?
-#  description: Prendre en compte les primes et avantages en nature..
-#  cdtn:
-#    type: salaire-mensuel
-
-#contrat salarié . convention collective . transports routiers . salaire de ref . 1:
-#  titre: salaires
-#  question: Salaire mensuel brut ?
-#  description: Prendre en compte les primes et avantages en nature..
-#  cdtn:
-#    type: salaire-mensuel
-
 contrat salarié . convention collective . transports routiers . catégorie professionnelle:
   titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?

@@ -10,8 +10,7 @@ export function getReferences(engine: Engine): References[] {
     .filter(
       (rule) =>
         rule.rawNode.références &&
-        engine.evaluate(rule.dottedName).nodeValue !== false &&
-        engine.evaluate(rule.dottedName).nodeValue !== null
+        engine.evaluate(rule.dottedName).nodeValue !== false
     )
     .flatMap(({ rawNode }) => {
       if (rawNode.références) {
@@ -21,6 +20,28 @@ export function getReferences(engine: Engine): References[] {
             url: value,
           };
         });
+      }
+      return [];
+    });
+}
+
+export function getReferencesIndemnite(engine: Engine): any[] {
+  return Object.values(engine.getParsedRules())
+    .filter(
+      (rule: any) =>
+        rule.rawNode["références-indemnité"] &&
+        engine.evaluate(rule.dottedName).nodeValue !== false
+    )
+    .flatMap(({ rawNode }: any) => {
+      if (rawNode["références-indemnité"]) {
+        return Object.entries(rawNode["références-indemnité"]).map(
+          ([key, value]) => {
+            return {
+              article: key,
+              url: value,
+            };
+          }
+        );
       }
       return [];
     });

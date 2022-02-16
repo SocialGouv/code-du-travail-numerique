@@ -16,7 +16,7 @@ describe("Indemnité légale de licenciement", () => {
     ({ seniority, salary, expectedCompensation }) => {
       const result = engine
         .setSituation({
-          "contrat salarié . ancienneté total en mois": seniority,
+          "contrat salarié . ancienneté total": seniority,
           "contrat salarié . convention collective": "''",
           "contrat salarié . salaire de référence": salary,
           "contrat salarié . travailleur handicapé": "non",
