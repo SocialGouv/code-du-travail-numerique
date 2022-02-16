@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
 import { Agreement } from "../../../conventions/Search/api/type";
 import { useLocalStorage } from "../../../lib/useLocalStorage";
+import { OnUserAction } from "../../ConventionCollective/types";
 import { AgreementRoute, FormContent } from "../type/WizardType";
 import { AgreementSearch } from "./AgreementSearch";
 import { EnterpriseSearch } from "./EnterpriseSearch";
@@ -47,6 +48,10 @@ const SelectAgreement = ({
     [storedConvention, setConvention, onChange]
   );
 
+  const onUserAction: OnUserAction = (action, extra) => {
+    // TODO handle event
+  };
+
   useEffect(() => {
     form.batch(() => {
       form.change(AGREEMENT_NAME, storedConvention);
@@ -76,6 +81,7 @@ const SelectAgreement = ({
           supportedAgreements={supportedAgreements}
           selectedAgreement={values.ccn.selected}
           onSelectAgreement={onSelectAgreement}
+          onUserAction={onUserAction}
         />
       )}
       {values.ccn?.route === "enterprise" && (
@@ -83,6 +89,7 @@ const SelectAgreement = ({
           selectedEnterprise={enterprise}
           onSelectAgreement={onSelectAgreement}
           supportedAgreements={supportedAgreements}
+          onUserAction={onUserAction}
         />
       )}
     </>

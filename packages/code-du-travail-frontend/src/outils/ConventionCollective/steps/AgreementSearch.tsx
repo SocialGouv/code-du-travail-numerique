@@ -18,30 +18,31 @@ import { AgreementLink } from "../agreement/AgreementLink";
 import { SearchAgreement } from "../agreement/SearchAgreement";
 import { HelpModal } from "../common/Modal";
 import { ListItem, ResultList } from "../common/ResultList";
-import { useTrackingContext } from "../common/TrackingContext";
+import { TrackingProps, UserAction } from "../types";
 
 type AgreementSearchStepProps = {
   embeddedForm: boolean;
   onSelectAgreement: (agreement) => void;
   onBackClick?: () => void;
-};
+} & TrackingProps;
 
 const AgreementSearchStep = ({
   embeddedForm,
   onBackClick,
   onSelectAgreement,
+  onUserAction,
 }: AgreementSearchStepProps): JSX.Element => {
   const refInput = useRef<HTMLFormElement>();
-  const { trackEvent, title, uuid } = useTrackingContext();
 
   function openModalHandler(openModal: () => void) {
-    trackEvent("cc_search_help", "click_cc_search_help_p1", title, uuid);
+    onUserAction(UserAction.OpenAgreementHelp);
     openModal();
   }
 
   return (
     <>
       <SearchAgreement
+        onUserAction={onUserAction}
         embeddedForm={embeddedForm}
         inputRef={refInput as MutableRefObject<HTMLFormElement>}
         renderResults={(state, query) => {

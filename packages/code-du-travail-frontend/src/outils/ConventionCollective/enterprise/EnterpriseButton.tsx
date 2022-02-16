@@ -5,20 +5,21 @@ import styled from "styled-components";
 import Html from "../../../common/Html";
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
 import { ResultItem } from "../common/ResultList";
-import { useTrackingContext } from "../common/TrackingContext";
+import { TrackingProps, UserAction } from "../types";
 
 type CompagnyItemProps = {
   enterprise: Enterprise;
   isFirst: boolean;
   showAddress: boolean;
   onClick: (enterprise: Enterprise) => void;
-};
+} & TrackingProps;
 
 export function EnterpriseButton({
   enterprise,
   isFirst,
   showAddress,
   onClick,
+  onUserAction,
 }: CompagnyItemProps): JSX.Element {
   const {
     label,
@@ -31,15 +32,8 @@ export function EnterpriseButton({
     firstMatchingEtablissement,
   } = enterprise;
 
-  const { trackEvent, title, uuid } = useTrackingContext();
-
   const clickHandler = () => {
-    trackEvent(
-      "enterprise_select",
-      title,
-      JSON.stringify({ label, siren }),
-      uuid
-    );
+    onUserAction(UserAction.SelectEnterprise, { label, siren });
     onClick(enterprise);
   };
   const showTitleWithHighlight = label === simpleLabel;

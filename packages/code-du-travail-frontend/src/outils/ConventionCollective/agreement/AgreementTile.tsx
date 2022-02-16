@@ -9,17 +9,15 @@ import Link from "next/link";
 import React from "react";
 
 import type { Agreement } from "../../../conventions/Search/api/type";
-import { useTrackingContext } from "../common/TrackingContext";
+import { TrackingProps, UserAction } from "../types";
 
 type Props = {
   agreement: Agreement;
-};
+} & TrackingProps;
 
-export function AgreementTile({ agreement }: Props): JSX.Element {
-  const { trackEvent, title, uuid } = useTrackingContext();
-
+export function AgreementTile({ agreement, onUserAction }: Props): JSX.Element {
   const clickHandler = () => {
-    trackEvent("cc_select_p2", title, `idcc${agreement.num.toString()}`, uuid);
+    onUserAction(UserAction.SelectAgreement, `idcc${agreement.num.toString()}`);
   };
   return (
     <Link href={`/${getRouteBySource(SOURCES.CCN)}/${agreement.slug}`} passHref>

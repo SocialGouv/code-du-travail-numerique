@@ -11,6 +11,10 @@ const callback: (agreement: Agreement | null) => void = () => {
 };
 const onSelectAgreement = jest.fn(callback);
 
+const onUserAction = () => {
+  /* stub */
+};
+
 const selectedAgreement: Agreement = {
   id: "KALICONT000044594539",
   num: 3239,
@@ -21,6 +25,7 @@ const selectedAgreement: Agreement = {
 
 const dataWithoutSelectedAgreement: Props = {
   onSelectAgreement,
+  onUserAction,
   supportedAgreements: [],
 };
 

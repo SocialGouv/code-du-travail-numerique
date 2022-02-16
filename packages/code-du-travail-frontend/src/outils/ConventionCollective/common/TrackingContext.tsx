@@ -3,13 +3,15 @@ import { v4 as generateUUID } from "uuid";
 
 import { matopush } from "../../../piwik";
 
+export type TrackEventFn = (
+  category: string,
+  action: string,
+  name?: string,
+  value?: string
+) => void;
+
 export type TrackingContext = {
-  trackEvent: (
-    category: string,
-    action: string,
-    name?: string,
-    value?: string
-  ) => void;
+  trackEvent: TrackEventFn;
   uuid: string;
   title: string;
 };
