@@ -2,13 +2,15 @@ import debounce from "debounce-promise";
 import memoizee from "memoizee";
 import getConfig from "next/config";
 
+import { Agreement } from "./type";
+
 export interface ApiEnterpriseData {
   entreprises: Enterprise[];
 }
 
 export interface Enterprise {
   activitePrincipale?: string;
-  conventions: AgreementData[];
+  conventions: Agreement[];
   etablissements: number;
   highlightLabel: string;
   label: string;
@@ -17,21 +19,6 @@ export interface Enterprise {
   siren: string;
   address?: string;
   firstMatchingEtablissement?: MatchingEtablissement;
-}
-
-/**
- * Agreement type from @socialgouv/kali-data/data/index.json
- */
-export interface AgreementData {
-  num: number;
-  shortTitle: string;
-  etat?: string;
-  id?: string;
-  mtime?: number;
-  texte_de_base?: string;
-  url?: string;
-  title?: string;
-  slug?: string;
 }
 
 export interface MatchingEtablissement {

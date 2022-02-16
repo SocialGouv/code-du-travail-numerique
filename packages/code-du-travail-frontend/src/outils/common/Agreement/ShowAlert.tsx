@@ -1,7 +1,7 @@
 import { Alert, Paragraph, Text } from "@socialgouv/cdtn-ui";
 import React from "react";
 
-import { AgreementSupportInfo } from "../types";
+import type { AgreementSupportInfo } from "./types";
 
 type Props = {
   currentIdcc: number;

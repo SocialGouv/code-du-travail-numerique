@@ -8,11 +8,11 @@ import { Paragraph, Tile } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 
-import { AgreementData } from "../../../conventions/Search/api/enterprises.service";
+import type { Agreement } from "../../../conventions/Search/api/type";
 import { useTrackingContext } from "../common/TrackingContext";
 
 type Props = {
-  agreement: AgreementData;
+  agreement: Agreement;
 };
 
 export function AgreementTile({ agreement }: Props): JSX.Element {

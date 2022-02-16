@@ -4,7 +4,6 @@ import {
   Enterprise,
   searchEnterprises,
 } from "../../../conventions/Search/api/enterprises.service";
-import { useNavContext } from "../common/NavContext";
 import { createSuggesterHook, FetchReducerState } from "../common/Suggester";
 import { useTrackingContext } from "../common/TrackingContext";
 import { SearchEnterpriseInput } from "./SearchEnterpriseInput";
@@ -15,6 +14,8 @@ type Props = {
     params: SearchParams
   ) => JSX.Element;
   inputRef: ForwardedRef<HTMLDivElement>;
+  searchParams: SearchParams;
+  onSearchParamsChange: (params: SearchParams) => void;
 };
 
 export type SearchParams = {
@@ -25,9 +26,9 @@ export type SearchParams = {
 export function SearchEnterprise({
   renderResults,
   inputRef,
+  searchParams,
+  onSearchParamsChange,
 }: Props): JSX.Element {
-  const { searchParams, setSearchParams } = useNavContext();
-
   const trackingContext = useTrackingContext();
 
   const useEnterpriseSuggester = createSuggesterHook(
@@ -44,7 +45,7 @@ export function SearchEnterprise({
   const searchInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const name = event.target.name;
     const value = event.target.value;
-    setSearchParams({ ...searchParams, [name]: value });
+    onSearchParamsChange({ ...searchParams, [name]: value });
   };
 
   return (

@@ -16,6 +16,21 @@ describe("RouteSelection: Skip the agreement selection", () => {
       expect(getByText("(obligatoire)")).toBeInTheDocument();
     });
 
+    it("should show all routes", () => {
+      const { getByText } = render(
+        <EmbeddedInjectedForm Step={RouteSelection} />
+      );
+      expect(
+        getByText(/Je connais ma convention collective/)
+      ).toBeInTheDocument();
+      expect(
+        getByText(/Je ne connais pas ma convention collective/)
+      ).toBeInTheDocument();
+      expect(
+        getByText(/Je ne souhaite pas renseigner ma convention collective/)
+      ).toBeInTheDocument();
+    });
+
     it("should show an alert when submit without select an option", () => {
       const { getByText } = render(
         <EmbeddedInjectedForm Step={RouteSelection} />
@@ -44,6 +59,15 @@ describe("RouteSelection: Skip the agreement selection", () => {
         <EmbeddedInjectedForm Step={RouteSelection} />
       );
       getByText(/Je connais ma convention collective/).click();
+
+      expect(queryByText(/À noter/)).not.toBeInTheDocument();
+    });
+
+    it("should not show an alert when select i don't know my agreement", () => {
+      const { getByText, queryByText } = render(
+        <EmbeddedInjectedForm Step={RouteSelection} />
+      );
+      getByText(/Je ne connais pas ma convention collective/).click();
 
       expect(queryByText(/À noter/)).not.toBeInTheDocument();
     });
