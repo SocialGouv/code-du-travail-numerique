@@ -1,3 +1,4 @@
+import { MatomoSearchAgreementCategory } from "../../../lib";
 import { TrackEventFn } from "../common/TrackingContext";
 import { UserAction } from "../types";
 
@@ -10,28 +11,68 @@ const handleTrackEvent = (
 ): void => {
   switch (action) {
     case UserAction.OpenAgreementHelp:
-      trackEvent("cc_search_help", "click_cc_search_help_p1", title, uuid);
+      trackEvent(
+        MatomoSearchAgreementCategory.AGREEMENT_SEARCH_HELP,
+        "click_cc_search_help_p1",
+        title,
+        uuid
+      );
       break;
     case UserAction.OpenEnterpriseHelp:
-      trackEvent("cc_search_help", "click_cc_search_help_p2", title, uuid);
+      trackEvent(
+        MatomoSearchAgreementCategory.AGREEMENT_SEARCH_HELP,
+        "click_cc_search_help_p2",
+        title,
+        uuid
+      );
       break;
     case UserAction.SelectEnterprise:
-      trackEvent("enterprise_select", title, JSON.stringify(extra), uuid);
+      trackEvent(
+        MatomoSearchAgreementCategory.ENTERPRISE_SELECT,
+        title,
+        JSON.stringify(extra),
+        uuid
+      );
       break;
     case UserAction.SelectAgreement:
-      trackEvent("cc_select_p2", title, extra as string, uuid);
+      trackEvent(
+        MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
+        title,
+        extra as string,
+        uuid
+      );
       break;
     case UserAction.SearchEnterprise:
-      trackEvent("enterprise_search", title, JSON.stringify(extra), uuid);
+      trackEvent(
+        MatomoSearchAgreementCategory.ENTERPRISE_SEARCH,
+        title,
+        JSON.stringify(extra),
+        uuid
+      );
       break;
     case UserAction.SearchAgreement:
-      trackEvent("cc_search", title, JSON.stringify(extra), uuid);
+      trackEvent(
+        MatomoSearchAgreementCategory.AGREEMENT_SEARCH,
+        title,
+        JSON.stringify(extra),
+        uuid
+      );
       break;
     case UserAction.SelectAgreementRoute:
-      trackEvent("cc_search_type_of_users", "click_p1", title, uuid);
+      trackEvent(
+        MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+        "click_p1",
+        title,
+        uuid
+      );
       break;
     case UserAction.SelectEnterpriseRoute:
-      trackEvent("cc_search_type_of_users", "click_p2", title, uuid);
+      trackEvent(
+        MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+        "click_p2",
+        title,
+        uuid
+      );
       break;
   }
 };

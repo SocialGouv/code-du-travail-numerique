@@ -15,7 +15,7 @@ const callback: (
 };
 const onSelectAgreement = jest.fn(callback);
 const onUserAction = () => {
-  /* stub */
+  /* dummy */
 };
 
 const agreement1: Agreement = {
