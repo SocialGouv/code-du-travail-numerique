@@ -6,10 +6,13 @@ import {
   SectionTitle,
   SmallText,
 } from "../../../common/stepStyles";
-import { PublicodesContextInterface } from "../../../publicodes";
+import {
+  PublicodesContextType,
+  PublicodesSupportedSimulator,
+} from "../../../publicodes";
 
 type Props = {
-  publicodesContext: PublicodesContextInterface;
+  publicodesContext: PublicodesContextType;
 };
 
 const ShowResult: React.FC<Props> = ({ publicodesContext }) => {
@@ -28,33 +31,36 @@ const ShowResult: React.FC<Props> = ({ publicodesContext }) => {
   return (
     <>
       <SectionTitle>Préavis de {type} à la retraite</SectionTitle>
-      <p>
-        À partir des éléments que vous avez saisis
-        {publicodesContext.result.value > 0
-          ? `, la durée du préavis en cas de ${type} à la retraite est estimée à`
-          : ""}
-        &nbsp;:{" "}
-        <HighlightResult>
-          {agreementMaximumResult?.value &&
-          agreementMaximumResult?.value !== publicodesContext.result.value ? (
-            <>
-              entre&nbsp;{publicodesContext.result.value}&nbsp;
-              {publicodesContext.result.unit}&nbsp;et&nbsp;
-              {agreementMaximumResult?.value}&nbsp;
-              {agreementMaximumResult?.unit}
-            </>
-          ) : publicodesContext.result.value > 0 ? (
-            <>
-              {publicodesContext.result.value}
-              &nbsp;
-              {publicodesContext.result.unit}
-            </>
-          ) : (
-            <>il n’y a pas de préavis à effectuer</>
-          )}
-          {notifications.length > 0 ? <sup>*</sup> : ""}
-        </HighlightResult>
-      </p>
+      {publicodesContext.result.type ===
+        PublicodesSupportedSimulator.PreavisRetraite && (
+        <p>
+          À partir des éléments que vous avez saisis
+          {publicodesContext.result.value > 0
+            ? `, la durée du préavis en cas de ${type} à la retraite est estimée à`
+            : ""}
+          &nbsp;:{" "}
+          <HighlightResult>
+            {agreementMaximumResult?.value &&
+            agreementMaximumResult?.value !== publicodesContext.result.value ? (
+              <>
+                entre&nbsp;{publicodesContext.result.value}&nbsp;
+                {publicodesContext.result.unit}&nbsp;et&nbsp;
+                {agreementMaximumResult?.value}&nbsp;
+                {agreementMaximumResult?.unit}
+              </>
+            ) : publicodesContext.result.value > 0 ? (
+              <>
+                {publicodesContext.result.value}
+                &nbsp;
+                {publicodesContext.result.unit}
+              </>
+            ) : (
+              <>il n’y a pas de préavis à effectuer</>
+            )}
+            {notifications.length > 0 ? <sup>*</sup> : ""}
+          </HighlightResult>
+        </p>
+      )}
       {notifications.length > 0 && (
         <SmallText>
           {publicodesContext.getNotifications().map((notification) => (

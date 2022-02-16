@@ -1,3 +1,9 @@
+import { Evaluation, Unit } from "publicodes";
+
+import { PublicodesSupportedSimulator } from ".";
+
 export type PublicodesIndemniteLicenciementResult = {
-  value: number;
+  type: PublicodesSupportedSimulator.IndemniteLicenciement;
+  value: Evaluation;
+  unit?: Unit;
 };

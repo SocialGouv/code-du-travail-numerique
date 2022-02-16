@@ -16,7 +16,7 @@ import {
   SectionTitle,
   SmallText,
 } from "../../common/stepStyles";
-import { formatRefs } from "../../publicodes/Utils";
+import { formatRefs } from "../../publicodes";
 
 function DisclaimerBox() {
   return (

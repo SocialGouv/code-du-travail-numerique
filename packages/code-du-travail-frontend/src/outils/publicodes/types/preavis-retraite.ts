@@ -1,14 +1,17 @@
-export enum PublicodesUnit {
+import { PublicodesSupportedSimulator } from ".";
+
+export enum PublicodesConvertedUnit {
   DAY = "jour",
+  MONTH = "mois",
+  YEAR = "an",
   DAYS = "jours",
   WEEK = "semaine",
   WEEKS = "semaines",
-  MONTH = "mois",
-  EUROS = "€",
 }
 
 export type PublicodesPreavisRetraiteResult = {
+  type: PublicodesSupportedSimulator.PreavisRetraite;
   value: number;
-  unit: PublicodesUnit;
-  valueInDays?: number | undefined;
+  unit: PublicodesConvertedUnit;
+  valueInDays?: number;
 };

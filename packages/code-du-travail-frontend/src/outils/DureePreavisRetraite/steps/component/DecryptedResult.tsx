@@ -6,13 +6,14 @@ import React from "react";
 import { SectionTitle } from "../../../common/stepStyles";
 import { FormContent } from "../../../common/type/WizardType";
 import {
-  PublicodesContextInterface,
+  PublicodesContextType,
+  PublicodesPreavisRetraiteResult,
   PublicodesResult,
 } from "../../../publicodes";
 
 type Props = {
   data: FormContent;
-  publicodesContext: PublicodesContextInterface;
+  publicodesContext: PublicodesContextType;
 };
 
 const ShowResult: React.FC<{
@@ -89,9 +90,9 @@ type RootData = {
 
 export const createRootData = (
   data: Partial<FormContent>,
-  result: PublicodesResult,
-  legalResult: PublicodesResult,
-  agreementResult: PublicodesResult | null,
+  result: PublicodesPreavisRetraiteResult,
+  legalResult: PublicodesPreavisRetraiteResult,
+  agreementResult: PublicodesPreavisRetraiteResult | null,
   supportedCcn: AgreementInfo[]
 ): RootData => {
   let agreement: Agreement | null = null;
@@ -199,9 +200,9 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
 
   const rootData = createRootData(
     data,
-    publicodesContext.result,
-    legalResult,
-    agreementResult,
+    publicodesContext.result as PublicodesPreavisRetraiteResult,
+    legalResult as PublicodesPreavisRetraiteResult,
+    agreementResult as PublicodesPreavisRetraiteResult,
     supportedCcn
   );
   const description = getDescription(rootData);

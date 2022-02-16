@@ -3,8 +3,12 @@ import React, { useEffect } from "react";
 import PubliReferences from "../../common/PubliReferences";
 import ShowDetails from "../../common/ShowDetails";
 import { WizardStepProps } from "../../common/type/WizardType";
-import { usePublicodes } from "../../publicodes";
-import { mapToPublicodesSituationForPreavisDeRetraite } from "../../publicodes/Utils";
+import {
+  mapToPublicodesSituationForPreavisDeRetraite,
+  PublicodesPreavisRetraiteResult,
+  PublicodesSupportedSimulator,
+  usePublicodes,
+} from "../../publicodes";
 import DecryptedResult from "./component/DecryptedResult";
 import ShowResult from "./component/ShowResult";
 import { Situation } from "./component/Situation";
@@ -35,7 +39,12 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
         <PubliReferences references={publicodesContext.getReferences()} />
       </ShowDetails>
       <WarningResult
-        resultValueInDays={publicodesContext.result?.valueInDays}
+        resultValueInDays={
+          publicodesContext.result.type ===
+          PublicodesSupportedSimulator.PreavisRetraite
+            ? publicodesContext.result.valueInDays
+            : undefined
+        }
         type={
           formValues["contrat salarié - mise à la retraite"] === "oui"
             ? "mise"

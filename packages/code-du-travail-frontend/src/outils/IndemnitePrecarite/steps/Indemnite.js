@@ -11,7 +11,7 @@ import {
   getSituationsFor,
 } from "../../common/situations.utils";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
-import { formatRefs } from "../../publicodes/Utils";
+import { formatRefs } from "../../publicodes/";
 import DisclaimerBox from "../components/DisclaimerBox";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 import { getIndemnitePrecarite } from "../indemnite";

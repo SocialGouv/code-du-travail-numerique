@@ -40,10 +40,10 @@ export interface SituationElement {
 }
 
 export type PublicodesResult =
-  | PublicodesIndemniteLicenciementResult
-  | PublicodesPreavisRetraiteResult;
+  | PublicodesPreavisRetraiteResult
+  | PublicodesIndemniteLicenciementResult;
 
-export type PublicodesContext = {
+export type PublicodesContextType = {
   execute: (rule: string) => PublicodesResult;
   getNotifications: () => Notification[];
   getReferences: () => References[];
@@ -68,7 +68,16 @@ export type PublicodesProviderRule = {
   children: React.ReactNode;
   rules: any;
   targetRule: string;
+  simulator: PublicodesSupportedSimulator;
 };
+
+export enum PublicodesUnit {
+  DAY = "jour",
+  MONTH = "mois",
+  YEAR = "an",
+  EUROS = "€",
+  K_EUROS = "k/€",
+}
 
 export enum PublicodesSupportedSimulator {
   IndemniteLicenciement = "indemnite-licenciement",

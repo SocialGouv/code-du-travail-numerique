@@ -4,12 +4,15 @@ import { OnChange } from "react-final-form-listeners";
 
 import { Wizard } from "../common/Wizard";
 import {
+  PublicodesProvider,
+  PublicodesSupportedSimulator,
+} from "../publicodes";
+import {
   initialState,
   stepPrime,
   stepReducer,
   stepSalaires,
 } from "./stepReducer";
-import { PublicodesProvider } from "../publicodes";
 
 interface Props {
   icon: string;
@@ -54,6 +57,7 @@ const CalculateurIndemnite = ({
     <PublicodesProvider
       rules={publicodesRules}
       targetRule="contrat salarié . indemnité de licenciement"
+      simulator={PublicodesSupportedSimulator.IndemniteLicenciement}
     >
       <Wizard
         icon={icon}

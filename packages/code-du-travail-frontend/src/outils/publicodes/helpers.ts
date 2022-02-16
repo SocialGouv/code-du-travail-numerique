@@ -1,16 +1,14 @@
-import Engine from "publicodes";
+import Engine, { EvaluatedNode } from "publicodes";
 
-import { convertDaysIntoBetterUnit, SituationElement } from "..";
-import { PublicodesPreavisRetraiteResult } from "../types/preavis-retraite";
+import { SituationElement } from ".";
 
-export function handleExecutePreavisRetraite(
+export function handleExecute(
   engine: Engine,
   situation: SituationElement[],
   rule: string
-): PublicodesPreavisRetraiteResult {
+): EvaluatedNode {
   engine.setSituation(buildSituation(situation));
-  const result = engine.evaluate(rule);
-  return convertDaysIntoBetterUnit(result.nodeValue as unknown as string);
+  return engine.evaluate(rule);
 }
 
 export function newSituation(
@@ -20,7 +18,7 @@ export function newSituation(
   args: Record<string, string>
 ): any {
   // Situation is an array to keep the order of the answers
-  const currentSituation = situation;
+  const currentSituation = situation ?? [];
   const newSituation: SituationElement[] = [];
 
   // Update the current situation with new values
@@ -58,7 +56,7 @@ export function newSituation(
   };
 }
 
-export const buildSituation = (
+const buildSituation = (
   map: Array<SituationElement>
 ): Record<string, string> => {
   const situation: Record<string, string> = {};
@@ -68,7 +66,7 @@ export const buildSituation = (
   return situation;
 };
 
-export const buildMissingArgs = (
+const buildMissingArgs = (
   engine: Engine,
   missingArgs: Record<string, number>
 ): Array<any> => {
