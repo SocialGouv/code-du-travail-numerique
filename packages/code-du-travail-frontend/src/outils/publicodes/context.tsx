@@ -11,13 +11,8 @@ import {
   PublicodesSimulator,
 } from "./types";
 
-export function PublicodesContext<
-  T extends PublicodesResult
->(): Context<PublicodesContextType<T> | null> {
-  return createContext<PublicodesContextType<T> | null>(null);
-}
-
-const Provider = PublicodesContext().Provider;
+export const PublicodesContext =
+  createContext<PublicodesContextType<PublicodesResult> | null>(null);
 
 export const PublicodesProvider = ({
   children,
@@ -64,7 +59,7 @@ export const PublicodesProvider = ({
   };
 
   return (
-    <Provider
+    <PublicodesContext.Provider
       value={{
         execute,
         getNotifications: () => getNotifications(engine),
@@ -76,6 +71,6 @@ export const PublicodesProvider = ({
       }}
     >
       {children}
-    </Provider>
+    </PublicodesContext.Provider>
   );
 };
