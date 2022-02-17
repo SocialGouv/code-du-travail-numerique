@@ -22,7 +22,7 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "prebuild": "tsc",
+    "prebuild": "yarn clean && tsc",
     "test": "jest",
     "lint": "eslint \"./src/**/*.{js,ts}\"",
     "dev": "nodemon --exec 'npm run build' --watch 'src/**' --ext 'ts,yaml'",
