@@ -13,7 +13,7 @@ export type AgreementInfo = {
   preavisRetraite: boolean;
 };
 
-export function extractImplementedCc(engine: Engine): Partial<AgreementInfo>[] {
+export function extractSupportedCc(engine: Engine): Partial<AgreementInfo>[] {
   return Object.values(engine.getParsedRules())
     .flatMap((rule) => {
       const rawNode = rule.rawNode as RuleNodeIdcc;

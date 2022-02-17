@@ -1,4 +1,4 @@
-import { References } from "@socialgouv/modeles-social/bin/utils/GetReferences";
+import { References } from "@socialgouv/modeles-social/bin/utils";
 
 import { OldReference } from "../types";
 

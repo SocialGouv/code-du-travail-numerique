@@ -2,7 +2,7 @@ import Engine from "publicodes";
 
 import { getNotifications } from "../..";
 import { mergeModels } from "../../internal/merger";
-import { getReferences } from "../../utils/GetReferences";
+import { getReferences } from "../../utils";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,

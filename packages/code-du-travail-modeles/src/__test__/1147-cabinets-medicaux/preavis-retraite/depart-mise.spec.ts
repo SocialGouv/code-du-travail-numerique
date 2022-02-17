@@ -1,7 +1,7 @@
 import Engine from "publicodes";
 
 import { mergeModels } from "../../../internal/merger";
-import { getNotifications } from "../../../utils/GetNotifications";
+import { getNotifications } from "../../../utils";
 
 const engine = new Engine(mergeModels());
 describe("Mise à la retraite", () => {

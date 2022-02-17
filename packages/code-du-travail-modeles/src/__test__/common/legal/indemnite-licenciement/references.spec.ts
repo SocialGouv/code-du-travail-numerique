@@ -1,7 +1,7 @@
 import Engine from "publicodes";
 
+import { getReferences } from "../../../..";
 import { mergeModels } from "../../../../internal/merger";
-import { getReferencesIndemnite } from "../../../../utils/GetReferences";
 import { IndemniteLicenciementReferences } from "../../legal-references";
 
 const engine = new Engine(mergeModels());
@@ -15,12 +15,14 @@ describe("Vérification des références juridiques pour Indemnité légale de l
   `(
     "pour un employé avec une ancienneté de $seniority mois",
     ({ seniority, expectedReferences }) => {
-      const result = getReferencesIndemnite(
+      const result = getReferences(
         engine.setSituation({
           "contrat salarié . ancienneté": seniority,
           "contrat salarié . convention collective": "''",
           "contrat salarié . salaire de référence": 1000,
           "contrat salarié . travailleur handicapé": "non",
+          "indemnité de licenciement": "non",
+          "préavis de retraite": "oui",
         })
       );
 

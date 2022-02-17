@@ -1,30 +1,9 @@
 import Engine from "publicodes";
 
-import type { RuleNodeIdcc } from "../../internal/ExtractSupportedCc";
-import { extractImplementedCc } from "../../internal/ExtractSupportedCc";
+import type { RuleNodeIdcc } from "../../internal";
 import { mergeModels } from "../../internal/merger";
 
-const engine = new Engine(
-  mergeModels([
-    "industries_chimiques.yaml",
-    "industrie_pharmaceutique.yaml",
-    "metallurgie_ingenieurs_cadres.yaml",
-    "animation.yaml",
-  ])
-);
-
-test("Extract all supported CC from the YAML modeles", () => {
-  const result = extractImplementedCc(engine);
-
-  expect(result).toEqual(
-    expect.arrayContaining([
-      { idcc: 176, preavisRetraite: true },
-      { idcc: 44, preavisRetraite: true },
-      { idcc: 650, preavisRetraite: true },
-      { idcc: 1518, preavisRetraite: false },
-    ])
-  );
-});
+const engine = new Engine(mergeModels());
 
 test("Check all agreements have an cdtn with idcc property", () => {
   Object.values(engine.getParsedRules())

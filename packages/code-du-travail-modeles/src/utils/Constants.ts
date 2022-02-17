@@ -1,3 +1,3 @@
-import type { AgreementInfo } from "../internal/ExtractSupportedCc";
+import type { AgreementInfo } from "../internal";
 
 export const supportedCcn: AgreementInfo[] = [];

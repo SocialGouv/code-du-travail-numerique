@@ -1,0 +1,8 @@
+contrat salarié: oui
+
+contrat salarié . ancienneté:
+  titre: Ancienneté du salarié
+  question: Quel est votre ancienneté en mois ?
+  unité: mois
+  cdtn:
+    type: entier
