@@ -4,7 +4,8 @@ import fse from "fs-extra";
 import path from "path";
 import Engine from "publicodes";
 
-import { extractSupportedCc, mergeModels } from ".";
+import { extractSupportedCc } from "./extractSupportedCc";
+import { mergeModels } from "./merger";
 
 const inDir = path.resolve(__dirname, "../../bin");
 const outDir = path.resolve(__dirname, "../../lib");

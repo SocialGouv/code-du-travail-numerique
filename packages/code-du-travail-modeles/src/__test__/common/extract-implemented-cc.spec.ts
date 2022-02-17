@@ -1,6 +1,6 @@
 import Engine from "publicodes";
 
-import type { RuleNodeIdcc } from "../../internal";
+import type { RuleNodeIdcc } from "../../internal/extractSupportedCc";
 import { mergeModels } from "../../internal/merger";
 
 const engine = new Engine(mergeModels());
