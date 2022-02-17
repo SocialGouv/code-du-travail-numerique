@@ -1,5 +1,4 @@
 import { FormContent } from "../../common/type/WizardType";
-import { PublicodesSupportedSimulator } from "../types";
 import {
   PublicodesConvertedUnit,
   PublicodesPreavisRetraiteResult,
@@ -43,7 +42,6 @@ export const convertDaysIntoBetterUnit = (
     const parsedWeek = parsedDay / 7;
     const isWeek = parsedWeek === 1;
     return {
-      type: PublicodesSupportedSimulator.PreavisRetraite,
       unit: isWeek
         ? PublicodesConvertedUnit.WEEK
         : PublicodesConvertedUnit.WEEKS,
@@ -57,14 +55,12 @@ export const convertDaysIntoBetterUnit = (
   if (isConvertibleIntoMonth) {
     const parsedMonth = Math.round(parsedDay / (365 / 12));
     return {
-      type: PublicodesSupportedSimulator.PreavisRetraite,
       unit: PublicodesConvertedUnit.MONTH,
       value: parsedMonth,
       valueInDays: parsedDay,
     };
   }
   return {
-    type: PublicodesSupportedSimulator.PreavisRetraite,
     unit: isDay ? PublicodesConvertedUnit.DAY : PublicodesConvertedUnit.DAYS,
     value: parsedDay,
     valueInDays: parsedDay,

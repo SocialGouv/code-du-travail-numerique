@@ -6,7 +6,6 @@ import { WizardStepProps } from "../../common/type/WizardType";
 import {
   mapToPublicodesSituationForPreavisDeRetraite,
   PublicodesPreavisRetraiteResult,
-  PublicodesSupportedSimulator,
   usePublicodes,
 } from "../../publicodes";
 import DecryptedResult from "./component/DecryptedResult";
@@ -15,7 +14,7 @@ import { Situation } from "./component/Situation";
 import WarningResult from "./component/WarningResult";
 
 function ResultStep({ form }: WizardStepProps): JSX.Element {
-  const publicodesContext = usePublicodes();
+  const publicodesContext = usePublicodes<PublicodesPreavisRetraiteResult>();
   const formValues = form.getState().values;
 
   useEffect(() => {
@@ -26,25 +25,17 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
 
   return (
     <>
-      <ShowResult publicodesContext={publicodesContext} />
+      <ShowResult />
       <ShowDetails>
         <Situation
           content={formValues}
           elements={publicodesContext.situation}
         />
-        <DecryptedResult
-          data={formValues}
-          publicodesContext={publicodesContext}
-        />
+        <DecryptedResult data={formValues} />
         <PubliReferences references={publicodesContext.getReferences()} />
       </ShowDetails>
       <WarningResult
-        resultValueInDays={
-          publicodesContext.result.type ===
-          PublicodesSupportedSimulator.PreavisRetraite
-            ? publicodesContext.result.valueInDays
-            : undefined
-        }
+        resultValueInDays={publicodesContext.result.valueInDays}
         type={
           formValues["contrat salarié - mise à la retraite"] === "oui"
             ? "mise"

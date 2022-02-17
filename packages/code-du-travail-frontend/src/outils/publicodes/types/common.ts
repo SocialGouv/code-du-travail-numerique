@@ -43,11 +43,11 @@ export type PublicodesResult =
   | PublicodesPreavisRetraiteResult
   | PublicodesIndemniteLicenciementResult;
 
-export type PublicodesContextType = {
-  execute: (rule: string) => PublicodesResult;
+export type PublicodesContextType<T extends PublicodesResult> = {
+  execute: (rule: string) => T;
   getNotifications: () => Notification[];
   getReferences: () => References[];
-  result: PublicodesResult;
+  result: T;
   missingArgs: MissingArgs[];
   situation: SituationElement[];
   setSituation: (values: Record<string, string>) => void;
@@ -67,8 +67,7 @@ export type PublicodesData = {
 export type PublicodesProviderRule = {
   children: React.ReactNode;
   rules: any;
-  targetRule: string;
-  simulator: PublicodesSupportedSimulator;
+  simulator: PublicodesSimulator;
 };
 
 export enum PublicodesUnit {
@@ -79,7 +78,7 @@ export enum PublicodesUnit {
   K_EUROS = "k/€",
 }
 
-export enum PublicodesSupportedSimulator {
-  IndemniteLicenciement = "indemnite-licenciement",
-  PreavisRetraite = "preavis-retraite",
+export enum PublicodesSimulator {
+  INDEMNITE_LICENCIEMENT = "contrat salarié . indemnité de licenciement",
+  PREAVIS_RETRAITE = "contrat salarié . préavis de retraite en jours",
 }

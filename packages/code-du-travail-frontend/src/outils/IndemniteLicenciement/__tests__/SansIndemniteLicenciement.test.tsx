@@ -2,10 +2,7 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 import { loadPublicodes } from "../../api/LoadPublicodes";
-import {
-  PublicodesProvider,
-  PublicodesSupportedSimulator,
-} from "../../publicodes";
+import { PublicodesProvider, PublicodesSimulator } from "../../publicodes";
 import SansIndemniteLicenciement from "../ccn/SansIndemniteLicenciement";
 
 describe("<SansIndemniteLicenciement />", () => {
@@ -37,7 +34,7 @@ describe("<SansIndemniteLicenciement />", () => {
       <PublicodesProvider
         rules={loadPublicodes("indemnite-licenciement")}
         targetRule="contrat salarié . indemnité de licenciement"
-        simulator={PublicodesSupportedSimulator.IndemniteLicenciement}
+        simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
       >
         <SansIndemniteLicenciement form={form} />
       </PublicodesProvider>

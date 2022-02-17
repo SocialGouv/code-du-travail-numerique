@@ -3,10 +3,7 @@ import React from "react";
 import { Form } from "react-final-form";
 
 import { loadPublicodes } from "../../../api/LoadPublicodes";
-import {
-  PublicodesProvider,
-  PublicodesSupportedSimulator,
-} from "../../../publicodes";
+import { PublicodesProvider, PublicodesSimulator } from "../../../publicodes";
 import { StepIndemnite } from "../Indemnite";
 
 const initialValues = {
@@ -28,7 +25,7 @@ describe("<StepIndemnite />", () => {
           <PublicodesProvider
             rules={loadPublicodes("indemnite-licenciement")}
             targetRule="contrat salarié . indemnité de licenciement"
-            simulator={PublicodesSupportedSimulator.IndemniteLicenciement}
+            simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
           >
             <StepIndemnite form={form} />
           </PublicodesProvider>

@@ -7,15 +7,13 @@ import {
   SmallText,
 } from "../../../common/stepStyles";
 import {
-  PublicodesContextType,
-  PublicodesSupportedSimulator,
+  PublicodesPreavisRetraiteResult,
+  usePublicodes,
 } from "../../../publicodes";
 
-type Props = {
-  publicodesContext: PublicodesContextType;
-};
+const ShowResult: React.FC = () => {
+  const publicodesContext = usePublicodes<PublicodesPreavisRetraiteResult>();
 
-const ShowResult: React.FC<Props> = ({ publicodesContext }) => {
   const type =
     publicodesContext.situation.find(
       (item) => item.name === "contrat salarié - mise à la retraite"
@@ -31,36 +29,33 @@ const ShowResult: React.FC<Props> = ({ publicodesContext }) => {
   return (
     <>
       <SectionTitle>Préavis de {type} à la retraite</SectionTitle>
-      {publicodesContext.result.type ===
-        PublicodesSupportedSimulator.PreavisRetraite && (
-        <p>
-          À partir des éléments que vous avez saisis
-          {publicodesContext.result.value > 0
-            ? `, la durée du préavis en cas de ${type} à la retraite est estimée à`
-            : ""}
-          &nbsp;:{" "}
-          <HighlightResult>
-            {agreementMaximumResult?.value &&
-            agreementMaximumResult?.value !== publicodesContext.result.value ? (
-              <>
-                entre&nbsp;{publicodesContext.result.value}&nbsp;
-                {publicodesContext.result.unit}&nbsp;et&nbsp;
-                {agreementMaximumResult?.value}&nbsp;
-                {agreementMaximumResult?.unit}
-              </>
-            ) : publicodesContext.result.value > 0 ? (
-              <>
-                {publicodesContext.result.value}
-                &nbsp;
-                {publicodesContext.result.unit}
-              </>
-            ) : (
-              <>il n’y a pas de préavis à effectuer</>
-            )}
-            {notifications.length > 0 ? <sup>*</sup> : ""}
-          </HighlightResult>
-        </p>
-      )}
+      <p>
+        À partir des éléments que vous avez saisis
+        {publicodesContext.result.value > 0
+          ? `, la durée du préavis en cas de ${type} à la retraite est estimée à`
+          : ""}
+        &nbsp;:{" "}
+        <HighlightResult>
+          {agreementMaximumResult?.value &&
+          agreementMaximumResult?.value !== publicodesContext.result.value ? (
+            <>
+              entre&nbsp;{publicodesContext.result.value}&nbsp;
+              {publicodesContext.result.unit}&nbsp;et&nbsp;
+              {agreementMaximumResult?.value}&nbsp;
+              {agreementMaximumResult?.unit}
+            </>
+          ) : publicodesContext.result.value > 0 ? (
+            <>
+              {publicodesContext.result.value}
+              &nbsp;
+              {publicodesContext.result.unit}
+            </>
+          ) : (
+            <>il n’y a pas de préavis à effectuer</>
+          )}
+          {notifications.length > 0 ? <sup>*</sup> : ""}
+        </HighlightResult>
+      </p>
       {notifications.length > 0 && (
         <SmallText>
           {publicodesContext.getNotifications().map((notification) => (

@@ -6,14 +6,13 @@ import React from "react";
 import { SectionTitle } from "../../../common/stepStyles";
 import { FormContent } from "../../../common/type/WizardType";
 import {
-  PublicodesContextType,
   PublicodesPreavisRetraiteResult,
   PublicodesResult,
+  usePublicodes,
 } from "../../../publicodes";
 
 type Props = {
   data: FormContent;
-  publicodesContext: PublicodesContextType;
 };
 
 const ShowResult: React.FC<{
@@ -183,7 +182,8 @@ export const getDescription = (data: RootData): string | null => {
   }
 };
 
-const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
+const DecryptedResult: React.FC<Props> = ({ data }) => {
+  const publicodesContext = usePublicodes<PublicodesPreavisRetraiteResult>();
   const legalResult = publicodesContext.execute(
     "contrat salarié . préavis de retraite légale en jours"
   );
@@ -200,9 +200,9 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
 
   const rootData = createRootData(
     data,
-    publicodesContext.result as PublicodesPreavisRetraiteResult,
-    legalResult as PublicodesPreavisRetraiteResult,
-    agreementResult as PublicodesPreavisRetraiteResult,
+    publicodesContext.result,
+    legalResult,
+    agreementResult,
     supportedCcn
   );
   const description = getDescription(rootData);

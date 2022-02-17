@@ -1,5 +1,3 @@
-import { PublicodesSupportedSimulator } from ".";
-
 export enum PublicodesConvertedUnit {
   DAY = "jour",
   MONTH = "mois",
@@ -10,7 +8,6 @@ export enum PublicodesConvertedUnit {
 }
 
 export type PublicodesPreavisRetraiteResult = {
-  type: PublicodesSupportedSimulator.PreavisRetraite;
   value: number;
   unit: PublicodesConvertedUnit;
   valueInDays?: number;

@@ -1,4 +1,3 @@
-import { PublicodesSupportedSimulator } from "../..";
 import { PublicodesConvertedUnit } from "../../types/preavis-retraite";
 import { convertDaysIntoBetterUnit } from "..";
 
@@ -27,7 +26,6 @@ describe("Testing the transformation of the unit from publicodes (in days) into 
     "should return $expectedValue $expectedUnit for $input day(s)",
     ({ input, expectedUnit, expectedValue }) => {
       expect(convertDaysIntoBetterUnit(input)).toEqual({
-        type: PublicodesSupportedSimulator.PreavisRetraite,
         unit: expectedUnit,
         value: expectedValue,
         valueInDays: parseFloat(input),
