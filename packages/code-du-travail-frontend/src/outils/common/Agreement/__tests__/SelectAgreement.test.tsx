@@ -23,6 +23,7 @@ describe("SelectAgreement", () => {
           Step={SelectAgreement}
           props={{
             supportedAgreements: [],
+            title: "Outil",
           }}
         />
       );
@@ -55,6 +56,7 @@ describe("SelectAgreement", () => {
           props={{
             defaultSelectedAgreement: selectedAgreement,
             supportedAgreements: [],
+            title: "Outil",
           }}
         />
       );
