@@ -1,6 +1,6 @@
 import { MatomoBaseEvent, MatomoRetirementEvent } from "../../lib";
 import { matopush } from "../../piwik";
-import { pushEvents } from "../common";
+import { pushAgreementEvents } from "../common";
 import {
   Action,
   ActionName,
@@ -9,6 +9,7 @@ import {
 } from "../common/type/WizardType";
 import Steps from "./steps";
 import IntroAnnotation from "./steps/component/IntroAnnotation";
+import { getSupportedCC } from "./steps/utils";
 
 export const initialState: State = {
   stepIndex: 0,
@@ -38,8 +39,8 @@ export const initialState: State = {
       component: Steps.AgreementStep,
       label: "Convention collective",
       name: "ccn",
-      onStepDone: (title: string, data: FormContent): void => {
-        if (data.ccn) pushEvents(title, data.ccn);
+      onStepDone: (title: string, values: FormContent): void => {
+        pushAgreementEvents(title, values.ccn, getSupportedCC());
       },
     },
     {

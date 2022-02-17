@@ -1,4 +1,4 @@
 import handleTrackEvent from "./handleTrackEvent";
-import pushEvents from "./pushEvents";
+import pushAgreementEvents from "./pushAgreementEvents";
 
-export { handleTrackEvent, pushEvents };
+export { handleTrackEvent, pushAgreementEvents };

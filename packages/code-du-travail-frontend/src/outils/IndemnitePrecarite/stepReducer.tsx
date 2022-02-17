@@ -1,4 +1,4 @@
-import { pushEvents } from "../common";
+import { pushAgreementEvents } from "../common";
 import {
   Action,
   ActionName,
@@ -10,6 +10,7 @@ import { StepIndemnite } from "./steps/Indemnite";
 import { StepInfosGenerales } from "./steps/InfosGenerales";
 import { StepIntro } from "./steps/Introduction";
 import { StepRemuneration } from "./steps/Remuneration";
+import { getSupportedCCWithoutConventionalProvision } from "./steps/situation";
 
 export const initialState = {
   stepIndex: 0,
@@ -24,7 +25,11 @@ export const initialState = {
       label: "Convention collective",
       name: "info_cc",
       onStepDone: (title: string, data: FormContent): void => {
-        if (data.ccn) pushEvents(title, data.ccn);
+        pushAgreementEvents(
+          title,
+          data.ccn,
+          getSupportedCCWithoutConventionalProvision()
+        );
       },
     },
     {

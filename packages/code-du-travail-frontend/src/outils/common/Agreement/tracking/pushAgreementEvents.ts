@@ -1,11 +1,21 @@
 import {
+  MatomoAgreementEvent,
   MatomoBaseEvent,
   MatomoSearchAgreementCategory,
 } from "../../../../lib";
 import { matopush } from "../../../../piwik";
 import { ConventionCollective } from "../../type/WizardType";
+import { AgreementSupportInfo } from "../types";
 
-const pushEvents = (title: string, values: ConventionCollective): void => {
+const pushAgreementEvents = (
+  title: string,
+  values: ConventionCollective | undefined,
+  supportedAgreements: AgreementSupportInfo[]
+): void => {
+  if (!values) {
+    // no agreement section, no event to send. Should never happen.
+    return;
+  }
   let eventName = "";
   switch (values.route) {
     case "not-selected":
@@ -42,7 +52,19 @@ const pushEvents = (title: string, values: ConventionCollective): void => {
       title,
       `idcc${values.selected.num.toString()}`,
     ]);
+    const idcc = values.selected.num;
+    const isTreated = supportedAgreements.find(
+      (agreement) => agreement.idcc === idcc
+    );
+    matopush([
+      MatomoBaseEvent.TRACK_EVENT,
+      MatomoBaseEvent.OUTIL,
+      isTreated
+        ? MatomoAgreementEvent.CC_TREATED
+        : MatomoAgreementEvent.CC_UNTREATED,
+      idcc,
+    ]);
   }
 };
 
-export default pushEvents;
+export default pushAgreementEvents;

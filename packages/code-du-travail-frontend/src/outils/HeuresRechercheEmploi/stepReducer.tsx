@@ -1,7 +1,7 @@
 import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 
-import { pushEvents } from "../common";
-import { skipStep } from "../common/situations.utils";
+import { pushAgreementEvents } from "../common";
+import { getSupportedCC, skipStep } from "../common/situations.utils";
 import {
   Action,
   ActionName,
@@ -27,7 +27,7 @@ export const initialState = {
       label: "Convention collective",
       name: "info_cc",
       onStepDone: (title: string, data: FormContent): void => {
-        if (data.ccn) pushEvents(title, data.ccn);
+        pushAgreementEvents(title, data.ccn, getSupportedCC(data.situations));
       },
     },
     {

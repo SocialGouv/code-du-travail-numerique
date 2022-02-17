@@ -1,8 +1,8 @@
-import { supportedCcn } from "@socialgouv/modeles-social";
 import React from "react";
 
 import { SelectAgreement } from "../../common";
 import { WizardStepProps } from "../../common/type/WizardType";
+import { getSupportedCC } from "./utils";
 
 const AgreementStep = (props: WizardStepProps): JSX.Element => {
   return (
@@ -13,12 +13,7 @@ const AgreementStep = (props: WizardStepProps): JSX.Element => {
         // Delete infos when change CC
         props.form.change("infos", undefined);
       }}
-      supportedAgreements={supportedCcn.map((item) => {
-        return {
-          fullySupported: item.preavisRetraite,
-          idcc: item.idcc,
-        };
-      })}
+      supportedAgreements={getSupportedCC()}
     />
   );
 };
