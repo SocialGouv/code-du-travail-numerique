@@ -1,4 +1,10 @@
-import { Action, ActionName, State } from "../common/type/WizardType";
+import { pushEvents } from "../common";
+import {
+  Action,
+  ActionName,
+  FormContent,
+  State,
+} from "../common/type/WizardType";
 import { AgreementStep } from "./steps/AgreementStep";
 import { StepIndemnite } from "./steps/Indemnite";
 import { StepInfosGenerales } from "./steps/InfosGenerales";
@@ -17,6 +23,9 @@ export const initialState = {
       component: AgreementStep,
       label: "Convention collective",
       name: "info_cc",
+      onStepDone: (title: string, data: FormContent): void => {
+        if (data.ccn) pushEvents(title, data.ccn);
+      },
     },
     {
       component: StepInfosGenerales,

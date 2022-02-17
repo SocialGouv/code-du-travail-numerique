@@ -10,9 +10,11 @@ import { AgreementSearch } from "./AgreementSearch";
 import { EnterpriseSearch } from "./EnterpriseSearch";
 import { AGREEMENT_NAME, ENTERPRISE_NAME, ROUTE_NAME } from "./form-constants";
 import { RouteSelection } from "./RouteSelection";
+import { handleTrackEvent } from "./tracking";
 import { AgreementSupportInfo, OnSelectAgreementFn } from "./types";
 
 export type Props = {
+  title: string;
   form: FormApi<FormContent>;
   supportedAgreements: AgreementSupportInfo[];
   onChange?: (oldValue: Agreement | null, newValue: Agreement | null) => void;
@@ -20,6 +22,7 @@ export type Props = {
 };
 
 const SelectAgreement = ({
+  title,
   form,
   supportedAgreements,
   onChange,
@@ -49,7 +52,7 @@ const SelectAgreement = ({
   );
 
   const onUserAction: OnUserAction = (action, extra) => {
-    // TODO handle event
+    handleTrackEvent(title, action, extra);
   };
 
   useEffect(() => {
@@ -69,7 +72,11 @@ const SelectAgreement = ({
   const values = form.getState().values;
   useEffect(() => {
     if (values.ccn?.route === "not-selected") {
-      setConvention(null);
+      setConvention(undefined);
+      setEnterprise(undefined);
+    }
+    if (values.ccn?.route === "agreement") {
+      setEnterprise(undefined);
     }
   }, [setConvention, values.ccn?.route]);
 
