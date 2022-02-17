@@ -10,7 +10,6 @@ describe("<IndemniteLegale />", () => {
     const { container } = render(
       <PublicodesProvider
         rules={loadPublicodes("indemnite-licenciement")}
-        targetRule="contrat salarié . indemnité de licenciement"
         simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
       >
         <IndemniteLegale
