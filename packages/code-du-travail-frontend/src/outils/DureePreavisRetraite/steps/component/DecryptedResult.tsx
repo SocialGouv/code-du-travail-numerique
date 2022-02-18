@@ -1,6 +1,5 @@
 import { Paragraph } from "@socialgouv/cdtn-ui";
-import { supportedCcn } from "@socialgouv/modeles-social";
-import { AgreementInfo } from "@socialgouv/modeles-social/bin/internal/ExtractSupportedCc";
+import { AgreementInfo, supportedCcn } from "@socialgouv/modeles-social";
 import React from "react";
 
 import { SectionTitle } from "../../../common/stepStyles";

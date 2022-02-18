@@ -1,5 +1,4 @@
-import { Notification } from "@socialgouv/modeles-social";
-import { References } from "@socialgouv/modeles-social/bin/utils";
+import { Notification, References } from "@socialgouv/modeles-social";
 import Engine, { Rule as PubliRule } from "publicodes";
 
 import { PublicodesIndemniteLicenciementResult } from "./indemnite-licenciement";

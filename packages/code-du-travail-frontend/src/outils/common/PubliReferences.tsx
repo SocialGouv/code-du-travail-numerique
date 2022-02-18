@@ -1,4 +1,4 @@
-import { References } from "@socialgouv/modeles-social/src/utils";
+import { References } from "@socialgouv/modeles-social";
 import React from "react";
 
 import { A11yLink } from "../../common/A11yLink";

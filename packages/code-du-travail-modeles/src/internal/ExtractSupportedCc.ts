@@ -1,16 +1,13 @@
 import type { Rule } from "publicodes";
 import type Engine from "publicodes";
 
+import type { AgreementInfo } from "..";
+
 export type RuleNodeIdcc = Rule & {
   cdtn?: {
     idcc?: number;
     "préavis-retraite"?: boolean;
   };
-};
-
-export type AgreementInfo = {
-  idcc: number;
-  preavisRetraite: boolean;
 };
 
 export function extractSupportedCc(engine: Engine): Partial<AgreementInfo>[] {
