@@ -19,9 +19,38 @@ jobs:
           dockerfile: "./docker/elasticsearch/Dockerfile"
           dockercontext: "./docker/elasticsearch"
 
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Restore cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install dependencies
+        run: |
+          yarn install --prefer-offline --frozen-lockfile
+      - name: Build code
+        run: |
+          yarn build
+      - name: Cache build
+        uses: actions/cache@v2
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+
   lint:
     name: Lint
     runs-on: ubuntu-latest
+    needs: [build]
     strategy:
       fail-fast: false
       matrix:
@@ -35,6 +64,11 @@ jobs:
             "@cdt/api",
           ]
     steps:
+      - uses: actions/cache@v2
+        name: Restore build
+        with:
+          path: ./*
+          key: ${{ github.sha }}
       - name: Lint ${{ matrix.repositories }}
         run: |
           yarn workspace ${{ matrix.repositories }} lint
@@ -42,7 +76,7 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
-    needs: [register-elastic]
+    needs: [register-elastic, build]
     services:
       elasticsearch:
         image: ghcr.io/socialgouv/cdtn/elasticsearch:sha-${{ github.sha }}
@@ -68,6 +102,11 @@ jobs:
             "@cdt/api",
           ]
     steps:
+      - uses: actions/cache@v2
+        name: Restore build
+        with:
+          path: ./*
+          key: ${{ github.sha }}
       - name: Test ${{ matrix.repositories }}
         run: |
           yarn workspace ${{ matrix.repositories }} test
