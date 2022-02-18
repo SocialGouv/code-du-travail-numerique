@@ -47,7 +47,7 @@ const siretNumberError =
   "Veuillez indiquer un numéro Siret (14 chiffres uniquement)";
 
 const ENTERPRISE_API_URL =
-  "https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1";
+  "https://api.recherche-entreprises.fabrique.social.gouv.fr/api/v1";
 
 const makeSearchUrl = ({ query, address }) => {
   const params: { k: string; v: string }[] = [
