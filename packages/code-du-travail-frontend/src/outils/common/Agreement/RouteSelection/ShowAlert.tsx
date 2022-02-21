@@ -1,4 +1,4 @@
-import { Alert, Paragraph, Text, theme } from "@socialgouv/cdtn-ui";
+import { Alert, Paragraph, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
@@ -13,16 +13,20 @@ const ShowAlert = ({ route }: ShowAlertProps): JSX.Element => {
     <>
       {route === "not-selected" && (
         <StyledAlert variant="primary">
-          <Paragraph noMargin>
-            <Text variant="primary" fontSize="hsmall" fontWeight="700">
-              À noter
-            </Text>
+          <Paragraph
+            variant="primary"
+            fontSize="hsmall"
+            fontWeight="700"
+            noMargin
+          >
+            À noter
           </Paragraph>
-          <Paragraph>
-            Vous pouvez passer cette étape et poursuivre la simulation pour
-            connaitre la durée prévue par le code du travail mais nous vous
-            conseillons d&apos;indiquer votre convention collective afin de voir
-            si elle prévoit un délai plus favorable qui vous serait applicable.
+          <Paragraph noMargin>
+            Vous pouvez passer cette étape et poursuivre la simulation qui vous
+            indiquera la durée du préavis prévue par le code du travail. Nous
+            vous recommandons de renseigner votre convention collective qui peut
+            prévoir un préavis plus favorable que celui défini par le code du
+            travail.
           </Paragraph>
         </StyledAlert>
       )}

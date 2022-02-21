@@ -70,7 +70,6 @@ const AgreementSearch = ({
 const { spacings } = theme;
 
 const SelectedAgreement = styled(Toast)`
-  width: 100%;
   margin-bottom: ${spacings.medium};
 `;
 

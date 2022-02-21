@@ -30,7 +30,7 @@ Fonctionnalité: Outil - Préavis de retraite
     Quand je clique sur "Suivant"
     Alors je vois "Vous devez répondre à cette question"
     Quand je choisis "Je ne souhaite pas renseigner ma convention collective"
-    Alors je vois "Vous pouvez passer cette étape et poursuivre la simulation pour connaitre la durée prévue par le code du travail"
+    Alors je vois "Vous pouvez passer cette étape et poursuivre la simulation qui vous indiquera la durée du préavis prévue par le code du travail."
     Quand je clique sur "Suivant"
 
     Alors je vois "Le salarié concerné est-il reconnu en tant que travailleur handicapé ?"

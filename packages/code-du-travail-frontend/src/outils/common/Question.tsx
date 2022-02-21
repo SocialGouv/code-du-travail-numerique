@@ -31,8 +31,10 @@ export const Question = ({
   const [isLocalTooltipOpen, setIsLocalToolTipOpen] = React.useState(false);
   return (
     <LabelBlock htmlFor={htmlFor} {...otherProps}>
-      {children}
-      {required && <Text fontWeight="400">&nbsp;(obligatoire)</Text>}
+      <Text fontWeight="600" fontSize="default">
+        {children}
+      </Text>
+      {required && <Text>&nbsp;(obligatoire)</Text>}
       {tooltip && (
         <InfoBulle
           title={tooltip.help ?? "Plus d'informations"}
@@ -60,10 +62,7 @@ const { breakpoints, fonts, spacings } = theme;
 
 const LabelBlock = styled.label`
   display: block;
-  margin-top: ${spacings.small};
-  margin-bottom: ${spacings.small};
-  font-size: ${fonts.sizes.headings.small};
-  font-weight: 600;
+  margin: ${spacings.small} 0;
   cursor: ${(props) => (props.as ? "default" : "pointer")};
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};

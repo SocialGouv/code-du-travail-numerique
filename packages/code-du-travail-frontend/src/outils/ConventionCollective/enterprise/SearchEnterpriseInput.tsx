@@ -1,16 +1,8 @@
-import {
-  AlertWithIcon,
-  Input,
-  Label,
-  Section as SectionUi,
-  Text,
-  theme,
-} from "@socialgouv/cdtn-ui";
+import { Input, Label, Paragraph, Text, theme } from "@socialgouv/cdtn-ui";
 import React, { ForwardedRef } from "react";
 import styled from "styled-components";
 
 import { InfoBulle } from "../../common/InfoBulle";
-import { SectionTitle } from "../../common/stepStyles";
 
 type Props = {
   query?: string;
@@ -25,14 +17,12 @@ export const SearchEnterpriseInput = React.forwardRef(
     ref: ForwardedRef<HTMLDivElement>
   ): JSX.Element {
     return (
-      <Section>
-        <SectionTitle>Précisez et sélectionnez votre entreprise</SectionTitle>
+      <>
+        <ParagraphNoMarginBottom fontWeight="600" fontSize="default">
+          Précisez et sélectionnez votre entreprise
+        </ParagraphNoMarginBottom>
 
-        <AlertWithMargin variant="secondary">
-          Avec le nom de l’entreprise, il est possible de retrouver la
-          convention collective associée.
-        </AlertWithMargin>
-        <Form onSubmit={(event) => event.preventDefault()}>
+        <Inputs>
           <Box ref={ref}>
             <InlineLabel htmlFor="enterprise-search">
               Nom de votre entreprise ou numéro Siret{" "}
@@ -70,20 +60,17 @@ export const SearchEnterpriseInput = React.forwardRef(
               autoComplete="off"
             />
           </Box>
-        </Form>
-      </Section>
+        </Inputs>
+      </>
     );
   }
 );
-const Section = styled(SectionUi)`
-  padding-top: 0;
-`;
 const BlockInput = styled(Input)`
   padding-top: ${theme.spacings.base};
   width: 100%;
 `;
 
-const Form = styled.form`
+const Inputs = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -94,7 +81,10 @@ const Form = styled.form`
 
 const InlineLabel = styled(Label)`
   display: inline;
-  font-weight: 700;
+`;
+
+const ParagraphNoMarginBottom = styled(Paragraph)`
+  margin-bottom: 0;
 `;
 
 const Box = styled.div`
@@ -111,8 +101,4 @@ const Box = styled.div`
       flex: 0 1 auto;
     }
   }
-`;
-
-const AlertWithMargin = styled(AlertWithIcon)`
-  margin: ${theme.spacings.large} 0;
 `;

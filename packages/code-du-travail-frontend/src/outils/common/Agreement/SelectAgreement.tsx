@@ -37,9 +37,6 @@ const SelectAgreement = ({
       const oldData = storedConvention;
       setConvention(agreement);
       setEnterprise(enterprise);
-      if (window) {
-        window.scrollTo(0, 0);
-      }
       if (oldData !== agreement && onChange) {
         onChange(storedConvention, agreement);
       }

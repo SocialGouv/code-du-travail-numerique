@@ -1,4 +1,4 @@
-import { AlertWithIcon, InputRadio, Text } from "@socialgouv/cdtn-ui";
+import { InputRadio, Text } from "@socialgouv/cdtn-ui";
 import { FormApi } from "final-form";
 import React from "react";
 import { Field } from "react-final-form";
@@ -19,13 +19,20 @@ const RouteSelection = ({ form }: Props): JSX.Element => {
   const values = form.getState().values;
   return (
     <>
-      <Question htmlFor={ROUTE_NAME} required>
+      <Question
+        htmlFor={ROUTE_NAME}
+        required
+        tooltip={{
+          content: (
+            <p>
+              Vous pouvez trouver le nom de votre convention collective sur
+              votre <strong>bulletin de paie</strong>.
+            </p>
+          ),
+        }}
+      >
         Quel est le nom de la convention collective applicable ?
       </Question>
-      <AlertWithIcon variant="secondary">
-        Vous pouvez trouver le nom de votre convention collective sur votre{" "}
-        <strong>bulletin de paie</strong>.
-      </AlertWithIcon>
       <RadioContainer>
         <Field<AgreementRoute>
           type="radio"

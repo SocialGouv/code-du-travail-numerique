@@ -47,7 +47,7 @@ function Wizard({
 
   useEffect(() => {
     const node = anchorRef.current;
-    // We only focus on wizzard after wizzard start
+    // We only focus on wizard after wizard start
     // that way focus is correctly placed on the form
     if (node && stepIndex > 0) {
       node.focus();

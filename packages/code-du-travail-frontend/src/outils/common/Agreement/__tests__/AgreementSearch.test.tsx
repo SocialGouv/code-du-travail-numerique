@@ -178,7 +178,7 @@ describe("AgreementSearch", () => {
         />
       );
       expect(
-        getByText(/À noter : convention collective non traitée/)
+        getByText(/Convention collective non traitée/)
       ).toBeInTheDocument();
     });
   });
@@ -206,7 +206,7 @@ describe("AgreementSearch", () => {
         />
       );
       expect(
-        queryByText(/À noter : convention collective non traitée/)
+        queryByText(/Convention collective non traitée/)
       ).not.toBeInTheDocument();
       expect(
         queryByText(/À noter : convention prochainement traitée/)

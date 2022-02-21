@@ -16,17 +16,18 @@ const ShowAlert = ({
   if (!idccInfo) {
     return (
       <Alert variant="primary">
-        <p>
-          <Text variant="primary" fontSize="hsmall" fontWeight="700">
-            À noter&nbsp;: convention collective non traitée
-          </Text>
-        </p>
+        <Paragraph
+          variant="primary"
+          fontSize="hsmall"
+          fontWeight="700"
+          noMargin
+        >
+          Convention collective non traitée
+        </Paragraph>
         <Paragraph noMargin>
-          La convention collective sélectionnée n&apos;a pas été traitée par nos
-          services. Vous pouvez poursuivre la simulation pour connaitre la durée
-          prévue par le code du travail mais nous vous conseillons de vérifier
-          si votre convention collective prévoit un délai plus favorable qui
-          vous serait applicable.
+          La convention collective sélectionnée n&apos;est pas traitée dans ce
+          simulateur. Vous pouvez tout de même poursuivre la simulation pour
+          connaitre la durée prévue par le code du travail.
         </Paragraph>
       </Alert>
     );
@@ -34,11 +35,9 @@ const ShowAlert = ({
   if (!idccInfo.fullySupported) {
     return (
       <Alert variant="primary">
-        <p>
-          <Text variant="primary" fontSize="hsmall" fontWeight="700">
-            À noter&nbsp;: convention prochainement traitée
-          </Text>
-        </p>
+        <Text variant="primary" fontSize="hsmall" fontWeight="700">
+          À noter&nbsp;: convention prochainement traitée
+        </Text>
         <Paragraph noMargin>
           Cette convention collective n&apos;est pas encore traitée par nos
           services mais le sera très prochainement. Vous pouvez poursuivre la

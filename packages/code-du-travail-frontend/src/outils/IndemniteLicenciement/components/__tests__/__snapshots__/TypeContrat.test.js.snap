@@ -4,10 +4,16 @@ exports[`<TypeContrat /> should render 1`] = `
 .c1 {
   color: #3e486e;
   font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.c2 {
+  color: #3e486e;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,7 +22,7 @@ exports[`<TypeContrat /> should render 1`] = `
   cursor: pointer;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,7 +32,7 @@ exports[`<TypeContrat /> should render 1`] = `
   flex-direction: row;
 }
 
-.c4 {
+.c5 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -47,7 +53,7 @@ exports[`<TypeContrat /> should render 1`] = `
   appearance: none;
 }
 
-.c4:before {
+.c5:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -62,25 +68,22 @@ exports[`<TypeContrat /> should render 1`] = `
   content: "";
 }
 
-.c4:checked {
+.c5:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c4:checked:before {
+.c5:checked:before {
   display: block;
 }
 
 .c0 {
   display: block;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  font-weight: 600;
+  margin: 1rem 0;
   cursor: pointer;
 }
 
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -109,45 +112,49 @@ exports[`<TypeContrat /> should render 1`] = `
   <label
     class="c0"
   >
-    Quel est le type du contrat de travail ?
     <span
       class="c1"
+    >
+      Quel est le type du contrat de travail ?
+    </span>
+    <span
+      class="c2"
     >
        (obligatoire)
     </span>
   </label>
   <div
-    class="c2"
+    class="c3"
   >
     <div
-      class="c3"
+      class="c4"
     >
       <input
-        class="c4"
+        class="c5"
         id="contrat-cdd"
         name="contrat"
         type="radio"
         value="cdd"
       />
       <label
-        class="c5"
+        class="c6"
         for="contrat-cdd"
       >
         Contrat à durée determiné (CDD) ou contrat d’intérim
       </label>
     </div>
     <div
-      class="c3"
+      class="c4"
     >
       <input
-        class="c4"
+        class="c5"
         id="contrat-cdi"
         name="contrat"
         type="radio"
         value="cdi"
       />
       <label
-        class="c5"
+        class="c6"
         for="contrat-cdi"
       >
         Contrat à durée indeterminé (CDI)

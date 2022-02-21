@@ -1,4 +1,3 @@
-import { Section } from "@socialgouv/cdtn-ui";
 import React, { useState } from "react";
 import { Field } from "react-final-form";
 
@@ -36,7 +35,7 @@ const EnterpriseSearch = ({
 
   if (enterprise) {
     return (
-      <Section>
+      <>
         <SelectedEnterprise
           enterprise={enterprise}
           onRemoveEnterprise={() => {
@@ -58,7 +57,7 @@ const EnterpriseSearch = ({
             supportedAgreements={supportedAgreements}
           />
         )}
-      </Section>
+      </>
     );
   }
 

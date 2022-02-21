@@ -4,10 +4,16 @@ exports[`<TypeRemuneration /> should render 1`] = `
 .c1 {
   color: #3e486e;
   font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.c2 {
+  color: #3e486e;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,7 +22,7 @@ exports[`<TypeRemuneration /> should render 1`] = `
   cursor: pointer;
 }
 
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,7 +32,7 @@ exports[`<TypeRemuneration /> should render 1`] = `
   flex-direction: row;
 }
 
-.c3 {
+.c4 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -47,7 +53,7 @@ exports[`<TypeRemuneration /> should render 1`] = `
   appearance: none;
 }
 
-.c3:before {
+.c4:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -62,21 +68,18 @@ exports[`<TypeRemuneration /> should render 1`] = `
   content: "";
 }
 
-.c3:checked {
+.c4:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c3:checked:before {
+.c4:checked:before {
   display: block;
 }
 
 .c0 {
   display: block;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  font-weight: 600;
+  margin: 1rem 0;
   cursor: pointer;
 }
 
@@ -90,25 +93,29 @@ exports[`<TypeRemuneration /> should render 1`] = `
   <label
     class="c0"
   >
-    Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
     <span
       class="c1"
+    >
+      Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
+    </span>
+    <span
+      class="c2"
     >
        (obligatoire)
     </span>
   </label>
   <div
-    class="c2"
+    class="c3"
   >
     <input
-      class="c3"
+      class="c4"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
       value="total"
     />
     <label
-      class="c4"
+      class="c5"
       for="typeRemuneration-amount"
     >
       <span>
@@ -121,17 +128,17 @@ exports[`<TypeRemuneration /> should render 1`] = `
     </label>
   </div>
   <div
-    class="c2"
+    class="c3"
   >
     <input
-      class="c3"
+      class="c4"
       id="typeRemuneration-pay"
       name="typeRemuneration"
       type="radio"
       value="mensuel"
     />
     <label
-      class="c4"
+      class="c5"
       for="typeRemuneration-pay"
     >
       <span>
