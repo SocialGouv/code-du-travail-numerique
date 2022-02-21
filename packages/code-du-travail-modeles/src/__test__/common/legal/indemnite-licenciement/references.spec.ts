@@ -21,7 +21,7 @@ describe("Vérification des références juridiques pour Indemnité légale de l
           "contrat salarié . convention collective": "''",
           "contrat salarié . salaire de référence": 1000,
           "contrat salarié . travailleur handicapé": "non",
-          "indemnité de licenciement": "non",
+          "indemnité de licenciement": "oui",
         })
       );
 

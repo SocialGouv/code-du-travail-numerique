@@ -29,7 +29,7 @@ describe("Travailleur handicapé - Références départ et mise à la retraite",
           "contrat salarié . mise à la retraite":
             retirement === "mise" ? "oui" : "non",
           "contrat salarié . travailleur handicapé": "oui",
-          "préavis de retraite": "non",
+          "préavis de retraite": "oui",
         })
       );
 

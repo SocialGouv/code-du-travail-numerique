@@ -22,7 +22,7 @@ test.each`
         "contrat salarié . convention collective": "''",
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -50,7 +50,7 @@ test.each`
         "contrat salarié . convention collective": "''",
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 

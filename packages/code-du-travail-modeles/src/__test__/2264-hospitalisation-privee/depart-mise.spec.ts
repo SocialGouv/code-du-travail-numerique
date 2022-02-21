@@ -36,7 +36,7 @@ describe("Préavis de retraite de la CC 2264", () => {
           "contrat salarié . convention collective": "'IDCC2264'",
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "non",
+          "préavis de retraite": "oui",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
@@ -75,7 +75,7 @@ describe("Préavis de retraite de la CC 2264", () => {
           "contrat salarié . convention collective . hospitalisation privées . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "non",
+          "préavis de retraite": "oui",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"

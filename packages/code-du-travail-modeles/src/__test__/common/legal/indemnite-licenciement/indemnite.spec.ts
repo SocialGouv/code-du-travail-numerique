@@ -20,7 +20,7 @@ describe("Indemnité légale de licenciement", () => {
           "contrat salarié . convention collective": "''",
           "contrat salarié . salaire de référence": salary,
           "contrat salarié . travailleur handicapé": "non",
-          "indemnité de licenciement": "non",
+          "indemnité de licenciement": "oui",
         })
         .evaluate("contrat salarié . indemnité de licenciement");
       expect(result.nodeValue).toEqual(expectedCompensation);

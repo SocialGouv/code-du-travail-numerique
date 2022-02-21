@@ -101,7 +101,7 @@ test.each`
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       })
     );
 

@@ -19,7 +19,7 @@ describe("Départ à la retraite", () => {
           "contrat salarié . convention collective": "'IDCC1483'",
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "non",
+          "préavis de retraite": "oui",
         })
         .evaluate("contrat salarié . préavis de retraite");
 
@@ -45,7 +45,7 @@ describe("Mise à la retraite", () => {
           "contrat salarié . convention collective": "'IDCC1483'",
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "non",
+          "préavis de retraite": "oui",
         })
         .evaluate("contrat salarié . préavis de retraite");
 
@@ -69,7 +69,7 @@ describe("Notifications", () => {
           "contrat salarié . convention collective": "'IDCC1483'",
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "non",
+          "préavis de retraite": "oui",
         })
       );
 
@@ -83,7 +83,7 @@ describe("Notifications", () => {
         "contrat salarié . convention collective": "'IDCC1483'",
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       })
     );
 
@@ -104,7 +104,7 @@ describe("Notifications", () => {
           "contrat salarié . convention collective": "'IDCC1483'",
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "non",
+          "préavis de retraite": "oui",
         })
       );
 

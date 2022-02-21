@@ -25,7 +25,7 @@ test.each`
           grade,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -56,7 +56,7 @@ test.each`
           grade,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -82,7 +82,7 @@ test.each`
           "'Cadres'",
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 

@@ -29,7 +29,7 @@ test("Vérification des références juridiques pour un employé en départ à l
       "contrat salarié . convention collective": "'IDCC0650'",
       "contrat salarié . mise à la retraite": "non",
       "contrat salarié . travailleur handicapé": "non",
-      "préavis de retraite": "non",
+      "préavis de retraite": "oui",
     })
   );
 
@@ -47,7 +47,7 @@ test("Vérification des références juridiques pour un employé en mise à la r
       "contrat salarié . convention collective": "'IDCC0650'",
       "contrat salarié . mise à la retraite": "oui",
       "contrat salarié . travailleur handicapé": "non",
-      "préavis de retraite": "non",
+      "préavis de retraite": "oui",
     })
   );
 

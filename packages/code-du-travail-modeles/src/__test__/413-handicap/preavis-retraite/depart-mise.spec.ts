@@ -36,7 +36,7 @@ test.each`
         "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -77,7 +77,7 @@ test.each`
         "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -118,7 +118,7 @@ test.each`
         "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       })
     );
 
@@ -160,7 +160,7 @@ test.each`
         "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
         "contrat salarié . départ à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       })
     );
 

@@ -37,7 +37,7 @@ test.each`
         "contrat salarié . convention collective . transports routiers . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -81,7 +81,7 @@ test.each`
           group,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -100,7 +100,7 @@ test("Pour un employé dans les transports routiers avec la catgorie TAM dans le
       "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe": 6,
       "contrat salarié . mise à la retraite": "oui",
       "contrat salarié . travailleur handicapé": "non",
-      "préavis de retraite": "non",
+      "préavis de retraite": "oui",
     })
   );
   expect(notifications).toHaveLength(1);
@@ -141,7 +141,7 @@ test.each`
           group,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       })
     );
 

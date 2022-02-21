@@ -23,7 +23,7 @@ describe("Mise à la retraite", () => {
           "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "non",
+          "préavis de retraite": "oui",
         })
         .evaluate("contrat salarié . préavis de retraite");
 
@@ -49,7 +49,7 @@ describe("Départ à la retraite", () => {
           "contrat salarié . convention collective": "'IDCC1147'",
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "non",
+          "préavis de retraite": "oui",
         })
         .evaluate("contrat salarié . préavis de retraite");
 
@@ -77,7 +77,7 @@ describe("Notifications", () => {
           "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "non",
+          "préavis de retraite": "oui",
         })
       );
 
@@ -94,7 +94,7 @@ describe("Notifications", () => {
           "'Non-cadres'",
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       })
     );
 

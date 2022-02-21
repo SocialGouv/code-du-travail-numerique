@@ -1,7 +1,3 @@
-indemnité de licenciement:
-  valeur: oui
-  rend non applicable: contrat salarié . indemnité de licenciement
-
 contrat salarié . salaire de référence:
   titre: Salaire de référence du salarié
   unité: €

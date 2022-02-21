@@ -52,7 +52,7 @@ describe("Préavis de départ à la retraite", () => {
         "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Ouvriers et Employés'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       });
       const result = engine.evaluate("contrat salarié . préavis de retraite");
       const references = getReferences(engine);
@@ -82,7 +82,7 @@ describe("Préavis de départ à la retraite", () => {
         "contrat salarié . convention collective . sedima . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       });
       const result = engine.evaluate("contrat salarié . préavis de retraite");
       const references = getReferences(engine);
@@ -116,7 +116,7 @@ describe("Préavis de mise à la retraite", () => {
         "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Ouvriers et Employés'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       });
       const result = engine.evaluate("contrat salarié . préavis de retraite");
       const references = getReferences(engine);
@@ -148,7 +148,7 @@ describe("Préavis de mise à la retraite", () => {
         "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Techniciens et agents de maîtrise'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       });
       const result = engine.evaluate("contrat salarié . préavis de retraite");
       const references = getReferences(engine);
@@ -175,7 +175,7 @@ describe("Préavis de mise à la retraite", () => {
         "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Cadres'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       });
       const result = engine.evaluate("contrat salarié . préavis de retraite");
       const references = getReferences(engine);

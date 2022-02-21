@@ -40,7 +40,7 @@ describe("Vérification des départs à la retraite, mise à la retraite et des 
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "non",
+        "préavis de retraite": "oui",
       });
       const result = situation.evaluate(
         "contrat salarié . préavis de retraite"
