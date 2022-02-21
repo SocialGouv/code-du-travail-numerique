@@ -24,48 +24,51 @@ export const SearchEnterpriseInput = React.forwardRef(
           Précisez et sélectionnez votre entreprise
         </ParagraphNoMarginBottom>
 
-        <Form
+        <EmbeddedInForm
           enable={embeddedForm}
           onSubmit={(event) => event.preventDefault()}
+          reference={ref}
         >
-          <Box ref={ref}>
-            <InlineLabel htmlFor="enterprise-search">
-              Nom de votre entreprise ou numéro Siret{" "}
-              <Text fontWeight="400">(obligatoire)</Text>
-            </InlineLabel>
-            <InfoBulle title={"Qu’est ce qu’un n°siret ?"}>
-              <p>
-                Le numéro Siret est un <strong>numéro de 14 chiffres</strong>{" "}
-                unique pour chaque entreprise. Il est présent sur la{" "}
-                <strong>fiche de paie du salarié</strong>.<br />
-                Ex : 40123778000127
-              </p>
-            </InfoBulle>
-            <BlockInput
-              placeholder="Ex : Café de la gare ou 40123778000127"
-              value={query}
-              type="text"
-              name="query"
-              id="enterprise-search"
-              onChange={onChange}
-              autoComplete="off"
-            />
-          </Box>
-          <Box>
-            <InlineLabel htmlFor="enterprise-search-address">
-              Code postal ou ville
-            </InlineLabel>
-            <BlockInput
-              placeholder="Ex : 31000 ou Toulouse "
-              value={address}
-              type="text"
-              name="address"
-              id="enterprise-search-address"
-              onChange={onChange}
-              autoComplete="off"
-            />
-          </Box>
-        </Form>
+          <Flex>
+            <Box ref={ref}>
+              <InlineLabel htmlFor="enterprise-search">
+                Nom de votre entreprise ou numéro Siret{" "}
+                <Text fontWeight="400">(obligatoire)</Text>
+              </InlineLabel>
+              <InfoBulle title={"Qu’est ce qu’un n°siret ?"}>
+                <p>
+                  Le numéro Siret est un <strong>numéro de 14 chiffres</strong>{" "}
+                  unique pour chaque entreprise. Il est présent sur la{" "}
+                  <strong>fiche de paie du salarié</strong>.<br />
+                  Ex : 40123778000127
+                </p>
+              </InfoBulle>
+              <BlockInput
+                placeholder="Ex : Café de la gare ou 40123778000127"
+                value={query}
+                type="text"
+                name="query"
+                id="enterprise-search"
+                onChange={onChange}
+                autoComplete="off"
+              />
+            </Box>
+            <Box>
+              <InlineLabel htmlFor="enterprise-search-address">
+                Code postal ou ville
+              </InlineLabel>
+              <BlockInput
+                placeholder="Ex : 31000 ou Toulouse "
+                value={address}
+                type="text"
+                name="address"
+                id="enterprise-search-address"
+                onChange={onChange}
+                autoComplete="off"
+              />
+            </Box>
+          </Flex>
+        </EmbeddedInForm>
       </>
     );
   }
@@ -75,7 +78,7 @@ const BlockInput = styled(Input)`
   width: 100%;
 `;
 
-const Form = styled(EmbeddedInForm)`
+const Flex = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: space-between;

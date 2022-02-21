@@ -3,6 +3,7 @@ import {
   Button,
   ScreenReaderOnly,
   Section as SectionUi,
+  theme,
   Title,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
@@ -166,17 +167,19 @@ const EnterpriseSearchStep = ({
       />
 
       {onBackClick && (
-        <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
-          <Button
-            as="a"
-            small
-            type="button"
-            onClick={onBackClick}
-            variant="flat"
-          >
-            Précédent
-          </Button>
-        </Link>
+        <Div>
+          <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
+            <Button
+              as="a"
+              small
+              type="button"
+              onClick={onBackClick}
+              variant="flat"
+            >
+              Précédent
+            </Button>
+          </Link>
+        </Div>
       )}
     </>
   );
@@ -185,5 +188,9 @@ const EnterpriseSearchStep = ({
 export { EnterpriseSearchStep };
 
 const Section = styled(SectionUi)`
-  padding-top: 1rem;
+  padding-top: ${theme.spacings.small};
+`;
+
+const Div = styled.div`
+  padding-top: ${theme.spacings.larger};
 `;
