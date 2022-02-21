@@ -20,6 +20,7 @@ import { EnterpriseButton } from "../enterprise/EnterpriseButton";
 import { SearchEnterprise, SearchParams } from "../enterprise/SearchEnterprise";
 
 type EnterpriseSearchStepProps = {
+  embeddedForm: boolean;
   onBackClick?: () => void;
   handleEnterpriseSelection: (
     enterprise: Enterprise,
@@ -34,6 +35,7 @@ const EnterpriseSearchStep = ({
   handleEnterpriseSelection,
   searchParams,
   onSearchParamsChange,
+  embeddedForm,
 }: EnterpriseSearchStepProps): JSX.Element => {
   const { trackEvent, uuid, title } = useTrackingContext();
   const refInput = useRef<HTMLDivElement>();
@@ -46,6 +48,7 @@ const EnterpriseSearchStep = ({
   return (
     <>
       <SearchEnterprise
+        embeddedForm={embeddedForm}
         searchParams={
           searchParams ?? {
             address: "",

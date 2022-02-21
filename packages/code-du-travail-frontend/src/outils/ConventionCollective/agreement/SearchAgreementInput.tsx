@@ -1,15 +1,16 @@
 import {
   Input,
   Label,
+  Paragraph,
   Section as SectionUi,
   Text,
   theme,
 } from "@socialgouv/cdtn-ui";
-import React, { FormEventHandler, ForwardedRef } from "react";
+import React, { ForwardedRef } from "react";
 import styled from "styled-components";
 
 import { InfoBulle } from "../../common/InfoBulle";
-import { SectionTitle } from "../../common/stepStyles";
+import EmbeddedInForm from "../common/EmbeddedInForm";
 
 type Props = {
   embeddedForm: boolean;
@@ -20,26 +21,6 @@ type Props = {
 
 const defaultPlaceholder = "Ex : Transports routiers ou 1486";
 
-const EmbeddedInForm = ({
-  enable,
-  reference,
-  onSubmit,
-  children,
-}: {
-  enable: boolean;
-  reference: ForwardedRef<HTMLFormElement>;
-  onSubmit: FormEventHandler;
-  children: React.ReactNode;
-}) => {
-  if (enable) {
-    return (
-      <form ref={reference} onSubmit={onSubmit}>
-        {children}
-      </form>
-    );
-  }
-  return <>{children}</>;
-};
 export const SearchAgreementInput = React.forwardRef(
   function _SearchAgreementInput(
     {
@@ -52,9 +33,9 @@ export const SearchAgreementInput = React.forwardRef(
   ): JSX.Element {
     return (
       <Section>
-        <SectionTitle>
+        <Paragraph fontWeight="600" fontSize="default">
           Précisez et sélectionnez votre convention collective
-        </SectionTitle>
+        </Paragraph>
         <EmbeddedInForm
           enable={embeddedForm}
           reference={ref}

@@ -3,8 +3,10 @@ import React, { ForwardedRef } from "react";
 import styled from "styled-components";
 
 import { InfoBulle } from "../../common/InfoBulle";
+import EmbeddedInForm from "../common/EmbeddedInForm";
 
 type Props = {
+  embeddedForm: boolean;
   query?: string;
   address?: string;
   onChange: (event: React.ChangeEvent) => void;
@@ -13,7 +15,7 @@ type Props = {
 
 export const SearchEnterpriseInput = React.forwardRef(
   function _SearchEnterpriseInput(
-    { query = "", address = "", onChange }: Props,
+    { query = "", address = "", onChange, embeddedForm = true }: Props,
     ref: ForwardedRef<HTMLDivElement>
   ): JSX.Element {
     return (
@@ -22,7 +24,10 @@ export const SearchEnterpriseInput = React.forwardRef(
           Précisez et sélectionnez votre entreprise
         </ParagraphNoMarginBottom>
 
-        <Inputs>
+        <Form
+          enable={embeddedForm}
+          onSubmit={(event) => event.preventDefault()}
+        >
           <Box ref={ref}>
             <InlineLabel htmlFor="enterprise-search">
               Nom de votre entreprise ou numéro Siret{" "}
@@ -60,7 +65,7 @@ export const SearchEnterpriseInput = React.forwardRef(
               autoComplete="off"
             />
           </Box>
-        </Inputs>
+        </Form>
       </>
     );
   }
@@ -70,7 +75,7 @@ const BlockInput = styled(Input)`
   width: 100%;
 `;
 
-const Inputs = styled.div`
+const Form = styled(EmbeddedInForm)`
   display: flex;
   align-items: flex-end;
   justify-content: space-between;

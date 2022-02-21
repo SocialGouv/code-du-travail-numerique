@@ -64,6 +64,7 @@ const EnterpriseSearch = ({
   return (
     <>
       <EnterpriseSearchStep
+        embeddedForm={false}
         handleEnterpriseSelection={(enterprise) => {
           if (enterprise.conventions.length === 1) {
             onSelectAgreement(enterprise.conventions[0], enterprise);
@@ -75,7 +76,10 @@ const EnterpriseSearch = ({
           setSearchParams(params);
         }}
       />
-      <ErrorField name={ENTERPRISE_NAME} />
+      <ErrorField
+        name={ENTERPRISE_NAME}
+        errorText={"Vous devez séléctionner une entreprise"}
+      />
       <Field
         type="input"
         name={ENTERPRISE_NAME}

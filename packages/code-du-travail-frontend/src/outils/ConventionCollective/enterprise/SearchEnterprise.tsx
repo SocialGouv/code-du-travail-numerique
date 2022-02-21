@@ -9,6 +9,7 @@ import { useTrackingContext } from "../common/TrackingContext";
 import { SearchEnterpriseInput } from "./SearchEnterpriseInput";
 
 type Props = {
+  embeddedForm: boolean;
   renderResults: (
     renderProps: FetchReducerState<Enterprise[]>,
     params: SearchParams
@@ -28,6 +29,7 @@ export function SearchEnterprise({
   inputRef,
   searchParams,
   onSearchParamsChange,
+  embeddedForm,
 }: Props): JSX.Element {
   const trackingContext = useTrackingContext();
 
@@ -51,6 +53,7 @@ export function SearchEnterprise({
   return (
     <>
       <SearchEnterpriseInput
+        embeddedForm={embeddedForm}
         ref={inputRef}
         query={searchParams.query}
         address={searchParams.address}
