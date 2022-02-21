@@ -14,24 +14,27 @@ const HandicapeReferences = {
   url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006903707/",
 };
 
-test.each`
-  retirement  | expectedReferences
-  ${"mise"}   | ${MiseRetraiteReferences.concat(HandicapeReferences)}
-  ${"depart"} | ${DepartRetraiteReferences.concat(HandicapeReferences)}
-`(
-  "Vérification des références juridiques pour un employé handicapé en case de $retirement à la retraite",
-  ({ retirement, expectedReferences }) => {
-    const result = getReferences(
-      engine.setSituation({
-        "contrat salarié . ancienneté": "24",
-        "contrat salarié . convention collective": "''",
-        "contrat salarié . mise à la retraite":
-          retirement === "mise" ? "oui" : "non",
-        "contrat salarié . travailleur handicapé": "oui",
-      })
-    );
+describe("Travailleur handicapé - Références départ et mise à la retraite", () => {
+  test.each`
+    retirement  | expectedReferences
+    ${"mise"}   | ${MiseRetraiteReferences.concat(HandicapeReferences)}
+    ${"depart"} | ${DepartRetraiteReferences.concat(HandicapeReferences)}
+  `(
+    "Vérification des références juridiques pour un employé handicapé en case de $retirement à la retraite",
+    ({ retirement, expectedReferences }) => {
+      const result = getReferences(
+        engine.setSituation({
+          "contrat salarié . ancienneté": "24",
+          "contrat salarié . convention collective": "''",
+          "contrat salarié . mise à la retraite":
+            retirement === "mise" ? "oui" : "non",
+          "contrat salarié . travailleur handicapé": "oui",
+          "préavis de retraite": "non",
+        })
+      );
 
-    expect(result).toHaveLength(expectedReferences.length);
-    expect(result).toEqual(expect.arrayContaining(expectedReferences));
-  }
-);
+      expect(result).toHaveLength(expectedReferences.length);
+      expect(result).toEqual(expect.arrayContaining(expectedReferences));
+    }
+  );
+});

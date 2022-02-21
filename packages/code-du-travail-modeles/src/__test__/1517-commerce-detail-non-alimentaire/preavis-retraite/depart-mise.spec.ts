@@ -43,6 +43,7 @@ describe("Préavis de retraite de la CC 1517", () => {
           "contrat salarié . convention collective . commerces de detail non alimentaires . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
+          "préavis de retraite": "non",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
@@ -81,6 +82,7 @@ describe("Préavis de retraite de la CC 1517", () => {
           "contrat salarié . convention collective . commerces de detail non alimentaires . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
+          "préavis de retraite": "non",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"

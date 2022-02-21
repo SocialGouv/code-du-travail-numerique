@@ -54,6 +54,7 @@ test.each`
         "contrat salarié . convention collective . commerce gros et detail alimentation . départ à la retraite . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
+        "préavis de retraite": "non",
       })
     );
 
@@ -76,6 +77,7 @@ test.each`
         "contrat salarié . convention collective . commerce gros et detail alimentation . mise à la retraite . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
+        "préavis de retraite": "non",
       })
     );
 

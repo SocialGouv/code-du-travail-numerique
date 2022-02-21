@@ -44,6 +44,7 @@ test.each`
         "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
+        "préavis de retraite": "non",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -73,6 +74,7 @@ test.each`
           coefficient,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
+        "préavis de retraite": "non",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -129,6 +131,7 @@ test.each`
           coefficient,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
+        "préavis de retraite": "non",
       })
     );
 

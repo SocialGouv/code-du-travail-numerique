@@ -6,3 +6,9 @@ contrat salarié . ancienneté:
   unité: mois
   cdtn:
     type: entier
+
+contrat salarié . travailleur handicapé:
+  titre: Travailleur handicapé
+  question: Le salarié concerné est-il reconnu en tant que travailleur handicapé ?
+  cdtn:
+    type: oui-non

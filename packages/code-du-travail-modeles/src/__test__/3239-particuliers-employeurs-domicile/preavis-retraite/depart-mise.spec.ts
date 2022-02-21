@@ -83,6 +83,7 @@ describe("Préavis de retraite de la CC 3239", () => {
           "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
+          "préavis de retraite": "non",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
@@ -124,6 +125,7 @@ describe("Préavis de retraite de la CC 3239", () => {
           "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
+          "préavis de retraite": "non",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
@@ -149,6 +151,7 @@ describe("Vérification des notifications", () => {
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle": `'Assistants maternels du particulier employeur'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
+        "préavis de retraite": "non",
       })
     );
     expect(notifications).toHaveLength(1);
@@ -165,6 +168,7 @@ describe("Vérification des notifications", () => {
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle": `'Assistants maternels du particulier employeur'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
+        "préavis de retraite": "non",
       })
     );
     expect(notifications).toHaveLength(1);
@@ -181,6 +185,7 @@ describe("Vérification des notifications", () => {
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle": `'Salariés du particulier employeur'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
+        "préavis de retraite": "non",
       })
     );
     expect(notifications).toHaveLength(0);
@@ -194,6 +199,7 @@ describe("Vérification des notifications", () => {
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle": `'Salariés du particulier employeur'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
+        "préavis de retraite": "non",
       })
     );
     expect(notifications).toHaveLength(0);

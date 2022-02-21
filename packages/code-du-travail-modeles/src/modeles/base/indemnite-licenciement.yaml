@@ -8,12 +8,6 @@ contrat salarié . salaire de référence:
   cdtn:
     type: entier
 
-contrat salarié . travailleur handicapé:
-  titre: Travailleur handicapé
-  question: Le salarié concerné est-il reconnu en tant que travailleur handicapé ?
-  cdtn:
-    type: oui-non
-
 contrat salarié . ancienneté total:
   titre: Ancienneté du salarié
   question: Quel est votre ancienneté en mois ?

@@ -55,6 +55,7 @@ describe("Convention collective 2511", () => {
           "contrat salarié . convention collective . sport . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
+          "préavis de retraite": "non",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
@@ -96,6 +97,7 @@ describe("Convention collective 2511", () => {
           "contrat salarié . convention collective . sport . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
+          "préavis de retraite": "non",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"

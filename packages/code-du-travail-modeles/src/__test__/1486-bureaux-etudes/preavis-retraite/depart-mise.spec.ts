@@ -21,6 +21,7 @@ describe("Préavis retraite pour la CC 1486", () => {
             "contrat salarié . convention collective": "'IDCC1486'",
             "contrat salarié . mise à la retraite": "non",
             "contrat salarié . travailleur handicapé": "non",
+            "préavis de retraite": "non",
           })
           .evaluate("contrat salarié . préavis de retraite");
 
@@ -51,6 +52,7 @@ describe("Préavis retraite pour la CC 1486", () => {
               "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle": `'${category}'`,
               "contrat salarié . mise à la retraite": "oui",
               "contrat salarié . travailleur handicapé": "non",
+              "préavis de retraite": "non",
             })
             .evaluate("contrat salarié . préavis de retraite");
 

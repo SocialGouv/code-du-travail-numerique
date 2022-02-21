@@ -23,6 +23,7 @@ test("Vérification des références juridiques pour un employéen en depart à 
       "contrat salarié . convention collective . bad . catégorie professionnelle": `'A, B, C ou D'`,
       "contrat salarié . mise à la retraite": "non",
       "contrat salarié . travailleur handicapé": "non",
+      "préavis de retraite": "non",
     })
   );
 
@@ -45,6 +46,7 @@ test.each`
         "contrat salarié . convention collective . bad . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
+        "préavis de retraite": "non",
       })
     );
 

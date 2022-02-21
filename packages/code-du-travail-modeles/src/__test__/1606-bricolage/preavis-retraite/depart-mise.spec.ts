@@ -73,6 +73,7 @@ describe("Convention collective 1606", () => {
           "contrat salarié . convention collective": "'IDCC1606'",
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
+          "préavis de retraite": "non",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
@@ -125,6 +126,7 @@ describe("Convention collective 1606", () => {
           "contrat salarié . convention collective . bricolage . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
+          "préavis de retraite": "non",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"

@@ -37,6 +37,7 @@ describe("Préavis de retraite de la CC 1740", () => {
           "contrat salarié . convention collective": "'IDCC1740'",
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
+          "préavis de retraite": "non",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
@@ -68,6 +69,7 @@ describe("Préavis de retraite de la CC 1740", () => {
           "contrat salarié . convention collective": "'IDCC1740'",
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
+          "préavis de retraite": "non",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
@@ -93,6 +95,7 @@ describe("Préavis de retraite de la CC 1740", () => {
           "contrat salarié . convention collective": "'IDCC1740'",
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
+          "préavis de retraite": "non",
         })
       );
       expect(notifications).toHaveLength(1);
@@ -107,6 +110,7 @@ describe("Préavis de retraite de la CC 1740", () => {
           "contrat salarié . convention collective": "'IDCC1740'",
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
+          "préavis de retraite": "non",
         })
       );
       expect(notifications).toHaveLength(1);
