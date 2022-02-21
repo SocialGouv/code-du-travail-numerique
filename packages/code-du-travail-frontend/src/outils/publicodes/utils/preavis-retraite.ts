@@ -29,6 +29,9 @@ export const mapToPublicodesSituationForPreavisDeRetraite = (
     ...formWithoutCcn,
     ...seniority,
     ...agreement,
+    ...{
+      "préavis de retraite": "oui",
+    },
   };
 };
 

@@ -21,5 +21,8 @@ export const mapToPublicodesSituationForIndemniteLicenciement = (
       "contrat salarié - salaire de référence": formatNumber(salaireRef),
     },
     ...agreement,
+    ...{
+      "indemnité de licenciement": "oui",
+    },
   };
 };

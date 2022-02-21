@@ -21,7 +21,7 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
     publicodesContext.setSituation(
       mapToPublicodesSituationForPreavisDeRetraite(form.getState().values)
     );
-  });
+  }, []);
 
   return (
     <>
