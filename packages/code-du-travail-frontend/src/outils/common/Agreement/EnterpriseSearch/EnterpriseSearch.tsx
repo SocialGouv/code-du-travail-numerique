@@ -5,6 +5,7 @@ import { Enterprise } from "../../../../conventions/Search/api/enterprises.servi
 import { Agreement } from "../../../../conventions/Search/api/type";
 import { SearchParams } from "../../../ConventionCollective/common/NavContext";
 import { EnterpriseSearchStep } from "../../../ConventionCollective/steps/EnterpriseSearch";
+import { TrackingProps } from "../../../ConventionCollective/types";
 import { ErrorField } from "../../ErrorField";
 import { required } from "../../validators";
 import { ENTERPRISE_NAME } from "../form-constants";
@@ -18,12 +19,13 @@ export type Props = {
   selectedEnterprise?: Enterprise;
   selectedAgreement?: Agreement;
   onSelectAgreement: OnSelectAgreementFn;
-};
+} & TrackingProps;
 
 const EnterpriseSearch = ({
   supportedAgreements,
   selectedEnterprise,
   onSelectAgreement,
+  onUserAction,
 }: Props): JSX.Element => {
   const [enterprise, setEnterprise] = useState<Enterprise | undefined>(
     selectedEnterprise
@@ -75,6 +77,7 @@ const EnterpriseSearch = ({
         onSearchParamsChange={(params) => {
           setSearchParams(params);
         }}
+        onUserAction={onUserAction}
       />
       <ErrorField
         name={ENTERPRISE_NAME}

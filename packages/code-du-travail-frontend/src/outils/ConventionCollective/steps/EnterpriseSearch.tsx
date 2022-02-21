@@ -15,9 +15,9 @@ import { Enterprise } from "../../../conventions/Search/api/enterprises.service"
 import { InlineError } from "../../common/ErrorField";
 import { HelpModal } from "../common/Modal";
 import { ListItem, ResultList } from "../common/ResultList";
-import { useTrackingContext } from "../common/TrackingContext";
 import { EnterpriseButton } from "../enterprise/EnterpriseButton";
 import { SearchEnterprise, SearchParams } from "../enterprise/SearchEnterprise";
+import { TrackingProps, UserAction } from "../types";
 
 type EnterpriseSearchStepProps = {
   embeddedForm: boolean;
@@ -28,7 +28,7 @@ type EnterpriseSearchStepProps = {
   ) => void;
   searchParams?: SearchParams;
   onSearchParamsChange: (params: SearchParams) => void;
-};
+} & TrackingProps;
 
 const EnterpriseSearchStep = ({
   onBackClick,
@@ -36,12 +36,12 @@ const EnterpriseSearchStep = ({
   searchParams,
   onSearchParamsChange,
   embeddedForm,
+  onUserAction,
 }: EnterpriseSearchStepProps): JSX.Element => {
-  const { trackEvent, uuid, title } = useTrackingContext();
   const refInput = useRef<HTMLDivElement>();
 
   function openModalHandler(openModal: () => void) {
-    trackEvent("cc_search_help", "click_cc_search_help_p2", title, uuid);
+    onUserAction(UserAction.OpenEnterpriseHelp);
     openModal();
   }
 
@@ -49,6 +49,7 @@ const EnterpriseSearchStep = ({
     <>
       <SearchEnterprise
         embeddedForm={embeddedForm}
+        onUserAction={onUserAction}
         searchParams={
           searchParams ?? {
             address: "",
@@ -98,6 +99,7 @@ const EnterpriseSearchStep = ({
                           onClick={() =>
                             handleEnterpriseSelection(item, params)
                           }
+                          onUserAction={onUserAction}
                         />
                       </ListItem>
                     );
