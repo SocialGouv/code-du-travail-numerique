@@ -16,7 +16,7 @@ type Props = {
 export const SearchEnterpriseInput = React.forwardRef(
   function _SearchEnterpriseInput(
     { query = "", address = "", onChange, embeddedForm = true }: Props,
-    ref: ForwardedRef<HTMLDivElement>
+    ref: ForwardedRef<HTMLFormElement>
   ): JSX.Element {
     return (
       <>

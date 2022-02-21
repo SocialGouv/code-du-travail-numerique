@@ -39,7 +39,7 @@ const EnterpriseSearchStep = ({
   embeddedForm,
   onUserAction,
 }: EnterpriseSearchStepProps): JSX.Element => {
-  const refInput = useRef<HTMLDivElement>();
+  const refInput = useRef<HTMLFormElement>();
 
   function openModalHandler(openModal: () => void) {
     onUserAction(UserAction.OpenEnterpriseHelp);
@@ -58,7 +58,7 @@ const EnterpriseSearchStep = ({
           }
         }
         onSearchParamsChange={onSearchParamsChange}
-        inputRef={refInput as MutableRefObject<HTMLDivElement>}
+        inputRef={refInput as MutableRefObject<HTMLFormElement>}
         renderResults={(state, params) => {
           if (refInput.current && state.data && !state.isLoading) {
             refInput.current.scrollIntoView({ behavior: "smooth" });

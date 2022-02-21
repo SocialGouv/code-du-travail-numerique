@@ -14,7 +14,7 @@ type Props = {
     renderProps: FetchReducerState<Enterprise[]>,
     params: SearchParams
   ) => JSX.Element;
-  inputRef: ForwardedRef<HTMLDivElement>;
+  inputRef: ForwardedRef<HTMLFormElement>;
   searchParams: SearchParams;
   onSearchParamsChange: (params: SearchParams) => void;
 } & TrackingProps;
