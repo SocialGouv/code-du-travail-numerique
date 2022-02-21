@@ -97,7 +97,9 @@ describe("AgreementSearch", () => {
         />
       );
       getByText("Submit").click();
-      expect(getByText(/Vous devez répondre à cette question/)).toBeDefined();
+      expect(
+        getByText(/Vous devez séléctionner une convention collective/)
+      ).toBeDefined();
     });
   });
 

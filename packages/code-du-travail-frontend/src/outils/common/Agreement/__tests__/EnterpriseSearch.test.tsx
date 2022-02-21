@@ -106,7 +106,7 @@ describe("EnterpriseSearch", () => {
       );
       getByText("Submit").click();
       expect(
-        queryByText(/Vous devez répondre à cette question/)
+        queryByText(/Vous devez séléctionner une entreprise/)
       ).toBeInTheDocument();
     });
   });
