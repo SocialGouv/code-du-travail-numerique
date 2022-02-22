@@ -47,7 +47,10 @@ export const Situation: React.FC<Props> = ({ content, elements }) => {
       content.infos["contrat salarié - travailleur handicapé"] === "oui"
     ) {
       if (content["contrat salarié - mise à la retraite"] === "oui") {
-        if (content.ccn && supportedCcn.includes(content.ccn.num)) {
+        if (
+          content.ccn &&
+          supportedCcn.map((v) => v.idcc).includes(content.ccn.num)
+        ) {
           return [
             <Text key="handicap">
               Le salarié étant reconnu en tant que travailleur handicapé, la

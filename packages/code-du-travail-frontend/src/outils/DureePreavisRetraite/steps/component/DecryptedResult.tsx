@@ -6,20 +6,20 @@ import React from "react";
 import { SectionTitle } from "../../../common/stepStyles";
 import { FormContent } from "../../../common/type/WizardType";
 import {
-  PublicodesContextInterface,
+  PublicodesPreavisRetraiteResult,
   PublicodesResult,
+  usePublicodes,
 } from "../../../publicodes";
 
 type Props = {
   data: FormContent;
-  publicodesContext: PublicodesContextInterface;
 };
 
 const ShowResult: React.FC<{
   result: PublicodesResult;
   agreementMaximumResult: PublicodesResult | null;
 }> = ({ result, agreementMaximumResult }) => {
-  if (result.value > 0) {
+  if (result?.value && result.value > 0) {
     return (
       <strong>
         {agreementMaximumResult?.value &&
@@ -47,7 +47,7 @@ const ShowResultAgreement: React.FC<{
   if (!result) {
     return <strong>convention collective non renseignée</strong>;
   }
-  if (result && result.value > 0) {
+  if (result?.value && result.value > 0) {
     return (
       <ShowResult
         result={result}
@@ -89,9 +89,9 @@ type RootData = {
 
 export const createRootData = (
   data: Partial<FormContent>,
-  result: PublicodesResult,
-  legalResult: PublicodesResult,
-  agreementResult: PublicodesResult | null,
+  result: PublicodesPreavisRetraiteResult,
+  legalResult: PublicodesPreavisRetraiteResult,
+  agreementResult: PublicodesPreavisRetraiteResult | null,
   supportedCcn: AgreementInfo[]
 ): RootData => {
   let agreement: Agreement | null = null;
@@ -110,17 +110,20 @@ export const createRootData = (
   }
   let noticeUsed = NoticeUsed.none;
   if (
-    (legalResult.valueInDays > 0 &&
+    (legalResult.valueInDays &&
+      legalResult.valueInDays > 0 &&
       legalResult.valueInDays === agreementResult?.valueInDays) ??
     -1
   ) {
     noticeUsed = NoticeUsed.same;
   } else if (
+    result.valueInDays &&
     result.valueInDays > 0 &&
     result.valueInDays === legalResult.valueInDays
   ) {
     noticeUsed = NoticeUsed.legal;
   } else if (
+    result.valueInDays &&
     result.valueInDays > 0 &&
     result.valueInDays === agreementResult?.valueInDays
   ) {
@@ -179,7 +182,8 @@ export const getDescription = (data: RootData): string | null => {
   }
 };
 
-const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
+const DecryptedResult: React.FC<Props> = ({ data }) => {
+  const publicodesContext = usePublicodes<PublicodesPreavisRetraiteResult>();
   const legalResult = publicodesContext.execute(
     "contrat salarié . préavis de retraite légale en jours"
   );

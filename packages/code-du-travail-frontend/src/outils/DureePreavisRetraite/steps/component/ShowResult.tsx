@@ -6,13 +6,14 @@ import {
   SectionTitle,
   SmallText,
 } from "../../../common/stepStyles";
-import { PublicodesContextInterface } from "../../../publicodes";
+import {
+  PublicodesPreavisRetraiteResult,
+  usePublicodes,
+} from "../../../publicodes";
 
-type Props = {
-  publicodesContext: PublicodesContextInterface;
-};
+const ShowResult: React.FC = () => {
+  const publicodesContext = usePublicodes<PublicodesPreavisRetraiteResult>();
 
-const ShowResult: React.FC<Props> = ({ publicodesContext }) => {
   const type =
     publicodesContext.situation.find(
       (item) => item.name === "contrat salarié - mise à la retraite"
@@ -24,30 +25,33 @@ const ShowResult: React.FC<Props> = ({ publicodesContext }) => {
   const agreementMaximumResult = publicodesContext.execute(
     "contrat salarié . préavis de retraite collective maximum en jours"
   );
+  const legalResult = publicodesContext.execute(
+    "contrat salarié . préavis de retraite légale en jours"
+  );
 
   return (
     <>
       <SectionTitle>Préavis de {type} à la retraite</SectionTitle>
       <p>
         À partir des éléments que vous avez saisis
-        {publicodesContext.result.value > 0
+        {legalResult.value > 0
           ? `, la durée du préavis en cas de ${type} à la retraite est estimée à`
           : ""}
         &nbsp;:{" "}
         <HighlightResult>
           {agreementMaximumResult?.value &&
-          agreementMaximumResult?.value !== publicodesContext.result.value ? (
+          agreementMaximumResult?.value !== legalResult.value ? (
             <>
-              entre&nbsp;{publicodesContext.result.value}&nbsp;
-              {publicodesContext.result.unit}&nbsp;et&nbsp;
+              entre&nbsp;{legalResult.value}&nbsp;
+              {legalResult.unit}&nbsp;et&nbsp;
               {agreementMaximumResult?.value}&nbsp;
               {agreementMaximumResult?.unit}
             </>
-          ) : publicodesContext.result.value > 0 ? (
+          ) : legalResult.value > 0 ? (
             <>
-              {publicodesContext.result.value}
+              {legalResult.value}
               &nbsp;
-              {publicodesContext.result.unit}
+              {legalResult.unit}
             </>
           ) : (
             <>il n’y a pas de préavis à effectuer</>

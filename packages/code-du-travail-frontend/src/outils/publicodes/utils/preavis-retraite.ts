@@ -1,13 +1,12 @@
-import { References } from "@socialgouv/modeles-social/bin/utils/GetReferences";
+import { FormContent } from "../../common/type/WizardType";
+import {
+  PublicodesConvertedUnit,
+  PublicodesPreavisRetraiteResult,
+} from "../types/preavis-retraite";
+import { isFloat } from ".";
+import { formatSeniority } from "./common";
 
-import { FormContent } from "../common/type/WizardType";
-import { formatSeniority } from "../DureePreavisRetraite/steps/utils";
-import { PublicodesResult, PublicodesUnit } from "./index";
-
-/**
- * Take the form values from react-final-form and transform to a flat object for publicodes.
- */
-export const mapToPublicodesSituation = (
+export const mapToPublicodesSituationForPreavisDeRetraite = (
   form: FormContent
 ): Record<string, string> => {
   const { ccn, infos, seniorityMaximum, seniorityValue, ...formWithoutCcn } =
@@ -29,21 +28,16 @@ export const mapToPublicodesSituation = (
     ...infos,
     ...formWithoutCcn,
     ...seniority,
-    ...Object.assign({}, agreement),
+    ...agreement,
+    // ...{
+    //   "préavis de retraite": "oui",
+    // },
   };
 };
 
-export const reverseValues = (
-  values: Record<string, string>
-): Record<string, string> =>
-  Object.entries(values).reduce((state, [key, value]) => {
-    state[value] = key;
-    return state;
-  }, {});
-
 export const convertDaysIntoBetterUnit = (
   days: string | number
-): PublicodesResult => {
+): PublicodesPreavisRetraiteResult => {
   const parsedDay = typeof days === "string" ? parseFloat(days) : days;
   const isDay = parsedDay === 1;
   const isConvertibleIntoWeek = parsedDay % 7 === 0;
@@ -51,7 +45,9 @@ export const convertDaysIntoBetterUnit = (
     const parsedWeek = parsedDay / 7;
     const isWeek = parsedWeek === 1;
     return {
-      unit: isWeek ? PublicodesUnit.WEEK : PublicodesUnit.WEEKS,
+      unit: isWeek
+        ? PublicodesConvertedUnit.WEEK
+        : PublicodesConvertedUnit.WEEKS,
       value: parsedWeek,
       valueInDays: parsedDay,
     };
@@ -62,29 +58,14 @@ export const convertDaysIntoBetterUnit = (
   if (isConvertibleIntoMonth) {
     const parsedMonth = Math.round(parsedDay / (365 / 12));
     return {
-      unit: PublicodesUnit.MONTH,
+      unit: PublicodesConvertedUnit.MONTH,
       value: parsedMonth,
       valueInDays: parsedDay,
     };
   }
   return {
-    unit: isDay ? PublicodesUnit.DAY : PublicodesUnit.DAYS,
+    unit: isDay ? PublicodesConvertedUnit.DAY : PublicodesConvertedUnit.DAYS,
     value: parsedDay,
     valueInDays: parsedDay,
   };
 };
-
-export function isFloat(n: number): boolean {
-  return Number(n) === n && n % 1 !== 0;
-}
-
-type OldReference = {
-  ref: string;
-  refUrl: string;
-};
-
-export function formatRefs(refs: Array<OldReference>): Array<References> {
-  return refs.map((ref) => {
-    return { article: ref.ref, url: ref.refUrl };
-  });
-}

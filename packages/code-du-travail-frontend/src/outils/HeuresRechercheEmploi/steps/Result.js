@@ -12,7 +12,7 @@ import {
   recapSituation,
 } from "../../common/situations.utils";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
-import { formatRefs } from "../../publicodes/Utils";
+import { formatRefs } from "../../publicodes";
 
 function Duration({ situation }) {
   if (!situation.answer) {
