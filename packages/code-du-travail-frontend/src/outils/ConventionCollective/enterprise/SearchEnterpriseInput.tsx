@@ -1,4 +1,11 @@
-import { Input, Label, Paragraph, Text, theme } from "@socialgouv/cdtn-ui";
+import {
+  Input,
+  Label,
+  Paragraph,
+  Section as SectionUi,
+  Text,
+  theme,
+} from "@socialgouv/cdtn-ui";
 import React, { ForwardedRef } from "react";
 import styled from "styled-components";
 
@@ -19,7 +26,7 @@ export const SearchEnterpriseInput = React.forwardRef(
     ref: ForwardedRef<HTMLFormElement>
   ): JSX.Element {
     return (
-      <>
+      <Section>
         <ParagraphNoMarginBottom fontWeight="600" fontSize="default">
           Précisez et sélectionnez votre entreprise
         </ParagraphNoMarginBottom>
@@ -71,13 +78,28 @@ export const SearchEnterpriseInput = React.forwardRef(
             </Box>
           </Flex>
         </EmbeddedInForm>
-      </>
+      </Section>
     );
   }
 );
+
+const Section = styled(SectionUi)`
+  padding-top: 0;
+`;
+
+const ParagraphNoMarginBottom = styled(Paragraph)`
+  margin-bottom: 0;
+`;
+
 const BlockInput = styled(Input)`
   padding-top: ${theme.spacings.small};
   width: 100%;
+`;
+
+const BlockLabel = styled(Label)`
+  display: block;
+  font-weight: 400;
+  padding-bottom: 0;
 `;
 
 const Flex = styled.div`
@@ -87,16 +109,6 @@ const Flex = styled.div`
   @media (max-width: ${theme.breakpoints.mobile}) {
     flex-direction: column;
   }
-`;
-
-const BlockLabel = styled(Label)`
-  display: block;
-  font-weight: 400;
-  padding-bottom: 0;
-`;
-
-const ParagraphNoMarginBottom = styled(Paragraph)`
-  margin-bottom: 0;
 `;
 
 const Box = styled.div`

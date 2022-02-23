@@ -32,7 +32,7 @@ export const SearchAgreementInput = React.forwardRef(
     ref: ForwardedRef<HTMLFormElement>
   ): JSX.Element {
     return (
-      <>
+      <Section>
         <ParagraphNoMarginBottom fontWeight="600" fontSize="default">
           Précisez et sélectionnez votre convention collective
         </ParagraphNoMarginBottom>
@@ -71,22 +71,24 @@ export const SearchAgreementInput = React.forwardRef(
             autoComplete="off"
           />
         </EmbeddedInForm>
-      </>
+      </Section>
     );
   }
 );
-
+const Section = styled(SectionUi)`
+  padding-top: 0;
+`;
 const ParagraphNoMarginBottom = styled(Paragraph)`
   margin-bottom: 0;
+`;
+
+const BlockInput = styled(Input)`
+  padding-top: ${theme.spacings.small};
+  width: 100%;
 `;
 
 const BlockLabel = styled(Label)`
   display: block;
   font-weight: 400;
   padding-bottom: 0;
-`;
-
-const BlockInput = styled(Input)`
-  padding-top: ${theme.spacings.base};
-  width: 100%;
 `;
