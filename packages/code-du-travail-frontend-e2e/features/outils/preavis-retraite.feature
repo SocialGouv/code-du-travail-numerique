@@ -66,7 +66,7 @@ Fonctionnalité: Outil - Préavis de retraite
     Alors je vois "Quel est le nom de la convention collective applicable ?"
     Quand je clique sur "Suivant"
     Alors je vois "Vous devez répondre à cette question"
-    Quand je choisis "Je connais ma convention collective"
+    Quand je choisis "Je sais quelle est ma convention collective"
     Alors je vois "Précisez et sélectionnez votre convention collective"
     Quand je renseigne "843" dans le champ "Nom de la convention collective ou son numéro d’identification IDCC"
     Alors j'attends que le texte "Boulangerie" apparaisse
@@ -110,7 +110,7 @@ Fonctionnalité: Outil - Préavis de retraite
     Alors je vois "Quel est le nom de la convention collective applicable ?"
     Quand je clique sur "Suivant"
     Alors je vois "Vous devez répondre à cette question"
-    Quand je choisis "Je ne connais pas ma convention collective"
+    Quand je choisis "Je ne sais pas quelle est ma convention collective"
     Alors je vois "Précisez et sélectionnez votre entreprise"
     Quand je renseigne "michelin" dans le champ "Nom de votre entreprise ou numéro Siret (obligatoire)"
     Quand j'attends que le texte "MANUFACTURE FRANCAISE DES PNEUMATIQUES" apparaisse
