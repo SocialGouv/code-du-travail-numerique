@@ -54,7 +54,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
 
 .c3 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
@@ -386,7 +386,7 @@ exports[`<StepInformations /> should render groupe 1`] = `
 
 .c3 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 

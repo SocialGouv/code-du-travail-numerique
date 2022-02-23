@@ -3,7 +3,7 @@
 exports[`<Salaire /> renders 1`] = `
 .c4 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
@@ -253,7 +253,7 @@ exports[`<Salaire /> renders 1`] = `
 exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
 .c4 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
@@ -556,7 +556,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
 exports[`<Salaire /> renders a table of fields of type number 1`] = `
 .c4 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
@@ -1165,7 +1165,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
 exports[`<Salaire /> renders an input field of type number 1`] = `
 .c4 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 

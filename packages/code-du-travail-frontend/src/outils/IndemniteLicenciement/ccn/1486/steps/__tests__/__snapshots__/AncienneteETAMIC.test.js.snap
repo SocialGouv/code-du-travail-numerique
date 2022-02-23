@@ -3,7 +3,7 @@
 exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideration 1`] = `
 .c5 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
@@ -606,7 +606,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 exports[`<AncienneteETAMIC /> renders 1`] = `
 .c5 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 

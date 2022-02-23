@@ -19,7 +19,7 @@ exports[`<Anciennete /> renders AncienneteCE component with initialValues CATEGO
 exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
 .c5 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 

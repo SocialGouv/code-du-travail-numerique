@@ -3,7 +3,7 @@
 exports[`<StepInfosGenerales /> should render 1`] = `
 .c1 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
@@ -151,7 +151,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
 exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 .c1 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
@@ -494,7 +494,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] = `
 .c1 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
@@ -837,7 +837,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
 exports[`<StepInfosGenerales /> should render with CTT 1`] = `
 .c1 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 

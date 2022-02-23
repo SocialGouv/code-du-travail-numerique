@@ -26,8 +26,11 @@ const ShowAlert = ({
         </Paragraph>
         <Paragraph noMargin>
           La convention collective sélectionnée n&apos;est pas traitée dans ce
-          simulateur. Vous pouvez tout de même poursuivre la simulation pour
-          connaitre la durée prévue par le code du travail.
+          simulateur.
+        </Paragraph>
+        <Paragraph noMargin>
+          Vous pouvez tout de même poursuivre la simulation pour connaitre la
+          durée prévue par le code du travail.
         </Paragraph>
       </Alert>
     );

@@ -19,7 +19,7 @@ const ShowAlert = ({ route }: ShowAlertProps): JSX.Element => {
             fontWeight="700"
             noMargin
           >
-            À noter
+            Attention
           </Paragraph>
           <Paragraph noMargin>
             Vous pouvez passer cette étape et poursuivre la simulation qui vous

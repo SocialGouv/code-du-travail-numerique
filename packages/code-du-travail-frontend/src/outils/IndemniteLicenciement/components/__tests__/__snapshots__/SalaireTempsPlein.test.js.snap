@@ -3,7 +3,7 @@
 exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
 .c3 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
@@ -298,7 +298,7 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
 exports[`<SalaireTempsPlein /> should render 1`] = `
 .c3 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 

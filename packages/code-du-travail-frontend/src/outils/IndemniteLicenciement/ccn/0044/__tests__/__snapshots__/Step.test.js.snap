@@ -16,7 +16,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
 
 .c4 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
@@ -563,7 +563,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
 
 .c4 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
@@ -1252,7 +1252,7 @@ exports[`<Step /> should render 1`] = `
 
 .c4 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 

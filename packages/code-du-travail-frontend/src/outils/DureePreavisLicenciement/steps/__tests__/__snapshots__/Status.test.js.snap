@@ -3,7 +3,7 @@
 exports[`<StepStatus /> should render 1`] = `
 .c1 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
@@ -218,7 +218,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 
 .c1 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
@@ -682,7 +682,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 exports[`<StepStatus /> should render seriousMisconduct 1`] = `
 .c1 {
   color: #3e486e;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 

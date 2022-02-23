@@ -31,18 +31,20 @@ export const SearchEnterpriseInput = React.forwardRef(
         >
           <Flex>
             <Box ref={ref}>
-              <InlineLabel htmlFor="enterprise-search">
+              <BlockLabel htmlFor="enterprise-search">
                 Nom de votre entreprise ou numéro Siret{" "}
                 <Text fontWeight="400">(obligatoire)</Text>
-              </InlineLabel>
-              <InfoBulle title={"Qu’est ce qu’un n°siret ?"}>
-                <p>
-                  Le numéro Siret est un <strong>numéro de 14 chiffres</strong>{" "}
-                  unique pour chaque entreprise. Il est présent sur la{" "}
-                  <strong>fiche de paie du salarié</strong>.<br />
-                  Ex : 40123778000127
-                </p>
-              </InfoBulle>
+                <InfoBulle title={"Qu’est ce qu’un n°siret ?"}>
+                  <p>
+                    Le numéro Siret est un{" "}
+                    <strong>numéro de 14 chiffres</strong> unique pour chaque
+                    entreprise. Il est présent sur la{" "}
+                    <strong>fiche de paie du salarié</strong>.<br />
+                    Ex : 40123778000127
+                  </p>
+                </InfoBulle>
+              </BlockLabel>
+
               <BlockInput
                 placeholder="Ex : Café de la gare ou 40123778000127"
                 value={query}
@@ -54,9 +56,9 @@ export const SearchEnterpriseInput = React.forwardRef(
               />
             </Box>
             <Box>
-              <InlineLabel htmlFor="enterprise-search-address">
+              <BlockLabel htmlFor="enterprise-search-address">
                 Code postal ou ville
-              </InlineLabel>
+              </BlockLabel>
               <BlockInput
                 placeholder="Ex : 31000 ou Toulouse "
                 value={address}
@@ -74,7 +76,7 @@ export const SearchEnterpriseInput = React.forwardRef(
   }
 );
 const BlockInput = styled(Input)`
-  padding-top: ${theme.spacings.base};
+  padding-top: ${theme.spacings.small};
   width: 100%;
 `;
 
@@ -87,8 +89,10 @@ const Flex = styled.div`
   }
 `;
 
-const InlineLabel = styled(Label)`
-  display: inline;
+const BlockLabel = styled(Label)`
+  display: block;
+  font-weight: 400;
+  padding-bottom: 0;
 `;
 
 const ParagraphNoMarginBottom = styled(Paragraph)`

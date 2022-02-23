@@ -43,7 +43,9 @@ const RouteSelection = ({ form }: Props): JSX.Element => {
           {(props) => (
             <InputRadio
               label={
-                <Text>Je connais ma convention collective (je la saisis)</Text>
+                <Text>
+                  Je sais quelle est ma convention collective (je la saisis)
+                </Text>
               }
               id={`agreement`}
               {...props.input}
@@ -60,7 +62,8 @@ const RouteSelection = ({ form }: Props): JSX.Element => {
             <InputRadio
               label={
                 <Text>
-                  Je ne connais pas ma convention collective (je la recherche)
+                  Je ne sais pas quelle est ma convention collective (je la
+                  recherche)
                 </Text>
               }
               id={`enterprise`}

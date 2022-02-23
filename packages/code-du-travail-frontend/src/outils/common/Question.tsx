@@ -31,7 +31,7 @@ export const Question = ({
   const [isLocalTooltipOpen, setIsLocalToolTipOpen] = React.useState(false);
   return (
     <LabelBlock htmlFor={htmlFor} {...otherProps}>
-      <Text fontWeight="600" fontSize="default">
+      <Text fontWeight="600" fontSize="hsmall">
         {children}
       </Text>
       {required && <Text>&nbsp;(obligatoire)</Text>}
