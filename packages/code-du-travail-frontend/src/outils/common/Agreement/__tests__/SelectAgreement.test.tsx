@@ -35,13 +35,13 @@ describe("SelectAgreement", () => {
       expect(
         getByRole("radio", {
           checked: false,
-          name: /Je connais ma convention collective/,
+          name: /Je sais quelle est ma convention collective/,
         })
       ).toBeInTheDocument();
       expect(
         getByRole("radio", {
           checked: false,
-          name: /Je ne connais pas ma convention collective/,
+          name: /Je ne sais pas quelle est ma convention collective/,
         })
       ).toBeInTheDocument();
     });
@@ -61,7 +61,7 @@ describe("SelectAgreement", () => {
       expect(
         getByRole("radio", {
           checked: true,
-          name: /Je connais ma convention collective/,
+          name: /Je sais quelle est ma convention collective/,
         })
       ).toBeInTheDocument();
       expect(
