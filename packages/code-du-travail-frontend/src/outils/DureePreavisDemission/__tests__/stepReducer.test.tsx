@@ -1,3 +1,4 @@
+import { ActionName } from "../../common/type/WizardType";
 import { initialState, stepReducer } from "../stepReducer";
 
 describe("initialSteps", () => {
@@ -10,13 +11,19 @@ describe("initialSteps", () => {
     ]);
   });
   it("handles reset action", () => {
-    expect(stepReducer({}, { payload: undefined, type: "reset" })).toEqual(
-      initialState
-    );
+    expect(
+      stepReducer(
+        {
+          stepIndex: 1,
+          steps: [],
+        },
+        { type: ActionName.reset }
+      )
+    ).toEqual(initialState);
   });
   it("handles setIndex action", () => {
     expect(
-      stepReducer(initialState, { payload: 1, type: "setStepIndex" })
+      stepReducer(initialState, { payload: 1, type: ActionName.setStepIndex })
     ).toEqual({ stepIndex: 1, steps: initialState.steps });
   });
 });

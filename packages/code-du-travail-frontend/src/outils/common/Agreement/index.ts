@@ -1,3 +1,4 @@
 import SelectAgreement from "./SelectAgreement";
+import { pushAgreementEvents } from "./tracking";
 
-export { SelectAgreement };
+export { pushAgreementEvents, SelectAgreement };

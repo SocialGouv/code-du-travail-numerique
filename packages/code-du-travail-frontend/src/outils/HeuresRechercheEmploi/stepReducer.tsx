@@ -1,6 +1,7 @@
 import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 
-import { skipStep } from "../common/situations.utils";
+import { pushAgreementEvents } from "../common";
+import { getSupportedCC, skipStep } from "../common/situations.utils";
 import {
   Action,
   ActionName,
@@ -25,6 +26,9 @@ export const initialState = {
       component: AgreementStep,
       label: "Convention collective",
       name: "info_cc",
+      onStepDone: (title: string, data: FormContent): void => {
+        pushAgreementEvents(title, data.ccn, getSupportedCC(data.situations));
+      },
     },
     {
       component: StepTypeRupture,
