@@ -17,19 +17,16 @@ function renderProvider({ children }: { children: React.ReactNode }) {
 
 describe("Publicodes Context", () => {
   it("should render the provider", () => {
-    const children = <p>Hello</p>;
-    const { container } = renderProvider({ children });
-    expect(container.getElementsByTagName("p").item(0)).toHaveTextContent(
-      "Hello"
-    );
+    renderProvider({ children: <p data-testid="text">Hello</p> });
+    expect(screen.getByTestId("text")).toHaveTextContent("Hello");
   });
 
   it("should render no result", () => {
-    const { container } = renderProvider({
+    renderProvider({
       children: (
         <PublicodesContext.Consumer>
           {(result) => (
-            <p>
+            <p data-testid="text">
               {
                 result?.execute(
                   "contrat salarié . préavis de retraite collective en jours"
@@ -40,11 +37,11 @@ describe("Publicodes Context", () => {
         </PublicodesContext.Consumer>
       ),
     });
-    expect(container.getElementsByTagName("p").item(0)).toHaveTextContent("0");
+    expect(screen.getByTestId("text")).toHaveTextContent("0");
   });
 
   it("should render a result", () => {
-    const { container } = renderProvider({
+    renderProvider({
       children: (
         <PublicodesContext.Consumer>
           {(result) => (
@@ -62,7 +59,7 @@ describe("Publicodes Context", () => {
                   });
                 }}
               />
-              <p>
+              <p data-testid="text">
                 {
                   result?.execute(
                     "contrat salarié . préavis de retraite collective en jours"
@@ -74,9 +71,9 @@ describe("Publicodes Context", () => {
         </PublicodesContext.Consumer>
       ),
     });
-    expect(container.getElementsByTagName("p").item(0)).toHaveTextContent("0");
+    expect(screen.getByTestId("text")).toHaveTextContent("0");
     const setButton = screen.getByTestId("setSituation");
     fireEvent.click(setButton);
-    expect(container.getElementsByTagName("p").item(0)).toHaveTextContent("3");
+    expect(screen.getByTestId("text")).toHaveTextContent("3");
   });
 });
