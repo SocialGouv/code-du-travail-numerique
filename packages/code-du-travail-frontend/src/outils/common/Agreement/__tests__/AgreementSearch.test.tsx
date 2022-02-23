@@ -198,9 +198,7 @@ describe("AgreementSearch", () => {
           props={dataWithSelectedAgreementNotFullySupported}
         />
       );
-      expect(
-        getByText(/À noter : convention prochainement traitée/)
-      ).toBeInTheDocument();
+      expect(getByText(/Convention prochainement traitée/)).toBeInTheDocument();
     });
   });
 
@@ -216,7 +214,7 @@ describe("AgreementSearch", () => {
         queryByText(/Convention collective non traitée/)
       ).not.toBeInTheDocument();
       expect(
-        queryByText(/À noter : convention prochainement traitée/)
+        queryByText(/Convention prochainement traitée/)
       ).not.toBeInTheDocument();
     });
   });

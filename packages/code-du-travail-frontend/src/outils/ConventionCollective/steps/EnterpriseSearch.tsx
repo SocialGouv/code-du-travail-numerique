@@ -167,19 +167,17 @@ const EnterpriseSearchStep = ({
       />
 
       {onBackClick && (
-        <Div>
-          <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
-            <Button
-              as="a"
-              small
-              type="button"
-              onClick={onBackClick}
-              variant="flat"
-            >
-              Précédent
-            </Button>
-          </Link>
-        </Div>
+        <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
+          <Button
+            as="a"
+            small
+            type="button"
+            onClick={onBackClick}
+            variant="flat"
+          >
+            Précédent
+          </Button>
+        </Link>
       )}
     </>
   );
@@ -189,8 +187,4 @@ export { EnterpriseSearchStep };
 
 const Section = styled(SectionUi)`
   padding-top: ${theme.spacings.small};
-`;
-
-const Div = styled.div`
-  padding-top: ${theme.spacings.larger};
 `;

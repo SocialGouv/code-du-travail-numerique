@@ -39,7 +39,7 @@ const ShowAlert = ({
     return (
       <Alert variant="primary">
         <Text variant="primary" fontSize="hsmall" fontWeight="700">
-          À noter&nbsp;: convention prochainement traitée
+          Convention prochainement traitée
         </Text>
         <Paragraph noMargin>
           Cette convention collective n&apos;est pas encore traitée par nos
