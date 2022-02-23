@@ -28,11 +28,19 @@ describe("Publicodes Context", () => {
     const { container } = renderProvider({
       children: (
         <PublicodesContext.Consumer>
-          {(result) => <p>{result?.result.value}</p>}
+          {(result) => (
+            <p>
+              {
+                result?.execute(
+                  "contrat salarié . préavis de retraite collective en jours"
+                )?.value
+              }
+            </p>
+          )}
         </PublicodesContext.Consumer>
       ),
     });
-    expect(container.getElementsByTagName("p").item(0)).toHaveTextContent("");
+    expect(container.getElementsByTagName("p").item(0)).toHaveTextContent("0");
   });
 
   it("should render a result", () => {
