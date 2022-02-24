@@ -23,8 +23,8 @@ const ShowAlert = ({ route }: ShowAlertProps): JSX.Element => {
           </Paragraph>
           <Paragraph noMargin>
             Vous pouvez passer cette étape et poursuivre la simulation qui vous
-            indiquera la durée du préavis prévue par le code du travail. Nous
-            vous recommandons de renseigner votre convention collective qui peut
+            fournira un résultat basé sur le code du travail. Nous vous
+            recommandons de renseigner votre convention collective qui peut
             prévoir un préavis plus favorable que celui défini par le code du
             travail.
           </Paragraph>

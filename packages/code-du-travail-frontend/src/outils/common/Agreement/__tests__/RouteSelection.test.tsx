@@ -49,7 +49,7 @@ describe("RouteSelection: Skip the agreement selection", () => {
 
       expect(
         getByText(
-          /Vous pouvez passer cette étape et poursuivre la simulation qui vous indiquera la durée du préavis prévue par le code du travail./
+          /Vous pouvez passer cette étape et poursuivre la simulation qui vous fournira un résultat basé sur le code du travail./
         )
       ).toBeInTheDocument();
     });
@@ -90,7 +90,7 @@ describe("RouteSelection: Skip the agreement selection", () => {
       ).toBeInTheDocument();
       expect(
         getByText(
-          /Vous pouvez passer cette étape et poursuivre la simulation qui vous indiquera la durée du préavis prévue par le code du travail./
+          /Vous pouvez passer cette étape et poursuivre la simulation qui vous fournira un résultat basé sur le code du travail./
         )
       ).toBeInTheDocument();
     });

@@ -29,8 +29,8 @@ const ShowAlert = ({
           services.
         </Paragraph>
         <Paragraph noMargin>
-          Vous pouvez tout de même poursuivre la simulation pour connaitre la
-          durée prévue par le code du travail.
+          Vous pouvez tout de même poursuivre la simulation qui vous fournira un
+          résultat basé sur le code du travail.
         </Paragraph>
       </Alert>
     );
