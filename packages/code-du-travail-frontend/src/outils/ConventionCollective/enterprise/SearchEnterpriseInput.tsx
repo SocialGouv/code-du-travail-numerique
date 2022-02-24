@@ -42,22 +42,21 @@ export const SearchEnterpriseInput = React.forwardRef(
         >
           <Flex>
             <Box ref={ref}>
-              <BlockLabel
+              <InlineLabel
                 htmlFor="enterprise-search"
                 embeddedForm={embeddedForm}
               >
                 Nom de votre entreprise ou numéro Siret{" "}
                 <Text fontWeight="400">(obligatoire)</Text>
-                <InfoBulle title={"Qu’est ce qu’un n°siret ?"}>
-                  <p>
-                    Le numéro Siret est un{" "}
-                    <strong>numéro de 14 chiffres</strong> unique pour chaque
-                    entreprise. Il est présent sur la{" "}
-                    <strong>fiche de paie du salarié</strong>.<br />
-                    Ex : 40123778000127
-                  </p>
-                </InfoBulle>
-              </BlockLabel>
+              </InlineLabel>
+              <InfoBulle title={"Qu’est ce qu’un n°siret ?"}>
+                <p>
+                  Le numéro Siret est un <strong>numéro de 14 chiffres</strong>{" "}
+                  unique pour chaque entreprise. Il est présent sur la{" "}
+                  <strong>fiche de paie du salarié</strong>.<br />
+                  Ex : 40123778000127
+                </p>
+              </InfoBulle>
 
               <BlockInput
                 placeholder="Ex : Café de la gare ou 40123778000127"
@@ -70,12 +69,12 @@ export const SearchEnterpriseInput = React.forwardRef(
               />
             </Box>
             <Box>
-              <BlockLabel
+              <InlineLabel
                 htmlFor="enterprise-search-address"
                 embeddedForm={embeddedForm}
               >
                 Code postal ou ville
-              </BlockLabel>
+              </InlineLabel>
               <BlockInput
                 placeholder="Ex : 31000 ou Toulouse "
                 value={address}
@@ -106,9 +105,8 @@ const BlockInput = styled(Input)`
   width: 100%;
 `;
 
-const BlockLabel = styled(Label)`
-  display: block;
-  padding-bottom: 0;
+const InlineLabel = styled(Label)`
+  display: inline;
   ${(props) => {
     if (!props.embeddedForm) {
       return css`
