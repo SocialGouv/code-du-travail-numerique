@@ -14,6 +14,7 @@ export type Step = {
   annotation?: () => JSX.Element;
   isForm?: boolean;
   hasNoMarginBottom?: boolean;
+  onStepDone?: (title: string, values: FormContent) => void;
 };
 
 export type State = {
@@ -33,6 +34,7 @@ export type Action =
 export type WizardStepProps = {
   form: FormApi<FormContent>;
   dispatch: React.Dispatch<Action>;
+  title: string;
 };
 
 export type AgreementRoute = "not-selected" | "agreement" | "enterprise";

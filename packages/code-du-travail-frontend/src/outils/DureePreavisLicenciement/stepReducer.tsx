@@ -1,7 +1,7 @@
 import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
-import React from "react";
 
-import { skipStep } from "../common/situations.utils";
+import { pushAgreementEvents } from "../common";
+import { getSupportedCC, skipStep } from "../common/situations.utils";
 import {
   Action,
   ActionName,
@@ -31,6 +31,9 @@ export const initialState = {
       component: AgreementStep,
       label: "Convention collective",
       name: "info_cc",
+      onStepDone: (title: string, values: FormContent): void => {
+        pushAgreementEvents(title, values.ccn, getSupportedCC(data.situations));
+      },
     },
     {
       component: StepInformations,

@@ -1,9 +1,16 @@
-import { Action, ActionName, State } from "../common/type/WizardType";
+import { pushAgreementEvents } from "../common";
+import {
+  Action,
+  ActionName,
+  FormContent,
+  State,
+} from "../common/type/WizardType";
 import { AgreementStep } from "./steps/AgreementStep";
 import { StepIndemnite } from "./steps/Indemnite";
 import { StepInfosGenerales } from "./steps/InfosGenerales";
 import { StepIntro } from "./steps/Introduction";
 import { StepRemuneration } from "./steps/Remuneration";
+import { getSupportedCCWithoutConventionalProvision } from "./steps/situation";
 
 export const initialState = {
   stepIndex: 0,
@@ -17,6 +24,13 @@ export const initialState = {
       component: AgreementStep,
       label: "Convention collective",
       name: "info_cc",
+      onStepDone: (title: string, data: FormContent): void => {
+        pushAgreementEvents(
+          title,
+          data.ccn,
+          getSupportedCCWithoutConventionalProvision()
+        );
+      },
     },
     {
       component: StepInfosGenerales,
