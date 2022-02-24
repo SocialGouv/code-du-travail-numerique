@@ -3,7 +3,6 @@ import {
   MatomoActionEvent,
   MatomoBaseEvent,
   MatomoSimulatorEvent,
-  trackConventionCollective,
   trackQuestion,
 } from "../matomo";
 
@@ -15,36 +14,6 @@ describe("Matomo", () => {
   beforeEach(() => {
     const ma = matopush as jest.MockedFunction<typeof matopush>;
     ma.mockReset();
-  });
-
-  describe("Convention collective", () => {
-    test.each`
-      path                                        | isTreated
-      ${"/outils/preavis-retraite"}               | ${1}
-      ${"/outils/preavis-demission"}              | ${1}
-      ${"/outils/preavis-licenciement"}           | ${1}
-      ${"/outils/indemnite-precarite"}            | ${1}
-      ${"/outils/heures-recherche-emploi"}        | ${1}
-      ${"/outils/poire"}                          | ${0}
-      ${""}                                       | ${0}
-      ${null}                                     | ${0}
-      ${"/outils/heures-recherche-emploi?q=test"} | ${1}
-    `(
-      "Sur $path, matomo doit être appelé $isTreated fois",
-      ({ isTreated, path }) => {
-        trackConventionCollective(
-          {
-            id: "id",
-            num: 1992,
-            shortTitle: "short",
-            slug: "slug",
-            title: "title",
-          },
-          path
-        );
-        expect(matopush).toHaveBeenCalledTimes(isTreated);
-      }
-    );
   });
 
   describe("Selection de la valeur sur les étapes dynamique", () => {

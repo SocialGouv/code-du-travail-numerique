@@ -8,13 +8,8 @@ import { stepReducer } from "../../IndemniteLicenciement/stepReducer";
 import { Wizard } from "../Wizard";
 
 jest.mock("../../../piwik", () => {
-  let events = [];
   return {
-    events,
-    flushEvents() {
-      events = [];
-    },
-    matopush: jest.fn().mockImplementation((event) => events.push(event)),
+    matopush: jest.fn().mockImplementation(),
   };
 });
 

@@ -10,7 +10,6 @@ type Props = {
   nextVisible: boolean;
   printVisible: boolean;
   previousVisible: boolean;
-  onNext: () => void;
 };
 
 export const PrevNextBar: FunctionComponent<Props> = ({
@@ -19,7 +18,6 @@ export const PrevNextBar: FunctionComponent<Props> = ({
   nextVisible = true,
   printVisible,
   previousVisible = true,
-  onNext,
 }) => {
   return (
     <>
@@ -36,7 +34,7 @@ export const PrevNextBar: FunctionComponent<Props> = ({
           </StyledButtonReverse>
         )}
         {nextVisible && previousVisible && (
-          <StyledButton disabled={hasError} variant="primary" onClick={onNext}>
+          <StyledButton disabled={hasError} variant="primary">
             Suivant
             <ArrowIcon />
           </StyledButton>
