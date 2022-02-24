@@ -37,7 +37,7 @@ function Term({ term: { term, definition, references } }) {
                     <Html>{definition}</Html>
                   </td>
                 </tr>
-                {references.length > 0 && (
+                {references && references.length > 0 && (
                   <tr>
                     <th>Sources</th>
                     <td>

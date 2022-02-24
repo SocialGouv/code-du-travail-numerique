@@ -53,7 +53,7 @@ const Accessibilite = () => {
             <p>
               Le site Internet code.travail.gouv.fr est en conformité partielle
               avec le référentiel général d’amélioration de l’accessibilité
-              (RGAA) « version 4.1 ».
+              (RGAA) « version 4.1 ».
             </p>
             <p>
               Nous tâchons de rendre dès la conception, ce site accessible à
@@ -61,42 +61,19 @@ const Accessibilite = () => {
             </p>
             <Title shift={theme.spacings.larger}>Résultat des tests</Title>
             <p>
-              L’audit de conformité réalisé par Alter Way révèle que&nbsp;:
               <ul>
-                <li>[50%] des critères du RGAA version 4.1 sont respectés</li>
+                <li>[75%] des critères du RGAA version 4.1 sont respectés</li>
               </ul>
             </p>
             <Title shift={theme.spacings.larger}>Non-conformité</Title>
             <ul>
               <li>
-                Critère 1.1. Chaque image porteuse d’information a-t-elle
-                une alternative textuelle&nbsp;?
+                Critère 5.7. Pour chaque tableau de données, la technique
+                appropriée permettant d’associer chaque cellule avec ses
+                en-têtes est-elle utilisée (hors cas particuliers)&nbsp;?
               </li>
               <li>
-                Critère 1.2. Chaque image de décoration est-elle correctement
-                ignorée par les technologies d’assistance&nbsp;?
-              </li>
-              <li>
-                Critère 3.1. Dans chaque page web, l’information ne doit pas
-                être donnée uniquement par la couleur. Cette règle est-elle
-                respectée&nbsp;?
-              </li>
-              <li>
-                Critère 3.2. Dans chaque page web, le contraste entre la couleur
-                du texte et la couleur de son arrière-plan est-il suffisamment
-                élevé (hors cas particuliers)&nbsp;?
-              </li>
-              <li>
-                Critère 5.7. Pour chaque tableau de données, la technique
-                appropriée permettant d’associer chaque cellule avec
-                ses en-têtes est-elle utilisée (hors cas particuliers)&nbsp;?
-              </li>
-              <li>
-                Critère 6.2. Dans chaque page web, chaque lien a-t-il
-                un intitulé&nbsp;?
-              </li>
-              <li>
-                Critère 7.1. Chaque script est-il, si nécessaire, compatible
+                Critère 7.1. Chaque script est-il, si nécessaire, compatible
                 avec les technologies d’assistance&nbsp;?
               </li>
               <li>
@@ -104,76 +81,38 @@ const Accessibilite = () => {
                 par tout dispositif de pointage (hors cas particuliers)&nbsp;?
               </li>
               <li>
-                Critère 7.4. Pour chaque script qui initie un changement de
-                contexte, l’utilisateur est-il averti ou en a-t-il le
-                contrôle&nbsp;?
-              </li>
-              <li>
                 Critère 7.5. Dans chaque page web, les messages de statut
                 sont-ils correctement restitués par les technologies
                 d’assistance&nbsp;?
               </li>
               <li>
-                Critère 8.2. Pour chaque page web, le code source généré est-il
-                valide selon le type de document spécifié&nbsp;?
-              </li>
-              <li>
-                Critère 8.6. Pour chaque page web ayant un titre de page, ce
-                titre est-il pertinent&nbsp;?
-              </li>
-              <li>
-                Critère 8.7. Dans chaque page web, chaque changement de
-                langue est-il indiqué dans le code source (hors cas
+                Critère 8.7. Dans chaque page web, chaque changement de langue
+                est-il indiqué dans le code source (hors cas
                 particuliers)&nbsp;?
               </li>
               <li>
                 Critère 8.9. Dans chaque page web, les balises ne doivent pas
-                être utilisées uniquement à des fins de présentation. Cette
+                être utilisées uniquement à des fins de présentation. Cette
                 règle est-elle respectée&nbsp;?
               </li>
               <li>
-                Critère 9.1. Dans chaque page web, l’information est-elle
-                structurée par l’utilisation appropriée de titres&nbsp;?
-              </li>
-              <li>
-                Critère 9.2. Dans chaque page web, la structure du
-                document est-elle cohérente (hors cas particuliers)&nbsp;?
-              </li>
-              <li>
-                Critère 9.3. Dans chaque page web, chaque liste est-elle
-                correctement structurée&nbsp;?
-              </li>
-              <li>
-                Critère 10.6. Dans chaque page web, chaque lien dont la nature
-                n’est pas évidente est-il visible par rapport au texte
-                environnant&nbsp;?
-              </li>
-              <li>
-                Critère 11.1. Chaque champ de formulaire a-t-il
-                une étiquette&nbsp;?
-              </li>
-              <li>
-                Critère 11.4. Dans chaque formulaire, chaque étiquette de
-                champ et son champ associé sont-ils accolés (hors cas
+                Critère 11.4. Dans chaque formulaire, chaque étiquette de champ
+                et son champ associé sont-ils accolés (hors cas
                 particuliers)&nbsp;?
               </li>
               <li>
-                Critère 11.5. Dans chaque formulaire, les champs de même
-                nature sont-ils regroupés, si nécessaire&nbsp;?
-              </li>
-              <li>
-                Critère 11.9. Dans chaque formulaire, l’intitulé de
-                chaque bouton est-il pertinent (hors cas particuliers)&nbsp;?
+                Critère 11.10. Dans chaque formulaire, le contrôle de saisie
+                est-il utilisé de manière pertinente (hors cas particuliers) ?
               </li>
               <li>
                 Critère 12.6. Les zones de regroupement de contenus présentes
-                dans plusieurs pages web (zones d’en-tête, de navigation
-                principale, de contenu principal, de pied de page et de moteur
+                dans plusieurs pages web (zones d’en-tête, de navigation
+                principale, de contenu principal, de pied de page et de moteur
                 de recherche) peuvent-elles être atteintes ou évitées&nbsp;?
               </li>
               <li>
-                Critère 12.8. Dans chaque page web, l’ordre de
-                tabulation est-il cohérent&nbsp;?
+                Critère 12.8. Dans chaque page web, l’ordre de tabulation est-il
+                cohérent&nbsp;?
               </li>
             </ul>
             <Title shift={theme.spacings.larger}>
@@ -181,7 +120,7 @@ const Accessibilite = () => {
             </Title>
             <p>
               Cette déclaration a été établie le 12 avril 2021. Elle a été mise
-              à jour le 23/06/2021.
+              à jour le 13/01/2022.
             </p>
             <Title shift={theme.spacings.larger}>
               ​Technologies utilisées pour la réalisation du Code du travail

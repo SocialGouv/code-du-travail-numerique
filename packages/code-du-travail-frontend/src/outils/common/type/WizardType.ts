@@ -1,18 +1,22 @@
 import { FormApi } from "final-form";
 import React from "react";
 
-export interface Step {
+export type SkipFn = (values: FormContent) => boolean;
+
+export type Step = {
   component: (props: WizardStepProps) => JSX.Element;
   label: string;
   name: string;
-  skip?: (values: FormContent) => boolean;
-  annotation?: (props: WizardStepProps) => JSX.Element;
-}
+  skip?: SkipFn;
+  annotation?: () => JSX.Element;
+  isForm?: boolean;
+  hasNoMarginBottom?: boolean;
+};
 
-export interface State {
+export type State = {
   steps: Array<Step>;
   stepIndex: number;
-}
+};
 
 export enum ActionName {
   reset = "reset",
@@ -23,18 +27,18 @@ export type Action =
   | { type: ActionName.reset }
   | { type: ActionName.setStepIndex; payload: number };
 
-export interface WizardStepProps {
+export type WizardStepProps = {
   form: FormApi<FormContent>;
   dispatch: React.Dispatch<Action>;
-}
+};
 
-export interface ConventionCollective {
+export type ConventionCollective = {
   id: string;
   num: number;
   shortTitle: string;
   slug: string;
   title: string;
-}
+};
 
 export type FormContent = Record<string, string> & {
   ccn?: ConventionCollective;

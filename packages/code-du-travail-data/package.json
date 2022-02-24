@@ -1,6 +1,6 @@
 {
   "name": "@cdt/data",
-  "version": "4.59.0",
+  "version": "4.69.0",
   "description": "Ce dépôt de code permet d'indexer différentes sources de données relatives au Code du travail dans Elasticsearch.",
   "private": true,
   "main": "index.js",
@@ -36,7 +36,7 @@
     "babel-jest": "^27.0.6",
     "eslint": "^7.31.0",
     "jest": "^27.0.6",
-    "lint-staged": "^11.0.1",
+    "lint-staged": "^12.1.2",
     "prettier": "^2.3.2"
   },
   "lint-staged": {

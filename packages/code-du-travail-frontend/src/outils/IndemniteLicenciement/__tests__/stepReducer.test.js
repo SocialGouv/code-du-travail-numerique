@@ -13,11 +13,14 @@ describe("initialSteps", () => {
           },
           Object {
             "component": [Function],
+            "isForm": true,
             "label": "Contrat de travail",
             "name": "info_generales",
           },
           Object {
             "component": [Function],
+            "hasNoMarginBottom": true,
+            "isForm": true,
             "label": "Ancienneté",
             "name": "anciennete",
           },

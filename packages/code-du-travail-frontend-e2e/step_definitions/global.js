@@ -32,6 +32,13 @@ Quand("je renseigne {string} dans le champ {string}", async (text, input) => {
   I.fillField(input, text);
 });
 
+Quand(
+  "je renseigne {string} dans le champ avec le css {string}",
+  async (text, input) => {
+    I.fillField({ css: input }, text);
+  }
+);
+
 Quand("je clique sur {string}", async (text) => {
   I.click(text);
 });
@@ -42,6 +49,10 @@ Quand("je choisis {string}", (text) => {
 
 Quand("je ferme la modale", () => {
   I.click('button[title="fermer la modale"]');
+});
+
+Quand("j'ouvre l'accordion", () => {
+  I.click('div[role="button"][aria-expanded="false"]');
 });
 
 Quand("j'attends que les suggestions apparaissent", () => {
@@ -57,8 +68,8 @@ Quand("j'attends que le titre de page {string} apparaisse", (title) => {
   I.waitForElement(`//h1[contains(., "${title}")]`, 10);
 });
 
-Quand("j'attend que le texte {string} apparaisse", (text) => {
-  I.waitForText(text, 5);
+Quand("j'attends que le texte {string} apparaisse", (text) => {
+  I.waitForText(text, 10);
   I.scrollTo(`//*[text()[starts-with(., "${text}")]]`, 0, -100);
 });
 

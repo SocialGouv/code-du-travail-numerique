@@ -1,5 +1,4 @@
-import { getNotifications } from "@socialgouv/modeles-social";
-import { getReferences } from "@socialgouv/modeles-social/bin/utils/GetReferences";
+import { getNotifications, getReferences } from "@socialgouv/modeles-social";
 import Engine from "publicodes";
 import { useState } from "react";
 
@@ -9,6 +8,7 @@ import type {
   PublicodesResult,
   SituationElement,
 } from "./index";
+import { PublicodesUnit } from "./index";
 import { convertDaysIntoBetterUnit } from "./Utils";
 
 interface State {
@@ -19,7 +19,7 @@ interface State {
 type PublicodeData = {
   situation: Array<SituationElement>;
   missingArgs: MissingArgs[];
-  result: PublicodesResult | null;
+  result: PublicodesResult;
 };
 
 const usePublicodesHandler = ({
@@ -28,7 +28,11 @@ const usePublicodesHandler = ({
 }: State): PublicodesContextInterface => {
   const [data, setData] = useState<PublicodeData>({
     missingArgs: [],
-    result: null,
+    result: {
+      unit: PublicodesUnit.DAY,
+      value: 0,
+      valueInDays: 0,
+    },
     situation: [],
   });
 

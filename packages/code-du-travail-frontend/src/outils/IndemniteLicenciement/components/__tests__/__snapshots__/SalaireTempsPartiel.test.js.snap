@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
-.c16 {
+.c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -39,16 +39,16 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   will-change: transform;
 }
 
-.c16:link,
-.c16:visited {
+.c15:link,
+.c15:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c16:not([disabled]):hover,
-.c16:not([disabled]):active,
-.c16:not([disabled]):focus {
+.c15:not([disabled]):hover,
+.c15:not([disabled]):active,
+.c15:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -57,7 +57,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   border-color: transparent;
 }
 
-.c16[disabled] {
+.c15[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -65,23 +65,105 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   cursor: not-allowed;
 }
 
-.c4 {
+.c3 {
   color: #7994d4;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 400;
 }
 
-.c12 {
+.c11 {
   position: relative;
   display: inline-block;
+}
+
+.c12 {
+  width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 2rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: right;
+  background: #fff;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c12::-webkit-outer-spin-button,
+.c12::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c12::-webkit-calendar-picker-indicator {
+  display: block;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-right: -2rem;
+  color: rgba(0,0,0,0);
+  background-color: #9298af;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
+  mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.c12:invalid {
+  border-color: #eb5757;
+}
+
+.c12::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c12::-moz-placeholder {
+  color: #9298af;
+}
+
+.c12:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c12::placeholder {
+  color: #9298af;
+}
+
+.c12:focus {
+  border-color: #7994d4;
+}
+
+.c12:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c12:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c12:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c12:focus::placeholder {
+  color: transparent;
 }
 
 .c13 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
-  padding-right: 2rem;
+  padding-right: 5rem;
   color: #3e486e;
   font-weight: normal;
   font-size: 1.6rem;
@@ -161,89 +243,6 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 }
 
 .c14 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 5rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: right;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c14::-webkit-outer-spin-button,
-.c14::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c14::-webkit-calendar-picker-indicator {
-  display: block;
-  width: 3.2rem;
-  height: 3.2rem;
-  margin-right: -2rem;
-  color: rgba(0,0,0,0);
-  background-color: #9298af;
-  cursor: pointer;
-  opacity: 1;
-  -webkit-mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-  mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-}
-
-.c14:invalid {
-  border-color: #eb5757;
-}
-
-.c14::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c14::-moz-placeholder {
-  color: #9298af;
-}
-
-.c14:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c14::placeholder {
-  color: #9298af;
-}
-
-.c14:focus {
-  border-color: #7994d4;
-}
-
-.c14:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c14:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c14:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c14:focus::placeholder {
-  color: transparent;
-}
-
-.c15 {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -254,7 +253,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   color: #9298af;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -268,7 +267,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c7 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -288,7 +287,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   text-align: center;
 }
 
-.c11 {
+.c10 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -298,7 +297,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   pointer-events: none;
 }
 
-.c10 {
+.c9 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -319,25 +318,25 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   appearance: none;
 }
 
-.c10::-ms-expand {
+.c9::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c10 *::-ms-backdrop,
-.c10 {
+.c9 *::-ms-backdrop,
+.c9 {
   padding-right: 1.6rem;
 }
 
-.c10:invalid {
+.c9:invalid {
   border-color: #eb5757;
 }
 
-.c10:disabled {
+.c9:disabled {
   background-color: #e4e8ef;
 }
 
-.c17 {
+.c16 {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
@@ -345,13 +344,13 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   padding-left: 0;
 }
 
-.c18 {
+.c17 {
   width: 2rem;
   margin-right: 0.4rem;
   color: #f66663;
 }
 
-.c5 {
+.c4 {
   display: -ms-grid;
   -ms-grid-rows: auto auto;
   -ms-grid-columns: 2fr 1fr 1fr 13rem;
@@ -362,49 +361,49 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   margin-bottom: 1.6rem;
 }
 
-.c5 > *:nth-child(1) {
+.c4 > *:nth-child(1) {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-row: 1;
   grid-column: 1;
 }
 
-.c5 > *:nth-child(2) {
+.c4 > *:nth-child(2) {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-row: 2;
   grid-column: 1;
 }
 
-.c5 > *:nth-child(3) {
+.c4 > *:nth-child(3) {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-row: 1;
   grid-column: 2;
 }
 
-.c5 > *:nth-child(4) {
+.c4 > *:nth-child(4) {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-row: 2;
   grid-column: 2;
 }
 
-.c5 > *:nth-child(5) {
+.c4 > *:nth-child(5) {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-row: 1;
   grid-column: 3;
 }
 
-.c5 > *:nth-child(6) {
+.c4 > *:nth-child(6) {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-row: 2;
   grid-column: 3;
 }
 
-.c5 > *:nth-child(7) {
+.c4 > *:nth-child(7) {
   -ms-grid-row: 2;
   -ms-grid-column: 4;
   grid-row: 2;
@@ -413,76 +412,73 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 
 .c0 {
   display: block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .c1 {
-  font-weight: 600;
-}
-
-.c2 {
   position: relative;
 }
 
-.c3 {
+.c2 {
   margin-bottom: 1.6rem;
   padding-top: 1rem;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c7 {
+.c6 {
   margin-right: 1.6rem;
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c15 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c16 {
+  .c15 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c11 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c12 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c13 {
     padding: 0 1rem;
     padding-right: 5rem;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c7 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c4 {
     display: block;
     margin-bottom: 3.2rem;
   }
@@ -495,7 +491,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c6 {
     margin-right: 0;
     margin-bottom: 1.6rem;
   }
@@ -506,47 +502,43 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 }
 
 <div>
-  <p
+  <label
     class="c0"
   >
-    <span
-      class="c1"
-    >
-      Quels ont été les durées et les salaires des périodes à temps plein et à temps partiel ?
-    </span>
-  </p>
+    Quels ont été les durées et les salaires des périodes à temps plein et à temps partiel ?
+  </label>
   <div
-    class="c2"
+    class="c1"
   >
     <div
-      class="c3"
+      class="c2"
     >
       <span
-        class="c4"
-        font-size="hsmall"
-        font-weight="400"
+        aria-level="2"
+        class="c3"
+        role="heading"
       >
         Période 
         1
       </span>
     </div>
     <div
-      class="c5"
+      class="c4"
     >
       <label
-        class="c6"
+        class="c5"
         for="periods[0].type"
       >
         Type de durée de travail
       </label>
       <div
-        class="c7"
+        class="c6"
       >
         <div
-          class="c8 c9"
+          class="c7 c8"
         >
           <select
-            class="c10"
+            class="c9"
             name="periods[0].type"
           >
             <option>
@@ -558,7 +550,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
           </select>
           <div
             aria-hidden="true"
-            class="c11"
+            class="c10"
           >
             <svg
               aria-hidden="true"
@@ -567,16 +559,16 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <g
-                clip-path="url(#arrow-down_svg__clip0)"
+                clip-path="url(#arrow-down_svg__a)"
               >
                 <path
-                  d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z"
+                  d="m8.425 11.573 7.11-6.072a.709.709 0 0 0 .26-.537.709.709 0 0 0-.26-.537.973.973 0 0 0-.629-.223.973.973 0 0 0-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 0 0-.63-.223.973.973 0 0 0-.628.223.708.708 0 0 0-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 0 0 .29.165 1.021 1.021 0 0 0 .68 0 .91.91 0 0 0 .29-.165z"
                   fill="currentColor"
                 />
               </g>
               <defs>
                 <clippath
-                  id="arrow-down_svg__clip0"
+                  id="arrow-down_svg__a"
                 >
                   <path
                     d="M0 0h16v16H0z"
@@ -589,19 +581,19 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
         </div>
       </div>
       <label
-        class="c6"
+        class="c5"
         for="periods[0].duration"
       >
         Durée (en mois)
       </label>
       <div
-        class="c7"
+        class="c6"
       >
         <span
-          class="c12"
+          class="c11"
         >
           <input
-            class="c13"
+            class="c12"
             id="periods[0].duration"
             name="periods[0].duration"
             type="number"
@@ -610,24 +602,24 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
         </span>
       </div>
       <label
-        class="c6"
+        class="c5"
         for="periods[0].salary"
       >
         Rémunération
       </label>
       <div>
         <span
-          class="c12"
+          class="c11"
         >
           <input
-            class="c14"
+            class="c13"
             id="periods[0].salary"
             name="periods[0].salary"
             type="number"
             value="1000"
           />
           <div
-            class="c15"
+            class="c14"
           >
             <svg
               aria-hidden="true"
@@ -646,19 +638,19 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
     </div>
   </div>
   <button
-    class="c16 c17"
+    class="c15 c16"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="c18"
+      class="c17"
       fill="none"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         clip-rule="evenodd"
-        d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
+        d="M8 2a1 1 0 0 0-1 1v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3a1 1 0 0 0-1-1z"
         fill="currentColor"
         fill-rule="evenodd"
       />
@@ -669,7 +661,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 `;
 
 exports[`<SalaireTempsPartiel /> should render 1`] = `
-.c16 {
+.c15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -707,16 +699,16 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   will-change: transform;
 }
 
-.c16:link,
-.c16:visited {
+.c15:link,
+.c15:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c16:not([disabled]):hover,
-.c16:not([disabled]):active,
-.c16:not([disabled]):focus {
+.c15:not([disabled]):hover,
+.c15:not([disabled]):active,
+.c15:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -725,7 +717,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   border-color: transparent;
 }
 
-.c16[disabled] {
+.c15[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -733,23 +725,105 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c4 {
+.c3 {
   color: #7994d4;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 400;
 }
 
-.c12 {
+.c11 {
   position: relative;
   display: inline-block;
+}
+
+.c12 {
+  width: 100%;
+  height: 5.4rem;
+  padding: 0 2rem;
+  padding-right: 2rem;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  font-style: normal;
+  line-height: inherit;
+  text-align: right;
+  background: #fff;
+  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 0.6rem;
+  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c12::-webkit-outer-spin-button,
+.c12::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c12::-webkit-calendar-picker-indicator {
+  display: block;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-right: -2rem;
+  color: rgba(0,0,0,0);
+  background-color: #9298af;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
+  mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.c12:invalid {
+  border-color: #eb5757;
+}
+
+.c12::-webkit-input-placeholder {
+  color: #9298af;
+}
+
+.c12::-moz-placeholder {
+  color: #9298af;
+}
+
+.c12:-ms-input-placeholder {
+  color: #9298af;
+}
+
+.c12::placeholder {
+  color: #9298af;
+}
+
+.c12:focus {
+  border-color: #7994d4;
+}
+
+.c12:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c12:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.c12:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.c12:focus::placeholder {
+  color: transparent;
 }
 
 .c13 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
-  padding-right: 2rem;
+  padding-right: 5rem;
   color: #3e486e;
   font-weight: normal;
   font-size: 1.6rem;
@@ -829,89 +903,6 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
 }
 
 .c14 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 5rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: right;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c14::-webkit-outer-spin-button,
-.c14::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c14::-webkit-calendar-picker-indicator {
-  display: block;
-  width: 3.2rem;
-  height: 3.2rem;
-  margin-right: -2rem;
-  color: rgba(0,0,0,0);
-  background-color: #9298af;
-  cursor: pointer;
-  opacity: 1;
-  -webkit-mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-  mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
-}
-
-.c14:invalid {
-  border-color: #eb5757;
-}
-
-.c14::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c14::-moz-placeholder {
-  color: #9298af;
-}
-
-.c14:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c14::placeholder {
-  color: #9298af;
-}
-
-.c14:focus {
-  border-color: #7994d4;
-}
-
-.c14:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c14:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c14:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c14:focus::placeholder {
-  color: transparent;
-}
-
-.c15 {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -922,7 +913,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   color: #9298af;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -936,7 +927,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c7 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -956,7 +947,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   text-align: center;
 }
 
-.c11 {
+.c10 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -966,7 +957,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   pointer-events: none;
 }
 
-.c10 {
+.c9 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -987,25 +978,25 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   appearance: none;
 }
 
-.c10::-ms-expand {
+.c9::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c10 *::-ms-backdrop,
-.c10 {
+.c9 *::-ms-backdrop,
+.c9 {
   padding-right: 1.6rem;
 }
 
-.c10:invalid {
+.c9:invalid {
   border-color: #eb5757;
 }
 
-.c10:disabled {
+.c9:disabled {
   background-color: #e4e8ef;
 }
 
-.c19 {
+.c18 {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
@@ -1013,19 +1004,19 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   padding-left: 0;
 }
 
-.c18 {
+.c17 {
   width: 2rem;
   margin-left: 0.4rem;
   color: #f66663;
 }
 
-.c20 {
+.c19 {
   width: 2rem;
   margin-right: 0.4rem;
   color: #f66663;
 }
 
-.c5 {
+.c4 {
   display: -ms-grid;
   -ms-grid-rows: auto auto;
   -ms-grid-columns: 2fr 1fr 1fr 13rem;
@@ -1036,49 +1027,49 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   margin-bottom: 1.6rem;
 }
 
-.c5 > *:nth-child(1) {
+.c4 > *:nth-child(1) {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-row: 1;
   grid-column: 1;
 }
 
-.c5 > *:nth-child(2) {
+.c4 > *:nth-child(2) {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-row: 2;
   grid-column: 1;
 }
 
-.c5 > *:nth-child(3) {
+.c4 > *:nth-child(3) {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-row: 1;
   grid-column: 2;
 }
 
-.c5 > *:nth-child(4) {
+.c4 > *:nth-child(4) {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-row: 2;
   grid-column: 2;
 }
 
-.c5 > *:nth-child(5) {
+.c4 > *:nth-child(5) {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-row: 1;
   grid-column: 3;
 }
 
-.c5 > *:nth-child(6) {
+.c4 > *:nth-child(6) {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-row: 2;
   grid-column: 3;
 }
 
-.c5 > *:nth-child(7) {
+.c4 > *:nth-child(7) {
   -ms-grid-row: 2;
   -ms-grid-column: 4;
   grid-row: 2;
@@ -1087,80 +1078,77 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
 
 .c0 {
   display: block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .c1 {
-  font-weight: 600;
-}
-
-.c2 {
   position: relative;
 }
 
-.c3 {
+.c2 {
   margin-bottom: 1.6rem;
   padding-top: 1rem;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c7 {
+.c6 {
   margin-right: 1.6rem;
 }
 
-.c17 {
+.c16 {
   margin-top: 0.8rem;
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c15 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c16 {
+  .c15 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c11 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c12 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c13 {
     padding: 0 1rem;
     padding-right: 5rem;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c7 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c4 {
     display: block;
     margin-bottom: 3.2rem;
   }
@@ -1173,14 +1161,14 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c6 {
     margin-right: 0;
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c16 {
     position: absolute;
     top: 0;
     right: 0;
@@ -1189,47 +1177,43 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
 }
 
 <div>
-  <p
+  <label
     class="c0"
   >
-    <span
-      class="c1"
-    >
-      Quels ont été les durées et les salaires des périodes à temps plein et à temps partiel ?
-    </span>
-  </p>
+    Quels ont été les durées et les salaires des périodes à temps plein et à temps partiel ?
+  </label>
   <div
-    class="c2"
+    class="c1"
   >
     <div
-      class="c3"
+      class="c2"
     >
       <span
-        class="c4"
-        font-size="hsmall"
-        font-weight="400"
+        aria-level="2"
+        class="c3"
+        role="heading"
       >
         Période 
         1
       </span>
     </div>
     <div
-      class="c5"
+      class="c4"
     >
       <label
-        class="c6"
+        class="c5"
         for="periods[0].type"
       >
         Type de durée de travail
       </label>
       <div
-        class="c7"
+        class="c6"
       >
         <div
-          class="c8 c9"
+          class="c7 c8"
         >
           <select
-            class="c10"
+            class="c9"
             name="periods[0].type"
           >
             <option>
@@ -1241,7 +1225,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
           </select>
           <div
             aria-hidden="true"
-            class="c11"
+            class="c10"
           >
             <svg
               aria-hidden="true"
@@ -1250,16 +1234,16 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <g
-                clip-path="url(#arrow-down_svg__clip0)"
+                clip-path="url(#arrow-down_svg__a)"
               >
                 <path
-                  d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z"
+                  d="m8.425 11.573 7.11-6.072a.709.709 0 0 0 .26-.537.709.709 0 0 0-.26-.537.973.973 0 0 0-.629-.223.973.973 0 0 0-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 0 0-.63-.223.973.973 0 0 0-.628.223.708.708 0 0 0-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 0 0 .29.165 1.021 1.021 0 0 0 .68 0 .91.91 0 0 0 .29-.165z"
                   fill="currentColor"
                 />
               </g>
               <defs>
                 <clippath
-                  id="arrow-down_svg__clip0"
+                  id="arrow-down_svg__a"
                 >
                   <path
                     d="M0 0h16v16H0z"
@@ -1272,19 +1256,19 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
         </div>
       </div>
       <label
-        class="c6"
+        class="c5"
         for="periods[0].duration"
       >
         Durée (en mois)
       </label>
       <div
-        class="c7"
+        class="c6"
       >
         <span
-          class="c12"
+          class="c11"
         >
           <input
-            class="c13"
+            class="c12"
             id="periods[0].duration"
             name="periods[0].duration"
             type="number"
@@ -1293,24 +1277,24 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
         </span>
       </div>
       <label
-        class="c6"
+        class="c5"
         for="periods[0].salary"
       >
         Rémunération
       </label>
       <div>
         <span
-          class="c12"
+          class="c11"
         >
           <input
-            class="c14"
+            class="c13"
             id="periods[0].salary"
             name="periods[0].salary"
             type="number"
             value="2000"
           />
           <div
-            class="c15"
+            class="c14"
           >
             <svg
               aria-hidden="true"
@@ -1327,20 +1311,20 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
         </span>
       </div>
       <button
-        class="c16 c17"
+        class="c15 c16"
         type="button"
       >
         Supprimer
         <svg
           aria-hidden="true"
-          class="c18"
+          class="c17"
           fill="none"
           viewBox="0 0 32 32"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
-            d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+            d="M14.752 16.5 7.258 8.591A.957.957 0 0 1 7 7.932c0-.247.093-.484.259-.659A.858.858 0 0 1 7.883 7a.86.86 0 0 1 .625.273L16 15.183l7.492-7.91A.859.859 0 0 1 24.117 7c.234 0 .459.098.624.273a.957.957 0 0 1 .259.659.957.957 0 0 1-.259.66L17.249 16.5l7.492 7.909a.958.958 0 0 1 .259.659.957.957 0 0 1-.259.659.859.859 0 0 1-.624.273.86.86 0 0 1-.625-.273L16 17.817l-7.492 7.91a.859.859 0 0 1-.625.273.859.859 0 0 1-.624-.273.957.957 0 0 1-.259-.659.96.96 0 0 1 .259-.66l7.492-7.908z"
             fill="currentColor"
             fill-rule="evenodd"
           />
@@ -1349,37 +1333,37 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
     </div>
   </div>
   <div
-    class="c2"
+    class="c1"
   >
     <div
-      class="c3"
+      class="c2"
     >
       <span
-        class="c4"
-        font-size="hsmall"
-        font-weight="400"
+        aria-level="2"
+        class="c3"
+        role="heading"
       >
         Période 
         2
       </span>
     </div>
     <div
-      class="c5"
+      class="c4"
     >
       <label
-        class="c6"
+        class="c5"
         for="periods[1].type"
       >
         Type de durée de travail
       </label>
       <div
-        class="c7"
+        class="c6"
       >
         <div
-          class="c8 c9"
+          class="c7 c8"
         >
           <select
-            class="c10"
+            class="c9"
             name="periods[1].type"
           >
             <option>
@@ -1391,7 +1375,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
           </select>
           <div
             aria-hidden="true"
-            class="c11"
+            class="c10"
           >
             <svg
               aria-hidden="true"
@@ -1400,16 +1384,16 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <g
-                clip-path="url(#arrow-down_svg__clip0)"
+                clip-path="url(#arrow-down_svg__a)"
               >
                 <path
-                  d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z"
+                  d="m8.425 11.573 7.11-6.072a.709.709 0 0 0 .26-.537.709.709 0 0 0-.26-.537.973.973 0 0 0-.629-.223.973.973 0 0 0-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 0 0-.63-.223.973.973 0 0 0-.628.223.708.708 0 0 0-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 0 0 .29.165 1.021 1.021 0 0 0 .68 0 .91.91 0 0 0 .29-.165z"
                   fill="currentColor"
                 />
               </g>
               <defs>
                 <clippath
-                  id="arrow-down_svg__clip0"
+                  id="arrow-down_svg__a"
                 >
                   <path
                     d="M0 0h16v16H0z"
@@ -1422,19 +1406,19 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
         </div>
       </div>
       <label
-        class="c6"
+        class="c5"
         for="periods[1].duration"
       >
         Durée (en mois)
       </label>
       <div
-        class="c7"
+        class="c6"
       >
         <span
-          class="c12"
+          class="c11"
         >
           <input
-            class="c13"
+            class="c12"
             id="periods[1].duration"
             name="periods[1].duration"
             type="number"
@@ -1443,24 +1427,24 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
         </span>
       </div>
       <label
-        class="c6"
+        class="c5"
         for="periods[1].salary"
       >
         Rémunération
       </label>
       <div>
         <span
-          class="c12"
+          class="c11"
         >
           <input
-            class="c14"
+            class="c13"
             id="periods[1].salary"
             name="periods[1].salary"
             type="number"
             value="1000"
           />
           <div
-            class="c15"
+            class="c14"
           >
             <svg
               aria-hidden="true"
@@ -1477,20 +1461,20 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
         </span>
       </div>
       <button
-        class="c16 c17"
+        class="c15 c16"
         type="button"
       >
         Supprimer
         <svg
           aria-hidden="true"
-          class="c18"
+          class="c17"
           fill="none"
           viewBox="0 0 32 32"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
-            d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+            d="M14.752 16.5 7.258 8.591A.957.957 0 0 1 7 7.932c0-.247.093-.484.259-.659A.858.858 0 0 1 7.883 7a.86.86 0 0 1 .625.273L16 15.183l7.492-7.91A.859.859 0 0 1 24.117 7c.234 0 .459.098.624.273a.957.957 0 0 1 .259.659.957.957 0 0 1-.259.66L17.249 16.5l7.492 7.909a.958.958 0 0 1 .259.659.957.957 0 0 1-.259.659.859.859 0 0 1-.624.273.86.86 0 0 1-.625-.273L16 17.817l-7.492 7.91a.859.859 0 0 1-.625.273.859.859 0 0 1-.624-.273.957.957 0 0 1-.259-.659.96.96 0 0 1 .259-.66l7.492-7.908z"
             fill="currentColor"
             fill-rule="evenodd"
           />
@@ -1499,19 +1483,19 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
     </div>
   </div>
   <button
-    class="c16 c19"
+    class="c15 c18"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="c20"
+      class="c19"
       fill="none"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         clip-rule="evenodd"
-        d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
+        d="M8 2a1 1 0 0 0-1 1v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3a1 1 0 0 0-1-1z"
         fill="currentColor"
         fill-rule="evenodd"
       />

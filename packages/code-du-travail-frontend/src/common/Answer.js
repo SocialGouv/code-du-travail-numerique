@@ -1,14 +1,21 @@
-import { Alert, Container, theme, Wrapper } from "@socialgouv/cdtn-ui";
+import {
+  Alert,
+  Container,
+  Paragraph,
+  theme,
+  Wrapper,
+} from "@socialgouv/cdtn-ui";
 import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
 
-import { ConventionModal } from "../../src/conventions/SearchModal";
+import { ConventionModal } from "../conventions/SearchModal";
 import {
   AsideContent,
   MainAsideLayout,
   MainContent,
 } from "../layout/AnswerLayout";
+import { isHTML } from "../lib";
 import Article from "./Article";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { Feedback } from "./Feedback";
@@ -63,7 +70,11 @@ function Answer({
             >
               {intro && (
                 <IntroWrapper variant="dark">
-                  <Html>{intro}</Html>
+                  {isHTML(intro) ? (
+                    <Html>{intro}</Html>
+                  ) : (
+                    <Paragraph noMargin>{intro}</Paragraph>
+                  )}
                 </IntroWrapper>
               )}
               {html && <Html>{html}</Html>}
@@ -72,7 +83,7 @@ function Answer({
           )}
           {additionalContent}
           <ShareContainer>
-            Partager ce contenu&nbsp;:&nbsp;
+            <Paragraph noMargin>Partager ce contenu&nbsp;:&nbsp;</Paragraph>
             <Share title={title} metaDescription={metaDescription} />
           </ShareContainer>
           <Feedback url={router.asPath} />
@@ -102,9 +113,11 @@ const StyledErrorContainer = styled(Container)`
 
 const IntroWrapper = styled(Wrapper)`
   margin: ${spacings.base} auto;
+
   & div > *:first-child {
     margin-top: 0;
   }
+
   & div > *:last-child {
     margin-bottom: 0;
   }

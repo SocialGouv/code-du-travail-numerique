@@ -15,26 +15,45 @@ type Props = {
   publicodesContext: PublicodesContextInterface;
 };
 
-const ShowResult: React.FC<{ result: PublicodesResult }> = ({ result }) => {
+const ShowResult: React.FC<{
+  result: PublicodesResult;
+  agreementMaximumResult: PublicodesResult | null;
+}> = ({ result, agreementMaximumResult }) => {
   if (result.value > 0) {
     return (
-      <b>
-        {result.value} {result.unit}
-      </b>
+      <strong>
+        {agreementMaximumResult?.value &&
+        agreementMaximumResult?.value !== result.value ? (
+          <>
+            entre&nbsp;{result.value}&nbsp;{result.unit}&nbsp;et&nbsp;
+            {agreementMaximumResult.value}&nbsp;{agreementMaximumResult.unit}
+          </>
+        ) : (
+          <>
+            {result.value} {result.unit}
+          </>
+        )}
+      </strong>
     );
   }
-  return <b>pas de préavis</b>;
+  return <strong>pas de préavis</strong>;
 };
 
 const ShowResultAgreement: React.FC<{
   result: PublicodesResult | null;
   detail: Agreement | null;
-}> = ({ result, detail }) => {
+  agreementMaximumResult: PublicodesResult | null;
+}> = ({ result, detail, agreementMaximumResult }) => {
   if (!result) {
     return <strong>convention collective non renseignée</strong>;
   }
   if (result && result.value > 0) {
-    return <ShowResult result={result} />;
+    return (
+      <ShowResult
+        result={result}
+        agreementMaximumResult={agreementMaximumResult}
+      />
+    );
   }
   if (detail?.status === AgreementStatus.Supported) {
     return <strong>pas de préavis</strong>;
@@ -69,7 +88,7 @@ type RootData = {
 };
 
 export const createRootData = (
-  data: FormContent,
+  data: Partial<FormContent>,
   result: PublicodesResult,
   legalResult: PublicodesResult,
   agreementResult: PublicodesResult | null,
@@ -78,7 +97,7 @@ export const createRootData = (
   let agreement: Agreement | null = null;
   if (data.ccn) {
     const agreementFound = supportedCcn.find(
-      (item) => item.idcc === data.ccn.num
+      (item) => item.idcc === data.ccn?.num
     );
     agreement = {
       notice: agreementResult?.valueInDays ?? 0,
@@ -103,13 +122,15 @@ export const createRootData = (
     noticeUsed = NoticeUsed.legal;
   } else if (
     result.valueInDays > 0 &&
-    result.valueInDays === agreementResult.valueInDays
+    result.valueInDays === agreementResult?.valueInDays
   ) {
     noticeUsed = NoticeUsed.agreementLabor;
   }
   return {
     agreement: agreement,
-    handicap: data.infos["contrat salarié - travailleur handicapé"] === "oui",
+    handicap:
+      data.infos !== undefined &&
+      data.infos["contrat salarié - travailleur handicapé"] === "oui",
     isVoluntary: data["contrat salarié - mise à la retraite"] === "non",
     noticeUsed,
     seniorityLessThan6Months: Number(data["contrat salarié - ancienneté"]) < 6,
@@ -156,17 +177,20 @@ export const getDescription = (data: RootData): string | null => {
         return null;
     }
   }
-  return null;
 };
 
 const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
   const legalResult = publicodesContext.execute(
     "contrat salarié . préavis de retraite légale en jours"
   );
-  let agreementResult = null;
+  let agreementResult: PublicodesResult | null = null;
+  let agreementMaximumResult: PublicodesResult | null = null;
   if (data.ccn) {
     agreementResult = publicodesContext.execute(
       "contrat salarié . préavis de retraite collective en jours"
+    );
+    agreementMaximumResult = publicodesContext.execute(
+      "contrat salarié . préavis de retraite collective maximum en jours"
     );
   }
 
@@ -183,7 +207,10 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
       <SectionTitle>Le résultat décrypté</SectionTitle>
       <Paragraph>
         Durée prévue par le code du travail (durée légale)&nbsp;:&nbsp;
-        <ShowResult result={legalResult} />
+        <ShowResult
+          result={legalResult}
+          agreementMaximumResult={agreementMaximumResult}
+        />
       </Paragraph>
       <Paragraph>
         Durée prévue par la convention collective (durée
@@ -191,6 +218,7 @@ const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
         <ShowResultAgreement
           result={agreementResult}
           detail={rootData.agreement}
+          agreementMaximumResult={agreementMaximumResult}
         />
       </Paragraph>
       {description && <Paragraph>{description}</Paragraph>}

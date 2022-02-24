@@ -65,9 +65,8 @@ exports[`<StepPrimes /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c2 {
+.c1 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -171,7 +170,7 @@ exports[`<StepPrimes /> should render 1`] = `
   color: #9298af;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -180,7 +179,17 @@ exports[`<StepPrimes /> should render 1`] = `
   cursor: pointer;
 }
 
-.c5 {
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c4 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -201,7 +210,7 @@ exports[`<StepPrimes /> should render 1`] = `
   appearance: none;
 }
 
-.c5:before {
+.c4:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -216,28 +225,25 @@ exports[`<StepPrimes /> should render 1`] = `
   content: "";
 }
 
-.c5:checked {
+.c4:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c5:checked:before {
+.c4:checked:before {
   display: block;
 }
 
 .c0 {
   display: block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  cursor: default;
-}
-
-.c1 {
   font-weight: 600;
+  cursor: pointer;
 }
 
-.c3 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -253,7 +259,7 @@ exports[`<StepPrimes /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
 }
 
 .c13 {
@@ -328,52 +334,54 @@ exports[`<StepPrimes /> should render 1`] = `
 }
 
 <div>
-  <p
+  <label
     class="c0"
   >
+    Des primes annuelles ou exceptionnelles ont-elles été perçues au cours des 3 derniers mois ?
     <span
       class="c1"
     >
-      Des primes annuelles ou exceptionnelles ont-elles été perçues au cours des 3 derniers mois ?
-    </span>
-    <span
-      class="c2"
-      font-size="default"
-      font-weight="400"
-    >
        (obligatoire)
     </span>
-  </p>
+  </label>
   <div
-    class="c3"
+    class="c2"
   >
-    <label
-      class="c4"
-      for="hasPrimes-oui"
+    <div
+      class="c3"
     >
       <input
         checked=""
-        class="c5"
+        class="c4"
         id="hasPrimes-oui"
         name="hasPrimes"
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
-      class="c4"
-      for="hasPrimes-non"
+      <label
+        class="c5"
+        for="hasPrimes-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
+      class="c3"
     >
       <input
-        class="c5"
+        class="c4"
         id="hasPrimes-non"
         name="hasPrimes"
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c5"
+        for="hasPrimes-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
   <br />
   <br />
@@ -424,7 +432,7 @@ exports[`<StepPrimes /> should render 1`] = `
       >
         <path
           clip-rule="evenodd"
-          d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+          d="M14.752 16.5 7.258 8.591A.957.957 0 0 1 7 7.932c0-.247.093-.484.259-.659A.858.858 0 0 1 7.883 7a.86.86 0 0 1 .625.273L16 15.183l7.492-7.91A.859.859 0 0 1 24.117 7c.234 0 .459.098.624.273a.957.957 0 0 1 .259.659.957.957 0 0 1-.259.66L17.249 16.5l7.492 7.909a.958.958 0 0 1 .259.659.957.957 0 0 1-.259.659.859.859 0 0 1-.624.273.86.86 0 0 1-.625-.273L16 17.817l-7.492 7.91a.859.859 0 0 1-.625.273.859.859 0 0 1-.624-.273.957.957 0 0 1-.259-.659.96.96 0 0 1 .259-.66l7.492-7.908z"
           fill="currentColor"
           fill-rule="evenodd"
         />
@@ -444,7 +452,7 @@ exports[`<StepPrimes /> should render 1`] = `
     >
       <path
         clip-rule="evenodd"
-        d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
+        d="M8 2a1 1 0 0 0-1 1v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3a1 1 0 0 0-1-1z"
         fill="currentColor"
         fill-rule="evenodd"
       />

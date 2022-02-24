@@ -24,9 +24,9 @@ exports[`<Result /> should render 1`] = `
 
 .c11 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
 }
 
 .c13 {
@@ -67,7 +67,7 @@ exports[`<Result /> should render 1`] = `
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -245,13 +245,11 @@ exports[`<Result /> should render 1`] = `
               points="9 18 15 12 9 6"
             />
           </svg>
-          <span
+          <p
             class="c11 c12"
-            font-size="hsmall"
-            font-weight="600"
           >
             Voir le détail du calcul
-          </span>
+          </p>
         </div>
         <div
           class="c13"
@@ -589,13 +587,11 @@ exports[`<Result /> should render 1`] = `
               points="9 18 15 12 9 6"
             />
           </svg>
-          <span
+          <p
             class="c11 c12"
-            font-size="hsmall"
-            font-weight="600"
           >
             Voir le détail du calcul
-          </span>
+          </p>
         </div>
         <div
           class="c13"

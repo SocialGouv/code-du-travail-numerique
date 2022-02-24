@@ -21,6 +21,30 @@ exports[`<Footer /> should render 1`] = `
   color: #3e486e;
 }
 
+.c7 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c16 {
+  position: relative;
+  display: block;
+  margin: 0 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -142,30 +166,6 @@ exports[`<Footer /> should render 1`] = `
   list-style-type: none;
 }
 
-.c7 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c16 {
-  position: relative;
-  display: block;
-  margin: 0 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c5 {
   margin-top: 0;
   margin-bottom: 2rem;
@@ -255,7 +255,7 @@ exports[`<Footer /> should render 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  padding: 0.4rem 0;
+  padding: 0.8rem 0;
   display: inline-block;
 }
 
@@ -330,6 +330,12 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c16 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c10 {
     font-size: 1.4rem;
   }
@@ -356,12 +362,6 @@ exports[`<Footer /> should render 1`] = `
 @media print {
   .c20 {
     display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    font-size: 1.6rem;
   }
 }
 
@@ -444,21 +444,25 @@ exports[`<Footer /> should render 1`] = `
           class="c4"
         >
           <div
+            aria-level="2"
             class="c5"
+            role="heading"
           >
-            <strong
+            <p
               class="c6"
             >
               <span
                 class="c7"
               />
               Besoin de plus d’informations ?
-            </strong>
+            </p>
           </div>
           <div
             class="c8 c9"
           >
-            Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+            <p>
+              Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
+            </p>
           </div>
           <button
             class="c10"
@@ -472,7 +476,7 @@ exports[`<Footer /> should render 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                 fill="currentColor"
               />
             </svg>
@@ -489,7 +493,9 @@ exports[`<Footer /> should render 1`] = `
             class="c14 "
           >
             <strong
+              aria-level="2"
               class="c15 c16"
+              role="heading"
             >
               Code du travail numérique
             </strong>
@@ -566,7 +572,9 @@ exports[`<Footer /> should render 1`] = `
             class="c14 "
           >
             <strong
+              aria-level="2"
               class="c15 c16"
+              role="heading"
             >
               Aidez-nous à améliorer cet outil
             </strong>
@@ -608,7 +616,9 @@ exports[`<Footer /> should render 1`] = `
             class="c14 "
           >
             <strong
+              aria-level="2"
               class="c15 c16"
+              role="heading"
             >
               En collaboration avec
             </strong>

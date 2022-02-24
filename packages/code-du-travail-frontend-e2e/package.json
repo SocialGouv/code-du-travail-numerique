@@ -1,6 +1,6 @@
 {
   "name": "@cdt/e2e",
-  "version": "4.59.0",
+  "version": "4.69.0",
   "private": true,
   "description": "",
   "main": "codecept.conf.js",
@@ -8,7 +8,7 @@
     "precommit": "lint-staged",
     "lint": "eslint ./**/*.js",
     "test:e2e": "codeceptjs run --features",
-    "test:e2e:ui": "codecept-ui --app"
+    "test:e2e:ui": "codecept-ui --app --verbose"
   },
   "dependencies": {
     "@codeceptjs/helper": "^1.0.2",
@@ -19,7 +19,7 @@
   "devDependencies": {
     "@socialgouv/eslint-config-recommended": "^1.75.0",
     "eslint": "^7.31.0",
-    "lint-staged": "^11.2.3"
+    "lint-staged": "^12.1.2"
   },
   "lint-staged": {
     "*.{ts,js}": [

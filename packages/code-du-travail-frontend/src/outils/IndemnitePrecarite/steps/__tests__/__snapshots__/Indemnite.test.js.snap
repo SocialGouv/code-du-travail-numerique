@@ -24,7 +24,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 
 .c10 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -42,9 +42,15 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -128,7 +134,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -150,11 +156,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 @media (max-width:600px) {
@@ -216,13 +223,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -582,12 +587,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 1 1 .838-.545l9.429 14.505a.5.5 0 0 1-.42.773H5.571a.5.5 0 0 1-.419-.773L25.581 5.014a.5.5 0 0 1 .838 0l5.107 7.857a.5.5 0 0 1-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"
             fill="#3E486E"
             stroke="#4E6896"
           />
           <path
-            d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+            d="M26 14.714a1.57 1.57 0 0 0-1.571 1.571v9.429a1.571 1.571 0 0 0 3.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1 0 26 32a1.571 1.571 0 0 0 0-3.143z"
             fill="#FF7067"
           />
         </svg>
@@ -595,11 +600,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
       <div
         class="c14"
       >
-        <span
-          class="c15"
+        <p
+          class="c15 c16"
         >
           Attention il peut exister un montant plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -645,7 +650,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 
 .c10 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -663,9 +668,15 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -749,7 +760,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -771,11 +782,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 @media (max-width:600px) {
@@ -837,13 +849,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -1192,12 +1202,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 1 1 .838-.545l9.429 14.505a.5.5 0 0 1-.42.773H5.571a.5.5 0 0 1-.419-.773L25.581 5.014a.5.5 0 0 1 .838 0l5.107 7.857a.5.5 0 0 1-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"
             fill="#3E486E"
             stroke="#4E6896"
           />
           <path
-            d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+            d="M26 14.714a1.57 1.57 0 0 0-1.571 1.571v9.429a1.571 1.571 0 0 0 3.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1 0 26 32a1.571 1.571 0 0 0 0-3.143z"
             fill="#FF7067"
           />
         </svg>
@@ -1205,11 +1215,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
       <div
         class="c14"
       >
-        <span
-          class="c15"
+        <p
+          class="c15 c16"
         >
           Attention il peut exister un montant plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -1258,7 +1268,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 
 .c10 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -1276,9 +1286,15 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -1362,7 +1378,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1384,11 +1400,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 @media (max-width:600px) {
@@ -1450,13 +1467,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -1816,12 +1831,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 1 1 .838-.545l9.429 14.505a.5.5 0 0 1-.42.773H5.571a.5.5 0 0 1-.419-.773L25.581 5.014a.5.5 0 0 1 .838 0l5.107 7.857a.5.5 0 0 1-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"
             fill="#3E486E"
             stroke="#4E6896"
           />
           <path
-            d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+            d="M26 14.714a1.57 1.57 0 0 0-1.571 1.571v9.429a1.571 1.571 0 0 0 3.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1 0 26 32a1.571 1.571 0 0 0 0-3.143z"
             fill="#FF7067"
           />
         </svg>
@@ -1829,11 +1844,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
       <div
         class="c14"
       >
-        <span
-          class="c15"
+        <p
+          class="c15 c16"
         >
           Attention il peut exister un montant plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -1882,7 +1897,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 
 .c10 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -1900,9 +1915,15 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -1986,7 +2007,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -2008,11 +2029,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 @media (max-width:600px) {
@@ -2074,13 +2096,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -2429,12 +2449,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 1 1 .838-.545l9.429 14.505a.5.5 0 0 1-.42.773H5.571a.5.5 0 0 1-.419-.773L25.581 5.014a.5.5 0 0 1 .838 0l5.107 7.857a.5.5 0 0 1-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"
             fill="#3E486E"
             stroke="#4E6896"
           />
           <path
-            d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+            d="M26 14.714a1.57 1.57 0 0 0-1.571 1.571v9.429a1.571 1.571 0 0 0 3.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1 0 26 32a1.571 1.571 0 0 0 0-3.143z"
             fill="#FF7067"
           />
         </svg>
@@ -2442,11 +2462,11 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
       <div
         class="c14"
       >
-        <span
-          class="c15"
+        <p
+          class="c15 c16"
         >
           Attention il peut exister un montant plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -2495,7 +2515,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 
 .c10 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -2513,9 +2533,15 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c15 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -2599,7 +2625,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -2621,11 +2647,12 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c16 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 @media (max-width:600px) {
@@ -2687,13 +2714,11 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -3042,12 +3067,12 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 1 1 .838-.545l9.429 14.505a.5.5 0 0 1-.42.773H5.571a.5.5 0 0 1-.419-.773L25.581 5.014a.5.5 0 0 1 .838 0l5.107 7.857a.5.5 0 0 1-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"
             fill="#3E486E"
             stroke="#4E6896"
           />
           <path
-            d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+            d="M26 14.714a1.57 1.57 0 0 0-1.571 1.571v9.429a1.571 1.571 0 0 0 3.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1 0 26 32a1.571 1.571 0 0 0 0-3.143z"
             fill="#FF7067"
           />
         </svg>
@@ -3055,11 +3080,11 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
       <div
         class="c14"
       >
-        <span
-          class="c15"
+        <p
+          class="c15 c16"
         >
           Attention il peut exister un montant plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>

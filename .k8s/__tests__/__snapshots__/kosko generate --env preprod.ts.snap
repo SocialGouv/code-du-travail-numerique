@@ -264,6 +264,27 @@ spec:
         - api-code-du-travail-numerique-preprod.dev2.fabrique.social.gouv.fr
       secretName: wildcard-crt
 ---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: netpol-code-du-travail-numerique-preprod
+  namespace: code-du-travail-numerique-preprod
+spec:
+  ingress:
+    - from:
+        - podSelector: {}
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              network-policy/source: ingress-controller
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              network-policy/source: monitoring
+  podSelector: {}
+  policyTypes:
+    - Ingress
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -334,10 +355,10 @@ spec:
           resources:
             limits:
               cpu: 500m
-              memory: 560Mi
+              memory: 768Mi
             requests:
-              cpu: 200m
-              memory: 256Mi
+              cpu: 300m
+              memory: 512Mi
           startupProbe:
             failureThreshold: 12
             httpGet:
@@ -401,7 +422,7 @@ data:
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr
   PROD_HOSTNAME: code.travail.gouv.fr
   SENTRY_PUBLIC_DSN: https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
-  SENTRY_ENV: preproduction
+  SENTRY_ENV: production
 ---
 apiVersion: v1
 kind: Service

@@ -15,7 +15,7 @@ type Props = {
 };
 
 export const Share = ({ title, metaDescription }: Props): JSX.Element => {
-  const [currentPageUrl, setCurrentPageUrl] = useState(undefined);
+  const [currentPageUrl, setCurrentPageUrl] = useState("");
   const hiddenInputRef = useRef(null);
   const [isUrlCopied, setUrlCopied] = useState(false);
 
@@ -246,7 +246,10 @@ const StyledIcon = styled.span`
   height: 2rem;
 `;
 
-const Center = styled.span`
+const Center = styled.span.attrs({
+  "aria-level": "2",
+  role: "heading",
+})`
   text-align: center;
 `;
 

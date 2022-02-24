@@ -24,7 +24,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
 
 .c9 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -42,9 +42,15 @@ exports[`<StepResult /> should render with O duration 1`] = `
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c14 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -123,16 +129,17 @@ exports[`<StepResult /> should render with O duration 1`] = `
   margin-top: 3.2rem;
 }
 
-.c14 {
+.c15 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -206,13 +213,11 @@ exports[`<StepResult /> should render with O duration 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -337,12 +342,12 @@ exports[`<StepResult /> should render with O duration 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 1 1 .838-.545l9.429 14.505a.5.5 0 0 1-.42.773H5.571a.5.5 0 0 1-.419-.773L25.581 5.014a.5.5 0 0 1 .838 0l5.107 7.857a.5.5 0 0 1-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"
             fill="#3E486E"
             stroke="#4E6896"
           />
           <path
-            d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+            d="M26 14.714a1.57 1.57 0 0 0-1.571 1.571v9.429a1.571 1.571 0 0 0 3.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1 0 26 32a1.571 1.571 0 0 0 0-3.143z"
             fill="#FF7067"
           />
         </svg>
@@ -350,11 +355,11 @@ exports[`<StepResult /> should render with O duration 1`] = `
       <div
         class="c13"
       >
-        <span
-          class="c14"
+        <p
+          class="c14 c15"
         >
           Attention il peut exister une durée plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -388,7 +393,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
 
 .c9 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -406,9 +411,15 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c14 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -487,16 +498,17 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   margin-top: 3.2rem;
 }
 
-.c14 {
+.c15 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -540,7 +552,8 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     Durée du préavis
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à : 
+    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
+     
     <strong
       class="c1 c2"
     >
@@ -571,13 +584,11 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -652,12 +663,12 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 1 1 .838-.545l9.429 14.505a.5.5 0 0 1-.42.773H5.571a.5.5 0 0 1-.419-.773L25.581 5.014a.5.5 0 0 1 .838 0l5.107 7.857a.5.5 0 0 1-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"
             fill="#3E486E"
             stroke="#4E6896"
           />
           <path
-            d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+            d="M26 14.714a1.57 1.57 0 0 0-1.571 1.571v9.429a1.571 1.571 0 0 0 3.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1 0 26 32a1.571 1.571 0 0 0 0-3.143z"
             fill="#FF7067"
           />
         </svg>
@@ -665,11 +676,11 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
       <div
         class="c13"
       >
-        <span
-          class="c14"
+        <p
+          class="c14 c15"
         >
           Attention il peut exister une durée plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -712,7 +723,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 
 .c9 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -730,9 +741,15 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c14 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -811,16 +828,17 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   margin-top: 3.2rem;
 }
 
-.c14 {
+.c15 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -894,13 +912,11 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -975,12 +991,12 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 1 1 .838-.545l9.429 14.505a.5.5 0 0 1-.42.773H5.571a.5.5 0 0 1-.419-.773L25.581 5.014a.5.5 0 0 1 .838 0l5.107 7.857a.5.5 0 0 1-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"
             fill="#3E486E"
             stroke="#4E6896"
           />
           <path
-            d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+            d="M26 14.714a1.57 1.57 0 0 0-1.571 1.571v9.429a1.571 1.571 0 0 0 3.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1 0 26 32a1.571 1.571 0 0 0 0-3.143z"
             fill="#FF7067"
           />
         </svg>
@@ -988,11 +1004,11 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
       <div
         class="c13"
       >
-        <span
-          class="c14"
+        <p
+          class="c14 c15"
         >
           Attention il peut exister une durée plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -1035,7 +1051,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 
 .c9 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -1053,9 +1069,15 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c14 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -1134,16 +1156,17 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   margin-top: 3.2rem;
 }
 
-.c14 {
+.c15 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1187,7 +1210,8 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     Durée du préavis
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à : 
+    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
+     
     <strong
       class="c1 c2"
     >
@@ -1218,13 +1242,11 @@ exports[`<StepResult /> should render with when no CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -1296,12 +1318,12 @@ exports[`<StepResult /> should render with when no CC 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 1 1 .838-.545l9.429 14.505a.5.5 0 0 1-.42.773H5.571a.5.5 0 0 1-.419-.773L25.581 5.014a.5.5 0 0 1 .838 0l5.107 7.857a.5.5 0 0 1-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"
             fill="#3E486E"
             stroke="#4E6896"
           />
           <path
-            d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+            d="M26 14.714a1.57 1.57 0 0 0-1.571 1.571v9.429a1.571 1.571 0 0 0 3.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1 0 26 32a1.571 1.571 0 0 0 0-3.143z"
             fill="#FF7067"
           />
         </svg>
@@ -1309,11 +1331,11 @@ exports[`<StepResult /> should render with when no CC 1`] = `
       <div
         class="c13"
       >
-        <span
-          class="c14"
+        <p
+          class="c14 c15"
         >
           Attention il peut exister une durée plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>
@@ -1347,7 +1369,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 
 .c9 {
   margin-bottom: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem;
   color: #3e486e;
   font-size: 1.6rem;
   background-color: #f2f5fa;
@@ -1365,9 +1387,15 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
 
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.c14 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .c8 {
@@ -1446,16 +1474,17 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   margin-top: 3.2rem;
 }
 
-.c14 {
+.c15 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
   font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1499,7 +1528,8 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     Durée du préavis
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à : 
+    À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
+     
     <strong
       class="c1 c2"
     >
@@ -1530,13 +1560,11 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
           points="9 18 15 12 9 6"
         />
       </svg>
-      <span
+      <p
         class="c6 c7"
-        font-size="hsmall"
-        font-weight="600"
       >
         Voir le détail du calcul
-      </span>
+      </p>
     </div>
     <div
       class="c8"
@@ -1611,12 +1639,12 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 1 1 .838-.545l9.429 14.505a.5.5 0 0 1-.42.773H5.571a.5.5 0 0 1-.419-.773L25.581 5.014a.5.5 0 0 1 .838 0l5.107 7.857a.5.5 0 0 1-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"
             fill="#3E486E"
             stroke="#4E6896"
           />
           <path
-            d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+            d="M26 14.714a1.57 1.57 0 0 0-1.571 1.571v9.429a1.571 1.571 0 0 0 3.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1 0 26 32a1.571 1.571 0 0 0 0-3.143z"
             fill="#FF7067"
           />
         </svg>
@@ -1624,11 +1652,11 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       <div
         class="c13"
       >
-        <span
-          class="c14"
+        <p
+          class="c14 c15"
         >
           Attention il peut exister une durée plus favorable
-        </span>
+        </p>
       </div>
     </div>
     <p>

@@ -17,17 +17,28 @@ exports[`<Convention /> renders 1`] = `
   margin-bottom: 0;
 }
 
-.c9 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
+.c2 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c8 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
 }
 
 .c6 {
@@ -55,7 +66,7 @@ exports[`<Convention /> renders 1`] = `
   border-top: 1px solid #bbcadf;
 }
 
-.c8 {
+.c9 {
   padding: 1.6rem;
   -webkit-animation: iHsNqv 250ms ease-in;
   animation: iHsNqv 250ms ease-in;
@@ -120,6 +131,7 @@ exports[`<Convention /> renders 1`] = `
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
+  margin: 0;
 }
 
 .c20 {
@@ -208,9 +220,9 @@ exports[`<Convention /> renders 1`] = `
 
 .c24 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
 }
 
 .c26 {
@@ -435,19 +447,6 @@ exports[`<Convention /> renders 1`] = `
   padding: 1rem 0 0 3.2rem;
   -webkit-animation: iHsNqv 250ms ease-in;
   animation: iHsNqv 250ms ease-in;
-}
-
-.c2 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .c42 {
@@ -712,6 +711,12 @@ exports[`<Convention /> renders 1`] = `
 
 @media (max-width:600px) {
   .c8 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c9 {
     padding: 1rem 0;
   }
 }
@@ -918,10 +923,8 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-0"
@@ -953,23 +956,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Congés et repos
+              <h3
+                class="c8"
+                style="margin: 0px;"
+              >
+                Congés et repos
+              </h3>
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-0"
-          class="c8"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-0"
         >
-          <div
-            class="c9"
-          >
-            Congés et repos
-          </div>
           <div
             class="c10"
           >
@@ -985,10 +987,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
@@ -1020,27 +1020,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Jours fériés et ponts dans le secteur privé
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Jours fériés et ponts dans le secteur privé
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-jours-feries-et-ponts-dans-le-secteur-prive"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-jours-feries-et-ponts-dans-le-secteur-prive"
                   >
                     <div
-                      class="c9"
-                    >
-                      Jours fériés et ponts dans le secteur privé
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Les jours fériés légaux sont payés dans les conditions prévues par la loi pour le 1er Mai, y compris lorsque les jours fériés tombent pendant une période de chômage-intempéries ou pendant le congé payé.
                         </p>
@@ -1084,15 +1085,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 5-11
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -1119,10 +1120,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
@@ -1154,27 +1153,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-conditions-dindemnisation-pendant-le-conge-de-maternite"
                   >
                     <div
-                      class="c9"
-                    >
-                      Quelles sont les conditions d’indemnisation pendant le congé de maternité ? 
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Les salariées ont droit à un maintien de salaire à 100 % du dernier salaire mensuel, après déduction des indemnités de la sécurité sociale ou de tout autre régime de prévoyance, pendant une durée maximale de 6 semaines avant la date présumée de l'accouchement et de 10 semaines après.
                         </p>
@@ -1257,15 +1257,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 6.121
-                              </span>
+                              </p>
                             </a>
                           </li>
                           <li>
@@ -1284,15 +1284,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 6.21
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -1319,10 +1319,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-les-conges-pour-evenements-familiaux"
@@ -1354,27 +1352,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Les congés pour événements familiaux
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Les congés pour événements familiaux
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-les-conges-pour-evenements-familiaux"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-les-conges-pour-evenements-familiaux"
                   >
                     <div
-                      class="c9"
-                    >
-                      Les congés pour événements familiaux
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Les salariés ont droit à des congés exceptionnels avec maintien de la rémunération, pour les événements familiaux suivants :
                         </p>
@@ -1454,15 +1453,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article  5-12
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -1492,10 +1491,8 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-4"
@@ -1527,23 +1524,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Départ de l'entreprise
+              <h3
+                class="c8"
+                style="margin: 0px;"
+              >
+                Départ de l'entreprise
+              </h3>
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-4"
-          class="c8"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-4"
         >
-          <div
-            class="c9"
-          >
-            Départ de l'entreprise
-          </div>
           <div
             class="c10"
           >
@@ -1559,10 +1555,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
@@ -1594,27 +1588,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                         Quelle est la durée de préavis en cas de licenciement ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                           Quelle est la durée de préavis en cas de licenciement ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-licenciement"
                   >
                     <div
-                      class="c9"
-                    >
-                       Quelle est la durée de préavis en cas de licenciement ?
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           En cas de licenciement, la durée du préavis est égale à :
                         </p>
@@ -1679,15 +1674,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.11
-                              </span>
+                              </p>
                             </a>
                           </li>
                           <li>
@@ -1706,15 +1701,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.13
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -1741,10 +1736,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
@@ -1776,27 +1769,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                         Quelle est la durée du préavis en cas de démission ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                           Quelle est la durée du préavis en cas de démission ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelle-est-la-duree-du-preavis-en-cas-de-demission"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-du-preavis-en-cas-de-demission"
                   >
                     <div
-                      class="c9"
-                    >
-                       Quelle est la durée du préavis en cas de démission ?
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           En cas de démission, la durée du préavis est égale à :
                         </p>
@@ -1846,15 +1840,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.11
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -1881,10 +1875,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
@@ -1916,27 +1908,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                         Quelle est la durée de préavis en cas de départ à la retraite ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                           Quelle est la durée de préavis en cas de départ à la retraite ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-depart-a-la-retraite"
                   >
                     <div
-                      class="c9"
-                    >
-                       Quelle est la durée de préavis en cas de départ à la retraite ?
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           En cas de départ à la retraite du salarié, la durée du préavis est égale à 2 mois.
                         </p>
@@ -1970,15 +1963,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </span>
+                              </p>
                             </a>
                           </li>
                           <li>
@@ -1997,15 +1990,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -2032,10 +2025,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
@@ -2067,27 +2058,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                         Quelle est la durée de préavis en cas de mise à la retraite ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                           Quelle est la durée de préavis en cas de mise à la retraite ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-de-preavis-en-cas-de-mise-a-la-retraite"
                   >
                     <div
-                      class="c9"
-                    >
-                       Quelle est la durée de préavis en cas de mise à la retraite ?
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           En cas de mise à la retraite du salarié, la durée du préavis est égale à 2 mois.
                         </p>
@@ -2121,15 +2113,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </span>
+                              </p>
                             </a>
                           </li>
                           <li>
@@ -2148,15 +2140,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -2183,10 +2175,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
@@ -2218,27 +2208,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-consequences-du-non-respect-du-preavis-par-le-salarie-ou-lemployeur"
                   >
                     <div
-                      class="c9"
-                    >
-                      Quelles sont les conséquences du non-respect du préavis par le salarié ou l'employeur ?
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Si l'employeur ou le salarié ne respecte pas le préavis de licenciement ou de démission, l'autre partie peut obtenir le paiement d'une indemnité égale au salaire correspondant à la durée du préavis restant à courir.
                         </p>
@@ -2272,15 +2263,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.12
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -2307,10 +2298,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
@@ -2342,27 +2331,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
                   >
                     <div
-                      class="c9"
-                    >
-                      Le salarié peut-il s’absenter pour rechercher un emploi pendant son préavis ?
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Pendant le préavis, l'ouvrier licencié ou démissionnaire est autorisé, s'il en fait la demande, à s'absenter pour rechercher un nouvel emploi, pendant :
                         </p>
@@ -2437,15 +2427,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.2
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -2475,10 +2465,8 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-11"
@@ -2510,23 +2498,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Embauche et contrat de travail
+              <h3
+                class="c8"
+                style="margin: 0px;"
+              >
+                Embauche et contrat de travail
+              </h3>
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-11"
-          class="c8"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-11"
         >
-          <div
-            class="c9"
-          >
-            Embauche et contrat de travail
-          </div>
           <div
             class="c10"
           >
@@ -2542,10 +2529,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
@@ -2577,27 +2562,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelle-est-la-duree-maximale-de-la-periode-dessai-sans-et-avec-renouvellement"
                   >
                     <div
-                      class="c9"
-                    >
-                      Quelle est la durée maximale de la période d'essai, sans et avec renouvellement ?
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           La durée de la période d'essai a été fixée par une convention collective conclue avant le 26 juin 2008.
                         </p>
@@ -2639,15 +2625,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 2-4
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -2674,10 +2660,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-comment-determiner-lanciennete-du-salarie"
@@ -2709,27 +2693,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Comment déterminer l'ancienneté du salarié ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Comment déterminer l'ancienneté du salarié ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-comment-determiner-lanciennete-du-salarie"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-comment-determiner-lanciennete-du-salarie"
                   >
                     <div
-                      class="c9"
-                    >
-                      Comment déterminer l'ancienneté du salarié ?
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           L'ancienneté du salarié tient compte de :
                         </p>
@@ -2815,15 +2800,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 10.4
-                              </span>
+                              </p>
                             </a>
                           </li>
                           <li>
@@ -2842,15 +2827,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 11-2
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -2877,10 +2862,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
@@ -2912,27 +2895,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                         Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                           Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-informations-doivent-figurer-dans-le-contrat-de-travail-ou-la-lettre-dengagement"
                   >
                     <div
-                      class="c9"
-                    >
-                       Quelles informations doivent figurer dans le contrat de travail ou la lettre d'engagement ?
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant :
                         </p>
@@ -3037,15 +3021,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 2-3
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -3072,10 +3056,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
@@ -3107,27 +3089,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-est-il-obligatoire-davoir-un-contrat-de-travail-ecrit-et-signe"
                   >
                     <div
-                      class="c9"
-                    >
-                      Est-il obligatoire d'avoir un contrat de travail écrit et signé ?
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           L'employeur doit remettre au salarié, dans les 8 jours qui suivent son embauche, un document écrit (contrat de travail ou lettre d'engagement, ...) précisant les conditions du poste. Ce document doit être accepté et signé par l'employeur et le salarié.
                         </p>
@@ -3161,15 +3144,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 2-3
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -3196,10 +3179,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
@@ -3231,27 +3212,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                         Embauche en contrat d'extra (CDD d'usage)
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                           Embauche en contrat d'extra (CDD d'usage)
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-embauche-en-contrat-dextra-cdd-dusage"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-embauche-en-contrat-dextra-cdd-dusage"
                   >
                     <div
-                      class="c9"
-                    >
-                       Embauche en contrat d'extra (CDD d'usage)
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           La convention collective ne prévoit pas le recours au contrat d'usage.
                         </p>
@@ -3289,10 +3271,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
@@ -3324,27 +3304,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Quelles sont les conditions de cumul d'emplois ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Quelles sont les conditions de cumul d'emplois ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-sont-les-conditions-de-cumul-demplois"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-conditions-de-cumul-demplois"
                   >
                     <div
-                      class="c9"
-                    >
-                      Quelles sont les conditions de cumul d'emplois ?
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Le salarié doit s'engager dans le contrat de travail à ne pas avoir d'activité professionnelle susceptible de concurrencer celle de son employeur ou qui dépasserait le nombre d'heures de travail maximum prévu par le code du travail.
                         </p>
@@ -3378,15 +3359,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 2-3
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -3416,10 +3397,8 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-18"
@@ -3451,23 +3430,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Salaire et Rémunération
+              <h3
+                class="c8"
+                style="margin: 0px;"
+              >
+                Salaire et Rémunération
+              </h3>
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-18"
-          class="c8"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-18"
         >
-          <div
-            class="c9"
-          >
-            Salaire et Rémunération
-          </div>
           <div
             class="c10"
           >
@@ -3483,10 +3461,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
@@ -3518,27 +3494,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-conditions-dattribution-de-la-prime-pour-travaux-dangereux-et-de-la-prime-pour-travaux-insalubres"
                   >
                     <div
-                      class="c9"
-                    >
-                      Quelles sont les conditions d'attribution de la prime pour travaux dangereux et de la prime pour travaux insalubres ?
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           La convention collective ne prévoit pas de prime pour travaux dangereux ni de prime pour travaux insalubres.
                         </p>
@@ -3567,10 +3544,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
@@ -3602,27 +3577,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Quelles sont les primes prévues par la convention collective ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Quelles sont les primes prévues par la convention collective ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quelles-sont-les-primes-prevues-par-la-convention-collective"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quelles-sont-les-primes-prevues-par-la-convention-collective"
                   >
                     <div
-                      class="c9"
-                    >
-                      Quelles sont les primes prévues par la convention collective ?
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           La convention collective prévoit une 
                           <strong>
@@ -3680,15 +3656,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 5-25
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -3715,10 +3691,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
@@ -3750,27 +3724,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-quand-le-salarie-a-t-il-droit-a-une-prime-danciennete-quel-est-son-montant"
                   >
                     <div
-                      class="c9"
-                    >
-                      Quand le salarié a-t-il droit à une prime d’ancienneté ? Quel est son montant ?
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           La convention collective ne prévoit pas de prime d'ancienneté.
                         </p>
@@ -3830,15 +3805,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 5-24
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -3868,10 +3843,8 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-22"
@@ -3903,23 +3876,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Santé, sécurité et conditions de travail
+              <h3
+                class="c8"
+                style="margin: 0px;"
+              >
+                Santé, sécurité et conditions de travail
+              </h3>
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-22"
-          class="c8"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-22"
         >
-          <div
-            class="c9"
-          >
-            Santé, sécurité et conditions de travail
-          </div>
           <div
             class="c10"
           >
@@ -3935,10 +3907,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
@@ -3970,27 +3940,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-en-cas-darret-maladie-du-salarie-lemployeur-doit-il-assurer-le-maintien-de-salaire"
                   >
                     <div
-                      class="c9"
-                    >
-                      En cas d’arrêt maladie du salarié, l’employeur doit-il assurer le maintien de salaire ?
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           Le salarié a droit à un maintien de salaire pendant l'arrêt maladie dans les conditions suivantes.
                         </p>
@@ -4276,13 +4247,13 @@ exports[`<Convention /> renders 1`] = `
                                 points="9 18 15 12 9 6"
                               />
                             </svg>
-                            <span
+                            <p
+                              aria-level="2"
                               class="c24 c25"
-                              font-size="hsmall"
-                              font-weight="600"
+                              role="heading"
                             >
                               Références juridiques concernées :
-                            </span>
+                            </p>
                           </div>
                           <div
                             class="c26"
@@ -4306,15 +4277,15 @@ exports[`<Convention /> renders 1`] = `
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
                                     <path
-                                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <span
+                                  <p
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-11
-                                  </span>
+                                  </p>
                                 </a>
                               </li>
                               <li>
@@ -4333,15 +4304,15 @@ exports[`<Convention /> renders 1`] = `
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
                                     <path
-                                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <span
+                                  <p
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-12
-                                  </span>
+                                  </p>
                                 </a>
                               </li>
                               <li>
@@ -4360,15 +4331,15 @@ exports[`<Convention /> renders 1`] = `
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
                                     <path
-                                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <span
+                                  <p
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-13
-                                  </span>
+                                  </p>
                                 </a>
                               </li>
                               <li>
@@ -4387,15 +4358,15 @@ exports[`<Convention /> renders 1`] = `
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
                                     <path
-                                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <span
+                                  <p
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-14
-                                  </span>
+                                  </p>
                                 </a>
                               </li>
                               <li>
@@ -4414,15 +4385,15 @@ exports[`<Convention /> renders 1`] = `
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
                                     <path
-                                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                       fill="currentColor"
                                     />
                                   </svg>
-                                  <span
+                                  <p
                                     class="c21"
                                   >
                                     IDCC 1596 - Article 6-15
-                                  </span>
+                                  </p>
                                 </a>
                               </li>
                             </ul>
@@ -4451,10 +4422,8 @@ exports[`<Convention /> renders 1`] = `
                   data-accordion-component="AccordionItem"
                 >
                   <div
-                    aria-level="4"
                     class="accordion__heading"
                     data-accordion-component="AccordionItemHeading"
-                    role="heading"
                   >
                     <div
                       aria-controls="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
@@ -4486,27 +4455,28 @@ exports[`<Convention /> renders 1`] = `
                       <div
                         class="c7"
                       >
-                        En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
+                        <h4
+                          class="c8"
+                          style="margin: 0px;"
+                        >
+                          En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
+                        </h4>
                       </div>
                     </div>
                   </div>
                   <div
                     aria-hidden="true"
-                    aria-labelledby="accordion__heading-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
-                    class="c8"
+                    class="c9"
                     data-accordion-component="AccordionItemPanel"
                     hidden=""
                     id="accordion__panel-en-cas-de-maladie-le-salarie-a-t-il-droit-a-une-garantie-demploi"
                   >
                     <div
-                      class="c9"
-                    >
-                      En cas de maladie, le salarié a-t-il droit à une garantie d’emploi ?
-                    </div>
-                    <div
                       class="c10"
                     >
-                      <div>
+                      <div
+                        class=""
+                      >
                         <p>
                           En cas d'accident du travail ou de maladie professionnelle, le code du travail s'applique. 
                         </p>
@@ -4571,15 +4541,15 @@ exports[`<Convention /> renders 1`] = `
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                                  d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <span
+                              <p
                                 class="c21"
                               >
                                 IDCC 1596 - Article 6-11
-                              </span>
+                              </p>
                             </a>
                           </li>
                         </ul>
@@ -4630,10 +4600,8 @@ exports[`<Convention /> renders 1`] = `
       data-accordion-component="AccordionItem"
     >
       <div
-        aria-level="3"
         class="accordion__heading"
         data-accordion-component="AccordionItemHeading"
-        role="heading"
       >
         <div
           aria-controls="accordion__panel-raa-25"
@@ -4654,7 +4622,7 @@ exports[`<Convention /> renders 1`] = `
           >
             <path
               clip-rule="evenodd"
-              d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
+              d="M8 2a1 1 0 0 0-1 1v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3a1 1 0 0 0-1-1z"
               fill="currentColor"
               fill-rule="evenodd"
             />
@@ -4667,12 +4635,10 @@ exports[`<Convention /> renders 1`] = `
         </div>
       </div>
       <div
-        aria-labelledby="accordion__heading-raa-25"
         class="c32"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-raa-25"
-        role="region"
       >
         <div
           class="c33"
@@ -4721,10 +4687,8 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-26"
@@ -4756,23 +4720,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Salaires minima hiérarchiques
+              <h3
+                class="c8"
+                style="margin: 0px;"
+              >
+                Salaires minima hiérarchiques
+              </h3>
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-26"
-          class="c8"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-26"
         >
-          <div
-            class="c9"
-          >
-            Salaires minima hiérarchiques
-          </div>
           <div
             class="c10"
           >
@@ -4800,11 +4763,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 1-4
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -4830,11 +4793,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 4-1
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -4860,11 +4823,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 4-2
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -4890,11 +4853,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-8
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -4918,10 +4881,8 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-27"
@@ -4953,23 +4914,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Durée du travail, répartition et aménagement des horaires
+              <h3
+                class="c8"
+                style="margin: 0px;"
+              >
+                Durée du travail, répartition et aménagement des horaires
+              </h3>
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-27"
-          class="c8"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-27"
         >
-          <div
-            class="c9"
-          >
-            Durée du travail, répartition et aménagement des horaires
-          </div>
           <div
             class="c10"
           >
@@ -4997,11 +4957,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-13
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5027,11 +4987,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-14
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5057,11 +5017,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-15
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5087,11 +5047,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-16
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5117,11 +5077,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-17
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5147,11 +5107,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-18
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5177,11 +5137,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-21
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5207,11 +5167,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-22
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5237,11 +5197,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-24
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5267,11 +5227,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-25
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5297,11 +5257,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-28
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5327,11 +5287,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 3-29
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5355,10 +5315,8 @@ exports[`<Convention /> renders 1`] = `
         data-accordion-component="AccordionItem"
       >
         <div
-          aria-level="3"
           class="accordion__heading"
           data-accordion-component="AccordionItemHeading"
-          role="heading"
         >
           <div
             aria-controls="accordion__panel-raa-28"
@@ -5390,23 +5348,22 @@ exports[`<Convention /> renders 1`] = `
             <div
               class="c7"
             >
-              Classifications
+              <h3
+                class="c8"
+                style="margin: 0px;"
+              >
+                Classifications
+              </h3>
             </div>
           </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__heading-raa-28"
-          class="c8"
+          class="c9"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-raa-28"
         >
-          <div
-            class="c9"
-          >
-            Classifications
-          </div>
           <div
             class="c10"
           >
@@ -5434,11 +5391,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-1
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5464,11 +5421,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-2
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5494,11 +5451,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-3
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5524,11 +5481,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-4
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5554,11 +5511,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-5
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5584,11 +5541,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-6
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5614,11 +5571,11 @@ exports[`<Convention /> renders 1`] = `
                         <div
                           class="c41"
                         >
-                          <span
+                          <p
                             class="c42 c43"
                           >
                             Article 12-7
-                          </span>
+                          </p>
                           
                         </div>
                       </div>
@@ -5719,7 +5676,7 @@ exports[`<Convention /> renders 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
+            d="M27.319 25.368a.935.935 0 0 1-1.304 1.341l-6.256-6.012a9.797 9.797 0 0 1-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
             fill="currentColor"
           />
         </svg>
@@ -5739,12 +5696,12 @@ exports[`<Convention /> renders 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 11.838-.545l9.429 14.505a.5.5 0 01-.42.773H5.571a.5.5 0 01-.419-.773L25.581 5.014a.5.5 0 01.838 0l5.107 7.857a.5.5 0 01-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 11-1 0 .5.5 0 011 0z"
+          d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 1 1 .838-.545l9.429 14.505a.5.5 0 0 1-.42.773H5.571a.5.5 0 0 1-.419-.773L25.581 5.014a.5.5 0 0 1 .838 0l5.107 7.857a.5.5 0 0 1-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"
           fill="#3E486E"
           stroke="#4E6896"
         />
         <path
-          d="M26 14.714a1.57 1.57 0 00-1.571 1.571v9.429a1.571 1.571 0 003.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1026 32a1.571 1.571 0 000-3.143z"
+          d="M26 14.714a1.57 1.57 0 0 0-1.571 1.571v9.429a1.571 1.571 0 0 0 3.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1 0 26 32a1.571 1.571 0 0 0 0-3.143z"
           fill="#FF7067"
         />
       </svg>

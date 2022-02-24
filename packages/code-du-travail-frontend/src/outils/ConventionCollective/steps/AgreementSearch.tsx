@@ -9,7 +9,7 @@ import {
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
-import React, { useRef } from "react";
+import React, { MutableRefObject, useRef } from "react";
 import Spinner from "react-svg-spinner";
 import styled from "styled-components";
 
@@ -29,14 +29,16 @@ const AgreementSearchStep = ({
 }: AgreementSearchStepProps): JSX.Element => {
   const refInput = useRef<HTMLFormElement>();
   const { trackEvent, title, uuid } = useTrackingContext();
+
   function openModalHandler(openModal: () => void) {
     trackEvent("cc_search_help", "click_cc_search_help_p1", title, uuid);
     openModal();
   }
+
   return (
     <>
       <SearchAgreement
-        inputRef={refInput}
+        inputRef={refInput as MutableRefObject<HTMLFormElement>}
         renderResults={(state, query) => {
           if (state.isLoading) {
             return (
@@ -147,7 +149,9 @@ const AgreementSearchStep = ({
                 </Wrapper>
               </Section>
             )
-          ) : null;
+          ) : (
+            <></>
+          );
         }}
       />
       <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>

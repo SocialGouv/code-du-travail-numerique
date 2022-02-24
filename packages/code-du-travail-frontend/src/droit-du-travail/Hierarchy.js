@@ -37,20 +37,20 @@ const Hierarchy = ({ hash }) => {
         items={[
           {
             body: (
-              <>
+              <p>
                 Les textes nationaux doivent être conformes aux textes
                 internationaux et européens.
-              </>
+              </p>
             ),
             icon: icons.International,
             title: "Les textes internationaux et européens",
           },
           {
             body: (
-              <>
+              <p>
                 Tous les textes nationaux doivent être conformes à la
                 Constitution française ainsi qu’au bloc de constitutionnalité.
-              </>
+              </p>
             ),
             icon: icons.Constitution,
             title: "La Constitution",
@@ -72,14 +72,14 @@ const Hierarchy = ({ hash }) => {
                   items={[
                     {
                       body: (
-                        <>
+                        <p>
                           Il existe des règles dans le Code du travail que les
                           conventions et accords collectifs doivent respecter.
                           Les conventions et accords collectifs peuvent
                           toutefois prévoir des mesures plus avantageuses pour
                           le salarié. Dans ce cas, c’est le texte le plus
                           avantageux pour le salarié qui s’applique.
-                        </>
+                        </p>
                       ),
                       title:
                         "Les conventions et accords collectifs doivent respecter le Code du travail",
@@ -181,24 +181,26 @@ const Hierarchy = ({ hash }) => {
                 </p>
                 <Wrapper variant="light">
                   <IconStripe icon={icons.Warning}>
-                    Ce principe ne s’applique pas dans{" "}
-                    <Button
-                      variant="link"
-                      onClick={() => setModal13MatieresOpen(true)}
-                    >
-                      13 matières
-                    </Button>{" "}
-                    où la loi reconnaît la primauté à la convention collective
-                    de branche et{" "}
-                    <Button
-                      variant="link"
-                      onClick={() => setModal4MatieresOpen(true)}
-                    >
-                      4 matières
-                    </Button>{" "}
-                    où la branche elle-même peut reconnaître sa primauté, sauf
-                    si l’accord d’entreprise a des garanties au moins
-                    équivalentes.
+                    <P>
+                      Ce principe ne s’applique pas dans{" "}
+                      <Button
+                        variant="link"
+                        onClick={() => setModal13MatieresOpen(true)}
+                      >
+                        13 matières
+                      </Button>{" "}
+                      où la loi reconnaît la primauté à la convention collective
+                      de branche et{" "}
+                      <Button
+                        variant="link"
+                        onClick={() => setModal4MatieresOpen(true)}
+                      >
+                        4 matières
+                      </Button>{" "}
+                      où la branche elle-même peut reconnaître sa primauté, sauf
+                      si l’accord d’entreprise a des garanties au moins
+                      équivalentes.
+                    </P>
                   </IconStripe>
                 </Wrapper>
                 <p>
@@ -234,34 +236,34 @@ const Hierarchy = ({ hash }) => {
           },
           {
             body: (
-              <>
+              <p>
                 Les usages et les engagements unilatéraux doivent respecter les
                 textes situés en haut. Ils peuvent être plus avantageux pour le
                 salarié. Dans ce cas, ce sont les textes les plus avantageux qui
                 s’appliquent.
-              </>
+              </p>
             ),
             icon: icons.Uses,
             title: "Les usages et les engagements unilatéraux",
           },
           {
             body: (
-              <>
+              <p>
                 Le règlement intérieur doit respecter les textes situés en haut.
                 Il peut être plus avantageux pour le salarié. Dans ce cas, c’est
                 le texte le plus avantageux pour le salarié qui s’applique.
-              </>
+              </p>
             ),
             icon: icons.Rules,
             title: "Le règlement intérieur de l’entreprise",
           },
           {
             body: (
-              <>
+              <p>
                 Le contrat de travail doit respecter les textes situés en haut.
                 Il peut prévoir des mesures plus avantageuses pour le salarié.
                 Dans ce cas, c’est le contrat de travail qui s’applique.
-              </>
+              </p>
             ),
             icon: icons.Contract,
             title: "Le contrat de travail",
@@ -366,4 +368,8 @@ const Ul = styled.ul`
       margin-left: 0;
     }
   }
+`;
+
+const P = styled.p`
+  margin: 0;
 `;

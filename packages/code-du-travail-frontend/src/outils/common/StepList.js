@@ -62,7 +62,10 @@ const StyledWrapper = styled(Wrapper)`
   }
 `;
 
-const Title = styled.span`
+const Title = styled.span.attrs({
+  "aria-level": "2",
+  role: "heading",
+})`
   margin: ${spacings.medium} 0;
   font-weight: 600;
   @media (max-width: ${breakpoints.tablet}) {

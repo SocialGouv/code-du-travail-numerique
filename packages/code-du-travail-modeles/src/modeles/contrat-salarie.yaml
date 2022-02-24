@@ -116,3 +116,21 @@ contrat salarié . convention collective:
   titre: Convention collective
   question: Quelle est votre convention collective ?
   par défaut: "''"
+
+contrat salarié . préavis de retraite collective maximum: non
+
+contrat salarié . préavis de retraite collective maximum en jours:
+  valeur: contrat salarié . préavis de retraite collective maximum
+  unité: jour
+
+contrat salarié . préavis de retraite collective maximum pour travailleur handicapé:
+  applicable si: contrat salarié . travailleur handicapé
+  remplace: contrat salarié . préavis de retraite collective maximum
+  variations:
+    - si: contrat salarié . préavis de retraite collective maximum < 3 mois
+      alors:
+        variations:
+          - si: contrat salarié . préavis de retraite collective maximum * 2 > 3 mois
+            alors: 3 mois
+          - sinon: contrat salarié . préavis de retraite collective maximum * 2
+    - sinon: contrat salarié . préavis de retraite collective maximum

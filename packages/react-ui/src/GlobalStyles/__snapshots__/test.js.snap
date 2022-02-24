@@ -18,6 +18,10 @@ HTMLCollection [
 
 }
 
+@media (max-width:600px) {
+
+}
+
 @media print {
 
 }
@@ -52,8 +56,12 @@ HTMLCollection [
     @media (max-width:600px){h1{margin-bottom:1.6rem;font-size:2.6rem;}}
     h2{font-size:2.8rem;}
     @media (max-width:600px){h2{font-size:2.2rem;}}
-    h3,h4,h5,h6{font-weight:600;font-size:1.8rem;font-family:"Open Sans",sans-serif;}
-    @media (max-width:600px){h3,h4,h5,h6{font-size:1.6rem;}}
+    h3,h4,h5,h6{font-family:"Open Sans",sans-serif;}
+    h3{font-weight:600;font-size:1.8rem;}
+    @media (max-width:600px){h3{font-size:1.6rem;}}
+    h4{font-weight:normal;font-size:1.8rem;}
+    @media (max-width:600px){h4{font-size:1.6rem;}}
+    h5,h6{font-weight:600;font-size:1.4rem;}
     a{color:#3e486e;font-weight:600;font-family:'Open Sans',sans-serif;-webkit-text-decoration:underline;text-decoration:underline;-webkit-text-decoration-color:#f66663;text-decoration-color:#f66663;-webkit-transition:color 250ms linear,text-decoration 250ms linear;transition:color 250ms linear,text-decoration 250ms linear;}
     @media print{a{-webkit-text-decoration:none;text-decoration:none;}}
     a:focus,a:hover,a:active{color:#f66663;}

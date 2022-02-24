@@ -48,9 +48,11 @@ export { ViewMore } from "./ViewMore/index.js";
 
 // Fields
 export { InputCheckbox } from "./field/Checkbox.js";
+export { Fieldset } from "./field/Fieldset.js";
 export { Input } from "./field/Input.js";
 export { InputDate } from "./field/InputDate.js";
 export { Label } from "./field/Label.js";
+export { Legend } from "./field/Legend.js";
 export { InputRadio } from "./field/Radio.js";
 export { Select } from "./field/Select.js";
 export { Textarea } from "./field/Textarea.js";

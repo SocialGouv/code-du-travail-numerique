@@ -16,6 +16,12 @@ function getSalaireRef({
   primes = [],
   anciennete,
 }) {
+  if (!salaires) {
+    salaires = [];
+  }
+  if (!primes) {
+    primes = [];
+  }
   const primeValues = primes.map((a) => a.prime);
   const salaryValues = salaires.map((a) => a.salary);
 
