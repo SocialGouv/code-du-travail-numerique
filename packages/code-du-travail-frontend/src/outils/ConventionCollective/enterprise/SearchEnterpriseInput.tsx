@@ -7,9 +7,10 @@ import {
   theme,
 } from "@socialgouv/cdtn-ui";
 import React, { ForwardedRef } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { InfoBulle } from "../../common/InfoBulle";
+import { SectionTitle } from "../../common/stepStyles";
 import EmbeddedInForm from "../common/EmbeddedInForm";
 
 type Props = {
@@ -27,10 +28,13 @@ export const SearchEnterpriseInput = React.forwardRef(
   ): JSX.Element {
     return (
       <Section>
-        <ParagraphNoMarginBottom fontWeight="600" fontSize="default">
-          Précisez et sélectionnez votre entreprise
-        </ParagraphNoMarginBottom>
-
+        {embeddedForm ? (
+          <SectionTitle>Précisez et sélectionnez votre entreprise</SectionTitle>
+        ) : (
+          <ParagraphNoMarginBottom fontWeight="600" fontSize="default">
+            Précisez et sélectionnez votre entreprise
+          </ParagraphNoMarginBottom>
+        )}
         <EmbeddedInForm
           enable={embeddedForm}
           onSubmit={(event) => event.preventDefault()}
@@ -38,7 +42,10 @@ export const SearchEnterpriseInput = React.forwardRef(
         >
           <Flex>
             <Box ref={ref}>
-              <BlockLabel htmlFor="enterprise-search">
+              <BlockLabel
+                htmlFor="enterprise-search"
+                embeddedForm={embeddedForm}
+              >
                 Nom de votre entreprise ou numéro Siret{" "}
                 <Text fontWeight="400">(obligatoire)</Text>
                 <InfoBulle title={"Qu’est ce qu’un n°siret ?"}>
@@ -63,7 +70,10 @@ export const SearchEnterpriseInput = React.forwardRef(
               />
             </Box>
             <Box>
-              <BlockLabel htmlFor="enterprise-search-address">
+              <BlockLabel
+                htmlFor="enterprise-search-address"
+                embeddedForm={embeddedForm}
+              >
                 Code postal ou ville
               </BlockLabel>
               <BlockInput
@@ -98,8 +108,14 @@ const BlockInput = styled(Input)`
 
 const BlockLabel = styled(Label)`
   display: block;
-  font-weight: 400;
   padding-bottom: 0;
+  ${(props) => {
+    if (!props.embeddedForm) {
+      return css`
+        font-weight: 400;
+      `;
+    }
+  }}
 `;
 
 const Flex = styled.div`

@@ -25,8 +25,8 @@ const ShowAlert = ({
           Convention collective non traitée
         </Paragraph>
         <Paragraph noMargin>
-          La convention collective sélectionnée n&apos;est pas traitée dans ce
-          simulateur.
+          La convention collective sélectionnée n&apos;est pas traitée par nos
+          services.
         </Paragraph>
         <Paragraph noMargin>
           Vous pouvez tout de même poursuivre la simulation pour connaitre la

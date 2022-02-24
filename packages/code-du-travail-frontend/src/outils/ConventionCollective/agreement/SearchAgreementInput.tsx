@@ -7,9 +7,10 @@ import {
   theme,
 } from "@socialgouv/cdtn-ui";
 import React, { ForwardedRef } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { InfoBulle } from "../../common/InfoBulle";
+import { SectionTitle } from "../../common/stepStyles";
 import EmbeddedInForm from "../common/EmbeddedInForm";
 
 type Props = {
@@ -33,15 +34,21 @@ export const SearchAgreementInput = React.forwardRef(
   ): JSX.Element {
     return (
       <Section>
-        <ParagraphNoMarginBottom fontWeight="600" fontSize="default">
-          Précisez et sélectionnez votre convention collective
-        </ParagraphNoMarginBottom>
+        {embeddedForm ? (
+          <SectionTitle>
+            Précisez et sélectionnez votre convention collective
+          </SectionTitle>
+        ) : (
+          <ParagraphNoMarginBottom fontWeight="600" fontSize="default">
+            Précisez et sélectionnez votre convention collective
+          </ParagraphNoMarginBottom>
+        )}
         <EmbeddedInForm
           enable={embeddedForm}
           reference={ref}
           onSubmit={(event) => event.preventDefault()}
         >
-          <BlockLabel htmlFor="agreement-search">
+          <BlockLabel htmlFor="agreement-search" embeddedForm={embeddedForm}>
             Nom de la convention collective ou son numéro d’identification{" "}
             <abbr title="Identifiant de la Convention Collective">IDCC</abbr>{" "}
             <Text fontWeight="400">(champ obligatoire)</Text>
@@ -89,6 +96,12 @@ const BlockInput = styled(Input)`
 
 const BlockLabel = styled(Label)`
   display: block;
-  font-weight: 400;
   padding-bottom: 0;
+  ${(props) => {
+    if (!props.embeddedForm) {
+      return css`
+        font-weight: 400;
+      `;
+    }
+  }}
 `;
