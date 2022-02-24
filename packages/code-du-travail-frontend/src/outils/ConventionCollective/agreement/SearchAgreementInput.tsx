@@ -50,9 +50,11 @@ export const SearchAgreementInput = React.forwardRef(
         >
           <InlineLabel htmlFor="agreement-search" embeddedForm={embeddedForm}>
             Nom de la convention collective ou son numéro d’identification{" "}
+            <abbr title="Identifiant de la Convention Collective">IDCC</abbr>{" "}
+            <Text fontWeight="400" fontSize="small">
+              (champ obligatoire)
+            </Text>
           </InlineLabel>
-          <abbr title="Identifiant de la Convention Collective">IDCC</abbr>{" "}
-          <Text fontWeight="400">(champ obligatoire)</Text>
           <InfoBulle title="Qu'est ce qu'un IDCC">
             <p>
               L’Identifiant de la Convention Collective (IDCC) est un numéro

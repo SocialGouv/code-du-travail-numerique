@@ -47,7 +47,9 @@ export const SearchEnterpriseInput = React.forwardRef(
                 embeddedForm={embeddedForm}
               >
                 Nom de votre entreprise ou numéro Siret{" "}
-                <Text fontWeight="400">(obligatoire)</Text>
+                <Text fontWeight="400" fontSize="small">
+                  (obligatoire)
+                </Text>
               </InlineLabel>
               <InfoBulle title={"Qu’est ce qu’un n°siret ?"}>
                 <p>
