@@ -1,5 +1,4 @@
 import { formatIdcc } from "@cdt/data";
-import slugify from "@socialgouv/cdtn-slugify";
 import {
   getLabelBySource,
   getRouteBySource,
@@ -9,30 +8,22 @@ import { Paragraph, Tile } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 
-import { AgreementData } from "../../../conventions/Search/api/enterprises.service";
-import { useTrackingContext } from "../common/TrackingContext";
+import type { Agreement } from "../../../conventions/Search/api/type";
+import { TrackingProps, UserAction } from "../types";
 
 type Props = {
-  agreement: AgreementData;
-};
+  agreement: Agreement;
+} & TrackingProps;
 
-const getConventionSlug = (convention: AgreementData) =>
-  slugify(`${convention.idcc}-${convention.shortTitle}`.substring(0, 80));
-
-export function AgreementTile({ agreement }: Props): JSX.Element {
-  const { trackEvent, title, uuid } = useTrackingContext();
-
+export function AgreementTile({ agreement, onUserAction }: Props): JSX.Element {
   const clickHandler = () => {
-    trackEvent("cc_select_p2", title, `idcc${agreement.idcc.toString()}`, uuid);
+    onUserAction(UserAction.SelectAgreement, `idcc${agreement.num.toString()}`);
   };
   return (
-    <Link
-      href={`/${getRouteBySource(SOURCES.CCN)}/${getConventionSlug(agreement)}`}
-      passHref
-    >
+    <Link href={`/${getRouteBySource(SOURCES.CCN)}/${agreement.slug}`} passHref>
       <Tile
         wide
-        title={`${agreement.shortTitle} IDCC${formatIdcc(agreement.idcc)}`}
+        title={`${agreement.shortTitle} IDCC${formatIdcc(agreement.num)}`}
         subtitle={getLabelBySource(SOURCES.CCN)}
         onClick={clickHandler}
       >

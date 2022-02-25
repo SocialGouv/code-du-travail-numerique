@@ -1,5 +1,8 @@
 import debounce from "debounce-promise";
 import memoizee from "memoizee";
+import getConfig from "next/config";
+
+import { Agreement } from "./type";
 
 export interface ApiEnterpriseData {
   entreprises: Enterprise[];
@@ -7,7 +10,7 @@ export interface ApiEnterpriseData {
 
 export interface Enterprise {
   activitePrincipale?: string;
-  conventions: AgreementData[];
+  conventions: Agreement[];
   etablissements: number;
   highlightLabel: string;
   label: string;
@@ -16,20 +19,6 @@ export interface Enterprise {
   siren: string;
   address?: string;
   firstMatchingEtablissement?: MatchingEtablissement;
-}
-
-/**
- * Agreement type from @socialgouv/kali-data/data/index.json
- */
-export interface AgreementData {
-  idcc: number;
-  shortTitle: string;
-  etat?: string;
-  id?: string;
-  mtime?: number;
-  texte_de_base?: string;
-  url?: string;
-  title?: string;
 }
 
 export interface MatchingEtablissement {
@@ -46,27 +35,9 @@ const siretLengthError =
 const siretNumberError =
   "Veuillez indiquer un numéro Siret (14 chiffres uniquement)";
 
-const ENTERPRISE_API_URL =
-  "https://search-recherche-entreprises.fabrique.social.gouv.fr/api/v1";
-
-const makeSearchUrl = ({ query, address }) => {
-  const params: { k: string; v: string }[] = [
-    { k: "ranked", v: "true" },
-    { k: "query", v: encodeURIComponent(query) },
-    { k: "address", v: encodeURIComponent(address) },
-    { k: "convention", v: "true" },
-    { k: "employer", v: "true" },
-    { k: "open", v: "true" },
-    { k: "matchingLimit", v: "0" },
-  ];
-
-  const flattenParams = params
-    .map(({ k, v }) => (k && v ? `${k}=${v}` : undefined))
-    .filter((qp) => qp)
-    .join("&");
-
-  return `${ENTERPRISE_API_URL}/search?${flattenParams}`;
-};
+const {
+  publicRuntimeConfig: { API_URL },
+} = getConfig();
 
 const apiEnterprises = memoizee(function createFetcher(query, address) {
   if (/^\d{2,8}$/.test(query.replace(/\s/g, ""))) {
@@ -82,7 +53,9 @@ const apiEnterprises = memoizee(function createFetcher(query, address) {
     return Promise.reject(siretNumberError);
   }
 
-  const url = makeSearchUrl({ address, query });
+  const url = `${API_URL}/enterprises?q=${encodeURIComponent(query)}${
+    address ? `&a=${encodeURIComponent(address)}` : ""
+  }`;
 
   // if (/^\d{14}$/.test(query.replace(/\s/g, ""))) {
   //   url = `${ENTERPRISE_API_URL}/etablissement/${query}`;

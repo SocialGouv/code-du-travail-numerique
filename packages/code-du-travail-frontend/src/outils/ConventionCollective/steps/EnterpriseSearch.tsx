@@ -3,6 +3,7 @@ import {
   Button,
   ScreenReaderOnly,
   Section as SectionUi,
+  theme,
   Title,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
@@ -14,40 +15,50 @@ import styled from "styled-components";
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
 import { InlineError } from "../../common/ErrorField";
 import { HelpModal } from "../common/Modal";
-import { useNavContext } from "../common/NavContext";
 import { ListItem, ResultList } from "../common/ResultList";
-import { useTrackingContext } from "../common/TrackingContext";
 import { EnterpriseButton } from "../enterprise/EnterpriseButton";
 import { SearchEnterprise, SearchParams } from "../enterprise/SearchEnterprise";
+import { TrackingProps, UserAction } from "../types";
 
 type EnterpriseSearchStepProps = {
-  onBackClick: () => void;
-};
+  embeddedForm: boolean;
+  onBackClick?: () => void;
+  handleEnterpriseSelection: (
+    enterprise: Enterprise,
+    params: SearchParams
+  ) => void;
+  searchParams?: SearchParams;
+  onSearchParamsChange: (params: SearchParams) => void;
+} & TrackingProps;
 
 const EnterpriseSearchStep = ({
   onBackClick,
+  handleEnterpriseSelection,
+  searchParams,
+  onSearchParamsChange,
+  embeddedForm,
+  onUserAction,
 }: EnterpriseSearchStepProps): JSX.Element => {
-  const { setSearchParams, setEnterprise } = useNavContext();
-  const { trackEvent, uuid, title } = useTrackingContext();
-  const refInput = useRef<HTMLDivElement>();
-
-  function handleEnterpriseSelection(
-    enterprise: Enterprise,
-    params: SearchParams
-  ) {
-    setEnterprise(enterprise);
-    setSearchParams(params);
-  }
+  const refInput = useRef<HTMLFormElement>();
 
   function openModalHandler(openModal: () => void) {
-    trackEvent("cc_search_help", "click_cc_search_help_p2", title, uuid);
+    onUserAction(UserAction.OpenEnterpriseHelp);
     openModal();
   }
 
   return (
     <>
       <SearchEnterprise
-        inputRef={refInput as MutableRefObject<HTMLDivElement>}
+        embeddedForm={embeddedForm}
+        onUserAction={onUserAction}
+        searchParams={
+          searchParams ?? {
+            address: "",
+            query: "",
+          }
+        }
+        onSearchParamsChange={onSearchParamsChange}
+        inputRef={refInput as MutableRefObject<HTMLFormElement>}
         renderResults={(state, params) => {
           if (refInput.current && state.data && !state.isLoading) {
             refInput.current.scrollIntoView({ behavior: "smooth" });
@@ -89,6 +100,7 @@ const EnterpriseSearchStep = ({
                           onClick={() =>
                             handleEnterpriseSelection(item, params)
                           }
+                          onUserAction={onUserAction}
                         />
                       </ListItem>
                     );
@@ -154,11 +166,19 @@ const EnterpriseSearchStep = ({
         }}
       />
 
-      <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
-        <Button as="a" small type="button" onClick={onBackClick} variant="flat">
-          Précédent
-        </Button>
-      </Link>
+      {onBackClick && (
+        <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
+          <Button
+            as="a"
+            small
+            type="button"
+            onClick={onBackClick}
+            variant="flat"
+          >
+            Précédent
+          </Button>
+        </Link>
+      )}
     </>
   );
 };
@@ -166,5 +186,5 @@ const EnterpriseSearchStep = ({
 export { EnterpriseSearchStep };
 
 const Section = styled(SectionUi)`
-  padding-top: 1rem;
+  padding-top: ${theme.spacings.small};
 `;

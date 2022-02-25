@@ -183,7 +183,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
     Durée du préavis
   </h2>
   <p>
-    À partir des éléments que vous avez saisis, la durée du préavis de démission est estimée à :
+    À partir des éléments que vous avez saisis, la durée du préavis de démission est estimée à : 
     <strong
       class="c1 c2"
     >

@@ -10,17 +10,28 @@ import { PublicodesResult, PublicodesUnit } from "./index";
 export const mapToPublicodesSituation = (
   form: FormContent
 ): Record<string, string> => {
-  const { ccn, infos, seniorityMaximum, seniorityValue, ...formWithoutCcn } =
-    form;
+  const {
+    ccn,
+    infos,
+    seniorityMaximum,
+    seniorityValue,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    disabledWorker,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    cdt,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    criteria,
+    ...formWithoutCcn
+  } = form;
   const seniority = {
     "contrat salarié - ancienneté":
       seniorityMaximum && seniorityValue
         ? seniorityValue
-        : formatSeniority(form["contrat salarié - ancienneté"]),
+        : formatSeniority(form["contrat salarié - ancienneté"] as string),
   };
-  const agreement: Record<string, string> = ccn
+  const agreement: Record<string, string> = ccn?.selected
     ? {
-        "contrat salarié - convention collective": `'IDCC${ccn.num
+        "contrat salarié - convention collective": `'IDCC${ccn.selected.num
           .toString()
           .padStart(4, "0")}'`,
       }

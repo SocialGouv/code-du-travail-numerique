@@ -13,6 +13,7 @@ import {
   getSituationsFor,
 } from "../../common/situations.utils";
 import { SectionTitle } from "../../common/stepStyles";
+import { WizardStepProps } from "../../common/type/WizardType";
 
 const { questions, situations: allSituations } = data;
 
@@ -28,10 +29,10 @@ type OpenArray = Array<{
   status: boolean;
 }>;
 
-function StepInformations({ form }) {
+function StepInformations({ form }: WizardStepProps): JSX.Element {
   const { values } = form.getState();
   const { ccn, typeRupture, criteria = {} } = values;
-  const idcc = ccn ? ccn.num : 0;
+  const idcc = ccn?.selected ? ccn.selected.num : 0;
 
   const initialSituations = getSituationsFor(allSituations, {
     idcc,

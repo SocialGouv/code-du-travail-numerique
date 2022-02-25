@@ -20,7 +20,7 @@ exports[`<StepInformations /> should render 1`] = `
 `;
 
 exports[`<StepInformations /> should render catégorie professionelle 1`] = `
-.c4 {
+.c5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -65,19 +65,25 @@ exports[`<StepInformations /> should render catégorie professionelle 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c4:focus,
-.c4:hover,
-.c4:active {
+.c5:focus,
+.c5:hover,
+.c5:active {
   color: #f66663;
 }
 
 .c3 {
   color: #3e486e;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.c4 {
+  color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c5 {
+.c6 {
   display: inline-block;
   font-weight: 700;
   font-size: 1.4rem;
@@ -90,7 +96,7 @@ exports[`<StepInformations /> should render catégorie professionelle 1`] = `
   bottom: -0.5rem;
 }
 
-.c6 {
+.c7 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -110,7 +116,7 @@ exports[`<StepInformations /> should render catégorie professionelle 1`] = `
   text-align: center;
 }
 
-.c9 {
+.c10 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -120,7 +126,7 @@ exports[`<StepInformations /> should render catégorie professionelle 1`] = `
   pointer-events: none;
 }
 
-.c8 {
+.c9 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -141,34 +147,31 @@ exports[`<StepInformations /> should render catégorie professionelle 1`] = `
   appearance: none;
 }
 
-.c8::-ms-expand {
+.c9::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c8 *::-ms-backdrop,
-.c8 {
+.c9 *::-ms-backdrop,
+.c9 {
   padding-right: 1.6rem;
 }
 
-.c8:invalid {
+.c9:invalid {
   border-color: #eb5757;
 }
 
-.c8:disabled {
+.c9:disabled {
   background-color: #e4e8ef;
 }
 
 .c2 {
   display: block;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  font-weight: 600;
+  margin: 1rem 0;
   cursor: pointer;
 }
 
-.c7 {
+.c8 {
   width: 40rem;
 }
 
@@ -186,19 +189,19 @@ exports[`<StepInformations /> should render catégorie professionelle 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c5 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c4 {
+  .c5 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     width: 100%;
   }
 }
@@ -210,7 +213,7 @@ exports[`<StepInformations /> should render catégorie professionelle 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     width: 100%;
   }
 }
@@ -228,15 +231,19 @@ exports[`<StepInformations /> should render catégorie professionelle 1`] = `
       class="c2"
       for="input-criteria.catégorie professionnelle"
     >
-      Quelle est la catégorie professionnelle du salarié ?
       <span
         class="c3"
+      >
+        Quelle est la catégorie professionnelle du salarié ?
+      </span>
+      <span
+        class="c4"
       >
          (obligatoire)
       </span>
       <button
         aria-label="Plus d'informations"
-        class="c4 c5"
+        class="c5 c6"
         title="Plus d'informations"
         type="button"
       >
@@ -270,10 +277,10 @@ exports[`<StepInformations /> should render catégorie professionelle 1`] = `
       </button>
     </label>
     <div
-      class="c6 c7"
+      class="c7 c8"
     >
       <select
-        class="c8"
+        class="c9"
         id="input-criteria.catégorie professionnelle"
         name="criteria.catégorie professionnelle"
       >
@@ -306,7 +313,7 @@ exports[`<StepInformations /> should render catégorie professionelle 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="c9"
+        class="c10"
       >
         <svg
           aria-hidden="true"

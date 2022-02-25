@@ -141,17 +141,20 @@ describe("Validation de l'aggregation des données", () => {
       expectedNoticeUsed,
       expectedAgreement,
     }) => {
-      let ccn: ConventionCollective | null = null;
+      let ccn: ConventionCollective | undefined = undefined;
       if (ccnNum) {
         ccn = {
-          id: "ID",
-          num: ccnNum,
-          shortTitle: "ShortTitle",
-          slug: "slug",
-          title: "Title",
+          route: "not-selected",
+          selected: {
+            id: "ID",
+            num: ccnNum,
+            shortTitle: "ShortTitle",
+            slug: "slug",
+            title: "Title",
+          },
         };
       }
-      const data: unknown = {
+      const data: FormContent = {
         ccn,
         "contrat salarié - ancienneté": seniority,
         "contrat salarié - mise à la retraite": type === "mise" ? "oui" : "non",

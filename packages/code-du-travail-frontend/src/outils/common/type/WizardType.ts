@@ -1,6 +1,9 @@
 import { FormApi } from "final-form";
 import React from "react";
 
+import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
+import type { Agreement } from "../../../conventions/Search/api/type";
+
 export type SkipFn = (values: FormContent) => boolean;
 
 export type Step = {
@@ -11,6 +14,7 @@ export type Step = {
   annotation?: () => JSX.Element;
   isForm?: boolean;
   hasNoMarginBottom?: boolean;
+  onStepDone?: (title: string, values: FormContent) => void;
 };
 
 export type State = {
@@ -30,19 +34,23 @@ export type Action =
 export type WizardStepProps = {
   form: FormApi<FormContent>;
   dispatch: React.Dispatch<Action>;
-};
-
-export type ConventionCollective = {
-  id: string;
-  num: number;
-  shortTitle: string;
-  slug: string;
   title: string;
 };
 
-export type FormContent = Record<string, string> & {
+export type AgreementRoute = "not-selected" | "agreement" | "enterprise";
+
+export interface ConventionCollective {
+  route: AgreementRoute;
+  selected?: Agreement;
+  enterprise?: Enterprise;
+}
+
+export type FormContent = {
   ccn?: ConventionCollective;
-  seniorityMaximum: boolean;
-  seniorityValue: string;
+  seniorityMaximum?: boolean;
+  seniorityValue?: string;
   infos?: Record<string, string>;
-};
+  criteria?: Record<string, string>;
+  cdt?: Record<string, string>;
+  disabledWorker?: boolean;
+} & Record<string, unknown>;

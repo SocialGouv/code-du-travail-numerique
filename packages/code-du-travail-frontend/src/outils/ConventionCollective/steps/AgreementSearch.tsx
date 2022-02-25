@@ -18,26 +18,32 @@ import { AgreementLink } from "../agreement/AgreementLink";
 import { SearchAgreement } from "../agreement/SearchAgreement";
 import { HelpModal } from "../common/Modal";
 import { ListItem, ResultList } from "../common/ResultList";
-import { useTrackingContext } from "../common/TrackingContext";
+import { TrackingProps, UserAction } from "../types";
 
 type AgreementSearchStepProps = {
-  onBackClick: () => void;
-};
+  embeddedForm: boolean;
+  onSelectAgreement: (agreement) => void;
+  onBackClick?: () => void;
+} & TrackingProps;
 
 const AgreementSearchStep = ({
+  embeddedForm,
   onBackClick,
+  onSelectAgreement,
+  onUserAction,
 }: AgreementSearchStepProps): JSX.Element => {
   const refInput = useRef<HTMLFormElement>();
-  const { trackEvent, title, uuid } = useTrackingContext();
 
   function openModalHandler(openModal: () => void) {
-    trackEvent("cc_search_help", "click_cc_search_help_p1", title, uuid);
+    onUserAction(UserAction.OpenAgreementHelp);
     openModal();
   }
 
   return (
     <>
       <SearchAgreement
+        onUserAction={onUserAction}
+        embeddedForm={embeddedForm}
         inputRef={refInput as MutableRefObject<HTMLFormElement>}
         renderResults={(state, query) => {
           if (state.isLoading) {
@@ -68,7 +74,11 @@ const AgreementSearchStep = ({
                   {state.data.map((item, index) => {
                     return (
                       <ListItem key={item.id}>
-                        <AgreementLink isFirst={index === 0} agreement={item} />
+                        <AgreementLink
+                          isFirst={index === 0}
+                          agreement={item}
+                          onClick={onSelectAgreement}
+                        />
                       </ListItem>
                     );
                   })}
@@ -154,11 +164,19 @@ const AgreementSearchStep = ({
           );
         }}
       />
-      <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
-        <Button as="a" small type="button" onClick={onBackClick} variant="flat">
-          Précédent
-        </Button>
-      </Link>
+      {onBackClick && (
+        <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
+          <Button
+            as="a"
+            small
+            type="button"
+            onClick={onBackClick}
+            variant="flat"
+          >
+            Précédent
+          </Button>
+        </Link>
+      )}
     </>
   );
 };

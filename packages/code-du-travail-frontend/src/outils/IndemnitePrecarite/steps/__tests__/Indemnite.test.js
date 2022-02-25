@@ -3,25 +3,31 @@ import { CONTRACT_TYPE } from "../../components/TypeContrat";
 import { StepIndemnite } from "../Indemnite";
 
 const unhandledCC = {
-  num: 1561,
-  shortTitle: "Cordonnerie multiservice",
-  title:
-    "Convention collective nationale de la cordonnerie multiservice du 7 août 1989. Elargie au secteur des cordonniers industriels ",
+  selected: {
+    num: 1561,
+    shortTitle: "Cordonnerie multiservice",
+    title:
+      "Convention collective nationale de la cordonnerie multiservice du 7 août 1989. Elargie au secteur des cordonniers industriels ",
+  },
 };
 const ccWithoutConventionalProvition = {
-  num: 29,
-  shortTitle:
-    "Hospitalisation privée : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)",
-  title:
-    "Convention collective nationale des etablissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif du 31 octobre 1951.",
+  selected: {
+    num: 29,
+    shortTitle:
+      "Hospitalisation privée : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)",
+    title:
+      "Convention collective nationale des etablissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif du 31 octobre 1951.",
+  },
 };
 
 const ccWitConventionalProvition = {
-  num: 1486,
-  shortTitle:
-    "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils",
-  title:
-    "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. ",
+  selected: {
+    num: 1486,
+    shortTitle:
+      "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils",
+    title:
+      "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. ",
+  },
 };
 
 describe("<StepIndemnite />", () => {
