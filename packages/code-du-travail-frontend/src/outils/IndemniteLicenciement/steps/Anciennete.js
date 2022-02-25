@@ -122,7 +122,7 @@ StepAnciennete.validate = validate;
 StepAnciennete.decorator = createDecorator({
   field: /date|absencePeriods/,
   updates: {
-    anciennete: (_, values) => computeAnciennete(values),
+    totalAbsence: (_, values) => computeTotalAbsence(values),
     salaires: (_, values) => computeSalaraires(values),
   },
 });
@@ -131,20 +131,15 @@ StepAnciennete.propTypes = {
   form: PropTypes.object.isRequired,
 };
 
-function computeAnciennete({ dateEntree, dateSortie, absencePeriods = [] }) {
-  const dEntree = parse(dateEntree);
-  const dSortie = parse(dateSortie);
-
-  // on calcule totalAbsence en mois par année (ex: 12mois = 1)
-  // pour pouvoir ensuite le retranché de l’anciennété qui est aussi en mois par année
-  const totalAbsence =
-    (absencePeriods || [])
+function computeTotalAbsence({ absencePeriods = [] }) {
+  return (
+    absencePeriods
       .filter((period) => Boolean(period.duration))
       .reduce((total, item) => {
         const motif = MOTIFS.find((motif) => motif.label === item.type);
         return total + item.duration * motif.value;
-      }, 0) / 12;
-  return differenceInMonths(dSortie, dEntree) / 12 - totalAbsence;
+      }, 0) / 12
+  );
 }
 
 function computeSalaraires(values) {
@@ -161,4 +156,4 @@ function computeSalaraires(values) {
   return null;
 }
 
-export { computeAnciennete, computeSalaraires, StepAnciennete };
+export { computeSalaraires, computeTotalAbsence, StepAnciennete };

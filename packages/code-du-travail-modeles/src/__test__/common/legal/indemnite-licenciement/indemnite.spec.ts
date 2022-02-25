@@ -6,25 +6,37 @@ const engine = new Engine(mergeModels());
 
 describe("Indemnité légale de licenciement pour un employé", () => {
   test.each`
-    seniority | salary  | expectedCompensation
-    ${0}      | ${0}    | ${0}
-    ${24}     | ${0}    | ${0}
-    ${28}     | ${0}    | ${0}
-    ${1}      | ${1000} | ${0}
-    ${6}      | ${1000} | ${0}
-    ${8}      | ${1000} | ${0}
-    ${11}     | ${2000} | ${458.33}
-    ${13}     | ${2000} | ${541.67}
-    ${24}     | ${2000} | ${1000}
-    ${28}     | ${2000} | ${1166.67}
+    beginDate       | endDate         | absence | salary  | expectedCompensation
+    ${"22/02/2022"} | ${"21/02/2022"} | ${0}    | ${0}    | ${0}
+    ${"22/02/2020"} | ${"22/02/2022"} | ${0}    | ${0}    | ${0}
+    ${"22/10/2019"} | ${"21/02/2022"} | ${0}    | ${0}    | ${0}
+    ${"22/01/2022"} | ${"21/02/2022"} | ${0}    | ${1000} | ${0}
+    ${"22/08/2021"} | ${"21/02/2022"} | ${0}    | ${1000} | ${0}
+    ${"22/06/2021"} | ${"20/02/2022"} | ${0}    | ${1000} | ${0}
+    ${"22/03/2021"} | ${"21/02/2022"} | ${0}    | ${2000} | ${460.27}
+    ${"22/01/2021"} | ${"21/02/2022"} | ${0}    | ${2000} | ${541.1}
+    ${"22/02/2020"} | ${"21/02/2022"} | ${0}    | ${2000} | ${1000}
+    ${"22/10/2019"} | ${"21/02/2022"} | ${0}    | ${2000} | ${1168.49}
+    ${"22/02/2022"} | ${"21/02/2022"} | ${6}    | ${0}    | ${0}
+    ${"22/02/2020"} | ${"22/02/2022"} | ${6}    | ${0}    | ${0}
+    ${"22/10/2019"} | ${"21/02/2022"} | ${6}    | ${0}    | ${0}
+    ${"22/01/2022"} | ${"21/02/2022"} | ${6}    | ${1000} | ${0}
+    ${"22/08/2021"} | ${"21/02/2022"} | ${6}    | ${1000} | ${0}
+    ${"22/06/2021"} | ${"20/02/2022"} | ${6}    | ${1000} | ${0}
+    ${"22/03/2021"} | ${"21/02/2022"} | ${6}    | ${2000} | ${0}
+    ${"22/01/2021"} | ${"21/02/2022"} | ${6}    | ${2000} | ${0}
+    ${"22/02/2020"} | ${"21/02/2022"} | ${6}    | ${2000} | ${750}
+    ${"22/10/2019"} | ${"21/02/2022"} | ${6}    | ${2000} | ${918.49}
   `(
-    "ancienneté: $seniority mois, salaire de référence: $salary => $expectedCompensation €",
-    ({ seniority, salary, expectedCompensation }) => {
+    "date de début: $beginDate, date de fin: $endDate, nombre de mois d'absences: $absence, salaire de référence: $salary => $expectedCompensation €",
+    ({ beginDate, endDate, absence, salary, expectedCompensation }) => {
       const result = engine
         .setSituation({
-          "contrat salarié . ancienneté": seniority,
           "contrat salarié . convention collective": "''",
+          "contrat salarié . date d'embauche": beginDate,
+          "contrat salarié . date de fin de contrat": endDate,
           "contrat salarié . salaire de référence": salary,
+          "contrat salarié . total absences": absence,
           "contrat salarié . travailleur handicapé": "non",
           "indemnité de licenciement": "oui",
         })

@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import React, { useEffect } from "react";
 
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
@@ -19,6 +18,9 @@ function IndemniteLegale(formValues) {
     primes = [],
     salaire,
     anciennete,
+    dateEntree,
+    dateSortie,
+    totalAbsence,
   } = formValues.formValues;
 
   const salaireRef = getSalaireRef({
@@ -31,25 +33,35 @@ function IndemniteLegale(formValues) {
     salaires,
   });
   useEffect(() => {
+    console.log(
+      formValues.formValues.ccn,
+      dateEntree,
+      dateSortie,
+      salaireRef,
+      totalAbsence
+    );
     publicodesContext.setSituation(
       mapToPublicodesSituationForIndemniteLicenciement(
         formValues.formValues.ccn,
-        anciennete,
-        salaireRef
+        dateEntree,
+        dateSortie,
+        salaireRef,
+        totalAbsence
       )
     );
     publicodesContext.execute("contrat salarié . indemnité de licenciement");
   }, [formValues]);
 
   const notifications = publicodesContext.getNotifications();
+  console.log(publicodesContext);
   return (
     <>
       <SectionTitle>Indemnité légale</SectionTitle>
       <p>
         Le code du travail prévoit un montant minimum de&nbsp;:{" "}
         <HighlightResult>
-          {publicodesContext.result.value}
-          &nbsp;€&nbsp;brut.
+          {publicodesContext.result.nodeValue}&nbsp;
+          {publicodesContext.result.unit?.numerators[0]}&nbsp;brut.
         </HighlightResult>{" "}
       </p>
       {notifications}

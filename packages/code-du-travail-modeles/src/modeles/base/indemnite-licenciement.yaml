@@ -4,22 +4,38 @@ contrat salarié . salaire de référence:
   cdtn:
     type: entier
 
+contrat salarié . date d'embauche:
+  unité: date
+  cdtn:
+    type: date
+
+contrat salarié . date de fin de contrat:
+  unité: date
+  cdtn:
+    type: date
+
+contrat salarié . total absences:
+  unité: mois
+
 contrat salarié . ancienneté en année:
-  valeur:
-    produit:
-      assiette: contrat salarié . ancienneté
-      facteur: 1 / 12
+  unité: an
+  somme:
+    - durée:
+        depuis: contrat salarié . date d'embauche
+        jusqu'à: contrat salarié . date de fin de contrat
+    - (- contrat salarié . total absences)
+  plancher: 0 an
 
 #  (1/4*Sref*A1) + (1/3*Sref*A2)
 #  A1 : Ancienneté de 10 ans ou moins
 #  A2 : Ancienneté au delà de 10 ans
 contrat salarié . indemnité de licenciement:
   variations:
-    - si: contrat salarié . ancienneté en année > (8 mois / 12)
+    - si: contrat salarié . ancienneté en année > 8 mois
       alors:
         somme:
-        - contrat salarié . indemnité de licenciement . dix ans ou moins
-        - contrat salarié . indemnité de licenciement . plus de dix ans
+          - contrat salarié . indemnité de licenciement . dix ans ou moins
+          - contrat salarié . indemnité de licenciement . plus de dix ans
     - sinon: 0
   unité: €
   arrondi: 2 décimales
@@ -30,8 +46,8 @@ contrat salarié . indemnité de licenciement:
 contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins:
   valeur:
     le minimum de:
-       - contrat salarié . ancienneté en année
-       - 10 an
+      - contrat salarié . ancienneté en année
+      - 10 an
 
 contrat salarié . indemnité de licenciement . au dela de dix ans:
   somme:

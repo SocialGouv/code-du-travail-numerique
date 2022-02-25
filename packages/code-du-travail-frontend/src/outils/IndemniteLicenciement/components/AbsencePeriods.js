@@ -31,7 +31,7 @@ export const AbsencePeriods = ({ name }) => (
         <>
           <p>
             Les congés payés, le congé de maternité ou d&apos;adoption, le congé
-            de présence parental ,l&apos;arrêt de travail lié à un accident du
+            de présence parental, l&apos;arrêt de travail lié à un accident du
             travail ou une maladie professionnelle, le congé individuel de
             formation (CIF), le congé de solidarité internationale, le congé de
             solidarité familiale et le stage de fin d&apos;étude de plus de 2
