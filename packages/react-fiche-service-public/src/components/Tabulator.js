@@ -1,16 +1,16 @@
-import { Tabs } from "@socialgouv/cdtn-ui";
+import { Heading, Tabs } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
 
 import { getText } from "../utils.js";
 import { ElementBuilder } from "./ElementBuilder.js";
-import Title from "./Title.js";
 
 class Tabulator extends React.PureComponent {
   static propTypes = {
     data: PropTypes.object.isRequired,
     headingLevel: PropTypes.number.isRequired,
   };
+
   render() {
     const { data, headingLevel: previousHeadingLevel } = this.props;
     const headingLevel =
@@ -23,13 +23,13 @@ class Tabulator extends React.PureComponent {
         panel: (
           <ElementBuilder
             data={tab.children.filter((el) => el.name !== "Titre")}
-            headingLevel={headingLevel + 1}
+            headingLevel={headingLevel}
           />
         ),
         tab: (
-          <Title level={headingLevel}>
+          <Heading as={"h" + (headingLevel + 1)}>
             {getText(tab.children.find((child) => child.name === "Titre"))}
-          </Title>
+          </Heading>
         ),
       };
     });

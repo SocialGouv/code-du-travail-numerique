@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Contribution /> should NOT render invalid preselected convention 1`] = `
-.c11 {
+.c12 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -23,7 +23,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   margin-bottom: 0;
 }
 
-.c10 {
+.c11 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -36,7 +36,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   transform: translateY(-50%);
 }
 
-.c16 {
+.c17 {
   position: absolute;
   background-color: #f66663;
   border-radius: 0;
@@ -80,7 +80,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   height: 3rem;
 }
 
-.c23 {
+.c24 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -125,10 +125,17 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c23:focus,
-.c23:hover,
-.c23:active {
+.c24:focus,
+.c24:hover,
+.c24:active {
   color: #f66663;
+}
+
+.c8 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
 }
 
 .c4 {
@@ -163,12 +170,12 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   flex: 1 1 auto;
 }
 
-.c18 {
+.c19 {
   position: relative;
   display: inline-block;
 }
 
-.c20 {
+.c21 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -190,15 +197,15 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   appearance: none;
 }
 
-.c20::-webkit-outer-spin-button,
-.c20::-webkit-inner-spin-button {
+.c21::-webkit-outer-spin-button,
+.c21::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c20::-webkit-calendar-picker-indicator {
+.c21::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -211,47 +218,47 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c20:invalid {
+.c21:invalid {
   border-color: #eb5757;
 }
 
-.c20::-webkit-input-placeholder {
+.c21::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c20::-moz-placeholder {
+.c21::-moz-placeholder {
   color: #9298af;
 }
 
-.c20:-ms-input-placeholder {
+.c21:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c20::placeholder {
+.c21::placeholder {
   color: #9298af;
 }
 
-.c20:focus {
+.c21:focus {
   border-color: #7994d4;
 }
 
-.c20:focus::-webkit-input-placeholder {
+.c21:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c20:focus::-moz-placeholder {
+.c21:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c20:focus:-ms-input-placeholder {
+.c21:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c20:focus::placeholder {
+.c21:focus::placeholder {
   color: transparent;
 }
 
-.c17 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -274,21 +281,21 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   line-height: 1.625;
 }
 
-.c8 {
+.c9 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
-.c13 {
+.c14 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
 
-.c9 {
+.c10 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -300,7 +307,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   text-align: left;
 }
 
-.c15 {
+.c16 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -312,26 +319,26 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   text-align: left;
 }
 
-.c19 {
+.c20 {
   width: 100%;
 }
 
-.c21 {
+.c22 {
   margin-top: 2.4rem;
 }
 
-.c22 {
+.c23 {
   display: block;
   margin-top: 1.6rem;
 }
 
-.c24 {
+.c25 {
   color: #7994d4;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c12 {
+.c13 {
   padding-bottom: 0;
 }
 
@@ -339,12 +346,12 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   margin-bottom: 3.2rem;
 }
 
-.c14 {
+.c15 {
   margin-top: 3.2rem;
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c12 {
     padding: 2.4rem 0;
   }
 }
@@ -363,13 +370,13 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c24 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c23 {
+  .c24 {
     display: none;
   }
 }
@@ -388,13 +395,13 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c19 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c21 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
@@ -407,39 +414,39 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c14 {
     margin-bottom: 1rem;
     margin-left: -1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c16 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c16 {
     font-size: 2.2rem;
   }
 }
@@ -465,13 +472,13 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
       >
         <path
           clip-rule="evenodd"
-          d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+          d="M11.938 16.5a3.548 3.548 0 0 1 3.562-3.563 3.548 3.548 0 0 1 3.563 3.563 3.548 3.548 0 0 1-3.563 3.563 3.548 3.548 0 0 1-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
           fill="currentColor"
           fill-rule="evenodd"
         />
         <path
           clip-rule="evenodd"
-          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
           fill="currentColor"
           fill-rule="evenodd"
         />
@@ -495,12 +502,12 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         >
           <path
             clip-rule="evenodd"
-            d="M17 2L6 13v2c0 1 .398 1 1.076 1h9.693C18.554 16 20 14.657 20 13V4h19a1 1 0 011 1v27h2V5a3 3 0 00-3-3H17zm-.23 12H8L18 4v9c0 .552-.636 1-1.23 1z"
+            d="M17 2 6 13v2c0 1 .398 1 1.076 1h9.693C18.554 16 20 14.657 20 13V4h19a1 1 0 0 1 1 1v27h2V5a3 3 0 0 0-3-3H17zm-.23 12H8L18 4v9c0 .552-.636 1-1.23 1z"
             fill="#4E6896"
             fill-rule="evenodd"
           />
           <path
-            d="M27 50v-2H9a1 1 0 01-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 003 3h18zM7 20a1 1 0 100-2 1 1 0 000 2z"
+            d="M27 50v-2H9a1 1 0 0 1-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 0 0 3 3h18zM7 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
             fill="#4E6896"
           />
           <path
@@ -509,7 +516,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           />
           <path
             clip-rule="evenodd"
-            d="M36.5 37.938a3.548 3.548 0 00-3.563 3.562 3.548 3.548 0 003.563 3.563 3.548 3.548 0 003.563-3.563 3.548 3.548 0 00-3.563-3.563zm0 5.062c-.84 0-1.5-.66-1.5-1.5s.66-1.5 1.5-1.5 1.5.66 1.5 1.5-.66 1.5-1.5 1.5z"
+            d="M36.5 37.938a3.548 3.548 0 0 0-3.563 3.562 3.548 3.548 0 0 0 3.563 3.563 3.548 3.548 0 0 0 3.563-3.563 3.548 3.548 0 0 0-3.563-3.563zm0 5.062c-.84 0-1.5-.66-1.5-1.5s.66-1.5 1.5-1.5 1.5.66 1.5 1.5-.66 1.5-1.5 1.5z"
             fill="#FF7067"
             fill-rule="evenodd"
           />
@@ -524,33 +531,37 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
       <div
         class="c6"
       >
-        <div
+        <p
           aria-level="2"
           class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
           role="heading"
         >
           Page personnalisable
-        </div>
-        Le contenu de cette page peut être personnalisé en fonction de votre situation.
-        <br />
-        <a
-          href="#customisation"
+        </p>
+        <p
+          class="c8"
         >
-          Voir en bas de page
-        </a>
-         pour renseigner votre convention collective.
+          Le contenu de cette page peut être personnalisé en fonction de votre situation.
+          <br />
+          <a
+            href="#customisation"
+          >
+            Voir en bas de page
+          </a>
+           pour renseigner votre convention collective.
+        </p>
       </div>
     </div>
   </div>
   <section>
     <div
-      class="c8"
+      class="c9"
     >
       <h2
-        class="c9"
+        class="c10"
       >
         <span
-          class="c10"
+          class="c11"
         />
         Que dit le code du travail ?
       </h2>
@@ -565,35 +576,35 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
     </div>
   </section>
   <div
-    class="c11 c12"
+    class="c12 c13"
   >
     <div
       class="c2"
     >
       <div
-        class="c13 c14"
+        class="c14 c15"
         id="customisation"
       >
         <h2
-          class="c15"
+          class="c16"
         >
           <span
-            class="c16"
+            class="c17"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
       <label
-        class="c17"
+        class="c18"
         for="convention-search"
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
-        class="c18 c19"
+        class="c19 c20"
       >
         <input
-          class="c20"
+          class="c21"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -603,16 +614,16 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
       </span>
       
       <p
-        class="c21"
+        class="c22"
       >
         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
         <span
-          class="c22"
+          class="c23"
         >
           Consultez
            
           <button
-            class="c23 c24"
+            class="c24 c25"
             type="button"
           >
             notre aide
@@ -626,7 +637,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 `;
 
 exports[`<Contribution /> should render answer references 1`] = `
-.c11 {
+.c12 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -648,7 +659,7 @@ exports[`<Contribution /> should render answer references 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
+.c11 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -661,7 +672,7 @@ exports[`<Contribution /> should render answer references 1`] = `
   transform: translateY(-50%);
 }
 
-.c16 {
+.c17 {
   position: absolute;
   background-color: #f66663;
   border-radius: 0;
@@ -705,7 +716,7 @@ exports[`<Contribution /> should render answer references 1`] = `
   height: 3rem;
 }
 
-.c23 {
+.c24 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -750,10 +761,17 @@ exports[`<Contribution /> should render answer references 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c23:focus,
-.c23:hover,
-.c23:active {
+.c24:focus,
+.c24:hover,
+.c24:active {
   color: #f66663;
+}
+
+.c8 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
 }
 
 .c4 {
@@ -788,12 +806,12 @@ exports[`<Contribution /> should render answer references 1`] = `
   flex: 1 1 auto;
 }
 
-.c18 {
+.c19 {
   position: relative;
   display: inline-block;
 }
 
-.c20 {
+.c21 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -815,15 +833,15 @@ exports[`<Contribution /> should render answer references 1`] = `
   appearance: none;
 }
 
-.c20::-webkit-outer-spin-button,
-.c20::-webkit-inner-spin-button {
+.c21::-webkit-outer-spin-button,
+.c21::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c20::-webkit-calendar-picker-indicator {
+.c21::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -836,47 +854,47 @@ exports[`<Contribution /> should render answer references 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c20:invalid {
+.c21:invalid {
   border-color: #eb5757;
 }
 
-.c20::-webkit-input-placeholder {
+.c21::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c20::-moz-placeholder {
+.c21::-moz-placeholder {
   color: #9298af;
 }
 
-.c20:-ms-input-placeholder {
+.c21:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c20::placeholder {
+.c21::placeholder {
   color: #9298af;
 }
 
-.c20:focus {
+.c21:focus {
   border-color: #7994d4;
 }
 
-.c20:focus::-webkit-input-placeholder {
+.c21:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c20:focus::-moz-placeholder {
+.c21:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c20:focus:-ms-input-placeholder {
+.c21:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c20:focus::placeholder {
+.c21:focus::placeholder {
   color: transparent;
 }
 
-.c17 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -899,21 +917,21 @@ exports[`<Contribution /> should render answer references 1`] = `
   line-height: 1.625;
 }
 
-.c8 {
+.c9 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
-.c13 {
+.c14 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
 
-.c9 {
+.c10 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -925,7 +943,7 @@ exports[`<Contribution /> should render answer references 1`] = `
   text-align: left;
 }
 
-.c15 {
+.c16 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -937,26 +955,26 @@ exports[`<Contribution /> should render answer references 1`] = `
   text-align: left;
 }
 
-.c19 {
+.c20 {
   width: 100%;
 }
 
-.c21 {
+.c22 {
   margin-top: 2.4rem;
 }
 
-.c22 {
+.c23 {
   display: block;
   margin-top: 1.6rem;
 }
 
-.c24 {
+.c25 {
   color: #7994d4;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c12 {
+.c13 {
   padding-bottom: 0;
 }
 
@@ -964,12 +982,12 @@ exports[`<Contribution /> should render answer references 1`] = `
   margin-bottom: 3.2rem;
 }
 
-.c14 {
+.c15 {
   margin-top: 3.2rem;
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c12 {
     padding: 2.4rem 0;
   }
 }
@@ -988,13 +1006,13 @@ exports[`<Contribution /> should render answer references 1`] = `
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c24 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c23 {
+  .c24 {
     display: none;
   }
 }
@@ -1013,13 +1031,13 @@ exports[`<Contribution /> should render answer references 1`] = `
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c19 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c21 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
@@ -1032,39 +1050,39 @@ exports[`<Contribution /> should render answer references 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c14 {
     margin-bottom: 1rem;
     margin-left: -1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c16 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c16 {
     font-size: 2.2rem;
   }
 }
@@ -1090,13 +1108,13 @@ exports[`<Contribution /> should render answer references 1`] = `
       >
         <path
           clip-rule="evenodd"
-          d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+          d="M11.938 16.5a3.548 3.548 0 0 1 3.562-3.563 3.548 3.548 0 0 1 3.563 3.563 3.548 3.548 0 0 1-3.563 3.563 3.548 3.548 0 0 1-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
           fill="currentColor"
           fill-rule="evenodd"
         />
         <path
           clip-rule="evenodd"
-          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
           fill="currentColor"
           fill-rule="evenodd"
         />
@@ -1120,12 +1138,12 @@ exports[`<Contribution /> should render answer references 1`] = `
         >
           <path
             clip-rule="evenodd"
-            d="M17 2L6 13v2c0 1 .398 1 1.076 1h9.693C18.554 16 20 14.657 20 13V4h19a1 1 0 011 1v27h2V5a3 3 0 00-3-3H17zm-.23 12H8L18 4v9c0 .552-.636 1-1.23 1z"
+            d="M17 2 6 13v2c0 1 .398 1 1.076 1h9.693C18.554 16 20 14.657 20 13V4h19a1 1 0 0 1 1 1v27h2V5a3 3 0 0 0-3-3H17zm-.23 12H8L18 4v9c0 .552-.636 1-1.23 1z"
             fill="#4E6896"
             fill-rule="evenodd"
           />
           <path
-            d="M27 50v-2H9a1 1 0 01-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 003 3h18zM7 20a1 1 0 100-2 1 1 0 000 2z"
+            d="M27 50v-2H9a1 1 0 0 1-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 0 0 3 3h18zM7 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
             fill="#4E6896"
           />
           <path
@@ -1134,7 +1152,7 @@ exports[`<Contribution /> should render answer references 1`] = `
           />
           <path
             clip-rule="evenodd"
-            d="M36.5 37.938a3.548 3.548 0 00-3.563 3.562 3.548 3.548 0 003.563 3.563 3.548 3.548 0 003.563-3.563 3.548 3.548 0 00-3.563-3.563zm0 5.062c-.84 0-1.5-.66-1.5-1.5s.66-1.5 1.5-1.5 1.5.66 1.5 1.5-.66 1.5-1.5 1.5z"
+            d="M36.5 37.938a3.548 3.548 0 0 0-3.563 3.562 3.548 3.548 0 0 0 3.563 3.563 3.548 3.548 0 0 0 3.563-3.563 3.548 3.548 0 0 0-3.563-3.563zm0 5.062c-.84 0-1.5-.66-1.5-1.5s.66-1.5 1.5-1.5 1.5.66 1.5 1.5-.66 1.5-1.5 1.5z"
             fill="#FF7067"
             fill-rule="evenodd"
           />
@@ -1149,33 +1167,37 @@ exports[`<Contribution /> should render answer references 1`] = `
       <div
         class="c6"
       >
-        <div
+        <p
           aria-level="2"
           class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
           role="heading"
         >
           Page personnalisable
-        </div>
-        Le contenu de cette page peut être personnalisé en fonction de votre situation.
-        <br />
-        <a
-          href="#customisation"
+        </p>
+        <p
+          class="c8"
         >
-          Voir en bas de page
-        </a>
-         pour renseigner votre convention collective.
+          Le contenu de cette page peut être personnalisé en fonction de votre situation.
+          <br />
+          <a
+            href="#customisation"
+          >
+            Voir en bas de page
+          </a>
+           pour renseigner votre convention collective.
+        </p>
       </div>
     </div>
   </div>
   <section>
     <div
-      class="c8"
+      class="c9"
     >
       <h2
-        class="c9"
+        class="c10"
       >
         <span
-          class="c10"
+          class="c11"
         />
         Que dit le code du travail ?
       </h2>
@@ -1190,35 +1212,35 @@ exports[`<Contribution /> should render answer references 1`] = `
     </div>
   </section>
   <div
-    class="c11 c12"
+    class="c12 c13"
   >
     <div
       class="c2"
     >
       <div
-        class="c13 c14"
+        class="c14 c15"
         id="customisation"
       >
         <h2
-          class="c15"
+          class="c16"
         >
           <span
-            class="c16"
+            class="c17"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
       <label
-        class="c17"
+        class="c18"
         for="convention-search"
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
-        class="c18 c19"
+        class="c19 c20"
       >
         <input
-          class="c20"
+          class="c21"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -1228,16 +1250,16 @@ exports[`<Contribution /> should render answer references 1`] = `
       </span>
       
       <p
-        class="c21"
+        class="c22"
       >
         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
         <span
-          class="c22"
+          class="c23"
         >
           Consultez
            
           <button
-            class="c23 c24"
+            class="c24 c25"
             type="button"
           >
             notre aide
@@ -1251,7 +1273,7 @@ exports[`<Contribution /> should render answer references 1`] = `
 `;
 
 exports[`<Contribution /> should render preselected convention 1`] = `
-.c11 {
+.c12 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -1273,7 +1295,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
+.c11 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -1286,7 +1308,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   transform: translateY(-50%);
 }
 
-.c16 {
+.c17 {
   position: absolute;
   background-color: #f66663;
   border-radius: 0;
@@ -1330,7 +1352,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   height: 3rem;
 }
 
-.c23 {
+.c24 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1375,10 +1397,17 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c23:focus,
-.c23:hover,
-.c23:active {
+.c24:focus,
+.c24:hover,
+.c24:active {
   color: #f66663;
+}
+
+.c8 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
 }
 
 .c4 {
@@ -1413,12 +1442,12 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   flex: 1 1 auto;
 }
 
-.c18 {
+.c19 {
   position: relative;
   display: inline-block;
 }
 
-.c20 {
+.c21 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -1440,15 +1469,15 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   appearance: none;
 }
 
-.c20::-webkit-outer-spin-button,
-.c20::-webkit-inner-spin-button {
+.c21::-webkit-outer-spin-button,
+.c21::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c20::-webkit-calendar-picker-indicator {
+.c21::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -1461,47 +1490,47 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c20:invalid {
+.c21:invalid {
   border-color: #eb5757;
 }
 
-.c20::-webkit-input-placeholder {
+.c21::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c20::-moz-placeholder {
+.c21::-moz-placeholder {
   color: #9298af;
 }
 
-.c20:-ms-input-placeholder {
+.c21:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c20::placeholder {
+.c21::placeholder {
   color: #9298af;
 }
 
-.c20:focus {
+.c21:focus {
   border-color: #7994d4;
 }
 
-.c20:focus::-webkit-input-placeholder {
+.c21:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c20:focus::-moz-placeholder {
+.c21:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c20:focus:-ms-input-placeholder {
+.c21:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c20:focus::placeholder {
+.c21:focus::placeholder {
   color: transparent;
 }
 
-.c17 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1524,21 +1553,21 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   line-height: 1.625;
 }
 
-.c8 {
+.c9 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
-.c13 {
+.c14 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
 
-.c9 {
+.c10 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -1550,7 +1579,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   text-align: left;
 }
 
-.c15 {
+.c16 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -1562,26 +1591,26 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   text-align: left;
 }
 
-.c19 {
+.c20 {
   width: 100%;
 }
 
-.c21 {
+.c22 {
   margin-top: 2.4rem;
 }
 
-.c22 {
+.c23 {
   display: block;
   margin-top: 1.6rem;
 }
 
-.c24 {
+.c25 {
   color: #7994d4;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c12 {
+.c13 {
   padding-bottom: 0;
 }
 
@@ -1589,12 +1618,12 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   margin-bottom: 3.2rem;
 }
 
-.c14 {
+.c15 {
   margin-top: 3.2rem;
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c12 {
     padding: 2.4rem 0;
   }
 }
@@ -1613,13 +1642,13 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c24 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c23 {
+  .c24 {
     display: none;
   }
 }
@@ -1638,13 +1667,13 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c19 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c21 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
@@ -1657,39 +1686,39 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c14 {
     margin-bottom: 1rem;
     margin-left: -1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c16 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c16 {
     font-size: 2.2rem;
   }
 }
@@ -1715,13 +1744,13 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       >
         <path
           clip-rule="evenodd"
-          d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+          d="M11.938 16.5a3.548 3.548 0 0 1 3.562-3.563 3.548 3.548 0 0 1 3.563 3.563 3.548 3.548 0 0 1-3.563 3.563 3.548 3.548 0 0 1-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
           fill="currentColor"
           fill-rule="evenodd"
         />
         <path
           clip-rule="evenodd"
-          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
           fill="currentColor"
           fill-rule="evenodd"
         />
@@ -1745,12 +1774,12 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         >
           <path
             clip-rule="evenodd"
-            d="M17 2L6 13v2c0 1 .398 1 1.076 1h9.693C18.554 16 20 14.657 20 13V4h19a1 1 0 011 1v27h2V5a3 3 0 00-3-3H17zm-.23 12H8L18 4v9c0 .552-.636 1-1.23 1z"
+            d="M17 2 6 13v2c0 1 .398 1 1.076 1h9.693C18.554 16 20 14.657 20 13V4h19a1 1 0 0 1 1 1v27h2V5a3 3 0 0 0-3-3H17zm-.23 12H8L18 4v9c0 .552-.636 1-1.23 1z"
             fill="#4E6896"
             fill-rule="evenodd"
           />
           <path
-            d="M27 50v-2H9a1 1 0 01-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 003 3h18zM7 20a1 1 0 100-2 1 1 0 000 2z"
+            d="M27 50v-2H9a1 1 0 0 1-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 0 0 3 3h18zM7 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
             fill="#4E6896"
           />
           <path
@@ -1759,7 +1788,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           />
           <path
             clip-rule="evenodd"
-            d="M36.5 37.938a3.548 3.548 0 00-3.563 3.562 3.548 3.548 0 003.563 3.563 3.548 3.548 0 003.563-3.563 3.548 3.548 0 00-3.563-3.563zm0 5.062c-.84 0-1.5-.66-1.5-1.5s.66-1.5 1.5-1.5 1.5.66 1.5 1.5-.66 1.5-1.5 1.5z"
+            d="M36.5 37.938a3.548 3.548 0 0 0-3.563 3.562 3.548 3.548 0 0 0 3.563 3.563 3.548 3.548 0 0 0 3.563-3.563 3.548 3.548 0 0 0-3.563-3.563zm0 5.062c-.84 0-1.5-.66-1.5-1.5s.66-1.5 1.5-1.5 1.5.66 1.5 1.5-.66 1.5-1.5 1.5z"
             fill="#FF7067"
             fill-rule="evenodd"
           />
@@ -1774,33 +1803,37 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       <div
         class="c6"
       >
-        <div
+        <p
           aria-level="2"
           class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
           role="heading"
         >
           Page personnalisable
-        </div>
-        Le contenu de cette page peut être personnalisé en fonction de votre situation.
-        <br />
-        <a
-          href="#customisation"
+        </p>
+        <p
+          class="c8"
         >
-          Voir en bas de page
-        </a>
-         pour renseigner votre convention collective.
+          Le contenu de cette page peut être personnalisé en fonction de votre situation.
+          <br />
+          <a
+            href="#customisation"
+          >
+            Voir en bas de page
+          </a>
+           pour renseigner votre convention collective.
+        </p>
       </div>
     </div>
   </div>
   <section>
     <div
-      class="c8"
+      class="c9"
     >
       <h2
-        class="c9"
+        class="c10"
       >
         <span
-          class="c10"
+          class="c11"
         />
         Que dit le code du travail ?
       </h2>
@@ -1815,35 +1848,35 @@ exports[`<Contribution /> should render preselected convention 1`] = `
     </div>
   </section>
   <div
-    class="c11 c12"
+    class="c12 c13"
   >
     <div
       class="c2"
     >
       <div
-        class="c13 c14"
+        class="c14 c15"
         id="customisation"
       >
         <h2
-          class="c15"
+          class="c16"
         >
           <span
-            class="c16"
+            class="c17"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
       <label
-        class="c17"
+        class="c18"
         for="convention-search"
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
-        class="c18 c19"
+        class="c19 c20"
       >
         <input
-          class="c20"
+          class="c21"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -1853,16 +1886,16 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       </span>
       
       <p
-        class="c21"
+        class="c22"
       >
         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
         <span
-          class="c22"
+          class="c23"
         >
           Consultez
            
           <button
-            class="c23 c24"
+            class="c24 c25"
             type="button"
           >
             notre aide
@@ -1876,7 +1909,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 `;
 
 exports[`<Contribution /> should render with both answers 1`] = `
-.c11 {
+.c12 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -1898,7 +1931,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
+.c11 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -1911,7 +1944,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
   transform: translateY(-50%);
 }
 
-.c16 {
+.c17 {
   position: absolute;
   background-color: #f66663;
   border-radius: 0;
@@ -1955,7 +1988,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
   height: 3rem;
 }
 
-.c23 {
+.c24 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2000,10 +2033,17 @@ exports[`<Contribution /> should render with both answers 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c23:focus,
-.c23:hover,
-.c23:active {
+.c24:focus,
+.c24:hover,
+.c24:active {
   color: #f66663;
+}
+
+.c8 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
 }
 
 .c4 {
@@ -2038,12 +2078,12 @@ exports[`<Contribution /> should render with both answers 1`] = `
   flex: 1 1 auto;
 }
 
-.c18 {
+.c19 {
   position: relative;
   display: inline-block;
 }
 
-.c20 {
+.c21 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -2065,15 +2105,15 @@ exports[`<Contribution /> should render with both answers 1`] = `
   appearance: none;
 }
 
-.c20::-webkit-outer-spin-button,
-.c20::-webkit-inner-spin-button {
+.c21::-webkit-outer-spin-button,
+.c21::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c20::-webkit-calendar-picker-indicator {
+.c21::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -2086,47 +2126,47 @@ exports[`<Contribution /> should render with both answers 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c20:invalid {
+.c21:invalid {
   border-color: #eb5757;
 }
 
-.c20::-webkit-input-placeholder {
+.c21::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c20::-moz-placeholder {
+.c21::-moz-placeholder {
   color: #9298af;
 }
 
-.c20:-ms-input-placeholder {
+.c21:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c20::placeholder {
+.c21::placeholder {
   color: #9298af;
 }
 
-.c20:focus {
+.c21:focus {
   border-color: #7994d4;
 }
 
-.c20:focus::-webkit-input-placeholder {
+.c21:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c20:focus::-moz-placeholder {
+.c21:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c20:focus:-ms-input-placeholder {
+.c21:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c20:focus::placeholder {
+.c21:focus::placeholder {
   color: transparent;
 }
 
-.c17 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2149,21 +2189,21 @@ exports[`<Contribution /> should render with both answers 1`] = `
   line-height: 1.625;
 }
 
-.c8 {
+.c9 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
-.c13 {
+.c14 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
 
-.c9 {
+.c10 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -2175,7 +2215,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
   text-align: left;
 }
 
-.c15 {
+.c16 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -2187,26 +2227,26 @@ exports[`<Contribution /> should render with both answers 1`] = `
   text-align: left;
 }
 
-.c19 {
+.c20 {
   width: 100%;
 }
 
-.c21 {
+.c22 {
   margin-top: 2.4rem;
 }
 
-.c22 {
+.c23 {
   display: block;
   margin-top: 1.6rem;
 }
 
-.c24 {
+.c25 {
   color: #7994d4;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c12 {
+.c13 {
   padding-bottom: 0;
 }
 
@@ -2214,12 +2254,12 @@ exports[`<Contribution /> should render with both answers 1`] = `
   margin-bottom: 3.2rem;
 }
 
-.c14 {
+.c15 {
   margin-top: 3.2rem;
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c12 {
     padding: 2.4rem 0;
   }
 }
@@ -2238,13 +2278,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c24 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c23 {
+  .c24 {
     display: none;
   }
 }
@@ -2263,13 +2303,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c19 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c21 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
@@ -2282,39 +2322,39 @@ exports[`<Contribution /> should render with both answers 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c14 {
     margin-bottom: 1rem;
     margin-left: -1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     font-size: 2.2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c16 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c16 {
     font-size: 2.2rem;
   }
 }
@@ -2340,13 +2380,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
       >
         <path
           clip-rule="evenodd"
-          d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+          d="M11.938 16.5a3.548 3.548 0 0 1 3.562-3.563 3.548 3.548 0 0 1 3.563 3.563 3.548 3.548 0 0 1-3.563 3.563 3.548 3.548 0 0 1-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
           fill="currentColor"
           fill-rule="evenodd"
         />
         <path
           clip-rule="evenodd"
-          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
           fill="currentColor"
           fill-rule="evenodd"
         />
@@ -2370,12 +2410,12 @@ exports[`<Contribution /> should render with both answers 1`] = `
         >
           <path
             clip-rule="evenodd"
-            d="M17 2L6 13v2c0 1 .398 1 1.076 1h9.693C18.554 16 20 14.657 20 13V4h19a1 1 0 011 1v27h2V5a3 3 0 00-3-3H17zm-.23 12H8L18 4v9c0 .552-.636 1-1.23 1z"
+            d="M17 2 6 13v2c0 1 .398 1 1.076 1h9.693C18.554 16 20 14.657 20 13V4h19a1 1 0 0 1 1 1v27h2V5a3 3 0 0 0-3-3H17zm-.23 12H8L18 4v9c0 .552-.636 1-1.23 1z"
             fill="#4E6896"
             fill-rule="evenodd"
           />
           <path
-            d="M27 50v-2H9a1 1 0 01-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 003 3h18zM7 20a1 1 0 100-2 1 1 0 000 2z"
+            d="M27 50v-2H9a1 1 0 0 1-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 0 0 3 3h18zM7 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
             fill="#4E6896"
           />
           <path
@@ -2384,7 +2424,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
           />
           <path
             clip-rule="evenodd"
-            d="M36.5 37.938a3.548 3.548 0 00-3.563 3.562 3.548 3.548 0 003.563 3.563 3.548 3.548 0 003.563-3.563 3.548 3.548 0 00-3.563-3.563zm0 5.062c-.84 0-1.5-.66-1.5-1.5s.66-1.5 1.5-1.5 1.5.66 1.5 1.5-.66 1.5-1.5 1.5z"
+            d="M36.5 37.938a3.548 3.548 0 0 0-3.563 3.562 3.548 3.548 0 0 0 3.563 3.563 3.548 3.548 0 0 0 3.563-3.563 3.548 3.548 0 0 0-3.563-3.563zm0 5.062c-.84 0-1.5-.66-1.5-1.5s.66-1.5 1.5-1.5 1.5.66 1.5 1.5-.66 1.5-1.5 1.5z"
             fill="#FF7067"
             fill-rule="evenodd"
           />
@@ -2399,33 +2439,37 @@ exports[`<Contribution /> should render with both answers 1`] = `
       <div
         class="c6"
       >
-        <div
+        <p
           aria-level="2"
           class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
           role="heading"
         >
           Page personnalisable
-        </div>
-        Le contenu de cette page peut être personnalisé en fonction de votre situation.
-        <br />
-        <a
-          href="#customisation"
+        </p>
+        <p
+          class="c8"
         >
-          Voir en bas de page
-        </a>
-         pour renseigner votre convention collective.
+          Le contenu de cette page peut être personnalisé en fonction de votre situation.
+          <br />
+          <a
+            href="#customisation"
+          >
+            Voir en bas de page
+          </a>
+           pour renseigner votre convention collective.
+        </p>
       </div>
     </div>
   </div>
   <section>
     <div
-      class="c8"
+      class="c9"
     >
       <h2
-        class="c9"
+        class="c10"
       >
         <span
-          class="c10"
+          class="c11"
         />
         Que dit le code du travail ?
       </h2>
@@ -2440,35 +2484,35 @@ exports[`<Contribution /> should render with both answers 1`] = `
     </div>
   </section>
   <div
-    class="c11 c12"
+    class="c12 c13"
   >
     <div
       class="c2"
     >
       <div
-        class="c13 c14"
+        class="c14 c15"
         id="customisation"
       >
         <h2
-          class="c15"
+          class="c16"
         >
           <span
-            class="c16"
+            class="c17"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
       <label
-        class="c17"
+        class="c18"
         for="convention-search"
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
-        class="c18 c19"
+        class="c19 c20"
       >
         <input
-          class="c20"
+          class="c21"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -2478,16 +2522,16 @@ exports[`<Contribution /> should render with both answers 1`] = `
       </span>
       
       <p
-        class="c21"
+        class="c22"
       >
         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
         <span
-          class="c22"
+          class="c23"
         >
           Consultez
            
           <button
-            class="c23 c24"
+            class="c24 c25"
             type="button"
           >
             notre aide
@@ -2501,7 +2545,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
 `;
 
 exports[`<Contribution /> should render with conventions answer 1`] = `
-.c8 {
+.c9 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
@@ -2523,7 +2567,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   margin-bottom: 0;
 }
 
-.c13 {
+.c14 {
   position: absolute;
   background-color: #f66663;
   border-radius: 0;
@@ -2567,7 +2611,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   height: 3rem;
 }
 
-.c20 {
+.c21 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2612,10 +2656,17 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c20:focus,
-.c20:hover,
-.c20:active {
+.c21:focus,
+.c21:hover,
+.c21:active {
   color: #f66663;
+}
+
+.c8 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
 }
 
 .c4 {
@@ -2650,12 +2701,12 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   flex: 1 1 auto;
 }
 
-.c15 {
+.c16 {
   position: relative;
   display: inline-block;
 }
 
-.c17 {
+.c18 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -2677,15 +2728,15 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   appearance: none;
 }
 
-.c17::-webkit-outer-spin-button,
-.c17::-webkit-inner-spin-button {
+.c18::-webkit-outer-spin-button,
+.c18::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c17::-webkit-calendar-picker-indicator {
+.c18::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -2698,47 +2749,47 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c17:invalid {
+.c18:invalid {
   border-color: #eb5757;
 }
 
-.c17::-webkit-input-placeholder {
+.c18::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c17::-moz-placeholder {
+.c18::-moz-placeholder {
   color: #9298af;
 }
 
-.c17:-ms-input-placeholder {
+.c18:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c17::placeholder {
+.c18::placeholder {
   color: #9298af;
 }
 
-.c17:focus {
+.c18:focus {
   border-color: #7994d4;
 }
 
-.c17:focus::-webkit-input-placeholder {
+.c18:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c17:focus::-moz-placeholder {
+.c18:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c17:focus:-ms-input-placeholder {
+.c18:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c17:focus::placeholder {
+.c18:focus::placeholder {
   color: transparent;
 }
 
-.c14 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2761,14 +2812,14 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   line-height: 1.625;
 }
 
-.c10 {
+.c11 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: -2.4rem;
   text-align: left;
 }
 
-.c12 {
+.c13 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -2780,26 +2831,26 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   text-align: left;
 }
 
-.c16 {
+.c17 {
   width: 100%;
 }
 
-.c18 {
+.c19 {
   margin-top: 2.4rem;
 }
 
-.c19 {
+.c20 {
   display: block;
   margin-top: 1.6rem;
 }
 
-.c21 {
+.c22 {
   color: #7994d4;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c9 {
+.c10 {
   padding-bottom: 0;
 }
 
@@ -2807,12 +2858,12 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   margin-bottom: 3.2rem;
 }
 
-.c11 {
+.c12 {
   margin-top: 0;
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     padding: 2.4rem 0;
   }
 }
@@ -2831,13 +2882,13 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c21 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c20 {
+  .c21 {
     display: none;
   }
 }
@@ -2856,13 +2907,13 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c16 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c18 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
@@ -2875,20 +2926,20 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c11 {
     margin-bottom: 1rem;
     margin-left: -1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c13 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c13 {
     font-size: 2.2rem;
   }
 }
@@ -2914,13 +2965,13 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
       >
         <path
           clip-rule="evenodd"
-          d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+          d="M11.938 16.5a3.548 3.548 0 0 1 3.562-3.563 3.548 3.548 0 0 1 3.563 3.563 3.548 3.548 0 0 1-3.563 3.563 3.548 3.548 0 0 1-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
           fill="currentColor"
           fill-rule="evenodd"
         />
         <path
           clip-rule="evenodd"
-          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+          d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
           fill="currentColor"
           fill-rule="evenodd"
         />
@@ -2944,12 +2995,12 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         >
           <path
             clip-rule="evenodd"
-            d="M17 2L6 13v2c0 1 .398 1 1.076 1h9.693C18.554 16 20 14.657 20 13V4h19a1 1 0 011 1v27h2V5a3 3 0 00-3-3H17zm-.23 12H8L18 4v9c0 .552-.636 1-1.23 1z"
+            d="M17 2 6 13v2c0 1 .398 1 1.076 1h9.693C18.554 16 20 14.657 20 13V4h19a1 1 0 0 1 1 1v27h2V5a3 3 0 0 0-3-3H17zm-.23 12H8L18 4v9c0 .552-.636 1-1.23 1z"
             fill="#4E6896"
             fill-rule="evenodd"
           />
           <path
-            d="M27 50v-2H9a1 1 0 01-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 003 3h18zM7 20a1 1 0 100-2 1 1 0 000 2z"
+            d="M27 50v-2H9a1 1 0 0 1-1-1V24s0-1-1-1-1 1-1 1v23a3 3 0 0 0 3 3h18zM7 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
             fill="#4E6896"
           />
           <path
@@ -2958,7 +3009,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           />
           <path
             clip-rule="evenodd"
-            d="M36.5 37.938a3.548 3.548 0 00-3.563 3.562 3.548 3.548 0 003.563 3.563 3.548 3.548 0 003.563-3.563 3.548 3.548 0 00-3.563-3.563zm0 5.062c-.84 0-1.5-.66-1.5-1.5s.66-1.5 1.5-1.5 1.5.66 1.5 1.5-.66 1.5-1.5 1.5z"
+            d="M36.5 37.938a3.548 3.548 0 0 0-3.563 3.562 3.548 3.548 0 0 0 3.563 3.563 3.548 3.548 0 0 0 3.563-3.563 3.548 3.548 0 0 0-3.563-3.563zm0 5.062c-.84 0-1.5-.66-1.5-1.5s.66-1.5 1.5-1.5 1.5.66 1.5 1.5-.66 1.5-1.5 1.5z"
             fill="#FF7067"
             fill-rule="evenodd"
           />
@@ -2973,54 +3024,58 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
       <div
         class="c6"
       >
-        <div
+        <p
           aria-level="2"
           class="Contribution__StyledInsertTitle-sc-17vgrcg-3 c7"
           role="heading"
         >
           Page personnalisable
-        </div>
-        Le contenu de cette page peut être personnalisé en fonction de votre situation.
-        <br />
-        <a
-          href="#customisation"
+        </p>
+        <p
+          class="c8"
         >
-          Voir en bas de page
-        </a>
-         pour renseigner votre convention collective.
+          Le contenu de cette page peut être personnalisé en fonction de votre situation.
+          <br />
+          <a
+            href="#customisation"
+          >
+            Voir en bas de page
+          </a>
+           pour renseigner votre convention collective.
+        </p>
       </div>
     </div>
   </div>
   <div
-    class="c8 c9"
+    class="c9 c10"
   >
     <div
       class="c2"
     >
       <div
-        class="c10 c11"
+        class="c11 c12"
         id="customisation"
       >
         <h2
-          class="c12"
+          class="c13"
         >
           <span
-            class="c13"
+            class="c14"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
       <label
-        class="c14"
+        class="c15"
         for="convention-search"
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
-        class="c15 c16"
+        class="c16 c17"
       >
         <input
-          class="c17"
+          class="c18"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -3030,16 +3085,16 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
       </span>
       
       <p
-        class="c18"
+        class="c19"
       >
         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
         <span
-          class="c19"
+          class="c20"
         >
           Consultez
            
           <button
-            class="c20 c21"
+            class="c21 c22"
             type="button"
           >
             notre aide
@@ -3178,6 +3233,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: auto;
+  margin: 0;
 }
 
 .c13 {
@@ -3382,15 +3438,15 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                 fill="currentColor"
               />
             </svg>
-            <span
+            <p
               class="c14"
             >
               Article L-1243 du Code du travail
-            </span>
+            </p>
           </a>
         </li>
       </ul>

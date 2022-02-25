@@ -124,12 +124,3 @@ jobs:
         with:
           recursive: true
 
-  services-de-renseignement:
-    name: Get url from service de renseignement
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Test SDR urls
-        run: |
-          jq ".[].url" ./packages/code-du-travail-frontend/src/data/services-de-renseignement.json | xargs -n 1 wget  --spider

@@ -1,7 +1,0 @@
-contrat salarié . convention collective . publicité française:
-  description: Convention collective nationale de travail des cadres, techniciens et employés de la publicité française du 22 avril 1955.
-  applicable si: convention collective = 'IDCC0086'
-  valeur: oui
-  cdtn:
-    idcc: 86
-    préavis-retraite: false

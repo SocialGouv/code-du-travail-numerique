@@ -5,7 +5,7 @@ import {
   getRouteBySource,
   SOURCES,
 } from "@socialgouv/cdtn-sources";
-import { Tile } from "@socialgouv/cdtn-ui";
+import { Paragraph, Tile } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 
@@ -36,9 +36,11 @@ export function AgreementTile({ agreement }: Props): JSX.Element {
         subtitle={getLabelBySource(SOURCES.CCN)}
         onClick={clickHandler}
       >
-        Retrouvez les questions-réponses les plus fréquentes organisées par
-        thème et élaborées par le Ministère du travail concernant cette
-        convention collective
+        <Paragraph noMargin>
+          Retrouvez les questions-réponses les plus fréquentes organisées par
+          thème et élaborées par le Ministère du travail concernant cette
+          convention collective
+        </Paragraph>
       </Tile>
     </Link>
   );

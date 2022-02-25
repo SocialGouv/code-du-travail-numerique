@@ -7,7 +7,7 @@ import { box, fonts, spacings } from "../theme.js";
 
 export const Alert = styled.div`
   margin-bottom: ${spacings.base};
-  padding: ${spacings.small} ${spacings.medium};
+  padding: ${spacings.base} ${spacings.medium};
   color: ${({ theme }) => theme.paragraph};
   font-size: ${({ size }) =>
     size === "medium" ? fonts.sizes.default : fonts.sizes.small};

@@ -51,18 +51,28 @@ export interface PublicodesContextInterface {
   execute: (rule: string) => PublicodesResult;
   getNotifications: () => Notification[];
   getReferences: () => References[];
-  result?: PublicodesResult;
+  result: PublicodesResult;
   missingArgs: MissingArgs[];
   situation: SituationElement[];
   setSituation: (values: Record<string, string>) => void;
 }
 
 const PublicodesContext = createContext<PublicodesContextInterface>({
-  execute: () => null,
+  execute: () => {
+    return {
+      unit: PublicodesUnit.DAY,
+      value: 0,
+      valueInDays: 0,
+    };
+  },
   getNotifications: () => [],
   getReferences: () => [],
   missingArgs: [],
-  result: null,
+  result: {
+    unit: PublicodesUnit.DAY,
+    value: 0,
+    valueInDays: 0,
+  },
   setSituation: () => {
     throw Error("Not implemented");
   },

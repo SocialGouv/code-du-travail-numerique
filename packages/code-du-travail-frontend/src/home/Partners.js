@@ -1,4 +1,4 @@
-import { Container, PageTitle, Section, theme } from "@socialgouv/cdtn-ui";
+import { Container, Section, theme, Title } from "@socialgouv/cdtn-ui";
 import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
@@ -7,9 +7,9 @@ export function Partners() {
   return (
     <Section variant="white">
       <Container>
-        <PageTitle as="div" stripe="left" withoutHeader>
+        <Title as="p" isFirst stripe="left">
           Sites associés
-        </PageTitle>
+        </Title>
         <Flex>
           <Link
             href="https://service-public.fr"
@@ -61,9 +61,11 @@ const Flex = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   & :first-child {
     margin-left: 0;
   }
+
   & :last-child {
     margin-right: 0;
   }

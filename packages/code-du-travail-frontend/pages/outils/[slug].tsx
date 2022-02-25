@@ -13,7 +13,6 @@ import Metas from "../../src/common/Metas";
 import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
 import { Layout } from "../../src/layout/Layout";
-import EventTracker from "../../src/lib/tracking/EventTracker";
 import { loadPublicodes } from "../../src/outils/api/LoadPublicodes";
 import { AgreementSearch } from "../../src/outils/ConventionCollective";
 import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
@@ -23,6 +22,7 @@ import { HeuresRechercheEmploi } from "../../src/outils/HeuresRechercheEmploi";
 import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
 import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
 import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
+import { Tool } from "../../src/outils/types";
 import { matopush } from "../../src/piwik";
 
 const {
@@ -77,7 +77,6 @@ function Outils({
           <Feedback url={router.asPath} />
         </Container>
       </StyledSection>
-      <EventTracker />
     </Layout>
   );
 }
@@ -87,9 +86,14 @@ export default Outils;
 export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
-  const { slug, description, icon, title } = tools.find(
-    (tool) => tool.slug === query.slug
-  );
+  const tool = (tools as Tool[]).find((tool) => tool.slug === query.slug);
+  if (!tool) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const { slug, description, icon, title } = tool;
   let relatedItems = [];
   try {
     const response = await fetch(`${API_URL}/items/${SOURCES.TOOLS}/${slug}`);

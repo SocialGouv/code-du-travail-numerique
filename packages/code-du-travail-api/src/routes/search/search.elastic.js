@@ -16,6 +16,7 @@ function getSearchBody({ query, size, sources = [] }) {
       "action",
       "breadcrumbs",
       "cdtnId",
+      "highlight",
     ],
     query: {
       bool: {

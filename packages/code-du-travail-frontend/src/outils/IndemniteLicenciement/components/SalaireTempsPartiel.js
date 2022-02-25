@@ -20,7 +20,7 @@ export const SalaireTempsPartiel = ({ name }) => (
     {({ fields }) =>
       fields.length > 0 && (
         <>
-          <Question as="p">
+          <Question>
             Quels ont été les durées et les salaires des périodes à temps plein
             et à temps partiel&nbsp;?
           </Question>

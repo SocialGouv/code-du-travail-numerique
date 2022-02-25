@@ -11,13 +11,17 @@ import {
   getSituationsFor,
   recapSituation,
 } from "../../common/situations.utils";
-import { HighlightResult, SectionTitle } from "../../common/stepStyles";
+import {
+  HighlightResult,
+  SectionTitle,
+  SmallText,
+} from "../../common/stepStyles";
 import { formatRefs } from "../../publicodes/Utils";
 import DisclaimerText from "./DisclaimerText";
 
 const { situations: allSituations } = data;
 
-function DurationResult({ duration, durationCC, durationCDT }) {
+function DurationResult({ duration, durationCC, durationCDT, note }) {
   if (parseInt(durationCDT, 10) === 0) {
     if (durationCC === undefined) {
       return (
@@ -42,11 +46,19 @@ function DurationResult({ duration, durationCC, durationCDT }) {
     }
   }
   return (
-    <p>
-      À partir des éléments que vous avez saisis, la durée du préavis de
-      licenciement est estimée à : <HighlightResult>{duration}</HighlightResult>
-      .
-    </p>
+    <>
+      <p>
+        À partir des éléments que vous avez saisis, la durée du préavis de
+        licenciement est estimée à :{" "}
+        <HighlightResult>{duration}</HighlightResult>
+        {note && <sup>*</sup>}.
+      </p>
+      {note && (
+        <SmallText>
+          <sup>*</sup> {note}
+        </SmallText>
+      )}
+    </>
   );
 }
 
@@ -141,6 +153,7 @@ function StepResult({ form }) {
         duration={duration}
         durationCC={durationCC}
         durationCDT={durationCDT}
+        note={situationCC?.note}
       />
 
       <ShowDetails>

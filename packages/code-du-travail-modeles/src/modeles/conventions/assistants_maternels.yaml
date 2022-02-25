@@ -1,7 +1,0 @@
-contrat salarié . convention collective . assistants maternels:
-  description: Convention collective nationale des assistants maternels du particulier employeur du 1er juillet 2004.
-  applicable si: convention collective = 'IDCC2395'
-  valeur: oui
-  cdtn:
-    idcc: 2395
-    préavis-retraite: false

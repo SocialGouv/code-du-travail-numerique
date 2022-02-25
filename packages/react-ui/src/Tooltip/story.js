@@ -20,7 +20,7 @@ export const base = () => (
       <p>
         This is a text with a tooltip on a
         <Tooltip text="Tooltip content">
-          <b>single</b>
+          <strong>single</strong>
         </Tooltip>
         world
       </p>

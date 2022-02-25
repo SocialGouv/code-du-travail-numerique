@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SelectQuestion /> should render with default value 1`] = `
-.c3 {
+.c2 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c4 {
+.c3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -27,7 +27,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
   text-align: center;
 }
 
-.c7 {
+.c6 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -37,7 +37,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
   pointer-events: none;
 }
 
-.c6 {
+.c5 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -58,37 +58,34 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
   appearance: none;
 }
 
-.c6::-ms-expand {
+.c5::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c6 *::-ms-backdrop,
-.c6 {
+.c5 *::-ms-backdrop,
+.c5 {
   padding-right: 1.6rem;
 }
 
-.c6:invalid {
+.c5:invalid {
   border-color: #eb5757;
 }
 
-.c6:disabled {
+.c5:disabled {
   background-color: #e4e8ef;
 }
 
 .c1 {
   display: block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.c2 {
-  font-weight: 600;
-}
-
-.c5 {
+.c4 {
   width: 40rem;
 }
 
@@ -97,7 +94,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c3 {
     width: 100%;
   }
 }
@@ -109,7 +106,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c4 {
     width: 100%;
   }
 }
@@ -122,22 +119,18 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
       class="c1"
       for="input-foo"
     >
+      Une question ?
       <span
         class="c2"
-      >
-        Une question ?
-      </span>
-      <span
-        class="c3"
       >
          (obligatoire)
       </span>
     </label>
     <div
-      class="c4 c5"
+      class="c3 c4"
     >
       <select
-        class="c6"
+        class="c5"
         id="input-foo"
         name="foo"
       >
@@ -160,7 +153,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="c7"
+        class="c6"
       >
         <svg
           aria-hidden="true"
@@ -169,16 +162,16 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
-            clip-path="url(#arrow-down_svg__clip0)"
+            clip-path="url(#arrow-down_svg__a)"
           >
             <path
-              d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z"
+              d="m8.425 11.573 7.11-6.072a.709.709 0 0 0 .26-.537.709.709 0 0 0-.26-.537.973.973 0 0 0-.629-.223.973.973 0 0 0-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 0 0-.63-.223.973.973 0 0 0-.628.223.708.708 0 0 0-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 0 0 .29.165 1.021 1.021 0 0 0 .68 0 .91.91 0 0 0 .29-.165z"
               fill="currentColor"
             />
           </g>
           <defs>
             <clippath
-              id="arrow-down_svg__clip0"
+              id="arrow-down_svg__a"
             >
               <path
                 d="M0 0h16v16H0z"
@@ -194,13 +187,13 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 `;
 
 exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
-.c3 {
+.c2 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c4 {
+.c3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -220,7 +213,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
   text-align: center;
 }
 
-.c7 {
+.c6 {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
@@ -230,7 +223,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
   pointer-events: none;
 }
 
-.c6 {
+.c5 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem 0;
@@ -251,37 +244,34 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
   appearance: none;
 }
 
-.c6::-ms-expand {
+.c5::-ms-expand {
   background-color: transparent;
   border: 0 transparent;
 }
 
-.c6 *::-ms-backdrop,
-.c6 {
+.c5 *::-ms-backdrop,
+.c5 {
   padding-right: 1.6rem;
 }
 
-.c6:invalid {
+.c5:invalid {
   border-color: #eb5757;
 }
 
-.c6:disabled {
+.c5:disabled {
   background-color: #e4e8ef;
 }
 
 .c1 {
   display: block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.c2 {
-  font-weight: 600;
-}
-
-.c5 {
+.c4 {
   width: 40rem;
 }
 
@@ -290,7 +280,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c3 {
     width: 100%;
   }
 }
@@ -302,7 +292,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c4 {
     width: 100%;
   }
 }
@@ -315,22 +305,18 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
       class="c1"
       for="input-foo"
     >
+      Une question ?
       <span
         class="c2"
-      >
-        Une question ?
-      </span>
-      <span
-        class="c3"
       >
          (obligatoire)
       </span>
     </label>
     <div
-      class="c4 c5"
+      class="c3 c4"
     >
       <select
-        class="c6"
+        class="c5"
         id="input-foo"
         name="foo"
       >
@@ -353,7 +339,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="c7"
+        class="c6"
       >
         <svg
           aria-hidden="true"
@@ -362,16 +348,16 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
-            clip-path="url(#arrow-down_svg__clip0)"
+            clip-path="url(#arrow-down_svg__a)"
           >
             <path
-              d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z"
+              d="m8.425 11.573 7.11-6.072a.709.709 0 0 0 .26-.537.709.709 0 0 0-.26-.537.973.973 0 0 0-.629-.223.973.973 0 0 0-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 0 0-.63-.223.973.973 0 0 0-.628.223.708.708 0 0 0-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 0 0 .29.165 1.021 1.021 0 0 0 .68 0 .91.91 0 0 0 .29-.165z"
               fill="currentColor"
             />
           </g>
           <defs>
             <clippath
-              id="arrow-down_svg__clip0"
+              id="arrow-down_svg__a"
             >
               <path
                 d="M0 0h16v16H0z"

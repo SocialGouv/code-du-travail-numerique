@@ -26,6 +26,13 @@ exports[`<Highlights /> should render 1`] = `
   transform: translateX(-50%);
 }
 
+.c16 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+}
+
 .c5 {
   position: relative;
   overflow: visible;
@@ -375,7 +382,9 @@ exports[`<Highlights /> should render 1`] = `
                 <div
                   class="c15"
                 >
-                  <p>
+                  <p
+                    class="c16"
+                  >
                     1. Dois-je prévenir mon employeur si je reviens, ou si...
                   </p>
                 </div>
@@ -409,7 +418,9 @@ exports[`<Highlights /> should render 1`] = `
                 <div
                   class="c15"
                 >
-                  <p>
+                  <p
+                    class="c16"
+                  >
                     9. Quelles sont les recommandations sanitaires pour...
                   </p>
                 </div>

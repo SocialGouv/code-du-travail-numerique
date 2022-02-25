@@ -265,6 +265,27 @@ spec:
         - api-code-du-travail-numerique-mybranch.dev2.fabrique.social.gouv.fr
       secretName: wildcard-crt
 ---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: netpol-code-du-travail-numerique-mybranch
+  namespace: code-du-travail-numerique-mybranch
+spec:
+  ingress:
+    - from:
+        - podSelector: {}
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              network-policy/source: ingress-controller
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              network-policy/source: monitoring
+  podSelector: {}
+  policyTypes:
+    - Ingress
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -335,10 +356,10 @@ spec:
           resources:
             limits:
               cpu: 500m
-              memory: 560Mi
+              memory: 768Mi
             requests:
-              cpu: 200m
-              memory: 256Mi
+              cpu: 300m
+              memory: 512Mi
           startupProbe:
             failureThreshold: 12
             httpGet:

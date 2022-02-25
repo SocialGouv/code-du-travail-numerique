@@ -108,7 +108,7 @@ exports[`<MoreContent /> renders with an More icon 1`] = `
           >
             <path
               clip-rule="evenodd"
-              d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
+              d="M8 2a1 1 0 0 0-1 1v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3a1 1 0 0 0-1-1z"
               fill="currentColor"
               fill-rule="evenodd"
             />

@@ -1,6 +1,10 @@
 {
   "questions": [
     {
+      "name": "âge",
+      "question": "Quel est l'âge du salarié ?"
+    },
+    {
       "name": "agents payés à l'heure",
       "question": "L'agent est-il payé à l'heure ?"
     },
@@ -10,7 +14,8 @@
     },
     {
       "name": "catégorie professionnelle",
-      "question": "Quelle est la catégorie professionnelle du salarié ?"
+      "question": "Quelle est la catégorie professionnelle du salarié ?",
+      "note": "La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "initiative de la rupture de la période d'essai",
@@ -50,35 +55,39 @@
     },
     {
       "name": "niveau",
-      "question": "Quel est le niveau du salarié ?"
+      "question": "Quel est le niveau du salarié ?",
+      "note": "Le niveau du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "classe",
-      "question": "Quelle est la classe du salarié ?"
+      "question": "Quelle est la classe du salarié ?",
+      "note": "La classe du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "position",
-      "question": "Quelle est la position du salarié ?"
+      "question": "Quelle est la position du salarié ?",
+      "note": "La position du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "groupe",
-      "question": "Quel est le groupe professionnel du salarié ?"
+      "question": "Quel est le groupe professionnel du salarié ?",
+      "note": "Le groupe du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "coefficient",
-      "question": "Quel est le coefficient hiérarchique du salarié ?"
+      "question": "Quel est le coefficient hiérarchique du salarié ?",
+      "note": "La coefficient du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "échelon",
-      "question": "Quel est l'échelon du salarié ?"
+      "question": "Quel est l'échelon du salarié ?",
+      "note": "L'échelon du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>."
     },
+
     {
       "name": "ancienneté",
-      "question": "Quelle est l'ancienneté du salarié ?"
-    },
-    {
-      "name": "âge",
-      "question": "Quel est l'âge du salarié ?"
+      "question": "Quelle est l'ancienneté du salarié ?",
+      "note": "L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>."
     },
     {
       "name": "secteur d'activité",
@@ -1661,9 +1670,9 @@
     },
     {
       "criteria": {
+        "âge": "1| Moins de 50 ans",
         "position": "1| I",
-        "ancienneté": "38| Moins de 2 ans",
-        "âge": "1| Moins de 50 ans"
+        "ancienneté": "38| Moins de 2 ans"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
@@ -1676,9 +1685,9 @@
     },
     {
       "criteria": {
+        "âge": "1| Moins de 50 ans",
         "position": "1| I",
-        "ancienneté": "42| 2 ans ou plus",
-        "âge": "1| Moins de 50 ans"
+        "ancienneté": "42| 2 ans ou plus"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
@@ -1691,8 +1700,8 @@
     },
     {
       "criteria": {
-        "position": "3| II",
-        "âge": "1| Moins de 50 ans"
+        "âge": "1| Moins de 50 ans",
+        "position": "3| II"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
@@ -1705,8 +1714,8 @@
     },
     {
       "criteria": {
-        "position": "4| III",
-        "âge": "1| Moins de 50 ans"
+        "âge": "1| Moins de 50 ans",
+        "position": "4| III"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
@@ -1719,8 +1728,24 @@
     },
     {
       "criteria": {
+        "âge": "2| 50 ans à 55 ans",
         "ancienneté": "24| Moins de 1 an",
-        "âge": "2| 50 ans à 55 ans"
+        "position": "1| I"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "2| 50 ans à 55 ans",
+        "ancienneté": "24| Moins de 1 an",
+        "position": "3| II"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
@@ -1733,8 +1758,24 @@
     },
     {
       "criteria": {
+        "âge": "2| 50 ans à 55 ans",
+        "ancienneté": "24| Moins de 1 an",
+        "position": "4| III"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "2| 50 ans à 55 ans",
         "ancienneté": "44| Entre 1 an et moins de 5 ans",
-        "âge": "2| 50 ans à 55 ans"
+        "position": "1| I"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
@@ -1747,8 +1788,39 @@
     },
     {
       "criteria": {
+        "âge": "2| 50 ans à 55 ans",
+        "ancienneté": "44| Entre 1 an et moins de 5 ans",
+        "position": "3| II"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "4 mois",
+      "answer2": null,
+      "answer3": "120",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "2| 50 ans à 55 ans",
+        "ancienneté": "44| Entre 1 an et moins de 5 ans",
+        "position": "4| III"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "4 mois",
+      "answer2": null,
+      "answer3": "120",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "2| 50 ans à 55 ans",
         "ancienneté": "48| 5 ans et plus",
-        "âge": "2| 50 ans à 55 ans"
+        "position": "1| I"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
@@ -1761,7 +1833,114 @@
     },
     {
       "criteria": {
-        "âge": "4| 55 ans et plus"
+        "âge": "2| 50 ans à 55 ans",
+        "ancienneté": "48| 5 ans et plus",
+        "position": "3| II"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "6 mois",
+      "answer2": null,
+      "answer3": "180",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "2| 50 ans à 55 ans",
+        "ancienneté": "48| 5 ans et plus",
+        "position": "4| III"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "6 mois",
+      "answer2": null,
+      "answer3": "180",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "4| 55 ans et plus",
+        "ancienneté": "24| Moins de 1 an",
+        "position": "1| I"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "4| 55 ans et plus",
+        "ancienneté": "24| Moins de 1 an",
+        "position": "3| II"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "4| 55 ans et plus",
+        "ancienneté": "24| Moins de 1 an",
+        "position": "4| III"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "4| 55 ans et plus",
+        "ancienneté": "27| 1 an ou plus",
+        "position": "1| I"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "6 mois",
+      "answer2": null,
+      "answer3": "180",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "4| 55 ans et plus",
+        "ancienneté": "27| 1 an ou plus",
+        "position": "3| II"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "6 mois",
+      "answer2": null,
+      "answer3": "180",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=3A4E814FD2154397637BC31D67BD3E6F.tplgfr26s_3?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "âge": "4| 55 ans et plus",
+        "ancienneté": "27| 1 an ou plus",
+        "position": "4| III"
       },
       "type": "préavis de Licenciement",
       "idcc": 650,
@@ -6443,45 +6622,6 @@
     },
     {
       "criteria": {
-        "ancienneté": "15| Moins de 6 mois"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2111,
-      "typeRupture": null,
-      "answer": "1 semaine",
-      "answer2": null,
-      "answer3": "7",
-      "ref": "Article 12a",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1FBE77FACF3A20C70C10CCE69F359D7B.tplgfr23s_1?idArticle=KALIARTI000005834194&cidTexte=KALITEXT000005672603&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "ancienneté": "33| 6 mois à moins de 2 ans"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2111,
-      "typeRupture": null,
-      "answer": "1 mois",
-      "answer2": null,
-      "answer3": "30",
-      "ref": "Article 12a",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1FBE77FACF3A20C70C10CCE69F359D7B.tplgfr23s_1?idArticle=KALIARTI000005834194&cidTexte=KALITEXT000005672603&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
-        "ancienneté": "42| 2 ans ou plus"
-      },
-      "type": "préavis de Licenciement",
-      "idcc": 2111,
-      "typeRupture": null,
-      "answer": "2 mois",
-      "answer2": null,
-      "answer3": "60",
-      "ref": "Article 12a",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1FBE77FACF3A20C70C10CCE69F359D7B.tplgfr23s_1?idArticle=KALIARTI000005834194&cidTexte=KALITEXT000005672603&dateTexte=29990101&categorieLien=id"
-    },
-    {
-      "criteria": {
         "catégorie professionnelle": "48| Cadres"
       },
       "type": "préavis de Licenciement",
@@ -7014,33 +7154,95 @@
     },
     {
       "criteria": {
-        "ancienneté": "24| Moins de 1 an"
+        "ancienneté": "15| Moins de 6 mois",
+        "catégorie professionnelle": "100| Salariés du particulier employeur"
       },
       "type": "préavis de Licenciement",
-      "idcc": 2395,
+      "idcc": 3239,
+      "typeRupture": null,
+      "answer": "1 semaine",
+      "answer2": null,
+      "answer3": "7",
+      "ref": null,
+      "refUrl": null
+    },
+    {
+      "criteria": {
+        "ancienneté": "35| 6 mois à 2 ans",
+        "catégorie professionnelle": "100| Salariés du particulier employeur"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 3239,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": null,
+      "refUrl": null
+    },
+    {
+      "criteria": {
+        "ancienneté": "42| 2 ans ou plus",
+        "catégorie professionnelle": "100| Salariés du particulier employeur"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 3239,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": null,
+      "refUrl": null
+    },
+    {
+      "criteria": {
+        "ancienneté": "105| Enfant accueilli depuis moins de 3 mois",
+        "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 3239,
+      "typeRupture": null,
+      "answer": "8 jours calendaires",
+      "answer2": null,
+      "answer3": "8",
+      "ref": null,
+      "refUrl": null,
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2021 c’est la convention collective “Assistants maternels du particulier employeur (IDCC 2395)” qui s’appliquait. Celle-ci a fusionné avec la convention collective \"Salariés du particulier employeur (IDCC 2111)\" pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022."
+    },
+    {
+      "criteria": {
+        "ancienneté": "106| Enfant accueilli de 3 mois à moins d'un an",
+        "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
+      },
+      "type": "préavis de Licenciement",
+      "idcc": 3239,
       "typeRupture": null,
       "answer": "15 jours calendaires",
       "answer2": null,
       "answer3": "15",
-      "ref": "article 18",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005825552&cidTexte=KALITEXT000005669667&dateTexte=29990101&categorieLien=id"
+      "ref": null,
+      "refUrl": null,
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2021 c’est la convention collective “Assistants maternels du particulier employeur (IDCC 2395)” qui s’appliquait. Celle-ci a fusionné avec la convention collective \"Salariés du particulier employeur (IDCC 2111)\" pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022."
     },
     {
       "criteria": {
-        "ancienneté": "25| Au moins 1 an"
+        "ancienneté": "107| Enfant accueilli depuis 1 an et plus",
+        "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
       },
       "type": "préavis de Licenciement",
-      "idcc": 2395,
+      "idcc": 3239,
       "typeRupture": null,
-      "answer": "1 mois calendaire",
+      "answer": "1 mois",
       "answer2": null,
       "answer3": "30",
-      "ref": "article 18",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A21177F5F79C7025761CDB35C436AE27.tplgfr37s_1?idArticle=KALIARTI000005825552&cidTexte=KALITEXT000005669667&dateTexte=29990101&categorieLien=id"
+      "ref": null,
+      "refUrl": null,
+      "note": "Si la lettre de licenciement a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2021 c’est la convention collective “Assistants maternels du particulier employeur (IDCC 2395)” qui s’appliquait. Celle-ci a fusionné avec la convention collective \"Salariés du particulier employeur (IDCC 2111)\" pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022."
     },
     {
       "criteria": {
-        "ancienneté": "38| Moins de 2 ans"
+        "ancienneté": "38| Moins de 2 ans",
+        "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
       },
       "type": "préavis de Licenciement",
       "idcc": 2420,
