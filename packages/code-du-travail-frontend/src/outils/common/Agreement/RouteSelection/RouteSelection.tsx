@@ -1,4 +1,4 @@
-import { AlertWithIcon, InputRadio, Text } from "@socialgouv/cdtn-ui";
+import { InputRadio, Text } from "@socialgouv/cdtn-ui";
 import { FormApi } from "final-form";
 import React from "react";
 import { Field } from "react-final-form";
@@ -19,13 +19,20 @@ const RouteSelection = ({ form }: Props): JSX.Element => {
   const values = form.getState().values;
   return (
     <>
-      <Question htmlFor={ROUTE_NAME} required>
+      <Question
+        htmlFor={ROUTE_NAME}
+        required
+        tooltip={{
+          content: (
+            <p>
+              Vous pouvez trouver le nom de votre convention collective sur
+              votre <strong>bulletin de paie</strong>.
+            </p>
+          ),
+        }}
+      >
         Quel est le nom de la convention collective applicable ?
       </Question>
-      <AlertWithIcon variant="secondary">
-        Vous pouvez trouver le nom de votre convention collective sur votre{" "}
-        <strong>bulletin de paie</strong>.
-      </AlertWithIcon>
       <RadioContainer>
         <Field<AgreementRoute>
           type="radio"
@@ -36,7 +43,9 @@ const RouteSelection = ({ form }: Props): JSX.Element => {
           {(props) => (
             <InputRadio
               label={
-                <Text>Je connais ma convention collective (je la saisis)</Text>
+                <Text>
+                  Je sais quelle est ma convention collective (je la saisis)
+                </Text>
               }
               id={`agreement`}
               {...props.input}
@@ -53,7 +62,8 @@ const RouteSelection = ({ form }: Props): JSX.Element => {
             <InputRadio
               label={
                 <Text>
-                  Je ne connais pas ma convention collective (je la recherche)
+                  Je ne sais pas quelle est ma convention collective (je la
+                  recherche)
                 </Text>
               }
               id={`enterprise`}

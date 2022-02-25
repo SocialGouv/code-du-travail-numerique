@@ -3,6 +3,7 @@ import {
   Button,
   ScreenReaderOnly,
   Section as SectionUi,
+  theme,
   Title,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
@@ -20,6 +21,7 @@ import { SearchEnterprise, SearchParams } from "../enterprise/SearchEnterprise";
 import { TrackingProps, UserAction } from "../types";
 
 type EnterpriseSearchStepProps = {
+  embeddedForm: boolean;
   onBackClick?: () => void;
   handleEnterpriseSelection: (
     enterprise: Enterprise,
@@ -34,9 +36,10 @@ const EnterpriseSearchStep = ({
   handleEnterpriseSelection,
   searchParams,
   onSearchParamsChange,
+  embeddedForm,
   onUserAction,
 }: EnterpriseSearchStepProps): JSX.Element => {
-  const refInput = useRef<HTMLDivElement>();
+  const refInput = useRef<HTMLFormElement>();
 
   function openModalHandler(openModal: () => void) {
     onUserAction(UserAction.OpenEnterpriseHelp);
@@ -46,6 +49,7 @@ const EnterpriseSearchStep = ({
   return (
     <>
       <SearchEnterprise
+        embeddedForm={embeddedForm}
         onUserAction={onUserAction}
         searchParams={
           searchParams ?? {
@@ -54,7 +58,7 @@ const EnterpriseSearchStep = ({
           }
         }
         onSearchParamsChange={onSearchParamsChange}
-        inputRef={refInput as MutableRefObject<HTMLDivElement>}
+        inputRef={refInput as MutableRefObject<HTMLFormElement>}
         renderResults={(state, params) => {
           if (refInput.current && state.data && !state.isLoading) {
             refInput.current.scrollIntoView({ behavior: "smooth" });
@@ -182,5 +186,5 @@ const EnterpriseSearchStep = ({
 export { EnterpriseSearchStep };
 
 const Section = styled(SectionUi)`
-  padding-top: 1rem;
+  padding-top: ${theme.spacings.small};
 `;

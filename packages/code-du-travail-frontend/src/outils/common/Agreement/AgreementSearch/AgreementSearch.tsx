@@ -56,7 +56,10 @@ const AgreementSearch = ({
         embeddedForm={false}
         onSelectAgreement={onSelectAgreement}
       />
-      <ErrorField name={AGREEMENT_NAME} />
+      <ErrorField
+        name={AGREEMENT_NAME}
+        errorText={"Vous devez séléctionner une convention collective"}
+      />
       <Field
         type="input"
         name={AGREEMENT_NAME}
@@ -73,7 +76,6 @@ const AgreementSearch = ({
 const { spacings } = theme;
 
 const SelectedAgreement = styled(Toast)`
-  width: 100%;
   margin-bottom: ${spacings.medium};
 `;
 

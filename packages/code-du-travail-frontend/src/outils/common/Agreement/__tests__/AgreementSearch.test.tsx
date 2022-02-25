@@ -97,7 +97,9 @@ describe("AgreementSearch", () => {
         />
       );
       getByText("Submit").click();
-      expect(getByText(/Vous devez répondre à cette question/)).toBeDefined();
+      expect(
+        getByText(/Vous devez séléctionner une convention collective/)
+      ).toBeDefined();
     });
   });
 
@@ -183,7 +185,7 @@ describe("AgreementSearch", () => {
         />
       );
       expect(
-        getByText(/À noter : convention collective non traitée/)
+        getByText(/Convention collective non traitée/)
       ).toBeInTheDocument();
     });
   });
@@ -196,9 +198,7 @@ describe("AgreementSearch", () => {
           props={dataWithSelectedAgreementNotFullySupported}
         />
       );
-      expect(
-        getByText(/À noter : convention prochainement traitée/)
-      ).toBeInTheDocument();
+      expect(getByText(/Convention prochainement traitée/)).toBeInTheDocument();
     });
   });
 
@@ -211,10 +211,10 @@ describe("AgreementSearch", () => {
         />
       );
       expect(
-        queryByText(/À noter : convention collective non traitée/)
+        queryByText(/Convention collective non traitée/)
       ).not.toBeInTheDocument();
       expect(
-        queryByText(/À noter : convention prochainement traitée/)
+        queryByText(/Convention prochainement traitée/)
       ).not.toBeInTheDocument();
     });
   });

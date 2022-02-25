@@ -7,7 +7,7 @@ import { OnChange } from "react-final-form-listeners";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
 import { Agreement } from "../../../../conventions/Search/api/type";
 import { ErrorField } from "../../ErrorField";
-import { RadioContainer, SectionTitle } from "../../stepStyles";
+import { RadioContainer } from "../../stepStyles";
 import { required } from "../../validators";
 import { AGREEMENT_ID_NAME } from "../form-constants";
 import ShowAlert from "../ShowAlert";
@@ -28,10 +28,10 @@ const ShowAgreements = ({
 
   return (
     <>
-      <SectionTitle>
+      <Paragraph fontWeight="600" fontSize="default">
         {enterprise.conventions.length} conventions collectives ont été trouvées
         pour cette entreprise, sélectionnez la vôtre&nbsp;:&nbsp;
-      </SectionTitle>
+      </Paragraph>
       <RadioContainer>
         {enterprise.conventions.map((agreement) => {
           return (

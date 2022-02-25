@@ -1,15 +1,17 @@
 import {
   Input,
   Label,
+  Paragraph,
   Section as SectionUi,
   Text,
   theme,
 } from "@socialgouv/cdtn-ui";
-import React, { FormEventHandler, ForwardedRef } from "react";
-import styled from "styled-components";
+import React, { ForwardedRef } from "react";
+import styled, { css } from "styled-components";
 
 import { InfoBulle } from "../../common/InfoBulle";
 import { SectionTitle } from "../../common/stepStyles";
+import EmbeddedInForm from "../common/EmbeddedInForm";
 
 type Props = {
   embeddedForm: boolean;
@@ -20,26 +22,6 @@ type Props = {
 
 const defaultPlaceholder = "Ex : Transports routiers ou 1486";
 
-const EmbeddedInForm = ({
-  enable,
-  reference,
-  onSubmit,
-  children,
-}: {
-  enable: boolean;
-  reference: ForwardedRef<HTMLFormElement>;
-  onSubmit: FormEventHandler;
-  children: React.ReactNode;
-}) => {
-  if (enable) {
-    return (
-      <form ref={reference} onSubmit={onSubmit}>
-        {children}
-      </form>
-    );
-  }
-  return <>{children}</>;
-};
 export const SearchAgreementInput = React.forwardRef(
   function _SearchAgreementInput(
     {
@@ -52,18 +34,26 @@ export const SearchAgreementInput = React.forwardRef(
   ): JSX.Element {
     return (
       <Section>
-        <SectionTitle>
-          Précisez et sélectionnez votre convention collective
-        </SectionTitle>
+        {embeddedForm ? (
+          <SectionTitle>
+            Précisez et sélectionnez votre convention collective
+          </SectionTitle>
+        ) : (
+          <ParagraphNoMarginBottom fontWeight="600" fontSize="default">
+            Précisez et sélectionnez votre convention collective
+          </ParagraphNoMarginBottom>
+        )}
         <EmbeddedInForm
           enable={embeddedForm}
           reference={ref}
           onSubmit={(event) => event.preventDefault()}
         >
-          <InlineLabel htmlFor="agreement-search">
+          <InlineLabel htmlFor="agreement-search" embeddedForm={embeddedForm}>
             Nom de la convention collective ou son numéro d’identification{" "}
             <abbr title="Identifiant de la Convention Collective">IDCC</abbr>{" "}
-            <Text fontWeight="400">(champ obligatoire)</Text>
+            <Text fontWeight="400" fontSize="small">
+              (champ obligatoire)
+            </Text>
           </InlineLabel>
           <InfoBulle title="Qu'est ce qu'un IDCC">
             <p>
@@ -93,17 +83,25 @@ export const SearchAgreementInput = React.forwardRef(
     );
   }
 );
-
 const Section = styled(SectionUi)`
   padding-top: 0;
 `;
+const ParagraphNoMarginBottom = styled(Paragraph)`
+  margin-bottom: 0;
+`;
 
 const BlockInput = styled(Input)`
-  padding-top: ${theme.spacings.base};
+  padding-top: ${theme.spacings.small};
   width: 100%;
 `;
 
 const InlineLabel = styled(Label)`
   display: inline;
-  margin-right: 0;
+  ${(props) => {
+    if (!props.embeddedForm) {
+      return css`
+        font-weight: 400;
+      `;
+    }
+  }}
 `;

@@ -21,9 +21,10 @@ const IntroductionStep = ({ onUserAction }: Props): JSX.Element => {
       <AlertWithIcon variant="secondary">
         <p>
           La convention collective est un texte conclu au niveau d’une branche
-          d’activité (Ex : Transports routiers). Elle adapte les règles du code
-          du travail aux situations particulières de la branche (primes, congés,
-          salaires minima, préavis, prévoyance…).
+          d’activité (Ex : Transports routiers). Elle adapte les règles du Code
+          du travail sur des points précis, en fonction des situations
+          particulières de la branche (primes, congés, salaires minima, préavis,
+          prévoyance…).
         </p>
         <Paragraph noMargin fontWeight="700">
           Vous pouvez retrouver le nom de votre convention collective sur votre

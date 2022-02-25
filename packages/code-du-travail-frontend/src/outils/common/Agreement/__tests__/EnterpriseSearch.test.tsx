@@ -106,7 +106,7 @@ describe("EnterpriseSearch", () => {
       );
       getByText("Submit").click();
       expect(
-        queryByText(/Vous devez répondre à cette question/)
+        queryByText(/Vous devez séléctionner une entreprise/)
       ).toBeInTheDocument();
     });
   });
@@ -299,7 +299,7 @@ describe("EnterpriseSearch", () => {
         <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
       );
       expect(
-        getByText(/À noter : convention collective non traitée/)
+        getByText(/Convention collective non traitée/)
       ).toBeInTheDocument();
     });
 
@@ -315,7 +315,7 @@ describe("EnterpriseSearch", () => {
       );
       getByText(/Grands magasins et magasins populaires/).click();
       expect(
-        getByText(/À noter : convention collective non traitée/)
+        getByText(/Convention collective non traitée/)
       ).toBeInTheDocument();
     });
 
@@ -335,7 +335,7 @@ describe("EnterpriseSearch", () => {
         <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
       );
       expect(
-        queryByText(/À noter : convention collective non traitée/)
+        queryByText(/Convention collective non traitée/)
       ).not.toBeInTheDocument();
     });
 
@@ -356,7 +356,7 @@ describe("EnterpriseSearch", () => {
       );
       getByText(/Grands magasins et magasins populaires/).click();
       expect(
-        queryByText(/À noter : convention collective non traitée/)
+        queryByText(/Convention collective non traitée/)
       ).not.toBeInTheDocument();
     });
   });

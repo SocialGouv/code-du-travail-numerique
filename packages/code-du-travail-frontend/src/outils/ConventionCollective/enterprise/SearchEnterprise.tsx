@@ -9,11 +9,12 @@ import { TrackingProps, UserAction } from "../types";
 import { SearchEnterpriseInput } from "./SearchEnterpriseInput";
 
 type Props = {
+  embeddedForm: boolean;
   renderResults: (
     renderProps: FetchReducerState<Enterprise[]>,
     params: SearchParams
   ) => JSX.Element;
-  inputRef: ForwardedRef<HTMLDivElement>;
+  inputRef: ForwardedRef<HTMLFormElement>;
   searchParams: SearchParams;
   onSearchParamsChange: (params: SearchParams) => void;
 } & TrackingProps;
@@ -28,6 +29,7 @@ export function SearchEnterprise({
   inputRef,
   searchParams,
   onSearchParamsChange,
+  embeddedForm,
   onUserAction,
 }: Props): JSX.Element {
   const useEnterpriseSuggester = createSuggesterHook(
@@ -51,6 +53,7 @@ export function SearchEnterprise({
   return (
     <>
       <SearchEnterpriseInput
+        embeddedForm={embeddedForm}
         ref={inputRef}
         query={searchParams.query}
         address={searchParams.address}

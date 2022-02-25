@@ -118,6 +118,7 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
     case ScreenType.enterprise:
       Step = (
         <Steps.EnterpriseSearchStep
+          embeddedForm={true}
           onSearchParamsChange={(params) => setSearchParams(params)}
           searchParams={searchParams}
           handleEnterpriseSelection={handleEnterpriseSelection}

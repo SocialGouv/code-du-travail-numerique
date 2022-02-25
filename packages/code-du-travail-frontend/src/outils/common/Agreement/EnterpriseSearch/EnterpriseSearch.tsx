@@ -1,4 +1,3 @@
-import { Section } from "@socialgouv/cdtn-ui";
 import React, { useState } from "react";
 import { Field } from "react-final-form";
 
@@ -38,7 +37,7 @@ const EnterpriseSearch = ({
 
   if (enterprise) {
     return (
-      <Section>
+      <>
         <SelectedEnterprise
           enterprise={enterprise}
           onRemoveEnterprise={() => {
@@ -60,13 +59,14 @@ const EnterpriseSearch = ({
             supportedAgreements={supportedAgreements}
           />
         )}
-      </Section>
+      </>
     );
   }
 
   return (
     <>
       <EnterpriseSearchStep
+        embeddedForm={false}
         handleEnterpriseSelection={(enterprise) => {
           if (enterprise.conventions.length === 1) {
             onSelectAgreement(enterprise.conventions[0], enterprise);
@@ -79,7 +79,10 @@ const EnterpriseSearch = ({
         }}
         onUserAction={onUserAction}
       />
-      <ErrorField name={ENTERPRISE_NAME} />
+      <ErrorField
+        name={ENTERPRISE_NAME}
+        errorText={"Vous devez séléctionner une entreprise"}
+      />
       <Field
         type="input"
         name={ENTERPRISE_NAME}
