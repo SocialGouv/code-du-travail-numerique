@@ -1,15 +1,9 @@
 import { Fieldset, icons, Legend, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import arrayMutators from "final-form-arrays";
-import { useRouter } from "next/router";
 import React, { Reducer, useEffect, useReducer } from "react";
 import { Form } from "react-final-form";
 import styled from "styled-components";
 
-import {
-  MatomoBaseEvent,
-  MatomoRetirementEvent,
-  MatomoTrackUrl,
-} from "../../lib/matomo";
 import { matopush } from "../../piwik";
 import { PrevNextBar } from "./PrevNextBar";
 import { STEP_LIST_WIDTH, StepList } from "./StepList";
@@ -41,13 +35,12 @@ function Wizard({
     initialState
   );
   const { stepIndex, steps } = state;
-  const router = useRouter();
   const setStepIndex = (index) =>
     dispatch({ payload: index, type: ActionName.setStepIndex });
 
   useEffect(() => {
     const node = anchorRef.current;
-    // We only focus on wizzard after wizzard start
+    // We only focus on wizard after wizard start
     // that way focus is correctly placed on the form
     if (node && stepIndex > 0) {
       node.focus();
@@ -75,6 +68,10 @@ function Wizard({
   };
   const nextStep = (values) => {
     let nextStepIndex = stepIndex;
+    const currentStep = steps[stepIndex];
+    if (currentStep.onStepDone) {
+      currentStep.onStepDone(title, values);
+    }
     let skipFn: SkipFn = () => true;
     while (skipFn(values)) {
       nextStepIndex = Math.min(nextStepIndex + 1, steps.length - 1);
@@ -126,34 +123,6 @@ function Wizard({
 
   const Annotation = steps[stepIndex].annotation;
 
-  const onClickNext = (form) => {
-    if (router.asPath === MatomoTrackUrl.PREAVIS_RETRAITE) {
-      switch (steps[stepIndex].name) {
-        case initialState.steps[1].name: // "origine"
-          matopush([
-            MatomoBaseEvent.TRACK_EVENT,
-            MatomoBaseEvent.OUTIL,
-            form.getState().values["contrat salarié - mise à la retraite"] ===
-            "oui"
-              ? MatomoRetirementEvent.MISE_RETRAITE
-              : MatomoRetirementEvent.DEPART_RETRAITE,
-          ]);
-          break;
-        case initialState.steps[4].name: // "anciennete"
-          matopush([
-            MatomoBaseEvent.TRACK_EVENT,
-            MatomoBaseEvent.OUTIL,
-            form.getState().values.seniorityGreaterThanTwoYears
-              ? MatomoRetirementEvent.ANCIENNETE_PLUS_2_ANS
-              : MatomoRetirementEvent.ANCIENNETE_MOINS_2_ANS,
-          ]);
-          break;
-        default:
-          return;
-      }
-    }
-  };
-
   return (
     <Wrapper variant="main">
       <Form
@@ -187,10 +156,10 @@ function Wizard({
                 {steps[stepIndex].isForm ? (
                   <Fieldset>
                     <Legend isHidden>{steps[stepIndex].label}</Legend>
-                    <Step form={form} dispatch={dispatch} {...StepProps} />
+                    <Step form={form} dispatch={dispatch} title={title} {...StepProps} />
                   </Fieldset>
                 ) : (
-                  <Step form={form} dispatch={dispatch} {...StepProps} />
+                  <Step form={form} dispatch={dispatch} title={title} {...StepProps} />
                 )}
                 <PrevNextBar
                   hasError={invalid && submitFailed}
@@ -198,7 +167,6 @@ function Wizard({
                   nextVisible={nextVisible}
                   printVisible={isLastStep}
                   previousVisible={previousVisible}
-                  onNext={() => onClickNext(form)}
                 />
                 {Annotation && (
                   <p>

@@ -3,6 +3,7 @@ import data from "@cdt/data...prime-precarite/precarite.data.json";
 import {
   filterSituations,
   getPastQuestions,
+  getSupportedCC,
 } from "../../common/situations.utils";
 
 // humanize questions
@@ -63,12 +64,9 @@ export const hasConventionalProvision = (data, idcc) => {
     .some((situation) => situation.hasConventionalProvision);
 };
 
-export const isNotYetProcessed = (idcc) => {
+export const getSupportedCCWithoutConventionalProvision = () => {
   const situations = data.filter(
-    (situation) => parseInt(situation.idcc) === parseInt(idcc)
+    (situation) => situation.hasConventionalProvision !== null
   );
-  return (
-    situations.length === 0 ||
-    situations.some((situation) => situation.hasConventionalProvision === null)
-  );
+  return getSupportedCC(situations);
 };

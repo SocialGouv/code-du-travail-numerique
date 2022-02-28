@@ -1,4 +1,4 @@
-import elasticsearchClient from "../../conf/elasticsearch.js";
+import elasticsearchClient from "../../conf/elasticsearch";
 
 const { SOURCES } = require("@socialgouv/cdtn-sources");
 const { logger } = require("@socialgouv/cdtn-logger");
