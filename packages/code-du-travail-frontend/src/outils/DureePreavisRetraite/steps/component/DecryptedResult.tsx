@@ -19,7 +19,7 @@ const ShowResult: React.FC<{
   result: PublicodesResult;
   agreementMaximumResult: PublicodesResult | null;
 }> = ({ result, agreementMaximumResult }) => {
-  if (result?.value > 0) {
+  if (result.value > 0) {
     return (
       <strong>
         {agreementMaximumResult?.value &&
