@@ -26,8 +26,8 @@ export const initialState = {
       component: AgreementStep,
       label: "Convention collective",
       name: "info_cc",
-      onStepDone: (title: string, data: FormContent): void => {
-        pushAgreementEvents(title, data.ccn, getSupportedCC(data.situations));
+      onStepDone: (title: string, values: FormContent): void => {
+        pushAgreementEvents(title, values.ccn, getSupportedCC(data.situations));
       },
     },
     {
