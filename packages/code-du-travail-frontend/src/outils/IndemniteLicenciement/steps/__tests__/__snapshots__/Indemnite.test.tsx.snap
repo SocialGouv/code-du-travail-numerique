@@ -124,6 +124,7 @@ exports[`<StepIndemnite /> should render 1`] = `
     <strong
       class="c1 c2"
     >
+      0
        € brut.
     </strong>
      

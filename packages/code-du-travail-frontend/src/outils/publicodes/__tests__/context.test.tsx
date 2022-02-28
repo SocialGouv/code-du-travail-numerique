@@ -154,7 +154,7 @@ describe("Publicodes Context", () => {
         </PublicodesContext.Consumer>
       ),
     });
-    expect(screen.getByTestId("text")).toHaveTextContent("0");
+    expect(screen.getByTestId("text")).toHaveTextContent("");
     const setButton = screen.getByTestId("setSituation");
     fireEvent.click(setButton);
     expect(screen.getByTestId("text")).toHaveTextContent("1166.67");

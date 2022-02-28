@@ -127,6 +127,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
       <strong
         class="c5 c6"
       >
+        0
          € brut.
       </strong>
        
