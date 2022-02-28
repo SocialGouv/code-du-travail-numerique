@@ -2,7 +2,8 @@ import { supportedCcn } from "@socialgouv/modeles-social";
 import { References } from "@socialgouv/modeles-social/lib/utils/GetReferences";
 
 import { AgreementSupportInfo } from "../../common/Agreement/types";
-import { OldReference } from "../types";
+import { OldReference, PublicodesResult, PublicodesSimulator } from "../types";
+import { convertDaysIntoBetterUnit } from "./preavis-retraite";
 
 export const reverseValues = (
   values: Record<string, string>
@@ -35,3 +36,15 @@ export const getSupportedCC = (): AgreementSupportInfo[] =>
     fullySupported: item.preavisRetraite,
     idcc: item.idcc,
   }));
+
+export const convertedResult = (
+  simulator: PublicodesSimulator,
+  nodeValue: string
+): PublicodesResult => {
+  switch (simulator) {
+    case PublicodesSimulator.PREAVIS_RETRAITE:
+      return convertDaysIntoBetterUnit(nodeValue);
+    default:
+      throw new Error(`Unsupported simulator: ${simulator}`);
+  }
+};

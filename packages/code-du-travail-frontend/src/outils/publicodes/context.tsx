@@ -2,13 +2,12 @@ import { getNotifications, getReferences } from "@socialgouv/modeles-social";
 import Engine from "publicodes";
 import React, { createContext, useMemo, useState } from "react";
 
-import { convertDaysIntoBetterUnit, handleExecute, newSituation } from ".";
+import { convertedResult, handleExecute, newSituation } from ".";
 import {
   PublicodesContextType,
   PublicodesData,
   PublicodesProviderRule,
   PublicodesResult,
-  PublicodesSimulator,
 } from "./types";
 
 export const PublicodesContext =
@@ -31,12 +30,7 @@ export const PublicodesProvider = ({
 
   const execute = (rule: string): PublicodesResult => {
     const result = handleExecute(engine, data.situation, rule);
-    switch (simulator) {
-      case PublicodesSimulator.PREAVIS_RETRAITE:
-        return convertDaysIntoBetterUnit(result.nodeValue as unknown as string);
-      default:
-        throw new Error(`Unsupported simulator: ${simulator}`);
-    }
+    return convertedResult(simulator, result.nodeValue as unknown as string);
   };
 
   const setSituation = (args: Record<string, any>) => {
@@ -46,17 +40,9 @@ export const PublicodesProvider = ({
       simulator,
       args
     );
-    let treatedResult;
-    switch (simulator) {
-      case PublicodesSimulator.PREAVIS_RETRAITE:
-        treatedResult = convertDaysIntoBetterUnit(
-          result.nodeValue as unknown as string
-        );
-        break;
-    }
     setData({
       missingArgs,
-      result: treatedResult,
+      result: convertedResult(simulator, result.nodeValue as unknown as string),
       situation,
     });
   };
