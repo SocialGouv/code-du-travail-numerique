@@ -1,7 +1,9 @@
 import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
 
+import { MatomoActionEvent } from "../../lib";
 import { pushAgreementEvents } from "../common";
 import { getSupportedCC, skipStep } from "../common/situations.utils";
+import { StepInformations } from "../common/StepInformations";
 import {
   Action,
   ActionName,
@@ -9,7 +11,6 @@ import {
   State,
 } from "../common/type/WizardType";
 import { AgreementStep } from "./steps/AgreementStep";
-import { StepInformations } from "./steps/Informations";
 import { StepIntro } from "./steps/Introduction";
 import { StepResult } from "./steps/Result";
 import { StepStatus } from "./steps/Status";
@@ -37,6 +38,9 @@ export const initialState = {
     },
     {
       component: StepInformations,
+      componentProps: {
+        actionEvent: MatomoActionEvent.PREAVIS_LICENCIEMENT,
+      },
       label: "Informations complémentaires",
       name: "infos",
       skip: (values: FormContent): boolean =>

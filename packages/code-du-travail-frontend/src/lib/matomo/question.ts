@@ -3,11 +3,10 @@ import { MatomoActionEvent, MatomoBaseEvent, MatomoMapping } from ".";
 
 export const trackQuestion = (
   trackTitle: string | null,
-  simulatorEvent: MatomoActionEvent,
+  simulatorEvent?: MatomoActionEvent,
   isTrackingHelp = true
 ): void => {
-  // FIXME: add other simulator events
-  if (simulatorEvent !== MatomoActionEvent.PREAVIS_RETRAITE) {
+  if (!simulatorEvent) {
     return;
   }
   MatomoMapping.forEach((mappingElement) => {

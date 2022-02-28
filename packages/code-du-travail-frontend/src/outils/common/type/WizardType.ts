@@ -3,11 +3,13 @@ import React from "react";
 
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
 import type { Agreement } from "../../../conventions/Search/api/type";
+import { MatomoActionEvent } from "../../../lib";
 
 export type SkipFn = (values: FormContent) => boolean;
 
 export type Step = {
   component: (props: WizardStepProps) => JSX.Element;
+  componentProps?: { actionEvent: MatomoActionEvent };
   label: string;
   name: string;
   skip?: SkipFn;

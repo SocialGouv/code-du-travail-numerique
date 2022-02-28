@@ -1,7 +1,9 @@
 import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 
+import { MatomoActionEvent } from "../../lib";
 import { pushAgreementEvents } from "../common";
 import { getSupportedCC, skipStep } from "../common/situations.utils";
+import { StepInformations } from "../common/StepInformations";
 import {
   Action,
   ActionName,
@@ -9,7 +11,6 @@ import {
   State,
 } from "../common/type/WizardType";
 import { AgreementStep } from "./steps/AgreementStep";
-import { StepInformations } from "./steps/Informations";
 import { StepIntro } from "./steps/Introduction";
 import { StepResult } from "./steps/Result";
 
@@ -31,6 +32,9 @@ export const initialState = {
     },
     {
       component: StepInformations,
+      componentProps: {
+        actionEvent: MatomoActionEvent.PREAVIS_DEMISSION,
+      },
       hasNoMarginBottom: true,
       isForm: true,
       label: "Informations",

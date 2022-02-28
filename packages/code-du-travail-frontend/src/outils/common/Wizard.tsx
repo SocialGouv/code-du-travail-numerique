@@ -119,6 +119,8 @@ function Wizard({
 
   const Step = steps[stepIndex].component;
 
+  const StepProps = steps[stepIndex].componentProps;
+
   const Annotation = steps[stepIndex].annotation;
 
   return (
@@ -154,10 +156,10 @@ function Wizard({
                 {steps[stepIndex].isForm ? (
                   <Fieldset>
                     <Legend isHidden>{steps[stepIndex].label}</Legend>
-                    <Step form={form} dispatch={dispatch} title={title} />
+                    <Step form={form} dispatch={dispatch} title={title} {...StepProps} />
                   </Fieldset>
                 ) : (
-                  <Step form={form} dispatch={dispatch} title={title} />
+                  <Step form={form} dispatch={dispatch} title={title} {...StepProps} />
                 )}
                 <PrevNextBar
                   hasError={invalid && submitFailed}
