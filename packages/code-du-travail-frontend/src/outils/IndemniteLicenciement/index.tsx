@@ -3,6 +3,7 @@ import React from "react";
 import { OnChange } from "react-final-form-listeners";
 
 import { Wizard } from "../common/Wizard";
+import { PublicodesProvider, PublicodesSimulator } from "../publicodes";
 import {
   initialState,
   stepPrime,
@@ -13,13 +14,18 @@ import {
 interface Props {
   icon: string;
   title: string;
+  publicodesRules: any;
 }
 
-const CalculateurIndemnite = ({ icon, title }: Props): JSX.Element => {
+const CalculateurIndemnite = ({
+  icon,
+  title,
+  publicodesRules,
+}: Props): JSX.Element => {
   /**
    * The rules defined here allows to manage additionnal steps to the wizard
    */
-  const Rules = ({ values, dispatch }) => (
+  const Rules = ({ dispatch }) => (
     <>
       <OnChange key="rule-same-salaire" name="hasSameSalaire">
         {(value) =>
@@ -45,14 +51,19 @@ const CalculateurIndemnite = ({ icon, title }: Props): JSX.Element => {
   );
 
   return (
-    <Wizard
-      icon={icon}
-      title={title}
-      duration="5 à 10 min"
-      stepReducer={stepReducer}
-      initialState={initialState}
-      Rules={Rules}
-    />
+    <PublicodesProvider
+      rules={publicodesRules}
+      simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
+    >
+      <Wizard
+        icon={icon}
+        title={title}
+        duration="5 à 10 min"
+        stepReducer={stepReducer}
+        initialState={initialState}
+        Rules={Rules}
+      />
+    </PublicodesProvider>
   );
 };
 

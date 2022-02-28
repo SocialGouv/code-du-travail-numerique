@@ -3,18 +3,12 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import Disclaimer from "../../common/Disclaimer";
-import { WizardStepProps } from "../../common/type/WizardType";
 import { IndemniteLegale } from "../components/IndemniteLegale";
-import { getIndemniteFromFinalForm } from "../indemnite";
 
-function StepIndemnite({ form }: WizardStepProps): JSX.Element {
-  const { indemniteLegale, infoCalculLegal } = getIndemniteFromFinalForm(form);
+function StepIndemnite({ form }) {
   return (
     <>
-      <IndemniteLegale
-        indemnite={indemniteLegale}
-        infoCalcul={infoCalculLegal}
-      />
+      <IndemniteLegale formValues={form.getState().values} />
       <Disclaimer title={"Attention il peut exister un montant plus favorable"}>
         <p>
           Une convention collective, un accord d’entreprise, le contrat de
