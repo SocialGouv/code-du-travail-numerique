@@ -47,7 +47,7 @@ const ShowResultAgreement: React.FC<{
   if (!result) {
     return <strong>convention collective non renseignée</strong>;
   }
-  if (result?.value && result.value > 0) {
+  if (result?.value > 0) {
     return (
       <ShowResult
         result={result}

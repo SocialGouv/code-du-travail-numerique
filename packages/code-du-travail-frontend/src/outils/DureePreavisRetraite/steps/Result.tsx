@@ -52,11 +52,7 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
       </ShowDetails>
       <WarningResult
         resultValueInDays={publicodesContext.result.valueInDays}
-        type={
-          formValues["contrat salarié - mise à la retraite"] === "oui"
-            ? "mise"
-            : "depart"
-        }
+        type={type}
         ccNumber={formValues?.ccn?.selected?.num}
       />
     </>
