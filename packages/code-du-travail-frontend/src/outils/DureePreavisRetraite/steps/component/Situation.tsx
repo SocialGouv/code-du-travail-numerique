@@ -15,7 +15,7 @@ type Props = {
 export const Situation: React.FC<Props> = ({ content, elements }) => {
   const overrideSituation = (element: SituationElement): JSX.Element | null => {
     if (element.name === "contrat salarié - convention collective") {
-      return <>{content.ccn?.shortTitle}</>;
+      return <>{content.ccn?.selected?.shortTitle}</>;
     }
     if (
       element.name === "contrat salarié - ancienneté" &&
@@ -49,7 +49,7 @@ export const Situation: React.FC<Props> = ({ content, elements }) => {
       if (content["contrat salarié - mise à la retraite"] === "oui") {
         if (
           content.ccn &&
-          supportedCcn.map((v) => v.idcc).includes(content.ccn.num)
+          supportedCcn.map((v) => v.idcc).includes(content.ccn.selected?.num)
         ) {
           return [
             <Text key="handicap">

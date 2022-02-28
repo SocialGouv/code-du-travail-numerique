@@ -88,16 +88,16 @@ type RootData = {
 };
 
 export const createRootData = (
-  data: Partial<FormContent>,
+  data: FormContent,
   result: PublicodesPreavisRetraiteResult,
   legalResult: PublicodesPreavisRetraiteResult,
   agreementResult: PublicodesPreavisRetraiteResult | null,
   supportedCcn: AgreementInfo[]
 ): RootData => {
   let agreement: Agreement | null = null;
-  if (data.ccn) {
+  if (data.ccn?.selected) {
     const agreementFound = supportedCcn.find(
-      (item) => item.idcc === data.ccn?.num
+      (item) => item.idcc === data.ccn?.selected?.num
     );
     agreement = {
       notice: agreementResult?.valueInDays ?? 0,

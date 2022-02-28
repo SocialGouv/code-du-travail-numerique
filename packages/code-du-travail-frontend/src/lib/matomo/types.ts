@@ -3,6 +3,15 @@ export enum MatomoBaseEvent {
   OUTIL = "outil",
 }
 
+export enum MatomoSearchAgreementCategory {
+  AGREEMENT_SEARCH_HELP = "cc_search_help",
+  ENTERPRISE_SELECT = "enterprise_select",
+  AGREEMENT_SELECT_P2 = "cc_select_p2",
+  ENTERPRISE_SEARCH = "enterprise_search",
+  AGREEMENT_SEARCH = "cc_search",
+  AGREEMENT_SEARCH_TYPE_OF_USERS = "cc_search_type_of_users",
+}
+
 export enum MatomoSimulatorEvent {
   CLICK_CALCUL_DETAIL = "click_calcul_detail",
   CLICK_HELP_ANCIENNETE = "click_help_anciennete",

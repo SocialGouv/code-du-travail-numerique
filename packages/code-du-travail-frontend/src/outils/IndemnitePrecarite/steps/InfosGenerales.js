@@ -32,7 +32,7 @@ const excludeContracts = [
 
 function StepInfosGenerales({ form }) {
   const { values } = form.getState();
-  const idcc = values.ccn ? values.ccn.num : "0";
+  const idcc = values.ccn?.selected ? values.ccn.selected.num : "0";
   const initialSituations = getSituationsFor(data, { idcc });
   const pastQuestions = getPastQuestions(
     initialSituations,
@@ -75,8 +75,8 @@ function StepInfosGenerales({ form }) {
           switch (input.value) {
             case CONTRACT_TYPE.CDD:
               if (
-                values.ccn &&
-                hasConventionalProvision(data, values.ccn.num)
+                values.ccn?.selected &&
+                hasConventionalProvision(data, values.ccn.selected.num)
               ) {
                 return (
                   <>

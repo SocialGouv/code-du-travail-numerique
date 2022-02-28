@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { MatomoActionEvent, trackQuestion } from "../../../lib/matomo";
+import { MatomoActionEvent, trackQuestion } from "../../../lib";
 import { TextQuestion } from "../../common/TextQuestion";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { isPositiveNumber } from "../../common/validators";
@@ -22,7 +22,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
 
   useEffect(() => {
     if (
-      form.getState().values.ccn?.num === 2264 &&
+      form.getState().values.ccn?.selected?.num === 2264 &&
       form.getState().values["contrat salarié - mise à la retraite"] === "oui"
     ) {
       setQuestion(

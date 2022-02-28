@@ -8,14 +8,14 @@ describe("<StepInformations />", () => {
   });
   it("should render catégorie professionelle", () => {
     const { container } = renderForm(StepInformations, {
-      ccn: { num: 44 },
+      ccn: { selected: { num: 44 } },
       typeRupture: "1| Démission",
     });
     expect(container).toMatchSnapshot();
   });
   it("should render groupe", () => {
     const { container } = renderForm(StepInformations, {
-      ccn: { num: 44 },
+      ccn: { selected: { num: 44 } },
       criteria: { "catégorie professionnelle": "28| Techniciens" },
       typeRupture: "1| démission",
     });

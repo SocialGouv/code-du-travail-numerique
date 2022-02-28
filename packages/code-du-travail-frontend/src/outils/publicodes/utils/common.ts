@@ -1,5 +1,7 @@
+import { supportedCcn } from "@socialgouv/modeles-social";
 import { References } from "@socialgouv/modeles-social/lib/utils/GetReferences";
 
+import { AgreementSupportInfo } from "../../common/Agreement/types";
 import { OldReference } from "../types";
 
 export const reverseValues = (
@@ -27,3 +29,9 @@ export function formatNumber(toBeFormmatted: number): string {
 export function formatSeniority(initialSeniority: string): string {
   return formatNumber(parseInt(initialSeniority));
 }
+
+export const getSupportedCC = (): AgreementSupportInfo[] =>
+  supportedCcn.map((item) => ({
+    fullySupported: item.preavisRetraite,
+    idcc: item.idcc,
+  }));
