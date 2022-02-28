@@ -12,8 +12,8 @@ import {
   recapSituation,
 } from "../../common/situations.utils";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
+import { formatRefs } from "../../publicodes";
 import { WizardStepProps } from "../../common/type/WizardType";
-import { formatRefs } from "../../publicodes/Utils";
 
 function Duration({ situation }) {
   if (!situation.answer) {

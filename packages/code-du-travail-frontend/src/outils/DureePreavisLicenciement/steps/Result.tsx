@@ -17,7 +17,7 @@ import {
   SmallText,
 } from "../../common/stepStyles";
 import { WizardStepProps } from "../../common/type/WizardType";
-import { formatRefs } from "../../publicodes/Utils";
+import { formatRefs } from "../../publicodes";
 import DisclaimerText from "./DisclaimerText";
 
 const { situations: allSituations } = data;

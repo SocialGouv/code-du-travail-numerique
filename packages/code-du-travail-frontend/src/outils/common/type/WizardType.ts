@@ -45,7 +45,7 @@ export interface ConventionCollective {
   enterprise?: Enterprise;
 }
 
-export type FormContent = {
+export type PreavisRetraiteFormContent = {
   ccn?: ConventionCollective;
   seniorityMaximum?: boolean;
   seniorityValue?: string;
@@ -54,3 +54,5 @@ export type FormContent = {
   cdt?: Record<string, string>;
   disabledWorker?: boolean;
 } & Record<string, unknown>;
+
+export type FormContent = PreavisRetraiteFormContent;
