@@ -2,7 +2,7 @@ import { getNotifications, getReferences } from "@socialgouv/modeles-social";
 import Engine from "publicodes";
 import React, { createContext, useMemo, useState } from "react";
 
-import { convertedResult, handleExecute, newSituation } from ".";
+import { convertedResult, handleExecute, updateSituation } from ".";
 import {
   PublicodesContextType,
   PublicodesData,
@@ -34,7 +34,7 @@ export const PublicodesProvider = ({
   };
 
   const setSituation = (args: Record<string, any>) => {
-    const { missingArgs, result, situation } = newSituation(
+    const { missingArgs, result, situation } = updateSituation(
       engine,
       data.situation,
       simulator,

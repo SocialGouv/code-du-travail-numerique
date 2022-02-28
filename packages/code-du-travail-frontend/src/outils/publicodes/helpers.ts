@@ -11,7 +11,7 @@ export function handleExecute(
   return engine.evaluate(rule);
 }
 
-export function newSituation(
+export function updateSituation(
   engine: Engine,
   situation: SituationElement[],
   targetRule: string,
