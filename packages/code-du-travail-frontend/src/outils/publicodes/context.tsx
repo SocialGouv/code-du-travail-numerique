@@ -32,11 +32,6 @@ export const PublicodesProvider = ({
   const execute = (rule: string): PublicodesResult => {
     const result = handleExecute(engine, data.situation, rule);
     switch (simulator) {
-      case PublicodesSimulator.INDEMNITE_LICENCIEMENT:
-        return {
-          unit: result.unit,
-          value: result.nodeValue,
-        };
       case PublicodesSimulator.PREAVIS_RETRAITE:
         return convertDaysIntoBetterUnit(result.nodeValue as unknown as string);
       default:

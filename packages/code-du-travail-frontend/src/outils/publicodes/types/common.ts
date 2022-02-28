@@ -2,7 +2,6 @@ import { Notification } from "@socialgouv/modeles-social";
 import { References } from "@socialgouv/modeles-social/lib/utils/GetReferences";
 import Engine, { Rule as PubliRule } from "publicodes";
 
-import { PublicodesIndemniteLicenciementResult } from "./indemnite-licenciement";
 import { PublicodesPreavisRetraiteResult } from "./preavis-retraite";
 
 export type OldReference = {
@@ -39,9 +38,7 @@ export interface SituationElement {
   value: string;
 }
 
-export type PublicodesResult =
-  | PublicodesPreavisRetraiteResult
-  | PublicodesIndemniteLicenciementResult;
+export type PublicodesResult = PublicodesPreavisRetraiteResult;
 
 export type PublicodesContextType<T extends PublicodesResult> = {
   execute: (rule: string) => T;
@@ -79,6 +76,5 @@ export enum PublicodesUnit {
 }
 
 export enum PublicodesSimulator {
-  INDEMNITE_LICENCIEMENT = "contrat salarié . indemnité de licenciement",
   PREAVIS_RETRAITE = "contrat salarié . préavis de retraite en jours",
 }

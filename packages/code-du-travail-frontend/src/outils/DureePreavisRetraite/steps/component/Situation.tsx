@@ -3,12 +3,12 @@ import { supportedCcn } from "@socialgouv/modeles-social";
 import React from "react";
 
 import PubliSituation from "../../../common/PubliSituation";
-import { FormContent } from "../../../common/type/WizardType";
+import { PreavisRetraiteFormContent } from "../../../common/type/WizardType";
 import { SituationElement } from "../../../publicodes";
 import { SeniorityMaximum } from "../constants";
 
 type Props = {
-  content: FormContent;
+  content: PreavisRetraiteFormContent;
   elements: SituationElement[];
 };
 
@@ -41,7 +41,9 @@ export const Situation: React.FC<Props> = ({ content, elements }) => {
     return null;
   };
 
-  const getAnnotations = (content: FormContent): JSX.Element[] => {
+  const getAnnotations = (
+    content: PreavisRetraiteFormContent
+  ): JSX.Element[] => {
     if (
       content.infos &&
       content.infos["contrat salarié - travailleur handicapé"] === "oui"

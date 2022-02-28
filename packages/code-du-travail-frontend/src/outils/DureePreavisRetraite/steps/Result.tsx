@@ -15,6 +15,17 @@ import WarningResult from "./component/WarningResult";
 
 function ResultStep({ form }: WizardStepProps): JSX.Element {
   const publicodesContext = usePublicodes<PublicodesPreavisRetraiteResult>();
+  const type =
+    publicodesContext.situation.find(
+      (item) => item.name === "contrat salarié - mise à la retraite"
+    )?.value === "oui"
+      ? "mise"
+      : "départ";
+
+  const notifications = publicodesContext.getNotifications();
+  const agreementMaximumResult = publicodesContext.execute(
+    "contrat salarié . préavis de retraite collective maximum en jours"
+  );
   const formValues = form.getState().values;
 
   useEffect(() => {
@@ -25,7 +36,12 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
 
   return (
     <>
-      <ShowResult />
+      <ShowResult
+        notifications={notifications}
+        agreementMaximumResult={agreementMaximumResult}
+        type={type}
+        publicodesResult={publicodesContext.result}
+      />
       <ShowDetails>
         <Situation
           content={formValues}

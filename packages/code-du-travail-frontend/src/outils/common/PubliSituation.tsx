@@ -40,14 +40,12 @@ const PubliSituation = ({
         const overriden = onOverrideInput && onOverrideInput(element);
         return (
           <>
-            {element.rawNode.titre && (
-              <li key={element.name}>
-                {element.rawNode.titre}&nbsp;:&nbsp;
-                <strong>
-                  {overriden ? overriden : <SituationInput element={element} />}
-                </strong>
-              </li>
-            )}
+            <li key={element.name}>
+              {element.rawNode.titre}&nbsp;:&nbsp;
+              <strong>
+                {overriden ? overriden : <SituationInput element={element} />}
+              </strong>
+            </li>
           </>
         );
       })}

@@ -19,7 +19,7 @@ const ShowResult: React.FC<{
   result: PublicodesResult;
   agreementMaximumResult: PublicodesResult | null;
 }> = ({ result, agreementMaximumResult }) => {
-  if (result?.value && result.value > 0) {
+  if (result?.value > 0) {
     return (
       <strong>
         {agreementMaximumResult?.value &&
@@ -110,20 +110,17 @@ export const createRootData = (
   }
   let noticeUsed = NoticeUsed.none;
   if (
-    (legalResult.valueInDays &&
-      legalResult.valueInDays > 0 &&
+    (legalResult.valueInDays > 0 &&
       legalResult.valueInDays === agreementResult?.valueInDays) ??
     -1
   ) {
     noticeUsed = NoticeUsed.same;
   } else if (
-    result.valueInDays &&
     result.valueInDays > 0 &&
     result.valueInDays === legalResult.valueInDays
   ) {
     noticeUsed = NoticeUsed.legal;
   } else if (
-    result.valueInDays &&
     result.valueInDays > 0 &&
     result.valueInDays === agreementResult?.valueInDays
   ) {

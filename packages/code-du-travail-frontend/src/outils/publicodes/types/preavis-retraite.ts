@@ -10,5 +10,5 @@ export enum PublicodesConvertedUnit {
 export type PublicodesPreavisRetraiteResult = {
   value: number;
   unit: PublicodesConvertedUnit;
-  valueInDays?: number;
+  valueInDays: number;
 };

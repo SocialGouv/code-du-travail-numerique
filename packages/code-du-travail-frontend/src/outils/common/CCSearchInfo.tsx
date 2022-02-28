@@ -10,16 +10,12 @@ type Props = {
 
 const CCSearchInfo: React.FC<Props> = ({ ccn }) => {
   return (
-    <>
-      {ccn && (
-        <p>
-          Vous pouvez faire une recherche par mots-clés dans{" "}
-          <Link href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}>
-            <a>votre convention collective</a>
-          </Link>
-        </p>
-      )}
-    </>
+    <p>
+      Vous pouvez faire une recherche par mots-clés dans{" "}
+      <Link href={`/${getRouteBySource(SOURCES.CCN)}/${ccn.slug}`}>
+        <a>votre convention collective</a>
+      </Link>
+    </p>
   );
 };
 
