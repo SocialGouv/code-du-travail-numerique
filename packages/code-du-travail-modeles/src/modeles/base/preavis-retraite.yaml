@@ -1,11 +1,3 @@
-contrat salarié: oui
-contrat salarié . ancienneté:
-  titre: Ancienneté du salarié
-  question: Quel est votre ancienneté en mois ?
-  unité: mois
-  cdtn:
-    type: entier
-
 contrat salarié . mise à la retraite:
   titre: Origine du départ à la retraite
   question: L’employeur a-t-il décidé de lui-même de mettre à la retraite le salarié par une décision adressée à celui-ci ?
@@ -14,12 +6,6 @@ contrat salarié . mise à la retraite:
     valeurs:
       Mise à la retraite: oui
       Départ à la retraite: non
-
-contrat salarié . travailleur handicapé:
-  titre: Travailleur handicapé
-  question: Le salarié concerné est-il reconnu en tant que travailleur handicapé ?
-  cdtn:
-    type: oui-non
 
 contrat salarié . départ à la retraite:
   valeur: mise à la retraite = non
@@ -73,7 +59,7 @@ contrat salarié . préavis de retraite légale en jours:
   valeur: contrat salarié . préavis de retraite légale
   unité: jour
 
-contrat salarié . préavis de retraite légale pour travailleur handicapé:
+contrat salarié . préavis de retraite . légale pour travailleur handicapé:
   applicable si: contrat salarié . travailleur handicapé
   remplace: contrat salarié . préavis de retraite légale
   variations:
@@ -94,7 +80,7 @@ contrat salarié . préavis de retraite . tranches:
         plafond: 24 mois
       - montant: 2 mois
 
-contrat salarié . préavis de retraite collective pour travailleur handicapé:
+contrat salarié . préavis de retraite . collective pour travailleur handicapé:
   applicable si: contrat salarié . travailleur handicapé
   remplace: contrat salarié . préavis de retraite collective
   variations:
@@ -123,7 +109,7 @@ contrat salarié . préavis de retraite collective maximum en jours:
   valeur: contrat salarié . préavis de retraite collective maximum
   unité: jour
 
-contrat salarié . préavis de retraite collective maximum pour travailleur handicapé:
+contrat salarié . préavis de retraite . collective maximum pour travailleur handicapé:
   applicable si: contrat salarié . travailleur handicapé
   remplace: contrat salarié . préavis de retraite collective maximum
   variations:

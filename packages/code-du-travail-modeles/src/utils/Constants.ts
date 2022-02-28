@@ -1,3 +1,6 @@
-import type { AgreementInfo } from "../internal/ExtractSupportedCc";
+export type AgreementInfo = {
+  idcc: number;
+  preavisRetraite: boolean;
+};
 
 export const supportedCcn: AgreementInfo[] = [];

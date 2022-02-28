@@ -1,7 +1,7 @@
 import Engine from "publicodes";
 
 import { mergeModels } from "../../../internal/merger";
-import { getReferences } from "../../../utils/GetReferences";
+import { getReferences } from "../../../utils";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
@@ -56,6 +56,7 @@ describe("restauration rapide", () => {
           "contrat salarié . convention collective . restauration rapide . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
+          "préavis de retraite": "oui",
         });
 
         const result = engine.evaluate("contrat salarié . préavis de retraite");
@@ -104,6 +105,7 @@ describe("restauration rapide", () => {
           "contrat salarié . convention collective . restauration rapide . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
+          "préavis de retraite": "oui",
         });
 
         const result = engine.evaluate("contrat salarié . préavis de retraite");

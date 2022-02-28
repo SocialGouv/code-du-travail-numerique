@@ -14,11 +14,8 @@ export const mapToPublicodesSituationForPreavisDeRetraite = (
     infos,
     seniorityMaximum,
     seniorityValue,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     disabledWorker,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     cdt,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     criteria,
     ...formWithoutCcn
   } = form;
@@ -40,9 +37,9 @@ export const mapToPublicodesSituationForPreavisDeRetraite = (
     ...formWithoutCcn,
     ...seniority,
     ...agreement,
-    // ...{
-    //   "préavis de retraite": "oui",
-    // },
+    ...{
+      "préavis de retraite": "oui",
+    },
   };
 };
 

@@ -1,5 +1,4 @@
-import { supportedCcn } from "@socialgouv/modeles-social";
-import { References } from "@socialgouv/modeles-social/lib/utils/GetReferences";
+import { References, supportedCcn } from "@socialgouv/modeles-social";
 
 import { AgreementSupportInfo } from "../../common/Agreement/types";
 import { OldReference, PublicodesResult, PublicodesSimulator } from "../types";
