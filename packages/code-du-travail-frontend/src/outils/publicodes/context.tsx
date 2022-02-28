@@ -46,9 +46,17 @@ export const PublicodesProvider = ({
       simulator,
       args
     );
+    let treatedResult;
+    switch (simulator) {
+      case PublicodesSimulator.PREAVIS_RETRAITE:
+        treatedResult = convertDaysIntoBetterUnit(
+          result.nodeValue as unknown as string
+        );
+        break;
+    }
     setData({
       missingArgs,
-      result,
+      result: treatedResult,
       situation,
     });
   };
