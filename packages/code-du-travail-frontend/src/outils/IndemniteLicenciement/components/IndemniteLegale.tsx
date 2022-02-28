@@ -1,14 +1,16 @@
 import PropTypes from "prop-types";
 import React, { useEffect } from "react";
 
-import { usePublicodes } from "../../publicodes";
-import { mapToPublicodesSituationForPreavisDeLicenciement } from "../../publicodes/Utils";
-import { getSalaireRef } from "../indemnite";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
+import {
+  mapToPublicodesSituationForIndemniteLicenciement,
+  usePublicodes,
+} from "../../publicodes";
+import { getSalaireRef } from "../indemnite";
 
 function IndemniteLegale(formValues) {
   const publicodesContext = usePublicodes();
-  console.log(formValues);
+
   const {
     hasTempsPartiel = false,
     hasSameSalaire = false,
@@ -30,7 +32,11 @@ function IndemniteLegale(formValues) {
   });
   useEffect(() => {
     publicodesContext.setSituation(
-      mapToPublicodesSituationForPreavisDeLicenciement(formValues, salaireRef)
+      mapToPublicodesSituationForIndemniteLicenciement(
+        formValues.formValues.ccn,
+        anciennete,
+        salaireRef
+      )
     );
     publicodesContext.execute("contrat salarié . indemnité de licenciement");
   }, [formValues]);
@@ -52,12 +58,12 @@ function IndemniteLegale(formValues) {
   );
 }
 
-IndemniteLegale.propTypes = {
-  indemnite: PropTypes.number.isRequired,
-  infoCalcul: PropTypes.shape({
-    formula: PropTypes.string.isRequired,
-    labels: PropTypes.object.isRequired,
-  }).isRequired,
-};
+// IndemniteLegale.propTypes = {
+//   indemnite: PropTypes.number.isRequired,
+//   infoCalcul: PropTypes.shape({
+//     formula: PropTypes.string.isRequired,
+//     labels: PropTypes.object.isRequired,
+//   }).isRequired,
+// };
 
 export { IndemniteLegale };

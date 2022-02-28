@@ -1,8 +1,7 @@
 import { Paragraph } from "@socialgouv/cdtn-ui";
 import React from "react";
 
-import { RuleType, SituationElement } from "../publicodes";
-import { reverseValues } from "../publicodes/Utils";
+import { reverseValues, RuleType, SituationElement } from "../publicodes";
 import { SectionTitle } from "./stepStyles";
 
 type PublicodesInputProps = {
@@ -40,12 +39,16 @@ const PubliSituation = ({
       {situation.map((element) => {
         const overriden = onOverrideInput && onOverrideInput(element);
         return (
-          <li key={element.name}>
-            {element.rawNode.titre}&nbsp;:&nbsp;
-            <strong>
-              {overriden ? overriden : <SituationInput element={element} />}
-            </strong>
-          </li>
+          <>
+            {element.rawNode.titre && (
+              <li key={element.name}>
+                {element.rawNode.titre}&nbsp;:&nbsp;
+                <strong>
+                  {overriden ? overriden : <SituationInput element={element} />}
+                </strong>
+              </li>
+            )}
+          </>
         );
       })}
     </ul>

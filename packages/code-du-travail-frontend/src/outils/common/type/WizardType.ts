@@ -40,9 +40,18 @@ export type ConventionCollective = {
   title: string;
 };
 
-export type FormContent = Record<string, string> & {
+export type PreavisRetraiteFormContent = Record<string, string> & {
   ccn?: ConventionCollective;
-  seniorityMaximum?: boolean; // specific preavis de retraite ?
-  seniorityValue?: string; // specific preavis de retraite ?
+  seniorityMaximum?: boolean;
+  seniorityValue?: string;
   infos?: Record<string, string>;
 };
+
+export type IndemniteLicenciementFormContent = Record<string, string> & {
+  ccn?: ConventionCollective;
+  infos?: Record<string, string>;
+};
+
+export type FormContent =
+  | PreavisRetraiteFormContent
+  | IndemniteLicenciementFormContent;

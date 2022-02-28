@@ -1,25 +1,3 @@
-contrat salarié: oui
-contrat salarié . ancienneté:
-  titre: Ancienneté du salarié
-  question: Quel est votre ancienneté en mois ?
-  unité: mois
-  cdtn:
-    type: entier
-
-# should be specific to indemnite licenciement ?
-contrat salarié . salaire de référence:
-  titre: Salaire de référence du salarié
-  unité: €
-  cdtn:
-    type: entier
-
-contrat salarié . travailleur handicapé:
-  titre: Travailleur handicapé
-  question: Le salarié concerné est-il reconnu en tant que travailleur handicapé ?
-  cdtn:
-    type: oui-non
-
-# Préavis de retraite
 contrat salarié . mise à la retraite:
   titre: Origine du départ à la retraite
   question: L’employeur a-t-il décidé de lui-même de mettre à la retraite le salarié par une décision adressée à celui-ci ?
@@ -81,7 +59,7 @@ contrat salarié . préavis de retraite légale en jours:
   valeur: contrat salarié . préavis de retraite légale
   unité: jour
 
-contrat salarié . préavis de retraite légale pour travailleur handicapé:
+contrat salarié . préavis de retraite . légale pour travailleur handicapé:
   applicable si: contrat salarié . travailleur handicapé
   remplace: contrat salarié . préavis de retraite légale
   variations:
@@ -102,7 +80,7 @@ contrat salarié . préavis de retraite . tranches:
         plafond: 24 mois
       - montant: 2 mois
 
-contrat salarié . préavis de retraite collective pour travailleur handicapé:
+contrat salarié . préavis de retraite . collective pour travailleur handicapé:
   applicable si: contrat salarié . travailleur handicapé
   remplace: contrat salarié . préavis de retraite collective
   variations:
@@ -131,7 +109,7 @@ contrat salarié . préavis de retraite collective maximum en jours:
   valeur: contrat salarié . préavis de retraite collective maximum
   unité: jour
 
-contrat salarié . préavis de retraite collective maximum pour travailleur handicapé:
+contrat salarié . préavis de retraite . collective maximum pour travailleur handicapé:
   applicable si: contrat salarié . travailleur handicapé
   remplace: contrat salarié . préavis de retraite collective maximum
   variations:
@@ -142,46 +120,3 @@ contrat salarié . préavis de retraite collective maximum pour travailleur hand
             alors: 3 mois
           - sinon: contrat salarié . préavis de retraite collective maximum * 2
     - sinon: contrat salarié . préavis de retraite collective maximum
-
-# Indemnité de licenciement
-
-contrat salarié . ancienneté total en mois:
-  titre: Ancienneté du salarié
-  question: Quel est votre ancienneté en mois ?
-  cdtn:
-    type: entier
-
-contrat salarié . indemnité de licenciement:
-  valeur: 1 / 4 * contrat salarié . salaire de référence * contrat salarié . ancienneté
-  unité: €
-  arrondi: oui
-  références:
-    Article L1234-9: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644154/
-    Article R1234-1 à R1234-4: https://www.legifrance.gouv.fr/codes/id/LEGISCTA000018537572/
-
-#contrat salarié . salaire annuel:
-#  titre: Salaire mensuel
-#  question: Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement ?
-#  cdtn:
-#    type: oui-non
-#
-#contrat salarié . salaire annuel . total:
-#  applicable si: contrat salarié . travailleur annuel
-#
-#contrat salarié . salaire mensuel:
-#  valeur: salaire annuel = non
-#
-#contrat salarié . salaire mensuel . 1:
-#  titre: Salaire mensuel janvier
-#  question: Salaire mensuel brut du mois de fanvier ?
-#  unité: euro
-#  cdtn:
-#    type: entier
-#
-#contrat salarié . salaire mensuel . 2:
-#  titre: Salaire mensuel février
-#  question: Salaire mensuel brut du mois de février ?
-#  unité: euro
-#  cdtn:
-#    type: entier
-

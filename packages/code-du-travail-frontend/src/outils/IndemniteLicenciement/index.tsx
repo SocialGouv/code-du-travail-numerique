@@ -3,13 +3,13 @@ import React from "react";
 import { OnChange } from "react-final-form-listeners";
 
 import { Wizard } from "../common/Wizard";
+import { PublicodesProvider, PublicodesSimulator } from "../publicodes";
 import {
   initialState,
   stepPrime,
   stepReducer,
   stepSalaires,
 } from "./stepReducer";
-import { PublicodesProvider } from "../publicodes";
 
 interface Props {
   icon: string;
@@ -25,7 +25,7 @@ const CalculateurIndemnite = ({
   /**
    * The rules defined here allows to manage additionnal steps to the wizard
    */
-  const Rules = ({ values, dispatch }) => (
+  const Rules = ({ dispatch }) => (
     <>
       <OnChange key="rule-same-salaire" name="hasSameSalaire">
         {(value) =>
@@ -53,7 +53,7 @@ const CalculateurIndemnite = ({
   return (
     <PublicodesProvider
       rules={publicodesRules}
-      targetRule="contrat salarié . indemnité de licenciement"
+      simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
     >
       <Wizard
         icon={icon}

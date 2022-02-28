@@ -2,6 +2,8 @@ import { render } from "@testing-library/react";
 import React from "react";
 import { Form } from "react-final-form";
 
+import { loadPublicodes } from "../../../api/LoadPublicodes";
+import { PublicodesProvider, PublicodesSimulator } from "../../../publicodes";
 import { StepIndemnite } from "../Indemnite";
 
 const initialValues = {
@@ -19,7 +21,14 @@ describe("<StepIndemnite />", () => {
       <Form
         initialValues={initialValues}
         onSubmit={onSubmit}
-        render={({ form }) => <StepIndemnite form={form} />}
+        render={({ form }) => (
+          <PublicodesProvider
+            rules={loadPublicodes("indemnite-licenciement")}
+            simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
+          >
+            <StepIndemnite form={form} />
+          </PublicodesProvider>
+        )}
       />
     );
     expect(container).toMatchSnapshot();

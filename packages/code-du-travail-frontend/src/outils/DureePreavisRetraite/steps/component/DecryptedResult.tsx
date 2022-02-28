@@ -1,18 +1,17 @@
 import { Paragraph } from "@socialgouv/cdtn-ui";
-import { supportedCcn } from "@socialgouv/modeles-social";
-import { AgreementInfo } from "@socialgouv/modeles-social/bin/internal/ExtractSupportedCc";
+import { AgreementInfo, supportedCcn } from "@socialgouv/modeles-social";
 import React from "react";
 
 import { SectionTitle } from "../../../common/stepStyles";
 import { FormContent } from "../../../common/type/WizardType";
 import {
-  PublicodesContextInterface,
+  PublicodesPreavisRetraiteResult,
   PublicodesResult,
+  usePublicodes,
 } from "../../../publicodes";
 
 type Props = {
   data: FormContent;
-  publicodesContext: PublicodesContextInterface;
 };
 
 const ShowResult: React.FC<{
@@ -89,9 +88,9 @@ type RootData = {
 
 export const createRootData = (
   data: Partial<FormContent>,
-  result: PublicodesResult,
-  legalResult: PublicodesResult,
-  agreementResult: PublicodesResult | null,
+  result: PublicodesPreavisRetraiteResult,
+  legalResult: PublicodesPreavisRetraiteResult,
+  agreementResult: PublicodesPreavisRetraiteResult | null,
   supportedCcn: AgreementInfo[]
 ): RootData => {
   let agreement: Agreement | null = null;
@@ -182,7 +181,8 @@ export const getDescription = (data: RootData): string | null => {
   }
 };
 
-const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
+const DecryptedResult: React.FC<Props> = ({ data }) => {
+  const publicodesContext = usePublicodes<PublicodesPreavisRetraiteResult>();
   const legalResult = publicodesContext.execute(
     "contrat salarié . préavis de retraite légale en jours"
   );

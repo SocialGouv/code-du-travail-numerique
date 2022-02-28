@@ -1,6 +1,8 @@
 import type { Rule } from "publicodes";
 import type Engine from "publicodes";
 
+import type { AgreementInfo } from "..";
+
 export type RuleNodeIdcc = Rule & {
   cdtn?: {
     idcc?: number;
@@ -8,12 +10,7 @@ export type RuleNodeIdcc = Rule & {
   };
 };
 
-export type AgreementInfo = {
-  idcc: number;
-  preavisRetraite: boolean;
-};
-
-export function extractImplementedCc(engine: Engine): Partial<AgreementInfo>[] {
+export function extractSupportedCc(engine: Engine): Partial<AgreementInfo>[] {
   return Object.values(engine.getParsedRules())
     .flatMap((rule) => {
       const rawNode = rule.rawNode as RuleNodeIdcc;
