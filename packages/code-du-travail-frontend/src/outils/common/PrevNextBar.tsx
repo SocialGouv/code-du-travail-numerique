@@ -2,7 +2,7 @@ import { Button, icons, theme } from "@socialgouv/cdtn-ui";
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 
-import printResult from "./printResult";
+import { printResult } from "./utils/printResult";
 
 type Props = {
   onPrev: () => void;
@@ -10,6 +10,7 @@ type Props = {
   nextVisible: boolean;
   printVisible: boolean;
   previousVisible: boolean;
+  simulatorTitle: string;
 };
 
 export const PrevNextBar: FunctionComponent<Props> = ({
@@ -18,6 +19,7 @@ export const PrevNextBar: FunctionComponent<Props> = ({
   nextVisible = true,
   printVisible,
   previousVisible = true,
+  simulatorTitle,
 }) => {
   return (
     <>
@@ -40,7 +42,10 @@ export const PrevNextBar: FunctionComponent<Props> = ({
           </StyledButton>
         )}
         {printVisible && (
-          <StyledButton type="button" onClick={printResult}>
+          <StyledButton
+            type="button"
+            onClick={() => printResult(simulatorTitle)}
+          >
             Imprimer le résultat
           </StyledButton>
         )}
