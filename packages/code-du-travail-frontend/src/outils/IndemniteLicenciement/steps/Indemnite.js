@@ -8,7 +8,7 @@ import { IndemniteLegale } from "../components/IndemniteLegale";
 function StepIndemnite({ form }) {
   return (
     <>
-      <IndemniteLegale formValues={form.getState().values} />
+      <IndemniteLegale form={form} />
       <Disclaimer title={"Attention il peut exister un montant plus favorable"}>
         <p>
           Une convention collective, un accord d’entreprise, le contrat de

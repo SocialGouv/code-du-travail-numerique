@@ -1,3 +1,4 @@
+import { FormApi } from "final-form";
 import React, { useEffect } from "react";
 
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
@@ -8,7 +9,11 @@ import {
 } from "../../publicodes";
 import { getSalaireRef } from "../indemnite";
 
-function IndemniteLegale(formValues) {
+type Props = {
+  form: FormApi<any>;
+};
+
+function IndemniteLegale({ form }: Props) {
   const publicodesContext =
     usePublicodes<PublicodesIndemniteLicenciementResult>();
 
@@ -20,27 +25,28 @@ function IndemniteLegale(formValues) {
     primes = [],
     salaire,
     anciennete,
-  } = formValues.formValues;
+    ccn,
+  } = form.getState().values;
 
-  const salaireRef = getSalaireRef({
-    anciennete,
-    hasSameSalaire,
-    hasTempsPartiel,
-    primes,
-    salaire,
-    salairePeriods,
-    salaires,
-  });
   useEffect(() => {
+    const salaireRef = getSalaireRef({
+      anciennete,
+      hasSameSalaire,
+      hasTempsPartiel,
+      primes,
+      salaire,
+      salairePeriods,
+      salaires,
+    });
     publicodesContext.setSituation(
       mapToPublicodesSituationForIndemniteLicenciement(
-        formValues.formValues.ccn,
+        ccn,
         anciennete,
         salaireRef
       )
     );
     publicodesContext.execute("contrat salarié . indemnité de licenciement");
-  }, [formValues]);
+  }, []);
 
   const notifications = publicodesContext.getNotifications();
   return (

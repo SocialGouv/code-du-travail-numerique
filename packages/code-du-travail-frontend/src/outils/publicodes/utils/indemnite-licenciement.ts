@@ -1,8 +1,12 @@
 import { ConventionCollective } from "../../common/type/WizardType";
-import { formatNumber, formatSeniority } from "./common";
+import { formatNumber } from "./common";
+
+function formatSeniorityForPreavisRetraite(initialSeniority: string): string {
+  return formatNumber(parseInt(initialSeniority) * 12);
+}
 
 export const mapToPublicodesSituationForIndemniteLicenciement = (
-  ccn: ConventionCollective,
+  ccn: ConventionCollective | undefined,
   seniority: string,
   salaireRef: number
 ): Record<string, string> => {
@@ -12,17 +16,14 @@ export const mapToPublicodesSituationForIndemniteLicenciement = (
           .toString()
           .padStart(4, "0")}'`,
       }
-    : {};
-
+    : { "contrat salarié - convention collective": "''" };
   return {
-    ...{
-      "contrat salarié - ancienneté": formatSeniority(seniority),
-    },
-    ...{
-      "contrat salarié - salaire de référence": formatNumber(salaireRef),
-    },
     ...agreement,
     ...{
+      "contrat salarié - ancienneté":
+        formatSeniorityForPreavisRetraite(seniority),
+      "contrat salarié - salaire de référence": formatNumber(salaireRef),
+      "contrat salarié - travailleur handicapé": "non",
       "indemnité de licenciement": "oui",
     },
   };
