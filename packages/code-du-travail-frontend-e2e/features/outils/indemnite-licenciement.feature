@@ -33,7 +33,7 @@ Scénario:
   Alors je ne vois pas "pas dûe en cas de faute grave"
 
   Alors je vois "Le licenciement est-il dû à une inaptitude"
-  Quand je choisis "#inaptitude-oui"
+  Quand je choisis "#inaptitude-non"
 
   Quand je clique sur "Suivant"
 
@@ -44,17 +44,17 @@ Scénario:
   Alors je vois que bouton "Suivant" est désactivé
   Alors je vois "La date est invalide"
 
-  Quand je renseigne "02/01/2000" dans le champ "la date d’entrée"
+  Quand je renseigne "01/01/2000" dans le champ "la date d’entrée"
   Alors je ne vois pas "La date est invalide"
 
-  Quand je renseigne "01/01/2000" dans le champ "la date de notification"
+  Quand je renseigne "01/01/1990" dans le champ "la date de notification"
   Alors je vois "La date de notification doit se situer après la date d’entrée"
-  Quand je renseigne "02/01/2020" dans le champ "la date de notification"
+  Quand je renseigne "01/01/2020" dans le champ "la date de notification"
   Alors je ne vois pas "La date de notification doit se situer après la date d’entrée"
 
-  Quand je renseigne "01/01/2020" dans le champ "la date de sortie"
+  Quand je renseigne "01/01/2000" dans le champ "la date de sortie"
   Alors je vois "La date de notification doit se situer avant la date de sortie"
-  Quand je renseigne "02/02/2020" dans le champ "la date de sortie"
+  Quand je renseigne "01/01/2022" dans le champ "la date de sortie"
   Alors je ne vois pas "La date de notification doit se situer avant la date de sortie"
 
 
@@ -81,5 +81,13 @@ Scénario:
 
 
   Alors je vois "périodes d'alternance à temps plein et à temps partiel"
-  Quand je choisis "Non"
-  Alors je vois "Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification"
+  Quand je choisis "#hasTempsPartiel-non"
+  Alors je vois "Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement"
+  Quand je choisis "#hasSameSalaire-oui"
+  Quand je renseigne "10000" dans le champ "salaire"
+
+  Quand je clique sur "Suivant"
+
+  Alors je vois "Indemnité légale"
+  Alors je vois "55000"
+  Alors je vois "Imprimer le résultat"
