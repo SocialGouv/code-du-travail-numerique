@@ -1,14 +1,11 @@
 import Link from "next/link";
-import PropTypes from "prop-types";
 import React from "react";
 
 import Disclaimer from "../../common/Disclaimer";
-import { IndemniteLegale } from "../components/IndemniteLegale";
 
-function StepIndemnite({ form }) {
+export default function LegalResultIndemnite(): JSX.Element {
   return (
     <>
-      <IndemniteLegale form={form} />
       <Disclaimer title={"Attention il peut exister un montant plus favorable"}>
         <p>
           Une convention collective, un accord d’entreprise, le contrat de
@@ -30,8 +27,3 @@ function StepIndemnite({ form }) {
     </>
   );
 }
-
-StepIndemnite.propTypes = {
-  form: PropTypes.object.isRequired,
-};
-export { StepIndemnite };

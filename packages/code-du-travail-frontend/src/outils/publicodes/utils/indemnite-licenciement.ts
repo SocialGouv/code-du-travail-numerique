@@ -1,7 +1,9 @@
 import { ConventionCollective } from "../../common/type/WizardType";
 import { formatNumber } from "./common";
 
-function formatSeniorityForPreavisRetraite(initialSeniority: string): string {
+function formatSeniorityForIndemniteLicenciement(
+  initialSeniority: string
+): string {
   return formatNumber(parseInt(initialSeniority) * 12);
 }
 
@@ -21,7 +23,7 @@ export const mapToPublicodesSituationForIndemniteLicenciement = (
     ...agreement,
     ...{
       "contrat salarié - ancienneté":
-        formatSeniorityForPreavisRetraite(seniority),
+        formatSeniorityForIndemniteLicenciement(seniority),
       "contrat salarié - salaire de référence": formatNumber(salaireRef),
       "contrat salarié - travailleur handicapé": "non",
       "indemnité de licenciement": "oui",

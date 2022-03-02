@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import React from "react";
 import { Form } from "react-final-form";
 
@@ -7,20 +7,78 @@ import { PublicodesProvider, PublicodesSimulator } from "../../../publicodes";
 import { StepIndemnite } from "../Indemnite";
 
 const initialValues = {
-  anciennete: 15 / 12,
-  dateNotification: "2018-10-22",
+  absencePeriods: [],
+  anciennete: 2,
+  contrat: "cdi",
+  dateEntree: "2020-02-20",
+  dateNotification: "2021-02-20",
+  dateSortie: "2022-02-20",
+  fauteGrave: false,
+  hasAbsenceProlonge: false,
+  hasPrimes: false,
+  hasSameSalaire: false,
   hasTempsPartiel: false,
-  inaptitude: true,
-  salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
+  inaptitude: false,
+  primes: [],
+  salaire: null,
+  salairePeriods: [],
+  salaires: [
+    {
+      label: "janvier 2021",
+      salary: 10000,
+    },
+    {
+      label: "décembre 2020",
+      salary: 10000,
+    },
+    {
+      label: "novembre 2020",
+      salary: 10000,
+    },
+    {
+      label: "octobre 2020",
+      salary: 10000,
+    },
+    {
+      label: "septembre 2020",
+      salary: 10000,
+    },
+    {
+      label: "août 2020",
+      salary: 10000,
+    },
+    {
+      label: "juillet 2020",
+      salary: 10000,
+    },
+    {
+      label: "juin 2020",
+      salary: 10000,
+    },
+    {
+      label: "mai 2020",
+      salary: 10000,
+    },
+    {
+      label: "avril 2020",
+      salary: 10000,
+    },
+    {
+      label: "mars 2020",
+      salary: 10000,
+    },
+    {
+      label: "février 2020",
+      salary: 10000,
+    },
+  ],
 };
-
 describe("<StepIndemnite />", () => {
   it("should render", () => {
-    const onSubmit = jest.fn();
-    const { container } = render(
+    render(
       <Form
         initialValues={initialValues}
-        onSubmit={onSubmit}
+        onSubmit={jest.fn()}
         render={({ form }) => (
           <PublicodesProvider
             rules={loadPublicodes("indemnite-licenciement")}
@@ -31,6 +89,8 @@ describe("<StepIndemnite />", () => {
         )}
       />
     );
-    expect(container).toMatchSnapshot();
+    expect(
+      screen.getByText("Le code du travail prévoit un montant minimum de :")
+    ).toHaveTextContent("5000 € brut.");
   });
 });
