@@ -8,6 +8,7 @@ import { matopush } from "../../piwik";
 import { PrevNextBar } from "./PrevNextBar";
 import { STEP_LIST_WIDTH, StepList } from "./StepList";
 import { Action, ActionName, SkipFn, State } from "./type/WizardType";
+import { printResult } from "./utils/";
 
 const anchorRef = React.createRef<HTMLLIElement>();
 
@@ -177,7 +178,7 @@ function Wizard({
                   nextVisible={nextVisible}
                   printVisible={isLastStep}
                   previousVisible={previousVisible}
-                  simulatorTitle={title}
+                  onPrint={() => printResult(title)}
                 />
                 {Annotation && (
                   <p>

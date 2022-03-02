@@ -29,6 +29,7 @@ export enum MatomoSimulatorEvent {
   SELECT_CLASSE = "select_value_classe",
   SELECT_POSITION = "select_value_position",
   SELECT_COEFFICIENT = "select_value_coefficient",
+  CLICK_PRINT = "click_print",
 }
 
 export enum MatomoAgreementEvent {

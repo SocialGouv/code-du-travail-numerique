@@ -1,8 +1,10 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
+import { MatomoBaseEvent, MatomoSimulatorEvent } from "../../../lib";
 import { matopush } from "../../../piwik";
 import { PrevNextBar } from "../PrevNextBar";
+import { printResult } from "../utils/";
 
 jest.mock("../../../piwik.js", () => ({
   matopush: jest.fn(),
@@ -19,7 +21,6 @@ describe("<PrevNextBar />", () => {
         hasError={false}
         nextVisible={false}
         previousVisible={false}
-        simulatorTitle={"Test"}
       />
     );
 
@@ -33,7 +34,6 @@ describe("<PrevNextBar />", () => {
         hasError={false}
         nextVisible={false}
         previousVisible={true}
-        simulatorTitle={"Test"}
       />
     );
     expect(container).toMatchSnapshot();
@@ -46,7 +46,6 @@ describe("<PrevNextBar />", () => {
         hasError={false}
         nextVisible={true}
         previousVisible={false}
-        simulatorTitle={"Test"}
       />
     );
     expect(container).toMatchSnapshot();
@@ -59,7 +58,6 @@ describe("<PrevNextBar />", () => {
         hasError={false}
         nextVisible={false}
         previousVisible={false}
-        simulatorTitle={"Test"}
       />
     );
     expect(container).toMatchSnapshot();
@@ -73,7 +71,6 @@ describe("<PrevNextBar />", () => {
         hasError={false}
         nextVisible={false}
         previousVisible={true}
-        simulatorTitle={"Test"}
       />
     );
     const prevButton = getByText(/précédent/i);
@@ -90,7 +87,6 @@ describe("<PrevNextBar />", () => {
           hasError={false}
           nextVisible={true}
           previousVisible={true}
-          simulatorTitle={"Test"}
         />
       </form>
     );
@@ -108,14 +104,17 @@ describe("<PrevNextBar />", () => {
         hasError={false}
         nextVisible={false}
         previousVisible={false}
-        simulatorTitle={simulatorName}
+        onPrint={() => {
+          printResult(simulatorName);
+        }}
       />
     );
     const printButton = getByText(/imprimer/i);
     printButton.click();
     expect(matopush).toHaveBeenCalledWith([
-      "trackEvent",
-      "click_print",
+      MatomoBaseEvent.TRACK_EVENT,
+      MatomoBaseEvent.OUTIL,
+      MatomoSimulatorEvent.CLICK_PRINT,
       simulatorName,
     ]);
     expect(window.print).toHaveBeenCalled();

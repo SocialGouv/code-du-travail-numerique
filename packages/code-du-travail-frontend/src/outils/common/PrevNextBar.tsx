@@ -2,24 +2,22 @@ import { Button, icons, theme } from "@socialgouv/cdtn-ui";
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 
-import { printResult } from "./utils/printResult";
-
 type Props = {
   onPrev: () => void;
   hasError: boolean;
   nextVisible: boolean;
   printVisible: boolean;
   previousVisible: boolean;
-  simulatorTitle: string;
+  onPrint: () => void;
 };
 
-export const PrevNextBar: FunctionComponent<Props> = ({
+export const PrevNextBar: FunctionComponent<Partial<Props>> = ({
   onPrev,
   hasError = false,
   nextVisible = true,
   printVisible,
   previousVisible = true,
-  simulatorTitle,
+  onPrint,
 }) => {
   return (
     <>
@@ -41,11 +39,8 @@ export const PrevNextBar: FunctionComponent<Props> = ({
             <ArrowIcon />
           </StyledButton>
         )}
-        {printVisible && (
-          <StyledButton
-            type="button"
-            onClick={() => printResult(simulatorTitle)}
-          >
+        {printVisible && onPrint && (
+          <StyledButton type="button" onClick={onPrint}>
             Imprimer le résultat
           </StyledButton>
         )}
