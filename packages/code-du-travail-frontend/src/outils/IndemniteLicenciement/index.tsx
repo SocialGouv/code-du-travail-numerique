@@ -37,16 +37,6 @@ const CalculateurIndemnite = ({
             : dispatch({ payload: stepPrime.name, type: "remove_step" })
         }
       </OnChange>
-      <OnChange key="rule-branche" name="branche">
-        {async (value) => {
-          if (value) {
-            const module = await import(`./ccn/${value}`);
-            dispatch({ payload: module.steps, type: "add_branche" });
-          } else {
-            dispatch({ type: "remove_branche" });
-          }
-        }}
-      </OnChange>
     </>
   );
 
