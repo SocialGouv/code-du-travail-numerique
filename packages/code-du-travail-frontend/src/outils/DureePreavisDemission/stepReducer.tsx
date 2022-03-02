@@ -2,7 +2,7 @@ import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 
 import { MatomoActionEvent } from "../../lib";
 import { pushAgreementEvents } from "../common";
-import { getSupportedCC, skipStep } from "../common/situations.utils";
+import { getSupportedCC, skipInformations } from "../common/situations.utils";
 import { StepInformations } from "../common/StepInformations";
 import {
   Action,
@@ -40,7 +40,7 @@ export const initialState = {
       label: "Informations",
       name: "infos",
       skip: (values: FormContent): boolean =>
-        skipStep(data.situations, values.ccn?.selected?.num),
+        skipInformations(data.situations, values.ccn?.selected?.num),
     },
     {
       component: StepResult,
