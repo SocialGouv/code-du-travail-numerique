@@ -3157,6 +3157,15 @@
   resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.241.0.tgz#518166dfc7d5b8837463a5451e42b1eddc691471"
   integrity sha512-/NMLUHADoCql9XYfTZMovciyOv8+ego+f/CKKdYYXExUjIAHevvpujGZ9KvBY9tr3fE6h3mBApx5a3+HB2RgJQ==
 
+"@socialgouv/modeles-social@^4.71.0":
+  version "4.71.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/modeles-social/-/modeles-social-4.71.0.tgz#23c371e1516372a8f5396e2fc8f380cca00f986f"
+  integrity sha512-R5ow4ryFsSibwUDkSbcxZkVjboC65zWjf3Z5GE9DncT+lmDXe4YECs9A02ueMIf6ApTXbVWkNguo3I7B9QkbQw==
+  dependencies:
+    fs-extra "^10.0.0"
+    publicodes "^1.0.0-beta.16"
+    yaml "^1.10.2"
+
 "@socialgouv/reference-article@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@socialgouv/reference-article/-/reference-article-1.0.1.tgz#9fd791dd1e8c119bb013f5c78ab0f85975ed7d05"
@@ -4350,7 +4359,7 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@*":
+"@types/jest@*", "@types/jest@^27.4.0":
   version "27.4.0"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-27.4.0.tgz#037ab8b872067cae842a320841693080f9cb84ed"
   integrity sha512-gHl8XuC1RZ8H2j5sHv/JqsaxXkDDM9iDOgu0Wp8sjs4u/snb2PVehyWXJPr+ORA0RPpgw231mnutWI1+0hgjIQ==
@@ -4362,14 +4371,6 @@
   version "27.0.1"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-27.0.1.tgz#fafcc997da0135865311bb1215ba16dba6bdf4ca"
   integrity sha512-HTLpVXHrY69556ozYkcq47TtQJXpcWAWfkoqz+ZGz2JnmZhzlRjprCIyFnetSy8gpDWwTTGBcRVv1J1I1vBrHw==
-  dependencies:
-    jest-diff "^27.0.0"
-    pretty-format "^27.0.0"
-
-"@types/jest@^27.4.0":
-  version "27.4.0"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-27.4.0.tgz#037ab8b872067cae842a320841693080f9cb84ed"
-  integrity sha512-gHl8XuC1RZ8H2j5sHv/JqsaxXkDDM9iDOgu0Wp8sjs4u/snb2PVehyWXJPr+ORA0RPpgw231mnutWI1+0hgjIQ==
   dependencies:
     jest-diff "^27.0.0"
     pretty-format "^27.0.0"

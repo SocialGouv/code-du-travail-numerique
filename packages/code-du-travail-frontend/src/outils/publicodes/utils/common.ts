@@ -1,4 +1,5 @@
 import { References, supportedCcn } from "@socialgouv/modeles-social";
+import { EvaluatedNode } from "publicodes";
 
 import { AgreementSupportInfo } from "../../common/Agreement/types";
 import { OldReference, PublicodesResult, PublicodesSimulator } from "../types";
@@ -38,11 +39,18 @@ export const getSupportedCC = (): AgreementSupportInfo[] =>
 
 export const convertedResult = (
   simulator: PublicodesSimulator,
-  nodeValue: string
+  evaluatedNode: EvaluatedNode
 ): PublicodesResult => {
   switch (simulator) {
     case PublicodesSimulator.PREAVIS_RETRAITE:
-      return convertDaysIntoBetterUnit(nodeValue);
+      return convertDaysIntoBetterUnit(
+        evaluatedNode.nodeValue as unknown as string
+      );
+    case PublicodesSimulator.INDEMNITE_LICENCIEMENT:
+      return {
+        unit: evaluatedNode.unit,
+        value: evaluatedNode.nodeValue,
+      };
     default:
       throw new Error(`Unsupported simulator: ${simulator}`);
   }

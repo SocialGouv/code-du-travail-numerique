@@ -72,20 +72,6 @@ export function stepReducer(state, { type, payload }) {
         steps: steps.filter((step) => step.name !== payload),
       };
     }
-    case "add_branche": {
-      return {
-        stepIndex: stepIndex,
-        steps: steps
-          .filter((step) => !/branche_/.test(step.name))
-          .concat(...payload),
-      };
-    }
-    case "remove_branche": {
-      return {
-        stepIndex,
-        steps: steps.filter((step) => !/branche_/.test(step.name)),
-      };
-    }
     default:
       console.warn("action unknow", { payload, type });
       return state;

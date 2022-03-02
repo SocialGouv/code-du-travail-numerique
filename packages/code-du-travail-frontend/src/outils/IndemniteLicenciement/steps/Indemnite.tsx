@@ -1,43 +1,55 @@
-import Link from "next/link";
-import PropTypes from "prop-types";
-import React from "react";
+import React, { useEffect } from "react";
 
-import Disclaimer from "../../common/Disclaimer";
-import { WizardStepProps } from "../../common/type/WizardType";
+import {
+  mapToPublicodesSituationForIndemniteLicenciement,
+  PublicodesIndemniteLicenciementResult,
+  usePublicodes,
+} from "../../publicodes";
 import { IndemniteLegale } from "../components/IndemniteLegale";
-import { getIndemniteFromFinalForm } from "../indemnite";
+import { getSalaireRef } from "../indemnite";
 
-function StepIndemnite({ form }: WizardStepProps): JSX.Element {
-  const { indemniteLegale, infoCalculLegal } = getIndemniteFromFinalForm(form);
+type Props = {
+  form: any;
+};
+
+export function StepIndemnite({ form }: Props): JSX.Element {
+  const publicodesContext =
+    usePublicodes<PublicodesIndemniteLicenciementResult>();
+
+  const {
+    hasTempsPartiel = false,
+    hasSameSalaire = false,
+    salairePeriods = [],
+    salaires = [],
+    primes = [],
+    salaire,
+    anciennete,
+    ccn,
+  } = form.getState().values;
+
+  useEffect(() => {
+    const salaireRef = getSalaireRef({
+      anciennete,
+      hasSameSalaire,
+      hasTempsPartiel,
+      primes,
+      salaire,
+      salairePeriods,
+      salaires,
+    });
+    publicodesContext.setSituation(
+      mapToPublicodesSituationForIndemniteLicenciement(
+        ccn,
+        anciennete,
+        salaireRef
+      )
+    );
+  }, []);
+
   return (
-    <>
-      <IndemniteLegale
-        indemnite={indemniteLegale}
-        infoCalcul={infoCalculLegal}
-      />
-      <Disclaimer title={"Attention il peut exister un montant plus favorable"}>
-        <p>
-          Une convention collective, un accord d’entreprise, le contrat de
-          travail ou un usage peuvent prévoir un montant plus favorable pour le
-          salarié. Dans ce cas, c’est ce montant plus favorable qui s’applique
-          au salarié.
-        </p>
-      </Disclaimer>
-      <p>
-        Pour en savoir plus sur l’indemnité de licenciement et son mode de
-        calcul, consultez{" "}
-        <Link
-          href={`/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi`}
-        >
-          <a>cet article</a>
-        </Link>
-        .
-      </p>
-    </>
+    <IndemniteLegale
+      result={publicodesContext.result.value?.toString() ?? "0"}
+      unit={publicodesContext.result.unit?.denominators[0] ?? "€"}
+    />
   );
 }
-
-StepIndemnite.propTypes = {
-  form: PropTypes.object.isRequired,
-};
-export { StepIndemnite };
