@@ -4,7 +4,7 @@ import React from "react";
 import { MatomoBaseEvent, MatomoSimulatorEvent } from "../../../lib";
 import { matopush } from "../../../piwik";
 import { PrevNextBar } from "../PrevNextBar";
-import { printResult } from "../utils/";
+import { printResult } from "../utils";
 
 jest.mock("../../../piwik.js", () => ({
   matopush: jest.fn(),

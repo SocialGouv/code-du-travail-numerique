@@ -6,8 +6,8 @@ import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import styled from "styled-components";
 
-import { parse } from "../../../../common/date";
 import { InlineError } from "../../../../common/ErrorField";
+import { parse } from "../../../../common/utils";
 import { isNumber } from "../../../../common/validators";
 import { YesNoQuestion } from "../../../../common/YesNoQuestion";
 

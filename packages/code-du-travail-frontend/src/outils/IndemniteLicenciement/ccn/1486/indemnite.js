@@ -1,4 +1,4 @@
-import { round, sum } from "../../../common/math";
+import { round, sum } from "../../../common/utils";
 import { getSalaireRef } from "../../indemnite";
 
 const COEFF_ETAM_0 = 1 / 4;
