@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import React, { useEffect } from "react";
 
 import {
@@ -7,10 +6,13 @@ import {
   usePublicodes,
 } from "../../publicodes";
 import { IndemniteLegale } from "../components/IndemniteLegale";
-import LegalResultIndemnite from "../components/LegalResultIndemnite";
 import { getSalaireRef } from "../indemnite";
 
-function StepIndemnite({ form }) {
+type Props = {
+  form: any;
+};
+
+export function StepIndemnite({ form }: Props): JSX.Element {
   const publicodesContext =
     usePublicodes<PublicodesIndemniteLicenciementResult>();
 
@@ -45,17 +47,9 @@ function StepIndemnite({ form }) {
   }, []);
 
   return (
-    <>
-      <IndemniteLegale
-        result={publicodesContext.result.value?.toString() ?? "0"}
-        unit={publicodesContext.result.unit?.denominators[0] ?? "€"}
-      />
-      <LegalResultIndemnite />
-    </>
+    <IndemniteLegale
+      result={publicodesContext.result.value?.toString() ?? "0"}
+      unit={publicodesContext.result.unit?.denominators[0] ?? "€"}
+    />
   );
 }
-
-StepIndemnite.propTypes = {
-  form: PropTypes.object.isRequired,
-};
-export { StepIndemnite };
