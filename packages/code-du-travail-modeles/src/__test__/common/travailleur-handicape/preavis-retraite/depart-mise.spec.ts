@@ -11,7 +11,7 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
     ${6}      | ${2}
     ${24}     | ${3}
   `(
-    "Pour un employé handicapé possédant $seniority mois d'ancienneté, son préavis de mise à la retraite devrait être $expectedNotice mois",
+    "En ayant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
     ({ seniority, expectedNotice }) => {
       const result = engine
         .setSituation({
@@ -35,7 +35,7 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
     ${6}      | ${2}
     ${24}     | ${3}
   `(
-    "Pour un employé handicapé possédant $seniority mois d'ancienneté, son préavis de départ à la retraite devrait être $expectedNotice mois",
+    "En ayant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
     ({ seniority, expectedNotice }) => {
       const result = engine
         .setSituation({
@@ -58,7 +58,7 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
     ${6}      | ${4}
     ${24}     | ${6}
   `(
-    "Pour un employé handicapé possédant $seniority mois d'ancienneté (CC: Hopital), son préavis de mise à la retraite devrait être $expectedNotice mois",
+    "En ayant $seniority mois d'ancienneté (CC: Hopital), son préavis devrait être $expectedNotice mois",
     ({ seniority, expectedNotice }) => {
       const result = engine
         .setSituation({
@@ -84,7 +84,7 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
     ${3}      | ${"Autres cadres"} | ${3}
     ${24}     | ${"Autres cadres"} | ${3}
   `(
-    "Pour un employé handicapé possédant $seniority mois d'ancienneté (CC: Hopital), son préavis de départ à la retraite devrait être $expectedNotice mois",
+    "En ayant $seniority mois d'ancienneté (CC: Hopital), son préavis devrait être $expectedNotice mois",
     ({ seniority, category, expectedNotice }) => {
       const result = engine
         .setSituation({
