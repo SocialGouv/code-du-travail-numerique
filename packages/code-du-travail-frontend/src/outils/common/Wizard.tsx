@@ -8,6 +8,7 @@ import { matopush } from "../../piwik";
 import { PrevNextBar } from "./PrevNextBar";
 import { STEP_LIST_WIDTH, StepList } from "./StepList";
 import { Action, ActionName, SkipFn, State } from "./type/WizardType";
+import { printResult } from "./utils/";
 
 const anchorRef = React.createRef<HTMLLIElement>();
 
@@ -156,10 +157,20 @@ function Wizard({
                 {steps[stepIndex].isForm ? (
                   <Fieldset>
                     <Legend isHidden>{steps[stepIndex].label}</Legend>
-                    <Step form={form} dispatch={dispatch} title={title} {...StepProps} />
+                    <Step
+                      form={form}
+                      dispatch={dispatch}
+                      title={title}
+                      {...StepProps}
+                    />
                   </Fieldset>
                 ) : (
-                  <Step form={form} dispatch={dispatch} title={title} {...StepProps} />
+                  <Step
+                    form={form}
+                    dispatch={dispatch}
+                    title={title}
+                    {...StepProps}
+                  />
                 )}
                 <PrevNextBar
                   hasError={invalid && submitFailed}
@@ -167,6 +178,7 @@ function Wizard({
                   nextVisible={nextVisible}
                   printVisible={isLastStep}
                   previousVisible={previousVisible}
+                  onPrint={() => printResult(title)}
                 />
                 {Annotation && (
                   <p>

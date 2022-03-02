@@ -3,10 +3,10 @@ import createDecorator from "final-form-calculate";
 import PropTypes from "prop-types";
 import React from "react";
 
-import { parse } from "../../common/date";
 import { ErrorComputedField } from "../../common/ErrorField";
 import { SectionTitle } from "../../common/stepStyles";
 import { TextQuestion } from "../../common/TextQuestion";
+import { parse } from "../../common/utils/";
 import { isDate } from "../../common/validators";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
 import { AbsencePeriods, MOTIFS } from "../components/AbsencePeriods";
