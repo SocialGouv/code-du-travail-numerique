@@ -87,16 +87,24 @@ export function getSituationsFor(data, obj) {
 
 const isNotEmpty = (obj) => Object.keys(obj).length > 0;
 
-export const skipStep = (data, idcc) => {
-  if (!idcc) return true;
+const situationsForAgreement = (data, idcc) => {
+  if (!idcc) return [];
 
-  const situtation = data.filter(
-    (situation) =>
-      isNotEmpty(situation.criteria) &&
-      parseInt(situation.idcc, 10) === parseInt(idcc, 10)
+  return data.filter(
+    (situation) => parseInt(situation.idcc, 10) === parseInt(idcc, 10)
   );
-  return !situtation.length;
 };
+
+export const isAgreementSupported = (data, idcc) =>
+  situationsForAgreement(data, idcc).length > 0;
+
+export const hasCriteria = (data, idcc) =>
+  situationsForAgreement(data, idcc).filter((situation) =>
+    isNotEmpty(situation.criteria)
+  ).length > 0;
+
+export const skipInformations = (data, idcc) =>
+  !isAgreementSupported(data, idcc) || !hasCriteria(data, idcc);
 
 export function recapSituation(criteria) {
   const cleanValue = (value) => `${value}`.replace(/[0-9]+\|/, "").trim();
