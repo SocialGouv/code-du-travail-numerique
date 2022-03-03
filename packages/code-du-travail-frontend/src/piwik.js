@@ -33,31 +33,37 @@ export function initPiwik({
   refElement.parentNode.insertBefore(scriptElement, refElement);
   previousPath = location.pathname;
 
-  Router.events.on("routeChangeComplete", (path) => {
+  Router.events.on("routeChangeStart", (path) => {
     // We use only the part of the url without the querystring to ensure piwik is happy
     // It seems that piwik doesn't track well page with querystring
     const [pathname] = path.split("?");
+
+    if (previousPath) {
+      matopush(["setReferrerUrl", `${previousPath}`]);
+    }
+    matopush(["setCustomUrl", pathname]);
+    matopush(["deleteCustomVariables", "page"]);
+    previousPath = pathname;
+  });
+
+  Router.events.on("routeChangeComplete", () => {
     // In order to ensure that the page title had been updated,
     // we delayed pushing the tracking to the next tick.
     setTimeout(() => {
       const { q } = Router.query;
-      if (previousPath) {
-        matopush(["setReferrerUrl", `${previousPath}`]);
-      }
-      matopush(["setCustomUrl", pathname]);
       matopush(["setDocumentTitle", document.title]);
-      matopush(["deleteCustomVariables", "page"]);
-      if (/^\/recherche/.test(pathname) && q) {
+      if (/^\/recherche/.test(previousPath) && q) {
         matopush(["trackSiteSearch", q]);
       } else {
         matopush(["trackPageView"]);
       }
       matopush(["enableLinkTracking"]);
-      previousPath = pathname;
     }, 0);
   });
 }
 
 export function matopush(args) {
-  window._paq.push(args);
+  if (window && window._paq) {
+    window._paq.push(args);
+  }
 }

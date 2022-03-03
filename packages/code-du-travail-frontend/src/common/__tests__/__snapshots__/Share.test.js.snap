@@ -26,7 +26,6 @@ exports[`<Share /> renders 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -43,6 +42,14 @@ exports[`<Share /> renders 1`] = `
   color: #f66663;
 }
 
+.c1.spacing-left {
+  margin-left: 1rem;
+}
+
+.c1.spacing-top {
+  margin-top: 1rem;
+}
+
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -53,7 +60,6 @@ exports[`<Share /> renders 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 1rem;
   color: #7994d4;
   font-weight: bold;
   font-size: 1.6rem;
@@ -70,6 +76,14 @@ exports[`<Share /> renders 1`] = `
 .c4:hover,
 .c4:focus {
   color: #f66663;
+}
+
+.c4.spacing-left {
+  margin-left: 1rem;
+}
+
+.c4.spacing-top {
+  margin-top: 1rem;
 }
 
 .c2 {
@@ -111,12 +125,11 @@ exports[`<Share /> renders 1`] = `
     class="c0"
   >
     <button
-      class="c1 no-after"
-      spacing="left"
+      class="c1 no-after spacing-left"
       title="Partager sur Facebook"
       type="button"
     >
-      <div
+      <span
         class="c2"
       >
         <svg
@@ -124,21 +137,21 @@ exports[`<Share /> renders 1`] = `
           class="c3"
           fill="none"
           viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M11.7 1H9.6a3.5 3.5 0 00-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 01.7-.7h2.1V1z"
+            d="M11.7 1H9.6a3.5 3.5 0 0 0-3.5 3.5v2.1H4v2.8h2.1V15h2.8V9.4H11l.7-2.8H8.9V4.5a.7.7 0 0 1 .7-.7h2.1V1z"
             fill="currentColor"
           />
         </svg>
-      </div>
+      </span>
     </button>
     <a
-      class="c4"
+      class="c4 spacing-left"
       href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20undefined&body=undefined%0A%0Ahttp%3A%2F%2Flocalhost%2F"
-      spacing="left"
       title="Envoyer par email"
     >
-      <div
+      <span
         class="c2"
       >
         <svg
@@ -146,24 +159,24 @@ exports[`<Share /> renders 1`] = `
           class="c3"
           fill="none"
           viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0013.536 3z"
+            d="M13.537 3H2.393c-.346 0-.663.11-.907.292l6.479 3.915 6.48-3.915A1.52 1.52 0 0 0 13.536 3z"
             fill="currentColor"
           />
           <path
-            d="M14.93 4.75L8.353 8.726a.75.75 0 01-.776 0L1 4.75v6.666c0 .66.627 1.202 1.393 1.202h11.144c.766 0 1.393-.541 1.393-1.202V4.75z"
+            d="M14.93 4.75 8.353 8.726a.75.75 0 0 1-.776 0L1 4.75v6.666c0 .66.627 1.202 1.393 1.202h11.144c.766 0 1.393-.541 1.393-1.202V4.75z"
             fill="currentColor"
           />
         </svg>
-      </div>
+      </span>
     </a>
     <button
-      class="c1"
-      spacing="left"
+      class="c1 spacing-left"
       title="Partager sur LinkedIn"
     >
-      <div
+      <span
         class="c2"
       >
         <svg
@@ -171,23 +184,23 @@ exports[`<Share /> renders 1`] = `
           class="c3"
           fill="none"
           viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M10.753 5.125a4.21 4.21 0 012.955 1.208 4.098 4.098 0 011.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 00-1.97 0 1.366 1.366 0 00-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 012.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
+            d="M10.753 5.125a4.21 4.21 0 0 1 2.955 1.208 4.098 4.098 0 0 1 1.225 2.917v4.813h-2.787V9.25c0-.365-.147-.714-.408-.972a1.403 1.403 0 0 0-1.97 0 1.366 1.366 0 0 0-.409.972v4.813H6.573V9.25c0-1.094.44-2.143 1.224-2.917a4.208 4.208 0 0 1 2.956-1.208zm-6.966.688H1v8.25h2.787v-8.25zM2.393 3.75c.77 0 1.394-.616 1.394-1.375C3.787 1.615 3.163 1 2.393 1 1.623 1 1 1.616 1 2.375c0 .76.624 1.375 1.393 1.375z"
             fill="currentColor"
           />
         </svg>
-      </div>
+      </span>
     </button>
     <div
       class="c5"
     >
       <button
-        class="c1"
-        spacing="left"
+        class="c1 spacing-left"
         title="Plus d’options"
       >
-        <div
+        <span
           class="c2"
         >
           <svg
@@ -195,6 +208,7 @@ exports[`<Share /> renders 1`] = `
             class="c3"
             fill="none"
             viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M12 5.2c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zm-8 4.899c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1zM12 15c1.105 0 2-.94 2-2.1 0-1.16-.895-2.1-2-2.1s-2 .94-2 2.1c0 1.16.895 2.1 2 2.1z"
@@ -204,14 +218,14 @@ exports[`<Share /> renders 1`] = `
               stroke-linejoin="round"
             />
             <path
-              d="M5.727 9.057l4.553 2.786m-.006-7.687L5.727 6.942"
+              d="m5.727 9.057 4.553 2.786m-.006-7.687L5.727 6.942"
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="1.5"
             />
           </svg>
-        </div>
+        </span>
       </button>
     </div>
   </div>

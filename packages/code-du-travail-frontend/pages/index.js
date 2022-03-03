@@ -1,5 +1,5 @@
 import tools from "@cdt/data...tools/internals.json";
-import * as Sentry from "@sentry/browser";
+import * as Sentry from "@sentry/nextjs";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import {
   Button,
@@ -7,6 +7,7 @@ import {
   Grid,
   icons,
   PageTitle,
+  Paragraph,
   Section,
   theme,
 } from "@socialgouv/cdtn-ui";
@@ -33,9 +34,12 @@ export const DocumentsTile = (
       custom
       icon={icons.Document}
       title="Modèles de documents"
+      titleTagType="h2"
     >
-      Téléchargez et utilisez des modèles de lettres et de documents
-      personnalisables
+      <Paragraph noMargin>
+        Téléchargez et utilisez des modèles de lettres et de documents
+        personnalisables
+      </Paragraph>
     </CallToActionTile>
   </Link>
 );
@@ -50,6 +54,7 @@ const Home = ({ themes = [], highlights = [] }) => (
   <Layout currentPage="home" initialTitle="Code du travail numérique">
     <Metas
       title="Code du travail numérique - Ministère du Travail"
+      noTitleAdd
       description="Posez votre question sur le droit du travail et obtenez une réponse personnalisée à vos questions (contrat de travail, congés payés, formation, démission, indemnités)."
     />
     <SearchHero />
@@ -85,7 +90,7 @@ const Home = ({ themes = [], highlights = [] }) => (
                     icon={icons[icon]}
                     title={title}
                   >
-                    {description}
+                    <Paragraph noMargin>{description}</Paragraph>
                   </CallToActionTile>
                 </Link>
               );

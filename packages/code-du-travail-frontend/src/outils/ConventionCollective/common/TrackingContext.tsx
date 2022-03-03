@@ -3,21 +3,25 @@ import { v4 as generateUUID } from "uuid";
 
 import { matopush } from "../../../piwik";
 
+export type TrackEventFn = (
+  category: string,
+  action: string,
+  name?: string,
+  value?: string
+) => void;
+
 export type TrackingContext = {
-  trackEvent: (
-    category: string,
-    action: string,
-    name?: string,
-    value?: string
-  ) => void;
+  trackEvent: TrackEventFn;
   uuid: string;
   title: string;
 };
 
 export const trackingContext = createContext<TrackingContext>({
-  title: null,
-  trackEvent: null,
-  uuid: null,
+  title: "",
+  trackEvent: () => {
+    /* nothing to do */
+  },
+  uuid: "",
 });
 
 export function useTrackingContext(): TrackingContext {

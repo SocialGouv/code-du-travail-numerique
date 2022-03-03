@@ -1,4 +1,5 @@
 import "jest-styled-components";
+import "@testing-library/jest-dom";
 
 import MockDate from "mockdate";
 
@@ -11,8 +12,8 @@ jest.mock("next/config", () => () => ({
     API_URL: "api.url",
     AZURE_BASE_URL: "azure.url",
     AZURE_CONTAINER: "cdtn",
+    NEXT_PUBLIC_SENTRY_DSN: "https://xxxxxxx@sentry.test.com/n",
     PACKAGE_VERSION: "vX.Y.Z",
-    SENTRY_PUBLIC_DSN: "https://xxxxxxx@sentry.test.com/n",
   },
 }));
 

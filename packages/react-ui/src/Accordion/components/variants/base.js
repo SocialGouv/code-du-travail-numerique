@@ -1,11 +1,11 @@
-import PropTypes from "prop-types";
-import React from "react";
 import {
   Accordion as RootAccordion,
   AccordionItem,
   AccordionItemButton,
   AccordionItemPanel,
-} from "react-accessible-accordion";
+} from "@maxgfr/react-accessible-accordion";
+import PropTypes from "prop-types";
+import React from "react";
 import styled, { css } from "styled-components";
 
 import { fadeIn } from "../../../keyframes.js";
@@ -16,13 +16,13 @@ import {
   fonts,
   spacings,
 } from "../../../theme.js";
-import { VerticalArrow } from "../VerticalArrow/index.js";
+import { VerticalArrow } from "../VerticalArrow";
 
 export const Accordion = RootAccordion;
-
-// eslint-disable-next-line
-export const Item = styled(({ isLast, ...rest }) => {
-  return <AccordionItem {...rest} />;
+export const Item = styled(({ ...props }) => {
+  // eslint-disable-next-line no-unused-vars
+  const { index, isLast, ...cleanAccordionItemProps } = props;
+  return <AccordionItem {...cleanAccordionItemProps} />;
 })`
   ${({ index, theme }) =>
     index > 0 &&
@@ -39,16 +39,16 @@ export const ItemPanel = styled(AccordionItemPanel)`
   }
 `;
 
-export const ItemButton = ({ children, noTitle = false }) => (
+export const ItemButton = ({ children, disableStyles = false }) => (
   <StyledAccordionItemButton>
     <VerticalArrow aria-hidden="true" />
-    <ButtonText noTitle={noTitle}>{children}</ButtonText>
+    <ButtonText disableStyles={disableStyles}>{children}</ButtonText>
   </StyledAccordionItemButton>
 );
 
 ItemButton.propTypes = {
   children: PropTypes.node.isRequired,
-  noTitle: PropTypes.bool,
+  disableStyles: PropTypes.bool,
 };
 
 const StyledAccordionItemButton = styled(AccordionItemButton)`
@@ -66,11 +66,11 @@ const StyledAccordionItemButton = styled(AccordionItemButton)`
 `;
 
 // eslint-disable-next-line no-unused-vars
-const ButtonText = styled(({ noTitle, ...props }) => <div {...props} />)`
+const ButtonText = styled(({ disableStyles, ...props }) => <div {...props} />)`
   margin: ${spacings.medium} 0 ${spacings.medium} ${spacings.small};
   color: ${({ theme }) => theme.title};
-  ${({ noTitle }) =>
-    !noTitle &&
+  ${({ disableStyles }) =>
+    !disableStyles &&
     `
       font-weight: 600;
       font-size: ${fonts.sizes.headings.small};

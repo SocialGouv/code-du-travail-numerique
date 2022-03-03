@@ -22,7 +22,7 @@ function StepTypeRupture({ form }) {
   useEffect(() => {
     values.criteria = {};
   });
-  const idcc = ccn ? ccn.num : 0;
+  const idcc = ccn?.selected ? ccn.selected.num : 0;
 
   const initialSituations = getSituationsFor(allSituations, { idcc });
 

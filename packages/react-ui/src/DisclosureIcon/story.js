@@ -10,23 +10,27 @@ export default {
   title: "Components/DisclosureIcon",
 };
 
-export const base = () => (
-  <>
-    <Section>
-      <p>
-        <Text fontSize="hsmall" fontWeight="700">
-          Example:
-        </Text>
-      </p>
-      <p>
-        Info button
-        <DisclosureIcon
-          iconTitle="Find out what lies beneath"
-          icon={<HelpCircle size="20" aria-label="?" />}
-        >
-          Here I am! I am the buried treasure!
-        </DisclosureIcon>
-      </p>
-    </Section>
-  </>
-);
+export const base = () => {
+  return (
+    <>
+      <Section>
+        <p>
+          <Text fontSize="hsmall" fontWeight="700">
+            Example:
+          </Text>
+        </p>
+        <p>
+          Info button
+          <DisclosureIcon
+            iconTitle="Find out what lies beneath"
+            icon={<HelpCircle size="20" aria-label="?" />}
+            onVisibilityChange={() => {}}
+            isTooltipOpen={true}
+          >
+            Here I am! I am the buried treasure!
+          </DisclosureIcon>
+        </p>
+      </Section>
+    </>
+  );
+};

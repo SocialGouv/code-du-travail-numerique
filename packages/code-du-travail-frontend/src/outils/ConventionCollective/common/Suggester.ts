@@ -1,7 +1,5 @@
 import { Reducer, useEffect, useReducer } from "react";
 
-import { TrackingContext } from "./TrackingContext";
-
 export enum Status {
   idle = "idle",
   loading = "loading",
@@ -42,8 +40,8 @@ const dataFetchReducer = <A>(
     case Actions.reset:
       return {
         ...state,
-        data: null,
-        error: null,
+        data: undefined,
+        error: undefined,
         isError: false,
         isLoading: false,
       };
@@ -72,21 +70,23 @@ type Fetcher<Result> = (query: string, address?: string) => Promise<Result>;
  * a factory function that return a suggesterHook that
  * use fetcher to return result
  * @param fetcher an async function that should receive only one argument
- * @param eventName name of the to be sent to matomo
- * @param trackingContext tracking context to keep track of user attempts
+ * @param onResult callback when new results are found
  * @returns a hook function
  */
 export function createSuggesterHook<Result>(
   fetcher: Fetcher<Result>,
-  eventName: string,
-  trackingContext: TrackingContext
+  onResult: (query: string, address?: string) => void
 ) {
   return function (query: string, address?: string): FetchReducerState<Result> {
     const [state, dispatch] = useReducer<
       Reducer<FetchReducerState<Result>, FecthActions<Result>>
-    >(dataFetchReducer, { isError: false, isLoading: false });
+    >(dataFetchReducer, {
+      isError: false,
+      isLoading: false,
+    });
     useEffect(() => {
       let shouldCancel = false;
+
       async function fetchData() {
         if (!query) {
           dispatch({ type: Actions.reset });
@@ -99,18 +99,14 @@ export function createSuggesterHook<Result>(
             return;
           }
 
-          trackingContext.trackEvent(
-            eventName,
-            trackingContext.title,
-            JSON.stringify({ address, query }),
-            trackingContext.uuid
-          );
+          onResult(query, address);
 
           dispatch({ payload: results, type: Actions.success });
         } catch (error) {
           dispatch({ payload: error, type: Actions.failure });
         }
       }
+
       fetchData();
       return () => {
         shouldCancel = true;

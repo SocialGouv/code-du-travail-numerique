@@ -1,9 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextQuestion /> should render 1`] = `
+.c1 {
+  color: #3e486e;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
 .c2 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -98,14 +103,8 @@ exports[`<TextQuestion /> should render 1`] = `
 
 .c0 {
   display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
+  margin: 1rem 0;
   cursor: pointer;
-}
-
-.c1 {
-  font-weight: 600;
 }
 
 .c3 {
@@ -151,8 +150,6 @@ exports[`<TextQuestion /> should render 1`] = `
     </span>
     <span
       class="c2"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>

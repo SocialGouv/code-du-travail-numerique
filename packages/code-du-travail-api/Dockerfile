@@ -1,20 +1,38 @@
-ARG IMAGE_TAG=master
-ARG REGISTRY=harbor.fabrique.social.gouv.fr/cdtn/cdtn-base
-ARG BASE_IMAGE=${REGISTRY}:${IMAGE_TAG}
+# dist
+FROM node:14.17-alpine3.13 AS dist
 
-# hadolint ignore=DL3006
-FROM ${BASE_IMAGE} as cdtn-base-image
+WORKDIR /
 
+COPY package.json ./
+
+RUN yarn install
+
+COPY . ./
+
+RUN yarn build
+
+# node_modules
+FROM node:14.17-alpine3.13 AS node_modules
+
+WORKDIR /
+
+COPY package.json ./
+
+RUN yarn install --prod
+
+# app
 FROM node:14.17-alpine3.13
 
-COPY ./package.json /app/package.json
-
-COPY --from=cdtn-base-image /app/packages/code-du-travail-api/dist /app/dist
-
-RUN yarn add elastic-apm-node --production
+RUN mkdir -p /app
 
 WORKDIR /app
 
-USER node
+COPY --from=dist dist /app/dist
 
-ENTRYPOINT ["yarn", "start"]
+COPY --from=node_modules node_modules /app/node_modules
+
+COPY . /app
+
+USER 1000
+
+CMD [ "yarn", "start" ]

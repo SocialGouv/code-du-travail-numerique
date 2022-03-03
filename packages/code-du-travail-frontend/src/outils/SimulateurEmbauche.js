@@ -1,4 +1,4 @@
-import { Alert, Section, Title, Wrapper } from "@socialgouv/cdtn-ui";
+import { Alert, PageTitle, Section, Wrapper } from "@socialgouv/cdtn-ui";
 import React from "react";
 import Spinner from "react-svg-spinner";
 
@@ -24,7 +24,8 @@ class SimulateurEmbauche extends React.PureComponent {
 
   componentDidMount() {
     const script = document.createElement("script");
-    script.src = "https://mon-entreprise.fr/simulateur-iframe-integration.js";
+    script.src =
+      "https://mon-entreprise.urssaf.fr/simulateur-iframe-integration.js";
     script.async = true;
     script.dataset.couleur = "#2975D1";
     script.id = "script-simulateur-embauche";
@@ -40,11 +41,13 @@ class SimulateurEmbauche extends React.PureComponent {
     const { simulator } = this.state;
     return (
       <Wrapper variant="main">
-        <Title>Salaire brut/net</Title>
+        <PageTitle stripe="left">Salaire brut/net</PageTitle>
         <Alert>
-          Pour information, l’estimation du salaire net après impôt est basée
-          sur la situation d’une personne célibataire sans enfants ni
-          patrimoine.
+          <p>
+            Pour information, l’estimation du salaire net après impôt est basée
+            sur la situation d’une personne célibataire sans enfants ni
+            patrimoine.
+          </p>
         </Alert>
         {simulator === "loading" && (
           <p>
@@ -57,8 +60,11 @@ class SimulateurEmbauche extends React.PureComponent {
             <br />
             Retrouvez les autres simulateurs autour du thème de l’entreprise,
             sur le site:{" "}
-            <a title="Voir les simulateurs" href="https://mon-entreprise.fr/">
-              https://mon-entreprise.fr/
+            <a
+              title="Voir les simulateurs"
+              href="https://mon-entreprise.urssaf.fr/"
+            >
+              https://mon-entreprise.urssaf.fr/
             </a>
           </p>
         ) : (
@@ -70,4 +76,5 @@ class SimulateurEmbauche extends React.PureComponent {
     );
   }
 }
+
 export { SimulateurEmbauche };

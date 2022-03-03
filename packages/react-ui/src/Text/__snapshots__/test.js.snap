@@ -3,7 +3,6 @@
 exports[`<Text /> renders text 1`] = `
 .c0 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -11,8 +10,6 @@ exports[`<Text /> renders text 1`] = `
 <div>
   <span
     class="c0"
-    font-size="default"
-    font-weight="400"
   >
     A simple text
   </span>
@@ -22,7 +19,6 @@ exports[`<Text /> renders text 1`] = `
 exports[`<Text /> renders text with fontSize 1`] = `
 .c0 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 3.2rem;
   font-weight: 400;
 }
@@ -30,8 +26,6 @@ exports[`<Text /> renders text with fontSize 1`] = `
 <div>
   <span
     class="c0"
-    font-size="hlarge"
-    font-weight="400"
   >
     A large text
   </span>
@@ -41,7 +35,6 @@ exports[`<Text /> renders text with fontSize 1`] = `
 exports[`<Text /> renders text with fontWeight 1`] = `
 .c0 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 700;
 }
@@ -49,8 +42,6 @@ exports[`<Text /> renders text with fontWeight 1`] = `
 <div>
   <span
     class="c0"
-    font-size="default"
-    font-weight="700"
   >
     A bold text
   </span>
@@ -60,7 +51,6 @@ exports[`<Text /> renders text with fontWeight 1`] = `
 exports[`<Text /> renders text with variant 1`] = `
 .c0 {
   color: #f66663;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -68,8 +58,6 @@ exports[`<Text /> renders text with variant 1`] = `
 <div>
   <span
     class="c0"
-    font-size="default"
-    font-weight="400"
   >
     A colored text
   </span>

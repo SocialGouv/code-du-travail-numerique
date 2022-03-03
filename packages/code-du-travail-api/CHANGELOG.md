@@ -3,6 +3,375 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.71.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.70.0...v4.71.0) (2022-02-28)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# [4.70.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.69.1...v4.70.0) (2022-02-28)
+
+
+### Features
+
+* **simulators:** Implement new agreement route ([#4205](https://github.com/SocialGouv/code-du-travail-numerique/issues/4205)) ([4f1bc73](https://github.com/SocialGouv/code-du-travail-numerique/commit/4f1bc73e8c1ad498c1b36a086fdd797426892b2c))
+
+
+
+
+
+## [4.69.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.69.0...v4.69.1) (2022-02-25)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# [4.69.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.68.0...v4.69.0) (2022-02-10)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# [4.68.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.1...v4.68.0) (2022-02-02)
+
+
+### Bug Fixes
+
+* **frontend:** page stats when matomo is down ([#4193](https://github.com/SocialGouv/code-du-travail-numerique/issues/4193)) ([d038840](https://github.com/SocialGouv/code-du-travail-numerique/commit/d03884029c287a4eea33d690dee69d37afb7398f))
+* **secu:** use non-privilegied docker user ([#4201](https://github.com/SocialGouv/code-du-travail-numerique/issues/4201)) ([9f665df](https://github.com/SocialGouv/code-du-travail-numerique/commit/9f665df5197f3291a4993f002907d7ae9540dbce))
+
+
+
+
+
+## [4.67.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.0...v4.67.1) (2022-01-24)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# [4.67.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.2...v4.67.0) (2022-01-24)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.66.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.1...v4.66.2) (2022-01-14)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.66.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.0...v4.66.1) (2022-01-14)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# [4.66.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.4...v4.66.0) (2022-01-14)
+
+
+### Bug Fixes
+
+* **api:** set search option same as before ([#4161](https://github.com/SocialGouv/code-du-travail-numerique/issues/4161)) ([b5365e6](https://github.com/SocialGouv/code-du-travail-numerique/commit/b5365e6f3bee2823034646595cee2d105e1274bc))
+
+
+
+
+
+## [4.65.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.3...v4.65.4) (2022-01-05)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.65.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.2...v4.65.3) (2022-01-04)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.65.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.1...v4.65.2) (2021-12-31)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.65.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.0...v4.65.1) (2021-12-31)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# [4.65.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.64.0...v4.65.0) (2021-12-30)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# [4.64.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.63.1...v4.64.0) (2021-12-30)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.63.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.63.0...v4.63.1) (2021-12-22)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# [4.63.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.62.0...v4.63.0) (2021-12-22)
+
+
+### Bug Fixes
+
+* **api:** search weight for CC ([#4129](https://github.com/SocialGouv/code-du-travail-numerique/issues/4129)) ([74b0e1f](https://github.com/SocialGouv/code-du-travail-numerique/commit/74b0e1f3da32f5f61b9c4763c725413a0942678c))
+
+
+### Features
+
+* **api:** add highlight on search ([#4130](https://github.com/SocialGouv/code-du-travail-numerique/issues/4130)) ([01384d2](https://github.com/SocialGouv/code-du-travail-numerique/commit/01384d2878f22a265ce38fdaf7cfe652d3edca7b))
+
+
+
+
+
+# [4.62.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.61.0...v4.62.0) (2021-12-21)
+
+
+### Bug Fixes
+
+* **api:** french ([#4128](https://github.com/SocialGouv/code-du-travail-numerique/issues/4128)) ([0a140f1](https://github.com/SocialGouv/code-du-travail-numerique/commit/0a140f18b835f4a03eb9df32062188b3c6cedd39))
+
+
+### Features
+
+* **api:** add synonymes ([#4126](https://github.com/SocialGouv/code-du-travail-numerique/issues/4126)) ([fbe0127](https://github.com/SocialGouv/code-du-travail-numerique/commit/fbe01276b100d8bf225f08738f115fdcbb934452))
+
+
+
+
+
+# [4.61.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.3...v4.61.0) (2021-12-20)
+
+
+### Features
+
+* **agreement:** add a highlight on search agreements ([#4117](https://github.com/SocialGouv/code-du-travail-numerique/issues/4117)) ([9acd5ab](https://github.com/SocialGouv/code-du-travail-numerique/commit/9acd5abfead3fdcc8fee23c6e160c6c1afbf899e))
+* **agreement:** add an highlight on agreement ([#4115](https://github.com/SocialGouv/code-du-travail-numerique/issues/4115)) ([a29de2a](https://github.com/SocialGouv/code-du-travail-numerique/commit/a29de2a574d3decab43dbaaf7f3ffd722e5dabd5))
+
+
+
+
+
+## [4.60.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.2...v4.60.3) (2021-12-07)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.60.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.1...v4.60.2) (2021-12-06)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.60.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.0...v4.60.1) (2021-12-06)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# [4.60.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.59.0...v4.60.0) (2021-11-24)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# [4.59.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.2...v4.59.0) (2021-11-18)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.58.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.1...v4.58.2) (2021-11-17)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.58.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.0...v4.58.1) (2021-11-17)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# [4.58.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.57.1...v4.58.0) (2021-11-17)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.57.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.57.0...v4.57.1) (2021-11-09)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# [4.57.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.5...v4.57.0) (2021-11-09)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.56.5](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.4...v4.56.5) (2021-11-05)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.56.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.3...v4.56.4) (2021-11-05)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.56.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.2...v4.56.3) (2021-11-05)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.56.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.1...v4.56.2) (2021-11-05)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.56.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.0...v4.56.1) (2021-11-04)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# [4.56.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.55.1...v4.56.0) (2021-11-04)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+## [4.55.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.55.0...v4.55.1) (2021-10-26)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# [4.55.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.54.1...v4.55.0) (2021-10-26)
+
+
+### Bug Fixes
+
+* **command:** add typescript for dev mode api ([#3891](https://github.com/SocialGouv/code-du-travail-numerique/issues/3891)) ([2051396](https://github.com/SocialGouv/code-du-travail-numerique/commit/2051396977a5fd7d3bb174b06dc2ff21f2010e45))
+
+
+### Features
+
+* **ci:** optimize CI and replace gitlab ci ([#3895](https://github.com/SocialGouv/code-du-travail-numerique/issues/3895)) ([f44baf5](https://github.com/SocialGouv/code-du-travail-numerique/commit/f44baf531a4075d42d424d438dba51c85571a65a))
+
+
+
+
+
+## [4.54.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.54.0...v4.54.1) (2021-10-15)
+
+**Note:** Version bump only for package @cdt/api
+
+
+
+
+
+# 4.54.0 (2021-10-14)
+
+
+### Bug Fixes
+
+* **data:** linter is now effective ([#3859](https://github.com/SocialGouv/code-du-travail-numerique/issues/3859)) ([e7d046c](https://github.com/SocialGouv/code-du-travail-numerique/commit/e7d046c6a730785cc10b33ca0783afeb212557f6))
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.206.0 ([#3793](https://github.com/SocialGouv/code-du-travail-numerique/issues/3793)) ([3ea1d20](https://github.com/SocialGouv/code-du-travail-numerique/commit/3ea1d2066e7b0b62f7ac6157338fea1ff8223d66))
+* **search:** fix deduplication between PQ and Search ([#3850](https://github.com/SocialGouv/code-du-travail-numerique/issues/3850)) ([c6a3585](https://github.com/SocialGouv/code-du-travail-numerique/commit/c6a3585b8f1a0b167bdcdd28fd9b374088125ced))
+
+
+### Features
+
+* **api:** add babel as processor instead of esm ([#3749](https://github.com/SocialGouv/code-du-travail-numerique/issues/3749)) ([25933f5](https://github.com/SocialGouv/code-du-travail-numerique/commit/25933f55cc07dba39716f0c227834da0c66c419f))
+* **pipeline:** ts to js ([#3827](https://github.com/SocialGouv/code-du-travail-numerique/issues/3827)) ([2042d3a](https://github.com/SocialGouv/code-du-travail-numerique/commit/2042d3a396fe692669360725efe846cc8e188983))
+
+
+
+
+
 ## [4.53.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.53.0...v4.53.1) (2021-09-24)
 
 **Note:** Version bump only for package @cdt/api

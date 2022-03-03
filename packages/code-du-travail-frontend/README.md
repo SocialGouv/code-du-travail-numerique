@@ -2,22 +2,18 @@
 
 Frontend du site web du Code du Travail Numérique.
 
-Prototype dispo sur : https://master-code-travail.dev.fabrique.social.gouv.fr/
-
+Prototype disponible sur : [https://code-du-travail-numerique-master.dev.fabrique.social.gouv.fr/](https://code-du-travail-numerique-master.dev.fabrique.social.gouv.fr/)
 
 ## Lancer l'environnement de développement
 
 **Important** : pour tourner en local, ce projet nécessite les services api et elasticsearch. Par défaut on va utiliser l'API publique de dev.
 
 ```sh
-# for local dev
-$ yarn workspace @cdt/frontend dev
+yarn dev:frontend:preprod-api
 ```
 
 ## Lancer la version build du frontend
 
 ```sh
-$ yarn workspace @cdt/frontend build && yarn workspace @cdt/frontend start
+yarn build:ui && yarn workspace @cdt/frontend start
 ```
-
-

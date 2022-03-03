@@ -5,16 +5,13 @@ import { create } from "@socialgouv/kosko-charts/components/app";
 import { addWaitForHttp } from "@socialgouv/kosko-charts/utils/addWaitForHttp";
 import { addEnv } from "@socialgouv/kosko-charts/utils/addEnv";
 import { getIngressHost } from "@socialgouv/kosko-charts/utils/getIngressHost";
-import { getHarborImagePath } from "@socialgouv/kosko-charts/utils/getHarborImagePath";
-
+import { getGithubRegistryImagePath } from "@socialgouv/kosko-charts/utils/getGithubRegistryImagePath";
 import { EnvVar } from "kubernetes-models/v1/EnvVar";
 import type { Deployment } from "kubernetes-models/apps/v1/Deployment";
 import type { IIoK8sApiCoreV1HTTPGetAction } from "kubernetes-models/v1";
 import { HorizontalPodAutoscaler } from "kubernetes-models/autoscaling/v2beta2/HorizontalPodAutoscaler";
 
 import getApiManifests from "./api";
-
-ok(process.env.CI_ENVIRONMENT_URL, "Missing CI_ENVIRONMENT_URL");
 
 // all probes httpGet
 const httpGet: IIoK8sApiCoreV1HTTPGetAction = {
@@ -36,7 +33,10 @@ export default async () => {
     env,
     config: {
       containerPort: 3000,
-      image: getHarborImagePath({ name: "cdtn-frontend" }),
+      image: getGithubRegistryImagePath({
+        name: "code-du-travail-frontend",
+        project: "cdtn",
+      }),
       ...(env.env === "prod" ? productionConfig : {}),
       container: {
         livenessProbe: {
@@ -56,12 +56,12 @@ export default async () => {
         },
         resources: {
           requests: {
-            cpu: "200m",
-            memory: "256Mi",
+            cpu: "300m",
+            memory: "512Mi",
           },
           limits: {
             cpu: "500m",
-            memory: "560Mi",
+            memory: "768Mi",
           },
         },
         env: [
@@ -71,11 +71,11 @@ export default async () => {
           },
           {
             name: "COMMIT",
-            value: process.env.CI_COMMIT_SHA,
+            value: process.env.GITHUB_SHA,
           },
           {
             name: "VERSION",
-            value: process.env.CI_COMMIT_REF_NAME,
+            value: process.env.GITHUB_REF,
           },
         ],
       },
@@ -103,7 +103,7 @@ export default async () => {
   const hpa = new HorizontalPodAutoscaler({
     metadata: deployment.metadata,
     spec: {
-      minReplicas: 1,
+      minReplicas: 2,
       maxReplicas: 10,
 
       metrics: [

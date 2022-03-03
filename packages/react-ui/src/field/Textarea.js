@@ -69,7 +69,7 @@ Textarea.propTypes = {
   maxLength: PropTypes.number,
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func,
-  showCounter: PropTypes.string,
+  showCounter: PropTypes.bool,
 };
 
 const StyledTextarea = styled.textarea`
@@ -85,20 +85,25 @@ const StyledTextarea = styled.textarea`
   border-radius: ${box.borderRadius};
   box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
   appearance: none;
+
   &::placeholder {
     color: ${({ theme }) => theme.placeholder};
   }
+
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     margin: 0;
     appearance: none;
   }
+
   &:focus {
     border-color: ${({ theme }) => theme.secondary};
   }
+
   &:focus::placeholder {
     color: transparent;
   }
+
   @media (max-width: ${breakpoints.mobile}) {
     width: 100%;
   }

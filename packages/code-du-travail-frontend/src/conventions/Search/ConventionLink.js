@@ -1,6 +1,6 @@
 import { formatIdcc } from "@cdt/data";
 import slugify from "@socialgouv/cdtn-slugify";
-import { Button, theme } from "@socialgouv/cdtn-ui";
+import { Button, Paragraph, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
@@ -12,8 +12,13 @@ import { matopush } from "../../piwik";
 const getConventionSlug = (convention) =>
   slugify(`${convention.num}-${convention.shortTitle}`.substring(0, 80));
 
-export const ConventionLink = ({ convention, isFirst, onClick, small }) => {
-  const { num, shortTitle } = convention;
+export const ConventionLink = ({
+  convention,
+  isFirst,
+  onClick,
+  small = false,
+}) => {
+  const { num, shortTitle, highlight } = convention;
   const router = useRouter();
 
   const clickHandler = () => {
@@ -30,6 +35,11 @@ export const ConventionLink = ({ convention, isFirst, onClick, small }) => {
   return onClick ? (
     <StyledLink as={Button} variant="navLink" {...commonProps}>
       {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
+      {highlight && highlight.searchInfo && (
+        <Paragraph variant="altText" noMargin>
+          {highlight.searchInfo}
+        </Paragraph>
+      )}
     </StyledLink>
   ) : (
     <Link
@@ -41,6 +51,11 @@ export const ConventionLink = ({ convention, isFirst, onClick, small }) => {
     >
       <StyledLink {...commonProps}>
         {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
+        {highlight && highlight.searchInfo && (
+          <Paragraph variant="altText" noMargin>
+            {highlight.searchInfo}
+          </Paragraph>
+        )}
       </StyledLink>
     </Link>
   );

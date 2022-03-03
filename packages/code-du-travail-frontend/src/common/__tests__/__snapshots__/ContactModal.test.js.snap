@@ -17,19 +17,6 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   margin-bottom: 0;
 }
 
-.c12 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
 .c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -142,7 +129,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   text-decoration: underline;
 }
 
-.c10 {
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -180,16 +167,16 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   will-change: transform;
 }
 
-.c10:link,
-.c10:visited {
+.c9:link,
+.c9:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c10:not([disabled]):hover,
-.c10:not([disabled]):active,
-.c10:not([disabled]):focus {
+.c9:not([disabled]):hover,
+.c9:not([disabled]):active,
+.c9:not([disabled]):focus {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -198,7 +185,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   border-color: transparent;
 }
 
-.c10[disabled] {
+.c9[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -219,6 +206,19 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
+}
+
+.c11 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c2 {
@@ -246,7 +246,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   outline: none;
 }
 
-.c11 {
+.c10 {
   position: absolute;
   top: 0;
   right: 0;
@@ -255,13 +255,6 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
 
 .c4 {
   margin-top: 0;
-}
-
-.c9 {
-  font-weight: bold;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 @media (max-width:600px) {
@@ -308,13 +301,13 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c9 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c10 {
+  .c9 {
     display: none;
   }
 }
@@ -340,7 +333,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c10 {
     position: fixed;
     top: 1rem;
     right: 1rem;
@@ -404,9 +397,10 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
                     class="c7 c8"
                     fill="none"
                     viewBox="0 0 28 15"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                       fill="currentColor"
                     />
                   </svg>
@@ -432,18 +426,17 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
               , vous pouvez nous contacter à cette adresse :
                
               <a
-                class="c9"
                 href="mailto:codedutravailnumerique@travail.gouv.fr"
               >
                 codedutravailnumerique@travail.gouv.fr
               </a>
             </p>
             <button
-              class="c0 c10 c11"
+              class="c0 c9 c10"
               title="fermer la modale"
             >
               <div
-                class="c12"
+                class="c11"
               >
                 fermer la modale
               </div>

@@ -106,12 +106,12 @@ class ModeleCourrier extends React.Component {
             Ko{" "}
           </Notice>
 
-          <Disclaimenr>
+          <Disclaimer as="p">
             Attention, chaque modèle de document proposé est à personnaliser
             selon votre situation et est susceptible d’évoluer suite à des
             changements de règlementation. Assurez-vous d’avoir la dernière
             version mise à jour avant toute utilisation.
-          </Disclaimenr>
+          </Disclaimer>
           <Centered>
             <Button
               as="a"
@@ -143,7 +143,7 @@ const LightWrapper = styled(Wrapper).attrs(() => ({ variant: "light" }))`
   position: relative;
   padding-top: ${spacings.large};
 `;
-const Disclaimenr = styled(Wrapper).attrs(() => ({ variant: "dark" }))`
+const Disclaimer = styled(Wrapper).attrs(() => ({ variant: "dark" }))`
   margin-top: ${spacings.medium};
   margin-bottom: ${spacings.large};
 `;

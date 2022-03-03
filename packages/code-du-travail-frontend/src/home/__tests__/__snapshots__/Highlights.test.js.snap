@@ -13,6 +13,26 @@ exports[`<Highlights /> should render 1`] = `
   color: #3e486e;
 }
 
+.c4 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c16 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+}
+
 .c5 {
   position: relative;
   overflow: visible;
@@ -90,30 +110,6 @@ exports[`<Highlights /> should render 1`] = `
   width: calc(100% / 2 - 2 * 1rem - 1px);
 }
 
-.c4 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c14 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
 .c13 {
   display: block;
   margin: 0 0 1rem 0;
@@ -186,11 +182,11 @@ exports[`<Highlights /> should render 1`] = `
   padding-right: 1rem;
 }
 
-.c15 {
+.c14 {
   margin: 0;
 }
 
-.c16 {
+.c15 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -310,12 +306,6 @@ exports[`<Highlights /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c14 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
   .c10 {
     padding: 1.6rem 1.6rem;
     font-size: 1.4rem;
@@ -349,7 +339,7 @@ exports[`<Highlights /> should render 1`] = `
         <h2
           class="c3"
         >
-          <div
+          <span
             class="c4"
           />
           À la une
@@ -377,22 +367,26 @@ exports[`<Highlights /> should render 1`] = `
                   <div
                     class="c12"
                   >
-                    <span
+                    <p
                       class="c13 "
                     >
                       Santé, sécurité et conditions de travail
-                    </span>
+                    </p>
                     <h3
-                      class="c14 c15"
+                      class="c14"
                     >
                       Coronavirus : je suis salarié
                     </h3>
                   </div>
                 </div>
                 <div
-                  class="c16"
+                  class="c15"
                 >
-                  1. Dois-je prévenir mon employeur si je reviens, ou si...
+                  <p
+                    class="c16"
+                  >
+                    1. Dois-je prévenir mon employeur si je reviens, ou si...
+                  </p>
                 </div>
               </a>
             </div>
@@ -409,22 +403,26 @@ exports[`<Highlights /> should render 1`] = `
                   <div
                     class="c12"
                   >
-                    <span
+                    <p
                       class="c13 "
                     >
                       Santé, sécurité et conditions de travail
-                    </span>
+                    </p>
                     <h3
-                      class="c14 c15"
+                      class="c14"
                     >
                       Coronavirus : je suis employeur
                     </h3>
                   </div>
                 </div>
                 <div
-                  class="c16"
+                  class="c15"
                 >
-                  9. Quelles sont les recommandations sanitaires pour...
+                  <p
+                    class="c16"
+                  >
+                    9. Quelles sont les recommandations sanitaires pour...
+                  </p>
                 </div>
               </a>
             </div>

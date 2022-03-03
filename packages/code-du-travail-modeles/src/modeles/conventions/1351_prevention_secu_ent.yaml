@@ -1,0 +1,79 @@
+# Convention collective nationale des entreprises de prévention et de sécurité du 15 février 1985. Etendue par arrêté du 25 juillet 1985 (JO du 30 juillet 1985).
+contrat salarié . convention collective . prevention sécurité entreprise:
+  description: Convention collective nationale des entreprises de prévention et de sécurité du 15 février 1985. Etendue par arrêté du 25 juillet 1985 (JO du 30 juillet 1985).
+  applicable si: convention collective = 'IDCC1351'
+  valeur: oui
+  cdtn:
+    idcc: 1351
+    préavis-retraite: true
+
+contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  cdtn:
+    type: liste
+    valeurs:
+      Agents d'exploitation, employés administratifs et techniciens: "'Agents d'exploitation, employés administratifs et techniciens'"
+      Agents de maîtrise: "'Agents de maîtrise'"
+      Cadres: "'Cadres'"
+
+contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle . agents exploitation:
+  applicable si: catégorie professionnelle = 'Agents d'exploitation, employés administratifs et techniciens'
+  valeur: oui
+
+contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle . agents exploitation . préavis de départ à la retraite:
+  applicable si: départ à la retraite
+  remplace: préavis de retraite collective
+  valeur: 2 mois
+  références:
+    Article 6.14: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000021994236/?idConteneur=KALICONT000005635405
+    "Annexe IV : Agents d'exploitation, employés administratifs et techniciens, article 10": https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005853822/?idConteneur=KALICONT000005635405
+
+contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle . agents exploitation . préavis de mise à la retraite:
+  applicable si: mise à la retraite
+  remplace: préavis de retraite collective
+  valeur: 2 mois
+  références:
+    Article 6.13: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000021994236/?idConteneur=KALICONT000005635405
+    "Annexe IV : Agents d'exploitation, employés administratifs et techniciens, article 10": https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005853822/?idConteneur=KALICONT000005635405
+
+contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle . agents de maîtrise:
+  applicable si: catégorie professionnelle = 'Agents de maîtrise'
+  valeur: oui
+
+contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle . agents de maîtrise . préavis de mise à la retraite:
+  applicable si: mise à la retraite
+  remplace: préavis de retraite collective
+  valeur: 2 mois
+  références:
+    Article 6.13: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000021994236/?idConteneur=KALICONT000005635405
+    "Annexe V : Agents de maîtrise, article 9": https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005853833/?idConteneur=KALICONT000005635405
+
+contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle . agents de maîtrise . préavis de départ à la retraite:
+  applicable si: départ à la retraite
+  remplace: préavis de retraite collective
+  valeur: 2 mois
+  références:
+    Article 6.14: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000021994236/?idConteneur=KALICONT000005635405
+    "Annexe V : Agents de maîtrise, article 9": https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005853833/?idConteneur=KALICONT000005635405
+
+contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle . cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
+
+contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle . cadres . préavis de départ à la retraite:
+  applicable si: départ à la retraite
+  remplace: préavis de retraite collective
+  valeur: 3 mois
+  références:
+    Article 6.14: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000021994236/?idConteneur=KALICONT000005635405
+    "Annexe VI : Cadres, article 10": https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005853845/?idConteneur=KALICONT000005635405
+
+contrat salarié . convention collective . prevention sécurité entreprise . catégorie professionnelle . cadres . préavis de mise à la retraite:
+  applicable si: mise à la retraite
+  remplace: préavis de retraite collective
+  valeur: 3 mois
+  références:
+    Article 6.13: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000021994236/?idConteneur=KALICONT000005635405
+    "Annexe VI : Cadres, article 10": https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005853845/?idConteneur=KALICONT000005635405

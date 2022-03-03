@@ -4,6 +4,7 @@ import {
   Grid,
   icons,
   PageTitle,
+  Paragraph,
   Section,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
@@ -18,7 +19,7 @@ import { DocumentsTile } from "../index";
 const Outils = ({ cdtnSimulators, externalTools }) => (
   <Layout currentPage="tools">
     <Metas
-      title={`Boîte a outils - Code du travail numérique`}
+      title="Boîte a outils"
       description="Trouvez des réponses personnalisées selon votre situation"
     />
     <Section>
@@ -39,8 +40,9 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
                     custom
                     title={title}
                     icon={icons[icon]}
+                    titleTagType="h2"
                   >
-                    {description}
+                    <Paragraph noMargin>{description}</Paragraph>
                   </CallToActionTile>
                 </Link>
               );
@@ -50,6 +52,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
             ({ id, action, description, icon, title, url }) => (
               <CallToActionTile
                 key={id}
+                titleTagType="h2"
                 action={action}
                 custom
                 title={title}
@@ -59,7 +62,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
                 target="_blank"
                 className="no-after"
               >
-                {description}
+                <Paragraph noMargin>{description}</Paragraph>
               </CallToActionTile>
             )
           )}
@@ -74,4 +77,5 @@ export async function getServerSideProps() {
     props: getTools(),
   };
 }
+
 export default Outils;

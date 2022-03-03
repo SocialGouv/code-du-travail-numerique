@@ -40,6 +40,7 @@ export function getOptions(possibleSituations, nextQuestionKey) {
     .sort(orderCriteria)
     .map(formatOption);
 }
+
 export function orderCriteria(a, b) {
   const [, numA] = a.match(/([0-9]+)\|/) || [];
   const [, numB] = b.match(/([0-9]+)\|/) || [];
@@ -84,9 +85,15 @@ export function getSituationsFor(data, obj) {
   );
 }
 
-export const isNotYetProcessed = (data, idcc) => {
+const isNotEmpty = (obj) => Object.keys(obj).length > 0;
+
+export const skipStep = (data, idcc) => {
+  if (!idcc) return true;
+
   const situtation = data.filter(
-    (situation) => parseInt(situation.idcc, 10) === parseInt(idcc, 10)
+    (situation) =>
+      isNotEmpty(situation.criteria) &&
+      parseInt(situation.idcc, 10) === parseInt(idcc, 10)
   );
   return !situtation.length;
 };
@@ -116,3 +123,16 @@ export const getFormProps = ({ key, criteria, pastQuestions }) =>
         .slice(pastQuestions.findIndex(([k]) => k === key) + 1)
         .map(([key]) => key)
     );
+
+export const getSupportedCC = (data) => {
+  const uniqueIDCC = [
+    ...new Map(data.map((item) => [item["idcc"], item])).values(),
+  ];
+
+  return uniqueIDCC.map((item) => {
+    return {
+      fullySupported: true,
+      idcc: parseInt(item.idcc, 10),
+    };
+  });
+};

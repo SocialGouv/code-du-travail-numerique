@@ -20,14 +20,19 @@ export const SalaireTempsPartiel = ({ name }) => (
     {({ fields }) =>
       fields.length > 0 && (
         <>
-          <Question as="p">
+          <Question>
             Quels ont été les durées et les salaires des périodes à temps plein
             et à temps partiel&nbsp;?
           </Question>
           {fields.map((name, index) => (
             <RelativeDiv key={name}>
               <RowTitle>
-                <Text variant="secondary" fontSize="hsmall">
+                <Text
+                  variant="secondary"
+                  fontSize="hsmall"
+                  role="heading"
+                  aria-level="2"
+                >
                   Période {index + 1}
                 </Text>
               </RowTitle>

@@ -10,7 +10,7 @@ import { required } from "../../common/validators";
 function TypeRemuneration({ name, onChange }) {
   return (
     <>
-      <Question as="p" required>
+      <Question required>
         Comment souhaitez-vous indiquer la rémunération perçue pendant le
         contrat de travail&nbsp;?
       </Question>

@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/react-fiche-service-public",
-  "version": "4.53.1",
+  "version": "4.71.0",
   "private": true,
   "description": "Composant React pour render une fiche SP",
   "main": "lib/index.js",
@@ -45,7 +45,7 @@
     "eslint": "^7.31.0",
     "jest": "^27.0.6",
     "jest-styled-components": "^7.0.5",
-    "lint-staged": "^11.0.1",
+    "lint-staged": "^12.1.2",
     "prettier": "^2.3.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",

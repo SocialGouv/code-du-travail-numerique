@@ -17,9 +17,14 @@ exports[`<Anciennete /> renders AncienneteCE component with initialValues CATEGO
 `;
 
 exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
+.c5 {
+  color: #3e486e;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
 .c6 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -59,13 +64,23 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   text-align: left;
 }
 
-.c8 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   cursor: pointer;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .c9 {
@@ -115,14 +130,8 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
 
 .c4 {
   display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c5 {
-  font-weight: 600;
+  margin: 1rem 0;
+  cursor: pointer;
 }
 
 .c7 {
@@ -141,12 +150,12 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
 }
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -204,7 +213,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
       Dans le cas de la démission, l’employeur peut accepter de prendre en compte la durée du contrat de travail correspondant pour l’appréciation de l’ancienneté.
     </div>
   </div>
-  <p
+  <label
     class="c4"
   >
     <span
@@ -214,41 +223,47 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
     </span>
     <span
       class="c6"
-      font-size="default"
-      font-weight="400"
     >
        (obligatoire)
     </span>
-  </p>
+  </label>
   <div
     class="c7"
   >
-    <label
+    <div
       class="c8"
-      for="hasBrancheContrat-yes"
     >
       <input
         class="c9"
-        id="hasBrancheContrat-yes"
+        id="hasBrancheContrat-oui"
         name="hasBrancheContrat"
         type="radio"
         value="true"
       />
-      Oui
-    </label>
-    <label
+      <label
+        class="c10"
+        for="hasBrancheContrat-oui"
+      >
+        Oui
+      </label>
+    </div>
+    <div
       class="c8"
-      for="hasBrancheContrat-no"
     >
       <input
         class="c9"
-        id="hasBrancheContrat-no"
+        id="hasBrancheContrat-non"
         name="hasBrancheContrat"
         type="radio"
         value="false"
       />
-      Non
-    </label>
+      <label
+        class="c10"
+        for="hasBrancheContrat-non"
+      >
+        Non
+      </label>
+    </div>
   </div>
 </div>
 `;

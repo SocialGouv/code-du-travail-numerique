@@ -65,9 +65,14 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   cursor: not-allowed;
 }
 
+.c1 {
+  color: #3e486e;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
 .c4 {
   color: #7994d4;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 400;
 }
@@ -413,14 +418,8 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 
 .c0 {
   display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c1 {
-  font-weight: 600;
+  margin: 1rem 0;
+  cursor: pointer;
 }
 
 .c2 {
@@ -506,7 +505,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 }
 
 <div>
-  <p
+  <label
     class="c0"
   >
     <span
@@ -514,7 +513,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
     >
       Quels ont été les durées et les salaires des périodes à temps plein et à temps partiel ?
     </span>
-  </p>
+  </label>
   <div
     class="c2"
   >
@@ -522,9 +521,9 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
       class="c3"
     >
       <span
+        aria-level="2"
         class="c4"
-        font-size="hsmall"
-        font-weight="400"
+        role="heading"
       >
         Période 
         1
@@ -564,18 +563,19 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
               aria-hidden="true"
               fill="none"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <g
-                clip-path="url(#arrow-down_svg__clip0)"
+                clip-path="url(#arrow-down_svg__a)"
               >
                 <path
-                  d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z"
+                  d="m8.425 11.573 7.11-6.072a.709.709 0 0 0 .26-.537.709.709 0 0 0-.26-.537.973.973 0 0 0-.629-.223.973.973 0 0 0-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 0 0-.63-.223.973.973 0 0 0-.628.223.708.708 0 0 0-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 0 0 .29.165 1.021 1.021 0 0 0 .68 0 .91.91 0 0 0 .29-.165z"
                   fill="currentColor"
                 />
               </g>
               <defs>
                 <clippath
-                  id="arrow-down_svg__clip0"
+                  id="arrow-down_svg__a"
                 >
                   <path
                     d="M0 0h16v16H0z"
@@ -632,6 +632,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
               aria-hidden="true"
               fill="none"
               viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
@@ -652,10 +653,11 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
       class="c18"
       fill="none"
       viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
         clip-rule="evenodd"
-        d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
+        d="M8 2a1 1 0 0 0-1 1v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3a1 1 0 0 0-1-1z"
         fill="currentColor"
         fill-rule="evenodd"
       />
@@ -730,9 +732,14 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   cursor: not-allowed;
 }
 
+.c1 {
+  color: #3e486e;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
 .c4 {
   color: #7994d4;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 400;
 }
@@ -1084,14 +1091,8 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
 
 .c0 {
   display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c1 {
-  font-weight: 600;
+  margin: 1rem 0;
+  cursor: pointer;
 }
 
 .c2 {
@@ -1186,7 +1187,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
 }
 
 <div>
-  <p
+  <label
     class="c0"
   >
     <span
@@ -1194,7 +1195,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
     >
       Quels ont été les durées et les salaires des périodes à temps plein et à temps partiel ?
     </span>
-  </p>
+  </label>
   <div
     class="c2"
   >
@@ -1202,9 +1203,9 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
       class="c3"
     >
       <span
+        aria-level="2"
         class="c4"
-        font-size="hsmall"
-        font-weight="400"
+        role="heading"
       >
         Période 
         1
@@ -1244,18 +1245,19 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
               aria-hidden="true"
               fill="none"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <g
-                clip-path="url(#arrow-down_svg__clip0)"
+                clip-path="url(#arrow-down_svg__a)"
               >
                 <path
-                  d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z"
+                  d="m8.425 11.573 7.11-6.072a.709.709 0 0 0 .26-.537.709.709 0 0 0-.26-.537.973.973 0 0 0-.629-.223.973.973 0 0 0-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 0 0-.63-.223.973.973 0 0 0-.628.223.708.708 0 0 0-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 0 0 .29.165 1.021 1.021 0 0 0 .68 0 .91.91 0 0 0 .29-.165z"
                   fill="currentColor"
                 />
               </g>
               <defs>
                 <clippath
-                  id="arrow-down_svg__clip0"
+                  id="arrow-down_svg__a"
                 >
                   <path
                     d="M0 0h16v16H0z"
@@ -1312,6 +1314,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
               aria-hidden="true"
               fill="none"
               viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
@@ -1331,10 +1334,11 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
           class="c18"
           fill="none"
           viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
-            d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+            d="M14.752 16.5 7.258 8.591A.957.957 0 0 1 7 7.932c0-.247.093-.484.259-.659A.858.858 0 0 1 7.883 7a.86.86 0 0 1 .625.273L16 15.183l7.492-7.91A.859.859 0 0 1 24.117 7c.234 0 .459.098.624.273a.957.957 0 0 1 .259.659.957.957 0 0 1-.259.66L17.249 16.5l7.492 7.909a.958.958 0 0 1 .259.659.957.957 0 0 1-.259.659.859.859 0 0 1-.624.273.86.86 0 0 1-.625-.273L16 17.817l-7.492 7.91a.859.859 0 0 1-.625.273.859.859 0 0 1-.624-.273.957.957 0 0 1-.259-.659.96.96 0 0 1 .259-.66l7.492-7.908z"
             fill="currentColor"
             fill-rule="evenodd"
           />
@@ -1349,9 +1353,9 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
       class="c3"
     >
       <span
+        aria-level="2"
         class="c4"
-        font-size="hsmall"
-        font-weight="400"
+        role="heading"
       >
         Période 
         2
@@ -1391,18 +1395,19 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
               aria-hidden="true"
               fill="none"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <g
-                clip-path="url(#arrow-down_svg__clip0)"
+                clip-path="url(#arrow-down_svg__a)"
               >
                 <path
-                  d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z"
+                  d="m8.425 11.573 7.11-6.072a.709.709 0 0 0 .26-.537.709.709 0 0 0-.26-.537.973.973 0 0 0-.629-.223.973.973 0 0 0-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 0 0-.63-.223.973.973 0 0 0-.628.223.708.708 0 0 0-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 0 0 .29.165 1.021 1.021 0 0 0 .68 0 .91.91 0 0 0 .29-.165z"
                   fill="currentColor"
                 />
               </g>
               <defs>
                 <clippath
-                  id="arrow-down_svg__clip0"
+                  id="arrow-down_svg__a"
                 >
                   <path
                     d="M0 0h16v16H0z"
@@ -1459,6 +1464,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
               aria-hidden="true"
               fill="none"
               viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M17.632 12.392c-.78 0-1.42.232-1.917.697-.493.465-.822 1.168-.988 2.108h3.785v1.279h-3.91l-.016.373v.457l.016.323h3.387v1.27h-3.245c.354 1.727 1.361 2.59 3.021 2.59.791 0 1.602-.171 2.432-.514v1.685c-.725.337-1.569.506-2.531.506-1.334 0-2.419-.365-3.254-1.096-.83-.73-1.373-1.787-1.627-3.17h-1.262v-1.27h1.129l-.017-.308v-.307l.017-.54h-1.13v-1.278h1.246c.21-1.389.739-2.479 1.585-3.27.847-.792 1.94-1.187 3.28-1.187 1.106 0 2.097.243 2.971.73l-.697 1.553c-.852-.421-1.61-.631-2.275-.631z"
@@ -1478,10 +1484,11 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
           class="c18"
           fill="none"
           viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
-            d="M14.752 16.5L7.258 8.591A.957.957 0 017 7.932c0-.247.093-.484.259-.659A.858.858 0 017.883 7a.86.86 0 01.625.273L16 15.183l7.492-7.91A.859.859 0 0124.117 7c.234 0 .459.098.624.273a.957.957 0 01.259.659.957.957 0 01-.259.66L17.249 16.5l7.492 7.909a.958.958 0 01.259.659.957.957 0 01-.259.659.859.859 0 01-.624.273.86.86 0 01-.625-.273L16 17.817l-7.492 7.91a.859.859 0 01-.625.273.859.859 0 01-.624-.273.957.957 0 01-.259-.659.96.96 0 01.259-.66l7.492-7.908z"
+            d="M14.752 16.5 7.258 8.591A.957.957 0 0 1 7 7.932c0-.247.093-.484.259-.659A.858.858 0 0 1 7.883 7a.86.86 0 0 1 .625.273L16 15.183l7.492-7.91A.859.859 0 0 1 24.117 7c.234 0 .459.098.624.273a.957.957 0 0 1 .259.659.957.957 0 0 1-.259.66L17.249 16.5l7.492 7.909a.958.958 0 0 1 .259.659.957.957 0 0 1-.259.659.859.859 0 0 1-.624.273.86.86 0 0 1-.625-.273L16 17.817l-7.492 7.91a.859.859 0 0 1-.625.273.859.859 0 0 1-.624-.273.957.957 0 0 1-.259-.659.96.96 0 0 1 .259-.66l7.492-7.908z"
             fill="currentColor"
             fill-rule="evenodd"
           />
@@ -1498,10 +1505,11 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
       class="c20"
       fill="none"
       viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
         clip-rule="evenodd"
-        d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
+        d="M8 2a1 1 0 0 0-1 1v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3a1 1 0 0 0-1-1z"
         fill="currentColor"
         fill-rule="evenodd"
       />

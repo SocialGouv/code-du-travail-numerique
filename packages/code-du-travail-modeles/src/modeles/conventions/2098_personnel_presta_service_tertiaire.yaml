@@ -1,0 +1,62 @@
+contrat salarié . convention collective . personnel presta service tertiaire:
+  description: Convention collective nationale du personnel des prestataires de services dans le domaine du secteur tertiaire du 13 août 1999.
+  applicable si: convention collective = 'IDCC2098'
+  valeur: oui
+  cdtn:
+    idcc: 2098
+    préavis-retraite: true
+
+contrat salarié . convention collective . personnel presta service tertiaire . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  cdtn:
+    type: liste
+    valeurs:
+      Employés: "'Employés'"
+      Techniciens et agents de maîtrise (TAM): "'Techniciens et agents de maîtrise (TAM)'"
+      Cadres: "'Cadres'"
+
+contrat salarié . convention collective . personnel presta service tertiaire . catégorie professionnelle . employés:
+  applicable si: catégorie professionnelle = 'Employés'
+  valeur: oui
+  références:
+    Article 19.1: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005850366/?idConteneur=KALICONT000005635550
+
+contrat salarié . convention collective . personnel presta service tertiaire . catégorie professionnelle . employés . départ:
+  applicable si: départ à la retraite
+  remplace: préavis de retraite collective
+  valeur: 1 mois
+
+contrat salarié . convention collective . personnel presta service tertiaire . catégorie professionnelle . employés . mise:
+  applicable si: mise à la retraite
+  remplace: préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 1 mois
+        plafond: 24 mois
+      - montant: 2 mois
+
+contrat salarié . convention collective . personnel presta service tertiaire . catégorie professionnelle . tam:
+  applicable si: catégorie professionnelle = 'Techniciens et agents de maîtrise (TAM)'
+  remplace: préavis de retraite collective
+  valeur: 2 mois
+  références:
+    Article 19.1: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005850366/?idConteneur=KALICONT000005635550
+
+contrat salarié . convention collective . personnel presta service tertiaire . catégorie professionnelle . cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
+  références:
+    Article 19.1: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005850366/?idConteneur=KALICONT000005635550
+
+contrat salarié . convention collective . personnel presta service tertiaire . catégorie professionnelle . cadres . départ:
+  applicable si: départ à la retraite
+  remplace: préavis de retraite collective
+  valeur: 2 mois
+
+contrat salarié . convention collective . personnel presta service tertiaire . catégorie professionnelle . cadres . mise:
+  applicable si: mise à la retraite
+  remplace: préavis de retraite collective
+  valeur: 3 mois

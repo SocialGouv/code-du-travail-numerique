@@ -1,9 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Anciennete /> should render 1`] = `
+.c2 {
+  color: #3e486e;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
 .c3 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -100,7 +105,7 @@ exports[`<Anciennete /> should render 1`] = `
   width: 20rem;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -109,7 +114,17 @@ exports[`<Anciennete /> should render 1`] = `
   cursor: pointer;
 }
 
-.c11 {
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c10 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -130,7 +145,7 @@ exports[`<Anciennete /> should render 1`] = `
   appearance: none;
 }
 
-.c11:before {
+.c10:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -145,16 +160,16 @@ exports[`<Anciennete /> should render 1`] = `
   content: "";
 }
 
-.c11:checked {
+.c10:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c11:checked:before {
+.c10:checked:before {
   display: block;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -170,12 +185,12 @@ exports[`<Anciennete /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
 }
 
 .c0 {
   margin-top: 3.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -184,22 +199,8 @@ exports[`<Anciennete /> should render 1`] = `
 
 .c1 {
   display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
+  margin: 1rem 0;
   cursor: pointer;
-}
-
-.c8 {
-  display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c2 {
-  font-weight: 600;
 }
 
 .c4 {
@@ -239,12 +240,6 @@ exports[`<Anciennete /> should render 1`] = `
   }
 }
 
-@media (max-width:600px) {
-  .c8 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <form>
     <h2
@@ -263,8 +258,6 @@ exports[`<Anciennete /> should render 1`] = `
       </span>
       <span
         class="c3"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
@@ -298,8 +291,6 @@ exports[`<Anciennete /> should render 1`] = `
       </span>
       <span
         class="c3"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
@@ -333,8 +324,6 @@ exports[`<Anciennete /> should render 1`] = `
       </span>
       <span
         class="c3"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
@@ -362,8 +351,8 @@ exports[`<Anciennete /> should render 1`] = `
     >
       Période d’absence prolongée
     </h2>
-    <p
-      class="c8"
+    <label
+      class="c1"
     >
       <span
         class="c2"
@@ -372,41 +361,47 @@ exports[`<Anciennete /> should render 1`] = `
       </span>
       <span
         class="c3"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
-    </p>
+    </label>
     <div
-      class="c9"
+      class="c8"
     >
-      <label
-        class="c10"
-        for="hasAbsenceProlonge-yes"
+      <div
+        class="c9"
       >
         <input
-          class="c11"
-          id="hasAbsenceProlonge-yes"
+          class="c10"
+          id="hasAbsenceProlonge-oui"
           name="hasAbsenceProlonge"
           type="radio"
           value="true"
         />
-        Oui
-      </label>
-      <label
-        class="c10"
-        for="hasAbsenceProlonge-no"
+        <label
+          class="c11"
+          for="hasAbsenceProlonge-oui"
+        >
+          Oui
+        </label>
+      </div>
+      <div
+        class="c9"
       >
         <input
-          class="c11"
-          id="hasAbsenceProlonge-no"
+          class="c10"
+          id="hasAbsenceProlonge-non"
           name="hasAbsenceProlonge"
           type="radio"
           value="false"
         />
-        Non
-      </label>
+        <label
+          class="c11"
+          for="hasAbsenceProlonge-non"
+        >
+          Non
+        </label>
+      </div>
     </div>
     <button
       data-testid="nextBt"

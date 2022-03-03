@@ -3,6 +3,329 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.71.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.70.0...v4.71.0) (2022-02-28)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+# [4.70.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.69.1...v4.70.0) (2022-02-28)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.69.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.69.0...v4.69.1) (2022-02-25)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+# [4.69.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.68.0...v4.69.0) (2022-02-10)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+# [4.68.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.1...v4.68.0) (2022-02-02)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.67.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.0...v4.67.1) (2022-01-24)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+# [4.67.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.2...v4.67.0) (2022-01-24)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.66.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.1...v4.66.2) (2022-01-14)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.66.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.0...v4.66.1) (2022-01-14)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+# [4.66.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.4...v4.66.0) (2022-01-14)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.65.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.3...v4.65.4) (2022-01-05)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.65.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.2...v4.65.3) (2022-01-04)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.65.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.1...v4.65.2) (2021-12-31)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.65.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.0...v4.65.1) (2021-12-31)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+# [4.65.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.64.0...v4.65.0) (2021-12-30)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+# [4.64.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.63.1...v4.64.0) (2021-12-30)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.63.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.63.0...v4.63.1) (2021-12-22)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+# [4.63.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.62.0...v4.63.0) (2021-12-22)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+# [4.62.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.61.0...v4.62.0) (2021-12-21)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+# [4.61.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.3...v4.61.0) (2021-12-20)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.60.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.2...v4.60.3) (2021-12-07)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.60.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.1...v4.60.2) (2021-12-06)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.60.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.0...v4.60.1) (2021-12-06)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+# [4.60.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.59.0...v4.60.0) (2021-11-24)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+# [4.59.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.2...v4.59.0) (2021-11-18)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.58.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.1...v4.58.2) (2021-11-17)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.58.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.0...v4.58.1) (2021-11-17)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+# [4.58.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.57.1...v4.58.0) (2021-11-17)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.57.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.57.0...v4.57.1) (2021-11-09)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+# [4.57.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.5...v4.57.0) (2021-11-09)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.56.5](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.4...v4.56.5) (2021-11-05)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.56.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.3...v4.56.4) (2021-11-05)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.56.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.2...v4.56.3) (2021-11-05)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.56.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.1...v4.56.2) (2021-11-05)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.56.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.0...v4.56.1) (2021-11-04)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+# [4.56.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.55.1...v4.56.0) (2021-11-04)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.55.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.55.0...v4.55.1) (2021-10-26)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+# [4.55.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.54.1...v4.55.0) (2021-10-26)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+## [4.54.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.54.0...v4.54.1) (2021-10-15)
+
+**Note:** Version bump only for package @socialgouv/cdtn-slugify
+
+
+
+
+
+# 4.54.0 (2021-10-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.206.0 ([#3793](https://github.com/SocialGouv/code-du-travail-numerique/issues/3793)) ([3ea1d20](https://github.com/SocialGouv/code-du-travail-numerique/commit/3ea1d2066e7b0b62f7ac6157338fea1ff8223d66))
+
+
+
+
+
 ## [4.53.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.53.0...v4.53.1) (2021-09-24)
 
 **Note:** Version bump only for package @socialgouv/cdtn-slugify

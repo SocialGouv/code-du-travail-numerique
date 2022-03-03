@@ -11,7 +11,7 @@ import { required } from "../../common/validators";
 function TypeContrat({ name }) {
   return (
     <>
-      <Question as="p" required>
+      <Question required>
         Quel est le type du contrat de travail&nbsp;?
       </Question>
       <RadioContainer>

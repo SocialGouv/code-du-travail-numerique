@@ -3,7 +3,7 @@ import React from "react";
 
 import { Stripe } from "./index.js";
 
-describe("<Table />", () => {
+describe("<Stripe />", () => {
   it("renders", () => {
     const { container } = render(<Stripe />);
     expect(container).toMatchSnapshot();

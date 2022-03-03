@@ -2,7 +2,6 @@ import React from "react";
 
 import { Custom } from "../icons/index.js";
 import { Section } from "../layout/Section/index.js";
-import { Title } from "../Titles/Title";
 import { Accordion } from "./index.js";
 
 export default {
@@ -14,48 +13,44 @@ export const base = () => (
   <>
     <Section>
       <Accordion
+        titleLevel={5}
         items={[
           {
             body: "this is the single body",
-            title: (
-              <h5>
-                This is an h5 heading of a single item accordion with a crazy
-                long title so we know if the accordion arrow icon get compressed
-                or if it keeps its width
-              </h5>
-            ),
+            title:
+              "This is an h5 heading of a single item accordion with a crazy long title so we know if the accordion arrow icon get compressed or if it keeps its width",
           },
         ]}
       />
     </Section>
     <Section>
       <Accordion
+        titleLevel={3}
         items={[
           {
             body: "this is the first body",
-            title: <h3>This the first h3 heading of a multiple accordion</h3>,
+            title: "This the first h3 heading of a multiple accordion",
           },
           {
             body: "this is the second body",
-            title: (
-              <h3>This is the second h3 heading of a multiple accordion</h3>
-            ),
+            title: "This is the second h3 heading of a multiple accordion",
           },
         ]}
       />
     </Section>
     <Section>
       <Accordion
+        titleLevel={3}
         preExpanded={["id"]}
         items={[
           {
             body: "this is the body",
             id: "id",
-            title: <Title>This is a pre expanded Title accordion</Title>,
+            title: "This is a pre expanded Title accordion",
           },
           {
             body: "this is the body",
-            title: <Title>This bloc could be extended too if needed</Title>,
+            title: "This bloc could be extended too if needed",
           },
         ]}
       />
@@ -66,43 +61,44 @@ export const base = () => (
 export const tile = () => (
   <Section>
     <Accordion
+      titleLevel={5}
       variant="tile"
       items={[
         {
           body: "this is the single body",
-          title: <h5>1 - A tile title</h5>,
+          title: "1 - A tile title",
         },
         {
           body: "this is the single body",
-          title: <h5>2 - A tile title</h5>,
-        },
-        {
-          body: "this is the single body",
-          icon: Custom,
-          title: <h5>3 - A tile title with an icon</h5>,
+          title: "2 - A tile title",
         },
         {
           body: "this is the single body",
           icon: Custom,
-          title: <h5>4 - A tile title with an icon</h5>,
-        },
-        {
-          body: "this is the single body",
-          title: <h5>5 - A tile title</h5>,
+          title: "3 - A tile title with an icon",
         },
         {
           body: "this is the single body",
           icon: Custom,
-          title: <h5>6 - A tile title with an icon</h5>,
+          title: "4 - A tile title with an icon",
+        },
+        {
+          body: "this is the single body",
+          title: "5 - A tile title",
         },
         {
           body: "this is the single body",
           icon: Custom,
-          title: <h5>7 - A tile title with an icon</h5>,
+          title: "6 - A tile title with an icon",
         },
         {
           body: "this is the single body",
-          title: <h5>8 - A tile title</h5>,
+          icon: Custom,
+          title: "7 - A tile title with an icon",
+        },
+        {
+          body: "this is the single body",
+          title: "8 - A tile title",
         },
       ]}
     />
@@ -112,6 +108,7 @@ export const tile = () => (
 export const Hierarchy = () => (
   <Section>
     <Accordion
+      titleLevel={5}
       variant="hierarchy"
       items={[
         {
@@ -135,12 +132,12 @@ export const Hierarchy = () => (
               </p>
             </div>
           ),
-          title: <h5>A hiearchy title</h5>,
+          title: "A hierarchy title",
         },
         {
           body: "this is the single body",
           icon: Custom,
-          title: <h5>A hiearchy title with an icon</h5>,
+          title: "A hierarchy title with an icon",
         },
         {
           body: (
@@ -163,11 +160,11 @@ export const Hierarchy = () => (
               </p>
             </div>
           ),
-          title: <h5>A hiearchy title</h5>,
+          title: "A hierarchy title",
         },
         {
           body: "this is the single body",
-          title: <h5>A hiearchy title</h5>,
+          title: "A hierarchy title",
         },
         {
           body: (
@@ -191,12 +188,8 @@ export const Hierarchy = () => (
             </div>
           ),
           icon: Custom,
-          title: (
-            <h5>
-              A hiearchy title, crazy long so we check the render of the last
-              left dash on every viewport
-            </h5>
-          ),
+          title:
+            "A hierarchy title, crazy long so we check the render of the last left dash on every viewport",
         },
       ]}
     />

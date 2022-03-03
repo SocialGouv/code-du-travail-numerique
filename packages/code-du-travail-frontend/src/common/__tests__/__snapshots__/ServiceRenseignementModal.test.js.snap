@@ -1,17 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] = `
-.c16 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
+.c3 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
 }
 
 .c0 {
@@ -142,6 +140,19 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   cursor: not-allowed;
 }
 
+.c16 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
+}
+
 .c1 {
   position: fixed;
   top: 0;
@@ -172,17 +183,6 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   top: 0;
   right: 0;
   color: #7994d4;
-}
-
-.c3 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c8 {
@@ -374,8 +374,14 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 .c14 {
-  display: block;
+  font-size: 1.2rem;
   margin-top: 2rem;
+}
+
+@media (max-width:600px) {
+  .c3 {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -433,12 +439,6 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
     position: fixed;
     top: 1rem;
     right: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    font-size: 1.6rem;
   }
 }
 
@@ -586,18 +586,21 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                   class="c13"
                   fill="none"
                   viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M27.319 25.368a.935.935 0 01-1.304 1.341l-6.256-6.012a9.797 9.797 0 01-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
+                    d="M27.319 25.368a.935.935 0 0 1-1.304 1.341l-6.256-6.012a9.797 9.797 0 0 1-6.092 2.1C8.327 22.798 4 18.59 4 13.4S8.328 4 13.667 4c5.338 0 9.666 4.208 9.666 9.399 0 2.245-.81 4.307-2.16 5.923l6.146 6.046zm-13.652-4.515c4.234 0 7.666-3.337 7.666-7.454 0-4.117-3.432-7.454-7.666-7.454C9.432 5.945 6 9.282 6 13.399c0 4.117 3.432 7.454 7.667 7.454z"
                     fill="currentColor"
                   />
                 </svg>
               </button>
             </form>
-            <small
+            <div
               class="c14"
             >
-              Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
+              <p>
+                Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
+              </p>
               <ul>
                 <li>
                   les demandes d'intervention en entreprise
@@ -612,7 +615,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                   vous renseigner sur les cotisations sociales
                 </li>
               </ul>
-            </small>
+            </div>
             <button
               class="c11 c15"
               title="fermer la modale"

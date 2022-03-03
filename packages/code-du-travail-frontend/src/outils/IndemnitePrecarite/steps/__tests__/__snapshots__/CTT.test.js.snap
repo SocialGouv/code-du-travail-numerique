@@ -1,11 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepCTT /> should render 1`] = `
+.c1 {
+  color: #3e486e;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
 .c2 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
 
 .c4 {
@@ -13,8 +27,9 @@ exports[`<StepCTT /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.6rem;
-  cursor: pointer;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .c5 {
@@ -64,14 +79,8 @@ exports[`<StepCTT /> should render 1`] = `
 
 .c0 {
   display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c1 {
-  font-weight: 600;
+  margin: 1rem 0;
+  cursor: pointer;
 }
 
 .c3 {
@@ -90,7 +99,7 @@ exports[`<StepCTT /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
 }
 
 @media (max-width:600px) {
@@ -101,7 +110,7 @@ exports[`<StepCTT /> should render 1`] = `
 
 <div>
   <form>
-    <p
+    <label
       class="c0"
     >
       <span
@@ -111,44 +120,50 @@ exports[`<StepCTT /> should render 1`] = `
       </span>
       <span
         class="c2"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
-    </p>
+    </label>
     <div
       class="c3"
       data-testid="cttFormation"
     >
-      <label
+      <div
         class="c4"
-        for="cttFormation-yes"
       >
         <input
           class="c5"
-          id="cttFormation-yes"
+          id="cttFormation-oui"
           name="cttFormation"
           type="radio"
           value="true"
         />
-        Oui
-      </label>
-      <label
+        <label
+          class="c6"
+          for="cttFormation-oui"
+        >
+          Oui
+        </label>
+      </div>
+      <div
         class="c4"
-        for="cttFormation-no"
       >
         <input
           class="c5"
-          id="cttFormation-no"
+          id="cttFormation-non"
           name="cttFormation"
           type="radio"
           value="false"
         />
-        Non
-      </label>
+        <label
+          class="c6"
+          for="cttFormation-non"
+        >
+          Non
+        </label>
+      </div>
     </div>
-    <p
+    <label
       class="c0"
     >
       <span
@@ -158,44 +173,50 @@ exports[`<StepCTT /> should render 1`] = `
       </span>
       <span
         class="c2"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
-    </p>
+    </label>
     <div
       class="c3"
       data-testid="ruptureContratFauteGrave"
     >
-      <label
+      <div
         class="c4"
-        for="ruptureContratFauteGrave-yes"
       >
         <input
           class="c5"
-          id="ruptureContratFauteGrave-yes"
+          id="ruptureContratFauteGrave-oui"
           name="ruptureContratFauteGrave"
           type="radio"
           value="true"
         />
-        Oui
-      </label>
-      <label
+        <label
+          class="c6"
+          for="ruptureContratFauteGrave-oui"
+        >
+          Oui
+        </label>
+      </div>
+      <div
         class="c4"
-        for="ruptureContratFauteGrave-no"
       >
         <input
           class="c5"
-          id="ruptureContratFauteGrave-no"
+          id="ruptureContratFauteGrave-non"
           name="ruptureContratFauteGrave"
           type="radio"
           value="false"
         />
-        Non
-      </label>
+        <label
+          class="c6"
+          for="ruptureContratFauteGrave-non"
+        >
+          Non
+        </label>
+      </div>
     </div>
-    <p
+    <label
       class="c0"
     >
       <span
@@ -205,44 +226,50 @@ exports[`<StepCTT /> should render 1`] = `
       </span>
       <span
         class="c2"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
-    </p>
+    </label>
     <div
       class="c3"
       data-testid="propositionCDIFinContrat"
     >
-      <label
+      <div
         class="c4"
-        for="propositionCDIFinContrat-yes"
       >
         <input
           class="c5"
-          id="propositionCDIFinContrat-yes"
+          id="propositionCDIFinContrat-oui"
           name="propositionCDIFinContrat"
           type="radio"
           value="true"
         />
-        Oui
-      </label>
-      <label
+        <label
+          class="c6"
+          for="propositionCDIFinContrat-oui"
+        >
+          Oui
+        </label>
+      </div>
+      <div
         class="c4"
-        for="propositionCDIFinContrat-no"
       >
         <input
           class="c5"
-          id="propositionCDIFinContrat-no"
+          id="propositionCDIFinContrat-non"
           name="propositionCDIFinContrat"
           type="radio"
           value="false"
         />
-        Non
-      </label>
+        <label
+          class="c6"
+          for="propositionCDIFinContrat-non"
+        >
+          Non
+        </label>
+      </div>
     </div>
-    <p
+    <label
       class="c0"
     >
       <span
@@ -252,42 +279,48 @@ exports[`<StepCTT /> should render 1`] = `
       </span>
       <span
         class="c2"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
-    </p>
+    </label>
     <div
       class="c3"
       data-testid="refusSouplesse"
     >
-      <label
+      <div
         class="c4"
-        for="refusSouplesse-yes"
       >
         <input
           class="c5"
-          id="refusSouplesse-yes"
+          id="refusSouplesse-oui"
           name="refusSouplesse"
           type="radio"
           value="true"
         />
-        Oui
-      </label>
-      <label
+        <label
+          class="c6"
+          for="refusSouplesse-oui"
+        >
+          Oui
+        </label>
+      </div>
+      <div
         class="c4"
-        for="refusSouplesse-no"
       >
         <input
           class="c5"
-          id="refusSouplesse-no"
+          id="refusSouplesse-non"
           name="refusSouplesse"
           type="radio"
           value="false"
         />
-        Non
-      </label>
+        <label
+          class="c6"
+          for="refusSouplesse-non"
+        >
+          Non
+        </label>
+      </div>
     </div>
     <button
       data-testid="nextBt"

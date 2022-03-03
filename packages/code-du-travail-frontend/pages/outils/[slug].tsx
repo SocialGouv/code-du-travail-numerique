@@ -1,5 +1,5 @@
 import tools from "@cdt/data...tools/internals.json";
-import * as Sentry from "@sentry/browser";
+import * as Sentry from "@sentry/nextjs";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import { Container, Section, theme } from "@socialgouv/cdtn-ui";
 import { GetServerSideProps } from "next";
@@ -22,6 +22,7 @@ import { HeuresRechercheEmploi } from "../../src/outils/HeuresRechercheEmploi";
 import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
 import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
 import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
+import { Tool } from "../../src/outils/types";
 import { matopush } from "../../src/piwik";
 
 const {
@@ -63,10 +64,7 @@ function Outils({
   const router = useRouter();
   return (
     <Layout>
-      <Metas
-        title={`${title} - Code du travail numérique - Ministère du travail`}
-        description={description}
-      />
+      <Metas title={title} description={description} />
       <StyledSection>
         <Container>
           <Flex>
@@ -88,9 +86,14 @@ export default Outils;
 export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
-  const { slug, description, icon, title } = tools.find(
-    (tool) => tool.slug === query.slug
-  );
+  const tool = (tools as Tool[]).find((tool) => tool.slug === query.slug);
+  if (!tool) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const { slug, description, icon, title } = tool;
   let relatedItems = [];
   try {
     const response = await fetch(`${API_URL}/items/${SOURCES.TOOLS}/${slug}`);

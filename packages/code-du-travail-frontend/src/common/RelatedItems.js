@@ -45,7 +45,9 @@ export const RelatedItems = ({ items = [] }) => {
         ({ title, items }) =>
           items.length > 0 && (
             <React.Fragment key={title}>
-              <Heading as="div">{title}&nbsp;:</Heading>
+              <Heading as="div" aria-level="2" role="heading">
+                {title}&nbsp;:
+              </Heading>
               <FlatList>
                 {items.map(({ slug, source, title, reco, url }) => {
                   // if source is external we use url otherwise we assemble the route

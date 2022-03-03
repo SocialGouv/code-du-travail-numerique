@@ -5,17 +5,17 @@ export function getText(element = { text: "" }, separator = " ") {
   }
   if (element.children) {
     return element.children
-      .map(child => getText(child, separator))
+      .map((child) => getText(child, separator))
       .join(separator);
   }
   if (Array.isArray(element)) {
-    return element.map(child => getText(child, separator)).join(separator);
+    return element.map((child) => getText(child, separator)).join(separator);
   }
   return "";
 }
 
-export const ignoreParagraph = element =>
-  element.children.map(child => {
+export const ignoreParagraph = (element) =>
+  element.children.map((child) => {
     if (child.name === "Texte") {
       return ignoreParagraph(child);
     }

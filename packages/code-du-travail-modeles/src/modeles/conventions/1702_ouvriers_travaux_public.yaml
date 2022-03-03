@@ -1,0 +1,17 @@
+contrat salarié . convention collective . ouvriers travaux public:
+  description: Convention collective nationale des ouvriers des travaux publics du 15 décembre 1992
+  applicable si: convention collective = 'IDCC1702'
+  valeur: oui
+  cdtn:
+    idcc: 1702
+    préavis-retraite: true
+
+contrat salarié . convention collective . ouvriers travaux public . mise ou départ à la retraite:
+  applicable si:
+    une de ces conditions:
+      - mise à la retraite
+      - départ à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 2 mois
+  références:
+    Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4: https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005706582/?idConteneur=KALICONT000005635120
