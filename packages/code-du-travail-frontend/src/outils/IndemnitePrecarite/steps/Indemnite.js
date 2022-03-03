@@ -11,7 +11,7 @@ import {
   getSituationsFor,
 } from "../../common/situations.utils";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
-import { formatRefs } from "../../publicodes/Utils";
+import { formatRefs } from "../../publicodes";
 import DisclaimerBox from "../components/DisclaimerBox";
 import { CONTRACT_TYPE } from "../components/TypeContrat";
 import { getIndemnitePrecarite } from "../indemnite";
@@ -56,7 +56,7 @@ function StepIndemnite({ form }) {
     criteria = {},
   } = state.values;
 
-  const idcc = ccn ? ccn.num : 0;
+  const idcc = ccn?.selected ? ccn.selected.num : 0;
   const [situationCdt] = getSituationsFor(data, { contractType, idcc: 0 });
   const initialSituations = getSituationsFor(data, { contractType, idcc });
   const situations = filterSituations(initialSituations, criteria);
@@ -96,7 +96,10 @@ function StepIndemnite({ form }) {
   });
 
   const entries = Object.entries({
-    "Convention collective": getConventionCollectiveText(ccn, situations),
+    "Convention collective": getConventionCollectiveText(
+      ccn?.selected,
+      situations
+    ),
     ...inputs,
   });
 

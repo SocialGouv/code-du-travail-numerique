@@ -3,16 +3,22 @@
 exports[`<Anciennete /> should render 1`] = `
 .c2 {
   color: #3e486e;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.c3 {
+  color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c4 {
+.c5 {
   position: relative;
   display: inline-block;
 }
 
-.c6 {
+.c7 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -34,15 +40,15 @@ exports[`<Anciennete /> should render 1`] = `
   appearance: none;
 }
 
-.c6::-webkit-outer-spin-button,
-.c6::-webkit-inner-spin-button {
+.c7::-webkit-outer-spin-button,
+.c7::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c6::-webkit-calendar-picker-indicator {
+.c7::-webkit-calendar-picker-indicator {
   display: block;
   width: 3.2rem;
   height: 3.2rem;
@@ -55,51 +61,51 @@ exports[`<Anciennete /> should render 1`] = `
   mask-image: url("data:image/svg+xml;,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20.947%207.601h1.601c1.472%200%202.521%201.198%202.521%202.669v2.306l-.001%2010.392c0%201.472-1.049%202.669-2.521%202.669H8.669A2.672%202.672%200%20016%2022.967l.001-12.697a2.672%202.672%200%20012.67-2.669h1.331V6h.999v1.601H20V6h.947v1.601zm1.6%2017.036c.883%200%201.454-.786%201.454-1.67v-10.33h-17L7%2022.967c0%20.884.785%201.67%201.668%201.67h13.879zm-15.548-13h17.002l.001-1.367c0-.883-.57-1.601-1.453-1.601h-1.6v1.068H20V8.669h-9v1.068h-1V8.669H8.669C7.786%208.669%207%209.387%207%2010.27v1.367zm9.677%206.277h-2.135a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203h-2.135v2.135h2.136v-2.135zm3.203%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068H19.88a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135H19.88v-2.135zm-8.54%208.541H9.204a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H9.204v2.135h2.136l-.001-2.135zm3.202%203.203h2.135a1.07%201.07%200%20001.068-1.068v-2.135a1.07%201.07%200%2000-1.068-1.068h-2.135a1.07%201.07%200%2000-1.068%201.068v2.135a1.07%201.07%200%20001.068%201.068zm0-3.203h2.135l.001%202.135h-2.136v-2.135zm7.473%203.203H19.88a1.07%201.07%200%2001-1.068-1.068v-2.135a1.07%201.07%200%20011.068-1.068h2.135a1.07%201.07%200%20011.068%201.068v2.135a1.07%201.07%200%2001-1.068%201.068zm0-3.203H19.88v2.135h2.136v-2.135z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.c6:invalid {
+.c7:invalid {
   border-color: #eb5757;
 }
 
-.c6::-webkit-input-placeholder {
+.c7::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c6::-moz-placeholder {
+.c7::-moz-placeholder {
   color: #9298af;
 }
 
-.c6:-ms-input-placeholder {
+.c7:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c6::placeholder {
+.c7::placeholder {
   color: #9298af;
 }
 
-.c6:focus {
+.c7:focus {
   border-color: #7994d4;
 }
 
-.c6:focus::-webkit-input-placeholder {
+.c7:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c6:focus::-moz-placeholder {
+.c7:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c6:focus:-ms-input-placeholder {
+.c7:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c6:focus::placeholder {
+.c7:focus::placeholder {
   color: transparent;
 }
 
-.c5 {
+.c6 {
   width: 20rem;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -108,7 +114,7 @@ exports[`<Anciennete /> should render 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -118,7 +124,7 @@ exports[`<Anciennete /> should render 1`] = `
   flex-direction: row;
 }
 
-.c9 {
+.c10 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -139,7 +145,7 @@ exports[`<Anciennete /> should render 1`] = `
   appearance: none;
 }
 
-.c9:before {
+.c10:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -154,16 +160,16 @@ exports[`<Anciennete /> should render 1`] = `
   content: "";
 }
 
-.c9:checked {
+.c10:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c9:checked:before {
+.c10:checked:before {
   display: block;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -193,14 +199,11 @@ exports[`<Anciennete /> should render 1`] = `
 
 .c1 {
   display: block;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  font-weight: 600;
+  margin: 1rem 0;
   cursor: pointer;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -213,20 +216,20 @@ exports[`<Anciennete /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c5 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     width: 100%;
   }
 }
@@ -248,21 +251,25 @@ exports[`<Anciennete /> should render 1`] = `
       class="c1"
       for="1"
     >
-      Quelle est la date d’entrée dans l’entreprise ?
       <span
         class="c2"
+      >
+        Quelle est la date d’entrée dans l’entreprise ?
+      </span>
+      <span
+        class="c3"
       >
          (obligatoire)
       </span>
     </label>
     <div
-      class="c3"
+      class="c4"
     >
       <span
-        class="c4 c5"
+        class="c5 c6"
       >
         <input
-          class="c6"
+          class="c7"
           id="1"
           max="2099-12-31"
           min="1900-01-01"
@@ -277,21 +284,25 @@ exports[`<Anciennete /> should render 1`] = `
       class="c1"
       for="2"
     >
-      Quelle est la date de notification du licenciement ?
       <span
         class="c2"
+      >
+        Quelle est la date de notification du licenciement ?
+      </span>
+      <span
+        class="c3"
       >
          (obligatoire)
       </span>
     </label>
     <div
-      class="c3"
+      class="c4"
     >
       <span
-        class="c4 c5"
+        class="c5 c6"
       >
         <input
-          class="c6"
+          class="c7"
           id="2"
           max="2099-12-31"
           min="1900-01-01"
@@ -306,21 +317,25 @@ exports[`<Anciennete /> should render 1`] = `
       class="c1"
       for="3"
     >
-      Quelle est la date de sortie de l’entreprise ?
       <span
         class="c2"
+      >
+        Quelle est la date de sortie de l’entreprise ?
+      </span>
+      <span
+        class="c3"
       >
          (obligatoire)
       </span>
     </label>
     <div
-      class="c3"
+      class="c4"
     >
       <span
-        class="c4 c5"
+        class="c5 c6"
       >
         <input
-          class="c6"
+          class="c7"
           id="3"
           max="2099-12-31"
           min="1900-01-01"
@@ -339,45 +354,49 @@ exports[`<Anciennete /> should render 1`] = `
     <label
       class="c1"
     >
-      Y a-t-il eu des absences de plus d’un mois durant le contrat de travail ?
       <span
         class="c2"
+      >
+        Y a-t-il eu des absences de plus d’un mois durant le contrat de travail ?
+      </span>
+      <span
+        class="c3"
       >
          (obligatoire)
       </span>
     </label>
     <div
-      class="c7"
+      class="c8"
     >
       <div
-        class="c8"
+        class="c9"
       >
         <input
-          class="c9"
+          class="c10"
           id="hasAbsenceProlonge-oui"
           name="hasAbsenceProlonge"
           type="radio"
           value="true"
         />
         <label
-          class="c10"
+          class="c11"
           for="hasAbsenceProlonge-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c8"
+        class="c9"
       >
         <input
-          class="c9"
+          class="c10"
           id="hasAbsenceProlonge-non"
           name="hasAbsenceProlonge"
           type="radio"
           value="false"
         />
         <label
-          class="c10"
+          class="c11"
           for="hasAbsenceProlonge-non"
         >
           Non

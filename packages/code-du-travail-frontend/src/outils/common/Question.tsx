@@ -15,6 +15,8 @@ type Props = {
   tooltip?: Tooltip;
   children: React.ReactNode;
   htmlFor?: string;
+  isTooltipOpen?: boolean;
+  onSwitchTooltip?: () => void;
 };
 
 export const Question = ({
@@ -22,30 +24,45 @@ export const Question = ({
   tooltip,
   children,
   htmlFor,
+  isTooltipOpen,
+  onSwitchTooltip,
   ...otherProps
-}: Props): JSX.Element => (
-  <LabelBlock htmlFor={htmlFor} {...otherProps}>
-    {children}
-    {required && <Text fontWeight="400">&nbsp;(obligatoire)</Text>}
-    {tooltip && (
-      <InfoBulle
-        title={tooltip.help ?? "Plus d'informations"}
-        onVisibilityChange={tooltip.trackableFn}
-      >
-        {tooltip.content}
-      </InfoBulle>
-    )}
-  </LabelBlock>
-);
+}: Props): JSX.Element => {
+  const [isLocalTooltipOpen, setIsLocalToolTipOpen] = React.useState(false);
+  return (
+    <LabelBlock htmlFor={htmlFor} {...otherProps}>
+      <Text fontWeight="600" fontSize="hsmall">
+        {children}
+      </Text>
+      {required && <Text>&nbsp;(obligatoire)</Text>}
+      {tooltip && (
+        <InfoBulle
+          title={tooltip.help ?? "Plus d'informations"}
+          isTooltipOpen={
+            isTooltipOpen === undefined ? isLocalTooltipOpen : isTooltipOpen
+          }
+          onVisibilityChange={() => {
+            tooltip.trackableFn?.(
+              isTooltipOpen === undefined ? !isLocalTooltipOpen : isTooltipOpen
+            );
+            setIsLocalToolTipOpen(
+              isTooltipOpen === undefined ? !isLocalTooltipOpen : isTooltipOpen
+            );
+            onSwitchTooltip?.();
+          }}
+        >
+          {tooltip.content}
+        </InfoBulle>
+      )}
+    </LabelBlock>
+  );
+};
 
 const { breakpoints, fonts, spacings } = theme;
 
 const LabelBlock = styled.label`
   display: block;
-  margin-top: ${spacings.small};
-  margin-bottom: ${spacings.small};
-  font-size: ${fonts.sizes.headings.small};
-  font-weight: 600;
+  margin: ${spacings.small} 0;
   cursor: ${(props) => (props.as ? "default" : "pointer")};
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};

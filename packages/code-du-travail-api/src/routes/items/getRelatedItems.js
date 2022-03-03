@@ -1,4 +1,4 @@
-import elasticsearchClient from "../../conf/elasticsearch.js";
+import elasticsearchClient from "../../conf/elasticsearch";
 
 const { SOURCES, getSourceByRoute } = require("@socialgouv/cdtn-sources");
 const { DOCUMENTS, vectorizeQuery } = require("@socialgouv/cdtn-elasticsearch");
