@@ -42,13 +42,14 @@ const nextConfig = {
     PIWIK_SITE_ID: process.env.PIWIK_SITE_ID,
     PIWIK_URL: process.env.PIWIK_URL,
   },
-
   sentry: {
     disableClientWebpackPlugin: true,
     disableServerWebpackPlugin: true,
   },
-  // https://github.com/zeit/next.js/#disabling-file-system-routing
-  useFileSystemPublicRoutes: true,
+  swcMinify: true,
+  compiler: {
+    styledComponents: true,
+  },
 };
 
 module.exports = {
