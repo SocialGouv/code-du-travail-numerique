@@ -1,5 +1,5 @@
 import { theme } from "@socialgouv/cdtn-ui";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import React from "react";
 import Autosuggest from "react-autosuggest";
 import styled from "styled-components";
@@ -9,16 +9,16 @@ import Html from "../../common/Html";
 const { colors } = theme;
 
 export class DocumentSuggester extends React.Component {
-  static propTypes = {
-    hasFocus: PropTypes.bool,
-    inputId: PropTypes.string,
-    onChange: PropTypes.func.isRequired,
-    onClear: PropTypes.func.isRequired,
-    onSearch: PropTypes.func.isRequired,
-    onSelect: PropTypes.func.isRequired,
-    query: PropTypes.string,
-    suggestions: PropTypes.array,
-  };
+  // static propTypes = {
+  //   hasFocus: PropTypes.bool,
+  //   inputId: PropTypes.string,
+  //   onChange: PropTypes.func.isRequired,
+  //   onClear: PropTypes.func.isRequired,
+  //   onSearch: PropTypes.func.isRequired,
+  //   onSelect: PropTypes.func.isRequired,
+  //   query: PropTypes.string,
+  //   suggestions: PropTypes.array,
+  // };
 
   static defaultProps = {
     excludeSources: "",

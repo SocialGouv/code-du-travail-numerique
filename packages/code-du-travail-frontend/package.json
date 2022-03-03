@@ -52,6 +52,7 @@
     "next": "^12.1.0",
     "next-transpile-modules": "^8.0.0",
     "p-debounce": "^2.1.0",
+    "prop-types": "^15.8.1",
     "publicodes": "^1.0.0-beta.16",
     "react": "^17.0.2",
     "react-autosuggest": "10.1.0",
@@ -97,7 +98,6 @@
     "lint-staged": "^12.1.2",
     "mockdate": "^3.0.5",
     "prettier": "^2.3.2",
-    "prop-types": "^15.7.2",
     "stylelint": "^13.13.1",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recommended": "^5.0.0",
@@ -112,23 +112,6 @@
     ],
     "{__mocks__,test,__tests__,pages,server,src}/**/*.{js,ts,tsx,jsx}": [
       "yarn lint-js --fix"
-    ]
-  },
-  "jest": {
-    "testEnvironment": "jsdom",
-    "testMatch": [
-      "**/__tests__/**/*?(*.)+(test|spec).[jt]s?(x)"
-    ],
-    "collectCoverageFrom": [
-      "!src/**/*mock.js",
-      "src/**/*.js"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/test/jest.setup.js"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/.next/",
-      "<rootDir>/node_modules/"
     ]
   }
 }

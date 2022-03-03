@@ -38,7 +38,30 @@ const ccList = [
     idcc: "30",
   },
 ];
-jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => ccList);
+jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
+  { criteria: { bar: "baz", foo: "1| foo" }, idcc: "10" },
+  { criteria: { bar: "bar", foo: "1| foo" }, idcc: "10" },
+  { criteria: { bar: "baz", foo: "2| baz" }, idcc: "10" },
+  { criteria: { bar: "bar", foo: "2| baz" }, idcc: "10" },
+  {
+    allowBonus: false,
+    criteria: { foo: "3| bar" },
+    endMessage: "nope",
+    hasConventionalProvision: true,
+    idcc: "20",
+  },
+  {
+    allowBonus: true,
+    criteria: { foo: "4| baz" },
+    hasConventionalProvision: true,
+    idcc: "20",
+  },
+  {
+    criteria: {},
+    hasConventionalProvision: null,
+    idcc: "30",
+  },
+]);
 
 describe("situations", () => {
   describe("getInitialSituations", () => {
