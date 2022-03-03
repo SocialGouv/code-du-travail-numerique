@@ -1,11 +1,12 @@
 import heureRechercheData from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 import demissionData from "@cdt/data...simulateurs/preavis-demission.data.json";
 import licenciementData from "@cdt/data...simulateurs/preavis-licenciement.data.json";
+import { FormApi } from "final-form";
 import React, { useMemo } from "react";
 
 import Html from "../../common/Html";
 import { MatomoActionEvent, trackQuestion } from "../../lib";
-import { SelectQuestion } from "../common/SelectQuestion";
+import { SelectQuestion } from "./SelectQuestion";
 import {
   filterSituations,
   getFormProps,
@@ -13,23 +14,27 @@ import {
   getOptions,
   getPastQuestions,
   getSituationsFor,
-} from "../common/situations.utils";
-import { SectionTitle } from "../common/stepStyles";
+} from "./situations.utils";
+import { SectionTitle } from "./stepStyles";
+import { FormContent } from "./type/WizardType";
 
 type OpenArray = Array<{
   key: string;
   status: boolean;
 }>;
 
-type Props = {
-  form: any;
+export type StepInformationsProps = {
+  form: FormApi<FormContent>;
   actionEvent?: MatomoActionEvent;
 };
 
-export function StepInformations({ form, actionEvent }: Props): JSX.Element {
+export function StepInformations({
+  form,
+  actionEvent,
+}: StepInformationsProps): JSX.Element {
   const { values } = form.getState();
   const { ccn, criteria = {} } = values;
-  const idcc = ccn ? ccn.num : 0;
+  const idcc = ccn?.selected?.num ?? 0;
 
   const subLabel = (key) =>
     key === "ancienneté"

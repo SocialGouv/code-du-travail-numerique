@@ -2,7 +2,10 @@ import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 
 import { MatomoActionEvent } from "../../lib";
 import { pushAgreementEvents } from "../common";
-import { getSupportedCC, skipStep } from "../common/situations.utils";
+import {
+  getSupportedCC,
+  isAgreementSupported,
+} from "../common/situations.utils";
 import { StepInformations } from "../common/StepInformations";
 import {
   Action,
@@ -58,20 +61,13 @@ export const initialState = {
   ],
 };
 
-const ccnNotProcessed = (values: FormContent): boolean =>
-  skipStep(data.situations, values.ccn?.selected?.num);
-
 function skipTypeRupture(values: FormContent): boolean {
-  return (
-    ccnNotProcessed(values) ||
-    data.situations.filter(({ idcc }) => idcc === values?.ccn?.selected?.num)
-      .length <= 1
-  );
+  return !isAgreementSupported(data.situations, values?.ccn?.selected?.num);
 }
 
 function skipInformations(values: FormContent): boolean {
   return (
-    ccnNotProcessed(values) ||
+    !isAgreementSupported(data.situations, values?.ccn?.selected?.num) ||
     data.situations.filter(
       ({ idcc, typeRupture }) =>
         typeRupture === values?.typeRupture &&
