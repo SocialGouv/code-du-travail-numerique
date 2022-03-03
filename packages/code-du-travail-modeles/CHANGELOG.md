@@ -3,6 +3,70 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.71.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.70.0...v4.71.0) (2022-02-28)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.70.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.69.1...v4.70.0) (2022-02-28)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.69.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.69.0...v4.69.1) (2022-02-25)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.69.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.68.0...v4.69.0) (2022-02-10)
+
+
+### Features
+
+* **simulator:** add new CC 2941 ([#4166](https://github.com/SocialGouv/code-du-travail-numerique/issues/4166)) ([8330d59](https://github.com/SocialGouv/code-du-travail-numerique/commit/8330d59949b592446720173a680e01597d8df2ac))
+
+
+
+
+
+# [4.68.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.1...v4.68.0) (2022-02-02)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.67.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.0...v4.67.1) (2022-01-24)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.67.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.2...v4.67.0) (2022-01-24)
+
+
+### Features
+
+* **modeles:** add cc 2148 for retirement ([#4176](https://github.com/SocialGouv/code-du-travail-numerique/issues/4176)) ([829e66d](https://github.com/SocialGouv/code-du-travail-numerique/commit/829e66da9f4bcab31d8970aaad5f6109c465c686))
+* **modeles:** add cc 86 for retirement simulator / adding selected result to the publicode context ([#4175](https://github.com/SocialGouv/code-du-travail-numerique/issues/4175)) ([b62cf7d](https://github.com/SocialGouv/code-du-travail-numerique/commit/b62cf7d5102f5580a6e6940c59a85b2df3e47b64))
+* **modeles:** cc 2596 for retirement added ([#4164](https://github.com/SocialGouv/code-du-travail-numerique/issues/4164)) ([ffb9815](https://github.com/SocialGouv/code-du-travail-numerique/commit/ffb9815854cc361dec7a5deba6cd3c4e70204ed2))
+
+
+
+
+
 ## [4.66.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.1...v4.66.2) (2022-01-14)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

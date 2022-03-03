@@ -9,14 +9,14 @@ import WarningResult, {
 describe("WarningResult", () => {
   it.each`
     resultValueInDays | type        | ccNumber     | expectedMessage                                                          | expectedWarning
-    ${0}              | ${"depart"} | ${123456789} | ${"Une convention collective de branche"}                                | ${titrePreavis}
+    ${0}              | ${"départ"} | ${123456789} | ${"Une convention collective de branche"}                                | ${titrePreavis}
     ${0}              | ${"mise"}   | ${123456789} | ${"Une convention collective de branche"}                                | ${titrePreavis}
-    ${0}              | ${"depart"} | ${undefined} | ${"Une convention collective de branche"}                                | ${titrePreavis}
+    ${0}              | ${"départ"} | ${undefined} | ${"Une convention collective de branche"}                                | ${titrePreavis}
     ${0}              | ${"mise"}   | ${null}      | ${"Une convention collective de branche"}                                | ${titrePreavis}
-    ${0}              | ${"depart"} | ${1090}      | ${"Un accord collectif d’entreprise"}                                    | ${titrePreavis}
+    ${0}              | ${"départ"} | ${1090}      | ${"Un accord collectif d’entreprise"}                                    | ${titrePreavis}
     ${0}              | ${"mise"}   | ${1090}      | ${"Un accord collectif d’entreprise"}                                    | ${titrePreavis}
-    ${12}             | ${"depart"} | ${123456789} | ${"conduisant à une durée de préavis plus courte."}                      | ${titreFavorable}
-    ${12}             | ${"depart"} | ${1090}      | ${"durée de préavis plus favorable pour le salarié = durée plus courte"} | ${titreFavorable}
+    ${12}             | ${"départ"} | ${123456789} | ${"conduisant à une durée de préavis plus courte."}                      | ${titreFavorable}
+    ${12}             | ${"départ"} | ${1090}      | ${"durée de préavis plus favorable pour le salarié = durée plus courte"} | ${titreFavorable}
     ${12}             | ${"mise"}   | ${123456789} | ${"conduisant à une durée de préavis plus longue."}                      | ${titreFavorable}
     ${12}             | ${"mise"}   | ${1090}      | ${"durée de préavis plus favorable pour le salarié = durée plus longue"} | ${titreFavorable}
   `(

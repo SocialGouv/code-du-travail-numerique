@@ -3,6 +3,93 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.71.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.70.0...v4.71.0) (2022-02-28)
+
+
+### Features
+
+* **alert wording:** fix wording to be generic on all simulators + error on heure de recherches emploi ([#4266](https://github.com/SocialGouv/code-du-travail-numerique/issues/4266)) ([a84b878](https://github.com/SocialGouv/code-du-travail-numerique/commit/a84b87892db97c3f30781d88deacd41afac85bc9))
+
+
+
+
+
+# [4.70.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.69.1...v4.70.0) (2022-02-28)
+
+
+### Features
+
+* **simulators:** Implement new agreement route ([#4205](https://github.com/SocialGouv/code-du-travail-numerique/issues/4205)) ([4f1bc73](https://github.com/SocialGouv/code-du-travail-numerique/commit/4f1bc73e8c1ad498c1b36a086fdd797426892b2c))
+
+
+
+
+
+## [4.69.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.69.0...v4.69.1) (2022-02-25)
+
+
+### Bug Fixes
+
+* **tracking:** fix url sent on route change when tracking outils' start event ([#4254](https://github.com/SocialGouv/code-du-travail-numerique/issues/4254)) ([368b8e3](https://github.com/SocialGouv/code-du-travail-numerique/commit/368b8e3b070fa096fc06a41d17915cced84e9992))
+
+
+
+
+
+# [4.69.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.68.0...v4.69.0) (2022-02-10)
+
+
+### Bug Fixes
+
+* **affichage preavis demission:** Pb affichage résultat préavis de dé… ([#4229](https://github.com/SocialGouv/code-du-travail-numerique/issues/4229)) ([98fde15](https://github.com/SocialGouv/code-du-travail-numerique/commit/98fde15e3663902b5ef59db0d8d1f7c2896db000))
+* **sdr:** link update ([#4240](https://github.com/SocialGouv/code-du-travail-numerique/issues/4240)) ([83113bb](https://github.com/SocialGouv/code-du-travail-numerique/commit/83113bb057d025106cfd763e793e0d8b06ae9002))
+
+
+
+
+
+# [4.68.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.1...v4.68.0) (2022-02-02)
+
+
+### Bug Fixes
+
+* **frontend:** page stats when matomo is down ([#4193](https://github.com/SocialGouv/code-du-travail-numerique/issues/4193)) ([d038840](https://github.com/SocialGouv/code-du-travail-numerique/commit/d03884029c287a4eea33d690dee69d37afb7398f))
+* issues after enabled check null in typescript ([#4213](https://github.com/SocialGouv/code-du-travail-numerique/issues/4213)) ([1e6b727](https://github.com/SocialGouv/code-du-travail-numerique/commit/1e6b727f3c278b13804762985469c5843cc19d39))
+
+
+### Features
+
+* **cc search:** update call for new API ([#4212](https://github.com/SocialGouv/code-du-travail-numerique/issues/4212)) ([923f149](https://github.com/SocialGouv/code-du-travail-numerique/commit/923f149c25f6ffcb687bde560151090e27e24f46))
+* **simulator:** add help button + events ([#4210](https://github.com/SocialGouv/code-du-travail-numerique/issues/4210)) ([253bbd8](https://github.com/SocialGouv/code-du-travail-numerique/commit/253bbd80d2cbf6b8607981cab52614489358d16f))
+
+
+
+
+
+## [4.67.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.0...v4.67.1) (2022-01-24)
+
+
+### Bug Fixes
+
+* **pass:** url ([#4207](https://github.com/SocialGouv/code-du-travail-numerique/issues/4207)) ([b88c03b](https://github.com/SocialGouv/code-du-travail-numerique/commit/b88c03b021caf58f8298bc7f4396aa6d11d42b98))
+
+
+
+
+
+# [4.67.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.2...v4.67.0) (2022-01-24)
+
+
+### Features
+
+* **modeles:** add cc 86 for retirement simulator / adding selected result to the publicode context ([#4175](https://github.com/SocialGouv/code-du-travail-numerique/issues/4175)) ([b62cf7d](https://github.com/SocialGouv/code-du-travail-numerique/commit/b62cf7d5102f5580a6e6940c59a85b2df3e47b64))
+* **redirection:** add new redirection + simplify mapping redirection ([#4190](https://github.com/SocialGouv/code-du-travail-numerique/issues/4190)) ([6d05d54](https://github.com/SocialGouv/code-du-travail-numerique/commit/6d05d548c3a27602c145cf55081646bcdd2c474d))
+* **simulator:** add time picto on all simulator first step ([#4188](https://github.com/SocialGouv/code-du-travail-numerique/issues/4188)) ([2db0bb2](https://github.com/SocialGouv/code-du-travail-numerique/commit/2db0bb279bb4114b56d08402223afa2b0380c471))
+
+
+
+
+
 ## [4.66.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.1...v4.66.2) (2022-01-14)
 
 

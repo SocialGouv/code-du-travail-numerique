@@ -1,5 +1,8 @@
 import debounce from "debounce-promise";
 import memoizee from "memoizee";
+import getConfig from "next/config";
+
+import { Agreement } from "./type";
 
 export interface ApiEnterpriseData {
   entreprises: Enterprise[];
@@ -7,7 +10,7 @@ export interface ApiEnterpriseData {
 
 export interface Enterprise {
   activitePrincipale?: string;
-  conventions: AgreementData[];
+  conventions: Agreement[];
   etablissements: number;
   highlightLabel: string;
   label: string;
@@ -15,21 +18,7 @@ export interface Enterprise {
   simpleLabel: string;
   siren: string;
   address?: string;
-  matchingEtablissement?: MatchingEtablissement;
-}
-
-/**
- * Agreement type from @socialgouv/kali-data/data/index.json
- */
-export interface AgreementData {
-  idcc: number;
-  shortTitle: string;
-  etat?: string;
-  id?: string;
-  mtime?: number;
-  texte_de_base?: string;
-  url?: string;
-  title?: string;
+  firstMatchingEtablissement?: MatchingEtablissement;
 }
 
 export interface MatchingEtablissement {
@@ -46,8 +35,9 @@ const siretLengthError =
 const siretNumberError =
   "Veuillez indiquer un numéro Siret (14 chiffres uniquement)";
 
-const ENTERPRISE_API_URL =
-  "https://api-recherche-entreprises.fabrique.social.gouv.fr/api/v1";
+const {
+  publicRuntimeConfig: { API_URL },
+} = getConfig();
 
 const apiEnterprises = memoizee(function createFetcher(query, address) {
   if (/^\d{2,8}$/.test(query.replace(/\s/g, ""))) {
@@ -63,9 +53,9 @@ const apiEnterprises = memoizee(function createFetcher(query, address) {
     return Promise.reject(siretNumberError);
   }
 
-  const url = `${ENTERPRISE_API_URL}/search?q=${encodeURIComponent(query)}${
+  const url = `${API_URL}/enterprises?q=${encodeURIComponent(query)}${
     address ? `&a=${encodeURIComponent(address)}` : ""
-  }&onlyWithConvention=true`;
+  }`;
 
   // if (/^\d{14}$/.test(query.replace(/\s/g, ""))) {
   //   url = `${ENTERPRISE_API_URL}/etablissement/${query}`;

@@ -5,10 +5,10 @@ import PropTypes from "prop-types";
 import React from "react";
 import { Field } from "react-final-form";
 
-import { parse } from "../../common/date";
 import { Error } from "../../common/ErrorField";
 import { Question } from "../../common/Question";
 import { SmallText } from "../../common/stepStyles";
+import { parse } from "../../common/utils/";
 import { isNumber } from "../../common/validators";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
 import { MOTIFS } from "../components/AbsencePeriods";

@@ -1,7 +1,6 @@
 import { differenceInMonths, isAfter, max, min } from "date-fns";
 
-import { parse } from "../../../common/date";
-import { round, sum } from "../../../common/math";
+import { parse, round, sum } from "../../../common/utils";
 import {
   CADRE,
   DISCIPLINAIRE,

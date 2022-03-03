@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import { Alert } from "../Alert";
@@ -11,14 +11,8 @@ export const DisclosureIcon = ({
   iconTitle,
   children,
   onVisibilityChange,
+  isTooltipOpen,
 }) => {
-  const [isNoticeVisible, setIsNoticeVisible] = useState(false);
-
-  const handleClick = () => {
-    setIsNoticeVisible(!isNoticeVisible);
-    if (onVisibilityChange) onVisibilityChange(!isNoticeVisible);
-  };
-
   return (
     <>
       <DisclosureIconButton
@@ -27,11 +21,11 @@ export const DisclosureIcon = ({
         variant="navLink"
         size="small"
         type="button"
-        onClick={handleClick}
+        onClick={onVisibilityChange}
       >
         {icon}
       </DisclosureIconButton>
-      {isNoticeVisible && (
+      {isTooltipOpen && (
         <AlertWithMargin size="small" variant="secondary">
           {children}
         </AlertWithMargin>
@@ -60,5 +54,6 @@ DisclosureIcon.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.node.isRequired,
   iconTitle: PropTypes.string.isRequired,
-  onVisibilityChange: PropTypes.func,
+  isTooltipOpen: PropTypes.bool.isRequired,
+  onVisibilityChange: PropTypes.func.isRequired,
 };

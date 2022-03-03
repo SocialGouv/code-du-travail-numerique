@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { trackHelpQuestionRetraite } from "../../../lib/matomo";
+import { MatomoActionEvent, trackQuestion } from "../../../lib";
 import { TextQuestion } from "../../common/TextQuestion";
-import { MatomoPreavisRetraiteTrackTitle } from "../../common/type/matomo";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { isPositiveNumber } from "../../common/validators";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
@@ -23,8 +22,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
 
   useEffect(() => {
     if (
-      form.getState().values.ccn &&
-      form.getState().values.ccn.num === 2264 &&
+      form.getState().values.ccn?.selected?.num === 2264 &&
       form.getState().values["contrat salarié - mise à la retraite"] === "oui"
     ) {
       setQuestion(
@@ -61,9 +59,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
           ),
           trackableFn: (visibility: boolean) => {
             if (visibility) {
-              trackHelpQuestionRetraite(
-                MatomoPreavisRetraiteTrackTitle.ANCIENNETE
-              );
+              trackQuestion("Ancienneté", MatomoActionEvent.PREAVIS_RETRAITE);
             }
           },
         }}

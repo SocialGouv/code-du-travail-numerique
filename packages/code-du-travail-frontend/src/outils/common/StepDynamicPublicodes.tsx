@@ -1,8 +1,11 @@
 import React, { useEffect, useMemo } from "react";
 
-import { trackSelectQuestionRetraite } from "../../lib/matomo";
-import { Rule, usePublicodes } from "../publicodes";
-import { mapToPublicodesSituation } from "../publicodes/Utils";
+import { MatomoActionEvent, trackQuestion } from "../../lib/matomo";
+import {
+  mapToPublicodesSituationForPreavisDeRetraite,
+  Rule,
+  usePublicodes,
+} from "../publicodes";
 import PubliQuestion from "./PubliQuestion";
 import { WizardStepProps } from "./type/WizardType";
 
@@ -33,7 +36,9 @@ function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
   const formValues = form.getState().values;
 
   useEffect(() => {
-    publicodesContext.setSituation(mapToPublicodesSituation(formValues));
+    publicodesContext.setSituation(
+      mapToPublicodesSituationForPreavisDeRetraite(formValues)
+    );
   }, [formValues]);
 
   const memoizedQuestions: Question[] = useMemo(() => {
@@ -88,8 +93,10 @@ function StepDynamicPublicodes({ excludedRules, form }: Props): JSX.Element {
     });
   };
 
-  const onTrackDynamicRule = (titleQuestion: string): void => {
-    trackSelectQuestionRetraite(titleQuestion);
+  const onTrackDynamicRule = (titleQuestion: string | undefined): void => {
+    if (titleQuestion) {
+      trackQuestion(titleQuestion, MatomoActionEvent.PREAVIS_RETRAITE, false);
+    }
   };
 
   return (

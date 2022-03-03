@@ -1,8 +1,7 @@
 import { Paragraph } from "@socialgouv/cdtn-ui";
 import React from "react";
 
-import { RuleType, SituationElement } from "../publicodes";
-import { reverseValues } from "../publicodes/Utils";
+import { reverseValues, RuleType, SituationElement } from "../publicodes";
 import { SectionTitle } from "./stepStyles";
 
 type PublicodesInputProps = {
@@ -26,7 +25,7 @@ const SituationInput = ({ element }: PublicodesInputProps): JSX.Element => {
 type Props = {
   situation: SituationElement[];
   annotations?: JSX.Element[];
-  onOverrideInput?: (element: SituationElement) => JSX.Element;
+  onOverrideInput?: (element: SituationElement) => JSX.Element | null;
 };
 
 const PubliSituation = ({

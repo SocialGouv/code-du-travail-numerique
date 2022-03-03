@@ -10,21 +10,21 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
-import {} from "../../common/type/WizardType";
 import { ScreenType } from "../common/NavContext";
-import { useTrackingContext } from "../common/TrackingContext";
+import { TrackingProps, UserAction } from "../types";
 
-const IntroductionStep = (): JSX.Element => {
-  const { trackEvent, uuid, title } = useTrackingContext();
+type Props = TrackingProps;
 
+const IntroductionStep = ({ onUserAction }: Props): JSX.Element => {
   return (
     <>
       <AlertWithIcon variant="secondary">
         <p>
           La convention collective est un texte conclu au niveau d’une branche
-          d’activité (Ex : Transports routiers). Elle adapte les règles du code
-          du travail aux situations particulières de la branche (primes, congés,
-          salaires minima, préavis, prévoyance…).
+          d’activité (Ex : Transports routiers). Elle adapte les règles du Code
+          du travail sur des points précis, en fonction des situations
+          particulières de la branche (primes, congés, salaires minima, préavis,
+          prévoyance…).
         </p>
         <Paragraph noMargin fontWeight="700">
           Vous pouvez retrouver le nom de votre convention collective sur votre
@@ -36,11 +36,7 @@ const IntroductionStep = (): JSX.Element => {
           href={`/${SOURCES.TOOLS}/convention-collective#${ScreenType.agreement}`}
           passHref
         >
-          <Tile
-            onClick={() =>
-              trackEvent("cc_search_type_of_users", " click_p1", title, uuid)
-            }
-          >
+          <Tile onClick={() => onUserAction(UserAction.SelectAgreementRoute)}>
             <Paragraph noMargin fontWeight="700">
               Je connais
               <br /> ma convention collective
@@ -56,11 +52,7 @@ const IntroductionStep = (): JSX.Element => {
           href={`/${SOURCES.TOOLS}/convention-collective#${ScreenType.enterprise}`}
           passHref
         >
-          <Tile
-            onClick={() =>
-              trackEvent("cc_search_type_of_users", " click_p2", title, uuid)
-            }
-          >
+          <Tile onClick={() => onUserAction(UserAction.SelectEnterpriseRoute)}>
             <Paragraph noMargin fontWeight="700">
               Je ne connais <br /> pas ma convention collective
             </Paragraph>
