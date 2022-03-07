@@ -1,0 +1,63 @@
+import {
+  Container,
+  Grid,
+  PageTitle,
+  Paragraph,
+  Section,
+  Wrapper,
+} from "@socialgouv/cdtn-ui";
+import Link from "next/link";
+import React from "react";
+
+import Metas from "../../src/common/Metas";
+import { CallToActionTile } from "../../src/common/tiles/CallToAction";
+import { Layout } from "../../src/layout/Layout";
+
+const FindAnswerPage = (): JSX.Element => (
+  <Layout>
+    <Metas
+      title="Widget pour intégrer le Code du travail numérique à votre site"
+      description="Intégrez le moteur de recherche du Code du travail numérique sur votre site grâce à un module (widget)."
+    />
+
+    <Section>
+      <Container>
+        <PageTitle>Intégrer le Code du travail numérique</PageTitle>
+
+        <Wrapper variant="main">
+          <p>
+            L’équipe du Code du travail numérique vous propose d’intégrer son
+            moteur de recherche sur votre site grâce à un module (widget).
+          </p>
+          <Grid>
+            <Link href="/integration/trouver-une-reponse" passHref>
+              <CallToActionTile
+                action="Installer"
+                title="Trouvez les réponses à vos questions en droit du travail "
+                titleTagType="h2"
+              >
+                <Paragraph>
+                  Intégrez le moteur de recherche du Code du travail numérique
+                </Paragraph>
+              </CallToActionTile>
+            </Link>
+            <Link href="/integration/preavis-retraite" passHref>
+              <CallToActionTile
+                action="Installer"
+                title="Prévis de départ ou mise à la retraite"
+                titleTagType="h2"
+              >
+                <Paragraph>
+                  Calculer la durée de préavis à respecter en cas de départ ou
+                  mise à la retraite
+                </Paragraph>
+              </CallToActionTile>
+            </Link>
+          </Grid>
+        </Wrapper>
+      </Container>
+    </Section>
+  </Layout>
+);
+
+export default FindAnswerPage;
