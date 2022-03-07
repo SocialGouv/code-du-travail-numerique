@@ -14,6 +14,8 @@ import {
 } from "./common/NavContext";
 import { TrackingProvider, useTrackingContext } from "./common/TrackingContext";
 import Steps from "./steps";
+import handleTrackEvent from "./tracking/HandleTrackEvent";
+import { OnUserAction, UserAction } from "./types";
 
 interface Props {
   icon: string;
@@ -22,8 +24,13 @@ interface Props {
 
 function AgreementSearchTool({ icon, title }: Props): JSX.Element {
   const [screen, setScreen] = useState<ScreenType | null>(null);
-  const { setEnterprise, setSearchParams } = useNavContext();
+  const { setEnterprise, setSearchParams, searchParams } = useNavContext();
   const { uuid, trackEvent } = useTrackingContext();
+  const router = useRouter();
+
+  const onUserAction: OnUserAction = (action: UserAction, extra?: unknown) => {
+    handleTrackEvent(trackEvent, uuid, title, action, extra);
+  };
 
   function clearSelection() {
     setEnterprise(null);
@@ -66,7 +73,17 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
     setScreen(value);
   }
 
-  const router = useRouter();
+  function handleEnterpriseSelection(
+    enterprise: Enterprise,
+    params: SearchParams
+  ) {
+    setEnterprise(enterprise);
+    setSearchParams(params);
+
+    router.push(
+      `/${SOURCES.TOOLS}/convention-collective#${ScreenType.agreementSelection}`
+    );
+  }
 
   useEffect(() => {
     router.replace(`/${SOURCES.TOOLS}/convention-collective`, undefined, {
@@ -81,16 +98,45 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
   let Step;
   switch (screen) {
     case ScreenType.agreement:
-      Step = <Steps.AgreementSearchStep onBackClick={clearSearchType} />;
+      Step = (
+        <Steps.AgreementSearchStep
+          embeddedForm
+          onBackClick={clearSearchType}
+          onSelectAgreement={(agreement) => {
+            trackEvent(
+              "cc_select_p1",
+              title,
+              `idcc${agreement.num.toString()}`,
+              uuid
+            );
+            router.push(`/convention-collective/${agreement.slug}`);
+          }}
+          onUserAction={onUserAction}
+        />
+      );
       break;
     case ScreenType.enterprise:
-      Step = <Steps.EnterpriseSearchStep onBackClick={clearSearchType} />;
+      Step = (
+        <Steps.EnterpriseSearchStep
+          embeddedForm={true}
+          onSearchParamsChange={(params) => setSearchParams(params)}
+          searchParams={searchParams}
+          handleEnterpriseSelection={handleEnterpriseSelection}
+          onBackClick={clearSearchType}
+          onUserAction={onUserAction}
+        />
+      );
       break;
     case ScreenType.agreementSelection:
-      Step = <Steps.AgreementSelectionStep onBackClick={clearSelection} />;
+      Step = (
+        <Steps.AgreementSelectionStep
+          onBackClick={clearSelection}
+          onUserAction={onUserAction}
+        />
+      );
       break;
     default:
-      Step = <Steps.IntroductionStep />;
+      Step = <Steps.IntroductionStep onUserAction={onUserAction} />;
   }
   return (
     <WizardWrapper variant="main">

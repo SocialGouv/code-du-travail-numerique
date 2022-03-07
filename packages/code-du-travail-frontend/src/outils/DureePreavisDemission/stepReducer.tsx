@@ -1,9 +1,16 @@
 import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 
-import { isNotYetProcessed } from "../common/situations.utils";
-import { Action, State } from "../common/type/WizardType";
-import { StepInformations } from "./steps/Informations";
-import { StepInfoCCn } from "./steps/InfosCCn";
+import { MatomoActionEvent } from "../../lib";
+import { pushAgreementEvents } from "../common";
+import { getSupportedCC, skipInformations } from "../common/situations.utils";
+import { StepInformations } from "../common/StepInformations";
+import {
+  Action,
+  ActionName,
+  FormContent,
+  State,
+} from "../common/type/WizardType";
+import { AgreementStep } from "./steps/AgreementStep";
 import { StepIntro } from "./steps/Introduction";
 import { StepResult } from "./steps/Result";
 
@@ -16,19 +23,24 @@ export const initialState = {
       name: "intro",
     },
     {
-      component: StepInfoCCn,
+      component: AgreementStep,
       label: "Convention collective",
       name: "info_cc",
+      onStepDone: (title: string, values: FormContent): void => {
+        pushAgreementEvents(title, values.ccn, getSupportedCC(data.situations));
+      },
     },
     {
       component: StepInformations,
+      componentProps: {
+        actionEvent: MatomoActionEvent.PREAVIS_DEMISSION,
+      },
       hasNoMarginBottom: true,
       isForm: true,
       label: "Informations",
       name: "infos",
-      skip: (values) =>
-        !values.ccn ||
-        (values.ccn && isNotYetProcessed(data.situations, values.ccn.num)),
+      skip: (values: FormContent): boolean =>
+        skipInformations(data.situations, values.ccn?.selected?.num),
     },
     {
       component: StepResult,
@@ -40,14 +52,11 @@ export const initialState = {
 
 export function stepReducer(state: State, action: Action): State {
   switch (action.type) {
-    case "reset": {
+    case ActionName.reset: {
       return { ...initialState };
     }
-    case "setStepIndex": {
+    case ActionName.setStepIndex: {
       return { stepIndex: action.payload, steps: state.steps };
     }
-    default:
-      console.warn("action unknow", action.type);
-      return state;
   }
 }

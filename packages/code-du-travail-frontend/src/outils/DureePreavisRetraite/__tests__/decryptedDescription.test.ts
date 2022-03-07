@@ -118,13 +118,13 @@ describe("Validation de l'aggregation des données", () => {
 
   test.each`
     ccnNum  | type        | handicap | seniority | result                | legalResult           | agreementResult       | expectedNoticeUsed           | expectedAgreement
-    ${null} | ${"depart"} | ${"oui"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${null}
+    ${null} | ${"départ"} | ${"oui"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${null}
     ${null} | ${"mise"}   | ${"non"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${null}
-    ${null} | ${"depart"} | ${"oui"} | ${"24"}   | ${{ valueInDays: 2 }} | ${{ valueInDays: 2 }} | ${null}               | ${NoticeUsed.legal}          | ${null}
-    ${123}  | ${"depart"} | ${"non"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${agreementNotSupported}
-    ${321}  | ${"depart"} | ${"oui"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${agreementPlanned}
-    ${292}  | ${"depart"} | ${"non"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${NoticeUsed.none}           | ${getAgreementSupported(0)}
-    ${292}  | ${"depart"} | ${"oui"} | ${"5"}    | ${{ valueInDays: 2 }} | ${{ valueInDays: 0 }} | ${{ valueInDays: 2 }} | ${NoticeUsed.agreementLabor} | ${getAgreementSupported(2)}
+    ${null} | ${"départ"} | ${"oui"} | ${"24"}   | ${{ valueInDays: 2 }} | ${{ valueInDays: 2 }} | ${null}               | ${NoticeUsed.legal}          | ${null}
+    ${123}  | ${"départ"} | ${"non"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${agreementNotSupported}
+    ${321}  | ${"départ"} | ${"oui"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${null}               | ${NoticeUsed.none}           | ${agreementPlanned}
+    ${292}  | ${"départ"} | ${"non"} | ${"5"}    | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${{ valueInDays: 0 }} | ${NoticeUsed.none}           | ${getAgreementSupported(0)}
+    ${292}  | ${"départ"} | ${"oui"} | ${"5"}    | ${{ valueInDays: 2 }} | ${{ valueInDays: 0 }} | ${{ valueInDays: 2 }} | ${NoticeUsed.agreementLabor} | ${getAgreementSupported(2)}
     ${292}  | ${"mise"}   | ${"non"} | ${"23"}   | ${{ valueInDays: 4 }} | ${{ valueInDays: 3 }} | ${{ valueInDays: 4 }} | ${NoticeUsed.agreementLabor} | ${getAgreementSupported(4)}
     ${292}  | ${"mise"}   | ${"oui"} | ${"23"}   | ${{ valueInDays: 4 }} | ${{ valueInDays: 4 }} | ${{ valueInDays: 3 }} | ${NoticeUsed.legal}          | ${getAgreementSupported(3)}
     ${292}  | ${"mise"}   | ${"non"} | ${"23"}   | ${{ valueInDays: 4 }} | ${{ valueInDays: 4 }} | ${{ valueInDays: 4 }} | ${NoticeUsed.same}           | ${getAgreementSupported(4)}
@@ -141,17 +141,20 @@ describe("Validation de l'aggregation des données", () => {
       expectedNoticeUsed,
       expectedAgreement,
     }) => {
-      let ccn: ConventionCollective | null = null;
+      let ccn: ConventionCollective | undefined = undefined;
       if (ccnNum) {
         ccn = {
-          id: "ID",
-          num: ccnNum,
-          shortTitle: "ShortTitle",
-          slug: "slug",
-          title: "Title",
+          route: "not-selected",
+          selected: {
+            id: "ID",
+            num: ccnNum,
+            shortTitle: "ShortTitle",
+            slug: "slug",
+            title: "Title",
+          },
         };
       }
-      const data: unknown = {
+      const data: FormContent = {
         ccn,
         "contrat salarié - ancienneté": seniority,
         "contrat salarié - mise à la retraite": type === "mise" ? "oui" : "non",
@@ -167,7 +170,7 @@ describe("Validation de l'aggregation des données", () => {
         supportedCcn
       );
 
-      expect(rootData.isVoluntary).toEqual(type === "depart");
+      expect(rootData.isVoluntary).toEqual(type === "départ");
       expect(rootData.seniorityLessThan6Months).toEqual(seniority < 6);
       expect(rootData.noticeUsed).toEqual(expectedNoticeUsed);
       expect(rootData.agreement).toEqual(expectedAgreement);

@@ -6,6 +6,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
   },
   rules: {
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
     "@typescript-eslint/no-require-imports": "warn",
     "@typescript-eslint/prefer-nullish-coalescing": "warn",
     "@typescript-eslint/no-var-requires": "warn",

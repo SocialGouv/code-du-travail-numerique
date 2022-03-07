@@ -9,7 +9,7 @@
 <br/>
 
 - Consulter le [site internet code.travail.gouv.fr](https://code.travail.gouv.fr)
-- A propos du code du travail numérique : [https://code.travail.gouv.fr/a-propos](https://code.travail.gouv.fr/a-propos)
+- À propos du code du travail numérique : [https://code.travail.gouv.fr/a-propos](https://code.travail.gouv.fr/a-propos)
 - L'[histoire du projet](https://incubateur.social.gouv.fr/startups/code-du-travail-numerique)
 
 ## Contribuer
@@ -22,7 +22,3 @@
 Retrouvez toutes les infos techniques pour démarrer le projet sur [README-dev](./README-dev.md).
 
 Notre bibliothèque de composants UI est disponible en démo [ici](https://socialgouv.github.io/code-du-travail-numerique/).
-
-## License
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FSocialGouv%2Fcode-du-travail-numerique.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FSocialGouv%2Fcode-du-travail-numerique?ref=badge_large)

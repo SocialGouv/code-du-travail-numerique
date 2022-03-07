@@ -2,8 +2,8 @@ import { theme, Toast } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
-import { round } from "../../../../common/math";
 import { Highlight } from "../../../../common/stepStyles";
+import { round } from "../../../../common/utils";
 import { IndemniteCCn } from "../../../components/IndemniteConventionnelle";
 import { getIndemniteFromFinalForm } from "../../../indemnite";
 import { getIndemniteConventionnelle } from "../indemnite";

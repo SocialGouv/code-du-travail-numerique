@@ -1,4 +1,4 @@
-import { round } from "../../../common/math";
+import { round } from "../../../common/utils";
 /**
  * calcul de l'indemnite de licenciement conventionnelle
  * des industries chimiques et connexes
