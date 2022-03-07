@@ -11,7 +11,7 @@ Fonctionnalité: Outil - Heures pour recherche d’emploi
 
     Alors je vois "Étapes"
     Alors je vois "Heures pour recherche d’emploi"
-    Alors je vois "Ce simulateur vous permet de savoir si le salarié peut bénéficier d’heures d’absence autorisée pendant son préavis pour rechercher un emploi."
+    Alors je vois "permet de calculer le nombre d’heures d’absence autorisée pendant la période de préavis"
 
     Quand je clique sur "Commencer"
 
@@ -32,7 +32,7 @@ Fonctionnalité: Outil - Heures pour recherche d’emploi
 
     Alors je vois "Étapes"
     Alors je vois "Heures pour recherche d’emploi"
-    Alors je vois "Ce simulateur vous permet de savoir si le salarié peut bénéficier d’heures d’absence autorisée pendant son préavis pour rechercher un emploi."
+    Alors je vois "permet de calculer le nombre d’heures d’absence autorisée pendant la période de préavis"
 
     Quand je clique sur "Commencer"
 
@@ -67,7 +67,7 @@ Fonctionnalité: Outil - Heures pour recherche d’emploi
 
     Alors je vois "Étapes"
     Alors je vois "Heures pour recherche d’emploi"
-    Alors je vois "Ce simulateur vous permet de savoir si le salarié peut bénéficier d’heures d’absence autorisée pendant son préavis pour rechercher un emploi."
+    Alors je vois "permet de calculer le nombre d’heures d’absence autorisée pendant la période de préavis"
 
     Quand je clique sur "Commencer"
 

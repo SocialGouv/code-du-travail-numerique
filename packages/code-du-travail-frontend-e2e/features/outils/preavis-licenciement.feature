@@ -11,7 +11,7 @@ Fonctionnalité: Outil - Préavis de licenciement
 
     Alors je vois "Étapes"
     Alors je vois "Préavis de licenciement"
-    Alors je vois "Le préavis est une période accordée au salarié entre la notification du licenciement et son départ effectif de l’entreprise (fin du contrat)."
+    Alors je vois "permet de calculer la durée du préavis accordée au salarié en cas de licenciement"
 
     Quand je clique sur "Commencer"
 
@@ -44,7 +44,7 @@ Fonctionnalité: Outil - Préavis de licenciement
 
     Alors je vois "Étapes"
     Alors je vois "Préavis de licenciement"
-    Alors je vois "Le préavis est une période accordée au salarié entre la notification du licenciement et son départ effectif de l’entreprise (fin du contrat)."
+    Alors je vois "permet de calculer la durée du préavis accordée au salarié en cas de licenciement"
 
     Quand je clique sur "Commencer"
 

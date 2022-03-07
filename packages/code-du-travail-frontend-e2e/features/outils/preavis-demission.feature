@@ -11,7 +11,7 @@ Fonctionnalité: Outil - Préavis de démission
 
     Alors je vois "Étapes"
     Alors je vois "Préavis de démission"
-    Alors je vois "Le présent outil vous permet de connaitre la durée du préavis prévue par la convention collective en matière de démission."
+    Alors je vois "permet de calculer la durée du préavis que le salarié doit respecter en cas de démission"
 
     Quand je clique sur "Commencer"
 
@@ -31,7 +31,7 @@ Fonctionnalité: Outil - Préavis de démission
 
     Alors je vois "Étapes"
     Alors je vois "Préavis de démission"
-    Alors je vois "Le présent outil vous permet de connaitre la durée du préavis prévue par la convention collective en matière de démission."
+    Alors je vois "permet de calculer la durée du préavis que le salarié doit respecter en cas de démission"
 
     Quand je clique sur "Commencer"
 
