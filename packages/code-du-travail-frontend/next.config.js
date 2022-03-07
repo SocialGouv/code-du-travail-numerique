@@ -12,6 +12,47 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
+const csp = {
+  "default-src": [
+    "'self'",
+    "*.travail.gouv.fr",
+    "*.data.gouv.fr",
+    "*.fabrique.social.gouv.fr",
+  ],
+  "connect-src": ["'self'", "data:", "blob:", "*.fabrique.social.gouv.fr"],
+  "font-src": ["'self'", "data:"],
+  "img-src": [
+    "'self'",
+    "data:",
+    "*.fabrique.social.gouv.fr",
+    "https://travail-emploi.gouv.fr",
+    "https://mon-entreprise.urssaf.fr",
+    process.env.AZURE_BASE_URL,
+  ],
+  "script-src": [
+    "'self'",
+    "https://mon-entreprise.urssaf.fr",
+    "*.fabrique.social.gouv.fr",
+    "https://cdnjs.cloudflare.com",
+  ],
+  "frame-src": [
+    "'self'",
+    "https://mon-entreprise.urssaf.fr",
+    "https://matomo.fabrique.social.gouv.fr",
+    "*.dailymotion.com",
+  ],
+  "style-src": ["'self'", "'unsafe-inline'"],
+  "prefetch-src": ["'self'", "*.fabrique.social.gouv.fr"],
+  ...(process.env.NEXT_PUBLIC_SENTRY_DSN && {
+    reportUri: process.env.NEXT_PUBLIC_SENTRY_DSN,
+  }),
+};
+
+// In dev we allow 'unsafe-eval', so HMR doesn't trigger the CSP
+if (process.env.NODE_ENV !== "production") {
+  csp["script-src"].push("'unsafe-eval'");
+}
+
 const { withSentryConfig } = require("@sentry/nextjs");
 
 const compose =
@@ -53,64 +94,25 @@ const nextConfig = {
 };
 
 module.exports = {
-  // async headers() {
-  //   return [
-  //     {
-  //       headers: securityHeaders,
-  //       // Apply these headers to all routes in your application.
-  //       source: "/:path*",
-  //     },
-  //   ];
-  // },
-
-  // const cspConfig = {
-  //   directives: {
-  //     defaultSrc: [
-  //       "'self'",
-  //       "*.travail.gouv.fr",
-  //       "*.data.gouv.fr",
-  //       "*.fabrique.social.gouv.fr",
-  //     ],
-  //     "font-src": ["'self'", "data:", "blob:"],
-  //     frameSrc: [
-  //       "'self'",
-  //       "https://mon-entreprise.urssaf.fr",
-  //       "https://matomo.fabrique.social.gouv.fr",
-  //       "*.dailymotion.com",
-  //     ],
-  //     imgSrc: [
-  //       "'self'",
-  //       "data:",
-  //       "*.fabrique.social.gouv.fr",
-  //       "https://travail-emploi.gouv.fr",
-  //       "https://mon-entreprise.urssaf.fr",
-  //       AZURE_BASE_URL,
-  //     ],
-  //     scriptSrc: [
-  //       "'self'",
-  //       "https://mon-entreprise.urssaf.fr",
-  //       "*.fabrique.social.gouv.fr",
-  //       "https://cdnjs.cloudflare.com",
-  //     ],
-  //     styleSrc: ["'self'", "'unsafe-inline'"],
-  //     ...(process.env.NEXT_PUBLIC_SENTRY_DSN && {
-  //       reportUri: process.env.NEXT_PUBLIC_SENTRY_DSN,
-  //     }),
-  //   },
-  // };
-
-  // if (!IS_PRODUCTION_DEPLOYMENT) {
-  //   server.use(async function (ctx, next) {
-  //     ctx.set({ "X-Robots-Tag": "noindex, nofollow, nosnippet" });
-  //     await next();
-  //   });
-  // }
-
-  // router.get("/robots.txt", async (ctx) => {
-  //   ctx.type = "text/plain";
-  //   ctx.body = IS_PRODUCTION_DEPLOYMENT ? robotsProd : robotsDev;
-  // });
-
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value: Object.keys(csp)
+              .map((key) => `${key} ${csp[key].join(" ")}`)
+              .join(";"),
+          },
+          ...(!process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true" && {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow, nosnippet",
+          }),
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       {
@@ -122,6 +124,11 @@ module.exports = {
         destination: "/themes/:slug",
         permanent: true,
         source: "/themes/(\\d{1,}-):slug",
+      },
+      {
+        destination: "/api/health",
+        permanent: true,
+        source: "/health",
       },
     ];
   },

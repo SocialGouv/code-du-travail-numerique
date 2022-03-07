@@ -90,13 +90,9 @@ MyApp.getInitialProps = async ({ Component, ctx }) => {
 
   if (Component.getInitialProps) {
     try {
-      const initialProps = await Component.getInitialProps(ctx);
-      if (initialProps.statusCode) {
-        ctx.res.statusCode = initialProps.statusCode;
-      }
       pageProps = await Component.getInitialProps(ctx);
     } catch (err) {
-      ctx.res.statusCode = 500;
+      console.log(err);
       pageProps = { message: err.message, statusCode: 500 };
     }
   }
