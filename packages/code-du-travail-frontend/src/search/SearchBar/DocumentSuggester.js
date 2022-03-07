@@ -1,5 +1,5 @@
 import { theme } from "@socialgouv/cdtn-ui";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import React from "react";
 import Autosuggest from "react-autosuggest";
 import styled from "styled-components";
@@ -9,25 +9,6 @@ import Html from "../../common/Html";
 const { colors } = theme;
 
 export class DocumentSuggester extends React.Component {
-  // static propTypes = {
-  //   hasFocus: PropTypes.bool,
-  //   inputId: PropTypes.string,
-  //   onChange: PropTypes.func.isRequired,
-  //   onClear: PropTypes.func.isRequired,
-  //   onSearch: PropTypes.func.isRequired,
-  //   onSelect: PropTypes.func.isRequired,
-  //   query: PropTypes.string,
-  //   suggestions: PropTypes.array,
-  // };
-
-  static defaultProps = {
-    excludeSources: "",
-    hasFocus: false,
-    inputId: "main-search-input",
-    query: "",
-    suggestions: [],
-  };
-
   focusInput = (autoSuggest) => {
     if (autoSuggest !== null && this.props.hasFocus) {
       autoSuggest.input.focus();
@@ -107,6 +88,26 @@ export class DocumentSuggester extends React.Component {
     );
   }
 }
+
+DocumentSuggester.propTypes = {
+  hasFocus: PropTypes.bool,
+  inputId: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+  onClear: PropTypes.func.isRequired,
+  onSearch: PropTypes.func.isRequired,
+  onSelect: PropTypes.func.isRequired,
+  query: PropTypes.string,
+  suggestions: PropTypes.array,
+  children: PropTypes.node,
+};
+
+DocumentSuggester.defaultProps = {
+  excludeSources: "",
+  hasFocus: false,
+  inputId: "main-search-input",
+  query: "",
+  suggestions: [],
+};
 
 const getSuggestionValue = (suggestion) => suggestion;
 

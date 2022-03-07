@@ -1,5 +1,5 @@
 import * as Sentry from "@sentry/nextjs";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import React from "react";
 
 class ErrorBoundary extends React.Component {
@@ -7,14 +7,6 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-
-  // static propTypes = {
-  //   message: PropTypes.string,
-  // };
-
-  static defaultProps = {
-    message: "widget non disponible",
-  };
 
   componentDidCatch(err) {
     Sentry.captureException(err);
@@ -32,5 +24,14 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+
+ErrorBoundary.propTypes = {
+  children: PropTypes.node,
+  message: PropTypes.string,
+};
+
+ErrorBoundary.defaultProps = {
+  message: "widget non disponible",
+};
 
 export { ErrorBoundary };

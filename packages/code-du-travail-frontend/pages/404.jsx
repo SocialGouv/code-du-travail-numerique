@@ -15,7 +15,10 @@ export default function Custom404() {
   return (
     <>
       <Head>
-        <Metas title="Page non trouvée" description="Page 404" />
+        <Metas
+          title="Page non trouvée"
+          description="La page que vous cherchez n'a pas été trouvée..."
+        />
       </Head>
       <Layout>
         <CenteredContainer>

@@ -105,10 +105,13 @@ module.exports = {
               .map((key) => `${key} ${csp[key].join(" ")}`)
               .join(";"),
           },
-          ...(!process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true" && {
+          {
             key: "X-Robots-Tag",
-            value: "noindex, nofollow, nosnippet",
-          }),
+            value:
+              process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT !== "true"
+                ? "noindex, nofollow, nosnippet"
+                : "all",
+          },
         ],
       },
     ];

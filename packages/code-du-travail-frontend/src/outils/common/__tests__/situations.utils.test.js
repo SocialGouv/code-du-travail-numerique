@@ -38,6 +38,7 @@ const ccList = [
     idcc: "30",
   },
 ];
+
 jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
   { criteria: { bar: "baz", foo: "1| foo" }, idcc: "10" },
   { criteria: { bar: "bar", foo: "1| foo" }, idcc: "10" },
