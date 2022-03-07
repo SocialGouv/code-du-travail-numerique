@@ -1,32 +1,33 @@
 import { Button, theme, Tile } from "@socialgouv/cdtn-ui";
-import PropTypes from "prop-types";
-import React from "react";
+import React, { ForwardedRef } from "react";
 import styled from "styled-components";
 
-export const CallToActionTile = React.forwardRef(
-  ({ action, children, ...props }, ref) => (
-    <StyledTile custom {...props} ref={ref}>
-      <TileChildren>
-        {children}
-        <StyledDiv hasContentAbove={Boolean(children)}>
-          <Button variant="link">{action}</Button>
-        </StyledDiv>
-      </TileChildren>
-    </StyledTile>
-  )
+type Props = {
+  children: React.ReactNode | null;
+  action: string;
+  title: string;
+  titleTagType: string;
+};
+
+export const CallToActionTile = React.forwardRef<HTMLAnchorElement, Props>(
+  function _CallToActionTile(
+    { action = "", children, ...props }: Props,
+    ref: ForwardedRef<any>
+  ): JSX.Element {
+    return (
+      <StyledTile custom {...props} ref={ref}>
+        <TileChildren>
+          {children}
+          <StyledDiv hasContentAbove={Boolean(children)}>
+            <Button variant="link">{action}</Button>
+          </StyledDiv>
+        </TileChildren>
+      </StyledTile>
+    );
+  }
 );
 
 CallToActionTile.displayName = "CallToActionTile";
-
-CallToActionTile.propTypes = {
-  action: PropTypes.string,
-  children: PropTypes.node,
-};
-
-CallToActionTile.defaultProps = {
-  action: "",
-  children: null,
-};
 
 const { spacings, breakpoints, fonts } = theme;
 
