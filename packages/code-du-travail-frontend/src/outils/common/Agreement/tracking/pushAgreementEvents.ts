@@ -48,7 +48,9 @@ const pushAgreementEvents = (
   if (values.selected) {
     matopush([
       MatomoBaseEvent.TRACK_EVENT,
-      MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
+      values.route === "agreement"
+        ? MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1
+        : MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
       title,
       `idcc${values.selected.num.toString()}`,
     ]);

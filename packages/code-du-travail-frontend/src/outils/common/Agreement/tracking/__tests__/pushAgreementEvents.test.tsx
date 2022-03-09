@@ -74,7 +74,7 @@ describe("Push agreement events on click next", () => {
         ]);
         expect(matopush).toHaveBeenNthCalledWith(2, [
           MatomoBaseEvent.TRACK_EVENT,
-          MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
+          MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1,
           pageTitle,
           `idcc${agreement.num.toString()}`,
         ]);
@@ -104,7 +104,7 @@ describe("Push agreement events on click next", () => {
         ]);
         expect(matopush).toHaveBeenNthCalledWith(2, [
           MatomoBaseEvent.TRACK_EVENT,
-          MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
+          MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1,
           pageTitle,
           `idcc${agreement.num.toString()}`,
         ]);
