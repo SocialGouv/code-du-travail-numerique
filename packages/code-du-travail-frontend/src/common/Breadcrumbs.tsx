@@ -1,14 +1,20 @@
 import { Container, icons, OverflowWrapper, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
-import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
 const { ArrowRight, Home: HomeIcon } = icons;
 
-const Breadcrumbs = ({ items = [] }) => {
+type Props = {
+  items: {
+    label: string;
+    slug: string;
+  }[];
+};
+
+export default function Breadcrumbs({ items }: Props): JSX.Element {
   if (!items || items.length === 0) {
-    return null;
+    return <></>;
   }
   return (
     <Nav aria-label="Fil d'ariane">
@@ -36,18 +42,7 @@ const Breadcrumbs = ({ items = [] }) => {
       </OverflowWrapper>
     </Nav>
   );
-};
-
-Breadcrumbs.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string,
-      slug: PropTypes.string,
-    })
-  ),
-};
-
-export { Breadcrumbs };
+}
 
 const { breakpoints, fonts, spacings } = theme;
 
@@ -67,9 +62,11 @@ const NavItem = styled.div`
   align-items: center;
   padding: 0 ${spacings.small} 0 0;
   white-space: nowrap;
+
   &:first-of-type {
     padding-left: 0;
   }
+
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.tiny};
     &:not(:last-of-type) {
@@ -82,6 +79,7 @@ const StyledLink = styled.a`
   display: flex;
   align-items: center;
   text-decoration: none;
+
   &:focus,
   &:hover,
   &:active {

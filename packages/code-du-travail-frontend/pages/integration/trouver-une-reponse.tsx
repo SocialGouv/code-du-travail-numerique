@@ -8,6 +8,7 @@ import {
 } from "@socialgouv/cdtn-ui";
 import React from "react";
 
+import Breadcrumbs from "../../src/common/Breadcrumbs";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 
@@ -19,13 +20,19 @@ const FindAnswerPage = (): JSX.Element => (
     />
 
     <Section>
+      <Breadcrumbs items={[{ label: "Integration", slug: "/integration" }]} />
       <Container narrow>
-        <PageTitle>Intégrer le Code du travail numérique</PageTitle>
+        <PageTitle>
+          Intégrer le moteur de recherche du Code du travail numérique
+        </PageTitle>
 
         <Wrapper variant="main">
           <p>
-            L’équipe du Code du travail numérique vous propose d’intégrer son
-            moteur de recherche sur votre site grâce à un module (widget).
+            Intégrez notre moteur de recherche sur votre site grâce à un module
+            (widget). Ce module permettra à l’utilisateur de faire une recherche
+            depuis votre site dans la barre de recherche du module. Une fois la
+            recherche lancée, cela ouvrira la page de recherche sur le site du
+            Code du travail numérique.
           </p>
           <iframe
             src="/widget.html"
@@ -34,12 +41,7 @@ const FindAnswerPage = (): JSX.Element => (
             title="widget - Code du travail numérique "
             style={{ border: "none" }}
           />
-          <p>
-            Ce module permettra à l’utilisateur de faire une recherche depuis
-            votre site dans la barre de recherche du module. Une fois la
-            recherche lancée, cela ouvrira la page de recherche sur le site du
-            Code du travail numérique.
-          </p>
+
           <p>
             Comment faire ? Nous vous proposons deux méthodes pour intégrer ce
             module à votre site :

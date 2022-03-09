@@ -4,10 +4,13 @@ import {
   Container,
   PageTitle,
   Section,
+  theme,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import React from "react";
+import styled from "styled-components";
 
+import Breadcrumbs from "../../src/common/Breadcrumbs";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 
@@ -20,18 +23,19 @@ const PreavisRetraitePage = (): JSX.Element => (
 
     <Section>
       <Container>
+        <Breadcrumbs items={[{ label: "Integration", slug: "/integration" }]} />
         <PageTitle>
-          Intégrer l’outil de préavis de retraite Code du travail numérique
+          Intégrer l’outil de préavis de retraite du Code du travail numérique
         </PageTitle>
-
+        <NarrowParagraph>
+          Intégrez notre simulateur « Préavis de départ ou de mise à la retraite
+          » sur votre site grâce à un module (widget). Ce module permettra à
+          l’utilisateur de calculer la durée de préavis à respecter en cas de
+          départ ou de mise à la retraite. Afin de personnaliser le résultat,
+          l’utilisateur pourra, s’il le souhaite, renseigner ou rechercher (à
+          partir du nom de l’entreprise) sa convention collective.
+        </NarrowParagraph>
         <Wrapper variant="main">
-          <p>
-            L’équipe du Code du travail numérique vous propose d’intégrer son
-            simulateur « Préavis de départ ou de mise à la retraite » sur votre
-            site grâce à un module (widget). Ce module permettra à l’utilisateur
-            de calculer la durée de préavis de départ ou de mise à la retraite
-            tout en restant sur votre site.
-          </p>
           <iframe
             src="/widgets/preavis-de-retraite"
             width="100%"
@@ -39,13 +43,6 @@ const PreavisRetraitePage = (): JSX.Element => (
             title="Calcul du préavis de retraite - Code du travail numérique"
             style={{ border: "none" }}
           />
-          <p>
-            Ce module permettra à l’utilisateur de calculer la durée de préavis
-            à respecter en cas de départ ou de mise à la retraite. Afin de
-            personnaliser le résultat, l’utilisateur pourra, s’il le souhaite,
-            renseigner ou rechercher (à partir du nom de l’entreprise) sa
-            convention collective.
-          </p>
           <p>
             Comment faire ? Nous vous proposons deux méthodes pour intégrer ce
             module à votre site :
@@ -119,3 +116,11 @@ const PreavisRetraitePage = (): JSX.Element => (
 );
 
 export default PreavisRetraitePage;
+
+const NarrowParagraph = styled.p`
+  margin: 0 auto ${theme.spacings.larger};
+  text-align: center;
+  @media (min-width: ${theme.breakpoints.mobile}) {
+    width: 70%;
+  }
+`;

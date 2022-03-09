@@ -22,7 +22,7 @@ const FindAnswerPage = (): JSX.Element => (
 
     <Section>
       <Container>
-        <PageTitle>Intégrer le Code du travail numérique</PageTitle>
+        <PageTitle>Intégrer les outils du code du travail numérique</PageTitle>
 
         <Wrapper variant="main">
           <p>
@@ -35,11 +35,12 @@ const FindAnswerPage = (): JSX.Element => (
               <CallToActionTile
                 noCustom
                 action="Installer"
-                title="Trouvez les réponses à vos questions en droit du travail "
+                title="Intégrer notre moteur de recherche"
                 titleTagType="h2"
               >
                 <Paragraph>
-                  Intégrez le moteur de recherche du Code du travail numérique
+                  Effectuer une recherche depuis votre site sur le code du
+                  travail numérique
                 </Paragraph>
               </CallToActionTile>
             </Link>
