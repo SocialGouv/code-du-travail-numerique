@@ -1540,7 +1540,7 @@ exports[`<Term /> should render 1`] = `
                     class="c49"
                     href="/integration"
                   >
-                    Intégrer le Code du travail numérique
+                    Intégrer les outils du Code du travail numérique
                   </a>
                 </li>
               </ul>

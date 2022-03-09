@@ -1648,7 +1648,7 @@ exports[`<About /> should render 1`] = `
                     class="c51"
                     href="/integration"
                   >
-                    Intégrer le Code du travail numérique
+                    Intégrer les outils du Code du travail numérique
                   </a>
                 </li>
               </ul>

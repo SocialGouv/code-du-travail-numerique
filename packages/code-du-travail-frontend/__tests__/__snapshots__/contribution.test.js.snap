@@ -3108,7 +3108,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       class="c104"
                       href="/integration"
                     >
-                      Intégrer le Code du travail numérique
+                      Intégrer les outils du Code du travail numérique
                     </a>
                   </li>
                 </ul>
@@ -6422,7 +6422,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       class="c104"
                       href="/integration"
                     >
-                      Intégrer le Code du travail numérique
+                      Intégrer les outils du Code du travail numérique
                     </a>
                   </li>
                 </ul>
