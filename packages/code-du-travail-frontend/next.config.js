@@ -13,14 +13,6 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 const csp = {
-  "default-src": [
-    "'self'",
-    "*.travail.gouv.fr",
-    "*.data.gouv.fr",
-    "*.fabrique.social.gouv.fr",
-  ],
-  "connect-src": ["'self'", "data:", "blob:", "*.fabrique.social.gouv.fr"],
-  "font-src": ["'self'", "data:"],
   "img-src": [
     "'self'",
     "data:",
@@ -34,6 +26,7 @@ const csp = {
     "https://mon-entreprise.urssaf.fr",
     "*.fabrique.social.gouv.fr",
     "https://cdnjs.cloudflare.com",
+    process.env.NODE_ENV !== "production" && "'unsafe-eval'",
   ],
   "frame-src": [
     "'self'",
@@ -43,15 +36,18 @@ const csp = {
   ],
   "style-src": ["'self'", "'unsafe-inline'"],
   "prefetch-src": ["'self'", "*.fabrique.social.gouv.fr"],
-  ...(process.env.NEXT_PUBLIC_SENTRY_DSN && {
-    reportUri: process.env.NEXT_PUBLIC_SENTRY_DSN,
-  }),
 };
 
-// In dev we allow 'unsafe-eval', so HMR doesn't trigger the CSP
-if (process.env.NODE_ENV !== "production") {
-  csp["script-src"].push("'unsafe-eval'");
-}
+const ContentSecurityPolicy = `
+img-src 'self' data: *.fabrique.social.gouv.fr https://travail-emploi.gouv.fr https://mon-entreprise.urssaf.fr ${
+  process.env.AZURE_BASE_URL
+};
+script-src 'self' https://mon-entreprise.urssaf.fr *.fabrique.social.gouv.fr https://cdnjs.cloudflare.com ${
+  process.env.NODE_ENV !== "production" && "'unsafe-eval'"
+};
+frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com;
+style-src 'self' 'unsafe-inline';prefetch-src 'self' *.fabrique.social.gouv.fr";
+`;
 
 const { withSentryConfig } = require("@sentry/nextjs");
 
@@ -101,9 +97,7 @@ module.exports = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: Object.keys(csp)
-              .map((key) => `${key} ${csp[key].join(" ")}`)
-              .join(";"),
+            value: ContentSecurityPolicy.replace(/\n/g, " ").trim(),
           },
           {
             key: "X-Robots-Tag",
