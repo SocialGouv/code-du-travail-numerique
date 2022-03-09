@@ -8,35 +8,10 @@ const withTranspileModule = require("next-transpile-modules")([
   "p-debounce",
   "is-plain-obj",
 ]);
+
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
-
-const csp = {
-  "img-src": [
-    "'self'",
-    "data:",
-    "*.fabrique.social.gouv.fr",
-    "https://travail-emploi.gouv.fr",
-    "https://mon-entreprise.urssaf.fr",
-    process.env.AZURE_BASE_URL,
-  ],
-  "script-src": [
-    "'self'",
-    "https://mon-entreprise.urssaf.fr",
-    "*.fabrique.social.gouv.fr",
-    "https://cdnjs.cloudflare.com",
-    process.env.NODE_ENV !== "production" && "'unsafe-eval'",
-  ],
-  "frame-src": [
-    "'self'",
-    "https://mon-entreprise.urssaf.fr",
-    "https://matomo.fabrique.social.gouv.fr",
-    "*.dailymotion.com",
-  ],
-  "style-src": ["'self'", "'unsafe-inline'"],
-  "prefetch-src": ["'self'", "*.fabrique.social.gouv.fr"],
-};
 
 const ContentSecurityPolicy = `
 img-src 'self' data: *.fabrique.social.gouv.fr https://travail-emploi.gouv.fr https://mon-entreprise.urssaf.fr ${
