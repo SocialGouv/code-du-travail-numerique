@@ -8,6 +8,7 @@ function addWidget() {
   const isIE = /MSIE/.test(window.navigator.userAgent);
   iframe.id = "cdtn-iframe";
   iframe.width = "100%";
+  iframe.width = "250px";
   iframe.style = "border:none";
 
   iframe.src = isIE
@@ -190,18 +191,6 @@ function addWidget() {
 
   function init() {
     iframe.contentWindow.document.body.innerHTML = widget;
-    const root = iframe.contentWindow.document.querySelector("#root");
-    let lastHeight = 0;
-
-    function measureHeight() {
-      const height = root.getBoundingClientRect().height;
-      if (height !== lastHeight) {
-        lastHeight = height;
-        iframe.height = height;
-      }
-    }
-
-    setTimeout(measureHeight, 0);
     const link = document.querySelector("#cdtn-widget a");
     if (link) {
       target.removeChild(link);

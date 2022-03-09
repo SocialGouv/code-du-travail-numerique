@@ -1,12 +1,12 @@
 import {
   Accordion,
+  CodeSnippet,
   Container,
   PageTitle,
   Section,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import React from "react";
-import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
@@ -57,22 +57,18 @@ const FindAnswerPage = (): JSX.Element => (
                       Premièrement, ajoutez le code suivant dans la balise{" "}
                       <code>&lt;body&gt;</code> de votre page&nbsp;:
                     </p>
-                    <Code>
-                      <pre style={{ lineHeight: "125%", margin: 0 }}>
-                        {`<script src="https://code.travail.gouv.fr/widget.js" defer></script>`}
-                      </pre>
-                    </Code>
+                    <CodeSnippet>
+                      {`<script src="https://code.travail.gouv.fr/widget.js" defer></script>`}
+                    </CodeSnippet>
                     <p>
                       Ensuite, intégrez le code suivant à l’endroit où vous
                       souhaitez voir le module s’afficher&nbsp;:
                     </p>
-                    <Code>
-                      <pre style={{ lineHeight: "125%", margin: 0 }}>
-                        {`<div id="cdtn-widget">
-  <a href="https://code.travail.gouv.fr" class="cdtn-homelink">Le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail.</a>
+                    <CodeSnippet>
+                      {`<div id="cdtn-widget">
+  <a href="https://code.travail.gouv.fr">Le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail.</a>
 </div>`}
-                      </pre>
-                    </Code>
+                    </CodeSnippet>
                   </>
                 ),
                 id: "id-js",
@@ -86,9 +82,8 @@ const FindAnswerPage = (): JSX.Element => (
                       l’endroit où vous souhaitez voir apparaître le
                       module&nbsp;:
                     </p>
-                    <Code>
-                      <pre>
-                        {`<iframe
+                    <CodeSnippet>
+                      {`<iframe
   src="https://code.travail.gouv.fr/widget.html"
   width="100%"
   height="300px"
@@ -96,8 +91,7 @@ const FindAnswerPage = (): JSX.Element => (
   style="border: none"
 ></iframe>
 `}
-                      </pre>
-                    </Code>
+                    </CodeSnippet>
                     <p>
                       En revanche, c’est à vous de décider de la hauteur que
                       prendra le module. Vous pouvez spécifier la valeur{" "}
@@ -130,12 +124,3 @@ const FindAnswerPage = (): JSX.Element => (
 );
 
 export default FindAnswerPage;
-
-const Code = styled.div`
-  width: auto;
-  padding: 0.2em 0.6em;
-  overflow: auto;
-  background: #ffffff;
-  border: solid gray;
-  border-width: 0.1em 0.1em 0.1em 0.8em;
-`;
