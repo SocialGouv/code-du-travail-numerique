@@ -39,7 +39,8 @@ FROM node:$NODE_VERSION
 
 WORKDIR /app
 
-COPY --from=dist . /app/
+COPY --from=dist ./packages/code-du-travail-frontend/.next /app/
+COPY --from=dist ./package.json /app/
 
 USER 1000
 
