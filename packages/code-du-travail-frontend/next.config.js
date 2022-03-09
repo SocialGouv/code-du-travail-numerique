@@ -102,7 +102,7 @@ module.exports = {
           {
             key: "Content-Security-Policy",
             value: Object.keys(csp)
-              .map((key) => `${key} ${csp[key].join(" ")}`)
+              ?.map((key) => `${key} ${csp[key]?.join(" ")}`)
               .join(";"),
           },
           {
