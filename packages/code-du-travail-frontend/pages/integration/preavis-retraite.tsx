@@ -1,6 +1,11 @@
-import { Container, PageTitle, Section, Wrapper } from "@socialgouv/cdtn-ui";
+import {
+  CodeSnippet,
+  Container,
+  PageTitle,
+  Section,
+  Wrapper,
+} from "@socialgouv/cdtn-ui";
 import React from "react";
-import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
@@ -21,27 +26,33 @@ const PreavisRetraitePage = (): JSX.Element => (
         <Wrapper variant="main">
           <p>
             L’équipe du Code du travail numérique vous propose d’intégrer son
-            outil de calcul du préavis de retraite sur votre site grâce à un
-            module (widget).
+            simulateur « Préavis de départ ou de mise à la retraite » sur votre
+            site grâce à un module (widget). Ce module permettra à l’utilisateur
+            de calculer la durée de préavis de départ ou de mise à la retraite
+            tout en restant sur votre site.
           </p>
           <iframe
             src="/widgets/preavis-de-retraite"
             width="100%"
-            height="750px"
+            height="650px"
             title="Calcul du préavis de retraite - Code du travail numérique"
             style={{ border: "none" }}
           />
-          <p>Plus de texte ici ?</p>
-          <h3>Comment faire ?</h3>
-
-          <>
-            <p>
-              Il suffit d’ajouter le code suivant à l’endroit où vous souhaitez
-              voir apparaître le module&nbsp;:
-            </p>
-            <Code>
-              <pre>
-                {`<iframe
+          <p>
+            Ce module permettra à l’utilisateur de calculer la durée de préavis
+            à respecter en cas de départ ou de mise à la retraite. Afin de
+            personnaliser le résultat, l’utilisateur pourra, s’il le souhaite,
+            renseigner ou rechercher (à partir du nom de l’entreprise) sa
+            convention collective.
+          </p>
+          <h2>Comment faire ?</h2>
+          <p>
+            Il suffit d’ajouter le code suivant à l’endroit où vous souhaitez
+            voir apparaître le module&nbsp;:
+          </p>
+          <CodeSnippet>
+            <pre>
+              {`<iframe
   src="https://code.travail.gouv.fr/widgets/preavis-de-retraite"
   width="100%"
   height="750px"
@@ -49,9 +60,8 @@ const PreavisRetraitePage = (): JSX.Element => (
   style="border: none"
 ></iframe>
 `}
-              </pre>
-            </Code>
-          </>
+            </pre>
+          </CodeSnippet>
 
           <p>
             En cas de difficulté, nous vous invitons à nous contacter à
@@ -67,12 +77,3 @@ const PreavisRetraitePage = (): JSX.Element => (
 );
 
 export default PreavisRetraitePage;
-
-const Code = styled.div`
-  width: auto;
-  padding: 0.2em 0.6em;
-  overflow: auto;
-  background: #ffffff;
-  border: solid gray;
-  border-width: 0.1em 0.1em 0.1em 0.8em;
-`;

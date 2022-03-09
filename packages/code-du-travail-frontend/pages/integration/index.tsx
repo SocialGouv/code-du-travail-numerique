@@ -17,7 +17,7 @@ const FindAnswerPage = (): JSX.Element => (
   <Layout>
     <Metas
       title="Widget pour intégrer le Code du travail numérique à votre site"
-      description="Intégrez le moteur de recherche du Code du travail numérique sur votre site grâce à un module (widget)."
+      description="L’équipe du code du travail numérique vous propose d’intégrer son moteur de recherche et certains de ses simulateurs sur votre site grâce à un module (widget).l"
     />
 
     <Section>
@@ -26,12 +26,14 @@ const FindAnswerPage = (): JSX.Element => (
 
         <Wrapper variant="main">
           <p>
-            L’équipe du Code du travail numérique vous propose d’intégrer son
-            moteur de recherche sur votre site grâce à un module (widget).
+            L’équipe du code du travail numérique vous propose d’intégrer son
+            moteur de recherche et certains de ses simulateurs sur votre site
+            grâce à un module (widget).
           </p>
           <Grid>
             <Link href="/integration/trouver-une-reponse" passHref>
               <CallToActionTile
+                noCustom
                 action="Installer"
                 title="Trouvez les réponses à vos questions en droit du travail "
                 titleTagType="h2"
@@ -43,8 +45,9 @@ const FindAnswerPage = (): JSX.Element => (
             </Link>
             <Link href="/integration/preavis-retraite" passHref>
               <CallToActionTile
+                noCustom
                 action="Installer"
-                title="Prévis de départ ou mise à la retraite"
+                title="Préavis de départ ou mise à la retraite"
                 titleTagType="h2"
               >
                 <Paragraph>
