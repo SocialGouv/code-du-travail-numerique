@@ -102,15 +102,14 @@ module.exports = {
           {
             key: "Content-Security-Policy",
             value: Object.keys(csp)
-              ?.map((key) => `${key} ${csp[key]?.join(" ")}`)
+              .map((key) => `${key} ${csp[key].join(" ")}`)
               .join(";"),
           },
           {
             key: "X-Robots-Tag",
-            value:
-              process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT !== "true"
-                ? "noindex, nofollow, nosnippet"
-                : "all",
+            value: process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
+              ? "noindex, nofollow, nosnippet"
+              : "all",
           },
         ],
       },

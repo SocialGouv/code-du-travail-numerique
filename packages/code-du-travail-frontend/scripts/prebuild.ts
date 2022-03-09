@@ -20,7 +20,7 @@ export const generateRobotsTxt = (isOnProduction: boolean, host: string) => {
 
 const run = () => {
   generateRobotsTxt(
-    process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT !== "true",
+    process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT ? true : false,
     process.env.FRONTEND_HOST ?? "localhost"
   );
   console.log("Robots.txt generated.");

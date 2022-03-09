@@ -51,7 +51,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     initPiwik({ piwikUrl: PIWIK_URL, siteId: PIWIK_SITE_ID });
     clientSideRedirectMiddleware();
-    if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true") {
+    if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT) {
       initATInternetService();
     }
   }, []);
