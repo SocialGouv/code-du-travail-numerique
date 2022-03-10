@@ -28,20 +28,18 @@ describe("removeQueryParameters", () => {
 
 describe("replaceSlug", () => {
   test.each`
-    url                                                                                                                                                  | expected
-    ${"/contribution/2111-les-conges-pour-evenements-familiaux"}                                                                                         | ${"/contribution/3239-les-conges-pour-evenements-familiaux"}
-    ${"https://code.travail.gouv.fr/contribution/2111-les-conges-pour-evenements-familiaux?q=m&m=p"}                                                     | ${"https://code.travail.gouv.fr/contribution/3239-les-conges-pour-evenements-familiaux?q=m&m=p"}
-    ${"https://code.travail.gouv.fr/contribution/2395-les-conges-pour-evenements-familiaux"}                                                             | ${"https://code.travail.gouv.fr/contribution/3239-les-conges-pour-evenements-familiaux"}
-    ${"https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux"}                                                               | ${"https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux"}
-    ${"https://code.travail.gouv.fr/convention-collective/2111-salaries-du-particulier-employeur"}                                                       | ${"https://code.travail.gouv.fr/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile"}
-    ${"https://code.travail.gouv.fr/convention-collective/2111-salaries-du-particulier-employeur?q=test"}                                                | ${"https://code.travail.gouv.fr/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile?q=test"}
-    ${"/convention-collective/2111-salaries-du-particulier-employeur?q=test"}                                                                            | ${"/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile?q=test"}
-    ${"https://code.travail.gouv.fr/convention-collective/2395-assistants-maternels-du-particulier-employeur"}                                           | ${"https://code.travail.gouv.fr/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile"}
-    ${"https://code.travail.gouv.fr/contribution/2395-salaries-du-particulier-employeur"}                                                                | ${"https://code.travail.gouv.fr/contribution/3239-salaries-du-particulier-employeur"}
-    ${"https://code.travail.gouv.fr/information/pass-sanitaire-et-contrat-de-travail"}                                                                   | ${"https://code.travail.gouv.fr/information/covid-19-pass-vaccinal-et-contrat-de-travail-infographie"}
-    ${"https://code.travail.gouv.fr/information/vaccination-et-pass-sanitaire-les-dates-a-retenir"}                                                      | ${"https://code.travail.gouv.fr/information/pass-vaccinal-les-dates-a-retenir-infographie"}
-    ${"https://code.travail.gouv.fr/modeles-de-courriers/attestation-sur-lhonneur-arret-de-travail-pour-la-garde-denfant"}                               | ${"https://code.travail.gouv.fr/information/suppression-de-lattestation-garde-denfant"}
-    ${"https://code.travail.gouv.fr/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/ce-que-changent-les-ordonnances-en-droit-du-travail"} | ${"https://code.travail.gouv.fr/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19"}
+    url                                                                                                        | expected
+    ${"/contribution/2111-les-conges-pour-evenements-familiaux"}                                               | ${"/contribution/3239-les-conges-pour-evenements-familiaux"}
+    ${"https://code.travail.gouv.fr/contribution/2111-les-conges-pour-evenements-familiaux?q=m&m=p"}           | ${"https://code.travail.gouv.fr/contribution/3239-les-conges-pour-evenements-familiaux?q=m&m=p"}
+    ${"https://code.travail.gouv.fr/contribution/2395-les-conges-pour-evenements-familiaux"}                   | ${"https://code.travail.gouv.fr/contribution/3239-les-conges-pour-evenements-familiaux"}
+    ${"https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux"}                     | ${"https://code.travail.gouv.fr/contribution/12-les-conges-pour-evenements-familiaux"}
+    ${"https://code.travail.gouv.fr/convention-collective/2111-salaries-du-particulier-employeur"}             | ${"https://code.travail.gouv.fr/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile"}
+    ${"https://code.travail.gouv.fr/convention-collective/2111-salaries-du-particulier-employeur?q=test"}      | ${"https://code.travail.gouv.fr/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile?q=test"}
+    ${"/convention-collective/2111-salaries-du-particulier-employeur?q=test"}                                  | ${"/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile?q=test"}
+    ${"https://code.travail.gouv.fr/convention-collective/2395-assistants-maternels-du-particulier-employeur"} | ${"https://code.travail.gouv.fr/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile"}
+    ${"https://code.travail.gouv.fr/contribution/2395-salaries-du-particulier-employeur"}                      | ${"https://code.travail.gouv.fr/contribution/3239-salaries-du-particulier-employeur"}
+    ${"https://code.travail.gouv.fr/information/pass-sanitaire-et-contrat-de-travail"}                         | ${"https://code.travail.gouv.fr/information/covid-19-pass-vaccinal-et-contrat-de-travail-infographie"}
+    ${"https://code.travail.gouv.fr/information/vaccination-et-pass-sanitaire-les-dates-a-retenir"}            | ${"https://code.travail.gouv.fr/information/pass-vaccinal-les-dates-a-retenir-infographie"}
   `(
     "should transform $url to this canonical url: $expected",
     ({ url, expected }) => {

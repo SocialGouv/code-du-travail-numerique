@@ -46,20 +46,4 @@ export const MappingReplacement = [
     path: ["information"],
     previousValues: ["vaccination-et-pass-sanitaire-les-dates-a-retenir"],
   },
-  {
-    newPath: "information",
-    newValue: "suppression-de-lattestation-garde-denfant",
-    path: ["modeles-de-courriers"],
-    previousValues: [
-      "attestation-sur-lhonneur-arret-de-travail-pour-la-garde-denfant",
-    ],
-  },
-  {
-    newValue:
-      "ministere-du-travail-notre-dossier-sur-le-coronavirus/nouveautes-covid19",
-    path: ["dossiers"],
-    previousValues: [
-      "ministere-du-travail-notre-dossier-sur-le-coronavirus/ce-que-changent-les-ordonnances-en-droit-du-travail",
-    ],
-  },
 ];
