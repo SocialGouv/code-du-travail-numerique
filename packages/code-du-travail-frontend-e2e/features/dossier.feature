@@ -9,7 +9,7 @@ Fonctionnalité: Dossier Coronavirus
   Scénario:
     Soit un utilisateur sur la page "/dossiers/ministere-du-travail-notre-dossier-sur-le-coronavirus"
 
-    Alors je vois "Ministère du travail : notre dossier sur le Coronavirus (Covid-19)"
+    Alors je vois "Covid-19 : fin du protocole sanitaire"
     Alors je vois "Sommaire"
 
     Quand je clique sur "Covid-19 : Les mesures de protection"
