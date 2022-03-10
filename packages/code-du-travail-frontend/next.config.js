@@ -14,6 +14,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 const ContentSecurityPolicy = `
+default-src 'self' *.travail.gouv.fr *.data.gouv.fr *.fabrique.social.gouv.fr;
 img-src 'self' data: *.fabrique.social.gouv.fr https://travail-emploi.gouv.fr https://mon-entreprise.urssaf.fr ${
   process.env.AZURE_BASE_URL
 };
@@ -21,7 +22,8 @@ script-src 'self' https://mon-entreprise.urssaf.fr *.fabrique.social.gouv.fr htt
   process.env.NODE_ENV !== "production" && "'unsafe-eval'"
 };
 frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com;
-style-src 'self' 'unsafe-inline';prefetch-src 'self' *.fabrique.social.gouv.fr";
+style-src 'self' 'unsafe-inline';
+font-src 'self' data: blob:;
 `;
 
 const { withSentryConfig } = require("@sentry/nextjs");
@@ -77,8 +79,8 @@ module.exports = {
           {
             key: "X-Robots-Tag",
             value: process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
-              ? "noindex, nofollow, nosnippet"
-              : "all",
+              ? "all"
+              : "noindex, nofollow, nosnippet",
           },
         ],
       },
