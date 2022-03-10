@@ -14,7 +14,7 @@ export default (req: NextApiRequest, res: NextApiResponse): void => {
 export function getTools(): Tools {
   return {
     cdtnSimulators: tools.filter(
-      (tool) => tool.enable || process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
+      (tool) => tool.enable || !process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
     ),
     externalTools: externalTools.filter(
       (tools) => tools.title === "Mon compte formation"

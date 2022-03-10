@@ -12,23 +12,26 @@ jobs:
   register:
     name: Register images
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - images: "code-du-travail-frontend"
+            path: "."
+            args: |
+              NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+              NEXT_PUBLIC_SENTRY_ENV=dev
+          - images: "code-du-travail-api"
+            path: "./packages/code-du-travail-api/"
     steps:
-      - name: Register docker image for api
-        uses: SocialGouv/actions/autodevops-build-register@v1
+      - name: Register docker images
+        uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
         with:
-          project: "cdtn"
-          imageName: cdtn/code-du-travail-api
+          imageName: cdtn/${{ matrix.images }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          dockerfile: "./packages/code-du-travail-api/Dockerfile"
-          dockercontext: "./packages/code-du-travail-api"
-      - name: Register docker image for frontend
-        uses: SocialGouv/actions/autodevops-build-register@v1
-        with:
-          project: "cdtn"
-          imageName: cdtn/code-du-travail-frontend
-          token: ${{ secrets.GITHUB_TOKEN }}
-          dockerfile: "./Dockerfile"
-          dockercontext: "./"
+          dockerfile: "${{ matrix.path }}/Dockerfile"
+          dockercontext: "${{ matrix.path }}"
+          dockerbuildargs: ${{ matrix.args }}
 
   trivy:
     name: Run trivy
