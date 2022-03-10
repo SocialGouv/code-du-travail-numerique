@@ -1,6 +1,7 @@
 ARG NODE_VERSION=14.17-alpine3.13
-# dist
-FROM node:$NODE_VERSION AS dist
+
+# build
+FROM node:$NODE_VERSION AS build
 
 WORKDIR /
 
@@ -9,38 +10,35 @@ ARG NEXT_PUBLIC_SENTRY_DSN
 ENV NEXT_PUBLIC_SENTRY_DSN=$NEXT_PUBLIC_SENTRY_DSN
 ARG NEXT_PUBLIC_SENTRY_ENV
 ENV NEXT_PUBLIC_SENTRY_ENV=$NEXT_PUBLIC_SENTRY_ENV
-
-# Copy all package.json
-COPY ./package.json ./package.json
-COPY ./packages/code-du-travail-data/package.json ./packages/code-du-travail-data/package.json
-COPY ./packages/code-du-travail-data/prime-precarite/package.json ./packages/code-du-travail-data/prime-precarite/package.json
-COPY ./packages/code-du-travail-data/simulateurs/package.json ./packages/code-du-travail-data/simulateurs/package.json
-COPY ./packages/code-du-travail-data/tools/package.json ./packages/code-du-travail-data/tools/package.json
-COPY ./packages/react-fiche-service-public/package.json ./packages/react-fiche-service-public/package.json
-COPY ./packages/sources/package.json ./packages/sources/package.json
-COPY ./packages/slugify/package.json ./packages/slugify/package.json
-COPY ./packages/react-ui/package.json ./packages/react-ui/package.json
-COPY ./packages/code-du-travail-api/package.json ./packages/code-du-travail-api/package.json
-COPY ./packages/code-du-travail-frontend/package.json ./packages/code-du-travail-frontend/package.json
-COPY ./packages/code-du-travail-modeles/package.json ./packages/code-du-travail-modeles/package.json
-
-# Copy lockfile
-COPY ./yarn.lock ./yarn.lock
-
-# Install packages
-RUN yarn --frozen-lockfile && yarn cache clean
+ARG NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
+ENV NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=$NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
 
 COPY . ./
 
-RUN yarn build && yarn --frozen-lockfile --prod
+RUN yarn --frozen-lockfile && yarn build
+
+# FROM node:$NODE_VERSION AS dep
+
+# WORKDIR /
+
+# COPY ./packages/code-du-travail-frontend/package.json ./
+
+# Install packages
+# RUN yarn --frozen-lockfile --production --offline
+
+# add dep from other repo
 
 # app
 FROM node:$NODE_VERSION
 
 WORKDIR /app
 
-COPY --from=dist . /app/
+COPY --from=build ./packages/code-du-travail-frontend/package.json /app/package.json
+COPY --from=build ./packages/code-du-travail-frontend/public /app/public
+COPY --from=build ./packages/code-du-travail-frontend/.next /app/.next
+COPY --from=build ./node_modules /app/node_modules
+COPY --from=build ./packages/code-du-travail-frontend/node_modules /app/node_modules
 
 USER 1000
 
-CMD [ "yarn", "start"]
+CMD ["yarn", "start"]

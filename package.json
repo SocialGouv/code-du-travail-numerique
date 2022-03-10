@@ -54,9 +54,6 @@
     "packages": [
       "packages/*",
       "packages/code-du-travail-data/*"
-    ],
-    "nohoist": [
-      "**/*"
     ]
   },
   "engines": {
