@@ -2,13 +2,15 @@ import { push as matopush } from "@socialgouv/matomo-next";
 import React, { createContext, useContext } from "react";
 import { v4 as generateUUID } from "uuid";
 
+export type TrackEventFn = (
+  category: string,
+  action: string,
+  name?: string,
+  value?: string
+) => void;
+
 export type TrackingContext = {
-  trackEvent: (
-    category: string,
-    action: string,
-    name?: string,
-    value?: string
-  ) => void;
+  trackEvent: TrackEventFn;
   uuid: string;
   title: string;
 };

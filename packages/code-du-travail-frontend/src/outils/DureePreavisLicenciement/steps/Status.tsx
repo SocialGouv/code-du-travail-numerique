@@ -4,13 +4,14 @@ import Link from "next/link";
 import React from "react";
 
 import Html from "../../../common/Html";
-import { MatomoActionEvent, trackQuestion } from "../../../lib/matomo";
+import { MatomoActionEvent, trackQuestion } from "../../../lib";
 import { SelectQuestion } from "../../common/SelectQuestion";
 import {
   filterSituations,
   getOptions,
   getSituationsFor,
 } from "../../common/situations.utils";
+import { WizardStepProps } from "../../common/type/WizardType";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
 
 const { questions, situations: allSituations } = data;
@@ -19,13 +20,17 @@ const questionsMap = questions.reduce(
   {}
 );
 
-function validate({ seriousMisconduct }) {
-  const errors: any = {};
+type Validate = {
+  seriousMisconduct?: JSX.Element;
+};
+
+function validate({ seriousMisconduct }): Validate {
+  const errors: Validate = {};
   if (seriousMisconduct) {
     errors.seriousMisconduct = (
       <Toast>
         Dans le cas d’un licenciement pour faute grave ou lourde, il n’y pas
-        d’obligation de respecter un préavis.Vous pouvez trouver plus
+        d’obligation de respecter un préavis. Vous pouvez trouver plus
         d’informations sur le préavis de licenciement sur{" "}
         <Link href={`/fiche-service-public/preavis-de-licenciement`}>
           <a>cette fiche</a>
@@ -37,7 +42,7 @@ function validate({ seriousMisconduct }) {
   return errors;
 }
 
-function StepStatus({ form }) {
+function StepStatus({ form }: WizardStepProps): JSX.Element {
   const { seriousMisconduct, disabledWorker } = form.getState().values;
   const seniorityKey = "ancienneté";
 

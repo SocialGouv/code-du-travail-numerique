@@ -87,14 +87,24 @@ export function getSituationsFor(data, obj) {
 
 const isNotEmpty = (obj) => Object.keys(obj).length > 0;
 
-export const isNotYetProcessed = (data, idcc) => {
-  const situtation = data.filter(
-    (situation) =>
-      isNotEmpty(situation.criteria) &&
-      parseInt(situation.idcc, 10) === parseInt(idcc, 10)
+const situationsForAgreement = (data, idcc) => {
+  if (!idcc) return [];
+
+  return data.filter(
+    (situation) => parseInt(situation.idcc, 10) === parseInt(idcc, 10)
   );
-  return !situtation.length;
 };
+
+export const isAgreementSupported = (data, idcc) =>
+  situationsForAgreement(data, idcc).length > 0;
+
+export const hasCriteria = (data, idcc) =>
+  situationsForAgreement(data, idcc).filter((situation) =>
+    isNotEmpty(situation.criteria)
+  ).length > 0;
+
+export const skipInformations = (data, idcc) =>
+  !isAgreementSupported(data, idcc) || !hasCriteria(data, idcc);
 
 export function recapSituation(criteria) {
   const cleanValue = (value) => `${value}`.replace(/[0-9]+\|/, "").trim();
@@ -121,3 +131,16 @@ export const getFormProps = ({ key, criteria, pastQuestions }) =>
         .slice(pastQuestions.findIndex(([k]) => k === key) + 1)
         .map(([key]) => key)
     );
+
+export const getSupportedCC = (data) => {
+  const uniqueIDCC = [
+    ...new Map(data.map((item) => [item["idcc"], item])).values(),
+  ];
+
+  return uniqueIDCC.map((item) => {
+    return {
+      fullySupported: true,
+      idcc: parseInt(item.idcc, 10),
+    };
+  });
+};

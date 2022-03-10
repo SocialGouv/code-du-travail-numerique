@@ -3,19 +3,19 @@ import { supportedCcn } from "@socialgouv/modeles-social";
 import React from "react";
 
 import PubliSituation from "../../../common/PubliSituation";
-import { FormContent } from "../../../common/type/WizardType";
+import { PreavisRetraiteFormContent } from "../../../common/type/WizardType";
 import { SituationElement } from "../../../publicodes";
 import { SeniorityMaximum } from "../constants";
 
 type Props = {
-  content: FormContent;
+  content: PreavisRetraiteFormContent;
   elements: SituationElement[];
 };
 
 export const Situation: React.FC<Props> = ({ content, elements }) => {
   const overrideSituation = (element: SituationElement): JSX.Element | null => {
     if (element.name === "contrat salarié - convention collective") {
-      return <>{content.ccn?.shortTitle}</>;
+      return <>{content.ccn?.selected?.shortTitle}</>;
     }
     if (
       element.name === "contrat salarié - ancienneté" &&
@@ -41,13 +41,18 @@ export const Situation: React.FC<Props> = ({ content, elements }) => {
     return null;
   };
 
-  const getAnnotations = (content: FormContent): JSX.Element[] => {
+  const getAnnotations = (
+    content: PreavisRetraiteFormContent
+  ): JSX.Element[] => {
     if (
       content.infos &&
       content.infos["contrat salarié - travailleur handicapé"] === "oui"
     ) {
       if (content["contrat salarié - mise à la retraite"] === "oui") {
-        if (content.ccn && supportedCcn.includes(content.ccn.num)) {
+        if (
+          content.ccn &&
+          supportedCcn.map((v) => v.idcc).includes(content.ccn.selected?.num)
+        ) {
           return [
             <Text key="handicap">
               Le salarié étant reconnu en tant que travailleur handicapé, la

@@ -1,3 +1,4 @@
+import { Notification } from "@socialgouv/modeles-social";
 import React from "react";
 
 import Mdx from "../../../../common/Mdx";
@@ -6,48 +7,44 @@ import {
   SectionTitle,
   SmallText,
 } from "../../../common/stepStyles";
-import { PublicodesContextInterface } from "../../../publicodes";
+import { PublicodesPreavisRetraiteResult } from "../../../publicodes";
 
 type Props = {
-  publicodesContext: PublicodesContextInterface;
+  publicodesResult: PublicodesPreavisRetraiteResult;
+  agreementMaximumResult: PublicodesPreavisRetraiteResult;
+  type: "mise" | "départ";
+  notifications: Notification[];
 };
 
-const ShowResult: React.FC<Props> = ({ publicodesContext }) => {
-  const type =
-    publicodesContext.situation.find(
-      (item) => item.name === "contrat salarié - mise à la retraite"
-    )?.value === "oui"
-      ? "mise"
-      : "départ";
-
-  const notifications = publicodesContext.getNotifications();
-  const agreementMaximumResult = publicodesContext.execute(
-    "contrat salarié . préavis de retraite collective maximum en jours"
-  );
-
+const ShowResult: React.FC<Props> = ({
+  publicodesResult,
+  agreementMaximumResult,
+  type,
+  notifications,
+}: Props) => {
   return (
     <>
       <SectionTitle>Préavis de {type} à la retraite</SectionTitle>
       <p>
         À partir des éléments que vous avez saisis
-        {publicodesContext.result.value > 0
+        {publicodesResult.value > 0
           ? `, la durée du préavis en cas de ${type} à la retraite est estimée à`
           : ""}
         &nbsp;:{" "}
         <HighlightResult>
           {agreementMaximumResult?.value &&
-          agreementMaximumResult?.value !== publicodesContext.result.value ? (
+          agreementMaximumResult?.value !== publicodesResult.value ? (
             <>
-              entre&nbsp;{publicodesContext.result.value}&nbsp;
-              {publicodesContext.result.unit}&nbsp;et&nbsp;
+              entre&nbsp;{publicodesResult.value}&nbsp;
+              {publicodesResult.unit}&nbsp;et&nbsp;
               {agreementMaximumResult?.value}&nbsp;
               {agreementMaximumResult?.unit}
             </>
-          ) : publicodesContext.result.value > 0 ? (
+          ) : publicodesResult.value > 0 ? (
             <>
-              {publicodesContext.result.value}
+              {publicodesResult.value}
               &nbsp;
-              {publicodesContext.result.unit}
+              {publicodesResult.unit}
             </>
           ) : (
             <>il n’y a pas de préavis à effectuer</>
@@ -57,7 +54,7 @@ const ShowResult: React.FC<Props> = ({ publicodesContext }) => {
       </p>
       {notifications.length > 0 && (
         <SmallText>
-          {publicodesContext.getNotifications().map((notification) => (
+          {notifications.map((notification) => (
             <Mdx
               key={notification.dottedName}
               markdown={"\\* " + notification.description}

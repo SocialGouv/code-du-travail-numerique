@@ -7,13 +7,15 @@ import styled from "styled-components";
 import { SectionTitle } from "../../common/stepStyles";
 import { AgreementTile } from "../agreement/AgreementTile";
 import { useNavContext } from "../common/NavContext";
+import { TrackingProps } from "../types";
 
 type EnterpriseSearchStepProps = {
   onBackClick: () => void;
-};
+} & TrackingProps;
 
 const AgreementSelectionStep = ({
   onBackClick,
+  onUserAction,
 }: EnterpriseSearchStepProps): JSX.Element => {
   const { enterprise } = useNavContext();
 
@@ -36,7 +38,7 @@ const AgreementSelectionStep = ({
       <FlatList>
         {enterprise?.conventions.map((agreement) => (
           <Li key={agreement.id}>
-            <AgreementTile agreement={agreement} />
+            <AgreementTile onUserAction={onUserAction} agreement={agreement} />
           </Li>
         ))}
       </FlatList>

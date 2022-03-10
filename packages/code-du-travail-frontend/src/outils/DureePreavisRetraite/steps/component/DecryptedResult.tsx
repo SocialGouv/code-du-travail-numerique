@@ -6,13 +6,13 @@ import React from "react";
 import { SectionTitle } from "../../../common/stepStyles";
 import { FormContent } from "../../../common/type/WizardType";
 import {
-  PublicodesContextInterface,
+  PublicodesPreavisRetraiteResult,
   PublicodesResult,
+  usePublicodes,
 } from "../../../publicodes";
 
 type Props = {
   data: FormContent;
-  publicodesContext: PublicodesContextInterface;
 };
 
 const ShowResult: React.FC<{
@@ -47,7 +47,7 @@ const ShowResultAgreement: React.FC<{
   if (!result) {
     return <strong>convention collective non renseignée</strong>;
   }
-  if (result && result.value > 0) {
+  if (result?.value > 0) {
     return (
       <ShowResult
         result={result}
@@ -88,16 +88,16 @@ type RootData = {
 };
 
 export const createRootData = (
-  data: Partial<FormContent>,
-  result: PublicodesResult,
-  legalResult: PublicodesResult,
-  agreementResult: PublicodesResult | null,
+  data: FormContent,
+  result: PublicodesPreavisRetraiteResult,
+  legalResult: PublicodesPreavisRetraiteResult,
+  agreementResult: PublicodesPreavisRetraiteResult | null,
   supportedCcn: AgreementInfo[]
 ): RootData => {
   let agreement: Agreement | null = null;
-  if (data.ccn) {
+  if (data.ccn?.selected) {
     const agreementFound = supportedCcn.find(
-      (item) => item.idcc === data.ccn?.num
+      (item) => item.idcc === data.ccn?.selected?.num
     );
     agreement = {
       notice: agreementResult?.valueInDays ?? 0,
@@ -179,7 +179,8 @@ export const getDescription = (data: RootData): string | null => {
   }
 };
 
-const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
+const DecryptedResult: React.FC<Props> = ({ data }) => {
+  const publicodesContext = usePublicodes<PublicodesPreavisRetraiteResult>();
   const legalResult = publicodesContext.execute(
     "contrat salarié . préavis de retraite légale en jours"
   );
