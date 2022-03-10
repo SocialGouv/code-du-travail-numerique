@@ -1,15 +1,17 @@
+import { push as matopush } from "@socialgouv/matomo-next";
 import { render } from "@testing-library/react";
 import React from "react";
 
-import { matopush } from "../../piwik";
 import { ListLink } from "../SearchResults/Results";
-
-jest.mock("../../piwik", () => ({
-  matopush: jest.fn(),
-}));
 
 jest.mock("next/link", () => {
   return ({ children }) => children;
+});
+
+jest.mock("@socialgouv/matomo-next", () => {
+  return {
+    push: jest.fn(),
+  };
 });
 
 const item = {

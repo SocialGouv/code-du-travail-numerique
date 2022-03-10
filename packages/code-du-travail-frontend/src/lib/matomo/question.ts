@@ -1,4 +1,5 @@
-import { matopush } from "../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
+
 import { MatomoActionEvent, MatomoBaseEvent, MatomoMapping } from ".";
 
 export const trackQuestion = (

@@ -1,8 +1,7 @@
 import { Dropdown, icons, theme, utils } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import React, { useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
-
-import { matopush } from "../piwik";
 
 const { copyToClipboard } = utils;
 
@@ -21,7 +20,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
 
   useEffect(() => {
     setCurrentPageUrl(window.location.href);
-  }, [setCurrentPageUrl]);
+  }, []);
 
   return (
     <Flex>

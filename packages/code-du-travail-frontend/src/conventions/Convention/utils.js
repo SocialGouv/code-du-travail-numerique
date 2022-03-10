@@ -1,4 +1,4 @@
-import { matopush } from "../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 export function trackAccordionPanelState(conventionName, eventName) {
   let previousPanelState = [];
