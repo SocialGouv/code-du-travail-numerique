@@ -9,11 +9,11 @@ import {
   theme,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import React, { useCallback, useEffect, useState } from "react";
 import { Field, Form } from "react-final-form";
 import styled from "styled-components";
 
-import { matopush } from "../../piwik";
 import { ServiceRenseignementModal } from "../ServiceRenseignementModal";
 
 function baseUrl(url) {

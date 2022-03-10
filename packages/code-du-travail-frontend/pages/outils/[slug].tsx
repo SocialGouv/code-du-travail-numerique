@@ -2,6 +2,7 @@ import tools from "@cdt/data...tools/internals.json";
 import * as Sentry from "@sentry/nextjs";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import { Container, Section, theme } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { GetServerSideProps } from "next";
 import getConfig from "next/config";
 import { useRouter } from "next/router";
@@ -23,7 +24,6 @@ import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
 import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
 import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
 import { Tool } from "../../src/outils/types";
-import { matopush } from "../../src/piwik";
 
 const {
   publicRuntimeConfig: { API_URL },

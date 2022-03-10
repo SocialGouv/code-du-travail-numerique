@@ -3045,6 +3045,11 @@
   resolved "https://registry.yarnpkg.com/@socialgouv/fiches-travail-data/-/fiches-travail-data-4.241.0.tgz#518166dfc7d5b8837463a5451e42b1eddc691471"
   integrity sha512-/NMLUHADoCql9XYfTZMovciyOv8+ego+f/CKKdYYXExUjIAHevvpujGZ9KvBY9tr3fE6h3mBApx5a3+HB2RgJQ==
 
+"@socialgouv/matomo-next@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/matomo-next/-/matomo-next-1.3.0.tgz#6f55b51c75582d9504f3e008339437deb1dd0d26"
+  integrity sha512-1EWGFre4CudvcJPIaLYyAwHsGk8mMK5/IKztEIaU14uUifv117dlIJmcpJIVEow70AMY1VqRHh1x5z7Dx+H7dQ==
+
 "@socialgouv/reference-article@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@socialgouv/reference-article/-/reference-article-1.0.1.tgz#9fd791dd1e8c119bb013f5c78ab0f85975ed7d05"

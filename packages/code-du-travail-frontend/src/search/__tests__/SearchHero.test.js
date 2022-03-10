@@ -8,9 +8,11 @@ jest.mock("../search.service.js", () => ({
   fetchSuggestResults: jest.fn(),
 }));
 
-jest.mock("../../piwik", () => ({
-  matopush: jest.fn(),
-}));
+jest.mock("@socialgouv/matomo-next", () => {
+  return {
+    push: jest.fn(),
+  };
+});
 
 const suggestions = ["foo", "foobar", "foo bar ?", "foo bazzz"];
 

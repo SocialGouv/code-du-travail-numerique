@@ -7,6 +7,7 @@ import "../public/static/modeles.css";
 import * as Sentry from "@sentry/nextjs";
 import { GlobalStyles, ThemeProvider } from "@socialgouv/cdtn-ui";
 import { AppProps } from "next/app";
+import { init } from "@socialgouv/matomo-next";
 import getConfig from "next/config";
 import React, { useEffect } from "react";
 
@@ -16,7 +17,6 @@ import {
   clientSideRedirectMiddleware,
   serverSideRedirectMiddleware,
 } from "../src/middleware/redirect";
-import { initPiwik } from "../src/piwik";
 import CustomError from "./_error";
 import Custom404 from "./404";
 
@@ -49,7 +49,7 @@ const {
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    initPiwik({ piwikUrl: PIWIK_URL, siteId: PIWIK_SITE_ID });
+    init({ siteId: PIWIK_SITE_ID, url: PIWIK_URL });
     clientSideRedirectMiddleware();
     if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT) {
       initATInternetService();

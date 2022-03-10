@@ -17,7 +17,7 @@ import styled from "styled-components";
 import { ContactModal } from "../common/ContactModal";
 import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
 import { Partners } from "../home/Partners";
-import { matopush } from "../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 const { DirectionRight: DirectionRightIcon } = icons;
 const { publicRuntimeConfig } = getConfig();

@@ -1,7 +1,8 @@
-import { matopush } from "../../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
+
 import { trackAccordionPanelState } from "../utils";
 
-jest.mock("../../../piwik");
+jest.mock("@socialgouv/matomo-next");
 matopush.mockImplementation();
 
 describe("trackAccordionPanelState", () => {

@@ -1,6 +1,5 @@
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
-
-import { matopush } from "../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 export const summarize = (text = "") =>
   text.length > 160 ? text.slice(0, text.indexOf(" ", 160)) + "…" : text;
