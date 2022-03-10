@@ -18,9 +18,6 @@ jobs:
         include:
           - images: "code-du-travail-frontend"
             path: "."
-            args: |
-              NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
-              NEXT_PUBLIC_SENTRY_ENV=dev
           - images: "code-du-travail-api"
             path: "./packages/code-du-travail-api/"
     steps:
@@ -31,7 +28,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           dockerfile: "${{ matrix.path }}/Dockerfile"
           dockercontext: "${{ matrix.path }}"
-          dockerbuildargs: ${{ matrix.args }}
 
   trivy:
     name: Run trivy
