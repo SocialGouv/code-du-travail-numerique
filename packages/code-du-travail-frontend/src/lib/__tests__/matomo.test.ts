@@ -1,4 +1,5 @@
-import { matopush } from "../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
+
 import {
   MatomoActionEvent,
   MatomoBaseEvent,
@@ -6,9 +7,11 @@ import {
   trackQuestion,
 } from "../matomo";
 
-jest.mock("../../piwik", () => ({
-  matopush: jest.fn(),
-}));
+jest.mock("@socialgouv/matomo-next", () => {
+  return {
+    push: jest.fn(),
+  };
+});
 
 describe("Matomo", () => {
   beforeEach(() => {

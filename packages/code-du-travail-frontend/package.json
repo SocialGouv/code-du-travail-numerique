@@ -36,6 +36,7 @@
     "@socialgouv/cdtn-sources": "^4.71.0",
     "@socialgouv/cdtn-ui": "^4.71.0",
     "@socialgouv/fiches-travail-data": "^4.241.0",
+    "@socialgouv/matomo-next": "^1.3.0",
     "@socialgouv/modeles-social": "^4.71.0",
     "@socialgouv/react-fiche-service-public": "^4.71.0",
     "@socialgouv/reference-article": "^1.0.1",

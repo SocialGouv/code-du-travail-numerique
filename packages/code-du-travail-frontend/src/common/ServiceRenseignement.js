@@ -1,11 +1,11 @@
 import { Button, Heading, icons, Input, theme } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { useRouter } from "next/router";
 import React, { useCallback, useEffect, useState } from "react";
 import { Field, Form } from "react-final-form";
 import styled from "styled-components";
 
 import servicesDeRenseignement from "../data/services-de-renseignement.json";
-import { matopush } from "../piwik.js";
 import { A11yLink } from "./A11yLink";
 
 const { Search: SearchIcon } = icons;

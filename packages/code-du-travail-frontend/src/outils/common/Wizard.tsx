@@ -4,7 +4,7 @@ import React, { Reducer, useEffect, useReducer } from "react";
 import { Form } from "react-final-form";
 import styled from "styled-components";
 
-import { matopush } from "../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { PrevNextBar } from "./PrevNextBar";
 import { STEP_LIST_WIDTH, StepList } from "./StepList";
 import { Action, ActionName, SkipFn, State } from "./type/WizardType";

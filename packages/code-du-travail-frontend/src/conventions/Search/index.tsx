@@ -6,7 +6,7 @@ import Spinner from "react-svg-spinner";
 import styled from "styled-components";
 import { v4 as generateUUID } from "uuid";
 
-import { matopush } from "../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { CompanyTile } from "./CompanyTile";
 import { ConventionLink } from "./ConventionLink";
 import { HelpModal } from "./HelpModal";
