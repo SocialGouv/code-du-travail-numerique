@@ -25,7 +25,9 @@ const PreavisRetraitePage = (): JSX.Element => (
       <Container>
         <Breadcrumbs items={[{ label: "Integration", slug: "/integration" }]} />
         <PageTitle>
-          Intégrer l’outil de préavis de retraite du Code du travail numérique
+          Intégrer l’outil de préavis de licenciement
+          <br />
+          du Code du travail numérique
         </PageTitle>
         <NarrowParagraph>
           Intégrez notre simulateur « Préavis de départ ou de mise à la retraite

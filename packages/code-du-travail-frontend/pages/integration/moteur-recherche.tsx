@@ -23,16 +23,19 @@ const FindAnswerPage = (): JSX.Element => (
       <Breadcrumbs items={[{ label: "Integration", slug: "/integration" }]} />
       <Container narrow>
         <PageTitle>
-          Intégrer le moteur de recherche du Code du travail numérique
+          Intégrer le moteur de recherche
+          <br />
+          du Code du travail numérique
         </PageTitle>
 
         <Wrapper variant="main">
           <p>
-            Intégrez notre moteur de recherche sur votre site grâce à un module
-            (widget). Ce module permettra à l’utilisateur de faire une recherche
-            depuis votre site dans la barre de recherche du module. Une fois la
-            recherche lancée, cela ouvrira la page de recherche sur le site du
-            Code du travail numérique.
+            Vous pouvez intégrer le notre moteur de recherche du code du travail
+            numérique sur votre site grâce à un module (widget). Ce module
+            permettra à l’utilisateur de faire une recherche depuis votre site
+            dans la barre de recherche du module. Une fois la recherche lancée,
+            cela ouvrira la page de recherche sur le site du Code du travail
+            numérique.
           </p>
           <iframe
             src="/widget.html"

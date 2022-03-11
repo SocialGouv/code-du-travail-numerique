@@ -32,7 +32,7 @@ const FindAnswerPage = (): JSX.Element => (
             grâce à un module (widget).
           </p>
           <Grid>
-            <Link href="/integration/trouver-une-reponse" passHref>
+            <Link href="/integration/moteur-recherche" passHref>
               <CallToActionTile
                 noCustom
                 icon={icons.SearchCC}
@@ -41,8 +41,7 @@ const FindAnswerPage = (): JSX.Element => (
                 titleTagType="h2"
               >
                 <Paragraph>
-                  Effectuer une recherche depuis votre site sur le code du
-                  travail numérique
+                  Moteur de recherche du code du travail numérique
                 </Paragraph>
               </CallToActionTile>
             </Link>
