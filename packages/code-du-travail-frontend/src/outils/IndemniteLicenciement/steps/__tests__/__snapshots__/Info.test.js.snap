@@ -18,8 +18,8 @@ exports[`<StepInfo /> should display error if contrat cdd 1`] = `
   L’indemnité de licenciement n’est pas dûe pour les CDD et contrats de travail temporaires. Sous certaines conditions, le salarié peut avoir le droit à une 
   <a
     aria-label="indemnité de précarité (nouvelle fenêtre) (nouvelle fenêtre)"
-    el="noopener noreferrer"
-    href="/fiche-service-public/qui-peut-toucher-la-prime-de-precarite-a-la-fin-dun-contrat-de-travail"
+    rel="noopener noreferrer"
+    href="/fiche-service-public/le-salarie-touche-t-il-la-prime-de-precarite-a-la-fin-dun-contrat-de-travail"
     target="_blank"
   >
     indemnité de précarité (nouvelle fenêtre)
