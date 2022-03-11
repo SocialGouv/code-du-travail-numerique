@@ -4,11 +4,9 @@ import {
   Container,
   PageTitle,
   Section,
-  theme,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
 import React from "react";
-import styled from "styled-components";
 
 import Breadcrumbs from "../../src/common/Breadcrumbs";
 import Metas from "../../src/common/Metas";
@@ -25,20 +23,20 @@ const PreavisRetraitePage = (): JSX.Element => (
       <Container>
         <Breadcrumbs items={[{ label: "Integration", slug: "/integration" }]} />
         <PageTitle>
-          Intégrer l’outil de préavis de retraite
+          Intégrer l’outil de calcul du préavis de retraite
           <br />
           du Code du travail numérique
         </PageTitle>
-        <NarrowParagraph>
-          Vous pouvez intégrer l’outil de calcul du préavis de retraite du Code
-          du travail numérique sur votre site grâce à un module (widget). Ce
-          module permettra à l’utilisateur de calculer la durée de préavis à
-          respecter en cas de départ ou de mise à la retraite. Afin de
-          personnaliser le résultat, l’utilisateur pourra, s’il le souhaite,
-          renseigner ou rechercher (à partir du nom de l’entreprise) sa
-          convention collective.
-        </NarrowParagraph>
         <Wrapper variant="main">
+          <p>
+            Vous pouvez intégrer l’outil de calcul du préavis de retraite du
+            Code du travail numérique sur votre site grâce à un module (widget).
+            Ce module permettra à l’utilisateur de calculer la durée de préavis
+            à respecter en cas de départ ou de mise à la retraite. Afin de
+            personnaliser le résultat, l’utilisateur pourra, s’il le souhaite,
+            renseigner ou rechercher (à partir du nom de l’entreprise) sa
+            convention collective.
+          </p>
           <iframe
             src="/widgets/preavis-retraite"
             width="100%"
@@ -119,11 +117,3 @@ const PreavisRetraitePage = (): JSX.Element => (
 );
 
 export default PreavisRetraitePage;
-
-const NarrowParagraph = styled.p`
-  margin: 0 auto ${theme.spacings.larger};
-  text-align: center;
-  @media (min-width: ${theme.breakpoints.mobile}) {
-    width: 70%;
-  }
-`;

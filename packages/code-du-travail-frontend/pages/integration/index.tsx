@@ -5,7 +5,6 @@ import {
   PageTitle,
   Paragraph,
   Section,
-  Wrapper,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
@@ -25,56 +24,55 @@ const FindAnswerPage = (): JSX.Element => (
       <Container>
         <PageTitle>Intégrer les outils du code du travail numérique</PageTitle>
 
-        <Wrapper variant="main">
-          <p>
-            L’équipe du code du travail numérique vous propose d’intégrer son
-            moteur de recherche et certains de ses simulateurs sur votre site
-            grâce à un module (widget).
-          </p>
-          <Grid>
-            <Link href="/integration/moteur-recherche" passHref>
-              <CallToActionTile
-                noCustom
-                icon={icons.SearchCC}
-                action="Installer"
-                title="Intégrer notre moteur de recherche"
-                titleTagType="h2"
-              >
-                <Paragraph>
-                  Moteur de recherche du code du travail numérique
-                </Paragraph>
-              </CallToActionTile>
-            </Link>
-            <Link href="/integration/preavis-retraite" passHref>
-              <CallToActionTile
-                noCustom
-                icon={icons.CalendarTime}
-                action="Installer"
-                title="Préavis de départ ou mise à la retraite"
-                titleTagType="h2"
-              >
-                <Paragraph>
-                  Calculer la durée de préavis à respecter en cas de départ ou
-                  mise à la retraite
-                </Paragraph>
-              </CallToActionTile>
-            </Link>
-            <Link href="/integration/preavis-licenciement" passHref>
-              <CallToActionTile
-                noCustom
-                icon={icons.CalendarTime}
-                action="Installer"
-                title="Préavis de licenciement"
-                titleTagType="h2"
-              >
-                <Paragraph>
-                  Calculer la durée de préavis à respecter en cas de
-                  licenciement
-                </Paragraph>
-              </CallToActionTile>
-            </Link>
-          </Grid>
-        </Wrapper>
+        <p>
+          L’équipe du code du travail numérique vous propose d’intégrer son
+          moteur de recherche et certains de ses simulateurs sur votre site
+          grâce à un module (widget).
+        </p>
+        <Grid columns="4">
+          <Link href="/integration/moteur-recherche" passHref>
+            <CallToActionTile
+              noCustom
+              icon={icons.SearchCC}
+              action="Installer"
+              title=" Moteur de recherche du code du travail numérique"
+              titleTagType="h2"
+            >
+              <Paragraph>
+                Effectuer une recherche depuis votre site sur le code du travail
+                numérique
+              </Paragraph>
+            </CallToActionTile>
+          </Link>
+          <Link href="/integration/preavis-retraite" passHref>
+            <CallToActionTile
+              noCustom
+              icon={icons.CalendarTime}
+              action="Installer"
+              title="Préavis de départ ou mise&nbsp;à la retraite"
+              titleTagType="h2"
+            >
+              <Paragraph>
+                Calculer la durée de préavis à respecter en cas de départ à la
+                retraite ou de mise à la retraite
+              </Paragraph>
+            </CallToActionTile>
+          </Link>
+          <Link href="/integration/preavis-licenciement" passHref>
+            <CallToActionTile
+              noCustom
+              icon={icons.CalendarTime}
+              action="Installer"
+              title="Préavis de&nbsp;licenciement"
+              titleTagType="h2"
+            >
+              <Paragraph>
+                <br />
+                Calculer la durée de préavis à respecter en cas de licenciement
+              </Paragraph>
+            </CallToActionTile>
+          </Link>
+        </Grid>
       </Container>
     </Section>
   </Layout>
