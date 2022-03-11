@@ -19,8 +19,9 @@ describe("Vérification des références juridiques pour Indemnité légale de l
         engine.setSituation({
           "contrat salarié . ancienneté": seniority,
           "contrat salarié . convention collective": "''",
+          "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
+            "non",
           "contrat salarié . salaire de référence": 1000,
-          "contrat salarié . travailleur handicapé": "non",
           "indemnité de licenciement": "oui",
         })
       );

@@ -16,6 +16,7 @@ contrat salarié . ancienneté:
     type: entier
 
 contrat salarié . travailleur handicapé:
+  applicable si: préavis de retraite
   titre: Travailleur handicapé
   question: Le salarié concerné est-il reconnu en tant que travailleur handicapé ?
   cdtn:

@@ -24,6 +24,7 @@ export function StepIndemnite({ form }: Props): JSX.Element {
     primes = [],
     salaire,
     anciennete,
+    inaptitude,
     ccn,
   } = form.getState().values;
 
@@ -41,7 +42,8 @@ export function StepIndemnite({ form }: Props): JSX.Element {
       mapToPublicodesSituationForIndemniteLicenciement(
         ccn,
         anciennete,
-        salaireRef
+        salaireRef,
+        inaptitude
       )
     );
   }, []);

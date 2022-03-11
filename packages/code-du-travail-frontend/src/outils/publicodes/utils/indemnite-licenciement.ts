@@ -10,7 +10,8 @@ function formatSeniorityForIndemniteLicenciement(
 export const mapToPublicodesSituationForIndemniteLicenciement = (
   ccn: ConventionCollective | undefined,
   seniority: string,
-  salaireRef: number
+  salaireRef: number,
+  inaptitude: boolean
 ): Record<string, string> => {
   const agreement: Record<string, string> = ccn?.selected
     ? {
@@ -25,7 +26,8 @@ export const mapToPublicodesSituationForIndemniteLicenciement = (
       "contrat salarié - ancienneté":
         formatSeniorityForIndemniteLicenciement(seniority),
       "contrat salarié - salaire de référence": formatNumber(salaireRef),
-      "contrat salarié - travailleur handicapé": "non",
+      "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
+        inaptitude ? "oui" : "non",
       "indemnité de licenciement": "oui",
     },
   };
