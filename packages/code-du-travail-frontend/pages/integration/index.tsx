@@ -1,6 +1,7 @@
 import {
   Container,
   Grid,
+  icons,
   PageTitle,
   Paragraph,
   Section,
@@ -34,6 +35,7 @@ const FindAnswerPage = (): JSX.Element => (
             <Link href="/integration/trouver-une-reponse" passHref>
               <CallToActionTile
                 noCustom
+                icon={icons.SearchCC}
                 action="Installer"
                 title="Intégrer notre moteur de recherche"
                 titleTagType="h2"
@@ -47,6 +49,7 @@ const FindAnswerPage = (): JSX.Element => (
             <Link href="/integration/preavis-retraite" passHref>
               <CallToActionTile
                 noCustom
+                icon={icons.CalendarTime}
                 action="Installer"
                 title="Préavis de départ ou mise à la retraite"
                 titleTagType="h2"
@@ -54,6 +57,20 @@ const FindAnswerPage = (): JSX.Element => (
                 <Paragraph>
                   Calculer la durée de préavis à respecter en cas de départ ou
                   mise à la retraite
+                </Paragraph>
+              </CallToActionTile>
+            </Link>
+            <Link href="/integration/preavis-licenciement" passHref>
+              <CallToActionTile
+                noCustom
+                icon={icons.CalendarTime}
+                action="Installer"
+                title="Préavis de licenciement"
+                titleTagType="h2"
+              >
+                <Paragraph>
+                  Calculer la durée de préavis à respecter en cas de
+                  licenciement
                 </Paragraph>
               </CallToActionTile>
             </Link>

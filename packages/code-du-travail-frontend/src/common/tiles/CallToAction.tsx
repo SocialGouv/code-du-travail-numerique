@@ -6,6 +6,7 @@ type Props = {
   children: React.ReactNode | null;
   action: string;
   title: string;
+  icon?: string;
   titleTagType: string;
   noCustom?: boolean;
 };
