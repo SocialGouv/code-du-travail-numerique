@@ -24,6 +24,7 @@ script-src 'self' https://mon-entreprise.urssaf.fr *.fabrique.social.gouv.fr htt
 frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com;
 style-src 'self' 'unsafe-inline';
 font-src 'self' data: blob:;
+prefetch-src 'self' *.fabrique.social.gouv.fr;
 `;
 
 const { withSentryConfig } = require("@sentry/nextjs");
