@@ -37,7 +37,7 @@ const PreavisRetraitePage = (): JSX.Element => (
         </NarrowParagraph>
         <Wrapper variant="main">
           <iframe
-            src="/widgets/preavis-de-retraite"
+            src="/widgets/preavis-retraite"
             width="100%"
             height="650px"
             title="Calcul du préavis de retraite - Code du travail numérique"
@@ -61,7 +61,7 @@ const PreavisRetraitePage = (): JSX.Element => (
                       <code>&lt;body&gt;</code> de votre page&nbsp;:
                     </p>
                     <CodeSnippet>
-                      {`<script src="https://code.travail.gouv.fr/widget-preavis-retraite.js" defer></script>`}
+                      {`<script src="https://code.travail.gouv.fr/widgets/widget-preavis-retraite.js" defer></script>`}
                     </CodeSnippet>
                     <p>
                       Ensuite, intégrez le code suivant à l’endroit où vous
@@ -87,7 +87,7 @@ const PreavisRetraitePage = (): JSX.Element => (
                     </p>
                     <CodeSnippet>
                       {`<iframe
-  src="https://code.travail.gouv.fr/widgets/preavis-de-retraite"
+  src="https://code.travail.gouv.fr/widgets/preavis-retraite"
   width="100%"
   height="650px"
   title="Calcul du préavis de retraite - Code du travail numérique"

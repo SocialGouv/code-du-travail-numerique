@@ -8,7 +8,7 @@ function addWidget() {
   const isIE = /MSIE/.test(window.navigator.userAgent);
   iframe.id = "cdtn-iframe";
   iframe.width = "100%";
-  iframe.width = "250px";
+  iframe.height = "250px";
   iframe.style = "border:none";
 
   iframe.src = isIE

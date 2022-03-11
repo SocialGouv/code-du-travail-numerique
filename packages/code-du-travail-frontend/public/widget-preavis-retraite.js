@@ -9,7 +9,7 @@ function addWidget() {
   iframe.width = "100%";
   iframe.height = "650px";
   iframe.style = "border:none";
-  iframe.src = "http://localhost:3000/widgets/preavis-de-retraite";
+  iframe.src = "https://code.travail.gouv.fr/widgets/preavis-retraite";
 
   setTimeout(init, 300);
 
