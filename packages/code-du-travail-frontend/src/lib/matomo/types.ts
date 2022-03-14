@@ -6,6 +6,7 @@ export enum MatomoBaseEvent {
 export enum MatomoSearchAgreementCategory {
   AGREEMENT_SEARCH_HELP = "cc_search_help",
   ENTERPRISE_SELECT = "enterprise_select",
+  AGREEMENT_SELECT_P1 = "cc_select_p1",
   AGREEMENT_SELECT_P2 = "cc_select_p2",
   ENTERPRISE_SEARCH = "enterprise_search",
   AGREEMENT_SEARCH = "cc_search",
@@ -29,6 +30,7 @@ export enum MatomoSimulatorEvent {
   SELECT_CLASSE = "select_value_classe",
   SELECT_POSITION = "select_value_position",
   SELECT_COEFFICIENT = "select_value_coefficient",
+  CLICK_PRINT = "click_print",
 }
 
 export enum MatomoAgreementEvent {

@@ -6,9 +6,11 @@ import Search from "../";
 global.fetch = jest.fn();
 jest.useFakeTimers();
 
-jest.mock("../../../piwik", () => ({
-  matopush: jest.fn(),
-}));
+jest.mock("@socialgouv/matomo-next", () => {
+  return {
+    push: jest.fn(),
+  };
+});
 
 function renderSearchForm({
   title = "Recherche de convention collective",

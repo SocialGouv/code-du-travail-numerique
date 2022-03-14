@@ -1,7 +1,6 @@
 import { isAfter } from "date-fns";
 
-import { parse } from "../common/date";
-import { round, sum } from "../common/math";
+import { parse, round, sum } from "../common/utils/";
 
 /**
  * Compute the salaire de Réference

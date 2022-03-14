@@ -47,6 +47,13 @@ Quand("je choisis {string}", (text) => {
   I.checkOption(text);
 });
 
+Quand(
+  "je sélectionne {string} dans la liste {string}",
+  (optionName, selectName) => {
+    I.selectOption(selectName, optionName);
+  }
+);
+
 Quand("je ferme la modale", () => {
   I.click('button[title="fermer la modale"]');
 });
