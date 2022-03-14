@@ -6,7 +6,7 @@ import {
   usePublicodes,
 } from "../../publicodes";
 import { IndemniteLegale } from "../components/IndemniteLegale";
-import { getSalaireRef } from "../indemnite";
+import { getIndemniteExplications, getSalaireRef } from "../indemnite";
 
 type Props = {
   form: any;
@@ -27,17 +27,21 @@ export function StepIndemnite({ form }: Props): JSX.Element {
     inaptitude,
     ccn,
   } = form.getState().values;
-
+  const salaireRef = getSalaireRef({
+    anciennete,
+    hasSameSalaire,
+    hasTempsPartiel,
+    primes,
+    salaire,
+    salairePeriods,
+    salaires,
+  });
+  const infoCalcul = getIndemniteExplications({
+    anciennete,
+    inaptitude,
+    salaireRef,
+  });
   useEffect(() => {
-    const salaireRef = getSalaireRef({
-      anciennete,
-      hasSameSalaire,
-      hasTempsPartiel,
-      primes,
-      salaire,
-      salairePeriods,
-      salaires,
-    });
     publicodesContext.setSituation(
       mapToPublicodesSituationForIndemniteLicenciement(
         ccn,
@@ -52,6 +56,7 @@ export function StepIndemnite({ form }: Props): JSX.Element {
     <IndemniteLegale
       result={publicodesContext.result.value?.toString() ?? "0"}
       unit={publicodesContext.result.unit?.denominators[0] ?? "€"}
+      infoCalcul={infoCalcul}
     />
   );
 }
