@@ -1,5 +1,5 @@
 import tools from "@cdt/data...tools/internals.json";
-import { Container, theme } from "@socialgouv/cdtn-ui";
+import { Container, icons, theme } from "@socialgouv/cdtn-ui";
 import { GetServerSideProps } from "next";
 import Link from "next/link";
 import React from "react";
@@ -35,6 +35,7 @@ function Widgets({ icon, slug, title, publicodesRules }: Props): JSX.Element {
             Politique de confidentialité
           </a>
         </Link>
+        <Logo />
       </StyledFooter>
     </Container>
   );
@@ -76,5 +77,16 @@ const StyledFooter = styled.footer`
   padding: ${theme.spacings.base};
   @media print {
     display: none;
+  }
+`;
+
+const Logo = styled(icons.Logo)`
+  width: 17.4rem;
+  height: 7rem;
+  margin-left: auto;
+  color: ${({ theme }) => theme.primary};
+  @media (max-width: ${theme.breakpoints.mobile}) {
+    height: 5rem;
+    width: auto;
   }
 `;
