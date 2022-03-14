@@ -619,13 +619,10 @@ exports[`<DureePreavisDemission /> should render 1`] = `
         </ol>
       </div>
       <p>
-        En cas de démission, le salarié ne peut pas quitter l’entreprise immédiatement après avoir informé l’employeur de ses intentions. Il doit rester dans l’entreprise durant une certaine période, qu’on appelle préavis ou parfois délai congé.
+        Ce simulateur permet de calculer la durée du préavis que le salarié doit respecter en cas de démission.
       </p>
       <p>
-        Les règles encadrant le préavis (droits et obligations, durées, cas de dispense, absences autorisées pour chercher un emploi durant le préavis) sont notamment définies par le code du travail et la branche.
-      </p>
-      <p>
-        Le présent outil vous permet de connaitre la durée du préavis prévue par la convention collective en matière de démission.
+        Des informations disponibles sur le bulletin de salaire pourraient être utiles pour réaliser cette simulation.
       </p>
       <div
         class="c19"

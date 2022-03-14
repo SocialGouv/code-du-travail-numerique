@@ -1,4 +1,4 @@
-import { round, sum } from "../common/math";
+import { round, sum } from "../common/utils/";
 
 function getIndemnitePrecarite({
   salaire,

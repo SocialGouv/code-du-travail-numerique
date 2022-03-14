@@ -9,7 +9,7 @@ import {
   getSituationsFor,
   getSupportedCC,
   recapSituation,
-  skipStep,
+  skipInformations,
 } from "../situations.utils";
 
 const criteriaOrder = ["bar", "foo", "baz", "yolo"];
@@ -123,18 +123,18 @@ describe("situations", () => {
     });
   });
 
-  describe("skipStep", () => {
-    it("should return true if there no  cc", () => {
-      expect(skipStep(data, undefined)).toBe(true);
+  describe("skip information step", () => {
+    it("should return true if there no agreement", () => {
+      expect(skipInformations(data, undefined)).toBe(true);
     });
-    it("should return true if there no matching cc", () => {
-      expect(skipStep(data, "toto")).toBe(true);
+    it("should return true if there no matching agreement", () => {
+      expect(skipInformations(data, 9999)).toBe(true);
     });
-    it("should return true if there matching cc but only with empty criteria", () => {
-      expect(skipStep(data, "30")).toBe(true);
+    it("should return true if there matching agreement but only with empty criteria", () => {
+      expect(skipInformations(data, 30)).toBe(true);
     });
-    it("should return false if there matching cc", () => {
-      expect(skipStep(data, "20")).toBe(false);
+    it("should return false if there matching agreement", () => {
+      expect(skipInformations(data, 20)).toBe(false);
     });
   });
 

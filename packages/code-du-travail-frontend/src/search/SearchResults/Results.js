@@ -13,13 +13,13 @@ import {
   Title,
   ViewMore,
 } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
 import { CallToActionTile } from "../../common/tiles/CallToAction";
-import { matopush } from "../../piwik";
 import { reportSelectionToMatomo, summarize } from "../utils";
 
 export const ListLink = ({

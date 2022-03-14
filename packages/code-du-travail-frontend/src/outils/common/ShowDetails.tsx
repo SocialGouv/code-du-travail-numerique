@@ -1,8 +1,8 @@
 import { Collapse } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import React from "react";
 
 import { MatomoBaseEvent, MatomoSimulatorEvent } from "../../lib";
-import { matopush } from "../../piwik";
 
 type Props = {
   children: React.ReactNode;

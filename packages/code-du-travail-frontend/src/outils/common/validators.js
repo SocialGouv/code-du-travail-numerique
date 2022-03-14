@@ -1,4 +1,4 @@
-import { parse } from "./date";
+import { parse } from "./utils/";
 
 export function required(value) {
   return value ? undefined : "Vous devez répondre à cette question";

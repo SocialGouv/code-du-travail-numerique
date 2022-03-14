@@ -1,4 +1,4 @@
-import { round, sum } from "../common/math";
+import { round, sum } from "../common/utils";
 
 /**
  * Compute the salaire de Réference

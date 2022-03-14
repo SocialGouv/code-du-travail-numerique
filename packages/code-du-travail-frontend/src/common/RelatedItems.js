@@ -6,11 +6,10 @@ import {
   Heading,
   theme,
 } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-
-import { matopush } from "../piwik";
 
 const matoSelectRelated = (reco, selection) => {
   matopush([

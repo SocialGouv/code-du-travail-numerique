@@ -1,13 +1,14 @@
 import { Fieldset, icons, Legend, theme, Wrapper } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import arrayMutators from "final-form-arrays";
 import React, { Reducer, useEffect, useReducer } from "react";
 import { Form } from "react-final-form";
 import styled from "styled-components";
 
-import { matopush } from "../../piwik";
 import { PrevNextBar } from "./PrevNextBar";
 import { STEP_LIST_WIDTH, StepList } from "./StepList";
 import { Action, ActionName, SkipFn, State } from "./type/WizardType";
+import { printResult } from "./utils/";
 
 const anchorRef = React.createRef<HTMLLIElement>();
 
@@ -177,6 +178,7 @@ function Wizard({
                   nextVisible={nextVisible}
                   printVisible={isLastStep}
                   previousVisible={previousVisible}
+                  onPrint={() => printResult(title)}
                 />
                 {Annotation && (
                   <p>

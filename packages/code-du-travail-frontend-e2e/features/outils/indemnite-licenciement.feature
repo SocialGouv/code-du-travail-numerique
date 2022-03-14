@@ -11,7 +11,7 @@ Scénario:
 
   Alors je vois "Étapes"
   Alors je vois "Indemnité de licenciement"
-  Alors je vois "permet d’estimer le montant de l’indemnité minimale de licenciement"
+  Alors je vois "permet d’estimer le montant de l’indemnité légale de licenciement d’un salarié"
 
   Quand je clique sur "Commencer"
 
