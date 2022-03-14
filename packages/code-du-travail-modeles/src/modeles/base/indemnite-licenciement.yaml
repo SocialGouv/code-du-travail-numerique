@@ -41,6 +41,8 @@ contrat salarié . indemnité de licenciement . inaptitude suite à un accident 
     produit:
       assiette: contrat salarié . indemnité de licenciement
       facteur: 2
+  références:
+    Article L1226-14: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006900981/
 
 contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins:
   valeur:
