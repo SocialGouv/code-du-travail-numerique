@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import Disclaimer from "../../common/Disclaimer";
-import { isNotNearZero } from "../../common/math";
 import PubliReferences from "../../common/PubliReferences";
 import ShowDetails from "../../common/ShowDetails";
 import {
@@ -17,6 +16,7 @@ import {
   SmallText,
 } from "../../common/stepStyles";
 import { WizardStepProps } from "../../common/type/WizardType";
+import { isNotNearZero } from "../../common/utils";
 import { formatRefs } from "../../publicodes";
 import DisclaimerText from "./DisclaimerText";
 
