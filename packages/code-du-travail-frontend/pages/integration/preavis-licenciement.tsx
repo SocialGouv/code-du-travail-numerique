@@ -40,7 +40,7 @@ const PreavisRetraitePage = (): JSX.Element => (
           <iframe
             src="/widgets/preavis-licenciement"
             width="100%"
-            height="650px"
+            height="700px"
             title="Calcul du préavis de retraite - Code du travail numérique"
             style={{ border: "none" }}
           />
