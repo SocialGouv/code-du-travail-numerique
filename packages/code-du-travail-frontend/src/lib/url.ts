@@ -1,6 +1,6 @@
 import getConfig from "next/config";
 
-import { MappingReplacement } from "../constants";
+import { MappingReplacement } from "../redirects";
 
 const {
   publicRuntimeConfig: { AZURE_BASE_URL, AZURE_CONTAINER },

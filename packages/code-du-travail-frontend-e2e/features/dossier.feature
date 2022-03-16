@@ -14,4 +14,4 @@ Fonctionnalité: Dossier Coronavirus
 
     Quand je clique sur "Personnes vulnérables : reprise d'activité ou activité partielle ? [infographies]"
     Quand j'attends que le titre de page "Personnes vulnérables : reprise d'activité ou activité partielle ?" apparaisse
-    Alors je vois "A partir du 27 septembre 2021, la reprise de l'activité professionnelle des personnes à risque de forme grave de Covid-19 en présentiel est possible, sous réserve de mesures de protection renforcées."
+    Alors je vois "Depuis le 27 septembre 2021, les personnes à risque de forme grave de Covid-19 qui ne peuvent pas télétravailler peuvent reprendre leur activité professionnelle en présentiel, sous réserve de mesures de protection renforcées."
