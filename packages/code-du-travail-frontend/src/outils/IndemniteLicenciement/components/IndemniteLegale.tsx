@@ -20,10 +20,10 @@ export const IndemniteLegale = ({
   <>
     <SectionTitle>Indemnité légale</SectionTitle>
     <p>
-      {"Le code du travail prévoit un montant minimum de : "}
+      Le code du travail prévoit un montant minimum de :{" "}
       <HighlightResult>{`${result} ${unit} brut.`}</HighlightResult>
-      <FormulaDetails infoCalcul={infoCalcul} withSource />
     </p>
+    <FormulaDetails infoCalcul={infoCalcul} withSource />
     <Disclaimer title={"Attention il peut exister un montant plus favorable"}>
       <p>
         Une convention collective, un accord d’entreprise, le contrat de travail
