@@ -4,6 +4,7 @@ import {
   PageTitle,
   Paragraph,
   Section,
+  theme,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
@@ -98,5 +99,6 @@ const Image = styled.img`
   height: auto;
   width: auto;
   max-width: 90%;
+  border: solid 1px ${theme.colors.border};
 `;
 export default FindAnswerPage;
