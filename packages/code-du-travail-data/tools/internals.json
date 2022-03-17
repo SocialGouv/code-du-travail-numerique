@@ -105,7 +105,7 @@
   },
   {
     "icon": "Time",
-    "title": "Heures pour recherche d’emploi",
+    "title": "Heures d'absence pour rechercher un emploi",
     "slug": "heures-recherche-emploi",
     "questions": [
       "ai-je droit à des heures de recherche d'emploi",
@@ -120,7 +120,7 @@
       "chercher un emploi pendant son préavis",
       "absence 2h pour recherche d'emploi pendant préavis"
     ],
-    "description": "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
+    "description": "Calculez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis",
     "action": "Calculer",
     "date": "08/11/2019",
     "enable": true,

@@ -1,7 +1,7 @@
 #language: fr
 
 @heure-recherche-emploi-outil
-Fonctionnalité: Outil - Heures pour recherche d’emploi
+Fonctionnalité: Outil - Heures d'absence pour rechercher un emploi
   Pour pouvoir calculer mes heures pour recherche d'emploi
   En tant que visiteur
   Je veux pouvoir utiliser le calculateur d'heures pour recherche d'emploi (en renseignant ou non ma CC)
@@ -10,7 +10,7 @@ Fonctionnalité: Outil - Heures pour recherche d’emploi
     Soit un utilisateur sur la page "/outils/heures-recherche-emploi"
 
     Alors je vois "Étapes"
-    Alors je vois "Heures pour recherche d’emploi"
+    Alors je vois "Heures d'absence pour rechercher un emploi"
     Alors je vois "permet de calculer le nombre d’heures d’absence autorisée pendant la période de préavis"
 
     Quand je clique sur "Commencer"
@@ -31,7 +31,7 @@ Fonctionnalité: Outil - Heures pour recherche d’emploi
     Soit un utilisateur sur la page "/outils/heures-recherche-emploi"
 
     Alors je vois "Étapes"
-    Alors je vois "Heures pour recherche d’emploi"
+    Alors je vois "Heures d'absence pour rechercher un emploi"
     Alors je vois "permet de calculer le nombre d’heures d’absence autorisée pendant la période de préavis"
 
     Quand je clique sur "Commencer"
@@ -66,7 +66,7 @@ Fonctionnalité: Outil - Heures pour recherche d’emploi
     Soit un utilisateur sur la page "/outils/heures-recherche-emploi"
 
     Alors je vois "Étapes"
-    Alors je vois "Heures pour recherche d’emploi"
+    Alors je vois "Heures d'absence pour rechercher un emploi"
     Alors je vois "permet de calculer le nombre d’heures d’absence autorisée pendant la période de préavis"
 
     Quand je clique sur "Commencer"

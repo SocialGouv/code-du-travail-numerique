@@ -1665,7 +1665,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -1794,7 +1794,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -1897,7 +1897,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -2008,7 +2008,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -2141,7 +2141,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -2247,7 +2247,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -2360,11 +2360,11 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
-                          Heures pour recherche d’emploi
+                          Heures d'absence pour rechercher un emploi
                         </h2>
                       </div>
                     </div>
@@ -2377,7 +2377,7 @@ exports[`<Outils /> should render 1`] = `
                         <p
                           class="c44"
                         >
-                          Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis
+                          Calculez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis
                         </p>
                         <div
                           class="c45"
@@ -2469,7 +2469,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -2575,7 +2575,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
@@ -2690,7 +2690,7 @@ exports[`<Outils /> should render 1`] = `
                       <div
                         class="c40"
                       >
-                        
+
                         <h2
                           class="c41"
                         >
