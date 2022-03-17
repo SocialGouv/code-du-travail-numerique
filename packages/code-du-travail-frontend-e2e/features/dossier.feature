@@ -12,6 +12,6 @@ Fonctionnalité: Dossier Coronavirus
     Alors je vois "Covid-19 : fin du protocole sanitaire"
     Alors je vois "Sommaire"
 
-    Quand je clique sur "Covid-19 : Les mesures de protection"
-    Quand j'attends que le titre de page "Covid-19 : Les mesures de protection en entreprise" apparaisse
-    Alors je vois "L’employeur doit mettre en place, dans le cadre du dialogue social de proximité, notamment en associant représentants du personnel et représentants syndicaux, des mesures d’hygiène, organisationnelles et de protection collective dans le but de veiller au respect des gestes barrières."
+    Quand je clique sur "Personnes vulnérables : reprise d'activité ou activité partielle ? [infographies]"
+    Quand j'attends que le titre de page "Personnes vulnérables : reprise d'activité ou activité partielle ?" apparaisse
+    Alors je vois "Depuis le 27 septembre 2021, les personnes à risque de forme grave de Covid-19 qui ne peuvent pas télétravailler peuvent reprendre leur activité professionnelle en présentiel, sous réserve de mesures de protection renforcées."

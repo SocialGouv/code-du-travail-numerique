@@ -19,9 +19,9 @@ function validate(values) {
         droit à une&nbsp;
         <Link href={`${getRouteBySource(SOURCES.TOOLS)}/imdemnite-precarite`}>
           <A11yLink
-            href="/fiche-service-public/qui-peut-toucher-la-prime-de-precarite-a-la-fin-dun-contrat-de-travail"
+            href="/fiche-service-public/le-salarie-touche-t-il-la-prime-de-precarite-a-la-fin-dun-contrat-de-travail"
             target="_blank"
-            el="noopener noreferrer"
+            rel="noopener noreferrer"
           >
             indemnité de précarité (nouvelle fenêtre)
           </A11yLink>

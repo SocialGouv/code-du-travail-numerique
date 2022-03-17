@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.73.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.72.0...v4.73.0) (2022-03-16)
+
+
+### Features
+
+* **redirects:** add new url to redirects after remove of multiples articles ([#4301](https://github.com/SocialGouv/code-du-travail-numerique/issues/4301)) ([c7b3acc](https://github.com/SocialGouv/code-du-travail-numerique/commit/c7b3acc9664a8cf00c0bce0335669708d6f3de0f))
+
+
+
+
+
+# [4.72.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.71.0...v4.72.0) (2022-03-11)
+
+
+### Bug Fixes
+
+* **events:** wrapping same component + optimization with callback ([#4222](https://github.com/SocialGouv/code-du-travail-numerique/issues/4222)) ([bae7e41](https://github.com/SocialGouv/code-du-travail-numerique/commit/bae7e415e327b92c112cd4ff716929003c32916d))
+* **frontend:** reduce introduction ([#4279](https://github.com/SocialGouv/code-du-travail-numerique/issues/4279)) ([1875a3e](https://github.com/SocialGouv/code-du-travail-numerique/commit/1875a3e826e5e5e08137d665116f0d11aea61e92))
+* **simulators:** skip steps on simulators even if agreement is supported ([#4276](https://github.com/SocialGouv/code-du-travail-numerique/issues/4276)) ([43d52a1](https://github.com/SocialGouv/code-du-travail-numerique/commit/43d52a12d18b53df704749725295924001296370))
+* **simulators:** wrong event sent for cc_select ([#4294](https://github.com/SocialGouv/code-du-travail-numerique/issues/4294)) ([9b65ac5](https://github.com/SocialGouv/code-du-travail-numerique/commit/9b65ac5e0e6df025b79623a2f1ee5f7940f22634))
+* **url:** fix link on simulateur Indemnite de licenciement + add redirections for deleted articles ([#4299](https://github.com/SocialGouv/code-du-travail-numerique/issues/4299)) ([8968eb3](https://github.com/SocialGouv/code-du-travail-numerique/commit/8968eb33d507b79a1a80b3eccc32d88ef3ebd4e4))
+
+
+### Features
+
+* **analytics:** add fabrique matomo lib ([#4251](https://github.com/SocialGouv/code-du-travail-numerique/issues/4251)) ([057afcd](https://github.com/SocialGouv/code-du-travail-numerique/commit/057afcd39f8dcd521327d2e854d991d4c35eca3a))
+* **event:** add event for print result ([#4273](https://github.com/SocialGouv/code-du-travail-numerique/issues/4273)) ([edbffb5](https://github.com/SocialGouv/code-du-travail-numerique/commit/edbffb54fa9adfab1287c7892bdaf68040195488))
+* **frontend:** refacto publicodes handler ([#4261](https://github.com/SocialGouv/code-du-travail-numerique/issues/4261)) ([5a412e3](https://github.com/SocialGouv/code-du-travail-numerique/commit/5a412e36c29647c50122938d061329dbffcf2c64))
+
+
+
+
+
 # [4.71.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.70.0...v4.71.0) (2022-02-28)
 
 
