@@ -78,7 +78,7 @@ Object {
     Object {
       "_id": "18",
       "_index": "cdtn_test-v1_documents",
-      "_score": 14.710339,
+      "_score": 14.719249,
       "_source": Object {
         "cdtnId": "647c224c9b",
         "effectif": 134889,
@@ -108,7 +108,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 14.710339,
+  "max_score": 14.719249,
   "total": Object {
     "relation": "eq",
     "value": 2,
