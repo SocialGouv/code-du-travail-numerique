@@ -1,4 +1,4 @@
-import { differenceInMonths, format, isAfter } from "date-fns";
+import { differenceInMonths, format, isAfter, isBefore } from "date-fns";
 import createDecorator from "final-form-calculate";
 import PropTypes from "prop-types";
 import React from "react";
@@ -50,6 +50,9 @@ function validate({
       "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté";
   }
 
+  if (dateNotification && isBefore(dNotification, new Date("2017-09-27"))) {
+    errors.dateNotification = `Les licenciements notifiés avant le 27 septembre 2017 ont un calcul différent`;
+  }
   if (dateNotification && dateSortie && isAfter(dNotification, dSortie)) {
     errors.dateNotification = `La date de notification doit se situer avant la date de sortie`;
   }
