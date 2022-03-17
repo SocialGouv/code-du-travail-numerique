@@ -35,7 +35,11 @@ function Widgets({ icon, slug, title, publicodesRules }: Props): JSX.Element {
             Politique de confidentialité
           </a>
         </Link>
-        <Logo />
+        <Link passHref href="https://code.travail.gouv.fr/">
+          <LeftLink target="_blank">
+            <Logo />
+          </LeftLink>
+        </Link>
       </StyledFooter>
     </Container>
   );
@@ -69,11 +73,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
 
 const StyledFooter = styled.footer`
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
+  justify-content: space-between;
   padding: ${theme.spacings.base};
   @media print {
     display: none;
@@ -81,12 +82,15 @@ const StyledFooter = styled.footer`
 `;
 
 const Logo = styled(icons.Logo)`
-  width: 17.4rem;
+  width: auto;
   height: 7rem;
-  margin-left: auto;
   color: ${({ theme }) => theme.primary};
   @media (max-width: ${theme.breakpoints.mobile}) {
     height: 5rem;
-    width: auto;
+  }
+`;
+const LeftLink = styled.a`
+  &:after {
+    content: "" !important;
   }
 `;
