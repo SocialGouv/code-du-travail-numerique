@@ -1,13 +1,13 @@
 import {
   Container,
   Grid,
-  icons,
   PageTitle,
   Paragraph,
   Section,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
+import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
@@ -29,47 +29,63 @@ const FindAnswerPage = (): JSX.Element => (
           moteur de recherche et certains de ses simulateurs sur votre site
           grâce à un module (widget).
         </p>
-        <Grid columns="4">
+        <Grid columns="2">
           <Link href="/integration/moteur-recherche" passHref>
             <CallToActionTile
               noCustom
-              icon={icons.SearchCC}
               action="Installer"
-              title=" Moteur de recherche du code du travail numérique"
+              title="Moteur de recherche du code du travail numérique"
               titleTagType="h2"
             >
-              <Paragraph>
-                Effectuer une recherche depuis votre site sur le code du travail
-                numérique
-              </Paragraph>
+              <>
+                <Image
+                  src="/static/assets/img/moteur-recherche.png"
+                  alt="Widget Moteur de recherche du code du travail numérique"
+                />
+                <Paragraph>
+                  Effectuer une recherche depuis votre site sur le code du
+                  travail numérique
+                </Paragraph>
+              </>
             </CallToActionTile>
           </Link>
           <Link href="/integration/preavis-retraite" passHref>
             <CallToActionTile
               noCustom
-              icon={icons.CalendarTime}
               action="Installer"
               title="Préavis de départ ou mise&nbsp;à la retraite"
               titleTagType="h2"
             >
-              <Paragraph>
-                Calculer la durée de préavis à respecter en cas de départ à la
-                retraite ou de mise à la retraite
-              </Paragraph>
+              <>
+                <Image
+                  src="/static/assets/img/preavis-retraite.png"
+                  alt="Widget Moteur de recherche du code du travail numérique"
+                />
+                <Paragraph>
+                  Calculer la durée de préavis à respecter en cas de départ à la
+                  retraite ou de mise à la retraite
+                </Paragraph>
+              </>
             </CallToActionTile>
           </Link>
           <Link href="/integration/preavis-licenciement" passHref>
             <CallToActionTile
               noCustom
-              icon={icons.CalendarTime}
               action="Installer"
               title="Préavis de&nbsp;licenciement"
               titleTagType="h2"
             >
-              <Paragraph>
-                <br />
-                Calculer la durée de préavis à respecter en cas de licenciement
-              </Paragraph>
+              <>
+                <Image
+                  src="/static/assets/img/preavis-licenciement.png"
+                  alt="Widget Moteur de recherche du code du travail numérique"
+                />
+                <Paragraph>
+                  <br />
+                  Calculer la durée de préavis à respecter en cas de
+                  licenciement
+                </Paragraph>
+              </>
             </CallToActionTile>
           </Link>
         </Grid>
@@ -77,5 +93,10 @@ const FindAnswerPage = (): JSX.Element => (
     </Section>
   </Layout>
 );
-
+const Image = styled.img`
+  margin: auto;
+  height: auto;
+  width: auto;
+  max-width: 90%;
+`;
 export default FindAnswerPage;
