@@ -11,7 +11,7 @@ jobs:
     name: Register elasticsearch
     runs-on: ubuntu-latest
     steps:
-      - uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
+      - uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn-multi
         with:
           project: "cdtn"
           imageName: cdtn/elasticsearch
