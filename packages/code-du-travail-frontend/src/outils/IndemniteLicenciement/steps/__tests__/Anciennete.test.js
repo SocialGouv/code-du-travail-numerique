@@ -74,18 +74,18 @@ describe("<Anciennete />", () => {
     ).toMatch("La date de notification doit se situer avant la date de sortie");
   });
 
-  it("should display error if dateNotif is before 27/09/2017", () => {
+  it("should display error if dateNotif is older than 18 months", () => {
     const { container, getByLabelText } = renderForm({
-      dateSortie: "2018-04-01",
+      dateSortie: "2022-04-01",
     });
     const dateNotif = getByLabelText(/licenciement/i);
-    fireEvent.change(dateNotif, { target: { value: "2016-05-02" } });
+    fireEvent.change(dateNotif, { target: { value: "2018-02-02" } });
     expect(
       container
         .querySelector("input[name=dateNotification]")
         .parentElement.nextSibling.textContent.trim()
     ).toMatch(
-      "Les licenciements notifiés avant le 27 septembre 2017 ont un calcul différent"
+      "La date de notification doit se situer dans les 18 derniers mois"
     );
   });
 
