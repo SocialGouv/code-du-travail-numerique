@@ -83,7 +83,7 @@ const { spacings } = theme;
 const QuestionWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: ${spacings.medium};
+  margin-bottom: ${spacings.base};
 `;
 const ErrorWrapper = styled.div`
   display: inline-block;
