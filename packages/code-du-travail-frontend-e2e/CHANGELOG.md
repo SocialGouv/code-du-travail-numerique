@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.73.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.72.0...v4.73.0) (2022-03-16)
+
+
+### Features
+
+* **redirects:** add new url to redirects after remove of multiples articles ([#4301](https://github.com/SocialGouv/code-du-travail-numerique/issues/4301)) ([c7b3acc](https://github.com/SocialGouv/code-du-travail-numerique/commit/c7b3acc9664a8cf00c0bce0335669708d6f3de0f))
+
+
+
+
+
+# [4.72.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.71.0...v4.72.0) (2022-03-11)
+
+
+### Bug Fixes
+
+* **e2e:** dossier covid-19 as changed ([#4298](https://github.com/SocialGouv/code-du-travail-numerique/issues/4298)) ([60c21f9](https://github.com/SocialGouv/code-du-travail-numerique/commit/60c21f9dae62781f5300638a0e6db769fc432ba9))
+* **e2e:** fix e2e test after update dossier ([#4300](https://github.com/SocialGouv/code-du-travail-numerique/issues/4300)) ([2fbd4f4](https://github.com/SocialGouv/code-du-travail-numerique/commit/2fbd4f47330864b1eb2d7146e7a17bd5182cf897))
+* **frontend:** reduce introduction ([#4279](https://github.com/SocialGouv/code-du-travail-numerique/issues/4279)) ([1875a3e](https://github.com/SocialGouv/code-du-travail-numerique/commit/1875a3e826e5e5e08137d665116f0d11aea61e92))
+* **simulators:** skip steps on simulators even if agreement is supported ([#4276](https://github.com/SocialGouv/code-du-travail-numerique/issues/4276)) ([43d52a1](https://github.com/SocialGouv/code-du-travail-numerique/commit/43d52a12d18b53df704749725295924001296370))
+
+
+
+
+
 # [4.71.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.70.0...v4.71.0) (2022-02-28)
 
 **Note:** Version bump only for package @cdt/e2e
