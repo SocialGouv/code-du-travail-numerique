@@ -499,11 +499,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
         <div
           class="c9"
         >
-          <h1
+          <h2
             class="c10"
           >
             CDI
-          </h1>
+          </h2>
         </div>
         <div
           class="c11"
@@ -551,12 +551,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c16"
                     >
-                      <h2
+                      <h3
                         class="c10"
                         style="margin: 0px;"
                       >
                         De quoi s'agit-il ?
-                      </h2>
+                      </h3>
                     </div>
                   </div>
                 </div>
@@ -625,12 +625,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c16"
                     >
-                      <h2
+                      <h3
                         class="c10"
                         style="margin: 0px;"
                       >
                         Conditions
-                      </h2>
+                      </h3>
                     </div>
                   </div>
                 </div>
@@ -742,12 +742,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c16"
                     >
-                      <h2
+                      <h3
                         class="c10"
                         style="margin: 0px;"
                       >
                         Volonté de démissionner
-                      </h2>
+                      </h3>
                     </div>
                   </div>
                 </div>
@@ -843,12 +843,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c16"
                     >
-                      <h2
+                      <h3
                         class="c10"
                         style="margin: 0px;"
                       >
                         Procédure
-                      </h2>
+                      </h3>
                     </div>
                   </div>
                 </div>
@@ -956,12 +956,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c16"
                     >
-                      <h2
+                      <h3
                         class="c10"
                         style="margin: 0px;"
                       >
                         Préavis
-                      </h2>
+                      </h3>
                     </div>
                   </div>
                 </div>
@@ -978,11 +978,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <p>
                       Vous ne pouvez pas quitter votre travail dès que vous avez signifié votre démission à votre employeur. Vous continuez de travailler jusqu'à la fin de votre contrat de travail, dans le respect du délai de préavis prévu (sauf en cas de dispense du préavis).
                     </p>
-                    <h3
+                    <h4
                       class="c10"
                     >
                       Durée
-                    </h3>
+                    </h4>
                     <div
                       class="c2"
                       data-tabs="true"
@@ -1040,11 +1040,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         <div
                           class="c9"
                         >
-                          <h3
+                          <h4
                             class="c10"
                           >
                             Cas général
-                          </h3>
+                          </h4>
                         </div>
                         <div
                           class="c11"
@@ -1090,11 +1090,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           <div
                             class="c28 c29"
                           >
-                            <h4
+                            <h5
                               class="c10"
                             >
                               À savoir
-                            </h4>
+                            </h5>
                             <p>
                               le préavis commence à courir à compter de la notification à l'employeur de votre démission.
                             </p>
@@ -1114,11 +1114,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         role="tabpanel"
                       />
                     </div>
-                    <h3
+                    <h4
                       class="c10"
                     >
                       Dispense de préavis
-                    </h3>
+                    </h4>
                     <p>
                       Vous n'êtes pas tenu(e) d'effectuer de préavis dans les cas suivants :
                     </p>
@@ -1194,11 +1194,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         <div
                           class="c9"
                         >
-                          <h3
+                          <h4
                             class="c10"
                           >
                             Vous demandez une dispense de préavis
-                          </h3>
+                          </h4>
                         </div>
                         <div
                           class="c11"
@@ -1249,12 +1249,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                     <div
                                       class="c16"
                                     >
-                                      <h4
+                                      <h5
                                         class="c10"
                                         style="margin: 0px;"
                                       >
                                         Accord de l'employeur
-                                      </h4>
+                                      </h5>
                                     </div>
                                   </div>
                                 </div>
@@ -1320,12 +1320,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                     <div
                                       class="c16"
                                     >
-                                      <h4
+                                      <h5
                                         class="c10"
                                         style="margin: 0px;"
                                       >
                                         Refus de l'employeur
-                                      </h4>
+                                      </h5>
                                     </div>
                                   </div>
                                 </div>
@@ -1356,11 +1356,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         role="tabpanel"
                       />
                     </div>
-                    <h3
+                    <h4
                       class="c10"
                     >
                       Report ou suspension du préavis
-                    </h3>
+                    </h4>
                     <p>
                       Le préavis peut être reporté ou suspendu dans les cas suivants :
                     </p>
@@ -1406,11 +1406,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         </p>
                       </li>
                     </ul>
-                    <h3
+                    <h4
                       class="c10"
                     >
                       Absence pour recherche d'emploi
-                    </h3>
+                    </h4>
                     <p>
                       
                      Il n'existe aucune disposition légale vous permettant de vous
@@ -1466,12 +1466,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c16"
                     >
-                      <h2
+                      <h3
                         class="c10"
                         style="margin: 0px;"
                       >
                         Indemnisation
-                      </h2>
+                      </h3>
                     </div>
                   </div>
                 </div>
@@ -1588,12 +1588,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <div
                       class="c16"
                     >
-                      <h2
+                      <h3
                         class="c10"
                         style="margin: 0px;"
                       >
                         Documents remis au salarié
-                      </h2>
+                      </h3>
                     </div>
                   </div>
                 </div>
