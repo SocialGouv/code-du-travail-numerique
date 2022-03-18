@@ -18,15 +18,15 @@ const FindAnswerPage = (): JSX.Element => (
   <Layout>
     <Metas
       title="Widget pour intégrer le Code du travail numérique à votre site"
-      description="L’équipe du code du travail numérique vous propose d’intégrer son moteur de recherche et certains de ses simulateurs sur votre site grâce à un module (widget).l"
+      description="L’équipe du Code du travail numérique vous propose d’intégrer son moteur de recherche et certains de ses simulateurs sur votre site grâce à un module (widget).l"
     />
 
     <Section>
       <Container>
-        <PageTitle>Intégrer les outils du code du travail numérique</PageTitle>
+        <PageTitle>Intégrer les outils du Code du travail numérique</PageTitle>
 
         <p>
-          L’équipe du code du travail numérique vous propose d’intégrer son
+          L’équipe du Code du travail numérique vous propose d’intégrer son
           moteur de recherche et certains de ses simulateurs sur votre site
           grâce à un module (widget).
         </p>
@@ -35,13 +35,13 @@ const FindAnswerPage = (): JSX.Element => (
             <CallToActionTile
               noCustom
               action="Installer"
-              title="Moteur de recherche du code du travail numérique"
+              title="Moteur de recherche du Code du travail numérique"
               titleTagType="h2"
             >
               <>
                 <Image
                   src="/static/assets/img/moteur-recherche.png"
-                  alt="Widget Moteur de recherche du code du travail numérique"
+                  alt="Widget Moteur de recherche du Code du travail numérique"
                 />
                 <Paragraph>
                   Effectuer une recherche depuis votre site sur le code du
@@ -60,11 +60,11 @@ const FindAnswerPage = (): JSX.Element => (
               <>
                 <Image
                   src="/static/assets/img/preavis-retraite.png"
-                  alt="Widget Moteur de recherche du code du travail numérique"
+                  alt="Widget Moteur de recherche du Code du travail numérique"
                 />
                 <Paragraph>
-                  Calculer la durée de préavis à respecter en cas de départ à la
-                  retraite ou de mise à la retraite
+                  Calculer la durée de préavis à respecter en cas <br />
+                  de départ à la retraite ou de mise à la retraite
                 </Paragraph>
               </>
             </CallToActionTile>
@@ -79,10 +79,9 @@ const FindAnswerPage = (): JSX.Element => (
               <>
                 <Image
                   src="/static/assets/img/preavis-licenciement.png"
-                  alt="Widget Moteur de recherche du code du travail numérique"
+                  alt="Widget Moteur de recherche du Code du travail numérique"
                 />
                 <Paragraph>
-                  <br />
                   Calculer la durée de préavis à respecter en cas de
                   licenciement
                 </Paragraph>

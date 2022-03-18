@@ -30,7 +30,7 @@ const FindAnswerPage = (): JSX.Element => (
 
         <Wrapper variant="main">
           <p>
-            Vous pouvez intégrer le moteur de recherche du code du travail
+            Vous pouvez intégrer le moteur de recherche du Code du travail
             numérique sur votre site grâce à un module (widget). Ce module
             permettra à l’utilisateur de faire une recherche depuis votre site
             dans la barre de recherche du module. Une fois la recherche lancée,

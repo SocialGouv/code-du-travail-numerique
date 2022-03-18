@@ -27,7 +27,7 @@ function Glossaire({ glossary }) {
     <Layout>
       <Metas
         title="Glossaire"
-        description="Retrouvez l'ensemble des termes utilisés fréquemment sur le code du travail numérique et leur explication"
+        description="Retrouvez l'ensemble des termes utilisés fréquemment sur le Code du travail numérique et leur explication"
       />
       <Section>
         <Container narrow>

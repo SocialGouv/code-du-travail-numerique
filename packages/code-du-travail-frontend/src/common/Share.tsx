@@ -45,7 +45,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
       </StyledButton>
       <StyledLink
         href={`mailto:?subject=${encodeURIComponent(
-          `A lire sur le code du travail numérique : ${title}`
+          `A lire sur le Code du travail numérique : ${title}`
         )}&body=${`${encodeURIComponent(
           `${metaDescription}\n\n${currentPageUrl}`
         )}`}`}
