@@ -93,7 +93,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 }
 
 .c0 {
-  margin-bottom: 3.2rem;
+  margin-bottom: 1.6rem;
 }
 
 @media (max-width:600px) {
@@ -286,7 +286,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
 }
 
 .c0 {
-  margin-bottom: 3.2rem;
+  margin-bottom: 1.6rem;
 }
 
 @media (max-width:600px) {
