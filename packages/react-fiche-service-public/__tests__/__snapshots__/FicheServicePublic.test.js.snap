@@ -291,6 +291,8 @@ exports[`<FicheServicePublic /> should render 1`] = `
 
 .c26 {
   margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .c27 {
@@ -886,11 +888,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           >
                             Modèle de document
                           </p>
-                          <h3
+                          <p
                             class="c26"
                           >
                             Lettre de démission du salarié
-                          </h3>
+                          </p>
                         </div>
                       </div>
                       <div
@@ -1678,11 +1680,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
           >
             Modèle de document
           </p>
-          <h3
+          <p
             class="c26"
           >
             Lettre de démission du salarié
-          </h3>
+          </p>
         </div>
       </div>
       <div

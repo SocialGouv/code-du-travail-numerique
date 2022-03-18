@@ -168,6 +168,8 @@ exports[`<CallToActionTile /> should render 1`] = `
 
 .c7 {
   margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .c8 {
@@ -293,11 +295,11 @@ exports[`<CallToActionTile /> should render 1`] = `
         class="c6"
       >
         
-        <h3
+        <p
           class="c7"
         >
           Saluez moi
-        </h3>
+        </p>
       </div>
     </div>
     <div

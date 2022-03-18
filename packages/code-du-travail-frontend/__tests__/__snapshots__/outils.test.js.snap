@@ -569,6 +569,8 @@ exports[`<Outils /> should render 1`] = `
 
 .c41 {
   margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .c42 {
@@ -1666,11 +1668,11 @@ exports[`<Outils /> should render 1`] = `
                         class="c40"
                       >
                         
-                        <h2
+                        <h3
                           class="c41"
                         >
                           Modèles de documents
-                        </h2>
+                        </h3>
                       </div>
                     </div>
                     <div

@@ -47,6 +47,7 @@ function Articles({ blocs, containerId, convention }) {
                 href={getArticleUrl({ containerId, id })}
                 subtitle={`Article ${title}`}
                 className="no-after"
+                titleTagType="h3"
               >
                 {section}
               </Tile>

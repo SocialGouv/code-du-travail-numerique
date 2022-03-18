@@ -46,4 +46,12 @@ describe("<Tile />", () => {
     expect(container).toMatchSnapshot();
     expect(container.getElementsByTagName("button").length).toBe(1);
   });
+  it("renders a tile with title with titleTagType", () => {
+    const { container } = render(
+      <Tile href="#" title="Hello !" titleTagType="h2">
+        There is text inside
+      </Tile>
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

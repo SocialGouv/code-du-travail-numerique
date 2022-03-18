@@ -430,6 +430,8 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 
 .c44 {
   margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .c45 {
