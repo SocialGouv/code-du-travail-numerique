@@ -56,7 +56,7 @@ export const ListLink = ({
         )}
         <Paragraph noMargin>{summarize(description)}</Paragraph>
       </>
-    ), //TODO
+    ),
     onClick: () => reportSelectionToMatomo(source, slug, url, algo),
     onKeyPress: (e) =>
       e.keyCode === 13 && reportSelectionToMatomo(source, slug, url, algo),
@@ -78,6 +78,7 @@ export const ListLink = ({
         )} ${action} (nouvelle fenêtre)`}
         {...tileCommonProps}
         custom={false}
+        titleTagType="h3"
       />
     );
   }

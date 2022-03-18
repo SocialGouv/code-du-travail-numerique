@@ -826,11 +826,11 @@ exports[`<SearchResults/> should render results 1`] = `
               >
                 Outils externes
               </p>
-              <p
+              <h3
                 class="c8"
               >
                 telerc
-              </p>
+              </h3>
             </div>
           </div>
           <div
