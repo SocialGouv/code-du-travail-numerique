@@ -16,7 +16,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 const ContentSecurityPolicy = `
 default-src 'self' *.travail.gouv.fr *.data.gouv.fr *.fabrique.social.gouv.fr;
 img-src 'self' data: *.fabrique.social.gouv.fr https://travail-emploi.gouv.fr https://mon-entreprise.urssaf.fr ${
-  process.env.AZURE_BASE_URL
+  process.env.AZURE_BASE_URL ?? ""
 };
 script-src 'self' https://mon-entreprise.urssaf.fr *.fabrique.social.gouv.fr https://cdnjs.cloudflare.com ${
   process.env.NODE_ENV !== "production" && "'unsafe-eval'"
