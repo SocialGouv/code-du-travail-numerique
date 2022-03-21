@@ -69,11 +69,7 @@ const FindAnswerPage = (): JSX.Element => (
                       Ensuite, intégrez le code suivant à l’endroit où vous
                       souhaitez voir le module s’afficher&nbsp;:
                     </p>
-                    <CodeSnippet>
-                      {`<div id="cdtn-widget">
-  <a href="https://code.travail.gouv.fr">Le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail.</a>
-</div>`}
-                    </CodeSnippet>
+                    <CodeSnippet>{`<div id="cdtn-widget"></div>`}</CodeSnippet>
                   </>
                 ),
                 id: "id-js",

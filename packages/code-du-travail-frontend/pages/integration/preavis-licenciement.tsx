@@ -1,5 +1,4 @@
 import {
-  Accordion,
   CodeSnippet,
   Container,
   PageTitle,
@@ -44,50 +43,13 @@ const PreavisRetraitePage = (): JSX.Element => (
             title="Calcul du préavis de retraite - Code du travail numérique"
             style={{ border: "none" }}
           />
+          <p>Comment intégrer ce module à votre site ?</p>
           <p>
-            Comment faire ? Nous vous proposons deux méthodes pour intégrer ce
-            module à votre site :
+            Il suffit d’ajouter le code suivant à l’endroit où vous souhaitez
+            voir apparaître le module&nbsp;:
           </p>
-          <Accordion
-            titleLevel={2}
-            preExpanded={["id-js"]}
-            items={[
-              {
-                body: (
-                  <>
-                    <p>
-                      L’installation se passe en deux temps.
-                      <br />
-                      Premièrement, ajoutez le code suivant dans la balise{" "}
-                      <code>&lt;body&gt;</code> de votre page&nbsp;:
-                    </p>
-                    <CodeSnippet>
-                      {`<script src="https://code.travail.gouv.fr/widgets/widget-preavis-licenciement.js" defer></script>`}
-                    </CodeSnippet>
-                    <p>
-                      Ensuite, intégrez le code suivant à l’endroit où vous
-                      souhaitez voir le module s’afficher&nbsp;:
-                    </p>
-                    <CodeSnippet>
-                      {`<div id="cdtn-widget-preavis-licenciement">
-  <a href="https://code.travail.gouv.fr">Le Code du travail numérique - Obtenez les réponses à vos questions sur le droit du travail.</a>
-</div>`}
-                    </CodeSnippet>
-                  </>
-                ),
-                id: "id-js",
-                title: "javascript",
-              },
-              {
-                body: (
-                  <>
-                    <p>
-                      Avec l’iframe, il suffit d’ajouter le code suivant à
-                      l’endroit où vous souhaitez voir apparaître le
-                      module&nbsp;:
-                    </p>
-                    <CodeSnippet>
-                      {`<iframe
+          <CodeSnippet>
+            {`<iframe
   src="https://code.travail.gouv.fr/widgets/preavis-licenciement"
   width="100%"
   height="650px"
@@ -95,14 +57,7 @@ const PreavisRetraitePage = (): JSX.Element => (
   style="border: none"
 ></iframe>
 `}
-                    </CodeSnippet>
-                  </>
-                ),
-                title: "iframe",
-              },
-            ]}
-          />
-
+          </CodeSnippet>
           <p>
             En cas de difficulté, nous vous invitons à nous contacter à
             l’adresse suivante&nbsp;:{" "}

@@ -44,8 +44,9 @@ const FindAnswerPage = (): JSX.Element => (
                   alt="Widget Moteur de recherche du Code du travail numérique"
                 />
                 <Paragraph>
-                  Effectuer une recherche depuis votre site sur le code du
-                  travail numérique
+                  Effectuer une recherche depuis votre site
+                  <br />
+                  sur le code du travail numérique
                 </Paragraph>
               </>
             </CallToActionTile>
