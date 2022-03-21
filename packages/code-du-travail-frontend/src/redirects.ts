@@ -60,7 +60,6 @@ export const MappingReplacement = [
       "/en-pratique-que-doivent-faire-les-entreprises-a-partir-du-14-mars-2022-dans-le-cadre-de-lallegement-des-mesures-de-prevention-des-risques-de-contamination-au-covid-19",
     path: ["information"],
     previousValues: [
-      "covid-19-reagir-en-cas-de-contamination-dans-lentreprise-protocole-national",
       "covid-19-les-mesures-de-protection-en-entreprise-protocole-national",
       "covid-19-integrer-le-risque-sanitaire-dans-lentreprise-protocole-national",
       "services-de-sante-au-travail-nouveautes-covid-19",
