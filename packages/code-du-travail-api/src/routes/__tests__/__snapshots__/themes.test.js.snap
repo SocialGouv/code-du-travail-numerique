@@ -73,10 +73,10 @@ Object {
     },
     Object {
       "cdtnId": "d8fca710c5",
-      "description": "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
+      "description": "Calculez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis",
       "slug": "heures-recherche-emploi",
       "source": "outils",
-      "title": "Heures pour recherche d’emploi",
+      "title": "Heures d'absence pour rechercher un emploi",
     },
     Object {
       "cdtnId": "daf560f481",
