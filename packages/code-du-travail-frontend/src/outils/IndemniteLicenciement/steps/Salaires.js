@@ -2,7 +2,7 @@ import { icons, Input } from "@socialgouv/cdtn-ui";
 import { differenceInMonths, format, subMonths } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useState } from "react";
 import { Field } from "react-final-form";
 
 import { Error } from "../../common/ErrorField";
@@ -12,36 +12,23 @@ import { parse } from "../../common/utils/";
 import { isNumber } from "../../common/validators";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
 import { MOTIFS } from "../components/AbsencePeriods";
-import {
-  SalaireTempsPartiel,
-  TEMPS_PARTIEL,
-  TEMPS_PLEIN,
-} from "../components/SalaireTempsPartiel";
 import { SalaireTempsPlein } from "../components/SalaireTempsPlein";
 
 function StepSalaires({ form }) {
+  const [hasTempsPartiel, setHasTempsPartiel] = useState(false);
+
   return (
     <>
       <YesNoQuestion
         name="hasTempsPartiel"
         label="Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail&nbsp;?"
-        onChange={(hasTempsPartiel) => {
-          if (hasTempsPartiel) {
-            form.batch(() => {
-              form.change("salairePeriods", [
-                { duration: null, salary: null, type: TEMPS_PLEIN },
-                { duration: null, salary: null, type: TEMPS_PARTIEL },
-              ]);
-              form.change("salaire", null);
-              form.change("salaires", []);
-              form.change("hasSameSalaire", null);
-            });
-          } else {
-            form.change("salairePeriods", []);
-          }
+        onChange={(value) => {
+          setHasTempsPartiel(value);
         }}
       />
-      <SalaireTempsPartiel name="salairePeriods" />
+      {hasTempsPartiel && (
+        <Error>{"Nous ne gérons pas encore le temps partiel"}</Error>
+      )}
       <Field name="hasTempsPartiel">
         {({ input }) => (
           <>
@@ -92,9 +79,9 @@ function StepSalaires({ form }) {
                                 invalid={touched && invalid}
                                 icon={icons.Euro}
                               />
-                              {error && touched && invalid ? (
+                              {error && touched && invalid && (
                                 <Error>{error}</Error>
-                              ) : null}
+                              )}
                             </>
                           )}
                         </Field>

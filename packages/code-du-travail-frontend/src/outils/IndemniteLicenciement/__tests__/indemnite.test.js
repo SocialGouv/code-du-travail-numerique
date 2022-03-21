@@ -4,7 +4,6 @@ const tests = [
   {
     data: {
       anciennete: 15 / 12,
-      hasTempsPartiel: false,
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
     },
     expected: 2000,
@@ -13,7 +12,6 @@ const tests = [
   {
     data: {
       anciennete: 15,
-      hasTempsPartiel: false,
       salaires: Array.from({ length: 12 }).fill({ salary: 4000 }),
     },
     expected: 4000,
@@ -22,7 +20,6 @@ const tests = [
   {
     data: {
       anciennete: 15 / 12,
-      hasTempsPartiel: false,
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
     },
     expected: 2000,
@@ -31,7 +28,6 @@ const tests = [
   {
     data: {
       anciennete: 25 / 12,
-      hasTempsPartiel: false,
       salaires: Array.from({ length: 12 }).fill({ salary: 4000 }),
     },
     expected: 4000,
@@ -40,7 +36,6 @@ const tests = [
   {
     data: {
       anciennete: 15 / 12,
-      hasTempsPartiel: false,
       primes: [{ prime: 4000 }],
       salaires: Array.from({ length: 12 })
         .fill({ salary: 6000 })
@@ -52,7 +47,6 @@ const tests = [
   {
     data: {
       anciennete: 25 / 12,
-      hasTempsPartiel: false,
       primes: [{ prime: 4000 }],
       salaires: Array.from({ length: 12 })
         .fill({ salary: 8000 })
@@ -64,7 +58,6 @@ const tests = [
   {
     data: {
       anciennete: 25,
-      hasTempsPartiel: false,
       primes: [{ prime: 4000 }],
       salaires: Array.from({ length: 12 })
         .fill({ salary: 8000 })
@@ -76,7 +69,6 @@ const tests = [
   {
     data: {
       anciennete: 26 / 12,
-      hasTempsPartiel: false,
       primes: [{ prime: 2500 }],
       salaires: [
         { salary: 3000 },
@@ -95,26 +87,6 @@ const tests = [
     },
     expected: 2041.6666666666665,
     title: "prime + 3 mois plus favorable, 26m",
-  },
-  {
-    data: {
-      anciennete: 15 / 12,
-      hasTempsPartiel: true,
-      salairePeriods: [
-        {
-          duration: 10,
-          salary: 2000,
-          type: "temps-plein",
-        },
-        {
-          duration: 5,
-          salary: 1000,
-          type: "temps-partiel",
-        },
-      ],
-    },
-    expected: 1666.666666666667,
-    title: "2k, 15m, 2019-01-01, 10m tps plein, 5mois tps partiel",
   },
 ];
 describe("getSalaireRef", () => {
