@@ -1,6 +1,6 @@
 #language: fr
 
-@indemnite-licenciement-outil
+@widget
 Fonctionnalité: Widgets
   Pour pouvoir ajouter sur mon site un outil du code du travail numérique
   En tant que admin d'un site
