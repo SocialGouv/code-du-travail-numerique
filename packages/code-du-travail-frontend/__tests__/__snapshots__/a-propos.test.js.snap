@@ -1396,7 +1396,7 @@ exports[`<About /> should render 1`] = `
             </p>
             <p>
               La décision de créer le Code du travail numérique a donc été prise et inscrite dans
-
+               
               <a
                 href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=F175675A5AF37BD5745391E7C64C2FAB.tplgfr41s_3?cidTexte=JORFTEXT000035607388&idArticle=LEGIARTI000036762196&dateTexte=20191129&categorieLien=id#LEGIARTI000036762196"
                 title="voir l'ordonnance du Code du travail numérique"
@@ -1411,7 +1411,7 @@ exports[`<About /> should render 1`] = `
             </h3>
             <p>
               Le Code du travail numérique s’adresse à tous les salariés et employeurs de droit privé relevant du code du travail. Les fonctionnaires et les indépendants ne sont par exemple pas concernés. Plus d’informations à ce sujet dans notre
-
+               
               <a
                 href="/droit-du-travail"
                 title="Qu'est ce que le droit du travail ?"
@@ -1466,7 +1466,7 @@ exports[`<About /> should render 1`] = `
             </p>
             <p>
               Le Code du travail numérique est un service public initié par
-
+               
               <a
                 href="https://travail-emploi.gouv.fr/"
                 title="le site du ministère du travail"
@@ -1474,16 +1474,16 @@ exports[`<About /> should render 1`] = `
                 le ministère du Travail
               </a>
               , conçu et développé au sein de
-
+               
               <a
                 href="https://fabrique.social.gouv.fr/"
                 title="le site de la fabrique des Ministères sociaux"
               >
                 la fabrique des Ministères sociaux
               </a>
-
+               
               en partenariat avec la communauté
-
+               
               <a
                 href="https://beta.gouv.fr/"
                 title="le site beta.gouv"
@@ -1502,14 +1502,14 @@ exports[`<About /> should render 1`] = `
             </p>
             <p>
               Le site sur lequel vous naviguez est en évolution continue et s’enrichit régulièrement de nouveaux contenus et de nouvelles fonctionnalités. Nous vous invitons à
-
+               
               <a
                 href="mailto:codedutravailnumerique@travail.gouv.fr"
                 title="contactez nous par courriel"
               >
                 nous contacter
               </a>
-
+               
               si vous souhaitez nous faire part d’une proposition d’amélioration !
             </p>
           </div>

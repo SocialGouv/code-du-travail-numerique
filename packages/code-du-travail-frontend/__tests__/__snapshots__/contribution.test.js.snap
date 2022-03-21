@@ -2449,7 +2449,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                       </button>
                       <a
                         class="c41 spacing-left"
-                        href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+                        href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                         title="Envoyer par email"
                       >
                         <span
@@ -2853,7 +2853,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 </button>
                 <a
                   class="c41 spacing-left"
-                  href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+                  href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
@@ -5763,7 +5763,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                       </button>
                       <a
                         class="c41 spacing-left"
-                        href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+                        href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                         title="Envoyer par email"
                       >
                         <span
@@ -6167,7 +6167,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 </button>
                 <a
                   class="c41 spacing-left"
-                  href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+                  href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Quelles%20sont%20les%20cons%C3%A9quences%20du%20d%C3%A9c%C3%A8s%20de%20l%E2%80%99employeur%20sur%20le%20contrat%20de%20travail%C2%A0%3F&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
