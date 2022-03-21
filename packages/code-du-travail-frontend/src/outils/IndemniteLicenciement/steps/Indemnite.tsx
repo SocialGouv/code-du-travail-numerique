@@ -18,7 +18,6 @@ export function StepIndemnite({ form }: Props): JSX.Element {
 
   const {
     hasSameSalaire = false,
-    salairePeriods = [],
     salaires = [],
     primes = [],
     salaire,
@@ -27,11 +26,9 @@ export function StepIndemnite({ form }: Props): JSX.Element {
     ccn,
   } = form.getState().values;
   const salaireRef = getSalaireRef({
-    anciennete,
     hasSameSalaire,
     primes,
     salaire,
-    salairePeriods,
     salaires,
   });
   const infoCalcul = getIndemniteExplications({
