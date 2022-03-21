@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import React from "react";
 
 import { Time } from "../icons/index.js";
@@ -47,11 +47,12 @@ describe("<Tile />", () => {
     expect(container.getElementsByTagName("button").length).toBe(1);
   });
   it("renders a tile with title with titleTagType", () => {
-    const { container } = render(
+    render(
       <Tile href="#" title="Hello !" titleTagType="h2">
         There is text inside
       </Tile>
     );
-    expect(container).toMatchSnapshot();
+    const title = screen.getByRole("heading", { level: 2 });
+    expect(title.textContent).toEqual("Hello !");
   });
 });
