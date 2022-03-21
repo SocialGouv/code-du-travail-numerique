@@ -82,7 +82,7 @@ Scénario:
 
   Alors je vois "périodes d'alternance à temps plein et à temps partiel"
   Quand je choisis "#hasTempsPartiel-oui"
-  Alors je vois "Nous ne gérons pas encore le temps partiel"
+  Alors je vois "Le calcul de l’indemnité de licenciement dans le cas d’une alternance de temps plein et de temps partiel est actuellement en cours de développement."
   Quand je choisis "#hasTempsPartiel-non"
   Alors je vois "Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement"
   Quand je choisis "#hasSameSalaire-oui"

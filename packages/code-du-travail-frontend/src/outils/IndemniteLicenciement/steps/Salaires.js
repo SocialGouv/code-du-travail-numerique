@@ -27,7 +27,17 @@ function StepSalaires({ form }) {
         }}
       />
       {hasTempsPartiel && (
-        <Error>{"Nous ne gérons pas encore le temps partiel"}</Error>
+        <Error>
+          <p>
+            Le calcul de l’indemnité de licenciement dans le cas d’une
+            alternance de temps plein et de temps partiel est actuellement en
+            cours de développement.
+          </p>
+          <p>
+            Les périodes à temps partiel ne sont actuellement pas prise en
+            compte dans le calcul.
+          </p>
+        </Error>
       )}
       <Field name="hasTempsPartiel">
         {({ input }) => (
