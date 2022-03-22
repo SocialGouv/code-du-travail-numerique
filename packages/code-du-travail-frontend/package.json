@@ -101,7 +101,7 @@
     "lint-staged": "^12.1.2",
     "mockdate": "^3.0.5",
     "prettier": "^2.3.2",
-    "stylelint": "^13.13.1",
+    "stylelint": "^14.0.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recommended": "^5.0.0",
     "stylelint-config-styled-components": "^0.1.1",
