@@ -13,7 +13,7 @@
     "@socialgouv/eslint-config-typescript": "^1.93.0",
     "@types/fs-extra": "^9.0.12",
     "@types/jest": "^27.0.1",
-    "eslint": "^7.32.0",
+    "eslint": "^8.0.0",
     "jest": "^27.0.6",
     "lint-staged": "^12.1.2",
     "nodemon": "^2.0.12",
