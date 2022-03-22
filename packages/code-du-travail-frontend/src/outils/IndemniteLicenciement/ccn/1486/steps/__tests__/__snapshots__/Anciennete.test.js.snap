@@ -150,7 +150,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
 }
 
 .c0 {

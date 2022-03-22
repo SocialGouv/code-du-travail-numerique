@@ -213,7 +213,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
 }
 
 .c7 {
@@ -828,7 +828,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
 }
 
 .c5 {
@@ -860,7 +860,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
 }
 
 .c7 {

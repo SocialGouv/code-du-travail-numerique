@@ -157,6 +157,10 @@ Alors("je vois le thème {string}", (theme) => {
   I.seeElement(`//a[text()="${theme}" and starts-with(@href, "/themes/")]`);
 });
 
+Quand("je regarde dans l'iframe {string}", async (iframe) => {
+  I.switchTo(iframe);
+});
+
 Alors("je ne vois pas le thème {string}", (theme) => {
   I.dontSeeElement(`//a[text()="${theme}" and starts-with(@href, "/themes/")]`);
 });

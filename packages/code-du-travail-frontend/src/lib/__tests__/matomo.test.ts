@@ -36,7 +36,6 @@ describe("Matomo", () => {
       ({ isTreated, title, params }) => {
         trackQuestion(title, MatomoActionEvent.PREAVIS_RETRAITE, false);
         expect(matopush).toHaveBeenCalledTimes(isTreated);
-        // eslint-disable-next-line jest/no-conditional-expect
         if (params) expect(matopush).toHaveBeenCalledWith(params);
       }
     );
@@ -58,7 +57,6 @@ describe("Matomo", () => {
       ({ isTreated, title, params }) => {
         trackQuestion(title, MatomoActionEvent.PREAVIS_RETRAITE);
         expect(matopush).toHaveBeenCalledTimes(isTreated);
-        // eslint-disable-next-line jest/no-conditional-expect
         if (params) expect(matopush).toHaveBeenCalledWith(params);
       }
     );

@@ -4,6 +4,8 @@ import * as Sentry from "@sentry/nextjs";
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import React from "react";
 import { ServerStyleSheet } from "styled-components";
+// eslint-disable-next-line @next/next/no-script-in-document
+import Script from "next/script";
 
 process.on("unhandledRejection", (err) => {
   Sentry.captureException(err);
@@ -49,12 +51,12 @@ export default class MyDocument extends Document {
             type="text/css"
             href="/static/fonts.css"
           />
-          <script key="polyfill" src="/static/polyfill.min.js" />
-          <script
+          <Script key="polyfill" src="/static/polyfill.min.js" />
+          <Script
             key="webcomponents"
             src="/static/webcomponents-polyfill/loader.js"
           />
-          <script key="smarttag" src="/static/smarttag.js" />
+          <Script key="smarttag" src="/static/smarttag.js" />
         </Head>
         <body>
           <noscript>
