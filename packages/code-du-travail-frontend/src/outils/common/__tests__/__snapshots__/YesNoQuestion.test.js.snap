@@ -99,7 +99,7 @@ exports[`<YesNoQuestion /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
 }
 
 @media (max-width:600px) {

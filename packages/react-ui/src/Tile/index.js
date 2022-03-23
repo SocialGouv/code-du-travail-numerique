@@ -3,10 +3,10 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 import { Badge } from "../Badge";
-import { Stripe } from "../Stripe/index.js";
+import { Stripe } from "../Stripe";
 import { animations, box, breakpoints, fonts, spacings } from "../theme.js";
-import { Heading } from "../Titles/Heading/index.js";
-import { Subtitle } from "../Titles/Subtitle/index.js";
+import { Heading } from "../Titles/Heading";
+import { Subtitle } from "../Titles/Subtitle";
 
 export const Tile = React.forwardRef(
   (
@@ -70,7 +70,7 @@ Tile.defaultProps = {
   striped: false,
   subtitle: "",
   title: "",
-  titleTagType: "h3",
+  titleTagType: "p",
   wide: false,
 };
 
@@ -100,6 +100,7 @@ const StyledTile = styled.a`
   transition: box-shadow ${animations.transitionTiming} linear,
     transform 100ms linear;
   appearance: none;
+
   &:hover,
   &:active,
   &:focus {
@@ -107,6 +108,7 @@ const StyledTile = styled.a`
     box-shadow: ${({ theme }) => box.shadow.large(theme.secondary)};
     transform: translateY(-2px);
   }
+
   @media (max-width: ${breakpoints.mobile}) {
     padding: ${({ wide }) =>
       wide
@@ -143,6 +145,8 @@ const StyledSubtitle = styled(Subtitle)`
 `;
 const StyledHeading = styled(Heading)`
   margin: 0;
+  font-size: ${fonts.sizes.headings.small};
+  font-weight: 600;
 `;
 
 const ChildrenWrapper = styled.div`

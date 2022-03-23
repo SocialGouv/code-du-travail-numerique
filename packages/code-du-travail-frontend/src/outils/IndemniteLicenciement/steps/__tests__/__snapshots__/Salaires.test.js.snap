@@ -99,7 +99,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
 }
 
 @media (max-width:600px) {
@@ -263,7 +263,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
 }
 
 @media (max-width:600px) {

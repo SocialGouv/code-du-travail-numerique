@@ -7,6 +7,7 @@ import { Agreement } from "../../../../conventions/Search/api/type";
 import { AgreementSearchStep } from "../../../ConventionCollective/steps/AgreementSearch";
 import { TrackingProps } from "../../../ConventionCollective/types";
 import { ErrorField } from "../../ErrorField";
+import { Question } from "../../Question";
 import { required } from "../../validators";
 import { AGREEMENT_NAME } from "../form-constants";
 import ShowAlert from "../ShowAlert";
@@ -27,9 +28,9 @@ const AgreementSearch = ({
   if (selectedAgreement) {
     return (
       <>
-        <SelectedAgreementTitle>
+        <Question required={false} as="p">
           Vous avez sélectionné la convention collective&nbsp;:&nbsp;
-        </SelectedAgreementTitle>
+        </Question>
         <SelectedAgreement
           variant="secondary"
           onRemove={(event) => {
@@ -76,12 +77,7 @@ const AgreementSearch = ({
 const { spacings } = theme;
 
 const SelectedAgreement = styled(Toast)`
-  margin-bottom: ${spacings.medium};
-`;
-
-const SelectedAgreementTitle = styled(Paragraph)`
-  margin-bottom: ${spacings.small};
-  font-weight: bold;
+  margin-bottom: ${spacings.base};
 `;
 
 export default AgreementSearch;

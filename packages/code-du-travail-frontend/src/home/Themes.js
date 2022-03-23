@@ -23,7 +23,7 @@ export const Themes = ({ themes = [] }) => {
           href={`/${getRouteBySource(SOURCES.THEMES)}/${slug}`}
           passHref
         >
-          <Tile title={title} icon={icons[icon]} />
+          <Tile title={title} icon={icons[icon]} titleTagType="h3" />
         </Link>
       </GridCell>
     );

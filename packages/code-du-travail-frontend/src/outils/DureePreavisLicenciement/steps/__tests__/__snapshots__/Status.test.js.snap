@@ -99,7 +99,7 @@ exports[`<StepStatus /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
 }
 
 @media (max-width:600px) {
@@ -392,7 +392,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
 }
 
 .c7 {
-  margin-bottom: 3.2rem;
+  margin-bottom: 1.6rem;
 }
 
 .c3 {
@@ -411,7 +411,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
 }
 
 @media (max-width:600px) {
@@ -778,7 +778,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
 }
 
 @media (max-width:600px) {
