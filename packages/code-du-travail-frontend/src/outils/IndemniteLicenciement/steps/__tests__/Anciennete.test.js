@@ -74,6 +74,21 @@ describe("<Anciennete />", () => {
     ).toMatch("La date de notification doit se situer avant la date de sortie");
   });
 
+  it("should display error if dateNotif is older than 18 months", () => {
+    const { container, getByLabelText } = renderForm({
+      dateSortie: "2022-04-01",
+    });
+    const dateNotif = getByLabelText(/licenciement/i);
+    fireEvent.change(dateNotif, { target: { value: "2018-02-02" } });
+    expect(
+      container
+        .querySelector("input[name=dateNotification]")
+        .parentElement.nextSibling.textContent.trim()
+    ).toMatch(
+      "La date de notification doit se situer dans les 18 derniers mois"
+    );
+  });
+
   it("should display error if anciennté < 8mois", () => {
     const { getByText, getByLabelText } = renderForm({
       dateEntree: "2018-04-02",

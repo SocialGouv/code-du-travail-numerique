@@ -137,8 +137,9 @@ describe("Publicodes Context", () => {
                   result?.setSituation({
                     "contrat salarié . ancienneté": "28",
                     "contrat salarié . convention collective": "''",
+                    "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
+                      "non",
                     "contrat salarié . salaire de référence": "2000",
-                    "contrat salarié . travailleur handicapé": "non",
                     "indemnité de licenciement": "oui",
                   });
                 }}

@@ -50,11 +50,17 @@ function validate({
       "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté";
   }
 
+  if (dNotification && differenceInMonths(new Date(), dNotification) > 18) {
+    errors.dateNotification =
+      "La date de notification doit se situer dans les 18 derniers mois";
+  }
   if (dateNotification && dateSortie && isAfter(dNotification, dSortie)) {
-    errors.dateNotification = `La date de notification doit se situer avant la date de sortie`;
+    errors.dateNotification =
+      "La date de notification doit se situer avant la date de sortie";
   }
   if (dateNotification && dateEntree && isAfter(dEntree, dNotification)) {
-    errors.dateNotification = `La date de notification doit se situer après la date d’entrée`;
+    errors.dateNotification =
+      "La date de notification doit se situer après la date d’entrée";
   }
   return errors;
 }
