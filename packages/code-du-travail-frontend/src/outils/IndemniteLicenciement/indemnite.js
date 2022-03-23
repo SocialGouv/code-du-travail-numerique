@@ -19,15 +19,11 @@ function getSalaireRef({
   const primeValues = primes.map((a) => a.prime);
   const salaryValues = salaires.map((a) => a.salary);
 
-  let moyenneSalaires = 0;
-  let moyenne3DerniersMoisSalaires = 0;
-
-  // calcul du salaire de reference
-  moyenneSalaires = hasSameSalaire
+  const moyenneSalaires = hasSameSalaire
     ? salaire
     : sum(salaryValues) / salaires.length;
 
-  moyenne3DerniersMoisSalaires = hasSameSalaire
+  const moyenne3DerniersMoisSalaires = hasSameSalaire
     ? salaire
     : sum(primeValues) / 12 +
       (sum(salaryValues.slice(0, 3)) - sum(primeValues)) / 3;
