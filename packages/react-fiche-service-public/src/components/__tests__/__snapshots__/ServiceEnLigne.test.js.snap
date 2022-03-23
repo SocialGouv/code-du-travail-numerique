@@ -75,6 +75,8 @@ exports[`<ServiceEnLigne /> should render 1`] = `
 
 .c5 {
   margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .c6 {
@@ -114,11 +116,11 @@ exports[`<ServiceEnLigne /> should render 1`] = `
         >
           Se retrouve dans en entête
         </p>
-        <h3
+        <p
           class="c5"
         >
           Texte qui se retrouve dans le lien
-        </h3>
+        </p>
       </div>
     </div>
     <div

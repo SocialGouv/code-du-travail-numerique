@@ -582,6 +582,8 @@ exports[`<Home /> should render 1`] = `
 
 .c51 {
   margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .c52 {
@@ -2868,11 +2870,11 @@ exports[`<Home /> should render 1`] = `
                         class="c50"
                       >
                         
-                        <h2
+                        <h3
                           class="c51"
                         >
                           Modèles de documents
-                        </h2>
+                        </h3>
                       </div>
                     </div>
                     <div
