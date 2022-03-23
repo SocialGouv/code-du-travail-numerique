@@ -34,7 +34,7 @@ export const DocumentsTile = (
       custom
       icon={icons.Document}
       title="Modèles de documents"
-      titleTagType="h2"
+      titleTagType="h3"
     >
       <Paragraph noMargin>
         Téléchargez et utilisez des modèles de lettres et de documents
@@ -89,6 +89,7 @@ const Home = ({ themes = [], highlights = [] }) => (
                     custom
                     icon={icons[icon]}
                     title={title}
+                    titleTagType="h3"
                   >
                     <Paragraph noMargin>{description}</Paragraph>
                   </CallToActionTile>
