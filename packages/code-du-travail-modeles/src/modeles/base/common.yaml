@@ -6,9 +6,7 @@ préavis de retraite:
 
 indemnité de licenciement:
   valeur: non
-  rend non applicable:
-    - contrat salarié . préavis de retraite
-    - contrat salarié . travailleur handicapé
+  rend non applicable: contrat salarié . préavis de retraite
 
 contrat salarié . ancienneté:
   titre: Ancienneté du salarié
