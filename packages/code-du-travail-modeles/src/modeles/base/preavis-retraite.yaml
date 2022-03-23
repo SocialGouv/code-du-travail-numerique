@@ -43,10 +43,10 @@ contrat salarié . préavis de retraite . départ à la retraite:
           - préavis de retraite collective # Hack pour empêcher que la règle ne soit pas évaluer
       alors: contrat salarié . préavis de retraite collective
     - sinon:
-        variations:
-          - si: contrat salarié . préavis de retraite légale > contrat salarié . préavis de retraite collective
-            alors: contrat salarié . préavis de retraite collective
-          - sinon: contrat salarié . préavis de retraite légale
+        le maximum de:
+          - contrat salarié . préavis de retraite légale
+          - contrat salarié . préavis de retraite collective
+
   références:
     Article L1237-10: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901184/
     Article L1234-1: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901112
