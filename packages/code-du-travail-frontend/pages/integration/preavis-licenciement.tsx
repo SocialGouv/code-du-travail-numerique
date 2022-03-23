@@ -11,7 +11,7 @@ import Breadcrumbs from "../../src/common/Breadcrumbs";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 
-const PreavisRetraitePage = (): JSX.Element => (
+const PreavisLicenciementPage = (): JSX.Element => (
   <Layout>
     <Metas
       title="Widget pour intégrer le Code du travail numérique à votre site"
@@ -71,4 +71,4 @@ const PreavisRetraitePage = (): JSX.Element => (
   </Layout>
 );
 
-export default PreavisRetraitePage;
+export default PreavisLicenciementPage;
