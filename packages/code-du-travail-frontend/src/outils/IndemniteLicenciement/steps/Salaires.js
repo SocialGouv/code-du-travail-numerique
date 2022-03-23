@@ -1,8 +1,8 @@
-import { icons, Input } from "@socialgouv/cdtn-ui";
+import { Alert, icons, Input, Paragraph, Text } from "@socialgouv/cdtn-ui";
 import { differenceInMonths, format, subMonths } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React from "react";
 import { Field } from "react-final-form";
 
 import { Error } from "../../common/ErrorField";
@@ -15,33 +15,33 @@ import { MOTIFS } from "../components/AbsencePeriods";
 import { SalaireTempsPlein } from "../components/SalaireTempsPlein";
 
 function StepSalaires({ form }) {
-  const [hasTempsPartiel, setHasTempsPartiel] = useState(false);
-
   return (
     <>
       <YesNoQuestion
         name="hasTempsPartiel"
         label="Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail&nbsp;?"
-        onChange={(value) => {
-          setHasTempsPartiel(value);
-        }}
       />
-      {hasTempsPartiel && (
-        <Error>
-          <p>
-            Le calcul de l’indemnité de licenciement dans le cas d’une
-            alternance de temps plein et de temps partiel est actuellement en
-            cours de développement.
-          </p>
-          <p>
-            Les périodes à temps partiel ne sont actuellement pas prise en
-            compte dans le calcul.
-          </p>
-        </Error>
-      )}
+
       <Field name="hasTempsPartiel">
         {({ input }) => (
           <>
+            {input.value === true && (
+              <Alert variant="primary">
+                <Text variant="primary" fontSize="hsmall" fontWeight="700">
+                  À noter
+                </Text>
+
+                <Paragraph noMargin>
+                  Le calcul de l’indemnité de licenciement dans le cas d’une
+                  alternance de temps plein et de temps partiel est actuellement
+                  en cours de développement.
+                </Paragraph>
+                <Paragraph noMargin>
+                  Les périodes à temps partiel ne sont actuellement pas prise en
+                  compte dans le calcul.
+                </Paragraph>
+              </Alert>
+            )}
             {input.value === false && (
               <>
                 <YesNoQuestion
@@ -137,5 +137,12 @@ function getSalairesPeriods({ dateEntree, dateNotification, absencePeriods }) {
 StepSalaires.propTypes = {
   form: PropTypes.object.isRequired,
 };
+StepSalaires.validate = (values) => {
+  const errors = {};
+  if (values.hasTempsPartiel === true) {
+    errors.hasTempsPartiel = true;
+  }
 
+  return errors;
+};
 export { getSalairesPeriods, StepSalaires };
