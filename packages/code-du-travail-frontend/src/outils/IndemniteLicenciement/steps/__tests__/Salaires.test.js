@@ -22,19 +22,7 @@ describe("<StepSalaires />", () => {
   it("should render same salaire", () => {
     const { container } = renderForm({
       hasSameSalaire: true,
-      hasTempsPartiel: false,
       salaire: 3000,
-    });
-    expect(container).toMatchSnapshot();
-  });
-  it("should render tempsPartiel", () => {
-    const { container } = renderForm({
-      hasSameSalaire: true,
-      hasTempsPartiel: true,
-      salairePeriods: [
-        { duration: 24, salary: 2000, type: "Temps plein" },
-        { duration: 12, salary: 1000, type: "Temps partiel" },
-      ],
     });
     expect(container).toMatchSnapshot();
   });
@@ -46,7 +34,6 @@ describe("<StepSalaires />", () => {
     });
     const { container } = renderForm({
       hasSameSalaire: false,
-      hasTempsPartiel: false,
       salaires: salairesPeriods,
     });
     expect(container).toMatchSnapshot();

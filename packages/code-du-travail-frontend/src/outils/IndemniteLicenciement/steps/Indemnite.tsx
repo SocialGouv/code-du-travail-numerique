@@ -17,9 +17,7 @@ export function StepIndemnite({ form }: Props): JSX.Element {
     usePublicodes<PublicodesIndemniteLicenciementResult>();
 
   const {
-    hasTempsPartiel = false,
     hasSameSalaire = false,
-    salairePeriods = [],
     salaires = [],
     primes = [],
     salaire,
@@ -28,12 +26,9 @@ export function StepIndemnite({ form }: Props): JSX.Element {
     ccn,
   } = form.getState().values;
   const salaireRef = getSalaireRef({
-    anciennete,
     hasSameSalaire,
-    hasTempsPartiel,
     primes,
     salaire,
-    salairePeriods,
     salaires,
   });
   const infoCalcul = getIndemniteExplications({

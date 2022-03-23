@@ -17,7 +17,6 @@ const initialValues = {
   hasAbsenceProlonge: false,
   hasPrimes: false,
   hasSameSalaire: false,
-  hasTempsPartiel: false,
   inaptitude: false,
   primes: [],
   salaire: null,
