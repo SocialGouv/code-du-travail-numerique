@@ -37,8 +37,8 @@ function StepSalaires({ form }) {
                   en cours de développement.
                 </Paragraph>
                 <Paragraph noMargin>
-                  Les périodes à temps partiel ne sont actuellement pas prise en
-                  compte dans le calcul.
+                  Les périodes à temps partiel ne sont actuellement pas prises
+                  en compte dans le calcul.
                 </Paragraph>
               </Alert>
             )}
