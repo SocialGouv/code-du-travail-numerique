@@ -117,5 +117,5 @@ const StyledSelect = styled(Select)`
 `;
 
 const Wrapper = styled.div`
-  margin-bottom: ${spacings.large};
+  margin-bottom: ${spacings.base};
 `;

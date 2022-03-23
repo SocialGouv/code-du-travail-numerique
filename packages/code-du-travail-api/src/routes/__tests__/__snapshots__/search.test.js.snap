@@ -5,7 +5,7 @@ Object {
   "articles": Array [],
   "documents": Array [
     Object {
-      "_score": 28.00174,
+      "_score": 28.030552,
       "algo": "fulltext",
       "breadcrumbs": Array [],
       "cdtnId": "647c224c9b",
@@ -24,7 +24,7 @@ exports[`returns article results when searching article R1225-18 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 23.197472,
+      "_score": 23.260067,
       "cdtnId": "f13147ec33",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -62,7 +62,7 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 38.13995,
+      "_score": 38.152607,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -128,7 +128,7 @@ Object {
       "title": "Indemnité de licenciement",
     },
     Object {
-      "_score": 36.77092,
+      "_score": 36.78487,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -161,10 +161,10 @@ Object {
         },
       ],
       "cdtnId": "d8fca710c5",
-      "description": "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
+      "description": "Calculez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis",
       "slug": "heures-recherche-emploi",
       "source": "outils",
-      "title": "Heures pour recherche d’emploi",
+      "title": "Heures d'absence pour rechercher un emploi",
     },
     Object {
       "_score": 31.6917,
@@ -264,7 +264,7 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 1.9994254,
+      "_score": 2.0031483,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
       "slug": "demission",
@@ -557,10 +557,10 @@ Object {
         },
       ],
       "cdtnId": "d8fca710c5",
-      "description": "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
+      "description": "Calculez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis",
       "slug": "heures-recherche-emploi",
       "source": "outils",
-      "title": "Heures pour recherche d’emploi",
+      "title": "Heures d'absence pour rechercher un emploi",
     },
     Object {
       "_score": 31.6917,
@@ -660,7 +660,7 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 1.9994254,
+      "_score": 2.0031483,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
       "slug": "demission",
@@ -686,7 +686,7 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 57.510513,
+      "_score": 57.554726,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
@@ -707,7 +707,7 @@ Object {
       "title": "Certificat de travail",
     },
     Object {
-      "_score": 56.12152,
+      "_score": 56.165733,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
@@ -849,7 +849,7 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 2.7380137,
+      "_score": 2.7550187,
       "algo": "fulltext",
       "cdtnId": "5594695039",
       "icon": "Contract",
@@ -858,7 +858,7 @@ Object {
       "title": "Embauche et contrat de travail",
     },
     Object {
-      "_score": 1.0915728,
+      "_score": 1.0964528,
       "algo": "fulltext",
       "cdtnId": "e4982f0aa9",
       "icon": "Depart",

@@ -1,6 +1,0 @@
-root: true
-extends:
-  - "@socialgouv/eslint-config-recommended"
-
-rules:
-  import/no-extraneous-dependencies: error

@@ -1,7 +1,9 @@
-import { Paragraph, Toast } from "@socialgouv/cdtn-ui";
+import { theme, Toast } from "@socialgouv/cdtn-ui";
 import React from "react";
+import styled from "styled-components";
 
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
+import { Question } from "../../Question";
 
 type Props = {
   enterprise: Enterprise;
@@ -14,10 +16,10 @@ const SelectedEnterprise = ({
 }: Props): JSX.Element => {
   return (
     <>
-      <Paragraph fontWeight="600" fontSize="default">
+      <Question required={false} as="p">
         Vous avez sélectionné l&apos;entreprise&nbsp;:&nbsp;
-      </Paragraph>
-      <Toast
+      </Question>
+      <Selected
         variant="secondary"
         onRemove={(event) => {
           event.preventDefault();
@@ -25,9 +27,13 @@ const SelectedEnterprise = ({
         }}
       >
         {enterprise.simpleLabel}
-      </Toast>
+      </Selected>
     </>
   );
 };
 
 export default SelectedEnterprise;
+
+const Selected = styled(Toast)`
+  margin-bottom: ${theme.spacings.small};
+`;

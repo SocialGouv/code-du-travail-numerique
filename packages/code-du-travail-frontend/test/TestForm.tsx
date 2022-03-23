@@ -3,7 +3,6 @@ import React from "react";
 import { Form } from "react-final-form";
 
 type EmbeddedInjectedFormProps<FormContent, Props> = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Step: React.ComponentType<{ form: FormApi<FormContent> }>;
   formData?: FormContent;
   props?: Props;
@@ -32,7 +31,6 @@ function EmbeddedInjectedForm<FormContent, Props>({
 }
 
 type EmbeddedFormProps<Props> = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Step: React.ComponentType<Props>;
   props: Props;
 };

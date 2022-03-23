@@ -1,8 +1,9 @@
 import { formatIdcc } from "@cdt/data";
-import { Paragraph } from "@socialgouv/cdtn-ui";
+import { Paragraph, Text } from "@socialgouv/cdtn-ui";
 import React from "react";
 
 import { Agreement } from "../../../../conventions/Search/api/type";
+import { Question } from "../../Question";
 import ShowAlert from "../ShowAlert";
 import { AgreementSupportInfo } from "../types";
 
@@ -17,12 +18,12 @@ const ShowAgreement = ({
 }: Props): JSX.Element => {
   return (
     <>
-      <Paragraph fontWeight="600" fontSize="default">
+      <Question required={false} as="p">
         Une convention collective a été trouvée pour cette entreprise&nbsp;:
-      </Paragraph>
-      <Paragraph fontSize="default" fontWeight="600" variant="secondary">
+      </Question>
+      <Text fontSize="default" fontWeight="600" variant="secondary">
         {agreement.shortTitle} (IDCC {formatIdcc(agreement.num)})
-      </Paragraph>
+      </Text>
       <ShowAlert
         currentIdcc={agreement.num}
         supportedAgreements={supportedAgreements}

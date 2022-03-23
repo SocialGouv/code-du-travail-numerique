@@ -727,10 +727,10 @@
       },
       {
         "cdtnId": "d8fca710c5",
-        "description": "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
+        "description": "Calculez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis",
         "slug": "heures-recherche-emploi",
         "source": "outils",
-        "title": "Heures pour recherche d’emploi"
+        "title": "Heures d'absence pour rechercher un emploi"
       },
       {
         "cdtnId": "daf560f481",
@@ -12631,7 +12631,7 @@
     "date": "08/11/2019",
     "icon": "Time",
     "action": "Calculer",
-    "description": "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
+    "description": "Calculez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis",
     "breadcrumbs": [
       {
         "label": "Départ de l’entreprise",
@@ -12647,7 +12647,7 @@
     "slug": "heures-recherche-emploi",
     "source": "outils",
     "text": "ai-je droit à des heures de recherche d’emploi\nquel est le nombre d’heures pour rechercher un emploi\nrechercher un emploi en période de préavis\ncomment prendre ses heures de recherche d’emploi\ndémission recherche emploi pendant préavis\nlicenciement recherche d emploi pendant préavis\nheures de recherche d’emploi en cas de licenciement\nAi-je droit aux heures pour recherche d’emploi dans le cadre d’une démission\nautorisation d absence pour recherche d emploi\nchercher un emploi pendant son préavis\nabsence 2h pour recherche d’emploi pendant préavis",
-    "title": "Heures pour recherche d’emploi",
+    "title": "Heures d'absence pour rechercher un emploi",
     "title_vector": [
       0.00814497,
       0.0332682915,
