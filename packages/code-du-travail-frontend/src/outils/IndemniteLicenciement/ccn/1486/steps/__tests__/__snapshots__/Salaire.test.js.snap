@@ -134,7 +134,7 @@ exports[`<Salaire /> renders 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
 }
 
 .c1 {
@@ -384,7 +384,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
 }
 
 .c1 {
@@ -846,7 +846,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
 }
 
 .c1 {
@@ -1384,7 +1384,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
 }
 
 .c1 {

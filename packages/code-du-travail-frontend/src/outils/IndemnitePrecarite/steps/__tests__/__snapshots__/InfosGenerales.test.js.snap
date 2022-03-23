@@ -305,7 +305,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
 }
 
 .c6 {
-  margin-bottom: 3.2rem;
+  margin-bottom: 1.6rem;
 }
 
 @media (max-width:600px) {
@@ -648,7 +648,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
 }
 
 .c6 {
-  margin-bottom: 3.2rem;
+  margin-bottom: 1.6rem;
 }
 
 @media (max-width:600px) {
@@ -933,7 +933,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
 }
 
 @media (max-width:600px) {
