@@ -19,9 +19,9 @@ const trackInput = debounce((query, path, trackingUID) => {
   }
 }, 2000);
 
-interface Props {
+type Props = {
   onSelectConvention?: () => void;
-}
+};
 
 const Search = ({ onSelectConvention }: Props): JSX.Element => {
   const router = useRouter();

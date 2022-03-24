@@ -15,7 +15,7 @@ const PreavisRetraitePage = (): JSX.Element => (
   <Layout>
     <Metas
       title="Widget pour intégrer le Code du travail numérique à votre site"
-      description="Intégrez le moteur de recherche du Code du travail numérique sur votre site grâce à un module (widget)."
+      description="Intégrez l’outil de calcul du préavis de retraite du Code du travail numérique sur votre site grâce à un module (widget)."
     />
 
     <Section>
