@@ -134,11 +134,11 @@ contrat salarié . indemnité de licenciement . moyenne des salaires des 12 dern
     produit:
       assiette:
         somme:
-          - contrat salarié . indemnité de licenciement . salaire du mois 1
-          - contrat salarié . indemnité de licenciement . salaire du mois 2
-          - contrat salarié . indemnité de licenciement . salaire du mois 3
-          - contrat salarié . indemnité de licenciement . salaire du mois 4
-      facteur: 1 / 12
+          - salaire du mois 1
+          - salaire du mois 2
+          - salaire du mois 3
+          - salaire du mois 4
+      facteur: 1 / 12 # passer nombre de mois en input
   unité: €
 
 contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois:
@@ -207,17 +207,12 @@ contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derni
 
 contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois préavis inclus:
   applicable si: contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois si préavis . préavis
-  variations:
-    - si: contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois si préavis . préavis . salaire du mois 2 = 0
-      alors: contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois préavis inclus . avec 1 mois
-    - sinon:
-        variations:
-          - si: contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois si préavis . préavis . salaire du mois 3 = 0
-            alors: contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois préavis inclus . avec 2 mois
-          - sinon: contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois préavis inclus . avec 3 mois
+  valeur: non
   unité: €
 
 contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois préavis inclus . avec 1 mois:
+  applicable si: contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois si préavis . préavis . salaire du mois 2 = 0
+  remplace: contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois préavis inclus
   valeur:
     produit:
       assiette:
@@ -229,6 +224,8 @@ contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derni
   unité: €
 
 contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois préavis inclus . avec 2 mois:
+  applicable si: contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois si préavis . préavis . salaire du mois 3 = 0
+  remplace: contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois préavis inclus
   valeur:
     produit:
       assiette:
@@ -240,6 +237,8 @@ contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derni
   unité: €
 
 contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois préavis inclus . avec 3 mois:
+  applicable si: contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois si préavis . préavis . salaire du mois 3 > 0
+  remplace: contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois préavis inclus
   valeur:
     produit:
       assiette:
