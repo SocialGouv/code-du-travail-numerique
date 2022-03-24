@@ -15,17 +15,18 @@ const PreavisLicenciementPage = (): JSX.Element => (
   <Layout>
     <Metas
       title="Widget pour intégrer le Code du travail numérique à votre site"
-      description="Intégrez le moteur de recherche du Code du travail numérique sur votre site grâce à un module (widget)."
+      description="Intégrez l’outil de calcul du préavis de licenciement du Code du travail numérique sur votre site grâce à un module (widget)."
     />
 
     <Section>
       <Container>
         <Breadcrumbs items={[{ label: "Integration", slug: "/integration" }]} />
-        <PageTitle>
-          Intégrer l’outil de calcul du préavis de licenciement <br />
-          du Code du travail numérique
-        </PageTitle>
-
+        <Container narrow>
+          <PageTitle>
+            Intégrer l’outil de calcul du préavis de licenciement
+            du&nbsp;Code&nbsp;du&nbsp;travail&nbsp;numérique
+          </PageTitle>
+        </Container>
         <Wrapper variant="main">
           <p>
             Vous pouvez intégrer l’outil de calcul du préavis de licenciement du

@@ -21,11 +21,12 @@ const PreavisRetraitePage = (): JSX.Element => (
     <Section>
       <Container>
         <Breadcrumbs items={[{ label: "Integration", slug: "/integration" }]} />
-        <PageTitle>
-          Intégrer l’outil de calcul du préavis de retraite
-          <br />
-          du Code du travail numérique
-        </PageTitle>
+        <Container narrow>
+          <PageTitle>
+            Intégrer l’outil de calcul du préavis de retraite
+            du&nbsp;Code&nbsp;du&nbsp;travail&nbsp;numérique
+          </PageTitle>
+        </Container>
         <Wrapper variant="main">
           <p>
             Vous pouvez intégrer l’outil de calcul du préavis de retraite du

@@ -14,8 +14,11 @@ const FindAnswerPage = (): JSX.Element => (
 
     <Section>
       <Container>
-        <PageTitle>Intégrer les outils du Code du travail numérique</PageTitle>
-
+        <Container narrow>
+          <PageTitle>
+            Intégrer les outils du Code&nbsp;du&nbsp;travail&nbsp;numérique
+          </PageTitle>
+        </Container>
         <p>
           L’équipe du Code du travail numérique vous propose d’intégrer son
           moteur de recherche et certains de ses simulateurs sur votre site

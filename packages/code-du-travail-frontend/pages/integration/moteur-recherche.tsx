@@ -24,8 +24,7 @@ const FindAnswerPage = (): JSX.Element => (
       <Container narrow>
         <PageTitle>
           Intégrer le moteur de recherche
-          <br />
-          du Code du travail numérique
+          du&nbsp;Code&nbsp;du&nbsp;travail&nbsp;numérique
         </PageTitle>
 
         <Wrapper variant="main">
