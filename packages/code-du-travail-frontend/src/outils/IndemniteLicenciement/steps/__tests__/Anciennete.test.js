@@ -5,7 +5,7 @@ import { Form } from "react-final-form";
 
 import {
   computeAnciennete,
-  computeSalaraires,
+  computeSalaires,
   StepAnciennete,
 } from "../Anciennete";
 
@@ -131,7 +131,7 @@ describe("computeAncienneté", () => {
 describe("computeSalaires", () => {
   it("should compute salaires periods only if there is previous salaires", () => {
     expect(
-      computeSalaraires({
+      computeSalaires({
         dateEntree: "2016-04-01",
         dateNotification: "2018-04-01",
         dateSortie: "2018-05-01",
@@ -142,7 +142,7 @@ describe("computeSalaires", () => {
   });
   it("should restore previous salaires periods", () => {
     expect(
-      computeSalaraires({
+      computeSalaires({
         dateEntree: "2018-01-01",
         dateNotification: "2018-09-01",
         dateSortie: "2018-10-01",
@@ -171,7 +171,7 @@ describe("computeSalaires", () => {
   });
   it("should not compute salaires periods if hasSameSalaire is true", () => {
     expect(
-      computeSalaraires({
+      computeSalaires({
         dateEntree: "2016-04-01",
         dateNotification: "2018-04-01",
         dateSortie: "2018-05-01",

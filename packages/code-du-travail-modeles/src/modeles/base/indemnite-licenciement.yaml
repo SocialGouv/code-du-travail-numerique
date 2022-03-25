@@ -5,11 +5,10 @@ contrat salarié . salaire de référence:
     type: entier
 
 contrat salarié . ancienneté en année:
-  valeur:
-    produit:
-      assiette: contrat salarié . ancienneté
-      facteur: 1 / 12
-
+  titre: Ancienneté du salarié en année
+  cdtn:
+    type: entier
+  unit: an
 
 contrat salarié . inaptitude suite à un accident ou maladie professionnelle:
   titre: Inaptitude
@@ -22,11 +21,11 @@ contrat salarié . inaptitude suite à un accident ou maladie professionnelle:
 #  A2 : Ancienneté au delà de 10 ans
 contrat salarié . indemnité de licenciement:
   variations:
-    - si: contrat salarié . ancienneté en année > (8 mois / 12)
+    - si: ancienneté en année > (8 mois / 12)
       alors:
         somme:
-        - contrat salarié . indemnité de licenciement . dix ans ou moins
-        - contrat salarié . indemnité de licenciement . plus de dix ans
+        - indemnité de licenciement . dix ans ou moins
+        - indemnité de licenciement . plus de dix ans
     - sinon: 0
   unité: €
   arrondi: 2 décimales
@@ -35,11 +34,11 @@ contrat salarié . indemnité de licenciement:
     Article R1234-1 à R1234-4: https://www.legifrance.gouv.fr/codes/id/LEGISCTA000018537572/
 
 contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle:
-  applicable si: contrat salarié . inaptitude suite à un accident ou maladie professionnelle
-  remplace: contrat salarié . indemnité de licenciement
+  applicable si: inaptitude suite à un accident ou maladie professionnelle
+  remplace: indemnité de licenciement
   valeur:
     produit:
-      assiette: contrat salarié . indemnité de licenciement
+      assiette: indemnité de licenciement
       facteur: 2
   références:
     Article L1226-14: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006900981/
@@ -47,25 +46,25 @@ contrat salarié . indemnité de licenciement . inaptitude suite à un accident 
 contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins:
   valeur:
     le minimum de:
-       - contrat salarié . ancienneté en année
+       - ancienneté en année
        - 10 an
 
 contrat salarié . indemnité de licenciement . au dela de dix ans:
   somme:
-    - contrat salarié . ancienneté en année
+    - ancienneté en année
     - (- 10 an)
   plancher: 0 an
 
 contrat salarié . indemnité de licenciement . dix ans ou moins:
   valeur:
     produit:
-      assiette: contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins * contrat salarié . salaire de référence
+      assiette: jusqu'à dix ans ou moins * salaire de référence
       facteur: 1 / 4
   unité: €
 
 contrat salarié . indemnité de licenciement . plus de dix ans:
   valeur:
     produit:
-      assiette: contrat salarié . salaire de référence * contrat salarié . indemnité de licenciement . au dela de dix ans
+      assiette: salaire de référence * au dela de dix ans
       facteur: 1 / 3
   unité: €

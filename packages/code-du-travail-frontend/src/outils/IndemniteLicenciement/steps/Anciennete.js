@@ -42,7 +42,6 @@ function validate({
 
   if (
     dateEntree &&
-    dateSortie &&
     dNotification &&
     differenceInMonths(dNotification, dEntree) - totalAbsence < 8
   ) {
@@ -129,7 +128,7 @@ StepAnciennete.decorator = createDecorator({
   field: /date|absencePeriods/,
   updates: {
     anciennete: (_, values) => computeAnciennete(values),
-    salaires: (_, values) => computeSalaraires(values),
+    salaires: (_, values) => computeSalaires(values),
   },
 });
 
@@ -153,7 +152,7 @@ function computeAnciennete({ dateEntree, dateSortie, absencePeriods = [] }) {
   return differenceInMonths(dSortie, dEntree) / 12 - totalAbsence;
 }
 
-function computeSalaraires(values) {
+function computeSalaires(values) {
   if (values.hasSameSalaire === false && values.salaires) {
     const salairePeriods = getSalairesPeriods(values);
     return salairePeriods.map(({ label, salary }) => {
@@ -167,4 +166,4 @@ function computeSalaraires(values) {
   return null;
 }
 
-export { computeAnciennete, computeSalaraires, StepAnciennete };
+export { computeAnciennete, computeSalaires, StepAnciennete };

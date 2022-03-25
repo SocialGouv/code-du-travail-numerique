@@ -23,8 +23,7 @@ export const mapToPublicodesSituationForIndemniteLicenciement = (
   return {
     ...agreement,
     ...{
-      "contrat salarié - ancienneté":
-        formatSeniorityForIndemniteLicenciement(seniority),
+      "contrat salarié . ancienneté en année": seniority,
       "contrat salarié - salaire de référence": formatNumber(salaireRef),
       "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
         inaptitude ? "oui" : "non",
