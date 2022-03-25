@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CodeSnippet /> renders 1`] = `
+.c0 {
+  width: auto;
+  padding: 0.2em 0.6em;
+  overflow: auto;
+  background: #fff;
+  border: solid #bbcadf;
+  border-width: 0.1em 0.1em 0.1em 0.8em;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <pre>
+      <p>
+        Hi
+      </p>
+    </pre>
+  </div>
+</div>
+`;

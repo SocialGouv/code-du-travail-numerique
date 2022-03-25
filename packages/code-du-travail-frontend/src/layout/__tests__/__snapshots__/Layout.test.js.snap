@@ -1296,7 +1296,7 @@ exports[`<Layout /> should render 1`] = `
                     class="c42"
                     href="/integration"
                   >
-                    Intégrer le Code du travail numérique
+                    Intégrer les outils du Code du travail numérique
                   </a>
                 </li>
               </ul>
