@@ -1,5 +1,9 @@
 import { round, sum } from "../common/utils";
 
+function getTotalPrimes({ primes = [] }) {
+  return sum(primes.map((a) => a.prime));
+}
+
 /**
  * Compute the salaire de Réference
  * used in the indemnité calculus
@@ -64,4 +68,4 @@ function getIndemniteExplications({
   return { formula, labels };
 }
 
-export { getIndemniteExplications, getSalaireRef };
+export { getIndemniteExplications, getSalaireRef, getTotalPrimes };

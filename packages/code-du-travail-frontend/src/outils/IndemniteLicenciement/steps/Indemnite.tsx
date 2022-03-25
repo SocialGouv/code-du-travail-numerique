@@ -6,7 +6,11 @@ import {
   usePublicodes,
 } from "../../publicodes";
 import { IndemniteLegale } from "../components/IndemniteLegale";
-import { getIndemniteExplications, getSalaireRef } from "../indemnite";
+import {
+  getIndemniteExplications,
+  getSalaireRef,
+  getTotalPrimes,
+} from "../indemnite";
 
 type Props = {
   form: any;
@@ -43,7 +47,7 @@ export function StepIndemnite({ form }: Props): JSX.Element {
         anciennete,
         inaptitude,
         hasSameSalaire,
-        primes,
+        getTotalPrimes(primes),
         salaire,
         salaires
       )

@@ -8,7 +8,7 @@ export const mapToPublicodesSituationForIndemniteLicenciement = (
   hasSameSalaire: boolean,
   primes: number,
   salaire: number,
-  salaires: number[]
+  salaires: any[]
 ): Record<string, string> => {
   const agreement: Record<string, string> = ccn?.selected
     ? {
@@ -30,10 +30,14 @@ export const mapToPublicodesSituationForIndemniteLicenciement = (
     salaries[
       "contrat salarié . indemnité de licenciement . nombre de dernier salaire"
     ] = formatNumber(salaires.length);
-    for (let i = 1; i <= 12; i++) {
+    salaries[
+      "contrat salarié . indemnité de licenciement . primes 3 derniers mois"
+    ] = formatNumber(primes);
+    for (let i = 0; i < 12; i++) {
       salaries[
-        "contrat salarié . indemnité de licenciement . salaire du mois " + i
-      ] = formatNumber(salaires[i]);
+        "contrat salarié . indemnité de licenciement . salaire du mois " +
+          (i + 1)
+      ] = formatNumber(salaires[i]?.salary);
     }
   }
 

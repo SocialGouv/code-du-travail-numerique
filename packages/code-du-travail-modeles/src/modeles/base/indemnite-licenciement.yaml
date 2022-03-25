@@ -14,12 +14,13 @@ contrat salarié . inaptitude suite à un accident ou maladie professionnelle:
 #  A1 : Ancienneté de 10 ans ou moins
 #  A2 : Ancienneté au delà de 10 ans
 contrat salarié . indemnité de licenciement:
+  résoudre la référence circulaire: oui
   variations:
     - si: ancienneté en année > (8 mois / 12)
       alors:
         somme:
-        - indemnité de licenciement . dix ans ou moins
-        - indemnité de licenciement . plus de dix ans
+          - indemnité de licenciement . dix ans ou moins
+          - indemnité de licenciement . plus de dix ans
     - sinon: 0
   unité: €
   arrondi: 2 décimales
@@ -40,19 +41,21 @@ contrat salarié . indemnité de licenciement . inaptitude suite à un accident 
 contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins:
   valeur:
     le minimum de:
-       - ancienneté en année
-       - 10 an
+      - ancienneté en année
+      - 10 an
+  unit: an
 
 contrat salarié . indemnité de licenciement . au dela de dix ans:
   somme:
     - ancienneté en année
     - (- 10 an)
   plancher: 0 an
+  unit: an
 
 contrat salarié . indemnité de licenciement . dix ans ou moins:
   valeur:
     produit:
-      assiette: jusqu'à dix ans ou moins * salaire de référence
+      assiette: salaire de référence * jusqu'à dix ans ou moins
       facteur: 1 / 4
   unité: €
 
@@ -150,12 +153,12 @@ contrat salarié . indemnité de licenciement . salaire du mois 12:
 contrat salarié . indemnité de licenciement . salaire de référence:
   titre: Salaire de référence du salarié
   variations:
-    - si: contrat salarié . indemnité de licenciement . même salaire sur les 12 derniers mois
-      alors: contrat salarié . indemnité de licenciement . salaire des 12 derniers mois
+    - si: même salaire sur les 12 derniers mois
+      alors: salaire des 12 derniers mois
     - sinon:
         le maximum de:
-          - contrat salarié . indemnité de licenciement . moyenne des salaires des 12 derniers mois
-          - contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois
+          - moyenne des salaires des 12 derniers mois
+          - moyenne des salaires des 3 derniers mois
   unité: €
 
 contrat salarié . indemnité de licenciement . primes 3 derniers mois:
@@ -190,14 +193,14 @@ contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derni
   non applicable si: contrat salarié . indemnité de licenciement . même salaire sur les 12 derniers mois
   valeur:
     somme:
-      - contrat salarié . indemnité de licenciement . primes 3 derniers mois / 12
+      - primes 3 derniers mois / 12
       - produit:
           assiette:
             somme:
-              - contrat salarié . indemnité de licenciement . salaire du mois 1
-              - contrat salarié . indemnité de licenciement . salaire du mois 2
-              - contrat salarié . indemnité de licenciement . salaire du mois 3
-              - (- contrat salarié . indemnité de licenciement . primes 3 derniers mois)
+              - indemnité de licenciement . salaire du mois 1
+              - indemnité de licenciement . salaire du mois 2
+              - indemnité de licenciement . salaire du mois 3
+              - (- primes 3 derniers mois)
           facteur: 1 / 3
   unité: €
 
@@ -208,9 +211,9 @@ contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derni
   titre: moyenne des salaires des 3 derniers mois préavis inclus
   valeur:
     variations:
-      - si: contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois si préavis . préavis
-        alors: contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois préavis inclus
-      - sinon: contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois sans préavis
+      - si: moyenne des salaires des 3 derniers mois si préavis . préavis
+        alors: moyenne des salaires des 3 derniers mois préavis inclus
+      - sinon: moyenne des salaires des 3 derniers mois sans préavis
   unité: €
 
 contrat salarié . indemnité de licenciement . moyenne des salaires des 3 derniers mois si préavis . préavis:
