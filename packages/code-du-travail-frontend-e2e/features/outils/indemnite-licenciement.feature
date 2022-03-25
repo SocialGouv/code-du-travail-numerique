@@ -88,10 +88,10 @@ Fonctionnalité: Outil - Indemnité de licenciement
     Quand je choisis "#hasTempsPartiel-non"
     Alors je vois "Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement"
     Quand je choisis "#hasSameSalaire-oui"
-    Quand je renseigne "10000" dans le champ "salaire"
+    Quand je renseigne "1000" dans le champ "salaire"
 
     Quand je clique sur "Suivant"
 
     Alors je vois "Indemnité légale"
-    Alors je vois "55000"
+    Alors je vois "6500"
     Alors je vois "Imprimer le résultat"
