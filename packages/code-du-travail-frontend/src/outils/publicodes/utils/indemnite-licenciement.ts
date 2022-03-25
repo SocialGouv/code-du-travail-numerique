@@ -39,7 +39,7 @@ export const mapToPublicodesSituationForIndemniteLicenciement = (
 
   return {
     ...agreement,
-    // ...salary,
+    ...salary,
     ...salaries,
     ...{
       "contrat salarié . ancienneté en année": seniority,

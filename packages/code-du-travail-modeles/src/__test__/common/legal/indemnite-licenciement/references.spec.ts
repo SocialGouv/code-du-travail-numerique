@@ -21,7 +21,7 @@ describe("Vérification des références juridiques pour Indemnité légale de l
           "contrat salarié . convention collective": "''",
           "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
             "non",
-          "contrat salarié . salaire de référence": 1000,
+          "contrat salarié . indemnité de licenciement . salaire de référence": 1000,
           "indemnité de licenciement": "oui",
         })
       );
@@ -44,7 +44,7 @@ describe("Vérification des références juridiques pour Indemnité légale de l
           "contrat salarié . convention collective": "''",
           "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
             "oui",
-          "contrat salarié . salaire de référence": 1000,
+          "contrat salarié . indemnité de licenciement . salaire de référence": 1000,
           "indemnité de licenciement": "oui",
         })
       );

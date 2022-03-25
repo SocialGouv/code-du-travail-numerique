@@ -139,7 +139,8 @@ describe("Publicodes Context", () => {
                     "contrat salarié . convention collective": "''",
                     "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
                       "non",
-                    "contrat salarié . salaire de référence": "2000",
+                    "contrat salarié . indemnité de licenciement . salaire de référence":
+                      "2000",
                     "indemnité de licenciement": "oui",
                   });
                 }}

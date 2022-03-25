@@ -1,9 +1,3 @@
-contrat salarié . salaire de référence:
-  titre: Salaire de référence du salarié
-  unité: €
-  cdtn:
-    type: entier
-
 contrat salarié . ancienneté en année:
   titre: Ancienneté du salarié en année
   cdtn:

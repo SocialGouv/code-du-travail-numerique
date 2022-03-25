@@ -28,7 +28,8 @@ describe("Indemnité légale de licenciement pour un employé", () => {
           "contrat salarié . convention collective": "''",
           "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
             "non",
-          "contrat salarié . salaire de référence": salary,
+          "contrat salarié . indemnité de licenciement . salaire de référence":
+            salary,
           "indemnité de licenciement": "oui",
         })
         .evaluate("contrat salarié . indemnité de licenciement");
@@ -58,7 +59,8 @@ describe("Indemnité légale de licenciement pour un employé", () => {
           "contrat salarié . convention collective": "''",
           "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
             "oui",
-          "contrat salarié . salaire de référence": salary,
+          "contrat salarié . indemnité de licenciement . salaire de référence":
+            salary,
           "indemnité de licenciement": "oui",
         })
         .evaluate("contrat salarié . indemnité de licenciement");
