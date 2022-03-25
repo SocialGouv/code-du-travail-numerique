@@ -107,8 +107,47 @@ contrat salarié . indemnité de licenciement . salaire du mois 3:
   unité: €
   cdtn:
     type: entier
-
 contrat salarié . indemnité de licenciement . salaire du mois 4:
+  titre: Salaire du mois -4
+  unité: €
+  cdtn:
+    type: entier
+contrat salarié . indemnité de licenciement . salaire du mois 5:
+  titre: Salaire du mois -4
+  unité: €
+  cdtn:
+    type: entier
+contrat salarié . indemnité de licenciement . salaire du mois 6:
+  titre: Salaire du mois -4
+  unité: €
+  cdtn:
+    type: entier
+contrat salarié . indemnité de licenciement . salaire du mois 7:
+  titre: Salaire du mois -4
+  unité: €
+  cdtn:
+    type: entier
+contrat salarié . indemnité de licenciement . salaire du mois 8:
+  titre: Salaire du mois -4
+  unité: €
+  cdtn:
+    type: entier
+contrat salarié . indemnité de licenciement . salaire du mois 9:
+  titre: Salaire du mois -4
+  unité: €
+  cdtn:
+    type: entier
+contrat salarié . indemnité de licenciement . salaire du mois 10:
+  titre: Salaire du mois -4
+  unité: €
+  cdtn:
+    type: entier
+contrat salarié . indemnité de licenciement . salaire du mois 11:
+  titre: Salaire du mois -4
+  unité: €
+  cdtn:
+    type: entier
+contrat salarié . indemnité de licenciement . salaire du mois 12:
   titre: Salaire du mois -4
   unité: €
   cdtn:
@@ -142,6 +181,14 @@ contrat salarié . indemnité de licenciement . moyenne des salaires des 12 dern
           - salaire du mois 2
           - salaire du mois 3
           - salaire du mois 4
+          - salaire du mois 5
+          - salaire du mois 6
+          - salaire du mois 7
+          - salaire du mois 8
+          - salaire du mois 9
+          - salaire du mois 10
+          - salaire du mois 11
+          - salaire du mois 12
       facteur: 1 / nombre de dernier salaire
   unité: €
 

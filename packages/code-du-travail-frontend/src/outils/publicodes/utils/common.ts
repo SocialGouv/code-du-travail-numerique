@@ -23,6 +23,9 @@ export function formatRefs(refs: Array<OldReference>): Array<References> {
   });
 }
 
+export function formatOuiNon(toBeFormmatted: boolean): string {
+  return toBeFormmatted ? "oui" : "non";
+}
 export function formatNumber(toBeFormmatted: number): string {
   return isNaN(toBeFormmatted) ? "0" : toBeFormmatted.toString();
 }

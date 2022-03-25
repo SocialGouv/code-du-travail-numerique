@@ -41,8 +41,11 @@ export function StepIndemnite({ form }: Props): JSX.Element {
       mapToPublicodesSituationForIndemniteLicenciement(
         ccn,
         anciennete,
-        salaireRef,
-        inaptitude
+        inaptitude,
+        hasSameSalaire,
+        primes,
+        salaire,
+        salaires
       )
     );
   }, []);
