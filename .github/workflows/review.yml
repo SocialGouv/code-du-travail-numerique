@@ -68,7 +68,7 @@ jobs:
     needs: [register, manifests]
     steps:
       - name: Use autodevops deployment
-        uses: SocialGouv/actions/autodevops-deploy@v1
+        uses: SocialGouv/actions/autodevops-deploy@master
         with:
           environment: "dev"
           token: ${{ secrets.GITHUB_TOKEN }}

@@ -58,7 +58,7 @@ jobs:
           KUBE_NAMESPACE: cdtn
 
       - name: Use autodevops deployment
-        uses: SocialGouv/actions/autodevops-deploy@v1
+        uses: SocialGouv/actions/autodevops-deploy@master
         with:
           environment: "prod"
           token: ${{ secrets.GITHUB_TOKEN }}
