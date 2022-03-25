@@ -135,7 +135,7 @@ describe("Publicodes Context", () => {
                 data-testid="setSituation"
                 onClick={() => {
                   result?.setSituation({
-                    "contrat salarié . ancienneté en année": "28",
+                    "contrat salarié . ancienneté en année": "2.333333333",
                     "contrat salarié . convention collective": "''",
                     "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
                       "non",
