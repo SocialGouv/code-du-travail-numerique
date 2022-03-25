@@ -30,20 +30,23 @@ describe("Salaire de référénce pour un employé", () => {
   );
 
   test.each`
-    salary1 | salary2 | salary3 | salary4 | primes  | salaireRef
-    ${0}    | ${0}    | ${0}    | ${0}    | ${0}    | ${0}
-    ${1000} | ${2000} | ${2000} | ${2000} | ${1000} | ${1416.6666666666665}
-    ${1000} | ${1000} | ${2000} | ${2000} | ${3000} | ${583.3333333333333}
-    ${6000} | ${2000} | ${2000} | ${2000} | ${4000} | ${2333.3333333333335}
-    ${6000} | ${6000} | ${6000} | ${2000} | ${4000} | ${4999.999999999999}
+    salary1 | salary2 | salary3 | salary4 | salaryNum | primes  | salaireRef
+    ${0}    | ${0}    | ${0}    | ${0}    | ${0}      | ${0}    | ${0}
+    ${1000} | ${1000} | ${1000} | ${0}    | ${3}      | ${1000} | ${1000}
+    ${1000} | ${2000} | ${2000} | ${2000} | ${12}     | ${1000} | ${1416.6666666666665}
+    ${1000} | ${1000} | ${2000} | ${2000} | ${12}     | ${3000} | ${583.3333333333333}
+    ${6000} | ${2000} | ${2000} | ${2000} | ${12}     | ${4000} | ${2333.3333333333335}
+    ${6000} | ${6000} | ${6000} | ${2000} | ${12}     | ${4000} | ${4999.999999999999}
   `(
     "qui n'a eu le même salaire: $salary1 lors des 12 derniers mois avec un total de primes: $primes a un salaire ref de $salaireRef",
-    ({ salary1, salary2, salary3, salary4, primes, salaireRef }) => {
+    ({ salary1, salary2, salary3, salary4, salaryNum, primes, salaireRef }) => {
       const result = engine
         .setSituation({
           "contrat salarié . convention collective": "''",
           "contrat salarié . indemnité de licenciement . même salaire sur les 12 derniers mois":
             "non",
+          "contrat salarié . indemnité de licenciement . nombre de dernier salaire":
+            salaryNum,
           "contrat salarié . indemnité de licenciement . primes 3 derniers mois":
             primes,
           "contrat salarié . indemnité de licenciement . salaire du mois 1":
