@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.74.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.73.0...v4.74.0) (2022-03-28)
+
+
+### Bug Fixes
+
+* **deps:** upgrade next to v12 ([#4280](https://github.com/SocialGouv/code-du-travail-numerique/issues/4280)) ([10ae94f](https://github.com/SocialGouv/code-du-travail-numerique/commit/10ae94fa4424230fb72e74bb63bd98ef9abd6ac8))
+* **hn in tabs:** when tabs do not have headings level as parameter, then starts at H2 not H1 ([#4311](https://github.com/SocialGouv/code-du-travail-numerique/issues/4311)) ([fd015f0](https://github.com/SocialGouv/code-du-travail-numerique/commit/fd015f0e961d9c2e09624d720ca4954ee75d2d9e))
+* **spacings in questions:** standardize spacing around questions in tools ([#4309](https://github.com/SocialGouv/code-du-travail-numerique/issues/4309)) ([a5a7b97](https://github.com/SocialGouv/code-du-travail-numerique/commit/a5a7b9796a6a5ba69aa2ce3c15728d5319a9db8c))
+
+
+### Features
+
+* **outil - heures-recherche-emploi:** outil "heures pour recherche d'emploi" by "Heures d'absence pour rechercher un emploi" ([#4308](https://github.com/SocialGouv/code-du-travail-numerique/issues/4308)) ([4410f39](https://github.com/SocialGouv/code-du-travail-numerique/commit/4410f39dd029d860e3851e681f548b66a8f457fa))
+* **widget:** new widget for preavis de retraite ([#4287](https://github.com/SocialGouv/code-du-travail-numerique/issues/4287)) ([745026e](https://github.com/SocialGouv/code-du-travail-numerique/commit/745026eda3929d15359d3184584636d2a6d94a33))
+
+
+
+
+
 # [4.73.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.72.0...v4.73.0) (2022-03-16)
 
 
