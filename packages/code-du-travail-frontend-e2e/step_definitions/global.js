@@ -192,3 +192,7 @@ Alors("le status de la page est {int}", async (num) => {
     );
   }
 });
+
+// const res = await I.sendPostRequest("/api/users", userData);
+// expect(res.status).to.eql(201);
+// expect(res.data.name).to.eql(userData.name);
