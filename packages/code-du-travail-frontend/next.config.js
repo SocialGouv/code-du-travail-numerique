@@ -90,11 +90,6 @@ module.exports = {
   async redirects() {
     return [
       {
-        destination: "/api/sitemap",
-        permanent: false,
-        source: "/sitemap.xml",
-      },
-      {
         destination: "/themes/:slug",
         permanent: true,
         source: "/themes/(\\d{1,}-):slug",
