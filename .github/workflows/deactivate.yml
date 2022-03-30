@@ -13,5 +13,4 @@ jobs:
         with:
           kube-config: ${{ secrets.KUBECONFIG }}
           github-token: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
-          rancherId: ${{ secrets.RANCHER_PROJECT_ID }} # optional
-          socialgouvBaseDomain: ${{ secrets.SOCIALGOUV_BASE_DOMAIN }} # optional
+          rancherProjectName: ${{ secrets.RANCHER_PROJECT_NAME }}
