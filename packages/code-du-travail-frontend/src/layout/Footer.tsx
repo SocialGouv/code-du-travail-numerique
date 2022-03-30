@@ -103,7 +103,7 @@ const Footer = (): JSX.Element => {
                 <li>
                   <Link passHref href="/integration">
                     <StyledLink>
-                      Intégrer le Code du travail numérique
+                      Intégrer les outils du Code du travail numérique
                     </StyledLink>
                   </Link>
                 </li>
