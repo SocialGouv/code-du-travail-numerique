@@ -108,13 +108,5 @@
     "stylelint-order": "^4.1.0",
     "stylelint-processor-styled-components": "^1.10.0",
     "supertest": "^6.1.6"
-  },
-  "lint-staged": {
-    "{pages,src}/**/*.{css,js,ts,tsx,jsx}": [
-      "yarn lint-css"
-    ],
-    "{__mocks__,test,__tests__,pages,server,src}/**/*.{js,ts,tsx,jsx}": [
-      "yarn lint-js --fix"
-    ]
   }
 }
