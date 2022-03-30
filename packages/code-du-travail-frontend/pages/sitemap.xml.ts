@@ -10,12 +10,10 @@ const {
 const Sitemap = () => {};
 
 export const getServerSideProps = async ({ res }) => {
-  const sitemapFile = "sitemap.xml";
-
   return new Promise(function SitemapStream(resolve, reject) {
     const get = AZURE_BASE_URL.startsWith("https") ? https.get : http.get;
     const sitempaReq = get(
-      `${AZURE_BASE_URL}/sitemap/${sitemapFile}`,
+      `${AZURE_BASE_URL}/sitemap/sitemap.xml`,
       (response) => {
         response.pipe(res);
         response.on("end", () => {
