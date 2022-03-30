@@ -2,8 +2,8 @@ name: Pre-production
 
 on:
   push:
-    tags:
-      - v*
+    branches:
+      - preprod
 
 concurrency:
   group: pre-production
