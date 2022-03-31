@@ -2,7 +2,9 @@ name: Pre-production
 
 on:
   push:
-    tags:
+    branches:
+      - master
+    tags-ignore:
       - v*
 
 concurrency:
