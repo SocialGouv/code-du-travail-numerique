@@ -1,9 +1,8 @@
 # Code du travail numérique
+
 ![Tests](https://github.com/SocialGouv/code-du-travail-numerique/actions/workflows/quality.yml/badge.svg)
 
 > Ce dépôt de code regroupe les informations techniques du projet Code du travail numérique
-
-<br/>
 
 - Consulter le [site internet code.travail.gouv.fr](https://code.travail.gouv.fr)
 - À propos du code du travail numérique : [https://code.travail.gouv.fr/a-propos](https://code.travail.gouv.fr/a-propos)
