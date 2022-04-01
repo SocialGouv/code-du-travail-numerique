@@ -13,4 +13,3 @@ jobs:
         with:
           kube-config: ${{ secrets.KUBECONFIG }}
           github-token: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
-          rancherProjectName: ${{ secrets.RANCHER_PROJECT_NAME }}
