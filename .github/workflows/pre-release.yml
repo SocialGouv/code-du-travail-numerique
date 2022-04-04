@@ -1,0 +1,34 @@
+name: Pre-release
+
+on: workflow_dispatch
+
+concurrency:
+  cancel-in-progress: true
+  group: pre-release-${{ github.ref }}
+
+jobs:
+  release:
+    name: Pre-release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Opening pull request
+        uses: tretuna/sync-branches@1.4.0
+        id: pull
+        with:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          FROM_BRANCH: "dev"
+          TO_BRANCH: "master"
+      - name: Enable Automerge
+        run: gh pr merge --auto --rebase "$PR_URL"
+        env:
+          PR_URL: ${{ steps.pull.outputs.PULL_REQUEST_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
