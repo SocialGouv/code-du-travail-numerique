@@ -1,6 +1,12 @@
 name: Release
 
-on: workflow_dispatch
+on:
+  workflow_dispatch
+  # push:
+  #   branches:
+  #     - master
+  #   tags-ignore:
+  #     - v*
 
 concurrency:
   cancel-in-progress: true
@@ -16,10 +22,6 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-      - name: Set up Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -46,15 +48,3 @@ jobs:
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
           NPM_TOKEN: ${{ secrets.SOCIALGROOVYBOT_NPM_TOKEN }}
-      - name: Opening pull request
-        uses: tretuna/sync-branches@1.4.0
-        id: pull
-        with:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          FROM_BRANCH: "dev"
-          TO_BRANCH: "master"
-      - name: Enable Automerge
-        run: gh pr merge --auto --rebase "$PR_URL"
-        env:
-          PR_URL: ${{ steps.pull.outputs.PULL_REQUEST_URL }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
