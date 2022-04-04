@@ -8,6 +8,7 @@ concurrency:
 
 jobs:
   release:
+    if: github.ref == 'refs/heads/master'
     name: Release
     runs-on: ubuntu-latest
     steps:

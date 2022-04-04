@@ -27,8 +27,13 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           FROM_BRANCH: "dev"
           TO_BRANCH: "master"
+      - name: Approve PR
+        run: gh pr review "$PR_URL" --approve
+        env:
+          PR_URL: ${{ steps.pull.outputs.PULL_REQUEST_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Enable Automerge
-        run: gh pr merge --auto --rebase "$PR_URL"
+        run: gh pr merge "$PR_URL" --auto --rebase
         env:
           PR_URL: ${{ steps.pull.outputs.PULL_REQUEST_URL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
