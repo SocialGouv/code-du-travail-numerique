@@ -54,7 +54,7 @@ jobs:
           FROM_BRANCH: "dev"
           TO_BRANCH: "master"
       - name: Enable Automerge
-        run: gh pr merge --auto --merge "$PR_URL"
+        run: gh pr merge --auto --merge --rebase "$PR_URL"
         env:
           PR_URL: ${{ steps.pull.outputs.PULL_REQUEST_URL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
