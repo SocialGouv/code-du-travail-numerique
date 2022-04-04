@@ -49,6 +49,7 @@ jobs:
           git config --global user.email "${EMAIL}"
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           git switch dev
+          git rebase master
           git pull --rebase
           git push origin dev
         env:
