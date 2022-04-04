@@ -27,6 +27,10 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           FROM_BRANCH: "dev"
           TO_BRANCH: "master"
+      - name: Sleep for 15 seconds
+        uses: jakejarvis/wait-action@master
+        with:
+          time: "15s"
       - name: Enable Automerge
         run: gh pr merge "$PR_URL" --rebase --admin
         env:
