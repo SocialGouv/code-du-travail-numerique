@@ -21,7 +21,7 @@ contrat salarié . inaptitude suite à un accident ou maladie professionnelle:
 #  A2 : Ancienneté au delà de 10 ans
 contrat salarié . indemnité de licenciement:
   variations:
-    - si: ancienneté en année > (8 mois / 12)
+    - si: ancienneté en année > (7 mois / 12)
       alors:
         somme:
         - indemnité de licenciement . dix ans ou moins
