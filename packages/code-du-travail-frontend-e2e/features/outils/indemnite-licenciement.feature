@@ -93,5 +93,5 @@ Fonctionnalité: Outil - Indemnité de licenciement
     Quand je clique sur "Suivant"
 
     Alors je vois "Indemnité légale"
-    Alors je vois "6500"
+    Alors je vois "6 500,00"
     Alors je vois "Imprimer le résultat"

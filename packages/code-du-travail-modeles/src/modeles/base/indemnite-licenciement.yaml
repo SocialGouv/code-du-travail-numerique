@@ -28,7 +28,7 @@ contrat salarié . indemnité de licenciement:
         - indemnité de licenciement . plus de dix ans
     - sinon: 0
   unité: €
-  arrondi: 2 décimales
+  arrondi: 3 décimales
   références:
     Article L1234-9: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644154/
     Article R1234-1 à R1234-4: https://www.legifrance.gouv.fr/codes/id/LEGISCTA000018537572/
