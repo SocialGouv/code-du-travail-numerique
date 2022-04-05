@@ -158,6 +158,6 @@ describe("Publicodes Context", () => {
     expect(screen.getByTestId("text")).toHaveTextContent("");
     const setButton = screen.getByTestId("setSituation");
     fireEvent.click(setButton);
-    expect(screen.getByTestId("text")).toHaveTextContent("1166.67");
+    expect(screen.getByTestId("text")).toHaveTextContent("1166.667");
   });
 });
