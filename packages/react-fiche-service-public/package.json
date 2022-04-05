@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/react-fiche-service-public",
-  "version": "4.75.0",
+  "version": "4.75.2",
   "private": true,
   "description": "Composant React pour render une fiche SP",
   "main": "lib/index.js",
