@@ -51,9 +51,13 @@ export function StepIndemnite({ form }: Props): JSX.Element {
     <IndemniteLegale
       result={
         publicodesContext.result.value
-          ? Number(publicodesContext.result.value).toLocaleString("fr-FR", {
-              minimumFractionDigits: 2,
-            })
+          ? (Number(publicodesContext.result.value) + 0.004).toLocaleString(
+              "fr-FR",
+              {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              }
+            )
           : "0"
       }
       unit={publicodesContext.result.unit?.denominators[0] ?? "€"}
