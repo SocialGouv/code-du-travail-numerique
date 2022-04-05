@@ -90,6 +90,6 @@ describe("<StepIndemnite />", () => {
     );
     expect(
       screen.getByText("Le code du travail prévoit un montant minimum de :")
-    ).toHaveTextContent("5000 € brut.");
+    ).toHaveTextContent("5 000,00 € brut.");
   });
 });
