@@ -21,53 +21,18 @@ const MATOMO_URL =
  * getDate return a 6month date range that starts from 2020-01-01
  * @param {date} date a date
  */
-function getDate(date) {
+function getDate(date: Date) {
   const launchDate = new Date(Date.UTC(2020, 0, 1));
   const startDate = max([subMonths(startOfDay(date), 6), launchDate]);
   return `${format(startDate, "yyyy-MM-dd")},today`;
 }
 
-function getUrl(baseUrl, params) {
-  const qs = Object.entries(params).map(([key, value]) => {
-    if (Array.isArray(value)) {
-      //label: ["A", "B"] => label[]=A&label[]=B
-      return value.map((value) => `${key}[]=${value}`).join("&");
-    }
-    return `${key}=${value}`;
-  });
-  return `${baseUrl}?${qs.join("&")}`;
-}
-
-// general matomo congif params
-const baseParams = {
-  date: getDate(new Date()),
-  format: "JSON",
-  idSite: MATOMO_SITE_ID,
-  module: "API",
-  period: "range",
-};
-
-const methodParams = [
-  {
-    method: "VisitsSummary.getVisits",
-  },
-  {
-    method: "Actions.get",
-  },
-];
-
-router.get("/stats", async (ctx) => {
+router.get("/stats", async (ctx: any) => {
   if (!MATOMO_SITE_ID && !MATOMO_URL) {
     ctx.throw(500, `There is no matomo`);
     return;
   }
-  const promises = methodParams.map((params) =>
-    fetch(getUrl(MATOMO_URL, { ...baseParams, ...params }))
-      .then((data) => data.json())
-      .catch(() => {
-        return null;
-      })
-  );
+
   const {
     body: { aggregations },
   } = await elasticsearchClient.search({ body: docsCountBody, index });
@@ -76,6 +41,22 @@ router.get("/stats", async (ctx) => {
   for (const { doc_count } of buckets) {
     nbDocuments += doc_count;
   }
+
+  const URLS = [
+    `${MATOMO_URL}/?module=API&method=VisitsSummary.getVisits&idSite=${MATOMO_SITE_ID}&format=JSON&period=range&date=${getDate(
+      new Date()
+    )}`,
+    `${MATOMO_URL}/?module=API&method=Actions.get&idSite=${MATOMO_SITE_ID}&format=JSON&period=range&date=${getDate(
+      new Date()
+    )}`,
+  ];
+  const promises = URLS.map((url) =>
+    fetch(url)
+      .then((data: any) => data.json())
+      .catch(() => {
+        return null;
+      })
+  );
   const [nbVisitData, infoData] = await Promise.all(promises);
 
   if (!nbVisitData && !infoData) {
