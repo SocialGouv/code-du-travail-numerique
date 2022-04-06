@@ -3,7 +3,6 @@ import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 
 const Router = require("koa-router");
 const fetch = require("node-fetch");
-const { startOfDay, subMonths, max, format } = require("date-fns");
 
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
 const docsCountBody = require("../docs-count/docCount.elastic");
@@ -16,16 +15,6 @@ const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 const MATOMO_SITE_ID = process.env.PIWIK_SITE_ID || "3";
 const MATOMO_URL =
   process.env.PIWIK_URL || "https://matomo.fabrique.social.gouv.fr";
-/**
- * Return a date range (matomo api format)
- * getDate return a 6month date range that starts from 2020-01-01
- * @param {date} date a date
- */
-function getDate(date: Date) {
-  const launchDate = new Date(Date.UTC(2020, 0, 1));
-  const startDate = max([subMonths(startOfDay(date), 6), launchDate]);
-  return `${format(startDate, "yyyy-MM-dd")},today`;
-}
 
 router.get("/stats", async (ctx: any) => {
   if (!MATOMO_SITE_ID && !MATOMO_URL) {
@@ -43,12 +32,8 @@ router.get("/stats", async (ctx: any) => {
   }
 
   const URLS = [
-    `${MATOMO_URL}/?module=API&method=VisitsSummary.getVisits&idSite=${MATOMO_SITE_ID}&format=JSON&period=range&date=${getDate(
-      new Date()
-    )}`,
-    `${MATOMO_URL}/?module=API&method=Actions.get&idSite=${MATOMO_SITE_ID}&format=JSON&period=range&date=${getDate(
-      new Date()
-    )}`,
+    `${MATOMO_URL}/?module=API&method=VisitsSummary.getVisits&idSite=${MATOMO_SITE_ID}&format=JSON&period=range&date=2020-01-01,today`,
+    `${MATOMO_URL}/?module=API&method=Actions.get&idSite=${MATOMO_SITE_ID}&format=JSON&period=range&date=2020-01-01,today`,
   ];
   const promises = URLS.map((url) =>
     fetch(url)
