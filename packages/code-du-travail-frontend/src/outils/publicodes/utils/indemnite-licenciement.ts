@@ -5,53 +5,32 @@ export const mapToPublicodesSituationForIndemniteLicenciement = (
   ccn: ConventionCollective | undefined,
   seniority: string,
   inaptitude: boolean,
-  hasSameSalaire: boolean,
-  primes: number,
-  salaire: number,
-  salaires: any[]
+  salaireRef?: number
 ): Record<string, string> => {
   const agreement: Record<string, string> = ccn?.selected
     ? {
-        "contrat salarié - convention collective": `'IDCC${ccn.selected.num
+        "contrat salarié . convention collective": `'IDCC${ccn.selected.num
           .toString()
           .padStart(4, "0")}'`,
       }
-    : { "contrat salarié - convention collective": "''" };
-
-  const salary: Record<string, string> = salaire
-    ? {
-        "contrat salarié . indemnité de licenciement . salaire des 12 derniers mois":
-          formatNumber(salaire),
-      }
     : {};
 
-  const salaries: Record<string, string> = {};
-  if (salaires?.length) {
-    salaries[
-      "contrat salarié . indemnité de licenciement . nombre de dernier salaire"
-    ] = formatNumber(salaires.length);
-    salaries[
-      "contrat salarié . indemnité de licenciement . primes 3 derniers mois"
-    ] = formatNumber(primes);
-    for (let i = 0; i < 12; i++) {
-      salaries[
-        "contrat salarié . indemnité de licenciement . salaire du mois " +
-          (i + 1)
-      ] = formatNumber(salaires[i]?.salary);
-    }
-  }
+  const salaireRef2: Record<string, string> | undefined = salaireRef
+    ? {
+        "contrat salarié . indemnité de licenciement légale . salaire de référence": `${salaireRef}`,
+      }
+    : undefined;
 
-  return {
+  const situation = {
     ...agreement,
-    ...salary,
-    ...salaries,
+    ...salaireRef2,
     ...{
       "contrat salarié . ancienneté en année": seniority,
       "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
         formatOuiNon(inaptitude),
       "indemnité de licenciement": "oui",
-      "contrat salarié . indemnité de licenciement . même salaire sur les 12 derniers mois":
-        formatOuiNon(hasSameSalaire),
     },
   };
+  console.log("Situation", situation);
+  return situation;
 };

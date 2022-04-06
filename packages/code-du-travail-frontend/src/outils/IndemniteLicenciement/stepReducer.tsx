@@ -3,10 +3,11 @@ import { StepIndemnite } from "./steps/Indemnite";
 import { StepInfo } from "./steps/Info";
 import { StepIntro } from "./steps/Introduction";
 import { StepPrimes } from "./steps/Primes";
-import { StepSalaires } from "./steps/Salaires";
+import SalairesStep from "./steps/SalairesStep";
+import { AgreementStep } from "./steps/AgreementStep";
 
 export const stepSalaires = {
-  component: StepSalaires,
+  component: SalairesStep,
   label: "Salaires",
   name: "salaires",
 };
@@ -28,6 +29,12 @@ const initialSteps = [
     isForm: true,
     label: "Contrat de travail",
     name: "info_generales",
+  },
+  {
+    component: AgreementStep,
+    isForm: true,
+    label: "Convention collective",
+    name: "agreement",
   },
   {
     component: StepAnciennete,

@@ -46,8 +46,10 @@ export function updateSituation(
     }
   });
 
+  console.log("New situation: ", newSituation);
   engine.setSituation(buildSituation(newSituation));
   const result = engine.evaluate(targetRule);
+  console.log("Result: ", result);
 
   return {
     missingArgs: buildMissingArgs(engine, result.missingVariables),

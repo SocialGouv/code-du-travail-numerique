@@ -33,8 +33,8 @@ export type Action =
   | { type: ActionName.reset }
   | { type: ActionName.setStepIndex; payload: number };
 
-export type WizardStepProps = {
-  form: FormApi<FormContent>;
+export type WizardStepProps<Form> = {
+  form: FormApi<Form>;
   dispatch: React.Dispatch<Action>;
   title: string;
 };
@@ -55,6 +55,25 @@ export type PreavisRetraiteFormContent = {
   criteria?: Record<string, string>;
   cdt?: Record<string, string>;
   disabledWorker?: boolean;
+} & Record<string, unknown>;
+
+export type Absence = {
+  duration: number;
+  type: string;
+};
+
+export type IndemniteLicenciementFormContent = {
+  ccn?: ConventionCollective;
+  seniorityMaximum?: boolean;
+  seniorityValue?: string;
+  infos?: Record<string, string>;
+  criteria?: Record<string, string>;
+  cdt?: Record<string, string>;
+  dateEntree?: string;
+  dateNotification?: string;
+  absencePeriods: Absence[];
+  inaptitude?: boolean;
+  salaireRef?: number;
 } & Record<string, unknown>;
 
 export type FormContent = PreavisRetraiteFormContent;
