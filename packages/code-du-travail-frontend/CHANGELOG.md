@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.75.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.0...v4.75.4) (2022-04-06)
+
+
+### Bug Fixes
+
+* **csp:** azure config ([#4361](https://github.com/SocialGouv/code-du-travail-numerique/issues/4361)) ([d6a73f5](https://github.com/SocialGouv/code-du-travail-numerique/commit/d6a73f54d0ea930eb5989235db84db56fbb30c6f)), closes [#4357](https://github.com/SocialGouv/code-du-travail-numerique/issues/4357)
+
+
+
+
+
 ## [4.75.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.2...v4.75.3) (2022-04-06)
 
 
