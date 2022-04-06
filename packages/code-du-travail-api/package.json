@@ -13,7 +13,7 @@
     "postbuild": "ncc build ./babel-dist/index.js -o dist --source-map && rimraf babel-dist",
     "lint": "eslint \"./src/**/*.{js,ts}\"",
     "precommit": "lint-staged",
-    "prepush": "yarn test --bail --changedSince=master",
+    "prepush": "yarn test --bail --changedSince=dev",
     "start": "ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME=true NODE_ENV=production node -r elastic-apm-node/start ./dist/index.js",
     "dev": "nodemon --exec babel-node ./src/index.js --extensions \".ts,.js\"",
     "update-mock-data": "ES_INDEX_PREFIX=cdtn babel-node src/tests/fetch_mock_data.js",

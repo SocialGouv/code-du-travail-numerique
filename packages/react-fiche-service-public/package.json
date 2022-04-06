@@ -14,7 +14,7 @@
     "lint-css": "stylelint 'src/**/*.js'",
     "lint": "yarn lint-css && yarn lint-js",
     "precommit": "lint-staged",
-    "prepush": "yarn test --bail --changedSince=master",
+    "prepush": "yarn test --bail --changedSince=dev",
     "prepublishOnly": "yarn build",
     "dev": "rollup --config --watch",
     "test": "jest",

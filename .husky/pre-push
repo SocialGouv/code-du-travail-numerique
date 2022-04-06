@@ -4,11 +4,11 @@
 yarn lerna run \
   --exclude-dependents \
   --parallel prepush \
-  --since master \
+  --since dev \
   --stream \
   ;
 
-if git diff master --name-only | grep --quiet ".k8s"
+if git diff dev --name-only | grep --quiet ".k8s"
 then
   yarn k8s
   yarn k8s prepush
