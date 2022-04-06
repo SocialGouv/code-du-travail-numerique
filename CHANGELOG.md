@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.75.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.2...v4.75.3) (2022-04-06)
+
+
+### Bug Fixes
+
+* dev as default branch ([554472b](https://github.com/SocialGouv/code-du-travail-numerique/commit/554472b62c5e8f60788b0bef9477c28584c1eadc))
+* dev as default branch ([ed06576](https://github.com/SocialGouv/code-du-travail-numerique/commit/ed065764fb89d25456b8b694a50964030202006c))
+* dev as default branch ([48b318a](https://github.com/SocialGouv/code-du-travail-numerique/commit/48b318ab0bf6ce4911e5f4c5ac536527901886cf))
+* dev as default branch ([b7e93de](https://github.com/SocialGouv/code-du-travail-numerique/commit/b7e93de90dff05db9a6da7ced3e588293218de95))
+* dev as default branch ([9d38312](https://github.com/SocialGouv/code-du-travail-numerique/commit/9d38312f4bbe720b56ef34402993a843591edecb))
+* dev as default branch ([f8c926b](https://github.com/SocialGouv/code-du-travail-numerique/commit/f8c926bf9a59a7f4583e0269ae8a58dde675d36b))
+* dev as default branch ([91e97c8](https://github.com/SocialGouv/code-du-travail-numerique/commit/91e97c85a64f067af15bdd3653baecdfa406ded7))
+* dev as default branch ([59dc014](https://github.com/SocialGouv/code-du-travail-numerique/commit/59dc014b00b5dde2ff2aa9c78f336a2bdf6318fe))
+* dev as default branch ([dac9187](https://github.com/SocialGouv/code-du-travail-numerique/commit/dac9187837a9790be0b4dd02f60e46b4447b3b7b))
+* dev as default branch ([f9fef79](https://github.com/SocialGouv/code-du-travail-numerique/commit/f9fef79b956ae902769c4b6af77c46c0add4fd78))
+* dev as default branch ([93b1aa5](https://github.com/SocialGouv/code-du-travail-numerique/commit/93b1aa5455c2887bce55a7101aeafe6094946236))
+* **csp:** azure config ([#4361](https://github.com/SocialGouv/code-du-travail-numerique/issues/4361)) ([eb4ee19](https://github.com/SocialGouv/code-du-travail-numerique/commit/eb4ee19c2903da81e831f623fc2932a27896dbec)), closes [#4357](https://github.com/SocialGouv/code-du-travail-numerique/issues/4357)
+* dev as default branch ([baa1a9c](https://github.com/SocialGouv/code-du-travail-numerique/commit/baa1a9c09f7677d30fe6f438a6fad788802ec8af))
+* dev as default branch ([955ece4](https://github.com/SocialGouv/code-du-travail-numerique/commit/955ece46349e271be6eaaa1ddcdbb32909a54753))
+* dev as default branch ([e869bc8](https://github.com/SocialGouv/code-du-travail-numerique/commit/e869bc82b9b6a350a42a0d332c5a7789e0113262))
+* dev as default branch ([8846987](https://github.com/SocialGouv/code-du-travail-numerique/commit/8846987f13b942db0d895cbe65ced41580efcfb3))
+* dev as default branch ([1297908](https://github.com/SocialGouv/code-du-travail-numerique/commit/1297908a8068a8c10bf2ebb5dde9989debd2a551))
+* dev as default branch ([6bda2cc](https://github.com/SocialGouv/code-du-travail-numerique/commit/6bda2cc28f1a41f2dd9168c018fdf44fba269fbb))
+* dev as default branch ([d4598f9](https://github.com/SocialGouv/code-du-travail-numerique/commit/d4598f9e36a770f9bdb064cd37d86663e0b3db82))
+* dev as default branch ([c4c3e5d](https://github.com/SocialGouv/code-du-travail-numerique/commit/c4c3e5dd4939276c9eba88b3640f2605ca6aec55))
+* dev as default branch ([8348c88](https://github.com/SocialGouv/code-du-travail-numerique/commit/8348c881439c2b0a75050c4bbc623e2448fe4eb8))
+* dev as default branch ([8f3be54](https://github.com/SocialGouv/code-du-travail-numerique/commit/8f3be546a23643c4e339152f9aea7deb32ae0ded))
+* dev as default branch ([a72560e](https://github.com/SocialGouv/code-du-travail-numerique/commit/a72560ede6ee3b69ded123d1a2ce271681888358))
+* dev as default branch ([683937f](https://github.com/SocialGouv/code-du-travail-numerique/commit/683937f4760b24d7d5ca3e9e82cbeb5e4b1b3ce2))
+* dev as default branch ([a2cf7b1](https://github.com/SocialGouv/code-du-travail-numerique/commit/a2cf7b1e434f34d1450c5304415b7ed26c743615))
+* dev as default branch ([27293e4](https://github.com/SocialGouv/code-du-travail-numerique/commit/27293e45594c436efaf857fdecd54ad325b6c2d7))
+* dev as default branch ([175e020](https://github.com/SocialGouv/code-du-travail-numerique/commit/175e0202147d76dc11b2158730c5949b6611f835))
+* dev as default branch ([105f9a9](https://github.com/SocialGouv/code-du-travail-numerique/commit/105f9a97e6d9bccda27c6a6127aba31785409bcc))
+* dev as default branch ([9f23f7f](https://github.com/SocialGouv/code-du-travail-numerique/commit/9f23f7fcd0b6ce39627acec80d6b7c4ea5b2d5a9))
+* dev as default branch ([1deca43](https://github.com/SocialGouv/code-du-travail-numerique/commit/1deca43a2c518fbed4907d769df9b5a250152f69))
+* dev as default branch ([df0ff68](https://github.com/SocialGouv/code-du-travail-numerique/commit/df0ff684e3e44e4cb112e6999203ac3dd54d8d3b))
+* dev as default branch ([cb15697](https://github.com/SocialGouv/code-du-travail-numerique/commit/cb15697aff4f274c3b0972c9a374f13cc8f8f60f))
+* dev as default branch ([09114a0](https://github.com/SocialGouv/code-du-travail-numerique/commit/09114a08ddb6827885cf2738d6ce332339cc9d8f))
+
+
+
+
+
 ## [4.75.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.1...v4.75.2) (2022-04-04)
 
 
