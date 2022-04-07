@@ -1,10 +1,10 @@
-import { StepAnciennete } from "./steps/Anciennete";
 import { StepIndemnite } from "./steps/Indemnite";
 import { StepInfo } from "./steps/Info";
 import { StepIntro } from "./steps/Introduction";
 import { StepPrimes } from "./steps/Primes";
 import SalairesStep from "./steps/SalairesStep";
 import { AgreementStep } from "./steps/AgreementStep";
+import AncienneteStep from "./steps/AncienneteStep";
 
 export const stepSalaires = {
   component: SalairesStep,
@@ -37,7 +37,7 @@ const initialSteps = [
     name: "agreement",
   },
   {
-    component: StepAnciennete,
+    component: AncienneteStep,
     hasNoMarginBottom: true,
     isForm: true,
     label: "Ancienneté",

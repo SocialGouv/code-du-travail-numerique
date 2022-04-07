@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { isPositiveNumber } from "../../common/validators";
 import {
   mapToPublicodesSituationForIndemniteLicenciement,
   MissingArgs,
@@ -9,14 +8,16 @@ import {
   IndemniteLicenciementFormContent,
   WizardStepProps,
 } from "../../common/type/WizardType";
-import { TextQuestion } from "../../common/TextQuestion";
 import SalaireRefLegale from "../components/modules/SalaireRefLegale";
+import AskSalaires from "../components/modules/AskSalaires";
+import SalaireWithPreavis from "../components/modules/SalaireWithPreavis";
 
 const SalairesStep = ({
   form,
 }: WizardStepProps<IndemniteLicenciementFormContent>) => {
   const publicodesContext = usePublicodes();
   const [data, setData] = useState<MissingArgs[]>([]);
+  const [agreementRule, setAgreementRule] = useState<string | null>(null);
 
   const values = form.getState().values;
 
@@ -30,20 +31,26 @@ const SalairesStep = ({
       )
     );
     setData(publicodesContext.missingArgs);
+    setAgreementRule(
+      publicodesContext.missingArgs
+        .filter(
+          (item) =>
+            item.name !==
+            "contrat salarié - indemnité de licenciement légale - salaire de référence"
+        )
+        .pop()?.rawNode.cdtn?.front_rules ?? null
+    );
   }, [values]);
 
-  console.log("Result: ", data);
+  console.log("MissingArgs:", data);
+  console.log("AgreementRule:", agreementRule);
+
   return (
     <>
       <SalaireRefLegale form={form} />
-      <TextQuestion
-        name="salaireRef"
-        label={"Salaire de référence"}
-        inputType="number"
-        validate={isPositiveNumber}
-        validateOnChange
-        placeholder="0"
-      />
+      {agreementRule === "salaire_reference_boulangerie" && (
+        <SalaireWithPreavis form={form} />
+      )}
     </>
   );
 };

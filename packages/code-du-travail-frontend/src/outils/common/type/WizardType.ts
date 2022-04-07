@@ -62,6 +62,11 @@ export type Absence = {
   type: string;
 };
 
+export type Salary = {
+  label: string;
+  salary: string | null;
+};
+
 export type IndemniteLicenciementFormContent = {
   ccn?: ConventionCollective;
   seniorityMaximum?: boolean;
@@ -74,6 +79,12 @@ export type IndemniteLicenciementFormContent = {
   absencePeriods: Absence[];
   inaptitude?: boolean;
   salaireRef?: number;
+  salaireAgreementRef?: number;
+  hasSameSalaire?: boolean;
+  salaire?: string;
+  salaires?: Salary[];
+  hasPreavis?: boolean;
+  preavis_salaires?: Salary[];
 } & Record<string, unknown>;
 
 export type FormContent = PreavisRetraiteFormContent;

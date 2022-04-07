@@ -76,16 +76,9 @@ contrat salarié . indemnité de licenciement légale . salaire de référence:
   titre: Salaire de référence du salarié
   unité: €
   cdtn:
-    front-rules: salaire_reference_legale
+    front_rules: salaire_reference_legale
 
 contrat salarié . indemnité de licenciement collective: non
-
-contrat salarié . indemnité de licenciement . salaire de référence:
-  titre: Salaire de référence du salarié
-  valeur:
-    le maximum de:
-      - contrat salarié . indemnité de licenciement légale . salaire de référence
-      - contrat salarié . indemnité de licenciement collective . salaire de référence
 
 contrat salarié . indemnité de licenciement collective . salaire de référence: non
 
@@ -97,4 +90,4 @@ contrat salarié . convention collective . boulangerie patisserie . salaire de r
   titre: Salaire de référence collective du salarié
   unité: €
   cdtn:
-    ront-rules: salaire_reference_boulangerie
+    front_rules: salaire_reference_boulangerie

@@ -24,6 +24,7 @@ export enum RuleType {
 export interface RuleListe {
   type: RuleType;
   valeurs: Record<string, string>;
+  front_rules: string;
 }
 
 export type RuleCdtn = RuleListe;
