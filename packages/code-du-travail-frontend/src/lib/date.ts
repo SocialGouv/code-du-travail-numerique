@@ -118,7 +118,7 @@ export const convertPeriodToHumanDate = (
     }
     date = convertDate(date, 14, Unit.DAY);
   }
-  return dateToString(date, isTheSameYear(date, from));
+  return dateToString(date, !isTheSameYear(date, from));
 };
 
 const convertDate = (date: Date, value: number, unit: Unit): Date => {
@@ -178,6 +178,6 @@ export const dateToString = (date: Date, withYear = false): string => {
   const month = date.getMonth() + 1;
   const year = date.getFullYear();
   return withYear
-    ? `${day} ${Month[month].toString()}`
-    : `${day} ${Month[month].toString()} ${year}`;
+    ? `${day} ${Month[month].toString()} ${year}`
+    : `${day} ${Month[month].toString()}`;
 };
