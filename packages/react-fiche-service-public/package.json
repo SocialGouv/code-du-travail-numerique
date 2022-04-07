@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/react-fiche-service-public",
-  "version": "4.75.2",
+  "version": "4.75.4",
   "private": true,
   "description": "Composant React pour render une fiche SP",
   "main": "lib/index.js",
@@ -14,7 +14,7 @@
     "lint-css": "stylelint 'src/**/*.js'",
     "lint": "yarn lint-css && yarn lint-js",
     "precommit": "lint-staged",
-    "prepush": "yarn test --bail --changedSince=master",
+    "prepush": "yarn test --bail --changedSince=dev",
     "prepublishOnly": "yarn build",
     "dev": "rollup --config --watch",
     "test": "jest",

@@ -1,4 +1,5 @@
 # Code du travail numérique
+
 ![Tests](https://github.com/SocialGouv/code-du-travail-numerique/actions/workflows/quality.yml/badge.svg)
 
 > Ce dépôt de code regroupe les informations techniques du projet Code du travail numérique

@@ -26,9 +26,9 @@ jobs:
           git config --global user.email "${EMAIL}"
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           git switch master
+          git pull
           git rebase dev
-          git pull --rebase
-          git push origin master
+          git push
         env:
           GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
