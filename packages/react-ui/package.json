@@ -13,7 +13,7 @@
     "lint-css": "stylelint 'src/**/*.js'",
     "lint": "yarn lint-css && yarn lint-js",
     "precommit": "lint-staged",
-    "prepush": "yarn test --bail --changedSince=master",
+    "prepush": "yarn test --bail --changedSince=dev",
     "start": "start-storybook",
     "svg": "svgo --config=src/icons/mono.config.js -f src/icons/src/monochrome && svgo --config=src/icons/bi.config.js -f src/icons/src/bicolor && svgr --config-file=src/icons/svgr.config.js -d src/icons/components src/icons/src",
     "build-storybook": "build-storybook -c .storybook -o .out",

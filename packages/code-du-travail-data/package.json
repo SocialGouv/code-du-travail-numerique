@@ -15,7 +15,7 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "prepush": "yarn test --bail --changedSince=master",
+    "prepush": "yarn test --bail --changedSince=dev",
     "lint": "eslint . --ext .js",
     "test": "jest"
   },

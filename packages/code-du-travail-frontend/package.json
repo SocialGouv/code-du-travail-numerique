@@ -12,7 +12,7 @@
     "lint-css": "stylelint 'src/**/*.{js,ts,tsx,jsx}' 'src/**/*.css' 'pages/**/*.{js,ts,tsx,jsx}'",
     "lint": "yarn lint-css && next lint",
     "precommit": "lint-staged",
-    "prepush": "yarn test --bail --changedSince=master",
+    "prepush": "yarn test --bail --changedSince=dev",
     "start": "NODE_ENV=production next start",
     "prebuild": "node -r @swc-node/register scripts/prebuild.ts",
     "build": "next build",
