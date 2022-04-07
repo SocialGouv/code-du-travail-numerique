@@ -2,6 +2,7 @@ import { Notification } from "@socialgouv/modeles-social";
 import React from "react";
 
 import Mdx from "../../../../common/Mdx";
+import { PrecisionResult, Simulator } from "../../../common/PrecisionResult";
 import {
   HighlightResult,
   SectionTitle,
@@ -49,7 +50,7 @@ const ShowResult: React.FC<Props> = ({
           ) : (
             <>il n’y a pas de préavis à effectuer</>
           )}
-          {notifications.length > 0 ? <sup>*</sup> : ""}
+          <sup>*</sup>
         </HighlightResult>
       </p>
       {notifications.length > 0 && (
@@ -62,6 +63,14 @@ const ShowResult: React.FC<Props> = ({
           ))}
         </SmallText>
       )}
+      <PrecisionResult
+        simulator={
+          type === "mise"
+            ? Simulator.PREAVIS_MISE_RETRAITE
+            : Simulator.PREAVIS_DEPART_RETRAITE
+        }
+        period={`${publicodesResult.value} ${publicodesResult.unit}`}
+      />
     </>
   );
 };

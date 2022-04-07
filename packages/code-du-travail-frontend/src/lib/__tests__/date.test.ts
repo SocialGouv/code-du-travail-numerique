@@ -25,6 +25,7 @@ describe("convertPeriodToHumanDate", () => {
     ${"1 an et demi"}             | ${new Date("2022-01-14")} | ${null}
     ${"1 mois de date à date"}    | ${new Date("2022-01-14")} | ${"14 février"}
     ${"1 semaine de date à date"} | ${new Date("2022-01-14")} | ${"21 janvier"}
+    ${"7 jours calendaires"}      | ${new Date("2022-01-14")} | ${"21 janvier"}
     ${"blabla"}                   | ${new Date("2022-01-14")} | ${null}
     ${"blabla jours"}             | ${new Date("2022-01-14")} | ${null}
   `(

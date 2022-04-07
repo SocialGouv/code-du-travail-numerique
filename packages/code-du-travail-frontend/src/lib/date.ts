@@ -28,6 +28,7 @@ enum Extra {
   OPEN,
   FROM_TO,
   MID,
+  CALENDAR,
 }
 
 const MappingExtra = [
@@ -42,6 +43,10 @@ const MappingExtra = [
   {
     key: Extra.MID,
     label: ["et demi"],
+  },
+  {
+    key: Extra.CALENDAR,
+    label: ["calendaires", "calendaire"],
   },
 ];
 
@@ -168,7 +173,7 @@ const isTheSameYear = (date1: Date, date2: Date): boolean => {
   return date1.getFullYear() === date2.getFullYear();
 };
 
-const dateToString = (date: Date, withYear = false): string => {
+export const dateToString = (date: Date, withYear = false): string => {
   const day = date.getDate();
   const month = date.getMonth() + 1;
   const year = date.getFullYear();

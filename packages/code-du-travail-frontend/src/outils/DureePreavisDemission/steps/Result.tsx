@@ -4,6 +4,7 @@ import React from "react";
 
 import CCSearchInfo from "../../common/CCSearchInfo";
 import Disclaimer from "../../common/Disclaimer";
+import { PrecisionResult, Simulator } from "../../common/PrecisionResult";
 import PubliReferences from "../../common/PubliReferences";
 import ShowDetails from "../../common/ShowDetails";
 import {
@@ -91,7 +92,7 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
           À partir des éléments que vous avez saisis, la durée du préavis de
           démission est estimée à&nbsp;:&nbsp;
           <HighlightResult>{situation.answer}</HighlightResult>
-          {situation.note && <sup>*</sup>}.
+          <sup>*</sup>.
         </p>
       ) : (
         <p>
@@ -105,6 +106,12 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.
         </p>
+      )}
+      {situation.answer && (
+        <PrecisionResult
+          simulator={Simulator.PREAVIS_DEMISSION}
+          period={situation.answer}
+        />
       )}
       {situation.note && (
         <SmallText>
