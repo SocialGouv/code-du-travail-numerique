@@ -37,12 +37,10 @@ function copyJSFile() {
 
 function writeSupportedCCFile() {
   const ccn = extractSupportedCc(new Engine(mergeModels()));
-  const jsString =
-    '"use strict";\n' +
-    'Object.defineProperty(exports, "__esModule", { value: true });\n' +
-    "exports.supportedCcn = void 0;\n" +
-    `exports.supportedCcn = ${JSON.stringify(ccn, null, 2)};`;
-  fs.writeFileSync(path.resolve(outDir, "utils/constants.js"), jsString);
+  fs.writeFileSync(
+    path.resolve(outDir, "utils/ccn-supported.json"),
+    JSON.stringify(ccn, null, 2)
+  );
 }
 
 copyJSFile();
