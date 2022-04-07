@@ -14,9 +14,10 @@ describe("convertPeriodToHumanDate", () => {
     ${"1 semaine"}                | ${new Date("2022-01-14")} | ${"21 janvier"}
     ${"15 jours"}                 | ${new Date("2022-01-14")} | ${"28 janvier"}
     ${"14 jours"}                 | ${new Date("2022-01-14")} | ${"28 janvier"}
+    ${"1 jour ouvré"}             | ${new Date("2022-01-14")} | ${"14 janvier"}
     ${"2 jours ouvrés"}           | ${new Date("2022-01-14")} | ${"17 janvier"}
-    ${"1 jour ouvré"}             | ${new Date("2022-01-14")} | ${"16 janvier"}
     ${"3 jours ouvrés"}           | ${new Date("2022-01-14")} | ${"18 janvier"}
+    ${"10 jours ouvrés"}          | ${new Date("2022-01-14")} | ${"27 janvier"}
     ${"1 mois et demi"}           | ${new Date("2022-01-14")} | ${"28 février"}
     ${"3 mois et demi"}           | ${new Date("2022-01-14")} | ${"28 avril"}
     ${"1 jour et demi"}           | ${new Date("2022-01-14")} | ${null}

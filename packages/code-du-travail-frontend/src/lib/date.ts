@@ -62,10 +62,10 @@ enum Month {
 
 export const convertPeriodToHumanDate = (
   input: string,
-  from = new Date()
+  from: Date
 ): string | null => {
-  let date = new Date(from);
-  let dayToDodge = 0;
+  let date: Date;
+  let weekendDays = 0;
   let extra: Extra | undefined;
   const splitString = input.split(" ");
   if (splitString.length <= 1) {
@@ -97,22 +97,26 @@ export const convertPeriodToHumanDate = (
     }
   }
   if (extra === Extra.OPEN) {
-    dayToDodge = countWeekendDays(date, new Date()) - 1;
+    weekendDays =
+      countWeekendDays(from, convertDate(from, firstElement, Unit.DAY)) - 1;
+    if (firstElement === 1) {
+      weekendDays--;
+    }
   }
   if (firstElement === 15 && unit === Unit.DAY) {
     firstElement = 14;
   }
-  date = renderDate(date, firstElement - dayToDodge, unit);
+  date = convertDate(from, firstElement + weekendDays, unit);
   if (extra === Extra.MID) {
     if (unit !== Unit.MONTH) {
       return null;
     }
-    date = renderDate(date, 14, Unit.DAY);
+    date = convertDate(date, 14, Unit.DAY);
   }
   return dateToString(date, isTheSameYear(date, from));
 };
 
-const renderDate = (date: Date, value: number, unit: Unit): Date => {
+const convertDate = (date: Date, value: number, unit: Unit): Date => {
   let localDate = new Date(date);
   switch (unit) {
     case Unit.DAY:
@@ -127,9 +131,11 @@ const renderDate = (date: Date, value: number, unit: Unit): Date => {
 };
 
 const countWeekendDays = (startDate: Date, endDate: Date): number => {
+  let localStart = new Date(startDate);
+  let localEnd = new Date(endDate);
   var totalWeekends = 0;
-  for (var i = startDate; i <= endDate; i.setDate(i.getDate() + 1)) {
-    if (i.getDay() == 0 || i.getDay() == 1) totalWeekends++;
+  for (var i = localStart; i <= localEnd; i.setDate(i.getDate() + 1)) {
+    if (i.getDay() == 0 || i.getDay() == 6) totalWeekends++;
   }
   return totalWeekends;
 };
