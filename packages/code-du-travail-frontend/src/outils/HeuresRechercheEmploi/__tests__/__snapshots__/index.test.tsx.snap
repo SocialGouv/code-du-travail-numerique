@@ -636,7 +636,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
       </p>
       <p>
         Vous pouvez trouver plus d’informations sur les heures d’absence autorisée pour rechercher un emploi pendant le préavis sur
-
+         
         <a
           href="/contribution/le-salarie-peut-il-sabsenter-pour-rechercher-un-emploi-pendant-son-preavis"
         >
