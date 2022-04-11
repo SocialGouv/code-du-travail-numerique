@@ -6,27 +6,6 @@ Fonctionnalité: Outil - Heures d'absence pour rechercher un emploi
   En tant que visiteur
   Je veux pouvoir utiliser le calculateur d'heures pour recherche d'emploi (en renseignant ou non ma CC)
 
-  Scénario: Parcours sans convention collective
-    Soit un utilisateur sur la page "/outils/heures-recherche-emploi"
-
-    Alors je vois "Étapes"
-    Alors je vois "Heures d'absence pour rechercher un emploi"
-    Alors je vois "permet de calculer le nombre d’heures d’absence autorisée pendant la période de préavis"
-
-    Quand je clique sur "Commencer"
-
-    Alors je vois "Quel est le nom de la convention collective applicable ?"
-    Quand je clique sur "Suivant"
-    Alors je vois "Vous devez répondre à cette question"
-    Quand je choisis "Je ne souhaite pas renseigner ma convention collective"
-    Alors je vois "Vous pouvez passer cette étape et poursuivre la simulation qui vous fournira un résultat basé sur le code du travail."
-    Quand je clique sur "Suivant"
-
-    Alors je vois "Nombre d’heures d’absence autorisée pour rechercher un emploi"
-    Alors je vois "Aucun résultat"
-    Quand j'ouvre l'accordion
-    Alors je vois "La convention collective n'a pas été renseignée"
-
   Scénario: Parcours en connaissant sa convention collective et sans information complémentaire
     Soit un utilisateur sur la page "/outils/heures-recherche-emploi"
 
@@ -72,8 +51,6 @@ Fonctionnalité: Outil - Heures d'absence pour rechercher un emploi
     Quand je clique sur "Commencer"
 
     Alors je vois "Quel est le nom de la convention collective applicable ?"
-    Quand je clique sur "Suivant"
-    Alors je vois "Vous devez répondre à cette question"
     Quand je choisis "Je sais quelle est ma convention collective"
     Alors je vois "Précisez et sélectionnez votre convention collective"
     Quand je renseigne "787" dans le champ "Nom de la convention collective ou son numéro d’identification IDCC"

@@ -6,26 +6,6 @@ Fonctionnalité: Outil - Préavis de démission
   En tant que visiteur
   Je veux pouvoir utiliser le calculateur de préavis de démission (en renseignant ou non ma CC)
 
-  Scénario: Parcours sans convention collective
-    Soit un utilisateur sur la page "/outils/preavis-demission"
-
-    Alors je vois "Étapes"
-    Alors je vois "Préavis de démission"
-    Alors je vois "permet de calculer la durée du préavis que le salarié doit respecter en cas de démission"
-
-    Quand je clique sur "Commencer"
-
-    Alors je vois "Quel est le nom de la convention collective applicable ?"
-    Quand je clique sur "Suivant"
-    Alors je vois "Vous devez répondre à cette question"
-    Quand je choisis "Je ne souhaite pas renseigner ma convention collective"
-    Alors je vois "Vous pouvez passer cette étape et poursuivre la simulation qui vous fournira un résultat basé sur le code du travail."
-    Quand je clique sur "Suivant"
-
-    Alors je vois "Durée du préavis"
-    Alors je vois "Aucun résultat"
-    Alors je vois "la convention collective n’a pas été renseignée"
-
   Scénario: Parcours en connaissant sa convention collective
     Soit un utilisateur sur la page "/outils/preavis-demission"
 
