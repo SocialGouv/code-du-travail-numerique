@@ -1,4 +1,4 @@
-import { convertPeriodToHumanDate } from "../date";
+import { convertPeriodToHumanDate, Extra, getExtra } from "../date";
 
 describe("convertPeriodToHumanDate", () => {
   it.each`
@@ -14,10 +14,10 @@ describe("convertPeriodToHumanDate", () => {
     ${"1 semaine"}                | ${new Date("2022-01-14")} | ${"21 janvier"}
     ${"15 jours"}                 | ${new Date("2022-01-14")} | ${"28 janvier"}
     ${"14 jours"}                 | ${new Date("2022-01-14")} | ${"28 janvier"}
-    ${"1 jour ouvré"}             | ${new Date("2022-01-14")} | ${"14 janvier"}
-    ${"2 jours ouvrés"}           | ${new Date("2022-01-14")} | ${"17 janvier"}
-    ${"3 jours ouvrés"}           | ${new Date("2022-01-14")} | ${"18 janvier"}
-    ${"10 jours ouvrés"}          | ${new Date("2022-01-14")} | ${"27 janvier"}
+    ${"1 jour ouvré"}             | ${new Date("2022-01-14")} | ${null}
+    ${"2 jours ouvrés"}           | ${new Date("2022-01-14")} | ${null}
+    ${"3 jours ouvrés"}           | ${new Date("2022-01-14")} | ${null}
+    ${"10 jours ouvrés"}          | ${new Date("2022-01-14")} | ${null}
     ${"1 mois et demi"}           | ${new Date("2022-01-14")} | ${"28 février"}
     ${"3 mois et demi"}           | ${new Date("2022-01-14")} | ${"28 avril"}
     ${"1 jour et demi"}           | ${new Date("2022-01-14")} | ${null}
@@ -34,4 +34,20 @@ describe("convertPeriodToHumanDate", () => {
       expect(convertPeriodToHumanDate(period, fromDate)).toBe(result);
     }
   );
+});
+
+describe("getExtra", () => {
+  it.each`
+    period                        | result
+    ${"1 jour"}                   | ${null}
+    ${"7 jours ouvrés"}           | ${Extra.OPEN}
+    ${"1 jour ouvré"}             | ${Extra.OPEN}
+    ${"1 an et demi"}             | ${Extra.MID}
+    ${"1 mois de date à date"}    | ${Extra.FROM_TO}
+    ${"blabla"}                   | ${null}
+    ${"7 jours calendaires"}      | ${Extra.CALENDAR}
+    ${"1 semaine de date à date"} | ${Extra.FROM_TO}
+  `("should return $result for $period", ({ period, result }) => {
+    expect(getExtra(period)).toBe(result);
+  });
 });

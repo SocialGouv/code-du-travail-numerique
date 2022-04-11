@@ -24,7 +24,7 @@ const MappingUnit = [
   },
 ];
 
-enum Extra {
+export enum Extra {
   OPEN,
   FROM_TO,
   MID,
@@ -102,11 +102,7 @@ export const convertPeriodToHumanDate = (
     }
   }
   if (extra === Extra.OPEN) {
-    weekendDays =
-      countWeekendDays(from, convertDate(from, firstElement, Unit.DAY)) - 1;
-    if (firstElement === 1) {
-      weekendDays--;
-    }
+    return null;
   }
   if (firstElement === 15 && unit === Unit.DAY) {
     firstElement = 14;
@@ -119,6 +115,21 @@ export const convertPeriodToHumanDate = (
     date = convertDate(date, 14, Unit.DAY);
   }
   return dateToString(date, !isTheSameYear(date, from));
+};
+
+export const getExtra = (input: string): Extra | null => {
+  let extra: Extra | null = null;
+  const splitString = input.split(" ");
+  if (splitString.length > 2) {
+    const otherElements = splitString.slice(2).join(" ");
+    MappingExtra.forEach((v) => {
+      if (v.label.includes(otherElements)) {
+        extra = v.key;
+      }
+    });
+    return extra;
+  }
+  return null;
 };
 
 const convertDate = (date: Date, value: number, unit: Unit): Date => {

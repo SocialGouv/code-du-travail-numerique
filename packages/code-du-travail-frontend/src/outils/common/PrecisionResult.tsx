@@ -2,7 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 import { SmallText } from "./stepStyles";
-import { convertPeriodToHumanDate, dateToString } from "../../lib";
+import {
+  convertPeriodToHumanDate,
+  dateToString,
+  Extra,
+  getExtra,
+} from "../../lib";
 
 const FROM_DATE = new Date("2022-04-22");
 
@@ -29,6 +34,8 @@ export const PrecisionResult = ({
     [period, fromDate]
   );
 
+  const extra = React.useMemo(() => getExtra(period), [period]);
+
   switch (simulator) {
     case Simulator.PREAVIS_DEMISSION:
       return (
@@ -36,6 +43,7 @@ export const PrecisionResult = ({
           *Le préavis débute le jour où le salarié remet sa lettre de démission
           en main propre ou à la date de première présentation de la lettre
           recommandée, peu importe le jour de son retrait par l’employeur.
+          <MorePrecision extra={extra} />
           {resultFound && (
             <>
               <br />
@@ -54,6 +62,7 @@ export const PrecisionResult = ({
           *Le préavis débute à la date de première présentation de la
           notification du licenciement par lettre recommandée, peu importe le
           jour de son retrait par le salarié.
+          <MorePrecision extra={extra} />
           {resultFound && (
             <>
               <br />
@@ -77,6 +86,7 @@ export const PrecisionResult = ({
           la retraite en main propre ou à la date de première présentation de la
           lettre recommandée, peu importe le jour de son retrait par
           l’employeur.
+          <MorePrecision extra={extra} />
         </StyledSmallText>
       );
     case Simulator.PREAVIS_MISE_RETRAITE:
@@ -85,12 +95,45 @@ export const PrecisionResult = ({
           *Le préavis débute à la date de première présentation de la
           notification de la mise à la retraite par lettre recommandée, peu
           importe le jour de son retrait par le salarié.
+          <MorePrecision extra={extra} />
         </StyledSmallText>
       );
     default:
       return <></>;
   }
 };
+
+const MorePrecision = ({ extra }: { extra: Extra | null }): JSX.Element => {
+  switch (extra) {
+    case Extra.OPEN:
+      return <PrecisionOpenDay />;
+    case Extra.CALENDAR:
+      return <PrecisionCalendarDay />;
+    default:
+      return <></>;
+  }
+};
+
+const PrecisionOpenDay = (): JSX.Element => (
+  <>
+    <SmallText as="span">
+      Les jours ouvrés sont les jours effectivement travaillé dans une
+      entreprise ou une administration. On en compte 5 par semaine.
+    </SmallText>
+    <br />
+  </>
+);
+
+const PrecisionCalendarDay = (): JSX.Element => (
+  <>
+    <SmallText as="span">
+      Les jours calendaires correspondent à la totalité des jours du calendrier
+      de l’année civile, du 1er janvier au 31 décembre, y compris les jours
+      fériés ou chômés.
+    </SmallText>
+    <br />
+  </>
+);
 
 const StyledSmallText = styled(SmallText)`
   font-style: normal;
