@@ -12,6 +12,7 @@ import { AGREEMENT_NAME, ENTERPRISE_NAME, ROUTE_NAME } from "./form-constants";
 import { RouteSelection } from "./RouteSelection";
 import { handleTrackEvent } from "./tracking";
 import { AgreementSupportInfo, OnSelectAgreementFn } from "./types";
+import { SmallText } from "../stepStyles";
 
 export type Props = {
   title: string;
@@ -19,6 +20,8 @@ export type Props = {
   supportedAgreements: AgreementSupportInfo[];
   onChange?: (oldValue: Agreement | null, newValue: Agreement | null) => void;
   defaultSelectedAgreement?: Agreement;
+  mandatory?: boolean;
+  note?: string;
 };
 
 const SelectAgreement = ({
@@ -27,6 +30,8 @@ const SelectAgreement = ({
   supportedAgreements,
   onChange,
   defaultSelectedAgreement,
+  mandatory = false,
+  note,
 }: Props): JSX.Element => {
   const [storedConvention, setConvention] = useLocalStorage(
     "convention",
@@ -79,7 +84,8 @@ const SelectAgreement = ({
 
   return (
     <>
-      <RouteSelection form={form} />
+      <RouteSelection form={form} canBeSkip={!mandatory} />
+      {note && <SmallText>{note}</SmallText>}
       {values.ccn?.route === "agreement" && (
         <AgreementSearch
           supportedAgreements={supportedAgreements}
