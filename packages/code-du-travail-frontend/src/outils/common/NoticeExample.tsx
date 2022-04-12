@@ -10,6 +10,7 @@ type NoticeExampleProps = {
   simulator: Simulator;
   period: string;
   fromDate?: Date;
+  note?: JSX.Element;
 };
 
 export enum Simulator {
@@ -23,6 +24,7 @@ export const NoticeExample = ({
   simulator,
   period,
   fromDate = FROM_DATE,
+  note,
 }: NoticeExampleProps): JSX.Element => {
   const resultFound = React.useMemo(
     () => convertPeriodToHumanDate(period, fromDate),
@@ -35,7 +37,8 @@ export const NoticeExample = ({
     case Simulator.PREAVIS_DEMISSION:
       return (
         <StyledSmallText>
-          *Le préavis débute le jour où le salarié remet sa lettre de démission
+          {note}
+          Le préavis débute le jour où le salarié remet sa lettre de démission
           en main propre ou à la date de première présentation de la lettre
           recommandée, peu importe le jour de son retrait par l’employeur.
           <MorePrecision extra={extra} />
@@ -54,7 +57,8 @@ export const NoticeExample = ({
     case Simulator.PREAVIS_LICENCIEMENT:
       return (
         <StyledSmallText>
-          *Le préavis débute à la date de première présentation de la
+          {note}
+          Le préavis débute à la date de première présentation de la
           notification du licenciement par lettre recommandée, peu importe le
           jour de son retrait par le salarié.
           <MorePrecision extra={extra} />
@@ -77,8 +81,9 @@ export const NoticeExample = ({
     case Simulator.PREAVIS_DEPART_RETRAITE:
       return (
         <StyledSmallText>
-          *Le préavis débute le jour où le salarié remet sa lettre de départ à
-          la retraite en main propre ou à la date de première présentation de la
+          {note}
+          Le préavis débute le jour où le salarié remet sa lettre de départ à la
+          retraite en main propre ou à la date de première présentation de la
           lettre recommandée, peu importe le jour de son retrait par
           l’employeur.
           <MorePrecision extra={extra} />
@@ -87,7 +92,8 @@ export const NoticeExample = ({
     case Simulator.PREAVIS_MISE_RETRAITE:
       return (
         <StyledSmallText>
-          *Le préavis débute à la date de première présentation de la
+          {note}
+          Le préavis débute à la date de première présentation de la
           notification de la mise à la retraite par lettre recommandée, peu
           importe le jour de son retrait par le salarié.
           <MorePrecision extra={extra} />
