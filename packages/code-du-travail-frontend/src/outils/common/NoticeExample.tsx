@@ -1,16 +1,12 @@
 import React from "react";
 
 import { SmallText, StyledSmallText } from "./stepStyles";
-import {
-  convertPeriodToHumanDate,
-  dateToString,
-  Extra,
-  getExtra,
-} from "../../lib";
+import { dateToString } from "../../lib";
+import { convertPeriodToHumanDate, Extra, getExtra } from "../utils";
 
 const FROM_DATE = new Date("2022-04-22");
 
-type PrecisionResultProps = {
+type NoticeExampleProps = {
   simulator: Simulator;
   period: string;
   fromDate?: Date;
@@ -23,11 +19,11 @@ export enum Simulator {
   PREAVIS_MISE_RETRAITE,
 }
 
-export const PrecisionResult = ({
+export const NoticeExample = ({
   simulator,
   period,
   fromDate = FROM_DATE,
-}: PrecisionResultProps): JSX.Element => {
+}: NoticeExampleProps): JSX.Element => {
   const resultFound = React.useMemo(
     () => convertPeriodToHumanDate(period, fromDate),
     [period, fromDate]

@@ -2,7 +2,7 @@ import { Notification } from "@socialgouv/modeles-social";
 import React from "react";
 
 import Mdx from "../../../../common/Mdx";
-import { PrecisionResult, Simulator } from "../../../common/PrecisionResult";
+import { NoticeExample, Simulator } from "../../../common/NoticeExample";
 import {
   HighlightResult,
   SectionTitle,
@@ -63,7 +63,7 @@ const ShowResult: React.FC<Props> = ({
           ))}
         </SmallText>
       )}
-      <PrecisionResult
+      <NoticeExample
         simulator={
           type === "mise"
             ? Simulator.PREAVIS_MISE_RETRAITE

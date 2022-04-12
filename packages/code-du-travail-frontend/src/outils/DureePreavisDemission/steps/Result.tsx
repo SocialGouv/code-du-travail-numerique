@@ -4,7 +4,7 @@ import React from "react";
 
 import CCSearchInfo from "../../common/CCSearchInfo";
 import Disclaimer from "../../common/Disclaimer";
-import { PrecisionResult, Simulator } from "../../common/PrecisionResult";
+import { NoticeExample, Simulator } from "../../common/NoticeExample";
 import PubliReferences from "../../common/PubliReferences";
 import ShowDetails from "../../common/ShowDetails";
 import {
@@ -108,7 +108,7 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
         </p>
       )}
       {situation.answer && (
-        <PrecisionResult
+        <NoticeExample
           simulator={Simulator.PREAVIS_DEMISSION}
           period={situation.answer}
         />

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import Disclaimer from "../../common/Disclaimer";
-import { PrecisionResult, Simulator } from "../../common/PrecisionResult";
+import { NoticeExample, Simulator } from "../../common/NoticeExample";
 import PubliReferences from "../../common/PubliReferences";
 import ShowDetails from "../../common/ShowDetails";
 import {
@@ -55,7 +55,7 @@ function DurationResult({ duration, durationCC, durationCDT, note }) {
         <HighlightResult>{duration}</HighlightResult>
         {note && <sup>*</sup>}.
       </p>
-      <PrecisionResult
+      <NoticeExample
         simulator={Simulator.PREAVIS_LICENCIEMENT}
         period={duration}
       />
