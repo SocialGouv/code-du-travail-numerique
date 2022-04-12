@@ -41,7 +41,8 @@ router.get("/stats", async (ctx: Context) => {
   const promises = URLS.map((url) =>
     fetch(url)
       .then(async (data: Response) => data.json())
-      .catch(() => {
+      .catch((e: Error) => {
+        console.error(e);
         return null;
       })
   );
