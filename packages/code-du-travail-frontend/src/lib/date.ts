@@ -81,22 +81,17 @@ export const convertPeriodToHumanDate = (
     return null;
   }
   const secondElement = splitString[1];
-  let unit: Unit | undefined;
-  MappingUnit.forEach((v) => {
-    if (v.label.includes(secondElement)) {
-      unit = v.key;
-    }
-  });
+  const unit: Unit | undefined = MappingUnit.find(
+    (v) => v.label.includes(secondElement) === true
+  )?.key;
   if (unit === undefined) {
     return null;
   }
   if (splitString.length > 2) {
     const otherElements = splitString.slice(2).join(" ");
-    MappingExtra.forEach((v) => {
-      if (v.label.includes(otherElements)) {
-        extra = v.key;
-      }
-    });
+    extra = MappingExtra.find(
+      (v) => v.label.includes(otherElements) === true
+    )?.key;
     if (extra === undefined) {
       return null;
     }
@@ -144,16 +139,6 @@ const convertDate = (date: Date, value: number, unit: Unit): Date => {
     case Unit.YEAR:
       return addYear(localDate, value);
   }
-};
-
-const countWeekendDays = (startDate: Date, endDate: Date): number => {
-  let localStart = new Date(startDate);
-  let localEnd = new Date(endDate);
-  var totalWeekends = 0;
-  for (var i = localStart; i <= localEnd; i.setDate(i.getDate() + 1)) {
-    if (i.getDay() == 0 || i.getDay() == 6) totalWeekends++;
-  }
-  return totalWeekends;
 };
 
 const addDay = (date: Date, day: number): Date => {

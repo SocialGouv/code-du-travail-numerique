@@ -1,7 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 
-import { SmallText } from "./stepStyles";
+import { SmallText, StyledSmallText } from "./stepStyles";
 import {
   convertPeriodToHumanDate,
   dateToString,
@@ -134,7 +133,3 @@ const PrecisionCalendarDay = (): JSX.Element => (
     <br />
   </>
 );
-
-const StyledSmallText = styled(SmallText)`
-  font-style: normal;
-`;
