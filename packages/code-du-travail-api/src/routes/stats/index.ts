@@ -1,3 +1,6 @@
+import type { Context } from "koa";
+import type { Response } from "node-fetch";
+
 import elasticsearchClient from "../../conf/elasticsearch";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 
@@ -9,14 +12,14 @@ const docsCountBody = require("../docs-count/docCount.elastic");
 
 const router = new Router({ prefix: API_BASE_URL });
 
-const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
+const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX ?? "cdtn";
 const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
-const MATOMO_SITE_ID = process.env.PIWIK_SITE_ID || "3";
+const MATOMO_SITE_ID = process.env.PIWIK_SITE_ID ?? "3";
 const MATOMO_URL =
-  process.env.PIWIK_URL || "https://matomo.fabrique.social.gouv.fr";
+  process.env.PIWIK_URL ?? "https://matomo.fabrique.social.gouv.fr";
 
-router.get("/stats", async (ctx: any) => {
+router.get("/stats", async (ctx: Context) => {
   if (!MATOMO_SITE_ID && !MATOMO_URL) {
     ctx.throw(500, `There is no matomo`);
     return;
@@ -37,7 +40,7 @@ router.get("/stats", async (ctx: any) => {
   ];
   const promises = URLS.map((url) =>
     fetch(url)
-      .then((data: any) => data.json())
+      .then(async (data: Response) => data.json())
       .catch(() => {
         return null;
       })
