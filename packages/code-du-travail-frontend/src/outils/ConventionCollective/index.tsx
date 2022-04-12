@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { Enterprise } from "../../conventions/Search/api/enterprises.service";
-import { WizardTitle } from "../common/Wizard";
+import { Title } from "../Components/SimulatorDecorator/Components";
 import {
   NavProvider,
   ScreenType,
@@ -140,7 +140,7 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
   }
   return (
     <WizardWrapper variant="main">
-      <WizardTitle title={title} icon={icon} />
+      <Title title={title} icon={icon} />
       {Step}
     </WizardWrapper>
   );

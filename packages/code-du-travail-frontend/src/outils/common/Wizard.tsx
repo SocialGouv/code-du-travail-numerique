@@ -1,14 +1,17 @@
-import { Fieldset, icons, Legend, theme, Wrapper } from "@socialgouv/cdtn-ui";
-import { push as matopush } from "@socialgouv/matomo-next";
+import { Fieldset, Legend } from "@socialgouv/cdtn-ui";
 import arrayMutators from "final-form-arrays";
 import React, { Reducer, useEffect, useReducer } from "react";
-import { Form } from "react-final-form";
-import styled from "styled-components";
 
-import { PrevNextBar } from "./PrevNextBar";
-import { STEP_LIST_WIDTH, StepList } from "./StepList";
-import { Action, ActionName, SkipFn, State } from "./type/WizardType";
+import { push as matopush } from "@socialgouv/matomo-next";
+import {
+  Action,
+  ActionName,
+  FormContent,
+  SkipFn,
+  State,
+} from "./type/WizardType";
 import { printResult } from "./utils/";
+import { SimulatorDecorator } from "../Components";
 
 const anchorRef = React.createRef<HTMLLIElement>();
 
@@ -22,7 +25,7 @@ type Props = {
   title: string;
 };
 
-function Wizard({
+export const Wizard = ({
   initialState,
   initialValues = {},
   title,
@@ -30,7 +33,7 @@ function Wizard({
   Rules = null,
   stepReducer = (step) => step,
   duration,
-}: Props): JSX.Element {
+}: Props): JSX.Element => {
   const [state, dispatch] = useReducer<Reducer<State, Action>>(
     stepReducer,
     initialState
@@ -125,178 +128,66 @@ function Wizard({
   const Annotation = steps[stepIndex].annotation;
 
   return (
-    <Wrapper variant="main">
-      <Form
+    <>
+      <SimulatorDecorator<FormContent>
         initialValues={initialValues}
+        title={{
+          icon,
+          title,
+          duration,
+          hasNoMarginBottom: steps[stepIndex].hasNoMarginBottom,
+        }}
+        navigation={{
+          showNext: nextVisible,
+          onPrevious: previousVisible
+            ? (values) => prevStep(values)
+            : undefined,
+          onPrint: isLastStep ? () => printResult(title) : undefined,
+        }}
+        steps={{
+          steps: stepItems,
+          activeIndex: stepIndex,
+          listRef: anchorRef,
+        }}
+        onFormStepSubmit={handlePageSubmit}
+        showDebug={
+          process.env.NODE_ENV !== "production" &&
+          process.env.NODE_ENV !== "test"
+        }
         validate={validate}
         decorators={decorators}
         mutators={{
           ...arrayMutators,
         }}
-        onSubmit={handlePageSubmit}
-      >
-        {({ handleSubmit, form, invalid, submitFailed }) => {
+        Annotations={Annotation}
+        renderStep={(form) => {
           return (
             <>
-              <StyledForm onSubmit={handleSubmit}>
-                {Rules && (
-                  <Rules values={form.getState().values} dispatch={dispatch} />
-                )}
-                <WizardTitle
-                  title={title}
-                  icon={icon}
-                  duration={duration}
-                  stepIndex={stepIndex}
-                  hasNoMarginBottom={steps[stepIndex].hasNoMarginBottom}
-                />
-                <StepList
-                  activeIndex={stepIndex}
-                  items={stepItems}
-                  anchorRef={anchorRef}
-                />
-                {steps[stepIndex].isForm ? (
-                  <Fieldset>
-                    <Legend isHidden>{steps[stepIndex].label}</Legend>
-                    <Step
-                      form={form}
-                      dispatch={dispatch}
-                      title={title}
-                      {...StepProps}
-                    />
-                  </Fieldset>
-                ) : (
+              {Rules && (
+                <Rules values={form.getState().values} dispatch={dispatch} />
+              )}
+              {steps[stepIndex].isForm ? (
+                <Fieldset>
+                  <Legend isHidden>{steps[stepIndex].label}</Legend>
                   <Step
                     form={form}
                     dispatch={dispatch}
                     title={title}
                     {...StepProps}
                   />
-                )}
-                <PrevNextBar
-                  hasError={invalid && submitFailed}
-                  onPrev={() => prevStep(form.getState().values)}
-                  nextVisible={nextVisible}
-                  printVisible={isLastStep}
-                  previousVisible={previousVisible}
-                  onPrint={() => printResult(title)}
+                </Fieldset>
+              ) : (
+                <Step
+                  form={form}
+                  dispatch={dispatch}
+                  title={title}
+                  {...StepProps}
                 />
-                {Annotation && (
-                  <p>
-                    <Annotation />
-                  </p>
-                )}
-                {process.env.NODE_ENV !== "production" &&
-                  process.env.NODE_ENV !== "test" && (
-                    <details>
-                      <summary>state</summary>
-                      <pre>
-                        {JSON.stringify(form.getState().values, null, 2)}
-                      </pre>
-                    </details>
-                  )}
-              </StyledForm>
+              )}
             </>
           );
         }}
-      </Form>
-    </Wrapper>
+      />
+    </>
   );
-}
-
-type WizardTitleProps = {
-  duration?: string;
-  hasNoMarginBottom?: boolean;
-  icon?: string;
-  stepIndex?: number;
-  title: string;
 };
-
-function WizardTitle({
-  title,
-  icon,
-  duration,
-  stepIndex,
-  hasNoMarginBottom,
-}: WizardTitleProps): JSX.Element {
-  const Icon = icons[icon];
-  return (
-    <ToolTitle hasNoMarginBottom={hasNoMarginBottom}>
-      <StyledTitleBox>
-        {Icon && (
-          <IconWrapper>
-            <Icon />
-          </IconWrapper>
-        )}
-        <StyledTitle>{title}</StyledTitle>
-      </StyledTitleBox>
-      {duration && stepIndex === 0 && <WizardDuration duration={duration} />}
-    </ToolTitle>
-  );
-}
-
-function WizardDuration({ duration }) {
-  return (
-    <ToolDuration>
-      <TimeWithLabel aria-hidden="true" />
-      <ToolDurationLabel>{duration}</ToolDurationLabel>
-    </ToolDuration>
-  );
-}
-
-export { Wizard, WizardTitle };
-
-const { breakpoints, spacings, fonts } = theme;
-
-const StyledForm = styled.form`
-  padding: 0 0 0 ${STEP_LIST_WIDTH};
-  overflow: visible;
-  @media (max-width: ${breakpoints.tablet}) {
-    padding: 0;
-  }
-  @media print {
-    border: 0;
-  }
-`;
-
-const ToolTitle = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: ${(props) =>
-    props.hasNoMarginBottom ? "0px" : spacings.large};
-  padding-bottom: ${spacings.base};
-  border-bottom: 1px solid ${({ theme }) => theme.border};
-  @media (max-width: ${breakpoints.tablet}) {
-    margin-bottom: ${spacings.base};
-    padding: ${spacings.base} 0 ${spacings.small} 0;
-    border-bottom: 0;
-  }
-`;
-
-const ToolDuration = styled.div`
-  position: relative;
-  padding-right: 45px;
-`;
-const ToolDurationLabel = styled.span`
-  position: absolute;
-  bottom: 3px;
-  left: 28px;
-  font-size: ${fonts.sizes.tiny};
-  color: ${({ theme }) => theme.paragraph};
-`;
-const TimeWithLabel = styled(icons.TimeWithLabel)`
-  width: 4.2rem;
-`;
-const StyledTitle = styled.h1`
-  margin: 0;
-`;
-const StyledTitleBox = styled.div`
-  display: flex;
-  align-items: center;
-`;
-const IconWrapper = styled.span`
-  flex: 0 0 auto;
-  width: 5.2rem;
-  height: 5.2rem;
-  margin-right: ${spacings.base};
-`;

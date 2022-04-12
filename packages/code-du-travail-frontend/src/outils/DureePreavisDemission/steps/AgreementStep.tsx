@@ -6,6 +6,7 @@ import { getSupportedCC } from "../../common/situations.utils";
 import { WizardStepProps } from "../../common/type/WizardType";
 
 export const AgreementStep = (props: WizardStepProps): JSX.Element => {
+  console.log("Step; ", props.form.getState().values);
   return (
     <>
       <SelectAgreement
