@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import PubliReferences from "../../common/PubliReferences";
 import ShowDetails from "../../common/ShowDetails";
-import { WizardStepProps } from "../../common/type/WizardType";
+import { PreavisRetraiteFormContent } from "../../common/type/WizardType";
 import {
   mapToPublicodesSituationForPreavisDeRetraite,
   PublicodesPreavisRetraiteResult,
@@ -13,7 +13,11 @@ import ShowResult from "./component/ShowResult";
 import { Situation } from "./component/Situation";
 import WarningResult from "./component/WarningResult";
 
-function ResultStep({ form }: WizardStepProps): JSX.Element {
+type Props = {
+  values: PreavisRetraiteFormContent;
+};
+
+function ResultStep({ values }: Props): JSX.Element {
   const publicodesContext = usePublicodes<PublicodesPreavisRetraiteResult>();
   const type =
     publicodesContext.situation.find(
@@ -26,11 +30,10 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
   const agreementMaximumResult = publicodesContext.execute(
     "contrat salarié . préavis de retraite collective maximum en jours"
   );
-  const formValues = form.getState().values;
 
   useEffect(() => {
     publicodesContext.setSituation(
-      mapToPublicodesSituationForPreavisDeRetraite(form.getState().values)
+      mapToPublicodesSituationForPreavisDeRetraite(values)
     );
   }, []);
 
@@ -43,17 +46,14 @@ function ResultStep({ form }: WizardStepProps): JSX.Element {
         publicodesResult={publicodesContext.result}
       />
       <ShowDetails>
-        <Situation
-          content={formValues}
-          elements={publicodesContext.situation}
-        />
-        <DecryptedResult data={formValues} />
+        <Situation content={values} elements={publicodesContext.situation} />
+        <DecryptedResult data={values} />
         <PubliReferences references={publicodesContext.getReferences()} />
       </ShowDetails>
       <WarningResult
         resultValueInDays={publicodesContext.result.valueInDays}
         type={type}
-        ccNumber={formValues?.ccn?.selected?.num}
+        ccNumber={values?.ccn?.selected?.num}
       />
     </>
   );

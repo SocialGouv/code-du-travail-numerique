@@ -1,17 +1,23 @@
 import React from "react";
 
 import { SelectAgreement } from "../../common";
-import { WizardStepProps } from "../../common/type/WizardType";
+import { PreavisRetraiteFormContent } from "../../common/type/WizardType";
 import { getSupportedCC } from "./utils";
+import { FormApi } from "final-form";
 
-const AgreementStep = (props: WizardStepProps): JSX.Element => {
+type Props = {
+  form: FormApi<PreavisRetraiteFormContent>;
+  title: string;
+};
+
+const AgreementStep = ({ form, title }: Props): JSX.Element => {
   return (
     <SelectAgreement
-      title={props.title}
-      form={props.form}
+      title={title}
+      form={form}
       onChange={() => {
         // Delete infos when change CC
-        props.form.change("infos", undefined);
+        form.change("infos", undefined);
       }}
       supportedAgreements={getSupportedCC()}
     />
