@@ -32,6 +32,7 @@ app.use(cors());
  */
 app.use(async (ctx, next) => {
   try {
+    logger.info(`Request ${ctx.request.method} ${ctx.request.url}`);
     await next();
   } catch (error) {
     logger.error(error);
