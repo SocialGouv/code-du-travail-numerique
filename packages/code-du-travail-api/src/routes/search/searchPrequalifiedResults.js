@@ -40,17 +40,14 @@ async function _getPrequalified() {
   });
   logger.info(`Loading ${count} prequalifiedQueries`);
 
-  const response = await elasticsearchClient
-    .search({
-      body: {
-        query: prequalifiedQuery,
-        size: count,
-      },
-      index,
-    })
-    .catch((err) =>
-      logger.error(`ES Search error when loading prequalifiedQueries: ${err}`)
-    );
+  const response = await elasticsearchClient.search({
+    body: {
+      query: prequalifiedQuery,
+      size: count,
+    },
+    index,
+  });
+
   if (response.body.hits.total.value === 0) {
     return null;
   }
