@@ -16,8 +16,12 @@ export const convertPeriodToHumanDate = (
   if (!value) return null;
   let unit = getUnit(input);
   if (!unit) return null;
-  if (value === 15 && unit === Unit.DAY) value--;
   let extra = getExtra(input);
+  if (
+    (value === 15 && unit === Unit.DAY) ||
+    (unit === Unit.DAY && extra && extra === Extra.CALENDAR)
+  )
+    value--;
   date = convertDate(from, value, unit);
   if (extra === Extra.MID && unit === Unit.MONTH) {
     date = convertDate(date, 14, Unit.DAY);
@@ -35,7 +39,7 @@ export const getValue = (input: string): number | null => {
   if (splitString.length <= 1) {
     return null;
   }
-  let firstElement = parseInt(splitString[0]);
+  let firstElement = Number(splitString[0]);
   if (isNaN(firstElement)) {
     return null;
   }
@@ -43,35 +47,19 @@ export const getValue = (input: string): number | null => {
 };
 
 export const getExtra = (input: string): Extra | null => {
-  let extra: Extra | null = null;
-  const splitString = input.split(" ");
-  const extraArr = Object.entries(Extra).map(([key, value]) => ({
-    id: key,
-    value: value,
-  }));
-  if (splitString.length > 2) {
-    const otherElements = splitString.slice(2).join(" ");
-    const key = extraArr.find((v) => otherElements.includes(v.value))?.id;
-    if (key && key !== Extra.OPEN) {
-      extra = Extra[key];
+  for (var extra of Object.values(Extra)) {
+    if (input.includes(extra)) {
+      return extra;
     }
   }
-  return extra;
+  return null;
 };
 
 export const getUnit = (input: string): Unit | null => {
-  let unit: Unit | null = null;
-  const splitString = input.split(" ");
-  const unitArr = Object.entries(Unit).map(([key, value]) => ({
-    id: key,
-    value: value,
-  }));
-  if (splitString.length > 1) {
-    const otherElements = splitString.slice(1).join(" ");
-    const key = unitArr.find((v) => otherElements.includes(v.value))?.id;
-    if (key) {
-      unit = Unit[key];
+  for (var unit of Object.values(Unit)) {
+    if (input.includes(unit)) {
+      return unit;
     }
   }
-  return unit;
+  return null;
 };

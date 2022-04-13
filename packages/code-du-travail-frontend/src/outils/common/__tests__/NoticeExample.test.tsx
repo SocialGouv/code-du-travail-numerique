@@ -53,7 +53,7 @@ describe("<NoticeExample />", () => {
     ${"2 semaines"}               | ${/6 mai/}
     ${"15 jours"}                 | ${/6 mai/}
     ${"1 semaine"}                | ${/29 avril/}
-    ${"7 jours calendaires"}      | ${/29 avril/}
+    ${"7 jours calendaires"}      | ${/28 avril/}
     ${"1 semaine de date à date"} | ${/29 avril/}
     ${"1 mois et demi"}           | ${/5 juin/}
   `("should render a precision for $period", ({ period, expected }) => {
