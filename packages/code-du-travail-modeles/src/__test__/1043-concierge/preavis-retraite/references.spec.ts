@@ -1,7 +1,7 @@
 import Engine from "publicodes";
 
 import { mergeModels } from "../../../internal/merger";
-import { getReferences } from "../../../utils/GetReferences";
+import { getReferences } from "../../../utils";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
@@ -86,6 +86,7 @@ describe("Vérification juridiques de la CC 1043", () => {
             "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
             "contrat salarié . mise à la retraite": "non",
             "contrat salarié . travailleur handicapé": "non",
+            "préavis de retraite": "oui",
           })
         );
 
@@ -117,6 +118,7 @@ describe("Vérification juridiques de la CC 1043", () => {
             "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
             "contrat salarié . mise à la retraite": "oui",
             "contrat salarié . travailleur handicapé": "non",
+            "préavis de retraite": "oui",
           })
         );
 

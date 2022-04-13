@@ -1,0 +1,70 @@
+contrat salarié . salaire de référence:
+  titre: Salaire de référence du salarié
+  unité: €
+  cdtn:
+    type: entier
+
+contrat salarié . ancienneté en année:
+  titre: Ancienneté du salarié en année
+  cdtn:
+    type: entier
+  unit: an
+
+contrat salarié . inaptitude suite à un accident ou maladie professionnelle:
+  titre: Inaptitude
+  question: Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue ?
+  cdtn:
+    type: oui-non
+
+#  (1/4*Sref*A1) + (1/3*Sref*A2)
+#  A1 : Ancienneté de 10 ans ou moins
+#  A2 : Ancienneté au delà de 10 ans
+contrat salarié . indemnité de licenciement:
+  variations:
+    - si: ancienneté en année > (7 mois / 12)
+      alors:
+        somme:
+        - indemnité de licenciement . dix ans ou moins
+        - indemnité de licenciement . plus de dix ans
+    - sinon: 0
+  unité: €
+  arrondi: 3 décimales
+  références:
+    Article L1234-9: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644154/
+    Article R1234-1 à R1234-4: https://www.legifrance.gouv.fr/codes/id/LEGISCTA000018537572/
+
+contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle:
+  applicable si: inaptitude suite à un accident ou maladie professionnelle
+  remplace: indemnité de licenciement
+  valeur:
+    produit:
+      assiette: indemnité de licenciement
+      facteur: 2
+  références:
+    Article L1226-14: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006900981/
+
+contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins:
+  valeur:
+    le minimum de:
+       - ancienneté en année
+       - 10 an
+
+contrat salarié . indemnité de licenciement . au dela de dix ans:
+  somme:
+    - ancienneté en année
+    - (- 10 an)
+  plancher: 0 an
+
+contrat salarié . indemnité de licenciement . dix ans ou moins:
+  valeur:
+    produit:
+      assiette: jusqu'à dix ans ou moins * salaire de référence
+      facteur: 1 / 4
+  unité: €
+
+contrat salarié . indemnité de licenciement . plus de dix ans:
+  valeur:
+    produit:
+      assiette: salaire de référence * au dela de dix ans
+      facteur: 1 / 3
+  unité: €

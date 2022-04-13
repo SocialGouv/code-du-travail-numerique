@@ -76,14 +76,7 @@ const Stats = ({ data }: Props): JSX.Element => {
                     </Num>
                   </Tile>
                 </Grid>
-                <p>
-                  Statistiques d’utilisation depuis le{" "}
-                  {startDate.toLocaleString("fr-FR", {
-                    day: "numeric",
-                    month: "numeric",
-                    year: "numeric",
-                  })}
-                </p>
+                <p>Statistiques d’utilisation depuis le 01/01/2020</p>
               </>
             ) : (
               <p>Informations actuellement indisponibles</p>

@@ -1,0 +1,22 @@
+contrat salarié: oui
+
+préavis de retraite:
+  valeur: non
+  rend non applicable: contrat salarié . indemnité de licenciement
+
+indemnité de licenciement:
+  valeur: non
+  rend non applicable: contrat salarié . préavis de retraite
+
+contrat salarié . ancienneté:
+  titre: Ancienneté du salarié
+  question: Quel est votre ancienneté en mois ?
+  unité: mois
+  cdtn:
+    type: entier
+
+contrat salarié . travailleur handicapé:
+  titre: Travailleur handicapé
+  question: Le salarié concerné est-il reconnu en tant que travailleur handicapé ?
+  cdtn:
+    type: oui-non

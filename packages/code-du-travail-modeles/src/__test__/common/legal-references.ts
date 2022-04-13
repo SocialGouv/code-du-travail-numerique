@@ -19,3 +19,14 @@ export const DepartRetraiteReferences = [
     url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901112",
   },
 ];
+
+export const IndemniteLicenciementReferences = [
+  {
+    article: "Article L1234-9",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644154/",
+  },
+  {
+    article: "Article R1234-1 à R1234-4",
+    url: "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000018537572/",
+  },
+];

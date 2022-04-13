@@ -17,7 +17,7 @@ const SearchResults = ({
     if (isSearch) {
       matopush(["trackEvent", "candidateResults", query]);
     } else {
-      matopush(["trackEvent", "themeResults"]);
+      matopush(["trackEvent", "themeResults", ""]);
     }
   });
   let isArticleSearch = false;

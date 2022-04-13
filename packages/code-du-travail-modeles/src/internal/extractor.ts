@@ -2,8 +2,7 @@ import type Engine from "publicodes";
 
 export function extractCcnIds(engine: Engine): string[] {
   return Object.values(engine.getParsedRules())
-    .flatMap((rule) => {
-      // @ts-expect-error
+    .flatMap((rule: any) => {
       const applicableSi = rule.rawNode["applicable si"];
       return applicableSi && typeof applicableSi == "string"
         ? [applicableSi]
