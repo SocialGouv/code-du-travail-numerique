@@ -52,7 +52,7 @@ const pushAgreementEvents = (
         ? MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1
         : MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2,
       title,
-      `idcc${values.selected.num.toString()}`,
+      `idcc${values.selected.num?.toString()}`,
     ]);
     const idcc = values.selected.num;
     const isTreated = supportedAgreements.find(

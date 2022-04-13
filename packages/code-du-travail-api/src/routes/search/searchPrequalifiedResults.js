@@ -32,19 +32,30 @@ const prequalifiedQuery = {
 };
 
 async function _getPrequalified() {
+  logger.info("_getPrequalified starts");
+
   const { body: { count = 10000 } = {} } = await elasticsearchClient.count({
     body: {
       query: prequalifiedQuery,
     },
     index,
   });
-  const response = await elasticsearchClient.search({
-    body: {
-      query: prequalifiedQuery,
-      size: count,
-    },
-    index,
-  });
+  logger.info(`We found: ${count} prequalifiedQueries`);
+
+  const response = await elasticsearchClient
+    .search({
+      body: {
+        query: prequalifiedQuery,
+        size: count,
+      },
+      index,
+    })
+    .catch((err) =>
+      logger.error(`Search error when loading prequalifiedQueries: ${err}`)
+    );
+
+  logger.info(`We found: ${count} prequalifiedQuery`);
+
   if (response.body.hits.total.value === 0) {
     return null;
   }
