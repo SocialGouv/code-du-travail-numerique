@@ -1,7 +1,7 @@
 import Engine from "publicodes";
 
 import { mergeModels } from "../../../../internal/merger";
-import { getReferences } from "../../../../utils/GetReferences";
+import { getReferences } from "../../../../utils";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
@@ -26,6 +26,7 @@ test.each`
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
         "contrat salarié . travailleur handicapé": "non",
+        "préavis de retraite": "oui",
       })
     );
 

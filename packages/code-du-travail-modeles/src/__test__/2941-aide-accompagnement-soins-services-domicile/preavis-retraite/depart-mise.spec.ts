@@ -18,6 +18,7 @@ test.each`
       "contrat salarié . convention collective": "'IDCC2941'",
       "contrat salarié . mise à la retraite": "non",
       "contrat salarié . travailleur handicapé": "non",
+      "préavis de retraite": "oui",
     });
     const result = situation.evaluate("contrat salarié . préavis de retraite");
 
@@ -51,6 +52,7 @@ test.each`
       "contrat salarié . convention collective . bad . catégorie professionnelle": `'${category}'`,
       "contrat salarié . mise à la retraite": "oui",
       "contrat salarié . travailleur handicapé": "non",
+      "préavis de retraite": "oui",
     });
     const result = situation.evaluate("contrat salarié . préavis de retraite");
     const notifications = getNotifications(situation);
@@ -72,6 +74,7 @@ test("Pour un employé de category A, B, C ou D possédant 24 mois d'ancienneté
       "'A, B, C ou D'",
     "contrat salarié . mise à la retraite": "oui",
     "contrat salarié . travailleur handicapé": "non",
+    "préavis de retraite": "oui",
   });
   const result = situation.evaluate("contrat salarié . préavis de retraite");
   const notifications = getNotifications(situation);

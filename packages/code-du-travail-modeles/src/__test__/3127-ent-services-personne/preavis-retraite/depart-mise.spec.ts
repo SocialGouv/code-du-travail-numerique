@@ -1,7 +1,7 @@
 import Engine from "publicodes";
 
 import { mergeModels } from "../../../internal/merger";
-import { getReferences } from "../../../utils/GetReferences";
+import { getReferences } from "../../../utils";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
@@ -60,6 +60,7 @@ describe("Préavis de retraite de la CC 3127", () => {
           "contrat salarié . convention collective": "'IDCC3127'",
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
+          "préavis de retraite": "oui",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
@@ -91,6 +92,7 @@ describe("Préavis de retraite de la CC 3127", () => {
           "contrat salarié . convention collective": "'IDCC3127'",
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
+          "préavis de retraite": "oui",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
