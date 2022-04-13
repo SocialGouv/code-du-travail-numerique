@@ -42,8 +42,6 @@ const CDT_ES = "cdt_es";
 router.get("/search", async (ctx) => {
   const { q: query } = ctx.query;
 
-  logger.info("/search starts");
-
   const sources = [
     SOURCES.SHEET_MT,
     SOURCES.SHEET_SP,
@@ -65,7 +63,6 @@ router.get("/search", async (ctx) => {
   let articles = [];
   let themes = [];
 
-  logger.info("prequalifiedResults", prequalifiedResults);
   if (prequalifiedResults) {
     prequalifiedResults.forEach(
       (item) => (item._source.algo = "pre-qualified")
@@ -87,40 +84,31 @@ router.get("/search", async (ctx) => {
   const shouldRequestThemes = themes.length < 5;
   const size = Math.min(ctx.query.size || DEFAULT_RESULTS_NUMBER, MAX_RESULTS);
 
-  logger.info("vectorizeQuery starts");
   const query_vector = await vectorizeQuery(query.toLowerCase()).catch(
     (error) => {
       logger.error(error.message);
     }
   );
-  logger.info("vectorizeQuery ends");
 
   // if not enough prequalified results, we also trigger ES search
   if (
     !prequalifiedResults ||
     prequalifiedResults.length < DEFAULT_RESULTS_NUMBER
   ) {
-    logger.info("not enough prequalified results");
-
     searches[DOCUMENTS_ES] = [
       { index },
       getSearchBody({ query, size, sources }),
     ];
     if (query_vector) {
-      logger.info("getSemBody for query_vector");
-
       searches[DOCUMENTS_SEM] = [
         { index },
         getSemBody({ query_vector, size, sources }),
       ];
     }
   }
-  logger.info("shouldRequestThemes", shouldRequestThemes);
 
   if (shouldRequestThemes) {
     const themeNumber = THEMES_RESULTS_NUMBER - themes.length;
-    logger.info("getRelatedThemesBody starts");
-
     searches[THEMES_ES] = [
       { index }, // we search in themeIndex here to try to match title in breadcrumb
       getRelatedThemesBody({
@@ -129,8 +117,6 @@ router.get("/search", async (ctx) => {
       }),
     ];
     if (query_vector) {
-      logger.info("getSemBody for query_vector");
-
       searches[THEMES_SEM] = [
         { index },
         getSemBody({
@@ -141,11 +127,9 @@ router.get("/search", async (ctx) => {
       ];
     }
   }
-  logger.info("shouldRequestCdt", shouldRequestCdt);
 
   if (shouldRequestCdt) {
     const cdtNumber = CDT_RESULTS_NUMBER - articles.length;
-    logger.info("getRelatedArticlesBody");
     searches[CDT_ES] = [
       { index },
       getRelatedArticlesBody({
@@ -154,13 +138,11 @@ router.get("/search", async (ctx) => {
       }),
     ];
   }
-  logger.info("msearch starts");
 
   const results = await msearch({
     client: elasticsearchClient,
     searches,
   });
-  logger.info("msearch ends");
 
   const fulltextHits = extractHits(results[DOCUMENTS_ES]);
   fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
@@ -172,7 +154,6 @@ router.get("/search", async (ctx) => {
   const semanticHitsFiltered = semanticHits.filter(
     (item) => item._score > SEMANTIC_THRESHOLD
   );
-  logger.info("mergePipe starts");
 
   // we merge prequalified + full text + semantic results
   const mergedSearchResults = mergePipe(
@@ -180,12 +161,8 @@ router.get("/search", async (ctx) => {
     semanticHitsFiltered,
     size
   );
-  logger.info("mergePipe ends");
-
   documents.push(...mergedSearchResults);
   documents = removeDuplicate(documents);
-
-  logger.info("shouldRequestThemes", shouldRequestThemes);
 
   if (shouldRequestThemes) {
     const fulltextHits = extractHits(results[THEMES_ES]);
@@ -198,8 +175,6 @@ router.get("/search", async (ctx) => {
         .slice(0, THEMES_RESULTS_NUMBER)
     );
   }
-  logger.info("shouldRequestCdt", shouldRequestCdt);
-
   if (shouldRequestCdt) {
     articles = removeDuplicate(articles.concat(results[CDT_ES].hits.hits));
   }
