@@ -26,7 +26,7 @@ const PORT = process.env.PORT || 1337;
 
 app.use(cors());
 /**
- * use a middleware for catching errors and re-emit them
+ * Log every request + catch errors and re-emit them
  * so we can centralize error handling / logging
  * https://github.com/koajs/koa/wiki/Error-Handling
  */
