@@ -600,7 +600,8 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
       22 avril
        alors il effectuera son dernier jour dans l’entreprise le 
       22 mai
-      . Si le 
+      . Si le
+       
       22 mai
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>
@@ -1302,7 +1303,8 @@ exports[`<StepResult /> should render with when no CC 1`] = `
       22 avril
        alors il effectuera son dernier jour dans l’entreprise le 
       22 juin
-      . Si le 
+      . Si le
+       
       22 juin
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>
@@ -1664,7 +1666,8 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       22 avril
        alors il effectuera son dernier jour dans l’entreprise le 
       22 juin
-      . Si le 
+      . Si le
+       
       22 juin
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>

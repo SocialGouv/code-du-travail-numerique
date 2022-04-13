@@ -26,7 +26,7 @@ export const NoticeExample = ({
   fromDate = FROM_DATE,
   note,
 }: NoticeExampleProps): JSX.Element => {
-  const resultFound = React.useMemo(
+  const periodCalculated = React.useMemo(
     () => convertPeriodToHumanDate(period, fromDate),
     [period, fromDate]
   );
@@ -42,13 +42,13 @@ export const NoticeExample = ({
           en main propre ou à la date de première présentation de la lettre
           recommandée, peu importe le jour de son retrait par l’employeur.
           <MorePrecision extra={extra} />
-          {resultFound && (
+          {periodCalculated && (
             <>
               <br />
               <SmallText as="i">
                 Exemple : si l’employeur reçoit le courrier recommandé le{" "}
                 {dateToString(fromDate)} alors le salarié effectuera son dernier
-                jour dans l’entreprise le {resultFound}.
+                jour dans l’entreprise le {periodCalculated}.
               </SmallText>
             </>
           )}
@@ -62,17 +62,17 @@ export const NoticeExample = ({
           notification du licenciement par lettre recommandée, peu importe le
           jour de son retrait par le salarié.
           <MorePrecision extra={extra} />
-          {resultFound && (
+          {periodCalculated && (
             <>
               <br />
               <SmallText as="i">
                 Exemple : si le salarié reçoit le courrier recommandé le{" "}
                 {dateToString(fromDate)} alors il effectuera son dernier jour
-                dans l’entreprise le {resultFound}. Si le {resultFound} tombe un
-                samedi, un dimanche, un jour férié ou un jour qui n’est
-                habituellement pas travaillé dans l’entreprise, le salarié
-                effectuera son dernier jour dans l’entreprise le jour ouvrable
-                suivant.
+                dans l’entreprise le {periodCalculated}. Si le{" "}
+                {periodCalculated} tombe un samedi, un dimanche, un jour férié
+                ou un jour qui n’est habituellement pas travaillé dans
+                l’entreprise, le salarié effectuera son dernier jour dans
+                l’entreprise le jour ouvrable suivant.
               </SmallText>
             </>
           )}
