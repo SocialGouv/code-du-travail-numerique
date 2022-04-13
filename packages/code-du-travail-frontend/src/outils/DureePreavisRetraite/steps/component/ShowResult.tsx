@@ -1,12 +1,12 @@
 import { Notification } from "@socialgouv/modeles-social";
 import React from "react";
 
-import Mdx from "../../../../common/Mdx";
-import { PrecisionResult, Simulator } from "../../../common/PrecisionResult";
+import { NoticeExample, Simulator } from "../../../common/NoticeExample";
+import { NoticeNote } from "../../../common/NoticeNote";
 import {
   HighlightResult,
   SectionTitle,
-  SmallText,
+  StyledSmallText,
 } from "../../../common/stepStyles";
 import { PublicodesPreavisRetraiteResult } from "../../../publicodes";
 
@@ -50,20 +50,17 @@ const ShowResult: React.FC<Props> = ({
           ) : (
             <>il n’y a pas de préavis à effectuer</>
           )}
-          <sup>*</sup>
+          <NoticeNote numberOfElements={1 + notifications.length} isList />
         </HighlightResult>
       </p>
-      {notifications.length > 0 && (
-        <SmallText>
-          {notifications.map((notification) => (
-            <Mdx
-              key={notification.dottedName}
-              markdown={"\\* " + notification.description}
-            />
-          ))}
-        </SmallText>
-      )}
-      <PrecisionResult
+
+      <NoticeExample
+        note={
+          <NoticeNote
+            numberOfElements={1 + notifications.length}
+            currentElement={1}
+          />
+        }
         simulator={
           type === "mise"
             ? Simulator.PREAVIS_MISE_RETRAITE
@@ -71,6 +68,19 @@ const ShowResult: React.FC<Props> = ({
         }
         period={`${publicodesResult.value} ${publicodesResult.unit}`}
       />
+      {notifications.length > 0 && (
+        <StyledSmallText>
+          {notifications.map((notification, index) => (
+            <>
+              <NoticeNote
+                numberOfElements={1 + notifications.length}
+                currentElement={1 + 1 + index}
+              />
+              {notification.description}
+            </>
+          ))}
+        </StyledSmallText>
+      )}
     </>
   );
 };

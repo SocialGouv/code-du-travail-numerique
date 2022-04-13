@@ -48,3 +48,7 @@ export const SmallText = styled.p`
   font-style: italic;
   margin-top: ${spacings.xsmall};
 `;
+
+export const StyledSmallText = styled(SmallText)`
+  font-style: normal;
+`;

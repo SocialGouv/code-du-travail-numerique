@@ -1,15 +1,16 @@
 import React from "react";
-import styled from "styled-components";
 
-import { SmallText } from "./stepStyles";
-import { convertPeriodToHumanDate, dateToString } from "../../lib";
+import { SmallText, StyledSmallText } from "./stepStyles";
+import { dateToString } from "../../lib";
+import { convertPeriodToHumanDate, Extra, getExtra } from "../utils";
 
 const FROM_DATE = new Date("2022-04-22");
 
-type PrecisionResultProps = {
+type NoticeExampleProps = {
   simulator: Simulator;
   period: string;
   fromDate?: Date;
+  note?: JSX.Element;
 };
 
 export enum Simulator {
@@ -19,23 +20,28 @@ export enum Simulator {
   PREAVIS_MISE_RETRAITE,
 }
 
-export const PrecisionResult = ({
+export const NoticeExample = ({
   simulator,
   period,
   fromDate = FROM_DATE,
-}: PrecisionResultProps): JSX.Element => {
+  note,
+}: NoticeExampleProps): JSX.Element => {
   const resultFound = React.useMemo(
     () => convertPeriodToHumanDate(period, fromDate),
     [period, fromDate]
   );
 
+  const extra = React.useMemo(() => getExtra(period), [period]);
+
   switch (simulator) {
     case Simulator.PREAVIS_DEMISSION:
       return (
         <StyledSmallText>
-          *Le préavis débute le jour où le salarié remet sa lettre de démission
+          {note}
+          Le préavis débute le jour où le salarié remet sa lettre de démission
           en main propre ou à la date de première présentation de la lettre
           recommandée, peu importe le jour de son retrait par l’employeur.
+          <MorePrecision extra={extra} />
           {resultFound && (
             <>
               <br />
@@ -51,9 +57,11 @@ export const PrecisionResult = ({
     case Simulator.PREAVIS_LICENCIEMENT:
       return (
         <StyledSmallText>
-          *Le préavis débute à la date de première présentation de la
+          {note}
+          Le préavis débute à la date de première présentation de la
           notification du licenciement par lettre recommandée, peu importe le
           jour de son retrait par le salarié.
+          <MorePrecision extra={extra} />
           {resultFound && (
             <>
               <br />
@@ -73,18 +81,22 @@ export const PrecisionResult = ({
     case Simulator.PREAVIS_DEPART_RETRAITE:
       return (
         <StyledSmallText>
-          *Le préavis débute le jour où le salarié remet sa lettre de départ à
-          la retraite en main propre ou à la date de première présentation de la
+          {note}
+          Le préavis débute le jour où le salarié remet sa lettre de départ à la
+          retraite en main propre ou à la date de première présentation de la
           lettre recommandée, peu importe le jour de son retrait par
           l’employeur.
+          <MorePrecision extra={extra} />
         </StyledSmallText>
       );
     case Simulator.PREAVIS_MISE_RETRAITE:
       return (
         <StyledSmallText>
-          *Le préavis débute à la date de première présentation de la
+          {note}
+          Le préavis débute à la date de première présentation de la
           notification de la mise à la retraite par lettre recommandée, peu
           importe le jour de son retrait par le salarié.
+          <MorePrecision extra={extra} />
         </StyledSmallText>
       );
     default:
@@ -92,6 +104,34 @@ export const PrecisionResult = ({
   }
 };
 
-const StyledSmallText = styled(SmallText)`
-  font-style: normal;
-`;
+const MorePrecision = ({ extra }: { extra: Extra | null }): JSX.Element => {
+  switch (extra) {
+    case Extra.OPEN:
+      return <PrecisionOpenDay />;
+    case Extra.CALENDAR:
+      return <PrecisionCalendarDay />;
+    default:
+      return <></>;
+  }
+};
+
+const PrecisionOpenDay = (): JSX.Element => (
+  <>
+    <SmallText as="span">
+      Les jours ouvrés sont les jours effectivement travaillé dans une
+      entreprise ou une administration. On en compte 5 par semaine.
+    </SmallText>
+    <br />
+  </>
+);
+
+const PrecisionCalendarDay = (): JSX.Element => (
+  <>
+    <SmallText as="span">
+      Les jours calendaires correspondent à la totalité des jours du calendrier
+      de l’année civile, du 1er janvier au 31 décembre, y compris les jours
+      fériés ou chômés.
+    </SmallText>
+    <br />
+  </>
+);

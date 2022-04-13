@@ -4,7 +4,8 @@ import React from "react";
 
 import CCSearchInfo from "../../common/CCSearchInfo";
 import Disclaimer from "../../common/Disclaimer";
-import { PrecisionResult, Simulator } from "../../common/PrecisionResult";
+import { NoticeExample, Simulator } from "../../common/NoticeExample";
+import { NoticeNote } from "../../common/NoticeNote";
 import PubliReferences from "../../common/PubliReferences";
 import ShowDetails from "../../common/ShowDetails";
 import {
@@ -19,6 +20,7 @@ import {
 } from "../../common/stepStyles";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { formatRefs } from "../../publicodes/";
+import { calculateNumberOfElements } from "../../utils";
 
 function DisclaimerBox() {
   return (
@@ -92,7 +94,14 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
           À partir des éléments que vous avez saisis, la durée du préavis de
           démission est estimée à&nbsp;:&nbsp;
           <HighlightResult>{situation.answer}</HighlightResult>
-          <sup>*</sup>.
+          <NoticeNote
+            isList
+            numberOfElements={calculateNumberOfElements(
+              situation.answer,
+              situation.note
+            )}
+          />
+          .
         </p>
       ) : (
         <p>
@@ -108,14 +117,30 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
         </p>
       )}
       {situation.answer && (
-        <PrecisionResult
+        <NoticeExample
           simulator={Simulator.PREAVIS_DEMISSION}
           period={situation.answer}
+          note={
+            <NoticeNote
+              numberOfElements={calculateNumberOfElements(
+                situation.answer,
+                situation.note
+              )}
+              currentElement={1}
+            />
+          }
         />
       )}
       {situation.note && (
         <SmallText>
-          <sup>*</sup> {situation.note}
+          <NoticeNote
+            numberOfElements={calculateNumberOfElements(
+              situation.answer,
+              situation.note
+            )}
+            currentElement={calculateNumberOfElements(situation.answer) + 1}
+          />
+          {situation.note}
         </SmallText>
       )}
       <ShowDetails>

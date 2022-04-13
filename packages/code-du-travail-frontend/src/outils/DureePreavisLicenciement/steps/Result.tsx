@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import Disclaimer from "../../common/Disclaimer";
-import { PrecisionResult, Simulator } from "../../common/PrecisionResult";
+import { NoticeExample, Simulator } from "../../common/NoticeExample";
+import { NoticeNote } from "../../common/NoticeNote";
 import PubliReferences from "../../common/PubliReferences";
 import ShowDetails from "../../common/ShowDetails";
 import {
@@ -19,6 +20,7 @@ import {
 import { WizardStepProps } from "../../common/type/WizardType";
 import { isNotNearZero } from "../../common/utils";
 import { formatRefs } from "../../publicodes";
+import { calculateNumberOfElements } from "../../utils";
 import DisclaimerText from "./DisclaimerText";
 
 const { situations: allSituations } = data;
@@ -53,15 +55,29 @@ function DurationResult({ duration, durationCC, durationCDT, note }) {
         À partir des éléments que vous avez saisis, la durée du préavis de
         licenciement est estimée à :{" "}
         <HighlightResult>{duration}</HighlightResult>
-        {note && <sup>*</sup>}.
+        <NoticeNote
+          isList
+          numberOfElements={calculateNumberOfElements(1, note)}
+        />
+        .
       </p>
-      <PrecisionResult
+      <NoticeExample
         simulator={Simulator.PREAVIS_LICENCIEMENT}
         period={duration}
+        note={
+          <NoticeNote
+            numberOfElements={calculateNumberOfElements(1, note)}
+            currentElement={1}
+          />
+        }
       />
       {note && (
         <SmallText>
-          <sup>*</sup> {note}
+          <NoticeNote
+            numberOfElements={calculateNumberOfElements(1, note)}
+            currentElement={1 + calculateNumberOfElements(note)}
+          />
+          {note}
         </SmallText>
       )}
     </>
