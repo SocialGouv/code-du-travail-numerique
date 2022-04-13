@@ -1,6 +1,5 @@
 import { Paragraph } from "@socialgouv/cdtn-ui";
-import { supportedCcn } from "@socialgouv/modeles-social";
-import { AgreementInfo } from "@socialgouv/modeles-social/bin/internal/ExtractSupportedCc";
+import { AgreementInfo, supportedCcn } from "@socialgouv/modeles-social";
 import React from "react";
 
 import { SectionTitle } from "../../../common/stepStyles";
@@ -16,8 +15,8 @@ type Props = {
 };
 
 const ShowResult: React.FC<{
-  result: PublicodesResult;
-  agreementMaximumResult: PublicodesResult | null;
+  result: PublicodesPreavisRetraiteResult;
+  agreementMaximumResult: PublicodesPreavisRetraiteResult | null;
 }> = ({ result, agreementMaximumResult }) => {
   if (result.value > 0) {
     return (
@@ -40,9 +39,9 @@ const ShowResult: React.FC<{
 };
 
 const ShowResultAgreement: React.FC<{
-  result: PublicodesResult | null;
+  result: PublicodesPreavisRetraiteResult | null;
   detail: Agreement | null;
-  agreementMaximumResult: PublicodesResult | null;
+  agreementMaximumResult: PublicodesPreavisRetraiteResult | null;
 }> = ({ result, detail, agreementMaximumResult }) => {
   if (!result) {
     return <strong>convention collective non renseignée</strong>;

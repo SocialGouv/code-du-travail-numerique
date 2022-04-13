@@ -137,13 +137,13 @@ async function updateDocumentsData(slugs) {
       },
       {
         cdtnId: "98b9c85542",
+        contributions: true,
         date_publi: "1981-04-01T00:00:00.000Z",
         description:
           "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
         excludeFromSearch: false,
         id: "KALICONT000005635191",
         isPublished: true,
-        contributions: true,
         longTitle:
           "Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981.",
         metaDescription:
@@ -153,9 +153,9 @@ async function updateDocumentsData(slugs) {
           "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
         slug: "1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle",
         source: "conventions_collectives",
+        text: "IDCC 1090: Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981. Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
         title:
           "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
-        text: "IDCC 1090: Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981. Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
         url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635191",
       },
       versions

@@ -95,41 +95,4 @@ describe("reducer", () => {
       newState.steps.findIndex((step) => step.name === stepPrime.name)
     ).toEqual(-1);
   });
-
-  it("should handle add_branche", () => {
-    const state = { stepIndex: 0, steps: [] };
-    const newState = stepReducer(state, {
-      payload: [{ name: "branche_1" }, { name: "branche_2" }],
-      type: "add_branche",
-    });
-
-    expect(
-      newState.steps.filter((step) => /branche/.test(step.name)).length
-    ).toEqual(2);
-  });
-
-  it("should not fail to remove_branche when steps are empty", () => {
-    const state = { stepIndex: 0, steps: [] };
-    const newState = stepReducer(state, {
-      type: "remove_branche",
-    });
-
-    expect(newState.steps.length).toEqual(0);
-  });
-
-  it("should handle remove_branche", () => {
-    const state = {
-      stepIndex: 0,
-      steps: [
-        { name: "salaires" },
-        { name: "branche_1" },
-        { name: "branche_2" },
-      ],
-    };
-    const newState = stepReducer(state, {
-      type: "remove_branche",
-    });
-
-    expect(newState.steps.length).toEqual(1);
-  });
 });

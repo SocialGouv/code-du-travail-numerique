@@ -7,7 +7,10 @@ import PubliReferences from "../../common/PubliReferences";
 import ShowDetails from "../../common/ShowDetails";
 import { SectionTitle } from "../../common/stepStyles";
 
-function FormulaDetails({ infoCalcul: { labels, formula }, withSource }) {
+export function FormulaDetails({
+  infoCalcul: { labels, formula },
+  withSource,
+}) {
   return (
     <>
       <ShowDetails>
@@ -43,8 +46,6 @@ function FormulaDetails({ infoCalcul: { labels, formula }, withSource }) {
     </>
   );
 }
-
-export { FormulaDetails };
 
 FormulaDetails.propTypes = {
   infoCalcul: PropTypes.shape({
