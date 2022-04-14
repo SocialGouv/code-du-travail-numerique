@@ -37,11 +37,8 @@ export const addDay = (date: Date, day: number): Date => {
   return newDate;
 };
 
-export const addWeek = (date: Date, week: number): Date => {
-  const newDate = new Date(date);
-  newDate.setDate(newDate.getDate() + week * 7);
-  return newDate;
-};
+export const addWeek = (date: Date, week: number): Date =>
+  addDay(date, week * 7);
 
 export const addMonth = (date: Date, month: number): Date => {
   const newDate = new Date(date);
