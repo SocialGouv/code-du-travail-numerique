@@ -597,12 +597,12 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     >
       Exemple : si le salarié reçoit le courrier recommandé le
        
-      22 avril
+      23 avril
        alors il effectuera son dernier jour dans l’entreprise le 
-      22 mai
+      23 mai
       . Si le
        
-      22 mai
+      23 mai
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>
   </p>
@@ -1300,12 +1300,12 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     >
       Exemple : si le salarié reçoit le courrier recommandé le
        
-      22 avril
+      23 avril
        alors il effectuera son dernier jour dans l’entreprise le 
-      22 juin
+      23 juin
       . Si le
        
-      22 juin
+      23 juin
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>
   </p>
@@ -1663,12 +1663,12 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     >
       Exemple : si le salarié reçoit le courrier recommandé le
        
-      22 avril
+      23 avril
        alors il effectuera son dernier jour dans l’entreprise le 
-      22 juin
+      23 juin
       . Si le
        
-      22 juin
+      23 juin
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>
   </p>

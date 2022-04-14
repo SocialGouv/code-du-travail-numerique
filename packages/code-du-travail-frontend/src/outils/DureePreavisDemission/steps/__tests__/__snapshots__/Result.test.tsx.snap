@@ -227,9 +227,9 @@ exports[`<StepResult /> should render CC answer 1`] = `
     >
       Exemple : si l’employeur reçoit le courrier recommandé le
        
-      22 avril
+      23 avril
        alors le salarié effectuera son dernier jour dans l’entreprise le 
-      22 juin
+      23 juin
       .
     </i>
   </p>
