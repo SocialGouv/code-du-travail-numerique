@@ -6,7 +6,7 @@ import { NoticeNote } from "../../../common/NoticeNote";
 import {
   HighlightResult,
   SectionTitle,
-  StyledSmallText,
+  SmallText,
 } from "../../../common/stepStyles";
 import { PublicodesPreavisRetraiteResult } from "../../../publicodes";
 
@@ -69,7 +69,7 @@ const ShowResult: React.FC<Props> = ({
         period={`${publicodesResult.value} ${publicodesResult.unit}`}
       />
       {notifications.length > 0 && (
-        <StyledSmallText>
+        <SmallText>
           {notifications.map((notification, index) => (
             <>
               <NoticeNote
@@ -79,7 +79,7 @@ const ShowResult: React.FC<Props> = ({
               {notification.description}
             </>
           ))}
-        </StyledSmallText>
+        </SmallText>
       )}
     </>
   );
