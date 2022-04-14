@@ -39,6 +39,14 @@ const dataWithSelectedAgreementNotSupported: Props = {
   selectedAgreement,
   supportedAgreements: [],
 };
+const dataWithSelectedAgreementNotSupportedWithCustomText: Props = {
+  ...dataWithoutSelectedAgreement,
+  selectedAgreement,
+  supportedAgreements: [],
+  alertCCUnsupported: (id: number) => (
+    <p>This is my custom text with the id: {id}</p>
+  ),
+};
 
 const dataWithSelectedAgreementNotFullySupported: Props = {
   ...dataWithoutSelectedAgreement,
@@ -186,6 +194,17 @@ describe("AgreementSearch", () => {
       );
       expect(
         getByText(/Convention collective non traitée/)
+      ).toBeInTheDocument();
+    });
+    it("should render custom text is alertCCUnsupported is provided", () => {
+      const { getByText } = render(
+        <EmbeddedForm<Props>
+          Step={AgreementSearch}
+          props={dataWithSelectedAgreementNotSupportedWithCustomText}
+        />
+      );
+      expect(
+        getByText(/This is my custom text with the id: KALICONT000044594539/)
       ).toBeInTheDocument();
     });
   });

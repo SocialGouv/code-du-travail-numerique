@@ -2,17 +2,22 @@ import { Alert, Paragraph, Text } from "@socialgouv/cdtn-ui";
 import React from "react";
 
 import type { AgreementSupportInfo } from "./types";
+import { Agreement } from "../../../conventions/Search/api/type";
 
 type Props = {
-  currentIdcc: number;
+  currentIdcc: Agreement;
   supportedAgreements: AgreementSupportInfo[];
+  alertCCUnsupported?: (string) => JSX.Element;
 };
 
 const ShowAlert = ({
   currentIdcc,
   supportedAgreements,
+  alertCCUnsupported,
 }: Props): JSX.Element => {
-  const idccInfo = supportedAgreements.find((item) => item.idcc == currentIdcc);
+  const idccInfo = supportedAgreements.find(
+    (item) => item.idcc == currentIdcc.num
+  );
   if (!idccInfo) {
     return (
       <Alert variant="primary">
@@ -28,10 +33,14 @@ const ShowAlert = ({
           La convention collective sélectionnée n&apos;est pas traitée par nos
           services.
         </Paragraph>
-        <Paragraph noMargin>
-          Vous pouvez tout de même poursuivre la simulation qui vous fournira un
-          résultat basé sur le code du travail.
-        </Paragraph>
+        {alertCCUnsupported ? (
+          alertCCUnsupported(currentIdcc.id)
+        ) : (
+          <Paragraph noMargin>
+            Vous pouvez tout de même poursuivre la simulation qui vous fournira
+            un résultat basé sur le code du travail.
+          </Paragraph>
+        )}
       </Alert>
     );
   }

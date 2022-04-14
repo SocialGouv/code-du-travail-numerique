@@ -70,7 +70,7 @@ const ShowAgreements = ({
       </RadioContainer>
       {agreement && (
         <ShowAlert
-          currentIdcc={agreement.num}
+          currentIdcc={agreement}
           supportedAgreements={supportedAgreements}
         />
       )}

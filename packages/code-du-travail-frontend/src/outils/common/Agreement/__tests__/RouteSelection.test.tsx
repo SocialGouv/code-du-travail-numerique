@@ -114,7 +114,7 @@ describe("RouteSelection: Skip the agreement selection", () => {
   });
 
   it("should not show the skip option", () => {
-    const { queryByText, getByRole, getAllByRole } = render(
+    const { queryByText, getAllByRole } = render(
       <EmbeddedInjectedForm
         Step={RouteSelection}
         props={{ canBeSkip: false }}

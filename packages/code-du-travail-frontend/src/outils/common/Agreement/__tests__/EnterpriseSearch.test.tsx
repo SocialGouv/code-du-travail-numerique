@@ -359,5 +359,23 @@ describe("EnterpriseSearch", () => {
         queryByText(/Convention collective non traitée/)
       ).not.toBeInTheDocument();
     });
+
+    it("should render custom text if alertCCUnsupported is provided", () => {
+      const data: Props = {
+        onSelectAgreement,
+        onUserAction,
+        selectedEnterprise: selectedEnterpriseOneAgreement,
+        supportedAgreements: [],
+        alertCCUnsupported: (id: number) => (
+          <p>This is my custom text with the id: {id}</p>
+        ),
+      };
+      const { getByText } = render(
+        <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
+      );
+      expect(
+        getByText(/This is my custom text with the id: KALICONT000005635093/)
+      ).toBeInTheDocument();
+    });
   });
 });

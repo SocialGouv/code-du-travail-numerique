@@ -10,11 +10,13 @@ import { AgreementSupportInfo } from "../types";
 type Props = {
   agreement: Agreement;
   supportedAgreements: AgreementSupportInfo[];
+  alertCCUnsupported?: (string) => JSX.Element;
 };
 
 const ShowAgreement = ({
   agreement,
   supportedAgreements,
+  alertCCUnsupported,
 }: Props): JSX.Element => {
   return (
     <>
@@ -25,8 +27,9 @@ const ShowAgreement = ({
         {agreement.shortTitle} (IDCC {formatIdcc(agreement.num)})
       </Text>
       <ShowAlert
-        currentIdcc={agreement.num}
+        currentIdcc={agreement}
         supportedAgreements={supportedAgreements}
+        alertCCUnsupported={alertCCUnsupported}
       />
       <Paragraph>Cliquez sur Suivant pour poursuivre la simulation.</Paragraph>
     </>

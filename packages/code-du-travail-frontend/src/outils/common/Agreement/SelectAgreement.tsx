@@ -22,6 +22,7 @@ export type Props = {
   defaultSelectedAgreement?: Agreement;
   mandatory?: boolean;
   note?: string;
+  alertCCUnsupported?: (string) => JSX.Element;
 };
 
 const SelectAgreement = ({
@@ -32,6 +33,7 @@ const SelectAgreement = ({
   defaultSelectedAgreement,
   mandatory = false,
   note,
+  alertCCUnsupported,
 }: Props): JSX.Element => {
   const [storedConvention, setConvention] = useLocalStorage(
     "convention",
@@ -92,6 +94,7 @@ const SelectAgreement = ({
           selectedAgreement={values.ccn.selected}
           onSelectAgreement={onSelectAgreement}
           onUserAction={onUserAction}
+          alertCCUnsupported={alertCCUnsupported}
         />
       )}
       {values.ccn?.route === "enterprise" && (
@@ -100,6 +103,7 @@ const SelectAgreement = ({
           onSelectAgreement={onSelectAgreement}
           supportedAgreements={supportedAgreements}
           onUserAction={onUserAction}
+          alertCCUnsupported={alertCCUnsupported}
         />
       )}
     </>

@@ -1,0 +1,30 @@
+import { render } from "@testing-library/react";
+import React from "react";
+import UnsupportedCCDisclaimer from "../component/UnsupportedCCDisclaimer";
+
+describe("Unsupported CC Disclaimer component should render disclaimer", () => {
+  it("with no link if no id", () => {
+    const { getByText, queryByText } = render(<UnsupportedCCDisclaimer />);
+    expect(
+      getByText(
+        /Nous vous invitons à consulter votre convention collective pour voir si elle prévoit un nombre d’heures d’absence/
+      )
+    ).toBeInTheDocument();
+    expect(queryByText(/Vous pouvez consulter/)).toBeNull();
+  });
+
+  it("with link if an id is passed", () => {
+    const { getByText } = render(<UnsupportedCCDisclaimer ccNumber={1234} />);
+    expect(
+      getByText(
+        /Nous vous invitons à consulter votre convention collective pour voir si elle prévoit un nombre d’heures d’absence/
+      )
+    ).toBeInTheDocument();
+    expect(
+      getByText(/Vous pouvez consulter votre convention collective/)
+    ).toBeInTheDocument();
+    expect(getByText(/^ici/).getAttribute("href")).toEqual(
+      "https://www.legifrance.gouv.fr/conv_coll/id/1234"
+    );
+  });
+});

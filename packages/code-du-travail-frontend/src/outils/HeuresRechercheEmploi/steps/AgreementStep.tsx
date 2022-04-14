@@ -4,6 +4,7 @@ import React from "react";
 import { SelectAgreement } from "../../common";
 import { getSupportedCC } from "../../common/situations.utils";
 import { WizardStepProps } from "../../common/type/WizardType";
+import UnsupportedCCDisclaimer from "./component/UnsupportedCCDisclaimer";
 
 export const AgreementStep = (props: WizardStepProps): JSX.Element => {
   return (
@@ -18,6 +19,9 @@ export const AgreementStep = (props: WizardStepProps): JSX.Element => {
         mandatory
         note="La convention collective est nécessaire pour obtenir un résultat, le code du travail ne prévoyant rien sur les heures d'absences autorisées pour rechercher un emploi pendant le préavis."
         supportedAgreements={getSupportedCC(data.situations)}
+        alertCCUnsupported={(id: number) => (
+          <UnsupportedCCDisclaimer ccNumber={id} />
+        )}
       />
     </>
   );
