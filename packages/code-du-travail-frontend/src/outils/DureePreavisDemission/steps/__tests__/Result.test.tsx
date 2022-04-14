@@ -12,8 +12,4 @@ describe("<StepResult />", () => {
     });
     expect(container).toMatchSnapshot();
   });
-  it("should render with no cc", () => {
-    const { container } = renderForm(StepResult, {});
-    expect(container).toMatchSnapshot();
-  });
 });
