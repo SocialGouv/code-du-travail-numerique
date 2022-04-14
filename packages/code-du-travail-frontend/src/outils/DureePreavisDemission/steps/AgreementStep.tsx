@@ -24,7 +24,7 @@ function validate({ ccn }): Validate {
   return errors;
 }
 
-export const AgreementStep = (props: WizardStepProps): JSX.Element => {
+const AgreementStep = (props: WizardStepProps): JSX.Element => {
   return (
     <>
       <SelectAgreement
@@ -44,3 +44,7 @@ export const AgreementStep = (props: WizardStepProps): JSX.Element => {
     </>
   );
 };
+
+AgreementStep.validate = validate;
+
+export { AgreementStep };

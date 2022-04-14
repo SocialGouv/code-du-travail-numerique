@@ -6,7 +6,7 @@ Fonctionnalité: Outil - Préavis de démission
   En tant que visiteur
   Je veux pouvoir utiliser le calculateur de préavis de démission (en renseignant ou non ma CC)
 
-  Scénario: Parcours en connaissant sa convention collective
+  Scénario: Parcours avec convention collective non traité
     Soit un utilisateur sur la page "/outils/preavis-demission"
 
     Alors je vois "Étapes"
@@ -18,6 +18,25 @@ Fonctionnalité: Outil - Préavis de démission
     Alors je vois "Quel est le nom de la convention collective applicable ?"
     Quand je clique sur "Suivant"
     Alors je vois "Vous devez répondre à cette question"
+    Quand je choisis "Je sais quelle est ma convention collective"
+    Alors je vois "Précisez et sélectionnez votre convention collective"
+    Quand je renseigne "1388" dans le champ "Nom de la convention collective ou son numéro d’identification IDCC"
+    Alors j'attends que le texte "Industrie du pétrole" apparaisse
+    Quand je clique sur "Industrie du pétrole"
+    Alors je vois "Convention collective non traitée"
+    Quand je clique sur "Suivant"
+
+    Alors je vois "Quel est le nom de la convention collective applicable ?"
+
+
+  Scénario: Parcours en connaissant sa convention collective
+    Soit un utilisateur sur la page "/outils/preavis-demission"
+
+    Alors je vois "Préavis de démission"
+
+    Quand je clique sur "Commencer"
+
+    Alors je vois "Quel est le nom de la convention collective applicable ?"
     Quand je choisis "Je sais quelle est ma convention collective"
     Alors je vois "Précisez et sélectionnez votre convention collective"
     Quand je renseigne "843" dans le champ "Nom de la convention collective ou son numéro d’identification IDCC"
