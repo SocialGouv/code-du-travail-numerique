@@ -53,7 +53,7 @@ describe("SelectAgreement", () => {
           props={{
             supportedAgreements: [],
             title: "Outil",
-            mandatory: true,
+            required: true,
             note: "This is my note",
           }}
         />

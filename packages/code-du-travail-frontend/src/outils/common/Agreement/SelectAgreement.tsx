@@ -20,7 +20,7 @@ export type Props = {
   supportedAgreements: AgreementSupportInfo[];
   onChange?: (oldValue: Agreement | null, newValue: Agreement | null) => void;
   defaultSelectedAgreement?: Agreement;
-  mandatory?: boolean;
+  required?: boolean;
   note?: string;
   alertCCUnsupported?: (string) => JSX.Element;
 };
@@ -31,7 +31,7 @@ const SelectAgreement = ({
   supportedAgreements,
   onChange,
   defaultSelectedAgreement,
-  mandatory = false,
+  required = false,
   note,
   alertCCUnsupported,
 }: Props): JSX.Element => {
@@ -86,7 +86,7 @@ const SelectAgreement = ({
 
   return (
     <>
-      <RouteSelection form={form} canBeSkip={!mandatory} />
+      <RouteSelection form={form} canBeSkip={!required} />
       {note && <SmallText>{note}</SmallText>}
       {values.ccn?.route === "agreement" && (
         <AgreementSearch

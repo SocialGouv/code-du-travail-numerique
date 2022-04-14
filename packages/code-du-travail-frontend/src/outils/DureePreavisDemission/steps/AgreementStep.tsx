@@ -34,7 +34,7 @@ const AgreementStep = (props: WizardStepProps): JSX.Element => {
           // Delete infos when change CC
           props.form.change("infos", undefined);
         }}
-        mandatory
+        required
         note="La convention collective est nécessaire pour obtenir un résultat, le code du travail ne prévoyant rien sur le préavis de démission."
         supportedAgreements={supportedCC}
         alertCCUnsupported={(id: number) => (
