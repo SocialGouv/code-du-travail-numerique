@@ -6,6 +6,24 @@ import { getSupportedCC } from "../../common/situations.utils";
 import { WizardStepProps } from "../../common/type/WizardType";
 import UnsupportedCCDisclaimer from "./component/UnsupportedCCDisclaimer";
 
+const supportedCC = getSupportedCC(data.situations);
+
+type Validate = {
+  ccMandatory?: JSX.Element;
+};
+
+function validate({ ccn }): Validate {
+  const errors: Validate = {};
+  if (ccn?.selected) {
+    const idccInfo = supportedCC.find((item) => item.idcc == ccn.selected.num);
+    if (!idccInfo) {
+      errors.ccMandatory = <p>La convention collective est obligatoire</p>;
+    }
+  }
+
+  return errors;
+}
+
 export const AgreementStep = (props: WizardStepProps): JSX.Element => {
   return (
     <>
@@ -18,7 +36,7 @@ export const AgreementStep = (props: WizardStepProps): JSX.Element => {
         }}
         mandatory
         note="La convention collective est nécessaire pour obtenir un résultat, le code du travail ne prévoyant rien sur le préavis de démission."
-        supportedAgreements={getSupportedCC(data.situations)}
+        supportedAgreements={supportedCC}
         alertCCUnsupported={(id: number) => (
           <UnsupportedCCDisclaimer ccNumber={id} />
         )}
