@@ -31,8 +31,6 @@ export const NoticeExample = ({
     [period, fromDate]
   );
 
-  const extra = React.useMemo(() => getExtra(period), [period]);
-
   switch (simulator) {
     case Simulator.PREAVIS_DEMISSION:
       return (
@@ -41,7 +39,7 @@ export const NoticeExample = ({
           Le préavis débute le jour où le salarié remet sa lettre de démission
           en main propre ou à la date de première présentation de la lettre
           recommandée, peu importe le jour de son retrait par l’employeur.
-          <MorePrecision extra={extra} />
+          <MorePrecision period={period} />
           {periodCalculated && (
             <>
               <br />
@@ -61,7 +59,7 @@ export const NoticeExample = ({
           Le préavis débute à la date de première présentation de la
           notification du licenciement par lettre recommandée, peu importe le
           jour de son retrait par le salarié.
-          <MorePrecision extra={extra} />
+          <MorePrecision period={period} />
           {periodCalculated && (
             <>
               <br />
@@ -86,7 +84,7 @@ export const NoticeExample = ({
           retraite en main propre ou à la date de première présentation de la
           lettre recommandée, peu importe le jour de son retrait par
           l’employeur.
-          <MorePrecision extra={extra} />
+          <MorePrecision period={period} />
         </StyledSmallText>
       );
     case Simulator.PREAVIS_MISE_RETRAITE:
@@ -96,7 +94,7 @@ export const NoticeExample = ({
           Le préavis débute à la date de première présentation de la
           notification de la mise à la retraite par lettre recommandée, peu
           importe le jour de son retrait par le salarié.
-          <MorePrecision extra={extra} />
+          <MorePrecision period={period} />
         </StyledSmallText>
       );
     default:
@@ -104,7 +102,8 @@ export const NoticeExample = ({
   }
 };
 
-const MorePrecision = ({ extra }: { extra: Extra | null }): JSX.Element => {
+const MorePrecision = ({ period }: { period: string }): JSX.Element => {
+  const extra = React.useMemo(() => getExtra(period), [period]);
   switch (extra) {
     case Extra.OPEN:
       return <PrecisionOpenDay />;

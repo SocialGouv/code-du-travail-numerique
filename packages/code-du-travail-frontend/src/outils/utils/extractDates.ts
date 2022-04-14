@@ -24,7 +24,7 @@ export const convertPeriodToHumanDate = (
     value--;
   date = convertDate(from, value, unit);
   if (extra === Extra.MID && unit === Unit.MONTH) {
-    date = convertDate(date, 14, Unit.DAY);
+    date = convertDate(date, 13, Unit.DAY);
   } else if (
     (extra === Extra.MID && unit !== Unit.MONTH) ||
     extra === Extra.OPEN
