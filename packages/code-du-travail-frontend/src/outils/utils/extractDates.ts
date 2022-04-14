@@ -17,14 +17,10 @@ export const convertPeriodToHumanDate = (
   let unit = getUnit(input);
   if (!unit) return null;
   let extra = getExtra(input);
-  if (
-    (value === 15 && unit === Unit.DAY) ||
-    (unit === Unit.DAY && extra && extra === Extra.CALENDAR)
-  )
-    value--;
-  date = convertDate(from, value, unit);
+  if (unit === Unit.DAY && extra !== Extra.FROM_TO) value--;
+  date = convertDate(from, value, unit, !extra);
   if (extra === Extra.MID && unit === Unit.MONTH) {
-    date = convertDate(date, 13, Unit.DAY);
+    date = convertDate(date, 14, Unit.DAY);
   } else if (
     (extra === Extra.MID && unit !== Unit.MONTH) ||
     extra === Extra.OPEN

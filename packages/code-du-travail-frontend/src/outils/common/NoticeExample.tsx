@@ -4,7 +4,7 @@ import { SmallText, StyledSmallText } from "./stepStyles";
 import { dateToString } from "../../lib";
 import { convertPeriodToHumanDate, Extra, getExtra } from "../utils";
 
-const FROM_DATE = new Date("2022-04-22");
+const FROM_DATE = new Date("2022-04-23");
 
 type NoticeExampleProps = {
   simulator: Simulator;

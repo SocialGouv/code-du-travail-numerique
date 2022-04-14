@@ -48,14 +48,15 @@ describe("<NoticeExample />", () => {
     period                        | expected
     ${"1 mois"}                   | ${/22 mai/}
     ${"6 mois"}                   | ${/22 octobre/}
-    ${"2 jours"}                  | ${/24 avril/}
-    ${"1 jour"}                   | ${/23 avril/}
-    ${"2 semaines"}               | ${/6 mai/}
+    ${"2 jours"}                  | ${/23 avril/}
+    ${"1 jour"}                   | ${/22 avril/}
+    ${"2 semaines"}               | ${/5 mai/}
     ${"15 jours"}                 | ${/6 mai/}
-    ${"1 semaine"}                | ${/29 avril/}
+    ${"15 jours calendaires"}     | ${/6 mai/}
+    ${"1 semaine"}                | ${/28 avril/}
     ${"7 jours calendaires"}      | ${/28 avril/}
     ${"1 semaine de date à date"} | ${/29 avril/}
-    ${"1 mois et demi"}           | ${/4 juin/}
+    ${"1 mois et demi"}           | ${/5 juin/}
   `("should render a precision for $period", ({ period, expected }) => {
     const { getByText } = render(
       <NoticeExample
