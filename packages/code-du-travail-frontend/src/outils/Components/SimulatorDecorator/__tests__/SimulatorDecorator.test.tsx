@@ -27,7 +27,7 @@ describe("SimulatorDecorator", () => {
           onFormStepSubmit={onFormStepSubmit}
           showDebug={false}
           renderStep={(values) => <>Nom: {values.getState().values.name}</>}
-          Annotations={() => <>Rendu des annotations</>}
+          annotations={<>Rendu des annotations</>}
         />
       );
       expect(getByText(/Nom: John/)).toBeInTheDocument();

@@ -159,7 +159,7 @@ export const Wizard = ({
         mutators={{
           ...arrayMutators,
         }}
-        Annotations={Annotation}
+        annotations={Annotation}
         renderStep={(form) => {
           return (
             <>

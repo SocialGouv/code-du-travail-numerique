@@ -19,7 +19,7 @@ const Index = ({
   listRef,
 }: StepListProps): JSX.Element => {
   return (
-    <StyledWrapper variant="dark" width={width}>
+    <StyledWrapper variant="dark" defaultWidth={width}>
       <Title>
         Étape<HideOnMobile>s</HideOnMobile>
         <StepProgress>
@@ -52,14 +52,14 @@ export default Index;
 
 const { box, spacings, breakpoints } = theme;
 
-const StyledWrapper = styled(Wrapper)<{ width: string }>`
+const StyledWrapper = styled(Wrapper)<{ defaultWidth: string }>`
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   display: flex;
   flex-direction: column;
-  width: ${({ width }) => width};
+  width: ${({ defaultWidth }) => defaultWidth};
   padding: 6rem ${spacings.larger} ${spacings.larger} ${spacings.larger};
   border-radius: ${box.borderRadius} 0 0 ${box.borderRadius};
   @media (max-width: ${breakpoints.tablet}) {

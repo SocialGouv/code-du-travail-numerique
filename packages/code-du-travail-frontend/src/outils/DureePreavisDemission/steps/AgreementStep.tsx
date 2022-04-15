@@ -5,19 +5,14 @@ import { SelectAgreement } from "../../common";
 import { getSupportedCC } from "../../common/situations.utils";
 import { WizardStepProps } from "../../common/type/WizardType";
 
-export const AgreementStep = (props: WizardStepProps): JSX.Element => {
-  console.log("Step; ", props.form.getState().values);
-  return (
-    <>
-      <SelectAgreement
-        title={props.title}
-        form={props.form}
-        onChange={() => {
-          // Delete infos when change CC
-          props.form.change("infos", undefined);
-        }}
-        supportedAgreements={getSupportedCC(data.situations)}
-      />
-    </>
-  );
-};
+export const AgreementStep = (props: WizardStepProps): JSX.Element => (
+  <SelectAgreement
+    title={props.title}
+    form={props.form}
+    onChange={() => {
+      // Delete infos when change CC
+      props.form.change("infos", undefined);
+    }}
+    supportedAgreements={getSupportedCC(data.situations)}
+  />
+);

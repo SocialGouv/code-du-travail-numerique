@@ -551,7 +551,6 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
       </div>
       <div
         class="c8 c9"
-        width="28rem"
       >
         <span
           aria-level="2"

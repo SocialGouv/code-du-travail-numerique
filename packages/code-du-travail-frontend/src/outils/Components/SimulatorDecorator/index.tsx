@@ -32,7 +32,7 @@ type Props<FormValues> = {
   ) => ValidationErrors | Promise<ValidationErrors>;
   decorators?: Array<Decorator<FormValues, Partial<FormValues>>>;
   mutators?: { [key: string]: Mutator<FormValues, Partial<FormValues>> };
-  Annotations?: () => JSX.Element;
+  annotations?: JSX.Element;
   renderStep: (form: FormApi<FormValues>) => JSX.Element;
 };
 
@@ -47,7 +47,7 @@ const SimulatorDecorator = <FormValues,>({
   validate,
   decorators,
   mutators,
-  Annotations,
+  annotations,
   renderStep,
 }: Props<FormValues>): JSX.Element => {
   const onPrevious = navigation.onPrevious;
@@ -82,11 +82,7 @@ const SimulatorDecorator = <FormValues,>({
                   })
                 }
               />
-              {Annotations && (
-                <p>
-                  <Annotations />
-                </p>
-              )}
+              {annotations && <p>{annotations}</p>}
               {showDebug && <DebugInfo formValues={form.getState().values} />}
             </StyledForm>
           );
