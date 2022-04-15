@@ -3,21 +3,23 @@ import styled from "styled-components";
 
 import { MatomoActionEvent, trackQuestion } from "../../../lib";
 import { TextQuestion } from "../../common/TextQuestion";
-import { WizardStepProps } from "../../common/type/WizardType";
+import { PreavisRetraiteFormContent } from "../../common/type/WizardType";
 import { isPositiveNumber } from "../../common/validators";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
 import { SeniorityMaximum } from "./constants";
+import { FormApi } from "final-form";
 
-function AncienneteStep({ form }: WizardStepProps): JSX.Element {
+type Props = {
+  form: FormApi<PreavisRetraiteFormContent>;
+};
+
+function AncienneteStep({ form }: Props): JSX.Element {
   const [question, setQuestion] = useState<JSX.Element>(
     <>
       Le salarié a-t-il plus de 2 ans d&apos;ancienneté dans l&apos;entreprise{" "}
       <Small>(à partir de 2 ans + 1 jour)</Small>
       &nbsp;?
     </>
-  );
-  const [seniorityLabel, setSeniorityLabel] = useState(
-    "Quelle est l'ancienneté du salarié dans l’entreprise en mois ?"
   );
 
   useEffect(() => {
@@ -70,7 +72,7 @@ function AncienneteStep({ form }: WizardStepProps): JSX.Element {
       {form.getState().values.seniorityMaximum === false && (
         <TextQuestion
           name="contrat salarié - ancienneté"
-          label={seniorityLabel}
+          label="Quelle est l'ancienneté du salarié dans l’entreprise en mois ?"
           inputType="number"
           validate={isPositiveNumber}
           validateOnChange
