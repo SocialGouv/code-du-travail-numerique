@@ -1,17 +1,19 @@
 import React, { useEffect, useMemo } from "react";
 
-import { MatomoActionEvent, trackQuestion } from "../../lib/matomo";
+import { MatomoActionEvent, trackQuestion } from "../../lib";
 import {
   mapToPublicodesSituationForPreavisDeRetraite,
   Rule,
   usePublicodes,
 } from "../publicodes";
 import PubliQuestion from "./PubliQuestion";
-import { WizardStepProps } from "./type/WizardType";
+import { PreavisRetraiteFormContent } from "./type/WizardType";
+import { FormApi } from "final-form";
 
-interface Props extends WizardStepProps {
+type Props = {
+  form: FormApi<PreavisRetraiteFormContent>;
   excludedRules: Array<string>;
-}
+};
 
 type Question = {
   name: string;
