@@ -6,10 +6,13 @@ import styled from "styled-components";
 import { ErrorField } from "../../common/ErrorField";
 import { Question } from "../../common/Question";
 import { RadioContainer } from "../../common/stepStyles";
-import { WizardStepProps } from "../../common/type/WizardType";
 import { required } from "../../common/validators";
 
-function OrigineStep({ form }: WizardStepProps): JSX.Element {
+type Props = {
+  isVoluntary: boolean;
+};
+
+function OrigineStep({ isVoluntary }: Props): JSX.Element {
   return (
     <>
       <Question required>
@@ -44,29 +47,27 @@ function OrigineStep({ form }: WizardStepProps): JSX.Element {
             />
           )}
         </Field>
-        {form.getState().values &&
-          form.getState().values["contrat salarié - mise à la retraite"] ===
-            "oui" && (
-            <StyledAlert variant="primary">
-              <Paragraph noMargin>
-                <Text variant="primary" fontSize="hsmall" fontWeight="700">
-                  À noter
-                </Text>
-                <br />
-                L&apos;employeur qui décide une mise à la retraite doit en avoir
-                informé son salarié.
-                <br />
-                Plus d&apos;info&nbsp;:{" "}
-                <a
-                  href="/fiche-service-public/lemployeur-peut-il-mettre-doffice-un-salarie-a-la-retraite"
-                  target="_blank"
-                >
-                  L&apos;employeur peut-il mettre d&apos;office un salarié à la
-                  retraite ?
-                </a>
-              </Paragraph>
-            </StyledAlert>
-          )}
+        {!isVoluntary && (
+          <StyledAlert variant="primary">
+            <Paragraph noMargin>
+              <Text variant="primary" fontSize="hsmall" fontWeight="700">
+                À noter
+              </Text>
+              <br />
+              L&apos;employeur qui décide une mise à la retraite doit en avoir
+              informé son salarié.
+              <br />
+              Plus d&apos;info&nbsp;:{" "}
+              <a
+                href="/fiche-service-public/lemployeur-peut-il-mettre-doffice-un-salarie-a-la-retraite"
+                target="_blank"
+              >
+                L&apos;employeur peut-il mettre d&apos;office un salarié à la
+                retraite ?
+              </a>
+            </Paragraph>
+          </StyledAlert>
+        )}
         <ErrorField name="contrat salarié - mise à la retraite" />
       </RadioContainer>
     </>

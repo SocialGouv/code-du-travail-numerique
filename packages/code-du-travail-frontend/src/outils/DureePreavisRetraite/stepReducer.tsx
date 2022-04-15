@@ -16,12 +16,19 @@ export const initialState: State = {
   steps: [
     {
       annotation: IntroAnnotation,
-      component: Steps.IntroductionStep,
+      component: () => <Steps.IntroductionStep />,
       label: "Introduction",
       name: "intro",
     },
     {
-      component: Steps.OrigineStep,
+      component: ({ form }) => (
+        <Steps.OrigineStep
+          isVoluntary={
+            form.getState().values["contrat salarié - mise à la retraite"] ===
+            "non"
+          }
+        />
+      ),
       isForm: true,
       label: "Origine du départ à la retraite",
       name: "origine",
@@ -36,7 +43,9 @@ export const initialState: State = {
       },
     },
     {
-      component: Steps.AgreementStep,
+      component: ({ form, title }) => (
+        <Steps.AgreementStep form={form} title={title} />
+      ),
       label: "Convention collective",
       name: "ccn",
       onStepDone: (title: string, values: FormContent): void => {
@@ -44,13 +53,13 @@ export const initialState: State = {
       },
     },
     {
-      component: Steps.Informations,
+      component: ({ form }) => <Steps.Informations form={form} />,
       isForm: true,
       label: "Informations",
       name: "infos",
     },
     {
-      component: Steps.AncienneteStep,
+      component: ({ form }) => <Steps.AncienneteStep form={form} />,
       isForm: true,
       label: "Ancienneté",
       name: "anciennete",
@@ -65,7 +74,9 @@ export const initialState: State = {
       },
     },
     {
-      component: Steps.ResultStep,
+      component: ({ form }) => (
+        <Steps.ResultStep values={form.getState().values} />
+      ),
       label: "Résultat",
       name: "result",
     },

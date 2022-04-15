@@ -1,7 +1,8 @@
 import React from "react";
 
 import { StepDynamicPublicodes } from "../../common/StepDynamicPublicodes";
-import { WizardStepProps } from "../../common/type/WizardType";
+import { PreavisRetraiteFormContent } from "../../common/type/WizardType";
+import { FormApi } from "final-form";
 
 const excludedRules = [
   "contrat salarié - ancienneté",
@@ -9,7 +10,11 @@ const excludedRules = [
   "contrat salarié - mise à la retraite",
 ];
 
-const Informations = (props: WizardStepProps): JSX.Element => (
+type Props = {
+  form: FormApi<PreavisRetraiteFormContent>;
+};
+
+const Informations = (props: Props): JSX.Element => (
   <>
     <StepDynamicPublicodes {...props} excludedRules={excludedRules} />
   </>
