@@ -1,8 +1,8 @@
 import { supportedCcn } from "@socialgouv/modeles-social";
 import React from "react";
 
-import Disclaimer from "../../../common/Disclaimer";
-import { SmallText } from "../../../common/stepStyles";
+import Disclaimer from "../../../../common/Disclaimer";
+import { SmallText } from "../../../../common/stepStyles";
 
 type Props = {
   resultValueInDays?: number;

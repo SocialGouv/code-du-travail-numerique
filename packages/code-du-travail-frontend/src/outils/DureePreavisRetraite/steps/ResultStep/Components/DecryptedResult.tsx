@@ -2,13 +2,13 @@ import { Paragraph } from "@socialgouv/cdtn-ui";
 import { AgreementInfo, supportedCcn } from "@socialgouv/modeles-social";
 import React from "react";
 
-import { SectionTitle } from "../../../common/stepStyles";
-import { FormContent } from "../../../common/type/WizardType";
+import { SectionTitle } from "../../../../common/stepStyles";
+import { FormContent } from "../../../../common/type/WizardType";
 import {
   PublicodesPreavisRetraiteResult,
   PublicodesResult,
   usePublicodes,
-} from "../../../publicodes";
+} from "../../../../publicodes";
 
 type Props = {
   data: FormContent;

@@ -5,6 +5,7 @@ import {
 } from "../types/preavis-retraite";
 import { isFloat } from ".";
 import { formatSeniority } from "./common";
+import { PreavisRetraiteFormState } from "../../DureePreavisRetraite/types";
 
 export const mapToPublicodesSituationForPreavisDeRetraite = (
   form: FormContent

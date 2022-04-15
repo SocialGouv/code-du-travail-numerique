@@ -3,16 +3,17 @@ import React from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
 
-import { ErrorField } from "../../common/ErrorField";
-import { Question } from "../../common/Question";
-import { RadioContainer } from "../../common/stepStyles";
-import { required } from "../../common/validators";
+import { ErrorField } from "../../../common/ErrorField";
+import { Question } from "../../../common/Question";
+import { RadioContainer } from "../../../common/stepStyles";
+import { required } from "../../../common/validators";
+import { OriginMandatoryName } from "../../types";
 
-type Props = {
-  isVoluntary: boolean;
+export type OriginStepProps = {
+  showWarning: boolean;
 };
 
-function OrigineStep({ isVoluntary }: Props): JSX.Element {
+function OriginStep({ showWarning }: OriginStepProps): JSX.Element {
   return (
     <>
       <Question required>
@@ -21,7 +22,7 @@ function OrigineStep({ isVoluntary }: Props): JSX.Element {
       <RadioContainer>
         <Field
           type="radio"
-          name="contrat salarié - mise à la retraite"
+          name={OriginMandatoryName}
           value="non"
           validate={required}
         >
@@ -35,7 +36,7 @@ function OrigineStep({ isVoluntary }: Props): JSX.Element {
         </Field>
         <Field
           type="radio"
-          name="contrat salarié - mise à la retraite"
+          name={OriginMandatoryName}
           value="oui"
           validate={required}
         >
@@ -47,7 +48,7 @@ function OrigineStep({ isVoluntary }: Props): JSX.Element {
             />
           )}
         </Field>
-        {!isVoluntary && (
+        {showWarning && (
           <StyledAlert variant="primary">
             <Paragraph noMargin>
               <Text variant="primary" fontSize="hsmall" fontWeight="700">
@@ -81,4 +82,4 @@ const StyledAlert = styled(Alert)`
   width: 100%;
 `;
 
-export { OrigineStep };
+export default OriginStep;

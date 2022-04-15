@@ -13,4 +13,4 @@ const IntroductionStep = (): JSX.Element => (
   </>
 );
 
-export { IntroductionStep };
+export default IntroductionStep;

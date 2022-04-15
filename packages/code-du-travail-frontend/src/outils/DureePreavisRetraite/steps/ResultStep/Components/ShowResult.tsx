@@ -1,13 +1,13 @@
 import { Notification } from "@socialgouv/modeles-social";
 import React from "react";
 
-import Mdx from "../../../../common/Mdx";
+import Mdx from "../../../../../common/Mdx";
 import {
   HighlightResult,
   SectionTitle,
   SmallText,
-} from "../../../common/stepStyles";
-import { PublicodesPreavisRetraiteResult } from "../../../publicodes";
+} from "../../../../common/stepStyles";
+import { PublicodesPreavisRetraiteResult } from "../../../../publicodes";
 
 type Props = {
   publicodesResult: PublicodesPreavisRetraiteResult;

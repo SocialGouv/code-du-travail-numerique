@@ -1,95 +1,81 @@
-import { MatomoBaseEvent, MatomoRetirementEvent } from "../../lib";
-import { matopush } from "../../piwik";
-import { pushAgreementEvents } from "../common";
 import {
-  Action,
-  ActionName,
-  FormContent,
-  State,
-} from "../common/type/WizardType";
-import Steps from "./steps";
-import IntroAnnotation from "./steps/component/IntroAnnotation";
-import { getSupportedCC } from "./steps/utils";
+  PreavisRetraiteAction,
+  PreavisRetraiteFormState,
+  PreavisRetraiteState,
+  PreavisRetraiteStepLabel,
+} from "./types";
+import { CommonActionName } from "../Components/Simulator/types";
+import {
+  PublicodesContextType,
+  PublicodesPreavisRetraiteResult,
+} from "../publicodes";
+import originReducer from "./steps/OriginStep/reducer";
+import { informationReducer } from "./steps/InformationStep";
+import { seniorityReducer } from "./steps/SeniorityStep";
+import { resultReducer } from "./steps";
 
-export const initialState: State = {
-  stepIndex: 0,
+export const initialState: PreavisRetraiteState = {
+  currentStepIndex: 0,
   steps: [
     {
-      annotation: <IntroAnnotation />,
-      component: () => <Steps.IntroductionStep />,
-      label: "Introduction",
       name: "intro",
+      label: PreavisRetraiteStepLabel.intro,
     },
     {
-      component: ({ form }) => (
-        <Steps.OrigineStep
-          isVoluntary={
-            form.getState().values["contrat salarié - mise à la retraite"] ===
-            "non"
-          }
-        />
-      ),
-      isForm: true,
-      label: "Origine du départ à la retraite",
       name: "origine",
-      onStepDone: (title: string, data: FormContent): void => {
-        matopush([
-          MatomoBaseEvent.TRACK_EVENT,
-          MatomoBaseEvent.OUTIL,
-          data["contrat salarié - mise à la retraite"] === "oui"
-            ? MatomoRetirementEvent.MISE_RETRAITE
-            : MatomoRetirementEvent.DEPART_RETRAITE,
-        ]);
-      },
+      label: PreavisRetraiteStepLabel.origin,
     },
     {
-      component: ({ form, title }) => (
-        <Steps.AgreementStep form={form} title={title} />
-      ),
-      label: "Convention collective",
       name: "ccn",
-      onStepDone: (title: string, values: FormContent): void => {
-        pushAgreementEvents(title, values.ccn, getSupportedCC());
-      },
+      label: PreavisRetraiteStepLabel.agreement,
     },
     {
-      component: ({ form }) => <Steps.Informations form={form} />,
-      isForm: true,
-      label: "Informations",
       name: "infos",
+      label: PreavisRetraiteStepLabel.infos,
     },
     {
-      component: ({ form }) => <Steps.AncienneteStep form={form} />,
-      isForm: true,
-      label: "Ancienneté",
       name: "anciennete",
-      onStepDone: (title: string, data: FormContent): void => {
-        matopush([
-          MatomoBaseEvent.TRACK_EVENT,
-          MatomoBaseEvent.OUTIL,
-          data.seniorityGreaterThanTwoYears
-            ? MatomoRetirementEvent.ANCIENNETE_PLUS_2_ANS
-            : MatomoRetirementEvent.ANCIENNETE_MOINS_2_ANS,
-        ]);
-      },
+      label: PreavisRetraiteStepLabel.seniority,
     },
     {
-      component: ({ form }) => (
-        <Steps.ResultStep values={form.getState().values} />
-      ),
-      label: "Résultat",
       name: "result",
+      label: PreavisRetraiteStepLabel.result,
     },
   ],
+  origin: {
+    showWarning: false,
+  },
+  seniority: {
+    showAccurateSeniority: false,
+    minYearCount: 2,
+  },
+  informations: {
+    questions: [],
+  },
 };
 
-export function stepReducer(state: State, action: Action): State {
-  switch (action.type) {
-    case ActionName.reset: {
-      return { ...initialState };
+export const stepReducer =
+  (publicodes: PublicodesContextType<PublicodesPreavisRetraiteResult>) =>
+  (
+    state: PreavisRetraiteState,
+    action: PreavisRetraiteAction<PreavisRetraiteFormState>
+  ): PreavisRetraiteState => {
+    if (
+      action.type === CommonActionName.onChange ||
+      action.type === CommonActionName.changeStep
+    ) {
+      switch (action.payload.currentStep.step.label) {
+        case PreavisRetraiteStepLabel.origin:
+          return originReducer(state, action);
+        case PreavisRetraiteStepLabel.infos:
+          return informationReducer(state, action, publicodes);
+        case PreavisRetraiteStepLabel.seniority:
+          return seniorityReducer(state, action);
+        case PreavisRetraiteStepLabel.result:
+          return resultReducer(state, action, publicodes);
+        default:
+          return state;
+      }
     }
-    case ActionName.setStepIndex: {
-      return { stepIndex: action.payload, steps: state.steps };
-    }
-  }
-}
+    return state;
+  };

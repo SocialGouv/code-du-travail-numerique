@@ -7,7 +7,7 @@ import {
   createRootData,
   getDescription,
   NoticeUsed,
-} from "../steps/component/DecryptedResult";
+} from "../steps/ResultStep/Components/DecryptedResult";
 
 const agreementSupported = { notice: 2, status: AgreementStatus.Supported };
 const getAgreementSupported = (notice) => ({

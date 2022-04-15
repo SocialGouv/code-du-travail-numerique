@@ -2,17 +2,17 @@ import { Text } from "@socialgouv/cdtn-ui";
 import { supportedCcn } from "@socialgouv/modeles-social";
 import React from "react";
 
-import PubliSituation from "../../../common/PubliSituation";
-import { PreavisRetraiteFormContent } from "../../../common/type/WizardType";
-import { SituationElement } from "../../../publicodes";
-import { SeniorityMaximum } from "../constants";
+import PubliSituation from "../../../../common/PubliSituation";
+import { PreavisRetraiteFormContent } from "../../../../common/type/WizardType";
+import { SituationElement } from "../../../../publicodes";
+import { SeniorityMaximum } from "../../constants";
 
 type Props = {
   content: PreavisRetraiteFormContent;
   elements: SituationElement[];
 };
 
-export const Situation: React.FC<Props> = ({ content, elements }) => {
+const Situation: React.FC<Props> = ({ content, elements }) => {
   const overrideSituation = (element: SituationElement): JSX.Element | null => {
     if (element.name === "contrat salarié - convention collective") {
       return <>{content.ccn?.selected?.shortTitle}</>;
@@ -85,3 +85,5 @@ export const Situation: React.FC<Props> = ({ content, elements }) => {
     />
   );
 };
+
+export default Situation;
