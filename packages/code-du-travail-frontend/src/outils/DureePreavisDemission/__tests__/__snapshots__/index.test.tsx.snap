@@ -263,11 +263,6 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   border-radius: 49%;
 }
 
-.c1 {
-  padding: 0 0 0 28rem;
-  overflow: visible;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -284,6 +279,21 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   margin-bottom: 3.2rem;
   padding-bottom: 1.6rem;
   border-bottom: 1px solid #bbcadf;
+}
+
+.c4 {
+  margin: 0;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c5 {
@@ -303,19 +313,9 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   width: 4.2rem;
 }
 
-.c4 {
-  margin: 0;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.c1 {
+  padding: 0 0 0 28rem;
+  overflow: visible;
 }
 
 @media print {
@@ -461,6 +461,14 @@ exports[`<DureePreavisDemission /> should render 1`] = `
 }
 
 @media (max-width:980px) {
+  .c2 {
+    margin-bottom: 1.6rem;
+    padding: 1.6rem 0 1rem 0;
+    border-bottom: 0;
+  }
+}
+
+@media (max-width:980px) {
   .c1 {
     padding: 0;
   }
@@ -469,14 +477,6 @@ exports[`<DureePreavisDemission /> should render 1`] = `
 @media print {
   .c1 {
     border: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c2 {
-    margin-bottom: 1.6rem;
-    padding: 1.6rem 0 1rem 0;
-    border-bottom: 0;
   }
 }
 
