@@ -13,7 +13,7 @@ export type Step = {
   label: string;
   name: string;
   skip?: SkipFn;
-  annotation?: () => JSX.Element;
+  annotation?: JSX.Element;
   isForm?: boolean;
   hasNoMarginBottom?: boolean;
   onStepDone?: (title: string, values: FormContent) => void;
