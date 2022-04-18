@@ -15,7 +15,7 @@ export const initialState: State = {
   stepIndex: 0,
   steps: [
     {
-      annotation: IntroAnnotation,
+      annotation: <IntroAnnotation />,
       component: () => <Steps.IntroductionStep />,
       label: "Introduction",
       name: "intro",
