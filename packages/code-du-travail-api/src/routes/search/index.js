@@ -4,11 +4,7 @@ import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 const Router = require("koa-router");
 const { SOURCES } = require("@socialgouv/cdtn-sources");
 const { DOCUMENTS, vectorizeQuery } = require("@socialgouv/cdtn-elasticsearch");
-const getPrequalifiedResults = require("./searchPrequalifiedResults");
-const getSearchBody = require("./search.elastic");
 const getSemBody = require("./search.sem");
-const getRelatedThemesBody = require("./searchRelatedThemes.elastic");
-const getRelatedArticlesBody = require("./searchRelatedArticles.elastic");
 const { removeDuplicate, merge, mergePipe } = require("./utils");
 const { logger } = require("@socialgouv/cdtn-logger");
 
@@ -18,13 +14,11 @@ const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 const MAX_RESULTS = 100;
 const DEFAULT_RESULTS_NUMBER = 25;
 const THEMES_RESULTS_NUMBER = 5;
-const CDT_RESULTS_NUMBER = 5;
 const SEMANTIC_THRESHOLD = 1.11;
 
 const router = new Router({ prefix: API_BASE_URL });
 
 const DOCUMENTS_SEM = "documents_sem";
-const DOCUMENTS_ES = "documents_es";
 const THEMES_ES = "themes_es";
 const THEMES_SEM = "themes_sem";
 const CDT_ES = "cdt_es";
@@ -53,31 +47,10 @@ router.get("/search", async (ctx) => {
     SOURCES.EDITORIAL_CONTENT,
     SOURCES.CCN,
   ];
-  const skipPrequalifiedResults =
-    ctx.query.skipSavedResults === "" || ctx.query.skipSavedResults === "true";
 
-  // check prequalified requests
-  const prequalifiedResults =
-    !skipPrequalifiedResults && (await getPrequalifiedResults(query));
   let documents = [];
   let articles = [];
   let themes = [];
-
-  if (prequalifiedResults) {
-    prequalifiedResults.forEach(
-      (item) => (item._source.algo = "pre-qualified")
-    );
-    documents = prequalifiedResults.filter(
-      ({ _source: { source } }) =>
-        ![SOURCES.CDT, SOURCES.THEMES].includes(source)
-    );
-    articles = prequalifiedResults.filter(
-      ({ _source: { source } }) => source === SOURCES.CDT
-    );
-    themes = prequalifiedResults.filter(
-      ({ _source: { source } }) => source === SOURCES.THEMES
-    );
-  }
 
   const searches = {};
   const shouldRequestCdt = articles.length < 5;
@@ -91,61 +64,16 @@ router.get("/search", async (ctx) => {
   );
 
   // if not enough prequalified results, we also trigger ES search
-  if (
-    !prequalifiedResults ||
-    prequalifiedResults.length < DEFAULT_RESULTS_NUMBER
-  ) {
-    searches[DOCUMENTS_ES] = [
-      { index },
-      getSearchBody({ query, size, sources }),
-    ];
-    if (query_vector) {
-      searches[DOCUMENTS_SEM] = [
-        { index },
-        getSemBody({ query_vector, size, sources }),
-      ];
-    }
-  }
 
-  if (shouldRequestThemes) {
-    const themeNumber = THEMES_RESULTS_NUMBER - themes.length;
-    searches[THEMES_ES] = [
-      { index }, // we search in themeIndex here to try to match title in breadcrumb
-      getRelatedThemesBody({
-        query,
-        size: themeNumber,
-      }),
-    ];
-    if (query_vector) {
-      searches[THEMES_SEM] = [
-        { index },
-        getSemBody({
-          query_vector,
-          size: themeNumber,
-          sources: [SOURCES.THEMES],
-        }),
-      ];
-    }
-  }
-
-  if (shouldRequestCdt) {
-    const cdtNumber = CDT_RESULTS_NUMBER - articles.length;
-    searches[CDT_ES] = [
-      { index },
-      getRelatedArticlesBody({
-        query,
-        size: cdtNumber,
-      }),
-    ];
-  }
+  searches[DOCUMENTS_SEM] = [
+    { index },
+    getSemBody({ query_vector, size, sources }),
+  ];
 
   const results = await msearch({
     client: elasticsearchClient,
     searches,
   });
-
-  const fulltextHits = extractHits(results[DOCUMENTS_ES]);
-  fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
 
   const semanticHits = extractHits(results[DOCUMENTS_SEM]);
   semanticHits.forEach((item) => (item._source.algo = "semantic"));
@@ -156,28 +84,8 @@ router.get("/search", async (ctx) => {
   );
 
   // we merge prequalified + full text + semantic results
-  const mergedSearchResults = mergePipe(
-    fulltextHits,
-    semanticHitsFiltered,
-    size
-  );
-  documents.push(...mergedSearchResults);
+  documents.push(...semanticHitsFiltered);
   documents = removeDuplicate(documents);
-
-  if (shouldRequestThemes) {
-    const fulltextHits = extractHits(results[THEMES_ES]);
-    const semanticHits = extractHits(results[THEMES_SEM]);
-    fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
-    semanticHits.forEach((item) => (item._source.algo = "semantic"));
-    themes = removeDuplicate(
-      themes
-        .concat(merge(fulltextHits, semanticHits, THEMES_RESULTS_NUMBER * 2))
-        .slice(0, THEMES_RESULTS_NUMBER)
-    );
-  }
-  if (shouldRequestCdt) {
-    articles = removeDuplicate(articles.concat(results[CDT_ES].hits.hits));
-  }
 
   logger.info(`search: ${query} took ${results.took}ms`);
 
