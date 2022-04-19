@@ -5,7 +5,7 @@ const Router = require("koa-router");
 const { SOURCES } = require("@socialgouv/cdtn-sources");
 const { DOCUMENTS, vectorizeQuery } = require("@socialgouv/cdtn-elasticsearch");
 const getSemBody = require("./search.sem");
-const { removeDuplicate, merge, mergePipe } = require("./utils");
+const { removeDuplicate } = require("./utils");
 const { logger } = require("@socialgouv/cdtn-logger");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
@@ -13,15 +13,11 @@ const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
 const MAX_RESULTS = 100;
 const DEFAULT_RESULTS_NUMBER = 25;
-const THEMES_RESULTS_NUMBER = 5;
 const SEMANTIC_THRESHOLD = 1.11;
 
 const router = new Router({ prefix: API_BASE_URL });
 
 const DOCUMENTS_SEM = "documents_sem";
-const THEMES_ES = "themes_es";
-const THEMES_SEM = "themes_sem";
-const CDT_ES = "cdt_es";
 
 /**
  * Return documents matching the given query.
@@ -49,12 +45,10 @@ router.get("/search", async (ctx) => {
   ];
 
   let documents = [];
-  let articles = [];
-  let themes = [];
+  const articles = [];
+  const themes = [];
 
   const searches = {};
-  const shouldRequestCdt = articles.length < 5;
-  const shouldRequestThemes = themes.length < 5;
   const size = Math.min(ctx.query.size || DEFAULT_RESULTS_NUMBER, MAX_RESULTS);
 
   const query_vector = await vectorizeQuery(query.toLowerCase()).catch(
