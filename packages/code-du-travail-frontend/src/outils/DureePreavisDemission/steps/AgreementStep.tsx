@@ -13,7 +13,9 @@ export const AgreementStep = (props: WizardStepProps): JSX.Element => {
         form={props.form}
         onChange={() => {
           // Delete infos when change CC
-          props.form.change("infos", undefined);
+          props.form.reset();
+          props.form.change("ccn.route", "agreement");
+          props.form.change("ccn.selected", null);
         }}
         supportedAgreements={getSupportedCC(data.situations)}
       />
