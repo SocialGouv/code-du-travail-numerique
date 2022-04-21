@@ -7,7 +7,7 @@ describe("Unsupported CC Disclaimer component should render disclaimer", () => {
     const { getByText, queryByText } = render(<UnsupportedCCDisclaimer />);
     expect(
       getByText(
-        /Nous vous invitons à consulter votre convention collective pour voir si elle prévoit un nombre d’heures d’absence/
+        /Nous vous invitons à consulter votre convention collective qui peut prévoir un nombre d’heures d’absence autorisée pour rechercher un emploi pendant un préavis/
       )
     ).toBeInTheDocument();
     expect(queryByText(/Vous pouvez consulter/)).toBeNull();
@@ -17,7 +17,7 @@ describe("Unsupported CC Disclaimer component should render disclaimer", () => {
     const { getByText } = render(<UnsupportedCCDisclaimer ccNumber={1234} />);
     expect(
       getByText(
-        /Nous vous invitons à consulter votre convention collective pour voir si elle prévoit un nombre d’heures d’absence/
+        /Nous vous invitons à consulter votre convention collective qui peut/
       )
     ).toBeInTheDocument();
     expect(
