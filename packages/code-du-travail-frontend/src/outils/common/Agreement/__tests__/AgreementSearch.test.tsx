@@ -17,6 +17,7 @@ const onUserAction = () => {
 
 const selectedAgreement: Agreement = {
   id: "KALICONT000044594539",
+  url: "hello.com",
   num: 3239,
   shortTitle: "Particuliers employeurs et emploi à domicile",
   slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
@@ -43,8 +44,8 @@ const dataWithSelectedAgreementNotSupportedWithCustomText: Props = {
   ...dataWithoutSelectedAgreement,
   selectedAgreement,
   supportedAgreements: [],
-  alertCCUnsupported: (id: number) => (
-    <p>This is my custom text with the id: {id}</p>
+  alertCCUnsupported: (url: string) => (
+    <p>This is my custom text with the url: {url}</p>
   ),
 };
 
@@ -204,7 +205,7 @@ describe("AgreementSearch", () => {
         />
       );
       expect(
-        getByText(/This is my custom text with the id: KALICONT000044594539/)
+        getByText(/This is my custom text with the url: hello.com/)
       ).toBeInTheDocument();
     });
   });

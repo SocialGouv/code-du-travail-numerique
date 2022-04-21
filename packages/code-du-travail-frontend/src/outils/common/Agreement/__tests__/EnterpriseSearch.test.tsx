@@ -20,6 +20,7 @@ const onUserAction = () => {
 
 const agreement1: Agreement = {
   id: "KALICONT000005635093",
+  url: "hello.com",
   num: 2156,
   shortTitle: "Grands magasins et magasins populaires",
   slug: "2156-grands-magasins-et-magasins-populaires",
@@ -366,15 +367,15 @@ describe("EnterpriseSearch", () => {
         onUserAction,
         selectedEnterprise: selectedEnterpriseOneAgreement,
         supportedAgreements: [],
-        alertCCUnsupported: (id: number) => (
-          <p>This is my custom text with the id: {id}</p>
+        alertCCUnsupported: (ccUrl: string) => (
+          <p>This is my custom text with the url: {ccUrl}</p>
         ),
       };
       const { getByText } = render(
         <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
       );
       expect(
-        getByText(/This is my custom text with the id: KALICONT000005635093/)
+        getByText(/This is my custom text with the url: hello.com/)
       ).toBeInTheDocument();
     });
   });
