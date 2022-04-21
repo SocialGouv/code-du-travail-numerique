@@ -9,11 +9,9 @@ const UnsupportedCCDisclaimer: React.FC<Props> = ({ ccNumber }) => {
   return (
     <>
       <Paragraph>
-        Nous vous invitons à consulter votre convention collective pour voir si
-        elle prévoit un nombre d’heures d’absence autorisée pour rechercher un
-        emploi pendant un préavis. En effet, pour votre information, la
-        convention collective peut définir ce nombre d’heures, le code du
-        travail ne prévoit rien sur ce sujet.{" "}
+        Nous vous invitons à consulter votre convention collective qui peut
+        prévoir un nombre d’heures d’absence autorisée pour rechercher un emploi
+        pendant un préavis.{" "}
         {ccNumber && (
           <>
             Vous pouvez consulter votre convention collective{" "}

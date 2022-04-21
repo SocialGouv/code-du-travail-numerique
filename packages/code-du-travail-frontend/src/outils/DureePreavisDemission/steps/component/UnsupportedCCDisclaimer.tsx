@@ -9,10 +9,9 @@ const UnsupportedCCDisclaimer: React.FC<Props> = ({ ccNumber }) => {
   return (
     <>
       <Paragraph>
-        Nous vous invitons à consulter votre convention collective pour obtenir
-        votre durée de préavis. En effet, pour votre information, la convention
-        collective peut définir la durée du préavis de démission, le code du
-        travail ne prévoit rien sur ce sujet.{" "}
+        La convention collective sélectionnée n’est pas traitée par nos
+        services. Nous vous invitons à consulter votre convention collective
+        pour obtenir votre durée de préavis.{" "}
         {ccNumber && (
           <>
             Vous pouvez consulter votre convention collective{" "}
