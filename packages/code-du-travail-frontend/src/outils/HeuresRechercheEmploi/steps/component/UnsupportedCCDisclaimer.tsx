@@ -19,6 +19,7 @@ const UnsupportedCCDisclaimer: React.FC<Props> = ({ ccUrl }) => {
             <a href={ccUrl} target="_blank" rel="noreferrer">
               ici
             </a>
+            .
           </>
         )}
       </Paragraph>
