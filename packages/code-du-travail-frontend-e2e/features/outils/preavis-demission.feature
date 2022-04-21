@@ -26,7 +26,7 @@ Fonctionnalité: Outil - Préavis de démission
     Alors je vois "Convention collective non traitée"
     Quand je clique sur "Suivant"
 
-    Alors je vois "Quel est le nom de la convention collective applicable ?"
+    Alors je vois "La simulation ne peut pas se poursuivre avec cette convention collective"
 
 
   Scénario: Parcours en connaissant sa convention collective

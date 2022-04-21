@@ -74,11 +74,6 @@ const ShowAgreements = ({
           supportedAgreements={supportedAgreements}
         />
       )}
-      {agreement && (
-        <Paragraph>
-          Cliquez sur Suivant pour poursuivre la simulation.
-        </Paragraph>
-      )}
     </>
   );
 };

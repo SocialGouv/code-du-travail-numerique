@@ -26,7 +26,7 @@ Fonctionnalité: Outil - Heures d'absence pour rechercher un emploi
     Alors je vois "Convention collective non traitée"
     Quand je clique sur "Suivant"
 
-    Alors je vois "Quel est le nom de la convention collective applicable ?"
+    Alors je vois "La simulation ne peut pas se poursuivre avec cette convention collective"
 
   Scénario: Parcours en connaissant sa convention collective et sans information complémentaire
     Soit un utilisateur sur la page "/outils/heures-recherche-emploi"

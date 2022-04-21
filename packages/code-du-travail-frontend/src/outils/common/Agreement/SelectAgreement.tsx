@@ -13,6 +13,7 @@ import { RouteSelection } from "./RouteSelection";
 import { handleTrackEvent } from "./tracking";
 import { AgreementSupportInfo, OnSelectAgreementFn } from "./types";
 import { SmallText } from "../stepStyles";
+import { ErrorField } from "../ErrorField";
 
 export type Props = {
   title: string;
@@ -106,6 +107,12 @@ const SelectAgreement = ({
           alertCCUnsupported={alertCCUnsupported}
         />
       )}
+      <ErrorField
+        name="ccMandatory"
+        errorText={
+          "La simulation ne peut pas se poursuivre avec cette convention collective"
+        }
+      />
     </>
   );
 };

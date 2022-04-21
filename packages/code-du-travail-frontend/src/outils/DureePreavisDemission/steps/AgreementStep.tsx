@@ -9,7 +9,7 @@ import UnsupportedCCDisclaimer from "./component/UnsupportedCCDisclaimer";
 const supportedCC = getSupportedCC(data.situations);
 
 type Validate = {
-  ccMandatory?: JSX.Element;
+  ccMandatory?: boolean;
 };
 
 function validate({ ccn }): Validate {
@@ -17,7 +17,7 @@ function validate({ ccn }): Validate {
   if (ccn?.selected) {
     const idccInfo = supportedCC.find((item) => item.idcc == ccn.selected.num);
     if (!idccInfo) {
-      errors.ccMandatory = <p>La convention collective est obligatoire</p>;
+      errors.ccMandatory = true;
     }
   }
 

@@ -1,4 +1,4 @@
-import { Paragraph, theme, Toast } from "@socialgouv/cdtn-ui";
+import { theme, Toast } from "@socialgouv/cdtn-ui";
 import React from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
@@ -47,9 +47,6 @@ const AgreementSearch = ({
           supportedAgreements={supportedAgreements}
           alertCCUnsupported={alertCCUnsupported}
         />
-        <Paragraph>
-          Cliquez sur Suivant pour poursuivre la simulation.
-        </Paragraph>
       </>
     );
   }

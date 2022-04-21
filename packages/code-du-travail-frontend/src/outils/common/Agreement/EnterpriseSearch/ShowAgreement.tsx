@@ -1,5 +1,5 @@
 import { formatIdcc } from "@cdt/data";
-import { Paragraph, Text } from "@socialgouv/cdtn-ui";
+import { Text } from "@socialgouv/cdtn-ui";
 import React from "react";
 
 import { Agreement } from "../../../../conventions/Search/api/type";
@@ -31,7 +31,6 @@ const ShowAgreement = ({
         supportedAgreements={supportedAgreements}
         alertCCUnsupported={alertCCUnsupported}
       />
-      <Paragraph>Cliquez sur Suivant pour poursuivre la simulation.</Paragraph>
     </>
   );
 };
