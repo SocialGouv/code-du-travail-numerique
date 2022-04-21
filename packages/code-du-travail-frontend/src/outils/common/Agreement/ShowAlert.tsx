@@ -31,9 +31,8 @@ const ShowAlert = ({
           >
             Convention collective non traitée
           </Paragraph>
-
           {alertCCUnsupported ? (
-            alertCCUnsupported(currentIdcc.id)
+            alertCCUnsupported(currentIdcc.url)
           ) : (
             <>
               <Paragraph>

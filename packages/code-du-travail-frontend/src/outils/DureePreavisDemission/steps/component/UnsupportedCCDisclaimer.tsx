@@ -2,24 +2,20 @@ import React from "react";
 import { Paragraph } from "@socialgouv/cdtn-ui";
 
 type Props = {
-  ccNumber?: number;
+  ccUrl?: string;
 };
 
-const UnsupportedCCDisclaimer: React.FC<Props> = ({ ccNumber }) => {
+const UnsupportedCCDisclaimer: React.FC<Props> = ({ ccUrl }) => {
   return (
     <>
       <Paragraph>
         La convention collective sélectionnée n’est pas traitée par nos
         services. Nous vous invitons à consulter votre convention collective
         pour obtenir votre durée de préavis.{" "}
-        {ccNumber && (
+        {ccUrl && (
           <>
             Vous pouvez consulter votre convention collective{" "}
-            <a
-              href={`https://www.legifrance.gouv.fr/conv_coll/id/${ccNumber}`}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={ccUrl} target="_blank" rel="noreferrer">
               ici
             </a>
           </>

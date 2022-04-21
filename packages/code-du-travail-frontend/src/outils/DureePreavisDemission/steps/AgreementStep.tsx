@@ -37,8 +37,8 @@ const AgreementStep = (props: WizardStepProps): JSX.Element => {
         required
         note="La convention collective est nécessaire pour obtenir un résultat, le code du travail ne prévoyant rien sur le préavis de démission."
         supportedAgreements={supportedCC}
-        alertCCUnsupported={(id: number) => (
-          <UnsupportedCCDisclaimer ccNumber={id} />
+        alertCCUnsupported={(url: string) => (
+          <UnsupportedCCDisclaimer ccUrl={url} />
         )}
       />
     </>

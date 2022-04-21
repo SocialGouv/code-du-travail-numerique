@@ -38,8 +38,8 @@ const AgreementStep = (props: WizardStepProps): JSX.Element => {
         required
         note="La convention collective est nécessaire pour obtenir un résultat, le code du travail ne prévoyant rien sur les heures d'absences autorisées pour rechercher un emploi pendant le préavis."
         supportedAgreements={supportedCC}
-        alertCCUnsupported={(id: number) => (
-          <UnsupportedCCDisclaimer ccNumber={id} />
+        alertCCUnsupported={(url: string) => (
+          <UnsupportedCCDisclaimer ccUrl={url} />
         )}
       />
     </>

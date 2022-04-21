@@ -14,7 +14,9 @@ describe("Unsupported CC Disclaimer component should render disclaimer", () => {
   });
 
   it("with link if an id is passed", () => {
-    const { getByText } = render(<UnsupportedCCDisclaimer ccNumber={1234} />);
+    const { getByText } = render(
+      <UnsupportedCCDisclaimer ccUrl={"https://my.url"} />
+    );
     expect(
       getByText(
         /Nous vous invitons à consulter votre convention collective qui peut/
@@ -23,8 +25,6 @@ describe("Unsupported CC Disclaimer component should render disclaimer", () => {
     expect(
       getByText(/Vous pouvez consulter votre convention collective/)
     ).toBeInTheDocument();
-    expect(getByText(/^ici/).getAttribute("href")).toEqual(
-      "https://www.legifrance.gouv.fr/conv_coll/id/1234"
-    );
+    expect(getByText(/^ici/).getAttribute("href")).toEqual("https://my.url");
   });
 });

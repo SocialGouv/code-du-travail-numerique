@@ -9,12 +9,14 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-const formatCCn = ({ num, id, slug, title, shortTitle, highlight }) => ({
+const formatCCn = ({ num, id, slug, url, title, shortTitle, highlight }) => ({
   ...(highlight ? { highlight } : {}),
+  ...(url ? { url } : {}),
   id,
   num,
   shortTitle,
   slug,
+  url,
   title,
 });
 export const onlyNumberError =
