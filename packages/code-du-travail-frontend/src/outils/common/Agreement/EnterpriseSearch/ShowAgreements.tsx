@@ -18,12 +18,14 @@ type Props = {
   enterprise: Enterprise;
   onChange: (enterprise: Enterprise, agreement: Agreement | null) => void;
   supportedAgreements: AgreementSupportInfo[];
+  alertCCUnsupported?: (string) => JSX.Element;
 };
 
 const ShowAgreements = ({
   enterprise,
   onChange,
   supportedAgreements,
+  alertCCUnsupported,
 }: Props): JSX.Element => {
   const [agreement, setAgreement] = useState<Agreement | undefined>();
 
@@ -72,6 +74,7 @@ const ShowAgreements = ({
         <ShowAlert
           currentIdcc={agreement}
           supportedAgreements={supportedAgreements}
+          alertCCUnsupported={alertCCUnsupported}
         />
       )}
     </>

@@ -60,6 +60,7 @@ const EnterpriseSearch = ({
               onSelectAgreement(agreement, enterprise);
             }}
             supportedAgreements={supportedAgreements}
+            alertCCUnsupported={alertCCUnsupported}
           />
         )}
       </>

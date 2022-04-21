@@ -1,8 +1,8 @@
-import {Alert, Paragraph, Text, theme} from "@socialgouv/cdtn-ui";
+import { Alert, Paragraph, Text, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 
-import type {AgreementSupportInfo} from "./types";
-import {Agreement} from "../../../conventions/Search/api/type";
+import type { AgreementSupportInfo } from "./types";
+import { Agreement } from "../../../conventions/Search/api/type";
 import styled from "styled-components";
 
 type Props = {
@@ -12,10 +12,10 @@ type Props = {
 };
 
 const ShowAlert = ({
-                     currentIdcc,
-                     supportedAgreements,
-                     alertCCUnsupported,
-                   }: Props): JSX.Element => {
+  currentIdcc,
+  supportedAgreements,
+  alertCCUnsupported,
+}: Props): JSX.Element => {
   const idccInfo = supportedAgreements.find(
     (item) => item.idcc == currentIdcc.num
   );
@@ -39,12 +39,16 @@ const ShowAlert = ({
             alertCCUnsupported(currentIdcc.id)
           ) : (
             <Paragraph noMargin>
-              Vous pouvez tout de même poursuivre la simulation qui vous fournira
-              un résultat basé sur le code du travail.
+              Vous pouvez tout de même poursuivre la simulation qui vous
+              fournira un résultat basé sur le code du travail.
             </Paragraph>
           )}
         </StyledAlert>
-        {!alertCCUnsupported && (<StyledParagraph>Cliquez sur Suivant pour poursuivre la simulation.</StyledParagraph>)}
+        {!alertCCUnsupported && (
+          <StyledParagraph>
+            Cliquez sur Suivant pour poursuivre la simulation.
+          </StyledParagraph>
+        )}
       </>
     );
   }
@@ -58,17 +62,24 @@ const ShowAlert = ({
           <Paragraph noMargin>
             Cette convention collective n&apos;est pas encore traitée par nos
             services mais le sera très prochainement. Vous pouvez poursuivre la
-            simulation pour connaitre la durée prévue par le code du travail mais
-            nous vous conseillons de vérifier si votre convention collective
-            prévoit un délai plus favorable qui vous serait applicable.
+            simulation pour connaitre la durée prévue par le code du travail
+            mais nous vous conseillons de vérifier si votre convention
+            collective prévoit un délai plus favorable qui vous serait
+            applicable.
           </Paragraph>
         </StyledAlert>
-        <StyledParagraph>Cliquez sur Suivant pour poursuivre la simulation.</StyledParagraph>
+        <StyledParagraph>
+          Cliquez sur Suivant pour poursuivre la simulation.
+        </StyledParagraph>
       </>
     );
   }
 
-  return <StyledParagraph>Cliquez sur Suivant pour poursuivre la simulation.</StyledParagraph>
+  return (
+    <StyledParagraph>
+      Cliquez sur Suivant pour poursuivre la simulation.
+    </StyledParagraph>
+  );
 };
 
 export default ShowAlert;
