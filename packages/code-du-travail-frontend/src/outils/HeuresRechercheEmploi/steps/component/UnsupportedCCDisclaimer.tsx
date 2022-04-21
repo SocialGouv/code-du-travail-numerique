@@ -9,9 +9,10 @@ const UnsupportedCCDisclaimer: React.FC<Props> = ({ ccNumber }) => {
   return (
     <>
       <Paragraph>
-        Nous vous invitons à consulter votre convention collective qui peut
-        prévoir un nombre d’heures d’absence autorisée pour rechercher un emploi
-        pendant un préavis.{" "}
+        La convention collective sélectionnée n’est pas traitée par nos
+        services. Nous vous invitons à consulter votre convention collective qui
+        peut prévoir un nombre d’heures d’absence autorisée pour rechercher un
+        emploi pendant un préavis.{" "}
         {ccNumber && (
           <>
             Vous pouvez consulter votre convention collective{" "}
