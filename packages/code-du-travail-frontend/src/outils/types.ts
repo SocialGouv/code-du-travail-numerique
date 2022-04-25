@@ -8,4 +8,6 @@ export type Tool = {
   date: string;
   enable: boolean;
   id: string;
+  metatitle: string;
+  metadescription: string;
 };
