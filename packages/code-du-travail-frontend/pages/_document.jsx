@@ -1,11 +1,10 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import "@ungap/url-search-params";
 
 import * as Sentry from "@sentry/nextjs";
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import React from "react";
 import { ServerStyleSheet } from "styled-components";
-// eslint-disable-next-line @next/next/no-script-in-document
-import Script from "next/script";
 
 process.on("unhandledRejection", (err) => {
   Sentry.captureException(err);
@@ -51,12 +50,12 @@ export default class MyDocument extends Document {
             type="text/css"
             href="/static/fonts.css"
           />
-          <Script key="polyfill" src="/static/polyfill.min.js" />
-          <Script
+          <script key="polyfill" src="/static/polyfill.min.js" />
+          <script
             key="webcomponents"
             src="/static/webcomponents-polyfill/loader.js"
           />
-          <Script key="smarttag" src="/static/smarttag.js" />
+          <script key="smarttag" src="/static/smarttag.js" />
         </Head>
         <body>
           <noscript>
