@@ -361,7 +361,7 @@ describe("EnterpriseSearch", () => {
       ).not.toBeInTheDocument();
     });
 
-    it("should render custom text if alertCCUnsupported is provided", () => {
+    it("should render the alert with custom content provided", () => {
       const data: Props = {
         onSelectAgreement,
         onUserAction,
