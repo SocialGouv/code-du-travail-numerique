@@ -16,7 +16,6 @@ const formatCCn = ({ num, id, slug, url, title, shortTitle, highlight }) => ({
   num,
   shortTitle,
   slug,
-  url,
   title,
 });
 export const onlyNumberError =
