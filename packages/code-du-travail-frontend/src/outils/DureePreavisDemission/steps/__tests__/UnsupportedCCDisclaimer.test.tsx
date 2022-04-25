@@ -15,7 +15,7 @@ describe("Unsupported CC Disclaimer component should render disclaimer", () => {
 
   it("with link if an id is passed", () => {
     const { getByText } = render(
-      <UnsupportedCCDisclaimer ccUrl={"https://my.url"} />
+      <UnsupportedCCDisclaimer ccUrl={"https://legifrance.url"} />
     );
     expect(
       getByText(
