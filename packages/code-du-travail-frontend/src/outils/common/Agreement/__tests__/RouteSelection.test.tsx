@@ -123,6 +123,6 @@ describe("RouteSelection: Skip the agreement selection", () => {
     );
 
     expect(getAllByRole("radio")).toHaveLength(2);
-    expect(queryByText(/Je ne souhaite pas renseigner/)).toBeNull();
+    expect(queryByText(/Je ne souhaite pas renseigner/)).not.toBeInTheDocument();
   });
 });
