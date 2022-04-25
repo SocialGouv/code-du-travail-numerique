@@ -60,7 +60,7 @@ describe("SelectAgreement", () => {
       );
       expect(
         queryByText(/Je ne souhaite pas renseigner ma convention collective/)
-      ).toBeNull();
+      ).not.toBeInTheDocument();
       expect(
         getByRole("radio", {
           checked: false,
