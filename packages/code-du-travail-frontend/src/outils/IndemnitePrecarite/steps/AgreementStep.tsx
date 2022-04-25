@@ -10,7 +10,6 @@ export const AgreementStep = (props: WizardStepProps): JSX.Element => {
       title={props.title}
       form={props.form}
       onChange={() => {
-        // Delete infos when change CC
         props.form.change("criteria", undefined);
       }}
       supportedAgreements={getSupportedCCWithoutConventionalProvision()}
