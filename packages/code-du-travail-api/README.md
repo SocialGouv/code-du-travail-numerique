@@ -62,3 +62,9 @@ $ docker run --rm \
 
 $ curl http://localhost:1337/api/v1/version
 ```
+
+### Local test elasticsearch
+
+```sh
+yarn workspace @cdt/api test:default -- -t 'Search - Snapshot result'
+```
