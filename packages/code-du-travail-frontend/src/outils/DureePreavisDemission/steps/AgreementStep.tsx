@@ -9,7 +9,7 @@ import UnsupportedCCDisclaimer from "./component/UnsupportedCCDisclaimer";
 const supportedCC = getSupportedCC(data.situations);
 
 type Validate = {
-  ccMandatory?: boolean;
+  agreementMissing?: boolean;
 };
 
 function validate({ ccn }): Validate {
@@ -17,7 +17,7 @@ function validate({ ccn }): Validate {
   if (ccn?.selected) {
     const idccInfo = supportedCC.find((item) => item.idcc == ccn.selected.num);
     if (!idccInfo) {
-      errors.ccMandatory = true;
+      errors.agreementMissing = true;
     }
   }
 
@@ -39,8 +39,8 @@ const AgreementStep = (props: WizardStepProps): JSX.Element => {
         required
         note="La convention collective est nécessaire pour obtenir un résultat, le code du travail ne prévoyant rien sur le préavis de démission."
         supportedAgreements={supportedCC}
-        alertCCUnsupported={(url: string) => (
-          <UnsupportedCCDisclaimer ccUrl={url} />
+        alertAgreementNotSupported={(url: string) => (
+          <UnsupportedCCDisclaimer agreementUrl={url} />
         )}
       />
     </>

@@ -23,7 +23,7 @@ export type Props = {
   defaultSelectedAgreement?: Agreement;
   required?: boolean;
   note?: string;
-  alertCCUnsupported?: (string) => JSX.Element;
+  alertAgreementNotSupported?: (string) => JSX.Element;
 };
 
 const SelectAgreement = ({
@@ -34,7 +34,7 @@ const SelectAgreement = ({
   defaultSelectedAgreement,
   required = false,
   note,
-  alertCCUnsupported,
+  alertAgreementNotSupported,
 }: Props): JSX.Element => {
   const [storedConvention, setConvention] = useLocalStorage(
     "convention",
@@ -95,7 +95,7 @@ const SelectAgreement = ({
           selectedAgreement={values.ccn.selected}
           onSelectAgreement={onSelectAgreement}
           onUserAction={onUserAction}
-          alertCCUnsupported={alertCCUnsupported}
+          alertAgreementNotSupported={alertAgreementNotSupported}
         />
       )}
       {values.ccn?.route === "enterprise" && (
@@ -104,11 +104,11 @@ const SelectAgreement = ({
           onSelectAgreement={onSelectAgreement}
           supportedAgreements={supportedAgreements}
           onUserAction={onUserAction}
-          alertCCUnsupported={alertCCUnsupported}
+          alertAgreementNotSupported={alertAgreementNotSupported}
         />
       )}
       <ErrorField
-        name="ccMandatory"
+        name="agreementMissing"
         errorText={
           "La simulation ne peut pas se poursuivre avec cette convention collective"
         }

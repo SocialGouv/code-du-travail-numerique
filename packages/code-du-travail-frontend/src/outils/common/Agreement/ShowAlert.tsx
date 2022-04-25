@@ -8,13 +8,13 @@ import styled from "styled-components";
 type Props = {
   currentIdcc: Agreement;
   supportedAgreements: AgreementSupportInfo[];
-  alertCCUnsupported?: (string) => JSX.Element;
+  alertAgreementNotSupported?: (string) => JSX.Element;
 };
 
 const ShowAlert = ({
   currentIdcc,
   supportedAgreements,
-  alertCCUnsupported,
+  alertAgreementNotSupported,
 }: Props): JSX.Element => {
   const idccInfo = supportedAgreements.find(
     (item) => item.idcc == currentIdcc.num
@@ -31,8 +31,8 @@ const ShowAlert = ({
           >
             Convention collective non traitée
           </Paragraph>
-          {alertCCUnsupported ? (
-            alertCCUnsupported(currentIdcc.url)
+          {alertAgreementNotSupported ? (
+            alertAgreementNotSupported(currentIdcc.url)
           ) : (
             <>
               <Paragraph>
@@ -46,7 +46,7 @@ const ShowAlert = ({
             </>
           )}
         </StyledAlert>
-        {!alertCCUnsupported && (
+        {!alertAgreementNotSupported && (
           <StyledParagraph>
             Cliquez sur Suivant pour poursuivre la simulation.
           </StyledParagraph>

@@ -10,13 +10,13 @@ import { AgreementSupportInfo } from "../types";
 type Props = {
   agreement: Agreement;
   supportedAgreements: AgreementSupportInfo[];
-  alertCCUnsupported?: (string) => JSX.Element;
+  alertAgreementNotSupported?: (string) => JSX.Element;
 };
 
 const ShowAgreement = ({
   agreement,
   supportedAgreements,
-  alertCCUnsupported,
+  alertAgreementNotSupported,
 }: Props): JSX.Element => {
   return (
     <>
@@ -29,7 +29,7 @@ const ShowAgreement = ({
       <ShowAlert
         currentIdcc={agreement}
         supportedAgreements={supportedAgreements}
-        alertCCUnsupported={alertCCUnsupported}
+        alertAgreementNotSupported={alertAgreementNotSupported}
       />
     </>
   );

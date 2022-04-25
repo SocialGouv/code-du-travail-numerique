@@ -367,8 +367,8 @@ describe("EnterpriseSearch", () => {
         onUserAction,
         selectedEnterprise: selectedEnterpriseOneAgreement,
         supportedAgreements: [],
-        alertCCUnsupported: (ccUrl: string) => (
-          <p>This is my custom text with the url: {ccUrl}</p>
+        alertAgreementNotSupported: (agreementUrl: string) => (
+          <p>This is my custom text with the url: {agreementUrl}</p>
         ),
       };
       const { getByText } = render(

@@ -2,10 +2,10 @@ import React from "react";
 import { Paragraph } from "@socialgouv/cdtn-ui";
 
 type Props = {
-  ccUrl?: string;
+  agreementUrl?: string;
 };
 
-const UnsupportedCCDisclaimer: React.FC<Props> = ({ ccUrl }) => {
+const UnsupportedCCDisclaimer: React.FC<Props> = ({ agreementUrl }) => {
   return (
     <>
       <Paragraph>
@@ -13,10 +13,10 @@ const UnsupportedCCDisclaimer: React.FC<Props> = ({ ccUrl }) => {
         services. Nous vous invitons à consulter votre convention collective qui
         peut prévoir un nombre d’heures d’absence autorisée pour rechercher un
         emploi pendant un préavis.{" "}
-        {ccUrl && (
+        {agreementUrl && (
           <>
             Vous pouvez consulter votre convention collective{" "}
-            <a href={ccUrl} target="_blank" rel="noreferrer">
+            <a href={agreementUrl} target="_blank" rel="noreferrer">
               ici
             </a>
             .

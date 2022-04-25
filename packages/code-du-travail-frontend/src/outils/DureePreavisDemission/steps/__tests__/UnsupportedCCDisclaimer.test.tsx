@@ -15,7 +15,7 @@ describe("Unsupported CC Disclaimer component should render disclaimer", () => {
 
   it("should show the link if agreement is available on legifrance", () => {
     const { getByText } = render(
-      <UnsupportedCCDisclaimer ccUrl={"https://legifrance.url"} />
+      <UnsupportedCCDisclaimer agreementUrl={"https://legifrance.url"} />
     );
     expect(
       getByText(

@@ -44,7 +44,7 @@ const dataWithSelectedAgreementNotSupportedWithCustomText: Props = {
   ...dataWithoutSelectedAgreement,
   selectedAgreement,
   supportedAgreements: [],
-  alertCCUnsupported: (url: string) => (
+  alertAgreementNotSupported: (url: string) => (
     <p>This is my custom text with the url: {url}</p>
   ),
 };

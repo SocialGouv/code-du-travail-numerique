@@ -19,7 +19,7 @@ export type Props = {
   selectedEnterprise?: Enterprise;
   selectedAgreement?: Agreement;
   onSelectAgreement: OnSelectAgreementFn;
-  alertCCUnsupported?: (string) => JSX.Element;
+  alertAgreementNotSupported?: (string) => JSX.Element;
 } & TrackingProps;
 
 const EnterpriseSearch = ({
@@ -27,7 +27,7 @@ const EnterpriseSearch = ({
   selectedEnterprise,
   onSelectAgreement,
   onUserAction,
-  alertCCUnsupported,
+  alertAgreementNotSupported,
 }: Props): JSX.Element => {
   const [enterprise, setEnterprise] = useState<Enterprise | undefined>(
     selectedEnterprise
@@ -51,7 +51,7 @@ const EnterpriseSearch = ({
           <ShowAgreement
             agreement={enterprise.conventions[0]}
             supportedAgreements={supportedAgreements}
-            alertCCUnsupported={alertCCUnsupported}
+            alertAgreementNotSupported={alertAgreementNotSupported}
           />
         ) : (
           <ShowAgreements
@@ -60,7 +60,7 @@ const EnterpriseSearch = ({
               onSelectAgreement(agreement, enterprise);
             }}
             supportedAgreements={supportedAgreements}
-            alertCCUnsupported={alertCCUnsupported}
+            alertAgreementNotSupported={alertAgreementNotSupported}
           />
         )}
       </>

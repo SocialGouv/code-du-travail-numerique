@@ -17,7 +17,7 @@ export type Props = {
   supportedAgreements: AgreementSupportInfo[];
   selectedAgreement?: Agreement;
   onSelectAgreement: (agreement: Agreement | null) => void;
-  alertCCUnsupported?: (string) => JSX.Element;
+  alertAgreementNotSupported?: (string) => JSX.Element;
 } & TrackingProps;
 
 const AgreementSearch = ({
@@ -25,7 +25,7 @@ const AgreementSearch = ({
   selectedAgreement,
   onSelectAgreement,
   onUserAction,
-  alertCCUnsupported,
+  alertAgreementNotSupported,
 }: Props): JSX.Element => {
   if (selectedAgreement) {
     return (
@@ -45,7 +45,7 @@ const AgreementSearch = ({
         <ShowAlert
           currentIdcc={selectedAgreement}
           supportedAgreements={supportedAgreements}
-          alertCCUnsupported={alertCCUnsupported}
+          alertAgreementNotSupported={alertAgreementNotSupported}
         />
       </>
     );
