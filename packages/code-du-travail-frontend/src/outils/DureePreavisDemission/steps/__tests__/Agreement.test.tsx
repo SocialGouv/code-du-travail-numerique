@@ -6,7 +6,7 @@ describe("<AgreementStep />", () => {
     const { getAllByRole, queryByText } = renderForm(AgreementStep);
 
     expect(getAllByRole("radio").length).toBe(2);
-    expect(queryByText(/Je ne souhaite pas renseigner/)).toBeNull();
+    expect(queryByText(/Je ne souhaite pas renseigner/)).not.toBeInTheDocument();
     expect(
       queryByText(/La convention collective est nécessaire pour obtenir/)
     ).toBeInTheDocument();
