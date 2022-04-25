@@ -3,7 +3,7 @@ import React from "react";
 import UnsupportedCCDisclaimer from "../component/UnsupportedCCDisclaimer";
 
 describe("Unsupported CC Disclaimer component should render disclaimer", () => {
-  it("with no link if no id", () => {
+  it("should not show the link if agreement is not available on legifrance", () => {
     const { getByText, queryByText } = render(<UnsupportedCCDisclaimer />);
     expect(
       getByText(
