@@ -25,6 +25,8 @@ describe("Unsupported CC Disclaimer component should render disclaimer", () => {
     expect(
       getByText(/Vous pouvez consulter votre convention collective/)
     ).toBeInTheDocument();
-    expect(getByText(/ici/).getAttribute("href")).toEqual("https://my.url");
+    expect(getByText(/ici/).getAttribute("href")).toEqual(
+      "https://legifrance.url"
+    );
   });
 });
