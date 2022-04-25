@@ -46,7 +46,7 @@ describe("SelectAgreement", () => {
         })
       ).toBeInTheDocument();
     });
-    it("should not show skip option ° show message", () => {
+    it("should not show skip option & show message if passed in param", () => {
       const { getByRole, getByText, queryByText } = render(
         <EmbeddedInjectedForm<FormContent, Omit<Props, "form">>
           Step={SelectAgreement}

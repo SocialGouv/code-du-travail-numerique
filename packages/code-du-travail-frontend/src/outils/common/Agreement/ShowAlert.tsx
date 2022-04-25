@@ -6,18 +6,18 @@ import { Agreement } from "../../../conventions/Search/api/type";
 import styled from "styled-components";
 
 type Props = {
-  currentIdcc: Agreement;
+  currentAgreement: Agreement;
   supportedAgreements: AgreementSupportInfo[];
   alertAgreementNotSupported?: (string) => JSX.Element;
 };
 
 const ShowAlert = ({
-  currentIdcc,
+  currentAgreement,
   supportedAgreements,
   alertAgreementNotSupported,
 }: Props): JSX.Element => {
   const idccInfo = supportedAgreements.find(
-    (item) => item.idcc == currentIdcc.num
+    (item) => item.idcc == currentAgreement.num
   );
   if (!idccInfo) {
     return (
@@ -32,7 +32,7 @@ const ShowAlert = ({
             Convention collective non traitée
           </Paragraph>
           {alertAgreementNotSupported ? (
-            alertAgreementNotSupported(currentIdcc.url)
+            alertAgreementNotSupported(currentAgreement.url)
           ) : (
             <>
               <Paragraph>

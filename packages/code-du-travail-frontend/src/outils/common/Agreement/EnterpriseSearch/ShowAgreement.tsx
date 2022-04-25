@@ -27,7 +27,7 @@ const ShowAgreement = ({
         {agreement.shortTitle} (IDCC {formatIdcc(agreement.num)})
       </Text>
       <ShowAlert
-        currentIdcc={agreement}
+        currentAgreement={agreement}
         supportedAgreements={supportedAgreements}
         alertAgreementNotSupported={alertAgreementNotSupported}
       />

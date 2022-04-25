@@ -43,7 +43,7 @@ const AgreementSearch = ({
           {selectedAgreement.shortTitle}
         </SelectedAgreement>
         <ShowAlert
-          currentIdcc={selectedAgreement}
+          currentAgreement={selectedAgreement}
           supportedAgreements={supportedAgreements}
           alertAgreementNotSupported={alertAgreementNotSupported}
         />
