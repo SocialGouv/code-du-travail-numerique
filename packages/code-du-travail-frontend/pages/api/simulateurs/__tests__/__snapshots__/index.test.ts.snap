@@ -11,7 +11,7 @@ Object {
       "icon": "Indemnity",
       "id": "085a07ba-2936-4b0c-89c5-89c3e0cdb773",
       "metadescription": "Vous souhaitez calculer le montant de l'indemnité de licenciement ? Notre simulateur vous apporte une réponse personnalisée.",
-      "metatitle": "Simulateur - Calcul du salaire brut/net",
+      "metatitle": "Simulateur - Calcul de l'indemnité de licenciement",
       "questions": Array [
         "Quelle est mon indemnité de licenciement",
         "Comment calculer mon indemnité de licenciement",
@@ -42,7 +42,7 @@ Object {
         "calcul durée préavis démission",
       ],
       "slug": "preavis-demission",
-      "title": " Calculer le préavis de démission",
+      "title": "Calculer le préavis de démission",
     },
     Object {
       "action": "Estimer",
@@ -73,7 +73,7 @@ Object {
         "cout embauche CDI",
       ],
       "slug": "simulateur-embauche",
-      "title": " Calculer le salaire brut/net",
+      "title": "Calculer le salaire brut/net",
     },
     Object {
       "action": "Estimer",
@@ -82,7 +82,7 @@ Object {
       "enable": true,
       "icon": "Precarity",
       "id": "1f092661-e948-4f27-aafd-7f5142f25f46",
-      "metadescription": " Vous souhaitez calculer le montant de l'indemnité de précarité ? Notre simulateur vous apporte une réponse personnalisée.",
+      "metadescription": "Vous souhaitez calculer le montant de l'indemnité de précarité ? Notre simulateur vous apporte une réponse personnalisée.",
       "metatitle": "Simulateur - Calcul de l'indemnité de précarité",
       "questions": Array [
         "fin de contrat cdd",
@@ -96,7 +96,7 @@ Object {
         "montant indemnité fin de contrat",
       ],
       "slug": "indemnite-precarite",
-      "title": " Calculer l'indemnité de précarité",
+      "title": "Calculer l'indemnité de précarité",
     },
     Object {
       "action": "Calculer",
@@ -105,7 +105,7 @@ Object {
       "enable": true,
       "icon": "CalendarTime",
       "id": "fcc43645-9ac1-433d-bd95-0eb44239b864",
-      "metadescription": " Vous souhaitez calculer le montant de l'indemnité de licenciement ? Notre simulateur vous apporte une réponse personnalisée.",
+      "metadescription": "Vous souhaitez connaître la durée du préavis à respecter en cas de licenciement ? Notre simulateur vous apporte une réponse personnalisée.",
       "metatitle": "Simulateur - Calcul du préavis de licenciement",
       "questions": Array [
         "preavis de licenciement",
@@ -115,7 +115,7 @@ Object {
         "calcul durée préavis licenciement",
       ],
       "slug": "preavis-licenciement",
-      "title": " Calculer le préavis de licenciement",
+      "title": "Calculer le préavis de licenciement",
     },
     Object {
       "action": "Calculer",
@@ -140,7 +140,7 @@ Object {
         "absence 2h pour recherche d'emploi pendant préavis",
       ],
       "slug": "heures-recherche-emploi",
-      "title": " Calculer le nombre d'heures d'absence pour rechercher un emploi",
+      "title": "Calculer le nombre d'heures d'absence pour rechercher un emploi",
     },
     Object {
       "action": "Consulter",
@@ -170,7 +170,7 @@ Object {
       "metadescription": "Vous souhaitez connaître la durée du préavis à respecter en cas de départ ou de mise à la retraite ? Notre simulateur vous apporte une réponse personnalisée.",
       "metatitle": "Simulateur - Calcul du préavis de départ ou mise à la retraite",
       "slug": "preavis-retraite",
-      "title": " Calculer le préavis de départ ou de mise à la retraite",
+      "title": "Calculer le préavis de départ ou de mise à la retraite",
     },
   ],
   "externalTools": Array [
@@ -197,7 +197,7 @@ Object {
       "icon": "Indemnity",
       "id": "085a07ba-2936-4b0c-89c5-89c3e0cdb773",
       "metadescription": "Vous souhaitez calculer le montant de l'indemnité de licenciement ? Notre simulateur vous apporte une réponse personnalisée.",
-      "metatitle": "Simulateur - Calcul du salaire brut/net",
+      "metatitle": "Simulateur - Calcul de l'indemnité de licenciement",
       "questions": Array [
         "Quelle est mon indemnité de licenciement",
         "Comment calculer mon indemnité de licenciement",
@@ -228,7 +228,7 @@ Object {
         "calcul durée préavis démission",
       ],
       "slug": "preavis-demission",
-      "title": " Calculer le préavis de démission",
+      "title": "Calculer le préavis de démission",
     },
     Object {
       "action": "Estimer",
@@ -259,7 +259,7 @@ Object {
         "cout embauche CDI",
       ],
       "slug": "simulateur-embauche",
-      "title": " Calculer le salaire brut/net",
+      "title": "Calculer le salaire brut/net",
     },
     Object {
       "action": "Estimer",
@@ -268,7 +268,7 @@ Object {
       "enable": true,
       "icon": "Precarity",
       "id": "1f092661-e948-4f27-aafd-7f5142f25f46",
-      "metadescription": " Vous souhaitez calculer le montant de l'indemnité de précarité ? Notre simulateur vous apporte une réponse personnalisée.",
+      "metadescription": "Vous souhaitez calculer le montant de l'indemnité de précarité ? Notre simulateur vous apporte une réponse personnalisée.",
       "metatitle": "Simulateur - Calcul de l'indemnité de précarité",
       "questions": Array [
         "fin de contrat cdd",
@@ -282,7 +282,7 @@ Object {
         "montant indemnité fin de contrat",
       ],
       "slug": "indemnite-precarite",
-      "title": " Calculer l'indemnité de précarité",
+      "title": "Calculer l'indemnité de précarité",
     },
     Object {
       "action": "Calculer",
@@ -291,7 +291,7 @@ Object {
       "enable": true,
       "icon": "CalendarTime",
       "id": "fcc43645-9ac1-433d-bd95-0eb44239b864",
-      "metadescription": " Vous souhaitez calculer le montant de l'indemnité de licenciement ? Notre simulateur vous apporte une réponse personnalisée.",
+      "metadescription": "Vous souhaitez connaître la durée du préavis à respecter en cas de licenciement ? Notre simulateur vous apporte une réponse personnalisée.",
       "metatitle": "Simulateur - Calcul du préavis de licenciement",
       "questions": Array [
         "preavis de licenciement",
@@ -301,7 +301,7 @@ Object {
         "calcul durée préavis licenciement",
       ],
       "slug": "preavis-licenciement",
-      "title": " Calculer le préavis de licenciement",
+      "title": "Calculer le préavis de licenciement",
     },
     Object {
       "action": "Calculer",
@@ -326,7 +326,7 @@ Object {
         "absence 2h pour recherche d'emploi pendant préavis",
       ],
       "slug": "heures-recherche-emploi",
-      "title": " Calculer le nombre d'heures d'absence pour rechercher un emploi",
+      "title": "Calculer le nombre d'heures d'absence pour rechercher un emploi",
     },
     Object {
       "action": "Consulter",
@@ -356,7 +356,7 @@ Object {
       "metadescription": "Vous souhaitez connaître la durée du préavis à respecter en cas de départ ou de mise à la retraite ? Notre simulateur vous apporte une réponse personnalisée.",
       "metatitle": "Simulateur - Calcul du préavis de départ ou mise à la retraite",
       "slug": "preavis-retraite",
-      "title": " Calculer le préavis de départ ou de mise à la retraite",
+      "title": "Calculer le préavis de départ ou de mise à la retraite",
     },
   ],
   "externalTools": Array [

@@ -2657,7 +2657,7 @@ exports[`<Home /> should render 1`] = `
                         <h3
                           class="c51"
                         >
-                           Calculer le préavis de démission
+                          Calculer le préavis de démission
                         </h3>
                       </div>
                     </div>
@@ -2768,7 +2768,7 @@ exports[`<Home /> should render 1`] = `
                         <h3
                           class="c51"
                         >
-                           Calculer le salaire brut/net
+                          Calculer le salaire brut/net
                         </h3>
                       </div>
                     </div>
