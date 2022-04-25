@@ -197,7 +197,7 @@ describe("AgreementSearch", () => {
         getByText(/Convention collective non traitée/)
       ).toBeInTheDocument();
     });
-    it("should render custom text is alertCCUnsupported is provided", () => {
+    it("should render the alert with custom content provided", () => {
       const { getByText } = render(
         <EmbeddedForm<Props>
           Step={AgreementSearch}
