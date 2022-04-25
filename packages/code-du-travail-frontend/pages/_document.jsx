@@ -50,11 +50,6 @@ export default class MyDocument extends Document {
             type="text/css"
             href="/static/fonts.css"
           />
-          <script key="polyfill" src="/static/polyfill.min.js" />
-          <script
-            key="webcomponents"
-            src="/static/webcomponents-polyfill/loader.js"
-          />
           <script key="smarttag" src="/static/smarttag.js" />
         </Head>
         <body>
