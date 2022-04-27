@@ -4,15 +4,18 @@ import PubliQuestion from "../../../common/PubliQuestion";
 
 export type InformationStepProps = {
   questions: Question[];
+  onChange: (name: string, value: string) => void;
 };
 
 type Question = {
   name: string;
   rule: Rule;
-  answered: boolean;
 };
 
-const InformationStep = ({ questions }: InformationStepProps): JSX.Element => (
+const InformationStep = ({
+  questions,
+  onChange,
+}: InformationStepProps): JSX.Element => (
   <>
     {questions.map((question) => {
       return (
@@ -20,6 +23,7 @@ const InformationStep = ({ questions }: InformationStepProps): JSX.Element => (
           key={question.name}
           name={"infos." + question.name}
           rule={question.rule}
+          onChange={(values) => onChange(question.name, values as string)}
         />
       );
     })}

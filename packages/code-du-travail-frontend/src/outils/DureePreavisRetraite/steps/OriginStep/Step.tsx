@@ -1,6 +1,7 @@
 import { Alert, InputRadio, Paragraph, Text, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import { Field } from "react-final-form";
+import { OnChange } from "react-final-form-listeners";
 import styled from "styled-components";
 
 import { ErrorField } from "../../../common/ErrorField";
@@ -8,12 +9,14 @@ import { Question } from "../../../common/Question";
 import { RadioContainer } from "../../../common/stepStyles";
 import { required } from "../../../common/validators";
 import { OriginMandatoryName } from "../../types";
+import { Origin } from "../../state";
 
 export type OriginStepProps = {
   showWarning: boolean;
+  onChange: (type: Origin) => void;
 };
 
-function OriginStep({ showWarning }: OriginStepProps): JSX.Element {
+function OriginStep({ showWarning, onChange }: OriginStepProps): JSX.Element {
   return (
     <>
       <Question required>
@@ -70,6 +73,11 @@ function OriginStep({ showWarning }: OriginStepProps): JSX.Element {
           </StyledAlert>
         )}
         <ErrorField name="contrat salarié - mise à la retraite" />
+        <OnChange name={OriginMandatoryName}>
+          {(values: "oui" | "non") => {
+            onChange?.(values === "oui" ? "mise" : "départ");
+          }}
+        </OnChange>
       </RadioContainer>
     </>
   );

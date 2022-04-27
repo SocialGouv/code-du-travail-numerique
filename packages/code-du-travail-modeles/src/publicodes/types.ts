@@ -1,8 +1,6 @@
-import { Notification, References } from "@socialgouv/modeles-social";
-import Engine, { Rule as PubliRule } from "publicodes";
-
-import { PublicodesIndemniteLicenciementResult } from "./indemnite-licenciement";
-import { PublicodesPreavisRetraiteResult } from "./preavis-retraite";
+import type Engine from "publicodes";
+import type { Evaluation, Unit } from "publicodes";
+import type { Rule as PubliRule } from "publicodes/dist/types/rule";
 
 export type OldReference = {
   ref: string;
@@ -38,29 +36,15 @@ export interface SituationElement {
   value: string;
 }
 
-export type PublicodesResult =
-  | PublicodesPreavisRetraiteResult
-  | PublicodesIndemniteLicenciementResult;
-
-export type PublicodesContextType<T extends PublicodesResult> = {
-  execute: (rule: string) => T;
-  getNotifications: () => Notification[];
-  getReferences: () => References[];
-  result: T;
-  missingArgs: MissingArgs[];
-  situation: SituationElement[];
-  setSituation: (values: Record<string, string>) => void;
-};
-
 export type PublicodesState = {
   engine: Engine;
   targetRule: string;
 };
 
-export type PublicodesData<Result extends PublicodesResult> = {
-  situation: Array<SituationElement>;
+export type PublicodesData<TResult> = {
+  situation: SituationElement[];
   missingArgs: MissingArgs[];
-  result: Result;
+  result: TResult;
 };
 
 export type PublicodesProviderRule = {
@@ -81,3 +65,23 @@ export enum PublicodesSimulator {
   INDEMNITE_LICENCIEMENT = "contrat salarié . indemnité de licenciement",
   PREAVIS_RETRAITE = "contrat salarié . préavis de retraite en jours",
 }
+
+export enum PublicodesConvertedUnit {
+  DAY = "jour",
+  MONTH = "mois",
+  YEAR = "an",
+  DAYS = "jours",
+  WEEK = "semaine",
+  WEEKS = "semaines",
+}
+
+export type PublicodesPreavisRetraiteResult = {
+  value: number;
+  unit: PublicodesConvertedUnit;
+  valueInDays: number;
+};
+
+export type PublicodesIndemniteLicenciementResult = {
+  value: Evaluation;
+  unit?: Unit;
+};

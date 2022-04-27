@@ -1,50 +1,28 @@
-import React, { Reducer, useMemo, useReducer } from "react";
-import {
-  CommonAction,
-  CommonActionName,
-  CommonReducer,
-  CommonState,
-} from "./types";
+import React, { useMemo } from "react";
 import { SimulatorDecorator } from "../index";
 import { printResult } from "../../common/utils";
-import commonReducer from "./commonReducer";
+import { Step, useSimulatorStore } from "./state/useSimulatorStore";
 
-type Props<
-  State extends CommonState,
-  Action extends CommonAction<FormState>,
-  FormState
-> = {
-  initialState: State;
-  initialValues: FormState;
-  stepReducer: CommonReducer<
-    FormState,
-    State,
-    Action & CommonAction<FormState>
-  >;
+type Props<FormState> = {
   duration?: string;
   icon?: string;
   title: string;
-  renderStep: (label: string, state: State) => JSX.Element;
+  steps: Step[];
+  debug: JSX.Element;
+  onFormValuesChange: (values: FormState) => void;
 };
 
-const Simulator = <
-  State extends CommonState,
-  Action extends CommonAction<FormState>,
-  FormState
->({
-  initialValues,
-  initialState,
-  stepReducer,
+const Simulator = <FormState,>({
   icon,
   title,
   duration,
-  renderStep,
-}: Props<State, Action, FormState>): JSX.Element => {
-  const [state, dispatch] = useReducer<
-    Reducer<CommonState, CommonAction<FormState>>
-  >(commonReducer(stepReducer, initialState), initialState);
-  const { currentStepIndex, steps } = state;
-  let currentValues = initialValues;
+  steps,
+  debug,
+  onFormValuesChange,
+}: Props<FormState>): JSX.Element => {
+  const { currentStepIndex, previousStep, nextStep, reset } = useSimulatorStore(
+    (state) => state
+  );
 
   const stepItems = useMemo(
     () =>
@@ -56,46 +34,29 @@ const Simulator = <
     [steps]
   );
 
-  const handlePageSubmit = (values: FormState, form) => {
+  const handlePageSubmit = () => {
     // This means the user clicked on a "restart a new simulation" button
     const nextStepIndex = currentStepIndex + 1;
     if (nextStepIndex >= steps.length) {
-      dispatch({ type: CommonActionName.reset });
+      reset();
     } else {
-      dispatch({
-        type: CommonActionName.changeStep,
-        payload: {
-          values,
-          currentStep: {
-            index: nextStepIndex,
-            step: steps[nextStepIndex],
-          },
-        },
-      });
+      nextStep();
     }
   };
 
   const prevStep = () => {
     const previousStepIndex = currentStepIndex - 1;
     if (previousStepIndex >= 0) {
-      dispatch({
-        type: CommonActionName.changeStep,
-        payload: {
-          values: currentValues,
-          currentStep: {
-            index: previousStepIndex,
-            step: steps[previousStepIndex],
-          },
-        },
-      });
+      previousStep();
     } else {
       throw Error("Can't show the previous step with index less than 0");
     }
   };
 
+  const Component = steps[currentStepIndex].Component;
+
   return (
     <SimulatorDecorator<FormState>
-      initialValues={initialValues}
       title={{
         icon,
         title,
@@ -116,25 +77,9 @@ const Simulator = <
         // TODO listRef: anchorRef,
       }}
       onFormStepSubmit={handlePageSubmit}
-      showDebug={
-        process.env.NODE_ENV !== "production" && process.env.NODE_ENV !== "test"
-      }
-      renderStep={() =>
-        renderStep(steps[currentStepIndex].label, state as State)
-      }
-      onFormStateUpdate={(values) => {
-        currentValues = values;
-        dispatch({
-          type: CommonActionName.onChange,
-          payload: {
-            values,
-            currentStep: {
-              step: steps[currentStepIndex],
-              index: currentStepIndex,
-            },
-          },
-        });
-      }}
+      onFormStateUpdate={onFormValuesChange}
+      debug={debug}
+      renderStep={() => <Component />}
     />
   );
 };

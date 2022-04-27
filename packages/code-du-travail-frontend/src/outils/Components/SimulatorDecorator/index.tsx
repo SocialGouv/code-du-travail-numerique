@@ -3,13 +3,7 @@ import React from "react";
 import { Form } from "react-final-form";
 import styled from "styled-components";
 
-import {
-  DebugInfo,
-  FormStateToReducer,
-  Navigation,
-  StepList,
-  Title,
-} from "./Components";
+import { FormStateToReducer, Navigation, StepList, Title } from "./Components";
 import type {
   NavigationProps,
   StepListProps,
@@ -26,7 +20,7 @@ type Props<FormValues> = {
   initialValues?: FormValues;
   onFormStateUpdate?: (values: FormValues) => void;
   onFormStepSubmit: (values: FormValues, form: FormApi<FormValues>) => void;
-  showDebug: boolean;
+  debug: JSX.Element;
   validate?: (
     values: FormValues
   ) => ValidationErrors | Promise<ValidationErrors>;
@@ -43,7 +37,7 @@ const SimulatorDecorator = <FormValues,>({
   initialValues,
   onFormStateUpdate,
   onFormStepSubmit,
-  showDebug,
+  debug,
   validate,
   decorators,
   mutators,
@@ -83,7 +77,7 @@ const SimulatorDecorator = <FormValues,>({
                 }
               />
               {annotations && <p>{annotations}</p>}
-              {showDebug && <DebugInfo formValues={form.getState().values} />}
+              {debug}
             </StyledForm>
           );
         }}
