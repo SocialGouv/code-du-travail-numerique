@@ -636,7 +636,7 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
       </p>
       <p>
         Vous pouvez trouver plus d’informations sur le préavis de licenciement sur
-
+         
         <a
           href="/fiche-service-public/preavis-de-licenciement"
         >
