@@ -76,12 +76,20 @@ const SelectAgreement = ({
 
   const values = form.getState().values;
   useEffect(() => {
-    if (values.ccn?.route === "not-selected") {
-      setConvention(undefined);
-      setEnterprise(undefined);
-    }
-    if (values.ccn?.route === "agreement") {
-      setEnterprise(undefined);
+    switch (values.ccn?.route) {
+      case "not-selected": {
+        setConvention(undefined);
+        setEnterprise(undefined);
+        break;
+      }
+      case "agreement": {
+        setEnterprise(undefined);
+        break;
+      }
+      case "enterprise": {
+        setConvention(undefined);
+        break;
+      }
     }
   }, [setConvention, values.ccn?.route]);
 
