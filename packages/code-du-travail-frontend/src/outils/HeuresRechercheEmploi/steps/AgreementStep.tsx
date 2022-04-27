@@ -2,10 +2,16 @@ import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
 import React from "react";
 
 import { SelectAgreement } from "../../common";
-import { getSupportedCC } from "../../common/situations.utils";
+import {
+  getSupportedCC,
+  validateUnsupportedAgreement,
+} from "../../common/situations.utils";
 import { WizardStepProps } from "../../common/type/WizardType";
+import NotSupportedAgreementDisclaimer from "./component/NotSupportedAgreementDisclaimer";
 
-export const AgreementStep = (props: WizardStepProps): JSX.Element => {
+const supportedCC = getSupportedCC(data.situations);
+
+const AgreementStep = (props: WizardStepProps): JSX.Element => {
   return (
     <>
       <SelectAgreement
@@ -15,8 +21,19 @@ export const AgreementStep = (props: WizardStepProps): JSX.Element => {
           props.form.change("criteria", undefined);
           props.form.change("typeRupture", undefined);
         }}
-        supportedAgreements={getSupportedCC(data.situations)}
+        required
+        note="La convention collective est nécessaire pour obtenir un résultat, le code du travail ne prévoyant rien sur les heures d'absence autorisée pour rechercher un emploi pendant le préavis."
+        supportedAgreements={supportedCC}
+        alertAgreementNotSupported={(url: string) => (
+          <NotSupportedAgreementDisclaimer agreementUrl={url} />
+        )}
       />
     </>
   );
 };
+
+AgreementStep.validate = validateUnsupportedAgreement(
+  getSupportedCC(data.situations)
+);
+
+export { AgreementStep };

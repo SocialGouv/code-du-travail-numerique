@@ -10,6 +10,7 @@ import {
   getSupportedCC,
   recapSituation,
   skipInformations,
+  validateUnsupportedAgreement,
 } from "../situations.utils";
 
 const criteriaOrder = ["bar", "foo", "baz", "yolo"];
@@ -207,6 +208,25 @@ describe("situations", () => {
       expect(supportedCCResult.find((item) => item.idcc === 20)).toStrictEqual({
         fullySupported: true,
         idcc: 20,
+      });
+    });
+  });
+  describe("validateUnsupportedAgreement", () => {
+    const validate = validateUnsupportedAgreement(ccList);
+
+    it("should return no error if no agreement", () => {
+      expect(validate({})).toStrictEqual({});
+    });
+
+    it("should return no error if agreement is supported", () => {
+      expect(validate({ ccn: { selected: { num: "20" } } })).toStrictEqual({});
+    });
+
+    it("should return one error if agreement is not supported", () => {
+      expect(
+        validate({ ccn: { selected: { num: "unsupported" } } })
+      ).toStrictEqual({
+        agreementMissing: true,
       });
     });
   });

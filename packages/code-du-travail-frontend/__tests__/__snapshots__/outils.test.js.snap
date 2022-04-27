@@ -1668,11 +1668,11 @@ exports[`<Outils /> should render 1`] = `
                         class="c40"
                       >
                         
-                        <h3
+                        <h2
                           class="c41"
                         >
                           Modèles de documents
-                        </h3>
+                        </h2>
                       </div>
                     </div>
                     <div

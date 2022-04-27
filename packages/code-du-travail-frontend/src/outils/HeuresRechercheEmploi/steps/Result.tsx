@@ -75,52 +75,43 @@ function DisclaimerBox({ duration }) {
   );
 }
 
-function NoResult({ idcc, ccn, legalRefs }) {
-  let reason =
-    "la convention collective n’a pas encore été traitée par nos services.";
-  if (idcc === 0) {
-    reason = "la convention collective n’a pas été renseignée.";
-  }
-  return (
-    <>
-      <SectionTitle>
-        Nombre d’heures d’absence autorisée pour rechercher un emploi
-      </SectionTitle>
-      <Paragraph noMargin>
-        <HighlightResult>Aucun résultat</HighlightResult>&nbsp;:&nbsp;{reason}
-      </Paragraph>
-      {idcc > 0 && <CCSearchInfo ccn={ccn} />}
+const NoResult = ({ idcc, ccn, legalRefs }) => (
+  <>
+    <SectionTitle>
+      Nombre d’heures d’absence autorisée pour rechercher un emploi
+    </SectionTitle>
+    <Paragraph noMargin>
+      <HighlightResult>Aucun résultat</HighlightResult>&nbsp;:&nbsp;la
+      convention collective n’a pas encore été traitée par nos services.
+    </Paragraph>
+    <CCSearchInfo ccn={ccn} />
+    <p>
+      Le code du travail ne prévoit pas le droit pour le salarié de s’absenter
+      pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe
+      une exception dans les départements de la Moselle, du Bas-Rhin et du
+      Haut-Rhin où le salarié, qui en fait la demande, a droit à un délai
+      raisonnable pour rechercher un emploi pendant son préavis de licenciement.
+    </p>
+    <ShowDetails>
+      <SectionTitle>Éléments saisis</SectionTitle>
+      {recapSituation({
+        ...{
+          "Convention collective": `${ccn.shortTitle} (IDCC ${idcc})`,
+        },
+      })}
+      <PubliReferences references={legalRefs && formatRefs(legalRefs)} />
+    </ShowDetails>
+    <Disclaimer title={"Attention il peut exister une durée plus favorable"}>
       <p>
-        Le code du travail ne prévoit pas le droit pour le salarié de s’absenter
-        pendant son préavis pour pouvoir rechercher un nouvel emploi. Il existe
-        une exception dans les départements de la Moselle, du Bas-Rhin et du
-        Haut-Rhin où le salarié, qui en fait la demande, a droit à un délai
-        raisonnable pour rechercher un emploi pendant son préavis de
-        licenciement.
+        Une convention collective, un accord d’entreprise ou à défaut un usage
+        dans la profession ou l’entreprise peut prévoir que le salarié bénéficie
+        d’heures d’absence autorisée pour rechercher un emploi pendant le
+        préavis. Il peut s’agir du préavis en cas de rupture de la période
+        d’essai, de démission ou de licenciement.
       </p>
-      <ShowDetails>
-        <SectionTitle>Éléments saisis</SectionTitle>
-        {recapSituation({
-          ...{
-            "Convention collective": ccn
-              ? `${ccn.shortTitle} (IDCC ${idcc})`
-              : "La convention collective n'a pas été renseignée",
-          },
-        })}
-        <PubliReferences references={legalRefs && formatRefs(legalRefs)} />
-      </ShowDetails>
-      <Disclaimer title={"Attention il peut exister une durée plus favorable"}>
-        <p>
-          Une convention collective, un accord d’entreprise ou à défaut un usage
-          dans la profession ou l’entreprise peut prévoir que le salarié
-          bénéficie d’heures d’absence autorisée pour rechercher un emploi
-          pendant le préavis. Il peut s’agir du préavis en cas de rupture de la
-          période d’essai, de démission ou de licenciement.
-        </p>
-      </Disclaimer>
-    </>
-  );
-}
+    </Disclaimer>
+  </>
+);
 
 export function StepResult({ form }: WizardStepProps): JSX.Element {
   const { values } = form.getState();
@@ -135,7 +126,7 @@ export function StepResult({ form }: WizardStepProps): JSX.Element {
     typeRupture,
   });
   const possibleSituations = filterSituations(initialSituations, criteria);
-  if (idcc === 0 || possibleSituations.length === 0) {
+  if (possibleSituations.length === 0) {
     return (
       <NoResult idcc={idcc} ccn={ccn?.selected} legalRefs={[situationCdt]} />
     );

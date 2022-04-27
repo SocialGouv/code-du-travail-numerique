@@ -1,4 +1,4 @@
-import { Paragraph, theme, Toast } from "@socialgouv/cdtn-ui";
+import { theme, Toast } from "@socialgouv/cdtn-ui";
 import React from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
@@ -17,6 +17,7 @@ export type Props = {
   supportedAgreements: AgreementSupportInfo[];
   selectedAgreement?: Agreement;
   onSelectAgreement: (agreement: Agreement | null) => void;
+  alertAgreementNotSupported?: (string) => JSX.Element;
 } & TrackingProps;
 
 const AgreementSearch = ({
@@ -24,6 +25,7 @@ const AgreementSearch = ({
   selectedAgreement,
   onSelectAgreement,
   onUserAction,
+  alertAgreementNotSupported,
 }: Props): JSX.Element => {
   if (selectedAgreement) {
     return (
@@ -41,12 +43,10 @@ const AgreementSearch = ({
           {selectedAgreement.shortTitle}
         </SelectedAgreement>
         <ShowAlert
-          currentIdcc={selectedAgreement.num}
+          currentAgreement={selectedAgreement}
           supportedAgreements={supportedAgreements}
+          alertAgreementNotSupported={alertAgreementNotSupported}
         />
-        <Paragraph>
-          Cliquez sur Suivant pour poursuivre la simulation.
-        </Paragraph>
       </>
     );
   }

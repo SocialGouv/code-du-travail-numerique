@@ -112,4 +112,17 @@ describe("RouteSelection: Skip the agreement selection", () => {
     ).toBeInTheDocument();
     expect(queryByText(/À noter/)).not.toBeInTheDocument();
   });
+
+  it("should not show the skip option", () => {
+    const { queryByText, getAllByRole } = render(
+      <EmbeddedInjectedForm
+        Step={RouteSelection}
+        props={{ canBeSkip: false }}
+        formData={{ ccn: { route: "agreement" } }}
+      />
+    );
+
+    expect(getAllByRole("radio")).toHaveLength(2);
+    expect(queryByText(/Je ne souhaite pas renseigner/)).not.toBeInTheDocument();
+  });
 });
