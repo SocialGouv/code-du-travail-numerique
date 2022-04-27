@@ -63,6 +63,9 @@ function Wizard({
       `click_previous_${title}`,
       state.steps[nextStepIndex].name,
     ]);
+    if (window) {
+      window.scrollTo(0, 0);
+    }
   };
   const nextStep = (values) => {
     let nextStepIndex = stepIndex;
@@ -82,6 +85,9 @@ function Wizard({
       `view_step_${title}`,
       state.steps[nextStepIndex].name,
     ]);
+    if (window) {
+      window.scrollTo(0, 0);
+    }
   };
 
   const previousVisible = stepIndex > 0;
