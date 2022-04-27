@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DureePreavisLicenciement /> should render 1`] = `
+exports[`<CalculateurIndemnite /> should render 1`] = `
 .c0 {
   padding: 2rem 2.4rem;
   color: #3e486e;
@@ -495,7 +495,9 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
         >
           <h1
             class="c4"
-          />
+          >
+            Calculer l'indemnité de licenciement
+          </h1>
         </div>
         <div
           class="c5"
@@ -543,7 +545,7 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
           <span
             class="c7"
           >
-            2 à 5 min
+            5 à 10 min
           </span>
         </div>
       </div>
@@ -592,7 +594,7 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
             >
               2
             </span>
-            Situation du salarié
+            Contrat de travail
           </li>
           <li
             class="c14 c17"
@@ -602,7 +604,7 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
             >
               3
             </span>
-            Convention collective
+            Ancienneté
           </li>
           <li
             class="c14 c17"
@@ -612,7 +614,7 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
             >
               4
             </span>
-            Informations complémentaires
+            Salaires
           </li>
           <li
             class="c14 c17"
@@ -622,25 +624,15 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
             >
               5
             </span>
-            Durée du préavis
+            Indemnité légale
           </li>
         </ol>
       </div>
       <p>
-        Ce simulateur permet de calculer la durée du préavis accordée au salarié en cas de licenciement.
+        Ce simulateur permet d’estimer le montant de l’indemnité légale de licenciement d’un salarié.
       </p>
       <p>
-        Des informations disponibles sur le bulletin de salaire pourraient être utiles pour réaliser cette simulation.
-      </p>
-      <p>
-        Vous pouvez trouver plus d’informations sur le préavis de licenciement sur
-         
-        <a
-          href="/fiche-service-public/preavis-de-licenciement"
-        >
-          cette fiche
-        </a>
-        .
+        Vous aurez besoin d’informations telles que les dates d’entrée et de sortie de l’entreprise, la date de notification du licenciement et le montant des derniers salaires.
       </p>
       <div
         class="c19"

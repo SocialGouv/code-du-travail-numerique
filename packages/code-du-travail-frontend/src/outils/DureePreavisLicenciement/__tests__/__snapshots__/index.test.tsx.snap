@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
+exports[`<DureePreavisLicenciement /> should render 1`] = `
 .c0 {
   padding: 2rem 2.4rem;
   color: #3e486e;
@@ -495,7 +495,9 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
         >
           <h1
             class="c4"
-          />
+          >
+            Calculer le préavis de licenciement
+          </h1>
         </div>
         <div
           class="c5"
@@ -543,7 +545,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
           <span
             class="c7"
           >
-            5 min
+            2 à 5 min
           </span>
         </div>
       </div>
@@ -592,7 +594,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
             >
               2
             </span>
-            Convention collective
+            Situation du salarié
           </li>
           <li
             class="c14 c17"
@@ -602,7 +604,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
             >
               3
             </span>
-            Informations générales
+            Convention collective
           </li>
           <li
             class="c14 c17"
@@ -612,7 +614,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
             >
               4
             </span>
-            Rémunération
+            Informations complémentaires
           </li>
           <li
             class="c14 c17"
@@ -622,15 +624,25 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
             >
               5
             </span>
-            Indemnité
+            Durée du préavis
           </li>
         </ol>
       </div>
       <p>
-        Ce simulateur permet d’estimer le montant de l’indemnité de fin de contrat ou de fin de mission, (dite “prime de précarité”), d’un salarié en CDD ou en contrat d’intérim.
+        Ce simulateur permet de calculer la durée du préavis accordée au salarié en cas de licenciement.
       </p>
       <p>
-        Les montants des salaires perçus pourraient être utiles pour réaliser cette simulation.
+        Des informations disponibles sur le bulletin de salaire pourraient être utiles pour réaliser cette simulation.
+      </p>
+      <p>
+        Vous pouvez trouver plus d’informations sur le préavis de licenciement sur
+
+        <a
+          href="/fiche-service-public/preavis-de-licenciement"
+        >
+          cette fiche
+        </a>
+        .
       </p>
       <div
         class="c19"
