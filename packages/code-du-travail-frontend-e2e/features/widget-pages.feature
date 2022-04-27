@@ -22,7 +22,7 @@ Scénario: Page widget preavis de licenciement
   Soit un utilisateur sur la page "/widgets/preavis-licenciement"
 
   Alors je vois "Étapes"
-  Alors je vois "Préavis de licenciement"
+  Alors je vois "Calculer le préavis de licenciement"
   Alors je vois "permet de calculer la durée du préavis accordée au salarié en cas de licenciement"
 
   Quand je clique sur "Commencer"
