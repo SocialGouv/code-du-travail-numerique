@@ -5,7 +5,7 @@ type Props = {
   agreementUrl?: string;
 };
 
-const UnsupportedCCDisclaimer: React.FC<Props> = ({ agreementUrl }) => {
+const NotSupportedAgreementDisclaimer: React.FC<Props> = ({ agreementUrl }) => {
   return (
     <>
       <Paragraph>
@@ -31,4 +31,4 @@ const UnsupportedCCDisclaimer: React.FC<Props> = ({ agreementUrl }) => {
   );
 };
 
-export default UnsupportedCCDisclaimer;
+export default NotSupportedAgreementDisclaimer;
