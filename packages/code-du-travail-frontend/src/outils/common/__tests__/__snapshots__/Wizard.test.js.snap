@@ -498,9 +498,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
         >
           <h1
             class="c4"
-          >
-            test
-          </h1>
+          />
         </div>
       </div>
       <div
@@ -1126,9 +1124,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
         >
           <h1
             class="c4"
-          >
-            test
-          </h1>
+          />
         </div>
       </div>
       <div
@@ -1693,9 +1689,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
         >
           <h1
             class="c4"
-          >
-            test
-          </h1>
+          />
         </div>
       </div>
       <div
@@ -2267,9 +2261,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
         >
           <h1
             class="c4"
-          >
-            test
-          </h1>
+          />
         </div>
       </div>
       <div
@@ -2907,9 +2899,7 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
         >
           <h1
             class="c4"
-          >
-            test
-          </h1>
+          />
         </div>
       </div>
       <div
@@ -3474,9 +3464,7 @@ exports[`<Wizard /> should render a step 1`] = `
         >
           <h1
             class="c4"
-          >
-            test
-          </h1>
+          />
         </div>
       </div>
       <div

@@ -2657,7 +2657,7 @@ exports[`<Home /> should render 1`] = `
                         <h3
                           class="c51"
                         >
-                          Calculer le préavis de démission
+                          Préavis de démission
                         </h3>
                       </div>
                     </div>
@@ -2670,7 +2670,7 @@ exports[`<Home /> should render 1`] = `
                         <p
                           class="c54"
                         >
-                          Calculez la durée de préavis à respecter en cas de démission
+                          Estimez la durée de préavis à respecter en cas de démission
                         </p>
                         <div
                           class="c55"
@@ -2768,7 +2768,7 @@ exports[`<Home /> should render 1`] = `
                         <h3
                           class="c51"
                         >
-                          Calculer le salaire brut/net
+                          Salaire brut/net
                         </h3>
                       </div>
                     </div>
@@ -2781,7 +2781,7 @@ exports[`<Home /> should render 1`] = `
                         <p
                           class="c54"
                         >
-                          Estimer le salaire : brut en net, net après impôt, calcul heures supplémentaires, coût total employeur
+                          Estimez le salaire : brut en net, net après impôt, calcul heures supplémentaires, coût total employeur
                         </p>
                         <div
                           class="c55"

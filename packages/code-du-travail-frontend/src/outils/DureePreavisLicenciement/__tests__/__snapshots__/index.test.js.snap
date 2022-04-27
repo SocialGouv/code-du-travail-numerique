@@ -495,9 +495,7 @@ exports[`<DureePreavisLicenciement /> should render 1`] = `
         >
           <h1
             class="c4"
-          >
-            Simulateur de durée de préavis de licenciement
-          </h1>
+          />
         </div>
         <div
           class="c5"

@@ -495,9 +495,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
         >
           <h1
             class="c4"
-          >
-            Simulateur de l'indemnité de précarité
-          </h1>
+          />
         </div>
         <div
           class="c5"

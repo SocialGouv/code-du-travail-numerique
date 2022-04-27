@@ -495,9 +495,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
         >
           <h1
             class="c4"
-          >
-            Simulateur d'indemnité de licenciement
-          </h1>
+          />
         </div>
         <div
           class="c5"

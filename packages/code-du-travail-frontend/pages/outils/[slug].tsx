@@ -47,6 +47,7 @@ interface Props {
   relatedItems: Array<any>;
   slug: string;
   title: string;
+  titleH1: string;
   metaTitle: string;
   metaDescription: string;
 }
@@ -59,6 +60,7 @@ function Outils({
   title,
   metaTitle,
   metaDescription,
+  titleH1,
   publicodesRules,
 }: Props): JSX.Element {
   const Tool = toolsBySlug[slug];
@@ -72,7 +74,12 @@ function Outils({
       <StyledSection>
         <Container>
           <Flex>
-            <Tool icon={icon} title={title} publicodesRules={publicodesRules} />
+            <Tool
+              icon={icon}
+              title={title}
+              titleH1={titleH1}
+              publicodesRules={publicodesRules}
+            />
             <ShareContainer>
               <Share title={title} metaDescription={description} />
             </ShareContainer>
@@ -97,7 +104,15 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     };
   }
 
-  const { slug, description, icon, title, metaTitle, metaDescription } = tool;
+  const {
+    slug,
+    description,
+    icon,
+    title,
+    titleH1,
+    metaTitle,
+    metaDescription,
+  } = tool;
   let relatedItems = [];
   try {
     const response = await fetch(`${API_URL}/items/${SOURCES.TOOLS}/${slug}`);
@@ -119,6 +134,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
       relatedItems,
       slug,
       title,
+      titleH1,
       metaTitle,
       metaDescription,
     },

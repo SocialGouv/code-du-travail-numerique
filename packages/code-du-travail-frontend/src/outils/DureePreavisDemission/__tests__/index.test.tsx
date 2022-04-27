@@ -7,7 +7,8 @@ describe("<DureePreavisDemission />", () => {
   it("should render", () => {
     const { container } = render(
       <DureePreavisDemission
-        title="Simulateur de durée de préavis de démission"
+        title="Durée de préavis de démission"
+        titleH1="Simulateur de durée de préavis de démission"
         icon="mail"
       />
     );
