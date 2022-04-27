@@ -147,6 +147,7 @@
   {
     "icon": "SearchCC",
     "title": "Trouver sa convention collective",
+    "titleH1": "Trouver sa convention collective",
     "metaTitle": "Trouver sa convention collective",
     "slug": "convention-collective",
     "questions": [
