@@ -1,10 +1,12 @@
 import React from "react";
 import { usePreavisRetraiteStore } from "../../index";
 import { useForm } from "react-final-form";
+import { OnChange } from "react-final-form-listeners";
 import { PreavisRetraiteFormState } from "../../form";
 import { getSupportedCC } from "../../../common/situations.utils";
 import { SelectAgreement } from "../../../common";
 import { supportedCcn } from "@socialgouv/modeles-social";
+import { AGREEMENT_NAME } from "../../../common/Agreement/form-constants";
 
 const RenderAgreementStep = (): JSX.Element => {
   const { title, onChange } = usePreavisRetraiteStore((state) => ({
@@ -14,17 +16,18 @@ const RenderAgreementStep = (): JSX.Element => {
   const form = useForm<PreavisRetraiteFormState>();
 
   return (
-    <SelectAgreement
-      title={title}
-      form={form}
-      onChange={() => {
-        console.log("On agreement change !!!");
-        // Delete infos when change CC
-        form.change("infos", undefined);
-        onChange(form);
-      }}
-      supportedAgreements={getSupportedCC(supportedCcn)}
-    />
+    <>
+      <SelectAgreement
+        title={title}
+        form={form}
+        supportedAgreements={getSupportedCC(supportedCcn)}
+      />
+      <OnChange name={AGREEMENT_NAME}>
+        {(values, _previous) => {
+          onChange(form);
+        }}
+      </OnChange>
+    </>
   );
 };
 

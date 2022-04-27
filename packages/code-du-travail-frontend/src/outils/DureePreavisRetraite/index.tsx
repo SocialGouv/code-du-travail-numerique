@@ -1,6 +1,5 @@
 import React from "react";
 import Simulator from "../Components/Simulator";
-import { PreavisRetraiteStepLabel } from "./types";
 import {
   IntroductionStep,
   RenderAgreementStep,
@@ -54,22 +53,22 @@ const Content = ({
       steps={[
         {
           name: "Introduction",
-          label: PreavisRetraiteStepLabel.intro,
+          label: "intro",
           Component: IntroductionStep,
         },
         {
           name: "Origine du départ",
-          label: PreavisRetraiteStepLabel.origin,
+          label: "origin",
           Component: RenderOriginStep,
         },
         {
           name: "Convention collective",
-          label: PreavisRetraiteStepLabel.agreement,
+          label: "agreement",
           Component: RenderAgreementStep,
         },
         {
           name: "Informations",
-          label: PreavisRetraiteStepLabel.infos,
+          label: "infos",
           Component: RenderInformationStep,
         },
         /*

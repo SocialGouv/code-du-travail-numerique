@@ -39,11 +39,12 @@ const removeNotValidQuestion = (
   currentQuestions: Question[]
 ): {
   new: Question[];
-  removed?: Question[];
+  removedNames?: string[];
 } => {
   if (!answerQuestionName) {
     return {
-      new: currentQuestions,
+      new: [],
+      removedNames: ["infos"],
     };
   }
   const question = currentQuestions.findIndex(
@@ -53,7 +54,9 @@ const removeNotValidQuestion = (
     // Question has been already answered
     return {
       new: currentQuestions.slice(0, question + 1),
-      removed: currentQuestions.slice(question + 1),
+      removedNames: currentQuestions
+        .slice(question + 1)
+        .map((item) => `infos.${item.name}`),
     };
   }
   return {
@@ -63,13 +66,13 @@ const removeNotValidQuestion = (
 
 const removeOutdatedQuestionFromFormState = (
   values: PreavisRetraiteFormState,
-  removedQuestions: Question[] | undefined
+  removedQuestions: string[] | undefined
 ) => {
   if (removedQuestions) {
     const newValues = { ...values };
-    removedQuestions.forEach((question) => {
+    removedQuestions.forEach((name) => {
       if (newValues.infos) {
-        delete newValues.infos[question.name];
+        delete newValues.infos[name];
       }
     });
     return newValues;
@@ -82,19 +85,18 @@ const computeInfoQuestions = (
   removeQuestionFromForm: (names: string[]) => void,
   answeredQuestionName?: string
 ): PreavisRetraiteStore => {
-  console.log("Compute question for state ", state.formValues);
   const result = removeNotValidQuestion(
     answeredQuestionName,
     state.steps.informations.questions
   );
-  if (result.removed && result.removed.length > 0) {
-    removeQuestionFromForm(result.removed.map((item) => item.name));
+  if (result.removedNames && result.removedNames.length > 0) {
+    removeQuestionFromForm(result.removedNames);
   }
   const currentQuestions = result.new;
   const publicodes = state.publicodes;
   publicodes.setSituation(
     stateToPublicode(
-      removeOutdatedQuestionFromFormState(state.formValues, result.removed)
+      removeOutdatedQuestionFromFormState(state.formValues, result.removedNames)
     )
   );
 

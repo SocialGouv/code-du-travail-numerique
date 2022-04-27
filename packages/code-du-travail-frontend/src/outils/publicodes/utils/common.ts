@@ -3,7 +3,6 @@ import { EvaluatedNode } from "publicodes";
 
 import { AgreementSupportInfo } from "../../common/Agreement/types";
 import { OldReference, PublicodesResult, PublicodesSimulator } from "../types";
-import { convertDaysIntoBetterUnit } from "./preavis-retraite";
 
 export const reverseValues = (
   values: Record<string, string>
@@ -42,10 +41,6 @@ export const convertedResult = (
   evaluatedNode: EvaluatedNode
 ): PublicodesResult => {
   switch (simulator) {
-    case PublicodesSimulator.PREAVIS_RETRAITE:
-      return convertDaysIntoBetterUnit(
-        evaluatedNode.nodeValue as unknown as string
-      );
     case PublicodesSimulator.INDEMNITE_LICENCIEMENT:
       return {
         unit: evaluatedNode.unit,

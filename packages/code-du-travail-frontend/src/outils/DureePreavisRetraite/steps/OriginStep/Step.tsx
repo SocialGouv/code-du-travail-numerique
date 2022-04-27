@@ -8,8 +8,8 @@ import { ErrorField } from "../../../common/ErrorField";
 import { Question } from "../../../common/Question";
 import { RadioContainer } from "../../../common/stepStyles";
 import { required } from "../../../common/validators";
-import { OriginMandatoryName } from "../../types";
 import { Origin } from "../../state";
+import { OriginMandatoryName } from "../../form";
 
 export type OriginStepProps = {
   showWarning: boolean;

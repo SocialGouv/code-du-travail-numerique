@@ -1,4 +1,3 @@
-import { MissingArgs } from "../../../../publicodes";
 import {
   dummyPublicodes,
   generateStore,
@@ -6,6 +5,7 @@ import {
 } from "../../__tests__/dummies";
 import { computeInfoQuestions } from "../index";
 import { initialState } from "../../preavisRetraiteStore";
+import { MissingArgs } from "@socialgouv/modeles-social";
 
 describe("computeInfoQuestions", () => {
   const missing1: MissingArgs = {
@@ -57,13 +57,14 @@ describe("computeInfoQuestions", () => {
       expect(newState.steps.informations.questions).toStrictEqual([question1]);
     });
 
-    it("ne doit pas retirer du form des réponses", () => {
-      expect(mockRemoveQuestionFromForm.mock.calls).toHaveLength(0);
+    it("doit retirer les anciennes réponses du form", () => {
+      expect(mockRemoveQuestionFromForm.mock.calls).toHaveLength(1);
+      expect(mockRemoveQuestionFromForm.mock.calls[0][0]).toEqual(["infos"]);
     });
   });
 
   describe("il n'y a plus de questions manquantes", () => {
-    const mockRemoveQuestionFromForm = jest.fn((names: string[]): void => {});
+    const mockRemoveQuestionFromForm = jest.fn(() => {});
     const publicodes = dummyPublicodes;
     publicodes.data = {
       ...publicodesData,
@@ -129,8 +130,8 @@ describe("computeInfoQuestions", () => {
     it("doit retirer du form les réponses aux questions 2 et 3", () => {
       expect(mockRemoveQuestionFromForm.mock.calls).toHaveLength(1);
       expect(mockRemoveQuestionFromForm.mock.calls[0][0]).toEqual([
-        question2.name,
-        question3.name,
+        `infos.${question2.name}`,
+        `infos.${question3.name}`,
       ]);
     });
   });

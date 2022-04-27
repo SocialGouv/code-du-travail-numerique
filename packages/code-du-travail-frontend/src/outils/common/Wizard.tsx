@@ -12,6 +12,7 @@ import {
 } from "./type/WizardType";
 import { printResult } from "./utils/";
 import { SimulatorDecorator } from "../Components";
+import DebugInfo from "./DebugInfo";
 
 const anchorRef = React.createRef<HTMLLIElement>();
 
@@ -150,9 +151,13 @@ export const Wizard = ({
           listRef: anchorRef,
         }}
         onFormStepSubmit={handlePageSubmit}
-        showDebug={
+        debug={
           process.env.NODE_ENV !== "production" &&
-          process.env.NODE_ENV !== "test"
+          process.env.NODE_ENV !== "test" ? (
+            <DebugInfo />
+          ) : (
+            <></>
+          )
         }
         validate={validate}
         decorators={decorators}

@@ -25,7 +25,7 @@ describe("SimulatorDecorator", () => {
             steps: [],
           }}
           onFormStepSubmit={onFormStepSubmit}
-          showDebug={false}
+          debug={<></>}
           renderStep={(values) => <>Nom: {values.getState().values.name}</>}
           annotations={<>Rendu des annotations</>}
         />

@@ -1,6 +1,6 @@
 import React from "react";
-import { Rule } from "../../../publicodes";
 import PubliQuestion from "../../../common/PubliQuestion";
+import { Rule } from "@socialgouv/modeles-social";
 
 export type InformationStepProps = {
   questions: Question[];

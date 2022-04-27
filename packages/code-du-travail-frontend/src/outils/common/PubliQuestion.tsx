@@ -2,10 +2,11 @@ import React from "react";
 
 import Html from "../../common/Html";
 import { MatomoActionEvent, trackQuestion } from "../../lib";
-import { reverseValues, Rule, RuleType } from "../publicodes";
+import { reverseValues } from "../publicodes";
 import { SelectQuestion } from "./SelectQuestion";
 import { TextQuestion } from "./TextQuestion";
 import { YesNoPubliQuestion } from "./YesNoPubliQuestion";
+import { Rule, RuleType } from "@socialgouv/modeles-social";
 
 interface Props {
   name: string;

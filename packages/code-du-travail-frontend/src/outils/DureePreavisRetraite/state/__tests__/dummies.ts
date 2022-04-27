@@ -1,4 +1,4 @@
-import { PreavisRetraiteFormState } from "../../types";
+import { PreavisRetraiteFormState } from "../../form";
 
 import { PreavisRetraiteState, PreavisRetraiteStore } from "../types";
 import { initialState } from "../preavisRetraiteStore";
