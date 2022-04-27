@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { getByText, render } from "@testing-library/react";
 import React from "react";
 
 import { EmbeddedInjectedForm } from "../../../../../test/TestForm";
@@ -45,6 +45,35 @@ describe("SelectAgreement", () => {
           name: /Je ne sais pas quelle est ma convention collective/,
         })
       ).toBeInTheDocument();
+    });
+    it("should not show skip option & show message if passed in param", () => {
+      const { getByRole, getByText, queryByText } = render(
+        <EmbeddedInjectedForm<FormContent, Omit<Props, "form">>
+          Step={SelectAgreement}
+          props={{
+            supportedAgreements: [],
+            title: "Outil",
+            required: true,
+            note: "This is my note",
+          }}
+        />
+      );
+      expect(
+        queryByText(/Je ne souhaite pas renseigner ma convention collective/)
+      ).not.toBeInTheDocument();
+      expect(
+        getByRole("radio", {
+          checked: false,
+          name: /Je sais quelle est ma convention collective/,
+        })
+      ).toBeInTheDocument();
+      expect(
+        getByRole("radio", {
+          checked: false,
+          name: /Je ne sais pas quelle est ma convention collective/,
+        })
+      ).toBeInTheDocument();
+      expect(getByText(/This is my note/)).toBeInTheDocument();
     });
   });
 

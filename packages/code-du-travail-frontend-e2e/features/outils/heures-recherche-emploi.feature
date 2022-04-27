@@ -6,7 +6,7 @@ Fonctionnalité: Outil - Heures d'absence pour rechercher un emploi
   En tant que visiteur
   Je veux pouvoir utiliser le calculateur d'heures pour recherche d'emploi (en renseignant ou non ma CC)
 
-  Scénario: Parcours sans convention collective
+  Scénario: Parcours avec convention collective non traité
     Soit un utilisateur sur la page "/outils/heures-recherche-emploi"
 
     Alors je vois "Étapes"
@@ -18,14 +18,15 @@ Fonctionnalité: Outil - Heures d'absence pour rechercher un emploi
     Alors je vois "Quel est le nom de la convention collective applicable ?"
     Quand je clique sur "Suivant"
     Alors je vois "Vous devez répondre à cette question"
-    Quand je choisis "Je ne souhaite pas renseigner ma convention collective"
-    Alors je vois "Vous pouvez passer cette étape et poursuivre la simulation qui vous fournira un résultat basé sur le code du travail."
+    Quand je choisis "Je sais quelle est ma convention collective"
+    Alors je vois "Précisez et sélectionnez votre convention collective"
+    Quand je renseigne "1388" dans le champ "Nom de la convention collective ou son numéro d’identification IDCC"
+    Alors j'attends que le texte "Industrie du pétrole" apparaisse
+    Quand je clique sur "Industrie du pétrole"
+    Alors je vois "Convention collective non traitée"
     Quand je clique sur "Suivant"
 
-    Alors je vois "Nombre d’heures d’absence autorisée pour rechercher un emploi"
-    Alors je vois "Aucun résultat"
-    Quand j'ouvre l'accordion
-    Alors je vois "La convention collective n'a pas été renseignée"
+    Alors je vois "La simulation ne peut pas se poursuivre avec cette convention collective"
 
   Scénario: Parcours en connaissant sa convention collective et sans information complémentaire
     Soit un utilisateur sur la page "/outils/heures-recherche-emploi"
@@ -33,8 +34,6 @@ Fonctionnalité: Outil - Heures d'absence pour rechercher un emploi
     Quand je clique sur "Commencer"
 
     Alors je vois "Quel est le nom de la convention collective applicable ?"
-    Quand je clique sur "Suivant"
-    Alors je vois "Vous devez répondre à cette question"
     Quand je choisis "Je sais quelle est ma convention collective"
     Alors je vois "Précisez et sélectionnez votre convention collective"
     Quand je renseigne "843" dans le champ "Nom de la convention collective ou son numéro d’identification IDCC"
@@ -64,8 +63,6 @@ Fonctionnalité: Outil - Heures d'absence pour rechercher un emploi
     Quand je clique sur "Commencer"
 
     Alors je vois "Quel est le nom de la convention collective applicable ?"
-    Quand je clique sur "Suivant"
-    Alors je vois "Vous devez répondre à cette question"
     Quand je choisis "Je sais quelle est ma convention collective"
     Alors je vois "Précisez et sélectionnez votre convention collective"
     Quand je renseigne "787" dans le champ "Nom de la convention collective ou son numéro d’identification IDCC"

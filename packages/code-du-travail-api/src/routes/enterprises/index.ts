@@ -23,6 +23,7 @@ type Convention = {
   shortTitle: string;
   id: string;
   title: string;
+  url?: string;
 };
 
 type EnterpriseApiResponse = {
@@ -36,6 +37,7 @@ const toAgreement = (convention: Convention): Agreement => ({
   num: convention.idcc,
   shortTitle: convention.shortTitle,
   title: convention.title,
+  ...(convention.url ? { url: convention.url } : {}),
 });
 
 const populateAgreements = async (

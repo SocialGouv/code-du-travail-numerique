@@ -17,6 +17,7 @@ const onUserAction = () => {
 
 const selectedAgreement: Agreement = {
   id: "KALICONT000044594539",
+  url: "hello.com",
   num: 3239,
   shortTitle: "Particuliers employeurs et emploi à domicile",
   slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
@@ -38,6 +39,14 @@ const dataWithSelectedAgreementNotSupported: Props = {
   ...dataWithoutSelectedAgreement,
   selectedAgreement,
   supportedAgreements: [],
+};
+const dataWithSelectedAgreementNotSupportedWithCustomText: Props = {
+  ...dataWithoutSelectedAgreement,
+  selectedAgreement,
+  supportedAgreements: [],
+  alertAgreementNotSupported: (url: string) => (
+    <p>This is my custom text with the url: {url}</p>
+  ),
 };
 
 const dataWithSelectedAgreementNotFullySupported: Props = {
@@ -186,6 +195,17 @@ describe("AgreementSearch", () => {
       );
       expect(
         getByText(/Convention collective non traitée/)
+      ).toBeInTheDocument();
+    });
+    it("should render the alert with custom content provided", () => {
+      const { getByText } = render(
+        <EmbeddedForm<Props>
+          Step={AgreementSearch}
+          props={dataWithSelectedAgreementNotSupportedWithCustomText}
+        />
+      );
+      expect(
+        getByText(/This is my custom text with the url: hello.com/)
       ).toBeInTheDocument();
     });
   });

@@ -2870,11 +2870,11 @@ exports[`<Home /> should render 1`] = `
                         class="c50"
                       >
                         
-                        <h3
+                        <h2
                           class="c51"
                         >
                           Modèles de documents
-                        </h3>
+                        </h2>
                       </div>
                     </div>
                     <div
