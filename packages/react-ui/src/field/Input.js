@@ -4,10 +4,18 @@ import styled from "styled-components";
 
 import { box, breakpoints, fonts, spacings } from "../theme.js";
 
-export const Input = ({ icon: Icon, className, ...props }) => {
+export const Input = ({
+  icon: Icon,
+  className,
+  blockUpdateOnScroll,
+  ...props
+}) => {
+  const onWheel = blockUpdateOnScroll
+    ? { onWheel: (e) => e.target.blur() }
+    : {};
   return (
     <StyledWrapper className={className}>
-      <StyledInput hasIcon={Boolean(Icon)} {...props} />
+      <StyledInput hasIcon={Boolean(Icon)} {...onWheel} {...props} />
       {Icon && (
         <StyledIcon>
           <Icon />
@@ -18,6 +26,7 @@ export const Input = ({ icon: Icon, className, ...props }) => {
 };
 
 Input.propTypes = {
+  blockUpdateOnScroll: PropTypes.bool,
   className: PropTypes.string,
   icon: PropTypes.elementType,
   name: PropTypes.string.isRequired,
@@ -57,11 +66,13 @@ const StyledInput = styled.input`
     invalid ? theme.error : "transparent"};
   border-radius: ${box.borderRadius};
   box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
+
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     margin: 0;
     appearance: none;
   }
+
   &::-webkit-calendar-picker-indicator {
     display: block;
     width: ${spacings.large};
@@ -73,18 +84,23 @@ const StyledInput = styled.input`
     opacity: 1;
     mask-image: url("data:image/svg+xml;,${encodeURIComponent(iconDateSvg)}");
   }
+
   &:invalid {
     border-color: ${({ theme }) => theme.error};
   }
+
   &::placeholder {
     color: ${({ theme }) => theme.placeholder};
   }
+
   &:focus {
     border-color: ${({ theme }) => theme.secondary};
   }
+
   &:focus::placeholder {
     color: transparent;
   }
+
   appearance: none;
   @media (max-width: ${breakpoints.mobile}) {
     padding: 0 ${spacings.small};

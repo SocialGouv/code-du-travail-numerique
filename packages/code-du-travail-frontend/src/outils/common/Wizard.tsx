@@ -46,9 +46,6 @@ function Wizard({
     if (node && stepIndex > 0) {
       node.focus();
     }
-    if (window) {
-      window.scrollTo(0, 0);
-    }
   });
 
   const prevStep = (values) => {
