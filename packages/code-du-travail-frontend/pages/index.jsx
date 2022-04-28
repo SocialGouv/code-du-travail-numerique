@@ -89,6 +89,7 @@ const Home = ({ themes = [], highlights = [] }) => (
                     custom
                     icon={icons[icon]}
                     title={title}
+                    titleTagType="h3"
                   >
                     <Paragraph noMargin>{description}</Paragraph>
                   </CallToActionTile>

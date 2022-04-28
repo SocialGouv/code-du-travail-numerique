@@ -12,23 +12,4 @@ describe("<StepResult />", () => {
     });
     expect(container).toMatchSnapshot();
   });
-  it("should render with no cc", () => {
-    const { container } = renderForm(StepResult, {});
-    expect(container).toMatchSnapshot();
-  });
-  it("should render with unhandled cc", () => {
-    const { container } = renderForm(StepResult, {
-      ccn: {
-        selected: {
-          id: "KALICONT000005635662",
-          num: 1561,
-          shortTitle: "Cordonnerie multiservice",
-          slug: "1561-cordonnerie-multiservice",
-          title:
-            "Convention collective nationale de la cordonnerie multiservice du 7 août 1989. Elargie au secteur des cordonniers industriels ",
-        },
-      },
-    });
-    expect(container).toMatchSnapshot();
-  });
 });

@@ -8,21 +8,19 @@ describe("robots.txt", () => {
     jest.clearAllMocks();
   });
   it("should generate production robots.txt", () => {
-    const host = "localhost";
     const robotsProd = [
       "User-agent: *",
       "Disallow: /assets/",
       "Disallow: /images/",
       "",
-      `Sitemap: https://${host}/sitemap.xml`,
+      `Sitemap: https://code.travail.gouv.fr/sitemap.xml`,
     ].join("\n");
-    generateRobotsTxt(true, host);
+    generateRobotsTxt(true);
     expect(fs.writeFileSync).toHaveBeenCalledWith(filePath, robotsProd);
   });
   it("should generate development robots.txt", () => {
-    const host = "localhost";
     const robotsDev = ["User-agent: *", "Disallow: /"].join("\n");
-    generateRobotsTxt(false, host);
+    generateRobotsTxt(false);
     expect(fs.writeFileSync).toHaveBeenCalledWith(filePath, robotsDev);
   });
 });

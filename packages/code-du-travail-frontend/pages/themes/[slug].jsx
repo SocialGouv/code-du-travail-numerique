@@ -10,7 +10,7 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
-import { Breadcrumbs } from "../../src/common/Breadcrumbs";
+import Breadcrumbs from "../../src/common/Breadcrumbs";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { SearchResults } from "../../src/search/SearchResults";

@@ -144,3 +144,19 @@ export const getSupportedCC = (data) => {
     };
   });
 };
+
+export const validateUnsupportedAgreement =
+  (supportedAgreement) =>
+  ({ ccn }) => {
+    const errors = {};
+    if (ccn?.selected) {
+      const idccInfo = supportedAgreement.find(
+        (item) => item.idcc === ccn.selected.num
+      );
+      if (!idccInfo) {
+        errors.agreementMissing = true;
+      }
+    }
+
+    return errors;
+  };

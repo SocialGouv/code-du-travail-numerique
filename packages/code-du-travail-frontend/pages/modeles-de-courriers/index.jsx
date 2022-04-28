@@ -91,7 +91,13 @@ function Modeles(props) {
                       href={`${getRouteBySource(SOURCES.LETTERS)}/${slug}`}
                       passHref
                     >
-                      <Tile wide custom title={title} subtitle={theme.title}>
+                      <Tile
+                        wide
+                        custom
+                        title={title}
+                        subtitle={theme.title}
+                        titleTagType="h3"
+                      >
                         {summarize(description)}
                       </Tile>
                     </Link>

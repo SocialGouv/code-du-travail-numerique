@@ -1676,7 +1676,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
               </button>
               <a
                 class="c34 spacing-left"
-                href="mailto:?subject=A%20lire%20sur%20le%20code%20du%20travail%20num%C3%A9rique%20%3A%20undefined&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+                href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20undefined&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                 title="Envoyer par email"
               >
                 <span
@@ -1931,7 +1931,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
                     class="c63"
                     href="/integration"
                   >
-                    Intégrer le Code du travail numérique
+                    Intégrer les outils du Code du travail numérique
                   </a>
                 </li>
               </ul>

@@ -1,4 +1,5 @@
 import { Button, Input, Label, Paragraph, theme } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import debounce from "debounce-promise";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
@@ -6,7 +7,6 @@ import Spinner from "react-svg-spinner";
 import styled from "styled-components";
 import { v4 as generateUUID } from "uuid";
 
-import { push as matopush } from "@socialgouv/matomo-next";
 import { CompanyTile } from "./CompanyTile";
 import { ConventionLink } from "./ConventionLink";
 import { HelpModal } from "./HelpModal";
@@ -19,7 +19,11 @@ const trackInput = debounce((query, path, trackingUID) => {
   }
 }, 2000);
 
-const Search = ({ onSelectConvention }) => {
+type Props = {
+  onSelectConvention?: () => void;
+};
+
+const Search = ({ onSelectConvention }: Props): JSX.Element => {
   const router = useRouter();
   const [query, setQuery] = useState("");
   const [trackingUID, setTrackingUID] = useState("");

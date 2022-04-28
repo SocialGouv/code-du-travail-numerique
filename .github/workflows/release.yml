@@ -8,6 +8,7 @@ concurrency:
 
 jobs:
   release:
+    if: github.ref == 'refs/heads/master'
     name: Release
     runs-on: ubuntu-latest
     steps:
@@ -42,3 +43,16 @@ jobs:
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
           NPM_TOKEN: ${{ secrets.SOCIALGROOVYBOT_NPM_TOKEN }}
+      - name: Rebase master to dev
+        run: |
+          git config --global user.name "${NAME}"
+          git config --global user.email "${EMAIL}"
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git switch dev
+          git pull
+          git rebase master
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
+          NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
+          EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}

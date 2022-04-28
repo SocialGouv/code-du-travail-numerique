@@ -30,7 +30,7 @@ export const PublicodesProvider = ({
 
   const execute = (rule: string): PublicodesResult => {
     const result = handleExecute(engine, data.situation, rule);
-    return convertedResult(simulator, result.nodeValue as unknown as string);
+    return convertedResult(simulator, result);
   };
 
   const setSituation = (args: Record<string, any>) => {
@@ -42,7 +42,7 @@ export const PublicodesProvider = ({
     );
     setData({
       missingArgs,
-      result: convertedResult(simulator, result.nodeValue as unknown as string),
+      result: convertedResult(simulator, result),
       situation,
     });
   };

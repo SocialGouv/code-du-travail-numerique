@@ -2,7 +2,9 @@ name: Pre-production
 
 on:
   push:
-    tags:
+    branches:
+      - master
+    tags-ignore:
       - v*
 
 concurrency:
@@ -21,7 +23,7 @@ jobs:
             path: "."
             args: |
               NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
-              NEXT_PUBLIC_SENTRY_ENV=production
+              NEXT_PUBLIC_SENTRY_ENV=preproduction
           - images: "code-du-travail-api"
             path: "./packages/code-du-travail-api/"
     steps:

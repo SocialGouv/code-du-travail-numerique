@@ -1,7 +1,7 @@
 import Engine from "publicodes";
 
 import { mergeModels } from "../../../internal/merger";
-import { getReferences } from "../../../utils/GetReferences";
+import { getReferences } from "../../../utils";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
@@ -58,6 +58,7 @@ test.each`
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
         "contrat salarié . travailleur handicapé": "non",
+        "préavis de retraite": "oui",
       })
     );
 
@@ -76,6 +77,7 @@ test("Vérification des références juridiques pour un employé du groupe 4 en 
       "contrat salarié . convention collective . industrie pharmaceutique . groupe": 4,
       "contrat salarié . mise à la retraite": "oui",
       "contrat salarié . travailleur handicapé": "non",
+      "préavis de retraite": "oui",
     })
   );
 
@@ -96,6 +98,7 @@ test("Vérification des références juridiques pour un employé du groupe 1 à 
       "contrat salarié . convention collective . industrie pharmaceutique . groupe": 3,
       "contrat salarié . mise à la retraite": "oui",
       "contrat salarié . travailleur handicapé": "non",
+      "préavis de retraite": "oui",
     })
   );
 

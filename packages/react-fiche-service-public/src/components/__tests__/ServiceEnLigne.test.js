@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import React from "react";
 
 import ServiceEnLigne from "../ServiceEnLigne";
@@ -10,5 +10,8 @@ describe("<ServiceEnLigne />", () => {
       <ServiceEnLigne data={serviceEnLigneDataMock} />
     );
     expect(container).toMatchSnapshot();
+
+    const title = screen.getByText("Se retrouve dans en entête");
+    expect(title.tagName).toEqual("P");
   });
 });

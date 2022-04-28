@@ -38,6 +38,8 @@ async function _getPrequalified() {
     },
     index,
   });
+  logger.info(`Loading ${count} prequalifiedQueries`);
+
   const response = await elasticsearchClient.search({
     body: {
       query: prequalifiedQuery,
@@ -45,6 +47,7 @@ async function _getPrequalified() {
     },
     index,
   });
+
   if (response.body.hits.total.value === 0) {
     return null;
   }

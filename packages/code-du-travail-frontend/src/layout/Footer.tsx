@@ -8,6 +8,7 @@ import {
   theme,
   Title,
 } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import getConfig from "next/config";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -17,7 +18,6 @@ import styled from "styled-components";
 import { ContactModal } from "../common/ContactModal";
 import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
 import { Partners } from "../home/Partners";
-import { push as matopush } from "@socialgouv/matomo-next";
 
 const { DirectionRight: DirectionRightIcon } = icons;
 const { publicRuntimeConfig } = getConfig();
@@ -103,7 +103,7 @@ const Footer = (): JSX.Element => {
                 <li>
                   <Link passHref href="/integration">
                     <StyledLink>
-                      Intégrer le Code du travail numérique
+                      Intégrer les outils du Code du travail numérique
                     </StyledLink>
                   </Link>
                 </li>

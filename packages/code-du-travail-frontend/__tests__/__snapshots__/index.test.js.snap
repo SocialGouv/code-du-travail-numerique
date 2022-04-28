@@ -582,6 +582,8 @@ exports[`<Home /> should render 1`] = `
 
 .c51 {
   margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .c52 {
@@ -3071,7 +3073,7 @@ exports[`<Home /> should render 1`] = `
                     class="c78"
                     href="/integration"
                   >
-                    Intégrer le Code du travail numérique
+                    Intégrer les outils du Code du travail numérique
                   </a>
                 </li>
               </ul>

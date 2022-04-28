@@ -9,6 +9,7 @@ class ServiceEnLigne extends React.PureComponent {
   static propTypes = {
     data: PropTypes.object.isRequired,
   };
+
   render() {
     const { data } = this.props;
     const type = data.attributes.type;
@@ -33,7 +34,6 @@ class ServiceEnLigne extends React.PureComponent {
 }
 
 export default ServiceEnLigne;
-
 const { spacings } = theme;
 
 const StyledTile = styled(Tile)`

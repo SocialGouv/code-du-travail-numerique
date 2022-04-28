@@ -14,9 +14,7 @@ class Tabulator extends React.PureComponent {
   render() {
     const { data, headingLevel: previousHeadingLevel } = this.props;
     const headingLevel =
-      previousHeadingLevel > 0
-        ? previousHeadingLevel + 1
-        : previousHeadingLevel;
+      previousHeadingLevel > 0 ? previousHeadingLevel + 1 : 1;
 
     const tabsData = data.children.map((tab) => {
       return {

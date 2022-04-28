@@ -184,6 +184,8 @@ exports[`<Highlights /> should render 1`] = `
 
 .c14 {
   margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .c15 {
@@ -372,11 +374,11 @@ exports[`<Highlights /> should render 1`] = `
                     >
                       Santé, sécurité et conditions de travail
                     </p>
-                    <h3
+                    <p
                       class="c14"
                     >
                       Coronavirus : je suis salarié
-                    </h3>
+                    </p>
                   </div>
                 </div>
                 <div
@@ -408,11 +410,11 @@ exports[`<Highlights /> should render 1`] = `
                     >
                       Santé, sécurité et conditions de travail
                     </p>
-                    <h3
+                    <p
                       class="c14"
                     >
                       Coronavirus : je suis employeur
-                    </h3>
+                    </p>
                   </div>
                 </div>
                 <div

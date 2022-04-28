@@ -1,0 +1,35 @@
+name: Pre-release
+
+on: workflow_dispatch
+
+concurrency:
+  cancel-in-progress: true
+  group: pre-release-${{ github.ref }}
+
+jobs:
+  release:
+    name: Pre-release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Rebase dev to master
+        run: |
+          git config --global user.name "${NAME}"
+          git config --global user.email "${EMAIL}"
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git switch master
+          git pull
+          git rebase dev
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
+          NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
+          EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}

@@ -51,7 +51,8 @@ export const Situation: React.FC<Props> = ({ content, elements }) => {
       if (content["contrat salarié - mise à la retraite"] === "oui") {
         if (
           content.ccn &&
-          supportedCcn.map((v) => v.idcc).includes(content.ccn.selected?.num)
+          content.ccn.selected &&
+          supportedCcn.map((v) => v.idcc).includes(content.ccn.selected.num)
         ) {
           return [
             <Text key="handicap">
