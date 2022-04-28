@@ -20,14 +20,14 @@ interface Props {
   publicodesRules: any;
   slug: string;
   title: string;
-  titleH1: string;
+  displayTitle: string;
 }
 
 function Widgets({
   icon,
   slug,
   title,
-  titleH1,
+  displayTitle,
   publicodesRules,
 }: Props): JSX.Element {
   const Tool = toolsBySlug[slug];
@@ -37,7 +37,7 @@ function Widgets({
       <Tool
         icon={icon}
         title={title}
-        titleH1={titleH1}
+        displayTitle={displayTitle}
         publicodesRules={publicodesRules}
       />
 
@@ -69,7 +69,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     };
   }
 
-  const { slug, icon, title, titleH1 } = tool;
+  const { slug, icon, title, displayTitle } = tool;
 
   const publicodesRules = loadPublicodes(slug);
 
@@ -79,7 +79,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
       publicodesRules,
       slug,
       title,
-      titleH1,
+      displayTitle,
     },
   };
 };

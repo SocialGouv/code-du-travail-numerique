@@ -28,7 +28,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
         <Grid>
           {DocumentsTile}
           {cdtnSimulators.map(
-            ({ id, action, description, icon, slug, titleH1 }) => {
+            ({ id, action, description, icon, slug, displayTitle }) => {
               const linkProps = {
                 passHref: true,
               };
@@ -38,7 +38,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
                   <CallToActionTile
                     action={action}
                     custom
-                    title={titleH1}
+                    title={displayTitle}
                     icon={icons[icon]}
                     titleTagType="h2"
                   >

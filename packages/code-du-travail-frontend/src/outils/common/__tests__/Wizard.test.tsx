@@ -59,7 +59,7 @@ describe("<Wizard />", () => {
     const { container } = render(
       <Wizard
         title="test"
-        titleH1="test H1"
+        displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={initialState}
       />
@@ -70,7 +70,7 @@ describe("<Wizard />", () => {
     const { container, getByText } = render(
       <Wizard
         title="test"
-        titleH1="test H1"
+        displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={initialState}
       />
@@ -89,7 +89,7 @@ describe("<Wizard />", () => {
     const { getByText } = render(
       <Wizard
         title="test"
-        titleH1="test H1"
+        displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={initialState}
       />
@@ -103,7 +103,7 @@ describe("<Wizard />", () => {
     const { container } = render(
       <Wizard
         title="test"
-        titleH1="test H1"
+        displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={state}
       />
@@ -115,7 +115,7 @@ describe("<Wizard />", () => {
     const { container, getByText } = render(
       <Wizard
         title="test"
-        titleH1="test H1"
+        displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={state}
       />
@@ -135,7 +135,7 @@ describe("<Wizard />", () => {
     const { container } = render(
       <Wizard
         title="test"
-        titleH1="test H1"
+        displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={state}
         initialValues={{ firstName: "lionel" }}
@@ -148,7 +148,7 @@ describe("<Wizard />", () => {
     const { container } = render(
       <Wizard
         title="test"
-        titleH1="test H1"
+        displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={initialState}
         Rules={() => <Rule key="key" />}
@@ -167,7 +167,7 @@ describe("<Wizard />", () => {
     const { getByText } = render(
       <Wizard
         title="test"
-        titleH1="test H1"
+        displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={state}
       />
@@ -188,7 +188,7 @@ describe("<Wizard />", () => {
     const { getByText } = render(
       <Wizard
         title="test"
-        titleH1="test H1"
+        displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={state}
       />
@@ -215,7 +215,7 @@ describe("<Wizard />", () => {
     const { getByText, getByLabelText } = render(
       <Wizard
         title="test"
-        titleH1="test H1"
+        displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={initialState}
         Rules={RulesAdditionalStep}

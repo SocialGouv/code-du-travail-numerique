@@ -23,7 +23,7 @@ Object {
       ],
       "slug": "indemnite-licenciement",
       "title": "Indemnité de licenciement",
-      "titleH1": "Calculer l'indemnité de licenciement",
+      "displayTitle": "Calculer l'indemnité de licenciement",
     },
     Object {
       "action": "Calculer",
@@ -44,7 +44,7 @@ Object {
       ],
       "slug": "preavis-demission",
       "title": "Préavis de démission",
-      "titleH1": "Calculer le préavis de démission",
+      "displayTitle": "Calculer le préavis de démission",
     },
     Object {
       "action": "Estimer",
@@ -76,7 +76,7 @@ Object {
       ],
       "slug": "simulateur-embauche",
       "title": "Salaire brut/net",
-      "titleH1": "Calculer le salaire brut/net",
+      "displayTitle": "Calculer le salaire brut/net",
     },
     Object {
       "action": "Estimer",
@@ -100,7 +100,7 @@ Object {
       ],
       "slug": "indemnite-precarite",
       "title": "Indemnité de précarité",
-      "titleH1": "Calculer l'indemnité de précarité",
+      "displayTitle": "Calculer l'indemnité de précarité",
     },
     Object {
       "action": "Calculer",
@@ -120,7 +120,7 @@ Object {
       ],
       "slug": "preavis-licenciement",
       "title": "Préavis de licenciement",
-      "titleH1": "Calculer le préavis de licenciement",
+      "displayTitle": "Calculer le préavis de licenciement",
     },
     Object {
       "action": "Calculer",
@@ -146,7 +146,7 @@ Object {
       ],
       "slug": "heures-recherche-emploi",
       "title": "Heures d'absence pour rechercher un emploi",
-      "titleH1": "Calculer le nombre d'heures d'absence pour rechercher un emploi",
+      "displayTitle": "Calculer le nombre d'heures d'absence pour rechercher un emploi",
     },
     Object {
       "action": "Consulter",
@@ -165,7 +165,7 @@ Object {
       ],
       "slug": "convention-collective",
       "title": "Trouver sa convention collective",
-      "titleH1": "Trouver sa convention collective",
+      "displayTitle": "Trouver sa convention collective",
     },
     Object {
       "action": "Calculer",
@@ -178,7 +178,7 @@ Object {
       "metaTitle": "Simulateur - Calcul du préavis de départ ou mise à la retraite",
       "slug": "preavis-retraite",
       "title": "Préavis de départ ou de mise à la retraite",
-      "titleH1": "Calculer le préavis de départ à la retraite",
+      "displayTitle": "Calculer le préavis de départ à la retraite",
     },
   ],
   "externalTools": Array [
@@ -217,7 +217,7 @@ Object {
       ],
       "slug": "indemnite-licenciement",
       "title": "Indemnité de licenciement",
-      "titleH1": "Calculer l'indemnité de licenciement",
+      "displayTitle": "Calculer l'indemnité de licenciement",
     },
     Object {
       "action": "Calculer",
@@ -238,7 +238,7 @@ Object {
       ],
       "slug": "preavis-demission",
       "title": "Préavis de démission",
-      "titleH1": "Calculer le préavis de démission",
+      "displayTitle": "Calculer le préavis de démission",
     },
     Object {
       "action": "Estimer",
@@ -270,7 +270,7 @@ Object {
       ],
       "slug": "simulateur-embauche",
       "title": "Salaire brut/net",
-      "titleH1": "Calculer le salaire brut/net",
+      "displayTitle": "Calculer le salaire brut/net",
     },
     Object {
       "action": "Estimer",
@@ -294,7 +294,7 @@ Object {
       ],
       "slug": "indemnite-precarite",
       "title": "Indemnité de précarité",
-      "titleH1": "Calculer l'indemnité de précarité",
+      "displayTitle": "Calculer l'indemnité de précarité",
     },
     Object {
       "action": "Calculer",
@@ -314,7 +314,7 @@ Object {
       ],
       "slug": "preavis-licenciement",
       "title": "Préavis de licenciement",
-      "titleH1": "Calculer le préavis de licenciement",
+      "displayTitle": "Calculer le préavis de licenciement",
     },
     Object {
       "action": "Calculer",
@@ -340,7 +340,7 @@ Object {
       ],
       "slug": "heures-recherche-emploi",
       "title": "Heures d'absence pour rechercher un emploi",
-      "titleH1": "Calculer le nombre d'heures d'absence pour rechercher un emploi",
+      "displayTitle": "Calculer le nombre d'heures d'absence pour rechercher un emploi",
     },
     Object {
       "action": "Consulter",
@@ -359,7 +359,7 @@ Object {
       ],
       "slug": "convention-collective",
       "title": "Trouver sa convention collective",
-      "titleH1": "Trouver sa convention collective",
+      "displayTitle": "Trouver sa convention collective",
     },
     Object {
       "action": "Calculer",
@@ -372,7 +372,7 @@ Object {
       "metaTitle": "Simulateur - Calcul du préavis de départ ou mise à la retraite",
       "slug": "preavis-retraite",
       "title": "Préavis de départ ou de mise à la retraite",
-      "titleH1": "Calculer le préavis de départ à la retraite",
+      "displayTitle": "Calculer le préavis de départ à la retraite",
     },
   ],
   "externalTools": Array [

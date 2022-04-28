@@ -2,7 +2,7 @@
   {
     "icon": "Indemnity",
     "title": "Indemnité de licenciement",
-    "titleH1": "Calculer l'indemnité de licenciement",
+    "displayTitle": "Calculer l'indemnité de licenciement",
     "metaTitle": "Simulateur - Calcul de l'indemnité de licenciement",
     "slug": "indemnite-licenciement",
     "questions": [
@@ -24,7 +24,7 @@
   {
     "icon": "Rules",
     "title": "Préavis de démission",
-    "titleH1": "Calculer le préavis de démission",
+    "displayTitle": "Calculer le préavis de démission",
     "metaTitle": "Simulateur - Calcul du préavis de démission",
     "slug": "preavis-demission",
     "questions": [
@@ -45,7 +45,7 @@
   {
     "icon": "Salary",
     "title": "Salaire brut/net",
-    "titleH1": "Calculer le salaire brut/net",
+    "displayTitle": "Calculer le salaire brut/net",
     "metaTitle": "Simulateur - Calcul du salaire brut/net",
     "slug": "simulateur-embauche",
     "questions": [
@@ -77,7 +77,7 @@
   {
     "icon": "Precarity",
     "title": "Indemnité de précarité",
-    "titleH1": "Calculer l'indemnité de précarité",
+    "displayTitle": "Calculer l'indemnité de précarité",
     "metaTitle": "Simulateur - Calcul de l'indemnité de précarité",
     "slug": "indemnite-precarite",
     "questions": [
@@ -101,7 +101,7 @@
   {
     "icon": "CalendarTime",
     "title": "Préavis de licenciement",
-    "titleH1": "Calculer le préavis de licenciement",
+    "displayTitle": "Calculer le préavis de licenciement",
     "metaTitle": "Simulateur - Calcul du préavis de licenciement",
     "slug": "preavis-licenciement",
     "questions": [
@@ -121,7 +121,7 @@
   {
     "icon": "Time",
     "title": "Heures d'absence pour rechercher un emploi",
-    "titleH1": "Calculer le nombre d'heures d'absence pour rechercher un emploi",
+    "displayTitle": "Calculer le nombre d'heures d'absence pour rechercher un emploi",
     "metaTitle": "Simulateur - Calcul du nombre d’heures d'absence pour rechercher un emploi",
     "slug": "heures-recherche-emploi",
     "questions": [
@@ -147,7 +147,7 @@
   {
     "icon": "SearchCC",
     "title": "Trouver sa convention collective",
-    "titleH1": "Trouver sa convention collective",
+    "displayTitle": "Trouver sa convention collective",
     "metaTitle": "Trouver sa convention collective",
     "slug": "convention-collective",
     "questions": [
@@ -166,7 +166,7 @@
   {
     "icon": "CalendarTime",
     "title": "Préavis de départ ou de mise à la retraite",
-    "titleH1": "Calculer le préavis de départ à la retraite",
+    "displayTitle": "Calculer le préavis de départ à la retraite",
     "metaTitle": "Simulateur - Calcul du préavis de départ ou mise à la retraite",
     "slug": "preavis-retraite",
     "description": "Estimez la durée de préavis à respecter en cas de départ à la retraite ou de mise à la retraite",

@@ -6,18 +6,18 @@ import { initialState, stepReducer } from "./stepReducer";
 interface Props {
   icon: string;
   title: string;
-  titleH1: string;
+  displayTitle: string;
 }
 
 const DureePreavisLicenciement = ({
   icon,
   title,
-  titleH1,
+  displayTitle,
 }: Props): JSX.Element => (
   <Wizard
     icon={icon}
     title={title}
-    titleH1={titleH1}
+    displayTitle={displayTitle}
     duration="2 à 5 min"
     initialState={initialState}
     stepReducer={stepReducer}

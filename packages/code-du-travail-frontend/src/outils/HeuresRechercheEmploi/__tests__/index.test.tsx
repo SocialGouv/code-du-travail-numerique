@@ -8,7 +8,7 @@ describe("<HeuresRechercheEmploi />", () => {
     const { container } = render(
       <HeuresRechercheEmploi
         title="Heures d'absence pour rechercher un emploi"
-        titleH1="Heures pour recherche d'emploi"
+        displayTitle="Heures pour recherche d'emploi"
         icon=""
       />
     );

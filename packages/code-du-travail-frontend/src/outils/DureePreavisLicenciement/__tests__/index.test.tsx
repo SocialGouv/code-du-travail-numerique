@@ -7,7 +7,7 @@ describe("<DureePreavisLicenciement />", () => {
     const { container } = render(
       <DureePreavisLicenciement
         title="Préavis de licenciement"
-        titleH1="Calculer le préavis de licenciement"
+        displayTitle="Calculer le préavis de licenciement"
         icon=""
       />
     );

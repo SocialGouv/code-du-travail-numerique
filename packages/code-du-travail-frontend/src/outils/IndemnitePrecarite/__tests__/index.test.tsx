@@ -7,7 +7,7 @@ describe("<SimulateurIndemnitePrecarite />", () => {
     const { container } = render(
       <SimulateurIndemnitePrecarite
         title="Indemnité de précarité"
-        titleH1="Calculer l'indemnité de précarité"
+        displayTitle="Calculer l'indemnité de précarité"
         icon=""
       />
     );

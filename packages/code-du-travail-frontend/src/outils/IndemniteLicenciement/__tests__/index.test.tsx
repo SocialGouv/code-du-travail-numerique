@@ -7,7 +7,7 @@ describe("<CalculateurIndemnite />", () => {
     const { container } = render(
       <CalculateurIndemnite
         title="Indemnité de licenciement"
-        titleH1="Calculer l'indemnité de licenciement"
+        displayTitle="Calculer l'indemnité de licenciement"
         icon=""
         publicodesRules={[]}
       />

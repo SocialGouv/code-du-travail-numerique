@@ -1,7 +1,7 @@
 export type Tool = {
   icon: string;
   title: string;
-  titleH1: string;
+  displayTitle: string;
   slug: string;
   questions: string[];
   description: string;
