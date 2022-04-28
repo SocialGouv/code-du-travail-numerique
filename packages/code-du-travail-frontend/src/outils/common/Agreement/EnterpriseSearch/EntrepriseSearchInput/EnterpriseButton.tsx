@@ -2,10 +2,13 @@ import { Tag, Text, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
-import Html from "../../../common/Html";
-import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
-import { ResultItem } from "../common/ResultList";
-import { TrackingProps, UserAction } from "../types";
+import { Enterprise } from "../../../../../conventions/Search/api/enterprises.service";
+import { ResultItem } from "../../components/ResultList";
+import Html from "../../../../../common/Html";
+import {
+  TrackingProps,
+  UserAction,
+} from "../../../../ConventionCollective/types";
 
 type CompagnyItemProps = {
   enterprise: Enterprise;

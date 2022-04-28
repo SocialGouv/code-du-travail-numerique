@@ -2,9 +2,8 @@ import { formatIdcc } from "@cdt/data";
 import { Paragraph } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
-
-import { Agreement } from "../../../conventions/Search/api/type";
-import { ResultItem } from "../common/ResultList";
+import { Agreement } from "../../../../../conventions/Search/api/type";
+import { ResultItem } from "../../components/ResultList";
 
 type AgreementItemProps = {
   agreement: Agreement;

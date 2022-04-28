@@ -1,8 +1,8 @@
 import { Alert, Paragraph, Text, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 
-import type { AgreementSupportInfo } from "./types";
-import { Agreement } from "../../../conventions/Search/api/type";
+import { AgreementSupportInfo } from "../types";
+import { Agreement } from "../../../../conventions/Search/api/type";
 import styled from "styled-components";
 
 type Props = {
