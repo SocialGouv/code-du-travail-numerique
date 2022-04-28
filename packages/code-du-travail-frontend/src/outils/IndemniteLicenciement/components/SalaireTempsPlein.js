@@ -76,7 +76,7 @@ function SalaireTempsPlein({ name }) {
                             id={`salary${index}`}
                             invalid={touched && invalid}
                             icon={icons.Euro}
-                            blockUpdateOnScroll
+                            updateOnScrollDisabled
                           />
                           {error && touched && invalid ? (
                             <InlineError>{error}</InlineError>

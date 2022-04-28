@@ -88,7 +88,7 @@ function StepSalaires({ form }) {
                                 type="number"
                                 invalid={touched && invalid}
                                 icon={icons.Euro}
-                                blockUpdateOnScroll
+                                updateOnScrollDisabled
                               />
                               {error && touched && invalid && (
                                 <Error>{error}</Error>

@@ -7,10 +7,10 @@ import { box, breakpoints, fonts, spacings } from "../theme.js";
 export const Input = ({
   icon: Icon,
   className,
-  blockUpdateOnScroll,
+  updateOnScrollDisabled,
   ...props
 }) => {
-  const onWheel = blockUpdateOnScroll
+  const onWheel = updateOnScrollDisabled
     ? { onWheel: (e) => e.target.blur() }
     : {};
   return (
@@ -26,10 +26,10 @@ export const Input = ({
 };
 
 Input.propTypes = {
-  blockUpdateOnScroll: PropTypes.bool,
   className: PropTypes.string,
   icon: PropTypes.elementType,
   name: PropTypes.string.isRequired,
+  updateOnScrollDisabled: PropTypes.bool,
 };
 
 Input.defaultProps = {
