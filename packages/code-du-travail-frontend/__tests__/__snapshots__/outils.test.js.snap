@@ -2472,7 +2472,11 @@ exports[`<Outils /> should render 1`] = `
                         class="c40"
                       >
                         
-                        
+                        <h2
+                          class="c41"
+                        >
+                          Trouver sa convention collective
+                        </h2>
                       </div>
                     </div>
                     <div
