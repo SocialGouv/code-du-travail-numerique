@@ -30,7 +30,7 @@ export type PublicodesState = {
 };
 
 export type PreavisRetraiteActions = {
-  onStepChange: (step: Step<StepName>) => void;
+  onStepChange: (oldStep: Step<StepName>, newStep: Step<StepName>) => void;
   onFormValuesChange: (values: PreavisRetraiteFormState) => void;
   onOriginChange: (type: Origin) => void;
   onAgreementChange: (form: FormApi) => void;

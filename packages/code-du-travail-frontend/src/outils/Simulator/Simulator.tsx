@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useMemo } from "react";
 import { SimulatorDecorator } from "../Components";
 import { printResult } from "../common/utils";
 import { Step, useSimulatorStore } from "./useSimulatorStore";
@@ -11,10 +11,8 @@ type Props<FormState, StepName extends string> = {
   steps: Step<StepName>[];
   debug: JSX.Element;
   onFormValuesChange: (values: FormState) => void;
-  onFinishStep: (step: Step<StepName>) => void;
+  onStepChange: (oldStep: Step<StepName>, newStep: Step<StepName>) => void;
 };
-
-const anchorRef = React.createRef<HTMLLIElement>();
 
 const Simulator = <FormState, StepName extends string>({
   icon,
@@ -23,7 +21,7 @@ const Simulator = <FormState, StepName extends string>({
   steps,
   debug,
   onFormValuesChange,
-  onFinishStep,
+  onStepChange,
 }: Props<FormState, StepName>): JSX.Element => {
   const { currentStepIndex, previousStep, nextStep } = useSimulatorStore(
     (state) => state
@@ -31,18 +29,6 @@ const Simulator = <FormState, StepName extends string>({
 
   const currentStep = steps[currentStepIndex];
   const Component = currentStep.Component;
-
-  useEffect(() => {
-    const node = anchorRef.current;
-    // We only focus on wizard after wizard start
-    // that way focus is correctly placed on the form
-    if (node && currentStepIndex > 0) {
-      node.focus();
-    }
-    if (window) {
-      window.scrollTo(0, 0);
-    }
-  });
 
   const stepItems = useMemo(
     () =>
@@ -60,7 +46,7 @@ const Simulator = <FormState, StepName extends string>({
       throw Error("Can't show the next step with index more than steps");
     } else {
       nextStep();
-      onFinishStep(currentStep);
+      onStepChange(currentStep, steps[nextStepIndex]);
       matopush([
         "trackEvent",
         "outil",
@@ -74,6 +60,7 @@ const Simulator = <FormState, StepName extends string>({
     const previousStepIndex = currentStepIndex - 1;
     if (previousStepIndex >= 0) {
       previousStep();
+      onStepChange(currentStep, steps[previousStepIndex]);
       matopush([
         "trackEvent",
         "outil",
@@ -104,11 +91,10 @@ const Simulator = <FormState, StepName extends string>({
       steps={{
         steps: stepItems,
         activeIndex: currentStepIndex,
-        listRef: anchorRef,
       }}
       onFormStepSubmit={onNextStep}
       onFormStateUpdate={onFormValuesChange}
-      renderStep={Component}
+      renderStep={() => <Component />}
       options={{
         debug: debug,
         annotations: currentStep.options?.annotation,

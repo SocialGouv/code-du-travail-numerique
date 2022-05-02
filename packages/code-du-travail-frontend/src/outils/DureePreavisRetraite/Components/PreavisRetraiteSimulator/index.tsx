@@ -25,7 +25,7 @@ const PreavisRetraiteSimulator = ({
       duration="5 min"
       debug={<DebugInfo />}
       onFormValuesChange={onChange}
-      onFinishStep={onStepChange}
+      onStepChange={onStepChange}
       steps={steps}
     />
   );

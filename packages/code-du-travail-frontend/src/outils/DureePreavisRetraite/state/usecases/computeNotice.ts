@@ -4,7 +4,7 @@ import { stateToPublicode } from "./helpers";
 const computeNotice = (state: PreavisRetraiteStore): PreavisRetraiteStore => {
   const values = state.formValues;
   const publicodes = state.publicodes;
-  publicodes.setSituation(stateToPublicode(values));
+  const result = publicodes.setSituation(stateToPublicode(values));
   const legalResult = publicodes.execute(
     "contrat salarié . préavis de retraite légale en jours"
   );
@@ -21,7 +21,7 @@ const computeNotice = (state: PreavisRetraiteStore): PreavisRetraiteStore => {
       ...state.steps,
       result: {
         notice: {
-          result: publicodes.data.result,
+          result: result.result,
           agreement: {
             result: agreementResult,
             maximum: agreementMaximumResult,
@@ -35,6 +35,7 @@ const computeNotice = (state: PreavisRetraiteStore): PreavisRetraiteStore => {
           references: publicodes.getReferences(),
           values,
           situation: publicodes.data.situation,
+          minYearCount: state.steps.seniority.minYearCount,
         },
       },
     },

@@ -12,12 +12,8 @@ const initQuestions = (
     // Reset infos
     infos: {},
   });
-  console.log("New situation: ", situation);
-  const publicodes = state.publicodes;
-  const data = publicodes.setSituation(situation);
-  console.log("New data", data);
+  const data = state.publicodes.setSituation(situation);
   const missingQuestion = getNextQuestion(data.missingArgs);
-  console.log("Init questions: ", missingQuestion);
   return {
     ...state,
     steps: {

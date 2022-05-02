@@ -29,6 +29,7 @@ export type ResultStepProps = {
   detail: {
     values: PreavisRetraiteFormState;
     situation: SituationElement[];
+    minYearCount: number;
     references: References[];
   };
 };
@@ -43,7 +44,11 @@ function ResultStep({ notice, detail }: ResultStepProps): JSX.Element {
         notifications={notice.notifications}
       />
       <ShowDetails>
-        <Situation content={detail.values} elements={detail.situation} />
+        <Situation
+          content={detail.values}
+          elements={detail.situation}
+          minSeniorityYear={detail.minYearCount}
+        />
         <DecryptedResult
           data={detail.values}
           legalResult={notice.legal}

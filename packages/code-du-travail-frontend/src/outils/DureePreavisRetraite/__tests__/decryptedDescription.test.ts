@@ -1,13 +1,11 @@
-import {
-  ConventionCollective,
-  FormContent,
-} from "../../common/type/WizardType";
+import { ConventionCollective } from "../../common/type/WizardType";
 import {
   AgreementStatus,
   createRootData,
   getDescription,
   NoticeUsed,
 } from "../steps/ResultStep/Components/DecryptedResult";
+import { PreavisRetraiteFormState } from "../form";
 
 const agreementSupported = { notice: 2, status: AgreementStatus.Supported };
 const getAgreementSupported = (notice) => ({
@@ -154,16 +152,18 @@ describe("Validation de l'aggregation des données", () => {
           },
         };
       }
-      const data: FormContent = {
+      const data: PreavisRetraiteFormState = {
         ccn,
-        "contrat salarié - ancienneté": seniority,
-        "contrat salarié - mise à la retraite": type === "mise" ? "oui" : "non",
+        seniority: {
+          value: seniority,
+        },
+        origin: {
+          isRetirementMandatory: type === "mise" ? "oui" : "non",
+        },
         infos: { "contrat salarié - travailleur handicapé": handicap },
-        seniorityMaximum: true,
-        seniorityValue: "25",
       };
       const rootData = createRootData(
-        data as FormContent,
+        data,
         result,
         legalResult,
         agreementResult,

@@ -59,7 +59,6 @@ const computeNextQuestion = (
   const newSituation = stateToPublicode(
     removeOutdatedAnswers(state.formValues, result.removedNames)
   );
-  console.log("New situation: ", newSituation);
   const missingQuestions = getNextQuestion(
     state.publicodes.setSituation(newSituation).missingArgs,
     currentQuestions

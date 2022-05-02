@@ -4,3 +4,4 @@ export { default as initQuestions } from "./initQuestions";
 export { default as computeNextQuestion } from "./computeNextQuestion";
 export { default as askAccurateSeniority } from "./askAccurateSeniority";
 export { default as computeNotice } from "./computeNotice";
+export { default as processAnalyticEvents } from "./processAnalyticEvents";

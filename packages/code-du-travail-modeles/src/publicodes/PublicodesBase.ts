@@ -28,7 +28,6 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   }
 
   setSituation(args: Record<string, string>): PublicodesData<TResult> {
-    console.log("Set situation: ", args);
     const { missingArgs, result, situation } = this.updateSituation(
       this.data.situation,
       args
@@ -89,7 +88,6 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     result: EvaluatedNode;
     situation: SituationElement[];
   } {
-    console.log("Update situation: ", situation);
     // Situation is an array to keep the order of the answers
     const currentSituation = situation;
     const newSituation: SituationElement[] = [];

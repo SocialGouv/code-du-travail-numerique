@@ -8,9 +8,14 @@ import { PreavisRetraiteFormState } from "../../../form";
 type Props = {
   content: PreavisRetraiteFormState;
   elements: SituationElement[];
+  minSeniorityYear: number;
 };
 
-const Situation: React.FC<Props> = ({ content, elements }) => {
+const Situation: React.FC<Props> = ({
+  content,
+  elements,
+  minSeniorityYear,
+}) => {
   const overrideSituation = (element: SituationElement): JSX.Element | null => {
     if (element.name === "contrat salarié - convention collective") {
       return <>{content.ccn?.selected?.shortTitle}</>;
@@ -19,8 +24,7 @@ const Situation: React.FC<Props> = ({ content, elements }) => {
       element.name === "contrat salarié - ancienneté" &&
       content.seniority?.moreThanXYear
     ) {
-      // TODO Use the state to get the year value
-      return element.value === "61" ? <>Plus de 5 ans</> : <>Plus de 2 ans</>;
+      return <>Plus de {minSeniorityYear} ans</>;
     }
     if (
       element.name === "contrat salarié - travailleur handicapé" &&
