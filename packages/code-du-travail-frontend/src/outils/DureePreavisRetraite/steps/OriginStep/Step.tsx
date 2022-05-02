@@ -1,22 +1,22 @@
-import { Alert, InputRadio, Paragraph, Text, theme } from "@socialgouv/cdtn-ui";
+import {Alert, InputRadio, Paragraph, Text, theme} from "@socialgouv/cdtn-ui";
 import React from "react";
-import { Field } from "react-final-form";
-import { OnChange } from "react-final-form-listeners";
+import {Field} from "react-final-form";
+import {OnChange} from "react-final-form-listeners";
 import styled from "styled-components";
 
-import { ErrorField } from "../../../common/ErrorField";
-import { Question } from "../../../common/Question";
-import { RadioContainer } from "../../../common/stepStyles";
-import { required } from "../../../common/validators";
-import { Origin } from "../../state";
-import { OriginMandatoryName } from "../../form";
+import {ErrorField} from "../../../common/ErrorField";
+import {Question} from "../../../common/Question";
+import {RadioContainer} from "../../../common/stepStyles";
+import {required} from "../../../common/validators";
+import {Origin} from "../../state";
+import {OriginMandatoryName} from "../../form";
 
 export type OriginStepProps = {
   showWarning: boolean;
   onChange: (type: Origin) => void;
 };
 
-function OriginStep({ showWarning, onChange }: OriginStepProps): JSX.Element {
+function OriginStep({showWarning, onChange}: OriginStepProps): JSX.Element {
   return (
     <>
       <Question required>
@@ -57,10 +57,10 @@ function OriginStep({ showWarning, onChange }: OriginStepProps): JSX.Element {
               <Text variant="primary" fontSize="hsmall" fontWeight="700">
                 À noter
               </Text>
-              <br />
+              <br/>
               L&apos;employeur qui décide une mise à la retraite doit en avoir
               informé son salarié.
-              <br />
+              <br/>
               Plus d&apos;info&nbsp;:{" "}
               <a
                 href="/fiche-service-public/lemployeur-peut-il-mettre-doffice-un-salarie-a-la-retraite"
@@ -72,7 +72,7 @@ function OriginStep({ showWarning, onChange }: OriginStepProps): JSX.Element {
             </Paragraph>
           </StyledAlert>
         )}
-        <ErrorField name="contrat salarié - mise à la retraite" />
+        <ErrorField name={OriginMandatoryName}/>
         <OnChange name={OriginMandatoryName}>
           {(values: "oui" | "non") => {
             onChange?.(values === "oui" ? "mise" : "départ");
@@ -83,7 +83,7 @@ function OriginStep({ showWarning, onChange }: OriginStepProps): JSX.Element {
   );
 }
 
-const { spacings } = theme;
+const {spacings} = theme;
 
 const StyledAlert = styled(Alert)`
   margin-top: ${spacings.medium};
