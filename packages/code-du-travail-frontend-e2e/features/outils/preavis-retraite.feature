@@ -81,7 +81,7 @@ Fonctionnalité: Outil - Préavis de retraite
     Alors je vois "Le salarié a-t-il plus de 2 ans d'ancienneté dans l'entreprise (2 ans + 1 jour)"
     Quand je choisis "Non"
     Alors je vois "Quelle est l'ancienneté du salarié dans l’entreprise en mois"
-    Quand je renseigne "10" dans le champ avec le css 'input[name="contrat salarié - ancienneté"]'
+    Quand je renseigne "10" dans le champ avec le css 'input[name="seniority.value"]'
 
     Quand je clique sur "Suivant"
 
@@ -140,7 +140,7 @@ Fonctionnalité: Outil - Préavis de retraite
     Alors je vois "Le salarié a-t-il plus de 2 ans d'ancienneté dans l'entreprise (2 ans + 1 jour)"
     Quand je choisis "Non"
     Alors je vois "Quelle est l'ancienneté du salarié dans l’entreprise en mois"
-    Quand je renseigne "10" dans le champ avec le css 'input[name="contrat salarié - ancienneté"]'
+    Quand je renseigne "10" dans le champ avec le css 'input[name="seniority.value"]'
 
     Quand je clique sur "Suivant"
 

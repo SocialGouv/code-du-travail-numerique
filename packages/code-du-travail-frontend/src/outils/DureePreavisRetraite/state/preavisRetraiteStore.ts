@@ -1,6 +1,6 @@
 import create from "zustand";
-import { PreavisRetraiteState, PreavisRetraiteStore } from "./types";
-import { PreavisRetraitePublicodes } from "@socialgouv/modeles-social";
+import {PreavisRetraiteState, PreavisRetraiteStore} from "./types";
+import {PreavisRetraitePublicodes} from "@socialgouv/modeles-social";
 import {
   askAccurateSeniority,
   computeMinSeniorityYear,
@@ -10,7 +10,8 @@ import {
   processAnalyticEvents,
   showOriginWarning,
 } from "./usecases";
-import { updateFormValues } from "./utils";
+import {updateFormValues} from "./utils";
+import {StepName} from "../steps";
 
 export const initialState: PreavisRetraiteState = {
   title: "",

@@ -4,7 +4,7 @@ export const stateToPublicode = (
   values: PreavisRetraiteFormState
 ): Record<string, string> => {
   const { infos, origin, ccn, seniority } = values;
-  const agreement: Record<string, string> = ccn?.selected
+  const agreement: Record<string, string> = ccn?.selected?.num
     ? {
         "contrat salarié - convention collective": `'IDCC${ccn.selected.num
           .toString()

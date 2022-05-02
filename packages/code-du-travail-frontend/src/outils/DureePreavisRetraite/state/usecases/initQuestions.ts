@@ -1,12 +1,13 @@
-import { PreavisRetraiteStore } from "../types";
-import { getNextQuestion, stateToPublicode } from "./helpers";
-import { UpdateFormValues } from "../utils";
+import {PreavisRetraiteStore} from "../types";
+import {getNextQuestion, stateToPublicode} from "./helpers";
+import {UpdateFormValues} from "../utils";
 
 const initQuestions = (
   state: PreavisRetraiteStore,
-  removeQuestionFromForm: UpdateFormValues
+  removeQuestionFromForm: UpdateFormValues,
 ): PreavisRetraiteStore => {
-  removeQuestionFromForm([{ name: "infos" }]);
+  removeQuestionFromForm([{name: "infos"}]);
+  console.log("Init question: ", state);
   const situation = stateToPublicode({
     ...state.formValues,
     // Reset infos
