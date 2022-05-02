@@ -14,16 +14,18 @@ import Metas from "../../src/common/Metas";
 import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
 import { Layout } from "../../src/layout/Layout";
-import { loadPublicodes } from "../../src/outils/api/LoadPublicodes";
-import { AgreementSearch } from "../../src/outils/ConventionCollective";
-import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
-import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciement";
-import { SimulateurPreavisRetraite } from "../../src/outils/DureePreavisRetraite";
-import { HeuresRechercheEmploi } from "../../src/outils/HeuresRechercheEmploi";
-import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
-import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
-import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
-import { Tool } from "../../src/outils/types";
+import {
+  AgreementSearch,
+  CalculateurIndemnite,
+  DureePreavisDemission,
+  DureePreavisLicenciement,
+  DureePreavisRetraite,
+  HeuresRechercheEmploi,
+  loadPublicodesRules,
+  SimulateurEmbauche,
+  SimulateurIndemnitePrecarite,
+  Tool,
+} from "../../src/outils";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -36,7 +38,7 @@ const toolsBySlug = {
   "indemnite-precarite": SimulateurIndemnitePrecarite,
   "preavis-demission": DureePreavisDemission,
   "preavis-licenciement": DureePreavisLicenciement,
-  "preavis-retraite": SimulateurPreavisRetraite,
+  "preavis-retraite": DureePreavisRetraite,
   "simulateur-embauche": SimulateurEmbauche,
 };
 
@@ -105,7 +107,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     Sentry.captureException(e);
   }
 
-  const publicodesRules = loadPublicodes(slug);
+  const publicodesRules = loadPublicodesRules(slug);
 
   return {
     props: {

@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
 
-import { loadPublicodes } from "../../api/LoadPublicodes";
+import { loadPublicodesRules } from "../../";
 import { PublicodesContext, PublicodesProvider, PublicodesSimulator } from "..";
 
 function renderProviderPreavisRetraite({
@@ -11,8 +11,8 @@ function renderProviderPreavisRetraite({
 }) {
   return render(
     <PublicodesProvider
-      rules={loadPublicodes("preavis-retraite")}
-      simulator={PublicodesSimulator.PREAVIS_RETRAITE}
+      rules={loadPublicodesRules("preavis-retraite")}
+      simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
     >
       {children}
     </PublicodesProvider>
@@ -26,7 +26,7 @@ function renderProviderIndemniteLicenciement({
 }) {
   return render(
     <PublicodesProvider
-      rules={loadPublicodes("indemnite-licenciement")}
+      rules={loadPublicodesRules("indemnite-licenciement")}
       simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
     >
       {children}

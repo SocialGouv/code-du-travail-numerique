@@ -1,17 +1,22 @@
 import { Paragraph } from "@socialgouv/cdtn-ui";
-import { AgreementInfo, supportedCcn } from "@socialgouv/modeles-social";
+import {
+  AgreementInfo,
+  PublicodesPreavisRetraiteResult,
+  supportedCcn,
+} from "@socialgouv/modeles-social";
 import React from "react";
 
 import { SectionTitle } from "../../../../common/stepStyles";
-import { FormContent } from "../../../../common/type/WizardType";
-import {
-  PublicodesPreavisRetraiteResult,
-  PublicodesResult,
-  usePublicodes,
-} from "../../../../publicodes";
+import { PreavisRetraiteFormState } from "../../../form";
 
 type Props = {
-  data: FormContent;
+  data: PreavisRetraiteFormState;
+  result: PublicodesPreavisRetraiteResult;
+  legalResult: PublicodesPreavisRetraiteResult;
+  agreement: {
+    result: PublicodesPreavisRetraiteResult | null;
+    maximum: PublicodesPreavisRetraiteResult | null;
+  };
 };
 
 const ShowResult: React.FC<{
@@ -87,7 +92,7 @@ type RootData = {
 };
 
 export const createRootData = (
-  data: FormContent,
+  data: PreavisRetraiteFormState,
   result: PublicodesPreavisRetraiteResult,
   legalResult: PublicodesPreavisRetraiteResult,
   agreementResult: PublicodesPreavisRetraiteResult | null,
@@ -130,9 +135,9 @@ export const createRootData = (
     handicap:
       data.infos !== undefined &&
       data.infos["contrat salarié - travailleur handicapé"] === "oui",
-    isVoluntary: data["contrat salarié - mise à la retraite"] === "non",
+    isVoluntary: data.origin?.isRetirementMandatory === "non",
     noticeUsed,
-    seniorityLessThan6Months: Number(data["contrat salarié - ancienneté"]) < 6,
+    seniorityLessThan6Months: Number(data.seniority?.value) < 6,
   };
 };
 
@@ -178,27 +183,17 @@ export const getDescription = (data: RootData): string | null => {
   }
 };
 
-const DecryptedResult: React.FC<Props> = ({ data }) => {
-  const publicodesContext = usePublicodes<PublicodesPreavisRetraiteResult>();
-  const legalResult = publicodesContext.execute(
-    "contrat salarié . préavis de retraite légale en jours"
-  );
-  let agreementResult: PublicodesResult | null = null;
-  let agreementMaximumResult: PublicodesResult | null = null;
-  if (data.ccn) {
-    agreementResult = publicodesContext.execute(
-      "contrat salarié . préavis de retraite collective en jours"
-    );
-    agreementMaximumResult = publicodesContext.execute(
-      "contrat salarié . préavis de retraite collective maximum en jours"
-    );
-  }
-
+const DecryptedResult: React.FC<Props> = ({
+  data,
+  legalResult,
+  agreement,
+  result,
+}) => {
   const rootData = createRootData(
     data,
-    publicodesContext.result,
+    result,
     legalResult,
-    agreementResult,
+    agreement.result,
     supportedCcn
   );
   const description = getDescription(rootData);
@@ -209,16 +204,16 @@ const DecryptedResult: React.FC<Props> = ({ data }) => {
         Durée prévue par le code du travail (durée légale)&nbsp;:&nbsp;
         <ShowResult
           result={legalResult}
-          agreementMaximumResult={agreementMaximumResult}
+          agreementMaximumResult={agreement.maximum}
         />
       </Paragraph>
       <Paragraph>
         Durée prévue par la convention collective (durée
         conventionnelle)&nbsp;:&nbsp;
         <ShowResultAgreement
-          result={agreementResult}
+          result={agreement.result}
           detail={rootData.agreement}
-          agreementMaximumResult={agreementMaximumResult}
+          agreementMaximumResult={agreement.maximum}
         />
       </Paragraph>
       {description && <Paragraph>{description}</Paragraph>}

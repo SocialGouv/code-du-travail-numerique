@@ -15,13 +15,17 @@ export const generateStore = (
   onAgreementChange = () => {},
   onFormValuesChange = () => {},
   onInformationChange = () => {},
-  onOriginChange = () => {}
+  onOriginChange = () => {},
+  onSeniorityChange = () => {},
+  onStepChange = () => {}
 ): PreavisRetraiteStore => ({
   ...state,
   onAgreementChange,
   onFormValuesChange,
   onInformationChange,
   onOriginChange,
+  onSeniorityChange,
+  onStepChange,
   publicodes,
 });
 
@@ -35,17 +39,24 @@ export const publicodesData: PublicodesData<PublicodesPreavisRetraiteResult> = {
   situation: [],
 };
 
-class PublicodesDummy implements Publicodes<PublicodesPreavisRetraiteResult> {
-  constructor() {}
+class PublicodesStub implements Publicodes<PublicodesPreavisRetraiteResult> {
+  constructor(data: PublicodesData<PublicodesPreavisRetraiteResult>) {
+    this.data = data;
+  }
 
-  data = publicodesData;
+  data;
+
   execute: (rule: string) => PublicodesPreavisRetraiteResult = () =>
     publicodesData.result;
   setSituation: (
     args: Record<string, any>
-  ) => PublicodesData<PublicodesPreavisRetraiteResult> = () => publicodesData;
+  ) => PublicodesData<PublicodesPreavisRetraiteResult> = () => this.data;
+  getNotifications: () => [];
+  getReferences: () => [];
 }
 
-export const dummyPublicodes = new PublicodesDummy();
+export const publicodesStub = (
+  data: PublicodesData<PublicodesPreavisRetraiteResult> = publicodesData
+) => new PublicodesStub(data);
 
 export const formValuesDummy: PreavisRetraiteFormState = {};

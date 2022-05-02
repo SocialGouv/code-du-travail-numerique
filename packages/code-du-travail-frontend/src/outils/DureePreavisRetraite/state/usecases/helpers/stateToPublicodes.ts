@@ -1,9 +1,9 @@
-import { PreavisRetraiteFormState } from "./form";
+import { PreavisRetraiteFormState } from "../../../form";
 
 export const stateToPublicode = (
   values: PreavisRetraiteFormState
 ): Record<string, string> => {
-  const { infos, origin, ccn } = values;
+  const { infos, origin, ccn, seniority } = values;
   const agreement: Record<string, string> = ccn?.selected
     ? {
         "contrat salarié - convention collective": `'IDCC${ccn.selected.num
@@ -11,11 +11,17 @@ export const stateToPublicode = (
           .padStart(4, "0")}'`,
       }
     : {};
+  const senioritySituation: Record<string, string> = seniority?.value
+    ? {
+        "contrat salarié - ancienneté": seniority.value,
+      }
+    : {};
   return {
     ...infos,
     ...agreement,
+    ...senioritySituation,
     "contrat salarié - mise à la retraite":
       origin?.isRetirementMandatory ?? "non",
-    "contrat salarié - ancienneté": values.seniority?.value ?? "1",
+    "préavis de retraite": "oui",
   };
 };

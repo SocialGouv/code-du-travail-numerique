@@ -1,14 +1,12 @@
 import { Text } from "@socialgouv/cdtn-ui";
-import { supportedCcn } from "@socialgouv/modeles-social";
+import { SituationElement, supportedCcn } from "@socialgouv/modeles-social";
 import React from "react";
 
 import PubliSituation from "../../../../common/PubliSituation";
-import { PreavisRetraiteFormContent } from "../../../../common/type/WizardType";
-import { SituationElement } from "../../../../publicodes";
-import { SeniorityMaximum } from "../../constants";
+import { PreavisRetraiteFormState } from "../../../form";
 
 type Props = {
-  content: PreavisRetraiteFormContent;
+  content: PreavisRetraiteFormState;
   elements: SituationElement[];
 };
 
@@ -19,13 +17,10 @@ const Situation: React.FC<Props> = ({ content, elements }) => {
     }
     if (
       element.name === "contrat salarié - ancienneté" &&
-      content.seniorityMaximum
+      content.seniority?.moreThanXYear
     ) {
-      return element.value === SeniorityMaximum.GREATER_THAN_5_YEARS ? (
-        <>Plus de 5 ans</>
-      ) : (
-        <>Plus de 2 ans</>
-      );
+      // TODO Use the state to get the year value
+      return element.value === "61" ? <>Plus de 5 ans</> : <>Plus de 2 ans</>;
     }
     if (
       element.name === "contrat salarié - travailleur handicapé" &&
@@ -41,9 +36,7 @@ const Situation: React.FC<Props> = ({ content, elements }) => {
     return null;
   };
 
-  const getAnnotations = (
-    content: PreavisRetraiteFormContent
-  ): JSX.Element[] => {
+  const getAnnotations = (content: PreavisRetraiteFormState): JSX.Element[] => {
     if (
       content.infos &&
       content.infos["contrat salarié - travailleur handicapé"] === "oui"

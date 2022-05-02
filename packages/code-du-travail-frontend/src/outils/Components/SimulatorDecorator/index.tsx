@@ -1,4 +1,4 @@
-import { theme, Wrapper } from "@socialgouv/cdtn-ui";
+import { Fieldset, Legend, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import React from "react";
 import { Form } from "react-final-form";
 import styled from "styled-components";
@@ -20,14 +20,19 @@ type Props<FormValues> = {
   initialValues?: FormValues;
   onFormStateUpdate?: (values: FormValues) => void;
   onFormStepSubmit: (values: FormValues, form: FormApi<FormValues>) => void;
-  debug: JSX.Element;
-  validate?: (
-    values: FormValues
-  ) => ValidationErrors | Promise<ValidationErrors>;
-  decorators?: Array<Decorator<FormValues, Partial<FormValues>>>;
-  mutators?: { [key: string]: Mutator<FormValues, Partial<FormValues>> };
-  annotations?: JSX.Element;
+  formOptions?: {
+    validate?: (
+      values: FormValues
+    ) => ValidationErrors | Promise<ValidationErrors>;
+    decorators?: Array<Decorator<FormValues, Partial<FormValues>>>;
+    mutators?: { [key: string]: Mutator<FormValues, Partial<FormValues>> };
+    legend?: string;
+  };
   renderStep: (form: FormApi<FormValues>) => JSX.Element;
+  options: {
+    annotations?: JSX.Element;
+    debug?: JSX.Element;
+  };
 };
 
 const SimulatorDecorator = <FormValues,>({
@@ -37,12 +42,9 @@ const SimulatorDecorator = <FormValues,>({
   initialValues,
   onFormStateUpdate,
   onFormStepSubmit,
-  debug,
-  validate,
-  decorators,
-  mutators,
-  annotations,
+  formOptions,
   renderStep,
+  options,
 }: Props<FormValues>): JSX.Element => {
   const onPrevious = navigation.onPrevious;
 
@@ -51,9 +53,9 @@ const SimulatorDecorator = <FormValues,>({
       <Form<FormValues>
         initialValues={initialValues}
         onSubmit={onFormStepSubmit}
-        validate={validate}
-        decorators={decorators}
-        mutators={mutators}
+        validate={formOptions?.validate}
+        decorators={formOptions?.decorators}
+        mutators={formOptions?.mutators}
       >
         {({ handleSubmit, form, invalid, submitFailed }) => {
           return (
@@ -65,7 +67,15 @@ const SimulatorDecorator = <FormValues,>({
               )}
               <Title {...title} />
               <StepList {...steps} width={STEP_LIST_WIDTH} />
-              {renderStep(form)}
+              {formOptions?.legend ? (
+                <Fieldset>
+                  <Legend isHidden>{formOptions.legend}</Legend>
+                  {renderStep(form)}
+                </Fieldset>
+              ) : (
+                renderStep(form)
+              )}
+
               <Navigation
                 {...navigation}
                 hasError={invalid && submitFailed}
@@ -76,8 +86,8 @@ const SimulatorDecorator = <FormValues,>({
                   })
                 }
               />
-              {annotations && <p>{annotations}</p>}
-              {debug}
+              {options?.annotations && <p>{options.annotations}</p>}
+              {options?.debug}
             </StyledForm>
           );
         }}

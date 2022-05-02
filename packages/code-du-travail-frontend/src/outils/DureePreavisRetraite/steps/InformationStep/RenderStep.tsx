@@ -1,19 +1,18 @@
 import React from "react";
-import { usePreavisRetraiteStore } from "../../index";
+import { usePreavisRetraiteStore } from "../../state";
 import InformationStep from "./Step";
 import { useForm } from "react-final-form";
-import { PreavisRetraiteFormState } from "../../form";
 
 const RenderInformationStep = (): JSX.Element => {
   const { questions, onChange } = usePreavisRetraiteStore((state) => ({
     questions: state.steps.informations.questions,
     onChange: state.onInformationChange,
   }));
-  const form = useForm<PreavisRetraiteFormState>();
+  const form = useForm();
   return (
     <InformationStep
       questions={questions}
-      onChange={(name, value) => onChange(name, value, form)}
+      onChange={(name) => onChange(name, form)}
     />
   );
 };

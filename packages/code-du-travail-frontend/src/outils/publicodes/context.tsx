@@ -2,16 +2,20 @@ import { getNotifications, getReferences } from "@socialgouv/modeles-social";
 import Engine from "publicodes";
 import React, { createContext, useMemo, useState } from "react";
 
-import { convertedResult, handleExecute, updateSituation } from ".";
+import {
+  handleExecute,
+  PublicodesIndemniteLicenciementResult,
+  updateSituation,
+} from ".";
 import {
   PublicodesContextType,
   PublicodesData,
   PublicodesProviderRule,
-  PublicodesResult,
 } from "./types";
 
-export const PublicodesContext =
-  createContext<PublicodesContextType<PublicodesResult> | null>(null);
+export const PublicodesContext = createContext<PublicodesContextType | null>(
+  null
+);
 
 export const PublicodesProvider = ({
   children,
@@ -24,13 +28,16 @@ export const PublicodesProvider = ({
 
   const [data, setData] = useState<PublicodesData>({
     missingArgs: [],
-    result: {} as PublicodesResult,
+    result: {} as PublicodesIndemniteLicenciementResult,
     situation: [],
   });
 
-  const execute = (rule: string): PublicodesResult => {
+  const execute = (rule: string): PublicodesIndemniteLicenciementResult => {
     const result = handleExecute(engine, data.situation, rule);
-    return convertedResult(simulator, result);
+    return {
+      unit: result.unit,
+      value: result.nodeValue,
+    };
   };
 
   const setSituation = (args: Record<string, any>) => {
@@ -42,7 +49,10 @@ export const PublicodesProvider = ({
     );
     setData({
       missingArgs,
-      result: convertedResult(simulator, result),
+      result: {
+        unit: result.unit,
+        value: result.nodeValue,
+      },
       situation,
     });
   };

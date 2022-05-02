@@ -2,9 +2,9 @@ import { render, screen } from "@testing-library/react";
 import React from "react";
 import { Form } from "react-final-form";
 
-import { loadPublicodes } from "../../../api/LoadPublicodes";
 import { PublicodesProvider, PublicodesSimulator } from "../../../publicodes";
 import { StepIndemnite } from "../Indemnite";
+import { loadPublicodesRules } from "../../..";
 
 const initialValues = {
   absencePeriods: [],
@@ -80,7 +80,7 @@ describe("<StepIndemnite />", () => {
         onSubmit={jest.fn()}
         render={({ form }) => (
           <PublicodesProvider
-            rules={loadPublicodes("indemnite-licenciement")}
+            rules={loadPublicodesRules("indemnite-licenciement")}
             simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
           >
             <StepIndemnite form={form} />

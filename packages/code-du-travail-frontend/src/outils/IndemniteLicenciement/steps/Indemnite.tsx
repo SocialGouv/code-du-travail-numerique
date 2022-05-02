@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 
 import {
   mapToPublicodesSituationForIndemniteLicenciement,
-  PublicodesIndemniteLicenciementResult,
   usePublicodes,
 } from "../../publicodes";
 import { IndemniteLegale } from "../components/IndemniteLegale";
@@ -13,8 +12,7 @@ type Props = {
 };
 
 export function StepIndemnite({ form }: Props): JSX.Element {
-  const publicodesContext =
-    usePublicodes<PublicodesIndemniteLicenciementResult>();
+  const publicodesContext = usePublicodes();
 
   const {
     hasSameSalaire = false,

@@ -1,2 +1,1 @@
-export { default as SeniorityStep } from "./Step";
-export { default as seniorityReducer } from "./reducer";
+export { default as RenderSeniorityStep } from "./RenderStep";

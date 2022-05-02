@@ -1,8 +1,10 @@
 import type { EvaluatedNode } from "publicodes";
 import Engine from "publicodes";
 
+import type { Notification, References } from "../utils";
+import { getNotifications, getReferences } from "../utils";
 import type { Publicodes } from "./Publicodes";
-import type { PublicodesData, SituationElement } from "./types";
+import type { MissingArgs, PublicodesData, SituationElement } from "./types";
 
 export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   engine: Engine;
@@ -25,7 +27,8 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     return this.convertedResult(result);
   }
 
-  setSituation(args: Record<string, any>): PublicodesData<TResult> {
+  setSituation(args: Record<string, string>): PublicodesData<TResult> {
+    console.log("Set situation: ", args);
     const { missingArgs, result, situation } = this.updateSituation(
       this.data.situation,
       args
@@ -36,6 +39,14 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
       situation,
     };
     return this.data;
+  }
+
+  getNotifications(): Notification[] {
+    return getNotifications(this.engine);
+  }
+
+  getReferences(): References[] {
+    return getReferences(this.engine);
   }
 
   private buildSituation(map: SituationElement[]): Record<string, string> {
@@ -49,7 +60,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   private buildMissingArgs(
     engine: Engine,
     missingArgs: Record<string, number>
-  ): any[] {
+  ): MissingArgs[] {
     return Object.entries(missingArgs)
       .map(([key, value]) => {
         const detail = engine.getRule(key);
@@ -73,9 +84,14 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   private updateSituation(
     situation: SituationElement[],
     args: Record<string, string>
-  ): any {
+  ): {
+    missingArgs: MissingArgs[];
+    result: EvaluatedNode;
+    situation: SituationElement[];
+  } {
+    console.log("Update situation: ", situation);
     // Situation is an array to keep the order of the answers
-    const currentSituation = situation ?? [];
+    const currentSituation = situation;
     const newSituation: SituationElement[] = [];
 
     // Update the current situation with new values

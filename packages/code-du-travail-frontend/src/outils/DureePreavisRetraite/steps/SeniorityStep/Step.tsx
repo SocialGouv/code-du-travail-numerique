@@ -5,16 +5,18 @@ import { MatomoActionEvent, trackQuestion } from "../../../../lib";
 import { TextQuestion } from "../../../common/TextQuestion";
 import { isPositiveNumber } from "../../../common/validators";
 import { YesNoQuestion } from "../../../common/YesNoQuestion";
-import { SeniorityMoreThanXYear, SeniorityValue } from "../../types";
+import { SeniorityMoreThanXYear, SeniorityValue } from "../../form";
 
 export type SeniorityProps = {
   minYearCount: number;
   showAccurateSeniority: boolean;
+  onChange: () => void;
 };
 
 const SeniorityStep = ({
   minYearCount,
   showAccurateSeniority,
+  onChange,
 }: SeniorityProps): JSX.Element => {
   return (
     <>
@@ -40,6 +42,7 @@ const SeniorityStep = ({
             }
           },
         }}
+        onChange={onChange}
       />
       {showAccurateSeniority && (
         <TextQuestion

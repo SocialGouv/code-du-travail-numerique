@@ -3,11 +3,12 @@ import React from "react";
 
 import Disclaimer from "../../../../common/Disclaimer";
 import { SmallText } from "../../../../common/stepStyles";
+import { Origin } from "../../../state";
 
 type Props = {
   resultValueInDays?: number;
   ccNumber?: number;
-  type: "départ" | "mise";
+  type: Origin;
 };
 export const titreFavorable =
   "Attention il peut exister une durée plus favorable";

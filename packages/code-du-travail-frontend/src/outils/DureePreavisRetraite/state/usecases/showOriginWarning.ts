@@ -1,6 +1,6 @@
 import { Origin, PreavisRetraiteStore } from "../index";
 
-const computeOriginWarning = (
+const showOriginWarning = (
   state: PreavisRetraiteStore,
   type: Origin
 ): PreavisRetraiteStore => ({
@@ -13,4 +13,4 @@ const computeOriginWarning = (
   },
 });
 
-export default computeOriginWarning;
+export default showOriginWarning;

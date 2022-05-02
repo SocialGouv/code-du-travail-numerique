@@ -1,4 +1,4 @@
-import { usePreavisRetraiteStore } from "../../index";
+import { usePreavisRetraiteStore } from "../../state";
 
 const DebugInfo = (): JSX.Element => {
   const data = usePreavisRetraiteStore((state) => ({

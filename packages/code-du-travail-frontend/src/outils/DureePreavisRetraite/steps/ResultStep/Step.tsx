@@ -1,53 +1,62 @@
 import React from "react";
-import { PublicodesPreavisRetraiteResult } from "../../../publicodes";
-import { ShowResult } from "./Components";
-import { Notification } from "@socialgouv/modeles-social";
+import {
+  DecryptedResult,
+  ShowResult,
+  Situation,
+  WarningResult,
+} from "./Components";
+import {
+  Notification,
+  PublicodesPreavisRetraiteResult,
+  References,
+  SituationElement,
+} from "@socialgouv/modeles-social";
+import ShowDetails from "../../../common/ShowDetails";
+import PubliReferences from "../../../common/PubliReferences";
+import { PreavisRetraiteFormState } from "../../form";
 
 export type ResultStepProps = {
   notice: {
-    publicodesResult: PublicodesPreavisRetraiteResult;
-    agreementMaximumResult: PublicodesPreavisRetraiteResult;
+    result: PublicodesPreavisRetraiteResult;
+    legal: PublicodesPreavisRetraiteResult;
+    agreement: {
+      result: PublicodesPreavisRetraiteResult;
+      maximum: PublicodesPreavisRetraiteResult;
+    };
     type: "mise" | "départ";
     notifications: Notification[];
   };
+  detail: {
+    values: PreavisRetraiteFormState;
+    situation: SituationElement[];
+    references: References[];
+  };
 };
 
-function ResultStep({ notice }: ResultStepProps): JSX.Element {
-  /*
-  const publicodesContext = usePublicodes<PublicodesPreavisRetraiteResult>();
-  const type =
-    publicodesContext.situation.find(
-      (item) => item.name === "contrat salarié - mise à la retraite"
-    )?.value === "oui"
-      ? "mise"
-      : "départ";
-
-  const notifications = publicodesContext.getNotifications();
-  const agreementMaximumResult = publicodesContext.execute(
-    "contrat salarié . préavis de retraite collective maximum en jours"
-  );
-
-  useEffect(() => {
-    publicodesContext.setSituation(
-      mapToPublicodesSituationForPreavisDeRetraite(values)
-    );
-  }, []);
-*/
+function ResultStep({ notice, detail }: ResultStepProps): JSX.Element {
   return (
     <>
-      <ShowResult {...notice} />
-      {/*
-        <ShowDetails>
-          <Situation content={values} elements={publicodesContext.situation}/>
-          <DecryptedResult data={values}/>
-          <PubliReferences references={publicodesContext.getReferences()}/>
-        </ShowDetails>
-        <WarningResult
-        resultValueInDays={publicodesContext.result.valueInDays}
-        type={type}
-        ccNumber={values?.ccn?.selected?.num}
+      <ShowResult
+        result={notice.result}
+        agreementMaximumResult={notice.agreement.maximum}
+        type={notice.type}
+        notifications={notice.notifications}
+      />
+      <ShowDetails>
+        <Situation content={detail.values} elements={detail.situation} />
+        <DecryptedResult
+          data={detail.values}
+          legalResult={notice.legal}
+          result={notice.result}
+          agreement={notice.agreement}
         />
-      */}
+        <PubliReferences references={detail.references} />
+      </ShowDetails>
+      <WarningResult
+        resultValueInDays={notice.result.valueInDays}
+        type={notice.type}
+        ccNumber={detail.values?.ccn?.selected?.num}
+      />
     </>
   );
 }

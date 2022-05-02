@@ -1,4 +1,7 @@
-import { Notification } from "@socialgouv/modeles-social";
+import {
+  Notification,
+  PublicodesPreavisRetraiteResult,
+} from "@socialgouv/modeles-social";
 import React from "react";
 
 import Mdx from "../../../../../common/Mdx";
@@ -7,17 +10,16 @@ import {
   SectionTitle,
   SmallText,
 } from "../../../../common/stepStyles";
-import { PublicodesPreavisRetraiteResult } from "../../../../publicodes";
 
 type Props = {
-  publicodesResult: PublicodesPreavisRetraiteResult;
+  result: PublicodesPreavisRetraiteResult;
   agreementMaximumResult: PublicodesPreavisRetraiteResult;
   type: "mise" | "départ";
   notifications: Notification[];
 };
 
 const ShowResult: React.FC<Props> = ({
-  publicodesResult,
+  result,
   agreementMaximumResult,
   type,
   notifications,
@@ -27,24 +29,24 @@ const ShowResult: React.FC<Props> = ({
       <SectionTitle>Préavis de {type} à la retraite</SectionTitle>
       <p>
         À partir des éléments que vous avez saisis
-        {publicodesResult.value > 0
+        {result.value > 0
           ? `, la durée du préavis en cas de ${type} à la retraite est estimée à`
           : ""}
         &nbsp;:{" "}
         <HighlightResult>
           {agreementMaximumResult?.value &&
-          agreementMaximumResult?.value !== publicodesResult.value ? (
+          agreementMaximumResult?.value !== result.value ? (
             <>
-              entre&nbsp;{publicodesResult.value}&nbsp;
-              {publicodesResult.unit}&nbsp;et&nbsp;
+              entre&nbsp;{result.value}&nbsp;
+              {result.unit}&nbsp;et&nbsp;
               {agreementMaximumResult?.value}&nbsp;
               {agreementMaximumResult?.unit}
             </>
-          ) : publicodesResult.value > 0 ? (
+          ) : result.value > 0 ? (
             <>
-              {publicodesResult.value}
+              {result.value}
               &nbsp;
-              {publicodesResult.unit}
+              {result.unit}
             </>
           ) : (
             <>il n’y a pas de préavis à effectuer</>

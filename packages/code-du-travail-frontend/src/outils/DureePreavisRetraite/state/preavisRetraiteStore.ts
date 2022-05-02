@@ -1,8 +1,20 @@
 import create from "zustand";
 import { PreavisRetraiteState, PreavisRetraiteStore } from "./types";
 import { PreavisRetraitePublicodes } from "@socialgouv/modeles-social";
-import { computeInfoQuestions, computeOriginWarning } from "./helpers";
-import { cleanForm } from "./utils/cleanForm";
+import {
+  askAccurateSeniority,
+  computeMinSeniorityYear,
+  computeNextQuestion,
+  computeNotice,
+  initQuestions,
+  showOriginWarning,
+} from "./usecases";
+import { updateFormValues } from "./utils";
+import { StepName } from "../steps";
+import { matopush } from "../../../piwik";
+import { MatomoBaseEvent, MatomoRetirementEvent } from "../../../lib";
+import { pushAgreementEvents } from "../../common";
+import { getSupportedCC } from "../steps/AgreementStep/RenderStep";
 
 export const initialState: PreavisRetraiteState = {
   title: "",
@@ -27,15 +39,48 @@ const createPreavisRetraiteStore = (rules: string, title: string) =>
     title: title,
     publicodes: new PreavisRetraitePublicodes(rules),
     onFormValuesChange: (values) =>
-      set((state) => ({
-        ...state,
-        formValues: values,
-      })),
-    onOriginChange: (type) => set((state) => computeOriginWarning(state, type)),
+      set((state) =>
+        computeNotice({
+          ...state,
+          formValues: values,
+        })
+      ),
+    onOriginChange: (type) => set((state) => showOriginWarning(state, type)),
     onAgreementChange: (form) =>
-      set((state) => computeInfoQuestions(state, cleanForm(form))),
-    onInformationChange: (name, values, form) =>
-      set((state) => computeInfoQuestions(state, cleanForm(form), name)),
+      set((state) =>
+        computeMinSeniorityYear(initQuestions(state, updateFormValues(form)))
+      ),
+    onInformationChange: (name, form) =>
+      set((state) => computeNextQuestion(state, updateFormValues(form), name)),
+    onSeniorityChange: (form) =>
+      set((state) => askAccurateSeniority(state, updateFormValues(form))),
+    onStepChange: (step) =>
+      set((state) => {
+        switch (step.name) {
+          case StepName.Origin:
+            matopush([
+              MatomoBaseEvent.TRACK_EVENT,
+              MatomoBaseEvent.OUTIL,
+              state.formValues.origin?.isRetirementMandatory
+                ? MatomoRetirementEvent.MISE_RETRAITE
+                : MatomoRetirementEvent.DEPART_RETRAITE,
+            ]);
+            break;
+          case StepName.Agreement:
+            pushAgreementEvents(title, state.formValues.ccn, getSupportedCC());
+            break;
+          case StepName.Seniority:
+            matopush([
+              MatomoBaseEvent.TRACK_EVENT,
+              MatomoBaseEvent.OUTIL,
+              state.formValues.seniority?.moreThanXYear
+                ? MatomoRetirementEvent.ANCIENNETE_PLUS_2_ANS
+                : MatomoRetirementEvent.ANCIENNETE_MOINS_2_ANS,
+            ]);
+            break;
+        }
+        return state;
+      }),
   }));
 
 export default createPreavisRetraiteStore;

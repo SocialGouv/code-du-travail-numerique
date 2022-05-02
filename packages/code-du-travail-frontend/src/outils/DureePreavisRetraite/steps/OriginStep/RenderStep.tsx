@@ -1,5 +1,5 @@
 import React from "react";
-import { usePreavisRetraiteStore } from "../../index";
+import { usePreavisRetraiteStore } from "../../state";
 import OriginStep from "./Step";
 
 function RenderOriginStep(): JSX.Element {
