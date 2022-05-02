@@ -34,7 +34,7 @@ export const DocumentsTile = (
       custom
       icon={icons.Document}
       title="Modèles de documents"
-      titleTagType="h3"
+      titleTagType="h2"
     >
       <Paragraph noMargin>
         Téléchargez et utilisez des modèles de lettres et de documents

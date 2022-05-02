@@ -6,27 +6,6 @@ import { renderForm } from "../../../../../test/renderForm";
 
 describe("StepResult", () => {
   it.each`
-    ccNumber
-    ${123456789}
-    ${undefined}
-  `(
-    'doit afficher le résultat "Aucun résultat" si pas de CC ("$ccNumber")',
-    ({ ccNumber }) => {
-      const form = {
-        ccn: { selected: { num: ccNumber } },
-      };
-      const { getByText } = renderForm(StepResult, form);
-      expect(getByText("Aucun résultat", { exact: false })).toBeTruthy();
-      expect(
-        getByText(
-          "L’existence ou la durée du préavis de démission peut être prévue par une convention collective, un accord d’entreprise ou à défaut, par un usage dans l’entreprise.",
-          { exact: false }
-        )
-      ).toBeTruthy();
-    }
-  );
-
-  it.each`
     catPro            | anciennete               | expectedResult
     ${"16| Employés"} | ${"16| 1 mois à 6 mois"} | ${"15 jours"}
     ${"16| Employés"} | ${"3| Moins de 1 mois"}  | ${"il n’y a pas de préavis à effectuer"}

@@ -36,17 +36,19 @@ const PubliSituation = ({
   <>
     <SectionTitle>Les éléments saisis</SectionTitle>
     <ul>
-      {situation.map((element) => {
-        const overriden = onOverrideInput && onOverrideInput(element);
-        return (
-          <li key={element.name}>
-            {element.rawNode.titre}&nbsp;:&nbsp;
-            <strong>
-              {overriden ? overriden : <SituationInput element={element} />}
-            </strong>
-          </li>
-        );
-      })}
+      {situation
+        .filter((element) => element.rawNode.titre)
+        .map((element) => {
+          const overriden = onOverrideInput && onOverrideInput(element);
+          return (
+            <li key={element.name}>
+              {element.rawNode.titre}&nbsp;:&nbsp;
+              <strong>
+                {overriden ? overriden : <SituationInput element={element} />}
+              </strong>
+            </li>
+          );
+        })}
     </ul>
     {annotations &&
       annotations.map((annotation, index) => (
