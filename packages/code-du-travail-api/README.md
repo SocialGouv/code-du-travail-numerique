@@ -30,7 +30,7 @@ $ docker run --rm \
     -e PORT=80 \
     -e ELASTICSEARCH_LOG_LEVEL="info" \
     -e ELASTICSEARCH_URL="http://elasticsearch:9200" \
-    -e NLP_URL=https://serving-ml-preprod.dev.fabrique.social.gouv.fr/ \
+    -e NLP_URL=https://serving-ml.fabrique.social.gouv.fr/ \
     -e VERSION="foo" \
     registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/api:<commit hash>
 $ curl http://localhost:1337/api/v1/version
