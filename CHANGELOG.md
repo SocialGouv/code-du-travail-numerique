@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.76.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.4...v4.76.0) (2022-04-27)
+
+
+### Bug Fixes
+
+* **api:** réécriture de la partie statistique côté api ([#4363](https://github.com/SocialGouv/code-du-travail-numerique/issues/4363)) ([0ca31dd](https://github.com/SocialGouv/code-du-travail-numerique/commit/0ca31dd2218b7c29b4854ea87b2735873ffcad71))
+* **ATInternet:** fix script loading to fix js error on load of ATInternet ([#4402](https://github.com/SocialGouv/code-du-travail-numerique/issues/4402)) ([cd37419](https://github.com/SocialGouv/code-du-travail-numerique/commit/cd37419161459fe57c347ad92dc12878db413aa7))
+* **events:** ajout d'un paramètre manquant pour matomo sur la page theme ([#4376](https://github.com/SocialGouv/code-du-travail-numerique/issues/4376)) ([78b873e](https://github.com/SocialGouv/code-du-travail-numerique/commit/78b873ee6ed2bfe5fc2d4950039a34181ea37e45))
+* **form:** change cc (with [@m-maillot](https://github.com/m-maillot)) ([#4401](https://github.com/SocialGouv/code-du-travail-numerique/issues/4401)) ([14ceb91](https://github.com/SocialGouv/code-du-travail-numerique/commit/14ceb91e0085eed2e244447635bff0289b7a0ab4))
+* **hooks:** add diff to dev ([#4369](https://github.com/SocialGouv/code-du-travail-numerique/issues/4369)) ([73bbb4f](https://github.com/SocialGouv/code-du-travail-numerique/commit/73bbb4f5ab355ffa3b5a91dce758aa54922eb2da))
+* **logging:** make preprod log on Sentry preprod ([#4381](https://github.com/SocialGouv/code-du-travail-numerique/issues/4381)) ([c9ca632](https://github.com/SocialGouv/code-du-travail-numerique/commit/c9ca632b01b3b8f3d2821454d8c4730a3b4c27ee))
+* **preavis de retraite:** do not show empty situation if no title on result page ([#4394](https://github.com/SocialGouv/code-du-travail-numerique/issues/4394)) ([4c89588](https://github.com/SocialGouv/code-du-travail-numerique/commit/4c89588d7ebcfac96cfaa4d5ba376ecdfbd2162a))
+* **simulateurs:** bug de changements de CC nouveau parcours ([#4388](https://github.com/SocialGouv/code-du-travail-numerique/issues/4388)) ([4fc2881](https://github.com/SocialGouv/code-du-travail-numerique/commit/4fc2881ee8bb143e84363d4e2ac576d27ab5038b))
+* **version:** update dependencies ([#4389](https://github.com/SocialGouv/code-du-travail-numerique/issues/4389)) ([be7bb1f](https://github.com/SocialGouv/code-du-travail-numerique/commit/be7bb1f170dc22507942e7c266bf1577178948b2))
+
+
+### Features
+
+* **agreement step:** for Heure de recherche d'emploi & préavis de démisison agreement step can not be skipped ([#4379](https://github.com/SocialGouv/code-du-travail-numerique/issues/4379)) ([58afc1e](https://github.com/SocialGouv/code-du-travail-numerique/commit/58afc1ee1e89623a9f955129f942713d0e878913))
+* **simulator:** publicodes for indemnité de licenciement ([#4275](https://github.com/SocialGouv/code-du-travail-numerique/issues/4275)) ([07ec458](https://github.com/SocialGouv/code-du-travail-numerique/commit/07ec458b46352920c5b2bcb4f2587454d4529c36)), closes [#4267](https://github.com/SocialGouv/code-du-travail-numerique/issues/4267) [#4268](https://github.com/SocialGouv/code-du-travail-numerique/issues/4268) [#4302](https://github.com/SocialGouv/code-du-travail-numerique/issues/4302) [#4359](https://github.com/SocialGouv/code-du-travail-numerique/issues/4359) [#4375](https://github.com/SocialGouv/code-du-travail-numerique/issues/4375)
+
+
+
+
+
 ## [4.75.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.0...v4.75.4) (2022-04-06)
 
 

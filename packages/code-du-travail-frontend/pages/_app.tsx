@@ -12,7 +12,7 @@ import getConfig from "next/config";
 import React, { useEffect } from "react";
 
 import { A11y } from "../src/a11y";
-import { initATInternetService } from "../src/lib/atinternet";
+import { initATInternetService } from "../src/lib";
 import {
   clientSideRedirectMiddleware,
   serverSideRedirectMiddleware,

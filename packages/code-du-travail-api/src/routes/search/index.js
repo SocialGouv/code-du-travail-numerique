@@ -138,7 +138,7 @@ router.get("/search", async (ctx) => {
       }),
     ];
   }
-
+  console.log(JSON.stringify(searches[DOCUMENTS_ES], null, 2));
   const results = await msearch({
     client: elasticsearchClient,
     searches,

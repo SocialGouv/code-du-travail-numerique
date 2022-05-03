@@ -1,9 +1,9 @@
 import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 import PropTypes from "prop-types";
 import React from "react";
-
-import CCSearchInfo from "../../common/CCSearchInfo";
 import Disclaimer from "../../common/Disclaimer";
+import { NoticeExample, Simulator } from "../../common/NoticeExample";
+import { NoticeNote } from "../../common/NoticeNote";
 import PubliReferences from "../../common/PubliReferences";
 import ShowDetails from "../../common/ShowDetails";
 import {
@@ -18,6 +18,7 @@ import {
 } from "../../common/stepStyles";
 import { WizardStepProps } from "../../common/type/WizardType";
 import { formatRefs } from "../../publicodes/";
+import { calculateNumberOfElements } from "../../utils";
 
 function DisclaimerBox() {
   return (
@@ -25,18 +26,6 @@ function DisclaimerBox() {
       <p>
         L’existence ou la durée du préavis de démission peut être prévue par un
         accord d’entreprise ou à défaut, par un usage dans l’entreprise.
-      </p>
-    </Disclaimer>
-  );
-}
-
-function DisclaimerBoxNoCC() {
-  return (
-    <Disclaimer title={"Attention il peut exister une autre durée de préavis"}>
-      <p>
-        L’existence ou la durée du préavis de démission peut être prévue par une
-        convention collective, un accord d’entreprise ou à défaut, par un usage
-        dans l’entreprise.
       </p>
     </Disclaimer>
   );
@@ -56,32 +45,6 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
       "https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174",
   };
 
-  // No ccn selected or UnhandledCC
-  if (!ccn?.selected || possibleSituations.length === 0) {
-    let reason =
-      "la convention collective n’a pas encore été traitée par nos services.";
-    if (idcc === 0) {
-      reason = "la convention collective n’a pas été renseignée.";
-    }
-    return (
-      <>
-        <SectionTitle>Durée du préavis</SectionTitle>
-        <p>
-          <HighlightResult>Aucun résultat</HighlightResult>&nbsp;:&nbsp;{reason}
-        </p>
-        <p>
-          Le code du travail ne prévoit pas de durée de préavis de démission
-          sauf, cas particuliers.
-        </p>
-        {possibleSituations.length === 0 && ccn?.selected && (
-          <CCSearchInfo ccn={ccn.selected} />
-        )}
-        <DisclaimerBoxNoCC />
-        <PubliReferences references={formatRefs([refLegal])} />
-      </>
-    );
-  }
-  // CCn Selected
   const [situation] = possibleSituations;
   return (
     <>
@@ -91,7 +54,14 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
           À partir des éléments que vous avez saisis, la durée du préavis de
           démission est estimée à&nbsp;:&nbsp;
           <HighlightResult>{situation.answer}</HighlightResult>
-          {situation.note && <sup>*</sup>}.
+          <NoticeNote
+            isList
+            numberOfElements={calculateNumberOfElements(
+              situation.answer,
+              situation.note
+            )}
+          />
+          .
         </p>
       ) : (
         <p>
@@ -106,15 +76,37 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
           sauf, cas particuliers.
         </p>
       )}
+      {situation.answer && (
+        <NoticeExample
+          simulator={Simulator.PREAVIS_DEMISSION}
+          period={situation.answer}
+          note={
+            <NoticeNote
+              numberOfElements={calculateNumberOfElements(
+                situation.answer,
+                situation.note
+              )}
+              currentElement={1}
+            />
+          }
+        />
+      )}
       {situation.note && (
         <SmallText>
-          <sup>*</sup> {situation.note}
+          <NoticeNote
+            numberOfElements={calculateNumberOfElements(
+              situation.answer,
+              situation.note
+            )}
+            currentElement={calculateNumberOfElements(situation.answer) + 1}
+          />
+          {situation.note}
         </SmallText>
       )}
       <ShowDetails>
         <SectionTitle>Éléments saisis</SectionTitle>
         {recapSituation({
-          "Convention collective": `${ccn.selected.title} (${idcc})`,
+          "Convention collective": `${ccn?.selected?.title} (${idcc})`,
           ...situation.criteria,
         })}
         <PubliReferences references={formatRefs([refLegal, situation])} />

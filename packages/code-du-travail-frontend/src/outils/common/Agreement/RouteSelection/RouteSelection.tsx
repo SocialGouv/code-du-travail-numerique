@@ -13,9 +13,10 @@ import ShowAlert from "./ShowAlert";
 
 type Props = {
   form: FormApi<FormContent>;
+  canBeSkip: boolean;
 };
 
-const RouteSelection = ({ form }: Props): JSX.Element => {
+const RouteSelection = ({ form, canBeSkip = true }: Props): JSX.Element => {
   const values = form.getState().values;
   return (
     <>
@@ -71,25 +72,27 @@ const RouteSelection = ({ form }: Props): JSX.Element => {
             />
           )}
         </Field>
-        <Field<AgreementRoute>
-          type="radio"
-          name={ROUTE_NAME}
-          value="not-selected"
-          validate={required}
-        >
-          {(props) => (
-            <InputRadio
-              label={
-                <Text>
-                  Je ne souhaite pas renseigner ma convention collective (je
-                  passe l&apos;étape)
-                </Text>
-              }
-              id={`not-selected`}
-              {...props.input}
-            />
-          )}
-        </Field>
+        {canBeSkip && (
+          <Field<AgreementRoute>
+            type="radio"
+            name={ROUTE_NAME}
+            value="not-selected"
+            validate={required}
+          >
+            {(props) => (
+              <InputRadio
+                label={
+                  <Text>
+                    Je ne souhaite pas renseigner ma convention collective (je
+                    passe l&apos;étape)
+                  </Text>
+                }
+                id={`not-selected`}
+                {...props.input}
+              />
+            )}
+          </Field>
+        )}
         <ErrorField name={ROUTE_NAME} />
         {values.ccn && <ShowAlert route={values.ccn.route} />}
       </RadioContainer>

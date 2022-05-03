@@ -370,7 +370,7 @@ exports[`<StepResult /> should render with O duration 1`] = `
 `;
 
 exports[`<StepResult /> should render with both CC duration and CDT duration 1`] = `
-.c5 {
+.c7 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -384,14 +384,14 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   transition: transform 250ms linear;
 }
 
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c5 {
+[aria-expanded="true"] .c6,
+[aria-selected="true"] .c7 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c9 {
+.c11 {
   margin-bottom: 1.6rem;
   padding: 1.6rem 2rem;
   color: #3e486e;
@@ -401,28 +401,28 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   border-radius: 0.6rem;
 }
 
-.c9 > *:first-child {
+.c11 > *:first-child {
   margin-top: 0;
 }
 
-.c9 > *:last-child {
+.c11 > *:last-child {
   margin-bottom: 0;
 }
 
-.c6 {
+.c8 {
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
   margin: 0;
 }
 
-.c14 {
+.c16 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c8 {
+.c10 {
   max-height: 0px;
   opacity: 0;
   overflow: auto;
@@ -430,7 +430,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   transition: opacity 0.5s ease-in-out;
 }
 
-.c3 {
+.c5 {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -447,18 +447,18 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   overflow: hidden;
 }
 
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
+.c5:hover,
+.c5:focus,
+.c5:focus-within,
+.c5[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c7 {
+.c9 {
   margin-left: 1rem;
 }
 
-.c11 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -473,7 +473,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   justify-content: stretch;
 }
 
-.c12 {
+.c14 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -483,22 +483,22 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   margin-right: 2rem;
 }
 
-.c12 svg {
+.c14 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c13 {
+.c15 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c10 {
+.c12 {
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c17 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -526,14 +526,25 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   font-size: 1.5em;
 }
 
+.c4 {
+  color: #3e486e;
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
+}
+
+.c3 {
+  font-size: 0.8em;
+  margin-right: 0.2em;
+}
+
 @media (max-width:600px) {
-  .c12 {
+  .c14 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c12 svg {
+  .c14 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -559,17 +570,46 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     >
       1 mois
     </strong>
+    <sup
+      class="c3"
+    >
+      *
+    </sup>
     .
+  </p>
+  <p
+    class="c4"
+  >
+    <sup
+      class="c3"
+    >
+      * 
+    </sup>
+    Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
+    <i
+      class="c4"
+    >
+       
+      Exemple : si le salarié reçoit le courrier recommandé le
+       
+      23 avril
+       alors il effectuera son dernier jour dans l’entreprise le 
+      23 mai
+      . Si le
+       
+      23 mai
+       tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
+    </i>
   </p>
   <div>
     <div
       aria-expanded="false"
-      class="c3"
+      class="c5"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="c4 c5"
+        class="c6 c7"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -585,13 +625,13 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         />
       </svg>
       <p
-        class="c6 c7"
+        class="c8 c9"
       >
         Voir le détail du calcul
       </p>
     </div>
     <div
-      class="c8"
+      class="c10"
     >
       <h2
         class="c0"
@@ -648,13 +688,13 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     </div>
   </div>
   <div
-    class="c9 c10"
+    class="c11 c12"
   >
     <div
-      class="c11"
+      class="c13"
     >
       <div
-        class="c12"
+        class="c14"
       >
         <svg
           aria-hidden="true"
@@ -674,10 +714,10 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
         </svg>
       </div>
       <div
-        class="c13"
+        class="c15"
       >
         <p
-          class="c14 c15"
+          class="c16 c17"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -1028,7 +1068,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 `;
 
 exports[`<StepResult /> should render with when no CC 1`] = `
-.c5 {
+.c7 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1042,14 +1082,14 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   transition: transform 250ms linear;
 }
 
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c5 {
+[aria-expanded="true"] .c6,
+[aria-selected="true"] .c7 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c9 {
+.c11 {
   margin-bottom: 1.6rem;
   padding: 1.6rem 2rem;
   color: #3e486e;
@@ -1059,28 +1099,28 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   border-radius: 0.6rem;
 }
 
-.c9 > *:first-child {
+.c11 > *:first-child {
   margin-top: 0;
 }
 
-.c9 > *:last-child {
+.c11 > *:last-child {
   margin-bottom: 0;
 }
 
-.c6 {
+.c8 {
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
   margin: 0;
 }
 
-.c14 {
+.c16 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c8 {
+.c10 {
   max-height: 0px;
   opacity: 0;
   overflow: auto;
@@ -1088,7 +1128,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   transition: opacity 0.5s ease-in-out;
 }
 
-.c3 {
+.c5 {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -1105,18 +1145,18 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   overflow: hidden;
 }
 
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
+.c5:hover,
+.c5:focus,
+.c5:focus-within,
+.c5[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c7 {
+.c9 {
   margin-left: 1rem;
 }
 
-.c11 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1131,7 +1171,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   justify-content: stretch;
 }
 
-.c12 {
+.c14 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -1141,22 +1181,22 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   margin-right: 2rem;
 }
 
-.c12 svg {
+.c14 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c13 {
+.c15 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c10 {
+.c12 {
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c17 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1184,14 +1224,25 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   font-size: 1.5em;
 }
 
+.c4 {
+  color: #3e486e;
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
+}
+
+.c3 {
+  font-size: 0.8em;
+  margin-right: 0.2em;
+}
+
 @media (max-width:600px) {
-  .c12 {
+  .c14 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c12 svg {
+  .c14 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -1217,17 +1268,46 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     >
       2 mois
     </strong>
+    <sup
+      class="c3"
+    >
+      *
+    </sup>
     .
+  </p>
+  <p
+    class="c4"
+  >
+    <sup
+      class="c3"
+    >
+      * 
+    </sup>
+    Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
+    <i
+      class="c4"
+    >
+       
+      Exemple : si le salarié reçoit le courrier recommandé le
+       
+      23 avril
+       alors il effectuera son dernier jour dans l’entreprise le 
+      23 juin
+      . Si le
+       
+      23 juin
+       tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
+    </i>
   </p>
   <div>
     <div
       aria-expanded="false"
-      class="c3"
+      class="c5"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="c4 c5"
+        class="c6 c7"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -1243,13 +1323,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         />
       </svg>
       <p
-        class="c6 c7"
+        class="c8 c9"
       >
         Voir le détail du calcul
       </p>
     </div>
     <div
-      class="c8"
+      class="c10"
     >
       <h2
         class="c0"
@@ -1303,13 +1383,13 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     </div>
   </div>
   <div
-    class="c9 c10"
+    class="c11 c12"
   >
     <div
-      class="c11"
+      class="c13"
     >
       <div
-        class="c12"
+        class="c14"
       >
         <svg
           aria-hidden="true"
@@ -1329,10 +1409,10 @@ exports[`<StepResult /> should render with when no CC 1`] = `
         </svg>
       </div>
       <div
-        class="c13"
+        class="c15"
       >
         <p
-          class="c14 c15"
+          class="c16 c17"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -1346,7 +1426,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
 `;
 
 exports[`<StepResult /> should render with when unhandled CC 1`] = `
-.c5 {
+.c7 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1360,14 +1440,14 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   transition: transform 250ms linear;
 }
 
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c5 {
+[aria-expanded="true"] .c6,
+[aria-selected="true"] .c7 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c9 {
+.c11 {
   margin-bottom: 1.6rem;
   padding: 1.6rem 2rem;
   color: #3e486e;
@@ -1377,28 +1457,28 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   border-radius: 0.6rem;
 }
 
-.c9 > *:first-child {
+.c11 > *:first-child {
   margin-top: 0;
 }
 
-.c9 > *:last-child {
+.c11 > *:last-child {
   margin-bottom: 0;
 }
 
-.c6 {
+.c8 {
   color: #3e486e;
   font-size: 1.8rem;
   font-weight: 600;
   margin: 0;
 }
 
-.c14 {
+.c16 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c8 {
+.c10 {
   max-height: 0px;
   opacity: 0;
   overflow: auto;
@@ -1406,7 +1486,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   transition: opacity 0.5s ease-in-out;
 }
 
-.c3 {
+.c5 {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -1423,18 +1503,18 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   overflow: hidden;
 }
 
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
+.c5:hover,
+.c5:focus,
+.c5:focus-within,
+.c5[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c7 {
+.c9 {
   margin-left: 1rem;
 }
 
-.c11 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1449,7 +1529,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   justify-content: stretch;
 }
 
-.c12 {
+.c14 {
   display: block;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -1459,22 +1539,22 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   margin-right: 2rem;
 }
 
-.c12 svg {
+.c14 svg {
   width: 3.5rem;
   height: 3.5rem;
 }
 
-.c13 {
+.c15 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.c10 {
+.c12 {
   margin-top: 3.2rem;
 }
 
-.c15 {
+.c17 {
   color: #4d73b8;
   font-weight: 600;
   font-size: 1.8rem;
@@ -1502,14 +1582,25 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   font-size: 1.5em;
 }
 
+.c4 {
+  color: #3e486e;
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
+}
+
+.c3 {
+  font-size: 0.8em;
+  margin-right: 0.2em;
+}
+
 @media (max-width:600px) {
-  .c12 {
+  .c14 {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
   }
 
-  .c12 svg {
+  .c14 svg {
     width: 3rem;
     height: 3rem;
   }
@@ -1535,17 +1626,46 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     >
       2 mois
     </strong>
+    <sup
+      class="c3"
+    >
+      *
+    </sup>
     .
+  </p>
+  <p
+    class="c4"
+  >
+    <sup
+      class="c3"
+    >
+      * 
+    </sup>
+    Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
+    <i
+      class="c4"
+    >
+       
+      Exemple : si le salarié reçoit le courrier recommandé le
+       
+      23 avril
+       alors il effectuera son dernier jour dans l’entreprise le 
+      23 juin
+      . Si le
+       
+      23 juin
+       tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
+    </i>
   </p>
   <div>
     <div
       aria-expanded="false"
-      class="c3"
+      class="c5"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="c4 c5"
+        class="c6 c7"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -1561,13 +1681,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         />
       </svg>
       <p
-        class="c6 c7"
+        class="c8 c9"
       >
         Voir le détail du calcul
       </p>
     </div>
     <div
-      class="c8"
+      class="c10"
     >
       <h2
         class="c0"
@@ -1624,13 +1744,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     </div>
   </div>
   <div
-    class="c9 c10"
+    class="c11 c12"
   >
     <div
-      class="c11"
+      class="c13"
     >
       <div
-        class="c12"
+        class="c14"
       >
         <svg
           aria-hidden="true"
@@ -1650,10 +1770,10 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
         </svg>
       </div>
       <div
-        class="c13"
+        class="c15"
       >
         <p
-          class="c14 c15"
+          class="c16 c17"
         >
           Attention il peut exister une durée plus favorable
         </p>

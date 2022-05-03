@@ -89,12 +89,13 @@ describe("Test enterprise endpoint", () => {
         // Conventions data should be extract from elastic
         conventions: Data.filter(
           (doc) => doc.num === enterprise.conventions[0].idcc
-        ).map(({ id, num, shortTitle, slug, title }) => ({
+        ).map(({ id, num, shortTitle, slug, title, url }) => ({
           id,
           num,
           shortTitle,
           slug,
           title,
+          url,
         })),
       })),
     };

@@ -6,16 +6,13 @@ import { getSupportedCCWithoutConventionalProvision } from "./situation";
 
 export const AgreementStep = (props: WizardStepProps): JSX.Element => {
   return (
-    <>
-      <SelectAgreement
-        title={props.title}
-        form={props.form}
-        onChange={() => {
-          // Delete infos when change CC
-          props.form.change("infos", undefined);
-        }}
-        supportedAgreements={getSupportedCCWithoutConventionalProvision()}
-      />
-    </>
+    <SelectAgreement
+      title={props.title}
+      form={props.form}
+      onChange={() => {
+        props.form.change("criteria", undefined);
+      }}
+      supportedAgreements={getSupportedCCWithoutConventionalProvision()}
+    />
   );
 };

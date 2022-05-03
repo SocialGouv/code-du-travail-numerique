@@ -11,7 +11,7 @@ const sourcesFilter = (sources) =>
             // we want a boost here to avoid noise from CCNs
             {
               terms: {
-                boost: 30,
+                boost: 1,
                 source: sources.filter((s) => s != SOURCES.CCN),
               },
             },
@@ -19,7 +19,7 @@ const sourcesFilter = (sources) =>
             {
               bool: {
                 must: [
-                  { term: { source: SOURCES.CCN } },
+                  { terms: { boost: 2, source: [SOURCES.CCN] } },
                   { term: { contributions: true } },
                   {
                     rank_feature: {

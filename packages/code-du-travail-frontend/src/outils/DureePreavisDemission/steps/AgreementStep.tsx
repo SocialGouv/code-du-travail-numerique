@@ -2,21 +2,36 @@ import data from "@cdt/data...simulateurs/preavis-demission.data.json";
 import React from "react";
 
 import { SelectAgreement } from "../../common";
-import { getSupportedCC } from "../../common/situations.utils";
+import {
+  getSupportedCC,
+  validateUnsupportedAgreement,
+} from "../../common/situations.utils";
 import { WizardStepProps } from "../../common/type/WizardType";
+import NotSupportedAgreementDisclaimer from "./component/NotSupportedAgreementDisclaimer";
 
-export const AgreementStep = (props: WizardStepProps): JSX.Element => {
+const supportedCC = getSupportedCC(data.situations);
+
+const AgreementStep = (props: WizardStepProps): JSX.Element => {
   return (
     <>
       <SelectAgreement
         title={props.title}
         form={props.form}
         onChange={() => {
-          // Delete infos when change CC
-          props.form.change("infos", undefined);
+          props.form.change("criteria", undefined);
         }}
-        supportedAgreements={getSupportedCC(data.situations)}
+        required
+        note="La convention collective est nécessaire pour obtenir un résultat, le code du travail ne prévoyant rien sur le préavis de démission."
+        supportedAgreements={supportedCC}
+        alertAgreementNotSupported={(url: string) => (
+          <NotSupportedAgreementDisclaimer agreementUrl={url} />
+        )}
       />
     </>
   );
 };
+
+AgreementStep.validate = validateUnsupportedAgreement(
+  getSupportedCC(data.situations)
+);
+export { AgreementStep };
