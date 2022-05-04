@@ -7,15 +7,12 @@ const sourcesFilter = (sources) =>
     ? {
         bool: {
           should: [
-            // contents other than CCN
-            // we want a boost here to avoid noise from CCNs
             {
               terms: {
                 boost: 1,
                 source: sources.filter((s) => s != SOURCES.CCN),
               },
             },
-            // OR ( CCN source AND contributions )
             {
               bool: {
                 must: [
