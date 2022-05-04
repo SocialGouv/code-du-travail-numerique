@@ -96,7 +96,7 @@ jobs:
         run: |
           yarn install --prefer-offline --frozen-lockfile
       - name: Download k8s manifests
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: manifests-dev.yml
       - name: Get deployment url
