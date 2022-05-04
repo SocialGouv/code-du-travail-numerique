@@ -31,6 +31,9 @@ Fonctionnalité: Outil - Préavis de démission
 
   Scénario: Parcours en connaissant sa convention collective
     Soit un utilisateur sur la page "/outils/preavis-demission"
+
+    Alors je vois "Calculer le préavis de démission"
+
     Quand je clique sur "Commencer"
 
     Alors je vois "Quel est le nom de la convention collective applicable ?"

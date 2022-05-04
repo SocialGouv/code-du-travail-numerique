@@ -31,6 +31,9 @@ Fonctionnalité: Outil - Heures d'absence pour rechercher un emploi
   Scénario: Parcours en connaissant sa convention collective et sans information complémentaire
     Soit un utilisateur sur la page "/outils/heures-recherche-emploi"
 
+    Alors je vois "Étapes"
+    Alors je vois "Heures d'absence pour rechercher un emploi"
+
     Quand je clique sur "Commencer"
 
     Alors je vois "Quel est le nom de la convention collective applicable ?"
@@ -59,6 +62,9 @@ Fonctionnalité: Outil - Heures d'absence pour rechercher un emploi
 
   Scénario: Parcours en connaissant sa convention collective et avec informations complémentaires
     Soit un utilisateur sur la page "/outils/heures-recherche-emploi"
+
+    Alors je vois "Étapes"
+    Alors je vois "Heures d'absence pour rechercher un emploi"
 
     Quand je clique sur "Commencer"
 
