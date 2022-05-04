@@ -31,25 +31,27 @@ const EnterpriseSearchStep = ({
   onUserAction,
 }: EnterpriseSearchStepProps): JSX.Element => {
   return (
-    <Section>
-      <SectionTitle>Précisez et sélectionnez votre entreprise</SectionTitle>
-      <form onSubmit={(event) => event.preventDefault()}>
-        <SearchEnterpriseInput
-          searchParams={searchParams}
-          onUserAction={onUserAction}
-          onSearchParamsChange={onSearchParamsChange}
-          renderResults={renderResults({
-            handleEnterpriseSelection,
-            onUserAction,
-          })}
-        />
-      </form>
+    <>
+      <Section>
+        <SectionTitle>Précisez et sélectionnez votre entreprise</SectionTitle>
+        <form onSubmit={(event) => event.preventDefault()}>
+          <SearchEnterpriseInput
+            searchParams={searchParams}
+            onUserAction={onUserAction}
+            onSearchParamsChange={onSearchParamsChange}
+            renderResults={renderResults({
+              handleEnterpriseSelection,
+              onUserAction,
+            })}
+          />
+        </form>
+      </Section>
       <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
         <Button as="a" small type="button" onClick={onBackClick} variant="flat">
           Précédent
         </Button>
       </Link>
-    </Section>
+    </>
   );
 };
 

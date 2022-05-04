@@ -19,25 +19,28 @@ const AgreementSearchStep = ({
   onUserAction,
 }: AgreementSearchStepProps): JSX.Element => {
   return (
-    <Section>
-      <SectionTitle>
-        Précisez et sélectionnez votre convention collective
-      </SectionTitle>
-      <form onSubmit={(event) => event.preventDefault()}>
-        <SearchAgreementInput
-          onUserAction={onUserAction}
-          renderResults={renderResults({
-            onSelectAgreement,
-            onUserAction,
-          })}
-        />
-      </form>
+    <>
+      <Section>
+        <SectionTitle>
+          Précisez et sélectionnez votre convention collective
+        </SectionTitle>
+        <form onSubmit={(event) => event.preventDefault()}>
+          <SearchAgreementInput
+            onUserAction={onUserAction}
+            renderResults={renderResults({
+              onSelectAgreement,
+              onUserAction,
+            })}
+          />
+        </form>
+      </Section>
+
       <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
         <Button as="a" small type="button" onClick={onBackClick} variant="flat">
           Précédent
         </Button>
       </Link>
-    </Section>
+    </>
   );
 };
 

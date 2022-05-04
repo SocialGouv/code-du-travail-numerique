@@ -93,7 +93,7 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
     return () => {
       router.events.off("hashChangeStart", handleHashNavigation);
     };
-  });
+  }, []);
 
   let Step;
   switch (screen) {
