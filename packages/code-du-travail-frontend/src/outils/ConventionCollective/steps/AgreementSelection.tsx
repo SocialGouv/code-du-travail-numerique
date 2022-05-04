@@ -1,5 +1,5 @@
 import { SOURCES } from "@socialgouv/cdtn-sources";
-import { Button, FlatList, Text, theme } from "@socialgouv/cdtn-ui";
+import { Button, FlatList, Paragraph, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
@@ -7,34 +7,38 @@ import styled from "styled-components";
 import { SectionTitle } from "../../common/stepStyles";
 import { AgreementTile } from "../agreement/AgreementTile";
 import { useNavContext } from "../common/NavContext";
+import { TrackingProps } from "../types";
 
 type EnterpriseSearchStepProps = {
   onBackClick: () => void;
-};
+} & TrackingProps;
 
 const AgreementSelectionStep = ({
   onBackClick,
+  onUserAction,
 }: EnterpriseSearchStepProps): JSX.Element => {
   const { enterprise } = useNavContext();
 
   return (
     <>
       <SectionTitle>Convention collective</SectionTitle>
-      <Text as="p" variant="primary">
-        {enterprise.conventions.length > 1
-          ? `${enterprise.conventions.length} conventions collectives trouvées pour `
-          : `${enterprise.conventions.length} convention collective trouvée pour `}
-        <b>
-          « {enterprise.simpleLabel}
-          {enterprise.address &&
-            ` , ${enterprise.matchingEtablissement.address}`}{" "}
+      <Paragraph noMargin variant="primary">
+        {(enterprise?.conventions?.length ?? 0) > 1
+          ? `${enterprise?.conventions.length} conventions collectives trouvées pour `
+          : `${
+              enterprise?.conventions.length ?? 0
+            } convention collective trouvée pour `}
+        <strong>
+          « {enterprise?.simpleLabel}
+          {enterprise?.address &&
+            ` , ${enterprise?.firstMatchingEtablissement?.address}`}{" "}
           »
-        </b>
-      </Text>
+        </strong>
+      </Paragraph>
       <FlatList>
-        {enterprise.conventions.map((agreement) => (
+        {enterprise?.conventions.map((agreement) => (
           <Li key={agreement.id}>
-            <AgreementTile agreement={agreement} />
+            <AgreementTile onUserAction={onUserAction} agreement={agreement} />
           </Li>
         ))}
       </FlatList>
@@ -57,6 +61,7 @@ const Li = styled.li`
   & + & {
     margin-top: ${theme.spacings.base};
   }
+
   &:last-child {
     margin-bottom: ${theme.spacings.large};
   }

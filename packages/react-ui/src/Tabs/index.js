@@ -3,8 +3,8 @@ import React from "react";
 import { Tab, TabList, TabPanel, Tabs as RootTabs } from "react-tabs";
 import styled from "styled-components";
 
-import { OverflowWrapper } from "../OverflowWrapper/index.js";
-import { ScreenReaderOnly } from "../ScreenReaderOnly/index.js";
+import { OverflowWrapper } from "../OverflowWrapper";
+import { ScreenReaderOnly } from "../ScreenReaderOnly";
 import { animations, box, breakpoints, fonts, spacings } from "../theme.js";
 import { getTextFromComponent } from "../utils/getTextFromComponent.js";
 
@@ -96,9 +96,11 @@ const StyledTab = styled(Tab)`
   cursor: pointer;
   opacity: 1;
   transition: opacity ${animations.transitionTiming} linear;
+
   &[aria-selected="false"]:hover {
     opacity: 0.7;
   }
+
   &[aria-selected="true"] {
     color: ${({ theme }) => theme.white};
     background-color: ${({ theme }) => theme.secondary};
@@ -116,6 +118,7 @@ const StyledTab = styled(Tab)`
 const StyledTabPanel = styled(TabPanel)`
   color: ${({ theme }) => theme.paragraph};
   background-color: ${({ theme }) => theme.white};
+
   &.react-tabs__tab-panel--selected {
     padding: ${spacings.xmedium};
     border: 1px solid ${({ theme }) => theme.border};

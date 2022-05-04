@@ -1,124 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepInfo /> should display error if contrat cdd 1`] = `
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-.c2 {
-  position: relative;
-  display: inline-block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: calc(1.6rem * 1.25);
-  height: calc(1.6rem * 1.25);
-  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
-  padding: 0;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-  box-shadow: none;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c2:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-  width: calc(1.6rem / 1.5);
-  height: calc(1.6rem / 1.5);
-  background-color: #f66663;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  content: "";
-}
-
-.c2:checked {
-  background-color: #fff;
-  border-color: #f66663;
-}
-
-.c2:checked:before {
-  display: block;
-}
-
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
 }
 
 @media (max-width:600px) {
 
 }
 
-<div
+<p
   class="c0"
 >
-  <label
-    class="c1"
-    for="contrat-cdd"
-  >
-    <input
-      class="c2"
-      id="contrat-cdd"
-      name="contrat"
-      type="radio"
-      value="cdd"
-    />
-    Contrat à durée determiné (CDD) ou contrat d’intérim
-  </label>
-  <label
-    class="c1"
-    for="contrat-cdi"
-  >
-    <input
-      checked=""
-      class="c2"
-      id="contrat-cdi"
-      name="contrat"
-      type="radio"
-      value="cdi"
-    />
-    Contrat à durée indeterminé (CDI)
-  </label>
   L’indemnité de licenciement n’est pas dûe pour les CDD et contrats de travail temporaires. Sous certaines conditions, le salarié peut avoir le droit à une 
   <a
     aria-label="indemnité de précarité (nouvelle fenêtre) (nouvelle fenêtre)"
-    el="noopener noreferrer"
-    href="/fiche-service-public/qui-peut-toucher-la-prime-de-precarite-a-la-fin-dun-contrat-de-travail"
+    href="/fiche-service-public/le-salarie-touche-t-il-la-prime-de-precarite-a-la-fin-dun-contrat-de-travail"
+    rel="noopener noreferrer"
     target="_blank"
   >
     indemnité de précarité (nouvelle fenêtre)
   </a>
   .
-</div>
+</p>
 `;
 
 exports[`<StepInfo /> should display error if fauteGrave 1`] = `
@@ -126,17 +33,31 @@ exports[`<StepInfo /> should display error if fauteGrave 1`] = `
 
 }
 
-<b>
+<strong>
   L’indemnité légale de licenciement n’est pas dûe en cas de faute grave.
-</b>
+</strong>
 `;
 
 exports[`<StepInfo /> should render 1`] = `
+.c1 {
+  color: #3e486e;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
 .c2 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
 
 .c4 {
@@ -144,8 +65,9 @@ exports[`<StepInfo /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.6rem;
-  cursor: pointer;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .c5 {
@@ -195,14 +117,8 @@ exports[`<StepInfo /> should render 1`] = `
 
 .c0 {
   display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c1 {
-  font-weight: 600;
+  margin: 1rem 0;
+  cursor: pointer;
 }
 
 .c3 {
@@ -221,7 +137,7 @@ exports[`<StepInfo /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
 }
 
 @media (max-width:600px) {
@@ -232,7 +148,7 @@ exports[`<StepInfo /> should render 1`] = `
 
 <div>
   <form>
-    <p
+    <label
       class="c0"
     >
       <span
@@ -242,18 +158,15 @@ exports[`<StepInfo /> should render 1`] = `
       </span>
       <span
         class="c2"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
-    </p>
+    </label>
     <div
       class="c3"
     >
-      <label
+      <div
         class="c4"
-        for="contrat-cdd"
       >
         <input
           class="c5"
@@ -262,11 +175,15 @@ exports[`<StepInfo /> should render 1`] = `
           type="radio"
           value="cdd"
         />
-        Contrat à durée determiné (CDD) ou contrat d’intérim
-      </label>
-      <label
+        <label
+          class="c6"
+          for="contrat-cdd"
+        >
+          Contrat à durée determiné (CDD) ou contrat d’intérim
+        </label>
+      </div>
+      <div
         class="c4"
-        for="contrat-cdi"
       >
         <input
           class="c5"
@@ -275,10 +192,15 @@ exports[`<StepInfo /> should render 1`] = `
           type="radio"
           value="cdi"
         />
-        Contrat à durée indeterminé (CDI)
-      </label>
+        <label
+          class="c6"
+          for="contrat-cdi"
+        >
+          Contrat à durée indeterminé (CDI)
+        </label>
+      </div>
     </div>
-    <p
+    <label
       class="c0"
     >
       <span
@@ -288,43 +210,49 @@ exports[`<StepInfo /> should render 1`] = `
       </span>
       <span
         class="c2"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
-    </p>
+    </label>
     <div
       class="c3"
     >
-      <label
+      <div
         class="c4"
-        for="fauteGrave-yes"
       >
         <input
           class="c5"
-          id="fauteGrave-yes"
+          id="fauteGrave-oui"
           name="fauteGrave"
           type="radio"
           value="true"
         />
-        Oui
-      </label>
-      <label
+        <label
+          class="c6"
+          for="fauteGrave-oui"
+        >
+          Oui
+        </label>
+      </div>
+      <div
         class="c4"
-        for="fauteGrave-no"
       >
         <input
           class="c5"
-          id="fauteGrave-no"
+          id="fauteGrave-non"
           name="fauteGrave"
           type="radio"
           value="false"
         />
-        Non
-      </label>
+        <label
+          class="c6"
+          for="fauteGrave-non"
+        >
+          Non
+        </label>
+      </div>
     </div>
-    <p
+    <label
       class="c0"
     >
       <span
@@ -334,41 +262,47 @@ exports[`<StepInfo /> should render 1`] = `
       </span>
       <span
         class="c2"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
-    </p>
+    </label>
     <div
       class="c3"
     >
-      <label
+      <div
         class="c4"
-        for="inaptitude-yes"
       >
         <input
           class="c5"
-          id="inaptitude-yes"
+          id="inaptitude-oui"
           name="inaptitude"
           type="radio"
           value="true"
         />
-        Oui
-      </label>
-      <label
+        <label
+          class="c6"
+          for="inaptitude-oui"
+        >
+          Oui
+        </label>
+      </div>
+      <div
         class="c4"
-        for="inaptitude-no"
       >
         <input
           class="c5"
-          id="inaptitude-no"
+          id="inaptitude-non"
           name="inaptitude"
           type="radio"
           value="false"
         />
-        Non
-      </label>
+        <label
+          class="c6"
+          for="inaptitude-non"
+        >
+          Non
+        </label>
+      </div>
     </div>
     <button
       data-testid="nextBt"

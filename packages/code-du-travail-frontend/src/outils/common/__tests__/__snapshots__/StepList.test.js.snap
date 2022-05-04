@@ -229,7 +229,9 @@ exports[`<StepList /> should render 1`] = `
     class="c0 c1"
   >
     <span
+      aria-level="2"
       class="c2"
+      role="heading"
     >
       Étape
       <span

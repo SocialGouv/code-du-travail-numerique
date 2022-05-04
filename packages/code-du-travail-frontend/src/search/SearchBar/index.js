@@ -1,9 +1,9 @@
 import { Button, icons, ScreenReaderOnly, theme } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { matopush } from "../../piwik";
 import { fetchSuggestResults } from "../search.service";
 import { DocumentSuggester } from "./DocumentSuggester";
 
@@ -74,9 +74,7 @@ const SearchBar = ({
   return (
     <SearchForm role="search" action="/recherche" onSubmit={onFormSubmit}>
       <ScreenReaderOnly>
-        <label htmlFor={inputId} id="search">
-          Rechercher
-        </label>
+        <label htmlFor={inputId}>Rechercher</label>
       </ScreenReaderOnly>
       {hasButton && !hasSearchIcon && <SearchIconLeft />}
       <SearchInput
@@ -173,9 +171,11 @@ const SearchInput = styled(DocumentSuggester)`
   border-radius: ${box.borderRadius};
   box-shadow: ${({ theme }) => box.shadow.large(theme.secondary)};
   appearance: none;
+
   &::placeholder {
     color: ${({ theme }) => theme.placeholder};
   }
+
   @media (max-width: ${breakpoints.mobile}) {
     height: 5.4rem;
     padding: ${({ hasButton }) =>
@@ -189,8 +189,7 @@ const SubmitButton = styled(Button)`
   position: absolute;
   top: ${spacings.xsmall};
   right: ${spacings.xsmall};
-  padding: 0
-    ${({ hasSearchIcon }) => (hasSearchIcon ? spacings.base : "inherit")};
+  ${({ hasSearchIcon }) => hasSearchIcon && `padding: 0 ${spacings.base};`};
   @media (max-width: ${breakpoints.mobile}) {
     position: static;
     margin-top: ${spacings.small};

@@ -1,11 +1,13 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-import Recherche from "../pages/recherche.js";
+import Recherche from "../pages/recherche";
 
-jest.mock("../src/piwik", () => ({
-  matopush: jest.fn(),
-}));
+jest.mock("@socialgouv/matomo-next", () => {
+  return {
+    push: jest.fn(),
+  };
+});
 
 describe("<Recherche />", () => {
   it("should render", () => {

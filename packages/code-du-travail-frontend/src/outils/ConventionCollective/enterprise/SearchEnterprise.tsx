@@ -4,18 +4,20 @@ import {
   Enterprise,
   searchEnterprises,
 } from "../../../conventions/Search/api/enterprises.service";
-import { useNavContext } from "../common/NavContext";
 import { createSuggesterHook, FetchReducerState } from "../common/Suggester";
-import { useTrackingContext } from "../common/TrackingContext";
+import { TrackingProps, UserAction } from "../types";
 import { SearchEnterpriseInput } from "./SearchEnterpriseInput";
 
 type Props = {
+  embeddedForm: boolean;
   renderResults: (
     renderProps: FetchReducerState<Enterprise[]>,
     params: SearchParams
   ) => JSX.Element;
-  inputRef: ForwardedRef<HTMLDivElement>;
-};
+  inputRef: ForwardedRef<HTMLFormElement>;
+  searchParams: SearchParams;
+  onSearchParamsChange: (params: SearchParams) => void;
+} & TrackingProps;
 
 export type SearchParams = {
   address: string;
@@ -25,15 +27,16 @@ export type SearchParams = {
 export function SearchEnterprise({
   renderResults,
   inputRef,
+  searchParams,
+  onSearchParamsChange,
+  embeddedForm,
+  onUserAction,
 }: Props): JSX.Element {
-  const { searchParams, setSearchParams } = useNavContext();
-
-  const trackingContext = useTrackingContext();
-
   const useEnterpriseSuggester = createSuggesterHook(
     searchEnterprises,
-    "enterprise_search",
-    trackingContext
+    (query, address) => {
+      onUserAction(UserAction.SearchEnterprise, { address, query });
+    }
   );
 
   const state = useEnterpriseSuggester(
@@ -44,12 +47,13 @@ export function SearchEnterprise({
   const searchInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const name = event.target.name;
     const value = event.target.value;
-    setSearchParams({ ...searchParams, [name]: value });
+    onSearchParamsChange({ ...searchParams, [name]: value });
   };
 
   return (
     <>
       <SearchEnterpriseInput
+        embeddedForm={embeddedForm}
         ref={inputRef}
         query={searchParams.query}
         address={searchParams.address}

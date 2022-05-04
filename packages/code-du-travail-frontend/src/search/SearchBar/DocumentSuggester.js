@@ -9,25 +9,6 @@ import Html from "../../common/Html";
 const { colors } = theme;
 
 export class DocumentSuggester extends React.Component {
-  static propTypes = {
-    hasFocus: PropTypes.bool,
-    inputId: PropTypes.string,
-    onChange: PropTypes.func.isRequired,
-    onClear: PropTypes.func.isRequired,
-    onSearch: PropTypes.func.isRequired,
-    onSelect: PropTypes.func.isRequired,
-    query: PropTypes.string,
-    suggestions: PropTypes.array,
-  };
-
-  static defaultProps = {
-    excludeSources: "",
-    hasFocus: false,
-    inputId: "main-search-input",
-    query: "",
-    suggestions: [],
-  };
-
   focusInput = (autoSuggest) => {
     if (autoSuggest !== null && this.props.hasFocus) {
       autoSuggest.input.focus();
@@ -108,6 +89,26 @@ export class DocumentSuggester extends React.Component {
   }
 }
 
+DocumentSuggester.propTypes = {
+  hasFocus: PropTypes.bool,
+  inputId: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+  onClear: PropTypes.func.isRequired,
+  onSearch: PropTypes.func.isRequired,
+  onSelect: PropTypes.func.isRequired,
+  query: PropTypes.string,
+  suggestions: PropTypes.array,
+  children: PropTypes.node,
+};
+
+DocumentSuggester.defaultProps = {
+  excludeSources: "",
+  hasFocus: false,
+  inputId: "main-search-input",
+  query: "",
+  suggestions: [],
+};
+
 const getSuggestionValue = (suggestion) => suggestion;
 
 const SuggestionContainer = styled.div`
@@ -117,7 +118,7 @@ const SuggestionContainer = styled.div`
 `;
 
 const renderSuggestion = (suggestion, query) => {
-  const title = suggestion.replace(query, `<b>${query}</b>`);
+  const title = suggestion.replace(query, `<strong>${query}</strong>`);
   return (
     <SuggestionContainer>
       <Html inline>{title}</Html>

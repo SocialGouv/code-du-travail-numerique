@@ -10,13 +10,13 @@ exports[`<SearchResults/> should render results 1`] = `
   max-width: 74rem;
 }
 
-.c21 {
+.c23 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.c18 {
+.c20 {
   position: relative;
   margin: 5rem 0;
   padding: 3.2rem 0;
@@ -24,7 +24,7 @@ exports[`<SearchResults/> should render results 1`] = `
   color: #3e486e;
 }
 
-.c19 {
+.c21 {
   position: absolute;
   top: 0;
   right: 30%;
@@ -37,12 +37,49 @@ exports[`<SearchResults/> should render results 1`] = `
   content: "";
 }
 
-.c20 {
+.c22 {
   position: relative;
   z-index: 0;
 }
 
-.c10 {
+.c26 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c34 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0;
+  top: 0;
+  left: 50%;
+  width: 5rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c1 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
+.c12 {
   position: absolute;
   top: 0;
   right: 0;
@@ -53,7 +90,7 @@ exports[`<SearchResults/> should render results 1`] = `
   border-radius: 0 0.6rem 0 0;
 }
 
-.c10:before {
+.c12:before {
   position: absolute;
   display: block;
   width: 0;
@@ -64,7 +101,7 @@ exports[`<SearchResults/> should render results 1`] = `
   content: "";
 }
 
-.c11 {
+.c13 {
   position: absolute;
   top: 0;
   right: 0;
@@ -73,7 +110,7 @@ exports[`<SearchResults/> should render results 1`] = `
   height: 3rem;
 }
 
-.c15 {
+.c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -114,14 +151,14 @@ exports[`<SearchResults/> should render results 1`] = `
   overflow: visible;
 }
 
-.c15:focus,
-.c15:hover,
-.c15:active {
+.c17:focus,
+.c17:hover,
+.c17:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c17 {
+.c19 {
   width: 2.6rem;
   height: 1.4rem;
   margin: 0 0.4rem 0 1rem;
@@ -130,10 +167,17 @@ exports[`<SearchResults/> should render results 1`] = `
   transition: transform 250ms linear;
 }
 
-.c14:hover .c16 {
+.c16:hover .c18 {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
+}
+
+.c10 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
 }
 
 .c2 {
@@ -142,13 +186,13 @@ exports[`<SearchResults/> should render results 1`] = `
   list-style-type: none;
 }
 
-.c25 {
+.c27 {
   position: relative;
   overflow: visible;
 }
 
-.c25:before,
-.c25:after {
+.c27:before,
+.c27:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -163,19 +207,19 @@ exports[`<SearchResults/> should render results 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c25:before {
+.c27:before {
   left: -2rem;
 }
 
-.c25:after {
+.c27:after {
   right: -2rem;
 }
 
-.c27 {
+.c29 {
   overflow-x: visible;
 }
 
-.c28 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -202,7 +246,7 @@ exports[`<SearchResults/> should render results 1`] = `
   list-style-type: none;
 }
 
-.c29 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -219,7 +263,7 @@ exports[`<SearchResults/> should render results 1`] = `
   width: calc(100% / 3 - 2 * 1rem - 1px);
 }
 
-.c30 {
+.c32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -234,43 +278,6 @@ exports[`<SearchResults/> should render results 1`] = `
   margin: 1rem;
   padding: 0;
   width: calc(100% / 4 - 2 * 1rem - 1px);
-}
-
-.c24 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c32 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: none;
-  top: 0;
-  left: 50%;
-  width: 5rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c1 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
 }
 
 .c7 {
@@ -335,7 +342,7 @@ exports[`<SearchResults/> should render results 1`] = `
   transform: translateY(-2px);
 }
 
-.c31 {
+.c33 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -376,9 +383,9 @@ exports[`<SearchResults/> should render results 1`] = `
   appearance: none;
 }
 
-.c31:hover,
-.c31:active,
-.c31:focus {
+.c33:hover,
+.c33:active,
+.c33:focus {
   color: #3e486e;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
   -webkit-transform: translateY(-2px);
@@ -398,6 +405,8 @@ exports[`<SearchResults/> should render results 1`] = `
 
 .c8 {
   margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .c9 {
@@ -407,14 +416,14 @@ exports[`<SearchResults/> should render results 1`] = `
   margin-top: 1rem;
 }
 
-.c22 {
+.c24 {
   margin-top: 3.2rem;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: left;
 }
 
-.c23 {
+.c25 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -426,7 +435,7 @@ exports[`<SearchResults/> should render results 1`] = `
   text-align: left;
 }
 
-.c12 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -441,7 +450,13 @@ exports[`<SearchResults/> should render results 1`] = `
   height: 100%;
 }
 
-.c13 {
+.c11 h2 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+.c15 {
   margin-top: 1.6rem;
 }
 
@@ -463,63 +478,69 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media (max-width:600px) {
-  .c21 {
+  .c23 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c21 {
+  .c23 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c21 {
     right: 2rem;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c17 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c15 {
+  .c17 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c27 {
     overflow-x: hidden;
   }
 }
 
 @media (max-width:600px) {
-  .c25:before,
-  .c25:after {
+  .c27:before,
+  .c27:after {
     display: block;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c29 {
     overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c28 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c30 {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
@@ -530,18 +551,18 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c31 {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
     min-width: 23rem;
   }
 
-  .c29:first-of-type {
+  .c31:first-of-type {
     margin-left: 2rem;
   }
 
-  .c29:last-of-type:after {
+  .c31:last-of-type:after {
     display: block;
     width: 2rem;
     height: 100%;
@@ -551,36 +572,36 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c29 {
+  .c31 {
     width: calc( 100% / 2 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:980px) {
-  .c29 {
+  .c31 {
     width: calc( 100% / 1 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c31 {
     width: 80%;
   }
 }
 
 @media (max-width:600px) {
-  .c30 {
+  .c32 {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
     min-width: 23rem;
   }
 
-  .c30:first-of-type {
+  .c32:first-of-type {
     margin-left: 2rem;
   }
 
-  .c30:last-of-type:after {
+  .c32:last-of-type:after {
     display: block;
     width: 2rem;
     height: 100%;
@@ -590,26 +611,20 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c30 {
+  .c32 {
     width: calc( 100% / 3 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:980px) {
-  .c30 {
+  .c32 {
     width: calc( 100% / 2 - 2 * 1rem - 1px );
   }
 }
 
 @media (max-width:600px) {
-  .c30 {
+  .c32 {
     width: 60%;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
   }
 }
 
@@ -621,28 +636,34 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 @media (max-width:600px) {
-  .c31 {
+  .c33 {
     padding: 2rem 1.6rem;
     font-size: 1.4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c22 {
+  .c24 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c25 {
     padding-left: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c25 {
     font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c11 h2 {
+    font-size: 1.6rem;
   }
 }
 
@@ -652,11 +673,11 @@ exports[`<SearchResults/> should render results 1`] = `
     class="c0"
     role="region"
   >
-    <h3
+    <p
       class="c1"
     >
       Résultats de recherche pour “search test”
-    </h3>
+    </p>
     <ul
       class="c2"
     >
@@ -673,22 +694,26 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c6"
             >
-              <span
+              <p
                 class="c7 "
               >
                 test theme content
-              </span>
-              <h3
-                class="c1 c8"
+              </p>
+              <p
+                class="c8"
               >
                 Mer il est fou!
-              </h3>
+              </p>
             </div>
           </div>
           <div
             class="c9"
           >
-            description
+            <p
+              class="c10"
+            >
+              description
+            </p>
           </div>
         </a>
       </li>
@@ -696,29 +721,30 @@ exports[`<SearchResults/> should render results 1`] = `
         class="c3"
       >
         <a
-          class="c4"
+          class="c4 c11"
           href="/outils/simulateur-precarite?q=search%20test"
         >
           <div
-            class="c10"
+            class="c12"
           >
             <div
-              class="c11"
+              class="c13"
             >
               <svg
                 aria-hidden="true"
                 fill="none"
                 viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
-                  d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                  d="M11.938 16.5a3.548 3.548 0 0 1 3.562-3.563 3.548 3.548 0 0 1 3.563 3.563 3.548 3.548 0 0 1-3.563 3.563 3.548 3.548 0 0 1-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
                   fill="currentColor"
                   fill-rule="evenodd"
                 />
                 <path
                   clip-rule="evenodd"
-                  d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                  d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
                   fill="currentColor"
                   fill-rule="evenodd"
                 />
@@ -731,44 +757,49 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c6"
             >
-              <span
+              <p
                 class="c7 "
               >
                 Outils
-              </span>
-              <h3
-                class="c1 c8"
+              </p>
+              <p
+                class="c8"
               >
                 simulateur de prime de précarite
-              </h3>
+              </p>
             </div>
           </div>
           <div
             class="c9"
           >
             <div
-              class="c12"
+              class="c14"
             >
-              description
-              <div
-                class="c13"
+              <p
+                class="c10"
               >
-                <div
-                  class="c14 c15"
+                description
+              </p>
+              <div
+                class="c15"
+              >
+                <button
+                  class="c16 c17"
                 >
                   Consulter
                   <svg
                     aria-hidden="true"
-                    class="c16 c17"
+                    class="c18 c19"
                     fill="none"
                     viewBox="0 0 28 15"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                       fill="currentColor"
                     />
                   </svg>
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -779,7 +810,7 @@ exports[`<SearchResults/> should render results 1`] = `
       >
         <a
           aria-label="Outils externes telerc description undefined (nouvelle fenêtre)"
-          class="c4 no-after"
+          class="c4 c11 no-after"
           href="https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14"
           rel="noreferer noopener"
           target="_blank"
@@ -790,13 +821,13 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c6"
             >
-              <span
+              <p
                 class="c7 "
               >
                 Outils externes
-              </span>
+              </p>
               <h3
-                class="c1 c8"
+                class="c8"
               >
                 telerc
               </h3>
@@ -806,28 +837,33 @@ exports[`<SearchResults/> should render results 1`] = `
             class="c9"
           >
             <div
-              class="c12"
+              class="c14"
             >
-              description
-              <div
-                class="c13"
+              <p
+                class="c10"
               >
-                <div
-                  class="c14 c15"
+                description
+              </p>
+              <div
+                class="c15"
+              >
+                <button
+                  class="c16 c17"
                 >
                   Consulter
                   <svg
                     aria-hidden="true"
-                    class="c16 c17"
+                    class="c18 c19"
                     fill="none"
                     viewBox="0 0 28 15"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                       fill="currentColor"
                     />
                   </svg>
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -837,29 +873,30 @@ exports[`<SearchResults/> should render results 1`] = `
         class="c3"
       >
         <a
-          class="c4"
+          class="c4 c11"
           href="/outils/mer-il-est-fou2?q=search%20test"
         >
           <div
-            class="c10"
+            class="c12"
           >
             <div
-              class="c11"
+              class="c13"
             >
               <svg
                 aria-hidden="true"
                 fill="none"
                 viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
-                  d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                  d="M11.938 16.5a3.548 3.548 0 0 1 3.562-3.563 3.548 3.548 0 0 1 3.563 3.563 3.548 3.548 0 0 1-3.563 3.563 3.548 3.548 0 0 1-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
                   fill="currentColor"
                   fill-rule="evenodd"
                 />
                 <path
                   clip-rule="evenodd"
-                  d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                  d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
                   fill="currentColor"
                   fill-rule="evenodd"
                 />
@@ -872,44 +909,49 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c6"
             >
-              <span
+              <p
                 class="c7 "
               >
                 test root content
-              </span>
-              <h3
-                class="c1 c8"
+              </p>
+              <p
+                class="c8"
               >
                 Mer il est fou 2!
-              </h3>
+              </p>
             </div>
           </div>
           <div
             class="c9"
           >
             <div
-              class="c12"
+              class="c14"
             >
-              description
-              <div
-                class="c13"
+              <p
+                class="c10"
               >
-                <div
-                  class="c14 c15"
+                description
+              </p>
+              <div
+                class="c15"
+              >
+                <button
+                  class="c16 c17"
                 >
                   Consulter
                   <svg
                     aria-hidden="true"
-                    class="c16 c17"
+                    class="c18 c19"
                     fill="none"
                     viewBox="0 0 28 15"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                      d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                       fill="currentColor"
                     />
                   </svg>
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -923,25 +965,26 @@ exports[`<SearchResults/> should render results 1`] = `
           href="/contribution/mer-il-est-fou4?q=search%20test"
         >
           <div
-            class="c10"
+            class="c12"
           >
             <div
-              class="c11"
+              class="c13"
             >
               <svg
                 aria-hidden="true"
                 fill="none"
                 viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
-                  d="M11.938 16.5a3.548 3.548 0 013.562-3.563 3.548 3.548 0 013.563 3.563 3.548 3.548 0 01-3.563 3.563 3.548 3.548 0 01-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
+                  d="M11.938 16.5a3.548 3.548 0 0 1 3.562-3.563 3.548 3.548 0 0 1 3.563 3.563 3.548 3.548 0 0 1-3.563 3.563 3.548 3.548 0 0 1-3.563-3.563zm2.062 0c0 .84.66 1.5 1.5 1.5s1.5-.66 1.5-1.5-.66-1.5-1.5-1.5-1.5.66-1.5 1.5z"
                   fill="currentColor"
                   fill-rule="evenodd"
                 />
                 <path
                   clip-rule="evenodd"
-                  d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112l.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
+                  d="M25 14.838v3.404l-1.663.87-.474 1.109.554 1.82-2.375 2.376-1.9-.555-1.109.476-.87 1.662h-3.405l-.87-1.663-1.109-.474-1.82.554-2.376-2.375.554-1.9-.475-1.109L6 18.163v-3.405l1.662-.87.475-1.109-.554-1.82 2.375-2.376 1.9.554 1.109-.475.87-1.662h3.405l.87 1.662 1.109.475 1.82-.554 2.376 2.375-.555 1.9.476 1.109 1.662.87zm-4.1 5.112.825-2.025L23 17.25v-1.5l-1.2-.6-.825-2.025.375-1.35-1.05-1.05-1.35.375-2.025-.825L16.25 9h-1.5l-.6 1.2-2.025.825-1.35-.375-1.05 1.05.375 1.35-.825 2.025L8 15.75v1.5l1.2.6.825 2.025-.375 1.35 1.05 1.05 1.35-.375 2.025.825L14.75 24h1.5l.6-1.2 2.025-.825 1.35.375 1.05-1.05-.375-1.35z"
                   fill="currentColor"
                   fill-rule="evenodd"
                 />
@@ -954,62 +997,66 @@ exports[`<SearchResults/> should render results 1`] = `
             <div
               class="c6"
             >
-              <span
+              <p
                 class="c7 "
               >
                 test theme content
-              </span>
-              <h3
-                class="c1 c8"
+              </p>
+              <p
+                class="c8"
               >
                 Mer il est fou 4!
-              </h3>
+              </p>
             </div>
           </div>
           <div
             class="c9"
           >
-            description
+            <p
+              class="c10"
+            >
+              description
+            </p>
           </div>
         </a>
       </li>
     </ul>
   </div>
   <div
-    class="c18"
+    class="c20"
   >
     <div
-      class="c19"
+      class="c21"
     />
     <div
-      class="c20"
+      class="c22"
     >
       <div
-        class="c21"
+        class="c23"
       >
         <div
-          class="c22"
+          class="c24"
         >
           <h2
-            class="c23"
+            class="c25"
           >
-            <div
-              class="c24"
+            <span
+              class="c26"
             />
             Que dit le code du travail ?
           </h2>
         </div>
         <div
-          class="c25 c26"
+          class="c27 c28"
         >
           <div
-            class="c27"
+            class="c29"
           >
             <div
-              class="c28"
+              class="c30"
             >
               <div
-                class="c29"
+                class="c31"
               >
                 <a
                   class="c4"
@@ -1022,11 +1069,11 @@ exports[`<SearchResults/> should render results 1`] = `
                       class="c6"
                     >
                       
-                      <h3
-                        class="c1 c8"
+                      <p
+                        class="c8"
                       >
                         L1243-1
-                      </h3>
+                      </p>
                     </div>
                   </div>
                   <div
@@ -1040,48 +1087,48 @@ exports[`<SearchResults/> should render results 1`] = `
           </div>
         </div>
         <div
-          class="c22"
+          class="c24"
         >
           <h2
-            class="c23"
+            class="c25"
           >
-            <div
-              class="c24"
+            <span
+              class="c26"
             />
             Les thèmes suivants peuvent vous intéresser
           </h2>
         </div>
         <div
-          class="c25 c26"
+          class="c27 c28"
         >
           <div
-            class="c27"
+            class="c29"
           >
             <div
-              class="c28"
+              class="c30"
             >
               <div
-                class="c30"
+                class="c32"
               >
                 <a
-                  class="c31"
+                  class="c33"
                   href="/themes/1-contrat?q=search%20test"
                 >
                   <div
                     class="c5"
                   >
-                    <div
-                      class="c32"
+                    <span
+                      class="c34"
                     />
                     <div
                       class="c6"
                     >
                       
-                      <h3
-                        class="c1 c8"
+                      <p
+                        class="c8"
                       >
                         Contrat
-                      </h3>
+                      </p>
                     </div>
                   </div>
                 </a>

@@ -2,13 +2,10 @@ import env from "@kosko/env";
 import { ok } from "assert";
 
 import { create } from "@socialgouv/kosko-charts/components/app";
-import { getHarborImagePath } from "@socialgouv/kosko-charts/utils/getHarborImagePath";
-
+import { getGithubRegistryImagePath } from "@socialgouv/kosko-charts/utils/getGithubRegistryImagePath";
 import type { IIoK8sApiCoreV1HTTPGetAction } from "kubernetes-models/v1";
 import { HorizontalPodAutoscaler } from "kubernetes-models/autoscaling/v2beta2/HorizontalPodAutoscaler";
 import type { Deployment } from "kubernetes-models/apps/v1/Deployment";
-
-const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX;
 
 const httpGet: IIoK8sApiCoreV1HTTPGetAction = {
   path: "/api/v1/version",
@@ -20,7 +17,10 @@ export default async () => {
     env,
     config: {
       subDomainPrefix: env.env === "prod" ? "api." : "api-",
-      image: getHarborImagePath({ name: "cdtn-api" }),
+      image: getGithubRegistryImagePath({
+        name: "code-du-travail-api",
+        project: "cdtn",
+      }),
       containerPort: 1337,
       container: {
         livenessProbe: {
@@ -51,15 +51,15 @@ export default async () => {
         env: [
           {
             name: "ELASTIC_APM_ENVIRONMENT",
-            value: `cdtn-${process.env.CI_ENVIRONMENT_SLUG}`,
+            value: process.env.ELASTIC_APM_ENVIRONMENT,
           },
           {
             name: "ES_INDEX_PREFIX",
-            value: ES_INDEX_PREFIX,
+            value: process.env.ES_INDEX_PREFIX,
           },
           {
             name: "VERSION",
-            value: process.env.CI_COMMIT_REF_NAME,
+            value: process.env.GITHUB_REF,
           },
         ],
       },
@@ -76,7 +76,7 @@ export default async () => {
   const hpa = new HorizontalPodAutoscaler({
     metadata: deployment.metadata,
     spec: {
-      minReplicas: 1,
+      minReplicas: 2,
       maxReplicas: 10,
 
       metrics: [

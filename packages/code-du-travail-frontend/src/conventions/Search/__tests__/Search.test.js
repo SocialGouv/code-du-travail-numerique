@@ -6,9 +6,11 @@ import Search from "../";
 global.fetch = jest.fn();
 jest.useFakeTimers();
 
-jest.mock("../../../piwik", () => ({
-  matopush: jest.fn(),
-}));
+jest.mock("@socialgouv/matomo-next", () => {
+  return {
+    push: jest.fn(),
+  };
+});
 
 function renderSearchForm({
   title = "Recherche de convention collective",
@@ -42,10 +44,15 @@ describe("<Search />", () => {
 
   it("should show spinner when loading", () => {
     mockFetch({ "api.url/idcc": {} });
-    const { container, getByRole } = renderSearchForm({
+    const { container, getByPlaceholderText } = renderSearchForm({
       onSelectConvention: null,
     });
-    fireEvent.change(getByRole("search"), { target: { value: "8888" } });
+    fireEvent.change(
+      getByPlaceholderText(
+        "Nom de la convention collective, de l’entreprise ou son SIRET"
+      ),
+      { target: { value: "8888" } }
+    );
     expect(container).toMatchSnapshot();
   });
 
@@ -76,10 +83,15 @@ describe("<Search />", () => {
         },
       },
     });
-    const { container, getByRole } = renderSearchForm({
+    const { container, getByPlaceholderText } = renderSearchForm({
       onSelectConvention: null,
     });
-    fireEvent.change(getByRole("search"), { target: { value: "1234" } });
+    fireEvent.change(
+      getByPlaceholderText(
+        "Nom de la convention collective, de l’entreprise ou son SIRET"
+      ),
+      { target: { value: "1234" } }
+    );
     jest.runAllTimers();
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
     expect(fetch).toHaveBeenCalledWith("api.url/idcc?q=1234");
@@ -113,10 +125,15 @@ describe("<Search />", () => {
         },
       },
     });
-    const { container, getByRole } = renderSearchForm({
+    const { container, getByPlaceholderText } = renderSearchForm({
       onSelectConvention: null,
     });
-    fireEvent.change(getByRole("search"), { target: { value: "4567" } });
+    fireEvent.change(
+      getByPlaceholderText(
+        "Nom de la convention collective, de l’entreprise ou son SIRET"
+      ),
+      { target: { value: "4567" } }
+    );
     jest.runAllTimers();
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
     expect(fetch).toHaveBeenCalledWith("api.url/idcc?q=4567");
@@ -131,10 +148,15 @@ describe("<Search />", () => {
         },
       },
     });
-    const { container, getByRole, findByText } = renderSearchForm({
+    const { container, getByPlaceholderText, findByText } = renderSearchForm({
       onSelectConvention: null,
     });
-    fireEvent.change(getByRole("search"), { target: { value: "9999" } });
+    fireEvent.change(
+      getByPlaceholderText(
+        "Nom de la convention collective, de l’entreprise ou son SIRET"
+      ),
+      { target: { value: "9999" } }
+    );
     jest.runAllTimers();
     await waitFor(() => findByText(/Aucun résultat/i), { container });
     expect(container).toMatchSnapshot();
@@ -170,10 +192,15 @@ describe("<Search />", () => {
       },
     });
     const onSelectConvention = jest.fn();
-    const { getByRole, getByText } = renderSearchForm({
+    const { getByPlaceholderText, getByText } = renderSearchForm({
       onSelectConvention,
     });
-    fireEvent.change(getByRole("search"), { target: { value: "42" } });
+    fireEvent.change(
+      getByPlaceholderText(
+        "Nom de la convention collective, de l’entreprise ou son SIRET"
+      ),
+      { target: { value: "42" } }
+    );
     jest.runAllTimers();
     await waitFor(() => expect(onSelectConvention).toHaveBeenCalledTimes(0));
     const link = getByText("smaller convention 2");
@@ -236,10 +263,15 @@ describe("<Search />", () => {
     });
 
     const onSelectConvention = jest.fn();
-    const { container, getByRole } = renderSearchForm({
+    const { container, getByPlaceholderText } = renderSearchForm({
       onSelectConvention,
     });
-    fireEvent.change(getByRole("search"), { target: { value: "hello" } });
+    fireEvent.change(
+      getByPlaceholderText(
+        "Nom de la convention collective, de l’entreprise ou son SIRET"
+      ),
+      { target: { value: "hello" } }
+    );
     jest.runOnlyPendingTimers(); // run debounce timer
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(3));
     expect(container).toMatchSnapshot();
@@ -268,10 +300,15 @@ describe("<Search />", () => {
     });
 
     const onSelectConvention = jest.fn();
-    const { container, getByRole } = renderSearchForm({
+    const { container, getByPlaceholderText } = renderSearchForm({
       onSelectConvention,
     });
-    fireEvent.change(getByRole("search"), { target: { value: "xxxx" } });
+    fireEvent.change(
+      getByPlaceholderText(
+        "Nom de la convention collective, de l’entreprise ou son SIRET"
+      ),
+      { target: { value: "xxxx" } }
+    );
     jest.runOnlyPendingTimers(); // run debounce timer
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));
     expect(container).toMatchSnapshot();
@@ -307,12 +344,17 @@ describe("<Search />", () => {
     });
 
     const onSelectConvention = jest.fn();
-    const { container, getByRole } = renderSearchForm({
+    const { container, getByPlaceholderText } = renderSearchForm({
       onSelectConvention,
     });
-    fireEvent.change(getByRole("search"), {
-      target: { value: "01234567891011" },
-    });
+    fireEvent.change(
+      getByPlaceholderText(
+        "Nom de la convention collective, de l’entreprise ou son SIRET"
+      ),
+      {
+        target: { value: "01234567891011" },
+      }
+    );
     jest.runOnlyPendingTimers(); // run debounce timer
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));
     expect(container).toMatchSnapshot();
@@ -363,12 +405,17 @@ describe("<Search />", () => {
     });
 
     const onSelectConvention = jest.fn();
-    const { container, getByRole } = renderSearchForm({
+    const { container, getByPlaceholderText } = renderSearchForm({
       onSelectConvention,
     });
-    fireEvent.change(getByRole("search"), {
-      target: { value: "012345678" },
-    });
+    fireEvent.change(
+      getByPlaceholderText(
+        "Nom de la convention collective, de l’entreprise ou son SIRET"
+      ),
+      {
+        target: { value: "012345678" },
+      }
+    );
     jest.runOnlyPendingTimers(); // run debounce timer
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));
     expect(container).toMatchSnapshot();

@@ -86,10 +86,8 @@ exports[`<MoreContent /> renders with an More icon 1`] = `
       data-accordion-component="AccordionItem"
     >
       <div
-        aria-level="3"
         class="accordion__heading"
         data-accordion-component="AccordionItemHeading"
-        role="heading"
       >
         <div
           aria-controls="accordion__panel-raa-0"
@@ -106,10 +104,11 @@ exports[`<MoreContent /> renders with an More icon 1`] = `
             class="c2 c3"
             fill="none"
             viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               clip-rule="evenodd"
-              d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
+              d="M8 2a1 1 0 0 0-1 1v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3a1 1 0 0 0-1-1z"
               fill="currentColor"
               fill-rule="evenodd"
             />
@@ -122,12 +121,10 @@ exports[`<MoreContent /> renders with an More icon 1`] = `
         </div>
       </div>
       <div
-        aria-labelledby="accordion__heading-raa-0"
         class="c5"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-raa-0"
-        role="region"
       >
         <div
           class="c6"

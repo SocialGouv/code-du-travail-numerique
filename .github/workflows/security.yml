@@ -1,0 +1,53 @@
+name: Security vulnerability scanner
+
+on:
+  push:
+    branches: ["dev"]
+
+concurrency:
+  cancel-in-progress: true
+  group: security-${{ github.ref }}
+
+jobs:
+  register:
+    name: Register images
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - images: "code-du-travail-frontend"
+            path: "."
+          - images: "code-du-travail-api"
+            path: "./packages/code-du-travail-api/"
+    steps:
+      - name: Register docker images
+        uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
+        with:
+          imageName: cdtn/${{ matrix.images }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: "${{ matrix.path }}/Dockerfile"
+          dockercontext: "${{ matrix.path }}"
+
+  trivy:
+    name: Run trivy
+    runs-on: ubuntu-18.04
+    needs: [register]
+    strategy:
+      fail-fast: false
+      matrix:
+        images: ["code-du-travail-frontend", "code-du-travail-api"]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build ${{ matrix.images }} from Dockerfile
+        run: |
+          docker build -t ghcr.io/socialgouv/cdtn/${{ matrix.images }}:sha-${{ github.sha }} .
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: "ghcr.io/socialgouv/cdtn/${{ matrix.images }}:sha-${{ github.sha }}"
+          format: "table"
+          ignore-unfixed: true
+          vuln-type: "os,library"
+          severity: "CRITICAL,HIGH"

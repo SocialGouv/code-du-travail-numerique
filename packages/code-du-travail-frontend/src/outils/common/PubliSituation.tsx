@@ -1,7 +1,7 @@
+import { Paragraph } from "@socialgouv/cdtn-ui";
 import React from "react";
 
-import { RuleType, SituationElement } from "../publicodes";
-import { reverseValues } from "../publicodes/Utils";
+import { reverseValues, RuleType, SituationElement } from "../publicodes";
 import { SectionTitle } from "./stepStyles";
 
 type PublicodesInputProps = {
@@ -25,7 +25,7 @@ const SituationInput = ({ element }: PublicodesInputProps): JSX.Element => {
 type Props = {
   situation: SituationElement[];
   annotations?: JSX.Element[];
-  onOverrideInput?: (element: SituationElement) => JSX.Element;
+  onOverrideInput?: (element: SituationElement) => JSX.Element | null;
 };
 
 const PubliSituation = ({
@@ -36,23 +36,25 @@ const PubliSituation = ({
   <>
     <SectionTitle>Les éléments saisis</SectionTitle>
     <ul>
-      {situation.map((element) => {
-        const overriden = onOverrideInput && onOverrideInput(element);
-        return (
-          <li key={element.name}>
-            {element.rawNode.titre}:{" "}
-            <b>
-              {overriden ? overriden : <SituationInput element={element} />}
-            </b>
-          </li>
-        );
-      })}
+      {situation
+        .filter((element) => element.rawNode.titre)
+        .map((element) => {
+          const overriden = onOverrideInput && onOverrideInput(element);
+          return (
+            <li key={element.name}>
+              {element.rawNode.titre}&nbsp;:&nbsp;
+              <strong>
+                {overriden ? overriden : <SituationInput element={element} />}
+              </strong>
+            </li>
+          );
+        })}
     </ul>
     {annotations &&
       annotations.map((annotation, index) => (
-        <p key={index}>
+        <Paragraph key={index}>
           <i>*&nbsp;{annotation}</i>
-        </p>
+        </Paragraph>
       ))}
   </>
 );

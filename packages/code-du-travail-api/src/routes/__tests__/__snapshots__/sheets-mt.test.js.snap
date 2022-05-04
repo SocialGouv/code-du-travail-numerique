@@ -90,11 +90,11 @@ Object {
     },
     Object {
       "action": "Calculer",
-      "description": "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
+      "description": "Calculez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis",
       "reco": "search",
       "slug": "heures-recherche-emploi",
       "source": "outils",
-      "title": "Heures pour recherche d’emploi",
+      "title": "Heures d'absence pour rechercher un emploi",
     },
   ],
 }

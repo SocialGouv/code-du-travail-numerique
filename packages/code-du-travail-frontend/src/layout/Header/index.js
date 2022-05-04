@@ -6,7 +6,7 @@ import styled, { css } from "styled-components";
 
 import { useWindowScrollPosition } from "../../lib/useScrollLocation";
 import SearchBar from "../../search/SearchBar";
-import { BurgerNav } from "./BurgerNav";
+import HeaderBurgerNav from "./BurgerNav";
 
 export const HEADER_HEIGHT = "13.5rem";
 export const MOBILE_HEADER_HEIGHT = "9rem";
@@ -30,7 +30,6 @@ export const Header = ({ currentPage = "" }) => {
   const isContentPage = currentPage !== "home" && currentPage !== "search";
   return (
     <StyledHeader
-      role="banner"
       overThreshold={overThreshold}
       floating={floating}
       showFloatingMenu={showFloatingMenu}
@@ -44,6 +43,8 @@ export const Header = ({ currentPage = "" }) => {
           >
             <MinistereTravail
               overThreshold={overThreshold}
+              width="135"
+              height="115"
               src={"/static/assets/img/logo-rf.svg"}
               alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
             />
@@ -70,7 +71,7 @@ export const Header = ({ currentPage = "" }) => {
               </StyledLink>
             </Link>
           )}
-          <BurgerNav currentPage={currentPage} />
+          <HeaderBurgerNav currentPage={currentPage} />
         </RightSide>
       </StyledContainer>
     </StyledHeader>

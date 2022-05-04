@@ -29,6 +29,32 @@ exports[`<Feedback/> should render 1`] = `
   margin-bottom: 0;
 }
 
+.c7 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c6 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
+}
+
 .c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -91,32 +117,6 @@ exports[`<Feedback/> should render 1`] = `
   color: #9298af;
   box-shadow: none;
   cursor: not-allowed;
-}
-
-.c7 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c6 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c4 {
@@ -199,6 +199,19 @@ exports[`<Feedback/> should render 1`] = `
 }
 
 @media (max-width:600px) {
+  .c6 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
   .c9 {
     font-size: 1.4rem;
   }
@@ -213,19 +226,6 @@ exports[`<Feedback/> should render 1`] = `
 @media (max-width:600px) {
   .c9 {
     padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
   }
 }
 
@@ -290,16 +290,14 @@ exports[`<Feedback/> should render 1`] = `
         <div
           class="c4"
         >
-          <strong
+          <h2
             class="c5 c6"
           >
-            <div
+            <span
               class="c7"
             />
-            <span>
-              Avez-vous trouvé la réponse à votre question ?
-            </span>
-          </strong>
+            Avez-vous trouvé la réponse à votre question ?
+          </h2>
           <p
             class="c8"
           >
@@ -350,17 +348,30 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   margin-bottom: 0;
 }
 
-.c16 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
+.c7 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c6 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
 }
 
 .c19 {
@@ -490,37 +501,23 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   transform: translateX(4px);
 }
 
-.c7 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+.c16 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c15 {
   color: #9298af;
-  line-height: 1.25;
   font-size: 1.2rem;
   font-weight: 400;
-}
-
-.c6 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c10 {
@@ -723,42 +720,6 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 @media (max-width:600px) {
-
-}
-
-@media print {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-  .c19 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c19 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c21 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c21 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
   .c6 {
     margin-left: -1rem;
     padding-left: 1.6rem;
@@ -768,6 +729,42 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 @media (max-width:600px) {
   .c6 {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+
+}
+
+@media print {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:600px) {
+  .c19 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c19 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c21 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c21 {
+    display: none;
   }
 }
 
@@ -833,18 +830,14 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
         <div
           class="c4"
         >
-          <strong
+          <h2
             class="c5 c6"
           >
-            <div
+            <span
               class="c7"
             />
-            <span
-              role="status"
-            >
-              Merci pour votre réponse.
-            </span>
-          </strong>
+            Merci pour votre réponse.
+          </h2>
         </div>
         <form>
           <fieldset
@@ -926,8 +919,6 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           <div>
             <span
               class="c15"
-              font-size="tiny"
-              font-weight="400"
             >
               150
                caractères restants
@@ -963,9 +954,10 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               class="c22 c23"
               fill="none"
               viewBox="0 0 28 15"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M27.875 7.153l-6-6.284a.526.526 0 00-.711-.023.496.496 0 00-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 00.024.687.52.52 0 00.711-.023l6-6.284a.506.506 0 000-.665z"
+                d="m27.875 7.153-6-6.284a.526.526 0 0 0-.711-.023.496.496 0 0 0-.024.688l5.204 5.468H.5c-.276 0-.5.217-.5.484s.224.483.5.483h25.844l-5.204 5.469a.493.493 0 0 0 .024.687.52.52 0 0 0 .711-.023l6-6.284a.506.506 0 0 0 0-.665z"
                 fill="currentColor"
               />
             </svg>
@@ -1006,17 +998,30 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   margin-bottom: 0;
 }
 
-.c12 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
+.c7 {
+  position: absolute;
+  background-color: #f66663;
+  border-radius: 0;
+  top: 50%;
+  left: 0;
+  width: 0.4rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c6 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+  margin-left: -2.4rem;
+  padding-left: 2.4rem;
 }
 
 .c14 {
@@ -1083,37 +1088,23 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   cursor: not-allowed;
 }
 
-.c7 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: none;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+.c12 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip: rect(0,0,0,0) !important;
+  clip: rect(0,0,0,0) !important;
 }
 
 .c11 {
   color: #9298af;
-  line-height: 1.25;
   font-size: 1.2rem;
   font-weight: 400;
-}
-
-.c6 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
 }
 
 .c9 {
@@ -1256,6 +1247,19 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 @media (max-width:600px) {
+  .c6 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
 
 }
 
@@ -1276,19 +1280,6 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 @media print {
   .c14 {
     display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
   }
 }
 
@@ -1354,18 +1345,14 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
         <div
           class="c4"
         >
-          <strong
+          <h2
             class="c5 c6"
           >
-            <div
+            <span
               class="c7"
             />
-            <span
-              role="status"
-            >
-              Merci pour votre réponse.
-            </span>
-          </strong>
+            Merci pour votre réponse.
+          </h2>
         </div>
         <form>
           <label
@@ -1386,8 +1373,6 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
           <div>
             <span
               class="c11"
-              font-size="tiny"
-              font-weight="400"
             >
               150
                caractères restants

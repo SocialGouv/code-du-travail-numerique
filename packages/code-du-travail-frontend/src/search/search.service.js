@@ -14,8 +14,7 @@ const fetchSearchResults = async (query = "", excludeSources = "") => {
   if (!response.ok) {
     throw new Error("Un problème est survenu.");
   }
-  const json = await response.json();
-  return json;
+  return await response.json();
 };
 
 const fetchSuggestResults = async (query) => {

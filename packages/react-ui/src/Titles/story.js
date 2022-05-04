@@ -1,13 +1,13 @@
 import React from "react";
 
-import { Section } from "../layout/Section/index.js";
-import { Wrapper } from "../layout/Wrapper/index.js";
+import { Section } from "../layout/Section";
+import { Wrapper } from "../layout/Wrapper";
 import { spacings } from "../theme.js";
-import { Heading } from "./Heading/index.js";
-import { InsertTitle } from "./InsertTitle/index.js";
-import { PageTitle } from "./PageTitle/index.js";
-import { Subtitle } from "./Subtitle/index.js";
-import { Title } from "./Title/index.js";
+import { Heading } from "./Heading";
+import { InsertTitle } from "./InsertTitle";
+import { PageTitle } from "./PageTitle";
+import { Subtitle } from "./Subtitle";
+import { Title } from "./Title";
 
 export default {
   component: Title,
@@ -56,6 +56,20 @@ export const notice = () => (
         Theses one are tiny titles that you can use in cards or to split
         paragraphs under a `Heading` for example
       </p>
+      <Section>
+        <h1>Default (h1)</h1>
+        <p>This is a paragraph</p>
+        <h2>Default (h2)</h2>
+        <p>This is a paragraph</p>
+        <h3>Default (h3)</h3>
+        <p>This is a paragraph</p>
+        <h4>Default (h4)</h4>
+        <p>This is a paragraph</p>
+        <h5>Default (h5)</h5>
+        <p>This is a paragraph</p>
+        <h6>Default (h6)</h6>
+        <p>This is a paragraph</p>
+      </Section>
     </Section>
   </>
 );

@@ -1,7 +1,6 @@
 import { utils } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { css, html, LitElement } from "lit-element";
-
-import { matopush } from "../piwik";
 
 const { throttledDisplayInViewport } = utils;
 
@@ -35,6 +34,7 @@ class WebComponentsTooltipCC extends LitElement {
       }
 
       .tooltip .content {
+        margin: 0;
         position: absolute;
         z-index: 1;
         display: none;
@@ -80,7 +80,7 @@ class WebComponentsTooltipCC extends LitElement {
       @mouseleave="${this.hide}"
     >
       <slot></slot>
-      <div
+      <p
         id="tooltip-searchcc"
         class="content${this.visible ? " visible" : ""}"
         role="tooltip"
@@ -94,7 +94,7 @@ class WebComponentsTooltipCC extends LitElement {
         >
           Cliquez ici pour rechercher votre convention collective
         </a>
-      </div>
+      </p>
     </div>`;
   }
 

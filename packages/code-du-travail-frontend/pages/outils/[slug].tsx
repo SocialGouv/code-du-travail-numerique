@@ -1,7 +1,8 @@
 import tools from "@cdt/data...tools/internals.json";
-import * as Sentry from "@sentry/browser";
+import * as Sentry from "@sentry/nextjs";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import { Container, Section, theme } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { GetServerSideProps } from "next";
 import getConfig from "next/config";
 import { useRouter } from "next/router";
@@ -22,7 +23,7 @@ import { HeuresRechercheEmploi } from "../../src/outils/HeuresRechercheEmploi";
 import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
 import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
 import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
-import { matopush } from "../../src/piwik";
+import { Tool } from "../../src/outils/types";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -46,6 +47,9 @@ interface Props {
   relatedItems: Array<any>;
   slug: string;
   title: string;
+  displayTitle: string;
+  metaTitle: string;
+  metaDescription: string;
 }
 
 function Outils({
@@ -54,6 +58,9 @@ function Outils({
   slug,
   relatedItems,
   title,
+  metaTitle,
+  metaDescription,
+  displayTitle,
   publicodesRules,
 }: Props): JSX.Element {
   const Tool = toolsBySlug[slug];
@@ -63,14 +70,16 @@ function Outils({
   const router = useRouter();
   return (
     <Layout>
-      <Metas
-        title={`${title} - Code du travail numérique - Ministère du travail`}
-        description={description}
-      />
+      <Metas title={metaTitle} description={metaDescription} />
       <StyledSection>
         <Container>
           <Flex>
-            <Tool icon={icon} title={title} publicodesRules={publicodesRules} />
+            <Tool
+              icon={icon}
+              title={title}
+              displayTitle={displayTitle}
+              publicodesRules={publicodesRules}
+            />
             <ShareContainer>
               <Share title={title} metaDescription={description} />
             </ShareContainer>
@@ -88,9 +97,22 @@ export default Outils;
 export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
-  const { slug, description, icon, title } = tools.find(
-    (tool) => tool.slug === query.slug
-  );
+  const tool = (tools as Tool[]).find((tool) => tool.slug === query.slug);
+  if (!tool) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const {
+    slug,
+    description,
+    icon,
+    title,
+    displayTitle,
+    metaTitle,
+    metaDescription,
+  } = tool;
   let relatedItems = [];
   try {
     const response = await fetch(`${API_URL}/items/${SOURCES.TOOLS}/${slug}`);
@@ -112,6 +134,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
       relatedItems,
       slug,
       title,
+      displayTitle,
+      metaTitle,
+      metaDescription,
     },
   };
 };

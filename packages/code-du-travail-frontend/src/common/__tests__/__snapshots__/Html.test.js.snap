@@ -2,10 +2,12 @@
 
 exports[`<Html /> should render 1`] = `
 <div>
-  <div>
-    <b>
+  <div
+    class=""
+  >
+    <strong>
       Hello
-    </b>
+    </strong>
      World
   </div>
 </div>

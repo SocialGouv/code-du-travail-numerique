@@ -1,5 +1,3 @@
-const withSourceMaps = require("@zeit/next-source-maps");
-
 const withTranspileModule = require("next-transpile-modules")([
   "@socialgouv/cdtn-sources",
   "@socialgouv/cdtn-slugify",
@@ -10,9 +8,24 @@ const withTranspileModule = require("next-transpile-modules")([
   "p-debounce",
   "is-plain-obj",
 ]);
+
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
+
+const ContentSecurityPolicy = `
+default-src 'self' *.travail.gouv.fr *.data.gouv.fr *.fabrique.social.gouv.fr;
+img-src 'self' data: *.fabrique.social.gouv.fr https://travail-emploi.gouv.fr https://mon-entreprise.urssaf.fr https://cdtnadminprod.blob.core.windows.net https://cdtnadmindev.blob.core.windows.net https://logs1412.xiti.com;
+script-src 'self' https://mon-entreprise.urssaf.fr *.fabrique.social.gouv.fr https://cdnjs.cloudflare.com ${
+  process.env.NODE_ENV !== "production" && "'unsafe-eval'"
+};
+frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com;
+style-src 'self' 'unsafe-inline';
+font-src 'self' data: blob:;
+prefetch-src 'self' *.fabrique.social.gouv.fr;
+`;
+
+const { withSentryConfig } = require("@sentry/nextjs");
 
 const compose =
   (...fns) =>
@@ -41,39 +54,54 @@ const nextConfig = {
     PACKAGE_VERSION: process.env.VERSION || require("./package.json").version,
     PIWIK_SITE_ID: process.env.PIWIK_SITE_ID,
     PIWIK_URL: process.env.PIWIK_URL,
-    SENTRY_PUBLIC_DSN: process.env.SENTRY_PUBLIC_DSN,
   },
-  // https://github.com/zeit/next.js/#disabling-file-system-routing
-  useFileSystemPublicRoutes: true,
-
-  webpack: (config) => {
-    config.module.rules.push({
-      loader: "ignore-loader",
-      test: /\.test.js$/,
-    });
-    return config;
+  sentry: {
+    disableClientWebpackPlugin: true,
+    disableServerWebpackPlugin: true,
   },
-  webpack5: true,
+  swcMinify: true,
+  compiler: {
+    styledComponents: true,
+  },
 };
 
 module.exports = {
-  async redirects() {
+  async headers() {
     return [
       {
-        destination: "/api/sitemap",
-        permanent: false,
-        source: "/sitemap.xml",
+        source: "/:path*",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value: ContentSecurityPolicy.replace(/\n/g, " ").trim(),
+          },
+          {
+            key: "X-Robots-Tag",
+            value: process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
+              ? "all"
+              : "noindex, nofollow, nosnippet",
+          },
+        ],
       },
+    ];
+  },
+  async redirects() {
+    return [
       {
         destination: "/themes/:slug",
         permanent: true,
         source: "/themes/(\\d{1,}-):slug",
       },
+      {
+        destination: "/api/health",
+        permanent: true,
+        source: "/health",
+      },
     ];
   },
   ...compose(
-    withSourceMaps,
     withBundleAnalyzer,
-    withTranspileModule
+    withTranspileModule,
+    withSentryConfig
   )(nextConfig),
 };

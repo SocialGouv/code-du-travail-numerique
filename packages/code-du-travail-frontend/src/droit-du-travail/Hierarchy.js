@@ -32,27 +32,28 @@ const Hierarchy = ({ hash }) => {
       </p>
       <Accordion
         preExpanded={[hash]}
+        titleLevel={3}
         variant="hierarchy"
         items={[
           {
             body: (
-              <>
+              <p>
                 Les textes nationaux doivent être conformes aux textes
                 internationaux et européens.
-              </>
+              </p>
             ),
             icon: icons.International,
-            title: <h3>Les textes internationaux et européens</h3>,
+            title: "Les textes internationaux et européens",
           },
           {
             body: (
-              <>
+              <p>
                 Tous les textes nationaux doivent être conformes à la
                 Constitution française ainsi qu’au bloc de constitutionnalité.
-              </>
+              </p>
             ),
             icon: icons.Constitution,
-            title: <h3>La Constitution</h3>,
+            title: "La Constitution",
           },
           {
             body: (
@@ -67,24 +68,21 @@ const Hierarchy = ({ hash }) => {
                   possibles&nbsp;:
                 </p>
                 <StyledAccordion
+                  titleLevel={5}
                   items={[
                     {
                       body: (
-                        <>
+                        <p>
                           Il existe des règles dans le Code du travail que les
                           conventions et accords collectifs doivent respecter.
                           Les conventions et accords collectifs peuvent
                           toutefois prévoir des mesures plus avantageuses pour
                           le salarié. Dans ce cas, c’est le texte le plus
                           avantageux pour le salarié qui s’applique.
-                        </>
+                        </p>
                       ),
-                      title: (
-                        <h5>
-                          Les conventions et accords collectifs doivent
-                          respecter le Code du travail
-                        </h5>
-                      ),
+                      title:
+                        "Les conventions et accords collectifs doivent respecter le Code du travail",
                     },
                     {
                       body: (
@@ -99,26 +97,15 @@ const Hierarchy = ({ hash }) => {
                             défavorable pour le salarié que la loi.
                           </p>
                           <i>
-                            Exemple&nbsp;:
-                            <ul>
-                              <li>
-                                le taux de majoration des heures
-                                supplémentaires. Un accord collectif peut
-                                prévoir dans une certaine limite un taux
-                                inférieur à 25% (règle prévue par le Code du
-                                travail).
-                              </li>
-                            </ul>
+                            Exemple&nbsp;: le taux de majoration des heures
+                            supplémentaires. Un accord collectif peut prévoir
+                            dans une certaine limite un taux inférieur à 25%
+                            (règle prévue par le Code du travail).
                           </i>
                         </>
                       ),
-                      title: (
-                        <h5>
-                          Les conventions et accords collectifs peuvent prévoir
-                          des mesures différentes que celles posées par le Code
-                          du travail
-                        </h5>
-                      ),
+                      title:
+                        "Les conventions et accords collectifs peuvent prévoir des mesures différentes que celles posées par le Code du travail",
                     },
                     {
                       body: (
@@ -132,26 +119,17 @@ const Hierarchy = ({ hash }) => {
                             la loi ne s’applique pas.
                           </p>
                           <i>
-                            Exemple&nbsp;:
-                            <ul>
-                              <li>
-                                le taux de majoration des heures
-                                supplémentaires. En l’absence d’accord collectif
-                                sur le taux de majoration des heures
-                                supplémentaires s’applique le code du travail
-                                (25% de majoration pour les 8 premières heures
-                                et 50% pour les suivantes).
-                              </li>
-                            </ul>
+                            Exemple&nbsp;: le taux de majoration des heures
+                            supplémentaires. En l’absence d’accord collectif sur
+                            le taux de majoration des heures supplémentaires
+                            s’applique le code du travail (25% de majoration
+                            pour les 8 premières heures et 50% pour les
+                            suivantes).
                           </i>
                         </>
                       ),
-                      title: (
-                        <h5>
-                          En l’absence de convention ou d’accord collectif sur
-                          le sujet, le Code du travail s’applique
-                        </h5>
-                      ),
+                      title:
+                        "En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique",
                     },
                   ]}
                 />
@@ -179,7 +157,7 @@ const Hierarchy = ({ hash }) => {
               </>
             ),
             icon: icons.Laws,
-            title: <h3>Lois, ordonnances et décrets (Code du travail)</h3>,
+            title: "Lois, ordonnances et décrets (Code du travail)",
           },
           {
             body: (
@@ -203,24 +181,26 @@ const Hierarchy = ({ hash }) => {
                 </p>
                 <Wrapper variant="light">
                   <IconStripe icon={icons.Warning}>
-                    Ce principe ne s’applique pas dans{" "}
-                    <Button
-                      variant="link"
-                      onClick={() => setModal13MatieresOpen(true)}
-                    >
-                      13 matières
-                    </Button>{" "}
-                    où la loi reconnaît la primauté à la convention collective
-                    de branche et{" "}
-                    <Button
-                      variant="link"
-                      onClick={() => setModal4MatieresOpen(true)}
-                    >
-                      4 matières
-                    </Button>{" "}
-                    où la branche elle-même peut reconnaître sa primauté, sauf
-                    si l’accord d’entreprise a des garanties au moins
-                    équivalentes.
+                    <P>
+                      Ce principe ne s’applique pas dans{" "}
+                      <Button
+                        variant="link"
+                        onClick={() => setModal13MatieresOpen(true)}
+                      >
+                        13 matières
+                      </Button>{" "}
+                      où la loi reconnaît la primauté à la convention collective
+                      de branche et{" "}
+                      <Button
+                        variant="link"
+                        onClick={() => setModal4MatieresOpen(true)}
+                      >
+                        4 matières
+                      </Button>{" "}
+                      où la branche elle-même peut reconnaître sa primauté, sauf
+                      si l’accord d’entreprise a des garanties au moins
+                      équivalentes.
+                    </P>
                   </IconStripe>
                 </Wrapper>
                 <p>
@@ -252,41 +232,41 @@ const Hierarchy = ({ hash }) => {
             ),
             icon: icons.Agreement,
             id: "hierarchie",
-            title: <h3>Les conventions et accords collectifs</h3>,
+            title: "Les conventions et accords collectifs",
           },
           {
             body: (
-              <>
+              <p>
                 Les usages et les engagements unilatéraux doivent respecter les
                 textes situés en haut. Ils peuvent être plus avantageux pour le
                 salarié. Dans ce cas, ce sont les textes les plus avantageux qui
                 s’appliquent.
-              </>
+              </p>
             ),
             icon: icons.Uses,
-            title: <h3>Les usages et les engagements unilatéraux</h3>,
+            title: "Les usages et les engagements unilatéraux",
           },
           {
             body: (
-              <>
+              <p>
                 Le règlement intérieur doit respecter les textes situés en haut.
                 Il peut être plus avantageux pour le salarié. Dans ce cas, c’est
                 le texte le plus avantageux pour le salarié qui s’applique.
-              </>
+              </p>
             ),
             icon: icons.Rules,
-            title: <h3>Le règlement intérieur de l’entreprise</h3>,
+            title: "Le règlement intérieur de l’entreprise",
           },
           {
             body: (
-              <>
+              <p>
                 Le contrat de travail doit respecter les textes situés en haut.
                 Il peut prévoir des mesures plus avantageuses pour le salarié.
                 Dans ce cas, c’est le contrat de travail qui s’applique.
-              </>
+              </p>
             ),
             icon: icons.Contract,
-            title: <h3>Le contrat de travail</h3>,
+            title: "Le contrat de travail",
           },
         ]}
       />
@@ -312,7 +292,7 @@ const Hierarchy = ({ hash }) => {
           </Ul>
           <Ul>
             <li> CDI de chantier</li>
-            <li>Egalité professionnelle </li>
+            <li>Egalité professionnelle</li>
             <li>
               Conditions et durées de renouvellement de la période d’essai
             </li>
@@ -381,10 +361,15 @@ const ListContainer = styled.div`
 const Ul = styled.ul`
   flex: 1 1 50%;
   margin: 0;
+
   & + & {
     margin-left: ${spacings.medium};
     @media (max-width: ${breakpoints.mobile}) {
       margin-left: 0;
     }
   }
+`;
+
+const P = styled.p`
+  margin: 0;
 `;

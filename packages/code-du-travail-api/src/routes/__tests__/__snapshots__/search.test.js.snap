@@ -5,7 +5,7 @@ Object {
   "articles": Array [],
   "documents": Array [
     Object {
-      "_score": 27.688023,
+      "_score": 28.0615,
       "algo": "fulltext",
       "breadcrumbs": Array [],
       "cdtnId": "647c224c9b",
@@ -24,7 +24,7 @@ exports[`returns article results when searching article R1225-18 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 22.143171,
+      "_score": 23.321869,
       "cdtnId": "f13147ec33",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -42,7 +42,7 @@ exports[`returns search results for demission from elastic 1`] = `
 Object {
   "articles": Array [
     Object {
-      "_score": 2.94797,
+      "_score": 3.0965018,
       "cdtnId": "f13147ec33",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -51,7 +51,7 @@ Object {
       "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
     },
     Object {
-      "_score": 2.8290424,
+      "_score": 2.9689612,
       "cdtnId": "ea03713a82",
       "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
       "slug": "l1237-1",
@@ -62,7 +62,7 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 37.678734,
+      "_score": 38.16725,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -128,7 +128,7 @@ Object {
       "title": "Indemnité de licenciement",
     },
     Object {
-      "_score": 36.361824,
+      "_score": 36.80169,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -150,7 +150,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
     Object {
-      "_score": 35.71634,
+      "_score": 35.9218,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": Array [
@@ -161,13 +161,13 @@ Object {
         },
       ],
       "cdtnId": "d8fca710c5",
-      "description": "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
+      "description": "Calculez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis",
       "slug": "heures-recherche-emploi",
       "source": "outils",
-      "title": "Heures pour recherche d’emploi",
+      "title": "Heures d'absence pour rechercher un emploi",
     },
     Object {
-      "_score": 31.628939,
+      "_score": 31.694538,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -264,7 +264,7 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 1.912857,
+      "_score": 2.0031483,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
       "slug": "demission",
@@ -306,7 +306,7 @@ Object {
       "title": "L1237-2",
     },
     Object {
-      "_score": 2.94797,
+      "_score": 3.0965018,
       "cdtnId": "f13147ec33",
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
       "slug": "r1225-18",
@@ -546,7 +546,7 @@ Object {
       "title": "Indemnité de licenciement",
     },
     Object {
-      "_score": 35.71634,
+      "_score": 35.9218,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": Array [
@@ -557,13 +557,13 @@ Object {
         },
       ],
       "cdtnId": "d8fca710c5",
-      "description": "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
+      "description": "Calculez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis",
       "slug": "heures-recherche-emploi",
       "source": "outils",
-      "title": "Heures pour recherche d’emploi",
+      "title": "Heures d'absence pour rechercher un emploi",
     },
     Object {
-      "_score": 31.628939,
+      "_score": 31.694538,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -660,7 +660,7 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 1.912857,
+      "_score": 2.0031483,
       "algo": "fulltext",
       "cdtnId": "a9ccf1d613",
       "slug": "demission",
@@ -675,7 +675,7 @@ exports[`returns unique documents from prequalified data (same slug but differen
 Object {
   "articles": Array [
     Object {
-      "_score": 1.173369,
+      "_score": 1.2495522,
       "cdtnId": "ea03713a82",
       "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
       "slug": "l1237-1",
@@ -686,7 +686,7 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 56.320465,
+      "_score": 57.60034,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
@@ -707,7 +707,7 @@ Object {
       "title": "Certificat de travail",
     },
     Object {
-      "_score": 54.965897,
+      "_score": 56.215057,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
@@ -729,7 +729,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
     },
     Object {
-      "_score": 33.820084,
+      "_score": 33.932697,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
@@ -751,7 +751,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
-      "_score": 33.43704,
+      "_score": 33.537582,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
@@ -777,7 +777,7 @@ Object {
       "title": "Rupture de période d’essai à l’initiative de l’employeur",
     },
     Object {
-      "_score": 33.29029,
+      "_score": 33.388336,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": Array [
@@ -799,7 +799,7 @@ Object {
       "title": "Préavis de démission",
     },
     Object {
-      "_score": 33.25407,
+      "_score": 33.34879,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
@@ -825,7 +825,7 @@ Object {
       "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
     },
     Object {
-      "_score": 32.182713,
+      "_score": 32.251896,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
@@ -849,7 +849,7 @@ Object {
   ],
   "themes": Array [
     Object {
-      "_score": 2.601738,
+      "_score": 2.7550187,
       "algo": "fulltext",
       "cdtnId": "5594695039",
       "icon": "Contract",
@@ -858,7 +858,7 @@ Object {
       "title": "Embauche et contrat de travail",
     },
     Object {
-      "_score": 1.1093456,
+      "_score": 1.0964528,
       "algo": "fulltext",
       "cdtnId": "e4982f0aa9",
       "icon": "Depart",

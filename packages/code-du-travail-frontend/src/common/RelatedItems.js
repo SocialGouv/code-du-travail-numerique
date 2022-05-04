@@ -6,11 +6,10 @@ import {
   Heading,
   theme,
 } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-
-import { matopush } from "../piwik";
 
 const matoSelectRelated = (reco, selection) => {
   matopush([
@@ -45,7 +44,9 @@ export const RelatedItems = ({ items = [] }) => {
         ({ title, items }) =>
           items.length > 0 && (
             <React.Fragment key={title}>
-              <Heading as="div">{title}&nbsp;:</Heading>
+              <Heading as="div" aria-level="2" role="heading">
+                {title}&nbsp;:
+              </Heading>
               <FlatList>
                 {items.map(({ slug, source, title, reco, url }) => {
                   // if source is external we use url otherwise we assemble the route

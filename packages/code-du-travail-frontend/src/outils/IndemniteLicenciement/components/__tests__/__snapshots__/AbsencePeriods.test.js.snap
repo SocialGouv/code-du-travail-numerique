@@ -65,9 +65,14 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
   cursor: not-allowed;
 }
 
+.c1 {
+  color: #3e486e;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
 .c4 {
   color: #7994d4;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 400;
 }
@@ -305,14 +310,8 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
 
 .c0 {
   display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c1 {
-  font-weight: 600;
+  margin: 1rem 0;
+  cursor: pointer;
 }
 
 .c2 {
@@ -394,7 +393,7 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
   <p>
     Les congés payés, le congé de maternité ou d'adoption, le congé de présence parental ,l'arrêt de travail lié à un accident du travail ou une maladie professionnelle, le congé individuel de formation (CIF), le congé de solidarité internationale, le congé de solidarité familiale et le stage de fin d'étude de plus de 2 mois sont déjà prises en compte dans l'ancienneté et ne sont pas des périodes à renseigner ci-après :
   </p>
-  <p
+  <label
     class="c0"
   >
     <span
@@ -402,7 +401,7 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
     >
       Quels sont le motif et la durée de ces absences prolongées ?
     </span>
-  </p>
+  </label>
   <div
     class="c2"
   >
@@ -410,9 +409,9 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
       class="c3"
     >
       <span
+        aria-level="2"
         class="c4"
-        font-size="hsmall"
-        font-weight="400"
+        role="heading"
       >
         Absence 
         1
@@ -476,18 +475,19 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
               aria-hidden="true"
               fill="none"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <g
-                clip-path="url(#arrow-down_svg__clip0)"
+                clip-path="url(#arrow-down_svg__a)"
               >
                 <path
-                  d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z"
+                  d="m8.425 11.573 7.11-6.072a.709.709 0 0 0 .26-.537.709.709 0 0 0-.26-.537.973.973 0 0 0-.629-.223.973.973 0 0 0-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 0 0-.63-.223.973.973 0 0 0-.628.223.708.708 0 0 0-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 0 0 .29.165 1.021 1.021 0 0 0 .68 0 .91.91 0 0 0 .29-.165z"
                   fill="currentColor"
                 />
               </g>
               <defs>
                 <clippath
-                  id="arrow-down_svg__clip0"
+                  id="arrow-down_svg__a"
                 >
                   <path
                     d="M0 0h16v16H0z"
@@ -529,10 +529,11 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
       class="c16"
       fill="none"
       viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
         clip-rule="evenodd"
-        d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
+        d="M8 2a1 1 0 0 0-1 1v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3a1 1 0 0 0-1-1z"
         fill="currentColor"
         fill-rule="evenodd"
       />
@@ -607,9 +608,14 @@ exports[`<AbsencePeriods /> should render 1`] = `
   cursor: not-allowed;
 }
 
+.c1 {
+  color: #3e486e;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
 .c4 {
   color: #7994d4;
-  line-height: 1.25;
   font-size: 1.8rem;
   font-weight: 400;
 }
@@ -847,14 +853,8 @@ exports[`<AbsencePeriods /> should render 1`] = `
 
 .c0 {
   display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  cursor: default;
-}
-
-.c1 {
-  font-weight: 600;
+  margin: 1rem 0;
+  cursor: pointer;
 }
 
 .c2 {
@@ -932,7 +932,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
   <p>
     Les congés payés, le congé de maternité ou d'adoption, le congé de présence parental ,l'arrêt de travail lié à un accident du travail ou une maladie professionnelle, le congé individuel de formation (CIF), le congé de solidarité internationale, le congé de solidarité familiale et le stage de fin d'étude de plus de 2 mois sont déjà prises en compte dans l'ancienneté et ne sont pas des périodes à renseigner ci-après :
   </p>
-  <p
+  <label
     class="c0"
   >
     <span
@@ -940,7 +940,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
     >
       Quels sont le motif et la durée de ces absences prolongées ?
     </span>
-  </p>
+  </label>
   <div
     class="c2"
   >
@@ -948,9 +948,9 @@ exports[`<AbsencePeriods /> should render 1`] = `
       class="c3"
     >
       <span
+        aria-level="2"
         class="c4"
-        font-size="hsmall"
-        font-weight="400"
+        role="heading"
       >
         Absence 
         1
@@ -1014,18 +1014,19 @@ exports[`<AbsencePeriods /> should render 1`] = `
               aria-hidden="true"
               fill="none"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <g
-                clip-path="url(#arrow-down_svg__clip0)"
+                clip-path="url(#arrow-down_svg__a)"
               >
                 <path
-                  d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z"
+                  d="m8.425 11.573 7.11-6.072a.709.709 0 0 0 .26-.537.709.709 0 0 0-.26-.537.973.973 0 0 0-.629-.223.973.973 0 0 0-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 0 0-.63-.223.973.973 0 0 0-.628.223.708.708 0 0 0-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 0 0 .29.165 1.021 1.021 0 0 0 .68 0 .91.91 0 0 0 .29-.165z"
                   fill="currentColor"
                 />
               </g>
               <defs>
                 <clippath
-                  id="arrow-down_svg__clip0"
+                  id="arrow-down_svg__a"
                 >
                   <path
                     d="M0 0h16v16H0z"
@@ -1067,10 +1068,11 @@ exports[`<AbsencePeriods /> should render 1`] = `
       class="c16"
       fill="none"
       viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
         clip-rule="evenodd"
-        d="M8 2a1 1 0 00-1 1v4H3a1 1 0 000 2h4v4a1 1 0 102 0V9h4a1 1 0 100-2H9V3a1 1 0 00-1-1z"
+        d="M8 2a1 1 0 0 0-1 1v4H3a1 1 0 0 0 0 2h4v4a1 1 0 1 0 2 0V9h4a1 1 0 1 0 0-2H9V3a1 1 0 0 0-1-1z"
         fill="currentColor"
         fill-rule="evenodd"
       />

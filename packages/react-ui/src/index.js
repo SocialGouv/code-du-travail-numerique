@@ -11,7 +11,7 @@ export { Container } from "./layout/Container/index.js";
 export { Section } from "./layout/Section/index.js";
 export { Wrapper } from "./layout/Wrapper/index.js";
 // Components
-export { Accordion } from "./Accordion/index.js";
+export { Accordion, AccordionArrow } from "./Accordion/index.js";
 export { Alert, AlertWithIcon } from "./Alert/index.js";
 export { ArrowLink } from "./ArrowLink/index.js";
 export { Badge } from "./Badge/index.js";
@@ -22,6 +22,8 @@ export {
   BurgerNavLink,
 } from "./BurgerNav/NavItems.js";
 export { Button } from "./Button/index.js";
+export { CodeSnippet } from "./CodeSnippet/index.js";
+export { Collapse } from "./Collapse/index.js";
 export { DisclosureIcon } from "./DisclosureIcon/index.js";
 export { Dropdown } from "./Dropdown/index.js";
 export { FlatList } from "./FlatList/index.js";
@@ -39,7 +41,7 @@ export { Table } from "./Table/index.js";
 export { TableOfContent } from "./TableOfContent/index.js";
 export { Tabs } from "./Tabs/index.js";
 export { Tag } from "./Tag/index.js";
-export { Text } from "./Text/index.js";
+export { Paragraph, Text } from "./Text/index.js";
 export { Tile } from "./Tile/index.js";
 export { Toast } from "./Toast/index.js";
 export { Tooltip } from "./Tooltip/index.js";
@@ -47,9 +49,11 @@ export { ViewMore } from "./ViewMore/index.js";
 
 // Fields
 export { InputCheckbox } from "./field/Checkbox.js";
+export { Fieldset } from "./field/Fieldset.js";
 export { Input } from "./field/Input.js";
 export { InputDate } from "./field/InputDate.js";
 export { Label } from "./field/Label.js";
+export { Legend } from "./field/Legend.js";
 export { InputRadio } from "./field/Radio.js";
 export { Select } from "./field/Select.js";
 export { Textarea } from "./field/Textarea.js";

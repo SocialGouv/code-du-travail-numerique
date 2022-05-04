@@ -3,10 +3,10 @@
 exports[`<StepIntro /> should render 1`] = `
 <div>
   <p>
-    Le préavis est une période accordée au salarié entre la notification du licenciement et son départ effectif de l’entreprise (fin du contrat).
+    Ce simulateur permet de calculer la durée du préavis accordée au salarié en cas de licenciement.
   </p>
   <p>
-    Afin de réaliser cette simulation, vous aurez besoin d’informations concernant la situation de l’employé concerné, comme sa convention collective, sa catégorie ou son coefficient. La plupart de ces informations se trouvent sur le bulletin de salaire ou le contrat de travail. Prévoyez 2 à 5 minutes pour cette simulation.
+    Des informations disponibles sur le bulletin de salaire pourraient être utiles pour réaliser cette simulation.
   </p>
   <p>
     Vous pouvez trouver plus d’informations sur le préavis de licenciement sur
@@ -17,9 +17,6 @@ exports[`<StepIntro /> should render 1`] = `
       cette fiche
     </a>
     .
-  </p>
-  <p>
-    Cliquez sur commencer pour démarrer la simulation.
   </p>
 </div>
 `;

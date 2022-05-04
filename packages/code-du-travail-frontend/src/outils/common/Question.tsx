@@ -6,45 +6,68 @@ import { InfoBulle } from "./InfoBulle";
 
 export type Tooltip = {
   content: JSX.Element;
-  help: string;
+  help?: string;
+  trackableFn?: (actualVisibility: boolean) => void;
 };
 type Props = {
   as?: string;
   required: boolean;
   tooltip?: Tooltip;
   children: React.ReactNode;
+  htmlFor?: string;
+  isTooltipOpen?: boolean;
+  onSwitchTooltip?: () => void;
 };
 
 export const Question = ({
   required,
   tooltip,
   children,
+  htmlFor,
+  isTooltipOpen,
+  onSwitchTooltip,
   ...otherProps
-}: Props): JSX.Element => (
-  <LabelBlock {...otherProps}>
-    <Label>{children}</Label>
-    {required && <Text fontWeight="400">&nbsp;(obligatoire)</Text>}
-    {tooltip && (
-      <InfoBulle title={tooltip.help}>
-        <>{tooltip.content}</>
-      </InfoBulle>
-    )}
-  </LabelBlock>
-);
+}: Props): JSX.Element => {
+  const [isLocalTooltipOpen, setIsLocalToolTipOpen] = React.useState(false);
+  return (
+    <LabelBlock htmlFor={htmlFor} {...otherProps}>
+      <Text
+        fontWeight="600"
+        fontSize={otherProps.as === "p" ? "default" : "hsmall"}
+      >
+        {children}
+      </Text>
+      {required && <Text>&nbsp;(obligatoire)</Text>}
+      {tooltip && (
+        <InfoBulle
+          title={tooltip.help ?? "Plus d'informations"}
+          isTooltipOpen={
+            isTooltipOpen === undefined ? isLocalTooltipOpen : isTooltipOpen
+          }
+          onVisibilityChange={() => {
+            tooltip.trackableFn?.(
+              isTooltipOpen === undefined ? !isLocalTooltipOpen : isTooltipOpen
+            );
+            setIsLocalToolTipOpen(
+              isTooltipOpen === undefined ? !isLocalTooltipOpen : isTooltipOpen
+            );
+            onSwitchTooltip?.();
+          }}
+        >
+          {tooltip.content}
+        </InfoBulle>
+      )}
+    </LabelBlock>
+  );
+};
 
 const { breakpoints, fonts, spacings } = theme;
 
 const LabelBlock = styled.label`
   display: block;
-  margin-top: ${spacings.medium};
-  margin-bottom: ${spacings.small};
-  font-size: ${fonts.sizes.headings.small};
+  margin: ${spacings.small} 0;
   cursor: ${(props) => (props.as ? "default" : "pointer")};
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};
   }
-`;
-
-const Label = styled.span`
-  font-weight: 600;
 `;

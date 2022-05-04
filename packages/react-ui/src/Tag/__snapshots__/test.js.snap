@@ -3,7 +3,6 @@
 exports[`<Tag /> renders text 1`] = `
 .c0 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.4rem;
   font-weight: 600;
 }
@@ -19,8 +18,6 @@ exports[`<Tag /> renders text 1`] = `
 <div>
   <span
     class="c0 c1"
-    font-size="small"
-    font-weight="600"
   >
     A simple text
   </span>

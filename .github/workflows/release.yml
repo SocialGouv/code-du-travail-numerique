@@ -1,0 +1,58 @@
+name: Release
+
+on: workflow_dispatch
+
+concurrency:
+  cancel-in-progress: true
+  group: release-${{ github.ref }}
+
+jobs:
+  release:
+    if: github.ref == 'refs/heads/master'
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Restore cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Deploy
+        run: |
+          npm config set access public
+          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+          git config --global user.name "${NAME}"
+          git config --global user.email "${EMAIL}"
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          yarn --frozen-lockfile
+          yarn build:npm
+          GH_TOKEN=${GITHUB_TOKEN} yarn lerna version --force-publish --yes --conventional-commits
+          yarn lerna publish from-package --yes
+        env:
+          GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
+          NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
+          EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
+          NPM_TOKEN: ${{ secrets.SOCIALGROOVYBOT_NPM_TOKEN }}
+      - name: Rebase master to dev
+        run: |
+          git config --global user.name "${NAME}"
+          git config --global user.email "${EMAIL}"
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git switch dev
+          git pull
+          git rebase master
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
+          NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
+          EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}

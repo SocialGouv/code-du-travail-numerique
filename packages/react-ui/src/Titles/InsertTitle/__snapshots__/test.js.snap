@@ -17,10 +17,10 @@ exports[`<InsertTitle /> renders an insert title 1`] = `
 }
 
 <div>
-  <div
+  <p
     class="c0"
   >
     Lorem Ipsum
-  </div>
+  </p>
 </div>
 `;

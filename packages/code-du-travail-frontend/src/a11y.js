@@ -2,7 +2,7 @@ import { ScreenReaderOnly } from "@socialgouv/cdtn-ui";
 import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
 
-import { SkipNavLink } from "./layout/Header/SkipNavLink";
+import SkipNavLink from "./layout/Header/SkipNavLink";
 
 export function A11y({ initialTitle = "" }) {
   const router = useRouter();

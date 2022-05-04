@@ -7,23 +7,24 @@ kind: Namespace
 metadata:
   annotations:
     socialgouv/creator: autodevops
-    janitor/ttl: 15d
+    janitor/ttl: 7d
     field.cattle.io/creatorId: gitlab
     field.cattle.io/projectId: c-bar:p-foo
-    git/branch: master
-    git/remote: >-
-      https://gitlab-ci-token:[MASKED]@gitlab.factory.social.gouv.fr/SocialGouv/code-du-travail-numerique.git
-    app.gitlab.com/app: socialgouv-code-du-travail-numerique
-    app.gitlab.com/env: master-dev42
-    app.gitlab.com/env.name: master-dev42
+    git/branch: refs/heads/mybranch
+    git/remote: socialgouv/code-du-travail-numerique
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/heads/mybranch
+    app.github.com/repo: socialgouv/code-du-travail-numerique
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   labels:
     azure-pg-admin-user: code-du-travail-numerique
-    application: master-dev42-code-du-travail-numerique
-    component: master-dev42-code-du-travail-numerique
+    application: code-du-travail-numerique
+    component: code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
-  name: code-du-travail-numerique-85-master-dev42
+  name: code-du-travail-numerique-mybranch
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -31,18 +32,20 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-code-du-travail-numerique
-    app.gitlab.com/env: master-dev42
-    app.gitlab.com/env.name: master-dev42
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/heads/mybranch
+    app.github.com/repo: socialgouv/code-du-travail-numerique
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   labels:
     app: api
-    application: master-dev42-code-du-travail-numerique
-    component: master-dev42-code-du-travail-numerique
+    application: code-du-travail-numerique
+    component: code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
   name: api
-  namespace: code-du-travail-numerique-85-master-dev42
+  namespace: code-du-travail-numerique-mybranch
 spec:
   replicas: 1
   selector:
@@ -53,20 +56,22 @@ spec:
       annotations:
         kapp.k14s.io/disable-default-ownership-label-rules: ''
         kapp.k14s.io/disable-default-label-scoping-rules: ''
-        app.gitlab.com/app: socialgouv-code-du-travail-numerique
-        app.gitlab.com/env: master-dev42
-        app.gitlab.com/env.name: master-dev42
+        app.github.com/job: '5678'
+        app.github.com/ref: refs/heads/mybranch
+        app.github.com/repo: socialgouv/code-du-travail-numerique
+        app.github.com/run: '1234'
+        app.github.com/sha: '0123456'
       labels:
         app: api
-        application: master-dev42-code-du-travail-numerique
-        component: master-dev42-code-du-travail-numerique
+        application: code-du-travail-numerique
+        component: code-du-travail-numerique
         owner: code-du-travail-numerique
         team: code-du-travail-numerique
         cert: wildcard
     spec:
       containers:
         - image: >-
-            harbor.fabrique.social.gouv.fr/cdtn/cdtn-api:0123456789abcdefghijklmnopqrstuvwxyz0123
+            ghcr.io/socialgouv/cdtn/code-du-travail-api:sha-0123456789abcdefghijklmnopqrstuvwxyz0123
           livenessProbe:
             failureThreshold: 6
             httpGet:
@@ -105,11 +110,10 @@ spec:
             timeoutSeconds: 15
           env:
             - name: ELASTIC_APM_ENVIRONMENT
-              value: cdtn-master-dev42
             - name: ES_INDEX_PREFIX
-              value: cdtn-prod
+              value: cdtn-preprod
             - name: VERSION
-              value: master
+              value: refs/heads/mybranch
           envFrom:
             - secretRef:
                 name: api-secret
@@ -123,14 +127,16 @@ metadata:
     sealedsecrets.bitnami.com/cluster-wide: 'true'
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-code-du-travail-numerique
-    app.gitlab.com/env: master-dev42
-    app.gitlab.com/env.name: master-dev42
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/heads/mybranch
+    app.github.com/repo: socialgouv/code-du-travail-numerique
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   name: api-secret
-  namespace: code-du-travail-numerique-85-master-dev42
+  namespace: code-du-travail-numerique-mybranch
   labels:
-    application: master-dev42-code-du-travail-numerique
-    component: master-dev42-code-du-travail-numerique
+    application: code-du-travail-numerique
+    component: code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
@@ -150,13 +156,15 @@ spec:
         sealedsecrets.bitnami.com/cluster-wide: 'true'
         kapp.k14s.io/disable-default-ownership-label-rules: ''
         kapp.k14s.io/disable-default-label-scoping-rules: ''
-        app.gitlab.com/app: socialgouv-code-du-travail-numerique
-        app.gitlab.com/env: master-dev42
-        app.gitlab.com/env.name: master-dev42
+        app.github.com/job: '5678'
+        app.github.com/ref: refs/heads/mybranch
+        app.github.com/repo: socialgouv/code-du-travail-numerique
+        app.github.com/run: '1234'
+        app.github.com/sha: '0123456'
       name: api-secret
       labels:
-        application: master-dev42-code-du-travail-numerique
-        component: master-dev42-code-du-travail-numerique
+        application: code-du-travail-numerique
+        component: code-du-travail-numerique
         owner: code-du-travail-numerique
         team: code-du-travail-numerique
         cert: wildcard
@@ -169,21 +177,23 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-code-du-travail-numerique
-    app.gitlab.com/env: master-dev42
-    app.gitlab.com/env.name: master-dev42
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/heads/mybranch
+    app.github.com/repo: socialgouv/code-du-travail-numerique
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   labels:
-    application: master-dev42-code-du-travail-numerique
-    component: master-dev42-code-du-travail-numerique
+    application: code-du-travail-numerique
+    component: code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
-  namespace: code-du-travail-numerique-85-master-dev42
+  namespace: code-du-travail-numerique-mybranch
 data:
   ELASTIC_APM_ACTIVE: 'false'
   ELASTIC_APM_SERVICE_NAME: cdtn-api
   ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME: 'true'
-  NLP_URL: https://preprod-serving-ml.dev.fabrique.social.gouv.fr
+  NLP_URL: https://serving-ml-preprod.dev.fabrique.social.gouv.fr
   NODE_ENV: production
   PIWIK_SITE_ID: '3'
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr
@@ -193,8 +203,8 @@ kind: Service
 metadata:
   labels:
     app: api
-    application: master-dev42-code-du-travail-numerique
-    component: master-dev42-code-du-travail-numerique
+    application: code-du-travail-numerique
+    component: code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
@@ -202,10 +212,12 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-code-du-travail-numerique
-    app.gitlab.com/env: master-dev42
-    app.gitlab.com/env.name: master-dev42
-  namespace: code-du-travail-numerique-85-master-dev42
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/heads/mybranch
+    app.github.com/repo: socialgouv/code-du-travail-numerique
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
+  namespace: code-du-travail-numerique-mybranch
 spec:
   ports:
     - name: http
@@ -222,21 +234,23 @@ metadata:
     kubernetes.io/ingress.class: nginx
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-code-du-travail-numerique
-    app.gitlab.com/env: master-dev42
-    app.gitlab.com/env.name: master-dev42
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/heads/mybranch
+    app.github.com/repo: socialgouv/code-du-travail-numerique
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   labels:
     app: api
-    application: master-dev42-code-du-travail-numerique
-    component: master-dev42-code-du-travail-numerique
+    application: code-du-travail-numerique
+    component: code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
   name: api
-  namespace: code-du-travail-numerique-85-master-dev42
+  namespace: code-du-travail-numerique-mybranch
 spec:
   rules:
-    - host: api-master-dev42-code-du-travail-numerique.dev42.fabrique.social.gouv.fr
+    - host: api-code-du-travail-numerique-mybranch.dev2.fabrique.social.gouv.fr
       http:
         paths:
           - backend:
@@ -248,9 +262,29 @@ spec:
             pathType: Prefix
   tls:
     - hosts:
-        - >-
-          api-master-dev42-code-du-travail-numerique.dev42.fabrique.social.gouv.fr
+        - api-code-du-travail-numerique-mybranch.dev2.fabrique.social.gouv.fr
       secretName: wildcard-crt
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: netpol-code-du-travail-numerique-mybranch
+  namespace: code-du-travail-numerique-mybranch
+spec:
+  ingress:
+    - from:
+        - podSelector: {}
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              network-policy/source: ingress-controller
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              network-policy/source: monitoring
+  podSelector: {}
+  policyTypes:
+    - Ingress
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -258,18 +292,20 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-code-du-travail-numerique
-    app.gitlab.com/env: master-dev42
-    app.gitlab.com/env.name: master-dev42
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/heads/mybranch
+    app.github.com/repo: socialgouv/code-du-travail-numerique
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   labels:
     app: www
-    application: master-dev42-code-du-travail-numerique
-    component: master-dev42-code-du-travail-numerique
+    application: code-du-travail-numerique
+    component: code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
   name: www
-  namespace: code-du-travail-numerique-85-master-dev42
+  namespace: code-du-travail-numerique-mybranch
 spec:
   replicas: 1
   selector:
@@ -280,20 +316,22 @@ spec:
       annotations:
         kapp.k14s.io/disable-default-ownership-label-rules: ''
         kapp.k14s.io/disable-default-label-scoping-rules: ''
-        app.gitlab.com/app: socialgouv-code-du-travail-numerique
-        app.gitlab.com/env: master-dev42
-        app.gitlab.com/env.name: master-dev42
+        app.github.com/job: '5678'
+        app.github.com/ref: refs/heads/mybranch
+        app.github.com/repo: socialgouv/code-du-travail-numerique
+        app.github.com/run: '1234'
+        app.github.com/sha: '0123456'
       labels:
         app: www
-        application: master-dev42-code-du-travail-numerique
-        component: master-dev42-code-du-travail-numerique
+        application: code-du-travail-numerique
+        component: code-du-travail-numerique
         owner: code-du-travail-numerique
         team: code-du-travail-numerique
         cert: wildcard
     spec:
       containers:
         - image: >-
-            harbor.fabrique.social.gouv.fr/cdtn/cdtn-frontend:0123456789abcdefghijklmnopqrstuvwxyz0123
+            ghcr.io/socialgouv/cdtn/code-du-travail-frontend:sha-0123456789abcdefghijklmnopqrstuvwxyz0123
           livenessProbe:
             failureThreshold: 6
             httpGet:
@@ -318,10 +356,10 @@ spec:
           resources:
             limits:
               cpu: 500m
-              memory: 560Mi
+              memory: 768Mi
             requests:
-              cpu: 200m
-              memory: 256Mi
+              cpu: 300m
+              memory: 512Mi
           startupProbe:
             failureThreshold: 12
             httpGet:
@@ -333,21 +371,20 @@ spec:
           env:
             - name: API_URL
               value: >-
-                https://api-master-dev42-code-du-travail-numerique.dev42.fabrique.social.gouv.fr/api/v1
+                https://api-code-du-travail-numerique-mybranch.dev2.fabrique.social.gouv.fr/api/v1
             - name: COMMIT
               value: 0123456789abcdefghijklmnopqrstuvwxyz0123
             - name: VERSION
-              value: master
+              value: refs/heads/mybranch
             - name: FRONTEND_HOST
-              value: >-
-                master-dev42-code-du-travail-numerique.dev42.fabrique.social.gouv.fr
+              value: code-du-travail-numerique-mybranch.dev2.fabrique.social.gouv.fr
           envFrom:
             - configMapRef:
                 name: www-configmap
       initContainers:
         - args:
             - http://api
-          image: ghcr.io/socialgouv/docker/wait-for-http:6.45.0
+          image: ghcr.io/socialgouv/docker/wait-for-http:6.56.1
           imagePullPolicy: Always
           name: wait-for-www
           resources:
@@ -365,33 +402,35 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-code-du-travail-numerique
-    app.gitlab.com/env: master-dev42
-    app.gitlab.com/env.name: master-dev42
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/heads/mybranch
+    app.github.com/repo: socialgouv/code-du-travail-numerique
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   labels:
-    application: master-dev42-code-du-travail-numerique
-    component: master-dev42-code-du-travail-numerique
+    application: code-du-travail-numerique
+    component: code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
-  namespace: code-du-travail-numerique-85-master-dev42
+  namespace: code-du-travail-numerique-mybranch
 data:
   AZURE_BASE_URL: https://cdtnadmindev.blob.core.windows.net
   AZURE_CONTAINER: cdtn-dev
-  IS_PRODUCTION_DEPLOYMENT: 'false'
   NODE_ENV: production
   PIWIK_SITE_ID: '3'
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr
   PROD_HOSTNAME: code.travail.gouv.fr
   SENTRY_PUBLIC_DSN: https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+  SENTRY_ENV: dev
 ---
 apiVersion: v1
 kind: Service
 metadata:
   labels:
     app: www
-    application: master-dev42-code-du-travail-numerique
-    component: master-dev42-code-du-travail-numerique
+    application: code-du-travail-numerique
+    component: code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
@@ -399,10 +438,12 @@ metadata:
   annotations:
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-code-du-travail-numerique
-    app.gitlab.com/env: master-dev42
-    app.gitlab.com/env.name: master-dev42
-  namespace: code-du-travail-numerique-85-master-dev42
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/heads/mybranch
+    app.github.com/repo: socialgouv/code-du-travail-numerique
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
+  namespace: code-du-travail-numerique-mybranch
 spec:
   ports:
     - name: http
@@ -419,21 +460,23 @@ metadata:
     kubernetes.io/ingress.class: nginx
     kapp.k14s.io/disable-default-ownership-label-rules: ''
     kapp.k14s.io/disable-default-label-scoping-rules: ''
-    app.gitlab.com/app: socialgouv-code-du-travail-numerique
-    app.gitlab.com/env: master-dev42
-    app.gitlab.com/env.name: master-dev42
+    app.github.com/job: '5678'
+    app.github.com/ref: refs/heads/mybranch
+    app.github.com/repo: socialgouv/code-du-travail-numerique
+    app.github.com/run: '1234'
+    app.github.com/sha: '0123456'
   labels:
     app: www
-    application: master-dev42-code-du-travail-numerique
-    component: master-dev42-code-du-travail-numerique
+    application: code-du-travail-numerique
+    component: code-du-travail-numerique
     owner: code-du-travail-numerique
     team: code-du-travail-numerique
     cert: wildcard
   name: www
-  namespace: code-du-travail-numerique-85-master-dev42
+  namespace: code-du-travail-numerique-mybranch
 spec:
   rules:
-    - host: master-dev42-code-du-travail-numerique.dev42.fabrique.social.gouv.fr
+    - host: code-du-travail-numerique-mybranch.dev2.fabrique.social.gouv.fr
       http:
         paths:
           - backend:
@@ -445,7 +488,7 @@ spec:
             pathType: Prefix
   tls:
     - hosts:
-        - master-dev42-code-du-travail-numerique.dev42.fabrique.social.gouv.fr
+        - code-du-travail-numerique-mybranch.dev2.fabrique.social.gouv.fr
       secretName: wildcard-crt
 "
 `;

@@ -13,9 +13,11 @@ jest.mock(
   { virtual: true }
 );
 
-jest.mock("../../piwik", () => ({
-  matopush: jest.fn(),
-}));
+jest.mock("@socialgouv/matomo-next", () => {
+  return {
+    push: jest.fn(),
+  };
+});
 
 describe("<ServiceRenseignement />", () => {
   it("should render suggestions", async () => {

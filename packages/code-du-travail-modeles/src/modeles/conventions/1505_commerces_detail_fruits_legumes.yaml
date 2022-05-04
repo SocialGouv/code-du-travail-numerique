@@ -1,0 +1,73 @@
+contrat salarié . convention collective . commerces de détail fruits et légumes:
+  description: Convention collective nationale du commerce de détail des fruits et légumes, épicerie et produits laitiers du 15 avril 1988. Etendue par arrêté du 20 juin 1988, JORF 25 juin 1988.
+  applicable si: convention collective = 'IDCC1505'
+  valeur: oui
+  cdtn:
+    idcc: 1505
+    préavis-retraite: true
+
+contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  cdtn:
+    type: liste
+    valeurs:
+      Ouvriers, Employés (Niveaux N1 à N4): "'Ouvriers, Employés (Niveaux N1 à N4)'"
+      Agents de maîtrise (Niveaux N5 et N6): "'Agents de maîtrise (Niveaux N5 et N6)'"
+      Cadres (Niveaux N7 et N8): "'Cadres (Niveaux N7 et N8)'"
+
+contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . agents de maitrise:
+  applicable si: catégorie professionnelle = 'Agents de maîtrise (Niveaux N5 et N6)'
+  valeur: oui
+  références:
+    Article 3.10.3: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005874375/?idConteneur=KALICONT000005635421
+
+contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . agents de maitrise . départ ou mise à la retraite:
+  applicable si:
+    une de ces conditions:
+      - départ à la retraite
+      - mise à la retraite
+  remplace: préavis de retraite collective
+  valeur: 2 mois
+
+contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . ouvriers:
+  applicable si: catégorie professionnelle = 'Ouvriers, Employés (Niveaux N1 à N4)'
+  valeur: oui
+  références:
+    Article 3.10.3: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005874375/?idConteneur=KALICONT000005635421
+
+contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . ouvriers . départ à la retraite:
+  applicable si: départ à la retraite
+  remplace: préavis de retraite collective
+  valeur: 1 mois
+
+contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . ouvriers . mise à la retraite:
+  applicable si: mise à la retraite
+  remplace: préavis de retraite collective
+  valeur: 2 mois
+
+contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . cadres:
+  applicable si: catégorie professionnelle = 'Cadres (Niveaux N7 et N8)'
+  valeur: oui
+  références:
+    Article 3.10.3: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005874375/?idConteneur=KALICONT000005635421
+
+contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . cadres . départ à la retraite:
+  applicable si: départ à la retraite
+  remplace: préavis de retraite collective
+  valeur: 3 mois
+
+contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . cadres . mise à la retraite:
+  applicable si: mise à la retraite
+  remplace: préavis de retraite collective
+  valeur: 2 mois
+
+contrat salarié . convention collective . commerces de détail fruits et légumes . notification:
+  applicable si:
+    toutes ces conditions:
+      - départ à la retraite
+      - catégorie professionnelle = 'Cadres (Niveaux N7 et N8)'
+  type: notification
+  description: "Attention: L'article de la convention collective ou la convention collective saisie n’a pas été étendue au niveau national. Par conséquent, pour que ce résultat soit applicable à votre situation, il faut que l’employeur ait adhéré à l’organisation patronale signataire de cette convention. Sans cette adhésion, l'employeur n'a pas l'obligation d'appliquer les règles de la convention mais il applique le préavis prévu par le code du travail."
+  valeur: oui

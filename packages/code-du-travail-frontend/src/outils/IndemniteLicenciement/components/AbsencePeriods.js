@@ -38,13 +38,18 @@ export const AbsencePeriods = ({ name }) => (
             mois sont déjà prises en compte dans l&apos;ancienneté et ne sont
             pas des périodes à renseigner ci-après :
           </p>
-          <Question as="p">
+          <Question>
             Quels sont le motif et la durée de ces absences prolongées&nbsp;?
           </Question>
           {fields.map((name, index) => (
             <RelativeDiv key={name}>
               <RowTitle>
-                <Text variant="secondary" fontSize="hsmall">
+                <Text
+                  variant="secondary"
+                  fontSize="hsmall"
+                  role="heading"
+                  aria-level="2"
+                >
                   Absence {index + 1}
                 </Text>
               </RowTitle>

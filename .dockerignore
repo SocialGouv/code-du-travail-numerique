@@ -8,3 +8,7 @@
 **/.docz
 **/coverage
 **/fiches_service_public/data
+node_modules
+npm-debug.log
+yarn-error.log
+.next

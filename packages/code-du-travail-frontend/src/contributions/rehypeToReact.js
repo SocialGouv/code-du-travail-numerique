@@ -8,10 +8,11 @@ import Html from "../../src/common/Html";
 //Custom MDX component
 const Tab = (props) => (
   <StyledAccordion
+    titleLevel={3}
     items={[
       {
         body: props.children,
-        title: <h3>{props.title}</h3>,
+        title: props.title,
       },
     ]}
   />
@@ -19,7 +20,7 @@ const Tab = (props) => (
 
 const Hdn = (props) => (
   <Alert>
-    <Heading>Texte applicable</Heading>
+    <Heading as="p">Texte applicable</Heading>
     <div {...props} />
   </Alert>
 );
@@ -46,10 +47,11 @@ const ContentMT = ({ intro, sections }) => {
       )}
       {sections && (
         <Accordion
+          levelTitle={3}
           items={sections.map((section) => ({
             body: <TabContent>{section.html}</TabContent>,
             id: section.anchor,
-            title: <h3>{section.title}</h3>,
+            title: section.title,
           }))}
         />
       )}
@@ -83,6 +85,7 @@ const TabContent = styled(Html)`
   & > *:first-child {
     margin-top: 0;
   }
+
   & > *:last-child {
     margin-bottom: 0;
   }
@@ -96,6 +99,7 @@ const Intro = styled(Html)`
   & > *:first-child {
     margin-top: 0;
   }
+
   & > *:last-child {
     margin-bottom: 0;
   }

@@ -4,18 +4,14 @@
 [![codecov](https://codecov.io/gh/SocialGouv/code-du-travail-numerique/branch/master/graph/badge.svg)](https://codecov.io/gh/SocialGouv/code-du-travail-numerique)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FSocialGouv%2Fcode-du-travail-numerique.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FSocialGouv%2Fcode-du-travail-numerique?ref=badge_shield)
 
-<br/><br/>
-
 ![schema](./schema.png)
-
-<br/><br/>
 
 ## URLs
 
 ### Demos
 
 - Production : <https://code.travail.gouv.fr>
-- master (dev) : <https://master-dev-code-du-travail-numerique.dev.fabrique.social.gouv.fr/>
+- master (dev) : <https://code-du-travail-numerique-master.dev.fabrique.social.gouv.fr/>
 
 ## Installation
 
@@ -26,8 +22,6 @@ Make sure you're using NodeJS 14.17.4+.
 yarn
 yarn build
 ```
-
-Note: environment file can be created using [scripts/setup-env.js](scripts/setup-env.js)) according to `NODE_ENV`, default to `dev`
 
 ### Dev
 
@@ -55,7 +49,7 @@ If you need to work on both frontend and api, don't provide API_URL as it will f
 yarn dev:frontend
 ```
 
-The React components are defined in the [react-ui](./packages/react-ui) package and showcased here: <https://socialgouv-react-ui.netlify.com>
+The React components are defined in the [react-ui](./packages/react-ui) package and showcased here: <https://socialgouv.github.io/code-du-travail-numerique/>
 
 ##### Testing
 
@@ -71,14 +65,6 @@ yarn test:e2e:ui # To run e2e test with CodeceptJS UI
 To run the NodeJS API, you need an Elasticsearch instance.
 
 The provided [docker-compose.yml](./docker-compose.yml) provide all the environment.
-
-We recommend using the `docker-compose.override.dev.yml` config for local development.
-Copy/paste and rename the `docker-compose.override.dev.yml` to `docker-compose.override.yml`
-(more information on the [docker-compose documentation](https://docs.docker.com/compose/extends/#multiple-compose-files)).
-
-```sh
-cp docker-compose.override.dev.yml docker-compose.override.yml
-```
 
 ```sh
 # start elasticsearch

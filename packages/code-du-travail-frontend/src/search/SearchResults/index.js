@@ -1,8 +1,8 @@
 import { Container, Section } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { classifyTokens } from "@socialgouv/reference-article";
 import React, { useEffect } from "react";
 
-import { matopush } from "../../piwik";
 import { Law } from "./Law";
 import { Results } from "./Results";
 import { Themes } from "./Themes";
@@ -17,7 +17,7 @@ const SearchResults = ({
     if (isSearch) {
       matopush(["trackEvent", "candidateResults", query]);
     } else {
-      matopush(["trackEvent", "themeResults"]);
+      matopush(["trackEvent", "themeResults", ""]);
     }
   });
   let isArticleSearch = false;

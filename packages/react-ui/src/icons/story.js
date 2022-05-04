@@ -38,10 +38,10 @@ export const readme = () => (
       <li>Place the monochrome or bicolor icon into the according folder</li>
       <li>
         Run <code>yarn svg</code>. Your SVG component will be created in the{" "}
-        <b>components</b> folder
+        <strong>components</strong> folder
       </li>
       <li>
-        Export the new icon in the <b>index.js</b> file.{" "}
+        Export the new icon in the <strong>index.js</strong> file.{" "}
         <code>{`export { default as MyNewIcon } from "./components/bicolor/MyNewIcon.js"`}</code>
       </li>
     </ol>

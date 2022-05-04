@@ -1,9 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SelectQuestion /> should render with default value 1`] = `
+.c2 {
+  color: #3e486e;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
 .c3 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -79,14 +84,8 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 
 .c1 {
   display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
+  margin: 1rem 0;
   cursor: pointer;
-}
-
-.c2 {
-  font-weight: 600;
 }
 
 .c5 {
@@ -94,7 +93,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 }
 
 .c0 {
-  margin-bottom: 3.2rem;
+  margin-bottom: 1.6rem;
 }
 
 @media (max-width:600px) {
@@ -130,8 +129,6 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
       </span>
       <span
         class="c3"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
@@ -169,18 +166,19 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
           aria-hidden="true"
           fill="none"
           viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <g
-            clip-path="url(#arrow-down_svg__clip0)"
+            clip-path="url(#arrow-down_svg__a)"
           >
             <path
-              d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z"
+              d="m8.425 11.573 7.11-6.072a.709.709 0 0 0 .26-.537.709.709 0 0 0-.26-.537.973.973 0 0 0-.629-.223.973.973 0 0 0-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 0 0-.63-.223.973.973 0 0 0-.628.223.708.708 0 0 0-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 0 0 .29.165 1.021 1.021 0 0 0 .68 0 .91.91 0 0 0 .29-.165z"
               fill="currentColor"
             />
           </g>
           <defs>
             <clippath
-              id="arrow-down_svg__clip0"
+              id="arrow-down_svg__a"
             >
               <path
                 d="M0 0h16v16H0z"
@@ -196,9 +194,14 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 `;
 
 exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
+.c2 {
+  color: #3e486e;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
 .c3 {
   color: #3e486e;
-  line-height: 1.25;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -274,14 +277,8 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
 
 .c1 {
   display: block;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
+  margin: 1rem 0;
   cursor: pointer;
-}
-
-.c2 {
-  font-weight: 600;
 }
 
 .c5 {
@@ -289,7 +286,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
 }
 
 .c0 {
-  margin-bottom: 3.2rem;
+  margin-bottom: 1.6rem;
 }
 
 @media (max-width:600px) {
@@ -325,8 +322,6 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
       </span>
       <span
         class="c3"
-        font-size="default"
-        font-weight="400"
       >
          (obligatoire)
       </span>
@@ -364,18 +359,19 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
           aria-hidden="true"
           fill="none"
           viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <g
-            clip-path="url(#arrow-down_svg__clip0)"
+            clip-path="url(#arrow-down_svg__a)"
           >
             <path
-              d="M8.425 11.573l7.11-6.072a.709.709 0 00.26-.537.709.709 0 00-.26-.537.973.973 0 00-.629-.223.973.973 0 00-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 00-.63-.223.973.973 0 00-.628.223.708.708 0 00-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 00.29.165 1.021 1.021 0 00.68 0 .91.91 0 00.29-.165z"
+              d="m8.425 11.573 7.11-6.072a.709.709 0 0 0 .26-.537.709.709 0 0 0-.26-.537.973.973 0 0 0-.629-.223.973.973 0 0 0-.63.223l-6.48 5.536-6.481-5.536a.973.973 0 0 0-.63-.223.973.973 0 0 0-.628.223.708.708 0 0 0-.261.537c0 .202.094.395.26.537l7.11 6.072a.91.91 0 0 0 .29.165 1.021 1.021 0 0 0 .68 0 .91.91 0 0 0 .29-.165z"
               fill="currentColor"
             />
           </g>
           <defs>
             <clippath
-              id="arrow-down_svg__clip0"
+              id="arrow-down_svg__a"
             >
               <path
                 d="M0 0h16v16H0z"

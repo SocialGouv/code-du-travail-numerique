@@ -1,6 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tabulator /> should have two different levels of headings 1`] = `
+.c8 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c7 {
   position: absolute !important;
   width: 1px !important;
@@ -45,19 +56,6 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 
 .c3 {
   overflow-x: auto;
-}
-
-.c10 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .c0 {
@@ -123,42 +121,18 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
   border-radius: 0.6rem;
 }
 
-.c11 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c11 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
-.c12 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c8 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  text-align: left;
-}
-
-.c9 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
+@media (max-width:600px) {
+  .c8 {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -215,31 +189,6 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 @media (max-width:600px) {
   .c6.react-tabs__tab-panel--selected {
     padding: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
-    margin-bottom: 1rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    font-size: 2.2rem;
   }
 }
 
@@ -291,24 +240,17 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
       <div
         class="c7"
       >
-        <div
+        <h2
           class="c8"
         >
-          <h2
-            class="c9"
-          >
-            <div
-              class="c10"
-            />
-            CDI
-          </h2>
-        </div>
+          CDI
+        </h2>
       </div>
       <div
-        class="c11"
+        class="c9"
       >
         <h3
-          class="c12"
+          class="c8"
         >
           titre 1
         </h3>
@@ -328,6 +270,17 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 `;
 
 exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
+.c8 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c7 {
   position: absolute !important;
   width: 1px !important;
@@ -445,15 +398,10 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
   margin-bottom: 0;
 }
 
-.c8 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
+@media (max-width:600px) {
+  .c8 {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -510,12 +458,6 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 @media (max-width:600px) {
   .c6.react-tabs__tab-panel--selected {
     padding: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
-    font-size: 1.6rem;
   }
 }
 
@@ -567,20 +509,20 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
       <div
         class="c7"
       >
-        <h4
+        <h3
           class="c8"
         >
           CDI
-        </h4>
+        </h3>
       </div>
       <div
         class="c9"
       >
-        <h5
+        <h4
           class="c8"
         >
           titre 1
-        </h5>
+        </h4>
         <p>
           paragraphe 1
         </p>
@@ -597,6 +539,17 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 `;
 
 exports[`<Tabulator /> should render 1`] = `
+.c8 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c7 {
   position: absolute !important;
   width: 1px !important;
@@ -714,15 +667,10 @@ exports[`<Tabulator /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c8 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
+@media (max-width:600px) {
+  .c8 {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -782,12 +730,6 @@ exports[`<Tabulator /> should render 1`] = `
   }
 }
 
-@media (max-width:600px) {
-  .c8 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <div
     class="c0"
@@ -836,20 +778,20 @@ exports[`<Tabulator /> should render 1`] = `
       <div
         class="c7"
       >
-        <h5
+        <h4
           class="c8"
         >
           CDI
-        </h5>
+        </h4>
       </div>
       <div
         class="c9"
       >
-        <h6
+        <h5
           class="c8"
         >
           titre 1
-        </h6>
+        </h5>
         <p>
           paragraphe 1
         </p>

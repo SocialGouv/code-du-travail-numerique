@@ -13,10 +13,10 @@ exports[`<Subtitle /> renders a subtitle 1`] = `
 }
 
 <div>
-  <span
+  <p
     class="c0"
   >
     Lorem Ipsum
-  </span>
+  </p>
 </div>
 `;

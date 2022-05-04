@@ -1,12 +1,12 @@
-import PropTypes from "prop-types";
-import React from "react";
 import {
   Accordion as RootAccordion,
   AccordionItem,
   AccordionItemButton,
   AccordionItemHeading,
   AccordionItemPanel,
-} from "react-accessible-accordion";
+} from "@maxgfr/react-accessible-accordion";
+import PropTypes from "prop-types";
+import React from "react";
 import styled from "styled-components";
 
 import { More } from "../icons/index.js";

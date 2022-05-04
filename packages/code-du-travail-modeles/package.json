@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/modeles-social",
-  "version": "4.54.0",
+  "version": "4.76.0",
   "description": "Les règles publicodes des simulateurs de code du travail numérique",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -15,7 +15,7 @@
     "@types/jest": "^27.0.1",
     "eslint": "^7.32.0",
     "jest": "^27.0.6",
-    "lint-staged": "^11.2.3",
+    "lint-staged": "^12.1.2",
     "nodemon": "^2.0.12",
     "ts-jest": "^27.0.5",
     "typescript": "^4.3.5"
@@ -25,9 +25,9 @@
     "prebuild": "tsc",
     "test": "jest",
     "lint": "eslint \"./src/**/*.{js,ts}\"",
-    "dev": "nodemon --exec 'tsc && node bin/build.js' --watch 'src' --ext 'ts,yaml'",
+    "dev": "nodemon --exec 'npm run build' --watch 'src/**' --ext 'ts,yaml'",
     "test:watch": "nodemon --exec 'jest' --watch 'src/**' --ext 'ts,yaml'",
-    "build": "node bin/build.js",
+    "build": "node bin/internal/build.js",
     "clean": "rimraf bin lib"
   },
   "dependencies": {
