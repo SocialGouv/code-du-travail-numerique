@@ -18,12 +18,14 @@ type Props = {
   enterprise: Enterprise;
   onChange: (enterprise: Enterprise, agreement: Agreement | null) => void;
   supportedAgreements: AgreementSupportInfo[];
+  alertAgreementNotSupported?: (string) => JSX.Element;
 };
 
 const ShowAgreements = ({
   enterprise,
   onChange,
   supportedAgreements,
+  alertAgreementNotSupported,
 }: Props): JSX.Element => {
   const [agreement, setAgreement] = useState<Agreement | undefined>();
 
@@ -70,14 +72,10 @@ const ShowAgreements = ({
       </RadioContainer>
       {agreement && (
         <ShowAlert
-          currentIdcc={agreement.num}
+          currentAgreement={agreement}
           supportedAgreements={supportedAgreements}
+          alertAgreementNotSupported={alertAgreementNotSupported}
         />
-      )}
-      {agreement && (
-        <Paragraph>
-          Cliquez sur Suivant pour poursuivre la simulation.
-        </Paragraph>
       )}
     </>
   );

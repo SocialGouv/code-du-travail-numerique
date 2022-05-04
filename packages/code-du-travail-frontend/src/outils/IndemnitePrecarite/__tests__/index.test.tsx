@@ -1,12 +1,15 @@
 import { render } from "@testing-library/react";
-import React from "react";
 
 import { SimulateurIndemnitePrecarite } from "..";
 
 describe("<SimulateurIndemnitePrecarite />", () => {
   it("should render", () => {
     const { container } = render(
-      <SimulateurIndemnitePrecarite title="Simulateur de l'indemnité de précarité" />
+      <SimulateurIndemnitePrecarite
+        title="Indemnité de précarité"
+        displayTitle="Calculer l'indemnité de précarité"
+        icon=""
+      />
     );
     expect(container).toMatchSnapshot();
   });

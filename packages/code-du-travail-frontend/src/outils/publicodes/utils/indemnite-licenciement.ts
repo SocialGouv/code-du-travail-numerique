@@ -1,12 +1,6 @@
 import { ConventionCollective } from "../../common/type/WizardType";
 import { formatNumber } from "./common";
 
-function formatSeniorityForIndemniteLicenciement(
-  initialSeniority: string
-): string {
-  return formatNumber(parseInt(initialSeniority) * 12);
-}
-
 export const mapToPublicodesSituationForIndemniteLicenciement = (
   ccn: ConventionCollective | undefined,
   seniority: string,

@@ -12,6 +12,8 @@ import { AGREEMENT_NAME, ENTERPRISE_NAME, ROUTE_NAME } from "./form-constants";
 import { RouteSelection } from "./RouteSelection";
 import { handleTrackEvent } from "./tracking";
 import { AgreementSupportInfo, OnSelectAgreementFn } from "./types";
+import { SmallText } from "../stepStyles";
+import { ErrorField } from "../ErrorField";
 
 export type Props = {
   title: string;
@@ -19,6 +21,9 @@ export type Props = {
   supportedAgreements: AgreementSupportInfo[];
   onChange?: (oldValue: Agreement | null, newValue: Agreement | null) => void;
   defaultSelectedAgreement?: Agreement;
+  required?: boolean;
+  note?: string;
+  alertAgreementNotSupported?: (string) => JSX.Element;
 };
 
 const SelectAgreement = ({
@@ -27,6 +32,9 @@ const SelectAgreement = ({
   supportedAgreements,
   onChange,
   defaultSelectedAgreement,
+  required = false,
+  note,
+  alertAgreementNotSupported,
 }: Props): JSX.Element => {
   const [storedConvention, setConvention] = useLocalStorage(
     "convention",
@@ -68,24 +76,34 @@ const SelectAgreement = ({
 
   const values = form.getState().values;
   useEffect(() => {
-    if (values.ccn?.route === "not-selected") {
-      setConvention(undefined);
-      setEnterprise(undefined);
-    }
-    if (values.ccn?.route === "agreement") {
-      setEnterprise(undefined);
+    switch (values.ccn?.route) {
+      case "not-selected": {
+        setConvention(undefined);
+        setEnterprise(undefined);
+        break;
+      }
+      case "agreement": {
+        setEnterprise(undefined);
+        break;
+      }
+      case "enterprise": {
+        setConvention(undefined);
+        break;
+      }
     }
   }, [setConvention, values.ccn?.route]);
 
   return (
     <>
-      <RouteSelection form={form} />
+      <RouteSelection form={form} canBeSkip={!required} />
+      {note && <SmallText>{note}</SmallText>}
       {values.ccn?.route === "agreement" && (
         <AgreementSearch
           supportedAgreements={supportedAgreements}
           selectedAgreement={values.ccn.selected}
           onSelectAgreement={onSelectAgreement}
           onUserAction={onUserAction}
+          alertAgreementNotSupported={alertAgreementNotSupported}
         />
       )}
       {values.ccn?.route === "enterprise" && (
@@ -94,8 +112,15 @@ const SelectAgreement = ({
           onSelectAgreement={onSelectAgreement}
           supportedAgreements={supportedAgreements}
           onUserAction={onUserAction}
+          alertAgreementNotSupported={alertAgreementNotSupported}
         />
       )}
+      <ErrorField
+        name="agreementMissing"
+        errorText={
+          "La simulation ne peut pas se poursuivre avec cette convention collective"
+        }
+      />
     </>
   );
 };

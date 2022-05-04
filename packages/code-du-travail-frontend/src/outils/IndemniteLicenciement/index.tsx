@@ -14,12 +14,14 @@ import {
 interface Props {
   icon: string;
   title: string;
+  displayTitle: string;
   publicodesRules: any;
 }
 
 const CalculateurIndemnite = ({
   icon,
   title,
+  displayTitle,
   publicodesRules,
 }: Props): JSX.Element => {
   /**
@@ -48,6 +50,7 @@ const CalculateurIndemnite = ({
       <Wizard
         icon={icon}
         title={title}
+        displayTitle={displayTitle}
         duration="5 à 10 min"
         stepReducer={stepReducer}
         initialState={initialState}

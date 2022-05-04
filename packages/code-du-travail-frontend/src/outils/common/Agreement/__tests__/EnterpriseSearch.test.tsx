@@ -20,6 +20,7 @@ const onUserAction = () => {
 
 const agreement1: Agreement = {
   id: "KALICONT000005635093",
+  url: "hello.com",
   num: 2156,
   shortTitle: "Grands magasins et magasins populaires",
   slug: "2156-grands-magasins-et-magasins-populaires",
@@ -358,6 +359,24 @@ describe("EnterpriseSearch", () => {
       expect(
         queryByText(/Convention collective non traitée/)
       ).not.toBeInTheDocument();
+    });
+
+    it("should render the alert with custom content provided", () => {
+      const data: Props = {
+        onSelectAgreement,
+        onUserAction,
+        selectedEnterprise: selectedEnterpriseOneAgreement,
+        supportedAgreements: [],
+        alertAgreementNotSupported: (agreementUrl: string) => (
+          <p>This is my custom text with the url: {agreementUrl}</p>
+        ),
+      };
+      const { getByText } = render(
+        <EmbeddedForm<Props> Step={EnterpriseSearch} props={data} />
+      );
+      expect(
+        getByText(/This is my custom text with the url: hello.com/)
+      ).toBeInTheDocument();
     });
   });
 });
