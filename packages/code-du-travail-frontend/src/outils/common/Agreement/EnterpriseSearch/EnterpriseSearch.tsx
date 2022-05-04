@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import { Field } from "react-final-form";
-
+import {
+  Input,
+  Label,
+  Paragraph,
+  Section as SectionUi,
+  Text,
+  theme,
+} from "@socialgouv/cdtn-ui";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
 import { Agreement } from "../../../../conventions/Search/api/type";
 import { SearchParams } from "../../../ConventionCollective/common/NavContext";
-import { EnterpriseSearchStep } from "../../../ConventionCollective/steps/EnterpriseSearch";
 import { TrackingProps } from "../../../ConventionCollective/types";
 import { ErrorField } from "../../ErrorField";
 import { required } from "../../validators";
@@ -13,6 +19,9 @@ import { AgreementSupportInfo, OnSelectAgreementFn } from "../types";
 import SelectedEnterprise from "./SelectedEnterprise";
 import ShowAgreement from "./ShowAgreement";
 import ShowAgreements from "./ShowAgreements";
+import { renderResults } from "./EntrepriseSearchResult";
+import { SearchEnterpriseInput } from "./EntrepriseSearchInput/SearchEnterpriseInput";
+import styled from "styled-components";
 
 export type Props = {
   supportedAgreements: AgreementSupportInfo[];
@@ -66,22 +75,25 @@ const EnterpriseSearch = ({
       </>
     );
   }
-
+  const handleEnterpriseSelection = (enterprise) => {
+    if (enterprise.conventions.length === 1) {
+      onSelectAgreement(enterprise.conventions[0], enterprise);
+    }
+    setEnterprise(enterprise);
+  };
   return (
-    <>
-      <EnterpriseSearchStep
-        embeddedForm={false}
-        handleEnterpriseSelection={(enterprise) => {
-          if (enterprise.conventions.length === 1) {
-            onSelectAgreement(enterprise.conventions[0], enterprise);
-          }
-          setEnterprise(enterprise);
-        }}
+    <Section>
+      <Paragraph noMargin fontWeight="600" fontSize="default">
+        Précisez et sélectionnez votre entreprise
+      </Paragraph>
+      <SearchEnterpriseInput
         searchParams={searchParams}
-        onSearchParamsChange={(params) => {
-          setSearchParams(params);
-        }}
         onUserAction={onUserAction}
+        onSearchParamsChange={setSearchParams}
+        renderResults={renderResults({
+          handleEnterpriseSelection,
+          onUserAction,
+        })}
       />
       <ErrorField
         name={ENTERPRISE_NAME}
@@ -96,8 +108,15 @@ const EnterpriseSearch = ({
           return <input {...input} {...props} />;
         }}
       />
-    </>
+    </Section>
   );
 };
 
 export default EnterpriseSearch;
+
+const Section = styled(SectionUi)`
+  padding-top: 0;
+  label {
+    font-weight: 400;
+  }
+`;

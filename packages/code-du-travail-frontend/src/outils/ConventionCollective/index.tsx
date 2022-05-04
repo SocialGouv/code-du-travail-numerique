@@ -100,7 +100,6 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
     case ScreenType.agreement:
       Step = (
         <Steps.AgreementSearchStep
-          embeddedForm
           onBackClick={clearSearchType}
           onSelectAgreement={(agreement) => {
             trackEvent(
@@ -118,7 +117,6 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
     case ScreenType.enterprise:
       Step = (
         <Steps.EnterpriseSearchStep
-          embeddedForm={true}
           onSearchParamsChange={(params) => setSearchParams(params)}
           searchParams={searchParams}
           handleEnterpriseSelection={handleEnterpriseSelection}

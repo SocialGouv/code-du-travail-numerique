@@ -7,9 +7,11 @@ import {
 import { Paragraph, Tile } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
-
-import type { Agreement } from "../../../conventions/Search/api/type";
-import { TrackingProps, UserAction } from "../types";
+import { Agreement } from "../../../../../conventions/Search/api/type";
+import {
+  TrackingProps,
+  UserAction,
+} from "../../../../ConventionCollective/types";
 
 type Props = {
   agreement: Agreement;

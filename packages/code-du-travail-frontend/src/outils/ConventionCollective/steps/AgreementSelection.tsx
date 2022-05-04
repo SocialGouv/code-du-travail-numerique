@@ -5,9 +5,9 @@ import React from "react";
 import styled from "styled-components";
 
 import { SectionTitle } from "../../common/stepStyles";
-import { AgreementTile } from "../agreement/AgreementTile";
 import { useNavContext } from "../common/NavContext";
 import { TrackingProps } from "../types";
+import { AgreementTile } from "../../common/Agreement/AgreementSearch/AgreementInput/AgreementTile";
 
 type EnterpriseSearchStepProps = {
   onBackClick: () => void;
