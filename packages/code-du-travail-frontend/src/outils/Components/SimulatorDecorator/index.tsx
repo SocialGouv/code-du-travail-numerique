@@ -87,7 +87,9 @@ const SimulatorDecorator = <FormValues,>({
                 }
               />
               {options?.annotations && <p>{options.annotations}</p>}
-              {options?.debug}
+              {process.env.NODE_ENV !== "production" &&
+                process.env.NODE_ENV !== "test" &&
+                options?.debug}
             </StyledForm>
           );
         }}

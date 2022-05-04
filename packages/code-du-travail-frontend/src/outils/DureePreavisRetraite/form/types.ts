@@ -2,7 +2,7 @@ import { ConventionCollective } from "../../common/type/WizardType";
 
 export type PreavisRetraiteFormState = Partial<{
   origin: PreavisRetraiteOriginFormState;
-  ccn?: ConventionCollective;
+  ccn: ConventionCollective;
   infos: Record<string, string>;
   seniority: PreavisRetraiteSeniorityFormState;
 }>;

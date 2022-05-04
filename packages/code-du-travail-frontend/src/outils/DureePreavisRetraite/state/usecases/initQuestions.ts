@@ -7,7 +7,6 @@ const initQuestions = (
   removeQuestionFromForm: UpdateFormValues,
 ): PreavisRetraiteStore => {
   removeQuestionFromForm([{name: "infos"}]);
-  console.log("Init question: ", state);
   const situation = stateToPublicode({
     ...state.formValues,
     // Reset infos

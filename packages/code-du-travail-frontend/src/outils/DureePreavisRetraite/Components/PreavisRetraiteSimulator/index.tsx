@@ -21,13 +21,7 @@ const PreavisRetraiteSimulator = ({title, icon,}: Props): JSX.Element => {
       title={title}
       icon={icon}
       duration="5 min"
-      debug={
-        process.env.NODE_ENV !== "production" &&
-        process.env.NODE_ENV !== "test" ? (
-          <DebugInfo/>
-        ) : (
-          <></>
-        )}
+      debug={<DebugInfo/>}
       onFormValuesChange={onChange}
       onStepChange={onStepChange}
       steps={steps}

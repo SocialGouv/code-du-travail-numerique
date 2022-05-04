@@ -151,13 +151,7 @@ export const Wizard = ({
         }}
         onFormStepSubmit={handlePageSubmit}
         options={{
-          debug:
-            process.env.NODE_ENV !== "production" &&
-            process.env.NODE_ENV !== "test" ? (
-              <DebugInfo />
-            ) : (
-              <></>
-            ),
+          debug: <DebugInfo />,
           annotations: Annotation,
         }}
         formOptions={{

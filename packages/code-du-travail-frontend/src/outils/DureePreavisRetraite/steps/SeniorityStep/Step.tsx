@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "@socialgouv/cdtn-ui";
 
 import { MatomoActionEvent, trackQuestion } from "../../../../lib";
 import { TextQuestion } from "../../../common/TextQuestion";
@@ -59,7 +60,7 @@ const SeniorityStep = ({
 };
 
 const Small = styled.small`
-  font-size: 1.3rem;
+  font-size: ${theme.fonts.sizes.large};
 `;
 
 export default SeniorityStep;
