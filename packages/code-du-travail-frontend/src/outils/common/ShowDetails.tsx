@@ -1,8 +1,8 @@
 import { Collapse } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import React from "react";
 
-import { matopush } from "../../piwik";
-import { MatomoCommonEvent, MatomoPreavisRetraiteEvent } from "./type/matomo";
+import { MatomoBaseEvent, MatomoSimulatorEvent } from "../../lib";
 
 type Props = {
   children: React.ReactNode;
@@ -11,9 +11,9 @@ type Props = {
 const ShowDetails = ({ children }: Props): JSX.Element => {
   const trackClick = () =>
     matopush([
-      MatomoCommonEvent.TRACK_EVENT,
-      MatomoCommonEvent.OUTIL,
-      MatomoPreavisRetraiteEvent.CLICK_CALCUL_DETAIL,
+      MatomoBaseEvent.TRACK_EVENT,
+      MatomoBaseEvent.OUTIL,
+      MatomoSimulatorEvent.CLICK_CALCUL_DETAIL,
     ]);
 
   return (

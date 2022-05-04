@@ -22,6 +22,7 @@ export {
   BurgerNavLink,
 } from "./BurgerNav/NavItems.js";
 export { Button } from "./Button/index.js";
+export { CodeSnippet } from "./CodeSnippet/index.js";
 export { Collapse } from "./Collapse/index.js";
 export { DisclosureIcon } from "./DisclosureIcon/index.js";
 export { Dropdown } from "./Dropdown/index.js";

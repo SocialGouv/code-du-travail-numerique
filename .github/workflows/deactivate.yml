@@ -9,9 +9,7 @@ jobs:
     name: Deactivate review branch
     runs-on: ubuntu-latest
     steps:
-      - uses: SocialGouv/actions/k8s-deactivate@v1
+      - uses: SocialGouv/actions/autodevops-deactivate-without-db@v1
         with:
           kube-config: ${{ secrets.KUBECONFIG }}
           github-token: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
-          rancherId: ${{ secrets.RANCHER_PROJECT_ID }} # optional
-          socialgouvBaseDomain: ${{ secrets.SOCIALGOUV_BASE_DOMAIN }} # optional

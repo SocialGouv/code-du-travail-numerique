@@ -1,0 +1,326 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepResult /> should render CC answer 1`] = `
+.c5 {
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  color: #7994d4;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+}
+
+[aria-expanded="true"] .c4,
+[aria-selected="true"] .c5 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.c9 {
+  margin-bottom: 1.6rem;
+  padding: 1.6rem 2rem;
+  color: #3e486e;
+  font-size: 1.6rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c9 > *:first-child {
+  margin-top: 0;
+}
+
+.c9 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c6 {
+  color: #3e486e;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.c14 {
+  color: #3e486e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.c8 {
+  max-height: 0px;
+  opacity: 0;
+  overflow: auto;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.c3 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #3e486e;
+}
+
+.c7 {
+  margin-left: 1rem;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+}
+
+.c12 {
+  display: block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 2rem;
+}
+
+.c12 svg {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.c13 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c10 {
+  margin-top: 3.2rem;
+}
+
+.c15 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  margin: 0;
+}
+
+.c0 {
+  margin-top: 3.2rem;
+  margin-bottom: 1rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+.c1 {
+  color: #f66663;
+  font-weight: 700;
+  font-size: 1.8rem;
+  white-space: pre-line;
+}
+
+.c2 {
+  font-size: 1.5em;
+}
+
+@media (max-width:600px) {
+  .c12 {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+
+  .c12 svg {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    font-size: 1.6rem;
+  }
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Durée du préavis
+  </h2>
+  <p>
+    À partir des éléments que vous avez saisis, la durée du préavis de démission est estimée à : 
+    <strong
+      class="c1 c2"
+    >
+      2 mois
+    </strong>
+    .
+  </p>
+  <div>
+    <div
+      aria-expanded="false"
+      class="c3"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="c4 c5"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+      <p
+        class="c6 c7"
+      >
+        Voir le détail du calcul
+      </p>
+    </div>
+    <div
+      class="c8"
+    >
+      <h2
+        class="c0"
+      >
+        Éléments saisis
+      </h2>
+      <ul>
+        <li>
+          Convention collective
+           : 
+          <strong>
+            Plasturgie (292)
+          </strong>
+        </li>
+        <li>
+          Catégorie professionnelle
+           : 
+          <strong>
+            Collaborateurs
+          </strong>
+        </li>
+        <li>
+          Coefficient
+           : 
+          <strong>
+            800 à 830 inclus
+          </strong>
+        </li>
+      </ul>
+      <h2
+        class="c0"
+      >
+        Sources
+      </h2>
+      <ul>
+        <li>
+          <a
+            aria-label=" Article L.1237-1 du code du travail (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901174"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’ article l.1237-1 du code du travail"
+          >
+             Article L.1237-1 du code du travail
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Article 15 (nouvelle fenêtre)"
+            href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856709&cidTexte=KALITEXT000005682080&dateTexte=29990101&categorieLien=id"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Consultez l’article 15"
+          >
+            Article 15
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    class="c9 c10"
+  >
+    <div
+      class="c11"
+    >
+      <div
+        class="c12"
+      >
+        <svg
+          aria-hidden="true"
+          fill="none"
+          viewBox="0 0 52 52"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M44.586 36.215h.921l-.502-.773-8.424-12.96a.5.5 0 1 1 .838-.545l9.429 14.505a.5.5 0 0 1-.42.773H5.571a.5.5 0 0 1-.419-.773L25.581 5.014a.5.5 0 0 1 .838 0l5.107 7.857a.5.5 0 0 1-.838.545l-4.269-6.567-.42-.645-.418.645L6.995 35.442l-.502.773h38.093zM34.5 18a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"
+            fill="#3E486E"
+            stroke="#4E6896"
+          />
+          <path
+            d="M26 14.714a1.57 1.57 0 0 0-1.571 1.571v9.429a1.571 1.571 0 0 0 3.143 0v-9.429c0-.868-.704-1.571-1.572-1.571zm0 14.143A1.571 1.571 0 1 0 26 32a1.571 1.571 0 0 0 0-3.143z"
+            fill="#FF7067"
+          />
+        </svg>
+      </div>
+      <div
+        class="c13"
+      >
+        <p
+          class="c14 c15"
+        >
+          Attention il peut exister une autre durée de préavis
+        </p>
+      </div>
+    </div>
+    <p>
+      L’existence ou la durée du préavis de démission peut être prévue par un accord d’entreprise ou à défaut, par un usage dans l’entreprise.
+    </p>
+  </div>
+</div>
+`;

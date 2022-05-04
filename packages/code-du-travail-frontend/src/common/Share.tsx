@@ -1,8 +1,7 @@
 import { Dropdown, icons, theme, utils } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import React, { useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
-
-import { matopush } from "../piwik";
 
 const { copyToClipboard } = utils;
 
@@ -15,13 +14,13 @@ type Props = {
 };
 
 export const Share = ({ title, metaDescription }: Props): JSX.Element => {
-  const [currentPageUrl, setCurrentPageUrl] = useState(undefined);
+  const [currentPageUrl, setCurrentPageUrl] = useState("");
   const hiddenInputRef = useRef(null);
   const [isUrlCopied, setUrlCopied] = useState(false);
 
   useEffect(() => {
     setCurrentPageUrl(window.location.href);
-  }, [setCurrentPageUrl]);
+  }, []);
 
   return (
     <Flex>
@@ -46,7 +45,7 @@ export const Share = ({ title, metaDescription }: Props): JSX.Element => {
       </StyledButton>
       <StyledLink
         href={`mailto:?subject=${encodeURIComponent(
-          `A lire sur le code du travail numérique : ${title}`
+          `A lire sur le Code du travail numérique : ${title}`
         )}&body=${`${encodeURIComponent(
           `${metaDescription}\n\n${currentPageUrl}`
         )}`}`}

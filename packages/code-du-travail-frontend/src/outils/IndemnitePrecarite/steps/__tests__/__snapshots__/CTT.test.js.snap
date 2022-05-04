@@ -3,11 +3,17 @@
 exports[`<StepCTT /> should render 1`] = `
 .c1 {
   color: #3e486e;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.c2 {
+  color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,7 +22,7 @@ exports[`<StepCTT /> should render 1`] = `
   cursor: pointer;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,7 +32,7 @@ exports[`<StepCTT /> should render 1`] = `
   flex-direction: row;
 }
 
-.c4 {
+.c5 {
   position: relative;
   display: inline-block;
   -webkit-flex-shrink: 0;
@@ -47,7 +53,7 @@ exports[`<StepCTT /> should render 1`] = `
   appearance: none;
 }
 
-.c4:before {
+.c5:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -62,25 +68,22 @@ exports[`<StepCTT /> should render 1`] = `
   content: "";
 }
 
-.c4:checked {
+.c5:checked {
   background-color: #fff;
   border-color: #f66663;
 }
 
-.c4:checked:before {
+.c5:checked:before {
   display: block;
 }
 
 .c0 {
   display: block;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  font-weight: 600;
+  margin: 1rem 0;
   cursor: pointer;
 }
 
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -96,7 +99,7 @@ exports[`<StepCTT /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
 }
 
 @media (max-width:600px) {
@@ -110,46 +113,50 @@ exports[`<StepCTT /> should render 1`] = `
     <label
       class="c0"
     >
-      S’agit-il d’un contrat de mission-formation ?
       <span
         class="c1"
+      >
+        S’agit-il d’un contrat de mission-formation ?
+      </span>
+      <span
+        class="c2"
       >
          (obligatoire)
       </span>
     </label>
     <div
-      class="c2"
+      class="c3"
       data-testid="cttFormation"
     >
       <div
-        class="c3"
+        class="c4"
       >
         <input
-          class="c4"
+          class="c5"
           id="cttFormation-oui"
           name="cttFormation"
           type="radio"
           value="true"
         />
         <label
-          class="c5"
+          class="c6"
           for="cttFormation-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c3"
+        class="c4"
       >
         <input
-          class="c4"
+          class="c5"
           id="cttFormation-non"
           name="cttFormation"
           type="radio"
           value="false"
         />
         <label
-          class="c5"
+          class="c6"
           for="cttFormation-non"
         >
           Non
@@ -159,46 +166,50 @@ exports[`<StepCTT /> should render 1`] = `
     <label
       class="c0"
     >
-      Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave du salarié, cas de force majeure ?
       <span
         class="c1"
+      >
+        Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave du salarié, cas de force majeure ?
+      </span>
+      <span
+        class="c2"
       >
          (obligatoire)
       </span>
     </label>
     <div
-      class="c2"
+      class="c3"
       data-testid="ruptureContratFauteGrave"
     >
       <div
-        class="c3"
+        class="c4"
       >
         <input
-          class="c4"
+          class="c5"
           id="ruptureContratFauteGrave-oui"
           name="ruptureContratFauteGrave"
           type="radio"
           value="true"
         />
         <label
-          class="c5"
+          class="c6"
           for="ruptureContratFauteGrave-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c3"
+        class="c4"
       >
         <input
-          class="c4"
+          class="c5"
           id="ruptureContratFauteGrave-non"
           name="ruptureContratFauteGrave"
           type="radio"
           value="false"
         />
         <label
-          class="c5"
+          class="c6"
           for="ruptureContratFauteGrave-non"
         >
           Non
@@ -208,46 +219,50 @@ exports[`<StepCTT /> should render 1`] = `
     <label
       class="c0"
     >
-      À la fin du contrat d'intérim, le salarié a-t-il été immédiatement embauché en CDI au sein de l'entreprise dans laquelle il effectuait sa mission ?
       <span
         class="c1"
+      >
+        À la fin du contrat d'intérim, le salarié a-t-il été immédiatement embauché en CDI au sein de l'entreprise dans laquelle il effectuait sa mission ?
+      </span>
+      <span
+        class="c2"
       >
          (obligatoire)
       </span>
     </label>
     <div
-      class="c2"
+      class="c3"
       data-testid="propositionCDIFinContrat"
     >
       <div
-        class="c3"
+        class="c4"
       >
         <input
-          class="c4"
+          class="c5"
           id="propositionCDIFinContrat-oui"
           name="propositionCDIFinContrat"
           type="radio"
           value="true"
         />
         <label
-          class="c5"
+          class="c6"
           for="propositionCDIFinContrat-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c3"
+        class="c4"
       >
         <input
-          class="c4"
+          class="c5"
           id="propositionCDIFinContrat-non"
           name="propositionCDIFinContrat"
           type="radio"
           value="false"
         />
         <label
-          class="c5"
+          class="c6"
           for="propositionCDIFinContrat-non"
         >
           Non
@@ -257,46 +272,50 @@ exports[`<StepCTT /> should render 1`] = `
     <label
       class="c0"
     >
-      Le salarié a-t-il refusé la mise en œuvre de la souplesse prévue dans le contrat d’intérim ?
       <span
         class="c1"
+      >
+        Le salarié a-t-il refusé la mise en œuvre de la souplesse prévue dans le contrat d’intérim ?
+      </span>
+      <span
+        class="c2"
       >
          (obligatoire)
       </span>
     </label>
     <div
-      class="c2"
+      class="c3"
       data-testid="refusSouplesse"
     >
       <div
-        class="c3"
+        class="c4"
       >
         <input
-          class="c4"
+          class="c5"
           id="refusSouplesse-oui"
           name="refusSouplesse"
           type="radio"
           value="true"
         />
         <label
-          class="c5"
+          class="c6"
           for="refusSouplesse-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c3"
+        class="c4"
       >
         <input
-          class="c4"
+          class="c5"
           id="refusSouplesse-non"
           name="refusSouplesse"
           type="radio"
           value="false"
         />
         <label
-          class="c5"
+          class="c6"
           for="refusSouplesse-non"
         >
           Non

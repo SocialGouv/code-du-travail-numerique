@@ -17,7 +17,7 @@ import {
 } from "../layout/AnswerLayout";
 import { isHTML } from "../lib";
 import Article from "./Article";
-import { Breadcrumbs } from "./Breadcrumbs";
+import Breadcrumbs from "./Breadcrumbs";
 import { Feedback } from "./Feedback";
 import Html from "./Html";
 import { RelatedItems } from "./RelatedItems";

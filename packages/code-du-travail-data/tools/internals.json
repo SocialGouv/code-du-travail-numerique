@@ -2,6 +2,8 @@
   {
     "icon": "Indemnity",
     "title": "Indemnité de licenciement",
+    "displayTitle": "Calculer l'indemnité de licenciement",
+    "metaTitle": "Simulateur - Calcul de l'indemnité de licenciement",
     "slug": "indemnite-licenciement",
     "questions": [
       "Quelle est mon indemnité de licenciement",
@@ -13,6 +15,7 @@
       "calculez le montant d'une indemnité de licenciement en fonction de votre situation"
     ],
     "description": "Estimez simplement le montant de l’indemnité de licenciement",
+    "metaDescription": "Vous souhaitez calculer le montant de l'indemnité de licenciement ? Notre simulateur vous apporte une réponse personnalisée.",
     "action": "Estimer",
     "date": "18/10/2018",
     "enable": true,
@@ -21,6 +24,8 @@
   {
     "icon": "Rules",
     "title": "Préavis de démission",
+    "displayTitle": "Calculer le préavis de démission",
+    "metaTitle": "Simulateur - Calcul du préavis de démission",
     "slug": "preavis-demission",
     "questions": [
       "preavis de demission",
@@ -30,7 +35,8 @@
       "calculer la durée de son préavis",
       "calcul durée préavis démission"
     ],
-    "description": "Calculez la durée de préavis à respecter en cas de démission",
+    "description": "Estimez la durée de préavis à respecter en cas de démission",
+    "metaDescription": "Vous souhaitez connaître la durée du préavis à respecter en cas de démission ? Notre simulateur vous apporte une réponse personnalisée.",
     "action": "Calculer",
     "date": "24/07/2019",
     "enable": true,
@@ -39,6 +45,8 @@
   {
     "icon": "Salary",
     "title": "Salaire brut/net",
+    "displayTitle": "Calculer le salaire brut/net",
+    "metaTitle": "Simulateur - Calcul du salaire brut/net",
     "slug": "simulateur-embauche",
     "questions": [
       "Comment calculer mon salaire",
@@ -59,7 +67,8 @@
       "cout embauche CDD",
       "cout embauche CDI"
     ],
-    "description": "Estimer le salaire : brut en net, net après impôt, calcul heures supplémentaires, coût total employeur",
+    "description": "Estimez le salaire : brut en net, net après impôt, calcul heures supplémentaires, coût total employeur",
+    "metaDescription": "Réalisez vos conversions et calculs de salaire (brut en net, net en brut, net après impôt, heures supplémentaires et coût total employeur) avec notre simulateur.",
     "action": "Estimer",
     "date": "14/03/2019",
     "enable": true,
@@ -68,6 +77,8 @@
   {
     "icon": "Precarity",
     "title": "Indemnité de précarité",
+    "displayTitle": "Calculer l'indemnité de précarité",
+    "metaTitle": "Simulateur - Calcul de l'indemnité de précarité",
     "slug": "indemnite-precarite",
     "questions": [
       "fin de contrat cdd",
@@ -81,6 +92,7 @@
       "montant indemnité fin de contrat"
     ],
     "description": "Estimez le montant de l’indemnité de fin de CDD ou intérim",
+    "metaDescription": "Vous souhaitez calculer le montant de l'indemnité de précarité ? Notre simulateur vous apporte une réponse personnalisée.",
     "action": "Estimer",
     "date": "14/03/2019",
     "enable": true,
@@ -89,6 +101,8 @@
   {
     "icon": "CalendarTime",
     "title": "Préavis de licenciement",
+    "displayTitle": "Calculer le préavis de licenciement",
+    "metaTitle": "Simulateur - Calcul du préavis de licenciement",
     "slug": "preavis-licenciement",
     "questions": [
       "preavis de licenciement",
@@ -97,7 +111,8 @@
       "calculer la durée de son préavis de licenciement",
       "calcul durée préavis licenciement"
     ],
-    "description": "Calculez la durée de préavis à respecter en cas de licenciement",
+    "description": "Estimez la durée de préavis à respecter en cas de licenciement",
+    "metaDescription": "Vous souhaitez connaître la durée du préavis à respecter en cas de licenciement ? Notre simulateur vous apporte une réponse personnalisée.",
     "action": "Calculer",
     "date": "08/11/2019",
     "enable": true,
@@ -105,7 +120,9 @@
   },
   {
     "icon": "Time",
-    "title": "Heures pour recherche d’emploi",
+    "title": "Heures d'absence pour rechercher un emploi",
+    "displayTitle": "Calculer le nombre d'heures d'absence pour rechercher un emploi",
+    "metaTitle": "Simulateur - Calcul du nombre d’heures d'absence pour rechercher un emploi",
     "slug": "heures-recherche-emploi",
     "questions": [
       "ai-je droit à des heures de recherche d'emploi",
@@ -120,7 +137,8 @@
       "chercher un emploi pendant son préavis",
       "absence 2h pour recherche d'emploi pendant préavis"
     ],
-    "description": "Calculez le nombre d'heures pour recherche d'emploi prévues pendant le préavis",
+    "description": "Estimez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis",
+    "metaDescription": "Vous souhaitez connaître le nombre d’heures d’absence autorisée pendant un préavis pour rechercher un emploi ? Notre simulateur vous apporte une réponse personnalisée.",
     "action": "Calculer",
     "date": "08/11/2019",
     "enable": true,
@@ -129,6 +147,8 @@
   {
     "icon": "SearchCC",
     "title": "Trouver sa convention collective",
+    "displayTitle": "Trouver sa convention collective",
+    "metaTitle": "Trouver sa convention collective",
     "slug": "convention-collective",
     "questions": [
       "trouver ma convention collective",
@@ -137,6 +157,7 @@
       "trouver ma cc"
     ],
     "description": "Recherchez une convention collective par Entreprise, SIRET, Nom ou numéro IDCC.",
+    "metaDescription": "Vous recherchez des informations traitées par votre convention collective ? Notre outil de recherche vous apporte une réponse en saisissant le nom de votre entreprise (ou siret) ou de votre convention collective (ou numéro IDCC).",
     "action": "Consulter",
     "date": "01/01/2020",
     "enable": true,
@@ -145,8 +166,11 @@
   {
     "icon": "CalendarTime",
     "title": "Préavis de départ ou de mise à la retraite",
+    "displayTitle": "Calculer le préavis de départ à la retraite",
+    "metaTitle": "Simulateur - Calcul du préavis de départ ou mise à la retraite",
     "slug": "preavis-retraite",
-    "description": "Calculez la durée de préavis à respecter en cas de départ à la retraite ou de mise à la retraite",
+    "description": "Estimez la durée de préavis à respecter en cas de départ à la retraite ou de mise à la retraite",
+    "metaDescription": "Vous souhaitez connaître la durée du préavis à respecter en cas de départ ou de mise à la retraite ? Notre simulateur vous apporte une réponse personnalisée.",
     "action": "Calculer",
     "date": "17/11/2021",
     "enable": true,

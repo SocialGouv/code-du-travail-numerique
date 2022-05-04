@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepInformations /> should render 1`] = `
+.c0 {
+  margin-top: 3.2rem;
+  margin-bottom: 1rem;
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Statut du salarié
+  </h2>
+  <div />
+</div>
+`;

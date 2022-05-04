@@ -13,13 +13,13 @@ import {
   Title,
   ViewMore,
 } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
 import { CallToActionTile } from "../../common/tiles/CallToAction";
-import { matopush } from "../../piwik";
 import { reportSelectionToMatomo, summarize } from "../utils";
 
 export const ListLink = ({
@@ -56,7 +56,7 @@ export const ListLink = ({
         )}
         <Paragraph noMargin>{summarize(description)}</Paragraph>
       </>
-    ), //TODO
+    ),
     onClick: () => reportSelectionToMatomo(source, slug, url, algo),
     onKeyPress: (e) =>
       e.keyCode === 13 && reportSelectionToMatomo(source, slug, url, algo),
@@ -78,6 +78,7 @@ export const ListLink = ({
         )} ${action} (nouvelle fenêtre)`}
         {...tileCommonProps}
         custom={false}
+        titleTagType="h3"
       />
     );
   }
@@ -138,7 +139,10 @@ export const Results = ({ id, isSearch, items, query }) => {
   return (
     <Container narrow role="region" aria-label="Résultats de recherche">
       {isSearch ? (
-        <Heading id={id}>{`Résultats de recherche pour “${query}”`}</Heading>
+        <Heading
+          as="p"
+          id={id}
+        >{`Résultats de recherche pour “${query}”`}</Heading>
       ) : (
         <Title isFirst id={id}>
           {"Contenu correspondant"}

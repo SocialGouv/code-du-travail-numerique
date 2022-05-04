@@ -3,6 +3,145 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.76.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.4...v4.76.0) (2022-04-27)
+
+
+### Bug Fixes
+
+* **hooks:** add diff to dev ([#4369](https://github.com/SocialGouv/code-du-travail-numerique/issues/4369)) ([73bbb4f](https://github.com/SocialGouv/code-du-travail-numerique/commit/73bbb4f5ab355ffa3b5a91dce758aa54922eb2da))
+
+
+
+
+
+## [4.75.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.0...v4.75.4) (2022-04-06)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+## [4.75.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.2...v4.75.3) (2022-04-06)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+## [4.75.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.1...v4.75.2) (2022-04-04)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+## [4.75.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.0...v4.75.1) (2022-04-04)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+# [4.75.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.74.0...v4.75.0) (2022-03-30)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+# [4.74.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.73.0...v4.74.0) (2022-03-28)
+
+
+### Bug Fixes
+
+* **hn in tabs:** when tabs do not have headings level as parameter, then starts at H2 not H1 ([#4311](https://github.com/SocialGouv/code-du-travail-numerique/issues/4311)) ([fd015f0](https://github.com/SocialGouv/code-du-travail-numerique/commit/fd015f0e961d9c2e09624d720ca4954ee75d2d9e))
+
+
+### Features
+
+* **widget:** new widget for preavis de retraite ([#4287](https://github.com/SocialGouv/code-du-travail-numerique/issues/4287)) ([745026e](https://github.com/SocialGouv/code-du-travail-numerique/commit/745026eda3929d15359d3184584636d2a6d94a33))
+
+
+
+
+
+# [4.73.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.72.0...v4.73.0) (2022-03-16)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+# [4.72.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.71.0...v4.72.0) (2022-03-11)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+# [4.71.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.70.0...v4.71.0) (2022-02-28)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+# [4.70.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.69.1...v4.70.0) (2022-02-28)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+## [4.69.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.69.0...v4.69.1) (2022-02-25)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+# [4.69.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.68.0...v4.69.0) (2022-02-10)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
+# [4.68.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.1...v4.68.0) (2022-02-02)
+
+
+### Bug Fixes
+
+* **headings:** on tabs ([#4114](https://github.com/SocialGouv/code-du-travail-numerique/issues/4114)) ([7c155f9](https://github.com/SocialGouv/code-du-travail-numerique/commit/7c155f96e33ed3d1a59bb4a60bcbabe8a5ddf567))
+
+
+### Features
+
+* **simulator:** add help button + events ([#4210](https://github.com/SocialGouv/code-du-travail-numerique/issues/4210)) ([253bbd8](https://github.com/SocialGouv/code-du-travail-numerique/commit/253bbd80d2cbf6b8607981cab52614489358d16f))
+
+
+
+
+
+## [4.67.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.0...v4.67.1) (2022-01-24)
+
+**Note:** Version bump only for package @socialgouv/cdtn-ui
+
+
+
+
+
 # [4.67.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.2...v4.67.0) (2022-01-24)
 
 **Note:** Version bump only for package @socialgouv/cdtn-ui

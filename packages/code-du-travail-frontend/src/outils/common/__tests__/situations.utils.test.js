@@ -7,11 +7,38 @@ import {
   getOptions,
   getPastQuestions,
   getSituationsFor,
-  isNotYetProcessed,
+  getSupportedCC,
   recapSituation,
+  skipInformations,
+  validateUnsupportedAgreement,
 } from "../situations.utils";
 
 const criteriaOrder = ["bar", "foo", "baz", "yolo"];
+
+const ccList = [
+  { criteria: { bar: "baz", foo: "1| foo" }, idcc: "10" },
+  { criteria: { bar: "bar", foo: "1| foo" }, idcc: "10" },
+  { criteria: { bar: "baz", foo: "2| baz" }, idcc: "10" },
+  { criteria: { bar: "bar", foo: "2| baz" }, idcc: "10" },
+  {
+    allowBonus: false,
+    criteria: { foo: "3| bar" },
+    endMessage: "nope",
+    hasConventionalProvision: true,
+    idcc: "20",
+  },
+  {
+    allowBonus: true,
+    criteria: { foo: "4| baz" },
+    hasConventionalProvision: true,
+    idcc: "20",
+  },
+  {
+    criteria: {},
+    hasConventionalProvision: null,
+    idcc: "30",
+  },
+];
 
 jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
   { criteria: { bar: "baz", foo: "1| foo" }, idcc: "10" },
@@ -20,18 +47,14 @@ jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
   { criteria: { bar: "bar", foo: "2| baz" }, idcc: "10" },
   {
     allowBonus: false,
-    criteria: {
-      foo: "3| bar",
-    },
+    criteria: { foo: "3| bar" },
     endMessage: "nope",
     hasConventionalProvision: true,
     idcc: "20",
   },
   {
     allowBonus: true,
-    criteria: {
-      foo: "4| baz",
-    },
+    criteria: { foo: "4| baz" },
     hasConventionalProvision: true,
     idcc: "20",
   },
@@ -125,15 +148,18 @@ describe("situations", () => {
     });
   });
 
-  describe("isNotYetProcessed", () => {
-    it("should return true if there no matching cc", () => {
-      expect(isNotYetProcessed(data, "toto")).toBe(true);
+  describe("skip information step", () => {
+    it("should return true if there no agreement", () => {
+      expect(skipInformations(data, undefined)).toBe(true);
     });
-    it("should return true if there matching cc but only with empty criteria", () => {
-      expect(isNotYetProcessed(data, "30")).toBe(true);
+    it("should return true if there no matching agreement", () => {
+      expect(skipInformations(data, 9999)).toBe(true);
     });
-    it("should return false if there matching cc", () => {
-      expect(isNotYetProcessed(data, "20")).toBe(false);
+    it("should return true if there matching agreement but only with empty criteria", () => {
+      expect(skipInformations(data, 30)).toBe(true);
+    });
+    it("should return false if there matching agreement", () => {
+      expect(skipInformations(data, 20)).toBe(false);
     });
   });
 
@@ -165,6 +191,43 @@ describe("situations", () => {
           pastQuestions,
         })
       ).toEqual(["foo"]);
+    });
+  });
+
+  describe("getSupportedCC", () => {
+    it("should return all supported CC", () => {
+      const supportedCCResult = getSupportedCC(ccList);
+      expect(supportedCCResult).toHaveLength(3);
+      expect(supportedCCResult.find((item) => item.idcc === 99999)).toBe(
+        undefined
+      );
+      expect(supportedCCResult.find((item) => item.idcc === 30)).toStrictEqual({
+        fullySupported: true,
+        idcc: 30,
+      });
+      expect(supportedCCResult.find((item) => item.idcc === 20)).toStrictEqual({
+        fullySupported: true,
+        idcc: 20,
+      });
+    });
+  });
+  describe("validateUnsupportedAgreement", () => {
+    const validate = validateUnsupportedAgreement(ccList);
+
+    it("should return no error if no agreement", () => {
+      expect(validate({})).toStrictEqual({});
+    });
+
+    it("should return no error if agreement is supported", () => {
+      expect(validate({ ccn: { selected: { num: "20" } } })).toStrictEqual({});
+    });
+
+    it("should return one error if agreement is not supported", () => {
+      expect(
+        validate({ ccn: { selected: { num: "unsupported" } } })
+      ).toStrictEqual({
+        agreementMissing: true,
+      });
     });
   });
 });

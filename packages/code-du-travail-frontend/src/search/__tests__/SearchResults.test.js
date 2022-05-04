@@ -1,12 +1,14 @@
+import { push as matopush } from "@socialgouv/matomo-next";
 import { render } from "@testing-library/react";
 import React from "react";
 
-import { matopush } from "../../piwik";
 import { SearchResults } from "../SearchResults";
 
-jest.mock("../../piwik", () => ({
-  matopush: jest.fn(),
-}));
+jest.mock("@socialgouv/matomo-next", () => {
+  return {
+    push: jest.fn(),
+  };
+});
 
 const items = {
   articles: [

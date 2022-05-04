@@ -1399,7 +1399,7 @@ exports[`<About /> should render 1`] = `
                
               <a
                 href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=F175675A5AF37BD5745391E7C64C2FAB.tplgfr41s_3?cidTexte=JORFTEXT000035607388&idArticle=LEGIARTI000036762196&dateTexte=20191129&categorieLien=id#LEGIARTI000036762196"
-                title="voir l'ordonnance du code du travail numérique"
+                title="voir l'ordonnance du Code du travail numérique"
               >
                 les ordonnances sur le renforcement du dialogue social de 2017.
               </a>
@@ -1648,7 +1648,7 @@ exports[`<About /> should render 1`] = `
                     class="c51"
                     href="/integration"
                   >
-                    Intégrer le Code du travail numérique
+                    Intégrer les outils du Code du travail numérique
                   </a>
                 </li>
               </ul>

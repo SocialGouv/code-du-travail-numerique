@@ -582,6 +582,8 @@ exports[`<Home /> should render 1`] = `
 
 .c51 {
   margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .c52 {
@@ -974,7 +976,7 @@ exports[`<Home /> should render 1`] = `
   overflow: hidden;
   background: linear-gradient( #f2f5fa 40rem, #fff );
   height: 100rem;
-  background: linear-gradient( #d1dffd 40%,#f2f5fa 80%,#fff );
+  background: linear-gradient( #d1dffd 40%, #f2f5fa 80%, #fff );
 }
 
 .c15 {
@@ -2668,7 +2670,7 @@ exports[`<Home /> should render 1`] = `
                         <p
                           class="c54"
                         >
-                          Calculez la durée de préavis à respecter en cas de démission
+                          Estimez la durée de préavis à respecter en cas de démission
                         </p>
                         <div
                           class="c55"
@@ -2779,7 +2781,7 @@ exports[`<Home /> should render 1`] = `
                         <p
                           class="c54"
                         >
-                          Estimer le salaire : brut en net, net après impôt, calcul heures supplémentaires, coût total employeur
+                          Estimez le salaire : brut en net, net après impôt, calcul heures supplémentaires, coût total employeur
                         </p>
                         <div
                           class="c55"
@@ -3071,7 +3073,7 @@ exports[`<Home /> should render 1`] = `
                     class="c78"
                     href="/integration"
                   >
-                    Intégrer le Code du travail numérique
+                    Intégrer les outils du Code du travail numérique
                   </a>
                 </li>
               </ul>

@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-import MentionLegales from "../pages/mentions-legales.js";
+import MentionLegales from "../pages/mentions-legales";
 
 describe("<MentionLegales />", () => {
   it("should render", () => {

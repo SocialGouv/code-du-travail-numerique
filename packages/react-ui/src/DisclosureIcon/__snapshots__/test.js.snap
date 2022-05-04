@@ -1,6 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tooltip /> renders simple tooltip 1`] = `
+.c2 {
+  margin-bottom: 1.6rem;
+  padding: 1.6rem 2rem;
+  color: #3e486e;
+  font-size: 1.4rem;
+  background-color: #f2f5fa;
+  border: 1px solid #f2f5fa;
+  border-radius: 0.6rem;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -65,6 +83,10 @@ exports[`<Tooltip /> renders simple tooltip 1`] = `
   bottom: -0.5rem;
 }
 
+.c3 {
+  margin-top: 1.6rem;
+}
+
 @media (max-width:600px) {
   .c0 {
     font-size: 1.4rem;
@@ -112,5 +134,10 @@ exports[`<Tooltip /> renders simple tooltip 1`] = `
       />
     </svg>
   </button>
+  <div
+    class="c2 c3"
+  >
+    Here I am! I am the buried treasure!
+  </div>
 </div>
 `;

@@ -29,7 +29,7 @@ jobs:
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
       - name: Restore cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
@@ -42,7 +42,7 @@ jobs:
         run: |
           yarn build
       - name: Cache build
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ./*
           key: ${{ github.sha }}
@@ -64,7 +64,7 @@ jobs:
             "@cdt/api",
           ]
     steps:
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         name: Restore build
         with:
           path: ./*
@@ -102,7 +102,7 @@ jobs:
             "@cdt/api",
           ]
     steps:
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         name: Restore build
         with:
           path: ./*
@@ -123,13 +123,3 @@ jobs:
         uses: hadolint/hadolint-action@v1.6.0
         with:
           recursive: true
-
-  services-de-renseignement:
-    name: Get url from service de renseignement
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Test SDR urls
-        run: |
-          jq ".[].url" ./packages/code-du-travail-frontend/src/data/services-de-renseignement.json | xargs -n 1 wget  --spider

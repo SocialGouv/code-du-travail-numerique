@@ -1,59 +1,61 @@
 import { Fieldset, icons, Legend, theme, Wrapper } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import arrayMutators from "final-form-arrays";
-import { useRouter } from "next/router";
-import PropTypes from "prop-types";
-import React, { useEffect, useReducer } from "react";
+import React, { Reducer, useEffect, useReducer } from "react";
 import { Form } from "react-final-form";
 import styled from "styled-components";
 
-import { matopush } from "../../piwik";
 import { PrevNextBar } from "./PrevNextBar";
 import { STEP_LIST_WIDTH, StepList } from "./StepList";
-import {
-  MatomoCommonEvent,
-  MatomoPreavisRetraiteEvent,
-  MatomoTrackUrl,
-} from "./type/matomo";
+import { Action, ActionName, SkipFn, State } from "./type/WizardType";
+import { printResult } from "./utils/";
 
-const anchorRef = React.createRef();
+const anchorRef = React.createRef<HTMLLIElement>();
+
+type Props = {
+  Rules?: any;
+  duration?: string;
+  icon?: string;
+  initialState: State;
+  initialValues?: any;
+  stepReducer?: any;
+  title: string;
+  displayTitle: string;
+};
 
 function Wizard({
   initialState,
   initialValues = {},
   title,
+  displayTitle,
   icon,
-  hasNoMarginBottom = false,
   Rules = null,
   stepReducer = (step) => step,
   duration,
-}): JSX.Element {
-  const [state, dispatch] = useReducer(stepReducer, initialState);
+}: Props): JSX.Element {
+  const [state, dispatch] = useReducer<Reducer<State, Action>>(
+    stepReducer,
+    initialState
+  );
   const { stepIndex, steps } = state;
-  const router = useRouter();
   const setStepIndex = (index) =>
-    //@ts-ignore
-    dispatch({ payload: index, type: "setStepIndex" });
+    dispatch({ payload: index, type: ActionName.setStepIndex });
 
   useEffect(() => {
     const node = anchorRef.current;
-    // We only focus on wizzard after wizzard start
+    // We only focus on wizard after wizard start
     // that way focus is correctly placed on the form
     if (node && stepIndex > 0) {
-      //@ts-ignore
       node.focus();
-    }
-    if (window) {
-      window.scrollTo(0, 0);
     }
   });
 
   const prevStep = (values) => {
-    let nextStepIndex = stepIndex;
-    let skipFn = () => true;
-    //@ts-ignore
+    let nextStepIndex: number = stepIndex;
+    let skipFn: SkipFn = () => true;
     while (skipFn(values)) {
       nextStepIndex = Math.max(0, nextStepIndex - 1);
-      skipFn = steps[nextStepIndex].skip || (() => false);
+      skipFn = steps[nextStepIndex].skip ?? (() => false);
     }
     setStepIndex(nextStepIndex);
 
@@ -63,14 +65,18 @@ function Wizard({
       `click_previous_${title}`,
       state.steps[nextStepIndex].name,
     ]);
+    window?.scrollTo(0, 0);
   };
   const nextStep = (values) => {
     let nextStepIndex = stepIndex;
-    let skipFn = () => true;
-    //@ts-ignore
+    const currentStep = steps[stepIndex];
+    if (currentStep.onStepDone) {
+      currentStep.onStepDone(title, values);
+    }
+    let skipFn: SkipFn = () => true;
     while (skipFn(values)) {
       nextStepIndex = Math.min(nextStepIndex + 1, steps.length - 1);
-      skipFn = steps[nextStepIndex].skip || (() => false);
+      skipFn = steps[nextStepIndex].skip ?? (() => false);
     }
     setStepIndex(nextStepIndex);
     matopush([
@@ -79,6 +85,7 @@ function Wizard({
       `view_step_${title}`,
       state.steps[nextStepIndex].name,
     ]);
+    window?.scrollTo(0, 0);
   };
 
   const previousVisible = stepIndex > 0;
@@ -86,16 +93,15 @@ function Wizard({
   const isLastStep = stepIndex === steps.length - 1;
 
   const validate = (values) => {
-    const Step = steps[stepIndex].component;
+    const Step: any = steps[stepIndex].component;
     return Step.validate ? Step.validate(values) : {};
   };
 
   const handlePageSubmit = (values, form) => {
     // This means the user clicked on a "restart a new simulation" button
     if (stepIndex === steps.length - 1) {
-      //@ts-ignore
       dispatch({
-        type: "reset",
+        type: ActionName.reset,
       });
       setStepIndex(0);
       setTimeout(() => form.reset());
@@ -110,40 +116,14 @@ function Wizard({
   }));
 
   const decorators = steps
-    .map((step) => step.component.decorator)
+    .map((step) => (step.component as any).decorator)
     .filter(Boolean);
 
   const Step = steps[stepIndex].component;
 
-  const Annotation = steps[stepIndex].annotation;
+  const StepProps = steps[stepIndex].componentProps;
 
-  const onClickNext = (form) => {
-    if (router.asPath === MatomoTrackUrl.PREAVIS_RETRAITE) {
-      switch (steps[stepIndex].name) {
-        case initialState.steps[1].name: // "origine"
-          matopush([
-            MatomoCommonEvent.TRACK_EVENT,
-            MatomoCommonEvent.OUTIL,
-            form.getState().values["contrat salarié - mise à la retraite"] ===
-            "oui"
-              ? MatomoPreavisRetraiteEvent.MISE_RETRAITE
-              : MatomoPreavisRetraiteEvent.DEPART_RETRAITE,
-          ]);
-          break;
-        case initialState.steps[4].name: // "anciennete"
-          matopush([
-            MatomoCommonEvent.TRACK_EVENT,
-            MatomoCommonEvent.OUTIL,
-            form.getState().values.seniorityGreaterThanTwoYears
-              ? MatomoPreavisRetraiteEvent.ANCIENNETE_PLUS_2_ANS
-              : MatomoPreavisRetraiteEvent.ANCIENNETE_MOINS_2_ANS,
-          ]);
-          break;
-        default:
-          return;
-      }
-    }
-  };
+  const Annotation = steps[stepIndex].annotation;
 
   return (
     <Wrapper variant="main">
@@ -164,7 +144,7 @@ function Wizard({
                   <Rules values={form.getState().values} dispatch={dispatch} />
                 )}
                 <WizardTitle
-                  title={title}
+                  title={displayTitle}
                   icon={icon}
                   duration={duration}
                   stepIndex={stepIndex}
@@ -178,19 +158,28 @@ function Wizard({
                 {steps[stepIndex].isForm ? (
                   <Fieldset>
                     <Legend isHidden>{steps[stepIndex].label}</Legend>
-                    <Step form={form} dispatch={dispatch} />
+                    <Step
+                      form={form}
+                      dispatch={dispatch}
+                      title={title}
+                      {...StepProps}
+                    />
                   </Fieldset>
                 ) : (
-                  <Step form={form} dispatch={dispatch} />
+                  <Step
+                    form={form}
+                    dispatch={dispatch}
+                    title={title}
+                    {...StepProps}
+                  />
                 )}
                 <PrevNextBar
                   hasError={invalid && submitFailed}
                   onPrev={() => prevStep(form.getState().values)}
                   nextVisible={nextVisible}
-                  //@ts-ignore
                   printVisible={isLastStep}
                   previousVisible={previousVisible}
-                  onNext={() => onClickNext(form)}
+                  onPrint={() => printResult(title)}
                 />
                 {Annotation && (
                   <p>
@@ -215,27 +204,21 @@ function Wizard({
   );
 }
 
-Wizard.propTypes = {
-  Rules: PropTypes.func,
-  duration: PropTypes.string,
-  hasNoMarginBottom: PropTypes.bool,
-  icon: PropTypes.string,
-  initialState: PropTypes.shape({
-    stepIndex: PropTypes.number,
-    steps: PropTypes.arrayOf(
-      PropTypes.shape({
-        component: PropTypes.func.isRequired,
-        label: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-      })
-    ),
-  }).isRequired,
-  initialValues: PropTypes.object,
-  stepReducer: PropTypes.func,
-  title: PropTypes.string.isRequired,
+type WizardTitleProps = {
+  duration?: string;
+  hasNoMarginBottom?: boolean;
+  icon?: string;
+  stepIndex?: number;
+  title: string;
 };
 
-function WizardTitle({ title, icon, duration, stepIndex, hasNoMarginBottom }) {
+function WizardTitle({
+  title,
+  icon,
+  duration,
+  stepIndex,
+  hasNoMarginBottom,
+}: WizardTitleProps): JSX.Element {
   const Icon = icons[icon];
   return (
     <ToolTitle hasNoMarginBottom={hasNoMarginBottom}>
@@ -251,14 +234,6 @@ function WizardTitle({ title, icon, duration, stepIndex, hasNoMarginBottom }) {
     </ToolTitle>
   );
 }
-
-WizardTitle.propTypes = {
-  duration: PropTypes.string,
-  hasNoMarginBottom: PropTypes.bool,
-  icon: PropTypes.string,
-  stepIndex: PropTypes.number,
-  title: PropTypes.string.isRequired,
-};
 
 function WizardDuration({ duration }) {
   return (

@@ -405,6 +405,8 @@ exports[`<SearchResults/> should render results 1`] = `
 
 .c8 {
   margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .c9 {
@@ -671,11 +673,11 @@ exports[`<SearchResults/> should render results 1`] = `
     class="c0"
     role="region"
   >
-    <h3
+    <p
       class="c1"
     >
       Résultats de recherche pour “search test”
-    </h3>
+    </p>
     <ul
       class="c2"
     >
@@ -697,11 +699,11 @@ exports[`<SearchResults/> should render results 1`] = `
               >
                 test theme content
               </p>
-              <h3
+              <p
                 class="c8"
               >
                 Mer il est fou!
-              </h3>
+              </p>
             </div>
           </div>
           <div
@@ -760,11 +762,11 @@ exports[`<SearchResults/> should render results 1`] = `
               >
                 Outils
               </p>
-              <h3
+              <p
                 class="c8"
               >
                 simulateur de prime de précarite
-              </h3>
+              </p>
             </div>
           </div>
           <div
@@ -912,11 +914,11 @@ exports[`<SearchResults/> should render results 1`] = `
               >
                 test root content
               </p>
-              <h3
+              <p
                 class="c8"
               >
                 Mer il est fou 2!
-              </h3>
+              </p>
             </div>
           </div>
           <div
@@ -1000,11 +1002,11 @@ exports[`<SearchResults/> should render results 1`] = `
               >
                 test theme content
               </p>
-              <h3
+              <p
                 class="c8"
               >
                 Mer il est fou 4!
-              </h3>
+              </p>
             </div>
           </div>
           <div
@@ -1067,11 +1069,11 @@ exports[`<SearchResults/> should render results 1`] = `
                       class="c6"
                     >
                       
-                      <h3
+                      <p
                         class="c8"
                       >
                         L1243-1
-                      </h3>
+                      </p>
                     </div>
                   </div>
                   <div
@@ -1122,11 +1124,11 @@ exports[`<SearchResults/> should render results 1`] = `
                       class="c6"
                     >
                       
-                      <h3
+                      <p
                         class="c8"
                       >
                         Contrat
-                      </h3>
+                      </p>
                     </div>
                   </div>
                 </a>

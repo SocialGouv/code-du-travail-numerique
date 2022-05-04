@@ -3,6 +3,7 @@ import { logger } from "@socialgouv/cdtn-logger";
 import conventionsRoutes from "./routes/conventions";
 import docsCountRoutes from "./routes/docs-count";
 import dossiersRoute from "./routes/dossiers";
+import enterprisesRoute from "./routes/enterprises";
 import glossaryRoute from "./routes/glossary";
 import highlightRoutes from "./routes/highlights";
 import idccRoutes from "./routes/idcc";
@@ -25,12 +26,13 @@ const PORT = process.env.PORT || 1337;
 
 app.use(cors());
 /**
- * use a middleware for catching errors and re-emit them
+ * Log every request + catch errors and re-emit them
  * so we can centralize error handling / logging
  * https://github.com/koajs/koa/wiki/Error-Handling
  */
 app.use(async (ctx, next) => {
   try {
+    logger.info(`Request ${ctx.request.method} ${ctx.request.url}`);
     await next();
   } catch (error) {
     logger.error(error);
@@ -51,6 +53,7 @@ app.use(async (ctx, next) => {
 
 app.use(bodyParser());
 
+app.use(enterprisesRoute.routes());
 app.use(conventionsRoutes.routes());
 app.use(docsCountRoutes.routes());
 app.use(highlightRoutes.routes());

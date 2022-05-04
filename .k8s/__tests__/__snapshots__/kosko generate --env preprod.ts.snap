@@ -192,7 +192,7 @@ data:
   ELASTIC_APM_ACTIVE: 'false'
   ELASTIC_APM_SERVICE_NAME: cdtn-api
   ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME: 'true'
-  NLP_URL: https://preprod-serving-ml.dev.fabrique.social.gouv.fr
+  NLP_URL: https://serving-ml-preprod.dev.fabrique.social.gouv.fr
   NODE_ENV: production
   PIWIK_SITE_ID: '3'
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr
@@ -416,7 +416,6 @@ metadata:
 data:
   AZURE_BASE_URL: https://cdtnadmindev.blob.core.windows.net
   AZURE_CONTAINER: cdtn
-  NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT: 'false'
   NODE_ENV: production
   PIWIK_SITE_ID: '3'
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr

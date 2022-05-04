@@ -5,9 +5,9 @@ import Disclaimer from "../../../common/Disclaimer";
 import { SmallText } from "../../../common/stepStyles";
 
 type Props = {
-  resultValueInDays: number | null;
-  ccNumber: number | null;
-  type: "depart" | "mise" | null;
+  resultValueInDays?: number;
+  ccNumber?: number;
+  type: "départ" | "mise";
 };
 export const titreFavorable =
   "Attention il peut exister une durée plus favorable";
@@ -58,7 +58,7 @@ const WarningResult: React.FC<Props> = ({
           </p>
           <p>Nous vous conseillons de vérifiez cela.</p>
         </>
-      ) : type === "depart" && statusCcn === StatusCcn.CCN_SUPPORTED ? (
+      ) : type === "départ" && statusCcn === StatusCcn.CCN_SUPPORTED ? (
         <>
           <p>
             Un accord collectif d’entreprise, le contrat de travail ou un usage
@@ -98,7 +98,7 @@ const WarningResult: React.FC<Props> = ({
             une durée de préavis plus longue.
           </SmallText>
         </>
-      ) : type === "depart" &&
+      ) : type === "départ" &&
         (statusCcn === StatusCcn.CC_UNSELECTED ||
           statusCcn === StatusCcn.CCN_UNSUPPORTED) ? (
         <>

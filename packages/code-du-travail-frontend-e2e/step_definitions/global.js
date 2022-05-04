@@ -47,6 +47,13 @@ Quand("je choisis {string}", (text) => {
   I.checkOption(text);
 });
 
+Quand(
+  "je sélectionne {string} dans la liste {string}",
+  (optionName, selectName) => {
+    I.selectOption(selectName, optionName);
+  }
+);
+
 Quand("je ferme la modale", () => {
   I.click('button[title="fermer la modale"]');
 });
@@ -148,6 +155,10 @@ Alors("je vois {string} tuiles sous le texte {string}", (num, title) => {
 
 Alors("je vois le thème {string}", (theme) => {
   I.seeElement(`//a[text()="${theme}" and starts-with(@href, "/themes/")]`);
+});
+
+Quand("je regarde dans l'iframe {string}", async (iframe) => {
+  I.switchTo(iframe);
 });
 
 Alors("je ne vois pas le thème {string}", (theme) => {

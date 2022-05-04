@@ -420,7 +420,6 @@ metadata:
 data:
   AZURE_BASE_URL: https://cdtnadminprod.blob.core.windows.net
   AZURE_CONTAINER: cdtn
-  NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT: 'true'
   NODE_ENV: production
   PIWIK_SITE_ID: '4'
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr
@@ -535,7 +534,7 @@ spec:
     kind: Deployment
     name: www
 ---
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:

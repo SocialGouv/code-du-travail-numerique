@@ -1,23 +1,22 @@
 import { Paragraph } from "@socialgouv/cdtn-ui";
-import { supportedCcn } from "@socialgouv/modeles-social";
-import { AgreementInfo } from "@socialgouv/modeles-social/bin/internal/ExtractSupportedCc";
+import { AgreementInfo, supportedCcn } from "@socialgouv/modeles-social";
 import React from "react";
 
 import { SectionTitle } from "../../../common/stepStyles";
 import { FormContent } from "../../../common/type/WizardType";
 import {
-  PublicodesContextInterface,
+  PublicodesPreavisRetraiteResult,
   PublicodesResult,
+  usePublicodes,
 } from "../../../publicodes";
 
 type Props = {
   data: FormContent;
-  publicodesContext: PublicodesContextInterface;
 };
 
 const ShowResult: React.FC<{
-  result: PublicodesResult;
-  agreementMaximumResult: PublicodesResult;
+  result: PublicodesPreavisRetraiteResult;
+  agreementMaximumResult: PublicodesPreavisRetraiteResult | null;
 }> = ({ result, agreementMaximumResult }) => {
   if (result.value > 0) {
     return (
@@ -40,14 +39,14 @@ const ShowResult: React.FC<{
 };
 
 const ShowResultAgreement: React.FC<{
-  result: PublicodesResult | null;
+  result: PublicodesPreavisRetraiteResult | null;
   detail: Agreement | null;
-  agreementMaximumResult: PublicodesResult | null;
+  agreementMaximumResult: PublicodesPreavisRetraiteResult | null;
 }> = ({ result, detail, agreementMaximumResult }) => {
   if (!result) {
     return <strong>convention collective non renseignée</strong>;
   }
-  if (result && result.value > 0) {
+  if (result?.value > 0) {
     return (
       <ShowResult
         result={result}
@@ -89,15 +88,15 @@ type RootData = {
 
 export const createRootData = (
   data: FormContent,
-  result: PublicodesResult,
-  legalResult: PublicodesResult,
-  agreementResult: PublicodesResult | null,
+  result: PublicodesPreavisRetraiteResult,
+  legalResult: PublicodesPreavisRetraiteResult,
+  agreementResult: PublicodesPreavisRetraiteResult | null,
   supportedCcn: AgreementInfo[]
 ): RootData => {
   let agreement: Agreement | null = null;
-  if (data.ccn) {
+  if (data.ccn?.selected) {
     const agreementFound = supportedCcn.find(
-      (item) => item.idcc === data.ccn.num
+      (item) => item.idcc === data.ccn?.selected?.num
     );
     agreement = {
       notice: agreementResult?.valueInDays ?? 0,
@@ -122,13 +121,15 @@ export const createRootData = (
     noticeUsed = NoticeUsed.legal;
   } else if (
     result.valueInDays > 0 &&
-    result.valueInDays === agreementResult.valueInDays
+    result.valueInDays === agreementResult?.valueInDays
   ) {
     noticeUsed = NoticeUsed.agreementLabor;
   }
   return {
     agreement: agreement,
-    handicap: data.infos["contrat salarié - travailleur handicapé"] === "oui",
+    handicap:
+      data.infos !== undefined &&
+      data.infos["contrat salarié - travailleur handicapé"] === "oui",
     isVoluntary: data["contrat salarié - mise à la retraite"] === "non",
     noticeUsed,
     seniorityLessThan6Months: Number(data["contrat salarié - ancienneté"]) < 6,
@@ -177,12 +178,13 @@ export const getDescription = (data: RootData): string | null => {
   }
 };
 
-const DecryptedResult: React.FC<Props> = ({ data, publicodesContext }) => {
+const DecryptedResult: React.FC<Props> = ({ data }) => {
+  const publicodesContext = usePublicodes<PublicodesPreavisRetraiteResult>();
   const legalResult = publicodesContext.execute(
     "contrat salarié . préavis de retraite légale en jours"
   );
-  let agreementResult = null;
-  let agreementMaximumResult = null;
+  let agreementResult: PublicodesResult | null = null;
+  let agreementMaximumResult: PublicodesResult | null = null;
   if (data.ccn) {
     agreementResult = publicodesContext.execute(
       "contrat salarié . préavis de retraite collective en jours"

@@ -1,12 +1,11 @@
 import { formatIdcc } from "@cdt/data";
 import slugify from "@socialgouv/cdtn-slugify";
 import { Button, Paragraph, theme } from "@socialgouv/cdtn-ui";
+import { push as matopush } from "@socialgouv/matomo-next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
-
-import { matopush } from "../../piwik";
 
 // following @cdt/data/indexing/cdtnDocuments.js slug rules
 const getConventionSlug = (convention) =>
