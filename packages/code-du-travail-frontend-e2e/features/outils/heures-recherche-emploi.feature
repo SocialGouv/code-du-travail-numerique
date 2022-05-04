@@ -32,7 +32,7 @@ Fonctionnalité: Outil - Heures d'absence pour rechercher un emploi
     Soit un utilisateur sur la page "/outils/heures-recherche-emploi"
 
     Alors je vois "Étapes"
-    Alors je vois "Heures d'absence pour rechercher un emploi"
+    Alors je vois "Calculer le nombre d'heures d'absence pour rechercher un emploi"
 
     Quand je clique sur "Commencer"
 
@@ -64,7 +64,7 @@ Fonctionnalité: Outil - Heures d'absence pour rechercher un emploi
     Soit un utilisateur sur la page "/outils/heures-recherche-emploi"
 
     Alors je vois "Étapes"
-    Alors je vois "Heures d'absence pour rechercher un emploi"
+    Alors je vois "Calculer le nombre d'heures d'absence pour rechercher un emploi"
 
     Quand je clique sur "Commencer"
 
