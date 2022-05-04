@@ -20,9 +20,14 @@ import { OnUserAction, UserAction } from "./types";
 interface Props {
   icon: string;
   title: string;
+  displayTitle: string;
 }
 
-function AgreementSearchTool({ icon, title }: Props): JSX.Element {
+function AgreementSearchTool({
+  icon,
+  title,
+  displayTitle,
+}: Props): JSX.Element {
   const [screen, setScreen] = useState<ScreenType | null>(null);
   const { setEnterprise, setSearchParams, searchParams } = useNavContext();
   const { uuid, trackEvent } = useTrackingContext();
@@ -140,7 +145,7 @@ function AgreementSearchTool({ icon, title }: Props): JSX.Element {
   }
   return (
     <WizardWrapper variant="main">
-      <WizardTitle title={title} icon={icon} />
+      <WizardTitle title={displayTitle} icon={icon} />
       {Step}
     </WizardWrapper>
   );

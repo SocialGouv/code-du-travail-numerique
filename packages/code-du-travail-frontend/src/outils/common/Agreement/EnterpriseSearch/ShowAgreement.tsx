@@ -1,5 +1,5 @@
 import { formatIdcc } from "@cdt/data";
-import { Paragraph, Text } from "@socialgouv/cdtn-ui";
+import { Text } from "@socialgouv/cdtn-ui";
 import React from "react";
 
 import { Agreement } from "../../../../conventions/Search/api/type";
@@ -10,11 +10,13 @@ import { AgreementSupportInfo } from "../types";
 type Props = {
   agreement: Agreement;
   supportedAgreements: AgreementSupportInfo[];
+  alertAgreementNotSupported?: (string) => JSX.Element;
 };
 
 const ShowAgreement = ({
   agreement,
   supportedAgreements,
+  alertAgreementNotSupported,
 }: Props): JSX.Element => {
   return (
     <>
@@ -25,10 +27,10 @@ const ShowAgreement = ({
         {agreement.shortTitle} (IDCC {formatIdcc(agreement.num)})
       </Text>
       <ShowAlert
-        currentIdcc={agreement.num}
+        currentAgreement={agreement}
         supportedAgreements={supportedAgreements}
+        alertAgreementNotSupported={alertAgreementNotSupported}
       />
-      <Paragraph>Cliquez sur Suivant pour poursuivre la simulation.</Paragraph>
     </>
   );
 };

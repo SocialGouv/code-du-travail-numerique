@@ -10,7 +10,7 @@ Scénario:
   Soit un utilisateur sur la page "/outils/indemnite-precarite"
 
   Alors je vois "Étapes"
-  Alors je vois "Indemnité de précarité"
+  Alors je vois "Calculer l'indemnité de précarité"
   Alors je vois "permet d’estimer le montant de l’indemnité de fin de contrat ou de fin de mission"
 
   Quand je clique sur "Commencer"

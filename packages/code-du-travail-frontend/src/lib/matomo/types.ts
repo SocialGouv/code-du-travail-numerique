@@ -52,14 +52,6 @@ export enum MatomoActionEvent {
   PREAVIS_LICENCIEMENT = "view_step_Préavis de licenciement",
 }
 
-export enum MatomoTrackUrl {
-  PREAVIS_RETRAITE = "/outils/preavis-retraite",
-  PREAVIS_DEMISSION = "/outils/preavis-demission",
-  PREAVIS_LICENCIEMENT = "/outils/preavis-licenciement",
-  INDEMNITE_PRECARITE = "/outils/indemnite-precarite",
-  HEURE_RECHERCHE_EMPLOI = "/outils/heures-recherche-emploi",
-}
-
 type Mapping = Array<{
   helpEvent: MatomoSimulatorEvent;
   questionLabels: Array<string>;

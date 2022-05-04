@@ -16,7 +16,7 @@ import {
   SmallText,
 } from "../../common/stepStyles";
 import { WizardStepProps } from "../../common/type/WizardType";
-import { isNotNearZero } from "../../common/utils/";
+import { isNotNearZero } from "../../common/utils";
 import { formatRefs } from "../../publicodes";
 import DisclaimerText from "./DisclaimerText";
 

@@ -1,58 +1,94 @@
-import { Alert, Paragraph, Text } from "@socialgouv/cdtn-ui";
+import { Alert, Paragraph, Text, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 
 import type { AgreementSupportInfo } from "./types";
+import { Agreement } from "../../../conventions/Search/api/type";
+import styled from "styled-components";
 
 type Props = {
-  currentIdcc: number;
+  currentAgreement: Agreement;
   supportedAgreements: AgreementSupportInfo[];
+  alertAgreementNotSupported?: (string) => JSX.Element;
 };
 
 const ShowAlert = ({
-  currentIdcc,
+  currentAgreement,
   supportedAgreements,
+  alertAgreementNotSupported,
 }: Props): JSX.Element => {
-  const idccInfo = supportedAgreements.find((item) => item.idcc == currentIdcc);
+  const idccInfo = supportedAgreements.find(
+    (item) => item.idcc == currentAgreement.num
+  );
   if (!idccInfo) {
     return (
-      <Alert variant="primary">
-        <Paragraph
-          variant="primary"
-          fontSize="hsmall"
-          fontWeight="700"
-          noMargin
-        >
-          Convention collective non traitée
-        </Paragraph>
-        <Paragraph noMargin>
-          La convention collective sélectionnée n&apos;est pas traitée par nos
-          services.
-        </Paragraph>
-        <Paragraph noMargin>
-          Vous pouvez tout de même poursuivre la simulation qui vous fournira un
-          résultat basé sur le code du travail.
-        </Paragraph>
-      </Alert>
+      <>
+        <StyledAlert variant="primary">
+          <Paragraph
+            variant="primary"
+            fontSize="hsmall"
+            fontWeight="700"
+            noMargin
+          >
+            Convention collective non traitée
+          </Paragraph>
+          {alertAgreementNotSupported ? (
+            alertAgreementNotSupported(currentAgreement.url)
+          ) : (
+            <>
+              <Paragraph>
+                La convention collective sélectionnée n&apos;est pas traitée par
+                nos services.
+              </Paragraph>
+              <Paragraph>
+                Vous pouvez tout de même poursuivre la simulation qui vous
+                fournira un résultat basé sur le code du travail.
+              </Paragraph>
+            </>
+          )}
+        </StyledAlert>
+        {!alertAgreementNotSupported && (
+          <StyledParagraph>
+            Cliquez sur Suivant pour poursuivre la simulation.
+          </StyledParagraph>
+        )}
+      </>
     );
   }
   if (!idccInfo.fullySupported) {
     return (
-      <Alert variant="primary">
-        <Text variant="primary" fontSize="hsmall" fontWeight="700">
-          Convention prochainement traitée
-        </Text>
-        <Paragraph noMargin>
-          Cette convention collective n&apos;est pas encore traitée par nos
-          services mais le sera très prochainement. Vous pouvez poursuivre la
-          simulation pour connaitre la durée prévue par le code du travail mais
-          nous vous conseillons de vérifier si votre convention collective
-          prévoit un délai plus favorable qui vous serait applicable.
-        </Paragraph>
-      </Alert>
+      <>
+        <StyledAlert variant="primary">
+          <Text variant="primary" fontSize="hsmall" fontWeight="700">
+            Convention prochainement traitée
+          </Text>
+          <Paragraph>
+            Cette convention collective n&apos;est pas encore traitée par nos
+            services mais le sera très prochainement. Vous pouvez poursuivre la
+            simulation pour connaitre la durée prévue par le code du travail
+            mais nous vous conseillons de vérifier si votre convention
+            collective prévoit un délai plus favorable qui vous serait
+            applicable.
+          </Paragraph>
+        </StyledAlert>
+        <StyledParagraph>
+          Cliquez sur Suivant pour poursuivre la simulation.
+        </StyledParagraph>
+      </>
     );
   }
 
-  return <></>;
+  return (
+    <StyledParagraph>
+      Cliquez sur Suivant pour poursuivre la simulation.
+    </StyledParagraph>
+  );
 };
 
 export default ShowAlert;
+
+const StyledAlert = styled(Alert)`
+  margin-top: ${theme.spacings.small};
+`;
+const StyledParagraph = styled(Paragraph)`
+  margin-top: ${theme.spacings.large};
+`;

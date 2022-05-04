@@ -5,7 +5,7 @@ import { Form } from "react-final-form";
 
 import {
   computeAnciennete,
-  computeSalaraires,
+  computeSalaires,
   StepAnciennete,
 } from "../Anciennete";
 
@@ -74,6 +74,21 @@ describe("<Anciennete />", () => {
     ).toMatch("La date de notification doit se situer avant la date de sortie");
   });
 
+  it("should display error if dateNotif is older than 18 months", () => {
+    const { container, getByLabelText } = renderForm({
+      dateSortie: "2022-04-01",
+    });
+    const dateNotif = getByLabelText(/licenciement/i);
+    fireEvent.change(dateNotif, { target: { value: "2018-02-02" } });
+    expect(
+      container
+        .querySelector("input[name=dateNotification]")
+        .parentElement.nextSibling.textContent.trim()
+    ).toMatch(
+      "La date de notification doit se situer dans les 18 derniers mois"
+    );
+  });
+
   it("should display error if anciennté < 8mois", () => {
     const { getByText, getByLabelText } = renderForm({
       dateEntree: "2018-04-02",
@@ -116,7 +131,7 @@ describe("computeAncienneté", () => {
 describe("computeSalaires", () => {
   it("should compute salaires periods only if there is previous salaires", () => {
     expect(
-      computeSalaraires({
+      computeSalaires({
         dateEntree: "2016-04-01",
         dateNotification: "2018-04-01",
         dateSortie: "2018-05-01",
@@ -127,7 +142,7 @@ describe("computeSalaires", () => {
   });
   it("should restore previous salaires periods", () => {
     expect(
-      computeSalaraires({
+      computeSalaires({
         dateEntree: "2018-01-01",
         dateNotification: "2018-09-01",
         dateSortie: "2018-10-01",
@@ -156,7 +171,7 @@ describe("computeSalaires", () => {
   });
   it("should not compute salaires periods if hasSameSalaire is true", () => {
     expect(
-      computeSalaraires({
+      computeSalaires({
         dateEntree: "2016-04-01",
         dateNotification: "2018-04-01",
         dateSortie: "2018-05-01",

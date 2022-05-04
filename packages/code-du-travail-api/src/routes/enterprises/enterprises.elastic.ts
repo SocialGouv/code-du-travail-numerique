@@ -9,7 +9,7 @@ export type SearchAgreementsBody = {
 
 const getAgreements = (idccList: number[]): SearchAgreementsBody => {
   return {
-    _source: ["id", "title", "shortTitle", "num", "slug", "highlight"],
+    _source: ["id", "title", "shortTitle", "num", "slug", "highlight", "url"],
     from: 0,
     query: {
       bool: {
