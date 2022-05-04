@@ -68,10 +68,6 @@
     "source": "fiches_service_public"
   },
   {
-    "slug": "413-handicapes-etablissements-et-services-pour-les-personnes-inadaptees-et-han",
-    "source": "conventions_collectives"
-  },
-  {
     "slug": "la-rupture-conventionnelle-du-contrat-de-travail-a-duree-indeterminee#Les-salaries-lt-lt-proteges-sont-ils-concernes",
     "source": "fiches_ministere_travail"
   },
@@ -105,6 +101,10 @@
   },
   {
     "slug": "la-rupture-conventionnelle-du-contrat-de-travail-a-duree-indeterminee#Quelle-est-la-procedure",
+    "source": "fiches_ministere_travail"
+  },
+  {
+    "slug": "le-contrat-de-travail-a-duree-indeterminee-cdi#Dans-quels-cas-un-CDI-doit-il-etre-conclu",
     "source": "fiches_ministere_travail"
   }
 ]

@@ -4,14 +4,6 @@
     "source": "conventions_collectives"
   },
   {
-    "slug": "1501-restauration-rapide",
-    "source": "conventions_collectives"
-  },
-  {
-    "slug": "1266-restauration-de-collectivites",
-    "source": "conventions_collectives"
-  },
-  {
     "slug": "covid-19-quelles-sont-les-regles-dexoneration-ou-de-reduction-de-cotisation",
     "source": "fiches_service_public"
   },
@@ -97,6 +89,14 @@
   },
   {
     "slug": "travail-de-nuit-dun-jeune-de-moins-de-18-ans",
+    "source": "fiches_service_public"
+  },
+  {
+    "slug": "comment-obtenir-et-utiliser-des-titres-restaurant",
+    "source": "fiches_service_public"
+  },
+  {
+    "slug": "paiement-du-salaire",
     "source": "fiches_service_public"
   }
 ]

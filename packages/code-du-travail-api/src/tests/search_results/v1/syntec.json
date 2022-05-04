@@ -4,10 +4,6 @@
     "source": "conventions_collectives"
   },
   {
-    "slug": "1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle",
-    "source": "conventions_collectives"
-  },
-  {
     "slug": "etudiant-etranger-comment-travailler-en-france-apres-ses-etudes",
     "source": "fiches_service_public"
   },
@@ -97,6 +93,10 @@
   },
   {
     "slug": "travail-sur-ecran#Les-moyens-de-prevention",
+    "source": "fiches_ministere_travail"
+  },
+  {
+    "slug": "conventions-collectives-nomenclatures#Liste-des-conventions-collectives-et-de-leur-code-IDCC",
     "source": "fiches_ministere_travail"
   }
 ]

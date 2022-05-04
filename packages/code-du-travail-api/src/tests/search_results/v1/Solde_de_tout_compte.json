@@ -36,10 +36,6 @@
     "source": "fiches_service_public"
   },
   {
-    "slug": "787-personnel-des-cabinets-dexperts-comptables-et-de-commissaires-aux-comptes",
-    "source": "conventions_collectives"
-  },
-  {
     "slug": "comment-beneficier-dun-conge-sans-solde",
     "source": "fiches_service_public"
   },
@@ -110,5 +106,9 @@
   {
     "slug": "demission-dune-assistante-maternelle",
     "source": "fiches_service_public"
+  },
+  {
+    "slug": "compte-personnel-de-formation-cpf#Comment-utiliser-le-Compte-personnel-de-formation-CPF",
+    "source": "fiches_ministere_travail"
   }
 ]
