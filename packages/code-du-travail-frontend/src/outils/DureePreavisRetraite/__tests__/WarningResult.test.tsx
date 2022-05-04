@@ -4,7 +4,7 @@ import * as React from "react";
 import WarningResult, {
   titreFavorable,
   titrePreavis,
-} from "../steps/component/WarningResult";
+} from "../steps/ResultStep/Components/WarningResult";
 
 describe("WarningResult", () => {
   it.each`

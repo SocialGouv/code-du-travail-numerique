@@ -4,7 +4,7 @@ import React from "react";
 
 import { Agreement } from "../../../../conventions/Search/api/type";
 import { Question } from "../../Question";
-import ShowAlert from "../ShowAlert";
+import ShowAlert from "../components/ShowAlert";
 import { AgreementSupportInfo } from "../types";
 
 type Props = {

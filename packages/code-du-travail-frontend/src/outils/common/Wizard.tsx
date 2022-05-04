@@ -1,4 +1,3 @@
-import { Fieldset, Legend } from "@socialgouv/cdtn-ui";
 import arrayMutators from "final-form-arrays";
 import React, { Reducer, useEffect, useReducer } from "react";
 
@@ -12,6 +11,7 @@ import {
 } from "./type/WizardType";
 import { printResult } from "./utils/";
 import { SimulatorDecorator } from "../Components";
+import DebugInfo from "./DebugInfo";
 
 const anchorRef = React.createRef<HTMLLIElement>();
 
@@ -151,40 +151,30 @@ export const Wizard = ({
           listRef: anchorRef,
         }}
         onFormStepSubmit={handlePageSubmit}
-        showDebug={
-          process.env.NODE_ENV !== "production" &&
-          process.env.NODE_ENV !== "test"
-        }
-        validate={validate}
-        decorators={decorators}
-        mutators={{
-          ...arrayMutators,
+        options={{
+          debug: <DebugInfo />,
+          annotations: Annotation,
         }}
-        annotations={Annotation}
+        formOptions={{
+          validate: validate,
+          decorators: decorators,
+          mutators: {
+            ...arrayMutators,
+          },
+          legend: steps[stepIndex].isForm ? steps[stepIndex].label : undefined,
+        }}
         renderStep={(form) => {
           return (
             <>
               {Rules && (
                 <Rules values={form.getState().values} dispatch={dispatch} />
               )}
-              {steps[stepIndex].isForm ? (
-                <Fieldset>
-                  <Legend isHidden>{steps[stepIndex].label}</Legend>
-                  <Step
-                    form={form}
-                    dispatch={dispatch}
-                    title={title}
-                    {...StepProps}
-                  />
-                </Fieldset>
-              ) : (
-                <Step
-                  form={form}
-                  dispatch={dispatch}
-                  title={title}
-                  {...StepProps}
-                />
-              )}
+              <Step
+                form={form}
+                dispatch={dispatch}
+                title={title}
+                {...StepProps}
+              />
             </>
           );
         }}

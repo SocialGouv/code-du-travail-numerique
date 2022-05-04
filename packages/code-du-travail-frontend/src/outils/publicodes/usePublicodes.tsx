@@ -1,14 +1,12 @@
 import { useContext } from "react";
 
 import { PublicodesContext } from "./context";
-import { PublicodesContextType, PublicodesResult } from "./types";
+import { PublicodesContextType } from "./types";
 
-export function usePublicodes<
-  T extends PublicodesResult
->(): PublicodesContextType<T> {
+export function usePublicodes(): PublicodesContextType {
   const context = useContext(PublicodesContext);
   if (!context) {
     throw new Error("usePublicodes must be used within a PublicodesProvider");
   }
-  return context as PublicodesContextType<T>;
+  return context as PublicodesContextType;
 }

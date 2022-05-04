@@ -5,14 +5,16 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
-import { loadPublicodes } from "../../src/outils/api/LoadPublicodes";
-import { DureePreavisLicenciement } from "../../src/outils/DureePreavisLicenciement";
-import { SimulateurPreavisRetraite } from "../../src/outils/DureePreavisRetraite";
-import { Tool } from "../../src/outils/types";
+import {
+  DureePreavisLicenciement,
+  DureePreavisRetraite,
+  loadPublicodesRules,
+  Tool,
+} from "../../src/outils";
 
 const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
-  "preavis-retraite": SimulateurPreavisRetraite,
+  "preavis-retraite": DureePreavisRetraite,
 };
 
 interface Props {
@@ -71,7 +73,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
 
   const { slug, icon, title, displayTitle } = tool;
 
-  const publicodesRules = loadPublicodes(slug);
+  const publicodesRules = loadPublicodesRules(slug);
 
   return {
     props: {
