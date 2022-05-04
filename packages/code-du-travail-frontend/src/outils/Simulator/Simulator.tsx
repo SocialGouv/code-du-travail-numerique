@@ -8,6 +8,7 @@ type Props<FormState, StepName extends string> = {
   duration?: string;
   icon?: string;
   title: string;
+  displayTitle: string;
   steps: Step<StepName>[];
   debug: JSX.Element;
   onFormValuesChange: (values: FormState) => void;
@@ -17,6 +18,7 @@ type Props<FormState, StepName extends string> = {
 const Simulator = <FormState, StepName extends string>({
   icon,
   title,
+  displayTitle,
   duration,
   steps,
   debug,
@@ -76,7 +78,7 @@ const Simulator = <FormState, StepName extends string>({
     <SimulatorDecorator<FormState>
       title={{
         icon,
-        title,
+        title: displayTitle,
         duration,
         hasNoMarginBottom: currentStep.options?.hasNoMarginBottom,
       }}
