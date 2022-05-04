@@ -18,7 +18,11 @@ const DureePreavisRetraite = ({
   <PreavisRetraiteProvider
     createStore={() => createPreavisRetraiteStore(publicodesRules, title)}
   >
-    <PreavisRetraiteSimulator icon={icon} title={displayTitle} />
+    <PreavisRetraiteSimulator
+      icon={icon}
+      title={title}
+      displayTitle={displayTitle}
+    />
   </PreavisRetraiteProvider>
 );
 
