@@ -1,6 +1,5 @@
 import { push as matopush } from "@socialgouv/matomo-next";
 import { render } from "@testing-library/react";
-import React from "react";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
 
@@ -60,6 +59,7 @@ describe("<Wizard />", () => {
     const { container } = render(
       <Wizard
         title="test"
+        displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={initialState}
       />
@@ -70,6 +70,7 @@ describe("<Wizard />", () => {
     const { container, getByText } = render(
       <Wizard
         title="test"
+        displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={initialState}
       />
@@ -88,6 +89,7 @@ describe("<Wizard />", () => {
     const { getByText } = render(
       <Wizard
         title="test"
+        displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={initialState}
       />
@@ -99,14 +101,24 @@ describe("<Wizard />", () => {
   it("should handle initialState.stepIndex", () => {
     const state = { stepIndex: 1, steps: steps };
     const { container } = render(
-      <Wizard title="test" stepReducer={stepReducer} initialState={state} />
+      <Wizard
+        title="test"
+        displayTitle="test H1"
+        stepReducer={stepReducer}
+        initialState={state}
+      />
     );
     expect(container).toMatchSnapshot();
   });
   it("should call navigate the previous step when click on précédent", () => {
     const state = { stepIndex: 1, steps: steps };
     const { container, getByText } = render(
-      <Wizard title="test" stepReducer={stepReducer} initialState={state} />
+      <Wizard
+        title="test"
+        displayTitle="test H1"
+        stepReducer={stepReducer}
+        initialState={state}
+      />
     );
     const button = getByText(/précédent/i);
     button.click();
@@ -123,6 +135,7 @@ describe("<Wizard />", () => {
     const { container } = render(
       <Wizard
         title="test"
+        displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={state}
         initialValues={{ firstName: "lionel" }}
@@ -135,6 +148,7 @@ describe("<Wizard />", () => {
     const { container } = render(
       <Wizard
         title="test"
+        displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={initialState}
         Rules={() => <Rule key="key" />}
@@ -151,7 +165,12 @@ describe("<Wizard />", () => {
     };
 
     const { getByText } = render(
-      <Wizard title="test" stepReducer={stepReducer} initialState={state} />
+      <Wizard
+        title="test"
+        displayTitle="test H1"
+        stepReducer={stepReducer}
+        initialState={state}
+      />
     );
     const button = getByText(/Commencer/i);
     button.click();
@@ -167,7 +186,12 @@ describe("<Wizard />", () => {
     };
 
     const { getByText } = render(
-      <Wizard title="test" stepReducer={stepReducer} initialState={state} />
+      <Wizard
+        title="test"
+        displayTitle="test H1"
+        stepReducer={stepReducer}
+        initialState={state}
+      />
     );
     const button = getByText(/précédent/i);
     button.click();
@@ -191,6 +215,7 @@ describe("<Wizard />", () => {
     const { getByText, getByLabelText } = render(
       <Wizard
         title="test"
+        displayTitle="test H1"
         stepReducer={stepReducer}
         initialState={initialState}
         Rules={RulesAdditionalStep}

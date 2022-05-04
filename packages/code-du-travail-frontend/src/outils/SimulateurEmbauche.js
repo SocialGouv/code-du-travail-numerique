@@ -41,7 +41,7 @@ class SimulateurEmbauche extends React.PureComponent {
     const { simulator } = this.state;
     return (
       <Wrapper variant="main">
-        <PageTitle stripe="left">Salaire brut/net</PageTitle>
+        <PageTitle stripe="left">Calculer le salaire brut/net</PageTitle>
         <Alert>
           <p>
             Pour information, l’estimation du salaire net après impôt est basée

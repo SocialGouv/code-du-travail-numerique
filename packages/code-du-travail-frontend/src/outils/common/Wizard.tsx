@@ -20,12 +20,14 @@ type Props = {
   initialValues?: any;
   stepReducer?: any;
   title: string;
+  displayTitle: string;
 };
 
 function Wizard({
   initialState,
   initialValues = {},
   title,
+  displayTitle,
   icon,
   Rules = null,
   stepReducer = (step) => step,
@@ -142,7 +144,7 @@ function Wizard({
                   <Rules values={form.getState().values} dispatch={dispatch} />
                 )}
                 <WizardTitle
-                  title={title}
+                  title={displayTitle}
                   icon={icon}
                   duration={duration}
                   stepIndex={stepIndex}

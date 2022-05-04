@@ -6,12 +6,18 @@ import { initialState, stepReducer } from "./stepReducer";
 interface Props {
   icon: string;
   title: string;
+  displayTitle: string;
 }
 
-const SimulateurIndemnitePrecarite = ({ icon, title }: Props): JSX.Element => (
+const SimulateurIndemnitePrecarite = ({
+  icon,
+  title,
+  displayTitle,
+}: Props): JSX.Element => (
   <Wizard
     icon={icon}
     title={title}
+    displayTitle={displayTitle}
     duration="5 min"
     initialState={initialState}
     stepReducer={stepReducer}

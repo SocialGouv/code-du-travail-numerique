@@ -139,7 +139,10 @@ export const Results = ({ id, isSearch, items, query }) => {
   return (
     <Container narrow role="region" aria-label="Résultats de recherche">
       {isSearch ? (
-        <Heading id={id}>{`Résultats de recherche pour “${query}”`}</Heading>
+        <Heading
+          as="p"
+          id={id}
+        >{`Résultats de recherche pour “${query}”`}</Heading>
       ) : (
         <Title isFirst id={id}>
           {"Contenu correspondant"}

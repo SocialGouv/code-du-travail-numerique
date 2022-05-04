@@ -1800,7 +1800,7 @@ exports[`<Outils /> should render 1`] = `
                         <h2
                           class="c41"
                         >
-                          Indemnité de licenciement
+                          Calculer l'indemnité de licenciement
                         </h2>
                       </div>
                     </div>
@@ -1903,7 +1903,7 @@ exports[`<Outils /> should render 1`] = `
                         <h2
                           class="c41"
                         >
-                          Préavis de démission
+                          Calculer le préavis de démission
                         </h2>
                       </div>
                     </div>
@@ -1916,7 +1916,7 @@ exports[`<Outils /> should render 1`] = `
                         <p
                           class="c44"
                         >
-                          Calculez la durée de préavis à respecter en cas de démission
+                          Estimez la durée de préavis à respecter en cas de démission
                         </p>
                         <div
                           class="c45"
@@ -2014,7 +2014,7 @@ exports[`<Outils /> should render 1`] = `
                         <h2
                           class="c41"
                         >
-                          Salaire brut/net
+                          Calculer le salaire brut/net
                         </h2>
                       </div>
                     </div>
@@ -2027,7 +2027,7 @@ exports[`<Outils /> should render 1`] = `
                         <p
                           class="c44"
                         >
-                          Estimer le salaire : brut en net, net après impôt, calcul heures supplémentaires, coût total employeur
+                          Estimez le salaire : brut en net, net après impôt, calcul heures supplémentaires, coût total employeur
                         </p>
                         <div
                           class="c45"
@@ -2147,7 +2147,7 @@ exports[`<Outils /> should render 1`] = `
                         <h2
                           class="c41"
                         >
-                          Indemnité de précarité
+                          Calculer l'indemnité de précarité
                         </h2>
                       </div>
                     </div>
@@ -2253,7 +2253,7 @@ exports[`<Outils /> should render 1`] = `
                         <h2
                           class="c41"
                         >
-                          Préavis de licenciement
+                          Calculer le préavis de licenciement
                         </h2>
                       </div>
                     </div>
@@ -2266,7 +2266,7 @@ exports[`<Outils /> should render 1`] = `
                         <p
                           class="c44"
                         >
-                          Calculez la durée de préavis à respecter en cas de licenciement
+                          Estimez la durée de préavis à respecter en cas de licenciement
                         </p>
                         <div
                           class="c45"
@@ -2366,7 +2366,7 @@ exports[`<Outils /> should render 1`] = `
                         <h2
                           class="c41"
                         >
-                          Heures d'absence pour rechercher un emploi
+                          Calculer le nombre d'heures d'absence pour rechercher un emploi
                         </h2>
                       </div>
                     </div>
@@ -2379,7 +2379,7 @@ exports[`<Outils /> should render 1`] = `
                         <p
                           class="c44"
                         >
-                          Calculez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis
+                          Estimez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis
                         </p>
                         <div
                           class="c45"
@@ -2581,7 +2581,7 @@ exports[`<Outils /> should render 1`] = `
                         <h2
                           class="c41"
                         >
-                          Préavis de départ ou de mise à la retraite
+                          Calculer le préavis de départ à la retraite
                         </h2>
                       </div>
                     </div>
@@ -2594,7 +2594,7 @@ exports[`<Outils /> should render 1`] = `
                         <p
                           class="c44"
                         >
-                          Calculez la durée de préavis à respecter en cas de départ à la retraite ou de mise à la retraite
+                          Estimez la durée de préavis à respecter en cas de départ à la retraite ou de mise à la retraite
                         </p>
                         <div
                           class="c45"
