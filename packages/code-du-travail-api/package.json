@@ -18,8 +18,8 @@
     "dev": "nodemon --exec babel-node ./src/index.js --extensions \".ts,.js\"",
     "update-mock-data": "ES_INDEX_PREFIX=cdtn babel-node src/tests/fetch_mock_data.js",
     "pretest": "NODE_ENV=test babel-node src/tests/create_indexes.js --extensions \".ts,.js\"",
+    "test:search": "jest -t 'Search - Snapshot result'",
     "test": "ES_INDEX_PREFIX=cdtn_test jest",
-    "test:default": "jest",
     "test:update": "yarn pretest && ES_INDEX_PREFIX=cdtn_test jest --updateSnapshot",
     "clean": "rimraf dist && rimraf babel-dist"
   },
@@ -71,6 +71,7 @@
     "nodemon": "^2.0.12",
     "rimraf": "^3.0.2",
     "supertest": "^6.2.2",
+    "ts-node": "^10.7.0",
     "typescript": "^4.4.3"
   },
   "lint-staged": {

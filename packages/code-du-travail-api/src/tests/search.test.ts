@@ -4,8 +4,6 @@ import supertest from "supertest";
 
 import { app } from "..";
 
-const actualVersion = "v1";
-
 const mostSearches = [
   "3239", // popular
   "indemnités de licenciement",
@@ -27,6 +25,11 @@ const mostSearches = [
   "1596",
   "1597",
   "HCR",
+  "particulier employeur",
+  "particuliers employeurs",
+  "assistantes maternelles",
+  "assistant maternel",
+  "convention collective assistante maternelle",
 ];
 
 describe("Search - Snapshot result", () => {
@@ -57,8 +60,7 @@ describe("Search - Snapshot result", () => {
       source: r.source,
     }));
     fs.writeFileSync(
-      __dirname +
-        `/search_results/${actualVersion}/${search.replace(/\s/g, "_")}.json`,
+      __dirname + `/search_results/${search.replace(/\s/g, "_")}.json`,
       JSON.stringify(result, null, 2)
     );
     expect(res.status).toBe(200);
