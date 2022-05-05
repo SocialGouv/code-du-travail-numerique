@@ -1,12 +1,15 @@
 import { render } from "@testing-library/react";
-import React from "react";
 
 import { DureePreavisLicenciement } from "..";
 
 describe("<DureePreavisLicenciement />", () => {
   it("should render", () => {
     const { container } = render(
-      <DureePreavisLicenciement title="Simulateur de durée de préavis de licenciement" />
+      <DureePreavisLicenciement
+        title="Préavis de licenciement"
+        displayTitle="Calculer le préavis de licenciement"
+        icon=""
+      />
     );
     expect(container).toMatchSnapshot();
   });

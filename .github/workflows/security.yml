@@ -39,7 +39,7 @@ jobs:
         images: ["code-du-travail-frontend", "code-du-travail-api"]
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Build ${{ matrix.images }} from Dockerfile
         run: |
           docker build -t ghcr.io/socialgouv/cdtn/${{ matrix.images }}:sha-${{ github.sha }} .

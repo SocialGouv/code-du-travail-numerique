@@ -1,12 +1,16 @@
 import { render } from "@testing-library/react";
-import React from "react";
 
 import { CalculateurIndemnite } from "../";
 
 describe("<CalculateurIndemnite />", () => {
   it("should render", () => {
     const { container } = render(
-      <CalculateurIndemnite title="Simulateur d'indemnité de licenciement" />
+      <CalculateurIndemnite
+        title="Indemnité de licenciement"
+        displayTitle="Calculer l'indemnité de licenciement"
+        icon=""
+        publicodesRules={[]}
+      />
     );
     expect(container).toMatchSnapshot();
   });

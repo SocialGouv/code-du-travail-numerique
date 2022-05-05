@@ -9,7 +9,7 @@ Fonctionnalité: Outil - Salaire brut/net
   Scénario:
     Soit un utilisateur sur la page "/outils/simulateur-embauche"
 
-    Alors je vois "Salaire brut/net"
+    Alors je vois "Calculer le salaire brut/net"
 
     Quand je regarde dans l'iframe "#simulateurEmbauche"
     Alors je vois "Coût total"

@@ -6,7 +6,11 @@ import { HeuresRechercheEmploi } from "..";
 describe("<HeuresRechercheEmploi />", () => {
   it("should render", () => {
     const { container } = render(
-      <HeuresRechercheEmploi title="Heures pour recherche d'emploi" icon="" />
+      <HeuresRechercheEmploi
+        title="Heures d'absence pour rechercher un emploi"
+        displayTitle="Heures pour recherche d'emploi"
+        icon=""
+      />
     );
     expect(container).toMatchSnapshot();
   });
