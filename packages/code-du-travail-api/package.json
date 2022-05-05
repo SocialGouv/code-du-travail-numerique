@@ -18,9 +18,9 @@
     "dev": "nodemon --exec babel-node ./src/index.js --extensions \".ts,.js\"",
     "update-mock-data": "ES_INDEX_PREFIX=cdtn babel-node src/tests/fetch_mock_data.js",
     "pretest": "NODE_ENV=test babel-node src/tests/create_indexes.js --extensions \".ts,.js\"",
-    "test:search": "TEST_ONLY=search jest -t 'Search - Snapshot result'",
-    "test": "ES_INDEX_PREFIX=cdtn_test jest",
-    "test:update": "yarn pretest && ES_INDEX_PREFIX=cdtn_test jest --updateSnapshot",
+    "test:search": "TEST_ONLY=search jest -t 'Search - Snapshot result' --detectOpenHandles",
+    "test": "ES_INDEX_PREFIX=cdtn_test jest --detectOpenHandles",
+    "test:update": "yarn pretest && ES_INDEX_PREFIX=cdtn_test jest --updateSnapshot --detectOpenHandles",
     "clean": "rimraf dist && rimraf babel-dist"
   },
   "repository": {
