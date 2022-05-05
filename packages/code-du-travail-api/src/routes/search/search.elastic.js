@@ -47,7 +47,7 @@ function getSearchBody({ query, size, sources = [] }) {
                 {
                   match: {
                     "synonymes.french": {
-                      boost: 10,
+                      boost: 30,
                       query,
                     },
                   },

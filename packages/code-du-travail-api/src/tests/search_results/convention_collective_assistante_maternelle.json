@@ -1,5 +1,9 @@
 [
   {
+    "slug": "3239-particuliers-employeurs-et-emploi-a-domicile",
+    "source": "conventions_collectives"
+  },
+  {
     "slug": "recruter-un-assistant-maternel-les-obligations-a-respecter#Quels-sont-les-textes-applicables",
     "source": "fiches_ministere_travail"
   },
@@ -84,19 +88,15 @@
     "source": "fiches_ministere_travail"
   },
   {
+    "slug": "413-handicapes-etablissements-et-services-pour-les-personnes-inadaptees-et-han",
+    "source": "conventions_collectives"
+  },
+  {
     "slug": "les-aides-a-lemploi-dun-assistant-maternel#En-quoi-consiste-l-avantage-fiscal",
     "source": "fiches_ministere_travail"
   },
   {
     "slug": "rupture-dun-commun-accord-rupture-conventionnelle-collective",
     "source": "modeles_de_courriers"
-  },
-  {
-    "slug": "convention-collective",
-    "source": "fiches_service_public"
-  },
-  {
-    "slug": "conventions-collectives-nomenclatures#Liste-des-conventions-collectives-et-de-leur-code-IDCC",
-    "source": "fiches_ministere_travail"
   }
 ]

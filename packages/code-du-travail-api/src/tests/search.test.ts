@@ -51,18 +51,19 @@ describe("Search - Snapshot result", () => {
     expect(res.body).toStrictEqual({ message: "running" });
   });
 
-  it.each(mostSearches)("should return a result for %s", async (search) => {
-    const url = `/api/v1/search?q=${encodeURIComponent(search)}`;
-    const res = await request.get(url);
-    const documents = res.body.documents;
-    const result = documents.map((r: any) => ({
-      slug: r.slug,
-      source: r.source,
-    }));
-    fs.writeFileSync(
-      __dirname + `/search_results/${search.replace(/\s/g, "_")}.json`,
-      JSON.stringify(result, null, 2)
-    );
-    expect(res.status).toBe(200);
-  });
+  if (process.env.TEST_ONLY == "search")
+    it.each(mostSearches)("should return a result for %s", async (search) => {
+      const url = `/api/v1/search?q=${encodeURIComponent(search)}`;
+      const res = await request.get(url);
+      const documents = res.body.documents;
+      const result = documents.map((r: any) => ({
+        slug: r.slug,
+        source: r.source,
+      }));
+      fs.writeFileSync(
+        __dirname + `/search_results/${search.replace(/\s/g, "_")}.json`,
+        JSON.stringify(result, null, 2)
+      );
+      expect(res.status).toBe(200);
+    });
 });

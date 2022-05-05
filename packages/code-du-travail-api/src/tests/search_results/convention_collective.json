@@ -24,6 +24,10 @@
     "source": "fiches_ministere_travail"
   },
   {
+    "slug": "413-handicapes-etablissements-et-services-pour-les-personnes-inadaptees-et-han",
+    "source": "conventions_collectives"
+  },
+  {
     "slug": "rupture-conventionnelle-collective#Comment-la-rupture-conventionnelle-collective-est-elle-mise-en-oeuvre-nbsp",
     "source": "fiches_ministere_travail"
   },
@@ -94,9 +98,5 @@
   {
     "slug": "comment-determiner-lanciennete-du-salarie",
     "source": "contributions"
-  },
-  {
-    "slug": "recruter-un-assistant-maternel-les-obligations-a-respecter#Quels-sont-les-textes-applicables",
-    "source": "fiches_ministere_travail"
   }
 ]

@@ -5,7 +5,7 @@ Object {
   "articles": Array [],
   "documents": Array [
     Object {
-      "_score": 28.332262,
+      "_score": 28.0615,
       "algo": "fulltext",
       "breadcrumbs": Array [],
       "cdtnId": "647c224c9b",
@@ -62,7 +62,7 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 9.16725,
+      "_score": 38.16725,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -128,7 +128,7 @@ Object {
       "title": "Indemnité de licenciement",
     },
     Object {
-      "_score": 7.801688,
+      "_score": 36.80169,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -150,7 +150,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
     Object {
-      "_score": 6.9218006,
+      "_score": 35.9218,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": Array [
@@ -167,7 +167,7 @@ Object {
       "title": "Heures d'absence pour rechercher un emploi",
     },
     Object {
-      "_score": 2.6945395,
+      "_score": 31.694538,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -546,7 +546,7 @@ Object {
       "title": "Indemnité de licenciement",
     },
     Object {
-      "_score": 6.9218006,
+      "_score": 35.9218,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": Array [
@@ -563,7 +563,7 @@ Object {
       "title": "Heures d'absence pour rechercher un emploi",
     },
     Object {
-      "_score": 2.6945395,
+      "_score": 31.694538,
       "algo": "both",
       "breadcrumbs": Array [
         Object {
@@ -686,7 +686,7 @@ Object {
   ],
   "documents": Array [
     Object {
-      "_score": 28.600342,
+      "_score": 57.60034,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
@@ -707,7 +707,7 @@ Object {
       "title": "Certificat de travail",
     },
     Object {
-      "_score": 27.215055,
+      "_score": 56.215057,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
@@ -729,7 +729,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
     },
     Object {
-      "_score": 4.9326973,
+      "_score": 33.932697,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
@@ -751,7 +751,7 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
-      "_score": 4.5375824,
+      "_score": 33.537582,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
@@ -777,7 +777,7 @@ Object {
       "title": "Rupture de période d’essai à l’initiative de l’employeur",
     },
     Object {
-      "_score": 4.3883348,
+      "_score": 33.388336,
       "action": "Calculer",
       "algo": "fulltext",
       "breadcrumbs": Array [
@@ -799,7 +799,7 @@ Object {
       "title": "Préavis de démission",
     },
     Object {
-      "_score": 4.34879,
+      "_score": 33.34879,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {
@@ -825,7 +825,7 @@ Object {
       "title": "Demande de rendez-vous en vue d’une rupture conventionnelle",
     },
     Object {
-      "_score": 3.2518961,
+      "_score": 32.251896,
       "algo": "fulltext",
       "breadcrumbs": Array [
         Object {

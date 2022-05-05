@@ -4,6 +4,10 @@
     "source": "information"
   },
   {
+    "slug": "3239-particuliers-employeurs-et-emploi-a-domicile",
+    "source": "conventions_collectives"
+  },
+  {
     "slug": "recruter-un-assistant-maternel-les-obligations-a-respecter#Combien-d-enfants-peut-accueillir-un-assistant-maternel",
     "source": "fiches_ministere_travail"
   },
@@ -94,9 +98,5 @@
   {
     "slug": "cesu-declaratif-ou-cesu-prefinance-quelles-differences",
     "source": "fiches_service_public"
-  },
-  {
-    "slug": "les-aides-a-lemploi-dun-assistant-maternel",
-    "source": "fiches_ministere_travail"
   }
 ]

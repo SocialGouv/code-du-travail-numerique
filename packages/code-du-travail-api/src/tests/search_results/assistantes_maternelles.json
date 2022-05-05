@@ -4,6 +4,10 @@
     "source": "information"
   },
   {
+    "slug": "3239-particuliers-employeurs-et-emploi-a-domicile",
+    "source": "conventions_collectives"
+  },
+  {
     "slug": "recruter-un-assistant-maternel-les-obligations-a-respecter#Combien-d-enfants-peut-accueillir-un-assistant-maternel",
     "source": "fiches_ministere_travail"
   },
@@ -93,10 +97,6 @@
   },
   {
     "slug": "les-droits-et-obligations-des-salaries-du-particulier-employeur#Quels-droits-quelles-obligations",
-    "source": "fiches_ministere_travail"
-  },
-  {
-    "slug": "le-conge-parental-deducation#Peut-on-exercer-une-activite-professionnelle-suivre-une-formation-durant-nbsp",
     "source": "fiches_ministere_travail"
   }
 ]
