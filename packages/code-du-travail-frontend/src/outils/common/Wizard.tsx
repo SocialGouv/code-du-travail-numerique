@@ -20,12 +20,14 @@ type Props = {
   initialValues?: any;
   stepReducer?: any;
   title: string;
+  displayTitle: string;
 };
 
 function Wizard({
   initialState,
   initialValues = {},
   title,
+  displayTitle,
   icon,
   Rules = null,
   stepReducer = (step) => step,
@@ -46,9 +48,6 @@ function Wizard({
     if (node && stepIndex > 0) {
       node.focus();
     }
-    if (window) {
-      window.scrollTo(0, 0);
-    }
   });
 
   const prevStep = (values) => {
@@ -66,6 +65,7 @@ function Wizard({
       `click_previous_${title}`,
       state.steps[nextStepIndex].name,
     ]);
+    window?.scrollTo(0, 0);
   };
   const nextStep = (values) => {
     let nextStepIndex = stepIndex;
@@ -85,6 +85,7 @@ function Wizard({
       `view_step_${title}`,
       state.steps[nextStepIndex].name,
     ]);
+    window?.scrollTo(0, 0);
   };
 
   const previousVisible = stepIndex > 0;
@@ -143,7 +144,7 @@ function Wizard({
                   <Rules values={form.getState().values} dispatch={dispatch} />
                 )}
                 <WizardTitle
-                  title={title}
+                  title={displayTitle}
                   icon={icon}
                   duration={duration}
                   stepIndex={stepIndex}

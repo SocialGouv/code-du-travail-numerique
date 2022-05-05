@@ -673,11 +673,11 @@ exports[`<SearchResults/> should render results 1`] = `
     class="c0"
     role="region"
   >
-    <h3
+    <p
       class="c1"
     >
       Résultats de recherche pour “search test”
-    </h3>
+    </p>
     <ul
       class="c2"
     >
