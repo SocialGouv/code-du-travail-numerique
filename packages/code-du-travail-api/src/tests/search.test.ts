@@ -36,12 +36,12 @@ describe("Search - Snapshot result", () => {
   let server: any;
   let request: SuperTest<any>;
 
-  beforeEach(() => {
+  beforeAll(() => {
     server = app.listen(3000);
     request = supertest(server);
   });
 
-  afterEach(() => {
+  afterAll(() => {
     server.close();
   });
 
