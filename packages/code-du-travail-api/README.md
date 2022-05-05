@@ -65,9 +65,7 @@ $ curl http://localhost:1337/api/v1/version
 
 ### Local test elasticsearch
 
-1. Running locally an elasticsearch instance
-2. Remove `.skip` at line 35 of `src/test/search.test.ts`
-3. Run the command below
+Run the command below:
 
 ```sh
 yarn workspace @cdt/api test:search
