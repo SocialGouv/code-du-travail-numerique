@@ -53,7 +53,11 @@ const SimulatorDecorator = <FormValues,>({
       <Form<FormValues>
         initialValues={initialValues}
         onSubmit={onFormStepSubmit}
-        validate={formOptions?.validate}
+        validate={(values) => {
+          if (formOptions?.validate) {
+            return formOptions?.validate(values);
+          }
+        }}
         decorators={formOptions?.decorators}
         mutators={formOptions?.mutators}
       >

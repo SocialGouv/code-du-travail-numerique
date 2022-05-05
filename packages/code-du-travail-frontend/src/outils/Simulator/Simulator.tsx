@@ -55,6 +55,7 @@ const Simulator = <FormState, StepName extends string>({
         `view_step_${title}`,
         steps[nextStepIndex].name,
       ]);
+      window?.scrollTo(0, 0);
     }
   };
 
@@ -69,6 +70,7 @@ const Simulator = <FormState, StepName extends string>({
         `click_previous_${title}`,
         steps[previousStepIndex].name,
       ]);
+      window?.scrollTo(0, 0);
     } else {
       throw Error("Can't show the previous step with index less than 0");
     }
@@ -79,7 +81,7 @@ const Simulator = <FormState, StepName extends string>({
       title={{
         icon,
         title: displayTitle,
-        duration,
+        duration: currentStepIndex === 0 ? duration : undefined,
         hasNoMarginBottom: currentStep.options?.hasNoMarginBottom,
       }}
       navigation={{
@@ -97,6 +99,9 @@ const Simulator = <FormState, StepName extends string>({
       onFormStepSubmit={onNextStep}
       onFormStateUpdate={onFormValuesChange}
       renderStep={() => <Component />}
+      formOptions={{
+        legend: currentStep.options?.isForm ? currentStep.label : undefined,
+      }}
       options={{
         debug: debug,
         annotations: currentStep.options?.annotation,
