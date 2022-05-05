@@ -58,5 +58,5 @@ const EnterpriseSearchStep = ({
 export { EnterpriseSearchStep };
 
 const Section = styled(SectionUi)`
-  padding-top: ${theme.spacings.small};
+  padding-top: 0;
 `;
