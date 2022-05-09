@@ -60,7 +60,7 @@ const SeniorityStep = ({
 };
 
 const Small = styled.small`
-  font-size: ${theme.fonts.sizes.large};
+  font-size: ${theme.fonts.sizes.small};
 `;
 
 export default SeniorityStep;

@@ -1,8 +1,10 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import { SimulatorDecorator } from "../Components";
 import { printResult } from "../common/utils";
 import { Step, useSimulatorStore } from "./useSimulatorStore";
 import { matopush } from "../../piwik";
+
+const anchorRef = React.createRef<HTMLLIElement>();
 
 type Props<FormState, StepName extends string> = {
   duration?: string;
@@ -41,6 +43,15 @@ const Simulator = <FormState, StepName extends string>({
       })),
     [steps]
   );
+
+  useEffect(() => {
+    const node = anchorRef.current;
+    // We only focus on wizard after wizard start
+    // that way focus is correctly placed on the form
+    if (node && currentStepIndex > 0) {
+      node.focus();
+    }
+  }, [currentStepIndex]);
 
   const onNextStep = () => {
     const nextStepIndex = currentStepIndex + 1;
@@ -95,6 +106,7 @@ const Simulator = <FormState, StepName extends string>({
       steps={{
         steps: stepItems,
         activeIndex: currentStepIndex,
+        listRef: anchorRef,
       }}
       onFormStepSubmit={onNextStep}
       onFormStateUpdate={onFormValuesChange}

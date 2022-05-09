@@ -12,7 +12,7 @@ export type StepListProps = {
   listRef?: React.Ref<HTMLLIElement>;
 };
 
-const Index = ({
+const StepList = ({
   activeIndex,
   steps,
   width,
@@ -48,7 +48,7 @@ const Index = ({
   );
 };
 
-export default Index;
+export default StepList;
 
 const { box, spacings, breakpoints } = theme;
 

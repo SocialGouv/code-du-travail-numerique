@@ -135,7 +135,7 @@ export const Wizard = ({
         title={{
           icon,
           title: displayTitle,
-          duration,
+          duration: stepIndex === 0 ? duration : undefined,
           hasNoMarginBottom: steps[stepIndex].hasNoMarginBottom,
         }}
         navigation={{
