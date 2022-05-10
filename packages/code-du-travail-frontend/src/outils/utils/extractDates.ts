@@ -9,7 +9,8 @@ export enum Extra {
 
 export const convertPeriodToHumanDate = (
   input: string,
-  from: Date
+  from: Date,
+  withDay = true
 ): string | null => {
   let date: Date;
   let value = getValue(input);
@@ -28,7 +29,7 @@ export const convertPeriodToHumanDate = (
   ) {
     return null;
   }
-  return dateToString(date);
+  return dateToString(date, withDay);
 };
 
 export const getValue = (input: string): number | null => {
@@ -44,12 +45,20 @@ export const getValue = (input: string): number | null => {
 };
 
 export const getExtra = (input: string): Extra | null => {
+  let extraFound: Extra | null = null;
   for (var extra of Object.values(Extra)) {
     if (input.includes(extra)) {
-      return extra;
+      extraFound = extra;
     }
   }
-  return null;
+  if (!extraFound) {
+    const splitString = input.split(" ");
+    let firstElement = Number(splitString[0]);
+    if (isFloat(firstElement)) {
+      return Extra.MID;
+    }
+  }
+  return extraFound;
 };
 
 export const getUnit = (input: string): Unit | null => {
@@ -60,3 +69,7 @@ export const getUnit = (input: string): Unit | null => {
   }
   return null;
 };
+
+function isFloat(n) {
+  return Number(n) === n && n % 1 !== 0;
+}

@@ -4,7 +4,7 @@ import { SmallText } from "./stepStyles";
 import { dateToString } from "../../lib";
 import { convertPeriodToHumanDate, Extra, getExtra } from "../utils";
 
-const FROM_DATE = new Date("2022-04-23");
+const FROM_DATE = new Date("2021-04-23");
 
 type NoticeExampleProps = {
   simulator: Simulator;
@@ -27,6 +27,11 @@ export const NoticeExample = ({
   note,
 }: NoticeExampleProps): JSX.Element => {
   const periodCalculated = React.useMemo(
+    () => convertPeriodToHumanDate(period, fromDate, false),
+    [period, fromDate]
+  );
+
+  const periodCalculatedWithDay = React.useMemo(
     () => convertPeriodToHumanDate(period, fromDate),
     [period, fromDate]
   );
@@ -40,13 +45,13 @@ export const NoticeExample = ({
           Le préavis débute le jour où le salarié remet sa lettre de démission
           en main propre ou à la date de première présentation de la lettre
           recommandée, peu importe le jour de son retrait par l’employeur.
-          {periodCalculated && (
+          {periodCalculatedWithDay && (
             <>
               <SmallText as="i">
                 {" "}
                 Exemple : si l’employeur reçoit le courrier recommandé le{" "}
                 {dateToString(fromDate)} alors le salarié effectuera son dernier
-                jour dans l’entreprise le {periodCalculated}.
+                jour dans l’entreprise le {periodCalculatedWithDay}.
               </SmallText>
             </>
           )}
@@ -60,7 +65,7 @@ export const NoticeExample = ({
           notification du licenciement par lettre recommandée, peu importe le
           jour de son retrait par le salarié.
           <MorePrecision period={period} />
-          {periodCalculated && (
+          {periodCalculatedWithDay && periodCalculated && (
             <>
               <SmallText as="i">
                 {" "}

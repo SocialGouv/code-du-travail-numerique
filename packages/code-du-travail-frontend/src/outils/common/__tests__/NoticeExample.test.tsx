@@ -49,7 +49,6 @@ describe("<NoticeExample />", () => {
     ${"1 mois"}                   | ${/22 mai/}
     ${"6 mois"}                   | ${/22 octobre/}
     ${"2 jours"}                  | ${/23 avril/}
-    ${"1 jour"}                   | ${/22 avril/}
     ${"2 semaines"}               | ${/5 mai/}
     ${"15 jours"}                 | ${/6 mai/}
     ${"15 jours calendaires"}     | ${/6 mai/}
@@ -72,10 +71,10 @@ describe("<NoticeExample />", () => {
     period
     ${"blabla"}
     ${"1 moi"}
-    ${"2 jours ouvrés"}
     ${"2"}
     ${"blabla jours"}
     ${"Entre 1 et 3 mois"}
+    ${"1 jour"}
     ${"Durée fixée dans le contrat sans pouvoir être inférieure à 3 mois"}
   `("should not render an example for $period", ({ period }) => {
     const { getByText } = render(
