@@ -10,32 +10,33 @@ import {
 describe("convertPeriodToHumanDate", () => {
   it.each`
     period                        | fromDate                  | result
-    ${"1 jour"}                   | ${new Date("2022-01-14")} | ${"14 janvier"}
-    ${"2 jours"}                  | ${new Date("2022-01-14")} | ${"15 janvier"}
-    ${"7 jours"}                  | ${new Date("2022-01-14")} | ${"20 janvier"}
-    ${"1 mois"}                   | ${new Date("2022-01-14")} | ${"14 février"}
-    ${"2 mois"}                   | ${new Date("2022-01-14")} | ${"14 mars"}
-    ${"12 mois"}                  | ${new Date("2022-01-14")} | ${"14 janvier"}
-    ${"15 mois"}                  | ${new Date("2022-01-14")} | ${"14 avril"}
+    ${"1 jour"}                   | ${new Date("2022-01-14")} | ${null}
+    ${"2 jours"}                  | ${new Date("2022-01-14")} | ${"samedi 15 janvier"}
+    ${"7 jours"}                  | ${new Date("2022-01-14")} | ${"jeudi 20 janvier"}
+    ${"1 mois"}                   | ${new Date("2022-01-14")} | ${"lundi 14 février"}
+    ${"2 mois"}                   | ${new Date("2022-01-14")} | ${"lundi 14 mars"}
+    ${"12 mois"}                  | ${new Date("2022-01-14")} | ${"samedi 14 janvier"}
+    ${"15 mois"}                  | ${new Date("2022-01-14")} | ${"vendredi 14 avril"}
     ${"1 an"}                     | ${new Date("2022-01-14")} | ${null}
     ${"2 ans"}                    | ${new Date("2022-01-14")} | ${null}
-    ${"1 semaine"}                | ${new Date("2022-01-14")} | ${"20 janvier"}
-    ${"2 semaines"}               | ${new Date("2022-01-14")} | ${"27 janvier"}
-    ${"15 jours"}                 | ${new Date("2022-01-14")} | ${"28 janvier"}
-    ${"15 jours calendaires"}     | ${new Date("2022-01-14")} | ${"28 janvier"}
-    ${"14 jours"}                 | ${new Date("2022-01-14")} | ${"27 janvier"}
+    ${"1 semaine"}                | ${new Date("2022-01-14")} | ${"jeudi 20 janvier"}
+    ${"2 semaines"}               | ${new Date("2022-01-14")} | ${"jeudi 27 janvier"}
+    ${"15 jours"}                 | ${new Date("2022-01-14")} | ${"vendredi 28 janvier"}
+    ${"15 jours calendaires"}     | ${new Date("2022-01-14")} | ${"vendredi 28 janvier"}
+    ${"14 jours"}                 | ${new Date("2022-01-14")} | ${"jeudi 27 janvier"}
     ${"1 jour ouvré"}             | ${new Date("2022-01-14")} | ${null}
     ${"2 jours ouvrés"}           | ${new Date("2022-01-14")} | ${null}
     ${"3 jours ouvrés"}           | ${new Date("2022-01-14")} | ${null}
     ${"10 jours ouvrés"}          | ${new Date("2022-01-14")} | ${null}
-    ${"1 mois et demi"}           | ${new Date("2022-01-14")} | ${"28 février"}
-    ${"3 mois et demi"}           | ${new Date("2022-01-14")} | ${"28 avril"}
+    ${"1 mois et demi"}           | ${new Date("2022-01-14")} | ${"lundi 28 février"}
+    ${"1 mois et demi"}           | ${new Date("2022-01-07")} | ${"lundi 21 février"}
+    ${"3 mois et demi"}           | ${new Date("2022-01-14")} | ${"jeudi 28 avril"}
     ${"1 jour et demi"}           | ${new Date("2022-01-14")} | ${null}
     ${"2 jours et demi"}          | ${new Date("2022-01-14")} | ${null}
     ${"1 an et demi"}             | ${new Date("2022-01-14")} | ${null}
-    ${"1 mois de date à date"}    | ${new Date("2022-01-14")} | ${"14 février"}
-    ${"1 semaine de date à date"} | ${new Date("2022-01-14")} | ${"21 janvier"}
-    ${"7 jours calendaires"}      | ${new Date("2022-01-14")} | ${"20 janvier"}
+    ${"1 mois de date à date"}    | ${new Date("2022-01-14")} | ${"lundi 14 février"}
+    ${"1 semaine de date à date"} | ${new Date("2022-01-14")} | ${"vendredi 21 janvier"}
+    ${"7 jours calendaires"}      | ${new Date("2022-01-14")} | ${"jeudi 20 janvier"}
     ${"blabla"}                   | ${new Date("2022-01-14")} | ${null}
     ${"blabla jours"}             | ${new Date("2022-01-14")} | ${null}
   `(

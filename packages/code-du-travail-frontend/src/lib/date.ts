@@ -19,6 +19,26 @@ export enum Unit {
   MONTH = "mois",
 }
 
+export enum Day {
+  DIMANCHE = "dimanche",
+  LUNDI = "lundi",
+  MARDI = "mardi",
+  MERCREDI = "mercredi",
+  JEUDI = "jeudi",
+  VENDREDI = "vendredi",
+  SAMEDI = "samedi",
+}
+
+const days = [
+  Day.DIMANCHE,
+  Day.LUNDI,
+  Day.MARDI,
+  Day.MERCREDI,
+  Day.JEUDI,
+  Day.VENDREDI,
+  Day.SAMEDI,
+];
+
 export const convertDate = (
   date: Date,
   value: number,
@@ -52,7 +72,8 @@ export const addMonth = (date: Date, month: number): Date => {
 };
 
 export const dateToString = (date: Date): string => {
-  const day = date.getDate();
+  const day = date.getDay();
+  const num = date.getDate();
   const month = date.getMonth() + 1;
-  return `${day} ${Month[month].toString()}`;
+  return `${days[day]} ${num} ${Month[month].toString()}`;
 };

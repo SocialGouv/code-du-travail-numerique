@@ -121,9 +121,14 @@ const MorePrecision = ({ period }: { period: string }): JSX.Element => {
 const PrecisionOpenDay = (): JSX.Element => (
   <>
     <SmallText as="span">
-      Les jours ouvrés sont les jours effectivement travaillé dans une
+      Les jours ouvrés sont les jours effectivement travaillés dans une
       entreprise ou une administration. On en compte 5 par semaine.
       <br />
+    </SmallText>
+    <SmallText as="i">
+      Exemple : si les jours travaillés dans l&apos;entreprise sont du lundi au
+      vendredi et que l’employeur reçoit le courrier recommandé le mardi alors
+      le salarié effectuera son dernier jour dans l’entreprise le mercredi.
     </SmallText>
   </>
 );

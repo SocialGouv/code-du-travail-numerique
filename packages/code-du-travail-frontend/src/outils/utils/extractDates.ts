@@ -23,6 +23,7 @@ export const convertPeriodToHumanDate = (
     date = convertDate(date, 14, Unit.DAY);
   } else if (
     (extra === Extra.MID && unit !== Unit.MONTH) ||
+    (value === 0 && unit === Unit.DAY) ||
     extra === Extra.OPEN
   ) {
     return null;
