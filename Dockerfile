@@ -45,4 +45,6 @@ COPY --from=dist . /app/
 
 USER 1000
 
+RUN MKDIR /app/packages/code-du-travail-frontend/.next/cache/images
+
 CMD [ "yarn", "start"]
