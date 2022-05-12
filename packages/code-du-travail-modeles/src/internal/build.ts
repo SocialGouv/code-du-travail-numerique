@@ -33,6 +33,7 @@ function copyJSFile() {
     path.resolve(outDir, "index.d.ts")
   );
   fse.copySync(`${inDir}/utils`, `${outDir}/utils`);
+  fse.copySync(`${inDir}/publicodes`, `${outDir}/publicodes`);
 }
 
 function writeSupportedCCFile() {

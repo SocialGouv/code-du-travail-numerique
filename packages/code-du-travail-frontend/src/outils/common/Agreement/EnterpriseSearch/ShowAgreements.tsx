@@ -1,5 +1,5 @@
 import { formatIdcc } from "@cdt/data";
-import { InputRadio, Paragraph, Text } from "@socialgouv/cdtn-ui";
+import { InputRadio, Text } from "@socialgouv/cdtn-ui";
 import React, { useState } from "react";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
@@ -11,7 +11,7 @@ import { Question } from "../../Question";
 import { RadioContainer } from "../../stepStyles";
 import { required } from "../../validators";
 import { AGREEMENT_ID_NAME } from "../form-constants";
-import ShowAlert from "../ShowAlert";
+import ShowAlert from "../components/ShowAlert";
 import { AgreementSupportInfo } from "../types";
 
 type Props = {
