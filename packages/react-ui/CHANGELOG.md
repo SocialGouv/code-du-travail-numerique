@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.77.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.76.0...v4.77.0) (2022-05-12)
+
+
+### Bug Fixes
+
+* **simulator ui:** do not modify salary inputs on scroll event and do not scroll to top on change value in the form ([#4405](https://github.com/SocialGouv/code-du-travail-numerique/issues/4405)) ([e703962](https://github.com/SocialGouv/code-du-travail-numerique/commit/e7039624df38904fbd9b96250c60a205febbbb65))
+
+
+
+
+
 # [4.76.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.4...v4.76.0) (2022-04-27)
 
 

@@ -1,8 +1,6 @@
 import React from "react";
-
-import { Wizard } from "../common/Wizard";
-import { PublicodesProvider, PublicodesSimulator } from "../publicodes";
-import { initialState, stepReducer } from "./stepReducer";
+import { createPreavisRetraiteStore, PreavisRetraiteProvider } from "./state";
+import { PreavisRetraiteSimulator } from "./Components";
 
 interface Props {
   icon: string;
@@ -11,25 +9,21 @@ interface Props {
   publicodesRules: any;
 }
 
-const SimulateurPreavisRetraite = ({
+const DureePreavisRetraite = ({
   icon,
   title,
   displayTitle,
   publicodesRules,
 }: Props): JSX.Element => (
-  <PublicodesProvider
-    rules={publicodesRules}
-    simulator={PublicodesSimulator.PREAVIS_RETRAITE}
+  <PreavisRetraiteProvider
+    createStore={() => createPreavisRetraiteStore(publicodesRules, title)}
   >
-    <Wizard
+    <PreavisRetraiteSimulator
       icon={icon}
       title={title}
       displayTitle={displayTitle}
-      duration="5 min"
-      initialState={initialState}
-      stepReducer={stepReducer}
     />
-  </PublicodesProvider>
+  </PreavisRetraiteProvider>
 );
 
-export { SimulateurPreavisRetraite };
+export { DureePreavisRetraite };

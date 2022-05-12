@@ -1,6 +1,7 @@
 import { Input, InputDate, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import { Field } from "react-final-form";
+import { OnChange } from "react-final-form-listeners";
 import { UID } from "react-uid";
 import styled from "styled-components";
 
@@ -16,6 +17,7 @@ type Props = {
   validateOnChange?: boolean;
   tooltip?: Tooltip;
   placeholder?: string;
+  onChange?: (values?: unknown) => void;
 };
 
 const TextQuestion = ({
@@ -25,6 +27,7 @@ const TextQuestion = ({
   validate,
   validateOnChange = false,
   tooltip,
+  onChange,
   ...props
 }: Props): JSX.Element => {
   const InputComponent = inputType === "date" ? InputDate : Input;
@@ -71,6 +74,11 @@ const TextQuestion = ({
               )}
             />
           </QuestionWrapper>
+          <OnChange name={name}>
+            {(values) => {
+              onChange?.(values);
+            }}
+          </OnChange>
         </>
       )}
     </UID>

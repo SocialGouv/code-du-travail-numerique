@@ -1,8 +1,9 @@
 import { Paragraph } from "@socialgouv/cdtn-ui";
 import React from "react";
 
-import { reverseValues, RuleType, SituationElement } from "../publicodes";
+import { reverseValues } from "../publicodes";
 import { SectionTitle } from "./stepStyles";
+import { RuleType, SituationElement } from "@socialgouv/modeles-social";
 
 type PublicodesInputProps = {
   element: SituationElement;
