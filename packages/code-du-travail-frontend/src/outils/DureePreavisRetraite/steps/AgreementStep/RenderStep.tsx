@@ -1,12 +1,15 @@
 import React from "react";
-import {usePreavisRetraiteStore} from "../../state";
-import {useForm} from "react-final-form";
-import {OnChange} from "react-final-form-listeners";
-import {PreavisRetraiteFormState} from "../../form";
-import {SelectAgreement} from "../../../common";
-import {supportedCcn} from "@socialgouv/modeles-social";
-import {AGREEMENT_NAME, ROUTE_NAME} from "../../../common/Agreement/form-constants";
-import {AgreementSupportInfo} from "../../../common/Agreement/types";
+import { usePreavisRetraiteStore } from "../../state";
+import { useForm } from "react-final-form";
+import { OnChange } from "react-final-form-listeners";
+import { PreavisRetraiteFormState } from "../../form";
+import { SelectAgreement } from "../../../common";
+import { supportedCcn } from "@socialgouv/modeles-social";
+import {
+  AGREEMENT_NAME,
+  ROUTE_NAME,
+} from "../../../common/Agreement/form-constants";
+import { AgreementSupportInfo } from "../../../common/Agreement/types";
 
 export const getSupportedCC = (): AgreementSupportInfo[] =>
   supportedCcn.map((item) => ({
@@ -15,7 +18,7 @@ export const getSupportedCC = (): AgreementSupportInfo[] =>
   }));
 
 const RenderAgreementStep = (): JSX.Element => {
-  const {title, onChange} = usePreavisRetraiteStore((state) => ({
+  const { title, onChange } = usePreavisRetraiteStore((state) => ({
     title: state.title,
     onChange: state.onAgreementChange,
   }));
@@ -30,7 +33,11 @@ const RenderAgreementStep = (): JSX.Element => {
       </OnChange>
       <OnChange name={AGREEMENT_NAME}>
         {(values, _previous) => {
-          onChange(form);
+          // Agreement change is called when step is shown (inherited behaviour from the Component)
+          // We need to add a check to call onChange only when the value has changed
+          if (_previous === "" || values.id !== _previous.id) {
+            onChange(form);
+          }
         }}
       </OnChange>
       <SelectAgreement
