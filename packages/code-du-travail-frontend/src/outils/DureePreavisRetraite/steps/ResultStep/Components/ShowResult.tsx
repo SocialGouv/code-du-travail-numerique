@@ -4,8 +4,8 @@ import {
 } from "@socialgouv/modeles-social";
 import React from "react";
 
-import { NoticeExample, Simulator } from "../../../common/NoticeExample";
-import { NoticeNote } from "../../../common/NoticeNote";
+import { NoticeExample, Simulator } from "../../../../common/NoticeExample";
+import { NoticeNote } from "../../../../common/NoticeNote";
 import {
   HighlightResult,
   SectionTitle,
@@ -52,10 +52,9 @@ const ShowResult: React.FC<Props> = ({
           ) : (
             <>il n’y a pas de préavis à effectuer</>
           )}
-          <NoticeNote numberOfElements={1 + notifications.length} isList />
+          {notifications.length > 0 ? <sup>*</sup> : ""}
         </HighlightResult>
       </p>
-
       <NoticeExample
         note={
           <NoticeNote
@@ -68,7 +67,7 @@ const ShowResult: React.FC<Props> = ({
             ? Simulator.PREAVIS_MISE_RETRAITE
             : Simulator.PREAVIS_DEPART_RETRAITE
         }
-        period={`${publicodesResult.value} ${publicodesResult.unit}`}
+        period={`${result.value} ${result.unit}`}
       />
       {notifications.length > 0 && (
         <SmallText>
