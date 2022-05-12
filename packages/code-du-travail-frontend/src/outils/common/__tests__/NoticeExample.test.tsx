@@ -12,10 +12,10 @@ describe("<NoticeExample />", () => {
   `(
     "should render a precision for simulator $simulator",
     ({ simulator, expected }) => {
-      const { getByText } = render(
+      const { queryByText } = render(
         <NoticeExample simulator={simulator} period={"1 mois"} />
       );
-      expect(getByText(expected)).toBeInTheDocument();
+      expect(queryByText(expected)).toBeInTheDocument();
     }
   );
 
@@ -24,10 +24,10 @@ describe("<NoticeExample />", () => {
     ${Simulator.PREAVIS_DEMISSION}
     ${Simulator.PREAVIS_LICENCIEMENT}
   `("should render an example for simulator $simulator", ({ simulator }) => {
-    const { getByText } = render(
+    const { queryByText } = render(
       <NoticeExample simulator={simulator} period={"1 mois"} />
     );
-    expect(getByText(/Exemple/)).toBeInTheDocument();
+    expect(queryByText(/Exemple/)).toBeInTheDocument();
   });
 
   it.each`
@@ -37,10 +37,10 @@ describe("<NoticeExample />", () => {
   `(
     "should not render an example for simulator $simulator",
     ({ simulator }) => {
-      const { getByText } = render(
+      const { queryByText } = render(
         <NoticeExample simulator={simulator} period={"1 mois"} />
       );
-      expect(() => getByText(/Exemple/)).toThrow("Unable to find an element");
+      expect(queryByText(/Exemple/)).toBeNull();
     }
   );
 
@@ -57,14 +57,14 @@ describe("<NoticeExample />", () => {
     ${"1 semaine de date à date"} | ${/29 avril/}
     ${"1 mois et demi"}           | ${/5 juin/}
   `("should render a precision for $period", ({ period, expected }) => {
-    const { getByText } = render(
+    const { queryByText } = render(
       <NoticeExample
-        simulator={Simulator.PREAVIS_DEMISSION}
+        simulator={Simulator.PREAVIS_LICENCIEMENT}
         period={period}
         fromDate={new Date("2022-04-22")}
       />
     );
-    expect(getByText(expected)).toBeInTheDocument();
+    expect(queryByText(expected)).toBeInTheDocument();
   });
 
   it.each`
@@ -77,14 +77,14 @@ describe("<NoticeExample />", () => {
     ${"1 jour"}
     ${"Durée fixée dans le contrat sans pouvoir être inférieure à 3 mois"}
   `("should not render an example for $period", ({ period }) => {
-    const { getByText } = render(
+    const { queryByText } = render(
       <NoticeExample
         simulator={Simulator.PREAVIS_DEMISSION}
         period={period}
         fromDate={new Date("2022-04-22")}
       />
     );
-    expect(() => getByText(/Exemple/)).toThrow("Unable to find an element");
+    expect(queryByText(/Exemple/)).toBeNull();
   });
 
   it.each`
@@ -93,14 +93,14 @@ describe("<NoticeExample />", () => {
     ${"2 jours ouvrés"}      | ${/On en compte 5 par semaine/}
     ${"7 jours calendaires"} | ${/du 1er janvier au 31 décembre/}
   `("should render a precision for $period", ({ period, expected }) => {
-    const { getByText } = render(
+    const { queryByText } = render(
       <NoticeExample
         simulator={Simulator.PREAVIS_DEMISSION}
         period={period}
         fromDate={new Date("2022-04-22")}
       />
     );
-    expect(getByText(expected)).toBeInTheDocument();
+    expect(queryByText(expected)).toBeInTheDocument();
   });
 
   it.each`
@@ -113,18 +113,34 @@ describe("<NoticeExample />", () => {
     ${"Entre 1 et 3 mois"}
     ${"Durée fixée dans le contrat sans pouvoir être inférieure à 3 mois"}
   `("should not render a precision for $period", ({ period }) => {
-    const { getByText } = render(
+    const { queryByText } = render(
       <NoticeExample
         simulator={Simulator.PREAVIS_DEMISSION}
         period={period}
         fromDate={new Date("2022-04-22")}
       />
     );
-    expect(() => getByText(/On en compte 5 par semaine/)).toThrow(
-      "Unable to find an element"
+    expect(queryByText(/On en compte 5 par semaine/)).toBeNull();
+    expect(queryByText(/du 1er janvier au 31 décembre/)).toBeNull();
+  });
+
+  it("should render an example an other example", () => {
+    const { queryByText } = render(
+      <NoticeExample
+        simulator={Simulator.PREAVIS_DEMISSION}
+        period={"1 mois"}
+      />
     );
-    expect(() => getByText(/du 1er janvier au 31 décembre/)).toThrow(
-      "Unable to find an element"
+    expect(queryByText(/précédent/)).toBeInTheDocument();
+  });
+
+  it("should not render an example an other example", () => {
+    const { queryByText } = render(
+      <NoticeExample
+        simulator={Simulator.PREAVIS_DEMISSION}
+        period={"1 jour"}
+      />
     );
+    expect(queryByText(/précédent/)).toBeNull();
   });
 });

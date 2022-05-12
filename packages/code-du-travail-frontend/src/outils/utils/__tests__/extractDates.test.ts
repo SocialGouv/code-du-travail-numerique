@@ -28,6 +28,7 @@ describe("extractDates", () => {
       ${"1 jour ouvré"}             | ${new Date("2022-01-14")} | ${null}
       ${"2 jours ouvrés"}           | ${new Date("2022-01-14")} | ${null}
       ${"3 jours ouvrés"}           | ${new Date("2022-01-14")} | ${null}
+      ${"3 jour ouvré"}             | ${new Date("2022-01-14")} | ${null}
       ${"10 jours ouvrés"}          | ${new Date("2022-01-14")} | ${null}
       ${"1 mois et demi"}           | ${new Date("2022-01-14")} | ${"lundi 28 février"}
       ${"1 mois et demi"}           | ${new Date("2022-01-07")} | ${"lundi 21 février"}
@@ -45,7 +46,7 @@ describe("extractDates", () => {
     `(
       "should return $result for $period from $fromDate",
       ({ period, fromDate, result }) => {
-        expect(convertPeriodToHumanDate(period, fromDate)).toBe(result);
+        expect(convertPeriodToHumanDate(period, fromDate, true)).toBe(result);
       }
     );
   });

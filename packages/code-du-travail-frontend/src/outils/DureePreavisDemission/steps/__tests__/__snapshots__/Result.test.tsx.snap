@@ -222,10 +222,18 @@ exports[`<StepResult /> should render CC answer 1`] = `
        
       Exemple : si l’employeur reçoit le courrier recommandé le
        
-      lundi 9 mai
+      mardi 5 avril
        alors le salarié effectuera son dernier jour dans l’entreprise le 
-      samedi 9 juillet
+      5 juin
       .
+      <span
+        class="c4"
+      >
+         
+        Si le 
+        5 juin
+         tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvré précédent.
+      </span>
     </i>
   </p>
   <div>

@@ -10,7 +10,7 @@ export enum Extra {
 export const convertPeriodToHumanDate = (
   input: string,
   from: Date,
-  withDay = true
+  withDay = false
 ): string | null => {
   let date: Date;
   let value = getValue(input);
@@ -23,9 +23,9 @@ export const convertPeriodToHumanDate = (
   if (extra === Extra.MID && unit === Unit.MONTH) {
     date = convertDate(date, 14, Unit.DAY);
   } else if (
-    (extra === Extra.MID && unit !== Unit.MONTH) ||
-    (value === 0 && unit === Unit.DAY) ||
-    extra === Extra.OPEN
+    (extra === Extra.MID && unit !== Unit.MONTH) || // 1 an et demi / 1 mois et demi
+    (value === 0 && unit === Unit.DAY) || // 1 jour
+    extra === Extra.OPEN // x jours ouvrés
   ) {
     return null;
   }
