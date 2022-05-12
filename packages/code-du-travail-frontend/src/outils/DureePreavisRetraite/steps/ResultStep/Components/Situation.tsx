@@ -46,7 +46,7 @@ const Situation: React.FC<Props> = ({
       content.infos &&
       content.infos["contrat salarié - travailleur handicapé"] === "oui"
     ) {
-      if (content.origin?.isRetirementMandatory) {
+      if (content.origin?.isRetirementMandatory === "oui") {
         if (
           content.ccn &&
           content.ccn.selected &&
