@@ -592,7 +592,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
        
       Exemple : si le salarié reçoit le courrier recommandé le
        
-      mardi 5 avril
+      5 avril
        alors il effectuera son dernier jour dans l’entreprise le 
       5 mai
       . Si le 
@@ -1290,7 +1290,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
        
       Exemple : si le salarié reçoit le courrier recommandé le
        
-      mardi 5 avril
+      5 avril
        alors il effectuera son dernier jour dans l’entreprise le 
       5 juin
       . Si le 
@@ -1648,7 +1648,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
        
       Exemple : si le salarié reçoit le courrier recommandé le
        
-      mardi 5 avril
+      5 avril
        alors il effectuera son dernier jour dans l’entreprise le 
       5 juin
       . Si le 

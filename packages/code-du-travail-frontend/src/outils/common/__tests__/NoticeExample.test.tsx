@@ -55,7 +55,7 @@ describe("<NoticeExample />", () => {
     ${"1 semaine"}                | ${/28 avril/}
     ${"7 jours calendaires"}      | ${/28 avril/}
     ${"1 semaine de date à date"} | ${/29 avril/}
-    ${"1 mois et demi"}           | ${/5 juin/}
+    ${"1 mois et demi"}           | ${/6 juin/}
   `("should render a precision for $period", ({ period, expected }) => {
     const { queryByText } = render(
       <NoticeExample
