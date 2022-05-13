@@ -71,7 +71,7 @@ export const addMonth = (date: Date, month: number): Date => {
   return newDate;
 };
 
-export const dateToString = (date: Date, withDay = true): string => {
+export const dateToString = (date: Date, withDay = false): string => {
   const day = date.getDay();
   const num = date.getDate();
   const month = date.getMonth() + 1;

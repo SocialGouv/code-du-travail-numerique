@@ -21,11 +21,10 @@ export const convertPeriodToHumanDate = (
   if (unit === Unit.DAY && extra !== Extra.FROM_TO) value--;
   date = convertDate(from, value, unit, !extra);
   if (extra === Extra.MID && unit === Unit.MONTH) {
-    date = convertDate(date, 14, Unit.DAY);
+    date = convertDate(date, 15, Unit.DAY);
   } else if (
     (extra === Extra.MID && unit !== Unit.MONTH) || // 1 an et demi / 1 mois et demi
-    (value === 0 && unit === Unit.DAY) || // 1 jour
-    extra === Extra.OPEN // x jours ouvrés
+    (value === 0 && unit === Unit.DAY) // 1 jour
   ) {
     return null;
   }
