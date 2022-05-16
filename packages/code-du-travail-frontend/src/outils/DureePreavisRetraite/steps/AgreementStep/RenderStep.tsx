@@ -10,6 +10,7 @@ import {
   ROUTE_NAME,
 } from "../../../common/Agreement/form-constants";
 import { AgreementSupportInfo } from "../../../common/Agreement/types";
+import { Agreement } from "../../../../conventions/Search/api/type";
 
 export const getSupportedCC = (): AgreementSupportInfo[] =>
   supportedCcn.map((item) => ({
@@ -28,15 +29,15 @@ const RenderAgreementStep = (): JSX.Element => {
     <>
       <OnChange name={ROUTE_NAME}>
         {(values, _previous) => {
-          onChange(form);
+          onChange(null, form.getState().values.ccn?.selected ?? null, form);
         }}
       </OnChange>
       <OnChange name={AGREEMENT_NAME}>
-        {(values, _previous) => {
-          // Agreement change is called when step is shown (inherited behaviour from the Component)
-          // We need to add a check to call onChange only when the value has changed
-          if (_previous === "" || values.id !== _previous.id) {
-            onChange(form);
+        {(values: Agreement | null, _previous: Agreement | "" | null) => {
+          if (_previous === "") {
+            onChange(values, null, form);
+          } else {
+            onChange(values, _previous, form);
           }
         }}
       </OnChange>

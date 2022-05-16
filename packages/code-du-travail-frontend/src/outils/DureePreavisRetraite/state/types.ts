@@ -6,6 +6,7 @@ import { Publicodes } from "@socialgouv/modeles-social/bin";
 import { PublicodesPreavisRetraiteResult } from "@socialgouv/modeles-social/bin/publicodes/types";
 import { Step } from "../../Simulator";
 import { StepName } from "../steps";
+import { Agreement } from "../../../conventions/Search/api/type";
 
 export type PreavisRetraiteState = {
   title: string;
@@ -33,7 +34,11 @@ export type PreavisRetraiteActions = {
   onStepChange: (oldStep: Step<StepName>, newStep: Step<StepName>) => void;
   onFormValuesChange: (values: PreavisRetraiteFormState) => void;
   onOriginChange: (type: Origin) => void;
-  onAgreementChange: (form: FormApi) => void;
+  onAgreementChange: (
+    newValue: Agreement | null,
+    oldValue: Agreement | null,
+    form: FormApi
+  ) => void;
   onInformationChange: (name: string, form: FormApi) => void;
   onSeniorityChange: (form: FormApi) => void;
 };
