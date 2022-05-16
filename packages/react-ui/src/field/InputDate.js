@@ -70,6 +70,7 @@ export const InputDate = ({ value, invalid, onChange, ...props }) => {
         {...props}
       />
       <DatePickerInputDate
+        aria-disabled="true"
         type="date"
         min="1900-01-01"
         max="2100-01-01"
