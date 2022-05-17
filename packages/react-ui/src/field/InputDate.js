@@ -103,8 +103,6 @@ const StyledWrapper = styled.div`
   box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
 
   border: 2px solid transparent;
-  border-color: ${({ invalid, theme }) =>
-    invalid ? theme.error : "transparent"};
   border-radius: ${box.borderRadius};
   border-color: ${({ isFocus, isValid, theme }) =>
     isFocus ? theme.secondary : !isValid ? theme.error : "transparent"};
