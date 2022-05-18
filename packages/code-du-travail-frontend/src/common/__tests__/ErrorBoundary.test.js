@@ -48,15 +48,7 @@ describe("Error Boundary", () => {
         <Child />
       </ErrorBoundary>
     );
-    expect(container).toMatchInlineSnapshot(
-      `
-<div>
-  <i>
-    widget non disponible
-  </i>
-</div>
-`
-    );
+    expect(container.includes("Désolé, une erreur s’est produite")).toBeTruthy;
     expect(topLevelErrors.length).toBe(1);
   });
 });
