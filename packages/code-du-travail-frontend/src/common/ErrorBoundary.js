@@ -1,6 +1,8 @@
 import * as Sentry from "@sentry/nextjs";
+import { Button, Container, Section } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
+import styled from "styled-components";
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -17,8 +19,19 @@ class ErrorBoundary extends React.Component {
   }
 
   render() {
+    console.log("render", this.state);
     if (this.state.hasError) {
-      return <i>{this.props.message}</i>;
+      return (
+        <CenteredContainer>
+          <h1>Désolé, une erreur s’est produite…</h1>
+          <p>Notre équipe technique a été informée et interviendra sous peu.</p>
+          <Section>
+            <Button variant="primary" as="a" href="/">
+              Revenir à la page d’accueil
+            </Button>
+          </Section>
+        </CenteredContainer>
+      );
     }
 
     return this.props.children;
@@ -35,3 +48,8 @@ ErrorBoundary.defaultProps = {
 };
 
 export { ErrorBoundary };
+
+const CenteredContainer = styled(Container)`
+  margin-top: 2em;
+  text-align: center;
+`;
