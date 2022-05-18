@@ -19,7 +19,6 @@ class ErrorBoundary extends React.Component {
   }
 
   render() {
-    console.log("render", this.state);
     if (this.state.hasError) {
       return (
         <CenteredContainer>
