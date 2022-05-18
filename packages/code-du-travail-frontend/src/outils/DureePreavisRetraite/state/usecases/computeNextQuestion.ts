@@ -15,12 +15,12 @@ export const getNextQuestion = (
   const nextQuestion = missingArgs
     .filter((item) => !excludedRules.includes(item.name))
     .slice(0, 1)
-    .map((item): Question => {
-      return {
+    .map(
+      (item): Question => ({
         name: item.name,
         rule: item.rawNode,
-      };
-    });
+      })
+    );
   if (!currentQuestions) {
     return nextQuestion;
   }
