@@ -40,7 +40,23 @@ export const InputDate = ({ value, invalid, onChange, ...props }) => {
     if (onChange) onChange(newValue);
   };
 
-  const onClickPicker = () => {};
+  const onChangeDatePicker = (event) => {
+    const date = event.target.value;
+    const realDate = date.split("-");
+    const year = realDate[0] ?? "";
+    const month = realDate[1] ?? "";
+    const day = realDate[2] ?? "";
+    const newValue = `${day}/${month}/${year}`;
+    setDate(newValue);
+  };
+
+  const formatDate = () => {
+    const splitParts = date.split("/");
+    const day = splitParts[0] ?? "";
+    const month = splitParts[1] ?? "";
+    const year = splitParts[2] ?? "";
+    return `${year}-${month}-${day}`;
+  };
 
   return (
     <StyledWrapper isFocus={isFocus} isValid={isValid}>
@@ -53,8 +69,20 @@ export const InputDate = ({ value, invalid, onChange, ...props }) => {
         onBlur={() => setIsFocus(false)}
         {...props}
       />
-      <StyledDiv onClick={onClickPicker}>
-        <SvgDatePicker width="100%" height="100%" />
+      <StyledDiv>
+        <StyledDateWrapper>
+          <SvgDatePicker width="100%" height="100%" />
+        </StyledDateWrapper>
+        <StyledDatePicker
+          type="date"
+          aria-disabled={!isValid}
+          tabIndex={-1}
+          min="1900-01-01"
+          max="2100-01-01"
+          maxlength="11"
+          value={formatDate()}
+          onChange={onChangeDatePicker}
+        />
       </StyledDiv>
     </StyledWrapper>
   );
@@ -116,12 +144,34 @@ const StyledInput = styled.input`
 `;
 
 const StyledDiv = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   width: 40px;
   height: 100%;
+`;
+
+const StyledDatePicker = styled.input`
+  opacity: 1;
+  cursor: pointer;
+  width: fit-content;
+
+  &::-webkit-calendar-picker-indicator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+`;
+
+const StyledDateWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 `;
 
 const SvgDatePicker = (props) => (
