@@ -154,7 +154,7 @@ const StyledDiv = styled.div`
 `;
 
 const StyledDatePicker = styled.input`
-  opacity: 1;
+  opacity: 0;
   cursor: pointer;
   width: fit-content;
 
