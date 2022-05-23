@@ -73,7 +73,7 @@ function StepAnciennete({ form }) {
         label="Quelle est la date d’entrée dans l’entreprise&nbsp;?"
         inputType="date"
         validate={isDate}
-        placeholder=" jj/mm/yyyy" // placeholder for safari desktop which does not support input type date
+        placeholder=" jj/mm/aaaa" // placeholder for safari desktop which does not support input type date
       />
       <TextQuestion
         name="dateNotification"
@@ -81,7 +81,7 @@ function StepAnciennete({ form }) {
         inputType="date"
         validate={isDate}
         validateOnChange
-        placeholder=" jj/mm/yyyy" // placeholder for safari desktop which does not support input type date
+        placeholder=" jj/mm/aaaa" // placeholder for safari desktop which does not support input type date
       />
       <TextQuestion
         name="dateSortie"
@@ -89,7 +89,7 @@ function StepAnciennete({ form }) {
         inputType="date"
         validate={isDate}
         validateOnChange
-        placeholder=" jj/mm/yyyy" // placeholder for safari desktop which does not support input type date
+        placeholder=" jj/mm/aaaa" // placeholder for safari desktop which does not support input type date
       />
       <ErrorComputedField name="anciennete" />
       <SectionTitle>Période d’absence prolongée</SectionTitle>

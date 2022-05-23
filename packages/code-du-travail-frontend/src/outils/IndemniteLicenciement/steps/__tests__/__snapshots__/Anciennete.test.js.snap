@@ -279,7 +279,7 @@ exports[`<Anciennete /> should render 1`] = `
           class="c6"
           id="1"
           name="dateEntree"
-          placeholder=" jj/mm/yyyy"
+          placeholder=" jj/mm/aaaa"
           value=""
         />
         <div
@@ -340,7 +340,7 @@ exports[`<Anciennete /> should render 1`] = `
           class="c6"
           id="2"
           name="dateNotification"
-          placeholder=" jj/mm/yyyy"
+          placeholder=" jj/mm/aaaa"
           value=""
         />
         <div
@@ -401,7 +401,7 @@ exports[`<Anciennete /> should render 1`] = `
           class="c6"
           id="3"
           name="dateSortie"
-          placeholder=" jj/mm/yyyy"
+          placeholder=" jj/mm/aaaa"
           value=""
         />
         <div

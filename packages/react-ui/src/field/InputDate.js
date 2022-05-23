@@ -11,6 +11,8 @@ export const InputDate = ({ value, invalid, onChange, ...props }) => {
   const [isFocus, setIsFocus] = React.useState(false);
 
   const onChangeDate = (event) => {
+    const currentSelectionStart = event.target.selectionStart;
+    const currentSelectionEnd = event.target.selectionEnd;
     const value = event.target.value;
     const inputType = event.nativeEvent.inputType;
     if (inputType === "deleteContentBackward") {
@@ -18,26 +20,26 @@ export const InputDate = ({ value, invalid, onChange, ...props }) => {
       return;
     }
     const onlyNumbers = value.replace(/\D/g, "");
-    const lastValue = onlyNumbers[onlyNumbers.length - 1] ?? "";
-    const newValue = value.slice(0, -1) + lastValue;
-    if (newValue.length === 2 || newValue.length === 5) {
-      setDate(newValue + "/");
-    } else if (newValue.length <= 10) {
+    if (onlyNumbers.length <= 8) {
+      let newValue = "";
+      for (let i = 0; i < onlyNumbers.length; i++) {
+        if (i === 2 || i === 4) {
+          newValue += "/";
+        }
+        newValue += onlyNumbers[i];
+      }
       setDate(newValue);
+      setIsValid(/^\d{2}\/\d{2}\/\d{4}$/.test(newValue));
+      if (onChange) onChange(newValue);
+      // hack pour que le cursor ne se déplace pas si on édite le champ
+      setTimeout(() => {
+        if (currentSelectionEnd < newValue.length - 1)
+          event.target.setSelectionRange(
+            currentSelectionStart,
+            currentSelectionEnd
+          );
+      }, 0);
     }
-    if (newValue.length <= 10) {
-      const splitParts = newValue.split("/");
-      const day = isNaN(Number(splitParts[0])) ? null : Number(splitParts[0]);
-      const month = isNaN(Number(splitParts[1])) ? null : Number(splitParts[1]);
-      const year = isNaN(Number(splitParts[2])) ? null : Number(splitParts[2]);
-      const isYearValid = year && year >= 1900 && year <= 2100;
-      const isMonthValid = month && month >= 1 && month <= 12;
-      const isDayValid = day && day >= 1 && day <= 31;
-      const isValidDate = /^\d{2}\/\d{2}\/\d{4}$/.test(newValue);
-      const isValid = isYearValid && isMonthValid && isDayValid && isValidDate;
-      setIsValid(isValid);
-    }
-    if (onChange) onChange(newValue);
   };
 
   const onChangeDatePicker = (event) => {
