@@ -44,17 +44,17 @@ Fonctionnalité: Outil - Indemnité de licenciement
     Alors je vois que bouton "Suivant" est désactivé
     Alors je vois "La date est invalide"
 
-    Quand je renseigne "01/01/2000" dans le champ "la date d’entrée"
+    Quand je renseigne "01012000" dans le champ "la date d’entrée"
     Alors je ne vois pas "La date est invalide"
 
-    Quand je renseigne "01/01/1990" dans le champ "la date de notification"
+    Quand je renseigne "01011990" dans le champ "la date de notification"
     Alors je vois "La date de notification doit se situer après la date d’entrée"
-    Quand je renseigne "01/01/2022" dans le champ "la date de notification"
+    Quand je renseigne "01012022" dans le champ "la date de notification"
     Alors je ne vois pas "La date de notification doit se situer après la date d’entrée"
 
-    Quand je renseigne "01/01/2000" dans le champ "la date de sortie"
+    Quand je renseigne "01012000" dans le champ "la date de sortie"
     Alors je vois "La date de notification doit se situer avant la date de sortie"
-    Quand je renseigne "01/01/2022" dans le champ "la date de sortie"
+    Quand je renseigne "01012022" dans le champ "la date de sortie"
     Alors je ne vois pas "La date de notification doit se situer avant la date de sortie"
 
 

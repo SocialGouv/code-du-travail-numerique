@@ -48,6 +48,8 @@ export const InputDate = ({ value, invalid, onChange, ...props }) => {
     const day = realDate[2] ?? "";
     const newValue = `${day}/${month}/${year}`;
     setDate(newValue);
+    setIsValid(true);
+    if (onChange) onChange(newValue);
   };
 
   const formatDate = () => {
