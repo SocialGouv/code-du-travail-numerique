@@ -6,7 +6,6 @@ import {
 import { initialState } from "../../preavisRetraiteStore";
 import { MissingArgs } from "@socialgouv/modeles-social";
 import { computeNextQuestion } from "../index";
-import { UpdateFormValues } from "../../utils";
 
 describe("computeNextQuestion", () => {
   const missing1: MissingArgs = {
@@ -43,9 +42,83 @@ describe("computeNextQuestion", () => {
     rule: missing3.rawNode,
   };
 
-  describe("l'utilisateur répond à la dernière question", () => {
-    const updateFormValues: UpdateFormValues = () => {};
-    const mockRemoveQuestionFromForm = jest.fn(updateFormValues);
+  describe("l'utilisateur a répondu à la première question", () => {
+    const publicodes = publicodesStub({
+      ...publicodesData,
+      missingArgs: [missing2, missing3],
+    });
+
+    const store = generateStore(publicodes, {
+      ...initialState,
+      steps: {
+        ...initialState.steps,
+        informations: {
+          questions: [question1],
+        },
+      },
+    });
+    const newState = computeNextQuestion(store);
+
+    it("doit retourner la question 1 et 2", () => {
+      expect(newState.steps.informations.questions).toStrictEqual([
+        question1,
+        question2,
+      ]);
+    });
+  });
+
+  describe("l'utilisateur a changé la réponse à la première question", () => {
+    const publicodes = publicodesStub({
+      ...publicodesData,
+      missingArgs: [missing2, missing3],
+    });
+
+    const store = generateStore(publicodes, {
+      ...initialState,
+      steps: {
+        ...initialState.steps,
+        informations: {
+          questions: [question1, question2],
+        },
+      },
+    });
+    const newState = computeNextQuestion(store);
+
+    it("doit retourner la question 1 et 2", () => {
+      expect(newState.steps.informations.questions).toStrictEqual([
+        question1,
+        question2,
+      ]);
+    });
+  });
+
+  describe("l'utilisateur a répondu à la deuxième question", () => {
+    const publicodes = publicodesStub({
+      ...publicodesData,
+      missingArgs: [missing3],
+    });
+
+    const store = generateStore(publicodes, {
+      ...initialState,
+      steps: {
+        ...initialState.steps,
+        informations: {
+          questions: [question1, question2],
+        },
+      },
+    });
+    const newState = computeNextQuestion(store);
+
+    it("doit retourner la question 1, 2 et 3", () => {
+      expect(newState.steps.informations.questions).toStrictEqual([
+        question1,
+        question2,
+        question3,
+      ]);
+    });
+  });
+
+  describe("l'utilisateur a répondu à toute les questions", () => {
     const publicodes = publicodesStub({
       ...publicodesData,
       missingArgs: [],
@@ -60,59 +133,12 @@ describe("computeNextQuestion", () => {
         },
       },
     });
-    const newState = computeNextQuestion(
-      store,
-      mockRemoveQuestionFromForm,
-      question3.name
-    );
+    const newState = computeNextQuestion(store);
 
     it("doit retourner la même liste de questions", () => {
       expect(newState.steps.informations.questions).toStrictEqual(
         store.steps.informations.questions
       );
-    });
-
-    it("ne doit pas retirer du form des réponses", () => {
-      expect(mockRemoveQuestionFromForm.mock.calls).toHaveLength(0);
-    });
-  });
-
-  describe("l'utilisateur change sa réponse à la première question", () => {
-    const updateFormValues: UpdateFormValues = () => {};
-    const mockRemoveQuestionFromForm = jest.fn(updateFormValues);
-    const publicodes = publicodesStub({
-      ...publicodesData,
-      missingArgs: [missing2],
-    });
-
-    const store = generateStore(publicodes, {
-      ...initialState,
-      steps: {
-        ...initialState.steps,
-        informations: {
-          questions: [question1, question2, question3],
-        },
-      },
-    });
-    const newState = computeNextQuestion(
-      store,
-      mockRemoveQuestionFromForm,
-      question1.name
-    );
-
-    it("doit retourner reposer la question 2 (et supprimer la 3)", () => {
-      expect(newState.steps.informations.questions).toStrictEqual([
-        question1,
-        question2,
-      ]);
-    });
-
-    it("doit retirer les réponses aux questions 2 et 3", () => {
-      expect(mockRemoveQuestionFromForm.mock.calls).toHaveLength(1);
-      expect(mockRemoveQuestionFromForm.mock.calls[0][0]).toEqual([
-        { name: `infos.${question2.name}` },
-        { name: `infos.${question3.name}` },
-      ]);
     });
   });
 });
