@@ -37,10 +37,10 @@ describe("<Anciennete />", () => {
 
   it("should display error if dateEntre after dateSortie", async () => {
     const { getByLabelText, container } = renderForm({
-      dateEntree: "2018-04-02",
+      dateEntree: "02/04/2018",
     });
     const dateSortie = getByLabelText(/date de sortie/i);
-    fireEvent.change(dateSortie, { target: { value: "2018-03-01" } });
+    fireEvent.change(dateSortie, { target: { value: "01/03/2018" } });
     expect(
       container
         .querySelector("input[name=dateSortie]")
@@ -50,10 +50,10 @@ describe("<Anciennete />", () => {
 
   it("should display error if dateEntree after dateNotif", () => {
     const { container, getByLabelText } = renderForm({
-      dateEntree: "2018-05-01",
+      dateEntree: "01/05/2018",
     });
     const dateNotif = getByLabelText(/licenciement/i);
-    fireEvent.change(dateNotif, { target: { value: "2018-04-02" } });
+    fireEvent.change(dateNotif, { target: { value: "02/04/2018" } });
     expect(
       container
         .querySelector("input[name=dateNotification]")
@@ -63,10 +63,10 @@ describe("<Anciennete />", () => {
 
   it("should display error if dateNotif after dateSortie", () => {
     const { container, getByLabelText } = renderForm({
-      dateSortie: "2018-04-01",
+      dateSortie: "01/04/2018",
     });
     const dateNotif = getByLabelText(/licenciement/i);
-    fireEvent.change(dateNotif, { target: { value: "2018-05-02" } });
+    fireEvent.change(dateNotif, { target: { value: "02/05/2018" } });
     expect(
       container
         .querySelector("input[name=dateNotification]")
@@ -76,10 +76,10 @@ describe("<Anciennete />", () => {
 
   it("should display error if dateNotif is older than 18 months", () => {
     const { container, getByLabelText } = renderForm({
-      dateSortie: "2022-04-01",
+      dateSortie: "01/04/2018",
     });
     const dateNotif = getByLabelText(/licenciement/i);
-    fireEvent.change(dateNotif, { target: { value: "2018-02-02" } });
+    fireEvent.change(dateNotif, { target: { value: "02/02/2018" } });
     expect(
       container
         .querySelector("input[name=dateNotification]")
@@ -91,11 +91,11 @@ describe("<Anciennete />", () => {
 
   it("should display error if anciennté < 8mois", () => {
     const { getByText, getByLabelText } = renderForm({
-      dateEntree: "2018-04-02",
-      dateNotification: "2018-09-02",
+      dateEntree: "02/04/2018",
+      dateNotification: "02/09/2018",
     });
     const dateSortie = getByLabelText(/date de sortie/i);
-    fireEvent.change(dateSortie, { target: { value: "2018-12-31" } });
+    fireEvent.change(dateSortie, { target: { value: "31/12/2018" } });
     expect(getByText(/8 mois d’ancienneté/).textContent.trim()).toMatch(
       "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté"
     );
