@@ -2,13 +2,18 @@ import { theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
-function Montant({ value, ratio = 1 }) {
+type Props = {
+  value: number;
+  ratio: number;
+};
+
+export default function Montant({ value, ratio = 1 }: Props) {
   return (
     <Wrapper>
       <Bar ratio={ratio} />
       <Value>
         {value.toLocaleString("fr-FR", {
-          maximumFractionDigit: 2,
+          maximumFractionDigits: 2,
           minimumFractionDigits: 2,
         })}
         &nbsp;€ brut
@@ -16,7 +21,6 @@ function Montant({ value, ratio = 1 }) {
     </Wrapper>
   );
 }
-export { Montant };
 
 const { box, breakpoints, fonts, spacings } = theme;
 

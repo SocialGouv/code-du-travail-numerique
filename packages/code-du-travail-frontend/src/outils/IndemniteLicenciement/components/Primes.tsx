@@ -1,9 +1,6 @@
 import { icons, Input, theme } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
-import { Field } from "react-final-form";
-import { FieldArray } from "react-final-form-arrays";
-import { OnChange } from "react-final-form-listeners";
 import styled from "styled-components";
 
 import { AddButton, DelButton } from "../../common/Buttons";

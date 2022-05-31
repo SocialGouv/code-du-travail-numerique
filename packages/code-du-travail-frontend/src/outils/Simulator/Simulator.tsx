@@ -122,9 +122,6 @@ const SimulatorContent = <FormState, StepName extends string>({
       onFormStepSubmit={onNextStep}
       onFormStateUpdate={onFormValuesChange}
       renderStep={() => <Component />}
-      formOptions={{
-        legend: currentStep.options?.isForm ? currentStep.label : undefined,
-      }}
       options={{
         debug: debug,
         annotations: currentStep.options?.annotation,
@@ -135,6 +132,7 @@ const SimulatorContent = <FormState, StepName extends string>({
         mutators: {
           ...arrayMutators,
         },
+        legend: currentStep.options?.isForm ? currentStep.label : undefined,
       }}
     />
   );

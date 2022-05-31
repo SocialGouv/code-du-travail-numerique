@@ -5,9 +5,8 @@ import {
   SalariesStep,
   SeniorityStep,
   StepName,
-} from "../../steps";
-import React from "react";
-import { Step } from "../../../Simulator";
+} from "./steps";
+import { Step } from "../Simulator";
 
 export const steps: Step<StepName>[] = [
   {

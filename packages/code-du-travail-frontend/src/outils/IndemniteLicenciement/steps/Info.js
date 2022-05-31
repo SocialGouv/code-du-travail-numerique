@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 import { A11yLink } from "../../../common/A11yLink";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
-import { TypeContrat } from "../components/TypeContrat";
+import { TypeContrat } from "../components/TypeContrat.tsx";
 
 function validate(values) {
   const errors = {};

@@ -1,59 +1,38 @@
-import PropTypes from "prop-types";
 import React from "react";
-import { IndemniteLicenciementSimulator } from "./components";
-import {
-  createIndemniteLicenciementStore,
-  IndemniteLicenciementProvider,
-} from "./state";
+import { IndemniteLicenciementFormState } from "./form";
+import { steps } from "./steps";
+import { DebugInfo } from "./components";
+import { useIndemniteLicenciementStore } from "./state";
+import { Simulator } from "../Simulator";
+import { StepName } from "./steps";
 
-interface Props {
+type Props = {
   icon: string;
   title: string;
   displayTitle: string;
   publicodesRules: any;
-}
+};
 
-const CalculateurIndemnite = ({
-  icon,
+export const CalculateurIndemnite = ({
   title,
+  icon,
   displayTitle,
-  publicodesRules,
 }: Props): JSX.Element => {
-  /**
-   * The rules defined here allows to manage additionnal steps to the wizard
-   */
-  // const Rules = ({ dispatch }) => (
-  //   <>
-  //     <OnChange key="rule-same-salaire" name="hasSameSalaire">
-  //       {(value) =>
-  //         value === false
-  //           ? dispatch({
-  //               payload: { insertAfter: stepSalaires.name, step: stepPrime },
-  //               type: "add_step",
-  //             })
-  //           : dispatch({ payload: stepPrime.name, type: "remove_step" })
-  //       }
-  //     </OnChange>
-  //   </>
-  // );
+  const { onChange, onStepChange } = useIndemniteLicenciementStore((state) => ({
+    onChange: state.onFormValuesChange,
+    onStepChange: state.onStepChange,
+  }));
 
   return (
-    <IndemniteLicenciementProvider
-      createStore={() =>
-        createIndemniteLicenciementStore(publicodesRules, title)
-      }
-    >
-      <IndemniteLicenciementSimulator
-        icon={icon}
-        title={title}
-        displayTitle={displayTitle}
-      />
-    </IndemniteLicenciementProvider>
+    <Simulator<IndemniteLicenciementFormState, StepName>
+      title={title}
+      displayTitle={displayTitle}
+      icon={icon}
+      duration="5 à 10 min"
+      debug={<DebugInfo />}
+      onFormValuesChange={onChange}
+      onStepChange={onStepChange}
+      steps={steps}
+    />
   );
 };
-
-CalculateurIndemnite.propTypes = {
-  initialState: PropTypes.object,
-};
-
-export { CalculateurIndemnite };

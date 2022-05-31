@@ -3,20 +3,16 @@ import React from "react";
 
 import Disclaimer from "../../common/Disclaimer";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
-import { FormulaDetails } from "./FormulaDetails";
+import { FormulaDetails } from ".";
+import { InformationCalcul } from "./FormulaDetails";
 
 type Props = {
   result: number | string;
   unit: string;
-  infoCalcul: any;
-  children?: React.ReactNode;
+  infoCalcul: InformationCalcul;
 };
 
-export const IndemniteLegale = ({
-  result,
-  unit,
-  infoCalcul,
-}: Props): JSX.Element => (
+const IndemniteLegale = ({ result, unit, infoCalcul }: Props): JSX.Element => (
   <>
     <SectionTitle>Indemnité légale</SectionTitle>
     <p>
@@ -43,3 +39,5 @@ export const IndemniteLegale = ({
     </p>
   </>
 );
+
+export default IndemniteLegale;

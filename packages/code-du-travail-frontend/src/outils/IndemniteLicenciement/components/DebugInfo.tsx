@@ -1,4 +1,4 @@
-import { useIndemniteLicenciementStore } from "../../state";
+import { useIndemniteLicenciementStore } from "../state";
 
 const DebugInfo = (): JSX.Element => {
   const data = useIndemniteLicenciementStore((state) => ({
