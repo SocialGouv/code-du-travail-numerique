@@ -5,14 +5,10 @@ import styled from "styled-components";
 import { box, breakpoints, fonts, spacings } from "../theme.js";
 import { INPUT_HEIGHT } from "./Input";
 
-export const InputDate = ({ value, invalid, onChange, ...props }) => {
+export const InputDate = ({ value, onChange, invalid, ...props }) => {
   const [date, setDate] = React.useState(value ?? "");
-  const [isValid, setIsValid] = React.useState(true ?? !invalid);
+  const [isValid, setIsValid] = React.useState(true);
   const [isFocus, setIsFocus] = React.useState(false);
-
-  React.useEffect(() => {
-    setIsValid(!invalid);
-  }, [invalid]);
 
   const onChangeDate = (event) => {
     const currentSelectionStart = event.target.selectionStart;
@@ -33,7 +29,7 @@ export const InputDate = ({ value, invalid, onChange, ...props }) => {
         newValue += onlyNumbers[i];
       }
       setDate(newValue);
-      setIsValid(!invalid ?? isValidDate(newValue));
+      setIsValid(isValidDate(newValue));
       if (onChange) onChange(newValue);
       // hack pour que le cursor ne se déplace pas si on édite le champ
       setTimeout(() => {
@@ -54,7 +50,7 @@ export const InputDate = ({ value, invalid, onChange, ...props }) => {
     const day = realDate[2] ?? "";
     const newValue = `${day}/${month}/${year}`;
     setDate(newValue);
-    setIsValid(!invalid ?? true);
+    setIsValid(true);
     if (onChange) onChange(newValue);
   };
 
@@ -83,16 +79,18 @@ export const InputDate = ({ value, invalid, onChange, ...props }) => {
 
   const onBlur = () => {
     setIsFocus(false);
-    if (date.length != 10) {
+    if (date.length !== 10) {
       setIsValid(false);
     }
   };
 
   return (
-    <StyledWrapper isFocus={isFocus} isValid={isValid}>
+    <StyledWrapper
+      isFocus={isFocus}
+      isValid={invalid === true ? false : invalid === false ? true : isValid}
+    >
       <StyledInput
         value={date}
-        invalid={!isValid}
         onChange={onChangeDate}
         placeholder="jj/mm/aaaa"
         onFocus={() => setIsFocus(true)}
@@ -138,7 +136,7 @@ const StyledWrapper = styled.div`
   background: ${({ theme }) => theme.white};
   box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
 
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   border-radius: ${box.borderRadius};
   border-color: ${({ isFocus, isValid, theme }) =>
     isFocus ? theme.secondary : !isValid ? theme.error : "transparent"};

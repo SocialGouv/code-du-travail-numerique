@@ -80,7 +80,6 @@ function StepAnciennete({ form }) {
         name="dateNotification"
         label="Quelle est la date de notification du licenciement&nbsp;?"
         inputType="date"
-        validate={isDate}
         validateOnChange
         placeholder=" jj/mm/aaaa" // placeholder for safari desktop which does not support input type date
       />
@@ -88,7 +87,6 @@ function StepAnciennete({ form }) {
         name="dateSortie"
         label="Quelle est la date de sortie de l’entreprise&nbsp;?"
         inputType="date"
-        validate={isDate}
         validateOnChange
         placeholder=" jj/mm/aaaa" // placeholder for safari desktop which does not support input type date
       />

@@ -179,7 +179,7 @@ exports[`<InputDate /> should render input date field 1`] = `
   width: fit-content;
   background: #fff;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   border-radius: 0.6rem;
   border-color: transparent;
   line-height: inherit;
