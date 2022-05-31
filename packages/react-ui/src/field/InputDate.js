@@ -29,7 +29,7 @@ export const InputDate = ({ value, invalid, onChange, ...props }) => {
         newValue += onlyNumbers[i];
       }
       setDate(newValue);
-      setIsValid(/^\d{2}\/\d{2}\/\d{4}$/.test(newValue));
+      setIsValid(isValidDate(newValue));
       if (onChange) onChange(newValue);
       // hack pour que le cursor ne se déplace pas si on édite le champ
       setTimeout(() => {
@@ -62,6 +62,28 @@ export const InputDate = ({ value, invalid, onChange, ...props }) => {
     return `${year}-${month}-${day}`;
   };
 
+  const isValidDate = (date) => {
+    if (date.length === 10) {
+      const splitParts = date.split("/");
+      const day = isNaN(Number(splitParts[0])) ? null : Number(splitParts[0]);
+      const month = isNaN(Number(splitParts[1])) ? null : Number(splitParts[1]);
+      const year = isNaN(Number(splitParts[2])) ? null : Number(splitParts[2]);
+      const isYearValid = year && year >= 1900 && year <= 2100;
+      const isMonthValid = month && month >= 1 && month <= 12;
+      const isDayValid = day && day >= 1 && day <= 31;
+      const isValidDate = /^\d{2}\/\d{2}\/\d{4}$/.test(date);
+      return isYearValid && isMonthValid && isDayValid && isValidDate;
+    }
+    return true;
+  };
+
+  const onBlur = () => {
+    setIsFocus(false);
+    if (date.length != 10) {
+      setIsValid(false);
+    }
+  };
+
   return (
     <StyledWrapper isFocus={isFocus} isValid={isValid}>
       <StyledInput
@@ -70,7 +92,7 @@ export const InputDate = ({ value, invalid, onChange, ...props }) => {
         onChange={onChangeDate}
         placeholder="jj/mm/aaaa"
         onFocus={() => setIsFocus(true)}
-        onBlur={() => setIsFocus(false)}
+        onBlur={onBlur}
         {...props}
       />
       <StyledDiv>
