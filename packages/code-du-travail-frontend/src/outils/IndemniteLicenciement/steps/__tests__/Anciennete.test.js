@@ -45,7 +45,7 @@ describe("<Anciennete />", () => {
       container
         .querySelector("input[name=dateSortie]")
         .parentElement.nextSibling.textContent.trim()
-    ).toMatch("La date de sortie doit se situer après le 02 April 2018");
+    ).toMatch("La date de sortie doit se situer après le 02 avril 2018");
   });
 
   it("should display error if dateEntree after dateNotif", () => {

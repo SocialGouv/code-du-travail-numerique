@@ -10,6 +10,10 @@ export const InputDate = ({ value, invalid, onChange, ...props }) => {
   const [isValid, setIsValid] = React.useState(true ?? !invalid);
   const [isFocus, setIsFocus] = React.useState(false);
 
+  React.useEffect(() => {
+    setIsValid(!invalid);
+  }, [invalid]);
+
   const onChangeDate = (event) => {
     const currentSelectionStart = event.target.selectionStart;
     const currentSelectionEnd = event.target.selectionEnd;
@@ -29,7 +33,7 @@ export const InputDate = ({ value, invalid, onChange, ...props }) => {
         newValue += onlyNumbers[i];
       }
       setDate(newValue);
-      setIsValid(isValidDate(newValue));
+      setIsValid(!invalid ?? isValidDate(newValue));
       if (onChange) onChange(newValue);
       // hack pour que le cursor ne se déplace pas si on édite le champ
       setTimeout(() => {
@@ -50,7 +54,7 @@ export const InputDate = ({ value, invalid, onChange, ...props }) => {
     const day = realDate[2] ?? "";
     const newValue = `${day}/${month}/${year}`;
     setDate(newValue);
-    setIsValid(true);
+    setIsValid(!invalid ?? true);
     if (onChange) onChange(newValue);
   };
 

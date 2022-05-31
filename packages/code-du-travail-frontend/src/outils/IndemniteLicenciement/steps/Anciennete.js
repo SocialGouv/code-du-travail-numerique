@@ -1,4 +1,5 @@
 import { differenceInMonths, format, isAfter } from "date-fns";
+import { fr } from "date-fns/locale";
 import createDecorator from "final-form-calculate";
 import PropTypes from "prop-types";
 import React from "react";
@@ -27,7 +28,7 @@ function validate({
     errors.dateSortie = (
       <>
         La date de sortie doit se situer après le
-        <strong> {format(dEntree, "dd MMMM yyyy")}</strong>
+        <strong> {format(dEntree, "dd MMMM yyyy", { locale: fr })}</strong>
       </>
     );
   }
