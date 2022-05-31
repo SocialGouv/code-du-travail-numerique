@@ -1,9 +1,10 @@
 import { Text } from "@socialgouv/cdtn-ui";
-import { SituationElement, supportedCcn } from "@socialgouv/modeles-social";
+import { SituationElement } from "@socialgouv/modeles-social";
 import React from "react";
 
 import PubliSituation from "../../../../common/PubliSituation";
 import { PreavisRetraiteFormState } from "../../../form";
+import { getSupportedCC } from "../../AgreementStep/RenderStep";
 
 type Props = {
   content: PreavisRetraiteFormState;
@@ -45,11 +46,13 @@ const Situation: React.FC<Props> = ({
       content.infos &&
       content.infos["contrat salarié - travailleur handicapé"] === "oui"
     ) {
-      if (content["contrat salarié - mise à la retraite"] === "oui") {
+      if (content.origin?.isRetirementMandatory === "oui") {
         if (
           content.ccn &&
           content.ccn.selected &&
-          supportedCcn.map((v) => v.idcc).includes(content.ccn.selected.num)
+          getSupportedCC()
+            .map((v) => v.idcc)
+            .includes(content.ccn.selected.num)
         ) {
           return [
             <Text key="handicap">

@@ -1,8 +1,10 @@
 import React, { useEffect, useMemo } from "react";
 import { SimulatorDecorator } from "../Components";
 import { printResult } from "../common/utils";
-import { Step, useSimulatorStore } from "./useSimulatorStore";
+import { createSimulatorStore } from "./useSimulatorStore";
 import { matopush } from "../../piwik";
+import { SimulatorStepProvider, useSimulatorStepStore } from "./createContext";
+import { Step } from "./type";
 
 const anchorRef = React.createRef<HTMLLIElement>();
 
@@ -17,7 +19,7 @@ type Props<FormState, StepName extends string> = {
   onStepChange: (oldStep: Step<StepName>, newStep: Step<StepName>) => void;
 };
 
-const Simulator = <FormState, StepName extends string>({
+const SimulatorContent = <FormState, StepName extends string>({
   icon,
   title,
   displayTitle,
@@ -27,7 +29,7 @@ const Simulator = <FormState, StepName extends string>({
   onFormValuesChange,
   onStepChange,
 }: Props<FormState, StepName>): JSX.Element => {
-  const { currentStepIndex, previousStep, nextStep } = useSimulatorStore(
+  const { currentStepIndex, previousStep, nextStep } = useSimulatorStepStore(
     (state) => state
   );
 
@@ -119,6 +121,16 @@ const Simulator = <FormState, StepName extends string>({
         annotations: currentStep.options?.annotation,
       }}
     />
+  );
+};
+
+const Simulator = <FormState, StepName extends string>(
+  props: Props<FormState, StepName>
+): JSX.Element => {
+  return (
+    <SimulatorStepProvider createStore={() => createSimulatorStore()}>
+      <SimulatorContent {...props} />
+    </SimulatorStepProvider>
   );
 };
 
