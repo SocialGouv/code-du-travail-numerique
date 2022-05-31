@@ -1,0 +1,16 @@
+import { useIndemniteLicenciementStore } from "../../state";
+
+const DebugInfo = (): JSX.Element => {
+  const data = useIndemniteLicenciementStore((state) => ({
+    formValues: state.formValues,
+    steps: state.steps,
+  }));
+  return (
+    <details>
+      <summary>state</summary>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </details>
+  );
+};
+
+export default DebugInfo;

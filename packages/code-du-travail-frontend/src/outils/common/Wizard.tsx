@@ -16,7 +16,6 @@ import DebugInfo from "./DebugInfo";
 const anchorRef = React.createRef<HTMLLIElement>();
 
 type Props = {
-  Rules?: any;
   duration?: string;
   icon?: string;
   initialState: State;
@@ -32,7 +31,6 @@ export const Wizard = ({
   title,
   displayTitle,
   icon,
-  Rules = null,
   stepReducer = (step) => step,
   duration,
 }: Props): JSX.Element => {
@@ -166,9 +164,6 @@ export const Wizard = ({
         renderStep={(form) => {
           return (
             <>
-              {Rules && (
-                <Rules values={form.getState().values} dispatch={dispatch} />
-              )}
               <Step
                 form={form}
                 dispatch={dispatch}

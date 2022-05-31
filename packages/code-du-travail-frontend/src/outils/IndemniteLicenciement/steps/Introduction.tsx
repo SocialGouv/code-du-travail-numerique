@@ -14,4 +14,4 @@ const StepIntro = (): JSX.Element => (
   </>
 );
 
-export { StepIntro };
+export default StepIntro;

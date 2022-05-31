@@ -50,7 +50,7 @@ function validate(values) {
   return errors;
 }
 
-function StepInfo() {
+const StepInfo = () => {
   return (
     <>
       <TypeContrat name="contrat" />
@@ -64,9 +64,10 @@ function StepInfo() {
       />
     </>
   );
-}
+};
+
 StepInfo.validate = validate;
-export { StepInfo };
+export default StepInfo;
 
 const Title = styled.p.attrs({
   "aria-level": "2",

@@ -1,6 +1,4 @@
 import { differenceInMonths, format, isAfter } from "date-fns";
-import createDecorator from "final-form-calculate";
-import PropTypes from "prop-types";
 import React from "react";
 
 import { ErrorComputedField } from "../../common/ErrorField";
@@ -10,7 +8,7 @@ import { parse } from "../../common/utils/";
 import { isDate } from "../../common/validators";
 import { YesNoQuestion } from "../../common/YesNoQuestion";
 import { AbsencePeriods, MOTIFS } from "../components/AbsencePeriods";
-import { getSalairesPeriods } from "./Salaires";
+import { useForm } from "react-final-form";
 
 function validate({
   dateEntree,
@@ -64,7 +62,8 @@ function validate({
   return errors;
 }
 
-function StepAnciennete({ form }) {
+const StepAnciennete = () => {
+  const form = useForm();
   return (
     <>
       <SectionTitle>Dates d’entrée et de sortie de l’entreprise</SectionTitle>
@@ -110,60 +109,8 @@ function StepAnciennete({ form }) {
       <AbsencePeriods name="absencePeriods" />
     </>
   );
-}
-
-StepAnciennete.validate = validate;
-/**
- * The decorator here is used to compute the ancienneté value
- * based on the data provided by the user
- *
- * We also need to verify if hasSameSalaire exists to update
- * salaires period values in case the user go backward to answer
- * a previous question
- *
- * info: decorator can only be used in initialSteps since final-form do not allows
- * decorator to be added once the form is created
- */
-StepAnciennete.decorator = createDecorator({
-  field: /date|absencePeriods/,
-  updates: {
-    anciennete: (_, values) => computeAnciennete(values),
-    salaires: (_, values) => computeSalaires(values),
-  },
-});
-
-StepAnciennete.propTypes = {
-  form: PropTypes.object.isRequired,
 };
 
-function computeAnciennete({ dateEntree, dateSortie, absencePeriods = [] }) {
-  const dEntree = parse(dateEntree);
-  const dSortie = parse(dateSortie);
+StepAnciennete.validate = validate;
 
-  // on calcule totalAbsence en mois par année (ex: 12mois = 1)
-  // pour pouvoir ensuite le retranché de l’anciennété qui est aussi en mois par année
-  const totalAbsence =
-    (absencePeriods || [])
-      .filter((period) => Boolean(period.duration))
-      .reduce((total, item) => {
-        const motif = MOTIFS.find((motif) => motif.label === item.type);
-        return total + item.duration * motif.value;
-      }, 0) / 12;
-  return differenceInMonths(dSortie, dEntree) / 12 - totalAbsence;
-}
-
-function computeSalaires(values) {
-  if (values.hasSameSalaire === false && values.salaires) {
-    const salairePeriods = getSalairesPeriods(values);
-    return salairePeriods.map(({ label, salary }) => {
-      const month = values.salaires.find((item) => item.label === label);
-      if (month) {
-        return { label, salary: month.salary };
-      }
-      return { label, salary };
-    });
-  }
-  return null;
-}
-
-export { computeAnciennete, computeSalaires, StepAnciennete };
+export default StepAnciennete;

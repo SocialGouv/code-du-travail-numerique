@@ -1,19 +1,16 @@
-import React, { useEffect } from "react";
-
-import {
-  mapToPublicodesSituationForIndemniteLicenciement,
-  usePublicodes,
-} from "../../publicodes";
+import React from "react";
 import { IndemniteLegale } from "../components/IndemniteLegale";
 import { getIndemniteExplications, getSalaireRef } from "../indemnite";
+import { useForm } from "react-final-form";
+import { useIndemniteLicenciementStore } from "../state";
 
-type Props = {
-  form: any;
-};
+const StepIndemnite = (): JSX.Element => {
+  const result = useIndemniteLicenciementStore((state) => state.steps.result);
+  if (!result) {
+    throw Error("Try to show result without computed result data");
+  }
 
-export function StepIndemnite({ form }: Props): JSX.Element {
-  const publicodesContext = usePublicodes();
-
+  const form = useForm();
   const {
     hasSameSalaire = false,
     salaires = [],
@@ -21,7 +18,6 @@ export function StepIndemnite({ form }: Props): JSX.Element {
     salaire,
     anciennete,
     inaptitude,
-    ccn,
   } = form.getState().values;
   const salaireRef = getSalaireRef({
     hasSameSalaire,
@@ -34,32 +30,21 @@ export function StepIndemnite({ form }: Props): JSX.Element {
     inaptitude,
     salaireRef,
   });
-  useEffect(() => {
-    publicodesContext.setSituation(
-      mapToPublicodesSituationForIndemniteLicenciement(
-        ccn,
-        anciennete,
-        salaireRef,
-        inaptitude
-      )
-    );
-  }, []);
 
   return (
     <IndemniteLegale
       result={
-        publicodesContext.result.value
-          ? (Number(publicodesContext.result.value) + 0.004).toLocaleString(
-              "fr-FR",
-              {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              }
-            )
+        result.result.value
+          ? (Number(result.result.value) + 0.004).toLocaleString("fr-FR", {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })
           : "0"
       }
-      unit={publicodesContext.result.unit?.denominators[0] ?? "€"}
+      unit={result.result.unit?.denominators[0] ?? "€"}
       infoCalcul={infoCalcul}
     />
   );
-}
+};
+
+export default StepIndemnite;

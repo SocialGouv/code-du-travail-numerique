@@ -1,21 +1,25 @@
 import { Alert, icons, Input, Paragraph, Text } from "@socialgouv/cdtn-ui";
-import { differenceInMonths, format, subMonths } from "date-fns";
-import frLocale from "date-fns/locale/fr";
-import PropTypes from "prop-types";
 import React from "react";
-import { Field, useForm } from "react-final-form";
+import { Field } from "react-final-form";
 
-import { Error } from "../../common/ErrorField";
-import { Question } from "../../common/Question";
-import { SmallText } from "../../common/stepStyles";
-import { parse } from "./Salaires";
-import { isNumber } from "../../common/validators";
-import { YesNoQuestion } from "../../common/YesNoQuestion";
-import { MOTIFS } from "../components/AbsencePeriods";
-import { SalaireTempsPlein } from "../components/SalaireTempsPlein";
+import { Error } from "../../../common/ErrorField";
+import { Question } from "../../../common/Question";
+import { SmallText } from "../../../common/stepStyles";
+import { isNumber } from "../../../common/validators";
+import { YesNoQuestion } from "../../../common/YesNoQuestion";
+import SalaireTempsPlein from "../../components/SalaireTempsPlein";
 
-const StepSalaires = () => {
-  const form = useForm();
+export type Props = {
+  salaryPeriods: any[] | undefined;
+  onHasSameSalaryChange: (hasSameSalary: boolean) => void;
+  onSalariesChange: (value: string, index: number) => void;
+};
+
+function SalariesStep({
+  salaryPeriods,
+  onHasSameSalaryChange,
+  onSalariesChange,
+}: Props): JSX.Element {
   return (
     <>
       <YesNoQuestion
@@ -48,18 +52,7 @@ const StepSalaires = () => {
                 <YesNoQuestion
                   name="hasSameSalaire"
                   label="Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement&nbsp;?"
-                  onChange={(hasSameSalaire) => {
-                    if (hasSameSalaire) {
-                      form.change("salaires", []);
-                    } else {
-                      console.log("on change salaires");
-                      form.batch(() => {
-                        const { values } = form.getState();
-                        form.change("salaires", getSalairesPeriods(values));
-                        form.change("salaire", null);
-                      });
-                    }
-                  }}
+                  onChange={onHasSameSalaryChange}
                 />
                 <Field name="hasSameSalaire">
                   {({ input }) => (
@@ -99,7 +92,12 @@ const StepSalaires = () => {
                           )}
                         </Field>
                       )}
-                      <SalaireTempsPlein name="salaires" />
+                      {salaryPeriods?.length && (
+                        <SalaireTempsPlein
+                          onSalariesChange={onSalariesChange}
+                          salaryPeriods={salaryPeriods}
+                        />
+                      )}
                     </>
                   )}
                 </Field>
@@ -110,43 +108,6 @@ const StepSalaires = () => {
       </Field>
     </>
   );
-};
-
-function getSalairesPeriods({ dateEntree, dateNotification, absencePeriods }) {
-  const dEntree = parse(dateEntree);
-  const dNotification = parse(dateNotification);
-
-  const totalAbsence = (absencePeriods || [])
-    .filter((period) => Boolean(period.duration))
-    .reduce((total, item) => {
-      const motif = MOTIFS.find((motif) => motif.label === item.type);
-      return total + item.duration * motif.value;
-    }, 0);
-
-  const nbMonthes = Math.min(
-    differenceInMonths(dNotification, dEntree) - totalAbsence,
-    12
-  );
-  return Array.from({ length: nbMonthes }).map((_, index) => {
-    return {
-      label: format(subMonths(dNotification, index + 1), "MMMM yyyy", {
-        locale: frLocale,
-      }),
-      salary: null,
-    };
-  });
 }
 
-StepSalaires.propTypes = {
-  form: PropTypes.object.isRequired,
-};
-StepSalaires.validate = (values) => {
-  const errors = {};
-  if (values.hasTempsPartiel === true) {
-    errors.hasTempsPartiel = true;
-  }
-
-  return errors;
-};
-export { getSalairesPeriods };
-export default StepSalaires;
+export default SalariesStep;
