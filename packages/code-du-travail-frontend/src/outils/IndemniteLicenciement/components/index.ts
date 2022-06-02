@@ -3,3 +3,8 @@ export { default as FormulaDetails } from "./FormulaDetails";
 export { default as Montant } from "./Montant";
 export { default as AbsencePeriods } from "./AbsencePeriods";
 export { default as IndemniteLegale } from "./IndemniteLegale";
+export { default as Primes } from "./Primes";
+export { default as SalaireTempsPlein } from "./SalaireTempsPlein";
+export { default as RadioQuestion } from "./RadioQuestion";
+export { default as FauteGrave } from "./FauteGrave";
+export { default as TypeContratMessage } from "./TypeContratMessage";

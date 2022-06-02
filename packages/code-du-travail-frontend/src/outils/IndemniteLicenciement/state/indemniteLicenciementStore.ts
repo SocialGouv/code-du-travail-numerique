@@ -4,11 +4,11 @@ import {
   IndemniteLicenciementStore,
 } from "./types";
 import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
-import { StepName } from "../steps";
 import { mapToPublicodesSituationForIndemniteLicenciement } from "../../publicodes";
-import { getSalaireRef } from "../indemnite";
 import computeSalaryPeriods from "./usecases/computeSalaryPeriods";
 import computeSeniority from "./usecases/computeSeniority";
+import { getSalaireRef } from "../utils";
+import { StepName } from "..";
 
 export const initialState: IndemniteLicenciementState = {
   title: "",
@@ -66,48 +66,53 @@ const createIndemniteLicenciementStore = (rules: string, title: string) =>
         );
         return state;
       }),
-    onStepChange: (oldStep, newStep) =>
+    onStepChange: (oldStep, newStep, v) =>
       set((state) => {
-        if (newStep.name === StepName.Result) {
-          const publicodes = state.publicodes;
-          const {
-            hasSameSalaire = false,
-            salaires = [],
-            primes = [],
-            salaire,
-            inaptitude = false,
-            ccn,
-            dateSortie,
-            dateEntree,
-            absencePeriods,
-          } = state.formValues;
-
-          if (!dateEntree || !dateSortie) {
-            throw new Error(`Missing fields ${dateEntree} ${dateSortie}`);
-          }
-
-          const seniority = computeSeniority({
-            dateSortie,
-            dateEntree,
-            absencePeriods,
-          });
-          const salaireRef = getSalaireRef({
-            hasSameSalaire,
-            primes,
-            salaire,
-            salaires,
-          });
-
-          const { result } = publicodes.setSituation(
-            mapToPublicodesSituationForIndemniteLicenciement(
-              ccn,
-              seniority,
-              salaireRef,
-              inaptitude
-            )
-          );
-          return { ...state, steps: { ...state.steps, result: { result } } };
+        console.log(newStep, v);
+        if (oldStep.name === StepName.Info) {
+          v.find((item) => item.stepName === StepName.Info)?.stepValidator();
         }
+        // if (newStep.name === StepName.Info) {
+        //   // Stepname.result
+        //   const publicodes = state.publicodes;
+        //   const {
+        //     hasSameSalaire = false,
+        //     salaires = [],
+        //     primes = [],
+        //     salaire,
+        //     inaptitude = false,
+        //     ccn,
+        //     dateSortie,
+        //     dateEntree,
+        //     absencePeriods,
+        //   } = state.formValues;
+
+        //   if (!dateEntree || !dateSortie) {
+        //     throw new Error(`Missing fields ${dateEntree} ${dateSortie}`);
+        //   }
+
+        //   const seniority = computeSeniority({
+        //     dateSortie,
+        //     dateEntree,
+        //     absencePeriods,
+        //   });
+        //   const salaireRef = getSalaireRef({
+        //     hasSameSalaire,
+        //     primes,
+        //     salaire,
+        //     salaires,
+        //   });
+
+        //   const { result } = publicodes.setSituation(
+        //     mapToPublicodesSituationForIndemniteLicenciement(
+        //       ccn,
+        //       seniority,
+        //       salaireRef,
+        //       inaptitude
+        //     )
+        //   );
+        //   return { ...state, steps: { ...state.steps, result: { result } } };
+        // }
         return state;
       }),
   }));

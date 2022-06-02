@@ -1,7 +1,7 @@
 import create from "zustand";
-import { SimulatorStore } from "./type";
+import { SimulatorState, SimulatorStore } from "./type";
 
-const initialState = {
+const initialState: SimulatorState = {
   currentStepIndex: 0,
 };
 

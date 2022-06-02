@@ -15,6 +15,7 @@ type Absence = {
 
 type Props = {
   onChange: (absences: Absence[]) => void;
+  absences: Absence[] | null;
 };
 
 export const MOTIFS = [
@@ -30,13 +31,15 @@ export const MOTIFS = [
   { label: "Congé de paternité", value: 1.0 },
 ];
 
-const AbsencePeriods = ({ onChange }: Props) => {
-  const [absencePeriods, setAbsencePeriods] = React.useState<Absence[]>([
-    {
-      motif: MOTIFS[0].label,
-      durationInMonth: null,
-    },
-  ]);
+const AbsencePeriods = ({ onChange, absences }: Props) => {
+  const [absencePeriods, setAbsencePeriods] = React.useState<Absence[]>(
+    absences ?? [
+      {
+        motif: MOTIFS[0].label,
+        durationInMonth: null,
+      },
+    ]
+  );
   const [errorsAbsencePeriods, setErrorsAbsencePeriods] = React.useState({});
 
   const onAddButtonClick = () => {
@@ -62,21 +65,19 @@ const AbsencePeriods = ({ onChange }: Props) => {
       });
       return;
     }
-    setAbsencePeriods(
-      absencePeriods.map((absence, i) =>
-        i === index ? { ...absence, durationInMonth: duration } : absence
-      )
+    const newAbsences = absencePeriods.map((absence, i) =>
+      i === index ? { ...absence, durationInMonth: duration } : absence
     );
-    onChange(absencePeriods);
+    setAbsencePeriods(newAbsences);
+    onChange(newAbsences);
   };
 
   const onSelectMotif = (index: number, value: string) => {
-    setAbsencePeriods(
-      absencePeriods.map((motif, i) =>
-        i === index ? { ...motif, motif: value } : motif
-      )
+    const newAbsences = absencePeriods.map((motif, i) =>
+      i === index ? { ...motif, motif: value } : motif
     );
-    onChange(absencePeriods);
+    setAbsencePeriods(newAbsences);
+    onChange(newAbsences);
   };
 
   return (
@@ -133,10 +134,10 @@ const AbsencePeriods = ({ onChange }: Props) => {
                 id={`${index}.duration`}
                 type="number"
                 onChange={(e) => onSetDurationDate(index, e.target.value)}
-                invalid={errorsAbsencePeriods[index]}
+                invalid={errorsAbsencePeriods[`${index}`]}
               />
-              {errorsAbsencePeriods[index] && (
-                <StyledError>{errorsAbsencePeriods[index]}</StyledError>
+              {errorsAbsencePeriods[`${index}`] && (
+                <StyledError>{errorsAbsencePeriods[`${index}`]}</StyledError>
               )}
             </div>
             {absencePeriods.length > 1 && (

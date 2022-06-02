@@ -7,6 +7,8 @@ export type NavigationProps = {
   showNext: boolean;
   onPrevious?: () => void;
   onPrint?: () => void;
+  onNext?: () => void;
+  onStart?: () => void;
 };
 
 const Index = ({
@@ -14,6 +16,8 @@ const Index = ({
   showNext = false,
   onPrint,
   onPrevious,
+  onNext,
+  onStart,
 }: NavigationProps): JSX.Element => {
   return (
     <>
@@ -24,13 +28,23 @@ const Index = ({
           </StyledButton>
         )}
         {showNext && !onPrevious && (
-          <StyledButtonReverse disabled={hasError} variant="primary">
+          <StyledButtonReverse
+            disabled={hasError}
+            variant="primary"
+            type="button"
+            onClick={onStart}
+          >
             Commencer
             <ArrowIcon />
           </StyledButtonReverse>
         )}
         {showNext && onPrevious && (
-          <StyledButton disabled={hasError} variant="primary">
+          <StyledButton
+            disabled={hasError}
+            type="button"
+            variant="primary"
+            onClick={onNext}
+          >
             Suivant
             <ArrowIcon />
           </StyledButton>

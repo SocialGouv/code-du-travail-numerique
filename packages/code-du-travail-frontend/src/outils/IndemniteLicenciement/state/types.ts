@@ -4,7 +4,7 @@ import {
   PublicodesIndemniteLicenciementResult,
 } from "@socialgouv/modeles-social";
 import { Step } from "../../Simulator";
-import { StepName } from "../steps";
+import { StepName } from "..";
 import { FormApi } from "final-form";
 
 export type IndemniteLicenciementState = {
@@ -24,9 +24,18 @@ export type PublicodesState = {
   publicodes: Publicodes<PublicodesIndemniteLicenciementResult>;
 };
 
+export type StepValidator = {
+  stepName: StepName;
+  stepValidator: () => void;
+};
+
 export type IndemniteLicenciementActions = {
   onFormValuesChange: (values: IndemniteLicenciementFormState) => void;
-  onStepChange: (oldStep: Step<StepName>, newStep: Step<StepName>) => void;
+  onStepChange: (
+    oldStep: Step<StepName>,
+    newStep: Step<StepName>,
+    validators: StepValidator[]
+  ) => void;
   onHasSameSalaryChange: (hasSameSalary: boolean) => void;
   onSalariesChange: (value: string, index: number, form: FormApi) => void;
 };

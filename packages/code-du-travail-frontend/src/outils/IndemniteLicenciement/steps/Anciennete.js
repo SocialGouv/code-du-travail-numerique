@@ -106,7 +106,12 @@ const StepAnciennete = () => {
             : form.change("absencePeriods", []);
         }}
       />
-      <AbsencePeriods name="absencePeriods" />
+      <AbsencePeriods
+        onChange={(absences: Abscens[]) => {
+          setStore(absences);
+        }}
+        abscences={store.abscence}
+      />
     </>
   );
 };

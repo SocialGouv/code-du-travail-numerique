@@ -34,7 +34,7 @@ const ErrorComputedField = ({ name }: Props): JSX.Element => (
   />
 );
 
-const Error = styled.div`
+const Error = styled.p`
   margin: ${theme.spacings.small} 0 ${theme.spacings.base};
   color: ${({ theme }) => theme.error};
   font-weight: 600;
