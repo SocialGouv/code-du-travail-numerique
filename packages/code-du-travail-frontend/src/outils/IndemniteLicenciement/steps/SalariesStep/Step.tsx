@@ -92,12 +92,12 @@ function SalariesStep({
                           )}
                         </Field>
                       )}
-                      {salaryPeriods?.length && (
+                      {/* {salaryPeriods?.length && (
                         <SalaireTempsPlein
                           onSalariesChange={onSalariesChange}
                           salaryPeriods={salaryPeriods}
                         />
-                      )}
+                      )} */}
                     </>
                   )}
                 </Field>

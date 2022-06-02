@@ -8,7 +8,6 @@ import { mapToPublicodesSituationForIndemniteLicenciement } from "../../publicod
 import computeSalaryPeriods from "./usecases/computeSalaryPeriods";
 import computeSeniority from "./usecases/computeSeniority";
 import { getSalaireRef } from "../utils";
-import { StepName } from "..";
 
 export const initialState: IndemniteLicenciementState = {
   title: "",
@@ -66,12 +65,8 @@ const createIndemniteLicenciementStore = (rules: string, title: string) =>
         );
         return state;
       }),
-    onStepChange: (oldStep, newStep, v) =>
+    onStepChange: (oldStep, newStep) =>
       set((state) => {
-        console.log(newStep, v);
-        if (oldStep.name === StepName.Info) {
-          v.find((item) => item.stepName === StepName.Info)?.stepValidator();
-        }
         // if (newStep.name === StepName.Info) {
         //   // Stepname.result
         //   const publicodes = state.publicodes;

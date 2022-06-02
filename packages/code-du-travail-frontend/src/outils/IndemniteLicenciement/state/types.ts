@@ -4,8 +4,8 @@ import {
   PublicodesIndemniteLicenciementResult,
 } from "@socialgouv/modeles-social";
 import { Step } from "../../Simulator";
-import { StepName } from "..";
 import { FormApi } from "final-form";
+import { StepName } from "../../DureePreavisRetraite/steps";
 
 export type IndemniteLicenciementState = {
   title: string;

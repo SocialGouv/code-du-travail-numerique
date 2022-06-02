@@ -38,7 +38,7 @@ export default function RadioQuestion({
         {questions.map((question, index) => (
           <InputRadio
             key={index}
-            name={question.label}
+            name={Math.random().toString(36)}
             label={question.label}
             value={question.value}
             id={Math.random().toString(36)}

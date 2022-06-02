@@ -1,7 +1,7 @@
 import { theme, Wrapper } from "@socialgouv/cdtn-ui";
 import React, { useEffect, useMemo } from "react";
 import styled from "styled-components";
-import { StepName } from "..";
+import { IndemniteLicenciementStepName } from "..";
 import { matopush } from "../../../piwik";
 import { printResult } from "../../common/utils";
 import {
@@ -15,6 +15,14 @@ import {
   useSimulatorStepStore,
 } from "../../Simulator/createContext";
 
+type StepName = IndemniteLicenciementStepName;
+
+type Validator = {
+  validator: () => boolean;
+  stepName: StepName;
+  isStepValid: boolean;
+};
+
 type Props = {
   title: string;
   displayTitle: string;
@@ -22,6 +30,7 @@ type Props = {
   duration: string;
   debug?: JSX.Element;
   steps: Step<StepName>[];
+  validators: Validator[];
 };
 
 const SimulatorContent = ({
@@ -31,6 +40,7 @@ const SimulatorContent = ({
   duration,
   debug,
   steps,
+  validators,
 }: Props): JSX.Element => {
   const anchorRef = React.createRef<HTMLLIElement>();
 
@@ -64,14 +74,21 @@ const SimulatorContent = ({
     if (nextStepIndex >= steps.length) {
       throw Error("Can't show the next step with index more than steps");
     } else {
-      nextStep();
-      matopush([
-        "trackEvent",
-        "outil",
-        `view_step_${title}`,
-        steps[nextStepIndex].name,
-      ]);
-      window?.scrollTo(0, 0);
+      const isValid = validators
+        .find(
+          (validator) => validator.stepName === steps[currentStepIndex].name
+        )
+        ?.validator();
+      if (isValid) {
+        nextStep();
+        matopush([
+          "trackEvent",
+          "outil",
+          `view_step_${title}`,
+          steps[nextStepIndex].name,
+        ]);
+        window?.scrollTo(0, 0);
+      }
     }
   };
 
@@ -112,7 +129,13 @@ const SimulatorContent = ({
         />
         <Step />
         <Navigation
-          hasError={false}
+          hasError={
+            validators.find(
+              (validator) => validator.stepName === steps[currentStepIndex].name
+            )?.isStepValid === false
+              ? true
+              : false
+          }
           showNext={currentStepIndex < steps.length - 1}
           onPrint={
             currentStepIndex === steps.length - 1
@@ -134,9 +157,7 @@ const SimulatorContent = ({
   );
 };
 
-const SimulatorLayout = <FormState, StepName extends string>(
-  props: Props
-): JSX.Element => {
+const SimulatorLayout = (props: Props): JSX.Element => {
   return (
     <SimulatorStepProvider createStore={() => createSimulatorStore()}>
       <SimulatorContent {...props} />

@@ -17,25 +17,25 @@ type Props = {
   publicodesRules: any;
 };
 
-export enum StepName {
-  Introduction = "Introduction",
-  Info = "Contrat de travail",
+export enum IndemniteLicenciementStepName {
+  Introduction = "Intro",
+  Info = "Info",
 }
 
-const steps: Step<StepName>[] = [
+const steps: Step<IndemniteLicenciementStepName>[] = [
   {
-    label: StepName.Introduction,
-    name: StepName.Introduction,
+    label: "Introduction",
+    name: IndemniteLicenciementStepName.Introduction,
     Component: StepIntro,
   },
   {
-    label: StepName.Info,
-    name: StepName.Info,
+    label: "Contrat de travail",
+    name: IndemniteLicenciementStepName.Info,
     Component: StepContratTravail,
   },
   {
-    label: StepName.Introduction,
-    name: StepName.Introduction,
+    label: "Introduction",
+    name: IndemniteLicenciementStepName.Introduction,
     Component: StepIntro,
   },
 ];
@@ -50,10 +50,10 @@ const IndemniteLicenciementSimulator = ({
     onStepChange: state.onStepChange,
   }));
 
-  const { onValidateStepInfo, hasErrorStepInfo } = useContratTravailStore(
+  const { onValidateStepInfo, isStepInfoValid } = useContratTravailStore(
     (state) => ({
       onValidateStepInfo: state.onValidateStep,
-      hasErrorStepInfo: state.hasError,
+      isStepInfoValid: state.isStepValid,
     })
   );
 
@@ -65,6 +65,13 @@ const IndemniteLicenciementSimulator = ({
       duration="5 à 10 min"
       debug={<DebugInfo />}
       steps={steps}
+      validators={[
+        {
+          stepName: IndemniteLicenciementStepName.Info,
+          isStepValid: isStepInfoValid,
+          validator: onValidateStepInfo,
+        },
+      ]}
     />
   );
 };
