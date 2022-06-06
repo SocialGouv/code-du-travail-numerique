@@ -2,9 +2,7 @@ import { useIndemniteLicenciementStore } from "../store";
 
 const DebugInfo = (): JSX.Element => {
   const data = useIndemniteLicenciementStore((state) => ({
-    errorCdd: state.errorCdd,
-    errorFauteGrave: state.errorFauteGrave,
-    typeContratTravail: state.typeContratTravail,
+    ...state,
   }));
   return (
     <details>

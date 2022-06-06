@@ -7,3 +7,4 @@ export { default as SalaireTempsPlein } from "./SalaireTempsPlein";
 export { default as RadioQuestion } from "./RadioQuestion";
 export { default as FauteGrave } from "./FauteGrave";
 export { default as TypeContratMessage } from "./TypeContratMessage";
+export { default as TextQuestion } from "./TextQuestion";

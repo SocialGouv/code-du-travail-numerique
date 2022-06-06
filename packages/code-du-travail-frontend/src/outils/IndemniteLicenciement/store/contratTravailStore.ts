@@ -10,8 +10,8 @@ type ContratTravailStoreData = {
   errorLicenciementInaptitude: string | undefined;
   errorCdd: boolean;
   errorFauteGrave: boolean;
-  hasBeenSubmit: boolean;
-  isStepValid: boolean;
+  hasBeenSubmitInfo: boolean;
+  isStepInfoValid: boolean;
 };
 
 type ContratTravailStoreFn = {
@@ -24,7 +24,7 @@ type ContratTravailStoreFn = {
   onChangeLicenciementInaptitude: (
     value: typeof initialState.licenciementInaptitude
   ) => void;
-  onValidateStep: () => boolean;
+  onValidateStepInfo: () => boolean;
 };
 
 export type ContratTravailStoreSlice = ContratTravailStoreData &
@@ -39,8 +39,8 @@ const initialState: ContratTravailStoreData = {
   errorLicenciementInaptitude: undefined,
   errorCdd: false,
   errorFauteGrave: false,
-  hasBeenSubmit: false,
-  isStepValid: true,
+  hasBeenSubmitInfo: false,
+  isStepInfoValid: true,
 };
 
 export const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
@@ -51,7 +51,7 @@ export const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
   onChangeTypeContratTravail: (
     value: typeof initialState.typeContratTravail
   ) => {
-    if (get().hasBeenSubmit) {
+    if (get().hasBeenSubmitInfo) {
       const { isValid, newState } = validateStep({
         ...get(),
         typeContratTravail: value,
@@ -59,7 +59,7 @@ export const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
       set((state) => ({
         ...state,
         ...newState,
-        isStepValid: isValid,
+        isStepInfoValid: isValid,
         typeContratTravail: value,
       }));
     } else {
@@ -69,7 +69,7 @@ export const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
   onChangeLicenciementFauteGrave: (
     value: typeof initialState.licenciementFauteGrave
   ) => {
-    if (get().hasBeenSubmit) {
+    if (get().hasBeenSubmitInfo) {
       const { isValid, newState } = validateStep({
         ...get(),
         licenciementFauteGrave: value,
@@ -77,7 +77,7 @@ export const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
       set((state) => ({
         ...state,
         ...newState,
-        isStepValid: isValid,
+        isStepInfoValid: isValid,
         licenciementFauteGrave: value,
       }));
     } else {
@@ -87,7 +87,7 @@ export const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
   onChangeLicenciementInaptitude: (
     value: typeof initialState.licenciementInaptitude
   ) => {
-    if (get().hasBeenSubmit) {
+    if (get().hasBeenSubmitInfo) {
       const { isValid, newState } = validateStep({
         ...get(),
         licenciementInaptitude: value,
@@ -95,20 +95,20 @@ export const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
       set((state) => ({
         ...state,
         ...newState,
-        isStepValid: isValid,
+        isStepInfoValid: isValid,
         licenciementInaptitude: value,
       }));
     } else {
       set(() => ({ licenciementInaptitude: value }));
     }
   },
-  onValidateStep: () => {
+  onValidateStepInfo: () => {
     const { isValid, newState } = validateStep(get());
     set((state) => ({
       ...state,
       ...newState,
-      hasBeenSubmit: true,
-      isStepValid: isValid,
+      hasBeenSubmitInfo: true,
+      isStepInfoValid: isValid,
     }));
     return isValid;
   },

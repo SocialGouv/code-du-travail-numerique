@@ -6,9 +6,8 @@ import { AddButton, DelButton } from "../../common/Buttons";
 import { Error } from "../../common/ErrorField";
 import { MultiFieldRow } from "../../common/MultiFieldRow";
 import { Question } from "../../common/Question";
-import { isNumber } from "../../common/validators";
 
-type Absence = {
+export type Absence = {
   motif: string;
   durationInMonth: number | null;
 };
@@ -58,13 +57,6 @@ const AbsencePeriods = ({ onChange, absences }: Props) => {
 
   const onSetDurationDate = (index: number, value: string) => {
     const duration = parseFloat(value);
-    if (!isNumber(duration)) {
-      setErrorsAbsencePeriods({
-        ...errorsAbsencePeriods,
-        [`${index}`]: "Veuillez entrer un nombre",
-      });
-      return;
-    }
     const newAbsences = absencePeriods.map((absence, i) =>
       i === index ? { ...absence, durationInMonth: duration } : absence
     );
@@ -132,9 +124,10 @@ const AbsencePeriods = ({ onChange, absences }: Props) => {
             <div>
               <Input
                 id={`${index}.duration`}
-                type="number"
                 onChange={(e) => onSetDurationDate(index, e.target.value)}
                 invalid={errorsAbsencePeriods[`${index}`]}
+                value={absencePeriods[index].durationInMonth}
+                type="number"
               />
               {errorsAbsencePeriods[`${index}`] && (
                 <StyledError>{errorsAbsencePeriods[`${index}`]}</StyledError>

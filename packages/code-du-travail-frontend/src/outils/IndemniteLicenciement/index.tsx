@@ -1,6 +1,6 @@
 import React from "react";
 import { Step } from "../Simulator";
-import { StepIntro, StepContratTravail } from "./steps";
+import { StepIntro, StepContratTravail, StepAnciennete } from "./steps";
 import {
   createIndemniteLicenciementStore,
   IndemniteLicenciementProvider,
@@ -19,6 +19,7 @@ type Props = {
 export enum IndemniteLicenciementStepName {
   Introduction = "Intro",
   Info = "Info",
+  Anciennete = "Anciennete",
 }
 
 const steps: Step<IndemniteLicenciementStepName>[] = [
@@ -27,10 +28,15 @@ const steps: Step<IndemniteLicenciementStepName>[] = [
     name: IndemniteLicenciementStepName.Introduction,
     Component: StepIntro,
   },
+  // {
+  //   label: "Contrat de travail",
+  //   name: IndemniteLicenciementStepName.Info,
+  //   Component: StepContratTravail,
+  // },
   {
-    label: "Contrat de travail",
-    name: IndemniteLicenciementStepName.Info,
-    Component: StepContratTravail,
+    label: "Ancienneté",
+    name: IndemniteLicenciementStepName.Anciennete,
+    Component: StepAnciennete,
   },
   {
     label: "Introduction",
@@ -44,12 +50,14 @@ const IndemniteLicenciementSimulator = ({
   icon,
   displayTitle,
 }: Omit<Props, "publicodesRules">): JSX.Element => {
-  const { onValidateStepInfo, isStepInfoValid } = useIndemniteLicenciementStore(
-    (state) => ({
-      onValidateStepInfo: state.onValidateStep,
-      isStepInfoValid: state.isStepValid,
-    })
-  );
+  const {
+    onValidateStepInfo,
+    isStepInfoValid,
+    onValidateStepAnciennete,
+    isStepAncienneteValid,
+  } = useIndemniteLicenciementStore((state) => ({
+    ...state,
+  }));
 
   return (
     <SimulatorLayout
@@ -64,6 +72,11 @@ const IndemniteLicenciementSimulator = ({
           stepName: IndemniteLicenciementStepName.Info,
           isStepValid: isStepInfoValid,
           validator: onValidateStepInfo,
+        },
+        {
+          stepName: IndemniteLicenciementStepName.Anciennete,
+          isStepValid: isStepAncienneteValid,
+          validator: onValidateStepAnciennete,
         },
       ]}
     />
