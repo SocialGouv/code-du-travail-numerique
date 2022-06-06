@@ -1,14 +1,13 @@
 import React from "react";
-import { DebugInfo } from "./components";
+import { Step } from "../Simulator";
+import { StepIntro, StepContratTravail } from "./steps";
 import {
   createIndemniteLicenciementStore,
   IndemniteLicenciementProvider,
   useIndemniteLicenciementStore,
-} from "./state";
-import { Step } from "../Simulator";
-import { StepIntro, StepContratTravail } from "./steps";
-import { useContratTravailStore } from "./store";
+} from "./store";
 import SimulatorLayout from "./common/Layout";
+import { DebugInfo } from "./utils";
 
 type Props = {
   icon: string;
@@ -45,12 +44,7 @@ const IndemniteLicenciementSimulator = ({
   icon,
   displayTitle,
 }: Omit<Props, "publicodesRules">): JSX.Element => {
-  const { onChange, onStepChange } = useIndemniteLicenciementStore((state) => ({
-    onChange: state.onFormValuesChange,
-    onStepChange: state.onStepChange,
-  }));
-
-  const { onValidateStepInfo, isStepInfoValid } = useContratTravailStore(
+  const { onValidateStepInfo, isStepInfoValid } = useIndemniteLicenciementStore(
     (state) => ({
       onValidateStepInfo: state.onValidateStep,
       isStepInfoValid: state.isStepValid,
@@ -84,9 +78,7 @@ export const CalculateurIndemnite = ({
 }: Props): JSX.Element => {
   return (
     <IndemniteLicenciementProvider
-      createStore={() =>
-        createIndemniteLicenciementStore(publicodesRules, title)
-      }
+      createStore={() => createIndemniteLicenciementStore(publicodesRules)}
     >
       <IndemniteLicenciementSimulator
         icon={icon}

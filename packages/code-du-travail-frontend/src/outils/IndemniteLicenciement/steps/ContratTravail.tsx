@@ -1,7 +1,7 @@
 import React from "react";
 
 import { FauteGrave, RadioQuestion, TypeContratMessage } from "../components";
-import { useContratTravailStore } from "../store";
+import { useIndemniteLicenciementStore } from "../store";
 
 const StepContratTravail = () => {
   const {
@@ -16,7 +16,7 @@ const StepContratTravail = () => {
     errorTypeContratTravail,
     errorCdd,
     errorFauteGrave,
-  } = useContratTravailStore((state) => ({
+  } = useIndemniteLicenciementStore((state) => ({
     ...state,
   }));
 
