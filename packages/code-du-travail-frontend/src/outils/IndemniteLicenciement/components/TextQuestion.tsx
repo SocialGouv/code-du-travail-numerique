@@ -12,7 +12,6 @@ type Props = {
   label: string;
   tooltip?: Tooltip;
   inputType?: string;
-  invalid?: boolean;
   value: string | undefined;
   placeholder?: string;
 };
@@ -20,7 +19,6 @@ type Props = {
 export default function TextQuestion({
   tooltip,
   inputType,
-  invalid,
   label,
   error,
   value,
@@ -39,7 +37,7 @@ export default function TextQuestion({
           id={randomId}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          invalid={invalid}
+          invalid={error}
           placeholder={placeholder}
         />
         {error && (

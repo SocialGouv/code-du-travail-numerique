@@ -16,9 +16,9 @@ const StepAnciennete = () => {
     onChangeDateSortie,
     dateNotification,
     onChangeDateNotification,
-    errorDateEntree,
     errorDateNotification,
     errorDateSortie,
+    errorAbsenceProlonge,
   } = useIndemniteLicenciementStore((state) => ({
     ...state,
   }));
@@ -31,7 +31,7 @@ const StepAnciennete = () => {
         placeholder=" jj/mm/aaaa"
         value={dateEntree}
         onChange={onChangeDateEntree}
-        error={errorDateEntree}
+        error={undefined}
       />
       <TextQuestion
         label="Quelle est la date de notification du licenciement&nbsp;?"
@@ -64,7 +64,7 @@ const StepAnciennete = () => {
         label="Y a-t-il eu des absences de plus d’un mois durant le contrat de travail&nbsp;?"
         selectedOption={hasAbsenceProlonge}
         onChangeSelectedOption={onChangeHasAbsenceProlonge}
-        error={undefined}
+        error={errorAbsenceProlonge}
       />
       {hasAbsenceProlonge === "oui" && (
         <AbsencePeriods

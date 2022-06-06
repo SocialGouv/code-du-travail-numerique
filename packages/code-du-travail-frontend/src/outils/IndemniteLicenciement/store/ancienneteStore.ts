@@ -8,13 +8,13 @@ type AncienneteStoreData = {
   dateEntree: string | undefined;
   dateSortie: string | undefined;
   dateNotification: string | undefined;
-  errorDateEntree: string | undefined;
   errorDateSortie: string | undefined;
   errorDateNotification: string | undefined;
   absencePeriods: Absence[];
   hasBeenSubmitStepAnciennete: boolean;
   isStepAncienneteValid: boolean;
   hasAbsenceProlonge: "oui" | "non" | undefined;
+  errorAbsenceProlonge: string | undefined;
 };
 
 type AncienneteStoreFn = {
@@ -34,7 +34,6 @@ const initialState: AncienneteStoreData = {
   dateEntree: undefined,
   dateSortie: undefined,
   dateNotification: undefined,
-  errorDateEntree: undefined,
   errorDateSortie: undefined,
   errorDateNotification: undefined,
   hasBeenSubmitStepAnciennete: false,
@@ -46,6 +45,7 @@ const initialState: AncienneteStoreData = {
     },
   ],
   hasAbsenceProlonge: undefined,
+  errorAbsenceProlonge: undefined,
 };
 
 export const createAncienneteStore: StoreSlice<AncienneteStoreSlice> = (
@@ -107,18 +107,35 @@ export const createAncienneteStore: StoreSlice<AncienneteStoreSlice> = (
   onChangeHasAbsenceProlonge: (
     value: typeof initialState.hasAbsenceProlonge
   ) => {
-    set(() => ({
-      hasAbsenceProlonge: value,
-      absencePeriods:
-        value === "non" ? initialState.absencePeriods : get().absencePeriods,
-    }));
+    if (get().hasBeenSubmitStepAnciennete) {
+      const { isValid, newState } = validateStep({
+        ...get(),
+        hasAbsenceProlonge: value,
+        absencePeriods:
+          value === "non" ? initialState.absencePeriods : get().absencePeriods,
+      });
+      set((state) => ({
+        ...state,
+        ...newState,
+        isStepAncienneteValid: isValid,
+        hasAbsenceProlonge: value,
+        absencePeriods:
+          value === "non" ? initialState.absencePeriods : get().absencePeriods,
+      }));
+    } else {
+      set(() => ({
+        hasAbsenceProlonge: value,
+        absencePeriods:
+          value === "non" ? initialState.absencePeriods : get().absencePeriods,
+      }));
+    }
   },
   onValidateStepAnciennete: () => {
     const { isValid, newState } = validateStep(get());
     set((state) => ({
       ...state,
       ...newState,
-      hasBeenSubmit: true,
+      hasBeenSubmitStepAnciennete: true,
       isStepAncienneteValid: isValid,
     }));
     return isValid;
@@ -149,43 +166,50 @@ const validateStep = (state: AncienneteStoreData) => {
       dEntree,
       "dd MMMM yyyy"
     )}</strong>`;
-  }
-
-  if (
+  } else if (
     state.dateEntree &&
     state.dateNotification &&
     differenceInMonths(dNotification, dEntree) - totalAbsence < 8
   ) {
     errors.errorDateSortie =
       "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté";
+  } else {
+    errors.errorDateSortie = undefined;
   }
+
   if (
     state.dateNotification &&
     differenceInMonths(new Date(), dNotification) > 18
   ) {
     errors.errorDateNotification =
       "La date de notification doit se situer dans les 18 derniers mois";
-  }
-  if (
+  } else if (
     state.dateNotification &&
     state.dateSortie &&
     isAfter(dNotification, dSortie)
   ) {
     errors.errorDateNotification =
       "La date de notification doit se situer avant la date de sortie";
-  }
-  if (
+  } else if (
     state.dateNotification &&
     state.dateEntree &&
     isAfter(dEntree, dNotification)
   ) {
     errors.errorDateNotification =
       "La date de notification doit se situer après la date d’entrée";
+  } else {
+    errors.errorDateNotification = undefined;
+  }
+
+  if (state.hasAbsenceProlonge === undefined) {
+    errors.errorAbsenceProlonge = "Vous devez répondre à cette question";
+  } else {
+    errors.errorAbsenceProlonge = undefined;
   }
 
   return {
     isValid: deepEqualObject(errors, {
-      errorDateEntree: undefined,
+      errorAbsenceProlonge: undefined,
       errorDateSortie: undefined,
       errorDateNotification: undefined,
     }),
