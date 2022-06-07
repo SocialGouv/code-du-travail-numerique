@@ -6,7 +6,7 @@ type Props = {
   anciennete: number;
 };
 
-export function getIndemniteExplications({
+export default function getIndemniteExplications({
   salaireRef,
   inaptitude = false,
   anciennete,

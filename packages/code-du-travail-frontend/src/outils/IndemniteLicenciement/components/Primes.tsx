@@ -6,15 +6,14 @@ import { AddButton, DelButton } from "../../common/Buttons";
 import { InlineError } from "../../common/ErrorField";
 import { isNumber } from "../../common/validators";
 
-type Prime = (number | undefined) | null;
+export type Prime = (number | undefined) | null;
 
 type Props = {
-  visible?: boolean;
   onChange: (primes: Prime[]) => void;
   primes: Prime[];
 };
 
-export default function Primes({ primes, visible = true, onChange }: Props) {
+export default function Primes({ primes, onChange }: Props) {
   const [localPrimes, setLocalPrimes] = React.useState<Prime[]>(
     primes ?? [undefined]
   );
@@ -44,12 +43,9 @@ export default function Primes({ primes, visible = true, onChange }: Props) {
 
   return (
     <>
-      {visible && (
-        <p>
-          Primes annuelles ou exceptionnelles perçues au cours des 3 derniers
-          mois
-        </p>
-      )}
+      <p>
+        Primes annuelles ou exceptionnelles perçues au cours des 3 derniers mois
+      </p>
       {localPrimes.map((value, index) => (
         <Row key={index}>
           <div>
@@ -70,9 +66,7 @@ export default function Primes({ primes, visible = true, onChange }: Props) {
           </StyledDelButton>
         </Row>
       ))}
-      {visible && (
-        <AddButton onClick={onAddButtonClick}>Ajouter une prime</AddButton>
-      )}
+      <AddButton onClick={onAddButtonClick}>Ajouter une prime</AddButton>
     </>
   );
 }

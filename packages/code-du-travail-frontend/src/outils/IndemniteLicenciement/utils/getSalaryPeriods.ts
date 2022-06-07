@@ -1,30 +1,32 @@
-import { parse } from "../../../common/utils";
-import { MOTIFS } from "../../components/AbsencePeriods";
 import { differenceInMonths, format, subMonths } from "date-fns";
 import frLocale from "date-fns/locale/fr";
+import { parse } from "../../common/utils";
+import { Absence, MOTIFS } from "../components/AbsencePeriods";
 
 type Props = {
   dateEntree: string;
   dateNotification: string;
-  absencePeriods?: { duration: string; type: string }[];
+  absencePeriods?: Absence[];
 };
 
 function computeSalaryPeriods({
   dateEntree,
   dateNotification,
   absencePeriods,
-}: Props) {
+}: Props): string[] {
   const dEntree = parse(dateEntree);
   const dNotification = parse(dateNotification);
 
   const totalAbsence = (absencePeriods || [])
-    .filter((period) => Boolean(period.duration))
+    .filter((period) => Boolean(period.durationInMonth))
     .reduce((total, item) => {
-      const motif = MOTIFS.find((motif) => motif.label === item.type) as {
+      const motif = MOTIFS.find((motif) => motif.label === item.motif) as {
         label: string;
         value: number;
       };
-      return total + parseInt(item.duration) * motif.value;
+      return (
+        total + parseInt(item.durationInMonth?.toString() ?? "") * motif.value
+      );
     }, 0);
 
   const nbMonthes = Math.min(

@@ -8,7 +8,7 @@ import { Question } from "../../common/Question";
 import { SmallText } from "../../common/stepStyles";
 import { isNumber } from "../../common/validators";
 
-type SalaryPeriods = {
+export type SalaryPeriods = {
   month: string;
   value: number | undefined;
 };

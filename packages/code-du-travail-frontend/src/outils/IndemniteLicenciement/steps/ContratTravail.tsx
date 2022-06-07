@@ -2,8 +2,9 @@ import React from "react";
 
 import { FauteGrave, RadioQuestion, TypeContratMessage } from "../components";
 import { useIndemniteLicenciementStore } from "../store";
+import { ContratTravailStoreSlice } from "../store/contratTravailStore";
 
-const StepContratTravail = () => {
+const StepContratTravail = (): JSX.Element => {
   const {
     licenciementFauteGrave,
     onChangeLicenciementFauteGrave,
@@ -16,8 +17,20 @@ const StepContratTravail = () => {
     errorTypeContratTravail,
     errorCdd,
     errorFauteGrave,
-  } = useIndemniteLicenciementStore((state) => ({
-    ...state,
+  } = useIndemniteLicenciementStore((state: ContratTravailStoreSlice) => ({
+    errorFauteGrave: state.errorContratTravail.errorFauteGrave,
+    licenciementFauteGrave: state.inputContratTravail.licenciementFauteGrave,
+    onChangeLicenciementFauteGrave: state.onChangeLicenciementFauteGrave,
+    licenciementInaptitude: state.inputContratTravail.licenciementInaptitude,
+    onChangeLicenciementInaptitude: state.onChangeLicenciementInaptitude,
+    typeContratTravail: state.inputContratTravail.typeContratTravail,
+    onChangeTypeContratTravail: state.onChangeTypeContratTravail,
+    errorLicenciementFauteGrave:
+      state.errorContratTravail.errorLicenciementFauteGrave,
+    errorLicenciementInaptitude:
+      state.errorContratTravail.errorLicenciementInaptitude,
+    errorTypeContratTravail: state.errorContratTravail.errorTypeContratTravail,
+    errorCdd: state.errorContratTravail.errorCdd,
   }));
 
   return (
@@ -37,6 +50,7 @@ const StepContratTravail = () => {
         selectedOption={typeContratTravail}
         onChangeSelectedOption={onChangeTypeContratTravail}
         error={errorTypeContratTravail}
+        showRequired
       />
       {errorCdd && <TypeContratMessage />}
       <RadioQuestion
@@ -54,6 +68,7 @@ const StepContratTravail = () => {
         selectedOption={licenciementFauteGrave}
         onChangeSelectedOption={onChangeLicenciementFauteGrave}
         error={errorLicenciementFauteGrave}
+        showRequired
       />
       {errorFauteGrave && <FauteGrave />}
       <RadioQuestion
@@ -71,6 +86,7 @@ const StepContratTravail = () => {
         selectedOption={licenciementInaptitude}
         onChangeSelectedOption={onChangeLicenciementInaptitude}
         error={errorLicenciementInaptitude}
+        showRequired
       />
     </>
   );

@@ -5,16 +5,17 @@ import { parse } from "../../common/utils";
 import { Absence, MOTIFS } from "../components/AbsencePeriods";
 
 type AncienneteStoreData = {
-  dateEntree: string | undefined;
-  dateSortie: string | undefined;
-  dateNotification: string | undefined;
-  errorDateSortie: string | undefined;
-  errorDateNotification: string | undefined;
+  dateEntree?: string;
+  dateSortie?: string;
+  dateNotification?: string;
+  errorDateSortie?: string;
+  errorDateNotification?: string;
   absencePeriods: Absence[];
   hasBeenSubmitStepAnciennete: boolean;
   isStepAncienneteValid: boolean;
-  hasAbsenceProlonge: "oui" | "non" | undefined;
-  errorAbsenceProlonge: string | undefined;
+  hasAbsenceProlonge?: "oui" | "non";
+  errorAbsenceProlonge?: string;
+  errorDateEntree?: string;
 };
 
 type AncienneteStoreFn = {
@@ -31,11 +32,6 @@ type AncienneteStoreFn = {
 export type AncienneteStoreSlice = AncienneteStoreData & AncienneteStoreFn;
 
 const initialState: AncienneteStoreData = {
-  dateEntree: undefined,
-  dateSortie: undefined,
-  dateNotification: undefined,
-  errorDateSortie: undefined,
-  errorDateNotification: undefined,
   hasBeenSubmitStepAnciennete: false,
   isStepAncienneteValid: true,
   absencePeriods: [
@@ -44,8 +40,6 @@ const initialState: AncienneteStoreData = {
       durationInMonth: null,
     },
   ],
-  hasAbsenceProlonge: undefined,
-  errorAbsenceProlonge: undefined,
 };
 
 export const createAncienneteStore: StoreSlice<AncienneteStoreSlice> = (
@@ -53,7 +47,7 @@ export const createAncienneteStore: StoreSlice<AncienneteStoreSlice> = (
   get
 ) => ({
   ...initialState,
-  onChangeDateEntree: (value: string) => {
+  onChangeDateEntree: (value) => {
     if (get().hasBeenSubmitStepAnciennete) {
       const { isValid, newState } = validateStep({
         ...get(),
@@ -69,7 +63,7 @@ export const createAncienneteStore: StoreSlice<AncienneteStoreSlice> = (
       set(() => ({ dateEntree: value }));
     }
   },
-  onChangeDateSortie: (value: string) => {
+  onChangeDateSortie: (value) => {
     if (get().hasBeenSubmitStepAnciennete) {
       const { isValid, newState } = validateStep({
         ...get(),
@@ -85,7 +79,7 @@ export const createAncienneteStore: StoreSlice<AncienneteStoreSlice> = (
       set(() => ({ dateSortie: value }));
     }
   },
-  onChangeDateNotification: (value: string) => {
+  onChangeDateNotification: (value) => {
     if (get().hasBeenSubmitStepAnciennete) {
       const { isValid, newState } = validateStep({
         ...get(),
@@ -101,7 +95,7 @@ export const createAncienneteStore: StoreSlice<AncienneteStoreSlice> = (
       set(() => ({ dateNotification: value }));
     }
   },
-  onChangeAbsencePeriods: (value: typeof initialState.absencePeriods) => {
+  onChangeAbsencePeriods: (value) => {
     set(() => ({ absencePeriods: value }));
   },
   onChangeHasAbsenceProlonge: (
@@ -161,7 +155,21 @@ const validateStep = (state: AncienneteStoreData) => {
         return total + item.durationInMonth * v;
       }, 0) / 12;
 
-  if (state.dateEntree && state.dateSortie && isAfter(dEntree, dSortie)) {
+  // Date d'entrée
+  if (!state.dateEntree) {
+    errors.errorDateEntree = "Veuillez saisir cette date";
+  } else {
+    errors.errorDateEntree = undefined;
+  }
+
+  // Date de sortie
+  if (!state.dateSortie) {
+    errors.errorDateSortie = "Veuillez saisir cette date";
+  } else if (
+    state.dateEntree &&
+    state.dateSortie &&
+    isAfter(dEntree, dSortie)
+  ) {
     errors.errorDateSortie = `La date de sortie doit se situer après le <strong> ${format(
       dEntree,
       "dd MMMM yyyy"
@@ -177,7 +185,10 @@ const validateStep = (state: AncienneteStoreData) => {
     errors.errorDateSortie = undefined;
   }
 
-  if (
+  // Date de notification
+  if (!state.dateNotification) {
+    errors.errorDateNotification = "Veuillez saisir cette date";
+  } else if (
     state.dateNotification &&
     differenceInMonths(new Date(), dNotification) > 18
   ) {
@@ -212,6 +223,7 @@ const validateStep = (state: AncienneteStoreData) => {
       errorAbsenceProlonge: undefined,
       errorDateSortie: undefined,
       errorDateNotification: undefined,
+      errorDateEntree: undefined,
     }),
     newState: errors,
   };

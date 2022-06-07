@@ -1,28 +1,36 @@
 import { deepEqualObject } from "../../../lib";
 import { StoreSlice } from ".";
 
-type ContratTravailStoreData = {
-  typeContratTravail: "cdi" | "cdd" | undefined;
-  licenciementFauteGrave: "oui" | "non" | undefined;
-  licenciementInaptitude: "oui" | "non" | undefined;
-  errorTypeContratTravail: string | undefined;
-  errorLicenciementFauteGrave: string | undefined;
-  errorLicenciementInaptitude: string | undefined;
+type ContratTravailStoreInput = {
+  typeContratTravail: "cdi" | "cdd";
+  licenciementFauteGrave: "oui" | "non";
+  licenciementInaptitude: "oui" | "non";
+};
+
+type ContratTravailStoreError = {
+  errorTypeContratTravail?: string;
+  errorLicenciementFauteGrave?: string;
+  errorLicenciementInaptitude?: string;
   errorCdd: boolean;
   errorFauteGrave: boolean;
+};
+
+type ContratTravailStoreData = {
+  inputContratTravail: Partial<ContratTravailStoreInput>;
+  errorContratTravail: ContratTravailStoreError;
   hasBeenSubmitInfo: boolean;
   isStepInfoValid: boolean;
 };
 
 type ContratTravailStoreFn = {
   onChangeTypeContratTravail: (
-    value: typeof initialState.typeContratTravail
+    value: typeof initialState.inputContratTravail.typeContratTravail
   ) => void;
   onChangeLicenciementFauteGrave: (
-    value: typeof initialState.licenciementFauteGrave
+    value: typeof initialState.inputContratTravail.licenciementFauteGrave
   ) => void;
   onChangeLicenciementInaptitude: (
-    value: typeof initialState.licenciementInaptitude
+    value: typeof initialState.inputContratTravail.licenciementInaptitude
   ) => void;
   onValidateStepInfo: () => boolean;
 };
@@ -31,14 +39,11 @@ export type ContratTravailStoreSlice = ContratTravailStoreData &
   ContratTravailStoreFn;
 
 const initialState: ContratTravailStoreData = {
-  typeContratTravail: undefined,
-  licenciementFauteGrave: undefined,
-  licenciementInaptitude: undefined,
-  errorTypeContratTravail: undefined,
-  errorLicenciementFauteGrave: undefined,
-  errorLicenciementInaptitude: undefined,
-  errorCdd: false,
-  errorFauteGrave: false,
+  inputContratTravail: {},
+  errorContratTravail: {
+    errorCdd: false,
+    errorFauteGrave: false,
+  },
   hasBeenSubmitInfo: false,
   isStepInfoValid: true,
 };
@@ -48,58 +53,85 @@ export const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
   get
 ) => ({
   ...initialState,
-  onChangeTypeContratTravail: (
-    value: typeof initialState.typeContratTravail
-  ) => {
+  onChangeTypeContratTravail: (value) => {
     if (get().hasBeenSubmitInfo) {
       const { isValid, newState } = validateStep({
         ...get(),
-        typeContratTravail: value,
+        inputContratTravail: {
+          ...get().inputContratTravail,
+          typeContratTravail: value,
+        },
       });
       set((state) => ({
         ...state,
         ...newState,
         isStepInfoValid: isValid,
-        typeContratTravail: value,
+        inputContratTravail: {
+          ...get().inputContratTravail,
+          typeContratTravail: value,
+        },
       }));
     } else {
-      set(() => ({ typeContratTravail: value }));
+      set(() => ({
+        inputContratTravail: {
+          ...get().inputContratTravail,
+          typeContratTravail: value,
+        },
+      }));
     }
   },
-  onChangeLicenciementFauteGrave: (
-    value: typeof initialState.licenciementFauteGrave
-  ) => {
+  onChangeLicenciementFauteGrave: (value) => {
     if (get().hasBeenSubmitInfo) {
       const { isValid, newState } = validateStep({
         ...get(),
-        licenciementFauteGrave: value,
+        inputContratTravail: {
+          ...get().inputContratTravail,
+          licenciementFauteGrave: value,
+        },
       });
       set((state) => ({
         ...state,
         ...newState,
         isStepInfoValid: isValid,
-        licenciementFauteGrave: value,
+        inputContratTravail: {
+          ...get().inputContratTravail,
+          licenciementFauteGrave: value,
+        },
       }));
     } else {
-      set(() => ({ licenciementFauteGrave: value }));
+      set(() => ({
+        inputContratTravail: {
+          ...get().inputContratTravail,
+          licenciementFauteGrave: value,
+        },
+      }));
     }
   },
-  onChangeLicenciementInaptitude: (
-    value: typeof initialState.licenciementInaptitude
-  ) => {
+  onChangeLicenciementInaptitude: (value) => {
     if (get().hasBeenSubmitInfo) {
       const { isValid, newState } = validateStep({
         ...get(),
-        licenciementInaptitude: value,
+        inputContratTravail: {
+          ...get().inputContratTravail,
+          licenciementInaptitude: value,
+        },
       });
       set((state) => ({
         ...state,
         ...newState,
         isStepInfoValid: isValid,
-        licenciementInaptitude: value,
+        inputContratTravail: {
+          ...get().inputContratTravail,
+          licenciementInaptitude: value,
+        },
       }));
     } else {
-      set(() => ({ licenciementInaptitude: value }));
+      set(() => ({
+        inputContratTravail: {
+          ...get().inputContratTravail,
+          licenciementInaptitude: value,
+        },
+      }));
     }
   },
   onValidateStepInfo: () => {
@@ -115,26 +147,36 @@ export const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
 });
 
 const validateStep = (state: ContratTravailStoreData) => {
-  const newState = {
-    errorCdd: state.typeContratTravail === "cdd" ? true : false,
-    errorFauteGrave: state.licenciementFauteGrave === "oui" ? true : false,
-    errorLicenciementInaptitude: !state.licenciementInaptitude
-      ? "Vous devez répondre à cette question"
-      : undefined,
-    errorLicenciementFauteGrave: !state.licenciementFauteGrave
-      ? "Vous devez répondre à cette question"
-      : undefined,
-    errorTypeContratTravail: !state.typeContratTravail
-      ? "Vous devez répondre à cette question"
-      : undefined,
+  const newState: Partial<ContratTravailStoreData> = {
+    errorContratTravail: {
+      errorCdd:
+        state.inputContratTravail.typeContratTravail === "cdd" ? true : false,
+      errorFauteGrave:
+        state.inputContratTravail.licenciementFauteGrave === "oui"
+          ? true
+          : false,
+      errorLicenciementInaptitude: !state.inputContratTravail
+        .licenciementInaptitude
+        ? "Vous devez répondre à cette question"
+        : undefined,
+      errorLicenciementFauteGrave: !state.inputContratTravail
+        .licenciementFauteGrave
+        ? "Vous devez répondre à cette question"
+        : undefined,
+      errorTypeContratTravail: !state.inputContratTravail.typeContratTravail
+        ? "Vous devez répondre à cette question"
+        : undefined,
+    },
   };
   return {
     isValid: deepEqualObject(newState, {
-      errorCdd: false,
-      errorFauteGrave: false,
-      errorLicenciementInaptitude: undefined,
-      errorLicenciementFauteGrave: undefined,
-      errorTypeContratTravail: undefined,
+      errorContratTravail: {
+        errorCdd: false,
+        errorFauteGrave: false,
+        errorLicenciementInaptitude: undefined,
+        errorLicenciementFauteGrave: undefined,
+        errorTypeContratTravail: undefined,
+      },
     }),
     newState,
   };

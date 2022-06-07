@@ -1,6 +1,6 @@
-import { parse } from "../../../common/utils";
-import { MOTIFS } from "../../components/AbsencePeriods";
 import { differenceInMonths } from "date-fns";
+import { parse } from "../../common/utils";
+import { MOTIFS } from "../components/AbsencePeriods";
 
 type Props = {
   dateEntree: string;
@@ -30,4 +30,5 @@ const computeSeniority = ({
       }, 0) / 12;
   return differenceInMonths(dSortie, dEntree) / 12 - totalAbsence;
 };
+
 export default computeSeniority;

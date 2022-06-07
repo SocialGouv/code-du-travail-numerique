@@ -7,7 +7,7 @@ type Props = {
   primes: { prime: number }[];
 };
 
-export function getSalaireRef({
+export default function getSalaireRef({
   hasSameSalaire = false,
   salaires = [],
   salaire,

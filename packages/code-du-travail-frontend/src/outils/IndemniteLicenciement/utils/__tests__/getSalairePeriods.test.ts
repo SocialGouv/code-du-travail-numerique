@@ -1,9 +1,9 @@
-import computeSalaryPeriods from "../computeSalaryPeriods";
+import { getSalaryPeriods } from "..";
 
-describe("computeSeniority", () => {
+describe("getSalaryPeriods", () => {
   it("should compute salary periods for the last 12 months", () => {
     expect(
-      computeSalaryPeriods({
+      getSalaryPeriods({
         dateEntree: "2017-02-01",
         dateNotification: "2018-04-01",
       })
@@ -24,8 +24,8 @@ describe("computeSeniority", () => {
   });
   it("should compute salary periods for 2 months", () => {
     expect(
-      computeSalaryPeriods({
-        absencePeriods: [{ duration: "6", type: "Congés sans solde" }],
+      getSalaryPeriods({
+        absencePeriods: [{ durationInMonth: 6, motif: "Congés sans solde" }],
         dateEntree: "2017-04-01",
         dateNotification: "2017-12-01",
       })

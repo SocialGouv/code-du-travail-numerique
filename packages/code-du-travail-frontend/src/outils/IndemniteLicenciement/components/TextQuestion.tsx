@@ -1,10 +1,11 @@
 import { Input, InputDate, theme } from "@socialgouv/cdtn-ui";
-import React from "react";
+import React, { FunctionComponent } from "react";
 
 import styled from "styled-components";
 import xss from "xss";
 import { InlineError } from "../../common/ErrorField";
 import { Question, Tooltip } from "../../common/Question";
+import { SmallText } from "../../common/stepStyles";
 
 type Props = {
   onChange: (value: string) => void;
@@ -14,6 +15,9 @@ type Props = {
   inputType?: string;
   value: string | undefined;
   placeholder?: string;
+  smallText?: string;
+  showRequired?: boolean;
+  icon?: FunctionComponent;
 };
 
 export default function TextQuestion({
@@ -24,14 +28,18 @@ export default function TextQuestion({
   value,
   placeholder,
   onChange,
+  smallText,
+  showRequired,
+  icon,
 }: Props) {
   const InputComponent = inputType === "date" ? InputDate : Input;
   const randomId = Math.random().toString(36);
   return (
     <>
-      <Question required tooltip={tooltip} htmlFor={randomId}>
+      <Question required={showRequired} tooltip={tooltip} htmlFor={randomId}>
         {label}
       </Question>
+      {smallText && <SmallText>{smallText}</SmallText>}
       <QuestionWrapper>
         <InputComponent
           id={randomId}
@@ -39,6 +47,7 @@ export default function TextQuestion({
           onChange={(e) => onChange(e.target.value)}
           invalid={error}
           placeholder={placeholder}
+          icon={icon}
         />
         {error && (
           <ErrorWrapper>

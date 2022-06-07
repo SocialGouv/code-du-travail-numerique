@@ -10,11 +10,12 @@ import { Question } from "../../common/Question";
 export type Absence = {
   motif: string;
   durationInMonth: number | null;
+  error?: string;
 };
 
 type Props = {
   onChange: (absences: Absence[]) => void;
-  absences: Absence[] | null;
+  absences: Absence[];
 };
 
 export const MOTIFS = [
@@ -31,44 +32,34 @@ export const MOTIFS = [
 ];
 
 const AbsencePeriods = ({ onChange, absences }: Props) => {
-  const [absencePeriods, setAbsencePeriods] = React.useState<Absence[]>(
-    absences ?? [
-      {
-        motif: MOTIFS[0].label,
-        durationInMonth: null,
-      },
-    ]
-  );
-  const [errorsAbsencePeriods, setErrorsAbsencePeriods] = React.useState({});
-
   const onAddButtonClick = () => {
-    setAbsencePeriods([
-      ...absencePeriods,
+    const newAbsences = [
+      ...absences,
       {
         motif: MOTIFS[0].label,
         durationInMonth: null,
       },
-    ]);
+    ];
+    onChange(newAbsences);
   };
 
   const onDeleteButtonClick = (index: number) => {
-    setAbsencePeriods(absencePeriods.filter((_, i) => i !== index));
+    const newAbsences = absences.filter((_, i) => i !== index);
+    onChange(newAbsences);
   };
 
   const onSetDurationDate = (index: number, value: string) => {
     const duration = parseFloat(value);
-    const newAbsences = absencePeriods.map((absence, i) =>
+    const newAbsences = absences.map((absence, i) =>
       i === index ? { ...absence, durationInMonth: duration } : absence
     );
-    setAbsencePeriods(newAbsences);
     onChange(newAbsences);
   };
 
   const onSelectMotif = (index: number, value: string) => {
-    const newAbsences = absencePeriods.map((motif, i) =>
+    const newAbsences = absences.map((motif, i) =>
       i === index ? { ...motif, motif: value } : motif
     );
-    setAbsencePeriods(newAbsences);
     onChange(newAbsences);
   };
 
@@ -86,7 +77,7 @@ const AbsencePeriods = ({ onChange, absences }: Props) => {
       <Question>
         Quels sont le motif et la durée de ces absences prolongées&nbsp;?
       </Question>
-      {absencePeriods.map((value, index) => (
+      {absences.map((value, index) => (
         <RelativeDiv key={index}>
           <RowTitle>
             <Text
@@ -112,7 +103,7 @@ const AbsencePeriods = ({ onChange, absences }: Props) => {
                 {MOTIFS.map(({ label }) => (
                   <option
                     key={label}
-                    selected={absencePeriods[index].motif === label}
+                    selected={value.motif === label}
                     value={label}
                   >
                     {label}
@@ -125,15 +116,13 @@ const AbsencePeriods = ({ onChange, absences }: Props) => {
               <Input
                 id={`${index}.duration`}
                 onChange={(e) => onSetDurationDate(index, e.target.value)}
-                invalid={errorsAbsencePeriods[`${index}`]}
-                value={absencePeriods[index].durationInMonth}
+                invalid={value.error}
+                value={value.durationInMonth}
                 type="number"
               />
-              {errorsAbsencePeriods[`${index}`] && (
-                <StyledError>{errorsAbsencePeriods[`${index}`]}</StyledError>
-              )}
+              {value.error && <StyledError>{value.error}</StyledError>}
             </div>
-            {absencePeriods.length > 1 && (
+            {absences.length > 1 && (
               <StyledDelButton onClick={() => onDeleteButtonClick(index)}>
                 Supprimer
               </StyledDelButton>

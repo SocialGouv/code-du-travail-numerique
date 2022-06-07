@@ -16,6 +16,7 @@ type Props = {
   error?: string;
   label: string;
   questions: Question[];
+  showRequired?: boolean;
 };
 
 export default function RadioQuestion({
@@ -24,6 +25,7 @@ export default function RadioQuestion({
   error,
   label,
   questions,
+  showRequired,
 }: Props) {
   const [value, setValue] = React.useState(selectedOption ?? "");
   const onChange = (value: string) => {
@@ -33,7 +35,7 @@ export default function RadioQuestion({
 
   return (
     <>
-      <Question required>{label}</Question>
+      <Question required={showRequired}>{label}</Question>
       <RadioContainer>
         {questions.map((question, index) => (
           <InputRadio

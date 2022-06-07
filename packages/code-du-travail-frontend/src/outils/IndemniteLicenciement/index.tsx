@@ -1,12 +1,18 @@
 import React from "react";
 import { Step } from "../Simulator";
-import { StepIntro, StepContratTravail, StepAnciennete } from "./steps";
+import {
+  StepIntro,
+  StepContratTravail,
+  StepAnciennete,
+  StepSalaires,
+  StepResultat,
+} from "./steps";
 import {
   createIndemniteLicenciementStore,
   IndemniteLicenciementProvider,
   useIndemniteLicenciementStore,
 } from "./store";
-import SimulatorLayout from "./common/Layout";
+import SimulatorLayout from "./components/Layout";
 import { DebugInfo } from "./utils";
 
 type Props = {
@@ -20,6 +26,8 @@ export enum IndemniteLicenciementStepName {
   Introduction = "Intro",
   Info = "Info",
   Anciennete = "Anciennete",
+  Salaires = "Salaires",
+  Resultat = "Resultat",
 }
 
 const steps: Step<IndemniteLicenciementStepName>[] = [
@@ -28,20 +36,25 @@ const steps: Step<IndemniteLicenciementStepName>[] = [
     name: IndemniteLicenciementStepName.Introduction,
     Component: StepIntro,
   },
-  // {
-  //   label: "Contrat de travail",
-  //   name: IndemniteLicenciementStepName.Info,
-  //   Component: StepContratTravail,
-  // },
+  {
+    label: "Contrat de travail",
+    name: IndemniteLicenciementStepName.Info,
+    Component: StepContratTravail,
+  },
   {
     label: "Ancienneté",
     name: IndemniteLicenciementStepName.Anciennete,
     Component: StepAnciennete,
   },
   {
-    label: "Introduction",
-    name: IndemniteLicenciementStepName.Introduction,
-    Component: StepIntro,
+    label: "Salaires",
+    name: IndemniteLicenciementStepName.Salaires,
+    Component: StepSalaires,
+  },
+  {
+    label: "Indemnité légale",
+    name: IndemniteLicenciementStepName.Resultat,
+    Component: StepResultat,
   },
 ];
 
@@ -55,6 +68,8 @@ const IndemniteLicenciementSimulator = ({
     isStepInfoValid,
     onValidateStepAnciennete,
     isStepAncienneteValid,
+    onValidateStepSalaires,
+    isStepSalairesValid,
   } = useIndemniteLicenciementStore((state) => ({
     ...state,
   }));
@@ -77,6 +92,11 @@ const IndemniteLicenciementSimulator = ({
           stepName: IndemniteLicenciementStepName.Anciennete,
           isStepValid: isStepAncienneteValid,
           validator: onValidateStepAnciennete,
+        },
+        {
+          stepName: IndemniteLicenciementStepName.Salaires,
+          isStepValid: isStepSalairesValid,
+          validator: onValidateStepSalaires,
         },
       ]}
     />
