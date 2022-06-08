@@ -9,7 +9,7 @@ describe("getSeniority", () => {
   it("should compute seniority with periods of absence", () => {
     expect(
       getSeniority({
-        absencePeriods: [{ duration: "6", type: "Congés sans solde" }],
+        absencePeriods: [{ durationInMonth: 6, motif: "Congés sans solde" }],
         dateEntree: "2017-04-01",
         dateSortie: "2018-04-01",
       })
@@ -18,7 +18,9 @@ describe("getSeniority", () => {
   it("should compute seniority with periods of absence divided by two for Congé parental", () => {
     expect(
       getSeniority({
-        absencePeriods: [{ duration: "6", type: "Congé parental d'éducation" }],
+        absencePeriods: [
+          { durationInMonth: 6, motif: "Congé parental d'éducation" },
+        ],
         dateEntree: "2016-04-01",
         dateSortie: "2018-04-01",
       })

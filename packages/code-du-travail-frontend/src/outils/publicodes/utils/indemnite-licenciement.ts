@@ -14,6 +14,7 @@ export const mapToPublicodesSituationForIndemniteLicenciement = (
           .padStart(4, "0")}'`,
       }
     : { "contrat salarié - convention collective": "''" };
+
   return {
     ...agreement,
     ...{

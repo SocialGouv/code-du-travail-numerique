@@ -9,7 +9,7 @@ import { InfoCalcul } from "../utils/getIndemniteExplications";
 type Props = {
   result: number | string;
   unit: string;
-  infoCalcul: InfoCalcul;
+  infoCalcul?: InfoCalcul;
 };
 
 const IndemniteLegale = ({ result, unit, infoCalcul }: Props): JSX.Element => (
@@ -19,7 +19,7 @@ const IndemniteLegale = ({ result, unit, infoCalcul }: Props): JSX.Element => (
       Le code du travail prévoit un montant minimum de :{" "}
       <HighlightResult>{`${result} ${unit} brut.`}</HighlightResult>
     </p>
-    <FormulaDetails infoCalcul={infoCalcul} withSource />
+    {infoCalcul && <FormulaDetails infoCalcul={infoCalcul} withSource />}
     <Disclaimer title={"Attention il peut exister un montant plus favorable"}>
       <p>
         Une convention collective, un accord d’entreprise, le contrat de travail

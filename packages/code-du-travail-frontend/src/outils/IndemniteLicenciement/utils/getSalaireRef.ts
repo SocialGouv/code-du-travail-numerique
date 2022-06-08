@@ -24,7 +24,7 @@ export default function getSalaireRef({
   if (!salaire) {
     salaire = 0;
   }
-  const primeValues = primes.map((a) => a !== undefined && a);
+  const primeValues = primes.filter((v) => v !== undefined);
   const salaryValues = salaires.map((a) => a.value);
 
   let moyenneSalaires = 0;

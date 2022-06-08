@@ -146,6 +146,11 @@ const validateStep = (state: SalairesStoreData) => {
       errorHasTempsPartiel: !state.inputSalaires.hasTempsPartiel
         ? "Vous devez répondre à cette question"
         : undefined,
+      errorHasSameSalaire:
+        state.inputSalaires.hasTempsPartiel === "non" &&
+        !state.inputSalaires.hasSameSalaire
+          ? "Vous devez répondre à cette question"
+          : undefined,
       errorTempsPartiel: state.inputSalaires.hasTempsPartiel === "oui",
       errorSalaireBrut:
         state.inputSalaires.hasTempsPartiel === "non" &&
@@ -179,6 +184,7 @@ const validateStep = (state: SalairesStoreData) => {
   return {
     isValid: deepEqualObject(newState, {
       errorSalaires: {
+        errorHasSameSalaire: undefined,
         errorHasPrimes: undefined,
         errorHasTempsPartiel: undefined,
         errorSalaireBrut: undefined,

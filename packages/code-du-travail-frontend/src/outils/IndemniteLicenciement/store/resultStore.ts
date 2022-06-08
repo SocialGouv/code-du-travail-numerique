@@ -51,7 +51,9 @@ export const createResultStore: StoreSlice<
     const salaireRef = getSalaireRef({
       hasSameSalaire: get().inputSalaires.hasSameSalaire === "oui",
       primes: get().inputSalaires.primes,
-      salaire: parseFloat(get().inputSalaires.salaireBrut!),
+      salaire: get().inputSalaires.salaireBrut
+        ? parseFloat(get().inputSalaires.salaireBrut!)
+        : undefined,
       salaires: get().inputSalaires.salaryPeriods,
     });
 

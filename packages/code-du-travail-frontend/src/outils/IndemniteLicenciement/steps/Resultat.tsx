@@ -13,6 +13,7 @@ const StepResult = () => {
   React.useEffect(() => {
     getPublicodesResult();
   }, []);
+
   return (
     <IndemniteLegale
       result={
@@ -24,7 +25,7 @@ const StepResult = () => {
           : "0"
       }
       unit={publicodesResult?.unit?.denominators[0] ?? "€"}
-      infoCalcul={infoCalcul!}
+      infoCalcul={infoCalcul}
     />
   );
 };
