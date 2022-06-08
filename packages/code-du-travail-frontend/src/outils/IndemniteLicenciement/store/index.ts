@@ -6,6 +6,7 @@ import {
 import createContext from "zustand/context";
 import { AncienneteStoreSlice, createAncienneteStore } from "./ancienneteStore";
 import { createSalairesStore, SalairesStoreSlice } from "./salairesStore";
+import { createResultStore, ResultStoreSlice } from "./resultStore";
 
 export type StoreSlice<T extends object, E extends object = T> = (
   set: SetState<E extends T ? E : E & T>,
@@ -13,9 +14,10 @@ export type StoreSlice<T extends object, E extends object = T> = (
   publicodesRules?: string
 ) => T;
 
-type MainStore = ContratTravailStoreSlice &
+export type MainStore = ContratTravailStoreSlice &
   AncienneteStoreSlice &
-  SalairesStoreSlice;
+  SalairesStoreSlice &
+  ResultStoreSlice;
 
 const createRootSlice = (
   set: SetState<MainStore>,
@@ -24,7 +26,8 @@ const createRootSlice = (
 ) => ({
   ...createContratTravailStore(set, get),
   ...createAncienneteStore(set, get),
-  ...createSalairesStore(set, get, publicodesRules),
+  ...createSalairesStore(set, get),
+  ...createResultStore(set, get, publicodesRules),
 });
 
 const createStore = (publicodesRules: string) =>

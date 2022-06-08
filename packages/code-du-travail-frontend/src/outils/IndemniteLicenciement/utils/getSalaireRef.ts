@@ -1,10 +1,12 @@
 import { sum } from "../../common/utils";
+import { Prime } from "../components/Primes";
+import { SalaryPeriods } from "../components/SalaireTempsPlein";
 
 type Props = {
   hasSameSalaire: boolean;
-  salaires: { salary: number }[];
+  salaires: SalaryPeriods[];
   salaire: number | undefined;
-  primes: { prime: number }[];
+  primes: Prime[];
 };
 
 export default function getSalaireRef({
@@ -22,8 +24,8 @@ export default function getSalaireRef({
   if (!salaire) {
     salaire = 0;
   }
-  const primeValues = primes.map((a) => a.prime);
-  const salaryValues = salaires.map((a) => a.salary);
+  const primeValues = primes.map((a) => a !== undefined && a);
+  const salaryValues = salaires.map((a) => a.value);
 
   let moyenneSalaires = 0;
   let moyenne3DerniersMoisSalaires = 0;

@@ -1,12 +1,11 @@
 import { icons, Input, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
-import { Field } from "react-final-form";
 import styled from "styled-components";
 
 import { InlineError } from "../../common/ErrorField";
 import { Question } from "../../common/Question";
 import { SmallText } from "../../common/stepStyles";
-import { isNumber } from "../../common/validators";
+import { ErrorWrapper } from "./TextQuestion";
 
 export type SalaryPeriods = {
   month: string;
@@ -22,22 +21,36 @@ export const SalaireTempsPlein = ({
   salaryPeriods,
   onSalariesChange,
 }: Props): JSX.Element => {
+  const [isFirstEdit, setIsFirstEdit] = React.useState(true);
   const [salariesPeriod, setLocalSalaries] =
     React.useState<SalaryPeriods[]>(salaryPeriods);
   const [errorsSalaries, setErrorsSalaries] = React.useState({});
 
   const onChangeSalaries = (index: number, value: string) => {
     const salary = parseFloat(value);
-    if (!isNumber(salary)) {
+    if (isNaN(salary)) {
       setErrorsSalaries({
         ...errorsSalaries,
         [`${index}`]: "Veuillez entrer un nombre",
       });
       return;
+    } else {
+      setErrorsSalaries({
+        ...errorsSalaries,
+        [`${index}`]: undefined,
+      });
     }
-    const newLocalSalaries = salariesPeriod.map((p, i) =>
-      i === index ? { ...p, value: salary } : p
-    );
+    let newLocalSalaries: SalaryPeriods[] = [];
+    if (isFirstEdit) {
+      newLocalSalaries = salariesPeriod.map((p) => ({
+        ...p,
+        value: salary,
+      }));
+    } else {
+      newLocalSalaries = salariesPeriod.map((p, i) =>
+        i === index ? { ...p, value: salary } : p
+      );
+    }
     setLocalSalaries(newLocalSalaries);
     onSalariesChange(newLocalSalaries);
   };
@@ -57,7 +70,7 @@ export const SalaireTempsPlein = ({
         </tr>
       </thead>
       <tbody>
-        {salaryPeriods.map((salaryPeriod, index) => (
+        {salariesPeriod.map((salaryPeriod, index) => (
           <tr key={salaryPeriod.month + index}>
             <td>
               <label htmlFor={`salaries${index}`}>{salaryPeriod.month}</label>
@@ -71,12 +84,16 @@ export const SalaireTempsPlein = ({
                 type="number"
                 id={`salary${index}`}
                 invalid={errorsSalaries[`${index}`]}
+                value={salaryPeriod.value}
                 icon={icons.Euro}
                 updateOnScrollDisabled
                 onChange={(e) => onChangeSalaries(index, e.target.value)}
+                onBlur={() => setIsFirstEdit(false)}
               />
               {errorsSalaries[`${index}`] && (
-                <InlineError>{errorsSalaries[`${index}`]}</InlineError>
+                <ErrorWrapper>
+                  <InlineError>{errorsSalaries[`${index}`]}</InlineError>
+                </ErrorWrapper>
               )}
             </td>
           </tr>

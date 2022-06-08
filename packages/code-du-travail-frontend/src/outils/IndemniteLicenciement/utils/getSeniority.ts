@@ -1,11 +1,11 @@
 import { differenceInMonths } from "date-fns";
 import { parse } from "../../common/utils";
-import { MOTIFS } from "../components/AbsencePeriods";
+import { Absence, MOTIFS } from "../components/AbsencePeriods";
 
 type Props = {
   dateEntree: string;
   dateSortie: string;
-  absencePeriods?: { duration: string; type: string }[];
+  absencePeriods?: Absence[];
 };
 
 const computeSeniority = ({
@@ -20,13 +20,16 @@ const computeSeniority = ({
   // pour pouvoir ensuite le retranché de l’anciennété qui est aussi en mois par année
   const totalAbsence =
     (absencePeriods || [])
-      .filter((period) => Boolean(period.duration))
+      .filter((period) => Boolean(period.durationInMonth))
       .reduce((total, item) => {
-        const motif = MOTIFS.find((motif) => motif.label === item.type) as {
+        const motif = MOTIFS.find((motif) => motif.label === item.motif) as {
           label: string;
           value: number;
         };
-        return total + parseInt(item.duration) * motif.value;
+        if (item.durationInMonth) {
+          return total + item.durationInMonth * motif.value;
+        }
+        return total;
       }, 0) / 12;
   return differenceInMonths(dSortie, dEntree) / 12 - totalAbsence;
 };

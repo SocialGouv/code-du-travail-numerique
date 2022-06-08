@@ -119,6 +119,7 @@ const AbsencePeriods = ({ onChange, absences }: Props) => {
                 invalid={value.error}
                 value={value.durationInMonth}
                 type="number"
+                updateOnScrollDisabled
               />
               {value.error && <StyledError>{value.error}</StyledError>}
             </div>

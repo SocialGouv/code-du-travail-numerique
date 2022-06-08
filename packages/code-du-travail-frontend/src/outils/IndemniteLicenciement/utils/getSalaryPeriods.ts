@@ -24,9 +24,10 @@ function computeSalaryPeriods({
         label: string;
         value: number;
       };
-      return (
-        total + parseInt(item.durationInMonth?.toString() ?? "") * motif.value
-      );
+      if (item.durationInMonth) {
+        return total + item.durationInMonth * motif.value;
+      }
+      return total;
     }, 0);
 
   const nbMonthes = Math.min(

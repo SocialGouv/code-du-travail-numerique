@@ -5,14 +5,10 @@ import { MathFormula } from "../../common/MathFormula";
 import PubliReferences from "../../common/PubliReferences";
 import ShowDetails from "../../common/ShowDetails";
 import { SectionTitle } from "../../common/stepStyles";
-
-export type InformationCalcul = {
-  formula: string;
-  labels: { [key: string]: string };
-};
+import { InfoCalcul } from "../utils/getIndemniteExplications";
 
 type Props = {
-  infoCalcul: InformationCalcul;
+  infoCalcul: InfoCalcul;
   withSource?: boolean;
 };
 

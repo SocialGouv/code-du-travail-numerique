@@ -73,7 +73,7 @@ const QuestionWrapper = styled.div`
   margin-bottom: ${spacings.base};
 `;
 
-const ErrorWrapper = styled.div`
+export const ErrorWrapper = styled.div`
   display: inline-block;
   margin-left: ${spacings.medium};
 `;

@@ -4,9 +4,9 @@ import styled from "styled-components";
 
 import { AddButton, DelButton } from "../../common/Buttons";
 import { InlineError } from "../../common/ErrorField";
-import { isNumber } from "../../common/validators";
+import { ErrorWrapper } from "./TextQuestion";
 
-export type Prime = (number | undefined) | null;
+export type Prime = number | undefined;
 
 type Props = {
   onChange: (primes: Prime[]) => void;
@@ -14,27 +14,35 @@ type Props = {
 };
 
 export default function Primes({ primes, onChange }: Props) {
-  const [localPrimes, setLocalPrimes] = React.useState<Prime[]>(
-    primes ?? [undefined]
-  );
+  const [localPrimes, setLocalPrimes] = React.useState<Prime[]>(primes);
   const [errorsPrimes, setErrorsPrimes] = React.useState({});
 
   const onAddButtonClick = () => {
-    setLocalPrimes([...localPrimes, undefined]);
+    const newLocalPrimes = [...localPrimes, undefined];
+    setLocalPrimes(newLocalPrimes);
+    onChange(newLocalPrimes);
   };
 
   const onDeleteButtonClick = (index: number) => {
-    setLocalPrimes(primes.filter((_, i) => i !== index));
+    const newLocalPrimes = localPrimes.filter((_, i) => i !== index);
+    setLocalPrimes(newLocalPrimes);
+    onChange(newLocalPrimes);
   };
 
   const onChangePrimes = (index: number, value: string) => {
     const prime = parseFloat(value);
-    if (!isNumber(prime)) {
+    console.log(prime);
+    if (isNaN(prime)) {
       setErrorsPrimes({
         ...errorsPrimes,
         [`${index}`]: "Veuillez entrer un nombre",
       });
       return;
+    } else {
+      setErrorsPrimes({
+        ...errorsPrimes,
+        [`${index}`]: undefined,
+      });
     }
     const newLocalPrimes = localPrimes.map((p, i) => (i === index ? prime : p));
     setLocalPrimes(newLocalPrimes);
@@ -50,18 +58,22 @@ export default function Primes({ primes, onChange }: Props) {
         <Row key={index}>
           <div>
             <Input
+              id={`prime-${index}`}
               name={`${index}.prime`}
               type="number"
               invalid={errorsPrimes[`${index}`]}
               icon={icons.Euro}
               onChange={(e) => onChangePrimes(index, e.target.value)}
               value={value}
+              updateOnScrollDisabled
             />
             {errorsPrimes[`${index}`] && (
-              <InlineError>{errorsPrimes[`${index}`]}</InlineError>
+              <ErrorWrapper>
+                <InlineError>{errorsPrimes[`${index}`]}</InlineError>
+              </ErrorWrapper>
             )}
           </div>
-          <StyledDelButton onClick={onDeleteButtonClick}>
+          <StyledDelButton onClick={() => onDeleteButtonClick(index)}>
             Supprimer
           </StyledDelButton>
         </Row>

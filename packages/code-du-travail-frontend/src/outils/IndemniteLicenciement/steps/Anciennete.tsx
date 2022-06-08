@@ -3,6 +3,7 @@ import React from "react";
 import { SectionTitle } from "../../common/stepStyles";
 import { AbsencePeriods, RadioQuestion, TextQuestion } from "../components";
 import { useIndemniteLicenciementStore } from "../store";
+import { AncienneteStoreSlice } from "../store/ancienneteStore";
 
 const StepAnciennete = () => {
   const {
@@ -20,7 +21,7 @@ const StepAnciennete = () => {
     errorDateSortie,
     errorAbsenceProlonge,
     errorDateEntree,
-  } = useIndemniteLicenciementStore((state) => ({
+  } = useIndemniteLicenciementStore((state: AncienneteStoreSlice) => ({
     ...state,
   }));
   return (

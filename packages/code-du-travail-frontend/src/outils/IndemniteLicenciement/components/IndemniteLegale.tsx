@@ -4,12 +4,12 @@ import React from "react";
 import Disclaimer from "../../common/Disclaimer";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
 import { FormulaDetails } from ".";
-import { InformationCalcul } from "./FormulaDetails";
+import { InfoCalcul } from "../utils/getIndemniteExplications";
 
 type Props = {
   result: number | string;
   unit: string;
-  infoCalcul: InformationCalcul;
+  infoCalcul: InfoCalcul;
 };
 
 const IndemniteLegale = ({ result, unit, infoCalcul }: Props): JSX.Element => (

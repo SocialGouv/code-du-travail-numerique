@@ -6,11 +6,21 @@ type Props = {
   anciennete: number;
 };
 
+export type InfoCalcul = {
+  formula: string;
+  labels: {
+    "Anciennet\u00E9 au del\u00E0 de 10ans (A2)"?: number | undefined;
+    "Anciennet\u00E9 totale (A)": number;
+    "Licenciement pour inaptitude": string;
+    "Salaire de r\u00E9ference (Sref)": number;
+  };
+};
+
 export default function getIndemniteExplications({
   salaireRef,
   inaptitude = false,
   anciennete,
-}: Props) {
+}: Props): InfoCalcul {
   let formula = "-";
   const labels = {
     "Ancienneté totale (A)": round(anciennete),

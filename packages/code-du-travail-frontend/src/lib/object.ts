@@ -9,7 +9,11 @@ export const deepEqualObject = (
   }
   for (let i = 0; i < aKeys.length; i++) {
     const key = aKeys[i];
-    if (a[key] !== b[key]) {
+    if (typeof a[key] === "object" && typeof b[key] === "object") {
+      if (!deepEqualObject(a[key], b[key])) {
+        return false;
+      }
+    } else if (a[key] !== b[key]) {
       return false;
     }
   }
