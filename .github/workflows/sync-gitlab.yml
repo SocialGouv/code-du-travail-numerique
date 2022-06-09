@@ -9,7 +9,7 @@ jobs:
     name: Synchronize with Gitlab
     runs-on: ubuntu-latest
     steps:
-      - uses: SocialGouv/actions/mirror-gitlab@master
+      - uses: SocialGouv/actions/mirror-gitlab@v1
         with:
-          project: SocialGouv/cdtn/code-du-travail-numerique
+          project: SocialGouv/code-du-travail-numerique
           token: ${{ secrets.SOCIALGROOVYBOT_GITLAB_TOKEN }}
