@@ -4,7 +4,7 @@ import React from "react";
 import Disclaimer from "../../common/Disclaimer";
 import { HighlightResult, SectionTitle } from "../../common/stepStyles";
 import { FormulaDetails } from ".";
-import { InfoCalcul } from "../utils/getIndemniteExplications";
+import { InfoCalcul } from "../store/common/usecase/generateExplanation";
 
 type Props = {
   result: number | string;

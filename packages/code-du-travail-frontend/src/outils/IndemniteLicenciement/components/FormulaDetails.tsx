@@ -5,7 +5,7 @@ import { MathFormula } from "../../common/MathFormula";
 import PubliReferences from "../../common/PubliReferences";
 import ShowDetails from "../../common/ShowDetails";
 import { SectionTitle } from "../../common/stepStyles";
-import { InfoCalcul } from "../utils/getIndemniteExplications";
+import { InfoCalcul } from "../store/common/usecase/generateExplanation";
 
 type Props = {
   infoCalcul: InfoCalcul;

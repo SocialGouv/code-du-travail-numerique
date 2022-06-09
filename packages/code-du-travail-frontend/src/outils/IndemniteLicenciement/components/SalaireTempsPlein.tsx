@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { InlineError } from "../../common/ErrorField";
 import { Question } from "../../common/Question";
 import { SmallText } from "../../common/stepStyles";
-import { ErrorWrapper } from "./TextQuestion";
+import { ErrorWrapper } from "../../Components/TextQuestion";
 
 export type SalaryPeriods = {
   month: string;
@@ -54,6 +54,7 @@ export const SalaireTempsPlein = ({
     setLocalSalaries(newLocalSalaries);
     onSalariesChange(newLocalSalaries);
   };
+  //TODO: que les mois suivants Salaire mensuel brut
 
   return (
     <Table>

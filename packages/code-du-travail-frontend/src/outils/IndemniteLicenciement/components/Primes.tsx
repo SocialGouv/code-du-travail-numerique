@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import { AddButton, DelButton } from "../../common/Buttons";
 import { InlineError } from "../../common/ErrorField";
-import { ErrorWrapper } from "./TextQuestion";
+import { ErrorWrapper } from "../../Components/TextQuestion";
 
 export type Prime = number | undefined;
 

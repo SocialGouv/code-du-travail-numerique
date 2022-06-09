@@ -1,8 +1,8 @@
 import React from "react";
+import { RadioQuestion } from "../../Components";
 
-import { FauteGrave, RadioQuestion, TypeContratMessage } from "../components";
+import { FauteGrave, TypeContratMessage } from "../components";
 import { useIndemniteLicenciementStore } from "../store";
-import { ContratTravailStoreSlice } from "../store/contratTravailStore";
 
 const StepContratTravail = (): JSX.Element => {
   const {
@@ -17,20 +17,26 @@ const StepContratTravail = (): JSX.Element => {
     errorTypeContratTravail,
     errorCdd,
     errorFauteGrave,
-  } = useIndemniteLicenciementStore((state: ContratTravailStoreSlice) => ({
-    errorFauteGrave: state.errorContratTravail.errorFauteGrave,
-    licenciementFauteGrave: state.inputContratTravail.licenciementFauteGrave,
-    onChangeLicenciementFauteGrave: state.onChangeLicenciementFauteGrave,
-    licenciementInaptitude: state.inputContratTravail.licenciementInaptitude,
-    onChangeLicenciementInaptitude: state.onChangeLicenciementInaptitude,
-    typeContratTravail: state.inputContratTravail.typeContratTravail,
-    onChangeTypeContratTravail: state.onChangeTypeContratTravail,
+  } = useIndemniteLicenciementStore((state) => ({
+    errorFauteGrave: state.contratTravailData.error.errorFauteGrave,
+    licenciementFauteGrave:
+      state.contratTravailData.input.licenciementFauteGrave,
+    onChangeLicenciementFauteGrave:
+      state.contratTravailFunction.onChangeLicenciementFauteGrave,
+    licenciementInaptitude:
+      state.contratTravailData.input.licenciementInaptitude,
+    onChangeLicenciementInaptitude:
+      state.contratTravailFunction.onChangeLicenciementInaptitude,
+    typeContratTravail: state.contratTravailData.input.typeContratTravail,
+    onChangeTypeContratTravail:
+      state.contratTravailFunction.onChangeTypeContratTravail,
     errorLicenciementFauteGrave:
-      state.errorContratTravail.errorLicenciementFauteGrave,
+      state.contratTravailData.error.errorLicenciementFauteGrave,
     errorLicenciementInaptitude:
-      state.errorContratTravail.errorLicenciementInaptitude,
-    errorTypeContratTravail: state.errorContratTravail.errorTypeContratTravail,
-    errorCdd: state.errorContratTravail.errorCdd,
+      state.contratTravailData.error.errorLicenciementInaptitude,
+    errorTypeContratTravail:
+      state.contratTravailData.error.errorTypeContratTravail,
+    errorCdd: state.contratTravailData.error.errorCdd,
   }));
 
   return (

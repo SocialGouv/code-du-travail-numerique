@@ -2,12 +2,13 @@ import React from "react";
 
 import { IndemniteLegale } from "../components";
 import { useIndemniteLicenciementStore } from "../store";
-import { ResultStoreSlice } from "../store/resultStore";
 
 const StepResult = () => {
   const { publicodesResult, getPublicodesResult, infoCalcul } =
-    useIndemniteLicenciementStore((state: ResultStoreSlice) => ({
-      ...state,
+    useIndemniteLicenciementStore((state) => ({
+      infoCalcul: state.resultData.input.infoCalcul,
+      publicodesResult: state.resultData.input.publicodesResult,
+      getPublicodesResult: state.resultFunction.getPublicodesResult,
     }));
 
   React.useEffect(() => {

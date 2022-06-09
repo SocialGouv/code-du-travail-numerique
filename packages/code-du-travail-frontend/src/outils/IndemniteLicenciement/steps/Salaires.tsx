@@ -1,15 +1,9 @@
 import React from "react";
 import { icons } from "@socialgouv/cdtn-ui";
 
-import {
-  Primes,
-  RadioQuestion,
-  SalaireTempsPlein,
-  TempsPartiel,
-  TextQuestion,
-} from "../components";
+import { Primes, SalaireTempsPlein, TempsPartiel } from "../components";
 import { useIndemniteLicenciementStore } from "../store";
-import { SalairesStoreSlice } from "../store/salairesStore";
+import { RadioQuestion, TextQuestion } from "../../Components";
 
 const StepSalaires = () => {
   const {
@@ -29,23 +23,23 @@ const StepSalaires = () => {
     errorHasPrimes,
     primes,
     onChangePrimes,
-  } = useIndemniteLicenciementStore((state: SalairesStoreSlice) => ({
-    hasTempsPartiel: state.inputSalaires.hasTempsPartiel,
-    onChangeHasTempsPartiel: state.onChangeHasTempsPartiel,
-    errorHasTempsPartiel: state.errorSalaires.errorHasTempsPartiel,
-    hasSameSalaire: state.inputSalaires.hasSameSalaire,
-    onChangeHasSameSalaire: state.onChangeHasSameSalaire,
-    errorHasSameSalaire: state.errorSalaires.errorHasSameSalaire,
-    salaireBrut: state.inputSalaires.salaireBrut,
-    onChangeSalaireBrut: state.onChangeSalaireBrut,
-    errorSalaireBrut: state.errorSalaires.errorSalaireBrut,
-    salaryPeriods: state.inputSalaires.salaryPeriods,
-    onSalariesChange: state.onSalariesChange,
-    hasPrimes: state.inputSalaires.hasPrimes,
-    onChangeHasPrimes: state.onChangeHasPrimes,
-    errorHasPrimes: state.errorSalaires.errorHasPrimes,
-    primes: state.inputSalaires.primes,
-    onChangePrimes: state.onChangePrimes,
+  } = useIndemniteLicenciementStore((state) => ({
+    hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
+    onChangeHasTempsPartiel: state.salairesFunction.onChangeHasTempsPartiel,
+    errorHasTempsPartiel: state.salairesData.error.errorHasTempsPartiel,
+    hasSameSalaire: state.salairesData.input.hasSameSalaire,
+    onChangeHasSameSalaire: state.salairesFunction.onChangeHasSameSalaire,
+    errorHasSameSalaire: state.salairesData.error.errorHasSameSalaire,
+    salaireBrut: state.salairesData.input.salaireBrut,
+    onChangeSalaireBrut: state.salairesFunction.onChangeSalaireBrut,
+    errorSalaireBrut: state.salairesData.error.errorSalaireBrut,
+    salaryPeriods: state.salairesData.input.salaryPeriods,
+    onSalariesChange: state.salairesFunction.onSalariesChange,
+    hasPrimes: state.salairesData.input.hasPrimes,
+    onChangeHasPrimes: state.salairesFunction.onChangeHasPrimes,
+    errorHasPrimes: state.salairesData.error.errorHasPrimes,
+    primes: state.salairesData.input.primes,
+    onChangePrimes: state.salairesFunction.onChangePrimes,
   }));
 
   return (
@@ -94,6 +88,7 @@ const StepSalaires = () => {
               icon={icons.Euro}
               smallText="Prendre en compte les primes et avantages en nature."
               showRequired
+              inputType="number"
             />
           )}
           {hasSameSalaire === "non" && (

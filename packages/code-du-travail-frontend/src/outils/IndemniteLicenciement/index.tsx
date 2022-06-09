@@ -1,4 +1,5 @@
 import React from "react";
+import { DebugInfo, SimulatorLayout } from "../Components";
 import { Step } from "../Simulator";
 import {
   StepIntro,
@@ -12,8 +13,6 @@ import {
   IndemniteLicenciementProvider,
   useIndemniteLicenciementStore,
 } from "./store";
-import SimulatorLayout from "./components/Layout";
-import { DebugInfo } from "./utils";
 
 type Props = {
   icon: string;
@@ -71,8 +70,24 @@ const IndemniteLicenciementSimulator = ({
     onValidateStepSalaires,
     isStepSalairesValid,
   } = useIndemniteLicenciementStore((state) => ({
-    ...state,
+    onValidateStepInfo: state.contratTravailFunction.onValidateStepInfo,
+    isStepInfoValid: state.contratTravailData.isStepValid,
+    onValidateStepAnciennete: state.ancienneteFunction.onValidateStepAnciennete,
+    isStepAncienneteValid: state.ancienneteData.isStepValid,
+    onValidateStepSalaires: state.salairesFunction.onValidateStepSalaires,
+    isStepSalairesValid: state.ancienneteData.isStepValid,
   }));
+
+  const data = useIndemniteLicenciementStore((state) => {
+    let resultDataWithoutPublicodes = { ...state.resultData };
+    delete resultDataWithoutPublicodes.publicodes;
+    return {
+      contratTravailData: { ...state.contratTravailData },
+      ancienneteData: { ...state.ancienneteData },
+      salairesData: { ...state.salairesData },
+      resultData: resultDataWithoutPublicodes,
+    };
+  });
 
   return (
     <SimulatorLayout
@@ -80,7 +95,7 @@ const IndemniteLicenciementSimulator = ({
       displayTitle={displayTitle}
       icon={icon}
       duration="5 à 10 min"
-      debug={<DebugInfo />}
+      debug={<DebugInfo data={data} />}
       steps={steps}
       validators={[
         {

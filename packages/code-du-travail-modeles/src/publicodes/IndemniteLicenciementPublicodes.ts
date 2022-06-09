@@ -10,7 +10,7 @@ class IndemniteLicenciementPublicodes
   implements Publicodes<PublicodesIndemniteLicenciementResult>
 {
   constructor(rules: string) {
-    super(rules, PublicodesSimulator.PREAVIS_RETRAITE);
+    super(rules, PublicodesSimulator.INDEMNITE_LICENCIEMENT);
   }
 
   protected convertedResult(

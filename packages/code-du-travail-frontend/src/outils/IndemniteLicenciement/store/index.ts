@@ -1,12 +1,30 @@
 import create, { SetState, GetState, StoreApi } from "zustand";
+
+import createContext from "zustand/context";
+import {
+  AncienneteStoreSlice,
+  AncienneteStoreInput,
+  AncienneteStoreError,
+  createAncienneteStore,
+} from "./anciennete";
 import {
   ContratTravailStoreSlice,
+  ContratTravailStoreInput,
+  ContratTravailStoreError,
   createContratTravailStore,
-} from "./contratTravailStore";
-import createContext from "zustand/context";
-import { AncienneteStoreSlice, createAncienneteStore } from "./ancienneteStore";
-import { createSalairesStore, SalairesStoreSlice } from "./salairesStore";
-import { createResultStore, ResultStoreSlice } from "./resultStore";
+} from "./contratTravail";
+import {
+  ResultStoreSlice,
+  createResultStore,
+  ResultStoreError,
+  ResultStoreInput,
+} from "./result";
+import {
+  SalairesStoreSlice,
+  SalairesStoreInput,
+  SalairesStoreError,
+  createSalairesStore,
+} from "./salaires";
 
 export type StoreSlice<T extends object, E extends object = T> = (
   set: SetState<E extends T ? E : E & T>,
@@ -18,6 +36,24 @@ export type MainStore = ContratTravailStoreSlice &
   AncienneteStoreSlice &
   SalairesStoreSlice &
   ResultStoreSlice;
+
+export type StepData<
+  T extends
+    | AncienneteStoreInput
+    | SalairesStoreInput
+    | ContratTravailStoreInput
+    | ResultStoreInput,
+  U extends
+    | AncienneteStoreError
+    | SalairesStoreError
+    | ContratTravailStoreError
+    | ResultStoreError
+> = {
+  input: T;
+  error: U;
+  hasBeenSubmit: boolean;
+  isStepValid: boolean;
+};
 
 const createRootSlice = (
   set: SetState<MainStore>,

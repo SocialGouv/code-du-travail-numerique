@@ -1,6 +1,5 @@
 import { Paragraph } from "@socialgouv/cdtn-ui";
 import React from "react";
-import styled from "styled-components";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import Link from "next/link";
 import { A11yLink } from "../../../common/A11yLink";

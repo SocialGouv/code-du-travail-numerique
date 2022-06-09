@@ -1,9 +1,9 @@
 import React from "react";
 
 import { SectionTitle } from "../../common/stepStyles";
-import { AbsencePeriods, RadioQuestion, TextQuestion } from "../components";
+import { RadioQuestion, TextQuestion } from "../../Components";
+import { AbsencePeriods } from "../components";
 import { useIndemniteLicenciementStore } from "../store";
-import { AncienneteStoreSlice } from "../store/ancienneteStore";
 
 const StepAnciennete = () => {
   const {
@@ -21,8 +21,22 @@ const StepAnciennete = () => {
     errorDateSortie,
     errorAbsenceProlonge,
     errorDateEntree,
-  } = useIndemniteLicenciementStore((state: AncienneteStoreSlice) => ({
-    ...state,
+  } = useIndemniteLicenciementStore((state) => ({
+    onChangeAbsencePeriods: state.ancienneteFunction.onChangeAbsencePeriods,
+    absencePeriods: state.ancienneteData.input.absencePeriods,
+    onChangeHasAbsenceProlonge:
+      state.ancienneteFunction.onChangeHasAbsenceProlonge,
+    hasAbsenceProlonge: state.ancienneteData.input.hasAbsenceProlonge,
+    dateEntree: state.ancienneteData.input.dateEntree,
+    onChangeDateEntree: state.ancienneteFunction.onChangeDateEntree,
+    dateSortie: state.ancienneteData.input.dateSortie,
+    onChangeDateSortie: state.ancienneteFunction.onChangeDateSortie,
+    dateNotification: state.ancienneteData.input.dateNotification,
+    onChangeDateNotification: state.ancienneteFunction.onChangeDateNotification,
+    errorDateNotification: state.ancienneteData.error.errorDateNotification,
+    errorDateSortie: state.ancienneteData.error.errorDateSortie,
+    errorAbsenceProlonge: state.ancienneteData.error.errorAbsenceProlonge,
+    errorDateEntree: state.ancienneteData.error.errorDateEntree,
   }));
   return (
     <>
