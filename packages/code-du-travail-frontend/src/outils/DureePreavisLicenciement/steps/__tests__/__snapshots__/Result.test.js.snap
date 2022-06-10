@@ -233,14 +233,14 @@ exports[`<StepResult /> should render with O duration 1`] = `
       <ul>
         <li>
           Durée légale :
-
+           
           <strong>
             Aucun préavis.
           </strong>
         </li>
         <li>
           Durée conventionnelle :
-
+           
           <strong>
             Aucun préavis.
           </strong>
@@ -254,42 +254,42 @@ exports[`<StepResult /> should render with O duration 1`] = `
       <ul>
         <li>
           Ancienneté selon le code du travail
-           :
+           : 
           <strong>
             Moins de 6 mois
           </strong>
         </li>
         <li>
           Licenciement pour faute grave
-           :
+           : 
           <strong>
             Non
           </strong>
         </li>
         <li>
           Reconnu en tant que travailleur handicapé
-           :
+           : 
           <strong>
             Non
           </strong>
         </li>
         <li>
           Catégorie professionnelle
-           :
+           : 
           <strong>
             Employés
           </strong>
         </li>
         <li>
           Ancienneté selon la convention collective
-           :
+           : 
           <strong>
             Moins de 1 mois
           </strong>
         </li>
         <li>
           Convention collective
-           :
+           : 
           <strong>
             Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
           </strong>
@@ -564,7 +564,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   </h2>
   <p>
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
-
+     
     <strong
       class="c1 c2"
     >
@@ -583,23 +583,23 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     <sup
       class="c3"
     >
-      *
+      * 
     </sup>
     Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
     <i
       class="c4"
     >
-
+       
       Exemple : si le salarié reçoit le courrier recommandé le
-
+       
       5 avril
-       alors il effectuera son dernier jour dans l’entreprise le
+       alors il effectuera son dernier jour dans l’entreprise le 
       5 mai
-      . Si le
+      . Si le 
       5 mai
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>
-
+     
   </p>
   <div>
     <div
@@ -644,14 +644,14 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
       <ul>
         <li>
           Durée légale :
-
+           
           <strong>
             1 mois
           </strong>
         </li>
         <li>
           Durée conventionnelle :
-
+           
           <strong>
             La convention collective n'a pas été traitée par nos services.
           </strong>
@@ -665,21 +665,21 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
       <ul>
         <li>
           Ancienneté selon le code du travail
-           :
+           : 
           <strong>
             6 mois à moins de 2 ans
           </strong>
         </li>
         <li>
           Licenciement pour faute grave
-           :
+           : 
           <strong>
             Non
           </strong>
         </li>
         <li>
           Reconnu en tant que travailleur handicapé
-           :
+           : 
           <strong>
             Non
           </strong>
@@ -728,7 +728,7 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
     </p>
     <p>
       Vous pouvez faire une recherche par mots-clés dans
-
+       
       <a
         href="/convention-collective/16-transports-routiers-et-activites-auxiliaires-du-transport"
       >
@@ -972,14 +972,14 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
       <ul>
         <li>
           Durée légale :
-
+           
           <strong>
             Aucun préavis.
           </strong>
         </li>
         <li>
           Durée conventionnelle :
-
+           
           <strong>
             La convention collective n'a pas été traitée par nos services.
           </strong>
@@ -993,21 +993,21 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
       <ul>
         <li>
           Ancienneté selon le code du travail
-           :
+           : 
           <strong>
             Moins de 6 mois
           </strong>
         </li>
         <li>
           Licenciement pour faute grave
-           :
+           : 
           <strong>
             Non
           </strong>
         </li>
         <li>
           Reconnu en tant que travailleur handicapé
-           :
+           : 
           <strong>
             Non
           </strong>
@@ -1056,7 +1056,7 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
     </p>
     <p>
       Vous pouvez faire une recherche par mots-clés dans
-
+       
       <a
         href="/convention-collective/16-transports-routiers-et-activites-auxiliaires-du-transport"
       >
@@ -1262,7 +1262,7 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   </h2>
   <p>
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
-
+     
     <strong
       class="c1 c2"
     >
@@ -1281,23 +1281,23 @@ exports[`<StepResult /> should render with when no CC 1`] = `
     <sup
       class="c3"
     >
-      *
+      * 
     </sup>
     Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
     <i
       class="c4"
     >
-
+       
       Exemple : si le salarié reçoit le courrier recommandé le
-
+       
       5 avril
-       alors il effectuera son dernier jour dans l’entreprise le
+       alors il effectuera son dernier jour dans l’entreprise le 
       5 juin
-      . Si le
+      . Si le 
       5 juin
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>
-
+     
   </p>
   <div>
     <div
@@ -1339,14 +1339,14 @@ exports[`<StepResult /> should render with when no CC 1`] = `
       <ul>
         <li>
           Durée légale :
-
+           
           <strong>
             2 mois
           </strong>
         </li>
         <li>
           Durée conventionnelle :
-
+           
           <strong>
             La convention collective n'a pas été renseignée.
           </strong>
@@ -1360,21 +1360,21 @@ exports[`<StepResult /> should render with when no CC 1`] = `
       <ul>
         <li>
           Ancienneté selon le code du travail
-           :
+           : 
           <strong>
             Plus de 2 ans
           </strong>
         </li>
         <li>
           Licenciement pour faute grave
-           :
+           : 
           <strong>
             Non
           </strong>
         </li>
         <li>
           Reconnu en tant que travailleur handicapé
-           :
+           : 
           <strong>
             Non
           </strong>
@@ -1620,7 +1620,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   </h2>
   <p>
     À partir des éléments que vous avez saisis, la durée du préavis de licenciement est estimée à :
-
+     
     <strong
       class="c1 c2"
     >
@@ -1639,23 +1639,23 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     <sup
       class="c3"
     >
-      *
+      * 
     </sup>
     Le préavis débute à la date de première présentation de la notification du licenciement par lettre recommandée, peu importe le jour de son retrait par le salarié.
     <i
       class="c4"
     >
-
+       
       Exemple : si le salarié reçoit le courrier recommandé le
-
+       
       5 avril
-       alors il effectuera son dernier jour dans l’entreprise le
+       alors il effectuera son dernier jour dans l’entreprise le 
       5 juin
-      . Si le
+      . Si le 
       5 juin
        tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvrable suivant.
     </i>
-
+     
   </p>
   <div>
     <div
@@ -1700,14 +1700,14 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       <ul>
         <li>
           Durée légale :
-
+           
           <strong>
             2 mois
           </strong>
         </li>
         <li>
           Durée conventionnelle :
-
+           
           <strong>
             La convention collective n'a pas été traitée par nos services.
           </strong>
@@ -1721,21 +1721,21 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
       <ul>
         <li>
           Ancienneté selon le code du travail
-           :
+           : 
           <strong>
             Plus de 2 ans
           </strong>
         </li>
         <li>
           Licenciement pour faute grave
-           :
+           : 
           <strong>
             Non
           </strong>
         </li>
         <li>
           Reconnu en tant que travailleur handicapé
-           :
+           : 
           <strong>
             Non
           </strong>
@@ -1784,7 +1784,7 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
     </p>
     <p>
       Vous pouvez faire une recherche par mots-clés dans
-
+       
       <a
         href="/convention-collective/1561-cordonnerie-multiservice"
       >
