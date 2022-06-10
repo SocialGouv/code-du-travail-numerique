@@ -9,6 +9,7 @@ import {
 } from "../../../common";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { SalairesStoreSlice } from "../../Salaires/store";
+import produce from "immer";
 
 import { ResultStoreData, ResultStoreSlice } from "./types";
 
@@ -57,12 +58,6 @@ const createResultStore: StoreSlice<
         salaires: salaireInput.salaryPeriods,
       });
 
-      console.log(
-        seniority,
-        salaireRef,
-        contratInput.licenciementInaptitude === "oui"
-      );
-
       const { result } = publicodes.setSituation(
         mapToPublicodesSituationForIndemniteLicenciement(
           undefined, //TODO: on mettra la CC ici
@@ -78,13 +73,14 @@ const createResultStore: StoreSlice<
         salaireRef,
       });
 
-      set((state) => ({
-        ...state,
-        publicodesResult: result,
-        salaireRef,
-        seniority,
-        infoCalcul,
-      }));
+      set(
+        produce((state: ResultStoreSlice) => {
+          state.resultData.input.publicodesResult = result;
+          state.resultData.input.salaireRef = salaireRef;
+          state.resultData.input.seniority = seniority;
+          state.resultData.input.infoCalcul = infoCalcul;
+        })
+      );
     },
   },
 });
