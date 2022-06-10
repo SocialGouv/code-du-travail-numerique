@@ -18,8 +18,8 @@ export type SalairesStoreError = {
   errorSalaireBrut?: string;
   errorHasPrimes?: string;
   errorTempsPartiel?: boolean;
-  errorSalaryPeriods?: boolean;
-  errorPrimes?: boolean;
+  errorSalaryPeriods?: string;
+  errorPrimes?: string;
 };
 
 export type SalairesStoreData = StepData<

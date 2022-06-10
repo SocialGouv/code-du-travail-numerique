@@ -7,7 +7,10 @@ import {
   SalairesStoreSlice,
 } from "./types";
 import { StoreSlice } from "../../../store";
-import { deepEqualObject } from "../../../../../lib";
+import {
+  deepEqualObject,
+  detectNullOrUndefinedOrNaNInArray,
+} from "../../../../../lib";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { computeSalaryPeriods } from "../../../common/usecase";
 import { SalaryPeriods } from "../components/SalaireTempsPlein";
@@ -15,7 +18,7 @@ import { SalaryPeriods } from "../components/SalaireTempsPlein";
 const initialState: SalairesStoreData = {
   input: {
     salaryPeriods: [],
-    primes: [undefined],
+    primes: [],
   },
   error: {},
   hasBeenSubmit: false,
@@ -76,7 +79,7 @@ const createSalairesStore: StoreSlice<
       if (value === "non") {
         set(
           produce((state: SalairesStoreSlice) => {
-            state.salairesData.input.primes = [undefined];
+            state.salairesData.input.primes = [];
           })
         );
       }
@@ -117,10 +120,10 @@ const validateStep = (state: SalairesStoreInput) => {
     errorSalaryPeriods:
       state.hasTempsPartiel === "non" &&
       state.hasSameSalaire === "non" &&
-      state.salaryPeriods.map((v) => v.value && v).length !==
-        state.salaryPeriods.length
-        ? true
-        : false,
+      (state.salaryPeriods.length === 0 ||
+        detectNullOrUndefinedOrNaNInArray(state.salaryPeriods))
+        ? "Vous devez compléter l'ensemble des champs"
+        : undefined,
     errorHasPrimes:
       state.hasTempsPartiel === "non" &&
       state.hasSameSalaire === "non" &&
@@ -131,9 +134,10 @@ const validateStep = (state: SalairesStoreInput) => {
       state.hasTempsPartiel === "non" &&
       state.hasSameSalaire === "non" &&
       state.hasPrimes === "oui" &&
-      state.primes.length <= 1
-        ? true
-        : false,
+      (state.primes.length === 0 ||
+        detectNullOrUndefinedOrNaNInArray(state.primes))
+        ? "Vous devez compléter l'ensemble des champs"
+        : undefined,
   };
 
   return {
@@ -143,8 +147,8 @@ const validateStep = (state: SalairesStoreInput) => {
       errorHasTempsPartiel: undefined,
       errorSalaireBrut: undefined,
       errorTempsPartiel: false,
-      errorSalaryPeriods: false,
-      errorPrimes: false,
+      errorSalaryPeriods: undefined,
+      errorPrimes: undefined,
     }),
     errorState,
   };
@@ -165,6 +169,7 @@ const applyGenericValidation = (
       produce((state: SalairesStoreSlice) => {
         state.salairesData.error = errorState;
         state.salairesData.isStepValid = isValid;
+        state.salairesData.input[paramName] = value;
       })
     );
   } else {

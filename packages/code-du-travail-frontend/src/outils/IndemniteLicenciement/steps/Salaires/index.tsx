@@ -23,6 +23,8 @@ const StepSalaires = () => {
     errorHasPrimes,
     primes,
     onChangePrimes,
+    errorSalaryPeriods,
+    errorPrimes,
   } = useIndemniteLicenciementStore((state) => ({
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     onChangeHasTempsPartiel: state.salairesFunction.onChangeHasTempsPartiel,
@@ -40,6 +42,8 @@ const StepSalaires = () => {
     errorHasPrimes: state.salairesData.error.errorHasPrimes,
     primes: state.salairesData.input.primes,
     onChangePrimes: state.salairesFunction.onChangePrimes,
+    errorSalaryPeriods: state.salairesData.error.errorSalaryPeriods,
+    errorPrimes: state.salairesData.error.errorPrimes,
   }));
 
   return (
@@ -96,6 +100,7 @@ const StepSalaires = () => {
               <SalaireTempsPlein
                 onSalariesChange={onSalariesChange}
                 salaryPeriods={salaryPeriods}
+                error={errorSalaryPeriods}
               />
               <RadioQuestion
                 questions={[
@@ -114,7 +119,11 @@ const StepSalaires = () => {
                 error={errorHasPrimes}
               />
               {hasPrimes === "oui" && (
-                <Primes onChange={onChangePrimes} primes={primes} />
+                <Primes
+                  onChange={onChangePrimes}
+                  primes={primes}
+                  error={errorPrimes}
+                />
               )}
             </>
           )}

@@ -75,7 +75,7 @@ const IndemniteLicenciementSimulator = ({
     onValidateStepAnciennete: state.ancienneteFunction.onValidateStepAnciennete,
     isStepAncienneteValid: state.ancienneteData.isStepValid,
     onValidateStepSalaires: state.salairesFunction.onValidateStepSalaires,
-    isStepSalairesValid: state.ancienneteData.isStepValid,
+    isStepSalairesValid: state.salairesData.isStepValid,
   }));
 
   const data = useIndemniteLicenciementStore((state) => {

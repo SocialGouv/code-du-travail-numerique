@@ -6,19 +6,22 @@ import { AddButton, DelButton } from "../../../../common/Buttons";
 import { InlineError } from "../../../../common/ErrorField";
 import { ErrorWrapper } from "../../../../Components/TextQuestion";
 
-export type Prime = number | undefined;
+export type Prime = number | null;
 
 type Props = {
   onChange: (primes: Prime[]) => void;
   primes: Prime[];
+  error?: string;
 };
 
-export default function Primes({ primes, onChange }: Props) {
-  const [localPrimes, setLocalPrimes] = React.useState<Prime[]>(primes);
+export default function Primes({ primes, onChange, error }: Props) {
+  const [localPrimes, setLocalPrimes] = React.useState<Prime[]>(
+    primes.length === 0 ? [null] : primes
+  );
   const [errorsPrimes, setErrorsPrimes] = React.useState({});
 
   const onAddButtonClick = () => {
-    const newLocalPrimes = [...localPrimes, undefined];
+    const newLocalPrimes = [...localPrimes, null];
     setLocalPrimes(newLocalPrimes);
     onChange(newLocalPrimes);
   };
@@ -31,8 +34,7 @@ export default function Primes({ primes, onChange }: Props) {
 
   const onChangePrimes = (index: number, value: string) => {
     const prime = parseFloat(value);
-    console.log(prime);
-    if (isNaN(prime)) {
+    if (isNaN(prime) && value.length > 0) {
       setErrorsPrimes({
         ...errorsPrimes,
         [`${index}`]: "Veuillez entrer un nombre",
@@ -79,6 +81,11 @@ export default function Primes({ primes, onChange }: Props) {
         </Row>
       ))}
       <AddButton onClick={onAddButtonClick}>Ajouter une prime</AddButton>
+      {error && (
+        <StyledInlineWrapperError>
+          <InlineError>{error}</InlineError>
+        </StyledInlineWrapperError>
+      )}
     </>
   );
 }
@@ -94,4 +101,8 @@ const Row = styled.div`
 
 const StyledDelButton = styled(DelButton)`
   margin-left: ${spacings.base};
+`;
+
+const StyledInlineWrapperError = styled.div`
+  margin-top: ${spacings.base};
 `;

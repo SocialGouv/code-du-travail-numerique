@@ -93,6 +93,7 @@ const applyGenericValidation = (
       produce((state: ContratTravailStoreSlice) => {
         state.contratTravailData.error = errorState;
         state.contratTravailData.isStepValid = isValid;
+        state.contratTravailData.input[paramName] = value;
       })
     );
   } else {

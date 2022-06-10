@@ -15,11 +15,13 @@ export type SalaryPeriods = {
 type Props = {
   salaryPeriods: SalaryPeriods[];
   onSalariesChange: (salaries: SalaryPeriods[]) => void;
+  error?: string;
 };
 
 export const SalaireTempsPlein = ({
   salaryPeriods,
   onSalariesChange,
+  error,
 }: Props): JSX.Element => {
   const [isFirstEdit, setIsFirstEdit] = React.useState(true);
   const [salariesPeriod, setLocalSalaries] =
@@ -28,7 +30,7 @@ export const SalaireTempsPlein = ({
 
   const onChangeSalaries = (index: number, value: string) => {
     const salary = parseFloat(value);
-    if (isNaN(salary)) {
+    if (isNaN(salary) && value.length > 0) {
       setErrorsSalaries({
         ...errorsSalaries,
         [`${index}`]: "Veuillez entrer un nombre",
@@ -55,56 +57,63 @@ export const SalaireTempsPlein = ({
   };
 
   return (
-    <Table>
-      <Caption>
-        <Question required>Salaire mensuel brut</Question>
-        <SmallText>
-          Prendre en compte les salaires et avantages en nature.
-        </SmallText>
-      </Caption>
-      <thead>
-        <tr>
-          <Th>Mois</Th>
-          <Th>Salaire mensuel brut</Th>
-        </tr>
-      </thead>
-      <tbody>
-        {salariesPeriod.map((salaryPeriod, index) => (
-          <tr key={salaryPeriod.month + index}>
-            <td>
-              <label htmlFor={`salaries${index}`}>{salaryPeriod.month}</label>
-            </td>
-            <td>
-              <Input
-                name={`salaries[${index}]`}
-                title={`Salaire mensuel brut pour le mois ${
-                  index + 1
-                } (prendre en compte les salaires et avantages en nature)`}
-                type="number"
-                id={`salary${index}`}
-                invalid={errorsSalaries[`${index}`]}
-                value={salaryPeriod.value}
-                icon={icons.Euro}
-                updateOnScrollDisabled
-                onChange={(e) => onChangeSalaries(index, e.target.value)}
-                onBlur={() => setIsFirstEdit(false)}
-              />
-              {errorsSalaries[`${index}`] && (
-                <ErrorWrapper>
-                  <InlineError>{errorsSalaries[`${index}`]}</InlineError>
-                </ErrorWrapper>
-              )}
-            </td>
+    <>
+      <Table>
+        <Caption>
+          <Question required>Salaire mensuel brut</Question>
+          <SmallText>
+            Prendre en compte les salaires et avantages en nature.
+          </SmallText>
+        </Caption>
+        <thead>
+          <tr>
+            <Th>Mois</Th>
+            <Th>Salaire mensuel brut</Th>
           </tr>
-        ))}
-      </tbody>
-    </Table>
+        </thead>
+        <tbody>
+          {salariesPeriod.map((salaryPeriod, index) => (
+            <tr key={salaryPeriod.month + index}>
+              <td>
+                <label htmlFor={`salaries${index}`}>{salaryPeriod.month}</label>
+              </td>
+              <td>
+                <Input
+                  name={`salaries[${index}]`}
+                  title={`Salaire mensuel brut pour le mois ${
+                    index + 1
+                  } (prendre en compte les salaires et avantages en nature)`}
+                  type="number"
+                  id={`salary${index}`}
+                  invalid={errorsSalaries[`${index}`]}
+                  value={salaryPeriod.value}
+                  icon={icons.Euro}
+                  updateOnScrollDisabled
+                  onChange={(e) => onChangeSalaries(index, e.target.value)}
+                  onBlur={() => setIsFirstEdit(false)}
+                />
+                {errorsSalaries[`${index}`] && (
+                  <ErrorWrapper>
+                    <InlineError>{errorsSalaries[`${index}`]}</InlineError>
+                  </ErrorWrapper>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+      {error && (
+        <StyledInlineWrapperError>
+          <InlineError>{error}</InlineError>
+        </StyledInlineWrapperError>
+      )}
+    </>
   );
 };
 
 export default SalaireTempsPlein;
 
-const { fonts, breakpoints } = theme;
+const { fonts, breakpoints, spacings } = theme;
 
 const Table = styled.table`
   width: 100%;
@@ -129,4 +138,8 @@ const Caption = styled.caption`
 
 const Th = styled.th`
   font-size: ${fonts.sizes.small};
+`;
+
+const StyledInlineWrapperError = styled.div`
+  margin-top: ${spacings.base};
 `;

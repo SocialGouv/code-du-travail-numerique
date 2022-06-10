@@ -9,13 +9,13 @@ import { Question } from "../../../../common/Question";
 
 export type Absence = {
   motif: string;
-  durationInMonth: number | null;
-  error?: string;
+  durationInMonth: number | undefined;
 };
 
 type Props = {
   onChange: (absences: Absence[]) => void;
   absences: Absence[];
+  error?: string;
 };
 
 export const MOTIFS = [
@@ -31,35 +31,64 @@ export const MOTIFS = [
   { label: "Congé de paternité", value: 1.0 },
 ];
 
-const AbsencePeriods = ({ onChange, absences }: Props) => {
+const AbsencePeriods = ({ onChange, absences, error }: Props) => {
+  const [localAbsences, setLocalAbsences] = React.useState(
+    absences.length > 0
+      ? absences
+      : [
+          {
+            motif: MOTIFS[0].label,
+            durationInMonth: undefined,
+          },
+        ]
+  );
+
+  const [errorsInput, setErrorsInput] = React.useState({});
+
   const onAddButtonClick = () => {
     const newAbsences = [
-      ...absences,
+      ...localAbsences,
       {
         motif: MOTIFS[0].label,
-        durationInMonth: null,
+        durationInMonth: undefined,
       },
     ];
+    setLocalAbsences(newAbsences);
     onChange(newAbsences);
   };
 
   const onDeleteButtonClick = (index: number) => {
-    const newAbsences = absences.filter((_, i) => i !== index);
+    const newAbsences = localAbsences.filter((_, i) => i !== index);
+    setLocalAbsences(newAbsences);
     onChange(newAbsences);
   };
 
   const onSetDurationDate = (index: number, value: string) => {
     const duration = parseFloat(value);
-    const newAbsences = absences.map((absence, i) =>
+    if (isNaN(duration) && value.length > 0) {
+      setErrorsInput({
+        ...errorsInput,
+        [`${index}`]: "Veuillez entrer un nombre",
+      });
+      return;
+    } else {
+      setErrorsInput({
+        ...errorsInput,
+        [`${index}`]: undefined,
+      });
+    }
+    const newAbsences = localAbsences.map((absence, i) =>
       i === index ? { ...absence, durationInMonth: duration } : absence
     );
+    setLocalAbsences(newAbsences);
     onChange(newAbsences);
   };
 
   const onSelectMotif = (index: number, value: string) => {
-    const newAbsences = absences.map((motif, i) =>
+    const newAbsences = localAbsences.map((motif, i) =>
       i === index ? { ...motif, motif: value } : motif
     );
+    setLocalAbsences(newAbsences);
     onChange(newAbsences);
   };
 
@@ -77,7 +106,7 @@ const AbsencePeriods = ({ onChange, absences }: Props) => {
       <Question>
         Quels sont le motif et la durée de ces absences prolongées&nbsp;?
       </Question>
-      {absences.map((value, index) => (
+      {localAbsences.map((value, index) => (
         <RelativeDiv key={index}>
           <RowTitle>
             <Text
@@ -116,12 +145,14 @@ const AbsencePeriods = ({ onChange, absences }: Props) => {
               <Input
                 id={`${index}.duration`}
                 onChange={(e) => onSetDurationDate(index, e.target.value)}
-                invalid={value.error}
+                invalid={errorsInput[`${index}`] !== undefined}
                 value={value.durationInMonth}
                 type="number"
                 updateOnScrollDisabled
               />
-              {value.error && <StyledError>{value.error}</StyledError>}
+              {errorsInput[`${index}`] && (
+                <StyledError>{errorsInput[`${index}`]}</StyledError>
+              )}
             </div>
             {absences.length > 1 && (
               <StyledDelButton onClick={() => onDeleteButtonClick(index)}>
@@ -131,6 +162,7 @@ const AbsencePeriods = ({ onChange, absences }: Props) => {
           </MultiFieldRow>
         </RelativeDiv>
       ))}
+      {error && <StyledError>{error}</StyledError>}
       <AddButton onClick={onAddButtonClick}>Ajouter une absence</AddButton>
     </>
   );

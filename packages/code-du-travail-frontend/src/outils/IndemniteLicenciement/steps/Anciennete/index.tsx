@@ -21,6 +21,7 @@ const StepAnciennete = () => {
     errorDateSortie,
     errorAbsenceProlonge,
     errorDateEntree,
+    errorAbsencePeriods,
   } = useIndemniteLicenciementStore((state) => ({
     onChangeAbsencePeriods: state.ancienneteFunction.onChangeAbsencePeriods,
     absencePeriods: state.ancienneteData.input.absencePeriods,
@@ -37,6 +38,7 @@ const StepAnciennete = () => {
     errorDateSortie: state.ancienneteData.error.errorDateSortie,
     errorAbsenceProlonge: state.ancienneteData.error.errorAbsenceProlonge,
     errorDateEntree: state.ancienneteData.error.errorDateEntree,
+    errorAbsencePeriods: state.ancienneteData.error.errorAbsencePeriods,
   }));
   return (
     <>
@@ -86,6 +88,7 @@ const StepAnciennete = () => {
         <AbsencePeriods
           onChange={onChangeAbsencePeriods}
           absences={absencePeriods}
+          error={errorAbsencePeriods}
         />
       )}
     </>

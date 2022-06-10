@@ -15,6 +15,7 @@ export type AncienneteStoreError = {
   errorDateNotification?: string;
   errorAbsenceProlonge?: string;
   errorDateEntree?: string;
+  errorAbsencePeriods?: string;
 };
 
 export type AncienneteStoreData = StepData<

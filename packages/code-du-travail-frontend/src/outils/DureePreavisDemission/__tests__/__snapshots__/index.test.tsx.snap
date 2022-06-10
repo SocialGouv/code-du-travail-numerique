@@ -629,6 +629,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
       >
         <button
           class="c20 c21 c22"
+          type="button"
         >
           Commencer
           <svg

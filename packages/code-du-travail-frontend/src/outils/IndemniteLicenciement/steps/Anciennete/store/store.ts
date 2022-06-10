@@ -16,12 +16,7 @@ const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
   isStepValid: true,
   input: {
-    absencePeriods: [
-      {
-        motif: MOTIFS[0].label,
-        durationInMonth: null,
-      },
-    ],
+    absencePeriods: [],
   },
   error: {},
 };
@@ -148,12 +143,23 @@ const validateStep = (state: AncienneteStoreInput) => {
     errors.errorAbsenceProlonge = undefined;
   }
 
+  if (
+    state.hasAbsenceProlonge === "oui" &&
+    (state.absencePeriods.find((v) => !v.durationInMonth) ||
+      state.absencePeriods.length === 0)
+  ) {
+    errors.errorAbsencePeriods = "Vous devez renseigner tous les champs";
+  } else {
+    errors.errorAbsencePeriods = undefined;
+  }
+
   return {
     isValid: deepEqualObject(errors, {
       errorAbsenceProlonge: undefined,
       errorDateSortie: undefined,
       errorDateNotification: undefined,
       errorDateEntree: undefined,
+      errorAbsencePeriods: undefined,
     }),
     errorState: errors,
   };
@@ -176,6 +182,7 @@ const applyGenericValidation = (
       produce((state: AncienneteStoreSlice) => {
         state.ancienneteData.error = errorState;
         state.ancienneteData.isStepValid = isValid;
+        state.ancienneteData.input[paramName] = value;
       })
     );
   } else {

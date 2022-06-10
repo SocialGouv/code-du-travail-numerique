@@ -27,22 +27,27 @@ const createResultStore: StoreSlice<
   ResultStoreSlice,
   AncienneteStoreSlice & ContratTravailStoreSlice & SalairesStoreSlice
 > = (set, get, publicodesRules) => ({
-  publicodes: new IndemniteLicenciementPublicodes(publicodesRules ?? ""),
   resultData: {
     ...initialState,
+    publicodes: new IndemniteLicenciementPublicodes(publicodesRules!),
   },
   resultFunction: {
     getPublicodesResult: () => {
       const ancienneteInput = get().ancienneteData.input;
       const salaireInput = get().salairesData.input;
       const contratInput = get().contratTravailData.input;
-      const publicodes = get().resultData.publicodes!;
+      const publicodes = get().resultData.publicodes;
+
+      if (!publicodes) {
+        throw new Error("Publicodes is not defined");
+      }
 
       const seniority = computeSeniority({
         dateSortie: ancienneteInput.dateSortie!,
         dateEntree: ancienneteInput.dateEntree!,
         absencePeriods: ancienneteInput.absencePeriods!,
       });
+
       const salaireRef = computeReferenceSalary({
         hasSameSalaire: salaireInput.hasSameSalaire === "oui",
         primes: salaireInput.primes,
@@ -51,6 +56,12 @@ const createResultStore: StoreSlice<
           : undefined,
         salaires: salaireInput.salaryPeriods,
       });
+
+      console.log(
+        seniority,
+        salaireRef,
+        contratInput.licenciementInaptitude === "oui"
+      );
 
       const { result } = publicodes.setSituation(
         mapToPublicodesSituationForIndemniteLicenciement(
