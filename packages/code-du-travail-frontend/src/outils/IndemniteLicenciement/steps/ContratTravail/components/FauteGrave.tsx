@@ -26,6 +26,7 @@ export const AlertTitle = styled.p.attrs({
 })`
   color: ${({ theme }) => theme.primary};
   font-weight: 600;
+  margin-bottom: 3px;
 `;
 
 export default FauteGrave;

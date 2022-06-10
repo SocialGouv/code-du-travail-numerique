@@ -9,7 +9,7 @@ const TypeContratMessage = (): JSX.Element => {
   return (
     <Alert variant="primary" role="alert">
       <AlertTitle>À noter</AlertTitle>
-      <Paragraph>
+      <Paragraph noMargin>
         L’indemnité de licenciement n’est pas dûe pour les CDD et contrats de
         travail temporaires. Sous certaines conditions, le salarié peut avoir le
         droit à une&nbsp;
