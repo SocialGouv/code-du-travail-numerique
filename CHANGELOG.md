@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.77.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.77.0...v4.77.1) (2022-05-18)
+
+
+### Bug Fixes
+
+* **simulator:** remise à zéro du simulateur en quittant la page ([#4415](https://github.com/SocialGouv/code-du-travail-numerique/issues/4415)) ([93e33b5](https://github.com/SocialGouv/code-du-travail-numerique/commit/93e33b58623fe29454b974ade7ba2b1f8f7da20f))
+
+
+
+
+
+# [4.77.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.76.0...v4.77.0) (2022-05-12)
+
+
+### Bug Fixes
+
+* **ATInternet:** fix img load blocked by CSP rule ([#4406](https://github.com/SocialGouv/code-du-travail-numerique/issues/4406)) ([78fbdcb](https://github.com/SocialGouv/code-du-travail-numerique/commit/78fbdcb60a608e92630cdb8a7c7f11590ff22104))
+* **simulator:** indemnité de licenciement bug de selection absence ([#4412](https://github.com/SocialGouv/code-du-travail-numerique/issues/4412)) ([ad133b9](https://github.com/SocialGouv/code-du-travail-numerique/commit/ad133b9ae3677c7c924bd4ee58b0e7e3a8f7ddbf))
+* **simulator metadata:** update simulators metadata for SEO purpose ([#4403](https://github.com/SocialGouv/code-du-travail-numerique/issues/4403)) ([6c71ecd](https://github.com/SocialGouv/code-du-travail-numerique/commit/6c71ecdf5be00b082061bd1dc09475737e624903))
+* **simulator ui:** do not modify salary inputs on scroll event and do not scroll to top on change value in the form ([#4405](https://github.com/SocialGouv/code-du-travail-numerique/issues/4405)) ([e703962](https://github.com/SocialGouv/code-du-travail-numerique/commit/e7039624df38904fbd9b96250c60a205febbbb65))
+
+
+### Features
+
+* **simulator:** amélioration de la gestion du state ([#4383](https://github.com/SocialGouv/code-du-travail-numerique/issues/4383)) ([075ab8a](https://github.com/SocialGouv/code-du-travail-numerique/commit/075ab8abd6595d0bf4935c0185e6ac6b95501b4e)), closes [#4380](https://github.com/SocialGouv/code-du-travail-numerique/issues/4380) [#4382](https://github.com/SocialGouv/code-du-travail-numerique/issues/4382) [#4384](https://github.com/SocialGouv/code-du-travail-numerique/issues/4384)
+
+
+
+
+
 # [4.76.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.4...v4.76.0) (2022-04-27)
 
 

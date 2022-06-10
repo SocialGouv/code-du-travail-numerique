@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.77.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.77.0...v4.77.1) (2022-05-18)
+
+**Note:** Version bump only for package @cdt/e2e
+
+
+
+
+
+# [4.77.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.76.0...v4.77.0) (2022-05-12)
+
+
+### Bug Fixes
+
+* **simulator metadata:** update simulators metadata for SEO purpose ([#4403](https://github.com/SocialGouv/code-du-travail-numerique/issues/4403)) ([6c71ecd](https://github.com/SocialGouv/code-du-travail-numerique/commit/6c71ecdf5be00b082061bd1dc09475737e624903))
+
+
+### Features
+
+* **simulator:** amélioration de la gestion du state ([#4383](https://github.com/SocialGouv/code-du-travail-numerique/issues/4383)) ([075ab8a](https://github.com/SocialGouv/code-du-travail-numerique/commit/075ab8abd6595d0bf4935c0185e6ac6b95501b4e)), closes [#4380](https://github.com/SocialGouv/code-du-travail-numerique/issues/4380) [#4382](https://github.com/SocialGouv/code-du-travail-numerique/issues/4382) [#4384](https://github.com/SocialGouv/code-du-travail-numerique/issues/4384)
+
+
+
+
+
 # [4.76.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.4...v4.76.0) (2022-04-27)
 
 

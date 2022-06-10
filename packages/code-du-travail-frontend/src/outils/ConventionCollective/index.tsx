@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { Enterprise } from "../../conventions/Search/api/enterprises.service";
-import { WizardTitle } from "../common/Wizard";
+import { Title } from "../Components/SimulatorDecorator/Components";
 import {
   NavProvider,
   ScreenType,
@@ -105,7 +105,6 @@ function AgreementSearchTool({
     case ScreenType.agreement:
       Step = (
         <Steps.AgreementSearchStep
-          embeddedForm
           onBackClick={clearSearchType}
           onSelectAgreement={(agreement) => {
             trackEvent(
@@ -123,7 +122,6 @@ function AgreementSearchTool({
     case ScreenType.enterprise:
       Step = (
         <Steps.EnterpriseSearchStep
-          embeddedForm={true}
           onSearchParamsChange={(params) => setSearchParams(params)}
           searchParams={searchParams}
           handleEnterpriseSelection={handleEnterpriseSelection}
@@ -145,7 +143,7 @@ function AgreementSearchTool({
   }
   return (
     <WizardWrapper variant="main">
-      <WizardTitle title={displayTitle} icon={icon} />
+      <Title title={displayTitle} icon={icon} />
       {Step}
     </WizardWrapper>
   );

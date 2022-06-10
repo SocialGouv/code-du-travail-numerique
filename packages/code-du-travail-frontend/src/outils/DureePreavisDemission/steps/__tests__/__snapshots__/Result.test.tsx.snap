@@ -213,19 +213,27 @@ exports[`<StepResult /> should render CC answer 1`] = `
     <sup
       class="c3"
     >
-      * 
+      *
     </sup>
     Le préavis débute le jour où le salarié remet sa lettre de démission en main propre ou à la date de première présentation de la lettre recommandée, peu importe le jour de son retrait par l’employeur.
     <i
       class="c4"
     >
-       
+
       Exemple : si l’employeur reçoit le courrier recommandé le
-       
-      23 avril
-       alors le salarié effectuera son dernier jour dans l’entreprise le 
-      23 juin
+
+      5 avril
+       alors le salarié effectuera son dernier jour dans l’entreprise le
+      5 juin
       .
+      <span
+        class="c4"
+      >
+
+        Si le
+        5 juin
+         tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvré précédent.
+      </span>
     </i>
   </p>
   <div>
@@ -268,21 +276,21 @@ exports[`<StepResult /> should render CC answer 1`] = `
       <ul>
         <li>
           Convention collective
-           : 
+           :
           <strong>
             Plasturgie (292)
           </strong>
         </li>
         <li>
           Catégorie professionnelle
-           : 
+           :
           <strong>
             Collaborateurs
           </strong>
         </li>
         <li>
           Coefficient
-           : 
+           :
           <strong>
             800 à 830 inclus
           </strong>
