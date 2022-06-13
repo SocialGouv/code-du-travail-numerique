@@ -44,10 +44,12 @@ export default function TextQuestion({
         <InputComponent
           id={randomId}
           value={value}
-          onChange={(e) => onChange(e.target.value)}
+          onChange={(e) => onChange(inputType === "date" ? e : e.target.value)}
           invalid={error}
           placeholder={placeholder}
           icon={icon}
+          type={inputType}
+          updateOnScrollDisabled
         />
         {error && (
           <ErrorWrapper>

@@ -2,9 +2,10 @@ import { differenceInMonths, format, isAfter } from "date-fns";
 import produce from "immer";
 import { GetState, SetState } from "zustand";
 import { StoreSlice } from "../../../store";
-import { deepEqualObject } from "../../../../../lib";
+import { deepEqualObject, isValidDate } from "../../../../../lib";
 import { parse } from "../../../../common/utils";
 import { MOTIFS } from "../components/AbsencePeriods";
+import frLocale from "date-fns/locale/fr";
 import {
   AncienneteStoreData,
   AncienneteStoreError,
@@ -83,6 +84,8 @@ const validateStep = (state: AncienneteStoreInput) => {
   // Date d'entrée
   if (!state.dateEntree) {
     errors.errorDateEntree = "Veuillez saisir cette date";
+  } else if (!isValidDate(state.dateEntree)) {
+    errors.errorDateEntree = "La date d'entrée est invalide";
   } else {
     errors.errorDateEntree = undefined;
   }
@@ -97,15 +100,13 @@ const validateStep = (state: AncienneteStoreInput) => {
   ) {
     errors.errorDateSortie = `La date de sortie doit se situer après le <strong> ${format(
       dEntree,
-      "dd MMMM yyyy"
+      "dd MMMM yyyy",
+      {
+        locale: frLocale,
+      }
     )}</strong>`;
-  } else if (
-    state.dateEntree &&
-    state.dateNotification &&
-    differenceInMonths(dNotification, dEntree) - totalAbsence < 8
-  ) {
-    errors.errorDateSortie =
-      "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté";
+  } else if (!isValidDate(state.dateSortie)) {
+    errors.errorDateSortie = "La date de sortie est invalide";
   } else {
     errors.errorDateSortie = undefined;
   }
@@ -133,6 +134,15 @@ const validateStep = (state: AncienneteStoreInput) => {
   ) {
     errors.errorDateNotification =
       "La date de notification doit se situer après la date d’entrée";
+  } else if (
+    state.dateEntree &&
+    state.dateNotification &&
+    differenceInMonths(dNotification, dEntree) - totalAbsence < 8
+  ) {
+    errors.errorDateNotification =
+      "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté";
+  } else if (!isValidDate(state.dateNotification)) {
+    errors.errorDateNotification = "La date de notification est invalide";
   } else {
     errors.errorDateNotification = undefined;
   }

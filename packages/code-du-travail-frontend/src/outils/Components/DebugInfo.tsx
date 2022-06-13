@@ -4,8 +4,12 @@ type Props = {
 
 const DebugInfo = (props: Props): JSX.Element => {
   return (
-    <details>
-      <summary>state</summary>
+    <details
+      style={{
+        cursor: "pointer",
+      }}
+    >
+      <summary>State</summary>
       <pre>{JSON.stringify(props.data, null, 2)}</pre>
     </details>
   );
