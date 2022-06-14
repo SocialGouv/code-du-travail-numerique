@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "indemnite-licenciement",
+    "source": "outils"
+  },
+  {
+    "slug": "heures-recherche-emploi",
+    "source": "outils"
+  },
+  {
+    "slug": "demission-dun-salarie",
+    "source": "fiches_service_public"
+  },
+  {
+    "slug": "certificat-de-travail",
+    "source": "fiches_service_public"
+  },
+  {
+    "slug": "rupture-de-periode-dessai-a-linitiative-de-lemployeur",
+    "source": "modeles_de_courriers"
+  },
+  {
+    "slug": "preavis-demission",
+    "source": "outils"
+  },
+  {
+    "slug": "demission-dune-assistante-maternelle",
+    "source": "fiches_service_public"
+  },
+  {
+    "slug": "demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle",
+    "source": "modeles_de_courriers"
+  },
+  {
+    "slug": "certificat-de-travail",
+    "source": "modeles_de_courriers"
+  }
+]

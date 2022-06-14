@@ -18,9 +18,9 @@
     "dev": "nodemon --exec babel-node ./src/index.js --extensions \".ts,.js\"",
     "update-mock-data": "ES_INDEX_PREFIX=cdtn babel-node src/tests/fetch_mock_data.js",
     "pretest": "NODE_ENV=test babel-node src/tests/create_indexes.js --extensions \".ts,.js\"",
-    "test:search": "TEST_ONLY=search jest -t 'Search - Snapshot result' --detectOpenHandles",
-    "test": "ES_INDEX_PREFIX=cdtn_test jest --detectOpenHandles",
-    "test:update": "yarn pretest && ES_INDEX_PREFIX=cdtn_test jest --updateSnapshot --detectOpenHandles",
+    "test:search": "jest -t 'Search - Snapshot result' --testPathIgnorePatterns=[]",
+    "test": "ES_INDEX_PREFIX=cdtn_test jest",
+    "test:update": "yarn pretest && ES_INDEX_PREFIX=cdtn_test jest --updateSnapshot",
     "clean": "rimraf dist && rimraf babel-dist"
   },
   "repository": {
@@ -80,6 +80,9 @@
     ]
   },
   "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/src/tests/ignored"
+    ],
     "setupFiles": [
       "<rootDir>/src/tests/process.env.mock.js"
     ],
