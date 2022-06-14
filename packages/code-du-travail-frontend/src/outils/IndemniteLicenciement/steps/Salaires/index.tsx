@@ -53,10 +53,12 @@ const StepSalaires = () => {
           {
             label: "Oui",
             value: "oui",
+            id: "hasTempsPartiel-oui",
           },
           {
             label: "Non",
             value: "non",
+            id: "hasTempsPartiel-non",
           },
         ]}
         label="Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail&nbsp;?"
@@ -72,10 +74,12 @@ const StepSalaires = () => {
               {
                 label: "Oui",
                 value: "oui",
+                id: "hasSameSalaire-oui",
               },
               {
                 label: "Non",
                 value: "non",
+                id: "hasSameSalaire-non",
               },
             ]}
             label="Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement&nbsp;?"
@@ -107,10 +111,12 @@ const StepSalaires = () => {
                   {
                     label: "Oui",
                     value: "oui",
+                    id: "hasPrimes-oui",
                   },
                   {
                     label: "Non",
                     value: "non",
+                    id: "hasPrimes-non",
                   },
                 ]}
                 label="Des primes annuelles ou exceptionnelles ont-elles été perçues au cours des 3 derniers mois&nbsp;?"

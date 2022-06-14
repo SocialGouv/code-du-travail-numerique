@@ -46,10 +46,12 @@ const StepContratTravail = (): JSX.Element => {
           {
             label: "Contrat à durée determiné (CDD) ou contrat d’intérim",
             value: "cdd",
+            id: "cdd",
           },
           {
             label: "Contrat à durée indeterminé (CDI)",
             value: "cdi",
+            id: "cdi",
           },
         ]}
         label="Quel est le type du contrat de travail&nbsp;?"
@@ -64,10 +66,12 @@ const StepContratTravail = (): JSX.Element => {
           {
             label: "Oui",
             value: "oui",
+            id: "fauteGrave-oui",
           },
           {
             label: "Non",
             value: "non",
+            id: "fauteGrave-non",
           },
         ]}
         label="Le licenciement est-il dû à une faute grave (ou lourde)&nbsp;?"
@@ -82,10 +86,12 @@ const StepContratTravail = (): JSX.Element => {
           {
             label: "Oui",
             value: "oui",
+            id: "inaptitude-oui",
           },
           {
             label: "Non",
             value: "non",
+            id: "inaptitude-non",
           },
         ]}
         label="Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue&nbsp;?"
