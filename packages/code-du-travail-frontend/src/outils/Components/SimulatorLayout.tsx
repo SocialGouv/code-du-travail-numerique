@@ -4,12 +4,13 @@ import styled from "styled-components";
 import { IndemniteLicenciementStepName } from "../IndemniteLicenciement";
 import { matopush } from "../../piwik";
 import { printResult } from "../common/utils";
-import { Navigation, StepList, Title } from "./SimulatorDecorator/Components";
+import { StepList, Title } from "./SimulatorDecorator/Components";
 import { createSimulatorStore, Step } from "../Simulator";
 import {
   SimulatorStepProvider,
   useSimulatorStepStore,
 } from "../Simulator/createContext";
+import SimulatorNavigation from "./SimulatorNavigation";
 
 type StepName = IndemniteLicenciementStepName;
 
@@ -124,7 +125,7 @@ const SimulatorContent = ({
           width={STEP_LIST_WIDTH}
         />
         <Step />
-        <Navigation
+        <SimulatorNavigation
           hasError={
             validators.find(
               (validator) => validator.stepName === steps[currentStepIndex].name

@@ -1,9 +1,8 @@
 import { push as matopush } from "@socialgouv/matomo-next";
 import { render } from "@testing-library/react";
 import { Field } from "react-final-form";
-import { OnChange } from "react-final-form-listeners";
+import { stepReducer } from "../../DureePreavisDemission/stepReducer";
 
-import { stepReducer } from "../../IndemniteLicenciement/stepReducer";
 import { Wizard } from "../Wizard";
 
 const FirstStep = () => <p>Premiere Etape</p>;
@@ -44,14 +43,6 @@ const optionnalStep = {
   component: OptionnalStep,
   label: "Optional Step",
   name: "additional_step",
-};
-const skipableStep = {
-  component: function Skipable() {
-    return <p>skipable component</p>;
-  },
-  label: "Skippable Step",
-  name: "skippable",
-  skip: () => true,
 };
 
 describe("<Wizard />", () => {
@@ -142,88 +133,5 @@ describe("<Wizard />", () => {
       />
     );
     expect(container).toMatchSnapshot();
-  });
-  it("should inject rules component", () => {
-    const Rule = () => <p>Rule</p>;
-    const { container } = render(
-      <Wizard
-        title="test"
-        displayTitle="test H1"
-        stepReducer={stepReducer}
-        initialState={initialState}
-        Rules={() => <Rule key="key" />}
-      />
-    );
-    expect(container).toMatchSnapshot();
-  });
-
-  it("should skip step forward", () => {
-    const [step1, step2] = steps;
-    const state = {
-      stepIndex: 0,
-      steps: [step1, skipableStep, step2],
-    };
-
-    const { getByText } = render(
-      <Wizard
-        title="test"
-        displayTitle="test H1"
-        stepReducer={stepReducer}
-        initialState={state}
-      />
-    );
-    const button = getByText(/Commencer/i);
-    button.click();
-    expect(getByText("Deuxieme Etape")).toBeTruthy();
-  });
-
-  it("should skip step backward", () => {
-    const [step1, step2] = steps;
-
-    const state = {
-      stepIndex: 2,
-      steps: [step1, skipableStep, step2],
-    };
-
-    const { getByText } = render(
-      <Wizard
-        title="test"
-        displayTitle="test H1"
-        stepReducer={stepReducer}
-        initialState={state}
-      />
-    );
-    const button = getByText(/précédent/i);
-    button.click();
-    expect(getByText("Premiere Etape")).toBeTruthy();
-  });
-
-  it("should navigate to a dynamic step", () => {
-    const RulesAdditionalStep = ({ dispatch }) => (
-      <OnChange key="foo-rules" name="fooStep">
-        {(value) => {
-          if (value === true) {
-            dispatch({
-              payload: { insertAfter: "second_step", step: optionnalStep },
-              type: "add_step",
-            });
-          }
-        }}
-      </OnChange>
-    );
-
-    const { getByText, getByLabelText } = render(
-      <Wizard
-        title="test"
-        displayTitle="test H1"
-        stepReducer={stepReducer}
-        initialState={initialState}
-        Rules={RulesAdditionalStep}
-      />
-    );
-    getByText(/Commencer/i).click(); // step 2
-    getByLabelText("etape facultative").click();
-    getByText(/suivant/i).click(); // additionalStep
-    expect(getByText("etape optionnelle")).toBeTruthy();
   });
 });
