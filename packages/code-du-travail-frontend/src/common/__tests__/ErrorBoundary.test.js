@@ -43,12 +43,12 @@ describe("Error Boundary", () => {
       throw new Error("oups");
     };
 
-    const { container } = render(
+    const { getByText } = render(
       <ErrorBoundary>
         <Child />
       </ErrorBoundary>
     );
-    expect(container.includes("Désolé, une erreur s’est produite")).toBeTruthy;
+    expect(getByText(/Désolé, une erreur s’est produite/i)).toBeTruthy();
     expect(topLevelErrors.length).toBe(1);
   });
 });
