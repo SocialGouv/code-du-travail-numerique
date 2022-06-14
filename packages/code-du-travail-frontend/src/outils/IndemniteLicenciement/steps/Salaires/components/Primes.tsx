@@ -60,6 +60,7 @@ export default function Primes({ primes, onChange, error }: Props) {
         <Row key={index}>
           <div>
             <Input
+              title={`Renseignez votre prime numéro ${index + 1} ici`}
               id={`prime-${index}`}
               name={`${index}.prime`}
               type="number"
