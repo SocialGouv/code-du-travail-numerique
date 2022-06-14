@@ -33,11 +33,11 @@ function computeSalaryPeriods({
       return total;
     }, 0);
 
-  const nbMonthes = Math.min(
+  const nbMonths = Math.min(
     differenceInMonths(dNotification, dEntree) - totalAbsence,
     12
   );
-  return Array.from({ length: nbMonthes }).map((_, index) => {
+  return Array.from({ length: nbMonths }).map((_, index) => {
     return format(subMonths(dNotification, index + 1), "MMMM yyyy", {
       locale: frLocale,
     });

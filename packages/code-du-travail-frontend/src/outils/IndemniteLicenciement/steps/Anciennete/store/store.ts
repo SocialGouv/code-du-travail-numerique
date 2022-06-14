@@ -98,7 +98,7 @@ const validateStep = (state: AncienneteStoreInput) => {
     state.dateSortie &&
     isAfter(dEntree, dSortie)
   ) {
-    errors.errorDateSortie = `La date de sortie doit se situer après le <strong> ${format(
+    errors.errorDateSortie = `La date de sortie doit se situer après le <strong>${format(
       dEntree,
       "dd MMMM yyyy",
       {
