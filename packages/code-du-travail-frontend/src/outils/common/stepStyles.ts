@@ -45,6 +45,5 @@ export const HighlightResult = styled(Highlight)`
 export const SmallText = styled.p`
   color: ${colors.paragraph};
   font-size: ${fonts.sizes.small};
-  font-style: italic;
   margin-top: ${spacings.xsmall};
 `;

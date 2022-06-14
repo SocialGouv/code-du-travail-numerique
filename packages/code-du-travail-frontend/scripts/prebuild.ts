@@ -22,7 +22,7 @@ const run = () => {
   generateRobotsTxt(
     process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT ? true : false
   );
-  console.log("Robots.txt generated.");
+  console.info("Robots.txt generated.");
 };
 
 run();

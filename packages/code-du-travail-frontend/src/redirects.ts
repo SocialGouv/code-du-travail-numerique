@@ -66,10 +66,18 @@ export const MappingReplacement = [
     ],
   },
   {
-    newSlug: "covid-19-reagir-en-cas-de-contamination-dans-lentreprise-infographies",
+    newSlug:
+      "covid-19-reagir-en-cas-de-contamination-dans-lentreprise-infographies",
     sourcePath: ["information"],
     previousSlugs: [
       "covid-19-reagir-en-cas-de-contamination-dans-lentreprise-protocole-national",
-    ]
-  }
+    ],
+  },
+  {
+    newSlug: "1505-commerce-de-detail-alimentaire-non-specialise",
+    sourcePath: ["convention-collective"],
+    previousSlugs: [
+      "1505-commerce-de-detail-des-fruits-et-legumes-epicerie-et-produits-laitiers",
+    ],
+  },
 ];
