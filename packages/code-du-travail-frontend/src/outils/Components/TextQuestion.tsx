@@ -12,7 +12,7 @@ type Props = {
   error?: string;
   label: string;
   tooltip?: Tooltip;
-  inputType?: string;
+  inputType?: "date" | "number" | "text";
   value: string | undefined;
   placeholder?: string;
   smallText?: string;
@@ -48,7 +48,7 @@ export default function TextQuestion({
           invalid={error}
           placeholder={placeholder}
           icon={icon}
-          type={inputType}
+          type={inputType === "date" ? "text" : inputType}
           updateOnScrollDisabled
         />
         {error && (

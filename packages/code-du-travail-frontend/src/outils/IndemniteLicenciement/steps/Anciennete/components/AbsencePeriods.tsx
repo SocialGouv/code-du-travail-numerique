@@ -128,13 +128,10 @@ const AbsencePeriods = ({ onChange, absences, error }: Props) => {
               <StyledSelect
                 id={`${index}.type`}
                 onChange={(e) => onSelectMotif(index, e.target.value)}
+                value={value.motif}
               >
                 {MOTIFS.map(({ label }) => (
-                  <option
-                    key={label}
-                    selected={value.motif === label}
-                    value={label}
-                  >
+                  <option key={label} value={label}>
                     {label}
                   </option>
                 ))}
@@ -148,6 +145,8 @@ const AbsencePeriods = ({ onChange, absences, error }: Props) => {
                 invalid={errorsInput[`${index}`] !== undefined}
                 value={value.durationInMonth}
                 type="number"
+                name={`${index}.duration`}
+                aria-label={`${index}.duration`}
                 updateOnScrollDisabled
               />
               {errorsInput[`${index}`] && (
