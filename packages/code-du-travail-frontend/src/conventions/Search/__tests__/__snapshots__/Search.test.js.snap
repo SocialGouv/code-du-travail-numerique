@@ -112,6 +112,16 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   appearance: none;
 }
 
+.c3[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .c3:invalid {
   border-color: #eb5757;
 }
@@ -416,6 +426,16 @@ exports[`<Search /> should render 1`] = `
   appearance: none;
 }
 
+.c3[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .c3:invalid {
   border-color: #eb5757;
 }
@@ -639,6 +659,16 @@ exports[`<Search /> should show no results when no result 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.c3[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .c3:invalid {
@@ -876,6 +906,16 @@ exports[`<Search /> should show spinner when loading 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.c3[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .c3:invalid {
@@ -1184,6 +1224,16 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.c3[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .c3:invalid {
@@ -1552,6 +1602,16 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   appearance: none;
 }
 
+.c3[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .c3:invalid {
   border-color: #eb5757;
 }
@@ -1890,6 +1950,16 @@ exports[`<Search /> when searching SIREN, should use API SIREN and siret2idcc 1`
   appearance: none;
 }
 
+.c3[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .c3:invalid {
   border-color: #eb5757;
 }
@@ -2209,6 +2279,16 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   appearance: none;
 }
 
+.c3[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .c3:invalid {
   border-color: #eb5757;
 }
@@ -2470,6 +2550,16 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.c3[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .c3:invalid {

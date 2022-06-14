@@ -103,6 +103,16 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   appearance: none;
 }
 
+.c7[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c7::-webkit-outer-spin-button,
+.c7::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .c7:invalid {
   border-color: #eb5757;
 }

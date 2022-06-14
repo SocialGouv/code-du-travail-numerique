@@ -559,6 +559,16 @@ exports[`<Convention /> renders 1`] = `
   appearance: none;
 }
 
+.c49[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c49::-webkit-outer-spin-button,
+.c49::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .c49:invalid {
   border-color: #eb5757;
 }

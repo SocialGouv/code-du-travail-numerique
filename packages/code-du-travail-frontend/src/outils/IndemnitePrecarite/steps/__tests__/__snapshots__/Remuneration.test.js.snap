@@ -104,6 +104,16 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   appearance: none;
 }
 
+.c10[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c10::-webkit-outer-spin-button,
+.c10::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .c10:invalid {
   border-color: #eb5757;
 }
@@ -608,6 +618,16 @@ exports[`<StepRemuneration /> should render one input 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.c8[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c8::-webkit-outer-spin-button,
+.c8::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .c8:invalid {

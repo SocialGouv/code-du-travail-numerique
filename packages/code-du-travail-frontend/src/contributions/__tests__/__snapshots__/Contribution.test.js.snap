@@ -197,6 +197,16 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   appearance: none;
 }
 
+.c21[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c21::-webkit-outer-spin-button,
+.c21::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .c21:invalid {
   border-color: #eb5757;
 }
@@ -810,6 +820,16 @@ exports[`<Contribution /> should render answer references 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.c21[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c21::-webkit-outer-spin-button,
+.c21::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .c21:invalid {
@@ -1427,6 +1447,16 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   appearance: none;
 }
 
+.c21[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c21::-webkit-outer-spin-button,
+.c21::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .c21:invalid {
   border-color: #eb5757;
 }
@@ -2042,6 +2072,16 @@ exports[`<Contribution /> should render with both answers 1`] = `
   appearance: none;
 }
 
+.c21[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c21::-webkit-outer-spin-button,
+.c21::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .c21:invalid {
   border-color: #eb5757;
 }
@@ -2642,6 +2682,16 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.c18[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c18::-webkit-outer-spin-button,
+.c18::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .c18:invalid {

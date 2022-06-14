@@ -65,6 +65,17 @@ const StyledInput = styled.input`
   border-radius: ${box.borderRadius};
   box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
 
+  /* stylelint-disable */
+  &[type="number"] {
+    -moz-appearance: textfield;
+  }
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  /* stylelint-enable */
+
   &:invalid {
     border-color: ${({ theme }) => theme.error};
   }

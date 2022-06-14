@@ -40,6 +40,16 @@ exports[`<TextQuestion /> should render 1`] = `
   appearance: none;
 }
 
+.c5[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c5::-webkit-outer-spin-button,
+.c5::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .c5:invalid {
   border-color: #eb5757;
 }

@@ -636,6 +636,16 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   appearance: none;
 }
 
+.c73[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c73::-webkit-outer-spin-button,
+.c73::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .c73:invalid {
   border-color: #eb5757;
 }
@@ -3927,6 +3937,16 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.c73[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c73::-webkit-outer-spin-button,
+.c73::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .c73:invalid {

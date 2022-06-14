@@ -28,6 +28,16 @@ exports[`<Input /> should render input field 1`] = `
   appearance: none;
 }
 
+.c1[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c1::-webkit-outer-spin-button,
+.c1::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .c1:invalid {
   border-color: #eb5757;
 }
