@@ -4,7 +4,8 @@ import {
 } from "@socialgouv/modeles-social";
 import React from "react";
 
-import Mdx from "../../../../../common/Mdx";
+import { NoticeExample, Simulator } from "../../../../common/NoticeExample";
+import { NoticeNote } from "../../../../common/NoticeNote";
 import {
   HighlightResult,
   SectionTitle,
@@ -54,13 +55,32 @@ const ShowResult: React.FC<Props> = ({
           {notifications.length > 0 ? <sup>*</sup> : ""}
         </HighlightResult>
       </p>
+      {result.value !== 0 && (
+        <NoticeExample
+          note={
+            <NoticeNote
+              numberOfElements={1 + notifications.length}
+              currentElement={1}
+            />
+          }
+          simulator={
+            type === "mise"
+              ? Simulator.PREAVIS_MISE_RETRAITE
+              : Simulator.PREAVIS_DEPART_RETRAITE
+          }
+          period={`${result.value} ${result.unit}`}
+        />
+      )}
       {notifications.length > 0 && (
         <SmallText>
-          {notifications.map((notification) => (
-            <Mdx
-              key={notification.dottedName}
-              markdown={"\\* " + notification.description}
-            />
+          {notifications.map((notification, index) => (
+            <>
+              <NoticeNote
+                numberOfElements={1 + notifications.length}
+                currentElement={1 + 1 + index}
+              />
+              {notification.description}
+            </>
           ))}
         </SmallText>
       )}
