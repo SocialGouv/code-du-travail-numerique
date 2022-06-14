@@ -74,7 +74,7 @@ export const MappingReplacement = [
     ],
   },
   {
-    newSlug: "1505-commerce-de-detail-alimentaire-non-spécialise",
+    newSlug: "1505-commerce-de-detail-alimentaire-non-specialise",
     sourcePath: ["convention-collective"],
     previousSlugs: [
       "1505-commerce-de-detail-des-fruits-et-legumes-epicerie-et-produits-laitiers",
