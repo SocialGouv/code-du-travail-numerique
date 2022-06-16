@@ -8,8 +8,7 @@ import { RadioContainer } from "../common/stepStyles";
 type Question = {
   label: string;
   value: string;
-  id?: string;
-  name?: string;
+  id: string;
 };
 
 type Props = {
@@ -19,6 +18,7 @@ type Props = {
   label: string;
   questions: Question[];
   showRequired?: boolean;
+  name: string;
 };
 
 export default function RadioQuestion({
@@ -28,6 +28,7 @@ export default function RadioQuestion({
   label,
   questions,
   showRequired,
+  name,
 }: Props) {
   const [value, setValue] = React.useState(selectedOption ?? "");
   const onChange = (value: string) => {
@@ -42,10 +43,10 @@ export default function RadioQuestion({
         {questions.map((question, index) => (
           <InputRadio
             key={index}
-            name={question.name ?? Math.random().toString(36)}
+            name={name}
             label={question.label}
             value={question.value}
-            id={question.id ?? Math.random().toString(36)}
+            id={question.id}
             checked={value === question.value}
             onChange={() => onChange(question.value)}
           />

@@ -15,10 +15,7 @@ const StepContratTravail = (): JSX.Element => {
     errorLicenciementFauteGrave,
     errorLicenciementInaptitude,
     errorTypeContratTravail,
-    errorCdd,
-    errorFauteGrave,
   } = useIndemniteLicenciementStore((state) => ({
-    errorFauteGrave: state.contratTravailData.error.errorFauteGrave,
     licenciementFauteGrave:
       state.contratTravailData.input.licenciementFauteGrave,
     onChangeLicenciementFauteGrave:
@@ -36,7 +33,6 @@ const StepContratTravail = (): JSX.Element => {
       state.contratTravailData.error.errorLicenciementInaptitude,
     errorTypeContratTravail:
       state.contratTravailData.error.errorTypeContratTravail,
-    errorCdd: state.contratTravailData.error.errorCdd,
   }));
 
   return (
@@ -54,6 +50,7 @@ const StepContratTravail = (): JSX.Element => {
             id: "cdi",
           },
         ]}
+        name="typeContratTravail"
         label="Quel est le type du contrat de travail&nbsp;?"
         selectedOption={typeContratTravail}
         onChangeSelectedOption={onChangeTypeContratTravail}
@@ -74,6 +71,7 @@ const StepContratTravail = (): JSX.Element => {
             id: "fauteGrave-non",
           },
         ]}
+        name="licenciementFauteGrave"
         label="Le licenciement est-il dû à une faute grave (ou lourde)&nbsp;?"
         selectedOption={licenciementFauteGrave}
         onChangeSelectedOption={onChangeLicenciementFauteGrave}
@@ -94,6 +92,7 @@ const StepContratTravail = (): JSX.Element => {
             id: "inaptitude-non",
           },
         ]}
+        name="licenciementInaptitude"
         label="Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue&nbsp;?"
         selectedOption={licenciementInaptitude}
         onChangeSelectedOption={onChangeLicenciementInaptitude}

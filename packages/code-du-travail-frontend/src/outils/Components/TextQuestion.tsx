@@ -18,7 +18,7 @@ type Props = {
   smallText?: string;
   showRequired?: boolean;
   icon?: FunctionComponent;
-  id?: string;
+  id: string;
 };
 
 export default function TextQuestion({
@@ -35,20 +35,15 @@ export default function TextQuestion({
   id,
 }: Props) {
   const InputComponent = inputType === "date" ? InputDate : Input;
-  const randomId = Math.random().toString(36);
   return (
     <>
-      <Question
-        required={showRequired}
-        tooltip={tooltip}
-        htmlFor={id ?? randomId}
-      >
+      <Question required={showRequired} tooltip={tooltip} htmlFor={id}>
         {label}
       </Question>
       {smallText && <SmallText>{smallText}</SmallText>}
       <QuestionWrapper>
         <InputComponent
-          id={id ?? randomId}
+          id={id}
           value={value}
           onChange={(e) => onChange(inputType === "date" ? e : e.target.value)}
           invalid={error}

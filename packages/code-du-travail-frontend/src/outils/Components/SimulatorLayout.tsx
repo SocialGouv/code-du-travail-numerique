@@ -71,11 +71,16 @@ const SimulatorContent = ({
     if (nextStepIndex >= steps.length) {
       throw Error("Can't show the next step with index more than steps");
     } else {
-      const isValid = validators
-        .find(
-          (validator) => validator.stepName === steps[currentStepIndex].name
-        )
-        ?.validator();
+      let isValid: boolean | undefined;
+      if (currentStepIndex === 0) {
+        isValid = true;
+      } else {
+        isValid = validators
+          .find(
+            (validator) => validator.stepName === steps[currentStepIndex].name
+          )
+          ?.validator();
+      }
       if (isValid) {
         nextStep();
         matopush([
@@ -103,11 +108,6 @@ const SimulatorContent = ({
     } else {
       throw Error("Can't show the previous step with index less than 0");
     }
-  };
-
-  const onStart = () => {
-    nextStep();
-    window?.scrollTo(0, 0);
   };
 
   return (
@@ -141,7 +141,7 @@ const SimulatorContent = ({
           }
           onPrevious={currentStepIndex > 0 ? () => onPrevStep() : undefined}
           onNext={onNextStep}
-          onStart={onStart}
+          onStart={onNextStep}
         />
         {steps[currentStepIndex].options?.annotation && (
           <p>{steps[currentStepIndex].options?.annotation}</p>

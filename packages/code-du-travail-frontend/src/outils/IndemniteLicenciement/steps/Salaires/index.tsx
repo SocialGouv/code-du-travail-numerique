@@ -61,6 +61,7 @@ const StepSalaires = () => {
             id: "hasTempsPartiel-non",
           },
         ]}
+        name="hasTempsPartiel"
         label="Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail&nbsp;?"
         selectedOption={hasTempsPartiel}
         onChangeSelectedOption={onChangeHasTempsPartiel}
@@ -82,6 +83,7 @@ const StepSalaires = () => {
                 id: "hasSameSalaire-non",
               },
             ]}
+            name="hasSameSalaire"
             label="Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement&nbsp;?"
             selectedOption={hasSameSalaire}
             onChangeSelectedOption={onChangeHasSameSalaire}
@@ -97,6 +99,7 @@ const StepSalaires = () => {
               smallText="Prendre en compte les primes et avantages en nature."
               showRequired
               inputType="number"
+              id="salaireBrut"
             />
           )}
           {hasSameSalaire === "non" && (
@@ -119,6 +122,7 @@ const StepSalaires = () => {
                     id: "hasPrimes-non",
                   },
                 ]}
+                name="hasPrimes"
                 label="Des primes annuelles ou exceptionnelles ont-elles été perçues au cours des 3 derniers mois&nbsp;?"
                 selectedOption={hasPrimes}
                 onChangeSelectedOption={onChangeHasPrimes}
