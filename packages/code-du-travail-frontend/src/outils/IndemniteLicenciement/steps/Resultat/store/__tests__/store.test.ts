@@ -3,12 +3,9 @@ import { createIndemniteLicenciementStore } from "../../../../store";
 import { MOTIFS } from "../../../Anciennete/components/AbsencePeriods";
 
 describe("Result store", () => {
-  let store = createIndemniteLicenciementStore(
-    loadPublicodesRules("indemnite-licenciement")
-  );
+  let store: ReturnType<typeof createIndemniteLicenciementStore>;
 
-  // to reset store after each unit test
-  afterEach(() => {
+  beforeEach(() => {
     store = createIndemniteLicenciementStore(
       loadPublicodesRules("indemnite-licenciement")
     );

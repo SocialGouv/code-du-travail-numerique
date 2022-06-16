@@ -1,5 +1,5 @@
 type Props = {
-  data: Record<string, any>;
+  data: Record<string, unknown>;
 };
 
 const DebugInfo = (props: Props): JSX.Element => {

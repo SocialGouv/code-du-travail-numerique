@@ -1,13 +1,12 @@
 import { GetState, SetState } from "zustand";
 import {
   ContratTravailStoreData,
-  ContratTravailStoreError,
   ContratTravailStoreInput,
   ContratTravailStoreSlice,
 } from "./types";
 import produce from "immer";
 import { StoreSlice } from "../../../store";
-import { deepEqualObject } from "../../../../../lib";
+import { validateStep } from "./validator";
 
 const initialState: ContratTravailStoreData = {
   input: {},
@@ -49,32 +48,6 @@ const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
     },
   },
 });
-
-const validateStep = (state: ContratTravailStoreInput) => {
-  const errorState: ContratTravailStoreError = {
-    errorCdd: state.typeContratTravail === "cdd" ? true : false,
-    errorFauteGrave: state.licenciementFauteGrave === "oui" ? true : false,
-    errorLicenciementInaptitude: !state.licenciementInaptitude
-      ? "Vous devez répondre à cette question"
-      : undefined,
-    errorLicenciementFauteGrave: !state.licenciementFauteGrave
-      ? "Vous devez répondre à cette question"
-      : undefined,
-    errorTypeContratTravail: !state.typeContratTravail
-      ? "Vous devez répondre à cette question"
-      : undefined,
-  };
-  return {
-    isValid: deepEqualObject(errorState, {
-      errorCdd: false,
-      errorFauteGrave: false,
-      errorLicenciementInaptitude: undefined,
-      errorLicenciementFauteGrave: undefined,
-      errorTypeContratTravail: undefined,
-    }),
-    errorState,
-  };
-};
 
 const applyGenericValidation = (
   get: GetState<ContratTravailStoreSlice>,
