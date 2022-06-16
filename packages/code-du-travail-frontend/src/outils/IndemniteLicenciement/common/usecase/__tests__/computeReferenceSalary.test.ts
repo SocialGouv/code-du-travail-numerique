@@ -6,7 +6,7 @@ describe("computeReferenceSalary", () => {
       computeReferenceSalary({
         hasSameSalaire: true,
         salaires: [],
-        primes: [undefined],
+        primes: [],
         salaire: 2000,
       })
     ).toEqual(2000);
@@ -30,7 +30,7 @@ describe("computeReferenceSalary", () => {
           { month: "janvier", value: 3000 },
           { month: "février", value: 2000 },
         ],
-        primes: [undefined],
+        primes: [],
         salaire: undefined,
       })
     ).toEqual(2500);
