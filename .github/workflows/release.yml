@@ -36,7 +36,7 @@ jobs:
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           yarn --frozen-lockfile
           yarn build:npm
-          GH_TOKEN=${GITHUB_TOKEN} yarn lerna version --force-publish --yes --conventional-commits
+          GH_TOKEN=${GITHUB_TOKEN} yarn lerna version --force-publish --yes --conventional-commits --create-release github
           yarn lerna publish from-package --yes
         env:
           GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
