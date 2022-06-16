@@ -1,6 +1,7 @@
 import { stateToPublicode } from "./helpers";
 import { PreavisRetraiteStore, Question } from "../types";
 import { MissingArgs } from "@socialgouv/modeles-social";
+import validateInformationAgreement3239 from "./validateInformationAgreement3239";
 
 const excludedRules = [
   "contrat salarié - ancienneté",
@@ -40,6 +41,10 @@ export const getNextQuestion = (
 const computeNextQuestion = (
   state: PreavisRetraiteStore
 ): PreavisRetraiteStore => {
+  const validation = validateInformationAgreement3239(state);
+  if (validation.steps.informations.error) {
+    return validation;
+  }
   const currentQuestions = state.steps.informations.questions;
   const newSituation = stateToPublicode(state.formValues);
   const missingQuestions = getNextQuestion(

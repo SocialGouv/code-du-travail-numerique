@@ -20,6 +20,7 @@ export type PreavisRetraiteState = {
     };
     informations: {
       questions: Question[];
+      error?: string;
     };
     result?: ResultStepProps;
   };

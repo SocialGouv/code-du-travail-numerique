@@ -1,9 +1,13 @@
 import React from "react";
-import PubliQuestion from "../../../common/PubliQuestion";
+import { Alert, Paragraph, Text, theme } from "@socialgouv/cdtn-ui";
 import { Rule } from "@socialgouv/modeles-social";
+import styled from "styled-components";
+
+import PubliQuestion from "../../../common/PubliQuestion";
 
 export type InformationStepProps = {
   questions: Question[];
+  error?: string;
   onChange: (name: string, value: string) => void;
 };
 
@@ -14,6 +18,7 @@ type Question = {
 
 const InformationStep = ({
   questions,
+  error,
   onChange,
 }: InformationStepProps): JSX.Element => (
   <>
@@ -27,7 +32,25 @@ const InformationStep = ({
         />
       );
     })}
+    {error && (
+      <StyledAlert variant="primary">
+        <Paragraph noMargin>
+          <Text variant="primary" fontSize="hsmall" fontWeight="700">
+            À noter
+          </Text>
+          <br />
+          {error}
+        </Paragraph>
+      </StyledAlert>
+    )}
   </>
 );
+
+const { spacings } = theme;
+
+const StyledAlert = styled(Alert)`
+  margin-top: ${spacings.medium};
+  width: 100%;
+`;
 
 export default InformationStep;
