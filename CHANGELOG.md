@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.78.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.77.1...v4.78.0) (2022-06-16)
+
+
+### Bug Fixes
+
+* **redirection:** remove accent on 1505 slug ([#4436](https://github.com/SocialGouv/code-du-travail-numerique/issues/4436)) ([1c834d2](https://github.com/SocialGouv/code-du-travail-numerique/commit/1c834d259d617b428744466a8b3aaa3bf24ce1b2))
+* github action to sync with gitlab ([#4433](https://github.com/SocialGouv/code-du-travail-numerique/issues/4433)) ([b2c1e14](https://github.com/SocialGouv/code-du-travail-numerique/commit/b2c1e14de7576a29acf19d42af0e4f6924e8a603))
+
+
+### Features
+
+* add a redirection to new agreement 1505 url ([#4432](https://github.com/SocialGouv/code-du-travail-numerique/issues/4432)) ([492685e](https://github.com/SocialGouv/code-du-travail-numerique/commit/492685e23811451f9c4b425380aab52d8e3835e6))
+* **simulator:** precise date to the result ([#4368](https://github.com/SocialGouv/code-du-travail-numerique/issues/4368)) ([532d58e](https://github.com/SocialGouv/code-du-travail-numerique/commit/532d58eacbbf3a583c65e81c93b072ea3ddf287a))
+
+
+
+
+
 ## [4.77.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.77.0...v4.77.1) (2022-05-18)
 
 

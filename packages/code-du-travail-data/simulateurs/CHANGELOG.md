@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.78.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.77.1...v4.78.0) (2022-06-16)
+
+**Note:** Version bump only for package @cdt/data...simulateurs
+
+
+
+
+
 ## [4.77.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.77.0...v4.77.1) (2022-05-18)
 
 **Note:** Version bump only for package @cdt/data...simulateurs
