@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.78.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.78.0...v4.78.1) (2022-06-17)
+
+
+### Bug Fixes
+
+* **frontend:** beautify ErrorBoundary ([#4417](https://github.com/SocialGouv/code-du-travail-numerique/issues/4417)) ([4f5ac2b](https://github.com/SocialGouv/code-du-travail-numerique/commit/4f5ac2b71f03ddb75bdb2b8d08ddf3a439efa8e4))
+
+
+
+
+
 # [4.78.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.77.1...v4.78.0) (2022-06-16)
 
 
