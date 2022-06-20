@@ -6,7 +6,7 @@ const Koa = require("koa");
 const app = new Koa();
 app.use(router.routes());
 
-function getSuggestions(query) {
+async function getSuggestions(query) {
   return request(app.callback()).get(`/api/v1/suggest?q=` + query);
 }
 
