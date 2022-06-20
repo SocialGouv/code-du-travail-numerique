@@ -52,8 +52,8 @@ const createResultStore: StoreSlice<
       const contratInput = get().contratTravailData.input;
       const publicodes = get().resultData.publicodes;
       const sReference = new SalaireReference(
-        ccn
-          ? (`IDCC${ccn.selected}` as SupportedCcIndemniteLicenciement)
+        ccn && ccn.selected
+          ? (`IDCC${ccn.selected.num}` as SupportedCcIndemniteLicenciement)
           : SupportedCcIndemniteLicenciement.default
       );
 
