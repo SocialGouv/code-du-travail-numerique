@@ -18,10 +18,13 @@ export const mapToPublicodesSituationForIndemniteLicenciement = (
   return {
     ...agreement,
     ...{
-      "contrat salarié . ancienneté en année": formatNumberAsString(seniority),
+      "contrat salarié - ancienneté en année": formatNumberAsString(seniority),
+      //TODO: à virer
+      "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . salaire de référence":
+        formatNumberAsString(salaireRef),
       "contrat salarié - salaire de référence":
         formatNumberAsString(salaireRef),
-      "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
+      "contrat salarié - inaptitude suite à un accident ou maladie professionnelle":
         inaptitude ? "oui" : "non",
       "indemnité de licenciement": "oui",
     },

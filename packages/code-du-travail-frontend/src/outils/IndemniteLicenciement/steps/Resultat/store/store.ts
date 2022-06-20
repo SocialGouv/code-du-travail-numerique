@@ -1,4 +1,8 @@
-import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
+import {
+  IndemniteLicenciementPublicodes,
+  SalaireReference,
+  SupportedCcIndemniteLicenciement,
+} from "@socialgouv/modeles-social";
 import { StoreSlice } from "../../../store";
 import { mapToPublicodesSituationForIndemniteLicenciement } from "../../../../publicodes";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
@@ -8,6 +12,19 @@ import { SalairesStoreSlice } from "../../Salaires/store";
 import produce from "immer";
 
 import { ResultStoreData, ResultStoreSlice } from "./types";
+import { ConventionCollective } from "../../../../common/type/WizardType";
+
+//TODO: à virer
+const ccn: ConventionCollective = {
+  route: "agreement",
+  selected: {
+    id: "YYYYY",
+    num: 1596,
+    shortTitle: "XXX",
+    slug: "xxx",
+    title: "Title",
+  },
+};
 
 const initialState: ResultStoreData = {
   input: {
@@ -34,7 +51,11 @@ const createResultStore: StoreSlice<
       const salaireInput = get().salairesData.input;
       const contratInput = get().contratTravailData.input;
       const publicodes = get().resultData.publicodes;
-      const SalaireReference = new SalaireReference();
+      const sReference = new SalaireReference(
+        ccn
+          ? (`IDCC${ccn.selected}` as SupportedCcIndemniteLicenciement)
+          : SupportedCcIndemniteLicenciement.default
+      );
 
       if (!publicodes) {
         throw new Error("Publicodes is not defined");
@@ -46,18 +67,23 @@ const createResultStore: StoreSlice<
         absencePeriods: ancienneteInput.absencePeriods!,
       });
 
-      const salaireRef = SalaireReference({
+      const primes = salaireInput.primes.filter((v) => v !== null) as number[];
+      const salaires = salaireInput.salaryPeriods.filter(
+        (v) => v.value !== undefined
+      ) as { month: string; value: number }[];
+
+      const salaireRef = sReference.compute({
         hasSameSalaire: salaireInput.hasSameSalaire === "oui",
-        primes: salaireInput.primes,
+        primes,
         salaire: salaireInput.salaireBrut
-          ? parseFloat(salaireInput.salaireBrut!)
+          ? parseFloat(salaireInput.salaireBrut)
           : undefined,
-        salaires: salaireInput.salaryPeriods,
+        salaires,
       });
 
       const { result } = publicodes.setSituation(
         mapToPublicodesSituationForIndemniteLicenciement(
-          undefined, //TODO: on mettra la CC ici
+          ccn,
           seniority,
           salaireRef,
           contratInput.licenciementInaptitude === "oui"
