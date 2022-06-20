@@ -85,7 +85,7 @@ const createSalairesStore: StoreSlice<
       const { isValid, errorState } = validateStep(get().salairesData.input);
       set(
         produce((state: SalairesStoreSlice) => {
-          state.salairesData.hasBeenSubmit = true;
+          state.salairesData.hasBeenSubmit = isValid ? false : true;
           state.salairesData.isStepValid = isValid;
           state.salairesData.error = errorState;
         })

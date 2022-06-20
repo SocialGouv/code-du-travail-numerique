@@ -39,7 +39,7 @@ const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
       );
       set(
         produce((state: ContratTravailStoreSlice) => {
-          state.contratTravailData.hasBeenSubmit = true;
+          state.contratTravailData.hasBeenSubmit = isValid ? false : true;
           state.contratTravailData.isStepValid = isValid;
           state.contratTravailData.error = errorState;
         })

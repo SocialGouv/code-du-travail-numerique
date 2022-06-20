@@ -48,7 +48,7 @@ const createAncienneteStore: StoreSlice<AncienneteStoreSlice> = (set, get) => ({
       const { isValid, errorState } = validateStep(get().ancienneteData.input);
       set(
         produce((state: AncienneteStoreSlice) => {
-          state.ancienneteData.hasBeenSubmit = true;
+          state.ancienneteData.hasBeenSubmit = isValid ? false : true;
           state.ancienneteData.isStepValid = isValid;
           state.ancienneteData.error = errorState;
         })
