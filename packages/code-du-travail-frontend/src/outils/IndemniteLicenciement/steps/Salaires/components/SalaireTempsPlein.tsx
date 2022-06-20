@@ -130,6 +130,7 @@ const Table = styled.table`
       width: 60%;
     }
   }
+  margin-bottom: ${spacings.large};
 `;
 
 const Caption = styled.caption`

@@ -66,6 +66,7 @@ const StepSalaires = () => {
         selectedOption={hasTempsPartiel}
         onChangeSelectedOption={onChangeHasTempsPartiel}
         error={errorHasTempsPartiel}
+        showRequired
       />
       {hasTempsPartiel === "oui" && <TempsPartiel />}
       {hasTempsPartiel === "non" && (
@@ -88,6 +89,7 @@ const StepSalaires = () => {
             selectedOption={hasSameSalaire}
             onChangeSelectedOption={onChangeHasSameSalaire}
             error={errorHasSameSalaire}
+            showRequired
           />
           {hasSameSalaire === "oui" && (
             <TextQuestion

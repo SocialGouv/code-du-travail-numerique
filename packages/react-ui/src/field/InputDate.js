@@ -44,14 +44,17 @@ export const InputDate = ({ value, onChange, invalid, ...props }) => {
 
   const onChangeDatePicker = (event) => {
     const date = event.target.value;
-    const realDate = date.split("-");
-    const year = realDate[0] ?? "";
-    const month = realDate[1] ?? "";
-    const day = realDate[2] ?? "";
-    const newValue = `${day}/${month}/${year}`;
-    setDate(newValue);
-    setIsValid(true);
-    if (onChange) onChange(newValue);
+    if (date && date !== "") {
+      console.log("date", date);
+      const realDate = date.split("-");
+      const year = realDate[0] ?? "";
+      const month = realDate[1] ?? "";
+      const day = realDate[2] ?? "";
+      const newValue = `${day}/${month}/${year}`;
+      setDate(newValue);
+      setIsValid(true);
+      if (onChange) onChange(newValue);
+    }
   };
 
   const formatDate = () => {
@@ -184,7 +187,8 @@ const StyledDiv = styled.div`
 const StyledDatePicker = styled.input`
   opacity: 0;
   cursor: pointer;
-  width: fit-content;
+  width: 100%;
+  height: 100%;
 
   &::-webkit-calendar-picker-indicator {
     position: absolute;

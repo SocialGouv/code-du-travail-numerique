@@ -4,8 +4,8 @@ describe("computeSalaryPeriods", () => {
   it("should compute salary periods for the last 12 months", () => {
     expect(
       computeSalaryPeriods({
-        dateEntree: "2017-02-01",
-        dateNotification: "2018-04-01",
+        dateEntree: "01/02/2017",
+        dateNotification: "01/04/2018",
       })
     ).toEqual([
       "mars 2018",
@@ -22,12 +22,28 @@ describe("computeSalaryPeriods", () => {
       "avril 2017",
     ]);
   });
+
+  it("should compute salary periods for the last 5 months", () => {
+    expect(
+      computeSalaryPeriods({
+        dateEntree: "01/02/2017",
+        dateNotification: "01/07/2017",
+      })
+    ).toEqual([
+      "juin 2017",
+      "mai 2017",
+      "avril 2017",
+      "mars 2017",
+      "février 2017",
+    ]);
+  });
+
   it("should compute salary periods for 2 months", () => {
     expect(
       computeSalaryPeriods({
         absencePeriods: [{ durationInMonth: 6, motif: "Congés sans solde" }],
-        dateEntree: "2017-04-01",
-        dateNotification: "2017-12-01",
+        dateEntree: "01/04/2017",
+        dateNotification: "01/12/2017",
       })
     ).toEqual(["novembre 2017", "octobre 2017"]);
   });
