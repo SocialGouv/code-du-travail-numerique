@@ -46,9 +46,7 @@ exports[`<SearchBar /> should render 1`] = `
   color: #3e486e;
 }
 
-.c4:not([disabled]):hover,
-.c4:not([disabled]):active,
-.c4:not([disabled]):focus {
+.c4:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -288,9 +286,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   color: #3e486e;
 }
 
-.c6:not([disabled]):hover,
-.c6:not([disabled]):active,
-.c6:not([disabled]):focus {
+.c6:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);

@@ -769,9 +769,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   color: #3e486e;
 }
 
-.c15:not([disabled]):hover,
-.c15:not([disabled]):active,
-.c15:not([disabled]):focus {
+.c15:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -833,9 +831,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c108:focus,
-.c108:hover,
-.c108:active {
+.c108:focus {
   color: #f66663;
 }
 
@@ -880,9 +876,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   overflow: visible;
 }
 
-.c87:focus,
-.c87:hover,
-.c87:active {
+.c87:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -932,9 +926,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   color: #fff;
 }
 
-.c98:not([disabled]):hover,
-.c98:not([disabled]):active,
-.c98:not([disabled]):focus {
+.c98:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -996,9 +988,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   color: #3e486e;
 }
 
-.c20:not([disabled]):hover,
-.c20:not([disabled]):active,
-.c20:not([disabled]):focus {
+.c20:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);

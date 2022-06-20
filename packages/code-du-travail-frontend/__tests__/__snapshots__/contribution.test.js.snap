@@ -223,9 +223,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   color: #3e486e;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):active,
-.c14:not([disabled]):focus {
+.c14:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -287,9 +285,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c76:focus,
-.c76:hover,
-.c76:active {
+.c76:focus {
   color: #f66663;
 }
 
@@ -338,9 +334,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   color: #3e486e;
 }
 
-.c85:not([disabled]):hover,
-.c85:not([disabled]):active,
-.c85:not([disabled]):focus {
+.c85:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -402,9 +396,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   color: #fff;
 }
 
-.c95:not([disabled]):hover,
-.c95:not([disabled]):active,
-.c95:not([disabled]):focus {
+.c95:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -466,9 +458,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
   color: #3e486e;
 }
 
-.c19:not([disabled]):hover,
-.c19:not([disabled]):active,
-.c19:not([disabled]):focus {
+.c19:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -3526,9 +3516,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   color: #3e486e;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):active,
-.c14:not([disabled]):focus {
+.c14:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -3590,9 +3578,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c76:focus,
-.c76:hover,
-.c76:active {
+.c76:focus {
   color: #f66663;
 }
 
@@ -3641,9 +3627,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   color: #3e486e;
 }
 
-.c85:not([disabled]):hover,
-.c85:not([disabled]):active,
-.c85:not([disabled]):focus {
+.c85:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -3705,9 +3689,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   color: #fff;
 }
 
-.c95:not([disabled]):hover,
-.c95:not([disabled]):active,
-.c95:not([disabled]):focus {
+.c95:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -3769,9 +3751,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
   color: #3e486e;
 }
 
-.c19:not([disabled]):hover,
-.c19:not([disabled]):active,
-.c19:not([disabled]):focus {
+.c19:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);

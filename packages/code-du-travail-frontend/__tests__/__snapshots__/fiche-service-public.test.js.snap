@@ -150,9 +150,7 @@ exports[`<FicheSP /> should render 1`] = `
   color: #3e486e;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):active,
-.c14:not([disabled]):focus {
+.c14:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -214,9 +212,7 @@ exports[`<FicheSP /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c64:focus,
-.c64:hover,
-.c64:active {
+.c64:focus {
   color: #f66663;
 }
 
@@ -265,9 +261,7 @@ exports[`<FicheSP /> should render 1`] = `
   color: #3e486e;
 }
 
-.c44:not([disabled]):hover,
-.c44:not([disabled]):active,
-.c44:not([disabled]):focus {
+.c44:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -329,9 +323,7 @@ exports[`<FicheSP /> should render 1`] = `
   color: #fff;
 }
 
-.c54:not([disabled]):hover,
-.c54:not([disabled]):active,
-.c54:not([disabled]):focus {
+.c54:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -393,9 +385,7 @@ exports[`<FicheSP /> should render 1`] = `
   color: #3e486e;
 }
 
-.c19:not([disabled]):hover,
-.c19:not([disabled]):active,
-.c19:not([disabled]):focus {
+.c19:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);

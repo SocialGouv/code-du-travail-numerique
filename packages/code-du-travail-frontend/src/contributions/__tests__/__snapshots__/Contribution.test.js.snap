@@ -125,9 +125,7 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c24:focus,
-.c24:hover,
-.c24:active {
+.c24:focus {
   color: #f66663;
 }
 
@@ -750,9 +748,7 @@ exports[`<Contribution /> should render answer references 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c24:focus,
-.c24:hover,
-.c24:active {
+.c24:focus {
   color: #f66663;
 }
 
@@ -1375,9 +1371,7 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c24:focus,
-.c24:hover,
-.c24:active {
+.c24:focus {
   color: #f66663;
 }
 
@@ -2000,9 +1994,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c24:focus,
-.c24:hover,
-.c24:active {
+.c24:focus {
   color: #f66663;
 }
 
@@ -2612,9 +2604,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c21:focus,
-.c21:hover,
-.c21:active {
+.c21:focus {
   color: #f66663;
 }
 

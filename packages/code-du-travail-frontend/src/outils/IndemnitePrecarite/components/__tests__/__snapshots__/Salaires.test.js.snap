@@ -46,9 +46,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
   color: #3e486e;
 }
 
-.c9:not([disabled]):hover,
-.c9:not([disabled]):active,
-.c9:not([disabled]):focus {
+.c9:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -430,9 +428,7 @@ exports[`<Salaires /> should delete a salaires 1`] = `
   color: #3e486e;
 }
 
-.c3:not([disabled]):hover,
-.c3:not([disabled]):active,
-.c3:not([disabled]):focus {
+.c3:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -603,9 +599,7 @@ exports[`<Salaires /> should render 1`] = `
   color: #3e486e;
 }
 
-.c9:not([disabled]):hover,
-.c9:not([disabled]):active,
-.c9:not([disabled]):focus {
+.c9:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);

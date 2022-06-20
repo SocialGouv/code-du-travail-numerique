@@ -70,9 +70,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
   color: #fff;
 }
 
-.c0:not([disabled]):hover,
-.c0:not([disabled]):active,
-.c0:not([disabled]):focus {
+.c0:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -134,9 +132,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
   color: #3e486e;
 }
 
-.c9:not([disabled]):hover,
-.c9:not([disabled]):active,
-.c9:not([disabled]):focus {
+.c9:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);

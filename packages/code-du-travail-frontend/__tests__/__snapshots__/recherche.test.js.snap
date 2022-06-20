@@ -139,9 +139,7 @@ exports[`<Recherche /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c51:focus,
-.c51:hover,
-.c51:active {
+.c51:focus {
   color: #f66663;
 }
 
@@ -190,9 +188,7 @@ exports[`<Recherche /> should render 1`] = `
   color: #fff;
 }
 
-.c24:not([disabled]):hover,
-.c24:not([disabled]):active,
-.c24:not([disabled]):focus {
+.c24:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -254,9 +250,7 @@ exports[`<Recherche /> should render 1`] = `
   color: #3e486e;
 }
 
-.c33:not([disabled]):hover,
-.c33:not([disabled]):active,
-.c33:not([disabled]):focus {
+.c33:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -318,9 +312,7 @@ exports[`<Recherche /> should render 1`] = `
   color: #fff;
 }
 
-.c41:not([disabled]):hover,
-.c41:not([disabled]):active,
-.c41:not([disabled]):focus {
+.c41:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -382,9 +374,7 @@ exports[`<Recherche /> should render 1`] = `
   color: #3e486e;
 }
 
-.c10:not([disabled]):hover,
-.c10:not([disabled]):active,
-.c10:not([disabled]):focus {
+.c10:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);

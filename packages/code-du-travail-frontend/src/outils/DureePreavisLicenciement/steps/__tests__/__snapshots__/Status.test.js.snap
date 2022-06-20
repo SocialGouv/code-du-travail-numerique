@@ -210,9 +210,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c8:focus,
-.c8:hover,
-.c8:active {
+.c8:focus {
   color: #f66663;
 }
 

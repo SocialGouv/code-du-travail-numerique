@@ -73,9 +73,7 @@ exports[`<CallToActionTile /> should render 1`] = `
   overflow: visible;
 }
 
-.c12:focus,
-.c12:hover,
-.c12:active {
+.c12:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }

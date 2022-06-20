@@ -73,9 +73,7 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c11:focus,
-.c11:hover,
-.c11:active {
+.c11:focus {
   color: #f66663;
 }
 
@@ -393,9 +391,7 @@ exports[`<Search /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c6:focus,
-.c6:hover,
-.c6:active {
+.c6:focus {
   color: #f66663;
 }
 
@@ -621,9 +617,7 @@ exports[`<Search /> should show no results when no result 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c8:focus,
-.c8:hover,
-.c8:active {
+.c8:focus {
   color: #f66663;
 }
 
@@ -868,9 +862,7 @@ exports[`<Search /> should show spinner when loading 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c8:focus,
-.c8:hover,
-.c8:active {
+.c8:focus {
   color: #f66663;
 }
 
@@ -1187,9 +1179,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c16:focus,
-.c16:hover,
-.c16:active {
+.c16:focus {
   color: #f66663;
 }
 
@@ -1563,9 +1553,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c15:focus,
-.c15:hover,
-.c15:active {
+.c15:focus {
   color: #f66663;
 }
 
@@ -1911,9 +1899,7 @@ exports[`<Search /> when searching SIREN, should use API SIREN and siret2idcc 1`
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c12:focus,
-.c12:hover,
-.c12:active {
+.c12:focus {
   color: #f66663;
 }
 
@@ -2239,9 +2225,7 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c8:focus,
-.c8:hover,
-.c8:active {
+.c8:focus {
   color: #f66663;
 }
 
@@ -2513,9 +2497,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c11:focus,
-.c11:hover,
-.c11:active {
+.c11:focus {
   color: #f66663;
 }
 
