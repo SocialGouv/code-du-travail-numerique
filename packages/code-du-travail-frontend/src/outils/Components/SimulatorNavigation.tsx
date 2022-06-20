@@ -3,12 +3,12 @@ import React from "react";
 import styled from "styled-components";
 
 export type NavigationProps = {
-  hasError?: boolean;
+  hasError: boolean;
   showNext: boolean;
   onPrevious?: () => void;
   onPrint?: () => void;
-  onNext?: () => void;
-  onStart?: () => void;
+  onNext: () => void;
+  onStart: () => void;
 };
 
 const SimulatorNavigation = ({

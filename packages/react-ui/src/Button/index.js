@@ -42,9 +42,7 @@ export const StyledButton = styled.button`
         border: none;
         border-radius: 0;
         overflow: visible;
-        &:focus,
-        &:hover,
-        &:active {
+        &:hover {
           text-decoration: underline;
         }
       `;
@@ -65,9 +63,7 @@ export const StyledButton = styled.button`
         overflow: visible;
         transition: color ${animations.transitionTiming} linear,
           text-decoration ${animations.transitionTiming} linear;
-        &:focus,
-        &:hover,
-        &:active {
+        &:focus {
           color: ${({ theme }) => theme.primary};
         }
       `;
@@ -134,9 +130,7 @@ export const StyledButton = styled.button`
         color: ${color};
       }
       :not([disabled]) {
-        &:hover,
-        &:active,
-        &:focus {
+        &:hover {
           opacity: ${opacity};
           transform: translateY(-2px);
           background: ${lighten(0.1, backgroundColor)};

@@ -19,5 +19,7 @@ module.exports = {
     "@typescript-eslint/no-unsafe-argument": "warn",
     "@typescript-eslint/no-shadow": "warn",
     "@typescript-eslint/prefer-optional-chain": "warn",
+    "@typescript-eslint/init-declarations": ["warn"],
+    "@typescript-eslint/no-explicit-any": ["warn"],
   },
 };

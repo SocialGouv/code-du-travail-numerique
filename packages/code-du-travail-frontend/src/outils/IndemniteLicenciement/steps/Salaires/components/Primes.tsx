@@ -76,9 +76,11 @@ export default function Primes({ primes, onChange, error }: Props) {
               </ErrorWrapper>
             )}
           </div>
-          <StyledDelButton onClick={() => onDeleteButtonClick(index)}>
-            Supprimer
-          </StyledDelButton>
+          {localPrimes.length > 1 && (
+            <StyledDelButton onClick={() => onDeleteButtonClick(index)}>
+              Supprimer
+            </StyledDelButton>
+          )}
         </Row>
       ))}
       <AddButton onClick={onAddButtonClick}>Ajouter une prime</AddButton>

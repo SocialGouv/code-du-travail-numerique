@@ -100,9 +100,7 @@ exports[`<Feedback/> should render 1`] = `
   color: #3e486e;
 }
 
-.c9:not([disabled]):hover,
-.c9:not([disabled]):active,
-.c9:not([disabled]):focus {
+.c9:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -419,9 +417,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   color: #3e486e;
 }
 
-.c19:not([disabled]):hover,
-.c19:not([disabled]):active,
-.c19:not([disabled]):focus {
+.c19:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -479,9 +475,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   overflow: visible;
 }
 
-.c21:focus,
-.c21:hover,
-.c21:active {
+.c21:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -1069,9 +1063,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   color: #3e486e;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):active,
-.c14:not([disabled]):focus {
+.c14:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);

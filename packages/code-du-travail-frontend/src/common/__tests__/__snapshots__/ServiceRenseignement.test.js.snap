@@ -57,9 +57,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   color: #3e486e;
 }
 
-.c8:not([disabled]):hover,
-.c8:not([disabled]):active,
-.c8:not([disabled]):focus {
+.c8:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);

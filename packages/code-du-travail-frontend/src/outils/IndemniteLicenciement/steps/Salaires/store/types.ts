@@ -35,6 +35,7 @@ export type SalairesStoreFn = {
   onChangeHasPrimes: (value: OuiNon) => void;
   onChangePrimes: (primes: Prime[]) => void;
   onValidateStepSalaires: () => boolean;
+  initSalaryPeriods: () => void;
 };
 
 export type SalairesStoreSlice = {

@@ -90,9 +90,7 @@ exports[`<Footer /> should render 1`] = `
   color: #fff;
 }
 
-.c10:not([disabled]):hover,
-.c10:not([disabled]):active,
-.c10:not([disabled]):focus {
+.c10:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -154,9 +152,7 @@ exports[`<Footer /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c20:focus,
-.c20:hover,
-.c20:active {
+.c20:focus {
   color: #f66663;
 }
 

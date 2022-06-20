@@ -51,6 +51,7 @@ const StepAnciennete = () => {
         onChange={onChangeDateEntree}
         error={errorDateEntree}
         id="dateEntree"
+        showRequired
       />
       <TextQuestion
         label="Quelle est la date de notification du licenciement&nbsp;?"
@@ -60,6 +61,7 @@ const StepAnciennete = () => {
         onChange={onChangeDateNotification}
         error={errorDateNotification}
         id="dateNotification"
+        showRequired
       />
       <TextQuestion
         label="Quelle est la date de sortie de l’entreprise&nbsp;?"
@@ -69,6 +71,7 @@ const StepAnciennete = () => {
         onChange={onChangeDateSortie}
         error={errorDateSortie}
         id="dateSortie"
+        showRequired
       />
       <SectionTitle>Période d’absence prolongée</SectionTitle>
       <RadioQuestion
@@ -89,6 +92,7 @@ const StepAnciennete = () => {
         selectedOption={hasAbsenceProlonge}
         onChangeSelectedOption={onChangeHasAbsenceProlonge}
         error={errorAbsenceProlonge}
+        showRequired
       />
       {hasAbsenceProlonge === "oui" && (
         <AbsencePeriods

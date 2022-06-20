@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.78.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.78.0...v4.78.1) (2022-06-17)
+
+**Note:** Version bump only for package @cdt/e2e
+
+
+
+
+
+# [4.78.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.77.1...v4.78.0) (2022-06-16)
+
+
+### Features
+
+* add a redirection to new agreement 1505 url ([#4432](https://github.com/SocialGouv/code-du-travail-numerique/issues/4432)) ([492685e](https://github.com/SocialGouv/code-du-travail-numerique/commit/492685e23811451f9c4b425380aab52d8e3835e6))
+
+
+
+
+
 ## [4.77.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.77.0...v4.77.1) (2022-05-18)
 
 **Note:** Version bump only for package @cdt/e2e

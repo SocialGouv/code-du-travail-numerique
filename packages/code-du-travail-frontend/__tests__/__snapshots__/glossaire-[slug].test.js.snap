@@ -128,9 +128,7 @@ exports[`<Term /> should render 1`] = `
   color: #3e486e;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):active,
-.c14:not([disabled]):focus {
+.c14:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -192,9 +190,7 @@ exports[`<Term /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c50:focus,
-.c50:hover,
-.c50:active {
+.c50:focus {
   color: #f66663;
 }
 
@@ -243,9 +239,7 @@ exports[`<Term /> should render 1`] = `
   color: #fff;
 }
 
-.c40:not([disabled]):hover,
-.c40:not([disabled]):active,
-.c40:not([disabled]):focus {
+.c40:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -307,9 +301,7 @@ exports[`<Term /> should render 1`] = `
   color: #3e486e;
 }
 
-.c19:not([disabled]):hover,
-.c19:not([disabled]):active,
-.c19:not([disabled]):focus {
+.c19:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);

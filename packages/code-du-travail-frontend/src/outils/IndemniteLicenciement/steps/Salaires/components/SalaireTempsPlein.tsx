@@ -28,6 +28,10 @@ export const SalaireTempsPlein = ({
     React.useState<SalaryPeriods[]>(salaryPeriods);
   const [errorsSalaries, setErrorsSalaries] = React.useState({});
 
+  React.useEffect(() => {
+    setLocalSalaries(salaryPeriods);
+  }, [salaryPeriods]);
+
   const onChangeSalaries = (index: number, value: string) => {
     const salary = parseFloat(value);
     if (isNaN(salary) && value.length > 0) {
@@ -57,12 +61,12 @@ export const SalaireTempsPlein = ({
   };
 
   return (
-    <>
+    <StyledDiv>
       <Table>
         <Caption>
           <Question required>Salaire mensuel brut</Question>
           <SmallText>
-            Prendre en compte les salaires et avantages en nature.
+            Prendre en compte les primes et avantages en nature.
           </SmallText>
         </Caption>
         <thead>
@@ -82,7 +86,7 @@ export const SalaireTempsPlein = ({
                   name={`salaries[${index}]`}
                   title={`Salaire mensuel brut pour le mois ${
                     index + 1
-                  } (prendre en compte les salaires et avantages en nature)`}
+                  } (prendre en compte les primes et avantages en nature)`}
                   type="number"
                   id={`salary${index}`}
                   invalid={errorsSalaries[`${index}`]}
@@ -107,13 +111,17 @@ export const SalaireTempsPlein = ({
           <InlineError>{error}</InlineError>
         </StyledInlineWrapperError>
       )}
-    </>
+    </StyledDiv>
   );
 };
 
 export default SalaireTempsPlein;
 
 const { fonts, breakpoints, spacings } = theme;
+
+const StyledDiv = styled.div`
+  margin-bottom: ${spacings.large};
+`;
 
 const Table = styled.table`
   width: 100%;

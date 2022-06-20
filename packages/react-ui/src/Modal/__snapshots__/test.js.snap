@@ -56,9 +56,7 @@ exports[`<Modal /> does not render at first and then render 2`] = `
   color: #3e486e;
 }
 
-.c2:not([disabled]):hover,
-.c2:not([disabled]):active,
-.c2:not([disabled]):focus {
+.c2:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -298,9 +296,7 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
   color: #3e486e;
 }
 
-.c2:not([disabled]):hover,
-.c2:not([disabled]):active,
-.c2:not([disabled]):focus {
+.c2:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);

@@ -104,9 +104,7 @@ exports[`<Themes /> should render 1`] = `
   color: #fff;
 }
 
-.c29:not([disabled]):hover,
-.c29:not([disabled]):active,
-.c29:not([disabled]):focus {
+.c29:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);

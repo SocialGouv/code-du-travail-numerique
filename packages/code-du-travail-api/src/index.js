@@ -21,7 +21,7 @@ const Koa = require("koa");
 const bodyParser = require("koa-bodyparser");
 const cors = require("@koa/cors");
 
-const app = new Koa();
+export const app = new Koa();
 const PORT = process.env.PORT || 1337;
 
 app.use(cors());
@@ -79,4 +79,4 @@ const server = app.listen(PORT, () => {
   logger.info(`Server listening on port: ${PORT}`);
 });
 
-module.exports = server;
+export default server;
