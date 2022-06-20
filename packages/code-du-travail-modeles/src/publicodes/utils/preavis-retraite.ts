@@ -1,6 +1,6 @@
+import { isFloat } from "../../utils";
 import type { PublicodesPreavisRetraiteResult } from "../types";
 import { PublicodesConvertedUnit } from "../types";
-import { isFloat } from ".";
 
 export const convertDaysIntoBetterUnit = (
   days: number | string

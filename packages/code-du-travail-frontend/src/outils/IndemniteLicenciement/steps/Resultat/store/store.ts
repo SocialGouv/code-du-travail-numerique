@@ -2,11 +2,7 @@ import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
 import { StoreSlice } from "../../../store";
 import { mapToPublicodesSituationForIndemniteLicenciement } from "../../../../publicodes";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
-import {
-  computeReferenceSalary,
-  computeSeniority,
-  generateExplanation,
-} from "../../../common";
+import { computeSeniority, generateExplanation } from "../../../common";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { SalairesStoreSlice } from "../../Salaires/store";
 import produce from "immer";
@@ -38,6 +34,7 @@ const createResultStore: StoreSlice<
       const salaireInput = get().salairesData.input;
       const contratInput = get().contratTravailData.input;
       const publicodes = get().resultData.publicodes;
+      const SalaireReference = new SalaireReference();
 
       if (!publicodes) {
         throw new Error("Publicodes is not defined");
@@ -49,7 +46,7 @@ const createResultStore: StoreSlice<
         absencePeriods: ancienneteInput.absencePeriods!,
       });
 
-      const salaireRef = computeReferenceSalary({
+      const salaireRef = SalaireReference({
         hasSameSalaire: salaireInput.hasSameSalaire === "oui",
         primes: salaireInput.primes,
         salaire: salaireInput.salaireBrut

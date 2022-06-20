@@ -1,9 +1,11 @@
-import { computeReferenceSalary1596 } from "..";
+import { SalaireReference1596 } from "../1596_batiment_ouvriers_employes";
 
-describe("computeReferenceSalary for CC 1596", () => {
-  it("should compute reference salary for a basic use case", () => {
+describe("Calcul du salaire pour la CC 1596", () => {
+  const SalaireReference = new SalaireReference1596();
+
+  it("Cas d'usage basique", () => {
     expect(
-      computeReferenceSalary1596({
+      SalaireReference.computeReferenceSalary({
         hasSameSalaire: true,
         primes: [],
         salaire: 2000,
@@ -11,9 +13,9 @@ describe("computeReferenceSalary for CC 1596", () => {
       })
     ).toEqual(2000);
   });
-  it("should compute reference salary for a basic use case with primes", () => {
+  it("Avec des primes", () => {
     expect(
-      computeReferenceSalary1596({
+      SalaireReference.computeReferenceSalary({
         hasSameSalaire: true,
         primes: [4000, 3000, 20000],
         salaire: 2000,
@@ -22,9 +24,9 @@ describe("computeReferenceSalary for CC 1596", () => {
     ).toEqual(4250);
   });
 
-  it("should compute reference salary if salaire is different between 2 months", () => {
+  it("Avec un salaire différent sur deux mois", () => {
     expect(
-      computeReferenceSalary1596({
+      SalaireReference.computeReferenceSalary({
         hasSameSalaire: false,
         primes: [],
         salaire: undefined,
@@ -36,9 +38,9 @@ describe("computeReferenceSalary for CC 1596", () => {
     ).toEqual(3000);
   });
 
-  it("should compute reference salary if salaire is different between 2 months with primes", () => {
+  it("Avec un salaire différent sur deux mois et une prime", () => {
     expect(
-      computeReferenceSalary1596({
+      SalaireReference.computeReferenceSalary({
         hasSameSalaire: false,
         primes: [2500],
         salaire: undefined,
@@ -60,9 +62,9 @@ describe("computeReferenceSalary for CC 1596", () => {
     ).toEqual(3208.3333333333335);
   });
 
-  it("should compute reference salary if salaire is different between 2 months with primes for 3 months", () => {
+  it("Avec un salaire différent sur trois mois et trois primes", () => {
     expect(
-      computeReferenceSalary1596({
+      SalaireReference.computeReferenceSalary({
         hasSameSalaire: false,
         primes: [20, 20, 20],
         salaire: undefined,
