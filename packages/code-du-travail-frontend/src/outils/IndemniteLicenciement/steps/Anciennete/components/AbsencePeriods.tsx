@@ -153,7 +153,7 @@ const AbsencePeriods = ({ onChange, absences, error }: Props) => {
                 <StyledError>{errorsInput[`${index}`]}</StyledError>
               )}
             </div>
-            {absences.length > 1 && (
+            {localAbsences.length > 1 && (
               <StyledDelButton onClick={() => onDeleteButtonClick(index)}>
                 Supprimer
               </StyledDelButton>

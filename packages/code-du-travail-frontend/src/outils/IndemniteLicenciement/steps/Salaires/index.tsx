@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { icons } from "@socialgouv/cdtn-ui";
 
 import { useIndemniteLicenciementStore } from "../../store";
@@ -25,6 +25,7 @@ const StepSalaires = () => {
     onChangePrimes,
     errorSalaryPeriods,
     errorPrimes,
+    initSalaryPeriods,
   } = useIndemniteLicenciementStore((state) => ({
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     onChangeHasTempsPartiel: state.salairesFunction.onChangeHasTempsPartiel,
@@ -44,7 +45,12 @@ const StepSalaires = () => {
     onChangePrimes: state.salairesFunction.onChangePrimes,
     errorSalaryPeriods: state.salairesData.error.errorSalaryPeriods,
     errorPrimes: state.salairesData.error.errorPrimes,
+    initSalaryPeriods: state.salairesFunction.initSalaryPeriods,
   }));
+
+  useEffect(() => {
+    initSalaryPeriods();
+  }, []);
 
   return (
     <>
@@ -93,7 +99,7 @@ const StepSalaires = () => {
           />
           {hasSameSalaire === "oui" && (
             <TextQuestion
-              label="Quel est le salaire mensuel brut du salarié&nbsp;?"
+              label="Quel a été le montant du salaire mensuel brut&nbsp;?"
               value={salaireBrut}
               onChange={onChangeSalaireBrut}
               error={errorSalaireBrut}
@@ -129,6 +135,7 @@ const StepSalaires = () => {
                 selectedOption={hasPrimes}
                 onChangeSelectedOption={onChangeHasPrimes}
                 error={errorHasPrimes}
+                showRequired
               />
               {hasPrimes === "oui" && (
                 <Primes

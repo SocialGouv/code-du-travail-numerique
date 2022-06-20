@@ -38,6 +38,28 @@ describe("computeSalaryPeriods", () => {
     ]);
   });
 
+  it("should compute salary periods for the last 5 months", () => {
+    expect(
+      computeSalaryPeriods({
+        dateEntree: "20/02/2015",
+        dateNotification: "20/12/2020",
+      })
+    ).toEqual([
+      "novembre 2020",
+      "octobre 2020",
+      "septembre 2020",
+      "août 2020",
+      "juillet 2020",
+      "juin 2020",
+      "mai 2020",
+      "avril 2020",
+      "mars 2020",
+      "février 2020",
+      "janvier 2020",
+      "décembre 2019",
+    ]);
+  });
+
   it("should compute salary periods for 2 months", () => {
     expect(
       computeSalaryPeriods({

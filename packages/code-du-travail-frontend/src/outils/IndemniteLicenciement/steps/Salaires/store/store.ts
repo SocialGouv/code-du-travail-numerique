@@ -27,20 +27,11 @@ const createSalairesStore: StoreSlice<
 > = (set, get) => ({
   salairesData: { ...initialState },
   salairesFunction: {
-    onChangeHasTempsPartiel: (value) => {
-      applyGenericValidation(get, set, "hasTempsPartiel", value);
-    },
-    onChangeHasSameSalaire: (value) => {
-      applyGenericValidation(get, set, "hasSameSalaire", value);
-      let periods: string[] = [];
+    initSalaryPeriods: () => {
       const ancienneteInput = get().ancienneteData.input;
-      if (
-        value === "non" &&
-        ancienneteInput.absencePeriods &&
-        ancienneteInput.dateEntree &&
-        ancienneteInput.dateNotification
-      ) {
-        periods = computeSalaryPeriods({
+      const hasSameSalaire = get().salairesData.input.hasSameSalaire;
+      if (hasSameSalaire === "non") {
+        const periods = computeSalaryPeriods({
           dateEntree: ancienneteInput.dateEntree ?? "",
           dateNotification: ancienneteInput.dateNotification ?? "",
           absencePeriods: ancienneteInput.absencePeriods,
@@ -63,6 +54,13 @@ const createSalairesStore: StoreSlice<
           })
         );
       }
+    },
+    onChangeHasTempsPartiel: (value) => {
+      applyGenericValidation(get, set, "hasTempsPartiel", value);
+    },
+    onChangeHasSameSalaire: (value) => {
+      applyGenericValidation(get, set, "hasSameSalaire", value);
+      get().salairesFunction.initSalaryPeriods();
     },
     onChangeSalaireBrut: (value) => {
       applyGenericValidation(get, set, "salaireBrut", value);
