@@ -20,7 +20,7 @@ export const mapToPublicodesSituationForIndemniteLicenciement = (
     ...{
       "contrat salarié - ancienneté en année": formatNumberAsString(seniority),
       //TODO: à virer
-      "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . salaire de référence":
+      "contrat salarié - convention collective - batiment ouvriers employés - indemnité de licenciement - salaire de référence":
         formatNumberAsString(salaireRef),
       "contrat salarié - salaire de référence":
         formatNumberAsString(salaireRef),
