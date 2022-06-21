@@ -1,8 +1,12 @@
 import { sum } from "../../utils";
-import type { ISalaireReference, LegalReferenceSalaryProps } from "./types";
+import type {
+  IReferenceSalary,
+  ReferenceSalaryProps,
+  SupportedCcIndemniteLicenciement,
+} from "./types";
 
-export class SalaireReference1596
-  implements ISalaireReference<LegalReferenceSalaryProps>
+export class ReferenceSalary1596
+  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1596>
 {
   /**
    * Règle :
@@ -18,7 +22,7 @@ export class SalaireReference1596
     salaires,
     salaire,
     primes,
-  }: LegalReferenceSalaryProps): number {
+  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1596>): number {
     const salaryValues = salaires.map((a) => a.value);
 
     if (!salaire) {

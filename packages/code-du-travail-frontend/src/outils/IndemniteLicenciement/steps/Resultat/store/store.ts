@@ -1,6 +1,6 @@
 import {
   IndemniteLicenciementPublicodes,
-  SalaireReference,
+  ReferenceSalary,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { StoreSlice } from "../../../store";
@@ -51,7 +51,7 @@ const createResultStore: StoreSlice<
       const salaireInput = get().salairesData.input;
       const contratInput = get().contratTravailData.input;
       const publicodes = get().resultData.publicodes;
-      const sReference = new SalaireReference(
+      const sReference = new ReferenceSalary(
         ccn && ccn.selected
           ? (`IDCC${ccn.selected.num}` as SupportedCcIndemniteLicenciement)
           : SupportedCcIndemniteLicenciement.default

@@ -1,11 +1,11 @@
-import { SalaireReference1596 } from "../1596_batiment_ouvriers_employes";
+import { ReferenceSalary1596 } from "../1596_batiment_ouvriers_employes";
 
 describe("Calcul du salaire pour la CC 1596", () => {
-  const SalaireReference = new SalaireReference1596();
+  const ReferenceSalary = new ReferenceSalary1596();
 
   it("Cas d'usage basique", () => {
     expect(
-      SalaireReference.computeReferenceSalary({
+      ReferenceSalary.computeReferenceSalary({
         hasSameSalaire: true,
         primes: [],
         salaire: 2000,
@@ -15,7 +15,7 @@ describe("Calcul du salaire pour la CC 1596", () => {
   });
   it("Avec des primes", () => {
     expect(
-      SalaireReference.computeReferenceSalary({
+      ReferenceSalary.computeReferenceSalary({
         hasSameSalaire: true,
         primes: [4000, 3000, 20000],
         salaire: 2000,
@@ -26,7 +26,7 @@ describe("Calcul du salaire pour la CC 1596", () => {
 
   it("Avec un salaire différent sur deux mois", () => {
     expect(
-      SalaireReference.computeReferenceSalary({
+      ReferenceSalary.computeReferenceSalary({
         hasSameSalaire: false,
         primes: [],
         salaire: undefined,
@@ -40,7 +40,7 @@ describe("Calcul du salaire pour la CC 1596", () => {
 
   it("Avec un salaire différent sur deux mois et une prime", () => {
     expect(
-      SalaireReference.computeReferenceSalary({
+      ReferenceSalary.computeReferenceSalary({
         hasSameSalaire: false,
         primes: [2500],
         salaire: undefined,
@@ -64,7 +64,7 @@ describe("Calcul du salaire pour la CC 1596", () => {
 
   it("Avec un salaire différent sur trois mois et trois primes", () => {
     expect(
-      SalaireReference.computeReferenceSalary({
+      ReferenceSalary.computeReferenceSalary({
         hasSameSalaire: false,
         primes: [20, 20, 20],
         salaire: undefined,

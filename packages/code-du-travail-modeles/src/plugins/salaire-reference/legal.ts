@@ -1,15 +1,19 @@
 import { sum } from "../../utils";
-import type { ISalaireReference, LegalReferenceSalaryProps } from "./types";
+import type {
+  IReferenceSalary,
+  ReferenceSalaryProps,
+  SupportedCcIndemniteLicenciement,
+} from "./types";
 
-export class SalaireReferenceLegal
-  implements ISalaireReference<LegalReferenceSalaryProps>
+export class ReferenceSalaryLegal
+  implements IReferenceSalary<SupportedCcIndemniteLicenciement.default>
 {
   computeReferenceSalary({
     hasSameSalaire,
     salaires,
     salaire,
     primes,
-  }: LegalReferenceSalaryProps): number {
+  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.default>): number {
     const salaryValues = salaires.map((a) => a.value);
 
     if (!salaire) {

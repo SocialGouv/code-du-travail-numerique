@@ -1,11 +1,11 @@
-import { SalaireReferenceLegal } from "../legal";
+import { ReferenceSalaryLegal } from "../legal";
 
 describe("Calcul du salaire de référence légal", () => {
-  const SalaireReference = new SalaireReferenceLegal();
+  const ReferenceSalary = new ReferenceSalaryLegal();
 
   it("Cas d'usage basique", () => {
     expect(
-      SalaireReference.computeReferenceSalary({
+      ReferenceSalary.computeReferenceSalary({
         hasSameSalaire: true,
         primes: [],
         salaire: 2000,
@@ -15,7 +15,7 @@ describe("Calcul du salaire de référence légal", () => {
   });
   it("Avec des primes", () => {
     expect(
-      SalaireReference.computeReferenceSalary({
+      ReferenceSalary.computeReferenceSalary({
         hasSameSalaire: true,
         primes: [4000, 3000, 20000],
         salaire: 2000,
@@ -26,7 +26,7 @@ describe("Calcul du salaire de référence légal", () => {
 
   it("Avec un salaire différent sur deux mois", () => {
     expect(
-      SalaireReference.computeReferenceSalary({
+      ReferenceSalary.computeReferenceSalary({
         hasSameSalaire: false,
         primes: [],
         salaire: undefined,
@@ -40,7 +40,7 @@ describe("Calcul du salaire de référence légal", () => {
 
   it("Avec un salaire différent sur deux mois et une prime", () => {
     expect(
-      SalaireReference.computeReferenceSalary({
+      ReferenceSalary.computeReferenceSalary({
         hasSameSalaire: false,
         primes: [2500],
         salaire: undefined,
@@ -64,7 +64,7 @@ describe("Calcul du salaire de référence légal", () => {
 
   it("Avec un salaire différent sur trois mois et trois primes", () => {
     expect(
-      SalaireReference.computeReferenceSalary({
+      ReferenceSalary.computeReferenceSalary({
         hasSameSalaire: false,
         primes: [20, 20, 20],
         salaire: undefined,
