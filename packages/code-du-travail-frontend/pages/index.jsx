@@ -1,4 +1,4 @@
-import tools from "@cdt/data...tools/internals.json";
+import { internals as tools } from "@cdt/data";
 import * as Sentry from "@sentry/nextjs";
 import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import {

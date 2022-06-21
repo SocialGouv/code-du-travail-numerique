@@ -1,5 +1,4 @@
-import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
-import PropTypes from "prop-types";
+import { preavisLicenciementData as data } from "@cdt/data";
 import React from "react";
 
 import Disclaimer from "../../common/Disclaimer";
@@ -162,11 +161,15 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
         "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901112&cidTexte=LEGITEXT000006072050&dateTexte=20080501",
     },
   ];
-  if (situationCC) {
+  if (situationCC && situationCC.ref && situationCC.refUrl) {
     refs.push({ ref: situationCC.ref, refUrl: situationCC.refUrl });
   }
 
-  const duration = getResult({ disabledWorker, durationCC, durationCDT });
+  const duration = getResult({
+    disabledWorker,
+    durationCC: parseInt(durationCC ?? "0"),
+    durationCDT: parseInt(durationCDT ?? "0"),
+  });
 
   return (
     <>
@@ -204,30 +207,22 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
             }),
           }),
         })}
-        {situationCC && (
-          <PubliReferences
-            references={
-              situationCC.ref && situationCC.refUrl && formatRefs(refs)
-            }
-          />
-        )}
+        {situationCC && <PubliReferences references={formatRefs(refs)} />}
       </ShowDetails>
-      <Disclaimer title={"Attention il peut exister une durée plus favorable"}>
-        <DisclaimerText
-          durationCC={durationCC}
-          durationCDT={durationCDT}
-          ccn={ccn?.selected}
-        />
-      </Disclaimer>
+      {durationCDT && (
+        <Disclaimer
+          title={"Attention il peut exister une durée plus favorable"}
+        >
+          <DisclaimerText
+            durationCC={durationCC}
+            durationCDT={durationCDT}
+            ccn={ccn?.selected}
+          />
+        </Disclaimer>
+      )}
     </>
   );
 }
-
-StepResult.propTypes = {
-  form: PropTypes.shape({
-    getState: PropTypes.func.isRequired,
-  }),
-};
 
 export { StepResult };
 
@@ -235,6 +230,10 @@ function getResult({
   durationCDT = 0,
   durationCC = 0,
   disabledWorker = true,
+}: {
+  durationCDT: number;
+  durationCC: number;
+  disabledWorker: boolean | undefined;
 }): string {
   const durationMax = Math.max(durationCDT, durationCC);
   if (durationMax === 0) {

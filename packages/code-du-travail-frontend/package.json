@@ -26,9 +26,6 @@
   },
   "dependencies": {
     "@cdt/data": "^4.78.1",
-    "@cdt/data...prime-precarite": "^4.78.1",
-    "@cdt/data...simulateurs": "^4.78.1",
-    "@cdt/data...tools": "^4.78.1",
     "@matejmazur/react-katex": "^3.1.3",
     "@next/bundle-analyzer": "^11.1.0",
     "@sentry/nextjs": "^6.17.9",

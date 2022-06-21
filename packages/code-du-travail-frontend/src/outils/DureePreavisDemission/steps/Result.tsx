@@ -1,4 +1,4 @@
-import data from "@cdt/data...simulateurs/preavis-demission.data.json";
+import { preavisDemissionData as data } from "@cdt/data";
 import PropTypes from "prop-types";
 import React from "react";
 import Disclaimer from "../../common/Disclaimer";
@@ -70,7 +70,7 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
           .
         </p>
       )}
-      {parseInt(situation.answer3, 10) === 0 && (
+      {situation.answer3 && parseInt(situation.answer3, 10) === 0 && (
         <p>
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.

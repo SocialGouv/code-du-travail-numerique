@@ -5,13 +5,13 @@ import CCSearchInfo from "../../common/CCSearchInfo";
 import { isNotNearZero } from "../../common/utils";
 
 type Props = {
-  durationCC: number;
   durationCDT: string;
+  durationCC: string | null;
   ccn?: Agreement;
 };
 
 const DisclaimerText: React.FC<Props> = ({ durationCC, durationCDT, ccn }) => {
-  if (durationCC === undefined) {
+  if (!durationCC) {
     if (parseInt(durationCDT, 10) === 0) {
       return (
         <>

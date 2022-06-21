@@ -52,4 +52,5 @@ export type FormContent = {
   criteria?: Record<string, string>;
   cdt?: Record<string, string>;
   disabledWorker?: boolean;
+  typeRupture?: string;
 } & Record<string, unknown>;

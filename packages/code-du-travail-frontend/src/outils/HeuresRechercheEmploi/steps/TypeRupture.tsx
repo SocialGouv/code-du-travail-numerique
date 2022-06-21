@@ -1,5 +1,5 @@
-import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
-import React, { useEffect } from "react";
+import { heuresRechercheEmploiData as data } from "@cdt/data";
+import { useEffect } from "react";
 
 import { SelectQuestion } from "../../common/SelectQuestion";
 import {
@@ -11,10 +11,7 @@ import { SectionTitle } from "../../common/stepStyles";
 
 const { questions, situations: allSituations } = data;
 
-export const RUPTURE_QUESTION_ID = "typeRupture";
-const { question: QUESTION_LABEL } = questions.find(
-  (q) => q.name === "type de rupture"
-);
+const question = questions.find((q) => q.name === "type de rupture");
 
 function StepTypeRupture({ form }) {
   const { values } = form.getState();
@@ -38,7 +35,7 @@ function StepTypeRupture({ form }) {
 
       <SelectQuestion
         name="typeRupture"
-        label={QUESTION_LABEL}
+        label={question?.question ?? ""}
         options={nextQuestionOptions}
       />
     </>

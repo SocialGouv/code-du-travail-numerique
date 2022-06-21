@@ -169,6 +169,7 @@
     "displayTitle": "Calculer le préavis de départ à la retraite",
     "metaTitle": "Simulateur - Calcul du préavis de départ ou mise à la retraite",
     "slug": "preavis-retraite",
+    "questions": [],
     "description": "Estimez la durée de préavis à respecter en cas de départ à la retraite ou de mise à la retraite",
     "metaDescription": "Vous souhaitez connaître la durée du préavis à respecter en cas de départ ou de mise à la retraite ? Notre simulateur vous apporte une réponse personnalisée.",
     "action": "Calculer",

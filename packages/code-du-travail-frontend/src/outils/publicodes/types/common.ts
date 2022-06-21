@@ -4,8 +4,8 @@ import Engine, { Rule as PubliRule } from "publicodes";
 import { PublicodesIndemniteLicenciementResult } from "./indemnite-licenciement";
 
 export type OldReference = {
-  ref: string;
-  refUrl: string;
+  ref: string | null;
+  refUrl: string | null;
 };
 
 export interface MissingArgs {

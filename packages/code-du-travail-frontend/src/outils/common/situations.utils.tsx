@@ -1,11 +1,8 @@
-import React from "react";
+import { Criteria, Situation } from "@cdt/data";
 
-const createValuesMatcher = (values) => (item) => {
-  function swallowEqual(a, b) {
+const createValuesMatcher = (values: Criteria) => (item: Situation) => {
+  function swallowEqual(a: Criteria, b: Criteria) {
     return Object.entries(a).every(([key, value]) => {
-      if (value && value.constructor === Object) {
-        return swallowEqual(value, b[key]);
-      }
       return `${b[key]}`.toLowerCase() === `${value}`.toLowerCase();
     });
   }
@@ -13,14 +10,17 @@ const createValuesMatcher = (values) => (item) => {
   return swallowEqual(values, item.criteria);
 };
 
-export function filterSituations(situations, criteria = {}) {
+export function filterSituations(
+  situations: Situation[],
+  criteria: Criteria = {}
+): Situation[] {
   const matchValues = createValuesMatcher(criteria);
   return situations.filter(matchValues);
 }
 
 export function getNextQuestionKey(
-  possibleSituations,
-  criteriaOrder,
+  possibleSituations: Situation[],
+  criteriaOrder: string[],
   values = {}
 ) {
   const [criterion] = criteriaOrder
@@ -31,7 +31,10 @@ export function getNextQuestionKey(
   return criterion;
 }
 
-export function getOptions(possibleSituations, nextQuestionKey) {
+export function getOptions(
+  possibleSituations: Situation[],
+  nextQuestionKey: string
+): string[][] {
   const dupValues = possibleSituations.map(
     ({ criteria }) => criteria[nextQuestionKey]
   );
@@ -41,23 +44,23 @@ export function getOptions(possibleSituations, nextQuestionKey) {
     .map(formatOption);
 }
 
-export function orderCriteria(a, b) {
+export function orderCriteria(a: string, b: string): number {
   const [, numA] = a.match(/([0-9]+)\|/) || [];
   const [, numB] = b.match(/([0-9]+)\|/) || [];
-  return numA && numB ? numA - numB : a.localeCompare(b);
+  return numA && numB ? parseInt(numA) - parseInt(numB) : a.localeCompare(b);
 }
 
-export function formatOption(a) {
+export function formatOption(a: string): [string, string] {
   return [a, a.replace(/([0-9]+\|)?/, "").trim()];
 }
 
 export function getPastQuestions(
-  initialSituations,
-  criteriaOrder,
+  initialSituations: Situation[],
+  criteriaOrder: string[],
   criteria = {}
-) {
+): [string, string[][]][] {
   const questions = {};
-  const answers = [];
+  const answers: [string, string[][]][] = [];
 
   let questionKey = getNextQuestionKey(
     initialSituations,
@@ -79,34 +82,45 @@ export function getPastQuestions(
   return answers;
 }
 
-export function getSituationsFor(data, obj) {
+export function getSituationsFor<T extends Situation>(
+  data: T[],
+  obj: Record<string, string | number | undefined>
+): T[] {
   return data.filter((situation) =>
     Object.entries(obj).every(([key, value]) => situation[key] === value)
   );
 }
 
-const isNotEmpty = (obj) => Object.keys(obj).length > 0;
+const isNotEmpty = (obj: Criteria) => Object.keys(obj).length > 0;
 
-const situationsForAgreement = (data, idcc) => {
+const situationsForAgreement = (
+  data: Situation[],
+  idcc: number | undefined | null
+) => {
   if (!idcc) return [];
 
-  return data.filter(
-    (situation) => parseInt(situation.idcc, 10) === parseInt(idcc, 10)
-  );
+  return data.filter((situation) => situation.idcc === idcc);
 };
 
-export const isAgreementSupported = (data, idcc) =>
-  situationsForAgreement(data, idcc).length > 0;
+export const isAgreementSupported = (
+  data: Situation[],
+  idcc: number | undefined
+): boolean => situationsForAgreement(data, idcc).length > 0;
 
-export const hasCriteria = (data, idcc) =>
+export const hasCriteria = (
+  data: Situation[],
+  idcc: number | undefined
+): boolean =>
   situationsForAgreement(data, idcc).filter((situation) =>
     isNotEmpty(situation.criteria)
   ).length > 0;
 
-export const skipInformations = (data, idcc) =>
-  !isAgreementSupported(data, idcc) || !hasCriteria(data, idcc);
+export const skipInformations = (
+  data: Situation[],
+  idcc: number | undefined
+): boolean => !isAgreementSupported(data, idcc) || !hasCriteria(data, idcc);
 
-export function recapSituation(criteria) {
+export function recapSituation(criteria: Criteria) {
   const cleanValue = (value) => `${value}`.replace(/[0-9]+\|/, "").trim();
   const capitalize = (str) => str.slice(0, 1).toUpperCase() + str.slice(1);
 
@@ -132,15 +146,17 @@ export const getFormProps = ({ key, criteria, pastQuestions }) =>
         .map(([key]) => key)
     );
 
-export const getSupportedCC = (data) => {
+export const getSupportedCC = (
+  data: Situation[]
+): { fullySupported: boolean; idcc: number }[] => {
   const uniqueIDCC = [
-    ...new Map(data.map((item) => [item["idcc"], item])).values(),
+    ...new Map(data.map((item) => [item.idcc, item])).values(),
   ];
 
   return uniqueIDCC.map((item) => {
     return {
       fullySupported: true,
-      idcc: parseInt(item.idcc, 10),
+      idcc: item.idcc,
     };
   });
 };
@@ -148,7 +164,7 @@ export const getSupportedCC = (data) => {
 export const validateUnsupportedAgreement =
   (supportedAgreement) =>
   ({ ccn }) => {
-    const errors = {};
+    const errors: any = {};
     if (ccn?.selected) {
       const idccInfo = supportedAgreement.find(
         (item) => item.idcc === ccn.selected.num
