@@ -12,6 +12,19 @@ import { SalairesStoreSlice } from "../../Salaires/store";
 import produce from "immer";
 
 import { ResultStoreData, ResultStoreSlice } from "./types";
+import { ConventionCollective } from "../../../../common/type/WizardType";
+
+//TODO: à virer
+const ccn: ConventionCollective = {
+  route: "agreement",
+  selected: {
+    id: "YYYYY",
+    num: 1596,
+    shortTitle: "XXX",
+    slug: "xxx",
+    title: "Title",
+  },
+};
 
 const initialState: ResultStoreData = {
   input: {
@@ -36,10 +49,9 @@ const createResultStore: StoreSlice<
     getPublicodesResult: () => {
       const ancienneteInput = get().ancienneteData.input;
       const salaireInput = get().salairesData.input;
-      const contratInput = get().contratTravailData.input;
       const publicodes = get().resultData.publicodes;
       const sReference = new ReferenceSalaryFactory().create(
-        SupportedCcIndemniteLicenciement.default
+        SupportedCcIndemniteLicenciement.IDCC1516
       );
 
       if (!publicodes) {
@@ -59,34 +71,18 @@ const createResultStore: StoreSlice<
 
       const salaireRef = sReference.computeReferenceSalary({
         hasSameSalaire: salaireInput.hasSameSalaire === "oui",
-        primes,
+        primesPendantPreavis: primes,
         salaire: salaireInput.salaireBrut
           ? parseFloat(salaireInput.salaireBrut)
           : undefined,
         salaires,
-      });
-
-      const { result } = publicodes.setSituation(
-        mapToPublicodesSituationForIndemniteLicenciement(
-          undefined,
-          seniority,
-          salaireRef,
-          contratInput.licenciementInaptitude === "oui"
-        )
-      );
-
-      const infoCalcul = generateExplanation({
-        anciennete: seniority,
-        inaptitude: contratInput.licenciementInaptitude === "oui",
-        salaireRef,
+        salairesPendantPreavis: salaires,
       });
 
       set(
         produce((state: ResultStoreSlice) => {
-          state.resultData.input.publicodesResult = result;
           state.resultData.input.salaireRef = salaireRef;
           state.resultData.input.seniority = seniority;
-          state.resultData.input.infoCalcul = infoCalcul;
         })
       );
     },
