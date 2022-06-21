@@ -1,12 +1,12 @@
-import { sum } from "../../utils";
+import { rankByMonthArrayDescFrench, sum } from "../../utils";
 import type {
   IReferenceSalary,
   ReferenceSalaryProps,
   SupportedCcIndemniteLicenciement,
 } from "./types";
 
-export class ReferenceSalary1596
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1596>
+export class ReferenceSalary1516
+  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1516>
 {
   /**
    * Règle :
@@ -21,9 +21,14 @@ export class ReferenceSalary1596
     hasSameSalaire,
     salaires,
     salaire,
-    primes,
-  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1596>): number {
-    const salaryValues = salaires.map((a) => a.value);
+    primesPendantPreavis,
+    salairesPendantPreavis,
+  }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1516>): number {
+    const rankedSalaires = rankByMonthArrayDescFrench(salaires);
+    const rankedSalairesPendantPreavis = rankByMonthArrayDescFrench(
+      salairesPendantPreavis
+    );
+    const salaryValues = rankedSalaires.map((a) => a.value);
 
     if (!salaire) {
       salaire = 0;
@@ -31,13 +36,19 @@ export class ReferenceSalary1596
 
     const moyenneSalaires = hasSameSalaire
       ? salaire
-      : sum(salaryValues) / salaires.length;
+      : sum(salaryValues) / rankedSalaires.length;
+
+    const totalSalaryValues = [
+      ...rankedSalairesPendantPreavis.map((a) => a.value),
+      ...salaryValues,
+    ];
 
     const meilleurSalaireDes3DerniersMois = hasSameSalaire
       ? salaire
-      : Math.max(...salaryValues.slice(0, 3));
+      : Math.max(...totalSalaryValues.slice(0, 3));
 
-    const formuleCc = meilleurSalaireDes3DerniersMois + sum(primes) / 12;
+    const formuleCc =
+      meilleurSalaireDes3DerniersMois + sum(primesPendantPreavis) / 12;
 
     return Math.max(moyenneSalaires, formuleCc);
   }

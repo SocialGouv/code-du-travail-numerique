@@ -1,4 +1,4 @@
-import { sum } from "../../utils";
+import { rankByMonthArrayDescFrench, sum } from "../../utils";
 import type {
   IReferenceSalary,
   ReferenceSalaryProps,
@@ -14,7 +14,9 @@ export class ReferenceSalaryLegal
     salaire,
     primes,
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.default>): number {
-    const salaryValues = salaires.map((a) => a.value);
+    const rankedSalaires = rankByMonthArrayDescFrench(salaires);
+
+    const salaryValues = rankedSalaires.map((a) => a.value);
 
     if (!salaire) {
       salaire = 0;
@@ -22,7 +24,7 @@ export class ReferenceSalaryLegal
 
     const moyenneSalaires = hasSameSalaire
       ? salaire
-      : sum(salaryValues) / salaires.length;
+      : sum(salaryValues) / rankedSalaires.length;
 
     const moyenne3DerniersMoisSalaires = hasSameSalaire
       ? salaire

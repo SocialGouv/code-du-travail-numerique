@@ -12,19 +12,26 @@ export type LegalReferenceSalaryProps = {
   primes: number[];
 };
 
-type VProps = {
-  sisi: boolean;
+export type CC1516ReferenceSalaryProps = {
+  hasSameSalaire: boolean;
+  salaire?: number;
+  salaires: {
+    month: string;
+    value: number;
+  }[];
+  salairesPendantPreavis: {
+    month: string;
+    value: number;
+  }[];
+  primesPendantPreavis: number[];
 };
 
 export enum SupportedCcIndemniteLicenciement {
-  IDCCV = "IDCCV", //TODO: to remove
-  IDCC1596 = "IDCC1596",
+  IDCC1516 = "IDCC1516",
   default = "default",
 }
 
 export type ReferenceSalaryProps<T> =
-  T extends SupportedCcIndemniteLicenciement.IDCC1596
-    ? LegalReferenceSalaryProps
-    : T extends SupportedCcIndemniteLicenciement.IDCCV
-    ? VProps
+  T extends SupportedCcIndemniteLicenciement.IDCC1516
+    ? CC1516ReferenceSalaryProps
     : LegalReferenceSalaryProps;

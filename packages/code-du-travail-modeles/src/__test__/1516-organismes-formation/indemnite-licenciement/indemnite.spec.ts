@@ -4,7 +4,7 @@ import { mergeModels } from "../../../internal/merger";
 
 const engine = new Engine(mergeModels());
 
-describe("Indemnité conventionnel de licenciement pour la CC 1596", () => {
+describe("Indemnité conventionnel de licenciement pour la CC 1516", () => {
   test.each`
     seniority | salary  | inaptitude | expectedCompensation
     ${0}      | ${0}    | ${"oui"}   | ${0}
@@ -19,8 +19,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 1596", () => {
       const result = engine
         .setSituation({
           "contrat salarié . ancienneté en année": seniority,
-          "contrat salarié . convention collective": "'IDCC1596'",
-          "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . salaire de référence":
+          "contrat salarié . convention collective": "'IDCC1516'",
+          "contrat salarié . convention collective . organismes de formation . indemnité de licenciement . salaire de référence":
             salary,
           "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
             inaptitude,

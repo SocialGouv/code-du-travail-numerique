@@ -45,21 +45,45 @@ describe("Calcul du salaire de référence légal", () => {
         primes: [2500],
         salaire: undefined,
         salaires: [
-          { month: "janvier", value: 3000 },
-          { month: "février", value: 2500 },
-          { month: "mars", value: 2500 },
-          { month: "avril", value: 1700 },
-          { month: "mai", value: 1700 },
-          { month: "juin", value: 1700 },
-          { month: "juillet", value: 1700 },
-          { month: "aout", value: 2500 },
-          { month: "septembre", value: 1700 },
-          { month: "octobre", value: 1700 },
-          { month: "novembre", value: 1700 },
-          { month: "décembre", value: 1700 },
+          { month: "janvier 2021", value: 1700 },
+          { month: "décembre 2020", value: 1700 },
+          { month: "novembre 2020", value: 1700 },
+          { month: "octobre 2020", value: 1700 },
+          { month: "septembre 2020", value: 2500 },
+          { month: "août 2020", value: 1700 },
+          { month: "juillet 2020", value: 1700 },
+          { month: "juin 2020", value: 1700 },
+          { month: "mai 2020", value: 1700 },
+          { month: "avril 2020", value: 2500 },
+          { month: "mars 2020", value: 2500 },
+          { month: "février 2020", value: 3000 },
         ],
       })
-    ).toEqual(2041.6666666666665);
+    ).toEqual(2008.3333333333333);
+  });
+
+  it("Avec un salaire différent sur deux mois et une prime et si on change l'ordre des salaires", () => {
+    expect(
+      ReferenceSalary.computeReferenceSalary({
+        hasSameSalaire: false,
+        primes: [2500],
+        salaire: undefined,
+        salaires: [
+          { month: "juillet 2020", value: 1700 },
+          { month: "avril 2020", value: 2500 },
+          { month: "janvier 2021", value: 1700 },
+          { month: "novembre 2020", value: 1700 },
+          { month: "octobre 2020", value: 1700 },
+          { month: "février 2020", value: 3000 },
+          { month: "septembre 2020", value: 2500 },
+          { month: "août 2020", value: 1700 },
+          { month: "juin 2020", value: 1700 },
+          { month: "mai 2020", value: 1700 },
+          { month: "mars 2020", value: 2500 },
+          { month: "décembre 2020", value: 1700 },
+        ],
+      })
+    ).toEqual(2008.3333333333333);
   });
 
   it("Avec un salaire différent sur trois mois et trois primes", () => {
