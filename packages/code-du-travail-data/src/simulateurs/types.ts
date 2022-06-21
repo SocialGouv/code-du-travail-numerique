@@ -16,19 +16,16 @@ export type Situation = {
   answer3: string | null;
   ref: string | null;
   refUrl: string | null;
+  disableLegal?: boolean;
 };
-
-export type SituationPreavisDemission = Situation;
 
 export type SituationHeuresRechercheEmploi = Situation & {
   typeRupture: string;
 };
 
-export type SituationPreavisLicenciement = Situation;
-
 export type PreavisDemission = {
   questions: Question[];
-  situations: SituationPreavisDemission[];
+  situations: Situation[];
 };
 
 export type HeuresRechercheEmploi = {
@@ -38,5 +35,5 @@ export type HeuresRechercheEmploi = {
 
 export type PreavisLicenciement = {
   questions: Question[];
-  situations: SituationPreavisLicenciement[];
+  situations: Situation[];
 };

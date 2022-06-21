@@ -15,9 +15,6 @@ ENV NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=$NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
 # Copy all package.json
 COPY ./package.json ./package.json
 COPY ./packages/code-du-travail-data/package.json ./packages/code-du-travail-data/package.json
-COPY ./packages/code-du-travail-data/prime-precarite/package.json ./packages/code-du-travail-data/prime-precarite/package.json
-COPY ./packages/code-du-travail-data/simulateurs/package.json ./packages/code-du-travail-data/simulateurs/package.json
-COPY ./packages/code-du-travail-data/tools/package.json ./packages/code-du-travail-data/tools/package.json
 COPY ./packages/react-fiche-service-public/package.json ./packages/react-fiche-service-public/package.json
 COPY ./packages/sources/package.json ./packages/sources/package.json
 COPY ./packages/slugify/package.json ./packages/slugify/package.json

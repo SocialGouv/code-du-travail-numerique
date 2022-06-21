@@ -3,16 +3,24 @@ import React from "react";
 import type { Agreement } from "../../../conventions/Search/api/type";
 import CCSearchInfo from "../../common/CCSearchInfo";
 import { isNotNearZero } from "../../common/utils";
+import { LicenciementSituation } from "./Result/utils";
 
 type Props = {
-  durationCDT: string;
-  durationCC: string | null;
+  legalSituation?: LicenciementSituation;
+  agreementSituation?: LicenciementSituation;
   ccn?: Agreement;
 };
 
-const DisclaimerText: React.FC<Props> = ({ durationCC, durationCDT, ccn }) => {
-  if (!durationCC) {
-    if (parseInt(durationCDT, 10) === 0) {
+const DisclaimerText: React.FC<Props> = ({
+  legalSituation,
+  agreementSituation,
+  ccn,
+}) => {
+  if (!legalSituation) {
+    return <></>;
+  }
+  if (!agreementSituation) {
+    if (legalSituation.duration === 0) {
       return (
         <>
           <p>
@@ -37,7 +45,7 @@ const DisclaimerText: React.FC<Props> = ({ durationCC, durationCDT, ccn }) => {
       );
     }
   } else {
-    if (isNotNearZero(durationCDT)) {
+    if (isNotNearZero(legalSituation.duration)) {
       return (
         <p>
           Une durée de préavis de licenciement ou une condition d’ancienneté
@@ -46,7 +54,7 @@ const DisclaimerText: React.FC<Props> = ({ durationCC, durationCDT, ccn }) => {
           d’entreprise, le contrat de travail ou les usages.
         </p>
       );
-    } else if (isNotNearZero(durationCC)) {
+    } else if (isNotNearZero(agreementSituation.duration)) {
       return (
         <p>
           L’existence ou la durée du préavis de licenciement peut aussi être
