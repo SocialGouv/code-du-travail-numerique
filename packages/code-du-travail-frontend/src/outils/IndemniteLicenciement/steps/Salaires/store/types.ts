@@ -4,6 +4,7 @@ import { SalaryPeriods } from "../components/SalaireTempsPlein";
 import { OuiNon } from "../../../common/types";
 
 export type SalairesStoreInput = {
+  hasBeenInit?: OuiNon;
   hasTempsPartiel?: OuiNon;
   hasSameSalaire?: OuiNon;
   salaireBrut?: string;

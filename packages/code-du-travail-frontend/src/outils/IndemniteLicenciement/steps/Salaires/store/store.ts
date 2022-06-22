@@ -28,31 +28,8 @@ const createSalairesStore: StoreSlice<
   salairesData: { ...initialState },
   salairesFunction: {
     initSalaryPeriods: () => {
-      const ancienneteInput = get().ancienneteData.input;
-      const hasSameSalaire = get().salairesData.input.hasSameSalaire;
-      if (hasSameSalaire === "non") {
-        const periods = computeSalaryPeriods({
-          dateEntree: ancienneteInput.dateEntree ?? "",
-          dateNotification: ancienneteInput.dateNotification ?? "",
-          absencePeriods: ancienneteInput.absencePeriods,
-        });
-        const salaryPeriods: SalaryPeriods[] = periods.map((v) => ({
-          month: v,
-          value: undefined,
-        }));
-        set(
-          produce((state: SalairesStoreSlice) => {
-            state.salairesData.input.salaireBrut = undefined;
-            state.salairesData.input.salaryPeriods = salaryPeriods;
-          })
-        );
-      } else {
-        set(
-          produce((state: SalairesStoreSlice) => {
-            state.salairesData.input.hasPrimes = undefined;
-            state.salairesData.input.salaryPeriods = [];
-          })
-        );
+      if (!get().salairesData.input.hasBeenInit) {
+        setSalaryPeriods(get, set);
       }
     },
     onChangeHasTempsPartiel: (value) => {
@@ -60,7 +37,7 @@ const createSalairesStore: StoreSlice<
     },
     onChangeHasSameSalaire: (value) => {
       applyGenericValidation(get, set, "hasSameSalaire", value);
-      get().salairesFunction.initSalaryPeriods();
+      setSalaryPeriods(get, set);
     },
     onChangeSalaireBrut: (value) => {
       applyGenericValidation(get, set, "salaireBrut", value);
@@ -94,6 +71,40 @@ const createSalairesStore: StoreSlice<
     },
   },
 });
+
+const setSalaryPeriods = (
+  get: GetState<AncienneteStoreSlice & SalairesStoreSlice>,
+  set: SetState<AncienneteStoreSlice & SalairesStoreSlice>
+) => {
+  const ancienneteInput = get().ancienneteData.input;
+  const hasSameSalaire = get().salairesData.input.hasSameSalaire;
+  if (hasSameSalaire === "non") {
+    const periods = computeSalaryPeriods({
+      dateEntree: ancienneteInput.dateEntree ?? "",
+      dateNotification: ancienneteInput.dateNotification ?? "",
+      absencePeriods: ancienneteInput.absencePeriods,
+    });
+    const salaryPeriods: SalaryPeriods[] = periods.map((v) => ({
+      month: v,
+      value: undefined,
+    }));
+    set(
+      produce((state: SalairesStoreSlice) => {
+        state.salairesData.input.salaireBrut = undefined;
+        state.salairesData.input.salaryPeriods = salaryPeriods;
+        state.salairesData.input.hasBeenInit = "oui";
+      })
+    );
+  } else {
+    set(
+      produce((state: SalairesStoreSlice) => {
+        state.salairesData.input.hasPrimes = undefined;
+        state.salairesData.input.salaryPeriods = [];
+        state.salairesData.input.hasBeenInit = "oui";
+      })
+    );
+  }
+};
 
 const applyGenericValidation = (
   get: GetState<SalairesStoreSlice>,
