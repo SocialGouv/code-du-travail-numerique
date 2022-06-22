@@ -3,28 +3,13 @@ import {
   ReferenceSalaryFactory,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
-import { StoreSlice } from "../../../store";
-import { mapToPublicodesSituationForIndemniteLicenciement } from "../../../../publicodes";
-import { AncienneteStoreSlice } from "../../Anciennete/store";
-import { computeSeniority, generateExplanation } from "../../../common";
-import { ContratTravailStoreSlice } from "../../ContratTravail/store";
-import { SalairesStoreSlice } from "../../Salaires/store";
 import produce from "immer";
-
-import { ResultStoreData, ResultStoreSlice } from "./types";
-import { ConventionCollective } from "../../../../common/type/WizardType";
-
-//TODO: à virer
-const ccn: ConventionCollective = {
-  route: "agreement",
-  selected: {
-    id: "YYYYY",
-    num: 1596,
-    shortTitle: "XXX",
-    slug: "xxx",
-    title: "Title",
-  },
-};
+import { computeSeniority } from "../../common";
+import { AncienneteStoreSlice } from "../../steps/Anciennete/store";
+import { ContratTravailStoreSlice } from "../../steps/ContratTravail/store";
+import { ResultStoreData, ResultStoreSlice } from "../../steps/Resultat/store";
+import { SalairesStoreSlice } from "../../steps/Salaires/store";
+import { StoreSlice } from "../../store";
 
 const initialState: ResultStoreData = {
   input: {

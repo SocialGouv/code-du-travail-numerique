@@ -9,7 +9,16 @@ type Props = {
 export default function AgreementsInjector(props: Props) {
   switch (props.idcc) {
     case SupportedCcIndemniteLicenciement.IDCC1516:
-      return <Agreement1516 />;
+      return (
+        <Agreement1516
+          onChangePrimes={}
+          onChangeSalaries={}
+          primes={}
+          salariesPeriods={}
+          errorPrimes={}
+          errorSalaries={}
+        />
+      );
     default:
       return <></>;
   }
