@@ -5,10 +5,9 @@ import ShowDetails from "../../../common/ShowDetails";
 import PubliReferences from "../../../common/PubliReferences";
 import { formatRefs } from "../../../publicodes";
 import Disclaimer from "../../../common/Disclaimer";
-import DisclaimerText from "../DisclaimerText";
 import React from "react";
 import { preavisLicenciementData as data } from "@cdt/data";
-import { DisplayResult, DurationResult } from "./Components";
+import { DisplayResult, DurationResult, DisclaimerText } from "./Components";
 import { buildRecap, getRefs, getResult, getSituations } from "./utils";
 
 const { situations: allSituations } = data;
@@ -63,17 +62,13 @@ const StepResult = ({ form }: WizardStepProps): JSX.Element => {
           <PubliReferences references={formatRefs(refs)} />
         )}
       </ShowDetails>
-      {situations.legal && (
-        <Disclaimer
-          title={"Attention il peut exister une durée plus favorable"}
-        >
-          <DisclaimerText
-            agreementSituation={situations.agreement}
-            legalSituation={situations.legal}
-            ccn={ccn?.selected}
-          />
-        </Disclaimer>
-      )}
+      <Disclaimer title={"Attention il peut exister une durée plus favorable"}>
+        <DisclaimerText
+          agreementSituation={situations.agreement}
+          legalSituation={situations.legal}
+          ccn={ccn?.selected}
+        />
+      </Disclaimer>
     </>
   );
 };

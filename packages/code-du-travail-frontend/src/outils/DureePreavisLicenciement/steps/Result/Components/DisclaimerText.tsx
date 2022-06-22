@@ -1,9 +1,9 @@
 import React from "react";
 
-import type { Agreement } from "../../../conventions/Search/api/type";
-import CCSearchInfo from "../../common/CCSearchInfo";
-import { isNotNearZero } from "../../common/utils";
-import { LicenciementSituation } from "./Result/utils";
+import type { Agreement } from "../../../../../conventions/Search/api/type";
+import CCSearchInfo from "../../../../common/CCSearchInfo";
+import { isNotNearZero } from "../../../../common/utils";
+import { LicenciementSituation } from "../utils";
 
 type Props = {
   legalSituation?: LicenciementSituation;
@@ -16,6 +16,16 @@ const DisclaimerText: React.FC<Props> = ({
   agreementSituation,
   ccn,
 }) => {
+  if (ccn && ccn.num === 3239) {
+    return (
+      <>
+        Le contrat de travail ou un usage peut prévoir une durée de préavis ou
+        une condition d’ancienneté plus favorable pour le salarié. Dans ce cas,
+        c’est cette durée ou cette ancienneté plus favorable qui s’applique au
+        salarié.
+      </>
+    );
+  }
   if (!legalSituation) {
     return <></>;
   }
