@@ -52,7 +52,11 @@ const ShowResult: React.FC<Props> = ({
           ) : (
             <>il n’y a pas de préavis à effectuer</>
           )}
-          {notifications.length > 0 ? <sup>*</sup> : ""}
+          <NoticeNote
+            numberOfElements={1 + notifications.length}
+            currentElement={1}
+            isList
+          />
         </HighlightResult>
       </p>
       {result.value !== 0 && (

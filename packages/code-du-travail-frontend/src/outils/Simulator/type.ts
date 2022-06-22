@@ -1,3 +1,5 @@
+import { ValidationErrors } from "final-form";
+
 export type Step<Name extends string> = {
   name: Name;
   label: string;
@@ -6,6 +8,7 @@ export type Step<Name extends string> = {
     isForm?: boolean;
     annotation?: JSX.Element;
     hasNoMarginBottom?: boolean;
+    validate?: (data) => ValidationErrors | undefined;
   };
 };
 

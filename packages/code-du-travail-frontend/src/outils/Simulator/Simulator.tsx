@@ -115,6 +115,7 @@ const SimulatorContent = <FormState, StepName extends string>({
       renderStep={() => <Component />}
       formOptions={{
         legend: currentStep.options?.isForm ? currentStep.label : undefined,
+        validate: currentStep.options?.validate,
       }}
       options={{
         debug: debug,
