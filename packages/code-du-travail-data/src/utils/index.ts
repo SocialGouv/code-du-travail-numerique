@@ -12,7 +12,7 @@ function extractMdxContentUrl(
 ): string | null | undefined {
   if (!markdown) return;
   // Check Content tag exist on markdown
-  const contentTag = /<Content.*?href="([^"]+)".*?>/.exec(markdown);
+  const contentTag = /<Content\s.*?href="([^"]+)"/.exec(markdown);
   return contentTag?.[1]?.match(
     /\bhttps?:\/\/(www\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)/gi
   )?.[0];
