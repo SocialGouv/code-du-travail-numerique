@@ -13,15 +13,19 @@ export type SalaryPeriods = {
 };
 
 type Props = {
+  title: string;
   salaryPeriods: SalaryPeriods[];
   onSalariesChange: (salaries: SalaryPeriods[]) => void;
   error?: string;
+  note?: string;
 };
 
 export const SalaireTempsPlein = ({
   salaryPeriods,
   onSalariesChange,
   error,
+  title,
+  note,
 }: Props): JSX.Element => {
   const [isFirstEdit, setIsFirstEdit] = React.useState(true);
   const [salariesPeriod, setLocalSalaries] =
@@ -64,7 +68,7 @@ export const SalaireTempsPlein = ({
     <StyledDiv>
       <Table>
         <Caption>
-          <Question required>Salaire mensuel brut</Question>
+          <Question required>{title}</Question>
           <SmallText>
             Prendre en compte les primes et avantages en nature.
           </SmallText>
@@ -111,6 +115,7 @@ export const SalaireTempsPlein = ({
           <InlineError>{error}</InlineError>
         </StyledInlineWrapperError>
       )}
+      {note && <SmallText>{note}</SmallText>}
     </StyledDiv>
   );
 };

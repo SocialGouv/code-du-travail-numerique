@@ -1,12 +1,8 @@
-import {
-  IndemniteLicenciementPublicodes,
-  ReferenceSalaryFactory,
-  SupportedCcIndemniteLicenciement,
-} from "@socialgouv/modeles-social";
+import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
 import { StoreSlice } from "../../../store";
 import { mapToPublicodesSituationForIndemniteLicenciement } from "../../../../publicodes";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
-import { computeSeniority, generateExplanation } from "../../../common";
+import { generateExplanation } from "../../../common";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { SalairesStoreSlice } from "../../Salaires/store";
 import produce from "immer";
@@ -34,43 +30,19 @@ const createResultStore: StoreSlice<
   },
   resultFunction: {
     getPublicodesResult: () => {
-      const ancienneteInput = get().ancienneteData.input;
-      const salaireInput = get().salairesData.input;
+      const refSalary = get().salairesData.input.refSalary;
+      const seniority = get().ancienneteData.input.seniority;
       const contratInput = get().contratTravailData.input;
       const publicodes = get().resultData.publicodes;
-      const sReference = new ReferenceSalaryFactory().create(
-        SupportedCcIndemniteLicenciement.default
-      );
-
       if (!publicodes) {
         throw new Error("Publicodes is not defined");
       }
-
-      const seniority = computeSeniority({
-        dateSortie: ancienneteInput.dateSortie!,
-        dateEntree: ancienneteInput.dateEntree!,
-        absencePeriods: ancienneteInput.absencePeriods!,
-      });
-
-      const primes = salaireInput.primes.filter((v) => v !== null) as number[];
-      const salaires = salaireInput.salaryPeriods.filter(
-        (v) => v.value !== undefined
-      ) as { month: string; value: number }[];
-
-      const salaireRef = sReference.computeReferenceSalary({
-        hasSameSalaire: salaireInput.hasSameSalaire === "oui",
-        primes,
-        salaire: salaireInput.salaireBrut
-          ? parseFloat(salaireInput.salaireBrut)
-          : undefined,
-        salaires,
-      });
 
       const { result } = publicodes.setSituation(
         mapToPublicodesSituationForIndemniteLicenciement(
           undefined,
           seniority,
-          salaireRef,
+          refSalary,
           contratInput.licenciementInaptitude === "oui"
         )
       );
@@ -78,13 +50,13 @@ const createResultStore: StoreSlice<
       const infoCalcul = generateExplanation({
         anciennete: seniority,
         inaptitude: contratInput.licenciementInaptitude === "oui",
-        salaireRef,
+        salaireRef: refSalary,
       });
 
       set(
         produce((state: ResultStoreSlice) => {
           state.resultData.input.publicodesResult = result;
-          state.resultData.input.salaireRef = salaireRef;
+          state.resultData.input.salaireRef = refSalary;
           state.resultData.input.seniority = seniority;
           state.resultData.input.infoCalcul = infoCalcul;
         })

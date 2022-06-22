@@ -8,6 +8,7 @@ export type AncienneteStoreInput = {
   dateNotification?: string;
   absencePeriods: Absence[];
   hasAbsenceProlonge?: OuiNon;
+  seniority: number;
 };
 
 export type AncienneteStoreError = {

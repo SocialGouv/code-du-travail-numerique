@@ -12,9 +12,10 @@ type Props = {
   onChange: (primes: Prime[]) => void;
   primes: Prime[];
   error?: string;
+  title: string;
 };
 
-export default function Primes({ primes, onChange, error }: Props) {
+export default function Primes({ primes, onChange, error, title }: Props) {
   const [localPrimes, setLocalPrimes] = React.useState<Prime[]>(
     primes.length === 0 ? [null] : primes
   );
@@ -53,9 +54,7 @@ export default function Primes({ primes, onChange, error }: Props) {
 
   return (
     <>
-      <p>
-        Primes annuelles ou exceptionnelles perçues au cours des 3 derniers mois
-      </p>
+      <p>{title}</p>
       {localPrimes.map((value, index) => (
         <Row key={index}>
           <div>

@@ -1,5 +1,6 @@
 import produce from "immer";
 import { GetState, SetState } from "zustand";
+import { computeSeniority } from "../../../common";
 import { StoreSlice } from "../../../store";
 
 import {
@@ -14,6 +15,7 @@ const initialState: AncienneteStoreData = {
   isStepValid: true,
   input: {
     absencePeriods: [],
+    seniority: 0,
   },
   error: {},
 };
@@ -46,11 +48,23 @@ const createAncienneteStore: StoreSlice<AncienneteStoreSlice> = (set, get) => ({
     },
     onValidateStepAnciennete: () => {
       const { isValid, errorState } = validateStep(get().ancienneteData.input);
+
+      let seniority = 0;
+
+      if (isValid) {
+        seniority = computeSeniority({
+          dateSortie: get().ancienneteData.input.dateSortie!,
+          dateEntree: get().ancienneteData.input.dateEntree!,
+          absencePeriods: get().ancienneteData.input.absencePeriods!,
+        });
+      }
+
       set(
         produce((state: AncienneteStoreSlice) => {
           state.ancienneteData.hasBeenSubmit = isValid ? false : true;
           state.ancienneteData.isStepValid = isValid;
           state.ancienneteData.error = errorState;
+          state.ancienneteData.input.seniority = seniority;
         })
       );
       return isValid;
@@ -66,7 +80,7 @@ const applyGenericValidation = (
 ) => {
   if (get().ancienneteData.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
-      draft.ancienneteData.input[paramName] = value;
+      draft.ancienneteData.input[paramName as string] = value;
     });
     const { isValid, errorState } = validateStep(
       nextState.ancienneteData.input
@@ -75,13 +89,13 @@ const applyGenericValidation = (
       produce((state: AncienneteStoreSlice) => {
         state.ancienneteData.error = errorState;
         state.ancienneteData.isStepValid = isValid;
-        state.ancienneteData.input[paramName] = value;
+        state.ancienneteData.input[paramName as string] = value;
       })
     );
   } else {
     set(
       produce((state: AncienneteStoreSlice) => {
-        state.ancienneteData.input[paramName] = value;
+        state.ancienneteData.input[paramName as string] = value;
       })
     );
   }

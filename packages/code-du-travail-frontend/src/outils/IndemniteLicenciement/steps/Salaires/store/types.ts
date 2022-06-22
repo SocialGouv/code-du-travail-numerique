@@ -10,6 +10,7 @@ export type SalairesStoreInput = {
   salaryPeriods: SalaryPeriods[];
   hasPrimes?: OuiNon;
   primes: Prime[];
+  refSalary: number;
 };
 
 export type SalairesStoreError = {

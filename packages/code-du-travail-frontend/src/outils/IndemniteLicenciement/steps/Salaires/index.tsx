@@ -113,6 +113,7 @@ const StepSalaires = () => {
           {hasSameSalaire === "non" && (
             <>
               <SalaireTempsPlein
+                title="Salaire mensuel brut"
                 onSalariesChange={onSalariesChange}
                 salaryPeriods={salaryPeriods}
                 error={errorSalaryPeriods}
@@ -139,6 +140,7 @@ const StepSalaires = () => {
               />
               {hasPrimes === "oui" && (
                 <Primes
+                  title="Primes annuelles ou exceptionnelles perçues au cours des 3 derniers mois"
                   onChange={onChangePrimes}
                   primes={primes}
                   error={errorPrimes}
