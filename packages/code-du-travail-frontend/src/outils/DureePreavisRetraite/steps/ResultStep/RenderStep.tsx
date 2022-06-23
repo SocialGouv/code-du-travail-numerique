@@ -7,7 +7,13 @@ const RenderResultStep = (): JSX.Element => {
   if (!result) {
     throw Error("Try to show result without computed result data");
   }
-  return <ResultStep notice={result.notice} detail={result.detail} />;
+  return (
+    <ResultStep
+      notice={result.notice}
+      detail={result.detail}
+      warning={result.warning}
+    />
+  );
 };
 
 export default RenderResultStep;
