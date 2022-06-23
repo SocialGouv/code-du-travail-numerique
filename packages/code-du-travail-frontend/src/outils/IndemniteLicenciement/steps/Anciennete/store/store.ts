@@ -1,6 +1,8 @@
 import produce from "immer";
 import { GetState, SetState } from "zustand";
+import { setSalaryPeriods } from "../../../common";
 import { StoreSlice } from "../../../store";
+import { SalairesStoreSlice } from "../../Salaires/store";
 
 import {
   AncienneteStoreData,
@@ -18,7 +20,10 @@ const initialState: AncienneteStoreData = {
   error: {},
 };
 
-const createAncienneteStore: StoreSlice<AncienneteStoreSlice> = (set, get) => ({
+const createAncienneteStore: StoreSlice<
+  AncienneteStoreSlice,
+  SalairesStoreSlice
+> = (set, get) => ({
   ancienneteData: { ...initialState },
   ancienneteFunction: {
     onChangeDateEntree: (value) => {
@@ -53,6 +58,7 @@ const createAncienneteStore: StoreSlice<AncienneteStoreSlice> = (set, get) => ({
           state.ancienneteData.error = errorState;
         })
       );
+      setSalaryPeriods(get, set);
       return isValid;
     },
   },

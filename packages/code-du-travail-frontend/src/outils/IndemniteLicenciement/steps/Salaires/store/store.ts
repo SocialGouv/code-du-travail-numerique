@@ -7,9 +7,8 @@ import {
 } from "./types";
 import { StoreSlice } from "../../../store";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
-import { computeSalaryPeriods } from "../../../common/usecase";
-import { SalaryPeriods } from "../components/SalaireTempsPlein";
 import { validateStep } from "./validator";
+import { setSalaryPeriods } from "../../../common/";
 
 const initialState: SalairesStoreData = {
   input: {
@@ -27,11 +26,6 @@ const createSalairesStore: StoreSlice<
 > = (set, get) => ({
   salairesData: { ...initialState },
   salairesFunction: {
-    initSalaryPeriods: () => {
-      if (!get().salairesData.input.hasBeenInit) {
-        setSalaryPeriods(get, set);
-      }
-    },
     onChangeHasTempsPartiel: (value) => {
       applyGenericValidation(get, set, "hasTempsPartiel", value);
     },
@@ -71,40 +65,6 @@ const createSalairesStore: StoreSlice<
     },
   },
 });
-
-const setSalaryPeriods = (
-  get: GetState<AncienneteStoreSlice & SalairesStoreSlice>,
-  set: SetState<AncienneteStoreSlice & SalairesStoreSlice>
-) => {
-  const ancienneteInput = get().ancienneteData.input;
-  const hasSameSalaire = get().salairesData.input.hasSameSalaire;
-  if (hasSameSalaire === "non") {
-    const periods = computeSalaryPeriods({
-      dateEntree: ancienneteInput.dateEntree ?? "",
-      dateNotification: ancienneteInput.dateNotification ?? "",
-      absencePeriods: ancienneteInput.absencePeriods,
-    });
-    const salaryPeriods: SalaryPeriods[] = periods.map((v) => ({
-      month: v,
-      value: undefined,
-    }));
-    set(
-      produce((state: SalairesStoreSlice) => {
-        state.salairesData.input.salaireBrut = undefined;
-        state.salairesData.input.salaryPeriods = salaryPeriods;
-        state.salairesData.input.hasBeenInit = "oui";
-      })
-    );
-  } else {
-    set(
-      produce((state: SalairesStoreSlice) => {
-        state.salairesData.input.hasPrimes = undefined;
-        state.salairesData.input.salaryPeriods = [];
-        state.salairesData.input.hasBeenInit = "oui";
-      })
-    );
-  }
-};
 
 const applyGenericValidation = (
   get: GetState<SalairesStoreSlice>,
