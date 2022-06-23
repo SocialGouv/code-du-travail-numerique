@@ -2,6 +2,12 @@ import create, { SetState, GetState, StoreApi } from "zustand";
 
 import createContext from "zustand/context";
 import {
+  AgreementStoreError,
+  AgreementStoreInput,
+  AgreementStoreSlice,
+  createRootAgreementsStore,
+} from "./agreements";
+import {
   AncienneteStoreSlice,
   AncienneteStoreInput,
   AncienneteStoreError,
@@ -35,19 +41,22 @@ export type StoreSlice<T extends object, E extends object = T> = (
 export type MainStore = ContratTravailStoreSlice &
   AncienneteStoreSlice &
   SalairesStoreSlice &
-  ResultStoreSlice;
+  ResultStoreSlice &
+  AgreementStoreSlice;
 
 export type StepData<
   T extends
     | AncienneteStoreInput
     | SalairesStoreInput
     | ContratTravailStoreInput
-    | ResultStoreInput,
+    | ResultStoreInput
+    | AgreementStoreInput,
   U extends
     | AncienneteStoreError
     | SalairesStoreError
     | ContratTravailStoreError
     | ResultStoreError
+    | AgreementStoreError
 > = {
   input: T;
   error: U;
@@ -64,6 +73,7 @@ const createRootSlice = (
   ...createAncienneteStore(set, get),
   ...createSalairesStore(set, get),
   ...createResultStore(set, get, publicodesRules),
+  ...createRootAgreementsStore(set, get),
 });
 
 const createStore = (publicodesRules: string) =>

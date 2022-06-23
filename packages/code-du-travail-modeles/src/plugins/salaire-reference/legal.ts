@@ -5,6 +5,16 @@ import type {
   SupportedCcIndemniteLicenciement,
 } from "./types";
 
+export type LegalReferenceSalaryProps = {
+  hasSameSalaire: boolean;
+  salaire?: number;
+  salaires: {
+    month: string;
+    value: number;
+  }[];
+  primes: number[];
+};
+
 export class ReferenceSalaryLegal
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.default>
 {

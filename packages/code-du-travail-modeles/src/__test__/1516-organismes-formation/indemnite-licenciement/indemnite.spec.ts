@@ -27,9 +27,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 1516", () => {
           "indemnité de licenciement": "oui",
         })
         .evaluate("contrat salarié . indemnité de licenciement");
+      expect(result.missingVariables).toEqual({});
       expect(result.nodeValue).toEqual(expectedCompensation);
       expect(result.unit?.numerators).toEqual(["€"]);
-      expect(result.missingVariables).toEqual({});
     }
   );
 });

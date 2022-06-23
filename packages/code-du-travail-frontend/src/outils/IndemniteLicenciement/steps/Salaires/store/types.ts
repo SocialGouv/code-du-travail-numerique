@@ -12,6 +12,7 @@ export type SalairesStoreInput = {
   hasPrimes?: OuiNon;
   primes: Prime[];
   refSalary: number;
+  agreementRefSAlary?: number;
 };
 
 export type SalairesStoreError = {

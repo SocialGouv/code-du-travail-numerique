@@ -9,11 +9,7 @@ import { StoreSlice } from "../../../store";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { validateStep } from "./validator";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
-import {
-  ReferenceSalaryFactory,
-  SupportedCcIndemniteLicenciement,
-} from "@socialgouv/modeles-social";
-import { setSalaryPeriods } from "../../../common/";
+import { setLegalReferenceSalary, setSalaryPeriods } from "../../../common/";
 
 const initialState: SalairesStoreData = {
   input: {
@@ -61,27 +57,8 @@ const createSalairesStore: StoreSlice<
     onValidateStepSalaires: () => {
       const { isValid, errorState } = validateStep(get().salairesData.input);
 
-      let refSalary = 0;
-
       if (isValid) {
-        const salaireInput = get().salairesData.input;
-        const sReference = new ReferenceSalaryFactory().create(
-          SupportedCcIndemniteLicenciement.default
-        );
-        const primes = salaireInput.primes.filter(
-          (v) => v !== null
-        ) as number[];
-        const salaires = salaireInput.salaryPeriods.filter(
-          (v) => v.value !== undefined
-        ) as { month: string; value: number }[];
-        refSalary = sReference.computeReferenceSalary({
-          hasSameSalaire: salaireInput.hasSameSalaire === "oui",
-          primes,
-          salaire: salaireInput.salaireBrut
-            ? parseFloat(salaireInput.salaireBrut)
-            : undefined,
-          salaires,
-        });
+        setLegalReferenceSalary(get, set);
       }
 
       set(
@@ -89,7 +66,6 @@ const createSalairesStore: StoreSlice<
           state.salairesData.hasBeenSubmit = isValid ? false : true;
           state.salairesData.isStepValid = isValid;
           state.salairesData.error = errorState;
-          state.salairesData.input.refSalary = refSalary;
         })
       );
       return isValid;

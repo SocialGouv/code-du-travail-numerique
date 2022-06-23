@@ -5,6 +5,19 @@ import type {
   SupportedCcIndemniteLicenciement,
 } from "./types";
 
+export type CC1516ReferenceSalaryProps = {
+  hasSameSalaire: boolean;
+  salaire?: number;
+  salaires: {
+    month: string;
+    value: number;
+  }[];
+  salairesPendantPreavis: {
+    month: string;
+    value: number;
+  }[];
+  primesPendantPreavis: number[];
+};
 export class ReferenceSalary1516
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1516>
 {
@@ -43,7 +56,7 @@ export class ReferenceSalary1516
       ...salaryValues,
     ];
 
-    const meilleurSalaireDes3DerniersMois = hasSameSalaire
+    const meilleurSalaireDes3DerniersMois: number = hasSameSalaire
       ? salaire
       : Math.max(...totalSalaryValues.slice(0, 3));
 

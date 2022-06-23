@@ -4,6 +4,13 @@ contrat salarié . salaire de référence:
   cdtn:
     type: entier
 
+contrat salarié . salaire de référence conventionnel:
+  titre: Salaire de référence du salarié
+  unité: €
+  cdtn:
+    type: entier
+  valeur: non
+
 contrat salarié . ancienneté en année:
   titre: Ancienneté du salarié en année
   cdtn:
@@ -24,8 +31,8 @@ contrat salarié . indemnité de licenciement:
     - si: ancienneté en année > (7 mois / 12)
       alors:
         somme:
-        - indemnité de licenciement . dix ans ou moins
-        - indemnité de licenciement . plus de dix ans
+          - indemnité de licenciement . dix ans ou moins
+          - indemnité de licenciement . plus de dix ans
     - sinon: 0
   unité: €
   arrondi: 3 décimales
@@ -46,8 +53,8 @@ contrat salarié . indemnité de licenciement . inaptitude suite à un accident 
 contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins:
   valeur:
     le minimum de:
-       - ancienneté en année
-       - 10 an
+      - ancienneté en année
+      - 10 an
 
 contrat salarié . indemnité de licenciement . au dela de dix ans:
   somme:
