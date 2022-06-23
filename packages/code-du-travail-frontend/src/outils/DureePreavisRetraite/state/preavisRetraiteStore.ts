@@ -12,6 +12,7 @@ import {
 } from "./usecases";
 import { updateFormValues } from "./utils";
 import removeOldQuestions from "./usecases/removeOldQuestions";
+import validateInformationAgreement3239 from "./usecases/validateInformationAgreement3239";
 
 export const initialState: PreavisRetraiteState = {
   title: "",

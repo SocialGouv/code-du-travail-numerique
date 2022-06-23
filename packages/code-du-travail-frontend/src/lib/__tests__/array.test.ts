@@ -1,4 +1,4 @@
-import { detectNullOrUndefinedOrNaNInArray } from "../array";
+import { deepMergeArray, detectNullOrUndefinedOrNaNInArray } from "../array";
 
 describe("detectNullOrUndefinedOrNaNInArray", () => {
   test.each`
@@ -19,4 +19,16 @@ describe("detectNullOrUndefinedOrNaNInArray", () => {
   `("should return $expected for $array", ({ array, expected }) => {
     expect(detectNullOrUndefinedOrNaNInArray(array)).toBe(expected);
   });
+
+  test.each`
+    array1                                                          | array2                                                  | key        | expected
+    ${[{ month: "a", value: undefined }]}                           | ${[{ month: "a", value: 2 }]}                           | ${"month"} | ${[{ month: "a", value: 2 }]}
+    ${[{ month: "a", value: undefined }, { month: "b", value: 3 }]} | ${[{ month: "a", value: 2 }]}                           | ${"month"} | ${[{ month: "a", value: 2 }, { month: "b", value: 3 }]}
+    ${[{ month: "a", value: undefined }, { month: "b", value: 4 }]} | ${[{ month: "a", value: 2 }, { month: "b", value: 5 }]} | ${"month"} | ${[{ month: "a", value: 2 }, { month: "b", value: 5 }]}
+  `(
+    "should return $expected for $array1 and $array2 with key $key",
+    ({ array1, array2, key, expected }) => {
+      expect(deepMergeArray(array1, array2, key)).toEqual(expected);
+    }
+  );
 });

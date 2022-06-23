@@ -4,6 +4,7 @@ import { SalaryPeriods } from "../components/SalaireTempsPlein";
 import { OuiNon } from "../../../common/types";
 
 export type SalairesStoreInput = {
+  hasBeenInit?: OuiNon;
   hasTempsPartiel?: OuiNon;
   hasSameSalaire?: OuiNon;
   salaireBrut?: string;
@@ -36,7 +37,6 @@ export type SalairesStoreFn = {
   onChangeHasPrimes: (value: OuiNon) => void;
   onChangePrimes: (primes: Prime[]) => void;
   onValidateStepSalaires: () => boolean;
-  initSalaryPeriods: () => void;
 };
 
 export type SalairesStoreSlice = {
