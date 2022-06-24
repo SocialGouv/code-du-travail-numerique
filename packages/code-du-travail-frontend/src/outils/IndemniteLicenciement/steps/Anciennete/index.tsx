@@ -105,7 +105,7 @@ const StepAnciennete = () => {
         />
       )}
       <AgreementsInjector
-        idcc={SupportedCcIndemniteLicenciement.IDCC1516}
+        idcc={SupportedCcIndemniteLicenciement.IDCC1516} //TODO: remplacer par la bonne CC
         step={IndemniteLicenciementStepName.Anciennete}
       />
     </>

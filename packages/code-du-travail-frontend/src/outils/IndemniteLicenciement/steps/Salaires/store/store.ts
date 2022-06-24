@@ -95,7 +95,7 @@ const createSalairesStore: StoreSlice<
       }
 
       const isAgreementValid = validateAgreement(
-        SupportedCcIndemniteLicenciement.IDCC1516,
+        SupportedCcIndemniteLicenciement.IDCC1516, //TODO: replace par la cc
         IndemniteLicenciementStepName.Salaires,
         get,
         set

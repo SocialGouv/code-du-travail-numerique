@@ -3,10 +3,6 @@ import { RadioQuestion } from "../../../Components";
 import { Primes, SalaireTempsPlein } from "../../steps/Salaires/components";
 import { useIndemniteLicenciementStore } from "../../store";
 
-type Props = {
-  isAgreementValid: boolean;
-};
-
 export default function Agreement1516() {
   const {
     salaryPeriods,

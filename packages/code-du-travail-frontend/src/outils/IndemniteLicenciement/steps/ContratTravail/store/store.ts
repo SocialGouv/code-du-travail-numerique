@@ -7,6 +7,9 @@ import {
 import produce from "immer";
 import { StoreSlice } from "../../../store";
 import { validateStep } from "./validator";
+import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
+import { IndemniteLicenciementStepName } from "../../..";
+import { validateAgreement } from "../../../agreements";
 
 const initialState: ContratTravailStoreData = {
   input: {},
@@ -37,6 +40,14 @@ const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
       const { isValid, errorState } = validateStep(
         get().contratTravailData.input
       );
+
+      const isAgreementValid = validateAgreement(
+        SupportedCcIndemniteLicenciement.IDCC1516, //TODO: replace par la bonne CC
+        IndemniteLicenciementStepName.Salaires,
+        get,
+        set
+      );
+
       set(
         produce((state: ContratTravailStoreSlice) => {
           state.contratTravailData.hasBeenSubmit = isValid ? false : true;
@@ -44,7 +55,7 @@ const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
           state.contratTravailData.error = errorState;
         })
       );
-      return isValid;
+      return isValid && isAgreementValid;
     },
   },
 });

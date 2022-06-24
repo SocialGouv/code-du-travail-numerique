@@ -145,7 +145,7 @@ const StepSalaires = () => {
               )}
             </>
           )}
-          {(hasSameSalaire === "oui" || hasSameSalaire === "non") && (
+          {(hasSameSalaire === "oui" || hasSameSalaire === "non") && ( //TODO: remplacer par la bonne CC
             <AgreementsInjector
               idcc={SupportedCcIndemniteLicenciement.IDCC1516}
               step={IndemniteLicenciementStepName.Salaires}

@@ -1,5 +1,8 @@
+import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 import produce from "immer";
 import { GetState, SetState } from "zustand";
+import { IndemniteLicenciementStepName } from "../../..";
+import { validateAgreement } from "../../../agreements";
 import { computeSeniority } from "../../../common";
 import { setSalaryPeriods } from "../../../common";
 import { StoreSlice } from "../../../store";
@@ -64,6 +67,13 @@ const createAncienneteStore: StoreSlice<
         });
       }
 
+      const isAgreementValid = validateAgreement(
+        SupportedCcIndemniteLicenciement.IDCC1516, //TODO: replace par la cc
+        IndemniteLicenciementStepName.Salaires,
+        get,
+        set
+      );
+
       set(
         produce((state: AncienneteStoreSlice) => {
           state.ancienneteData.hasBeenSubmit = isValid ? false : true;
@@ -73,7 +83,7 @@ const createAncienneteStore: StoreSlice<
         })
       );
       setSalaryPeriods(get, set);
-      return isValid;
+      return isValid && isAgreementValid;
     },
   },
 });
