@@ -74,16 +74,20 @@ const createAncienneteStore: StoreSlice<
         set
       );
 
+      const isStepValid = isValid && isAgreementValid;
+
       set(
         produce((state: AncienneteStoreSlice) => {
-          state.ancienneteData.hasBeenSubmit = isValid ? false : true;
-          state.ancienneteData.isStepValid = isValid;
+          state.ancienneteData.hasBeenSubmit = isStepValid ? false : true;
+          state.ancienneteData.isStepValid = isStepValid;
           state.ancienneteData.error = errorState;
           state.ancienneteData.input.seniority = seniority;
         })
       );
+
       setSalaryPeriods(get, set);
-      return isValid && isAgreementValid;
+
+      return isStepValid;
     },
   },
 });

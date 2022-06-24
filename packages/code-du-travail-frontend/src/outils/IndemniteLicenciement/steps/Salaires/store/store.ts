@@ -101,14 +101,16 @@ const createSalairesStore: StoreSlice<
         set
       );
 
+      const isStepValid = isValid && isAgreementValid;
+
       set(
         produce((state: SalairesStoreSlice) => {
-          state.salairesData.hasBeenSubmit = isValid ? false : true;
-          state.salairesData.isStepValid = isValid;
+          state.salairesData.hasBeenSubmit = isStepValid ? false : true;
+          state.salairesData.isStepValid = isStepValid;
           state.salairesData.error = errorState;
         })
       );
-      return isValid && isAgreementValid;
+      return isStepValid;
     },
   },
 });
@@ -124,10 +126,17 @@ const applyGenericValidation = (
       draft.salairesData.input[paramName as string] = value;
     });
     const { isValid, errorState } = validateStep(nextState.salairesData.input);
+    const isAgreementValid = validateAgreement(
+      SupportedCcIndemniteLicenciement.IDCC1516, //TODO: replace par la cc
+      IndemniteLicenciementStepName.Salaires,
+      get,
+      set
+    );
+    const isStepValid = isValid && isAgreementValid;
     set(
       produce((state: SalairesStoreSlice) => {
         state.salairesData.error = errorState;
-        state.salairesData.isStepValid = isValid;
+        state.salairesData.isStepValid = isStepValid;
         state.salairesData.input[paramName as string] = value;
       })
     );

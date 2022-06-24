@@ -48,14 +48,16 @@ const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
         set
       );
 
+      const isStepValid = isValid && isAgreementValid;
+
       set(
         produce((state: ContratTravailStoreSlice) => {
-          state.contratTravailData.hasBeenSubmit = isValid ? false : true;
-          state.contratTravailData.isStepValid = isValid;
+          state.contratTravailData.hasBeenSubmit = isStepValid ? false : true;
+          state.contratTravailData.isStepValid = isStepValid;
           state.contratTravailData.error = errorState;
         })
       );
-      return isValid && isAgreementValid;
+      return isStepValid;
     },
   },
 });
@@ -73,10 +75,17 @@ const applyGenericValidation = (
     const { isValid, errorState } = validateStep(
       nextState.contratTravailData.input
     );
+    const isAgreementValid = validateAgreement(
+      SupportedCcIndemniteLicenciement.IDCC1516, //TODO: replace par la bonne CC
+      IndemniteLicenciementStepName.ContratTravail,
+      get,
+      set
+    );
+    const isStepValid = isValid && isAgreementValid;
     set(
       produce((state: ContratTravailStoreSlice) => {
         state.contratTravailData.error = errorState;
-        state.contratTravailData.isStepValid = isValid;
+        state.contratTravailData.isStepValid = isStepValid;
         state.contratTravailData.input[paramName] = value;
       })
     );

@@ -20,6 +20,7 @@ export const validateAgreement1516 = (
   get: GetState<MainStore>,
   set: SetState<MainStore>
 ) => {
+  console.log("on valide");
   const { isValid, errorState } = validateStep(get().agreement1516Data.input);
   set(
     produce((state: Agreement1516StoreSlice) => {

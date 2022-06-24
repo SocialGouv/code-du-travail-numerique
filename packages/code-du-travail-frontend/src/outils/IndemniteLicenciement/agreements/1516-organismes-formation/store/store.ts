@@ -19,8 +19,8 @@ const initialState: Agreement1516StoreData = {
     salaryPeriods: [],
   },
   error: {},
-  hasBeenSubmit: true,
-  isStepValid: true,
+  hasBeenSubmit: false,
+  isStepValid: false,
 };
 
 export const createAgreement1516StoreSalaires: StoreSlice<
@@ -55,6 +55,10 @@ export const createAgreement1516StoreSalaires: StoreSlice<
       applyGenericValidation(get, set, "hasReceivedSalaries", value);
       if (value === "non") {
         applyGenericValidation(get, set, "salaryPeriods", []);
+        applyGenericValidation(get, set, "hasReceivedPrimes", undefined);
+        applyGenericValidation(get, set, "primes", []);
+      } else {
+        get().agreement1516Function.initSalaryPeriods();
       }
     },
     onSalariesChange: (value) => {
@@ -73,8 +77,8 @@ export const createAgreement1516StoreSalaires: StoreSlice<
 });
 
 const applyGenericValidation = (
-  get: GetState<Agreement1516StoreSlice>,
-  set: SetState<Agreement1516StoreSlice>,
+  get: GetState<Agreement1516StoreSlice & SalairesStoreSlice>,
+  set: SetState<Agreement1516StoreSlice & SalairesStoreSlice>,
   paramName: keyof Agreement1516StoreInput,
   value: any
 ) => {
@@ -92,6 +96,7 @@ const applyGenericValidation = (
         state.agreement1516Data.input[paramName] = value;
       })
     );
+    get().salairesFunction.onValidateStepSalaires();
   } else {
     set(
       produce((state: Agreement1516StoreSlice) => {
