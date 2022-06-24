@@ -4,6 +4,9 @@ import { icons } from "@socialgouv/cdtn-ui";
 import { useIndemniteLicenciementStore } from "../../store";
 import { RadioQuestion, TextQuestion } from "../../../Components";
 import { TempsPartiel, SalaireTempsPlein, Primes } from "./components";
+import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
+import { IndemniteLicenciementStepName } from "../..";
+import { AgreementsInjector } from "../../agreements";
 
 const StepSalaires = () => {
   const {
@@ -141,6 +144,12 @@ const StepSalaires = () => {
                 />
               )}
             </>
+          )}
+          {(hasSameSalaire === "oui" || hasSameSalaire === "non") && (
+            <AgreementsInjector
+              idcc={SupportedCcIndemniteLicenciement.IDCC1516}
+              step={IndemniteLicenciementStepName.Salaires}
+            />
           )}
         </>
       )}

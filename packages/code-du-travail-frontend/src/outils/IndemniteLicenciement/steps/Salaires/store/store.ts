@@ -5,11 +5,17 @@ import {
   SalairesStoreInput,
   SalairesStoreSlice,
 } from "./types";
-import { StoreSlice } from "../../../store";
+import { MainStore, StoreSlice } from "../../../store";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { validateStep } from "./validator";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
-import { setLegalReferenceSalary, setSalaryPeriods } from "../../../common/";
+import { setSalaryPeriods } from "../../../common/";
+import { validateAgreement } from "../../../agreements";
+import {
+  ReferenceSalaryFactory,
+  SupportedCcIndemniteLicenciement,
+} from "@socialgouv/modeles-social";
+import { IndemniteLicenciementStepName } from "../../..";
 
 const initialState: SalairesStoreData = {
   input: {
@@ -58,8 +64,42 @@ const createSalairesStore: StoreSlice<
       const { isValid, errorState } = validateStep(get().salairesData.input);
 
       if (isValid) {
-        setLegalReferenceSalary(get, set);
+        const salaireInput = get().salairesData.input;
+
+        const sReference = new ReferenceSalaryFactory().create(
+          SupportedCcIndemniteLicenciement.default
+        );
+
+        const primes = salaireInput.primes.filter(
+          (v) => v !== null
+        ) as number[];
+
+        const salaires = salaireInput.salaryPeriods.filter(
+          (v) => v.value !== undefined
+        ) as { month: string; value: number }[];
+
+        const refSalary = sReference.computeReferenceSalary({
+          hasSameSalaire: salaireInput.hasSameSalaire === "oui",
+          primes,
+          salaire: salaireInput.salaireBrut
+            ? parseFloat(salaireInput.salaireBrut)
+            : undefined,
+          salaires,
+        });
+
+        set(
+          produce((state: SalairesStoreSlice) => {
+            state.salairesData.input.refSalary = refSalary;
+          })
+        );
       }
+
+      const isAgreementValid = validateAgreement(
+        SupportedCcIndemniteLicenciement.IDCC1516,
+        IndemniteLicenciementStepName.Salaires,
+        get,
+        set
+      );
 
       set(
         produce((state: SalairesStoreSlice) => {
@@ -68,7 +108,7 @@ const createSalairesStore: StoreSlice<
           state.salairesData.error = errorState;
         })
       );
-      return isValid;
+      return isValid && isAgreementValid;
     },
   },
 });

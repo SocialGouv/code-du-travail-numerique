@@ -5,11 +5,11 @@ import {
 import produce from "immer";
 import { GetState, SetState } from "zustand";
 import { SalairesStoreSlice } from "../../../steps/Salaires/store";
-import { Agreement1516StoreSlice } from "./types";
+import { MainStore } from "../../../store";
 
 export const setReferenceSalaryAgreement1516 = (
-  get: GetState<SalairesStoreSlice & Agreement1516StoreSlice>,
-  set: SetState<SalairesStoreSlice & Agreement1516StoreSlice>
+  get: GetState<MainStore>,
+  set: SetState<MainStore>
 ) => {
   let refSalary = 0;
 

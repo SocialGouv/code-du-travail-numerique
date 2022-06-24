@@ -2,7 +2,6 @@ import produce from "immer";
 import { GetState, SetState } from "zustand";
 import { SalairesStoreSlice } from "../../../steps/Salaires/store";
 import { StoreSlice } from "../../../store";
-import { setReferenceSalaryAgreement1516 } from "./setReferenceSalary";
 import {
   Agreement1516StoreData,
   Agreement1516StoreInput,
@@ -26,33 +25,23 @@ export const createAgreement1516StoreSalaires: StoreSlice<
 > = (set, get) => ({
   agreement1516Data: { ...initialState },
   agreement1516Function: {
+    onChangeHasReceivedSalaries: (value) => {
+      applyGenericValidation(get, set, "hasReceivedSalaries", value);
+      if (value === "non") {
+        applyGenericValidation(get, set, "salaryPeriods", []);
+      }
+    },
     onSalariesChange: (value) => {
       applyGenericValidation(get, set, "salaryPeriods", value);
     },
     onChangeHasReceivedPrimes: (value) => {
       applyGenericValidation(get, set, "hasReceivedPrimes", value);
-    },
-    onChangeHasReceivedSalaries: (value) => {
-      applyGenericValidation(get, set, "hasReceivedSalaries", value);
+      if (value === "non") {
+        applyGenericValidation(get, set, "primes", []);
+      }
     },
     onChangePrimes: (primes) => {
       applyGenericValidation(get, set, "primes", primes);
-    },
-    onValidate: () => {
-      const { isValid, errorState } = validateStep(
-        get().agreement1516Data.input
-      );
-      set(
-        produce((state: Agreement1516StoreSlice) => {
-          state.agreement1516Data.hasBeenSubmit = isValid ? false : true;
-          state.agreement1516Data.isStepValid = isValid;
-          state.agreement1516Data.error = errorState;
-        })
-      );
-
-      setReferenceSalaryAgreement1516(get, set);
-
-      return isValid;
     },
   },
 });
@@ -65,7 +54,7 @@ const applyGenericValidation = (
 ) => {
   if (get().agreement1516Data.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
-      draft.agreement1516Data.input[paramName as string] = value;
+      draft.agreement1516Data.input[paramName] = value;
     });
     const { isValid, errorState } = validateStep(
       nextState.agreement1516Data.input
@@ -74,13 +63,13 @@ const applyGenericValidation = (
       produce((state: Agreement1516StoreSlice) => {
         state.agreement1516Data.error = errorState;
         state.agreement1516Data.isStepValid = isValid;
-        state.agreement1516Data.input[paramName as string] = value;
+        state.agreement1516Data.input[paramName] = value;
       })
     );
   } else {
     set(
       produce((state: Agreement1516StoreSlice) => {
-        state.agreement1516Data.input[paramName as string] = value;
+        state.agreement1516Data.input[paramName] = value;
       })
     );
   }

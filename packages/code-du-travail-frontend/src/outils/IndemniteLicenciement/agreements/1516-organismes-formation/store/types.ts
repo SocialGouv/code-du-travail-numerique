@@ -27,7 +27,6 @@ export type Agreement1516StoreFn = {
   onChangeHasReceivedSalaries: (value: OuiNon) => void;
   onChangeHasReceivedPrimes: (value: OuiNon) => void;
   onChangePrimes: (primes: Prime[]) => void;
-  onValidate: () => boolean;
 };
 
 export type Agreement1516StoreSlice = {
