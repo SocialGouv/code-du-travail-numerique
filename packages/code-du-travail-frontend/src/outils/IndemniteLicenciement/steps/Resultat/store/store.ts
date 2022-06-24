@@ -40,7 +40,16 @@ const createResultStore: StoreSlice<
 
       const { result } = publicodes.setSituation(
         mapToPublicodesSituationForIndemniteLicenciement(
-          undefined,
+          {
+            route: "agreement",
+            selected: {
+              id: "1516",
+              num: 1516,
+              shortTitle: "Indemnité de licenciement",
+              title: "Indemnité de licenciement",
+              slug: "indemnite-de-licenciement",
+            },
+          }, //TODO: à modifier
           seniority,
           refSalary,
           contratInput.licenciementInaptitude === "oui"

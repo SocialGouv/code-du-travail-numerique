@@ -69,7 +69,7 @@ const createAncienneteStore: StoreSlice<
 
       const isAgreementValid = validateAgreement(
         SupportedCcIndemniteLicenciement.IDCC1516, //TODO: replace par la cc
-        IndemniteLicenciementStepName.Salaires,
+        IndemniteLicenciementStepName.Anciennete,
         get,
         set
       );

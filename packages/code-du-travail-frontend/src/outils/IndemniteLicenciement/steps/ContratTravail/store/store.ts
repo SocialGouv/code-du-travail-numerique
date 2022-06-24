@@ -43,7 +43,7 @@ const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
 
       const isAgreementValid = validateAgreement(
         SupportedCcIndemniteLicenciement.IDCC1516, //TODO: replace par la bonne CC
-        IndemniteLicenciementStepName.Salaires,
+        IndemniteLicenciementStepName.ContratTravail,
         get,
         set
       );

@@ -23,7 +23,7 @@ type Props = {
 
 export enum IndemniteLicenciementStepName {
   Introduction = "Intro",
-  Info = "Info",
+  ContratTravail = "ContratTravail",
   Anciennete = "Anciennete",
   Salaires = "Salaires",
   Resultat = "Resultat",
@@ -37,7 +37,7 @@ const steps: Step<IndemniteLicenciementStepName>[] = [
   },
   {
     label: "Contrat de travail",
-    name: IndemniteLicenciementStepName.Info,
+    name: IndemniteLicenciementStepName.ContratTravail,
     Component: StepContratTravail,
   },
   {
@@ -99,7 +99,7 @@ const IndemniteLicenciementSimulator = ({
       steps={steps}
       validators={[
         {
-          stepName: IndemniteLicenciementStepName.Info,
+          stepName: IndemniteLicenciementStepName.ContratTravail,
           isStepValid: isStepInfoValid,
           validator: onValidateStepInfo,
         },

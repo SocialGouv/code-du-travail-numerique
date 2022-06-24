@@ -17,6 +17,7 @@ export default function Agreement1516() {
     hasReceivedSalaries,
     onChangeHasReceivedSalaries,
     errorHasReceivedSalaries,
+    initSalaryPeriods,
   } = useIndemniteLicenciementStore((state) => ({
     salaryPeriods: state.agreement1516Data.input.salaryPeriods,
     onSalariesChange: state.agreement1516Function.onSalariesChange,
@@ -34,7 +35,12 @@ export default function Agreement1516() {
       state.agreement1516Function.onChangeHasReceivedSalaries,
     errorHasReceivedSalaries:
       state.agreement1516Data.error.errorHasReceivedSalaries,
+    initSalaryPeriods: state.agreement1516Function.initSalaryPeriods,
   }));
+
+  React.useEffect(() => {
+    initSalaryPeriods();
+  }, []);
 
   return (
     <>
@@ -72,16 +78,16 @@ export default function Agreement1516() {
               {
                 label: "Oui",
                 value: "oui",
-                id: "hasPrimes-oui",
+                id: "hasPrimesCC-oui",
               },
               {
                 label: "Non",
                 value: "non",
-                id: "hasPrimes-non",
+                id: "hasPrimesCC-non",
               },
             ]}
-            name="hasPrimes"
-            label="Des primes annuelles ou exceptionnelles ont-elles été perçues au cours des 3 derniers mois de travail (préavis inclus) (obligatoire) ?"
+            name="hasPrimesCC"
+            label="Des primes annuelles ou exceptionnelles ont-elles été perçues au cours des 3 derniers mois de travail (préavis inclus) ?"
             selectedOption={hasPrimes}
             onChangeSelectedOption={onChangeHasReceivedPrimes}
             error={errorHasReceivedPrimes}

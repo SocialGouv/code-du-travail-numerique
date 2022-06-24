@@ -104,7 +104,7 @@ const StepContratTravail = (): JSX.Element => {
       />
       <AgreementsInjector
         idcc={SupportedCcIndemniteLicenciement.IDCC1516} //TODO: remplacer par la bonne CC
-        step={IndemniteLicenciementStepName.Info}
+        step={IndemniteLicenciementStepName.ContratTravail}
       />
     </>
   );

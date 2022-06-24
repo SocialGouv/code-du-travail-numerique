@@ -1,5 +1,9 @@
 import produce from "immer";
 import { GetState, SetState } from "zustand";
+import { deepMergeArray } from "../../../../../lib";
+import { computeSalaryPeriods } from "../../../common";
+import { AncienneteStoreSlice } from "../../../steps/Anciennete/store";
+import { SalaryPeriods } from "../../../steps/Salaires/components/SalaireTempsPlein";
 import { SalairesStoreSlice } from "../../../steps/Salaires/store";
 import { StoreSlice } from "../../../store";
 import {
@@ -21,10 +25,32 @@ const initialState: Agreement1516StoreData = {
 
 export const createAgreement1516StoreSalaires: StoreSlice<
   Agreement1516StoreSlice,
-  SalairesStoreSlice
+  SalairesStoreSlice & AncienneteStoreSlice
 > = (set, get) => ({
   agreement1516Data: { ...initialState },
   agreement1516Function: {
+    initSalaryPeriods: () => {
+      const ancienneteInput = get().ancienneteData.input;
+      const periods = computeSalaryPeriods({
+        dateEntree: ancienneteInput.dateNotification ?? "",
+        dateNotification: ancienneteInput.dateSortie ?? "",
+        absencePeriods: [],
+      });
+      const p: SalaryPeriods[] = periods.map((v) => ({
+        month: v,
+        value: undefined,
+      }));
+      const salaryPeriods = deepMergeArray(
+        p,
+        get().agreement1516Data.input.salaryPeriods,
+        "month"
+      );
+      set(
+        produce((state: Agreement1516StoreSlice) => {
+          state.agreement1516Data.input.salaryPeriods = salaryPeriods;
+        })
+      );
+    },
     onChangeHasReceivedSalaries: (value) => {
       applyGenericValidation(get, set, "hasReceivedSalaries", value);
       if (value === "non") {
