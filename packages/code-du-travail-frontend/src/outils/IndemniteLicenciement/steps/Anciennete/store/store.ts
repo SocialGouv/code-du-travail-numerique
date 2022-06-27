@@ -39,7 +39,6 @@ const createAncienneteStore: StoreSlice<
       applyGenericValidation(get, set, "absencePeriods", value);
     },
     onChangeHasAbsenceProlonge: (value) => {
-      applyGenericValidation(get, set, "hasAbsenceProlonge", value);
       set(
         produce((state: AncienneteStoreSlice) => {
           state.ancienneteData.input.absencePeriods =
@@ -48,6 +47,7 @@ const createAncienneteStore: StoreSlice<
               : get().ancienneteData.input.absencePeriods;
         })
       );
+      applyGenericValidation(get, set, "hasAbsenceProlonge", value);
     },
     onValidateStepAnciennete: () => {
       const { isValid, errorState } = validateStep(get().ancienneteData.input);
