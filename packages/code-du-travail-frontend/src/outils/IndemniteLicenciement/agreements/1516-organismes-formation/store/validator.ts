@@ -4,7 +4,10 @@ import {
 } from "@socialgouv/modeles-social";
 import produce from "immer";
 import { GetState, SetState } from "zustand";
-import { detectNullOrUndefinedOrNaNInArray, deepEqualObject } from "@lib";
+import {
+  detectNullOrUndefinedOrNaNInArray,
+  deepEqualObject,
+} from "../../../../../lib";
 import { SalairesStoreSlice } from "../../../steps/Salaires/store";
 import { MainStore } from "../../../store";
 import {
