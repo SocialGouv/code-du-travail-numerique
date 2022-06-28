@@ -7,6 +7,8 @@ export type LicenciementSituation = {
   note?: string;
   ref?: string;
   refUrl?: string;
+  ref2?: string;
+  ref2Url?: string;
 };
 
 export type Situations = {
