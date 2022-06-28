@@ -11,7 +11,6 @@ export const getRefs = ({ legal, agreement }: Situations): OldReference[] => {
     });
   }
   if (agreement) {
-    console.log("Get refs : ", agreement);
     if (agreement.ref && agreement.refUrl) {
       refs.push({ ref: agreement.ref, refUrl: agreement.refUrl });
     }

@@ -3566,8 +3566,10 @@
       "answer": null,
       "answer2": null,
       "answer3": "8",
-      "ref": "Article 423-26",
+      "ref": "Art. L. 423-26 du Code de l'action sociale et des familles",
       "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054",
+      "ref2": "Art. 120 de la convention collective",
+      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318",
       "note": "Il s’agit de la durée la plus courte entre celle prévue par le Code de l’action sociale et des familles et celle prévue par la convention collective.",
       "disableLegal": true
     },
@@ -3582,9 +3584,12 @@
       "answer": "15 jours calendaires",
       "answer2": null,
       "answer3": "15",
-      "ref": null,
-      "refUrl": null,
-      "note": "Si la lettre de démission a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective \"Assistants maternels du particulier employeur (IDCC 2395)\" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022."
+      "ref": "Art. L. 423-26 du Code de l'action sociale et des familles",
+      "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054",
+      "ref2": "Art. 120 de la convention collective",
+      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318",
+      "note": "Si la lettre de démission a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective \"Assistants maternels du particulier employeur (IDCC 2395)\" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022.",
+      "disableLegal": true
     },
     {
       "criteria": {
@@ -3597,9 +3602,12 @@
       "answer": "1 mois",
       "answer2": null,
       "answer3": "30",
-      "ref": null,
-      "refUrl": null,
-      "note": "Si la lettre de démission a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective \"Assistants maternels du particulier employeur (IDCC 2395)\" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022."
+      "ref": "Art. L. 423-26 du Code de l'action sociale et des familles",
+      "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054",
+      "ref2": "Art. 120 de la convention collective",
+      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318",
+      "note": "Si la lettre de démission a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective \"Assistants maternels du particulier employeur (IDCC 2395)\" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022.",
+      "disableLegal": true
     },
     {
       "criteria": {
