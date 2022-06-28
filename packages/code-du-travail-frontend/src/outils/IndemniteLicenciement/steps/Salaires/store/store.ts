@@ -14,7 +14,6 @@ import { computeSalaryPeriods, SalaryPeriods } from "../../../common";
 const initialState: SalairesStoreData = {
   input: {
     salaryPeriods: [],
-    primes: [],
   },
   error: {},
   hasBeenSubmit: false,
@@ -54,9 +53,6 @@ const createSalairesStore: StoreSlice<
     },
     onSalariesChange: (value) => {
       applyGenericValidation(get, set, "salaryPeriods", value);
-    },
-    onChangePrimes: (primes) => {
-      applyGenericValidation(get, set, "primes", primes);
     },
     onValidateStepSalaires: () => {
       const { isValid, errorState } = validateStep(get().salairesData.input);

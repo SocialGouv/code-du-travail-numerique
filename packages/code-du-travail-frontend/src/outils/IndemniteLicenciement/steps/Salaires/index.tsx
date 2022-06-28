@@ -12,8 +12,6 @@ const StepSalaires = () => {
     salaryPeriods,
     onSalariesChange,
     initFieldSalaries,
-    primes,
-    onChangePrimes,
     errorSalaryPeriods,
   } = useIndemniteLicenciementStore((state) => ({
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
@@ -21,8 +19,6 @@ const StepSalaires = () => {
     errorHasTempsPartiel: state.salairesData.error.errorHasTempsPartiel,
     salaryPeriods: state.salairesData.input.salaryPeriods,
     onSalariesChange: state.salairesFunction.onSalariesChange,
-    primes: state.salairesData.input.primes,
-    onChangePrimes: state.salairesFunction.onChangePrimes,
     errorSalaryPeriods: state.salairesData.error.errorSalaryPeriods,
     initFieldSalaries: state.salairesFunction.initFieldSalaries,
   }));
@@ -58,8 +54,6 @@ const StepSalaires = () => {
         <SalaireTempsPlein
           onSalariesChange={onSalariesChange}
           salaryPeriods={salaryPeriods}
-          primes={primes}
-          onChangePrimes={onChangePrimes}
           error={errorSalaryPeriods}
         />
       )}

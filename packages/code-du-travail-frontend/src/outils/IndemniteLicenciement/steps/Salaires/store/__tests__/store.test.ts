@@ -16,7 +16,6 @@ describe("Store", () => {
 
   it("should init data input", () => {
     expect(store.getState().salairesData.input.hasTempsPartiel).toBe(undefined);
-    expect(store.getState().salairesData.input.primes).toStrictEqual([]);
     expect(store.getState().salairesData.input.salaryPeriods).toStrictEqual([]);
   });
 
@@ -35,21 +34,19 @@ describe("Store", () => {
 
   it("should update properties (with primes and different salaries)", () => {
     store.getState().salairesFunction.onChangeHasTempsPartiel("oui");
-    store.getState().salairesFunction.onChangePrimes([2000, 3000]);
     store.getState().salairesFunction.onSalariesChange([
       {
         month: "janvier",
         value: 2000,
+        prime: 2000,
       },
     ]);
     expect(store.getState().salairesData.input.hasTempsPartiel).toBe("oui");
-    expect(store.getState().salairesData.input.primes).toStrictEqual([
-      2000, 3000,
-    ]);
     expect(store.getState().salairesData.input.salaryPeriods).toStrictEqual([
       {
         month: "janvier",
         value: 2000,
+        prime: 2000,
       },
     ]);
   });
@@ -95,15 +92,7 @@ describe("Store", () => {
     );
   });
 
-  it("should render an error for primes", () => {
-    const isValid = store.getState().salairesFunction.onValidateStepSalaires();
-    expect(isValid).toBe(false);
-    expect(store.getState().salairesData.error.errorPrimes).toBe(
-      "Vous devez compléter l'ensemble des champs"
-    );
-  });
-
-  it("should validate the step (with different salaries) 🚀", () => {
+  it("should validate the step 🚀", () => {
     store.getState().salairesFunction.onChangeHasTempsPartiel("non");
     store.getState().salairesFunction.onSalariesChange([
       {
@@ -111,21 +100,6 @@ describe("Store", () => {
         value: 2000,
       },
     ]);
-    store.getState().salairesFunction.onChangePrimes([2000, 3000]);
-    const isValid = store.getState().salairesFunction.onValidateStepSalaires();
-    expect(isValid).toBe(true);
-    expect(store.getState().salairesData.error.errorHasTempsPartiel).toBe(
-      undefined
-    );
-    expect(store.getState().salairesData.error.errorPrimes).toBe(undefined);
-    expect(store.getState().salairesData.error.errorSalaryPeriods).toBe(
-      undefined
-    );
-    expect(store.getState().salairesData.error.errorTempsPartiel).toBe(false);
-  });
-
-  it("should validate the step (with same salary) 🚀", () => {
-    store.getState().salairesFunction.onChangeHasTempsPartiel("non");
     const isValid = store.getState().salairesFunction.onValidateStepSalaires();
     expect(isValid).toBe(true);
     expect(store.getState().salairesData.error.errorHasTempsPartiel).toBe(

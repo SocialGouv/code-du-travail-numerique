@@ -6,31 +6,23 @@ import { InlineError } from "../../../../common/ErrorField";
 import { Question } from "../../../../common/Question";
 import { SmallText } from "../../../../common/stepStyles";
 import { ErrorWrapper } from "../../../../Components/TextQuestion";
-import { Prime, SalaryPeriods } from "../../../common";
+import { SalaryPeriods } from "../../../common";
 
 type Props = {
   salaryPeriods: SalaryPeriods[];
   onSalariesChange: (salaries: SalaryPeriods[]) => void;
   error?: string;
-  primes: Prime[];
-  onChangePrimes: (primes: Prime[]) => void;
 };
 
 export const SalaireTempsPlein = ({
   salaryPeriods,
   onSalariesChange,
-  primes,
-  onChangePrimes,
   error,
 }: Props): JSX.Element => {
   const [isFirstEdit, setIsFirstEdit] = React.useState(true);
   const [salariesPeriod, setLocalSalaries] =
     React.useState<SalaryPeriods[]>(salaryPeriods);
   const [errorsSalaries, setErrorsSalaries] = React.useState({});
-
-  const [localPrimes, setLocalPrimes] = React.useState<Prime[]>(
-    primes.length === 0 ? [null] : primes
-  );
   const [errorsPrimes, setErrorsPrimes] = React.useState({});
 
   React.useEffect(() => {
@@ -79,9 +71,11 @@ export const SalaireTempsPlein = ({
         [`${index}`]: undefined,
       });
     }
-    const newLocalPrimes = localPrimes.map((p, i) => (i === index ? prime : p));
-    setLocalPrimes(newLocalPrimes);
-    onChangePrimes(newLocalPrimes);
+    const newLocalSalaries = salariesPeriod.map((p, i) =>
+      i === index ? { ...p, prime } : p
+    );
+    setLocalSalaries(newLocalSalaries);
+    onSalariesChange(newLocalSalaries);
   };
 
   return (
@@ -97,7 +91,7 @@ export const SalaireTempsPlein = ({
           <tr>
             <Th>Mois</Th>
             <Th>Salaire mensuel brut</Th>
-            <Th>dont prime</Th>
+            <Th>Dont prime</Th>
           </tr>
         </thead>
         <tbody>
@@ -108,12 +102,12 @@ export const SalaireTempsPlein = ({
               </td>
               <td>
                 <Input
-                  name={`salaries[${index}]`}
+                  id={`salary.${index}`}
+                  name={`salary.${index}`}
                   title={`Salaire mensuel brut pour le mois ${
                     index + 1
                   } (prendre en compte les primes et avantages en nature)`}
                   type="number"
-                  id={`salary${index}`}
                   invalid={errorsSalaries[`${index}`]}
                   value={salaryPeriod.value}
                   icon={icons.Euro}
@@ -134,15 +128,15 @@ export const SalaireTempsPlein = ({
                       title={`Renseignez la prime pour le mois ${
                         index + 1
                       } ici`}
-                      id={`prime-${index}`}
-                      name={`${index}.prime`}
+                      id={`prime.${index}`}
+                      name={`prime.${index}`}
                       type="number"
                       error={errorsPrimes[`${index}`]}
                       icon={icons.Euro}
                       onChange={(e) =>
                         onChangeLocalPrimes(index, e.target.value)
                       }
-                      value={localPrimes[index]}
+                      value={salaryPeriod.prime}
                       updateOnScrollDisabled
                     />
                     {errorsPrimes[`${index}`] && (
@@ -178,16 +172,8 @@ const Table = styled.table`
   width: 100%;
   text-align: left;
 
-  & tr > td:nth-child(2) {
-    width: 80%;
-    text-align: left;
-  }
-
   @media (max-width: ${breakpoints.mobile}) {
     width: 100%;
-    & tr > td:nth-child(2) {
-      width: 60%;
-    }
   }
 `;
 

@@ -57,6 +57,34 @@ describe("<SalaireTempsPlein />", () => {
     ]);
   });
 
+  it("should add a prime", () => {
+    const onSalariesChange = jest.fn();
+    const { getByTitle } = render(
+      <SalaireTempsPlein
+        onSalariesChange={onSalariesChange}
+        salaryPeriods={[
+          {
+            month: "janvier",
+            value: 2000,
+          },
+        ]}
+      />
+    );
+    const input1 = getByTitle(
+      /Renseignez la prime pour le mois 1 ici/i
+    ) as HTMLInputElement;
+    fireEvent.change(input1, { target: { value: "6000" } });
+    expect(input1.value).toBe("6000");
+    expect(onSalariesChange).toHaveBeenCalledTimes(1);
+    expect(onSalariesChange).toHaveBeenCalledWith([
+      {
+        month: "janvier",
+        value: 2000,
+        prime: 6000,
+      },
+    ]);
+  });
+
   it("should render error", () => {
     const { getByText } = render(
       <SalaireTempsPlein
