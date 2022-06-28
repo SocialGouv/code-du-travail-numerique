@@ -30,7 +30,7 @@ function Widgets({
   slug,
   title,
   displayTitle,
-  publicodesRules,
+  publicodesRules
 }: Props): JSX.Element {
   const Tool = toolsBySlug[slug];
 

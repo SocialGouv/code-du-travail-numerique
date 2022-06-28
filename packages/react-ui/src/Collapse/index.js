@@ -13,7 +13,7 @@ export const Collapse = ({ title, children, onClickHandler, textProps }) => {
 
   function toggleAccordion() {
     setActive(!active);
-    setHeight(!active ? `${contentSpace.current.scrollHeight}px` : "0");
+    setHeight(!active ? `${contentSpace.current.scrollHeight + 5}px` : "0");
     onClickHandler && onClickHandler();
   }
 

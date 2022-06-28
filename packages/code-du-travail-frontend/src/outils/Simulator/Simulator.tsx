@@ -7,6 +7,7 @@ import { SimulatorStepProvider, useSimulatorStepStore } from "./createContext";
 import { Step } from "./type";
 
 const anchorRef = React.createRef<HTMLLIElement>();
+import arrayMutators from "final-form-arrays";
 
 type Props<FormState, StepName extends string> = {
   duration?: string;
@@ -89,6 +90,14 @@ const SimulatorContent = <FormState, StepName extends string>({
     }
   };
 
+  const validate = (values) => {
+    const Step: any = currentStep.Component;
+    return Step.validate ? Step.validate(values) : {};
+  };
+  const decorators = steps
+    .map((step) => (step.Component as any).decorator)
+    .filter(Boolean);
+
   return (
     <SimulatorDecorator<FormState>
       title={{
@@ -113,13 +122,17 @@ const SimulatorContent = <FormState, StepName extends string>({
       onFormStepSubmit={onNextStep}
       onFormStateUpdate={onFormValuesChange}
       renderStep={() => <Component />}
-      formOptions={{
-        legend: currentStep.options?.isForm ? currentStep.label : undefined,
-        validate: currentStep.options?.validate,
-      }}
       options={{
         debug: debug,
         annotations: currentStep.options?.annotation,
+      }}
+      formOptions={{
+        validate: validate,
+        decorators: decorators,
+        mutators: {
+          ...arrayMutators,
+        },
+        legend: currentStep.options?.isForm ? currentStep.label : undefined,
       }}
     />
   );

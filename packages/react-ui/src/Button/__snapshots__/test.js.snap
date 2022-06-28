@@ -46,9 +46,7 @@ exports[`<Button /> it renders a Button flat 1`] = `
   color: #3e486e;
 }
 
-.c0:not([disabled]):hover,
-.c0:not([disabled]):active,
-.c0:not([disabled]):focus {
+.c0:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -110,9 +108,7 @@ exports[`<Button /> it renders a Button flat 1`] = `
   color: #3e486e;
 }
 
-.c1:not([disabled]):hover,
-.c1:not([disabled]):active,
-.c1:not([disabled]):focus {
+.c1:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -174,9 +170,7 @@ exports[`<Button /> it renders a Button flat 1`] = `
   color: #3e486e;
 }
 
-.c2:not([disabled]):hover,
-.c2:not([disabled]):active,
-.c2:not([disabled]):focus {
+.c2:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -302,9 +296,7 @@ exports[`<Button /> it renders a Button link 1`] = `
   overflow: visible;
 }
 
-.c1:focus,
-.c1:hover,
-.c1:active {
+.c1:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -443,9 +435,7 @@ exports[`<Button /> it renders a Button naked 1`] = `
   color: #3e486e;
 }
 
-.c0:not([disabled]):hover,
-.c0:not([disabled]):active,
-.c0:not([disabled]):focus {
+.c0:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -507,9 +497,7 @@ exports[`<Button /> it renders a Button naked 1`] = `
   color: #3e486e;
 }
 
-.c1:not([disabled]):hover,
-.c1:not([disabled]):active,
-.c1:not([disabled]):focus {
+.c1:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -571,9 +559,7 @@ exports[`<Button /> it renders a Button naked 1`] = `
   color: #3e486e;
 }
 
-.c2:not([disabled]):hover,
-.c2:not([disabled]):active,
-.c2:not([disabled]):focus {
+.c2:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -703,9 +689,7 @@ exports[`<Button /> it renders a Button navLink 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c0:focus,
-.c0:hover,
-.c0:active {
+.c0:focus {
   color: #f66663;
 }
 
@@ -792,9 +776,7 @@ exports[`<Button /> it renders a Button primary 1`] = `
   color: #fff;
 }
 
-.c0:not([disabled]):hover,
-.c0:not([disabled]):active,
-.c0:not([disabled]):focus {
+.c0:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -856,9 +838,7 @@ exports[`<Button /> it renders a Button primary 1`] = `
   color: #fff;
 }
 
-.c1:not([disabled]):hover,
-.c1:not([disabled]):active,
-.c1:not([disabled]):focus {
+.c1:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -920,9 +900,7 @@ exports[`<Button /> it renders a Button primary 1`] = `
   color: #fff;
 }
 
-.c2:not([disabled]):hover,
-.c2:not([disabled]):active,
-.c2:not([disabled]):focus {
+.c2:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -1052,9 +1030,7 @@ exports[`<Button /> it renders a Button secondary 1`] = `
   color: #fff;
 }
 
-.c0:not([disabled]):hover,
-.c0:not([disabled]):active,
-.c0:not([disabled]):focus {
+.c0:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -1116,9 +1092,7 @@ exports[`<Button /> it renders a Button secondary 1`] = `
   color: #fff;
 }
 
-.c1:not([disabled]):hover,
-.c1:not([disabled]):active,
-.c1:not([disabled]):focus {
+.c1:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -1180,9 +1154,7 @@ exports[`<Button /> it renders a Button secondary 1`] = `
   color: #fff;
 }
 
-.c2:not([disabled]):hover,
-.c2:not([disabled]):active,
-.c2:not([disabled]):focus {
+.c2:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -1312,9 +1284,7 @@ exports[`<Button /> renders 1`] = `
   color: #fff;
 }
 
-.c0:not([disabled]):hover,
-.c0:not([disabled]):active,
-.c0:not([disabled]):focus {
+.c0:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -1404,9 +1374,7 @@ exports[`<Button /> renders as a link 1`] = `
   color: #fff;
 }
 
-.c0:not([disabled]):hover,
-.c0:not([disabled]):active,
-.c0:not([disabled]):focus {
+.c0:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -1497,9 +1465,7 @@ exports[`<Button /> renders as div 1`] = `
   color: #fff;
 }
 
-.c0:not([disabled]):hover,
-.c0:not([disabled]):active,
-.c0:not([disabled]):focus {
+.c0:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);

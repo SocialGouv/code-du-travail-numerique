@@ -48,6 +48,7 @@
     "final-form": "^4.20.2",
     "final-form-arrays": "^3.0.2",
     "final-form-calculate": "^1.3.2",
+    "immer": "^9.0.14",
     "katex": "^0.13.13",
     "lit-element": "3.0.2",
     "memoizee": "^0.4.15",

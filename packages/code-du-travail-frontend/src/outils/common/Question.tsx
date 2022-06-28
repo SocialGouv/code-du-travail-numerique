@@ -11,7 +11,7 @@ export type Tooltip = {
 };
 type Props = {
   as?: string;
-  required: boolean;
+  required?: boolean;
   tooltip?: Tooltip;
   children: React.ReactNode;
   htmlFor?: string;

@@ -1,9 +1,9 @@
 import { ConventionCollective } from "../../common/type/WizardType";
-import { formatNumber } from "./common";
+import { formatNumberAsString } from "./common";
 
 export const mapToPublicodesSituationForIndemniteLicenciement = (
   ccn: ConventionCollective | undefined,
-  seniority: string,
+  seniority: number,
   salaireRef: number,
   inaptitude: boolean
 ): Record<string, string> => {
@@ -14,11 +14,13 @@ export const mapToPublicodesSituationForIndemniteLicenciement = (
           .padStart(4, "0")}'`,
       }
     : { "contrat salarié - convention collective": "''" };
+
   return {
     ...agreement,
     ...{
-      "contrat salarié . ancienneté en année": seniority,
-      "contrat salarié - salaire de référence": formatNumber(salaireRef),
+      "contrat salarié . ancienneté en année": formatNumberAsString(seniority),
+      "contrat salarié - salaire de référence":
+        formatNumberAsString(salaireRef),
       "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
         inaptitude ? "oui" : "non",
       "indemnité de licenciement": "oui",

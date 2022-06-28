@@ -46,9 +46,7 @@ exports[`<ViewMore /> renders with an button 1`] = `
   color: #fff;
 }
 
-.c2:not([disabled]):hover,
-.c2:not([disabled]):active,
-.c2:not([disabled]):focus {
+.c2:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);

@@ -12,7 +12,7 @@ export type Step<Name extends string> = {
   };
 };
 
-export type SimulatorState<StepName extends string> = {
+export type SimulatorState = {
   currentStepIndex: number;
 };
 
@@ -21,4 +21,4 @@ export type SimulatorActions = {
   previousStep: () => void;
 };
 
-export type SimulatorStore = SimulatorState<string> & SimulatorActions;
+export type SimulatorStore = SimulatorState & SimulatorActions;

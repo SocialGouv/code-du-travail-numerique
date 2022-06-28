@@ -151,9 +151,7 @@ exports[`<SearchResults/> should render results 1`] = `
   overflow: visible;
 }
 
-.c17:focus,
-.c17:hover,
-.c17:active {
+.c17:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }

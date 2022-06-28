@@ -42,15 +42,13 @@ Fonctionnalité: Outil - Indemnité de licenciement
 
     Quand je clique sur "Suivant"
     Alors je vois que bouton "Suivant" est désactivé
-    Alors je vois "La date est invalide"
+    Alors je vois "Veuillez saisir cette date"
 
     Quand je renseigne "01/01/2000" dans le champ "la date d’entrée"
-    Alors je ne vois pas "La date est invalide"
-
     Quand je renseigne "01/01/1990" dans le champ "la date de notification"
-    Alors je vois "La date de notification doit se situer après la date d’entrée"
+    Alors je vois "La date de notification doit se situer dans les 18 derniers mois"
     Quand je renseigne "01/01/2022" dans le champ "la date de notification"
-    Alors je ne vois pas "La date de notification doit se situer après la date d’entrée"
+    Alors je ne vois pas "La date de notification doit se situer dans les 18 derniers mois"
 
     Quand je renseigne "01/01/2000" dans le champ "la date de sortie"
     Alors je vois "La date de notification doit se situer avant la date de sortie"
@@ -61,6 +59,7 @@ Fonctionnalité: Outil - Indemnité de licenciement
     Alors je vois "Période d’absence prolongée"
 
     Quand je choisis "Oui"
+    Alors je ne vois pas "Vous devez répondre à cette question"
     Alors je vois "ne sont pas des périodes à renseigner ci-après"
     Alors je vois "Quels sont le motif et la durée de ces absences"
     Alors je ne vois pas "Supprimer"

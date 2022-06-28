@@ -49,7 +49,7 @@ describe("<InputDate />", () => {
   });
   it("should be able to update input date", () => {
     const { container } = render(<InputDate name="input_date" />);
-    const testValue = "2019-12-17";
+    const testValue = "01/01/2020";
     const input = container.querySelector("input");
     fireEvent.change(input, { target: { value: testValue } });
     expect(input.value).toEqual(testValue);
