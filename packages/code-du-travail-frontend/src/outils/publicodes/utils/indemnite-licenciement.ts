@@ -24,7 +24,8 @@ export const mapToPublicodesSituationForIndemniteLicenciement = (
         formatNumberAsString(salaireRef),
       "contrat salarié - salaire de référence":
         formatNumberAsString(salaireRef),
-      "contrat salarié - inaptitude suite à un accident ou maladie professionnelle":
+      "contrat salarié . ancienneté en année": formatNumberAsString(seniority),
+      "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
         inaptitude ? "oui" : "non",
       "indemnité de licenciement": "oui",
     },
