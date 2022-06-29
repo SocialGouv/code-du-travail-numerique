@@ -1,35 +1,25 @@
 import { ReferenceSalaryLegal } from "../legal";
 
-describe("Calcul du salaire de référence légal", () => {
-  const ReferenceSalary = new ReferenceSalaryLegal();
-
-  it("Cas d'usage basique", () => {
+describe("computeReferenceSalary", () => {
+  const referenceSalary = new ReferenceSalaryLegal();
+  it("should compute reference salary for a basic use case", () => {
     expect(
-      ReferenceSalary.computeReferenceSalary({
-        hasSameSalaire: true,
-        primes: [],
-        salaire: 2000,
-        salaires: [],
+      referenceSalary.computeReferenceSalary({
+        salaires: [{ month: "janvier", value: 2000 }],
       })
     ).toEqual(2000);
   });
-  it("Avec des primes", () => {
+  it("should compute reference salary for a basic use case with primes", () => {
     expect(
-      ReferenceSalary.computeReferenceSalary({
-        hasSameSalaire: true,
-        primes: [4000, 3000, 20000],
-        salaire: 2000,
-        salaires: [],
+      referenceSalary.computeReferenceSalary({
+        salaires: [{ month: "janvier", prime: 200, value: 2000 }],
       })
     ).toEqual(2000);
   });
 
-  it("Avec un salaire différent sur deux mois", () => {
+  it("should compute reference salary if salaire is different between 2 months", () => {
     expect(
-      ReferenceSalary.computeReferenceSalary({
-        hasSameSalaire: false,
-        primes: [],
-        salaire: undefined,
+      referenceSalary.computeReferenceSalary({
         salaires: [
           { month: "janvier", value: 3000 },
           { month: "février", value: 2000 },
@@ -38,64 +28,34 @@ describe("Calcul du salaire de référence légal", () => {
     ).toEqual(2500);
   });
 
-  it("Avec un salaire différent sur deux mois et une prime", () => {
+  it("should compute reference salary if salaire is different between 2 months with primes", () => {
     expect(
-      ReferenceSalary.computeReferenceSalary({
-        hasSameSalaire: false,
-        primes: [2500],
-        salaire: undefined,
+      referenceSalary.computeReferenceSalary({
         salaires: [
-          { month: "janvier 2021", value: 1700 },
-          { month: "décembre 2020", value: 1700 },
-          { month: "novembre 2020", value: 1700 },
-          { month: "octobre 2020", value: 1700 },
-          { month: "septembre 2020", value: 2500 },
-          { month: "août 2020", value: 1700 },
-          { month: "juillet 2020", value: 1700 },
-          { month: "juin 2020", value: 1700 },
-          { month: "mai 2020", value: 1700 },
-          { month: "avril 2020", value: 2500 },
-          { month: "mars 2020", value: 2500 },
-          { month: "février 2020", value: 3000 },
-        ],
-      })
-    ).toEqual(2008.3333333333333);
-  });
-
-  it("Avec un salaire différent sur deux mois et une prime et si on change l'ordre des salaires", () => {
-    expect(
-      ReferenceSalary.computeReferenceSalary({
-        hasSameSalaire: false,
-        primes: [2500],
-        salaire: undefined,
-        salaires: [
-          { month: "juillet 2020", value: 1700 },
-          { month: "avril 2020", value: 2500 },
-          { month: "janvier 2021", value: 1700 },
-          { month: "novembre 2020", value: 1700 },
-          { month: "octobre 2020", value: 1700 },
-          { month: "février 2020", value: 3000 },
-          { month: "septembre 2020", value: 2500 },
-          { month: "août 2020", value: 1700 },
-          { month: "juin 2020", value: 1700 },
-          { month: "mai 2020", value: 1700 },
-          { month: "mars 2020", value: 2500 },
-          { month: "décembre 2020", value: 1700 },
-        ],
-      })
-    ).toEqual(2008.3333333333333);
-  });
-
-  it("Avec un salaire différent sur trois mois et trois primes", () => {
-    expect(
-      ReferenceSalary.computeReferenceSalary({
-        hasSameSalaire: false,
-        primes: [20, 20, 20],
-        salaire: undefined,
-        salaires: [
-          { month: "janvier", value: 3000 },
+          { month: "janvier", prime: 2500, value: 3000 },
           { month: "février", value: 2500 },
           { month: "mars", value: 2500 },
+          { month: "avril", value: 1700 },
+          { month: "mai", value: 1700 },
+          { month: "juin", value: 1700 },
+          { month: "juillet", value: 1700 },
+          { month: "aout", value: 2500 },
+          { month: "septembre", value: 1700 },
+          { month: "octobre", value: 1700 },
+          { month: "novembre", value: 1700 },
+          { month: "décembre", value: 1700 },
+        ],
+      })
+    ).toEqual(2008.3333333333333);
+  });
+
+  it("should compute reference salary if salaire is different between 2 months with primes for 3 months", () => {
+    expect(
+      referenceSalary.computeReferenceSalary({
+        salaires: [
+          { month: "janvier", prime: 20, value: 3000 },
+          { month: "février", prime: 20, value: 2500 },
+          { month: "mars", prime: 20, value: 2500 },
         ],
       })
     ).toEqual(2666.6666666666665);

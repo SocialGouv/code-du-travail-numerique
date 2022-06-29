@@ -24,6 +24,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 1516", () => {
             salary,
           "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
             inaptitude,
+          "contrat salarié . salaire de référence": salary,
           "indemnité de licenciement": "oui",
         })
         .evaluate("contrat salarié . indemnité de licenciement");

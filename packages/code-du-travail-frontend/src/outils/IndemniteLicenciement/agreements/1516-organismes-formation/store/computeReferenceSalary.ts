@@ -20,24 +20,9 @@ export const computeReferenceSalary = (
     SupportedCcIndemniteLicenciement.IDCC1516
   );
 
-  const primes = ccInput.primes.filter((v) => v !== null) as number[];
-
-  const salaires = salaireInput.salaryPeriods.filter(
-    (v) => v.value !== undefined
-  ) as { month: string; value: number }[];
-
-  const salairesPendantPreavis = ccInput.salaryPeriods.filter(
-    (v) => v.value !== undefined
-  ) as { month: string; value: number }[];
-
   refSalary = sReference.computeReferenceSalary({
-    hasSameSalaire: salaireInput.hasSameSalaire === "oui",
-    salairesPendantPreavis,
-    salaire: salaireInput.salaireBrut
-      ? parseFloat(salaireInput.salaireBrut)
-      : undefined,
-    salaires,
-    primesPendantPreavis: primes,
+    salairesPendantPreavis: ccInput.salaryPeriods,
+    salaires: salaireInput.salaryPeriods,
   });
 
   set(

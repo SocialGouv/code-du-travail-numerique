@@ -1,20 +1,15 @@
+import { SalaryPeriods } from "@socialgouv/modeles-social";
 import { OuiNon } from "../../../common";
-import { Prime } from "../../../steps/Salaires/components/Primes";
-import { SalaryPeriods } from "../../../steps/Salaires/components/SalaireTempsPlein";
 import { StepData } from "../../../store";
 
 export type Agreement1516StoreInput = {
   hasReceivedSalaries?: OuiNon;
   salaryPeriods: SalaryPeriods[];
-  hasReceivedPrimes?: OuiNon;
-  primes: Prime[];
 };
 
 export type Agreement1516StoreError = {
   errorHasReceivedSalaries?: string;
-  errorHasReceivedPrimes?: string;
   errorSalaryPeriods?: string;
-  errorPrimes?: string;
 };
 
 export type Agreement1516StoreData = StepData<
@@ -25,8 +20,6 @@ export type Agreement1516StoreData = StepData<
 export type Agreement1516StoreFn = {
   onSalariesChange: (value: SalaryPeriods[]) => void;
   onChangeHasReceivedSalaries: (value: OuiNon) => void;
-  onChangeHasReceivedPrimes: (value: OuiNon) => void;
-  onChangePrimes: (primes: Prime[]) => void;
   initSalaryPeriods: () => void;
 };
 

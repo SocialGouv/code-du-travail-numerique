@@ -5,19 +5,19 @@ import {
   SalairesStoreInput,
   SalairesStoreSlice,
 } from "./types";
-import { MainStore, StoreSlice } from "../../../store";
+import { StoreSlice } from "../../../store";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { validateStep } from "./validator";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
-import { setSalaryPeriods } from "../../../common/";
 import { validateAgreement } from "../../../agreements";
 import {
   ReferenceSalaryFactory,
+  SalaryPeriods,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { IndemniteLicenciementStepName } from "../../..";
 import { deepMergeArray } from "../../../../../lib";
-import { computeSalaryPeriods, SalaryPeriods } from "../../../common";
+import { computeSalaryPeriods } from "../../../common";
 
 const initialState: SalairesStoreData = {
   input: {
@@ -73,21 +73,8 @@ const createSalairesStore: StoreSlice<
           SupportedCcIndemniteLicenciement.default
         );
 
-        const primes = salaireInput.primes.filter(
-          (v) => v !== null
-        ) as number[];
-
-        const salaires = salaireInput.salaryPeriods.filter(
-          (v) => v.value !== undefined
-        ) as { month: string; value: number }[];
-
         const refSalary = sReference.computeReferenceSalary({
-          hasSameSalaire: salaireInput.hasSameSalaire === "oui",
-          primes,
-          salaire: salaireInput.salaireBrut
-            ? parseFloat(salaireInput.salaireBrut)
-            : undefined,
-          salaires,
+          salaires: salaireInput.salaryPeriods,
         });
 
         set(

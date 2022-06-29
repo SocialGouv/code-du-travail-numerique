@@ -1,3 +1,5 @@
+import type { SalaryPeriods } from "../plugins/salaire-reference/";
+
 /**
  *
  * @param array est un tableau qui contient des objets avec les propriétés mois et valeur.
@@ -5,8 +7,8 @@
  * @returns ordered array of months
  */
 export const rankByMonthArrayDescFrench = (
-  array: { month: string; value: number }[]
-): { month: string; value: number }[] => {
+  array: SalaryPeriods[]
+): SalaryPeriods[] => {
   return array.sort((a, b) => {
     const monthA = monthToNumber(getMonth(a.month));
     const monthB = monthToNumber(getMonth(b.month));
@@ -26,15 +28,18 @@ export const rankByMonthArrayDescFrench = (
 };
 
 export const getMonth = (value: string): string => {
+  if (!value) return "";
   return value.split(" ")[0] ?? "";
 };
 
 export const getYear = (value: string): number => {
+  if (!value) return 0;
   const v = value.split(" ")[1] ?? "";
   return Number(v.replace(/[^0-9]/g, ""));
 };
 
 export const monthToNumber = (month: string): number => {
+  if (!month) return 0;
   switch (true) {
     case month
       .normalize("NFD")

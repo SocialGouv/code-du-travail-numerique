@@ -1,9 +1,9 @@
+import { SalaryPeriods } from "@socialgouv/modeles-social";
 import produce from "immer";
 import { GetState, SetState } from "zustand";
 import { deepMergeArray } from "../../../../../lib";
 import { computeSalaryPeriods } from "../../../common";
 import { AncienneteStoreSlice } from "../../../steps/Anciennete/store";
-import { SalaryPeriods } from "../../../steps/Salaires/components/SalaireTempsPlein";
 import { SalairesStoreSlice } from "../../../steps/Salaires/store";
 import { StoreSlice } from "../../../store";
 import {
@@ -15,7 +15,6 @@ import { validateStep } from "./validator";
 
 const initialState: Agreement1516StoreData = {
   input: {
-    primes: [],
     salaryPeriods: [],
   },
   error: {},
@@ -52,26 +51,15 @@ export const createAgreement1516StoreSalaires: StoreSlice<
       );
     },
     onChangeHasReceivedSalaries: (value) => {
-      applyGenericValidation(get, set, "hasReceivedSalaries", value);
       if (value === "non") {
         applyGenericValidation(get, set, "salaryPeriods", []);
-        applyGenericValidation(get, set, "hasReceivedPrimes", undefined);
-        applyGenericValidation(get, set, "primes", []);
       } else {
         get().agreement1516Function.initSalaryPeriods();
       }
+      applyGenericValidation(get, set, "hasReceivedSalaries", value);
     },
     onSalariesChange: (value) => {
       applyGenericValidation(get, set, "salaryPeriods", value);
-    },
-    onChangeHasReceivedPrimes: (value) => {
-      applyGenericValidation(get, set, "hasReceivedPrimes", value);
-      if (value === "non") {
-        applyGenericValidation(get, set, "primes", []);
-      }
-    },
-    onChangePrimes: (primes) => {
-      applyGenericValidation(get, set, "primes", primes);
     },
   },
 });

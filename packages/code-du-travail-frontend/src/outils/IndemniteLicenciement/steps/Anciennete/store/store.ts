@@ -4,7 +4,6 @@ import { GetState, SetState } from "zustand";
 import { IndemniteLicenciementStepName } from "../../..";
 import { validateAgreement } from "../../../agreements";
 import { computeSeniority } from "../../../common";
-import { setSalaryPeriods } from "../../../common";
 import { StoreSlice } from "../../../store";
 import { SalairesStoreSlice } from "../../Salaires/store";
 

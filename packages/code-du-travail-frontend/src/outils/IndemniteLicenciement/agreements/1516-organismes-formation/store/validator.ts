@@ -34,9 +34,6 @@ export const validateAgreement1516 = (
 
 export const validateStep = (state: Agreement1516StoreInput) => {
   const errorState: Agreement1516StoreError = {
-    errorHasReceivedPrimes: !state.hasReceivedPrimes
-      ? "Vous devez répondre à cette question"
-      : undefined,
     errorHasReceivedSalaries: !state.hasReceivedSalaries
       ? "Vous devez répondre à cette question"
       : undefined,
@@ -46,20 +43,12 @@ export const validateStep = (state: Agreement1516StoreInput) => {
         detectNullOrUndefinedOrNaNInArray(state.salaryPeriods))
         ? "Vous devez compléter l'ensemble des champs"
         : undefined,
-    errorPrimes:
-      state.hasReceivedPrimes === "oui" &&
-      (state.primes.length === 0 ||
-        detectNullOrUndefinedOrNaNInArray(state.primes))
-        ? "Vous devez compléter l'ensemble des champs"
-        : undefined,
   };
 
   return {
     isValid: deepEqualObject(errorState, {
-      errorHasReceivedPrimes: undefined,
       errorHasReceivedSalaries: undefined,
       errorSalaryPeriods: undefined,
-      errorPrimes: undefined,
     }),
     errorState,
   };

@@ -2,43 +2,34 @@ import { rankByMonthArrayDescFrench, sum } from "../../utils";
 import type {
   IReferenceSalary,
   ReferenceSalaryProps,
+  SalaryPeriods,
   SupportedCcIndemniteLicenciement,
 } from "./types";
+import { nonNullable } from "./types";
 
 export type LegalReferenceSalaryProps = {
-  hasSameSalaire: boolean;
-  salaire?: number;
-  salaires: {
-    month: string;
-    value: number;
-  }[];
-  primes: number[];
+  salaires: SalaryPeriods[];
 };
 
 export class ReferenceSalaryLegal
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.default>
 {
   computeReferenceSalary({
-    hasSameSalaire,
-    salaires,
-    salaire,
-    primes,
+    salaires = [],
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.default>): number {
     const rankedSalaires = rankByMonthArrayDescFrench(salaires);
+    const primeValues = rankedSalaires.map((v) => v.prime).filter(nonNullable);
+    const salaryValues = rankedSalaires.map((a) => a.value).filter(nonNullable);
 
-    const salaryValues = rankedSalaires.map((a) => a.value);
+    let moyenneSalaires = 0;
+    let moyenne3DerniersMoisSalaires = 0;
 
-    if (!salaire) {
-      salaire = 0;
-    }
+    // calcul du salaire de reference
+    moyenneSalaires = sum(salaryValues) / salaires.length;
 
-    const moyenneSalaires = hasSameSalaire
-      ? salaire
-      : sum(salaryValues) / rankedSalaires.length;
-
-    const moyenne3DerniersMoisSalaires = hasSameSalaire
-      ? salaire
-      : sum(primes) / 12 + (sum(salaryValues.slice(0, 3)) - sum(primes)) / 3;
+    moyenne3DerniersMoisSalaires =
+      sum(primeValues) / 12 +
+      (sum(salaryValues.slice(0, 3)) - sum(primeValues)) / 3;
 
     return Math.max(moyenneSalaires, moyenne3DerniersMoisSalaires);
   }

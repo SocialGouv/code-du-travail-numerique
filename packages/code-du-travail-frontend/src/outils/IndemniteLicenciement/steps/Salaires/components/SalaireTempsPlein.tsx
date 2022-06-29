@@ -1,4 +1,5 @@
 import { icons, Input, theme } from "@socialgouv/cdtn-ui";
+import { SalaryPeriods } from "@socialgouv/modeles-social";
 import React from "react";
 import styled from "styled-components";
 
@@ -6,7 +7,6 @@ import { InlineError } from "../../../../common/ErrorField";
 import { Question } from "../../../../common/Question";
 import { SmallText } from "../../../../common/stepStyles";
 import { ErrorWrapper } from "../../../../Components/TextQuestion";
-import { SalaryPeriods } from "../../../common";
 
 type Props = {
   title: string;

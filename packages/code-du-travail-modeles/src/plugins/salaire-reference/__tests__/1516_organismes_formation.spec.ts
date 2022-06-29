@@ -6,22 +6,18 @@ describe("Calcul du salaire pour la CC 1516", () => {
   it("Cas d'usage basique", () => {
     expect(
       ReferenceSalary.computeReferenceSalary({
-        hasSameSalaire: true,
-        primesPendantPreavis: [],
-        salaire: 2000,
-        salaires: [],
+        salaires: [{ month: "janvier", value: 2000 }],
         salairesPendantPreavis: [],
       })
     ).toEqual(2000);
   });
-  it("Avec des primes", () => {
+  it("Avec des primes pendant le préavis", () => {
     expect(
       ReferenceSalary.computeReferenceSalary({
-        hasSameSalaire: true,
-        primesPendantPreavis: [4000, 3000, 20000],
-        salaire: 2000,
-        salaires: [],
-        salairesPendantPreavis: [],
+        salaires: [{ month: "janvier", value: 2000 }],
+        salairesPendantPreavis: [
+          { month: "février", prime: 27000, value: 2000 },
+        ],
       })
     ).toEqual(4250);
   });
@@ -29,9 +25,6 @@ describe("Calcul du salaire pour la CC 1516", () => {
   it("Avec un salaire différent sur deux mois", () => {
     expect(
       ReferenceSalary.computeReferenceSalary({
-        hasSameSalaire: false,
-        primesPendantPreavis: [],
-        salaire: undefined,
         salaires: [
           { month: "février", value: 2000 },
           { month: "janvier", value: 3000 },
@@ -47,9 +40,6 @@ describe("Calcul du salaire pour la CC 1516", () => {
   it("Avec un salaire différent sur deux mois et une prime", () => {
     expect(
       ReferenceSalary.computeReferenceSalary({
-        hasSameSalaire: false,
-        primesPendantPreavis: [2500],
-        salaire: undefined,
         salaires: [
           { month: "décembre", value: 1700 },
           { month: "novembre", value: 1700 },
@@ -64,7 +54,9 @@ describe("Calcul du salaire pour la CC 1516", () => {
           { month: "février", value: 2500 },
           { month: "janvier", value: 3000 },
         ],
-        salairesPendantPreavis: [],
+        salairesPendantPreavis: [
+          { month: "janvier", prime: 2500, value: 1500 },
+        ],
       })
     ).toEqual(2008.3333333333333);
   });
@@ -72,15 +64,12 @@ describe("Calcul du salaire pour la CC 1516", () => {
   it("Avec un salaire différent sur trois mois et trois primes", () => {
     expect(
       ReferenceSalary.computeReferenceSalary({
-        hasSameSalaire: false,
-        primesPendantPreavis: [20, 20, 20],
-        salaire: undefined,
         salaires: [
           { month: "mars", value: 2500 },
           { month: "février", value: 2500 },
           { month: "janvier", value: 3000 },
         ],
-        salairesPendantPreavis: [{ month: "avril", value: 2500 }],
+        salairesPendantPreavis: [{ month: "avril", prime: 60, value: 2500 }],
       })
     ).toEqual(2666.6666666666665);
   });
@@ -88,16 +77,13 @@ describe("Calcul du salaire pour la CC 1516", () => {
   it("Avec un salaire différent sur trois mois et trois primes et salaires pendant le préavis", () => {
     expect(
       ReferenceSalary.computeReferenceSalary({
-        hasSameSalaire: false,
-        primesPendantPreavis: [20, 20, 20],
-        salaire: undefined,
         salaires: [
           { month: "mars", value: 2500 },
           { month: "février", value: 2500 },
           { month: "janvier", value: 3000 },
         ],
         salairesPendantPreavis: [
-          { month: "mai", value: 6000 },
+          { month: "mai", prime: 60, value: 6000 },
           { month: "avril", value: 5000 },
         ],
       })

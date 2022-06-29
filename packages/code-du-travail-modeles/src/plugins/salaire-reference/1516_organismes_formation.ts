@@ -2,21 +2,14 @@ import { rankByMonthArrayDescFrench, sum } from "../../utils";
 import type {
   IReferenceSalary,
   ReferenceSalaryProps,
+  SalaryPeriods,
   SupportedCcIndemniteLicenciement,
 } from "./types";
+import { nonNullable } from "./types";
 
 export type CC1516ReferenceSalaryProps = {
-  hasSameSalaire: boolean;
-  salaire?: number;
-  salaires: {
-    month: string;
-    value: number;
-  }[];
-  salairesPendantPreavis: {
-    month: string;
-    value: number;
-  }[];
-  primesPendantPreavis: number[];
+  salaires: SalaryPeriods[];
+  salairesPendantPreavis: SalaryPeriods[];
 };
 export class ReferenceSalary1516
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1516>
@@ -31,34 +24,29 @@ export class ReferenceSalary1516
    * P : prime(s) ou gratification(s) de caractère annuel ou exceptionnel versée au salarié pendant cette période prise en compte prorata temporis
    **/
   computeReferenceSalary({
-    hasSameSalaire,
     salaires,
-    salaire,
-    primesPendantPreavis,
     salairesPendantPreavis,
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1516>): number {
     const rankedSalaires = rankByMonthArrayDescFrench(salaires);
     const rankedSalairesPendantPreavis = rankByMonthArrayDescFrench(
       salairesPendantPreavis
     );
-    const salaryValues = rankedSalaires.map((a) => a.value);
+    const salaryValues = rankedSalaires.map((a) => a.value).filter(nonNullable);
 
-    if (!salaire) {
-      salaire = 0;
-    }
-
-    const moyenneSalaires = hasSameSalaire
-      ? salaire
-      : sum(salaryValues) / rankedSalaires.length;
+    const moyenneSalaires = sum(salaryValues) / rankedSalaires.length;
 
     const totalSalaryValues = [
-      ...rankedSalairesPendantPreavis.map((a) => a.value),
+      ...rankedSalairesPendantPreavis.map((a) => a.value).filter(nonNullable),
       ...salaryValues,
     ];
 
-    const meilleurSalaireDes3DerniersMois: number = hasSameSalaire
-      ? salaire
-      : Math.max(...totalSalaryValues.slice(0, 3));
+    const meilleurSalaireDes3DerniersMois: number = Math.max(
+      ...totalSalaryValues.slice(0, 3)
+    );
+
+    const primesPendantPreavis = rankedSalairesPendantPreavis
+      .map((v) => v.prime)
+      .filter(nonNullable);
 
     const formuleCc =
       meilleurSalaireDes3DerniersMois + sum(primesPendantPreavis) / 12;

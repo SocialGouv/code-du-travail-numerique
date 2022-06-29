@@ -8,6 +8,8 @@ import {
 describe("date", () => {
   it.each`
     month        | rank
+    ${null}      | ${0}
+    ${""}        | ${0}
     ${"janvier"} | ${1}
     ${"février"} | ${2}
     ${"mars"}    | ${3}
@@ -21,6 +23,8 @@ describe("date", () => {
 
   it.each`
     input             | year
+    ${null}           | ${0}
+    ${""}             | ${0}
     ${"janvier 2020"} | ${2020}
     ${"février 2021"} | ${2021}
     ${"mars 2022"}    | ${2022}
@@ -34,6 +38,8 @@ describe("date", () => {
 
   it.each`
     input             | month
+    ${null}           | ${""}
+    ${""}             | ${""}
     ${"janvier 2020"} | ${"janvier"}
     ${"février 2021"} | ${"février"}
     ${"mars 2022"}    | ${"mars"}
@@ -44,6 +50,9 @@ describe("date", () => {
 
   it.each`
     arr                                                                                                                                                   | expected
+    ${[undefined]}                                                                                                                                        | ${[undefined]}
+    ${[]}                                                                                                                                                 | ${[]}
+    ${[{ month: "février", value: 3 }]}                                                                                                                   | ${[{ month: "février", value: 3 }]}
     ${[{ month: "février", value: 3 }, { month: "mars", value: 2 }]}                                                                                      | ${[{ month: "mars", value: 2 }, { month: "février", value: 3 }]}
     ${[{ month: "décembre", value: 3 }, { month: "novembre", value: 2 }]}                                                                                 | ${[{ month: "décembre", value: 3 }, { month: "novembre", value: 2 }]}
     ${[{ month: "décembre 2012", value: 3 }, { month: "novembre 2020", value: 2 }]}                                                                       | ${[{ month: "novembre 2020", value: 2 }, { month: "décembre 2012", value: 3 }]}
