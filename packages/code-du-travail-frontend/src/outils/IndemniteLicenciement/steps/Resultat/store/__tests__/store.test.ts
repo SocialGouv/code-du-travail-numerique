@@ -18,8 +18,6 @@ describe("Result store", () => {
   it("should init data input", () => {
     expect(store.getState().resultData.input.infoCalcul).toBe(undefined);
     expect(store.getState().resultData.input.publicodesResult).toBe(null);
-    expect(store.getState().resultData.input.salaireRef).toBe(0);
-    expect(store.getState().resultData.input.seniority).toBe(0);
   });
 
   it("should compute the publicodes result with same salary 🔥", () => {
@@ -34,8 +32,10 @@ describe("Result store", () => {
         motif: MOTIFS[0].label,
       },
     ]);
+    store.getState().ancienneteFunction.onValidateStepAnciennete();
 
     // Salaire ref
+    store.getState().salairesFunction.onChangeHasTempsPartiel("non");
     store.getState().salairesFunction.onSalariesChange([
       {
         month: "janvier",
@@ -88,6 +88,7 @@ describe("Result store", () => {
         value: 2000,
       },
     ]);
+    store.getState().salairesFunction.onValidateStepSalaires();
 
     // Contrat de travail
     store
@@ -95,15 +96,10 @@ describe("Result store", () => {
       .contratTravailFunction.onChangeLicenciementInaptitude("non");
 
     store.getState().resultFunction.getPublicodesResult();
-    expect(store.getState().resultData.input.publicodesResult).toStrictEqual({
-      unit: {
-        denominators: [],
-        numerators: ["€"],
-      },
-      value: 916.667,
-    });
-    expect(store.getState().resultData.input.salaireRef).toBe(2000);
-    expect(store.getState().resultData.input.seniority).toBe(
+    expect(store.getState().resultData.input.publicodesResult).toBeTruthy();
+
+    expect(store.getState().salairesData.input.refSalary).toBe(2000);
+    expect(store.getState().ancienneteData.input.seniority).toBe(
       1.8333333333333333
     );
     expect(store.getState().resultData.input.infoCalcul).toStrictEqual({
@@ -128,8 +124,10 @@ describe("Result store", () => {
         motif: MOTIFS[0].label,
       },
     ]);
+    store.getState().ancienneteFunction.onValidateStepAnciennete();
 
     // Salaire ref
+    store.getState().salairesFunction.onChangeHasTempsPartiel("non");
     store.getState().salairesFunction.onSalariesChange([
       {
         month: "janvier",
@@ -182,26 +180,23 @@ describe("Result store", () => {
         value: 1000,
       },
     ]);
+    store.getState().salairesFunction.onValidateStepSalaires();
 
     // Contrat de travail
     store
       .getState()
       .contratTravailFunction.onChangeLicenciementInaptitude("oui");
 
-    store.getState().resultFunction.getPublicodesResult();
-    expect(store.getState().resultData.input.publicodesResult).toStrictEqual({
-      unit: {
-        denominators: [],
-        numerators: ["€"],
-      },
-      value: 840.278,
-    });
-    expect(store.getState().resultData.input.salaireRef).toBe(
+    expect(store.getState().salairesData.input.refSalary).toBe(
       916.6666666666666
     );
-    expect(store.getState().resultData.input.seniority).toBe(
+    expect(store.getState().ancienneteData.input.seniority).toBe(
       1.8333333333333333
     );
+
+    store.getState().resultFunction.getPublicodesResult();
+    expect(store.getState().resultData.input.publicodesResult).toBeTruthy();
+
     expect(store.getState().resultData.input.infoCalcul).toStrictEqual({
       formula: "1 / 4 * Sref * A * 2",
       labels: {
