@@ -32,6 +32,7 @@ export const generateStore = (
 export const publicodesData: PublicodesData<PublicodesPreavisRetraiteResult> = {
   missingArgs: [],
   result: {
+    valid: true,
     unit: PublicodesConvertedUnit.MONTH,
     value: 1,
     valueInDays: 30,

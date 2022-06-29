@@ -1,5 +1,6 @@
 import { PreavisRetraiteStore } from "../types";
 import { stateToPublicode } from "./helpers";
+import { computeWarningType } from "./computeWarningType";
 
 const computeNotice = (state: PreavisRetraiteStore): PreavisRetraiteStore => {
   const values = state.formValues;
@@ -15,6 +16,15 @@ const computeNotice = (state: PreavisRetraiteStore): PreavisRetraiteStore => {
     "contrat salarié . préavis de retraite collective maximum en jours"
   );
 
+  const type =
+    values.origin?.isRetirementMandatory === "oui" ? "mise" : "départ";
+
+  const warningType = computeWarningType({
+    resultValueInDays: result.result.valueInDays,
+    ccNumber: values.ccn?.selected?.num,
+    type,
+  });
+
   return {
     ...state,
     steps: {
@@ -22,13 +32,16 @@ const computeNotice = (state: PreavisRetraiteStore): PreavisRetraiteStore => {
       result: {
         notice: {
           result: result.result,
-          agreement: {
-            result: agreementResult,
-            maximum: agreementMaximumResult,
-          },
-          legal: legalResult,
-          type:
-            values.origin?.isRetirementMandatory === "oui" ? "mise" : "départ",
+          agreement: agreementResult.valid
+            ? {
+                result: agreementResult,
+                maximum: agreementMaximumResult.valid
+                  ? agreementMaximumResult
+                  : null,
+              }
+            : null,
+          legal: legalResult.valid ? legalResult : null,
+          type,
           notifications: publicodes.getNotifications(),
         },
         detail: {
@@ -36,6 +49,10 @@ const computeNotice = (state: PreavisRetraiteStore): PreavisRetraiteStore => {
           values,
           situation: publicodes.data.situation,
           minYearCount: state.steps.seniority.minYearCount,
+        },
+        warning: {
+          type: warningType,
+          hasNotice: result.result.valueInDays > 0,
         },
       },
     },
