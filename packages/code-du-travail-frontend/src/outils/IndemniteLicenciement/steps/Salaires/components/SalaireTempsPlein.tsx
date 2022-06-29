@@ -82,16 +82,21 @@ export const SalaireTempsPlein = ({
     <StyledDiv>
       <Table>
         <Caption>
-          <Question required>Salaire mensuel brut</Question>
+          <Question required>
+            Indiquez le montant des salaires mensuels brut perçus au cours des
+            12 mois précédents la notification du licenciement
+          </Question>
           <SmallText>
-            Prendre en compte les primes et avantages en nature.
+            Renseignez le montant des salaires (en incluant les primes et
+            avantages en nature) dans le premier champ et le montant des primes
+            exceptionnelles dans le second champ.
           </SmallText>
         </Caption>
         <thead>
           <tr>
             <Th>Mois</Th>
             <Th>Salaire mensuel brut</Th>
-            <Th>Dont prime</Th>
+            <Th>Dont primes exceptionnelles</Th>
           </tr>
         </thead>
         <tbody>
@@ -125,7 +130,7 @@ export const SalaireTempsPlein = ({
                 {index < 3 && (
                   <>
                     <Input
-                      title={`Renseignez la prime pour le mois ${
+                      title={`Renseignez la prime exceptionnelle pour le mois ${
                         index + 1
                       } ici`}
                       id={`prime.${index}`}
