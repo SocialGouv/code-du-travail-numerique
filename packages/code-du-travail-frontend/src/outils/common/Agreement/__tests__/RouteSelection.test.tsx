@@ -41,7 +41,12 @@ describe("RouteSelection: Skip the agreement selection", () => {
 
     it("should show an alert when select to skip the agreement selection", () => {
       const { getByText } = render(
-        <EmbeddedInjectedForm Step={RouteSelection} />
+        <EmbeddedInjectedForm
+          Step={RouteSelection}
+          props={{
+            onChange: () => {},
+          }}
+        />
       );
       getByText(
         /Je ne souhaite pas renseigner ma convention collective/
@@ -56,7 +61,12 @@ describe("RouteSelection: Skip the agreement selection", () => {
 
     it("should not show an alert when select to search the agreement selection", () => {
       const { getByText, queryByText } = render(
-        <EmbeddedInjectedForm Step={RouteSelection} />
+        <EmbeddedInjectedForm
+          Step={RouteSelection}
+          props={{
+            onChange: () => {},
+          }}
+        />
       );
       getByText(/Je sais quelle est ma convention collective/).click();
 
@@ -65,7 +75,12 @@ describe("RouteSelection: Skip the agreement selection", () => {
 
     it("should not show an alert when select i don't know my agreement", () => {
       const { getByText, queryByText } = render(
-        <EmbeddedInjectedForm Step={RouteSelection} />
+        <EmbeddedInjectedForm
+          Step={RouteSelection}
+          props={{
+            onChange: () => {},
+          }}
+        />
       );
       getByText(/Je ne sais pas quelle est ma convention collective/).click();
 
@@ -123,6 +138,8 @@ describe("RouteSelection: Skip the agreement selection", () => {
     );
 
     expect(getAllByRole("radio")).toHaveLength(2);
-    expect(queryByText(/Je ne souhaite pas renseigner/)).not.toBeInTheDocument();
+    expect(
+      queryByText(/Je ne souhaite pas renseigner/)
+    ).not.toBeInTheDocument();
   });
 });
