@@ -18,7 +18,7 @@ export const mapToPublicodesSituationForIndemniteLicenciement = (
   // paramétrer la bonne cc
   const agreementRefSalary: Record<string, string> = salaireAgreementRef
     ? {
-        "contrat salarié - convention collective - batiment ouvriers employés - indemnité de licenciement - salaire de référence":
+        "contrat salarié - convention collective - organismes de formation - indemnité de licenciement - salaire de référence":
           formatNumberAsString(salaireAgreementRef),
       }
     : {};
