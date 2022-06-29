@@ -12,6 +12,16 @@ const ccn16 = {
   },
 };
 
+const ccn3239 = {
+  selected: {
+    id: "KALICONT000005635624",
+    num: 3239,
+    shortTitle: "Assistant maternel",
+    slug: "3239-assistant-maternel",
+    title: "Convention collective nationale des assistants maternels",
+  },
+};
+
 describe("<StepResult />", () => {
   it("should render with O duration", () => {
     const { container } = renderForm(StepResult, {
@@ -89,5 +99,29 @@ describe("<StepResult />", () => {
       seriousMisconduct: false,
     });
     expect(container).toMatchSnapshot();
+  });
+
+  describe("Convention collective 3239 -> Assistant maternel", () => {
+    it("doit remonter la durée de la convention collective", () => {
+      const { getByText, queryByText } = renderForm(StepResult, {
+        ccn: ccn3239,
+        cdt: {
+          ancienneté: "15| moins de 6 mois",
+        },
+        criteria: {
+          ancienneté: "105| Enfant accueilli depuis moins de 3 mois",
+          "catégorie professionnelle":
+            "101| Assistants maternels du particulier employeur",
+        },
+        disabledWorker: false,
+        seriousMisconduct: false,
+      });
+      expect(getByText(/8 jours/)).toBeInTheDocument();
+      expect(
+        queryByText(
+          /Il s’agit de la durée la plus longue entre la durée légale prévue par le Code du travail et la durée conventionnelle prévue par la convention collective/
+        )
+      ).not.toBeInTheDocument();
+    });
   });
 });

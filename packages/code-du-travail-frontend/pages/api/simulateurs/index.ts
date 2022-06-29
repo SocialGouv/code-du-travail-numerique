@@ -1,5 +1,4 @@
-import externalTools from "@cdt/data...tools/externals.json";
-import tools from "@cdt/data...tools/internals.json";
+import { externals as externalTools, internals as tools } from "@cdt/data";
 import { NextApiRequest, NextApiResponse } from "next";
 
 interface Tools {

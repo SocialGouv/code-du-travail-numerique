@@ -1,4 +1,4 @@
-import tools from "@cdt/data...tools/internals.json";
+import { internals as tools } from "@cdt/data";
 import { Container, icons, theme } from "@socialgouv/cdtn-ui";
 import { GetServerSideProps } from "next";
 import Link from "next/link";
@@ -9,7 +9,6 @@ import {
   DureePreavisLicenciement,
   DureePreavisRetraite,
   loadPublicodesRules,
-  Tool,
 } from "../../src/outils";
 
 const toolsBySlug = {
@@ -64,7 +63,7 @@ export default Widgets;
 export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
-  const tool = (tools as Tool[]).find((tool) => tool.slug === query.slug);
+  const tool = tools.find((tool) => tool.slug === query.slug);
   if (!tool) {
     return {
       notFound: true,

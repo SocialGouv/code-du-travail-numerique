@@ -1,6 +1,8 @@
-import heureRechercheData from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
-import demissionData from "@cdt/data...simulateurs/preavis-demission.data.json";
-import licenciementData from "@cdt/data...simulateurs/preavis-licenciement.data.json";
+import {
+  heuresRechercheEmploiData,
+  preavisDemissionData,
+  preavisLicenciementData,
+} from "@cdt/data";
 import { FormApi } from "final-form";
 import React, { useMemo } from "react";
 
@@ -44,11 +46,11 @@ export function StepInformations({
   const questions = useMemo(() => {
     switch (actionEvent) {
       case MatomoActionEvent.HEURE_RECHERCHE_EMPLOI:
-        return heureRechercheData.questions;
+        return heuresRechercheEmploiData.questions;
       case MatomoActionEvent.PREAVIS_DEMISSION:
-        return demissionData.questions;
+        return preavisDemissionData.questions;
       case MatomoActionEvent.PREAVIS_LICENCIEMENT:
-        return licenciementData.questions;
+        return preavisLicenciementData.questions;
       default:
         return [];
     }
@@ -57,11 +59,11 @@ export function StepInformations({
   const allSituations = useMemo(() => {
     switch (actionEvent) {
       case MatomoActionEvent.HEURE_RECHERCHE_EMPLOI:
-        return heureRechercheData.situations;
+        return heuresRechercheEmploiData.situations;
       case MatomoActionEvent.PREAVIS_DEMISSION:
-        return demissionData.situations;
+        return preavisDemissionData.situations;
       case MatomoActionEvent.PREAVIS_LICENCIEMENT:
-        return licenciementData.situations;
+        return preavisLicenciementData.situations;
       default:
         return [];
     }
