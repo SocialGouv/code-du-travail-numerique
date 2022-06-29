@@ -2,6 +2,7 @@ import { InputRadio, Text } from "@socialgouv/cdtn-ui";
 import { FormApi } from "final-form";
 import React from "react";
 import { Field } from "react-final-form";
+import { OnChange } from "react-final-form-listeners";
 
 import { ErrorField } from "../../ErrorField";
 import { Question } from "../../Question";
@@ -14,9 +15,14 @@ import ShowAlert from "./ShowAlert";
 type Props = {
   form: FormApi<FormContent>;
   canBeSkip: boolean;
+  onChange: (AgreementRoute) => void;
 };
 
-const RouteSelection = ({ form, canBeSkip = true }: Props): JSX.Element => {
+const RouteSelection = ({
+  form,
+  onChange,
+  canBeSkip = true,
+}: Props): JSX.Element => {
   const values = form.getState().values;
   return (
     <>
@@ -95,6 +101,16 @@ const RouteSelection = ({ form, canBeSkip = true }: Props): JSX.Element => {
         )}
         <ErrorField name={ROUTE_NAME} />
         {values.ccn && <ShowAlert route={values.ccn.route} />}
+        <OnChange name={ROUTE_NAME}>
+          {(
+            values: AgreementRoute | null | undefined,
+            _previous: AgreementRoute | null | undefined
+          ) => {
+            if (values) {
+              onChange(values);
+            }
+          }}
+        </OnChange>
       </RadioContainer>
     </>
   );

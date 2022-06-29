@@ -75,8 +75,8 @@ const SelectAgreement = ({
   }, [storedConvention, enterprise]);
 
   const values = form.getState().values;
-  useEffect(() => {
-    switch (values.ccn?.route) {
+  const onRouteChange = (route: AgreementRoute) => {
+    switch (route) {
       case "not-selected": {
         setConvention(undefined);
         setEnterprise(undefined);
@@ -91,11 +91,15 @@ const SelectAgreement = ({
         break;
       }
     }
-  }, [setConvention, values.ccn?.route]);
+  };
 
   return (
     <>
-      <RouteSelection form={form} canBeSkip={!required} />
+      <RouteSelection
+        form={form}
+        canBeSkip={!required}
+        onChange={onRouteChange}
+      />
       {note && <SmallText>{note}</SmallText>}
       {values.ccn?.route === "agreement" && (
         <AgreementSearch
