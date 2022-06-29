@@ -9,22 +9,26 @@ import type { SalaryPeriods } from "../plugins/salaire-reference/";
 export const rankByMonthArrayDescFrench = (
   array: SalaryPeriods[]
 ): SalaryPeriods[] => {
-  return array.sort((a, b) => {
-    const monthA = monthToNumber(getMonth(a.month));
-    const monthB = monthToNumber(getMonth(b.month));
-    const yearA = getYear(a.month);
-    const yearB = getYear(b.month);
-    if (yearA > yearB) {
-      return -1;
-    } else if (yearA < yearB) {
-      return 1;
-    } else if (yearA === yearB && monthA > monthB) {
-      return -1;
-    } else if (yearA === yearB && monthA < monthB) {
-      return 1;
-    }
-    return 0;
-  });
+  try {
+    return array.sort((a, b) => {
+      const monthA = monthToNumber(getMonth(a.month));
+      const monthB = monthToNumber(getMonth(b.month));
+      const yearA = getYear(a.month);
+      const yearB = getYear(b.month);
+      if (yearA > yearB) {
+        return -1;
+      } else if (yearA < yearB) {
+        return 1;
+      } else if (yearA === yearB && monthA > monthB) {
+        return -1;
+      } else if (yearA === yearB && monthA < monthB) {
+        return 1;
+      }
+      return 0;
+    });
+  } catch {
+    return array;
+  }
 };
 
 export const getMonth = (value: string): string => {
