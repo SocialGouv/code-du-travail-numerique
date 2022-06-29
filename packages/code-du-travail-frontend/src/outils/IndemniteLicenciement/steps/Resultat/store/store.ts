@@ -12,8 +12,6 @@ import { ResultStoreData, ResultStoreSlice } from "./types";
 const initialState: ResultStoreData = {
   input: {
     publicodesResult: null,
-    salaireRef: 0,
-    seniority: 0,
   },
   error: {},
   hasBeenSubmit: true,
@@ -31,8 +29,10 @@ const createResultStore: StoreSlice<
   resultFunction: {
     getPublicodesResult: () => {
       const refSalary = get().salairesData.input.refSalary;
+      const agreementRefSAlary = get().salairesData.input.agreementRefSAlary;
       const seniority = get().ancienneteData.input.seniority;
-      const contratInput = get().contratTravailData.input;
+      const isLicenciementInaptitude =
+        get().contratTravailData.input.licenciementInaptitude === "oui";
       const publicodes = get().resultData.publicodes;
       if (!publicodes) {
         throw new Error("Publicodes is not defined");
@@ -40,33 +40,23 @@ const createResultStore: StoreSlice<
 
       const { result } = publicodes.setSituation(
         mapToPublicodesSituationForIndemniteLicenciement(
-          {
-            route: "agreement",
-            selected: {
-              id: "1516",
-              num: 1516,
-              shortTitle: "Indemnité de licenciement",
-              title: "Indemnité de licenciement",
-              slug: "indemnite-de-licenciement",
-            },
-          }, //TODO: à modifier
+          1516, //TODO: à modifier
           seniority,
           refSalary,
-          contratInput.licenciementInaptitude === "oui"
+          agreementRefSAlary,
+          isLicenciementInaptitude
         )
       );
 
       const infoCalcul = generateExplanation({
         anciennete: seniority,
-        inaptitude: contratInput.licenciementInaptitude === "oui",
+        inaptitude: isLicenciementInaptitude,
         salaireRef: refSalary,
       });
 
       set(
         produce((state: ResultStoreSlice) => {
           state.resultData.input.publicodesResult = result;
-          state.resultData.input.salaireRef = refSalary;
-          state.resultData.input.seniority = seniority;
           state.resultData.input.infoCalcul = infoCalcul;
         })
       );

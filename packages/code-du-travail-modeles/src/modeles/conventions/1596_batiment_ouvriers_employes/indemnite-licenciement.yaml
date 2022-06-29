@@ -2,6 +2,6 @@ contrat salarié . convention collective . batiment ouvriers employés . indemni
   valeur: oui
 
 contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . salaire de référence:
-  remplace: contrat salarié . salaire de référence
+  remplace: contrat salarié . salaire de référence conventionnel
   cdtn:
     composant: ReferenceSalary1596
