@@ -85,9 +85,8 @@ Fonctionnalité: Outil - Indemnité de licenciement
     Alors je vois "périodes d'alternance à temps plein et à temps partiel"
 
     Quand je choisis "#hasTempsPartiel-non"
-    Alors je vois "Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement"
-    Quand je choisis "#hasSameSalaire-oui"
-    Quand je renseigne "1000" dans le champ "salaire"
+    Alors je vois "Salaire mensuel brut"
+    Quand je renseigne "1000" dans le champ "salary.0"
 
     Quand je clique sur "Suivant"
 

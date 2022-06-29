@@ -1,24 +1,15 @@
 import { StepData } from "../../../store";
-import { Prime } from "../components/Primes";
-import { SalaryPeriods } from "../components/SalaireTempsPlein";
-import { OuiNon } from "../../../common/types";
+import { OuiNon, SalaryPeriods } from "../../../common/types";
 
 export type SalairesStoreInput = {
   hasTempsPartiel?: OuiNon;
-  hasSameSalaire?: OuiNon;
-  salaireBrut?: string;
   salaryPeriods: SalaryPeriods[];
-  hasPrimes?: OuiNon;
-  primes: Prime[];
   refSalary: number;
   agreementRefSAlary?: number;
 };
 
 export type SalairesStoreError = {
   errorHasTempsPartiel?: string;
-  errorHasSameSalaire?: string;
-  errorSalaireBrut?: string;
-  errorHasPrimes?: string;
   errorTempsPartiel?: boolean;
   errorSalaryPeriods?: string;
   errorPrimes?: string;
@@ -30,12 +21,9 @@ export type SalairesStoreData = StepData<
 >;
 
 export type SalairesStoreFn = {
+  initFieldSalaries: () => void;
   onChangeHasTempsPartiel: (value: OuiNon) => void;
-  onChangeHasSameSalaire: (value: OuiNon) => void;
-  onChangeSalaireBrut: (value: string) => void;
   onSalariesChange: (value: SalaryPeriods[]) => void;
-  onChangeHasPrimes: (value: OuiNon) => void;
-  onChangePrimes: (primes: Prime[]) => void;
   onValidateStepSalaires: () => boolean;
 };
 

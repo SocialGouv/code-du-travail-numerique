@@ -6,11 +6,7 @@ import { InlineError } from "../../../../common/ErrorField";
 import { Question } from "../../../../common/Question";
 import { SmallText } from "../../../../common/stepStyles";
 import { ErrorWrapper } from "../../../../Components/TextQuestion";
-
-export type SalaryPeriods = {
-  month: string;
-  value: number | undefined;
-};
+import { SalaryPeriods } from "../../../common";
 
 type Props = {
   title: string;
@@ -31,6 +27,7 @@ export const SalaireTempsPlein = ({
   const [salariesPeriod, setLocalSalaries] =
     React.useState<SalaryPeriods[]>(salaryPeriods);
   const [errorsSalaries, setErrorsSalaries] = React.useState({});
+  const [errorsPrimes, setErrorsPrimes] = React.useState({});
 
   React.useEffect(() => {
     setLocalSalaries(salaryPeriods);
@@ -64,19 +61,43 @@ export const SalaireTempsPlein = ({
     onSalariesChange(newLocalSalaries);
   };
 
+  const onChangeLocalPrimes = (index: number, value: string) => {
+    const prime = parseFloat(value);
+    if (isNaN(prime) && value.length > 0) {
+      setErrorsPrimes({
+        ...errorsPrimes,
+        [`${index}`]: "Veuillez entrer un nombre",
+      });
+      return;
+    } else {
+      setErrorsPrimes({
+        ...errorsPrimes,
+        [`${index}`]: undefined,
+      });
+    }
+    const newLocalSalaries = salariesPeriod.map((p, i) =>
+      i === index ? { ...p, prime } : p
+    );
+    setLocalSalaries(newLocalSalaries);
+    onSalariesChange(newLocalSalaries);
+  };
+
   return (
     <StyledDiv>
       <Table>
         <Caption>
           <Question required>{title}</Question>
           <SmallText>
-            Prendre en compte les primes et avantages en nature.
+            Renseignez le montant des salaires (en incluant les primes et
+            avantages en nature) dans le premier champ et le montant des primes
+            exceptionnelles dans le second champ.
           </SmallText>
         </Caption>
         <thead>
           <tr>
             <Th>Mois</Th>
             <Th>Salaire mensuel brut</Th>
+            <Th>Dont primes exceptionnelles</Th>
           </tr>
         </thead>
         <tbody>
@@ -87,12 +108,12 @@ export const SalaireTempsPlein = ({
               </td>
               <td>
                 <Input
-                  name={`salaries[${index}]`}
+                  id={`salary.${index}`}
+                  name={`salary.${index}`}
                   title={`Salaire mensuel brut pour le mois ${
                     index + 1
                   } (prendre en compte les primes et avantages en nature)`}
                   type="number"
-                  id={`salary${index}`}
                   invalid={errorsSalaries[`${index}`]}
                   value={salaryPeriod.value}
                   icon={icons.Euro}
@@ -104,6 +125,32 @@ export const SalaireTempsPlein = ({
                   <ErrorWrapper>
                     <InlineError>{errorsSalaries[`${index}`]}</InlineError>
                   </ErrorWrapper>
+                )}
+              </td>
+              <td>
+                {index < 3 && (
+                  <>
+                    <Input
+                      title={`Renseignez la prime exceptionnelle pour le mois ${
+                        index + 1
+                      } ici`}
+                      id={`prime.${index}`}
+                      name={`prime.${index}`}
+                      type="number"
+                      error={errorsPrimes[`${index}`]}
+                      icon={icons.Euro}
+                      onChange={(e) =>
+                        onChangeLocalPrimes(index, e.target.value)
+                      }
+                      value={salaryPeriod.prime}
+                      updateOnScrollDisabled
+                    />
+                    {errorsPrimes[`${index}`] && (
+                      <ErrorWrapper>
+                        <InlineError>{errorsPrimes[`${index}`]}</InlineError>
+                      </ErrorWrapper>
+                    )}
+                  </>
                 )}
               </td>
             </tr>
@@ -132,16 +179,8 @@ const Table = styled.table`
   width: 100%;
   text-align: left;
 
-  & tr > td:nth-child(2) {
-    width: 80%;
-    text-align: left;
-  }
-
   @media (max-width: ${breakpoints.mobile}) {
     width: 100%;
-    & tr > td:nth-child(2) {
-      width: 60%;
-    }
   }
 `;
 

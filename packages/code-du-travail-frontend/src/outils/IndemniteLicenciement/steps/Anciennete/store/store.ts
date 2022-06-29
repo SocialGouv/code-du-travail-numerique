@@ -84,10 +84,7 @@ const createAncienneteStore: StoreSlice<
           state.ancienneteData.input.seniority = seniority;
         })
       );
-
-      setSalaryPeriods(get, set);
-
-      return isStepValid;
+      return isValid;
     },
   },
 });

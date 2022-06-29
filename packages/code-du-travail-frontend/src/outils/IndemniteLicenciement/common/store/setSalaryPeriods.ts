@@ -31,10 +31,7 @@ export const setSalaryPeriods = (
       produce((state: SalairesStoreSlice) => {
         state.salairesData.input.salaireBrut = undefined;
         state.salairesData.input.salaryPeriods = salaryPeriods;
-<<<<<<< HEAD
-=======
         state.salairesData.input.hasBeenInit = "oui";
->>>>>>> dev
       })
     );
   } else {
@@ -42,10 +39,7 @@ export const setSalaryPeriods = (
       produce((state: SalairesStoreSlice) => {
         state.salairesData.input.hasPrimes = undefined;
         state.salairesData.input.salaryPeriods = [];
-<<<<<<< HEAD
-=======
         state.salairesData.input.hasBeenInit = "oui";
->>>>>>> dev
       })
     );
   }

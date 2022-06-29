@@ -17,7 +17,7 @@ describe("<SalaireTempsPlein />", () => {
   });
 
   it("should render salaries period by default", () => {
-    const { getAllByTitle } = render(
+    const { queryByText } = render(
       <SalaireTempsPlein
         title="Salaire mensuel brut"
         onSalariesChange={jest.fn()}
@@ -29,7 +29,10 @@ describe("<SalaireTempsPlein />", () => {
         ]}
       />
     );
-    expect(getAllByTitle(/Salaire mensuel brut pour le mois/i)).toHaveLength(1);
+    const item = queryByText("Indiquez le montant des salaires mensuels brut", {
+      exact: false,
+    });
+    expect(item).toBeTruthy();
   });
 
   it("should modify a value of the month", () => {
@@ -56,6 +59,35 @@ describe("<SalaireTempsPlein />", () => {
       {
         month: "janvier",
         value: 1500,
+      },
+    ]);
+  });
+
+  it("should add a prime", () => {
+    const onSalariesChange = jest.fn();
+    const { getByTitle } = render(
+      <SalaireTempsPlein
+        onSalariesChange={onSalariesChange}
+        salaryPeriods={[
+          {
+            month: "janvier",
+            value: 2000,
+          },
+        ]}
+      />
+    );
+    const input1 = getByTitle(
+      /Renseignez la prime exceptionnelle pour le mois 1 ici/i
+    ) as HTMLInputElement;
+    expect(input1).toBeTruthy();
+    fireEvent.change(input1, { target: { value: "6000" } });
+    expect(input1.value).toBe("6000");
+    expect(onSalariesChange).toHaveBeenCalledTimes(1);
+    expect(onSalariesChange).toHaveBeenCalledWith([
+      {
+        month: "janvier",
+        value: 2000,
+        prime: 6000,
       },
     ]);
   });
