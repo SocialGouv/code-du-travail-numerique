@@ -67,4 +67,36 @@ describe("Indemnité légale de licenciement pour un employé", () => {
       expect(result.missingVariables).toEqual({});
     }
   );
+
+  //TODO: yo
+  test.each`
+    seniority      | salary  | expectedCompensation
+    ${0}           | ${0}    | ${0}
+    ${1}           | ${0}    | ${0}
+    ${2.3}         | ${0}    | ${0}
+    ${1 / 12}      | ${1000} | ${0}
+    ${6 / 12}      | ${1000} | ${0}
+    ${8 / 12}      | ${1000} | ${333.334}
+    ${11 / 12}     | ${2000} | ${916.666}
+    ${13 / 12}     | ${2000} | ${1083.334}
+    ${2}           | ${2000} | ${2000}
+    ${2.333333333} | ${2000} | ${2333.334}
+  `(
+    "Si on utilise le calcul du salaire de référence légal",
+    ({ seniority, salary, expectedCompensation }) => {
+      const result = engine
+        .setSituation({
+          "contrat salarié . ancienneté en année": seniority,
+          "contrat salarié . convention collective": "''",
+          "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
+            "oui",
+          "contrat salarié . salaire de référence": salary,
+          "indemnité de licenciement": "oui",
+        })
+        .evaluate("contrat salarié . indemnité de licenciement");
+      expect(result.nodeValue).toEqual(expectedCompensation);
+      expect(result.unit?.numerators).toEqual(["€"]);
+      expect(result.missingVariables).toEqual({});
+    }
+  );
 });

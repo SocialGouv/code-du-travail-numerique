@@ -16,11 +16,75 @@ contrat salarié . le meilleur salaire de référence:
     - contrat salarié . salaire de référence conventionnel
     - contrat salarié . salaire de référence
 
+contrat salarié . date d'entrée:
+  unité: an
+
+contrat salarié . date de sortie:
+  unité: an
+
+contrat salarié . ancienneté du début à la fin:
+  unité: an
+  durée:
+    depuis: contrat salarié . date d'entrée
+    jusqu'à: contrat salarié . date de sortie
+
+contrat salarié . absence pour maladie non pro:
+  titre: Absence pour maladie non professionnelle
+  unité: mois
+
+contrat salarié . absence pour accident de trajet:
+  titre: Arrêt maladie lié à un accident de trajet
+  unité: mois
+
+contrat salarié . absence pour congé sabbatique:
+  titre: Congé sabbatique
+  unité: mois
+
+contrat salarié . absence pour congé création d'entreprise:
+  titre: Congé pour création d'entreprise
+  unité: mois
+
+contrat salarié . absence pour congé parental d'éducation:
+  titre: Congé parental d'éducation
+  unité: mois
+
+contrat salarié . absence pour grève:
+  titre: Grève
+  unité: mois
+
+contrat salarié . absence pour congé sans solde:
+  titre: Congés sans solde
+  unité: mois
+
+contrat salarié . absence pour mise à pied:
+  titre: Mise à pied
+  unité: mois
+
+contrat salarié . absence pour maladie d'origine non pro:
+  titre: Maladie d'origine non professionnelle
+  unité: mois
+
+contrat salarié . absence pour congé paternité:
+  titre: Congé de paternité
+  unité: mois
+
+contrat salarié . somme des absences:
+  unité: mois
+  somme:
+    - contrat salarié . absence pour maladie non pro
+    - contrat salarié . absence pour accident de trajet
+    - contrat salarié . absence pour congé sabbatique
+    - contrat salarié . absence pour congé création d'entreprise
+    - contrat salarié . absence pour congé parental d'éducation / 2
+    - contrat salarié . absence pour grève
+    - contrat salarié . absence pour congé sans solde
+    - contrat salarié . absence pour mise à pied
+    - contrat salarié . absence pour maladie d'origine non pro
+    - contrat salarié . absence pour congé paternité
+
 contrat salarié . ancienneté en année:
   titre: Ancienneté du salarié en année
-  cdtn:
-    type: entier
-  unit: an
+  valeur: contrat salarié . ancienneté du début à la fin - contrat salarié . somme des absences
 
 contrat salarié . inaptitude suite à un accident ou maladie professionnelle:
   titre: Inaptitude
