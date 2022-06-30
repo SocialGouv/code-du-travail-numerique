@@ -16,7 +16,7 @@ type Props = {
   agreement: {
     result: PublicodesPreavisRetraiteResult;
     maximum: PublicodesPreavisRetraiteResult | null;
-  } | null;
+  };
 };
 
 const ShowResult: React.FC<{
@@ -96,7 +96,7 @@ export const createRootData = (
   result: PublicodesPreavisRetraiteResult,
   legalResult: PublicodesPreavisRetraiteResult,
   supportedCcn: AgreementInfo[],
-  agreementResult?: PublicodesPreavisRetraiteResult
+  agreementResult: PublicodesPreavisRetraiteResult | null
 ): RootData => {
   let agreement: Agreement | null = null;
   if (data.ccn?.selected) {
@@ -194,7 +194,7 @@ const DecryptedResult: React.FC<Props> = ({
     result,
     legalResult,
     supportedCcn,
-    agreement?.result
+    agreement.result
   );
   const description = getDescription(rootData);
   return (
@@ -204,16 +204,16 @@ const DecryptedResult: React.FC<Props> = ({
         Durée prévue par le code du travail (durée légale)&nbsp;:&nbsp;
         <ShowResult
           result={legalResult}
-          agreementMaximumResult={agreement && agreement.maximum}
+          agreementMaximumResult={agreement.maximum}
         />
       </Paragraph>
       <Paragraph>
         Durée prévue par la convention collective (durée
         conventionnelle)&nbsp;:&nbsp;
         <ShowResultAgreement
-          result={agreement && agreement.result}
+          result={agreement.result}
           detail={rootData.agreement}
-          agreementMaximumResult={agreement && agreement.maximum}
+          agreementMaximumResult={agreement.maximum}
         />
       </Paragraph>
       {description && <Paragraph>{description}</Paragraph>}

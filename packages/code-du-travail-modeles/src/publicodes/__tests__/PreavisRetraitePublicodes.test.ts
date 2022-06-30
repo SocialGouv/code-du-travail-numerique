@@ -108,7 +108,6 @@ describe("PreavisRetraitePublicodes::class", () => {
   it("doit retourner le résultat", () => {
     expect(publicodes.data.result).toEqual({
       unit: "mois",
-      valid: true,
       value: 2,
       valueInDays: 60.833333333333336,
     });
