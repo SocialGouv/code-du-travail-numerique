@@ -27,7 +27,6 @@ describe("Testing the transformation of the unit from publicodes (in days) into 
     ({ input, expectedUnit, expectedValue }) => {
       expect(convertDaysIntoBetterUnit(input)).toEqual({
         unit: expectedUnit,
-        valid: true,
         value: expectedValue,
         valueInDays: parseFloat(input),
       });

@@ -15,7 +15,6 @@ export const convertDaysIntoBetterUnit = (
       unit: isWeek
         ? PublicodesConvertedUnit.WEEK
         : PublicodesConvertedUnit.WEEKS,
-      valid: true,
       value: parsedWeek,
       valueInDays: parsedDay,
     };
@@ -27,14 +26,12 @@ export const convertDaysIntoBetterUnit = (
     const parsedMonth = Math.round(parsedDay / (365 / 12));
     return {
       unit: PublicodesConvertedUnit.MONTH,
-      valid: true,
       value: parsedMonth,
       valueInDays: parsedDay,
     };
   }
   return {
     unit: isDay ? PublicodesConvertedUnit.DAY : PublicodesConvertedUnit.DAYS,
-    valid: true,
     value: parsedDay,
     valueInDays: parsedDay,
   };

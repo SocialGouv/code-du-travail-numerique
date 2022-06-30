@@ -29,11 +29,11 @@ export enum WarningType {
 export type ResultStepProps = {
   notice: {
     result: PublicodesPreavisRetraiteResult;
-    legal: PublicodesPreavisRetraiteResult | null;
+    legal: PublicodesPreavisRetraiteResult;
     agreement: {
       result: PublicodesPreavisRetraiteResult;
       maximum: PublicodesPreavisRetraiteResult | null;
-    } | null;
+    };
     type: "mise" | "départ";
     notifications: Notification[];
   };
@@ -54,7 +54,7 @@ function ResultStep({ notice, detail, warning }: ResultStepProps): JSX.Element {
     <>
       <ShowResult
         result={notice.result}
-        agreementMaximumResult={notice.agreement && notice.agreement.maximum}
+        agreementMaximumResult={notice.agreement.maximum}
         type={notice.type}
         notifications={notice.notifications}
       />
@@ -64,14 +64,12 @@ function ResultStep({ notice, detail, warning }: ResultStepProps): JSX.Element {
           elements={detail.situation}
           minSeniorityYear={detail.minYearCount}
         />
-        {notice.legal && (
-          <DecryptedResult
-            data={detail.values}
-            legalResult={notice.legal}
-            result={notice.result}
-            agreement={notice.agreement}
-          />
-        )}
+        <DecryptedResult
+          data={detail.values}
+          legalResult={notice.legal}
+          result={notice.result}
+          agreement={notice.agreement}
+        />
         <PubliReferences references={detail.references} />
       </ShowDetails>
       <WarningResult hasNotice={warning.hasNotice} type={warning.type} />
