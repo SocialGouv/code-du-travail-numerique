@@ -5,9 +5,13 @@ type Props = {
   salaires: SalaryPeriods[];
 };
 
+function nonNullable<T>(value: T): value is NonNullable<T> {
+  return value !== null && value !== undefined;
+}
+
 export default function computeReferenceSalary({ salaires = [] }: Props) {
-  const primeValues = salaires.map((v) => v.prime).filter(Boolean);
-  const salaryValues = salaires.map((a) => a.value).filter(Boolean);
+  const primeValues = salaires.map((v) => v.prime).filter(nonNullable);
+  const salaryValues = salaires.map((a) => a.value).filter(nonNullable);
 
   let moyenneSalaires = 0;
   let moyenne3DerniersMoisSalaires = 0;
