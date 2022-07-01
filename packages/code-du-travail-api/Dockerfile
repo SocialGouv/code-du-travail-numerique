@@ -5,7 +5,7 @@ WORKDIR /
 
 COPY package.json ./
 
-RUN yarn install
+RUN yarn install --frozen-lockfile
 
 COPY . ./
 
@@ -18,7 +18,7 @@ WORKDIR /
 
 COPY package.json ./
 
-RUN yarn install --prod
+RUN yarn install --frozen-lockfile --prod
 
 # app
 FROM node:14.17-alpine3.13
