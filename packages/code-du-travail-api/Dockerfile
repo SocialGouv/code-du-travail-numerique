@@ -1,5 +1,6 @@
+ARG NODE_VERSION=14.18-alpine3.13
 # dist
-FROM node:14.17-alpine3.13 AS dist
+FROM node:$NODE_VERSION AS dist
 
 WORKDIR /
 
@@ -12,7 +13,7 @@ COPY . ./
 RUN yarn build
 
 # node_modules
-FROM node:14.17-alpine3.13 AS node_modules
+FROM node:$NODE_VERSION AS node_modules
 
 WORKDIR /
 
@@ -21,7 +22,7 @@ COPY package.json ./
 RUN yarn install --frozen-lockfile --prod
 
 # app
-FROM node:14.17-alpine3.13
+FROM node:$NODE_VERSION
 
 RUN mkdir -p /app
 
