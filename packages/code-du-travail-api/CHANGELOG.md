@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.79.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.78.1...v4.79.0) (2022-07-01)
+
+
+### Bug Fixes
+
+* **search:** add synonymes and a snapshot test to most popular result ([#4393](https://github.com/SocialGouv/code-du-travail-numerique/issues/4393)) ([4eec42f](https://github.com/SocialGouv/code-du-travail-numerique/commit/4eec42f2711269990fa0d7832b9124cb7e29ec19))
+
+
+
+
+
 ## [4.78.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.78.0...v4.78.1) (2022-06-17)
 
 **Note:** Version bump only for package @cdt/api

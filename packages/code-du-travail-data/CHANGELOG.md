@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.79.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.78.1...v4.79.0) (2022-07-01)
+
+
+### Features
+
+* **tools:** modification des règles du préavis de démission pour la CC 3239 ([#4449](https://github.com/SocialGouv/code-du-travail-numerique/issues/4449)) ([6242448](https://github.com/SocialGouv/code-du-travail-numerique/commit/62424484a4cc06811c5f713e892d8a7156c7df42))
+* **tools:** modification des résultats de l'indemnité de licenciement pour la CC 3239 ([#4446](https://github.com/SocialGouv/code-du-travail-numerique/issues/4446)) ([685d578](https://github.com/SocialGouv/code-du-travail-numerique/commit/685d57842c1d8132b6bab47c2c8ea970a8a33e6b))
+
+
+
+
+
 ## [4.78.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.78.0...v4.78.1) (2022-06-17)
 
 **Note:** Version bump only for package @cdt/data
