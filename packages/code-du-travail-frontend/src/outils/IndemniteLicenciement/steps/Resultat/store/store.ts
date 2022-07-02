@@ -1,8 +1,11 @@
 import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
 import { StoreSlice } from "../../../store";
-import { mapToPublicodesSituationForIndemniteLicenciement } from "../../../../publicodes";
+import {
+  IndemniteLicenciementSeniority,
+  mapToPublicodesSituationForIndemniteLicenciement,
+} from "../../../../publicodes";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
-import { generateExplanation } from "../../../common";
+import { convertToSeniority, generateExplanation } from "../../../common";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { SalairesStoreSlice } from "../../Salaires/store";
 import produce from "immer";
@@ -30,7 +33,11 @@ const createResultStore: StoreSlice<
     getPublicodesResult: () => {
       const refSalary = get().salairesData.input.refSalary;
       const agreementRefSAlary = get().salairesData.input.agreementRefSAlary;
-      const seniority = get().ancienneteData.input.seniority;
+      const seniority: IndemniteLicenciementSeniority = convertToSeniority(
+        get().ancienneteData.input.dateEntree!,
+        get().ancienneteData.input.dateSortie!,
+        get().ancienneteData.input.absencePeriods
+      );
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
       const publicodes = get().resultData.publicodes;
@@ -49,7 +56,8 @@ const createResultStore: StoreSlice<
       );
 
       const infoCalcul = generateExplanation({
-        anciennete: seniority,
+        anciennete: publicodes.execute("contrat salarié . ancienneté en année")
+          .value as number,
         inaptitude: isLicenciementInaptitude,
         salaireRef: refSalary,
       });

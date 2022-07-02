@@ -1,8 +1,22 @@
 import { formatNumberAsString } from "./common";
 
+export type IndemniteLicenciementSeniority = {
+  absenceAccidentTrajet: number;
+  absenceCongesCreationEntreprise: number;
+  absenceCongesParentalEducation: number;
+  absenceCongesPaternite: number;
+  absenceCongesSabbatique: number;
+  absenceGreve: number;
+  absenceMaladieOrigineNonPro: number;
+  absenceMaladiePro: number;
+  absenceMiseAPied: number;
+  entryDate: string;
+  exitDate: string;
+};
+
 export const mapToPublicodesSituationForIndemniteLicenciement = (
   ccn: number | undefined,
-  seniority: number,
+  seniority: IndemniteLicenciementSeniority,
   salaireRef: number,
   salaireAgreementRef: number | undefined,
   inaptitude: boolean
@@ -27,10 +41,38 @@ export const mapToPublicodesSituationForIndemniteLicenciement = (
     ...agreement,
     ...agreementRefSalary,
     ...{
-      "contrat salarié - ancienneté en année": formatNumberAsString(seniority),
       "contrat salarié - salaire de référence":
         formatNumberAsString(salaireRef),
-      "contrat salarié . ancienneté en année": formatNumberAsString(seniority),
+      "contrat salarié . absence pour accident de trajet": formatNumberAsString(
+        seniority.absenceAccidentTrajet
+      ),
+      "contrat salarié . absence pour congé création d'entreprise":
+        formatNumberAsString(seniority.absenceCongesCreationEntreprise),
+      "contrat salarié . absence pour congé parental d'éducation":
+        formatNumberAsString(seniority.absenceCongesParentalEducation),
+      "contrat salarié . absence pour congé paternité": formatNumberAsString(
+        seniority.absenceCongesPaternite
+      ),
+      "contrat salarié . absence pour congé sabbatique": formatNumberAsString(
+        seniority.absenceCongesSabbatique
+      ),
+      "contrat salarié . absence pour congé sans solde": formatNumberAsString(
+        seniority.absenceGreve
+      ),
+      "contrat salarié . absence pour grève": formatNumberAsString(
+        seniority.absenceGreve
+      ),
+      "contrat salarié . absence pour maladie d'origine non pro":
+        formatNumberAsString(seniority.absenceMaladieOrigineNonPro),
+      "contrat salarié . absence pour maladie non pro": formatNumberAsString(
+        seniority.absenceMaladiePro
+      ),
+      "contrat salarié . absence pour mise à pied": formatNumberAsString(
+        seniority.absenceMiseAPied
+      ),
+      "contrat salarié . convention collective": "''",
+      "contrat salarié . date d'entrée": seniority.entryDate,
+      "contrat salarié . date de sortie": seniority.exitDate,
       "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
         inaptitude ? "oui" : "non",
       "indemnité de licenciement": "oui",

@@ -1,6 +1,6 @@
 import { loadPublicodesRules } from "../../../../../api";
+import { MOTIFS } from "../../../../common";
 import { createIndemniteLicenciementStore } from "../../../../store";
-import { MOTIFS } from "../../components/AbsencePeriods";
 
 describe("Ancienneté store", () => {
   let store = createIndemniteLicenciementStore(
