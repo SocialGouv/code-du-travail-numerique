@@ -4,20 +4,14 @@ describe("computeReferenceSalary", () => {
   it("should compute reference salary for a basic use case", () => {
     expect(
       computeReferenceSalary({
-        hasSameSalaire: true,
-        salaires: [],
-        primes: [],
-        salaire: 2000,
+        salaires: [{ month: "janvier", value: 2000 }],
       })
     ).toEqual(2000);
   });
   it("should compute reference salary for a basic use case with primes", () => {
     expect(
       computeReferenceSalary({
-        hasSameSalaire: true,
-        salaires: [],
-        primes: [4000, 3000, 20000],
-        salaire: 2000,
+        salaires: [{ month: "janvier", value: 2000, prime: 200 }],
       })
     ).toEqual(2000);
   });
@@ -25,13 +19,10 @@ describe("computeReferenceSalary", () => {
   it("should compute reference salary if salaire is different between 2 months", () => {
     expect(
       computeReferenceSalary({
-        hasSameSalaire: false,
         salaires: [
           { month: "janvier", value: 3000 },
           { month: "février", value: 2000 },
         ],
-        primes: [],
-        salaire: undefined,
       })
     ).toEqual(2500);
   });
@@ -39,9 +30,8 @@ describe("computeReferenceSalary", () => {
   it("should compute reference salary if salaire is different between 2 months with primes", () => {
     expect(
       computeReferenceSalary({
-        hasSameSalaire: false,
         salaires: [
-          { month: "janvier", value: 3000 },
+          { month: "janvier", value: 3000, prime: 2500 },
           { month: "février", value: 2500 },
           { month: "mars", value: 2500 },
           { month: "avril", value: 1700 },
@@ -54,8 +44,6 @@ describe("computeReferenceSalary", () => {
           { month: "novembre", value: 1700 },
           { month: "décemebre", value: 1700 },
         ],
-        primes: [2500],
-        salaire: undefined,
       })
     ).toEqual(2041.6666666666665);
   });
@@ -63,14 +51,11 @@ describe("computeReferenceSalary", () => {
   it("should compute reference salary if salaire is different between 2 months with primes for 3 months", () => {
     expect(
       computeReferenceSalary({
-        hasSameSalaire: false,
         salaires: [
-          { month: "janvier", value: 3000 },
-          { month: "février", value: 2500 },
-          { month: "mars", value: 2500 },
+          { month: "janvier", value: 3000, prime: 20 },
+          { month: "février", value: 2500, prime: 20 },
+          { month: "mars", value: 2500, prime: 20 },
         ],
-        primes: [20, 20, 20],
-        salaire: undefined,
       })
     ).toEqual(2666.66666666666655);
   });

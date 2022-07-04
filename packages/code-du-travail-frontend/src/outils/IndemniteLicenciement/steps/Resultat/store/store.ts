@@ -50,11 +50,6 @@ const createResultStore: StoreSlice<
       });
 
       const salaireRef = computeReferenceSalary({
-        hasSameSalaire: salaireInput.hasSameSalaire === "oui",
-        primes: salaireInput.primes,
-        salaire: salaireInput.salaireBrut
-          ? parseFloat(salaireInput.salaireBrut!)
-          : undefined,
         salaires: salaireInput.salaryPeriods,
       });
 
