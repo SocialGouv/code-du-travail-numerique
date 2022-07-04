@@ -31,7 +31,7 @@ export type Content = {
 export type Breadcrumb = {
   label: string;
   slug: string;
-}
+};
 
 export type EditorialContent = {
   breadcrumbs: Breadcrumb[];
@@ -46,10 +46,10 @@ export type EditorialContent = {
 
 export type EditorialContentData = {
   _source: Partial<EditorialContent>;
-  relatedItems?: any[];
+  relatedItems?: string[];
 };
 
 export type EditorialContentDataWrapper = {
-  anchor: any;
+  anchor: string[];
   information: EditorialContentData;
 };

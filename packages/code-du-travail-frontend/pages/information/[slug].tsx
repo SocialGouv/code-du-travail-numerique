@@ -46,7 +46,7 @@ const InfoLink = ({ children, href }) => {
 };
 
 const processor = unified()
-  // @ts-ignore TODO trouver comment typer ca
+  // @ts-ignore
   .use(htmlToHtmlAst, { fragment: true })
   // @ts-ignore
   .use(htmlAstToReact, {

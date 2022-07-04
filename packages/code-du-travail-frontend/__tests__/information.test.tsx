@@ -1,11 +1,11 @@
 import { render, RenderResult } from "@testing-library/react";
 import React from "react";
 
-import InformationPage from "../[slug]";
+import InformationPage from "../pages/information/[slug]";
 import { EditorialContentDataWrapper, SectionDisplayMode } from "cdtn-types";
 
 const mockedProps: EditorialContentDataWrapper = {
-  anchor: "test",
+  anchor: [],
   information: {
     _source: {
       breadcrumbs: [],
@@ -35,7 +35,7 @@ describe("Information Page", () => {
   describe("Given a parameter sectionDisplayMode = 'accordion'", () => {
     beforeAll(() => {
       mockedProps.information._source.sectionDisplayMode =
-        SectionDisplayMode.accordion;
+        SectionDisplayMode.accordeon;
     });
     it("should contain accordions", () => {
       const accordions = renderResult.getByTestId("accordion");
