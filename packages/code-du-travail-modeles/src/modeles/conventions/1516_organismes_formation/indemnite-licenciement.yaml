@@ -30,7 +30,7 @@ contrat salarié . convention collective . organismes de formation . indemnité 
 contrat salarié . convention collective . organismes de formation . indemnité de licenciement conventionnel:
   remplace: contrat salarié . indemnité de licenciement conventionnel
   variations:
-    - si: ancienneté en année > (7 mois / 12)
+    - si: ancienneté en année > 24 mois
       alors:
         somme:
           - contrat salarié . convention collective . organismes de formation . indemnité de licenciement . ancienneté totale
