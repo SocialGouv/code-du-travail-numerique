@@ -3,7 +3,6 @@ import produce from "immer";
 import { GetState, SetState } from "zustand";
 import { IndemniteLicenciementStepName } from "../../..";
 import { validateAgreement } from "../../../agreements";
-import { computeSeniority } from "../../../common";
 import { StoreSlice } from "../../../store";
 import { SalairesStoreSlice } from "../../Salaires/store";
 
@@ -19,7 +18,6 @@ const initialState: AncienneteStoreData = {
   isStepValid: true,
   input: {
     absencePeriods: [],
-    seniority: 0,
   },
   error: {},
 };
@@ -56,16 +54,6 @@ const createAncienneteStore: StoreSlice<
     onValidateStepAnciennete: () => {
       const { isValid, errorState } = validateStep(get().ancienneteData.input);
 
-      let seniority = 0;
-
-      if (isValid) {
-        seniority = computeSeniority({
-          dateSortie: get().ancienneteData.input.dateSortie!,
-          dateEntree: get().ancienneteData.input.dateEntree!,
-          absencePeriods: get().ancienneteData.input.absencePeriods!,
-        });
-      }
-
       const isAgreementValid = validateAgreement(
         SupportedCcIndemniteLicenciement.IDCC1516, //TODO: replace par la cc
         IndemniteLicenciementStepName.Anciennete,
@@ -80,7 +68,6 @@ const createAncienneteStore: StoreSlice<
           state.ancienneteData.hasBeenSubmit = isStepValid ? false : true;
           state.ancienneteData.isStepValid = isStepValid;
           state.ancienneteData.error = errorState;
-          state.ancienneteData.input.seniority = seniority;
         })
       );
       return isValid;

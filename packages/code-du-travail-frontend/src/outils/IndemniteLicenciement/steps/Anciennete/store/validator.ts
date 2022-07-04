@@ -1,9 +1,9 @@
 import { isAfter, format, differenceInMonths } from "date-fns";
 import { isValidDate, deepEqualObject } from "../../../../../lib";
 import { parse } from "../../../../common/utils";
-import { MOTIFS } from "../components/AbsencePeriods";
 import { AncienneteStoreInput, AncienneteStoreError } from "./types";
 import frLocale from "date-fns/locale/fr";
+import { MOTIFS } from "../../../common";
 
 export const validateStep = (state: AncienneteStoreInput) => {
   const dEntree = parse(state.dateEntree);

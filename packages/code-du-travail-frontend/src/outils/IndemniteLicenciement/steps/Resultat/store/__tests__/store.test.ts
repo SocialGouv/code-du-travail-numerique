@@ -1,6 +1,6 @@
 import { loadPublicodesRules } from "../../../../../api";
+import { MOTIFS } from "../../../../common";
 import { createIndemniteLicenciementStore } from "../../../../store";
-import { MOTIFS } from "../../../Anciennete/components/AbsencePeriods";
 
 describe("Result store", () => {
   let store: ReturnType<typeof createIndemniteLicenciementStore>;
@@ -99,9 +99,6 @@ describe("Result store", () => {
     expect(store.getState().resultData.input.publicodesResult).toBeTruthy();
 
     expect(store.getState().salairesData.input.refSalary).toBe(2000);
-    expect(store.getState().ancienneteData.input.seniority).toBe(
-      1.8333333333333333
-    );
     expect(store.getState().resultData.input.infoCalcul).toStrictEqual({
       formula: "1 / 4 * Sref * A",
       labels: {
@@ -189,9 +186,6 @@ describe("Result store", () => {
 
     expect(store.getState().salairesData.input.refSalary).toBe(
       916.6666666666666
-    );
-    expect(store.getState().ancienneteData.input.seniority).toBe(
-      1.8333333333333333
     );
 
     store.getState().resultFunction.getPublicodesResult();

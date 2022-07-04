@@ -1,10 +1,8 @@
 import { differenceInMonths, format, subMonths } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import { parse } from "../../../common/utils";
-import {
-  Absence,
-  MOTIFS,
-} from "../../steps/Anciennete/components/AbsencePeriods";
+import { MOTIFS } from "../motifs";
+import { Absence } from "../types";
 
 type Props = {
   dateEntree: string;
@@ -23,11 +21,8 @@ function computeSalaryPeriods({
   const totalAbsence = (absencePeriods || [])
     .filter((period) => Boolean(period.durationInMonth))
     .reduce((total, item) => {
-      const motif = MOTIFS.find((motif) => motif.label === item.motif) as {
-        label: string;
-        value: number;
-      };
-      if (item.durationInMonth) {
+      const motif = MOTIFS.find((motif) => motif.label === item.motif);
+      if (motif && item.durationInMonth) {
         return total + item.durationInMonth * motif.value;
       }
       return total;
