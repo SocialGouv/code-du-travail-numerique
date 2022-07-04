@@ -5,3 +5,6 @@ export function isFloat(n: number): boolean {
 export function formatNumber(toBeFormmatted: number): string {
   return isNaN(toBeFormmatted) ? "0" : toBeFormmatted.toString();
 }
+
+export const sum = (values: number[]): number =>
+  values.reduce((a, b) => a + b, 0);

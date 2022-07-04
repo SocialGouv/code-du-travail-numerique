@@ -4,11 +4,82 @@ contrat salarié . salaire de référence:
   cdtn:
     type: entier
 
-contrat salarié . ancienneté en année:
-  titre: Ancienneté du salarié en année
+contrat salarié . salaire de référence conventionnel:
+  titre: Salaire de référence du salarié
+  unité: €
   cdtn:
     type: entier
-  unit: an
+  valeur: non
+
+contrat salarié . date d'entrée:
+  unité: an
+
+contrat salarié . date de sortie:
+  unité: an
+
+contrat salarié . ancienneté du début à la fin:
+  unité: an
+  durée:
+    depuis: contrat salarié . date d'entrée
+    jusqu'à: contrat salarié . date de sortie
+
+contrat salarié . absence pour maladie non pro:
+  titre: Absence pour maladie non professionnelle
+  unité: mois
+
+contrat salarié . absence pour accident de trajet:
+  titre: Arrêt maladie lié à un accident de trajet
+  unité: mois
+
+contrat salarié . absence pour congé sabbatique:
+  titre: Congé sabbatique
+  unité: mois
+
+contrat salarié . absence pour congé création d'entreprise:
+  titre: Congé pour création d'entreprise
+  unité: mois
+
+contrat salarié . absence pour congé parental d'éducation:
+  titre: Congé parental d'éducation
+  unité: mois
+
+contrat salarié . absence pour grève:
+  titre: Grève
+  unité: mois
+
+contrat salarié . absence pour congé sans solde:
+  titre: Congés sans solde
+  unité: mois
+
+contrat salarié . absence pour mise à pied:
+  titre: Mise à pied
+  unité: mois
+
+contrat salarié . absence pour maladie d'origine non pro:
+  titre: Maladie d'origine non professionnelle
+  unité: mois
+
+contrat salarié . absence pour congé paternité:
+  titre: Congé de paternité
+  unité: mois
+
+contrat salarié . somme des absences:
+  unité: mois
+  somme:
+    - contrat salarié . absence pour maladie non pro
+    - contrat salarié . absence pour accident de trajet
+    - contrat salarié . absence pour congé sabbatique
+    - contrat salarié . absence pour congé création d'entreprise
+    - contrat salarié . absence pour congé parental d'éducation / 2
+    - contrat salarié . absence pour grève
+    - contrat salarié . absence pour congé sans solde
+    - contrat salarié . absence pour mise à pied
+    - contrat salarié . absence pour maladie d'origine non pro
+    - contrat salarié . absence pour congé paternité
+
+contrat salarié . ancienneté en année:
+  titre: Ancienneté du salarié en année
+  valeur: contrat salarié . ancienneté du début à la fin - contrat salarié . somme des absences
 
 contrat salarié . inaptitude suite à un accident ou maladie professionnelle:
   titre: Inaptitude
@@ -24,8 +95,8 @@ contrat salarié . indemnité de licenciement:
     - si: ancienneté en année > (7 mois / 12)
       alors:
         somme:
-        - indemnité de licenciement . dix ans ou moins
-        - indemnité de licenciement . plus de dix ans
+          - indemnité de licenciement . dix ans ou moins
+          - indemnité de licenciement . plus de dix ans
     - sinon: 0
   unité: €
   arrondi: 3 décimales
@@ -46,8 +117,8 @@ contrat salarié . indemnité de licenciement . inaptitude suite à un accident 
 contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins:
   valeur:
     le minimum de:
-       - ancienneté en année
-       - 10 an
+      - ancienneté en année
+      - 10 an
 
 contrat salarié . indemnité de licenciement . au dela de dix ans:
   somme:
@@ -67,4 +138,8 @@ contrat salarié . indemnité de licenciement . plus de dix ans:
     produit:
       assiette: salaire de référence * au dela de dix ans
       facteur: 1 / 3
+  unité: €
+
+contrat salarié . indemnité de licenciement conventionnel:
+  valeur: non
   unité: €

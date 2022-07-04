@@ -86,6 +86,7 @@ const IndemniteLicenciementSimulator = ({
       ancienneteData: { ...state.ancienneteData },
       salairesData: { ...state.salairesData },
       resultData: resultDataWithoutPublicodes,
+      agreement1516Data: { ...state.agreement1516Data },
     };
   });
 

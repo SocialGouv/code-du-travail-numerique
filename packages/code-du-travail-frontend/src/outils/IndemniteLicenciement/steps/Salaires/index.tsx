@@ -1,8 +1,10 @@
 import React from "react";
-
 import { useIndemniteLicenciementStore } from "../../store";
 import { RadioQuestion } from "../../../Components";
 import { TempsPartiel, SalaireTempsPlein } from "./components";
+import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
+import { IndemniteLicenciementStepName } from "../..";
+import { AgreementsInjector } from "../../agreements";
 
 const StepSalaires = () => {
   const {
@@ -51,11 +53,19 @@ const StepSalaires = () => {
       />
       {hasTempsPartiel === "oui" && <TempsPartiel />}
       {hasTempsPartiel === "non" && (
-        <SalaireTempsPlein
-          onSalariesChange={onSalariesChange}
-          salaryPeriods={salaryPeriods}
-          error={errorSalaryPeriods}
-        />
+        <>
+          <SalaireTempsPlein
+            title="Indiquez le montant des salaires mensuels brut perçus au cours des
+            12 mois précédents la notification du licenciement"
+            onSalariesChange={onSalariesChange}
+            salaryPeriods={salaryPeriods}
+            error={errorSalaryPeriods}
+          />
+          <AgreementsInjector
+            idcc={SupportedCcIndemniteLicenciement.IDCC1516}
+            step={IndemniteLicenciementStepName.Salaires}
+          />
+        </>
       )}
     </>
   );
