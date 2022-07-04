@@ -35,7 +35,7 @@ describe("Information Page", () => {
   describe("Given a parameter sectionDisplayMode = 'accordion'", () => {
     beforeAll(() => {
       mockedProps.information._source.sectionDisplayMode =
-        SectionDisplayMode.accordeon;
+        SectionDisplayMode.accordion;
     });
     it("should contain accordions", () => {
       const accordions = renderResult.getByTestId("accordion");

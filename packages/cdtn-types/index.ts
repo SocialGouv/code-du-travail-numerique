@@ -1,5 +1,5 @@
 export enum SectionDisplayMode {
-  accordeon = "accordeon",
+  accordion = "accordion",
   tab = "tab",
 }
 
