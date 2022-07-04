@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.79.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.79.1...v4.79.2) (2022-07-01)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+## [4.79.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.79.0...v4.79.1) (2022-07-01)
+
+**Note:** Version bump only for package @socialgouv/modeles-social
+
+
+
+
+
+# [4.79.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.78.1...v4.79.0) (2022-07-01)
+
+
+### Bug Fixes
+
+* **tools:** le résultat de la convention collective mal renseigné ([#4460](https://github.com/SocialGouv/code-du-travail-numerique/issues/4460)) ([39a0571](https://github.com/SocialGouv/code-du-travail-numerique/commit/39a0571746143634a1b5cd437978a2481bd088ea))
+
+
+### Features
+
+* **simulator:** indemnité de licenciement store ([#4431](https://github.com/SocialGouv/code-du-travail-numerique/issues/4431)) ([1ae50da](https://github.com/SocialGouv/code-du-travail-numerique/commit/1ae50dab352af2b5bbd2214d2f39556820d5138c))
+* **tools:** assistant maternel ne peut pas être mis à la retraite ([#4438](https://github.com/SocialGouv/code-du-travail-numerique/issues/4438)) ([fcfc248](https://github.com/SocialGouv/code-du-travail-numerique/commit/fcfc248265b71331272c01d04ad857181f540c55))
+* **tools:** modification des règles du préavis de retraite pour la CC 3239 ([#4448](https://github.com/SocialGouv/code-du-travail-numerique/issues/4448)) ([ef6d912](https://github.com/SocialGouv/code-du-travail-numerique/commit/ef6d9123951ebf4354509dd8438b039426685072))
+
+
+
+
+
 ## [4.78.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.78.0...v4.78.1) (2022-06-17)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

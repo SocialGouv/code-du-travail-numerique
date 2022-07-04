@@ -1,4 +1,4 @@
-import data from "@cdt/data...prime-precarite/precarite.data.json";
+import { primePrecariteData as data } from "@cdt/data";
 import React from "react";
 
 import { A11yLink } from "../../../common/A11yLink";

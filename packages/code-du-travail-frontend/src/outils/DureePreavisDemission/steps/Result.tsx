@@ -1,4 +1,4 @@
-import data from "@cdt/data...simulateurs/preavis-demission.data.json";
+import { preavisDemissionData as data } from "@cdt/data";
 import PropTypes from "prop-types";
 import React from "react";
 import Disclaimer from "../../common/Disclaimer";
@@ -17,7 +17,7 @@ import {
   SmallText,
 } from "../../common/stepStyles";
 import { WizardStepProps } from "../../common/type/WizardType";
-import { formatRefs } from "../../publicodes/";
+import { formatRefs, OldReference } from "../../publicodes/";
 import { calculateNumberOfElements } from "../../utils";
 
 function DisclaimerBox() {
@@ -46,6 +46,21 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
   };
 
   const [situation] = possibleSituations;
+
+  const refs: OldReference[] = [
+    {
+      ref: situation.ref,
+      refUrl: situation.refUrl,
+    },
+    {
+      ref: situation.ref2 ?? null,
+      refUrl: situation.ref2Url ?? null,
+    },
+  ];
+  if (!situation.disableLegal) {
+    refs.unshift(refLegal);
+  }
+
   return (
     <>
       <SectionTitle>Durée du préavis</SectionTitle>
@@ -67,10 +82,17 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
         <p>
           À partir des éléments que vous avez saisis :{" "}
           <HighlightResult>il n’y a pas de préavis à effectuer</HighlightResult>
+          <NoticeNote
+            isList
+            numberOfElements={calculateNumberOfElements(
+              situation.answer,
+              situation.note
+            )}
+          />
           .
         </p>
       )}
-      {parseInt(situation.answer3, 10) === 0 && (
+      {situation.answer3 && parseInt(situation.answer3, 10) === 0 && (
         <p>
           Le code du travail ne prévoit pas de durée de préavis de démission
           sauf, cas particuliers.
@@ -109,9 +131,9 @@ function StepResult({ form }: WizardStepProps): JSX.Element {
           "Convention collective": `${ccn?.selected?.title} (${idcc})`,
           ...situation.criteria,
         })}
-        <PubliReferences references={formatRefs([refLegal, situation])} />
+        <PubliReferences references={formatRefs(refs)} />
       </ShowDetails>
-      <DisclaimerBox />
+      {ccn?.selected?.num === 3239 ? <></> : <DisclaimerBox />}
     </>
   );
 }

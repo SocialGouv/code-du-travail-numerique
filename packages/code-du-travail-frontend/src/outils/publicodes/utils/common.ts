@@ -10,9 +10,11 @@ export const reverseValues = (
   }, {});
 
 export function formatRefs(refs: Array<OldReference>): Array<References> {
-  return refs.map((ref) => {
-    return { article: ref.ref, url: ref.refUrl };
-  });
+  return refs
+    .filter((item) => item.ref !== null && item.refUrl !== null)
+    .map((ref) => {
+      return { article: ref.ref, url: ref.refUrl };
+    }) as References[];
 }
 
 export function formatNumberAsString(toBeFormmatted: number): string {

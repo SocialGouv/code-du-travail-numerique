@@ -166,8 +166,8 @@ describe("Validation de l'aggregation des données", () => {
         data,
         result,
         legalResult,
-        agreementResult,
-        supportedCcn
+        supportedCcn,
+        agreementResult
       );
 
       expect(rootData.isVoluntary).toEqual(type === "départ");

@@ -1,4 +1,4 @@
-ARG NODE_VERSION=14.17-alpine3.13
+ARG NODE_VERSION=14.18-alpine3.13
 # dist
 FROM node:$NODE_VERSION AS dist
 
@@ -15,13 +15,11 @@ ENV NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=$NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
 # Copy all package.json
 COPY ./package.json ./package.json
 COPY ./packages/code-du-travail-data/package.json ./packages/code-du-travail-data/package.json
-COPY ./packages/code-du-travail-data/prime-precarite/package.json ./packages/code-du-travail-data/prime-precarite/package.json
-COPY ./packages/code-du-travail-data/simulateurs/package.json ./packages/code-du-travail-data/simulateurs/package.json
-COPY ./packages/code-du-travail-data/tools/package.json ./packages/code-du-travail-data/tools/package.json
 COPY ./packages/react-fiche-service-public/package.json ./packages/react-fiche-service-public/package.json
 COPY ./packages/sources/package.json ./packages/sources/package.json
 COPY ./packages/slugify/package.json ./packages/slugify/package.json
 COPY ./packages/react-ui/package.json ./packages/react-ui/package.json
+COPY ./packages/cdtn-types/package.json ./packages/cdtn-types/package.json
 COPY ./packages/code-du-travail-api/package.json ./packages/code-du-travail-api/package.json
 COPY ./packages/code-du-travail-frontend/package.json ./packages/code-du-travail-frontend/package.json
 COPY ./packages/code-du-travail-modeles/package.json ./packages/code-du-travail-modeles/package.json

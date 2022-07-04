@@ -1,4 +1,4 @@
-import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
+import { heuresRechercheEmploiData as data } from "@cdt/data";
 
 import { MatomoActionEvent } from "../../lib";
 import { pushAgreementEvents } from "../common";

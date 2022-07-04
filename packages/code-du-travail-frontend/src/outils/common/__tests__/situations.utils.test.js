@@ -1,4 +1,4 @@
-import data from "@cdt/data...prime-precarite/precarite.data.json";
+import { primePrecariteData as data } from "@cdt/data";
 
 import {
   filterSituations,
@@ -16,59 +16,61 @@ import {
 const criteriaOrder = ["bar", "foo", "baz", "yolo"];
 
 const ccList = [
-  { criteria: { bar: "baz", foo: "1| foo" }, idcc: "10" },
-  { criteria: { bar: "bar", foo: "1| foo" }, idcc: "10" },
-  { criteria: { bar: "baz", foo: "2| baz" }, idcc: "10" },
-  { criteria: { bar: "bar", foo: "2| baz" }, idcc: "10" },
+  { criteria: { bar: "baz", foo: "1| foo" }, idcc: 10 },
+  { criteria: { bar: "bar", foo: "1| foo" }, idcc: 10 },
+  { criteria: { bar: "baz", foo: "2| baz" }, idcc: 10 },
+  { criteria: { bar: "bar", foo: "2| baz" }, idcc: 10 },
   {
     allowBonus: false,
     criteria: { foo: "3| bar" },
     endMessage: "nope",
     hasConventionalProvision: true,
-    idcc: "20",
+    idcc: 20,
   },
   {
     allowBonus: true,
     criteria: { foo: "4| baz" },
     hasConventionalProvision: true,
-    idcc: "20",
+    idcc: 20,
   },
   {
     criteria: {},
     hasConventionalProvision: null,
-    idcc: "30",
+    idcc: 30,
   },
 ];
 
-jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
-  { criteria: { bar: "baz", foo: "1| foo" }, idcc: "10" },
-  { criteria: { bar: "bar", foo: "1| foo" }, idcc: "10" },
-  { criteria: { bar: "baz", foo: "2| baz" }, idcc: "10" },
-  { criteria: { bar: "bar", foo: "2| baz" }, idcc: "10" },
-  {
-    allowBonus: false,
-    criteria: { foo: "3| bar" },
-    endMessage: "nope",
-    hasConventionalProvision: true,
-    idcc: "20",
-  },
-  {
-    allowBonus: true,
-    criteria: { foo: "4| baz" },
-    hasConventionalProvision: true,
-    idcc: "20",
-  },
-  {
-    criteria: {},
-    hasConventionalProvision: null,
-    idcc: "30",
-  },
-]);
+jest.mock("@cdt/data", () => ({
+  primePrecariteData: [
+    { criteria: { bar: "baz", foo: "1| foo" }, idcc: 10 },
+    { criteria: { bar: "bar", foo: "1| foo" }, idcc: 10 },
+    { criteria: { bar: "baz", foo: "2| baz" }, idcc: 10 },
+    { criteria: { bar: "bar", foo: "2| baz" }, idcc: 10 },
+    {
+      allowBonus: false,
+      criteria: { foo: "3| bar" },
+      endMessage: "nope",
+      hasConventionalProvision: true,
+      idcc: 20,
+    },
+    {
+      allowBonus: true,
+      criteria: { foo: "4| baz" },
+      hasConventionalProvision: true,
+      idcc: 20,
+    },
+    {
+      criteria: {},
+      hasConventionalProvision: null,
+      idcc: 30,
+    },
+  ],
+}));
 
 describe("situations", () => {
   describe("getInitialSituations", () => {
     it("should return only situation with corresponding idcc", () => {
-      const idcc = "10";
+      const idcc = 10;
       const situations = getSituationsFor(data, { idcc });
       expect(situations.length).toBe(4);
       expect(situations.every((situation) => idcc === situation.idcc)).toBe(
@@ -86,20 +88,20 @@ describe("situations", () => {
     });
     it("should render only situation that match foo", () => {
       expect(filterSituations(data, { foo: "1| foo" })).toEqual([
-        { criteria: { bar: "baz", foo: "1| foo" }, idcc: "10" },
-        { criteria: { bar: "bar", foo: "1| foo" }, idcc: "10" },
+        { criteria: { bar: "baz", foo: "1| foo" }, idcc: 10 },
+        { criteria: { bar: "bar", foo: "1| foo" }, idcc: 10 },
       ]);
     });
   });
 
   describe("getNextQuestions", () => {
     it("should return foo question key", () => {
-      const idcc = "10";
+      const idcc = 10;
       const situations = getSituationsFor(data, { idcc });
       expect(getNextQuestionKey(situations, criteriaOrder)).toBe("bar");
     });
     it("should return bar question key", () => {
-      const idcc = "10";
+      const idcc = 10;
       const situations = getSituationsFor(data, { idcc });
       expect(
         getNextQuestionKey(situations, criteriaOrder, { foo: "1| foo" })
@@ -117,7 +119,7 @@ describe("situations", () => {
       ]);
     });
     it("should return options for a question key, given a situation", () => {
-      const situations = getSituationsFor(data, { idcc: "10" });
+      const situations = getSituationsFor(data, { idcc: 10 });
 
       expect(getOptions(situations, "foo")).toEqual([
         ["1| foo", "foo"],
@@ -128,12 +130,12 @@ describe("situations", () => {
 
   describe("getPastQuestions", () => {
     it("should return empty questions array", () => {
-      const situations = getSituationsFor(data, { idcc: "10" });
+      const situations = getSituationsFor(data, { idcc: 10 });
       expect(getPastQuestions(situations, criteriaOrder, {})).toEqual([]);
     });
 
     it("should return a tuple array of questions key and questions option for branch and bar", () => {
-      const situations = getSituationsFor(data, { idcc: "10" });
+      const situations = getSituationsFor(data, { idcc: 10 });
       expect(
         getPastQuestions(situations, criteriaOrder, { bar: "baz" })
       ).toEqual([
@@ -176,7 +178,7 @@ describe("situations", () => {
   describe("getFormProps", () => {
     it("should return anlist keys", () => {
       const key = "bar";
-      const initialSituations = getSituationsFor(data, { idcc: "10" });
+      const initialSituations = getSituationsFor(data, { idcc: 10 });
       const criteria = { bar: "baz", foo: "1| foo" };
       const pastQuestions = getPastQuestions(
         initialSituations,
@@ -219,7 +221,7 @@ describe("situations", () => {
     });
 
     it("should return no error if agreement is supported", () => {
-      expect(validate({ ccn: { selected: { num: "20" } } })).toStrictEqual({});
+      expect(validate({ ccn: { selected: { num: 20 } } })).toStrictEqual({});
     });
 
     it("should return one error if agreement is not supported", () => {

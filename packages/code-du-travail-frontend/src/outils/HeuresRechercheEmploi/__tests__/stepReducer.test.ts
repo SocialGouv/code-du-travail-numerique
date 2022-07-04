@@ -1,4 +1,4 @@
-import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
+import { heuresRechercheEmploiData as data } from "@cdt/data";
 
 import { generateAgreement } from "../../../../test/generateAgreement";
 import { ActionName, SkipFn } from "../../common/type/WizardType";
