@@ -22,12 +22,30 @@ import { Feedback } from "./Feedback";
 import Html from "./Html";
 import { RelatedItems } from "./RelatedItems";
 import { Share } from "./Share";
+import { Breadcrumb } from "cdtn-types";
 
 const BigError = ({ children }) => (
   <StyledErrorContainer>
     <Alert>{children}</Alert>
   </StyledErrorContainer>
 );
+type AnswerProps = {
+  additionalContent?: any;
+  breadcrumbs?: Breadcrumb[];
+  children: any[] | null;
+  className?: string;
+  date?: string;
+  dateLabel: string;
+  emptyMessage?: string;
+  html?: string | null;
+  intro?: string | null;
+  metaDescription?: string;
+  relatedItems?: string[];
+  source?: string;
+  subtitle?: string;
+  suptitle?: string;
+  title: string;
+};
 
 function Answer({
   additionalContent,
@@ -45,7 +63,7 @@ function Answer({
   subtitle,
   suptitle,
   title,
-}) {
+}: AnswerProps) {
   const router = useRouter();
   return (
     <>

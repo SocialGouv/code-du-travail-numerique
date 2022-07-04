@@ -90,6 +90,7 @@
     "@types/debounce-promise": "^3.1.4",
     "@types/jest": "^27.4.0",
     "@types/memoizee": "^0.4.6",
+    "cdtn-types": "1.18.2",
     "babel-jest": "^27.4.6",
     "babel-plugin-styled-components": "^2.0.2",
     "eslint": "8.7.0",
