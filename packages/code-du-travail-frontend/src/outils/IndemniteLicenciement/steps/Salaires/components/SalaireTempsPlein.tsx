@@ -7,6 +7,10 @@ import { InlineError } from "../../../../common/ErrorField";
 import { Question } from "../../../../common/Question";
 import { SmallText } from "../../../../common/stepStyles";
 import { ErrorWrapper } from "../../../../Components/TextQuestion";
+<<<<<<< HEAD
+=======
+import { SalaryPeriods } from "../../../common";
+>>>>>>> feat/indemnite-licenciement
 
 type Props = {
   title: string;
@@ -86,7 +90,14 @@ export const SalaireTempsPlein = ({
     <StyledDiv>
       <Table>
         <Caption>
+<<<<<<< HEAD
           <Question required>{title}</Question>
+=======
+          <Question required>
+            Indiquez le montant des salaires mensuels brut perçus au cours des
+            12 mois précédents la notification du licenciement
+          </Question>
+>>>>>>> feat/indemnite-licenciement
           <SmallText>
             Renseignez le montant des salaires (en incluant les primes et
             avantages en nature) dans le premier champ et le montant des primes

@@ -35,7 +35,10 @@ describe("Result store", () => {
     store.getState().ancienneteFunction.onValidateStepAnciennete();
 
     // Salaire ref
+<<<<<<< HEAD
     store.getState().salairesFunction.onChangeHasTempsPartiel("non");
+=======
+>>>>>>> feat/indemnite-licenciement
     store.getState().salairesFunction.onSalariesChange([
       {
         month: "janvier",
@@ -88,7 +91,10 @@ describe("Result store", () => {
         value: 2000,
       },
     ]);
+<<<<<<< HEAD
     store.getState().salairesFunction.onValidateStepSalaires();
+=======
+>>>>>>> feat/indemnite-licenciement
 
     // Contrat de travail
     store
@@ -124,7 +130,10 @@ describe("Result store", () => {
     store.getState().ancienneteFunction.onValidateStepAnciennete();
 
     // Salaire ref
+<<<<<<< HEAD
     store.getState().salairesFunction.onChangeHasTempsPartiel("non");
+=======
+>>>>>>> feat/indemnite-licenciement
     store.getState().salairesFunction.onSalariesChange([
       {
         month: "janvier",
@@ -177,7 +186,10 @@ describe("Result store", () => {
         value: 1000,
       },
     ]);
+<<<<<<< HEAD
     store.getState().salairesFunction.onValidateStepSalaires();
+=======
+>>>>>>> feat/indemnite-licenciement
 
     // Contrat de travail
     store
