@@ -7,12 +7,6 @@ services:
     ports:
       - 9200:9200
 
-  data:
-    build:
-      context: ./packages/code-du-travail-data
-      args:
-        BASE_IMAGE: cdtn_master:local
-
   kibana:
     image: docker.elastic.co/kibana/kibana:7.13.4
     ports:

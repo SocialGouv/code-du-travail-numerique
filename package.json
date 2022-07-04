@@ -14,8 +14,8 @@
     "dev": "lerna run dev --parallel",
     "dev:api": "lerna run dev --scope=@cdt/api --stream",
     "dev:type-check": "lerna run type-check:watch --scope=@cdt/api --stream",
-    "dev:frontend": "lerna run dev --parallel --scope={@cdt/frontend,@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@socialgouv/modeles-social} --stream",
-    "test:frontend": "lerna run test --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@cdt/frontend} --stream",
+    "dev:frontend": "lerna run dev --parallel --scope={@cdt/frontend,@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@socialgouv/modeles-social,@cdt/data} --stream",
+    "test:frontend": "lerna run test --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@cdt/frontend,@cdt/data} --stream",
     "dev:frontend:preprod-api": "AZURE_BASE_URL=https://cdtnadmindev.blob.core.windows.net AZURE_CONTAINER=cdtn-dev API_URL=https://api-code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/api/v1 yarn dev:frontend",
     "k8s": "yarn --silent --cwd .k8s",
     "lint": "lerna run lint",
@@ -30,7 +30,7 @@
     "test:e2e": "lerna run test:e2e --scope=@cdt/e2e --stream",
     "test:e2e:headed": "lerna run test:e2e:headed --scope=@cdt/e2e --stream",
     "test:e2e:ui": "lerna run test:e2e:ui --scope=@cdt/e2e --stream",
-    "test:update": "lerna run test:update --scope={@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@cdt/frontend} --stream",
+    "test:update": "lerna run test:update --scope={@cdt/data,@socialgouv/cdtn-ui,@socialgouv/react-fiche-service-public,@cdt/frontend} --stream",
     "prepare": "is-ci || husky install"
   },
   "repository": {

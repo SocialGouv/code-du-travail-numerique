@@ -1,4 +1,4 @@
-import tools from "@cdt/data...tools/internals.json";
+import { internals as tools } from "@cdt/data";
 import * as Sentry from "@sentry/nextjs";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import { Container, Section, theme } from "@socialgouv/cdtn-ui";
@@ -24,7 +24,6 @@ import {
   loadPublicodesRules,
   SimulateurEmbauche,
   SimulateurIndemnitePrecarite,
-  Tool,
 } from "../../src/outils";
 
 const {
@@ -99,7 +98,7 @@ export default Outils;
 export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
-  const tool = (tools as Tool[]).find((tool) => tool.slug === query.slug);
+  const tool = tools.find((tool) => tool.slug === query.slug);
   if (!tool) {
     return {
       notFound: true,

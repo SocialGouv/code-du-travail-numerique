@@ -1,23 +1,19 @@
 {
   "name": "@cdt/data",
-  "version": "4.78.1",
+  "version": "4.79.2",
   "description": "Ce dépôt de code permet d'indexer différentes sources de données relatives au Code du travail dans Elasticsearch.",
   "private": true,
-  "main": "index.js",
-  "babel": {
-    "env": {
-      "test": {
-        "plugins": [
-          "@babel/plugin-transform-modules-commonjs"
-        ]
-      }
-    }
-  },
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "precommit": "lint-staged",
+    "build": "tsc",
+    "dev": "nodemon --exec 'npm run build' --watch 'src/**' --ext 'ts,json'",
+    "test:watch": "nodemon --exec 'jest' --watch 'src/**' --ext 'ts,json'",
     "prepush": "yarn test --bail --changedSince=dev",
-    "lint": "eslint . --ext .js",
-    "test": "jest"
+    "lint": "eslint \"./src/**/*.{js,ts}\"",
+    "test": "jest",
+    "clean": "rimraf lib"
   },
   "repository": {
     "type": "git",
@@ -29,24 +25,18 @@
   },
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/code-du-travail-data#readme",
   "devDependencies": {
-    "@babel/core": "^7.14.8",
-    "@babel/preset-env": "^7.15.0",
-    "@socialgouv/eslint-config-recommended": "^1.75.0",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^27.0.6",
-    "eslint": "^7.31.0",
-    "jest": "^27.0.6",
-    "lint-staged": "^12.1.2",
-    "prettier": "^2.3.2"
+    "@socialgouv/eslint-config-typescript": "1.97.0",
+    "eslint": "7.32.0",
+    "jest": "27.3.1",
+    "lint-staged": "12.1.2",
+    "nodemon": "^2.0.12",
+    "prettier": "2.5.1",
+    "ts-jest": "27.0.7",
+    "typescript": "4.6.2"
   },
   "lint-staged": {
     "*.{ts,js}": [
       "yarn lint --fix"
-    ]
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "indexing/**/*.js"
     ]
   }
 }

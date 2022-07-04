@@ -66,7 +66,7 @@ describe("Préavis de retraite de la CC 3239", () => {
       ${"Assistants maternels du particulier employeur"} | ${12}     | ${1}           | ${"mois"}      | ${DepartRetraiteCcReferencesAssistantsMaternels}
       ${"Assistants maternels du particulier employeur"} | ${24}     | ${1}           | ${"mois"}      | ${DepartRetraiteCcReferencesAssistantsMaternels}
     `(
-      "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
+      "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult $expectedPeriod",
       ({
         category,
         seniority,

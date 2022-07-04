@@ -1,4 +1,4 @@
-import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
+import { preavisLicenciementData as data } from "@cdt/data";
 
 import { MatomoActionEvent } from "../../lib";
 import { pushAgreementEvents } from "../common";

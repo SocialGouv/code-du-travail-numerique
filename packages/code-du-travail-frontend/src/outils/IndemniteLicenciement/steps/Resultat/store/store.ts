@@ -55,9 +55,17 @@ const createResultStore: StoreSlice<
         )
       );
 
+      const anciennete = publicodes.execute(
+        "contrat salarié . ancienneté en année"
+      ).value as number;
+
+      //TODO: calculer la bonne indemnité conventionnel pour chaque cc
+      // const indemniteConventionnel = publicodes.execute(
+      //   "contrat salarié . indemnité de licenciement conventionnel de la cc"
+      // );
+
       const infoCalcul = generateExplanation({
-        anciennete: publicodes.execute("contrat salarié . ancienneté en année")
-          .value as number,
+        anciennete,
         inaptitude: isLicenciementInaptitude,
         salaireRef: refSalary,
       });

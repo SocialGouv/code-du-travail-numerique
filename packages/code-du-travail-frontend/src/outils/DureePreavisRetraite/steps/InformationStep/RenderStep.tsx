@@ -2,6 +2,7 @@ import React from "react";
 import { usePreavisRetraiteStore } from "../../state";
 import InformationStep from "./Step";
 import { useForm } from "react-final-form";
+import { PreavisRetraiteFormState } from "../../form";
 
 const RenderInformationStep = (): JSX.Element => {
   const { questions, error, onChange } = usePreavisRetraiteStore((state) => ({
@@ -17,6 +18,18 @@ const RenderInformationStep = (): JSX.Element => {
       onChange={(name) => onChange(name, form)}
     />
   );
+};
+
+RenderInformationStep.validate = (data: PreavisRetraiteFormState) => {
+  if (
+    data.origin?.isRetirementMandatory === "oui" &&
+    data.infos?.[
+      "contrat salarié - convention collective - particuliers employeurs et emploi à domicile - catégorie professionnelle"
+    ] === "'Assistants maternels du particulier employeur'"
+  ) {
+    return { errorAgreement3239: true };
+  }
+  return undefined;
 };
 
 export default RenderInformationStep;

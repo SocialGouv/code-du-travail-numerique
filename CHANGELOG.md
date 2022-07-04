@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.79.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.79.1...v4.79.2) (2022-07-01)
+
+
+### Bug Fixes
+
+* docker ([147bfd3](https://github.com/SocialGouv/code-du-travail-numerique/commit/147bfd3ba94820dfc6478ae2c8badba7b04966d8))
+* node version ([876e174](https://github.com/SocialGouv/code-du-travail-numerique/commit/876e174dba787c63e3756e849a80afbdfa2d5b11))
+
+
+
+
+
+## [4.79.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.79.0...v4.79.1) (2022-07-01)
+
+**Note:** Version bump only for package @socialgouv/code-du-travail
+
+
+
+
+
+# [4.79.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.78.1...v4.79.0) (2022-07-01)
+
+
+### Bug Fixes
+
+* **search:** add synonymes and a snapshot test to most popular result ([#4393](https://github.com/SocialGouv/code-du-travail-numerique/issues/4393)) ([4eec42f](https://github.com/SocialGouv/code-du-travail-numerique/commit/4eec42f2711269990fa0d7832b9124cb7e29ec19))
+* **tools:** le résultat de la convention collective mal renseigné ([#4460](https://github.com/SocialGouv/code-du-travail-numerique/issues/4460)) ([39a0571](https://github.com/SocialGouv/code-du-travail-numerique/commit/39a0571746143634a1b5cd437978a2481bd088ea))
+* **tools:** perte de la CC après un retour sur les simulateurs ([#4450](https://github.com/SocialGouv/code-du-travail-numerique/issues/4450)) ([4179459](https://github.com/SocialGouv/code-du-travail-numerique/commit/41794594b1b2a8417d6d972fecffe7bfaa2ce7cd))
+
+
+### Features
+
+* **partner:** mise à jour du logo du Ministère du Travail ([#4447](https://github.com/SocialGouv/code-du-travail-numerique/issues/4447)) ([9e700e8](https://github.com/SocialGouv/code-du-travail-numerique/commit/9e700e83f4433f5391d999b54ac466baef0c6c0a))
+* **simulator:** indemnité de licenciement store ([#4431](https://github.com/SocialGouv/code-du-travail-numerique/issues/4431)) ([1ae50da](https://github.com/SocialGouv/code-du-travail-numerique/commit/1ae50dab352af2b5bbd2214d2f39556820d5138c))
+* **tools:** assistant maternel ne peut pas être mis à la retraite ([#4438](https://github.com/SocialGouv/code-du-travail-numerique/issues/4438)) ([fcfc248](https://github.com/SocialGouv/code-du-travail-numerique/commit/fcfc248265b71331272c01d04ad857181f540c55))
+* **tools:** modification des règles du préavis de démission pour la CC 3239 ([#4449](https://github.com/SocialGouv/code-du-travail-numerique/issues/4449)) ([6242448](https://github.com/SocialGouv/code-du-travail-numerique/commit/62424484a4cc06811c5f713e892d8a7156c7df42))
+* **tools:** modification des règles du préavis de retraite pour la CC 3239 ([#4448](https://github.com/SocialGouv/code-du-travail-numerique/issues/4448)) ([ef6d912](https://github.com/SocialGouv/code-du-travail-numerique/commit/ef6d9123951ebf4354509dd8438b039426685072))
+* **tools:** modification des résultats de l'indemnité de licenciement pour la CC 3239 ([#4446](https://github.com/SocialGouv/code-du-travail-numerique/issues/4446)) ([685d578](https://github.com/SocialGouv/code-du-travail-numerique/commit/685d57842c1d8132b6bab47c2c8ea970a8a33e6b))
+
+
+
+
+
 ## [4.78.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.78.0...v4.78.1) (2022-06-17)
 
 

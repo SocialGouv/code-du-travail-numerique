@@ -15,13 +15,24 @@ import ShowDetails from "../../../common/ShowDetails";
 import PubliReferences from "../../../common/PubliReferences";
 import { PreavisRetraiteFormState } from "../../form";
 
+export enum WarningType {
+  noNoticeWithAgreement = "no_notice_with_agreement",
+  noNoticeWithoutAgreement = "no_notice_without_agreement",
+  departWithAgreement = "depart_with_agreement",
+  miseWithAgreement = "mise_with_agreement",
+  departWithoutAgreement = "depart_without_agreement",
+  miseWithoutAgreement = "mise_without_agreement",
+  miseWithoutCollectiveAgreement = "mise_without_collective_agreement",
+  departWithoutCollectiveAgreement = "depart_without_collective_agreement",
+}
+
 export type ResultStepProps = {
   notice: {
     result: PublicodesPreavisRetraiteResult;
     legal: PublicodesPreavisRetraiteResult;
     agreement: {
       result: PublicodesPreavisRetraiteResult;
-      maximum: PublicodesPreavisRetraiteResult;
+      maximum: PublicodesPreavisRetraiteResult | null;
     };
     type: "mise" | "départ";
     notifications: Notification[];
@@ -32,9 +43,13 @@ export type ResultStepProps = {
     minYearCount: number;
     references: References[];
   };
+  warning: {
+    type: WarningType | null;
+    hasNotice: boolean;
+  };
 };
 
-function ResultStep({ notice, detail }: ResultStepProps): JSX.Element {
+function ResultStep({ notice, detail, warning }: ResultStepProps): JSX.Element {
   return (
     <>
       <ShowResult
@@ -57,11 +72,7 @@ function ResultStep({ notice, detail }: ResultStepProps): JSX.Element {
         />
         <PubliReferences references={detail.references} />
       </ShowDetails>
-      <WarningResult
-        resultValueInDays={notice.result.valueInDays}
-        type={notice.type}
-        ccNumber={detail.values?.ccn?.selected?.num}
-      />
+      <WarningResult hasNotice={warning.hasNotice} type={warning.type} />
     </>
   );
 }

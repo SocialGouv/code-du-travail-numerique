@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.79.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.79.1...v4.79.2) (2022-07-01)
+
+**Note:** Version bump only for package @cdt/e2e
+
+
+
+
+
+## [4.79.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.79.0...v4.79.1) (2022-07-01)
+
+**Note:** Version bump only for package @cdt/e2e
+
+
+
+
+
+# [4.79.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.78.1...v4.79.0) (2022-07-01)
+
+
+### Features
+
+* **simulator:** indemnité de licenciement store ([#4431](https://github.com/SocialGouv/code-du-travail-numerique/issues/4431)) ([1ae50da](https://github.com/SocialGouv/code-du-travail-numerique/commit/1ae50dab352af2b5bbd2214d2f39556820d5138c))
+
+
+
+
+
 ## [4.78.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.78.0...v4.78.1) (2022-06-17)
 
 **Note:** Version bump only for package @cdt/e2e

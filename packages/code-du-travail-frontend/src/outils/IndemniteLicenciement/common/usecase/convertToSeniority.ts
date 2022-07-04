@@ -13,11 +13,7 @@ const convertToPublicodesSeniority = (
     const durationInMonth = absences.find(
       (abs) => motif.label === abs.motif
     )?.durationInMonth;
-    if (durationInMonth) {
-      seniority[motif.key] = durationInMonth;
-    } else {
-      seniority[motif.key] = 0;
-    }
+    seniority[motif.key] = durationInMonth ?? 0;
   }
   seniority.entryDate = dateEntree;
   seniority.exitDate = dateSortie;

@@ -1,4 +1,4 @@
-import data from "@cdt/data...simulateurs/heures-recherche-emploi.data.json";
+import { heuresRechercheEmploiData as data } from "@cdt/data";
 import { Paragraph } from "@socialgouv/cdtn-ui";
 import React from "react";
 
@@ -149,11 +149,7 @@ export function StepResult({ form }: WizardStepProps): JSX.Element {
           ...situation.criteria,
         })}
 
-        <PubliReferences
-          references={
-            situation.ref && situation.refUrl && formatRefs([situation])
-          }
-        />
+        <PubliReferences references={formatRefs([situation])} />
       </ShowDetails>
       <DisclaimerBox duration={situation.answer} />
     </>

@@ -43,7 +43,7 @@ const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
 
       const isAgreementValid = validateAgreement(
         SupportedCcIndemniteLicenciement.IDCC1516, //TODO: replace par la bonne CC
-        IndemniteLicenciementStepName.ContratTravail,
+        IndemniteLicenciementStepName.Info,
         get,
         set
       );
@@ -77,7 +77,7 @@ const applyGenericValidation = (
     );
     const isAgreementValid = validateAgreement(
       SupportedCcIndemniteLicenciement.IDCC1516, //TODO: replace par la bonne CC
-      IndemniteLicenciementStepName.ContratTravail,
+      IndemniteLicenciementStepName.Info,
       get,
       set
     );
