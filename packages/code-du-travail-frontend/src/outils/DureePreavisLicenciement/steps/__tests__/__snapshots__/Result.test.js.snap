@@ -125,18 +125,6 @@ exports[`<StepResult /> should render with O duration 1`] = `
   flex: 1 1 auto;
 }
 
-.c10 {
-  margin-top: 3.2rem;
-}
-
-.c15 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 1rem;
@@ -155,6 +143,18 @@ exports[`<StepResult /> should render with O duration 1`] = `
 
 .c2 {
   font-size: 1.5em;
+}
+
+.c10 {
+  margin-top: 3.2rem;
+}
+
+.c15 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 @media (max-width:600px) {
@@ -494,18 +494,6 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   flex: 1 1 auto;
 }
 
-.c12 {
-  margin-top: 3.2rem;
-}
-
-.c17 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 1rem;
@@ -530,6 +518,18 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
   color: #3e486e;
   font-size: 1.4rem;
   margin-top: 0.8rem;
+}
+
+.c12 {
+  margin-top: 3.2rem;
+}
+
+.c17 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c3 {
@@ -682,6 +682,13 @@ exports[`<StepResult /> should render with both CC duration and CDT duration 1`]
            : 
           <strong>
             Non
+          </strong>
+        </li>
+        <li>
+          Convention collective
+           : 
+          <strong>
+            Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
           </strong>
         </li>
       </ul>
@@ -864,18 +871,6 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
   flex: 1 1 auto;
 }
 
-.c10 {
-  margin-top: 3.2rem;
-}
-
-.c15 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 1rem;
@@ -894,6 +889,18 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
 
 .c2 {
   font-size: 1.5em;
+}
+
+.c10 {
+  margin-top: 3.2rem;
+}
+
+.c15 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 @media (max-width:600px) {
@@ -1010,6 +1017,13 @@ exports[`<StepResult /> should render with only CC duration 1`] = `
            : 
           <strong>
             Non
+          </strong>
+        </li>
+        <li>
+          Convention collective
+           : 
+          <strong>
+            Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
           </strong>
         </li>
       </ul>
@@ -1192,18 +1206,6 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   flex: 1 1 auto;
 }
 
-.c12 {
-  margin-top: 3.2rem;
-}
-
-.c17 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 1rem;
@@ -1228,6 +1230,18 @@ exports[`<StepResult /> should render with when no CC 1`] = `
   color: #3e486e;
   font-size: 1.4rem;
   margin-top: 0.8rem;
+}
+
+.c12 {
+  margin-top: 3.2rem;
+}
+
+.c17 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c3 {
@@ -1550,18 +1564,6 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   flex: 1 1 auto;
 }
 
-.c12 {
-  margin-top: 3.2rem;
-}
-
-.c17 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
 .c0 {
   margin-top: 3.2rem;
   margin-bottom: 1rem;
@@ -1586,6 +1588,18 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
   color: #3e486e;
   font-size: 1.4rem;
   margin-top: 0.8rem;
+}
+
+.c12 {
+  margin-top: 3.2rem;
+}
+
+.c17 {
+  color: #4d73b8;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  margin: 0;
 }
 
 .c3 {
@@ -1738,6 +1752,13 @@ exports[`<StepResult /> should render with when unhandled CC 1`] = `
            : 
           <strong>
             Non
+          </strong>
+        </li>
+        <li>
+          Convention collective
+           : 
+          <strong>
+            Convention collective nationale de la cordonnerie multiservice du 7 août 1989. Elargie au secteur des cordonniers industriels
           </strong>
         </li>
       </ul>

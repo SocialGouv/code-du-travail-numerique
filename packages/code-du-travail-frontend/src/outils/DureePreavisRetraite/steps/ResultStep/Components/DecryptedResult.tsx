@@ -14,7 +14,7 @@ type Props = {
   result: PublicodesPreavisRetraiteResult;
   legalResult: PublicodesPreavisRetraiteResult;
   agreement: {
-    result: PublicodesPreavisRetraiteResult | null;
+    result: PublicodesPreavisRetraiteResult;
     maximum: PublicodesPreavisRetraiteResult | null;
   };
 };
@@ -95,8 +95,8 @@ export const createRootData = (
   data: PreavisRetraiteFormState,
   result: PublicodesPreavisRetraiteResult,
   legalResult: PublicodesPreavisRetraiteResult,
-  agreementResult: PublicodesPreavisRetraiteResult | null,
-  supportedCcn: AgreementInfo[]
+  supportedCcn: AgreementInfo[],
+  agreementResult: PublicodesPreavisRetraiteResult | null
 ): RootData => {
   let agreement: Agreement | null = null;
   if (data.ccn?.selected) {
@@ -193,8 +193,8 @@ const DecryptedResult: React.FC<Props> = ({
     data,
     result,
     legalResult,
-    agreement.result,
-    supportedCcn
+    supportedCcn,
+    agreement.result
   );
   const description = getDescription(rootData);
   return (

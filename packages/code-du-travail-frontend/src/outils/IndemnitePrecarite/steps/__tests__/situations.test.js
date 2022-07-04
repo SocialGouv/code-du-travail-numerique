@@ -1,4 +1,4 @@
-import data from "@cdt/data...prime-precarite/precarite.data.json";
+import { primePrecariteData as data } from "@cdt/data";
 
 import { getSituationsFor } from "../../../common/situations.utils";
 import {
@@ -6,33 +6,35 @@ import {
   validateSituation,
 } from "../situation";
 
-jest.mock("@cdt/data...prime-precarite/precarite.data.json", () => [
-  { criteria: { cddType: "1| foo", hasCdiProposal: "baz" }, idcc: 10 },
-  { criteria: { cddType: "1| foo", hasCdiRenewal: "bar" }, idcc: 10 },
-  { criteria: { cddType: "2| baz" }, idcc: 10 },
-  {
-    allowBonus: false,
-    criteria: {
-      cddType: "3| bar",
+jest.mock("@cdt/data", () => ({
+  primePrecariteData: [
+    { criteria: { cddType: "1| foo", hasCdiProposal: "baz" }, idcc: 10 },
+    { criteria: { cddType: "1| foo", hasCdiRenewal: "bar" }, idcc: 10 },
+    { criteria: { cddType: "2| baz" }, idcc: 10 },
+    {
+      allowBonus: false,
+      criteria: {
+        cddType: "3| bar",
+      },
+      endMessage: "nope",
+      hasConventionalProvision: true,
+      idcc: 20,
     },
-    endMessage: "nope",
-    hasConventionalProvision: true,
-    idcc: 20,
-  },
-  {
-    allowBonus: true,
-    criteria: {
-      cddType: "4| baz",
+    {
+      allowBonus: true,
+      criteria: {
+        cddType: "4| baz",
+      },
+      hasConventionalProvision: true,
+      idcc: 20,
     },
-    hasConventionalProvision: true,
-    idcc: 20,
-  },
-  {
-    criteria: {},
-    hasConventionalProvision: null,
-    idcc: 30,
-  },
-]);
+    {
+      criteria: {},
+      hasConventionalProvision: null,
+      idcc: 30,
+    },
+  ],
+}));
 
 describe("situations", () => {
   describe("validateSituation", () => {

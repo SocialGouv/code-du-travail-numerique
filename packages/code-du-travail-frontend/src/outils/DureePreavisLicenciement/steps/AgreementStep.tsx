@@ -1,4 +1,4 @@
-import data from "@cdt/data...simulateurs/preavis-licenciement.data.json";
+import { preavisLicenciementData as data } from "@cdt/data";
 import React from "react";
 
 import { SelectAgreement } from "../../common";

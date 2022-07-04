@@ -6,5 +6,4 @@ export * from "./IndemniteLicenciement";
 export * from "./HeuresRechercheEmploi";
 export * from "./IndemnitePrecarite";
 export * from "./SimulateurEmbauche";
-export * from "./types";
 export * from "./api";

@@ -2,14 +2,12 @@ import { Container, icons, OverflowWrapper, theme } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
+import { Breadcrumb } from "cdtn-types";
 
 const { ArrowRight, Home: HomeIcon } = icons;
 
 type Props = {
-  items: {
-    label: string;
-    slug: string;
-  }[];
+  items: Breadcrumb[];
 };
 
 export default function Breadcrumbs({ items }: Props): JSX.Element {

@@ -1,0 +1,4497 @@
+{
+  "questions": [
+    {
+      "name": "agents payés à l'heure",
+      "question": "L'agent est-il payé à l'heure ?"
+    },
+    {
+      "name": "durée d'accueil de l'enfant",
+      "question": "Quelle est la durée d'accueil de l'enfant ?"
+    },
+    {
+      "name": "catégorie professionnelle",
+      "question": "Quelle est la catégorie professionnelle du salarié ?",
+      "note": "La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>."
+    },
+    {
+      "name": "initiative de la rupture de la période d'essai",
+      "question": "Qui a pris l'initiative de rompre la période d'essai ?"
+    },
+    {
+      "name": "personnel de conduite",
+      "question": "Le salarié fait-il partie des personnels de conduite du transport de voyageurs ?"
+    },
+    {
+      "name": "motif de rupture",
+      "question": "Quel est le motif de rupture du contrat de travail ?"
+    },
+    {
+      "name": "durée du travail",
+      "question": "Quelle est la durée du travail du salarié ?"
+    },
+    {
+      "name": "durée du préavis",
+      "question": "Quelle est la durée du préavis du salarié ?"
+    },
+    {
+      "name": "délai de prévenance",
+      "question": "Quelle est la durée du préavis (aussi appelé délai de prévenance) ?"
+    },
+    {
+      "name": "type de rupture",
+      "question": "Pour quelle raison le contrat de travail a-t-il été rompu ?"
+    },
+    {
+      "name": "conclusion contrat travail",
+      "question": "Quelle est la date d'entrée du salarié dans l'entreprise?"
+    },
+    {
+      "name": "logement",
+      "question": "Le salarié est-il logé ?"
+    },
+    {
+      "name": "niveau",
+      "question": "Quel est le niveau du salarié ?",
+      "note": "Le niveau du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>."
+    },
+    {
+      "name": "classe",
+      "question": "Quelle est la classe du salarié ?",
+      "note": "La classe du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>."
+    },
+    {
+      "name": "position",
+      "question": "Quelle est la position du salarié ?",
+      "note": "La position du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>."
+    },
+    {
+      "name": "groupe",
+      "question": "Quel est le groupe professionnel du salarié ?",
+      "note": "Le groupe du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>."
+    },
+    {
+      "name": "coefficient",
+      "question": "Quel est le coefficient hiérarchique du salarié ?",
+      "note": "La coefficient du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>."
+    },
+    {
+      "name": "échelon",
+      "question": "Quel est l'échelon du salarié ?",
+      "note": "L'échelon du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>."
+    },
+    {
+      "name": "ancienneté",
+      "question": "Quelle est l'ancienneté du salarié ?",
+      "note": "L'ancienneté du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>."
+    },
+    {
+      "name": "âge",
+      "question": "Quel est l'âge du salarié ?"
+    },
+    {
+      "name": "secteur d'activité",
+      "question": "Quel est le secteur d'activité de l'entreprise ?"
+    },
+    {
+      "name": "durée initiale du contrat",
+      "question": "Quelle est la durée initiale du contrat du salarié ?"
+    },
+    {
+      "name": "déjà exercé pendant plus de 1 an au cours des 5 dernières années des fonctions de cadre chez un autre employeur",
+      "question": "Le salarié a-t-il déjà exercé pendant plus de 1 an au cours des 5 dernières années des fonctions de cadre pour un autre employeur ?"
+    },
+    {
+      "name": "convention collective",
+      "question": "Quelle est la convention collective du salarié ?"
+    }
+  ],
+  "situations": [
+    {
+      "criteria": {},
+      "type": "préavis de Démission",
+      "idcc": 0,
+      "typeRupture": null,
+      "answer": "Le code du travail ne prévoit pas une durée précise du préavis de Démission. Il prévoit qu'un texte du niveau légal conventionnel, un accord d'entreprise voire un usage en prévoit les durées et modalités. ",
+      "answer2": null,
+      "answer3": "0",
+      "ref": "Article L 1237-1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901174&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés"
+      },
+      "type": "préavis de Démission",
+      "idcc": 16,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe II, article 13",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849509&cidTexte=KALITEXT000005678903&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "61| Ingénieurs et Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 16,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": "- Sous réserve de durées plus longues prévues dans le contrat de travail\n- Les ingénieurs et cadres pourront quitter leur emploi après 2 mois de préavis sous réserve d'en avoir informé l'employeur au moins 15 jours à l'avance. Dans ce cas, ils n'auront droit, indépendamment de l'indemnité éventuelle de congédiement, qu'à la rémunération correspondant à leur temps effectif de travail.",
+      "answer3": "90",
+      "ref": "Annexe IV, Article 15",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849568&cidTexte=KALITEXT000005678909&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "4| Ouvriers",
+        "personnel de conduite": "1| Oui"
+      },
+      "type": "préavis de Démission",
+      "idcc": 16,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Accord au 18 avril 2002, article 30",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=00D98259FC73011DA835156FEF965FBD.tplgfr24s_3?idArticle=KALIARTI000005850203&cidTexte=KALITEXT000005679055&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "4| Ouvriers",
+        "personnel de conduite": "2| Non"
+      },
+      "type": "préavis de Démission",
+      "idcc": 16,
+      "typeRupture": null,
+      "answer": "1 semaine",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Annexe I, chapitre Ier, article 5",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849372&cidTexte=KALITEXT000005678895&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
+        "groupe": "25| 1 à 5 "
+      },
+      "type": "préavis de Démission",
+      "idcc": 16,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe III, article 17",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849262&cidTexte=KALITEXT000005678889&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
+        "groupe": "30| 6 à 8"
+      },
+      "type": "préavis de Démission",
+      "idcc": 16,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Annexe III, article 17",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849262&cidTexte=KALITEXT000005678889&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "75| Autres cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "64| Biologistes",
+        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "64| Biologistes",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "62| Cadres administratifs et de gestion",
+        "coefficient": "26| 715 et supérieur",
+        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "62| Cadres administratifs et de gestion",
+        "coefficient": "25| Inférieur à 715",
+        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "62| Cadres administratifs et de gestion",
+        "coefficient": "26| 715 et supérieur",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "62| Cadres administratifs et de gestion",
+        "coefficient": "25| Inférieur à 715",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "73| Directeurs",
+        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "73| Directeurs",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "74| Directeurs généraux",
+        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "74| Directeurs généraux",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "69| Directeurs-adjoints",
+        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "69| Directeurs-adjoints",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "67| Gestionnaires",
+        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "67| Gestionnaires",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "66| Médecins",
+        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "66| Médecins",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "38| Non-cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "65| Pharmaciens",
+        "ancienneté": "45| Plus de 2 ans ( en tant que cadre ou de non cadre dans la même entreprise)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "65| Pharmaciens",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 29,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 15.02.2.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=192078D9EC13AE76804741793841EAED.tplgfr33s_1?idArticle=KALIARTI000029952849&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "21| Agents de maîtrise et Techniciens",
+        "coefficient": "11| Inférieur à 275"
+      },
+      "type": "préavis de Démission",
+      "idcc": 44,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Avenant 2, article 20",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9658082762B1C494A3C7AB50DDDEB53B.tpdjo14v_2?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20120612"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "21| Agents de maîtrise et Techniciens",
+        "coefficient": "14| Supérieur à 275 (inclus)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 44,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Avenant 2, article 20",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9658082762B1C494A3C7AB50DDDEB53B.tpdjo14v_2?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20120612"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "60| Ingénieurs, Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 44,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Avenant n°3 article 4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846301&cidTexte=KALITEXT000005677770&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "14| Ouvriers, collaborateurs et tehniciens",
+        "coefficient": "1| Inférieur à 160"
+      },
+      "type": "préavis de Démission",
+      "idcc": 44,
+      "typeRupture": null,
+      "answer": "15 jours",
+      "answer2": null,
+      "answer3": "15",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "14| Ouvriers, collaborateurs et tehniciens",
+        "coefficient": "2| Entre 160 (inclus) et 175"
+      },
+      "type": "préavis de Démission",
+      "idcc": 44,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "14| Ouvriers, collaborateurs et tehniciens",
+        "coefficient": "8| 190 et plus"
+      },
+      "type": "préavis de Démission",
+      "idcc": 44,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Avenant n°1 article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "21| Agents de maîtrise et Techniciens"
+      },
+      "type": "préavis de Démission",
+      "idcc": 86,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 48\n",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857333&cidTexte=KALITEXT000005682357"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 86,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 67",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857359&cidTexte=KALITEXT000005682357&dateTexte=19740607"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés"
+      },
+      "type": "préavis de Démission",
+      "idcc": 86,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 29",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000005857303&cidTexte=KALITEXT000005682357&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "conclusion contrat travail": "1| Contrat de travail conclu avant le 1er juillet 2009",
+        "groupe": "24| 1 à 3"
+      },
+      "type": "préavis de Démission",
+      "idcc": 176,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 32, 2°",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "conclusion contrat travail": "1| Contrat de travail conclu avant le 1er juillet 2009",
+        "groupe": "15| 4"
+      },
+      "type": "préavis de Démission",
+      "idcc": 176,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 32, 2°",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "conclusion contrat travail": "1| Contrat de travail conclu avant le 1er juillet 2009",
+        "groupe": "29| 5 et suivants"
+      },
+      "type": "préavis de Démission",
+      "idcc": 176,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 32, 2°",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "conclusion contrat travail": "2| Contrat de travail conclu après le 1er juillet 2009",
+        "groupe": "24| 1 à 3"
+      },
+      "type": "préavis de Démission",
+      "idcc": 176,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 32, 2°",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "conclusion contrat travail": "2| Contrat de travail conclu après le 1er juillet 2009",
+        "groupe": "27| 4 à 5"
+      },
+      "type": "préavis de Démission",
+      "idcc": 176,
+      "typeRupture": null,
+      "answer": "3 mois (si les salariés bénéficient pas des dispositions de l'article 4 de la convention collective nationale de retraite et de prévoyance des cadres du 14/3/1947 )",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 32, 2°",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "conclusion contrat travail": "2| Contrat de travail conclu après le 1er juillet 2009",
+        "groupe": "31| 6 et suivants "
+      },
+      "type": "préavis de Démission",
+      "idcc": 176,
+      "typeRupture": null,
+      "answer": "4 mois (si les salariés bénéficient pas des dispositions de l'article 4 de la convention collective nationale de retraite et de prévoyance des cadres du 14/3/1947 )",
+      "answer2": null,
+      "answer3": "120",
+      "ref": "Article 32, 2°",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D95886BC7232B7E17E29C15F66690F00.tplgfr24s_2?idArticle=KALIARTI000022189662&cidTexte=KALITEXT000005682476&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise"
+      },
+      "type": "préavis de Démission",
+      "idcc": 275,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 11, Annexe II",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A669A8D4959C60AC9D8FC2BCE24A3F9E.tplgfr43s_1?idArticle=KALIARTI000005872146&cidTexte=KALITEXT000005688169&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "28| Techniciens"
+      },
+      "type": "préavis de Démission",
+      "idcc": 275,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 11, Annexe II",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=A669A8D4959C60AC9D8FC2BCE24A3F9E.tplgfr43s_1?idArticle=KALIARTI000005872146&cidTexte=KALITEXT000005688169&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 275,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 10, Annexe I",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=8F0A015EC69AE0F899489E29A88831C7.tplgfr27s_1?idArticle=KALIARTI000005872089&cidTexte=KALITEXT000005688165&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "4| Ouvriers"
+      },
+      "type": "préavis de Démission",
+      "idcc": 275,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 15, Annexe III",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0802D655AF540CB544CBBB1A9BD8895B.tplgfr24s_1?idArticle=KALIARTI000005872211&cidTexte=KALITEXT000005688175&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés"
+      },
+      "type": "préavis de Démission",
+      "idcc": 275,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 15, Annexe III",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0802D655AF540CB544CBBB1A9BD8895B.tplgfr24s_1?idArticle=KALIARTI000005872211&cidTexte=KALITEXT000005688175&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 292,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Avenant Cadres, Article 8\r\n",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?cidTexte=KALITEXT000005682082&idSectionTA=KALISCTA000005726361&idConvention=KALICONT000005635856&dateTexte=29990101"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "42| Collaborateurs",
+        "coefficient": "24| 700 à 750"
+      },
+      "type": "préavis de Démission",
+      "idcc": 292,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 15",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856709&cidTexte=KALITEXT000005682080&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "42| Collaborateurs",
+        "coefficient": "28| 800 à 830 inclus"
+      },
+      "type": "préavis de Démission",
+      "idcc": 292,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 15",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856709&cidTexte=KALITEXT000005682080&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "75| Autres cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 413,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
+      "answer3": "60",
+      "ref": "Article 9, de l'annexe 6",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "71| Directeurs d'établissement",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 413,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
+      "answer3": "90",
+      "ref": "Article 9, de l'annexe 6",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "71| Directeurs d'établissement",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 413,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
+      "answer3": "60",
+      "ref": "Article 9, de l'annexe 6",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "72| Directeurs de centre de formation en travail social",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 413,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
+      "answer3": "90",
+      "ref": "Article 9, de l'annexe 6",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "72| Directeurs de centre de formation en travail social",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 413,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
+      "answer3": "60",
+      "ref": "Article 9, de l'annexe 6",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "70| Directeurs de service",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 413,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
+      "answer3": "90",
+      "ref": "Article 9, de l'annexe 6",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "70| Directeurs de service",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 413,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
+      "answer3": "60",
+      "ref": "Article 9, de l'annexe 6",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "74| Directeurs généraux",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 413,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
+      "answer3": "90",
+      "ref": "Article 9, de l'annexe 6",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "74| Directeurs généraux",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 413,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
+      "answer3": "60",
+      "ref": "Article 9, de l'annexe 6",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9B8B320FAE9B60108E3058F82F1467BF.tplgfr24s_3?idArticle=KALIARTI000022837394&cidTexte=KALITEXT000005684719&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "38| Non-cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 413,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": "Attention dispositions non étendues. Les dispositions de la CCN se s'appliquent qu'aux entreprises affiliées à la FEGAPEI- SYNEAS ( organisation patronale signataire),  ou qui en font application volontaire de la convention collective. Pour les autres entreprises. ",
+      "answer3": "30",
+      "ref": "Article 16",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6B7F66290E5A27E516CA3A19F104D2C7.tplgfr24s_3?idArticle=KALIARTI000005863125&cidTexte=KALITEXT000022192697&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 573,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 35",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802012&cidTexte=KALITEXT000005673619&dateTexte=20120228"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "6| Ouvriers, Employés"
+      },
+      "type": "préavis de Démission",
+      "idcc": 573,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 35",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802012&cidTexte=KALITEXT000005673619&dateTexte=20120228"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "27| Techniciens et agents de maîtrise (TAM)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 573,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": "Cette durée s'applique aux techniciens et agents de maîtrise ou assimilés",
+      "answer3": "60",
+      "ref": "Article 35",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000026802012&cidTexte=KALITEXT000005673619&dateTexte=20120228"
+    },
+    {
+      "criteria": {
+        "groupe": "1| I",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=2FEC0821CB0BEF0711D0E80CBDC0EAD7.tplgfr33s_1?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "groupe": "1| I",
+        "ancienneté": "42| 2 ans ou plus"
+      },
+      "type": "préavis de Démission",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=2FEC0821CB0BEF0711D0E80CBDC0EAD7.tplgfr33s_1?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "groupe": "4| II"
+      },
+      "type": "préavis de Démission",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=2FEC0821CB0BEF0711D0E80CBDC0EAD7.tplgfr33s_1?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "groupe": "5| III"
+      },
+      "type": "préavis de Démission",
+      "idcc": 650,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=2FEC0821CB0BEF0711D0E80CBDC0EAD7.tplgfr33s_1?idArticle=KALIARTI000005836199&cidTexte=KALITEXT000005673470&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise"
+      },
+      "type": "préavis de Démission",
+      "idcc": 675,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 9 de l'avenant Maîtrise Convention collective nationale du 30 juin 1972",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005752473&cidTexte=KALITEXT000005679768&idConvention=KALICONT000005635617&dateTexte=29990101"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 675,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 13 de l'avenant Cadres Convention collective nationale du 30 juin 1972\r\n",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005752482&cidTexte=KALITEXT000005679774&idConvention=KALICONT000005635617&dateTexte=29990101"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "3| Moins de 1 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 675,
+      "typeRupture": null,
+      "answer": null,
+      "answer2": null,
+      "answer3": "0",
+      "ref": "Article 38 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=087F78E34949639D3C28EC165BE5AB3A.tplgfr32s_2?idSectionTA=KALISCTA000005723965&cidTexte=KALITEXT000005679762&idConvention=KALICONT000005635617"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "16| 1 mois à 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 675,
+      "typeRupture": null,
+      "answer": "15 jours",
+      "answer2": null,
+      "answer3": "15",
+      "ref": "Article 38 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=087F78E34949639D3C28EC165BE5AB3A.tplgfr32s_2?idSectionTA=KALISCTA000005723965&cidTexte=KALITEXT000005679762&idConvention=KALICONT000005635617"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "22| Plus de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 675,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 38 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=087F78E34949639D3C28EC165BE5AB3A.tplgfr32s_2?idSectionTA=KALISCTA000005723965&cidTexte=KALITEXT000005679762&idConvention=KALICONT000005635617"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 787,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 6.2.0",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=CFEA1065D76552B48FA299221688C973.tpdila22v_3?idArticle=KALIARTI000005839444&cidTexte=KALITEXT000005674852&dateTexte=19910731"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés"
+      },
+      "type": "préavis de Démission",
+      "idcc": 787,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": "Le contrat de travail peut prévoir une durée plus longue",
+      "answer3": "30",
+      "ref": "Article 6.2.0",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=CFEA1065D76552B48FA299221688C973.tpdila22v_3?idArticle=KALIARTI000005839444&cidTexte=KALITEXT000005674852&dateTexte=19910731"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 843,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 6 de l'annexe : Statut du personnel d'encadrement",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000038678849&cidTexte=KALITEXT000005688564&dateTexte=20190827"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "35| Personnel de fabrication, personnel de vente et personnel de services",
+        "ancienneté": "15| Moins de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 843,
+      "typeRupture": null,
+      "answer": "1 semaine",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Article 32 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005873153&cidTexte=KALITEXT000005688564&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "35| Personnel de fabrication, personnel de vente et personnel de services",
+        "ancienneté": "22| Plus de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 843,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Article 32 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005873153&cidTexte=KALITEXT000005688564&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "logement": "1| Non-logé",
+        "coefficient": "21| Inférieur ou égal à 602"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1043,
+      "typeRupture": null,
+      "answer": "8 jours",
+      "answer2": null,
+      "answer3": "8",
+      "ref": "Article 14",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9BE634B39A56D325EB33F7F23B8EC784.tplgfr36s_3?idArticle=KALIARTI000034978399&cidTexte=KALITEXT000021180979&dateTexte=29981231&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "logement": "1| Non-logé",
+        "coefficient": "22| Supérieur à 602"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1043,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 14",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9BE634B39A56D325EB33F7F23B8EC784.tplgfr36s_3?idArticle=KALIARTI000034978399&cidTexte=KALITEXT000021180979&dateTexte=29981231&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "logement": "3| logés"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1043,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 14",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9BE634B39A56D325EB33F7F23B8EC784.tplgfr36s_3?idArticle=KALIARTI000034978399&cidTexte=KALITEXT000021180979&dateTexte=29981231&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "échelon": "4| De 17 à 19"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1090,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 4.10 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "échelon": "5| De 20 à 25"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1090,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 4.10 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1090,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 4.10 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "6| Ouvriers, Employés",
+        "échelon": "2| 1 et 2"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1090,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Article 2.12 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "6| Ouvriers, Employés",
+        "échelon": "3| De 3 à 12"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1090,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 2.12 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1147,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": "Attention, pour les personnels en CDD entre 1 et 6 mois de présence, le préavis est de 8 jours.",
+      "answer3": "90",
+      "ref": "Article 25 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F4547682D53DBCC86360428C5C1B153D.tplgfr36s_3?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "38| Non-cadres",
+        "ancienneté": "15| Moins de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1147,
+      "typeRupture": null,
+      "answer": "15 jours",
+      "answer2": null,
+      "answer3": "15",
+      "ref": "Article 25 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F4547682D53DBCC86360428C5C1B153D.tplgfr36s_3?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "38| Non-cadres",
+        "ancienneté": "23| 6 mois et plus"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1147,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 25 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F4547682D53DBCC86360428C5C1B153D.tplgfr36s_3?idArticle=KALIARTI000027745280&cidTexte=KALITEXT000005681857&dateTexte=29981231&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1266,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 13",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7BE04E56DD26A6F4EA5E4E0CEB153D12.tplgfr24s_3?idArticle=KALIARTI000018649420&cidTexte=KALITEXT000005640427&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "15| Moins de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1266,
+      "typeRupture": null,
+      "answer": "8 jours",
+      "answer2": null,
+      "answer3": "8",
+      "ref": "Article 13",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7BE04E56DD26A6F4EA5E4E0CEB153D12.tplgfr24s_3?idArticle=KALIARTI000018649420&cidTexte=KALITEXT000005640427&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "35| 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1266,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 13",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7BE04E56DD26A6F4EA5E4E0CEB153D12.tplgfr24s_3?idArticle=KALIARTI000018649420&cidTexte=KALITEXT000005640427&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1266,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 13",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7BE04E56DD26A6F4EA5E4E0CEB153D12.tplgfr24s_3?idArticle=KALIARTI000018649420&cidTexte=KALITEXT000005640427&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "26| Maîtrises",
+        "ancienneté": "15| Moins de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1266,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 13",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7BE04E56DD26A6F4EA5E4E0CEB153D12.tplgfr24s_3?idArticle=KALIARTI000018649420&cidTexte=KALITEXT000005640427&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "26| Maîtrises",
+        "ancienneté": "35| 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1266,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 13",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7BE04E56DD26A6F4EA5E4E0CEB153D12.tplgfr24s_3?idArticle=KALIARTI000018649420&cidTexte=KALITEXT000005640427&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "26| Maîtrises",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1266,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 13",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7BE04E56DD26A6F4EA5E4E0CEB153D12.tplgfr24s_3?idArticle=KALIARTI000018649420&cidTexte=KALITEXT000005640427&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "1| I",
+        "ancienneté": "1| Moins de 15 jours"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": null,
+      "answer2": null,
+      "answer3": "0",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "1| I",
+        "ancienneté": "2| 15 jours à 1 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 jour ouvré",
+      "answer2": null,
+      "answer3": "1",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "1| I",
+        "ancienneté": "8| Plus de 1 mois à 2 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 jours ouvrés",
+      "answer2": null,
+      "answer3": "2",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "1| I",
+        "ancienneté": "18| Plus de 2 mois à 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "7 jours calendaires",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "1| I",
+        "ancienneté": "36| Plus de 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "1| I",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "3| II",
+        "ancienneté": "1| Moins de 15 jours"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": null,
+      "answer2": null,
+      "answer3": "0",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "3| II",
+        "ancienneté": "2| 15 jours à 1 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 jour ouvré",
+      "answer2": null,
+      "answer3": "1",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "3| II",
+        "ancienneté": "8| Plus de 1 mois à 2 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 jours ouvrés",
+      "answer2": null,
+      "answer3": "2",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "3| II",
+        "ancienneté": "18| Plus de 2 mois à 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "7 jours calendaires",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "3| II",
+        "ancienneté": "36| Plus de 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "3| II",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "4| III",
+        "ancienneté": "1| Moins de 15 jours"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": null,
+      "answer2": null,
+      "answer3": "0",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "4| III",
+        "ancienneté": "2| 15 jours à 1 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 jour ouvré",
+      "answer2": null,
+      "answer3": "1",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "4| III",
+        "ancienneté": "8| Plus de 1 mois à 2 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 jours ouvrés",
+      "answer2": null,
+      "answer3": "2",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "4| III",
+        "ancienneté": "18| Plus de 2 mois à 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "7 jours calendaires",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "4| III",
+        "ancienneté": "36| Plus de 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "4| III",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "5| IV",
+        "ancienneté": "2| 15 jours à 1 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 jour ouvré",
+      "answer2": null,
+      "answer3": "1",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "5| IV",
+        "ancienneté": "8| Plus de 1 mois à 2 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 jours ouvrés",
+      "answer2": null,
+      "answer3": "2",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "5| IV",
+        "ancienneté": "18| Plus de 2 mois à 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "14 jours calendaires",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "5| IV",
+        "ancienneté": "36| Plus de 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "5| IV",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "7| V",
+        "ancienneté": "2| 15 jours à 1 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 jour ouvré",
+      "answer2": null,
+      "answer3": "1",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "7| V",
+        "ancienneté": "8| Plus de 1 mois à 2 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 jours ouvrés",
+      "answer2": null,
+      "answer3": "2",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "7| V",
+        "ancienneté": "18| Plus de 2 mois à 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "14 jours calendaires",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "7| V",
+        "ancienneté": "36| Plus de 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "20| Agents d'exploitation, employés administratifs et techniciens",
+        "niveau": "7| V",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Annexe IV: Agents d'exploitation, employés administratifs et techniciens, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994249&cidTexte=KALITEXT000005680928&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "1| I",
+        "ancienneté": "7| 15 jours à 2 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 semaine",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "1| I",
+        "ancienneté": "12| Plus de 2 mois à 3 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 semaine",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "1| I",
+        "ancienneté": "20| Plus de 3 mois à 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "1| I",
+        "ancienneté": "36| Plus de 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "1| I",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "3| II",
+        "ancienneté": "7| 15 jours à 2 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 semaine",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "3| II",
+        "ancienneté": "12| Plus de 2 mois à 3 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 semaine",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "3| II",
+        "ancienneté": "20| Plus de 3 mois à 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "3| II",
+        "ancienneté": "36| Plus de 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "3| II",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "4| III",
+        "ancienneté": "7| 15 jours à 2 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 semaine",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "4| III",
+        "ancienneté": "12| Plus de 2 mois à 3 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 semaine",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "4| III",
+        "ancienneté": "20| Plus de 3 mois à 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "4| III",
+        "ancienneté": "36| Plus de 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "4| III",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "5| IV",
+        "ancienneté": "7| 15 jours à 2 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 semaine",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "5| IV",
+        "ancienneté": "12| Plus de 2 mois à 3 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "5| IV",
+        "ancienneté": "20| Plus de 3 mois à 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "5| IV",
+        "ancienneté": "36| Plus de 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "5| IV",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "7| V",
+        "ancienneté": "7| 15 jours à 2 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 semaine",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "7| V",
+        "ancienneté": "12| Plus de 2 mois à 3 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "7| V",
+        "ancienneté": "20| Plus de 3 mois à 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "7| V",
+        "ancienneté": "36| Plus de 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "niveau": "7| V",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Annexe V: Agents de maîtrise, article 8",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994252&cidTexte=KALITEXT000005680930&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres",
+        "ancienneté": "2| 15 jours à 1 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "7 jours calendaires",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Annexe VI: Cadres, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres",
+        "ancienneté": "11| Plus de 1 mois à 3 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "14 jours calendaires",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Annexe VI: Cadres, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres",
+        "ancienneté": "20| Plus de 3 mois à 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe VI: Cadres, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres",
+        "ancienneté": "26| Plus de 6 mois à 1 an"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Annexe VI: Cadres, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres",
+        "ancienneté": "27| Plus de 1 an"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Annexe VI: Cadres, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres",
+        "ancienneté": "2| 15 jours à 1 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "7 jours calendaires",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Annexe VI: Cadres, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres",
+        "ancienneté": "11| Plus de 1 mois à 3 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "14 jours calendaires",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Annexe VI: Cadres, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres",
+        "ancienneté": "20| Plus de 3 mois à 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Annexe VI: Cadres, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres",
+        "ancienneté": "26| Plus de 6 mois à 1 an"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Annexe VI: Cadres, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres",
+        "ancienneté": "27| Plus de 1 an"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1351,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Annexe VI: Cadres, article 9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=E181308CF06395FB1FE9F409605264DE.tplgfr24s_1?idArticle=KALIARTI000021994255&cidTexte=KALITEXT000005680932&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "24| Agents de maîtrise (niveau IV et V)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1404,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 3.41.0 de la convention collective ",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AA399426F344A1C9D191D4546FE00E59.tplgfr41s_1?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "52| Cadres (niveau VI et plus)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1404,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 6.50 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AA399426F344A1C9D191D4546FE00E59.tplgfr41s_1?idArticle=KALIARTI000026356071&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "10| Ouvriers, Employés (niveau III)",
+        "niveau": "4| III"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1404,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 3.41.0 de la convention collective ",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AA399426F344A1C9D191D4546FE00E59.tplgfr41s_1?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "7| Ouvriers, Employés (niveaux I et II)",
+        "niveau": "2| I à II"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1404,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 3.41.0 de la convention collective ",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AA399426F344A1C9D191D4546FE00E59.tplgfr41s_1?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {},
+      "type": "préavis de démission",
+      "idcc": 1480,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": null,
+      "ref": "Article 46",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=C82F1F97F72A0703119C7E8E78BB85F7.tpdila10v_3?idArticle=KALIARTI000005786645&cidTexte=KALITEXT000005652402&dateTexte=20090818"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1483,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 9 du Chapitre II de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005750625&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1483,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 9 du Chapitre II de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005750625&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "15| Moins de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1483,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Article 14 du Chapitre Ier de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005761249&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594&dateTexte=29990101"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "22| Plus de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1483,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 14 du Chapitre Ier de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005761249&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594&dateTexte=29990101"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "78| Chargés d'enquête intermittents"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1486,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 21 de l'annexe relative aux enquêteurs",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005761991&cidTexte=KALITEXT000005679885&idConvention=KALICONT000005635173&dateTexte=29990101"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "19| Employés, Techniciens ou Agents de maîtrise (ETAM)",
+        "coefficient": "16| de 200 à 355",
+        "ancienneté": "40| 2 ans ou moins"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1486,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": "L'employeur et le salarié peuvent décider d'une durée plus longue",
+      "answer3": "30",
+      "ref": "Article 15 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "19| Employés, Techniciens ou Agents de maîtrise (ETAM)",
+        "coefficient": "16| de 200 à 355",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1486,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 15 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "19| Employés, Techniciens ou Agents de maîtrise (ETAM)",
+        "coefficient": "19| De 400 à 500",
+        "ancienneté": "40| 2 ans ou moins"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1486,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 15 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "19| Employés, Techniciens ou Agents de maîtrise (ETAM)",
+        "coefficient": "19| De 400 à 500",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1486,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 15 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "60| Ingénieurs, Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1486,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 15 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1501,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 12",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0A4CDB15908BFF8D4A2E83C3B7A96545.tplgfr33s_2?idArticle=KALIARTI000005833465&cidTexte=KALITEXT000005672325&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "15| Moins de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1501,
+      "typeRupture": null,
+      "answer": "8 jours",
+      "answer2": null,
+      "answer3": "8",
+      "ref": "Article 12",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0A4CDB15908BFF8D4A2E83C3B7A96545.tplgfr33s_2?idArticle=KALIARTI000005833465&cidTexte=KALITEXT000005672325&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "35| 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1501,
+      "typeRupture": null,
+      "answer": "15 jours",
+      "answer2": null,
+      "answer3": "15",
+      "ref": "Article 12",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0A4CDB15908BFF8D4A2E83C3B7A96545.tplgfr33s_2?idArticle=KALIARTI000005833465&cidTexte=KALITEXT000005672325&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1501,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 12",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0A4CDB15908BFF8D4A2E83C3B7A96545.tplgfr33s_2?idArticle=KALIARTI000005833465&cidTexte=KALITEXT000005672325&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "26| Maîtrises",
+        "ancienneté": "40| 2 ans ou moins"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1501,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 12",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0A4CDB15908BFF8D4A2E83C3B7A96545.tplgfr33s_2?idArticle=KALIARTI000005833465&cidTexte=KALITEXT000005672325&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "26| Maîtrises",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1501,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 12",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0A4CDB15908BFF8D4A2E83C3B7A96545.tplgfr33s_2?idArticle=KALIARTI000005833465&cidTexte=KALITEXT000005672325&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "4| Ouvriers",
+        "ancienneté": "15| Moins de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1501,
+      "typeRupture": null,
+      "answer": "8 jours",
+      "answer2": null,
+      "answer3": "8",
+      "ref": "Article 12",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0A4CDB15908BFF8D4A2E83C3B7A96545.tplgfr33s_2?idArticle=KALIARTI000005833465&cidTexte=KALITEXT000005672325&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "4| Ouvriers",
+        "ancienneté": "23| 6 mois et plus"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1501,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 12",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0A4CDB15908BFF8D4A2E83C3B7A96545.tplgfr33s_2?idArticle=KALIARTI000005833465&cidTexte=KALITEXT000005672325&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "25| Agents de maîtrise (niveau V)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1505,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 3.7 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005757025&cidTexte=KALITEXT000005689370&idConvention=KALICONT000005635421"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "51| Cadres (niveau VI)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1505,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 3.7 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005757025&cidTexte=KALITEXT000005689370&idConvention=KALICONT000005635421"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "11| Ouvriers, Employés (niveaux I, II, III, IV)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1505,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 3.7 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005757025&cidTexte=KALITEXT000005689370&idConvention=KALICONT000005635421"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1516,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": "En cas de Démission, les délais accordés peuvent être très courts si, à la suite de la demande du salarié, l'employeur estime que le départ précipité de ce dernier ne perturbe pas la bonne marche de l'entreprise. Ces délais sont à discuter au cas par cas et ne peuvent, en tout état de cause, être supérieurs à la durée des préavis fixés ci-dessus en cas de Licenciement",
+      "answer3": "90",
+      "ref": "Article 9.1\r\n",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=081E95519848F14B8C138A45AEF8D87F.tplgfr33s_2?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "40| 2 ans ou moins"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1516,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": "En cas de Démission, les délais accordés peuvent être très courts si, à la suite de la demande du salarié, l'employeur estime que le départ précipité de ce dernier ne perturbe pas la bonne marche de l'entreprise. Ces délais sont à discuter au cas par cas et ne peuvent, en tout état de cause, être supérieurs à la durée des préavis fixés ci-dessus en cas de Licenciement",
+      "answer3": "30",
+      "ref": "Article 9.1\r\n",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=081E95519848F14B8C138A45AEF8D87F.tplgfr33s_2?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1516,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 9.1\r\n",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=081E95519848F14B8C138A45AEF8D87F.tplgfr33s_2?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "28| Techniciens"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1516,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 9.1\r\n",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=081E95519848F14B8C138A45AEF8D87F.tplgfr33s_2?idArticle=KALIARTI000005775560&cidTexte=KALITEXT000005644543&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "niveau": "1| I"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1517,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "niveau": "3| II"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1517,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "niveau": "4| III"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1517,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "niveau": "5| IV"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1517,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "niveau": "7| V"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1517,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "niveau": "8| VI"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1517,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "niveau": "9| VII"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1517,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "niveau": "11| VIII"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1517,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "niveau": "12| IX"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1517,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Chapitre VI, Article 1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=36436F81C3DF558365FA1648B6380F52.tplgfr24s_1?idArticle=KALIARTI000026803725&cidTexte=KALITEXT000026803629&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "21| Agents de maîtrise et Techniciens",
+        "groupe": "15| 4"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1518,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 4.4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "21| Agents de maîtrise et Techniciens",
+        "groupe": "16| 5"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1518,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 4.4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "21| Agents de maîtrise et Techniciens",
+        "groupe": "17| 6"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1518,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 4.4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "45| Animateurs, techniciens et professeurs",
+        "niveau": "13| A"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1518,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 4.4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "45| Animateurs, techniciens et professeurs",
+        "niveau": "14| B"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1518,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 4.4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres",
+        "groupe": "18| 7"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1518,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 4.4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres",
+        "groupe": "19| 8"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1518,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 4.4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "6| Ouvriers, Employés",
+        "groupe": "13| 2"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1518,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 4.4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "6| Ouvriers, Employés",
+        "groupe": "14| 3"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1518,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 4.4",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=F6466B2FD646502AAD4864291B818763.tplgfr27s_1?idArticle=KALIARTI000032495095&cidTexte=KALITEXT000005681198&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "ancienneté": "24| Moins de 1 an"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1527,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 32",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "ancienneté": "25| Au moins 1 an"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1527,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 32",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "56| Cadres non-VRP"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1527,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 32",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "55| Cadres VRP",
+        "ancienneté": "24| Moins de 1 an"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1527,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 32",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "55| Cadres VRP",
+        "ancienneté": "25| Au moins 1 an"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1527,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 32",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "76| Négociateur non VRP",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1527,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 32",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "76| Négociateur non VRP",
+        "ancienneté": "42| 2 ans ou plus"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1527,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 32",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "77| Négociateur VRP",
+        "ancienneté": "24| Moins de 1 an"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1527,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 32",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "77| Négociateur VRP",
+        "ancienneté": "37| 1 an à moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1527,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 32",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "77| Négociateur VRP",
+        "ancienneté": "42| 2 ans ou plus"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1527,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 32",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "6| Ouvriers, Employés",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1527,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 32",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "6| Ouvriers, Employés",
+        "ancienneté": "42| 2 ans ou plus"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1527,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 32",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=D26C8B281BBEBC7C9D780865323DB02D.tplgfr27s_1?idArticle=KALIARTI000023759231&cidTexte=KALITEXT000023759095&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "4| Ouvriers",
+        "ancienneté": "10| Au delà de la période d'essai et jusqu'à 3 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1596,
+      "typeRupture": null,
+      "answer": "2 jours",
+      "answer2": null,
+      "answer3": "2",
+      "ref": "Article 10.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005776855&cidTexte=KALITEXT000005645150&dateTexte=19910301"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "4| Ouvriers",
+        "ancienneté": "13| Plus de 3 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1596,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Article 10.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005776855&cidTexte=KALITEXT000005645150&dateTexte=19910301"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "4| Ouvriers",
+        "ancienneté": "10| Au delà de la période d'essai et jusqu'à 3 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1597,
+      "typeRupture": null,
+      "answer": "2 jours",
+      "answer2": null,
+      "answer3": "2",
+      "ref": "Article 10.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6B7211A48E0474D6942B62196D8E9DEE.tplgfr37s_2?idArticle=KALIARTI000005776855&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "4| Ouvriers",
+        "ancienneté": "13| Plus de 3 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1597,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Article 10.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=6B7211A48E0474D6942B62196D8E9DEE.tplgfr37s_2?idArticle=KALIARTI000005776855&cidTexte=KALITEXT000005645150&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1606,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 8 de l'annexe \"agents de maîtrise\" ",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0832656ABC6E21C910218E6299A686E0.tpdila23v_2?idArticle=KALIARTI000005870771&cidTexte=KALITEXT000005687528&dateTexte=19930629"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1606,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 8 de l'annexe \"cadres\" ",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=087F78E34949639D3C28EC165BE5AB3A.tplgfr32s_2?idSectionTA=KALISCTA000005731919&cidTexte=KALITEXT000005687530&idConvention=KALICONT000005635871"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1606,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 9.1 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000024633414&cidTexte=KALITEXT000005687520&idConvention=KALICONT000005635871&dateTexte=29990101"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "58| Cadres (Classes 5 à 7)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1672,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article II. 6 de l'accord relatif aux dispositions particulières \" Cadres \"",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=B48AED9DB5F1742E99768AF572DBFEF2.tpdjo13v_1?idSectionTA=KALISCTA000026688794&cidTexte=KALITEXT000005654666&idConvention=KALICONT000005635918"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "36| Non-cadres (Classes 1 à 4)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1672,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 91 a) de la convention collective ",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E0FA42F1D98C3A5E305111F72B4DD513.tpdjo06v_1?idSectionTA=KALISCTA000005765066&cidTexte=KALITEXT000005654646&idConvention=KALICONT000005635918"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "4| Ouvriers",
+        "ancienneté": "10| Au delà de la période d'essai et jusqu'à 3 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1702,
+      "typeRupture": null,
+      "answer": "2 jours",
+      "answer2": null,
+      "answer3": "2",
+      "ref": "Article 10.1.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=63146BC1A1D3059843F8953CF57BE0FC.tpdila07v_3?idArticle=KALIARTI000005801846&cidTexte=KALITEXT000005658951&dateTexte=20120513"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "4| Ouvriers",
+        "ancienneté": "13| Plus de 3 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1702,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Article 10.1.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=63146BC1A1D3059843F8953CF57BE0FC.tpdila07v_3?idArticle=KALIARTI000005801846&cidTexte=KALITEXT000005658951&dateTexte=20120513"
+    },
+    {
+      "criteria": {
+        "ancienneté": "10| Au delà de la période d'essai et jusqu'à 3 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1740,
+      "typeRupture": null,
+      "answer": "2 jours",
+      "answer2": null,
+      "answer3": "2",
+      "ref": "article 1.1.9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "ancienneté": "13| Plus de 3 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1740,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "article 1.1.9",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000005800996&cidTexte=KALITEXT000005658612&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "ancienneté": "15| Moins de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1979,
+      "typeRupture": null,
+      "answer": "15 jours",
+      "answer2": null,
+      "answer3": "15",
+      "ref": "Article 30 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "ancienneté": "35| 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1979,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 30 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1979,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 30 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres",
+        "ancienneté": "15| Moins de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1979,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 30 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres",
+        "ancienneté": "22| Plus de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1979,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 30 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "15| Moins de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1979,
+      "typeRupture": null,
+      "answer": "8 jours",
+      "answer2": null,
+      "answer3": "8",
+      "ref": "Article 30 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "35| 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1979,
+      "typeRupture": null,
+      "answer": "15 jours",
+      "answer2": null,
+      "answer3": "15",
+      "ref": "Article 30 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1979,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 30 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1996,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 6 de la convention collective nationale du 3 décembre 1997 relative aux dispositions particulières applicables aux cadres",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AEA06E7172B0964736B47818AC28E3F3.tpdila23v_2?idArticle=KALIARTI000005829442&cidTexte=KALITEXT000005671154&dateTexte=20170816"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "38| Non-cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 1996,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 20 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005829411&cidTexte=KALITEXT000005671152&dateTexte=20180607"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "21| Agents de maîtrise et Techniciens"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2098,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 19",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005850366&cidTexte=KALITEXT000005679043"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2098,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 19",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005850366&cidTexte=KALITEXT000005679043"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2098,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 19",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005850366&cidTexte=KALITEXT000005679043"
+    },
+    {
+      "criteria": {
+        "ancienneté": "15| Moins de 6 mois",
+        "catégorie professionnelle": "100| Salariés du particulier employeur"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3239,
+      "typeRupture": null,
+      "answer": "1 semaine",
+      "answer2": null,
+      "answer3": "7",
+      "ref": null,
+      "refUrl": null
+    },
+    {
+      "criteria": {
+        "ancienneté": "35| 6 mois à 2 ans",
+        "catégorie professionnelle": "100| Salariés du particulier employeur"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3239,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "ref": null,
+      "refUrl": null
+    },
+    {
+      "criteria": {
+        "ancienneté": "42| 2 ans ou plus",
+        "catégorie professionnelle": "100| Salariés du particulier employeur"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3239,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": null,
+      "refUrl": null
+    },
+    {
+      "criteria": {
+        "ancienneté": "105| Enfant accueilli depuis moins de 3 mois",
+        "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3239,
+      "typeRupture": null,
+      "answer": null,
+      "answer2": null,
+      "answer3": "8",
+      "ref": "Art. L. 423-26 du Code de l'action sociale et des familles",
+      "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054",
+      "ref2": "Art. 120 de la convention collective",
+      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318",
+      "note": "Il s’agit de la durée la plus favorable entre celle prévue par le Code de l’action sociale et des familles et celle prévue par la convention collective.",
+      "disableLegal": true
+    },
+    {
+      "criteria": {
+        "ancienneté": "106| Enfant accueilli de 3 mois à moins d'un an",
+        "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3239,
+      "typeRupture": null,
+      "answer": "15 jours calendaires",
+      "answer2": null,
+      "answer3": "15",
+      "ref": "Art. L. 423-26 du Code de l'action sociale et des familles",
+      "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054",
+      "ref2": "Art. 120 de la convention collective",
+      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318",
+      "note": "Si la lettre de démission a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective \"Assistants maternels du particulier employeur (IDCC 2395)\" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022.",
+      "disableLegal": true
+    },
+    {
+      "criteria": {
+        "ancienneté": "107| Enfant accueilli depuis 1 an et plus",
+        "catégorie professionnelle": "101| Assistants maternels du particulier employeur"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3239,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Art. L. 423-26 du Code de l'action sociale et des familles",
+      "refUrl": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798054",
+      "ref2": "Art. 120 de la convention collective",
+      "ref2Url": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318",
+      "note": "Si la lettre de démission a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective \"Assistants maternels du particulier employeur (IDCC 2395)\" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022.",
+      "disableLegal": true
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2120,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 30 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005784453&cidTexte=KALITEXT000005678018"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "28| Techniciens"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2120,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 30 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005784453&cidTexte=KALITEXT000005678018"
+    },
+    {
+      "criteria": {
+        "groupe": "20| A et B",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2148,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 4.4.1.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000022416125&cidTexte=KALITEXT000005677399&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "groupe": "20| A et B",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2148,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 4.4.1.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000022416125&cidTexte=KALITEXT000005677399&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "groupe": "21| C et D"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2148,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 4.4.1.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000022416125&cidTexte=KALITEXT000005677399&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "groupe": "22| E, F et G"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2148,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 4.4.1.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000022416125&cidTexte=KALITEXT000005677399&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "groupe": "23| Hors classification"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2148,
+      "typeRupture": null,
+      "answer": "Pour les salariés hors classification, la durée du préavis est fixée par le contrat de travail dans la limite de 3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 4.4.1.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9136FD3448350FB8507D33D3CE4F3321.tplgfr36s_2?idArticle=KALIARTI000022416125&cidTexte=KALITEXT000005677399&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "21| Agents de maîtrise et Techniciens"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2216,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "article 5 de l'annexe II",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0B7BDDA80BCD42638DB0584F88087DBC.tplgfr30s_2?idArticle=KALIARTI000023307097&cidTexte=KALITEXT000005642662&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2216,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "article 7 de l'annexe III",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=1586D3FFD3D633068920933FE7AEDD82.tplgfr44s_2?idArticle=KALIARTI000023307118&cidTexte=KALITEXT000005642692&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "6| Ouvriers, Employés"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2216,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "article 3 de l'annexe I",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=50DAAB41101DC91E64D73B9B365A0E69.tplgfr37s_2?idArticle=KALIARTI000005770839&cidTexte=KALITEXT000005642626&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2264,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 45",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801971&cidTexte=KALITEXT000005658770&dateTexte=20191017"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "68| Cadres dirigeants"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2264,
+      "typeRupture": null,
+      "answer": "6 mois",
+      "answer2": null,
+      "answer3": "180",
+      "ref": "Article 45",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801971&cidTexte=KALITEXT000005658770&dateTexte=20191017"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "63| Cadres supérieurs"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2264,
+      "typeRupture": null,
+      "answer": "6 mois",
+      "answer2": null,
+      "answer3": "180",
+      "ref": "Article 45",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801971&cidTexte=KALITEXT000005658770&dateTexte=20191017"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "21| 6 mois ou moins"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2264,
+      "typeRupture": null,
+      "answer": "15 jours",
+      "answer2": null,
+      "answer3": "15",
+      "ref": "Article 45",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801971&cidTexte=KALITEXT000005658770&dateTexte=20191017"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés",
+        "ancienneté": "22| Plus de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2264,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 45",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801971&cidTexte=KALITEXT000005658770&dateTexte=20191017"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2264,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 45",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801971&cidTexte=KALITEXT000005658770&dateTexte=20191017"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
+        "ancienneté": "42| 2 ans ou plus"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2264,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 45",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005801971&cidTexte=KALITEXT000005658770&dateTexte=20191017"
+    },
+    {
+      "criteria": {
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2420,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 7.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=769BBFA5FB460F19FA8D80BC0ADF3AA7.tplgfr25s_1?idArticle=KALIARTI000017941893&cidTexte=KALITEXT000017941844&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "ancienneté": "42| 2 ans ou plus"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2420,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 7.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=769BBFA5FB460F19FA8D80BC0ADF3AA7.tplgfr25s_1?idArticle=KALIARTI000017941893&cidTexte=KALITEXT000017941844&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2511,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 4.4.1. de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "6| Ouvriers, Employés"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2511,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 4.4.1. de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "27| Techniciens et agents de maîtrise (TAM)"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2511,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 4.4.1. de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "23| Agents de maîtrise"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2596,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2596,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "33| Salariés occupant un emploi de l'esthétique-cosmétique",
+        "ancienneté": "21| 6 mois ou moins"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2596,
+      "typeRupture": null,
+      "answer": "1 semaine",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "33| Salariés occupant un emploi de l'esthétique-cosmétique",
+        "ancienneté": "22| Plus de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2596,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "32| Salariés occupant un emploi non-technique de la coiffure",
+        "ancienneté": "21| 6 mois ou moins"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2596,
+      "typeRupture": null,
+      "answer": "1 semaine",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "32| Salariés occupant un emploi non-technique de la coiffure",
+        "ancienneté": "22| Plus de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2596,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "31| Salariés occupant un emploi technique de la coiffure",
+        "ancienneté": "21| 6 mois ou moins"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2596,
+      "typeRupture": null,
+      "answer": "1 semaine",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "31| Salariés occupant un emploi technique de la coiffure",
+        "ancienneté": "22| Plus de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2596,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 7.4.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000018563843&cidTexte=KALITEXT000018563760"
+    },
+    {
+      "criteria": {
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2609,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 8.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7C6D5292CB5A9AA0DB357C8DEC36C6EB.tplgfr36s_2?idArticle=KALIARTI000018773769&cidTexte=KALITEXT000018773681&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "ancienneté": "42| 2 ans ou plus"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2609,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 8.1",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=7C6D5292CB5A9AA0DB357C8DEC36C6EB.tplgfr36s_2?idArticle=KALIARTI000018773769&cidTexte=KALITEXT000018773681&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2614,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 8.1 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=32DC2149CCEA7BF0314A78D5DCC51A9C.tplgfr23s_1?idArticle=KALIARTI000018926304&cidTexte=KALITEXT000018926214&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "ancienneté": "42| 2 ans ou plus"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2614,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 8.1 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=32DC2149CCEA7BF0314A78D5DCC51A9C.tplgfr23s_1?idArticle=KALIARTI000018926304&cidTexte=KALITEXT000018926214&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "79| A",
+        "ancienneté": "15| Moins de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "1 semaine (de date à date)",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "79| A",
+        "ancienneté": "35| 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "1 mois (de date à date)",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "79| A",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "2 mois (de date à date)",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "80| B",
+        "ancienneté": "15| Moins de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "1 semaine (de date à date)",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "80| B",
+        "ancienneté": "35| 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "1 mois (de date à date)",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "80| B",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "2 mois (de date à date)",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "81| C",
+        "ancienneté": "15| Moins de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "1 semaine (de date à date)",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "81| C",
+        "ancienneté": "35| 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "1 mois (de date à date)",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "81| C",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "2 mois (de date à date)",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "82| D",
+        "ancienneté": "15| Moins de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "1 semaine (de date à date)",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "82| D",
+        "ancienneté": "35| 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "1 mois (de date à date)",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "82| D",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "2 mois (de date à date)",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "84| E",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "1 mois (de date à date)",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "84| E",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "2 mois (de date à date)",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "85| F",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "1 mois (de date à date)",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "85| F",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "2 mois (de date à date)",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "86| G",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "2 mois (de date à date)",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "86| G",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "4 mois (de date à date)",
+      "answer2": null,
+      "answer3": "120",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "87| H",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "2 mois (de date à date)",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "87| H",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "4 mois (de date à date)",
+      "answer2": null,
+      "answer3": "120",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "88| I",
+        "ancienneté": "38| Moins de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "2 mois (de date à date)",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "88| I",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 2941,
+      "typeRupture": null,
+      "answer": "4 mois (de date à date)",
+      "answer2": null,
+      "answer3": "120",
+      "ref": "Titre IV, Article 27",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=302614B8DD2A93A0C437326C71199882.tplgfr33s_1?idArticle=KALIARTI000025805634&cidTexte=KALITEXT000025805457&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "1| Agents de propreté",
+        "ancienneté": "3| Moins de 1 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3043,
+      "typeRupture": null,
+      "answer": null,
+      "answer2": null,
+      "answer3": "0",
+      "ref": "Article 4.11.2 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "1| Agents de propreté",
+        "ancienneté": "16| 1 mois à 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3043,
+      "typeRupture": null,
+      "answer": "2 jours",
+      "answer2": null,
+      "answer3": "2",
+      "ref": "Article 4.11.2 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "1| Agents de propreté",
+        "ancienneté": "22| Plus de 6 mois"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3043,
+      "typeRupture": null,
+      "answer": "1 semaine",
+      "answer2": null,
+      "answer3": "7",
+      "ref": "Article 4.11.2 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "48| Cadres"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3043,
+      "typeRupture": null,
+      "answer": "3 mois",
+      "answer2": null,
+      "answer3": "90",
+      "ref": "Article 4.11.2 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "16| Employés"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3043,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 4.11.2 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
+        "ancienneté": "32| 2 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3043,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 4.11.2 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "27| Techniciens et agents de maîtrise (TAM)",
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3043,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 4.11.2 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
+    },
+    {
+      "criteria": {
+        "ancienneté": "35| 6 mois à 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3127,
+      "typeRupture": null,
+      "answer": "1 mois",
+      "answer2": null,
+      "answer3": "30",
+      "ref": "Article 2 de la section 1 du Chapitre 4 de la Partie II de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=3429E84F009E9522894D791FC4F0085E.tplgfr25s_1?idSectionTA=KALISCTA000027029046&cidTexte=KALITEXT000026943196&idConvention=KALICONT000027084096&dateTexte=29990101"
+    },
+    {
+      "criteria": {
+        "ancienneté": "43| Plus de 2 ans"
+      },
+      "type": "préavis de Démission",
+      "idcc": 3127,
+      "typeRupture": null,
+      "answer": "2 mois",
+      "answer2": null,
+      "answer3": "60",
+      "ref": "Article 2 de la section 1 du Chapitre 4 de la Partie II de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=3429E84F009E9522894D791FC4F0085E.tplgfr25s_1?idSectionTA=KALISCTA000027029046&cidTexte=KALITEXT000026943196&idConvention=KALICONT000027084096&dateTexte=29990101"
+    }
+  ]
+}

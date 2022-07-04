@@ -36,7 +36,8 @@ function getSearchBody({ source, slug }) {
       "cdtnId",
       "covisits",
       "source",
-      "highlight", // convention-collective
+      "highlight", // convention-collective,
+      "sectionDisplayMode",
     ],
     query: {
       bool: {

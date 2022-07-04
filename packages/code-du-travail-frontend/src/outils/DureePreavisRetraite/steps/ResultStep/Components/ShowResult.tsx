@@ -14,7 +14,7 @@ import {
 
 type Props = {
   result: PublicodesPreavisRetraiteResult;
-  agreementMaximumResult: PublicodesPreavisRetraiteResult;
+  agreementMaximumResult: PublicodesPreavisRetraiteResult | null;
   type: "mise" | "départ";
   notifications: Notification[];
 };
