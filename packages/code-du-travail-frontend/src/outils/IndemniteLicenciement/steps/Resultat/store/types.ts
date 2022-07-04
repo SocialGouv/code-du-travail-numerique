@@ -7,8 +7,6 @@ import { InfoCalcul } from "../../../common/usecase/generateExplanation";
 
 export type ResultStoreInput = {
   publicodesResult: PublicodesIndemniteLicenciementResult | null;
-  seniority: number;
-  salaireRef: number;
   infoCalcul?: InfoCalcul;
 };
 

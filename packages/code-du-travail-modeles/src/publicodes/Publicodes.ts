@@ -1,5 +1,5 @@
-import type { Notification, References } from "../utils";
 import type { PublicodesData } from "./types";
+import type { Notification, References } from "../utils";
 
 export interface Publicodes<TResult> {
   readonly data: PublicodesData<TResult>;

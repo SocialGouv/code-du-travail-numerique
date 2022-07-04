@@ -6,30 +6,13 @@ import { AddButton, DelButton } from "../../../../common/Buttons";
 import { Error } from "../../../../common/ErrorField";
 import { MultiFieldRow } from "../../../../common/MultiFieldRow";
 import { Question } from "../../../../common/Question";
-
-export type Absence = {
-  motif: string;
-  durationInMonth: number | undefined;
-};
+import { Absence, MOTIFS } from "../../../common";
 
 type Props = {
   onChange: (absences: Absence[]) => void;
   absences: Absence[];
   error?: string;
 };
-
-export const MOTIFS = [
-  { label: "Absence pour maladie non professionnelle", value: 1.0 },
-  { label: "Arrêt maladie lié à un accident de trajet", value: 1.0 },
-  { label: "Congé sabbatique", value: 1.0 },
-  { label: "Congé pour création d'entreprise", value: 1.0 },
-  { label: "Congé parental d'éducation", value: 0.5 },
-  { label: "Congés sans solde", value: 1.0 },
-  { label: "Grève", value: 1.0 },
-  { label: "Mise à pied", value: 1.0 },
-  { label: "Maladie d'origine non professionnelle", value: 1.0 },
-  { label: "Congé de paternité", value: 1.0 },
-];
 
 const AbsencePeriods = ({ onChange, absences, error }: Props) => {
   const [localAbsences, setLocalAbsences] = React.useState(

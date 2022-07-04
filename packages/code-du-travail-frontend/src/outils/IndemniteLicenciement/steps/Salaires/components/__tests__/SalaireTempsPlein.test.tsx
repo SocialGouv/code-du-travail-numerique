@@ -7,6 +7,7 @@ describe("<SalaireTempsPlein />", () => {
     expect(
       render(
         <SalaireTempsPlein
+          title="Yo"
           onSalariesChange={jest.fn()}
           salaryPeriods={[]}
           error={undefined}
@@ -18,6 +19,7 @@ describe("<SalaireTempsPlein />", () => {
   it("should render salaries period by default", () => {
     const { queryByText } = render(
       <SalaireTempsPlein
+        title="Indiquez le montant des salaires mensuels brut blabla"
         onSalariesChange={jest.fn()}
         salaryPeriods={[
           {
@@ -37,6 +39,7 @@ describe("<SalaireTempsPlein />", () => {
     const onSalariesChange = jest.fn();
     const { getByTitle } = render(
       <SalaireTempsPlein
+        title="Yo"
         onSalariesChange={onSalariesChange}
         salaryPeriods={[
           {
@@ -64,6 +67,7 @@ describe("<SalaireTempsPlein />", () => {
     const onSalariesChange = jest.fn();
     const { getByTitle } = render(
       <SalaireTempsPlein
+        title="Yo"
         onSalariesChange={onSalariesChange}
         salaryPeriods={[
           {
@@ -92,6 +96,7 @@ describe("<SalaireTempsPlein />", () => {
   it("should render error", () => {
     const { getByText } = render(
       <SalaireTempsPlein
+        title="Yo"
         onSalariesChange={jest.fn()}
         salaryPeriods={[
           {

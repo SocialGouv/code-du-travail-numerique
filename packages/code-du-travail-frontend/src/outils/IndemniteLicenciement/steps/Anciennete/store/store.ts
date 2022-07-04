@@ -1,5 +1,9 @@
+import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 import produce from "immer";
 import { GetState, SetState } from "zustand";
+import { IndemniteLicenciementStepName } from "../../..";
+import { validateAgreement } from "../../../agreements";
+import { computeSalaryPeriods } from "../../../common";
 import { StoreSlice } from "../../../store";
 import { SalairesStoreSlice } from "../../Salaires/store";
 
@@ -50,10 +54,20 @@ const createAncienneteStore: StoreSlice<
     },
     onValidateStepAnciennete: () => {
       const { isValid, errorState } = validateStep(get().ancienneteData.input);
+
+      const isAgreementValid = validateAgreement(
+        SupportedCcIndemniteLicenciement.IDCC1516, //TODO: replace par la cc
+        IndemniteLicenciementStepName.Anciennete,
+        get,
+        set
+      );
+
+      const isStepValid = isValid && isAgreementValid;
+
       set(
         produce((state: AncienneteStoreSlice) => {
-          state.ancienneteData.hasBeenSubmit = isValid ? false : true;
-          state.ancienneteData.isStepValid = isValid;
+          state.ancienneteData.hasBeenSubmit = isStepValid ? false : true;
+          state.ancienneteData.isStepValid = isStepValid;
           state.ancienneteData.error = errorState;
         })
       );
@@ -70,7 +84,7 @@ const applyGenericValidation = (
 ) => {
   if (get().ancienneteData.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
-      draft.ancienneteData.input[paramName] = value;
+      draft.ancienneteData.input[paramName as string] = value;
     });
     const { isValid, errorState } = validateStep(
       nextState.ancienneteData.input
@@ -79,13 +93,13 @@ const applyGenericValidation = (
       produce((state: AncienneteStoreSlice) => {
         state.ancienneteData.error = errorState;
         state.ancienneteData.isStepValid = isValid;
-        state.ancienneteData.input[paramName] = value;
+        state.ancienneteData.input[paramName as string] = value;
       })
     );
   } else {
     set(
       produce((state: AncienneteStoreSlice) => {
-        state.ancienneteData.input[paramName] = value;
+        state.ancienneteData.input[paramName as string] = value;
       })
     );
   }

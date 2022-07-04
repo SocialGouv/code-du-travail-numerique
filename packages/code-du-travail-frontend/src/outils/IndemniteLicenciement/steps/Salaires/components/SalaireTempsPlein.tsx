@@ -1,4 +1,5 @@
 import { icons, Input, theme } from "@socialgouv/cdtn-ui";
+import { SalaryPeriods } from "@socialgouv/modeles-social";
 import React from "react";
 import styled from "styled-components";
 
@@ -6,18 +7,21 @@ import { InlineError } from "../../../../common/ErrorField";
 import { Question } from "../../../../common/Question";
 import { SmallText } from "../../../../common/stepStyles";
 import { ErrorWrapper } from "../../../../Components/TextQuestion";
-import { SalaryPeriods } from "../../../common";
 
 type Props = {
+  title: string;
   salaryPeriods: SalaryPeriods[];
   onSalariesChange: (salaries: SalaryPeriods[]) => void;
   error?: string;
+  note?: string;
 };
 
 export const SalaireTempsPlein = ({
   salaryPeriods,
   onSalariesChange,
   error,
+  title,
+  note,
 }: Props): JSX.Element => {
   const [isFirstEdit, setIsFirstEdit] = React.useState(true);
   const [salariesPeriod, setLocalSalaries] =
@@ -82,10 +86,7 @@ export const SalaireTempsPlein = ({
     <StyledDiv>
       <Table>
         <Caption>
-          <Question required>
-            Indiquez le montant des salaires mensuels brut perçus au cours des
-            12 mois précédents la notification du licenciement
-          </Question>
+          <Question required>{title}</Question>
           <SmallText>
             Renseignez le montant des salaires (en incluant les primes et
             avantages en nature) dans le premier champ et le montant des primes
@@ -161,6 +162,7 @@ export const SalaireTempsPlein = ({
           <InlineError>{error}</InlineError>
         </StyledInlineWrapperError>
       )}
+      {note && <SmallText>{note}</SmallText>}
     </StyledDiv>
   );
 };

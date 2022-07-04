@@ -4,6 +4,9 @@ import { SectionTitle } from "../../../common/stepStyles";
 import { RadioQuestion, TextQuestion } from "../../../Components";
 import { AbsencePeriods } from "./components";
 import { useIndemniteLicenciementStore } from "../../store";
+import { AgreementsInjector } from "../../agreements";
+import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
+import { IndemniteLicenciementStepName } from "../..";
 
 const StepAnciennete = () => {
   const {
@@ -101,6 +104,10 @@ const StepAnciennete = () => {
           error={errorAbsencePeriods}
         />
       )}
+      <AgreementsInjector
+        idcc={SupportedCcIndemniteLicenciement.IDCC1516} //TODO: remplacer par la bonne CC
+        step={IndemniteLicenciementStepName.Anciennete}
+      />
     </>
   );
 };

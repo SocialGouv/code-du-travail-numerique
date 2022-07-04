@@ -1,6 +1,5 @@
 import { StepData } from "../../../store";
-import { Absence } from "../components/AbsencePeriods";
-import { OuiNon } from "../../../common/types";
+import { Absence, OuiNon } from "../../../common/types";
 
 export type AncienneteStoreInput = {
   dateEntree?: string;
