@@ -48,40 +48,4 @@ describe("Publicodes Context", () => {
     });
     expect(screen.getByTestId("text")).toHaveTextContent("Hello");
   });
-
-  it("should render a result for indemnité de licenciement", () => {
-    renderProviderIndemniteLicenciement({
-      children: (
-        <PublicodesContext.Consumer>
-          {(result) => (
-            <>
-              <button
-                data-testid="setSituation"
-                onClick={() => {
-                  result?.setSituation({
-                    "contrat salarié . ancienneté en année": "2.333333333",
-                    "contrat salarié . convention collective": "''",
-                    "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
-                      "non",
-                    "contrat salarié . salaire de référence": "2000",
-                    "indemnité de licenciement": "oui",
-                  });
-                }}
-              />
-              <p data-testid="text">
-                {
-                  result?.execute("contrat salarié . indemnité de licenciement")
-                    ?.value
-                }
-              </p>
-            </>
-          )}
-        </PublicodesContext.Consumer>
-      ),
-    });
-    expect(screen.getByTestId("text")).toHaveTextContent("");
-    const setButton = screen.getByTestId("setSituation");
-    fireEvent.click(setButton);
-    expect(screen.getByTestId("text")).toHaveTextContent("1166.667");
-  });
 });
