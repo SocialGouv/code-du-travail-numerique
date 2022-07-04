@@ -36,9 +36,58 @@ describe("Result store", () => {
     ]);
 
     // Salaire ref
-    store.getState().salairesFunction.onChangeHasSameSalaire("oui");
-    store.getState().salairesFunction.onChangeSalaireBrut("2000"); // ou valuePeriods
-    store.getState().salairesFunction.onChangePrimes([200, 200]);
+    store.getState().salairesFunction.onSalariesChange([
+      {
+        month: "janvier",
+        value: 2000,
+        prime: 200,
+      },
+      {
+        month: "février",
+        value: 2000,
+        prime: 200,
+      },
+      {
+        month: "mars",
+        value: 2000,
+      },
+      {
+        month: "avril",
+        value: 2000,
+      },
+      {
+        month: "mai",
+        value: 2000,
+      },
+      {
+        month: "juin",
+        value: 2000,
+      },
+      {
+        month: "juillet",
+        value: 2000,
+      },
+      {
+        month: "août",
+        value: 2000,
+      },
+      {
+        month: "septembre",
+        value: 2000,
+      },
+      {
+        month: "octobre",
+        value: 2000,
+      },
+      {
+        month: "novembre",
+        value: 2000,
+      },
+      {
+        month: "décembre",
+        value: 2000,
+      },
+    ]);
 
     // Contrat de travail
     store
@@ -81,15 +130,16 @@ describe("Result store", () => {
     ]);
 
     // Salaire ref
-    store.getState().salairesFunction.onChangeHasSameSalaire("non");
     store.getState().salairesFunction.onSalariesChange([
       {
         month: "janvier",
         value: 1000,
+        prime: 200,
       },
       {
         month: "décembre",
         value: 1000,
+        prime: 200,
       },
       {
         month: "novembre",
@@ -131,8 +181,7 @@ describe("Result store", () => {
         month: "février",
         value: 1000,
       },
-    ]); // ou valuePeriods
-    store.getState().salairesFunction.onChangePrimes([200, 200]);
+    ]);
 
     // Contrat de travail
     store

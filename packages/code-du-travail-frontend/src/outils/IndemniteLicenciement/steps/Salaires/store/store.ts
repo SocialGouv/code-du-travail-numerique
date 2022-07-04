@@ -8,12 +8,12 @@ import {
 import { StoreSlice } from "../../../store";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { validateStep } from "./validator";
-import { setSalaryPeriods } from "../../../common/";
+import { deepMergeArray } from "../../../../../lib";
+import { computeSalaryPeriods, SalaryPeriods } from "../../../common";
 
 const initialState: SalairesStoreData = {
   input: {
     salaryPeriods: [],
-    primes: [],
   },
   error: {},
   hasBeenSubmit: false,
@@ -26,31 +26,33 @@ const createSalairesStore: StoreSlice<
 > = (set, get) => ({
   salairesData: { ...initialState },
   salairesFunction: {
+    initFieldSalaries: () => {
+      const ancienneteInput = get().ancienneteData.input;
+      const periods = computeSalaryPeriods({
+        dateEntree: ancienneteInput.dateEntree ?? "",
+        dateNotification: ancienneteInput.dateNotification ?? "",
+        absencePeriods: ancienneteInput.absencePeriods,
+      });
+      const p: SalaryPeriods[] = periods.map((v) => ({
+        month: v,
+        value: undefined,
+      }));
+      const salaryPeriods = deepMergeArray(
+        p,
+        get().salairesData.input.salaryPeriods,
+        "month"
+      );
+      set(
+        produce((state: SalairesStoreSlice) => {
+          state.salairesData.input.salaryPeriods = salaryPeriods;
+        })
+      );
+    },
     onChangeHasTempsPartiel: (value) => {
       applyGenericValidation(get, set, "hasTempsPartiel", value);
     },
-    onChangeHasSameSalaire: (value) => {
-      applyGenericValidation(get, set, "hasSameSalaire", value);
-      setSalaryPeriods(get, set);
-    },
-    onChangeSalaireBrut: (value) => {
-      applyGenericValidation(get, set, "salaireBrut", value);
-    },
     onSalariesChange: (value) => {
       applyGenericValidation(get, set, "salaryPeriods", value);
-    },
-    onChangeHasPrimes: (value) => {
-      applyGenericValidation(get, set, "hasPrimes", value);
-      if (value === "non") {
-        set(
-          produce((state: SalairesStoreSlice) => {
-            state.salairesData.input.primes = [];
-          })
-        );
-      }
-    },
-    onChangePrimes: (primes) => {
-      applyGenericValidation(get, set, "primes", primes);
     },
     onValidateStepSalaires: () => {
       const { isValid, errorState } = validateStep(get().salairesData.input);
