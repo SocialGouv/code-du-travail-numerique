@@ -19,6 +19,7 @@ COPY ./packages/react-fiche-service-public/package.json ./packages/react-fiche-s
 COPY ./packages/sources/package.json ./packages/sources/package.json
 COPY ./packages/slugify/package.json ./packages/slugify/package.json
 COPY ./packages/react-ui/package.json ./packages/react-ui/package.json
+COPY ./packages/cdtn-types/package.json ./packages/cdtn-types/package.json
 COPY ./packages/code-du-travail-api/package.json ./packages/code-du-travail-api/package.json
 COPY ./packages/code-du-travail-frontend/package.json ./packages/code-du-travail-frontend/package.json
 COPY ./packages/code-du-travail-modeles/package.json ./packages/code-du-travail-modeles/package.json

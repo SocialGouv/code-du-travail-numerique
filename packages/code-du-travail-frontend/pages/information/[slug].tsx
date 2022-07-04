@@ -1,6 +1,7 @@
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import {
   Accordion,
+  Tabs,
   Button,
   icons,
   MoreContent,
@@ -23,6 +24,7 @@ import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
 import { toUrl } from "../../src/lib";
+import { EditorialContentDataWrapper } from "cdtn-types";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -44,7 +46,9 @@ const InfoLink = ({ children, href }) => {
 };
 
 const processor = unified()
+  // @ts-ignore
   .use(htmlToHtmlAst, { fragment: true })
+  // @ts-ignore
   .use(htmlAstToReact, {
     Fragment: React.Fragment,
     components: {
@@ -60,17 +64,18 @@ const Information = ({
       breadcrumbs,
       contents,
       date,
-      metaDescription,
+      metaDescription = "",
+      sectionDisplayMode,
       intro,
       references = [],
-      title,
+      title = "",
     },
     relatedItems,
   } = { _source: {} },
-}) => {
-  let editorialContent = contents.map(
+}: EditorialContentDataWrapper) => {
+  let editorialContent = contents?.map(
     ({ type, name, altText, size, html, imgUrl, fileUrl, references = [] }) => {
-      const reactContent = processor.processSync(html).result;
+      const reactContent: any = processor.processSync(html).result;
       return (
         <>
           {type === "graphic" ? (
@@ -113,19 +118,36 @@ const Information = ({
       );
     }
   );
-  if (editorialContent.length > 1) {
-    editorialContent = (
-      <Accordion
-        titleLevel={2}
-        preExpanded={[anchor]}
-        items={contents.map(({ title, name }, index) => ({
-          body: editorialContent[index],
-          id: name,
-          title,
-        }))}
-      />
-    );
+  let contentWrapper;
+  if (editorialContent && editorialContent.length > 1) {
+    contentWrapper =
+      sectionDisplayMode === "tab" ? (
+        <Tabs
+          data={contents?.map(({ title, name }, index) => ({
+            panel: editorialContent?.[index],
+            tab: title,
+          }))}
+        />
+      ) : (
+        <Accordion
+          titleLevel={2}
+          preExpanded={[anchor]}
+          items={contents?.map(({ title, name }, index) => ({
+            body: editorialContent?.[index],
+            id: name,
+            title,
+          }))}
+        />
+      );
   }
+  let sectionTitleStyleWrapper =
+    sectionDisplayMode === "tab" ? (
+      <TabStylesWrapper data-testid="tabs">{contentWrapper}</TabStylesWrapper>
+    ) : (
+      <GlobalStylesWrapper data-testid="accordion">
+        {contentWrapper}
+      </GlobalStylesWrapper>
+    );
 
   return (
     <Layout>
@@ -138,7 +160,7 @@ const Information = ({
         relatedItems={relatedItems}
         title={title}
       >
-        <GlobalStylesWrapper>{editorialContent}</GlobalStylesWrapper>
+        {sectionTitleStyleWrapper}
         {references.map(
           ({ label, links }) =>
             links.length > 0 && (
@@ -176,6 +198,21 @@ Information.getInitialProps = async ({ query: { slug }, asPath }) => {
 };
 
 const { breakpoints, spacings } = theme;
+
+const TabStylesWrapper = styled.div`
+  & > div > div > div {
+    overflow-x: initial;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  li {
+    flex: 1;
+    font-size: 16px;
+  }
+`;
 
 const GlobalStylesWrapper = styled.div`
   img {
