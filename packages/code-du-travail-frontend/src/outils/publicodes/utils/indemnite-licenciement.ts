@@ -8,6 +8,7 @@ export type IndemniteLicenciementSeniority = {
   absenceCongesSabbatique: number;
   absenceGreve: number;
   absenceMaladieOrigineNonPro: number;
+  absenceCongesSansSolde: number;
   absenceMaladiePro: number;
   absenceMiseAPied: number;
   entryDate: string;
@@ -57,7 +58,7 @@ export const mapToPublicodesSituationForIndemniteLicenciement = (
         seniority.absenceCongesSabbatique
       ),
       "contrat salarié . absence pour congé sans solde": formatNumberAsString(
-        seniority.absenceGreve
+        seniority.absenceCongesSansSolde
       ),
       "contrat salarié . absence pour grève": formatNumberAsString(
         seniority.absenceGreve
