@@ -129,14 +129,14 @@ contrat salarié . indemnité de licenciement . au dela de dix ans:
 contrat salarié . indemnité de licenciement . dix ans ou moins:
   valeur:
     produit:
-      assiette: jusqu'à dix ans ou moins * le meilleur salaire de référence
+      assiette: jusqu'à dix ans ou moins * salaire de référence
       facteur: 1 / 4
   unité: €
 
 contrat salarié . indemnité de licenciement . plus de dix ans:
   valeur:
     produit:
-      assiette: le meilleur salaire de référence * au dela de dix ans
+      assiette: salaire de référence * au dela de dix ans
       facteur: 1 / 3
   unité: €
 
