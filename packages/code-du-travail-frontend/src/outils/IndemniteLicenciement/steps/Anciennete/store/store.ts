@@ -1,6 +1,5 @@
 import produce from "immer";
 import { GetState, SetState } from "zustand";
-import { setSalaryPeriods } from "../../../common";
 import { StoreSlice } from "../../../store";
 import { SalairesStoreSlice } from "../../Salaires/store";
 
@@ -58,7 +57,6 @@ const createAncienneteStore: StoreSlice<
           state.ancienneteData.error = errorState;
         })
       );
-      setSalaryPeriods(get, set);
       return isValid;
     },
   },
