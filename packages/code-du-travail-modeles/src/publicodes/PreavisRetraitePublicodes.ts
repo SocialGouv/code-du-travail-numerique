@@ -4,7 +4,7 @@ import type { Publicodes } from "./Publicodes";
 import { PublicodesBase } from "./PublicodesBase";
 import type { PublicodesPreavisRetraiteResult } from "./types";
 import { PublicodesSimulator } from "./types";
-import { convertDaysIntoBetterUnit } from "./utils";
+import { convertDaysIntoBetterUnit } from "./utils/preavis-retraite";
 
 class PreavisRetraitePublicodes
   extends PublicodesBase<PublicodesPreavisRetraiteResult>

@@ -1,0 +1,42 @@
+contrat salarié . convention collective . organismes de formation . indemnité de licenciement:
+  valeur: oui
+
+contrat salarié . convention collective . organismes de formation . indemnité de licenciement . salaire de référence:
+  remplace: contrat salarié . salaire de référence conventionnel
+
+contrat salarié . convention collective . organismes de formation . indemnité de licenciement . au dela de quinze ans:
+  somme:
+    - ancienneté en année
+    - (- 15 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . organismes de formation . indemnité de licenciement . ancienneté totale:
+  valeur:
+    produit:
+      assiette: salaire de référence conventionnel * ancienneté en année
+      facteur: 1 / 5
+  unité: €
+
+contrat salarié . convention collective . organismes de formation . indemnité de licenciement . plus de quinze ans:
+  valeur:
+    produit:
+      assiette: salaire de référence conventionnel * contrat salarié . convention collective . organismes de formation . indemnité de licenciement . au dela de quinze ans
+      facteur: 1 / 10
+  unité: €
+
+# (1/5*Sref*A1) + (1/10*Sref*A2)
+# A1: Ancienneté totale
+# A2: Années de présence au delà de 15 ans
+contrat salarié . convention collective . organismes de formation . indemnité de licenciement conventionnel:
+  remplace: contrat salarié . indemnité de licenciement conventionnel
+  variations:
+    - si: ancienneté en année > (7 mois / 12)
+      alors:
+        somme:
+          - contrat salarié . convention collective . organismes de formation . indemnité de licenciement . ancienneté totale
+          - contrat salarié . convention collective . organismes de formation . indemnité de licenciement . plus de quinze ans
+    - sinon: 0
+  unité: €
+  arrondi: 3 décimales
+  références:
+    Article 9.2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005775560?idConteneur=KALICONT000005635435
