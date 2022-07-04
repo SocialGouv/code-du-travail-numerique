@@ -68,7 +68,6 @@ describe("Indemnité légale de licenciement pour un employé", () => {
     }
   );
 
-  //TODO: yo
   test.each`
     seniority      | salary  | expectedCompensation
     ${0}           | ${0}    | ${0}
