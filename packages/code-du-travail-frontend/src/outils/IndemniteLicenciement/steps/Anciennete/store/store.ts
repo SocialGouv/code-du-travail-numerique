@@ -3,6 +3,7 @@ import produce from "immer";
 import { GetState, SetState } from "zustand";
 import { IndemniteLicenciementStepName } from "../../..";
 import { validateAgreement } from "../../../agreements";
+import { computeSalaryPeriods } from "../../../common";
 import { StoreSlice } from "../../../store";
 import { SalairesStoreSlice } from "../../Salaires/store";
 

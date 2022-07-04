@@ -1,17 +1,10 @@
 import React from "react";
-<<<<<<< HEAD
 import { useIndemniteLicenciementStore } from "../../store";
 import { RadioQuestion } from "../../../Components";
 import { TempsPartiel, SalaireTempsPlein } from "./components";
 import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 import { IndemniteLicenciementStepName } from "../..";
 import { AgreementsInjector } from "../../agreements";
-=======
-
-import { useIndemniteLicenciementStore } from "../../store";
-import { RadioQuestion } from "../../../Components";
-import { TempsPartiel, SalaireTempsPlein } from "./components";
->>>>>>> feat/indemnite-licenciement
 
 const StepSalaires = () => {
   const {
@@ -60,7 +53,6 @@ const StepSalaires = () => {
       />
       {hasTempsPartiel === "oui" && <TempsPartiel />}
       {hasTempsPartiel === "non" && (
-<<<<<<< HEAD
         <>
           <SalaireTempsPlein
             title="Indiquez le montant des salaires mensuels brut perçus au cours des
@@ -74,13 +66,6 @@ const StepSalaires = () => {
             step={IndemniteLicenciementStepName.Salaires}
           />
         </>
-=======
-        <SalaireTempsPlein
-          onSalariesChange={onSalariesChange}
-          salaryPeriods={salaryPeriods}
-          error={errorSalaryPeriods}
-        />
->>>>>>> feat/indemnite-licenciement
       )}
     </>
   );

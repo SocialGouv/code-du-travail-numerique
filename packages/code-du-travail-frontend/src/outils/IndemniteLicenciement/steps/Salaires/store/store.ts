@@ -8,7 +8,6 @@ import {
 import { StoreSlice } from "../../../store";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { validateStep } from "./validator";
-<<<<<<< HEAD
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { validateAgreement } from "../../../agreements";
 import {
@@ -19,18 +18,11 @@ import {
 import { IndemniteLicenciementStepName } from "../../..";
 import { deepMergeArray } from "../../../../../lib";
 import { computeSalaryPeriods } from "../../../common";
-=======
-import { deepMergeArray } from "../../../../../lib";
-import { computeSalaryPeriods, SalaryPeriods } from "../../../common";
->>>>>>> feat/indemnite-licenciement
 
 const initialState: SalairesStoreData = {
   input: {
     salaryPeriods: [],
-<<<<<<< HEAD
     refSalary: 0,
-=======
->>>>>>> feat/indemnite-licenciement
   },
   error: {},
   hasBeenSubmit: false,
@@ -73,7 +65,6 @@ const createSalairesStore: StoreSlice<
     },
     onValidateStepSalaires: () => {
       const { isValid, errorState } = validateStep(get().salairesData.input);
-<<<<<<< HEAD
 
       if (isValid) {
         const salaireInput = get().salairesData.input;
@@ -102,8 +93,6 @@ const createSalairesStore: StoreSlice<
 
       const isStepValid = isValid && isAgreementValid;
 
-=======
->>>>>>> feat/indemnite-licenciement
       set(
         produce((state: SalairesStoreSlice) => {
           state.salairesData.hasBeenSubmit = isStepValid ? false : true;

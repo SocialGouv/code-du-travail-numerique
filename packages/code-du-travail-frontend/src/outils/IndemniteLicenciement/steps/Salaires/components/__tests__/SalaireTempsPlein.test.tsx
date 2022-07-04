@@ -67,10 +67,7 @@ describe("<SalaireTempsPlein />", () => {
     const onSalariesChange = jest.fn();
     const { getByTitle } = render(
       <SalaireTempsPlein
-<<<<<<< HEAD
         title="Yo"
-=======
->>>>>>> feat/indemnite-licenciement
         onSalariesChange={onSalariesChange}
         salaryPeriods={[
           {
