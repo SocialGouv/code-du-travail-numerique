@@ -1,5 +1,70 @@
 contrat salarié . convention collective . sport . indemnité de licenciement:
   valeur: oui
 
-contrat salarié . convention collective . sport . indemnité de licenciement . salaire de référence:
-  remplace: contrat salarié . salaire de référence conventionnel
+contrat salarié . convention collective . sport . somme des absences:
+  unité: mois
+  remplace: contrat salarié . somme des absences collective
+  somme:
+    - contrat salarié . absence pour maladie non pro
+    - contrat salarié . absence pour congé sabbatique
+    - contrat salarié . absence pour congé création d'entreprise
+    - contrat salarié . absence pour congé parental d'éducation / 2
+    - contrat salarié . absence pour grève
+    - contrat salarié . absence pour congé sans solde
+    - contrat salarié . absence pour mise à pied
+    - contrat salarié . absence pour maladie d'origine non pro
+
+contrat salarié . convention collective . sport . ancienneté en année:
+  titre: Ancienneté du salarié en année conventionnelle
+  remplace: contrat salarié . ancienneté conventionnelle en année
+  valeur: contrat salarié . ancienneté du début à la fin - contrat salarié . convention collective . sport . somme des absences
+  arrondi: 3 décimales
+  références:
+    Article 7.3.5: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000042110591/?idConteneur=KALICONT000017577652&origin=list
+    Article 7.3.6: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000042110591/?idConteneur=KALICONT000017577652&origin=list
+    Article 4.4.3.3: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023446884/?idConteneur=KALICONT000017577652&origin=list
+    Article 7.1.2: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000042110596/?idConteneur=KALICONT000017577652&origin=list
+
+contrat salarié . convention collective . sport . indemnité de licenciement . jusqu'à dix ans ou moins:
+  valeur:
+    le minimum de:
+      - ancienneté conventionnelle en année
+      - 10 an
+
+contrat salarié . convention collective . sport . indemnité de licenciement . au dela de dix ans:
+  somme:
+    - ancienneté conventionnelle en année
+    - (- 10 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . sport . indemnité de licenciement . dix ans ou moins:
+  valeur:
+    produit:
+      assiette: jusqu'à dix ans ou moins * salaire de référence conventionnel
+      facteur: 1 / 4
+  unité: €
+
+contrat salarié . convention collective . sport . indemnité de licenciement . plus de dix ans:
+  valeur:
+    produit:
+      assiette: au dela de dix ans * salaire de référence conventionnel
+      facteur: 1 / 3
+  unité: €
+
+#  (1/4*Sref*A1) + (1/3*Sref*A2)
+#  A1 : Ancienneté de 10 ans ou moins
+#  A2 : Ancienneté au delà de 10 ans
+contrat salarié . convention collective . sport . indemnité de licenciement . résultat:
+  remplace: contrat salarié . indemnité de licenciement conventionnel
+
+  variations:
+    - si: ancienneté conventionnelle en année > (7 mois / 12)
+      alors:
+        somme:
+          - dix ans ou moins
+          - plus de dix ans
+    - sinon: 0
+  unité: €
+  arrondi: 3 décimales
+  références:
+    Article 4.4.3.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000042110557?idConteneur=KALICONT000017577652

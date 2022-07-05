@@ -1,4 +1,4 @@
-import { ReferenceSalaryLegal } from "../legal";
+import { ReferenceSalaryLegal } from "../../../../plugins/salaire-reference/legal";
 
 describe("computeReferenceSalary", () => {
   const referenceSalary = new ReferenceSalaryLegal();

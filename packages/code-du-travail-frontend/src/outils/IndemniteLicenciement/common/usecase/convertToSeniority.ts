@@ -10,10 +10,17 @@ const convertToPublicodesSeniority = (
   const seniority: Partial<IndemniteLicenciementSeniority> = {};
   for (let i = 0; i < MOTIFS.length; i++) {
     const motif = MOTIFS[i];
-    const durationInMonth = absences.find(
-      (abs) => motif.label === abs.motif
-    )?.durationInMonth;
-    seniority[motif.key] = durationInMonth ?? 0;
+    const durationInMonthArray = absences
+      .filter((abs) => motif.label === abs.motif)
+      .map((abs) => abs.durationInMonth);
+    const totalDurationInMonth = durationInMonthArray.reduce((acc, curr) => {
+      if (acc !== undefined && curr !== undefined) {
+        return acc + curr;
+      } else {
+        return acc;
+      }
+    }, 0);
+    seniority[motif.key] = totalDurationInMonth;
   }
   seniority.entryDate = dateEntree;
   seniority.exitDate = dateSortie;

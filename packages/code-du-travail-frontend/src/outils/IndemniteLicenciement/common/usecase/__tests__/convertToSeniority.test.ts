@@ -60,6 +60,20 @@ describe("convertToSeniority", () => {
   entryDate: "01/01/2021",
   exitDate: "01/01/2022",
 }}
+    ${"01/01/2021"} | ${"01/01/2022"} | ${[{ motif: MOTIFS[1].label, durationInMonth: 3 }, { motif: MOTIFS[1].label, durationInMonth: 3 }]} | ${{
+  absenceAccidentTrajet: 6,
+  absenceCongesCreationEntreprise: 0,
+  absenceCongesParentalEducation: 0,
+  absenceCongesPaternite: 0,
+  absenceCongesSabbatique: 0,
+  absenceCongesSansSolde: 0,
+  absenceGreve: 0,
+  absenceMaladieOrigineNonPro: 0,
+  absenceMaladiePro: 0,
+  absenceMiseAPied: 0,
+  entryDate: "01/01/2021",
+  exitDate: "01/01/2022",
+}}
   `(
     "should generate explanation",
     ({ dateEntree, dateSortie, absencePeriods, expected }) => {

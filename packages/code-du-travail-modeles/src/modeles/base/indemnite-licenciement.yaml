@@ -80,6 +80,7 @@ contrat salarié . somme des absences:
 contrat salarié . ancienneté en année:
   titre: Ancienneté du salarié en année
   valeur: contrat salarié . ancienneté du début à la fin - contrat salarié . somme des absences
+  arrondi: 3 décimales
 
 contrat salarié . inaptitude suite à un accident ou maladie professionnelle:
   titre: Inaptitude
@@ -139,6 +140,14 @@ contrat salarié . indemnité de licenciement . plus de dix ans:
       assiette: salaire de référence * au dela de dix ans
       facteur: 1 / 3
   unité: €
+
+contrat salarié . ancienneté conventionnelle en année:
+  titre: Ancienneté conventionnelle du salarié en année
+  valeur: non
+  arrondi: 3 décimales
+
+contrat salarié . somme des absences collective:
+  valeur: non
 
 contrat salarié . indemnité de licenciement conventionnel:
   valeur: non
