@@ -9,7 +9,7 @@ import { StoreSlice } from "../../../../types";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { validateStep } from "./validator";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
-import { validateAgreement } from "../../../agreements";
+import { validatorAgreement } from "../../../agreements";
 import {
   ReferenceSalaryFactory,
   SalaryPeriods,
@@ -84,7 +84,7 @@ const createSalairesStore: StoreSlice<
         );
       }
 
-      const isAgreementValid = validateAgreement(
+      const isAgreementValid = validatorAgreement(
         SupportedCcIndemniteLicenciement.IDCC1516, //TODO: replace par la cc
         IndemniteLicenciementStepName.Salaires,
         get,
@@ -116,7 +116,7 @@ const applyGenericValidation = (
       draft.salairesData.input[paramName as string] = value;
     });
     const { isValid, errorState } = validateStep(nextState.salairesData.input);
-    const isAgreementValid = validateAgreement(
+    const isAgreementValid = validatorAgreement(
       SupportedCcIndemniteLicenciement.IDCC1516, //TODO: replace par la cc
       IndemniteLicenciementStepName.Salaires,
       get,
