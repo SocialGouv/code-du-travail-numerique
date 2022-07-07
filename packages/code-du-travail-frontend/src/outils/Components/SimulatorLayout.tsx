@@ -1,7 +1,6 @@
 import { theme, Wrapper } from "@socialgouv/cdtn-ui";
 import React, { useEffect, useMemo } from "react";
 import styled from "styled-components";
-import { IndemniteLicenciementStepName } from "../IndemniteLicenciement";
 import { matopush } from "../../piwik";
 import { printResult } from "../common/utils";
 import { StepList, Title } from "./SimulatorDecorator/Components";
@@ -12,25 +11,23 @@ import {
 } from "../Simulator/createContext";
 import SimulatorNavigation from "./SimulatorNavigation";
 
-type StepName = IndemniteLicenciementStepName;
-
-type Validator = {
+type Validator<StepName extends string> = {
   validator: () => boolean;
   stepName: StepName;
   isStepValid: boolean;
 };
 
-type Props = {
+type Props<StepName extends string> = {
   title: string;
   displayTitle: string;
   icon: string;
   duration: string;
   debug?: JSX.Element;
   steps: Step<StepName>[];
-  validators: Validator[];
+  validators: Validator<StepName>[];
 };
 
-const SimulatorContent = ({
+const SimulatorContent = <StepName extends string>({
   title,
   displayTitle,
   icon,
@@ -38,7 +35,7 @@ const SimulatorContent = ({
   debug,
   steps,
   validators,
-}: Props): JSX.Element => {
+}: Props<StepName>): JSX.Element => {
   const anchorRef = React.createRef<HTMLLIElement>();
 
   const { currentStepIndex, previousStep, nextStep } = useSimulatorStepStore(
@@ -154,7 +151,9 @@ const SimulatorContent = ({
   );
 };
 
-const SimulatorLayout = (props: Props): JSX.Element => {
+const SimulatorLayout = <StepName extends string>(
+  props: Props<StepName>
+): JSX.Element => {
   return (
     <SimulatorStepProvider createStore={() => createSimulatorStore()}>
       <SimulatorContent {...props} />

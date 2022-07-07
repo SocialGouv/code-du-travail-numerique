@@ -13,6 +13,7 @@ import {
   IndemniteLicenciementProvider,
   useIndemniteLicenciementStore,
 } from "./store";
+import { AgreementStep } from "./steps/Agreement";
 
 type Props = {
   icon: string;
@@ -24,6 +25,7 @@ type Props = {
 export enum IndemniteLicenciementStepName {
   Introduction = "start",
   Info = "contrat_travail",
+  Agreement = "ccn",
   Anciennete = "anciennete",
   Salaires = "salaires",
   Resultat = "results",
@@ -39,6 +41,11 @@ const steps: Step<IndemniteLicenciementStepName>[] = [
     label: "Contrat de travail",
     name: IndemniteLicenciementStepName.Info,
     Component: StepContratTravail,
+  },
+  {
+    label: "Convention collective",
+    name: IndemniteLicenciementStepName.Agreement,
+    Component: AgreementStep,
   },
   {
     label: "Ancienneté",
@@ -69,6 +76,8 @@ const IndemniteLicenciementSimulator = ({
     isStepAncienneteValid,
     onValidateStepSalaires,
     isStepSalairesValid,
+    onValidateStepAgreement,
+    isStepAgreementValid,
   } = useIndemniteLicenciementStore((state) => ({
     onValidateStepInfo: state.contratTravailFunction.onValidateStepInfo,
     isStepInfoValid: state.contratTravailData.isStepValid,
@@ -76,6 +85,8 @@ const IndemniteLicenciementSimulator = ({
     isStepAncienneteValid: state.ancienneteData.isStepValid,
     onValidateStepSalaires: state.salairesFunction.onValidateStepSalaires,
     isStepSalairesValid: state.salairesData.isStepValid,
+    onValidateStepAgreement: state.agreementFunction.onValidateStep,
+    isStepAgreementValid: state.agreementData.isStepValid,
   }));
 
   const data = useIndemniteLicenciementStore((state) => {
@@ -83,6 +94,7 @@ const IndemniteLicenciementSimulator = ({
     delete resultDataWithoutPublicodes.publicodes;
     return {
       contratTravailData: { ...state.contratTravailData },
+      agreementData: { ...state.agreementData },
       ancienneteData: { ...state.ancienneteData },
       salairesData: { ...state.salairesData },
       resultData: resultDataWithoutPublicodes,
@@ -91,7 +103,7 @@ const IndemniteLicenciementSimulator = ({
   });
 
   return (
-    <SimulatorLayout
+    <SimulatorLayout<IndemniteLicenciementStepName>
       title={title}
       displayTitle={displayTitle}
       icon={icon}
@@ -103,6 +115,11 @@ const IndemniteLicenciementSimulator = ({
           stepName: IndemniteLicenciementStepName.Info,
           isStepValid: isStepInfoValid,
           validator: onValidateStepInfo,
+        },
+        {
+          stepName: IndemniteLicenciementStepName.Agreement,
+          isStepValid: isStepAgreementValid,
+          validator: onValidateStepAgreement,
         },
         {
           stepName: IndemniteLicenciementStepName.Anciennete,

@@ -5,7 +5,7 @@ import {
   SalairesStoreInput,
   SalairesStoreSlice,
 } from "./types";
-import { StoreSlice } from "../../../store";
+import { StoreSlice } from "../../../../types";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { validateStep } from "./validator";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
