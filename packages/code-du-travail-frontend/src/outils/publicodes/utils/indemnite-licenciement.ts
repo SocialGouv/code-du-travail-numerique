@@ -15,66 +15,87 @@ export type IndemniteLicenciementSeniority = {
   exitDate: string;
 };
 
-export const mapToPublicodesSituationForIndemniteLicenciement = (
-  ccn: number | undefined,
+export const mapToPublicodesSituationForIndemniteLicenciementLegal = (
   seniority: IndemniteLicenciementSeniority,
   salaireRef: number,
-  salaireAgreementRef: number | undefined,
   inaptitude: boolean
 ): Record<string, string> => {
-  const agreement: Record<string, string> = ccn
-    ? {
-        "contrat salarié - convention collective": `'IDCC${ccn
-          .toString()
-          .padStart(4, "0")}'`,
-      }
-    : { "contrat salarié - convention collective": "''" };
-
-  // paramétrer la bonne cc
-  const agreementRefSalary: Record<string, string> = salaireAgreementRef
-    ? {
-        "contrat salarié - convention collective - organismes de formation - indemnité de licenciement - salaire de référence":
-          formatNumberAsString(salaireAgreementRef),
-      }
-    : {};
-
   return {
-    ...agreement,
-    ...agreementRefSalary,
     ...{
-      "contrat salarié - salaire de référence":
+      "contrat salarié . indemnité de licenciement . salaire de référence":
         formatNumberAsString(salaireRef),
-      "contrat salarié . absence pour accident de trajet": formatNumberAsString(
-        seniority.absenceAccidentTrajet
-      ),
-      "contrat salarié . absence pour congé création d'entreprise":
+      "contrat salarié . indemnité de licenciement . absence pour accident de trajet":
+        formatNumberAsString(seniority.absenceAccidentTrajet),
+      "contrat salarié . indemnité de licenciement . absence pour congé création d'entreprise":
         formatNumberAsString(seniority.absenceCongesCreationEntreprise),
-      "contrat salarié . absence pour congé parental d'éducation":
+      "contrat salarié . indemnité de licenciement . absence pour congé parental d'éducation":
         formatNumberAsString(seniority.absenceCongesParentalEducation),
-      "contrat salarié . absence pour congé paternité": formatNumberAsString(
-        seniority.absenceCongesPaternite
-      ),
-      "contrat salarié . absence pour congé sabbatique": formatNumberAsString(
-        seniority.absenceCongesSabbatique
-      ),
-      "contrat salarié . absence pour congé sans solde": formatNumberAsString(
-        seniority.absenceCongesSansSolde
-      ),
-      "contrat salarié . absence pour grève": formatNumberAsString(
-        seniority.absenceGreve
-      ),
+      "contrat salarié . indemnité de licenciement . absence pour congé paternité":
+        formatNumberAsString(seniority.absenceCongesPaternite),
+      "contrat salarié . indemnité de licenciement . absence pour congé sabbatique":
+        formatNumberAsString(seniority.absenceCongesSabbatique),
+      "contrat salarié . indemnité de licenciement . absence pour congé sans solde":
+        formatNumberAsString(seniority.absenceCongesSansSolde),
+      "contrat salarié . indemnité de licenciement . absence pour grève":
+        formatNumberAsString(seniority.absenceGreve),
+      "contrat salarié . indemnité de licenciement . absence pour maladie d'origine non pro":
+        formatNumberAsString(seniority.absenceMaladieOrigineNonPro),
+      "contrat salarié . indemnité de licenciement . absence pour maladie non pro":
+        formatNumberAsString(seniority.absenceMaladiePro),
+      "contrat salarié . indemnité de licenciement . absence pour mise à pied":
+        formatNumberAsString(seniority.absenceMiseAPied),
+      "contrat salarié . indemnité de licenciement . date d'entrée":
+        seniority.entryDate,
+      "contrat salarié . indemnité de licenciement . date de sortie":
+        seniority.exitDate,
+      "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+        inaptitude ? "oui" : "non",
+      "indemnité de licenciement": "oui",
+    },
+  };
+};
+
+export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
+  ccn: number,
+  agreementParameters: Record<string, string>,
+  seniority: IndemniteLicenciementSeniority,
+  salaireRef: number,
+  inaptitude: boolean
+): Record<string, string> => {
+  return {
+    ...agreementParameters,
+    ...{
+      "contrat salarié . indemnité de licenciement . salaire de référence":
+        formatNumberAsString(salaireRef),
+      "contrat salarié . indemnité de licenciement . absence pour accident de trajet":
+        formatNumberAsString(seniority.absenceAccidentTrajet),
+      "contrat salarié . indemnité de licenciement . absence pour congé création d'entreprise":
+        formatNumberAsString(seniority.absenceCongesCreationEntreprise),
+      "contrat salarié . indemnité de licenciement . absence pour congé parental d'éducation":
+        formatNumberAsString(seniority.absenceCongesParentalEducation),
+      "contrat salarié . indemnité de licenciement . absence pour congé paternité":
+        formatNumberAsString(seniority.absenceCongesPaternite),
+      "contrat salarié . indemnité de licenciement . absence pour congé sabbatique":
+        formatNumberAsString(seniority.absenceCongesSabbatique),
+      "contrat salarié . indemnité de licenciement . absence pour congé sans solde":
+        formatNumberAsString(seniority.absenceCongesSansSolde),
+      "contrat salarié . indemnité de licenciement . absence pour grève":
+        formatNumberAsString(seniority.absenceGreve),
       "contrat salarié . absence pour maladie d'origine non pro":
         formatNumberAsString(seniority.absenceMaladieOrigineNonPro),
       "contrat salarié . absence pour maladie non pro": formatNumberAsString(
         seniority.absenceMaladiePro
       ),
-      "contrat salarié . absence pour mise à pied": formatNumberAsString(
-        seniority.absenceMiseAPied
-      ),
-      "contrat salarié . convention collective": "''",
-      "contrat salarié . date d'entrée": seniority.entryDate,
-      "contrat salarié . date de sortie": seniority.exitDate,
-      "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
+      "contrat salarié . indemnité de licenciement . absence pour mise à pied":
+        formatNumberAsString(seniority.absenceMiseAPied),
+      "contrat salarié . convention collective": `'IDCC${ccn
+        .toString()
+        .padStart(4, "0")}'`,
+      "contrat salarié . indemnité de licenciement . date d'entrée":
+        seniority.entryDate,
+      "contrat salarié . indemnité de licenciement . date de sortie":
+        seniority.exitDate,
+      "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
         inaptitude ? "oui" : "non",
       "indemnité de licenciement": "oui",
     },

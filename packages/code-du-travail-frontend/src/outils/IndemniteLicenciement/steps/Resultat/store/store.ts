@@ -2,7 +2,7 @@ import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
 import { StoreSlice } from "../../../../types";
 import {
   IndemniteLicenciementSeniority,
-  mapToPublicodesSituationForIndemniteLicenciement,
+  mapToPublicodesSituationForIndemniteLicenciementLegal,
 } from "../../../../publicodes";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { convertToSeniority, generateExplanation } from "../../../common";
@@ -46,26 +46,19 @@ const createResultStore: StoreSlice<
       }
 
       const { result } = publicodes.setSituation(
-        mapToPublicodesSituationForIndemniteLicenciement(
-          1516, //TODO: à modifier
+        mapToPublicodesSituationForIndemniteLicenciementLegal(
           seniority,
           refSalary,
-          agreementRefSAlary,
           isLicenciementInaptitude
         )
       );
 
-      const anciennete = publicodes.execute(
-        "contrat salarié . ancienneté en année"
+      const ancienneteLegal = publicodes.execute(
+        "contrat salarié . indemnité de licenciement . ancienneté en année"
       ).value as number;
 
-      //TODO: calculer la bonne indemnité conventionnel pour chaque cc
-      // const indemniteConventionnel = publicodes.execute(
-      //   "contrat salarié . indemnité de licenciement conventionnel de la cc"
-      // );
-
       const infoCalcul = generateExplanation({
-        anciennete,
+        anciennete: ancienneteLegal,
         inaptitude: isLicenciementInaptitude,
         salaireRef: refSalary,
       });
