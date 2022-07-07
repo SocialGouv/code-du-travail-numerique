@@ -1,9 +1,6 @@
-import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 import produce from "immer";
 import { GetState, SetState } from "zustand";
-import { IndemniteLicenciementStepName } from "../../..";
 import { StoreSlice } from "../../../../types";
-import { validateAgreement } from "../../../agreements";
 import { SalairesStoreSlice } from "../../Salaires/store";
 
 import {
@@ -54,19 +51,10 @@ const createAncienneteStore: StoreSlice<
     onValidateStepAnciennete: () => {
       const { isValid, errorState } = validateStep(get().ancienneteData.input);
 
-      const isAgreementValid = validateAgreement(
-        SupportedCcIndemniteLicenciement.IDCC1516, //TODO: replace par la cc
-        IndemniteLicenciementStepName.Anciennete,
-        get,
-        set
-      );
-
-      const isStepValid = isValid && isAgreementValid;
-
       set(
         produce((state: AncienneteStoreSlice) => {
-          state.ancienneteData.hasBeenSubmit = isStepValid ? false : true;
-          state.ancienneteData.isStepValid = isStepValid;
+          state.ancienneteData.hasBeenSubmit = isValid ? false : true;
+          state.ancienneteData.isStepValid = isValid;
           state.ancienneteData.error = errorState;
         })
       );

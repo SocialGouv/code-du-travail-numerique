@@ -77,7 +77,7 @@ const createRootSlice = (
   ...createSalairesStore(set, get),
   ...createResultStore(set, get, publicodesRules),
   ...createRootAgreementsStore(set, get),
-  ...createCommonAgreementStore(set, get, publicodesRules),
+  ...createCommonAgreementStore(set, get),
 });
 
 const createStore = (publicodesRules: string) =>
