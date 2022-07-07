@@ -2,7 +2,7 @@ import { InputRadio } from "@socialgouv/cdtn-ui";
 import React from "react";
 
 import { InlineError } from "../common/ErrorField";
-import { Question } from "../common/Question";
+import { Question, Tooltip } from "../common/Question";
 import { RadioContainer } from "../common/stepStyles";
 
 type Question = {
@@ -19,6 +19,7 @@ type Props = {
   questions: Question[];
   showRequired?: boolean;
   name: string;
+  tooltip?: Tooltip;
 };
 
 export default function RadioQuestion({
@@ -29,6 +30,7 @@ export default function RadioQuestion({
   questions,
   showRequired,
   name,
+  tooltip,
 }: Props) {
   const [value, setValue] = React.useState(selectedOption ?? "");
   const onChange = (value: string) => {
@@ -38,7 +40,9 @@ export default function RadioQuestion({
 
   return (
     <>
-      <Question required={showRequired}>{label}</Question>
+      <Question required={showRequired} tooltip={tooltip}>
+        {label}
+      </Question>
       <RadioContainer>
         {questions.map((question, index) => (
           <InputRadio

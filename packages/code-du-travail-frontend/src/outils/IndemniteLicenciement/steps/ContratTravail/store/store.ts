@@ -5,7 +5,7 @@ import {
   ContratTravailStoreSlice,
 } from "./types";
 import produce from "immer";
-import { StoreSlice } from "../../../store";
+import { StoreSlice } from "../../../../types";
 import { validateStep } from "./validator";
 import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 import { IndemniteLicenciementStepName } from "../../..";
