@@ -18,15 +18,16 @@ describe("CC 2511", () => {
         const result = engine
           .setSituation({
             "contrat salarié . convention collective": "'IDCC2511'",
-            "contrat salarié . convention collective . sport . ancienneté en année":
+            "contrat salarié . convention collective . sport . indemnité de licenciement . ancienneté en année":
               seniority,
-            "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
+            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
               inaptitude,
-            "contrat salarié . salaire de référence conventionnel": salaireRef,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salaireRef,
             "indemnité de licenciement": "oui",
           })
           .evaluate(
-            "contrat salarié . indemnité de licenciement conventionnel"
+            "contrat salarié . indemnité de licenciement . résultat conventionnel"
           );
         expect(result.unit?.numerators).toEqual(["€"]);
         expect(result.missingVariables).toEqual({});

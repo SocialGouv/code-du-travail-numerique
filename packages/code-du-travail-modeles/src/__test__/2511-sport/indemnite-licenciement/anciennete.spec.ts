@@ -41,29 +41,36 @@ describe("CC 2511", () => {
       }) => {
         const result = engine
           .setSituation({
-            "contrat salarié . absence pour accident de trajet":
-              absenceAccidentTrajet,
-            "contrat salarié . absence pour congé création d'entreprise":
-              absenceCongesCreationEntreprise,
-            "contrat salarié . absence pour congé parental d'éducation":
-              absenceCongesParentalEducation,
-            "contrat salarié . absence pour congé paternité":
-              absenceCongesPaternite,
-            "contrat salarié . absence pour congé sabbatique":
-              absenceCongesSabbatique,
-            "contrat salarié . absence pour congé sans solde":
-              absenceCongesSansSolde,
-            "contrat salarié . absence pour grève": absenceGreve,
-            "contrat salarié . absence pour maladie d'origine non pro":
-              absenceMaladieOrigineNonPro,
-            "contrat salarié . absence pour maladie non pro": absenceMaladiePro,
-            "contrat salarié . absence pour mise à pied": absenceMiseAPied,
             "contrat salarié . convention collective": "'IDCC2511'",
-            "contrat salarié . date d'entrée": entryDate,
-            "contrat salarié . date de sortie": exitDate,
+            "contrat salarié . indemnité de licenciement . absence pour accident de trajet":
+              absenceAccidentTrajet,
+            "contrat salarié . indemnité de licenciement . absence pour congé création d'entreprise":
+              absenceCongesCreationEntreprise,
+            "contrat salarié . indemnité de licenciement . absence pour congé parental d'éducation":
+              absenceCongesParentalEducation,
+            "contrat salarié . indemnité de licenciement . absence pour congé paternité":
+              absenceCongesPaternite,
+            "contrat salarié . indemnité de licenciement . absence pour congé sabbatique":
+              absenceCongesSabbatique,
+            "contrat salarié . indemnité de licenciement . absence pour congé sans solde":
+              absenceCongesSansSolde,
+            "contrat salarié . indemnité de licenciement . absence pour grève":
+              absenceGreve,
+            "contrat salarié . indemnité de licenciement . absence pour maladie d'origine non pro":
+              absenceMaladieOrigineNonPro,
+            "contrat salarié . indemnité de licenciement . absence pour maladie non pro":
+              absenceMaladiePro,
+            "contrat salarié . indemnité de licenciement . absence pour mise à pied":
+              absenceMiseAPied,
+            "contrat salarié . indemnité de licenciement . date d'entrée":
+              entryDate,
+            "contrat salarié . indemnité de licenciement . date de sortie":
+              exitDate,
             "indemnité de licenciement": "oui",
           })
-          .evaluate("contrat salarié . ancienneté conventionnelle en année");
+          .evaluate(
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
+          );
         expect(result.missingVariables).toEqual({});
         expect(result.unit?.numerators).toEqual(["an"]);
         expect(result.nodeValue).toEqual(expectedAnciennete);

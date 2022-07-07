@@ -40,29 +40,35 @@ describe("Indemnité légale de licenciement avec une ancienneté spécifiée", 
     }) => {
       const result = engine
         .setSituation({
-          "contrat salarié . absence pour accident de trajet":
+          "contrat salarié . indemnité de licenciement . absence pour accident de trajet":
             absenceAccidentTrajet,
-          "contrat salarié . absence pour congé création d'entreprise":
+          "contrat salarié . indemnité de licenciement . absence pour congé création d'entreprise":
             absenceCongesCreationEntreprise,
-          "contrat salarié . absence pour congé parental d'éducation":
+          "contrat salarié . indemnité de licenciement . absence pour congé parental d'éducation":
             absenceCongesParentalEducation,
-          "contrat salarié . absence pour congé paternité":
+          "contrat salarié . indemnité de licenciement . absence pour congé paternité":
             absenceCongesPaternite,
-          "contrat salarié . absence pour congé sabbatique":
+          "contrat salarié . indemnité de licenciement . absence pour congé sabbatique":
             absenceCongesSabbatique,
-          "contrat salarié . absence pour congé sans solde":
+          "contrat salarié . indemnité de licenciement . absence pour congé sans solde":
             absenceCongesSansSolde,
-          "contrat salarié . absence pour grève": absenceGreve,
-          "contrat salarié . absence pour maladie d'origine non pro":
+          "contrat salarié . indemnité de licenciement . absence pour grève":
+            absenceGreve,
+          "contrat salarié . indemnité de licenciement . absence pour maladie d'origine non pro":
             absenceMaladieOrigineNonPro,
-          "contrat salarié . absence pour maladie non pro": absenceMaladiePro,
-          "contrat salarié . absence pour mise à pied": absenceMiseAPied,
-          "contrat salarié . convention collective": "''",
-          "contrat salarié . date d'entrée": entryDate,
-          "contrat salarié . date de sortie": exitDate,
+          "contrat salarié . indemnité de licenciement . absence pour maladie non pro":
+            absenceMaladiePro,
+          "contrat salarié . indemnité de licenciement . absence pour mise à pied":
+            absenceMiseAPied,
+          "contrat salarié . indemnité de licenciement . date d'entrée":
+            entryDate,
+          "contrat salarié . indemnité de licenciement . date de sortie":
+            exitDate,
           "indemnité de licenciement": "oui",
         })
-        .evaluate("contrat salarié . ancienneté en année");
+        .evaluate(
+          "contrat salarié . indemnité de licenciement . ancienneté en année"
+        );
       expect(result.missingVariables).toEqual({});
       expect(result.unit?.numerators).toEqual(["an"]);
       expect(result.nodeValue).toEqual(expectedAnciennete);
@@ -96,35 +102,43 @@ describe("Indemnité légale de licenciement avec une ancienneté spécifiée", 
     }) => {
       const result = engine
         .setSituation({
-          "contrat salarié . absence pour accident de trajet":
+          "contrat salarié . indemnité de licenciement . absence pour accident de trajet":
             absenceAccidentTrajet,
-          "contrat salarié . absence pour congé création d'entreprise":
+          "contrat salarié . indemnité de licenciement . absence pour congé création d'entreprise":
             absenceCongesCreationEntreprise,
-          "contrat salarié . absence pour congé parental d'éducation":
+          "contrat salarié . indemnité de licenciement . absence pour congé parental d'éducation":
             absenceCongesParentalEducation,
-          "contrat salarié . absence pour congé paternité":
+          "contrat salarié . indemnité de licenciement . absence pour congé paternité":
             absenceCongesPaternite,
-          "contrat salarié . absence pour congé sabbatique":
+          "contrat salarié . indemnité de licenciement . absence pour congé sabbatique":
             absenceCongesSabbatique,
-          "contrat salarié . absence pour congé sans solde":
+          "contrat salarié . indemnité de licenciement . absence pour congé sans solde":
             absenceCongesSansSolde,
-          "contrat salarié . absence pour grève": absenceGreve,
-          "contrat salarié . absence pour maladie d'origine non pro":
+          "contrat salarié . indemnité de licenciement . absence pour grève":
+            absenceGreve,
+          "contrat salarié . indemnité de licenciement . absence pour maladie d'origine non pro":
             absenceMaladieOrigineNonPro,
-          "contrat salarié . absence pour maladie non pro": absenceMaladiePro,
-          "contrat salarié . absence pour mise à pied": absenceMiseAPied,
-          "contrat salarié . convention collective": "''",
-          "contrat salarié . date d'entrée": entryDate,
-          "contrat salarié . date de sortie": exitDate,
-          "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
+          "contrat salarié . indemnité de licenciement . absence pour maladie non pro":
+            absenceMaladiePro,
+          "contrat salarié . indemnité de licenciement . absence pour mise à pied":
+            absenceMiseAPied,
+          "contrat salarié . indemnité de licenciement . date d'entrée":
+            entryDate,
+          "contrat salarié . indemnité de licenciement . date de sortie":
+            exitDate,
+          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             "non",
-          "contrat salarié . salaire de référence": salaireRef,
+          "contrat salarié . indemnité de licenciement . salaire de référence":
+            salaireRef,
           "indemnité de licenciement": "oui",
         })
-        .evaluate("contrat salarié . indemnité de licenciement");
-      expect(result.nodeValue).toEqual(expectedCompensation);
+        .evaluate(
+          "contrat salarié . indemnité de licenciement . résultat légal"
+        );
+
       expect(result.unit?.numerators).toEqual(["€"]);
       expect(result.missingVariables).toEqual({});
+      expect(result.nodeValue).toEqual(expectedCompensation);
     }
   );
 });
