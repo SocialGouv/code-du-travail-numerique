@@ -15,6 +15,7 @@ describe("Indemnité légale de licenciement pour un employé", () => {
     ${8 / 12}             | ${1000} | ${166.75}
     ${11 / 12}            | ${2000} | ${458.5}
     ${1.083333333}        | ${2000} | ${541.5}
+    ${1}                  | ${2000} | ${500}
     ${2}                  | ${2000} | ${1000}
     ${2.333333333}        | ${2000} | ${1166.5}
     ${10.91}              | ${2000} | ${5606.667}
@@ -49,6 +50,7 @@ describe("Indemnité légale de licenciement pour un employé", () => {
     ${6 / 12}      | ${1000} | ${0}
     ${8 / 12}      | ${1000} | ${333.5}
     ${11 / 12}     | ${2000} | ${917}
+    ${1}           | ${2000} | ${1000}
     ${13 / 12}     | ${2000} | ${1083}
     ${2}           | ${2000} | ${2000}
     ${2.333333333} | ${2000} | ${2333}
@@ -71,40 +73,6 @@ describe("Indemnité légale de licenciement pour un employé", () => {
       expect(result.nodeValue).toEqual(expectedCompensation);
       expect(result.unit?.numerators).toEqual(["€"]);
       expect(result.missingVariables).toEqual({});
-    }
-  );
-
-  test.each`
-    seniority      | salary  | expectedCompensation
-    ${0}           | ${0}    | ${0}
-    ${1}           | ${0}    | ${0}
-    ${2.3}         | ${0}    | ${0}
-    ${1 / 12}      | ${1000} | ${0}
-    ${6 / 12}      | ${1000} | ${0}
-    ${8 / 12}      | ${1000} | ${333.5}
-    ${11 / 12}     | ${2000} | ${917}
-    ${13 / 12}     | ${2000} | ${1083}
-    ${2}           | ${2000} | ${2000}
-    ${2.333333333} | ${2000} | ${2333}
-  `(
-    "Si on utilise le calcul du salaire de référence légal",
-    ({ seniority, salary, expectedCompensation }) => {
-      const result = engine
-        .setSituation({
-          "contrat salarié . indemnité de licenciement . ancienneté en année":
-            seniority,
-          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-            "oui",
-          "contrat salarié . indemnité de licenciement . salaire de référence":
-            salary,
-          "indemnité de licenciement": "oui",
-        })
-        .evaluate(
-          "contrat salarié . indemnité de licenciement . résultat légal"
-        );
-      expect(result.unit?.numerators).toEqual(["€"]);
-      expect(result.missingVariables).toEqual({});
-      expect(result.nodeValue).toEqual(expectedCompensation);
     }
   );
 });
