@@ -31,18 +31,19 @@ import {
   SalairesStoreError,
   createSalairesStore,
 } from "./steps/Salaires/store";
-
-export type StoreSlice<T extends object, E extends object = T> = (
-  set: SetState<E extends T ? E : E & T>,
-  get: GetState<E extends T ? E : E & T>,
-  publicodesRules?: string
-) => T;
+import {
+  CommonAgreementStoreError,
+  CommonAgreementStoreInput,
+  CommonAgreementStoreSlice,
+  createCommonAgreementStore,
+} from "../CommonSteps/Agreement/store";
 
 export type MainStore = ContratTravailStoreSlice &
   AncienneteStoreSlice &
   SalairesStoreSlice &
   ResultStoreSlice &
-  AgreementStoreSlice;
+  AgreementStoreSlice &
+  CommonAgreementStoreSlice;
 
 export type StepData<
   T extends
@@ -50,13 +51,15 @@ export type StepData<
     | SalairesStoreInput
     | ContratTravailStoreInput
     | ResultStoreInput
-    | AgreementStoreInput,
+    | AgreementStoreInput
+    | CommonAgreementStoreInput,
   U extends
     | AncienneteStoreError
     | SalairesStoreError
     | ContratTravailStoreError
     | ResultStoreError
     | AgreementStoreError
+    | CommonAgreementStoreError
 > = {
   input: T;
   error: U;
@@ -74,6 +77,7 @@ const createRootSlice = (
   ...createSalairesStore(set, get),
   ...createResultStore(set, get, publicodesRules),
   ...createRootAgreementsStore(set, get),
+  ...createCommonAgreementStore(set, get, publicodesRules),
 });
 
 const createStore = (publicodesRules: string) =>
