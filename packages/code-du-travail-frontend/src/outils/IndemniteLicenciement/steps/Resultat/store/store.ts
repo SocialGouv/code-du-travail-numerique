@@ -1,5 +1,5 @@
 import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
-import { StoreSlice } from "../../../store";
+import { StoreSlice } from "../../../../types";
 import {
   IndemniteLicenciementSeniority,
   mapToPublicodesSituationForIndemniteLicenciement,

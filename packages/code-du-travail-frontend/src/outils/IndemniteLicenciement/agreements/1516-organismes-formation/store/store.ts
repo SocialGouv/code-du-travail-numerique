@@ -5,7 +5,7 @@ import { deepMergeArray } from "../../../../../lib";
 import { computeSalaryPeriods } from "../../../common";
 import { AncienneteStoreSlice } from "../../../steps/Anciennete/store";
 import { SalairesStoreSlice } from "../../../steps/Salaires/store";
-import { StoreSlice } from "../../../store";
+import { StoreSlice } from "../../../../types";
 import {
   Agreement1516StoreData,
   Agreement1516StoreInput,
