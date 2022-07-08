@@ -91,7 +91,7 @@ const createSalairesStore: StoreSlice<
 
       if (agreement) {
         isAgreementValid = validatorAgreement(
-          `IDCC${agreement.num}`,
+          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
           IndemniteLicenciementStepName.Salaires,
           get,
           set
@@ -113,8 +113,8 @@ const createSalairesStore: StoreSlice<
 });
 
 const applyGenericValidation = (
-  get: GetState<SalairesStoreSlice>,
-  set: SetState<SalairesStoreSlice>,
+  get: GetState<SalairesStoreSlice & CommonAgreementStoreSlice>,
+  set: SetState<SalairesStoreSlice & CommonAgreementStoreSlice>,
   paramName: keyof SalairesStoreInput,
   value: any
 ) => {
@@ -123,12 +123,18 @@ const applyGenericValidation = (
       draft.salairesData.input[paramName as string] = value;
     });
     const { isValid, errorState } = validateStep(nextState.salairesData.input);
-    const isAgreementValid = validatorAgreement(
-      SupportedCcIndemniteLicenciement.IDCC1516, //TODO: replace par la cc
-      IndemniteLicenciementStepName.Salaires,
-      get,
-      set
-    );
+    const agreement = get().agreementData.input.agreement;
+
+    let isAgreementValid = true;
+
+    if (agreement) {
+      isAgreementValid = validatorAgreement(
+        `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+        IndemniteLicenciementStepName.Salaires,
+        get,
+        set
+      );
+    }
     const isStepValid = isValid && isAgreementValid;
     set(
       produce((state: SalairesStoreSlice) => {

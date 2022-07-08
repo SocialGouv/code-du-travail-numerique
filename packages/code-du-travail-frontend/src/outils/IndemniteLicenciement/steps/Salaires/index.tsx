@@ -15,6 +15,7 @@ const StepSalaires = () => {
     onSalariesChange,
     initFieldSalaries,
     errorSalaryPeriods,
+    agreement,
   } = useIndemniteLicenciementStore((state) => ({
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     onChangeHasTempsPartiel: state.salairesFunction.onChangeHasTempsPartiel,
@@ -23,6 +24,7 @@ const StepSalaires = () => {
     onSalariesChange: state.salairesFunction.onSalariesChange,
     errorSalaryPeriods: state.salairesData.error.errorSalaryPeriods,
     initFieldSalaries: state.salairesFunction.initFieldSalaries,
+    agreement: state.agreementData.input.agreement,
   }));
 
   React.useEffect(() => {
@@ -61,10 +63,12 @@ const StepSalaires = () => {
             salaryPeriods={salaryPeriods}
             error={errorSalaryPeriods}
           />
-          <AgreementsInjector
-            idcc={SupportedCcIndemniteLicenciement.IDCC1516}
-            step={IndemniteLicenciementStepName.Salaires}
-          />
+          {agreement && (
+            <AgreementsInjector
+              idcc={`IDCC${agreement.num}` as SupportedCcIndemniteLicenciement}
+              step={IndemniteLicenciementStepName.Salaires}
+            />
+          )}
         </>
       )}
     </>
