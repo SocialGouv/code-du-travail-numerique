@@ -86,7 +86,7 @@ contrat salarié . indemnité de licenciement . somme des absences:
 contrat salarié . indemnité de licenciement . ancienneté en année:
   titre: Ancienneté du salarié en année
   valeur: ancienneté du début à la fin - somme des absences
-  arrondi: 3 décimales
+  arrondi: 2 décimales
   unité: an
 
 contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins:
@@ -145,7 +145,7 @@ contrat salarié . indemnité de licenciement . résultat légal si inaptitude s
 contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année:
   titre: Ancienneté conventionnelle du salarié en année
   valeur: non
-  arrondi: 3 décimales
+  arrondi: 2 décimales
 
 contrat salarié . indemnité de licenciement . somme des absences collective:
   valeur: non
