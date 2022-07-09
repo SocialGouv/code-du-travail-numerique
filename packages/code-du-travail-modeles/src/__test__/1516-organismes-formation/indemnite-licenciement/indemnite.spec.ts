@@ -8,13 +8,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 1516", () => {
   test.each`
     seniority | salary  | expectedCompensation
     ${0}      | ${0}    | ${0}
-    ${0}      | ${0}    | ${0}
-    ${2}      | ${1000} | ${0}
     ${2}      | ${1000} | ${0}
     ${5}      | ${1000} | ${1000}
     ${10}     | ${2000} | ${4000}
-    ${10}     | ${2000} | ${4000}
-    ${10}     | ${4000} | ${8000}
     ${42}     | ${3000} | ${33300}
   `(
     "ancienneté: $seniority an, salaire de référence: $salary, => $expectedCompensation €",
