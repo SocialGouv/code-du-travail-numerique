@@ -7,21 +7,19 @@ const engine = new Engine(mergeModels());
 describe("CC 2511", () => {
   describe("Calcul de l'indemnité de licenciement", () => {
     test.each`
-      seniority | salaireRef | inaptitude | expectedCompensation
-      ${42}     | ${3000}    | ${"non"}   | ${39500}
-      ${0}      | ${3000}    | ${"non"}   | ${0}
-      ${2}      | ${3000}    | ${"non"}   | ${1500}
-      ${2}      | ${3000}    | ${"oui"}   | ${1500}
+      seniority | salaireRef | expectedCompensation
+      ${42}     | ${3000}    | ${39500}
+      ${0}      | ${3000}    | ${0}
+      ${2}      | ${3000}    | ${1500}
+      ${2}      | ${3000}    | ${1500}
     `(
       "Avec une ancienneté $seniority ans, un salaire de référence $salaireRef € => une compensation de base de $expectedCompensation €",
-      ({ salaireRef, expectedCompensation, seniority, inaptitude }) => {
+      ({ salaireRef, expectedCompensation, seniority }) => {
         const result = engine
           .setSituation({
             "contrat salarié . convention collective": "'IDCC2511'",
             "contrat salarié . convention collective . sport . indemnité de licenciement . ancienneté en année":
               seniority,
-            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-              inaptitude,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salaireRef,
             "indemnité de licenciement": "oui",

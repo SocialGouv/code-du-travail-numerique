@@ -1,7 +1,11 @@
-import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
+import {
+  IndemniteLicenciementPublicodes,
+  PublicodesIndemniteLicenciementResult,
+} from "@socialgouv/modeles-social";
 import { StoreSlice } from "../../../../types";
 import {
   IndemniteLicenciementSeniority,
+  mapToPublicodesSituationForIndemniteLicenciementConventionnel,
   mapToPublicodesSituationForIndemniteLicenciementLegal,
 } from "../../../../publicodes";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
@@ -11,10 +15,12 @@ import { SalairesStoreSlice } from "../../Salaires/store";
 import produce from "immer";
 
 import { ResultStoreData, ResultStoreSlice } from "./types";
+import { CommonAgreementStoreSlice } from "../../Agreement/store";
 
 const initialState: ResultStoreData = {
   input: {
-    publicodesResult: null,
+    publicodesLegalResult: null,
+    publicodesAgreementResult: null,
   },
   error: {},
   hasBeenSubmit: true,
@@ -23,7 +29,10 @@ const initialState: ResultStoreData = {
 
 const createResultStore: StoreSlice<
   ResultStoreSlice,
-  AncienneteStoreSlice & ContratTravailStoreSlice & SalairesStoreSlice
+  AncienneteStoreSlice &
+    ContratTravailStoreSlice &
+    SalairesStoreSlice &
+    CommonAgreementStoreSlice
 > = (set, get, publicodesRules) => ({
   resultData: {
     ...initialState,
@@ -32,7 +41,8 @@ const createResultStore: StoreSlice<
   resultFunction: {
     getPublicodesResult: () => {
       const refSalary = get().salairesData.input.refSalary;
-      const agreementRefSAlary = get().salairesData.input.agreementRefSAlary;
+      const agreementParameters = get().salairesData.input.agreementParameters;
+      const agreement = get().agreementData.input.agreement;
       const seniority: IndemniteLicenciementSeniority = convertToSeniority(
         get().ancienneteData.input.dateEntree!,
         get().ancienneteData.input.dateSortie!,
@@ -45,7 +55,7 @@ const createResultStore: StoreSlice<
         throw new Error("Publicodes is not defined");
       }
 
-      const { result } = publicodes.setSituation(
+      const publicodesSituationLegal = publicodes.setSituation(
         mapToPublicodesSituationForIndemniteLicenciementLegal(
           seniority,
           refSalary,
@@ -57,6 +67,27 @@ const createResultStore: StoreSlice<
         "contrat salarié . indemnité de licenciement . ancienneté en année"
       ).value as number;
 
+      let publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult;
+      let ancienneteConventionnel: number;
+
+      if (agreement) {
+        publicodes.setSituation(
+          mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+            agreement.num,
+            seniority,
+            agreementParameters
+          )
+        );
+
+        publicodesSituationConventionnel = publicodes.execute(
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+
+        ancienneteConventionnel = publicodes.execute(
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
+        ).value as number;
+      }
+
       const infoCalcul = generateExplanation({
         anciennete: ancienneteLegal,
         inaptitude: isLicenciementInaptitude,
@@ -65,7 +96,10 @@ const createResultStore: StoreSlice<
 
       set(
         produce((state: ResultStoreSlice) => {
-          state.resultData.input.publicodesResult = result;
+          state.resultData.input.publicodesLegalResult =
+            publicodesSituationLegal.result;
+          state.resultData.input.publicodesAgreementResult =
+            publicodesSituationConventionnel ?? null;
           state.resultData.input.infoCalcul = infoCalcul;
         })
       );

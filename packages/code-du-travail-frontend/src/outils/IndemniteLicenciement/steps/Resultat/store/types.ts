@@ -6,7 +6,8 @@ import { StepData } from "../../../store";
 import { InfoCalcul } from "../../../common/usecase/generateExplanation";
 
 export type ResultStoreInput = {
-  publicodesResult: PublicodesIndemniteLicenciementResult | null;
+  publicodesLegalResult: PublicodesIndemniteLicenciementResult | null;
+  publicodesAgreementResult: PublicodesIndemniteLicenciementResult | null;
   infoCalcul?: InfoCalcul;
 };
 

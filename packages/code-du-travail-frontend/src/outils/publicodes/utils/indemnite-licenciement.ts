@@ -57,16 +57,12 @@ export const mapToPublicodesSituationForIndemniteLicenciementLegal = (
 
 export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
   ccn: number,
-  agreementParameters: Record<string, string>,
   seniority: IndemniteLicenciementSeniority,
-  salaireRef: number,
-  inaptitude: boolean
+  agreementParameters?: Record<string, string | number>
 ): Record<string, string> => {
   return {
     ...agreementParameters,
     ...{
-      "contrat salarié . indemnité de licenciement . salaire de référence":
-        formatNumberAsString(salaireRef),
       "contrat salarié . indemnité de licenciement . absence pour accident de trajet":
         formatNumberAsString(seniority.absenceAccidentTrajet),
       "contrat salarié . indemnité de licenciement . absence pour congé création d'entreprise":
@@ -95,8 +91,6 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
         seniority.entryDate,
       "contrat salarié . indemnité de licenciement . date de sortie":
         seniority.exitDate,
-      "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-        inaptitude ? "oui" : "non",
       "indemnité de licenciement": "oui",
     },
   };
