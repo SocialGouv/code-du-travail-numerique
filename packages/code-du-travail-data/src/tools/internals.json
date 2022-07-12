@@ -176,5 +176,19 @@
     "date": "17/11/2021",
     "enable": true,
     "id": "8d75dc3a-96bc-11eb-9deb-3e22fba5f665"
+  },
+  {
+    "icon": "CalendarTime",
+    "title": "Ministère du travail : notre dossier sur le licenciement",
+    "displayTitle": "Comprendre sa procédure de licenciement",
+    "metaTitle": "Simulateur - Comprendre sa procédure de licenciement",
+    "slug": "procedure-licenciement",
+    "questions": [],
+    "description": "Accédez à la procédure de licenciement qui correspond à votre situation en répondant à quelques questions",
+    "metaDescription": "Accédez à la procédure de licenciement qui correspond à votre situation en répondant à quelques questions",
+    "action": "Consulter",
+    "date": "05/07/2022",
+    "enable": true,
+    "id": "8d75dc3a-96bc-11eb-9deb-3e22fba5f666"
   }
 ]
