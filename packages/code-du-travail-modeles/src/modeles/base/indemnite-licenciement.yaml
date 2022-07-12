@@ -87,7 +87,7 @@ contrat salarié . indemnité de licenciement . ancienneté en année:
   titre: Ancienneté du salarié en année
   valeur: ancienneté du début à la fin - somme des absences
   arrondi: 2 décimales
-  unité: an
+  unité: mois
 
 contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins:
   valeur:
