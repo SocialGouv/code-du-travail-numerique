@@ -10,6 +10,7 @@ describe("CC 2511", () => {
       seniority | salaireRef | expectedCompensation
       ${0}      | ${3000}    | ${0}
       ${2}      | ${3000}    | ${1500}
+      ${12}     | ${3000}    | ${9500}
       ${42}     | ${3000}    | ${39500}
     `(
       "Avec une ancienneté $seniority ans, un salaire de référence $salaireRef € => une compensation de base de $expectedCompensation €",
@@ -17,7 +18,7 @@ describe("CC 2511", () => {
         const result = engine
           .setSituation({
             "contrat salarié . convention collective": "'IDCC2511'",
-            "contrat salarié . convention collective . sport . indemnité de licenciement . ancienneté en année":
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salaireRef,
