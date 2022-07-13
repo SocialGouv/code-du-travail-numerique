@@ -6,7 +6,8 @@ export type SalairesStoreInput = {
   hasTempsPartiel?: OuiNon;
   salaryPeriods: SalaryPeriods[];
   refSalary: number;
-  agreementParameters?: Record<string, string | number>;
+  agreementRefSalary?: number;
+  agreementParameters?: Record<string, string>;
 };
 
 export type SalairesStoreError = {

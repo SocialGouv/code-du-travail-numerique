@@ -11,6 +11,7 @@ import { validateStep } from "./validator";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { validatorAgreement } from "../../../agreements";
 import {
+  getMotifs,
   ReferenceSalaryFactory,
   SalaryPeriods,
   SupportedCcIndemniteLicenciement,
@@ -38,7 +39,13 @@ const createSalairesStore: StoreSlice<
   salairesFunction: {
     initFieldSalaries: () => {
       const ancienneteInput = get().ancienneteData.input;
+      const agreement = get().agreementData.input.agreement;
       const periods = computeSalaryPeriods({
+        motifs: getMotifs(
+          agreement
+            ? (`IDCC${agreement.num}` as SupportedCcIndemniteLicenciement)
+            : SupportedCcIndemniteLicenciement.default
+        ),
         dateEntree: ancienneteInput.dateEntree ?? "",
         dateNotification: ancienneteInput.dateNotification ?? "",
         absencePeriods: ancienneteInput.absencePeriods,

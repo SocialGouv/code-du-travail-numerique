@@ -28,10 +28,7 @@ export const computeReferenceSalary = (
 
   set(
     produce((state: SalairesStoreSlice) => {
-      state.salairesData.input.agreementParameters = {
-        "contrat salarié . convention collective . organismes de formation . indemnité de licenciement . salaire de référence":
-          formatNumberAsString(refSalary),
-      };
+      state.salairesData.input.agreementRefSalary = refSalary;
     })
   );
 };

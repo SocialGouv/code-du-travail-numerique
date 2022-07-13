@@ -1,4 +1,8 @@
-import { SalaryPeriods } from "@socialgouv/modeles-social";
+import {
+  getMotifs,
+  SalaryPeriods,
+  SupportedCcIndemniteLicenciement,
+} from "@socialgouv/modeles-social";
 import produce from "immer";
 import { GetState, SetState } from "zustand";
 import { deepMergeArray } from "../../../../../lib";
@@ -31,6 +35,7 @@ export const createAgreement1516StoreSalaires: StoreSlice<
     initSalaryPeriods: () => {
       const ancienneteInput = get().ancienneteData.input;
       const periods = computeSalaryPeriods({
+        motifs: getMotifs(SupportedCcIndemniteLicenciement.IDCC1516),
         dateEntree: ancienneteInput.dateNotification ?? "",
         dateNotification: ancienneteInput.dateSortie ?? "",
         absencePeriods: [],

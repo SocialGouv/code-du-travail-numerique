@@ -1,15 +1,16 @@
 import {
   IndemniteLicenciementPublicodes,
   PublicodesIndemniteLicenciementResult,
+  SeniorityFactory,
+  SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { StoreSlice } from "../../../../types";
 import {
-  IndemniteLicenciementSeniority,
   mapToPublicodesSituationForIndemniteLicenciementConventionnel,
   mapToPublicodesSituationForIndemniteLicenciementLegal,
 } from "../../../../publicodes";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
-import { convertToSeniority, generateExplanation } from "../../../common";
+import { generateExplanation } from "../../../common";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { SalairesStoreSlice } from "../../Salaires/store";
 import produce from "immer";
@@ -42,12 +43,8 @@ const createResultStore: StoreSlice<
     getPublicodesResult: () => {
       const refSalary = get().salairesData.input.refSalary;
       const agreementParameters = get().salairesData.input.agreementParameters;
+      const agreementRefSalary = get().salairesData.input.agreementRefSalary;
       const agreement = get().agreementData.input.agreement;
-      const seniority: IndemniteLicenciementSeniority = convertToSeniority(
-        get().ancienneteData.input.dateEntree!,
-        get().ancienneteData.input.dateSortie!,
-        get().ancienneteData.input.absencePeriods
-      );
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
       const publicodes = get().resultData.publicodes;
@@ -55,26 +52,41 @@ const createResultStore: StoreSlice<
         throw new Error("Publicodes is not defined");
       }
 
+      const factory = new SeniorityFactory().create(
+        SupportedCcIndemniteLicenciement.default
+      );
+      const legalSeniority = factory.computeSeniority({
+        dateEntree: get().ancienneteData.input.dateEntree!,
+        dateSortie: get().ancienneteData.input.dateSortie!,
+        absencePeriods: get().ancienneteData.input.absencePeriods,
+      });
+
       const publicodesSituationLegal = publicodes.setSituation(
         mapToPublicodesSituationForIndemniteLicenciementLegal(
-          seniority,
+          legalSeniority,
           refSalary,
           isLicenciementInaptitude
         )
       );
 
-      const ancienneteLegal = publicodes.execute(
-        "contrat salarié . indemnité de licenciement . ancienneté en année"
-      ).value as number;
-
       let publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult;
       let ancienneteConventionnel: number;
 
       if (agreement) {
+        const factory = new SeniorityFactory().create(
+          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
+        );
+        const agreementSeniority = factory.computeSeniority({
+          dateEntree: get().ancienneteData.input.dateEntree!,
+          dateSortie: get().ancienneteData.input.dateSortie!,
+          absencePeriods: get().ancienneteData.input.absencePeriods,
+        });
+
         publicodes.setSituation(
           mapToPublicodesSituationForIndemniteLicenciementConventionnel(
             agreement.num,
-            seniority,
+            agreementSeniority,
+            agreementRefSalary ?? refSalary,
             agreementParameters
           )
         );
@@ -82,14 +94,10 @@ const createResultStore: StoreSlice<
         publicodesSituationConventionnel = publicodes.execute(
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
-
-        ancienneteConventionnel = publicodes.execute(
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
-        ).value as number;
       }
 
       const infoCalcul = generateExplanation({
-        anciennete: ancienneteLegal,
+        anciennete: legalSeniority,
         inaptitude: isLicenciementInaptitude,
         salaireRef: refSalary,
       });
