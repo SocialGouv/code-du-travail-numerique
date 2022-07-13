@@ -2,7 +2,8 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
 
 import { loadPublicodesRules } from "../../";
-import { PublicodesContext, PublicodesProvider, PublicodesSimulator } from "..";
+import { PublicodesProvider } from "..";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 function renderProviderPreavisRetraite({
   children,

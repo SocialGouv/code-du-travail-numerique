@@ -1,7 +1,7 @@
+import { SupportedCcIndemniteLicenciement } from "..";
 import { ReferenceSalary1516 } from "./1516_organismes_formation";
 import { ReferenceSalaryLegal } from "./legal";
 import type { IReferenceSalary } from "./types";
-import { SupportedCcIndemniteLicenciement } from "./types";
 
 export class ReferenceSalaryFactory {
   create<T extends SupportedCcIndemniteLicenciement>(

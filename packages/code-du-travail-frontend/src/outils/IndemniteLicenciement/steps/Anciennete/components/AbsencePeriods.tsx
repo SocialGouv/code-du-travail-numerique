@@ -1,4 +1,6 @@
 import { Input, Label, Select, Text, theme } from "@socialgouv/cdtn-ui";
+import { Absence, getMotifs } from "@socialgouv/modeles-social";
+import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social/bin";
 import React from "react";
 import styled from "styled-components";
 
@@ -6,21 +8,23 @@ import { AddButton, DelButton } from "../../../../common/Buttons";
 import { Error } from "../../../../common/ErrorField";
 import { MultiFieldRow } from "../../../../common/MultiFieldRow";
 import { Question } from "../../../../common/Question";
-import { Absence, MOTIFS } from "../../../common";
+import { SmallText } from "../../../../common/stepStyles";
 
 type Props = {
   onChange: (absences: Absence[]) => void;
   absences: Absence[];
   error?: string;
+  idcc?: SupportedCcIndemniteLicenciement;
 };
 
-const AbsencePeriods = ({ onChange, absences, error }: Props) => {
+const AbsencePeriods = ({ onChange, absences, error, idcc }: Props) => {
+  const motifs = getMotifs(idcc ?? SupportedCcIndemniteLicenciement.default);
   const [localAbsences, setLocalAbsences] = React.useState(
     absences.length > 0
       ? absences
       : [
           {
-            motif: MOTIFS[0].label,
+            motif: motifs[0].label,
             durationInMonth: undefined,
           },
         ]
@@ -32,7 +36,7 @@ const AbsencePeriods = ({ onChange, absences, error }: Props) => {
     const newAbsences = [
       ...localAbsences,
       {
-        motif: MOTIFS[0].label,
+        motif: motifs[0].label,
         durationInMonth: undefined,
       },
     ];
@@ -89,6 +93,11 @@ const AbsencePeriods = ({ onChange, absences, error }: Props) => {
       <Question>
         Quels sont le motif et la durée de ces absences prolongées&nbsp;?
       </Question>
+      <SmallText>
+        Veuillez créer une ligne différente pour chaque période d’absence (de
+        plus d’un mois) même si vous avez été absent plusieurs fois pour le même
+        motif.
+      </SmallText>
       {localAbsences.map((value, index) => (
         <RelativeDiv key={index}>
           <RowTitle>
@@ -113,7 +122,7 @@ const AbsencePeriods = ({ onChange, absences, error }: Props) => {
                 onChange={(e) => onSelectMotif(index, e.target.value)}
                 value={value.motif}
               >
-                {MOTIFS.map(({ label }) => (
+                {motifs.map(({ label }) => (
                   <option key={label} value={label}>
                     {label}
                   </option>

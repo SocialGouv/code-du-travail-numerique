@@ -1,4 +1,8 @@
-import { Notification, References } from "@socialgouv/modeles-social";
+import {
+  Notification,
+  PublicodesSimulator,
+  References,
+} from "@socialgouv/modeles-social";
 import Engine, { Rule as PubliRule } from "publicodes";
 
 import { PublicodesIndemniteLicenciementResult } from "./indemnite-licenciement";
@@ -70,8 +74,4 @@ export enum PublicodesUnit {
   YEAR = "an",
   EUROS = "€",
   K_EUROS = "k/€",
-}
-
-export enum PublicodesSimulator {
-  INDEMNITE_LICENCIEMENT = "contrat salarié . indemnité de licenciement",
 }

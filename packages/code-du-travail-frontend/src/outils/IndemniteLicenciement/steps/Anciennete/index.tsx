@@ -4,9 +4,7 @@ import { SectionTitle } from "../../../common/stepStyles";
 import { RadioQuestion, TextQuestion } from "../../../Components";
 import { AbsencePeriods } from "./components";
 import { useIndemniteLicenciementStore } from "../../store";
-import { AgreementsInjector } from "../../agreements";
 import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
-import { IndemniteLicenciementStepName } from "../..";
 
 const StepAnciennete = () => {
   const {
@@ -25,6 +23,7 @@ const StepAnciennete = () => {
     errorAbsenceProlonge,
     errorDateEntree,
     errorAbsencePeriods,
+    agreement,
   } = useIndemniteLicenciementStore((state) => ({
     onChangeAbsencePeriods: state.ancienneteFunction.onChangeAbsencePeriods,
     absencePeriods: state.ancienneteData.input.absencePeriods,
@@ -42,6 +41,7 @@ const StepAnciennete = () => {
     errorAbsenceProlonge: state.ancienneteData.error.errorAbsenceProlonge,
     errorDateEntree: state.ancienneteData.error.errorDateEntree,
     errorAbsencePeriods: state.ancienneteData.error.errorAbsencePeriods,
+    agreement: state.agreementData.input.agreement,
   }));
   return (
     <>
@@ -99,15 +99,16 @@ const StepAnciennete = () => {
       />
       {hasAbsenceProlonge === "oui" && (
         <AbsencePeriods
+          idcc={
+            agreement
+              ? (`IDCC${agreement.num}` as SupportedCcIndemniteLicenciement)
+              : undefined
+          }
           onChange={onChangeAbsencePeriods}
           absences={absencePeriods}
           error={errorAbsencePeriods}
         />
       )}
-      <AgreementsInjector
-        idcc={SupportedCcIndemniteLicenciement.IDCC1516} //TODO: remplacer par la bonne CC
-        step={IndemniteLicenciementStepName.Anciennete}
-      />
     </>
   );
 };

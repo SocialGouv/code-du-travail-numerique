@@ -3,7 +3,7 @@ import type { EvaluatedNode } from "publicodes";
 import type { Publicodes } from "./Publicodes";
 import { PublicodesBase } from "./PublicodesBase";
 import type { PublicodesPreavisRetraiteResult } from "./types";
-import { PublicodesSimulator } from "./types";
+import { PublicodesDefaultRules, PublicodesSimulator } from "./types";
 import { convertDaysIntoBetterUnit } from "./utils/preavis-retraite";
 
 class PreavisRetraitePublicodes
@@ -11,7 +11,7 @@ class PreavisRetraitePublicodes
   implements Publicodes<PublicodesPreavisRetraiteResult>
 {
   constructor(rules: string) {
-    super(rules, PublicodesSimulator.PREAVIS_RETRAITE);
+    super(rules, PublicodesDefaultRules[PublicodesSimulator.PREAVIS_RETRAITE]);
   }
 
   protected convertedResult(

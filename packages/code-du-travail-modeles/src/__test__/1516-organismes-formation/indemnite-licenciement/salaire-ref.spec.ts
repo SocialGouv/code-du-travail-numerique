@@ -1,4 +1,4 @@
-import { ReferenceSalary1516 } from "../1516_organismes_formation";
+import { ReferenceSalary1516 } from "../../../plugins/salaire-reference/1516_organismes_formation";
 
 describe("Calcul du salaire pour la CC 1516", () => {
   const ReferenceSalary = new ReferenceSalary1516();

@@ -1,9 +1,14 @@
+import {
+  getMotifs,
+  SupportedCcIndemniteLicenciement,
+} from "@socialgouv/modeles-social";
 import { computeSalaryPeriods } from "..";
 
 describe("computeSalaryPeriods", () => {
   it("should compute salary periods for the last 12 months", () => {
     expect(
       computeSalaryPeriods({
+        motifs: getMotifs(SupportedCcIndemniteLicenciement.default),
         dateEntree: "01/02/2017",
         dateNotification: "01/04/2018",
       })
@@ -26,6 +31,7 @@ describe("computeSalaryPeriods", () => {
   it("should compute salary periods for the last 5 months", () => {
     expect(
       computeSalaryPeriods({
+        motifs: getMotifs(SupportedCcIndemniteLicenciement.default),
         dateEntree: "01/02/2017",
         dateNotification: "01/07/2017",
       })
@@ -41,6 +47,7 @@ describe("computeSalaryPeriods", () => {
   it("should compute salary periods for the last 5 months", () => {
     expect(
       computeSalaryPeriods({
+        motifs: getMotifs(SupportedCcIndemniteLicenciement.default),
         dateEntree: "20/02/2015",
         dateNotification: "20/12/2020",
       })
@@ -63,6 +70,7 @@ describe("computeSalaryPeriods", () => {
   it("should compute salary periods for 2 months", () => {
     expect(
       computeSalaryPeriods({
+        motifs: getMotifs(SupportedCcIndemniteLicenciement.default),
         absencePeriods: [{ durationInMonth: 6, motif: "Congés sans solde" }],
         dateEntree: "01/04/2017",
         dateNotification: "01/12/2017",
