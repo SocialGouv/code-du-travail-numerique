@@ -96,6 +96,7 @@ const createResultStore: StoreSlice<
         );
       }
 
+      // a enlever peut-être
       const infoCalcul = generateExplanation({
         anciennete: legalSeniority,
         inaptitude: isLicenciementInaptitude,
