@@ -25,10 +25,5 @@ export const MOTIFS_2511: Motif[] = [
   { key: "absenceCongesSansSolde", label: "Congés sans solde", value: 1 },
   { key: "absenceGreve", label: "Grève", value: 1 },
   { key: "absenceMiseAPied", label: "Mise à pied", value: 1 },
-  {
-    key: "absenceMaladieOrigineNonPro",
-    label: "Maladie d'origine non professionnelle",
-    value: 1,
-  },
   { key: "absenceCongesPaternite", label: "Congé de paternité", value: 0 },
 ];

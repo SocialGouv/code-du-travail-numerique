@@ -28,11 +28,6 @@ export const LEGAL_MOTIFS: Motif[] = [
   { key: "absenceCongesSansSolde", label: "Congés sans solde", value: 1 },
   { key: "absenceGreve", label: "Grève", value: 1 },
   { key: "absenceMiseAPied", label: "Mise à pied", value: 1 },
-  {
-    key: "absenceMaladieOrigineNonPro",
-    label: "Maladie d'origine non professionnelle",
-    value: 1,
-  },
   { key: "absenceCongesPaternite", label: "Congé de paternité", value: 1 },
 ];
 
@@ -71,8 +66,6 @@ export class SeniorityLegal
           }
           return total;
         }, 0) / 12;
-    const seniorityYear =
-      differenceInMonths(dSortie, dEntree) / 12 - totalAbsence;
-    return Math.round(seniorityYear * 100) / 100;
+    return differenceInMonths(dSortie, dEntree) / 12 - totalAbsence;
   }
 }
