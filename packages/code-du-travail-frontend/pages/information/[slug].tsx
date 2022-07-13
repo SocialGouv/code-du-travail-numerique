@@ -86,7 +86,6 @@ const Information = ({
             size,
           }) => {
             const reactContent: any = processor.processSync(html).result;
-            console.log("type", type);
             return type === "graphic" ? (
               <div key={name}>
                 <ImageWrapper src={toUrl(imgUrl)} altText={altText} />
