@@ -1,10 +1,10 @@
 import type { EvaluatedNode } from "publicodes";
 import Engine from "publicodes";
 
-import type { Publicodes } from "./Publicodes";
-import type { MissingArgs, PublicodesData, SituationElement } from "./types";
 import type { Notification, References } from "../utils";
 import { getNotifications, getReferences } from "../utils";
+import type { Publicodes } from "./Publicodes";
+import type { MissingArgs, PublicodesData, SituationElement } from "./types";
 
 export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   engine: Engine;

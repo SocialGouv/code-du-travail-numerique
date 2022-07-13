@@ -1,118 +1,19 @@
-contrat salarié . salaire de référence:
-  titre: Salaire de référence du salarié
-  unité: €
-  cdtn:
-    type: entier
-
-contrat salarié . salaire de référence conventionnel:
-  titre: Salaire de référence du salarié
-  unité: €
-  cdtn:
-    type: entier
-  valeur: non
-
-contrat salarié . date d'entrée:
-  unité: an
-
-contrat salarié . date de sortie:
-  unité: an
-
-contrat salarié . ancienneté du début à la fin:
-  unité: an
-  durée:
-    depuis: contrat salarié . date d'entrée
-    jusqu'à: contrat salarié . date de sortie
-
-contrat salarié . absence pour maladie non pro:
-  titre: Absence pour maladie non professionnelle
-  unité: mois
-
-contrat salarié . absence pour accident de trajet:
-  titre: Arrêt maladie lié à un accident de trajet
-  unité: mois
-
-contrat salarié . absence pour congé sabbatique:
-  titre: Congé sabbatique
-  unité: mois
-
-contrat salarié . absence pour congé création d'entreprise:
-  titre: Congé pour création d'entreprise
-  unité: mois
-
-contrat salarié . absence pour congé parental d'éducation:
-  titre: Congé parental d'éducation
-  unité: mois
-
-contrat salarié . absence pour grève:
-  titre: Grève
-  unité: mois
-
-contrat salarié . absence pour congé sans solde:
-  titre: Congés sans solde
-  unité: mois
-
-contrat salarié . absence pour mise à pied:
-  titre: Mise à pied
-  unité: mois
-
-contrat salarié . absence pour maladie d'origine non pro:
-  titre: Maladie d'origine non professionnelle
-  unité: mois
-
-contrat salarié . absence pour congé paternité:
-  titre: Congé de paternité
-  unité: mois
-
-contrat salarié . somme des absences:
-  unité: mois
-  somme:
-    - contrat salarié . absence pour maladie non pro
-    - contrat salarié . absence pour accident de trajet
-    - contrat salarié . absence pour congé sabbatique
-    - contrat salarié . absence pour congé création d'entreprise
-    - contrat salarié . absence pour congé parental d'éducation / 2
-    - contrat salarié . absence pour grève
-    - contrat salarié . absence pour congé sans solde
-    - contrat salarié . absence pour mise à pied
-    - contrat salarié . absence pour maladie d'origine non pro
-    - contrat salarié . absence pour congé paternité
-
-contrat salarié . ancienneté en année:
-  titre: Ancienneté du salarié en année
-  valeur: contrat salarié . ancienneté du début à la fin - contrat salarié . somme des absences
-
-contrat salarié . inaptitude suite à un accident ou maladie professionnelle:
-  titre: Inaptitude
-  question: Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue ?
-  cdtn:
-    type: oui-non
-
-#  (1/4*Sref*A1) + (1/3*Sref*A2)
-#  A1 : Ancienneté de 10 ans ou moins
-#  A2 : Ancienneté au delà de 10 ans
 contrat salarié . indemnité de licenciement:
-  variations:
-    - si: ancienneté en année > (7 mois / 12)
-      alors:
-        somme:
-          - indemnité de licenciement . dix ans ou moins
-          - indemnité de licenciement . plus de dix ans
-    - sinon: 0
-  unité: €
-  arrondi: 3 décimales
-  références:
-    Article L1234-9: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644154/
-    Article R1234-1 à R1234-4: https://www.legifrance.gouv.fr/codes/id/LEGISCTA000018537572/
+  valeur: oui
 
 contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle:
-  applicable si: inaptitude suite à un accident ou maladie professionnelle
-  remplace: indemnité de licenciement
-  valeur:
-    produit:
-      assiette: indemnité de licenciement
-      facteur: 2
-  références:
-    Article L1226-14: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006900981/
+  valeur: non
+
+contrat salarié . indemnité de licenciement . salaire de référence:
+  unité: €
+
+contrat salarié . indemnité de licenciement . salaire de référence conventionnel:
+  unité: €
+  valeur: non
+
+contrat salarié . indemnité de licenciement . ancienneté en année:
+  valeur: non
+  unité: an
 
 contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins:
   valeur:
@@ -126,20 +27,55 @@ contrat salarié . indemnité de licenciement . au dela de dix ans:
     - (- 10 an)
   plancher: 0 an
 
-contrat salarié . indemnité de licenciement . dix ans ou moins:
+contrat salarié . indemnité de licenciement . facteur dix ans ou moins:
   valeur:
     produit:
       assiette: jusqu'à dix ans ou moins * salaire de référence
       facteur: 1 / 4
   unité: €
 
-contrat salarié . indemnité de licenciement . plus de dix ans:
+contrat salarié . indemnité de licenciement . facteur plus de dix ans:
   valeur:
     produit:
-      assiette: salaire de référence * au dela de dix ans
+      assiette: au dela de dix ans * salaire de référence
       facteur: 1 / 3
   unité: €
 
-contrat salarié . indemnité de licenciement conventionnel:
+#  (1/4*Sref*A1) + (1/3*Sref*A2)
+#  A1 : Ancienneté de 10 ans ou moins
+#  A2 : Ancienneté au delà de 10 ans
+contrat salarié . indemnité de licenciement . résultat légal:
+  variations:
+    - si: ancienneté en année > 7 mois
+      alors:
+        somme:
+          - facteur dix ans ou moins
+          - facteur plus de dix ans
+    - sinon: 0
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article L1234-9: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035644154/
+    Article R1234-1 à R1234-4: https://www.legifrance.gouv.fr/codes/id/LEGISCTA000018537572/
+
+contrat salarié . indemnité de licenciement . résultat légal si inaptitude suite à un accident ou maladie professionnelle:
+  applicable si: inaptitude suite à un accident ou maladie professionnelle
+  remplace: résultat légal
+  valeur:
+    produit:
+      assiette: résultat légal
+      facteur: 2
+  références:
+    Article L1226-14: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006900981/
+
+contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année:
+  valeur: non
+  unité: an
+
+contrat salarié . indemnité de licenciement . somme des absences collective:
+  valeur: non
+  unité: an
+
+contrat salarié . indemnité de licenciement . résultat conventionnel:
   valeur: non
   unité: €

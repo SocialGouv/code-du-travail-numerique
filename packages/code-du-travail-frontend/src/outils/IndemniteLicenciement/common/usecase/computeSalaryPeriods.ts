@@ -1,16 +1,17 @@
+import { Absence, Motif } from "@socialgouv/modeles-social";
 import { differenceInMonths, format, subMonths } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import { parse } from "../../../common/utils";
-import { MOTIFS } from "../motifs";
-import { Absence } from "../types";
 
 type Props = {
   dateEntree: string;
   dateNotification: string;
+  motifs: Motif[];
   absencePeriods?: Absence[];
 };
 
 function computeSalaryPeriods({
+  motifs,
   dateEntree,
   dateNotification,
   absencePeriods,
@@ -21,7 +22,7 @@ function computeSalaryPeriods({
   const totalAbsence = (absencePeriods || [])
     .filter((period) => Boolean(period.durationInMonth))
     .reduce((total, item) => {
-      const motif = MOTIFS.find((motif) => motif.label === item.motif);
+      const motif = motifs.find((motif) => motif.label === item.motif);
       if (motif && item.durationInMonth) {
         return total + item.durationInMonth * motif.value;
       }

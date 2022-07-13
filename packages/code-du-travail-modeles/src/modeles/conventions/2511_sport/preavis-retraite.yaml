@@ -1,26 +1,3 @@
-contrat salarié . convention collective . sport:
-  description: Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006.
-  applicable si: convention collective = 'IDCC2511'
-  valeur: oui
-  cdtn:
-    idcc: 2511
-    préavis-retraite: true
-
-contrat salarié . convention collective . sport . catégorie professionnelle:
-  titre: Catégorie professionnelle
-  question: Quelle est la catégorie professionnelle du salarié ?
-  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
-  cdtn:
-    type: liste
-    valeurs:
-      Ouvriers, Employés: "'Ouvriers'"
-      Techniciens et agents de maîtrise (TAM): "'Techniciens'"
-      Cadres: "'Cadres'"
-
-contrat salarié . convention collective . sport . ouvriers:
-  applicable si: catégorie professionnelle = 'Ouvriers'
-  valeur: oui
-
 contrat salarié . convention collective . sport . ouvriers . préavis de retraite:
   remplace: préavis de retraite collective
   valeur: 1 mois
@@ -28,20 +5,12 @@ contrat salarié . convention collective . sport . ouvriers . préavis de retrai
     Article 4.4.2.1: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000021063914/?idConteneur=KALICONT000017577652
     Article 4.4.1: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000021063914/?idConteneur=KALICONT000017577652
 
-contrat salarié . convention collective . sport . techniciens:
-  applicable si: catégorie professionnelle = 'Techniciens'
-  valeur: oui
-
 contrat salarié . convention collective . sport . techniciens . préavis de retraite:
   remplace: préavis de retraite collective
   valeur: 2 mois
   références:
     Article 4.4.2.1: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000021063914/?idConteneur=KALICONT000017577652
     Article 4.4.1: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000021063914/?idConteneur=KALICONT000017577652
-
-contrat salarié . convention collective . sport . cadres:
-  applicable si: catégorie professionnelle = 'Cadres'
-  valeur: oui
 
 contrat salarié . convention collective . sport . cadres . préavis de retraite:
   remplace: préavis de retraite collective

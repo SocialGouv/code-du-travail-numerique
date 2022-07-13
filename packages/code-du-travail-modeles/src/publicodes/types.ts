@@ -62,9 +62,16 @@ export enum PublicodesUnit {
 }
 
 export enum PublicodesSimulator {
-  INDEMNITE_LICENCIEMENT = "contrat salarié . indemnité de licenciement",
-  PREAVIS_RETRAITE = "contrat salarié . préavis de retraite en jours",
+  INDEMNITE_LICENCIEMENT = "INDEMNITE_LICENCIEMENT",
+  PREAVIS_RETRAITE = "PREAVIS_RETRAITE",
 }
+
+export const PublicodesDefaultRules = {
+  [PublicodesSimulator.INDEMNITE_LICENCIEMENT]:
+    "contrat salarié . indemnité de licenciement . résultat légal",
+  [PublicodesSimulator.PREAVIS_RETRAITE]:
+    "contrat salarié . préavis de retraite en jours",
+};
 
 export enum PublicodesConvertedUnit {
   DAY = "jour",

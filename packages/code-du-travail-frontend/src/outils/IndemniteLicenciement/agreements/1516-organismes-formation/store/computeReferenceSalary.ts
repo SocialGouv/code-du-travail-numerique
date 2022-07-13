@@ -4,6 +4,7 @@ import {
 } from "@socialgouv/modeles-social";
 import produce from "immer";
 import { GetState, SetState } from "zustand";
+import { formatNumberAsString } from "../../../../publicodes";
 import { SalairesStoreSlice } from "../../../steps/Salaires/store";
 import { MainStore } from "../../../store";
 
@@ -27,7 +28,7 @@ export const computeReferenceSalary = (
 
   set(
     produce((state: SalairesStoreSlice) => {
-      state.salairesData.input.agreementRefSAlary = refSalary;
+      state.salairesData.input.agreementRefSalary = refSalary;
     })
   );
 };

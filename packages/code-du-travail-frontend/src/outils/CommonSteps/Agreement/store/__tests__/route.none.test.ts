@@ -1,11 +1,14 @@
 import { Route } from "../types";
 import { createIndemniteLicenciementStore } from "../../../../IndemniteLicenciement/store";
+import { loadPublicodesRules } from "../../../..";
 
 describe("[Store] Un utilisateur choisit de ne pas renseigner sa convention collective", () => {
   let store: ReturnType<typeof createIndemniteLicenciementStore>;
 
   beforeEach(() => {
-    store = createIndemniteLicenciementStore("");
+    store = createIndemniteLicenciementStore(
+      loadPublicodesRules("indemnite-licenciement")
+    );
   });
 
   it("doit pouvoir passer à l'étape suivante 🚀", () => {

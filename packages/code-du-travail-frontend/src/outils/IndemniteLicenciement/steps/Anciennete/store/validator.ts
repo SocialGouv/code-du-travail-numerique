@@ -3,13 +3,17 @@ import { isValidDate, deepEqualObject } from "../../../../../lib";
 import { parse } from "../../../../common/utils";
 import { AncienneteStoreInput, AncienneteStoreError } from "./types";
 import frLocale from "date-fns/locale/fr";
-import { MOTIFS } from "../../../common";
+import {
+  getMotifs,
+  SupportedCcIndemniteLicenciement,
+} from "@socialgouv/modeles-social";
 
 export const validateStep = (state: AncienneteStoreInput) => {
   const dEntree = parse(state.dateEntree);
   const dSortie = parse(state.dateSortie);
   const dNotification = parse(state.dateNotification);
   const absencePeriods = state.absencePeriods;
+  const legalMotif = getMotifs(SupportedCcIndemniteLicenciement.default);
   let errors: AncienneteStoreError = {};
 
   const totalAbsence =
@@ -20,7 +24,7 @@ export const validateStep = (state: AncienneteStoreInput) => {
           return total;
         }
         const v =
-          MOTIFS.find((motif) => motif.label === item.motif)?.value ?? 0;
+          legalMotif.find((motif) => motif.label === item.motif)?.value ?? 0;
         return total + item.durationInMonth * v;
       }, 0) / 12;
 
