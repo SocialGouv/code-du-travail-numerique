@@ -4,7 +4,7 @@ import { IndemniteLicenciementStepName } from "..";
 import { MainStore } from "../store";
 import { validateAgreement1516 } from "./1516-organismes-formation";
 
-export const validateAgreement = (
+const validatorAgreement = (
   idcc: SupportedCcIndemniteLicenciement,
   step: IndemniteLicenciementStepName,
   get: GetState<any>,
@@ -18,3 +18,5 @@ export const validateAgreement = (
       return true;
   }
 };
+
+export default validatorAgreement;

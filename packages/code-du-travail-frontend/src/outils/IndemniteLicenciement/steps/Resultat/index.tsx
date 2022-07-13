@@ -4,10 +4,10 @@ import { IndemniteLegale } from "./components";
 import { useIndemniteLicenciementStore } from "../../store";
 
 const StepResult = () => {
-  const { publicodesResult, getPublicodesResult, infoCalcul } =
+  const { publicodesLegalResult, getPublicodesResult, infoCalcul } =
     useIndemniteLicenciementStore((state) => ({
       infoCalcul: state.resultData.input.infoCalcul,
-      publicodesResult: state.resultData.input.publicodesResult,
+      publicodesLegalResult: state.resultData.input.publicodesLegalResult,
       getPublicodesResult: state.resultFunction.getPublicodesResult,
     }));
 
@@ -18,14 +18,17 @@ const StepResult = () => {
   return (
     <IndemniteLegale
       result={
-        publicodesResult?.value
-          ? (Number(publicodesResult.value) + 0.004).toLocaleString("fr-FR", {
-              minimumFractionDigits: 2,
-              maximumFractionDigits: 2,
-            })
+        publicodesLegalResult?.value
+          ? (Number(publicodesLegalResult.value) + 0.004).toLocaleString(
+              "fr-FR",
+              {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              }
+            )
           : "0"
       }
-      unit={publicodesResult?.unit?.denominators[0] ?? "€"}
+      unit={publicodesLegalResult?.unit?.denominators[0] ?? "€"}
       infoCalcul={infoCalcul}
     />
   );

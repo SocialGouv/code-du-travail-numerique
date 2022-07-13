@@ -9,8 +9,9 @@ import { StoreSlice } from "../../../../types";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { validateStep } from "./validator";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
-import { validateAgreement } from "../../../agreements";
+import { validatorAgreement } from "../../../agreements";
 import {
+  getMotifs,
   ReferenceSalaryFactory,
   SalaryPeriods,
   SupportedCcIndemniteLicenciement,
@@ -18,6 +19,7 @@ import {
 import { IndemniteLicenciementStepName } from "../../..";
 import { deepMergeArray } from "../../../../../lib";
 import { computeSalaryPeriods } from "../../../common";
+import { CommonAgreementStoreSlice } from "../../Agreement/store";
 
 const initialState: SalairesStoreData = {
   input: {
@@ -31,13 +33,19 @@ const initialState: SalairesStoreData = {
 
 const createSalairesStore: StoreSlice<
   SalairesStoreSlice,
-  AncienneteStoreSlice & ContratTravailStoreSlice
+  AncienneteStoreSlice & ContratTravailStoreSlice & CommonAgreementStoreSlice
 > = (set, get) => ({
   salairesData: { ...initialState },
   salairesFunction: {
     initFieldSalaries: () => {
       const ancienneteInput = get().ancienneteData.input;
+      const agreement = get().agreementData.input.agreement;
       const periods = computeSalaryPeriods({
+        motifs: getMotifs(
+          agreement
+            ? (`IDCC${agreement.num}` as SupportedCcIndemniteLicenciement)
+            : SupportedCcIndemniteLicenciement.default
+        ),
         dateEntree: ancienneteInput.dateEntree ?? "",
         dateNotification: ancienneteInput.dateNotification ?? "",
         absencePeriods: ancienneteInput.absencePeriods,
@@ -84,12 +92,18 @@ const createSalairesStore: StoreSlice<
         );
       }
 
-      const isAgreementValid = validateAgreement(
-        SupportedCcIndemniteLicenciement.IDCC1516, //TODO: replace par la cc
-        IndemniteLicenciementStepName.Salaires,
-        get,
-        set
-      );
+      const agreement = get().agreementData.input.agreement;
+
+      let isAgreementValid = true;
+
+      if (agreement) {
+        isAgreementValid = validatorAgreement(
+          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+          IndemniteLicenciementStepName.Salaires,
+          get,
+          set
+        );
+      }
 
       const isStepValid = isValid && isAgreementValid;
 
@@ -106,8 +120,8 @@ const createSalairesStore: StoreSlice<
 });
 
 const applyGenericValidation = (
-  get: GetState<SalairesStoreSlice>,
-  set: SetState<SalairesStoreSlice>,
+  get: GetState<SalairesStoreSlice & CommonAgreementStoreSlice>,
+  set: SetState<SalairesStoreSlice & CommonAgreementStoreSlice>,
   paramName: keyof SalairesStoreInput,
   value: any
 ) => {
@@ -116,12 +130,18 @@ const applyGenericValidation = (
       draft.salairesData.input[paramName as string] = value;
     });
     const { isValid, errorState } = validateStep(nextState.salairesData.input);
-    const isAgreementValid = validateAgreement(
-      SupportedCcIndemniteLicenciement.IDCC1516, //TODO: replace par la cc
-      IndemniteLicenciementStepName.Salaires,
-      get,
-      set
-    );
+    const agreement = get().agreementData.input.agreement;
+
+    let isAgreementValid = true;
+
+    if (agreement) {
+      isAgreementValid = validatorAgreement(
+        `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+        IndemniteLicenciementStepName.Salaires,
+        get,
+        set
+      );
+    }
     const isStepValid = isValid && isAgreementValid;
     set(
       produce((state: SalairesStoreSlice) => {

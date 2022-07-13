@@ -1,7 +1,12 @@
-import { ReferenceSalaryLegal } from "../legal";
+import {
+  ReferenceSalaryFactory,
+  SupportedCcIndemniteLicenciement,
+} from "../../../../plugins";
 
 describe("computeReferenceSalary", () => {
-  const referenceSalary = new ReferenceSalaryLegal();
+  const referenceSalary = new ReferenceSalaryFactory().create(
+    SupportedCcIndemniteLicenciement.default
+  );
   it("should compute reference salary for a basic use case", () => {
     expect(
       referenceSalary.computeReferenceSalary({

@@ -1,3 +1,16 @@
+contrat salarié . ancienneté:
+  titre: Ancienneté du salarié
+  question: Quel est votre ancienneté en mois ?
+  unité: mois
+  cdtn:
+    type: entier
+
+contrat salarié . travailleur handicapé:
+  titre: Travailleur handicapé
+  question: Le salarié concerné est-il reconnu en tant que travailleur handicapé ?
+  cdtn:
+    type: oui-non
+
 contrat salarié . mise à la retraite:
   titre: Origine du départ à la retraite
   question: L’employeur a-t-il décidé de lui-même de mettre à la retraite le salarié par une décision adressée à celui-ci ?

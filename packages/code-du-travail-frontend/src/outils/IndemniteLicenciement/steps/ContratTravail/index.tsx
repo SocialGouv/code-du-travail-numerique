@@ -3,9 +3,6 @@ import { RadioQuestion } from "../../../Components";
 
 import { FauteGrave, TypeContratMessage } from "./components";
 import { useIndemniteLicenciementStore } from "../../store";
-import { AgreementsInjector } from "../../agreements";
-import { IndemniteLicenciementStepName } from "../..";
-import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 
 const StepContratTravail = (): JSX.Element => {
   const {
@@ -101,10 +98,6 @@ const StepContratTravail = (): JSX.Element => {
         onChangeSelectedOption={onChangeLicenciementInaptitude}
         error={errorLicenciementInaptitude}
         showRequired
-      />
-      <AgreementsInjector
-        idcc={SupportedCcIndemniteLicenciement.IDCC1516} //TODO: remplacer par la bonne CC
-        step={IndemniteLicenciementStepName.Info}
       />
     </>
   );
