@@ -10,18 +10,19 @@ import {
   mapToPublicodesSituationForIndemniteLicenciementLegal,
 } from "../../../../publicodes";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
-import { generateExplanation } from "../../../common";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { SalairesStoreSlice } from "../../Salaires/store";
 import produce from "immer";
 
 import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
+import { computeLegalFormula } from "../../../common";
 
 const initialState: ResultStoreData = {
   input: {
-    publicodesLegalResult: null,
-    publicodesAgreementResult: null,
+    legalFormula: "",
+    legalSeniority: 0,
+    publicodesLegalResult: { value: "" },
   },
   error: {},
   hasBeenSubmit: true,
@@ -60,6 +61,10 @@ const createResultStore: StoreSlice<
         dateSortie: get().ancienneteData.input.dateSortie!,
         absencePeriods: get().ancienneteData.input.absencePeriods,
       });
+      const legalFormula = computeLegalFormula(
+        legalSeniority,
+        isLicenciementInaptitude
+      );
 
       const publicodesSituationLegal = publicodes.setSituation(
         mapToPublicodesSituationForIndemniteLicenciementLegal(
@@ -70,13 +75,13 @@ const createResultStore: StoreSlice<
       );
 
       let publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult;
-      let ancienneteConventionnel: number;
+      let agreementSeniority: number;
 
       if (agreement) {
         const factory = new SeniorityFactory().create(
           `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
         );
-        const agreementSeniority = factory.computeSeniority({
+        agreementSeniority = factory.computeSeniority({
           dateEntree: get().ancienneteData.input.dateEntree!,
           dateSortie: get().ancienneteData.input.dateSortie!,
           absencePeriods: get().ancienneteData.input.absencePeriods,
@@ -96,20 +101,15 @@ const createResultStore: StoreSlice<
         );
       }
 
-      // a enlever peut-être
-      const infoCalcul = generateExplanation({
-        anciennete: legalSeniority,
-        inaptitude: isLicenciementInaptitude,
-        salaireRef: refSalary,
-      });
-
       set(
         produce((state: ResultStoreSlice) => {
           state.resultData.input.publicodesLegalResult =
             publicodesSituationLegal.result;
           state.resultData.input.publicodesAgreementResult =
-            publicodesSituationConventionnel ?? null;
-          state.resultData.input.infoCalcul = infoCalcul;
+            publicodesSituationConventionnel;
+          state.resultData.input.agreementSeniority = agreementSeniority;
+          state.resultData.input.legalSeniority = legalSeniority;
+          state.resultData.input.legalFormula = legalFormula;
         })
       );
     },

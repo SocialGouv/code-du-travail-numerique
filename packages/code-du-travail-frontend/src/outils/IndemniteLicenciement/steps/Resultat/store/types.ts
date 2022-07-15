@@ -3,12 +3,13 @@ import {
   PublicodesIndemniteLicenciementResult,
 } from "@socialgouv/modeles-social";
 import { StepData } from "../../../store";
-import { InfoCalcul } from "../../../common/usecase/generateExplanation";
 
 export type ResultStoreInput = {
-  publicodesLegalResult: PublicodesIndemniteLicenciementResult | null;
-  publicodesAgreementResult: PublicodesIndemniteLicenciementResult | null;
-  infoCalcul?: InfoCalcul;
+  publicodesLegalResult: PublicodesIndemniteLicenciementResult;
+  publicodesAgreementResult?: PublicodesIndemniteLicenciementResult;
+  agreementSeniority?: number;
+  legalSeniority: number;
+  legalFormula: string;
 };
 
 export type ResultStoreError = {};
