@@ -17,7 +17,7 @@ export default function Result(props: Props) {
   );
   return (
     <>
-      <SectionTitle>Résultat</SectionTitle>
+      <SectionTitle>Indemnité</SectionTitle>
       <p>
         À partir des éléments que vous avez saisis, l’indemnité de licenciement
         est estimée à&nbsp;:&nbsp;

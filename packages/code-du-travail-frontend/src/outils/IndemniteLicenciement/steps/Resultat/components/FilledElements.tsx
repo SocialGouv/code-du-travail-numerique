@@ -1,7 +1,8 @@
 import { Absence, SalaryPeriods } from "@socialgouv/modeles-social";
 import { SectionTitle } from "../../../../common/stepStyles";
 import { AgreementInformation } from "../../../common";
-import { Table } from "@socialgouv/cdtn-ui";
+import { Table, theme } from "@socialgouv/cdtn-ui";
+import styled from "styled-components";
 
 type Props = {
   typeContrat: string;
@@ -52,7 +53,7 @@ export default function FilledElements(props: Props) {
               ))}
             {props.isLicenciementInaptitude && (
               <i>
-                Le licenciement ayant été licencié pour inaptitude suite à un
+                *Le licenciement ayant été licencié pour inaptitude suite à un
                 accident du travail ou une maladie professionnelle reconnue, le
                 montant de l&apos;indemnité de licenciement légal est doublé
               </i>
@@ -80,7 +81,7 @@ export default function FilledElements(props: Props) {
               {props.absencesPeriods.length > 0 ? "Oui" : "Non"}
             </li>
             {props.absencesPeriods.length > 0 && (
-              <Table>
+              <StyledTable>
                 <thead>
                   <tr>
                     <th>Motif de l&apos;absence</th>
@@ -91,38 +92,63 @@ export default function FilledElements(props: Props) {
                   {props.absencesPeriods.map((period, index) => (
                     <tr key={"absence-" + index}>
                       <td>{period.motif}</td>
-                      <td>{period.durationInMonth}</td>
+                      <td>{period.durationInMonth} mois</td>
                     </tr>
                   ))}
                 </tbody>
-              </Table>
+              </StyledTable>
             )}
           </ul>
         </li>
         <li>
           <strong>Salaire de référence (Sref)</strong>
           {props.salaryPeriods.length > 0 && (
-            <Table>
-              <thead>
-                <tr>
-                  <th>Mois</th>
-                  <th>Salaire (primes et avantages en nature inclus)</th>
-                  <th>dont primes (au cours des 3 derniers mois)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {props.salaryPeriods.map((salary, index) => (
-                  <tr key={"salary-" + index}>
-                    <td>{salary.month}</td>
-                    <td>{salary.value}</td>
-                    <td>{salary.prime}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
+            <ul>
+              <li>
+                <StyledTable>
+                  <thead>
+                    <tr>
+                      <th>Mois</th>
+                      <th>
+                        Salaire{" "}
+                        <StyledSpan>
+                          (primes et avantages en nature inclus)
+                        </StyledSpan>
+                      </th>
+                      <th>
+                        Dont primes{" "}
+                        <StyledSpan>(au cours des 3 derniers mois)</StyledSpan>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {props.salaryPeriods.map((salary, index) => (
+                      <tr key={"salary-" + index}>
+                        <td>{salary.month}</td>
+                        <td>{salary.value} €</td>
+                        <td>
+                          {salary.prime} {salary.prime && "€"}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </StyledTable>
+              </li>
+            </ul>
           )}
         </li>
       </ul>
     </>
   );
 }
+
+const { spacings } = theme;
+
+const StyledSpan = styled.span`
+  font-weight: normal;
+`;
+
+const StyledTable = styled(Table)`
+  text-align: center;
+  margin-top: ${spacings.small};
+`;

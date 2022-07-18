@@ -7,8 +7,9 @@ export default function ForMoreInfo() {
       consultez{" "}
       <Link
         href={`/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi`}
+        passHref
       >
-        <a>cet article</a>
+        <a target="_blank">cet article</a>
       </Link>
       .
     </p>
