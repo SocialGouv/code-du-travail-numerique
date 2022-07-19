@@ -29,6 +29,8 @@ const StepResult = () => {
     absencePeriods,
     salaryPeriods,
     legalFormula,
+    legalReferences,
+    agreementReferences,
   } = useIndemniteLicenciementStore((state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -46,6 +48,8 @@ const StepResult = () => {
     absencePeriods: state.ancienneteData.input.absencePeriods,
     salaryPeriods: state.salairesData.input.salaryPeriods,
     legalFormula: state.resultData.input.legalFormula,
+    legalReferences: state.resultData.input.legalReferences,
+    agreementReferences: state.resultData.input.agreementReferences,
   }));
 
   React.useEffect(() => {
@@ -87,19 +91,7 @@ const StepResult = () => {
           legalResult={publicodesLegalResult.value?.toString() ?? ""}
           agreementResult={publicodesAgreementResult?.value?.toString()}
         />
-
-        <PubliReferences
-          references={[
-            {
-              article: "Article L.1234-9",
-              url: "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000035644154&cidTexte=LEGITEXT000006072050&dateTexte=20170924",
-            },
-            {
-              article: "Article R1234-1 à R1234-4",
-              url: "https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000018537572&cidTexte=LEGITEXT000006072050&dateTexte=20170927",
-            },
-          ]}
-        />
+        <PubliReferences references={legalReferences} />
         <AgreementInfo
           hasSelectedAgreement={route === "agreement"}
           isAgreementSupported={

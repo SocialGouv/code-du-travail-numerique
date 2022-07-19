@@ -2,7 +2,10 @@ import Engine from "publicodes";
 
 import { getReferences } from "../../../..";
 import { mergeModels } from "../../../../internal/merger";
-import { IndemniteLicenciementReferences } from "../../legal-references";
+import {
+  IndemniteLicenciementInaptitudeReferences,
+  IndemniteLicenciementReferences,
+} from "../../legal-references";
 
 const engine = new Engine(mergeModels());
 
@@ -35,7 +38,7 @@ describe("Vérification des références juridiques pour Indemnité légale de l
     ${6}      | ${IndemniteLicenciementReferences}
     ${24}     | ${IndemniteLicenciementReferences}
   `(
-    "pour un employé avec une ancienneté de $seniority mois licencié pour inpatitude",
+    "pour un employé avec une ancienneté de $seniority mois licencié pour inaptitude",
     ({ seniority, expectedReferences }) => {
       const result = getReferences(
         engine.setSituation({
@@ -47,15 +50,10 @@ describe("Vérification des références juridiques pour Indemnité légale de l
         })
       );
 
-      expect(result).toHaveLength(3);
+      expect(result).toHaveLength(6);
       expect(result).toEqual(expect.arrayContaining(expectedReferences));
       expect(result).toEqual(
-        expect.arrayContaining([
-          {
-            article: "Article L1226-14",
-            url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006900981/",
-          },
-        ])
+        expect.arrayContaining(IndemniteLicenciementInaptitudeReferences)
       );
     }
   );

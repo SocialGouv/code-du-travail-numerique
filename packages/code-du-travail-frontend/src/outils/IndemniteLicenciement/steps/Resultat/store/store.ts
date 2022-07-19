@@ -1,6 +1,7 @@
 import {
   IndemniteLicenciementPublicodes,
   PublicodesIndemniteLicenciementResult,
+  References,
   SeniorityFactory,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
@@ -22,6 +23,7 @@ const initialState: ResultStoreData = {
   input: {
     legalFormula: "",
     legalSeniority: 0,
+    legalReferences: [],
     publicodesLegalResult: { value: "" },
   },
   error: {},
@@ -74,8 +76,11 @@ const createResultStore: StoreSlice<
         )
       );
 
+      const legalReferences = publicodes.getReferences();
+
       let publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult;
       let agreementSeniority: number;
+      let agreementReferences: References[];
 
       if (agreement) {
         const factory = new SeniorityFactory().create(
@@ -96,6 +101,10 @@ const createResultStore: StoreSlice<
           )
         );
 
+        agreementReferences = publicodes.getReferences(
+          "indemnité de licenciement . résultat conventionnel"
+        );
+
         publicodesSituationConventionnel = publicodes.execute(
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -103,13 +112,15 @@ const createResultStore: StoreSlice<
 
       set(
         produce((state: ResultStoreSlice) => {
+          state.resultData.input.legalSeniority = legalSeniority;
+          state.resultData.input.legalFormula = legalFormula;
+          state.resultData.input.legalReferences = legalReferences;
           state.resultData.input.publicodesLegalResult =
             publicodesSituationLegal.result;
           state.resultData.input.publicodesAgreementResult =
             publicodesSituationConventionnel;
           state.resultData.input.agreementSeniority = agreementSeniority;
-          state.resultData.input.legalSeniority = legalSeniority;
-          state.resultData.input.legalFormula = legalFormula;
+          state.resultData.input.agreementReferences = agreementReferences;
         })
       );
     },

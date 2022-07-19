@@ -1,6 +1,7 @@
 import {
   IndemniteLicenciementPublicodes,
   PublicodesIndemniteLicenciementResult,
+  References,
 } from "@socialgouv/modeles-social";
 import { StepData } from "../../../store";
 
@@ -10,6 +11,8 @@ export type ResultStoreInput = {
   agreementSeniority?: number;
   legalSeniority: number;
   legalFormula: string;
+  legalReferences: References[];
+  agreementReferences?: References[];
 };
 
 export type ResultStoreError = {};
