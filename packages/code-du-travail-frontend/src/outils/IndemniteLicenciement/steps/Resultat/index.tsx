@@ -9,7 +9,7 @@ import {
   DecryptResult,
   FilledElements,
   ForMoreInfo,
-  Formula,
+  FormulaInterpreter,
   Result,
 } from "./components";
 
@@ -78,7 +78,7 @@ const StepResult = () => {
           dateNotification={dateNotification!}
           salaryPeriods={salaryPeriods}
         />
-        <Formula formula={legalFormula} />
+        <FormulaInterpreter formula={legalFormula} />
         <DecryptResult
           hasSelectedAgreement={route === "agreement"}
           isAgreementSupported={

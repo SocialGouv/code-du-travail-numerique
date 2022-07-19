@@ -1,4 +1,6 @@
 import {
+  Formula,
+  FormuleFactory,
   IndemniteLicenciementPublicodes,
   PublicodesIndemniteLicenciementResult,
   References,
@@ -17,11 +19,10 @@ import produce from "immer";
 
 import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
-import { computeLegalFormula } from "../../../common";
 
 const initialState: ResultStoreData = {
   input: {
-    legalFormula: "",
+    legalFormula: { formula: "", explanations: [] },
     legalSeniority: 0,
     legalReferences: [],
     publicodesLegalResult: { value: "" },
@@ -63,10 +64,14 @@ const createResultStore: StoreSlice<
         dateSortie: get().ancienneteData.input.dateSortie!,
         absencePeriods: get().ancienneteData.input.absencePeriods,
       });
-      const legalFormula = computeLegalFormula(
-        legalSeniority,
-        isLicenciementInaptitude
+
+      const formulaFactory = new FormuleFactory().create(
+        SupportedCcIndemniteLicenciement.default
       );
+      const legalFormula = formulaFactory.computeFormula({
+        seniority: legalSeniority,
+        isForInaptitude: isLicenciementInaptitude,
+      });
 
       const publicodesSituationLegal = publicodes.setSituation(
         mapToPublicodesSituationForIndemniteLicenciementLegal(
@@ -81,6 +86,7 @@ const createResultStore: StoreSlice<
       let publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult;
       let agreementSeniority: number;
       let agreementReferences: References[];
+      let agreementFormula: Formula;
 
       if (agreement) {
         const factory = new SeniorityFactory().create(
@@ -108,6 +114,14 @@ const createResultStore: StoreSlice<
         publicodesSituationConventionnel = publicodes.execute(
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
+
+        const agreementFactoryFormula = new FormuleFactory().create(
+          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
+        );
+
+        agreementFormula = agreementFactoryFormula.computeFormula({
+          seniority: legalSeniority,
+        });
       }
 
       set(
@@ -121,6 +135,7 @@ const createResultStore: StoreSlice<
             publicodesSituationConventionnel;
           state.resultData.input.agreementSeniority = agreementSeniority;
           state.resultData.input.agreementReferences = agreementReferences;
+          state.resultData.input.agreementFormula = agreementFormula;
         })
       );
     },

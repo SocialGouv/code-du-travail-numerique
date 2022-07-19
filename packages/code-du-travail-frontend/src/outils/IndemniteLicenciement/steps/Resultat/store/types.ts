@@ -1,4 +1,5 @@
 import {
+  Formula,
   IndemniteLicenciementPublicodes,
   PublicodesIndemniteLicenciementResult,
   References,
@@ -10,7 +11,8 @@ export type ResultStoreInput = {
   publicodesAgreementResult?: PublicodesIndemniteLicenciementResult;
   agreementSeniority?: number;
   legalSeniority: number;
-  legalFormula: string;
+  legalFormula: Formula;
+  agreementFormula?: Formula;
   legalReferences: References[];
   agreementReferences?: References[];
 };

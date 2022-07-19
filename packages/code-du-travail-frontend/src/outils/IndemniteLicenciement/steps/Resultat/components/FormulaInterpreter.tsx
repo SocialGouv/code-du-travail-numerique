@@ -1,15 +1,16 @@
+import { Formula } from "@socialgouv/modeles-social";
 import { MathFormula } from "../../../../common/MathFormula";
 import { SectionTitle } from "../../../../common/stepStyles";
 
 type Props = {
-  formula: string;
+  formula: Formula;
 };
 
-export default function Formula(props: Props) {
+export default function FormulaInterpreter(props: Props) {
   return (
     <>
       <SectionTitle>Formule</SectionTitle>
-      <MathFormula formula={props.formula} />
+      <MathFormula formula={props.formula.formula} />
     </>
   );
 }
