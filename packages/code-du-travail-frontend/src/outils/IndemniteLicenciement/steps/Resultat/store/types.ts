@@ -15,6 +15,7 @@ export type ResultStoreInput = {
   agreementFormula?: Formula;
   legalReferences: References[];
   agreementReferences?: References[];
+  isAgreementBetter: boolean;
 };
 
 export type ResultStoreError = {};

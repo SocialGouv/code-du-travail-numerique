@@ -3,6 +3,7 @@ import type { LegalFormulaProps } from "./legal";
 
 export type DefaultFormulaProps = {
   seniority: number;
+  refSalary: number;
 };
 
 export type Formula = {

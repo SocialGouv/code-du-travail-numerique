@@ -26,6 +26,7 @@ const initialState: ResultStoreData = {
     legalSeniority: 0,
     legalReferences: [],
     publicodesLegalResult: { value: "" },
+    isAgreementBetter: false,
   },
   error: {},
   hasBeenSubmit: true,
@@ -71,6 +72,7 @@ const createResultStore: StoreSlice<
       const legalFormula = formulaFactory.computeFormula({
         seniority: legalSeniority,
         isForInaptitude: isLicenciementInaptitude,
+        refSalary,
       });
 
       const publicodesSituationLegal = publicodes.setSituation(
@@ -87,6 +89,7 @@ const createResultStore: StoreSlice<
       let agreementSeniority: number;
       let agreementReferences: References[];
       let agreementFormula: Formula;
+      let isAgreementBetter = false;
 
       if (agreement) {
         const factory = new SeniorityFactory().create(
@@ -120,8 +123,18 @@ const createResultStore: StoreSlice<
         );
 
         agreementFormula = agreementFactoryFormula.computeFormula({
-          seniority: legalSeniority,
+          seniority: agreementSeniority,
+          refSalary: agreementRefSalary ?? 0,
         });
+
+        if (
+          publicodesSituationConventionnel.value &&
+          publicodesSituationLegal.result.value &&
+          publicodesSituationConventionnel.value >
+            publicodesSituationLegal.result.value
+        ) {
+          isAgreementBetter = true;
+        }
       }
 
       set(
@@ -136,6 +149,7 @@ const createResultStore: StoreSlice<
           state.resultData.input.agreementSeniority = agreementSeniority;
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.agreementFormula = agreementFormula;
+          state.resultData.input.isAgreementBetter = isAgreementBetter;
         })
       );
     },

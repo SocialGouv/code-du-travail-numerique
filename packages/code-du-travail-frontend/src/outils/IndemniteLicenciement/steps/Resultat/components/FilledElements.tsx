@@ -15,6 +15,8 @@ type Props = {
   dateNotification: string;
   absencesPeriods: Absence[];
   salaryPeriods: SalaryPeriods[];
+  hasTempsPartiel: boolean;
+  isAgreementBetter: boolean;
 };
 
 export default function FilledElements(props: Props) {
@@ -43,7 +45,10 @@ export default function FilledElements(props: Props) {
           <ul>
             <li>
               Licenciement dû à une inaptitude&nbsp;:&nbsp;
-              {props.isLicenciementInaptitude ? "Oui*" : "Non"}
+              {props.isLicenciementInaptitude ? "Oui" : "Non"}
+              {props.isLicenciementInaptitude &&
+                !props.isAgreementBetter &&
+                "*"}
             </li>
             {props.agreementInformations &&
               props.agreementInformations.map((info, index) => (
@@ -51,7 +56,7 @@ export default function FilledElements(props: Props) {
                   {info.label}&nbsp;:&npsp;{info.value}
                 </li>
               ))}
-            {props.isLicenciementInaptitude && (
+            {props.isLicenciementInaptitude && !props.isAgreementBetter && (
               <i>
                 *Le licenciement ayant été licencié pour inaptitude suite à un
                 accident du travail ou une maladie professionnelle reconnue, le
@@ -102,9 +107,15 @@ export default function FilledElements(props: Props) {
         </li>
         <li>
           <strong>Salaire de référence (Sref)</strong>
-          {props.salaryPeriods.length > 0 && (
-            <ul>
+          <ul>
+            <li>
+              Alternance temps plein / temps partiel&nbsp;:&nbsp;
+              {props.hasTempsPartiel ? "Oui" : "Non"}
+            </li>
+            {props.salaryPeriods.length > 0 && (
               <li>
+                Salaire des 12 derniers mois précédant la date de notification
+                de licenciement&nbsp;:&nbsp;
                 <StyledTable>
                   <thead>
                     <tr>
@@ -134,8 +145,8 @@ export default function FilledElements(props: Props) {
                   </tbody>
                 </StyledTable>
               </li>
-            </ul>
-          )}
+            )}
+          </ul>
         </li>
       </ul>
     </>

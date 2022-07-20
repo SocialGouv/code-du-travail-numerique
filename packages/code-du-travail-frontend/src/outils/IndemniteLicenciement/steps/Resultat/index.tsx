@@ -31,6 +31,9 @@ const StepResult = () => {
     legalFormula,
     legalReferences,
     agreementReferences,
+    hasTempsPartiel,
+    isAgreementBetter,
+    agreementFormula,
   } = useIndemniteLicenciementStore((state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -50,6 +53,9 @@ const StepResult = () => {
     legalFormula: state.resultData.input.legalFormula,
     legalReferences: state.resultData.input.legalReferences,
     agreementReferences: state.resultData.input.agreementReferences,
+    hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
+    isAgreementBetter: state.resultData.input.isAgreementBetter,
+    agreementFormula: state.resultData.input.agreementFormula,
   }));
 
   React.useEffect(() => {
@@ -59,8 +65,11 @@ const StepResult = () => {
   return (
     <>
       <Result
-        legalResult={publicodesLegalResult.value?.toString() ?? ""}
-        agreementResult={publicodesAgreementResult?.value?.toString()}
+        maxResult={
+          isAgreementBetter
+            ? publicodesAgreementResult?.value?.toString() ?? ""
+            : publicodesLegalResult.value?.toString() ?? ""
+        }
       />
       <ShowDetails>
         <FilledElements
@@ -77,8 +86,16 @@ const StepResult = () => {
           dateSortie={dateSortie!}
           dateNotification={dateNotification!}
           salaryPeriods={salaryPeriods}
+          hasTempsPartiel={hasTempsPartiel === "oui" ? true : false}
+          isAgreementBetter={isAgreementBetter}
         />
-        <FormulaInterpreter formula={legalFormula} />
+        <FormulaInterpreter
+          formula={
+            isAgreementBetter && agreementFormula
+              ? agreementFormula
+              : legalFormula
+          }
+        />
         <DecryptResult
           hasSelectedAgreement={route === "agreement"}
           isAgreementSupported={
@@ -91,7 +108,11 @@ const StepResult = () => {
           legalResult={publicodesLegalResult.value?.toString() ?? ""}
           agreementResult={publicodesAgreementResult?.value?.toString()}
         />
-        <PubliReferences references={legalReferences} />
+        <PubliReferences
+          references={
+            isAgreementBetter ? agreementReferences ?? [] : legalReferences
+          }
+        />
         <AgreementInfo
           hasSelectedAgreement={route === "agreement"}
           isAgreementSupported={
