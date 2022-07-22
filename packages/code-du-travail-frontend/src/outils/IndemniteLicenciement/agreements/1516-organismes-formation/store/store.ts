@@ -54,11 +54,9 @@ export const createAgreement1516StoreSalaires: StoreSlice<
           }
         )
       );
-      const salaryPeriods = deepMergeArray(
-        period,
-        agreementSalaryPeriod,
-        "month"
-      );
+      const salaryPeriods = withDefaultSalaryPeriod
+        ? deepMergeArray(period, agreementSalaryPeriod, "month", true)
+        : period;
       set(
         produce((state: Agreement1516StoreSlice) => {
           state.agreement1516Data.input.salaryPeriods = salaryPeriods;

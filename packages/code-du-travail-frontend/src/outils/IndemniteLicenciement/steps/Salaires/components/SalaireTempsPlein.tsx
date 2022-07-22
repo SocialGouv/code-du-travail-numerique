@@ -107,7 +107,7 @@ export const SalaireTempsPlein = ({
                   } (prendre en compte les primes et avantages en nature)`}
                   type="number"
                   invalid={errorsSalaries[`${index}`]}
-                  value={sPeriod.value}
+                  value={sPeriod.value ?? ""}
                   icon={icons.Euro}
                   updateOnScrollDisabled
                   onChange={(e) => onChangeSalaries(index, e.target.value)}
@@ -134,7 +134,7 @@ export const SalaireTempsPlein = ({
                       onChange={(e) =>
                         onChangeLocalPrimes(index, e.target.value)
                       }
-                      value={sPeriod.prime}
+                      value={sPeriod.prime ?? ""}
                       updateOnScrollDisabled
                     />
                     {errorsPrimes[`${index}`] && (
