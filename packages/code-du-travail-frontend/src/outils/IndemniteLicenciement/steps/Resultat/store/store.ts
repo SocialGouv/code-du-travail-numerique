@@ -124,7 +124,7 @@ const createResultStore: StoreSlice<
 
         agreementFormula = agreementFactoryFormula.computeFormula({
           seniority: agreementSeniority,
-          refSalary: agreementRefSalary ?? 0,
+          refSalary: agreementRefSalary ?? refSalary,
         });
 
         if (

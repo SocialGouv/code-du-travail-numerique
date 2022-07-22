@@ -113,18 +113,18 @@ const StepResult = () => {
             isAgreementBetter ? agreementReferences ?? [] : legalReferences
           }
         />
-        <AgreementInfo
-          hasSelectedAgreement={route === "agreement"}
-          isAgreementSupported={
-            getSupportedCcIndemniteLicenciement().find(
-              (v) => v.value === `IDCC${agreement?.num}`
-            )
-              ? true
-              : false
-          }
-        />
-        <ForMoreInfo />
       </ShowDetails>
+      <AgreementInfo
+        hasSelectedAgreement={route === "agreement"}
+        isAgreementSupported={
+          getSupportedCcIndemniteLicenciement().find(
+            (v) => v.value === `IDCC${agreement?.num}`
+          )
+            ? true
+            : false
+        }
+      />
+      <ForMoreInfo />
     </>
   );
 };

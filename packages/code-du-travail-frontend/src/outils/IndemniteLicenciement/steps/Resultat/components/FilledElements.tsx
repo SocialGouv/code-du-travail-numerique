@@ -25,7 +25,7 @@ export default function FilledElements(props: Props) {
       <SectionTitle>Éléments saisis</SectionTitle>
       <ul>
         <li>
-          <strong>Conditions d&apos;applications</strong>
+          <strong>Contrat de travail</strong>
           <ul>
             <li>
               Type de contrat&nbsp;:&nbsp;{props.typeContrat.toUpperCase()}
@@ -34,37 +34,41 @@ export default function FilledElements(props: Props) {
               Licenciement dû à une faute grave&nbsp;:&nbsp;
               {props.isLicenciementFauteGrave ? "Oui" : "Non"}
             </li>
-          </ul>
-        </li>
-        <li>
-          <strong>Convention collective</strong>&nbsp;:&nbsp;
-          {!props.agreementName ? "Non sélectionnée" : props.agreementName}
-        </li>
-        <li>
-          <strong>Informations</strong>
-          <ul>
             <li>
               Licenciement dû à une inaptitude&nbsp;:&nbsp;
               {props.isLicenciementInaptitude ? "Oui" : "Non"}
               {props.isLicenciementInaptitude &&
                 !props.isAgreementBetter &&
                 "*"}
+              {props.isLicenciementInaptitude && !props.isAgreementBetter && (
+                <i>
+                  *Le salarié ayant été licencié pour inaptitude suite à un
+                  accident du travail ou une maladie professionnelle reconnue,
+                  le montant de l&apos;indemnité de licenciement légale est
+                  doublée
+                </i>
+              )}
             </li>
-            {props.agreementInformations &&
-              props.agreementInformations.map((info, index) => (
+          </ul>
+        </li>
+        <li>
+          <strong>Convention collective</strong>&nbsp;:&nbsp;
+          {!props.agreementName
+            ? "La convention collective n’a pas été renseignée"
+            : props.agreementName}
+        </li>
+        {props.agreementInformations && props.agreementInformations.length > 0 && (
+          <li>
+            <strong>Informations</strong>
+            <ul>
+              {props.agreementInformations.map((info, index) => (
                 <li key={"agreement-" + index}>
                   {info.label}&nbsp;:&npsp;{info.value}
                 </li>
               ))}
-            {props.isLicenciementInaptitude && !props.isAgreementBetter && (
-              <i>
-                *Le licenciement ayant été licencié pour inaptitude suite à un
-                accident du travail ou une maladie professionnelle reconnue, le
-                montant de l&apos;indemnité de licenciement légal est doublé
-              </i>
-            )}
-          </ul>
-        </li>
+            </ul>
+          </li>
+        )}
         <li>
           <strong>Ancienneté (A)</strong>
           <ul>
@@ -81,8 +85,8 @@ export default function FilledElements(props: Props) {
               {props.dateSortie}
             </li>
             <li>
-              Absence de plus d&apos;un mois dans le contrat de
-              travail&nbsp;:&nbsp;{" "}
+              Absence de plus d&apos;un mois durant le contrat de
+              travail&nbsp;:&nbsp;
               {props.absencesPeriods.length > 0 ? "Oui" : "Non"}
             </li>
             {props.absencesPeriods.length > 0 && (
@@ -121,13 +125,15 @@ export default function FilledElements(props: Props) {
                     <tr>
                       <th>Mois</th>
                       <th>
-                        Salaire{" "}
+                        Salaire
+                        <br />
                         <StyledSpan>
                           (primes et avantages en nature inclus)
                         </StyledSpan>
                       </th>
                       <th>
-                        Dont primes{" "}
+                        Dont primes
+                        <br />
                         <StyledSpan>(au cours des 3 derniers mois)</StyledSpan>
                       </th>
                     </tr>
@@ -138,7 +144,7 @@ export default function FilledElements(props: Props) {
                         <td>{salary.month}</td>
                         <td>{salary.value} €</td>
                         <td>
-                          {salary.prime} {salary.prime && "€"}
+                          {salary.prime} {salary.prime !== undefined && "€"}
                         </td>
                       </tr>
                     ))}
@@ -153,13 +159,17 @@ export default function FilledElements(props: Props) {
   );
 }
 
-const { spacings } = theme;
+const { spacings, fonts } = theme;
 
 const StyledSpan = styled.span`
   font-weight: normal;
+  font-size: ${fonts.sizes.small};
 `;
 
 const StyledTable = styled(Table)`
   text-align: center;
   margin-top: ${spacings.small};
+  th {
+    vertical-align: top;
+  }
 `;

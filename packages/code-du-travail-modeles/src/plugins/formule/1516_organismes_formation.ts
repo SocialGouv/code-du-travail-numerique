@@ -11,23 +11,22 @@ export class Formula1516
   }: FormulaProps<SupportedCcIndemniteLicenciement.IDCC1516>): Formula {
     let formula = "";
     const explanations = [];
-    const roundedSeniority = round(seniority);
-    const an = roundedSeniority < 2 ? "an" : "ans";
+    const an = round(seniority) < 2 ? "an" : "ans";
     if (seniority > 2) {
       if (seniority <= 15) {
         formula = `1 / 5 * Sref * A`;
-        explanations.push(`A : Ancienneté totale (${roundedSeniority} ${an})`);
+        explanations.push(`A : Ancienneté totale (${round(seniority)} ${an})`);
       } else {
         formula = `(1 / 5 * Sref * A1) + (1 / 10 * Sref * A2)`;
-        const anWithout = roundedSeniority - 15 < 2 ? "an" : "ans";
-        explanations.push(`A1 : Ancienneté totale (${roundedSeniority} ans)`);
+        const anWithout = round(seniority - 15) < 2 ? "an" : "ans";
+        explanations.push(`A1 : Ancienneté totale (${round(seniority)} ans)`);
         explanations.push(
-          `A2: Années de présence au delà de 15 ans (${
-            roundedSeniority - 15
-          } ${anWithout})`
+          `A2: Années de présence au delà de 15 ans (${round(
+            seniority - 15
+          )} ${anWithout})`
         );
       }
-      explanations.push(`Sref : Salaire de référence (${refSalary} €)`);
+      explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
     }
     return { explanations, formula };
   }
