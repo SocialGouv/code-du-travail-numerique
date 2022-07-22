@@ -10,6 +10,7 @@ type Props = {
   agreementName?: string;
   isLicenciementInaptitude: boolean;
   agreementInformations?: AgreementInformation[];
+  agreementRefSalaryInfo: React.ReactNode;
   dateEntree: string;
   dateSortie: string;
   dateNotification: string;
@@ -41,12 +42,15 @@ export default function FilledElements(props: Props) {
                 !props.isAgreementBetter &&
                 "*"}
               {props.isLicenciementInaptitude && !props.isAgreementBetter && (
-                <i>
-                  *Le salarié ayant été licencié pour inaptitude suite à un
-                  accident du travail ou une maladie professionnelle reconnue,
-                  le montant de l&apos;indemnité de licenciement légale est
-                  doublée
-                </i>
+                <>
+                  <br />
+                  <i>
+                    * Le salarié ayant été licencié pour inaptitude suite à un
+                    accident du travail ou une maladie professionnelle reconnue,
+                    le montant de l&apos;indemnité de licenciement légale est
+                    doublée
+                  </i>
+                </>
               )}
             </li>
           </ul>
@@ -90,7 +94,7 @@ export default function FilledElements(props: Props) {
               {props.absencesPeriods.length > 0 ? "Oui" : "Non"}
             </li>
             {props.absencesPeriods.length > 0 && (
-              <StyledTable>
+              <StyledFilledElementTable>
                 <thead>
                   <tr>
                     <th>Motif de l&apos;absence</th>
@@ -105,7 +109,7 @@ export default function FilledElements(props: Props) {
                     </tr>
                   ))}
                 </tbody>
-              </StyledTable>
+              </StyledFilledElementTable>
             )}
           </ul>
         </li>
@@ -120,21 +124,23 @@ export default function FilledElements(props: Props) {
               <li>
                 Salaire des 12 derniers mois précédant la date de notification
                 de licenciement&nbsp;:&nbsp;
-                <StyledTable>
+                <StyledFilledElementTable>
                   <thead>
                     <tr>
                       <th>Mois</th>
                       <th>
                         Salaire
                         <br />
-                        <StyledSpan>
+                        <StyledFilledElementSpan>
                           (primes et avantages en nature inclus)
-                        </StyledSpan>
+                        </StyledFilledElementSpan>
                       </th>
                       <th>
                         Dont primes
                         <br />
-                        <StyledSpan>(au cours des 3 derniers mois)</StyledSpan>
+                        <StyledFilledElementSpan>
+                          (au cours des 3 derniers mois)
+                        </StyledFilledElementSpan>
                       </th>
                     </tr>
                   </thead>
@@ -149,9 +155,10 @@ export default function FilledElements(props: Props) {
                       </tr>
                     ))}
                   </tbody>
-                </StyledTable>
+                </StyledFilledElementTable>
               </li>
             )}
+            {props.agreementRefSalaryInfo}
           </ul>
         </li>
       </ul>
@@ -161,14 +168,15 @@ export default function FilledElements(props: Props) {
 
 const { spacings, fonts } = theme;
 
-const StyledSpan = styled.span`
+export const StyledFilledElementSpan = styled.span`
   font-weight: normal;
   font-size: ${fonts.sizes.small};
 `;
 
-const StyledTable = styled(Table)`
+export const StyledFilledElementTable = styled(Table)`
   text-align: center;
   margin-top: ${spacings.small};
+  margin-bottom: ${spacings.small};
   th {
     vertical-align: top;
   }

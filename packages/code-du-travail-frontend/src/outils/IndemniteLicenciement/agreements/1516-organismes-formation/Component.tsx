@@ -30,38 +30,42 @@ export default function Agreement1516() {
 
   return (
     <>
-      <RadioQuestion
-        questions={[
-          {
-            label: "Oui",
-            value: "oui",
-            id: "hasReceivedSalaries-oui",
-          },
-          {
-            label: "Non",
-            value: "non",
-            id: "hasReceivedSalaries-non",
-          },
-        ]}
-        name="hasReceivedSalaries"
-        label="Connaissez-vous le montant des salaires perçus pendant le préavis ?"
-        selectedOption={hasReceivedSalaries}
-        onChangeSelectedOption={onChangeHasReceivedSalaries}
-        error={errorHasReceivedSalaries}
-        showRequired
-      />
-      {hasReceivedSalaries && (
-        <SalaireTempsPlein
-          title="Salaires perçus pendant le préavis"
-          onSalariesChange={onSalariesChange}
-          salaryPeriods={salaryPeriods}
-          error={errorSalaryPeriods}
-          note={
-            hasReceivedSalaries === "non"
-              ? "Le calcul de l’indemnité nécessecite le salaire le plus élevé perçu au cours des 3 derniers mois de travail (incluant le préavis). Pour réaliser cette simulation nous prendrons en considération le salaire le plus élevé perçu au cours des 12 derniers mois précédant la notification du licenciement. En conséquence, le résultat obtenu pourrait ne pas correspondre exactement à votre situation."
-              : undefined
-          }
-        />
+      {salaryPeriods.length > 0 && (
+        <>
+          <RadioQuestion
+            questions={[
+              {
+                label: "Oui",
+                value: "oui",
+                id: "hasReceivedSalaries-oui",
+              },
+              {
+                label: "Non",
+                value: "non",
+                id: "hasReceivedSalaries-non",
+              },
+            ]}
+            name="hasReceivedSalaries"
+            label="Connaissez-vous le montant des salaires perçus pendant le préavis ?"
+            selectedOption={hasReceivedSalaries}
+            onChangeSelectedOption={onChangeHasReceivedSalaries}
+            error={errorHasReceivedSalaries}
+            showRequired
+          />
+          {hasReceivedSalaries && (
+            <SalaireTempsPlein
+              title="Salaires perçus pendant le préavis"
+              onSalariesChange={onSalariesChange}
+              salaryPeriods={salaryPeriods}
+              error={errorSalaryPeriods}
+              note={
+                hasReceivedSalaries === "non"
+                  ? "Le calcul de l’indemnité nécessecite le salaire le plus élevé perçu au cours des 3 derniers mois de travail (incluant le préavis). Pour réaliser cette simulation nous prendrons en considération le salaire le plus élevé perçu au cours des 12 derniers mois précédant la notification du licenciement. En conséquence, le résultat obtenu pourrait ne pas correspondre exactement à votre situation."
+                  : undefined
+              }
+            />
+          )}
+        </>
       )}
     </>
   );

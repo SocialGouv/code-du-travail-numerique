@@ -1,7 +1,12 @@
-import { getSupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
+import {
+  getSupportedCcIndemniteLicenciement,
+  SupportedCcIndemniteLicenciement,
+} from "@socialgouv/modeles-social";
 import React from "react";
+import { IndemniteLicenciementStepName } from "../..";
 import PubliReferences from "../../../common/PubliReferences";
 import ShowDetails from "../../../common/ShowDetails";
+import { AgreementsInjector } from "../../agreements";
 
 import { useIndemniteLicenciementStore } from "../../store";
 import {
@@ -88,6 +93,16 @@ const StepResult = () => {
           salaryPeriods={salaryPeriods}
           hasTempsPartiel={hasTempsPartiel === "oui" ? true : false}
           isAgreementBetter={isAgreementBetter}
+          agreementRefSalaryInfo={
+            agreement && (
+              <AgreementsInjector
+                idcc={
+                  `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
+                }
+                step={IndemniteLicenciementStepName.Resultat}
+              />
+            )
+          }
         />
         <FormulaInterpreter
           formula={

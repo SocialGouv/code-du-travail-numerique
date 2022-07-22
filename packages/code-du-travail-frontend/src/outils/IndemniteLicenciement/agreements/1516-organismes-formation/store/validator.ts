@@ -34,13 +34,13 @@ export const validateAgreement1516 = (
 
 export const validateStep = (state: Agreement1516StoreInput) => {
   const errorState: Agreement1516StoreError = {
-    errorHasReceivedSalaries: !state.hasReceivedSalaries
-      ? "Vous devez répondre à cette question"
-      : undefined,
+    errorHasReceivedSalaries:
+      state.salaryPeriods.length > 0 && !state.hasReceivedSalaries
+        ? "Vous devez répondre à cette question"
+        : undefined,
     errorSalaryPeriods:
-      state.hasReceivedSalaries === "oui" &&
-      (state.salaryPeriods.length === 0 ||
-        detectNullOrUndefinedOrNaNInArray(state.salaryPeriods))
+      state.salaryPeriods.length > 0 &&
+      detectNullOrUndefinedOrNaNInArray(state.salaryPeriods)
         ? "Vous devez compléter l'ensemble des champs"
         : undefined,
   };
