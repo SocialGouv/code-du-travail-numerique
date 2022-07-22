@@ -33,17 +33,20 @@ export const validateAgreement1516 = (
 };
 
 export const validateStep = (state: Agreement1516StoreInput) => {
-  const errorState: Agreement1516StoreError = {
-    errorHasReceivedSalaries:
-      state.salaryPeriods.length > 0 && !state.hasReceivedSalaries
+  let errorState: Agreement1516StoreError = {};
+  if (state.salaryPeriods.length > 0) {
+    console.log(state.salaryPeriods);
+    errorState = {
+      errorHasReceivedSalaries: !state.hasReceivedSalaries
         ? "Vous devez répondre à cette question"
         : undefined,
-    errorSalaryPeriods:
-      state.salaryPeriods.length > 0 &&
-      detectNullOrUndefinedOrNaNInArray(state.salaryPeriods)
-        ? "Vous devez compléter l'ensemble des champs"
-        : undefined,
-  };
+      errorSalaryPeriods:
+        state.salaryPeriods.length === 0 ||
+        detectNullOrUndefinedOrNaNInArray(state.salaryPeriods)
+          ? "Vous devez compléter l'ensemble des champs"
+          : undefined,
+    };
+  }
 
   return {
     isValid: deepEqualObject(errorState, {

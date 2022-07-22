@@ -42,18 +42,22 @@ export const createAgreement1516StoreSalaires: StoreSlice<
         dateNotification: ancienneteInput.dateSortie ?? "",
         absencePeriods: [],
       });
-      const period: SalaryPeriods[] = periods.map((v) => ({
-        month: v,
-        value: withDefaultSalaryPeriod
-          ? defaultSalaryPeriod[0].value
-          : undefined,
-        prime: withDefaultSalaryPeriod ? 0 : undefined,
-      }));
+      const period: SalaryPeriods[] = periods.map((v) =>
+        Object.assign(
+          { month: v },
+          withDefaultSalaryPeriod &&
+            defaultSalaryPeriod[0].value && {
+              value: defaultSalaryPeriod[0].value,
+            },
+          withDefaultSalaryPeriod && {
+            prime: 0,
+          }
+        )
+      );
       const salaryPeriods = deepMergeArray(
         period,
         agreementSalaryPeriod,
-        "month",
-        true
+        "month"
       );
       set(
         produce((state: Agreement1516StoreSlice) => {

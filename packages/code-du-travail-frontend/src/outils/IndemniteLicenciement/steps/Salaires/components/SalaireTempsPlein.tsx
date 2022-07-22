@@ -24,14 +24,8 @@ export const SalaireTempsPlein = ({
   note,
 }: Props): JSX.Element => {
   const [isFirstEdit, setIsFirstEdit] = React.useState(true);
-  const [salariesPeriod, setLocalSalaries] =
-    React.useState<SalaryPeriods[]>(salaryPeriods);
   const [errorsSalaries, setErrorsSalaries] = React.useState({});
   const [errorsPrimes, setErrorsPrimes] = React.useState({});
-
-  React.useEffect(() => {
-    setLocalSalaries(salaryPeriods);
-  }, [salaryPeriods]);
 
   const onChangeSalaries = (index: number, value: string) => {
     const salary = parseFloat(value);
@@ -49,15 +43,14 @@ export const SalaireTempsPlein = ({
     }
     let newLocalSalaries: SalaryPeriods[] = [];
     if (isFirstEdit) {
-      newLocalSalaries = salariesPeriod.map((p, i) =>
+      newLocalSalaries = salaryPeriods.map((p, i) =>
         i >= index ? { ...p, value: salary } : p
       );
     } else {
-      newLocalSalaries = salariesPeriod.map((p, i) =>
+      newLocalSalaries = salaryPeriods.map((p, i) =>
         i === index ? { ...p, value: salary } : p
       );
     }
-    setLocalSalaries(newLocalSalaries);
     onSalariesChange(newLocalSalaries);
   };
 
@@ -75,12 +68,15 @@ export const SalaireTempsPlein = ({
         [`${index}`]: undefined,
       });
     }
-    const newLocalSalaries = salariesPeriod.map((p, i) =>
+    const newLocalSalaries = salaryPeriods.map((p, i) =>
       i === index ? { ...p, prime } : p
     );
-    setLocalSalaries(newLocalSalaries);
     onSalariesChange(newLocalSalaries);
   };
+
+  React.useEffect(() => {
+    console.log("dans le composant", salaryPeriods);
+  }, [salaryPeriods]);
 
   return (
     <StyledDiv>
@@ -101,10 +97,10 @@ export const SalaireTempsPlein = ({
           </tr>
         </thead>
         <tbody>
-          {salariesPeriod.map((salaryPeriod, index) => (
-            <tr key={salaryPeriod.month + index}>
+          {salaryPeriods.map((sPeriod, index) => (
+            <tr key={sPeriod.month + index}>
               <td>
-                <label htmlFor={`salaries${index}`}>{salaryPeriod.month}</label>
+                <label htmlFor={`salary.${index}`}>{sPeriod.month}</label>
               </td>
               <td>
                 <Input
@@ -115,7 +111,7 @@ export const SalaireTempsPlein = ({
                   } (prendre en compte les primes et avantages en nature)`}
                   type="number"
                   invalid={errorsSalaries[`${index}`]}
-                  value={salaryPeriod.value}
+                  value={sPeriod.value}
                   icon={icons.Euro}
                   updateOnScrollDisabled
                   onChange={(e) => onChangeSalaries(index, e.target.value)}
@@ -142,7 +138,7 @@ export const SalaireTempsPlein = ({
                       onChange={(e) =>
                         onChangeLocalPrimes(index, e.target.value)
                       }
-                      value={salaryPeriod.prime}
+                      value={sPeriod.prime}
                       updateOnScrollDisabled
                     />
                     {errorsPrimes[`${index}`] && (
