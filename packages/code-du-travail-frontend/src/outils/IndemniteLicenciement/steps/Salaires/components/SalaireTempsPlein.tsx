@@ -74,10 +74,6 @@ export const SalaireTempsPlein = ({
     onSalariesChange(newLocalSalaries);
   };
 
-  React.useEffect(() => {
-    console.log("dans le composant", salaryPeriods);
-  }, [salaryPeriods]);
-
   return (
     <StyledDiv>
       <Table>

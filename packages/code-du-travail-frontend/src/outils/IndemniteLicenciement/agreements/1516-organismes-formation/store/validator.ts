@@ -35,7 +35,6 @@ export const validateAgreement1516 = (
 export const validateStep = (state: Agreement1516StoreInput) => {
   let errorState: Agreement1516StoreError = {};
   if (state.salaryPeriods.length > 0) {
-    console.log(state.salaryPeriods);
     errorState = {
       errorHasReceivedSalaries: !state.hasReceivedSalaries
         ? "Vous devez répondre à cette question"
