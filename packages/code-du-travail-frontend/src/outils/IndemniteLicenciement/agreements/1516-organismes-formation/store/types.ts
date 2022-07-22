@@ -20,7 +20,7 @@ export type Agreement1516StoreData = StepData<
 export type Agreement1516StoreFn = {
   onSalariesChange: (value: SalaryPeriods[]) => void;
   onChangeHasReceivedSalaries: (value: OuiNon) => void;
-  initSalaryPeriods: () => void;
+  initSalaryPeriods: (withDefaultSalaryPeriod: boolean) => void;
 };
 
 export type Agreement1516StoreSlice = {

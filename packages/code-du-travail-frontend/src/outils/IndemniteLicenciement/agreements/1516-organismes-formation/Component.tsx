@@ -25,7 +25,7 @@ export default function Agreement1516() {
   }));
 
   React.useEffect(() => {
-    initSalaryPeriods();
+    initSalaryPeriods(false);
   }, []);
 
   return (
@@ -50,13 +50,17 @@ export default function Agreement1516() {
         error={errorHasReceivedSalaries}
         showRequired
       />
-      {hasReceivedSalaries === "oui" && (
+      {hasReceivedSalaries && (
         <SalaireTempsPlein
           title="Salaires perçus pendant le préavis"
           onSalariesChange={onSalariesChange}
           salaryPeriods={salaryPeriods}
           error={errorSalaryPeriods}
-          note="Le montant de l’indemnité est basé sur le salaire le plus élevé jusqu’à la sortie de l’entreprise (incluant le préavis). Pour réaliser la simulation nous considérerons que le montant du salaire perçu pendant le préavis est le même que celui  perçu au cours des 12 derniers mois précédant la notification du licenciement. En conséquence, le résultat donné pourrait ne pas correspondre exactement à votre situation."
+          note={
+            hasReceivedSalaries === "non"
+              ? "Le calcul de l’indemnité nécessecite le salaire le plus élevé perçu au cours des 3 derniers mois de travail (incluant le préavis). Pour réaliser cette simulation nous prendrons en considération le salaire le plus élevé perçu au cours des 12 derniers mois précédant la notification du licenciement. En conséquence, le résultat obtenu pourrait ne pas correspondre exactement à votre situation."
+              : undefined
+          }
         />
       )}
     </>
