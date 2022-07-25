@@ -24,7 +24,8 @@ import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
 import { toUrl } from "../../src/lib";
-import { EditorialContentDataWrapper, ContentBlock } from "cdtn-types";
+import { EditorialContentDataWrapper } from "cdtn-types";
+import { ListLink } from "../../src/search/SearchResults/Results";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -84,31 +85,46 @@ const Information = ({
             fileUrl = "",
             html = "",
             size,
+            contents,
           }) => {
             const reactContent: any = processor.processSync(html).result;
-            return type === "graphic" ? (
-              <div key={name}>
-                <ImageWrapper src={toUrl(imgUrl)} altText={altText} />
-                <DownloadWrapper>
-                  <Button
-                    as="a"
-                    className="no-after"
-                    href={toUrl(fileUrl)}
-                    narrow
-                    variant="navLink"
-                    download
-                  >
-                    Télécharger l‘infographie (pdf - {size})
-                    <Download />
-                  </Button>
-                </DownloadWrapper>
-                <MoreContent noLeftPadding title="Voir en détail">
-                  <Wrapper variant="dark">{reactContent}</Wrapper>
-                </MoreContent>
-              </div>
-            ) : (
-              <React.Fragment key={name}>{reactContent}</React.Fragment>
-            );
+            switch (type) {
+              case "graphic":
+                return (
+                  <div key={name}>
+                    <ImageWrapper src={toUrl(imgUrl)} altText={altText} />
+                    <DownloadWrapper>
+                      <Button
+                        as="a"
+                        className="no-after"
+                        href={toUrl(fileUrl)}
+                        narrow
+                        variant="navLink"
+                        download
+                      >
+                        Télécharger l‘infographie (pdf - {size})
+                        <Download />
+                      </Button>
+                    </DownloadWrapper>
+                    <MoreContent noLeftPadding title="Voir en détail">
+                      <Wrapper variant="dark">{reactContent}</Wrapper>
+                    </MoreContent>
+                  </div>
+                );
+              case "content":
+                return contents?.map((item) => (
+                  <>
+                    <ListLinkContainer>
+                      <ListLink item={item} />
+                    </ListLinkContainer>
+                  </>
+                ));
+              case "markdown":
+              default:
+                return (
+                  <React.Fragment key={name}>{reactContent}</React.Fragment>
+                );
+            }
           }
         )}
         {references.map(
@@ -254,4 +270,8 @@ const Download = styled(icons.Download)`
 
 const StyledReferences = styled(References)`
   margin-top: ${spacings.xmedium};
+`;
+
+const ListLinkContainer = styled.div`
+  margin: 12px 0;
 `;

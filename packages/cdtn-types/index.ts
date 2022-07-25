@@ -16,14 +16,22 @@ export type Reference = {
   links: ReferenceLink[];
 };
 
+export type ContentItem = {
+  source: string;
+  title: string;
+  slug: string;
+  description: string;
+};
+
 export declare type ContentBlock = {
   type: string;
-  markdown: string;
+  markdown?: string;
   imgUrl?: string;
   fileUrl?: string;
   altText?: string;
   html?: string;
   size?: number;
+  contents?: ContentItem[];
 };
 
 export declare type Content = {
