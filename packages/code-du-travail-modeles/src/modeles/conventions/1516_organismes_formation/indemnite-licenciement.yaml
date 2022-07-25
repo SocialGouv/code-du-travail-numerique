@@ -35,6 +35,6 @@ contrat salarié . convention collective . organismes de formation . indemnité 
           - plus de quinze ans
     - sinon: 0
   unité: €
-  arrondi: 3 décimales
+  arrondi: 2 décimales
   références:
     Article 9.2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005775560?idConteneur=KALICONT000005635435
