@@ -5,10 +5,14 @@ import styled from "styled-components";
 type Props = {
   children: React.ReactNode | null;
   action: string;
-  title: string;
+  title?: string;
   icon?: string;
   titleTagType: string;
   noCustom?: boolean;
+  href?: string;
+  target?: string;
+  rel?: string;
+  className?: string;
 };
 
 export const CallToActionTile = React.forwardRef<HTMLAnchorElement, Props>(
