@@ -100,6 +100,7 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . résultat conventionnel avec ancienneté jusqu'à 5 ans:
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an
+  non applicable si: contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . non cadre durant une période . temps
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   variations:
     - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
@@ -112,6 +113,7 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . résultat conventionnel avec ancienneté de plus de 5 ans:
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+  non applicable si: contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . non cadre durant une période . temps
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - cadre . facteur 2
@@ -133,19 +135,19 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
   applicable si: non cadre durant une période
   titre: Temps en tant que non-cadre
   question: Pendant combien de temps a-t-il occupé des fonctions non-cadre durant le contrat de travail ?
-  unité: mois
+  unité: an
   cdtn:
     type: entier
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . non cadre durant une période . temps . ancienneté 10 ans ou moins:
   valeur:
     le minimum de:
-      - non cadre durant une période
+      - temps
       - 10 an
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . non cadre durant une période . temps . ancienneté de plus de 10 ans:
   somme:
-    - non cadre durant une période
+    - temps
     - (- 10 an)
   plancher: 0 an
 
@@ -165,7 +167,7 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . non cadre durant une période . temps . résultat conventionnel en tant que non cadre:
   variations:
-    - si: non cadre durant une période >= 12 mois
+    - si: temps >= 12 mois
       alors:
         somme:
           - facteur 1 non cadre
@@ -175,7 +177,9 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
   arrondi: 2 décimales
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . non cadre durant une période . temps . ancienneté cadre:
-  valeur: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année - non cadre durant une période
+  valeur: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année - temps
+  unité: an
+  plancher: 0 an
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . non cadre durant une période . temps . ancienneté jusqu'à 5 ans en tant que cadre:
   valeur:
