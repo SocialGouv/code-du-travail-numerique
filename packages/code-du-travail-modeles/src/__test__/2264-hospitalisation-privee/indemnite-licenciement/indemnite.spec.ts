@@ -21,6 +21,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 2264", () => {
       ${"Cadre"}     | ${0}      | ${2000} | ${0}
       ${"Cadre"}     | ${1}      | ${2000} | ${400}
       ${"Cadre"}     | ${2}      | ${2000} | ${800}
+      ${"Cadre"}     | ${4.25}   | ${2000} | ${1700}
       ${"Cadre"}     | ${5}      | ${2000} | ${5000}
       ${"Cadre"}     | ${10}     | ${2000} | ${15000}
       ${"Cadre"}     | ${12.5}   | ${2000} | ${20000}
@@ -64,7 +65,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 2264", () => {
       ${2}              | ${0}      | ${2000} | ${0}
       ${2}              | ${1}      | ${2000} | ${800}
       ${2}              | ${2}      | ${2000} | ${800}
-      ${2}              | ${5}      | ${2000} | ${3800}
+      ${2}              | ${5}      | ${2000} | ${2000}
       ${2}              | ${10}     | ${2000} | ${11800}
       ${2}              | ${15}     | ${2000} | ${21800}
       ${2}              | ${42}     | ${2000} | ${50000}
@@ -80,9 +81,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 2264", () => {
       ${10}             | ${15}     | ${2000} | ${9000}
       ${10}             | ${42}     | ${2000} | ${50000}
       ${8}              | ${20.5}   | ${2000} | ${23200}
-      ${10.58}          | ${25}     | ${2000} | ${28304}
+      ${10.58}          | ${25}     | ${2000} | ${24000}
       ${11}             | ${13}     | ${2000} | ${5600}
-      ${0.75}           | ${5}      | ${2000} | ${4550}
+      ${0.75}           | ${5}      | ${2000} | ${2000}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, seniorityNonCadre: $seniorityNonCadre => $expectedCompensation €",
       ({ seniority, salary, expectedCompensation, seniorityNonCadre }) => {
