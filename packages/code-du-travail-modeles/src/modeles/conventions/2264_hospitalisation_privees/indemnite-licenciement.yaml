@@ -243,7 +243,9 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
           - facteur 1 cadre
           - résultat conventionnel en tant que non cadre
     - sinon: résultat conventionnel en tant que non cadre
-  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
+  plafond:
+    applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an
+    valeur: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
   unité: €
   arrondi: 2 décimales
   références:
@@ -259,7 +261,12 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
     - facteur 2 cadre
     - facteur 3 cadre
     - résultat conventionnel en tant que non cadre
-  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
+  plafond:
+    applicable si:
+      toutes ces conditions:
+        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 15 an
+    valeur: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
   unité: €
   arrondi: 2 décimales
   références:
@@ -272,7 +279,9 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
     - facteur 2 cadre
     - facteur 3 cadre
     - résultat conventionnel en tant que non cadre
-  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 25
+  plafond:
+    applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15 an
+    valeur: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 25
   unité: €
   arrondi: 2 décimales
   références:
