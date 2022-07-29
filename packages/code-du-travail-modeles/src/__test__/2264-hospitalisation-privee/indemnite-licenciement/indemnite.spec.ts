@@ -92,9 +92,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 2264", () => {
             "contrat salarié . convention collective": "'IDCC2264'",
             "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle":
               "'Cadre'",
-            "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . non cadre durant une période":
+            "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
               "oui",
-            "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . non cadre durant une période . temps":
+            "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps":
               seniorityNonCadre,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,

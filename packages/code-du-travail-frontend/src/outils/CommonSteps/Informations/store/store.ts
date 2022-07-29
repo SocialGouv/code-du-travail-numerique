@@ -9,6 +9,8 @@ import {
 } from "./types";
 import { StoreSlice } from "../../../types";
 import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
+import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../publicodes";
+import { CommonAgreementStoreSlice } from "../../Agreement/store";
 
 const initialState: CommonInformationsStoreData = {
   input: {
@@ -24,14 +26,31 @@ const initialState: CommonInformationsStoreData = {
 };
 
 const createCommonInformationsStore: StoreSlice<
-  CommonInformationsStoreSlice
+  CommonInformationsStoreSlice,
+  CommonAgreementStoreSlice
 > = (set, get, publicodesRules) => ({
   informationsData: {
     ...initialState,
     publicodes: new IndemniteLicenciementPublicodes(publicodesRules!),
   },
   informationsFunction: {
-    generatePublicodesQuestions: () => {},
+    generatePublicodesQuestions: () => {
+      const publicodes = get().informationsData.publicodes;
+      if (!publicodes) {
+        throw new Error("Publicodes is not defined");
+      }
+      const agreement = get().agreementData.input.agreement;
+      if (agreement) {
+        const { missingArgs } = publicodes.setSituation(
+          mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+            agreement.num,
+            0,
+            0
+          )
+        );
+        console.log(missingArgs);
+      }
+    },
     onInformationsChange: (key, value) => {
       const currentInformations = get().informationsData.input.informations;
       currentInformations[key] = value;
