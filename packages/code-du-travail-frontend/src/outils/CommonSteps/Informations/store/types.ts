@@ -1,41 +1,33 @@
-import { Agreement } from "../../../../conventions/Search/api/type";
-import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
+import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
+import { Question } from "../../../DureePreavisRetraite/state";
 
-export enum Route {
-  agreement = "agreement",
-  enterprise = "enterprise",
-  none = "none",
-}
-
-export type CommonAgreementStoreInput = {
-  route?: Route;
-  agreement?: Agreement;
-  enterprise?: Enterprise;
+export type CommonInformationsStoreInput = {
+  informations: Record<string, string>;
+  publicodesQuestions: Question[];
+  isStepHidden: boolean;
 };
 
-export type CommonAgreementStoreError = {
-  route?: string;
-  agreement?: string;
-  enterprise?: string;
+export type CommonInformationsStoreError = {
+  errorInformations: Record<string, string>;
+  alertError?: string;
 };
 
-export type CommonAgreementStoreData = {
-  input: CommonAgreementStoreInput;
-  error: CommonAgreementStoreError;
+export type CommonInformationsStoreData = {
+  input: CommonInformationsStoreInput;
+  error: CommonInformationsStoreError;
   hasBeenSubmit: boolean;
   isStepValid: boolean;
 };
 
-export type CommonAgreementStoreFn = {
-  onRouteChange: (value: Route) => void;
-  onAgreementChange: (
-    agreement: Agreement | null,
-    enterprise?: Enterprise
-  ) => void;
+export type CommonInformationsStoreFn = {
+  onInformationsChange: (questionKey: string, value: string) => void;
+  generatePublicodesQuestions: () => void;
   onValidateStep: () => boolean;
 };
 
-export type CommonAgreementStoreSlice = {
-  agreementData: CommonAgreementStoreData;
-  agreementFunction: CommonAgreementStoreFn;
+export type CommonInformationsStoreSlice = {
+  informationsData: CommonInformationsStoreData & {
+    publicodes?: IndemniteLicenciementPublicodes;
+  };
+  informationsFunction: CommonInformationsStoreFn;
 };

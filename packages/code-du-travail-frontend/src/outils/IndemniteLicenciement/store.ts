@@ -37,13 +37,20 @@ import {
   CommonAgreementStoreSlice,
   createCommonAgreementStore,
 } from "../CommonSteps/Agreement/store";
+import {
+  CommonInformationsStoreError,
+  CommonInformationsStoreInput,
+  CommonInformationsStoreSlice,
+  createCommonInformationsStore,
+} from "../CommonSteps/Informations/store";
 
 export type MainStore = ContratTravailStoreSlice &
   AncienneteStoreSlice &
   SalairesStoreSlice &
   ResultStoreSlice &
   AgreementStoreSlice &
-  CommonAgreementStoreSlice;
+  CommonAgreementStoreSlice &
+  CommonInformationsStoreSlice;
 
 export type StepData<
   T extends
@@ -52,7 +59,8 @@ export type StepData<
     | ContratTravailStoreInput
     | ResultStoreInput
     | AgreementStoreInput
-    | CommonAgreementStoreInput,
+    | CommonAgreementStoreInput
+    | CommonInformationsStoreInput,
   U extends
     | AncienneteStoreError
     | SalairesStoreError
@@ -60,6 +68,7 @@ export type StepData<
     | ResultStoreError
     | AgreementStoreError
     | CommonAgreementStoreError
+    | CommonInformationsStoreError
 > = {
   input: T;
   error: U;
@@ -78,6 +87,7 @@ const createRootSlice = (
   ...createResultStore(set, get, publicodesRules),
   ...createRootAgreementsStore(set, get),
   ...createCommonAgreementStore(set, get),
+  ...createCommonInformationsStore(set, get, publicodesRules),
 });
 
 const createStore = (publicodesRules: string) =>

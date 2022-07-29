@@ -18,7 +18,7 @@ import { SalairesStoreSlice } from "../../Salaires/store";
 import produce from "immer";
 
 import { ResultStoreData, ResultStoreSlice } from "./types";
-import { CommonAgreementStoreSlice } from "../../Agreement/store";
+import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 
 const initialState: ResultStoreData = {
   input: {

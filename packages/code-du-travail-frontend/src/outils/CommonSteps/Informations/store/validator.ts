@@ -1,32 +1,26 @@
-import { deepEqualObject } from "../../../../lib";
 import {
-  CommonAgreementStoreError,
-  CommonAgreementStoreInput,
-  Route,
+  CommonInformationsStoreError,
+  CommonInformationsStoreInput,
 } from "./types";
 
-export const validateStep = (state: CommonAgreementStoreInput) => {
-  const errorState: CommonAgreementStoreError = {
-    route: !state.route ? "Vous devez répondre à cette question" : undefined,
-    agreement:
-      state.route === Route.agreement && !state.agreement
-        ? "Vous devez séléctionner une convention collective"
-        : undefined,
-    enterprise:
-      state.route === Route.enterprise && !state.enterprise
-        ? "Vous devez séléctionner une entreprise"
-        : state.route === Route.enterprise &&
-          state.enterprise &&
-          !state.agreement
-        ? "Vous devez séléctionner une convention collective"
-        : undefined,
+export const validateStep = (state: CommonInformationsStoreInput) => {
+  const informations = state.informations;
+  let res = {
+    isValid: true,
+    errorState: {} as CommonInformationsStoreError,
   };
-  return {
-    isValid: deepEqualObject(errorState, {
-      route: undefined,
-      agreement: undefined,
-      enterprise: undefined,
-    }),
-    errorState,
-  };
+  Object.values(informations).forEach((value, index) => {
+    if (value === "" || value === undefined) {
+      res = {
+        isValid: false,
+        errorState: {
+          errorInformations: {
+            ...res.errorState.errorInformations,
+            [Object.keys(informations)[index]]: "Veuillez remplir ce champ",
+          },
+        },
+      };
+    }
+  });
+  return res;
 };

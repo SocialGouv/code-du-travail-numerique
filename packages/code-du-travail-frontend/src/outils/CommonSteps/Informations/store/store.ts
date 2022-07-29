@@ -3,45 +3,49 @@ import produce from "immer";
 import { validateStep } from "./validator";
 
 import {
-  CommonAgreementStoreData,
-  CommonAgreementStoreInput,
-  CommonAgreementStoreSlice,
+  CommonInformationsStoreData,
+  CommonInformationsStoreInput,
+  CommonInformationsStoreSlice,
 } from "./types";
 import { StoreSlice } from "../../../types";
+import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
 
-const initialState: CommonAgreementStoreData = {
-  input: {},
-  error: {},
+const initialState: CommonInformationsStoreData = {
+  input: {
+    informations: {},
+    publicodesQuestions: [],
+    isStepHidden: true,
+  },
+  error: {
+    errorInformations: {},
+  },
   hasBeenSubmit: false,
   isStepValid: true,
 };
 
-const createCommonAgreementStore: StoreSlice<CommonAgreementStoreSlice> = (
-  set,
-  get
-) => ({
-  agreementData: { ...initialState },
-  agreementFunction: {
-    onRouteChange: (value) => {
-      set(
-        produce((state: CommonAgreementStoreSlice) => {
-          state.agreementData.input.enterprise = undefined;
-          state.agreementData.input.agreement = undefined;
-        })
-      );
-      applyGenericValidation(get, set, "route", value);
-    },
-    onAgreementChange: (agreement, enterprise) => {
-      applyGenericValidation(get, set, "agreement", agreement);
-      applyGenericValidation(get, set, "enterprise", enterprise);
+const createCommonInformationsStore: StoreSlice<
+  CommonInformationsStoreSlice
+> = (set, get, publicodesRules) => ({
+  informationsData: {
+    ...initialState,
+    publicodes: new IndemniteLicenciementPublicodes(publicodesRules!),
+  },
+  informationsFunction: {
+    generatePublicodesQuestions: () => {},
+    onInformationsChange: (key, value) => {
+      const currentInformations = get().informationsData.input.informations;
+      currentInformations[key] = value;
+      applyGenericValidation(get, set, "informations", currentInformations);
     },
     onValidateStep: () => {
-      const { isValid, errorState } = validateStep(get().agreementData.input);
+      const { isValid, errorState } = validateStep(
+        get().informationsData.input
+      );
       set(
-        produce((state: CommonAgreementStoreSlice) => {
-          state.agreementData.hasBeenSubmit = isValid ? false : true;
-          state.agreementData.isStepValid = isValid;
-          state.agreementData.error = errorState;
+        produce((state: CommonInformationsStoreSlice) => {
+          state.informationsData.hasBeenSubmit = isValid ? false : true;
+          state.informationsData.isStepValid = isValid;
+          state.informationsData.error = errorState;
         })
       );
       return isValid;
@@ -50,30 +54,32 @@ const createCommonAgreementStore: StoreSlice<CommonAgreementStoreSlice> = (
 });
 
 const applyGenericValidation = (
-  get: GetState<CommonAgreementStoreSlice>,
-  set: SetState<CommonAgreementStoreSlice>,
-  paramName: keyof CommonAgreementStoreInput,
+  get: GetState<CommonInformationsStoreSlice>,
+  set: SetState<CommonInformationsStoreSlice>,
+  paramName: keyof CommonInformationsStoreInput,
   value: any
 ) => {
-  if (get().agreementData.hasBeenSubmit) {
+  if (get().informationsData.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
-      draft.agreementData.input[paramName] = value;
+      draft.informationsData.input[paramName] = value;
     });
-    const { isValid, errorState } = validateStep(nextState.agreementData.input);
+    const { isValid, errorState } = validateStep(
+      nextState.informationsData.input
+    );
     set(
-      produce((state: CommonAgreementStoreSlice) => {
-        state.agreementData.error = errorState;
-        state.agreementData.isStepValid = isValid;
-        state.agreementData.input[paramName] = value;
+      produce((state: CommonInformationsStoreSlice) => {
+        state.informationsData.error = errorState;
+        state.informationsData.isStepValid = isValid;
+        state.informationsData.input[paramName] = value;
       })
     );
   } else {
     set(
-      produce((state: CommonAgreementStoreSlice) => {
-        state.agreementData.input[paramName] = value;
+      produce((state: CommonInformationsStoreSlice) => {
+        state.informationsData.input[paramName] = value;
       })
     );
   }
 };
 
-export default createCommonAgreementStore;
+export default createCommonInformationsStore;

@@ -10,7 +10,7 @@ export const getSupportedCC = (): AgreementSupportInfo[] =>
     idcc: item.idcc,
   }));
 
-export const AgreementStep = (): JSX.Element => {
+const AgreementStep = (): JSX.Element => {
   const {
     error,
     onRouteChange,
@@ -39,3 +39,5 @@ export const AgreementStep = (): JSX.Element => {
     />
   );
 };
+
+export default AgreementStep;

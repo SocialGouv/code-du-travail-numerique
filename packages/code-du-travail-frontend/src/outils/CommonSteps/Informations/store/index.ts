@@ -1,2 +1,2 @@
-export { default as createCommonAgreementStore } from "./store";
+export { default as createCommonInformationsStore } from "./store";
 export * from "./types";

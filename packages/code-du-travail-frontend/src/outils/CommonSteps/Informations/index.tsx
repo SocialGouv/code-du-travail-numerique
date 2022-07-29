@@ -1,101 +1,59 @@
 import React from "react";
-import { RadioQuestion } from "../../Components";
-import { Route } from "./store";
-import { AgreementSearch, EnterpriseSearch } from "./components";
-import { Agreement } from "../../../conventions/Search/api/type";
-import {
-  AgreementSupportInfo,
-  OnSelectAgreementFn,
-} from "../../common/Agreement/types";
-import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
-import { InlineError } from "../../common/ErrorField";
 
-type Props = {
-  selectedRoute?: Route;
-  onRouteChange: (Route) => void;
-  supportedAgreements: AgreementSupportInfo[];
-  selectedEnterprise?: Enterprise;
-  selectedAgreement?: Agreement;
-  onAgreementChange: OnSelectAgreementFn;
-  error?: {
-    route?: string;
-    agreement?: string;
-    enterprise?: string;
-  };
+import { Alert, Paragraph, Text, theme } from "@socialgouv/cdtn-ui";
+import styled from "styled-components";
+import { Question } from "../../DureePreavisRetraite/state";
+import { PubliQuestion } from "./components";
+import { MatomoActionEvent } from "../../../lib";
+
+export type InformationStepProps = {
+  questions: Question[];
+  alertError?: string;
+  onChange: (key: string, value: unknown) => void;
+  values: Record<string, string>;
+  errors: Record<string, string>;
 };
 
-function AgreementStep({
-  selectedRoute,
-  onRouteChange,
-  supportedAgreements,
-  selectedEnterprise,
-  selectedAgreement,
-  onAgreementChange,
-  error,
-}: Props): JSX.Element {
-  return (
-    <>
-      <RadioQuestion
-        questions={[
-          {
-            label: "Je sais quelle est ma convention collective (je la saisis)",
-            value: Route.agreement,
-            id: "route-agreement",
-          },
-          {
-            label:
-              "Je ne sais pas quelle est ma convention collective (je la recherche)",
-            value: Route.enterprise,
-            id: "route-enterprise",
-          },
-          {
-            label:
-              "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)",
-            value: Route.none,
-            id: "route-none",
-          },
-        ]}
-        name="route"
-        label=" Quel est le nom de la convention collective applicable&nbsp;?"
-        selectedOption={selectedRoute}
-        onChangeSelectedOption={onRouteChange}
-        error={error?.route}
-        showRequired
-        tooltip={{
-          content: (
-            <p>
-              Vous pouvez trouver le nom de votre convention collective sur
-              votre <strong>bulletin de paie</strong>.
-            </p>
-          ),
-        }}
-      />
-      {selectedRoute === Route.agreement && (
-        <>
-          <AgreementSearch
-            supportedAgreements={supportedAgreements}
-            selectedAgreement={selectedAgreement}
-            onSelectAgreement={onAgreementChange}
-            onUserAction={() => {}}
-            alertAgreementNotSupported={undefined}
-          />
-          {error?.agreement && <InlineError>{error.agreement}</InlineError>}
-        </>
-      )}
-      {selectedRoute === Route.enterprise && (
-        <>
-          <EnterpriseSearch
-            supportedAgreements={supportedAgreements}
-            selectedAgreement={selectedAgreement}
-            selectedEnterprise={selectedEnterprise}
-            onSelectAgreement={onAgreementChange}
-            onUserAction={() => {}}
-          />
-          {error?.enterprise && <InlineError>{error.enterprise}</InlineError>}
-        </>
-      )}
-    </>
-  );
-}
+const CommonInformationStep = ({
+  questions,
+  alertError,
+  onChange,
+  values,
+  errors,
+}: InformationStepProps): JSX.Element => (
+  <>
+    {questions.map((question) => {
+      return (
+        <PubliQuestion
+          key={question.name}
+          name={"infos." + question.name}
+          rule={question.rule}
+          trackQuestionEvent={MatomoActionEvent.INDEMNITE_LICENCIEMENT}
+          value={values[question.rule.nom]}
+          onChange={(v) => onChange(question.rule.nom, v)}
+          error={errors[question.rule.nom]}
+        />
+      );
+    })}
+    {alertError && (
+      <StyledAlert variant="primary">
+        <Paragraph noMargin>
+          <Text variant="primary" fontSize="hsmall" fontWeight="700">
+            À noter
+          </Text>
+          <br />
+          {alertError}
+        </Paragraph>
+      </StyledAlert>
+    )}
+  </>
+);
 
-export default AgreementStep;
+const { spacings } = theme;
+
+const StyledAlert = styled(Alert)`
+  margin-top: ${spacings.medium};
+  width: 100%;
+`;
+
+export default CommonInformationStep;
