@@ -149,7 +149,6 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
     type: oui-non
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps:
-  applicable si: non cadre durant une période
   titre: Temps en tant que non-cadre
   question: Pendant combien de temps a-t-il occupé des fonctions non-cadre durant le contrat de travail ?
   unité: an

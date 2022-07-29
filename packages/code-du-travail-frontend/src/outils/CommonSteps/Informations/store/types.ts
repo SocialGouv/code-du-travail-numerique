@@ -5,6 +5,7 @@ export type CommonInformationsStoreInput = {
   informations: Record<string, string>;
   publicodesQuestions: Question[];
   isStepHidden: boolean;
+  hasNoMissingVariables: boolean;
 };
 
 export type CommonInformationsStoreError = {

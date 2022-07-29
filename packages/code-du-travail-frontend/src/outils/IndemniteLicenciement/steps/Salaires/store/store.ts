@@ -19,7 +19,7 @@ import {
 import { IndemniteLicenciementStepName } from "../../..";
 import { deepMergeArray } from "../../../../../lib";
 import { computeSalaryPeriods } from "../../../common";
-import { CommonAgreementStoreSlice } from "../../Agreement/store";
+import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 
 const initialState: SalairesStoreData = {
   input: {

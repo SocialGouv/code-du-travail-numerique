@@ -17,6 +17,7 @@ const initialState: CommonInformationsStoreData = {
     informations: {},
     publicodesQuestions: [],
     isStepHidden: true,
+    hasNoMissingVariables: false,
   },
   error: {
     errorInformations: {},
@@ -46,15 +47,65 @@ const createCommonInformationsStore: StoreSlice<
             agreement.num,
             0,
             0
-          )
+          ),
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
-        console.log(missingArgs);
+        if (missingArgs.length > 0) {
+          set(
+            produce((state: CommonInformationsStoreSlice) => {
+              state.informationsData.input.publicodesQuestions =
+                missingArgs.map((arg) => ({
+                  name: arg.name,
+                  rule: arg.rawNode,
+                }));
+              state.informationsData.input.isStepHidden = false;
+            })
+          );
+          return;
+        }
       }
+      set(
+        produce((state: CommonInformationsStoreSlice) => {
+          state.informationsData.input = initialState.input;
+        })
+      );
     },
     onInformationsChange: (key, value) => {
       const currentInformations = get().informationsData.input.informations;
-      currentInformations[key] = value;
-      applyGenericValidation(get, set, "informations", currentInformations);
+      const newObj = { ...currentInformations, [key]: value };
+      applyGenericValidation(get, set, "informations", newObj);
+      const publicodes = get().informationsData.publicodes!;
+      const agreement = get().agreementData.input.agreement!;
+      const { missingArgs } = publicodes.setSituation(
+        mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+          agreement.num,
+          0,
+          0,
+          newObj
+        ),
+        "contrat salarié . indemnité de licenciement . résultat conventionnel"
+      );
+      if (missingArgs.length > 0) {
+        set(
+          produce((state: CommonInformationsStoreSlice) => {
+            state.informationsData.input.publicodesQuestions = [
+              ...state.informationsData.input.publicodesQuestions,
+              missingArgs
+                .sort((a, b) => b.indice - a.indice)
+                .map((arg) => ({
+                  name: arg.name,
+                  rule: arg.rawNode,
+                }))[0],
+            ];
+          })
+        );
+      } else {
+        set(
+          produce((state: CommonInformationsStoreSlice) => {
+            state.informationsData.input.hasNoMissingVariables = true;
+          })
+        );
+      }
     },
     onValidateStep: () => {
       const { isValid, errorState } = validateStep(
@@ -63,7 +114,8 @@ const createCommonInformationsStore: StoreSlice<
       set(
         produce((state: CommonInformationsStoreSlice) => {
           state.informationsData.hasBeenSubmit = isValid ? false : true;
-          state.informationsData.isStepValid = isValid;
+          state.informationsData.isStepValid =
+            isValid && get().informationsData.input.hasNoMissingVariables;
           state.informationsData.error = errorState;
         })
       );

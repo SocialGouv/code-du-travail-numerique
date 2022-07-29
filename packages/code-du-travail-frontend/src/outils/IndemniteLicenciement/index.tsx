@@ -106,10 +106,12 @@ const IndemniteLicenciementSimulator = ({
   const data = useIndemniteLicenciementStore((state) => {
     let resultDataWithoutPublicodes = { ...state.resultData };
     delete resultDataWithoutPublicodes.publicodes;
+    let informationsDataWithoutPublicodes = { ...state.informationsData };
+    delete informationsDataWithoutPublicodes.publicodes;
     return {
       contratTravailData: { ...state.contratTravailData },
       agreementData: { ...state.agreementData },
-      informationsData: { ...state.informationsData },
+      informationsData: informationsDataWithoutPublicodes,
       ancienneteData: { ...state.ancienneteData },
       salairesData: { ...state.salairesData },
       resultData: resultDataWithoutPublicodes,

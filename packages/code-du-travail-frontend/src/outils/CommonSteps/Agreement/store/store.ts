@@ -31,6 +31,7 @@ const createCommonAgreementStore: StoreSlice<
         })
       );
       applyGenericValidation(get, set, "route", value);
+      get().informationsFunction.generatePublicodesQuestions();
     },
     onAgreementChange: (agreement, enterprise) => {
       applyGenericValidation(get, set, "agreement", agreement);

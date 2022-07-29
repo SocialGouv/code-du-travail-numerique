@@ -14,7 +14,7 @@ type Props = {
   onSwitchTooltip?: () => void;
   showRequired?: boolean;
   error?: string;
-  onChangeSelectedOption: (value: unknown) => void;
+  onChangeSelectedOption: (value: string) => void;
   selectedOption: string | undefined;
 };
 
@@ -60,7 +60,11 @@ const SelectQuestion = ({
         {label}
       </Question>
       {subLabel && <SubLabel>{subLabel}</SubLabel>}
-      <StyledSelect id={`input-${name}`} onChange={onChange} value={value}>
+      <StyledSelect
+        id={`input-${name}`}
+        onChange={(v) => onChange(v.target.value)}
+        value={value}
+      >
         <option disabled value="">
           ...
         </option>
