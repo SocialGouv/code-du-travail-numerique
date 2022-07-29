@@ -89,7 +89,7 @@ const PubliQuestion: React.FC<Props> = ({
         <TextQuestion
           label={question}
           tooltip={tooltip}
-          inputType="text"
+          inputType="number"
           value={value}
           onChange={onChange}
           error={error}
