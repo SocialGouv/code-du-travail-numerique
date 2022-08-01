@@ -23,7 +23,7 @@ type Props = {
 
 export enum IndemniteLicenciementStepName {
   Introduction = "start",
-  ContratTravail = "contrat_travail",
+  Info = "contrat_travail",
   Anciennete = "anciennete",
   Salaires = "salaires",
   Resultat = "results",
