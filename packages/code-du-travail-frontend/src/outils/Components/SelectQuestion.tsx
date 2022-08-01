@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { InlineError } from "../common/ErrorField";
 import { Question, Tooltip } from "../common/Question";
+import { ErrorWrapper } from "./TextQuestion";
 
 type Props = {
   name: string;
@@ -83,7 +84,11 @@ const SelectQuestion = ({
           );
         })}
       </StyledSelect>
-      {error && <InlineError>{error}</InlineError>}
+      {error && (
+        <ErrorWrapper>
+          <InlineError>{error}</InlineError>
+        </ErrorWrapper>
+      )}
     </Wrapper>
   );
 };

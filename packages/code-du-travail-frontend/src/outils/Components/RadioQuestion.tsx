@@ -4,6 +4,7 @@ import React from "react";
 import { InlineError } from "../common/ErrorField";
 import { Question, Tooltip } from "../common/Question";
 import { RadioContainer } from "../common/stepStyles";
+import { ErrorWrapper } from "./TextQuestion";
 
 type Question = {
   label: string;
@@ -55,7 +56,11 @@ export default function RadioQuestion({
             onChange={() => onChange(question.value)}
           />
         ))}
-        {error && <InlineError>{error}</InlineError>}
+        {error && (
+          <ErrorWrapper>
+            <InlineError>{error}</InlineError>
+          </ErrorWrapper>
+        )}
       </RadioContainer>
     </>
   );

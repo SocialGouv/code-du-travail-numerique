@@ -11,6 +11,8 @@ import { StoreSlice } from "../../../types";
 import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../publicodes";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
+import { removeDuplicateObject } from "../../../../lib";
+import { Question } from "../../../DureePreavisRetraite/state";
 
 const initialState: CommonInformationsStoreData = {
   input: {
@@ -94,13 +96,14 @@ const createCommonInformationsStore: StoreSlice<
                 name: arg.name,
                 rule: arg.rawNode,
               }))[0];
-            const publicodesQuestions = [
-              ...state.informationsData.input.publicodesQuestions,
-              newQuestion,
-            ].filter(
-              (v, i) =>
-                publicodesQuestions.findIndex((t) => t.name == v.name) === i
-            );
+            const publicodesQuestions = removeDuplicateObject(
+              [
+                ...state.informationsData.input.publicodesQuestions,
+                newQuestion,
+              ],
+              "name"
+            ) as Question[];
+            // quand le mec clique sur non cadre puis cadre il faut enlever les questions
             state.informationsData.input.publicodesQuestions =
               publicodesQuestions;
           })
