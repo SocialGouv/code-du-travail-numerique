@@ -31,7 +31,7 @@ const CommonInformationStep = ({
           trackQuestionEvent={MatomoActionEvent.INDEMNITE_LICENCIEMENT}
           value={values[question.rule.nom]}
           onChange={(v) => onChange(question.rule.nom, v)}
-          error={errors[question.rule.nom]}
+          error={errors[question.rule.nom] ?? undefined}
         />
       );
     })}

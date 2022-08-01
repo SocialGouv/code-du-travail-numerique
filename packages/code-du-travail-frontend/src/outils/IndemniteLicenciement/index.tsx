@@ -24,13 +24,13 @@ type Props = {
 };
 
 export enum IndemniteLicenciementStepName {
-  Introduction = "Intro",
-  ContratTravail = "Info",
-  Agreement = "ccn",
-  Anciennete = "Anciennete",
-  Salaires = "Salaires",
-  Resultat = "Resultat",
-  Informations = "Informations",
+  Introduction = "start",
+  ContratTravail = "contrat_travail",
+  Agreement = "info_cc",
+  Anciennete = "anciennete",
+  Salaires = "salaires",
+  Resultat = "results",
+  Informations = "infos",
 }
 
 const steps: Step<IndemniteLicenciementStepName>[] = [

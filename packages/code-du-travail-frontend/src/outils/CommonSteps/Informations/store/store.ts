@@ -88,15 +88,21 @@ const createCommonInformationsStore: StoreSlice<
       if (missingArgs.length > 0) {
         set(
           produce((state: CommonInformationsStoreSlice) => {
-            state.informationsData.input.publicodesQuestions = [
+            const newQuestion = missingArgs
+              .sort((a, b) => b.indice - a.indice)
+              .map((arg) => ({
+                name: arg.name,
+                rule: arg.rawNode,
+              }))[0];
+            const publicodesQuestions = [
               ...state.informationsData.input.publicodesQuestions,
-              missingArgs
-                .sort((a, b) => b.indice - a.indice)
-                .map((arg) => ({
-                  name: arg.name,
-                  rule: arg.rawNode,
-                }))[0],
-            ];
+              newQuestion,
+            ].filter(
+              (v, i) =>
+                publicodesQuestions.findIndex((t) => t.name == v.name) === i
+            );
+            state.informationsData.input.publicodesQuestions =
+              publicodesQuestions;
           })
         );
       } else {

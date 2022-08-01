@@ -1,26 +1,21 @@
-import {
-  CommonInformationsStoreError,
-  CommonInformationsStoreInput,
-} from "./types";
+import { deepEqualObject } from "../../../../lib";
+import { CommonInformationsStoreInput } from "./types";
 
 export const validateStep = (state: CommonInformationsStoreInput) => {
   const informations = state.informations;
-  let res = {
-    isValid: true,
-    errorState: {} as CommonInformationsStoreError,
-  };
-  Object.values(informations).forEach((value, index) => {
-    if (value === "" || value === undefined) {
-      res = {
-        isValid: false,
-        errorState: {
-          errorInformations: {
-            ...res.errorState.errorInformations,
-            [Object.keys(informations)[index]]: "Veuillez remplir ce champ",
-          },
-        },
-      };
+  const publicodesQuestions = state.publicodesQuestions;
+  let errorInformations: Record<string, string> = {};
+  publicodesQuestions.forEach((question) => {
+    if (informations[question.rule.nom] === undefined) {
+      errorInformations[question.rule.nom] = "Cette valeur est requise";
     }
   });
-  return res;
+  let errorState = { errorInformations };
+
+  return {
+    isValid: deepEqualObject(errorState, {
+      errorInformations: {},
+    }),
+    errorState,
+  };
 };
