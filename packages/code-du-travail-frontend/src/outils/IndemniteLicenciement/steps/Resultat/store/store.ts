@@ -86,6 +86,8 @@ const createResultStore: StoreSlice<
 
       const legalReferences = publicodes.getReferences();
 
+      const legalReferences = publicodes.getReferences();
+
       let publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult;
       let agreementSeniority: number;
       let agreementReferences: References[];
@@ -96,7 +98,10 @@ const createResultStore: StoreSlice<
         const factory = new SeniorityFactory().create(
           `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
         );
+<<<<<<< HEAD
         const agreementInformations = get().informationsData.input.informations;
+=======
+>>>>>>> feat/indemnite-licenciement
         agreementSeniority = factory.computeSeniority({
           dateEntree: get().ancienneteData.input.dateEntree!,
           dateSortie: get().ancienneteData.input.dateSortie!,
@@ -108,6 +113,7 @@ const createResultStore: StoreSlice<
             agreement.num,
             agreementSeniority,
             agreementRefSalary ?? refSalary,
+<<<<<<< HEAD
             agreementInformations
           ),
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
@@ -117,6 +123,20 @@ const createResultStore: StoreSlice<
           "indemnité de licenciement . résultat conventionnel"
         );
 
+=======
+            agreementParameters
+          )
+        );
+
+        agreementReferences = publicodes.getReferences(
+          "indemnité de licenciement . résultat conventionnel"
+        );
+
+        publicodesSituationConventionnel = publicodes.execute(
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+
+>>>>>>> feat/indemnite-licenciement
         const agreementFactoryFormula = new FormuleFactory().create(
           `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
         );
@@ -128,9 +148,15 @@ const createResultStore: StoreSlice<
 
         if (
           publicodesSituationConventionnel.value &&
+<<<<<<< HEAD
           publicodesSituationLegal.value &&
           publicodesSituationConventionnel.value >
             publicodesSituationLegal.value
+=======
+          publicodesSituationLegal.result.value &&
+          publicodesSituationConventionnel.value >
+            publicodesSituationLegal.result.value
+>>>>>>> feat/indemnite-licenciement
         ) {
           isAgreementBetter = true;
         }

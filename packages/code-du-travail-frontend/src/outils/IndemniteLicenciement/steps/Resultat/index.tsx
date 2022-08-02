@@ -81,13 +81,26 @@ const StepResult = () => {
           absencesPeriods={absencePeriods}
           agreementName={agreement?.shortTitle}
           typeContrat={typeContratTravail!.toString()}
+<<<<<<< HEAD
           isLicenciementFauteGrave={licenciementFauteGrave === "oui"}
           isLicenciementInaptitude={licenciementInaptitude === "oui"}
+=======
+          isLicenciementFauteGrave={
+            licenciementFauteGrave === "oui" ? true : false
+          }
+          isLicenciementInaptitude={
+            licenciementInaptitude === "oui" ? true : false
+          }
+>>>>>>> feat/indemnite-licenciement
           dateEntree={dateEntree!}
           dateSortie={dateSortie!}
           dateNotification={dateNotification!}
           salaryPeriods={salaryPeriods}
+<<<<<<< HEAD
           hasTempsPartiel={hasTempsPartiel === "oui"}
+=======
+          hasTempsPartiel={hasTempsPartiel === "oui" ? true : false}
+>>>>>>> feat/indemnite-licenciement
           isAgreementBetter={isAgreementBetter}
           agreementRefSalaryInfo={
             agreement && (

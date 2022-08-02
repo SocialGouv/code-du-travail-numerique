@@ -82,7 +82,8 @@ export const SalaireTempsPlein = ({
           <SmallText>
             Renseignez le montant des salaires (en incluant les primes et
             avantages en nature) dans le premier champ et le montant des primes
-            exceptionnelles dans le second champ.
+            exceptionnelles dans le second champ (seules les primes des 3
+            derniers mois sont nécessaires).
           </SmallText>
         </Caption>
         <thead>
