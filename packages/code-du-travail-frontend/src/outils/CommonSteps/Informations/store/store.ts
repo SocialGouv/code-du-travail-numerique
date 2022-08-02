@@ -6,20 +6,19 @@ import {
   CommonInformationsStoreData,
   CommonInformationsStoreInput,
   CommonInformationsStoreSlice,
+  PublicodesInformation,
 } from "./types";
 import { StoreSlice } from "../../../types";
 import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../publicodes";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
-import { Question } from "../../../DureePreavisRetraite/state";
 
 const initialState: CommonInformationsStoreData = {
   input: {
-    informations: {},
-    publicodesQuestions: [],
+    publicodesInformations: [],
     isStepHidden: true,
-    hasNoMissingVariables: false,
+    hasNoMissingQuestions: false,
   },
   error: {
     errorInformations: {},
@@ -53,13 +52,19 @@ const createCommonInformationsStore: StoreSlice<
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
         if (missingArgs.length > 0) {
+          const question = missingArgs.map((arg) => ({
+            name: arg.name,
+            rule: arg.rawNode,
+          }))[0];
           set(
             produce((state: CommonInformationsStoreSlice) => {
-              state.informationsData.input.publicodesQuestions =
-                missingArgs.map((arg) => ({
-                  name: arg.name,
-                  rule: arg.rawNode,
-                }));
+              state.informationsData.input.publicodesInformations = [
+                {
+                  order: 0,
+                  question,
+                  info: undefined,
+                },
+              ];
               state.informationsData.input.isStepHidden = false;
             })
           );
@@ -73,52 +78,78 @@ const createCommonInformationsStore: StoreSlice<
       );
     },
     onInformationsChange: (key, value) => {
-      const currentInformations = get().informationsData.input.informations;
-      let hasAlreadyBeenRegistered = false;
-      if (currentInformations[key]) {
-        hasAlreadyBeenRegistered = true;
-      }
-      const newObj = { ...currentInformations, [key]: value };
-      applyGenericValidation(get, set, "informations", newObj);
       const publicodes = get().informationsData.publicodes!;
       const agreement = get().agreementData.input.agreement!;
+      const publicodesInformations =
+        get().informationsData.input.publicodesInformations;
+      const questionAnswered = publicodesInformations.find(
+        (question) => question.question.rule.nom === key
+      );
+      if (!questionAnswered) {
+        throw new Error(`Question ${key} is not found`);
+      }
+      const currentInformations: PublicodesInformation = {
+        info: value,
+        order: questionAnswered.order,
+        question: questionAnswered.question,
+      };
+      const newPublicodesInformations = [
+        ...publicodesInformations.filter(
+          (el) => el.order !== questionAnswered.order
+        ),
+        currentInformations,
+      ].sort((a, b) => a.order - b.order);
+      const rules = newPublicodesInformations
+        .filter((el) => el.order <= currentInformations.order)
+        .map((v) => ({
+          [v.question.rule.nom]: v.info,
+        }))
+        .reduce((acc, cur) => ({ ...acc, ...cur }), {});
       const { missingArgs } = publicodes.setSituation(
         mapToPublicodesSituationForIndemniteLicenciementConventionnel(
           agreement.num,
           0,
           0,
-          newObj
+          rules
         ),
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      if (missingArgs.length > 0) {
-        set(
-          produce((state: CommonInformationsStoreSlice) => {
-            const newQuestion = missingArgs
-              .sort((a, b) => b.indice - a.indice)
-              .map((arg) => ({
-                name: arg.name,
-                rule: arg.rawNode,
-              }))[0];
-            const publicodesQuestions = removeDuplicateObject(
-              [
-                ...state.informationsData.input.publicodesQuestions,
-                newQuestion,
-              ],
-              "name"
-            ) as Question[];
-            // quand le mec clique sur non cadre puis cadre il faut enlever les questions
-            state.informationsData.input.publicodesQuestions =
-              publicodesQuestions;
-          })
-        );
+      const newQuestions = missingArgs
+        .sort((a, b) => b.indice - a.indice)
+        .map((arg, index) => ({
+          question: {
+            name: arg.name,
+            rule: arg.rawNode,
+          },
+          order: questionAnswered.order + index + 1,
+          info: undefined,
+        }))[0];
+      let newPublicodesInformationsForNextQuestions: PublicodesInformation[];
+      if (missingArgs.length === 0) {
+        newPublicodesInformationsForNextQuestions =
+          newPublicodesInformations.filter(
+            (el) => el.order <= questionAnswered.order
+          );
       } else {
-        set(
-          produce((state: CommonInformationsStoreSlice) => {
-            state.informationsData.input.hasNoMissingVariables = true;
-          })
-        );
+        newPublicodesInformationsForNextQuestions = removeDuplicateObject(
+          [newQuestions, ...newPublicodesInformations].sort(
+            (a, b) => a.order - b.order
+          ),
+          "order"
+        ) as PublicodesInformation[];
       }
+      applyGenericValidation(
+        get,
+        set,
+        "publicodesInformations",
+        newPublicodesInformationsForNextQuestions
+      );
+      applyGenericValidation(
+        get,
+        set,
+        "hasNoMissingQuestions",
+        missingArgs.length === 0
+      );
     },
     onValidateStep: () => {
       const { isValid, errorState } = validateStep(
@@ -128,7 +159,7 @@ const createCommonInformationsStore: StoreSlice<
         produce((state: CommonInformationsStoreSlice) => {
           state.informationsData.hasBeenSubmit = isValid ? false : true;
           state.informationsData.isStepValid =
-            isValid && get().informationsData.input.hasNoMissingVariables;
+            isValid && get().informationsData.input.hasNoMissingQuestions;
           state.informationsData.error = errorState;
         })
       );

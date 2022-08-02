@@ -1,11 +1,16 @@
 import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
 import { Question } from "../../../DureePreavisRetraite/state";
 
+export type PublicodesInformation = {
+  info: string | undefined;
+  order: number;
+  question: Question;
+};
+
 export type CommonInformationsStoreInput = {
-  informations: Record<string, string>;
-  publicodesQuestions: Question[];
+  publicodesInformations: Array<PublicodesInformation>;
   isStepHidden: boolean;
-  hasNoMissingVariables: boolean;
+  hasNoMissingQuestions: boolean;
 };
 
 export type CommonInformationsStoreError = {

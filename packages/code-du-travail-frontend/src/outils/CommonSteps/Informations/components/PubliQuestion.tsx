@@ -14,7 +14,7 @@ interface Props {
   name: string;
   rule: Rule;
   trackQuestionEvent: MatomoActionEvent;
-  value: string;
+  value: string | undefined;
   onChange: (value: unknown) => void;
   error?: string;
   alertError?: string;

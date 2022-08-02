@@ -2,12 +2,11 @@ import { deepEqualObject } from "../../../../lib";
 import { CommonInformationsStoreInput } from "./types";
 
 export const validateStep = (state: CommonInformationsStoreInput) => {
-  const informations = state.informations;
-  const publicodesQuestions = state.publicodesQuestions;
+  const informations = state.publicodesInformations;
   let errorInformations: Record<string, string> = {};
-  publicodesQuestions.forEach((question) => {
-    if (informations[question.rule.nom] === undefined) {
-      errorInformations[question.rule.nom] = "Cette valeur est requise";
+  informations.forEach((info) => {
+    if (info.info === undefined) {
+      errorInformations[info.question.rule.nom] = "Cette valeur est requise";
     }
   });
   let errorState = { errorInformations };

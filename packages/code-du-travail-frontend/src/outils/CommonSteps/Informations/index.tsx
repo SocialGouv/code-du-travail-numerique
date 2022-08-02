@@ -2,36 +2,34 @@ import React from "react";
 
 import { Alert, Paragraph, Text, theme } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
-import { Question } from "../../DureePreavisRetraite/state";
 import { PubliQuestion } from "./components";
 import { MatomoActionEvent } from "../../../lib";
+import { PublicodesInformation } from "./store";
 
 export type InformationStepProps = {
-  questions: Question[];
   alertError?: string;
   onChange: (key: string, value: unknown) => void;
-  values: Record<string, string>;
+  informations: PublicodesInformation[];
   errors: Record<string, string>;
 };
 
 const CommonInformationStep = ({
-  questions,
   alertError,
   onChange,
-  values,
+  informations,
   errors,
 }: InformationStepProps): JSX.Element => (
   <>
-    {questions.map((question) => {
+    {informations.map((info) => {
       return (
         <PubliQuestion
-          key={question.name}
-          name={"infos." + question.name}
-          rule={question.rule}
+          key={info.question.name}
+          name={"infos." + info.question.name}
+          rule={info.question.rule}
           trackQuestionEvent={MatomoActionEvent.INDEMNITE_LICENCIEMENT}
-          value={values[question.rule.nom]}
-          onChange={(v) => onChange(question.rule.nom, v)}
-          error={errors[question.rule.nom] ?? undefined}
+          value={info.info}
+          onChange={(v) => onChange(info.question.rule.nom, v)}
+          error={errors[info.question.rule.nom] ?? undefined}
         />
       );
     })}
