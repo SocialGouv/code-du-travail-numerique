@@ -64,7 +64,7 @@ const ShowAlert = ({
           <Paragraph>
             Cette convention collective n&apos;est pas encore traitée par nos
             services mais le sera très prochainement. Vous pouvez poursuivre la
-            simulation pour connaitre la durée prévue par le code du travail
+            simulation pour connaître la durée prévue par le code du travail
             mais nous vous conseillons de vérifier si votre convention
             collective prévoit un délai plus favorable qui vous serait
             applicable.

@@ -32,23 +32,31 @@ export const createAgreement1516StoreSalaires: StoreSlice<
 > = (set, get) => ({
   agreement1516Data: { ...initialState },
   agreement1516Function: {
-    initSalaryPeriods: () => {
+    initSalaryPeriods: (withDefaultSalaryPeriod: boolean) => {
       const ancienneteInput = get().ancienneteData.input;
+      const defaultSalaryPeriod = get().salairesData.input.salaryPeriods;
+      const agreementSalaryPeriod = get().agreement1516Data.input.salaryPeriods;
       const periods = computeSalaryPeriods({
         motifs: getMotifs(SupportedCcIndemniteLicenciement.IDCC1516),
         dateEntree: ancienneteInput.dateNotification ?? "",
         dateNotification: ancienneteInput.dateSortie ?? "",
         absencePeriods: [],
       });
-      const p: SalaryPeriods[] = periods.map((v) => ({
-        month: v,
-        value: undefined,
-      }));
-      const salaryPeriods = deepMergeArray(
-        p,
-        get().agreement1516Data.input.salaryPeriods,
-        "month"
+      const period: SalaryPeriods[] = periods.map((v) =>
+        Object.assign(
+          { month: v },
+          withDefaultSalaryPeriod &&
+            defaultSalaryPeriod[0].value && {
+              value: defaultSalaryPeriod[0].value,
+            },
+          withDefaultSalaryPeriod && {
+            prime: 0,
+          }
+        )
       );
+      const salaryPeriods = withDefaultSalaryPeriod
+        ? deepMergeArray(period, agreementSalaryPeriod, "month", true)
+        : period;
       set(
         produce((state: Agreement1516StoreSlice) => {
           state.agreement1516Data.input.salaryPeriods = salaryPeriods;
@@ -56,11 +64,9 @@ export const createAgreement1516StoreSalaires: StoreSlice<
       );
     },
     onChangeHasReceivedSalaries: (value) => {
-      if (value === "non") {
-        applyGenericValidation(get, set, "salaryPeriods", []);
-      } else {
-        get().agreement1516Function.initSalaryPeriods();
-      }
+      get().agreement1516Function.initSalaryPeriods(
+        value === "non" ? true : false
+      );
       applyGenericValidation(get, set, "hasReceivedSalaries", value);
     },
     onSalariesChange: (value) => {
