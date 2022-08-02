@@ -1,6 +1,9 @@
 import {
+  Formula,
+  FormuleFactory,
   IndemniteLicenciementPublicodes,
   PublicodesIndemniteLicenciementResult,
+  References,
   SeniorityFactory,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
@@ -10,7 +13,6 @@ import {
   mapToPublicodesSituationForIndemniteLicenciementLegal,
 } from "../../../../publicodes";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
-import { generateExplanation } from "../../../common";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { SalairesStoreSlice } from "../../Salaires/store";
 import produce from "immer";
@@ -20,8 +22,11 @@ import { CommonAgreementStoreSlice } from "../../Agreement/store";
 
 const initialState: ResultStoreData = {
   input: {
-    publicodesLegalResult: null,
-    publicodesAgreementResult: null,
+    legalFormula: { formula: "", explanations: [] },
+    legalSeniority: 0,
+    legalReferences: [],
+    publicodesLegalResult: { value: "" },
+    isAgreementBetter: false,
   },
   error: {},
   hasBeenSubmit: true,
@@ -61,6 +66,15 @@ const createResultStore: StoreSlice<
         absencePeriods: get().ancienneteData.input.absencePeriods,
       });
 
+      const formulaFactory = new FormuleFactory().create(
+        SupportedCcIndemniteLicenciement.default
+      );
+      const legalFormula = formulaFactory.computeFormula({
+        seniority: legalSeniority,
+        isForInaptitude: isLicenciementInaptitude,
+        refSalary,
+      });
+
       const publicodesSituationLegal = publicodes.setSituation(
         mapToPublicodesSituationForIndemniteLicenciementLegal(
           legalSeniority,
@@ -69,14 +83,19 @@ const createResultStore: StoreSlice<
         )
       );
 
+      const legalReferences = publicodes.getReferences();
+
       let publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult;
-      let ancienneteConventionnel: number;
+      let agreementSeniority: number;
+      let agreementReferences: References[];
+      let agreementFormula: Formula;
+      let isAgreementBetter = false;
 
       if (agreement) {
         const factory = new SeniorityFactory().create(
           `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
         );
-        const agreementSeniority = factory.computeSeniority({
+        agreementSeniority = factory.computeSeniority({
           dateEntree: get().ancienneteData.input.dateEntree!,
           dateSortie: get().ancienneteData.input.dateSortie!,
           absencePeriods: get().ancienneteData.input.absencePeriods,
@@ -91,24 +110,46 @@ const createResultStore: StoreSlice<
           )
         );
 
+        agreementReferences = publicodes.getReferences(
+          "indemnité de licenciement . résultat conventionnel"
+        );
+
         publicodesSituationConventionnel = publicodes.execute(
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
-      }
 
-      const infoCalcul = generateExplanation({
-        anciennete: legalSeniority,
-        inaptitude: isLicenciementInaptitude,
-        salaireRef: refSalary,
-      });
+        const agreementFactoryFormula = new FormuleFactory().create(
+          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
+        );
+
+        agreementFormula = agreementFactoryFormula.computeFormula({
+          seniority: agreementSeniority,
+          refSalary: agreementRefSalary ?? refSalary,
+        });
+
+        if (
+          publicodesSituationConventionnel.value &&
+          publicodesSituationLegal.result.value &&
+          publicodesSituationConventionnel.value >
+            publicodesSituationLegal.result.value
+        ) {
+          isAgreementBetter = true;
+        }
+      }
 
       set(
         produce((state: ResultStoreSlice) => {
+          state.resultData.input.legalSeniority = legalSeniority;
+          state.resultData.input.legalFormula = legalFormula;
+          state.resultData.input.legalReferences = legalReferences;
           state.resultData.input.publicodesLegalResult =
             publicodesSituationLegal.result;
           state.resultData.input.publicodesAgreementResult =
-            publicodesSituationConventionnel ?? null;
-          state.resultData.input.infoCalcul = infoCalcul;
+            publicodesSituationConventionnel;
+          state.resultData.input.agreementSeniority = agreementSeniority;
+          state.resultData.input.agreementReferences = agreementReferences;
+          state.resultData.input.agreementFormula = agreementFormula;
+          state.resultData.input.isAgreementBetter = isAgreementBetter;
         })
       );
     },

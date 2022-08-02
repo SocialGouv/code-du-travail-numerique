@@ -58,7 +58,7 @@ const steps: Step<IndemniteLicenciementStepName>[] = [
     Component: StepSalaires,
   },
   {
-    label: "Indemnité légale",
+    label: "Indemnité",
     name: IndemniteLicenciementStepName.Resultat,
     Component: StepResultat,
   },
