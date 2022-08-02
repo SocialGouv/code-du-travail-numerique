@@ -74,6 +74,10 @@ const createCommonInformationsStore: StoreSlice<
     },
     onInformationsChange: (key, value) => {
       const currentInformations = get().informationsData.input.informations;
+      let hasAlreadyBeenRegistered = false;
+      if (currentInformations[key]) {
+        hasAlreadyBeenRegistered = true;
+      }
       const newObj = { ...currentInformations, [key]: value };
       applyGenericValidation(get, set, "informations", newObj);
       const publicodes = get().informationsData.publicodes!;

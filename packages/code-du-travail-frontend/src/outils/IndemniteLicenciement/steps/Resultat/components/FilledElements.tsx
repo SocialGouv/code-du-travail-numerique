@@ -57,9 +57,8 @@ export default function FilledElements(props: Props) {
         </li>
         <li>
           <strong>Convention collective</strong>&nbsp;:&nbsp;
-          {!props.agreementName
-            ? "La convention collective n’a pas été renseignée"
-            : props.agreementName}
+          {!props.agreementName ||
+            "La convention collective n’a pas été renseignée"}
         </li>
         {props.agreementInformations && props.agreementInformations.length > 0 && (
           <li>
