@@ -44,8 +44,8 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     return getNotifications(this.engine);
   }
 
-  getReferences(): References[] {
-    return getReferences(this.engine);
+  getReferences(specificRule?: string): References[] {
+    return getReferences(this.engine, specificRule);
   }
 
   private buildSituation(map: SituationElement[]): Record<string, string> {
