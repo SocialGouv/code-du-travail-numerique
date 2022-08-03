@@ -1,13 +1,12 @@
 import { useIndemniteLicenciementStore } from "../../store";
 import CommonAgreementStep from "../../../CommonSteps/Agreement";
 import { AgreementSupportInfo } from "../../../common/Agreement/types";
-import { supportedCcn } from "@socialgouv/modeles-social";
+import { getSupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 
 export const getSupportedCC = (): AgreementSupportInfo[] =>
-  supportedCcn.map((item) => ({
-    fullySupported:
-      item.preavisRetraite /* TODO à changer par Indemnité licenciement */,
-    idcc: item.idcc,
+  getSupportedCcIndemniteLicenciement().map((item) => ({
+    fullySupported: true,
+    idcc: parseInt(item.value.replace("IDCC", "")),
   }));
 
 const AgreementStep = (): JSX.Element => {
