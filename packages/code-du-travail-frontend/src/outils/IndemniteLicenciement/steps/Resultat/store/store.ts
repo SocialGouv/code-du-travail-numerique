@@ -96,7 +96,11 @@ const createResultStore: StoreSlice<
         const factory = new SeniorityFactory().create(
           `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
         );
-        const agreementInformations = get().informationsData.input.informations;
+        const agreementInformations = get()
+          .informationsData.input.publicodesInformations.map((v) => ({
+            [v.question.rule.nom]: v.info,
+          }))
+          .reduce((acc, cur) => ({ ...acc, ...cur }), {});
         agreementSeniority = factory.computeSeniority({
           dateEntree: get().ancienneteData.input.dateEntree!,
           dateSortie: get().ancienneteData.input.dateSortie!,
