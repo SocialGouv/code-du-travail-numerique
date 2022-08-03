@@ -6,7 +6,8 @@ export const validateStep = (state: CommonInformationsStoreInput) => {
   let errorInformations: Record<string, string> = {};
   informations.forEach((info) => {
     if (info.info === undefined) {
-      errorInformations[info.question.rule.nom] = "Cette valeur est requise";
+      errorInformations[info.question.rule.nom] =
+        "Vous devez répondre à cette question";
     }
   });
   let errorState = { errorInformations };

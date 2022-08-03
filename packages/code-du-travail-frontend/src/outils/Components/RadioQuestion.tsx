@@ -1,10 +1,10 @@
 import { InputRadio } from "@socialgouv/cdtn-ui";
 import React from "react";
+import styled from "styled-components";
 
 import { InlineError } from "../common/ErrorField";
 import { Question, Tooltip } from "../common/Question";
 import { RadioContainer } from "../common/stepStyles";
-import { ErrorWrapper } from "./TextQuestion";
 
 type Question = {
   label: string;
@@ -65,3 +65,7 @@ export default function RadioQuestion({
     </>
   );
 }
+
+export const ErrorWrapper = styled.div`
+  display: flex;
+`;

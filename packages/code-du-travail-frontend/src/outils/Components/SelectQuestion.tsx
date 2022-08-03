@@ -3,7 +3,6 @@ import React from "react";
 import styled from "styled-components";
 import { InlineError } from "../common/ErrorField";
 import { Question, Tooltip } from "../common/Question";
-import { ErrorWrapper } from "./TextQuestion";
 
 type Props = {
   name: string;
@@ -112,8 +111,13 @@ const StyledSelect = styled(Select)`
   @media (max-width: ${breakpoints.mobile}) {
     width: 100%;
   }
+  margin-bottom: ${spacings.base};
 `;
 
 const Wrapper = styled.div`
   margin-bottom: ${spacings.base};
+`;
+
+export const ErrorWrapper = styled.div`
+  display: flex;
 `;

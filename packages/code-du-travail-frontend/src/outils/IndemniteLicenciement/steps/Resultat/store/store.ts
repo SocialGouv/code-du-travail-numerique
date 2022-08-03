@@ -20,6 +20,7 @@ import produce from "immer";
 import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { AgreementInformation } from "../../../common";
 
 const initialState: ResultStoreData = {
   input: {
@@ -91,16 +92,29 @@ const createResultStore: StoreSlice<
       let agreementReferences: References[];
       let agreementFormula: Formula;
       let isAgreementBetter = false;
+      let agreementInformations: AgreementInformation[];
 
       if (agreement) {
         const factory = new SeniorityFactory().create(
           `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
         );
-        const agreementInformations = get()
+        const infos = get()
           .informationsData.input.publicodesInformations.map((v) => ({
             [v.question.rule.nom]: v.info,
           }))
           .reduce((acc, cur) => ({ ...acc, ...cur }), {});
+
+        agreementInformations = get()
+          .informationsData.input.publicodesInformations.map(
+            (v) =>
+              v.question.rule.titre &&
+              v.info && {
+                label: v.question.rule.titre,
+                value: v.info,
+              }
+          )
+          .filter((v) => v !== "") as AgreementInformation[];
+
         agreementSeniority = factory.computeSeniority({
           dateEntree: get().ancienneteData.input.dateEntree!,
           dateSortie: get().ancienneteData.input.dateSortie!,
@@ -112,7 +126,7 @@ const createResultStore: StoreSlice<
             agreement.num,
             agreementSeniority,
             agreementRefSalary ?? refSalary,
-            agreementInformations
+            infos
           ),
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         ).result;
@@ -153,6 +167,7 @@ const createResultStore: StoreSlice<
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.agreementFormula = agreementFormula;
           state.resultData.input.isAgreementBetter = isAgreementBetter;
+          state.resultData.input.agreementInformations = agreementInformations;
         })
       );
     },

@@ -32,7 +32,7 @@ export default function FilledElements(props: Props) {
               Type de contrat&nbsp;:&nbsp;{props.typeContrat.toUpperCase()}
             </li>
             <li>
-              Licenciement dû à une faute grave&nbsp;:&nbsp;
+              Licenciement dû à une faute grave (ou lourde)&nbsp;:&nbsp;
               {props.isLicenciementFauteGrave ? "Oui" : "Non"}
             </li>
             <li>
@@ -66,7 +66,7 @@ export default function FilledElements(props: Props) {
             <ul>
               {props.agreementInformations.map((info, index) => (
                 <li key={"agreement-" + index}>
-                  {info.label}&nbsp;:&npsp;{info.value}
+                  {info.label}&nbsp;:&nbsp;{info.value}
                 </li>
               ))}
             </ul>
@@ -88,7 +88,7 @@ export default function FilledElements(props: Props) {
               {props.dateSortie}
             </li>
             <li>
-              Absence de plus d&apos;un mois durant le contrat de
+              Absences de plus d&apos;un mois durant le contrat de
               travail&nbsp;:&nbsp;
               {props.absencesPeriods.length > 0 ? "Oui" : "Non"}
             </li>
@@ -121,14 +121,14 @@ export default function FilledElements(props: Props) {
             </li>
             {props.salaryPeriods.length > 0 && (
               <li>
-                Salaire des 12 derniers mois précédant la date de notification
-                de licenciement&nbsp;:&nbsp;
+                Salaires mensuels bruts perçus au cours des 12 mois précédents
+                la notification du licenciement&nbsp;:&nbsp;
                 <StyledFilledElementTable>
                   <thead>
                     <tr>
                       <th>Mois</th>
                       <th>
-                        Salaire
+                        Salaires
                         <br />
                         <StyledFilledElementSpan>
                           (primes et avantages en nature inclus)
