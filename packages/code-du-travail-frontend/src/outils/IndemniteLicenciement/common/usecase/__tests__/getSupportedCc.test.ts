@@ -7,7 +7,8 @@ describe("utils - indemnite de licenciement", () => {
       expect(supportedCc).toEqual(
         expect.arrayContaining([
           expect.objectContaining({
-            value: "default",
+            fullySupported: true,
+            idcc: 2264,
           }),
         ])
       );

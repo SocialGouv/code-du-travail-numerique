@@ -145,8 +145,8 @@ const createResultStore: StoreSlice<
         });
 
         if (
-          publicodesSituationConventionnel.value &&
-          publicodesSituationLegal.value &&
+          publicodesSituationConventionnel.value !== null &&
+          publicodesSituationLegal.value !== null &&
           publicodesSituationConventionnel.value >
             publicodesSituationLegal.value
         ) {

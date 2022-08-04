@@ -57,7 +57,7 @@ export default function FilledElements(props: Props) {
         </li>
         <li>
           <strong>Convention collective</strong>&nbsp;:&nbsp;
-          {!props.agreementName ||
+          {props.agreementName ??
             "La convention collective n’a pas été renseignée"}
         </li>
         {props.agreementInformations && props.agreementInformations.length > 0 && (
@@ -66,7 +66,7 @@ export default function FilledElements(props: Props) {
             <ul>
               {props.agreementInformations.map((info, index) => (
                 <li key={"agreement-" + index}>
-                  {info.label}&nbsp;:&nbsp;{info.value}
+                  {info.label}&nbsp;:&nbsp;{info.value.replace("'", "")}
                 </li>
               ))}
             </ul>

@@ -12,7 +12,10 @@ export default function Result(props: Props) {
       <p>
         À partir des éléments que vous avez saisis, l’indemnité de licenciement
         est estimée à&nbsp;:&nbsp;
-        <HighlightResult>{`${props.maxResult} € brut.`}</HighlightResult>
+        <HighlightResult>{`${props.maxResult.replace(
+          ".",
+          ","
+        )} € brut.`}</HighlightResult>
       </p>
     </>
   );
