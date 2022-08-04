@@ -36,6 +36,7 @@ export enum MatomoSimulatorEvent {
 export enum MatomoAgreementEvent {
   CC_TREATED = "cc_select_traitée",
   CC_UNTREATED = "cc_select_non_traitée",
+  CC_BLOCK_USER = "user_blocked_info_cc",
 }
 
 export enum MatomoRetirementEvent {
