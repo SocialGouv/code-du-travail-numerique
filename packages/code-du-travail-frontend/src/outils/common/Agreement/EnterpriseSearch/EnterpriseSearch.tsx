@@ -97,7 +97,7 @@ const EnterpriseSearch = ({
       />
       <ErrorField
         name={ENTERPRISE_NAME}
-        errorText={"Vous devez séléctionner une entreprise"}
+        errorText={"Vous devez sélectionner une entreprise"}
       />
       <Field
         type="input"

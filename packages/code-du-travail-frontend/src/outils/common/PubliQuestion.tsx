@@ -11,14 +11,10 @@ import { Rule, RuleType } from "@socialgouv/modeles-social";
 interface Props {
   name: string;
   rule: Rule;
-  onHasSameSalaryChange?: (values?: unknown) => void;
+  onChange?: (values?: unknown) => void;
 }
 
-const PubliQuestion: React.FC<Props> = ({
-  name,
-  rule,
-  onHasSameSalaryChange,
-}) => {
+const PubliQuestion: React.FC<Props> = ({ name, rule, onChange }) => {
   const { question, titre, cdtn } = rule;
   const tooltip = rule.description
     ? {
@@ -41,7 +37,7 @@ const PubliQuestion: React.FC<Props> = ({
           name={name}
           label={question}
           options={reverseValues(cdtn.valeurs)}
-          onChange={onHasSameSalaryChange}
+          onChange={onChange}
           tooltip={tooltip}
         />
       );
@@ -51,7 +47,7 @@ const PubliQuestion: React.FC<Props> = ({
           name={name}
           label={question}
           tooltip={tooltip}
-          onChange={onHasSameSalaryChange}
+          onChange={onChange}
         />
       );
     default:

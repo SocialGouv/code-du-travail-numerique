@@ -1,12 +1,10 @@
-import {
-  getSupportedCcIndemniteLicenciement,
-  SupportedCcIndemniteLicenciement,
-} from "@socialgouv/modeles-social";
+import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 import React from "react";
 import { IndemniteLicenciementStepName } from "../..";
 import PubliReferences from "../../../common/PubliReferences";
 import ShowDetails from "../../../common/ShowDetails";
 import { AgreementsInjector } from "../../agreements";
+import { getSupportedCcIndemniteLicenciement } from "../../common";
 
 import { useIndemniteLicenciementStore } from "../../store";
 import {
@@ -39,6 +37,7 @@ const StepResult = () => {
     hasTempsPartiel,
     isAgreementBetter,
     agreementFormula,
+    agreementInformations,
   } = useIndemniteLicenciementStore((state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -61,6 +60,7 @@ const StepResult = () => {
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     isAgreementBetter: state.resultData.input.isAgreementBetter,
     agreementFormula: state.resultData.input.agreementFormula,
+    agreementInformations: state.resultData.input.agreementInformations,
   }));
 
   React.useEffect(() => {
@@ -81,18 +81,15 @@ const StepResult = () => {
           absencesPeriods={absencePeriods}
           agreementName={agreement?.shortTitle}
           typeContrat={typeContratTravail!.toString()}
-          isLicenciementFauteGrave={
-            licenciementFauteGrave === "oui" ? true : false
-          }
-          isLicenciementInaptitude={
-            licenciementInaptitude === "oui" ? true : false
-          }
+          isLicenciementFauteGrave={licenciementFauteGrave === "oui"}
+          isLicenciementInaptitude={licenciementInaptitude === "oui"}
           dateEntree={dateEntree!}
           dateSortie={dateSortie!}
           dateNotification={dateNotification!}
           salaryPeriods={salaryPeriods}
-          hasTempsPartiel={hasTempsPartiel === "oui" ? true : false}
+          hasTempsPartiel={hasTempsPartiel === "oui"}
           isAgreementBetter={isAgreementBetter}
+          agreementInformations={agreementInformations}
           agreementRefSalaryInfo={
             agreement && (
               <AgreementsInjector
@@ -112,10 +109,10 @@ const StepResult = () => {
           }
         />
         <DecryptResult
-          hasSelectedAgreement={route === "agreement"}
+          hasSelectedAgreement={route !== "none"}
           isAgreementSupported={
             getSupportedCcIndemniteLicenciement().find(
-              (v) => v.value === `IDCC${agreement?.num}`
+              (v) => v.fullySupported && v.idcc === agreement?.num
             )
               ? true
               : false
@@ -130,10 +127,10 @@ const StepResult = () => {
         />
       </ShowDetails>
       <AgreementInfo
-        hasSelectedAgreement={route === "agreement"}
+        hasSelectedAgreement={route !== "none"}
         isAgreementSupported={
           getSupportedCcIndemniteLicenciement().find(
-            (v) => v.value === `IDCC${agreement?.num}`
+            (v) => v.fullySupported && v.idcc === agreement?.num
           )
             ? true
             : false

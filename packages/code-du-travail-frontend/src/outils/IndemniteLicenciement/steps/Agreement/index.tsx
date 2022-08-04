@@ -1,16 +1,9 @@
 import { useIndemniteLicenciementStore } from "../../store";
 import CommonAgreementStep from "../../../CommonSteps/Agreement";
-import { AgreementSupportInfo } from "../../../common/Agreement/types";
-import { supportedCcn } from "@socialgouv/modeles-social";
+import { getSupportedCcIndemniteLicenciement } from "../../common";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
-export const getSupportedCC = (): AgreementSupportInfo[] =>
-  supportedCcn.map((item) => ({
-    fullySupported:
-      item.preavisRetraite /* TODO à changer par Indemnité licenciement */,
-    idcc: item.idcc,
-  }));
-
-export const AgreementStep = (): JSX.Element => {
+const AgreementStep = (): JSX.Element => {
   const {
     error,
     onRouteChange,
@@ -35,7 +28,10 @@ export const AgreementStep = (): JSX.Element => {
       onAgreementChange={onAgreementChange}
       selectedEnterprise={enterprise}
       selectedAgreement={agreement}
-      supportedAgreements={getSupportedCC()}
+      supportedAgreements={getSupportedCcIndemniteLicenciement()}
+      simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
     />
   );
 };
+
+export default AgreementStep;

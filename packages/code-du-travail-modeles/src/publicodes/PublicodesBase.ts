@@ -27,10 +27,14 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     return this.convertedResult(result);
   }
 
-  setSituation(args: Record<string, string>): PublicodesData<TResult> {
+  setSituation(
+    args: Record<string, string>,
+    targetRule?: string
+  ): PublicodesData<TResult> {
     const { missingArgs, result, situation } = this.updateSituation(
       this.data.situation,
-      args
+      args,
+      targetRule ?? this.targetRule
     );
     this.data = {
       missingArgs,
@@ -82,7 +86,8 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
 
   private updateSituation(
     situation: SituationElement[],
-    args: Record<string, string>
+    args: Record<string, string>,
+    targetRule: string
   ): {
     missingArgs: MissingArgs[];
     result: EvaluatedNode;
@@ -118,7 +123,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     });
 
     this.engine.setSituation(this.buildSituation(newSituation));
-    const result = this.engine.evaluate(this.targetRule);
+    const result = this.engine.evaluate(targetRule);
 
     return {
       missingArgs: this.buildMissingArgs(this.engine, result.missingVariables),
