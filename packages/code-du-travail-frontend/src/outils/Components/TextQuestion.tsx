@@ -36,7 +36,7 @@ export default function TextQuestion({
 }: Props) {
   const InputComponent = inputType === "date" ? InputDate : Input;
   return (
-    <>
+    <Wrapper>
       <Question required={showRequired} tooltip={tooltip} htmlFor={id}>
         {label}
       </Question>
@@ -52,31 +52,33 @@ export default function TextQuestion({
           type={inputType === "date" ? "text" : inputType}
           updateOnScrollDisabled
         />
-        {error && (
-          <ErrorWrapper>
-            <InlineError>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: xss(error),
-                }}
-              />
-            </InlineError>
-          </ErrorWrapper>
-        )}
       </QuestionWrapper>
-    </>
+      {error && (
+        <ErrorWrapper>
+          <InlineError>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: xss(error),
+              }}
+            />
+          </InlineError>
+        </ErrorWrapper>
+      )}
+    </Wrapper>
   );
 }
 
 const { spacings } = theme;
 
-const QuestionWrapper = styled.div`
-  display: flex;
-  align-items: center;
+const Wrapper = styled.div`
   margin-bottom: ${spacings.base};
 `;
 
+const QuestionWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export const ErrorWrapper = styled.div`
-  display: inline-block;
-  margin-left: ${spacings.medium};
+  display: flex;
 `;

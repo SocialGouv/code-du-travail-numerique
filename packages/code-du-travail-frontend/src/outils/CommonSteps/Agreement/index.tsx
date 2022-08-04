@@ -9,6 +9,7 @@ import {
 } from "../../common/Agreement/types";
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
 import { InlineError } from "../../common/ErrorField";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 type Props = {
   selectedRoute?: Route;
@@ -17,6 +18,7 @@ type Props = {
   selectedEnterprise?: Enterprise;
   selectedAgreement?: Agreement;
   onAgreementChange: OnSelectAgreementFn;
+  simulator: PublicodesSimulator;
   error?: {
     route?: string;
     agreement?: string;
@@ -32,6 +34,7 @@ function AgreementStep({
   selectedAgreement,
   onAgreementChange,
   error,
+  simulator,
 }: Props): JSX.Element {
   return (
     <>
@@ -78,6 +81,7 @@ function AgreementStep({
             onSelectAgreement={onAgreementChange}
             onUserAction={() => {}}
             alertAgreementNotSupported={undefined}
+            simulator={simulator}
           />
           {error?.agreement && <InlineError>{error.agreement}</InlineError>}
         </>

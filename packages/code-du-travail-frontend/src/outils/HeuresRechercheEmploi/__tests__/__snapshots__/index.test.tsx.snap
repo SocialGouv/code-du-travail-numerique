@@ -154,7 +154,7 @@ exports[`<HeuresRechercheEmploi /> should render 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   width: 28rem;
-  padding: 6rem 4rem 4rem 4rem;
+  padding: 4rem 4rem 4rem 4rem;
   border-radius: 0.6rem 0 0 0.6rem;
 }
 

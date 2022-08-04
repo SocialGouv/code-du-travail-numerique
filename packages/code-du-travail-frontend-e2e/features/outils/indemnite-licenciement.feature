@@ -34,7 +34,12 @@ Fonctionnalité: Outil - Indemnité de licenciement
 
     Alors je vois "Le licenciement est-il dû à une inaptitude"
     Quand je choisis "#inaptitude-non"
+    Quand je clique sur "Suivant"
 
+    Alors je vois "Quel est le nom de la convention collective applicable"
+    Quand je clique sur "Suivant"
+    Alors je vois "Vous devez répondre à cette question"
+    Quand je choisis "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)"
     Quand je clique sur "Suivant"
 
 
@@ -90,6 +95,6 @@ Fonctionnalité: Outil - Indemnité de licenciement
 
     Quand je clique sur "Suivant"
 
-    Alors je vois "Indemnité légale"
-    Alors je vois "6 500,00"
+    Alors je vois "Indemnité"
+    Alors je vois "6500 € brut"
     Alors je vois "Imprimer le résultat"

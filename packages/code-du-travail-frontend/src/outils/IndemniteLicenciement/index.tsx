@@ -7,13 +7,14 @@ import {
   StepAnciennete,
   StepSalaires,
   StepResultat,
+  StepAgreement,
+  StepInformations,
 } from "./steps";
 import {
   createIndemniteLicenciementStore,
   IndemniteLicenciementProvider,
   useIndemniteLicenciementStore,
 } from "./store";
-import { AgreementStep } from "./steps/Agreement";
 
 type Props = {
   icon: string;
@@ -24,11 +25,12 @@ type Props = {
 
 export enum IndemniteLicenciementStepName {
   Introduction = "start",
-  Info = "contrat_travail",
-  Agreement = "ccn",
+  ContratTravail = "contrat_travail",
+  Agreement = "info_cc",
   Anciennete = "anciennete",
   Salaires = "salaires",
   Resultat = "results",
+  Informations = "infos",
 }
 
 const steps: Step<IndemniteLicenciementStepName>[] = [
@@ -39,13 +41,18 @@ const steps: Step<IndemniteLicenciementStepName>[] = [
   },
   {
     label: "Contrat de travail",
-    name: IndemniteLicenciementStepName.Info,
+    name: IndemniteLicenciementStepName.ContratTravail,
     Component: StepContratTravail,
   },
   {
     label: "Convention collective",
     name: IndemniteLicenciementStepName.Agreement,
-    Component: AgreementStep,
+    Component: StepAgreement,
+  },
+  {
+    label: "Informations",
+    name: IndemniteLicenciementStepName.Informations,
+    Component: StepInformations,
   },
   {
     label: "Ancienneté",
@@ -70,31 +77,41 @@ const IndemniteLicenciementSimulator = ({
   displayTitle,
 }: Omit<Props, "publicodesRules">): JSX.Element => {
   const {
-    onValidateStepInfo,
-    isStepInfoValid,
+    onValidateStepContratTravail,
+    isStepContratTravailValid,
     onValidateStepAnciennete,
     isStepAncienneteValid,
     onValidateStepSalaires,
     isStepSalairesValid,
     onValidateStepAgreement,
     isStepAgreementValid,
+    onValidateStepInformations,
+    isStepInformationsValid,
+    isStepInformationsHidden,
   } = useIndemniteLicenciementStore((state) => ({
-    onValidateStepInfo: state.contratTravailFunction.onValidateStepInfo,
-    isStepInfoValid: state.contratTravailData.isStepValid,
+    onValidateStepContratTravail:
+      state.contratTravailFunction.onValidateStepInfo,
+    isStepContratTravailValid: state.contratTravailData.isStepValid,
     onValidateStepAnciennete: state.ancienneteFunction.onValidateStepAnciennete,
     isStepAncienneteValid: state.ancienneteData.isStepValid,
     onValidateStepSalaires: state.salairesFunction.onValidateStepSalaires,
     isStepSalairesValid: state.salairesData.isStepValid,
     onValidateStepAgreement: state.agreementFunction.onValidateStep,
     isStepAgreementValid: state.agreementData.isStepValid,
+    onValidateStepInformations: state.informationsFunction.onValidateStep,
+    isStepInformationsValid: state.informationsData.isStepValid,
+    isStepInformationsHidden: state.informationsData.input.isStepHidden,
   }));
 
   const data = useIndemniteLicenciementStore((state) => {
     let resultDataWithoutPublicodes = { ...state.resultData };
     delete resultDataWithoutPublicodes.publicodes;
+    let informationsDataWithoutPublicodes = { ...state.informationsData };
+    delete informationsDataWithoutPublicodes.publicodes;
     return {
       contratTravailData: { ...state.contratTravailData },
       agreementData: { ...state.agreementData },
+      informationsData: informationsDataWithoutPublicodes,
       ancienneteData: { ...state.ancienneteData },
       salairesData: { ...state.salairesData },
       resultData: resultDataWithoutPublicodes,
@@ -112,9 +129,9 @@ const IndemniteLicenciementSimulator = ({
       steps={steps}
       validators={[
         {
-          stepName: IndemniteLicenciementStepName.Info,
-          isStepValid: isStepInfoValid,
-          validator: onValidateStepInfo,
+          stepName: IndemniteLicenciementStepName.ContratTravail,
+          isStepValid: isStepContratTravailValid,
+          validator: onValidateStepContratTravail,
         },
         {
           stepName: IndemniteLicenciementStepName.Agreement,
@@ -131,7 +148,17 @@ const IndemniteLicenciementSimulator = ({
           isStepValid: isStepSalairesValid,
           validator: onValidateStepSalaires,
         },
+        {
+          stepName: IndemniteLicenciementStepName.Informations,
+          isStepValid: isStepInformationsValid,
+          validator: onValidateStepInformations,
+        },
       ]}
+      hiddenStep={
+        isStepInformationsHidden
+          ? [IndemniteLicenciementStepName.Informations]
+          : []
+      }
     />
   );
 };

@@ -8,6 +8,7 @@ import {
   CommonAgreementStoreSlice,
 } from "./types";
 import { StoreSlice } from "../../../types";
+import { CommonInformationsStoreSlice } from "../../Informations/store";
 
 const initialState: CommonAgreementStoreData = {
   input: {},
@@ -16,10 +17,10 @@ const initialState: CommonAgreementStoreData = {
   isStepValid: true,
 };
 
-const createCommonAgreementStore: StoreSlice<CommonAgreementStoreSlice> = (
-  set,
-  get
-) => ({
+const createCommonAgreementStore: StoreSlice<
+  CommonAgreementStoreSlice,
+  CommonInformationsStoreSlice
+> = (set, get) => ({
   agreementData: { ...initialState },
   agreementFunction: {
     onRouteChange: (value) => {
@@ -30,10 +31,12 @@ const createCommonAgreementStore: StoreSlice<CommonAgreementStoreSlice> = (
         })
       );
       applyGenericValidation(get, set, "route", value);
+      get().informationsFunction.generatePublicodesQuestions();
     },
     onAgreementChange: (agreement, enterprise) => {
       applyGenericValidation(get, set, "agreement", agreement);
       applyGenericValidation(get, set, "enterprise", enterprise);
+      get().informationsFunction.generatePublicodesQuestions();
     },
     onValidateStep: () => {
       const { isValid, errorState } = validateStep(get().agreementData.input);

@@ -25,6 +25,7 @@ type Props<StepName extends string> = {
   debug?: JSX.Element;
   steps: Step<StepName>[];
   validators: Validator<StepName>[];
+  hiddenStep?: StepName[];
 };
 
 const SimulatorContent = <StepName extends string>({
@@ -35,6 +36,7 @@ const SimulatorContent = <StepName extends string>({
   debug,
   steps,
   validators,
+  hiddenStep,
 }: Props<StepName>): JSX.Element => {
   const anchorRef = React.createRef<HTMLLIElement>();
 
@@ -42,16 +44,22 @@ const SimulatorContent = <StepName extends string>({
     (state) => state
   );
 
-  const Step = steps[currentStepIndex].Component;
+  const visibleSteps = useMemo(
+    () =>
+      steps.filter((step) => !hiddenStep || !hiddenStep.includes(step.name)),
+    [steps, hiddenStep]
+  );
+
+  const Step = visibleSteps[currentStepIndex].Component;
 
   const stepItems = useMemo(
     () =>
-      steps.map(({ name, label }) => ({
+      visibleSteps.map(({ name, label }) => ({
         isValid: false,
         label,
         name,
       })),
-    [steps]
+    [visibleSteps]
   );
 
   useEffect(() => {
@@ -65,7 +73,7 @@ const SimulatorContent = <StepName extends string>({
 
   const onNextStep = () => {
     const nextStepIndex = currentStepIndex + 1;
-    if (nextStepIndex >= steps.length) {
+    if (nextStepIndex >= visibleSteps.length) {
       throw Error("Can't show the next step with index more than steps");
     } else {
       let isValid: boolean | undefined;
@@ -74,7 +82,8 @@ const SimulatorContent = <StepName extends string>({
       } else {
         isValid = validators
           .find(
-            (validator) => validator.stepName === steps[currentStepIndex].name
+            (validator) =>
+              validator.stepName === visibleSteps[currentStepIndex].name
           )
           ?.validator();
       }
@@ -84,7 +93,7 @@ const SimulatorContent = <StepName extends string>({
           "trackEvent",
           "outil",
           `view_step_${title}`,
-          steps[nextStepIndex].name,
+          visibleSteps[nextStepIndex].name,
         ]);
         window?.scrollTo(0, 0);
       }
@@ -99,7 +108,7 @@ const SimulatorContent = <StepName extends string>({
         "trackEvent",
         "outil",
         `click_previous_${title}`,
-        steps[previousStepIndex].name,
+        visibleSteps[previousStepIndex].name,
       ]);
       window?.scrollTo(0, 0);
     } else {
@@ -114,7 +123,9 @@ const SimulatorContent = <StepName extends string>({
           title={displayTitle}
           duration={currentStepIndex === 0 ? duration : undefined}
           icon={icon}
-          hasNoMarginBottom={steps[currentStepIndex].options?.hasNoMarginBottom}
+          hasNoMarginBottom={
+            visibleSteps[currentStepIndex].options?.hasNoMarginBottom
+          }
         />
         <StepList
           activeIndex={currentStepIndex}
@@ -125,14 +136,15 @@ const SimulatorContent = <StepName extends string>({
         <SimulatorNavigation
           hasError={
             validators.find(
-              (validator) => validator.stepName === steps[currentStepIndex].name
+              (validator) =>
+                validator.stepName === visibleSteps[currentStepIndex].name
             )?.isStepValid === false
               ? true
               : false
           }
-          showNext={currentStepIndex < steps.length - 1}
+          showNext={currentStepIndex < visibleSteps.length - 1}
           onPrint={
-            currentStepIndex === steps.length - 1
+            currentStepIndex === visibleSteps.length - 1
               ? () => printResult(title)
               : undefined
           }
@@ -140,8 +152,8 @@ const SimulatorContent = <StepName extends string>({
           onNext={onNextStep}
           onStart={onNextStep}
         />
-        {steps[currentStepIndex].options?.annotation && (
-          <p>{steps[currentStepIndex].options?.annotation}</p>
+        {visibleSteps[currentStepIndex].options?.annotation && (
+          <p>{visibleSteps[currentStepIndex].options?.annotation}</p>
         )}
         {process.env.NODE_ENV !== "production" &&
           process.env.NODE_ENV !== "test" &&

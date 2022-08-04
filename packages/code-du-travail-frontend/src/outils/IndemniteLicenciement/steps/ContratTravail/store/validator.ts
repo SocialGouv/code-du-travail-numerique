@@ -3,8 +3,8 @@ import { ContratTravailStoreInput, ContratTravailStoreError } from "./types";
 
 export const validateStep = (state: ContratTravailStoreInput) => {
   const errorState: ContratTravailStoreError = {
-    errorCdd: state.typeContratTravail === "cdd" ? true : false,
-    errorFauteGrave: state.licenciementFauteGrave === "oui" ? true : false,
+    errorCdd: state.typeContratTravail === "cdd",
+    errorFauteGrave: state.licenciementFauteGrave === "oui",
     errorLicenciementInaptitude: !state.licenciementInaptitude
       ? "Vous devez répondre à cette question"
       : undefined,

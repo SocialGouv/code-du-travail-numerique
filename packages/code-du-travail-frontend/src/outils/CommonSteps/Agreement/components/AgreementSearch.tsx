@@ -13,12 +13,14 @@ import { AgreementSupportInfo } from "../../../common/Agreement/types";
 import ShowAlert from "../../../common/Agreement/components/ShowAlert";
 import { SearchAgreementInput } from "../../../common/Agreement/AgreementSearch/AgreementInput/SearchAgreementInput";
 import { renderResults } from "../../../common/Agreement/AgreementSearch/AgreementSearchResult";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 export type Props = {
   supportedAgreements: AgreementSupportInfo[];
   selectedAgreement?: Agreement;
   onSelectAgreement: (agreement: Agreement | null) => void;
   alertAgreementNotSupported?: (string) => JSX.Element;
+  simulator: PublicodesSimulator;
 } & TrackingProps;
 
 const AgreementSearch = ({
@@ -27,6 +29,7 @@ const AgreementSearch = ({
   onSelectAgreement,
   onUserAction,
   alertAgreementNotSupported,
+  simulator,
 }: Props): JSX.Element => {
   if (selectedAgreement) {
     return (
@@ -47,6 +50,7 @@ const AgreementSearch = ({
           currentAgreement={selectedAgreement}
           supportedAgreements={supportedAgreements}
           alertAgreementNotSupported={alertAgreementNotSupported}
+          simulator={simulator}
         />
       </>
     );

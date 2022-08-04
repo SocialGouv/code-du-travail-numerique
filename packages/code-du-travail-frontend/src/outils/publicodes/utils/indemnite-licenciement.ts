@@ -20,7 +20,7 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
   ccn: number,
   seniority: number,
   salaireRef: number,
-  agreementParameters?: Record<string, string>
+  agreementParameters?: Record<string, any>
 ): Record<string, string> => {
   return {
     ...agreementParameters,

@@ -28,9 +28,7 @@ const InformationStep = ({
           key={question.name}
           name={"infos." + question.name}
           rule={question.rule}
-          onHasSameSalaryChange={(values) =>
-            onChange(question.name, values as string)
-          }
+          onChange={(values) => onChange(question.name, values as string)}
         />
       );
     })}

@@ -7,7 +7,6 @@ export type SalairesStoreInput = {
   salaryPeriods: SalaryPeriods[];
   refSalary: number;
   agreementRefSalary?: number;
-  agreementParameters?: Record<string, string>;
 };
 
 export type SalairesStoreError = {
