@@ -1,5 +1,4 @@
 import { loadPublicodesRules } from "../../../../../api";
-import { MOTIFS } from "../../../../common";
 import { createIndemniteLicenciementStore } from "../../../../store";
 
 describe("Result store", () => {
@@ -16,8 +15,9 @@ describe("Result store", () => {
   });
 
   it("should init data input", () => {
-    expect(store.getState().resultData.input.infoCalcul).toBe(undefined);
-    expect(store.getState().resultData.input.publicodesResult).toBe(null);
+    expect(store.getState().resultData.input.legalFormula).toBe(undefined);
+    expect(store.getState().resultData.input.legalReferences).toBe(null);
+    expect(store.getState().resultData.input.legalSeniority).toBe(null);
   });
 
   it("should compute the publicodes result with same salary 🔥", () => {

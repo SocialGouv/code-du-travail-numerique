@@ -43,7 +43,6 @@ describe("<SalaireTempsPlein />", () => {
       },
     ];
     const onSalariesChange = (salaries: any) => {
-      console.log(salaries);
       initObject = salaries;
     };
     const { getByTitle } = render(
@@ -57,28 +56,25 @@ describe("<SalaireTempsPlein />", () => {
       /Salaire mensuel brut pour le mois/i
     ) as HTMLInputElement;
     fireEvent.change(input1, { target: { value: "1500" } });
-    expect(input1.value).toBe("1500");
-    expect(onSalariesChange).toHaveBeenCalledTimes(1);
-    expect(onSalariesChange).toHaveBeenCalledWith([
-      {
-        month: "janvier",
-        value: 1500,
-      },
-    ]);
+    expect(initObject[0].value).toBe(1500);
   });
 
   it("should add a prime", () => {
-    const onSalariesChange = jest.fn();
+    let initObject = [
+      {
+        month: "janvier",
+        value: 2000,
+        prime: undefined,
+      },
+    ];
+    const onSalariesChange = (salaries: any) => {
+      initObject = salaries;
+    };
     const { getByTitle } = render(
       <SalaireTempsPlein
         title="Yo"
         onSalariesChange={onSalariesChange}
-        salaryPeriods={[
-          {
-            month: "janvier",
-            value: 2000,
-          },
-        ]}
+        salaryPeriods={initObject}
       />
     );
     const input1 = getByTitle(
@@ -86,15 +82,7 @@ describe("<SalaireTempsPlein />", () => {
     ) as HTMLInputElement;
     expect(input1).toBeTruthy();
     fireEvent.change(input1, { target: { value: "6000" } });
-    expect(input1.value).toBe("6000");
-    expect(onSalariesChange).toHaveBeenCalledTimes(1);
-    expect(onSalariesChange).toHaveBeenCalledWith([
-      {
-        month: "janvier",
-        value: 2000,
-        prime: 6000,
-      },
-    ]);
+    expect(initObject[0].prime).toBe(6000);
   });
 
   it("should render error", () => {

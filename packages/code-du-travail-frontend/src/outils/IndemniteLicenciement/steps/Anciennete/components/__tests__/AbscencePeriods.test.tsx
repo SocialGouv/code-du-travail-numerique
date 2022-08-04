@@ -16,7 +16,7 @@ describe("<AbsencePeriods />", () => {
     const { getByRole, getAllByRole } = render(
       <AbsencePeriods onChange={jest.fn()} absences={[]} error={undefined} />
     );
-    expect(getAllByRole("option").length).toBe(10);
+    expect(getAllByRole("option").length).toBe(9);
     expect(
       getByRole("option", { name: "Congé pour création d'entreprise" })
     ).toBeInTheDocument();
@@ -44,9 +44,9 @@ describe("<AbsencePeriods />", () => {
     const { getByText, getAllByRole } = render(
       <AbsencePeriods onChange={jest.fn()} absences={[]} error={undefined} />
     );
-    expect(getAllByRole("option").length).toBe(10);
+    expect(getAllByRole("option").length).toBe(9);
     userEvent.click(getByText("Ajouter une absence"));
-    expect(getAllByRole("option").length).toBe(20);
+    expect(getAllByRole("option").length).toBe(18);
   });
 
   it("should render absences by default", () => {
