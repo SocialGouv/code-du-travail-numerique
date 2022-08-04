@@ -4,17 +4,20 @@ import React from "react";
 import { AgreementSupportInfo } from "../types";
 import { Agreement } from "../../../../conventions/Search/api/type";
 import styled from "styled-components";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 type Props = {
   currentAgreement: Agreement;
   supportedAgreements: AgreementSupportInfo[];
   alertAgreementNotSupported?: (string) => JSX.Element;
+  simulator?: PublicodesSimulator;
 };
 
 const ShowAlert = ({
   currentAgreement,
   supportedAgreements,
   alertAgreementNotSupported,
+  simulator = PublicodesSimulator.PREAVIS_RETRAITE,
 }: Props): JSX.Element => {
   const idccInfo = supportedAgreements.find(
     (item) => item.idcc == currentAgreement.num
@@ -62,12 +65,25 @@ const ShowAlert = ({
             Convention prochainement traitée
           </Text>
           <Paragraph>
-            Cette convention collective n&apos;est pas encore traitée par nos
-            services mais le sera très prochainement. Vous pouvez poursuivre la
-            simulation pour connaître la durée prévue par le code du travail
-            mais nous vous conseillons de vérifier si votre convention
-            collective prévoit un délai plus favorable qui vous serait
-            applicable.
+            {simulator === PublicodesSimulator.PREAVIS_RETRAITE ? (
+              <>
+                Cette convention collective n&apos;est pas encore traitée par
+                nos services mais le sera très prochainement. Vous pouvez
+                poursuivre la simulation pour connaître la durée prévue par le
+                code du travail mais nous vous conseillons de vérifier si votre
+                convention collective prévoit un délai plus favorable qui vous
+                serait applicable.
+              </>
+            ) : (
+              <>
+                Cette convention collective n&apos;est pas encore traitée par
+                nos services mais le sera très prochainement. Vous pouvez
+                poursuivre la simulation pour connaître le montant prévu par le
+                code du travail mais nous vous conseillons de vérifier si votre
+                convention collective prévoit un montant plus favorable pour le
+                salarié.
+              </>
+            )}
           </Paragraph>
         </StyledAlert>
         <StyledParagraph>

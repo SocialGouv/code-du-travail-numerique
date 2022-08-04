@@ -109,7 +109,7 @@ const StepResult = () => {
           }
         />
         <DecryptResult
-          hasSelectedAgreement={route === "agreement"}
+          hasSelectedAgreement={route !== "none"}
           isAgreementSupported={
             getSupportedCcIndemniteLicenciement().find(
               (v) => v.fullySupported && v.idcc === agreement?.num
@@ -127,7 +127,7 @@ const StepResult = () => {
         />
       </ShowDetails>
       <AgreementInfo
-        hasSelectedAgreement={route === "agreement"}
+        hasSelectedAgreement={route !== "none"}
         isAgreementSupported={
           getSupportedCcIndemniteLicenciement().find(
             (v) => v.fullySupported && v.idcc === agreement?.num

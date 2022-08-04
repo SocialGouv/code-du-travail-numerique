@@ -1,6 +1,7 @@
 import { useIndemniteLicenciementStore } from "../../store";
 import CommonAgreementStep from "../../../CommonSteps/Agreement";
 import { getSupportedCcIndemniteLicenciement } from "../../common";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 const AgreementStep = (): JSX.Element => {
   const {
@@ -28,6 +29,7 @@ const AgreementStep = (): JSX.Element => {
       selectedEnterprise={enterprise}
       selectedAgreement={agreement}
       supportedAgreements={getSupportedCcIndemniteLicenciement()}
+      simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
     />
   );
 };
