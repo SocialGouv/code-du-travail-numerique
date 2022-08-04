@@ -149,7 +149,7 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
     type: oui-non
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps:
-  titre: Durée en tant que non cadre
+  titre: Durée en tant que non cadre (en année)
   question: Pendant combien de temps a-t-il occupé des fonctions non-cadre durant le contrat de travail ?
   unité: an
   cdtn:

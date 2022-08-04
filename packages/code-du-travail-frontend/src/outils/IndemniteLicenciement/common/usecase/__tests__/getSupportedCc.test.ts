@@ -1,4 +1,4 @@
-import { getSupportedCcIndemniteLicenciement } from "../indemnite-licenciement";
+import getSupportedCcIndemniteLicenciement from "../getSupportedCc";
 
 describe("utils - indemnite de licenciement", () => {
   describe("getSupportedCcIndemniteLicenciement", () => {

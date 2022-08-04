@@ -1,13 +1,6 @@
 import { useIndemniteLicenciementStore } from "../../store";
 import CommonAgreementStep from "../../../CommonSteps/Agreement";
-import { AgreementSupportInfo } from "../../../common/Agreement/types";
-import { getSupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
-
-export const getSupportedCC = (): AgreementSupportInfo[] =>
-  getSupportedCcIndemniteLicenciement().map((item) => ({
-    fullySupported: true,
-    idcc: parseInt(item.value.replace("IDCC", "")),
-  }));
+import { getSupportedCcIndemniteLicenciement } from "../../common";
 
 const AgreementStep = (): JSX.Element => {
   const {
@@ -34,7 +27,7 @@ const AgreementStep = (): JSX.Element => {
       onAgreementChange={onAgreementChange}
       selectedEnterprise={enterprise}
       selectedAgreement={agreement}
-      supportedAgreements={getSupportedCC()}
+      supportedAgreements={getSupportedCcIndemniteLicenciement()}
     />
   );
 };
