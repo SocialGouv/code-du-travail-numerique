@@ -36,17 +36,21 @@ describe("<SalaireTempsPlein />", () => {
   });
 
   it("should modify a value of the month", () => {
-    const onSalariesChange = jest.fn();
+    let initObject = [
+      {
+        month: "janvier",
+        value: 2000,
+      },
+    ];
+    const onSalariesChange = (salaries: any) => {
+      console.log(salaries);
+      initObject = salaries;
+    };
     const { getByTitle } = render(
       <SalaireTempsPlein
         title="Yo"
         onSalariesChange={onSalariesChange}
-        salaryPeriods={[
-          {
-            month: "janvier",
-            value: 2000,
-          },
-        ]}
+        salaryPeriods={initObject}
       />
     );
     const input1 = getByTitle(

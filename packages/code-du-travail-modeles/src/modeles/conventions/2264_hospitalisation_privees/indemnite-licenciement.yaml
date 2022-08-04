@@ -116,7 +116,7 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 15 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 15 an
   non applicable si: non cadre durant une période
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
@@ -129,7 +129,7 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
     Article 47: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000020981961?idConteneur=KALICONT000005635813
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . résultat conventionnel avec ancienneté de plus de 15 ans:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15 an
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 15 an
   non applicable si: non cadre durant une période
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
@@ -252,7 +252,7 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
   applicable si:
     toutes ces conditions:
       - ancienneté cadre >= 5 an
-      - ancienneté cadre < 15 an
+      - ancienneté cadre <= 15 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - facteur 2 cadre
@@ -262,7 +262,7 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
     applicable si:
       toutes ces conditions:
         - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
-        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 15 an
+        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 15 an
     valeur: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
   unité: €
   arrondi: 2 décimales
@@ -270,14 +270,14 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
     Article 47: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000020981961?idConteneur=KALICONT000005635813
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . résultat conventionnel avec ancienneté de plus de 15 ans:
-  applicable si: ancienneté cadre >= 15 an
+  applicable si: ancienneté cadre > 15 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - facteur 2 cadre
     - facteur 3 cadre
     - résultat conventionnel en tant que non cadre
   plafond:
-    applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15 an
+    applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 15 an
     valeur: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 25
   unité: €
   arrondi: 2 décimales
