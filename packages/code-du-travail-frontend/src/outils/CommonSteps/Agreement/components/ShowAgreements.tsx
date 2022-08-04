@@ -44,14 +44,6 @@ const ShowAgreements = ({
         onChangeSelectedOption={onAgreementChange}
         error={error}
         showRequired
-        tooltip={{
-          content: (
-            <p>
-              Vous pouvez trouver le nom de votre convention collective sur
-              votre <strong>bulletin de paie</strong>.
-            </p>
-          ),
-        }}
       />
       {agreement && (
         <ShowAlert
