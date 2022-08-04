@@ -39,7 +39,7 @@ const ShowAgreements = ({
           id: `enterprise-agreement-${agreement.num}`,
         }))}
         name="agreement"
-        label={`${enterprise.conventions.length} conventions collectives ont été trouvées pour cette entreprise, sélectionnez la vôtre&nbsp;:`}
+        label={`${enterprise.conventions.length} conventions collectives ont été trouvées pour cette entreprise, sélectionnez la vôtre :`}
         selectedOption={agreement?.num.toString()}
         onChangeSelectedOption={onAgreementChange}
         error={error}

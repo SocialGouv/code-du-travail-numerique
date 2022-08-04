@@ -1,5 +1,4 @@
 import { loadPublicodesRules } from "../../../../../api";
-import { MOTIFS } from "../../../../common";
 import { createIndemniteLicenciementStore } from "../../../../store";
 
 describe("Ancienneté store", () => {
@@ -58,13 +57,13 @@ describe("Ancienneté store", () => {
     store.getState().ancienneteFunction.onChangeAbsencePeriods([
       {
         durationInMonth: 2,
-        motif: MOTIFS[0].label,
+        motif: "Label",
       },
     ]);
     expect(store.getState().ancienneteData.input.absencePeriods).toStrictEqual([
       {
         durationInMonth: 2,
-        motif: MOTIFS[0].label,
+        motif: "Label",
       },
     ]);
     expect(store.getState().ancienneteData.input.dateEntree).toBe("20/02/2020");
@@ -104,7 +103,7 @@ describe("Ancienneté store", () => {
   });
 
   it("should render an error for date de notification > 18 last months", () => {
-    store.getState().ancienneteFunction.onChangeDateNotification("05/05/2018"); // TODO: warning en 2020 ça marche pas
+    store.getState().ancienneteFunction.onChangeDateNotification("05/05/2018");
     const isValid = store
       .getState()
       .ancienneteFunction.onValidateStepAnciennete();
@@ -169,7 +168,7 @@ describe("Ancienneté store", () => {
     store.getState().ancienneteFunction.onChangeAbsencePeriods([
       {
         durationInMonth: 2,
-        motif: MOTIFS[0].label,
+        motif: "Label",
       },
     ]);
     const isValid = store

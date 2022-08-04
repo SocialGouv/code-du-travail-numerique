@@ -18,7 +18,9 @@ import { SalairesStoreSlice } from "../../Salaires/store";
 import produce from "immer";
 
 import { ResultStoreData, ResultStoreSlice } from "./types";
-import { CommonAgreementStoreSlice } from "../../Agreement/store";
+import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
+import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { AgreementInformation } from "../../../common";
 
 const initialState: ResultStoreData = {
   input: {
@@ -38,7 +40,8 @@ const createResultStore: StoreSlice<
   AncienneteStoreSlice &
     ContratTravailStoreSlice &
     SalairesStoreSlice &
-    CommonAgreementStoreSlice
+    CommonAgreementStoreSlice &
+    CommonInformationsStoreSlice
 > = (set, get, publicodesRules) => ({
   resultData: {
     ...initialState,
@@ -47,7 +50,6 @@ const createResultStore: StoreSlice<
   resultFunction: {
     getPublicodesResult: () => {
       const refSalary = get().salairesData.input.refSalary;
-      const agreementParameters = get().salairesData.input.agreementParameters;
       const agreementRefSalary = get().salairesData.input.agreementRefSalary;
       const agreement = get().agreementData.input.agreement;
       const isLicenciementInaptitude =
@@ -81,7 +83,7 @@ const createResultStore: StoreSlice<
           refSalary,
           isLicenciementInaptitude
         )
-      );
+      ).result;
 
       const legalReferences = publicodes.getReferences();
 
@@ -90,32 +92,47 @@ const createResultStore: StoreSlice<
       let agreementReferences: References[];
       let agreementFormula: Formula;
       let isAgreementBetter = false;
+      let agreementInformations: AgreementInformation[];
 
       if (agreement) {
         const factory = new SeniorityFactory().create(
           `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
         );
+        const infos = get()
+          .informationsData.input.publicodesInformations.map((v) => ({
+            [v.question.rule.nom]: v.info,
+          }))
+          .reduce((acc, cur) => ({ ...acc, ...cur }), {});
+
+        agreementInformations = get()
+          .informationsData.input.publicodesInformations.map(
+            (v) =>
+              v.question.rule.titre &&
+              v.info && {
+                label: v.question.rule.titre,
+                value: v.info,
+              }
+          )
+          .filter((v) => v !== "") as AgreementInformation[];
+
         agreementSeniority = factory.computeSeniority({
           dateEntree: get().ancienneteData.input.dateEntree!,
           dateSortie: get().ancienneteData.input.dateSortie!,
           absencePeriods: get().ancienneteData.input.absencePeriods,
         });
 
-        publicodes.setSituation(
+        publicodesSituationConventionnel = publicodes.setSituation(
           mapToPublicodesSituationForIndemniteLicenciementConventionnel(
             agreement.num,
             agreementSeniority,
             agreementRefSalary ?? refSalary,
-            agreementParameters
-          )
-        );
+            infos
+          ),
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        ).result;
 
         agreementReferences = publicodes.getReferences(
           "indemnité de licenciement . résultat conventionnel"
-        );
-
-        publicodesSituationConventionnel = publicodes.execute(
-          "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
 
         const agreementFactoryFormula = new FormuleFactory().create(
@@ -128,10 +145,10 @@ const createResultStore: StoreSlice<
         });
 
         if (
-          publicodesSituationConventionnel.value &&
-          publicodesSituationLegal.result.value &&
+          publicodesSituationConventionnel.value !== null &&
+          publicodesSituationLegal.value !== null &&
           publicodesSituationConventionnel.value >
-            publicodesSituationLegal.result.value
+            publicodesSituationLegal.value
         ) {
           isAgreementBetter = true;
         }
@@ -143,13 +160,14 @@ const createResultStore: StoreSlice<
           state.resultData.input.legalFormula = legalFormula;
           state.resultData.input.legalReferences = legalReferences;
           state.resultData.input.publicodesLegalResult =
-            publicodesSituationLegal.result;
+            publicodesSituationLegal;
           state.resultData.input.publicodesAgreementResult =
             publicodesSituationConventionnel;
           state.resultData.input.agreementSeniority = agreementSeniority;
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.agreementFormula = agreementFormula;
           state.resultData.input.isAgreementBetter = isAgreementBetter;
+          state.resultData.input.agreementInformations = agreementInformations;
         })
       );
     },

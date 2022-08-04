@@ -1,5 +1,6 @@
 import { InputRadio } from "@socialgouv/cdtn-ui";
 import React from "react";
+import styled from "styled-components";
 
 import { InlineError } from "../common/ErrorField";
 import { Question, Tooltip } from "../common/Question";
@@ -55,8 +56,16 @@ export default function RadioQuestion({
             onChange={() => onChange(question.value)}
           />
         ))}
-        {error && <InlineError>{error}</InlineError>}
+        {error && (
+          <ErrorWrapper>
+            <InlineError>{error}</InlineError>
+          </ErrorWrapper>
+        )}
       </RadioContainer>
     </>
   );
 }
+
+export const ErrorWrapper = styled.div`
+  display: flex;
+`;

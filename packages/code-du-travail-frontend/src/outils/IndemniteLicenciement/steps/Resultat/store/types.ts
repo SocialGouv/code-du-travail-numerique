@@ -4,6 +4,7 @@ import {
   PublicodesIndemniteLicenciementResult,
   References,
 } from "@socialgouv/modeles-social";
+import { AgreementInformation } from "../../../common";
 import { StepData } from "../../../store";
 
 export type ResultStoreInput = {
@@ -16,6 +17,7 @@ export type ResultStoreInput = {
   legalReferences: References[];
   agreementReferences?: References[];
   isAgreementBetter: boolean;
+  agreementInformations?: AgreementInformation[];
 };
 
 export type ResultStoreError = {};
