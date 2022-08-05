@@ -66,7 +66,7 @@ export default function FilledElements(props: Props) {
             <ul>
               {props.agreementInformations.map((info, index) => (
                 <li key={"agreement-" + index}>
-                  {info.label}&nbsp;:&nbsp;{info.value.replaceAll("'", "")}
+                  {info.label}&nbsp;:&nbsp;{info.value.replace(/'/g, "")}
                 </li>
               ))}
             </ul>
