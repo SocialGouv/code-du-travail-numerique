@@ -87,7 +87,7 @@ export const ListLink = ({
             {highlight.searchInfo}
           </StyledParagraph>
         )}
-        <Paragraph noMargin>{summarize(description)}</Paragraph>
+        <StyledDescription noMargin>{summarize(description)}</StyledDescription>
       </>
     ),
     onClick: () => reportSelectionToMatomo(source, slug, url, algo),
@@ -222,3 +222,5 @@ const StyledButton = styled(Button)`
 const StyledParagraph = styled(Paragraph)`
   margin-bottom: ${spacings.xsmall};
 `;
+
+const StyledDescription = styled(Paragraph)``;

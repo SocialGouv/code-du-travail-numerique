@@ -3,6 +3,11 @@ export enum SectionDisplayMode {
   tab = "tab",
 }
 
+export enum BlockDisplayMode {
+  line = "line",
+  square = "square",
+}
+
 export type ReferenceLink = {
   id: string;
   type: string;
@@ -31,6 +36,7 @@ export declare type ContentBlock = {
   altText?: string;
   html?: string;
   size?: number;
+  blockDisplayMode?: BlockDisplayMode;
   contents?: ContentItem[];
 };
 

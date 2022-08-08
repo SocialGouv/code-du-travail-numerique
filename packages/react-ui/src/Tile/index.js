@@ -134,6 +134,12 @@ const TopWrapper = styled.div`
 
 const HeadingWrapper = styled.div`
   padding-right: ${({ custom }) => (custom ? spacings.small : "0")};
+  display: flex;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 const StyledSubtitle = styled(Subtitle)`

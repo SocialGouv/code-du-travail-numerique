@@ -24,8 +24,9 @@ import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
 import { toUrl } from "../../src/lib";
-import { EditorialContentDataWrapper } from "cdtn-types";
+import { EditorialContentDataWrapper, BlockDisplayMode } from "cdtn-types";
 import { ListLink } from "../../src/search/SearchResults/Results";
+import { getContentBySlug } from "../../src/information";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -84,10 +85,12 @@ const Information = ({
             altText = "",
             fileUrl = "",
             html = "",
+            blockDisplayMode,
             size,
             contents,
           }) => {
             const reactContent: any = processor.processSync(html).result;
+
             switch (type) {
               case "graphic":
                 return (
@@ -112,13 +115,33 @@ const Information = ({
                   </div>
                 );
               case "content":
-                return contents?.map((item) => (
-                  <>
-                    <ListLinkContainer>
-                      <ListLink item={item} />
-                    </ListLinkContainer>
-                  </>
-                ));
+                switch (blockDisplayMode) {
+                  case BlockDisplayMode.square:
+                    return (
+                      <ListLinkSquareTile>
+                        {contents?.map((item) => (
+                          <>
+                            <ListLinkContainer>
+                              <ListLink item={item}></ListLink>
+                            </ListLinkContainer>
+                          </>
+                        ))}
+                      </ListLinkSquareTile>
+                    );
+                  case BlockDisplayMode.line:
+                  default:
+                    return (
+                      <ListLinkLineTile>
+                        {contents?.map((item) => (
+                          <>
+                            <ListLinkContainer>
+                              <ListLink item={item}></ListLink>
+                            </ListLinkContainer>
+                          </>
+                        ))}
+                      </ListLinkLineTile>
+                    );
+                }
               case "markdown":
               default:
                 return (
@@ -211,13 +234,7 @@ export default Information;
 Information.getInitialProps = async ({ query: { slug }, asPath }) => {
   // beware, this one is undefined when rendered server-side
   const anchor = asPath.split("#")[1];
-  const responseContainer = await fetch(
-    `${API_URL}/items/${SOURCES.EDITORIAL_CONTENT}/${slug}`
-  );
-  if (!responseContainer.ok) {
-    return { statusCode: responseContainer.status };
-  }
-  const information = await responseContainer.json();
+  const information = await getContentBySlug(slug);
 
   return { anchor, information };
 };
@@ -274,4 +291,29 @@ const StyledReferences = styled(References)`
 
 const ListLinkContainer = styled.div`
   margin: 12px 0;
+  a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+`;
+
+const ListLinkLineTile = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+`;
+
+const ListLinkSquareTile = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  & > div {
+    width: 280px;
+    height: 290px;
+    display: flex;
+  }
+  p,
+  button {
+    width: 100%;
+    text-align: center;
+  }
 `;

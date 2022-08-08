@@ -40,8 +40,18 @@ const { spacings, breakpoints, fonts } = theme;
 const TileChildren = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
+  flex: 1 1 auto;
+  p {
+    margin: 0;
+    flex: 1 0 auto;
+    display: flex;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 `;
 
 const StyledTile = styled(Tile)`
@@ -56,6 +66,6 @@ const StyledTile = styled(Tile)`
 `;
 
 const StyledDiv = styled.div`
-  margin-top: ${({ hasContentAbove }) =>
+  padding-top: ${({ hasContentAbove }) =>
     hasContentAbove ? spacings.base : spacings.small};
 `;
