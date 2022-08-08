@@ -25,7 +25,7 @@ describe("Missing args pour la CC 2264", () => {
       .setSituation({
         "contrat salarié . convention collective": "'IDCC2264'",
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle":
-          "'Cadre'",
+          "'Cadres'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 3,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
         "indemnité de licenciement": "oui",
@@ -44,7 +44,7 @@ describe("Missing args pour la CC 2264", () => {
       .setSituation({
         "contrat salarié . convention collective": "'IDCC2264'",
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle":
-          "'Non-Cadre'",
+          "'Non-cadres'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 3,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
         "indemnité de licenciement": "oui",
@@ -60,7 +60,7 @@ describe("Missing args pour la CC 2264", () => {
       .setSituation({
         "contrat salarié . convention collective": "'IDCC2264'",
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle":
-          "'Cadre'",
+          "'Cadres'",
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
           "oui",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 3,
@@ -79,7 +79,7 @@ describe("Missing args pour la CC 2264", () => {
       .setSituation({
         "contrat salarié . convention collective": "'IDCC2264'",
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle":
-          "'Cadre'",
+          "'Cadres'",
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
           "oui",
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps": 1,

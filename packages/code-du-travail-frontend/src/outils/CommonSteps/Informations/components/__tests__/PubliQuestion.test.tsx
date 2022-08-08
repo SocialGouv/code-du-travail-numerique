@@ -15,8 +15,8 @@ describe("<PubliQuestion />", () => {
             cdtn: {
               type: RuleType.Liste,
               valeurs: {
-                Cadre: "'Cadre'",
-                "Non-cadre": "'Non-cadre'",
+                Cadres: "'Cadres'",
+                "Non-cadres": "'Non-cadres'",
               },
             },
             description:
@@ -41,8 +41,8 @@ describe("<PubliQuestion />", () => {
           cdtn: {
             type: RuleType.Liste,
             valeurs: {
-              Cadre: "'Cadre'",
-              "Non-cadre": "'Non-cadre'",
+              Cadres: "'Cadres'",
+              "Non-cadres": "'Non-cadres'",
             },
           },
           description:
@@ -67,8 +67,8 @@ describe("<PubliQuestion />", () => {
           cdtn: {
             type: RuleType.OuiNon,
             valeurs: {
-              Cadre: "'Cadre'",
-              "Non-cadre": "'Non-cadre'",
+              Cadres: "'Cadres'",
+              "Non-cadres": "'Non-cadres'",
             },
           },
           description:
@@ -93,8 +93,8 @@ describe("<PubliQuestion />", () => {
           cdtn: {
             type: RuleType.SalaireMensuel,
             valeurs: {
-              Cadre: "'Cadre'",
-              "Non-cadre": "'Non-cadre'",
+              Cadres: "'Cadres'",
+              "Non-cadres": "'Non-cadres'",
             },
           },
           description:
