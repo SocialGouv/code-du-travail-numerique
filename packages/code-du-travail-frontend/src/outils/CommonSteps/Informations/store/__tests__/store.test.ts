@@ -45,8 +45,8 @@ describe("Informations store", () => {
             cdtn: {
               type: "liste",
               valeurs: {
-                Cadre: "'Cadre'",
-                "Non-cadre": "'Non-cadre'",
+                Cadres: "'Cadres'",
+                "Non-cadres": "'Non-cadres'",
               },
             },
             description:
@@ -86,13 +86,13 @@ describe("Informations store", () => {
       .getState()
       .informationsFunction.onInformationsChange(
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle",
-        "'Cadre'"
+        "'Cadres'"
       );
     expect(
       store.getState().informationsData.input.publicodesInformations
     ).toEqual([
       {
-        info: "'Cadre'",
+        info: "'Cadres'",
         order: 0,
         question: {
           name: "contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle",
@@ -100,8 +100,8 @@ describe("Informations store", () => {
             cdtn: {
               type: "liste",
               valeurs: {
-                Cadre: "'Cadre'",
-                "Non-cadre": "'Non-cadre'",
+                Cadres: "'Cadres'",
+                "Non-cadres": "'Non-cadres'",
               },
             },
             description:
@@ -147,13 +147,13 @@ describe("Informations store", () => {
       .getState()
       .informationsFunction.onInformationsChange(
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle",
-        "'Non-cadre'"
+        "'Non-cadres'"
       );
     expect(
       store.getState().informationsData.input.publicodesInformations
     ).toEqual([
       {
-        info: "'Non-cadre'",
+        info: "'Non-cadres'",
         order: 0,
         question: {
           name: "contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle",
@@ -161,8 +161,8 @@ describe("Informations store", () => {
             cdtn: {
               type: "liste",
               valeurs: {
-                Cadre: "'Cadre'",
-                "Non-cadre": "'Non-cadre'",
+                Cadres: "'Cadres'",
+                "Non-cadres": "'Non-cadres'",
               },
             },
             description:
@@ -192,7 +192,7 @@ describe("Informations store", () => {
       .getState()
       .informationsFunction.onInformationsChange(
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle",
-        "'Non-cadre'"
+        "'Non-cadres'"
       );
     store.getState().informationsFunction.onValidateStep();
     expect(store.getState().informationsData.isStepValid).toBe(true);
@@ -210,7 +210,7 @@ describe("Informations store", () => {
       .getState()
       .informationsFunction.onInformationsChange(
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle",
-        "'Cadre'"
+        "'Cadres'"
       );
     store.getState().informationsFunction.onValidateStep();
     expect(store.getState().informationsData.isStepValid).toBe(false);
