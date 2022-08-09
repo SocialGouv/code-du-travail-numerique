@@ -21,6 +21,9 @@ import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
 import { AgreementInformation } from "../../../common";
+import { getAgreementFormula } from "../../../agreements";
+import { MainStore } from "../../../store";
+import { GetState } from "zustand";
 
 const initialState: ResultStoreData = {
   input: {
@@ -69,7 +72,7 @@ const createResultStore: StoreSlice<
       });
 
       const formulaFactory = new FormuleFactory().create(
-        SupportedCcIndemniteLicenciement.default
+        SupportedCcIndemniteLicenciement.legal
       );
       const legalFormula = formulaFactory.computeFormula({
         seniority: legalSeniority,
@@ -135,14 +138,12 @@ const createResultStore: StoreSlice<
           "indemnité de licenciement . résultat conventionnel"
         );
 
-        const agreementFactoryFormula = new FormuleFactory().create(
-          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
+        agreementFormula = getAgreementFormula(
+          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+          agreementSeniority,
+          agreementRefSalary ?? refSalary,
+          get as GetState<MainStore>
         );
-
-        agreementFormula = agreementFactoryFormula.computeFormula({
-          seniority: agreementSeniority,
-          refSalary: agreementRefSalary ?? refSalary,
-        });
 
         if (
           publicodesSituationConventionnel.value !== null &&

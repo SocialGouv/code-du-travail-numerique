@@ -9,13 +9,13 @@ export type LegalFormulaProps = {
 };
 
 export class FormulaLegal
-  implements IFormula<SupportedCcIndemniteLicenciement.default>
+  implements IFormula<SupportedCcIndemniteLicenciement.legal>
 {
   computeFormula({
     seniority,
     refSalary,
     isForInaptitude,
-  }: FormulaProps<SupportedCcIndemniteLicenciement.default>): Formula {
+  }: FormulaProps<SupportedCcIndemniteLicenciement.legal>): Formula {
     let formula = "";
     const explanations = [];
     const an = round(seniority) < 2 ? "an" : "ans";
