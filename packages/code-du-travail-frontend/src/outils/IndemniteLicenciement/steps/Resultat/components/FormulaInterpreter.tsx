@@ -10,11 +10,15 @@ type Props = {
 export default function FormulaInterpreter(props: Props) {
   return (
     <>
-      <SectionTitle>Formule</SectionTitle>
-      <MathFormula formula={props.formula.formula} />
-      {props.formula.explanations.map((explanation, index) => (
-        <Paragraph key={"explanation-" + index}>{explanation}</Paragraph>
-      ))}
+      {props.formula.explanations.length > 0 && (
+        <>
+          <SectionTitle>Formule</SectionTitle>
+          <MathFormula formula={props.formula.formula} />
+          {props.formula.explanations.map((explanation, index) => (
+            <Paragraph key={"explanation-" + index}>{explanation}</Paragraph>
+          ))}
+        </>
+      )}
     </>
   );
 }

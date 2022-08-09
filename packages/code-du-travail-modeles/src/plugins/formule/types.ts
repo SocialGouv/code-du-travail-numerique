@@ -1,5 +1,5 @@
 import type { SupportedCcIndemniteLicenciement } from "..";
-import type { Formula2264Props } from "./2264-hospitalisation-privee";
+import type { Formula2264Props } from "./2264_hospitalisation_privee";
 import type { LegalFormulaProps } from "./legal";
 
 export type DefaultFormulaProps = {
