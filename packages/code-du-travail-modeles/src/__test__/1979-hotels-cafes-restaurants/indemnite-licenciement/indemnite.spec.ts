@@ -14,6 +14,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 1979", () => {
     ${5}      | ${2000} | ${1000}
     ${8}      | ${2000} | ${1600}
     ${15}     | ${2000} | ${3666.67}
+    ${2}      | ${1400} | ${280}
+    ${10}     | ${2400} | ${2400}
+    ${11}     | ${2350} | ${2741.67}
   `(
     "ancienneté: $seniority an, salaire de référence: $salary, => $expectedCompensation €",
     ({ seniority, salary, expectedCompensation }) => {

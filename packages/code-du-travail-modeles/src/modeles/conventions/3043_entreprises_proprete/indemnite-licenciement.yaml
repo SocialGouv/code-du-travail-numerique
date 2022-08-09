@@ -1,0 +1,63 @@
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement:
+  applicable si: indemnité de licenciement
+  valeur: oui
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . jusqu'à 5 ans:
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - 5 an
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . entre 5 ans et 10 ans:
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année - 5 an
+      - 4 an
+  plancher: 0 an
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . au dela de dix ans:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 10 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . facteur 1:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * jusqu'à 5 ans
+      facteur: 1 / 10
+  unité: €
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . facteur 2:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * entre 5 ans et 10 ans
+      facteur: 1 / 6
+  unité: €
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . facteur 3:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * au dela de dix ans
+      facteur: 1 / 5
+  unité: €
+
+# (1/10*Sref*A1)+(1/6*Sref*A2)+(1/5*Sref*A3)
+# A1: Années d'ancienneté pour la fraction des 5 premières années 
+# A2: Années d'ancienneté pour la fraction de 6 ans à 10 ans révolus
+# A3: Années d'ancienneté au-delà de 10 ans révolus
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  variations:
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 ans
+      alors:
+        somme:
+          - facteur 1
+          - facteur 2
+          - facteur 3
+    - sinon: 0
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 4.11.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027172424
+    Article 4.2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027172405?idConteneur=KALICONT000027172335&origin=list#KALIARTI000027172405
