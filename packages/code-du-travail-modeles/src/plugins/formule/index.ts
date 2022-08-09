@@ -1,6 +1,5 @@
 import { SupportedCcIndemniteLicenciement } from "../types";
 import { Formula1516 } from "./1516_organismes_formation";
-import { Formula1979 } from "./1979_hotels_cafes_restaurants";
 import { Formula2264 } from "./2264_hospitalisation_privee";
 import { FormulaLegal } from "./legal";
 import type { IFormula } from "./types";
