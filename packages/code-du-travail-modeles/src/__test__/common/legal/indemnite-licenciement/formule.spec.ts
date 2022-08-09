@@ -21,7 +21,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
     "Formule $expectedFormula avec $seniority ans et inaptitude $isForInaptitude",
     ({ seniority, isForInaptitude, expectedFormula, expectedExplanations }) => {
       const formula = new FormuleFactory().create(
-        SupportedCcIndemniteLicenciement.default
+        SupportedCcIndemniteLicenciement.legal
       );
 
       const result = formula.computeFormula({

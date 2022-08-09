@@ -9,12 +9,12 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
   cdtn:
     type: liste
     valeurs:
-      Non-cadre: "'Non-cadre'"
-      Cadre: "'Cadre'"
+      Non-cadres: "'Non-cadres'"
+      Cadres: "'Cadres'"
 
 ## NON CADRES ##
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . non cadre:
-  applicable si: catégorie professionnelle = 'Non-cadre'
+  applicable si: catégorie professionnelle = 'Non-cadres'
   valeur: oui
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . non cadre . ancienneté 10 ans ou moins:
@@ -62,7 +62,7 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
 
 ## CADRES ##
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre:
-  applicable si: catégorie professionnelle = 'Cadre'
+  applicable si: catégorie professionnelle = 'Cadres'
   valeur: oui
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . ancienneté jusqu'à 5 ans:
