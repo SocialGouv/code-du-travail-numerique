@@ -3,7 +3,7 @@ import type { SupportedCcIndemniteLicenciement } from "..";
 import type { Formula, FormulaProps, IFormula } from "./types";
 
 export type Formula2264Props = {
-  category: "Cadres" | "Ouvriers, employés, techniciens et agents de maîtrise";
+  category: "Cadres" | "Non-cadres";
   seniority: number;
   refSalary: number;
   seniorityNonCadre?: number;
@@ -22,10 +22,7 @@ export class Formula2264
     const explanations = [];
     const an = round(seniority) < 2 ? "an" : "ans";
 
-    if (
-      category === "Ouvriers, employés, techniciens et agents de maîtrise" &&
-      seniority >= 1
-    ) {
+    if (category === "Non-cadres" && seniority >= 1) {
       if (seniority <= 10) {
         formula = `1/5 * Sref * A`;
         explanations.push(`A : Ancienneté totale (${round(seniority)} ${an})`);
@@ -41,6 +38,7 @@ export class Formula2264
           )} ${anWithout})`
         );
       }
+      explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
     } else if (category === "Cadres" && !seniorityNonCadre) {
       if (seniority >= 1 && seniority < 5) {
         formula = `1/5 * Sref * A`;
@@ -48,6 +46,9 @@ export class Formula2264
           `A : Années d'ancienneté dans la fonction de cadre (${round(
             seniority
           )} ${an})`
+        );
+        explanations.push(
+          `Sref : Salaire de référence (${round(refSalary)} €)`
         );
       } else if (seniority >= 5) {
         formula = `(1/2 * Sref * A1)+ (1 * Sref * A2)`;
@@ -59,6 +60,9 @@ export class Formula2264
           `A2 : Années d'ancienneté dans la fonction de cadre supérieures à 5 ans (${round(
             seniority - 5
           )} ${anWithout})`
+        );
+        explanations.push(
+          `Sref : Salaire de référence (${round(refSalary)} €)`
         );
       }
     } else if (category === "Cadres" && seniorityNonCadre) {
@@ -105,8 +109,8 @@ export class Formula2264
           )} ${anWithout})`
         );
       }
+      explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
     }
-    explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
     return { explanations, formula };
   }
 }
