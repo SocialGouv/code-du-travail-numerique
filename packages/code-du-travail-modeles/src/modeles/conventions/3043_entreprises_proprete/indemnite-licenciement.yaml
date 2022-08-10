@@ -3,16 +3,33 @@ contrat salarié . convention collective . entreprises de propreté . indemnité
   valeur: oui
 
 contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . jusqu'à 5 ans:
+  valeur: non
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . jusqu'à 5 ans . cas 1:
+  remplace: contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . jusqu'à 5 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 6 an
   valeur:
     le minimum de:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
       - 5 an
 
+# ATTENTION: C'est un hack pour gérer le cas de 5.91 et de 6 ans d'ancienneté
+# Avec 5.91 d'années d'ancienneté => 1/10 * SRFEF * 5.91
+# Avec 6 années d'ancienneté => 1/10 * SREF * 5 + 1/6 * SRFEF * 1
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . jusqu'à 5 ans . cas 2:
+  remplace: contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . jusqu'à 5 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 6 an
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - 6 an
+
 contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . entre 5 ans et 10 ans:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 6 an
   valeur:
     le minimum de:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année - 5 an
-      - 4 an
+      - 5 an
   plancher: 0 an
 
 contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . au dela de dix ans:
