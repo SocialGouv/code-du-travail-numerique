@@ -42,9 +42,7 @@ const getAgreementFormula = (
     }
 
     default: {
-      const agreementFactoryFormula = new FormuleFactory().create(
-        SupportedCcIndemniteLicenciement.default
-      );
+      const agreementFactoryFormula = new FormuleFactory().create(idcc);
       return agreementFactoryFormula.computeFormula({
         seniority: agreementSeniority,
         refSalary: agreementRefSalary,
