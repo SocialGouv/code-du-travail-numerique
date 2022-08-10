@@ -1,10 +1,10 @@
 import elasticsearchClient from "../../conf/elasticsearch";
+import { getSearchBySourceSlugBody } from "../items/searchBySourceSlug.es";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 
 const Router = require("koa-router");
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
 const { SOURCES } = require("@socialgouv/cdtn-sources");
-const getItemBySlugBody = require("../items/searchBySourceSlug.elastic");
 
 const router = new Router({ prefix: API_BASE_URL });
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
@@ -21,7 +21,10 @@ const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
 router.get("/dossiers/:slug", async (ctx) => {
   const { slug } = ctx.params;
-  const body = getItemBySlugBody({ slug, source: SOURCES.THEMATIC_FILES });
+  const body = getSearchBySourceSlugBody({
+    slug,
+    source: SOURCES.THEMATIC_FILES,
+  });
   const response = await elasticsearchClient.search({ body, index });
 
   if (response.body.hits.total.value === 0) {

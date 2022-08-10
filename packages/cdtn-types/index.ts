@@ -26,6 +26,7 @@ export type ContentItem = {
   title: string;
   slug: string;
   description: string;
+  icon?: string;
 };
 
 export declare type ContentBlock = {
@@ -38,6 +39,7 @@ export declare type ContentBlock = {
   size?: number;
   blockDisplayMode?: BlockDisplayMode;
   contents?: ContentItem[];
+  title?: string;
 };
 
 export declare type Content = {

@@ -22,31 +22,33 @@ export const Tile = React.forwardRef(
       ...props
     },
     ref
-  ) => (
-    <StyledTile
-      as={props.href ? "a" : "button"}
-      ref={ref}
-      wide={wide}
-      {...props}
-    >
-      {custom && <Badge />}
-      <TopWrapper>
-        {striped && <Stripe length="5rem" />}
-        {Icon && (
-          <IconWrapper>
-            <Icon />
-          </IconWrapper>
-        )}
-        <HeadingWrapper custom>
-          {subtitle && (
-            <StyledSubtitle noTitle={!title}>{subtitle}</StyledSubtitle>
+  ) => {
+    return (
+      <StyledTile
+        as={props.href ? "a" : "button"}
+        ref={ref}
+        wide={wide}
+        {...props}
+      >
+        {custom && <Badge />}
+        <TopWrapper>
+          {striped && <Stripe length="5rem" />}
+          {Icon && (
+            <IconWrapper>
+              <Icon />
+            </IconWrapper>
           )}
-          {title && <StyledHeading as={titleTagType}>{title}</StyledHeading>}
-        </HeadingWrapper>
-      </TopWrapper>
-      {children && <ChildrenWrapper>{children}</ChildrenWrapper>}
-    </StyledTile>
-  )
+          <HeadingWrapper custom>
+            {subtitle && (
+              <StyledSubtitle noTitle={!title}>{subtitle}</StyledSubtitle>
+            )}
+            {title && <StyledHeading as={titleTagType}>{title}</StyledHeading>}
+          </HeadingWrapper>
+        </TopWrapper>
+        {children && <ChildrenWrapper>{children}</ChildrenWrapper>}
+      </StyledTile>
+    );
+  }
 );
 
 Tile.displayName = "Tile";
@@ -136,7 +138,7 @@ const HeadingWrapper = styled.div`
   padding-right: ${({ custom }) => (custom ? spacings.small : "0")};
   display: flex;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;

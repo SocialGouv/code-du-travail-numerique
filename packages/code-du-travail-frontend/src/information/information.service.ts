@@ -7,7 +7,7 @@ const {
 
 export const getContentByIds = async (ids: string[]): Promise<any> => {
   const responseContainer = await fetch(
-    `${API_URL}/items?ids=${ids.join(",")}`
+    `${API_URL}/items?ids=${ids.join(",")}&all=true`
   );
   return await responseContainer.json();
 };

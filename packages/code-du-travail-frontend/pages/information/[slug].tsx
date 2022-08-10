@@ -1,4 +1,3 @@
-import { SOURCES } from "@socialgouv/cdtn-sources";
 import {
   Accordion,
   Tabs,
@@ -9,7 +8,6 @@ import {
   theme,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
-import getConfig from "next/config";
 import Link from "next/link";
 import React from "react";
 import htmlToHtmlAst from "rehype-parse";
@@ -26,11 +24,7 @@ import { Layout } from "../../src/layout/Layout";
 import { toUrl } from "../../src/lib";
 import { EditorialContentDataWrapper, BlockDisplayMode } from "cdtn-types";
 import { ListLink } from "../../src/search/SearchResults/Results";
-import { getContentBySlug } from "../../src/information";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { getContentBySlug, getContentByIds } from "../../src/information";
 
 const InfoLink = ({ children, href }) => {
   if (!href.includes("http")) {
@@ -79,22 +73,26 @@ const Information = ({
     return (
       <>
         {blocks.map(
-          ({
-            type,
-            imgUrl = "",
-            altText = "",
-            fileUrl = "",
-            html = "",
-            blockDisplayMode,
-            size,
-            contents,
-          }) => {
+          (
+            {
+              type,
+              imgUrl = "",
+              altText = "",
+              fileUrl = "",
+              html = "",
+              blockDisplayMode,
+              size,
+              title,
+              contents,
+            },
+            index: number
+          ) => {
             const reactContent: any = processor.processSync(html).result;
 
             switch (type) {
               case "graphic":
                 return (
-                  <div key={name}>
+                  <div key={index}>
                     <ImageWrapper src={toUrl(imgUrl)} altText={altText} />
                     <DownloadWrapper>
                       <Button
@@ -115,37 +113,50 @@ const Information = ({
                   </div>
                 );
               case "content":
+                let contentBlock;
                 switch (blockDisplayMode) {
                   case BlockDisplayMode.square:
-                    return (
+                    contentBlock = (
                       <ListLinkSquareTile>
-                        {contents?.map((item) => (
-                          <>
+                        {contents?.map((item, ContentIndex) => (
+                          <div key={`${index}-${ContentIndex}`}>
                             <ListLinkContainer>
-                              <ListLink item={item}></ListLink>
+                              <ListLink
+                                item={{ ...item, icon: icons[item?.icon] }}
+                              ></ListLink>
                             </ListLinkContainer>
-                          </>
+                          </div>
                         ))}
                       </ListLinkSquareTile>
                     );
+                    break;
                   case BlockDisplayMode.line:
                   default:
-                    return (
-                      <ListLinkLineTile>
-                        {contents?.map((item) => (
-                          <>
+                    contentBlock = (
+                      <div>
+                        {contents?.map((item, ContentIndex) => (
+                          <div key={`${index}-${ContentIndex}`}>
                             <ListLinkContainer>
                               <ListLink item={item}></ListLink>
                             </ListLinkContainer>
-                          </>
+                          </div>
                         ))}
-                      </ListLinkLineTile>
+                      </div>
                     );
+                    break;
                 }
+                return (
+                  <div key={index}>
+                    {title && <BlockContentTitle>{title}</BlockContentTitle>}
+                    {contentBlock}
+                  </div>
+                );
               case "markdown":
               default:
                 return (
-                  <React.Fragment key={name}>{reactContent}</React.Fragment>
+                  <div key={index}>
+                    <React.Fragment key={name}>{reactContent}</React.Fragment>
+                  </div>
                 );
             }
           }
@@ -171,7 +182,7 @@ const Information = ({
     contentWrapper =
       sectionDisplayMode === "tab" ? (
         <Tabs
-          data={contents?.map(({ title, name }, index) => ({
+          data={contents?.map(({ title }, index) => ({
             panel: editorialContent?.[index],
             tab: title,
           }))}
@@ -234,7 +245,46 @@ export default Information;
 Information.getInitialProps = async ({ query: { slug }, asPath }) => {
   // beware, this one is undefined when rendered server-side
   const anchor = asPath.split("#")[1];
-  const information = await getContentBySlug(slug);
+  const contentBySlug = await getContentBySlug(slug);
+
+  const cdtnIdToFetch = contentBySlug._source.contents.reduce(
+    (idsAcc: string[], content) => {
+      content.blocks = content.blocks ?? [];
+      return idsAcc.concat(
+        content?.blocks?.flatMap(({ contents }) => {
+          return (
+            contents
+              ?.map(({ cdtnId }) => cdtnId)
+              ?.filter((cdtnId: string) => idsAcc.indexOf(cdtnId) === -1) ?? []
+          );
+        }) ?? []
+      );
+    },
+    []
+  );
+
+  const fetchedContents = await getContentByIds(cdtnIdToFetch);
+
+  const contents = contentBySlug._source.contents.map((content) => ({
+    ...content,
+    blocks: content?.blocks?.map((block) => {
+      return {
+        ...block,
+        contents: block?.contents?.flatMap((blockContent) => {
+          const c = fetchedContents?.find(({ _source }) => {
+            return _source.cdtnId === blockContent.cdtnId;
+          });
+          delete c._source.title_vector;
+          return c ? [c._source] : [];
+        }),
+      };
+    }),
+  }));
+
+  const information = {
+    ...contentBySlug,
+    _source: { ...contentBySlug._source, contents },
+  };
 
   return { anchor, information };
 };
@@ -293,15 +343,15 @@ const ListLinkContainer = styled.div`
   margin: 12px 0;
   a {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 100%;
+    div {
+      max-width: 100%;
+    }
   }
 `;
 
-const ListLinkLineTile = styled.div`
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-`;
+const ListLinkLineTile = styled.div``;
 
 const ListLinkSquareTile = styled.div`
   display: grid;
@@ -310,10 +360,15 @@ const ListLinkSquareTile = styled.div`
     width: 280px;
     height: 290px;
     display: flex;
+    margin: 12px auto;
   }
   p,
   button {
     width: 100%;
     text-align: center;
   }
+`;
+
+const BlockContentTitle = styled.h3`
+  color: #4d73b8;
 `;
