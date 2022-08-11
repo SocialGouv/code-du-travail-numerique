@@ -10,8 +10,18 @@ export const validateStep = (state: SalairesStoreInput) => {
       ? "Vous devez répondre à cette question"
       : undefined,
     errorTempsPartiel: state.hasTempsPartiel === "oui",
+    errorHasSameSalary: !state.hasSameSalary
+      ? "Vous devez répondre à cette question"
+      : undefined,
+    errorSalary:
+      state.hasTempsPartiel === "non" &&
+      state.hasSameSalary === "oui" &&
+      !state.salary
+        ? "Vous devez répondre à cette question"
+        : undefined,
     errorSalaryPeriods:
       state.hasTempsPartiel === "non" &&
+      state.hasSameSalary === "non" &&
       (state.salaryPeriods.length === 0 ||
         detectNullOrUndefinedOrNaNInArray(state.salaryPeriods))
         ? "Vous devez compléter l'ensemble des champs"
@@ -21,6 +31,8 @@ export const validateStep = (state: SalairesStoreInput) => {
   return {
     isValid: deepEqualObject(errorState, {
       errorHasTempsPartiel: undefined,
+      errorHasSameSalary: undefined,
+      errorSalary: undefined,
       errorTempsPartiel: false,
       errorSalaryPeriods: undefined,
     }),
