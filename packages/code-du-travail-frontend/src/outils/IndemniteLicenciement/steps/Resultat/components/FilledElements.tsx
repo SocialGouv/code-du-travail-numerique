@@ -18,6 +18,8 @@ type Props = {
   salaryPeriods: SalaryPeriods[];
   hasTempsPartiel: boolean;
   isAgreementBetter: boolean;
+  hasSameSalary: boolean;
+  salary?: string;
 };
 
 export default function FilledElements(props: Props) {
@@ -119,10 +121,22 @@ export default function FilledElements(props: Props) {
               Alternance temps plein / temps partiel&nbsp;:&nbsp;
               {props.hasTempsPartiel ? "Oui" : "Non"}
             </li>
-            {props.salaryPeriods.length > 0 && (
+            <li>
+              Salaire mensuel brut identique durant les 12 derniers mois
+              précédant la notification du licenciement&nbsp;:&nbsp;
+              {props.hasSameSalary ? "Oui" : "Non"}
+            </li>
+            {props.hasSameSalary && props.salary && (
               <li>
-                Salaires mensuels bruts perçus au cours des 12 mois précédents
-                la notification du licenciement&nbsp;:&nbsp;
+                Salaire mensuel brut (primes et avantages en nature
+                inclus)&nbsp;:&nbsp;
+                {props.salary} €
+              </li>
+            )}
+            {props.salaryPeriods.length > 0 && !props.hasSameSalary && (
+              <li>
+                Salaires mensuels bruts perçus au cours des 12 mois précédant la
+                notification du licenciement&nbsp;:&nbsp;
                 <StyledFilledElementTable>
                   <thead>
                     <tr>

@@ -16,6 +16,8 @@ describe("Store", () => {
 
   it("should init data input", () => {
     expect(store.getState().salairesData.input.hasTempsPartiel).toBe(undefined);
+    expect(store.getState().salairesData.input.hasSameSalary).toBe(undefined);
+    expect(store.getState().salairesData.input.salary).toBe(undefined);
     expect(store.getState().salairesData.input.salaryPeriods).toStrictEqual([]);
   });
 
@@ -30,10 +32,15 @@ describe("Store", () => {
     expect(store.getState().salairesData.error.errorTempsPartiel).toBe(
       undefined
     );
+    expect(store.getState().salairesData.error.errorSalary).toBe(undefined);
+    expect(store.getState().salairesData.error.errorHasSameSalary).toBe(
+      undefined
+    );
   });
 
   it("should update properties (with primes and different salaries)", () => {
     store.getState().salairesFunction.onChangeHasTempsPartiel("oui");
+    store.getState().salairesFunction.onChangeHasSameSalary("non");
     store.getState().salairesFunction.onSalariesChange([
       {
         month: "janvier",
@@ -42,6 +49,7 @@ describe("Store", () => {
       },
     ]);
     expect(store.getState().salairesData.input.hasTempsPartiel).toBe("oui");
+    expect(store.getState().salairesData.input.hasSameSalary).toBe("non");
     expect(store.getState().salairesData.input.salaryPeriods).toStrictEqual([
       {
         month: "janvier",
@@ -79,12 +87,17 @@ describe("Store", () => {
 
   it("should render an error if brut salary is not completed", () => {
     store.getState().salairesFunction.onChangeHasTempsPartiel("non");
+    store.getState().salairesFunction.onChangeHasSameSalary("oui");
     const isValid = store.getState().salairesFunction.onValidateStepSalaires();
     expect(isValid).toBe(false);
+    expect(store.getState().salairesData.error.errorSalary).toBe(
+      "Vous devez répondre à cette question"
+    );
   });
 
   it("should render an error if salaries are not completed if it is not the same salary", () => {
     store.getState().salairesFunction.onChangeHasTempsPartiel("non");
+    store.getState().salairesFunction.onChangeHasSameSalary("non");
     const isValid = store.getState().salairesFunction.onValidateStepSalaires();
     expect(isValid).toBe(false);
     expect(store.getState().salairesData.error.errorSalaryPeriods).toBe(
@@ -92,8 +105,29 @@ describe("Store", () => {
     );
   });
 
+  it("should validate the step with same salary 🚀", () => {
+    store.getState().salairesFunction.onChangeHasTempsPartiel("non");
+    store.getState().salairesFunction.onChangeHasSameSalary("oui");
+    store.getState().salairesFunction.onChangeSalary("2000");
+    const isValid = store.getState().salairesFunction.onValidateStepSalaires();
+    expect(isValid).toBe(true);
+    expect(store.getState().salairesData.error.errorHasTempsPartiel).toBe(
+      undefined
+    );
+    expect(store.getState().salairesData.error.errorPrimes).toBe(undefined);
+    expect(store.getState().salairesData.error.errorSalaryPeriods).toBe(
+      undefined
+    );
+    expect(store.getState().salairesData.error.errorTempsPartiel).toBe(false);
+    expect(store.getState().salairesData.error.errorSalary).toBe(undefined);
+    expect(store.getState().salairesData.error.errorHasSameSalary).toBe(
+      undefined
+    );
+  });
+
   it("should validate the step 🚀", () => {
     store.getState().salairesFunction.onChangeHasTempsPartiel("non");
+    store.getState().salairesFunction.onChangeHasSameSalary("non");
     store.getState().salairesFunction.onSalariesChange([
       {
         month: "janvier",
@@ -110,5 +144,9 @@ describe("Store", () => {
       undefined
     );
     expect(store.getState().salairesData.error.errorTempsPartiel).toBe(false);
+    expect(store.getState().salairesData.error.errorSalary).toBe(undefined);
+    expect(store.getState().salairesData.error.errorHasSameSalary).toBe(
+      undefined
+    );
   });
 });

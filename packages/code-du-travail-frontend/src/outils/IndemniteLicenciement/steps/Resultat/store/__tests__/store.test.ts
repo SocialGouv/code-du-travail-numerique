@@ -39,6 +39,7 @@ describe("Result store", () => {
 
     // Salaire ref
     store.getState().salairesFunction.onChangeHasTempsPartiel("non");
+    store.getState().salairesFunction.onChangeHasSameSalary("non");
     store.getState().salairesFunction.onSalariesChange([
       {
         month: "janvier",
