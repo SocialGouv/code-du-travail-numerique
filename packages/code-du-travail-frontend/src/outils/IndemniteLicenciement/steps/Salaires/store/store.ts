@@ -92,7 +92,7 @@ const createSalairesStore: StoreSlice<
         const { salary } = salaryInput;
 
         if (salary) {
-          const parseSalary: number = parseFloat(salary);
+          const parseSalary = parseFloat(salary);
           salaries = salaryInput.salaryPeriods.map((v) => ({
             ...v,
             value: parseSalary,
