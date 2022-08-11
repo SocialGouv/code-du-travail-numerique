@@ -135,8 +135,8 @@ export default function FilledElements(props: Props) {
             )}
             {props.salaryPeriods.length > 0 && !props.hasSameSalary && (
               <li>
-                Salaires mensuels bruts perçus au cours des 12 mois précédents
-                la notification du licenciement&nbsp;:&nbsp;
+                Salaires mensuels bruts perçus au cours des 12 mois précédant la
+                notification du licenciement&nbsp;:&nbsp;
                 <StyledFilledElementTable>
                   <thead>
                     <tr>
