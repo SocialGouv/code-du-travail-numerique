@@ -369,6 +369,8 @@ const ListLinkSquareTile = styled.div`
   }
 `;
 
-const BlockContentTitle = styled.h3`
+const BlockContentTitle = styled.div`
+  font-size: 18px;
+  font-weight: 600;
   color: #4d73b8;
 `;
