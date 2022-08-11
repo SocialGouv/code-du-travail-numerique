@@ -11,11 +11,13 @@ export class Formula1516
   }: FormulaProps<SupportedCcIndemniteLicenciement.IDCC1516>): Formula {
     let formula = "";
     const explanations = [];
-    const an = round(seniority) < 2 ? "an" : "ans";
+    const year = round(seniority) < 2 ? "an" : "ans";
     if (seniority > 2) {
       if (seniority <= 15) {
         formula = `1 / 5 * Sref * A`;
-        explanations.push(`A : Ancienneté totale (${round(seniority)} ${an})`);
+        explanations.push(
+          `A : Ancienneté totale (${round(seniority)} ${year})`
+        );
       } else {
         formula = `(1 / 5 * Sref * A1) + (1 / 10 * Sref * A2)`;
         const anWithout = round(seniority - 15) < 2 ? "an" : "ans";
