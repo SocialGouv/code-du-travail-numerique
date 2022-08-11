@@ -8,6 +8,7 @@ describe("<SalaireTempsPlein />", () => {
       render(
         <SalaireTempsPlein
           title="Yo"
+          subTitle="Wesh"
           onSalariesChange={jest.fn()}
           salaryPeriods={[]}
           error={undefined}
@@ -20,6 +21,7 @@ describe("<SalaireTempsPlein />", () => {
     const { queryByText } = render(
       <SalaireTempsPlein
         title="Indiquez le montant des salaires mensuels brut blabla"
+        subTitle="Wesh"
         onSalariesChange={jest.fn()}
         salaryPeriods={[
           {
@@ -48,6 +50,7 @@ describe("<SalaireTempsPlein />", () => {
     const { getByTitle } = render(
       <SalaireTempsPlein
         title="Yo"
+        subTitle="Wesh"
         onSalariesChange={onSalariesChange}
         salaryPeriods={initObject}
       />
@@ -73,6 +76,7 @@ describe("<SalaireTempsPlein />", () => {
     const { getByTitle } = render(
       <SalaireTempsPlein
         title="Yo"
+        subTitle="Wesh"
         onSalariesChange={onSalariesChange}
         salaryPeriods={initObject}
       />
@@ -89,6 +93,7 @@ describe("<SalaireTempsPlein />", () => {
     const { getByText } = render(
       <SalaireTempsPlein
         title="Yo"
+        subTitle="Wesh"
         onSalariesChange={jest.fn()}
         salaryPeriods={[
           {

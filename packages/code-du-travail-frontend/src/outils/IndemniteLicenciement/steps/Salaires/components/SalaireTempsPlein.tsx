@@ -10,6 +10,7 @@ import { ErrorWrapper } from "../../../../Components/TextQuestion";
 
 type Props = {
   title: string;
+  subTitle?: string;
   salaryPeriods: SalaryPeriods[];
   onSalariesChange: (salaries: SalaryPeriods[]) => void;
   error?: string;
@@ -22,6 +23,7 @@ export const SalaireTempsPlein = ({
   error,
   title,
   note,
+  subTitle,
 }: Props): JSX.Element => {
   const [isFirstEdit, setIsFirstEdit] = React.useState(true);
   const [errorsSalaries, setErrorsSalaries] = React.useState({});
@@ -79,12 +81,7 @@ export const SalaireTempsPlein = ({
       <Table>
         <Caption>
           <Question required>{title}</Question>
-          <SmallText>
-            Renseignez le montant des salaires (en incluant les primes et
-            avantages en nature) dans le premier champ et le montant des primes
-            exceptionnelles dans le second champ (seules les primes des 3
-            derniers mois sont nécessaires).
-          </SmallText>
+          {subTitle && <SmallText>{subTitle}</SmallText>}
         </Caption>
         <thead>
           <tr>

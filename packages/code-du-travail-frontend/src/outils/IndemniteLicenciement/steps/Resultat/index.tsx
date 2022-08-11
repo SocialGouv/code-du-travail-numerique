@@ -38,6 +38,8 @@ const StepResult = () => {
     isAgreementBetter,
     agreementFormula,
     agreementInformations,
+    salary,
+    hasSameSalary,
   } = useIndemniteLicenciementStore((state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -61,6 +63,8 @@ const StepResult = () => {
     isAgreementBetter: state.resultData.input.isAgreementBetter,
     agreementFormula: state.resultData.input.agreementFormula,
     agreementInformations: state.resultData.input.agreementInformations,
+    salary: state.salairesData.input.salary,
+    hasSameSalary: state.salairesData.input.hasSameSalary,
   }));
 
   React.useEffect(() => {
@@ -88,6 +92,8 @@ const StepResult = () => {
           dateNotification={dateNotification!}
           salaryPeriods={salaryPeriods}
           hasTempsPartiel={hasTempsPartiel === "oui"}
+          hasSameSalary={hasSameSalary === "oui"}
+          salary={salary}
           isAgreementBetter={isAgreementBetter}
           agreementInformations={agreementInformations}
           agreementRefSalaryInfo={

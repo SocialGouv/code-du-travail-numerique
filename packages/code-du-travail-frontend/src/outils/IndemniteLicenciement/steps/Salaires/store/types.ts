@@ -7,10 +7,14 @@ export type SalairesStoreInput = {
   salaryPeriods: SalaryPeriods[];
   refSalary: number;
   agreementRefSalary?: number;
+  hasSameSalary?: OuiNon;
+  salary?: string;
 };
 
 export type SalairesStoreError = {
   errorHasTempsPartiel?: string;
+  errorHasSameSalary?: string;
+  errorSalary?: string;
   errorTempsPartiel?: boolean;
   errorSalaryPeriods?: string;
   errorPrimes?: string;
@@ -26,6 +30,8 @@ export type SalairesStoreFn = {
   onChangeHasTempsPartiel: (value: OuiNon) => void;
   onSalariesChange: (value: SalaryPeriods[]) => void;
   onValidateStepSalaires: () => boolean;
+  onChangeHasSameSalary: (value: OuiNon) => void;
+  onChangeSalary: (value: string) => void;
 };
 
 export type SalairesStoreSlice = {
