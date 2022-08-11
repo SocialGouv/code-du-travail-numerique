@@ -20,22 +20,24 @@ export class Formula2264
   }: FormulaProps<SupportedCcIndemniteLicenciement.IDCC2264>): Formula {
     let formula = "";
     const explanations = [];
-    const an = round(seniority) < 2 ? "an" : "ans";
+    const year = round(seniority) < 2 ? "an" : "ans";
 
     if (category === "Non-cadres" && seniority >= 1) {
       if (seniority <= 10) {
         formula = `1/5 * Sref * A`;
-        explanations.push(`A : Ancienneté totale (${round(seniority)} ${an})`);
+        explanations.push(
+          `A : Ancienneté totale (${round(seniority)} ${year})`
+        );
       } else {
         formula = `(1/5 * Sref * A1) + (2/5 * Sref * A2)`;
         explanations.push(
           `A1 : Années d'ancienneté de 10 ans ou moins (10 ans)`
         );
-        const anWithout = round(seniority - 10) < 2 ? "an" : "ans";
+        const yearAfterDiff = round(seniority - 10) < 2 ? "an" : "ans";
         explanations.push(
           `A2 : Ancienneté au delà de 10 ans (${round(
             seniority - 10
-          )} ${anWithout})`
+          )} ${yearAfterDiff})`
         );
       }
       explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
@@ -45,7 +47,7 @@ export class Formula2264
         explanations.push(
           `A : Années d'ancienneté dans la fonction de cadre (${round(
             seniority
-          )} ${an})`
+          )} ${year})`
         );
         explanations.push(
           `Sref : Salaire de référence (${round(refSalary)} €)`
@@ -55,11 +57,11 @@ export class Formula2264
         explanations.push(
           `A1 : Années d'ancienneté dans la fonction de cadre jusqu'à 5 ans (5 ans)`
         );
-        const anWithout = round(seniority - 5) < 2 ? "an" : "ans";
+        const yearAfterDiff = round(seniority - 5) < 2 ? "an" : "ans";
         explanations.push(
           `A2 : Années d'ancienneté dans la fonction de cadre supérieures à 5 ans (${round(
             seniority - 5
-          )} ${anWithout})`
+          )} ${yearAfterDiff})`
         );
         explanations.push(
           `Sref : Salaire de référence (${round(refSalary)} €)`
@@ -79,12 +81,12 @@ export class Formula2264
         explanations.push(
           `A1 : Années d'ancienneté de 10 ans ou moins (10 ans)`
         );
-        const anWithoutNonCadre =
+        const yearAfterDiffNonCadre =
           round(seniorityNonCadre - 10) < 2 ? "an" : "ans";
         explanations.push(
           `A2 : Ancienneté au delà de 10 ans (${round(
             seniorityNonCadre - 10
-          )} ${anWithoutNonCadre})`
+          )} ${yearAfterDiffNonCadre})`
         );
       }
 
@@ -94,7 +96,7 @@ export class Formula2264
         explanations.push(
           `A3 : Années d'ancienneté dans la fonction de cadre (${round(
             seniorityRemain
-          )} ${an})`
+          )} ${year})`
         );
       }
       if (seniorityRemain >= 5) {
@@ -102,11 +104,11 @@ export class Formula2264
         explanations.push(
           `A3 : Années d'ancienneté dans la fonction de cadre jusqu'à 5 ans (5 ans)`
         );
-        const anWithout = round(seniorityRemain - 5) < 2 ? "an" : "ans";
+        const yearAfterDiff = round(seniorityRemain - 5) < 2 ? "an" : "ans";
         explanations.push(
           `A4 : Années d'ancienneté dans la fonction de cadre supérieures à 5 ans (${round(
             seniorityRemain - 5
-          )} ${anWithout})`
+          )} ${yearAfterDiff})`
         );
       }
       explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
