@@ -36,6 +36,8 @@ describe("<FilledElement />", () => {
           ]}
           hasTempsPartiel={true}
           isAgreementBetter={false}
+          hasSameSalary={true}
+          salary={"1000"}
         />
       )
     ).toBeTruthy();

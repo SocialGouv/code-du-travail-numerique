@@ -68,21 +68,40 @@ const createSalairesStore: StoreSlice<
     onChangeHasTempsPartiel: (value) => {
       applyGenericValidation(get, set, "hasTempsPartiel", value);
     },
+    onChangeHasSameSalary: (value) => {
+      applyGenericValidation(get, set, "hasSameSalary", value);
+    },
     onSalariesChange: (value) => {
       applyGenericValidation(get, set, "salaryPeriods", value);
+    },
+    onChangeSalary(value) {
+      applyGenericValidation(get, set, "salary", value);
     },
     onValidateStepSalaires: () => {
       const { isValid, errorState } = validateStep(get().salairesData.input);
 
       if (isValid) {
-        const salaireInput = get().salairesData.input;
+        const salaryInput = get().salairesData.input;
 
         const sReference = new ReferenceSalaryFactory().create(
           SupportedCcIndemniteLicenciement.default
         );
 
+        let salaries = salaryInput.salaryPeriods;
+
+        const { salary } = salaryInput;
+
+        if (salary) {
+          const parseSalary: number = parseFloat(salary);
+          salaries = salaryInput.salaryPeriods.map((v) => ({
+            ...v,
+            value: parseSalary,
+            prime: undefined,
+          }));
+        }
+
         const refSalary = sReference.computeReferenceSalary({
-          salaires: salaireInput.salaryPeriods,
+          salaires: salaries,
         });
 
         set(
