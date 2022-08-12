@@ -22,6 +22,7 @@ export type Reference = {
 };
 
 export type ContentItem = {
+  cdtnId: string;
   source: string;
   title: string;
   slug: string;
@@ -38,7 +39,7 @@ export declare type ContentBlock = {
   html?: string;
   size?: number;
   blockDisplayMode?: BlockDisplayMode;
-  contents?: ContentItem[];
+  contents?: EditorialContent[];
   title?: string;
 };
 
@@ -55,6 +56,7 @@ export type Breadcrumb = {
 };
 
 export type EditorialContent = {
+  cdtnId: string;
   breadcrumbs: Breadcrumb[];
   contents: Content[];
   date: string;
@@ -63,6 +65,8 @@ export type EditorialContent = {
   intro?: string;
   references: Reference[];
   title: string;
+  title_vector?: number[];
+  icon?: string;
 };
 
 export type EditorialContentData = {

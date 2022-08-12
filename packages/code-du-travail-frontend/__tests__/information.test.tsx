@@ -14,31 +14,37 @@ const mockedProps: EditorialContentDataWrapper = {
   },
 };
 
-jest.mock("rehype-parse", jest.fn());
-jest.mock("rehype-react", jest.fn());
+jest.mock(
+  "../src/information",
+  jest.fn(() => {
+    processToHtml: () => "myHtml";
+  })
+);
 
 describe("Information Page", () => {
   let renderResult: RenderResult;
+  let props;
   beforeEach(() => {
-    renderResult = render(<InformationPage {...mockedProps} />);
+    renderResult = render(<InformationPage {...props} />);
   });
   describe("Given a parameter sectionDisplayMode = 'tab'", () => {
     beforeAll(() => {
-      mockedProps.information._source.sectionDisplayMode =
-        SectionDisplayMode.tab;
+      props = { ...mockedProps };
+      props.information._source.sectionDisplayMode = SectionDisplayMode.tab;
     });
     it("should contain tabs", () => {
-      const tabs = renderResult.getByTestId("tabs");
+      const tabs = renderResult.queryByTestId("tabs");
       expect(tabs).toBeInTheDocument();
     });
   });
   describe("Given a parameter sectionDisplayMode = 'accordion'", () => {
     beforeAll(() => {
-      mockedProps.information._source.sectionDisplayMode =
+      props = { ...mockedProps };
+      props.information._source.sectionDisplayMode =
         SectionDisplayMode.accordion;
     });
     it("should contain accordions", () => {
-      const accordions = renderResult.getByTestId("accordion");
+      const accordions = renderResult.queryByTestId("accordion");
       expect(accordions).toBeInTheDocument();
     });
   });
