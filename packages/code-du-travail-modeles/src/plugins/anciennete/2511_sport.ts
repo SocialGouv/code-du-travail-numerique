@@ -2,7 +2,7 @@ import type { Motif } from "./types";
 
 export const MOTIFS_2511: Motif[] = [
   {
-    key: "absenceMaladiePro",
+    key: "absenceMaladieNonPro",
     label: "Absence pour maladie non professionnelle",
     value: 1,
   },

@@ -5,7 +5,7 @@ import type { Absence, ISeniority, Motif, SeniorityProps } from "./types";
 
 export const LEGAL_MOTIFS: Motif[] = [
   {
-    key: "absenceMaladiePro",
+    key: "absenceMaladieNonPro",
     label: "Absence pour maladie non professionnelle",
     value: 1,
   },
@@ -58,13 +58,10 @@ export class SeniorityLegal
         .filter((period) => Boolean(period.durationInMonth))
         .reduce((total, item) => {
           const m = this.motifs.find((motif) => motif.label === item.motif);
-          if (!m) {
+          if (!m || !item.durationInMonth) {
             return total;
           }
-          if (item.durationInMonth) {
-            return total + item.durationInMonth * m.value;
-          }
-          return total;
+          return total + item.durationInMonth * m.value;
         }, 0) / 12;
     return differenceInMonths(dSortie, dEntree) / 12 - totalAbsence;
   }
