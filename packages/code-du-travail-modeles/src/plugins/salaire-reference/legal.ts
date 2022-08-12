@@ -13,6 +13,15 @@ export type LegalReferenceSalaryProps = {
 export class ReferenceSalaryLegal
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.default>
 {
+  /**
+   * Règle :
+   * - soit 1/12*S1
+   *  S1 : total des salaires perçus lors des 12 derniers mois précédant le jour de l'envoi de la lettre de licenciement (brut)
+   *
+   * - soit 1/3*(S + ((P/12)*3))
+   * S : total des salaires perçus lors des 3 derniers mois précédant le jour de l'envoi de la lettre de licenciement (brut)
+   * P : prime(s) ou gratification(s) de caractère annuel ou exceptionnel versée(s) pendant cette période (prise en compte prorata temporis)
+   **/
   computeReferenceSalary({
     salaires = [],
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.default>): number {
