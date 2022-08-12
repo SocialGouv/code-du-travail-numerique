@@ -1,12 +1,3 @@
-# Convention collective nationale travail des établissements et services pour personnes inadaptées et handicapées
-contrat salarié . convention collective . établissement handicap:
-  description: Convention collective nationale des établissements et services pour les personnes inadaptées et handicapées
-  applicable si: convention collective = 'IDCC0413'
-  valeur: oui
-  cdtn:
-    idcc: 413
-    préavis-retraite: true
-
 contrat salarié . convention collective . établissement handicap . catégorie professionnelle:
   question: Quelle est la catégorie professionnelle du salarié ?
   titre: Catégorie professionnelle

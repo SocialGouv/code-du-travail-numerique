@@ -1,4 +1,5 @@
 import type { SupportedCcIndemniteLicenciement } from "..";
+import type { Formula413Props } from "./413_handicap";
 import type { Formula2264Props } from "./2264_hospitalisation_privee";
 import type { LegalFormulaProps } from "./legal";
 
@@ -20,4 +21,6 @@ export type FormulaProps<T> = T extends SupportedCcIndemniteLicenciement.legal
   ? LegalFormulaProps
   : T extends SupportedCcIndemniteLicenciement.IDCC2264
   ? Formula2264Props
+  : T extends SupportedCcIndemniteLicenciement.IDCC413
+  ? Formula413Props
   : DefaultFormulaProps;
