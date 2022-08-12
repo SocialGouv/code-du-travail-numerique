@@ -1,0 +1,8 @@
+app-frontend:
+  host: code.travail.gouv.fr
+  redirectFrom:
+    - www.code.travail.gouv.fr
+    - code.travail.fabrique.social.gouv.fr
+
+app-api:
+  host: api.cdtn.fabrique.social.gouv.fr
