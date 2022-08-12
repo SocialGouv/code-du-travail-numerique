@@ -24,12 +24,12 @@ export class Seniority1090
         .filter((period) => Boolean(period.durationInMonth))
         .reduce((total, item) => {
           const m = this.motifs.find((motif) => motif.label === item.motif);
-          if (
-            !m ||
-            !item.durationInMonth ||
-            (m.key === "absenceMaladieNonPro" && item.durationInMonth > 6)
-          ) {
+          if (!m || !item.durationInMonth) {
             return total;
+          }
+          if (m.key === "absenceMaladieNonPro") {
+            const newValue = Math.max(0, (item.durationInMonth - 6) * m.value);
+            return total + newValue;
           }
           return total + item.durationInMonth * m.value;
         }, 0) / 12;
