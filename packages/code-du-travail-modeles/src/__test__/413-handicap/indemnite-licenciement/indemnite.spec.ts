@@ -38,7 +38,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 413", () => {
           .setSituation({
             "contrat salarié . convention collective": "'IDCC0413'",
             "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . cadre et non cadre durant une période":
+            "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période":
               "non",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
@@ -75,9 +75,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 413", () => {
           .setSituation({
             "contrat salarié . convention collective": "'IDCC0413'",
             "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . cadre et non cadre durant une période":
+            "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période":
               "oui",
-            "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . cadre et non cadre durant une période . temps":
+            "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps":
               seniorityNonCadres,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
