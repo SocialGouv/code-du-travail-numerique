@@ -104,7 +104,7 @@ const StepSalaires = () => {
           )}
           {hasSameSalary === "non" && (
             <SalaireTempsPlein
-              title="Salaires mensuels brut des 12 derniers mois et primes des 3 derniers mois précédant la notification du licenciement"
+              title="Salaires mensuels bruts des 12 derniers mois et primes des 3 derniers mois précédant la notification du licenciement"
               subTitle="Indiquez le montant des salaires (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)              "
               onSalariesChange={onSalariesChange}
               salaryPeriods={salaryPeriods}
