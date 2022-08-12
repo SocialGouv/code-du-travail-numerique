@@ -28,7 +28,13 @@ export class Formula413
       formula = `1/2 * Sref * A`;
       explanations.push(`A : Ancienneté totale (${round(seniority)} ${year})`);
       explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
-    } else if (category === "Cadres" && !seniorityNonCadre && seniority > 2) {
+    } else if (
+      (category === "Cadres" ||
+        category ===
+          "Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service") &&
+      !seniorityNonCadre &&
+      seniority > 2
+    ) {
       formula = `Sref * A`;
       explanations.push(`A : Ancienneté totale (${round(seniority)} ${year})`);
       explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
