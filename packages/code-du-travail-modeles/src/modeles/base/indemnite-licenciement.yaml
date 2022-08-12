@@ -75,9 +75,31 @@ contrat salarié . indemnité de licenciement . ancienneté conventionnelle en a
   valeur: non
   unité: an
 
-contrat salarié . indemnité de licenciement . somme des absences collective:
-  valeur: non
-  unité: an
+contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins cc:
+  valeur:
+    le minimum de:
+      - ancienneté conventionnelle en année
+      - 10 an
+
+contrat salarié . indemnité de licenciement . au dela de dix ans cc:
+  somme:
+    - ancienneté conventionnelle en année
+    - (- 10 an)
+  plancher: 0 an
+
+contrat salarié . indemnité de licenciement . facteur dix ans ou moins cc:
+  valeur:
+    produit:
+      assiette: jusqu'à dix ans ou moins cc * salaire de référence conventionnel
+      facteur: 1 / 4
+  unité: €
+
+contrat salarié . indemnité de licenciement . facteur plus de dix ans cc:
+  valeur:
+    produit:
+      assiette: au dela de dix ans cc * salaire de référence conventionnel
+      facteur: 1 / 3
+  unité: €
 
 contrat salarié . indemnité de licenciement . résultat conventionnel:
   valeur: non

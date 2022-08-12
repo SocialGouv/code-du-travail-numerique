@@ -1,12 +1,3 @@
-# Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981.
-contrat salarié . convention collective . automobiles:
-  description: Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981.
-  applicable si: convention collective = 'IDCC1090'
-  valeur: oui
-  cdtn:
-    idcc: 1090
-    préavis-retraite: true
-
 contrat salarié . convention collective . automobiles . catégorie professionnelle:
   titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?
