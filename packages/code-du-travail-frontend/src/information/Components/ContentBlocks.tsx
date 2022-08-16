@@ -170,6 +170,11 @@ const ListLinkSquareTile = styled.div`
     width: 100%;
     text-align: center;
   }
+  a {
+    div:nth-child(3) {
+      margin-top: 0;
+    }
+  }
 `;
 
 const BlockContentTitle = styled.div`

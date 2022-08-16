@@ -124,7 +124,7 @@ const IconWrapper = styled.div`
   display: ${({ theme }) => (theme.noColors ? "none" : "block")};
   width: 7.2rem;
   height: 7.2rem;
-  margin: 0 auto ${spacings.base};
+  margin: 0 auto ${spacings.tiny};
   padding: 1.4rem;
   background-color: ${({ theme }) => theme.bgSecondary};
   border-radius: 50%;
