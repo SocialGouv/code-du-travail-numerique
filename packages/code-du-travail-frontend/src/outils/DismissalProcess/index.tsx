@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, PageTitle, Section } from "@socialgouv/cdtn-ui";
 import { internals as tools } from "@cdt/data";
+import { Quiz } from "../Components/Quiz";
 
 const tool = tools.find(({ slug }) => slug === "procedure-licenciement");
 const subtitle =
@@ -11,6 +12,7 @@ const DismissalProcess = (): JSX.Element => (
     <Container narrow>
       <PageTitle subtitle={subtitle}>{tool?.title}</PageTitle>
     </Container>
+    <Quiz></Quiz>
   </Section>
 );
 

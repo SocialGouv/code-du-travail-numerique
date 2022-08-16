@@ -1,0 +1,81 @@
+{
+    "text": "Vous êtes",
+    "responses": [
+        {
+            "text": "Salarié",
+            "description": "vous faites l'objet d'une procédure de licenciement",
+            "question": {
+                "text": "Par quel type de licenciement êtes-vous concerné",
+                "responses": [
+                    {
+                        "text": "Un licenciement pour motif personnel",
+                        "info": "",
+                        "question": {
+                            "text": "Quel est le motif de ce licenciement",
+                            "responses": [
+                                {
+                                    "text": "Une faute qui vous est reprochée",
+                                    "description": "motif disciplinaire",
+                                    "slug": ""
+                                },
+                                {
+                                    "text": "Une inaptitude constatée par le médecin du travail",
+                                    "slug": ""
+                                },
+                                {
+                                    "text": "Vous n'êtes concerné par aucun de ces cas",
+                                    "description": "motif non disciplinaire",
+                                    "slug": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "text": "Un licenciement suite à un accord de performance collective",
+                        "description": "APC",
+                        "info": "",
+                        "slug": ""
+                    }
+                ]
+            }
+        },
+        {
+            "text": "Employeur",
+            "description": "vous licenciez un ou plusieurs salariés",
+            "question": {
+                "text": "Par quel type de licenciement êtes-vous concerné",
+                "responses": [
+                    {
+                        "text": "Un licenciement pour motif personnel",
+                        "info": "",
+                        "question": {
+                            "text": "Quel est le motif de ce licenciement",
+                            "responses": [
+                                {
+                                    "text": "Une faute qui est reprochée au salarié",
+                                    "description": "motif disciplinaire",
+                                    "slug": ""
+                                },
+                                {
+                                    "text": "Une inaptitude du salarié constatée par le médecin du travail",
+                                    "slug": ""
+                                },
+                                {
+                                    "text": "Aucun de ces cas",
+                                    "description": "motif non disciplinaire",
+                                    "slug": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "text": "Un licenciement suite à un accord de performance collective",
+                        "description": "APC",
+                        "info": "",
+                        "slug": ""
+                    }
+                ]
+            }
+        }
+    ]
+}

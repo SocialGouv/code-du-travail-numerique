@@ -13,6 +13,7 @@ export { default as Eurotext } from "./components/bicolor/Eurotext.js";
 export { default as Focus } from "./components/bicolor/Focus.js";
 export { default as Formation } from "./components/bicolor/Formation.js";
 export { default as France } from "./components/bicolor/France.js";
+export { default as Gear } from "./components/bicolor/Gear.js";
 export { default as Handicap } from "./components/bicolor/Handicap.js";
 export { default as Health } from "./components/bicolor/Health.js";
 export { default as Holidays } from "./components/bicolor/Holidays.js";
