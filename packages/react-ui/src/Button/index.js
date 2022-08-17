@@ -28,7 +28,7 @@ export const StyledButton = styled.button`
   @media print {
     display: none;
   }
-  ${({ narrow, theme, small, variant }) => {
+  ${({ narrow, theme, small, variant, xsmall }) => {
     if (variant === "link") {
       return css`
         padding: 0;
@@ -90,6 +90,11 @@ export const StyledButton = styled.button`
 
     if (narrow) {
       padding = small ? "0 1rem" : "0 1.9rem";
+    }
+
+    if (xsmall) {
+      height = "2.8rem";
+      padding = "0 3rem";
     }
 
     if (variant === "flat") {
@@ -204,4 +209,5 @@ Button.defaultProps = {
   onClick: () => {},
   small: false,
   variant: "secondary",
+  xsmall: false,
 };

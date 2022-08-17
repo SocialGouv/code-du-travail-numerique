@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import { icons } from "@socialgouv/cdtn-ui";
+import { QuizSummary } from "./QuizSummary";
+import { QuizQuestionnary } from "./QuizQuestionnary";
+import { createQuizStore, useQuizStore, QuizProvider } from "../store";
 const { Gear: GearIcon } = icons;
 
-export const Quiz = () => {
+export const Quiz = ({ QuizName }) => {
   return (
     <QuizWrapper>
       <QuizHeader>
@@ -11,6 +14,12 @@ export const Quiz = () => {
         </StyledIcon>
         <QuizHeaderTitle>Quelle est votre situation ?</QuizHeaderTitle>
       </QuizHeader>
+      <QuizBody>
+        <QuizProvider createStore={() => createQuizStore(QuizName)}>
+          <QuizSummary></QuizSummary>
+          <QuizQuestionnary></QuizQuestionnary>
+        </QuizProvider>
+      </QuizBody>
     </QuizWrapper>
   );
 };
@@ -26,6 +35,7 @@ const QuizWrapper = styled.div`
 const QuizHeader = styled.div`
   display: flex;
   flex-direction: row;
+  margin-bottom: 32px;
 `;
 
 const QuizHeaderTitle = styled.div`
@@ -36,4 +46,9 @@ const QuizHeaderTitle = styled.div`
 
 const StyledIcon = styled.div`
   margin-right: 24px;
+`;
+
+const QuizBody = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
