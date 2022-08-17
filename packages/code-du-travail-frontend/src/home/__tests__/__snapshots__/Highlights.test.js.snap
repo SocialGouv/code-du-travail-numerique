@@ -26,7 +26,7 @@ exports[`<Highlights /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c16 {
+.c17 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
@@ -213,6 +213,12 @@ exports[`<Highlights /> should render 1`] = `
   padding-top: 1.6rem;
 }
 
+.c16 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 @media (max-width:600px) {
   .c1 {
     padding: 0 1rem;
@@ -384,11 +390,15 @@ exports[`<Highlights /> should render 1`] = `
                 <div
                   class="c15"
                 >
-                  <p
+                  <div
                     class="c16"
                   >
-                    1. Dois-je prévenir mon employeur si je reviens, ou si...
-                  </p>
+                    <p
+                      class="c17"
+                    >
+                      1. Dois-je prévenir mon employeur si je reviens, ou si...
+                    </p>
+                  </div>
                 </div>
               </a>
             </div>
@@ -420,11 +430,15 @@ exports[`<Highlights /> should render 1`] = `
                 <div
                   class="c15"
                 >
-                  <p
+                  <div
                     class="c16"
                   >
-                    9. Quelles sont les recommandations sanitaires pour...
-                  </p>
+                    <p
+                      class="c17"
+                    >
+                      9. Quelles sont les recommandations sanitaires pour...
+                    </p>
+                  </div>
                 </div>
               </a>
             </div>

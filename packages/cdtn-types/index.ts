@@ -3,6 +3,11 @@ export enum SectionDisplayMode {
   tab = "tab",
 }
 
+export enum BlockDisplayMode {
+  line = "line",
+  square = "square",
+}
+
 export type ReferenceLink = {
   id: string;
   type: string;
@@ -16,14 +21,26 @@ export type Reference = {
   links: ReferenceLink[];
 };
 
+export type ContentItem = {
+  cdtnId: string;
+  source: string;
+  title: string;
+  slug: string;
+  description: string;
+  icon?: string;
+};
+
 export declare type ContentBlock = {
   type: string;
-  markdown: string;
+  markdown?: string;
   imgUrl?: string;
   fileUrl?: string;
   altText?: string;
   html?: string;
   size?: number;
+  blockDisplayMode?: BlockDisplayMode;
+  contents?: EditorialContent[];
+  title?: string;
 };
 
 export declare type Content = {
@@ -39,6 +56,7 @@ export type Breadcrumb = {
 };
 
 export type EditorialContent = {
+  cdtnId: string;
   breadcrumbs: Breadcrumb[];
   contents: Content[];
   date: string;
@@ -47,6 +65,8 @@ export type EditorialContent = {
   intro?: string;
   references: Reference[];
   title: string;
+  title_vector?: number[];
+  icon?: string;
 };
 
 export type EditorialContentData = {

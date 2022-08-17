@@ -1,11 +1,11 @@
 import elasticsearchClient from "../../conf/elasticsearch";
+import { getRelatedItemsBody } from "./relatedItems.es";
+import { getSearchBySourceSlugBody } from "./searchBySourceSlug.es";
 
 const { SOURCES, getSourceByRoute } = require("@socialgouv/cdtn-sources");
 const { DOCUMENTS, vectorizeQuery } = require("@socialgouv/cdtn-elasticsearch");
-const getSearchBody = require("./searchBySourceSlug.elastic");
 const getSemBody = require("../search/search.sem");
 const utils = require("../search/utils");
-const getRelatedItemsBody = require("./relatedItems.elastic");
 const { logger } = require("@socialgouv/cdtn-logger");
 const { CDTN_ADMIN_VERSION } = require("../v1.prefix.js");
 
@@ -26,8 +26,8 @@ const sources = [
 
 // select certain fields and add recommendation source (covisits or search)
 const mapSource =
-  (reco) =>
-  ({ action, description, icon, slug, source, subtitle, title, url }) => ({
+  (reco: string) =>
+  ({ action, description, icon, slug, source, subtitle, title, url }: any) => ({
     action,
     description,
     icon,
@@ -40,16 +40,16 @@ const mapSource =
   });
 
 // rely on covisit links within the item, computed offline from usage logs (Monolog)
-async function getCovisitedItems({ covisits }) {
+export const getCovisitedItems = async ({ covisits }: { covisits: any }) => {
   // covisits as related items
-  const body = covisits.flatMap(({ link }) => {
+  const body = covisits.flatMap(({ link }: { link: string }) => {
     const [route, slug] = link.split("/");
     const source = getSourceByRoute(route);
     if (!(slug && source)) {
       logger.error(`Unknown covisit : ${link}`);
       return [];
     } else {
-      return [{ index }, getSearchBody({ slug, source })];
+      return [{ index }, getSearchBySourceSlugBody({ slug, source })];
     }
   });
 
@@ -69,19 +69,25 @@ async function getCovisitedItems({ covisits }) {
 
   const covisitedItems = esCovisits
     // we filter fields and add some info about recommandation type for evaluation purpose
-    .map(({ _source }) => mapSource("covisits")(_source))
+    .map(({ _source }: { _source: any }) => mapSource("covisits")(_source))
     .slice(0, MAX_RESULTS);
 
   return covisitedItems;
-}
+};
 
 // use search based on item title : More Like This & Semantic
-async function getSearchBasedItems({ title, settings }) {
+export const getSearchBasedItems = async ({
+  title,
+  settings,
+}: {
+  title: string;
+  settings: any;
+}) => {
   const relatedItemBody = getRelatedItemsBody({ settings, sources });
   const requestBodies = [{ index }, relatedItemBody];
 
   const query_vector = await vectorizeQuery(title.toLowerCase()).catch(
-    (error) => {
+    (error: any) => {
       logger.error(error.message);
     }
   );
@@ -112,26 +118,36 @@ async function getSearchBasedItems({ title, settings }) {
     utils
       .mergePipe(fullTextHits, semanticHits, MAX_RESULTS)
       // we filter fields and add some info about recommandation type for evaluation purpose
-      .map(({ _source }) => mapSource("search")(_source))
+      .map(({ _source }: any) => mapSource("search")(_source))
   );
-}
+};
 
 // get related items, depending on : covisits present & non empty
-async function getRelatedItems({ title, settings, slug, covisits }) {
-  const covisitedItems = covisits
-    ? await getCovisitedItems({ covisits, slug })
-    : [];
+export const getRelatedItems = async ({
+  title,
+  settings,
+  slug,
+  covisits,
+}: {
+  title: string;
+  settings: any;
+  slug: string;
+  covisits: string;
+}): Promise<any> => {
+  const covisitedItems = covisits ? await getCovisitedItems({ covisits }) : [];
 
-  const searchBasedItems = await getSearchBasedItems({ settings, slug, title });
+  const searchBasedItems = await getSearchBasedItems({ settings, title });
 
   const filteredItems = covisitedItems
     .concat(searchBasedItems)
     // avoid elements already visible within the item as fragments
-    .filter((item) => !slug.startsWith(item.slug.split("#")[0]))
+    .filter(
+      (item: { slug: string }) => !slug.startsWith(item.slug.split("#")[0])
+    )
     // only return sources of interest
-    .filter(({ source }) => sources.includes(source))
+    .filter(({ source }: { source: string }) => sources.includes(source))
     // drop duplicates (between covisits and search) using source/slug
-    .reduce((acc, related) => {
+    .reduce((acc: any, related: { source: string; slug: string }) => {
       const key = related.source + related.slug;
       if (!acc.has(key)) acc.set(key, related);
       return acc;
@@ -139,8 +155,4 @@ async function getRelatedItems({ title, settings, slug, covisits }) {
     .values();
 
   return Array.from(filteredItems).slice(0, MAX_RESULTS);
-}
-
-module.exports = {
-  getRelatedItems,
 };

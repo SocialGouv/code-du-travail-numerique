@@ -1,4 +1,12 @@
-function getRelatedItemsBody({ settings, size = 10, sources = [] }) {
+export const getRelatedItemsBody = ({
+  settings,
+  size = 10,
+  sources = [],
+}: {
+  settings: any;
+  size?: number;
+  sources: any[];
+}): any => {
   if (sources.length === 0) {
     throw new Error("[getRelatedItemsBody] sources should not be empty");
   }
@@ -36,6 +44,4 @@ function getRelatedItemsBody({ settings, size = 10, sources = [] }) {
     },
     size,
   };
-}
-
-module.exports = getRelatedItemsBody;
+};

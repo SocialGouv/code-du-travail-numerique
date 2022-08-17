@@ -22,6 +22,41 @@ import styled from "styled-components";
 import { CallToActionTile } from "../../common/tiles/CallToAction";
 import { reportSelectionToMatomo, summarize } from "../utils";
 
+type CommonProps = {
+  children: JSX.Element;
+  onClick: () => void;
+  onKeyPress: (e: any) => false | void;
+  subtitle: string;
+  title?: string;
+  wide: boolean;
+  action?: string;
+  custom?: boolean;
+  icon?: string;
+};
+
+type HighlightProps = {
+  searchInfo: string;
+};
+
+type ListLinkItemProps = {
+  action?: string;
+  algo?: string;
+  breadcrumbs?: any[];
+  description?: string;
+  source?: any;
+  slug?: string;
+  title?: string;
+  url?: string;
+  highlight?: HighlightProps;
+  icon?: string;
+};
+
+type ListLinkProps = {
+  item: ListLinkItemProps;
+  showTheme?: boolean;
+  query?: string;
+};
+
 export const ListLink = ({
   item: {
     action,
@@ -33,12 +68,13 @@ export const ListLink = ({
     title,
     url,
     highlight,
+    icon,
   },
   showTheme = true,
   query,
-}) => {
+}: ListLinkProps) => {
   let subtitle = "";
-  if (showTheme) {
+  if (showTheme && !icon) {
     if (breadcrumbs.length > 0) {
       subtitle = breadcrumbs[breadcrumbs.length - 1].label;
     } else {
@@ -46,7 +82,7 @@ export const ListLink = ({
     }
   }
 
-  const tileCommonProps = {
+  const tileCommonProps: CommonProps = {
     children: (
       <>
         {highlight && highlight.searchInfo && (
@@ -54,7 +90,9 @@ export const ListLink = ({
             {highlight.searchInfo}
           </StyledParagraph>
         )}
-        <Paragraph noMargin>{summarize(description)}</Paragraph>
+        <StyledParagraphContainer>
+          <Paragraph noMargin>{summarize(description)}</Paragraph>
+        </StyledParagraphContainer>
       </>
     ),
     onClick: () => reportSelectionToMatomo(source, slug, url, algo),
@@ -63,6 +101,7 @@ export const ListLink = ({
     subtitle,
     title,
     wide: true,
+    icon,
   };
 
   if (source === SOURCES.EXTERNALS) {
@@ -77,7 +116,7 @@ export const ListLink = ({
           description
         )} ${action} (nouvelle fenêtre)`}
         {...tileCommonProps}
-        custom={false}
+        noCustom={true}
         titleTagType="h3"
       />
     );
@@ -86,7 +125,7 @@ export const ListLink = ({
   // external links
   if (!slug) {
     return (
-      <Link href={url} passHref>
+      <Link href={url ?? ""} passHref>
         <Tile {...tileCommonProps} />
       </Link>
     );
@@ -188,4 +227,8 @@ const StyledButton = styled(Button)`
 
 const StyledParagraph = styled(Paragraph)`
   margin-bottom: ${spacings.xsmall};
+`;
+
+const StyledParagraphContainer = styled.div`
+  flex: 1;
 `;
