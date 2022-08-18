@@ -22,6 +22,39 @@ import styled from "styled-components";
 import { CallToActionTile } from "../../common/tiles/CallToAction";
 import { reportSelectionToMatomo, summarize } from "../utils";
 
+type CommonProps = {
+  children: JSX.Element;
+  onClick: () => void;
+  onKeyPress: (e: any) => false | void;
+  subtitle: string;
+  title?: string;
+  wide: boolean;
+  action?: string;
+  custom?: boolean;
+};
+
+type HighlightProps = {
+  searchInfo: string;
+};
+
+type ListLinkItemProps = {
+  action?: string;
+  algo?: string;
+  breadcrumbs?: any[];
+  description?: string;
+  source?: any;
+  slug?: string;
+  title?: string;
+  url?: string;
+  highlight?: HighlightProps;
+};
+
+type ListLinkProps = {
+  item: ListLinkItemProps;
+  showTheme?: boolean;
+  query?: string;
+};
+
 export const ListLink = ({
   item: {
     action,
@@ -36,7 +69,7 @@ export const ListLink = ({
   },
   showTheme = true,
   query,
-}) => {
+}: ListLinkProps) => {
   let subtitle = "";
   if (showTheme) {
     if (breadcrumbs.length > 0) {
@@ -46,7 +79,7 @@ export const ListLink = ({
     }
   }
 
-  const tileCommonProps = {
+  const tileCommonProps: CommonProps = {
     children: (
       <>
         {highlight && highlight.searchInfo && (
@@ -77,7 +110,7 @@ export const ListLink = ({
           description
         )} ${action} (nouvelle fenêtre)`}
         {...tileCommonProps}
-        custom={false}
+        noCustom={true}
         titleTagType="h3"
       />
     );
@@ -86,7 +119,7 @@ export const ListLink = ({
   // external links
   if (!slug) {
     return (
-      <Link href={url} passHref>
+      <Link href={url ?? ""} passHref>
         <Tile {...tileCommonProps} />
       </Link>
     );

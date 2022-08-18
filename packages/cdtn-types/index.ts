@@ -16,15 +16,28 @@ export type Reference = {
   links: ReferenceLink[];
 };
 
-export type Content = {
-  type: string;
-  name: string;
-  altText: string;
-  size: number;
-  html: string;
-  imgUrl: string;
-  fileUrl: string;
+export type ContentItem = {
+  source: string;
   title: string;
+  slug: string;
+  description: string;
+};
+
+export declare type ContentBlock = {
+  type: string;
+  markdown?: string;
+  imgUrl?: string;
+  fileUrl?: string;
+  altText?: string;
+  html?: string;
+  size?: number;
+  contents?: ContentItem[];
+};
+
+export declare type Content = {
+  name: string;
+  title: string;
+  blocks: ContentBlock[];
   references: Reference[];
 };
 
