@@ -31,6 +31,7 @@ type CommonProps = {
   wide: boolean;
   action?: string;
   custom?: boolean;
+  icon?: string;
 };
 
 type HighlightProps = {
@@ -47,6 +48,7 @@ type ListLinkItemProps = {
   title?: string;
   url?: string;
   highlight?: HighlightProps;
+  icon?: string;
 };
 
 type ListLinkProps = {
@@ -66,12 +68,13 @@ export const ListLink = ({
     title,
     url,
     highlight,
+    icon,
   },
   showTheme = true,
   query,
 }: ListLinkProps) => {
   let subtitle = "";
-  if (showTheme) {
+  if (showTheme && !icon) {
     if (breadcrumbs.length > 0) {
       subtitle = breadcrumbs[breadcrumbs.length - 1].label;
     } else {
@@ -87,7 +90,9 @@ export const ListLink = ({
             {highlight.searchInfo}
           </StyledParagraph>
         )}
-        <Paragraph noMargin>{summarize(description)}</Paragraph>
+        <StyledParagraphContainer>
+          <Paragraph noMargin>{summarize(description)}</Paragraph>
+        </StyledParagraphContainer>
       </>
     ),
     onClick: () => reportSelectionToMatomo(source, slug, url, algo),
@@ -96,6 +101,7 @@ export const ListLink = ({
     subtitle,
     title,
     wide: true,
+    icon,
   };
 
   if (source === SOURCES.EXTERNALS) {
@@ -221,4 +227,8 @@ const StyledButton = styled(Button)`
 
 const StyledParagraph = styled(Paragraph)`
   margin-bottom: ${spacings.xsmall};
+`;
+
+const StyledParagraphContainer = styled.div`
+  flex: 1;
 `;

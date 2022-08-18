@@ -1,4 +1,4 @@
-function getDocumentByUrlBody({ url }) {
+export const getDocumentByUrlBody = ({ url }: { url: string }) => {
   return {
     _source: ["date", "raw", "intro", "sections", "source", "url"],
     query: {
@@ -8,6 +8,4 @@ function getDocumentByUrlBody({ url }) {
     },
     size: 1,
   };
-}
-
-module.exports = getDocumentByUrlBody;
+};

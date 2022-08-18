@@ -1,11 +1,12 @@
 import elasticsearchClient from "../../conf/elasticsearch";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
+import { getRelatedItems } from "./getRelatedItems";
+import { getDocumentByIdsBody } from "./searchByIds.es";
+import { getSearchBySourceSlugBody } from "./searchBySourceSlug.es";
+import { getDocumentByUrlBody } from "./searchByUrl.es";
 
 const Router = require("koa-router");
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
-const getItemBySlugBody = require("./searchBySourceSlug.elastic");
-const getDocumentByUrlBody = require("./searchByUrl.elastic");
-const { getRelatedItems } = require("./getRelatedItems");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
 const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
@@ -22,9 +23,9 @@ const router = new Router({ prefix: API_BASE_URL });
  * @param {string} :slug The item slug to fetch.
  * @returns {Object} Result.
  */
-router.get("/items/:source/:slug", async (ctx) => {
+router.get("/items/:source/:slug", async (ctx: any) => {
   const { source, slug } = ctx.params;
-  const body = getItemBySlugBody({ slug, source }, true);
+  const body = getSearchBySourceSlugBody({ slug, source });
   const response = await elasticsearchClient.search({ body, index });
 
   if (response.body.hits.total.value === 0) {
@@ -63,7 +64,7 @@ router.get("/items/:source/:slug", async (ctx) => {
  * @param {string} :id The item id.
  * @returns {Object} Result.
  */
-router.get("/items/:id", async (ctx) => {
+router.get("/items/:id", async (ctx: any) => {
   const { id } = ctx.params;
 
   const response = await elasticsearchClient.get({
@@ -79,14 +80,18 @@ router.get("/items/:id", async (ctx) => {
  * Return document matching the given url.
  *
  * @example
- * http://localhost:1337/api/v1/items?url=:url
+ * http://localhost:1337/api/v1/items?url=:url&ids=:ids&all=:all
  *
  * @param {string} :url The item url.
+ * @param {string[]} :ids The item id array.
+ * @param {string} :all The response type array or object.
  * @returns {Object} Result.
  */
-router.get("/items", async (ctx) => {
-  const { url } = ctx.query;
-  const body = getDocumentByUrlBody({ url });
+router.get("/items", async (ctx: any) => {
+  const { url, ids, all } = ctx.query;
+  const body = ids
+    ? getDocumentByIdsBody(ids.split(","))
+    : getDocumentByUrlBody({ url });
   const response = await elasticsearchClient.search({ body, index });
 
   if (response.body.hits.total.value === 0) {
@@ -95,7 +100,7 @@ router.get("/items", async (ctx) => {
 
   const [item] = response.body.hits.hits;
   delete item.title_vector;
-  ctx.body = { ...item };
+  ctx.body = all === "true" ? response.body.hits.hits : { ...item };
 });
 
 export default router;
