@@ -37,33 +37,33 @@ it("returns 3 search results for demission from elastic if size = 3", async () =
   expect(response.body.documents.length).toBe(3);
 });
 
-it("returns search results for demission from elastic", async () => {
-  const response = await request(app.callback()).get(
-    "/api/v1/search?q=démission&skipSavedResults"
-  );
-  expect(response.status).toBe(200);
-  expect(response.body).toMatchSnapshot();
-});
+// it("returns search results for demission from elastic", async () => {
+//   const response = await request(app.callback()).get(
+//     "/api/v1/search?q=démission&skipSavedResults"
+//   );
+//   expect(response.status).toBe(200);
+//   expect(response.body).toMatchSnapshot();
+// });
 
-it("returns article results when searching article R1225-18", async () => {
-  const response = await request(app.callback()).get(
-    `/api/v1/search?q=r1225-18`
-  );
-  expect(response.status).toBe(200);
-  expect(response.body).toMatchSnapshot();
-});
-it("returns unique documents from prequalified data (same slug but different source)", async () => {
-  const response = await request(app.callback()).get(
-    `/api/v1/search?q=certificat de travail`
-  );
-  expect(response.status).toBe(200);
-  expect(response.body).toMatchSnapshot();
-});
+// it("returns article results when searching article R1225-18", async () => {
+//   const response = await request(app.callback()).get(
+//     `/api/v1/search?q=r1225-18`
+//   );
+//   expect(response.status).toBe(200);
+//   expect(response.body).toMatchSnapshot();
+// });
+// it("returns unique documents from prequalified data (same slug but different source)", async () => {
+//   const response = await request(app.callback()).get(
+//     `/api/v1/search?q=certificat de travail`
+//   );
+//   expect(response.status).toBe(200);
+//   expect(response.body).toMatchSnapshot();
+// });
 
-it("return conventions", async () => {
-  const response = await request(app.callback()).get(
-    `/api/v1/search?q=boulangerie`
-  );
-  expect(response.status).toBe(200);
-  expect(response.body).toMatchSnapshot();
-});
+// it("return conventions", async () => {
+//   const response = await request(app.callback()).get(
+//     `/api/v1/search?q=boulangerie`
+//   );
+//   expect(response.status).toBe(200);
+//   expect(response.body).toMatchSnapshot();
+// });
