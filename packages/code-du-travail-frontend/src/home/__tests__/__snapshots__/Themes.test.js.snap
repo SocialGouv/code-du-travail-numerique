@@ -253,7 +253,7 @@ exports[`<Themes /> should render 1`] = `
   display: block;
   width: 7.2rem;
   height: 7.2rem;
-  margin: 0 auto 1.6rem;
+  margin: 0 auto 0.4rem;
   padding: 1.4rem;
   background-color: #f2f5fa;
   border-radius: 50%;
@@ -267,6 +267,15 @@ exports[`<Themes /> should render 1`] = `
 
 .c26 {
   padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .c27 {

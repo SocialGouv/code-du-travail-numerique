@@ -368,7 +368,7 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
   display: block;
   width: 7.2rem;
   height: 7.2rem;
-  margin: 0 auto 1.6rem;
+  margin: 0 auto 0.4rem;
   padding: 1.4rem;
   background-color: #f2f5fa;
   border-radius: 50%;
