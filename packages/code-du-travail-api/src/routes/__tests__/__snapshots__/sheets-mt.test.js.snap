@@ -3,7 +3,7 @@
 exports[`return content data for slug 5-questions-reponses-sur-la-sante-au-travail 1`] = `
 Object {
   "_id": "23",
-  "_index": "cdtn_test-v1_documents",
+  "_index": "cdtn_test-v2_documents",
   "_score": 0,
   "_source": Object {
     "breadcrumbs": Array [
