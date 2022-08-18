@@ -1,11 +1,25 @@
 import React from "react";
 import { Paragraph } from "@socialgouv/cdtn-ui";
+import {
+  MatomoBaseEvent,
+  MatomoActionEvent,
+  MatomoAgreementEvent,
+} from "../../../../lib";
+import { matopush } from "../../../../piwik";
 
 type Props = {
   agreementUrl?: string;
 };
 
 const NotSupportedAgreementDisclaimer: React.FC<Props> = ({ agreementUrl }) => {
+  React.useEffect(() => {
+    matopush([
+      MatomoBaseEvent.TRACK_EVENT,
+      MatomoBaseEvent.OUTIL,
+      MatomoActionEvent.PREAVIS_DEMISSION,
+      MatomoAgreementEvent.CC_BLOCK_USER,
+    ]);
+  }, []);
   return (
     <>
       <Paragraph>

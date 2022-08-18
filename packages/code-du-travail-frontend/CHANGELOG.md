@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.80.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.79.2...v4.80.0) (2022-08-02)
+
+
+### Bug Fixes
+
+* **indemnite-licenciement:** event naming ([#4504](https://github.com/SocialGouv/code-du-travail-numerique/issues/4504)) ([40ef865](https://github.com/SocialGouv/code-du-travail-numerique/commit/40ef86559211d21b7f402da7c01f01690aeae6bb))
+* event ([#4503](https://github.com/SocialGouv/code-du-travail-numerique/issues/4503)) ([024d148](https://github.com/SocialGouv/code-du-travail-numerique/commit/024d1484c961b2e6d1ce3566a54812a53d1e738a))
+
+
+### Features
+
+* **event:** add `user_blocked_info_cc` event ([#4492](https://github.com/SocialGouv/code-du-travail-numerique/issues/4492)) ([c0c081f](https://github.com/SocialGouv/code-du-travail-numerique/commit/c0c081f2e32b83b45f3811ffe49b22c2246930bd))
+
+
+
+
+
 ## [4.79.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.79.1...v4.79.2) (2022-07-01)
 
 **Note:** Version bump only for package @cdt/frontend
