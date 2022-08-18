@@ -24,23 +24,22 @@ const MiseRetraiteCcReferences = [...MiseRetraiteReferences, CommonReference];
 describe("Préavis de retraite de la CC 1517", () => {
   describe("Vérification des départs à la retraite et des références juridiques", () => {
     test.each`
-      category                            | seniority | expectedResult
-      ${"Employés (Niveaux I à V)"}       | ${5}      | ${2}
-      ${"Employés (Niveaux I à V)"}       | ${6}      | ${1}
-      ${"Employés (Niveaux I à V)"}       | ${24}     | ${2}
-      ${"Agents de maîtrise (Niveau VI)"} | ${5}      | ${2}
-      ${"Agents de maîtrise (Niveau VI)"} | ${6}      | ${1}
-      ${"Agents de maîtrise (Niveau VI)"} | ${24}     | ${2}
-      ${"Cadres (Niveaux VII à IX)"}      | ${5}      | ${3}
-      ${"Cadres (Niveaux VII à IX)"}      | ${6}      | ${1}
-      ${"Cadres (Niveaux VII à IX)"}      | ${24}     | ${2}
+      seniority | expectedResult
+      ${5}      | ${1}
+      ${6}      | ${1}
+      ${24}     | ${2}
+      ${5}      | ${1}
+      ${6}      | ${1}
+      ${24}     | ${2}
+      ${5}      | ${1}
+      ${6}      | ${1}
+      ${24}     | ${2}
     `(
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
-      ({ category, seniority, expectedResult }) => {
+      ({ seniority, expectedResult }) => {
         const situation = engine.setSituation({
           "contrat salarié . ancienneté": seniority,
           "contrat salarié . convention collective": "'IDCC1517'",
-          "contrat salarié . convention collective . commerces de detail non alimentaires . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
           "préavis de retraite": "oui",
