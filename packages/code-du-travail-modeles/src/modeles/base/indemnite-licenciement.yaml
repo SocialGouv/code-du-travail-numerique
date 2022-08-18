@@ -46,7 +46,7 @@ contrat salarié . indemnité de licenciement . facteur plus de dix ans:
 #  A2 : Ancienneté au delà de 10 ans
 contrat salarié . indemnité de licenciement . résultat légal:
   variations:
-    - si: ancienneté en année > 7 mois
+    - si: ancienneté en année >= 8 mois
       alors:
         somme:
           - facteur dix ans ou moins
