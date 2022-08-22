@@ -8,6 +8,8 @@ export type QuizResponse = {
 
 export type QuizQuestion = {
   text: string;
+  statement: string;
   info?: string;
+  description?: string;
   responses: QuizResponse[];
 };

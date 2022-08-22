@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { icons } from "@socialgouv/cdtn-ui";
 import { QuizSummary } from "./QuizSummary";
 import { QuizQuestionnary } from "./QuizQuestionnary";
-import { createQuizStore, useQuizStore, QuizProvider } from "../store";
+import { createQuizStore, QuizProvider } from "../store";
+
 const { Gear: GearIcon } = icons;
 
 export const Quiz = ({ QuizName }) => {
@@ -38,10 +39,8 @@ const QuizHeader = styled.div`
   margin-bottom: 32px;
 `;
 
-const QuizHeaderTitle = styled.div`
-  font-family: "Merriweather";
-  font-weight: 400;
-  font-size: 26px;
+const QuizHeaderTitle = styled.h2`
+  margin: 3px 0;
 `;
 
 const StyledIcon = styled.div`

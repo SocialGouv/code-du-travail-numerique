@@ -1,31 +1,251 @@
 {
-    "text": "Vous êtes",
+    "text": "Vous êtes :",
+    "statement": "Vous êtes",
+    "description": "Les informations données sont identiques quel que soit votre profil.\nSeule la formulation des questions peut être différente afin de vous guider au mieux dans ce parcours.",
     "responses": [
         {
             "text": "Salarié",
-            "description": "vous faites l'objet d'une procédure de licenciement",
+            "description": "Vous faites l'objet d'une procédure de licenciement",
             "question": {
-                "text": "Par quel type de licenciement êtes-vous concerné",
+                "text": "Par quel type de licenciement êtes-vous concerné ?",
+                "statement": "Vous êtes concerné par",
                 "responses": [
                     {
                         "text": "Un licenciement pour motif personnel",
-                        "info": "",
+                        "info": "Licenciement dont le motif est lié à votre personne. Par exemple : faute, inaptitude constatée par le médecin du travail, insuffisance professionnelle...",
                         "question": {
-                            "text": "Quel est le motif de ce licenciement",
+                            "text": "Quel est le motif de ce licenciement ?",
+                            "statement": "Le motif de ce licenciement est",
                             "responses": [
                                 {
                                     "text": "Une faute qui vous est reprochée",
                                     "description": "motif disciplinaire",
-                                    "slug": ""
+                                    "slug": "licenciement-pour-motif-personnel-disciplinaire"
                                 },
                                 {
                                     "text": "Une inaptitude constatée par le médecin du travail",
-                                    "slug": ""
+                                    "slug": "licenciement-personnel-pour-inaptitude"
                                 },
                                 {
                                     "text": "Vous n'êtes concerné par aucun de ces cas",
                                     "description": "motif non disciplinaire",
-                                    "slug": ""
+                                    "slug": "licenciement-pour-motif-personnel-non-disciplinaire"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "text": "Un licenciement pour motif économique",
+                        "info": "Licenciement dont le motif n’est pas lié à votre personne mais à l’activité économique de l’entreprise. Par exemple : difficultés économiques, réorganisation de l’entreprise, cessation d’activité de l’entreprise...",
+                        "question": {
+                            "text": "Combien de personnes sont concernées par ce licenciement ?",
+                            "statement": "Le nombre de personnes concernées par ce licenciement est",
+                            "responses": [
+                                {
+                                    "text": "Seulement vous",
+                                    "question": {
+                                        "text": "Votre entreprise emploie :",
+                                        "statement": "Votre entreprise emploie",
+                                        "responses": [
+                                            {
+                                                "text": "Moins de 1000 salariés",
+                                                "question": {
+                                                    "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
+                                                    "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Oui",
+                                                            "slug": "licenciement-individuel-pour-motif-economique-le-conge-de-reclassement"
+                                                        },
+                                                        {
+                                                            "text": "Non",
+                                                            "slug": "licenciement-individuel-pour-motif-economique-le-contrat-de-securisation-professionnelle"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "text": "1000 salariés ou plus",
+                                                "slug": "licenciement-individuel-pour-motif-economique-le-congé-de-reclassement"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "text": "Entre 2 et 9 salariés",
+                                    "description": "vous inclus",
+                                    "question": {
+                                        "text": "Votre entreprise dispose-t-elle d’un Comité Social et Economique (CSE) ?",
+                                        "statement": "Votre entreprise dispose d'un Comité Social et Economique (CSE) :",
+                                        "info": "Le CSE est une instance unique chargée de représenter le personnel dans une entreprise. Elle remplace les anciennes instances représentatives du personnel dans l’entreprise qui étaient les délégués du personnel, le comité d’entreprise et le CHSCT. Sa mise en place est obligatoire dans les entreprises dont l’effectif atteint 11 salariés pendant 12 mois consécutifs.",
+                                        "responses": [
+                                            {
+                                                "text": "Oui",
+                                                "question": {
+                                                    "text": "Votre entreprise emploie :",
+                                                    "statement": "Votre entreprise emploie",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Moins de 1000 salariés",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
+                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-avec-cse-mise-en-place-du-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-avec-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "1000 salariés ou plus",
+                                                            "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-avec-cse-mise-en-place-du-conge-de-reclassement"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "text": "Non",
+                                                "question": {
+                                                    "text": "Votre entreprise emploie :",
+                                                    "statement": "Votre entreprise emploie",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Moins de 1000 salariés",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
+                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-sans-cse-mise-en-place-du-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-sans-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "1000 salariés ou plus",
+                                                            "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-sans-cse-mise-en-place-du-conge-de-reclassement"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "text": "Au minimum 10 salariés",
+                                    "description": "vous inclus",
+                                    "question": {
+                                        "text": "Votre entreprise dispose-t-elle d’un Comité Social et Economique (CSE) ?",
+                                        "statement": "Votre entreprise dispose d'un Comité Social et Economique (CSE) :",
+                                        "info": "Le CSE est une instance unique chargée de représenter le personnel dans une entreprise. Elle remplace les anciennes instances représentatives du personnel dans l’entreprise qui étaient les délégués du personnel, le comité d’entreprise et le CHSCT. Sa mise en place est obligatoire dans les entreprises dont l’effectif atteint 11 salariés pendant 12 mois consécutifs.",
+                                        "responses": [
+                                            {
+                                                "text": "Oui",
+                                                "question": {
+                                                    "text": "Votre entreprise emploie :",
+                                                    "statement": "Votre entreprise emploie",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Moins de 50 salariés",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
+                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-moins-de-50-salaries-avec-cse-mise-en-place-du-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-moins-de-50-salaries-avec-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "Moins de 50 et 999 salariés",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
+                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-avec-cse-mise-en-place-du-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-avec-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "1000 salariés ou plus",
+                                                            "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-avec-cse-mise-en-place-du-conge-de-reclassement"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "text": "Non",
+                                                "question": {
+                                                    "text": "Votre entreprise emploie :",
+                                                    "statement": "Votre entreprise emploie",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Moins de 50 salariés",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
+                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-moins-de-50-salaries-sans-cse-mise-en-place-du-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-moins-de-50-salaries-sans-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "Moins de 50 et 999 salariés",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
+                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-sans-cse-mise-en-place-du-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-sans-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "1000 salariés ou plus",
+                                                            "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-sans-cse-mise-en-place-du-conge-de-reclassement"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
                                 }
                             ]
                         }
@@ -33,8 +253,8 @@
                     {
                         "text": "Un licenciement suite à un accord de performance collective",
                         "description": "APC",
-                        "info": "",
-                        "slug": ""
+                        "info": "Licenciement déclenché car vous avez refusé qu’un accord de performance collective vous soit appliqué.",
+                        "slug": "licenciement-suite-a-un-accord-de-performance-collective-apc"
                     }
                 ]
             }
@@ -43,27 +263,243 @@
             "text": "Employeur",
             "description": "vous licenciez un ou plusieurs salariés",
             "question": {
-                "text": "Par quel type de licenciement êtes-vous concerné",
+                "text": "Par quel type de licenciement êtes-vous concerné ?",
+                "statement": "Vous êtes concerné par",
                 "responses": [
                     {
                         "text": "Un licenciement pour motif personnel",
-                        "info": "",
+                        "info": "Licenciement dont le motif est lié à votre personne. Par exemple : faute, inaptitude constatée par le médecin du travail, insuffisance professionnelle...",
                         "question": {
-                            "text": "Quel est le motif de ce licenciement",
+                            "text": "Quel est le motif de ce licenciement ?",
+                            "statement": "Le motif de ce licenciement est",
                             "responses": [
                                 {
                                     "text": "Une faute qui est reprochée au salarié",
                                     "description": "motif disciplinaire",
-                                    "slug": ""
+                                    "slug": "licenciement-pour-motif-personnel-disciplinaire"
                                 },
                                 {
                                     "text": "Une inaptitude du salarié constatée par le médecin du travail",
-                                    "slug": ""
+                                    "slug": "licenciement-personnel-pour-inaptitude"
                                 },
                                 {
                                     "text": "Aucun de ces cas",
                                     "description": "motif non disciplinaire",
-                                    "slug": ""
+                                    "slug": "licenciement-pour-motif-personnel-non-disciplinaire"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "text": "Un licenciement pour motif économique",
+                        "info": "Licenciement dont le motif n’est pas lié à votre personne mais à l’activité économique de l’entreprise. Par exemple : difficultés économiques, réorganisation de l’entreprise, cessation d’activité de l’entreprise...",
+                        "question": {
+                            "text": "Combien de personnes sont concernées par ce licenciement ?",
+                            "statement": "Le nombre de personnes concernées par ce licenciement est",
+                            "responses": [
+                                {
+                                    "text": "1 seul salarié",
+                                    "question": {
+                                        "text": "Votre entreprise emploie :",
+                                        "statement": "Votre entreprise emploie",
+                                        "responses": [
+                                            {
+                                                "text": "Moins de 1000 salariés",
+                                                "question": {
+                                                    "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
+                                                    "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Oui",
+                                                            "slug": "licenciement-individuel-pour-motif-economique-le-conge-de-reclassement"
+                                                        },
+                                                        {
+                                                            "text": "Non",
+                                                            "slug": "licenciement-individuel-pour-motif-economique-le-contrat-de-securisation-professionnelle"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "text": "1000 salariés ou plus",
+                                                "slug": "licenciement-individuel-pour-motif-economique-le-congé-de-reclassement"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "text": "Entre 2 et 9 salariés",
+                                    "question": {
+                                        "text": "Votre entreprise dispose-t-elle d’un Comité Social et Economique (CSE) ?",
+                                        "statement": "Votre entreprise dispose d'un Comité Social et Economique (CSE) :",
+                                        "info": "Le CSE est une instance unique chargée de représenter le personnel dans une entreprise. Elle remplace les anciennes instances représentatives du personnel dans l’entreprise qui étaient les délégués du personnel, le comité d’entreprise et le CHSCT. Sa mise en place est obligatoire dans les entreprises dont l’effectif atteint 11 salariés pendant 12 mois consécutifs.",
+                                        "responses": [
+                                            {
+                                                "text": "Oui",
+                                                "question": {
+                                                    "text": "Votre entreprise emploie :",
+                                                    "statement": "Votre entreprise emploie",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Moins de 1000 salariés",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
+                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-avec-cse-mise-en-place-du-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-avec-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "1000 salariés ou plus",
+                                                            "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-avec-cse-mise-en-place-du-conge-de-reclassement"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "text": "Non",
+                                                "question": {
+                                                    "text": "Votre entreprise emploie :",
+                                                    "statement": "Votre entreprise emploie",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Moins de 1000 salariés",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
+                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-sans-cse-mise-en-place-du-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-sans-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "1000 salariés ou plus",
+                                                            "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-sans-cse-mise-en-place-du-conge-de-reclassement"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "text": "Au minimum 10 salariés",
+                                    "question": {
+                                        "text": "Votre entreprise dispose-t-elle d’un Comité Social et Economique (CSE) ?",
+                                        "statement": "Votre entreprise dispose d'un Comité Social et Economique (CSE) :",
+                                        "info": "Le CSE est une instance unique chargée de représenter le personnel dans une entreprise. Elle remplace les anciennes instances représentatives du personnel dans l’entreprise qui étaient les délégués du personnel, le comité d’entreprise et le CHSCT. Sa mise en place est obligatoire dans les entreprises dont l’effectif atteint 11 salariés pendant 12 mois consécutifs.",
+                                        "responses": [
+                                            {
+                                                "text": "Oui",
+                                                "question": {
+                                                    "text": "Votre entreprise emploie :",
+                                                    "statement": "Votre entreprise emploie",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Moins de 50 salariés",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
+                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-moins-de-50-salaries-avec-cse-mise-en-place-du-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-moins-de-50-salaries-avec-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "Moins de 50 et 999 salariés",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
+                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-avec-cse-mise-en-place-du-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-avec-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "1000 salariés ou plus",
+                                                            "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-avec-cse-mise-en-place-du-conge-de-reclassement"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "text": "Non",
+                                                "question": {
+                                                    "text": "Votre entreprise emploie :",
+                                                    "statement": "Votre entreprise emploie",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Moins de 50 salariés",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
+                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-moins-de-50-salaries-sans-cse-mise-en-place-du-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-moins-de-50-salaries-sans-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "Moins de 50 et 999 salariés",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
+                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-sans-cse-mise-en-place-du-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-sans-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "1000 salariés ou plus",
+                                                            "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-sans-cse-mise-en-place-du-conge-de-reclassement"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
                                 }
                             ]
                         }
@@ -71,8 +507,8 @@
                     {
                         "text": "Un licenciement suite à un accord de performance collective",
                         "description": "APC",
-                        "info": "",
-                        "slug": ""
+                        "info": "Licenciement déclenché car vous avez refusé qu’un accord de performance collective vous soit appliqué.",
+                        "slug": "licenciement-suite-a-un-accord-de-performance-collective-apc"
                     }
                 ]
             }

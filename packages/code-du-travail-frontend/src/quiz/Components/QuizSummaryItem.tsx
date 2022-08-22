@@ -2,14 +2,14 @@ import styled from "styled-components";
 import { icons, Button } from "@socialgouv/cdtn-ui";
 const { Check: CheckIcon } = icons;
 
-export const QuizSummaryItem = () => {
+export const QuizSummaryItem = ({ data, onClick }) => {
   return (
     <QuizSummaryItemWrapper>
       <StyledIcon>
         <CheckIcon />
       </StyledIcon>
-      <StyledText>Vous êtes salariés</StyledText>
-      <Button variant="flat" xsmall>
+      <StyledText>{data}</StyledText>
+      <Button variant="flat" xsmall onClick={onClick}>
         Modifier
       </Button>
     </QuizSummaryItemWrapper>

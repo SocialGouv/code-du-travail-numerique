@@ -1,42 +1,36 @@
 import styled from "styled-components";
-import { InputRadio } from "@socialgouv/cdtn-ui";
-import { QuizQuestion } from "@cdt/data";
+import { useEffect, useState } from "react";
 import { useQuizStore } from "../store";
-
-const getQuestion = (data: QuizQuestion, current: string): QuizQuestion => {
-  if (!current) {
-    return data;
-  }
-  const currentArray = current
-    .split(".")
-    .map((index: string) => parseInt(index));
-  return currentArray.reduce((q: QuizQuestion, index: number) => {
-    return q.responses[index].question ?? q;
-  }, data);
-};
+import { QuizQuestionnaryItem } from "./QuizQuestionnaryItem";
+import { Tooltip } from "../../common/Tooltip";
 
 export const QuizQuestionnary = () => {
-  const data = useQuizStore((state) => state.questionTree);
-  const current = useQuizStore((state) => state.currentQuestion);
-  const nextQuestion = useQuizStore((state) => state.nextQuestion);
-  const question = getQuestion(data, current);
+  const currentQuestion = useQuizStore((state) => state.currentQuestion);
+  const [openedTooltip, setOpenedTooltip] = useState(false);
+  useEffect(() => {
+    setOpenedTooltip(false);
+  }, [currentQuestion]);
   return (
     <QuizQuestionWrapper>
-      <QuizQuestionHeader>{question.text} : </QuizQuestionHeader>
+      <QuizQuestionHeaderWrapper>
+        <QuizQuestionHeader>{currentQuestion.text}</QuizQuestionHeader>
+        {currentQuestion.info && (
+          <Tooltip onChange={setOpenedTooltip}></Tooltip>
+        )}
+      </QuizQuestionHeaderWrapper>
+      {openedTooltip && (
+        <QuizInformationWrapper>{currentQuestion.info}</QuizInformationWrapper>
+      )}
       <QuizRadioWrapper>
-        {question.responses.map(({ text, description }, index) => (
-          <InputRadio
-            key={`${text}.${index}`}
-            label={`${text} ${description ? `(${description})` : ""}`}
-            onChange={() => nextQuestion(index)}
-          />
+        {currentQuestion.responses.map((response, index: number) => (
+          <QuizQuestionnaryItem
+            key={`${response.text}${index}`}
+            response={response}
+            index={index}
+          ></QuizQuestionnaryItem>
         ))}
       </QuizRadioWrapper>
-      <QuizDescription>
-        Les informations données sont identiques quel que soit votre profil.
-        Seule la formulation des questions peut être différente afin de vous
-        guider au mieux dans ce parcours.
-      </QuizDescription>
+      <QuizDescription>{currentQuestion.description}</QuizDescription>
     </QuizQuestionWrapper>
   );
 };
@@ -47,7 +41,19 @@ const QuizQuestionWrapper = styled.div`
   padding: 14px 18px;
 `;
 
-const QuizQuestionHeader = styled.h3`
+const QuizQuestionHeader = styled.div`
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  color: #3e486e;
+  margin-right: 8px;
+`;
+
+const QuizQuestionHeaderWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
   margin: 0 0 11px;
 `;
 
@@ -60,4 +66,12 @@ const QuizRadioWrapper = styled.div`
   > div {
     margin: 4px 0;
   }
+`;
+
+const QuizInformationWrapper = styled.div`
+  background: #f2f5fa;
+  border-radius: 6px;
+  padding: 13px 20px;
+  font-size: 14px;
+  margin: 11px 5px;
 `;
