@@ -1,5 +1,5 @@
 import { getCurrentQuestion, PreviousResponse } from "../service";
-import { QuizQuestion } from "@cdt/data";
+import { QuestionnaireQuestion } from "@cdt/data";
 import { questionMock, responseMock } from "./mocks";
 
 describe("function getCurrentQuestion", () => {
@@ -7,12 +7,9 @@ describe("function getCurrentQuestion", () => {
     text: `previousResponse${index}`,
     index,
   });
-  let questionTreeParam: QuizQuestion;
+  let questionTreeParam: QuestionnaireQuestion;
   let previousResponsesParam: PreviousResponse[];
-  let result: QuizQuestion;
-  beforeEach(() => {
-    result = getCurrentQuestion(questionTreeParam, previousResponsesParam);
-  });
+  let result: QuestionnaireQuestion;
   describe(`Given:
   - a questionTreeParam with 2 level deep
   - a previousResponse of index [0, 1]`, () => {
@@ -46,6 +43,7 @@ describe("function getCurrentQuestion", () => {
         previousResponseMock(0),
         previousResponseMock(1),
       ];
+      result = getCurrentQuestion(questionTreeParam, previousResponsesParam);
     });
     it("should return question 121", () => {
       expect(result).toEqual(questionMock(121));

@@ -1,11 +1,14 @@
 import create, { StoreApi } from "zustand";
 import createContext from "zustand/context";
-import { dismissalProcessQuiz, QuizQuestion } from "@cdt/data";
+import {
+  dismissalProcessQuestionnaire,
+  QuestionnaireQuestion,
+} from "@cdt/data";
 import { getCurrentQuestion, getResponseStatement } from "./service";
 
-export type QuizStore = {
-  questionTree: QuizQuestion;
-  currentQuestion: QuizQuestion;
+export type Store = {
+  questionTree: QuestionnaireQuestion;
+  currentQuestion: QuestionnaireQuestion;
   previousResponses: PreviousResponse[];
   nextQuestion: (index: number) => void;
   goTo: (index: number) => void;
@@ -16,11 +19,11 @@ export type PreviousResponse = {
   text: string;
 };
 
-const createStore = (quizName: string) =>
-  create<QuizStore>((set, get): QuizStore => {
+const createStore = (Name: string) =>
+  create<Store>((set, get): Store => {
     return {
-      questionTree: dismissalProcessQuiz,
-      currentQuestion: dismissalProcessQuiz,
+      questionTree: dismissalProcessQuestionnaire,
+      currentQuestion: dismissalProcessQuestionnaire,
       previousResponses: [],
       nextQuestion: (index) => {
         const previousResponsesOld = get().previousResponses;
@@ -41,10 +44,10 @@ const createStore = (quizName: string) =>
     };
   });
 
-const { Provider, useStore } = createContext<StoreApi<QuizStore>>();
+const { Provider, useStore } = createContext<StoreApi<Store>>();
 
 export {
-  Provider as QuizProvider,
-  createStore as createQuizStore,
-  useStore as useQuizStore,
+  Provider as Provider,
+  createStore as createStore,
+  useStore as useStore,
 };

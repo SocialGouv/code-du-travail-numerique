@@ -1,4 +1,4 @@
-import { QuizQuestion } from "@cdt/data";
+import { QuestionnaireQuestion } from "@cdt/data";
 
 export type PreviousResponse = {
   index: number;
@@ -6,14 +6,14 @@ export type PreviousResponse = {
 };
 
 export const getCurrentQuestion = (
-  questionTree: QuizQuestion,
+  questionTree: QuestionnaireQuestion,
   previousResponses: PreviousResponse[]
-): QuizQuestion => {
+): QuestionnaireQuestion => {
   if (!previousResponses.length) {
     return questionTree;
   }
   return previousResponses.reduce(
-    (q: QuizQuestion, { index }: PreviousResponse) => {
+    (q: QuestionnaireQuestion, { index }: PreviousResponse) => {
       return q.responses[index].question ?? q;
     },
     questionTree
@@ -21,7 +21,7 @@ export const getCurrentQuestion = (
 };
 
 export const getResponseStatement = (
-  question: QuizQuestion,
+  question: QuestionnaireQuestion,
   responseIndex: number
 ): string => {
   return `${question.statement} ${question.responses[

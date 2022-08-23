@@ -1,2 +1,2 @@
-export * from "./quiz";
+export * from "./questionnaire";
 export * from "./types";

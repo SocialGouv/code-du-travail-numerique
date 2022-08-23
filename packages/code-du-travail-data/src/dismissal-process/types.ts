@@ -1,15 +1,15 @@
-export type QuizResponse = {
+export type QuestionnaireResponse = {
   text: string;
   info?: string;
   description?: string;
   slug?: string;
-  question?: QuizQuestion;
+  question?: QuestionnaireQuestion;
 };
 
-export type QuizQuestion = {
+export type QuestionnaireQuestion = {
   text: string;
   statement: string;
   info?: string;
   description?: string;
-  responses: QuizResponse[];
+  responses: QuestionnaireResponse[];
 };
