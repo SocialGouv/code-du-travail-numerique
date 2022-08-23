@@ -1,0 +1,10 @@
+contrat salarié . convention collective . prevention sécurité entreprise . indemnité de licenciement:
+  applicable si: indemnité de licenciement
+  valeur: oui
+
+# CC ne prévoit rien
+contrat salarié . convention collective . prevention sécurité entreprise . indemnité de licenciement . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: 0
+  unité: €
+  arrondi: 2 décimales
