@@ -4,12 +4,14 @@ import type { LegalSeniorityProps } from "./legal";
 export type Absence = {
   motif: string;
   durationInMonth?: number;
+  startedAt?: string;
 };
 
 export type Motif = {
   key: string;
   label: string;
   value: number;
+  startAt?: boolean;
 };
 
 export interface ISeniority<T extends SupportedCcIndemniteLicenciement> {
