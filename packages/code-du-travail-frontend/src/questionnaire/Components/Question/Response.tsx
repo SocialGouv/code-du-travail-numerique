@@ -2,7 +2,6 @@ import { useState } from "react";
 import styled from "styled-components";
 import { InputRadio } from "@socialgouv/cdtn-ui";
 import { QuestionnaireResponse } from "@cdt/data";
-import { useRouter } from "next/router";
 import { useStore } from "../../store";
 import { Tooltip } from "../../../common/Tooltip";
 
@@ -13,8 +12,7 @@ export const Response = ({
   response: QuestionnaireResponse;
   index: number;
 }) => {
-  const router = useRouter();
-  const nextQuestion = useStore((state) => state.nextQuestion);
+  const answer = useStore((state) => state.answer);
   const [openedTooltip, setOpenedTooltip] = useState(false);
   return (
     <ResponseWrapper>
@@ -23,9 +21,9 @@ export const Response = ({
           id={text}
           name={text}
           label={`${text} ${description ? `(${description})` : ""}`}
-          onChange={() =>
-            slug ? router.push(`/information/${slug}`) : nextQuestion(index)
-          }
+          onChange={() => {
+            answer(index);
+          }}
         />
         {info && (
           <TooltipWrapper>

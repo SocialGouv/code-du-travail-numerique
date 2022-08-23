@@ -3,12 +3,13 @@ export type QuestionnaireResponse = {
   info?: string;
   description?: string;
   slug?: string;
+  statement?: string;
   question?: QuestionnaireQuestion;
 };
 
 export type QuestionnaireQuestion = {
   text: string;
-  statement: string;
+  statement?: string;
   info?: string;
   description?: string;
   responses: QuestionnaireResponse[];

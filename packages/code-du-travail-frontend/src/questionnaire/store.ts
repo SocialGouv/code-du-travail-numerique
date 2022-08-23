@@ -3,15 +3,18 @@ import createContext from "zustand/context";
 import {
   dismissalProcessQuestionnaire,
   QuestionnaireQuestion,
+  QuestionnaireResponse,
 } from "@cdt/data";
 import { getCurrentQuestion, getResponseStatement } from "./service";
 
 export type Store = {
   questionTree: QuestionnaireQuestion;
   currentQuestion: QuestionnaireQuestion;
+  lastResponse?: QuestionnaireResponse;
   previousResponses: PreviousResponse[];
-  nextQuestion: (index: number) => void;
+  answer: (index: number) => void;
   goTo: (index: number) => void;
+  getSlug: () => string | undefined;
 };
 
 export type PreviousResponse = {
@@ -24,30 +27,37 @@ const createStore = (Name: string) =>
     return {
       questionTree: dismissalProcessQuestionnaire,
       currentQuestion: dismissalProcessQuestionnaire,
+      lastResponse: undefined,
       previousResponses: [],
-      nextQuestion: (index) => {
+      answer: (index) => {
         const previousResponsesOld = get().previousResponses;
         const currentQuestionOld = get().currentQuestion;
-        const currentQuestion =
-          currentQuestionOld.responses[index].question ?? currentQuestionOld;
+        const lastResponse = currentQuestionOld.responses[index];
+        const currentQuestion = lastResponse.question;
         const text = getResponseStatement(currentQuestionOld, index);
         const previousResponses = previousResponsesOld.concat({ index, text });
-        set({ previousResponses, currentQuestion });
+        set({ previousResponses, currentQuestion, lastResponse });
       },
       goTo: (index) => {
         const previousResponsesOld = get().previousResponses;
         const data = get().questionTree;
         const previousResponses = previousResponsesOld.slice(0, index);
-        const currentQuestion = getCurrentQuestion(data, previousResponses);
-        set({ previousResponses, currentQuestion });
+        const { currentQuestion, lastResponse } = getCurrentQuestion(
+          data,
+          previousResponses
+        );
+        set({ previousResponses, currentQuestion, lastResponse });
+      },
+      getSlug: () => {
+        const currentQuestion = get().currentQuestion;
+        const previousResponses = get().previousResponses;
+        if (!previousResponses.length) return;
+        const { index } = previousResponses.reverse()[0];
+        return currentQuestion.responses[index]?.slug;
       },
     };
   });
 
 const { Provider, useStore } = createContext<StoreApi<Store>>();
 
-export {
-  Provider as Provider,
-  createStore as createStore,
-  useStore as useStore,
-};
+export { Provider, createStore, useStore };

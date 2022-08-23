@@ -10,6 +10,7 @@ export { default as Custom } from "./components/bicolor/Custom.js";
 export { default as Depart } from "./components/bicolor/Depart.js";
 export { default as Document } from "./components/bicolor/Document.js";
 export { default as Eurotext } from "./components/bicolor/Eurotext.js";
+export { default as FileCheck } from "./components/bicolor/FileCheck.js";
 export { default as Focus } from "./components/bicolor/Focus.js";
 export { default as Formation } from "./components/bicolor/Formation.js";
 export { default as France } from "./components/bicolor/France.js";

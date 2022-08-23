@@ -43,6 +43,7 @@
                             "responses": [
                                 {
                                     "text": "Seulement vous",
+                                    "statement": "Seulement vous êtes concerné par ce licenciement",
                                     "question": {
                                         "text": "Votre entreprise emploie :",
                                         "statement": "Votre entreprise emploie",
@@ -51,14 +52,15 @@
                                                 "text": "Moins de 1000 salariés",
                                                 "question": {
                                                     "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
-                                                    "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
                                                     "responses": [
                                                         {
                                                             "text": "Oui",
+                                                            "statement": "Votre entreprise appartient à un groupe européen d'au moins 1000 salariés",
                                                             "slug": "licenciement-individuel-pour-motif-economique-le-conge-de-reclassement"
                                                         },
                                                         {
                                                             "text": "Non",
+                                                            "statement": "Votre entreprise n'appartient pas à un groupe européen d'au moins 1000 salariés",
                                                             "slug": "licenciement-individuel-pour-motif-economique-le-contrat-de-securisation-professionnelle"
                                                         }
                                                     ]
@@ -76,11 +78,11 @@
                                     "description": "vous inclus",
                                     "question": {
                                         "text": "Votre entreprise dispose-t-elle d’un Comité Social et Economique (CSE) ?",
-                                        "statement": "Votre entreprise dispose d'un Comité Social et Economique (CSE) :",
                                         "info": "Le CSE est une instance unique chargée de représenter le personnel dans une entreprise. Elle remplace les anciennes instances représentatives du personnel dans l’entreprise qui étaient les délégués du personnel, le comité d’entreprise et le CHSCT. Sa mise en place est obligatoire dans les entreprises dont l’effectif atteint 11 salariés pendant 12 mois consécutifs.",
                                         "responses": [
                                             {
                                                 "text": "Oui",
+                                                "statement": "Votre entreprise dispose d'un CSE",
                                                 "question": {
                                                     "text": "Votre entreprise emploie :",
                                                     "statement": "Votre entreprise emploie",
@@ -89,14 +91,15 @@
                                                             "text": "Moins de 1000 salariés",
                                                             "question": {
                                                                 "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
-                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
                                                                 "responses": [
                                                                     {
                                                                         "text": "Oui",
+                                                                        "statement": "Votre entreprise appartient à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-avec-cse-mise-en-place-du-conge-de-reclassement"
                                                                     },
                                                                     {
                                                                         "text": "Non",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-avec-cse-le-contrat-de-securisation-professionnelle-csp"
                                                                     }
                                                                 ]
@@ -111,6 +114,7 @@
                                             },
                                             {
                                                 "text": "Non",
+                                                "statement": "Votre entreprise ne dispose pas d'un CSE",
                                                 "question": {
                                                     "text": "Votre entreprise emploie :",
                                                     "statement": "Votre entreprise emploie",
@@ -119,14 +123,15 @@
                                                             "text": "Moins de 1000 salariés",
                                                             "question": {
                                                                 "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
-                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
                                                                 "responses": [
                                                                     {
                                                                         "text": "Oui",
+                                                                        "statement": "Votre entreprise appartient à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-sans-cse-mise-en-place-du-conge-de-reclassement"
                                                                     },
                                                                     {
                                                                         "text": "Non",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-sans-cse-le-contrat-de-securisation-professionnelle-csp"
                                                                     }
                                                                 ]
@@ -152,6 +157,7 @@
                                         "responses": [
                                             {
                                                 "text": "Oui",
+                                                "statement": "Votre entreprise dispose d'un CSE",
                                                 "question": {
                                                     "text": "Votre entreprise emploie :",
                                                     "statement": "Votre entreprise emploie",
@@ -160,14 +166,15 @@
                                                             "text": "Moins de 50 salariés",
                                                             "question": {
                                                                 "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
-                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
                                                                 "responses": [
                                                                     {
                                                                         "text": "Oui",
+                                                                        "statement": "Votre entreprise appartient à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-moins-de-50-salaries-avec-cse-mise-en-place-du-conge-de-reclassement"
                                                                     },
                                                                     {
                                                                         "text": "Non",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-moins-de-50-salaries-avec-cse-le-contrat-de-securisation-professionnelle-csp"
                                                                     }
                                                                 ]
@@ -177,14 +184,15 @@
                                                             "text": "Moins de 50 et 999 salariés",
                                                             "question": {
                                                                 "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
-                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
                                                                 "responses": [
                                                                     {
                                                                         "text": "Oui",
+                                                                        "statement": "Votre entreprise appartient à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-avec-cse-mise-en-place-du-conge-de-reclassement"
                                                                     },
                                                                     {
                                                                         "text": "Non",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-avec-cse-le-contrat-de-securisation-professionnelle-csp"
                                                                     }
                                                                 ]
@@ -199,6 +207,7 @@
                                             },
                                             {
                                                 "text": "Non",
+                                                "statement": "Votre entreprise ne dispose pas d'un CSE",
                                                 "question": {
                                                     "text": "Votre entreprise emploie :",
                                                     "statement": "Votre entreprise emploie",
@@ -207,14 +216,15 @@
                                                             "text": "Moins de 50 salariés",
                                                             "question": {
                                                                 "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
-                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
                                                                 "responses": [
                                                                     {
                                                                         "text": "Oui",
+                                                                        "statement": "Votre entreprise appartient à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-moins-de-50-salaries-sans-cse-mise-en-place-du-conge-de-reclassement"
                                                                     },
                                                                     {
                                                                         "text": "Non",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-moins-de-50-salaries-sans-cse-le-contrat-de-securisation-professionnelle-csp"
                                                                     }
                                                                 ]
@@ -224,14 +234,15 @@
                                                             "text": "Moins de 50 et 999 salariés",
                                                             "question": {
                                                                 "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
-                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
                                                                 "responses": [
                                                                     {
                                                                         "text": "Oui",
+                                                                        "statement": "Votre entreprise appartient à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-sans-cse-mise-en-place-du-conge-de-reclassement"
                                                                     },
                                                                     {
                                                                         "text": "Non",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-sans-cse-le-contrat-de-securisation-professionnelle-csp"
                                                                     }
                                                                 ]
@@ -307,14 +318,15 @@
                                                 "text": "Moins de 1000 salariés",
                                                 "question": {
                                                     "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
-                                                    "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
                                                     "responses": [
                                                         {
                                                             "text": "Oui",
+                                                            "statement": "Votre entreprise appartient à un groupe européen d'au moins 1000 salariés",
                                                             "slug": "licenciement-individuel-pour-motif-economique-le-conge-de-reclassement"
                                                         },
                                                         {
                                                             "text": "Non",
+                                                            "statement": "Votre entreprise n'appartient pas à un groupe européen d'au moins 1000 salariés",
                                                             "slug": "licenciement-individuel-pour-motif-economique-le-contrat-de-securisation-professionnelle"
                                                         }
                                                     ]
@@ -336,6 +348,7 @@
                                         "responses": [
                                             {
                                                 "text": "Oui",
+                                                "statement": "Votre entreprise dispose d'un CSE",
                                                 "question": {
                                                     "text": "Votre entreprise emploie :",
                                                     "statement": "Votre entreprise emploie",
@@ -344,14 +357,15 @@
                                                             "text": "Moins de 1000 salariés",
                                                             "question": {
                                                                 "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
-                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
                                                                 "responses": [
                                                                     {
                                                                         "text": "Oui",
+                                                                        "statement": "Votre entreprise appartient à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-avec-cse-mise-en-place-du-conge-de-reclassement"
                                                                     },
                                                                     {
                                                                         "text": "Non",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-avec-cse-le-contrat-de-securisation-professionnelle-csp"
                                                                     }
                                                                 ]
@@ -366,6 +380,7 @@
                                             },
                                             {
                                                 "text": "Non",
+                                                "statement": "Votre entreprise ne dispose pas d'un CSE",
                                                 "question": {
                                                     "text": "Votre entreprise emploie :",
                                                     "statement": "Votre entreprise emploie",
@@ -374,14 +389,15 @@
                                                             "text": "Moins de 1000 salariés",
                                                             "question": {
                                                                 "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
-                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
                                                                 "responses": [
                                                                     {
                                                                         "text": "Oui",
+                                                                        "statement": "Votre entreprise appartient à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-sans-cse-mise-en-place-du-conge-de-reclassement"
                                                                     },
                                                                     {
                                                                         "text": "Non",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-petit-licenciement-collectif-pour-motif-economique-entreprise-sans-cse-le-contrat-de-securisation-professionnelle-csp"
                                                                     }
                                                                 ]
@@ -406,6 +422,7 @@
                                         "responses": [
                                             {
                                                 "text": "Oui",
+                                                "statement": "Votre entreprise dispose d'un CSE",
                                                 "question": {
                                                     "text": "Votre entreprise emploie :",
                                                     "statement": "Votre entreprise emploie",
@@ -414,14 +431,15 @@
                                                             "text": "Moins de 50 salariés",
                                                             "question": {
                                                                 "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
-                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
                                                                 "responses": [
                                                                     {
                                                                         "text": "Oui",
+                                                                        "statement": "Votre entreprise appartient à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-moins-de-50-salaries-avec-cse-mise-en-place-du-conge-de-reclassement"
                                                                     },
                                                                     {
                                                                         "text": "Non",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-moins-de-50-salaries-avec-cse-le-contrat-de-securisation-professionnelle-csp"
                                                                     }
                                                                 ]
@@ -431,14 +449,15 @@
                                                             "text": "Moins de 50 et 999 salariés",
                                                             "question": {
                                                                 "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
-                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
                                                                 "responses": [
                                                                     {
                                                                         "text": "Oui",
+                                                                        "statement": "Votre entreprise appartient à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-avec-cse-mise-en-place-du-conge-de-reclassement"
                                                                     },
                                                                     {
                                                                         "text": "Non",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-avec-cse-le-contrat-de-securisation-professionnelle-csp"
                                                                     }
                                                                 ]
@@ -453,6 +472,7 @@
                                             },
                                             {
                                                 "text": "Non",
+                                                "statement": "Votre entreprise ne dispose pas d'un CSE",
                                                 "question": {
                                                     "text": "Votre entreprise emploie :",
                                                     "statement": "Votre entreprise emploie",
@@ -461,14 +481,15 @@
                                                             "text": "Moins de 50 salariés",
                                                             "question": {
                                                                 "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
-                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
                                                                 "responses": [
                                                                     {
                                                                         "text": "Oui",
+                                                                        "statement": "Votre entreprise appartient à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-moins-de-50-salaries-sans-cse-mise-en-place-du-conge-de-reclassement"
                                                                     },
                                                                     {
                                                                         "text": "Non",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-moins-de-50-salaries-sans-cse-le-contrat-de-securisation-professionnelle-csp"
                                                                     }
                                                                 ]
@@ -478,14 +499,15 @@
                                                             "text": "Moins de 50 et 999 salariés",
                                                             "question": {
                                                                 "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
-                                                                "statement": "Votre entreprise appartient à un groupe européen d’au moins 1000 salariés :",
                                                                 "responses": [
                                                                     {
                                                                         "text": "Oui",
+                                                                        "statement": "Votre entreprise appartient à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-sans-cse-mise-en-place-du-conge-de-reclassement"
                                                                     },
                                                                     {
                                                                         "text": "Non",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe européen d'au moins 1000 salariés",
                                                                         "slug": "procedure-du-grand-licenciement-collectif-pour-motif-economique-entreprise-de-50-salaries-et-plus-sans-cse-le-contrat-de-securisation-professionnelle-csp"
                                                                     }
                                                                 ]

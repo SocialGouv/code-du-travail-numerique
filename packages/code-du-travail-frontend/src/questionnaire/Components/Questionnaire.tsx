@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { icons } from "@socialgouv/cdtn-ui";
+import { icons, Section, Button } from "@socialgouv/cdtn-ui";
 import { Summary } from "./Summary";
-import { Questionnary } from "./Question";
+import { Question } from "./Question";
 import { createStore, Provider } from "../store";
 
 const { Gear: GearIcon } = icons;
@@ -18,7 +18,7 @@ export const Questionnaire = ({ name }) => {
       <Body>
         <Provider createStore={() => createStore(name)}>
           <Summary />
-          <Questionnary />
+          <Question />
         </Provider>
       </Body>
     </Wrapper>
