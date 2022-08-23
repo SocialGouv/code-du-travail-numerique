@@ -1,47 +1,47 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import { useQuizStore } from "../store";
-import { QuizQuestionnaryItem } from "./QuizQuestionnaryItem";
-import { Tooltip } from "../../common/Tooltip";
+import { useStore } from "../../store";
+import { Response } from "./Response";
+import { Tooltip } from "../../../common/Tooltip";
 
-export const QuizQuestionnary = () => {
-  const currentQuestion = useQuizStore((state) => state.currentQuestion);
+export const Questionnary = () => {
+  const currentQuestion = useStore((state) => state.currentQuestion);
   const [openedTooltip, setOpenedTooltip] = useState(false);
   useEffect(() => {
     setOpenedTooltip(false);
   }, [currentQuestion]);
   return (
-    <QuizQuestionWrapper>
-      <QuizQuestionHeaderWrapper>
-        <QuizQuestionHeader>{currentQuestion.text}</QuizQuestionHeader>
+    <QuestionWrapper>
+      <QuestionHeaderWrapper>
+        <QuestionHeader>{currentQuestion.text}</QuestionHeader>
         {currentQuestion.info && (
           <Tooltip onChange={setOpenedTooltip}></Tooltip>
         )}
-      </QuizQuestionHeaderWrapper>
+      </QuestionHeaderWrapper>
       {openedTooltip && (
-        <QuizInformationWrapper>{currentQuestion.info}</QuizInformationWrapper>
+        <InformationWrapper>{currentQuestion.info}</InformationWrapper>
       )}
-      <QuizRadioWrapper>
+      <RadioWrapper>
         {currentQuestion.responses.map((response, index: number) => (
-          <QuizQuestionnaryItem
+          <Response
             key={`${response.text}${index}`}
             response={response}
             index={index}
-          ></QuizQuestionnaryItem>
+          ></Response>
         ))}
-      </QuizRadioWrapper>
-      <QuizDescription>{currentQuestion.description}</QuizDescription>
-    </QuizQuestionWrapper>
+      </RadioWrapper>
+      <Description>{currentQuestion.description}</Description>
+    </QuestionWrapper>
   );
 };
 
-const QuizQuestionWrapper = styled.div`
+const QuestionWrapper = styled.div`
   border: 0.5px solid #7598d6;
   margin-left: 36px;
   padding: 14px 18px;
 `;
 
-const QuizQuestionHeader = styled.div`
+const QuestionHeader = styled.div`
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
@@ -51,24 +51,24 @@ const QuizQuestionHeader = styled.div`
   margin-right: 8px;
 `;
 
-const QuizQuestionHeaderWrapper = styled.div`
+const QuestionHeaderWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin: 0 0 11px;
 `;
 
-const QuizDescription = styled.i`
+const Description = styled.i`
   display: block;
   margin-top: 7px;
 `;
 
-const QuizRadioWrapper = styled.div`
+const RadioWrapper = styled.div`
   > div {
     margin: 4px 0;
   }
 `;
 
-const QuizInformationWrapper = styled.div`
+const InformationWrapper = styled.div`
   background: #f2f5fa;
   border-radius: 6px;
   padding: 13px 20px;

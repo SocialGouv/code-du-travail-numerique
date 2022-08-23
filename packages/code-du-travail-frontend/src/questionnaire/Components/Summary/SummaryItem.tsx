@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { icons, Button } from "@socialgouv/cdtn-ui";
 const { Check: CheckIcon } = icons;
 
-export const QuizSummaryItem = ({ data, onClick }) => {
+export const SummaryItem = ({ data, onClick }) => {
   return (
-    <QuizSummaryItemWrapper>
+    <SummaryItemWrapper>
       <StyledIcon>
         <CheckIcon />
       </StyledIcon>
@@ -12,11 +12,11 @@ export const QuizSummaryItem = ({ data, onClick }) => {
       <Button variant="flat" xsmall onClick={onClick}>
         Modifier
       </Button>
-    </QuizSummaryItemWrapper>
+    </SummaryItemWrapper>
   );
 };
 
-const QuizSummaryItemWrapper = styled.li`
+const SummaryItemWrapper = styled.li`
   list-style-type: none;
   display: flex;
   flex-direction: row;
