@@ -14,9 +14,7 @@ export const Questionnary = () => {
     <QuestionWrapper>
       <QuestionHeaderWrapper>
         <QuestionHeader>{currentQuestion.text}</QuestionHeader>
-        {currentQuestion.info && (
-          <Tooltip onChange={setOpenedTooltip}></Tooltip>
-        )}
+        {currentQuestion.info && <Tooltip onChange={setOpenedTooltip} />}
       </QuestionHeaderWrapper>
       {openedTooltip && (
         <InformationWrapper>{currentQuestion.info}</InformationWrapper>

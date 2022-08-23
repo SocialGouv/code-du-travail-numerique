@@ -17,8 +17,8 @@ export const Questionnaire = ({ name }) => {
       </Header>
       <Body>
         <Provider createStore={() => createStore(name)}>
-          <Summary></Summary>
-          <Questionnary></Questionnary>
+          <Summary />
+          <Questionnary />
         </Provider>
       </Body>
     </Wrapper>
