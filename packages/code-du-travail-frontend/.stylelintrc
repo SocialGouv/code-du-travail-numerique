@@ -12,19 +12,15 @@
   ],
   "rules": {
     "property-no-vendor-prefix": [
-      true,
+      [],
       {
-        "ignoreProperties": [
-          "/grid/"
-        ]
+        "severity": "warning"
       }
     ],
     "value-no-vendor-prefix": [
-      true,
+      [],
       {
-        "ignoreValues": [
-          "grid"
-        ]
+        "severity": "warning"
       }
     ],
     "order/properties-order": [
@@ -38,6 +34,12 @@
       {
         "border-in-box-model": false,
         "empty-line-between-groups": false,
+        "severity": "warning"
+      }
+    ],
+    "no-descending-specificity": [
+      [],
+      {
         "severity": "warning"
       }
     ]

@@ -1,61 +1,19 @@
-import { SOURCES } from "@socialgouv/cdtn-sources";
-import {
-  Accordion,
-  Tabs,
-  Button,
-  icons,
-  MoreContent,
-  Section,
-  theme,
-  Wrapper,
-} from "@socialgouv/cdtn-ui";
-import getConfig from "next/config";
-import Link from "next/link";
+import { Accordion, Tabs, Section, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
-import htmlToHtmlAst from "rehype-parse";
-import htmlAstToReact from "rehype-react";
 import styled from "styled-components";
-import unified from "unified";
 
-import { A11yLink } from "../../src/common/A11yLink";
 import Answer from "../../src/common/Answer";
-import ImageWrapper from "../../src/common/ImageWrapper";
 import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
-import { toUrl } from "../../src/lib";
 import { EditorialContentDataWrapper } from "cdtn-types";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
-
-const InfoLink = ({ children, href }) => {
-  if (!href.includes("http")) {
-    return (
-      <Link href={href} passHref>
-        <a>{children}</a>
-      </Link>
-    );
-  }
-  return (
-    <A11yLink href={href} rel="noopener noreferrer" target="_blank">
-      {children}
-    </A11yLink>
-  );
-};
-
-const processor = unified()
-  // @ts-ignore
-  .use(htmlToHtmlAst, { fragment: true })
-  // @ts-ignore
-  .use(htmlAstToReact, {
-    Fragment: React.Fragment,
-    components: {
-      a: InfoLink,
-    },
-    createElement: React.createElement,
-  });
+import {
+  getContentBySlug,
+  getContentByIds,
+  getContentBlockIds,
+  injectContentInfos,
+} from "../../src/information";
+import { ContentBlocks } from "../../src/information/Components";
 
 const Information = ({
   anchor,
@@ -73,57 +31,22 @@ const Information = ({
     relatedItems,
   } = { _source: {} },
 }: EditorialContentDataWrapper) => {
-  let editorialContent = contents?.map(
-    ({ type, name, altText, size, html, imgUrl, fileUrl, references = [] }) => {
-      const reactContent: any = processor.processSync(html).result;
-      return (
-        <>
-          {type === "graphic" ? (
-            <div key={name}>
-              <ImageWrapper src={toUrl(imgUrl)} altText={altText} />
-              <DownloadWrapper>
-                <Button
-                  as="a"
-                  className="no-after"
-                  href={toUrl(fileUrl)}
-                  narrow
-                  variant="navLink"
-                  download
-                >
-                  Télécharger l‘infographie (pdf - {size})
-                  <Download />
-                </Button>
-              </DownloadWrapper>
-              <MoreContent noLeftPadding title="Voir en détail">
-                <Wrapper variant="dark">{reactContent}</Wrapper>
-              </MoreContent>
-            </div>
-          ) : (
-            <React.Fragment key={name}>{reactContent}</React.Fragment>
-          )}
-          {references.map(
-            ({ label, links }) =>
-              links.length > 0 && (
-                <StyledReferences
-                  label={label}
-                  accordionDisplay={1}
-                  references={links.map((reference, index) => ({
-                    ...reference,
-                    id: reference.id || `${name}-${index}`,
-                  }))}
-                />
-              )
-          )}
-        </>
-      );
-    }
-  );
+  let editorialContent = contents?.map(({ name, references = [], blocks }) => {
+    return (
+      <ContentBlocks
+        key={name}
+        name={name}
+        references={references}
+        blocks={blocks}
+      ></ContentBlocks>
+    );
+  });
   let contentWrapper;
   if (editorialContent && editorialContent.length > 1) {
     contentWrapper =
       sectionDisplayMode === "tab" ? (
         <Tabs
-          data={contents?.map(({ title, name }, index) => ({
+          data={contents?.map(({ title }, index) => ({
             panel: editorialContent?.[index],
             tab: title,
           }))}
@@ -186,13 +109,25 @@ export default Information;
 Information.getInitialProps = async ({ query: { slug }, asPath }) => {
   // beware, this one is undefined when rendered server-side
   const anchor = asPath.split("#")[1];
-  const responseContainer = await fetch(
-    `${API_URL}/items/${SOURCES.EDITORIAL_CONTENT}/${slug}`
-  );
-  if (!responseContainer.ok) {
-    return { statusCode: responseContainer.status };
+  const contentBySlug = await getContentBySlug(slug);
+
+  const cdtnIdToFetch = getContentBlockIds(contentBySlug._source.contents);
+  let contents;
+
+  if (cdtnIdToFetch && cdtnIdToFetch.length) {
+    const fetchedContents = await getContentByIds(cdtnIdToFetch);
+    contents = injectContentInfos(
+      contentBySlug._source.contents,
+      fetchedContents
+    );
+  } else {
+    contents = contentBySlug._source.contents;
   }
-  const information = await responseContainer.json();
+
+  const information = {
+    ...contentBySlug,
+    _source: { ...contentBySlug._source, contents },
+  };
 
   return { anchor, information };
 };
@@ -231,18 +166,4 @@ const GlobalStylesWrapper = styled.div`
       margin-top: ${spacings.small};
     }
   }
-`;
-
-const DownloadWrapper = styled.div`
-  display: flex;
-  justify-content: flex-end;
-`;
-
-const Download = styled(icons.Download)`
-  width: 2.2rem;
-  margin-left: ${spacings.xsmall};
-`;
-
-const StyledReferences = styled(References)`
-  margin-top: ${spacings.xmedium};
 `;

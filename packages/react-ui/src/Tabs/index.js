@@ -82,6 +82,10 @@ const StyledTabList = styled(TabList)`
 `;
 
 const StyledTab = styled(Tab)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   flex: 1 0 auto;
   max-height: 11rem;
   margin-left: ${spacings.tiny};

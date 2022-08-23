@@ -1,4 +1,10 @@
-function getSearchBody({ source, slug }) {
+export const getSearchBySourceSlugBody = ({
+  source,
+  slug,
+}: {
+  source: any;
+  slug: string;
+}): any => {
   return {
     _source: [
       "action", // outils
@@ -50,6 +56,4 @@ function getSearchBody({ source, slug }) {
     },
     size: 1,
   };
-}
-
-module.exports = getSearchBody;
+};
