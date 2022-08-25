@@ -55,7 +55,11 @@ describe("<AbsencePeriods />", () => {
         onChange={jest.fn()}
         absences={[
           {
-            motif: "Congé parental d'éducation",
+            motif: {
+              key: "absenceCongesParentalEducation",
+              label: "Congé parental d'éducation",
+              value: 0.5,
+            },
             durationInMonth: 3,
           },
         ]}

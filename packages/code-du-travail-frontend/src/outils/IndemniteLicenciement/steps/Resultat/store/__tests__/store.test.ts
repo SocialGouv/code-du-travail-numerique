@@ -32,7 +32,11 @@ describe("Result store", () => {
     store.getState().ancienneteFunction.onChangeAbsencePeriods([
       {
         durationInMonth: 2,
-        motif: "Motif A",
+        motif: {
+          label: "Label",
+          key: "label",
+          value: 1,
+        },
       },
     ]);
     store.getState().ancienneteFunction.onValidateStepAnciennete();

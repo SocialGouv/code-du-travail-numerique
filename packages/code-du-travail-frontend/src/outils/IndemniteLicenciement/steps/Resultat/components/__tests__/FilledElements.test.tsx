@@ -23,7 +23,11 @@ describe("<FilledElement />", () => {
           dateNotification="01/02/2021"
           absencesPeriods={[
             {
-              motif: "Motif A",
+              motif: {
+                label: "Motif A",
+                key: "motif-a",
+                value: 1,
+              },
               durationInMonth: 2,
             },
           ]}

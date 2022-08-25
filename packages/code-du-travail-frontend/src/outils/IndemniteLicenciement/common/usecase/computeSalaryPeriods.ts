@@ -22,7 +22,7 @@ function computeSalaryPeriods({
   const totalAbsence = (absencePeriods || [])
     .filter((period) => Boolean(period.durationInMonth))
     .reduce((total, item) => {
-      const motif = motifs.find((motif) => motif.label === item.motif);
+      const motif = motifs.find((motif) => motif.key === item.motif.key);
       if (motif && item.durationInMonth) {
         return total + item.durationInMonth * motif.value;
       }

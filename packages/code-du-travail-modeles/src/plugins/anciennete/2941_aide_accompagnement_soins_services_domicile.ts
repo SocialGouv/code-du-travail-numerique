@@ -1,6 +1,8 @@
 import { differenceInMonths, parse } from "date-fns";
 
 import type { SupportedCcIndemniteLicenciement } from "..";
+import { LEGAL_MOTIFS } from "./legal";
+import { MotifKeys } from "./motif-keys";
 import type { ISeniority, Motif, SeniorityProps } from "./types";
 import { accumulateAbsenceByYear, splitBySeniorityYear } from "./utils";
 
@@ -26,7 +28,7 @@ export class Seniority2941
         if (item.durationInMonth === undefined) {
           return 0;
         }
-        const m = this.motifs.find((motif) => motif.label === item.motif);
+        const m = this.motifs.find((motif) => motif.key === item.motif.key);
         if (!m) {
           return total;
         }
@@ -43,7 +45,7 @@ export class Seniority2941
     const proAbsence = absencePeriods
       .filter((absence) => Boolean(absence.durationInMonth))
       .filter((absence) => {
-        const m = this.motifs.find((motif) => motif.label === absence.motif);
+        const m = this.motifs.find((motif) => motif.key === absence.motif.key);
         return m?.key === "absenceMaladieNonPro";
       });
     const absenceProBySeniorityYear = accumulateAbsenceByYear(
@@ -58,3 +60,14 @@ export class Seniority2941
     return differenceInMonths(dSortie, dEntree) / 12 - totalAbsence;
   }
 }
+
+export const MOTIFS_2941: Motif[] = LEGAL_MOTIFS.map((item) => {
+  if (item.key === MotifKeys.maladieNonPro) {
+    return {
+      ...item,
+      startAt: true,
+      value: 1,
+    };
+  }
+  return item;
+});

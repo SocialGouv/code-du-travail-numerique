@@ -71,7 +71,16 @@ describe("computeSalaryPeriods", () => {
     expect(
       computeSalaryPeriods({
         motifs: getMotifs(SupportedCcIndemniteLicenciement.default),
-        absencePeriods: [{ durationInMonth: 6, motif: "Congés sans solde" }],
+        absencePeriods: [
+          {
+            durationInMonth: 6,
+            motif: {
+              key: "absenceCongesSansSolde",
+              label: "Congés sans solde",
+              value: 1,
+            },
+          },
+        ],
         dateEntree: "01/04/2017",
         dateNotification: "01/12/2017",
       })

@@ -105,7 +105,7 @@ export default function FilledElements(props: Props) {
                 <tbody>
                   {props.absencesPeriods.map((period, index) => (
                     <tr key={"absence-" + index}>
-                      <td>{period.motif}</td>
+                      <td>{period.motif.label}</td>
                       <td>{period.durationInMonth} mois</td>
                     </tr>
                   ))}
