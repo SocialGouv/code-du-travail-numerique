@@ -33,7 +33,7 @@ export class Seniority2941
           return total;
         }
         // Exclude maladie non pro which is compute later
-        if (m.key === "absenceMaladieNonPro") {
+        if (m.key === MotifKeys.maladieNonPro) {
           return 0;
         }
         return total + item.durationInMonth * m.value;
@@ -46,7 +46,7 @@ export class Seniority2941
       .filter((absence) => Boolean(absence.durationInMonth))
       .filter((absence) => {
         const m = this.motifs.find((motif) => motif.key === absence.motif.key);
-        return m?.key === "absenceMaladieNonPro";
+        return m?.key === MotifKeys.maladieNonPro;
       });
     const absenceProBySeniorityYear = accumulateAbsenceByYear(
       proAbsence,
@@ -56,8 +56,8 @@ export class Seniority2941
       return total + Math.max(item.totalAbsenceInMonth - 1, 0);
     }, 0);
 
-    const totalAbsence = (totalAbsenceWithoutProAbsence + totalAbsencePro) / 12;
-    return differenceInMonths(dSortie, dEntree) / 12 - totalAbsence;
+    const totalAbsence = totalAbsenceWithoutProAbsence + totalAbsencePro;
+    return (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12;
   }
 }
 
