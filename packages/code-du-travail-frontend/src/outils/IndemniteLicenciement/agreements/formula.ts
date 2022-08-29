@@ -61,7 +61,7 @@ const getAgreementFormula = (
           .informationsData.input.publicodesInformations.find(
             (v) =>
               v.question.rule.nom ===
-              "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle"
+              "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle"
           )
           ?.info?.replace(/'/g, "") as any,
         seniorityNonCadre,
