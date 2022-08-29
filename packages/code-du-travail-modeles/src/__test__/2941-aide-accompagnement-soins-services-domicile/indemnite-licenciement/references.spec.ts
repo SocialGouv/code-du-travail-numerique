@@ -7,8 +7,8 @@ const engine = new Engine(mergeModels());
 
 const References = [
   {
-    article: "Article 26,Titre IV",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000025805633?idConteneur=KALICONT000025805800",
+    article: "Article 26. 1. b.,Titre IV",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525?idConteneur=KALICONT000025805800&origin=list#KALIARTI000044392525",
   },
   {
     article: "Article 17",

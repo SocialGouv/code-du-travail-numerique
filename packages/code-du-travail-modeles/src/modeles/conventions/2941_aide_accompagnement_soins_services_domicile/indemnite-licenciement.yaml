@@ -18,14 +18,14 @@ contrat salarié . convention collective . bad . indemnité de licenciement . di
   valeur:
     produit:
       assiette: jusqu'à dix ans ou moins * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      facteur: 1 / 5
+      facteur: 1 / 4
   unité: €
 
 contrat salarié . convention collective . bad . indemnité de licenciement . plus de dix ans:
   valeur:
     produit:
       assiette: au dela de dix ans * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      facteur: 2 / 15
+      facteur: 1 / 3
   unité: €
 
 #  (1/5*Sref*A1) + (2/15*Sref*A2)
@@ -34,7 +34,7 @@ contrat salarié . convention collective . bad . indemnité de licenciement . pl
 contrat salarié . convention collective . bad . indemnité de licenciement . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1 an
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 8 mois
       alors:
         somme:
           - dix ans ou moins
@@ -43,5 +43,5 @@ contrat salarié . convention collective . bad . indemnité de licenciement . r�
   unité: €
   arrondi: 2 décimales
   références:
-    Article 26,Titre IV: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000025805633?idConteneur=KALICONT000025805800
+    Article 26. 1. b.,Titre IV: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000044392525?idConteneur=KALICONT000025805800&origin=list#KALIARTI000044392525
     Article 17: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000025805624?idConteneur=KALICONT000025805800&origin=list#KALIARTI000025805624
