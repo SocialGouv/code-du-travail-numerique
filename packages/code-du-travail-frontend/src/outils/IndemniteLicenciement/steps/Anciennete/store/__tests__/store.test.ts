@@ -1,5 +1,6 @@
 import { loadPublicodesRules } from "../../../../../api";
 import { createIndemniteLicenciementStore } from "../../../../store";
+import { MotifKeys } from "@socialgouv/modeles-social";
 
 describe("Ancienneté store", () => {
   let store = createIndemniteLicenciementStore(
@@ -59,7 +60,7 @@ describe("Ancienneté store", () => {
         durationInMonth: 2,
         motif: {
           label: "Label",
-          key: "label",
+          key: MotifKeys.maladieNonPro,
           value: 1,
         },
       },
@@ -69,7 +70,7 @@ describe("Ancienneté store", () => {
         durationInMonth: 2,
         motif: {
           label: "Label",
-          key: "label",
+          key: MotifKeys.maladieNonPro,
           value: 1,
         },
       },
@@ -178,7 +179,7 @@ describe("Ancienneté store", () => {
         durationInMonth: 2,
         motif: {
           label: "Label",
-          key: "label",
+          key: MotifKeys.maladieNonPro,
           value: 1,
         },
       },

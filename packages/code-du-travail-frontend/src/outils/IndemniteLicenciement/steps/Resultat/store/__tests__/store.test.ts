@@ -1,5 +1,6 @@
 import { loadPublicodesRules } from "../../../../../api";
 import { createIndemniteLicenciementStore } from "../../../../store";
+import { MotifKeys } from "@socialgouv/modeles-social";
 
 describe("Result store", () => {
   let store: ReturnType<typeof createIndemniteLicenciementStore>;
@@ -34,7 +35,7 @@ describe("Result store", () => {
         durationInMonth: 2,
         motif: {
           label: "Label",
-          key: "label",
+          key: MotifKeys.maladieNonPro,
           value: 1,
         },
       },

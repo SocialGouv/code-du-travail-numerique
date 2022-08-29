@@ -1,5 +1,6 @@
 import {
   getMotifs,
+  MotifKeys,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { computeSalaryPeriods } from "..";
@@ -75,7 +76,7 @@ describe("computeSalaryPeriods", () => {
           {
             durationInMonth: 6,
             motif: {
-              key: "absenceCongesSansSolde",
+              key: MotifKeys.congesSansSolde,
               label: "Congés sans solde",
               value: 1,
             },
