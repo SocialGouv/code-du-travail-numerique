@@ -36,7 +36,7 @@ const getAgreementFormula = (
               v.question.rule.nom ===
               "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle"
           )
-          ?.info?.replace(/'/g, "") as any,
+          ?.info?.slice(1, -1) as any,
         seniorityNonCadre,
       });
     }
@@ -63,7 +63,7 @@ const getAgreementFormula = (
               v.question.rule.nom ===
               "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle"
           )
-          ?.info?.replace(/'/g, "") as any,
+          ?.info?.slice(1, -1) as any,
         seniorityNonCadre,
       });
     }
