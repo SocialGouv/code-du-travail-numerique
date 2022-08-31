@@ -5,7 +5,6 @@ import {
   deepEqualObject,
 } from "../../../../../lib";
 import { MainStore } from "../../../store";
-import { computeReferenceSalary } from "./computeReferenceSalary";
 import {
   Agreement1516StoreInput,
   Agreement1516StoreError,
@@ -24,10 +23,6 @@ export const validateAgreement1516 = (
       state.agreement1516Data.error = errorState;
     })
   );
-
-  if (isValid) {
-    computeReferenceSalary(get, set);
-  }
 
   return isValid;
 };

@@ -70,6 +70,9 @@ const createSalairesStore: StoreSlice<
     },
     onChangeHasSameSalary: (value) => {
       applyGenericValidation(get, set, "hasSameSalary", value);
+      if (value === "non") {
+        applyGenericValidation(get, set, "salary", undefined);
+      }
     },
     onSalariesChange: (value) => {
       applyGenericValidation(get, set, "salaryPeriods", value);

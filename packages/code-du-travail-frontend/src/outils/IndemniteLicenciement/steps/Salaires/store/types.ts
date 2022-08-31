@@ -6,7 +6,6 @@ export type SalairesStoreInput = {
   hasTempsPartiel?: OuiNon;
   salaryPeriods: SalaryPeriods[];
   refSalary: number;
-  agreementRefSalary?: number;
   hasSameSalary?: OuiNon;
   salary?: string;
 };
