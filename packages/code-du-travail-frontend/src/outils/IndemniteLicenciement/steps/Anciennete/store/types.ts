@@ -1,5 +1,5 @@
 import { StepData } from "../../../store";
-import { OuiNon } from "../../../common/types";
+import { OuiNon } from "../../../common";
 import { Absence } from "@socialgouv/modeles-social";
 
 export type AncienneteStoreInput = {

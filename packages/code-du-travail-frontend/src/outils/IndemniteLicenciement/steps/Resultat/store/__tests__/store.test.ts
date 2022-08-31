@@ -1,5 +1,6 @@
 import { loadPublicodesRules } from "../../../../../api";
 import { createIndemniteLicenciementStore } from "../../../../store";
+import { MotifKeys } from "@socialgouv/modeles-social";
 
 describe("Result store", () => {
   let store: ReturnType<typeof createIndemniteLicenciementStore>;
@@ -32,7 +33,11 @@ describe("Result store", () => {
     store.getState().ancienneteFunction.onChangeAbsencePeriods([
       {
         durationInMonth: 2,
-        motif: "Motif A",
+        motif: {
+          label: "Label",
+          key: MotifKeys.maladieNonPro,
+          value: 1,
+        },
       },
     ]);
     store.getState().ancienneteFunction.onValidateStepAnciennete();

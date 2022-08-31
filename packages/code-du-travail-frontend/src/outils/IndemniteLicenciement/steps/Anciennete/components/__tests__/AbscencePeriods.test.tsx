@@ -2,6 +2,7 @@ import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import AbsencePeriods from "../AbsencePeriods";
+import { MotifKeys } from "@socialgouv/modeles-social";
 
 describe("<AbsencePeriods />", () => {
   it("should render", () => {
@@ -55,7 +56,11 @@ describe("<AbsencePeriods />", () => {
         onChange={jest.fn()}
         absences={[
           {
-            motif: "Congé parental d'éducation",
+            motif: {
+              key: MotifKeys.congesParentalEducation,
+              label: "Congé parental d'éducation",
+              value: 0.5,
+            },
             durationInMonth: 3,
           },
         ]}

@@ -37,5 +37,6 @@ export class SeniorityFactory {
   }
 }
 
+export * from "./motif-keys";
 export * from "./motifs";
 export * from "./types";

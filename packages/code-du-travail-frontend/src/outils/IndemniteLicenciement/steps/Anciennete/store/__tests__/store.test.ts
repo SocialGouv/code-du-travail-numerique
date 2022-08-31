@@ -1,5 +1,6 @@
 import { loadPublicodesRules } from "../../../../../api";
 import { createIndemniteLicenciementStore } from "../../../../store";
+import { MotifKeys } from "@socialgouv/modeles-social";
 
 describe("Ancienneté store", () => {
   let store = createIndemniteLicenciementStore(
@@ -57,13 +58,21 @@ describe("Ancienneté store", () => {
     store.getState().ancienneteFunction.onChangeAbsencePeriods([
       {
         durationInMonth: 2,
-        motif: "Label",
+        motif: {
+          label: "Label",
+          key: MotifKeys.maladieNonPro,
+          value: 1,
+        },
       },
     ]);
     expect(store.getState().ancienneteData.input.absencePeriods).toStrictEqual([
       {
         durationInMonth: 2,
-        motif: "Label",
+        motif: {
+          label: "Label",
+          key: MotifKeys.maladieNonPro,
+          value: 1,
+        },
       },
     ]);
     expect(store.getState().ancienneteData.input.dateEntree).toBe("20/02/2020");
@@ -168,7 +177,11 @@ describe("Ancienneté store", () => {
     store.getState().ancienneteFunction.onChangeAbsencePeriods([
       {
         durationInMonth: 2,
-        motif: "Label",
+        motif: {
+          label: "Label",
+          key: MotifKeys.maladieNonPro,
+          value: 1,
+        },
       },
     ]);
     const isValid = store

@@ -1,6 +1,8 @@
 import { differenceInMonths, parse } from "date-fns";
 
 import type { SupportedCcIndemniteLicenciement } from "..";
+import { LEGAL_MOTIFS } from "./legal";
+import { MotifKeys } from "./motif-keys";
 import type { ISeniority, Motif, SeniorityProps } from "./types";
 import { accumulateAbsenceByYear, splitBySeniorityYear } from "./utils";
 
@@ -26,12 +28,12 @@ export class Seniority2941
         if (item.durationInMonth === undefined) {
           return 0;
         }
-        const m = this.motifs.find((motif) => motif.label === item.motif);
+        const m = this.motifs.find((motif) => motif.key === item.motif.key);
         if (!m) {
           return total;
         }
         // Exclude maladie non pro which is compute later
-        if (m.key === "absenceMaladieNonPro") {
+        if (m.key === MotifKeys.maladieNonPro) {
           return 0;
         }
         return total + item.durationInMonth * m.value;
@@ -43,8 +45,8 @@ export class Seniority2941
     const proAbsence = absencePeriods
       .filter((absence) => Boolean(absence.durationInMonth))
       .filter((absence) => {
-        const m = this.motifs.find((motif) => motif.label === absence.motif);
-        return m?.key === "absenceMaladieNonPro";
+        const m = this.motifs.find((motif) => motif.key === absence.motif.key);
+        return m?.key === MotifKeys.maladieNonPro;
       });
     const absenceProBySeniorityYear = accumulateAbsenceByYear(
       proAbsence,
@@ -54,7 +56,18 @@ export class Seniority2941
       return total + Math.max(item.totalAbsenceInMonth - 1, 0);
     }, 0);
 
-    const totalAbsence = (totalAbsenceWithoutProAbsence + totalAbsencePro) / 12;
-    return differenceInMonths(dSortie, dEntree) / 12 - totalAbsence;
+    const totalAbsence = totalAbsenceWithoutProAbsence + totalAbsencePro;
+    return (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12;
   }
 }
+
+export const MOTIFS_2941: Motif[] = LEGAL_MOTIFS.map((item) => {
+  if (item.key === MotifKeys.maladieNonPro) {
+    return {
+      ...item,
+      startAt: true,
+      value: 1,
+    };
+  }
+  return item;
+});

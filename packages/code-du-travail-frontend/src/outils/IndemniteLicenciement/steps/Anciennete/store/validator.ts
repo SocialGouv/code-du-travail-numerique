@@ -1,19 +1,14 @@
-import { isAfter, format, differenceInMonths } from "date-fns";
-import { isValidDate, deepEqualObject } from "../../../../../lib";
+import { differenceInMonths, format, isAfter } from "date-fns";
+import { deepEqualObject, isValidDate } from "../../../../../lib";
 import { parse } from "../../../../common/utils";
-import { AncienneteStoreInput, AncienneteStoreError } from "./types";
+import { AncienneteStoreError, AncienneteStoreInput } from "./types";
 import frLocale from "date-fns/locale/fr";
-import {
-  getMotifs,
-  SupportedCcIndemniteLicenciement,
-} from "@socialgouv/modeles-social";
 
 export const validateStep = (state: AncienneteStoreInput) => {
   const dEntree = parse(state.dateEntree);
   const dSortie = parse(state.dateSortie);
   const dNotification = parse(state.dateNotification);
   const absencePeriods = state.absencePeriods;
-  const legalMotif = getMotifs(SupportedCcIndemniteLicenciement.default);
   let errors: AncienneteStoreError = {};
 
   const totalAbsence =
@@ -23,9 +18,7 @@ export const validateStep = (state: AncienneteStoreInput) => {
         if (!item.durationInMonth) {
           return total;
         }
-        const v =
-          legalMotif.find((motif) => motif.label === item.motif)?.value ?? 0;
-        return total + item.durationInMonth * v;
+        return total + item.durationInMonth * item.motif.value;
       }, 0) / 12;
 
   // Date d'entrée
@@ -100,9 +93,16 @@ export const validateStep = (state: AncienneteStoreInput) => {
     errors.errorAbsenceProlonge = undefined;
   }
 
+  console.log(
+    "Validator",
+    state.absencePeriods.find((absence) => absence.motif.startAt === true)
+  );
   if (
     state.hasAbsenceProlonge === "oui" &&
-    (state.absencePeriods.find((v) => !v.durationInMonth) ||
+    (state.absencePeriods.find((absence) => !absence.durationInMonth) ||
+      state.absencePeriods.find(
+        (absence) => absence.motif.startAt === true && !absence.startedAt
+      ) ||
       state.absencePeriods.length === 0)
   ) {
     errors.errorAbsencePeriods = "Vous devez renseigner tous les champs";

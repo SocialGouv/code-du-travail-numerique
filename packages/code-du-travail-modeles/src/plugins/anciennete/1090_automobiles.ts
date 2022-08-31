@@ -23,7 +23,7 @@ export class Seniority1090
       absencePeriods
         .filter((period) => Boolean(period.durationInMonth))
         .reduce((total, item) => {
-          const m = this.motifs.find((motif) => motif.label === item.motif);
+          const m = this.motifs.find((motif) => motif.key === item.motif.key);
           if (!m || !item.durationInMonth) {
             return total;
           }
