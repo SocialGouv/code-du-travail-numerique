@@ -11,6 +11,7 @@ const AgreementStep = (): JSX.Element => {
     onAgreementChange,
     enterprise,
     agreement,
+    onInitAgreementPage,
   } = useIndemniteLicenciementStore((state) => ({
     error: state.agreementData.error,
     onRouteChange: state.agreementFunction.onRouteChange,
@@ -18,6 +19,7 @@ const AgreementStep = (): JSX.Element => {
     onAgreementChange: state.agreementFunction.onAgreementChange,
     enterprise: state.agreementData.input.enterprise,
     agreement: state.agreementData.input.agreement,
+    onInitAgreementPage: state.agreementFunction.onInitAgreementPage,
   }));
 
   return (
@@ -26,6 +28,7 @@ const AgreementStep = (): JSX.Element => {
       onRouteChange={onRouteChange}
       selectedRoute={route}
       onAgreementChange={onAgreementChange}
+      onInitAgreementPage={onInitAgreementPage}
       selectedEnterprise={enterprise}
       selectedAgreement={agreement}
       supportedAgreements={getSupportedCcIndemniteLicenciement()}

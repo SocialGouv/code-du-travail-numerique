@@ -33,9 +33,7 @@ export default function RadioQuestion({
   name,
   tooltip,
 }: Props) {
-  const [value, setValue] = React.useState(selectedOption ?? "");
   const onChange = (value: string) => {
-    setValue(value);
     onChangeSelectedOption(value);
   };
 
@@ -52,7 +50,7 @@ export default function RadioQuestion({
             label={question.label}
             value={question.value}
             id={question.id}
-            checked={value === question.value}
+            checked={selectedOption === question.value}
             onChange={() => onChange(question.value)}
           />
         ))}

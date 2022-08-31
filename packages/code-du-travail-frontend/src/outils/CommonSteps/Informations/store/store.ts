@@ -9,7 +9,10 @@ import {
   PublicodesInformation,
 } from "./types";
 import { StoreSlice } from "../../../types";
-import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
+import {
+  IndemniteLicenciementPublicodes,
+  MissingArgs,
+} from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../publicodes";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
@@ -105,15 +108,20 @@ const createCommonInformationsStore: StoreSlice<
           [v.question.rule.nom]: v.info,
         }))
         .reduce((acc, cur) => ({ ...acc, ...cur }), {});
-      const { missingArgs } = publicodes.setSituation(
-        mapToPublicodesSituationForIndemniteLicenciementConventionnel(
-          agreement.num,
-          0,
-          0,
-          rules
-        ),
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
+      let missingArgs: MissingArgs[] = [];
+      try {
+        missingArgs = publicodes.setSituation(
+          mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+            agreement.num,
+            0,
+            0,
+            rules
+          ),
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        ).missingArgs;
+      } catch (e) {
+        console.error(e);
+      }
       const newQuestions = missingArgs
         .sort((a, b) => b.indice - a.indice)
         .map((arg, index) => ({
