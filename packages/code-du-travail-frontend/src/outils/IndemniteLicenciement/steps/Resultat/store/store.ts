@@ -21,7 +21,10 @@ import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
 import { AgreementInformation } from "../../../common";
-import { getAgreementFormula } from "../../../agreements";
+import {
+  getAgreementFormula,
+  getAgreementReferenceSalary,
+} from "../../../agreements";
 import { MainStore } from "../../../store";
 import { GetState } from "zustand";
 
@@ -53,7 +56,6 @@ const createResultStore: StoreSlice<
   resultFunction: {
     getPublicodesResult: () => {
       const refSalary = get().salairesData.input.refSalary;
-      const agreementRefSalary = get().salairesData.input.agreementRefSalary;
       const agreement = get().agreementData.input.agreement;
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
@@ -92,6 +94,7 @@ const createResultStore: StoreSlice<
 
       let publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult;
       let agreementSeniority: number;
+      let agreementRefSalary: number;
       let agreementReferences: References[];
       let agreementFormula: Formula;
       let isAgreementBetter = false;
@@ -106,6 +109,11 @@ const createResultStore: StoreSlice<
             [v.question.rule.nom]: v.info,
           }))
           .reduce((acc, cur) => ({ ...acc, ...cur }), {});
+
+        agreementRefSalary = getAgreementReferenceSalary(
+          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+          get as GetState<MainStore>
+        );
 
         agreementInformations = get()
           .informationsData.input.publicodesInformations.map(
@@ -128,7 +136,7 @@ const createResultStore: StoreSlice<
           mapToPublicodesSituationForIndemniteLicenciementConventionnel(
             agreement.num,
             agreementSeniority,
-            agreementRefSalary ?? refSalary,
+            agreementRefSalary,
             infos
           ),
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
@@ -141,7 +149,7 @@ const createResultStore: StoreSlice<
         agreementFormula = getAgreementFormula(
           `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
           agreementSeniority,
-          agreementRefSalary ?? refSalary,
+          agreementRefSalary,
           get as GetState<MainStore>
         );
 

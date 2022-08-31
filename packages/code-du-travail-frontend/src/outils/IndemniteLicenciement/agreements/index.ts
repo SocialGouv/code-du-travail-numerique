@@ -3,3 +3,4 @@ export * from "./index";
 export { default as AgreementsInjector } from "./AgreementsInjector";
 export { default as validatorAgreement } from "./validator";
 export { default as getAgreementFormula } from "./formula";
+export { default as getAgreementReferenceSalary } from "./salary";
