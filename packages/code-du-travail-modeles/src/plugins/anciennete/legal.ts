@@ -1,34 +1,35 @@
 import { differenceInMonths, parse } from "date-fns";
 
 import type { SupportedCcIndemniteLicenciement } from "..";
+import { MotifKeys } from "./motif-keys";
 import type { Absence, ISeniority, Motif, SeniorityProps } from "./types";
 
 export const LEGAL_MOTIFS: Motif[] = [
   {
-    key: "absenceMaladieNonPro",
+    key: MotifKeys.maladieNonPro,
     label: "Absence pour maladie non professionnelle",
     value: 1,
   },
   {
-    key: "absenceAccidentTrajet",
+    key: MotifKeys.accidentTrajet,
     label: "Arrêt maladie lié à un accident de trajet",
     value: 1,
   },
-  { key: "absenceCongesSabbatique", label: "Congé sabbatique", value: 1 },
+  { key: MotifKeys.congesSabbatique, label: "Congé sabbatique", value: 1 },
   {
-    key: "absenceCongesCreationEntreprise",
+    key: MotifKeys.congesCreationEntreprise,
     label: "Congé pour création d'entreprise",
     value: 1,
   },
   {
-    key: "absenceCongesParentalEducation",
+    key: MotifKeys.congesParentalEducation,
     label: "Congé parental d'éducation",
     value: 0.5,
   },
-  { key: "absenceCongesSansSolde", label: "Congés sans solde", value: 1 },
-  { key: "absenceGreve", label: "Grève", value: 1 },
-  { key: "absenceMiseAPied", label: "Mise à pied", value: 1 },
-  { key: "absenceCongesPaternite", label: "Congé de paternité", value: 1 },
+  { key: MotifKeys.congesSansSolde, label: "Congés sans solde", value: 1 },
+  { key: MotifKeys.greve, label: "Grève", value: 1 },
+  { key: MotifKeys.miseAPied, label: "Mise à pied", value: 1 },
+  { key: MotifKeys.congesPaternite, label: "Congé de paternité", value: 1 },
 ];
 
 export type LegalSeniorityProps = {
@@ -57,7 +58,7 @@ export class SeniorityLegal
       absencePeriods
         .filter((period) => Boolean(period.durationInMonth))
         .reduce((total, item) => {
-          const m = this.motifs.find((motif) => motif.label === item.motif);
+          const m = this.motifs.find((motif) => motif.key === item.motif.key);
           if (!m || !item.durationInMonth) {
             return total;
           }

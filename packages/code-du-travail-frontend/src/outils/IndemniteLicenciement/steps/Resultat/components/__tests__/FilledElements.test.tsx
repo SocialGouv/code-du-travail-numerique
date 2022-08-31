@@ -1,6 +1,7 @@
 import { render } from "@testing-library/react";
 import React from "react";
 import FilledElement from "../FilledElements";
+import { MotifKeys } from "@socialgouv/modeles-social";
 
 describe("<FilledElement />", () => {
   it("should render", () => {
@@ -23,7 +24,11 @@ describe("<FilledElement />", () => {
           dateNotification="01/02/2021"
           absencesPeriods={[
             {
-              motif: "Motif A",
+              motif: {
+                label: "Motif A",
+                key: MotifKeys.maladieNonPro,
+                value: 1,
+              },
               durationInMonth: 2,
             },
           ]}

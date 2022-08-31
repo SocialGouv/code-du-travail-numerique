@@ -1,14 +1,15 @@
 import type { SupportedCcIndemniteLicenciement } from "..";
 import type { LegalSeniorityProps } from "./legal";
+import type { MotifKeys } from "./motif-keys";
 
 export type Absence = {
-  motif: string;
+  motif: Motif;
   durationInMonth?: number;
   startedAt?: string;
 };
 
 export type Motif = {
-  key: string;
+  key: MotifKeys;
   label: string;
   value: number;
   startAt?: boolean;
