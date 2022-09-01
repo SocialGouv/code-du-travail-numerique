@@ -71,10 +71,10 @@ module.exports = {
       {
         source: "/:path*",
         headers: [
-          // {
-          //   key: "Content-Security-Policy",
-          //   value: ContentSecurityPolicy.replace(/\n/g, " ").trim(),
-          // },
+          {
+            key: "Content-Security-Policy",
+            value: ContentSecurityPolicy.replace(/\n/g, " ").trim(),
+          },
           {
             key: "X-Robots-Tag",
             value: process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT

@@ -91,7 +91,6 @@ router.get("/items", async (ctx: any) => {
   const body = ids
     ? getDocumentByIdsBody(ids.split(","))
     : getDocumentByUrlBody({ url });
-  console.log(body);
   const response = await elasticsearchClient.search({ body, index });
 
   if (response.body.hits.total.value === 0) {
