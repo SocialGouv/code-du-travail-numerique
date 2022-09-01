@@ -4,7 +4,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { InlineError } from "../../../../common/ErrorField";
-import { Question } from "../../../../common/Question";
+import { Question, Tooltip } from "../../../../common/Question";
 import { SmallText } from "../../../../common/stepStyles";
 import { ErrorWrapper } from "../../../../Components/TextQuestion";
 
@@ -15,6 +15,7 @@ type Props = {
   onSalariesChange: (salaries: SalaryPeriods[]) => void;
   error?: string;
   note?: string;
+  tooltip?: Tooltip;
 };
 
 export const SalaireTempsPlein = ({
@@ -24,6 +25,7 @@ export const SalaireTempsPlein = ({
   title,
   note,
   subTitle,
+  tooltip,
 }: Props): JSX.Element => {
   const [isFirstEdit, setIsFirstEdit] = React.useState(true);
   const [errorsSalaries, setErrorsSalaries] = React.useState({});
@@ -80,7 +82,9 @@ export const SalaireTempsPlein = ({
     <StyledDiv>
       <Table>
         <Caption>
-          <Question required>{title}</Question>
+          <Question required tooltip={tooltip}>
+            {title}
+          </Question>
           {subTitle && <SmallText>{subTitle}</SmallText>}
         </Caption>
         <thead>
