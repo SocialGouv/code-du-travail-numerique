@@ -1,9 +1,9 @@
-import { QuizQuestion, QuizResponse } from "@cdt/data";
+import { QuestionnaireQuestion, QuestionnaireResponse } from "@cdt/data";
 
-export const responseMock = (index: number): QuizResponse => ({
+export const responseMock = (index: number): QuestionnaireResponse => ({
   text: `Response${index}`,
 });
-export const questionMock = (index: number): QuizQuestion => ({
+export const questionMock = (index: number): QuestionnaireQuestion => ({
   text: `Question${index}`,
   responses: [],
   statement: `statement${index}`,

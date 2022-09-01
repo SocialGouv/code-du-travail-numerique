@@ -14,6 +14,7 @@ import {
   injectContentInfos,
 } from "../../src/information";
 import { ContentBlocks } from "../../src/information/Components";
+import { QuestionnaireWrapper } from "../../src/questionnaire";
 
 const Information = ({
   anchor,
@@ -27,6 +28,7 @@ const Information = ({
       intro,
       references = [],
       title = "",
+      questionnaire = "",
     },
     relatedItems,
   } = { _source: {} },
@@ -83,6 +85,15 @@ const Information = ({
         relatedItems={relatedItems}
         title={title}
       >
+        {questionnaire && (
+          <SlugSummaryWrapper>
+            <QuestionnaireWrapper
+              name={questionnaire}
+              slug="licenciement-pour-motif-personnel-non-disciplinaire"
+              title="Votre situation"
+            ></QuestionnaireWrapper>
+          </SlugSummaryWrapper>
+        )}
         {sectionTitleStyleWrapper}
         {references.map(
           ({ label, links }) =>
@@ -166,4 +177,8 @@ const GlobalStylesWrapper = styled.div`
       margin-top: ${spacings.small};
     }
   }
+`;
+
+const SlugSummaryWrapper = styled.div`
+  margin-bottom: 29px;
 `;

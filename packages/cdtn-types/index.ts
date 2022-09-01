@@ -67,6 +67,7 @@ export type EditorialContent = {
   title: string;
   title_vector?: number[];
   icon?: string;
+  questionnaire?: string;
 };
 
 export type EditorialContentData = {

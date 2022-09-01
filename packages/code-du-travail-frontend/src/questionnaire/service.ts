@@ -1,9 +1,6 @@
 import { QuestionnaireQuestion, QuestionnaireResponse } from "@cdt/data";
 
-export type PreviousResponse = {
-  index: number;
-  text: string;
-};
+import { PreviousResponse, SlugResponses } from "./type";
 
 export const getCurrentQuestion = (
   questionTree: QuestionnaireQuestion,
@@ -18,7 +15,8 @@ export const getCurrentQuestion = (
   return previousResponses.reduce(
     ({ currentQuestion: currentQuestionOld }, { index }: PreviousResponse) => {
       const lastResponse = currentQuestionOld.responses[index];
-      const currentQuestion = currentQuestionOld.responses[index].question ?? q;
+      const currentQuestion =
+        currentQuestionOld.responses[index].question ?? currentQuestionOld;
       return { currentQuestion, lastResponse };
     },
     { currentQuestion: questionTree }
@@ -31,4 +29,30 @@ export const getResponseStatement = (
 ): string => {
   const { statement, text } = question.responses[responseIndex];
   return statement ?? `${question.statement} ${text.toLowerCase()}`;
+};
+
+export const slugSummaryRecursive = (
+  questionTree: QuestionnaireQuestion,
+  previousResponses?: PreviousResponse[]
+): SlugResponses => {
+  return questionTree.responses.reduce(
+    (
+      acc: SlugResponses,
+      { question, slug, isSlugReference }: QuestionnaireResponse,
+      index: number
+    ) => {
+      const text = getResponseStatement(questionTree, index);
+      let slugSummary = {};
+      const responses = [...(previousResponses ?? []), { index, text }];
+      if (question) {
+        slugSummary = slugSummaryRecursive(question, responses);
+      } else if (isSlugReference && slug) {
+        slugSummary = {
+          [slug]: responses,
+        };
+      }
+      return { ...acc, ...slugSummary };
+    },
+    {}
+  );
 };

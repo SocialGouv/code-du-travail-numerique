@@ -31,14 +31,14 @@ export const Question = () => {
   ) : (
     <QuestionWrapper>
       <QuestionHeaderWrapper>
-        <QuestionHeader>{currentQuestion.text}</QuestionHeader>
-        {currentQuestion.info && <Tooltip onChange={setOpenedTooltip} />}
+        <QuestionHeader>{currentQuestion?.text}</QuestionHeader>
+        {currentQuestion?.info && <Tooltip onChange={setOpenedTooltip} />}
       </QuestionHeaderWrapper>
       {openedTooltip && (
-        <InformationWrapper>{currentQuestion.info}</InformationWrapper>
+        <InformationWrapper>{currentQuestion?.info}</InformationWrapper>
       )}
       <RadioWrapper>
-        {currentQuestion.responses.map((response, index: number) => (
+        {currentQuestion?.responses.map((response, index: number) => (
           <Response
             key={`${response.text}${index}`}
             response={response}
@@ -46,7 +46,7 @@ export const Question = () => {
           ></Response>
         ))}
       </RadioWrapper>
-      <Description>{currentQuestion.description}</Description>
+      <Description>{currentQuestion?.description}</Description>
     </QuestionWrapper>
   );
 };
