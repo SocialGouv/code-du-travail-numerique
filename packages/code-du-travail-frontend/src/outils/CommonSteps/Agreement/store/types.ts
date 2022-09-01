@@ -28,6 +28,7 @@ export type CommonAgreementStoreData = {
 
 export type CommonAgreementStoreFn = {
   onRouteChange: (value: Route) => void;
+  onInitAgreementPage: () => void;
   onAgreementChange: (
     agreement: Agreement | null,
     enterprise?: Enterprise

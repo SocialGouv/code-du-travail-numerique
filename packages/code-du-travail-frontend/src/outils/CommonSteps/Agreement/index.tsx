@@ -14,6 +14,7 @@ import { PublicodesSimulator } from "@socialgouv/modeles-social";
 type Props = {
   selectedRoute?: Route;
   onRouteChange: (Route) => void;
+  onInitAgreementPage: () => void;
   supportedAgreements: AgreementSupportInfo[];
   selectedEnterprise?: Enterprise;
   selectedAgreement?: Agreement;
@@ -35,7 +36,12 @@ function AgreementStep({
   onAgreementChange,
   error,
   simulator,
+  onInitAgreementPage,
 }: Props): JSX.Element {
+  React.useEffect(() => {
+    onInitAgreementPage();
+  }, [onInitAgreementPage]);
+
   return (
     <>
       <RadioQuestion

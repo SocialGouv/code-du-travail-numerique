@@ -6,8 +6,9 @@ import {
   CommonAgreementStoreData,
   CommonAgreementStoreInput,
   CommonAgreementStoreSlice,
+  Route,
 } from "./types";
-import { StoreSlice } from "../../../types";
+import { STORAGE_KEY_AGREEMENT, StoreSlice } from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
 
 const initialState: CommonAgreementStoreData = {
@@ -23,6 +24,16 @@ const createCommonAgreementStore: StoreSlice<
 > = (set, get) => ({
   agreementData: { ...initialState },
   agreementFunction: {
+    onInitAgreementPage: () => {
+      const data =
+        window.localStorage &&
+        window.localStorage.getItem(STORAGE_KEY_AGREEMENT);
+      if (data) {
+        applyGenericValidation(get, set, "agreement", JSON.parse(data));
+        applyGenericValidation(get, set, "route", Route.agreement);
+        get().informationsFunction.generatePublicodesQuestions();
+      }
+    },
     onRouteChange: (value) => {
       set(
         produce((state: CommonAgreementStoreSlice) => {
@@ -35,6 +46,11 @@ const createCommonAgreementStore: StoreSlice<
     },
     onAgreementChange: (agreement, enterprise) => {
       applyGenericValidation(get, set, "agreement", agreement);
+      if (window.localStorage)
+        window.localStorage.setItem(
+          STORAGE_KEY_AGREEMENT,
+          JSON.stringify(agreement)
+        );
       applyGenericValidation(get, set, "enterprise", enterprise);
       get().informationsFunction.generatePublicodesQuestions();
     },
