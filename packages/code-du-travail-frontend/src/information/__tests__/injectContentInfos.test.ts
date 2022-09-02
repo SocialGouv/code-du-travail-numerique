@@ -62,6 +62,7 @@ describe("function injectContentInfos", () => {
             cdtnId: "id1",
             icon: "icon1",
           },
+          slug: "",
         },
         {
           _source: {
@@ -69,6 +70,7 @@ describe("function injectContentInfos", () => {
             cdtnId: "id2",
             icon: "icon2",
           },
+          slug: "",
         },
       ];
     });

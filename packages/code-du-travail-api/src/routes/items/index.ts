@@ -27,7 +27,6 @@ router.get("/items/:source/:slug", async (ctx: any) => {
   const { source, slug } = ctx.params;
   const body = getSearchBySourceSlugBody({ slug, source });
   const response = await elasticsearchClient.search({ body, index });
-
   if (response.body.hits.total.value === 0) {
     ctx.throw(404, `there is no documents that match ${slug} in ${source}`);
   }

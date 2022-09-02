@@ -1,6 +1,7 @@
-import { getCurrentQuestion, PreviousResponse } from "../service";
+import { getCurrentQuestion } from "../service";
 import { QuestionnaireQuestion, QuestionnaireResponse } from "@cdt/data";
 import { questionMock, responseMock } from "./mocks";
+import { PreviousResponse } from "../type";
 
 describe("function getCurrentQuestion", () => {
   const previousResponseMock = (index: number): PreviousResponse => ({

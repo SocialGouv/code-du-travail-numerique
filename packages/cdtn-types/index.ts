@@ -67,11 +67,13 @@ export type EditorialContent = {
   title: string;
   title_vector?: number[];
   icon?: string;
+  questionnaire?: string;
 };
 
 export type EditorialContentData = {
   _source: Partial<EditorialContent>;
   relatedItems?: string[];
+  slug: string;
 };
 
 export type EditorialContentDataWrapper = {

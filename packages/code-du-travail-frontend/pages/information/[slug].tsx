@@ -14,6 +14,7 @@ import {
   injectContentInfos,
 } from "../../src/information";
 import { ContentBlocks } from "../../src/information/Components";
+import { QuestionnaireWrapper } from "../../src/questionnaire";
 
 const Information = ({
   anchor,
@@ -27,9 +28,11 @@ const Information = ({
       intro,
       references = [],
       title = "",
+      questionnaire = "",
     },
     relatedItems,
-  } = { _source: {} },
+    slug,
+  } = { _source: {}, slug: "" },
 }: EditorialContentDataWrapper) => {
   let editorialContent = contents?.map(({ name, references = [], blocks }) => {
     return (
@@ -83,6 +86,15 @@ const Information = ({
         relatedItems={relatedItems}
         title={title}
       >
+        {questionnaire && (
+          <SlugSummaryWrapper>
+            <QuestionnaireWrapper
+              name={questionnaire}
+              slug={slug}
+              title="Votre situation"
+            ></QuestionnaireWrapper>
+          </SlugSummaryWrapper>
+        )}
         {sectionTitleStyleWrapper}
         {references.map(
           ({ label, links }) =>
@@ -127,6 +139,7 @@ Information.getInitialProps = async ({ query: { slug }, asPath }) => {
   const information = {
     ...contentBySlug,
     _source: { ...contentBySlug._source, contents },
+    slug,
   };
 
   return { anchor, information };
@@ -166,4 +179,8 @@ const GlobalStylesWrapper = styled.div`
       margin-top: ${spacings.small};
     }
   }
+`;
+
+const SlugSummaryWrapper = styled.div`
+  margin-bottom: 29px;
 `;

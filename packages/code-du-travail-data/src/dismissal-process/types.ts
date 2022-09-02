@@ -5,11 +5,12 @@ export type QuestionnaireResponse = {
   slug?: string;
   statement?: string;
   question?: QuestionnaireQuestion;
+  isSlugReference?: boolean;
 };
 
 export type QuestionnaireQuestion = {
   text: string;
-  statement?: string;
+  responseStatement?: string;
   info?: string;
   description?: string;
   responses: QuestionnaireResponse[];
