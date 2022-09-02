@@ -13,7 +13,7 @@ export default function Agreement1516() {
     errorHasReceivedSalaries,
     initSalaryPeriods,
   } = useIndemniteLicenciementStore((state) => ({
-    salaryPeriods: state.agreement1516Data.input.salaryPeriods,
+    salaryPeriods: state.agreement1516Data.input.salaryPeriods ?? [],
     onSalariesChange: state.agreement1516Function.onSalariesChange,
     errorSalaryPeriods: state.agreement1516Data.error.errorSalaryPeriods,
     hasReceivedSalaries: state.agreement1516Data.input.hasReceivedSalaries,

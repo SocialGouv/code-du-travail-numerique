@@ -29,7 +29,7 @@ const getAgreementReferenceSalary = (
         SupportedCcIndemniteLicenciement.IDCC1516
       );
       return sReference.computeReferenceSalary({
-        salairesPendantPreavis: ccInput.salaryPeriods,
+        salairesPendantPreavis: ccInput.salaryPeriods ?? [],
         salaires: salaries,
       });
     }
@@ -39,6 +39,17 @@ const getAgreementReferenceSalary = (
       );
       return sReference.computeReferenceSalary({
         salaires: salaries,
+      });
+    }
+    case SupportedCcIndemniteLicenciement.IDCC1527 === idcc: {
+      const ccInput = get().agreement1527Data.input;
+      const sReference = new ReferenceSalaryFactory().create(
+        SupportedCcIndemniteLicenciement.IDCC1527
+      );
+      return sReference.computeReferenceSalary({
+        salaires: salaries,
+        isContract: ccInput.hasContractSalary === "oui",
+        salaryContract: Number(ccInput.contractSalary),
       });
     }
     default: {

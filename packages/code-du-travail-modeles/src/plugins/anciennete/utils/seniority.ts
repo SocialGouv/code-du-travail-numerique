@@ -2,6 +2,7 @@ import {
   add,
   areIntervalsOverlapping,
   getOverlappingDaysInIntervals,
+  isWithinInterval,
   parse,
   set,
   sub,
@@ -58,6 +59,49 @@ export const accumulateAbsenceByYear = (
       year: year.begin.getFullYear(),
     };
   });
+};
+
+export const splitByTwelveMonthsRolling = (absences: Absence[]) =>
+  splitByTwelveMonthsRollingRec([...absences]);
+
+const splitByTwelveMonthsRollingRec = (
+  absences: Absence[],
+  currentYear: YearDetail | undefined = undefined,
+  acc: YearDetail[] = []
+): YearDetail[] => {
+  if (absences.length === 0) {
+    return acc;
+  }
+  if (currentYear === undefined) {
+    const absence = absences.shift();
+    if (!absence || !absence.startedAt) {
+      return splitByTwelveMonthsRollingRec(absences, currentYear, acc);
+    }
+    const absenceDate = parse(absence.startedAt, "dd/MM/yyyy", new Date());
+    const year: YearDetail = {
+      begin: absenceDate,
+      end: sub(add(absenceDate, { months: 12 }), { days: 1 }),
+    };
+    return splitByTwelveMonthsRollingRec(absences, year, acc.concat(year));
+  }
+  const absence = absences.shift();
+  if (!absence || !absence.startedAt) {
+    return splitByTwelveMonthsRollingRec(absences, currentYear, acc);
+  }
+  const startedAt = parse(absence.startedAt, "dd/MM/yyyy", new Date());
+  if (
+    isWithinInterval(startedAt, {
+      end: currentYear.end,
+      start: currentYear.begin,
+    })
+  ) {
+    return splitByTwelveMonthsRollingRec(absences, currentYear, acc);
+  }
+  const year: YearDetail = {
+    begin: startedAt,
+    end: sub(add(startedAt, { months: 12 }), { days: 1 }),
+  };
+  return splitByTwelveMonthsRollingRec(absences, year, acc.concat(year));
 };
 
 const DAYS_IN_ONE_MONTH = 30;

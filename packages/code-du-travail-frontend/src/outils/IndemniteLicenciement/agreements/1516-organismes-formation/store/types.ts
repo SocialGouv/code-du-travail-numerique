@@ -4,7 +4,7 @@ import { StepData } from "../../../store";
 
 export type Agreement1516StoreInput = {
   hasReceivedSalaries?: OuiNon;
-  salaryPeriods: SalaryPeriods[];
+  salaryPeriods?: SalaryPeriods[];
 };
 
 export type Agreement1516StoreError = {
