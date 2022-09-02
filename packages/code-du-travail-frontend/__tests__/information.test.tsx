@@ -11,6 +11,7 @@ const mockedProps: EditorialContentDataWrapper = {
       breadcrumbs: [],
       contents: [],
     },
+    slug: "",
   },
 };
 
