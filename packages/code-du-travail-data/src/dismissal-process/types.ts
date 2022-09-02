@@ -10,7 +10,7 @@ export type QuestionnaireResponse = {
 
 export type QuestionnaireQuestion = {
   text: string;
-  statement?: string;
+  responseStatement?: string;
   info?: string;
   description?: string;
   responses: QuestionnaireResponse[];

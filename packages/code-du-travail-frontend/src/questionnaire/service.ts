@@ -28,7 +28,7 @@ export const getResponseStatement = (
   responseIndex: number
 ): string => {
   const { statement, text } = question.responses[responseIndex];
-  return statement ?? `${question.statement} ${text.toLowerCase()}`;
+  return statement ?? `${question.responseStatement} ${text.toLowerCase()}`;
 };
 
 export const slugSummaryRecursive = (

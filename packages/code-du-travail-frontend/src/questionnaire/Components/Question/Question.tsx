@@ -1,15 +1,11 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import { Button, Section, ArrowLink, icons } from "@socialgouv/cdtn-ui";
 import { useStore } from "../../store";
 import { Response } from "./Response";
 import { Tooltip } from "../../../common/Tooltip";
-
-const { DirectionRight } = icons;
+import { ShowInfo } from "./ShowInfo";
 
 export const Question = () => {
-  const router = useRouter();
   const currentQuestion = useStore((state) => state.currentQuestion);
   const lastResponse = useStore((state) => state.lastResponse);
   const [openedTooltip, setOpenedTooltip] = useState(false);
@@ -17,17 +13,7 @@ export const Question = () => {
     setOpenedTooltip(false);
   }, [currentQuestion]);
   return lastResponse?.slug ? (
-    <ButtonSection>
-      <Button
-        variant="primary"
-        onClick={() => router.push(`/information/${lastResponse?.slug}`)}
-      >
-        Afficher les informations personnalisées
-        <ArrowWrapper>
-          <DirectionRight />
-        </ArrowWrapper>
-      </Button>
-    </ButtonSection>
+    <ShowInfo slug={lastResponse.slug}></ShowInfo>
   ) : (
     <QuestionWrapper>
       <QuestionHeaderWrapper>
@@ -90,16 +76,4 @@ const InformationWrapper = styled.div`
   padding: 13px 20px;
   font-size: 14px;
   margin: 11px 5px;
-`;
-
-const ButtonSection = styled(Section)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const ArrowWrapper = styled.div`
-  width: 28px;
-  height: 15px;
-  margin-left: 13px;
 `;

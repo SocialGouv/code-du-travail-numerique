@@ -1,6 +1,6 @@
 {
     "text": "Vous êtes :",
-    "statement": "Vous êtes",
+    "responseStatement": "Vous êtes",
     "description": "Les informations données sont identiques quel que soit votre profil.\nSeule la formulation des questions peut être différente afin de vous guider au mieux dans ce parcours.",
     "responses": [
         {
@@ -8,14 +8,14 @@
             "description": "Vous faites l'objet d'une procédure de licenciement",
             "question": {
                 "text": "Par quel type de licenciement êtes-vous concerné ?",
-                "statement": "Vous êtes concerné par",
+                "responseStatement": "Vous êtes concerné par",
                 "responses": [
                     {
                         "text": "Un licenciement pour motif personnel",
                         "info": "Licenciement dont le motif est lié à votre personne. Par exemple : faute, inaptitude constatée par le médecin du travail, insuffisance professionnelle...",
                         "question": {
                             "text": "Quel est le motif de ce licenciement ?",
-                            "statement": "Le motif de ce licenciement est",
+                            "responseStatement": "Le motif de ce licenciement est",
                             "responses": [
                                 {
                                     "text": "Une faute qui vous est reprochée",
@@ -45,14 +45,14 @@
                         "info": "Licenciement dont le motif n’est pas lié à votre personne mais à l’activité économique de l’entreprise. Par exemple : difficultés économiques, réorganisation de l’entreprise, cessation d’activité de l’entreprise...",
                         "question": {
                             "text": "Combien de personnes sont concernées par ce licenciement ?",
-                            "statement": "Le nombre de personnes concernées par ce licenciement est",
+                            "responseStatement": "Le nombre de personnes concernées par ce licenciement est",
                             "responses": [
                                 {
                                     "text": "Seulement vous",
                                     "statement": "Seulement vous êtes concerné par ce licenciement",
                                     "question": {
                                         "text": "Votre entreprise emploie :",
-                                        "statement": "Votre entreprise emploie",
+                                        "responseStatement": "Votre entreprise emploie",
                                         "responses": [
                                             {
                                                 "text": "Moins de 1000 salariés",
@@ -95,7 +95,7 @@
                                                 "statement": "Votre entreprise dispose d'un CSE",
                                                 "question": {
                                                     "text": "Votre entreprise emploie :",
-                                                    "statement": "Votre entreprise emploie",
+                                                    "responseStatement": "Votre entreprise emploie",
                                                     "responses": [
                                                         {
                                                             "text": "Moins de 1000 salariés",
@@ -131,7 +131,7 @@
                                                 "statement": "Votre entreprise ne dispose pas d'un CSE",
                                                 "question": {
                                                     "text": "Votre entreprise emploie :",
-                                                    "statement": "Votre entreprise emploie",
+                                                    "responseStatement": "Votre entreprise emploie",
                                                     "responses": [
                                                         {
                                                             "text": "Moins de 1000 salariés",
@@ -170,7 +170,7 @@
                                     "description": "vous inclus",
                                     "question": {
                                         "text": "Votre entreprise dispose-t-elle d’un Comité Social et Economique (CSE) ?",
-                                        "statement": "Votre entreprise dispose d'un Comité Social et Economique (CSE) :",
+                                        "responseStatement": "Votre entreprise dispose d'un Comité Social et Economique (CSE) :",
                                         "info": "Le CSE est une instance unique chargée de représenter le personnel dans une entreprise. Elle remplace les anciennes instances représentatives du personnel dans l’entreprise qui étaient les délégués du personnel, le comité d’entreprise et le CHSCT. Sa mise en place est obligatoire dans les entreprises dont l’effectif atteint 11 salariés pendant 12 mois consécutifs.",
                                         "responses": [
                                             {
@@ -178,7 +178,7 @@
                                                 "statement": "Votre entreprise dispose d'un CSE",
                                                 "question": {
                                                     "text": "Votre entreprise emploie :",
-                                                    "statement": "Votre entreprise emploie",
+                                                    "responseStatement": "Votre entreprise emploie",
                                                     "responses": [
                                                         {
                                                             "text": "Moins de 50 salariés",
@@ -235,7 +235,7 @@
                                                 "statement": "Votre entreprise ne dispose pas d'un CSE",
                                                 "question": {
                                                     "text": "Votre entreprise emploie :",
-                                                    "statement": "Votre entreprise emploie",
+                                                    "responseStatement": "Votre entreprise emploie",
                                                     "responses": [
                                                         {
                                                             "text": "Moins de 50 salariés",
@@ -308,14 +308,14 @@
             "description": "vous licenciez un ou plusieurs salariés",
             "question": {
                 "text": "Par quel type de licenciement êtes-vous concerné ?",
-                "statement": "Vous êtes concerné par",
+                "responseStatement": "Vous êtes concerné par",
                 "responses": [
                     {
                         "text": "Un licenciement pour motif personnel",
                         "info": "Licenciement dont le motif est lié à votre personne. Par exemple : faute, inaptitude constatée par le médecin du travail, insuffisance professionnelle...",
                         "question": {
                             "text": "Quel est le motif de ce licenciement ?",
-                            "statement": "Le motif de ce licenciement est",
+                            "responseStatement": "Le motif de ce licenciement est",
                             "responses": [
                                 {
                                     "text": "Une faute qui est reprochée au salarié",
@@ -342,13 +342,13 @@
                         "info": "Licenciement dont le motif n’est pas lié à votre personne mais à l’activité économique de l’entreprise. Par exemple : difficultés économiques, réorganisation de l’entreprise, cessation d’activité de l’entreprise...",
                         "question": {
                             "text": "Combien de personnes sont concernées par ce licenciement ?",
-                            "statement": "Le nombre de personnes concernées par ce licenciement est",
+                            "responseStatement": "Le nombre de personnes concernées par ce licenciement est",
                             "responses": [
                                 {
                                     "text": "1 seul salarié",
                                     "question": {
                                         "text": "Votre entreprise emploie :",
-                                        "statement": "Votre entreprise emploie",
+                                        "responseStatement": "Votre entreprise emploie",
                                         "responses": [
                                             {
                                                 "text": "Moins de 1000 salariés",
@@ -380,7 +380,7 @@
                                     "text": "Entre 2 et 9 salariés",
                                     "question": {
                                         "text": "Votre entreprise dispose-t-elle d’un Comité Social et Economique (CSE) ?",
-                                        "statement": "Votre entreprise dispose d'un Comité Social et Economique (CSE) :",
+                                        "responseStatement": "Votre entreprise dispose d'un Comité Social et Economique (CSE) :",
                                         "info": "Le CSE est une instance unique chargée de représenter le personnel dans une entreprise. Elle remplace les anciennes instances représentatives du personnel dans l’entreprise qui étaient les délégués du personnel, le comité d’entreprise et le CHSCT. Sa mise en place est obligatoire dans les entreprises dont l’effectif atteint 11 salariés pendant 12 mois consécutifs.",
                                         "responses": [
                                             {
@@ -388,7 +388,7 @@
                                                 "statement": "Votre entreprise dispose d'un CSE",
                                                 "question": {
                                                     "text": "Votre entreprise emploie :",
-                                                    "statement": "Votre entreprise emploie",
+                                                    "responseStatement": "Votre entreprise emploie",
                                                     "responses": [
                                                         {
                                                             "text": "Moins de 1000 salariés",
@@ -421,7 +421,7 @@
                                                 "statement": "Votre entreprise ne dispose pas d'un CSE",
                                                 "question": {
                                                     "text": "Votre entreprise emploie :",
-                                                    "statement": "Votre entreprise emploie",
+                                                    "responseStatement": "Votre entreprise emploie",
                                                     "responses": [
                                                         {
                                                             "text": "Moins de 1000 salariés",
@@ -456,7 +456,7 @@
                                     "text": "Au minimum 10 salariés",
                                     "question": {
                                         "text": "Votre entreprise dispose-t-elle d’un Comité Social et Economique (CSE) ?",
-                                        "statement": "Votre entreprise dispose d'un Comité Social et Economique (CSE) :",
+                                        "responseStatement": "Votre entreprise dispose d'un Comité Social et Economique (CSE) :",
                                         "info": "Le CSE est une instance unique chargée de représenter le personnel dans une entreprise. Elle remplace les anciennes instances représentatives du personnel dans l’entreprise qui étaient les délégués du personnel, le comité d’entreprise et le CHSCT. Sa mise en place est obligatoire dans les entreprises dont l’effectif atteint 11 salariés pendant 12 mois consécutifs.",
                                         "responses": [
                                             {
@@ -464,7 +464,7 @@
                                                 "statement": "Votre entreprise dispose d'un CSE",
                                                 "question": {
                                                     "text": "Votre entreprise emploie :",
-                                                    "statement": "Votre entreprise emploie",
+                                                    "responseStatement": "Votre entreprise emploie",
                                                     "responses": [
                                                         {
                                                             "text": "Moins de 50 salariés",
@@ -516,7 +516,7 @@
                                                 "statement": "Votre entreprise ne dispose pas d'un CSE",
                                                 "question": {
                                                     "text": "Votre entreprise emploie :",
-                                                    "statement": "Votre entreprise emploie",
+                                                    "responseStatement": "Votre entreprise emploie",
                                                     "responses": [
                                                         {
                                                             "text": "Moins de 50 salariés",

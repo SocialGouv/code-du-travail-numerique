@@ -6,5 +6,5 @@ export const responseMock = (index: number): QuestionnaireResponse => ({
 export const questionMock = (index: number): QuestionnaireQuestion => ({
   text: `Question${index}`,
   responses: [],
-  statement: `statement${index}`,
+  responseStatement: `statement${index}`,
 });

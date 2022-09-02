@@ -31,7 +31,8 @@ const Information = ({
       questionnaire = "",
     },
     relatedItems,
-  } = { _source: {} },
+    slug,
+  } = { _source: {}, slug: "" },
 }: EditorialContentDataWrapper) => {
   let editorialContent = contents?.map(({ name, references = [], blocks }) => {
     return (
@@ -89,7 +90,7 @@ const Information = ({
           <SlugSummaryWrapper>
             <QuestionnaireWrapper
               name={questionnaire}
-              slug="licenciement-pour-motif-personnel-non-disciplinaire"
+              slug={slug}
               title="Votre situation"
             ></QuestionnaireWrapper>
           </SlugSummaryWrapper>
@@ -138,6 +139,7 @@ Information.getInitialProps = async ({ query: { slug }, asPath }) => {
   const information = {
     ...contentBySlug,
     _source: { ...contentBySlug._source, contents },
+    slug,
   };
 
   return { anchor, information };

@@ -73,6 +73,7 @@ export type EditorialContent = {
 export type EditorialContentData = {
   _source: Partial<EditorialContent>;
   relatedItems?: string[];
+  slug: string;
 };
 
 export type EditorialContentDataWrapper = {
