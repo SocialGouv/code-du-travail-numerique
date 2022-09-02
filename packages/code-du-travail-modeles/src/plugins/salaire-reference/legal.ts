@@ -39,6 +39,8 @@ export class ReferenceSalaryLegal
       sum(primeValues) / 12 +
       (sum(salaryValues.slice(0, 3)) - sum(primeValues)) / 3;
 
-    return Math.max(moyenneSalaires, moyenne3DerniersMoisSalaires);
+    const max = Math.max(moyenneSalaires, moyenne3DerniersMoisSalaires);
+
+    return isNaN(max) ? 0 : max;
   }
 }
