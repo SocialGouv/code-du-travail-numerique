@@ -1,5 +1,6 @@
 import { SupportedCcIndemniteLicenciement } from "../types";
 import { Seniority1090 } from "./1090_automobiles";
+import { Seniority1486 } from "./1486_bureaux_etudes_techniques";
 import { Seniority2941 } from "./2941_aide_accompagnement_soins_services_domicile";
 import { SeniorityLegal } from "./legal";
 import { getMotifs } from "./motifs";
@@ -27,6 +28,10 @@ export class SeniorityFactory {
       case SupportedCcIndemniteLicenciement.IDCC2941:
         return new Seniority2941(
           getMotifs(SupportedCcIndemniteLicenciement.IDCC2941)
+        ) as ISeniority<T>;
+      case SupportedCcIndemniteLicenciement.IDCC1486:
+        return new Seniority1486(
+          getMotifs(SupportedCcIndemniteLicenciement.default)
         ) as ISeniority<T>;
       case SupportedCcIndemniteLicenciement.default:
       default:
