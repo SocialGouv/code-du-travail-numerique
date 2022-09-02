@@ -22,7 +22,7 @@
       "question": "Le salarié fait-il partie des personnels de conduite du transport de voyageurs ?"
     },
     {
-      "name": "fait partie des personnels de transports",
+      "name": "personnels des entreprises de transport routier de marchandises",
       "question": "Le salarié fait-il partie des personnels de transport routier de marchandises ou d'activités auxiliaires du transport ?"
     },
     {
@@ -165,7 +165,7 @@
       "criteria": {
         "catégorie professionnelle": "4| Ouvriers",
         "personnel de conduite": "2| Non",
-        "fait partie des personnels de transports": "1| Oui"
+        "personnels des entreprises de transport routier de marchandises": "1| Oui"
       },
       "type": "préavis de Démission",
       "idcc": 16,
@@ -180,7 +180,7 @@
       "criteria": {
         "catégorie professionnelle": "4| Ouvriers",
         "personnel de conduite": "2| Non",
-        "fait partie des personnels de transports": "1| Non"
+        "personnels des entreprises de transport routier de marchandises": "1| Non"
       },
       "type": "préavis de Démission",
       "idcc": 16,
