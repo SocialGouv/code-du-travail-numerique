@@ -141,7 +141,7 @@ const StepSalaires = () => {
                           Une prime ou gratification librement versée par
                           l’employeur
                         </strong>{" "}
-                        à une catégorie de salariés et/ou à l’occasion d’une
+                        à une catégorie de salariés et/ou à l’occasion d’un
                         évènement unique (exemple : prime exceptionnelle de
                         pouvoir d’achat)
                       </li>

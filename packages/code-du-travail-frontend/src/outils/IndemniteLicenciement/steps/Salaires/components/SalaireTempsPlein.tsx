@@ -91,7 +91,7 @@ export const SalaireTempsPlein = ({
           <tr>
             <Th>Mois</Th>
             <Th>Salaire mensuel brut</Th>
-            <Th>Dont primes exceptionnelles</Th>
+            <Th>Dont primes</Th>
           </tr>
         </thead>
         <tbody>
