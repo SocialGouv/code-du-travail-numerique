@@ -1,9 +1,9 @@
 import { useIndemniteLicenciementStore } from "../../store";
 
 export default function Agreement1527Informations() {
-  const { hasContractSalary, contractSalary } = useIndemniteLicenciementStore(
+  const { hasCommission, contractSalary } = useIndemniteLicenciementStore(
     (state) => ({
-      hasContractSalary: state.agreement1527Data.input.hasContractSalary,
+      hasCommission: state.agreement1527Data.input.hasCommission,
       contractSalary: state.agreement1527Data.input.contractSalary,
     })
   );
@@ -11,13 +11,12 @@ export default function Agreement1527Informations() {
   return (
     <>
       <li>
-        Les commissions constituent un élément contractuel de rémunération
-        &nbsp;:&nbsp;{hasContractSalary === "oui" ? "Oui" : "Non"}
+        Le salarié perçoit-il des commissions &nbsp;:&nbsp;
+        {hasCommission === "oui" ? "Oui" : "Non"}
       </li>
-      {hasContractSalary === "oui" && (
+      {hasCommission === "non" && (
         <li>
-          Salaire global brut mensuel contractuel dont les commissions
-          constituent un élément contractuel de rémunération &nbsp;:&nbsp;
+          Montant du salaire mensuel brut indiqué dans le contrat &nbsp;:&nbsp;
           {contractSalary} €
         </li>
       )}

@@ -2,12 +2,12 @@ import { OuiNon } from "../../../common";
 import { StepData } from "../../../store";
 
 export type Agreement1527StoreInput = {
-  hasContractSalary?: OuiNon;
+  hasCommission?: OuiNon;
   contractSalary?: string;
 };
 
 export type Agreement1527StoreError = {
-  errorHasContractSalary?: string;
+  errorHasCommission?: string;
   errorContractSalary?: string;
 };
 
@@ -18,7 +18,7 @@ export type Agreement1527StoreData = StepData<
 
 export type Agreement1527StoreFn = {
   onChangeContractSalary: (value: string) => void;
-  onChangeHasContractSalary: (value: OuiNon) => void;
+  onChangeHasCommission: (value: OuiNon) => void;
 };
 
 export type Agreement1527StoreSlice = {

@@ -48,7 +48,7 @@ const getAgreementReferenceSalary = (
       );
       return sReference.computeReferenceSalary({
         salaires: salaries,
-        isContract: ccInput.hasContractSalary === "oui",
+        hasCommission: ccInput.hasCommission === "oui",
         salaryContract: Number(ccInput.contractSalary),
       });
     }

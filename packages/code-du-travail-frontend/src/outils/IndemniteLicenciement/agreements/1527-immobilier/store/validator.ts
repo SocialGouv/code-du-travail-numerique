@@ -31,10 +31,10 @@ export const validateStep = (state: Agreement1527StoreInput) => {
   let errorState: Agreement1527StoreError = {};
   errorState = {
     errorContractSalary:
-      state.hasContractSalary === "oui" && !state.contractSalary
+      state.hasCommission === "non" && !state.contractSalary
         ? "Vous devez renseigner votre salaire brute mensuel contractuel"
         : undefined,
-    errorHasContractSalary: !state.hasContractSalary
+    errorHasCommission: !state.hasCommission
       ? "Vous devez répondre à cette question"
       : undefined,
   };

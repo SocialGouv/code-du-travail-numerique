@@ -23,8 +23,8 @@ export const createAgreement1527StoreSalaires: StoreSlice<
 > = (set, get) => ({
   agreement1527Data: { ...initialState },
   agreement1527Function: {
-    onChangeHasContractSalary: (value) => {
-      applyGenericValidation(get, set, "hasContractSalary", value);
+    onChangeHasCommission: (value) => {
+      applyGenericValidation(get, set, "hasCommission", value);
     },
     onChangeContractSalary: (value) => {
       applyGenericValidation(get, set, "contractSalary", value);

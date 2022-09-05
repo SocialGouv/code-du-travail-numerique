@@ -3,7 +3,7 @@ import type { IReferenceSalary, ReferenceSalaryProps } from "./types";
 
 export type CC1527ReferenceSalaryProps = {
   salaires: SalaryPeriods[];
-  isContract: boolean;
+  hasCommission: boolean;
   salaryContract?: number;
 };
 
@@ -20,10 +20,10 @@ export class ReferenceSalary1527
    **/
   computeReferenceSalary({
     salaires = [],
-    isContract = false,
+    hasCommission = false,
     salaryContract = undefined,
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC1527>): number {
-    if (isContract && salaryContract) {
+    if (!hasCommission && salaryContract) {
       return salaryContract;
     }
     const totalSalaries = salaires.reduce(

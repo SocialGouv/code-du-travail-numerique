@@ -55,16 +55,16 @@ describe("Calcul du salaire pour la CC 1527", () => {
   const ReferenceSalary = new ReferenceSalary1527();
 
   test.each`
-    salaries     | isContract | salaryContract | expectedResult
-    ${[]}        | ${false}   | ${undefined}   | ${0}
-    ${salaries1} | ${false}   | ${undefined}   | ${1911.076923076923}
-    ${salaries1} | ${true}    | ${1990}        | ${1990}
+    salaries     | hasCommission | salaryContract | expectedResult
+    ${[]}        | ${true}       | ${undefined}   | ${0}
+    ${salaries1} | ${true}       | ${undefined}   | ${1911.076923076923}
+    ${salaries1} | ${false}      | ${1990}        | ${1990}
   `(
     "Salaires : $salaries => $expectedResult €",
-    ({ salaries, isContract, salaryContract, expectedResult }) => {
+    ({ salaries, hasCommission, salaryContract, expectedResult }) => {
       expect(
         ReferenceSalary.computeReferenceSalary({
-          isContract,
+          hasCommission,
           salaires: salaries,
           salaryContract,
         })

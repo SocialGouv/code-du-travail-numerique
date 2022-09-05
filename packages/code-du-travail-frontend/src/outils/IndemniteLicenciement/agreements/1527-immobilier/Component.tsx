@@ -5,18 +5,16 @@ import { icons } from "@socialgouv/cdtn-ui";
 
 export default function Agreement1527() {
   const {
-    hasContractSalary,
-    onChangeHasContractSalary,
-    errorHasContractSalary,
+    hasCommission,
+    onChangeHasCommission,
+    errorHasCommission,
     contractSalary,
     onChangeContractSalary,
     errorContractSalary,
   } = useIndemniteLicenciementStore((state) => ({
-    hasContractSalary: state.agreement1527Data.input.hasContractSalary,
-    onChangeHasContractSalary:
-      state.agreement1527Function.onChangeHasContractSalary,
-    errorHasContractSalary:
-      state.agreement1527Data.error.errorHasContractSalary,
+    hasCommission: state.agreement1527Data.input.hasCommission,
+    onChangeHasCommission: state.agreement1527Function.onChangeHasCommission,
+    errorHasCommission: state.agreement1527Data.error.errorHasCommission,
     contractSalary: state.agreement1527Data.input.contractSalary,
     onChangeContractSalary: state.agreement1527Function.onChangeContractSalary,
     errorContractSalary: state.agreement1527Data.error.errorContractSalary,
@@ -38,15 +36,15 @@ export default function Agreement1527() {
           },
         ]}
         name="hasContractSalary"
-        label="Les commissions constituent un élément contractuel de rémunération de votre salaire global brut mensuel ?"
-        selectedOption={hasContractSalary}
-        onChangeSelectedOption={onChangeHasContractSalary}
-        error={errorHasContractSalary}
+        label="Le salarié perçoit-il des commissions ?"
+        selectedOption={hasCommission}
+        onChangeSelectedOption={onChangeHasCommission}
+        error={errorHasCommission}
         showRequired
       />
-      {hasContractSalary === "oui" && (
+      {hasCommission === "non" && (
         <TextQuestion
-          label="Quel a été le montant du salaire mensuel brut indiqué dans votre contrat ?"
+          label="Quel a été le montant du salaire mensuel brut indiqué dans le contrat ?"
           inputType="number"
           value={`${contractSalary}`}
           onChange={onChangeContractSalary}
