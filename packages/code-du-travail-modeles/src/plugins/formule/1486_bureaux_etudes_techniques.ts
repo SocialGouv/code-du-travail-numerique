@@ -33,39 +33,24 @@ export class Formula1486
         seniority,
       });
     } else if (category === CatPro1486.chargeEnquete && seniority >= 2) {
-      formula = `1/2 * Sref * A`;
+      formula = `1/5 * Sref * A`;
+      explanations.push(`A : Ancienneté totale (${round(seniority)} ${year})`);
+      explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
+    } else if (category === CatPro1486.ingeCadre && seniority >= 2) {
+      formula = `1/3 * Sref * A`;
       explanations.push(`A : Ancienneté totale (${round(seniority)} ${year})`);
       explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
     } else if (
-      (category === "Cadres" ||
-        category ===
-          "Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service") &&
-      !seniorityNonCadre &&
-      seniority > 2
+      category === CatPro1486.etam &&
+      seniority >= 2 &&
+      seniority < 20
     ) {
-      formula = `Sref * A`;
+      formula = `0.25 * Sref * A`;
       explanations.push(`A : Ancienneté totale (${round(seniority)} ${year})`);
       explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
-    } else if (
-      (category === "Cadres" ||
-        category ===
-          "Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service") &&
-      seniorityNonCadre &&
-      seniority > 2
-    ) {
-      const anNonCadre = round(seniorityNonCadre) < 2 ? "an" : "ans";
-      formula = `1/2 * Sref * A1 + Sref * A2`;
-      explanations.push(
-        `A1: Année de service en qualité de non-cadre (${round(
-          seniorityNonCadre
-        )} ${anNonCadre})`
-      );
-      const seniorityRemain = round(seniority - seniorityNonCadre);
-      explanations.push(
-        `A2: Année de service en qualité de cadre (${round(
-          seniorityRemain
-        )} ${anNonCadre})`
-      );
+    } else if (category === CatPro1486.etam && seniority >= 20) {
+      formula = `0.30 * Sref * A`;
+      explanations.push(`A : Ancienneté totale (${round(seniority)} ${year})`);
       explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
     }
     return { explanations, formula };

@@ -5,6 +5,7 @@ import {
 } from "@socialgouv/modeles-social";
 import { GetState } from "zustand";
 import { MainStore } from "../../store";
+import { AgreementFormula1486 } from "./1486";
 import { AgreementFormula1597 } from "./1597";
 import { AgreementFormula2264 } from "./2264";
 import { AgreementFormula413 } from "./413";
@@ -30,6 +31,12 @@ const getAgreementFormula = (
       );
     case SupportedCcIndemniteLicenciement.IDCC1597 === idcc:
       return new AgreementFormula1597().computeFormula(
+        agreementSeniority,
+        agreementRefSalary,
+        get
+      );
+    case SupportedCcIndemniteLicenciement.IDCC1486 === idcc:
+      return new AgreementFormula1486().computeFormula(
         agreementSeniority,
         agreementRefSalary,
         get

@@ -1,9 +1,13 @@
 import {
   ReferenceSalaryFactory,
+  SalaryPeriods,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { GetState } from "zustand";
-import { MainStore } from "../store";
+import { MainStore } from "../../store";
+import { AgreementSalary1486 } from "./1486";
+import { AgreementSalary1516 } from "./1516";
+import { AgreementSalary413 } from "./413";
 
 const getAgreementReferenceSalary = (
   idcc: SupportedCcIndemniteLicenciement,
@@ -23,24 +27,12 @@ const getAgreementReferenceSalary = (
   }
 
   switch (true) {
-    case SupportedCcIndemniteLicenciement.IDCC1516 === idcc: {
-      const ccInput = get().agreement1516Data.input;
-      const sReference = new ReferenceSalaryFactory().create(
-        SupportedCcIndemniteLicenciement.IDCC1516
-      );
-      return sReference.computeReferenceSalary({
-        salairesPendantPreavis: ccInput.salaryPeriods,
-        salaires: salaries,
-      });
-    }
-    case SupportedCcIndemniteLicenciement.IDCC413 === idcc: {
-      const sReference = new ReferenceSalaryFactory().create(
-        SupportedCcIndemniteLicenciement.IDCC413
-      );
-      return sReference.computeReferenceSalary({
-        salaires: salaries,
-      });
-    }
+    case SupportedCcIndemniteLicenciement.IDCC1516 === idcc:
+      return new AgreementSalary1516().computeSalary(salaries, get);
+    case SupportedCcIndemniteLicenciement.IDCC413 === idcc:
+      return new AgreementSalary413().computeSalary(salaries, get);
+    case SupportedCcIndemniteLicenciement.IDCC1486 === idcc:
+      return new AgreementSalary1486().computeSalary(salaries, get);
     default: {
       const sReference = new ReferenceSalaryFactory().create(
         SupportedCcIndemniteLicenciement.default
@@ -53,3 +45,10 @@ const getAgreementReferenceSalary = (
 };
 
 export default getAgreementReferenceSalary;
+
+export interface AgreementSalary {
+  computeSalary: (
+    salaryPeriods: SalaryPeriods[],
+    get: GetState<MainStore>
+  ) => number;
+}
