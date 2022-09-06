@@ -50,6 +50,8 @@ const createCommonInformationsStore: StoreSlice<
           mapToPublicodesSituationForIndemniteLicenciementConventionnel(
             agreement.num,
             0,
+            0,
+            0,
             0
           ),
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
@@ -113,6 +115,8 @@ const createCommonInformationsStore: StoreSlice<
         missingArgs = publicodes.setSituation(
           mapToPublicodesSituationForIndemniteLicenciementConventionnel(
             agreement.num,
+            0,
+            0,
             0,
             0,
             rules
