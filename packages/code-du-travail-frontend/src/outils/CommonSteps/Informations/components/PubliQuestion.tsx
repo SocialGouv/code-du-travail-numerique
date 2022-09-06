@@ -67,12 +67,12 @@ const PubliQuestion: React.FC<Props> = ({
           questions={[
             {
               label: "Oui",
-              value: `Oui`,
+              value: `'Oui'`,
               id: `oui-${randomId}`,
             },
             {
               label: "Non",
-              value: `Non`,
+              value: `'Non'`,
               id: `non-${randomId}`,
             },
           ]}
