@@ -6,10 +6,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
   titre: Le licenciement fait suite au refus d'une clause de mobilité
   question: Le licenciement fait-il suite au refus d'une clause de mobilité ?
   cdtn:
-    type: liste
-    valeurs:
-      Oui: "'Oui'"
-      Non: "'Non'"
+    type: oui-non
 
 ## TYPE DE LICENCIEMENT : Autre
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres:
