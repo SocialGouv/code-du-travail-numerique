@@ -11,7 +11,7 @@ export default function Agreement1527Informations() {
   return (
     <>
       <li>
-        Le salarié perçoit-il des commissions &nbsp;:&nbsp;
+        Le salarié perçoit des commissions &nbsp;:&nbsp;
         {hasCommission === "oui" ? "Oui" : "Non"}
       </li>
       {hasCommission === "non" && (
