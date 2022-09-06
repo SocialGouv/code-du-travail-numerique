@@ -35,7 +35,8 @@ export const createAgreement1516StoreSalaires: StoreSlice<
     initSalaryPeriods: (withDefaultSalaryPeriod: boolean) => {
       const ancienneteInput = get().ancienneteData.input;
       const defaultSalaryPeriod = get().salairesData.input.salaryPeriods;
-      const agreementSalaryPeriod = get().agreement1516Data.input.salaryPeriods;
+      const agreementSalaryPeriod =
+        get().agreement1516Data.input.salaryPeriods ?? [];
       const periods = computeSalaryPeriods({
         motifs: getMotifs(SupportedCcIndemniteLicenciement.IDCC1516),
         dateEntree: ancienneteInput.dateNotification ?? "",

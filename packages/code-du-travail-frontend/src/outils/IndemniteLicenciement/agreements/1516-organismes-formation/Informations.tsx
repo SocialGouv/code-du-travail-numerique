@@ -7,7 +7,7 @@ import { useIndemniteLicenciementStore } from "../../store";
 export default function Agreement1516Informations() {
   const { salaryPeriods, hasReceivedSalaries } = useIndemniteLicenciementStore(
     (state) => ({
-      salaryPeriods: state.agreement1516Data.input.salaryPeriods,
+      salaryPeriods: state.agreement1516Data.input.salaryPeriods ?? [],
       hasReceivedSalaries: state.agreement1516Data.input.hasReceivedSalaries,
     })
   );
