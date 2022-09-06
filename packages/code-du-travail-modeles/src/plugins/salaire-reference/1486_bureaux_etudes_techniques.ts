@@ -8,8 +8,8 @@ import type {
 } from "./types";
 
 export enum TypeLicenciement1486 {
-  autre = "Autres licenciements",
-  refus = "Licenciement en raison d'un refus de respecter une clause de mobilité",
+  autre = "Non",
+  refus = "Oui",
 }
 
 export enum CatPro1486 {

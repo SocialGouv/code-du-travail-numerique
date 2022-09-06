@@ -3,17 +3,17 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
   valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement:
-  titre: Motif du licenciement
-  question: Quel est le motif du licenciement ?
+  titre: Le licenciement fait suite au refus d'une clause de mobilité
+  question: Le licenciement fait-il suite au refus d'une clause de mobilité ?
   cdtn:
     type: liste
     valeurs:
-      Licenciement en raison d'un refus de respecter une clause de mobilité: "'Licenciement en raison d'un refus de respecter une clause de mobilité'"
-      Autres licenciements: "'Autres licenciements'"
+      Oui: "'Oui'"
+      Non: "'Non'"
 
 ## TYPE DE LICENCIEMENT : Autre
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres:
-  applicable si: type de licenciement = 'Autres licenciements'
+  applicable si: type de licenciement = 'Non'
   valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle:
@@ -134,7 +134,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
 
 ## TYPE DE LICENCIEMENT: Refus
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . refus:
-  applicable si: type de licenciement = 'Licenciement en raison d'un refus de respecter une clause de mobilité'
+  applicable si: type de licenciement = 'Oui'
   valeur: oui
 
 # Formules

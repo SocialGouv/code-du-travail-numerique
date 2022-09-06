@@ -17,7 +17,7 @@ export class AgreementSalary1516 implements AgreementSalary {
       SupportedCcIndemniteLicenciement.IDCC1516
     );
     return sReference.computeReferenceSalary({
-      salairesPendantPreavis: ccInput.salaryPeriods,
+      salairesPendantPreavis: ccInput.salaryPeriods ?? [],
       salaires: salaryPeriods,
     });
   };
