@@ -18,8 +18,10 @@ export const mapToPublicodesSituationForIndemniteLicenciementLegal = (
 
 export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
   ccn: number,
-  seniority: number,
-  salaireRef: number,
+  agreementSeniority: number,
+  agreementSalaireRef: number,
+  legalSeniority: number,
+  legalSalaireRef: number,
   agreementParameters?: Record<string, any>
 ): Record<string, string> => {
   return {
@@ -28,10 +30,14 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
       "contrat salarié . convention collective": `'IDCC${ccn
         .toString()
         .padStart(4, "0")}'`,
+      "contrat salarié . indemnité de licenciement . salaire de référence":
+        formatNumberAsString(legalSalaireRef),
+      "contrat salarié . indemnité de licenciement . ancienneté en année":
+        formatNumberAsString(legalSeniority),
       "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-        formatNumberAsString(seniority),
+        formatNumberAsString(agreementSeniority),
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-        formatNumberAsString(salaireRef),
+        formatNumberAsString(agreementSalaireRef),
       "indemnité de licenciement": "oui",
     },
   };

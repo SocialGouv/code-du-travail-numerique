@@ -141,26 +141,26 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . jusqu'à dix ans ou moins:
   valeur:
     le minimum de:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - contrat salarié . indemnité de licenciement . ancienneté en année
       - 10 an
 
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . au dela de dix ans:
   somme:
-    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - contrat salarié . indemnité de licenciement . ancienneté en année
     - (- 10 an)
   plancher: 0 an
 
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . dix ans ou moins:
   valeur:
     produit:
-      assiette: jusqu'à dix ans ou moins * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      assiette: jusqu'à dix ans ou moins * contrat salarié . indemnité de licenciement . salaire de référence
       facteur: 1 / 4
   unité: €
 
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . plus de dix ans:
   valeur:
     produit:
-      assiette: au dela de dix ans * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      assiette: au dela de dix ans * contrat salarié . indemnité de licenciement . salaire de référence
       facteur: 1 / 3
   unité: €
 
@@ -170,7 +170,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . refus . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 8 mois
+    - si: contrat salarié . indemnité de licenciement . ancienneté en année >= 8 mois
       alors:
         somme:
           - dix ans ou moins

@@ -13,7 +13,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 1486", () => {
     test.each`
       category                    | typeLicenciement              | seniority | salary    | expectedCompensation
       ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.refus} | ${0}      | ${2000}   | ${0}
-      ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.refus} | ${8 / 12} | ${2000}   | ${0}
+      ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.refus} | ${8 / 12} | ${2000}   | ${333.33}
       ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.refus} | ${8}      | ${2000}   | ${4000}
       ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.refus} | ${12}     | ${2000}   | ${6333.33}
       ${CatPro1486.ingeCadre}     | ${TypeLicenciement1486.autre} | ${0}      | ${2000}   | ${0}
@@ -67,6 +67,10 @@ describe("Indemnité conventionnel de licenciement pour la CC 1486", () => {
             "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle": `'${category}'`,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence":
+              salary,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
             "indemnité de licenciement": "oui",
