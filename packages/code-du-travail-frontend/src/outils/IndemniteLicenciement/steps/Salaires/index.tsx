@@ -1,7 +1,7 @@
 import React from "react";
 import { useIndemniteLicenciementStore } from "../../store";
 import { RadioQuestion, TextQuestion } from "../../../Components";
-import { TempsPartiel, SalaireTempsPlein } from "./components";
+import { TempsPartiel, SalaireTempsPlein, TooltipSalary } from "./components";
 import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 import { IndemniteLicenciementStepName } from "../..";
 import { AgreementsInjector } from "../../agreements";
@@ -106,6 +106,9 @@ const StepSalaires = () => {
             <SalaireTempsPlein
               title="Salaires mensuels bruts des 12 derniers mois et primes des 3 derniers mois précédant la notification du licenciement"
               subTitle="Indiquez le montant des salaires (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)              "
+              tooltip={{
+                content: <TooltipSalary />,
+              }}
               onSalariesChange={onSalariesChange}
               salaryPeriods={salaryPeriods}
               error={errorSalaryPeriods}
