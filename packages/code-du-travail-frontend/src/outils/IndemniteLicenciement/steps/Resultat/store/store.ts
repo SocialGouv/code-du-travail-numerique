@@ -6,6 +6,7 @@ import {
   PublicodesIndemniteLicenciementResult,
   References,
   SeniorityFactory,
+  SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { StoreSlice } from "../../../../types";
@@ -28,6 +29,7 @@ import {
 } from "../../../agreements";
 import { MainStore } from "../../../store";
 import { GetState } from "zustand";
+import getAgreementSeniority from "../../../agreements/seniority";
 
 const initialState: ResultStoreData = {
   input: {
@@ -78,14 +80,14 @@ const createResultStore: StoreSlice<
         SupportedCcIndemniteLicenciement.legal
       );
       const legalFormula = formulaFactory.computeFormula({
-        seniority: legalSeniority,
+        seniority: legalSeniority.value,
         isForInaptitude: isLicenciementInaptitude,
         refSalary,
       });
 
       const publicodesSituationLegal = publicodes.setSituation(
         mapToPublicodesSituationForIndemniteLicenciementLegal(
-          legalSeniority,
+          legalSeniority.value,
           refSalary,
           isLicenciementInaptitude
         )
@@ -94,7 +96,7 @@ const createResultStore: StoreSlice<
       const legalReferences = publicodes.getReferences();
 
       let publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult;
-      let agreementSeniority: number;
+      let agreementSeniority: SeniorityResult;
       let agreementRefSalary: number;
       let agreementReferences: References[];
       let agreementFormula: Formula;
@@ -104,9 +106,6 @@ const createResultStore: StoreSlice<
       let agreementHasNoLegalIndemnity: boolean;
 
       if (agreement) {
-        const factory = new SeniorityFactory().create(
-          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
-        );
         const infos = get()
           .informationsData.input.publicodesInformations.map((v) => ({
             [v.question.rule.nom]: v.info,
@@ -129,11 +128,10 @@ const createResultStore: StoreSlice<
           )
           .filter((v) => v !== "") as AgreementInformation[];
 
-        agreementSeniority = factory.computeSeniority({
-          dateEntree: get().ancienneteData.input.dateEntree!,
-          dateSortie: get().ancienneteData.input.dateSortie!,
-          absencePeriods: get().ancienneteData.input.absencePeriods,
-        });
+        agreementSeniority = getAgreementSeniority(
+          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+          get as GetState<MainStore>
+        );
 
         publicodesSituationConventionnel = publicodes.setSituation(
           mapToPublicodesSituationForIndemniteLicenciementConventionnel(
@@ -153,7 +151,7 @@ const createResultStore: StoreSlice<
 
         agreementFormula = getAgreementFormula(
           `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
-          agreementSeniority,
+          agreementSeniority.value,
           agreementRefSalary,
           get as GetState<MainStore>
         );
@@ -175,7 +173,7 @@ const createResultStore: StoreSlice<
 
       set(
         produce((state: ResultStoreSlice) => {
-          state.resultData.input.legalSeniority = legalSeniority;
+          state.resultData.input.legalSeniority = legalSeniority.value;
           state.resultData.input.legalFormula = legalFormula;
           state.resultData.input.legalReferences = legalReferences;
           state.resultData.input.publicodesLegalResult =

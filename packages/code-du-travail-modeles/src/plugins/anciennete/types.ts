@@ -16,13 +16,18 @@ export type Motif = {
 };
 
 export interface ISeniority<T extends SupportedCcIndemniteLicenciement> {
-  computeSeniority: (args: SeniorityProps<T>) => number;
+  computeSeniority: (args: SeniorityProps<T>) => SeniorityResult;
 }
 
 export type SeniorityProps<T> =
   T extends SupportedCcIndemniteLicenciement.IDCC2511
     ? LegalSeniorityProps
     : LegalSeniorityProps;
+
+export type SeniorityResult = {
+  value: number;
+  extraInfos?: Record<string, number>;
+};
 
 export const DISABLE_ABSENCE = [
   "IDCC1090",
