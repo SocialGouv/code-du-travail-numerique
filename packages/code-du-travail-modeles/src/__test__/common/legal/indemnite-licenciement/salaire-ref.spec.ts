@@ -7,6 +7,15 @@ describe("computeReferenceSalary", () => {
   const referenceSalary = new ReferenceSalaryFactory().create(
     SupportedCcIndemniteLicenciement.default
   );
+
+  it("should compute reference salary for no values", () => {
+    expect(
+      referenceSalary.computeReferenceSalary({
+        salaires: [],
+      })
+    ).toEqual(0);
+  });
+
   it("should compute reference salary for a basic use case", () => {
     expect(
       referenceSalary.computeReferenceSalary({

@@ -137,6 +137,8 @@ const createResultStore: StoreSlice<
             agreement.num,
             agreementSeniority,
             agreementRefSalary,
+            legalSeniority,
+            refSalary,
             infos
           ),
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
