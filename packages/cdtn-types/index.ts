@@ -67,7 +67,7 @@ export type EditorialContent = {
   title: string;
   title_vector?: number[];
   icon?: string;
-  questionnaire?: string;
+  dismissalProcess?: boolean;
 };
 
 export type EditorialContentData = {

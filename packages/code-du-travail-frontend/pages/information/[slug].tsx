@@ -28,7 +28,7 @@ const Information = ({
       intro,
       references = [],
       title = "",
-      questionnaire = "",
+      dismissalProcess = false,
     },
     relatedItems,
     slug,
@@ -86,10 +86,10 @@ const Information = ({
         relatedItems={relatedItems}
         title={title}
       >
-        {questionnaire && (
+        {dismissalProcess && (
           <SlugSummaryWrapper>
             <QuestionnaireWrapper
-              name={questionnaire}
+              name="dismissalProcess"
               slug={slug}
               title="Votre situation"
             ></QuestionnaireWrapper>
