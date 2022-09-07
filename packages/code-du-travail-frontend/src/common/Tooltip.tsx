@@ -20,9 +20,9 @@ export const Tooltip = ({ onChange }) => {
       }}
     >
       {hovered || opened ? (
-        <OpenedTooltip></OpenedTooltip>
+        <OpenedTooltipIcon aria-label="?"></OpenedTooltipIcon>
       ) : (
-        <HelpIcon></HelpIcon>
+        <TooltipIcon aria-label="?"></TooltipIcon>
       )}
     </TooltipWrapper>
   );
@@ -35,6 +35,14 @@ const TooltipWrapper = styled.div`
   justify-content: center;
 `;
 
-const OpenedTooltip = styled(HelpIcon)`
+const OpenedTooltipIcon = styled(HelpIcon)`
   color: #ff7067;
+  margin-top: 2px;
+  padding: 2px;
+`;
+
+const TooltipIcon = styled(HelpIcon)`
+  color: #7598d6;
+  margin-top: 2px;
+  padding: 2px;
 `;

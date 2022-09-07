@@ -5,7 +5,7 @@ import { QuestionnaireWrapper, Summary, Question } from "../../questionnaire";
 
 const tool = tools.find(({ slug }) => slug === "procedure-licenciement");
 const subtitle =
-  "Vous souhaitez obtenir des informations concernant une procédure de licenciement ? Afin de vous apporter une réponse précise et adapté, veuillez tout d'abord nous préciser votre situation :";
+  "Vous souhaitez obtenir des informations concernant une procédure de licenciement ? Afin de vous apporter une réponse précise et adaptée, veuillez tout d'abord nous préciser votre situation :";
 
 const DismissalProcess = (): JSX.Element => (
   <Section>
