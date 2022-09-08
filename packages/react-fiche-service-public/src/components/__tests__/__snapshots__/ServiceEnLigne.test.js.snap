@@ -67,6 +67,7 @@ exports[`<ServiceEnLigne /> should render 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  width: 100%;
 }
 
 .c3 {
