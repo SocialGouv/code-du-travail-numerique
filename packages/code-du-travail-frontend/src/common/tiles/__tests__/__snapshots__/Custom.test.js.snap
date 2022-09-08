@@ -158,6 +158,7 @@ exports[`<CallToActionTile /> should render 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  width: 100%;
 }
 
 .c6 {
@@ -209,11 +210,6 @@ exports[`<CallToActionTile /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .c1 h2 {

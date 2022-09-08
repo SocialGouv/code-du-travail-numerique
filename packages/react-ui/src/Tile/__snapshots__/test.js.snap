@@ -87,6 +87,7 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  width: 100%;
 }
 
 .c4 {
@@ -246,6 +247,7 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  width: 100%;
 }
 
 .c3 {
@@ -378,6 +380,7 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  width: 100%;
 }
 
 .c3 {
@@ -526,6 +529,7 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  width: 100%;
 }
 
 .c2 {
@@ -656,6 +660,7 @@ exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  width: 100%;
 }
 
 .c2 {
