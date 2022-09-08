@@ -10,10 +10,10 @@ Fonctionnalité: Outil - Dossier Licenciement
     Soit un utilisateur sur la page "/outils/procedure-licenciement"
 
     Alors je vois "Quelle est votre situation ?"
-    Alors je vois "Salarié (Vous faites l'objet d'une procédure de licenciement)"
-    Alors je vois "Employeur (vous licenciez un ou plusieurs salariés)"
+    Alors je vois "Salarié"
+    Alors je vois "Employeur"
 
-    Quand je clique sur "Salarié (Vous faites l'objet d'une procédure de licenciement)"
+    Quand je clique sur "Salarié"
 
     Alors je vois "Un licenciement pour motif personnel"
     Alors je vois "Un licenciement pour motif économique"
