@@ -160,8 +160,8 @@ const ListLinkSquareTile = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   & > div {
-    width: 280px;
-    height: 290px;
+    width: 284px;
+    height: 318px;
     display: flex;
     margin: 12px auto;
   }

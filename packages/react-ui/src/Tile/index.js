@@ -132,6 +132,7 @@ const IconWrapper = styled.div`
 
 const TopWrapper = styled.div`
   flex: 0 0 auto;
+  width: 100%;
 `;
 
 const HeadingWrapper = styled.div`

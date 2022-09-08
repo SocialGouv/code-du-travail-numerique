@@ -5,7 +5,6 @@
     "responses": [
         {
             "text": "Salarié",
-            "description": "Vous faites l'objet d'une procédure de licenciement",
             "question": {
                 "text": "Par quel type de licenciement êtes-vous concerné ?",
                 "responseStatement": "Vous êtes concerné par",
@@ -26,6 +25,7 @@
                                 },
                                 {
                                     "text": "Une inaptitude constatée par le médecin du travail",
+                                    "statement": "Vous êtes concerné par un licenciement suite à une inaptitude constatée par le médecin du travail",
                                     "slug": "licenciement-personnel-pour-inaptitude",
                                     "isSlugReference": true
                                 },
@@ -85,6 +85,7 @@
                                 },
                                 {
                                     "text": "Entre 2 et 9 salariés",
+                                    "statement": "Entre 2 et 9 salariés sont concernés par ce licenciement",
                                     "description": "vous inclus",
                                     "question": {
                                         "text": "Votre entreprise dispose-t-elle d’un Comité Social et Economique (CSE) ?",
@@ -167,6 +168,7 @@
                                 },
                                 {
                                     "text": "Au minimum 10 salariés",
+                                    "statement": "Au minimum 10 salariés sont concernés par ce licenciement",
                                     "description": "vous inclus",
                                     "question": {
                                         "text": "Votre entreprise dispose-t-elle d’un Comité Social et Economique (CSE) ?",
@@ -202,7 +204,7 @@
                                                             }
                                                         },
                                                         {
-                                                            "text": "Moins de 50 et 999 salariés",
+                                                            "text": "Entre 50 et 999 salariés",
                                                             "question": {
                                                                 "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
                                                                 "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
@@ -259,7 +261,7 @@
                                                             }
                                                         },
                                                         {
-                                                            "text": "Moins de 50 et 999 salariés",
+                                                            "text": "Entre 50 et 999 salariés",
                                                             "question": {
                                                                 "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
                                                                 "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
@@ -305,14 +307,13 @@
         },
         {
             "text": "Employeur",
-            "description": "vous licenciez un ou plusieurs salariés",
             "question": {
                 "text": "Par quel type de licenciement êtes-vous concerné ?",
                 "responseStatement": "Vous êtes concerné par",
                 "responses": [
                     {
                         "text": "Un licenciement pour motif personnel",
-                        "info": "Licenciement dont le motif est lié à votre personne. Par exemple : faute, inaptitude constatée par le médecin du travail, insuffisance professionnelle...",
+                        "info": "Licenciement dont le motif est lié à la personne. Par exemple : faute, inaptitude constatée par le médecin du travail, insuffisance professionnelle...",
                         "question": {
                             "text": "Quel est le motif de ce licenciement ?",
                             "responseStatement": "Le motif de ce licenciement est",
@@ -325,10 +326,11 @@
                                 },
                                 {
                                     "text": "Une inaptitude du salarié constatée par le médecin du travail",
+                                    "statement": "Vous êtes concerné par un licenciement suite à une inaptitude constatée par le médecin du travail",
                                     "slug": "licenciement-personnel-pour-inaptitude"
                                 },
                                 {
-                                    "text": "Vous n'êtes concerné par aucun de ces cas",
+                                    "text": "Aucun de ces cas",
                                     "statement": "Vous êtes concerné par un licenciement pour motif non disciplinaire",
                                     "info": "Le licenciement pour motif non disciplinaire n’est pas fondé sur une faute du salarié. Attention : l’employeur doit toujours justifier d’une cause réelle et sérieuse afin de procéder au licenciement du salarié (ex : insuffisance professionnelle, mésentente, perte de confiance...)",
                                     "description": "motif non disciplinaire",
@@ -339,13 +341,14 @@
                     },
                     {
                         "text": "Un licenciement pour motif économique",
-                        "info": "Licenciement dont le motif n’est pas lié à votre personne mais à l’activité économique de l’entreprise. Par exemple : difficultés économiques, réorganisation de l’entreprise, cessation d’activité de l’entreprise...",
+                        "info": "Licenciement dont le motif n’est pas lié à la personne mais à l’activité économique de l’entreprise. Par exemple : difficultés économiques, réorganisation de l’entreprise, cessation d’activité de l’entreprise...",
                         "question": {
-                            "text": "Combien de personnes sont concernées par ce licenciement ?",
+                            "text": "Combien de salariés sont concernés par ce licenciement ?",
                             "responseStatement": "Le nombre de personnes concernées par ce licenciement est",
                             "responses": [
                                 {
                                     "text": "1 seul salarié",
+                                    "statement": "1 seul salarié est concerné par ce licenciement",
                                     "question": {
                                         "text": "Votre entreprise emploie :",
                                         "responseStatement": "Votre entreprise emploie",
@@ -378,6 +381,7 @@
                                 },
                                 {
                                     "text": "Entre 2 et 9 salariés",
+                                    "statement": "Entre 2 et 9 salariés sont concernés par ce licenciement",
                                     "question": {
                                         "text": "Votre entreprise dispose-t-elle d’un Comité Social et Economique (CSE) ?",
                                         "responseStatement": "Votre entreprise dispose d'un Comité Social et Economique (CSE) :",
@@ -454,6 +458,7 @@
                                 },
                                 {
                                     "text": "Au minimum 10 salariés",
+                                    "statement": "Au minimum 10 salariés sont concernés par ce licenciement",
                                     "question": {
                                         "text": "Votre entreprise dispose-t-elle d’un Comité Social et Economique (CSE) ?",
                                         "responseStatement": "Votre entreprise dispose d'un Comité Social et Economique (CSE) :",
@@ -486,7 +491,7 @@
                                                             }
                                                         },
                                                         {
-                                                            "text": "Moins de 50 et 999 salariés",
+                                                            "text": "Entre 50 et 999 salariés",
                                                             "question": {
                                                                 "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
                                                                 "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
@@ -538,7 +543,7 @@
                                                             }
                                                         },
                                                         {
-                                                            "text": "Moins de 50 et 999 salariés",
+                                                            "text": "Entre 50 et 999 salariés",
                                                             "question": {
                                                                 "text": "Votre entreprise appartient-elle à un groupe européen d’au moins 1000 salariés ?",
                                                                 "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
@@ -572,7 +577,7 @@
                     {
                         "text": "Un licenciement suite à un accord de performance collective",
                         "description": "APC",
-                        "info": "Licenciement déclenché car vous avez refusé qu’un accord de performance collective vous soit appliqué.",
+                        "info": "Licenciement déclenché car le salarié a refusé qu’un accord de performance collective lui soit appliqué.",
                         "slug": "licenciement-suite-a-un-accord-de-performance-collective-apc"
                     }
                 ]
