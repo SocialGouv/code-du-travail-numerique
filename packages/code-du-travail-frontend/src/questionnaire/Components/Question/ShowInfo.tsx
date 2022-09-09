@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Button, Section, icons } from "@socialgouv/cdtn-ui";
+import { pushClickViewPageInfo } from "../../tracking";
 import { useRouter } from "next/router";
 const { DirectionRight } = icons;
 
@@ -9,7 +10,10 @@ export const ShowInfo = ({ slug }: { slug: string }) => {
     <ButtonSection>
       <Button
         variant="primary"
-        onClick={() => router.push(`/information/${slug}`)}
+        onClick={() => {
+          pushClickViewPageInfo("afficher_les_infos_personnalisées");
+          router.push(`/information/${slug}`);
+        }}
       >
         Afficher les informations personnalisées
         <ArrowWrapper>

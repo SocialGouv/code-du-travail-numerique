@@ -4,9 +4,10 @@ import { InputRadio } from "@socialgouv/cdtn-ui";
 import { QuestionnaireResponse } from "@cdt/data";
 import { useStore } from "../../store";
 import { Tooltip } from "../../../common/Tooltip";
+import { pushClickHelp } from "../../tracking";
 
 export const Response = ({
-  response: { text, description, slug, info },
+  response: { text, description, info, name },
   index,
 }: {
   response: QuestionnaireResponse;
@@ -27,7 +28,14 @@ export const Response = ({
         />
         {info && (
           <TooltipWrapper>
-            <Tooltip onChange={setOpenedTooltip}></Tooltip>
+            <Tooltip
+              onChange={(opened) => {
+                setOpenedTooltip(opened);
+                if (opened) {
+                  pushClickHelp(name);
+                }
+              }}
+            ></Tooltip>
           </TooltipWrapper>
         )}
       </ResponseInputWrapper>
