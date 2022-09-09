@@ -4,6 +4,7 @@ import { useStore } from "../../store";
 import { Response } from "./Response";
 import { Tooltip } from "../../../common/Tooltip";
 import { ShowInfo } from "./ShowInfo";
+import { pushClickHelp } from "../../tracking";
 
 export const Question = () => {
   const currentQuestion = useStore((state) => state.currentQuestion);
@@ -18,7 +19,16 @@ export const Question = () => {
     <QuestionWrapper>
       <QuestionHeaderWrapper>
         <QuestionHeader>{currentQuestion?.text}</QuestionHeader>
-        {currentQuestion?.info && <Tooltip onChange={setOpenedTooltip} />}
+        {currentQuestion?.info && (
+          <Tooltip
+            onChange={(opened) => {
+              setOpenedTooltip(opened);
+              if (opened) {
+                pushClickHelp(currentQuestion.name);
+              }
+            }}
+          />
+        )}
       </QuestionHeaderWrapper>
       {openedTooltip && (
         <InformationWrapper>{currentQuestion?.info}</InformationWrapper>
