@@ -1,6 +1,7 @@
 import elasticsearchClient from "../../conf/elasticsearch";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 import sourcesFilter from "./sourcesFilter.elastic";
+import getSemQueryNew from "./search.sem";
 
 const Router = require("koa-router");
 const { SOURCES } = require("@socialgouv/cdtn-sources");
@@ -14,7 +15,7 @@ const { removeDuplicate, merge, mergePipe } = require("./utils");
 const { logger } = require("@socialgouv/cdtn-logger");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";
-const index = `${ES_INDEX_PREFIX}`; // TODO update this at the end of the PR
+const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
 const MAX_RESULTS = 100;
 const DEFAULT_RESULTS_NUMBER = 25;
@@ -64,21 +65,21 @@ router.get("/search", async (ctx) => {
   let articles = [];
   let themes = [];
 
-  //if (prequalifiedResults) {
-  //  prequalifiedResults.forEach(
-  //    (item) => (item._source.algo = "pre-qualified")
-  //  );
-  //  documents = prequalifiedResults.filter(
-  //    ({ _source: { source } }) =>
-  //      ![SOURCES.CDT, SOURCES.THEMES].includes(source)
-  //  );
-  //  articles = prequalifiedResults.filter(
-  //    ({ _source: { source } }) => source === SOURCES.CDT
-  //  );
-  //  themes = prequalifiedResults.filter(
-  //    ({ _source: { source } }) => source === SOURCES.THEMES
-  //  );
-  //}
+  if (prequalifiedResults) {
+    prequalifiedResults.forEach(
+      (item) => (item._source.algo = "pre-qualified")
+    );
+    documents = prequalifiedResults.filter(
+      ({ _source: { source } }) =>
+        ![SOURCES.CDT, SOURCES.THEMES].includes(source)
+    );
+    articles = prequalifiedResults.filter(
+      ({ _source: { source } }) => source === SOURCES.CDT
+    );
+    themes = prequalifiedResults.filter(
+      ({ _source: { source } }) => source === SOURCES.THEMES
+    );
+  }
 
   const searches = {};
   const shouldRequestCdt = articles.length < 5;
@@ -91,133 +92,112 @@ router.get("/search", async (ctx) => {
     }
   );
 
-  let query_es = {};
+  let queryEs = {};
   // if not enough prequalified results, we also trigger ES search
   if (
     !prequalifiedResults ||
     prequalifiedResults.length < DEFAULT_RESULTS_NUMBER
   ) {
-    //searches[DOCUMENTS_ES] = [
-    //  { index },
-    //  getSearchBody({ query, size, sources }),
-    //];
-    query_es.query = getSearchBody({ query, size, sources }).query;
+    queryEs = getSearchBody({ query, size, sources });
     if (query_vector) {
-      query_es.knn = {
-        boost: 0.5,
-        field: "title_vector",
-        filter: [
-          { term: { excludeFromSearch: false } },
-          { term: { isPublished: true } },
-          sourcesFilter(sources),
-        ],
-        k: size,
-        num_candidates: 50,
-        query_vector: query_vector,
-      };
+      queryEs.knn = getSemQueryNew({
+        queryVector: query_vector,
+        size,
+        sources,
+      }).knn;
+    }
+    searches[DOCUMENTS_ES] = [{ index }, queryEs];
+  }
 
-      //searches[DOCUMENTS_SEM] = [
-      //  { index },
-      //  getSemBody({ query_vector, size, sources }),
-      //];
+  if (shouldRequestThemes) {
+    const themeNumber = THEMES_RESULTS_NUMBER - themes.length;
+    searches[THEMES_ES] = [
+      { index }, // we search in themeIndex here to try to match title in breadcrumb
+      getRelatedThemesBody({
+        query,
+        size: themeNumber,
+      }),
+    ];
+    if (query_vector) {
+      searches[THEMES_SEM] = [
+        { index },
+        getSemBody({
+          query_vector,
+          size: themeNumber,
+          sources: [SOURCES.THEMES],
+        }),
+      ];
     }
   }
 
-  //if (shouldRequestThemes) {
-  //  const themeNumber = THEMES_RESULTS_NUMBER - themes.length;
-  //  searches[THEMES_ES] = [
-  //    { index }, // we search in themeIndex here to try to match title in breadcrumb
-  //    getRelatedThemesBody({
-  //      query,
-  //      size: themeNumber,
-  //    }),
-  //  ];
-  //  if (query_vector) {
-  //    searches[THEMES_SEM] = [
-  //      { index },
-  //      getSemBody({
-  //        query_vector,
-  //        size: themeNumber,
-  //        sources: [SOURCES.THEMES],
-  //      }),
-  //    ];
-  //  }
-  //}
+  if (shouldRequestCdt) {
+    const cdtNumber = CDT_RESULTS_NUMBER - articles.length;
+    searches[CDT_ES] = [
+      { index },
+      getRelatedArticlesBody({
+        query,
+        size: cdtNumber,
+      }),
+    ];
+  }
 
-  //if (shouldRequestCdt) {
-  //  const cdtNumber = CDT_RESULTS_NUMBER - articles.length;
-  //  searches[CDT_ES] = [
-  //    { index },
-  //    getRelatedArticlesBody({
-  //      query,
-  //      size: cdtNumber,
-  //    }),
-  //  ];
-  //}
-
-  // const results = await msearch({
-  //   client: elasticsearchClient,
-  //   searches,
-  // });
-  //
-  // const fulltextHits = extractHits(results[DOCUMENTS_ES]);
-  // fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
-  //
-  // const semanticHits = extractHits(results[DOCUMENTS_SEM]);
-  // semanticHits.forEach((item) => (item._source.algo = "semantic"));
-  //
-  // // we only consider semantic results above a given threshold
-  // const semanticHitsFiltered = semanticHits.filter(
-  //   (item) => item._score > SEMANTIC_THRESHOLD
-  // );
-  //
-  // // we merge prequalified + full text + semantic results
-  // const mergedSearchResults = mergePipe(
-  //   fulltextHits,
-  //   semanticHitsFiltered,
-  //   size
-  // );
-  // documents.push(...mergedSearchResults);
-  // documents = removeDuplicate(documents);
-
-  //if (shouldRequestThemes) {
-  //  const fulltextHits = extractHits(results[THEMES_ES]);
-  //  const semanticHits = extractHits(results[THEMES_SEM]);
-  //  fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
-  //  semanticHits.forEach((item) => (item._source.algo = "semantic"));
-  //  themes = removeDuplicate(
-  //    themes
-  //      .concat(merge(fulltextHits, semanticHits, THEMES_RESULTS_NUMBER * 2))
-  //      .slice(0, THEMES_RESULTS_NUMBER)
-  //  );
-  //}
-  //if (shouldRequestCdt) {
-  //  articles = removeDuplicate(articles.concat(results[CDT_ES].hits.hits));
-  //}
-
-  //logger.info(`search: ${query} took ${results.took}ms`);
-
-  console.log("Mon log");
-  console.log(query_es);
-  const body = await elasticsearchClient.search({
-    index: index,
-    query: query_es.query,
-    knn: query_es.knn,
+  const results = await msearchNew({
+    client: elasticsearchClient,
+    searches,
   });
 
+  console.log("results");
+
+  const fulltextHits = extractHits(results[DOCUMENTS_ES]);
+  fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
+
+  const semanticHits = extractHits(results[DOCUMENTS_SEM]);
+  semanticHits.forEach((item) => (item._source.algo = "semantic"));
+
+  // Todo : with new research, this is not easily possible
+  // we only consider semantic results above a given threshold
+  const semanticHitsFiltered = semanticHits.filter(
+    (item) => item._score > SEMANTIC_THRESHOLD
+  );
+  //
+  // we merge prequalified + full text + semantic results
+  const mergedSearchResults = mergePipe(
+    fulltextHits,
+    semanticHitsFiltered,
+    size
+  );
+
+  documents.push(...mergedSearchResults);
+  documents = removeDuplicate(documents);
+
+  if (shouldRequestThemes) {
+    const fulltextHits = extractHits(results[THEMES_ES]);
+    const semanticHits = extractHits(results[THEMES_SEM]);
+    fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
+    semanticHits.forEach((item) => (item._source.algo = "semantic"));
+    themes = removeDuplicate(
+      themes
+        .concat(merge(fulltextHits, semanticHits, THEMES_RESULTS_NUMBER * 2))
+        .slice(0, THEMES_RESULTS_NUMBER)
+    );
+  }
+  if (shouldRequestCdt) {
+    articles = removeDuplicate(articles.concat(results[CDT_ES].hits.hits));
+  }
+
+  logger.info(`search: ${query} took ${results.took}ms`);
+
   ctx.body = {
-    //articles: articles.map(({ _score, _source }) => ({ _score, ..._source })),
-    documents: body.hits.hits.map(({ _score, _source }) => ({
+    articles: articles.map(({ _score, _source }) => ({ _score, ..._source })),
+    //documents: body.hits.hits.map(({ _score, _source }) => ({ _score, ..._source })),
+    documents: documents.map(({ _score, _source }) => ({ _score, ..._source })),
+    // we add source prop since some result might come from dedicated themes index
+    // wich has no source prop
+    themes: themes.map(({ _score, _source }) => ({
       _score,
       ..._source,
+      source: SOURCES.THEMES,
     })),
-    // we add source prop since some result might come from dedicataed themes index
-    // wich has no source prop
-    //themes: themes.map(({ _score, _source }) => ({
-    //  _score,
-    //  ..._source,
-    //  source: SOURCES.THEMES,
-    //})),
   };
 });
 
@@ -230,6 +210,7 @@ function extractHits(response) {
   return [];
 }
 
+// TODO : to delete
 async function msearch({ client, searches }) {
   const requests = [];
   const keys = [];
@@ -244,11 +225,48 @@ async function msearch({ client, searches }) {
     keys.push(key);
   }
 
-  const { body, error } = await client.msearch({ body: requests });
+  const body = await client.msearch({ body: requests });
 
-  if (error) {
-    throw error;
+  const results = keys.reduce((state, key, index) => {
+    const resp = body.responses[index];
+
+    if (resp.error) {
+      logger.error(
+        `Elastic search error : index ${index}, search key ${key} : ${JSON.stringify(
+          resp.error,
+          null,
+          2
+        )}`
+      );
+    }
+
+    state[key] = resp;
+    return state;
+  }, {});
+
+  results.took = body.took;
+
+  return results;
+}
+
+async function msearchNew({ client, searches }) {
+  const requests = [];
+  const keys = [];
+  console.log("start msearch 2")
+  console.log(searches)
+  // return an empty object if we receive an empty object
+  if (Object.keys(searches).length === 0) {
+    console.log("ooops")
+    return {};
   }
+
+  for (const [key, [index, query]] of Object.entries(searches)) {
+    console.log(key)
+    requests.push(index, query)
+    keys.push(key);
+  }
+
+  const body = await client.msearch({ searches: requests });
 
   const results = keys.reduce((state, key, index) => {
     const resp = body.responses[index];
