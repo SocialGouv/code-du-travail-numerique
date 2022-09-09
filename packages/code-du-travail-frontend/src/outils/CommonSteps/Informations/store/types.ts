@@ -11,11 +11,12 @@ export type CommonInformationsStoreInput = {
   publicodesInformations: Array<PublicodesInformation>;
   isStepHidden: boolean;
   hasNoMissingQuestions: boolean;
+  notificationBloquante?: string;
 };
 
 export type CommonInformationsStoreError = {
   errorInformations: Record<string, string>;
-  alertError?: string;
+  errorNotificationBloquante?: string;
 };
 
 export type CommonInformationsStoreData = {

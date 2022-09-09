@@ -1,5 +1,8 @@
 import { deepEqualObject } from "../../../../lib";
-import { CommonInformationsStoreInput } from "./types";
+import {
+  CommonInformationsStoreError,
+  CommonInformationsStoreInput,
+} from "./types";
 
 export const validateStep = (state: CommonInformationsStoreInput) => {
   const informations = state.publicodesInformations;
@@ -10,11 +13,18 @@ export const validateStep = (state: CommonInformationsStoreInput) => {
         "Vous devez répondre à cette question";
     }
   });
-  let errorState = { errorInformations };
+
+  let errorState: CommonInformationsStoreError = {
+    errorInformations,
+    errorNotificationBloquante: state.notificationBloquante
+      ? "Impossible de continuer la simulation avec ce paramètre"
+      : undefined,
+  };
 
   return {
     isValid: deepEqualObject(errorState, {
       errorInformations: {},
+      errorNotificationBloquante: undefined,
     }),
     errorState,
   };

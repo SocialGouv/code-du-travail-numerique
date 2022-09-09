@@ -2,6 +2,7 @@ import {
   Formula,
   FormuleFactory,
   IndemniteLicenciementPublicodes,
+  Notification,
   PublicodesIndemniteLicenciementResult,
   References,
   SeniorityFactory,
@@ -20,7 +21,7 @@ import produce from "immer";
 import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
-import { AgreementInformation } from "../../../common";
+import { AgreementInformation, hasNoLegalIndemnity } from "../../../common";
 import {
   getAgreementFormula,
   getAgreementReferenceSalary,
@@ -99,6 +100,8 @@ const createResultStore: StoreSlice<
       let agreementFormula: Formula;
       let isAgreementBetter = false;
       let agreementInformations: AgreementInformation[];
+      let agreementNotifications: Notification[];
+      let agreementHasNoLegalIndemnity: boolean;
 
       if (agreement) {
         const factory = new SeniorityFactory().create(
@@ -155,11 +158,16 @@ const createResultStore: StoreSlice<
           get as GetState<MainStore>
         );
 
+        agreementNotifications = publicodes.getNotifications();
+
+        agreementHasNoLegalIndemnity = hasNoLegalIndemnity(agreement.num);
+
         if (
-          publicodesSituationConventionnel.value !== null &&
-          publicodesSituationLegal.value !== null &&
-          publicodesSituationConventionnel.value >
-            publicodesSituationLegal.value
+          agreementHasNoLegalIndemnity ||
+          (publicodesSituationConventionnel.value !== null &&
+            publicodesSituationLegal.value !== null &&
+            publicodesSituationConventionnel.value >
+              publicodesSituationLegal.value)
         ) {
           isAgreementBetter = true;
         }
@@ -179,6 +187,10 @@ const createResultStore: StoreSlice<
           state.resultData.input.agreementFormula = agreementFormula;
           state.resultData.input.isAgreementBetter = isAgreementBetter;
           state.resultData.input.agreementInformations = agreementInformations;
+          state.resultData.input.agreementNotifications =
+            agreementNotifications;
+          state.resultData.input.agreementHasNoLegalIndemnity =
+            agreementHasNoLegalIndemnity;
         })
       );
     },

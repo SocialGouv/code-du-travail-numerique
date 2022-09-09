@@ -2,7 +2,11 @@ import type { EvaluatedNode } from "publicodes";
 import Engine from "publicodes";
 
 import type { Notification, References } from "../utils";
-import { getNotifications, getReferences } from "../utils";
+import {
+  getNotifications,
+  getNotificationsBloquantes,
+  getReferences,
+} from "../utils";
 import type { Publicodes } from "./Publicodes";
 import type { MissingArgs, PublicodesData, SituationElement } from "./types";
 
@@ -46,6 +50,10 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
 
   getNotifications(): Notification[] {
     return getNotifications(this.engine);
+  }
+
+  getNotificationsBloquantes(): Notification[] {
+    return getNotificationsBloquantes(this.engine);
   }
 
   getReferences(specificRule?: string): References[] {

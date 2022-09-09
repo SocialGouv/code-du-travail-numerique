@@ -8,6 +8,7 @@ export type RuleNodeIdcc = Rule & {
     idcc?: number;
     "préavis-retraite"?: boolean;
     "indemnité-licenciement"?: boolean;
+    "indemnité-licenciement-sans-legal"?: boolean;
   };
 };
 
@@ -22,6 +23,8 @@ export function extractSupportedCc(engine: Engine): Partial<AgreementInfo>[] {
           return {
             idcc,
             indemniteLicenciement: cdtnNode["indemnité-licenciement"] ?? false,
+            indemniteLicenciementSansLegal:
+              cdtnNode["indemnité-licenciement-sans-legal"] ?? false,
             preavisRetraite: cdtnNode["préavis-retraite"] ?? false,
           };
         }

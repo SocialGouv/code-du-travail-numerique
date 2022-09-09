@@ -6,5 +6,6 @@ export interface Publicodes<TResult> {
   execute: (rule: string) => TResult;
   setSituation: (args: Record<string, string>) => PublicodesData<TResult>;
   getNotifications: () => Notification[];
+  getNotificationsBloquantes: () => Notification[];
   getReferences: (specificRule?: string) => References[];
 }

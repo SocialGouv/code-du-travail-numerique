@@ -4,8 +4,8 @@ import { ReferenceSalaryLegal } from "./legal";
 import type { IReferenceSalary, ReferenceSalaryProps } from "./types";
 
 export enum CatPro3239 {
-  SALARIE_PARTICULIER_EMPLOYEUR = "Salarié du particulier employeur",
-  ASSISTANT_MATERNEL = "Assistant maternel",
+  salarieParticulierEmployeur = "Salarié du particulier employeur",
+  assistantMaternel = "Assistant maternel",
 }
 
 export type CC3239ReferenceSalaryProps = {
@@ -30,10 +30,9 @@ export class ReferenceSalary3239
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC3239>): number {
     const rankedSalaires = rankByMonthArrayDescFrench(salaires);
     const salaryValues = rankedSalaires.map((a) => a.value).filter(nonNullable);
-    const moyenneSalaires = sum(salaryValues) / rankedSalaires.length;
-    if (catPro === CatPro3239.SALARIE_PARTICULIER_EMPLOYEUR) {
+    if (catPro === CatPro3239.salarieParticulierEmployeur) {
       return new ReferenceSalaryLegal().computeReferenceSalary({ salaires });
     }
-    return moyenneSalaires;
+    return sum(salaryValues);
   }
 }

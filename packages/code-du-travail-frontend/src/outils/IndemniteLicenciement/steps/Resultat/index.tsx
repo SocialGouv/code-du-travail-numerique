@@ -40,6 +40,8 @@ const StepResult = () => {
     agreementInformations,
     salary,
     hasSameSalary,
+    agreementNotifications,
+    agreementHasNoLegalIndemnity,
   } = useIndemniteLicenciementStore((state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -65,6 +67,9 @@ const StepResult = () => {
     agreementInformations: state.resultData.input.agreementInformations,
     salary: state.salairesData.input.salary,
     hasSameSalary: state.salairesData.input.hasSameSalary,
+    agreementNotifications: state.resultData.input.agreementNotifications,
+    agreementHasNoLegalIndemnity:
+      state.resultData.input.agreementHasNoLegalIndemnity,
   }));
 
   React.useEffect(() => {
@@ -79,6 +84,7 @@ const StepResult = () => {
             ? publicodesAgreementResult?.value?.toString() ?? ""
             : publicodesLegalResult.value?.toString() ?? ""
         }
+        notifications={agreementNotifications}
       />
       <ShowDetails>
         <FilledElements
@@ -123,7 +129,11 @@ const StepResult = () => {
               ? true
               : false
           }
-          legalResult={publicodesLegalResult.value?.toString() ?? ""}
+          legalResult={
+            agreementHasNoLegalIndemnity
+              ? "0"
+              : publicodesLegalResult.value?.toString() ?? ""
+          }
           agreementResult={publicodesAgreementResult?.value?.toString()}
         />
         <PubliReferences

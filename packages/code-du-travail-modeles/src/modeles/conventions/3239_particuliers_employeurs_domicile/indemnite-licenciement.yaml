@@ -12,9 +12,9 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
       Assistant maternel: "'Assistant maternel'"
       Salarié du particulier employeur: "'Salarié du particulier employeur'"
 
-## Assistant maternel
+# Assistant maternel
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle:
-  applicable si: type de licenciement = 'Assistant maternel'
+  applicable si: catégorie professionnelle = 'Assistant maternel'
   valeur: oui
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement:
@@ -23,10 +23,10 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   cdtn:
     type: oui-non
 
-contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . notification de mise à la retraite:
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . notification bloquante:
   applicable si: type de licenciement = 'Oui'
-  type: notification
-  description: "Si la rupture du contrat de travail a été notifiée avant le 01/01/2022, l’indemnité de licenciement peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective “Assistants maternels du particulier employeur (IDCC 2395)” qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022."
+  type: notification-bloquante
+  description: <strong>L’indemnité légale de licenciement n’est pas dûe en cas de suspension, modification ou au retrait de l'agrément de l'assistant maternel.</strong> Lorsqu’il est invoqué, le motif doit apparaître précisément dans le courrier. Reportez vous à la lettre de notification de licenciement.
   valeur: oui
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres:
@@ -43,8 +43,9 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
 #  (1/80 * Sref)
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si: catégorie professionnelle = 'Assistant maternel' # ne fonctionne sans cette règle qu'on rappelle, je pense que c'est un bug
   variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté en année >= 9 mois
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 9 mois
       alors: un quatre vingtième du sref
     - sinon: 0
   unité: €
@@ -61,7 +62,7 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
 
 ## Salarié du particulier employeur
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . pe:
-  applicable si: type de licenciement = 'Salarié du particulier employeur'
+  applicable si: catégorie professionnelle = 'Salarié du particulier employeur'
   valeur: oui
 
 ### Formules
@@ -97,7 +98,7 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . pe . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté en année >= 8 mois
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
       alors:
         somme:
           - dix ans ou moins
@@ -114,3 +115,8 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
     Article 60: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942169?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942169
     Article 142: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942377?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942377
     Article 163-1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942458?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942458
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . notification:
+  type: notification
+  description: "Si la rupture du contrat de travail a été notifiée avant le 01/01/2022, l’indemnité de licenciement peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective “Assistants maternels du particulier employeur (IDCC 2395)” qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022."
+  valeur: oui

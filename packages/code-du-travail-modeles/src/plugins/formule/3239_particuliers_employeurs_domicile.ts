@@ -20,11 +20,15 @@ export class Formula3239
   }: FormulaProps<SupportedCcIndemniteLicenciement.IDCC3239>): Formula {
     let formula = "";
     const explanations = [];
-    if (category === CatPro3239.ASSISTANT_MATERNEL && seniority >= 9 / 12) {
-      formula = `1 / 80 * Sref`;
-      explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
+    if (category === CatPro3239.assistantMaternel && seniority >= 9 / 12) {
+      formula = `1 / 80 * S`;
+      explanations.push(
+        `S : total des salaires perçus depuis l'engagement (${round(
+          refSalary
+        )} €)`
+      );
     } else if (
-      category === CatPro3239.SALARIE_PARTICULIER_EMPLOYEUR &&
+      category === CatPro3239.salarieParticulierEmployeur &&
       seniority >= 8 / 12
     ) {
       return new FormulaLegal().computeFormula({

@@ -111,6 +111,7 @@ const createCommonInformationsStore: StoreSlice<
         }))
         .reduce((acc, cur) => ({ ...acc, ...cur }), {});
       let missingArgs: MissingArgs[] = [];
+      let notificationBloquante: string | undefined = undefined;
       try {
         missingArgs = publicodes.setSituation(
           mapToPublicodesSituationForIndemniteLicenciementConventionnel(
@@ -123,9 +124,19 @@ const createCommonInformationsStore: StoreSlice<
           ),
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         ).missingArgs;
+        const notifBloquante = publicodes.getNotificationsBloquantes();
+        if (notifBloquante.length > 0) {
+          notificationBloquante = notifBloquante[0].description;
+        }
       } catch (e) {
         console.error(e);
       }
+      set(
+        produce((state: CommonInformationsStoreSlice) => {
+          state.informationsData.input.notificationBloquante =
+            notificationBloquante;
+        })
+      );
       const newQuestions = missingArgs
         .sort((a, b) => b.indice - a.indice)
         .map((arg, index) => ({
@@ -183,7 +194,7 @@ const createCommonInformationsStore: StoreSlice<
 const applyGenericValidation = (
   get: GetState<CommonInformationsStoreSlice>,
   set: SetState<CommonInformationsStoreSlice>,
-  paramName: keyof CommonInformationsStoreInput,
+  paramName: string,
   value: any
 ) => {
   if (get().informationsData.hasBeenSubmit) {
