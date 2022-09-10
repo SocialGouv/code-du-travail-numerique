@@ -1,7 +1,7 @@
-import { FormulaLegal } from "../../../lib/plugins/formule/legal";
 import { round } from "../../utils";
 import type { SupportedCcIndemniteLicenciement } from "..";
 import { CatPro3239 } from "../salaire-reference/3239_particuliers_employeurs_domicile";
+import { FormulaLegal } from "./legal";
 import type { Formula, FormulaProps, IFormula } from "./types";
 
 export type Formula3239Props = {
