@@ -11,10 +11,12 @@ export enum MatomoDismissalProcessAction {
   AGREEMENT_SEARCH_TYPE_OF_USERS = "cc_search_type_of_users",
 }
 
-const questionnaireTrackingName = "comprendre sa procédure de licenciement";
+const questionnaireTrackingName = "comprendre_sa_procedure_de_licenciement";
+const infoPageTrackingName = "procedures_licenciement";
 
 export const pushViewQuestion = (trackingName: string) => {
   matopush([
+    MatomoBaseEvent.TRACK_EVENT,
     MatomoBaseEvent.OUTIL,
     questionnaireTrackingName,
     `${MatomoBaseAction.VIEW}_question_${trackingName}`,
@@ -23,6 +25,7 @@ export const pushViewQuestion = (trackingName: string) => {
 
 export const pushSelectResponse = (trackingName: string) => {
   matopush([
+    MatomoBaseEvent.TRACK_EVENT,
     MatomoBaseEvent.OUTIL,
     questionnaireTrackingName,
     `${MatomoBaseAction.SELECT}_${trackingName}`,
@@ -31,16 +34,27 @@ export const pushSelectResponse = (trackingName: string) => {
 
 export const pushClickHelp = (trackingName: string) => {
   matopush([
+    MatomoBaseEvent.TRACK_EVENT,
     MatomoBaseEvent.OUTIL,
     questionnaireTrackingName,
-    `${MatomoBaseAction.CLICK}_${trackingName}`,
+    `${MatomoBaseAction.CLICK}_help_${trackingName}`,
   ]);
 };
 
-export const pushClickViewPageInfo = (trackingName: string) => {
+export const pushClickViewPageInfo = () => {
   matopush([
+    MatomoBaseEvent.TRACK_EVENT,
     MatomoBaseEvent.OUTIL,
     questionnaireTrackingName,
-    `${MatomoBaseAction.SELECT}_${trackingName}`,
+    `${MatomoBaseAction.CLICK}_afficher_les_infos_personnalisées`,
+  ]);
+};
+
+export const pushClickInfoPageTab = (trackingName: string) => {
+  matopush([
+    MatomoBaseEvent.TRACK_EVENT,
+    MatomoBaseEvent.PAGE_INFORMATION,
+    infoPageTrackingName,
+    `${MatomoBaseAction.CLICK}_onglet_${trackingName}`,
   ]);
 };
