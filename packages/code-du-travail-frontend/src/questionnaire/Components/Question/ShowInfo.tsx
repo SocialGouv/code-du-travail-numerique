@@ -11,7 +11,7 @@ export const ShowInfo = ({ slug }: { slug: string }) => {
       <Button
         variant="primary"
         onClick={() => {
-          pushClickViewPageInfo("afficher_les_infos_personnalisées");
+          pushClickViewPageInfo();
           router.push(`/information/${slug}`);
         }}
       >

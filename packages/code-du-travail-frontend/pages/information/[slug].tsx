@@ -14,7 +14,10 @@ import {
   injectContentInfos,
 } from "../../src/information";
 import { ContentBlocks } from "../../src/information/Components";
-import { QuestionnaireWrapper } from "../../src/questionnaire";
+import {
+  QuestionnaireWrapper,
+  pushClickInfoPageTab,
+} from "../../src/questionnaire";
 
 const Information = ({
   anchor,
@@ -53,6 +56,12 @@ const Information = ({
             panel: editorialContent?.[index],
             tab: title,
           }))}
+          onSelect={(index) => {
+            if (dismissalProcess && contents) {
+              const content = contents[index];
+              pushClickInfoPageTab(content.name);
+            }
+          }}
         />
       ) : (
         <Accordion
