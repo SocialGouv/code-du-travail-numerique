@@ -76,6 +76,14 @@ const StepResult = () => {
     getPublicodesResult();
   }, []);
 
+  const supportedCc = React.useMemo(
+    () =>
+      getSupportedCcIndemniteLicenciement().find(
+        (v) => v.fullySupported && v.idcc === agreement?.num
+      ),
+    [agreement]
+  );
+
   return (
     <>
       <Result
@@ -120,38 +128,32 @@ const StepResult = () => {
               : legalFormula
           }
         />
-        <DecryptResult
-          hasSelectedAgreement={route !== "none"}
-          isAgreementSupported={
-            getSupportedCcIndemniteLicenciement().find(
-              (v) => v.fullySupported && v.idcc === agreement?.num
-            )
-              ? true
-              : false
-          }
-          legalResult={
-            agreementHasNoLegalIndemnity
-              ? "0"
-              : publicodesLegalResult.value?.toString() ?? ""
-          }
-          agreementResult={publicodesAgreementResult?.value?.toString()}
-        />
+        {!agreementHasNoLegalIndemnity && (
+          <DecryptResult
+            hasSelectedAgreement={route !== "none"}
+            isAgreementSupported={
+              getSupportedCcIndemniteLicenciement().find(
+                (v) => v.fullySupported && v.idcc === agreement?.num
+              )
+                ? true
+                : false
+            }
+            legalResult={publicodesLegalResult.value?.toString() ?? ""}
+            agreementResult={publicodesAgreementResult?.value?.toString()}
+          />
+        )}
         <PubliReferences
           references={
             isAgreementBetter ? agreementReferences ?? [] : legalReferences
           }
         />
       </ShowDetails>
-      <AgreementInfo
-        hasSelectedAgreement={route !== "none"}
-        isAgreementSupported={
-          getSupportedCcIndemniteLicenciement().find(
-            (v) => v.fullySupported && v.idcc === agreement?.num
-          )
-            ? true
-            : false
-        }
-      />
+      {!supportedCc?.withoutLegal && (
+        <AgreementInfo
+          hasSelectedAgreement={route !== "none"}
+          isAgreementSupported={supportedCc ? true : false}
+        />
+      )}
       <ForMoreInfo />
     </>
   );
