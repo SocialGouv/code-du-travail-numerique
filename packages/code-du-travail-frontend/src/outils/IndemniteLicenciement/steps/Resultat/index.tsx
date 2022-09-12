@@ -76,6 +76,14 @@ const StepResult = () => {
     getPublicodesResult();
   }, []);
 
+  const supportedCc = React.useMemo(
+    () =>
+      getSupportedCcIndemniteLicenciement().find(
+        (v) => v.fullySupported && v.idcc === agreement?.num
+      ),
+    [agreement]
+  );
+
   return (
     <>
       <Result
@@ -123,13 +131,7 @@ const StepResult = () => {
         {!agreementHasNoLegalIndemnity && (
           <DecryptResult
             hasSelectedAgreement={route !== "none"}
-            isAgreementSupported={
-              getSupportedCcIndemniteLicenciement().find(
-                (v) => v.fullySupported && v.idcc === agreement?.num
-              )
-                ? true
-                : false
-            }
+            isAgreementSupported={supportedCc ? true : false}
             legalResult={publicodesLegalResult.value?.toString() ?? ""}
             agreementResult={publicodesAgreementResult?.value?.toString()}
           />
@@ -143,13 +145,7 @@ const StepResult = () => {
       {!agreementHasNoLegalIndemnity && (
         <AgreementInfo
           hasSelectedAgreement={route !== "none"}
-          isAgreementSupported={
-            getSupportedCcIndemniteLicenciement().find(
-              (v) => v.fullySupported && v.idcc === agreement?.num
-            )
-              ? true
-              : false
-          }
+          isAgreementSupported={supportedCc ? true : false}
         />
       )}
       <ForMoreInfo />
