@@ -42,6 +42,7 @@ const StepResult = () => {
     hasSameSalary,
     agreementNotifications,
     agreementHasNoLegalIndemnity,
+    isStepSalaryHidden,
   } = useIndemniteLicenciementStore((state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -70,6 +71,7 @@ const StepResult = () => {
     agreementNotifications: state.resultData.input.agreementNotifications,
     agreementHasNoLegalIndemnity:
       state.resultData.input.agreementHasNoLegalIndemnity,
+    isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
   }));
 
   React.useEffect(() => {
@@ -120,6 +122,7 @@ const StepResult = () => {
               />
             )
           }
+          isStepSalaryHidden={isStepSalaryHidden}
         />
         <FormulaInterpreter
           formula={
