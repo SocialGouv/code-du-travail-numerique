@@ -76,14 +76,6 @@ const StepResult = () => {
     getPublicodesResult();
   }, []);
 
-  const supportedCc = React.useMemo(
-    () =>
-      getSupportedCcIndemniteLicenciement().find(
-        (v) => v.fullySupported && v.idcc === agreement?.num
-      ),
-    [agreement]
-  );
-
   return (
     <>
       <Result
@@ -148,10 +140,16 @@ const StepResult = () => {
           }
         />
       </ShowDetails>
-      {!supportedCc?.withoutLegal && (
+      {!agreementHasNoLegalIndemnity && (
         <AgreementInfo
           hasSelectedAgreement={route !== "none"}
-          isAgreementSupported={supportedCc ? true : false}
+          isAgreementSupported={
+            getSupportedCcIndemniteLicenciement().find(
+              (v) => v.fullySupported && v.idcc === agreement?.num
+            )
+              ? true
+              : false
+          }
         />
       )}
       <ForMoreInfo />
