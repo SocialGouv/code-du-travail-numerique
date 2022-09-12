@@ -31,6 +31,7 @@ export type CommonInformationsStoreFn = {
   onInformationsChange: (questionKey: string, value: string) => void;
   generatePublicodesQuestions: () => void;
   onValidateStep: () => boolean;
+  onSetStepHidden: () => void;
 };
 
 export type CommonInformationsStoreSlice = {
