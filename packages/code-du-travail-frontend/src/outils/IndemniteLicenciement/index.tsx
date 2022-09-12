@@ -88,6 +88,7 @@ const IndemniteLicenciementSimulator = ({
     onValidateStepInformations,
     isStepInformationsValid,
     isStepInformationsHidden,
+    isStepSalaryHidden,
   } = useIndemniteLicenciementStore((state) => ({
     onValidateStepContratTravail:
       state.contratTravailFunction.onValidateStepInfo,
@@ -101,6 +102,7 @@ const IndemniteLicenciementSimulator = ({
     onValidateStepInformations: state.informationsFunction.onValidateStep,
     isStepInformationsValid: state.informationsData.isStepValid,
     isStepInformationsHidden: state.informationsData.input.isStepHidden,
+    isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
   }));
 
   const data = useIndemniteLicenciementStore((state) => {
@@ -119,6 +121,17 @@ const IndemniteLicenciementSimulator = ({
       agreement1527Data: { ...state.agreement1527Data },
     };
   });
+
+  const getHiddenSteps = (): IndemniteLicenciementStepName[] => {
+    const hiddenSteps: IndemniteLicenciementStepName[] = [];
+    if (isStepInformationsHidden) {
+      hiddenSteps.push(IndemniteLicenciementStepName.Informations);
+    }
+    if (isStepSalaryHidden) {
+      hiddenSteps.push(IndemniteLicenciementStepName.Salaires);
+    }
+    return hiddenSteps;
+  };
 
   return (
     <SimulatorLayout<IndemniteLicenciementStepName>
@@ -155,11 +168,7 @@ const IndemniteLicenciementSimulator = ({
           validator: onValidateStepInformations,
         },
       ]}
-      hiddenStep={
-        isStepInformationsHidden
-          ? [IndemniteLicenciementStepName.Informations]
-          : []
-      }
+      hiddenStep={getHiddenSteps()}
     />
   );
 };

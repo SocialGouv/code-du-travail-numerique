@@ -10,6 +10,7 @@ export type PublicodesInformation = {
 export type CommonInformationsStoreInput = {
   publicodesInformations: Array<PublicodesInformation>;
   isStepHidden: boolean;
+  isStepSalaryHidden: boolean;
   hasNoMissingQuestions: boolean;
   notificationBloquante?: string;
 };

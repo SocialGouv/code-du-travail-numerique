@@ -33,20 +33,26 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   applicable si: type de licenciement = 'Non'
   valeur: oui
 
-contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . un quatre vingtième du sref:
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires:
+  titre: Total des salaires perçus pendant la totalité du contrat de travail (en euros)
+  question: Indiquez le total des salaires perçus pendant la totalité du contrat de travail ?
+  cdtn:
+    type: entier
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires . un quatre vingtième du total:
   valeur:
     produit:
-      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      assiette: total salaires
       facteur: 1 / 80
   unité: €
 
 #  (1/80 * Sref)
-contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . résultat conventionnel:
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si: catégorie professionnelle = 'Assistant maternel' # ne fonctionne sans cette règle qu'on rappelle, je pense que c'est un bug
   variations:
     - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 9 mois
-      alors: un quatre vingtième du sref
+      alors: un quatre vingtième du total
     - sinon: 0
   unité: €
   arrondi: 2 décimales
@@ -119,4 +125,12 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . notification:
   type: notification
   description: "Si la rupture du contrat de travail a été notifiée avant le 01/01/2022, l’indemnité de licenciement peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/21 c’est la convention collective “Assistants maternels du particulier employeur (IDCC 2395)” qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable à partir du 01/01/2022."
+  valeur: oui
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . suppression de l'étape salaire:
+  remplace: contrat salarié . indemnité de licenciement . étape salaire désactivée
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Assistant maternel'
+      - contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement = 'Non'
   valeur: oui

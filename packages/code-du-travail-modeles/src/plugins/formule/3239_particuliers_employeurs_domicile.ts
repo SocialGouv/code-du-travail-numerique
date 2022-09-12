@@ -6,6 +6,7 @@ import type { Formula, FormulaProps, IFormula } from "./types";
 
 export type Formula3239Props = {
   category: CatPro3239;
+  totalSalary: number;
   seniority: number;
   refSalary: number;
 };
@@ -17,6 +18,7 @@ export class Formula3239
     seniority,
     refSalary,
     category,
+    totalSalary,
   }: FormulaProps<SupportedCcIndemniteLicenciement.IDCC3239>): Formula {
     let formula = "";
     const explanations = [];
@@ -24,7 +26,7 @@ export class Formula3239
       formula = `1 / 80 * S`;
       explanations.push(
         `S : total des salaires perçus depuis l'engagement (${round(
-          refSalary
+          totalSalary
         )} €)`
       );
     } else if (

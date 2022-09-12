@@ -1,4 +1,3 @@
-import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../utils";
 import type { SalaryPeriods, SupportedCcIndemniteLicenciement } from "..";
 import { ReferenceSalaryLegal } from "./legal";
 import type { IReferenceSalary, ReferenceSalaryProps } from "./types";
@@ -21,6 +20,7 @@ export class ReferenceSalary3239
    * - si la catégorie professionnelle est "Assistant maternel" et que le licenciement n'est pas dû à un retrait d'Agrément
    * - S
    * S : total des salaires perçus depuis l'engagement (brut)
+   * Note : Cette information est utilisée côté publicodes
    *
    * - Dans le cas où c'est le salarié particulier employeur, on renvoie au légal
    **/
@@ -28,11 +28,9 @@ export class ReferenceSalary3239
     salaires = [],
     catPro,
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC3239>): number {
-    const rankedSalaires = rankByMonthArrayDescFrench(salaires);
-    const salaryValues = rankedSalaires.map((a) => a.value).filter(nonNullable);
     if (catPro === CatPro3239.salarieParticulierEmployeur) {
       return new ReferenceSalaryLegal().computeReferenceSalary({ salaires });
     }
-    return sum(salaryValues);
+    return 0;
   }
 }

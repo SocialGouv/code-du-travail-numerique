@@ -104,3 +104,6 @@ contrat salarié . indemnité de licenciement . facteur plus de dix ans cc:
 contrat salarié . indemnité de licenciement . résultat conventionnel:
   valeur: non
   unité: €
+
+contrat salarié . indemnité de licenciement . étape salaire désactivée:
+  valeur: non

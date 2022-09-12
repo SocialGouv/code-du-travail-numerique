@@ -14,10 +14,10 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
     ${CatPro3239.salarieParticulierEmployeur} | ${12}     | ${"(1 / 4 * Sref * A1 + 1 / 3 * Sref * A2)"} | ${["A1 : Ancienneté de 10 ans ou moins (10 ans)", "A2 : Ancienneté au delà de 10 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${CatPro3239.assistantMaternel}           | ${0}      | ${""}                                        | ${[]}
     ${CatPro3239.assistantMaternel}           | ${8 / 12} | ${""}                                        | ${[]}
-    ${CatPro3239.assistantMaternel}           | ${9 / 12} | ${"1 / 80 * S"}                              | ${["S : total des salaires perçus depuis l'engagement (1000 €)"]}
-    ${CatPro3239.assistantMaternel}           | ${2}      | ${"1 / 80 * S"}                              | ${["S : total des salaires perçus depuis l'engagement (1000 €)"]}
-    ${CatPro3239.assistantMaternel}           | ${10}     | ${"1 / 80 * S"}                              | ${["S : total des salaires perçus depuis l'engagement (1000 €)"]}
-    ${CatPro3239.assistantMaternel}           | ${12}     | ${"1 / 80 * S"}                              | ${["S : total des salaires perçus depuis l'engagement (1000 €)"]}
+    ${CatPro3239.assistantMaternel}           | ${9 / 12} | ${"1 / 80 * S"}                              | ${["S : total des salaires perçus depuis l'engagement (10000 €)"]}
+    ${CatPro3239.assistantMaternel}           | ${2}      | ${"1 / 80 * S"}                              | ${["S : total des salaires perçus depuis l'engagement (10000 €)"]}
+    ${CatPro3239.assistantMaternel}           | ${10}     | ${"1 / 80 * S"}                              | ${["S : total des salaires perçus depuis l'engagement (10000 €)"]}
+    ${CatPro3239.assistantMaternel}           | ${12}     | ${"1 / 80 * S"}                              | ${["S : total des salaires perçus depuis l'engagement (10000 €)"]}
   `(
     "Formule $expectedFormula avec $seniority ans, catégorie $category, type de licenciement $typeLicenciement et ancienneté non cadre : $seniorityNonCadre",
     ({ category, seniority, expectedFormula, expectedExplanations }) => {
@@ -29,6 +29,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
         category,
         refSalary: 1000,
         seniority,
+        totalSalary: 10000,
       });
 
       expect(result.formula).toEqual(expectedFormula);

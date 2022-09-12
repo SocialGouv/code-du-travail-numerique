@@ -26,6 +26,11 @@ export class AgreementFormula3239 implements AgreementFormula {
             "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle"
         )
         ?.info?.slice(1, -1) as any,
+      totalSalary: get().informationsData.input.publicodesInformations.find(
+        (v) =>
+          v.question.rule.nom ===
+          "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires"
+      )?.info as any,
     });
   };
 }
