@@ -8,14 +8,14 @@ import { PublicodesInformation } from "./store";
 import Html from "../../../common/Html";
 
 export type InformationStepProps = {
-  notificationBloquante?: string;
+  blockingNotification?: string;
   onChange: (key: string, value: unknown) => void;
   informations: PublicodesInformation[];
   errors: Record<string, string>;
 };
 
 const CommonInformationStep = ({
-  notificationBloquante,
+  blockingNotification,
   onChange,
   informations,
   errors,
@@ -34,14 +34,14 @@ const CommonInformationStep = ({
         />
       );
     })}
-    {notificationBloquante && (
+    {blockingNotification && (
       <StyledAlert variant="primary">
         <Paragraph noMargin>
           <Text variant="primary" fontSize="hsmall" fontWeight="700">
             À noter
           </Text>
           <br />
-          <Html>{notificationBloquante}</Html>
+          <Html>{blockingNotification}</Html>
         </Paragraph>
       </StyledAlert>
     )}

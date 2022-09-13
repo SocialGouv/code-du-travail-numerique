@@ -112,7 +112,7 @@ const createCommonInformationsStore: StoreSlice<
         }))
         .reduce((acc, cur) => ({ ...acc, ...cur }), {});
       let missingArgs: MissingArgs[] = [];
-      let notificationBloquante: string | undefined = undefined;
+      let blockingNotification: string | undefined = undefined;
       try {
         missingArgs = publicodes.setSituation(
           mapToPublicodesSituationForIndemniteLicenciementConventionnel(
@@ -127,15 +127,15 @@ const createCommonInformationsStore: StoreSlice<
         ).missingArgs;
         const notifBloquante = publicodes.getNotificationsBloquantes();
         if (notifBloquante.length > 0) {
-          notificationBloquante = notifBloquante[0].description;
+          blockingNotification = notifBloquante[0].description;
         }
       } catch (e) {
         console.error(e);
       }
       set(
         produce((state: CommonInformationsStoreSlice) => {
-          state.informationsData.input.notificationBloquante =
-            notificationBloquante;
+          state.informationsData.input.blockingNotification =
+            blockingNotification;
         })
       );
       const newQuestions = missingArgs

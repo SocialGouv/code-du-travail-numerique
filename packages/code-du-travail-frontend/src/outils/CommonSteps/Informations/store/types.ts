@@ -12,7 +12,7 @@ export type CommonInformationsStoreInput = {
   isStepHidden: boolean;
   isStepSalaryHidden: boolean;
   hasNoMissingQuestions: boolean;
-  notificationBloquante?: string;
+  blockingNotification?: string;
 };
 
 export type CommonInformationsStoreError = {

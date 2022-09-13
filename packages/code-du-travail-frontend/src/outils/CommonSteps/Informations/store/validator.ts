@@ -16,7 +16,7 @@ export const validateStep = (state: CommonInformationsStoreInput) => {
 
   let errorState: CommonInformationsStoreError = {
     errorInformations,
-    errorNotificationBloquante: state.notificationBloquante
+    errorNotificationBloquante: state.blockingNotification
       ? "Impossible de continuer la simulation avec ce paramètre"
       : undefined,
   };

@@ -6,17 +6,17 @@ const InformationsStep = (): JSX.Element => {
     errorInformations,
     onInformationsChange,
     informations,
-    notificationBloquante,
+    blockingNotification,
   } = useIndemniteLicenciementStore((state) => ({
     errorInformations: state.informationsData.error.errorInformations,
     onInformationsChange: state.informationsFunction.onInformationsChange,
     informations: state.informationsData.input.publicodesInformations,
-    notificationBloquante: state.informationsData.input.notificationBloquante,
+    blockingNotification: state.informationsData.input.blockingNotification,
   }));
 
   return (
     <CommonInformationStep
-      notificationBloquante={notificationBloquante}
+      blockingNotification={blockingNotification}
       errors={errorInformations}
       onChange={onInformationsChange}
       informations={informations}
