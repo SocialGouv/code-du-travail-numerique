@@ -25,9 +25,11 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . notification bloquante:
   applicable si: type de licenciement = 'Oui'
-  type: notification-bloquante
+  type: notification
   description: <strong>L’indemnité légale de licenciement n’est pas dûe en cas de suspension, modification ou au retrait de l'agrément de l'assistant maternel.</strong> Lorsqu’il est invoqué, le motif doit apparaître précisément dans le courrier. Reportez vous à la lettre de notification de licenciement.
   valeur: oui
+  cdtn:
+    bloquante: oui
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres:
   applicable si: type de licenciement = 'Non'

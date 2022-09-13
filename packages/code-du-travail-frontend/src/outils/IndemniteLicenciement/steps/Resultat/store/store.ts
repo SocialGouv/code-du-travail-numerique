@@ -148,7 +148,7 @@ const createResultStore: StoreSlice<
         ).result;
 
         agreementReferences = publicodes.getReferences(
-          "indemnité de licenciement . résultat conventionnel"
+          "résultat conventionnel"
         );
 
         agreementFormula = getAgreementFormula(

@@ -34,7 +34,7 @@ describe("Vérification des références juridiques pour la CC 3127", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
           "indemnité de licenciement": "oui",
         }),
-        "indemnité de licenciement . résultat conventionnel"
+        "résultat conventionnel"
       );
 
       expect(result).toHaveLength(expectedReferences.length);
