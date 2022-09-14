@@ -1,6 +1,7 @@
 import {
   Formula,
   IndemniteLicenciementPublicodes,
+  Notification,
   PublicodesIndemniteLicenciementResult,
   References,
 } from "@socialgouv/modeles-social";
@@ -18,6 +19,8 @@ export type ResultStoreInput = {
   agreementReferences?: References[];
   isAgreementBetter: boolean;
   agreementInformations?: AgreementInformation[];
+  agreementNotifications?: Notification[];
+  agreementHasNoLegalIndemnity?: boolean;
 };
 
 export type ResultStoreError = {};

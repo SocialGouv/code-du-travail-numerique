@@ -1,4 +1,5 @@
 import { Criteria, Situation } from "@cdt/data";
+import { AgreementSupportInfo } from "./Agreement/types";
 
 const createValuesMatcher = (values: Criteria) => (item: Situation) => {
   function swallowEqual(a: Criteria, b: Criteria) {
@@ -146,9 +147,7 @@ export const getFormProps = ({ key, criteria, pastQuestions }) =>
         .map(([key]) => key)
     );
 
-export const getSupportedCC = (
-  data: Situation[]
-): { fullySupported: boolean; idcc: number }[] => {
+export const getSupportedCC = (data: Situation[]): AgreementSupportInfo[] => {
   const uniqueIDCC = [
     ...new Map(data.map((item) => [item.idcc, item])).values(),
   ];
@@ -157,6 +156,7 @@ export const getSupportedCC = (
     return {
       fullySupported: true,
       idcc: item.idcc,
+      withoutLegal: false,
     };
   });
 };

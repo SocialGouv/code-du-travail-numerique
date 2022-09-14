@@ -20,6 +20,7 @@ type Props = {
   isAgreementBetter: boolean;
   hasSameSalary: boolean;
   salary?: string;
+  isStepSalaryHidden: boolean;
 };
 
 export default function FilledElements(props: Props) {
@@ -114,66 +115,68 @@ export default function FilledElements(props: Props) {
             )}
           </ul>
         </li>
-        <li>
-          <strong>Salaire de référence (Sref)</strong>
-          <ul>
-            <li>
-              Alternance temps plein / temps partiel&nbsp;:&nbsp;
-              {props.hasTempsPartiel ? "Oui" : "Non"}
-            </li>
-            <li>
-              Salaire mensuel brut identique durant les 12 derniers mois
-              précédant la notification du licenciement&nbsp;:&nbsp;
-              {props.hasSameSalary ? "Oui" : "Non"}
-            </li>
-            {props.hasSameSalary && props.salary && (
+        {!props.isStepSalaryHidden && (
+          <li>
+            <strong>Salaire de référence (Sref)</strong>
+            <ul>
               <li>
-                Salaire mensuel brut (primes et avantages en nature
-                inclus)&nbsp;:&nbsp;
-                {props.salary} €
+                Alternance temps plein / temps partiel&nbsp;:&nbsp;
+                {props.hasTempsPartiel ? "Oui" : "Non"}
               </li>
-            )}
-            {props.salaryPeriods.length > 0 && !props.hasSameSalary && (
               <li>
-                Salaires mensuels bruts perçus au cours des 12 mois précédant la
-                notification du licenciement&nbsp;:&nbsp;
-                <StyledFilledElementTable>
-                  <thead>
-                    <tr>
-                      <th>Mois</th>
-                      <th>
-                        Salaires
-                        <br />
-                        <StyledFilledElementSpan>
-                          (primes et avantages en nature inclus)
-                        </StyledFilledElementSpan>
-                      </th>
-                      <th>
-                        Dont primes
-                        <br />
-                        <StyledFilledElementSpan>
-                          (au cours des 3 derniers mois)
-                        </StyledFilledElementSpan>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {props.salaryPeriods.map((salary, index) => (
-                      <tr key={"salary-" + index}>
-                        <td>{salary.month}</td>
-                        <td>{salary.value} €</td>
-                        <td>
-                          {salary.prime} {salary.prime !== undefined && "€"}
-                        </td>
+                Salaire mensuel brut identique durant les 12 derniers mois
+                précédant la notification du licenciement&nbsp;:&nbsp;
+                {props.hasSameSalary ? "Oui" : "Non"}
+              </li>
+              {props.hasSameSalary && props.salary && (
+                <li>
+                  Salaire mensuel brut (primes et avantages en nature
+                  inclus)&nbsp;:&nbsp;
+                  {props.salary} €
+                </li>
+              )}
+              {props.salaryPeriods.length > 0 && !props.hasSameSalary && (
+                <li>
+                  Salaires mensuels bruts perçus au cours des 12 mois précédant
+                  la notification du licenciement&nbsp;:&nbsp;
+                  <StyledFilledElementTable>
+                    <thead>
+                      <tr>
+                        <th>Mois</th>
+                        <th>
+                          Salaires
+                          <br />
+                          <StyledFilledElementSpan>
+                            (primes et avantages en nature inclus)
+                          </StyledFilledElementSpan>
+                        </th>
+                        <th>
+                          Dont primes
+                          <br />
+                          <StyledFilledElementSpan>
+                            (au cours des 3 derniers mois)
+                          </StyledFilledElementSpan>
+                        </th>
                       </tr>
-                    ))}
-                  </tbody>
-                </StyledFilledElementTable>
-              </li>
-            )}
-            {props.agreementRefSalaryInfo}
-          </ul>
-        </li>
+                    </thead>
+                    <tbody>
+                      {props.salaryPeriods.map((salary, index) => (
+                        <tr key={"salary-" + index}>
+                          <td>{salary.month}</td>
+                          <td>{salary.value} €</td>
+                          <td>
+                            {salary.prime} {salary.prime !== undefined && "€"}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </StyledFilledElementTable>
+                </li>
+              )}
+              {props.agreementRefSalaryInfo}
+            </ul>
+          </li>
+        )}
       </ul>
     </>
   );

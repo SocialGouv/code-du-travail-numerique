@@ -40,6 +40,9 @@ const StepResult = () => {
     agreementInformations,
     salary,
     hasSameSalary,
+    agreementNotifications,
+    agreementHasNoLegalIndemnity,
+    isStepSalaryHidden,
   } = useIndemniteLicenciementStore((state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -65,11 +68,23 @@ const StepResult = () => {
     agreementInformations: state.resultData.input.agreementInformations,
     salary: state.salairesData.input.salary,
     hasSameSalary: state.salairesData.input.hasSameSalary,
+    agreementNotifications: state.resultData.input.agreementNotifications,
+    agreementHasNoLegalIndemnity:
+      state.resultData.input.agreementHasNoLegalIndemnity,
+    isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
   }));
 
   React.useEffect(() => {
     getPublicodesResult();
   }, []);
+
+  const supportedCc = React.useMemo(
+    () =>
+      getSupportedCcIndemniteLicenciement().find(
+        (v) => v.fullySupported && v.idcc === agreement?.num
+      ),
+    [agreement]
+  );
 
   return (
     <>
@@ -79,6 +94,7 @@ const StepResult = () => {
             ? publicodesAgreementResult?.value?.toString() ?? ""
             : publicodesLegalResult.value?.toString() ?? ""
         }
+        notifications={agreementNotifications}
       />
       <ShowDetails>
         <FilledElements
@@ -106,6 +122,7 @@ const StepResult = () => {
               />
             )
           }
+          isStepSalaryHidden={isStepSalaryHidden}
         />
         <FormulaInterpreter
           formula={
@@ -114,34 +131,26 @@ const StepResult = () => {
               : legalFormula
           }
         />
-        <DecryptResult
-          hasSelectedAgreement={route !== "none"}
-          isAgreementSupported={
-            getSupportedCcIndemniteLicenciement().find(
-              (v) => v.fullySupported && v.idcc === agreement?.num
-            )
-              ? true
-              : false
-          }
-          legalResult={publicodesLegalResult.value?.toString() ?? ""}
-          agreementResult={publicodesAgreementResult?.value?.toString()}
-        />
+        {!agreementHasNoLegalIndemnity && (
+          <DecryptResult
+            hasSelectedAgreement={route !== "none"}
+            isAgreementSupported={supportedCc ? true : false}
+            legalResult={publicodesLegalResult.value?.toString() ?? ""}
+            agreementResult={publicodesAgreementResult?.value?.toString()}
+          />
+        )}
         <PubliReferences
           references={
             isAgreementBetter ? agreementReferences ?? [] : legalReferences
           }
         />
       </ShowDetails>
-      <AgreementInfo
-        hasSelectedAgreement={route !== "none"}
-        isAgreementSupported={
-          getSupportedCcIndemniteLicenciement().find(
-            (v) => v.fullySupported && v.idcc === agreement?.num
-          )
-            ? true
-            : false
-        }
-      />
+      {!agreementHasNoLegalIndemnity && (
+        <AgreementInfo
+          hasSelectedAgreement={route !== "none"}
+          isAgreementSupported={supportedCc ? true : false}
+        />
+      )}
       <ForMoreInfo />
     </>
   );

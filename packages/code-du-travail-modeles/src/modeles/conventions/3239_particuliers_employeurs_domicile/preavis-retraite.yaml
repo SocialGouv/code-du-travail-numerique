@@ -1,11 +1,3 @@
-contrat salarié . convention collective . particuliers employeurs et emploi à domicile:
-  description: Secteur des particuliers employeurs et de l'emploi à domicile
-  applicable si: convention collective = 'IDCC3239'
-  valeur: oui
-  cdtn:
-    idcc: 3239
-    préavis-retraite: true
-
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . catégorie professionnelle:
   titre: Catégorie professionnelle
   question: Quelle est la catégorie professionnelle du salarié ?

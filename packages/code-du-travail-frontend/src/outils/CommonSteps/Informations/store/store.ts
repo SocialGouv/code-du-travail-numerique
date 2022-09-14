@@ -21,6 +21,7 @@ const initialState: CommonInformationsStoreData = {
   input: {
     publicodesInformations: [],
     isStepHidden: true,
+    isStepSalaryHidden: false,
     hasNoMissingQuestions: false,
   },
   error: {
@@ -111,6 +112,7 @@ const createCommonInformationsStore: StoreSlice<
         }))
         .reduce((acc, cur) => ({ ...acc, ...cur }), {});
       let missingArgs: MissingArgs[] = [];
+      let blockingNotification: string | undefined = undefined;
       try {
         missingArgs = publicodes.setSituation(
           mapToPublicodesSituationForIndemniteLicenciementConventionnel(
@@ -123,9 +125,19 @@ const createCommonInformationsStore: StoreSlice<
           ),
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         ).missingArgs;
+        const notifBloquante = publicodes.getNotificationsBloquantes();
+        if (notifBloquante.length > 0) {
+          blockingNotification = notifBloquante[0].description;
+        }
       } catch (e) {
         console.error(e);
       }
+      set(
+        produce((state: CommonInformationsStoreSlice) => {
+          state.informationsData.input.blockingNotification =
+            blockingNotification;
+        })
+      );
       const newQuestions = missingArgs
         .sort((a, b) => b.indice - a.indice)
         .map((arg, index) => ({
@@ -163,6 +175,38 @@ const createCommonInformationsStore: StoreSlice<
         missingArgs.length === 0
       );
     },
+    onSetStepHidden: () => {
+      try {
+        const publicodes = get().informationsData.publicodes!;
+        const publicodesInformations =
+          get().informationsData.input.publicodesInformations;
+        const agreement = get().agreementData.input.agreement!;
+        const rules = publicodesInformations
+          .map((v) => ({
+            [v.question.rule.nom]: v.info,
+          }))
+          .reduce((acc, cur) => ({ ...acc, ...cur }), {});
+        const isStepSalaryHidden = publicodes.setSituation(
+          mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+            agreement.num,
+            0,
+            0,
+            0,
+            0,
+            rules
+          ),
+          "contrat salarié . indemnité de licenciement . étape salaire désactivée"
+        ).result.value as boolean;
+        set(
+          produce((state: CommonInformationsStoreSlice) => {
+            state.informationsData.input.isStepSalaryHidden =
+              isStepSalaryHidden;
+          })
+        );
+      } catch (e) {
+        console.error(e);
+      }
+    },
     onValidateStep: () => {
       const { isValid, errorState } = validateStep(
         get().informationsData.input
@@ -175,6 +219,7 @@ const createCommonInformationsStore: StoreSlice<
           state.informationsData.error = errorState;
         })
       );
+      get().informationsFunction.onSetStepHidden();
       return isValid;
     },
   },
@@ -183,7 +228,7 @@ const createCommonInformationsStore: StoreSlice<
 const applyGenericValidation = (
   get: GetState<CommonInformationsStoreSlice>,
   set: SetState<CommonInformationsStoreSlice>,
-  paramName: keyof CommonInformationsStoreInput,
+  paramName: string,
   value: any
 ) => {
   if (get().informationsData.hasBeenSubmit) {

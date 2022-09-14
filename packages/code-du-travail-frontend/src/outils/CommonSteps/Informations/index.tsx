@@ -5,16 +5,17 @@ import styled from "styled-components";
 import { PubliQuestion } from "./components";
 import { MatomoActionEvent } from "../../../lib";
 import { PublicodesInformation } from "./store";
+import Html from "../../../common/Html";
 
 export type InformationStepProps = {
-  alertError?: string;
+  blockingNotification?: string;
   onChange: (key: string, value: unknown) => void;
   informations: PublicodesInformation[];
   errors: Record<string, string>;
 };
 
 const CommonInformationStep = ({
-  alertError,
+  blockingNotification,
   onChange,
   informations,
   errors,
@@ -33,14 +34,14 @@ const CommonInformationStep = ({
         />
       );
     })}
-    {alertError && (
+    {blockingNotification && (
       <StyledAlert variant="primary">
         <Paragraph noMargin>
           <Text variant="primary" fontSize="hsmall" fontWeight="700">
             À noter
           </Text>
           <br />
-          {alertError}
+          <Html>{blockingNotification}</Html>
         </Paragraph>
       </StyledAlert>
     )}

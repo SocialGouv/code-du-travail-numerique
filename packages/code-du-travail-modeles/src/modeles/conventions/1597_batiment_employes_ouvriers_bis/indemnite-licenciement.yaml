@@ -11,8 +11,8 @@ contrat salarié . convention collective . batiment ouvriers employés bis . ind
 
 contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age plus de 55 ans:
   applicable si: age = 55
-  titre: Le salarié aura plus de 55 ans avant la fin de son préavis
-  question: Le salarié aura-t-il plus de 55 ans avant la fin de son préavis (que le préavis soit effectué ou non) ?
+  titre: Le salarié aura plus de 56 ans avant la fin de son préavis
+  question: Le salarié aura-t-il 56 ans avant la fin de son préavis (que le préavis soit effectué ou non) ?
   cdtn:
     type: liste
     valeurs:

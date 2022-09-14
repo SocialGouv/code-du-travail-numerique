@@ -5,6 +5,7 @@ const getSupportedCcIndemniteLicenciement = (): AgreementSupportInfo[] =>
   supportedCcn.map((item) => ({
     fullySupported: item.indemniteLicenciement,
     idcc: item.idcc,
+    withoutLegal: item.indemniteLicenciementSansLegal,
   }));
 
 export default getSupportedCcIndemniteLicenciement;

@@ -10,12 +10,14 @@ export type PublicodesInformation = {
 export type CommonInformationsStoreInput = {
   publicodesInformations: Array<PublicodesInformation>;
   isStepHidden: boolean;
+  isStepSalaryHidden: boolean;
   hasNoMissingQuestions: boolean;
+  blockingNotification?: string;
 };
 
 export type CommonInformationsStoreError = {
   errorInformations: Record<string, string>;
-  alertError?: string;
+  errorNotificationBloquante?: string;
 };
 
 export type CommonInformationsStoreData = {
@@ -29,6 +31,7 @@ export type CommonInformationsStoreFn = {
   onInformationsChange: (questionKey: string, value: string) => void;
   generatePublicodesQuestions: () => void;
   onValidateStep: () => boolean;
+  onSetStepHidden: () => void;
 };
 
 export type CommonInformationsStoreSlice = {
