@@ -63,6 +63,7 @@ export type EditorialContent = {
   metaDescription: string;
   sectionDisplayMode: SectionDisplayMode;
   intro?: string;
+  displayTitle?: string;
   references: Reference[];
   title: string;
   title_vector?: number[];
