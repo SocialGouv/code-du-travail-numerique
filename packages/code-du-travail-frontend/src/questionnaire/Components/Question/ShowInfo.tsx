@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Button, Section, icons } from "@socialgouv/cdtn-ui";
-import { pushClickViewPageInfo } from "../../tracking";
+import { trackClickViewPageInfo } from "../../tracking";
 import { useRouter } from "next/router";
 const { DirectionRight } = icons;
 
@@ -11,7 +11,7 @@ export const ShowInfo = ({ slug }: { slug: string }) => {
       <Button
         variant="primary"
         onClick={() => {
-          pushClickViewPageInfo();
+          trackClickViewPageInfo();
           router.push(`/information/${slug}`);
         }}
       >

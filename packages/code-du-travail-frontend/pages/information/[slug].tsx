@@ -16,7 +16,7 @@ import {
 import { ContentBlocks } from "../../src/information/Components";
 import {
   QuestionnaireWrapper,
-  pushClickInfoPageTab,
+  trackClickInfoPageTab,
 } from "../../src/questionnaire";
 
 const Information = ({
@@ -59,7 +59,7 @@ const Information = ({
           onSelect={(index) => {
             if (dismissalProcess && contents) {
               const content = contents[index];
-              pushClickInfoPageTab(content.name);
+              trackClickInfoPageTab(content.name);
             }
           }}
         />

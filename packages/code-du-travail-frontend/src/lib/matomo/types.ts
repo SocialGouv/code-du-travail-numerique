@@ -10,16 +10,6 @@ export enum MatomoBaseAction {
   VIEW = "view",
 }
 
-export enum MatomoDismissalProcessAction {
-  AGREEMENT_SEARCH_HELP = "cc_search_help",
-  ENTERPRISE_SELECT = "enterprise_select",
-  AGREEMENT_SELECT_P1 = "cc_select_p1",
-  AGREEMENT_SELECT_P2 = "cc_select_p2",
-  ENTERPRISE_SEARCH = "enterprise_search",
-  AGREEMENT_SEARCH = "cc_search",
-  AGREEMENT_SEARCH_TYPE_OF_USERS = "cc_search_type_of_users",
-}
-
 export enum MatomoSearchAgreementCategory {
   AGREEMENT_SEARCH_HELP = "cc_search_help",
   ENTERPRISE_SELECT = "enterprise_select",

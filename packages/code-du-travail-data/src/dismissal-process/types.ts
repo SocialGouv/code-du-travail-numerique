@@ -1,6 +1,6 @@
 export type QuestionnaireResponse = {
   text: string;
-  name: string;
+  code: string;
   info?: string;
   description?: string;
   slug?: string;
@@ -11,7 +11,7 @@ export type QuestionnaireResponse = {
 
 export type QuestionnaireQuestion = {
   text: string;
-  name: string;
+  code: string;
   responseStatement?: string;
   info?: string;
   description?: string;
