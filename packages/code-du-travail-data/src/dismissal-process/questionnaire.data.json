@@ -53,9 +53,9 @@
                         "name": "licenciement_economique",
                         "info": "Licenciement dont le motif n’est pas lié à votre personne mais à l’activité économique de l’entreprise. Par exemple : difficultés économiques, réorganisation de l’entreprise, cessation d’activité de l’entreprise...",
                         "question": {
-                            "code": "nombre_de_salariés_licenciés",
-                            "text": "Combien de salariés sont concernés par ce licenciement ?",
-                            "responseStatement": "Le nombre de salariés concernés par ce licenciement est",
+                            "text": "Combien de personnes sont concernées par ce licenciement ?",
+                            "name": "nombre_de_salariés_licenciés",
+                            "responseStatement": "Le nombre de personnes concernées par ce licenciement est",
                             "responses": [
                                 {
                                     "text": "Seulement vous",
@@ -390,7 +390,7 @@
                                 {
                                     "text": "Une inaptitude du salarié constatée par le médecin du travail",
                                     "name": "licenciement_inaptitude",
-                                    "statement": "Vous êtes concerné par un licenciement suite à une inaptitude du salarié constatée par le médecin du travail",
+                                    "statement": "Vous êtes concerné par un licenciement suite à une inaptitude constatée par le médecin du travail",
                                     "slug": "licenciement-personnel-pour-inaptitude"
                                 },
                                 {
@@ -411,7 +411,8 @@
                         "question": {
                             "name": "nombre_de_salariés_licenciés",
                             "text": "Combien de salariés sont concernés par ce licenciement ?",
-                            "responseStatement": "Le nombre de salariés concernés par ce licenciement est",
+                            "name": "nombre_de_salariés_licenciés",
+                            "responseStatement": "Le nombre de personnes concernées par ce licenciement est",
                             "responses": [
                                 {
                                     "text": "1 seul salarié",
