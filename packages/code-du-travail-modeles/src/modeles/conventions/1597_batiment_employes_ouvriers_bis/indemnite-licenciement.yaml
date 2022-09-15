@@ -83,7 +83,7 @@ contrat salarié . convention collective . batiment ouvriers employés bis . ind
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5
   valeur: oui
 
-contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . plus de 55 ans . entre 2 et 5 ans d'ancienneté . indemnité de licenciement:
+contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . plus de 55 ans . entre 2 et 5 ans d'ancienneté . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - un dixième du salaire de reference
@@ -99,7 +99,7 @@ contrat salarié . convention collective . batiment ouvriers employés bis . ind
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5
   valeur: oui
 
-contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . plus de 55 ans . plus de 5 ans d'ancienneté . indemnité de licenciement:
+contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . plus de 55 ans . plus de 5 ans d'ancienneté . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - trois vingtième du salaire de reference
@@ -128,7 +128,7 @@ contrat salarié . convention collective . batiment ouvriers employés bis . ind
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5
   valeur: oui
 
-contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . moins de 55 ans . entre 2 et 5 ans d'ancienneté . indemnité de licenciement:
+contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . moins de 55 ans . entre 2 et 5 ans d'ancienneté . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - un dixième du salaire de reference
@@ -143,7 +143,7 @@ contrat salarié . convention collective . batiment ouvriers employés bis . ind
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5
   valeur: oui
 
-contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . moins de 55 ans . plus de 5 ans d'ancienneté . indemnité de licenciement:
+contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . moins de 55 ans . plus de 5 ans d'ancienneté . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - trois vingtième du salaire de reference
@@ -156,7 +156,7 @@ contrat salarié . convention collective . batiment ouvriers employés bis . ind
     Article 10.5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776860
 
 # Inférieur à 2 ans d'ancienneté
-contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . indemnité de licenciement:
+contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 2
   valeur: 0
