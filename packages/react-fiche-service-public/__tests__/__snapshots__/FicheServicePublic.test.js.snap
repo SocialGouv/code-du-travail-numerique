@@ -301,6 +301,17 @@ exports[`<FicheServicePublic /> should render 1`] = `
 
 .c24 {
   padding-right: 1rem;
+  height: auto;
+  display: block;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin: inherit;
 }
 
 .c26 {

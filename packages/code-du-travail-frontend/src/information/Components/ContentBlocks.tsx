@@ -75,9 +75,9 @@ export const ContentBlocks = ({
                             <ListLink
                               item={{
                                 ...item,
-                                title: item.displayTitle ?? item.title,
                                 icon: icons[item?.icon],
                               }}
+                              centerTitle
                             ></ListLink>
                           </ListLinkContainer>
                         </div>

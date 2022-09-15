@@ -92,6 +92,17 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
 
 .c4 {
   padding-right: 1rem;
+  height: auto;
+  display: block;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin: inherit;
 }
 
 .c5 {
@@ -243,6 +254,17 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
 
 .c3 {
   padding-right: 1rem;
+  height: auto;
+  display: block;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin: inherit;
 }
 
 .c4 {
@@ -367,6 +389,17 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
 
 .c3 {
   padding-right: 1rem;
+  height: auto;
+  display: block;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin: inherit;
 }
 
 .c4 {
@@ -507,6 +540,17 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
 
 .c2 {
   padding-right: 1rem;
+  height: auto;
+  display: block;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin: inherit;
 }
 
 .c3 {
@@ -629,6 +673,17 @@ exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
 
 .c2 {
   padding-right: 1rem;
+  height: auto;
+  display: block;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin: inherit;
 }
 
 .c4 {

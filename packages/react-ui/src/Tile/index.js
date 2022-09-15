@@ -19,10 +19,13 @@ export const Tile = React.forwardRef(
       title,
       wide,
       titleTagType,
+      centerTitle,
       ...props
     },
     ref
   ) => {
+    console.log("centerTitle", props.centerTitle);
+    console.log("custom", props.custom);
     return (
       <StyledTile
         as={props.href ? "a" : "button"}
@@ -38,7 +41,7 @@ export const Tile = React.forwardRef(
               <Icon />
             </IconWrapper>
           )}
-          <HeadingWrapper custom>
+          <HeadingWrapper custom centerTitle={centerTitle}>
             {subtitle && (
               <StyledSubtitle noTitle={!title}>{subtitle}</StyledSubtitle>
             )}
@@ -54,6 +57,7 @@ export const Tile = React.forwardRef(
 Tile.displayName = "Tile";
 
 Tile.propTypes = {
+  centerTitle: PropTypes.bool,
   children: PropTypes.node,
   custom: PropTypes.bool,
   href: PropTypes.string,
@@ -66,6 +70,7 @@ Tile.propTypes = {
 };
 
 Tile.defaultProps = {
+  centerTitle: false,
   custom: false,
   href: undefined,
   icon: null,
@@ -137,6 +142,14 @@ const TopWrapper = styled.div`
 
 const HeadingWrapper = styled.div`
   padding-right: ${({ custom }) => (custom ? spacings.small : "0")};
+  height: ${({ centerTitle }) => {
+    console.log("c", centerTitle);
+    return centerTitle ? "45px" : "auto";
+  }};
+  display: ${({ centerTitle }) => (centerTitle ? "flex" : "block")};
+  align-items: ${({ centerTitle }) => (centerTitle ? "center" : "start")};
+  justify-content: ${({ centerTitle }) => (centerTitle ? "center" : "start")};
+  margin: ${({ centerTitle }) => (centerTitle ? "0" : "inherit")};
 `;
 
 const StyledSubtitle = styled(Subtitle)`
