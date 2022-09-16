@@ -13,15 +13,21 @@ type Props = {
   target?: string;
   rel?: string;
   className?: string;
+  centerTitle?: boolean;
 };
 
 export const CallToActionTile = React.forwardRef<HTMLAnchorElement, Props>(
   function _CallToActionTile(
-    { action = "", noCustom, children, ...props }: Props,
+    { action = "", noCustom, children, centerTitle, ...props }: Props,
     ref: ForwardedRef<any>
   ): JSX.Element {
     return (
-      <StyledTile custom={!noCustom} {...props} ref={ref}>
+      <StyledTile
+        custom={!noCustom}
+        centerTitle={centerTitle}
+        {...props}
+        ref={ref}
+      >
         <TileChildren>
           {children}
           <StyledDiv hasContentAbove={Boolean(children)}>

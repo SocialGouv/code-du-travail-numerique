@@ -73,7 +73,11 @@ export const ContentBlocks = ({
                         <div key={`${index}-${ContentIndex}`}>
                           <ListLinkContainer>
                             <ListLink
-                              item={{ ...item, icon: icons[item?.icon] }}
+                              item={{
+                                ...item,
+                                icon: icons[item?.icon],
+                              }}
+                              centerTitle
                             ></ListLink>
                           </ListLinkContainer>
                         </div>
@@ -161,7 +165,7 @@ const ListLinkSquareTile = styled.div`
   grid-template-columns: repeat(2, 1fr);
   & > div {
     width: 284px;
-    height: 318px;
+    height: 348px;
     display: flex;
     margin: 12px auto;
   }
@@ -173,6 +177,13 @@ const ListLinkSquareTile = styled.div`
   a {
     div:nth-child(3) {
       margin-top: 0;
+      p {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
   }
 `;
