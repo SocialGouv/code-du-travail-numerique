@@ -33,12 +33,12 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
 contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . jusqu'à dix ans ou moins:
   valeur:
     le minimum de:
-      - contrat salarié . indemnité de licenciement . ancienneté en année
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
       - 10 an
 
 contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . au delà de dix ans:
   somme:
-    - contrat salarié . indemnité de licenciement . ancienneté en année
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
     - (- 10 an)
   plancher: 0 an
 
@@ -58,7 +58,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
 
 contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . au delà de quarante ans:
   somme:
-    - contrat salarié . indemnité de licenciement . ancienneté en année
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
     - (- 40 an)
   plancher: 0 an
 
@@ -68,14 +68,14 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
 contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . dix ans ou moins:
   valeur:
     produit:
-      assiette: contrat salarié . indemnité de licenciement . salaire de référence * jusqu'à dix ans ou moins
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * jusqu'à dix ans ou moins
       facteur: 1 / 4
   unité: €
 
 contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . plus de dix ans:
   valeur:
     produit:
-      assiette: contrat salarié . indemnité de licenciement . salaire de référence * au delà de dix ans
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * au delà de dix ans
       facteur: 1 / 3
   unité: €
 
@@ -158,7 +158,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
 #  (1/4 * Sref * A1) + (1/3 * Sref * A2)
 #  A1 : Ancienneté de 10 ans ou moins
 #  A2 : Ancienneté au delà de 10 ans
-contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . employés:
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . employés résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     une de ces conditions:
@@ -170,10 +170,10 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
           - catégorie professionnelle . licenciement économique = 'Oui'
           - catégorie professionnelle . licenciement économique . age <= 50 ans
   variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté en année >= 8 mois
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
       alors:
         somme:
-          - contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . dix ans ou moins
+          - dix ans ou moins
           - plus de dix ans
     - sinon: 0
   unité: €
@@ -187,7 +187,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
 #  (1/4 * Sref * A1) + (1/3 * Sref * A2)
 #  A1 : Ancienneté de 10 ans ou moins
 #  A2 : Ancienneté au delà de 10 ans
-contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . agent:
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . agent résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     une de ces conditions:
@@ -199,7 +199,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
           - catégorie professionnelle . licenciement économique = 'Oui'
           - catégorie professionnelle . licenciement économique . age <= 50 ans
   variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté en année >= 8 mois
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
       alors:
         somme:
           - dix ans ou moins
@@ -218,7 +218,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
 # A2: Années de présence, pour la tranche de 10 à 20 ans
 # A3: Années de présence, pour la tranche au-delà de 20 ans
 # A4 : Années de présence, pour la tranche au-delà de 40 ans
-contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres:
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     une de ces conditions:
@@ -230,7 +230,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
           - catégorie professionnelle . licenciement économique = 'Oui'
           - catégorie professionnelle . licenciement économique . age < 50 ans
   variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté en année >= 8 mois
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
       alors:
         somme:
           - trois dixième du salaire de référence jusqu'à 10 ans
@@ -251,7 +251,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
 #  (1/4 * Sref * A1) + (1/3 * Sref * A2) + 20%
 #  A1 : Ancienneté de 10 ans ou moins
 #  A2 : Ancienneté au delà de 10 ans
-contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . employés avec 20 pourcent:
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . employés avec 20 pourcent résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
@@ -259,9 +259,11 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
       - catégorie professionnelle . licenciement économique = 'Oui'
       - catégorie professionnelle . licenciement économique . age > 50 ans
   variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté en année >= 8 mois
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
       alors:
         somme:
+          - dix ans ou moins
+          - plus de dix ans
           - dix ans ou moins avec 20 pourcent
           - plus de dix ans avec 20 pourcent
     - sinon: 0
@@ -276,7 +278,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
 #  (1/4 * Sref * A1) + (1/3 * Sref * A2) + 20%
 #  A1 : Ancienneté de 10 ans ou moins
 #  A2 : Ancienneté au delà de 10 ans
-contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . agent avec 20 pourcent:
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . agent avec 20 pourcent résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
@@ -284,9 +286,11 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
       - catégorie professionnelle . licenciement économique = 'Oui'
       - catégorie professionnelle . licenciement économique . age > 50 ans
   variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté en année >= 8 mois
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
       alors:
         somme:
+          - dix ans ou moins
+          - plus de dix ans
           - dix ans ou moins avec 20 pourcent
           - plus de dix ans avec 20 pourcent
     - sinon: 0
@@ -303,7 +307,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
 # A2: Années de présence, pour la tranche de 10 à 20 ans
 # A3: Années de présence, pour la tranche au-delà de 20 ans
 # A4 : Années de présence, pour la tranche au-delà de 40 ans
-contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres avec 20 pourcent:
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres avec 20 pourcent résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
@@ -311,9 +315,13 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
       - catégorie professionnelle . licenciement économique = 'Oui'
       - catégorie professionnelle . licenciement économique . age >= 50 ans
   variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté en année >= 8 mois
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
       alors:
         somme:
+          - trois dixième du salaire de référence jusqu'à 10 ans
+          - quatre dixième du salaire de référence de 10 à 20 ans
+          - cinq dixième du salaire de référence de 20 à 40 ans
+          - un tiers du salaire de référence au delà de quarante ans
           - trois dixième du salaire de référence jusqu'à 10 ans avec 20 pourcent
           - quatre dixième du salaire de référence de 10 à 20 ans avec 20 pourcent
           - cinq dixième du salaire de référence de 20 à 40 ans avec 20 pourcent
