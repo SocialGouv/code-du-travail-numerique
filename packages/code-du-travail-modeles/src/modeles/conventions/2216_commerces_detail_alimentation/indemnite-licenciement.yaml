@@ -173,7 +173,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
     - si: contrat salarié . indemnité de licenciement . ancienneté en année >= 8 mois
       alors:
         somme:
-          - dix ans ou moins
+          - contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . dix ans ou moins
           - plus de dix ans
     - sinon: 0
   unité: €
