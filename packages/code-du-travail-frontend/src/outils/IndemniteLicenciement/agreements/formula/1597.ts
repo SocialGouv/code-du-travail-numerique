@@ -23,7 +23,7 @@ export class AgreementFormula1597 implements AgreementFormula {
           v.question.rule.nom ===
           "contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age"
       )
-      ?.info?.slice(1, -1);
+      ?.info as string
     if (year && parseInt(year) > 55) {
       hasMoreThan55Years = true;
     } else {
