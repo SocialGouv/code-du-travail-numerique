@@ -31,73 +31,85 @@ export class Formula2216
     const explanations = [];
     const year = round(seniority) < 2 ? "an" : "ans";
     if (
-      (!isEconomicFiring &&
-        (category === CatPro2216.employes || category === CatPro2216.agents)) ||
-      (isEconomicFiring &&
-        (category === CatPro2216.employes || category === CatPro2216.agents) &&
-        age <= 50)
+      (category === CatPro2216.employes || category === CatPro2216.agents) &&
+      seniority >= 8 / 12
     ) {
-      return new FormulaLegal().computeFormula({
+      const res = new FormulaLegal().computeFormula({
         isForInaptitude: false,
         refSalary,
         seniority,
       });
-    } else if (
-      isEconomicFiring &&
-      (category === CatPro2216.employes || category === CatPro2216.agents) &&
-      age > 50 &&
-      seniority >= 8 / 12
-    ) {
-      if (seniority <= 10) {
-        formula = `1 / 4 * Sref * A`;
-        explanations.push(
-          `A : Ancienneté totale (${round(seniority)} ${year})`
-        );
-      } else {
-        formula = `(1 / 4 * Sref * A1 + 1 / 3 * Sref * A2) + ( 20% * (1 / 4 * Sref * A1 + 1 / 3 * Sref * A2))`;
-        explanations.push(`A1 : Ancienneté de 10 ans ou moins (10 ans)`);
-        const yearAfterDiff = round(seniority - 10) < 2 ? "an" : "ans";
-        explanations.push(
-          `A2 : Ancienneté au delà de 10 ans (${round(
-            seniority - 10
-          )} ${yearAfterDiff})`
-        );
+      if (isEconomicFiring && age > 50 && seniority <= 10) {
+        res.formula += ` + ( 20% * (1 / 4 * Sref * A) )`;
+        explanations.push(`20% : majoration pour motif économique`);
+      } else if (isEconomicFiring && age > 50 && seniority > 10) {
+        res.formula += ` + ( 20% * (1 / 4 * Sref * A) + 20% * (1 / 3 * Sref * A) )`;
+        explanations.push(`20% : majoration pour motif économique`);
       }
-      explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
+      return res;
     } else if (
       category === CatPro2216.cadres &&
       seniority >= 8 / 12 &&
-      seniority <= 5 &&
-      !isEconomicFiring
+      seniority <= 5
     ) {
       formula = `1 / 4 * Sref * A`;
       explanations.push(`A : Ancienneté totale (${round(seniority)} ${year})`);
       explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
+      if (isEconomicFiring && age >= 50) {
+        formula += ` + ( 20% * (1 / 4 * Sref * A))`;
+        explanations.push(`20% : majoration pour motif économique`);
+      }
     } else if (
       category === CatPro2216.cadres &&
       seniority > 5 &&
-      seniority < 40 &&
-      !isEconomicFiring
+      seniority <= 40
     ) {
-      formula = `( 3 / 10 * Sref * A1 ) + ( 4 / 10 * Sref * A2 ) +( 5/10 * Sref * A3 )`;
-      const yearAfterDiff = round(seniority - 10) < 2 ? "an" : "ans";
+      formula = `( 3 / 10 * Sref * A1 ) + ( 4 / 10 * Sref * A2 ) + ( 5 / 10 * Sref * A3 )`;
+      const maxSeniority1 = Math.min(Math.abs(round(seniority - 10)), 10);
+      const yearAfterDiff = maxSeniority1 < 2 ? "an" : "ans";
       explanations.push(
-        `A1: Années de présence pour la tranche jusqu'à 10 ans (${round(
-          seniority - 10
-        )} ${yearAfterDiff})`
+        `A1: Années de présence pour la tranche jusqu'à 10 ans (${maxSeniority1} ${yearAfterDiff})`
       );
-      const yearAfterDiff2 = round(seniority - 20) < 2 ? "an" : "ans";
+      const maxSeniority2 = Math.min(Math.abs(round(seniority - 20)), 20);
+      const yearAfterDiff2 = maxSeniority2 < 2 ? "an" : "ans";
       explanations.push(
-        `A2: Années de présence pour la tranche de 10 à 20 ans (${round(
-          seniority - 20
-        )} ${yearAfterDiff2})`
+        `A2: Années de présence pour la tranche de 10 à 20 ans (${maxSeniority2} ${yearAfterDiff2})`
       );
-      const yearAfterDiff3 = round(seniority - 30) < 2 ? "an" : "ans";
+      const maxSeniority3 = Math.abs(round(seniority - 20));
+      const yearAfterDiff3 = maxSeniority3 < 2 ? "an" : "ans";
       explanations.push(
-        `A3: Années de présence pour la tranche au-delà de 20 ans (${round(
-          seniority - 30
-        )} ${yearAfterDiff3})`
+        `A3: Années de présence pour la tranche au-delà de 20 ans (${maxSeniority3} ${yearAfterDiff3})`
       );
+      if (isEconomicFiring && age >= 50) {
+        formula += ` + ( 20% * ( 3 / 10 * Sref * A1 ) + 20% * ( 4 / 10 * Sref * A2 ) + 20% * ( 5 / 10 * Sref * A3 ))`;
+        explanations.push(`20% : majoration pour motif économique`);
+      }
+    } else if (category === CatPro2216.cadres && seniority > 40) {
+      formula = `( 3 / 10 * Sref * A1 ) + ( 4 / 10 * Sref * A2 ) + ( 5 / 10 * Sref * A3 )`;
+      const maxSeniority1 = Math.min(Math.abs(round(seniority - 10)), 10);
+      const yearAfterDiff = maxSeniority1 < 2 ? "an" : "ans";
+      explanations.push(
+        `A1: Années de présence pour la tranche jusqu'à 10 ans (${maxSeniority1} ${yearAfterDiff})`
+      );
+      const maxSeniority2 = Math.min(Math.abs(round(seniority - 20)), 20);
+      const yearAfterDiff2 = maxSeniority2 < 2 ? "an" : "ans";
+      explanations.push(
+        `A2: Années de présence pour la tranche de 10 à 20 ans (${maxSeniority2} ${yearAfterDiff2})`
+      );
+      const maxSeniority3 = Math.min(Math.abs(round(seniority - 40)), 20);
+      const yearAfterDiff3 = maxSeniority3 < 2 ? "an" : "ans";
+      explanations.push(
+        `A3: Années de présence pour la tranche au-delà de 20 ans (${maxSeniority3} ${yearAfterDiff3})`
+      );
+      const maxSeniority4 = Math.abs(round(seniority - 40));
+      const yearAfterDiff4 = maxSeniority4 < 2 ? "an" : "ans";
+      explanations.push(
+        `A4: Années de présence pour la tranche au-delà de 40 ans (${maxSeniority4} ${yearAfterDiff4})`
+      );
+      if (isEconomicFiring && age >= 50) {
+        formula += ` + ( 20% * ( 3 / 10 * Sref * A1 ) + 20% * ( 4 / 10 * Sref * A2 ) + 20% * ( 5 / 10 * Sref * A3 ) + 20% * ( 5 / 10 * Sref * A4 ))`;
+        explanations.push(`20% : majoration pour motif économique`);
+      }
     }
     return { explanations, formula };
   }
