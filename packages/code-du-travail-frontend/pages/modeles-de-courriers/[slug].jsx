@@ -49,6 +49,7 @@ class ModeleCourrier extends React.Component {
           fileUrl,
           html,
           title,
+          meta_title,
         },
         relatedItems,
         status,
@@ -63,7 +64,7 @@ class ModeleCourrier extends React.Component {
     return (
       <Layout>
         <Metas
-          title={`Modèle de document :  ${title}`}
+          title={`Modèle de document :  ${meta_title}`}
           description={
             metaDescription ||
             description.slice(0, description.indexOf(" ", 150)) + "…"
