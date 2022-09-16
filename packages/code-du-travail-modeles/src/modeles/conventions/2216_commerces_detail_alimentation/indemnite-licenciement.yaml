@@ -161,9 +161,14 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
 contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . employés:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
-    toutes ces conditions:
-      - catégorie professionnelle = 'Employés et ouvriers, personnel de livraison'
-      - catégorie professionnelle . licenciement économique = 'Non'
+    une de ces conditions:
+      - toutes ces conditions:
+          - catégorie professionnelle = 'Employés et ouvriers, personnel de livraison'
+          - catégorie professionnelle . licenciement économique = 'Non'
+      - toutes ces conditions:
+          - catégorie professionnelle = 'Employés et ouvriers, personnel de livraison'
+          - catégorie professionnelle . licenciement économique = 'Oui'
+          - catégorie professionnelle . licenciement économique . age <= 50 ans
   variations:
     - si: contrat salarié . indemnité de licenciement . ancienneté en année >= 8 mois
       alors:
@@ -185,9 +190,14 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
 contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . agent:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
-    toutes ces conditions:
-      - catégorie professionnelle = 'Agents de maîtrise et techniciens'
-      - catégorie professionnelle . licenciement économique = 'Non'
+    une de ces conditions:
+      - toutes ces conditions:
+          - catégorie professionnelle = 'Agents de maîtrise et techniciens'
+          - catégorie professionnelle . licenciement économique = 'Non'
+      - toutes ces conditions:
+          - catégorie professionnelle = 'Agents de maîtrise et techniciens'
+          - catégorie professionnelle . licenciement économique = 'Oui'
+          - catégorie professionnelle . licenciement économique . age <= 50 ans
   variations:
     - si: contrat salarié . indemnité de licenciement . ancienneté en année >= 8 mois
       alors:
@@ -211,9 +221,14 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
 contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
-    toutes ces conditions:
-      - catégorie professionnelle = 'Cadres'
-      - catégorie professionnelle . licenciement économique = 'Non'
+    une de ces conditions:
+      - toutes ces conditions:
+          - catégorie professionnelle = 'Cadres'
+          - catégorie professionnelle . licenciement économique = 'Non'
+      - toutes ces conditions:
+          - catégorie professionnelle = 'Cadres'
+          - catégorie professionnelle . licenciement économique = 'Oui'
+          - catégorie professionnelle . licenciement économique . age < 50 ans
   variations:
     - si: contrat salarié . indemnité de licenciement . ancienneté en année >= 8 mois
       alors:
