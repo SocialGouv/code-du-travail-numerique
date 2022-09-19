@@ -150,6 +150,22 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
       facteur: 20 / 100
   unité: €
 
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . trois facteurs avec plafond:
+  valeur:
+    somme:
+      - trois dixième du salaire de référence jusqu'à 10 ans
+      - quatre dixième du salaire de référence de 10 à 20 ans
+      - cinq dixième du salaire de référence de 20 à 40 ans
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
+  unité: €
+
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . vingt pourcent du trois facteurs avec plafond:
+  valeur:
+    produit:
+      assiette: trois facteurs avec plafond
+      facteur: 20 / 100
+  unité: €
+
 # Résultat conventionnel
 
 ## Basique
@@ -233,9 +249,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
     - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
       alors:
         somme:
-          - trois dixième du salaire de référence jusqu'à 10 ans
-          - quatre dixième du salaire de référence de 10 à 20 ans
-          - cinq dixième du salaire de référence de 20 à 40 ans
+          - trois facteurs avec plafond
           - un tiers du salaire de référence au delà de quarante ans
     - sinon: 0
   unité: €
@@ -318,13 +332,9 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
     - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
       alors:
         somme:
-          - trois dixième du salaire de référence jusqu'à 10 ans
-          - quatre dixième du salaire de référence de 10 à 20 ans
-          - cinq dixième du salaire de référence de 20 à 40 ans
+          - trois facteurs avec plafond
           - un tiers du salaire de référence au delà de quarante ans
-          - trois dixième du salaire de référence jusqu'à 10 ans avec 20 pourcent
-          - quatre dixième du salaire de référence de 10 à 20 ans avec 20 pourcent
-          - cinq dixième du salaire de référence de 20 à 40 ans avec 20 pourcent
+          - vingt pourcent du trois facteurs avec plafond
           - un tiers du salaire de référence au delà de quarante ans avec 20 pourcent
     - sinon: 0
   unité: €

@@ -42,9 +42,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 2216", () => {
       ${CatPro2216.cadres}   | ${false}         | ${50} | ${22}     | ${2000} | ${16000}
       ${CatPro2216.cadres}   | ${true}          | ${50} | ${22}     | ${2000} | ${19200}
       ${CatPro2216.cadres}   | ${true}          | ${51} | ${22}     | ${2000} | ${19200}
-      ${CatPro2216.cadres}   | ${false}         | ${50} | ${44}     | ${2000} | ${36666.67}
-      ${CatPro2216.cadres}   | ${true}          | ${50} | ${44}     | ${2000} | ${44000}
-      ${CatPro2216.cadres}   | ${true}          | ${51} | ${44}     | ${2000} | ${44000}
+      ${CatPro2216.cadres}   | ${false}         | ${50} | ${44}     | ${2000} | ${26666.67}
+      ${CatPro2216.cadres}   | ${true}          | ${50} | ${44}     | ${2000} | ${34000}
+      ${CatPro2216.cadres}   | ${true}          | ${51} | ${44}     | ${2000} | ${34000}
       ${CatPro2216.employes} | ${false}         | ${45} | ${0.5}    | ${2500} | ${0}
       ${CatPro2216.employes} | ${false}         | ${45} | ${0.67}   | ${2500} | ${418.75}
       ${CatPro2216.employes} | ${false}         | ${45} | ${10}     | ${2500} | ${6250}
@@ -64,15 +64,15 @@ describe("Indemnité conventionnel de licenciement pour la CC 2216", () => {
       ${CatPro2216.cadres}   | ${false}         | ${45} | ${6}      | ${2500} | ${4500}
       ${CatPro2216.cadres}   | ${false}         | ${45} | ${15}     | ${2500} | ${12500}
       ${CatPro2216.cadres}   | ${false}         | ${45} | ${22}     | ${2500} | ${20000}
-      ${CatPro2216.cadres}   | ${false}         | ${45} | ${38}     | ${2500} | ${40000}
-      ${CatPro2216.cadres}   | ${false}         | ${45} | ${40}     | ${2500} | ${42500}
-      ${CatPro2216.cadres}   | ${false}         | ${45} | ${41}     | ${2500} | ${43333.33}
+      ${CatPro2216.cadres}   | ${false}         | ${45} | ${38}     | ${2500} | ${30000}
+      ${CatPro2216.cadres}   | ${false}         | ${45} | ${40}     | ${2500} | ${30000}
+      ${CatPro2216.cadres}   | ${false}         | ${45} | ${41}     | ${2500} | ${30833.33}
       ${CatPro2216.cadres}   | ${true}          | ${33} | ${5}      | ${2500} | ${3750}
       ${CatPro2216.cadres}   | ${true}          | ${40} | ${15}     | ${2500} | ${12500}
       ${CatPro2216.cadres}   | ${true}          | ${50} | ${22}     | ${2500} | ${24000}
-      ${CatPro2216.cadres}   | ${true}          | ${58} | ${38}     | ${2500} | ${48000}
-      ${CatPro2216.cadres}   | ${true}          | ${55} | ${40}     | ${2500} | ${51000}
-      ${CatPro2216.cadres}   | ${true}          | ${50} | ${41}     | ${2500} | ${52000}
+      ${CatPro2216.cadres}   | ${true}          | ${58} | ${38}     | ${2500} | ${38000}
+      ${CatPro2216.cadres}   | ${true}          | ${55} | ${40}     | ${2500} | ${38500}
+      ${CatPro2216.cadres}   | ${true}          | ${50} | ${41}     | ${2500} | ${39500}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, catégorie $category => $expectedCompensation €",
       ({
