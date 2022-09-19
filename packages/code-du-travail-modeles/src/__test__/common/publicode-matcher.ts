@@ -51,7 +51,7 @@ expect.extend({
         pass: false,
       };
     }
-    const validCdtnType = ["oui-non", "liste", "entier"];
+    const validCdtnType = ["oui-non", "liste", "entier", "date"];
     return {
       message: () =>
         `Type ${type} on ${rule.nom} is not valid. Valid types are ${validCdtnType}`,

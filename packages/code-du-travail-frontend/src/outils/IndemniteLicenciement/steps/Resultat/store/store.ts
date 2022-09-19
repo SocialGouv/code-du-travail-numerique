@@ -132,7 +132,6 @@ const createResultStore: StoreSlice<
           `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
           get as GetState<MainStore>
         );
-
         publicodesSituationConventionnel = publicodes.setSituation(
           mapToPublicodesSituationForIndemniteLicenciementConventionnel(
             agreement.num,
@@ -151,7 +150,7 @@ const createResultStore: StoreSlice<
 
         agreementFormula = getAgreementFormula(
           `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
-          agreementSeniority.value,
+          agreementSeniority,
           agreementRefSalary,
           get as GetState<MainStore>
         );

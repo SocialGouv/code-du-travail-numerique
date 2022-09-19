@@ -1,4 +1,5 @@
 import type { SupportedCcIndemniteLicenciement } from "..";
+import type { CC0016SeniorityProps } from "./16_transports_routiers";
 import type { LegalSeniorityProps } from "./legal";
 import type { MotifKeys } from "./motif-keys";
 
@@ -20,8 +21,8 @@ export interface ISeniority<T extends SupportedCcIndemniteLicenciement> {
 }
 
 export type SeniorityProps<T> =
-  T extends SupportedCcIndemniteLicenciement.IDCC2511
-    ? LegalSeniorityProps
+  T extends SupportedCcIndemniteLicenciement.IDCC0016
+    ? CC0016SeniorityProps
     : LegalSeniorityProps;
 
 export type SeniorityResult = {

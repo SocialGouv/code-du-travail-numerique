@@ -5,3 +5,4 @@ contrat salarié . convention collective . transports routiers:
   cdtn:
     idcc: 16
     préavis-retraite: true
+    indemnité-licenciement: true
