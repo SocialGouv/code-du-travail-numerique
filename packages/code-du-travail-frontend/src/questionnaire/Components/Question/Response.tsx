@@ -7,7 +7,7 @@ import { Tooltip } from "../../../common/Tooltip";
 import { trackClickHelp } from "../../tracking";
 
 export const Response = ({
-  response: { text, description, info, code },
+  response: { text, description, info, trackingName },
   index,
 }: {
   response: QuestionnaireResponse;
@@ -32,7 +32,7 @@ export const Response = ({
               onChange={(opened) => {
                 setOpenedTooltip(opened);
                 if (opened) {
-                  trackClickHelp(code);
+                  trackClickHelp(trackingName);
                 }
               }}
             ></Tooltip>

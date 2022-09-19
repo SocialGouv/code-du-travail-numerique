@@ -24,7 +24,7 @@ export const Question = () => {
             onChange={(opened) => {
               setOpenedTooltip(opened);
               if (opened) {
-                trackClickHelp(currentQuestion.code);
+                trackClickHelp(currentQuestion.trackingName);
               }
             }}
           />

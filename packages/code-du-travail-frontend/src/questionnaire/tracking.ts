@@ -14,30 +14,30 @@ export enum MatomoDismissalProcessAction {
 const questionnaireTrackingName = "comprendre_sa_procedure_de_licenciement";
 const infoPageTrackingName = "procedures_licenciement";
 
-export const trackViewQuestion = (trackingCode: string) => {
+export const trackViewQuestion = (trackingName: string) => {
   matopush([
     MatomoBaseEvent.TRACK_EVENT,
     MatomoBaseEvent.OUTIL,
     questionnaireTrackingName,
-    `${MatomoBaseAction.VIEW}_question_${trackingCode}`,
+    `${MatomoBaseAction.VIEW}_question_${trackingName}`,
   ]);
 };
 
-export const trackSelectResponse = (trackingCode: string) => {
+export const trackSelectResponse = (trackingName: string) => {
   matopush([
     MatomoBaseEvent.TRACK_EVENT,
     MatomoBaseEvent.OUTIL,
     questionnaireTrackingName,
-    `${MatomoBaseAction.SELECT}_${trackingCode}`,
+    `${MatomoBaseAction.SELECT}_${trackingName}`,
   ]);
 };
 
-export const trackClickHelp = (trackingCode: string) => {
+export const trackClickHelp = (trackingName: string) => {
   matopush([
     MatomoBaseEvent.TRACK_EVENT,
     MatomoBaseEvent.OUTIL,
     questionnaireTrackingName,
-    `${MatomoBaseAction.CLICK}_help_${trackingCode}`,
+    `${MatomoBaseAction.CLICK}_help_${trackingName}`,
   ]);
 };
 
@@ -50,11 +50,11 @@ export const trackClickViewPageInfo = () => {
   ]);
 };
 
-export const trackClickInfoPageTab = (trackingCode: string) => {
+export const trackClickInfoPageTab = (trackingName: string) => {
   matopush([
     MatomoBaseEvent.TRACK_EVENT,
     MatomoBaseEvent.PAGE_INFORMATION,
     infoPageTrackingName,
-    `${MatomoBaseAction.CLICK}_onglet_${trackingCode}`,
+    `${MatomoBaseAction.CLICK}_onglet_${trackingName}`,
   ]);
 };

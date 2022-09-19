@@ -24,8 +24,6 @@ export const Tile = React.forwardRef(
     },
     ref
   ) => {
-    console.log("centerTitle", props.centerTitle);
-    console.log("custom", props.custom);
     return (
       <StyledTile
         as={props.href ? "a" : "button"}
@@ -142,10 +140,7 @@ const TopWrapper = styled.div`
 
 const HeadingWrapper = styled.div`
   padding-right: ${({ custom }) => (custom ? spacings.small : "0")};
-  height: ${({ centerTitle }) => {
-    console.log("c", centerTitle);
-    return centerTitle ? "45px" : "auto";
-  }};
+  height: ${({ centerTitle }) => (centerTitle ? "45px" : "auto")};
   display: ${({ centerTitle }) => (centerTitle ? "flex" : "block")};
   align-items: ${({ centerTitle }) => (centerTitle ? "center" : "start")};
   justify-content: ${({ centerTitle }) => (centerTitle ? "center" : "start")};

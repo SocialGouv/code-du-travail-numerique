@@ -79,9 +79,9 @@ const createStore = (name: string) =>
         const currentQuestion = lastResponse.question;
         const text = getResponseStatement(currentQuestionOld, index);
         const previousResponses = previousResponsesOld.concat({ index, text });
-        trackSelectResponse(lastResponse.code);
+        trackSelectResponse(lastResponse.trackingName);
         if (currentQuestion) {
-          trackViewQuestion(currentQuestion.code);
+          trackViewQuestion(currentQuestion.trackingName);
         }
         set({ previousResponses, currentQuestion, lastResponse });
       },
@@ -95,7 +95,7 @@ const createStore = (name: string) =>
           previousResponses
         );
         if (currentQuestion) {
-          trackViewQuestion(currentQuestion.code);
+          trackViewQuestion(currentQuestion.trackingName);
         }
         set({ previousResponses, currentQuestion, lastResponse });
       },
