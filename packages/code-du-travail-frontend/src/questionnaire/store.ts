@@ -11,6 +11,7 @@ import {
   slugSummaryRecursive,
 } from "./service";
 import { SlugResponses } from "./type";
+import { trackSelectResponse, trackViewQuestion } from "./tracking";
 
 export type Store = {
   questionTree?: QuestionnaireQuestion;
@@ -78,6 +79,10 @@ const createStore = (name: string) =>
         const currentQuestion = lastResponse.question;
         const text = getResponseStatement(currentQuestionOld, index);
         const previousResponses = previousResponsesOld.concat({ index, text });
+        trackSelectResponse(lastResponse.trackingName);
+        if (currentQuestion) {
+          trackViewQuestion(currentQuestion.trackingName);
+        }
         set({ previousResponses, currentQuestion, lastResponse });
       },
       goTo: (index) => {
@@ -89,6 +94,9 @@ const createStore = (name: string) =>
           data,
           previousResponses
         );
+        if (currentQuestion) {
+          trackViewQuestion(currentQuestion.trackingName);
+        }
         set({ previousResponses, currentQuestion, lastResponse });
       },
       getSlug: () => {

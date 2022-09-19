@@ -1,5 +1,6 @@
 export type QuestionnaireResponse = {
   text: string;
+  trackingName: string;
   info?: string;
   description?: string;
   slug?: string;
@@ -10,6 +11,7 @@ export type QuestionnaireResponse = {
 
 export type QuestionnaireQuestion = {
   text: string;
+  trackingName: string;
   responseStatement?: string;
   info?: string;
   description?: string;
