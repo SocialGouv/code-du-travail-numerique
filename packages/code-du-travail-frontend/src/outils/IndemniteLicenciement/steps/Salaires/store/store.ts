@@ -48,7 +48,8 @@ const createSalairesStore: StoreSlice<
         ),
         dateEntree: ancienneteInput.dateEntree ?? "",
         dateNotification: ancienneteInput.dateNotification ?? "",
-        absencePeriods: ancienneteInput.absencePeriods,
+        absencePeriods: agreement
+          ? [] : ancienneteInput.absencePeriods,
       });
       const p: SalaryPeriods[] = periods.map((v) => ({
         month: v,
