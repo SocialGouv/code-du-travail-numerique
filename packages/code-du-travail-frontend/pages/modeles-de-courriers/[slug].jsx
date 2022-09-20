@@ -64,7 +64,7 @@ class ModeleCourrier extends React.Component {
     return (
       <Layout>
         <Metas
-          title={`Modèle de document :  ${meta_title}`}
+          title={`Modèle de document :  ${meta_title ?? title}`}
           description={
             metaDescription ||
             description.slice(0, description.indexOf(" ", 150)) + "…"
