@@ -30,9 +30,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 2216", () => {
       ${CatPro2216.cadres}   | ${false}         | ${50} | ${0}      | ${2000} | ${0}
       ${CatPro2216.cadres}   | ${true}          | ${50} | ${0}      | ${2000} | ${0}
       ${CatPro2216.cadres}   | ${true}          | ${51} | ${0}      | ${2000} | ${0}
-      ${CatPro2216.cadres}   | ${false}         | ${50} | ${8 / 12} | ${2000} | ${400}
-      ${CatPro2216.cadres}   | ${true}          | ${50} | ${8 / 12} | ${2000} | ${480}
-      ${CatPro2216.cadres}   | ${true}          | ${51} | ${8 / 12} | ${2000} | ${480}
+      ${CatPro2216.cadres}   | ${false}         | ${50} | ${8 / 12} | ${2000} | ${333.33}
+      ${CatPro2216.cadres}   | ${true}          | ${50} | ${8 / 12} | ${2000} | ${400}
+      ${CatPro2216.cadres}   | ${true}          | ${51} | ${8 / 12} | ${2000} | ${400}
       ${CatPro2216.cadres}   | ${false}         | ${50} | ${8}      | ${2000} | ${4800}
       ${CatPro2216.cadres}   | ${true}          | ${50} | ${8}      | ${2000} | ${5760}
       ${CatPro2216.cadres}   | ${true}          | ${51} | ${8}      | ${2000} | ${5760}
@@ -59,7 +59,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 2216", () => {
       ${CatPro2216.agents}   | ${true}          | ${50} | ${20}     | ${2500} | ${14583.33}
       ${CatPro2216.agents}   | ${true}          | ${51} | ${20}     | ${2500} | ${17500}
       ${CatPro2216.agents}   | ${true}          | ${53} | ${8}      | ${2500} | ${6000}
-      ${CatPro2216.cadres}   | ${false}         | ${45} | ${0.91}   | ${2500} | ${682.5}
+      ${CatPro2216.cadres}   | ${false}         | ${45} | ${0.91}   | ${2500} | ${568.75}
       ${CatPro2216.cadres}   | ${false}         | ${45} | ${5}      | ${2500} | ${3750}
       ${CatPro2216.cadres}   | ${false}         | ${45} | ${6}      | ${2500} | ${4500}
       ${CatPro2216.cadres}   | ${false}         | ${45} | ${15}     | ${2500} | ${12500}
