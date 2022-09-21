@@ -49,7 +49,7 @@ const createAncienneteStore: StoreSlice<
       applyGenericValidation(get, set, "hasAbsenceProlonge", value);
     },
     onValidateStepAnciennete: () => {
-      const { isValid, errorState } = validateStep(get().ancienneteData.input);
+      const { isValid, errorState } = validateStep(get().ancienneteData.input, get().agreementData.input.agreement);
 
       set(
         produce((state: AncienneteStoreSlice) => {
@@ -74,7 +74,8 @@ const applyGenericValidation = (
       draft.ancienneteData.input[paramName as string] = value;
     });
     const { isValid, errorState } = validateStep(
-      nextState.ancienneteData.input
+      nextState.ancienneteData.input,
+      get().agreementData.input.agreement
     );
     set(
       produce((state: AncienneteStoreSlice) => {

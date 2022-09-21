@@ -38,18 +38,16 @@ export const createAgreement1516StoreSalaires: StoreSlice<
       const agreementSalaryPeriod =
         get().agreement1516Data.input.salaryPeriods ?? [];
       const periods = computeSalaryPeriods({
-        motifs: getMotifs(SupportedCcIndemniteLicenciement.IDCC1516),
         dateEntree: ancienneteInput.dateNotification ?? "",
         dateNotification: ancienneteInput.dateSortie ?? "",
-        absencePeriods: [],
       });
       const period: SalaryPeriods[] = periods.map((v) =>
         Object.assign(
           { month: v },
           withDefaultSalaryPeriod &&
-            defaultSalaryPeriod[0].value && {
-              value: defaultSalaryPeriod[0].value,
-            },
+          defaultSalaryPeriod[0].value && {
+            value: defaultSalaryPeriod[0].value,
+          },
           withDefaultSalaryPeriod && {
             prime: 0,
           }
