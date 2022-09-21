@@ -29,9 +29,9 @@ export class Seniority2216
           item.durationInMonth === undefined ||
           !m ||
           (item.motif.key === MotifKeys.maladieNonPro &&
-            item.durationInMonth > 12) ||
+            item.durationInMonth <= 12) ||
           (item.motif.key === MotifKeys.accidentTrajet &&
-            item.durationInMonth > 12)
+            item.durationInMonth <= 12)
         ) {
           return total;
         }
