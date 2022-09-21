@@ -1,28 +1,41 @@
 import styled from "styled-components";
-import { icons, Button } from "@socialgouv/cdtn-ui";
+import { icons, Button, theme } from "@socialgouv/cdtn-ui";
 const { Check: CheckIcon } = icons;
+const { breakpoints } = theme;
 
 export const SummaryItem = ({ data, onClick }) => {
   return (
     <SummaryItemWrapper>
-      <StyledIcon>
-        <CheckIcon />
-      </StyledIcon>
-      <StyledText>{data}</StyledText>
-      <Button variant="flat" xsmall onClick={onClick}>
+      <SummaryText>
+        <StyledIcon>
+          <CheckIcon width="18" height="18" />
+        </StyledIcon>
+        <StyledText>{data}</StyledText>
+      </SummaryText>
+      <StyledButton variant="flat" xsmall onClick={onClick}>
         Modifier
-      </Button>
+      </StyledButton>
     </SummaryItemWrapper>
   );
 };
 
 const SummaryItemWrapper = styled.li`
   list-style-type: none;
+  margin-bottom: 11px;
+  @media (min-width: ${breakpoints.mobile}) {
+    display: flex;
+    flex-direction: row;
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-direction: column;
+  }
+`;
+
+const SummaryText = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 11px;
+  justify-content: flex-start;
+  flex: 1;
 `;
 
 const StyledIcon = styled.div`
@@ -35,9 +48,18 @@ const StyledIcon = styled.div`
   border-radius: 12px;
   margin-left: 32px;
   font-size: 10px;
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-left: 6px 0;
+  }
 `;
 
 const StyledText = styled.div`
-  flex: 1;
-  margin-left: 15px;
+  margin: 0 15px;
+  font-size: 16px;
+`;
+
+const StyledButton = styled(Button)`
+  @media (max-width: ${breakpoints.mobile}) {
+    margin: 3px 32px 0;
+  }
 `;

@@ -1,10 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { InputRadio } from "@socialgouv/cdtn-ui";
+import { InputRadio, theme } from "@socialgouv/cdtn-ui";
 import { QuestionnaireResponse } from "@cdt/data";
 import { useStore } from "../../store";
 import { Tooltip } from "../../../common/Tooltip";
 import { trackClickHelp } from "../../tracking";
+const { breakpoints } = theme;
 
 export const Response = ({
   response: { text, description, info, trackingName },
@@ -58,6 +59,9 @@ const ResponseInputWrapper = styled.div`
 
 const TooltipWrapper = styled.div`
   margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const InformationWrapper = styled.div`
