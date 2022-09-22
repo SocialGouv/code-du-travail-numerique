@@ -63,7 +63,7 @@ class ModeleCourrier extends React.Component {
     const [, extension] = filename.split(/\.([a-z]{2,4})$/);
     const filesizeFormated = Math.round((filesize / 1000) * 100) / 100;
     const category = `Modèle ${
-      type === "fichier" ? "à télécharger" : `de ${type}`
+      type !== "fichier" ? `de ${type}` : "à télécharger"
     }`;
     return (
       <Layout>
