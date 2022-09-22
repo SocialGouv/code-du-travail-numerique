@@ -1,19 +1,23 @@
 import styled from "styled-components";
 import { icons, Button, theme } from "@socialgouv/cdtn-ui";
-const { Check: CheckIcon } = icons;
+const { Check: CheckIcon, ArrowTurn: UpdateIcon } = icons;
+import useWindowDimensions from "../../../common/WindowDimension";
+
 const { breakpoints } = theme;
 
 export const SummaryItem = ({ data, onClick }) => {
+  const { width } = useWindowDimensions();
   return (
     <SummaryItemWrapper>
-      <SummaryText>
-        <StyledIcon>
-          <CheckIcon width="18" height="18" />
-        </StyledIcon>
-        <StyledText>{data}</StyledText>
-      </SummaryText>
+      <StyledIcon>
+        <CheckIcon width="18" height="18" />
+      </StyledIcon>
+      <StyledText>{data}</StyledText>
       <StyledButton variant="flat" xsmall onClick={onClick}>
-        Modifier
+        {width > breakpoints.intMobile ? "Modifier" : ""}
+        <UpdateIconWrapper>
+          <UpdateIcon width="18" height="18" />
+        </UpdateIconWrapper>
       </StyledButton>
     </SummaryItemWrapper>
   );
@@ -22,20 +26,8 @@ export const SummaryItem = ({ data, onClick }) => {
 const SummaryItemWrapper = styled.li`
   list-style-type: none;
   margin-bottom: 11px;
-  @media (min-width: ${breakpoints.mobile}) {
-    display: flex;
-    flex-direction: row;
-  }
-  @media (max-width: ${breakpoints.mobile}) {
-    flex-direction: column;
-  }
-`;
-
-const SummaryText = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  flex: 1;
 `;
 
 const StyledIcon = styled.div`
@@ -49,17 +41,25 @@ const StyledIcon = styled.div`
   margin-left: 32px;
   font-size: 10px;
   @media (max-width: ${breakpoints.mobile}) {
-    margin-left: 6px 0;
+    margin-left: 0;
+  }
+`;
+
+const UpdateIconWrapper = styled.div`
+  margin-left: 6px;
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-left: 0;
   }
 `;
 
 const StyledText = styled.div`
   margin: 0 15px;
   font-size: 16px;
+  flex: 1;
 `;
 
 const StyledButton = styled(Button)`
   @media (max-width: ${breakpoints.mobile}) {
-    margin: 3px 32px 0;
+    padding: 0 8px;
   }
 `;

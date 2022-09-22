@@ -48,6 +48,7 @@ export { default as Youth } from "./components/bicolor/Youth.js";
 // Monochrome icons
 export { default as ArrowDown } from "./components/monochrome/ArrowDown";
 export { default as ArrowRight } from "./components/monochrome/ArrowRight";
+export { default as ArrowTurn } from "./components/monochrome/ArrowTurn";
 export { default as Burger } from "./components/monochrome/Burger";
 export { default as Calendar } from "./components/monochrome/Calendar";
 export { default as External } from "./components/monochrome/Calendar";
