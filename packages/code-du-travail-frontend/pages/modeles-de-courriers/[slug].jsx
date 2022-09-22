@@ -75,7 +75,7 @@ class ModeleCourrier extends React.Component {
           }
         />
         <Answer
-          title={title}
+          title={`Modèle - ${title}`}
           relatedItems={relatedItems}
           emptyMessage="Modèle de document introuvable"
           intro={description}
