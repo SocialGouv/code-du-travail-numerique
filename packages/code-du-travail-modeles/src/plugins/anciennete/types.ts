@@ -21,8 +21,8 @@ export interface ISeniority<T extends SupportedCcIndemniteLicenciement> {
 
 export type SeniorityProps<T> =
   T extends SupportedCcIndemniteLicenciement.IDCC2511
-  ? LegalSeniorityProps
-  : LegalSeniorityProps;
+    ? LegalSeniorityProps
+    : LegalSeniorityProps;
 
 export const DISABLE_ABSENCE = [
   "IDCC1090",
