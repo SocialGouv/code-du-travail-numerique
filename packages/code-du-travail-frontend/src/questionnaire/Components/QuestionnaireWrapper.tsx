@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { icons } from "@socialgouv/cdtn-ui";
+import { icons, theme } from "@socialgouv/cdtn-ui";
 import { Questionnaire } from "./Questionnaire";
 import { withStore, Provider } from "../store";
+const { breakpoints } = theme;
 
 const { Gear: GearIcon } = icons;
 
@@ -39,6 +40,9 @@ const Wrapper = styled.div`
   max-width: 862px;
   margin: auto;
   padding: 32px;
+  @media (max-width: ${breakpoints.mobile}) {
+    padding: 12px;
+  }
 `;
 
 const Header = styled.div`

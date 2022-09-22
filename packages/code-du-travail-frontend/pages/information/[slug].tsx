@@ -158,7 +158,7 @@ const { breakpoints, spacings } = theme;
 
 const TabStylesWrapper = styled.div`
   & > div > div > div {
-    overflow-x: initial;
+    overflow-x: auto;
   }
   img {
     max-width: 100%;

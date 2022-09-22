@@ -5,6 +5,8 @@ import { Response } from "./Response";
 import { Tooltip } from "../../../common/Tooltip";
 import { ShowInfo } from "./ShowInfo";
 import { trackClickHelp } from "../../tracking";
+import { theme } from "@socialgouv/cdtn-ui";
+const { breakpoints } = theme;
 
 export const Question = () => {
   const currentQuestion = useStore((state) => state.currentQuestion);
@@ -51,6 +53,9 @@ const QuestionWrapper = styled.div`
   border: 0.5px solid #7598d6;
   margin-left: 36px;
   padding: 14px 18px;
+  @media (max-width: ${breakpoints.mobile}) {
+    margin: 0;
+  }
 `;
 
 const QuestionHeader = styled.div`
