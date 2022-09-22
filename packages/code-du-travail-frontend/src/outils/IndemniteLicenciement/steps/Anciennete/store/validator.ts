@@ -1,7 +1,16 @@
-import { differenceInMonths, format, isAfter } from "date-fns";
+import {
+  differenceInMonths,
+  format,
+  isAfter,
+  isWithinInterval,
+} from "date-fns";
 import { deepEqualObject, isValidDate } from "../../../../../lib";
 import { parse } from "../../../../common/utils";
-import { AncienneteStoreError, AncienneteStoreInput } from "./types";
+import {
+  AncienneteAbsenceStoreError,
+  AncienneteStoreError,
+  AncienneteStoreInput,
+} from "./types";
 import frLocale from "date-fns/locale/fr";
 import { Agreement } from "../../../../../conventions/Search/api/type";
 import { DISABLE_ABSENCE, SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
@@ -96,17 +105,53 @@ export const validateStep = (state: AncienneteStoreInput, agreeement?: Agreement
     errors.errorAbsenceProlonge = undefined;
   }
 
-  if (
-    state.hasAbsenceProlonge === "oui" &&
-    (state.absencePeriods.find((absence) => !absence.durationInMonth) ||
-      state.absencePeriods.find(
-        (absence) => absence.motif.startAt === true && !absence.startedAt
-      ) ||
-      state.absencePeriods.length === 0)
-  ) {
-    errors.errorAbsencePeriods = "Vous devez renseigner tous les champs";
-  } else {
-    errors.errorAbsencePeriods = undefined;
+  // Check all absences
+  if (state.hasAbsenceProlonge === "oui") {
+    const absenceErrors: AncienneteAbsenceStoreError[] =
+      state.absencePeriods.map((item): AncienneteAbsenceStoreError => {
+        if (!item.durationInMonth || (item.motif.startAt && !item.startedAt)) {
+          return {
+            errorDuration: !item.durationInMonth
+              ? "Veuillez saisir la durée de l'absence"
+              : undefined,
+            errorDate:
+              item.motif.startAt && !item.startedAt
+                ? "Veuillez saisir la date de l'absence"
+                : undefined,
+          };
+        }
+        if (
+          item.motif.startAt &&
+          item.startedAt &&
+          state.dateEntree &&
+          state.dateSortie &&
+          !isWithinInterval(parse(item.startedAt), {
+            start: dEntree,
+            end: dSortie,
+          })
+        ) {
+          return {
+            errorDate: `La date de l'absence doit être comprise entre le ${state.dateEntree} et le ${state.dateSortie} (date d'entrée et de sortie de l'entreprise))`,
+          };
+        }
+        return {};
+      });
+    if (absenceErrors.length === 0) {
+      errors.errorAbsencePeriods = {
+        global: "Vous devez renseigner tous les champs",
+      };
+    } else if (
+      absenceErrors.filter(
+        (item) =>
+          item.errorDuration !== undefined || item.errorDate !== undefined
+      ).length > 0
+    ) {
+      errors.errorAbsencePeriods = {
+        absences: absenceErrors,
+      };
+    } else {
+      errors.errorAbsencePeriods = undefined;
+    }
   }
 
   return {

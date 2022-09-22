@@ -90,7 +90,7 @@ describe("<AbsencePeriods />", () => {
       <AbsencePeriods
         onChange={jest.fn()}
         absences={[]}
-        error={"Ceci est une erreur"}
+        error={[{ errorDuration: "Ceci est une erreur" }]}
       />
     );
 
