@@ -428,6 +428,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
 @media (max-width:600px) {
   .c7 {
     font-size: 1.6rem;
+    max-width: 150px;
+    -webkit-flex: none !important;
+    -ms-flex: none !important;
+    flex: none !important;
   }
 }
 
