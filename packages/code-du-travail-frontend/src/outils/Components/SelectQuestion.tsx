@@ -58,9 +58,7 @@ const SelectQuestion = ({
         isTooltipOpen={isTooltipOpen}
         onSwitchTooltip={onSwitchTooltip}
       >
-        <Html as="span" inline>
-          {label}
-        </Html>
+        <Html as="span">{label}</Html>
       </Question>
       {subLabel && <SubLabel>{subLabel}</SubLabel>}
       <StyledSelect

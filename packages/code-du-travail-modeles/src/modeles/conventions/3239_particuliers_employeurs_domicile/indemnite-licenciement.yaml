@@ -18,15 +18,15 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
   valeur: oui
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement:
-  titre: Le licenciement fait suite à la suspension, à la modification ou au retrait de l'agrément de l'assistant maternel
-  question: La rupture du contrat de travail fait-elle suite à la suspension, à la modification ou au retrait de l'agrément de l'assistant maternel ?
+  titre: Le licenciement fait suite à la suspension, à la modification ou retrait de l'agrément de l'assistant maternel
+  question: La rupture du contrat de travail fait-elle suite à la suspension, à la modification ou retrait de l'agrément de l'assistant maternel ?
   cdtn:
     type: oui-non
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . notification bloquante:
   applicable si: type de licenciement = 'Oui'
   type: notification
-  description: L’indemnité de licenciement n’est pas due en cas de suspension, modification ou au retrait de l'agrément de l'assistant maternel.
+  description: L’indemnité de licenciement n’est pas due en cas de suspension, modification ou retrait de l'agrément de l'assistant maternel.
   valeur: oui
   cdtn:
     bloquante: oui

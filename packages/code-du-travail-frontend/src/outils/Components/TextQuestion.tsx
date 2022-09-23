@@ -42,9 +42,7 @@ export default function TextQuestion({
   return (
     <Wrapper>
       <Question required={showRequired} tooltip={tooltip} htmlFor={id}>
-        <Html as="span" inline>
-          {label}
-        </Html>
+        <Html as="span">{label}</Html>
       </Question>
       {smallText && <SmallText>{smallText}</SmallText>}
       {subLabel && <SubLabel>{subLabel}</SubLabel>}

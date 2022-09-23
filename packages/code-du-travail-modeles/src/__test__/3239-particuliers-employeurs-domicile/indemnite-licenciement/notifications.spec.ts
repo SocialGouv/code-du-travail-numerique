@@ -10,7 +10,7 @@ const notification =
   "Si la rupture du contrat de travail a été notifiée avant le 01/01/2022, l’indemnité de licenciement peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2021 c’est la convention collective “Assistants maternels du particulier employeur (IDCC 2395)” qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable depuis le 01/01/2022.";
 
 const blockingNotification =
-  "L’indemnité de licenciement n’est pas due en cas de suspension, modification ou au retrait de l'agrément de l'assistant maternel.";
+  "L’indemnité de licenciement n’est pas due en cas de suspension, modification ou retrait de l'agrément de l'assistant maternel.";
 
 describe("Notification bloquante et non bloquante pour la CC 3239", () => {
   describe("Cas standard pour les salariés du particulier employeur", () => {

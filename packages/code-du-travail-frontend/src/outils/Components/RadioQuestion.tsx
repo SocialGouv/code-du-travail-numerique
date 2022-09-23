@@ -44,9 +44,7 @@ export default function RadioQuestion({
   return (
     <>
       <Question required={showRequired} tooltip={tooltip}>
-        <Html as="span" inline>
-          {label}
-        </Html>
+        <Html as="span">{label}</Html>
       </Question>
       {subLabel && <SubLabel>{subLabel}</SubLabel>}
       <RadioContainer>
