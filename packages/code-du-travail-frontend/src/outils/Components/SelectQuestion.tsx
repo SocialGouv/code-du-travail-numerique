@@ -1,12 +1,13 @@
 import { Select, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
+import Html from "../../common/Html";
 import { InlineError } from "../common/ErrorField";
 import { Question, Tooltip } from "../common/Question";
 
 type Props = {
   name: string;
-  label: string | JSX.Element;
+  label: string;
   subLabel?: string;
   tooltip?: Tooltip;
   options: Record<string, string> | [string, string][];
@@ -57,7 +58,9 @@ const SelectQuestion = ({
         isTooltipOpen={isTooltipOpen}
         onSwitchTooltip={onSwitchTooltip}
       >
-        {label}
+        <Html as="span" inline>
+          {label}
+        </Html>
       </Question>
       {subLabel && <SubLabel>{subLabel}</SubLabel>}
       <StyledSelect

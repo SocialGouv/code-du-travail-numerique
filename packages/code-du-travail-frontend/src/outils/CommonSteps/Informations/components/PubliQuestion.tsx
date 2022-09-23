@@ -9,6 +9,7 @@ import {
 } from "../../../Components";
 import { reverseValues } from "../../../publicodes";
 import { MatomoActionEvent, trackQuestion } from "../../../../lib";
+import { icons } from "@socialgouv/cdtn-ui";
 
 interface Props {
   name: string;
@@ -82,6 +83,20 @@ const PubliQuestion: React.FC<Props> = ({
           onChangeSelectedOption={onChange}
           error={error}
           showRequired
+        />
+      );
+    case RuleType.Montant:
+      return (
+        <TextQuestion
+          label={question}
+          tooltip={tooltip}
+          inputType="number"
+          value={value}
+          onChange={onChange}
+          error={error}
+          id={name}
+          showRequired
+          icon={icons.Euro}
         />
       );
     default:

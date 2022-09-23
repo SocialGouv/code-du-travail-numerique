@@ -3,6 +3,7 @@ import React, { FunctionComponent } from "react";
 
 import styled from "styled-components";
 import xss from "xss";
+import Html from "../../common/Html";
 import { InlineError } from "../common/ErrorField";
 import { Tooltip, Question } from "../common/Question";
 import { SmallText } from "../common/stepStyles";
@@ -38,7 +39,9 @@ export default function TextQuestion({
   return (
     <Wrapper>
       <Question required={showRequired} tooltip={tooltip} htmlFor={id}>
-        {label}
+        <Html as="span" inline>
+          {label}
+        </Html>
       </Question>
       {smallText && <SmallText>{smallText}</SmallText>}
       <QuestionWrapper>

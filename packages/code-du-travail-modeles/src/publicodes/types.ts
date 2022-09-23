@@ -17,6 +17,7 @@ export enum RuleType {
   Liste = "liste",
   OuiNon = "oui-non",
   SalaireMensuel = "salaire-mensuel",
+  Montant = "montant",
 }
 
 export interface RuleListe {

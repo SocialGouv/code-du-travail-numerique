@@ -45,10 +45,10 @@ const initialState: ResultStoreData = {
 const createResultStore: StoreSlice<
   ResultStoreSlice,
   AncienneteStoreSlice &
-    ContratTravailStoreSlice &
-    SalairesStoreSlice &
-    CommonAgreementStoreSlice &
-    CommonInformationsStoreSlice
+  ContratTravailStoreSlice &
+  SalairesStoreSlice &
+  CommonAgreementStoreSlice &
+  CommonInformationsStoreSlice
 > = (set, get, publicodesRules) => ({
   resultData: {
     ...initialState,
@@ -125,6 +125,7 @@ const createResultStore: StoreSlice<
               v.info && {
                 label: v.question.rule.titre,
                 value: v.info,
+                unit: v.question.rule.unité
               }
           )
           .filter((v) => v !== "") as AgreementInformation[];
@@ -142,6 +143,7 @@ const createResultStore: StoreSlice<
             agreementRefSalary,
             legalSeniority,
             refSalary,
+            get().ancienneteData.input.dateNotification!,
             infos
           ),
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
@@ -167,7 +169,7 @@ const createResultStore: StoreSlice<
           (publicodesSituationConventionnel.value !== null &&
             publicodesSituationLegal.value !== null &&
             publicodesSituationConventionnel.value >
-              publicodesSituationLegal.value)
+            publicodesSituationLegal.value)
         ) {
           isAgreementBetter = true;
         }

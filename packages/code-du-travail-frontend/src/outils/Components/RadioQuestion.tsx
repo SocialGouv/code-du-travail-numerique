@@ -1,6 +1,7 @@
 import { InputRadio } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
+import Html from "../../common/Html";
 
 import { InlineError } from "../common/ErrorField";
 import { Question, Tooltip } from "../common/Question";
@@ -40,7 +41,9 @@ export default function RadioQuestion({
   return (
     <>
       <Question required={showRequired} tooltip={tooltip}>
-        {label}
+        <Html as="span" inline>
+          {label}
+        </Html>
       </Question>
       <RadioContainer>
         {questions.map((question, index) => (

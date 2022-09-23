@@ -66,7 +66,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
           "contrat salarié . convention collective": "'IDCC0413'",
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période":
-            "non",
+            "'Non'",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
@@ -94,7 +94,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
           "contrat salarié . convention collective": "'IDCC0413'",
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période":
-            "oui",
+            "'Oui'",
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps": 10,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,

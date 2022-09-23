@@ -2,6 +2,7 @@ import {
   Notification,
   PublicodesSimulator,
   References,
+  RuleType,
 } from "@socialgouv/modeles-social";
 import Engine, { Rule as PubliRule } from "publicodes";
 
@@ -16,12 +17,6 @@ export interface MissingArgs {
   name: string;
   indice: number;
   rawNode: Rule;
-}
-
-export enum RuleType {
-  Liste = "liste",
-  OuiNon = "oui-non",
-  SalaireMensuel = "salaire-mensuel",
 }
 
 export interface RuleListe {

@@ -6,6 +6,7 @@ import { htmlParser } from "../lib/html";
 
 type Props = {
   children: string;
+  as?: string;
   inline?: boolean;
 };
 
@@ -23,10 +24,16 @@ const whiteListTags = ["webcomponent-tooltip", "webcomponent-tooltip-cc"];
  */
 const whiteListAttr = ["class", "rel", "href", "target"];
 
-const Html = ({ children, inline = false, ...props }: Props): JSX.Element => {
+const Html = ({
+  children,
+  as = "div",
+  inline = false,
+  ...props
+}: Props): JSX.Element => {
   return (
     <Div
       {...props}
+      as={as}
       isInline={inline}
       dangerouslySetInnerHTML={{
         __html: xss(htmlParser(children), {
