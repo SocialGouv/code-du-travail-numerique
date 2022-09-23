@@ -152,6 +152,8 @@ export const validateStep = (state: AncienneteStoreInput, agreeement?: Agreement
     } else {
       errors.errorAbsencePeriods = undefined;
     }
+  } else {
+    errors.errorAbsencePeriods = undefined;
   }
 
   return {

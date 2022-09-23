@@ -13,7 +13,10 @@ import type { AncienneteAbsenceStoreError } from "../store";
 type Props = {
   onChange: (absences: Absence[]) => void;
   absences: Absence[];
-  error?: AncienneteAbsenceStoreError[];
+  error?: {
+    global?: string;
+    absences?: AncienneteAbsenceStoreError[];
+  };
   idcc?: SupportedCcIndemniteLicenciement;
 };
 
@@ -120,12 +123,17 @@ const AbsencePeriods = ({ onChange, absences, error, idcc }: Props) => {
           errors={{
             duration:
               errorsInput[`${index}`] ??
-              (error ? error[index].errorDuration : undefined),
-            absenceDate: error ? error[index].errorDate : undefined,
+              (error?.absences
+                ? error.absences[index].errorDuration
+                : undefined),
+            absenceDate: error?.absences
+              ? error.absences[index].errorDate
+              : undefined,
           }}
           absence={value}
         />
       ))}
+      {error?.global && <StyledError>{error.global}</StyledError>}
       <AddButton onClick={onAddButtonClick}>Ajouter une absence</AddButton>
     </>
   );

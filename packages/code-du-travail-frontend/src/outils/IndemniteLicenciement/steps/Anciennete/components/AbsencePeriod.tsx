@@ -57,7 +57,6 @@ const AbsencePeriod = ({
     ? FieldWrapper
     : FieldWrapperNoMargin;
 
-  console.log("Render absence", absence);
   return (
     <RelativeDiv key={index}>
       <RowTitle>

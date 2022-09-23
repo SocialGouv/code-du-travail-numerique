@@ -106,7 +106,7 @@ const StepAnciennete = () => {
           }
           onChange={onChangeAbsencePeriods}
           absences={absencePeriods}
-          error={errorAbsencePeriods?.absences}
+          error={errorAbsencePeriods}
         />
       )}
     </>
