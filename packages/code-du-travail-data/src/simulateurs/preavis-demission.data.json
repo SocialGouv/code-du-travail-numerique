@@ -22,6 +22,10 @@
       "question": "Le salarié fait-il partie des personnels de conduite du transport de voyageurs ?"
     },
     {
+      "name": "personnels des entreprises de transport routier de marchandises",
+      "question": "Le salarié fait-il partie des personnels de transport routier de marchandises ou d'activités auxiliaires du transport ?"
+    },
+    {
       "name": "motif de rupture",
       "question": "Quel est le motif de rupture du contrat de travail ?"
     },
@@ -160,7 +164,23 @@
     {
       "criteria": {
         "catégorie professionnelle": "4| Ouvriers",
-        "personnel de conduite": "2| Non"
+        "personnel de conduite": "2| Non",
+        "personnels des entreprises de transport routier de marchandises": "1| Oui"
+      },
+      "type": "préavis de Démission",
+      "idcc": 16,
+      "typeRupture": null,
+      "answer": "2 semaines",
+      "answer2": null,
+      "answer3": "14",
+      "ref": "Annexe I, chapitre Ier, article 5",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849372&cidTexte=KALITEXT000005678895&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "4| Ouvriers",
+        "personnel de conduite": "2| Non",
+        "personnels des entreprises de transport routier de marchandises": "1| Non"
       },
       "type": "préavis de Démission",
       "idcc": 16,

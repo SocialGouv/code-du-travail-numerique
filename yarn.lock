@@ -2921,6 +2921,13 @@
     winston "^3.3.3"
 
 "@socialgouv/cdtn-logger@^2.0.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/cdtn-logger/-/cdtn-logger-2.2.0.tgz#7f79af277e120ca2cf44b5928dc053fd7b916ffb"
+  integrity sha512-zKLJ8GWWEwHwleiEmKuTnSSnljAKEhlnvE0WStgvUmd/flHcqIdSR2iM6dmX2XX3RMIaWi9eMCC/JHA6comrRA==
+  dependencies:
+    winston "^3.3.3"
+
+"@socialgouv/cdtn-logger@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@socialgouv/cdtn-logger/-/cdtn-logger-2.0.0.tgz#8ea727cbda7019a4449caf2b07629f2624a1e8f1"
   integrity sha512-9KqNW023JIArsV+TSPV+hrgo6vMCFgVj8HfIovVjt5B9Bz9yUWZmCR3yy2aK5aNDERN6bvlhGSTx56lRc5qGHQ==
@@ -4419,6 +4426,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.17.28.tgz#c683413f485a5690649ef36cdc9402bae32da2df"
   integrity sha512-1Nh2wEWN8y9hyC4yTDPccUnRunqNeBEFmmTU+K5FpGZOEixqAzMhUXzrBwajNYCZq5uoGaztaMN9Yy1PDMMB6Q==
 
+"@types/node@14.18.16":
+  version "14.18.16"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.16.tgz#878f670ba3f00482bf859b6550b6010610fc54b5"
+  integrity sha512-X3bUMdK/VmvrWdoTkz+VCn6nwKwrKCFTHtqwBIaQJNx4RUIBBUFXM00bqPz/DsDd+Icjmzm6/tyYZzeGVqb6/Q==
+
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
@@ -4548,7 +4560,7 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-2.0.1.tgz#20f18294f797f2209b5f65c8e3b5c8e8261d127c"
   integrity sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==
 
-"@types/superagent@*":
+"@types/superagent@*", "@types/superagent@4.1.15":
   version "4.1.15"
   resolved "https://registry.yarnpkg.com/@types/superagent/-/superagent-4.1.15.tgz#63297de457eba5e2bc502a7609426c4cceab434a"
   integrity sha512-mu/N4uvfDN2zVQQ5AYJI/g4qxn2bHB6521t1UuH09ShNWjebTqN0ZFuYK9uYjcgmI0dTQEs+Owi1EO6U0OkOZQ==
