@@ -28,7 +28,9 @@
     "dev": "nodemon --exec 'npm run build' --watch 'src/**' --ext 'ts,yaml'",
     "test:watch": "nodemon --exec 'jest' --watch 'src/**' --ext 'ts,yaml'",
     "build": "node bin/internal/build.js",
-    "clean": "rimraf bin lib"
+    "clean": "rimraf bin lib",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch"
   },
   "dependencies": {
     "date-fns": "^2.28.0",
