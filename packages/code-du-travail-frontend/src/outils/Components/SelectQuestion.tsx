@@ -99,13 +99,13 @@ export default SelectQuestion;
 
 const { breakpoints, fonts, spacings } = theme;
 
-const SubLabel = styled.label`
+export const SubLabel = styled.label`
   display: block;
-  margin-bottom: ${theme.spacings.tiny};
-  font-size: ${fonts.sizes.default};
+  margin-bottom: ${theme.spacings.small};
+  font-size: ${fonts.sizes.small};
   cursor: ${(props) => (props.as ? "default" : "pointer")};
   @media (max-width: ${breakpoints.mobile}) {
-    font-size: ${fonts.sizes.small};
+    font-size: ${fonts.sizes.xsmall};
   }
 `;
 

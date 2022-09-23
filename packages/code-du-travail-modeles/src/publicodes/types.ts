@@ -2,9 +2,11 @@ import type Engine from "publicodes";
 import type { Evaluation, Unit } from "publicodes";
 import type { Rule as PubliRule } from "publicodes/dist/types/rule";
 
+import type { Notification, References } from "../utils";
+
 export type OldReference = {
-  ref: string;
-  refUrl: string;
+  ref: string | null;
+  refUrl: string | null;
 };
 
 export interface MissingArgs {
@@ -23,6 +25,7 @@ export enum RuleType {
 export interface RuleListe {
   type: RuleType;
   valeurs: Record<string, string>;
+  precision?: string;
 }
 
 export type RuleCdtn = RuleListe;
@@ -92,4 +95,14 @@ export type PublicodesPreavisRetraiteResult = {
 export type PublicodesIndemniteLicenciementResult = {
   value: Evaluation;
   unit?: Unit;
+};
+
+export type PublicodesContextType = {
+  execute: (rule: string) => PublicodesIndemniteLicenciementResult;
+  getNotifications: () => Notification[];
+  getReferences: () => References[];
+  result: PublicodesIndemniteLicenciementResult;
+  missingArgs: MissingArgs[];
+  situation: SituationElement[];
+  setSituation: (values: Record<string, string>) => void;
 };

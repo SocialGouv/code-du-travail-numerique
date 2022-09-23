@@ -6,6 +6,7 @@ import Html from "../../common/Html";
 import { InlineError } from "../common/ErrorField";
 import { Question, Tooltip } from "../common/Question";
 import { RadioContainer } from "../common/stepStyles";
+import { SubLabel } from "./SelectQuestion";
 
 type Question = {
   label: string;
@@ -22,6 +23,7 @@ type Props = {
   showRequired?: boolean;
   name: string;
   tooltip?: Tooltip;
+  subLabel?: string;
 };
 
 export default function RadioQuestion({
@@ -33,6 +35,7 @@ export default function RadioQuestion({
   showRequired,
   name,
   tooltip,
+  subLabel,
 }: Props) {
   const onChange = (value: string) => {
     onChangeSelectedOption(value);
@@ -45,6 +48,7 @@ export default function RadioQuestion({
           {label}
         </Html>
       </Question>
+      {subLabel && <SubLabel>{subLabel}</SubLabel>}
       <RadioContainer>
         {questions.map((question, index) => (
           <InputRadio

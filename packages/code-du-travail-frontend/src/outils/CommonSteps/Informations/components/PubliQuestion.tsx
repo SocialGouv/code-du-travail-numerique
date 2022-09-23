@@ -60,6 +60,7 @@ const PubliQuestion: React.FC<Props> = ({
           error={error}
           tooltip={tooltip}
           showRequired
+          subLabel={cdtn.precision}
         />
       );
     case RuleType.OuiNon:
@@ -83,6 +84,7 @@ const PubliQuestion: React.FC<Props> = ({
           onChangeSelectedOption={onChange}
           error={error}
           showRequired
+          subLabel={cdtn.precision}
         />
       );
     case RuleType.Montant:
@@ -97,6 +99,7 @@ const PubliQuestion: React.FC<Props> = ({
           id={name}
           showRequired
           icon={icons.Euro}
+          subLabel={cdtn.precision}
         />
       );
     default:
@@ -110,6 +113,7 @@ const PubliQuestion: React.FC<Props> = ({
           error={error}
           id={name}
           showRequired
+          subLabel={cdtn?.precision}
         />
       );
   }

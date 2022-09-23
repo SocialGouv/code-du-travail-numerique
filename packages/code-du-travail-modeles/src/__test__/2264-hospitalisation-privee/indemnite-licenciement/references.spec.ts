@@ -102,7 +102,7 @@ describe("Références jurdiques pour l'indemnité conventionnel de licenciement
             "'Cadres'",
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
             "'Oui'",
-          "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps":
+          "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif":
             seniorityNonCadres,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,

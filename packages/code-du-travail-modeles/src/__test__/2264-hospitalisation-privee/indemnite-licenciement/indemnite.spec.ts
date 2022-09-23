@@ -97,7 +97,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 2264", () => {
               "'Cadres'",
             "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
               "'Oui'",
-            "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps":
+            "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif":
               seniorityNonCadres,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,

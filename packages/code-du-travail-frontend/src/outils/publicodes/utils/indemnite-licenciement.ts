@@ -44,3 +44,16 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
     },
   };
 };
+
+
+export const publicodesUnitTranslator = (value: string, unit?: string) => {
+  if (!unit) return ""
+  if (unit === "an") {
+    const parseValue = parseFloat(value);
+    if (parseValue <= 1) {
+      return "an"
+    }
+    return "ans"
+  }
+  return unit;
+}

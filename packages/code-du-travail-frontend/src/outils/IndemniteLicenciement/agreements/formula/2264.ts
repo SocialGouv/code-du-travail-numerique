@@ -21,7 +21,7 @@ export class AgreementFormula2264 implements AgreementFormula {
       get().informationsData.input.publicodesInformations.find(
         (v) =>
           v.question.rule.nom ===
-          "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps"
+          "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif"
       )?.info;
     if (seniorityInfo) {
       seniorityNonCadre = parseFloat(seniorityInfo);
