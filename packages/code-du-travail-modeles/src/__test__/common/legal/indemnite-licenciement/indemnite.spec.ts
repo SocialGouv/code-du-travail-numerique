@@ -1,8 +1,8 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../../internal/merger";
+import { mergeIndemniteLicenciementModels } from "../../../../internal/merger";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergeIndemniteLicenciementModels());
 
 describe("Indemnité légale de licenciement pour un employé", () => {
   test.each`
@@ -32,7 +32,6 @@ describe("Indemnité légale de licenciement pour un employé", () => {
             "non",
           "contrat salarié . indemnité de licenciement . salaire de référence":
             salary,
-          "indemnité de licenciement": "oui",
         })
         .evaluate(
           "contrat salarié . indemnité de licenciement . résultat légal"
@@ -69,7 +68,6 @@ describe("Indemnité légale de licenciement pour un employé", () => {
             "oui",
           "contrat salarié . indemnité de licenciement . salaire de référence":
             salary,
-          "indemnité de licenciement": "oui",
         })
         .evaluate(
           "contrat salarié . indemnité de licenciement . résultat légal"

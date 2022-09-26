@@ -4,10 +4,10 @@ import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../__test__/common/legal-references";
-import { mergeModels } from "../../internal/merger";
+import { mergePreavisRetraiteModels } from "../../internal/merger";
 import { getReferences } from "../references";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergePreavisRetraiteModels());
 
 const CommonReferences = [
   {

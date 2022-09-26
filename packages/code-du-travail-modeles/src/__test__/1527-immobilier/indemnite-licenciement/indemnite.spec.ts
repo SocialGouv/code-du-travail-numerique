@@ -1,8 +1,8 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergeIndemniteLicenciementModels());
 
 describe("CC 1527", () => {
   describe("Calcul de l'indemnité de licenciement", () => {
@@ -21,7 +21,6 @@ describe("CC 1527", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salaireRef,
-            "indemnité de licenciement": "oui",
           })
           .evaluate(
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
