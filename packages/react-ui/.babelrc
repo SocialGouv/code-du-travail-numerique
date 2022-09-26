@@ -8,7 +8,7 @@
       }
     ]
   ],
-  "plugins": ["@babel/plugin-proposal-class-properties", "@babel/plugin-proposal-export-namespace-from"],
+  "plugins": ["@babel/plugin-proposal-class-properties", "@babel/plugin-proposal-export-namespace-from", "@babel/plugin-transform-runtime"],
   "env": {
     "test": {
       "presets": [
