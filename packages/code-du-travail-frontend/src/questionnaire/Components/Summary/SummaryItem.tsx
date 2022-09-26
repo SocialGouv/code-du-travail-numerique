@@ -5,7 +5,7 @@ import useWindowDimensions from "../../../common/WindowDimension";
 
 const { breakpoints } = theme;
 
-export const SummaryItem = ({ data, onClick }) => {
+export const SummaryItem = ({ data, onClick, noButton }) => {
   const { width } = useWindowDimensions();
   return (
     <SummaryItemWrapper>
@@ -13,12 +13,14 @@ export const SummaryItem = ({ data, onClick }) => {
         <CheckIcon width="18" height="18" />
       </StyledIcon>
       <StyledText>{data}</StyledText>
-      <StyledButton variant="flat" xsmall onClick={onClick}>
-        {width > breakpoints.intMobile ? "Modifier" : ""}
-        <UpdateIconWrapper>
-          <UpdateIcon width="18" height="18" />
-        </UpdateIconWrapper>
-      </StyledButton>
+      {!noButton && (
+        <StyledButton variant="flat" xsmall onClick={onClick}>
+          {width > breakpoints.intMobile ? "Modifier" : ""}
+          <UpdateIconWrapper>
+            <UpdateIcon width="18" height="18" />
+          </UpdateIconWrapper>
+        </StyledButton>
+      )}
     </SummaryItemWrapper>
   );
 };
@@ -27,6 +29,8 @@ const SummaryItemWrapper = styled.li`
   list-style-type: none;
   margin-bottom: 11px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
 `;
 

@@ -6,7 +6,7 @@ import {
   QuestionnaireResponse,
 } from "@cdt/data";
 import { getCurrentQuestion, slugSummaryRecursive } from "./service";
-import { SlugResponses } from "./type";
+import { SlugResponses, PreviousResponse } from "./type";
 import { trackSelectResponse, trackViewQuestion } from "./tracking";
 
 export type Store = {
@@ -16,17 +16,14 @@ export type Store = {
   previousResponses: PreviousResponse[];
   slugResponses?: SlugResponses;
   toolSlug?: string;
-  infoPageSlug?: string;
+  questionnaireSlug?: string;
   answer: (index: number) => void;
   goTo: (index: number) => void;
   getSlug: () => string | undefined;
   init: () => void;
-  initSlugResponses: (slug: string) => void;
-};
-
-export type PreviousResponse = {
-  index: number;
-  text: string;
+  setQuestionnaireSlug: (questionnaireSlug: string) => void;
+  isPersonnalizedMode: (slug?: string) => boolean;
+  getSlugResponses: (slug?: string) => PreviousResponse[];
 };
 
 const Stores = {};
@@ -56,17 +53,9 @@ const createStore = (name: string) =>
           set({ slugResponses, questionTree, currentQuestion });
         }
       },
-      initSlugResponses: (slug) => {
+      getSlugResponses: (slug) => {
         const slugResponses = get().slugResponses;
-        const lastResponseOld = get().lastResponse;
-        const data = get().questionTree;
-        if (!slugResponses || lastResponseOld?.slug || !data) return;
-        const previousResponses = slugResponses[slug];
-        const { currentQuestion, lastResponse } = getCurrentQuestion(
-          data,
-          previousResponses
-        );
-        set({ previousResponses, currentQuestion, lastResponse });
+        return slug && slugResponses ? slugResponses[slug] : [];
       },
       answer: (index) => {
         const previousResponsesOld = get().previousResponses;
@@ -103,6 +92,19 @@ const createStore = (name: string) =>
         if (!previousResponses.length) return;
         const { index } = previousResponses.reverse()[0];
         return currentQuestion.responses[index]?.slug;
+      },
+      setQuestionnaireSlug: (questionnaireSlug: string) => {
+        set({ questionnaireSlug });
+      },
+      isPersonnalizedMode: (slug?: string) => {
+        const questionnaireSlug = get().questionnaireSlug;
+        const toolSlug = get().toolSlug;
+        return (
+          !slug ||
+          (!!questionnaireSlug &&
+            slug !== toolSlug &&
+            questionnaireSlug === slug)
+        );
       },
     };
   });

@@ -15,6 +15,7 @@ export const getCurrentQuestion = (
   return previousResponses.reduce(
     ({ currentQuestion: currentQuestionOld }, { index }: PreviousResponse) => {
       const lastResponse = currentQuestionOld.responses[index];
+      console.log(currentQuestionOld.responses, index);
       const currentQuestion =
         currentQuestionOld.responses[index].question ?? currentQuestionOld;
       return { currentQuestion, lastResponse };
@@ -35,9 +36,7 @@ export const slugSummaryRecursive = (
     ) => {
       const { infoStatement: text } = questionTree.responses[index];
       let slugSummary = {};
-      const responses = text
-        ? previousResponses.concat({ index, text })
-        : previousResponses;
+      const responses = previousResponses.concat({ index, text });
       if (question) {
         slugSummary = slugSummaryRecursive(question, responses);
       } else if (isSlugReference && slug) {

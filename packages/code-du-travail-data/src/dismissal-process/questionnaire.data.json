@@ -1,7 +1,7 @@
 {
     "text": "Vous êtes :",
     "trackingName": "profil",
-    "description": "Les informations données sont identiques quel que soit votre profil.\nSeule la formulation des questions peut être différente afin de vous guider au mieux dans ce parcours.",
+    "description": "Quel que soit votre profil, les informations données sont identiques.\nSeule la formulation des questions peut être différente afin de vous guider au mieux dans ce parcours.",
     "responses": [
         {
             "text": "Salarié",
@@ -14,7 +14,6 @@
                     {
                         "text": "Un licenciement pour motif personnel",
                         "statement": "Vous êtes concerné par un licenciement pour motif personnel",
-                        "infoStatement": "Un licenciement pour motif personnel",
                         "trackingName": "licenciement_personnel",
                         "info": "Licenciement dont le motif est lié à votre personne. Par exemple : faute, inaptitude constatée par le médecin du travail, insuffisance professionnelle...",
                         "question": {
@@ -25,6 +24,7 @@
                                     "trackingName": "licenciement_disciplinaire",
                                     "text": "Une faute qui vous est reprochée",
                                     "statement": "Vous êtes concerné par un licenciement pour motif disciplinaire",
+                                    "infoStatement": "Un licenciement suite à une faute qui est reprochée au salarié",
                                     "description": "motif disciplinaire",
                                     "slug": "licenciement-pour-motif-personnel-disciplinaire",
                                     "isSlugReference": true
@@ -33,6 +33,7 @@
                                     "trackingName": "licenciement_inaptitude",
                                     "text": "Une inaptitude constatée par le médecin du travail",
                                     "statement": "Vous êtes concerné par un licenciement suite à une inaptitude constatée par le médecin du travail",
+                                    "infoStatement": "Un licenciement suite à une inaptitude du salarié constatée par le médecin du travail",
                                     "slug": "licenciement-personnel-pour-inaptitude",
                                     "isSlugReference": true
                                 },
@@ -40,6 +41,7 @@
                                     "trackingName": "licenciement_non_disciplinaire",
                                     "text": "Vous n'êtes concerné par aucun de ces cas",
                                     "statement": "Vous êtes concerné par un licenciement pour motif non disciplinaire",
+                                    "infoStatement": "Un licenciement qui n'est pas fondé sur une faute du salarié (ex : insuffisance professionnelle, mésentente, perte de confiance...)",
                                     "description": "motif non disciplinaire",
                                     "slug": "licenciement-pour-motif-personnel-non-disciplinaire",
                                     "info": "Le licenciement pour motif non disciplinaire n’est pas fondé sur une faute du salarié. Attention : l’employeur doit toujours justifier d’une cause réelle et sérieuse afin de procéder au licenciement du salarié (ex : insuffisance professionnelle, mésentente, perte de confiance...)",
@@ -395,6 +397,7 @@
                     {
                         "text": "Un licenciement suite à un accord de performance collective",
                         "statement": "Vous êtes concerné par un licenciement suite à un accord de performance collective",
+                        "infoStatement": "Un licenciement déclenché car le salarié a refusé qu’un accord de performance collective lui soit appliqué",
                         "trackingName": "licenciement_apc",
                         "description": "APC",
                         "info": "Licenciement déclenché car vous avez refusé qu’un accord de performance collective vous soit appliqué.",
@@ -425,6 +428,7 @@
                                     "text": "Une faute qui est reprochée au salarié",
                                     "trackingName": "licenciement_disciplinaire",
                                     "statement": "Vous êtes concerné par un licenciement pour motif disciplinaire",
+                                    "infoStatement": "Un licenciement suite à une faute qui est reprochée au salarié",
                                     "description": "motif disciplinaire",
                                     "slug": "licenciement-pour-motif-personnel-disciplinaire"
                                 },
@@ -432,12 +436,14 @@
                                     "text": "Une inaptitude du salarié constatée par le médecin du travail",
                                     "trackingName": "licenciement_inaptitude",
                                     "statement": "Vous êtes concerné par un licenciement suite à une inaptitude constatée par le médecin du travail",
+                                    "infoStatement": "Un licenciement suite à une inaptitude du salarié constatée par le médecin du travail",
                                     "slug": "licenciement-personnel-pour-inaptitude"
                                 },
                                 {
                                     "text": "Aucun de ces cas",
                                     "trackingName": "licenciement_non_disciplinaire",
                                     "statement": "Vous êtes concerné par un licenciement pour motif non disciplinaire",
+                                    "infoStatement": "Un licenciement qui n'est pas fondé sur une faute du salarié (ex : insuffisance professionnelle, mésentente, perte de confiance...)",
                                     "info": "Le licenciement pour motif non disciplinaire n’est pas fondé sur une faute du salarié. Attention : l’employeur doit toujours justifier d’une cause réelle et sérieuse afin de procéder au licenciement du salarié (ex : insuffisance professionnelle, mésentente, perte de confiance...)",
                                     "description": "motif non disciplinaire",
                                     "slug": "licenciement-pour-motif-personnel-non-disciplinaire"

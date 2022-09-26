@@ -99,8 +99,9 @@ const Information = ({
           <SlugSummaryWrapper>
             <QuestionnaireWrapper
               name="dismissalProcess"
+              personnalizedTitle="Votre situation"
               slug={slug}
-              title="Votre situation"
+              title={"Cette procédure concerne le cas suivant :"}
             ></QuestionnaireWrapper>
           </SlugSummaryWrapper>
         )}

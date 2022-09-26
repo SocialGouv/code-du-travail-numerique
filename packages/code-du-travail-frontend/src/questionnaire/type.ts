@@ -1,6 +1,6 @@
 export type PreviousResponse = {
   index: number;
-  text: string;
+  text?: string;
 };
 
 export type SlugResponses = {
