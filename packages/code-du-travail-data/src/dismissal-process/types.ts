@@ -4,7 +4,8 @@ export type QuestionnaireResponse = {
   info?: string;
   description?: string;
   slug?: string;
-  statement?: string;
+  statement: string;
+  infoStatement?: string;
   question?: QuestionnaireQuestion;
   isSlugReference?: boolean;
 };
@@ -12,7 +13,6 @@ export type QuestionnaireResponse = {
 export type QuestionnaireQuestion = {
   text: string;
   trackingName: string;
-  responseStatement?: string;
   info?: string;
   description?: string;
   responses: QuestionnaireResponse[];
