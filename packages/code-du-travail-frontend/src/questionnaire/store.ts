@@ -5,11 +5,7 @@ import {
   QuestionnaireQuestion,
   QuestionnaireResponse,
 } from "@cdt/data";
-import {
-  getCurrentQuestion,
-  getResponseStatement,
-  slugSummaryRecursive,
-} from "./service";
+import { getCurrentQuestion, slugSummaryRecursive } from "./service";
 import { SlugResponses } from "./type";
 import { trackSelectResponse, trackViewQuestion } from "./tracking";
 
@@ -20,6 +16,7 @@ export type Store = {
   previousResponses: PreviousResponse[];
   slugResponses?: SlugResponses;
   toolSlug?: string;
+  infoPageSlug?: string;
   answer: (index: number) => void;
   goTo: (index: number) => void;
   getSlug: () => string | undefined;
@@ -77,7 +74,7 @@ const createStore = (name: string) =>
         if (!currentQuestionOld) return;
         const lastResponse = currentQuestionOld.responses[index];
         const currentQuestion = lastResponse.question;
-        const text = getResponseStatement(currentQuestionOld, index);
+        const { statement: text } = currentQuestionOld.responses[index];
         const previousResponses = previousResponsesOld.concat({ index, text });
         trackSelectResponse(lastResponse.trackingName);
         if (currentQuestion) {

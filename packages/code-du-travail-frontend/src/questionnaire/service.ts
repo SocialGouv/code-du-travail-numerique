@@ -23,17 +23,9 @@ export const getCurrentQuestion = (
   );
 };
 
-export const getResponseStatement = (
-  question: QuestionnaireQuestion,
-  responseIndex: number
-): string => {
-  const { statement, text } = question.responses[responseIndex];
-  return statement ?? `${question.responseStatement} ${text.toLowerCase()}`;
-};
-
 export const slugSummaryRecursive = (
   questionTree: QuestionnaireQuestion,
-  previousResponses?: PreviousResponse[]
+  previousResponses: PreviousResponse[] = []
 ): SlugResponses => {
   return questionTree.responses.reduce(
     (
@@ -41,9 +33,11 @@ export const slugSummaryRecursive = (
       { question, slug, isSlugReference }: QuestionnaireResponse,
       index: number
     ) => {
-      const text = getResponseStatement(questionTree, index);
+      const { infoStatement: text } = questionTree.responses[index];
       let slugSummary = {};
-      const responses = [...(previousResponses ?? []), { index, text }];
+      const responses = text
+        ? previousResponses.concat({ index, text })
+        : previousResponses;
       if (question) {
         slugSummary = slugSummaryRecursive(question, responses);
       } else if (isSlugReference && slug) {
