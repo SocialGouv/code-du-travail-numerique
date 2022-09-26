@@ -56,6 +56,7 @@
     "@svgr/core": "^6.0.0",
     "@testing-library/react": "^12.0.0",
     "@testing-library/react-hooks": "7.0.2",
+    "@testing-library/user-event": "^14.4.3",
     "babel-jest": "^27.0.6",
     "babel-loader": "^8.2.2",
     "eslint": "^7.31.0",
