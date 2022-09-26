@@ -11,6 +11,6 @@ Fonctionnalité: Modèle de lettre
     Quand je recherche "modele rupture contrat periode d'essai"
     Quand je clique sur "Rechercher"
     Quand j'attends que les résultats de recherche apparaissent
-    Quand je clique sur "Rupture du contrat en période d’essai à l’initiative du salarié"
+    Quand je clique sur "Rupture du contrat en période d’essai par le salarié"
 
-    Alors je suis redirigé vers la page: "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie?q=modele%20rupture%20contrat%20periode%20d%27essai"
+    Alors je suis redirigé vers la page: "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie?q=modele%20rupture%20contrat%20periode%20d%27essai"
