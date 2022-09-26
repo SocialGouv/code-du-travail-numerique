@@ -80,4 +80,27 @@ export const MappingReplacement = [
       "1505-commerce-de-detail-des-fruits-et-legumes-epicerie-et-produits-laitiers",
     ],
   },
+  {
+    newSlug:
+      "rupture-dun-commun-accord-dun-contrat-de-travail-a-duree-determinee",
+    sourcePath: ["modeles-de-courriers"],
+    previousSlugs: [
+      "rupture-dun-contrat-de-travail-a-duree-determinee-dun-commun-accord",
+    ],
+  },
+  {
+    newSlug: "rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie",
+    sourcePath: ["modeles-de-courriers"],
+    previousSlugs: ["rupture-du-contrat-en-periode-dessai-par-le-salarie"],
+  },
+  {
+    newSlug: "rupture-de-periode-dessai-a-linitiative-de-lemployeur",
+    sourcePath: ["modeles-de-courriers"],
+    previousSlugs: ["rupture-de-periode-dessai-par-lemployeur"],
+  },
+  {
+    newSlug: "rupture-dun-commun-accord-dun-contrat-dapprentissage",
+    sourcePath: ["modeles-de-courriers"],
+    previousSlugs: ["rupture-dun-contrat-dapprentissage-dun-commun-accord"],
+  },
 ];
