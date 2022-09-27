@@ -73,7 +73,6 @@ const createStore = (name: string) =>
           previousResponses,
           currentQuestion,
           lastResponse,
-          questionnaireSlug: undefined,
         });
       },
       goTo: (index) => {
@@ -88,7 +87,12 @@ const createStore = (name: string) =>
         if (currentQuestion) {
           trackViewQuestion(currentQuestion.trackingName);
         }
-        set({ previousResponses, currentQuestion, lastResponse });
+        set({
+          previousResponses,
+          currentQuestion,
+          lastResponse,
+          questionnaireSlug: undefined,
+        });
       },
       getSlug: () => {
         const currentQuestion = get().currentQuestion;
