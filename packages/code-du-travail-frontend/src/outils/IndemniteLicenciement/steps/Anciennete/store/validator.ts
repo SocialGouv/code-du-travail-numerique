@@ -3,16 +3,19 @@ import { deepEqualObject, isValidDate } from "../../../../../lib";
 import { parse } from "../../../../common/utils";
 import { AncienneteStoreError, AncienneteStoreInput } from "./types";
 import frLocale from "date-fns/locale/fr";
+import { Agreement } from "../../../../../conventions/Search/api/type";
+import { DISABLE_ABSENCE, SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 
-export const validateStep = (state: AncienneteStoreInput) => {
+export const validateStep = (state: AncienneteStoreInput, agreeement?: Agreement) => {
   const dEntree = parse(state.dateEntree);
   const dSortie = parse(state.dateSortie);
   const dNotification = parse(state.dateNotification);
   const absencePeriods = state.absencePeriods;
   let errors: AncienneteStoreError = {};
 
-  const totalAbsence =
-    absencePeriods
+  const totalAbsence: number = agreeement && DISABLE_ABSENCE.includes(`IDCC${agreeement.num}` as SupportedCcIndemniteLicenciement)
+    ? 0
+    : absencePeriods
       .filter((period) => Boolean(period.durationInMonth))
       .reduce((total, item) => {
         if (!item.durationInMonth) {
@@ -93,10 +96,6 @@ export const validateStep = (state: AncienneteStoreInput) => {
     errors.errorAbsenceProlonge = undefined;
   }
 
-  console.log(
-    "Validator",
-    state.absencePeriods.find((absence) => absence.motif.startAt === true)
-  );
   if (
     state.hasAbsenceProlonge === "oui" &&
     (state.absencePeriods.find((absence) => !absence.durationInMonth) ||

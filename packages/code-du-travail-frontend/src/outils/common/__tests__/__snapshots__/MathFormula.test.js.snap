@@ -6,13 +6,16 @@ exports[`<MathFormula /> renders 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: "fit-content";
 }
 
 <div>
   <div
     class="c0"
   >
-    <div>
+    <div
+      style="overflow: auto;"
+    >
       <span
         class="katex-display"
       >
