@@ -1,5 +1,6 @@
 import produce from "immer";
 import { GetState, SetState } from "zustand";
+import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { StoreSlice } from "../../../../types";
 import { SalairesStoreSlice } from "../../Salaires/store";
 
@@ -21,7 +22,7 @@ const initialState: AncienneteStoreData = {
 
 const createAncienneteStore: StoreSlice<
   AncienneteStoreSlice,
-  SalairesStoreSlice
+  SalairesStoreSlice & CommonAgreementStoreSlice
 > = (set, get) => ({
   ancienneteData: { ...initialState },
   ancienneteFunction: {
@@ -49,7 +50,7 @@ const createAncienneteStore: StoreSlice<
       applyGenericValidation(get, set, "hasAbsenceProlonge", value);
     },
     onValidateStepAnciennete: () => {
-      const { isValid, errorState } = validateStep(get().ancienneteData.input);
+      const { isValid, errorState } = validateStep(get().ancienneteData.input, get().agreementData.input.agreement);
 
       set(
         produce((state: AncienneteStoreSlice) => {
@@ -64,8 +65,8 @@ const createAncienneteStore: StoreSlice<
 });
 
 const applyGenericValidation = (
-  get: GetState<AncienneteStoreSlice>,
-  set: SetState<AncienneteStoreSlice>,
+  get: GetState<AncienneteStoreSlice & CommonAgreementStoreSlice>,
+  set: SetState<AncienneteStoreSlice & CommonAgreementStoreSlice>,
   paramName: keyof AncienneteStoreInput,
   value: any
 ) => {
@@ -74,7 +75,8 @@ const applyGenericValidation = (
       draft.ancienneteData.input[paramName as string] = value;
     });
     const { isValid, errorState } = validateStep(
-      nextState.ancienneteData.input
+      nextState.ancienneteData.input,
+      get().agreementData.input.agreement
     );
     set(
       produce((state: AncienneteStoreSlice) => {

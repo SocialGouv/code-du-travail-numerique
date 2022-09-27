@@ -25,13 +25,18 @@ const createCommonAgreementStore: StoreSlice<
   agreementData: { ...initialState },
   agreementFunction: {
     onInitAgreementPage: () => {
-      const data =
-        window.localStorage &&
-        window.localStorage.getItem(STORAGE_KEY_AGREEMENT);
-      if (data) {
-        applyGenericValidation(get, set, "agreement", JSON.parse(data));
-        applyGenericValidation(get, set, "route", Route.agreement);
-        get().informationsFunction.generatePublicodesQuestions();
+      try {
+        const data =
+          window.localStorage &&
+          window.localStorage.getItem(STORAGE_KEY_AGREEMENT);
+        if (data) {
+          const parsedData = JSON.parse(data);
+          applyGenericValidation(get, set, "agreement", parsedData);
+          applyGenericValidation(get, set, "route", Route.agreement);
+          get().informationsFunction.generatePublicodesQuestions();
+        }
+      } catch (e) {
+        console.error(e);
       }
     },
     onRouteChange: (value) => {

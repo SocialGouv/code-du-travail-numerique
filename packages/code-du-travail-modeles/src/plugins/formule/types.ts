@@ -2,6 +2,7 @@ import type { SupportedCcIndemniteLicenciement } from "..";
 import type { Formula413Props } from "./413_handicap";
 import type { Formula1486Props } from "./1486_bureaux_etudes_techniques";
 import type { Formula1597Props } from "./1597_batiment_employes_ouvriers_bis";
+import type { Formula2216Props } from "./2216_commerces_detail_alimentation";
 import type { Formula2264Props } from "./2264_hospitalisation_privee";
 import type { Formula3239Props } from "./3239_particuliers_employeurs_domicile";
 import type { LegalFormulaProps } from "./legal";
@@ -32,4 +33,6 @@ export type FormulaProps<T> = T extends SupportedCcIndemniteLicenciement.legal
   ? Formula1486Props
   : T extends SupportedCcIndemniteLicenciement.IDCC3239
   ? Formula3239Props
+  : T extends SupportedCcIndemniteLicenciement.IDCC2216
+  ? Formula2216Props
   : DefaultFormulaProps;
