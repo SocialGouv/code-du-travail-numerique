@@ -69,7 +69,12 @@ const createStore = (name: string) =>
         if (currentQuestion) {
           trackViewQuestion(currentQuestion.trackingName);
         }
-        set({ previousResponses, currentQuestion, lastResponse });
+        set({
+          previousResponses,
+          currentQuestion,
+          lastResponse,
+          questionnaireSlug: undefined,
+        });
       },
       goTo: (index) => {
         const previousResponsesOld = get().previousResponses;
