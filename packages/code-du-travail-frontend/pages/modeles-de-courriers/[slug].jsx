@@ -50,6 +50,7 @@ class ModeleCourrier extends React.Component {
           html,
           title,
           meta_title,
+          type,
         },
         relatedItems,
         status,
@@ -61,17 +62,20 @@ class ModeleCourrier extends React.Component {
     const [filename] = fileUrl.match(/[^/]+$/);
     const [, extension] = filename.split(/\.([a-z]{2,4})$/);
     const filesizeFormated = Math.round((filesize / 1000) * 100) / 100;
+    const category = `Modèle ${
+      type !== "fichier" ? `de ${type}` : "à télécharger"
+    }`;
     return (
       <Layout>
         <Metas
-          title={`Modèle de document :  ${meta_title ?? title}`}
+          title={`${category} :  ${meta_title ?? title}`}
           description={
             metaDescription ||
             description.slice(0, description.indexOf(" ", 150)) + "…"
           }
         />
         <Answer
-          title={title}
+          title={`Modèle - ${title}`}
           relatedItems={relatedItems}
           emptyMessage="Modèle de document introuvable"
           intro={description}

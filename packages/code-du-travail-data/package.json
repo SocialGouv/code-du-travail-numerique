@@ -13,7 +13,9 @@
     "prepush": "yarn test --bail --changedSince=dev",
     "lint": "eslint \"./src/**/*.{js,ts}\"",
     "test": "jest",
-    "clean": "rimraf lib"
+    "clean": "rimraf lib",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch"
   },
   "repository": {
     "type": "git",
