@@ -14,30 +14,21 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
   titre: Le salarié aura 50 ans avant la fin de son préavis
   question: Le salarié aura-t-il 50 ans avant la fin de son préavis (que le préavis soit effectué ou non) ?
   cdtn:
-    type: liste
-    valeurs:
-      Oui: "'Oui'"
-      Non: "'Non'"
+    type: oui-non
 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age 55 ans:
   applicable si: age = 54
   titre: Le salarié aura 55 ans avant la fin de son préavis
   question: Le salarié aura-t-il 55 ans avant la fin de son préavis (que le préavis soit effectué ou non) ?
   cdtn:
-    type: liste
-    valeurs:
-      Oui: "'Oui'"
-      Non: "'Non'"
+    type: oui-non
 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age 60 ans:
   applicable si: age = 59
   titre: Le salarié aura 60 ans avant la fin de son préavis
   question: Le salarié aura-t-il 60 ans avant la fin de son préavis (que le préavis soit effectué ou non) ?
   cdtn:
-    type: liste
-    valeurs:
-      Oui: "'Oui'"
-      Non: "'Non'"
+    type: oui-non
 
 # Formules
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . jusqu'à sept ans ou moins:
@@ -126,6 +117,7 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
           - age >= 50
           - age < 55
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+          - age 55 ans = 'Non'
   variations:
     - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
       alors:
