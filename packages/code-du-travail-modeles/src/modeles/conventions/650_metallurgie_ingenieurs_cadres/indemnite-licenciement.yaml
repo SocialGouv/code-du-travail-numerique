@@ -176,7 +176,7 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
           - age < 60
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
       - toutes ces conditions:
-          - age = 59 ans
+          - age = 59
           - age 60 ans = 'Non'
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
   variations:
