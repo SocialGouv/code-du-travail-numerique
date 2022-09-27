@@ -23,7 +23,9 @@ export const asciiMathToTex = (ascii) => {
 export const MathFormula = ({ formula }) => {
   return (
     <StyledFormula>
-      <TeX block>{asciiMathToTex(formula)}</TeX>
+      <TeX block style={{ width: "fit-content", overflow: "auto" }}>
+        {asciiMathToTex(formula)}
+      </TeX>
     </StyledFormula>
   );
 };
@@ -34,4 +36,5 @@ MathFormula.propTypes = {
 
 const StyledFormula = styled.div`
   display: flex;
+  width: "fit-content";
 `;

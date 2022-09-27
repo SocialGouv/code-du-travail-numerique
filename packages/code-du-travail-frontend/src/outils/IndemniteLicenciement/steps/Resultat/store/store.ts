@@ -45,10 +45,10 @@ const initialState: ResultStoreData = {
 const createResultStore: StoreSlice<
   ResultStoreSlice,
   AncienneteStoreSlice &
-    ContratTravailStoreSlice &
-    SalairesStoreSlice &
-    CommonAgreementStoreSlice &
-    CommonInformationsStoreSlice
+  ContratTravailStoreSlice &
+  SalairesStoreSlice &
+  CommonAgreementStoreSlice &
+  CommonInformationsStoreSlice
 > = (set, get, publicodesRules) => ({
   resultData: {
     ...initialState,
@@ -167,7 +167,7 @@ const createResultStore: StoreSlice<
           (publicodesSituationConventionnel.value !== null &&
             publicodesSituationLegal.value !== null &&
             publicodesSituationConventionnel.value >
-              publicodesSituationLegal.value)
+            publicodesSituationLegal.value)
         ) {
           isAgreementBetter = true;
         }
