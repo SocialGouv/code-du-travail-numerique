@@ -42,7 +42,6 @@ export class AgreementFormula650 implements AgreementFormula {
         ?.info?.slice(1, -1);
       if (ruleYear && ruleYear === "Oui") interpretedYear = 55;
     } else if (parseYear === 59) {
-      interpretedYear = 60;
       const ruleYear = get()
         .informationsData.input.publicodesInformations.find(
           (v) =>
