@@ -126,10 +126,13 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
           - age >= 50
           - age < 55
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
-  valeur:
-    le maximum de:
-      - somme formule plus 20 pourcent
-      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 3
+  variations:
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
+      alors:
+        le maximum de:
+          - somme formule plus 20 pourcent
+          - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 3
+    - sinon: 0
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
   arrondi: 2 décimales
@@ -150,10 +153,13 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
           - age < 60
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an
-  valeur:
-    le maximum de:
-      - somme formule
-      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
+  variations:
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
+      alors:
+        le maximum de:
+          - somme formule
+          - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
+    - sinon: 0
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
   arrondi: 2 décimales
@@ -172,10 +178,13 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
           - age >= 55
           - age < 60
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
-  valeur:
-    le maximum de:
-      - somme formule plus 30 pourcent
-      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
+  variations:
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
+      alors:
+        le maximum de:
+          - somme formule plus 30 pourcent
+          - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
+    - sinon: 0
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
   arrondi: 2 décimales
@@ -185,7 +194,10 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 4:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si: age = 61
-  valeur: somme formule moins 5 pourcent
+  variations:
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
+      alors: somme formule moins 5 pourcent
+    - sinon: 0
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
   arrondi: 2 décimales
@@ -195,7 +207,10 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 5:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si: age = 62
-  valeur: somme formule moins 10 pourcent
+  variations:
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
+      alors: somme formule moins 10 pourcent
+    - sinon: 0
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
   arrondi: 2 décimales
@@ -205,7 +220,10 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 6:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si: age = 63
-  valeur: somme formule moins 20 pourcent
+  variations:
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
+      alors: somme formule moins 20 pourcent
+    - sinon: 0
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
   arrondi: 2 décimales
@@ -215,13 +233,17 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 7:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si: age = 64
-  valeur: somme formule moins 40 pourcent
+  variations:
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
+      alors: somme formule moins 40 pourcent
+    - sinon: 0
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
   arrondi: 2 décimales
   références:
     Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
 
+## Par défaut
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 8:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si:
@@ -233,7 +255,10 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
       - résultat conventionnel 5
       - résultat conventionnel 6
       - résultat conventionnel 7
-  valeur: somme formule
+  variations:
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
+      alors: somme formule
+    - sinon: 0
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
   arrondi: 2 décimales
