@@ -4,7 +4,6 @@ import { useStore } from "../../store";
 import { useRouter } from "next/router";
 import { PreviousResponse } from "../../type";
 import { Button } from "@socialgouv/cdtn-ui";
-import Link from "next/link";
 
 export const Summary = ({
   responses,
@@ -13,7 +12,6 @@ export const Summary = ({
   responses: PreviousResponse[];
   withLink: boolean;
 }) => {
-  // const previousResponses = useStore((state) => state.previousResponses);
   const toolSlug = useStore((state) => state.toolSlug);
   const router = useRouter();
   const goTo = useStore((state) => state.goTo);
