@@ -35,7 +35,7 @@ export function StepInformations({
   actionEvent,
 }: StepInformationsProps): JSX.Element {
   const { values } = form.getState();
-  const { ccn, typeRupture, criteria = {} } = values;
+  const { ccn, typeRupture = null, criteria = {} } = values;
   const idcc = ccn?.selected?.num ?? 0;
 
   const subLabel = (key) =>
