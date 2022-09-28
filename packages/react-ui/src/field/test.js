@@ -1,4 +1,7 @@
+import "regenerator-runtime/runtime";
+
 import { fireEvent, render } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { InputCheckbox } from "./Checkbox.js";
@@ -53,6 +56,37 @@ describe("<InputDate />", () => {
     const input = container.querySelector("input");
     fireEvent.change(input, { target: { value: testValue } });
     expect(input.value).toEqual(testValue);
+  });
+  it("should add / to input", async () => {
+    const { container } = render(<InputDate name="input_date" />);
+
+    const input = container.querySelector("input");
+
+    await input.focus();
+    await userEvent.keyboard("01012020");
+    expect(input.value).toEqual("01/01/2020");
+  });
+  it("should add / after 2 & 4 digit", async () => {
+    const { container } = render(<InputDate name="input_date" />);
+    const input = container.querySelector("input");
+
+    await userEvent.click(input);
+    await userEvent.keyboard("01");
+
+    expect(input.value).toEqual("01/");
+
+    await userEvent.keyboard("01");
+
+    expect(input.value).toEqual("01/01/");
+  });
+  it("should keep / if user type /", async () => {
+    const { container } = render(<InputDate name="input_date" />);
+    const input = container.querySelector("input");
+
+    await userEvent.click(input);
+    await userEvent.keyboard("01/");
+
+    expect(input.value).toEqual("01/");
   });
 });
 

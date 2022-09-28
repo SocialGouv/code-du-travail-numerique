@@ -5,6 +5,13 @@ import styled from "styled-components";
 import { box, breakpoints, fonts, spacings } from "../theme.js";
 import { INPUT_HEIGHT } from "./Input";
 
+function addSlashIfNeeded(newValue) {
+  if (newValue.length === 2 || newValue.length === 5) {
+    newValue += "/";
+  }
+  return newValue;
+}
+
 export const InputDate = ({ value, onChange, invalid, ...props }) => {
   const [date, setDate] = React.useState(value ?? "");
   const [isValid, setIsValid] = React.useState(true);
@@ -23,11 +30,11 @@ export const InputDate = ({ value, onChange, invalid, ...props }) => {
     if (onlyNumbers.length <= 8) {
       let newValue = "";
       for (let i = 0; i < onlyNumbers.length; i++) {
-        if (i === 2 || i === 4) {
-          newValue += "/";
-        }
+        newValue = addSlashIfNeeded(newValue);
+
         newValue += onlyNumbers[i];
       }
+      newValue = addSlashIfNeeded(newValue);
       setDate(newValue);
       setIsValid(isValidDate(newValue));
       if (onChange) onChange(newValue);
@@ -45,7 +52,6 @@ export const InputDate = ({ value, onChange, invalid, ...props }) => {
   const onChangeDatePicker = (event) => {
     const date = event.target.value;
     if (date && date !== "") {
-      console.log("date", date);
       const realDate = date.split("-");
       const year = realDate[0] ?? "";
       const month = realDate[1] ?? "";
@@ -71,9 +77,9 @@ export const InputDate = ({ value, onChange, invalid, ...props }) => {
       const day = isNaN(Number(splitParts[0])) ? null : Number(splitParts[0]);
       const month = isNaN(Number(splitParts[1])) ? null : Number(splitParts[1]);
       const year = isNaN(Number(splitParts[2])) ? null : Number(splitParts[2]);
-      const isYearValid = year && year >= 1900 && year <= 2100 ? true : false;
-      const isMonthValid = month && month >= 1 && month <= 12 ? true : false;
-      const isDayValid = day && day >= 1 && day <= 31 ? true : false;
+      const isYearValid = year && year >= 1900 && year <= 2100;
+      const isMonthValid = month && month >= 1 && month <= 12;
+      const isDayValid = day && day >= 1 && day <= 31;
       const isValidDate = /^\d{2}\/\d{2}\/\d{4}$/.test(date);
       return isYearValid && isMonthValid && isDayValid && isValidDate;
     }
@@ -139,10 +145,10 @@ const StyledWrapper = styled.div`
   background: ${({ theme }) => theme.white};
   box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
 
-  border: 1px solid transparent;
   border-radius: ${box.borderRadius};
-  border-color: ${({ isFocus, isValid, theme }) =>
-    isFocus ? theme.secondary : !isValid ? theme.error : "transparent"};
+  border: 1px solid
+    ${({ isFocus, isValid, theme }) =>
+      isFocus ? theme.secondary : !isValid ? theme.error : "transparent"};
 
   line-height: inherit;
 

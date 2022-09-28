@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/modeles-social",
-  "version": "4.81.0",
+  "version": "4.82.0",
   "description": "Les règles publicodes des simulateurs de code du travail numérique",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -28,7 +28,9 @@
     "dev": "nodemon --exec 'npm run build' --watch 'src/**' --ext 'ts,yaml'",
     "test:watch": "nodemon --exec 'jest' --watch 'src/**' --ext 'ts,yaml'",
     "build": "node bin/internal/build.js",
-    "clean": "rimraf bin lib"
+    "clean": "rimraf bin lib",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch"
   },
   "dependencies": {
     "fs-extra": "^10.0.0",

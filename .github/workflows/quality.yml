@@ -73,6 +73,30 @@ jobs:
         run: |
           yarn workspace ${{ matrix.repositories }} lint
 
+  type-check:
+    name: Check typescript types
+    runs-on: ubuntu-latest
+    needs: [build]
+    strategy:
+      fail-fast: false
+      matrix:
+        repositories:
+          [
+            "@cdt/frontend",
+            "@cdt/data",
+            "@socialgouv/modeles-social",
+            "@cdt/api",
+          ]
+    steps:
+      - uses: actions/cache@v3
+        name: Restore build
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+      - name: Lint ${{ matrix.repositories }}
+        run: |
+          yarn workspace ${{ matrix.repositories }} type-check
+
   test:
     name: Test
     runs-on: ubuntu-latest

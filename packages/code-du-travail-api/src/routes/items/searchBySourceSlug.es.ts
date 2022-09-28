@@ -46,6 +46,7 @@ export const getSearchBySourceSlugBody = ({
       "sectionDisplayMode",
       "dismissalProcess",
       "meta_title",
+      "type",
     ],
     query: {
       bool: {

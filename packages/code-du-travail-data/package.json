@@ -1,6 +1,6 @@
 {
   "name": "@cdt/data",
-  "version": "4.81.0",
+  "version": "4.82.0",
   "description": "Ce dépôt de code permet d'indexer différentes sources de données relatives au Code du travail dans Elasticsearch.",
   "private": true,
   "main": "./lib/index.js",
@@ -13,7 +13,9 @@
     "prepush": "yarn test --bail --changedSince=dev",
     "lint": "eslint \"./src/**/*.{js,ts}\"",
     "test": "jest",
-    "clean": "rimraf lib"
+    "clean": "rimraf lib",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch"
   },
   "repository": {
     "type": "git",
