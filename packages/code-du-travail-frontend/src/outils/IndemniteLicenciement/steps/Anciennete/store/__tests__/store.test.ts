@@ -164,9 +164,9 @@ describe("Ancienneté store", () => {
       .getState()
       .ancienneteFunction.onValidateStepAnciennete();
     expect(isValid).toBe(false);
-    expect(store.getState().ancienneteData.error.errorAbsencePeriods).toBe(
-      "Vous devez renseigner tous les champs"
-    );
+    expect(
+      store.getState().ancienneteData.error.errorAbsencePeriods?.global
+    ).toBe("Vous devez renseigner tous les champs");
   });
 
   it("should validate the step 🚀", () => {

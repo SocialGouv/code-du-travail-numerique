@@ -1,13 +1,13 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergePreavisRetraiteModels } from "../../../internal/merger";
 import { getNotifications, getReferences } from "../../../utils";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../common/legal-references";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergePreavisRetraiteModels());
 
 const DepartReferences = [
   {
@@ -46,7 +46,6 @@ describe("Convention collective 2420", () => {
           "contrat salarié . convention collective": "'IDCC2420'",
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "oui",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
@@ -84,7 +83,6 @@ describe("Convention collective 2420", () => {
           "contrat salarié . convention collective": "'IDCC2420'",
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "oui",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"

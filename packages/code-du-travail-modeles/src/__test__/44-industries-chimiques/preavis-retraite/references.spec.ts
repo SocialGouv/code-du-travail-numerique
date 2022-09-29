@@ -1,13 +1,13 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergePreavisRetraiteModels } from "../../../internal/merger";
 import { getReferences } from "../../../utils";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../common/legal-references";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergePreavisRetraiteModels());
 
 const MiseRetraiteOuvrierCollaborateurReferences = [
   {
@@ -39,7 +39,6 @@ test("Vérification des références juridiques pour un employé en départ à l
       "contrat salarié . convention collective": "'IDCC0044'",
       "contrat salarié . mise à la retraite": "non",
       "contrat salarié . travailleur handicapé": "non",
-      "préavis de retraite": "oui",
     })
   );
 
@@ -66,7 +65,6 @@ test.each`
         "contrat salarié . convention collective . industries chimiques . catégorie professionnelle . ouvriers et collaborateurs . coefficient": 200,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
     );
 

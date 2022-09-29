@@ -1,9 +1,9 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergePreavisRetraiteModels } from "../../../internal/merger";
 import { getNotifications } from "../../../utils";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergePreavisRetraiteModels());
 
 test.each`
   seniority | group | afterFirstJuly | expectedNotice
@@ -34,7 +34,6 @@ test.each`
           group,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -75,7 +74,6 @@ test.each`
           group,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -103,7 +101,6 @@ test.each`
           group,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
     );
 
@@ -138,7 +135,6 @@ test.each`
           group,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
     );
 
@@ -164,7 +160,6 @@ test.each`
           group,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
     );
 
@@ -185,7 +180,6 @@ test("Pour une mise à la retraite avec un contract conclu avant le 1er juillet 
       "contrat salarié . convention collective . industrie pharmaceutique . groupe": 3,
       "contrat salarié . mise à la retraite": "oui",
       "contrat salarié . travailleur handicapé": "non",
-      "préavis de retraite": "oui",
     })
   );
 
@@ -215,7 +209,6 @@ test.each`
           group,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
     );
 

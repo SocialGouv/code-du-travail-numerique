@@ -1,13 +1,13 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergePreavisRetraiteModels } from "../../../internal/merger";
 import { getReferences } from "../../../utils";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../common/legal-references";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergePreavisRetraiteModels());
 
 const CommonReference = {
   article: "Chapitre VI, article 1er",
@@ -42,7 +42,6 @@ describe("Préavis de retraite de la CC 1517", () => {
           "contrat salarié . convention collective": "'IDCC1517'",
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "oui",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
@@ -81,7 +80,6 @@ describe("Préavis de retraite de la CC 1517", () => {
           "contrat salarié . convention collective . commerces de detail non alimentaires . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "oui",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"

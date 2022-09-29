@@ -1,13 +1,13 @@
 import Engine from "publicodes";
 
 import { getReferences } from "../../../..";
-import { mergeModels } from "../../../../internal/merger";
+import { mergeIndemniteLicenciementModels } from "../../../../internal/merger";
 import {
   IndemniteLicenciementInaptitudeReferences,
   IndemniteLicenciementReferences,
 } from "../../legal-references";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergeIndemniteLicenciementModels());
 
 describe("Vérification des références juridiques pour Indemnité légale de licenciement", () => {
   test.each`
@@ -24,7 +24,6 @@ describe("Vérification des références juridiques pour Indemnité légale de l
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             "non",
           "contrat salarié . indemnité de licenciement . salaire de référence": 1000,
-          "indemnité de licenciement": "oui",
         })
       );
 
@@ -46,7 +45,6 @@ describe("Vérification des références juridiques pour Indemnité légale de l
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             "oui",
           "contrat salarié . indemnité de licenciement . salaire de référence": 1000,
-          "indemnité de licenciement": "oui",
         })
       );
 

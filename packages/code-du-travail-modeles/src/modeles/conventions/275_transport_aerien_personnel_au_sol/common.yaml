@@ -1,0 +1,8 @@
+# Convention collective nationale du personnel au sol des entreprises de transport aérien du 22 mai 1959.
+contrat salarié . convention collective . transport aérien personnel au sol:
+  titre: Convention collective nationale du personnel au sol des entreprises de transport aérien du 22 mai 1959.
+  applicable si: convention collective = 'IDCC0275'
+  valeur: oui
+  cdtn:
+    idcc: 275
+    préavis-retraite: true

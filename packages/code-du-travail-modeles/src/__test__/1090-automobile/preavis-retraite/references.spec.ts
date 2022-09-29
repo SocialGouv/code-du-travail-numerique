@@ -1,6 +1,6 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergePreavisRetraiteModels } from "../../../internal/merger";
 import { getReferences } from "../../../utils";
 import {
   DepartRetraiteReferences,
@@ -55,7 +55,7 @@ const MiseRetraiteAgentsMaitrisesCadres = [
   },
 ];
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergePreavisRetraiteModels());
 
 test.each`
   retirement  | category                | expectedReferences
@@ -76,7 +76,6 @@ test.each`
         "contrat salarié . mise à la retraite":
           retirement === "mise" ? "oui" : "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
     );
 
