@@ -1,8 +1,8 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergeIndemniteLicenciementModels());
 
 describe("CC 16", () => {
   describe("Calcul de l'indemnité de licenciement pour un Ingénieur et cadre", () => {

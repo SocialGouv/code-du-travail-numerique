@@ -1,9 +1,9 @@
 import Engine from "publicodes";
 
 import { getReferences } from "../../../";
-import { mergeModels } from "../../../internal/merger";
+import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergeIndemniteLicenciementModels());
 
 describe("Vérification des références juridiques pour la CC 16", () => {
   describe("Ouvriers (Autres licenciements)", () => {
