@@ -11,6 +11,7 @@ import { AgreementSalary1527 } from "./1527";
 import { AgreementSalary3239 } from "./3239";
 import { AgreementSalary413 } from "./413";
 import { AgreementSalary650 } from "./650";
+import { AgreementSalary16 } from "./16";
 
 const getAgreementReferenceSalary = (
   idcc: SupportedCcIndemniteLicenciement,
@@ -42,6 +43,8 @@ const getAgreementReferenceSalary = (
       return new AgreementSalary3239().computeSalary(salaries, get);
     case SupportedCcIndemniteLicenciement.IDCC650 === idcc:
       return new AgreementSalary650().computeSalary(salaries, get);
+    case SupportedCcIndemniteLicenciement.IDCC0016 === idcc:
+      return new AgreementSalary16().computeSalary(salaries, get);
     default: {
       const sReference = new ReferenceSalaryFactory().create(
         SupportedCcIndemniteLicenciement.default

@@ -16,6 +16,7 @@ export interface MissingArgs {
 export enum RuleType {
   Liste = "liste",
   OuiNon = "oui-non",
+  Date = "date",
   SalaireMensuel = "salaire-mensuel",
 }
 

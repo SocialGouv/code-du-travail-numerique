@@ -1,4 +1,5 @@
 import type { SupportedCcIndemniteLicenciement } from "..";
+import type { Formula16Props } from "./16_transports_routiers";
 import type { Formula413Props } from "./413_handicap";
 import type { Formula650Props } from "./650_metallurgie_ingenieurs_cadres";
 import type { Formula1486Props } from "./1486_bureaux_etudes_techniques";
@@ -17,6 +18,12 @@ export type Formula = {
   formula: string;
   explanations: string[];
 };
+
+export type CategoryPro16 =
+  | "'Employés'"
+  | "'Ingénieurs et cadres'"
+  | "'Ouvriers'"
+  | "'TAM'";
 
 export interface IFormula<T extends SupportedCcIndemniteLicenciement> {
   computeFormula: (args: FormulaProps<T>) => Formula;
@@ -38,4 +45,6 @@ export type FormulaProps<T> = T extends SupportedCcIndemniteLicenciement.legal
   ? Formula650Props
   : T extends SupportedCcIndemniteLicenciement.IDCC2216
   ? Formula2216Props
+  : T extends SupportedCcIndemniteLicenciement.IDCC0016
+  ? Formula16Props
   : DefaultFormulaProps;

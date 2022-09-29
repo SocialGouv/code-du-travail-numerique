@@ -1,6 +1,7 @@
 import {
   Formula,
   FormuleFactory,
+  SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { GetState } from "zustand";
@@ -12,10 +13,11 @@ import { AgreementFormula2264 } from "./2264";
 import { AgreementFormula3239 } from "./3239";
 import { AgreementFormula413 } from "./413";
 import { AgreementFormula650 } from "./650";
+import { AgreementFormula16 } from "./16";
 
 const getAgreementFormula = (
   idcc: SupportedCcIndemniteLicenciement,
-  agreementSeniority: number,
+  agreementSeniority: SeniorityResult,
   agreementRefSalary: number,
   get: GetState<MainStore>
 ): Formula => {
@@ -62,10 +64,16 @@ const getAgreementFormula = (
         agreementRefSalary,
         get
       );
+    case SupportedCcIndemniteLicenciement.IDCC0016 === idcc:
+      return new AgreementFormula16().computeFormula(
+        agreementSeniority,
+        agreementRefSalary,
+        get
+      );
     default: {
       const agreementFactoryFormula = new FormuleFactory().create(idcc);
       return agreementFactoryFormula.computeFormula({
-        seniority: agreementSeniority,
+        seniority: agreementSeniority.value,
         refSalary: agreementRefSalary,
       });
     }
@@ -76,7 +84,7 @@ export default getAgreementFormula;
 
 export interface AgreementFormula {
   computeFormula: (
-    agreementSeniority: number,
+    agreementSeniority: SeniorityResult,
     agreementRefSalary: number,
     get: GetState<MainStore>
   ) => Formula;

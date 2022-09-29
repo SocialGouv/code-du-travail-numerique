@@ -1,4 +1,5 @@
 import type { SupportedCcIndemniteLicenciement } from "..";
+import type { CC16ReferenceSalaryProps } from "./16_transports_routiers";
 import type { CC650ReferenceSalaryProps } from "./650_metallurgie_ingenieurs_cadres";
 import type { CC1486ReferenceSalaryProps } from "./1486_bureaux_etudes_techniques";
 import type { CC1516ReferenceSalaryProps } from "./1516_organismes_formation";
@@ -27,4 +28,6 @@ export type ReferenceSalaryProps<T> =
     ? CC3239ReferenceSalaryProps
     : T extends SupportedCcIndemniteLicenciement.IDCC650
     ? CC650ReferenceSalaryProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC0016
+    ? CC16ReferenceSalaryProps
     : LegalReferenceSalaryProps;

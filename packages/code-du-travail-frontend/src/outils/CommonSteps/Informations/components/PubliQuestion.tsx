@@ -84,6 +84,19 @@ const PubliQuestion: React.FC<Props> = ({
           showRequired
         />
       );
+    case RuleType.Date:
+      return (
+        <TextQuestion
+          label={question}
+          tooltip={tooltip}
+          inputType="date"
+          value={value}
+          onChange={onChange}
+          error={error}
+          id={name}
+          showRequired
+        />
+      );
     default:
       return (
         <TextQuestion

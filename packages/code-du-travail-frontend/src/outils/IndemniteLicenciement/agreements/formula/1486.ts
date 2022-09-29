@@ -1,6 +1,7 @@
 import {
   Formula,
   FormuleFactory,
+  SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { GetState } from "zustand";
@@ -9,7 +10,7 @@ import { MainStore } from "../../store";
 
 export class AgreementFormula1486 implements AgreementFormula {
   computeFormula = (
-    agreementSeniority: number,
+    agreementSeniority: SeniorityResult,
     agreementRefSalary: number,
     get: GetState<MainStore>
   ): Formula => {
@@ -17,7 +18,7 @@ export class AgreementFormula1486 implements AgreementFormula {
       SupportedCcIndemniteLicenciement.IDCC1486
     );
     return agreementFactoryFormula.computeFormula({
-      seniority: agreementSeniority,
+      seniority: agreementSeniority.value,
       refSalary: agreementRefSalary,
       category: get()
         .informationsData.input.publicodesInformations.find(
