@@ -35,7 +35,7 @@ export function StepInformations({
   actionEvent,
 }: StepInformationsProps): JSX.Element {
   const { values } = form.getState();
-  const { ccn, criteria = {} } = values;
+  const { ccn, typeRupture = null, criteria = {} } = values;
   const idcc = ccn?.selected?.num ?? 0;
 
   const subLabel = (key) =>
@@ -78,7 +78,10 @@ export function StepInformations({
   }, [questions]);
 
   const memoizedQuestions: any = useMemo(() => {
-    const initialSituations = getSituationsFor(allSituations, { idcc });
+    const initialSituations = getSituationsFor(allSituations, {
+      idcc,
+      typeRupture,
+    });
     const pastQuestions = getPastQuestions(
       initialSituations,
       criteriaOrder,

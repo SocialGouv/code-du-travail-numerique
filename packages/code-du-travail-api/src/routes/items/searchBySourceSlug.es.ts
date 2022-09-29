@@ -45,6 +45,7 @@ export const getSearchBySourceSlugBody = ({
       "highlight", // convention-collective,
       "sectionDisplayMode",
       "meta_title",
+      "type",
     ],
     query: {
       bool: {
