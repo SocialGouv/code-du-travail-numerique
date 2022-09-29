@@ -3,6 +3,7 @@ import { SectionTitle } from "../../../../common/stepStyles";
 import { AgreementInformation } from "../../../common";
 import { Table, theme } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
+import { publicodesUnitTranslator } from "../../../../publicodes";
 import AbsenceTable from "./AbsenceTable";
 
 type Props = {
@@ -70,7 +71,11 @@ export default function FilledElements(props: Props) {
             <ul>
               {props.agreementInformations.map((info, index) => (
                 <li key={"agreement-" + index}>
-                  {info.label}&nbsp;:&nbsp;{info.value.replace(/'/g, "")}
+                  {info.label}&nbsp;:&nbsp;{info.value.replace(/'/g, "")}&nbsp;
+                  {publicodesUnitTranslator(
+                    info.value.replace(/'/g, ""),
+                    info.unit
+                  )}
                 </li>
               ))}
             </ul>

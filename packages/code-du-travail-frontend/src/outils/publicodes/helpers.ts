@@ -1,6 +1,6 @@
+import { SituationElement } from "@socialgouv/modeles-social";
 import Engine, { EvaluatedNode } from "publicodes";
 
-import { SituationElement } from ".";
 
 export function handleExecute(
   engine: Engine,

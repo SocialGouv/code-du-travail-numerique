@@ -36,8 +36,8 @@ export const Question = ({
         fontSize={otherProps.as === "p" ? "default" : "hsmall"}
       >
         {children}
+        {required && <Text as="span">&nbsp;(obligatoire)</Text>}
       </Text>
-      {required && <Text>&nbsp;(obligatoire)</Text>}
       {tooltip && (
         <InfoBulle
           title={tooltip.help ?? "Plus d'informations"}

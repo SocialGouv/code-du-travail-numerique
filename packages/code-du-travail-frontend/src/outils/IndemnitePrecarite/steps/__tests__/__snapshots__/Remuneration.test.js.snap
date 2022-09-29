@@ -362,11 +362,11 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       class="c1"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="c2"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div
@@ -423,11 +423,11 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       class="c1"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="c2"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div
@@ -802,11 +802,11 @@ exports[`<StepRemuneration /> should render one input 1`] = `
       class="c1"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="c2"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div
@@ -864,11 +864,11 @@ exports[`<StepRemuneration /> should render one input 1`] = `
       class="c1"
     >
       Quelle est la rémunération totale brute perçue durant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="c2"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div

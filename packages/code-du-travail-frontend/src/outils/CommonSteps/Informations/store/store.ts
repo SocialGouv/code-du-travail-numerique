@@ -54,7 +54,8 @@ const createCommonInformationsStore: StoreSlice<
               { value: 0 },
               0,
               { value: 0 },
-              0
+              0,
+              "01/01/2022"
             ),
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           )
@@ -124,6 +125,7 @@ const createCommonInformationsStore: StoreSlice<
               0,
               { value: 0 },
               0,
+              "01/01/2022",
               rules
             ),
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
@@ -197,6 +199,7 @@ const createCommonInformationsStore: StoreSlice<
             0,
             { value: 0 },
             0,
+            "01/01/2022",
             rules
           ),
           "contrat salarié . indemnité de licenciement . étape salaire désactivée"

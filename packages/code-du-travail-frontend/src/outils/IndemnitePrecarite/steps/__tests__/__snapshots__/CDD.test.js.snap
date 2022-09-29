@@ -117,11 +117,11 @@ exports[`<StepCDD /> should render 1`] = `
         class="c1"
       >
         Le CDD a-t-il été rompu pendant la période d’essai du salarié ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
+        <span
+          class="c2"
+        >
+           (obligatoire)
+        </span>
       </span>
     </label>
     <div
@@ -170,11 +170,11 @@ exports[`<StepCDD /> should render 1`] = `
         class="c1"
       >
         À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
+        <span
+          class="c2"
+        >
+           (obligatoire)
+        </span>
       </span>
     </label>
     <div
@@ -223,11 +223,11 @@ exports[`<StepCDD /> should render 1`] = `
         class="c1"
       >
         Le CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave ou faute lourde du salarié, cas de force majeure ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
+        <span
+          class="c2"
+        >
+           (obligatoire)
+        </span>
       </span>
     </label>
     <div
@@ -276,11 +276,11 @@ exports[`<StepCDD /> should render 1`] = `
         class="c1"
       >
         Le salarié a-t-il refusé de renouveler le CDD alors que le renouvellement et ses modalités étaient prévus dès l’origine dans son contrat ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
+        <span
+          class="c2"
+        >
+           (obligatoire)
+        </span>
       </span>
     </label>
     <div
