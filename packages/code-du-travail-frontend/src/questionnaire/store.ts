@@ -109,7 +109,8 @@ const createStore = (name: string) =>
         const questionnaireSlug = get().questionnaireSlug;
         const toolSlug = get().toolSlug;
         return (
-          !!questionnaireSlug && slug !== toolSlug && questionnaireSlug === slug
+          slug === toolSlug ||
+          (!!questionnaireSlug && questionnaireSlug === slug)
         );
       },
     };

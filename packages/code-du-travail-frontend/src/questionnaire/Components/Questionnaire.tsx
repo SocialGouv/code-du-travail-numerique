@@ -23,6 +23,7 @@ export const Questionnaire = ({
   const init = useStore((state) => state.init);
   const getSlugResponses = useStore((state) => state.getSlugResponses);
   const isPersonnalizedMode = useStore((state) => state.isPersonnalizedMode);
+  const toolSlug = useStore((state) => state.toolSlug);
   const previousResponses = useStore((state) => state.previousResponses);
   const [slugResponses, setSlugResponses] = useState<PreviousResponse[]>();
   init();
@@ -48,7 +49,7 @@ export const Questionnaire = ({
           responses={slugResponses ?? previousResponses}
           withLink={!isPersonnalizedMode(slug)}
         />
-        {!slug && <Question />}
+        {slug === toolSlug && <Question />}
       </Body>
     </Wrapper>
   );
