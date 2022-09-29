@@ -17,6 +17,7 @@ export const asciiMathToTex = (ascii) => {
       `\\frac{$1$2}{$3$4}`
     );
   }
+  tex = tex.replace(new RegExp(`\%`, "gm"), `\\%`);
   return tex;
 };
 
