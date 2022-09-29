@@ -1,9 +1,9 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
 import { CatPro2216 } from "../../../plugins/formule/2216_commerces_detail_alimentation";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergeIndemniteLicenciementModels());
 
 describe("Indemnité conventionnel de licenciement pour la CC 2216", () => {
   describe("Cas standard", () => {

@@ -1,10 +1,10 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
 import { CatPro2216 } from "../../../plugins/formule/2216_commerces_detail_alimentation";
 import { getReferences } from "../../../utils";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergeIndemniteLicenciementModels());
 
 const referencesEmployes = [
   {
