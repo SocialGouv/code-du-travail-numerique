@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.82.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.81.0...v4.82.0) (2022-09-27)
+
+
+### Bug Fixes
+
+* **heure-absence:** cc 16 resultat ([#4564](https://github.com/SocialGouv/code-du-travail-numerique/issues/4564)) ([4129eef](https://github.com/SocialGouv/code-du-travail-numerique/commit/4129eef5988a4a48715bef1fa77590e5adbe5c9a))
+* **preavis-demission:** cc 16 ([#4533](https://github.com/SocialGouv/code-du-travail-numerique/issues/4533)) ([48c0048](https://github.com/SocialGouv/code-du-travail-numerique/commit/48c0048131287916f1c9638fa47abec1d3cd62ea))
+
+
+
+
+
 # [4.81.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.80.0...v4.81.0) (2022-08-22)
 
 **Note:** Version bump only for package @cdt/data

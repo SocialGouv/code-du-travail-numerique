@@ -8,7 +8,7 @@ Fonctionnalité: Modèle de lettre
   Scénario:
     Soit un utilisateur sur la page "/modeles-de-courriers"
 
-    Alors je vois "Rupture du contrat en période d’essai à l’initiative du salarié"
-    Quand je clique sur "Rupture du contrat en période d’essai à l’initiative du salarié"
+    Alors je vois "Rupture du contrat en période d’essai par le salarié"
+    Quand je clique sur "Rupture du contrat en période d’essai par le salarié"
 
-    Alors je suis redirigé vers la page: "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie"
+    Alors je suis redirigé vers la page: "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie"
