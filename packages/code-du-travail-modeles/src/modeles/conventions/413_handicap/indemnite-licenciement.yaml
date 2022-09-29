@@ -55,7 +55,7 @@ contrat salarié . convention collective . établissement handicap . indemnité 
 
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . cadre . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  non applicable si: non cadre durant une période
+  non applicable si: non cadre durant une période = 'Oui'
   variations:
     - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 ans
       alors: cadre . facteur 1 avec plafond
@@ -78,7 +78,7 @@ contrat salarié . convention collective . établissement handicap . indemnité 
 
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . cadre directeur . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  non applicable si: non cadre durant une période
+  non applicable si: non cadre durant une période = 'Oui'
   variations:
     - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 ans
       alors: cadre directeur . facteur 1 avec plafond
@@ -96,16 +96,22 @@ contrat salarié . convention collective . établissement handicap . indemnité 
       - catégorie professionnelle = 'Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service'
       - catégorie professionnelle = 'Cadres'
   titre: Fonctions de non-cadre durant le contrat de travail
-  question: Le salarié a-t-il précédemment occupé des fonctions non-cadre durant le contrat de travail ?
+  question: Le salarié a-t-il précédemment occupé des fonctions non-cadre durant le contrat de travail&nbsp;?
   cdtn:
     type: oui-non
 
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps:
-  titre: Durée en tant que non-cadre (en année)
-  question: Pendant combien de temps a-t-il occupé des fonctions non-cadre durant le contrat de travail ?
+  valeur: 0 an
+
+contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif:
+  remplace: temps
+  titre: Durée en tant que non-cadre
+  question: Pendant combien de temps a-t-il occupé des fonctions non-cadre durant le contrat de travail&nbsp;?
+  applicable si: non cadre durant une période = 'Oui'
   unité: an
   cdtn:
     type: entier
+    precision: Durée (en année)
 
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps . ancienneté cadre:
   valeur: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année - temps
@@ -132,7 +138,10 @@ contrat salarié . convention collective . établissement handicap . indemnité 
   unité: €
 
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps . résultat conventionnel cadre:
-  applicable si: catégorie professionnelle = 'Cadres'
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Cadres'
+      - temps effectif > 0 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - facteur 1 avec plafond
@@ -144,7 +153,10 @@ contrat salarié . convention collective . établissement handicap . indemnité 
     Article 10 de l'Annexe n°6 Dispositions spéciales aux cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022837395?idConteneur=KALICONT000005635407
 
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps . résultat conventionnel cadre directeur:
-  applicable si: catégorie professionnelle = 'Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service'
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service'
+      - temps effectif > 0 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   le minimum de:
     - facteur 1 sans plafond + contrat salarié . indemnité de licenciement . salaire de référence conventionnel * ancienneté cadre

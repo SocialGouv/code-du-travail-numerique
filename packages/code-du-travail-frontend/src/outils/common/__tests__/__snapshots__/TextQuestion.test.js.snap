@@ -136,11 +136,11 @@ exports[`<TextQuestion /> should render 1`] = `
       class="c1"
     >
       lorem ipsum
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="c2"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div

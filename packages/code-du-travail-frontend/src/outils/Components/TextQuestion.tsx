@@ -3,9 +3,11 @@ import React, { FunctionComponent } from "react";
 
 import styled from "styled-components";
 import xss from "xss";
+import Html from "../../common/Html";
 import { InlineError } from "../common/ErrorField";
 import { Tooltip, Question } from "../common/Question";
 import { SmallText } from "../common/stepStyles";
+import { SubLabel } from "./SelectQuestion";
 
 type Props = {
   onChange: (value: string) => void;
@@ -15,6 +17,7 @@ type Props = {
   inputType?: "date" | "number" | "text";
   value: string | undefined;
   placeholder?: string;
+  subLabel?: string;
   smallText?: string;
   showRequired?: boolean;
   icon?: FunctionComponent;
@@ -30,6 +33,7 @@ export default function TextQuestion({
   placeholder,
   onChange,
   smallText,
+  subLabel,
   showRequired,
   icon,
   id,
@@ -38,9 +42,10 @@ export default function TextQuestion({
   return (
     <Wrapper>
       <Question required={showRequired} tooltip={tooltip} htmlFor={id}>
-        {label}
+        <Html as="span">{label}</Html>
       </Question>
       {smallText && <SmallText>{smallText}</SmallText>}
+      {subLabel && <SubLabel>{subLabel}</SubLabel>}
       <QuestionWrapper>
         <InputComponent
           id={id}

@@ -32,8 +32,8 @@ describe("Missing args pour la CC 2264", () => {
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
     expect(result.missingVariables).toEqual({
-      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période": 122.02180000000001,
-      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps": 120.00949999999997,
+      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période": 602.0817999999999,
+      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif": 240.02149999999997,
     });
   });
 
@@ -59,7 +59,7 @@ describe("Missing args pour la CC 2264", () => {
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle":
           "'Cadres'",
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
-          "oui",
+          "'Oui'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 3,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
       })
@@ -67,7 +67,7 @@ describe("Missing args pour la CC 2264", () => {
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
     expect(result.missingVariables).toEqual({
-      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps": 120.00949999999997,
+      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif": 240.02149999999997,
     });
   });
   test("Aucune variable", () => {
@@ -77,8 +77,8 @@ describe("Missing args pour la CC 2264", () => {
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle":
           "'Cadres'",
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
-          "oui",
-        "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps": 1,
+          "'Oui'",
+        "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif": 1,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 3,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
       })

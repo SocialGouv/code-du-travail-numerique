@@ -9,6 +9,7 @@ import {
 } from "../../../Components";
 import { reverseValues } from "../../../publicodes";
 import { MatomoActionEvent, trackQuestion } from "../../../../lib";
+import { icons } from "@socialgouv/cdtn-ui";
 
 interface Props {
   name: string;
@@ -59,6 +60,7 @@ const PubliQuestion: React.FC<Props> = ({
           error={error}
           tooltip={tooltip}
           showRequired
+          subLabel={cdtn.precision}
         />
       );
     case RuleType.OuiNon:
@@ -82,6 +84,22 @@ const PubliQuestion: React.FC<Props> = ({
           onChangeSelectedOption={onChange}
           error={error}
           showRequired
+          subLabel={cdtn.precision}
+        />
+      );
+    case RuleType.Montant:
+      return (
+        <TextQuestion
+          label={question}
+          tooltip={tooltip}
+          inputType="number"
+          value={value}
+          onChange={onChange}
+          error={error}
+          id={name}
+          showRequired
+          icon={icons.Euro}
+          subLabel={cdtn.precision}
         />
       );
     case RuleType.Date:
@@ -108,6 +126,7 @@ const PubliQuestion: React.FC<Props> = ({
           error={error}
           id={name}
           showRequired
+          subLabel={cdtn?.precision}
         />
       );
   }
