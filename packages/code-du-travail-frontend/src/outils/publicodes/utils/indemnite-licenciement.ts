@@ -12,7 +12,6 @@ export const mapToPublicodesSituationForIndemniteLicenciementLegal = (
       formatNumberAsString(seniority),
     "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
       inaptitude ? "oui" : "non",
-    "indemnité de licenciement": "oui",
   };
 };
 
@@ -39,21 +38,20 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
         formatNumberAsString(agreementSeniority),
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
         formatNumberAsString(agreementSalaireRef),
-      "indemnité de licenciement": "oui",
-      "contrat salarié . indemnité de licenciement . date de notification": notificationDate
+      "contrat salarié . indemnité de licenciement . date de notification":
+        notificationDate,
     },
   };
 };
 
-
 export const publicodesUnitTranslator = (value: string, unit?: string) => {
-  if (!unit) return ""
+  if (!unit) return "";
   if (unit === "an") {
     const parseValue = parseFloat(value);
     if (parseValue <= 1) {
-      return "an"
+      return "an";
     }
-    return "ans"
+    return "ans";
   }
   return unit;
-}
+};

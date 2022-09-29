@@ -1,9 +1,9 @@
 import Engine from "publicodes";
 
 import { getReferences } from "../../../";
-import { mergeModels } from "../../../internal/merger";
+import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergeIndemniteLicenciementModels());
 
 const References = [
   {
@@ -36,7 +36,6 @@ describe("Vérification des références juridiques pour la CC 1518", () => {
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             inaptitude,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-          "indemnité de licenciement": "oui",
         }),
         "résultat conventionnel"
       );

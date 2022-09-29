@@ -1,9 +1,9 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergePreavisRetraiteModels } from "../../../internal/merger";
 import { getNotifications } from "../../../utils";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergePreavisRetraiteModels());
 
 test.each`
   seniority | category                                                 | expectedNotice
@@ -36,7 +36,6 @@ test.each`
         "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -77,7 +76,6 @@ test.each`
         "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -118,7 +116,6 @@ test.each`
         "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
     );
 
@@ -160,7 +157,6 @@ test.each`
         "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
         "contrat salarié . départ à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
     );
 

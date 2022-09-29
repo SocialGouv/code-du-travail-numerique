@@ -1,8 +1,8 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergePreavisRetraiteModels } from "../../../internal/merger";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergePreavisRetraiteModels());
 
 describe("Préavis de retraite pour la CC 2216", () => {
   describe("Départ à la retraite", () => {
@@ -24,7 +24,6 @@ describe("Préavis de retraite pour la CC 2216", () => {
             "contrat salarié . convention collective . commerce gros et detail alimentation . départ à la retraite . catégorie professionnelle": `'${category}'`,
             "contrat salarié . mise à la retraite": "non",
             "contrat salarié . travailleur handicapé": "non",
-            "préavis de retraite": "oui",
           })
           .evaluate("contrat salarié . préavis de retraite");
 
@@ -57,7 +56,6 @@ describe("Préavis de retraite pour la CC 2216", () => {
             "contrat salarié . convention collective . commerce gros et detail alimentation . mise à la retraite . catégorie professionnelle": `'${category}'`,
             "contrat salarié . mise à la retraite": "oui",
             "contrat salarié . travailleur handicapé": "non",
-            "préavis de retraite": "oui",
           })
           .evaluate("contrat salarié . préavis de retraite");
 

@@ -1,8 +1,8 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergePreavisRetraiteModels } from "../../../internal/merger";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergePreavisRetraiteModels());
 describe("Mise à la retraite", () => {
   test.each`
     seniority | category       | expectedNotice | expectedUnit
@@ -25,7 +25,6 @@ describe("Mise à la retraite", () => {
           "contrat salarié . convention collective . restauration collectivités . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "oui",
         })
         .evaluate("contrat salarié . préavis de retraite");
 
@@ -57,7 +56,6 @@ describe("Départ à la retraite", () => {
           "contrat salarié . convention collective . restauration collectivités . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "oui",
         })
         .evaluate("contrat salarié . préavis de retraite");
 

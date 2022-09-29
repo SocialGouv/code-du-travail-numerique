@@ -4,6 +4,7 @@ import { AgreementInformation } from "../../../common";
 import { Table, theme } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 import { publicodesUnitTranslator } from "../../../../publicodes";
+import AbsenceTable from "./AbsenceTable";
 
 type Props = {
   typeContrat: string;
@@ -100,24 +101,7 @@ export default function FilledElements(props: Props) {
               travail&nbsp;:&nbsp;
               {props.absencesPeriods.length > 0 ? "Oui" : "Non"}
             </li>
-            {props.absencesPeriods.length > 0 && (
-              <StyledFilledElementTable>
-                <thead>
-                  <tr>
-                    <th>Motif de l&apos;absence</th>
-                    <th>Durée</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {props.absencesPeriods.map((period, index) => (
-                    <tr key={"absence-" + index}>
-                      <td>{period.motif.label}</td>
-                      <td>{period.durationInMonth} mois</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </StyledFilledElementTable>
-            )}
+            <AbsenceTable absencesPeriods={props.absencesPeriods} />
           </ul>
         </li>
         {!props.isStepSalaryHidden && (

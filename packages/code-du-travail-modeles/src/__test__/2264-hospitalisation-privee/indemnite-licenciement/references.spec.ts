@@ -1,9 +1,9 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
 import { getReferences } from "../../../utils";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergeIndemniteLicenciementModels());
 
 const references = [
   {
@@ -49,7 +49,6 @@ describe("Références jurdiques pour l'indemnité conventionnel de licenciement
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
-          "indemnité de licenciement": "oui",
         });
 
         const result = getReferences(situation, "résultat conventionnel");
@@ -108,7 +107,6 @@ describe("Références jurdiques pour l'indemnité conventionnel de licenciement
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
-          "indemnité de licenciement": "oui",
         });
         const result = getReferences(situation, "résultat conventionnel");
 

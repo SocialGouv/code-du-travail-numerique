@@ -1,9 +1,6 @@
 contrat salarié: oui
 
-préavis de retraite:
-  valeur: non
-  rend non applicable: contrat salarié . indemnité de licenciement
-
-indemnité de licenciement:
-  valeur: non
-  rend non applicable: contrat salarié . préavis de retraite
+contrat salarié . convention collective:
+  titre: Convention collective
+  question: Quelle est votre convention collective ?
+  par défaut: "''"

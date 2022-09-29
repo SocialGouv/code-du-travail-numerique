@@ -1,8 +1,8 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergePreavisRetraiteModels } from "../../../internal/merger";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergePreavisRetraiteModels());
 
 test.each`
   seniority | expectedNotice
@@ -22,7 +22,6 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0044'",
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -64,7 +63,6 @@ test.each`
           coefficient,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -100,7 +98,6 @@ test.each`
           coefficient,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 
@@ -128,7 +125,6 @@ test.each`
         "contrat salarié . convention collective . industries chimiques . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
       .evaluate("contrat salarié . préavis de retraite");
 

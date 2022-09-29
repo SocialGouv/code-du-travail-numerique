@@ -1,0 +1,8 @@
+# Convention collective nationale des gardiens, concierges et employés d'immeubles (réécrite par l'avenant n° 74 du 27 avril 2009 portant modification de la convention).
+contrat salarié . convention collective . gardien concierge:
+  description: Convention collective nationale des gardiens, concierges et employés d'immeubles (réécrite par l'avenant n° 74 du 27 avril 2009 portant modification de la convention).
+  applicable si: convention collective = 'IDCC1043'
+  valeur: oui
+  cdtn:
+    idcc: 1043
+    préavis-retraite: true
