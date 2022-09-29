@@ -3,7 +3,7 @@ import { withStore, Provider } from "../store";
 
 type QuestionnaireWrapperProps = {
   name: string;
-  slug?: string;
+  slug: string;
   title: string;
   personnalizedTitle?: string;
 };

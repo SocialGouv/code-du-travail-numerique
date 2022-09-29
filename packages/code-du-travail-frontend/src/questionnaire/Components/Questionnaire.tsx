@@ -10,7 +10,7 @@ const { breakpoints } = theme;
 const { Gear: GearIcon } = icons;
 
 type QuestionnaireProps = {
-  slug?: string;
+  slug: string;
   title: string;
   personnalizedTitle?: string;
 };

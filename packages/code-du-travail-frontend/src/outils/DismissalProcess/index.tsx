@@ -16,6 +16,7 @@ const DismissalProcess = (): JSX.Element => (
       <QuestionnaireWrapper
         name="dismissalProcess"
         title="Quelle est votre situation ?"
+        slug="procedure-licenciement"
       />
     </Container>
   </Section>

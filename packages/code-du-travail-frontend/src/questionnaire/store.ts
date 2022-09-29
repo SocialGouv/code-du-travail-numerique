@@ -22,7 +22,7 @@ export type Store = {
   getSlug: () => string | undefined;
   init: () => void;
   setQuestionnaireSlug: (questionnaireSlug: string) => void;
-  isPersonnalizedMode: (slug?: string) => boolean;
+  isPersonnalizedMode: (slug: string) => boolean;
   getSlugResponses: (slug?: string) => PreviousResponse[];
 };
 
@@ -105,14 +105,11 @@ const createStore = (name: string) =>
       setQuestionnaireSlug: (questionnaireSlug: string) => {
         set({ questionnaireSlug });
       },
-      isPersonnalizedMode: (slug?: string) => {
+      isPersonnalizedMode: (slug: string) => {
         const questionnaireSlug = get().questionnaireSlug;
         const toolSlug = get().toolSlug;
         return (
-          !slug ||
-          (!!questionnaireSlug &&
-            slug !== toolSlug &&
-            questionnaireSlug === slug)
+          !!questionnaireSlug && slug !== toolSlug && questionnaireSlug === slug
         );
       },
     };
