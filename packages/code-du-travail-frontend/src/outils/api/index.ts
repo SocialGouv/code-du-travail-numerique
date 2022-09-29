@@ -1,10 +1,14 @@
-import { modeles } from "@socialgouv/modeles-social";
+import {
+  indemniteLicenciementModeles,
+  preavisRetraiteModeles,
+} from "@socialgouv/modeles-social";
 
 export const loadPublicodesRules = (simulator: string): any => {
   switch (simulator) {
     case "preavis-retraite":
+      return preavisRetraiteModeles;
     case "indemnite-licenciement":
-      return modeles;
+      return indemniteLicenciementModeles;
     default:
       return null;
   }

@@ -1,9 +1,9 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
 import { getReferences } from "../../../utils";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergeIndemniteLicenciementModels());
 
 const references = [
   {
@@ -34,7 +34,6 @@ describe("Indemnité conventionnel de licenciement pour la CC 3043", () => {
           seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           salary,
-        "indemnité de licenciement": "oui",
       });
 
       const result = getReferences(situation, "résultat conventionnel");

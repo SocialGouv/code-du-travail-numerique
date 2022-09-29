@@ -1,13 +1,13 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
 import {
   CatPro1486,
   TypeLicenciement1486,
 } from "../../../plugins/salaire-reference/1486_bureaux_etudes_techniques";
 import { getReferences } from "../../../utils";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergeIndemniteLicenciementModels());
 
 const refEtamMoins20OuInge = [
   {
@@ -95,7 +95,6 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
             salary,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
-          "indemnité de licenciement": "oui",
         });
 
         const result = getReferences(situation, "résultat conventionnel");

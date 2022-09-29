@@ -1,12 +1,12 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
 import {
   CatPro1486,
   TypeLicenciement1486,
 } from "../../../plugins/salaire-reference/1486_bureaux_etudes_techniques";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergeIndemniteLicenciementModels());
 
 describe("Indemnité conventionnel de licenciement pour la CC 1486", () => {
   describe("Cas standard", () => {
@@ -73,7 +73,6 @@ describe("Indemnité conventionnel de licenciement pour la CC 1486", () => {
               salary,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
-            "indemnité de licenciement": "oui",
           })
           .evaluate(
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
