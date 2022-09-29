@@ -35,7 +35,7 @@ describe("Indemnité légale de licenciement avec une ancienneté spécifiée", 
         dateSortie: exitDate,
       });
 
-      expect(result).toEqual(expectedAnciennete);
+      expect(result.value).toEqual(expectedAnciennete);
     }
   );
 });

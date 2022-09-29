@@ -1,4 +1,4 @@
-import { mergeModels } from "../../internal/merger";
+import { mergePreavisRetraiteModels } from "../../internal/merger";
 import PreavisRetraitePublicodes from "../PreavisRetraitePublicodes";
 
 const partialSituation = [
@@ -40,15 +40,6 @@ const partialSituation = [
     },
     value: "non",
   },
-  {
-    name: "préavis de retraite",
-    rawNode: {
-      nom: "préavis de retraite",
-      "rend non applicable": "contrat salarié . indemnité de licenciement",
-      valeur: "non",
-    },
-    value: "oui",
-  },
 ];
 
 const ancienneteSituation = {
@@ -66,14 +57,15 @@ const ancienneteSituation = {
 };
 
 describe("PreavisRetraitePublicodes::class", () => {
-  const publicodes = new PreavisRetraitePublicodes(mergeModels());
+  const publicodes = new PreavisRetraitePublicodes(
+    mergePreavisRetraiteModels()
+  );
 
   it("doit mettre à jour la situation", () => {
     publicodes.setSituation({
       "contrat salarié . convention collective": "''",
       "contrat salarié . mise à la retraite": "oui",
       "contrat salarié . travailleur handicapé": "non",
-      "préavis de retraite": "oui",
     });
     expect(publicodes.data.situation).toEqual(partialSituation);
   });
@@ -94,7 +86,6 @@ describe("PreavisRetraitePublicodes::class", () => {
       "contrat salarié . convention collective": "''",
       "contrat salarié . mise à la retraite": "oui",
       "contrat salarié . travailleur handicapé": "non",
-      "préavis de retraite": "oui",
     });
     expect(publicodes.data.situation).toEqual(
       partialSituation.concat(ancienneteSituation)

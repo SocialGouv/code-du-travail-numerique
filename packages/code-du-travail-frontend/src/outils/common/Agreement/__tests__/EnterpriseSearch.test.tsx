@@ -329,6 +329,7 @@ describe("EnterpriseSearch", () => {
           {
             fullySupported: true,
             idcc: selectedEnterpriseOneAgreement.conventions[0].num,
+            withoutLegal: false,
           },
         ],
       };
@@ -349,6 +350,7 @@ describe("EnterpriseSearch", () => {
           {
             fullySupported: true,
             idcc: selectedEnterpriseTwoAgreements.conventions[0].num,
+            withoutLegal: false,
           },
         ],
       };

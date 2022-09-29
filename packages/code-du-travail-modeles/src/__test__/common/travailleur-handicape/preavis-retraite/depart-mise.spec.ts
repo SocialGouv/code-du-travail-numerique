@@ -1,8 +1,8 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../../internal/merger";
+import { mergePreavisRetraiteModels } from "../../../../internal/merger";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergePreavisRetraiteModels());
 
 describe("Travailleur handicapé - Depart et mise à la retraite", () => {
   test.each`
@@ -19,7 +19,6 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
           "contrat salarié . convention collective": "''",
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "oui",
-          "préavis de retraite": "oui",
         })
         .evaluate("contrat salarié . préavis de retraite");
 
@@ -43,7 +42,6 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
           "contrat salarié . convention collective": "''",
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "oui",
-          "préavis de retraite": "oui",
         })
         .evaluate("contrat salarié . préavis de retraite");
 
@@ -67,7 +65,6 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
           "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'Médecins'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "oui",
-          "préavis de retraite": "oui",
         })
         .evaluate("contrat salarié . préavis de retraite");
 
@@ -93,7 +90,6 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
           "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "oui",
-          "préavis de retraite": "oui",
         })
         .evaluate("contrat salarié . préavis de retraite");
 

@@ -1,6 +1,7 @@
 import {
   Formula,
   FormuleFactory,
+  SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { GetState } from "zustand";
@@ -9,7 +10,7 @@ import { MainStore } from "../../store";
 
 export class AgreementFormula2216 implements AgreementFormula {
   computeFormula = (
-    agreementSeniority: number,
+    agreementSeniority: SeniorityResult,
     agreementRefSalary: number,
     get: GetState<MainStore>
   ): Formula => {
@@ -23,15 +24,13 @@ export class AgreementFormula2216 implements AgreementFormula {
           v.question.rule.nom ===
           "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle"
       )
-      ?.info?.slice(1, -1) as any
+      ?.info?.slice(1, -1) as any;
 
-    const year = get()
-      .informationsData.input.publicodesInformations.find(
-        (v) =>
-          v.question.rule.nom ===
-          "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age"
-      )
-      ?.info as string
+    const year = get().informationsData.input.publicodesInformations.find(
+      (v) =>
+        v.question.rule.nom ===
+        "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age"
+    )?.info as string;
 
     const firingType = get()
       .informationsData.input.publicodesInformations.find(
@@ -39,15 +38,14 @@ export class AgreementFormula2216 implements AgreementFormula {
           v.question.rule.nom ===
           "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique"
       )
-      ?.info?.slice(1, -1) as any
+      ?.info?.slice(1, -1) as any;
 
     return agreementFactoryFormula.computeFormula({
-      seniority: agreementSeniority,
+      seniority: agreementSeniority.value,
       refSalary: agreementRefSalary,
       category,
       age: year ? parseInt(year) : 0,
-      isEconomicFiring: firingType && firingType === 'Oui' ? true : false,
+      isEconomicFiring: firingType && firingType === "Oui" ? true : false,
     });
-
-  }
+  };
 }
