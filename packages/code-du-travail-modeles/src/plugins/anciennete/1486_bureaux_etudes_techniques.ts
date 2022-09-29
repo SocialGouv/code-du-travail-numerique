@@ -1,6 +1,6 @@
 import { differenceInMonths, parse } from "date-fns";
 
-import type { SupportedCcIndemniteLicenciement } from "..";
+import type { SeniorityResult, SupportedCcIndemniteLicenciement } from "..";
 import { MotifKeys } from "./motif-keys";
 import type { ISeniority, Motif, SeniorityProps } from "./types";
 
@@ -17,7 +17,7 @@ export class Seniority1486
     dateEntree,
     dateSortie,
     absencePeriods = [],
-  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC1486>): number {
+  }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC1486>): SeniorityResult {
     const dEntree = parse(dateEntree, "dd/MM/yyyy", new Date());
     const dSortie = parse(dateSortie, "dd/MM/yyyy", new Date());
 
@@ -35,6 +35,8 @@ export class Seniority1486
         return total + item.durationInMonth * m.value;
       }, 0) / 12;
 
-    return differenceInMonths(dSortie, dEntree) / 12 - totalAbsence;
+    return {
+      value: differenceInMonths(dSortie, dEntree) / 12 - totalAbsence,
+    };
   }
 }

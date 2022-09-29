@@ -1,0 +1,37 @@
+import produce from "immer";
+import { GetState, SetState } from "zustand";
+import { deepEqualObject } from "../../../../../lib";
+import { MainStore } from "../../../store";
+import { Agreement16StoreInput, Agreement16StoreSlice } from "./types";
+
+export const validateAgreement16 = (
+  get: GetState<MainStore>,
+  set: SetState<MainStore>
+) => {
+  const { isValid, errorState } = validateStep(get().agreement16Data.input);
+  set(
+    produce((state: Agreement16StoreSlice) => {
+      state.agreement16Data.hasBeenSubmit = isValid ? false : true;
+      state.agreement16Data.isStepValid = isValid;
+      state.agreement16Data.error = errorState;
+    })
+  );
+
+  return isValid;
+};
+
+export const validateStep = (state: Agreement16StoreInput) => {
+  const errorState = {
+    errorHasVariablePay: !state.hasVariablePay
+      ? "Vous devez répondre à cette question"
+      : undefined,
+  };
+
+  return {
+    isValid: deepEqualObject(errorState, {
+      errorHasReceivedSalaries: undefined,
+      errorSalaryPeriods: undefined,
+    }),
+    errorState,
+  };
+};
