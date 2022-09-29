@@ -97,11 +97,11 @@ exports[`<TypeContrat /> should render 1`] = `
       class="c1"
     >
       Quel est le type du contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="c2"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div

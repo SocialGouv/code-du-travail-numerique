@@ -37,10 +37,6 @@ exports[`<DocumentSuggester /> should render 1`] = `
 `;
 
 exports[`<DocumentSuggester /> should render suggestions 1`] = `
-.c2 {
-  display: inline-block;
-}
-
 .c1 p {
   margin: 0;
 }
@@ -90,13 +86,13 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           <div
             class="c1"
           >
-            <div
-              class="c2"
+            <span
+              class=""
             >
               <strong>
                 foo
               </strong>
-            </div>
+            </span>
           </div>
         </li>
         <li
@@ -109,14 +105,14 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           <div
             class="c1"
           >
-            <div
-              class="c2"
+            <span
+              class=""
             >
               <strong>
                 foo
               </strong>
               bar
-            </div>
+            </span>
           </div>
         </li>
         <li
@@ -129,14 +125,14 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           <div
             class="c1"
           >
-            <div
-              class="c2"
+            <span
+              class=""
             >
               <strong>
                 foo
               </strong>
                bar ?
-            </div>
+            </span>
           </div>
         </li>
         <li
@@ -149,14 +145,14 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
           <div
             class="c1"
           >
-            <div
-              class="c2"
+            <span
+              class=""
             >
               <strong>
                 foo
               </strong>
                bazzz
-            </div>
+            </span>
           </div>
         </li>
       </ul>
