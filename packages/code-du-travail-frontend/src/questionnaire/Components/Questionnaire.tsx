@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { icons, theme } from "@socialgouv/cdtn-ui";
+import { icons, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import { Summary } from "./Summary";
 import { Question } from "./Question";
 import { useStore } from "../store";
@@ -13,12 +13,14 @@ type QuestionnaireProps = {
   slug: string;
   title: string;
   personnalizedTitle?: string;
+  variant?: string;
 };
 
 export const Questionnaire = ({
   slug,
   title,
   personnalizedTitle,
+  variant,
 }: QuestionnaireProps) => {
   const init = useStore((state) => state.init);
   const getSlugResponses = useStore((state) => state.getSlugResponses);
@@ -33,10 +35,10 @@ export const Questionnaire = ({
     }
   }, [getSlugResponses, slug]);
   return (
-    <Wrapper>
+    <StyledWrapper variant={variant}>
       <Header>
         <StyledIcon>
-          <GearIcon />
+          <GearIcon width="24" height="24" />
         </StyledIcon>
         <HeaderTitle>
           {isPersonnalizedMode(slug) && personnalizedTitle
@@ -51,33 +53,49 @@ export const Questionnaire = ({
         />
         {slug === toolSlug && <Question />}
       </Body>
-    </Wrapper>
+    </StyledWrapper>
   );
 };
 
-const Wrapper = styled.div`
-  border: 1px solid #7598d6;
-  border-radius: 6px;
-  max-width: 862px;
-  margin: auto;
+// const Wrapper = styled.div`
+//   border: 1px solid #7598d6;
+//   border-radius: 6px;
+//   max-width: 862px;
+//   margin: auto;
+//   padding: 32px;
+//   @media (max-width: ${breakpoints.mobile}) {
+//     padding: 12px;
+//   }
+// `;
+
+const StyledWrapper = styled(Wrapper)`
   padding: 32px;
-  @media (max-width: ${breakpoints.mobile}) {
-    padding: 12px;
-  }
+  box-shadow: ${({ variant }) =>
+    variant !== "dark" ? "0 1rem 2rem rgb(121 148 212 / 20%)" : "none"};
+  max-width: 800px;
+  margin: auto;
 `;
 
 const Header = styled.div`
   display: flex;
   flex-direction: row;
-  margin-bottom: 32px;
+  margin-bottom: 12px;
 `;
 
-const HeaderTitle = styled.h2`
+const HeaderTitle = styled.div`
   margin: 3px 0;
+  font-weight: 600;
+  font-size: 22px;
 `;
 
 const StyledIcon = styled.div`
-  margin-right: 24px;
+  max-height: 35px;
+  max-width: 35px;
+  margin: 3px 18px 3px 12px;
+  svg {
+    width: 35px;
+    height: 35px;
+  }
 `;
 
 const Body = styled.div`

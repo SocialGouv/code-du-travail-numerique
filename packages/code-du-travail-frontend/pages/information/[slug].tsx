@@ -102,6 +102,7 @@ const Information = ({
               personnalizedTitle="Votre situation"
               slug={slug}
               title={"Cette procédure concerne le cas suivant :"}
+              variant="dark"
             ></QuestionnaireWrapper>
           </SlugSummaryWrapper>
         )}

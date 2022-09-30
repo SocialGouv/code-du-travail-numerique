@@ -5,20 +5,31 @@ import useWindowDimensions from "../../../common/WindowDimension";
 
 const { breakpoints } = theme;
 
-export const SummaryItem = ({ data, onClick, noButton }) => {
+type SymmaryItemProps = {
+  data: any;
+  onClick: () => void;
+  noButton: boolean;
+  noCheck: boolean;
+};
+
+export const SummaryItem = ({
+  data,
+  onClick,
+  noButton = false,
+  noCheck = false,
+}: SymmaryItemProps) => {
   const { width } = useWindowDimensions();
   return (
     <SummaryItemWrapper>
-      <StyledIcon>
-        <CheckIcon width="18" height="18" />
-      </StyledIcon>
+      {!noCheck && (
+        <StyledIcon>
+          <CheckIcon width="18" height="18" />
+        </StyledIcon>
+      )}
       <StyledText>{data}</StyledText>
       {!noButton && (
-        <StyledButton variant="flat" xsmall onClick={onClick}>
+        <StyledButton variant="link" xsmall onClick={onClick} icon={UpdateIcon}>
           {width > breakpoints.intMobile ? "Modifier" : ""}
-          <UpdateIconWrapper>
-            <UpdateIcon width="18" height="18" />
-          </UpdateIconWrapper>
         </StyledButton>
       )}
     </SummaryItemWrapper>
@@ -27,11 +38,12 @@ export const SummaryItem = ({ data, onClick, noButton }) => {
 
 const SummaryItemWrapper = styled.li`
   list-style-type: none;
-  margin-bottom: 11px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: row;
+  margin-bottom: 6px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const StyledIcon = styled.div`
@@ -42,15 +54,8 @@ const StyledIcon = styled.div`
   height: 20px;
   color: white;
   border-radius: 12px;
-  margin-left: 32px;
+  margin: 3px 0;
   font-size: 10px;
-  @media (max-width: ${breakpoints.mobile}) {
-    margin-left: 0;
-  }
-`;
-
-const UpdateIconWrapper = styled.div`
-  margin-left: 6px;
   @media (max-width: ${breakpoints.mobile}) {
     margin-left: 0;
   }

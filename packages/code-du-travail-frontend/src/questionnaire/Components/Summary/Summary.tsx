@@ -3,7 +3,7 @@ import { SummaryItem } from "./SummaryItem";
 import { useStore } from "../../store";
 import { useRouter } from "next/router";
 import { PreviousResponse } from "../../type";
-import { Button } from "@socialgouv/cdtn-ui";
+import { Button, Wrapper } from "@socialgouv/cdtn-ui";
 
 export const Summary = ({
   responses,
@@ -15,9 +15,10 @@ export const Summary = ({
   const toolSlug = useStore((state) => state.toolSlug);
   const router = useRouter();
   const goTo = useStore((state) => state.goTo);
+  const displayableResponses = responses.filter(({ text }) => !!text);
   return (
     <SummaryWrapper>
-      {responses.map(({ text }, index) => {
+      {displayableResponses.map(({ text }, index) => {
         return (
           text && (
             <SummaryItem
@@ -30,15 +31,16 @@ export const Summary = ({
                 goTo(index);
               }}
               noButton={withLink}
+              noCheck={withLink && displayableResponses.length === 1}
             ></SummaryItem>
           )
         );
       })}
       {withLink && (
         <LinkWrapper>
-          <div>Ce cas ne correspond pas à votre situation ?</div>
           <Button
             variant="link"
+            hasText
             onClick={async () => {
               await router.push(`/outils/${toolSlug}`);
             }}
@@ -56,5 +58,7 @@ const SummaryWrapper = styled.ul`
 `;
 
 const LinkWrapper = styled.div`
-  margin-left: 32px;
+  margin-left: 12px;
 `;
+
+const StyledWrapper = styled(Wrapper)``;
