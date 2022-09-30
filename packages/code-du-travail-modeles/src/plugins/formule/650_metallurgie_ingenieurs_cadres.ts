@@ -37,22 +37,22 @@ export class Formula650
       }
       explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
       if (age >= 50 && age < 55 && seniority >= 5) {
-        formula = formula.replace(/^/, "[").replace(/$/, "]");
+        formula = formula.replace(/^/, "[ ").replace(/$/, " ]");
         formula += ` * 1.2`;
       } else if (age >= 55 && age < 60 && seniority >= 5) {
-        formula = formula.replace(/^/, "[").replace(/$/, "]");
+        formula = formula.replace(/^/, "[ ").replace(/$/, " ]");
         formula += ` * 1.3`;
       } else if (age === 61) {
-        formula = formula.replace(/^/, "[").replace(/$/, "]");
+        formula = formula.replace(/^/, "[ ").replace(/$/, " ]");
         formula += ` * 0.95`;
       } else if (age === 62) {
-        formula = formula.replace(/^/, "[").replace(/$/, "]");
+        formula = formula.replace(/^/, "[ ").replace(/$/, " ]");
         formula += ` * 0.9`;
       } else if (age === 63) {
-        formula = formula.replace(/^/, "[").replace(/$/, "]");
+        formula = formula.replace(/^/, "[ ").replace(/$/, " ]");
         formula += ` * 0.8`;
       } else if (age === 64) {
-        formula = formula.replace(/^/, "[").replace(/$/, "]");
+        formula = formula.replace(/^/, "[ ").replace(/$/, " ]");
         formula += ` * 0.6`;
       }
     }
