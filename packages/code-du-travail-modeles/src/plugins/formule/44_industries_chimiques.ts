@@ -160,7 +160,6 @@ export class Formula44
   >): Formula {
     let formula = "";
     const explanations: string[] = [];
-    const year = round(seniority) < 2 ? "an" : "ans";
     if (isEconomicFiring) {
       if (seniority >= 5 && age >= 50 && age <= 55) {
         formula = "2 * Sref + 3 / 10 * Sref * A1";
@@ -172,7 +171,7 @@ export class Formula44
     } else {
       if (seniority >= 5 && age > 55) {
         formula = "2 * Sref + 3 / 10 * Sref * A1";
-      } else if (seniority >= 5 && age > 50) {
+      } else if (seniority >= 5 && age > 45) {
         formula = "Sref + 3 / 10 * Sref * A1";
       } else if (seniority >= 2) {
         formula = "3 / 10 * Sref * A1";
@@ -185,9 +184,11 @@ export class Formula44
       formula !== "" &&
       !(seniority >= 1 && seniority < 2 && isEconomicFiring)
     ) {
+      const maxSeniority = Math.min(round(seniority), 10);
+      const yearAfterDiff = maxSeniority < 2 ? "an" : "ans";
       explanations.push(
         `A1: Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans
-        (${Math.min(round(seniority), 10)} ${year})`
+        (${maxSeniority} ${yearAfterDiff})`
       );
       if (seniority >= 10) {
         const maxSeniority2 = Math.min(round(seniority - 10), 5);

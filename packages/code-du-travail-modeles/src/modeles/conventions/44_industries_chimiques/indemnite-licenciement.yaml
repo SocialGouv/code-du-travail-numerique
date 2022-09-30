@@ -2,39 +2,466 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   applicable si: indemnité de licenciement
   valeur: oui
 
+# Questions
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Ouvriers et collaborateurs (Groupes I à III): "'Ouvriers et collaborateurs (Groupes I à III)'"
+      Agents de maîtrise et techniciens (Groupe IV): "'Agents de maîtrise et techniciens (Groupe IV)'"
+      Ingénieurs et cadres (Groupe V): "'Ingénieurs et cadres (Groupe V)'"
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique:
+  titre: Licenciement pour motif économique
+  question: Le motif du licenciement est-il économique ?
+  cdtn:
+    type: oui-non
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié ?
+  cdtn:
+    type: entier
+
+# Formules
+
+## Périodes
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . jusqu'à dix ans:
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - 10 an
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . de dix à quinze ans:
+  variations:
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 10 an
+      alors:
+        le minimum de:
+          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année - 10
+          - 5 an
+    - sinon: 0
+  unité: an
+
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . au delà de quinze ans:
   somme:
     - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
     - (- 15 an)
   plancher: 0 an
 
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . ancienneté totale:
+## Calculs
+
+### Basique
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . trois dixième sref:
   valeur:
     produit:
       assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-      facteur: 1 / 5
+      facteur: 3 / 10
   unité: €
 
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . plus de quinze ans:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . un dixième sref à partir de dix ans:
+  variations:
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 10 an
+      alors:
+        produit:
+          assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+          facteur: 1 / 10
+    - sinon: 0
+  unité: €
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . un dixième sref à partir de vingt ans:
+  variations:
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 20 an
+      alors:
+        produit:
+          assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+          facteur: 1 / 10
+    - sinon: 0
+  unité: €
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . quatre dixième sref jusqu'à dix ans:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * jusqu'à dix ans
+      facteur: 4 / 10
+  unité: €
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . six dixième sref de dix ans à quinze ans:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * de dix à quinze ans
+      facteur: 6 / 10
+  unité: €
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . huit dixième sref au delà de quinze ans:
   valeur:
     produit:
       assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * au delà de quinze ans
-      facteur: 1 / 10
+      facteur: 8 / 10
   unité: €
 
-# (1/5*Sref*A1) + (1/10*Sref*A2)
-# A1: Ancienneté totale
-# A2: Années de présence au delà de 15 ans
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . somme agent de maîtrise:
+  valeur:
+    somme:
+      - trois dixième sref
+      - un dixième sref à partir de dix ans
+      - un dixième sref à partir de vingt ans
+  unité: €
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . somme ingénieur:
+  valeur:
+    somme:
+      - quatre dixième sref jusqu'à dix ans
+      - six dixième sref de dix ans à quinze ans
+      - huit dixième sref au delà de quinze ans
+  unité: €
+
+# Résultat conventionnel
+
+## Ouvrier
+
+### Licenciement économique
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 1:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 24 mois
-      alors:
-        somme:
-          - ancienneté totale
-          - plus de quinze ans
-    - sinon: 0
+  non applicable si: résultat conventionnel 3
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Ouvriers et collaborateurs (Groupes I à III)'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
+      - catégorie professionnelle . licenciement économique = 'Oui'
+  valeur:
+    le minimum de:
+      - trois dixième sref
+      - contrat salarié . indemnité de licenciement * 2
   unité: €
   arrondi: 2 décimales
   références:
-    Article 9.2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005775560?idConteneur=KALICONT000005635435
+    Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 2:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Ouvriers et collaborateurs (Groupes I à III)'
+      - catégorie professionnelle . licenciement économique = 'Oui'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1 an
+  valeur: contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 3:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Ouvriers et collaborateurs (Groupes I à III)'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+      - catégorie professionnelle . licenciement économique = 'Oui'
+      - catégorie professionnelle . licenciement économique . age >= 50
+      - catégorie professionnelle . licenciement économique . age <= 55
+  valeur:
+    somme:
+      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
+      - trois dixième sref
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 14
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+
+### Autres licenciement
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 4:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  non applicable si:
+    une de ces conditions:
+      - résultat conventionnel 5
+      - résultat conventionnel 6
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Ouvriers et collaborateurs (Groupes I à III)'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
+      - catégorie professionnelle . licenciement économique = 'Non'
+  valeur: trois dixième sref
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 14
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 28 de l’Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846396?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 5:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  non applicable si: résultat conventionnel 6
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Ouvriers et collaborateurs (Groupes I à III)'
+      - catégorie professionnelle . licenciement économique = 'Non'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+      - catégorie professionnelle . licenciement économique . age > 50
+  valeur:
+    somme:
+      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      - trois dixième sref
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 14
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 28 de l’Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846396?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 6:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Ouvriers et collaborateurs (Groupes I à III)'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+      - catégorie professionnelle . licenciement économique = 'Non'
+      - catégorie professionnelle . licenciement économique . age > 55
+  valeur:
+    somme:
+      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
+      - trois dixième sref
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 14
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 28 de l’Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846396?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+
+## Agents de maîtrise
+
+### Licenciement économique
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 7:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  non applicable si: résultat conventionnel 8
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Agents de maîtrise et techniciens (Groupe IV)'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
+      - catégorie professionnelle . licenciement économique = 'Oui'
+  valeur:
+    le minimum de:
+      - somme agent de maîtrise
+      - contrat salarié . indemnité de licenciement * 2
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 8:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Agents de maîtrise et techniciens (Groupe IV)'
+      - catégorie professionnelle . licenciement économique = 'Oui'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1 an
+  valeur: contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 9:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Agents de maîtrise et techniciens (Groupe IV)'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+      - catégorie professionnelle . licenciement économique = 'Oui'
+      - catégorie professionnelle . licenciement économique . age >= 50
+      - catégorie professionnelle . licenciement économique . age <= 55
+  valeur:
+    somme:
+      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
+      - somme agent de maîtrise
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+
+### Autres licenciement
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 10:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  non applicable si:
+    une de ces conditions:
+      - résultat conventionnel 11
+      - résultat conventionnel 12
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Agents de maîtrise et techniciens (Groupe IV)'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
+      - catégorie professionnelle . licenciement économique = 'Non'
+  valeur: somme agent de maîtrise
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 21 de l’ Avenant n° 2 du 14 mars 1955 relatif aux agents de maîtrise et certains techniciens: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846463?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 11:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  non applicable si: résultat conventionnel 6
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Agents de maîtrise et techniciens (Groupe IV)'
+      - catégorie professionnelle . licenciement économique = 'Non'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+      - catégorie professionnelle . licenciement économique . age > 50
+  valeur:
+    somme:
+      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      - somme agent de maîtrise
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 21 de l’ Avenant n° 2 du 14 mars 1955 relatif aux agents de maîtrise et certains techniciens: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846463?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 12:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Agents de maîtrise et techniciens (Groupe IV)'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+      - catégorie professionnelle . licenciement économique = 'Non'
+      - catégorie professionnelle . licenciement économique . age > 55
+  valeur:
+    somme:
+      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
+      - somme agent de maîtrise
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 21 de l’ Avenant n° 2 du 14 mars 1955 relatif aux agents de maîtrise et certains techniciens: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846463?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+
+## Ingénieur
+
+### Licenciement économique
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 13:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  non applicable si: résultat conventionnel 15
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Ingénieurs et cadres (Groupe V)'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
+      - catégorie professionnelle . licenciement économique = 'Oui'
+  valeur:
+    le minimum de:
+      - somme ingénieur
+      - contrat salarié . indemnité de licenciement * 2
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 14:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Ingénieurs et cadres (Groupe V)'
+      - catégorie professionnelle . licenciement économique = 'Oui'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1 an
+  valeur: contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 15:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Ingénieurs et cadres (Groupe V)'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+      - catégorie professionnelle . licenciement économique = 'Oui'
+      - catégorie professionnelle . licenciement économique . age >= 50
+      - catégorie professionnelle . licenciement économique . age <= 55
+  valeur:
+    somme:
+      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
+      - somme ingénieur
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 20
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+
+### Autres licenciement
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 16:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  non applicable si:
+    une de ces conditions:
+      - résultat conventionnel 17
+      - résultat conventionnel 18
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Ingénieurs et cadres (Groupe V)'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
+      - catégorie professionnelle . licenciement économique = 'Non'
+  valeur: somme ingénieur
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 20
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 14 de l’Avenant n° 3 du 16 juin 1955 relatif aux ingénieurs et cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846317?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 17:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  non applicable si: résultat conventionnel 6
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Ingénieurs et cadres (Groupe V)'
+      - catégorie professionnelle . licenciement économique = 'Non'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5 an
+      - catégorie professionnelle . licenciement économique . age > 45
+  valeur:
+    somme:
+      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      - somme ingénieur
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 20
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 14 de l’Avenant n° 3 du 16 juin 1955 relatif aux ingénieurs et cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846317?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 18:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Ingénieurs et cadres (Groupe V)'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5 an
+      - catégorie professionnelle . licenciement économique = 'Non'
+      - catégorie professionnelle . licenciement économique . age > 55
+  valeur:
+    somme:
+      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
+      - somme ingénieur
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 20
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 14 de l’Avenant n° 3 du 16 juin 1955 relatif aux ingénieurs et cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846317?idConteneur=KALICONT000005635613
+    Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
