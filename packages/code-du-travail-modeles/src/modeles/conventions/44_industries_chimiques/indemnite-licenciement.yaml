@@ -21,7 +21,6 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     type: oui-non
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
   titre: Âge du salarié
   question: Quel est l'âge du salarié ?
   cdtn:

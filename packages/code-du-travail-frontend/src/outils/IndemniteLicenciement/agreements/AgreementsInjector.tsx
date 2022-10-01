@@ -27,10 +27,12 @@ export default function AgreementsInjector(props: Props) {
     case SupportedCcIndemniteLicenciement.IDCC1527 === props.idcc &&
       props.step === IndemniteLicenciementStepName.Resultat:
       return <Agreement1527Informations />;
-    case SupportedCcIndemniteLicenciement.IDCC0016 === props.idcc &&
+    case (SupportedCcIndemniteLicenciement.IDCC0016 === props.idcc ||
+      SupportedCcIndemniteLicenciement.IDCC0044 === props.idcc) &&
       props.step === IndemniteLicenciementStepName.Salaires:
       return <Agreement16 />;
-    case SupportedCcIndemniteLicenciement.IDCC0016 === props.idcc &&
+    case (SupportedCcIndemniteLicenciement.IDCC0016 === props.idcc ||
+      SupportedCcIndemniteLicenciement.IDCC0044 === props.idcc) &&
       props.step === IndemniteLicenciementStepName.Resultat:
       return <Agreement16Informations />;
     default:
