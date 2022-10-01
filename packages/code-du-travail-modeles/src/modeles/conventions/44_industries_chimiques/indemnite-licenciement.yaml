@@ -123,7 +123,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
 ## Ouvrier
 
 ### Licenciement économique
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 1:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 1:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si: résultat conventionnel 3
   applicable si:
@@ -141,7 +141,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
 
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 2:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 2:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
@@ -156,7 +156,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
 
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 3:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 3:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
@@ -177,7 +177,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
 
 ### Autres licenciement
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 4:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 4:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si:
     une de ces conditions:
@@ -196,7 +196,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 28 de l’Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846396?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
 
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 5:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 5:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si: résultat conventionnel 6
   applicable si:
@@ -216,7 +216,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 28 de l’Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846396?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
 
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 6:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 6:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
@@ -238,7 +238,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
 ## Agents de maîtrise
 
 ### Licenciement économique
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 7:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 7:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si:
     une de ces conditions:
@@ -259,7 +259,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
 
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 8:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 8:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
@@ -274,7 +274,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
 
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 9:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 9:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
@@ -295,7 +295,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
 
 ### Autres licenciement
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 10:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 10:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si:
     une de ces conditions:
@@ -314,7 +314,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 21 de l’ Avenant n° 2 du 14 mars 1955 relatif aux agents de maîtrise et certains techniciens: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846463?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
 
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 11:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 11:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si: résultat conventionnel 12
   applicable si:
@@ -334,7 +334,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 21 de l’ Avenant n° 2 du 14 mars 1955 relatif aux agents de maîtrise et certains techniciens: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846463?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
 
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 12:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 12:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
@@ -356,7 +356,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
 ## Ingénieur
 
 ### Licenciement économique
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 13:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 13:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si: résultat conventionnel 15
   applicable si:
@@ -374,7 +374,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
 
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 14:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 14:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
@@ -389,7 +389,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
 
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 15:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 15:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
@@ -410,7 +410,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
 
 ### Autres licenciement
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 16:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 16:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si:
     une de ces conditions:
@@ -429,7 +429,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 14 de l’Avenant n° 3 du 16 juin 1955 relatif aux ingénieurs et cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846317?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
 
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 17:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 17:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si: résultat conventionnel 18
   applicable si:
@@ -449,7 +449,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 14 de l’Avenant n° 3 du 16 juin 1955 relatif aux ingénieurs et cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846317?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
 
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 18:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 18:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
@@ -469,7 +469,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
 
 ### Fallback
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 19:
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 19:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si:
     une de ces conditions:

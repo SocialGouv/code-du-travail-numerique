@@ -4,7 +4,6 @@ import { validateStep } from "./validator";
 
 import {
   CommonInformationsStoreData,
-  CommonInformationsStoreInput,
   CommonInformationsStoreSlice,
   PublicodesInformation,
 } from "./types";
