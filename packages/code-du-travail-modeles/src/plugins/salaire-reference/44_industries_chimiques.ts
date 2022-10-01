@@ -42,7 +42,7 @@ export class ReferenceSalary44
     const rankedSalaires = rankByMonthArrayDescFrench(salaires);
     const salaryValues = rankedSalaires.map((a) => a.value).filter(nonNullable);
     const salaireMoyen = sum(salaryValues) / 12;
-    const dernierSalaire = rankedSalaires[0].value ?? 0;
+    const dernierSalaire = rankedSalaires[0]?.value ?? 0;
     if (
       hasVariablePay &&
       (category === CategoryPro44.ouvrier ||
