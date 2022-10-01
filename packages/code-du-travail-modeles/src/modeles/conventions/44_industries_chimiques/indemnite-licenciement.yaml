@@ -241,7 +241,10 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
 ### Licenciement économique
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . résultat conventionnel 7:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  non applicable si: résultat conventionnel 8
+  non applicable si:
+    une de ces conditions:
+      - résultat conventionnel 8
+      - résultat conventionnel 9
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Agents de maîtrise et techniciens (Groupe IV)'
