@@ -25,13 +25,14 @@ export class Seniority44
     const totalAbsence =
       absencePeriods.reduce((total, item) => {
         const m = this.motifs.find((motif) => motif.key === item.motif.key);
-        if (
-          item.durationInMonth === undefined ||
-          !m ||
-          (item.motif.key === MotifKeys.maladieNonPro &&
-            item.durationInMonth > 36)
-        ) {
+        if (item.durationInMonth === undefined || !m) {
           return total;
+        }
+        if (
+          item.motif.key === MotifKeys.maladieNonPro &&
+          item.durationInMonth > 36
+        ) {
+          return total + item.durationInMonth;
         }
         return total + item.durationInMonth * m.value;
       }, 0) / 12;
