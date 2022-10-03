@@ -49,6 +49,10 @@ export class SeniorityFactory {
         return new SeniorityLegal(
           getMotifs(SupportedCcIndemniteLicenciement.IDCC3239)
         ) as ISeniority<T>;
+      case SupportedCcIndemniteLicenciement.IDCC650:
+        return new SeniorityLegal(
+          getMotifs(SupportedCcIndemniteLicenciement.IDCC650)
+        );
       case SupportedCcIndemniteLicenciement.IDCC2216:
         return new Seniority2216(
           getMotifs(SupportedCcIndemniteLicenciement.IDCC2216)

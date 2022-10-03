@@ -42,10 +42,10 @@ export class Formula2216
       formula = res.formula;
       explanations = res.explanations;
       if (isEconomicFiring && age > 50 && seniority <= 10) {
-        formula += ` + ( 20\\% * (1 / 4 * Sref * A) )`;
+        formula += ` + ( 20% * (1 / 4 * Sref * A) )`;
         explanations.push(`20% : majoration pour motif économique`);
       } else if (isEconomicFiring && age > 50 && seniority > 10) {
-        formula += ` + ( 20\\% * (1 / 4 * Sref * A) + 20\\% * (1 / 3 * Sref * A) )`;
+        formula += ` + ( 20% * (1 / 4 * Sref * A) + 20% * (1 / 3 * Sref * A) )`;
         explanations.push(`20% : majoration pour motif économique`);
       }
     } else if (
@@ -57,7 +57,7 @@ export class Formula2216
       explanations.push(`A : Ancienneté totale (${round(seniority)} ${year})`);
       explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
       if (isEconomicFiring && age >= 50) {
-        formula += ` + ( 20\\% * (1 / 4 * Sref * A) )`;
+        formula += ` + ( 20% * (1 / 4 * Sref * A) )`;
         explanations.push(`20% : majoration pour motif économique`);
       }
     } else if (category === CatPro2216.cadres && seniority > 5) {
@@ -68,7 +68,7 @@ export class Formula2216
         `A1: Années de présence pour la tranche jusqu'à 10 ans (${maxSeniority1} ${yearAfterDiff})`
       );
       if (isEconomicFiring && age >= 50) {
-        formula += ` + ( 20\\% * ( 3 / 10 * Sref * A1 ) )`;
+        formula += ` + ( 20% * ( 3 / 10 * Sref * A1 ) )`;
       }
       if (seniority > 10) {
         formula += ` + ( 4 / 10 * Sref * A2 )`;
@@ -78,7 +78,7 @@ export class Formula2216
           `A2: Années de présence pour la tranche de 10 à 20 ans (${maxSeniority2} ${yearAfterDiff2})`
         );
         if (isEconomicFiring && age >= 50) {
-          formula += ` + ( 20\\% * ( 4 / 10 * Sref * A2 ))`;
+          formula += ` + ( 20% * ( 4 / 10 * Sref * A2 ))`;
         }
       }
       if (seniority > 20) {
@@ -89,7 +89,7 @@ export class Formula2216
           `A3: Années de présence pour la tranche de 20 ans à 40 ans (${maxSeniority3} ${yearAfterDiff3})`
         );
         if (isEconomicFiring && age >= 50) {
-          formula += ` + ( 20\\% * ( 5 / 10 * Sref * A3 ))`;
+          formula += ` + ( 20% * ( 5 / 10 * Sref * A3 ))`;
         }
       }
       if (seniority > 40) {
@@ -100,7 +100,7 @@ export class Formula2216
           `A4: Années de présence pour la tranche au-delà de 40 ans (${maxSeniority4} ${yearAfterDiff4})`
         );
         if (isEconomicFiring && age >= 50) {
-          formula += ` + ( 20\\% * ( 1 / 3 * Sref * A4 ))`;
+          formula += ` + ( 20% * ( 1 / 3 * Sref * A4 ))`;
         }
       }
       if (isEconomicFiring) {

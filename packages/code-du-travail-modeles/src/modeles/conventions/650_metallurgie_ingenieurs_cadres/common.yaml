@@ -6,3 +6,4 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres:
   cdtn:
     idcc: 650
     préavis-retraite: true
+    indemnité-licenciement: true
