@@ -3,7 +3,7 @@ import { SummaryItem } from "./SummaryItem";
 import { useStore } from "../../store";
 import { useRouter } from "next/router";
 import { PreviousResponse } from "../../type";
-import { Button, Wrapper } from "@socialgouv/cdtn-ui";
+import { Button } from "@socialgouv/cdtn-ui";
 
 export const Summary = ({
   responses,
@@ -55,10 +55,9 @@ export const Summary = ({
 
 const SummaryWrapper = styled.ul`
   margin: 0;
+  padding: 12px 0;
 `;
 
 const LinkWrapper = styled.div`
   margin-left: 12px;
 `;
-
-const StyledWrapper = styled(Wrapper)``;

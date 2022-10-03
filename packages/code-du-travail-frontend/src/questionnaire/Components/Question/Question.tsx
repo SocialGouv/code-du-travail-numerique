@@ -49,12 +49,7 @@ export const Question = () => {
   );
 };
 
-const QuestionWrapper = styled.div`
-  padding: 18px;
-  @media (max-width: ${breakpoints.mobile}) {
-    margin: 0;
-  }
-`;
+const QuestionWrapper = styled.div``;
 
 const QuestionHeader = styled.div`
   font-weight: 600;

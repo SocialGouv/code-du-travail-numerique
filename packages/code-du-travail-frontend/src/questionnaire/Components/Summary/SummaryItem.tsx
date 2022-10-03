@@ -70,5 +70,9 @@ const StyledText = styled.div`
 const StyledButton = styled(Button)`
   @media (max-width: ${breakpoints.mobile}) {
     padding: 0 8px;
+    svg {
+      width: 32px;
+      height: 32px;
+    }
   }
 `;
