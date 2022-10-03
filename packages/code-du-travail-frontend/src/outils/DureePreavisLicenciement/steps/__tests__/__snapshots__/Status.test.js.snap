@@ -116,11 +116,11 @@ exports[`<StepStatus /> should render 1`] = `
       class="c1"
     >
       Le licenciement est-il dû à une faute grave (ou lourde) ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="c2"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div
@@ -456,11 +456,11 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       class="c1"
     >
       Le licenciement est-il dû à une faute grave (ou lourde) ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="c2"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div
@@ -509,11 +509,11 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       class="c1"
     >
       Le salarié concerné est-il reconnu en tant que travailleur handicapé ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="c2"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div
@@ -566,11 +566,11 @@ exports[`<StepStatus /> should render coefficient 1`] = `
         class="c1"
       >
         Quelle est l'ancienneté du salarié ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
+        <span
+          class="c2"
+        >
+           (obligatoire)
+        </span>
       </span>
       <button
         aria-label="Plus d'informations"
@@ -793,11 +793,11 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
       class="c1"
     >
       Le licenciement est-il dû à une faute grave (ou lourde) ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="c2"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div
@@ -846,11 +846,11 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
       class="c1"
     >
       Le salarié concerné est-il reconnu en tant que travailleur handicapé ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="c2"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div

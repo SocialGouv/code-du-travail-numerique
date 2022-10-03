@@ -123,7 +123,7 @@ describe("Informations store", () => {
             },
             nom: "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période",
             question:
-              "Le salarié a-t-il précédemment occupé des fonctions non-cadre durant le contrat de travail ?",
+              "Le salarié a-t-il précédemment occupé des fonctions non-cadre durant le contrat de travail&nbsp;?",
             titre: "Fonctions de non-cadre durant le contrat de travail",
           },
         },

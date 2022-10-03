@@ -44,7 +44,7 @@ describe("Références jurdiques pour l'indemnité conventionnel de licenciement
           "contrat salarié . convention collective": "'IDCC2264'",
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
-            "non",
+            "'Non'",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
@@ -100,8 +100,8 @@ describe("Références jurdiques pour l'indemnité conventionnel de licenciement
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle":
             "'Cadres'",
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
-            "oui",
-          "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps":
+            "'Oui'",
+          "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif":
             seniorityNonCadres,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,

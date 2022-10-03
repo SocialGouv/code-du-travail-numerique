@@ -85,7 +85,7 @@ export function getPastQuestions(
 
 export function getSituationsFor<T extends Situation>(
   data: T[],
-  obj: Record<string, string | number | undefined>
+  obj: Record<string, string | number | undefined | null>
 ): T[] {
   return data.filter((situation) =>
     Object.entries(obj).every(([key, value]) => situation[key] === value)

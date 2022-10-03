@@ -1,17 +1,15 @@
-import { getNotifications, getReferences } from "@socialgouv/modeles-social";
+import {
+  getNotifications,
+  getReferences,
+  PublicodesContextType,
+  PublicodesData,
+  PublicodesIndemniteLicenciementResult,
+  PublicodesProviderRule,
+} from "@socialgouv/modeles-social";
 import Engine from "publicodes";
 import React, { createContext, useMemo, useState } from "react";
 
-import {
-  handleExecute,
-  PublicodesIndemniteLicenciementResult,
-  updateSituation,
-} from ".";
-import {
-  PublicodesContextType,
-  PublicodesData,
-  PublicodesProviderRule,
-} from "./types";
+import { handleExecute, updateSituation } from ".";
 
 export const PublicodesContext = createContext<PublicodesContextType | null>(
   null
@@ -26,7 +24,9 @@ export const PublicodesProvider = ({
     return new Engine(rules);
   }, [rules]);
 
-  const [data, setData] = useState<PublicodesData>({
+  const [data, setData] = useState<
+    PublicodesData<PublicodesIndemniteLicenciementResult>
+  >({
     missingArgs: [],
     result: {} as PublicodesIndemniteLicenciementResult,
     situation: [],

@@ -1,5 +1,4 @@
-import { References } from "@socialgouv/modeles-social";
-import { OldReference } from "../types";
+import { OldReference, References } from "@socialgouv/modeles-social";
 
 export const reverseValues = (
   values: Record<string, string>

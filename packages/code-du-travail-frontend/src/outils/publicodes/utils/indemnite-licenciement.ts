@@ -22,6 +22,7 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
   agreementSalaireRef: number,
   legalSeniority: SeniorityResult,
   legalSalaireRef: number,
+  notificationDate: string,
   agreementParameters?: Record<string, any>
 ): Record<string, string> => {
   return {
@@ -39,6 +40,20 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
         formatNumberAsString(agreementSeniority.value),
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
         formatNumberAsString(agreementSalaireRef),
+      "contrat salarié . indemnité de licenciement . date de notification":
+        notificationDate,
     },
   };
+};
+
+export const publicodesUnitTranslator = (value: string, unit?: string) => {
+  if (!unit) return "";
+  if (unit === "an") {
+    const parseValue = parseFloat(value);
+    if (parseValue <= 1) {
+      return "an";
+    }
+    return "ans";
+  }
+  return unit;
 };

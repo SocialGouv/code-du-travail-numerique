@@ -124,6 +124,7 @@ const createResultStore: StoreSlice<
               v.info && {
                 label: v.question.rule.titre,
                 value: v.info,
+                unit: v.question.rule.unité
               }
           )
           .filter((v) => v !== "") as AgreementInformation[];
@@ -139,6 +140,7 @@ const createResultStore: StoreSlice<
             agreementRefSalary,
             legalSeniority,
             refSalary,
+            get().ancienneteData.input.dateNotification!,
             infos
           ),
           "contrat salarié . indemnité de licenciement . résultat conventionnel"

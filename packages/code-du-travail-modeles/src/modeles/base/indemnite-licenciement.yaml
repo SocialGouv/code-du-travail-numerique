@@ -107,3 +107,6 @@ contrat salarié . indemnité de licenciement . résultat conventionnel:
 
 contrat salarié . indemnité de licenciement . étape salaire désactivée:
   valeur: non
+
+contrat salarié . indemnité de licenciement . date de notification:
+  valeur: non
