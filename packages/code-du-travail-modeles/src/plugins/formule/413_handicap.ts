@@ -48,7 +48,7 @@ export class Formula413
       const anNonCadre = round(seniorityNonCadre) < 2 ? "an" : "ans";
       formula = `1/2 * Sref * A1 + Sref * A2`;
       explanations.push(
-        `A1: Année de service en qualité de non-cadre (${round(
+        `A1: Année de service en qualité de non-cadres (${round(
           seniorityNonCadre
         )} ${anNonCadre})`
       );
