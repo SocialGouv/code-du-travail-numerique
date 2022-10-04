@@ -7,7 +7,6 @@ export type QuestionnaireResponse = {
   statement: string;
   infoStatement?: string;
   question?: QuestionnaireQuestion;
-  isSlugReference?: boolean;
 };
 
 export type QuestionnaireQuestion = {

@@ -30,7 +30,7 @@ export const slugSummaryRecursive = (
   return questionTree.responses.reduce(
     (
       acc: SlugResponses,
-      { question, slug, isSlugReference }: QuestionnaireResponse,
+      { question, slug }: QuestionnaireResponse,
       index: number
     ) => {
       const { infoStatement: text } = questionTree.responses[index];
@@ -38,7 +38,7 @@ export const slugSummaryRecursive = (
       const responses = previousResponses.concat({ index, text });
       if (question) {
         slugSummary = slugSummaryRecursive(question, responses);
-      } else if (isSlugReference && slug) {
+      } else if (slug) {
         slugSummary = {
           [slug]: responses,
         };

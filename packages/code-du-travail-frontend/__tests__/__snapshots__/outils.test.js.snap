@@ -242,7 +242,7 @@ exports[`<Outils /> should render 1`] = `
 .c45 svg {
   width: 2.6rem;
   height: 1.4rem;
-  margin: 0;
+  margin: 0 0.4rem 0 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   transition: transform 250ms linear;
