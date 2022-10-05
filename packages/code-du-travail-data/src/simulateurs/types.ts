@@ -22,7 +22,7 @@ export type Situation = {
 };
 
 export type SituationHeuresRechercheEmploi = Situation & {
-  typeRupture: string;
+  typeRupture: string | null;
 };
 
 export type PreavisDemission = {
