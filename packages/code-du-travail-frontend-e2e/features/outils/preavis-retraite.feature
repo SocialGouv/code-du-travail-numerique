@@ -115,8 +115,8 @@ Fonctionnalité: Outil - Préavis de retraite
     Quand j'attends que le texte "CARREFOUR HYPERMARCHES" apparaisse
     Quand je clique sur "CARREFOUR HYPERMARCHES"
     Alors je vois "2 conventions collectives ont été trouvées pour cette entreprise"
-    Alors je vois "Commerce de détail et de gros à prédominance alimentaire"
-    Alors je vois "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils"
+    Alors je vois "Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)"
+    Alors je vois "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils (IDCC 1486)"
 # TODO: le message d'erreur ne s'affiche pas quand on a déjà submit une question avant. A décommenter quand le bug est fixed (#4253°
 #    Quand je clique sur "Suivant"
 #    Alors je vois "Vous devez répondre à cette question"
