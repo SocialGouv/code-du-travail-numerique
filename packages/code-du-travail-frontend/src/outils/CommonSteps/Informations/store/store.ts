@@ -4,7 +4,6 @@ import { validateStep } from "./validator";
 
 import {
   CommonInformationsStoreData,
-  CommonInformationsStoreInput,
   CommonInformationsStoreSlice,
   PublicodesInformation,
 } from "./types";
@@ -70,6 +69,7 @@ const createCommonInformationsStore: StoreSlice<
               state.informationsData.input.publicodesInformations = [
                 {
                   order: 0,
+                  id: Math.random().toString(36).substring(2, 15),
                   question,
                   info: undefined,
                 },
@@ -99,17 +99,17 @@ const createCommonInformationsStore: StoreSlice<
       }
       const currentInformations: PublicodesInformation = {
         info: value,
+        id: questionAnswered.id,
         order: questionAnswered.order,
         question: questionAnswered.question,
       };
       const newPublicodesInformations = [
-        ...publicodesInformations.filter(
-          (el) => el.order !== questionAnswered.order
-        ),
         currentInformations,
+        ...publicodesInformations.filter(
+          (el) => el.order < questionAnswered.order
+        ),
       ].sort((a, b) => a.order - b.order);
       const rules = newPublicodesInformations
-        .filter((el) => el.order <= currentInformations.order)
         .map((v) => ({
           [v.question.rule.nom]: v.info,
         }))
