@@ -120,7 +120,7 @@ Fonctionnalité: Outil - Préavis de retraite
 # TODO: le message d'erreur ne s'affiche pas quand on a déjà submit une question avant. A décommenter quand le bug est fixed (#4253°
 #    Quand je clique sur "Suivant"
 #    Alors je vois "Vous devez répondre à cette question"
-    Quand je choisis "Commerce de détail et de gros à prédominance alimentaire"
+    Quand je choisis "Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)"
     Alors je vois "Cliquez sur Suivant pour poursuivre la simulation."
     Quand je clique sur "Fermer"
     Alors je vois "Nom de votre entreprise ou numéro Siret"
