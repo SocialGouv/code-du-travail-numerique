@@ -129,11 +129,6 @@ contrat salarié . préavis de retraite collective en jours:
   valeur: contrat salarié . préavis de retraite collective
   unité: jour
 
-contrat salarié . convention collective:
-  titre: Convention collective
-  question: Quelle est votre convention collective ?
-  par défaut: "''"
-
 contrat salarié . préavis de retraite collective maximum: non
 
 contrat salarié . préavis de retraite collective maximum en jours:

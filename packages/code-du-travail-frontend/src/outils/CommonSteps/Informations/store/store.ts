@@ -47,16 +47,19 @@ const createCommonInformationsStore: StoreSlice<
       }
       const agreement = get().agreementData.input.agreement;
       if (agreement) {
-        const { missingArgs } = publicodes.setSituation(
-          mapToPublicodesSituationForIndemniteLicenciementConventionnel(
-            agreement.num,
-            0,
-            0,
-            0,
-            0
-          ),
-          "contrat salarié . indemnité de licenciement . résultat conventionnel"
-        );
+        const missingArgs = publicodes
+          .setSituation(
+            mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+              agreement.num,
+              { value: 0 },
+              0,
+              { value: 0 },
+              0,
+              "01/01/2022"
+            ),
+            "contrat salarié . indemnité de licenciement . résultat conventionnel"
+          )
+          .missingArgs.filter((item) => item.rawNode.cdtn);
         if (missingArgs.length > 0) {
           const question = missingArgs.map((arg) => ({
             name: arg.name,
@@ -114,17 +117,20 @@ const createCommonInformationsStore: StoreSlice<
       let missingArgs: MissingArgs[] = [];
       let blockingNotification: string | undefined = undefined;
       try {
-        missingArgs = publicodes.setSituation(
-          mapToPublicodesSituationForIndemniteLicenciementConventionnel(
-            agreement.num,
-            0,
-            0,
-            0,
-            0,
-            rules
-          ),
-          "contrat salarié . indemnité de licenciement . résultat conventionnel"
-        ).missingArgs;
+        missingArgs = publicodes
+          .setSituation(
+            mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+              agreement.num,
+              { value: 0 },
+              0,
+              { value: 0 },
+              0,
+              "01/01/2022",
+              rules
+            ),
+            "contrat salarié . indemnité de licenciement . résultat conventionnel"
+          )
+          .missingArgs.filter((item) => item.rawNode.cdtn);
         const notifBloquante = publicodes.getNotificationsBloquantes();
         if (notifBloquante.length > 0) {
           blockingNotification = notifBloquante[0].description;
@@ -189,10 +195,11 @@ const createCommonInformationsStore: StoreSlice<
         const isStepSalaryHidden = publicodes.setSituation(
           mapToPublicodesSituationForIndemniteLicenciementConventionnel(
             agreement.num,
+            { value: 0 },
             0,
+            { value: 0 },
             0,
-            0,
-            0,
+            "01/01/2022",
             rules
           ),
           "contrat salarié . indemnité de licenciement . étape salaire désactivée"

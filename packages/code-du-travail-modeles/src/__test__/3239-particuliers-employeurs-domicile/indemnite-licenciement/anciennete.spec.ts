@@ -37,7 +37,7 @@ describe("CC 3239", () => {
           dateSortie: exitDate,
         });
 
-        expect(result).toEqual(expectedAnciennete);
+        expect(result.value).toEqual(expectedAnciennete);
       }
     );
   });

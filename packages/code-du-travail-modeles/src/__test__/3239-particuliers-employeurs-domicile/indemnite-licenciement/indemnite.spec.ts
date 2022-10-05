@@ -1,9 +1,9 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
 import { CatPro3239 } from "../../../plugins/salaire-reference/3239_particuliers_employeurs_domicile";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergeIndemniteLicenciementModels());
 
 describe("Indemnité conventionnel de licenciement pour la CC 3239", () => {
   describe("Cas standard", () => {
@@ -33,7 +33,6 @@ describe("Indemnité conventionnel de licenciement pour la CC 3239", () => {
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
-          "indemnité de licenciement": "oui",
         });
 
         const result = situation.evaluate(
@@ -67,7 +66,6 @@ describe("Indemnité conventionnel de licenciement pour la CC 3239", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
-            "indemnité de licenciement": "oui",
           });
 
           const result = situation.evaluate(

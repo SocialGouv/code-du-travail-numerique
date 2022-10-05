@@ -8,11 +8,15 @@ import { Error } from "../../../../common/ErrorField";
 import { Question } from "../../../../common/Question";
 import { SmallText } from "../../../../common/stepStyles";
 import AbsencePeriod from "./AbsencePeriod";
+import type { AncienneteAbsenceStoreError } from "../store";
 
 type Props = {
   onChange: (absences: Absence[]) => void;
   absences: Absence[];
-  error?: string;
+  error?: {
+    global?: string;
+    absences?: AncienneteAbsenceStoreError[];
+  };
   idcc?: SupportedCcIndemniteLicenciement;
 };
 
@@ -116,11 +120,20 @@ const AbsencePeriods = ({ onChange, absences, error, idcc }: Props) => {
           motifs={motifs}
           showDeleteButton={localAbsences.length > 1}
           onDeleteAbsence={onDeleteButtonClick}
-          errors={{ duration: errorsInput[`${index}`] }}
+          errors={{
+            duration:
+              errorsInput[`${index}`] ??
+              (error?.absences
+                ? error.absences[index].errorDuration
+                : undefined),
+            absenceDate: error?.absences
+              ? error.absences[index].errorDate
+              : undefined,
+          }}
           absence={value}
         />
       ))}
-      {error && <StyledError>{error}</StyledError>}
+      {error?.global && <StyledError>{error.global}</StyledError>}
       <AddButton onClick={onAddButtonClick}>Ajouter une absence</AddButton>
     </>
   );

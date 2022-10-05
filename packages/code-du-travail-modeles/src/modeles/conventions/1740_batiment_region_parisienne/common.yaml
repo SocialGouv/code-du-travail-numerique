@@ -1,0 +1,7 @@
+contrat salarié . convention collective . ouvriers bâtiment région parisienne:
+  description: Convention collective régionale des ouvriers du bâtiment de la région parisienne du 28 juin 1993.
+  applicable si: convention collective = 'IDCC1740'
+  valeur: oui
+  cdtn:
+    idcc: 1740
+    préavis-retraite: true

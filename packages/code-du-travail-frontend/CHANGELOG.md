@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.82.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.81.0...v4.82.0) (2022-09-27)
+
+
+### Bug Fixes
+
+* mdoele redirections ([#4562](https://github.com/SocialGouv/code-du-travail-numerique/issues/4562)) ([283a19a](https://github.com/SocialGouv/code-du-travail-numerique/commit/283a19aabcea50b999c61c0d9d2a50dc38050ef2))
+* **snapshots:** use date-fns to format the date ([#4526](https://github.com/SocialGouv/code-du-travail-numerique/issues/4526)) ([ca1ec4d](https://github.com/SocialGouv/code-du-travail-numerique/commit/ca1ec4d62a5e9f2dd1835efcf911cb9c473088da))
+
+
+### Features
+
+* **modeles:** modification des titres et meta descriptions ([#4554](https://github.com/SocialGouv/code-du-travail-numerique/issues/4554)) ([13d09c2](https://github.com/SocialGouv/code-du-travail-numerique/commit/13d09c23a231f716bd7d2385742c7c66b63577a6))
+* use meta_title ([#4551](https://github.com/SocialGouv/code-du-travail-numerique/issues/4551)) ([490a292](https://github.com/SocialGouv/code-du-travail-numerique/commit/490a2928ae251ed0cfb60447e30b65fa663db946))
+
+
+
+
+
 # [4.81.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.80.0...v4.81.0) (2022-08-22)
 
 

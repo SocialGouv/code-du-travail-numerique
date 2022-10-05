@@ -1,9 +1,9 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
 import { getReferences } from "../../../utils";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergeIndemniteLicenciementModels());
 
 const referencesNonCadres = [
   {
@@ -57,7 +57,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
     test.each`
       category                                                                                                                         | seniority | salary  | expectedReferences
       ${"Non-cadres"}                                                                                                                  | ${10}     | ${2000} | ${referencesNonCadres}
-      ${"Cadres"}                                                                                                                      | ${0}      | ${2000} | ${referencesCadres}
+      ${"Cadres"}                                                                                                                      | ${10}     | ${2000} | ${referencesCadres}
       ${"Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service"} | ${10}     | ${2000} | ${referencesCadresDirecteur}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, => $expectedReferences",
@@ -66,12 +66,11 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
           "contrat salarié . convention collective": "'IDCC0413'",
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période":
-            "non",
+            "'Non'",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
-          "indemnité de licenciement": "oui",
         });
 
         const result = getReferences(situation, "résultat conventionnel");
@@ -94,13 +93,12 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
           "contrat salarié . convention collective": "'IDCC0413'",
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période":
-            "oui",
-          "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps": 10,
+            "'Oui'",
+          "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif": 10,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
-          "indemnité de licenciement": "oui",
         });
         const result = getReferences(situation, "résultat conventionnel");
 

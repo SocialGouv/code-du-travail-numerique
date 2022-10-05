@@ -1,10 +1,10 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
 import { CatPro3239 } from "../../../plugins/salaire-reference/3239_particuliers_employeurs_domicile";
 import { getReferences } from "../../../utils";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergeIndemniteLicenciementModels());
 
 const ReferencesPe = [
   {
@@ -84,7 +84,6 @@ describe("Références juridiques pour la CC 3239", () => {
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Non'`,
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires": 20000,
       "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 2,
-      "indemnité de licenciement": "oui",
     });
 
     const result = getReferences(situation, "résultat conventionnel");
@@ -99,7 +98,6 @@ describe("Références juridiques pour la CC 3239", () => {
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${CatPro3239.salarieParticulierEmployeur}'`,
       "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 2,
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
-      "indemnité de licenciement": "oui",
     });
 
     const result = getReferences(situation, "résultat conventionnel");

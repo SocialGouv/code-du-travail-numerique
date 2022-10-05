@@ -1,0 +1,126 @@
+contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  cdtn:
+    type: liste
+    valeurs:
+      Non-cadres: "'Non-cadres'"
+      Cadres administratifs et de gestion: "'Cadres administratifs et de gestion'"
+      Biologistes: "'Biologistes'"
+      Pharmaciens: "'Pharmaciens'"
+      Médecins: "'Médecins'"
+      Gestionnaires: "'Gestionnaires'"
+      Directeurs-adjoints: "'Directeurs-adjoints'"
+      Directeurs: "'Directeurs'"
+      Directeurs généraux: "'Directeurs généraux'"
+      Autres cadres: "'Autres cadres'"
+
+contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient:
+  titre: Coefficient
+  question: Quel est le coefficient du salarié ?
+  description: La coefficient du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
+  cdtn:
+    type: liste
+    valeurs:
+      "Inférieur à 715": 714
+      "715 et supérieur": 715
+
+contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle . Non-cadres:
+  applicable si: catégorie professionnelle = 'Non-cadres'
+  valeur: oui
+
+contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle . Non-cadres . préavis de départ à la retaite:
+  applicable si: départ à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  formule: 1 mois
+  références:
+    Article 15.03.1.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952839
+    Article 15.02.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952849
+
+contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle . Non-cadres . préavis de mise à la retaite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  formule: 3 mois
+  références:
+    Article 15.03.1.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952839
+
+contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle . Cadres:
+  applicable si:
+    une de ces conditions:
+      - catégorie professionnelle = 'Biologistes'
+      - catégorie professionnelle = 'Pharmaciens'
+      - catégorie professionnelle = 'Médecins'
+      - catégorie professionnelle = 'Gestionnaires'
+      - catégorie professionnelle = 'Directeurs-adjoints'
+      - catégorie professionnelle = 'Directeurs'
+      - catégorie professionnelle = 'Directeurs généraux'
+      - toutes ces conditions:
+          - catégorie professionnelle = 'Cadres administratifs et de gestion'
+          - coefficient >= 715
+  valeur: oui
+
+contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle . Cadres . préavis de départ à la retaite:
+  applicable si: départ à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 2 mois
+        plafond: 24 mois
+      - montant: 3 mois
+  références:
+    Article 15.03.1.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952839
+    Article 15.02.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952849
+
+contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle . Cadres . préavis de mise à la retaite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 4 mois
+        plafond: 24 mois
+      - montant: 6 mois
+  références:
+    Article 15.03.1.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952839
+    Article 15.02.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952849
+
+contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle . Autres cadres:
+  applicable si:
+    une de ces conditions:
+      - catégorie professionnelle = 'Autres cadres'
+      - toutes ces conditions:
+          - catégorie professionnelle = 'Cadres administratifs et de gestion'
+          - coefficient < 715
+  valeur: oui
+
+contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle . Autres cadres . préavis de départ à la retaite:
+  applicable si: départ à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  formule: 2 mois
+  références:
+    Article 15.03.1.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952839
+    Article 15.02.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952849
+
+contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle . Autres cadres . préavis de mise à la retaite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  grille:
+    assiette: ancienneté
+    tranches:
+      - montant: 4 mois
+        plafond: 24 mois
+      - montant: 4 mois
+  références:
+    Article 15.03.1.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952839
+    Article 15.02.2.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952849
+
+contrat salarié . convention collective . hospitalisation privée à but non lucratif . notification mise à la retraite:
+  applicable si:
+    toutes ces conditions:
+      - mise à la retraite
+      - contrat salarié . préavis de retraite = contrat salarié . préavis de retraite collective
+  type: notification
+  description: "Attention : L'article de la convention collective ou la convention collective saisie n’a pas été étendue au niveau national. Par conséquent, pour que ce résultat soit applicable à votre situation, il faut que l’employeur ait adhéré à l’organisation patronale signataire de cette convention. Sans cette adhésion, l'employeur n'a pas l'obligation d'appliquer les règles de la convention mais il peut appliquer le préavis prévu par le code du travail."
+  valeur: oui

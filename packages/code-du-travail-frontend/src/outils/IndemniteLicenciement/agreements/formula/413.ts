@@ -1,6 +1,7 @@
 import {
   Formula,
   FormuleFactory,
+  SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { GetState } from "zustand";
@@ -9,7 +10,7 @@ import { MainStore } from "../../store";
 
 export class AgreementFormula413 implements AgreementFormula {
   computeFormula = (
-    agreementSeniority: number,
+    agreementSeniority: SeniorityResult,
     agreementRefSalary: number,
     get: GetState<MainStore>
   ): Formula => {
@@ -21,13 +22,13 @@ export class AgreementFormula413 implements AgreementFormula {
       get().informationsData.input.publicodesInformations.find(
         (v) =>
           v.question.rule.nom ===
-          "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps"
+          "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif"
       )?.info;
     if (seniorityInfo) {
       seniorityNonCadre = parseFloat(seniorityInfo);
     }
     return agreementFactoryFormula.computeFormula({
-      seniority: agreementSeniority,
+      seniority: agreementSeniority.value,
       refSalary: agreementRefSalary,
       category: get()
         .informationsData.input.publicodesInformations.find(

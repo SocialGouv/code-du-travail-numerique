@@ -6,6 +6,7 @@ import { htmlParser } from "../lib/html";
 
 type Props = {
   children: string;
+  as?: string;
   inline?: boolean;
 };
 
@@ -23,11 +24,11 @@ const whiteListTags = ["webcomponent-tooltip", "webcomponent-tooltip-cc"];
  */
 const whiteListAttr = ["class", "rel", "href", "target"];
 
-const Html = ({ children, inline = false, ...props }: Props): JSX.Element => {
+const Html = ({ children, as = "div", ...props }: Props): JSX.Element => {
   return (
     <Div
       {...props}
-      isInline={inline}
+      as={as}
       dangerouslySetInnerHTML={{
         __html: xss(htmlParser(children), {
           onIgnoreTag: function (tag, html, _options) {
@@ -48,7 +49,4 @@ const Html = ({ children, inline = false, ...props }: Props): JSX.Element => {
 
 export default Html;
 
-const Div = styled.div`
-  ${({ isInline }: { isInline: boolean }) =>
-    isInline && "display: inline-block;"};
-`;
+const Div = styled.div``;

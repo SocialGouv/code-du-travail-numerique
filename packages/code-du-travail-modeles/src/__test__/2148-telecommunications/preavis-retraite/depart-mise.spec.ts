@@ -1,14 +1,14 @@
 import Engine from "publicodes";
 
 import { getNotifications } from "../../..";
-import { mergeModels } from "../../../internal/merger";
+import { mergePreavisRetraiteModels } from "../../../internal/merger";
 import { getReferences } from "../../../utils";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../common/legal-references";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergePreavisRetraiteModels());
 
 const ReferencesCc = [
   {
@@ -79,7 +79,6 @@ describe("Préavis de retraite de la CC 2148", () => {
           "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "oui",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
@@ -129,7 +128,6 @@ describe("Préavis de retraite de la CC 2148", () => {
           "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "oui",
         });
         const result = situation.evaluate(
           "contrat salarié . préavis de retraite"
@@ -155,7 +153,6 @@ describe("Préavis de retraite de la CC 2148", () => {
           "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${Category.autre}'`,
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "oui",
         })
       );
       expect(notifications).toHaveLength(1);
@@ -177,7 +174,6 @@ describe("Préavis de retraite de la CC 2148", () => {
             "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${category}'`,
             "contrat salarié . mise à la retraite": "oui",
             "contrat salarié . travailleur handicapé": "non",
-            "préavis de retraite": "oui",
           })
         );
         expect(notifications).toHaveLength(0);
@@ -192,7 +188,6 @@ describe("Préavis de retraite de la CC 2148", () => {
           "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${Category.autre}'`,
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "oui",
         })
       );
       expect(notifications).toHaveLength(1);
@@ -209,7 +204,6 @@ describe("Préavis de retraite de la CC 2148", () => {
           "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${Category.autre}'`,
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "oui",
         })
       );
       expect(notifications).toHaveLength(0);
@@ -230,7 +224,6 @@ describe("Préavis de retraite de la CC 2148", () => {
             "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${category}'`,
             "contrat salarié . mise à la retraite": "non",
             "contrat salarié . travailleur handicapé": "non",
-            "préavis de retraite": "oui",
           })
         );
         expect(notifications).toHaveLength(0);

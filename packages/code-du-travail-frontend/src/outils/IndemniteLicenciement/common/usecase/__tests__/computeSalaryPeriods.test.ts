@@ -59,13 +59,4 @@ describe("computeSalaryPeriods", () => {
       "décembre 2019",
     ]);
   });
-
-  it("should compute salary periods for 2 months", () => {
-    expect(
-      computeSalaryPeriods({
-        dateEntree: "01/04/2017",
-        dateNotification: "01/12/2017",
-      })
-    ).toEqual(["novembre 2017", "octobre 2017"]);
-  });
 });
