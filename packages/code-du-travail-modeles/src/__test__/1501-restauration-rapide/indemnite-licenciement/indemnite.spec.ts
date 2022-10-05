@@ -58,7 +58,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 1501", () => {
       ${"Cadres"}     | ${51} | ${5}       | ${3100} | ${1550}
       ${"Cadres"}     | ${51} | ${23}      | ${3100} | ${25668}
     `(
-      "ancienneté: $seniority an, salaire de référence: $salary, catégorie $category => $expectedCompensation €",
+      "ancienneté: $seniority an, salaire de référence: $salary, age: $age an, catégorie $category => $expectedCompensation €",
       ({ category, age, seniority, salary, expectedCompensation }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1501'",
