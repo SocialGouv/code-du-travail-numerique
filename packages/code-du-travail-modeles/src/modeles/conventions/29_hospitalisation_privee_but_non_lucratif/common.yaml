@@ -6,3 +6,4 @@ contrat salarié . convention collective . hospitalisation privée à but non lu
   cdtn:
     idcc: 29
     préavis-retraite: true
+    indemnité-licenciement: true

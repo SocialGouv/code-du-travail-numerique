@@ -10,9 +10,9 @@ export type CC29ReferenceSalaryProps = {
 };
 
 export enum CategoryPro29 {
-  other = "'Autres salariés'",
-  assistant = "'Assistants familiaux des services de placements familiaux spécialisés'",
-  medic = "'Médecins, pharmaciens et biologistes exerçant à titre permanent'",
+  other = "Autres salariés",
+  assistant = "Assistants familiaux des services de placements familiaux spécialisés",
+  medic = "Médecins, pharmaciens et biologistes exerçant à titre permanent",
 }
 
 export class ReferenceSalary0029
@@ -33,10 +33,7 @@ export class ReferenceSalary0029
     professionalCategory,
     bestSalariesTotal,
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0029>): number {
-    if (
-      professionalCategory ===
-      "'Assistants familiaux des services de placements familiaux spécialisés'"
-    ) {
+    if (professionalCategory === CategoryPro29.assistant) {
       const rankedSalaires = rankByMonthArrayDescFrench(salaires);
       const salaryValues = rankedSalaires
         .map((a) => a.value)
