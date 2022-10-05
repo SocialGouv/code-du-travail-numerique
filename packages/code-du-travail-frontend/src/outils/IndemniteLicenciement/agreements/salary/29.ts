@@ -16,12 +16,13 @@ export class AgreementSalary29 implements AgreementSalary {
     const sReference = new ReferenceSalaryFactory().create(
       SupportedCcIndemniteLicenciement.IDCC0029
     );
-    const category =
-      get().informationsData.input.publicodesInformations.find(
+    const category = get()
+      .informationsData.input.publicodesInformations.find(
         (item) =>
           item.question.name ===
           "contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle"
-      )?.info ?? "";
+      )
+      ?.info?.slice(1, -1) as any;
     return sReference.computeReferenceSalary({
       salaires: salaryPeriods,
       professionalCategory: category,
