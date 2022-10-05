@@ -10,11 +10,11 @@ Scénario:
   Soit un utilisateur sur la page "/outils/convention-collective"
 
   Quand je clique sur "Je la recherche"
-  Quand je renseigne "michelin" dans le champ "Nom de votre entreprise ou numéro Siret (obligatoire)"
-  Quand j'attends que le texte "MANUFACTURE FRANCAISE DES PNEUMATIQUES" apparaisse
-  Quand je clique sur "MANUFACTURE FRANCAISE DES PNEUMATIQUES"
-  Alors je vois "2 conventions collectives trouvées pour « MANUFACTURE FRANCAISE DES PNEUMATIQUES MICHELIN »"
-  Alors le lien "Caoutchouc IDCC0045" pointe sur "/convention-collective/45-caoutchouc"
+  Quand je renseigne "carrefour" dans le champ "Nom de votre entreprise ou numéro Siret (obligatoire)"
+  Quand j'attends que le texte "CARREFOUR HYPERMARCHES" apparaisse
+  Quand je clique sur "CARREFOUR HYPERMARCHES"
+  Alors je vois "2 conventions collectives trouvées pour « CARREFOUR HYPERMARCHES »"
+  Alors le lien "Commerce de détail et de gros à prédominance alimentaire IDCC2216" pointe sur "/convention-collective/2216-commerce-de-detail-et-de-gros-a-predominance-alimentaire"
 
   Quand je clique sur "Précédent"
   Quand je renseigne "82161143100015" dans le champ "Nom de votre entreprise ou numéro Siret (obligatoire)"
