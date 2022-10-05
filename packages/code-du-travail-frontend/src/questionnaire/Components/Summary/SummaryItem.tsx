@@ -5,29 +5,45 @@ import useWindowDimensions from "../../../common/WindowDimension";
 
 const { breakpoints } = theme;
 
-export const SummaryItem = ({ data, onClick }) => {
+type SymmaryItemProps = {
+  data: any;
+  onClick: () => void;
+  noButton: boolean;
+  noCheck: boolean;
+};
+
+export const SummaryItem = ({
+  data,
+  onClick,
+  noButton = false,
+  noCheck = false,
+}: SymmaryItemProps) => {
   const { width } = useWindowDimensions();
   return (
     <SummaryItemWrapper>
-      <StyledIcon>
-        <CheckIcon width="18" height="18" />
-      </StyledIcon>
+      {!noCheck && (
+        <StyledIcon>
+          <CheckIcon width="18" height="18" />
+        </StyledIcon>
+      )}
       <StyledText>{data}</StyledText>
-      <StyledButton variant="flat" xsmall onClick={onClick}>
-        {width > breakpoints.intMobile ? "Modifier" : ""}
-        <UpdateIconWrapper>
-          <UpdateIcon width="18" height="18" />
-        </UpdateIconWrapper>
-      </StyledButton>
+      {!noButton && (
+        <StyledButton variant="link" xsmall onClick={onClick} icon={UpdateIcon}>
+          {width > breakpoints.intMobile ? "Modifier" : ""}
+        </StyledButton>
+      )}
     </SummaryItemWrapper>
   );
 };
 
 const SummaryItemWrapper = styled.li`
   list-style-type: none;
-  margin-bottom: 11px;
   display: flex;
   flex-direction: row;
+  margin-bottom: 6px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const StyledIcon = styled.div`
@@ -38,15 +54,8 @@ const StyledIcon = styled.div`
   height: 20px;
   color: white;
   border-radius: 12px;
-  margin-left: 32px;
+  margin: 3px 0;
   font-size: 10px;
-  @media (max-width: ${breakpoints.mobile}) {
-    margin-left: 0;
-  }
-`;
-
-const UpdateIconWrapper = styled.div`
-  margin-left: 6px;
   @media (max-width: ${breakpoints.mobile}) {
     margin-left: 0;
   }
@@ -61,5 +70,9 @@ const StyledText = styled.div`
 const StyledButton = styled(Button)`
   @media (max-width: ${breakpoints.mobile}) {
     padding: 0 8px;
+    svg {
+      width: 32px;
+      height: 32px;
+    }
   }
 `;

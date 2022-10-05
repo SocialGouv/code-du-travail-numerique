@@ -372,7 +372,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   padding-left: 2.4rem;
 }
 
-.c19 {
+.c18 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -410,14 +410,14 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   will-change: transform;
 }
 
-.c19:link,
-.c19:visited {
+.c18:link,
+.c18:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c19:not([disabled]):hover {
+.c18:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -426,7 +426,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   border-color: #dee5ef;
 }
 
-.c19[disabled] {
+.c18[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -434,7 +434,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   cursor: not-allowed;
 }
 
-.c21 {
+.c20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -475,24 +475,25 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   overflow: visible;
 }
 
-.c21:hover {
+.c20:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c23 {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0 0.4rem 0 1rem;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c18:hover .c22 {
+.c20:hover svg {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
+}
+
+.c20 svg {
+  width: 2.6rem;
+  height: 1.4rem;
+  margin: 0;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+  fill: #f66663;
 }
 
 .c16 {
@@ -663,7 +664,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   padding-bottom: 1rem;
 }
 
-.c20 + .c20 {
+.c19 + .c19 {
   margin-left: 4rem;
 }
 
@@ -739,25 +740,25 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c18 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c19 {
+  .c18 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c21 {
+  .c20 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c21 {
+  .c20 {
     display: none;
   }
 }
@@ -806,7 +807,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c20 + .c20 {
+  .c19 + .c19 {
     margin-left: 0;
   }
 }
@@ -929,7 +930,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             class="c17"
           >
             <button
-              class="c18 c19 c20 "
+              class="c18 c19 "
             >
               Envoyer
             </button>
@@ -939,14 +940,15 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           Pour obtenir une réponse à votre question de droit du travail, nous vous invitons à joindre
            
           <button
-            class="c18 c21"
+            class="c20"
             type="button"
           >
             les services du ministère du Travail en région
             <svg
               aria-hidden="true"
-              class="c22 c23"
               fill="none"
+              type="button"
+              variant="link"
               viewBox="0 0 28 15"
               xmlns="http://www.w3.org/2000/svg"
             >

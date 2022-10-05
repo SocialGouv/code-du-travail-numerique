@@ -1,25 +1,50 @@
+import styled from "styled-components";
 import { Summary } from "./Summary";
 import { Question } from "./Question";
 import { useStore } from "../store";
-import { useEffect } from "react";
+import { PreviousResponse } from "../type";
+import { useEffect, useState } from "react";
 
 type QuestionnaireProps = {
-  slug?: string;
+  slug: string;
+  title: string;
+  personnalizedTitle?: string;
 };
 
-export const Questionnaire = ({ slug }: QuestionnaireProps) => {
+export const Questionnaire = ({
+  slug,
+  title,
+  personnalizedTitle,
+}: QuestionnaireProps) => {
   const init = useStore((state) => state.init);
-  const initSlugResponses = useStore((state) => state.initSlugResponses);
+  const getSlugResponses = useStore((state) => state.getSlugResponses);
+  const isPersonnalizedMode = useStore((state) => state.isPersonnalizedMode);
+  const toolSlug = useStore((state) => state.toolSlug);
+  const previousResponses = useStore((state) => state.previousResponses);
+  const [slugResponses, setSlugResponses] = useState<PreviousResponse[]>();
   init();
   useEffect(() => {
-    if (slug) {
-      initSlugResponses(slug);
+    if (slug && !isPersonnalizedMode(slug)) {
+      setSlugResponses(getSlugResponses(slug));
     }
-  }, [initSlugResponses, slug]);
+  }, [getSlugResponses, slug]);
   return (
-    <>
-      <Summary />
-      {!slug && <Question />}
-    </>
+    <div>
+      <StyledTitle>
+        {isPersonnalizedMode(slug) && personnalizedTitle
+          ? personnalizedTitle
+          : title}
+      </StyledTitle>
+      <Summary
+        responses={slugResponses ?? previousResponses}
+        withLink={!isPersonnalizedMode(slug)}
+      />
+      {slug === toolSlug && <Question />}
+    </div>
   );
 };
+
+const StyledTitle = styled.div`
+  font-weight: 600;
+  font-size: 22px;
+`;

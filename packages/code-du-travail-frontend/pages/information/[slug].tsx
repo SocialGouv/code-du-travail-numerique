@@ -1,4 +1,4 @@
-import { Accordion, Tabs, Section, theme } from "@socialgouv/cdtn-ui";
+import { Accordion, Tabs, Section, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
@@ -96,11 +96,12 @@ const Information = ({
         title={title}
       >
         {dismissalProcess && (
-          <SlugSummaryWrapper>
+          <SlugSummaryWrapper variant="dark">
             <QuestionnaireWrapper
               name="dismissalProcess"
+              personnalizedTitle="Votre situation"
               slug={slug}
-              title="Votre situation"
+              title={"Cette procédure concerne le cas suivant :"}
             ></QuestionnaireWrapper>
           </SlugSummaryWrapper>
         )}
@@ -190,6 +191,6 @@ const GlobalStylesWrapper = styled.div`
   }
 `;
 
-const SlugSummaryWrapper = styled.div`
+const SlugSummaryWrapper = styled(Wrapper)`
   margin-bottom: 29px;
 `;

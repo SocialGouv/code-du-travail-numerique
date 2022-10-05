@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ContactModal /> renders a popup when click on button 1`] = `
-.c5 {
+.c4 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -9,15 +9,15 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c5 > *:first-child {
+.c4 > *:first-child {
   margin-top: 0;
 }
 
-.c5 > *:last-child {
+.c4 > *:last-child {
   margin-bottom: 0;
 }
 
-.c1 {
+.c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -55,14 +55,14 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   will-change: transform;
 }
 
-.c1:link,
-.c1:visited {
+.c0:link,
+.c0:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c1:not([disabled]):hover {
+.c0:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -71,7 +71,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   border-color: #a0b3e0;
 }
 
-.c1[disabled] {
+.c0[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -79,7 +79,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   cursor: not-allowed;
 }
 
-.c6 {
+.c5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -120,12 +120,28 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   overflow: visible;
 }
 
-.c6:hover {
+.c5:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c9 {
+.c5:hover svg {
+  -webkit-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  transform: translateX(4px);
+}
+
+.c5 svg {
+  width: 2.6rem;
+  height: 1.4rem;
+  margin: 0;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+  fill: #f66663;
+}
+
+.c6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -163,14 +179,14 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   will-change: transform;
 }
 
-.c9:link,
-.c9:visited {
+.c6:link,
+.c6:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c9:not([disabled]):hover {
+.c6:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -179,7 +195,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   border-color: transparent;
 }
 
-.c9[disabled] {
+.c6[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -188,21 +204,6 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
 }
 
 .c8 {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0 0.4rem 0 1rem;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c0:hover .c7 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
-}
-
-.c11 {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
@@ -215,7 +216,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
-.c2 {
+.c1 {
   position: fixed;
   top: 0;
   right: 0;
@@ -226,7 +227,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   background: rgba(0,0,0,0.5);
 }
 
-.c3 {
+.c2 {
   position: relative;
   width: 50vw;
   max-width: 74rem;
@@ -240,86 +241,86 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   outline: none;
 }
 
-.c10 {
+.c7 {
   position: absolute;
   top: 0;
   right: 0;
   color: #7994d4;
 }
 
-.c4 {
+.c3 {
   margin-top: 0;
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c4 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c5 {
+  .c4 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c1 {
+  .c0 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c1 {
+  .c0 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c1 {
+  .c0 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c5 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c6 {
+  .c5 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c6 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c9 {
+  .c6 {
     display: none;
   }
 }
 
 @media (max-width:1180px) {
-  .c3 {
+  .c2 {
     width: 60vw;
   }
 }
 
 @media (max-width:980px) {
-  .c3 {
+  .c2 {
     width: 80vw;
   }
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c2 {
     width: calc(100% - 2 * 1.6rem);
     max-height: calc(100vh - 2 * 1.6rem);
     margin: 1.6rem;
@@ -327,7 +328,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c7 {
     position: fixed;
     top: 1rem;
     right: 1rem;
@@ -339,7 +340,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
     aria-hidden="true"
   >
     <button
-      class="c0 c1"
+      class="c0"
     >
       texte dans le bouton
     </button>
@@ -360,36 +361,36 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
     >
       <div>
         <div
-          class="c2"
+          class="c1"
           data-reach-dialog-overlay=""
         >
           <div
             aria-label="Contact"
             aria-modal="true"
-            class="c3"
+            class="c2"
             data-reach-dialog-content=""
             role="dialog"
             tabindex="-1"
           >
             <h4
-              class="c4"
+              class="c3"
             >
               Contact
             </h4>
             <div
-              class="c5"
+              class="c4"
             >
               <p>
                 Si vous souhaitez nous interroger sur vos droits ou sur des dispositions en droit du travail, nous vous invitons à contacter
                  
                 <button
-                  class="c0 c6"
+                  class="c5"
                 >
                   les services du ministère du Travail
                   <svg
                     aria-hidden="true"
-                    class="c7 c8"
                     fill="none"
+                    variant="link"
                     viewBox="0 0 28 15"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -426,11 +427,11 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
               </a>
             </p>
             <button
-              class="c0 c9 c10"
+              class="c6 c7"
               title="fermer la modale"
             >
               <div
-                class="c11"
+                class="c8"
               >
                 fermer la modale
               </div>
