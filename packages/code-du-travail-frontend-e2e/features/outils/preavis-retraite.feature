@@ -111,16 +111,16 @@ Fonctionnalité: Outil - Préavis de retraite
     Alors je vois "Vous devez répondre à cette question"
     Quand je choisis "Je ne sais pas quelle est ma convention collective"
     Alors je vois "Précisez et sélectionnez votre entreprise"
-    Quand je renseigne "michelin" dans le champ "Nom de votre entreprise ou numéro Siret (obligatoire)"
-    Quand j'attends que le texte "MANUFACTURE FRANCAISE DES PNEUMATIQUES" apparaisse
-    Quand je clique sur "MANUFACTURE FRANCAISE DES PNEUMATIQUES"
+    Quand je renseigne "carrefour" dans le champ "Nom de votre entreprise ou numéro Siret (obligatoire)"
+    Quand j'attends que le texte "CARREFOUR HYPERMARCHES" apparaisse
+    Quand je clique sur "CARREFOUR HYPERMARCHES"
     Alors je vois "2 conventions collectives ont été trouvées pour cette entreprise"
-    Alors je vois "Caoutchouc (IDCC 0045)"
-    Alors je vois "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils (IDCC 1486)"
+    Alors je vois "Commerce de détail et de gros à prédominance alimentaire"
+    Alors je vois "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils"
 # TODO: le message d'erreur ne s'affiche pas quand on a déjà submit une question avant. A décommenter quand le bug est fixed (#4253°
 #    Quand je clique sur "Suivant"
 #    Alors je vois "Vous devez répondre à cette question"
-    Quand je choisis "Caoutchouc (IDCC 0045)"
+    Quand je choisis "Commerce de détail et de gros à prédominance alimentaire"
     Alors je vois "Cliquez sur Suivant pour poursuivre la simulation."
     Quand je clique sur "Fermer"
     Alors je vois "Nom de votre entreprise ou numéro Siret"
