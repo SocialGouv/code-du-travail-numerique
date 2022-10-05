@@ -6,3 +6,4 @@ contrat salarié . convention collective . restauration rapide:
   cdtn:
     idcc: 1501
     préavis-retraite: true
+    indemnité-licenciement: true
