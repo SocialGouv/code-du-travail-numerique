@@ -143,8 +143,8 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
 
 ## Mixte ##
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période:
-  titre: Fonctions de non-cadre durant le contrat de travail
-  question: Le salarié a-t-il précédemment occupé des fonctions non-cadre durant le contrat de travail&nbsp;?
+  titre: Fonctions de non-cadres durant le contrat de travail
+  question: Le salarié a-t-il précédemment occupé des fonctions non-cadres durant le contrat de travail&nbsp;?
   cdtn:
     type: oui-non
 
@@ -153,8 +153,8 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif:
   remplace: temps
-  titre: Durée en tant que non-cadre
-  question: Pendant combien de temps a-t-il occupé des fonctions non-cadre durant le contrat de travail&nbsp;?
+  titre: Durée en tant que non-cadres
+  question: Pendant combien de temps a-t-il occupé des fonctions non-cadres durant le contrat de travail&nbsp;?
   applicable si: non cadre durant une période = 'Oui'
   unité: an
   cdtn:
