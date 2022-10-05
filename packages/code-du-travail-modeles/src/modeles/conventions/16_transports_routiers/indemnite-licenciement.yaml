@@ -11,7 +11,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise:
   applicable si:
     toutes ces conditions:
-      - age >= 61
+      - age >= 60
       - age <= 65
   titre: Le salarié remplit les conditions pour partir à la retraite
   question: Le salarié remplit-il les conditions pour partir à la retraite ?
@@ -61,6 +61,22 @@ contrat salarié . convention collective . transports routiers . indemnité de l
       - avant employé ou technicien = 'Oui'
       - date du statut cadre
   titre: Ancienneté en tant que Employés ou Technicien et agents de maîtrise (TAM)
+
+contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age:
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié ?
+  cdtn:
+    type: entier
+
+contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . droit à la retraite au titre du régime en vigueur dans l'entreprise:
+  applicable si:
+    toutes ces conditions:
+      - age >= 61
+      - age <= 65
+  titre: Le salarié remplit les conditions pour partir à la retraite
+  question: Le salarié remplit-il les conditions pour partir à la retraite ?
+  cdtn:
+    type: oui-non
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . ancienneté totale:
   titre: Ancienneté totale
@@ -232,6 +248,23 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   applicable si: incapacité de conduite = 'Non'
   valeur: oui
 
+contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . age:
+  applicable si: incapacité de conduite = 'Non'
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié ?
+  cdtn:
+    type: entier
+
+contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise:
+  applicable si:
+    toutes ces conditions:
+      - age >= 60
+      - age <= 65
+  titre: Le salarié remplit les conditions pour partir à la retraite
+  question: Le salarié remplit-il les conditions pour partir à la retraite ?
+  cdtn:
+    type: oui-non
+
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: base - minoration
@@ -256,10 +289,17 @@ contrat salarié . convention collective . transports routiers . indemnité de l
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . calcul 3 ans et plus d'ancienneté:
   valeur: 2 / 10 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
 
+contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . résultat conventionnel . anciennete entre 60 et 65 ans:
+  applicable si: age >= 60 ans
+  variations:
+    - si: (age - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année) >= 60
+      alors: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - sinon: age - 60
+
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . résultat conventionnel . minoration:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise = 'Oui'
+      - droit à la retraite au titre du régime en vigueur dans l'entreprise = 'Oui'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 3 ans
   valeur: 0.2 * anciennete entre 60 et 65 ans * calcul 3 ans et plus d'ancienneté
 

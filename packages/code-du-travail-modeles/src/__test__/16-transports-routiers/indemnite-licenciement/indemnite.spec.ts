@@ -50,16 +50,16 @@ describe("CC 16", () => {
         const result = engine
           .setSituation({
             "contrat salarié . convention collective": "'IDCC0016'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age":
-              age,
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
               "'Ingénieurs et cadres'",
+            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age":
+              age,
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . ancienneté avant cadre":
               seniorityEmployeTAM,
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien": `${
               seniorityEmployeTAM > 0 ? "'Oui'" : "'Non'"
             }`,
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${
+            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${
               haveRightToRetirement ? "'Oui'" : "'Non'"
             }`,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
@@ -187,7 +187,6 @@ describe("CC 16", () => {
         const result = engine
           .setSituation({
             "contrat salarié . convention collective": "'IDCC0016'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age": 60,
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
               "'Ouvriers'",
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
@@ -221,7 +220,6 @@ describe("CC 16", () => {
         const result = engine
           .setSituation({
             "contrat salarié . convention collective": "'IDCC0016'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age": 60,
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
               "'Ouvriers'",
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
@@ -267,17 +265,17 @@ describe("CC 16", () => {
         const result = engine
           .setSituation({
             "contrat salarié . convention collective": "'IDCC0016'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age":
-              age,
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
               "'Ouvriers'",
+            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . age":
+              age,
+            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${
+              haveRightToRetirement ? "'Oui'" : "'Non'"
+            }`,
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
               "'Non'",
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . ouvrier . type":
               "'Autres licenciements'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${
-              haveRightToRetirement ? "'Oui'" : "'Non'"
-            }`,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
