@@ -12,6 +12,7 @@ import { AgreementFormula2216 } from "./2216";
 import { AgreementFormula2264 } from "./2264";
 import { AgreementFormula3239 } from "./3239";
 import { AgreementFormula413 } from "./413";
+import { AgreementFormula650 } from "./650";
 import { AgreementFormula16 } from "./16";
 
 const getAgreementFormula = (
@@ -47,6 +48,12 @@ const getAgreementFormula = (
       );
     case SupportedCcIndemniteLicenciement.IDCC3239 === idcc:
       return new AgreementFormula3239().computeFormula(
+        agreementSeniority,
+        agreementRefSalary,
+        get
+      );
+    case SupportedCcIndemniteLicenciement.IDCC650 === idcc:
+      return new AgreementFormula650().computeFormula(
         agreementSeniority,
         agreementRefSalary,
         get
