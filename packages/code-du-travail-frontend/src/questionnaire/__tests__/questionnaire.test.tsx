@@ -9,11 +9,13 @@ jest.mock("@cdt/data", () => ({
     text: "Question1",
     trackingName: "Question1",
     description: "Description",
+    info: "Question1Info",
     responses: [
       {
         text: "Response1",
         trackingName: "Response1",
         statement: "Statement1",
+        info: "Response1Info",
         question: {
           text: "Question11",
           trackingName: "name1",
@@ -81,6 +83,54 @@ describe.each([
       });
       it("doit afficher la description", () => {
         expect(rendering.queryByText("Description")).toBeInTheDocument();
+      });
+      describe("quand je clique sur la 1e icone info", () => {
+        beforeEach(
+          async () =>
+            await act(async () => {
+              await fireEvent.click(rendering.queryAllByTestId("tooltip")[0]);
+            })
+        );
+        it("doit afficher la bulle d'info de la 1e question", () => {
+          expect(rendering.queryByText("Question1Info")).toBeInTheDocument();
+        });
+        describe("quand je reclique sur la 1e icone info", () => {
+          beforeEach(
+            async () =>
+              await act(async () => {
+                await fireEvent.click(rendering.queryAllByTestId("tooltip")[0]);
+              })
+          );
+          it("ne doit plus afficher la bulle d'info de la 1e question", () => {
+            expect(
+              rendering.queryByText("Question1Info")
+            ).not.toBeInTheDocument();
+          });
+        });
+      });
+      describe("quand je clique sur la 2e icone info", () => {
+        beforeEach(
+          async () =>
+            await act(async () => {
+              await fireEvent.click(rendering.queryAllByTestId("tooltip")[1]);
+            })
+        );
+        it("doit afficher la bulle d'info de la 1e réponse de la 1e question", () => {
+          expect(rendering.queryByText("Response1Info")).toBeInTheDocument();
+        });
+        describe("quand je reclique sur la 2e icone info", () => {
+          beforeEach(
+            async () =>
+              await act(async () => {
+                await fireEvent.click(rendering.queryAllByTestId("tooltip")[1]);
+              })
+          );
+          it("ne doit plus afficher la bulle d'info de la 1e réponse de la 1e question", () => {
+            expect(
+              rendering.queryByText("Response1Info")
+            ).not.toBeInTheDocument();
+          });
+        });
       });
       describe("quand je clique sur la 1e réponse de la 1e question", () => {
         beforeEach(

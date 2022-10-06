@@ -18,6 +18,7 @@ export const Tooltip = ({ onChange }) => {
       onMouseLeave={() => {
         setHovered(false);
       }}
+      data-testid="tooltip"
     >
       {hovered || opened ? (
         <OpenedTooltipIcon aria-label="?"></OpenedTooltipIcon>
