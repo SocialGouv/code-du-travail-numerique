@@ -1,6 +1,6 @@
-import { ReferenceSalaryLegal } from "../../../lib/plugins/salaire-reference/legal";
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../utils";
 import type { SalaryPeriods, SupportedCcIndemniteLicenciement } from "..";
+import { ReferenceSalaryLegal } from "./legal";
 import type { IReferenceSalary, ReferenceSalaryProps } from "./types";
 
 export type CC29ReferenceSalaryProps = {
