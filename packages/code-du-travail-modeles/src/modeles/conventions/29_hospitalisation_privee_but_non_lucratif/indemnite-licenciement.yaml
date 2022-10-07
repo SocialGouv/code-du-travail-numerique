@@ -8,9 +8,9 @@ contrat salarié . convention collective . hospitalisation privée à but non lu
   cdtn:
     type: liste
     valeurs:
-      Autres salariés: "'Autres salariés'"
       Médecins, pharmaciens et biologistes exerçant à titre permanent: "'Médecins, pharmaciens et biologistes exerçant à titre permanent'"
       Assistants familiaux des services de placements familiaux spécialisés: "'Assistants familiaux des services de placements familiaux spécialisés'"
+      Autres salariés: "'Autres salariés'"
 
 # Autres salariés
 contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle . Autres salariés:

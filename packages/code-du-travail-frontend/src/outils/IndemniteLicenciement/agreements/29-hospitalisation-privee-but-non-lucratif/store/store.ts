@@ -9,9 +9,12 @@ import {
   Agreement29StoreSlice,
 } from "./types";
 import { validateStep } from "./validator";
+import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
 
 const initialState: Agreement29StoreData = {
-  input: {},
+  input: {
+    shouldAskSixBestSalaries: false,
+  },
   error: {},
   hasBeenSubmit: false,
   isStepValid: false,
@@ -19,10 +22,25 @@ const initialState: Agreement29StoreData = {
 
 export const createAgreement29StoreSalaires: StoreSlice<
   Agreement29StoreSlice,
-  SalairesStoreSlice & AncienneteStoreSlice
+  SalairesStoreSlice & AncienneteStoreSlice & CommonInformationsStoreSlice
 > = (set, get) => ({
   agreement29Data: { ...initialState },
   agreement29Function: {
+    init: () => {
+      const shouldAskSixBestSalaries =
+        get().informationsData.input.publicodesInformations.find(
+          (item) =>
+            item.question.name ===
+            "contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle"
+        )?.info ===
+        "'Assistants familiaux des services de placements familiaux spécialisés'";
+      set(
+        produce((state: Agreement29StoreSlice) => {
+          state.agreement29Data.input.shouldAskSixBestSalaries =
+            shouldAskSixBestSalaries;
+        })
+      );
+    },
     onChangeSixBestSalariesTotal: (value) => {
       applyGenericValidation(get, set, "sixBestSalariesTotal", value);
     },

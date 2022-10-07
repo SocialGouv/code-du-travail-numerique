@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { RadioQuestion, TextQuestion } from "../../../Components";
 import { useIndemniteLicenciementStore } from "../../store";
 import { icons } from "@socialgouv/cdtn-ui";
@@ -11,6 +11,8 @@ export default function Agreement29() {
     sixBestSalariesTotal,
     onChangeSixBestSalariesTotal,
     errorSixBestSalariesTotal,
+    init,
+    shouldAskSixBestSalaries,
   } = useIndemniteLicenciementStore((state) => ({
     hasSixBestSalaries: state.agreement29Data.input.hasSixBestSalaries,
     onChangeHasSixBestSalaries:
@@ -22,9 +24,15 @@ export default function Agreement29() {
       state.agreement29Function.onChangeSixBestSalariesTotal,
     errorSixBestSalariesTotal:
       state.agreement29Data.error.errorSixBestSalariesTotal,
+    init: state.agreement29Function.init,
+    shouldAskSixBestSalaries:
+      state.agreement29Data.input.shouldAskSixBestSalaries,
   }));
 
-  return (
+  useEffect(() => {
+    init();
+  }, [init]);
+  return shouldAskSixBestSalaries ? (
     <>
       <RadioQuestion
         questions={[
@@ -48,7 +56,7 @@ export default function Agreement29() {
       />
       {hasSixBestSalaries === "oui" && (
         <TextQuestion
-          label="Total des 6 meilleurs salaires perçus consécutivement durant le contrat de travail ?"
+          label="Total des 6 meilleurs salaires perçus consécutivement durant le contrat de travail"
           inputType="number"
           value={`${sixBestSalariesTotal}`}
           onChange={onChangeSixBestSalariesTotal}
@@ -64,11 +72,13 @@ export default function Agreement29() {
           Le calcul de l’indemnité de licenciement nécessite le total des 6
           meilleurs salaires perçus consécutivement durant le contrat de
           travail. Pour réaliser cette simulation, nous calculerons ce total sur
-          la base des salaires renseignés précédemment. En conséquence, le
-          résultat donné pourrait ne pas correspondre exactement à votre
+          la base du/des salaire(s) renseigné(s) précédemment. En conséquence,
+          le résultat donné pourrait ne pas correspondre exactement à votre
           situation.
         </p>
       )}
     </>
+  ) : (
+    <></>
   );
 }

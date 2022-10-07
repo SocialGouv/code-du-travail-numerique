@@ -4,6 +4,7 @@ import { StepData } from "../../../store";
 export type Agreement29StoreInput = {
   hasSixBestSalaries?: OuiNon;
   sixBestSalariesTotal?: string;
+  shouldAskSixBestSalaries?: boolean;
 };
 
 export type Agreement29StoreError = {
@@ -19,6 +20,7 @@ export type Agreement29StoreData = StepData<
 export type Agreement29StoreFn = {
   onChangeSixBestSalariesTotal: (value: string) => void;
   onChangeHasSixBestSalaries: (value: OuiNon) => void;
+  init: () => void;
 };
 
 export type Agreement29StoreSlice = {

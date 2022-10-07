@@ -30,9 +30,10 @@ export const validateAgreement29 = (
 export const validateStep = (state: Agreement29StoreInput) => {
   let errorState: Agreement29StoreError = {};
   errorState = {
-    errorHasSixBestSalaries: !state.hasSixBestSalaries
-      ? "Vous devez répondre à cette question"
-      : undefined,
+    errorHasSixBestSalaries:
+      state.shouldAskSixBestSalaries && !state.hasSixBestSalaries
+        ? "Vous devez répondre à cette question"
+        : undefined,
     errorSixBestSalariesTotal:
       state.hasSixBestSalaries === "oui" && !state.sixBestSalariesTotal
         ? "Vous devez répondre à cette question"
