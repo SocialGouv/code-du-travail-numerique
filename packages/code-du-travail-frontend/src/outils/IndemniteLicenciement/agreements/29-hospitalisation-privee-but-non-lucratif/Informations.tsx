@@ -1,13 +1,24 @@
+import { useEffect } from "react";
 import { useIndemniteLicenciementStore } from "../../store";
 
 export default function Agreement29Informations() {
-  const { hasSixBestSalaries, sixBestSalariesTotal } =
-    useIndemniteLicenciementStore((state) => ({
-      hasSixBestSalaries: state.agreement29Data.input.hasSixBestSalaries,
-      sixBestSalariesTotal: state.agreement29Data.input.sixBestSalariesTotal,
-    }));
+  const {
+    hasSixBestSalaries,
+    sixBestSalariesTotal,
+    init,
+    shouldAskSixBestSalaries,
+  } = useIndemniteLicenciementStore((state) => ({
+    hasSixBestSalaries: state.agreement29Data.input.hasSixBestSalaries,
+    sixBestSalariesTotal: state.agreement29Data.input.sixBestSalariesTotal,
+    init: state.agreement29Function.init,
+    shouldAskSixBestSalaries:
+      state.agreement29Data.input.shouldAskSixBestSalaries,
+  }));
 
-  return (
+  useEffect(() => {
+    init();
+  }, [init]);
+  return shouldAskSixBestSalaries ? (
     <>
       <li>
         Connaissance du total des 6 meilleurs salaires perçus consécutivement
@@ -22,5 +33,7 @@ export default function Agreement29Informations() {
         </li>
       )}
     </>
+  ) : (
+    <></>
   );
 }
