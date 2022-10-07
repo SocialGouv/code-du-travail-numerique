@@ -1,0 +1,261 @@
+# Questions à poser
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Cadres: "'Cadres'"
+      Agents de maîtrise, techniciens et assimilés: "'Agents de maîtrise, techniciens et assimilés'"
+      Autres salariés: "'Autres salariés'"
+
+contrat salarié . convention collective . commerces de gros . age:
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Cadres'
+      - catégorie professionnelle = 'Agents de maîtrise, techniciens et assimilés'
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié ?
+  cdtn:
+    type: entier
+
+contrat salarié . convention collective . commerces de gros . licenciement:
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Cadres'
+      - catégorie professionnelle = 'Agents de maîtrise, techniciens et assimilés'
+  titre: Le licenciement fait suite au refus d'une clause de mobilité
+  question: Le licenciement fait-il suite au refus d'une clause de mobilité ?
+  cdtn:
+    type: oui-non
+
+# Formules
+contrat salarié . convention collective . commerces de gros . au dela de dix ans:
+  somme:
+    - contrat salarié . ancienneté conventionnelle en année
+    - (- 10 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . commerces de gros . formule 1:
+  valeur:
+    produit:
+      assiette: contrat salarié . salaire de référence conventionnel * contrat salarié . ancienneté conventionnelle en année
+      facteur: 1 / 5
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . formule 2:
+  valeur:
+    produit:
+      assiette: contrat salarié . salaire de référence conventionnel * au dela de sept ans
+      facteur: 3 / 5
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . somme formule:
+  valeur: formule 1 + formule 2
+  unité: €
+
+## Avec coefficient
+contrat salarié . convention collective . commerces de gros . somme formule plus 30 pourcent:
+  valeur:
+    produit:
+      assiette: somme formule
+      facteur: 130 / 100
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . somme formule plus 20 pourcent:
+  valeur:
+    produit:
+      assiette: somme formule
+      facteur: 120 / 100
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . somme formule moins 5 pourcent:
+  valeur:
+    produit:
+      assiette: somme formule
+      facteur: 95 / 100
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . somme formule moins 10 pourcent:
+  valeur:
+    produit:
+      assiette: somme formule
+      facteur: 90 / 100
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . somme formule moins 20 pourcent:
+  valeur:
+    produit:
+      assiette: somme formule
+      facteur: 80 / 100
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . somme formule moins 40 pourcent:
+  valeur:
+    produit:
+      assiette: somme formule
+      facteur: 60 / 100
+  unité: €
+
+# Résultat
+contrat salarié . convention collective . commerces de gros . résultat conventionnel 1:
+  remplace: contrat salarié . résultat conventionnel
+  applicable si:
+    une de ces conditions:
+      - toutes ces conditions:
+          - age = 49
+          - age 50 ans = 'Oui'
+          - contrat salarié . ancienneté conventionnelle en année >= 5 an
+      - toutes ces conditions:
+          - age >= 50
+          - age < 55
+          - contrat salarié . ancienneté conventionnelle en année >= 5 an
+          - age 55 ans = 'Non'
+  variations:
+    - si: contrat salarié . ancienneté conventionnelle en année >= 12 mois
+      alors:
+        le maximum de:
+          - somme formule plus 20 pourcent
+          - contrat salarié . salaire de référence conventionnel * 3
+    - sinon: 0
+  plafond: contrat salarié . salaire de référence conventionnel * 18
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
+
+contrat salarié . convention collective . commerces de gros . résultat conventionnel 2:
+  remplace: contrat salarié . résultat conventionnel
+  applicable si:
+    une de ces conditions:
+      - toutes ces conditions:
+          - age = 54
+          - age 55 ans = 'Oui'
+          - contrat salarié . ancienneté conventionnelle en année >= 2 an
+          - contrat salarié . ancienneté conventionnelle en année < 5 an
+      - toutes ces conditions:
+          - age >= 55
+          - age < 59
+          - contrat salarié . ancienneté conventionnelle en année >= 2 an
+          - contrat salarié . ancienneté conventionnelle en année < 5 an
+      - toutes ces conditions:
+          - age = 59
+          - age 60 ans = 'Non'
+          - contrat salarié . ancienneté conventionnelle en année >= 2 an
+          - contrat salarié . ancienneté conventionnelle en année < 5 an
+  variations:
+    - si: contrat salarié . ancienneté conventionnelle en année >= 12 mois
+      alors:
+        le maximum de:
+          - somme formule
+          - contrat salarié . salaire de référence conventionnel * 2
+    - sinon: 0
+  plafond: contrat salarié . salaire de référence conventionnel * 18
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
+
+contrat salarié . convention collective . commerces de gros . résultat conventionnel 3:
+  remplace: contrat salarié . résultat conventionnel
+  applicable si:
+    une de ces conditions:
+      - toutes ces conditions:
+          - age = 54
+          - age 55 ans = 'Oui'
+          - contrat salarié . ancienneté conventionnelle en année >= 5 an
+      - toutes ces conditions:
+          - age >= 55
+          - age < 59
+          - contrat salarié . ancienneté conventionnelle en année >= 5 an
+      - toutes ces conditions:
+          - age = 59
+          - age 60 ans = 'Non'
+          - contrat salarié . ancienneté conventionnelle en année >= 5 an
+  variations:
+    - si: contrat salarié . ancienneté conventionnelle en année >= 12 mois
+      alors:
+        le maximum de:
+          - somme formule plus 30 pourcent
+          - contrat salarié . salaire de référence conventionnel * 6
+    - sinon: 0
+  plafond: contrat salarié . salaire de référence conventionnel * 18
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
+
+contrat salarié . convention collective . commerces de gros . résultat conventionnel 4:
+  remplace: contrat salarié . résultat conventionnel
+  applicable si: age = 61
+  variations:
+    - si: contrat salarié . ancienneté conventionnelle en année >= 12 mois
+      alors: somme formule moins 5 pourcent
+    - sinon: 0
+  plafond: contrat salarié . salaire de référence conventionnel * 18
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
+
+contrat salarié . convention collective . commerces de gros . résultat conventionnel 5:
+  remplace: contrat salarié . résultat conventionnel
+  applicable si: age = 62
+  variations:
+    - si: contrat salarié . ancienneté conventionnelle en année >= 12 mois
+      alors: somme formule moins 10 pourcent
+    - sinon: 0
+  plafond: contrat salarié . salaire de référence conventionnel * 18
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
+
+contrat salarié . convention collective . commerces de gros . résultat conventionnel 6:
+  remplace: contrat salarié . résultat conventionnel
+  applicable si: age = 63
+  variations:
+    - si: contrat salarié . ancienneté conventionnelle en année >= 12 mois
+      alors: somme formule moins 20 pourcent
+    - sinon: 0
+  plafond: contrat salarié . salaire de référence conventionnel * 18
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
+
+contrat salarié . convention collective . commerces de gros . résultat conventionnel 7:
+  remplace: contrat salarié . résultat conventionnel
+  applicable si: age = 64
+  variations:
+    - si: contrat salarié . ancienneté conventionnelle en année >= 12 mois
+      alors: somme formule moins 40 pourcent
+    - sinon: 0
+  plafond: contrat salarié . salaire de référence conventionnel * 18
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
+
+## Par défaut
+contrat salarié . convention collective . commerces de gros . résultat conventionnel 8:
+  remplace: contrat salarié . résultat conventionnel
+  non applicable si:
+    une de ces conditions:
+      - résultat conventionnel 1
+      - résultat conventionnel 2
+      - résultat conventionnel 3
+      - résultat conventionnel 4
+      - résultat conventionnel 5
+      - résultat conventionnel 6
+      - résultat conventionnel 7
+  variations:
+    - si: contrat salarié . ancienneté conventionnelle en année >= 12 mois
+      alors: somme formule
+    - sinon: 0
+  plafond: contrat salarié . salaire de référence conventionnel * 18
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
