@@ -77,7 +77,7 @@ describe("Ancienneté store", () => {
     expect(result.errorState.errorAbsencePeriods?.absences).toStrictEqual([
       {
         errorDate:
-          "La date de l'absence doit être comprise entre le 01/01/2020 et le 01/03/2022 (date d'entrée et de sortie de l'entreprise))",
+          "La date de l'absence doit être comprise entre le 01/01/2020 et le 01/03/2022 (dates d'entrée et de sortie de l'entreprise)",
       },
     ]);
   });
