@@ -92,6 +92,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
           plafond: 66
         - montant: 0
   unité: €
+  arrondi: 2 décimales
   références:
     Article 17 de l’Accord du 30 octobre 1951 relatif aux ingénieurs et cadres Annexe IV: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005849570?idConteneur=KALICONT000005635624
 
@@ -155,6 +156,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: base - minoration
   unité: €
+  arrondi: 2 décimales
   références:
     Article 18 de l’Accord du 30 mars 1951 relatif aux techniciens et agents de maîtrise Annexe III: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005849264?idConteneur=KALICONT000005635624
 
@@ -195,6 +197,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: base - minoration
   unité: €
+  arrondi: 2 décimales
   références:
     Article 14 de l’Accord du 27 février 1951 relatif aux employés Annexe II: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005849373?idConteneur=KALICONT000005635624
 
@@ -320,6 +323,8 @@ contrat salarié . convention collective . transports routiers . indemnité de l
         - montant: 0 €
           plafond: 3 ans
         - montant: contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  unité: €
+  arrondi: 2 décimales
   références:
     Article 11 Ter de l’Accord du 16 juin 1961 relatif aux ouvriers - annexe I: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005849397?idConteneur=KALICONT000005635624
 
@@ -344,5 +349,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
         - montant: 5 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
           plafond: 20 ans
         - montant: 6 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+  unité: €
+  arrondi: 2 décimales
   références:
     Article 11 Ter de l’Accord du 16 juin 1961 relatif aux ouvriers - annexe I: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005849397?idConteneur=KALICONT000005635624
