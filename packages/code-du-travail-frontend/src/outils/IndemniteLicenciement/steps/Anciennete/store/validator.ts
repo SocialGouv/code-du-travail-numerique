@@ -13,25 +13,35 @@ import {
 } from "./types";
 import frLocale from "date-fns/locale/fr";
 import { Agreement } from "../../../../../conventions/Search/api/type";
-import { DISABLE_ABSENCE, SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
+import {
+  DISABLE_ABSENCE,
+  SupportedCcIndemniteLicenciement,
+} from "@socialgouv/modeles-social";
 
-export const validateStep = (state: AncienneteStoreInput, agreeement?: Agreement) => {
+export const validateStep = (
+  state: AncienneteStoreInput,
+  agreeement?: Agreement
+) => {
   const dEntree = parse(state.dateEntree);
   const dSortie = parse(state.dateSortie);
   const dNotification = parse(state.dateNotification);
   const absencePeriods = state.absencePeriods;
   let errors: AncienneteStoreError = {};
 
-  const totalAbsence: number = agreeement && DISABLE_ABSENCE.includes(`IDCC${agreeement.num}` as SupportedCcIndemniteLicenciement)
-    ? 0
-    : absencePeriods
-      .filter((period) => Boolean(period.durationInMonth))
-      .reduce((total, item) => {
-        if (!item.durationInMonth) {
-          return total;
-        }
-        return total + item.durationInMonth * item.motif.value;
-      }, 0) / 12;
+  const totalAbsence: number =
+    agreeement &&
+    DISABLE_ABSENCE.includes(
+      `IDCC${agreeement.num}` as SupportedCcIndemniteLicenciement
+    )
+      ? 0
+      : absencePeriods
+          .filter((period) => Boolean(period.durationInMonth))
+          .reduce((total, item) => {
+            if (!item.durationInMonth) {
+              return total;
+            }
+            return total + item.durationInMonth * item.motif.value;
+          }, 0) / 12;
 
   // Date d'entrée
   if (!state.dateEntree) {
@@ -131,7 +141,7 @@ export const validateStep = (state: AncienneteStoreInput, agreeement?: Agreement
           })
         ) {
           return {
-            errorDate: `La date de l'absence doit être comprise entre le ${state.dateEntree} et le ${state.dateSortie} (date d'entrée et de sortie de l'entreprise))`,
+            errorDate: `La date de l'absence doit être comprise entre le ${state.dateEntree} et le ${state.dateSortie} (dates d'entrée et de sortie de l'entreprise)`,
           };
         }
         return {};
