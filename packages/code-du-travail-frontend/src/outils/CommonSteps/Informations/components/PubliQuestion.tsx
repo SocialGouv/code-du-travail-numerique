@@ -112,6 +112,7 @@ const PubliQuestion: React.FC<Props> = ({
           onChange={onChange}
           error={error}
           id={name}
+          placeholder={"jj/mm/aaaa"}
           showRequired
         />
       );

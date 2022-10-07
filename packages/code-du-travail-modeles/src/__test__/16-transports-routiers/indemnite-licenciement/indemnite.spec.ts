@@ -245,14 +245,14 @@ describe("CC 16", () => {
     test.each`
       seniority | salaireRef | haveRightToRetirement | age   | expectedCompensation
       ${1}      | ${2516}    | ${false}              | ${56} | ${0}
-      ${2}      | ${2516}    | ${false}              | ${56} | ${503.20000000000005}
+      ${2}      | ${2516}    | ${false}              | ${56} | ${503.2}
       ${2.5}    | ${2516}    | ${false}              | ${56} | ${629}
-      ${3}      | ${2516}    | ${false}              | ${56} | ${1509.6000000000001}
+      ${3}      | ${2516}    | ${false}              | ${56} | ${1509.6}
       ${1}      | ${2516}    | ${true}               | ${60} | ${0}
-      ${2}      | ${2516}    | ${true}               | ${62} | ${503.20000000000005}
+      ${2}      | ${2516}    | ${true}               | ${62} | ${503.2}
       ${2.5}    | ${2516}    | ${true}               | ${62} | ${629}
-      ${3}      | ${2516}    | ${true}               | ${62} | ${905.7600000000001}
-      ${3}      | ${2516}    | ${false}              | ${62} | ${1509.6000000000001}
+      ${3}      | ${2516}    | ${true}               | ${62} | ${905.76}
+      ${3}      | ${2516}    | ${false}              | ${62} | ${1509.6}
     `(
       "Avec une ancienneté $seniority ans, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
       ({

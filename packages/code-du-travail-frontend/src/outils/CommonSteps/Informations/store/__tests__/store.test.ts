@@ -34,30 +34,17 @@ describe("Informations store", () => {
     });
     expect(store.getState().informationsData.input.isStepHidden).toBe(false);
     expect(
-      store.getState().informationsData.input.publicodesInformations
-    ).toEqual([
-      {
-        info: undefined,
-        order: 0,
-        question: {
-          name: "contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle",
-          rule: {
-            cdtn: {
-              type: "liste",
-              valeurs: {
-                Cadres: "'Cadres'",
-                "Non-cadres": "'Non-cadres'",
-              },
-            },
-            description:
-              "La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.",
-            nom: "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle",
-            question: "Quelle est la catégorie professionnelle du salarié ?",
-            titre: "Catégorie professionnelle",
-          },
-        },
-      },
-    ]);
+      store.getState().informationsData.input.publicodesInformations[0].info
+    ).toBeUndefined();
+    expect(
+      store.getState().informationsData.input.publicodesInformations[0].order
+    ).toEqual(0);
+    expect(
+      store.getState().informationsData.input.publicodesInformations[0].question
+        .name
+    ).toEqual(
+      "contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle"
+    );
   });
 
   it("should generate 0 publicodes questions", () => {
@@ -90,45 +77,31 @@ describe("Informations store", () => {
       );
     expect(
       store.getState().informationsData.input.publicodesInformations
-    ).toEqual([
-      {
-        info: "'Cadres'",
-        order: 0,
-        question: {
-          name: "contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle",
-          rule: {
-            cdtn: {
-              type: "liste",
-              valeurs: {
-                Cadres: "'Cadres'",
-                "Non-cadres": "'Non-cadres'",
-              },
-            },
-            description:
-              "La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.",
-            nom: "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle",
-            question: "Quelle est la catégorie professionnelle du salarié ?",
-            titre: "Catégorie professionnelle",
-          },
-        },
-      },
-      {
-        info: undefined,
-        order: 1,
-        question: {
-          name: "contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle - cadre - non cadre durant une période",
-          rule: {
-            cdtn: {
-              type: "oui-non",
-            },
-            nom: "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période",
-            question:
-              "Le salarié a-t-il précédemment occupé des fonctions non-cadres durant le contrat de travail&nbsp;?",
-            titre: "Fonctions de non-cadres durant le contrat de travail",
-          },
-        },
-      },
-    ]);
+    ).toHaveLength(2);
+    expect(
+      store.getState().informationsData.input.publicodesInformations[0].info
+    ).toEqual("'Cadres'");
+    expect(
+      store.getState().informationsData.input.publicodesInformations[0].order
+    ).toEqual(0);
+    expect(
+      store.getState().informationsData.input.publicodesInformations[0].question
+        .name
+    ).toEqual(
+      "contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle"
+    );
+    expect(
+      store.getState().informationsData.input.publicodesInformations[1].info
+    ).toBeUndefined();
+    expect(
+      store.getState().informationsData.input.publicodesInformations[1].order
+    ).toEqual(1);
+    expect(
+      store.getState().informationsData.input.publicodesInformations[1].question
+        .name
+    ).toEqual(
+      "contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle - cadre - non cadre durant une période"
+    );
     expect(store.getState().informationsData.input.isStepHidden).toBe(false);
     expect(store.getState().informationsData.input.hasNoMissingQuestions).toBe(
       false
@@ -151,29 +124,19 @@ describe("Informations store", () => {
       );
     expect(
       store.getState().informationsData.input.publicodesInformations
-    ).toEqual([
-      {
-        info: "'Non-cadres'",
-        order: 0,
-        question: {
-          name: "contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle",
-          rule: {
-            cdtn: {
-              type: "liste",
-              valeurs: {
-                Cadres: "'Cadres'",
-                "Non-cadres": "'Non-cadres'",
-              },
-            },
-            description:
-              "La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.",
-            nom: "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle",
-            question: "Quelle est la catégorie professionnelle du salarié ?",
-            titre: "Catégorie professionnelle",
-          },
-        },
-      },
-    ]);
+    ).toHaveLength(1);
+    expect(
+      store.getState().informationsData.input.publicodesInformations[0].info
+    ).toEqual("'Non-cadres'");
+    expect(
+      store.getState().informationsData.input.publicodesInformations[0].order
+    ).toEqual(0);
+    expect(
+      store.getState().informationsData.input.publicodesInformations[0].question
+        .name
+    ).toEqual(
+      "contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle"
+    );
     expect(store.getState().informationsData.input.isStepHidden).toBe(false);
     expect(store.getState().informationsData.input.hasNoMissingQuestions).toBe(
       true

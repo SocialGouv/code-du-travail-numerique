@@ -42,15 +42,15 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   valeur: oui
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien:
-  titre: Avant d'être cadre le salarié a été employé ou technicien dans l’entreprise
+  titre: Avant d'être cadre, le salarié a été employé, technicien ou agent de maîtrise dans l’entreprise
   description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
-  question: Avant d'être cadre le salarié a-t-il été employé ou technicien dans l’entreprise ?
+  question: Avant d'être cadre, le salarié a-t-il été employé, technicien ou agent de maîtrise dans l’entreprise ?
   cdtn:
     type: oui-non
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . date du statut cadre:
   applicable si: avant employé ou technicien = 'Oui'
-  titre: Date où le salarié a changé de catégorie
+  titre: Date du changement de catégorie
   question: A quelle date le salarié a-t-il changé de catégorie ?
   cdtn:
     type: date
@@ -269,6 +269,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: base - minoration
   unité: €
+  arrondi: 2
   références:
     Article 5 bis de l’Accord du 16 juin 1961 relatif aux ouvriers - annexe I: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005849373?idConteneur=KALICONT000005635624
 
