@@ -21,3 +21,8 @@ export enum SupportedCcIndemniteLicenciement {
   default = "default",
   legal = "legal",
 }
+
+export enum LicenciementEconomique {
+  oui = "Oui",
+  non = "Non",
+}
