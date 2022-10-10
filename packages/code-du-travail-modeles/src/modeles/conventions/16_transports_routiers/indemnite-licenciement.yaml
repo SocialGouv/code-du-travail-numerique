@@ -4,7 +4,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . age:
   titre: Âge du salarié
-  question: Quel est l'âge du salarié ?
+  question: Quel est l'âge du salarié&nbsp;?
   cdtn:
     type: entier
 
@@ -14,14 +14,14 @@ contrat salarié . convention collective . transports routiers . indemnité de l
       - age >= 60
       - age <= 65
   titre: Le salarié remplit les conditions pour partir à la retraite
-  question: Le salarié remplit-il les conditions pour partir à la retraite ?
+  question: Le salarié remplit-il les conditions pour partir à la retraite&nbsp;?
   cdtn:
     type: oui-non
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle:
   titre: Catégorie professionnelle
   description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
-  question: Quelle est la catégorie professionnelle du salarié ?
+  question: Quelle est la catégorie professionnelle du salarié&nbsp;?
   cdtn:
     type: liste
     valeurs:
@@ -44,14 +44,14 @@ contrat salarié . convention collective . transports routiers . indemnité de l
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien:
   titre: Avant d'être cadre, le salarié a été employé, technicien ou agent de maîtrise dans l’entreprise
   description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
-  question: Avant d'être cadre, le salarié a-t-il été employé, technicien ou agent de maîtrise dans l’entreprise ?
+  question: Avant d'être cadre, le salarié a-t-il été employé, technicien ou agent de maîtrise dans l’entreprise&nbsp;?
   cdtn:
     type: oui-non
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . date du statut cadre:
   applicable si: avant employé ou technicien = 'Oui'
   titre: Date du changement de catégorie
-  question: A quelle date le salarié a-t-il changé de catégorie ?
+  question: A quelle date le salarié a-t-il changé de catégorie&nbsp;?
   cdtn:
     type: date
 
@@ -64,7 +64,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age:
   titre: Âge du salarié
-  question: Quel est l'âge du salarié ?
+  question: Quel est l'âge du salarié&nbsp;?
   cdtn:
     type: entier
 
@@ -74,7 +74,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
       - age >= 61
       - age <= 65
   titre: Le salarié remplit les conditions pour partir à la retraite
-  question: Le salarié remplit-il les conditions pour partir à la retraite ?
+  question: Le salarié remplit-il les conditions pour partir à la retraite&nbsp;?
   cdtn:
     type: oui-non
 
@@ -236,14 +236,14 @@ contrat salarié . convention collective . transports routiers . indemnité de l
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite:
   titre: Le licenciement fait suite à une incapacité à la conduite
-  question: Le licenciement fait-il suite à une incapacité à la conduite ?
+  question: Le licenciement fait-il suite à une incapacité à la conduite&nbsp;?
   cdtn:
     type: oui-non
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite définitive:
   applicable si: incapacité de conduite = 'Oui'
   titre: L'incapacité à la conduite est définitive
-  question: L'incapacité à la conduite est-elle définitive ?
+  question: L'incapacité à la conduite est-elle définitive&nbsp;?
   cdtn:
     type: oui-non
 
@@ -254,7 +254,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . age:
   applicable si: incapacité de conduite = 'Non'
   titre: Âge du salarié
-  question: Quel est l'âge du salarié ?
+  question: Quel est l'âge du salarié&nbsp;?
   cdtn:
     type: entier
 
@@ -264,7 +264,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
       - age >= 60
       - age <= 65
   titre: Le salarié remplit les conditions pour partir à la retraite
-  question: Le salarié remplit-il les conditions pour partir à la retraite ?
+  question: Le salarié remplit-il les conditions pour partir à la retraite&nbsp;?
   cdtn:
     type: oui-non
 
