@@ -182,7 +182,7 @@ const STEP_LIST_WIDTH = "28rem";
 const { breakpoints } = theme;
 
 const StyledWrapper = styled(Wrapper)`
-  padding: 0;
+  padding: 0 !important;
 `;
 
 const StyledForm = styled.form`
