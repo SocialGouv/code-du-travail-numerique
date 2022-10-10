@@ -22,9 +22,9 @@ export class Formula1501
     props: FormulaProps<SupportedCcIndemniteLicenciement.IDCC1501>
   ): Formula {
     switch (true) {
-      case props.category === CatPro1501.cadres:
-        return this.computeFormulaNonCadres(props);
       case props.category === CatPro1501.nonCadres:
+        return this.computeFormulaNonCadres(props);
+      case props.category === CatPro1501.cadres:
         return this.computeFormulaCadres(props);
     }
     return { explanations: [], formula: "" };
