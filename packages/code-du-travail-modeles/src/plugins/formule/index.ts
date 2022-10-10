@@ -3,6 +3,7 @@ import { Formula16 } from "./16_transports_routiers";
 import { Formula413 } from "./413_handicap";
 import { Formula650 } from "./650_metallurgie_ingenieurs_cadres";
 import { Formula1486 } from "./1486_bureaux_etudes_techniques";
+import { Formula1501 } from "./1501_restauration_rapide";
 import { Formula1516 } from "./1516_organismes_formation";
 import { Formula1596 } from "./1596_batiment_employes_ouvriers";
 import { Formula1597 } from "./1597_batiment_employes_ouvriers_bis";
@@ -12,7 +13,6 @@ import { Formula2264 } from "./2264_hospitalisation_privee";
 import { Formula3043 } from "./3043_entreprises_proprete";
 import { Formula3127 } from "./3127_entreprises_services_a_la_personne";
 import { Formula3239 } from "./3239_particuliers_employeurs_domicile";
-import { Formula1501 } from "./1501_restauration_rapide";
 import { FormulaLegal } from "./legal";
 import type { IFormula } from "./types";
 
