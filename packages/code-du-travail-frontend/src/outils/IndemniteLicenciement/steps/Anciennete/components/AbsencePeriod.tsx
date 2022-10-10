@@ -28,6 +28,7 @@ type Props = {
   errors?: Errors;
   showDeleteButton: boolean;
   onDeleteAbsence: (index: number) => void;
+  informationData: Record<string, string | undefined>;
 };
 
 const AbsencePeriod = ({
@@ -40,16 +41,21 @@ const AbsencePeriod = ({
   errors,
   showDeleteButton,
   onDeleteAbsence,
+  informationData,
 }: Props): JSX.Element => {
   const [shouldAskAbsenceDate, askAbsenceDate] = useState(
     absence
-      ? absence.motif?.startAt === true
+      ? absence.motif?.startAt
+        ? absence.motif?.startAt(informationData)
+        : false
       : motifs.length > 0 && motifs[0].startAt
+      ? motifs[0].startAt(informationData)
+      : false
   );
 
   const selectMotif = (index: number, value: string) => {
     const motif = motifs.find((motif) => motif.label === value);
-    askAbsenceDate(motif?.startAt === true);
+    askAbsenceDate(motif?.startAt ? motif.startAt(informationData) : false);
     onSelectMotif(index, value);
   };
 

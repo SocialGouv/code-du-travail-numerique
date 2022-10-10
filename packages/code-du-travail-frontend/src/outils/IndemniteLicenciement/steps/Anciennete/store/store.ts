@@ -10,6 +10,10 @@ import {
   AncienneteStoreSlice,
 } from "./types";
 import { validateStep } from "./validator";
+import {
+  CommonInformationsStoreInput,
+  CommonInformationsStoreSlice,
+} from "../../../../CommonSteps/Informations/store";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
@@ -22,7 +26,7 @@ const initialState: AncienneteStoreData = {
 
 const createAncienneteStore: StoreSlice<
   AncienneteStoreSlice,
-  SalairesStoreSlice & CommonAgreementStoreSlice
+  SalairesStoreSlice & CommonAgreementStoreSlice & CommonInformationsStoreSlice
 > = (set, get) => ({
   ancienneteData: { ...initialState },
   ancienneteFunction: {
@@ -50,7 +54,11 @@ const createAncienneteStore: StoreSlice<
       applyGenericValidation(get, set, "hasAbsenceProlonge", value);
     },
     onValidateStepAnciennete: () => {
-      const { isValid, errorState } = validateStep(get().ancienneteData.input, get().agreementData.input.agreement);
+      const { isValid, errorState } = validateStep(
+        get().ancienneteData.input,
+        get().informationsData.input,
+        get().agreementData.input.agreement
+      );
 
       set(
         produce((state: AncienneteStoreSlice) => {
@@ -65,8 +73,16 @@ const createAncienneteStore: StoreSlice<
 });
 
 const applyGenericValidation = (
-  get: GetState<AncienneteStoreSlice & CommonAgreementStoreSlice>,
-  set: SetState<AncienneteStoreSlice & CommonAgreementStoreSlice>,
+  get: GetState<
+    AncienneteStoreSlice &
+      CommonAgreementStoreSlice &
+      CommonInformationsStoreSlice
+  >,
+  set: SetState<
+    AncienneteStoreSlice &
+      CommonAgreementStoreSlice &
+      CommonInformationsStoreSlice
+  >,
   paramName: keyof AncienneteStoreInput,
   value: any
 ) => {
@@ -76,6 +92,7 @@ const applyGenericValidation = (
     });
     const { isValid, errorState } = validateStep(
       nextState.ancienneteData.input,
+      get().informationsData.input,
       get().agreementData.input.agreement
     );
     set(

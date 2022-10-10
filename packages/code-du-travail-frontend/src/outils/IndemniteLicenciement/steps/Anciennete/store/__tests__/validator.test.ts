@@ -3,21 +3,29 @@ import { validateStep } from "../validator";
 
 describe("Ancienneté store", () => {
   it("doit retourner une erreur si la durée de l'absence est vide", () => {
-    const result = validateStep({
-      dateEntree: "01/01/2020",
-      dateSortie: "01/03/2022",
-      dateNotification: "01/01/2022",
-      absencePeriods: [
-        {
-          motif: {
-            label: "",
-            key: MotifKeys.maladieNonPro,
-            value: 1,
+    const result = validateStep(
+      {
+        dateEntree: "01/01/2020",
+        dateSortie: "01/03/2022",
+        dateNotification: "01/01/2022",
+        absencePeriods: [
+          {
+            motif: {
+              label: "",
+              key: MotifKeys.maladieNonPro,
+              value: 1,
+            },
           },
-        },
-      ],
-      hasAbsenceProlonge: "oui",
-    });
+        ],
+        hasAbsenceProlonge: "oui",
+      },
+      {
+        publicodesInformations: [],
+        isStepHidden: false,
+        isStepSalaryHidden: false,
+        hasNoMissingQuestions: true,
+      }
+    );
     expect(result.isValid).toBe(false);
     expect(result.errorState.errorAbsencePeriods?.absences).toStrictEqual([
       {
@@ -28,23 +36,31 @@ describe("Ancienneté store", () => {
   });
 
   it("doit retourner une erreur si la date de l'absence est vide", () => {
-    const result = validateStep({
-      dateEntree: "01/01/2020",
-      dateSortie: "01/03/2022",
-      dateNotification: "01/01/2022",
-      absencePeriods: [
-        {
-          motif: {
-            label: "",
-            startAt: true,
-            key: MotifKeys.maladieNonPro,
-            value: 1,
+    const result = validateStep(
+      {
+        dateEntree: "01/01/2020",
+        dateSortie: "01/03/2022",
+        dateNotification: "01/01/2022",
+        absencePeriods: [
+          {
+            motif: {
+              label: "",
+              startAt: () => true,
+              key: MotifKeys.maladieNonPro,
+              value: 1,
+            },
+            durationInMonth: 2,
           },
-          durationInMonth: 2,
-        },
-      ],
-      hasAbsenceProlonge: "oui",
-    });
+        ],
+        hasAbsenceProlonge: "oui",
+      },
+      {
+        publicodesInformations: [],
+        isStepHidden: false,
+        isStepSalaryHidden: false,
+        hasNoMissingQuestions: true,
+      }
+    );
     expect(result.isValid).toBe(false);
     expect(result.errorState.errorAbsencePeriods?.absences).toStrictEqual([
       {
@@ -55,24 +71,32 @@ describe("Ancienneté store", () => {
   });
 
   it("doit retourner une erreur si la date de l'absence est avant la date de l'embauche", () => {
-    const result = validateStep({
-      dateEntree: "01/01/2020",
-      dateSortie: "01/03/2022",
-      dateNotification: "01/01/2022",
-      absencePeriods: [
-        {
-          motif: {
-            label: "",
-            startAt: true,
-            key: MotifKeys.maladieNonPro,
-            value: 1,
+    const result = validateStep(
+      {
+        dateEntree: "01/01/2020",
+        dateSortie: "01/03/2022",
+        dateNotification: "01/01/2022",
+        absencePeriods: [
+          {
+            motif: {
+              label: "",
+              startAt: () => true,
+              key: MotifKeys.maladieNonPro,
+              value: 1,
+            },
+            startedAt: "01/01/2019",
+            durationInMonth: 2,
           },
-          startedAt: "01/01/2019",
-          durationInMonth: 2,
-        },
-      ],
-      hasAbsenceProlonge: "oui",
-    });
+        ],
+        hasAbsenceProlonge: "oui",
+      },
+      {
+        publicodesInformations: [],
+        isStepHidden: false,
+        isStepSalaryHidden: false,
+        hasNoMissingQuestions: true,
+      }
+    );
     expect(result.isValid).toBe(false);
     expect(result.errorState.errorAbsencePeriods?.absences).toStrictEqual([
       {
@@ -83,24 +107,32 @@ describe("Ancienneté store", () => {
   });
 
   it("ne doit pas retourner d'erreur si l'absence est bien remplie", () => {
-    const result = validateStep({
-      dateEntree: "01/01/2020",
-      dateSortie: "01/03/2022",
-      dateNotification: "01/01/2022",
-      absencePeriods: [
-        {
-          motif: {
-            label: "",
-            startAt: true,
-            key: MotifKeys.maladieNonPro,
-            value: 1,
+    const result = validateStep(
+      {
+        dateEntree: "01/01/2020",
+        dateSortie: "01/03/2022",
+        dateNotification: "01/01/2022",
+        absencePeriods: [
+          {
+            motif: {
+              label: "",
+              startAt: () => true,
+              key: MotifKeys.maladieNonPro,
+              value: 1,
+            },
+            startedAt: "01/01/2021",
+            durationInMonth: 2,
           },
-          startedAt: "01/01/2021",
-          durationInMonth: 2,
-        },
-      ],
-      hasAbsenceProlonge: "oui",
-    });
+        ],
+        hasAbsenceProlonge: "oui",
+      },
+      {
+        publicodesInformations: [],
+        isStepHidden: false,
+        isStepSalaryHidden: false,
+        hasNoMissingQuestions: true,
+      }
+    );
     expect(result.isValid).toBe(true);
     expect(result.errorState.errorAbsencePeriods?.absences).toBe(undefined);
   });

@@ -17,9 +17,11 @@ import {
   DISABLE_ABSENCE,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
+import { CommonInformationsStoreInput } from "../../../../CommonSteps/Informations/store";
 
 export const validateStep = (
   state: AncienneteStoreInput,
+  information: CommonInformationsStoreInput,
   agreeement?: Agreement
 ) => {
   const dEntree = parse(state.dateEntree);
@@ -27,6 +29,11 @@ export const validateStep = (
   const dNotification = parse(state.dateNotification);
   const absencePeriods = state.absencePeriods;
   let errors: AncienneteStoreError = {};
+  const informationData = information.publicodesInformations
+    .map((v) => ({
+      [v.question.rule.nom]: v.info,
+    }))
+    .reduce((acc, cur) => ({ ...acc, ...cur }), {});
 
   const totalAbsence: number =
     agreeement &&
@@ -119,19 +126,27 @@ export const validateStep = (
   if (state.hasAbsenceProlonge === "oui") {
     const absenceErrors: AncienneteAbsenceStoreError[] =
       state.absencePeriods.map((item): AncienneteAbsenceStoreError => {
-        if (!item.durationInMonth || (item.motif.startAt && !item.startedAt)) {
+        if (
+          !item.durationInMonth ||
+          (item.motif.startAt &&
+            item.motif.startAt(informationData) &&
+            !item.startedAt)
+        ) {
           return {
             errorDuration: !item.durationInMonth
               ? "Veuillez saisir la durée de l'absence"
               : undefined,
             errorDate:
-              item.motif.startAt && !item.startedAt
+              item.motif.startAt &&
+              item.motif.startAt(informationData) &&
+              !item.startedAt
                 ? "Veuillez saisir la date de l'absence"
                 : undefined,
           };
         }
         if (
           item.motif.startAt &&
+          item.motif.startAt(informationData) &&
           item.startedAt &&
           state.dateEntree &&
           state.dateSortie &&

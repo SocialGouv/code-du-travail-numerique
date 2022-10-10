@@ -5,6 +5,7 @@ import { RadioQuestion, TextQuestion } from "../../../Components";
 import { AbsencePeriods } from "./components";
 import { useIndemniteLicenciementStore } from "../../store";
 import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
+import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../publicodes";
 
 const StepAnciennete = () => {
   const {
@@ -24,6 +25,7 @@ const StepAnciennete = () => {
     errorDateEntree,
     errorAbsencePeriods,
     agreement,
+    informationData,
   } = useIndemniteLicenciementStore((state) => ({
     onChangeAbsencePeriods: state.ancienneteFunction.onChangeAbsencePeriods,
     absencePeriods: state.ancienneteData.input.absencePeriods,
@@ -42,6 +44,11 @@ const StepAnciennete = () => {
     errorDateEntree: state.ancienneteData.error.errorDateEntree,
     errorAbsencePeriods: state.ancienneteData.error.errorAbsencePeriods,
     agreement: state.agreementData.input.agreement,
+    informationData: state.informationsData.input.publicodesInformations
+      .map((v) => ({
+        [v.question.rule.nom]: v.info,
+      }))
+      .reduce((acc, cur) => ({ ...acc, ...cur }), {}),
   }));
   return (
     <>
@@ -107,6 +114,7 @@ const StepAnciennete = () => {
           onChange={onChangeAbsencePeriods}
           absences={absencePeriods}
           error={errorAbsencePeriods}
+          informationData={informationData}
         />
       )}
     </>

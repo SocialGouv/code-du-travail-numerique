@@ -20,6 +20,7 @@ describe("<AbsencePeriod />", () => {
           motifs={[]}
           showDeleteButton={false}
           onDeleteAbsence={() => {}}
+          informationData={{}}
         />
       )
     ).toBeTruthy();
@@ -35,6 +36,7 @@ describe("<AbsencePeriod />", () => {
         motifs={sampleMotifs}
         showDeleteButton={false}
         onDeleteAbsence={() => {}}
+        informationData={{}}
       />
     );
     expect(getAllByRole("option").length).toBe(sampleMotifs.length);
@@ -61,6 +63,7 @@ describe("<AbsencePeriod />", () => {
         motifs={sampleMotifs}
         showDeleteButton={false}
         onDeleteAbsence={() => {}}
+        informationData={{}}
       />
     );
     expect(
@@ -78,6 +81,7 @@ describe("<AbsencePeriod />", () => {
         motifs={sampleMotifs}
         showDeleteButton={true}
         onDeleteAbsence={() => {}}
+        informationData={{}}
       />
     );
     expect(getByRole("button", { name: /supprimer/i })).toBeInTheDocument();
@@ -93,6 +97,7 @@ describe("<AbsencePeriod />", () => {
         motifs={sampleMotifsWithStartedDate}
         showDeleteButton={false}
         onDeleteAbsence={() => {}}
+        informationData={{}}
       />
     );
     userEvent.selectOptions(
@@ -124,6 +129,7 @@ describe("<AbsencePeriod />", () => {
           durationInMonth: 4,
           startedAt: "01/01/2021",
         }}
+        informationData={{}}
       />
     );
     expect(
@@ -150,6 +156,7 @@ describe("<AbsencePeriod />", () => {
         motifs={sampleMotifsWithStartedDate}
         showDeleteButton={true}
         onDeleteAbsence={onDeleteAbsence}
+        informationData={{}}
       />
     );
     userEvent.selectOptions(

@@ -85,5 +85,14 @@ export class Seniority16
 
 export const MOTIFS_16: Motif[] = LEGAL_MOTIFS.map((item) => ({
   ...item,
-  startAt: true,
+  startAt: (data) => {
+    return (
+      data[
+        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle"
+      ] === "'Ingénieurs et cadres'" &&
+      data[
+        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien"
+      ] === "'Oui'"
+    );
+  },
 }));
