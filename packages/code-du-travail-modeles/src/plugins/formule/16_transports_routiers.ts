@@ -229,7 +229,7 @@ export class Formula16
     if (age > 65) {
       return { explanations, formula };
     }
-    const year = round(seniority) < 2 ? "an" : "ans";
+    const yearLabel = year(seniority);
     const yearTAM = round(seniorityTAM ?? 0) < 2 ? "an" : "ans";
     let base = "";
     if (seniorityTAM) {
@@ -237,7 +237,7 @@ export class Formula16
       explanations.push(
         `A1 : Ancienneté dans la catégorie Ingénieurs et cadres (${round(
           seniority
-        )} ${year})`
+        )} ${yearLabel})`
       );
       explanations.push(
         `A2 : Ancienneté dans les catégories Techniciens et agents de maîtrise et Employés (${round(
@@ -246,7 +246,9 @@ export class Formula16
       );
     } else {
       base = "4 / 10 * Sref * A";
-      explanations.push(`A : Ancienneté totale (${round(seniority)} ${year})`);
+      explanations.push(
+        `A : Ancienneté totale (${round(seniority)} ${yearLabel})`
+      );
     }
     formula = base;
     explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);

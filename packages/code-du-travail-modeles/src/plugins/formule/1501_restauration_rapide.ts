@@ -1,6 +1,6 @@
+import { min0, round, year } from "../../utils";
 import type { SupportedCcIndemniteLicenciement } from "..";
 import type { Formula, FormulaProps, IFormula } from "./types";
-import { min0, round, year } from "../../utils";
 
 export enum CatPro1501 {
   nonCadres = "'Non-cadres'",
