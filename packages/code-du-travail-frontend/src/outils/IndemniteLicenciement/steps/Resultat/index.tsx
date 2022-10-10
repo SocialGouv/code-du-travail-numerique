@@ -134,7 +134,7 @@ const StepResult = () => {
         {!agreementHasNoLegalIndemnity && (
           <DecryptResult
             hasSelectedAgreement={route !== "none"}
-            isAgreementSupported={supportedCc ? true : false}
+            isAgreementSupported={!!supportedCc}
             legalResult={publicodesLegalResult.value?.toString() ?? ""}
             agreementResult={publicodesAgreementResult?.value?.toString()}
           />
@@ -148,7 +148,7 @@ const StepResult = () => {
       {!agreementHasNoLegalIndemnity && (
         <AgreementInfo
           hasSelectedAgreement={route !== "none"}
-          isAgreementSupported={supportedCc ? true : false}
+          isAgreementSupported={!!supportedCc}
         />
       )}
       <ForMoreInfo />

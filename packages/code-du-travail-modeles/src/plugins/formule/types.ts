@@ -8,6 +8,7 @@ import type { Formula2216Props } from "./2216_commerces_detail_alimentation";
 import type { Formula2264Props } from "./2264_hospitalisation_privee";
 import type { Formula3239Props } from "./3239_particuliers_employeurs_domicile";
 import type { LegalFormulaProps } from "./legal";
+import type { Formula1501Props } from "./1501_restauration_rapide";
 
 export type DefaultFormulaProps = {
   seniority: number;
@@ -47,4 +48,6 @@ export type FormulaProps<T> = T extends SupportedCcIndemniteLicenciement.legal
   ? Formula2216Props
   : T extends SupportedCcIndemniteLicenciement.IDCC0016
   ? Formula16Props
+  : T extends SupportedCcIndemniteLicenciement.IDCC1501
+  ? Formula1501Props
   : DefaultFormulaProps;

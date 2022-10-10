@@ -11,6 +11,7 @@ import { Formula2264 } from "./2264_hospitalisation_privee";
 import { Formula3043 } from "./3043_entreprises_proprete";
 import { Formula3127 } from "./3127_entreprises_services_a_la_personne";
 import { Formula3239 } from "./3239_particuliers_employeurs_domicile";
+import { Formula1501 } from "./1501_restauration_rapide";
 import { FormulaLegal } from "./legal";
 import type { IFormula } from "./types";
 
@@ -41,6 +42,8 @@ export class FormuleFactory {
         return new Formula2216() as IFormula<T>;
       case SupportedCcIndemniteLicenciement.IDCC0016:
         return new Formula16() as IFormula<T>;
+      case SupportedCcIndemniteLicenciement.IDCC1501:
+        return new Formula1501() as IFormula<T>;
       case SupportedCcIndemniteLicenciement.default:
       default:
         return new FormulaLegal() as IFormula<T>;

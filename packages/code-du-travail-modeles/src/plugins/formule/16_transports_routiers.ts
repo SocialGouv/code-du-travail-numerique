@@ -1,4 +1,4 @@
-import { round } from "../../utils";
+import { round, year } from "../../utils";
 import type { CategoryPro16, SupportedCcIndemniteLicenciement } from "..";
 import type { Formula, FormulaProps, IFormula } from "./types";
 
@@ -157,20 +157,20 @@ export class Formula16
   ): Formula {
     let formula = "";
     const explanations = [];
-    const year = round(seniority) < 2 ? "an" : "ans";
+    const yearLabel = year(seniority);
     if (ratio) {
       formula = `${ratio} * Sref * ${hasCut ? "A1" : "A"}`;
       explanations.push(
         `${hasCut ? "A1" : "A"} : Ancienneté totale (${round(
           seniority
-        )} ${year})`
+        )} ${yearLabel})`
       );
       if (hasCut) {
         formula += ` - 20% * A2 * (${ratio} * Sref * A1)`;
         explanations.push(
           `A2 : Années entre 60 et 65 ans (${round(
             this.yearBetween60And65(age, seniority)
-          )} ${year})`
+          )} ${yearLabel})`
         );
       }
       explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
