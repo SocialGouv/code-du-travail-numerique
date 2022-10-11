@@ -13,6 +13,7 @@ jest.mock("@cdt/data", () => ({
         text: "Response1",
         trackingName: "Response1",
         statement: "Statement1",
+        neutralStatementRef: true,
         question: {
           text: "Question11",
           trackingName: "name1",
@@ -21,14 +22,14 @@ jest.mock("@cdt/data", () => ({
               text: "Response11",
               trackingName: "Response11",
               statement: "Statement11",
-              infoStatement: "InfoStatement11",
+              neutralStatement: "neutralStatement11",
               slug: "Slug11",
             },
             {
               text: "Response12",
               trackingName: "Response12",
               statement: "Statement11",
-              infoStatement: "InfoStatement12",
+              neutralStatement: "neutralStatement12",
               slug: "Slug12",
             },
           ],
@@ -78,7 +79,7 @@ describe.each([
         });
       });
       it("doit afficher la déclaration non personnalisée", () => {
-        expect(rendering.queryByText("InfoStatement11")).toBeInTheDocument();
+        expect(rendering.queryByText("neutralStatement11")).toBeInTheDocument();
       });
       it("doit afficher le lien vers le questionnaire", () => {
         expect(
