@@ -50,7 +50,7 @@ export default function Agreement29() {
           },
         ]}
         name="hasSixBestSalaries"
-        label="Connaissez-vous le montant total des 6 meilleurs salaires perçus consécutivement durant le contrat de travail ?"
+        label="Connaissez vous la somme des meilleurs salaires perçus sur une période de 6 mois consécutifs ?"
         selectedOption={hasSixBestSalaries}
         onChangeSelectedOption={onChangeHasSixBestSalaries}
         error={errorHasSixBestSalaries}
@@ -58,7 +58,7 @@ export default function Agreement29() {
       />
       {hasSixBestSalaries === "oui" && (
         <TextQuestion
-          label="Total des 6 meilleurs salaires perçus consécutivement durant le contrat de travail"
+          label="Somme des meilleurs salaires perçus sur une période de 6 mois consécutifs"
           inputType="number"
           value={`${sixBestSalariesTotal}`}
           onChange={onChangeSixBestSalariesTotal}

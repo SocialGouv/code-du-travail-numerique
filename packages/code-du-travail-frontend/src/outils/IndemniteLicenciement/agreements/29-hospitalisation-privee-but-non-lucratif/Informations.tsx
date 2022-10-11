@@ -21,14 +21,14 @@ export default function Agreement29Informations() {
   return shouldAskSixBestSalaries ? (
     <>
       <li>
-        Connaissance du total des 6 meilleurs salaires perçus consécutivement
-        durant le contrat de travail &nbsp;:&nbsp;
+        Connaissance de la somme des meilleurs salaires perçus sur une période
+        de 6 mois consécutifs &nbsp;:&nbsp;
         {hasSixBestSalaries === "oui" ? "Oui" : "Non"}
       </li>
       {hasSixBestSalaries === "oui" && (
         <li>
-          Total des 6 meilleurs salaires perçus consécutivement durant le
-          contrat de travail &nbsp;:&nbsp;
+          Somme des meilleurs salaires perçus sur une période de 6 mois
+          consécutifs &nbsp;:&nbsp;
           {sixBestSalariesTotal} €
         </li>
       )}
