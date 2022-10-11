@@ -28,9 +28,16 @@ export const SummaryItem = ({
       )}
       <StyledText>{data}</StyledText>
       {!noButton && (
-        <StyledButton variant="link" xsmall onClick={onClick} icon={UpdateIcon}>
-          {width > breakpoints.intMobile ? "Modifier" : ""}
-        </StyledButton>
+        <StyledButtonWrapper>
+          <StyledButton
+            variant="link"
+            xsmall
+            onClick={onClick}
+            icon={UpdateIcon}
+          >
+            {width > breakpoints.intMobile && <div>Modifier</div>}
+          </StyledButton>
+        </StyledButtonWrapper>
       )}
     </SummaryItemWrapper>
   );
@@ -68,6 +75,8 @@ const StyledText = styled.div`
 `;
 
 const StyledButton = styled(Button)`
+  display: flex;
+  align-items: baseline;
   @media (max-width: ${breakpoints.mobile}) {
     padding: 0 8px;
     svg {
@@ -75,4 +84,8 @@ const StyledButton = styled(Button)`
       height: 32px;
     }
   }
+`;
+
+const StyledButtonWrapper = styled.div`
+  margin-left: 4%;
 `;

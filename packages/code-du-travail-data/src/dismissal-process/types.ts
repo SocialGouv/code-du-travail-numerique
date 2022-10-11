@@ -5,7 +5,8 @@ export type QuestionnaireResponse = {
   description?: string;
   slug?: string;
   statement: string;
-  infoStatement?: string;
+  neutralStatement?: string;
+  neutralStatementRef?: boolean;
   question?: QuestionnaireQuestion;
 };
 
