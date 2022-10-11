@@ -61,7 +61,7 @@ const StyledIcon = styled.div`
   height: 20px;
   color: white;
   border-radius: 12px;
-  margin: 3px 0;
+  margin: 3px 15px 3px 0;
   font-size: 10px;
   @media (max-width: ${breakpoints.mobile}) {
     margin-left: 0;
@@ -69,7 +69,6 @@ const StyledIcon = styled.div`
 `;
 
 const StyledText = styled.div`
-  margin: 0 15px;
   font-size: 16px;
   flex: 1;
 `;
@@ -87,5 +86,5 @@ const StyledButton = styled(Button)`
 `;
 
 const StyledButtonWrapper = styled.div`
-  margin-left: 4%;
+  margin-left: 5%;
 `;

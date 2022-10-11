@@ -37,7 +37,7 @@ export const Summary = ({
         );
       })}
       {withLink && (
-        <LinkWrapper>
+        <div>
           <Button
             variant="link"
             hasText
@@ -47,7 +47,7 @@ export const Summary = ({
           >
             Changer de procédure
           </Button>
-        </LinkWrapper>
+        </div>
       )}
     </SummaryWrapper>
   );
@@ -58,6 +58,4 @@ const SummaryWrapper = styled.ul`
   padding: 12px 0;
 `;
 
-const LinkWrapper = styled.div`
-  margin-left: 12px;
-`;
+const LinkWrapper = styled.div``;

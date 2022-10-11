@@ -15,6 +15,7 @@
                     {
                         "text": "Un licenciement pour motif personnel",
                         "statement": "Vous êtes concerné par un licenciement pour motif personnel",
+                        "neutralStatementRef": true,
                         "trackingName": "licenciement_personnel",
                         "info": "Licenciement dont le motif est lié à votre personne. Par exemple : faute, inaptitude constatée par le médecin du travail, insuffisance professionnelle...",
                         "question": {
