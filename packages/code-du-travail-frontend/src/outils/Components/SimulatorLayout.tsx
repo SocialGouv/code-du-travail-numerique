@@ -204,7 +204,9 @@ const StyledStepList = styled(StepList)`
 `;
 
 const ContentWrapper = styled.div`
+  display: grid;
   grid-row: 1;
+  grid-template-rows: 100px 1fr;
   padding: ${spacings.medium} ${spacings.xmedium};
 `;
 
