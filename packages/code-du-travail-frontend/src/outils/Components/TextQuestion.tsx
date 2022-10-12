@@ -49,6 +49,7 @@ export default function TextQuestion({
       <QuestionWrapper>
         <InputComponent
           id={id}
+          name={id}
           value={value}
           onChange={(e) => onChange(inputType === "date" ? e : e.target.value)}
           invalid={error}

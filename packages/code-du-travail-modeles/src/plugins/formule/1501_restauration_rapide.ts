@@ -3,8 +3,8 @@ import type { SupportedCcIndemniteLicenciement } from "..";
 import type { Formula, FormulaProps, IFormula } from "./types";
 
 export enum CatPro1501 {
-  nonCadres = "'Non-cadres'",
-  cadres = "'Cadres'",
+  nonCadres = "Non-cadres",
+  cadres = "Cadres",
 }
 
 export type Formula1501Props = {
@@ -37,7 +37,7 @@ export class Formula1501
     const explanations = [];
 
     if (props.seniority > 2) {
-      formula = "(1/10 x Sref x A1)";
+      formula = "(1/10 * Sref * A1)";
       explanations.push(
         `A1 : Ancienneté totale (${round(props.seniority)} ${year(
           props.seniority
@@ -46,7 +46,7 @@ export class Formula1501
 
       if (props.seniority > 10 && props.seniority <= 15) {
         const above = props.seniority - 10;
-        formula += " + (1/15 x Sref x A2)";
+        formula += " + (1/15 * Sref * A2)";
         explanations.push(
           `A2: Années d'ancienneté au-delà de 10 ans (${round(above)} ${year(
             above
@@ -55,7 +55,7 @@ export class Formula1501
       }
       if (props.seniority > 15) {
         const above = props.seniority - 10;
-        formula += " + (2/15 x Sref x A2)";
+        formula += " + (2/15 * Sref * A2)";
         explanations.push(
           `A2: Années d'ancienneté au-delà de 10 ans (${round(above)} ${year(
             above
@@ -63,7 +63,7 @@ export class Formula1501
         );
       }
       if (props.isEconomicFiring && props.age > 50 && props.seniority >= 10) {
-        formula += ` + (15% x (${formula}))`;
+        formula += ` + (15% * (${formula}))`;
       }
 
       explanations.push(
@@ -81,7 +81,7 @@ export class Formula1501
 
     if (props.seniority >= 1) {
       if (props.seniority <= 5) {
-        formula = "(1/10 x Sref x A)";
+        formula = "(1/10 * Sref * A)";
         explanations.push(
           `A : Ancienneté totale (${round(props.seniority)} ${year(
             props.seniority
@@ -89,7 +89,7 @@ export class Formula1501
         );
       } else {
         formula =
-          "(2/10 x Sref x A1) + (1/15 x Sref x A2) + (2/15 x Sref x A3) + (3/15 x Sref x A4)";
+          "(2/10 * Sref * A1) + (1/15 * Sref * A2) + (2/15 * Sref * A3) + (3/15 * Sref * A4)";
         explanations.push(
           `A1 : Années de présence au total (${round(props.seniority)} ${year(
             props.seniority
@@ -118,7 +118,7 @@ export class Formula1501
       }
 
       if (props.isEconomicFiring && props.age > 50 && props.seniority >= 10) {
-        formula += ` + (15% x (${formula}))`;
+        formula += ` + (15% * (${formula}))`;
       }
 
       explanations.push(
