@@ -41,7 +41,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . dix ans ou moins:
   valeur:
     produit:
-      assiette:  indemnité de licenciement . ancienneté conventionnelle en année * indemnité de licenciement . salaire de référence conventionnel
+      assiette: indemnité de licenciement . ancienneté conventionnelle en année * indemnité de licenciement . salaire de référence conventionnel
       facteur: 1 / 10
   unité: €
 
@@ -85,34 +85,45 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
           - catégorie professionnelle . licenciement économique = 'Non'
       - toutes ces conditions:
           - catégorie professionnelle . licenciement économique = 'Oui'
-          - catégorie professionnelle . licenciement économique . age <= 50 ans
+          - catégorie professionnelle . licenciement économique . age <= 50 an
+      - toutes ces conditions:
+          - catégorie professionnelle . licenciement économique = 'Oui'
+          - catégorie professionnelle . licenciement économique . age > 50 an
+          - indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
   valeur: non cadre . résultat conventionnel
   références:
     Article 13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005833468?idConteneur=KALICONT000005635596
+  cdtn:
+    formule:
+      explanations:
+        - lala
+        - lolo
+      formula: tatata
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . avec majoration résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
-      toutes ces conditions:
-        - catégorie professionnelle . licenciement économique = 'Oui'
-        - catégorie professionnelle . licenciement économique . age > 50 ans
-  grille:
-    assiette: indemnité de licenciement . ancienneté conventionnelle en année
-    tranches:
-      - montant: non cadre . résultat conventionnel
-        plafond: 10 an
-      - montant:
-          somme:
-            - non cadre . résultat conventionnel
-            - produit:
-                assiette: non cadre . résultat conventionnel
-                facteur: 15 / 100
+    toutes ces conditions:
+      - catégorie professionnelle . licenciement économique = 'Oui'
+      - catégorie professionnelle . licenciement économique . age > 50 an
+      - indemnité de licenciement . ancienneté conventionnelle en année > 10 an
+  valeur:
+    somme:
+      - non cadre . résultat conventionnel
+      - produit:
+          assiette: non cadre . résultat conventionnel
+          facteur: 15 / 100
 
   unité: €
   arrondi: 2 décimales
   références:
     Article 13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005833468?idConteneur=KALICONT000005635596
-
+  cdtn:
+    formule:
+      explanations:
+        - lala
+        - lolo
+      formula: tatata
 ## CADRES
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre:
@@ -197,30 +208,45 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
           - catégorie professionnelle . licenciement économique = 'Non'
       - toutes ces conditions:
           - catégorie professionnelle . licenciement économique = 'Oui'
-          - catégorie professionnelle . licenciement économique . age <= 50 ans
+          - catégorie professionnelle . licenciement économique . age <= 50 an
+      - toutes ces conditions:
+          - catégorie professionnelle . licenciement économique = 'Oui'
+          - catégorie professionnelle . licenciement économique . age > 50 an
+          - indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
   valeur: cadre . résultat conventionnel
   références:
     Article 13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005833468?idConteneur=KALICONT000005635596
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Années de présence au total (23 ans)"
+        - "A2 : Années au dessus de 5 ans jusqu'à 10 ans (5 ans)"
+        - "A3 : Années au dessus de 10 ans jusqu'à 15 ans (5 ans)"
+        - "A4 : Années au dessus de 15 ans (8 ans)"
+        - "Sref : Salaire de référence (2300 €)"
+      formula: (2/10 * Sref * A1) + (1/15 * Sref * A2) + (2/15 * Sref * A3) + (3/15 * Sref * A4)
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . avec majoration résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle . licenciement économique = 'Oui'
-      - catégorie professionnelle . licenciement économique . age > 50 ans
-  grille:
-    assiette: indemnité de licenciement . ancienneté conventionnelle en année
-    tranches:
-      - montant: cadre . résultat conventionnel
-        plafond: 10 an
-      - montant:
-          somme:
-            - cadre . résultat conventionnel
-            - produit:
-                assiette: cadre . résultat conventionnel
-                facteur: 15 / 100
+      - catégorie professionnelle . licenciement économique . age > 50 an
+      - indemnité de licenciement . ancienneté conventionnelle en année > 10 an
+  valeur:
+    somme:
+      - cadre . résultat conventionnel
+      - produit:
+          assiette: cadre . résultat conventionnel
+          facteur: 15 / 100
 
   unité: €
   arrondi: 2 décimales
   références:
     Article 13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005833468?idConteneur=KALICONT000005635596
+  cdtn:
+    formule:
+      explanations:
+        - lala
+        - lolo
+      formula: cadre majoration
