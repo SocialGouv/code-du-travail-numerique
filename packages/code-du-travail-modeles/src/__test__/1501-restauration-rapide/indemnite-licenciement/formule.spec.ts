@@ -1,9 +1,11 @@
-import {
-  FormuleFactory,
-  SupportedCcIndemniteLicenciement,
-} from "../../../plugins";
+import Engine from "publicodes";
+
+import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
+import { getFormule } from "../../../utils";
 
 describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 1501", () => {
+  const engine = new Engine(mergeIndemniteLicenciementModels());
+
   describe("Autres licenciements", () => {
     test.each`
       category        | seniority  | expectedFormula                                                                        | expectedExplanations
@@ -18,20 +20,20 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
     `(
       "Formule $expectedFormula avec $seniority ans, $category",
       ({ category, seniority, expectedFormula, expectedExplanations }) => {
-        const formula = new FormuleFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC1501
-        );
-
-        const result = formula.computeFormula({
-          age: 43,
-          category: category,
-          isEconomicFiring: false,
-          refSalary: 2300,
-          seniority,
+        const situation = engine.setSituation({
+          "contrat salarié . convention collective": "'IDCC1501'",
+          "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle . licenciement économique": `'Oui'`,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": 42,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2300,
+          "indemnité de licenciement": "oui",
         });
+        const formule = getFormule(situation);
 
-        expect(result.formula).toEqual(expectedFormula);
-        expect(result.explanations).toEqual(expectedExplanations);
+        expect(formule.formula).toEqual(expectedFormula);
+        expect(formule.explanations).toEqual(expectedExplanations);
       }
     );
   });
@@ -52,20 +54,21 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
     `(
       "Formule $expectedFormula avec $seniority ans, $category, $age ans",
       ({ category, seniority, age, expectedFormula, expectedExplanations }) => {
-        const formula = new FormuleFactory().create(
-          SupportedCcIndemniteLicenciement.IDCC1501
-        );
-
-        const result = formula.computeFormula({
-          age: age,
-          category: category,
-          isEconomicFiring: true,
-          refSalary: 2300,
-          seniority,
+        const situation = engine.setSituation({
+          "contrat salarié . convention collective": "'IDCC1501'",
+          "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle . licenciement économique": `'Oui'`,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
+            age,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2300,
+          "indemnité de licenciement": "oui",
         });
+        const formule = getFormule(situation);
 
-        expect(result.formula).toEqual(expectedFormula);
-        expect(result.explanations).toEqual(expectedExplanations);
+        expect(formule.formula).toEqual(expectedFormula);
+        expect(formule.explanations).toEqual(expectedExplanations);
       }
     );
   });
