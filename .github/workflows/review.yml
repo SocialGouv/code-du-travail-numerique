@@ -104,6 +104,9 @@ jobs:
         id: url
         with:
           cmd: echo $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1)
-      - name: Run test e2e
+      - name: Run test e2e (Codecept)
         run: |
-          CODECEPT_BASEURL=https://${{ steps.url.outputs.result }} yarn test:e2e
+          CODECEPT_BASEURL=https://${{ steps.url.outputs.result }} yarn test:codeceptjs
+      - name: Run test e2e (Cypress)
+        run: |
+          CYPRESS_BASEURL=https://${{ steps.url.outputs.result }} yarn test:cypress
