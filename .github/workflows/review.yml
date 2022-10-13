@@ -51,7 +51,7 @@ jobs:
         run: |
           RAW_BRANCH=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
           BRANCH=$(npx @socialgouv/env-slug "${RAW_BRANCH}")
-          echo "branch=(echo ${BRANCH})" >> $GITHUB_OUTPUT
+          echo "branch=$(echo ${BRANCH})" >> $GITHUB_OUTPUT
       - name: Use k8s manifests generation
         uses: SocialGouv/actions/k8s-manifests@v1
         with:
