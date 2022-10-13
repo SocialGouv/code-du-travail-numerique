@@ -3,7 +3,7 @@
 ## Gherkin E2E tests
 
 The end to end tests are written in Gherkin.  
-You can find them in the [features](features) folder.
+You can find them in the [features](codecept/features) folder.
 
 ### [Codecept runners](https://codecept.io/bdd/#gherkin)
 
