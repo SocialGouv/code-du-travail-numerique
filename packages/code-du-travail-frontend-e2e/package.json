@@ -9,6 +9,7 @@
     "lint": "eslint ./**/*.js",
     "test:e2e": "yarn run test:codeceptjs && yarn run test:cypress",
     "test:cypress": "cypress run",
+    "test:cypress:ui": "cypress open",
     "test:codeceptjs": "codeceptjs run --features --config=./codecept/codecept.conf.js",
     "test:codeceptjs:headed": "CODECEPT_HEADED=true codeceptjs run --features  --config=./codecept/codecept.conf.js  --grep \"Parcours en ne connaissant pas sa convention collective\"   ",
     "test:codeceptjs:ui": "codecept-ui --verbose  --config=./codecept/codecept.conf.js"

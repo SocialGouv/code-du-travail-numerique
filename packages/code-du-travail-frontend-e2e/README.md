@@ -1,5 +1,8 @@
 # code-du-travail-frontend-e2e
 
+## Cypress E2E tests
+We're moving from Gherkin to [Cypress](https://docs.cypress.io).
+
 ## Gherkin E2E tests
 
 The end to end tests are written in Gherkin.  
