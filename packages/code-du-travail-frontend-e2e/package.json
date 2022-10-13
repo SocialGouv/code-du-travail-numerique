@@ -23,6 +23,7 @@
     "@socialgouv/eslint-config-recommended": "^1.75.0",
     "cypress": "^10.10.0",
     "eslint": "^7.31.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "lint-staged": "^12.1.2"
   },
   "lint-staged": {

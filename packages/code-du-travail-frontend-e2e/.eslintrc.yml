@@ -1,8 +1,20 @@
 extends:
   - "@socialgouv/eslint-config-recommended"
+  - "plugin:cypress/recommended"
+
+settings:
+  import/resolver:
+    node:
+      extensions:
+      - ".js"
+      - ".jsx"
+      - ".ts"
+      - ".tsx"
+
+
 
 overrides:
-  - files: ["step_definitions/**/*.js"]
+  - files: ["codecept/step_definitions/**/*.js"]
     globals:
       Given: readonly
       When: readonly

@@ -7,7 +7,7 @@ module.exports = defineConfig({
   e2e: {
     baseUrl: process.env.CYPRESS_BASEURL || "http://localhost:3000",
     specPattern: "e2e/**/*.spec.{js,jsx,ts,tsx}",
-    supportFile: "support.ts",
+    supportFile: "support/index.ts",
     viewportHeight: 1000,
     viewportWidth: 1280,
   },
