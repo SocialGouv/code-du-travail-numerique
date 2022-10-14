@@ -11,14 +11,17 @@ import {
 } from "@socialgouv/cdtn-ui";
 import { processToHtml } from "../../information";
 import { toUrl } from "../../lib";
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import useWindowDimensions from "../../common/WindowDimension";
 
 export const ContentBlocks = ({
   name,
   references = [],
   blocks,
 }: Omit<Content, "title">) => {
+  const { width } = useWindowDimensions();
+
   return (
     <>
       {blocks.map(
@@ -38,6 +41,9 @@ export const ContentBlocks = ({
         ) => {
           const reactContent: any = processToHtml(html);
           let comp;
+          if (width < theme.breakpoints.intDesktop) {
+            blockDisplayMode = BlockDisplayMode.line;
+          }
 
           switch (type) {
             case "graphic":
@@ -73,7 +79,11 @@ export const ContentBlocks = ({
                         <div key={`${index}-${ContentIndex}`}>
                           <ListLinkContainer>
                             <ListLink
-                              item={{ ...item, icon: icons[item?.icon] }}
+                              item={{
+                                ...item,
+                                icon: icons[item?.icon],
+                              }}
+                              centerTitle
                             ></ListLink>
                           </ListLinkContainer>
                         </div>
@@ -88,7 +98,12 @@ export const ContentBlocks = ({
                       {contents?.map((item, ContentIndex) => (
                         <div key={`${index}-${ContentIndex}`}>
                           <ListLinkContainer>
-                            <ListLink item={item}></ListLink>
+                            <ListLink
+                              item={{
+                                ...item,
+                                icon: undefined,
+                              }}
+                            ></ListLink>
                           </ListLinkContainer>
                         </div>
                       ))}
@@ -108,7 +123,7 @@ export const ContentBlocks = ({
               comp = <React.Fragment key={name}>{reactContent}</React.Fragment>;
               break;
           }
-          return <div key={index}>{comp}</div>;
+          return <ContentBlockWrapper key={index}>{comp}</ContentBlockWrapper>;
         }
       )}
       {references.map(
@@ -146,10 +161,11 @@ const StyledReferences = styled(References)`
 
 const ListLinkContainer = styled.div`
   margin: 12px 0;
+  height: 100%;
+  padding: 0 12px;
   a {
-    display: flex;
-    flex-direction: row;
     height: 100%;
+    padding: 32px 20px;
     div {
       max-width: 100%;
     }
@@ -160,9 +176,8 @@ const ListLinkSquareTile = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   & > div {
-    width: 280px;
-    height: 290px;
-    display: flex;
+    width: 284px;
+    height: 341px;
     margin: 12px auto;
   }
   p,
@@ -170,15 +185,14 @@ const ListLinkSquareTile = styled.div`
     width: 100%;
     text-align: center;
   }
-  a {
-    div:nth-child(3) {
-      margin-top: 0;
-    }
-  }
 `;
 
 const BlockContentTitle = styled.div`
   font-size: 18px;
   font-weight: 600;
   color: #4d73b8;
+`;
+
+const ContentBlockWrapper = styled.div`
+  padding-bottom: 12px;
 `;
