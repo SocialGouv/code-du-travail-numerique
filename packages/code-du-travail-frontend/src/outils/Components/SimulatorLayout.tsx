@@ -135,7 +135,9 @@ const SimulatorContent = <StepName extends string>({
               visibleSteps[currentStepIndex].options?.hasNoMarginBottom
             }
           />
-          <Step />
+          <div>
+            <Step />
+          </div>
           <SimulatorNavigation
             hasError={
               validators.find(
@@ -207,7 +209,7 @@ const ContentWrapper = styled.div`
   display: grid;
   grid-row: 1;
   grid-template-rows: 100px 1fr;
-  padding: ${spacings.medium} ${spacings.xmedium};
+  padding: 40px ${spacings.xmedium};
 `;
 
 export default SimulatorLayout;
