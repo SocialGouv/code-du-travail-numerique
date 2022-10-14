@@ -6,7 +6,6 @@ import getSemQueryNew from "./search.sem";
 const Router = require("koa-router");
 const { SOURCES } = require("@socialgouv/cdtn-sources");
 const { DOCUMENTS, vectorizeQuery } = require("@socialgouv/cdtn-elasticsearch");
-const getPrequalifiedResults = require("./searchPrequalifiedResults");
 const getSearchBody = require("./search.elastic");
 const getSemBody = require("./search.sem");
 const getRelatedThemesBody = require("./searchRelatedThemes.elastic");
@@ -141,12 +140,10 @@ router.get("/search", async (ctx) => {
     ];
   }
 
-  const results = await msearchNew({
+  const results = await msearch({
     client: elasticsearchClient,
     searches,
   });
-
-  console.log("results");
 
   const fulltextHits = extractHits(results[DOCUMENTS_ES]);
   fulltextHits.forEach((item) => (item._source.algo = "fulltext"));
@@ -210,7 +207,6 @@ function extractHits(response) {
   return [];
 }
 
-// TODO : to delete
 async function msearch({ client, searches }) {
   const requests = [];
   const keys = [];
@@ -222,47 +218,6 @@ async function msearch({ client, searches }) {
 
   for (const [key, [index, query]] of Object.entries(searches)) {
     requests.push(index, query);
-    keys.push(key);
-  }
-
-  const body = await client.msearch({ body: requests });
-
-  const results = keys.reduce((state, key, index) => {
-    const resp = body.responses[index];
-
-    if (resp.error) {
-      logger.error(
-        `Elastic search error : index ${index}, search key ${key} : ${JSON.stringify(
-          resp.error,
-          null,
-          2
-        )}`
-      );
-    }
-
-    state[key] = resp;
-    return state;
-  }, {});
-
-  results.took = body.took;
-
-  return results;
-}
-
-async function msearchNew({ client, searches }) {
-  const requests = [];
-  const keys = [];
-  console.log("start msearch 2")
-  console.log(searches)
-  // return an empty object if we receive an empty object
-  if (Object.keys(searches).length === 0) {
-    console.log("ooops")
-    return {};
-  }
-
-  for (const [key, [index, query]] of Object.entries(searches)) {
-    console.log(key)
-    requests.push(index, query)
     keys.push(key);
   }
 
