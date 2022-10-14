@@ -221,7 +221,7 @@ async function msearch({ client, searches }) {
     keys.push(key);
   }
 
-  const body = await client.msearch({ body: requests });
+  const body = await client.msearch({ searches: requests });
 
   const results = keys.reduce((state, key, index) => {
     const resp = body.responses[index];
