@@ -13,6 +13,7 @@ type Props = {
   target?: string;
   rel?: string;
   className?: string;
+  custom?: boolean;
 };
 
 export const CallToActionTile = React.forwardRef<HTMLAnchorElement, Props>(
