@@ -40,7 +40,7 @@ export default function Agreement16() {
             },
           ]}
           name="hasVariablePay"
-          label="Les salaires indiqués comportent-il une partie variable ?"
+          label="Les salaires indiqués comportent-ils une partie variable ?"
           selectedOption={hasVariablePay}
           onChangeSelectedOption={onChangeHasVariablePay}
           error={errorHasVariablePay}
