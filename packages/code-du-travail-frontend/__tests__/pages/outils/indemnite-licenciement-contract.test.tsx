@@ -2,10 +2,10 @@ import {
   default as Outils,
   getServerSideProps,
   Props,
-} from "../../../../pages/outils/[slug]";
+} from "../../../pages/outils/[slug]";
 
 import { act } from "react-dom/test-utils";
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, RenderResult } from "@testing-library/react";
 
 global.fetch = jest.fn(() =>
   Promise.resolve({
@@ -15,21 +15,23 @@ global.fetch = jest.fn(() =>
 
 describe("Quand j'arrive sur l'outil d'idemnité licenciement", () => {
   let rendering;
+  let props: Props;
+  beforeAll(async () => {
+    //@ts-ignore
+    const result: any = await getServerSideProps({
+      query: { slug: "indemnite-licenciement" },
+    });
+    props = result.props;
+  });
   beforeEach(async () => {
     await act(async () => {
-      // @ts-ignore
-      const { props }: Props = await getServerSideProps({
-        query: { slug: "indemnite-licenciement" },
-      });
       rendering = await render(<Outils {...props} />);
     });
   });
-  it("doit afficher le titre de l'outil", () => {
+  it("doit afficher l'intro", () => {
     expect(
       rendering.queryByText("Calculer l'indemnité de licenciement")
     ).toBeInTheDocument();
-  });
-  it("doit afficher le bouton commencer", () => {
     expect(rendering.queryByText("Commencer")).toBeInTheDocument();
   });
   describe("Quand je clique sur le bouton commencer", () => {
@@ -39,13 +41,10 @@ describe("Quand j'arrive sur l'outil d'idemnité licenciement", () => {
           await fireEvent.click(rendering.queryByText("Commencer"));
         })
     );
-    it("doit afficher la question type de contrat", () => {
+    it("doit afficher les questions & réponses de la partie contrat", () => {
       expect(
         rendering.queryByText("Quel est le type du contrat de travail ?")
       ).toBeInTheDocument();
-    });
-
-    it("doit afficher les réponses de la question type de contrat", () => {
       expect(
         rendering.queryByText(
           "Contrat à durée determiné (CDD) ou contrat d’intérim"
@@ -54,30 +53,18 @@ describe("Quand j'arrive sur l'outil d'idemnité licenciement", () => {
       expect(
         rendering.queryByText("Contrat à durée indeterminé (CDI)")
       ).toBeInTheDocument();
-    });
-
-    it("doit afficher la question faute grave", () => {
       expect(
         rendering.queryByText(
           "Le licenciement est-il dû à une faute grave (ou lourde) ?"
         )
       ).toBeInTheDocument();
-    });
-
-    it("doit afficher les réponses de la question faute grave", () => {
       expect(rendering.queryAllByText("Oui")[0]).toBeInTheDocument();
       expect(rendering.queryAllByText("Non")[0]).toBeInTheDocument();
-    });
-
-    it("doit afficher la question pour inaptitude", () => {
       expect(
         rendering.queryByText(
           "Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue ?"
         )
       ).toBeInTheDocument();
-    });
-
-    it("doit afficher les réponses de la question pour inaptitude", () => {
       expect(rendering.queryAllByText("Oui")[1]).toBeInTheDocument();
       expect(rendering.queryAllByText("Non")[1]).toBeInTheDocument();
     });

@@ -2,10 +2,10 @@ import {
   default as Outils,
   getServerSideProps,
   Props,
-} from "../../../../pages/outils/[slug]";
+} from "../../../pages/outils/[slug]";
 
 import { act } from "react-dom/test-utils";
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, RenderResult } from "@testing-library/react";
 
 global.fetch = jest.fn(() =>
   Promise.resolve({
@@ -36,7 +36,7 @@ describe.each([
       describe("Quand je réponds aux questions du contrat de travail", () => {
         beforeEach(async () => {
           await act(async () => {
-            await fireEvent.click(rendering.queryByText("Commencer"));
+            await fireEvent.click(rendering?.queryByText("Commencer"));
             await fireEvent.click(
               rendering.queryByText("Contrat à durée indeterminé (CDI)")
             );
@@ -51,6 +51,27 @@ describe.each([
               "Quel est le nom de la convention collective applicable ?"
             )
           ).toBeInTheDocument();
+        });
+        describe("Quand je clique sur 'je sais'", () => {
+          beforeEach(async () => {
+            await act(async () => {
+              await fireEvent.click(
+                rendering.queryByText(
+                  "Je sais quelle est ma convention collective (je la saisis)"
+                )
+              );
+            });
+          });
+          it("doit afficher la partie de sélection de cc", () => {
+            expect(
+              rendering.queryByText(
+                "Précisez et sélectionnez votre convention collective"
+              )
+            ).toBeInTheDocument();
+            // expect(
+            //   rendering.getByRole("input", { name: "agreement-search" })
+            // ).toBeInTheDocument();
+          });
         });
       });
     });
