@@ -11,7 +11,7 @@ const AbsenceTable = ({ absencesPeriods }: Props): JSX.Element => {
   }
 
   const showDate =
-    absencesPeriods.filter((item) => item.motif.startAt).length > 0;
+    absencesPeriods.filter((item) => item.startedAt !== undefined).length > 0;
 
   return (
     <StyledFilledElementTable>
