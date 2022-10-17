@@ -34,14 +34,17 @@ describe("Informations store", () => {
     });
     expect(store.getState().informationsData.input.isStepHidden).toBe(false);
     expect(
-      store.getState().informationsData.input.publicodesInformations[0].info
+      store.getState().informationsData.input.publicodesInformations
+    ).toHaveLength(1);
+    expect(
+      store.getState().informationsData.input.publicodesInformations[0]?.info
     ).toBeUndefined();
     expect(
-      store.getState().informationsData.input.publicodesInformations[0].order
+      store.getState().informationsData.input.publicodesInformations[0]?.order
     ).toEqual(0);
     expect(
-      store.getState().informationsData.input.publicodesInformations[0].question
-        .name
+      store.getState().informationsData.input.publicodesInformations[0]
+        ?.question?.name
     ).toEqual(
       "contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle"
     );
@@ -79,26 +82,26 @@ describe("Informations store", () => {
       store.getState().informationsData.input.publicodesInformations
     ).toHaveLength(2);
     expect(
-      store.getState().informationsData.input.publicodesInformations[0].info
+      store.getState().informationsData.input.publicodesInformations[0]?.info
     ).toEqual("'Cadres'");
     expect(
-      store.getState().informationsData.input.publicodesInformations[0].order
+      store.getState().informationsData.input.publicodesInformations[0]?.order
     ).toEqual(0);
     expect(
-      store.getState().informationsData.input.publicodesInformations[0].question
-        .name
+      store.getState().informationsData.input.publicodesInformations[0]
+        ?.question?.name
     ).toEqual(
       "contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle"
     );
     expect(
-      store.getState().informationsData.input.publicodesInformations[1].info
+      store.getState().informationsData.input.publicodesInformations[1]?.info
     ).toBeUndefined();
     expect(
-      store.getState().informationsData.input.publicodesInformations[1].order
+      store.getState().informationsData.input.publicodesInformations[1]?.order
     ).toEqual(1);
     expect(
-      store.getState().informationsData.input.publicodesInformations[1].question
-        .name
+      store.getState().informationsData.input.publicodesInformations[1]
+        ?.question?.name
     ).toEqual(
       "contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle - cadre - non cadre durant une période"
     );
@@ -126,14 +129,14 @@ describe("Informations store", () => {
       store.getState().informationsData.input.publicodesInformations
     ).toHaveLength(1);
     expect(
-      store.getState().informationsData.input.publicodesInformations[0].info
+      store.getState().informationsData.input.publicodesInformations[0]?.info
     ).toEqual("'Non-cadres'");
     expect(
-      store.getState().informationsData.input.publicodesInformations[0].order
+      store.getState().informationsData.input.publicodesInformations[0]?.order
     ).toEqual(0);
     expect(
-      store.getState().informationsData.input.publicodesInformations[0].question
-        .name
+      store.getState().informationsData.input.publicodesInformations[0]
+        ?.question?.name
     ).toEqual(
       "contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle"
     );

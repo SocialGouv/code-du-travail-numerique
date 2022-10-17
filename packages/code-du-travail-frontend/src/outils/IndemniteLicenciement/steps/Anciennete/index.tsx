@@ -6,6 +6,7 @@ import { AbsencePeriods } from "./components";
 import { useIndemniteLicenciementStore } from "../../store";
 import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../publicodes";
+import { informationToSituation } from "../../../CommonSteps/Informations/utils";
 
 const StepAnciennete = () => {
   const {
@@ -44,11 +45,9 @@ const StepAnciennete = () => {
     errorDateEntree: state.ancienneteData.error.errorDateEntree,
     errorAbsencePeriods: state.ancienneteData.error.errorAbsencePeriods,
     agreement: state.agreementData.input.agreement,
-    informationData: state.informationsData.input.publicodesInformations
-      .map((v) => ({
-        [v.question.rule.nom]: v.info,
-      }))
-      .reduce((acc, cur) => ({ ...acc, ...cur }), {}),
+    informationData: informationToSituation(
+      state.informationsData.input.publicodesInformations
+    ),
   }));
   return (
     <>

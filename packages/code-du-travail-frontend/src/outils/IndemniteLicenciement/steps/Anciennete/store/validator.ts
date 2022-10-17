@@ -18,6 +18,7 @@ import {
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { CommonInformationsStoreInput } from "../../../../CommonSteps/Informations/store";
+import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 
 export const validateStep = (
   state: AncienneteStoreInput,
@@ -29,11 +30,9 @@ export const validateStep = (
   const dNotification = parse(state.dateNotification);
   const absencePeriods = state.absencePeriods;
   let errors: AncienneteStoreError = {};
-  const informationData = information.publicodesInformations
-    .map((v) => ({
-      [v.question.rule.nom]: v.info,
-    }))
-    .reduce((acc, cur) => ({ ...acc, ...cur }), {});
+  const informationData = informationToSituation(
+    information.publicodesInformations
+  );
 
   const totalAbsence: number =
     agreeement &&

@@ -15,6 +15,7 @@ import {
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../publicodes";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
+import { informationToSituation } from "../utils";
 
 const initialState: CommonInformationsStoreData = {
   input: {
@@ -109,11 +110,7 @@ const createCommonInformationsStore: StoreSlice<
           (el) => el.order < questionAnswered.order
         ),
       ].sort((a, b) => a.order - b.order);
-      const rules = newPublicodesInformations
-        .map((v) => ({
-          [v.question.rule.nom]: v.info,
-        }))
-        .reduce((acc, cur) => ({ ...acc, ...cur }), {});
+      const rules = informationToSituation(newPublicodesInformations);
       let missingArgs: MissingArgs[] = [];
       let blockingNotification: string | undefined = undefined;
       try {
@@ -187,11 +184,7 @@ const createCommonInformationsStore: StoreSlice<
         const publicodesInformations =
           get().informationsData.input.publicodesInformations;
         const agreement = get().agreementData.input.agreement!;
-        const rules = publicodesInformations
-          .map((v) => ({
-            [v.question.rule.nom]: v.info,
-          }))
-          .reduce((acc, cur) => ({ ...acc, ...cur }), {});
+        const rules = informationToSituation(publicodesInformations);
         const isStepSalaryHidden = publicodes.setSituation(
           mapToPublicodesSituationForIndemniteLicenciementConventionnel(
             agreement.num,
