@@ -98,7 +98,7 @@
                                             {
                                                 "text": "1000 salariés ou plus",
                                                 "statement": "Votre entreprise emploie 1000 salariés ou plus",
-                                                "neutralStatement": "Dans une entreprise qui emploie 1000 salariés ou plus",
+                                                "neutralStatement": "Dans une entreprise ou un groupe qui emploie 1000 salariés ou plus (soit une entreprise de 1000 salariés ou plus soit une entreprise de moins de 1000 salariés mais qui appartient à un groupe européen de 1000 salariés ou plus)",
                                                 "trackingName": "plus_de_1000_salaries",
                                                 "slug": "licenciement-individuel-pour-motif-economique-le-conge-de-reclassement"
                                             }
