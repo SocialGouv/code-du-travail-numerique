@@ -45,14 +45,8 @@ describe("Quand l'utilisateur arrive sur la page avec une convention collective 
       ).toBeInTheDocument();
     });
 
-    describe("Quand l'utilisateur répond à l'ensemble des question", () => {
+    describe("Quand l'utilisateur répond à l'ensemble des questions", () => {
       beforeEach(() => {
-        userEvent.selectOptions(
-          rendering.getByRole("combobox", {
-            name: /Quelle est la catégorie professionnelle du salarié ?/i,
-          }),
-          "Ingénieurs et cadres"
-        );
         userEvent.click(
           rendering.getByRole("radio", {
             name: "Oui",

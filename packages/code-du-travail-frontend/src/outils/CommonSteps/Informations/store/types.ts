@@ -1,6 +1,5 @@
 import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
 import { Question } from "../../../DureePreavisRetraite/state";
-import { Agreement } from "../../../../conventions/Search/api/type";
 
 export type PublicodesInformation = {
   info: string | undefined;

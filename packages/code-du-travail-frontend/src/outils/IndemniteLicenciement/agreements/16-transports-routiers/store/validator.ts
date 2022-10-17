@@ -21,11 +21,6 @@ export const validateAgreement16 = (
 };
 
 export const validateStep = (state: Agreement16StoreInput) => {
-  console.log(
-    "CC 16 Validate step : ",
-    state.showVariablePay,
-    !state.hasVariablePay
-  );
   const errorState = {
     errorHasVariablePay:
       state.showVariablePay && !state.hasVariablePay

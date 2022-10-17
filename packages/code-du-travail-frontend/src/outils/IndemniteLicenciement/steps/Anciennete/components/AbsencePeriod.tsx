@@ -45,17 +45,15 @@ const AbsencePeriod = ({
 }: Props): JSX.Element => {
   const [shouldAskAbsenceDate, askAbsenceDate] = useState(
     absence
-      ? absence.motif?.startAt
-        ? absence.motif?.startAt(informationData)
-        : false
-      : motifs.length > 0 && motifs[0].startAt
-      ? motifs[0].startAt(informationData)
-      : false
+      ? absence.motif?.startAt && absence.motif?.startAt(informationData)
+      : motifs.length > 0 &&
+          motifs[0].startAt &&
+          motifs[0].startAt(informationData)
   );
 
   const selectMotif = (index: number, value: string) => {
     const motif = motifs.find((motif) => motif.label === value);
-    askAbsenceDate(motif?.startAt ? motif.startAt(informationData) : false);
+    askAbsenceDate(motif?.startAt && motif.startAt(informationData));
     onSelectMotif(index, value);
   };
 
