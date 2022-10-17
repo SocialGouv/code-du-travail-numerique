@@ -10,6 +10,7 @@ import {
 import { Enterprise } from "../../../conventions/Search/api/enterprises.service";
 import { InlineError } from "../../common/ErrorField";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
+import ShowAlert from "../../common/Agreement/RouteSelection/ShowAlert";
 
 type Props = {
   selectedRoute?: Route;
@@ -79,6 +80,8 @@ function AgreementStep({
           ),
         }}
       />
+      {selectedRoute === Route.none && <ShowAlert route="not-selected" />}
+
       {selectedRoute === Route.agreement && (
         <>
           <AgreementSearch

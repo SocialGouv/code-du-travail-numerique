@@ -1,5 +1,6 @@
 import { SupportedCcIndemniteLicenciement } from "..";
 import { ReferenceSalary16 } from "./16_transports_routiers";
+import { ReferenceSalary0029 } from "./29-hospitalisation-privee-but-non-lucratif";
 import { ReferenceSalary413 } from "./413_handicap";
 import { ReferenceSalary573 } from "./573_commerces_de_gros";
 import { ReferenceSalary1486 } from "./1486_bureaux_etudes_techniques";
@@ -28,6 +29,8 @@ export class ReferenceSalaryFactory {
         return new ReferenceSalary16() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.IDCC0573:
         return new ReferenceSalary573() as IReferenceSalary<T>;
+      case SupportedCcIndemniteLicenciement.IDCC0029:
+        return new ReferenceSalary0029() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.default:
       default:
         return new ReferenceSalaryLegal() as IReferenceSalary<T>;
