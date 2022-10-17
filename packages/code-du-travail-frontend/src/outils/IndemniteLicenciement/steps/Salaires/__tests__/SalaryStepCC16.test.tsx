@@ -49,7 +49,7 @@ describe("Quand l'utilisateur arrive sur l'étape salaire avec la convention col
       it("ne doit pas avoir la question sur le variable", () => {
         expect(
           rendering.queryByText(
-            /Les salaires indiqués comportent-il une partie variable/
+            /Les salaires indiqués comportent-ils une partie variable/
           )
         ).not.toBeInTheDocument();
       });
@@ -66,7 +66,7 @@ describe("Quand l'utilisateur arrive sur l'étape salaire avec la convention col
       it("ne doit pas avoir la question sur le variable", () => {
         expect(
           rendering.queryByText(
-            /Les salaires indiqués comportent-il une partie variable/
+            /Les salaires indiqués comportent-ils une partie variable/
           )
         ).not.toBeInTheDocument();
       });
@@ -99,7 +99,7 @@ describe("Quand l'utilisateur arrive sur l'étape salaire avec la convention col
       it("ne doit pas avoir la question sur le variable", () => {
         expect(
           rendering.queryByText(
-            /Les salaires indiqués comportent-il une partie variable/
+            /Les salaires indiqués comportent-ils une partie variable/
           )
         ).not.toBeInTheDocument();
       });
@@ -116,7 +116,7 @@ describe("Quand l'utilisateur arrive sur l'étape salaire avec la convention col
       it("doit avoir la question sur le variable", () => {
         expect(
           rendering.queryByText(
-            /Les salaires indiqués comportent-il une partie variable/
+            /Les salaires indiqués comportent-ils une partie variable/
           )
         ).toBeInTheDocument();
       });
