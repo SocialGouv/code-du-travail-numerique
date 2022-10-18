@@ -97,8 +97,8 @@ spec:
               cpu: 500m
               memory: 1Gi
             requests:
-              cpu: 100m
-              memory: 320Mi
+              cpu: 50m
+              memory: 128Mi
           startupProbe:
             failureThreshold: 12
             httpGet:
@@ -355,10 +355,10 @@ spec:
           resources:
             limits:
               cpu: 500m
-              memory: 768Mi
+              memory: 1Gi
             requests:
-              cpu: 300m
-              memory: 512Mi
+              cpu: 50m
+              memory: 256Mi
           startupProbe:
             failureThreshold: 12
             httpGet:
