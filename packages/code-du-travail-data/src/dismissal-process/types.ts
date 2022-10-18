@@ -7,6 +7,7 @@ export type QuestionnaireResponse = {
   statement: string;
   neutralStatement?: string;
   neutralStatementRef?: boolean;
+  neutralStatementInfo?: string;
   question?: QuestionnaireQuestion;
 };
 

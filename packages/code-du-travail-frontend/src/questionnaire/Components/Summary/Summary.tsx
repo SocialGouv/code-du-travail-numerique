@@ -18,12 +18,13 @@ export const Summary = ({
   const displayableResponses = responses.filter(({ text }) => !!text);
   return (
     <SummaryWrapper>
-      {displayableResponses.map(({ text }, index) => {
+      {displayableResponses.map(({ text, info }, index) => {
         return (
           text && (
             <SummaryItem
               key={index}
               data={text}
+              info={info}
               onClick={async () => {
                 if (router.basePath !== toolSlug) {
                   await router.push(`/outils/${toolSlug}`);
@@ -37,7 +38,7 @@ export const Summary = ({
         );
       })}
       {withLink && (
-        <div>
+        <LinkWrapper>
           <Button
             variant="link"
             hasText
@@ -47,7 +48,7 @@ export const Summary = ({
           >
             Changer de procédure
           </Button>
-        </div>
+        </LinkWrapper>
       )}
     </SummaryWrapper>
   );
@@ -58,4 +59,6 @@ const SummaryWrapper = styled.ul`
   padding: 12px 0;
 `;
 
-const LinkWrapper = styled.div``;
+const LinkWrapper = styled.div`
+  margin-top: 12px;
+`;

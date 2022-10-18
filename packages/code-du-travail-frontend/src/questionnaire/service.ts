@@ -33,11 +33,14 @@ export const slugSummaryRecursive = (
       { question, slug }: QuestionnaireResponse,
       index: number
     ) => {
-      const { neutralStatement: text, neutralStatementRef } =
-        questionTree.responses[index];
+      const {
+        neutralStatement: text,
+        neutralStatementRef,
+        neutralStatementInfo: info,
+      } = questionTree.responses[index];
       let slugSummary = {};
       if (text || neutralStatementRef) {
-        const responses = previousResponses.concat({ index, text });
+        const responses = previousResponses.concat({ index, text, info });
         if (question) {
           slugSummary = slugSummaryRecursive(question, responses);
         } else if (slug) {

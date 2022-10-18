@@ -1,12 +1,15 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { icons, Button, theme } from "@socialgouv/cdtn-ui";
 const { Check: CheckIcon, ArrowTurn: UpdateIcon } = icons;
 import useWindowDimensions from "../../../common/WindowDimension";
+import { Tooltip } from "../../../common/Tooltip";
 
 const { breakpoints } = theme;
 
 type SymmaryItemProps = {
-  data: any;
+  data: string;
+  info?: string;
   onClick: () => void;
   noButton: boolean;
   noCheck: boolean;
@@ -14,32 +17,48 @@ type SymmaryItemProps = {
 
 export const SummaryItem = ({
   data,
+  info,
   onClick,
   noButton = false,
   noCheck = false,
 }: SymmaryItemProps) => {
   const { width } = useWindowDimensions();
+  const [openedTooltip, setOpenedTooltip] = useState(false);
   return (
-    <SummaryItemWrapper>
-      {!noCheck && (
-        <StyledIcon>
-          <CheckIcon width="18" height="18" />
-        </StyledIcon>
-      )}
-      <StyledText>{data}</StyledText>
-      {!noButton && (
-        <StyledButtonWrapper>
-          <StyledButton
-            variant="link"
-            xsmall
-            onClick={onClick}
-            icon={UpdateIcon}
-          >
-            {width > breakpoints.intMobile && <div>Modifier</div>}
-          </StyledButton>
-        </StyledButtonWrapper>
-      )}
-    </SummaryItemWrapper>
+    <div>
+      <SummaryItemWrapper>
+        {!noCheck && (
+          <StyledIcon>
+            <CheckIcon width="18" height="18" />
+          </StyledIcon>
+        )}
+        <StyledText>
+          {data}
+          {info && (
+            <TooltipWrapper>
+              <Tooltip
+                onChange={(opened) => {
+                  setOpenedTooltip(opened);
+                }}
+              ></Tooltip>
+            </TooltipWrapper>
+          )}
+        </StyledText>
+        {!noButton && (
+          <StyledButtonWrapper>
+            <StyledButton
+              variant="link"
+              xsmall
+              onClick={onClick}
+              icon={UpdateIcon}
+            >
+              {width > breakpoints.intMobile && <div>Modifier</div>}
+            </StyledButton>
+          </StyledButtonWrapper>
+        )}
+      </SummaryItemWrapper>
+      {openedTooltip && <InformationWrapper>{info}</InformationWrapper>}
+    </div>
   );
 };
 
@@ -71,6 +90,8 @@ const StyledIcon = styled.div`
 const StyledText = styled.div`
   font-size: 16px;
   flex: 1;
+  display: flex;
+  flex-direction: row;
 `;
 
 const StyledButton = styled(Button)`
@@ -87,4 +108,19 @@ const StyledButton = styled(Button)`
 
 const StyledButtonWrapper = styled.div`
   margin-left: 5%;
+`;
+
+const TooltipWrapper = styled.div`
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const InformationWrapper = styled.div`
+  background: #fff;
+  border-radius: 6px;
+  padding: 13px 20px;
+  font-size: 14px;
+  margin: 5px;
 `;
