@@ -460,7 +460,7 @@ exports[`<SearchResults/> should render results 1`] = `
 }
 
 .c15 p {
-  margin: 0;
+  margin: 0 auto;
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
