@@ -51,7 +51,7 @@ const TileChildren = styled.div`
   height: 100%;
   flex: 1 1 auto;
   p {
-    margin: 0;
+    margin: 0 auto;
     flex: 1 0 auto;
     display: flex;
   }
