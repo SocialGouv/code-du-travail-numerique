@@ -10,10 +10,9 @@ import {
   AncienneteStoreSlice,
 } from "./types";
 import { validateStep } from "./validator";
-import {
-  CommonInformationsStoreInput,
-  CommonInformationsStoreSlice,
-} from "../../../../CommonSteps/Informations/store";
+import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { Absence } from "@socialgouv/modeles-social";
+import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
@@ -30,6 +29,18 @@ const createAncienneteStore: StoreSlice<
 > = (set, get) => ({
   ancienneteData: { ...initialState },
   ancienneteFunction: {
+    init: () => {
+      set(
+        produce(
+          (state: AncienneteStoreSlice & CommonInformationsStoreSlice) => {
+            state.ancienneteData.input.absencePeriods = cleanAbsenceDate(
+              state.ancienneteData.input.absencePeriods,
+              state
+            );
+          }
+        )
+      );
+    },
     onChangeDateEntree: (value) => {
       applyGenericValidation(get, set, "dateEntree", value);
     },
@@ -109,6 +120,29 @@ const applyGenericValidation = (
       })
     );
   }
+};
+
+const cleanAbsenceDate = (
+  absencePeriods: Absence[],
+  data: CommonInformationsStoreSlice
+): Absence[] => {
+  return absencePeriods.map((absence) => {
+    const dateRequired = absence.motif.startAt
+      ? absence.motif.startAt(
+          informationToSituation(
+            data.informationsData.input.publicodesInformations
+          )
+        )
+      : false;
+    if (!dateRequired) {
+      return {
+        ...absence,
+        startedAt: undefined,
+      };
+    } else {
+      return absence;
+    }
+  });
 };
 
 export default createAncienneteStore;

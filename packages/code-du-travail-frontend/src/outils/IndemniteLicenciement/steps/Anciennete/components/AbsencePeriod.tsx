@@ -88,6 +88,7 @@ const AbsencePeriod = ({
             id={`${index}.type`}
             onChange={(e) => selectMotif(index, e.target.value)}
             value={absence?.motif?.label}
+            data-testid={`absence-motif-${index}`}
           >
             {motifs.map(({ label, startAt }) => (
               <option key={label} value={label}>
@@ -107,6 +108,7 @@ const AbsencePeriod = ({
             name={`${index}.duration`}
             aria-label={`${index}.duration`}
             updateOnScrollDisabled
+            data-testid={`absence-duree-${index}`}
           />
           {errors?.duration && <StyledError>{errors.duration}</StyledError>}
         </DurationWrapper>
@@ -126,6 +128,7 @@ const AbsencePeriod = ({
                 name={`${index}.dateAbsence`}
                 aria-label={`${index}.dateAbsence`}
                 updateOnScrollDisabled
+                data-testid={`absence-date-${index}`}
               />
               {errors?.absenceDate && (
                 <StyledError>{errors.absenceDate}</StyledError>

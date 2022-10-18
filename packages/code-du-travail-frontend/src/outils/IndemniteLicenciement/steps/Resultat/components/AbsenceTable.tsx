@@ -27,7 +27,9 @@ const AbsenceTable = ({ absencesPeriods }: Props): JSX.Element => {
           <tr key={"absence-" + index}>
             <td>{period.motif.label}</td>
             <td>{period.durationInMonth} mois</td>
-            {showDate && <td>{period.startedAt ?? "-"}</td>}
+            {showDate && (
+              <td data-testid="absence-date">{period.startedAt ?? "-"}</td>
+            )}
           </tr>
         ))}
       </tbody>

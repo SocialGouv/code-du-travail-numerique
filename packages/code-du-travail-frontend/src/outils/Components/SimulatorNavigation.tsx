@@ -33,6 +33,7 @@ const SimulatorNavigation = ({
             variant="primary"
             type="button"
             onClick={onStart}
+            data-testid="commencer"
           >
             Commencer
             <ArrowIcon />
