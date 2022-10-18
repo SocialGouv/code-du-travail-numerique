@@ -27,7 +27,9 @@ export class ReferenceSalary573
       const salaryValues = rankedSalaires
         .map((a) => a.value)
         .filter(nonNullable);
-      return sum(salaryValues) / salaires.length;
+      return salaryValues.length === 0
+        ? 0
+        : sum(salaryValues) / salaires.length;
     }
     return new ReferenceSalaryLegal().computeReferenceSalary({ salaires });
   }

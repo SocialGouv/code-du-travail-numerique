@@ -3,7 +3,7 @@ import type { SupportedCcIndemniteLicenciement } from "..";
 import { LicenciementEconomique } from "..";
 import type { Formula, FormulaProps, IFormula } from "./types";
 
-enum CatPro573 {
+export enum CatPro573 {
   autres = "Autres salariés",
   agents = "Agents de maîtrise, techniciens et assimilés",
   cadres = "Cadres",
@@ -29,17 +29,27 @@ export class Formula573
   }: FormulaProps<SupportedCcIndemniteLicenciement.IDCC0573>): Formula {
     let formula = "";
     const explanations = [];
+    const roundSeniority = round(seniority);
+    const year = roundSeniority < 2 ? "an" : "ans";
 
     switch (true) {
       case category === CatPro573.autres && seniority >= 1 && seniority <= 10: {
         formula = `1 / 5 * Sref * A`;
-        explanations.push("A: Années d'ancienneté au total");
+        explanations.push(
+          `A: Années d'ancienneté au total (${roundSeniority} ${year})`
+        );
         break;
       }
       case category === CatPro573.autres && seniority > 10: {
         formula = `1 / 5 * Sref * A1 + 2 / 15 * Sref * A2`;
-        explanations.push("A1: Années d'ancienneté au total");
-        explanations.push("A2: Années d'ancienneté au delà de 10 ans");
+        const roundSeniority2 = round(seniority - 10);
+        const year2 = roundSeniority2 < 2 ? "an" : "ans";
+        explanations.push(
+          `A1: Années d'ancienneté au total (${roundSeniority} ${year})`
+        );
+        explanations.push(
+          `A2: Années d'ancienneté au delà de 10 ans (${roundSeniority2} ${year2})`
+        );
         break;
       }
       case category === CatPro573.agents &&
@@ -47,22 +57,29 @@ export class Formula573
         age >= 55 &&
         typeLicenciement === LicenciementEconomique.oui: {
         formula = `2 / 10 * Sref * A1 + 3 / 10 * Sref * A2 + 20% (2 / 10 * Sref * A1 + 3 / 10 * Sref)`;
+        const roundSeniority2 = Math.max(round(seniority), 9);
+        const roundSeniority3 = round(seniority - 9);
+        const year3 = roundSeniority3 < 2 ? "an" : "ans";
         explanations.push(
-          "A1: Années de présence dans la tranche de 0 à 9 ans inclus"
+          `A1: Années de présence dans la tranche de 0 à 9 ans inclus (${roundSeniority2} ${year})`
         );
         explanations.push(
-          "A2: Années de présence dans la tranche à partir de 10 ans"
+          `A2: Années de présence dans la tranche à partir de 10 ans (${roundSeniority3} ${year3})`
         );
         break;
       }
       case category === CatPro573.agents && seniority >= 1 && seniority <= 10: {
         formula = `2 / 10 * Sref * A`;
-        explanations.push("A: Années d'ancienneté au total");
+        explanations.push(
+          `A: Années d'ancienneté au total (${roundSeniority} ${year})`
+        );
         break;
       }
       case category === CatPro573.agents && seniority > 10: {
         formula = `2 / 10 * Sref * A1 + 2 / 15 * Sref * A2`;
-        explanations.push("A1: Années d'ancienneté au total");
+        explanations.push(
+          `A1: Années d'ancienneté au total (${roundSeniority} ${year})`
+        );
         explanations.push("A2: Années d'ancienneté au delà de 10 ans");
         break;
       }
