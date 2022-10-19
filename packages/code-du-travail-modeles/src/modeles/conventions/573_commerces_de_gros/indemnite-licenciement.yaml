@@ -79,7 +79,7 @@ contrat salarié . convention collective . commerces de gros . somme autre:
 contrat salarié . convention collective . commerces de gros . formule 1 agent:
   valeur:
     produit:
-      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * de zero à neuf ans
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
       facteur: 2 / 10
   unité: €
 
