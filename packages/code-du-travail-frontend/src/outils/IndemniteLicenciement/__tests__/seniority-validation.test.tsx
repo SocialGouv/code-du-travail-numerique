@@ -25,8 +25,8 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
   describe("parcours avec la convention collective 16 pour valider les erreurs", () => {
     let rendering: RenderResult;
     let userAction: UserAction;
-    beforeEach(async () => {
-      rendering = await render(
+    beforeEach(() => {
+      rendering = render(
         <CalculateurIndemnite
           icon={""}
           title={""}
@@ -36,25 +36,25 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       );
       userAction = new UserAction();
       userAction
-        .click(await ui.introduction.startButton.get())
-        .click(await ui.contract.type.cdi.get())
-        .click(await ui.contract.fauteGrave.non.get())
-        .click(await ui.contract.inaptitude.non.get())
-        .click(await ui.next.get())
-        .click(await ui.next.get())
+        .click(ui.introduction.startButton.get())
+        .click(ui.contract.type.cdi.get())
+        .click(ui.contract.fauteGrave.non.get())
+        .click(ui.contract.inaptitude.non.get())
+        .click(ui.next.get())
+        .click(ui.next.get())
         .changeInputList(
-          await ui.information.proCategory.get(),
+          ui.information.agreement16.proCategory.get(),
           "Ingénieurs et cadres"
         )
-        .click(await ui.information.proCategoryHasChanged.oui.get())
+        .click(ui.information.agreement16.proCategoryHasChanged.oui.get())
         .setInput(
-          await ui.information.dateProCategoryChanged.get(),
+          ui.information.agreement16.dateProCategoryChanged.get(),
           "01/01/2010"
         )
-        .setInput(await ui.information.age.get(), "38")
+        .setInput(ui.information.agreement16.age.get(), "38")
         .click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
-      expect(await ui.activeStep.query()).toHaveTextContent("Ancienneté");
+      expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
     });
 
     test(`
@@ -72,17 +72,17 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
        - validation de l'erreur quand on a une date d'absence en dehors de la période de présence dans l'entreprise
        - validation de l'erreur quand on a une absence qui réduit la période de présence de l'entreprise à moins de 8 mois
        - validation de la disparition des erreurs quand on a tout renseigné
-    `, async () => {
+    `, () => {
       // validation des erreurs sur les champs vides
-      userAction.click(await ui.next.get());
+      userAction.click(ui.next.get());
       expect(
         rendering.queryAllByText("Veuillez saisir cette date")
       ).toHaveLength(3);
 
       // validation de l'erreur quand cela fait plus de 18 mois que l'on a quitté l'entreprise
       userAction
-        .setInput(await ui.seniority.startDate.get(), "01/01/2000")
-        .setInput(await ui.seniority.notificationDate.get(), "01/01/2012");
+        .setInput(ui.seniority.startDate.get(), "01/01/2000")
+        .setInput(ui.seniority.notificationDate.get(), "01/01/2012");
 
       expect(
         rendering.queryByText(
@@ -92,8 +92,8 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
 
       // validation de l'erreur quand on a saisi une date de notification avant la date de d'entrée
       userAction
-        .setInput(await ui.seniority.startDate.get(), "01/03/2022")
-        .setInput(await ui.seniority.notificationDate.get(), "01/01/2022");
+        .setInput(ui.seniority.startDate.get(), "01/03/2022")
+        .setInput(ui.seniority.notificationDate.get(), "01/01/2022");
 
       expect(
         rendering.queryByText(
@@ -103,8 +103,8 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
 
       // validation de l'erreur quand on a saisi une date de sortie avant la date de notification
       userAction
-        .setInput(await ui.seniority.startDate.get(), "01/01/2010")
-        .setInput(await ui.seniority.endDate.get(), "01/01/2021");
+        .setInput(ui.seniority.startDate.get(), "01/01/2010")
+        .setInput(ui.seniority.endDate.get(), "01/01/2021");
 
       expect(
         rendering.queryByText(
@@ -114,9 +114,9 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
 
       // validation de l'erreur quand on a saisi une période (entrée -> notification) inférieure à 8 mois
       userAction
-        .setInput(await ui.seniority.startDate.get(), "01/01/2022")
-        .setInput(await ui.seniority.notificationDate.get(), "01/03/2022")
-        .setInput(await ui.seniority.endDate.get(), "01/03/2022");
+        .setInput(ui.seniority.startDate.get(), "01/01/2022")
+        .setInput(ui.seniority.notificationDate.get(), "01/03/2022")
+        .setInput(ui.seniority.endDate.get(), "01/03/2022");
 
       expect(
         rendering.queryByText(
@@ -125,7 +125,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       ).toBeInTheDocument();
 
       // validation de l'erreur quand on a saisi une période (entrée -> notification) inférieure à 8 mois et que l'on change la date de sortie
-      userAction.setInput(await ui.seniority.endDate.get(), "01/10/2022");
+      userAction.setInput(ui.seniority.endDate.get(), "01/10/2022");
 
       expect(
         rendering.queryByText(
@@ -134,10 +134,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       ).toBeInTheDocument();
 
       // validation de la disparition de l'erreur quand on a change la période  (entrée -> notification) pour plus de 8 mois
-      userAction.setInput(
-        await ui.seniority.notificationDate.get(),
-        "01/09/2022"
-      );
+      userAction.setInput(ui.seniority.notificationDate.get(), "01/09/2022");
       expect(
         rendering.queryByText(
           "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté"
@@ -150,7 +147,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       ).toBeInTheDocument();
 
       // validation de l'erreur quand on a des périodes d'absence mais que l'on a pas saisi le motif de l'absence
-      userAction.click(await ui.seniority.hasAbsence.oui.get());
+      userAction.click(ui.seniority.hasAbsence.oui.get());
 
       expect(
         rendering.queryByText("Vous devez renseigner tous les champs")
@@ -161,7 +158,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
 
       // validation de l'erreur quand on a des périodes d'absence mais que l'on a pas saisi la durée et la date de l'absence
       userAction.changeInputList(
-        await ui.seniority.absences.motif(0).get(),
+        ui.seniority.absences.motif(0).get(),
         "Congés sans solde"
       );
 
@@ -172,16 +169,13 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
         rendering.queryByText("Veuillez saisir la date de l'absence")
       ).toBeInTheDocument();
 
-      userAction.setInput(await ui.seniority.absences.duration(0).get(), "6");
+      userAction.setInput(ui.seniority.absences.duration(0).get(), "6");
       expect(
         rendering.queryByText("Veuillez saisir la durée de l'absence")
       ).not.toBeInTheDocument();
 
       // validation de l'erreur quand on a une date d'absence en dehors de la période de présence dans l'entreprise
-      userAction.setInput(
-        await ui.seniority.absences.date(0).get(),
-        "01/03/1999"
-      );
+      userAction.setInput(ui.seniority.absences.date(0).get(), "01/03/1999");
       expect(
         rendering.queryByText(
           "La date de l'absence doit être comprise entre le 01/01/2022 et le 01/10/2022 (dates d'entrée et de sortie de l'entreprise)"
@@ -189,10 +183,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       ).toBeInTheDocument();
 
       // validation de l'erreur quand on a une absence qui réduit la période de présence de l'entreprise à moins de 8 mois
-      userAction.setInput(
-        await ui.seniority.absences.date(0).get(),
-        "01/02/2022"
-      );
+      userAction.setInput(ui.seniority.absences.date(0).get(), "01/02/2022");
       expect(
         rendering.queryByText(
           "La date de l'absence doit être comprise entre le 01/01/2022 et le 01/10/2022 (dates d'entrée et de sortie de l'entreprise)"
@@ -205,16 +196,16 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       ).toBeInTheDocument();
 
       // validation de la disparition des erreurs quand on a tout renseigné
-      userAction.setInput(await ui.seniority.startDate.get(), "01/02/2000");
-      userAction.click(await ui.next.get());
-      expect(await ui.activeStep.query()).toHaveTextContent("Salaires");
+      userAction.setInput(ui.seniority.startDate.get(), "01/02/2000");
+      userAction.click(ui.next.get());
+      expect(ui.activeStep.query()).toHaveTextContent("Salaires");
     });
   });
   describe("parcours sans la convention collective valider les erreurs", () => {
     let rendering: RenderResult;
     let userAction: UserAction;
-    beforeEach(async () => {
-      rendering = await render(
+    beforeEach(() => {
+      rendering = render(
         <CalculateurIndemnite
           icon={""}
           title={""}
@@ -224,29 +215,29 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       );
       userAction = new UserAction();
       userAction
-        .click(await ui.introduction.startButton.get())
-        .click(await ui.contract.type.cdi.get())
-        .click(await ui.contract.fauteGrave.non.get())
-        .click(await ui.contract.inaptitude.non.get())
-        .click(await ui.next.get())
-        .click(await ui.agreement.noAgreement.get())
-        .click(await ui.next.get());
+        .click(ui.introduction.startButton.get())
+        .click(ui.contract.type.cdi.get())
+        .click(ui.contract.fauteGrave.non.get())
+        .click(ui.contract.inaptitude.non.get())
+        .click(ui.next.get())
+        .click(ui.agreement.noAgreement.get())
+        .click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
-      expect(await ui.activeStep.query()).toHaveTextContent("Ancienneté");
+      expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
     });
 
-    it("Parcours particulier reproduisant un bug sur l'erreur concernant les 8 mois d'ancienneté", async () => {
+    it("Parcours particulier reproduisant un bug sur l'erreur concernant les 8 mois d'ancienneté", () => {
       // validation que l'erreur est toujours présente si je change la période et la durée de l'absence
       userAction
-        .setInput(await ui.seniority.startDate.get(), "01/01/2022")
-        .setInput(await ui.seniority.notificationDate.get(), "01/09/2022")
-        .setInput(await ui.seniority.endDate.get(), "01/09/2022")
-        .click(await ui.seniority.hasAbsence.oui.get())
-        .setInput(await ui.seniority.absences.duration(0).get(), "1")
-        .click(await ui.next.get())
-        .setInput(await ui.seniority.notificationDate.get(), "01/10/2022")
-        .setInput(await ui.seniority.endDate.get(), "01/10/2022")
-        .setInput(await ui.seniority.absences.duration(0).get(), "6");
+        .setInput(ui.seniority.startDate.get(), "01/01/2022")
+        .setInput(ui.seniority.notificationDate.get(), "01/09/2022")
+        .setInput(ui.seniority.endDate.get(), "01/09/2022")
+        .click(ui.seniority.hasAbsence.oui.get())
+        .setInput(ui.seniority.absences.duration(0).get(), "1")
+        .click(ui.next.get())
+        .setInput(ui.seniority.notificationDate.get(), "01/10/2022")
+        .setInput(ui.seniority.endDate.get(), "01/10/2022")
+        .setInput(ui.seniority.absences.duration(0).get(), "6");
       expect(
         rendering.queryByText(
           "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté"

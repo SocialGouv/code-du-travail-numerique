@@ -25,8 +25,8 @@ describe("Indemnité licenciement", () => {
   describe("parcours avec la convention collective 16 pour tester la date de l'absence", () => {
     let rendering: RenderResult;
     let userAction: UserAction;
-    beforeEach(async () => {
-      rendering = await render(
+    beforeEach(() => {
+      rendering = render(
         <CalculateurIndemnite
           icon={""}
           title={""}
@@ -36,51 +36,51 @@ describe("Indemnité licenciement", () => {
       );
       userAction = new UserAction();
       userAction
-        .click(await ui.introduction.startButton.get())
-        .click(await ui.contract.type.cdi.get())
-        .click(await ui.contract.fauteGrave.non.get())
-        .click(await ui.contract.inaptitude.non.get())
-        .click(await ui.next.get())
-        .click(await ui.next.get())
+        .click(ui.introduction.startButton.get())
+        .click(ui.contract.type.cdi.get())
+        .click(ui.contract.fauteGrave.non.get())
+        .click(ui.contract.inaptitude.non.get())
+        .click(ui.next.get())
+        .click(ui.next.get())
         .changeInputList(
-          await ui.information.proCategory.get(),
+          ui.information.agreement16.proCategory.get(),
           "Ingénieurs et cadres"
         )
-        .click(await ui.information.proCategoryHasChanged.oui.get())
+        .click(ui.information.agreement16.proCategoryHasChanged.oui.get())
         .setInput(
-          await ui.information.dateProCategoryChanged.get(),
+          ui.information.agreement16.dateProCategoryChanged.get(),
           "01/01/2010"
         )
-        .setInput(await ui.information.age.get(), "38")
+        .setInput(ui.information.agreement16.age.get(), "38")
         .click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
-      expect(await ui.activeStep.query()).toHaveTextContent("Ancienneté");
+      expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
     });
 
     test(`
     On doit demander la date de l'absence puis ne plus la demander quand on change les informations sur le salarié
      - vérification que la date de l'absence est présente sur la page information
      - vérification que la date de l'absence n'est plus présente après avoir changé les informations du salarié
-    `, async () => {
+    `, () => {
       // vérification que la date de l'absence est présente sur la page information
       userAction
-        .setInput(await ui.seniority.startDate.get(), "01/01/2000")
-        .setInput(await ui.seniority.notificationDate.get(), "01/01/2022")
-        .setInput(await ui.seniority.endDate.get(), "01/03/2022")
-        .click(await ui.seniority.hasAbsence.oui.get())
+        .setInput(ui.seniority.startDate.get(), "01/01/2000")
+        .setInput(ui.seniority.notificationDate.get(), "01/01/2022")
+        .setInput(ui.seniority.endDate.get(), "01/03/2022")
+        .click(ui.seniority.hasAbsence.oui.get())
         .changeInputList(
-          await ui.seniority.absences.motif(0).get(),
+          ui.seniority.absences.motif(0).get(),
           "Congés sans solde"
         )
-        .setInput(await ui.seniority.absences.duration(0).get(), "6")
-        .setInput(await ui.seniority.absences.date(0).get(), "01/01/2015")
-        .click(await ui.next.get())
-        .click(await ui.salary.hasPartialTime.non.get())
-        .click(await ui.salary.hasSameSalary.oui.get())
-        .setInput(await ui.salary.sameSalaryValue.get(), "2500")
-        .click(await ui.next.get());
+        .setInput(ui.seniority.absences.duration(0).get(), "6")
+        .setInput(ui.seniority.absences.date(0).get(), "01/01/2015")
+        .click(ui.next.get())
+        .click(ui.salary.hasPartialTime.non.get())
+        .click(ui.salary.hasSameSalary.oui.get())
+        .setInput(ui.salary.sameSalaryValue.get(), "2500")
+        .click(ui.next.get());
 
-      expect(await ui.activeStep.query()).toHaveTextContent("Indemnité");
+      expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
       expect(rendering.queryByText("Éléments saisis")).toBeInTheDocument();
       expect(rendering.queryByText("Congés sans solde")).toBeInTheDocument();
       expect(rendering.queryByTestId("absence-date")).toBeInTheDocument();
@@ -88,27 +88,27 @@ describe("Indemnité licenciement", () => {
 
       // vérification que la date de l'absence n'est plus présente après avoir changé les informations du salarié
       userAction
-        .click(await ui.previous.get())
-        .click(await ui.previous.get())
-        .click(await ui.previous.get())
-        .click(await ui.information.proCategoryHasChanged.non.get())
-        .setInput(await ui.information.age.get(), "38")
-        .click(await ui.next.get());
+        .click(ui.previous.get())
+        .click(ui.previous.get())
+        .click(ui.previous.get())
+        .click(ui.information.agreement16.proCategoryHasChanged.non.get())
+        .setInput(ui.information.agreement16.age.get(), "38")
+        .click(ui.next.get());
 
-      expect(await ui.activeStep.query()).toHaveTextContent("Ancienneté");
+      expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
       // Il ne doit plus y avoir la date de l'absence
       expect(
         rendering.queryByText("Date de début de l'absence")
       ).not.toBeInTheDocument();
       // On doit garder les anciennes informations saisies
-      expect(await ui.seniority.absences.motif(0).get()).toHaveValue(
+      expect(ui.seniority.absences.motif(0).get()).toHaveValue(
         "Congés sans solde"
       );
-      expect(await ui.seniority.absences.duration(0).get()).toHaveValue(6);
+      expect(ui.seniority.absences.duration(0).get()).toHaveValue(6);
 
       // On passe à l'étape Résultat
-      userAction.click(await ui.next.get()).click(await ui.next.get());
-      expect(await ui.activeStep.query()).toHaveTextContent("Indemnité");
+      userAction.click(ui.next.get()).click(ui.next.get());
+      expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
 
       // On vérifie que la date de l'absence n'est pas présente dans le résultat
       expect(rendering.queryByText("Éléments saisis")).toBeInTheDocument();

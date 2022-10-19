@@ -24,25 +24,44 @@ export const ui = {
     noAgreement: byTestId(
       "route - Je ne souhaite pas renseigner ma convention collective (je passe l'étape)"
     ),
+    agreement: byTestId(
+      "route - Je sais quelle est ma convention collective (je la saisis)"
+    ),
+    agreementInput: byTestId("agreement-search-input"),
   },
   information: {
-    proCategory: byTestId(
-      "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle"
-    ),
-    proCategoryHasChanged: {
-      oui: byTestId(
-        "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ingénieurs et cadres - avant employé ou technicien - Oui"
+    agreement16: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle"
       ),
-      non: byTestId(
-        "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ingénieurs et cadres - avant employé ou technicien - Non"
+      proCategoryHasChanged: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ingénieurs et cadres - avant employé ou technicien - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ingénieurs et cadres - avant employé ou technicien - Non"
+        ),
+      },
+      dateProCategoryChanged: byTestId(
+        "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ingénieurs et cadres - date du statut cadre"
+      ),
+      age: byTestId(
+        "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ingénieurs et cadres - age"
+      ),
+      driveInability: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ouvriers - incapacité de conduite - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ouvriers - incapacité de conduite - Non"
+        ),
+      },
+    },
+    agreement3239: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - indemnité de licenciement - catégorie professionnelle"
       ),
     },
-    dateProCategoryChanged: byTestId(
-      "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ingénieurs et cadres - date du statut cadre"
-    ),
-    age: byTestId(
-      "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ingénieurs et cadres - age"
-    ),
   },
   seniority: {
     startDate: byTestId("date-entree"),
