@@ -12,7 +12,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . age:
   applicable si:
-    toutes ces conditions:
+    une de ces conditions:
       - catégorie professionnelle = 'Cadres'
       - catégorie professionnelle = 'Agents de maîtrise, techniciens et assimilés'
   titre: Âge du salarié
@@ -39,15 +39,15 @@ contrat salarié . convention collective . commerces de gros . de zero à neuf a
   plafond: 9 an
   plancher: 0 an
 
-contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans:
-  valeur: au delà de neuf ans
-  plafond: 9 an
-  plancher: 0 an
-
 contrat salarié . convention collective . commerces de gros . au delà de neuf ans:
   somme:
     - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
     - (- 9 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans:
+  valeur: au delà de neuf ans
+  plafond: 10 an
   plancher: 0 an
 
 contrat salarié . convention collective . commerces de gros . au delà de vingt ans:
@@ -79,7 +79,7 @@ contrat salarié . convention collective . commerces de gros . somme autre:
 contrat salarié . convention collective . commerces de gros . formule 1 agent:
   valeur:
     produit:
-      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * de zero à neuf ans
       facteur: 2 / 10
   unité: €
 
@@ -111,12 +111,7 @@ contrat salarié . convention collective . commerces de gros . somme agent avec 
     - formule 1 agent majoration
     - formule 2 agent majoration
   unité: €
-
-contrat salarié . convention collective . commerces de gros . somme agent sans majoration:
-  somme:
-    - formule 1 agent
-    - formule 2 agent
-  unité: €
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
 
 contrat salarié . convention collective . commerces de gros . formule 3 agent:
   valeur:
@@ -130,6 +125,12 @@ contrat salarié . convention collective . commerces de gros . formule 4 agent:
     produit:
       assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * au delà de dix ans
       facteur: 2 / 15
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . somme agent sans majoration:
+  somme:
+    - formule 3 agent
+    - formule 4 agent
   unité: €
 
 contrat salarié . convention collective . commerces de gros . formule 1 cadre:
@@ -246,7 +247,6 @@ contrat salarié . convention collective . commerces de gros . résultat convent
       - age >= 55
       - licenciement économique = 'Oui'
   valeur: somme agent avec majoration
-  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
   unité: €
   arrondi: 2 décimales
   références:
@@ -255,11 +255,11 @@ contrat salarié . convention collective . commerces de gros . résultat convent
 
 contrat salarié . convention collective . commerces de gros . résultat conventionnel 3:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  non applicable si: résultat conventionnel 2
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Agents de maîtrise, techniciens et assimilés'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1
+  non applicable si: résultat conventionnel 2
   valeur: somme agent sans majoration
   unité: €
   arrondi: 2 décimales
@@ -299,12 +299,12 @@ contrat salarié . convention collective . commerces de gros . résultat convent
 
 contrat salarié . convention collective . commerces de gros . résultat conventionnel 6:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  non applicable si: résultat conventionnel 5
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Cadres'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15
       - age >= 50
-      - age < 55
   valeur: somme cadre avec majoration 15%
   unité: €
   arrondi: 2 décimales
@@ -314,6 +314,10 @@ contrat salarié . convention collective . commerces de gros . résultat convent
 
 contrat salarié . convention collective . commerces de gros . résultat conventionnel 7:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  non applicable si:
+    une de ces conditions:
+      - résultat conventionnel 5
+      - résultat conventionnel 6
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Cadres'

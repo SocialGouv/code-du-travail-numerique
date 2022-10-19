@@ -1,98 +1,95 @@
 import Engine from "publicodes";
 
 import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
-import {
-  CatPro1486,
-  TypeLicenciement1486,
-} from "../../../plugins/salaire-reference/1486_bureaux_etudes_techniques";
+import { LicenciementEconomique } from "../../../plugins";
+import { CatPro573 } from "../../../plugins/formule/573_commerces_de_gros";
 import { getReferences } from "../../../utils";
 
 const engine = new Engine(mergeIndemniteLicenciementModels());
 
-const refEtamMoins20OuInge = [
+const refAutres = [
   {
-    article: "Article 18",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851444?idConteneur=KALICONT000005635173",
-  },
-  {
-    article: "Article 19",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851447?idConteneur=KALICONT000005635173",
-  },
-  {
-    article: "Article 12",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851428?idConteneur=KALICONT000005635173&origin=list#KALIARTI000005851428",
-  },
-];
-
-const refEtamPlus20 = [
-  {
-    article: "Article 18",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851444?idConteneur=KALICONT000005635173",
-  },
-  {
-    article: "Article 19",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851447?idConteneur=KALICONT000005635173",
-  },
-];
-
-const refRefus = [
-  {
-    article: "Article 61",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851537?idConteneur=KALICONT000005635173",
-  },
-  {
-    article: "Article 12",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851428?idConteneur=KALICONT000005635173&origin=list#KALIARTI000005851428",
-  },
-];
-
-const refChargeEnquete = [
-  {
-    article:
-      "Article 23 de l’Annexe IV. Enquêteurs. Accord du 16 décembre 1991",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851321?idConteneur=KALICONT000005635173",
+    article: "Article 37",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373",
   },
   {
     article:
-      "Article 24 de l’Annexe IV. Enquêteurs. Accord du 16 décembre 1991",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851322?idConteneur=KALICONT000005635173",
+      "Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur alimentaire",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802068?idConteneur=KALICONT000005635373",
   },
   {
-    article: "Article 12",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851428?idConteneur=KALICONT000005635173&origin=list#KALIARTI000005851428",
+    article:
+      "Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur non alimentaire",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802084?idConteneur=KALICONT000005635373",
   },
 ];
 
-describe("Références juridique pour l'indemnité conventionnel de licenciement pour la CC 1486", () => {
+const refAgentMajoration = [
+  {
+    article:
+      "Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur alimentaire",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802068?idConteneur=KALICONT000005635373",
+  },
+  {
+    article:
+      "Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur non alimentaire",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802084?idConteneur=KALICONT000005635373",
+  },
+];
+
+const refCadres = [
+  {
+    article: "Article 37",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373",
+  },
+  {
+    article: "Article 4 de l’Avenant I relatif aux cadres",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373",
+  },
+];
+
+describe("Références juridique pour l'indemnité conventionnel de licenciement pour la CC 573", () => {
   describe("Cas standard", () => {
     test.each`
-      category                    | typeLicenciement              | seniority | salary  | expectedReferences
-      ${CatPro1486.ingeCadre}     | ${TypeLicenciement1486.autre} | ${10}     | ${2000} | ${refEtamMoins20OuInge}
-      ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.autre} | ${10}     | ${2000} | ${refChargeEnquete}
-      ${CatPro1486.etam}          | ${TypeLicenciement1486.autre} | ${10}     | ${2000} | ${refEtamMoins20OuInge}
-      ${CatPro1486.etam}          | ${TypeLicenciement1486.autre} | ${25}     | ${2000} | ${refEtamPlus20}
-      ${CatPro1486.ingeCadre}     | ${TypeLicenciement1486.refus} | ${10}     | ${2000} | ${refRefus}
-      ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.refus} | ${10}     | ${2000} | ${refRefus}
-      ${CatPro1486.etam}          | ${TypeLicenciement1486.refus} | ${10}     | ${2000} | ${refRefus}
+      age   | category            | typeLicenciement              | seniority | salary  | expectedReferences
+      ${32} | ${CatPro573.autres} | ${LicenciementEconomique.non} | ${1}      | ${2500} | ${refAutres}
+      ${32} | ${CatPro573.autres} | ${LicenciementEconomique.non} | ${15}     | ${2500} | ${refAutres}
+      ${32} | ${CatPro573.agents} | ${LicenciementEconomique.non} | ${1}      | ${2700} | ${refAutres}
+      ${32} | ${CatPro573.agents} | ${LicenciementEconomique.non} | ${15}     | ${2700} | ${refAutres}
+      ${40} | ${CatPro573.agents} | ${LicenciementEconomique.oui} | ${1}      | ${2700} | ${refAutres}
+      ${40} | ${CatPro573.agents} | ${LicenciementEconomique.oui} | ${14}     | ${2700} | ${refAutres}
+      ${57} | ${CatPro573.agents} | ${LicenciementEconomique.oui} | ${14}     | ${2700} | ${refAutres}
+      ${55} | ${CatPro573.agents} | ${LicenciementEconomique.oui} | ${15}     | ${2700} | ${refAgentMajoration}
+      ${56} | ${CatPro573.agents} | ${LicenciementEconomique.oui} | ${25}     | ${2700} | ${refAgentMajoration}
+      ${32} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${4}      | ${3200} | ${refCadres}
+      ${32} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${5}      | ${3200} | ${refCadres}
+      ${40} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${6}      | ${3200} | ${refCadres}
+      ${40} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${10}     | ${3200} | ${refCadres}
+      ${40} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${23}     | ${3200} | ${refCadres}
+      ${52} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${6}      | ${3200} | ${refCadres}
+      ${52} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${10}     | ${3200} | ${refCadres}
+      ${52} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${23}     | ${3200} | ${refCadres}
+      ${57} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${6}      | ${3200} | ${refCadres}
+      ${57} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${10}     | ${3200} | ${refCadres}
+      ${57} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${23}     | ${3200} | ${refCadres}
     `(
-      "ancienneté: $seniority an, salaire de référence: $salary, type de licenciement $typeLicenciement, catégorie $category => $expectedReferences",
+      "ancienneté: $seniority an, salaire de référence: $salary, age $age, type de licenciement $typeLicenciement, catégorie $category => $expectedCompensation €",
       ({
         seniority,
         salary,
         expectedReferences,
         category,
         typeLicenciement,
+        age,
       }) => {
         const situation = engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC1486'",
-          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${typeLicenciement}'`,
-          "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective": "'IDCC0573'",
+          "contrat salarié . convention collective . commerces de gros . age":
+            age,
+          "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . commerces de gros . licenciement économique": `'${typeLicenciement}'`,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté en année":
-            seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence":
-            salary,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
         });

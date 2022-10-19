@@ -26,11 +26,11 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
       ${40} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${6}      | ${3200} | ${5760}
       ${40} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${10}     | ${3200} | ${9920}
       ${40} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${23}     | ${3200} | ${27840}
-      ${52} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${6}      | ${3200} | ${6624}
-      ${52} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${10}     | ${3200} | ${11408}
+      ${52} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${6}      | ${3200} | ${5760}
+      ${52} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${10}     | ${3200} | ${9920}
       ${52} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${23}     | ${3200} | ${32016}
-      ${57} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${6}      | ${3200} | ${6912}
-      ${57} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${10}     | ${3200} | ${11904}
+      ${57} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${6}      | ${3200} | ${5760}
+      ${57} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${10}     | ${3200} | ${9920}
       ${57} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${23}     | ${3200} | ${33408}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, age $age, type de licenciement $typeLicenciement, catégorie $category => $expectedCompensation €",
@@ -57,9 +57,10 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
           .evaluate(
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           );
+
+        expect(result.nodeValue).toEqual(expectedCompensation);
         expect(result.missingVariables).toEqual({});
         expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.nodeValue).toEqual(expectedCompensation);
       }
     );
   });
