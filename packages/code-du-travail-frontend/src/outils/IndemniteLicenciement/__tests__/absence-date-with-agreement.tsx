@@ -56,85 +56,13 @@ describe("Indemnité licenciement", () => {
       // Validation que l'on est bien sur l'étape ancienneté
       expect(await ui.activeStep.query()).toHaveTextContent("Ancienneté");
     });
-    test("Validation des erreurs à la validation du formulaire d'ancienneté", async () => {
-      userAction.click(await ui.next.get());
-      expect(
-        rendering.queryAllByText("Veuillez saisir cette date")
-      ).toHaveLength(3);
 
-      // On renseigne les champs dates
-      userAction
-        .setInput(await ui.seniority.startDate.get(), "01/01/2000")
-        .setInput(await ui.seniority.notificationDate.get(), "01/01/2022")
-        .setInput(await ui.seniority.endDate.get(), "01/03/2022")
-        .click(await ui.next.get());
-
-      expect(
-        rendering.queryByText("Veuillez saisir cette date")
-      ).not.toBeInTheDocument();
-      expect(
-        rendering.queryByText("Vous devez répondre à cette question")
-      ).toBeInTheDocument();
-
-      // On indique qu'il y a des absences
-      userAction.click(await ui.seniority.hasAbsence.oui.get());
-
-      // Absences non renseignés
-      expect(
-        rendering.queryByText("Vous devez renseigner tous les champs")
-      ).toBeInTheDocument();
-      expect(
-        rendering.queryByText("Date de début de l'absence")
-      ).toBeInTheDocument();
-
-      userAction.changeInputList(
-        await ui.seniority.absences.motif(0).get(),
-        "Congés sans solde"
-      );
-
-      // Absence renseignée sans la durée et la date
-      expect(
-        rendering.queryByText("Veuillez saisir la durée de l'absence")
-      ).toBeInTheDocument();
-      expect(
-        rendering.queryByText("Veuillez saisir la date de l'absence")
-      ).toBeInTheDocument();
-
-      // Durée de l'absence renseignée, on ne doit plus voir l'erreur
-      userAction.setInput(await ui.seniority.absences.duration(0).get(), "6");
-      expect(
-        rendering.queryByText("Veuillez saisir la durée de l'absence")
-      ).not.toBeInTheDocument();
-
-      // Date de l'absence hors de la présence dans l'entreprise
-      userAction.setInput(
-        await ui.seniority.absences.date(0).get(),
-        "01/03/1999"
-      );
-      expect(
-        rendering.queryByText(
-          "La date de l'absence doit être comprise entre le 01/01/2000 et le 01/03/2022 (dates d'entrée et de sortie de l'entreprise)"
-        )
-      ).toBeInTheDocument();
-
-      // Change la date de l'absence pour être dans la période de présence de l'entreprise
-      userAction.setInput(
-        await ui.seniority.absences.date(0).get(),
-        "01/01/2015"
-      );
-      expect(
-        rendering.queryByText(
-          "La date de l'absence doit être comprise entre le 01/01/2000 et le 01/03/2022 (dates d'entrée et de sortie de l'entreprise)"
-        )
-      ).not.toBeInTheDocument();
-
-      // On peut passer à l'étape suivante
-      userAction.click(await ui.next.get());
-      expect(await ui.activeStep.query()).toHaveTextContent("Salaires");
-    });
-
-    test("Validation de la disparition du champ demandant la date de l'absence après changement des informations", async () => {
-      // On renseigne la page ancienneté avec une absence avec une date
+    test(`
+    On doit demander la date de l'absence puis ne plus la demander quand on change les informations sur le salarié
+     - vérification que la date de l'absence est présente sur la page information
+     - vérification que la date de l'absence n'est plus présente après avoir changé les informations du salarié
+    `, async () => {
+      // vérification que la date de l'absence est présente sur la page information
       userAction
         .setInput(await ui.seniority.startDate.get(), "01/01/2000")
         .setInput(await ui.seniority.notificationDate.get(), "01/01/2022")
@@ -146,24 +74,19 @@ describe("Indemnité licenciement", () => {
         )
         .setInput(await ui.seniority.absences.duration(0).get(), "6")
         .setInput(await ui.seniority.absences.date(0).get(), "01/01/2015")
-        .click(await ui.next.get());
-
-      // On se rend sur la page information pour vérifier que la date est présente
-      expect(await ui.activeStep.query()).toHaveTextContent("Salaires");
-      userAction
+        .click(await ui.next.get())
         .click(await ui.salary.hasPartialTime.non.get())
         .click(await ui.salary.hasSameSalary.oui.get())
         .setInput(await ui.salary.sameSalaryValue.get(), "2500")
         .click(await ui.next.get());
 
       expect(await ui.activeStep.query()).toHaveTextContent("Indemnité");
-      // On valide que l'absence est présente avec la date
       expect(rendering.queryByText("Éléments saisis")).toBeInTheDocument();
       expect(rendering.queryByText("Congés sans solde")).toBeInTheDocument();
       expect(rendering.queryByTestId("absence-date")).toBeInTheDocument();
       expect(rendering.queryByText("01/01/2015")).toBeInTheDocument();
 
-      // On revient sur la page information pour changer une information et ne plus avoir besoin de la date sur une absence
+      // vérification que la date de l'absence n'est plus présente après avoir changé les informations du salarié
       userAction
         .click(await ui.previous.get())
         .click(await ui.previous.get())
@@ -173,7 +96,6 @@ describe("Indemnité licenciement", () => {
         .click(await ui.next.get());
 
       expect(await ui.activeStep.query()).toHaveTextContent("Ancienneté");
-
       // Il ne doit plus y avoir la date de l'absence
       expect(
         rendering.queryByText("Date de début de l'absence")

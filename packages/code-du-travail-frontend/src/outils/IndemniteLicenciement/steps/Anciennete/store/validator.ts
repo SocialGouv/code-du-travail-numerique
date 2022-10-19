@@ -47,7 +47,7 @@ export const validateStep = (
               return total;
             }
             return total + item.durationInMonth * item.motif.value;
-          }, 0) / 12;
+          }, 0);
 
   // Date d'entrée
   if (!state.dateEntree) {
