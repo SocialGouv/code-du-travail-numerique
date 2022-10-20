@@ -22,10 +22,10 @@ export class AgreementSalary573 implements AgreementSalary {
           v.question.rule.nom ===
           "contrat salarié . convention collective . commerce de gros . licenciement économique"
       )
-      ?.info?.slice(1, -1) as QuestionOuiNon;
+      ?.info?.slice(1, -1) as QuestionOuiNon | undefined;
     return sReference.computeReferenceSalary({
       salaires: salaryPeriods,
-      licenciementEco: firingType || QuestionOuiNon.non,
+      licenciementEco: firingType ?? QuestionOuiNon.non,
     });
   };
 }

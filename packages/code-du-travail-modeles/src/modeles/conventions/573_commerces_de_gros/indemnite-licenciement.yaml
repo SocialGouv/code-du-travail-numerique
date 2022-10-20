@@ -121,7 +121,6 @@ contrat salarié . convention collective . commerces de gros . somme agent avec 
     - formule 1 agent majoration
     - formule 2 agent majoration
   unité: €
-  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
 
 contrat salarié . convention collective . commerces de gros . formule 3 agent:
   valeur:
@@ -257,6 +256,7 @@ contrat salarié . convention collective . commerces de gros . résultat convent
       - age >= 55
       - licenciement économique = 'Oui'
   valeur: somme agent avec majoration
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
   unité: €
   arrondi: 2 décimales
   références:
