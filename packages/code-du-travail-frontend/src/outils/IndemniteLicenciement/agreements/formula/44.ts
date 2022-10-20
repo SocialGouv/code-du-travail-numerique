@@ -38,7 +38,7 @@ export class AgreementFormula44 implements AgreementFormula {
           v.question.rule.nom ===
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique"
       )
-      ?.info?.slice(1, -1) as any;
+      ?.info?.slice(1, -1) as string;
 
     return agreementFactoryFormula.computeFormula({
       seniority: agreementSeniority.value,
