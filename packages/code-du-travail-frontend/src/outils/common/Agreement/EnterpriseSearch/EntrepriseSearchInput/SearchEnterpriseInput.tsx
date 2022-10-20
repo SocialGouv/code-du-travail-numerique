@@ -77,6 +77,7 @@ export const SearchEnterpriseInput = ({
             id="enterprise-search"
             onChange={searchInputHandler}
             autoComplete="off"
+            data-testid="input-search-company"
           />
         </Box>
         <Box>
@@ -91,6 +92,7 @@ export const SearchEnterpriseInput = ({
             id="enterprise-search-address"
             onChange={searchInputHandler}
             autoComplete="off"
+            data-testid="input-search-postal-code"
           />
         </Box>
       </Flex>
