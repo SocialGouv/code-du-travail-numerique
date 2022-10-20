@@ -85,11 +85,11 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
       }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0573'",
-          "contrat salarié . convention collective . commerces de gros . age":
-            age,
-          "contrat salarié . convention collective . commerces de gros . cadre durant au moins de 15 ans": `'${auMoins15AnsCadre}'`,
           "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . convention collective . commerces de gros . licenciement économique": `'${typeLicenciement}'`,
+          "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age":
+            age,
+          "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age . licenciement économique": `'${typeLicenciement}'`,
+          "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age . licenciement économique . cadre durant au moins de 15 ans": `'${auMoins15AnsCadre}'`,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":

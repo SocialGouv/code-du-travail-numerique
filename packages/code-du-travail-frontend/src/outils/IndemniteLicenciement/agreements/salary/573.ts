@@ -20,7 +20,7 @@ export class AgreementSalary573 implements AgreementSalary {
       .informationsData.input.publicodesInformations.find(
         (v) =>
           v.question.rule.nom ===
-          "contrat salarié . convention collective . commerce de gros . licenciement économique"
+          "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age . licenciement économique"
       )
       ?.info?.slice(1, -1) as QuestionOuiNon | undefined;
     return sReference.computeReferenceSalary({

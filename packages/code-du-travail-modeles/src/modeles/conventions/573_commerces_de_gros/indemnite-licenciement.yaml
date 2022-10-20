@@ -10,28 +10,19 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
       Agents de maîtrise, techniciens et assimilés: "'Agents de maîtrise, techniciens et assimilés'"
       Autres salariés: "'Autres salariés'"
 
-contrat salarié . convention collective . commerces de gros . age:
-  applicable si:
-    une de ces conditions:
-      - catégorie professionnelle = 'Cadres'
-      - catégorie professionnelle = 'Agents de maîtrise, techniciens et assimilés'
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age:
   titre: Âge du salarié
   question: Quel est l'âge du salarié ?
   cdtn:
     type: entier
 
-contrat salarié . convention collective . commerces de gros . licenciement économique:
-  applicable si: catégorie professionnelle = 'Agents de maîtrise, techniciens et assimilés'
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age . licenciement économique:
   titre: Le licenciement fait suite au refus d'une clause de mobilité
   question: Le licenciement fait-il suite au refus d'une clause de mobilité ?
   cdtn:
     type: oui-non
 
-contrat salarié . convention collective . commerces de gros . cadre durant au moins de 15 ans:
-  applicable si:
-    toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15
-      - catégorie professionnelle = 'Cadres'
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age . licenciement économique . cadre durant au moins de 15 ans:
   titre: Le salarié a été cadre durant au moins 15 ans
   question: Le salarié a-t-il été cadre durant au moins 15 ans ?
   cdtn:
@@ -233,7 +224,7 @@ contrat salarié . convention collective . commerces de gros . somme cadre avec 
   unité: €
 
 # Résultats
-contrat salarié . convention collective . commerces de gros . résultat conventionnel 1:
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age . licenciement économique . cadre durant au moins de 15 ans . résultat conventionnel 1:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
@@ -247,14 +238,14 @@ contrat salarié . convention collective . commerces de gros . résultat convent
     Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur alimentaire: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802068?idConteneur=KALICONT000005635373
     Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur non alimentaire: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802084?idConteneur=KALICONT000005635373
 
-contrat salarié . convention collective . commerces de gros . résultat conventionnel 2:
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age . licenciement économique . cadre durant au moins de 15 ans . résultat conventionnel 2:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Agents de maîtrise, techniciens et assimilés'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15
-      - age >= 55
-      - licenciement économique = 'Oui'
+      - catégorie professionnelle . age >= 55
+      - catégorie professionnelle . age . licenciement économique = 'Oui'
   valeur: somme agent avec majoration
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
   unité: €
@@ -263,7 +254,7 @@ contrat salarié . convention collective . commerces de gros . résultat convent
     Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur alimentaire: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802068?idConteneur=KALICONT000005635373
     Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur non alimentaire: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802084?idConteneur=KALICONT000005635373
 
-contrat salarié . convention collective . commerces de gros . résultat conventionnel 3:
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age . licenciement économique . cadre durant au moins de 15 ans . résultat conventionnel 3:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
@@ -278,7 +269,7 @@ contrat salarié . convention collective . commerces de gros . résultat convent
     Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur alimentaire: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802068?idConteneur=KALICONT000005635373
     Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur non alimentaire: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802084?idConteneur=KALICONT000005635373
 
-contrat salarié . convention collective . commerces de gros . résultat conventionnel 4:
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age . licenciement économique . cadre durant au moins de 15 ans . résultat conventionnel 4:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
@@ -293,14 +284,14 @@ contrat salarié . convention collective . commerces de gros . résultat convent
     Article 37: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373
     Article 4 de l’Avenant I relatif aux cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373
 
-contrat salarié . convention collective . commerces de gros . résultat conventionnel 5:
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age . licenciement économique . cadre durant au moins de 15 ans . résultat conventionnel 5:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Cadres'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15
-      - age >= 55
-      - cadre durant au moins de 15 ans  = 'Oui'
+      - catégorie professionnelle . age >= 55
+      - catégorie professionnelle . age . licenciement économique . cadre durant au moins de 15 ans  = 'Oui'
   valeur: somme cadre avec majoration 20%
   unité: €
   arrondi: 2 décimales
@@ -308,15 +299,15 @@ contrat salarié . convention collective . commerces de gros . résultat convent
     Article 37: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373
     Article 4 de l’Avenant I relatif aux cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373
 
-contrat salarié . convention collective . commerces de gros . résultat conventionnel 6:
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age . licenciement économique . cadre durant au moins de 15 ans . résultat conventionnel 6:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si: résultat conventionnel 5
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Cadres'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15
-      - age >= 50
-      - cadre durant au moins de 15 ans  = 'Oui'
+      - catégorie professionnelle . age >= 50
+      - catégorie professionnelle . age . licenciement économique . cadre durant au moins de 15 ans  = 'Oui'
   valeur: somme cadre avec majoration 15%
   unité: €
   arrondi: 2 décimales
@@ -324,7 +315,7 @@ contrat salarié . convention collective . commerces de gros . résultat convent
     Article 37: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373
     Article 4 de l’Avenant I relatif aux cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373
 
-contrat salarié . convention collective . commerces de gros . résultat conventionnel 7:
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age . licenciement économique . cadre durant au moins de 15 ans . résultat conventionnel 7:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si:
     une de ces conditions:
@@ -342,7 +333,7 @@ contrat salarié . convention collective . commerces de gros . résultat convent
     Article 37: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373
     Article 4 de l’Avenant I relatif aux cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373
 
-contrat salarié . convention collective . commerces de gros . résultat conventionnel 8:
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age . licenciement économique . cadre durant au moins de 15 ans . résultat conventionnel 8:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si:
     une de ces conditions:
