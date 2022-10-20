@@ -617,6 +617,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     >
       <select
         class="c13"
+        data-testid="cdt.ancienneté"
         id="input-cdt.ancienneté"
         name="cdt.ancienneté"
       >

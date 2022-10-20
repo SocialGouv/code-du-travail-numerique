@@ -400,6 +400,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
       >
         <select
           class="c9"
+          data-testid="criteria.cddType"
           id="input-criteria.cddType"
           name="criteria.cddType"
         >
@@ -743,6 +744,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
       >
         <select
           class="c9"
+          data-testid="criteria.cddType"
           id="input-criteria.cddType"
           name="criteria.cddType"
         >
