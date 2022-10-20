@@ -129,7 +129,7 @@ test(`
       )
     ).toBeInTheDocument()
   );
-  waitFor(() =>
+  await waitFor(() =>
     fireEvent.click(
       screen.queryByText(
         "Transports routiers et activités auxiliaires du transport"
@@ -154,10 +154,10 @@ test(`
   fireEvent.change(screen.getByTestId("input-search-company"), {
     target: { value: "carrefour" },
   });
-  waitFor(() =>
+  await waitFor(() =>
     expect(screen.queryByText("CARREFOUR HYPERMARCHES")).toBeInTheDocument()
   );
-  waitFor(() =>
+  await waitFor(() =>
     fireEvent.click(screen.queryByText("CARREFOUR HYPERMARCHES") as HTMLElement)
   );
   expect(
