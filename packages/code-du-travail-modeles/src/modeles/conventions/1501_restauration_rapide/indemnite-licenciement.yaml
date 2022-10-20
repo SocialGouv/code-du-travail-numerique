@@ -37,6 +37,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
     - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
     - (- 10 an)
   plancher: 0 an
+  arrondi: 2 décimales
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . dix ans ou moins:
   valeur:
@@ -94,10 +95,22 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
   références:
     Article 13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005833468?idConteneur=KALICONT000005635596
 
-contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . sans majoration résultat conventionnel . moins de 15 ans résultat conventionnel:
+contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . sans majoration résultat conventionnel . moins de 10 ans résultat conventionnel:
   applicable si:
     toutes ces conditions:
       - indemnité de licenciement . ancienneté conventionnelle en année > 2 an
+      - indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
+  cdtn:
+    formule:
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 1/10 * Sref * A
+
+contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . sans majoration résultat conventionnel . moins de 15 ans résultat conventionnel:
+  applicable si:
+    toutes ces conditions:
+      - indemnité de licenciement . ancienneté conventionnelle en année > 10 an
       - indemnité de licenciement . ancienneté conventionnelle en année <= 15 an
   cdtn:
     formule:
@@ -170,6 +183,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
         - 10an
     - (- 5 an)
   plancher: 0 an
+  arrondi: 2 décimales
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . nombre d'années entre 10 et 15ans:
   somme:
@@ -178,12 +192,14 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
         - 15an
     - (- 10 an)
   plancher: 0 an
+  arrondi: 2 décimales
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . nombre d'années au dessus de 15ans:
   somme:
     - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
     - (- 15 an)
   plancher: 0 an
+  arrondi: 2 décimales
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . montant total:
   valeur:
@@ -253,7 +269,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . sans majoration résultat conventionnel . moins de 5 ans:
   applicable si:
     toutes ces conditions:
-      - indemnité de licenciement . ancienneté conventionnelle en année > 1 an
+      - indemnité de licenciement . ancienneté conventionnelle en année >= 1 an
       - indemnité de licenciement . ancienneté conventionnelle en année <= 5 an
   cdtn:
     formule:
@@ -262,8 +278,36 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: 1/10 * Sref * A
 
-contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . sans majoration résultat conventionnel . plus de 5 ans:
-  applicable si: indemnité de licenciement . ancienneté conventionnelle en année > 5 an
+contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . sans majoration résultat conventionnel . ancienneté entre 5 et 10ans:
+  applicable si:
+    toutes ces conditions:
+      - indemnité de licenciement . ancienneté conventionnelle en année > 5 an
+      - indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Années de présence au total": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "A2 : Années au dessus de 5 ans jusqu'à 10 ans": contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . nombre d'années entre 5 et 10ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (2/10 * Sref * A1) + (1/15 * Sref * A2)
+
+
+contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . sans majoration résultat conventionnel . ancienneté entre 10 et 15ans:
+  applicable si:
+    toutes ces conditions:
+      - indemnité de licenciement . ancienneté conventionnelle en année > 10 an
+      - indemnité de licenciement . ancienneté conventionnelle en année <= 15 an
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Années de présence au total": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "A2 : Années au dessus de 5 ans jusqu'à 10 ans": contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . nombre d'années entre 5 et 10ans
+        - "A3 : Années au dessus de 10 ans jusqu'à 15 ans": contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . nombre d'années entre 10 et 15ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (2/10 * Sref * A1) + (1/15 * Sref * A2) + (2/15 * Sref * A3)
+
+contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . sans majoration résultat conventionnel . plus de 15 ans:
+  applicable si: indemnité de licenciement . ancienneté conventionnelle en année > 15 an
   cdtn:
     formule:
       explanations:
@@ -293,6 +337,20 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
   arrondi: 2 décimales
   références:
     Article 13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005833468?idConteneur=KALICONT000005635596
+
+contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . avec majoration résultat conventionnel . ancienneté entre 10 et 15ans:
+  applicable si: indemnité de licenciement . ancienneté conventionnelle en année < 15 ans
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Années de présence au total": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "A2 : Années au dessus de 5 ans jusqu'à 10 ans": contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . nombre d'années entre 5 et 10ans
+        - "A3 : Années au dessus de 10 ans jusqu'à 15 ans": contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . nombre d'années entre 10 et 15ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (2/10 * Sref * A1) + (1/15 * Sref * A2) + (2/15 * Sref * A3) + (15% * ((2/10 * Sref * A1) + (1/15 * Sref * A2) + (2/15 * Sref * A3)))
+
+contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . avec majoration résultat conventionnel . ancienneté au dessus de 15ans:
+  applicable si: indemnité de licenciement . ancienneté conventionnelle en année > 15 ans
   cdtn:
     formule:
       explanations:
