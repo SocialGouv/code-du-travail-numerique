@@ -118,46 +118,50 @@ export function StepInformations({
   return (
     <>
       <SectionTitle>Statut du salarié</SectionTitle>
-      {memoizedQuestions.map(([key, answers], index) => (
-        <div key={`${index}-${key}`}>
-          {questionsMap[key] && (
-            <SelectQuestion
-              name={`criteria.${key}`}
-              options={answers}
-              label={questionsMap[key].question}
-              subLabel={subLabel(key)}
-              onChange={() => {
-                trackQuestion(questionsMap[key].name, actionEvent, false);
-                form.batch(() => {
-                  getFormProps({
-                    criteria,
-                    key,
-                    pastQuestions: memoizedQuestions,
-                  }).forEach((key) =>
-                    form.change(`criteria.${key}`, undefined)
-                  );
-                });
-              }}
-              isTooltipOpen={
-                isOpenArray.find((v) => v.key === key)?.status ?? false
-              }
-              onSwitchTooltip={() => handleChange(key)}
-              tooltip={
-                questionsMap[key].note !== undefined
-                  ? {
-                      content: <Html>{questionsMap[key].note}</Html>,
-                      trackableFn: (visibility) => {
-                        if (visibility) {
-                          trackQuestion(questionsMap[key].name, actionEvent);
-                        }
-                      },
-                    }
-                  : undefined
-              }
-            />
-          )}
-        </div>
-      ))}
+      {memoizedQuestions
+        .filter(([key]) => !!key)
+        .map(([key, answers], index) => (
+          <div key={`${index}-${key}-${criteria[key] ? "set" : "unset"}`}>
+            {questionsMap[key] && (
+              <SelectQuestion
+                name={`criteria.${key}`}
+                options={answers}
+                label={questionsMap[key].question}
+                subLabel={subLabel(key)}
+                onChange={() => {
+                  trackQuestion(questionsMap[key].name, actionEvent, false);
+                  form.batch(() => {
+                    getFormProps({
+                      criteria,
+                      key,
+                      pastQuestions: memoizedQuestions,
+                    }).forEach((key) => {
+                      if (key) {
+                        form.change(`criteria.${key}`, undefined);
+                      }
+                    });
+                  });
+                }}
+                isTooltipOpen={
+                  isOpenArray.find((v) => v.key === key)?.status ?? false
+                }
+                onSwitchTooltip={() => handleChange(key)}
+                tooltip={
+                  questionsMap[key].note !== undefined
+                    ? {
+                        content: <Html>{questionsMap[key].note}</Html>,
+                        trackableFn: (visibility) => {
+                          if (visibility) {
+                            trackQuestion(questionsMap[key].name, actionEvent);
+                          }
+                        },
+                      }
+                    : undefined
+                }
+              />
+            )}
+          </div>
+        ))}
     </>
   );
 }
