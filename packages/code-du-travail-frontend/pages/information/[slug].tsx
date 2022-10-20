@@ -1,6 +1,7 @@
 import { Accordion, Tabs, Section, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
+import EventTracker from "../../src/lib/tracking/EventTracker";
 
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
@@ -100,6 +101,7 @@ const Information = ({
             )
         )}
       </Answer>
+      <EventTracker />
     </Layout>
   );
 };
