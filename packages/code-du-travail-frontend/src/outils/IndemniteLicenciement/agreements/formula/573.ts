@@ -23,7 +23,7 @@ export class AgreementFormula573 implements AgreementFormula {
       .informationsData.input.publicodesInformations.find(
         (v) =>
           v.question.rule.nom ===
-          "contrat salarié . convention collective . commerce de gros . catégorie professionnelle"
+          "contrat salarié . convention collective . commerces de gros . catégorie professionnelle"
       )
       ?.info?.slice(1, -1) as any;
 

@@ -17,8 +17,8 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
     type: entier
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age . licenciement économique:
-  titre: Le licenciement fait suite au refus d'une clause de mobilité
-  question: Le licenciement fait-il suite au refus d'une clause de mobilité ?
+  titre: Licenciement pour motif économique
+  question: Le motif du licenciement est-il économique ?
   cdtn:
     type: oui-non
 
