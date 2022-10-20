@@ -1,6 +1,6 @@
 import { round } from "../../utils";
 import type { SupportedCcIndemniteLicenciement } from "..";
-import { LicenciementEconomique } from "..";
+import { QuestionOuiNon } from "..";
 import type { Formula, FormulaProps, IFormula } from "./types";
 
 export enum CatPro573 {
@@ -14,7 +14,8 @@ export type Formula573Props = {
   seniority: number;
   refSalary: number;
   category: CatPro573;
-  typeLicenciement: LicenciementEconomique;
+  licenciementEco: QuestionOuiNon;
+  cadreAuMoins15ans: QuestionOuiNon;
 };
 
 export class Formula573
@@ -25,7 +26,8 @@ export class Formula573
     refSalary,
     age,
     category,
-    typeLicenciement,
+    licenciementEco,
+    cadreAuMoins15ans,
   }: FormulaProps<SupportedCcIndemniteLicenciement.IDCC0573>): Formula {
     let formula = "";
     const explanations = [];
@@ -62,7 +64,7 @@ export class Formula573
       case category === CatPro573.agents &&
         seniority >= 15 &&
         age >= 55 &&
-        typeLicenciement === LicenciementEconomique.oui: {
+        licenciementEco === QuestionOuiNon.oui: {
         formula = `2 / 10 * Sref * A1 + 3 / 10 * Sref * A2 + 20% (2 / 10 * Sref * A1 + 3 / 10 * Sref)`;
 
         explanations.push(
@@ -97,7 +99,10 @@ export class Formula573
         );
         break;
       }
-      case category === CatPro573.cadres && seniority >= 15 && age >= 55: {
+      case category === CatPro573.cadres &&
+        seniority >= 15 &&
+        age >= 55 &&
+        cadreAuMoins15ans === QuestionOuiNon.oui: {
         formula = `3 / 10 * Sref * A1 + 4 / 10 * Sref * A2 + 5 / 10 * Sref * A3 + 20% ( 3 / 10 * Sref * A1 + 4 / 10 * Sref * A2 + 5 / 10 * Sref * A3 )`;
         explanations.push(
           `A1: Années de présence dans la tranche de 0 à 9 ans inclus (${roundSeniority2} ${year2})`
@@ -110,7 +115,10 @@ export class Formula573
         );
         break;
       }
-      case category === CatPro573.cadres && seniority >= 15 && age >= 50: {
+      case category === CatPro573.cadres &&
+        seniority >= 15 &&
+        age >= 50 &&
+        cadreAuMoins15ans === QuestionOuiNon.oui: {
         formula = `3 / 10 * Sref * A1 + 4 / 10 * Sref * A2 + 5 / 10 * Sref * A3 + 15% ( 3 / 10 * Sref * A1 + 4 / 10 * Sref * A2 + 5 / 10 * Sref )`;
         explanations.push(
           `A1: Années de présence dans la tranche de 0 à 9 ans inclus (${roundSeniority2} ${year2})`

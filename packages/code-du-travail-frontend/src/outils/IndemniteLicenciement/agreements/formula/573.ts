@@ -1,7 +1,7 @@
 import {
   Formula,
   FormuleFactory,
-  LicenciementEconomique,
+  QuestionOuiNon,
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
@@ -40,14 +40,23 @@ export class AgreementFormula573 implements AgreementFormula {
           v.question.rule.nom ===
           "contrat salarié . convention collective . commerce de gros . licenciement économique"
       )
-      ?.info?.slice(1, -1) as LicenciementEconomique;
+      ?.info?.slice(1, -1) as QuestionOuiNon;
+
+    const cadreAuMoins15ans = get()
+      .informationsData.input.publicodesInformations.find(
+        (v) =>
+          v.question.rule.nom ===
+          "contrat salarié . convention collective . commerce de gros . cadre durant au moins de 15 ans"
+      )
+      ?.info?.slice(1, -1) as QuestionOuiNon;
 
     return agreementFactoryFormula.computeFormula({
       seniority: agreementSeniority.value,
       refSalary: agreementRefSalary,
       category,
       age: year ? parseInt(year) : 0,
-      typeLicenciement: firingType || LicenciementEconomique.non,
+      licenciementEco: firingType || QuestionOuiNon.non,
+      cadreAuMoins15ans: cadreAuMoins15ans || QuestionOuiNon.non,
     });
   };
 }

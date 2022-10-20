@@ -1,5 +1,5 @@
 import {
-  LicenciementEconomique,
+  QuestionOuiNon,
   ReferenceSalaryFactory,
   SalaryPeriods,
   SupportedCcIndemniteLicenciement,
@@ -16,21 +16,16 @@ export class AgreementSalary573 implements AgreementSalary {
     const sReference = new ReferenceSalaryFactory().create(
       SupportedCcIndemniteLicenciement.IDCC0573
     );
-    let isEconomicFiring = false;
-    const licenciementEco =
-      (get()
-        .informationsData.input.publicodesInformations.find(
-          (v) =>
-            v.question.rule.nom ===
-            "contrat salarié . convention collective . commerces de gros . licenciement économique"
-        )
-        ?.info?.slice(1, -1) as string) || undefined;
-    if (licenciementEco === LicenciementEconomique.oui) {
-      isEconomicFiring = true;
-    }
+    const firingType = get()
+      .informationsData.input.publicodesInformations.find(
+        (v) =>
+          v.question.rule.nom ===
+          "contrat salarié . convention collective . commerce de gros . licenciement économique"
+      )
+      ?.info?.slice(1, -1) as QuestionOuiNon;
     return sReference.computeReferenceSalary({
       salaires: salaryPeriods,
-      isEconomicFiring,
+      licenciementEco: firingType || QuestionOuiNon.non,
     });
   };
 }

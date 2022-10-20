@@ -27,6 +27,16 @@ contrat salarié . convention collective . commerces de gros . licenciement éco
   cdtn:
     type: oui-non
 
+contrat salarié . convention collective . commerces de gros . cadre durant au moins de 15 ans:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15
+      - catégorie professionnelle = 'Cadres'
+  titre: Le salarié a été cadre durant au moins 15 ans
+  question: Le salarié a-t-il été cadre durant au moins 15 ans ?
+  cdtn:
+    type: oui-non
+
 # Formules
 contrat salarié . convention collective . commerces de gros . au delà de dix ans:
   somme:
@@ -290,6 +300,7 @@ contrat salarié . convention collective . commerces de gros . résultat convent
       - catégorie professionnelle = 'Cadres'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15
       - age >= 55
+      - cadre durant au moins de 15 ans  = 'Oui'
   valeur: somme cadre avec majoration 20%
   unité: €
   arrondi: 2 décimales
@@ -305,6 +316,7 @@ contrat salarié . convention collective . commerces de gros . résultat convent
       - catégorie professionnelle = 'Cadres'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15
       - age >= 50
+      - cadre durant au moins de 15 ans  = 'Oui'
   valeur: somme cadre avec majoration 15%
   unité: €
   arrondi: 2 décimales

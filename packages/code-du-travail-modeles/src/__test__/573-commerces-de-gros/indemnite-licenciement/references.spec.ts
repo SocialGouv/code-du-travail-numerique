@@ -1,7 +1,7 @@
 import Engine from "publicodes";
 
 import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
-import { LicenciementEconomique } from "../../../plugins";
+import { QuestionOuiNon } from "../../../plugins";
 import { CatPro573 } from "../../../plugins/formule/573_commerces_de_gros";
 import { getReferences } from "../../../utils";
 
@@ -51,27 +51,27 @@ const refCadres = [
 describe("Références juridique pour l'indemnité conventionnel de licenciement pour la CC 573", () => {
   describe("Cas standard", () => {
     test.each`
-      age   | category            | typeLicenciement              | seniority | salary  | expectedReferences
-      ${32} | ${CatPro573.autres} | ${LicenciementEconomique.non} | ${1}      | ${2500} | ${refAutres}
-      ${32} | ${CatPro573.autres} | ${LicenciementEconomique.non} | ${15}     | ${2500} | ${refAutres}
-      ${32} | ${CatPro573.agents} | ${LicenciementEconomique.non} | ${1}      | ${2700} | ${refAutres}
-      ${32} | ${CatPro573.agents} | ${LicenciementEconomique.non} | ${15}     | ${2700} | ${refAutres}
-      ${40} | ${CatPro573.agents} | ${LicenciementEconomique.oui} | ${1}      | ${2700} | ${refAutres}
-      ${40} | ${CatPro573.agents} | ${LicenciementEconomique.oui} | ${14}     | ${2700} | ${refAutres}
-      ${57} | ${CatPro573.agents} | ${LicenciementEconomique.oui} | ${14}     | ${2700} | ${refAutres}
-      ${55} | ${CatPro573.agents} | ${LicenciementEconomique.oui} | ${15}     | ${2700} | ${refAgentMajoration}
-      ${56} | ${CatPro573.agents} | ${LicenciementEconomique.oui} | ${25}     | ${2700} | ${refAgentMajoration}
-      ${32} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${4}      | ${3200} | ${refCadres}
-      ${32} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${5}      | ${3200} | ${refCadres}
-      ${40} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${6}      | ${3200} | ${refCadres}
-      ${40} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${10}     | ${3200} | ${refCadres}
-      ${40} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${23}     | ${3200} | ${refCadres}
-      ${52} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${6}      | ${3200} | ${refCadres}
-      ${52} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${10}     | ${3200} | ${refCadres}
-      ${52} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${23}     | ${3200} | ${refCadres}
-      ${57} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${6}      | ${3200} | ${refCadres}
-      ${57} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${10}     | ${3200} | ${refCadres}
-      ${57} | ${CatPro573.cadres} | ${LicenciementEconomique.non} | ${23}     | ${3200} | ${refCadres}
+      age   | category            | typeLicenciement      | auMoins15AnsCadre     | seniority | salary  | expectedReferences
+      ${32} | ${CatPro573.autres} | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui} | ${1}      | ${2500} | ${refAutres}
+      ${32} | ${CatPro573.autres} | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui} | ${15}     | ${2500} | ${refAutres}
+      ${32} | ${CatPro573.agents} | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui} | ${1}      | ${2700} | ${refAutres}
+      ${32} | ${CatPro573.agents} | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui} | ${15}     | ${2700} | ${refAutres}
+      ${40} | ${CatPro573.agents} | ${QuestionOuiNon.oui} | ${QuestionOuiNon.oui} | ${1}      | ${2700} | ${refAutres}
+      ${40} | ${CatPro573.agents} | ${QuestionOuiNon.oui} | ${QuestionOuiNon.oui} | ${14}     | ${2700} | ${refAutres}
+      ${57} | ${CatPro573.agents} | ${QuestionOuiNon.oui} | ${QuestionOuiNon.oui} | ${14}     | ${2700} | ${refAutres}
+      ${55} | ${CatPro573.agents} | ${QuestionOuiNon.oui} | ${QuestionOuiNon.oui} | ${15}     | ${2700} | ${refAgentMajoration}
+      ${56} | ${CatPro573.agents} | ${QuestionOuiNon.oui} | ${QuestionOuiNon.oui} | ${25}     | ${2700} | ${refAgentMajoration}
+      ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui} | ${4}      | ${3200} | ${refCadres}
+      ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui} | ${5}      | ${3200} | ${refCadres}
+      ${40} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui} | ${6}      | ${3200} | ${refCadres}
+      ${40} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui} | ${10}     | ${3200} | ${refCadres}
+      ${40} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui} | ${23}     | ${3200} | ${refCadres}
+      ${52} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui} | ${6}      | ${3200} | ${refCadres}
+      ${52} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui} | ${10}     | ${3200} | ${refCadres}
+      ${52} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui} | ${23}     | ${3200} | ${refCadres}
+      ${57} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui} | ${6}      | ${3200} | ${refCadres}
+      ${57} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui} | ${10}     | ${3200} | ${refCadres}
+      ${57} | ${CatPro573.cadres} | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui} | ${23}     | ${3200} | ${refCadres}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, age $age, type de licenciement $typeLicenciement, catégorie $category => $expectedCompensation €",
       ({
@@ -80,12 +80,14 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
         expectedReferences,
         category,
         typeLicenciement,
+        auMoins15AnsCadre,
         age,
       }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0573'",
           "contrat salarié . convention collective . commerces de gros . age":
             age,
+          "contrat salarié . convention collective . commerces de gros . cadre durant au moins de 15 ans": `'${auMoins15AnsCadre}'`,
           "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . commerces de gros . licenciement économique": `'${typeLicenciement}'`,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":

@@ -1,11 +1,12 @@
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../utils";
 import type { SalaryPeriods, SupportedCcIndemniteLicenciement } from "..";
+import { QuestionOuiNon } from "..";
 import { ReferenceSalaryLegal } from "./legal";
 import type { IReferenceSalary, ReferenceSalaryProps } from "./types";
 
 export type CC573ReferenceSalaryProps = {
   salaires: SalaryPeriods[];
-  isEconomicFiring: boolean;
+  licenciementEco: QuestionOuiNon;
 };
 
 export class ReferenceSalary573
@@ -20,9 +21,9 @@ export class ReferenceSalary573
    **/
   computeReferenceSalary({
     salaires = [],
-    isEconomicFiring = false,
+    licenciementEco = QuestionOuiNon.non,
   }: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0573>): number {
-    if (isEconomicFiring) {
+    if (licenciementEco === QuestionOuiNon.oui) {
       const rankedSalaires = rankByMonthArrayDescFrench(salaires);
       const salaryValues = rankedSalaires
         .map((a) => a.value)

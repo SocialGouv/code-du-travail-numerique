@@ -24,7 +24,7 @@ export enum SupportedCcIndemniteLicenciement {
   legal = "legal",
 }
 
-export enum LicenciementEconomique {
+export enum QuestionOuiNon {
   oui = "Oui",
   non = "Non",
 }
