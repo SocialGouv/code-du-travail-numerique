@@ -9,6 +9,7 @@ export type NavigationProps = {
   onPrint?: () => void;
   onNext: () => void;
   onStart: () => void;
+  className: string;
 };
 
 const SimulatorNavigation = ({
@@ -18,10 +19,11 @@ const SimulatorNavigation = ({
   onPrevious,
   onNext,
   onStart,
+  className,
 }: NavigationProps): JSX.Element => {
   return (
     <>
-      <StyledDiv>
+      <StyledDiv className={className}>
         {onPrevious && (
           <StyledButton small type="button" onClick={onPrevious} variant="flat">
             Précédent

@@ -126,45 +126,43 @@ const SimulatorContent = <StepName extends string>({
           steps={stepItems}
           width={STEP_LIST_WIDTH}
         />
-        <ContentWrapper>
-          <Title
-            title={displayTitle}
-            duration={currentStepIndex === 0 ? duration : undefined}
-            icon={icon}
-            hasNoMarginBottom={
-              visibleSteps[currentStepIndex].options?.hasNoMarginBottom
-            }
-          />
-          <div>
-            <Step />
-          </div>
-          <SimulatorNavigation
-            hasError={
-              validators.find(
-                (validator) =>
-                  validator.stepName === visibleSteps[currentStepIndex].name
-              )?.isStepValid === false
-                ? true
-                : false
-            }
-            showNext={currentStepIndex < visibleSteps.length - 1}
-            onPrint={
-              currentStepIndex === visibleSteps.length - 1
-                ? () => printResult(title)
-                : undefined
-            }
-            onPrevious={currentStepIndex > 0 ? () => onPrevStep() : undefined}
-            onNext={onNextStep}
-            onStart={onNextStep}
-          />
-          {visibleSteps[currentStepIndex].options?.annotation && (
-            <p>{visibleSteps[currentStepIndex].options?.annotation}</p>
-          )}
-          {process.env.NODE_ENV !== "production" &&
-            process.env.NODE_ENV !== "test" &&
-            debug}
-        </ContentWrapper>
+        <StyledTitle
+          title={displayTitle}
+          duration={currentStepIndex === 0 ? duration : undefined}
+          icon={icon}
+          hasNoMarginBottom={
+            visibleSteps[currentStepIndex].options?.hasNoMarginBottom
+          }
+        />
+        <StepWrapper>
+          <Step />
+        </StepWrapper>
+        <SimulatorNavigationWrapper
+          hasError={
+            validators.find(
+              (validator) =>
+                validator.stepName === visibleSteps[currentStepIndex].name
+            )?.isStepValid === false
+              ? true
+              : false
+          }
+          showNext={currentStepIndex < visibleSteps.length - 1}
+          onPrint={
+            currentStepIndex === visibleSteps.length - 1
+              ? () => printResult(title)
+              : undefined
+          }
+          onPrevious={currentStepIndex > 0 ? () => onPrevStep() : undefined}
+          onNext={onNextStep}
+          onStart={onNextStep}
+        />
+        {visibleSteps[currentStepIndex].options?.annotation && (
+          <p>{visibleSteps[currentStepIndex].options?.annotation}</p>
+        )}
       </StyledForm>
+      {process.env.NODE_ENV !== "production" &&
+        process.env.NODE_ENV !== "test" &&
+        debug}
     </StyledWrapper>
   );
 };
@@ -197,19 +195,43 @@ const StyledForm = styled.form`
     border: 0;
   }
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: fit-content(100%) 1fr;
+  grid-template-areas:
+    "a b"
+    "a c"
+    "a d";
+  column-gap: 42px;
+  padding-right: 42px;
+  @media (max-width: ${theme.breakpoints.mobile}) {
+    grid-template-areas:
+      "b b"
+      "a a"
+      "c c"
+      "d d";
+    padding: 12px;
+  }
 `;
 
 const StyledStepList = styled(StepList)`
   position: relative !important;
-  grid-row: 1;
+  grid-area: a;
+  @media (max-width: ${theme.breakpoints.mobile}) {
+    border-radius: 0.6rem;
+  }
 `;
 
-const ContentWrapper = styled.div`
-  display: grid;
-  grid-row: 1;
-  grid-template-rows: 100px 1fr;
-  padding: 40px ${spacings.xmedium};
+const StyledTitle = styled(Title)`
+  grid-area: b;
+  margin-top: 42px;
+`;
+
+const StepWrapper = styled.div`
+  grid-area: c;
+  grid-template-columns: 17.5% 31.25% auto;
+`;
+
+const SimulatorNavigationWrapper = styled(SimulatorNavigation)`
+  grid-area: d;
 `;
 
 export default SimulatorLayout;
