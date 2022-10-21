@@ -15,7 +15,6 @@ import getConfig from "next/config";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-import EventTracker from "../src/lib/tracking/EventTracker";
 import Metas from "../src/common/Metas";
 import { CallToActionTile } from "../src/common/tiles/CallToAction";
 import { Highlights } from "../src/home/Highlights";
@@ -108,7 +107,6 @@ const Home = ({ themes = [], highlights = [] }) => (
         </ButtonWrapper>
       </Container>
     </Section>
-    <EventTracker />
   </Layout>
 );
 
