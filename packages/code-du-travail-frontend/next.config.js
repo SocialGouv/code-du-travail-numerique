@@ -18,7 +18,7 @@ default-src 'self' *.travail.gouv.fr *.data.gouv.fr *.fabrique.social.gouv.fr;
 img-src 'self' data: *.fabrique.social.gouv.fr https://travail-emploi.gouv.fr https://mon-entreprise.urssaf.fr https://cdtnadminprod.blob.core.windows.net https://cdtnadmindev.blob.core.windows.net https://logs1412.xiti.com *.xiti.com *.doubleclick.net;
 script-src 'self' https://mon-entreprise.urssaf.fr *.fabrique.social.gouv.fr https://cdnjs.cloudflare.com ${
   process.env.NODE_ENV !== "production" && "'unsafe-eval'"
-} https://www.googletagmanager.com *.doubleclick.net nonce-tarteaucitron nonce-smarttag;
+} https://www.googletagmanager.com *.doubleclick.net 'unsafe-inline';
 frame-src 'self' https://mon-entreprise.urssaf.fr https://matomo.fabrique.social.gouv.fr *.dailymotion.com *.doubleclick.net;
 style-src 'self' 'unsafe-inline';
 font-src 'self' data: blob:;
