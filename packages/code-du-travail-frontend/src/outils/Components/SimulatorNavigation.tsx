@@ -9,7 +9,7 @@ export type NavigationProps = {
   onPrint?: () => void;
   onNext: () => void;
   onStart: () => void;
-  className: string;
+  className?: string;
 };
 
 const SimulatorNavigation = ({
