@@ -202,7 +202,7 @@ const StyledForm = styled.form`
     "a d";
   column-gap: 42px;
   padding-right: 42px;
-  @media (max-width: ${theme.breakpoints.mobile}) {
+  @media (max-width: ${breakpoints.tablet}) {
     grid-template-areas:
       "b b"
       "a a"
@@ -215,7 +215,7 @@ const StyledForm = styled.form`
 const StyledStepList = styled(StepList)`
   position: relative !important;
   grid-area: a;
-  @media (max-width: ${theme.breakpoints.mobile}) {
+  @media (max-width: ${breakpoints.tablet}) {
     border-radius: 0.6rem;
   }
 `;
