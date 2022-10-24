@@ -11,6 +11,10 @@ import {
   Agreement29,
   Agreement29Informations,
 } from "./29-hospitalisation-privee-but-non-lucratif";
+import {
+  Agreement44,
+  Agreement44Informations,
+} from "./44-industries-chimiques";
 
 type Props = {
   idcc: SupportedCcIndemniteLicenciement;
@@ -31,14 +35,18 @@ export default function AgreementsInjector(props: Props) {
     case SupportedCcIndemniteLicenciement.IDCC1527 === props.idcc &&
       props.step === IndemniteLicenciementStepName.Resultat:
       return <Agreement1527Informations />;
-    case (SupportedCcIndemniteLicenciement.IDCC0016 === props.idcc ||
-      SupportedCcIndemniteLicenciement.IDCC0044 === props.idcc) &&
+    case SupportedCcIndemniteLicenciement.IDCC0016 === props.idcc &&
       props.step === IndemniteLicenciementStepName.Salaires:
       return <Agreement16 />;
-    case (SupportedCcIndemniteLicenciement.IDCC0016 === props.idcc ||
-      SupportedCcIndemniteLicenciement.IDCC0044 === props.idcc) &&
+    case SupportedCcIndemniteLicenciement.IDCC0016 === props.idcc &&
       props.step === IndemniteLicenciementStepName.Resultat:
       return <Agreement16Informations />;
+    case SupportedCcIndemniteLicenciement.IDCC0044 === props.idcc &&
+      props.step === IndemniteLicenciementStepName.Salaires:
+      return <Agreement44 />;
+    case SupportedCcIndemniteLicenciement.IDCC0044 === props.idcc &&
+      props.step === IndemniteLicenciementStepName.Resultat:
+      return <Agreement44Informations />;
     case SupportedCcIndemniteLicenciement.IDCC0029 === props.idcc &&
       props.step === IndemniteLicenciementStepName.Salaires:
       return <Agreement29 />;
