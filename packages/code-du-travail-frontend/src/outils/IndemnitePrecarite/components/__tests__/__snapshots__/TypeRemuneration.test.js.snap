@@ -92,6 +92,7 @@ exports[`<TypeRemuneration /> should render 1`] = `
 <div>
   <label
     class="c0"
+    data-testid="question-label"
   >
     <span
       class="c1"

@@ -100,6 +100,7 @@ const PubliQuestion: React.FC<Props> = ({
           showRequired
           icon={icons.Euro}
           subLabel={cdtn.precision}
+          dataTestId={name}
         />
       );
     case RuleType.Date:
@@ -112,7 +113,9 @@ const PubliQuestion: React.FC<Props> = ({
           onChange={onChange}
           error={error}
           id={name}
+          placeholder={"jj/mm/aaaa"}
           showRequired
+          dataTestId={name}
         />
       );
     default:
@@ -127,6 +130,7 @@ const PubliQuestion: React.FC<Props> = ({
           id={name}
           showRequired
           subLabel={cdtn?.precision}
+          dataTestId={name}
         />
       );
   }

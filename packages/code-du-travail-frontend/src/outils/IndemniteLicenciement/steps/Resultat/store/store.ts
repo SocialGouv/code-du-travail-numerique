@@ -30,6 +30,7 @@ import {
 import { MainStore } from "../../../store";
 import { GetState } from "zustand";
 import getAgreementSeniority from "../../../agreements/seniority";
+import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 
 const initialState: ResultStoreData = {
   input: {
@@ -47,10 +48,10 @@ const initialState: ResultStoreData = {
 const createResultStore: StoreSlice<
   ResultStoreSlice,
   AncienneteStoreSlice &
-  ContratTravailStoreSlice &
-  SalairesStoreSlice &
-  CommonAgreementStoreSlice &
-  CommonInformationsStoreSlice
+    ContratTravailStoreSlice &
+    SalairesStoreSlice &
+    CommonAgreementStoreSlice &
+    CommonInformationsStoreSlice
 > = (set, get, publicodesRules) => ({
   resultData: {
     ...initialState,
@@ -106,11 +107,9 @@ const createResultStore: StoreSlice<
       let agreementHasNoLegalIndemnity: boolean;
 
       if (agreement) {
-        const infos = get()
-          .informationsData.input.publicodesInformations.map((v) => ({
-            [v.question.rule.nom]: v.info,
-          }))
-          .reduce((acc, cur) => ({ ...acc, ...cur }), {});
+        const infos = informationToSituation(
+          get().informationsData.input.publicodesInformations
+        );
 
         agreementRefSalary = getAgreementReferenceSalary(
           `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
@@ -124,7 +123,7 @@ const createResultStore: StoreSlice<
               v.info && {
                 label: v.question.rule.titre,
                 value: v.info,
-                unit: v.question.rule.unité
+                unit: v.question.rule.unité,
               }
           )
           .filter((v) => v !== "") as AgreementInformation[];
@@ -166,7 +165,7 @@ const createResultStore: StoreSlice<
           (publicodesSituationConventionnel.value !== null &&
             publicodesSituationLegal.value !== null &&
             publicodesSituationConventionnel.value >
-            publicodesSituationLegal.value)
+              publicodesSituationLegal.value)
         ) {
           isAgreementBetter = true;
         }

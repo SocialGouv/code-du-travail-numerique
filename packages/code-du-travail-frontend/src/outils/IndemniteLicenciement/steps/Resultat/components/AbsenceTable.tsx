@@ -11,7 +11,7 @@ const AbsenceTable = ({ absencesPeriods }: Props): JSX.Element => {
   }
 
   const showDate =
-    absencesPeriods.filter((item) => item.motif.startAt).length > 0;
+    absencesPeriods.filter((item) => item.startedAt !== undefined).length > 0;
 
   return (
     <StyledFilledElementTable>
@@ -27,7 +27,9 @@ const AbsenceTable = ({ absencesPeriods }: Props): JSX.Element => {
           <tr key={"absence-" + index}>
             <td>{period.motif.label}</td>
             <td>{period.durationInMonth} mois</td>
-            <td>{period.startedAt ?? "-"}</td>
+            {showDate && (
+              <td data-testid="absence-date">{period.startedAt ?? "-"}</td>
+            )}
           </tr>
         ))}
       </tbody>

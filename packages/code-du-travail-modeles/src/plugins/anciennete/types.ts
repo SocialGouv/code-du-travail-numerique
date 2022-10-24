@@ -13,7 +13,7 @@ export type Motif = {
   key: MotifKeys;
   label: string;
   value: number;
-  startAt?: boolean;
+  startAt?: (data: Record<string, string | undefined>) => boolean;
 };
 
 export interface ISeniority<T extends SupportedCcIndemniteLicenciement> {

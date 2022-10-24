@@ -22,6 +22,7 @@ type Props = {
   showRequired?: boolean;
   icon?: FunctionComponent;
   id: string;
+  dataTestId?: string;
 };
 
 export default function TextQuestion({
@@ -37,6 +38,7 @@ export default function TextQuestion({
   showRequired,
   icon,
   id,
+  dataTestId,
 }: Props) {
   const InputComponent = inputType === "date" ? InputDate : Input;
   return (
@@ -56,6 +58,7 @@ export default function TextQuestion({
           icon={icon}
           type={inputType === "date" ? "text" : inputType}
           updateOnScrollDisabled
+          data-testid={dataTestId}
         />
       </QuestionWrapper>
       {error && (

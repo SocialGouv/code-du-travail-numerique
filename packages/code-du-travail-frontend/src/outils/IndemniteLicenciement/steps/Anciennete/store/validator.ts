@@ -13,25 +13,41 @@ import {
 } from "./types";
 import frLocale from "date-fns/locale/fr";
 import { Agreement } from "../../../../../conventions/Search/api/type";
-import { DISABLE_ABSENCE, SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
+import {
+  DISABLE_ABSENCE,
+  SupportedCcIndemniteLicenciement,
+} from "@socialgouv/modeles-social";
+import { CommonInformationsStoreInput } from "../../../../CommonSteps/Informations/store";
+import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 
-export const validateStep = (state: AncienneteStoreInput, agreeement?: Agreement) => {
+export const validateStep = (
+  state: AncienneteStoreInput,
+  information: CommonInformationsStoreInput,
+  agreeement?: Agreement
+) => {
   const dEntree = parse(state.dateEntree);
   const dSortie = parse(state.dateSortie);
   const dNotification = parse(state.dateNotification);
   const absencePeriods = state.absencePeriods;
   let errors: AncienneteStoreError = {};
+  const informationData = informationToSituation(
+    information.publicodesInformations
+  );
 
-  const totalAbsence: number = agreeement && DISABLE_ABSENCE.includes(`IDCC${agreeement.num}` as SupportedCcIndemniteLicenciement)
-    ? 0
-    : absencePeriods
-      .filter((period) => Boolean(period.durationInMonth))
-      .reduce((total, item) => {
-        if (!item.durationInMonth) {
-          return total;
-        }
-        return total + item.durationInMonth * item.motif.value;
-      }, 0) / 12;
+  const totalAbsence: number =
+    agreeement &&
+    DISABLE_ABSENCE.includes(
+      `IDCC${agreeement.num}` as SupportedCcIndemniteLicenciement
+    )
+      ? 0
+      : absencePeriods
+          .filter((period) => Boolean(period.durationInMonth))
+          .reduce((total, item) => {
+            if (!item.durationInMonth) {
+              return total;
+            }
+            return total + item.durationInMonth * item.motif.value;
+          }, 0);
 
   // Date d'entrée
   if (!state.dateEntree) {
@@ -109,19 +125,27 @@ export const validateStep = (state: AncienneteStoreInput, agreeement?: Agreement
   if (state.hasAbsenceProlonge === "oui") {
     const absenceErrors: AncienneteAbsenceStoreError[] =
       state.absencePeriods.map((item): AncienneteAbsenceStoreError => {
-        if (!item.durationInMonth || (item.motif.startAt && !item.startedAt)) {
+        if (
+          !item.durationInMonth ||
+          (item.motif.startAt &&
+            item.motif.startAt(informationData) &&
+            !item.startedAt)
+        ) {
           return {
             errorDuration: !item.durationInMonth
               ? "Veuillez saisir la durée de l'absence"
               : undefined,
             errorDate:
-              item.motif.startAt && !item.startedAt
+              item.motif.startAt &&
+              item.motif.startAt(informationData) &&
+              !item.startedAt
                 ? "Veuillez saisir la date de l'absence"
                 : undefined,
           };
         }
         if (
           item.motif.startAt &&
+          item.motif.startAt(informationData) &&
           item.startedAt &&
           state.dateEntree &&
           state.dateSortie &&
@@ -131,7 +155,7 @@ export const validateStep = (state: AncienneteStoreInput, agreeement?: Agreement
           })
         ) {
           return {
-            errorDate: `La date de l'absence doit être comprise entre le ${state.dateEntree} et le ${state.dateSortie} (date d'entrée et de sortie de l'entreprise))`,
+            errorDate: `La date de l'absence doit être comprise entre le ${state.dateEntree} et le ${state.dateSortie} (dates d'entrée et de sortie de l'entreprise)`,
           };
         }
         return {};
