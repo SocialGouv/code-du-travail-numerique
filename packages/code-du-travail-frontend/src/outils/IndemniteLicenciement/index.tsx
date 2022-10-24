@@ -119,6 +119,7 @@ const IndemniteLicenciementSimulator = ({
       resultData: resultDataWithoutPublicodes,
       agreement1516Data: { ...state.agreement1516Data },
       agreement1527Data: { ...state.agreement1527Data },
+      agreement16Data: { ...state.agreement16Data },
     };
   });
 

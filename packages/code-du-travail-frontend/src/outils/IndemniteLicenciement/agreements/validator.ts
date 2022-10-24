@@ -5,6 +5,7 @@ import { MainStore } from "../store";
 import { validateAgreement1516 } from "./1516-organismes-formation";
 import { validateAgreement1527 } from "./1527-immobilier";
 import { validateAgreement29 } from "./29-hospitalisation-privee-but-non-lucratif";
+import { validateAgreement16 } from "./16-transports-routiers";
 
 const validatorAgreement = (
   idcc: SupportedCcIndemniteLicenciement,
@@ -22,6 +23,9 @@ const validatorAgreement = (
     case SupportedCcIndemniteLicenciement.IDCC0029 === idcc &&
       step === IndemniteLicenciementStepName.Salaires:
       return validateAgreement29(get, set);
+    case SupportedCcIndemniteLicenciement.IDCC0016 === idcc &&
+      step === IndemniteLicenciementStepName.Salaires:
+      return validateAgreement16(get, set);
     default:
       return true;
   }

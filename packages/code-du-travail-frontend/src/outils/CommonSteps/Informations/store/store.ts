@@ -4,7 +4,6 @@ import { validateStep } from "./validator";
 
 import {
   CommonInformationsStoreData,
-  CommonInformationsStoreInput,
   CommonInformationsStoreSlice,
   PublicodesInformation,
 } from "./types";
@@ -16,6 +15,7 @@ import {
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../publicodes";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
+import { informationToSituation } from "../utils";
 
 const initialState: CommonInformationsStoreData = {
   input: {
@@ -70,6 +70,7 @@ const createCommonInformationsStore: StoreSlice<
               state.informationsData.input.publicodesInformations = [
                 {
                   order: 0,
+                  id: Math.random().toString(36).substring(2, 15),
                   question,
                   info: undefined,
                 },
@@ -99,21 +100,17 @@ const createCommonInformationsStore: StoreSlice<
       }
       const currentInformations: PublicodesInformation = {
         info: value,
+        id: questionAnswered.id,
         order: questionAnswered.order,
         question: questionAnswered.question,
       };
       const newPublicodesInformations = [
-        ...publicodesInformations.filter(
-          (el) => el.order !== questionAnswered.order
-        ),
         currentInformations,
+        ...publicodesInformations.filter(
+          (el) => el.order < questionAnswered.order
+        ),
       ].sort((a, b) => a.order - b.order);
-      const rules = newPublicodesInformations
-        .filter((el) => el.order <= currentInformations.order)
-        .map((v) => ({
-          [v.question.rule.nom]: v.info,
-        }))
-        .reduce((acc, cur) => ({ ...acc, ...cur }), {});
+      const rules = informationToSituation(newPublicodesInformations);
       let missingArgs: MissingArgs[] = [];
       let blockingNotification: string | undefined = undefined;
       try {
@@ -187,11 +184,7 @@ const createCommonInformationsStore: StoreSlice<
         const publicodesInformations =
           get().informationsData.input.publicodesInformations;
         const agreement = get().agreementData.input.agreement!;
-        const rules = publicodesInformations
-          .map((v) => ({
-            [v.question.rule.nom]: v.info,
-          }))
-          .reduce((acc, cur) => ({ ...acc, ...cur }), {});
+        const rules = informationToSituation(publicodesInformations);
         const isStepSalaryHidden = publicodes.setSituation(
           mapToPublicodesSituationForIndemniteLicenciementConventionnel(
             agreement.num,

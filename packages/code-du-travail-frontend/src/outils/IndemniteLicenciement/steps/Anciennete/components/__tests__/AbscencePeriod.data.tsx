@@ -17,7 +17,7 @@ export const motif2WithDate: Motif = {
   label: "Motif 2",
   key: MotifKeys.greve,
   value: 0.5,
-  startAt: true,
+  startAt: () => true,
 };
 
 export const sampleMotifs: Motif[] = [motif1, motif2];
