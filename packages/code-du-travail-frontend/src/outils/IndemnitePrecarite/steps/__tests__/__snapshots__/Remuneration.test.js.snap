@@ -357,6 +357,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 <div>
   <label
     class="c0"
+    data-testid="question-label"
   >
     <span
       class="c1"
@@ -418,6 +419,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   </div>
   <label
     class="c0"
+    data-testid="question-label"
   >
     <span
       class="c1"
@@ -797,6 +799,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
 <div>
   <label
     class="c0"
+    data-testid="question-label"
   >
     <span
       class="c1"
@@ -858,6 +861,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
   </div>
   <label
     class="c0"
+    data-testid="question-label"
     for="currency-1"
   >
     <span

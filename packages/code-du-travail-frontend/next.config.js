@@ -61,6 +61,7 @@ const nextConfig = {
   },
   swcMinify: true,
   compiler: {
+    reactRemoveProperties: true,
     styledComponents: true,
   },
 };

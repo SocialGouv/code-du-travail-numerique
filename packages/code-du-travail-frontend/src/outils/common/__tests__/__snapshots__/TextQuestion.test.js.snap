@@ -130,6 +130,7 @@ exports[`<TextQuestion /> should render 1`] = `
 <div>
   <label
     class="c0"
+    data-testid="question-label"
     for="1"
   >
     <span

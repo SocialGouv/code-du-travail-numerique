@@ -93,6 +93,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
   <form>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
@@ -330,6 +331,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   <form>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
@@ -382,6 +384,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
     >
       <label
         class="c0"
+        data-testid="question-label"
         for="input-criteria.cddType"
       >
         <span
@@ -673,6 +676,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   <form>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
@@ -725,6 +729,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
     >
       <label
         class="c0"
+        data-testid="question-label"
         for="input-criteria.cddType"
       >
         <span
@@ -946,6 +951,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
   <form>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
@@ -995,6 +1001,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     </div>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
@@ -1048,6 +1055,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     </div>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
@@ -1101,6 +1109,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     </div>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
@@ -1154,6 +1163,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     </div>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"

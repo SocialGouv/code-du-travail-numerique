@@ -100,6 +100,7 @@ const StepSalaires = () => {
               id="salary"
               showRequired
               icon={icons.Euro}
+              dataTestId={"same-salary-value"}
             />
           )}
           {hasSameSalary === "non" && (

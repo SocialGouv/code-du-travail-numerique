@@ -28,6 +28,7 @@ type Props = {
   errors?: Errors;
   showDeleteButton: boolean;
   onDeleteAbsence: (index: number) => void;
+  informationData: Record<string, string | undefined>;
 };
 
 const AbsencePeriod = ({
@@ -40,16 +41,19 @@ const AbsencePeriod = ({
   errors,
   showDeleteButton,
   onDeleteAbsence,
+  informationData,
 }: Props): JSX.Element => {
   const [shouldAskAbsenceDate, askAbsenceDate] = useState(
     absence
-      ? absence.motif?.startAt === true
-      : motifs.length > 0 && motifs[0].startAt
+      ? absence.motif?.startAt && absence.motif?.startAt(informationData)
+      : motifs.length > 0 &&
+          motifs[0].startAt &&
+          motifs[0].startAt(informationData)
   );
 
   const selectMotif = (index: number, value: string) => {
     const motif = motifs.find((motif) => motif.label === value);
-    askAbsenceDate(motif?.startAt === true);
+    askAbsenceDate(motif?.startAt && motif.startAt(informationData));
     onSelectMotif(index, value);
   };
 
@@ -84,6 +88,7 @@ const AbsencePeriod = ({
             id={`${index}.type`}
             onChange={(e) => selectMotif(index, e.target.value)}
             value={absence?.motif?.label}
+            data-testid={`absence-motif-${index}`}
           >
             {motifs.map(({ label, startAt }) => (
               <option key={label} value={label}>
@@ -103,6 +108,7 @@ const AbsencePeriod = ({
             name={`${index}.duration`}
             aria-label={`${index}.duration`}
             updateOnScrollDisabled
+            data-testid={`absence-duree-${index}`}
           />
           {errors?.duration && <StyledError>{errors.duration}</StyledError>}
         </DurationWrapper>
@@ -122,6 +128,7 @@ const AbsencePeriod = ({
                 name={`${index}.dateAbsence`}
                 aria-label={`${index}.dateAbsence`}
                 updateOnScrollDisabled
+                data-testid={`absence-date-${index}`}
               />
               {errors?.absenceDate && (
                 <StyledError>{errors.absenceDate}</StyledError>
