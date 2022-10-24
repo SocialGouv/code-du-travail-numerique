@@ -5,6 +5,10 @@ window.tarteaucitronForceLanguage = currentLanguage;
 
 const URL_TRACKED = [
   {
+    type: "lpcode",
+    url: "/",
+  },
+  {
     type: "outils",
     url: "/outils/simulateur-embauche",
   },

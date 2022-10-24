@@ -3,10 +3,15 @@ type TrackingType =
   | "courrier"
   | "outils"
   | "infos"
-  | "convention_collective";
+  | "convention_collective"
+  | "lpcode";
 type UrlTracked = { type: TrackingType; url: string }[];
 
 export const URL_TRACKED: UrlTracked = [
+  {
+    type: "lpcode",
+    url: "/",
+  },
   {
     type: "outils",
     url: "/outils/simulateur-embauche",

@@ -3,8 +3,8 @@ import React from "react";
 
 import { URL_TRACKED } from "./constants";
 
-const trackingEnabled =
-  process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true";
+// TODO à remplacer avant de mettre en production
+const trackingEnabled = true; // process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT === "true";
 export default function EventTracker(): JSX.Element {
   const router = useRouter();
 
