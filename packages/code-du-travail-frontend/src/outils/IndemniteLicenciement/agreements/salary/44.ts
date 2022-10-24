@@ -15,7 +15,7 @@ export class AgreementSalary44 implements AgreementSalary {
     const sReference = new ReferenceSalaryFactory().create(
       SupportedCcIndemniteLicenciement.IDCC0044
     );
-    const ccInput = get().agreement16Data.input;
+    const ccInput = get().agreement44Data.input;
     const category = get()
       .informationsData.input.publicodesInformations.find(
         (v) =>
