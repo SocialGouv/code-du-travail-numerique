@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import React from "react";
+import Script from "next/script";
 
 import { URL_TRACKED } from "./constants";
 
@@ -24,7 +25,7 @@ export default function EventTracker(): JSX.Element {
     ) {
       window.gtag("event", "conversion", {
         allow_custom_scripts: true,
-        send_to: `DC-3048978/emplo253/${urlToTrack.type}+unique`,
+        send_to: `DC-3048978/emplo253/ttspages+unique`,
         u1: `${window.location.origin}${urlToTrack.url}`,
       });
     }
@@ -35,8 +36,7 @@ export default function EventTracker(): JSX.Element {
   return (
     <>
       {urlToTrack && (
-        // eslint-disable-next-line @next/next/no-sync-scripts
-        <script src="/static/tarteaucitron/initTarteaucitron.js" />
+        <Script src="/static/tarteaucitron/initTarteaucitron.js" />
       )}
     </>
   );

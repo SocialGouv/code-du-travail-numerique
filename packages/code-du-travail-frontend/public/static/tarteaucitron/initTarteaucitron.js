@@ -42,7 +42,7 @@ const URL_TRACKED = [
   },
   {
     type: "courrier",
-    url: "/modeles-de-courriers/rupture-dun-commun-accord-dun-contrat-de-travail-a-duree-determinee",
+    url: "/modeles-de-courriers/rupture-dun-contrat-de-travail-a-duree-determinee-dun-commun-accord",
   },
   {
     type: "courrier",
