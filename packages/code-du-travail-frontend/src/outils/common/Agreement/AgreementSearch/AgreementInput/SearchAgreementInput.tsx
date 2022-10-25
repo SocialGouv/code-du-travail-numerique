@@ -64,7 +64,6 @@ export const SearchAgreementInput = ({
         </p>
       </InfoBulle>
       <BlockInput
-        data-testid="input-agreement"
         placeholder="Ex : Transports routiers ou 1486"
         value={query}
         type="search"

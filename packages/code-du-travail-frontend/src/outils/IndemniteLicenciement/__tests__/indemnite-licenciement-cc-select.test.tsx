@@ -1,8 +1,9 @@
 import { getServerSideProps } from "../../../../pages/outils/[slug]";
 
 import { CalculateurIndemnite } from "..";
+import { ui } from "./ui";
 
-import { render, fireEvent, screen, waitFor } from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 
 global.fetch = jest.fn(() =>
   Promise.resolve({
@@ -96,109 +97,46 @@ test(`
     query: { slug: "indemnite-licenciement" },
   });
   await render(<CalculateurIndemnite {...props} />);
-  fireEvent.click(screen.queryByText("Commencer") as HTMLElement);
-  fireEvent.click(
-    screen.queryByText("Contrat à durée indeterminé (CDI)") as HTMLElement
-  );
-  fireEvent.click(screen.queryAllByText("Non")[0]);
-  fireEvent.click(screen.queryAllByText("Non")[1]);
-  fireEvent.click(screen.queryByText("Suivant") as HTMLElement);
+  fireEvent.click(ui.introduction.startButton.get());
+  fireEvent.click(ui.contract.type.cdi.get());
+  fireEvent.click(ui.contract.fauteGrave.non.get());
+  fireEvent.click(ui.contract.inaptitude.non.get());
+  fireEvent.click(ui.next.get());
 
   // Vérifier la recherche par cc
-  expect(
-    screen.queryByText(
-      "Quel est le nom de la convention collective applicable ?"
-    )
-  ).toBeInTheDocument();
-  fireEvent.click(
-    screen.queryByText(
-      "Je sais quelle est ma convention collective (je la saisis)"
-    ) as HTMLElement
-  );
-  expect(
-    screen.queryByText("Précisez et sélectionnez votre convention collective")
-  ).toBeInTheDocument();
-  expect(screen.getByTestId("input-agreement")).toBeInTheDocument();
-  fireEvent.change(screen.getByTestId("input-agreement"), {
+  fireEvent.click(ui.agreement.agreement.get());
+  fireEvent.change(ui.agreement.agreementInput.get(), {
     target: { value: "16" },
   });
-  waitFor(() =>
-    expect(
-      screen.queryByText(
-        "Transports routiers et activités auxiliaires du transport"
-      )
-    ).toBeInTheDocument()
-  );
   await waitFor(() =>
-    fireEvent.click(
-      screen.queryByText(
-        "Transports routiers et activités auxiliaires du transport"
-      ) as HTMLElement
-    )
+    fireEvent.click(ui.agreement.searchItem.agreement16.get())
   );
-  expect(
-    screen.queryByText(/Vous avez sélectionné la convention collective :/)
-  ).toBeInTheDocument();
+  fireEvent.click(ui.next.get());
+  fireEvent.click(ui.previous.get());
+  expect(ui.agreement.agreementInputConfirm.get()).toBeInTheDocument();
+  expect(ui.agreement.searchItem.agreement16.get()).toBeInTheDocument();
 
   // Vérifier la recherche par entreprise
-  fireEvent.click(
-    screen.queryByText(
-      "Je ne sais pas quelle est ma convention collective (je la recherche)"
-    ) as HTMLElement
-  );
-  expect(
-    screen.queryByText("Précisez et sélectionnez votre entreprise")
-  ).toBeInTheDocument();
-  expect(screen.getByTestId("input-search-company")).toBeInTheDocument();
-  expect(screen.getByTestId("input-search-postal-code")).toBeInTheDocument();
-  fireEvent.change(screen.getByTestId("input-search-company"), {
+  fireEvent.click(ui.agreement.unknownAgreement.get());
+  expect(ui.agreement.agreementCompanyInputAsk.get()).toBeInTheDocument();
+  expect(ui.agreement.agreementCompanyInput.get()).toBeInTheDocument();
+  expect(ui.agreement.agreementPostalCodeInput.get()).toBeInTheDocument();
+  fireEvent.change(ui.agreement.agreementCompanyInput.get(), {
     target: { value: "carrefour" },
   });
-  await waitFor(() =>
-    expect(screen.queryByText("CARREFOUR HYPERMARCHES")).toBeInTheDocument()
-  );
-  await waitFor(() =>
-    fireEvent.click(screen.queryByText("CARREFOUR HYPERMARCHES") as HTMLElement)
-  );
-  expect(
-    screen.queryByText(/Vous avez sélectionné l'entreprise :/)
-  ).toBeInTheDocument();
-  expect(
-    screen.queryByText(
-      "Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)"
-    )
-  ).toBeInTheDocument();
-  expect(
-    screen.queryByText(
-      "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils (IDCC 1486)"
-    )
-  ).toBeInTheDocument();
-  fireEvent.click(
-    screen.queryByText(
-      "Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)"
-    ) as HTMLElement
-  );
-  fireEvent.click(screen.queryByText("Suivant") as HTMLElement);
-  fireEvent.click(screen.queryByText("Précédent") as HTMLElement);
-  expect(
-    screen.queryByText(/Vous avez sélectionné la convention collective :/)
-  ).toBeInTheDocument();
-  expect(
-    screen.queryByText(
-      "Commerce de détail et de gros à prédominance alimentaire"
-    )
-  ).toBeInTheDocument();
+  await waitFor(() => {
+    fireEvent.click(ui.agreement.searchItem.carrefour.get());
+  });
+  expect(ui.agreement.agreementCompanyInputConfirm.get()).toBeInTheDocument();
+  expect(ui.agreement.ccChoice.commerce.get()).toBeInTheDocument();
+  expect(ui.agreement.ccChoice.bureau.get()).toBeInTheDocument();
+  fireEvent.click(ui.agreement.ccChoice.commerce.get());
+  fireEvent.click(ui.next.get());
+  fireEvent.click(ui.previous.get());
+  expect(ui.agreement.agreementCompanyInputConfirm.get()).toBeInTheDocument();
+  expect(ui.agreement.searchItem.carrefour.get()).toBeInTheDocument();
 
   // Vérifier la non sélection d'une cc
-  fireEvent.click(
-    screen.queryByText(
-      "Je ne souhaite pas renseigner ma convention collective (je passe l'étape)"
-    ) as HTMLElement
-  );
-  expect(screen.queryByText("Attention")).toBeInTheDocument();
-  // fireEvent.click(screen.queryByText("Suivant") as HTMLElement);
-  // fireEvent.click(screen.queryByText("Précédent") as HTMLElement);
-  // expect(
-  //   screen.queryByText("Précisez et sélectionnez votre convention collective")
-  // ).toBeInTheDocument();
+  fireEvent.click(ui.agreement.noAgreement.get());
+  expect(ui.warning.get()).toBeInTheDocument();
 });
