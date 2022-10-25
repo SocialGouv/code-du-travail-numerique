@@ -2,6 +2,7 @@ import { OuiNon } from "../../../common";
 import { StepData } from "../../../store";
 
 export type Agreement16StoreInput = {
+  showVariablePay?: boolean;
   hasVariablePay?: OuiNon;
 };
 
@@ -15,6 +16,7 @@ export type Agreement16StoreData = StepData<
 >;
 
 export type Agreement16StoreFn = {
+  onInit: () => void;
   onChangeHasVariablePay: (value: OuiNon) => void;
 };
 

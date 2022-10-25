@@ -8,14 +8,24 @@ describe("<AbsencePeriods />", () => {
   it("should render", () => {
     expect(
       render(
-        <AbsencePeriods onChange={jest.fn()} absences={[]} error={undefined} />
+        <AbsencePeriods
+          onChange={jest.fn()}
+          absences={[]}
+          error={undefined}
+          informationData={{}}
+        />
       )
     ).toBeTruthy();
   });
 
   it("should select an absence", () => {
     const { getByRole, getAllByRole } = render(
-      <AbsencePeriods onChange={jest.fn()} absences={[]} error={undefined} />
+      <AbsencePeriods
+        onChange={jest.fn()}
+        absences={[]}
+        error={undefined}
+        informationData={{}}
+      />
     );
     expect(getAllByRole("option").length).toBe(9);
     expect(
@@ -43,7 +53,12 @@ describe("<AbsencePeriods />", () => {
 
   it("should add a new absence line with absences and select one", () => {
     const { getByText, getAllByRole } = render(
-      <AbsencePeriods onChange={jest.fn()} absences={[]} error={undefined} />
+      <AbsencePeriods
+        onChange={jest.fn()}
+        absences={[]}
+        error={undefined}
+        informationData={{}}
+      />
     );
     expect(getAllByRole("option").length).toBe(9);
     userEvent.click(getByText("Ajouter une absence"));
@@ -65,6 +80,7 @@ describe("<AbsencePeriods />", () => {
           },
         ]}
         error={undefined}
+        informationData={{}}
       />
     );
     expect(
@@ -91,6 +107,7 @@ describe("<AbsencePeriods />", () => {
         onChange={jest.fn()}
         absences={[]}
         error={{ absences: [{ errorDuration: "Ceci est une erreur" }] }}
+        informationData={{}}
       />
     );
 

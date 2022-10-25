@@ -9,9 +9,12 @@ import {
   Agreement16StoreSlice,
 } from "./types";
 import { validateStep } from "./validator";
+import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
 
 const initialState: Agreement16StoreData = {
-  input: {},
+  input: {
+    showVariablePay: false,
+  },
   error: {},
   hasBeenSubmit: false,
   isStepValid: false,
@@ -19,10 +22,25 @@ const initialState: Agreement16StoreData = {
 
 export const createAgreement16StoreSalaires: StoreSlice<
   Agreement16StoreSlice,
-  SalairesStoreSlice & AncienneteStoreSlice
+  SalairesStoreSlice & AncienneteStoreSlice & CommonInformationsStoreSlice
 > = (set, get) => ({
   agreement16Data: { ...initialState },
   agreement16Function: {
+    onInit: () => {
+      const categoryPro =
+        get().informationsData.input.publicodesInformations.find(
+          (item) =>
+            item.question.name ===
+            "contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle"
+        )?.info;
+      set(
+        produce((state: Agreement16StoreSlice) => {
+          state.agreement16Data.input.showVariablePay =
+            get().salairesData.input.hasSameSalary === "non" &&
+            categoryPro === "'Ingénieurs et cadres'";
+        })
+      );
+    },
     onChangeHasVariablePay: (value) => {
       applyGenericValidation(get, set, "hasVariablePay", value);
     },

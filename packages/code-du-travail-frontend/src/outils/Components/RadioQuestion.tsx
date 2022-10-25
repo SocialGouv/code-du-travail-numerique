@@ -55,6 +55,7 @@ export default function RadioQuestion({
             label={question.label}
             value={question.value}
             id={question.id}
+            data-testid={`${name} - ${question.label}`}
             checked={selectedOption === question.value}
             onChange={() => onChange(question.value)}
           />

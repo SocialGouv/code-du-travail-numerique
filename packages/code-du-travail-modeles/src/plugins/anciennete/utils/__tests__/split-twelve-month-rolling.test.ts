@@ -11,7 +11,7 @@ const absences2020: Absence[] = [
     motif: {
       key: MotifKeys.congesSansSolde,
       label: "",
-      startAt: true,
+      startAt: () => true,
       value: 1,
     },
     startedAt: "01/09/2020",
@@ -31,7 +31,7 @@ const absencesNoOverlap: Absence[] = [
     motif: {
       key: MotifKeys.congesSansSolde,
       label: "",
-      startAt: true,
+      startAt: () => true,
       value: 1,
     },
     startedAt: "01/09/2020",
@@ -41,7 +41,7 @@ const absencesNoOverlap: Absence[] = [
     motif: {
       key: MotifKeys.congesSansSolde,
       label: "",
-      startAt: true,
+      startAt: () => true,
       value: 1,
     },
     startedAt: "10/10/2021",
@@ -65,7 +65,7 @@ const absencesWithOverlap: Absence[] = [
     motif: {
       key: MotifKeys.congesSansSolde,
       label: "",
-      startAt: true,
+      startAt: () => true,
       value: 1,
     },
     startedAt: "01/09/2020",
@@ -75,7 +75,7 @@ const absencesWithOverlap: Absence[] = [
     motif: {
       key: MotifKeys.congesSansSolde,
       label: "",
-      startAt: true,
+      startAt: () => true,
       value: 1,
     },
     startedAt: "01/03/2021",
@@ -85,7 +85,7 @@ const absencesWithOverlap: Absence[] = [
     motif: {
       key: MotifKeys.congesSansSolde,
       label: "",
-      startAt: true,
+      startAt: () => true,
       value: 1,
     },
     startedAt: "01/09/2021",

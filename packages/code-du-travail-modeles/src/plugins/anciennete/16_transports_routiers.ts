@@ -1,4 +1,4 @@
-import { differenceInMonths, parse } from "date-fns";
+import { differenceInMonths, isBefore, parse } from "date-fns";
 
 import type { SeniorityResult, SupportedCcIndemniteLicenciement } from "..";
 import type { LegalSeniorityProps } from "./legal";
@@ -30,16 +30,16 @@ export class Seniority16
   }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC0016>): SeniorityResult {
     const dEntree = parse(dateEntree, "dd/MM/yyyy", new Date());
     const dSortie = parse(dateSortie, "dd/MM/yyyy", new Date());
+    const totalAbsence = absencePeriods
+      .filter((period) => Boolean(period.durationInMonth))
+      .reduce((total, item) => {
+        const m = this.motifs.find((motif) => motif.key === item.motif.key);
+        if (!m || !item.durationInMonth) {
+          return total;
+        }
+        return total + Number(item.durationInMonth) * m.value;
+      }, 0);
     if (!isExecutive || !becameExecutiveAt) {
-      const totalAbsence = absencePeriods
-        .filter((period) => Boolean(period.durationInMonth))
-        .reduce((total, item) => {
-          const m = this.motifs.find((motif) => motif.key === item.motif.key);
-          if (!m || !item.durationInMonth) {
-            return total;
-          }
-          return total + Number(item.durationInMonth) * m.value;
-        }, 0);
       return {
         value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
       };
@@ -49,6 +49,14 @@ export class Seniority16
       "dd/MM/yyyy",
       new Date()
     );
+    if (isBefore(becameExecutiveDate, dEntree)) {
+      return {
+        extraInfos: {
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . ancienneté avant cadre": 0,
+        },
+        value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
+      };
+    }
     const periods: YearDetail[] = [
       { begin: dEntree, end: becameExecutiveDate },
       { begin: becameExecutiveDate, end: dSortie },
@@ -77,5 +85,14 @@ export class Seniority16
 
 export const MOTIFS_16: Motif[] = LEGAL_MOTIFS.map((item) => ({
   ...item,
-  startAt: true,
+  startAt: (data) => {
+    return (
+      data[
+        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle"
+      ] === "'Ingénieurs et cadres'" &&
+      data[
+        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien"
+      ] === "'Oui'"
+    );
+  },
 }));

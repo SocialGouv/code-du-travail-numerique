@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { SectionTitle } from "../../../common/stepStyles";
 import { RadioQuestion, TextQuestion } from "../../../Components";
 import { AbsencePeriods } from "./components";
 import { useIndemniteLicenciementStore } from "../../store";
 import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
+import { informationToSituation } from "../../../CommonSteps/Informations/utils";
 
 const StepAnciennete = () => {
   const {
+    init,
     onChangeAbsencePeriods,
     absencePeriods,
     onChangeHasAbsenceProlonge,
@@ -24,7 +26,9 @@ const StepAnciennete = () => {
     errorDateEntree,
     errorAbsencePeriods,
     agreement,
+    informationData,
   } = useIndemniteLicenciementStore((state) => ({
+    init: state.ancienneteFunction.init,
     onChangeAbsencePeriods: state.ancienneteFunction.onChangeAbsencePeriods,
     absencePeriods: state.ancienneteData.input.absencePeriods,
     onChangeHasAbsenceProlonge:
@@ -42,7 +46,15 @@ const StepAnciennete = () => {
     errorDateEntree: state.ancienneteData.error.errorDateEntree,
     errorAbsencePeriods: state.ancienneteData.error.errorAbsencePeriods,
     agreement: state.agreementData.input.agreement,
+    informationData: informationToSituation(
+      state.informationsData.input.publicodesInformations
+    ),
   }));
+
+  useEffect(() => {
+    init();
+  }, [init]);
+
   return (
     <>
       <SectionTitle>Dates d’entrée et de sortie de l’entreprise</SectionTitle>
@@ -55,6 +67,7 @@ const StepAnciennete = () => {
         error={errorDateEntree}
         id="dateEntree"
         showRequired
+        dataTestId={"date-entree"}
       />
       <TextQuestion
         label="Quelle est la date de notification du licenciement&nbsp;?"
@@ -65,6 +78,7 @@ const StepAnciennete = () => {
         error={errorDateNotification}
         id="dateNotification"
         showRequired
+        dataTestId={"date-notification"}
       />
       <TextQuestion
         label="Quelle est la date de sortie de l’entreprise&nbsp;?"
@@ -75,6 +89,7 @@ const StepAnciennete = () => {
         error={errorDateSortie}
         id="dateSortie"
         showRequired
+        dataTestId={"date-sortie"}
       />
       <SectionTitle>Période d’absence prolongée</SectionTitle>
       <RadioQuestion
@@ -107,6 +122,7 @@ const StepAnciennete = () => {
           onChange={onChangeAbsencePeriods}
           absences={absencePeriods}
           error={errorAbsencePeriods}
+          informationData={informationData}
         />
       )}
     </>

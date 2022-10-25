@@ -65,6 +65,7 @@ const SelectQuestion = ({
         id={`input-${name}`}
         onChange={(v) => onChange(v.target.value)}
         value={value}
+        data-testid={name}
       >
         <option disabled value="">
           ...
