@@ -1,44 +1,41 @@
-import { getServerSideProps } from "../../../../pages/outils/[slug]";
-
-import { CalculateurIndemnite } from "..";
+import {
+  CalculateurIndemnite,
+  loadPublicodesRules,
+} from "../../../../src/outils";
 import { ui } from "./ui";
 
-import { render, fireEvent, screen } from "@testing-library/react";
-
-global.fetch = jest.fn(() =>
-  Promise.resolve({
-    json: () => Promise.resolve({ relatedItems: [] }),
-  })
-) as jest.Mock;
+import { render, fireEvent } from "@testing-library/react";
 
 test(`
   - Vérifier l'affichage de l'intro
   - Vérifier l'affichage des questions de contrat
   - Vérifier les bulles d'info
 `, async () => {
-  // @ts-ignore
-  const { props }: Props = await getServerSideProps({
-    query: { slug: "indemnite-licenciement" },
-  });
-  await render(<CalculateurIndemnite {...props} />);
+  await render(
+    <CalculateurIndemnite
+      icon={""}
+      title={""}
+      displayTitle={""}
+      publicodesRules={loadPublicodesRules("indemnite-licenciement")}
+    />
+  );
 
   // Vérifier l'affichage de l'intro
-  expect(ui.title.query()).toBeInTheDocument();
   expect(ui.introduction.startButton.query()).toBeInTheDocument();
   fireEvent.click(ui.introduction.startButton.get());
 
   // Vérifier l'affichage des questions de contrat
   expect(ui.contract.type.question.query()).toBeInTheDocument();
-  expect(ui.contract.type.cdi.get()).toBeInTheDocument();
-  expect(ui.contract.type.cdd.get()).toBeInTheDocument();
+  expect(ui.contract.type.cdi.query()).toBeInTheDocument();
+  expect(ui.contract.type.cdd.query()).toBeInTheDocument();
 
   expect(ui.contract.fauteGrave.question.query()).toBeInTheDocument();
-  expect(ui.contract.fauteGrave.oui.get()).toBeInTheDocument();
-  expect(ui.contract.fauteGrave.non.get()).toBeInTheDocument();
+  expect(ui.contract.fauteGrave.oui.query()).toBeInTheDocument();
+  expect(ui.contract.fauteGrave.non.query()).toBeInTheDocument();
 
   expect(ui.contract.inaptitude.question.query()).toBeInTheDocument();
-  expect(ui.contract.inaptitude.oui.get()).toBeInTheDocument();
-  expect(ui.contract.inaptitude.non.get()).toBeInTheDocument();
+  expect(ui.contract.inaptitude.oui.query()).toBeInTheDocument();
+  expect(ui.contract.inaptitude.non.query()).toBeInTheDocument();
 
   // Vérifier l'affichage des bulles d'info
   fireEvent.click(ui.contract.type.cdd.get());
