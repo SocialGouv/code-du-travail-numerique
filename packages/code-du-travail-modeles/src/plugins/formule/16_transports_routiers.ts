@@ -1,4 +1,4 @@
-import { round, year } from "../../utils";
+import { round, yearPlural } from "../../utils";
 import type { CategoryPro16, SupportedCcIndemniteLicenciement } from "..";
 import type { Formula, FormulaProps, IFormula } from "./types";
 
@@ -157,7 +157,7 @@ export class Formula16
   ): Formula {
     let formula = "";
     const explanations = [];
-    const yearLabel = year(seniority);
+    const yearLabel = yearPlural(seniority);
     if (ratio) {
       formula = `${ratio} * Sref * ${hasCut ? "A1" : "A"}`;
       explanations.push(
@@ -229,7 +229,7 @@ export class Formula16
     if (age > 65) {
       return { explanations, formula };
     }
-    const yearLabel = year(seniority);
+    const yearLabel = yearPlural(seniority);
     const yearTAM = round(seniorityTAM ?? 0) < 2 ? "an" : "ans";
     let base = "";
     if (seniorityTAM) {

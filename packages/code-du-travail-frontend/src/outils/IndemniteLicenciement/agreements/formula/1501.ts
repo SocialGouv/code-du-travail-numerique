@@ -23,7 +23,7 @@ export class AgreementFormula1501 implements AgreementFormula {
           v.question.rule.nom ===
           "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle . licenciement économique"
       )
-      ?.info?.slice(1, -1) as any;
+      ?.info?.slice(1, -1) as "Oui" | "Non" | undefined;
     const year = get().informationsData.input.publicodesInformations.find(
       (v) =>
         v.question.rule.nom ===
@@ -42,7 +42,7 @@ export class AgreementFormula1501 implements AgreementFormula {
       refSalary: agreementRefSalary,
       category,
       age: year ? parseInt(year) : 0,
-      isEconomicFiring: firingType && firingType === "Oui",
+      isEconomicFiring: firingType === "Oui",
     });
   };
 }

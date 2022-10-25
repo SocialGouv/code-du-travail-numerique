@@ -14,7 +14,7 @@ export const round = (value: number, decimals = 2): number => {
   return Math.round(value * tenToPower) / tenToPower;
 };
 
-export const year = (value: number): string => {
+export const yearPlural = (value: number): string => {
   return round(value) < 2 ? "an" : "ans";
 };
 
