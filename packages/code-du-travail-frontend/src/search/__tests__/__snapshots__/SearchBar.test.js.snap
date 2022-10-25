@@ -241,7 +241,7 @@ exports[`<SearchBar /> should render 1`] = `
 `;
 
 exports[`<SearchBar /> should render suggestions 1`] = `
-.c6 {
+.c5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -279,14 +279,14 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   will-change: transform;
 }
 
-.c6:link,
-.c6:visited {
+.c5:link,
+.c5:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c6:not([disabled]):hover {
+.c5:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -295,7 +295,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   border-color: transparent;
 }
 
-.c6[disabled] {
+.c5[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -314,10 +314,6 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   border: 0 !important;
   -webkit-clip: rect(0,0,0,0) !important;
   clip: rect(0,0,0,0) !important;
-}
-
-.c5 {
-  display: inline-block;
 }
 
 .c4 p {
@@ -344,7 +340,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   flex-grow: 1;
 }
 
-.c8 {
+.c7 {
   width: 3rem;
   height: 3rem;
 }
@@ -389,7 +385,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   color: #9298af;
 }
 
-.c7 {
+.c6 {
   position: absolute;
   top: 0;
   right: 0;
@@ -399,13 +395,13 @@ exports[`<SearchBar /> should render suggestions 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c5 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c6 {
+  .c5 {
     display: none;
   }
 }
@@ -478,11 +474,11 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             <div
               class="c4"
             >
-              <div
-                class="c5"
+              <span
+                class=""
               >
                 foo
-              </div>
+              </span>
             </div>
           </li>
           <li
@@ -495,11 +491,11 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             <div
               class="c4"
             >
-              <div
-                class="c5"
+              <span
+                class=""
               >
                 foobar
-              </div>
+              </span>
             </div>
           </li>
           <li
@@ -512,11 +508,11 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             <div
               class="c4"
             >
-              <div
-                class="c5"
+              <span
+                class=""
               >
                 foo bar ?
-              </div>
+              </span>
             </div>
           </li>
           <li
@@ -529,11 +525,11 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             <div
               class="c4"
             >
-              <div
-                class="c5"
+              <span
+                class=""
               >
                 foo bazzz
-              </div>
+              </span>
             </div>
           </li>
         </ul>
@@ -541,13 +537,13 @@ exports[`<SearchBar /> should render suggestions 1`] = `
     </div>
     <button
       aria-label="Lancer ma recherche"
-      class="c6 c7"
+      class="c5 c6"
       title="Lancer ma recherche"
       type="submit"
     >
       <svg
         aria-hidden="true"
-        class="c8"
+        class="c7"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"

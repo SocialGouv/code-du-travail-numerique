@@ -72,6 +72,7 @@ export const SearchAgreementInput = ({
         id="agreement-search"
         onChange={searchInputHandler}
         autoComplete="off"
+        data-testid="agreement-search-input"
       />
 
       {renderResults(state, query)}

@@ -1,28 +1,53 @@
-import { isAfter, format, differenceInMonths } from "date-fns";
-import { isValidDate, deepEqualObject } from "../../../../../lib";
+import {
+  differenceInMonths,
+  format,
+  isAfter,
+  isWithinInterval,
+} from "date-fns";
+import { deepEqualObject, isValidDate } from "../../../../../lib";
 import { parse } from "../../../../common/utils";
-import { MOTIFS } from "../components/AbsencePeriods";
-import { AncienneteStoreInput, AncienneteStoreError } from "./types";
+import {
+  AncienneteAbsenceStoreError,
+  AncienneteStoreError,
+  AncienneteStoreInput,
+} from "./types";
 import frLocale from "date-fns/locale/fr";
+import { Agreement } from "../../../../../conventions/Search/api/type";
+import {
+  DISABLE_ABSENCE,
+  SupportedCcIndemniteLicenciement,
+} from "@socialgouv/modeles-social";
+import { CommonInformationsStoreInput } from "../../../../CommonSteps/Informations/store";
+import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 
-export const validateStep = (state: AncienneteStoreInput) => {
+export const validateStep = (
+  state: AncienneteStoreInput,
+  information: CommonInformationsStoreInput,
+  agreeement?: Agreement
+) => {
   const dEntree = parse(state.dateEntree);
   const dSortie = parse(state.dateSortie);
   const dNotification = parse(state.dateNotification);
   const absencePeriods = state.absencePeriods;
   let errors: AncienneteStoreError = {};
+  const informationData = informationToSituation(
+    information.publicodesInformations
+  );
 
-  const totalAbsence =
-    absencePeriods
-      .filter((period) => Boolean(period.durationInMonth))
-      .reduce((total, item) => {
-        if (!item.durationInMonth) {
-          return total;
-        }
-        const v =
-          MOTIFS.find((motif) => motif.label === item.motif)?.value ?? 0;
-        return total + item.durationInMonth * v;
-      }, 0) / 12;
+  const totalAbsence: number =
+    agreeement &&
+    DISABLE_ABSENCE.includes(
+      `IDCC${agreeement.num}` as SupportedCcIndemniteLicenciement
+    )
+      ? 0
+      : absencePeriods
+          .filter((period) => Boolean(period.durationInMonth))
+          .reduce((total, item) => {
+            if (!item.durationInMonth) {
+              return total;
+            }
+            return total + item.durationInMonth * item.motif.value;
+          }, 0);
 
   // Date d'entrée
   if (!state.dateEntree) {
@@ -96,12 +121,61 @@ export const validateStep = (state: AncienneteStoreInput) => {
     errors.errorAbsenceProlonge = undefined;
   }
 
-  if (
-    state.hasAbsenceProlonge === "oui" &&
-    (state.absencePeriods.find((v) => !v.durationInMonth) ||
-      state.absencePeriods.length === 0)
-  ) {
-    errors.errorAbsencePeriods = "Vous devez renseigner tous les champs";
+  // Check all absences
+  if (state.hasAbsenceProlonge === "oui") {
+    const absenceErrors: AncienneteAbsenceStoreError[] =
+      state.absencePeriods.map((item): AncienneteAbsenceStoreError => {
+        if (
+          !item.durationInMonth ||
+          (item.motif.startAt &&
+            item.motif.startAt(informationData) &&
+            !item.startedAt)
+        ) {
+          return {
+            errorDuration: !item.durationInMonth
+              ? "Veuillez saisir la durée de l'absence"
+              : undefined,
+            errorDate:
+              item.motif.startAt &&
+              item.motif.startAt(informationData) &&
+              !item.startedAt
+                ? "Veuillez saisir la date de l'absence"
+                : undefined,
+          };
+        }
+        if (
+          item.motif.startAt &&
+          item.motif.startAt(informationData) &&
+          item.startedAt &&
+          state.dateEntree &&
+          state.dateSortie &&
+          !isWithinInterval(parse(item.startedAt), {
+            start: dEntree,
+            end: dSortie,
+          })
+        ) {
+          return {
+            errorDate: `La date de l'absence doit être comprise entre le ${state.dateEntree} et le ${state.dateSortie} (dates d'entrée et de sortie de l'entreprise)`,
+          };
+        }
+        return {};
+      });
+    if (absenceErrors.length === 0) {
+      errors.errorAbsencePeriods = {
+        global: "Vous devez renseigner tous les champs",
+      };
+    } else if (
+      absenceErrors.filter(
+        (item) =>
+          item.errorDuration !== undefined || item.errorDate !== undefined
+      ).length > 0
+    ) {
+      errors.errorAbsencePeriods = {
+        absences: absenceErrors,
+      };
+    } else {
+      errors.errorAbsencePeriods = undefined;
+    }
   } else {
     errors.errorAbsencePeriods = undefined;
   }

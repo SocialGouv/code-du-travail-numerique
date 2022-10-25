@@ -3,9 +3,11 @@ import React, { FunctionComponent } from "react";
 
 import styled from "styled-components";
 import xss from "xss";
+import Html from "../../common/Html";
 import { InlineError } from "../common/ErrorField";
 import { Tooltip, Question } from "../common/Question";
 import { SmallText } from "../common/stepStyles";
+import { SubLabel } from "./SelectQuestion";
 
 type Props = {
   onChange: (value: string) => void;
@@ -15,10 +17,12 @@ type Props = {
   inputType?: "date" | "number" | "text";
   value: string | undefined;
   placeholder?: string;
+  subLabel?: string;
   smallText?: string;
   showRequired?: boolean;
   icon?: FunctionComponent;
   id: string;
+  dataTestId?: string;
 };
 
 export default function TextQuestion({
@@ -30,17 +34,20 @@ export default function TextQuestion({
   placeholder,
   onChange,
   smallText,
+  subLabel,
   showRequired,
   icon,
   id,
+  dataTestId,
 }: Props) {
   const InputComponent = inputType === "date" ? InputDate : Input;
   return (
-    <>
+    <Wrapper>
       <Question required={showRequired} tooltip={tooltip} htmlFor={id}>
-        {label}
+        <Html as="span">{label}</Html>
       </Question>
       {smallText && <SmallText>{smallText}</SmallText>}
+      {subLabel && <SubLabel>{subLabel}</SubLabel>}
       <QuestionWrapper>
         <InputComponent
           id={id}
@@ -51,32 +58,35 @@ export default function TextQuestion({
           icon={icon}
           type={inputType === "date" ? "text" : inputType}
           updateOnScrollDisabled
+          data-testid={dataTestId}
         />
-        {error && (
-          <ErrorWrapper>
-            <InlineError>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: xss(error),
-                }}
-              />
-            </InlineError>
-          </ErrorWrapper>
-        )}
       </QuestionWrapper>
-    </>
+      {error && (
+        <ErrorWrapper>
+          <InlineError>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: xss(error),
+              }}
+            />
+          </InlineError>
+        </ErrorWrapper>
+      )}
+    </Wrapper>
   );
 }
 
 const { spacings } = theme;
 
-const QuestionWrapper = styled.div`
-  display: flex;
-  align-items: center;
+const Wrapper = styled.div`
   margin-bottom: ${spacings.base};
 `;
 
+const QuestionWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export const ErrorWrapper = styled.div`
-  display: inline-block;
-  margin-left: ${spacings.medium};
+  display: flex;
 `;

@@ -93,16 +93,17 @@ exports[`<StepInfosGenerales /> should render 1`] = `
   <form>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
       >
         Quel est le type du contrat de travail ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
+        <span
+          class="c2"
+        >
+           (obligatoire)
+        </span>
       </span>
     </label>
     <div
@@ -330,16 +331,17 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   <form>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
       >
         Quel est le type du contrat de travail ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
+        <span
+          class="c2"
+        >
+           (obligatoire)
+        </span>
       </span>
     </label>
     <div
@@ -382,17 +384,18 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
     >
       <label
         class="c0"
+        data-testid="question-label"
         for="input-criteria.cddType"
       >
         <span
           class="c1"
         >
           Quel est le type de CDD ?
-        </span>
-        <span
-          class="c2"
-        >
-           (obligatoire)
+          <span
+            class="c2"
+          >
+             (obligatoire)
+          </span>
         </span>
       </label>
       <div
@@ -674,16 +677,17 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   <form>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
       >
         Quel est le type du contrat de travail ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
+        <span
+          class="c2"
+        >
+           (obligatoire)
+        </span>
       </span>
     </label>
     <div
@@ -726,17 +730,18 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
     >
       <label
         class="c0"
+        data-testid="question-label"
         for="input-criteria.cddType"
       >
         <span
           class="c1"
         >
           Quel est le type de CDD ?
-        </span>
-        <span
-          class="c2"
-        >
-           (obligatoire)
+          <span
+            class="c2"
+          >
+             (obligatoire)
+          </span>
         </span>
       </label>
       <div
@@ -948,16 +953,17 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
   <form>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
       >
         Quel est le type du contrat de travail ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
+        <span
+          class="c2"
+        >
+           (obligatoire)
+        </span>
       </span>
     </label>
     <div
@@ -997,16 +1003,17 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     </div>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
       >
         S’agit-il d’un contrat de mission-formation ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
+        <span
+          class="c2"
+        >
+           (obligatoire)
+        </span>
       </span>
     </label>
     <div
@@ -1050,16 +1057,17 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     </div>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
       >
         Le contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave du salarié, cas de force majeure ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
+        <span
+          class="c2"
+        >
+           (obligatoire)
+        </span>
       </span>
     </label>
     <div
@@ -1103,16 +1111,17 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     </div>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
       >
         À la fin du contrat d'intérim, le salarié a-t-il été immédiatement embauché en CDI au sein de l'entreprise dans laquelle il effectuait sa mission ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
+        <span
+          class="c2"
+        >
+           (obligatoire)
+        </span>
       </span>
     </label>
     <div
@@ -1156,16 +1165,17 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     </div>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
       >
         Le salarié a-t-il refusé la mise en œuvre de la souplesse prévue dans le contrat d’intérim ?
-      </span>
-      <span
-        class="c2"
-      >
-         (obligatoire)
+        <span
+          class="c2"
+        >
+           (obligatoire)
+        </span>
       </span>
     </label>
     <div

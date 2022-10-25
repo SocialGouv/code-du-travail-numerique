@@ -1,13 +1,13 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../internal/merger";
+import { mergePreavisRetraiteModels } from "../../../internal/merger";
 import { getReferences } from "../../../utils";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../common/legal-references";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergePreavisRetraiteModels());
 
 const DepartRetraiteCcReferences = [
   ...DepartRetraiteReferences,
@@ -45,7 +45,6 @@ describe("Références juridiques pour le préavis de retraite de la CC 1486", (
         "contrat salarié . convention collective": "'IDCC1486'",
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
     );
     expect(result).toHaveLength(DepartRetraiteCcReferences.length);
@@ -64,7 +63,6 @@ describe("Références juridiques pour le préavis de retraite de la CC 1486", (
         "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-        "préavis de retraite": "oui",
       })
     );
 

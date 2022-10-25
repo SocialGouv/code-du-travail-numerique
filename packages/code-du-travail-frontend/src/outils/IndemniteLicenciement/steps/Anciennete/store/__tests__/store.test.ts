@@ -1,6 +1,6 @@
 import { loadPublicodesRules } from "../../../../../api";
 import { createIndemniteLicenciementStore } from "../../../../store";
-import { MOTIFS } from "../../components/AbsencePeriods";
+import { MotifKeys } from "@socialgouv/modeles-social";
 
 describe("Ancienneté store", () => {
   let store = createIndemniteLicenciementStore(
@@ -58,13 +58,21 @@ describe("Ancienneté store", () => {
     store.getState().ancienneteFunction.onChangeAbsencePeriods([
       {
         durationInMonth: 2,
-        motif: MOTIFS[0].label,
+        motif: {
+          label: "Label",
+          key: MotifKeys.maladieNonPro,
+          value: 1,
+        },
       },
     ]);
     expect(store.getState().ancienneteData.input.absencePeriods).toStrictEqual([
       {
         durationInMonth: 2,
-        motif: MOTIFS[0].label,
+        motif: {
+          label: "Label",
+          key: MotifKeys.maladieNonPro,
+          value: 1,
+        },
       },
     ]);
     expect(store.getState().ancienneteData.input.dateEntree).toBe("20/02/2020");
@@ -104,7 +112,7 @@ describe("Ancienneté store", () => {
   });
 
   it("should render an error for date de notification > 18 last months", () => {
-    store.getState().ancienneteFunction.onChangeDateNotification("05/05/2018"); // TODO: warning en 2020 ça marche pas
+    store.getState().ancienneteFunction.onChangeDateNotification("05/05/2018");
     const isValid = store
       .getState()
       .ancienneteFunction.onValidateStepAnciennete();
@@ -156,9 +164,9 @@ describe("Ancienneté store", () => {
       .getState()
       .ancienneteFunction.onValidateStepAnciennete();
     expect(isValid).toBe(false);
-    expect(store.getState().ancienneteData.error.errorAbsencePeriods).toBe(
-      "Vous devez renseigner tous les champs"
-    );
+    expect(
+      store.getState().ancienneteData.error.errorAbsencePeriods?.global
+    ).toBe("Vous devez renseigner tous les champs");
   });
 
   it("should validate the step 🚀", () => {
@@ -169,7 +177,11 @@ describe("Ancienneté store", () => {
     store.getState().ancienneteFunction.onChangeAbsencePeriods([
       {
         durationInMonth: 2,
-        motif: MOTIFS[0].label,
+        motif: {
+          label: "Label",
+          key: MotifKeys.maladieNonPro,
+          value: 1,
+        },
       },
     ]);
     const isValid = store

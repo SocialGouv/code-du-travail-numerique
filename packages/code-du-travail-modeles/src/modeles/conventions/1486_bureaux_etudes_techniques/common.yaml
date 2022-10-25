@@ -1,0 +1,9 @@
+# Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987.
+contrat salarié . convention collective . bureaux études techniques:
+  description: Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987.
+  applicable si: convention collective = 'IDCC1486'
+  valeur: oui
+  cdtn:
+    idcc: 1486
+    préavis-retraite: true
+    indemnité-licenciement: true

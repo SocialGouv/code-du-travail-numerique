@@ -120,17 +120,18 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
   >
     <label
       class="c1"
+      data-testid="question-label"
       for="input-foo"
     >
       <span
         class="c2"
       >
         Une question ?
-      </span>
-      <span
-        class="c3"
-      >
-         (obligatoire)
+        <span
+          class="c3"
+        >
+           (obligatoire)
+        </span>
       </span>
     </label>
     <div
@@ -314,17 +315,18 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
   >
     <label
       class="c1"
+      data-testid="question-label"
       for="input-foo"
     >
       <span
         class="c2"
       >
         Une question ?
-      </span>
-      <span
-        class="c3"
-      >
-         (obligatoire)
+        <span
+          class="c3"
+        >
+           (obligatoire)
+        </span>
       </span>
     </label>
     <div

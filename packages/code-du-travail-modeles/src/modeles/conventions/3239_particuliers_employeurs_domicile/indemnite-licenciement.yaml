@@ -1,0 +1,143 @@
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement:
+  applicable si: indemnité de licenciement
+  valeur: oui
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Assistant maternel: "'Assistant maternel'"
+      Salarié du particulier employeur: "'Salarié du particulier employeur'"
+
+# Assistant maternel
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle:
+  applicable si: catégorie professionnelle = 'Assistant maternel'
+  valeur: oui
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement:
+  titre: Le licenciement fait suite à la suspension, à la modification ou au retrait de l'agrément de l'assistant maternel
+  question: La rupture du contrat de travail fait-elle suite à la suspension, à la modification ou au retrait de l'agrément de l'assistant maternel ?
+  cdtn:
+    type: oui-non
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . notification bloquante:
+  applicable si: type de licenciement = 'Oui'
+  type: notification
+  description: L’indemnité de licenciement n’est pas due en cas de suspension, modification ou retrait de l'agrément de l'assistant maternel.
+  valeur: oui
+  cdtn:
+    bloquante: oui
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres:
+  applicable si: type de licenciement = 'Non'
+  valeur: oui
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires:
+  titre: Total des salaires perçus pendant la totalité du contrat de travail
+  question: Indiquez le total des salaires perçus pendant la totalité du contrat de travail ?
+  unité: €
+  cdtn:
+    type: montant
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires . un quatre vingtième du total:
+  valeur:
+    produit:
+      assiette: total salaires
+      facteur: 1 / 80
+  unité: €
+
+#  (1/80 * Sref)
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si: catégorie professionnelle = 'Assistant maternel' # ne fonctionne sans cette règle qu'on rappelle, je pense que c'est un bug
+  variations:
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 9 mois
+      alors: un quatre vingtième du total
+    - sinon: 0
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 47-1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942116?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942116
+    Article 47-2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942117?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942117
+    Article 48-1-3-1-1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942139?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942139
+    Article 48-1-3-4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942144?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942144
+    Article 49: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942151?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942151
+    Article 60: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942169?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942169
+    Article 90-1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942236?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942236
+    Article 121-1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942321?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942321
+
+## Salarié du particulier employeur
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . pe:
+  applicable si: catégorie professionnelle = 'Salarié du particulier employeur'
+  valeur: oui
+
+### Formules
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . pe . jusqu'à dix ans ou moins:
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - 10 an
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . pe . au dela de dix ans:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 10 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . pe . dix ans ou moins:
+  valeur:
+    produit:
+      assiette: jusqu'à dix ans ou moins * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      facteur: 1 / 4
+  unité: €
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . pe . plus de dix ans:
+  valeur:
+    produit:
+      assiette: au dela de dix ans * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      facteur: 1 / 3
+  unité: €
+
+#  (1/4 * Sref * A1) + (1/3 * Sref * A2)
+#  A1 : Ancienneté de 10 ans ou moins
+#  A2 : Ancienneté au delà de 10 ans
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . pe . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  variations:
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
+      alors:
+        somme:
+          - dix ans ou moins
+          - plus de dix ans
+    - sinon: 0
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 47-1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942116?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942116
+    Article 47-2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942117?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942117
+    Article 48-1-3-1-1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942139?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942139
+    Article 48-1-3-4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942144?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942144
+    Article 49: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942151?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942151
+    Article 60: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942169?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942169
+    Article 142: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942377?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942377
+    Article 163-1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942458?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942458
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . notification:
+  type: notification
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Assistant maternel'
+      - contrat salarié . indemnité de licenciement . date de notification < 01/01/2022
+  description: "Si la rupture du contrat de travail a été notifiée avant le 01/01/2022, l’indemnité de licenciement peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2021 c’est la convention collective “Assistants maternels du particulier employeur (IDCC 2395)” qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable depuis le 01/01/2022."
+  valeur: oui
+
+contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . suppression de l'étape salaire:
+  remplace: contrat salarié . indemnité de licenciement . étape salaire désactivée
+  applicable si:
+    toutes ces conditions:
+      - catégorie professionnelle = 'Assistant maternel'
+      - contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement = 'Non'
+  valeur: oui

@@ -29,6 +29,7 @@ const PubliReferences: React.FC<Props> = ({ references }) => (
               </li>
             ))}
         </ul>
+        {references.length === 0 && <li>Source non disponible...</li>}
       </>
     )}
   </>

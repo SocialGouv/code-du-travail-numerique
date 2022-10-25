@@ -1,0 +1,8 @@
+contrat salarié . convention collective . organismes de formation:
+  description: Convention collective nationale des organismes de formation du 10 juin 1988.
+  applicable si: convention collective = 'IDCC1516'
+  valeur: oui
+  cdtn:
+    idcc: 1516
+    préavis-retraite: true
+    indemnité-licenciement: true

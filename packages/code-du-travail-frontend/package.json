@@ -49,7 +49,7 @@
     "katex": "^0.13.13",
     "lit-element": "3.0.2",
     "memoizee": "^0.4.15",
-    "next": "^12.1.0",
+    "next": "12.1.6",
     "next-transpile-modules": "^8.0.0",
     "p-debounce": "^2.1.0",
     "prop-types": "^15.8.1",
@@ -74,7 +74,7 @@
     "unified": "^9.2.2",
     "uuid": "^8.3.2",
     "xss": "^1.0.10",
-    "zustand": "^4.0.0-rc.0"
+    "zustand": "^4.0.0-rc.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.0",
@@ -92,7 +92,7 @@
     "babel-plugin-styled-components": "^2.0.2",
     "cdtn-types": "^4.82.0",
     "eslint": "8.7.0",
-    "eslint-config-next": "12.0.10",
+    "eslint-config-next": "12.1.6",
     "eslint-plugin-storybook": "^0.5.7",
     "esm": "^3.2.25",
     "ignore-loader": "^0.1.2",
@@ -107,6 +107,7 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-order": "^4.1.0",
     "stylelint-processor-styled-components": "^1.10.0",
-    "supertest": "^6.1.6"
+    "supertest": "^6.1.6",
+    "testing-library-selector": "0.2.1"
   }
 }

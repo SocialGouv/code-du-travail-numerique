@@ -1,15 +1,27 @@
 import {
+  Formula,
   IndemniteLicenciementPublicodes,
+  Notification,
   PublicodesIndemniteLicenciementResult,
+  References,
+  SeniorityResult,
 } from "@socialgouv/modeles-social";
+import { AgreementInformation } from "../../../common";
 import { StepData } from "../../../store";
-import { InfoCalcul } from "../../../common/usecase/generateExplanation";
 
 export type ResultStoreInput = {
-  publicodesResult: PublicodesIndemniteLicenciementResult | null;
-  seniority: number;
-  salaireRef: number;
-  infoCalcul?: InfoCalcul;
+  publicodesLegalResult: PublicodesIndemniteLicenciementResult;
+  publicodesAgreementResult?: PublicodesIndemniteLicenciementResult;
+  agreementSeniority?: SeniorityResult;
+  legalSeniority: number;
+  legalFormula: Formula;
+  agreementFormula?: Formula;
+  legalReferences: References[];
+  agreementReferences?: References[];
+  isAgreementBetter: boolean;
+  agreementInformations?: AgreementInformation[];
+  agreementNotifications?: Notification[];
+  agreementHasNoLegalIndemnity?: boolean;
 };
 
 export type ResultStoreError = {};

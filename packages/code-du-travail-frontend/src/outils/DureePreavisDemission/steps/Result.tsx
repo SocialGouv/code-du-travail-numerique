@@ -1,4 +1,5 @@
 import { preavisDemissionData as data } from "@cdt/data";
+import { OldReference } from "@socialgouv/modeles-social";
 import PropTypes from "prop-types";
 import React from "react";
 import Disclaimer from "../../common/Disclaimer";
@@ -17,7 +18,7 @@ import {
   SmallText,
 } from "../../common/stepStyles";
 import { WizardStepProps } from "../../common/type/WizardType";
-import { formatRefs, OldReference } from "../../publicodes/";
+import { formatRefs } from "../../publicodes/";
 import { calculateNumberOfElements } from "../../utils";
 
 function DisclaimerBox() {

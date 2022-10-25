@@ -2,6 +2,12 @@ import create, { SetState, GetState, StoreApi } from "zustand";
 
 import createContext from "zustand/context";
 import {
+  AgreementStoreError,
+  AgreementStoreInput,
+  AgreementStoreSlice,
+  createRootAgreementsStore,
+} from "./agreements";
+import {
   AncienneteStoreSlice,
   AncienneteStoreInput,
   AncienneteStoreError,
@@ -25,29 +31,44 @@ import {
   SalairesStoreError,
   createSalairesStore,
 } from "./steps/Salaires/store";
-
-export type StoreSlice<T extends object, E extends object = T> = (
-  set: SetState<E extends T ? E : E & T>,
-  get: GetState<E extends T ? E : E & T>,
-  publicodesRules?: string
-) => T;
+import {
+  CommonAgreementStoreError,
+  CommonAgreementStoreInput,
+  CommonAgreementStoreSlice,
+  createCommonAgreementStore,
+} from "../CommonSteps/Agreement/store";
+import {
+  CommonInformationsStoreError,
+  CommonInformationsStoreInput,
+  CommonInformationsStoreSlice,
+  createCommonInformationsStore,
+} from "../CommonSteps/Informations/store";
 
 export type MainStore = ContratTravailStoreSlice &
   AncienneteStoreSlice &
   SalairesStoreSlice &
-  ResultStoreSlice;
+  ResultStoreSlice &
+  AgreementStoreSlice &
+  CommonAgreementStoreSlice &
+  CommonInformationsStoreSlice;
 
 export type StepData<
   T extends
     | AncienneteStoreInput
     | SalairesStoreInput
     | ContratTravailStoreInput
-    | ResultStoreInput,
+    | ResultStoreInput
+    | AgreementStoreInput
+    | CommonAgreementStoreInput
+    | CommonInformationsStoreInput,
   U extends
     | AncienneteStoreError
     | SalairesStoreError
     | ContratTravailStoreError
     | ResultStoreError
+    | AgreementStoreError
+    | CommonAgreementStoreError
+    | CommonInformationsStoreError
 > = {
   input: T;
   error: U;
@@ -64,6 +85,9 @@ const createRootSlice = (
   ...createAncienneteStore(set, get),
   ...createSalairesStore(set, get),
   ...createResultStore(set, get, publicodesRules),
+  ...createRootAgreementsStore(set, get),
+  ...createCommonAgreementStore(set, get),
+  ...createCommonInformationsStore(set, get, publicodesRules),
 });
 
 const createStore = (publicodesRules: string) =>

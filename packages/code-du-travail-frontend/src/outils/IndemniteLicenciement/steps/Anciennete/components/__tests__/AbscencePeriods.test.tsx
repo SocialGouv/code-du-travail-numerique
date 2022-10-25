@@ -2,21 +2,32 @@ import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import AbsencePeriods from "../AbsencePeriods";
+import { MotifKeys } from "@socialgouv/modeles-social";
 
 describe("<AbsencePeriods />", () => {
   it("should render", () => {
     expect(
       render(
-        <AbsencePeriods onChange={jest.fn()} absences={[]} error={undefined} />
+        <AbsencePeriods
+          onChange={jest.fn()}
+          absences={[]}
+          error={undefined}
+          informationData={{}}
+        />
       )
     ).toBeTruthy();
   });
 
   it("should select an absence", () => {
     const { getByRole, getAllByRole } = render(
-      <AbsencePeriods onChange={jest.fn()} absences={[]} error={undefined} />
+      <AbsencePeriods
+        onChange={jest.fn()}
+        absences={[]}
+        error={undefined}
+        informationData={{}}
+      />
     );
-    expect(getAllByRole("option").length).toBe(10);
+    expect(getAllByRole("option").length).toBe(9);
     expect(
       getByRole("option", { name: "Congé pour création d'entreprise" })
     ).toBeInTheDocument();
@@ -42,11 +53,16 @@ describe("<AbsencePeriods />", () => {
 
   it("should add a new absence line with absences and select one", () => {
     const { getByText, getAllByRole } = render(
-      <AbsencePeriods onChange={jest.fn()} absences={[]} error={undefined} />
+      <AbsencePeriods
+        onChange={jest.fn()}
+        absences={[]}
+        error={undefined}
+        informationData={{}}
+      />
     );
-    expect(getAllByRole("option").length).toBe(10);
+    expect(getAllByRole("option").length).toBe(9);
     userEvent.click(getByText("Ajouter une absence"));
-    expect(getAllByRole("option").length).toBe(20);
+    expect(getAllByRole("option").length).toBe(18);
   });
 
   it("should render absences by default", () => {
@@ -55,11 +71,16 @@ describe("<AbsencePeriods />", () => {
         onChange={jest.fn()}
         absences={[
           {
-            motif: "Congé parental d'éducation",
+            motif: {
+              key: MotifKeys.congesParentalEducation,
+              label: "Congé parental d'éducation",
+              value: 0.5,
+            },
             durationInMonth: 3,
           },
         ]}
         error={undefined}
+        informationData={{}}
       />
     );
     expect(
@@ -85,7 +106,8 @@ describe("<AbsencePeriods />", () => {
       <AbsencePeriods
         onChange={jest.fn()}
         absences={[]}
-        error={"Ceci est une erreur"}
+        error={{ absences: [{ errorDuration: "Ceci est une erreur" }] }}
+        informationData={{}}
       />
     );
 

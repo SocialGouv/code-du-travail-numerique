@@ -5,7 +5,7 @@ import {
   ContratTravailStoreSlice,
 } from "./types";
 import produce from "immer";
-import { StoreSlice } from "../../../store";
+import { StoreSlice } from "../../../../types";
 import { validateStep } from "./validator";
 
 const initialState: ContratTravailStoreData = {
@@ -37,6 +37,7 @@ const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
       const { isValid, errorState } = validateStep(
         get().contratTravailData.input
       );
+
       set(
         produce((state: ContratTravailStoreSlice) => {
           state.contratTravailData.hasBeenSubmit = isValid ? false : true;

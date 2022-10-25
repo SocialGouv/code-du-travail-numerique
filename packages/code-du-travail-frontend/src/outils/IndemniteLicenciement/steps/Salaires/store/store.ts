@@ -5,15 +5,25 @@ import {
   SalairesStoreInput,
   SalairesStoreSlice,
 } from "./types";
-import { StoreSlice } from "../../../store";
+import { StoreSlice } from "../../../../types";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { validateStep } from "./validator";
-import { setSalaryPeriods } from "../../../common/";
+import { ContratTravailStoreSlice } from "../../ContratTravail/store";
+import { validatorAgreement } from "../../../agreements";
+import {
+  ReferenceSalaryFactory,
+  SalaryPeriods,
+  SupportedCcIndemniteLicenciement,
+} from "@socialgouv/modeles-social";
+import { IndemniteLicenciementStepName } from "../../..";
+import { deepMergeArray } from "../../../../../lib";
+import { computeSalaryPeriods } from "../../../common";
+import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 
 const initialState: SalairesStoreData = {
   input: {
     salaryPeriods: [],
-    primes: [],
+    refSalary: 0,
   },
   error: {},
   hasBeenSubmit: false,
@@ -22,72 +32,142 @@ const initialState: SalairesStoreData = {
 
 const createSalairesStore: StoreSlice<
   SalairesStoreSlice,
-  AncienneteStoreSlice
+  AncienneteStoreSlice & ContratTravailStoreSlice & CommonAgreementStoreSlice
 > = (set, get) => ({
   salairesData: { ...initialState },
   salairesFunction: {
+    initFieldSalaries: () => {
+      const ancienneteInput = get().ancienneteData.input;
+      const periods = computeSalaryPeriods({
+        dateEntree: ancienneteInput.dateEntree ?? "",
+        dateNotification: ancienneteInput.dateNotification ?? "",
+      });
+      const p: SalaryPeriods[] = periods.map((v) => ({
+        month: v,
+        value: undefined,
+      }));
+      const salaryPeriods = deepMergeArray(
+        p,
+        get().salairesData.input.salaryPeriods,
+        "month"
+      );
+      set(
+        produce((state: SalairesStoreSlice) => {
+          state.salairesData.input.salaryPeriods = salaryPeriods;
+        })
+      );
+    },
     onChangeHasTempsPartiel: (value) => {
       applyGenericValidation(get, set, "hasTempsPartiel", value);
     },
-    onChangeHasSameSalaire: (value) => {
-      applyGenericValidation(get, set, "hasSameSalaire", value);
-      setSalaryPeriods(get, set);
-    },
-    onChangeSalaireBrut: (value) => {
-      applyGenericValidation(get, set, "salaireBrut", value);
+    onChangeHasSameSalary: (value) => {
+      applyGenericValidation(get, set, "hasSameSalary", value);
+      if (value === "non") {
+        applyGenericValidation(get, set, "salary", undefined);
+      }
     },
     onSalariesChange: (value) => {
       applyGenericValidation(get, set, "salaryPeriods", value);
     },
-    onChangeHasPrimes: (value) => {
-      applyGenericValidation(get, set, "hasPrimes", value);
-      if (value === "non") {
-        set(
-          produce((state: SalairesStoreSlice) => {
-            state.salairesData.input.primes = [];
-          })
-        );
-      }
-    },
-    onChangePrimes: (primes) => {
-      applyGenericValidation(get, set, "primes", primes);
+    onChangeSalary(value) {
+      applyGenericValidation(get, set, "salary", value);
     },
     onValidateStepSalaires: () => {
       const { isValid, errorState } = validateStep(get().salairesData.input);
+
+      if (isValid) {
+        const salaryInput = get().salairesData.input;
+
+        const sReference = new ReferenceSalaryFactory().create(
+          SupportedCcIndemniteLicenciement.default
+        );
+
+        let salaries = salaryInput.salaryPeriods;
+
+        const { salary } = salaryInput;
+
+        if (salary) {
+          const parseSalary = parseFloat(salary);
+          salaries = salaryInput.salaryPeriods.map((v) => ({
+            ...v,
+            value: parseSalary,
+            prime: undefined,
+          }));
+        }
+
+        const refSalary = sReference.computeReferenceSalary({
+          salaires: salaries,
+        });
+
+        set(
+          produce((state: SalairesStoreSlice) => {
+            state.salairesData.input.refSalary = refSalary;
+          })
+        );
+      }
+
+      const agreement = get().agreementData.input.agreement;
+
+      let isAgreementValid = true;
+
+      if (agreement) {
+        isAgreementValid = validatorAgreement(
+          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+          IndemniteLicenciementStepName.Salaires,
+          get,
+          set
+        );
+      }
+
+      const isStepValid = isValid && isAgreementValid;
+
       set(
         produce((state: SalairesStoreSlice) => {
-          state.salairesData.hasBeenSubmit = isValid ? false : true;
-          state.salairesData.isStepValid = isValid;
+          state.salairesData.hasBeenSubmit = isStepValid ? false : true;
+          state.salairesData.isStepValid = isStepValid;
           state.salairesData.error = errorState;
         })
       );
-      return isValid;
+      return isStepValid;
     },
   },
 });
 
 const applyGenericValidation = (
-  get: GetState<SalairesStoreSlice>,
-  set: SetState<SalairesStoreSlice>,
+  get: GetState<SalairesStoreSlice & CommonAgreementStoreSlice>,
+  set: SetState<SalairesStoreSlice & CommonAgreementStoreSlice>,
   paramName: keyof SalairesStoreInput,
   value: any
 ) => {
   if (get().salairesData.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
-      draft.salairesData.input[paramName] = value;
+      draft.salairesData.input[paramName as string] = value;
     });
     const { isValid, errorState } = validateStep(nextState.salairesData.input);
+    const agreement = get().agreementData.input.agreement;
+
+    let isAgreementValid = true;
+
+    if (agreement) {
+      isAgreementValid = validatorAgreement(
+        `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+        IndemniteLicenciementStepName.Salaires,
+        get,
+        set
+      );
+    }
+    const isStepValid = isValid && isAgreementValid;
     set(
       produce((state: SalairesStoreSlice) => {
         state.salairesData.error = errorState;
-        state.salairesData.isStepValid = isValid;
-        state.salairesData.input[paramName] = value;
+        state.salairesData.isStepValid = isStepValid;
+        state.salairesData.input[paramName as string] = value;
       })
     );
   } else {
     set(
       produce((state: SalairesStoreSlice) => {
-        state.salairesData.input[paramName] = value;
+        state.salairesData.input[paramName as string] = value;
       })
     );
   }

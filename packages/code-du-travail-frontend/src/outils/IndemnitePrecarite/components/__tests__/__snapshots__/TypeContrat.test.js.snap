@@ -92,16 +92,17 @@ exports[`<TypeContrat /> should render 1`] = `
 <div>
   <label
     class="c0"
+    data-testid="question-label"
   >
     <span
       class="c1"
     >
       Quel est le type du contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="c2"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div

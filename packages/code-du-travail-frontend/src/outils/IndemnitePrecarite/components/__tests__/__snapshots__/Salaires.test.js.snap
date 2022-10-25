@@ -287,16 +287,17 @@ exports[`<Salaires /> should add a salaire 1`] = `
 <div>
   <label
     class="c0"
+    data-testid="question-label"
   >
     <span
       class="c1"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="c2"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div
@@ -518,16 +519,17 @@ exports[`<Salaires /> should delete a salaires 1`] = `
 <div>
   <label
     class="c0"
+    data-testid="question-label"
   >
     <span
       class="c1"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="c2"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <button
@@ -840,16 +842,17 @@ exports[`<Salaires /> should render 1`] = `
 <div>
   <label
     class="c0"
+    data-testid="question-label"
   >
     <span
       class="c1"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="c2"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div

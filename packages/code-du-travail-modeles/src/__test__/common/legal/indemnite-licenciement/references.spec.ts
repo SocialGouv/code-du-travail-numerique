@@ -1,10 +1,13 @@
 import Engine from "publicodes";
 
 import { getReferences } from "../../../..";
-import { mergeModels } from "../../../../internal/merger";
-import { IndemniteLicenciementReferences } from "../../legal-references";
+import { mergeIndemniteLicenciementModels } from "../../../../internal/merger";
+import {
+  IndemniteLicenciementInaptitudeReferences,
+  IndemniteLicenciementReferences,
+} from "../../legal-references";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergeIndemniteLicenciementModels());
 
 describe("Vérification des références juridiques pour Indemnité légale de licenciement", () => {
   test.each`
@@ -17,12 +20,10 @@ describe("Vérification des références juridiques pour Indemnité légale de l
     ({ seniority, expectedReferences }) => {
       const result = getReferences(
         engine.setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "''",
-          "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
+          "contrat salarié . indemnité de licenciement . ancienneté": seniority,
+          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             "non",
-          "contrat salarié . salaire de référence": 1000,
-          "indemnité de licenciement": "oui",
+          "contrat salarié . indemnité de licenciement . salaire de référence": 1000,
         })
       );
 
@@ -36,28 +37,21 @@ describe("Vérification des références juridiques pour Indemnité légale de l
     ${6}      | ${IndemniteLicenciementReferences}
     ${24}     | ${IndemniteLicenciementReferences}
   `(
-    "pour un employé avec une ancienneté de $seniority mois licencié pour inpatitude",
+    "pour un employé avec une ancienneté de $seniority mois licencié pour inaptitude",
     ({ seniority, expectedReferences }) => {
       const result = getReferences(
         engine.setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "''",
-          "contrat salarié . inaptitude suite à un accident ou maladie professionnelle":
+          "contrat salarié . indemnité de licenciement . ancienneté": seniority,
+          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             "oui",
-          "contrat salarié . salaire de référence": 1000,
-          "indemnité de licenciement": "oui",
+          "contrat salarié . indemnité de licenciement . salaire de référence": 1000,
         })
       );
 
-      expect(result).toHaveLength(3);
+      expect(result).toHaveLength(6);
       expect(result).toEqual(expect.arrayContaining(expectedReferences));
       expect(result).toEqual(
-        expect.arrayContaining([
-          {
-            article: "Article L1226-14",
-            url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006900981/",
-          },
-        ])
+        expect.arrayContaining(IndemniteLicenciementInaptitudeReferences)
       );
     }
   );

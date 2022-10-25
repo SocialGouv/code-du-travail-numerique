@@ -7,6 +7,8 @@ import {
   StepAnciennete,
   StepSalaires,
   StepResultat,
+  StepAgreement,
+  StepInformations,
 } from "./steps";
 import {
   createIndemniteLicenciementStore,
@@ -23,10 +25,12 @@ type Props = {
 
 export enum IndemniteLicenciementStepName {
   Introduction = "start",
-  Info = "contrat_travail",
+  ContratTravail = "contrat_travail",
+  Agreement = "info_cc",
   Anciennete = "anciennete",
   Salaires = "salaires",
   Resultat = "results",
+  Informations = "infos",
 }
 
 const steps: Step<IndemniteLicenciementStepName>[] = [
@@ -37,8 +41,18 @@ const steps: Step<IndemniteLicenciementStepName>[] = [
   },
   {
     label: "Contrat de travail",
-    name: IndemniteLicenciementStepName.Info,
+    name: IndemniteLicenciementStepName.ContratTravail,
     Component: StepContratTravail,
+  },
+  {
+    label: "Convention collective",
+    name: IndemniteLicenciementStepName.Agreement,
+    Component: StepAgreement,
+  },
+  {
+    label: "Informations",
+    name: IndemniteLicenciementStepName.Informations,
+    Component: StepInformations,
   },
   {
     label: "Ancienneté",
@@ -51,7 +65,7 @@ const steps: Step<IndemniteLicenciementStepName>[] = [
     Component: StepSalaires,
   },
   {
-    label: "Indemnité légale",
+    label: "Indemnité",
     name: IndemniteLicenciementStepName.Resultat,
     Component: StepResultat,
   },
@@ -63,34 +77,65 @@ const IndemniteLicenciementSimulator = ({
   displayTitle,
 }: Omit<Props, "publicodesRules">): JSX.Element => {
   const {
-    onValidateStepInfo,
-    isStepInfoValid,
+    onValidateStepContratTravail,
+    isStepContratTravailValid,
     onValidateStepAnciennete,
     isStepAncienneteValid,
     onValidateStepSalaires,
     isStepSalairesValid,
+    onValidateStepAgreement,
+    isStepAgreementValid,
+    onValidateStepInformations,
+    isStepInformationsValid,
+    isStepInformationsHidden,
+    isStepSalaryHidden,
   } = useIndemniteLicenciementStore((state) => ({
-    onValidateStepInfo: state.contratTravailFunction.onValidateStepInfo,
-    isStepInfoValid: state.contratTravailData.isStepValid,
+    onValidateStepContratTravail:
+      state.contratTravailFunction.onValidateStepInfo,
+    isStepContratTravailValid: state.contratTravailData.isStepValid,
     onValidateStepAnciennete: state.ancienneteFunction.onValidateStepAnciennete,
     isStepAncienneteValid: state.ancienneteData.isStepValid,
     onValidateStepSalaires: state.salairesFunction.onValidateStepSalaires,
     isStepSalairesValid: state.salairesData.isStepValid,
+    onValidateStepAgreement: state.agreementFunction.onValidateStep,
+    isStepAgreementValid: state.agreementData.isStepValid,
+    onValidateStepInformations: state.informationsFunction.onValidateStep,
+    isStepInformationsValid: state.informationsData.isStepValid,
+    isStepInformationsHidden: state.informationsData.input.isStepHidden,
+    isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
   }));
 
   const data = useIndemniteLicenciementStore((state) => {
     let resultDataWithoutPublicodes = { ...state.resultData };
     delete resultDataWithoutPublicodes.publicodes;
+    let informationsDataWithoutPublicodes = { ...state.informationsData };
+    delete informationsDataWithoutPublicodes.publicodes;
     return {
       contratTravailData: { ...state.contratTravailData },
+      agreementData: { ...state.agreementData },
+      informationsData: informationsDataWithoutPublicodes,
       ancienneteData: { ...state.ancienneteData },
       salairesData: { ...state.salairesData },
       resultData: resultDataWithoutPublicodes,
+      agreement1516Data: { ...state.agreement1516Data },
+      agreement1527Data: { ...state.agreement1527Data },
+      agreement16Data: { ...state.agreement16Data },
     };
   });
 
+  const getHiddenSteps = (): IndemniteLicenciementStepName[] => {
+    const hiddenSteps: IndemniteLicenciementStepName[] = [];
+    if (isStepInformationsHidden) {
+      hiddenSteps.push(IndemniteLicenciementStepName.Informations);
+    }
+    if (isStepSalaryHidden) {
+      hiddenSteps.push(IndemniteLicenciementStepName.Salaires);
+    }
+    return hiddenSteps;
+  };
+
   return (
-    <SimulatorLayout
+    <SimulatorLayout<IndemniteLicenciementStepName>
       title={title}
       displayTitle={displayTitle}
       icon={icon}
@@ -99,9 +144,14 @@ const IndemniteLicenciementSimulator = ({
       steps={steps}
       validators={[
         {
-          stepName: IndemniteLicenciementStepName.Info,
-          isStepValid: isStepInfoValid,
-          validator: onValidateStepInfo,
+          stepName: IndemniteLicenciementStepName.ContratTravail,
+          isStepValid: isStepContratTravailValid,
+          validator: onValidateStepContratTravail,
+        },
+        {
+          stepName: IndemniteLicenciementStepName.Agreement,
+          isStepValid: isStepAgreementValid,
+          validator: onValidateStepAgreement,
         },
         {
           stepName: IndemniteLicenciementStepName.Anciennete,
@@ -113,7 +163,13 @@ const IndemniteLicenciementSimulator = ({
           isStepValid: isStepSalairesValid,
           validator: onValidateStepSalaires,
         },
+        {
+          stepName: IndemniteLicenciementStepName.Informations,
+          isStepValid: isStepInformationsValid,
+          validator: onValidateStepInformations,
+        },
       ]}
+      hiddenStep={getHiddenSteps()}
     />
   );
 };

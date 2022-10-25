@@ -1,13 +1,13 @@
 import Engine from "publicodes";
 
-import { mergeModels } from "../../../../internal/merger";
+import { mergePreavisRetraiteModels } from "../../../../internal/merger";
 import { getReferences } from "../../../../utils";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../legal-references";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(mergePreavisRetraiteModels());
 
 const HandicapeReferences = {
   article: "Article L5213-9",
@@ -29,7 +29,6 @@ describe("Travailleur handicapé - Références départ et mise à la retraite",
           "contrat salarié . mise à la retraite":
             retirement === "mise" ? "oui" : "non",
           "contrat salarié . travailleur handicapé": "oui",
-          "préavis de retraite": "oui",
         })
       );
 

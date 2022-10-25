@@ -1,6 +1,6 @@
 import { StepData } from "../../../store";
-import { Absence } from "../components/AbsencePeriods";
-import { OuiNon } from "../../../common/types";
+import { OuiNon } from "../../../common";
+import { Absence } from "@socialgouv/modeles-social";
 
 export type AncienneteStoreInput = {
   dateEntree?: string;
@@ -15,7 +15,15 @@ export type AncienneteStoreError = {
   errorDateNotification?: string;
   errorAbsenceProlonge?: string;
   errorDateEntree?: string;
-  errorAbsencePeriods?: string;
+  errorAbsencePeriods?: {
+    global?: string;
+    absences?: AncienneteAbsenceStoreError[];
+  };
+};
+
+export type AncienneteAbsenceStoreError = {
+  errorDuration?: string;
+  errorDate?: string;
 };
 
 export type AncienneteStoreData = StepData<
@@ -24,6 +32,7 @@ export type AncienneteStoreData = StepData<
 >;
 
 export type AncienneteStoreFn = {
+  init: () => void;
   onChangeDateEntree: (value: string) => void;
   onChangeDateSortie: (value: string) => void;
   onChangeDateNotification: (value: string) => void;
