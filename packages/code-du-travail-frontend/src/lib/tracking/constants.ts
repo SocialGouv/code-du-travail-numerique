@@ -34,11 +34,11 @@ export const URL_TRACKED: UrlTracked = [
   },
   {
     type: "courrier",
-    url: "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie",
+    url: "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie",
   },
   {
     type: "courrier",
-    url: "/modeles-de-courriers/rupture-de-periode-dessai-a-linitiative-de-lemployeur",
+    url: "/modeles-de-courriers/rupture-de-periode-dessai-par-lemployeur",
   },
   {
     type: "courrier",
