@@ -31,8 +31,8 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
             ({ id, action, description, icon, slug, displayTitle }) => {
               const linkProps = {
                 passHref: true,
+                href: `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`,
               };
-              linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
               return (
                 <Link {...linkProps} passHref key={id}>
                   <CallToActionTile
