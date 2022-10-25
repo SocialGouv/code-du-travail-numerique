@@ -107,7 +107,7 @@ export class Formula44
       if (seniority >= 5 && age >= 50 && age <= 55) {
         formula = "2 * Sref + 3 / 10 * Sref * A1";
       } else if (seniority >= 2) {
-        formula = "Sref + 3 / 10 * Sref * A1";
+        formula = "3 / 10 * Sref * A1";
       } else if (seniority >= 1) {
         formula = "Sref";
       }
@@ -167,7 +167,7 @@ export class Formula44
       if (seniority >= 5 && age >= 50 && age <= 55) {
         formula = "2 * Sref + 4 / 10 * Sref * A1";
       } else if (seniority >= 2) {
-        formula = "Sref + 4 / 10 * Sref * A1";
+        formula = "4 / 10 * Sref * A1";
       } else if (seniority >= 1) {
         formula = "Sref";
       }
