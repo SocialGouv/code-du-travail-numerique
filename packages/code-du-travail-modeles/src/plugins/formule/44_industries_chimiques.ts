@@ -192,7 +192,7 @@ export class Formula44
       explanations.push(
         `A1: Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (${maxSeniority} ${yearAfterDiff})`
       );
-      if (seniority >= 10) {
+      if (seniority > 10) {
         const maxSeniority2 = Math.min(round(seniority - 10), 5);
         const yearAfterDiff2 = maxSeniority2 < 2 ? "an" : "ans";
         formula += " + 6 / 10 * Sref * A2";
@@ -200,7 +200,7 @@ export class Formula44
           `A2: Années au-delà de 10 ans pour la tranche de 10 à 15 ans (${maxSeniority2} ${yearAfterDiff2})`
         );
       }
-      if (seniority >= 15) {
+      if (seniority > 15) {
         const maxSeniority3 = round(seniority - 15);
         const yearAfterDiff3 = maxSeniority3 < 2 ? "an" : "ans";
         formula += " + 8 / 10 * Sref * A3";
