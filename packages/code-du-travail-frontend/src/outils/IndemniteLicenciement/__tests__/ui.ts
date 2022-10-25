@@ -1,9 +1,9 @@
 import { byTestId, byText, byTitle } from "testing-library-selector";
 
+import { ui as uiCommon } from "../../__tests__/ui";
+
 export const ui = {
-  introduction: {
-    startButton: byText("Commencer"),
-  },
+  ...uiCommon,
   contract: {
     type: {
       alert: byText("indemnité de précarité (nouvelle fenêtre)"),
@@ -31,39 +31,20 @@ export const ui = {
       non: byTestId("licenciementInaptitude - Non"),
     },
   },
-  agreement: {
-    noAgreement: byTestId(
-      "route - Je ne souhaite pas renseigner ma convention collective (je passe l'étape)"
-    ),
-    agreement: byTestId(
-      "route - Je sais quelle est ma convention collective (je la saisis)"
-    ),
-    unknownAgreement: byTestId(
-      "route - Je ne sais pas quelle est ma convention collective (je la recherche)"
-    ),
-    agreementInput: byTestId("agreement-search-input"),
-    agreementInputConfirm: byText(
-      /Vous avez sélectionné la convention collective/
-    ),
-    agreementCompanyInput: byTestId("agreement-company-search-input"),
-    agreementCompanyInputAsk: byText(
-      "Précisez et sélectionnez votre entreprise"
-    ),
-    agreementCompanyInputConfirm: byText(/Vous avez sélectionné l'entreprise/),
-    agreementPostalCodeInput: byTestId("agreement-postal-code-search-input"),
-    searchItem: {
-      agreement16: byText(
-        "Transports routiers et activités auxiliaires du transport"
-      ),
-      carrefour: byText("CARREFOUR HYPERMARCHES"),
+  searchResult: {
+    agreement16: {
+      text: byText("Transports routiers et activités auxiliaires du transport"),
     },
-    ccChoice: {
-      commerce: byText(
-        "Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)"
-      ),
-      bureau: byText(
-        "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils (IDCC 1486)"
-      ),
+    carrefourEnterprise: {
+      text: byText("CARREFOUR HYPERMARCHES"),
+      cc: {
+        commerce: byText(
+          "Commerce de détail et de gros à prédominance alimentaire (IDCC 2216)"
+        ),
+        bureau: byText(
+          "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils (IDCC 1486)"
+        ),
+      },
     },
   },
   information: {
@@ -125,9 +106,4 @@ export const ui = {
     },
     sameSalaryValue: byTestId("same-salary-value"),
   },
-  next: byText("Suivant"),
-  previous: byText("Précédent"),
-  activeStep: byTitle("onglet actif"),
-  warning: byText("Attention"),
-  title: byText("Calculer l'indemnité de licenciement"),
 };

@@ -1,7 +1,4 @@
-import {
-  CalculateurIndemnite,
-  loadPublicodesRules,
-} from "../../../../src/outils";
+import { CalculateurIndemnite, loadPublicodesRules } from "../..";
 import { ui } from "./ui";
 
 import { fireEvent, render, waitFor } from "@testing-library/react";
@@ -33,13 +30,11 @@ test(`
   fireEvent.change(ui.agreement.agreementInput.get(), {
     target: { value: "16" },
   });
-  await waitFor(() =>
-    fireEvent.click(ui.agreement.searchItem.agreement16.get())
-  );
+  await waitFor(() => fireEvent.click(ui.searchResult.agreement16.text.get()));
   fireEvent.click(ui.next.get());
   fireEvent.click(ui.previous.get());
   expect(ui.agreement.agreementInputConfirm.query()).toBeInTheDocument();
-  expect(ui.agreement.searchItem.agreement16.query()).toBeInTheDocument();
+  expect(ui.searchResult.agreement16.text.query()).toBeInTheDocument();
 
   // Vérifier la recherche par entreprise
   fireEvent.click(ui.agreement.unknownAgreement.get());
@@ -50,16 +45,20 @@ test(`
     target: { value: "carrefour" },
   });
   await waitFor(() => {
-    fireEvent.click(ui.agreement.searchItem.carrefour.get());
+    fireEvent.click(ui.searchResult.carrefourEnterprise.text.get());
   });
   expect(ui.agreement.agreementCompanyInputConfirm.query()).toBeInTheDocument();
-  expect(ui.agreement.ccChoice.commerce.query()).toBeInTheDocument();
-  expect(ui.agreement.ccChoice.bureau.query()).toBeInTheDocument();
-  fireEvent.click(ui.agreement.ccChoice.commerce.get());
+  expect(
+    ui.searchResult.carrefourEnterprise.cc.commerce.query()
+  ).toBeInTheDocument();
+  expect(
+    ui.searchResult.carrefourEnterprise.cc.bureau.query()
+  ).toBeInTheDocument();
+  fireEvent.click(ui.searchResult.carrefourEnterprise.cc.commerce.get());
   fireEvent.click(ui.next.get());
   fireEvent.click(ui.previous.get());
   expect(ui.agreement.agreementCompanyInputConfirm.query()).toBeInTheDocument();
-  expect(ui.agreement.searchItem.carrefour.query()).toBeInTheDocument();
+  expect(ui.searchResult.carrefourEnterprise.text.query()).toBeInTheDocument();
 
   // Vérifier la non sélection d'une cc
   fireEvent.click(ui.agreement.noAgreement.get());
