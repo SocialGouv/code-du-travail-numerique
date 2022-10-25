@@ -27,17 +27,27 @@ export class AgreementFormula573 implements AgreementFormula {
       )
       ?.info?.slice(1, -1) as any;
 
-    const year = get().informationsData.input.publicodesInformations.find(
+    const yearAgent = get().informationsData.input.publicodesInformations.find(
       (v) =>
         v.question.rule.nom ===
-        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age"
+        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . oui . age"
     )?.info;
+
+    const parseYearAgent = yearAgent ? parseInt(yearAgent) : 0;
+
+    const yearCadre = get().informationsData.input.publicodesInformations.find(
+      (v) =>
+        v.question.rule.nom ===
+        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . oui . age"
+    )?.info;
+
+    const parseYearCadre = yearCadre ? parseInt(yearCadre) : 0;
 
     const firingType = get()
       .informationsData.input.publicodesInformations.find(
         (v) =>
           v.question.rule.nom ===
-          "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age . licenciement économique"
+          "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique"
       )
       ?.info?.slice(1, -1) as QuestionOuiNon | undefined;
 
@@ -45,7 +55,7 @@ export class AgreementFormula573 implements AgreementFormula {
       .informationsData.input.publicodesInformations.find(
         (v) =>
           v.question.rule.nom ===
-          "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . age . licenciement économique . cadre durant au moins de 15 ans"
+          "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans"
       )
       ?.info?.slice(1, -1) as QuestionOuiNon | undefined;
 
@@ -53,7 +63,7 @@ export class AgreementFormula573 implements AgreementFormula {
       seniority: agreementSeniority.value,
       refSalary: agreementRefSalary,
       category,
-      age: year ? parseInt(year) : 0,
+      age: parseYearAgent === 0 ? parseYearCadre : parseYearAgent,
       licenciementEco: firingType ?? QuestionOuiNon.non,
       cadreAuMoins15ans: cadreAuMoins15ans ?? QuestionOuiNon.non,
     });
