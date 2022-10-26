@@ -108,6 +108,11 @@ export const ui = {
         "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - indemnité de licenciement - catégorie professionnelle"
       ),
     },
+    agreement413: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - établissement handicap - indemnité de licenciement - catégorie professionnelle"
+      ),
+    },
     agreement44: {
       proCategory: byTestId(
         "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
