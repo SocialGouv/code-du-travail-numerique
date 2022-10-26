@@ -20,6 +20,7 @@ export function getFormule(engine: Engine): Formula {
         formule.explanations = formule.explanations.concat(
           rule.rawNode.cdtn.formule.explanations
         );
+
         formule.formula += rule.rawNode.cdtn.formule.formula;
         return formule as Formula;
       },
