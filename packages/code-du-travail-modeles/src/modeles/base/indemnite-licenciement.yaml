@@ -20,12 +20,14 @@ contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins:
     le minimum de:
       - ancienneté en année
       - 10 an
+  arrondi: 2 décimales
 
 contrat salarié . indemnité de licenciement . au dela de dix ans:
   somme:
     - ancienneté en année
     - (- 10 an)
   plancher: 0 an
+  arrondi: 2 décimales
 
 contrat salarié . indemnité de licenciement . facteur dix ans ou moins:
   valeur:
@@ -58,24 +60,24 @@ contrat salarié . indemnité de licenciement . résultat légal:
     Art. L. 1225-54: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018764621
     Art. L. 1225-65: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038219280
 
-#TODO: make it works !
-contrat salarié . indemnité de licenciement . résultat légal . moins de 10ans:
+contrat salarié . indemnité de licenciement . résultat légal moins de 10ans:
   applicable si: ancienneté en année <= 10 an
+  valeur: résultat légal
   cdtn:
     formule:
       explanations:
-        - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . facteur dix ans ou moins
+        - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: 1/4 * Sref * A
 
-#TODO: make it works !
-contrat salarié . indemnité de licenciement . résultat légal . au dela de 10ans:
+contrat salarié . indemnité de licenciement . résultat légal au dela de 10ans:
   applicable si: ancienneté en année > 10 an
+  valeur: résultat légal
   cdtn:
     formule:
       explanations:
-        - "A1 : Ancienneté totale": contrat salarié . indemnité de licenciement . facteur dix ans ou moins
-        - "A2: Années d'ancienneté au-delà de 10 ans": contrat salarié . indemnité de licenciement . facteur plus de dix ans
+        - "A1 : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté en année
+        - "A2: Années d'ancienneté au-delà de 10 ans": contrat salarié . indemnité de licenciement . au dela de dix ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/4 * Sref * A1) + (1/3 * Sref * A2)
 
