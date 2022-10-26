@@ -183,6 +183,7 @@ export const StyledFilledElementTable = styled(Table)`
   text-align: center;
   margin-top: ${spacings.small};
   margin-bottom: ${spacings.small};
+
   th {
     vertical-align: top;
   }
