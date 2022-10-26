@@ -84,6 +84,7 @@ describe("Indemnité licenciement - Validation de la page information", () => {
        - validation des erreurs sur les champs vides
        - validation que le champ suivant s'affiche quand on répond à la question
        - validation que les champs sont retirés quand on revient à une question précédente
+       - validation qu'un champ présent avant soit réinitialisé
        - validation que l'on peut valider la page quand tous les champs sont saisis
        - validation que les infos sont gardées quand on revient sur les étapes précédentes sans changer les infos
        - validation que les infos sont effacées quand on change de convention collective
@@ -120,7 +121,7 @@ describe("Indemnité licenciement - Validation de la page information", () => {
           ui.information.agreement16.dateProCategoryChanged.get(),
           "01/01/2010"
         )
-        .setInput(ui.information.agreement16.age.get(), "38")
+        .setInput(ui.information.agreement16.engineerAge.get(), "38")
         .changeInputList(
           ui.information.agreement16.proCategory.get(),
           "Ouvriers"
@@ -134,6 +135,20 @@ describe("Indemnité licenciement - Validation de la page information", () => {
         ui.information.agreement16.driveInability.non.get()
       ).not.toBeChecked();
 
+      // validation qu'un champ présent avant soit réinitialisé
+      userAction
+        .changeInputList(
+          ui.information.agreement16.proCategory.get(),
+          "Employés"
+        )
+        .setInput(ui.information.agreement16.employeeAge.get(), "55")
+        .changeInputList(
+          ui.information.agreement16.proCategory.get(),
+          "Technicien et agents de maîtrise (TAM)"
+        );
+      expect(rendering.getAllByTestId("question-label")).toHaveLength(2);
+      expect(ui.information.agreement16.agentAge.query()).toHaveValue(null);
+
       // validation que l'on peut valider la page quand tous les champs sont saisis
       userAction
         .changeInputList(
@@ -145,7 +160,7 @@ describe("Indemnité licenciement - Validation de la page information", () => {
           ui.information.agreement16.dateProCategoryChanged.get(),
           "01/01/2010"
         )
-        .setInput(ui.information.agreement16.age.get(), "38")
+        .setInput(ui.information.agreement16.engineerAge.get(), "38")
         .click(ui.next.get());
       expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
 
@@ -167,7 +182,7 @@ describe("Indemnité licenciement - Validation de la page information", () => {
       expect(
         ui.information.agreement16.dateProCategoryChanged.get()
       ).toHaveValue("01/01/2010");
-      expect(ui.information.agreement16.age.get()).toHaveValue(38);
+      expect(ui.information.agreement16.engineerAge.get()).toHaveValue(38);
 
       // validation que les infos sont effacées quand on change de convention collective
       userAction

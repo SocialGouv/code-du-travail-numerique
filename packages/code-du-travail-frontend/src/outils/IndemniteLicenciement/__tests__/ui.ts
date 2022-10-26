@@ -82,8 +82,14 @@ export const ui = {
       dateProCategoryChanged: byTestId(
         "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ingénieurs et cadres - date du statut cadre"
       ),
-      age: byTestId(
+      engineerAge: byTestId(
         "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ingénieurs et cadres - age"
+      ),
+      employeeAge: byTestId(
+        "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - age"
+      ),
+      agentAge: byTestId(
+        "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - age"
       ),
       driveInability: {
         oui: byTestId(
