@@ -24,7 +24,7 @@ const CommonInformationStep = ({
     {informations.map((info) => {
       return (
         <PubliQuestion
-          key={info.question.name}
+          key={info.id}
           name={"infos." + info.question.name}
           rule={info.question.rule}
           trackQuestionEvent={MatomoActionEvent.INDEMNITE_LICENCIEMENT}

@@ -120,6 +120,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
   >
     <label
       class="c1"
+      data-testid="question-label"
       for="input-foo"
     >
       <span
@@ -313,6 +314,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
   >
     <label
       class="c1"
+      data-testid="question-label"
       for="input-foo"
     >
       <span

@@ -11,12 +11,12 @@ export default function Agreement1527Informations() {
   return (
     <>
       <li>
-        Le salarié perçoit des commissions &nbsp;:&nbsp;
+        Le contrat de travail prévoit le versement de commissions&nbsp;:&nbsp;
         {hasCommission === "oui" ? "Oui" : "Non"}
       </li>
       {hasCommission === "non" && (
         <li>
-          Montant du salaire mensuel brut indiqué dans le contrat &nbsp;:&nbsp;
+          Montant du salaire mensuel brut indiqué dans le contrat&nbsp;:&nbsp;
           {contractSalary} €
         </li>
       )}

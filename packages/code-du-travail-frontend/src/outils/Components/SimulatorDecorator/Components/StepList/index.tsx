@@ -10,6 +10,7 @@ export type StepListProps = {
   }[];
   width: string;
   listRef?: React.Ref<HTMLLIElement>;
+  className?: string;
 };
 
 const StepList = ({
@@ -17,9 +18,10 @@ const StepList = ({
   steps,
   width,
   listRef,
+  className,
 }: StepListProps): JSX.Element => {
   return (
-    <StyledWrapper variant="dark" defaultWidth={width}>
+    <StyledWrapper variant="dark" defaultWidth={width} className={className}>
       <Title>
         Étape<HideOnMobile>s</HideOnMobile>
         <StepProgress>

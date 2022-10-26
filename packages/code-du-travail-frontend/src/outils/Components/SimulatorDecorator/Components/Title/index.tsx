@@ -7,6 +7,7 @@ export type TitleProps = {
   hasNoMarginBottom?: boolean;
   icon?: string;
   title: string;
+  className?: string;
 };
 
 const Duration = ({ duration }: { duration: string }): JSX.Element => {
@@ -23,10 +24,11 @@ const Index = ({
   icon,
   duration,
   hasNoMarginBottom,
+  className,
 }: TitleProps): JSX.Element => {
   const Icon = icons[icon];
   return (
-    <ToolTitle hasNoMarginBottom={hasNoMarginBottom}>
+    <ToolTitle hasNoMarginBottom={hasNoMarginBottom} className={className}>
       <StyledTitleBox>
         {Icon && (
           <IconWrapper>

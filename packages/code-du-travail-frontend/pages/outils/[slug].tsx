@@ -41,7 +41,7 @@ const toolsBySlug = {
   "simulateur-embauche": SimulateurEmbauche,
 };
 
-interface Props {
+export interface Props {
   description: string;
   icon: string;
   publicodesRules: any;

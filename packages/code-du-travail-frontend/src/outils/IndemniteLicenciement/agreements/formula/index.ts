@@ -7,6 +7,7 @@ import {
 import { GetState } from "zustand";
 import { MainStore } from "../../store";
 import { AgreementFormula1486 } from "./1486";
+import { AgreementFormula1596 } from "./1596";
 import { AgreementFormula1597 } from "./1597";
 import { AgreementFormula2216 } from "./2216";
 import { AgreementFormula2264 } from "./2264";
@@ -14,6 +15,7 @@ import { AgreementFormula3239 } from "./3239";
 import { AgreementFormula413 } from "./413";
 import { AgreementFormula650 } from "./650";
 import { AgreementFormula16 } from "./16";
+import { AgreementFormula1501 } from "./1501";
 
 const getAgreementFormula = (
   idcc: SupportedCcIndemniteLicenciement,
@@ -30,6 +32,12 @@ const getAgreementFormula = (
       );
     case SupportedCcIndemniteLicenciement.IDCC413 === idcc:
       return new AgreementFormula413().computeFormula(
+        agreementSeniority,
+        agreementRefSalary,
+        get
+      );
+    case SupportedCcIndemniteLicenciement.IDCC1596 === idcc:
+      return new AgreementFormula1596().computeFormula(
         agreementSeniority,
         agreementRefSalary,
         get
@@ -66,6 +74,12 @@ const getAgreementFormula = (
       );
     case SupportedCcIndemniteLicenciement.IDCC0016 === idcc:
       return new AgreementFormula16().computeFormula(
+        agreementSeniority,
+        agreementRefSalary,
+        get
+      );
+    case SupportedCcIndemniteLicenciement.IDCC1501 === idcc:
+      return new AgreementFormula1501().computeFormula(
         agreementSeniority,
         agreementRefSalary,
         get

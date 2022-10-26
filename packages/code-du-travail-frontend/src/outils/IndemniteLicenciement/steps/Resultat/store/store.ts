@@ -27,6 +27,7 @@ import { getAgreementReferenceSalary } from "../../../agreements";
 import { MainStore } from "../../../store";
 import { GetState } from "zustand";
 import getAgreementSeniority from "../../../agreements/seniority";
+import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 
 const initialState: ResultStoreData = {
   input: {
@@ -103,11 +104,9 @@ const createResultStore: StoreSlice<
       let agreementHasNoLegalIndemnity: boolean;
 
       if (agreement) {
-        const infos = get()
-          .informationsData.input.publicodesInformations.map((v) => ({
-            [v.question.rule.nom]: v.info,
-          }))
-          .reduce((acc, cur) => ({ ...acc, ...cur }), {});
+        const infos = informationToSituation(
+          get().informationsData.input.publicodesInformations
+        );
 
         agreementRefSalary = getAgreementReferenceSalary(
           `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,

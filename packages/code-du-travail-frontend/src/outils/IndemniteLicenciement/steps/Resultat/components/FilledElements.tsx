@@ -41,7 +41,8 @@ export default function FilledElements(props: Props) {
               {props.isLicenciementFauteGrave ? "Oui" : "Non"}
             </li>
             <li>
-              Licenciement dû à une inaptitude&nbsp;:&nbsp;
+              Licenciement dû à une inaptitude d’origine
+              professionnelle&nbsp;:&nbsp;
               {props.isLicenciementInaptitude ? "Oui" : "Non"}
               {props.isLicenciementInaptitude &&
                 !props.isAgreementBetter &&
