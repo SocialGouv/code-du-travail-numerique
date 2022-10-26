@@ -91,6 +91,9 @@ export const ui = {
       agentAge: byTestId(
         "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - age"
       ),
+      workerAge: byTestId(
+        "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ouvriers - autres licenciement - age"
+      ),
       driveInability: {
         oui: byTestId(
           "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ouvriers - incapacité de conduite - Oui"
@@ -130,6 +133,10 @@ export const ui = {
       non: byTestId("hasSameSalary - Non"),
     },
     sameSalaryValue: byTestId("same-salary-value"),
+    variablePart: {
+      oui: byTestId("hasVariablePart - Oui"),
+      non: byTestId("hasVariablePart - Non"),
+    },
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),
