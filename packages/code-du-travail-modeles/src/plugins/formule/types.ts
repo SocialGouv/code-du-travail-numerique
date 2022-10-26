@@ -52,11 +52,8 @@ export type FormulaProps<T> = T extends SupportedCcIndemniteLicenciement.legal
   ? Formula2216Props
   : T extends SupportedCcIndemniteLicenciement.IDCC0016
   ? Formula16Props
-<<<<<<< HEAD
   : T extends SupportedCcIndemniteLicenciement.IDCC0573
   ? Formula573Props
-=======
   : T extends SupportedCcIndemniteLicenciement.IDCC1501
   ? Formula1501Props
->>>>>>> feat/indemnite-licenciement
   : DefaultFormulaProps;

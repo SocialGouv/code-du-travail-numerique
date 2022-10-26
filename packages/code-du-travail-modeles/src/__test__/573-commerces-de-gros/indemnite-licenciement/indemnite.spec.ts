@@ -30,7 +30,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
           );
 
         expect(result.nodeValue).toEqual(expectedCompensation);
-        // expect(result.missingVariables).toEqual({});
+        expect(result.missingVariables).toEqual({});
         expect(result.unit?.numerators).toEqual(["€"]);
       }
     );
@@ -74,7 +74,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
           );
 
         expect(result.nodeValue).toEqual(expectedCompensation);
-        // expect(result.missingVariables).toEqual({});
+        expect(result.missingVariables).toEqual({});
         expect(result.unit?.numerators).toEqual(["€"]);
       }
     );
@@ -123,7 +123,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
           );
 
         expect(result.nodeValue).toEqual(expectedCompensation);
-        // expect(result.missingVariables).toEqual({});
+        expect(result.missingVariables).toEqual({});
         expect(result.unit?.numerators).toEqual(["€"]);
       }
     );

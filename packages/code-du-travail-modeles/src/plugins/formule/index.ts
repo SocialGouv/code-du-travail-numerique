@@ -46,13 +46,10 @@ export class FormuleFactory {
         return new Formula2216() as IFormula<T>;
       case SupportedCcIndemniteLicenciement.IDCC0016:
         return new Formula16() as IFormula<T>;
-<<<<<<< HEAD
       case SupportedCcIndemniteLicenciement.IDCC0573:
         return new Formula573() as IFormula<T>;
-=======
       case SupportedCcIndemniteLicenciement.IDCC1501:
         return new Formula1501() as IFormula<T>;
->>>>>>> feat/indemnite-licenciement
       case SupportedCcIndemniteLicenciement.default:
       default:
         return new FormulaLegal() as IFormula<T>;
