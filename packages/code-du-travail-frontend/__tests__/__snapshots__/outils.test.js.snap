@@ -638,7 +638,7 @@ exports[`<Outils /> should render 1`] = `
 }
 
 .c42 p {
-  margin: 0;
+  margin: 0 auto;
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;

@@ -51,7 +51,7 @@ jobs:
         run: |
           RAW_BRANCH=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
           BRANCH=$(npx @socialgouv/env-slug "${RAW_BRANCH}")
-          echo "::set-output name=branch::$(echo ${BRANCH})"
+          echo "branch=$(echo ${BRANCH})" >> $GITHUB_OUTPUT
       - name: Use k8s manifests generation
         uses: SocialGouv/actions/k8s-manifests@v1
         with:
@@ -84,7 +84,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
       - name: Restore cache
         uses: actions/cache@v3
         with:
