@@ -15,7 +15,11 @@ import { AgreementFormula3239 } from "./3239";
 import { AgreementFormula413 } from "./413";
 import { AgreementFormula650 } from "./650";
 import { AgreementFormula16 } from "./16";
+<<<<<<< HEAD
 import { AgreementFormula573 } from "./573";
+=======
+import { AgreementFormula1501 } from "./1501";
+>>>>>>> feat/indemnite-licenciement
 
 const getAgreementFormula = (
   idcc: SupportedCcIndemniteLicenciement,
@@ -78,8 +82,13 @@ const getAgreementFormula = (
         agreementRefSalary,
         get
       );
+<<<<<<< HEAD
     case SupportedCcIndemniteLicenciement.IDCC0573 === idcc:
       return new AgreementFormula573().computeFormula(
+=======
+    case SupportedCcIndemniteLicenciement.IDCC1501 === idcc:
+      return new AgreementFormula1501().computeFormula(
+>>>>>>> feat/indemnite-licenciement
         agreementSeniority,
         agreementRefSalary,
         get
