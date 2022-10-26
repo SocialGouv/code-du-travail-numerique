@@ -240,7 +240,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
           produit:
             assiette: indemnité de licenciement . ancienneté conventionnelle en année * indemnité de licenciement . salaire de référence conventionnel
             facteur: 1 / 10
-        plafond: 6 an
+        plafond: 5.99 an
       - montant:
           somme:
             - montant total
@@ -326,7 +326,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
     toutes ces conditions:
       - licenciement économique = 'Oui'
       - licenciement économique . age > 50 an
-      - indemnité de licenciement . ancienneté conventionnelle en année > 10 an
+      - indemnité de licenciement . ancienneté conventionnelle en année >= 10 an
   valeur:
     somme:
       - cadre . résultat conventionnel

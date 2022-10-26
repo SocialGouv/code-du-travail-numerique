@@ -145,10 +145,6 @@ const createResultStore: StoreSlice<
         agreementReferences = publicodes.getReferences(
           "résultat conventionnel"
         );
-        // TODO: implement the method =>
-        // agreementReferences = publicodes.getFormule(
-        //  "résultat conventionnel"
-        // );
         agreementFormula = publicodes.getFormule();
         agreementNotifications = publicodes.getNotifications();
 

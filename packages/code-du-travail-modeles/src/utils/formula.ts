@@ -8,28 +8,29 @@ function pluralize(word: string, value: number) {
 }
 
 export function getFormule(engine: Engine): Formula {
-  const formula = Object.values(engine.getParsedRules())
-    .filter((rule: any) => {
-      return (
-        rule.rawNode.cdtn?.formule &&
-        engine.evaluate(rule.dottedName).nodeValue !== false
-      );
-    })
-    .reduce(
-      (formule: any, rule: any): Formula => {
-        formule.explanations = formule.explanations.concat(
-          rule.rawNode.cdtn.formule.explanations
-        );
-
-        formule.formula += rule.rawNode.cdtn.formule.formula;
-        return formule as Formula;
-      },
-      {
-        explanations: [],
-        formula: "",
-      }
+  let rules = Object.values(engine.getParsedRules()).filter((rule: any) => {
+    return (
+      rule.rawNode.cdtn?.formule &&
+      engine.evaluate(rule.dottedName).nodeValue !== false
     );
-  formula.explanations = formula.explanations.flatMap((explanation: any) => {
+  });
+  const formule = {
+    explanations: [] as string[],
+    formula: "",
+  };
+  if (!rules.length) return formule;
+
+  if (rules.length > 1) {
+    rules = rules.filter((rule: any) =>
+      rule.dottedName.includes("résultat conventionnel")
+    );
+  }
+
+  const rawNode: any = rules[0].rawNode;
+  formule.formula = rawNode.cdtn.formule.formula;
+  formule.explanations = rawNode.cdtn.formule.explanations;
+
+  formule.explanations = formule.explanations.flatMap((explanation: any) => {
     return Object.keys(explanation).map((text) => {
       const result = engine.evaluate(explanation[text]);
       const unit = result.unit.numerators[0];
@@ -39,5 +40,5 @@ export function getFormule(engine: Engine): Formula {
       )})`;
     });
   });
-  return formula;
+  return formule;
 }

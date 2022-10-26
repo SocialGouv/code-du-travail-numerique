@@ -29,6 +29,8 @@ describe("Formula", () => {
             age,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté en année":
+            seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2300,
           "indemnité de licenciement": "oui",
         });
