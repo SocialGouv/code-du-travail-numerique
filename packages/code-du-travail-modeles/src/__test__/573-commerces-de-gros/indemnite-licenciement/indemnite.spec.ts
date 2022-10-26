@@ -20,6 +20,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
           .setSituation({
             "contrat salarié . convention collective": "'IDCC0573'",
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . autres": `oui`,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
@@ -61,7 +62,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
           .setSituation({
             "contrat salarié . convention collective": "'IDCC0573'",
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents": `oui`,
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique": `'${typeLicenciement}'`,
+            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . oui": `oui`,
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . oui . age":
               age,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
@@ -110,7 +113,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
           .setSituation({
             "contrat salarié . convention collective": "'IDCC0573'",
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres": `oui`,
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans": `'${auMoins15AnsCadre}'`,
+            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . oui": `oui`,
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . oui . age":
               age,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
