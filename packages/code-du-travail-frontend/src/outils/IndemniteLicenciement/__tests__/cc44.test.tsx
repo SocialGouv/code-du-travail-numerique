@@ -68,12 +68,11 @@ describe("Indemnité licenciement - CC 44", () => {
       // vérification que l'on demande si le salaire a eu des primes pour un Ouvriers et collaborateurs (Groupes I à III)
       userEvent.click(ui.salary.hasPartialTime.non.get());
       userEvent.click(ui.salary.hasSameSalary.oui.get());
-
       expect(
         screen.queryByText(
           "Les salaires indiqués comportent-ils une partie variable ?"
         )
-      ).toBeInTheDocument();
+      ).not.toBeInTheDocument();
       userEvent.click(ui.salary.hasSameSalary.non.get());
       expect(
         screen.queryByText(
@@ -95,12 +94,11 @@ describe("Indemnité licenciement - CC 44", () => {
       userEvent.click(ui.next.get());
       userEvent.click(ui.next.get());
       userEvent.click(ui.salary.hasSameSalary.oui.get());
-
       expect(
         screen.queryByText(
           "Les salaires indiqués comportent-ils une partie variable ?"
         )
-      ).toBeInTheDocument();
+      ).not.toBeInTheDocument();
       userEvent.click(ui.salary.hasSameSalary.non.get());
       expect(
         screen.queryByText(

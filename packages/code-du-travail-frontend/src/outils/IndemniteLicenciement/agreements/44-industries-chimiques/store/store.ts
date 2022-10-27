@@ -33,12 +33,13 @@ export const createAgreement44StoreSalaires: StoreSlice<
             item.question.name ===
             "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
         )?.info;
-      console.log("Init agreement : ", categoryPro);
       set(
         produce((state: Agreement44StoreSlice) => {
           state.agreement44Data.input.showVariablePay =
-            categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
-            categoryPro === "'Agents de maîtrise et techniciens (Groupe IV)'";
+            get().salairesData.input.hasSameSalary === "non" &&
+            (categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
+              categoryPro ===
+                "'Agents de maîtrise et techniciens (Groupe IV)'");
         })
       );
     },
