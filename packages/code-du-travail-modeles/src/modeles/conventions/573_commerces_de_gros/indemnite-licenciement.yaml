@@ -12,6 +12,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres:
   applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans:
   titre: Le salarié a été cadre durant au moins 15 ans
@@ -21,6 +22,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . oui:
   applicable si: cadre durant au moins de 15 ans = 'Oui'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . oui . age:
   titre: Âge du salarié
@@ -30,6 +32,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents:
   applicable si: catégorie professionnelle = 'Agents de maîtrise, techniciens et assimilés'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique:
   titre: Licenciement pour motif économique
@@ -39,6 +42,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . oui:
   applicable si: licenciement économique = 'Oui'
+  valeur: oui
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . oui . age:
   titre: Âge du salarié
@@ -48,6 +52,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . autres:
   applicable si: catégorie professionnelle = 'Autres salariés'
+  valeur: oui
 
 # Formules
 contrat salarié . convention collective . commerces de gros . au delà de dix ans:
@@ -59,7 +64,6 @@ contrat salarié . convention collective . commerces de gros . au delà de dix a
 contrat salarié . convention collective . commerces de gros . de zero à neuf ans:
   valeur: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
   plafond: 9 an
-  plancher: 0 an
 
 contrat salarié . convention collective . commerces de gros . au delà de neuf ans:
   somme:
@@ -70,7 +74,6 @@ contrat salarié . convention collective . commerces de gros . au delà de neuf 
 contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans:
   valeur: au delà de neuf ans
   plafond: 10 an
-  plancher: 0 an
 
 contrat salarié . convention collective . commerces de gros . au delà de vingt ans:
   somme:
