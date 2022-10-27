@@ -16,6 +16,7 @@ metadata:
     app.github.com/repo: socialgouv/code-du-travail-numerique
     app.github.com/run: '1234'
     app.github.com/sha: '0123456'
+    janitor/ttl: 365d
   labels:
     azure-pg-admin-user: code-du-travail-numerique
     application: code-du-travail-numerique
