@@ -37,7 +37,8 @@ export const createAgreement16StoreSalaires: StoreSlice<
         produce((state: Agreement16StoreSlice) => {
           state.agreement16Data.input.showVariablePay =
             get().salairesData.input.hasSameSalary === "non" &&
-            categoryPro === "'Ingénieurs et cadres'";
+            (categoryPro === "'Ingénieurs et cadres'" ||
+              categoryPro === "'TAM'");
         })
       );
     },

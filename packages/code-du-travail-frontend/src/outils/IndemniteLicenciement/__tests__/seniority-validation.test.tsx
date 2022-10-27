@@ -51,7 +51,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
           ui.information.agreement16.dateProCategoryChanged.get(),
           "01/01/2010"
         )
-        .setInput(ui.information.agreement16.age.get(), "38")
+        .setInput(ui.information.agreement16.engineerAge.get(), "38")
         .click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté
       expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");

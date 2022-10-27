@@ -92,7 +92,7 @@ export class Formula16
     }
 
     if (coeff > 0) {
-      formula = `${coeff} * Sref`;
+      formula = `(${coeff} * Sref)`;
       explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
     }
     return { explanations, formula };
@@ -159,14 +159,14 @@ export class Formula16
     const explanations = [];
     const yearLabel = yearPlural(seniority);
     if (ratio) {
-      formula = `${ratio} * Sref * ${hasCut ? "A1" : "A"}`;
+      formula = `(${ratio} * Sref * ${hasCut ? "A1" : "A"})`;
       explanations.push(
         `${hasCut ? "A1" : "A"} : Ancienneté totale (${round(
           seniority
         )} ${yearLabel})`
       );
       if (hasCut) {
-        formula += ` - 20% * A2 * (${ratio} * Sref * A1)`;
+        formula += ` - (20% * A2 * (${ratio} * Sref * A1))`;
         explanations.push(
           `A2 : Années entre 60 et 65 ans (${round(
             this.yearBetween60And65(age, seniority)
@@ -232,8 +232,9 @@ export class Formula16
     const yearLabel = yearPlural(seniority);
     const yearTAM = round(seniorityTAM ?? 0) < 2 ? "an" : "ans";
     let base = "";
+    let needParenthesis = false;
     if (seniorityTAM) {
-      base = "4 / 10 * Sref * A1 + 3 / 10 * Sref * A2";
+      base = "(4 / 10 * Sref * A1) + (3 / 10 * Sref * A2)";
       explanations.push(
         `A1 : Ancienneté dans la catégorie Ingénieurs et cadres (${round(
           seniority
@@ -246,17 +247,18 @@ export class Formula16
       );
     } else {
       base = "4 / 10 * Sref * A";
+      needParenthesis = true;
       explanations.push(
         `A : Ancienneté totale (${round(seniority)} ${yearLabel})`
       );
     }
-    formula = base;
+    formula = needParenthesis ? `(${base})` : base;
     explanations.push(`Sref : Salaire de référence (${round(refSalary)} €)`);
     if (hasCut) {
-      formula += ` - 20% * (${base})`;
+      formula += ` - (20% * (${base}))`;
     }
     if (coeff > 0) {
-      formula += ` + ${coeff} * Sref`;
+      formula += ` + (${coeff} * Sref)`;
     }
     return { explanations, formula };
   }
