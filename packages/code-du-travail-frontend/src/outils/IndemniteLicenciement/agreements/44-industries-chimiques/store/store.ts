@@ -31,13 +31,14 @@ export const createAgreement44StoreSalaires: StoreSlice<
         get().informationsData.input.publicodesInformations.find(
           (item) =>
             item.question.name ===
-            "contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle"
+            "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
         )?.info;
+      console.log("Init agreement : ", categoryPro);
       set(
         produce((state: Agreement44StoreSlice) => {
           state.agreement44Data.input.showVariablePay =
-            get().salairesData.input.hasSameSalary === "non" &&
-            categoryPro === "'Ingénieurs et cadres'";
+            categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
+            categoryPro === "'Agents de maîtrise et techniciens (Groupe IV)'";
         })
       );
     },
