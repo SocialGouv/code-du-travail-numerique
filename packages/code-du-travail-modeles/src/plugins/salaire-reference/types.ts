@@ -30,13 +30,10 @@ export type ReferenceSalaryProps<T> =
     ? CC3239ReferenceSalaryProps
     : T extends SupportedCcIndemniteLicenciement.IDCC0016
     ? CC16ReferenceSalaryProps
-<<<<<<< HEAD
     : T extends SupportedCcIndemniteLicenciement.IDCC0044
     ? CC44ReferenceSalaryProps
-=======
     : T extends SupportedCcIndemniteLicenciement.IDCC0573
     ? CC573ReferenceSalaryProps
->>>>>>> feat/indemnite-licenciement
     : T extends SupportedCcIndemniteLicenciement.IDCC0029
     ? CC29ReferenceSalaryProps
     : LegalReferenceSalaryProps;
