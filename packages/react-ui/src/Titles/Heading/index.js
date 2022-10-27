@@ -21,6 +21,7 @@ export const Heading = ({ children, stripe, variant, ...props }) => (
 
 Heading.propTypes = {
   children: PropTypes.node,
+  "data-testid": PropTypes.string,
   isFirst: PropTypes.bool,
   shift: PropTypes.string,
   stripe: PropTypes.oneOf(["left", "none"]),

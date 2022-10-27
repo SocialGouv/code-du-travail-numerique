@@ -11,15 +11,14 @@ import {
 } from "@socialgouv/cdtn-ui";
 import { processToHtml } from "../../information";
 import { toUrl } from "../../lib";
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import useWindowDimensions from "../../common/WindowDimension";
 
 export const ContentBlocks = ({
   name,
-  references = [],
   blocks,
-}: Omit<Content, "title">) => {
+}: Omit<Content, "title" | "references">) => {
   const { width } = useWindowDimensions();
 
   return (
@@ -123,21 +122,13 @@ export const ContentBlocks = ({
               comp = <React.Fragment key={name}>{reactContent}</React.Fragment>;
               break;
           }
-          return <ContentBlockWrapper key={index}>{comp}</ContentBlockWrapper>;
+          return (
+            <div key={index}>
+              {index > 0 && <StyledSeparator></StyledSeparator>}
+              <ContentBlockWrapper>{comp}</ContentBlockWrapper>
+            </div>
+          );
         }
-      )}
-      {references.map(
-        ({ label, links }) =>
-          links.length > 0 && (
-            <StyledReferences
-              label={label}
-              accordionDisplay={1}
-              references={links.map((reference, index) => ({
-                ...reference,
-                id: reference.id || `${name}-${index}`,
-              }))}
-            />
-          )
       )}
     </>
   );
@@ -195,4 +186,9 @@ const BlockContentTitle = styled.div`
 
 const ContentBlockWrapper = styled.div`
   padding-bottom: 12px;
+`;
+
+const StyledSeparator = styled.div`
+  margin: 24px 0;
+  border-top: 1px solid #bbcadf;
 `;

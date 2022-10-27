@@ -5,8 +5,6 @@ import { Response } from "./Response";
 import { Tooltip } from "../../../common/Tooltip";
 import { ShowInfo } from "./ShowInfo";
 import { trackClickHelp } from "../../tracking";
-import { theme } from "@socialgouv/cdtn-ui";
-const { breakpoints } = theme;
 
 export const Question = () => {
   const currentQuestion = useStore((state) => state.currentQuestion);
@@ -29,6 +27,7 @@ export const Question = () => {
                 trackClickHelp(currentQuestion.trackingName);
               }
             }}
+            data-testid={`Tooltip-${currentQuestion?.text}`}
           />
         )}
       </QuestionHeaderWrapper>

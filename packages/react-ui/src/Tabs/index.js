@@ -25,7 +25,12 @@ export const Tabs = (props) => {
         <StyledOverflowWrapper>
           <StyledTabList>
             {data.map(({ tab }, index) => (
-              <StyledTab key={index}>{getTextFromComponent(tab)}</StyledTab>
+              <StyledTab
+                key={index}
+                data-testid={`${props["data-testid"]}-${index}`}
+              >
+                {getTextFromComponent(tab)}
+              </StyledTab>
             ))}
           </StyledTabList>
         </StyledOverflowWrapper>
@@ -47,6 +52,7 @@ Tabs.propTypes = {
       tab: PropTypes.node.isRequired,
     })
   ).isRequired,
+  "data-testid": PropTypes.string,
   defaultIndex: PropTypes.number,
   onSelect: PropTypes.func,
   selectedIndex: PropTypes.number,
