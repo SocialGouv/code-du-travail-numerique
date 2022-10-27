@@ -18,9 +18,15 @@ export enum SupportedCcIndemniteLicenciement {
   IDCC650 = "IDCC650",
   IDCC2216 = "IDCC2216",
   IDCC0016 = "IDCC16",
+  IDCC0573 = "IDCC573",
   IDCC1596 = "IDCC1596",
   IDCC0029 = "IDCC29",
   IDCC0044 = "IDCC44",
   default = "default",
   legal = "legal",
+}
+
+export enum QuestionOuiNon {
+  oui = "Oui",
+  non = "Non",
 }
