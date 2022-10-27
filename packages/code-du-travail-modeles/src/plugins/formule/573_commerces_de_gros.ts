@@ -43,17 +43,17 @@ export class Formula573
       case category === CatPro573.autres && seniority >= 1 && seniority <= 10: {
         formula = `1 / 5 * Sref * A`;
         explanations.push(
-          `A: Années d'ancienneté au total (${roundSeniority} ${year})`
+          `A : Années d'ancienneté au total (${roundSeniority} ${year})`
         );
         break;
       }
       case category === CatPro573.autres && seniority > 10: {
         formula = `1 / 5 * Sref * A1 + 2 / 15 * Sref * A2`;
         explanations.push(
-          `A1: Années d'ancienneté au total (${roundSeniority} ${year})`
+          `A1 : Années d'ancienneté au total (${roundSeniority} ${year})`
         );
         explanations.push(
-          `A2: Années d'ancienneté au delà de 10 ans (${roundSeniority5} ${year5})`
+          `A2 : Années d'ancienneté au delà de 10 ans (${roundSeniority5} ${year5})`
         );
         break;
       }
@@ -64,27 +64,27 @@ export class Formula573
         formula = `2 / 10 * Sref * A1 + 3 / 10 * Sref * A2 + 20% (2 / 10 * Sref * A1 + 3 / 10 * Sref)`;
 
         explanations.push(
-          `A1: Années de présence dans la tranche de 0 à 9 ans inclus (${roundSeniority2} ${year2})`
+          `A1 : Années de présence dans la tranche de 0 à 9 ans inclus (${roundSeniority2} ${year2})`
         );
         explanations.push(
-          `A2: Années de présence dans la tranche à partir de 10 ans (${roundSeniority6} ${year6})`
+          `A2 : Années de présence dans la tranche à partir de 10 ans (${roundSeniority6} ${year6})`
         );
         break;
       }
       case category === CatPro573.agents && seniority >= 1 && seniority <= 10: {
         formula = `2 / 10 * Sref * A`;
         explanations.push(
-          `A: Années d'ancienneté au total (${roundSeniority} ${year})`
+          `A : Années d'ancienneté au total (${roundSeniority} ${year})`
         );
         break;
       }
       case category === CatPro573.agents && seniority > 10: {
         formula = `2 / 10 * Sref * A1 + 2 / 15 * Sref * A2`;
         explanations.push(
-          `A1: Années d'ancienneté au total (${roundSeniority} ${year})`
+          `A1 : Années d'ancienneté au total (${roundSeniority} ${year})`
         );
         explanations.push(
-          `A2: Années d'ancienneté au delà de 10 ans (${roundSeniority5} ${year5})`
+          `A2 : Années d'ancienneté au delà de 10 ans (${roundSeniority5} ${year5})`
         );
         break;
       }
@@ -126,25 +126,25 @@ export class Formula573
     if (seniority >= 1 && seniority <= 5) {
       formula = `2 / 10 * Sref * A`;
       explanations.push(
-        `A: Années d'ancienneté au total (${roundSeniority} ${year})`
+        `A : Années d'ancienneté au total (${roundSeniority} ${year})`
       );
     }
     if (seniority > 5) {
       formula = `3 / 10 * Sref * A1`;
       explanations.push(
-        `A1: Années de présence dans la tranche de 0 à 9 ans inclus (${roundSeniority2} ${year2})`
+        `A1 : Années de présence dans la tranche de 0 à 9 ans inclus (${roundSeniority2} ${year2})`
       );
     }
     if (seniority > 9) {
       formula += ` + 4 / 10 * Sref * A2`;
       explanations.push(
-        `A2: Années de présence dans la tranche de 10 à 19 ans inclus (${roundSeniority3} ${year3})`
+        `A2 : Années de présence dans la tranche de 10 à 19 ans inclus (${roundSeniority3} ${year3})`
       );
     }
     if (seniority > 19) {
       formula += ` + 5 / 10 * Sref * A3`;
       explanations.push(
-        `A3: Années de présence dans la tranche à partir de 20 ans (${roundSeniority4} ${year4})`
+        `A3 : Années de présence dans la tranche à partir de 20 ans (${roundSeniority4} ${year4})`
       );
     }
     if (

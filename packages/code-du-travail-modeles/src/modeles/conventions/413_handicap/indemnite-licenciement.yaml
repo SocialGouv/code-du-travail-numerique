@@ -31,7 +31,7 @@ contrat salarié . convention collective . établissement handicap . indemnité 
     - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
 
 # (1/2*Sref*A)
-# A: Année d'ancienneté
+# A : Année d'ancienneté
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   variations:

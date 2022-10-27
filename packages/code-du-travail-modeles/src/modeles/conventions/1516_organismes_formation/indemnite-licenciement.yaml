@@ -23,8 +23,8 @@ contrat salarié . convention collective . organismes de formation . indemnité 
   unité: €
 
 # (1/5*Sref*A1) + (1/10*Sref*A2)
-# A1: Ancienneté totale
-# A2: Années de présence au delà de 15 ans
+# A1 : Ancienneté totale
+# A2 : Années de présence au delà de 15 ans
 contrat salarié . convention collective . organismes de formation . indemnité de licenciement . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   variations:

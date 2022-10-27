@@ -59,7 +59,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
   valeur: oui
 
 # (0.25*Sref*A)
-# A: Années de présence
+# A : Années de présence
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . etam . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 20 ans
@@ -75,7 +75,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
     Article 12: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005851428?idConteneur=KALICONT000005635173&origin=list#KALIARTI000005851428
 
 # (0.30*Sref*A)
-# A: Années de présence
+# A : Années de présence
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . etam . résultat conventionnel pour 20 ans et plus:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 20 ans
@@ -93,7 +93,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
   valeur: oui
 
 # 1/3 * Sref * A
-# A: Années de présence
+# A : Années de présence
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . ingé . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
@@ -114,7 +114,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
   valeur: oui
 
 # 1/5 * Sref * A
-# A: Années de présence
+# A : Années de présence
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . chargés d'enquête . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 7
