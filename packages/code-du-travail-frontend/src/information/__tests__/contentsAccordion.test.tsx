@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { Contents } from "../Components";
 import { ui } from "./ui";
-import { SectionDisplayMode } from "cdtn-types";
+import { ContentType, SectionDisplayMode } from "cdtn-types";
 
 jest.mock("../htmlProcess.service");
 
@@ -18,12 +18,24 @@ test(`Information Contents
         {
           name: "accordion1",
           title: "Accordion1",
-          blocks: [{ type: "markdown", markdown: "myText1", html: "myText1" }],
+          blocks: [
+            {
+              type: ContentType.markdown,
+              markdown: "myText1",
+              html: "myText1",
+            },
+          ],
         },
         {
           name: "accordion2",
           title: "Accordion2",
-          blocks: [{ type: "markdown", markdown: "myText2", html: "myText2" }],
+          blocks: [
+            {
+              type: ContentType.markdown,
+              markdown: "myText2",
+              html: "myText2",
+            },
+          ],
         },
       ]}
     />

@@ -8,6 +8,12 @@ export enum BlockDisplayMode {
   square = "square",
 }
 
+export enum ContentType {
+  markdown = "markdown",
+  graphic = "graphic",
+  content = "content",
+}
+
 export type ReferenceLink = {
   id: string;
   type: string;
@@ -30,18 +36,42 @@ export type ContentItem = {
   icon?: string;
 };
 
-export declare type ContentBlock = {
-  type: string;
-  markdown?: string;
-  imgUrl?: string;
-  fileUrl?: string;
-  altText?: string;
-  html?: string;
-  size?: number;
-  blockDisplayMode?: BlockDisplayMode;
-  contents?: EditorialContent[];
-  title?: string;
+export declare type ContentBlockMarkdown = {
+  type: ContentType.markdown;
+  markdown: string;
+  html: string;
 };
+
+export declare type ContentBlockGaphic = {
+  type: ContentType.graphic;
+  markdown: string;
+  imgUrl: string;
+  fileUrl: string;
+  altText: string;
+  size: string;
+  html: string;
+};
+
+export declare type ContentBlockContent = {
+  type: ContentType.content;
+  title: string;
+  blockDisplayMode: BlockDisplayMode;
+  contents: ContentBlockContentItem[];
+};
+
+export declare type ContentBlockContentItem = {
+  slug: string;
+  title: string;
+  cdtnId: string;
+  source: string;
+  description: string;
+  icon?: string;
+};
+
+export declare type ContentBlock =
+  | ContentBlockMarkdown
+  | ContentBlockGaphic
+  | ContentBlockContent;
 
 export declare type Content = {
   name: string;

@@ -1,7 +1,6 @@
 import { ListLink } from "../../search/SearchResults/Results";
 import ImageWrapper from "../../common/ImageWrapper";
-import References from "../../common/References";
-import { BlockDisplayMode, Content } from "cdtn-types";
+import { BlockDisplayMode, Content, ContentType } from "cdtn-types";
 import {
   Button,
   icons,
@@ -19,117 +18,110 @@ export const ContentBlocks = ({
   name,
   blocks,
 }: Omit<Content, "title" | "references">) => {
+  let forceBlockDisplayMode;
   const { width } = useWindowDimensions();
+  if (width < theme.breakpoints.intDesktop) {
+    forceBlockDisplayMode = BlockDisplayMode.line;
+  }
 
   return (
     <>
-      {blocks.map(
-        (
-          {
-            type,
-            imgUrl = "",
-            altText = "",
-            fileUrl = "",
-            html = "",
-            blockDisplayMode,
-            size,
-            title,
-            contents,
-          },
-          index: number
-        ) => {
-          const reactContent: any = processToHtml(html);
-          let comp;
-          if (width < theme.breakpoints.intDesktop) {
-            blockDisplayMode = BlockDisplayMode.line;
-          }
+      {blocks.map((block, index: number) => {
+        let comp;
 
-          switch (type) {
-            case "graphic":
-              comp = (
-                <>
-                  <ImageWrapper src={toUrl(imgUrl)} altText={altText} />
-                  <DownloadWrapper>
-                    <Button
-                      as="a"
-                      className="no-after"
-                      href={toUrl(fileUrl)}
-                      narrow
-                      variant="navLink"
-                      download
-                    >
-                      Télécharger l‘infographie (pdf - {size})
-                      <Download />
-                    </Button>
-                  </DownloadWrapper>
-                  <MoreContent noLeftPadding title="Voir en détail">
-                    <Wrapper variant="dark">{reactContent}</Wrapper>
-                  </MoreContent>
-                </>
-              );
-              break;
-            case "content":
-              let contentBlock;
-              switch (blockDisplayMode) {
-                case BlockDisplayMode.square:
-                  contentBlock = (
-                    <ListLinkSquareTile>
-                      {contents?.map((item, ContentIndex) => (
-                        <div key={`${index}-${ContentIndex}`}>
-                          <ListLinkContainer>
-                            <ListLink
-                              item={{
-                                ...item,
-                                icon: icons[item?.icon],
-                              }}
-                              centerTitle
-                            ></ListLink>
-                          </ListLinkContainer>
-                        </div>
-                      ))}
-                    </ListLinkSquareTile>
-                  );
-                  break;
-                case BlockDisplayMode.line:
-                default:
-                  contentBlock = (
-                    <div>
-                      {contents?.map((item, ContentIndex) => (
-                        <div key={`${index}-${ContentIndex}`}>
-                          <ListLinkContainer>
-                            <ListLink
-                              item={{
-                                ...item,
-                                icon: undefined,
-                              }}
-                            ></ListLink>
-                          </ListLinkContainer>
-                        </div>
-                      ))}
-                    </div>
-                  );
-                  break;
-              }
-              comp = (
-                <>
-                  {title && <BlockContentTitle>{title}</BlockContentTitle>}
-                  {contentBlock}
-                </>
-              );
-              break;
-            case "markdown":
-            default:
-              comp = <React.Fragment key={name}>{reactContent}</React.Fragment>;
-              break;
-          }
-          return (
-            <div key={index}>
-              {index > 0 && <StyledSeparator></StyledSeparator>}
-              <ContentBlockWrapper>{comp}</ContentBlockWrapper>
-            </div>
-          );
+        switch (block.type) {
+          case ContentType.graphic:
+            const { imgUrl, altText, fileUrl, html: htmlGraphic, size } = block;
+            comp = (
+              <>
+                <ImageWrapper src={toUrl(imgUrl)} altText={altText} />
+                <DownloadWrapper>
+                  <Button
+                    as="a"
+                    className="no-after"
+                    href={toUrl(fileUrl)}
+                    narrow
+                    variant="navLink"
+                    download
+                  >
+                    Télécharger l‘infographie (pdf - {size})
+                    <Download />
+                  </Button>
+                </DownloadWrapper>
+                <MoreContent noLeftPadding title="Voir en détail">
+                  <Wrapper variant="dark">{processToHtml(htmlGraphic)}</Wrapper>
+                </MoreContent>
+              </>
+            );
+            break;
+          case ContentType.content:
+            const { blockDisplayMode, contents, title } = block;
+            let contentBlock;
+            switch (forceBlockDisplayMode || blockDisplayMode) {
+              case BlockDisplayMode.square:
+                contentBlock = (
+                  <ListLinkSquareTile>
+                    {contents?.map((item, ContentIndex) => (
+                      <div key={`${index}-${ContentIndex}`}>
+                        <ListLinkContainer>
+                          <ListLink
+                            item={{
+                              ...item,
+                              icon: icons[item?.icon],
+                            }}
+                            centerTitle
+                          ></ListLink>
+                        </ListLinkContainer>
+                      </div>
+                    ))}
+                  </ListLinkSquareTile>
+                );
+                break;
+              case BlockDisplayMode.line:
+              default:
+                contentBlock = (
+                  <div>
+                    {contents?.map((item, ContentIndex) => (
+                      <div key={`${index}-${ContentIndex}`}>
+                        <ListLinkContainer>
+                          <ListLink
+                            item={{
+                              ...item,
+                              icon: undefined,
+                            }}
+                          ></ListLink>
+                        </ListLinkContainer>
+                      </div>
+                    ))}
+                  </div>
+                );
+                break;
+            }
+            comp = (
+              <>
+                {title && <BlockContentTitle>{title}</BlockContentTitle>}
+                {contentBlock}
+              </>
+            );
+            break;
+          case ContentType.markdown:
+            const { html: htmlMarkdown } = block;
+            comp = (
+              <React.Fragment key={name}>
+                {processToHtml(htmlMarkdown) as any}
+              </React.Fragment>
+            );
+            break;
         }
-      )}
+        return (
+          <div key={index}>
+            {index > 0 && (
+              <StyledSeparator data-testid="block-separator"></StyledSeparator>
+            )}
+            <ContentBlockWrapper>{comp}</ContentBlockWrapper>
+          </div>
+        );
+      })}
     </>
   );
 };
@@ -146,14 +138,10 @@ const Download = styled(icons.Download)`
   margin-left: ${spacings.xsmall};
 `;
 
-const StyledReferences = styled(References)`
-  margin-top: ${spacings.xmedium};
-`;
-
 const ListLinkContainer = styled.div`
   margin: 12px 0;
   height: 100%;
-  padding: 0 12px;
+  padding: 0 20px;
   a {
     height: 100%;
     padding: 32px 20px;
@@ -167,8 +155,7 @@ const ListLinkSquareTile = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   & > div {
-    width: 284px;
-    height: 341px;
+    min-height: 341px;
     margin: 12px auto;
   }
   p,
