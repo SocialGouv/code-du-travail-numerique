@@ -5,12 +5,6 @@ exports.config = {
     steps: ["./step_definitions/global.js"],
   },
   helpers: {
-    CurrentCanonicalLink: {
-      require: "./helpers/canonical.js",
-    },
-    CurrentUrl: {
-      require: "./helpers/url.js",
-    },
     FileSystem: {},
     FocusHelper: {
       require: "./helpers/focus.js",
