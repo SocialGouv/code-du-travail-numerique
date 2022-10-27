@@ -11,7 +11,7 @@ export const validateAgreement44 = (
   const { isValid, errorState } = validateStep(get().agreement44Data.input);
   set(
     produce((state: Agreement44StoreSlice) => {
-      state.agreement44Data.hasBeenSubmit = isValid;
+      state.agreement44Data.hasBeenSubmit = !isValid;
       state.agreement44Data.isStepValid = isValid;
       state.agreement44Data.error = errorState;
     })
