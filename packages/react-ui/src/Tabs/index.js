@@ -116,6 +116,8 @@ const StyledTab = styled(Tab)`
   }
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};
+    max-width: 150px;
+    flex: none !important;
   }
 `;
 
