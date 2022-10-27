@@ -1,0 +1,346 @@
+# Questions à poser
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  question: Quelle est la catégorie professionnelle du salarié ?
+  cdtn:
+    type: liste
+    valeurs:
+      Cadres: "'Cadres'"
+      Agents de maîtrise, techniciens et assimilés: "'Agents de maîtrise, techniciens et assimilés'"
+      Autres salariés: "'Autres salariés'"
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres:
+  applicable si: catégorie professionnelle = 'Cadres'
+  valeur: oui
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans:
+  titre: Le salarié a été cadre durant au moins 15 ans
+  question: Le salarié a-t-il été cadre durant au moins 15 ans ?
+  cdtn:
+    type: oui-non
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . oui:
+  applicable si: cadre durant au moins de 15 ans = 'Oui'
+  valeur: oui
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . oui . age:
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié ?
+  cdtn:
+    type: entier
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents:
+  applicable si: catégorie professionnelle = 'Agents de maîtrise, techniciens et assimilés'
+  valeur: oui
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique:
+  titre: Licenciement pour motif économique
+  question: Le motif du licenciement est-il économique ?
+  cdtn:
+    type: oui-non
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . oui:
+  applicable si: licenciement économique = 'Oui'
+  valeur: oui
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . oui . age:
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié ?
+  cdtn:
+    type: entier
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . autres:
+  applicable si: catégorie professionnelle = 'Autres salariés'
+  valeur: oui
+
+# Formules
+contrat salarié . convention collective . commerces de gros . au delà de dix ans:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 10 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . commerces de gros . de zero à neuf ans:
+  valeur: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+  plafond: 9 an
+
+contrat salarié . convention collective . commerces de gros . au delà de neuf ans:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 9 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans:
+  valeur: au delà de neuf ans
+  plafond: 10 an
+
+contrat salarié . convention collective . commerces de gros . au delà de vingt ans:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 19 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . commerces de gros . formule 1 autre:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      facteur: 1 / 5
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . formule 2 autre:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * au delà de dix ans
+      facteur: 2 / 15
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . somme autre:
+  somme:
+    - formule 1 autre
+    - formule 2 autre
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . formule 1 agent:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * de zero à neuf ans
+      facteur: 2 / 10
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . formule 1 agent majoration:
+  valeur:
+    produit:
+      assiette: formule 1 agent
+      facteur: 20 / 100
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . formule 2 agent:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * au delà de neuf ans
+      facteur: 3 / 10
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . formule 2 agent majoration:
+  valeur:
+    produit:
+      assiette: formule 2 agent
+      facteur: 20 / 100
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . somme agent avec majoration:
+  somme:
+    - formule 1 agent
+    - formule 2 agent
+    - formule 1 agent majoration
+    - formule 2 agent majoration
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . formule 3 agent:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      facteur: 2 / 10
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . formule 4 agent:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * au delà de dix ans
+      facteur: 2 / 15
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . somme agent sans majoration:
+  somme:
+    - formule 3 agent
+    - formule 4 agent
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . formule 1 cadre:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * de zero à neuf ans
+      facteur: 3 / 10
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . formule 1 cadre majoration 15%:
+  valeur:
+    produit:
+      assiette: formule 1 cadre
+      facteur: 15 / 100
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . formule 1 cadre majoration 20%:
+  valeur:
+    produit:
+      assiette: formule 1 cadre
+      facteur: 20 / 100
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . formule 2 cadre:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * de dix à dix-neuf ans
+      facteur: 4 / 10
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . formule 2 cadre majoration 15%:
+  valeur:
+    produit:
+      assiette: formule 2 cadre
+      facteur: 15 / 100
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . formule 2 cadre majoration 20%:
+  valeur:
+    produit:
+      assiette: formule 2 cadre
+      facteur: 20 / 100
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . formule 3 cadre:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * au delà de vingt ans
+      facteur: 5 / 10
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . formule 3 cadre majoration 15%:
+  valeur:
+    produit:
+      assiette: formule 3 cadre
+      facteur: 15 / 100
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . formule 3 cadre majoration 20%:
+  valeur:
+    produit:
+      assiette: formule 3 cadre
+      facteur: 20 / 100
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . somme cadre sans majoration:
+  somme:
+    - formule 1 cadre
+    - formule 2 cadre
+    - formule 3 cadre
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . somme cadre avec majoration 15%:
+  somme:
+    - formule 1 cadre
+    - formule 2 cadre
+    - formule 3 cadre
+    - formule 1 cadre majoration 15%
+    - formule 2 cadre majoration 15%
+    - formule 3 cadre majoration 15%
+  unité: €
+
+contrat salarié . convention collective . commerces de gros . somme cadre avec majoration 20%:
+  somme:
+    - formule 1 cadre
+    - formule 2 cadre
+    - formule 3 cadre
+    - formule 1 cadre majoration 20%
+    - formule 2 cadre majoration 20%
+    - formule 3 cadre majoration 20%
+  unité: €
+
+# Résultats
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . autres . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  variations:
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1
+      alors: somme autre
+    - sinon: 0
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 37: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373
+    Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur alimentaire: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802068?idConteneur=KALICONT000005635373
+    Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur non alimentaire: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802084?idConteneur=KALICONT000005635373
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  non applicable si: contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . oui . age . résultat conventionnel 55 ans
+  variations:
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1
+      alors: somme agent sans majoration
+    - sinon: 0
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 37: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373
+    Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur alimentaire: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802068?idConteneur=KALICONT000005635373
+    Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur non alimentaire: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802084?idConteneur=KALICONT000005635373
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . oui . age . résultat conventionnel 55 ans:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15
+      - age >= 55
+  valeur: somme agent avec majoration
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur alimentaire: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802068?idConteneur=KALICONT000005635373
+    Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur non alimentaire: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802084?idConteneur=KALICONT000005635373
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . résultat conventionnel moins 5 ans:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5
+  valeur: formule 3 agent
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 37: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373
+    Article 4 de l’Avenant I relatif aux cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . oui . age . résultat conventionnel 55 ans:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15
+      - age >= 55
+  valeur: somme cadre avec majoration 20%
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 37: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373
+    Article 4 de l’Avenant I relatif aux cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . oui . age . résultat conventionnel 50 ans:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15
+      - age >= 50
+      - age < 55
+  valeur: somme cadre avec majoration 15%
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 37: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373
+    Article 4 de l’Avenant I relatif aux cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373
+
+contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . résultat conventionnel plus 5 ans:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  non applicable si:
+    une de ces conditions:
+      - cadre durant au moins de 15 ans . oui . age . résultat conventionnel 55 ans
+      - cadre durant au moins de 15 ans . oui . age . résultat conventionnel 50 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5
+  valeur: somme cadre sans majoration
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 37: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373
+    Article 4 de l’Avenant I relatif aux cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373
