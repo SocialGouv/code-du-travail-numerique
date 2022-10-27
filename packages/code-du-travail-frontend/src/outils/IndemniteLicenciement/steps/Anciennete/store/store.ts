@@ -51,7 +51,8 @@ const createAncienneteStore: StoreSlice<
       applyGenericValidation(get, set, "dateNotification", value);
     },
     onChangeAbsencePeriods: (value) => {
-      applyGenericValidation(get, set, "absencePeriods", value);
+      const absence = cleanAbsenceDate(value, get());
+      applyGenericValidation(get, set, "absencePeriods", absence);
     },
     onChangeHasAbsenceProlonge: (value) => {
       set(

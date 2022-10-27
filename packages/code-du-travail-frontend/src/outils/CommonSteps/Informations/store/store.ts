@@ -150,6 +150,7 @@ const createCommonInformationsStore: StoreSlice<
           },
           order: questionAnswered.order + index + 1,
           info: undefined,
+          id: Math.random().toString(36).substring(2, 15),
         }))[0];
       let newPublicodesInformationsForNextQuestions: PublicodesInformation[];
       if (missingArgs.length === 0) {

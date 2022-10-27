@@ -48,7 +48,7 @@ export class Formula1501
         const above = props.seniority - 10;
         formula += " + (1/15 * Sref * A2)";
         explanations.push(
-          `A2: Années d'ancienneté au-delà de 10 ans (${round(
+          `A2 : Années d'ancienneté au-delà de 10 ans (${round(
             above
           )} ${yearPlural(above)})`
         );
@@ -57,7 +57,7 @@ export class Formula1501
         const above = props.seniority - 10;
         formula += " + (2/15 * Sref * A2)";
         explanations.push(
-          `A2: Années d'ancienneté au-delà de 10 ans (${round(
+          `A2 : Années d'ancienneté au-delà de 10 ans (${round(
             above
           )} ${yearPlural(above)})`
         );
