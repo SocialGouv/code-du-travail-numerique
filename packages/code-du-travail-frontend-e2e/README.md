@@ -1,9 +1,12 @@
 # code-du-travail-frontend-e2e
 
+## Cypress E2E tests
+We're moving from Gherkin to [Cypress](https://docs.cypress.io).
+
 ## Gherkin E2E tests
 
 The end to end tests are written in Gherkin.  
-You can find them in the [features](features) folder.
+You can find them in the [features](codecept/features) folder.
 
 ### [Codecept runners](https://codecept.io/bdd/#gherkin)
 
