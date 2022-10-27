@@ -207,16 +207,16 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
         category                 | isEconomicFiring | age   | seniority | salary  | expectedCompensation
         ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${0.75}   | ${2500} | ${0}
         ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${2}      | ${2500} | ${1500}
-        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${5}      | ${2500} | ${3750}
+        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${2}      | ${2500} | ${5000}
+        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${5}      | ${2500} | ${5000}
         ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${0.75}   | ${2500} | ${0}
         ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${2}      | ${2500} | ${1500}
+        ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${2}      | ${2500} | ${5000}
         ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${5}      | ${2500} | ${8750}
         ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${0.75}   | ${2500} | ${0}
         ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${2}      | ${2500} | ${1500}
-        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${5}      | ${2500} | ${3750}
+        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${2}      | ${2500} | ${5000}
+        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${5}      | ${2500} | ${5000}
       `(
         "Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring et sref : $salary => $expectedCompensation €",
         ({
@@ -256,16 +256,16 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
         category                     | isEconomicFiring | age   | seniority | salary  | expectedCompensation
         ${CategoryPro44.techniciens} | ${true}          | ${30} | ${0.75}   | ${2500} | ${0}
         ${CategoryPro44.techniciens} | ${true}          | ${30} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${2}      | ${2500} | ${1500}
-        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${5}      | ${2500} | ${3750}
+        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${2}      | ${2500} | ${5000}
+        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${5}      | ${2500} | ${5000}
         ${CategoryPro44.techniciens} | ${true}          | ${52} | ${0.75}   | ${2500} | ${0}
         ${CategoryPro44.techniciens} | ${true}          | ${52} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.techniciens} | ${true}          | ${52} | ${2}      | ${2500} | ${1500}
+        ${CategoryPro44.techniciens} | ${true}          | ${52} | ${2}      | ${2500} | ${5000}
         ${CategoryPro44.techniciens} | ${true}          | ${52} | ${5}      | ${2500} | ${8750}
         ${CategoryPro44.techniciens} | ${true}          | ${56} | ${0.75}   | ${2500} | ${0}
         ${CategoryPro44.techniciens} | ${true}          | ${56} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${2}      | ${2500} | ${1500}
-        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${5}      | ${2500} | ${3750}
+        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${2}      | ${2500} | ${5000}
+        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${5}      | ${2500} | ${5000}
       `(
         "Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring et sref : $salary => $expectedCompensation €",
         ({
@@ -305,15 +305,15 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
         category              | isEconomicFiring | age   | seniority | salary  | expectedCompensation
         ${CategoryPro44.inge} | ${true}          | ${30} | ${0.75}   | ${2500} | ${0}
         ${CategoryPro44.inge} | ${true}          | ${30} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.inge} | ${true}          | ${30} | ${2}      | ${2500} | ${2000}
+        ${CategoryPro44.inge} | ${true}          | ${30} | ${2}      | ${2500} | ${5000}
         ${CategoryPro44.inge} | ${true}          | ${30} | ${5}      | ${2500} | ${5000}
         ${CategoryPro44.inge} | ${true}          | ${52} | ${0.75}   | ${2500} | ${0}
         ${CategoryPro44.inge} | ${true}          | ${52} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.inge} | ${true}          | ${52} | ${2}      | ${2500} | ${2000}
+        ${CategoryPro44.inge} | ${true}          | ${52} | ${2}      | ${2500} | ${5000}
         ${CategoryPro44.inge} | ${true}          | ${52} | ${5}      | ${2500} | ${10000}
         ${CategoryPro44.inge} | ${true}          | ${56} | ${0.75}   | ${2500} | ${0}
         ${CategoryPro44.inge} | ${true}          | ${56} | ${1.5}    | ${2500} | ${2500}
-        ${CategoryPro44.inge} | ${true}          | ${56} | ${2}      | ${2500} | ${2000}
+        ${CategoryPro44.inge} | ${true}          | ${56} | ${2}      | ${2500} | ${5000}
         ${CategoryPro44.inge} | ${true}          | ${56} | ${5}      | ${2500} | ${5000}
       `(
         "Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring et sref : $salary => $expectedCompensation €",

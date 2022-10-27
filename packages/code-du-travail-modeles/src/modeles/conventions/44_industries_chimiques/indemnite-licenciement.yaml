@@ -118,6 +118,13 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
       - huit dixième sref au delà de quinze ans
   unité: €
 
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . plancher:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      facteur: 2
+  unité: €
+
 # Résultat conventionnel
 
 ## Ouvrier
@@ -131,10 +138,8 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
       - catégorie professionnelle = 'Ouvriers et collaborateurs (Groupes I à III)'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
       - catégorie professionnelle . licenciement économique = 'Oui'
-  valeur:
-    le minimum de:
-      - trois dixième sref
-      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
+  valeur: trois dixième sref
+  plancher: plancher
   unité: €
   arrondi: 2 décimales
   références:
@@ -249,10 +254,8 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
       - catégorie professionnelle = 'Agents de maîtrise et techniciens (Groupe IV)'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
       - catégorie professionnelle . licenciement économique = 'Oui'
-  valeur:
-    le minimum de:
-      - somme agent de maîtrise
-      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
+  valeur: somme agent de maîtrise
+  plancher: plancher
   unité: €
   arrondi: 2 décimales
   références:
@@ -364,10 +367,8 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
       - catégorie professionnelle = 'Ingénieurs et cadres (Groupe V)'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
       - catégorie professionnelle . licenciement économique = 'Oui'
-  valeur:
-    le minimum de:
-      - somme ingénieur
-      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
+  valeur: somme ingénieur
+  plancher: plancher
   unité: €
   arrondi: 2 décimales
   références:
