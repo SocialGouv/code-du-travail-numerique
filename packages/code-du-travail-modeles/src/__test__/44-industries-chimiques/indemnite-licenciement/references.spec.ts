@@ -58,6 +58,60 @@ const referencesIngeLicenciementNormal = [
   },
 ];
 
+const referencesLicenciementEcoInge = [
+  {
+    article:
+      "Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu)",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613",
+  },
+  {
+    article:
+      "Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022",
+  },
+  {
+    article:
+      "Article 14 de l’Avenant n° 3 du 16 juin 1955 relatif aux ingénieurs et cadres",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846317?idConteneur=KALICONT000005635613",
+  },
+];
+
+const referencesLicenciementEcoAgents = [
+  {
+    article:
+      "Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu)",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613",
+  },
+  {
+    article:
+      "Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022",
+  },
+  {
+    article:
+      "Article 21 de l’ Avenant n° 2 du 14 mars 1955 relatif aux agents de maîtrise et certains techniciens",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846463?idConteneur=KALICONT000005635613",
+  },
+];
+
+const referencesLicenciementEcoOuvriers = [
+  {
+    article:
+      "Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu)",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613",
+  },
+  {
+    article:
+      "Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022",
+  },
+  {
+    article:
+      "Article 28 de l’Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846396?idConteneur=KALICONT000005635613",
+  },
+];
+
 describe("Références juridiques pour l'indemnité conventionnel de licenciement pour la CC 44", () => {
   describe("Licenciement normal", () => {
     describe("Ouvrier", () => {
@@ -187,37 +241,37 @@ describe("Références juridiques pour l'indemnité conventionnel de licenciemen
 
   describe("Licenciement économique", () => {
     test.each`
-      category                     | isEconomicFiring | age   | seniority | salary
-      ${CategoryPro44.ouvrier}     | ${true}          | ${30} | ${1.5}    | ${2500}
-      ${CategoryPro44.ouvrier}     | ${true}          | ${30} | ${2}      | ${2500}
-      ${CategoryPro44.ouvrier}     | ${true}          | ${30} | ${5}      | ${2500}
-      ${CategoryPro44.ouvrier}     | ${true}          | ${52} | ${1.5}    | ${2500}
-      ${CategoryPro44.ouvrier}     | ${true}          | ${52} | ${2}      | ${2500}
-      ${CategoryPro44.ouvrier}     | ${true}          | ${52} | ${5}      | ${2500}
-      ${CategoryPro44.ouvrier}     | ${true}          | ${56} | ${1.5}    | ${2500}
-      ${CategoryPro44.ouvrier}     | ${true}          | ${56} | ${2}      | ${2500}
-      ${CategoryPro44.ouvrier}     | ${true}          | ${56} | ${5}      | ${2500}
-      ${CategoryPro44.techniciens} | ${true}          | ${30} | ${1.5}    | ${2500}
-      ${CategoryPro44.techniciens} | ${true}          | ${30} | ${2}      | ${2500}
-      ${CategoryPro44.techniciens} | ${true}          | ${30} | ${5}      | ${2500}
-      ${CategoryPro44.techniciens} | ${true}          | ${52} | ${1.5}    | ${2500}
-      ${CategoryPro44.techniciens} | ${true}          | ${52} | ${2}      | ${2500}
-      ${CategoryPro44.techniciens} | ${true}          | ${52} | ${5}      | ${2500}
-      ${CategoryPro44.techniciens} | ${true}          | ${56} | ${1.5}    | ${2500}
-      ${CategoryPro44.techniciens} | ${true}          | ${56} | ${2}      | ${2500}
-      ${CategoryPro44.techniciens} | ${true}          | ${56} | ${5}      | ${2500}
-      ${CategoryPro44.inge}        | ${true}          | ${30} | ${1.5}    | ${2500}
-      ${CategoryPro44.inge}        | ${true}          | ${30} | ${2}      | ${2500}
-      ${CategoryPro44.inge}        | ${true}          | ${30} | ${5}      | ${2500}
-      ${CategoryPro44.inge}        | ${true}          | ${52} | ${1.5}    | ${2500}
-      ${CategoryPro44.inge}        | ${true}          | ${52} | ${2}      | ${2500}
-      ${CategoryPro44.inge}        | ${true}          | ${52} | ${5}      | ${2500}
-      ${CategoryPro44.inge}        | ${true}          | ${56} | ${1.5}    | ${2500}
-      ${CategoryPro44.inge}        | ${true}          | ${56} | ${2}      | ${2500}
-      ${CategoryPro44.inge}        | ${true}          | ${56} | ${5}      | ${2500}
+      category                     | isEconomicFiring | age   | seniority | salary  | expectedRef
+      ${CategoryPro44.ouvrier}     | ${true}          | ${30} | ${1.5}    | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.ouvrier}     | ${true}          | ${30} | ${2}      | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.ouvrier}     | ${true}          | ${30} | ${5}      | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.ouvrier}     | ${true}          | ${52} | ${1.5}    | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.ouvrier}     | ${true}          | ${52} | ${2}      | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.ouvrier}     | ${true}          | ${52} | ${5}      | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.ouvrier}     | ${true}          | ${56} | ${1.5}    | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.ouvrier}     | ${true}          | ${56} | ${2}      | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.ouvrier}     | ${true}          | ${56} | ${5}      | ${2500} | ${referencesLicenciementEcoOuvriers}
+      ${CategoryPro44.techniciens} | ${true}          | ${30} | ${1.5}    | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.techniciens} | ${true}          | ${30} | ${2}      | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.techniciens} | ${true}          | ${30} | ${5}      | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.techniciens} | ${true}          | ${52} | ${1.5}    | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.techniciens} | ${true}          | ${52} | ${2}      | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.techniciens} | ${true}          | ${52} | ${5}      | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.techniciens} | ${true}          | ${56} | ${1.5}    | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.techniciens} | ${true}          | ${56} | ${2}      | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.techniciens} | ${true}          | ${56} | ${5}      | ${2500} | ${referencesLicenciementEcoAgents}
+      ${CategoryPro44.inge}        | ${true}          | ${30} | ${1.5}    | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.inge}        | ${true}          | ${30} | ${2}      | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.inge}        | ${true}          | ${30} | ${5}      | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.inge}        | ${true}          | ${52} | ${1.5}    | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.inge}        | ${true}          | ${52} | ${2}      | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.inge}        | ${true}          | ${52} | ${5}      | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.inge}        | ${true}          | ${56} | ${1.5}    | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.inge}        | ${true}          | ${56} | ${2}      | ${2500} | ${referencesLicenciementEco}
+      ${CategoryPro44.inge}        | ${true}          | ${56} | ${5}      | ${2500} | ${referencesLicenciementEcoInge}
     `(
       "Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring et sref : $salary",
-      ({ category, isEconomicFiring, age, seniority, salary }) => {
+      ({ category, isEconomicFiring, age, seniority, salary, expectedRef }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0044'",
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
@@ -233,10 +287,8 @@ describe("Références juridiques pour l'indemnité conventionnel de licenciemen
         });
 
         const result = getReferences(situation, "résultat conventionnel");
-        expect(result).toHaveLength(referencesLicenciementEco.length);
-        expect(result).toEqual(
-          expect.arrayContaining(referencesLicenciementEco)
-        );
+        expect(result).toHaveLength(expectedRef.length);
+        expect(result).toEqual(expect.arrayContaining(expectedRef));
       }
     );
   });
