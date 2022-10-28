@@ -1,9 +1,9 @@
 describe("Not found", () => {
   it("page should returns 404", () => {
     cy.request({
-      url: "/banane",
-      method: "GET",
       failOnStatusCode: false,
+      method: "GET",
+      url: "/banane",
     }).then((response) => {
       expect(response.status).to.equal(404);
     });
