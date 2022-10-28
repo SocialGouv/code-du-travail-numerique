@@ -164,7 +164,7 @@ export class Formula44
     let formula = "";
     const explanations: string[] = [];
     if (isEconomicFiring) {
-      if (seniority > 5 && age >= 50 && age <= 55) {
+      if (seniority >= 5 && age >= 50) {
         formula = "2 * Sref + 4 / 10 * Sref * A1";
       } else if (seniority >= 2) {
         formula = "4 / 10 * Sref * A1";

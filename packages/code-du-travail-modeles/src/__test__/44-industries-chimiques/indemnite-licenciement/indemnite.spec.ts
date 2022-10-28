@@ -216,7 +216,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
         ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${0.75}   | ${2500} | ${0}
         ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${1.5}    | ${2500} | ${2500}
         ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${2}      | ${2500} | ${5000}
-        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${5}      | ${2500} | ${5000}
+        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${5}      | ${2500} | ${8750}
       `(
         "Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring et sref : $salary => $expectedCompensation €",
         ({
@@ -265,7 +265,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
         ${CategoryPro44.techniciens} | ${true}          | ${56} | ${0.75}   | ${2500} | ${0}
         ${CategoryPro44.techniciens} | ${true}          | ${56} | ${1.5}    | ${2500} | ${2500}
         ${CategoryPro44.techniciens} | ${true}          | ${56} | ${2}      | ${2500} | ${5000}
-        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${5}      | ${2500} | ${5000}
+        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${5}      | ${2500} | ${8750}
       `(
         "Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring et sref : $salary => $expectedCompensation €",
         ({
@@ -314,7 +314,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
         ${CategoryPro44.inge} | ${true}          | ${56} | ${0.75}   | ${2500} | ${0}
         ${CategoryPro44.inge} | ${true}          | ${56} | ${1.5}    | ${2500} | ${2500}
         ${CategoryPro44.inge} | ${true}          | ${56} | ${2}      | ${2500} | ${5000}
-        ${CategoryPro44.inge} | ${true}          | ${56} | ${5}      | ${2500} | ${5000}
+        ${CategoryPro44.inge} | ${true}          | ${56} | ${5}      | ${2500} | ${10000}
       `(
         "Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring et sref : $salary => $expectedCompensation €",
         ({

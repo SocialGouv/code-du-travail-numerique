@@ -396,7 +396,6 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
       - catégorie professionnelle . licenciement économique = 'Oui'
       - catégorie professionnelle . licenciement économique . age >= 50
-      - catégorie professionnelle . licenciement économique . age <= 55
   valeur:
     somme:
       - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
