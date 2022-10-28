@@ -3,13 +3,16 @@
   "version": "4.82.0",
   "private": true,
   "description": "",
-  "main": "codecept.conf.js",
+  "main": "codecept/codecept.conf.js",
   "scripts": {
     "precommit": "lint-staged",
     "lint": "eslint ./**/*.js",
-    "test:e2e": "codeceptjs run --features",
-    "test:e2e:headed": "CODECEPT_HEADED=true codeceptjs run --features  --grep \"Parcours en ne connaissant pas sa convention collective\"   ",
-    "test:e2e:ui": "codecept-ui --verbose"
+    "test:e2e": "yarn run test:codeceptjs && yarn run test:cypress",
+    "test:cypress": "cypress run",
+    "test:cypress:ui": "cypress open",
+    "test:codeceptjs": "codeceptjs run --features --config=./codecept/codecept.conf.js",
+    "test:codeceptjs:headed": "CODECEPT_HEADED=true codeceptjs run --features  --config=./codecept/codecept.conf.js  --grep \"Parcours en ne connaissant pas sa convention collective\"   ",
+    "test:codeceptjs:ui": "codecept-ui --verbose  --config=./codecept/codecept.conf.js"
   },
   "dependencies": {
     "@codeceptjs/helper": "^1.0.2",
@@ -19,7 +22,9 @@
   },
   "devDependencies": {
     "@socialgouv/eslint-config-recommended": "^1.75.0",
+    "cypress": "^10.10.0",
     "eslint": "^7.31.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "lint-staged": "^12.1.2"
   },
   "lint-staged": {
