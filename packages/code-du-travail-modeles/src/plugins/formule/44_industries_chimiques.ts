@@ -59,8 +59,8 @@ export class Formula44
     const explanations: string[] = [];
     const year = round(seniority) < 2 ? "an" : "ans";
     if (isEconomicFiring) {
-      if (seniority >= 5 && age >= 50 && age <= 55) {
-        formula = "3 / 10 * Sref * A + Sref * 2";
+      if (seniority >= 5 && age >= 50) {
+        formula = "2 * Sref + 3 / 10 * Sref * A";
       } else if (seniority >= 2) {
         formula = "3 / 10 * Sref * A";
       } else if (seniority >= 1) {
@@ -68,7 +68,7 @@ export class Formula44
       }
     } else {
       if (seniority >= 5 && age > 55) {
-        formula = "3 / 10 * Sref * A + Sref * 2";
+        formula = "2 * Sref + 3 / 10 * Sref * A";
       } else if (seniority >= 5 && age > 50) {
         formula = "3 / 10 * Sref * A + Sref";
       } else if (seniority >= 2) {
@@ -104,7 +104,7 @@ export class Formula44
     const explanations: string[] = [];
     const year = round(seniority) < 2 ? "an" : "ans";
     if (isEconomicFiring) {
-      if (seniority >= 5 && age >= 50 && age <= 55) {
+      if (seniority >= 5 && age >= 50) {
         formula = "2 * Sref + 3 / 10 * Sref * A1";
       } else if (seniority >= 2) {
         formula = "3 / 10 * Sref * A1";
