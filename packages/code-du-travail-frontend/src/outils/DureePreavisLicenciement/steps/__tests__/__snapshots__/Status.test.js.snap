@@ -621,6 +621,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     >
       <select
         class="c13"
+        data-testid="cdt.ancienneté"
         id="input-cdt.ancienneté"
         name="cdt.ancienneté"
       >
@@ -631,16 +632,19 @@ exports[`<StepStatus /> should render coefficient 1`] = `
           ...
         </option>
         <option
+          data-testid="15| Moins de 6 mois"
           value="15| Moins de 6 mois"
         >
           Moins de 6 mois
         </option>
         <option
+          data-testid="33| 6 mois à moins de 2 ans"
           value="33| 6 mois à moins de 2 ans"
         >
           6 mois à moins de 2 ans
         </option>
         <option
+          data-testid="43| Plus de 2 ans"
           value="43| Plus de 2 ans"
         >
           Plus de 2 ans
