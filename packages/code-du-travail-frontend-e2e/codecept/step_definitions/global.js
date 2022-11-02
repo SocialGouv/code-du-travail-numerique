@@ -122,15 +122,6 @@ Alors("je vois {string} fois le {string} {string}", (num, element, text) => {
   );
 });
 
-Alors("je vois le lien canonique {string}", async (url) => {
-  const baseUrl = await I.getBaseUrl();
-  const currentUrl = baseUrl + url;
-  const href = await I.getCanonicalLink();
-  if (currentUrl !== href) {
-    assert.fail("Canonique non identique");
-  }
-});
-
 Alors("je vois {string} suggestions", (num) => {
   I.seeNumberOfVisibleElements("//ul[@role='listbox']//li", parseInt(num, 10));
 });
