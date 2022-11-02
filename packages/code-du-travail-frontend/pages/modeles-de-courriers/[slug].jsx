@@ -18,6 +18,7 @@ import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { toUrl } from "../../src/lib";
+import EventTracker from "../../src/lib/tracking/EventTracker";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -129,6 +130,7 @@ class ModeleCourrier extends React.Component {
             </Button>
           </Centered>
         </Answer>
+        <EventTracker />
       </Layout>
     );
   }
