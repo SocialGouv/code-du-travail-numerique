@@ -1,8 +1,8 @@
 describe("Sitemap", () => {
   it("should be visible", () => {
     cy.request({
-      url: "/sitemap.xml",
       method: "GET",
+      url: "/sitemap.xml",
     }).then((response) => {
       expect(response.status).to.equal(200);
 

@@ -11,16 +11,10 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
     "types": ["cypress"]
   },
-  "include": [
-    "node_modules/cypress",
-    "./**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["../../node_modules/cypress", "./**/*.ts"],
+  "exclude": ["../../node_modules"]
 }

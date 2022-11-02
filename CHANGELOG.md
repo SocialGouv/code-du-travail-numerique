@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.83.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.82.0...v4.83.0) (2022-11-02)
+
+
+### Bug Fixes
+
+* **lint:** cypress in typescript ([#4624](https://github.com/SocialGouv/code-du-travail-numerique/issues/4624)) ([eabca85](https://github.com/SocialGouv/code-du-travail-numerique/commit/eabca853443608509216cd8d387f4f57e1856888))
+* correction des tests e2e ([#4589](https://github.com/SocialGouv/code-du-travail-numerique/issues/4589)) ([e4e1e02](https://github.com/SocialGouv/code-du-travail-numerique/commit/e4e1e02b5115f41670a9ad6f45a5af73dc9a24fe))
+* préavis de démission bouton suivant grisé ([#4615](https://github.com/SocialGouv/code-du-travail-numerique/issues/4615)) ([8dd8812](https://github.com/SocialGouv/code-du-travail-numerique/commit/8dd8812f12259c84059fff3eddc0d99752b79e89))
+* **deps:** update all dependencies (patch) ([#4579](https://github.com/SocialGouv/code-du-travail-numerique/issues/4579)) ([395e51b](https://github.com/SocialGouv/code-du-travail-numerique/commit/395e51b38a7f9cebee8914a83a211bc28cf0971f))
+* widget display ([#4601](https://github.com/SocialGouv/code-du-travail-numerique/issues/4601)) ([5b10902](https://github.com/SocialGouv/code-du-travail-numerique/commit/5b10902a8126b77863b7b29d311f9e39427d3d61))
+* **ci:** deprecated `set-output` fixed ([#4599](https://github.com/SocialGouv/code-du-travail-numerique/issues/4599)) ([99bd1f4](https://github.com/SocialGouv/code-du-travail-numerique/commit/99bd1f47afb532b68707cc7540da0b3dc2aa95a6))
+* **ci:** semantic pr name ([#4590](https://github.com/SocialGouv/code-du-travail-numerique/issues/4590)) ([78b93c5](https://github.com/SocialGouv/code-du-travail-numerique/commit/78b93c54824c4a0b7801bd1584ec172c24cd332d))
+* **dateInput:** permet de taper slash quand on entre une date ([#4561](https://github.com/SocialGouv/code-du-travail-numerique/issues/4561)) ([d35aa88](https://github.com/SocialGouv/code-du-travail-numerique/commit/d35aa882edf65bec5ae30109e95fa7fab7282b5c))
+* **heure recherche emploi:** CC 275 / Cadres / Licenciement-Démission => "50 heures par mois" ([#4597](https://github.com/SocialGouv/code-du-travail-numerique/issues/4597)) ([9d24e74](https://github.com/SocialGouv/code-du-travail-numerique/commit/9d24e74fd6c706a8968f6062f6a9ef796db4c153))
+* **k8s:** fix resources limits ([#4603](https://github.com/SocialGouv/code-du-travail-numerique/issues/4603)) ([017217a](https://github.com/SocialGouv/code-du-travail-numerique/commit/017217ad4ca2b9d71b8f904e05e645657aba588a))
+* **simulateur:** filtre des questions sur le type de rupture ([#4569](https://github.com/SocialGouv/code-du-travail-numerique/issues/4569)) ([f43f969](https://github.com/SocialGouv/code-du-travail-numerique/commit/f43f969edb4cead5e6a02d78b78719bf315763db))
+
+
+### Features
+
+* **cookies:** ajout du bandeau pour la campagne SEA ([#4611](https://github.com/SocialGouv/code-du-travail-numerique/issues/4611)) ([08b2a91](https://github.com/SocialGouv/code-du-travail-numerique/commit/08b2a91a827b7ed6fbe9f09abc7d1ec2f78b3040))
+* **cypress:** add cypress to project ([#4598](https://github.com/SocialGouv/code-du-travail-numerique/issues/4598)) ([764d6b7](https://github.com/SocialGouv/code-du-travail-numerique/commit/764d6b7c6b45146ae30cc6c554c46d5186dafe16))
+
+
+
+
+
 # [4.82.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.81.0...v4.82.0) (2022-09-27)
 
 

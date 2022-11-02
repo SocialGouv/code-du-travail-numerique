@@ -139,6 +139,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
     >
       <select
         class="c6"
+        data-testid="foo"
         id="input-foo"
         name="foo"
       >
@@ -149,11 +150,13 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
           ...
         </option>
         <option
+          data-testid="baz"
           value="baz"
         >
           label baz
         </option>
         <option
+          data-testid="foo"
           value="foo"
         >
           label foo
@@ -333,6 +336,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
     >
       <select
         class="c6"
+        data-testid="foo"
         id="input-foo"
         name="foo"
       >
@@ -343,11 +347,13 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
           ...
         </option>
         <option
+          data-testid="baz"
           value="baz"
         >
           label baz
         </option>
         <option
+          data-testid="foo"
           value="foo"
         >
           label foo
