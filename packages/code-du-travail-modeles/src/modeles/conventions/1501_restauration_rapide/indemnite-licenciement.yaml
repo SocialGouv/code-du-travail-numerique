@@ -38,7 +38,6 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
     - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
     - (- 10 an)
   plancher: 0 an
-  arrondi: 2 décimales
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . dix ans ou moins:
   valeur:
@@ -163,7 +162,6 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
         - 10an
     - (- 5 an)
   plancher: 0 an
-  arrondi: 2 décimales
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . nombre d'années entre 10 et 15ans:
   somme:
@@ -172,14 +170,12 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
         - 15an
     - (- 10 an)
   plancher: 0 an
-  arrondi: 2 décimales
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . nombre d'années au dessus de 15ans:
   somme:
     - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
     - (- 15 an)
   plancher: 0 an
-  arrondi: 2 décimales
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . montant total:
   valeur:
