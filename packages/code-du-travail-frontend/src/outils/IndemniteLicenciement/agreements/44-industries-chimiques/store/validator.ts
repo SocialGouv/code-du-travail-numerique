@@ -2,25 +2,25 @@ import produce from "immer";
 import { GetState, SetState } from "zustand";
 import { deepEqualObject } from "../../../../../lib";
 import { MainStore } from "../../../store";
-import { Agreement16StoreInput, Agreement16StoreSlice } from "./types";
+import { Agreement44StoreInput, Agreement44StoreSlice } from "./types";
 
-export const validateAgreement16 = (
+export const validateAgreement44 = (
   get: GetState<MainStore>,
   set: SetState<MainStore>
 ) => {
-  const { isValid, errorState } = validateStep(get().agreement16Data.input);
+  const { isValid, errorState } = validateStep(get().agreement44Data.input);
   set(
-    produce((state: Agreement16StoreSlice) => {
-      state.agreement16Data.hasBeenSubmit = !isValid;
-      state.agreement16Data.isStepValid = isValid;
-      state.agreement16Data.error = errorState;
+    produce((state: Agreement44StoreSlice) => {
+      state.agreement44Data.hasBeenSubmit = !isValid;
+      state.agreement44Data.isStepValid = isValid;
+      state.agreement44Data.error = errorState;
     })
   );
 
   return isValid;
 };
 
-export const validateStep = (state: Agreement16StoreInput) => {
+export const validateStep = (state: Agreement44StoreInput) => {
   const errorState = {
     errorHasVariablePay:
       state.showVariablePay && !state.hasVariablePay
