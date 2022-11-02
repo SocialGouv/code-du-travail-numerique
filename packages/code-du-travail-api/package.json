@@ -60,7 +60,7 @@
     "@socialgouv/eslint-config-typescript": "^1.93.0",
     "@types/koa": "^2.13.4",
     "@types/koa-router": "^7.4.4",
-    "@types/node": "14.18.32",
+    "@types/node": "14.18.33",
     "@types/node-fetch": "^2.6.1",
     "@types/superagent": "4.1.15",
     "@types/supertest": "^2.0.12",
