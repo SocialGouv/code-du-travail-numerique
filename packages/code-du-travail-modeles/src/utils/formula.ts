@@ -2,43 +2,71 @@ import type Engine from "publicodes";
 
 import type { Formula } from "../plugins";
 
-function pluralize(word: string, value: number) {
+function pluralize(word: string, value: number): string {
   if (word.endsWith("s") || value < 2 || word === "€") return "";
   return "s";
 }
 
-export function getFormule(engine: Engine): Formula {
-  let rules = Object.values(engine.getParsedRules()).filter((rule: any) => {
+function round(num: number): number {
+  return Math.round(num * 100) / 100;
+}
+
+function getRulesWithFormuleAndNodeValue(engine: Engine) {
+  return Object.values(engine.getParsedRules()).filter((rule: any) => {
     return (
       rule.rawNode.cdtn?.formule &&
       engine.evaluate(rule.dottedName).nodeValue !== false
     );
   });
-  const formule = {
-    explanations: [] as string[],
-    formula: "",
-  };
-  if (!rules.length) return formule;
+}
 
-  if (rules.length > 1) {
-    rules = rules.filter((rule: any) =>
-      rule.dottedName.includes("résultat conventionnel")
-    );
+const FORMULE_VAR_REGEX = /\$formule/g;
+
+export function getFormule(engine: Engine): Formula {
+  let rules = getRulesWithFormuleAndNodeValue(engine);
+
+  if (
+    rules.find((rule) => rule.dottedName.includes("résultat conventionnel"))
+  ) {
+    rules = rules.filter((rule) => !rule.dottedName.includes("résultat légal"));
   }
 
-  const rawNode: any = rules[0].rawNode;
-  formule.formula = rawNode.cdtn.formule.formula;
-  formule.explanations = rawNode.cdtn.formule.explanations;
+  const formula = rules.reduce(
+    (formule: any, rule: any): Formula => {
+      formule.explanations = formule.explanations.concat(
+        rule.rawNode.cdtn.formule.explanations || []
+      );
 
-  formule.explanations = formule.explanations.flatMap((explanation: any) => {
+      const nodeFormule = rule.rawNode.cdtn.formule.formula;
+      if (nodeFormule.includes("$formule")) {
+        if (formule.formula.length) {
+          formule.formula = nodeFormule.replace(
+            FORMULE_VAR_REGEX,
+            formule.formula
+          );
+        }
+      } else {
+        formule.formula += nodeFormule;
+      }
+      return formule as Formula;
+    },
+    {
+      explanations: [],
+      formula: "",
+    }
+  );
+  formula.explanations = formula.explanations.flatMap((explanation: any) => {
     return Object.keys(explanation).map((text) => {
-      const result = engine.evaluate(explanation[text]);
+      const element = explanation[text];
+      if (element === "NONE") return text;
+
+      const result = engine.evaluate(element);
       const unit = result.unit.numerators[0];
-      return `${text} (${result.nodeValue} ${unit}${pluralize(
-        unit,
-        result.nodeValue
+      return `${text} (${round(result.nodeValue)} ${unit}${pluralize(
+        unit as string,
+        result.nodeValue as number
       )})`;
     });
   });
-  return formule;
+  return formula;
 }

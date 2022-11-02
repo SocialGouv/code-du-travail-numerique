@@ -23,11 +23,13 @@ import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
 import { AgreementInformation, hasNoLegalIndemnity } from "../../../common";
-import { getAgreementReferenceSalary } from "../../../agreements";
+import {
+  getAgreementFormula,
+  getAgreementReferenceSalary,
+} from "../../../agreements";
 import { MainStore } from "../../../store";
 import { GetState } from "zustand";
 import getAgreementSeniority from "../../../agreements/seniority";
-import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 
 const initialState: ResultStoreData = {
   input: {
@@ -77,6 +79,8 @@ const createResultStore: StoreSlice<
       const formulaFactory = new FormuleFactory().create(
         SupportedCcIndemniteLicenciement.legal
       );
+
+      // TODO: remove legalFormula and only have one formule
       const legalFormula = formulaFactory.computeFormula({
         seniority: legalSeniority.value,
         isForInaptitude: isLicenciementInaptitude,
@@ -104,9 +108,11 @@ const createResultStore: StoreSlice<
       let agreementHasNoLegalIndemnity: boolean;
 
       if (agreement) {
-        const infos = informationToSituation(
-          get().informationsData.input.publicodesInformations
-        );
+        const infos = get()
+          .informationsData.input.publicodesInformations.map((v) => ({
+            [v.question.rule.nom]: v.info,
+          }))
+          .reduce((acc, cur) => ({ ...acc, ...cur }), {});
 
         agreementRefSalary = getAgreementReferenceSalary(
           `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
@@ -145,7 +151,15 @@ const createResultStore: StoreSlice<
         agreementReferences = publicodes.getReferences(
           "résultat conventionnel"
         );
-        agreementFormula = publicodes.getFormule();
+
+        agreementFormula =
+          getAgreementFormula(
+            `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+            agreementSeniority,
+            agreementRefSalary,
+            get as GetState<MainStore>
+          ) || publicodes.getFormule();
+
         agreementNotifications = publicodes.getNotifications();
 
         agreementHasNoLegalIndemnity = hasNoLegalIndemnity(agreement.num);

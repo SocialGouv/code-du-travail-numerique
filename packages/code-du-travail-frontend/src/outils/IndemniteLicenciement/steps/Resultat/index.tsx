@@ -124,6 +124,7 @@ const StepResult = () => {
           }
           isStepSalaryHidden={isStepSalaryHidden}
         />
+        {/*  TODO: handle the fact that we only have one formule  */}
         <FormulaInterpreter
           formula={
             isAgreementBetter && agreementFormula
