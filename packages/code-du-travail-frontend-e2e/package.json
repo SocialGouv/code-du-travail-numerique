@@ -6,7 +6,7 @@
   "main": "codecept/codecept.conf.js",
   "scripts": {
     "precommit": "lint-staged",
-    "lint": "eslint ./**/*.js",
+    "lint": "eslint ./**/*.{js,ts}",
     "test:e2e": "yarn run test:codeceptjs && yarn run test:cypress",
     "test:cypress": "cypress run",
     "test:cypress:ui": "cypress open",
@@ -21,7 +21,7 @@
     "puppeteer": "^10.4.0"
   },
   "devDependencies": {
-    "@socialgouv/eslint-config-recommended": "^1.75.0",
+    "@socialgouv/eslint-config-typescript": "^1.93.0",
     "cypress": "^10.10.0",
     "eslint": "^7.31.0",
     "eslint-plugin-cypress": "^2.12.1",
