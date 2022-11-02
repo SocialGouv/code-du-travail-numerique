@@ -42,7 +42,7 @@ describe("Formula", () => {
     );
   });
 
-  describe("Check formula for CC when fold back to droit du travail", () => {
+  describe("Check formula for CC when fold back to legal", () => {
     test.each`
       seniority | inaptitude | expectedFormula                                  | expectedExplanations
       ${5}      | ${"non"}   | ${"1/4 * Sref * A"}                              | ${["A : Ancienneté totale (5 ans)", "Sref : Salaire de référence (2300 €)"]}

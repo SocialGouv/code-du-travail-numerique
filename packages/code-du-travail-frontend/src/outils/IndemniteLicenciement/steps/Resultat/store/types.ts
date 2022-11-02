@@ -14,8 +14,7 @@ export type ResultStoreInput = {
   publicodesAgreementResult?: PublicodesIndemniteLicenciementResult;
   agreementSeniority?: SeniorityResult;
   legalSeniority: number;
-  legalFormula: Formula;
-  agreementFormula?: Formula;
+  agreementFormula: Formula;
   legalReferences: References[];
   agreementReferences?: References[];
   isAgreementBetter: boolean;

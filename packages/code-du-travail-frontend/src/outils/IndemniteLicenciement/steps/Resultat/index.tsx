@@ -31,7 +31,6 @@ const StepResult = () => {
     dateNotification,
     absencePeriods,
     salaryPeriods,
-    legalFormula,
     legalReferences,
     agreementReferences,
     hasTempsPartiel,
@@ -59,7 +58,6 @@ const StepResult = () => {
     dateNotification: state.ancienneteData.input.dateNotification,
     absencePeriods: state.ancienneteData.input.absencePeriods,
     salaryPeriods: state.salairesData.input.salaryPeriods,
-    legalFormula: state.resultData.input.legalFormula,
     legalReferences: state.resultData.input.legalReferences,
     agreementReferences: state.resultData.input.agreementReferences,
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
@@ -124,14 +122,8 @@ const StepResult = () => {
           }
           isStepSalaryHidden={isStepSalaryHidden}
         />
-        {/*  TODO: handle the fact that we only have one formule  */}
-        <FormulaInterpreter
-          formula={
-            isAgreementBetter && agreementFormula
-              ? agreementFormula
-              : legalFormula
-          }
-        />
+
+        <FormulaInterpreter formula={agreementFormula} />
         {!agreementHasNoLegalIndemnity && (
           <DecryptResult
             hasSelectedAgreement={route !== "none"}

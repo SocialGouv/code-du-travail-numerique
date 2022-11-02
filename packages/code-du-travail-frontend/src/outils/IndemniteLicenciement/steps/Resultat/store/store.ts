@@ -1,6 +1,5 @@
 import {
   Formula,
-  FormuleFactory,
   IndemniteLicenciementPublicodes,
   Notification,
   PublicodesIndemniteLicenciementResult,
@@ -33,7 +32,7 @@ import getAgreementSeniority from "../../../agreements/seniority";
 
 const initialState: ResultStoreData = {
   input: {
-    legalFormula: { formula: "", explanations: [] },
+    agreementFormula: { formula: "", explanations: [] },
     legalSeniority: 0,
     legalReferences: [],
     publicodesLegalResult: { value: "" },
@@ -74,17 +73,6 @@ const createResultStore: StoreSlice<
         dateEntree: get().ancienneteData.input.dateEntree!,
         dateSortie: get().ancienneteData.input.dateSortie!,
         absencePeriods: get().ancienneteData.input.absencePeriods,
-      });
-
-      const formulaFactory = new FormuleFactory().create(
-        SupportedCcIndemniteLicenciement.legal
-      );
-
-      // TODO: remove legalFormula and only have one formule
-      const legalFormula = formulaFactory.computeFormula({
-        seniority: legalSeniority.value,
-        isForInaptitude: isLicenciementInaptitude,
-        refSalary,
       });
 
       const publicodesSituationLegal = publicodes.setSituation(
@@ -178,7 +166,6 @@ const createResultStore: StoreSlice<
       set(
         produce((state: ResultStoreSlice) => {
           state.resultData.input.legalSeniority = legalSeniority.value;
-          state.resultData.input.legalFormula = legalFormula;
           state.resultData.input.legalReferences = legalReferences;
           state.resultData.input.publicodesLegalResult =
             publicodesSituationLegal;

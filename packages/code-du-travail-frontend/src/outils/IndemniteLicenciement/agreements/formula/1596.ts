@@ -17,6 +17,8 @@ export class AgreementFormula1596 implements AgreementFormula {
     const agreementFactoryFormula = new FormuleFactory().create(
       SupportedCcIndemniteLicenciement.IDCC1596
     );
+    if (!agreementFactoryFormula) throw new Error("Formula should be defined");
+
     let hasMoreThan55Years = false;
     const year = get().informationsData.input.publicodesInformations.find(
       (v) =>

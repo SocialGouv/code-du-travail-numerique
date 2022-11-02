@@ -24,6 +24,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
         const formula = new FormuleFactory().create(
           SupportedCcIndemniteLicenciement.IDCC0016
         );
+        if (!formula) throw new Error("Formula should be defined");
 
         const result = formula.computeFormula({
           age,
@@ -49,6 +50,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
         const formula = new FormuleFactory().create(
           SupportedCcIndemniteLicenciement.IDCC0016
         );
+        if (!formula) throw new Error("Formula should be defined");
 
         const result = formula.computeFormula({
           age,
@@ -78,6 +80,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
         const formula = new FormuleFactory().create(
           SupportedCcIndemniteLicenciement.IDCC0016
         );
+        if (!formula) throw new Error("Formula should be defined");
 
         const result = formula.computeFormula({
           age: 60,
@@ -114,6 +117,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
         const formula = new FormuleFactory().create(
           SupportedCcIndemniteLicenciement.IDCC0016
         );
+        if (!formula) throw new Error("Formula should be defined");
 
         const result = formula.computeFormula({
           age,
@@ -152,6 +156,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
         const formula = new FormuleFactory().create(
           SupportedCcIndemniteLicenciement.IDCC0016
         );
+        if (!formula) throw new Error("Formula should be defined");
 
         const result = formula.computeFormula({
           age,
@@ -216,6 +221,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
         const formula = new FormuleFactory().create(
           SupportedCcIndemniteLicenciement.IDCC0016
         );
+        if (!formula) throw new Error("Formula should be defined");
 
         const result = formula.computeFormula({
           age,
