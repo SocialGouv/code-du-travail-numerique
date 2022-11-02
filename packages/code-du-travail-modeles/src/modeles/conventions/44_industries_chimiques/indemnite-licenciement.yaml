@@ -192,7 +192,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
       - catégorie professionnelle = 'Ouvriers et collaborateurs (Groupes I à III)'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
       - catégorie professionnelle . licenciement économique = 'Oui'
-      - catégorie professionnelle . licenciement économique . age > 55
+      - catégorie professionnelle . licenciement économique . age >= 55
   valeur:
     somme:
       - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
@@ -233,7 +233,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
       - catégorie professionnelle = 'Ouvriers et collaborateurs (Groupes I à III)'
       - catégorie professionnelle . licenciement économique = 'Non'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
-      - catégorie professionnelle . licenciement économique . age > 50
+      - catégorie professionnelle . licenciement économique . age >= 50
   valeur:
     somme:
       - contrat salarié . indemnité de licenciement . salaire de référence conventionnel
@@ -252,7 +252,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
       - catégorie professionnelle = 'Ouvriers et collaborateurs (Groupes I à III)'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
       - catégorie professionnelle . licenciement économique = 'Non'
-      - catégorie professionnelle . licenciement économique . age > 55
+      - catégorie professionnelle . licenciement économique . age >= 55
   valeur:
     somme:
       - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
@@ -330,7 +330,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
       - catégorie professionnelle = 'Agents de maîtrise et techniciens (Groupe IV)'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
       - catégorie professionnelle . licenciement économique = 'Oui'
-      - catégorie professionnelle . licenciement économique . age > 55
+      - catégorie professionnelle . licenciement économique . age >= 55
   valeur:
     somme:
       - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
@@ -371,7 +371,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
       - catégorie professionnelle = 'Agents de maîtrise et techniciens (Groupe IV)'
       - catégorie professionnelle . licenciement économique = 'Non'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
-      - catégorie professionnelle . licenciement économique . age > 50
+      - catégorie professionnelle . licenciement économique . age >= 50
   valeur:
     somme:
       - contrat salarié . indemnité de licenciement . salaire de référence conventionnel
@@ -390,7 +390,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
       - catégorie professionnelle = 'Agents de maîtrise et techniciens (Groupe IV)'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
       - catégorie professionnelle . licenciement économique = 'Non'
-      - catégorie professionnelle . licenciement économique . age > 55
+      - catégorie professionnelle . licenciement économique . age >= 55
   valeur:
     somme:
       - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
@@ -467,7 +467,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
       - catégorie professionnelle = 'Ingénieurs et cadres (Groupe V)'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
       - catégorie professionnelle . licenciement économique = 'Oui'
-      - catégorie professionnelle . licenciement économique . age > 55
+      - catégorie professionnelle . licenciement économique . age >= 55
   valeur:
     somme:
       - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
@@ -508,7 +508,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
       - catégorie professionnelle = 'Ingénieurs et cadres (Groupe V)'
       - catégorie professionnelle . licenciement économique = 'Non'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5 an
-      - catégorie professionnelle . licenciement économique . age > 45
+      - catégorie professionnelle . licenciement économique . age >= 45
   valeur:
     somme:
       - contrat salarié . indemnité de licenciement . salaire de référence conventionnel
@@ -527,7 +527,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
       - catégorie professionnelle = 'Ingénieurs et cadres (Groupe V)'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5 an
       - catégorie professionnelle . licenciement économique = 'Non'
-      - catégorie professionnelle . licenciement économique . age > 55
+      - catégorie professionnelle . licenciement économique . age >= 55
   valeur:
     somme:
       - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2

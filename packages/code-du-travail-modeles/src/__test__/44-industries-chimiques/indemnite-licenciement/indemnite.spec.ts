@@ -52,10 +52,10 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
         category                 | isEconomicFiring | age   | seniority | salary  | expectedCompensation
         ${CategoryPro44.ouvrier} | ${false}         | ${50} | ${1.25}   | ${2719} | ${0}
         ${CategoryPro44.ouvrier} | ${false}         | ${50} | ${2}      | ${2719} | ${1631.4}
-        ${CategoryPro44.ouvrier} | ${false}         | ${50} | ${5}      | ${2719} | ${4078.5}
+        ${CategoryPro44.ouvrier} | ${false}         | ${50} | ${5}      | ${2719} | ${6797.5}
         ${CategoryPro44.ouvrier} | ${false}         | ${55} | ${1.25}   | ${2719} | ${0}
         ${CategoryPro44.ouvrier} | ${false}         | ${55} | ${2}      | ${2719} | ${1631.4}
-        ${CategoryPro44.ouvrier} | ${false}         | ${55} | ${5}      | ${2719} | ${6797.5}
+        ${CategoryPro44.ouvrier} | ${false}         | ${55} | ${5}      | ${2719} | ${9516.5}
         ${CategoryPro44.ouvrier} | ${false}         | ${57} | ${1.25}   | ${2719} | ${0}
         ${CategoryPro44.ouvrier} | ${false}         | ${57} | ${2}      | ${2719} | ${1631.4}
         ${CategoryPro44.ouvrier} | ${false}         | ${57} | ${5}      | ${2719} | ${9516.5}
@@ -98,14 +98,14 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
         category                     | isEconomicFiring | age   | seniority | salary  | expectedCompensation
         ${CategoryPro44.techniciens} | ${false}         | ${50} | ${1.33}   | ${3140} | ${0}
         ${CategoryPro44.techniciens} | ${false}         | ${50} | ${3}      | ${3140} | ${2826}
-        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${5}      | ${3140} | ${4710}
-        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${10}     | ${3140} | ${12560}
-        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${20}     | ${3140} | ${31400}
+        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${5}      | ${3140} | ${7850}
+        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${10}     | ${3140} | ${15700}
+        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${20}     | ${3140} | ${34540}
         ${CategoryPro44.techniciens} | ${false}         | ${55} | ${1.33}   | ${3140} | ${0}
         ${CategoryPro44.techniciens} | ${false}         | ${55} | ${3}      | ${3140} | ${2826}
-        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${5}      | ${3140} | ${7850}
-        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${10}     | ${3140} | ${15700}
-        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${20}     | ${3140} | ${34540}
+        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${5}      | ${3140} | ${10990}
+        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${10}     | ${3140} | ${18840}
+        ${CategoryPro44.techniciens} | ${false}         | ${55} | ${20}     | ${3140} | ${37680}
         ${CategoryPro44.techniciens} | ${false}         | ${56} | ${1.33}   | ${3140} | ${0}
         ${CategoryPro44.techniciens} | ${false}         | ${56} | ${3}      | ${3140} | ${2826}
         ${CategoryPro44.techniciens} | ${false}         | ${56} | ${5}      | ${3140} | ${10990}
