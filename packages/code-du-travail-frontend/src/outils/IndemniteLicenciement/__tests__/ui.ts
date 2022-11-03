@@ -153,6 +153,8 @@ export const ui = {
       oui: byTestId("hasVariablePart - Oui"),
       non: byTestId("hasVariablePart - Non"),
     },
+    salaries: byTestId("salary-input"),
+    primes: byTestId("prime-input"),
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),
