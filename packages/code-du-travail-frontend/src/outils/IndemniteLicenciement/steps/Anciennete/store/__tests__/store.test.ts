@@ -73,6 +73,7 @@ describe("Ancienneté store", () => {
           key: MotifKeys.maladieNonPro,
           value: 1,
         },
+        startedAt: undefined,
       },
     ]);
     expect(store.getState().ancienneteData.input.dateEntree).toBe("20/02/2020");

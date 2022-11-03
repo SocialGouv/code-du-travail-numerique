@@ -82,8 +82,17 @@ export const ui = {
       dateProCategoryChanged: byTestId(
         "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ingénieurs et cadres - date du statut cadre"
       ),
-      age: byTestId(
+      engineerAge: byTestId(
         "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ingénieurs et cadres - age"
+      ),
+      employeeAge: byTestId(
+        "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - age"
+      ),
+      agentAge: byTestId(
+        "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - age"
+      ),
+      workerAge: byTestId(
+        "infos.contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle - Ouvriers - autres licenciement - age"
       ),
       driveInability: {
         oui: byTestId(
@@ -97,6 +106,22 @@ export const ui = {
     agreement3239: {
       proCategory: byTestId(
         "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - indemnité de licenciement - catégorie professionnelle"
+      ),
+    },
+    agreement44: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
+      ),
+      economicFire: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle - licenciement économique - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle - licenciement économique - Non"
+        ),
+      },
+      age: byTestId(
+        "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle - licenciement économique - age"
       ),
     },
   },
@@ -124,6 +149,10 @@ export const ui = {
       non: byTestId("hasSameSalary - Non"),
     },
     sameSalaryValue: byTestId("same-salary-value"),
+    variablePart: {
+      oui: byTestId("hasVariablePart - Oui"),
+      non: byTestId("hasVariablePart - Non"),
+    },
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),

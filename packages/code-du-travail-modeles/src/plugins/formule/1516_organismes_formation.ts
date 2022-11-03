@@ -24,7 +24,7 @@ export class Formula1516
         const anWithout = round(seniority - 15) < 2 ? "an" : "ans";
         explanations.push(`A1 : Ancienneté totale (${round(seniority)} ans)`);
         explanations.push(
-          `A2: Années de présence au delà de 15 ans (${round(
+          `A2 : Années de présence au delà de 15 ans (${round(
             seniority - 15
           )} ${anWithout})`
         );

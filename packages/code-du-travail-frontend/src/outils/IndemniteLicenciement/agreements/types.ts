@@ -24,20 +24,29 @@ import {
   Agreement29StoreSlice,
   createAgreement29StoreSalaires,
 } from "./29-hospitalisation-privee-but-non-lucratif";
+import {
+  Agreement44StoreInput,
+  Agreement44StoreError,
+  Agreement44StoreSlice,
+  createAgreement44StoreSalaires,
+} from "./44-industries-chimiques";
 
 export type AgreementStoreInput = Agreement1516StoreInput &
   Agreement1527StoreInput &
   Agreement16StoreInput &
-  Agreement29StoreInput;
+  Agreement29StoreInput &
+  Agreement44StoreInput;
 
 export type AgreementStoreError = Agreement1516StoreError &
   Agreement1527StoreError &
   Agreement16StoreError &
+  Agreement44StoreError &
   Agreement29StoreError;
 
 export type AgreementStoreSlice = Agreement1516StoreSlice &
   Agreement1527StoreSlice &
   Agreement16StoreSlice &
+  Agreement44StoreSlice &
   Agreement29StoreSlice;
 
 export const createRootAgreementsStore = (
@@ -48,4 +57,5 @@ export const createRootAgreementsStore = (
   ...createAgreement1527StoreSalaires(set, get),
   ...createAgreement16StoreSalaires(set, get),
   ...createAgreement29StoreSalaires(set, get),
+  ...createAgreement44StoreSalaires(set, get),
 });

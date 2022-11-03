@@ -1,5 +1,6 @@
 import { SupportedCcIndemniteLicenciement } from "../types";
 import { MOTIFS_16 } from "./16_transports_routiers";
+import { MOTIFS_44 } from "./44_industries_chimiques";
 import { MOTIFS_650 } from "./650_metallurgie_ingenieurs_cadres";
 import { MOTIFS_1518 } from "./1518_education_loisirs";
 import { MOTIFS_1527 } from "./1527-immobilier";
@@ -31,6 +32,8 @@ export const getMotifs = (idcc: SupportedCcIndemniteLicenciement): Motif[] => {
       return MOTIFS_2216;
     case SupportedCcIndemniteLicenciement.IDCC0016:
       return MOTIFS_16;
+    case SupportedCcIndemniteLicenciement.IDCC0044:
+      return MOTIFS_44;
     case SupportedCcIndemniteLicenciement.default:
     default:
       return LEGAL_MOTIFS;

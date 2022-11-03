@@ -173,6 +173,10 @@ exports[`<Tabs /> renders 1`] = `
 @media (max-width:600px) {
   .c5 {
     font-size: 1.6rem;
+    max-width: 150px;
+    -webkit-flex: none !important;
+    -ms-flex: none !important;
+    flex: none !important;
   }
 }
 

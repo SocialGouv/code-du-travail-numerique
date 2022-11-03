@@ -15,12 +15,12 @@ import getConfig from "next/config";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-
 import Metas from "../src/common/Metas";
 import { CallToActionTile } from "../src/common/tiles/CallToAction";
 import { Highlights } from "../src/home/Highlights";
 import { Themes } from "../src/home/Themes";
 import { Layout } from "../src/layout/Layout";
+import { EventTracker } from "../src/lib";
 import SearchHero from "../src/search/SearchHero";
 
 const {
@@ -35,6 +35,7 @@ export const DocumentsTile = (
       icon={icons.Document}
       title="Modèles de documents"
       titleTagType="h2"
+      centerTitle
     >
       <Paragraph noMargin>
         Téléchargez et utilisez des modèles de lettres et de documents
@@ -90,6 +91,7 @@ const Home = ({ themes = [], highlights = [] }) => (
                     icon={icons[icon]}
                     title={title}
                     titleTagType="h3"
+                    centerTitle
                   >
                     <Paragraph noMargin>{description}</Paragraph>
                   </CallToActionTile>
@@ -108,6 +110,7 @@ const Home = ({ themes = [], highlights = [] }) => (
         </ButtonWrapper>
       </Container>
     </Section>
+    <EventTracker />
   </Layout>
 );
 
