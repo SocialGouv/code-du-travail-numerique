@@ -1,11 +1,11 @@
 import type { Context } from "koa";
 import type { Response } from "node-fetch";
+import fetch from "node-fetch";
 
 import elasticsearchClient from "../../conf/elasticsearch";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 
 const Router = require("koa-router");
-const fetch = require("node-fetch");
 
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
 const docsCountBody = require("../docs-count/docCount.elastic");
@@ -38,7 +38,7 @@ router.get("/stats", async (ctx: Context) => {
     `${MATOMO_URL}/?module=API&method=VisitsSummary.getVisits&idSite=${MATOMO_SITE_ID}&format=JSON&period=range&date=2020-01-01,today`,
     `${MATOMO_URL}/?module=API&method=Actions.get&idSite=${MATOMO_SITE_ID}&format=JSON&period=range&date=2020-01-01,today`,
   ];
-  const promises = URLS.map((url) =>
+  const promises: Promise<any>[] = URLS.map(async (url) =>
     fetch(url)
       .then(async (data: Response) => data.json())
       .catch((e: Error) => {

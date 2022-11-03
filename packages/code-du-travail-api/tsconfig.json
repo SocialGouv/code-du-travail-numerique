@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     // Target latest version of ECMAScript.
-    "target": "es2020",
+    "target": "es2021",
     // Search under node_modules for non-relative imports.
     "moduleResolution": "node",
     // Process & infer types from .js files.
@@ -13,7 +13,13 @@
     // Disallow features that require cross-file information for emit.
     "isolatedModules": false,
     // Import non-ES modules as default imports.
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    // Specify what module code is generated.
+    "module": "es6",
+    // Generate .d.ts files from TypeScript and JavaScript files in your project
+    "declaration": true,
+    // Skip type checking all .d.ts files.
+    "skipLibCheck": true
   },
   "include": ["src"]
 }
