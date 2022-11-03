@@ -32,7 +32,7 @@ import getAgreementSeniority from "../../../agreements/seniority";
 
 const initialState: ResultStoreData = {
   input: {
-    agreementFormula: { formula: "", explanations: [] },
+    legalFormula: { formula: "", explanations: [] },
     legalSeniority: 0,
     legalReferences: [],
     publicodesLegalResult: { value: "" },
@@ -83,6 +83,7 @@ const createResultStore: StoreSlice<
         )
       ).result;
 
+      const legalFormula = publicodes.getFormule();
       const legalReferences = publicodes.getReferences();
 
       let publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult;
@@ -166,6 +167,7 @@ const createResultStore: StoreSlice<
       set(
         produce((state: ResultStoreSlice) => {
           state.resultData.input.legalSeniority = legalSeniority.value;
+          state.resultData.input.legalFormula = legalFormula;
           state.resultData.input.legalReferences = legalReferences;
           state.resultData.input.publicodesLegalResult =
             publicodesSituationLegal;

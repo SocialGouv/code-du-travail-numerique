@@ -31,6 +31,7 @@ const StepResult = () => {
     dateNotification,
     absencePeriods,
     salaryPeriods,
+    legalFormula,
     legalReferences,
     agreementReferences,
     hasTempsPartiel,
@@ -58,6 +59,7 @@ const StepResult = () => {
     dateNotification: state.ancienneteData.input.dateNotification,
     absencePeriods: state.ancienneteData.input.absencePeriods,
     salaryPeriods: state.salairesData.input.salaryPeriods,
+    legalFormula: state.resultData.input.legalFormula,
     legalReferences: state.resultData.input.legalReferences,
     agreementReferences: state.resultData.input.agreementReferences,
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
@@ -122,8 +124,13 @@ const StepResult = () => {
           }
           isStepSalaryHidden={isStepSalaryHidden}
         />
-
-        <FormulaInterpreter formula={agreementFormula} />
+        <FormulaInterpreter
+          formula={
+            isAgreementBetter && agreementFormula
+              ? agreementFormula
+              : legalFormula
+          }
+        />
         {!agreementHasNoLegalIndemnity && (
           <DecryptResult
             hasSelectedAgreement={route !== "none"}
