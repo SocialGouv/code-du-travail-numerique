@@ -1,5 +1,6 @@
 import {
   Formula,
+  FormuleFactory,
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
@@ -55,6 +56,14 @@ const getAgreementFormula = (
         agreementRefSalary,
         get
       );
+    default: {
+      const agreementFactoryFormula = new FormuleFactory().create(idcc);
+      if (!agreementFactoryFormula) return undefined;
+      return agreementFactoryFormula.computeFormula({
+        seniority: agreementSeniority.value,
+        refSalary: agreementRefSalary,
+      });
+    }
   }
 };
 
