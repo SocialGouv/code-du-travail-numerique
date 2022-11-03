@@ -31,4 +31,4 @@ Fonctionnalité: Outil - Dossier Licenciement
 
     Quand je clique sur "Afficher les informations personnalisées"
 
-    Alors je suis redirigé vers la page: "/information/licenciement-pour-motif-personnel-non-disciplinaire"
+    Alors je suis redirigé vers la page: "/information/licenciement-pour-motif-non-disciplinaire"
