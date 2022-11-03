@@ -2,7 +2,6 @@ import { round } from "../../utils";
 import type { SupportedCcIndemniteLicenciement } from "..";
 import type { Formula, FormulaProps, IFormula } from "./types";
 
-// TODO: à migrer, attention elle n'est pas plugué au front
 export class Formula1516
   implements IFormula<SupportedCcIndemniteLicenciement.IDCC1516>
 {
