@@ -154,6 +154,9 @@ export const ui = {
       non: byTestId("hasVariablePart - Non"),
     },
   },
+  result: {
+    formula: byTestId("formula"),
+  },
   next: byText("Suivant"),
   previous: byText("Précédent"),
   activeStep: byTitle("onglet actif"),

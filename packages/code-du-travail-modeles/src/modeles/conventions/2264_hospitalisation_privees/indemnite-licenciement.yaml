@@ -44,8 +44,8 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
   unité: €
 
 # (1/5*Sref*A1) + (2/5*Sref*A2)
-# A1= Années d'ancienneté de 10 ans ou moins
-# A2= Années d'ancienneté au delà de 10 ans
+# A1= Ancienneté de 10 ans ou moins
+# A2= Ancienneté au-delà de 10 ans
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . non cadre . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   variations:
