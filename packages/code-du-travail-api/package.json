@@ -3,7 +3,6 @@
   "version": "4.79.2",
   "description": "",
   "private": true,
-  "main": "dist/index.js",
   "type": "module",
   "scripts": {
     "type-check": "tsc --noEmit",
