@@ -28,38 +28,42 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
         <PageTitle>Retrouvez tous nos outils</PageTitle>
         <Grid>
           {DocumentsTile}
-          {cdtnSimulators.map(
-            ({
-              id,
-              action,
-              description,
-              metaDescription,
-              icon,
-              slug,
-              title,
-            }) => {
-              const linkProps = {
-                passHref: true,
-              };
-              linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
-              return (
-                <Link {...linkProps} passHref key={id}>
-                  <CallToActionTile
-                    action={action}
-                    custom
-                    title={title}
-                    icon={icons[icon]}
-                    titleTagType="h2"
-                    centerTitle
-                  >
-                    <Paragraph noMargin>
-                      {description ?? metaDescription}
-                    </Paragraph>
-                  </CallToActionTile>
-                </Link>
-              );
-            }
-          )}
+          {cdtnSimulators
+            .sort(({ order: orderA }, { order: orderB }) =>
+              orderA >= orderB ? 1 : -1
+            )
+            .map(
+              ({
+                id,
+                action,
+                description,
+                metaDescription,
+                icon,
+                slug,
+                title,
+              }) => {
+                const linkProps = {
+                  passHref: true,
+                };
+                linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
+                return (
+                  <Link {...linkProps} passHref key={id}>
+                    <CallToActionTile
+                      action={action}
+                      custom
+                      title={title}
+                      icon={icons[icon]}
+                      titleTagType="h2"
+                      centerTitle
+                    >
+                      <Paragraph noMargin>
+                        {description ?? metaDescription}
+                      </Paragraph>
+                    </CallToActionTile>
+                  </Link>
+                );
+              }
+            )}
           {externalTools.map(
             ({ id, action, description, icon, title, url }) => (
               <CallToActionTile
