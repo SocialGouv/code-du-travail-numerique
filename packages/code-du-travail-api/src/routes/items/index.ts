@@ -92,9 +92,7 @@ router.get("/items", async (ctx: any) => {
   const body = ids
     ? getDocumentByIdsBody(ids.split(","))
     : getDocumentBody({ isAll, source, url });
-  console.log("body", JSON.stringify(body));
   const response = await elasticsearchClient.search({ body, index });
-  console.log("response", JSON.stringify(response));
   if (response.body.hits.total.value === 0) {
     ctx.throw(404, `there is no document that match ${url}`);
   }
