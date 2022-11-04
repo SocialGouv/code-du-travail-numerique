@@ -32,6 +32,7 @@ export type AncienneteStoreData = StepData<
 >;
 
 export type AncienneteStoreFn = {
+  init: () => void;
   onChangeDateEntree: (value: string) => void;
   onChangeDateSortie: (value: string) => void;
   onChangeDateNotification: (value: string) => void;

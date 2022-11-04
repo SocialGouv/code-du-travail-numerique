@@ -14,6 +14,7 @@ import Metas from "../../src/common/Metas";
 import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
 import { Layout } from "../../src/layout/Layout";
+import { EventTracker } from "../../src/lib";
 import {
   AgreementSearch,
   CalculateurIndemnite,
@@ -41,7 +42,7 @@ const toolsBySlug = {
   "simulateur-embauche": SimulateurEmbauche,
 };
 
-interface Props {
+export interface Props {
   description: string;
   icon: string;
   publicodesRules: any;
@@ -89,6 +90,7 @@ function Outils({
           <Feedback url={router.asPath} />
         </Container>
       </StyledSection>
+      <EventTracker />
     </Layout>
   );
 }

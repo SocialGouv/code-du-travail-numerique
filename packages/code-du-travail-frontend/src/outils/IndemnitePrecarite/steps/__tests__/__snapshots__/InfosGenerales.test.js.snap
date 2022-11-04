@@ -93,6 +93,7 @@ exports[`<StepInfosGenerales /> should render 1`] = `
   <form>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
@@ -330,6 +331,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   <form>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
@@ -382,6 +384,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
     >
       <label
         class="c0"
+        data-testid="question-label"
         for="input-criteria.cddType"
       >
         <span
@@ -400,6 +403,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
       >
         <select
           class="c9"
+          data-testid="criteria.cddType"
           id="input-criteria.cddType"
           name="criteria.cddType"
         >
@@ -410,41 +414,49 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
             ...
           </option>
           <option
+            data-testid="CDD saisonnier"
             value="CDD saisonnier"
           >
             CDD saisonnier
           </option>
           <option
+            data-testid="CDD d'usage"
             value="CDD d'usage"
           >
             CDD d'usage
           </option>
           <option
+            data-testid="CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires"
             value="CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires"
           >
             CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires
           </option>
           <option
+            data-testid="CCD dans le cadre d’un congé de mobilité"
             value="CCD dans le cadre d’un congé de mobilité"
           >
             CCD dans le cadre d’un congé de mobilité
           </option>
           <option
+            data-testid="Contrat unique d’insertion (CUI) ou Parcours emploi compétences (PEC)"
             value="Contrat unique d’insertion (CUI) ou Parcours emploi compétences (PEC)"
           >
             Contrat unique d’insertion (CUI) ou Parcours emploi compétences (PEC)
           </option>
           <option
+            data-testid="Contrat de professionnalisation ou Contrat d’apprentissage"
             value="Contrat de professionnalisation ou Contrat d’apprentissage"
           >
             Contrat de professionnalisation ou Contrat d’apprentissage
           </option>
           <option
+            data-testid="Contrat pour lequel l’employeur s’est engagé à assurer un complément de formation professionnelle au salarié"
             value="Contrat pour lequel l’employeur s’est engagé à assurer un complément de formation professionnelle au salarié"
           >
             Contrat pour lequel l’employeur s’est engagé à assurer un complément de formation professionnelle au salarié
           </option>
           <option
+            data-testid="Autres"
             value="Autres"
           >
             Autres
@@ -673,6 +685,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
   <form>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
@@ -725,6 +738,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
     >
       <label
         class="c0"
+        data-testid="question-label"
         for="input-criteria.cddType"
       >
         <span
@@ -743,6 +757,7 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
       >
         <select
           class="c9"
+          data-testid="criteria.cddType"
           id="input-criteria.cddType"
           name="criteria.cddType"
         >
@@ -753,41 +768,49 @@ exports[`<StepInfosGenerales /> should render with CDD and not handled ccn 1`] =
             ...
           </option>
           <option
+            data-testid="CDD saisonnier"
             value="CDD saisonnier"
           >
             CDD saisonnier
           </option>
           <option
+            data-testid="CDD d'usage"
             value="CDD d'usage"
           >
             CDD d'usage
           </option>
           <option
+            data-testid="CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires"
             value="CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires"
           >
             CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires
           </option>
           <option
+            data-testid="CCD dans le cadre d’un congé de mobilité"
             value="CCD dans le cadre d’un congé de mobilité"
           >
             CCD dans le cadre d’un congé de mobilité
           </option>
           <option
+            data-testid="Contrat unique d’insertion (CUI) ou Parcours emploi compétences (PEC)"
             value="Contrat unique d’insertion (CUI) ou Parcours emploi compétences (PEC)"
           >
             Contrat unique d’insertion (CUI) ou Parcours emploi compétences (PEC)
           </option>
           <option
+            data-testid="Contrat de professionnalisation ou Contrat d’apprentissage"
             value="Contrat de professionnalisation ou Contrat d’apprentissage"
           >
             Contrat de professionnalisation ou Contrat d’apprentissage
           </option>
           <option
+            data-testid="Contrat pour lequel l’employeur s’est engagé à assurer un complément de formation professionnelle au salarié"
             value="Contrat pour lequel l’employeur s’est engagé à assurer un complément de formation professionnelle au salarié"
           >
             Contrat pour lequel l’employeur s’est engagé à assurer un complément de formation professionnelle au salarié
           </option>
           <option
+            data-testid="Autres"
             value="Autres"
           >
             Autres
@@ -946,6 +969,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
   <form>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
@@ -995,6 +1019,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     </div>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
@@ -1048,6 +1073,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     </div>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
@@ -1101,6 +1127,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     </div>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"
@@ -1154,6 +1181,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     </div>
     <label
       class="c0"
+      data-testid="question-label"
     >
       <span
         class="c1"

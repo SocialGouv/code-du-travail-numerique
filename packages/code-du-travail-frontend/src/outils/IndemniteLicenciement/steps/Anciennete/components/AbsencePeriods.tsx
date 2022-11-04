@@ -13,6 +13,7 @@ import type { AncienneteAbsenceStoreError } from "../store";
 type Props = {
   onChange: (absences: Absence[]) => void;
   absences: Absence[];
+  informationData: Record<string, string | undefined>;
   error?: {
     global?: string;
     absences?: AncienneteAbsenceStoreError[];
@@ -20,7 +21,13 @@ type Props = {
   idcc?: SupportedCcIndemniteLicenciement;
 };
 
-const AbsencePeriods = ({ onChange, absences, error, idcc }: Props) => {
+const AbsencePeriods = ({
+  onChange,
+  absences,
+  error,
+  idcc,
+  informationData,
+}: Props) => {
   const motifs = getMotifs(idcc ?? SupportedCcIndemniteLicenciement.default);
   const [localAbsences, setLocalAbsences] = React.useState<Absence[]>(
     absences.length > 0
@@ -131,6 +138,7 @@ const AbsencePeriods = ({ onChange, absences, error, idcc }: Props) => {
               : undefined,
           }}
           absence={value}
+          informationData={informationData}
         />
       ))}
       {error?.global && <StyledError>{error.global}</StyledError>}

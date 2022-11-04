@@ -73,7 +73,7 @@ export const MOTIFS_1527: Motif[] = LEGAL_MOTIFS.map((item) => {
   if (item.key === MotifKeys.congesSansSolde) {
     return {
       ...item,
-      startAt: true,
+      startAt: () => true,
       value: 1,
     };
   }

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.83.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.82.0...v4.83.0) (2022-11-02)
+
+
+### Bug Fixes
+
+* préavis de démission bouton suivant grisé ([#4615](https://github.com/SocialGouv/code-du-travail-numerique/issues/4615)) ([8dd8812](https://github.com/SocialGouv/code-du-travail-numerique/commit/8dd8812f12259c84059fff3eddc0d99752b79e89))
+* widget display ([#4601](https://github.com/SocialGouv/code-du-travail-numerique/issues/4601)) ([5b10902](https://github.com/SocialGouv/code-du-travail-numerique/commit/5b10902a8126b77863b7b29d311f9e39427d3d61))
+* **simulateur:** filtre des questions sur le type de rupture ([#4569](https://github.com/SocialGouv/code-du-travail-numerique/issues/4569)) ([f43f969](https://github.com/SocialGouv/code-du-travail-numerique/commit/f43f969edb4cead5e6a02d78b78719bf315763db))
+
+
+### Features
+
+* **cookies:** ajout du bandeau pour la campagne SEA ([#4611](https://github.com/SocialGouv/code-du-travail-numerique/issues/4611)) ([08b2a91](https://github.com/SocialGouv/code-du-travail-numerique/commit/08b2a91a827b7ed6fbe9f09abc7d1ec2f78b3040))
+
+
+
+
+
 # [4.82.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.81.0...v4.82.0) (2022-09-27)
 
 

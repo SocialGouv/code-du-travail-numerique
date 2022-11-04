@@ -40,8 +40,8 @@ export default async () => {
         },
         resources: {
           requests: {
-            cpu: "100m",
-            memory: "320Mi",
+            cpu: "50m",
+            memory: "128Mi",
           },
           limits: {
             cpu: "500m",

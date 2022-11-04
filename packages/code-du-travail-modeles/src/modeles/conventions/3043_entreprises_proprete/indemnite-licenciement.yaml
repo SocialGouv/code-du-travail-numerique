@@ -60,9 +60,9 @@ contrat salarié . convention collective . entreprises de propreté . indemnité
   unité: €
 
 # (1/10*Sref*A1)+(1/6*Sref*A2)+(1/5*Sref*A3)
-# A1: Années d'ancienneté pour la fraction des 5 premières années 
-# A2: Années d'ancienneté pour la fraction de 6 ans à 10 ans révolus
-# A3: Années d'ancienneté au-delà de 10 ans révolus
+# A1 : Années d'ancienneté pour la fraction des 5 premières années
+# A2 : Années d'ancienneté pour la fraction de 6 ans à 10 ans révolus
+# A3 : Années d'ancienneté au-delà de 10 ans révolus
 contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   variations:

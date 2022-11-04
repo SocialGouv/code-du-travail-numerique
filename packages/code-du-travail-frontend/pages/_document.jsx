@@ -51,6 +51,10 @@ export default class MyDocument extends Document {
             href="/static/fonts.css"
           />
           <script key="smarttag" src="/static/smarttag.js" />
+          <script
+            key="tarteaucitron"
+            src="/static/tarteaucitron/tarteaucitron.js"
+          />
         </Head>
         <body>
           <noscript>

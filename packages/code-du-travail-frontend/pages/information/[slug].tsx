@@ -1,6 +1,7 @@
-import { Accordion, Tabs, Section, theme } from "@socialgouv/cdtn-ui";
+import { Accordion, Tabs, Section, theme, Wrapper } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
+import EventTracker from "../../src/lib/tracking/EventTracker";
 
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
@@ -100,6 +101,7 @@ const Information = ({
             )
         )}
       </Answer>
+      <EventTracker />
     </Layout>
   );
 };
@@ -127,6 +129,7 @@ Information.getInitialProps = async ({ query: { slug }, asPath }) => {
   const information = {
     ...contentBySlug,
     _source: { ...contentBySlug._source, contents },
+    slug,
   };
 
   return { anchor, information };
@@ -136,7 +139,7 @@ const { breakpoints, spacings } = theme;
 
 const TabStylesWrapper = styled.div`
   & > div > div > div {
-    overflow-x: initial;
+    overflow-x: auto;
   }
   img {
     max-width: 100%;
@@ -166,4 +169,8 @@ const GlobalStylesWrapper = styled.div`
       margin-top: ${spacings.small};
     }
   }
+`;
+
+const SlugSummaryWrapper = styled(Wrapper)`
+  margin-bottom: 29px;
 `;

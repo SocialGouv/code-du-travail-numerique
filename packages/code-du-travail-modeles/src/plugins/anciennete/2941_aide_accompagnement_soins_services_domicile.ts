@@ -67,7 +67,7 @@ export const MOTIFS_2941: Motif[] = LEGAL_MOTIFS.map((item) => {
   if (item.key === MotifKeys.maladieNonPro) {
     return {
       ...item,
-      startAt: true,
+      startAt: () => true,
       value: 1,
     };
   }
