@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/routes/type.ts"],"sourcesContent":["// Complete definition of the Search response\nexport type SearchResponse<T> = {\n  hits: {\n    total: {\n      value: number;\n    };\n    hits: {\n      _source: T;\n    }[];\n  };\n};\n"],"names":[],"mappings":"AAAA,6CAA6C;AAC7C,WASE"}

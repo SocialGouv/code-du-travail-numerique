@@ -1,9 +1,12 @@
 import { SupportedCcIndemniteLicenciement } from "../types";
 import { Formula16 } from "./16_transports_routiers";
+import { Formula44 } from "./44_industries_chimiques";
 import { Formula413 } from "./413_handicap";
+import { Formula573 } from "./573_commerces_de_gros";
 import { Formula650 } from "./650_metallurgie_ingenieurs_cadres";
 import { Formula843 } from "./843_boulangerie_patisserie";
 import { Formula1486 } from "./1486_bureaux_etudes_techniques";
+import { Formula1501 } from "./1501_restauration_rapide";
 import { Formula1516 } from "./1516_organismes_formation";
 import { Formula1596 } from "./1596_batiment_employes_ouvriers";
 import { Formula1597 } from "./1597_batiment_employes_ouvriers_bis";
@@ -47,6 +50,12 @@ export class FormuleFactory {
         return new Formula16() as IFormula<T>;
       case SupportedCcIndemniteLicenciement.IDCC0843:
         return new Formula843() as IFormula<T>;
+      case SupportedCcIndemniteLicenciement.IDCC0573:
+        return new Formula573() as IFormula<T>;
+      case SupportedCcIndemniteLicenciement.IDCC1501:
+        return new Formula1501() as IFormula<T>;
+      case SupportedCcIndemniteLicenciement.IDCC0044:
+        return new Formula44() as IFormula<T>;
       case SupportedCcIndemniteLicenciement.default:
       default:
         return new FormulaLegal() as IFormula<T>;

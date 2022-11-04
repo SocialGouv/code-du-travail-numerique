@@ -30,7 +30,11 @@ export const Question = ({
 }: Props): JSX.Element => {
   const [isLocalTooltipOpen, setIsLocalToolTipOpen] = React.useState(false);
   return (
-    <LabelBlock htmlFor={htmlFor} {...otherProps}>
+    <LabelBlock
+      htmlFor={htmlFor}
+      {...otherProps}
+      data-testid={"question-label"}
+    >
       <Text
         fontWeight="600"
         fontSize={otherProps.as === "p" ? "default" : "hsmall"}

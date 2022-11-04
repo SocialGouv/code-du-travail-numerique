@@ -32,6 +32,7 @@ type CommonProps = {
   action?: string;
   custom?: boolean;
   icon?: string;
+  centerTitle?: boolean;
 };
 
 type HighlightProps = {
@@ -55,6 +56,7 @@ type ListLinkProps = {
   item: ListLinkItemProps;
   showTheme?: boolean;
   query?: string;
+  centerTitle?: boolean;
 };
 
 export const ListLink = ({
@@ -72,6 +74,7 @@ export const ListLink = ({
   },
   showTheme = true,
   query,
+  centerTitle,
 }: ListLinkProps) => {
   let subtitle = "";
   if (showTheme && !icon) {
@@ -102,6 +105,7 @@ export const ListLink = ({
     title,
     wide: true,
     icon,
+    centerTitle,
   };
 
   if (source === SOURCES.EXTERNALS) {

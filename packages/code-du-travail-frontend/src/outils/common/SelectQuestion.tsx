@@ -62,7 +62,7 @@ const SelectQuestion = ({
                 {label}
               </Question>
               {subLabel && <SubLabel>{subLabel}</SubLabel>}
-              <StyledSelect {...input} id={uid}>
+              <StyledSelect {...input} id={uid} data-testid={name}>
                 <option disabled value="">
                   ...
                 </option>
@@ -75,7 +75,7 @@ const SelectQuestion = ({
                   }
 
                   return (
-                    <option value={key} key={key}>
+                    <option value={key} key={key} data-testid={key}>
                       {label}
                     </option>
                   );

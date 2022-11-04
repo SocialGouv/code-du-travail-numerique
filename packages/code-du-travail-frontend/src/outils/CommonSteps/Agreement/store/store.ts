@@ -10,6 +10,7 @@ import {
 } from "./types";
 import { STORAGE_KEY_AGREEMENT, StoreSlice } from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
+import { Agreement } from "../../../../conventions/Search/api/type";
 
 const initialState: CommonAgreementStoreData = {
   input: {},
@@ -30,10 +31,12 @@ const createCommonAgreementStore: StoreSlice<
           window.localStorage &&
           window.localStorage.getItem(STORAGE_KEY_AGREEMENT);
         if (data) {
-          const parsedData = JSON.parse(data);
-          applyGenericValidation(get, set, "agreement", parsedData);
-          applyGenericValidation(get, set, "route", Route.agreement);
-          get().informationsFunction.generatePublicodesQuestions();
+          const parsedData: Agreement = JSON.parse(data);
+          if (parsedData.num !== get().agreementData.input.agreement?.num) {
+            applyGenericValidation(get, set, "agreement", parsedData);
+            applyGenericValidation(get, set, "route", Route.agreement);
+            get().informationsFunction.generatePublicodesQuestions();
+          }
         }
       } catch (e) {
         console.error(e);

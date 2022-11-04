@@ -1,6 +1,8 @@
 import type { SupportedCcIndemniteLicenciement } from "..";
 import type { CC16ReferenceSalaryProps } from "./16_transports_routiers";
 import type { CC29ReferenceSalaryProps } from "./29-hospitalisation-privee-but-non-lucratif";
+import type { CC44ReferenceSalaryProps } from "./44_industries_chimiques";
+import type { CC573ReferenceSalaryProps } from "./573_commerces_de_gros";
 import type { CC1486ReferenceSalaryProps } from "./1486_bureaux_etudes_techniques";
 import type { CC1516ReferenceSalaryProps } from "./1516_organismes_formation";
 import type { CC1527ReferenceSalaryProps } from "./1527-immobilier";
@@ -28,6 +30,10 @@ export type ReferenceSalaryProps<T> =
     ? CC3239ReferenceSalaryProps
     : T extends SupportedCcIndemniteLicenciement.IDCC0016
     ? CC16ReferenceSalaryProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC0044
+    ? CC44ReferenceSalaryProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC0573
+    ? CC573ReferenceSalaryProps
     : T extends SupportedCcIndemniteLicenciement.IDCC0029
     ? CC29ReferenceSalaryProps
     : LegalReferenceSalaryProps;

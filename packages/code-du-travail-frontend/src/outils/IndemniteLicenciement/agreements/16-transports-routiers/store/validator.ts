@@ -11,7 +11,7 @@ export const validateAgreement16 = (
   const { isValid, errorState } = validateStep(get().agreement16Data.input);
   set(
     produce((state: Agreement16StoreSlice) => {
-      state.agreement16Data.hasBeenSubmit = isValid ? false : true;
+      state.agreement16Data.hasBeenSubmit = !isValid;
       state.agreement16Data.isStepValid = isValid;
       state.agreement16Data.error = errorState;
     })
@@ -22,9 +22,10 @@ export const validateAgreement16 = (
 
 export const validateStep = (state: Agreement16StoreInput) => {
   const errorState = {
-    errorHasVariablePay: !state.hasVariablePay
-      ? "Vous devez répondre à cette question"
-      : undefined,
+    errorHasVariablePay:
+      state.showVariablePay && !state.hasVariablePay
+        ? "Vous devez répondre à cette question"
+        : undefined,
   };
 
   return {

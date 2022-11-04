@@ -11,6 +11,8 @@ import {
 } from "../Simulator/createContext";
 import SimulatorNavigation from "./SimulatorNavigation";
 
+const { spacings } = theme;
+
 type Validator<StepName extends string> = {
   validator: () => boolean;
   stepName: StepName;
@@ -117,9 +119,14 @@ const SimulatorContent = <StepName extends string>({
   };
 
   return (
-    <Wrapper variant="main">
+    <StyledWrapper variant="main">
       <StyledForm>
-        <Title
+        <StyledStepList
+          activeIndex={currentStepIndex}
+          steps={stepItems}
+          width={STEP_LIST_WIDTH}
+        />
+        <StyledTitle
           title={displayTitle}
           duration={currentStepIndex === 0 ? duration : undefined}
           icon={icon}
@@ -127,13 +134,10 @@ const SimulatorContent = <StepName extends string>({
             visibleSteps[currentStepIndex].options?.hasNoMarginBottom
           }
         />
-        <StepList
-          activeIndex={currentStepIndex}
-          steps={stepItems}
-          width={STEP_LIST_WIDTH}
-        />
-        <Step />
-        <SimulatorNavigation
+        <StepWrapper>
+          <Step />
+        </StepWrapper>
+        <SimulatorNavigationWrapper
           hasError={
             validators.find(
               (validator) =>
@@ -155,11 +159,11 @@ const SimulatorContent = <StepName extends string>({
         {visibleSteps[currentStepIndex].options?.annotation && (
           <p>{visibleSteps[currentStepIndex].options?.annotation}</p>
         )}
-        {process.env.NODE_ENV !== "production" &&
-          process.env.NODE_ENV !== "test" &&
-          debug}
       </StyledForm>
-    </Wrapper>
+      {process.env.NODE_ENV !== "production" &&
+        process.env.NODE_ENV !== "test" &&
+        debug}
+    </StyledWrapper>
   );
 };
 
@@ -177,8 +181,12 @@ const STEP_LIST_WIDTH = "28rem";
 
 const { breakpoints } = theme;
 
+const StyledWrapper = styled(Wrapper)`
+  padding: 0 !important;
+`;
+
 const StyledForm = styled.form`
-  padding: 0 0 0 ${STEP_LIST_WIDTH};
+  padding: 0 0 0 0;
   overflow: visible;
   @media (max-width: ${breakpoints.tablet}) {
     padding: 0;
@@ -186,6 +194,44 @@ const StyledForm = styled.form`
   @media print {
     border: 0;
   }
+  display: grid;
+  grid-template-columns: fit-content(100%) 1fr;
+  grid-template-areas:
+    "a b"
+    "a c"
+    "a d";
+  column-gap: 42px;
+  padding-right: 42px;
+  @media (max-width: ${breakpoints.tablet}) {
+    grid-template-areas:
+      "b b"
+      "a a"
+      "c c"
+      "d d";
+    padding: 12px;
+  }
+`;
+
+const StyledStepList = styled(StepList)`
+  position: relative !important;
+  grid-area: a;
+  @media (max-width: ${breakpoints.tablet}) {
+    border-radius: 0.6rem;
+  }
+`;
+
+const StyledTitle = styled(Title)`
+  grid-area: b;
+  margin-top: 42px;
+`;
+
+const StepWrapper = styled.div`
+  grid-area: c;
+  grid-template-columns: 17.5% 31.25% auto;
+`;
+
+const SimulatorNavigationWrapper = styled(SimulatorNavigation)`
+  grid-area: d;
 `;
 
 export default SimulatorLayout;

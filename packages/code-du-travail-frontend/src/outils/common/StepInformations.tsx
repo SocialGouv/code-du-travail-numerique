@@ -119,7 +119,7 @@ export function StepInformations({
     <>
       <SectionTitle>Statut du salarié</SectionTitle>
       {memoizedQuestions.map(([key, answers], index) => (
-        <div key={`${index}-${key}`}>
+        <div key={`${index}-${key}-${criteria[key] ? "set" : "unset"}`}>
           {questionsMap[key] && (
             <SelectQuestion
               name={`criteria.${key}`}
@@ -133,9 +133,11 @@ export function StepInformations({
                     criteria,
                     key,
                     pastQuestions: memoizedQuestions,
-                  }).forEach((key) =>
-                    form.change(`criteria.${key}`, undefined)
-                  );
+                  }).forEach((key) => {
+                    if (key) {
+                      form.change(`criteria.${key}`, undefined);
+                    }
+                  });
                 });
               }}
               isTooltipOpen={

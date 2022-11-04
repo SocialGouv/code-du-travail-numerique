@@ -65,7 +65,7 @@ export class Formula2216
       const maxSeniority1 = Math.min(round(seniority), 10);
       const yearAfterDiff = maxSeniority1 < 2 ? "an" : "ans";
       explanations.push(
-        `A1: Années de présence pour la tranche jusqu'à 10 ans (${maxSeniority1} ${yearAfterDiff})`
+        `A1 : Années de présence pour la tranche jusqu'à 10 ans (${maxSeniority1} ${yearAfterDiff})`
       );
       if (isEconomicFiring && age >= 50) {
         formula += ` + ( 20% * ( 3 / 10 * Sref * A1 ) )`;
@@ -75,7 +75,7 @@ export class Formula2216
         const maxSeniority2 = Math.min(round(seniority - 10), 10);
         const yearAfterDiff2 = maxSeniority2 < 2 ? "an" : "ans";
         explanations.push(
-          `A2: Années de présence pour la tranche de 10 à 20 ans (${maxSeniority2} ${yearAfterDiff2})`
+          `A2 : Années de présence pour la tranche de 10 à 20 ans (${maxSeniority2} ${yearAfterDiff2})`
         );
         if (isEconomicFiring && age >= 50) {
           formula += ` + ( 20% * ( 4 / 10 * Sref * A2 ))`;
@@ -86,7 +86,7 @@ export class Formula2216
         const maxSeniority3 = Math.min(round(seniority - 20), 20);
         const yearAfterDiff3 = maxSeniority3 < 2 ? "an" : "ans";
         explanations.push(
-          `A3: Années de présence pour la tranche de 20 ans à 40 ans (${maxSeniority3} ${yearAfterDiff3})`
+          `A3 : Années de présence pour la tranche de 20 ans à 40 ans (${maxSeniority3} ${yearAfterDiff3})`
         );
         if (isEconomicFiring && age >= 50) {
           formula += ` + ( 20% * ( 5 / 10 * Sref * A3 ))`;

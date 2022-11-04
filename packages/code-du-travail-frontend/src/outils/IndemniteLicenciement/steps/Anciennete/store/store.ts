@@ -10,6 +10,9 @@ import {
   AncienneteStoreSlice,
 } from "./types";
 import { validateStep } from "./validator";
+import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { Absence } from "@socialgouv/modeles-social";
+import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
@@ -22,10 +25,22 @@ const initialState: AncienneteStoreData = {
 
 const createAncienneteStore: StoreSlice<
   AncienneteStoreSlice,
-  SalairesStoreSlice & CommonAgreementStoreSlice
+  SalairesStoreSlice & CommonAgreementStoreSlice & CommonInformationsStoreSlice
 > = (set, get) => ({
   ancienneteData: { ...initialState },
   ancienneteFunction: {
+    init: () => {
+      set(
+        produce(
+          (state: AncienneteStoreSlice & CommonInformationsStoreSlice) => {
+            state.ancienneteData.input.absencePeriods = cleanAbsenceDate(
+              state.ancienneteData.input.absencePeriods,
+              state
+            );
+          }
+        )
+      );
+    },
     onChangeDateEntree: (value) => {
       applyGenericValidation(get, set, "dateEntree", value);
     },
@@ -36,7 +51,8 @@ const createAncienneteStore: StoreSlice<
       applyGenericValidation(get, set, "dateNotification", value);
     },
     onChangeAbsencePeriods: (value) => {
-      applyGenericValidation(get, set, "absencePeriods", value);
+      const absence = cleanAbsenceDate(value, get());
+      applyGenericValidation(get, set, "absencePeriods", absence);
     },
     onChangeHasAbsenceProlonge: (value) => {
       set(
@@ -50,7 +66,11 @@ const createAncienneteStore: StoreSlice<
       applyGenericValidation(get, set, "hasAbsenceProlonge", value);
     },
     onValidateStepAnciennete: () => {
-      const { isValid, errorState } = validateStep(get().ancienneteData.input, get().agreementData.input.agreement);
+      const { isValid, errorState } = validateStep(
+        get().ancienneteData.input,
+        get().informationsData.input,
+        get().agreementData.input.agreement
+      );
 
       set(
         produce((state: AncienneteStoreSlice) => {
@@ -65,8 +85,16 @@ const createAncienneteStore: StoreSlice<
 });
 
 const applyGenericValidation = (
-  get: GetState<AncienneteStoreSlice & CommonAgreementStoreSlice>,
-  set: SetState<AncienneteStoreSlice & CommonAgreementStoreSlice>,
+  get: GetState<
+    AncienneteStoreSlice &
+      CommonAgreementStoreSlice &
+      CommonInformationsStoreSlice
+  >,
+  set: SetState<
+    AncienneteStoreSlice &
+      CommonAgreementStoreSlice &
+      CommonInformationsStoreSlice
+  >,
   paramName: keyof AncienneteStoreInput,
   value: any
 ) => {
@@ -76,6 +104,7 @@ const applyGenericValidation = (
     });
     const { isValid, errorState } = validateStep(
       nextState.ancienneteData.input,
+      get().informationsData.input,
       get().agreementData.input.agreement
     );
     set(
@@ -92,6 +121,29 @@ const applyGenericValidation = (
       })
     );
   }
+};
+
+const cleanAbsenceDate = (
+  absencePeriods: Absence[],
+  data: CommonInformationsStoreSlice
+): Absence[] => {
+  return absencePeriods.map((absence) => {
+    const dateRequired = absence.motif.startAt
+      ? absence.motif.startAt(
+          informationToSituation(
+            data.informationsData.input.publicodesInformations
+          )
+        )
+      : false;
+    if (!dateRequired) {
+      return {
+        ...absence,
+        startedAt: undefined,
+      };
+    } else {
+      return absence;
+    }
+  });
 };
 
 export default createAncienneteStore;

@@ -36,7 +36,7 @@ export default function Agreement1527() {
           },
         ]}
         name="hasContractSalary"
-        label="Le salarié perçoit-il des commissions ?"
+        label="Le contrat de travail prévoit-il le versement de commissions ?"
         selectedOption={hasCommission}
         onChangeSelectedOption={onChangeHasCommission}
         error={errorHasCommission}

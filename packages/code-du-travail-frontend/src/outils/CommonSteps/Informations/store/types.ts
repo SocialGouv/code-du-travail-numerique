@@ -4,6 +4,7 @@ import { Question } from "../../../DureePreavisRetraite/state";
 export type PublicodesInformation = {
   info: string | undefined;
   order: number;
+  id: string;
   question: Question;
 };
 

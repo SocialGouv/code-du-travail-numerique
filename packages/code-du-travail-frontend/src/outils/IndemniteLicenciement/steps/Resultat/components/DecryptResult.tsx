@@ -46,6 +46,8 @@ export default function DecryptResult(props: Props) {
             ? "Convention collective non renseignée"
             : !props.isAgreementSupported
             ? "Convention collective non traitée"
+            : props.agreementResult === "0"
+            ? "La convention collective ne prévoit pas d'indemnité dans ce cas"
             : `${props.agreementResult} €`}
         </strong>
       </Paragraph>
