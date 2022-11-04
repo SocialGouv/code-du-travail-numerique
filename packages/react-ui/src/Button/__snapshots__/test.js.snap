@@ -339,7 +339,6 @@ exports[`<Button /> it renders a Button link 1`] = `
     <svg
       aria-hidden="true"
       fill="none"
-      variant="link"
       viewBox="0 0 28 15"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -358,7 +357,6 @@ exports[`<Button /> it renders a Button link 1`] = `
     <svg
       aria-hidden="true"
       fill="none"
-      variant="link"
       viewBox="0 0 28 15"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -377,7 +375,6 @@ exports[`<Button /> it renders a Button link 1`] = `
     <svg
       aria-hidden="true"
       fill="none"
-      variant="link"
       viewBox="0 0 28 15"
       xmlns="http://www.w3.org/2000/svg"
     >

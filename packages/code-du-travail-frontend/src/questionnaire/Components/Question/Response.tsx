@@ -36,6 +36,7 @@ export const Response = ({
                   trackClickHelp(trackingName);
                 }
               }}
+              data-testid={`Tooltip-${text}`}
             ></Tooltip>
           </TooltipWrapper>
         )}

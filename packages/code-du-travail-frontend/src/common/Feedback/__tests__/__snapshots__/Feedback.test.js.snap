@@ -947,8 +947,6 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             <svg
               aria-hidden="true"
               fill="none"
-              type="button"
-              variant="link"
               viewBox="0 0 28 15"
               xmlns="http://www.w3.org/2000/svg"
             >

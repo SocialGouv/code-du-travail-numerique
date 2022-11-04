@@ -40,6 +40,7 @@ export const SummaryItem = ({
                 onChange={(opened) => {
                   setOpenedTooltip(opened);
                 }}
+                data-testid={`Tooltip-${data}`}
               ></Tooltip>
             </TooltipWrapper>
           )}
@@ -51,6 +52,7 @@ export const SummaryItem = ({
               xsmall
               onClick={onClick}
               icon={UpdateIcon}
+              data-testid={`modify-${data}`}
             >
               {width > breakpoints.intMobile && <div>Modifier</div>}
             </StyledButton>
