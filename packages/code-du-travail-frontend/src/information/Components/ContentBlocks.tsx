@@ -11,7 +11,7 @@ import {
 } from "@socialgouv/cdtn-ui";
 import { processToHtml } from "../../information";
 import { toUrl } from "../../lib";
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import useWindowDimensions from "../../common/WindowDimension";
 

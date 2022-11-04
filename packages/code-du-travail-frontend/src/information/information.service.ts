@@ -1,17 +1,11 @@
 import getConfig from "next/config";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import { Content, EditorialContentData } from "cdtn-types";
+import { getToolByIds } from "../outils";
 
 const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
-
-export const getContentByIds = async (ids: string[]): Promise<any> => {
-  const responseContainer = await fetch(
-    `${API_URL}/items?ids=${ids.join(",")}&all=true`
-  );
-  return await responseContainer.json();
-};
 
 export const getContentBySlug = async (slug: string): Promise<any> => {
   const responseContainer = await fetch(
@@ -55,4 +49,26 @@ export const injectContentInfos = (
     });
     return { ...content, blocks };
   });
+};
+
+export const getInformationBySlug = async (slug: string) => {
+  const contentBySlug = await getContentBySlug(slug);
+
+  const cdtnIdToFetch = getContentBlockIds(contentBySlug._source.contents);
+  let contents;
+
+  if (cdtnIdToFetch && cdtnIdToFetch.length) {
+    const fetchedContents = await getToolByIds(cdtnIdToFetch);
+    contents = injectContentInfos(
+      contentBySlug._source.contents,
+      fetchedContents
+    );
+  } else {
+    contents = contentBySlug._source.contents;
+  }
+  return {
+    ...contentBySlug,
+    _source: { ...contentBySlug._source, contents },
+    slug,
+  };
 };

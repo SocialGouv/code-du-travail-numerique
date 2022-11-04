@@ -15,6 +15,7 @@ import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 import { Layout } from "../../src/layout/Layout";
 import { getTools } from "../api/simulateurs/index";
 import { DocumentsTile } from "../index";
+import { getAllTools } from "../../src/outils/service";
 
 const Outils = ({ cdtnSimulators, externalTools }) => (
   <Layout currentPage="tools">
@@ -28,7 +29,15 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
         <Grid>
           {DocumentsTile}
           {cdtnSimulators.map(
-            ({ id, action, description, icon, slug, title }) => {
+            ({
+              id,
+              action,
+              description,
+              metaDescription,
+              icon,
+              slug,
+              title,
+            }) => {
               const linkProps = {
                 passHref: true,
               };
@@ -43,7 +52,9 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
                     titleTagType="h2"
                     centerTitle
                   >
-                    <Paragraph noMargin>{description}</Paragraph>
+                    <Paragraph noMargin>
+                      {description ?? metaDescription}
+                    </Paragraph>
                   </CallToActionTile>
                 </Link>
               );
@@ -75,8 +86,9 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
 );
 
 export async function getServerSideProps() {
+  const tools = await getAllTools();
   return {
-    props: getTools(),
+    props: { ...getTools(), cdtnSimulators: tools },
   };
 }
 

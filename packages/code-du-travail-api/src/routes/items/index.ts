@@ -1,9 +1,9 @@
 import elasticsearchClient from "../../conf/elasticsearch";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 import { getRelatedItems } from "./getRelatedItems";
+import { getDocumentBody } from "./search.es";
 import { getDocumentByIdsBody } from "./searchByIds.es";
 import { getSearchBySourceSlugBody } from "./searchBySourceSlug.es";
-import { getDocumentByUrlBody } from "./searchByUrl.es";
 
 const Router = require("koa-router");
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
@@ -87,19 +87,21 @@ router.get("/items/:id", async (ctx: any) => {
  * @returns {Object} Result.
  */
 router.get("/items", async (ctx: any) => {
-  const { url, ids, all } = ctx.query;
+  const { url, source, ids, all } = ctx.query;
+  const isAll = all === "true";
   const body = ids
     ? getDocumentByIdsBody(ids.split(","))
-    : getDocumentByUrlBody({ url });
+    : getDocumentBody({ isAll, source, url });
+  console.log("body", JSON.stringify(body));
   const response = await elasticsearchClient.search({ body, index });
-
+  console.log("response", JSON.stringify(response));
   if (response.body.hits.total.value === 0) {
     ctx.throw(404, `there is no document that match ${url}`);
   }
 
   const [item] = response.body.hits.hits;
   delete item.title_vector;
-  ctx.body = all === "true" ? response.body.hits.hits : { ...item };
+  ctx.body = isAll ? response.body.hits.hits : { ...item };
 });
 
 export default router;
