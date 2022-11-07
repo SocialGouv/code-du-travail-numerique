@@ -4657,7 +4657,7 @@
     },
     {
       "criteria": {
-        "catégorie professionnelle": "23| Agents de maîtrise"
+        "catégorie professionnelle": "23| Agents de maîtrise (AM1 et AM2)"
       },
       "type": "préavis de Licenciement",
       "idcc": 1505,
@@ -4670,7 +4670,7 @@
     },
     {
       "criteria": {
-        "catégorie professionnelle": "48| Cadres"
+        "catégorie professionnelle": "48| Cadres (C1 et C2)"
       },
       "type": "préavis de Licenciement",
       "idcc": 1505,
@@ -4683,7 +4683,7 @@
     },
     {
       "criteria": {
-        "catégorie professionnelle": "6| Ouvriers, Employés",
+        "catégorie professionnelle": "6| Employés (E1 à E7)",
         "ancienneté": "40| 2 ans ou moins"
       },
       "type": "préavis de Licenciement",
@@ -4697,7 +4697,7 @@
     },
     {
       "criteria": {
-        "catégorie professionnelle": "6| Ouvriers, Employés",
+        "catégorie professionnelle": "6| Employés (E1 à E7)",
         "ancienneté": "43| Plus de 2 ans"
       },
       "type": "préavis de Licenciement",
