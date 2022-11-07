@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.84.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.83.0...v4.84.0) (2022-11-07)
+
+
+### Bug Fixes
+
+* **deps:** passage de renovate à dependabot ([#4627](https://github.com/SocialGouv/code-du-travail-numerique/issues/4627)) ([9b409a0](https://github.com/SocialGouv/code-du-travail-numerique/commit/9b409a01dc01f4a4b0771e2670113c5998e23b04))
+* **k8s:** performance et réplicas ([#4648](https://github.com/SocialGouv/code-du-travail-numerique/issues/4648)) ([eda70bb](https://github.com/SocialGouv/code-du-travail-numerique/commit/eda70bb1b726c0c3c02d98a65b4df52d9e71ad1d))
+* **preavis-retraite:** ref 3239 ([#4632](https://github.com/SocialGouv/code-du-travail-numerique/issues/4632)) ([10969bb](https://github.com/SocialGouv/code-du-travail-numerique/commit/10969bb618e811ebeadab61f305c0c11e6ec805d))
+
+
+### Features
+
+* **cc 1505:** changement de nom des catégories + mises à jour des références juridiques ([#4635](https://github.com/SocialGouv/code-du-travail-numerique/issues/4635)) ([5f1d1c5](https://github.com/SocialGouv/code-du-travail-numerique/commit/5f1d1c586f34b6ee2eaefd7ce37a24bb198dfd8a))
+* **test:** supprimer les balises data-testid en production ([#4631](https://github.com/SocialGouv/code-du-travail-numerique/issues/4631)) ([e47246c](https://github.com/SocialGouv/code-du-travail-numerique/commit/e47246c6b7378f9a5fd56c631ee8fd6f1f732722))
+
+
+
+
+
 # [4.83.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.82.0...v4.83.0) (2022-11-02)
 
 

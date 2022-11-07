@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.84.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.83.0...v4.84.0) (2022-11-07)
+
+
+### Features
+
+* **test:** supprimer les balises data-testid en production ([#4631](https://github.com/SocialGouv/code-du-travail-numerique/issues/4631)) ([e47246c](https://github.com/SocialGouv/code-du-travail-numerique/commit/e47246c6b7378f9a5fd56c631ee8fd6f1f732722))
+
+
+
+
+
 # [4.83.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.82.0...v4.83.0) (2022-11-02)
 
 
