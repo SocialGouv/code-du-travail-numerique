@@ -36,7 +36,7 @@
   "dependencies": {
     "@elastic/elasticsearch": "7",
     "@koa/cors": "^3.1.0",
-    "@socialgouv/cdtn-elasticsearch": "2.0.1",
+    "@socialgouv/cdtn-elasticsearch": "2.3.4",
     "@socialgouv/cdtn-logger": "^1.15.1",
     "@socialgouv/cdtn-sources": "^4.84.0",
     "date-fns": "^2.22.1",
