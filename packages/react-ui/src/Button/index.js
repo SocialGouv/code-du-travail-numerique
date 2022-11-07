@@ -202,7 +202,7 @@ export const Button = React.forwardRef(
       <StyledButton {...props} ref={ref}>
         {children}
         {props.variant === "link" && (
-          <StyledCustomIcon hasText={Boolean(children)} {...props} />
+          <StyledCustomIcon hasText={Boolean(children)} />
         )}
       </StyledButton>
     );

@@ -3,7 +3,12 @@ import { useState } from "react";
 import styled from "styled-components";
 const { HelpCircle: HelpIcon } = icons;
 
-export const Tooltip = ({ onChange }) => {
+type TooltipParameters = {
+  onChange: (boolean) => void;
+  "data-testid"?: string;
+};
+
+export const Tooltip = ({ onChange, ...parameters }: TooltipParameters) => {
   const [opened, setOpened] = useState(false);
   const [hovered, setHovered] = useState(false);
   return (
@@ -18,7 +23,7 @@ export const Tooltip = ({ onChange }) => {
       onMouseLeave={() => {
         setHovered(false);
       }}
-      data-testid="tooltip"
+      {...parameters}
     >
       {hovered || opened ? (
         <OpenedTooltipIcon aria-label="?"></OpenedTooltipIcon>

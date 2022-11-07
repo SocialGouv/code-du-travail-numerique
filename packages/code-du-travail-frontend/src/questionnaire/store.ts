@@ -5,7 +5,8 @@ import {
   QuestionnaireQuestion,
   QuestionnaireResponse,
 } from "@cdt/data";
-import { getCurrentQuestion, slugSummaryRecursive } from "./service";
+import { getCurrentQuestion, slugSummaryRecursive } from "./utils";
+import { getQuestionnaire } from "./service";
 import { SlugResponses, PreviousResponse } from "./type";
 import { trackSelectResponse, trackViewQuestion } from "./tracking";
 
@@ -45,6 +46,7 @@ const createStore = (name: string) =>
         const questionTreeOld = get().questionTree;
         const currentQuestionOld = get().currentQuestion;
         if (!slugResponsesOld && !questionTreeOld && !currentQuestionOld) {
+          const dismissalProcessQuestionnaire = getQuestionnaire(name);
           const slugResponses = slugSummaryRecursive(
             dismissalProcessQuestionnaire
           );

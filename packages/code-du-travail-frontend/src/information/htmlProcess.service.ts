@@ -16,6 +16,6 @@ const processor = unified()
     createElement: React.createElement,
   });
 
-export const processToHtml = (html: string) => {
-  return processor.processSync(html).result;
+export const processToHtml = (html: string): string => {
+  return processor.processSync(html).result as string;
 };

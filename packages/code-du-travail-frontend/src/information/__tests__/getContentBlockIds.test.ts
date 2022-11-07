@@ -1,9 +1,10 @@
 import { getContentBlockIds } from "../information.service";
 import {
+  BlockDisplayMode,
   Content,
-  ContentBlock,
-  EditorialContent,
-  SectionDisplayMode,
+  ContentBlockContent,
+  ContentType,
+  ContentBlockContentItem,
 } from "cdtn-types";
 
 describe("function getContentBlockIds", () => {
@@ -13,18 +14,18 @@ describe("function getContentBlockIds", () => {
     references: [],
     title: "title",
   };
-  const mockedBlock: ContentBlock = {
-    type: "content",
+  const mockedBlock: ContentBlockContent = {
+    type: ContentType.content,
+    blockDisplayMode: BlockDisplayMode.line,
+    contents: [],
+    title: "title",
   };
-  const mockedContentItem: EditorialContent = {
+  const mockedContentItem: ContentBlockContentItem = {
     cdtnId: "cdtnId",
     title: "title",
-    breadcrumbs: [],
-    contents: [],
-    date: "",
-    metaDescription: "",
-    references: [],
-    sectionDisplayMode: SectionDisplayMode.accordion,
+    description: "description",
+    slug: "slug",
+    source: "source",
   };
   let props: Content[];
   let result: string[];

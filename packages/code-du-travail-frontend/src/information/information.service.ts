@@ -1,6 +1,6 @@
 import getConfig from "next/config";
 import { SOURCES } from "@socialgouv/cdtn-sources";
-import { Content, EditorialContentData } from "cdtn-types";
+import { Content, ContentType, EditorialContentData } from "cdtn-types";
 import { getToolByIds } from "../outils";
 
 const {
@@ -17,17 +17,17 @@ export const getContentBySlug = async (slug: string): Promise<any> => {
   return await responseContainer.json();
 };
 
-export const getContentBlockIds = (contents: Content[]): string[] => {
-  return contents.reduce((idsAcc: string[], content) => {
+export const getContentBlockIds = (data: Content[]): string[] => {
+  return data.reduce((idsAcc: string[], content) => {
     content.blocks = content.blocks ?? [];
     return idsAcc.concat(
-      content?.blocks?.flatMap(({ contents }) => {
-        return (
-          contents
-            ?.map(({ cdtnId }) => cdtnId)
-            ?.filter((cdtnId: string) => idsAcc.indexOf(cdtnId) === -1) ?? []
-        );
-      }) ?? []
+      content?.blocks.flatMap((block) => {
+        return block.type === ContentType.content
+          ? block.contents
+              ?.map(({ cdtnId }) => cdtnId)
+              ?.filter((cdtnId: string) => idsAcc.indexOf(cdtnId) === -1) ?? []
+          : [];
+      })
     );
   }, []);
 };
@@ -38,6 +38,7 @@ export const injectContentInfos = (
 ) => {
   return contents.map((content) => {
     const blocks = content?.blocks?.map((block) => {
+      if (block.type !== ContentType.content) return block;
       const contents = block?.contents?.flatMap((blockContent) => {
         const contentFound = fetchedContents?.find(({ _source }) => {
           return _source.cdtnId === blockContent.cdtnId;
