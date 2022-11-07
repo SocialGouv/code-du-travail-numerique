@@ -95,10 +95,10 @@
                                                 }
                                             },
                                             {
-                                                "text": "au moins 1000 salariés",
+                                                "text": "Au moins 1000 salariés",
                                                 "statement": "Votre entreprise emploie au moins 1000 salariés",
                                                 "neutralStatement": "Dans une entreprise ou un groupe qui emploie au moins 1000 salariés",
-                                                "neutralStatementInfo": "soit une entreprise d'au moins 1000 salariés soit une entreprise de moins de 1000 salariés mais qui appartient à un groupe européen d'au moins 1000 salariés",
+                                                "neutralStatementInfo": "Soit une entreprise d'au moins 1000 salariés soit une entreprise de moins de 1000 salariés mais qui appartient à un groupe européen d'au moins 1000 salariés",
                                                 "trackingName": "plus_de_1000_salaries",
                                                 "slug": "licenciement-individuel-pour-motif-economique-le-conge-de-reclassement-cr"
                                             }
@@ -152,10 +152,10 @@
                                                             }
                                                         },
                                                         {
-                                                            "text": "au moins 1000 salariés",
+                                                            "text": "Au moins 1000 salariés",
                                                             "statement": "Votre entreprise emploie au moins 1000 salariés",
                                                             "neutralStatement": "Dans une entreprise ou un groupe qui emploie au moins 1000 salariés",
-                                                            "neutralStatementInfo": "soit une entreprise d'au moins 1000 salariés soit une entreprise de moins de 1000 salariés mais qui appartient à un groupe européen d'au moins 1000 salariés",
+                                                            "neutralStatementInfo": "Soit une entreprise d'au moins 1000 salariés soit une entreprise de moins de 1000 salariés mais qui appartient à un groupe européen d'au moins 1000 salariés",
                                                             "trackingName": "plus_de_1000_salaries",
                                                             "slug": "petit-licenciement-collectif-2-a-9-salaries-pour-motif-economique-dans-une-entreprise-avec-cse-le-conge-de-reclassement"
                                                         }
@@ -198,10 +198,10 @@
                                                             }
                                                         },
                                                         {
-                                                            "text": "au moins 1000 salariés",
+                                                            "text": "Au moins 1000 salariés",
                                                             "statement": "Votre entreprise emploie au moins 1000 salariés",
                                                             "neutralStatement": "Dans une entreprise ou un groupe qui emploie au moins 1000 salariés",
-                                                            "neutralStatementInfo": "soit une entreprise d'au moins 1000 salariés soit une entreprise de moins de 1000 salariés mais qui appartient à un groupe européen d'au moins 1000 salariés",
+                                                            "neutralStatementInfo": "Soit une entreprise d'au moins 1000 salariés soit une entreprise de moins de 1000 salariés mais qui appartient à un groupe européen d'au moins 1000 salariés",
                                                             "trackingName": "plus_de_1000_salaries",
                                                             "slug": "petit-licenciement-collectif-pour-motif-economique-dans-une-entreprise-sans-cse-la-mise-en-place-du-conge-de-reclassement-cr"
                                                         }
@@ -285,10 +285,10 @@
                                                             }
                                                         },
                                                         {
-                                                            "text": "au moins 1000 salariés",
+                                                            "text": "Au moins 1000 salariés",
                                                             "statement": "Votre entreprise emploie au moins 1000 salariés",
                                                             "neutralStatement": "Dans une entreprise ou un groupe qui emploie au moins 1000 salariés",
-                                                            "neutralStatementInfo": "soit une entreprise d'au moins 1000 salariés soit une entreprise de moins de 1000 salariés mais qui appartient à un groupe européen d'au moins 1000 salariés",
+                                                            "neutralStatementInfo": "Soit une entreprise d'au moins 1000 salariés soit une entreprise de moins de 1000 salariés mais qui appartient à un groupe européen d'au moins 1000 salariés",
                                                             "trackingName": "plus_de_1000_salaries",
                                                             "slug": "grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-avec-cse-le-conge-de-reclassement"
                                                         }
@@ -359,10 +359,10 @@
                                                         },
                                                         {
                                                             "trackingName": "plus_de_1000_salaries",
-                                                            "text": "au moins 1000 salariés",
+                                                            "text": "Au moins 1000 salariés",
                                                             "statement": "Votre entreprise emploie au moins 1000 salariés",
                                                             "neutralStatement": "Dans une entreprise ou un groupe qui emploie au moins 1000 salariés",
-                                                            "neutralStatementInfo": "soit une entreprise d'au moins 1000 salariés soit une entreprise de moins de 1000 salariés mais qui appartient à un groupe européen d'au moins 1000 salariés",
+                                                            "neutralStatementInfo": "Soit une entreprise d'au moins 1000 salariés soit une entreprise de moins de 1000 salariés mais qui appartient à un groupe européen d'au moins 1000 salariés",
                                                             "slug": "grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-sans-cse-le-conge-de-reclassement"
                                                         }
                                                     ]
@@ -470,7 +470,7 @@
                                                 }
                                             },
                                             {
-                                                "text": "au moins 1000 salariés",
+                                                "text": "Au moins 1000 salariés",
                                                 "statement": "Votre entreprise emploie au moins 1000 salariés",
                                                 "trackingName": "plus_de_1000_salaries",
                                                 "slug": "licenciement-individuel-pour-motif-economique-le-conge-de-reclassement-cr"
@@ -520,7 +520,7 @@
                                                             }
                                                         },
                                                         {
-                                                            "text": "au moins 1000 salariés",
+                                                            "text": "Au moins 1000 salariés",
                                                             "statement": "Votre entreprise emploie au moins 1000 salariés",
                                                             "trackingName": "plus_de_1000_salaries",
                                                             "slug": "petit-licenciement-collectif-2-a-9-salaries-pour-motif-economique-dans-une-entreprise-avec-cse-le-conge-de-reclassement"
@@ -561,7 +561,7 @@
                                                             }
                                                         },
                                                         {
-                                                            "text": "au moins 1000 salariés",
+                                                            "text": "Au moins 1000 salariés",
                                                             "statement": "Votre entreprise emploie au moins 1000 salariés",
                                                             "trackingName": "plus_de_1000_salaries",
                                                             "slug": "petit-licenciement-collectif-pour-motif-economique-dans-une-entreprise-sans-cse-la-mise-en-place-du-conge-de-reclassement-cr"
@@ -638,7 +638,7 @@
                                                             }
                                                         },
                                                         {
-                                                            "text": "au moins 1000 salariés",
+                                                            "text": "Au moins 1000 salariés",
                                                             "statement": "Votre entreprise emploie au moins 1000 salariés",
                                                             "trackingName": "plus_de_1000_salaries",
                                                             "slug": "grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-avec-cse-le-conge-de-reclassement"
@@ -703,7 +703,7 @@
                                                             }
                                                         },
                                                         {
-                                                            "text": "au moins 1000 salariés",
+                                                            "text": "Au moins 1000 salariés",
                                                             "statement": "Votre entreprise emploie au moins 1000 salariés",
                                                             "trackingName": "plus_de_1000_salaries",
                                                             "slug": "grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-sans-cse-le-conge-de-reclassement"
