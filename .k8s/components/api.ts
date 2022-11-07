@@ -40,8 +40,8 @@ export default async () => {
         },
         resources: {
           requests: {
-            cpu: "100m",
-            memory: "256Mi",
+            cpu: "50m",
+            memory: "128Mi",
           },
           limits: {
             cpu: "500m",
@@ -77,7 +77,7 @@ export default async () => {
     metadata: deployment.metadata,
     spec: {
       minReplicas: 2,
-      maxReplicas: 10,
+      maxReplicas: 25,
 
       metrics: [
         {
