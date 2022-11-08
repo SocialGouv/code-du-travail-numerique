@@ -79,27 +79,22 @@ router.get("/items/:id", async (ctx: any) => {
  * Return document matching the given url.
  *
  * @example
- * http://localhost:1337/api/v1/items?url=:url&ids=:ids&all=:all
+ * http://localhost:1337/api/v1/items?url=:url&ids=:ids
  *
  * @param {string} :url The item url.
  * @param {string[]} :ids The item id array.
- * @param {string} :all The response type array or object.
  * @returns {Object} Result.
  */
 router.get("/items", async (ctx: any) => {
-  const { url, source, ids, all } = ctx.query;
-  const isAll = all === "true";
-  const body = ids
-    ? getDocumentByIdsBody(ids.split(","))
-    : getDocumentBody({ isAll, source, url });
+  const { url, source, ids: idsString } = ctx.query;
+  const ids = idsString?.split(",");
+  const body = getDocumentBody({ ids, source, url });
   const response = await elasticsearchClient.search({ body, index });
   if (response.body.hits.total.value === 0) {
     ctx.throw(404, `there is no document that match ${url}`);
   }
 
-  const [item] = response.body.hits.hits;
-  delete item.title_vector;
-  ctx.body = isAll ? response.body.hits.hits : { ...item };
+  ctx.body = response.body.hits.hits;
 });
 
 export default router;
