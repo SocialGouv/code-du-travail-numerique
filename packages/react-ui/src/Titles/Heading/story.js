@@ -4,7 +4,7 @@ import { Section } from "../../layout/Section";
 import { Wrapper } from "../../layout/Wrapper";
 import { spacings } from "../../theme.js";
 import { Subtitle } from "../Subtitle";
-import { Heading } from "./index.js";
+import { Heading } from ".";
 
 export default {
   component: Heading,

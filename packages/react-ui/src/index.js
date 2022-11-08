@@ -59,7 +59,7 @@ export { Select } from "./field/Select.js";
 export { Textarea } from "./field/Textarea.js";
 
 // Titles
-export { Heading } from "./Titles/Heading/index.js";
+export { Heading } from "./Titles/Heading/index.tsx";
 export { InsertTitle } from "./Titles/InsertTitle/index.js";
 export { PageTitle } from "./Titles/PageTitle/index.js";
 export { Subtitle } from "./Titles/Subtitle/index.js";
