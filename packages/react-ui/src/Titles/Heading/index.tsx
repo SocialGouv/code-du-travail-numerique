@@ -6,10 +6,10 @@ import { breakpoints, fonts, spacings } from "../../theme.js";
 
 type Props = {
   children: React.ReactNode;
-  stripe: "left" | "none";
-  variant: "primary" | "secondary";
-  isFirst: boolean;
-  shift: string;
+  stripe?: "left" | "none";
+  variant?: "primary" | "secondary";
+  isFirst?: boolean;
+  shift?: string;
   as?: React.ElementType;
   style?: React.CSSProperties;
 };
