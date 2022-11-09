@@ -42,6 +42,44 @@ describe("Formula", () => {
     );
   });
 
+  describe("Check formula for a CC (16)", () => {
+    test.each`
+      seniority | age   | haveRightToRetirement | expectedFormula                                               | expectedExplanations
+      ${3}      | ${61} | ${true}               | ${"(2 / 10 * Sref * A1) - (20% * A2 * (2 / 10 * Sref * A1))"} | ${["A1 : Ancienneté totale (3 ans)", "A2 : Années entre 60 et 65 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
+    `(
+      "Valide l'ordonnancement des explanations par ordre alphabétique",
+      ({
+        seniority,
+        age,
+        haveRightToRetirement,
+        expectedFormula,
+        expectedExplanations,
+      }) => {
+        const situation = engine.setSituation({
+          "contrat salarié . convention collective": "'IDCC0016'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
+            "'Ouvriers'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . age":
+            age,
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${
+            haveRightToRetirement ? "'Oui'" : "'Non'"
+          }`,
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
+            "'Non'",
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+          "indemnité de licenciement": "oui",
+        });
+
+        const formule = getFormule(situation);
+
+        expect(formule.formula).toEqual(expectedFormula);
+        expect(formule.explanations).toEqual(expectedExplanations);
+      }
+    );
+  });
+
   describe("Check formula for CC when fold back to legal", () => {
     test.each`
       seniority | inaptitude | expectedFormula                                  | expectedExplanations

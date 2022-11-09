@@ -31,7 +31,7 @@ describe("CC 16", () => {
       ${23}     | ${0}                | ${61} | ${false}              | ${3374}    | ${41162.8}
       ${35}     | ${0}                | ${61} | ${false}              | ${3374}    | ${60732}
     `(
-      "Avec une ancienneté $seniority ans (plus $seniorityEmployeTAM en tant que non cadre), un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
+      "Avec une ancienneté $seniority ans (plus $seniorityEmployeTAM en tant que non cadre), droit de retraite: $haveRightToRetirement, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
       ({
         salaireRef,
         expectedCompensation,
@@ -90,6 +90,8 @@ describe("CC 16", () => {
       ${1.67}   | ${63} | ${false}              | ${2738}    | ${0}
       ${2.75}   | ${63} | ${false}              | ${2738}    | ${752.95}
       ${6}      | ${63} | ${false}              | ${2738}    | ${4928.4}
+      ${6}      | ${66} | ${false}              | ${2738}    | ${0}
+      ${6}      | ${66} | ${true}               | ${2738}    | ${0}
     `(
       "ancienneté: $seniority ans, sref: $salaireRef €, age: $age, droit à la retraite: $haveRightToRetirement => une compensation de base de $expectedCompensation €",
       ({
@@ -212,7 +214,7 @@ describe("CC 16", () => {
     test.each`
       seniority | salaireRef | expectedCompensation
       ${2.75}   | ${2600}    | ${0}
-      ${3}      | ${2600}    | ${2600}
+      ${4}      | ${2600}    | ${2600}
       ${12}     | ${2600}    | ${2600}
     `(
       "Avec une ancienneté $seniority ans, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",

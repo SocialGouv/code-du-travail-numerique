@@ -1,5 +1,4 @@
 import { SupportedCcIndemniteLicenciement } from "../types";
-import { Formula16 } from "./16_transports_routiers";
 import { Formula44 } from "./44_industries_chimiques";
 import { Formula413 } from "./413_handicap";
 import { Formula573 } from "./573_commerces_de_gros";
@@ -36,8 +35,6 @@ export class FormuleFactory {
         return new Formula1597() as IFormula<T>;
       case SupportedCcIndemniteLicenciement.IDCC650:
         return new Formula650() as IFormula<T>;
-      case SupportedCcIndemniteLicenciement.IDCC0016:
-        return new Formula16() as IFormula<T>;
       case SupportedCcIndemniteLicenciement.IDCC0573:
         return new Formula573() as IFormula<T>;
       case SupportedCcIndemniteLicenciement.IDCC0044:
