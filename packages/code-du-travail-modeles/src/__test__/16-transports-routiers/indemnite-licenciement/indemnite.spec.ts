@@ -66,7 +66,7 @@ describe("CC 16", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salaireRef,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
             ...dateCadre,
           })
           .evaluate(
@@ -113,7 +113,7 @@ describe("CC 16", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salaireRef,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
           })
           .evaluate(
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
@@ -159,7 +159,7 @@ describe("CC 16", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salaireRef,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
           })
           .evaluate(
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
@@ -197,7 +197,7 @@ describe("CC 16", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salaireRef,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
           })
           .evaluate(
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
@@ -230,7 +230,7 @@ describe("CC 16", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salaireRef,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
           })
           .evaluate(
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
@@ -274,13 +274,11 @@ describe("CC 16", () => {
             }`,
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
               "'Non'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . ouvrier . type":
-              "'Autres licenciements'",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salaireRef,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
           })
           .evaluate(
             "contrat salarié . indemnité de licenciement . résultat conventionnel"

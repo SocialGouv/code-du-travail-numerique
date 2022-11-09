@@ -52,8 +52,8 @@ test.each`
       })
       .evaluate("contrat salarié . préavis de retraite");
 
+    expect(result.missingVariables).toEqual({});
     expect(result.nodeValue).toEqual(expectedNotice);
     expect(result.unit?.numerators).toEqual(["mois"]);
-    expect(result.missingVariables).toEqual({});
   }
 );

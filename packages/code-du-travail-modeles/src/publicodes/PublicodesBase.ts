@@ -21,7 +21,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     situation: [],
   };
 
-  protected constructor(rules: string, targetRule: string) {
+  protected constructor(rules: any, targetRule: string) {
     this.engine = new Engine(rules);
     this.targetRule = targetRule;
   }
@@ -63,7 +63,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   private buildSituation(map: SituationElement[]): Record<string, string> {
     const situation: Record<string, string> = {};
     map.forEach((arg) => {
-      situation[arg.rawNode.nom] = arg.value;
+      situation[arg.name] = arg.value;
     });
     return situation;
   }

@@ -31,7 +31,6 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre:
   applicable si: catégorie professionnelle = 'Non-cadres'
-  valeur: oui
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . au dela de dix ans:
   somme:
@@ -100,7 +99,6 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre:
   applicable si: catégorie professionnelle = 'Cadres'
-  valeur: oui
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . nombre d'années entre 5 et 10ans:
   somme:

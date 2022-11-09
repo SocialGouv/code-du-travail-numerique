@@ -13,7 +13,7 @@ export function getReferences(
     .filter(
       (rule) =>
         rule.rawNode.références &&
-        engine.evaluate(rule.dottedName).nodeValue !== false
+        engine.evaluate(rule.dottedName).nodeValue !== null
     )
     .filter((rules) => {
       if (specificRule) {

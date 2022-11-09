@@ -2,43 +2,47 @@ contrat salarié . convention collective . entreprises de propreté . indemnité
   applicable si: indemnité de licenciement
   valeur: oui
 
-contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . jusqu'à 5 ans:
-  valeur: non
-
-contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . jusqu'à 5 ans . cas 1:
-  remplace: contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . jusqu'à 5 ans
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 6 an
-  valeur:
-    le minimum de:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-      - 5 an
-
-# ATTENTION: C'est un hack pour gérer le cas de 5.91 et de 6 ans d'ancienneté
-# Avec 5.91 d'années d'ancienneté => 1/10 * SRFEF * 5.91
-# Avec 6 années d'ancienneté => 1/10 * SREF * 5 + 1/6 * SRFEF * 1
-contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . jusqu'à 5 ans . cas 2:
-  remplace: contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . jusqu'à 5 ans
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . moins de 5 ans:
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 6 an
   valeur:
     le minimum de:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
       - 6 an
 
-contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . entre 5 ans et 10 ans:
+# ATTENTION: C'est un hack pour gérer le cas de 5.91 et de 6 ans d'ancienneté
+# Avec 5.91 d'années d'ancienneté => 1/10 * SREF * 5.91
+# Avec 6 années d'ancienneté => 1/10 * SREF * 5 + 1/6 * SREF * 1
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . jusqu'à 5 ans:
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 6 an
   valeur:
     le minimum de:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année - 5 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
       - 5 an
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . entre 5 ans et 10 ans:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 6
+  somme:
+    - le minimum de:
+        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - 10an
+    - (- 5 an)
   plancher: 0 an
 
 contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . au dela de dix ans:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 10
   somme:
     - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
     - (- 10 an)
   plancher: 0 an
 
-contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . facteur 1:
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . facteur moins de 5 ans:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * moins de 5 ans
+      facteur: 1 / 10
+  unité: €
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . facteur jusqu'à 5 ans:
   valeur:
     produit:
       assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * jusqu'à 5 ans
@@ -69,7 +73,8 @@ contrat salarié . convention collective . entreprises de propreté . indemnité
     - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 ans
       alors:
         somme:
-          - facteur 1
+          - facteur moins de 5 ans
+          - facteur jusqu'à 5 ans
           - facteur 2
           - facteur 3
     - sinon: 0

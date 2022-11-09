@@ -49,7 +49,7 @@ describe("Convention collective 2511", () => {
           "contrat salarié . convention collective . sport . catégorie professionnelle": `'${category}'`,
           "contrat salarié . mise à la retraite": miseRetraite,
           "contrat salarié . travailleur handicapé": "non",
-          "préavis de retraite": "oui",
+          "contrat salarié . préavis de retraite": "oui",
         });
         const references = getReferences(situation);
         expect(references).toHaveLength(expectedReferences.length);

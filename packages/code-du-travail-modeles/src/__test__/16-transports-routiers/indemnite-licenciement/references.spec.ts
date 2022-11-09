@@ -31,14 +31,12 @@ describe("Vérification des références juridiques pour la CC 16", () => {
               "'Ouvriers'",
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
               "'Non'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . ouvrier . type":
-              "'Autres licenciements'",
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise":
               "'Oui'",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
           }),
           "résultat conventionnel"
         );
@@ -75,14 +73,12 @@ describe("Vérification des références juridiques pour la CC 16", () => {
               "'Oui'",
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite définitive":
               "'Non'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . ouvrier . type":
-              "'Autres licenciements'",
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise":
               "'Oui'",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
           }),
           "résultat conventionnel"
         );
@@ -119,14 +115,12 @@ describe("Vérification des références juridiques pour la CC 16", () => {
               "'Oui'",
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite définitive":
               "'Oui'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . ouvrier . type":
-              "'Autres licenciements'",
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise":
               "'Oui'",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
           }),
           "résultat conventionnel"
         );
@@ -165,7 +159,7 @@ describe("Vérification des références juridiques pour la CC 16", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
           }),
           "résultat conventionnel"
         );
@@ -202,7 +196,7 @@ describe("Vérification des références juridiques pour la CC 16", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
           }),
           "résultat conventionnel"
         );
@@ -239,7 +233,7 @@ describe("Vérification des références juridiques pour la CC 16", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
           }),
           "résultat conventionnel"
         );

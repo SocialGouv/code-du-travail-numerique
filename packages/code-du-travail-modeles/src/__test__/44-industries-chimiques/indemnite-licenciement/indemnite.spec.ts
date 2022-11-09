@@ -33,7 +33,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
-          "indemnité de licenciement": "oui",
+          "contrat salarié . indemnité de licenciement": "oui",
         });
 
         const result = situation.evaluate(
@@ -80,7 +80,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
           });
 
           const result = situation.evaluate(
@@ -132,7 +132,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
           });
 
           const result = situation.evaluate(
@@ -187,7 +187,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
           });
 
           const result = situation.evaluate(
@@ -238,7 +238,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
           });
 
           const result = situation.evaluate(
@@ -287,7 +287,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
           });
 
           const result = situation.evaluate(
@@ -336,7 +336,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
               salary,
-            "indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement": "oui",
           });
 
           const result = situation.evaluate(

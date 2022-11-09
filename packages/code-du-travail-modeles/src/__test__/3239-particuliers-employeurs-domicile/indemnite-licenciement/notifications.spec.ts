@@ -135,7 +135,7 @@ describe("Notification bloquante et non bloquante pour la CC 3239", () => {
                 "01/12/2022",
               "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
                 salary,
-              "indemnité de licenciement": "oui",
+              "contrat salarié . indemnité de licenciement": "oui",
             });
 
             const notificationsBloquantes =

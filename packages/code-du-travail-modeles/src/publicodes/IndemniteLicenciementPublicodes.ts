@@ -9,7 +9,7 @@ class IndemniteLicenciementPublicodes
   extends PublicodesBase<PublicodesIndemniteLicenciementResult>
   implements Publicodes<PublicodesIndemniteLicenciementResult>
 {
-  constructor(rules: string) {
+  constructor(rules: any) {
     super(
       rules,
       PublicodesDefaultRules[PublicodesSimulator.INDEMNITE_LICENCIEMENT]

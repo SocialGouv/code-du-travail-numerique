@@ -53,7 +53,7 @@
     "next-transpile-modules": "^8.0.0",
     "p-debounce": "^2.1.0",
     "prop-types": "^15.8.1",
-    "publicodes": "^1.0.0-beta.16",
+    "publicodes": "^1.0.0-beta.60",
     "react": "^17.0.2",
     "react-autosuggest": "10.1.0",
     "react-dom": "^17.0.2",

@@ -62,7 +62,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
-          "indemnité de licenciement": "oui",
+          "contrat salarié . indemnité de licenciement": "oui",
         });
 
         const result = getReferences(situation, "résultat conventionnel");
@@ -94,7 +94,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
-          "indemnité de licenciement": "oui",
+          "contrat salarié . indemnité de licenciement": "oui",
         });
 
         const result = getReferences(situation, "résultat conventionnel");
@@ -126,7 +126,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
-          "indemnité de licenciement": "oui",
+          "contrat salarié . indemnité de licenciement": "oui",
         });
 
         const result = getReferences(situation, "résultat conventionnel");

@@ -45,6 +45,16 @@ const initialState: ResultStoreData = {
   isStepValid: true,
 };
 
+const isConventionnelBetter = (
+  publicodesSituationLegal: PublicodesIndemniteLicenciementResult,
+  publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult
+) =>
+  publicodesSituationLegal.value !== undefined &&
+  publicodesSituationLegal.value !== null &&
+  publicodesSituationConventionnel.value !== undefined &&
+  publicodesSituationConventionnel.value !== null &&
+  publicodesSituationConventionnel.value > publicodesSituationLegal.value;
+
 const createResultStore: StoreSlice<
   ResultStoreSlice,
   AncienneteStoreSlice &
@@ -162,10 +172,10 @@ const createResultStore: StoreSlice<
 
         if (
           agreementHasNoLegalIndemnity ||
-          (publicodesSituationConventionnel.value !== null &&
-            publicodesSituationLegal.value !== null &&
-            publicodesSituationConventionnel.value >
-              publicodesSituationLegal.value)
+          isConventionnelBetter(
+            publicodesSituationLegal,
+            publicodesSituationConventionnel
+          )
         ) {
           isAgreementBetter = true;
         }

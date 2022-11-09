@@ -70,6 +70,7 @@ contrat salarié . indemnité de licenciement . résultat légal si inaptitude s
       facteur: 2
   références:
     Art. L. 1226-14: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006900981
+  unité: €
 
 contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année:
   valeur: non
