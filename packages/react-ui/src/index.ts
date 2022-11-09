@@ -36,7 +36,7 @@ export { MoreContent } from "./MoreContent/index.js";
 export { OverflowWrapper } from "./OverflowWrapper/index.js";
 export { Progress } from "./Progress/index.js";
 export { ScreenReaderOnly } from "./ScreenReaderOnly/index.js";
-export { Stripe } from "./Stripe/index.tsx";
+export { Stripe } from "./Stripe/";
 export { Table } from "./Table/index.js";
 export { TableOfContent } from "./TableOfContent/index.js";
 export { Tabs } from "./Tabs/index.js";
@@ -59,7 +59,7 @@ export { Select } from "./field/Select.js";
 export { Textarea } from "./field/Textarea.js";
 
 // Titles
-export { Heading } from "./Titles/Heading/";
+export { Heading } from "./Titles/Heading";
 export { InsertTitle } from "./Titles/InsertTitle/index.js";
 export { PageTitle } from "./Titles/PageTitle/index.js";
 export { Subtitle } from "./Titles/Subtitle/index.js";

@@ -14,6 +14,7 @@ type Props = {
   style?: React.CSSProperties;
   role?: string;
   ariaLevel?: number | string;
+  id?: string;
 };
 
 export const Heading = (props: Props) => (
@@ -25,6 +26,7 @@ export const Heading = (props: Props) => (
     style={props.style}
     role={props.role}
     aria-level={props.ariaLevel}
+    id={props.id}
   >
     {props.stripe !== "none" && (
       <Stripe
