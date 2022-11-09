@@ -2,7 +2,7 @@ import React from "react";
 
 import { Section } from "../layout/Section/index.js";
 import { Wrapper } from "../layout/Wrapper/index.js";
-import { Stripe } from "./index.js";
+import { Stripe } from ".";
 
 export default {
   component: Stripe,
