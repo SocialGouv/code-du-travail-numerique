@@ -12,6 +12,8 @@ type Props = {
   shift?: string;
   as?: React.ElementType;
   style?: React.CSSProperties;
+  role?: string;
+  ariaLevel?: number | string;
 };
 
 export const Heading = (props: Props) => (
@@ -21,12 +23,14 @@ export const Heading = (props: Props) => (
     shift={props.shift}
     isFirst={props.isFirst}
     style={props.style}
+    role={props.role}
+    aria-level={props.ariaLevel}
   >
     {props.stripe !== "none" && (
       <Stripe
         rounded={props.variant !== "primary"}
-        variant={props.variant}
-        position={props.stripe}
+        variant={props.variant ?? "primary"}
+        position={props.stripe ?? "top"}
         length="100%"
       />
     )}
