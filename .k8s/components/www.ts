@@ -54,16 +54,8 @@ export default async () => {
           initialDelaySeconds: 10,
           timeoutSeconds: 15,
         },
-        resources: {
-          requests: {
-            cpu: "250m",
-            memory: "512Mi",
-          },
-          limits: {
-            cpu: "500m",
-            memory: "1Gi",
-          },
-        },
+        resources:
+          env.env === "prod" ? ressourcesConfigProd : ressourcesConfigDev,
         env: [
           {
             name: "API_URL",
@@ -104,7 +96,7 @@ export default async () => {
     metadata: deployment.metadata,
     spec: {
       minReplicas: 2,
-      maxReplicas: 15,
+      maxReplicas: 20,
 
       metrics: [
         {
@@ -144,4 +136,26 @@ export default async () => {
   }
 
   return manifests;
+};
+
+const ressourcesConfigProd = {
+  requests: {
+    cpu: "250m",
+    memory: "768Mi",
+  },
+  limits: {
+    cpu: "500m",
+    memory: "1Gi",
+  },
+};
+
+const ressourcesConfigDev = {
+  requests: {
+    cpu: "100m",
+    memory: "256Mi",
+  },
+  limits: {
+    cpu: "250m",
+    memory: "512Mi",
+  },
 };
