@@ -50,7 +50,7 @@
     "@socialgouv/eslint-config-react": "^1.75.0",
     "@storybook/addon-a11y": "^6.3.11",
     "@storybook/addon-essentials": "^6.3.11",
-    "@storybook/addon-storysource": "^6.3.11",
+    "@storybook/addon-storysource": "^6.5.13",
     "@storybook/components": "^6.3.11",
     "@storybook/react": "^6.3.11",
     "@svgr/cli": "^6.0.0",
