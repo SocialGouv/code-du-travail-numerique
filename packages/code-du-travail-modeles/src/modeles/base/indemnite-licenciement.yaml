@@ -2,17 +2,14 @@ contrat salarié . indemnité de licenciement:
   valeur: oui
 
 contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle:
-  valeur: non
 
 contrat salarié . indemnité de licenciement . salaire de référence:
   unité: €
 
 contrat salarié . indemnité de licenciement . salaire de référence conventionnel:
   unité: €
-  valeur: non
 
 contrat salarié . indemnité de licenciement . ancienneté en année:
-  valeur: non
   unité: an
 
 contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins:
@@ -73,7 +70,6 @@ contrat salarié . indemnité de licenciement . résultat légal si inaptitude s
   unité: €
 
 contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année:
-  valeur: non
   unité: an
 
 contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins cc:

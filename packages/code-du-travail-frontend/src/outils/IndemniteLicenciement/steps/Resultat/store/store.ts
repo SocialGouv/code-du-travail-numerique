@@ -11,7 +11,7 @@ import {
 } from "@socialgouv/modeles-social";
 import { StoreSlice } from "../../../../types";
 import {
-  mapToPublicodesSituationForIndemniteLicenciementConventionnel,
+  mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues,
   mapToPublicodesSituationForIndemniteLicenciementLegal,
 } from "../../../../publicodes";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
@@ -143,7 +143,7 @@ const createResultStore: StoreSlice<
           get as GetState<MainStore>
         );
         publicodesSituationConventionnel = publicodes.setSituation(
-          mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+          mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
             agreement.num,
             agreementSeniority,
             agreementRefSalary,
