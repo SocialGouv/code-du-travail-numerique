@@ -170,7 +170,3 @@ const GlobalStylesWrapper = styled.div`
     }
   }
 `;
-
-const SlugSummaryWrapper = styled(Wrapper)`
-  margin-bottom: 29px;
-`;

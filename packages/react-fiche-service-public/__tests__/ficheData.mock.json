@@ -2218,6 +2218,162 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "OuSAdresser",
+                      "attributes": {
+                        "ID": "R17689",
+                        "sve": "non",
+                        "type": "Centre de contact"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Agessa et Maison des artistes - Sécurité sociale"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Source",
+                          "attributes": {
+                            "ID": "R62649"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Agessa - Sécurité sociale des artistes auteurs"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Texte",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Chapitre",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Par téléphone"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Du lundi au vendredi : de 9h à 17h"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "0 806 804 208 (prix d'un appel local)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Chapitre",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Par messagerie"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "http://www.secu-artistes-auteurs.fr/contact"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Chapitre",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Par courrier"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "60 rue du Faubourg Poissonnière"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "75010 Paris"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
