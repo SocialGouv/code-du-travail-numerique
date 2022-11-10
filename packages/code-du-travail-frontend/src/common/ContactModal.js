@@ -1,4 +1,11 @@
-import { Button, Heading, Modal, Wrapper } from "@socialgouv/cdtn-ui";
+import {
+  Button,
+  Heading,
+  Modal,
+  PageTitle,
+  Title,
+  Wrapper,
+} from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import React, { useCallback, useState } from "react";
@@ -29,7 +36,9 @@ export const ContactModal = ({ children: renderProp }) => {
       <Modal isOpen={isModalVisible} onDismiss={closeModal} title="Contact">
         {(isServiceRenseignement && <ServiceRenseignement />) || (
           <>
-            <StyledHeading as="h4">Contact</StyledHeading>
+            <Heading stripe={"none"} as="p">
+              Contact
+            </Heading>
             <Wrapper variant="dark">
               <p>
                 Si vous souhaitez nous interroger sur vos droits ou sur des
@@ -64,7 +73,3 @@ export default ContactModal;
 ContactModal.propTypes = {
   children: PropTypes.func.isRequired,
 };
-
-const StyledHeading = styled(Heading)`
-  margin-top: 0;
-`;

@@ -510,11 +510,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
             role="dialog"
             tabindex="-1"
           >
-            <h4
+            <p
               class="c3"
             >
               Contact téléphonique
-            </h4>
+            </p>
             <a
               class="c4"
               href="tel:+0033806000126"
@@ -533,11 +533,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                 </span>
               </em>
             </a>
-            <h4
+            <p
               class="c3"
             >
               Contact par email et prise de rendez-vous
-            </h4>
+            </p>
             <form
               class="c7"
             >

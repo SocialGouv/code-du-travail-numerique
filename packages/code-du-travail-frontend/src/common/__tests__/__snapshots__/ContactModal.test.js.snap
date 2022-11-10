@@ -17,6 +17,17 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   margin-bottom: 0;
 }
 
+.c4 {
+  position: relative;
+  display: block;
+  margin: 3.2rem 0 2rem 0;
+  color: #2f3b6c;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.625;
+}
+
 .c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -247,10 +258,6 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   color: #7994d4;
 }
 
-.c4 {
-  margin-top: 0;
-}
-
 @media (max-width:600px) {
   .c5 {
     padding: 1.6rem 1rem;
@@ -261,6 +268,12 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
   .c5 {
     padding: 0 5pt;
     border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    font-size: 1.6rem;
   }
 }
 
@@ -371,11 +384,11 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
             role="dialog"
             tabindex="-1"
           >
-            <h4
+            <p
               class="c4"
             >
               Contact
-            </h4>
+            </p>
             <div
               class="c5"
             >

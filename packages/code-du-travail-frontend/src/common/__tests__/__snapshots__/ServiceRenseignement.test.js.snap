@@ -321,11 +321,11 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 }
 
 <div>
-  <h4
+  <p
     class="c0"
   >
     Contact téléphonique
-  </h4>
+  </p>
   <a
     class="c1"
     href="tel:+0033806000126"
@@ -344,11 +344,11 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
       </span>
     </em>
   </a>
-  <h4
+  <p
     class="c0"
   >
     Contact par email et prise de rendez-vous
-  </h4>
+  </p>
   <form
     class="c4"
   >

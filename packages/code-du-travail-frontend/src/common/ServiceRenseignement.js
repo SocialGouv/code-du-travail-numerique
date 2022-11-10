@@ -60,14 +60,14 @@ function ServiceRenseignement() {
 
   return (
     <>
-      <Heading as="h4">Contact téléphonique</Heading>
+      <Heading as="p">Contact téléphonique</Heading>
       <NumberInsert href="tel:+0033806000126" onClick={trackTelClick}>
         <Number>0 806 000 126</Number>
         <Pricing>
           Service gratuit <span>+ prix appel</span>
         </Pricing>
       </NumberInsert>
-      <Heading as="h4">Contact par email et prise de rendez-vous</Heading>
+      <Heading as="p">Contact par email et prise de rendez-vous</Heading>
       <Form
         onSubmit={onDepartmentInput}
         render={({ handleSubmit }) => (
