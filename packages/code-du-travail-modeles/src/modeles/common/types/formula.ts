@@ -1,6 +1,7 @@
 import type { LegalFormulaProps } from "../../base";
 import type {
   Formula16Props,
+  Formula44Props,
   Formula413Props,
   Formula573Props,
   Formula650Props,
@@ -58,4 +59,6 @@ export type FormulaProps<T> = T extends SupportedCcIndemniteLicenciement.legal
   ? Formula573Props
   : T extends SupportedCcIndemniteLicenciement.IDCC1501
   ? Formula1501Props
+  : T extends SupportedCcIndemniteLicenciement.IDCC0044
+  ? Formula44Props
   : DefaultFormulaProps;

@@ -1,6 +1,6 @@
 import { differenceInMonths, parse } from "date-fns";
 
-import { LEGAL_MOTIFS } from "../../base";
+import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
   ISeniority,
   Motif,
@@ -10,9 +10,9 @@ import type {
 } from "../../common";
 import {
   accumulateAbsenceByYear,
-  MotifKeys,
   splitByTwelveMonthsRolling,
 } from "../../common";
+import { MotifKeys } from "../../common/motif-keys";
 
 export class SenioritY1527
   implements ISeniority<SupportedCcIndemniteLicenciement.IDCC1527>

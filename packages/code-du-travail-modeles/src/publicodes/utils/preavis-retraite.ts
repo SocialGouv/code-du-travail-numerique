@@ -1,4 +1,4 @@
-import { isFloat } from "../../utils";
+import { isFloat } from "../../modeles/common";
 import type { PublicodesPreavisRetraiteResult } from "../types";
 import { PublicodesConvertedUnit } from "../types";
 

@@ -8,7 +8,7 @@ import type {
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "../common";
-import { MotifKeys } from "../common";
+import { MotifKeys } from "../common/motif-keys";
 
 export const LEGAL_MOTIFS: Motif[] = [
   {

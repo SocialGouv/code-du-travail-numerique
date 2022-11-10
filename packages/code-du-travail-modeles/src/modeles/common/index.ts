@@ -1,3 +1,4 @@
+export * from "./factory";
 export * from "./motif-keys";
 export * from "./motifs";
 export * from "./types";
