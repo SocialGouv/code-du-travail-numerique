@@ -108,6 +108,22 @@ export const ui = {
         "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - indemnité de licenciement - catégorie professionnelle"
       ),
     },
+    agreement44: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
+      ),
+      economicFire: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle - licenciement économique - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle - licenciement économique - Non"
+        ),
+      },
+      age: byTestId(
+        "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle - licenciement économique - age"
+      ),
+    },
   },
   seniority: {
     startDate: byTestId("date-entree"),
@@ -137,6 +153,9 @@ export const ui = {
       oui: byTestId("hasVariablePart - Oui"),
       non: byTestId("hasVariablePart - Non"),
     },
+  },
+  result: {
+    formula: byTestId("formula"),
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),

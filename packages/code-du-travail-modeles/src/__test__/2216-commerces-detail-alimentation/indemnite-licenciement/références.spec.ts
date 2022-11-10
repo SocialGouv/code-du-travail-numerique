@@ -1,7 +1,6 @@
 import Engine from "publicodes";
 
 import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
-import { CatPro2216 } from "../../../plugins/formule/2216_commerces_detail_alimentation";
 import { getReferences } from "../../../utils";
 
 const engine = new Engine(mergeIndemniteLicenciementModels());
@@ -58,45 +57,45 @@ const referencesCadres = [
 describe("Références juridique pour l'indemnité conventionnel de licenciement pour la CC 2216", () => {
   describe("Cas standard", () => {
     test.each`
-      category               | isEconomicFiring | age   | seniority | salary  | expectedReferences
-      ${CatPro2216.employes} | ${false}         | ${50} | ${0}      | ${2000} | ${referencesEmployes}
-      ${CatPro2216.employes} | ${true}          | ${50} | ${0}      | ${2000} | ${referencesEmployes}
-      ${CatPro2216.employes} | ${true}          | ${51} | ${0}      | ${2000} | ${referencesEmployes}
-      ${CatPro2216.employes} | ${false}         | ${50} | ${8 / 12} | ${2000} | ${referencesEmployes}
-      ${CatPro2216.employes} | ${true}          | ${50} | ${8 / 12} | ${2000} | ${referencesEmployes}
-      ${CatPro2216.employes} | ${true}          | ${51} | ${8 / 12} | ${2000} | ${referencesEmployes}
-      ${CatPro2216.employes} | ${false}         | ${50} | ${11}     | ${2000} | ${referencesEmployes}
-      ${CatPro2216.employes} | ${true}          | ${50} | ${11}     | ${2000} | ${referencesEmployes}
-      ${CatPro2216.employes} | ${true}          | ${51} | ${11}     | ${2000} | ${referencesEmployes}
-      ${CatPro2216.agents}   | ${false}         | ${50} | ${0}      | ${2000} | ${referencesAgents}
-      ${CatPro2216.agents}   | ${true}          | ${50} | ${0}      | ${2000} | ${referencesAgents}
-      ${CatPro2216.agents}   | ${true}          | ${51} | ${0}      | ${2000} | ${referencesAgents}
-      ${CatPro2216.agents}   | ${false}         | ${50} | ${8 / 12} | ${2000} | ${referencesAgents}
-      ${CatPro2216.agents}   | ${true}          | ${50} | ${8 / 12} | ${2000} | ${referencesAgents}
-      ${CatPro2216.agents}   | ${true}          | ${51} | ${8 / 12} | ${2000} | ${referencesAgents}
-      ${CatPro2216.agents}   | ${false}         | ${50} | ${11}     | ${2000} | ${referencesAgents}
-      ${CatPro2216.agents}   | ${true}          | ${50} | ${11}     | ${2000} | ${referencesAgents}
-      ${CatPro2216.agents}   | ${true}          | ${51} | ${11}     | ${2000} | ${referencesAgents}
-      ${CatPro2216.cadres}   | ${false}         | ${50} | ${0}      | ${2000} | ${referencesCadres}
-      ${CatPro2216.cadres}   | ${true}          | ${50} | ${0}      | ${2000} | ${referencesCadres}
-      ${CatPro2216.cadres}   | ${true}          | ${51} | ${0}      | ${2000} | ${referencesCadres}
-      ${CatPro2216.cadres}   | ${false}         | ${50} | ${8 / 12} | ${2000} | ${referencesCadres}
-      ${CatPro2216.cadres}   | ${true}          | ${50} | ${8 / 12} | ${2000} | ${referencesCadres}
-      ${CatPro2216.cadres}   | ${true}          | ${51} | ${8 / 12} | ${2000} | ${referencesCadres}
-      ${CatPro2216.cadres}   | ${false}         | ${50} | ${8}      | ${2000} | ${referencesCadres}
-      ${CatPro2216.cadres}   | ${true}          | ${50} | ${8}      | ${2000} | ${referencesCadres}
-      ${CatPro2216.cadres}   | ${true}          | ${51} | ${8}      | ${2000} | ${referencesCadres}
-      ${CatPro2216.cadres}   | ${false}         | ${50} | ${11}     | ${2000} | ${referencesCadres}
-      ${CatPro2216.cadres}   | ${true}          | ${50} | ${11}     | ${2000} | ${referencesCadres}
-      ${CatPro2216.cadres}   | ${true}          | ${51} | ${11}     | ${2000} | ${referencesCadres}
-      ${CatPro2216.cadres}   | ${false}         | ${50} | ${22}     | ${2000} | ${referencesCadres}
-      ${CatPro2216.cadres}   | ${true}          | ${50} | ${22}     | ${2000} | ${referencesCadres}
-      ${CatPro2216.cadres}   | ${true}          | ${51} | ${22}     | ${2000} | ${referencesCadres}
-      ${CatPro2216.cadres}   | ${false}         | ${50} | ${44}     | ${2000} | ${referencesCadres}
-      ${CatPro2216.cadres}   | ${true}          | ${50} | ${44}     | ${2000} | ${referencesCadres}
-      ${CatPro2216.cadres}   | ${true}          | ${51} | ${44}     | ${2000} | ${referencesCadres}
+      category                                          | isEconomicFiring | age   | seniority | salary  | expectedReferences
+      ${"Employés et ouvriers, personnel de livraison"} | ${false}         | ${50} | ${0}      | ${2000} | ${[]}
+      ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${50} | ${0}      | ${2000} | ${[]}
+      ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${51} | ${0}      | ${2000} | ${[]}
+      ${"Employés et ouvriers, personnel de livraison"} | ${false}         | ${50} | ${8 / 12} | ${2000} | ${referencesEmployes}
+      ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${50} | ${8 / 12} | ${2000} | ${referencesEmployes}
+      ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${51} | ${8 / 12} | ${2000} | ${referencesEmployes}
+      ${"Employés et ouvriers, personnel de livraison"} | ${false}         | ${50} | ${11}     | ${2000} | ${referencesEmployes}
+      ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${50} | ${11}     | ${2000} | ${referencesEmployes}
+      ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${51} | ${11}     | ${2000} | ${referencesEmployes}
+      ${"Agents de maîtrise et techniciens"}            | ${false}         | ${50} | ${0}      | ${2000} | ${[]}
+      ${"Agents de maîtrise et techniciens"}            | ${true}          | ${50} | ${0}      | ${2000} | ${[]}
+      ${"Agents de maîtrise et techniciens"}            | ${true}          | ${51} | ${0}      | ${2000} | ${[]}
+      ${"Agents de maîtrise et techniciens"}            | ${false}         | ${50} | ${8 / 12} | ${2000} | ${referencesAgents}
+      ${"Agents de maîtrise et techniciens"}            | ${true}          | ${50} | ${8 / 12} | ${2000} | ${referencesAgents}
+      ${"Agents de maîtrise et techniciens"}            | ${true}          | ${51} | ${8 / 12} | ${2000} | ${referencesAgents}
+      ${"Agents de maîtrise et techniciens"}            | ${false}         | ${50} | ${11}     | ${2000} | ${referencesAgents}
+      ${"Agents de maîtrise et techniciens"}            | ${true}          | ${50} | ${11}     | ${2000} | ${referencesAgents}
+      ${"Agents de maîtrise et techniciens"}            | ${true}          | ${51} | ${11}     | ${2000} | ${referencesAgents}
+      ${"Cadres"}                                       | ${false}         | ${50} | ${0}      | ${2000} | ${[]}
+      ${"Cadres"}                                       | ${true}          | ${50} | ${0}      | ${2000} | ${[]}
+      ${"Cadres"}                                       | ${true}          | ${51} | ${0}      | ${2000} | ${[]}
+      ${"Cadres"}                                       | ${false}         | ${50} | ${8 / 12} | ${2000} | ${referencesCadres}
+      ${"Cadres"}                                       | ${true}          | ${50} | ${8 / 12} | ${2000} | ${referencesCadres}
+      ${"Cadres"}                                       | ${true}          | ${51} | ${8 / 12} | ${2000} | ${referencesCadres}
+      ${"Cadres"}                                       | ${false}         | ${50} | ${8}      | ${2000} | ${referencesCadres}
+      ${"Cadres"}                                       | ${true}          | ${50} | ${8}      | ${2000} | ${referencesCadres}
+      ${"Cadres"}                                       | ${true}          | ${51} | ${8}      | ${2000} | ${referencesCadres}
+      ${"Cadres"}                                       | ${false}         | ${50} | ${11}     | ${2000} | ${referencesCadres}
+      ${"Cadres"}                                       | ${true}          | ${50} | ${11}     | ${2000} | ${referencesCadres}
+      ${"Cadres"}                                       | ${true}          | ${51} | ${11}     | ${2000} | ${referencesCadres}
+      ${"Cadres"}                                       | ${false}         | ${50} | ${22}     | ${2000} | ${referencesCadres}
+      ${"Cadres"}                                       | ${true}          | ${50} | ${22}     | ${2000} | ${referencesCadres}
+      ${"Cadres"}                                       | ${true}          | ${51} | ${22}     | ${2000} | ${referencesCadres}
+      ${"Cadres"}                                       | ${false}         | ${50} | ${44}     | ${2000} | ${referencesCadres}
+      ${"Cadres"}                                       | ${true}          | ${50} | ${44}     | ${2000} | ${referencesCadres}
+      ${"Cadres"}                                       | ${true}          | ${51} | ${44}     | ${2000} | ${referencesCadres}
     `(
-      "ancienneté: $seniority an, salaire de référence: $salary, catégorie $category => $expectedReferences",
+      "ancienneté: $seniority an, age $age ans, licenciement économique $isEconomicFiring, catégorie $category",
       ({
         category,
         isEconomicFiring,

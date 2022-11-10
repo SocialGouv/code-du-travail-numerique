@@ -17,7 +17,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
     ${false}           | ${16}     | ${"(3/20 * Sref * A1) + (1/20 * Sref * A2)"}                                             | ${["A1 : Ancienneté totale (16 ans)", "A2 : Ancienneté au delà de 15 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
     ${true}            | ${16}     | ${"(3/20 * Sref * A1) + (1/20 * Sref * A2) + (3/200 * Sref * A1) + (1/200 * Sref * A2)"} | ${["A1 : Ancienneté totale (16 ans)", "A2 : Ancienneté au delà de 15 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
   `(
-    "Formule $expectedFormula avec $seniority ans et age : $age",
+    "Formule $expectedFormula avec $seniority ans et seniority : $seniority",
     ({
       hasMoreThan55Years,
       seniority,
@@ -27,6 +27,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
       const formula = new FormuleFactory().create(
         SupportedCcIndemniteLicenciement.IDCC1596
       );
+      if (!formula) throw new Error("Formula should be defined");
 
       const result = formula.computeFormula({
         hasMoreThan55Years,

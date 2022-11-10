@@ -6,3 +6,4 @@ contrat salarié . convention collective . industries chimiques:
   cdtn:
     idcc: 44
     préavis-retraite: true
+    indemnité-licenciement: true

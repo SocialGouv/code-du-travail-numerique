@@ -17,6 +17,7 @@ export class AgreementFormula413 implements AgreementFormula {
     const agreementFactoryFormula = new FormuleFactory().create(
       SupportedCcIndemniteLicenciement.IDCC413
     );
+    if (!agreementFactoryFormula) throw new Error("Formula should be defined");
     let seniorityNonCadre;
     const seniorityInfo =
       get().informationsData.input.publicodesInformations.find(

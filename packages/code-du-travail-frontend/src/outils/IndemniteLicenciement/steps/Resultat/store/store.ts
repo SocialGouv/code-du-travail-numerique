@@ -1,6 +1,5 @@
 import {
   Formula,
-  FormuleFactory,
   IndemniteLicenciementPublicodes,
   Notification,
   PublicodesIndemniteLicenciementResult,
@@ -77,15 +76,6 @@ const createResultStore: StoreSlice<
         absencePeriods: get().ancienneteData.input.absencePeriods,
       });
 
-      const formulaFactory = new FormuleFactory().create(
-        SupportedCcIndemniteLicenciement.legal
-      );
-      const legalFormula = formulaFactory.computeFormula({
-        seniority: legalSeniority.value,
-        isForInaptitude: isLicenciementInaptitude,
-        refSalary,
-      });
-
       const publicodesSituationLegal = publicodes.setSituation(
         mapToPublicodesSituationForIndemniteLicenciementLegal(
           legalSeniority.value,
@@ -94,6 +84,7 @@ const createResultStore: StoreSlice<
         )
       ).result;
 
+      const legalFormula = publicodes.getFormule();
       const legalReferences = publicodes.getReferences();
 
       let publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult;
@@ -149,12 +140,13 @@ const createResultStore: StoreSlice<
           "résultat conventionnel"
         );
 
-        agreementFormula = getAgreementFormula(
-          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
-          agreementSeniority,
-          agreementRefSalary,
-          get as GetState<MainStore>
-        );
+        agreementFormula =
+          getAgreementFormula(
+            `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+            agreementSeniority,
+            agreementRefSalary,
+            get as GetState<MainStore>
+          ) || publicodes.getFormule();
 
         agreementNotifications = publicodes.getNotifications();
 
