@@ -1,4 +1,4 @@
-import { FormulaLegal } from "../../base";
+import { FormulaLegal } from "../../../modeles/base";
 import type {
   Formula,
   FormulaProps,

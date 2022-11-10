@@ -1,5 +1,6 @@
 export * from "./16_transports_routiers";
 export * from "./29_hospitalisation_privee_but_non_lucratif";
+export * from "./44_industries_chimiques";
 export * from "./413_handicap";
 export * from "./573_commerces_de_gros";
 export * from "./650_metallurgie_ingenieurs_cadres";

@@ -1,4 +1,4 @@
-import type { SalaryPeriods } from "../plugins/salaire-reference/";
+import type { SalaryPeriods } from "..";
 
 /**
  *

@@ -1,10 +1,10 @@
-import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../utils";
-import type { SupportedCcIndemniteLicenciement } from "..";
 import type {
   IReferenceSalary,
   ReferenceSalaryProps,
   SalaryPeriods,
-} from "./types";
+  SupportedCcIndemniteLicenciement,
+} from "../common";
+import { nonNullable, rankByMonthArrayDescFrench, sum } from "../common";
 
 export type LegalReferenceSalaryProps = {
   salaires: SalaryPeriods[];

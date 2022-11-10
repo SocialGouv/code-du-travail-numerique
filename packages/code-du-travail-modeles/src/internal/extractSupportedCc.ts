@@ -1,7 +1,7 @@
 import type { Rule } from "publicodes";
 import type Engine from "publicodes";
 
-import type { AgreementInfo } from "..";
+import type { AgreementInfo } from "../modeles/common";
 
 export type RuleNodeIdcc = Rule & {
   cdtn?: {

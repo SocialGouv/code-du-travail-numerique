@@ -1,10 +1,10 @@
-import { round } from "../../utils";
 import type {
   Formula,
   FormulaProps,
   IFormula,
   SupportedCcIndemniteLicenciement,
 } from "../common";
+import { round } from "../common";
 
 export type LegalFormulaProps = {
   seniority: number;

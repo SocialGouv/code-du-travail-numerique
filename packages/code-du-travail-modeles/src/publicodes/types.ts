@@ -2,7 +2,7 @@ import type Engine from "publicodes";
 import type { Evaluation, Unit } from "publicodes";
 import type { Rule as PubliRule } from "publicodes/dist/types/rule";
 
-import type { Notification, References } from "../utils";
+import type { Notification, References } from "../modeles/common";
 
 export type OldReference = {
   ref: string | null;

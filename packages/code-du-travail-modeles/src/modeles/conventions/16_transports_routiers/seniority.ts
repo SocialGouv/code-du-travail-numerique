@@ -1,7 +1,7 @@
 import { differenceInMonths, isBefore, parse } from "date-fns";
 
-import type { LegalSeniorityProps } from "../../base";
-import { LEGAL_MOTIFS } from "../../base";
+import type { LegalSeniorityProps } from "../../base/seniority";
+import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
   ISeniority,
   Motif,
