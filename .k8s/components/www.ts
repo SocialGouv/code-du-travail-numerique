@@ -151,7 +151,7 @@ const ressourcesConfigProd = {
 
 const ressourcesConfigDev = {
   requests: {
-    cpu: "100m",
+    cpu: "50m",
     memory: "256Mi",
   },
   limits: {
