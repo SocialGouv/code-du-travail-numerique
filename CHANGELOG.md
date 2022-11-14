@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.84.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.84.0...v4.84.1) (2022-11-14)
+
+
+### Bug Fixes
+
+* **k8s:** optimization of `requests` / `limits` in dev and production mode ([#4659](https://github.com/SocialGouv/code-du-travail-numerique/issues/4659)) ([c078145](https://github.com/SocialGouv/code-du-travail-numerique/commit/c078145e847a7fbed9f6b7ce408b8fd0d06a31b6))
+
+
+
+
+
 # [4.84.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.83.0...v4.84.0) (2022-11-07)
 
 
