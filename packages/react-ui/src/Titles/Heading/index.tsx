@@ -27,9 +27,11 @@ export const Heading = (props: Props) => (
     role={props.role}
     aria-level={props.ariaLevel}
     id={props.id}
+    data-testid="heading"
   >
     {props.stripe !== "none" && (
       <Stripe
+        data-testid="stripe"
         rounded={props.variant !== "primary"}
         variant={props.variant ?? "primary"}
         position={props.stripe ?? "top"}
