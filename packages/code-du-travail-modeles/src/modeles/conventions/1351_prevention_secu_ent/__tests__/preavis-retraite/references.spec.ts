@@ -1,11 +1,11 @@
 import Engine from "publicodes";
 
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
-import { getReferences } from "../../../../common";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
+import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
+import { getReferences } from "../../../../common";
 
 const engine = new Engine(mergePreavisRetraiteModels());
 
