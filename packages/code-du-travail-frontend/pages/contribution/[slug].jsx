@@ -30,9 +30,7 @@ class PageContribution extends React.Component {
 
     const contentUrl = extractMdxContentUrl(markdown);
     if (contentUrl) {
-      const fetchContent = await fetch(
-        `${API_URL}/items?url=${contentUrl}&all=true`
-      );
+      const fetchContent = await fetch(`${API_URL}/items?url=${contentUrl}`);
       const [content] = await fetchContent.json();
       return { content, data };
     }
