@@ -8,8 +8,8 @@ import {
 } from "../../common/legal-references";
 
 const ArticleCc = {
-  article: "Article 3.10.3",
-  url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005874375/?idConteneur=KALICONT000005635421",
+  article: "Article 23.3",
+  url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562759#KALIARTI000043562759",
 };
 
 const DepartRetraiteCcReferences = [...DepartRetraiteReferences, ArticleCc];
@@ -22,18 +22,18 @@ describe("Vérification juridique pour la CC 1505", () => {
   describe("Départ à la retraite", () => {
     test.each`
       seniority | expectedResult | expectedReferences            | category
-      ${2}      | ${1}           | ${DepartRetraiteCcReferences} | ${"Ouvriers, Employés (Niveaux N1 à N4)"}
-      ${7}      | ${1}           | ${DepartRetraiteCcReferences} | ${"Ouvriers, Employés (Niveaux N1 à N4)"}
-      ${24}     | ${1}           | ${DepartRetraiteCcReferences} | ${"Ouvriers, Employés (Niveaux N1 à N4)"}
-      ${32}     | ${1}           | ${DepartRetraiteCcReferences} | ${"Ouvriers, Employés (Niveaux N1 à N4)"}
-      ${2}      | ${2}           | ${DepartRetraiteCcReferences} | ${"Agents de maîtrise (Niveaux N5 et N6)"}
-      ${7}      | ${1}           | ${DepartRetraiteCcReferences} | ${"Agents de maîtrise (Niveaux N5 et N6)"}
-      ${24}     | ${2}           | ${DepartRetraiteCcReferences} | ${"Agents de maîtrise (Niveaux N5 et N6)"}
-      ${32}     | ${2}           | ${DepartRetraiteCcReferences} | ${"Agents de maîtrise (Niveaux N5 et N6)"}
-      ${2}      | ${3}           | ${DepartRetraiteCcReferences} | ${"Cadres (Niveaux N7 et N8)"}
-      ${7}      | ${1}           | ${DepartRetraiteCcReferences} | ${"Cadres (Niveaux N7 et N8)"}
-      ${24}     | ${2}           | ${DepartRetraiteCcReferences} | ${"Cadres (Niveaux N7 et N8)"}
-      ${32}     | ${2}           | ${DepartRetraiteCcReferences} | ${"Cadres (Niveaux N7 et N8)"}
+      ${2}      | ${1}           | ${DepartRetraiteCcReferences} | ${"Employés (E1 à E7)"}
+      ${7}      | ${1}           | ${DepartRetraiteCcReferences} | ${"Employés (E1 à E7)"}
+      ${24}     | ${1}           | ${DepartRetraiteCcReferences} | ${"Employés (E1 à E7)"}
+      ${32}     | ${1}           | ${DepartRetraiteCcReferences} | ${"Employés (E1 à E7)"}
+      ${2}      | ${2}           | ${DepartRetraiteCcReferences} | ${"Agents de maîtrise (AM1 et AM2)"}
+      ${7}      | ${1}           | ${DepartRetraiteCcReferences} | ${"Agents de maîtrise (AM1 et AM2)"}
+      ${24}     | ${2}           | ${DepartRetraiteCcReferences} | ${"Agents de maîtrise (AM1 et AM2)"}
+      ${32}     | ${2}           | ${DepartRetraiteCcReferences} | ${"Agents de maîtrise (AM1 et AM2)"}
+      ${2}      | ${3}           | ${DepartRetraiteCcReferences} | ${"Cadres (C1 et C2)"}
+      ${7}      | ${1}           | ${DepartRetraiteCcReferences} | ${"Cadres (C1 et C2)"}
+      ${24}     | ${2}           | ${DepartRetraiteCcReferences} | ${"Cadres (C1 et C2)"}
+      ${32}     | ${2}           | ${DepartRetraiteCcReferences} | ${"Cadres (C1 et C2)"}
     `(
       "Pour un $category disposant d'une ancienneté $seniority, son préavis devrait être $expectedResult mois",
       ({ expectedResult, seniority, category, expectedReferences }) => {
@@ -60,18 +60,18 @@ describe("Vérification juridique pour la CC 1505", () => {
   describe("Mise à la retraite", () => {
     test.each`
       seniority | expectedResult | expectedReferences          | category
-      ${2}      | ${2}           | ${MiseRetraiteCCReferences} | ${"Ouvriers, Employés (Niveaux N1 à N4)"}
-      ${7}      | ${2}           | ${MiseRetraiteCCReferences} | ${"Ouvriers, Employés (Niveaux N1 à N4)"}
-      ${24}     | ${2}           | ${MiseRetraiteCCReferences} | ${"Ouvriers, Employés (Niveaux N1 à N4)"}
-      ${32}     | ${2}           | ${MiseRetraiteCCReferences} | ${"Ouvriers, Employés (Niveaux N1 à N4)"}
-      ${2}      | ${2}           | ${MiseRetraiteCCReferences} | ${"Agents de maîtrise (Niveaux N5 et N6)"}
-      ${7}      | ${2}           | ${MiseRetraiteCCReferences} | ${"Agents de maîtrise (Niveaux N5 et N6)"}
-      ${24}     | ${2}           | ${MiseRetraiteCCReferences} | ${"Agents de maîtrise (Niveaux N5 et N6)"}
-      ${32}     | ${2}           | ${MiseRetraiteCCReferences} | ${"Agents de maîtrise (Niveaux N5 et N6)"}
-      ${2}      | ${2}           | ${MiseRetraiteCCReferences} | ${"Cadres (Niveaux N7 et N8)"}
-      ${7}      | ${2}           | ${MiseRetraiteCCReferences} | ${"Cadres (Niveaux N7 et N8)"}
-      ${24}     | ${2}           | ${MiseRetraiteCCReferences} | ${"Cadres (Niveaux N7 et N8)"}
-      ${32}     | ${2}           | ${MiseRetraiteCCReferences} | ${"Cadres (Niveaux N7 et N8)"}
+      ${2}      | ${2}           | ${MiseRetraiteCCReferences} | ${"Employés (E1 à E7)"}
+      ${7}      | ${2}           | ${MiseRetraiteCCReferences} | ${"Employés (E1 à E7)"}
+      ${24}     | ${2}           | ${MiseRetraiteCCReferences} | ${"Employés (E1 à E7)"}
+      ${32}     | ${2}           | ${MiseRetraiteCCReferences} | ${"Employés (E1 à E7)"}
+      ${2}      | ${2}           | ${MiseRetraiteCCReferences} | ${"Agents de maîtrise (AM1 et AM2)"}
+      ${7}      | ${2}           | ${MiseRetraiteCCReferences} | ${"Agents de maîtrise (AM1 et AM2)"}
+      ${24}     | ${2}           | ${MiseRetraiteCCReferences} | ${"Agents de maîtrise (AM1 et AM2)"}
+      ${32}     | ${2}           | ${MiseRetraiteCCReferences} | ${"Agents de maîtrise (AM1 et AM2)"}
+      ${2}      | ${2}           | ${MiseRetraiteCCReferences} | ${"Cadres (C1 et C2)"}
+      ${7}      | ${2}           | ${MiseRetraiteCCReferences} | ${"Cadres (C1 et C2)"}
+      ${24}     | ${2}           | ${MiseRetraiteCCReferences} | ${"Cadres (C1 et C2)"}
+      ${32}     | ${2}           | ${MiseRetraiteCCReferences} | ${"Cadres (C1 et C2)"}
     `(
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ seniority, category, expectedResult, expectedReferences }) => {
@@ -103,12 +103,12 @@ describe("Vérification juridique pour la CC 1505", () => {
     describe("Aucune notification à afficher", () => {
       test.each`
         seniority | category
-        ${5}      | ${"Ouvriers, Employés (Niveaux N1 à N4)"}
-        ${6}      | ${"Ouvriers, Employés (Niveaux N1 à N4)"}
-        ${24}     | ${"Ouvriers, Employés (Niveaux N1 à N4)"}
-        ${5}      | ${"Agents de maîtrise (Niveaux N5 et N6)"}
-        ${6}      | ${"Agents de maîtrise (Niveaux N5 et N6)"}
-        ${24}     | ${"Agents de maîtrise (Niveaux N5 et N6)"}
+        ${5}      | ${"Employés (E1 à E7)"}
+        ${6}      | ${"Employés (E1 à E7)"}
+        ${24}     | ${"Employés (E1 à E7)"}
+        ${5}      | ${"Agents de maîtrise (AM1 et AM2)"}
+        ${6}      | ${"Agents de maîtrise (AM1 et AM2)"}
+        ${24}     | ${"Agents de maîtrise (AM1 et AM2)"}
       `(
         "Pour un $category possédant $seniority mois d'ancienneté en départ à la retraite, le nombre de notification a affiché est de $expectedNotification.length",
         ({ seniority, category }) => {
@@ -129,10 +129,10 @@ describe("Vérification juridique pour la CC 1505", () => {
 
     describe("Une notification à afficher", () => {
       test.each`
-        seniority | category                       | expectedNotification
-        ${5}      | ${"Cadres (Niveaux N7 et N8)"} | ${notification}
-        ${6}      | ${"Cadres (Niveaux N7 et N8)"} | ${notification}
-        ${24}     | ${"Cadres (Niveaux N7 et N8)"} | ${notification}
+        seniority | category               | expectedNotification
+        ${5}      | ${"Cadres (C1 et C2)"} | ${notification}
+        ${6}      | ${"Cadres (C1 et C2)"} | ${notification}
+        ${24}     | ${"Cadres (C1 et C2)"} | ${notification}
       `(
         "Pour un $category possédant $seniority mois d'ancienneté en départ à la retraite, le nombre de notification a affiché est de $expectedNotification.length",
         ({ seniority, category, expectedNotification }) => {

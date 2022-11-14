@@ -108,6 +108,11 @@ export const ui = {
         "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - indemnité de licenciement - catégorie professionnelle"
       ),
     },
+    agreement413: {
+      proCategory: byTestId(
+        "infos.contrat salarié - convention collective - établissement handicap - indemnité de licenciement - catégorie professionnelle"
+      ),
+    },
     agreement44: {
       proCategory: byTestId(
         "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
@@ -153,6 +158,8 @@ export const ui = {
       oui: byTestId("hasVariablePart - Oui"),
       non: byTestId("hasVariablePart - Non"),
     },
+    salaries: byTestId("salary-input"),
+    primes: byTestId("prime-input"),
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),
