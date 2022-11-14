@@ -89,7 +89,7 @@ const makeSearchUrl = (query: string, address: string) => {
     { k: "query", v: encodeURIComponent(query) },
     { k: "address", v: encodeURIComponent(address) },
     { k: "convention", v: "true" },
-    { k: "employer", v: "true" },
+    { k: "employer", v: "false" },
     { k: "open", v: "true" },
     { k: "matchingLimit", v: "0" },
   ];

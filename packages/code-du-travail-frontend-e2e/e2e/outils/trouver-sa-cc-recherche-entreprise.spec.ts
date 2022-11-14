@@ -4,15 +4,16 @@ describe("Outil - Trouver sa convention collective", () => {
     cy.get("h1").should("have.text", "Trouver sa convention collective");
     cy.contains("Je la recherche").click();
 
-    cy.get("#enterprise-search").type("82161143100015");
-    cy.contains("CODEURS EN LIBERTE").click();
+    cy.get("#enterprise-search").type("82129756100010");
+    cy.contains("BOUILLON PIGALLE").click();
 
     cy.get("p").should(
       "contain",
-      "1 convention collective trouvée pour « CODEURS EN LIBERTE »"
+      "1 convention collective trouvée pour « BOUILLON PIGALLE »"
     );
 
     cy.contains("Précédent").click();
+    cy.get("#enterprise-search").clear();
     cy.get("#enterprise-search").type("fnac");
     cy.get("#enterprise-search-address").type("75001");
     cy.contains("FNAC PARIS").click();
