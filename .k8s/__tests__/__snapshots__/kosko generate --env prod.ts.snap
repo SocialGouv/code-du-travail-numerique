@@ -68,10 +68,10 @@ spec:
             timeoutSeconds: 3
           resources:
             limits:
-              cpu: 500m
-              memory: 1Gi
+              cpu: 300m
+              memory: 768Mi
             requests:
-              cpu: 150m
+              cpu: 100m
               memory: 256Mi
           startupProbe:
             failureThreshold: 12
@@ -254,7 +254,7 @@ metadata:
   namespace: cdtn
 spec:
   minReplicas: 2
-  maxReplicas: 15
+  maxReplicas: 20
   metrics:
     - resource:
         name: cpu
@@ -364,7 +364,7 @@ spec:
               memory: 1Gi
             requests:
               cpu: 250m
-              memory: 512Mi
+              memory: 768Mi
           startupProbe:
             failureThreshold: 12
             httpGet:
@@ -515,7 +515,7 @@ metadata:
   namespace: cdtn
 spec:
   minReplicas: 2
-  maxReplicas: 15
+  maxReplicas: 20
   metrics:
     - resource:
         name: cpu
