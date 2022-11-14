@@ -44,7 +44,7 @@ export const RelatedItems = ({ items = [] }) => {
         ({ title, items }) =>
           items.length > 0 && (
             <React.Fragment key={title}>
-              <Heading as="div" aria-level="2" role="heading">
+              <Heading as="div" ariaLevel="2" role="heading">
                 {title}&nbsp;:
               </Heading>
               <FlatList>
