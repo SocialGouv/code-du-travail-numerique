@@ -4,7 +4,7 @@ const TooltipSalary = (): JSX.Element => {
   return (
     <>
       <p>
-        Prendre en compte le salaire fixe ou variable (ex : commissions), les
+        Prendre en compte le salaire fixe et variable (ex : commissions), les
         primes et avantages en nature. Les éléments de rémunération suivants
         sont <strong>à exclure</strong> :
       </p>
