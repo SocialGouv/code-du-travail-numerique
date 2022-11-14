@@ -70,6 +70,15 @@ describe("PreavisRetraitePublicodes::class", () => {
     expect(publicodes.data.situation).toEqual(partialSituation);
   });
 
+  it("doit mettre à jour la situation avec des règle contenant des - dans les noms", () => {
+    publicodes.setSituation({
+      "contrat salarié - convention collective": "''",
+      "contrat salarié - mise à la retraite": "oui",
+      "contrat salarié - travailleur handicapé": "non",
+    });
+    expect(publicodes.data.situation).toEqual(partialSituation);
+  });
+
   it("doit retourner l'information manquante sur l'ancienneté", () => {
     expect(publicodes.data.missingArgs).toHaveLength(1);
     expect(publicodes.data.missingArgs[0].name).toBe(

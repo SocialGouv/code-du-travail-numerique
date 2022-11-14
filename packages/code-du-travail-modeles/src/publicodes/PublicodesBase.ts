@@ -123,7 +123,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
         const publiKey = key.replace(/ - /g, " . ");
         const detail = this.engine.getRule(publiKey);
         newSituation.push({
-          name: key,
+          name: publiKey,
           rawNode: detail.rawNode,
           value: value,
         });
