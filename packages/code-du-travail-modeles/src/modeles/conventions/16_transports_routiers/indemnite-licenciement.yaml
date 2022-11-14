@@ -71,9 +71,6 @@ contrat salarié . convention collective . transports routiers . indemnité de l
     type: entier
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . droit à la retraite au titre du régime en vigueur dans l'entreprise:
-  applicable si:
-    toutes ces conditions:
-      - age >= 61
   titre: Le salarié remplit les conditions pour partir à la retraite
   question: Le salarié remplit-il les conditions pour partir à la retraite&nbsp;?
   cdtn:
@@ -106,6 +103,19 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   unité: €
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . base:
+  applicable si:
+    toutes ces conditions:
+      - age < 65 # Hack pour afficher la question sur l'age
+      - age > 60 # Hack pour afficher la question sur l'age
+      - droit à la retraite au titre du régime en vigueur dans l'entreprise # Hack pour afficher la question sur l'age qui s'affichera que si age compris entre 60 et 65 ans
+  valeur: 0 €
+
+contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . base . pas d'indemnité:
+  remplace: base
+  applicable si:
+    une de ces conditions:
+      - age > 65 ans
+      - ancienneté totale < 3 an
   valeur: 0 €
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . base . seulement cadre:
