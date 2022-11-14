@@ -95,8 +95,8 @@ spec:
             timeoutSeconds: 3
           resources:
             limits:
-              cpu: 500m
-              memory: 1Gi
+              cpu: 100m
+              memory: 256Mi
             requests:
               cpu: 50m
               memory: 128Mi
@@ -355,8 +355,8 @@ spec:
             timeoutSeconds: 3
           resources:
             limits:
-              cpu: 500m
-              memory: 1Gi
+              cpu: 250m
+              memory: 512Mi
             requests:
               cpu: 50m
               memory: 256Mi

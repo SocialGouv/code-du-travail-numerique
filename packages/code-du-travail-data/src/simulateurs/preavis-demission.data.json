@@ -2680,7 +2680,7 @@
     },
     {
       "criteria": {
-        "catégorie professionnelle": "25| Agents de maîtrise (niveau V)"
+        "catégorie professionnelle": "25| Agents de maîtrise (AM1 et AM2)"
       },
       "type": "préavis de Démission",
       "idcc": 1505,
@@ -2688,12 +2688,12 @@
       "answer": "2 mois",
       "answer2": null,
       "answer3": "60",
-      "ref": "Article 3.7 de la convention collective",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005757025&cidTexte=KALITEXT000005689370&idConvention=KALICONT000005635421"
+      "ref": "Article 20 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562749#KALIARTI000043562749"
     },
     {
       "criteria": {
-        "catégorie professionnelle": "51| Cadres (niveau VI)"
+        "catégorie professionnelle": "51| Cadres (C1 et C2)"
       },
       "type": "préavis de Démission",
       "idcc": 1505,
@@ -2701,12 +2701,12 @@
       "answer": "3 mois",
       "answer2": null,
       "answer3": "90",
-      "ref": "Article 3.7 de la convention collective",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005757025&cidTexte=KALITEXT000005689370&idConvention=KALICONT000005635421"
+      "ref": "Article 20 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562749#KALIARTI000043562749"
     },
     {
       "criteria": {
-        "catégorie professionnelle": "11| Ouvriers, Employés (niveaux I, II, III, IV)"
+        "catégorie professionnelle": "11| Employés (E1 à E7)"
       },
       "type": "préavis de Démission",
       "idcc": 1505,
@@ -2714,8 +2714,8 @@
       "answer": "1 mois",
       "answer2": null,
       "answer3": "30",
-      "ref": "Article 3.7 de la convention collective",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005757025&cidTexte=KALITEXT000005689370&idConvention=KALICONT000005635421"
+      "ref": "Article 20 de la convention collective",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562749#KALIARTI000043562749"
     },
     {
       "criteria": {
