@@ -26,7 +26,7 @@ export const Summary = ({
               data={text}
               info={info}
               onClick={async () => {
-                if (router.basePath !== toolSlug) {
+                if (router.query.slug !== toolSlug) {
                   await router.push(`/outils/${toolSlug}`);
                 }
                 goTo(index);
