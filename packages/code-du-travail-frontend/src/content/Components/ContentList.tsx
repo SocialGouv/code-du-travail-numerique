@@ -1,10 +1,8 @@
-import { ListLink } from "../../search/SearchResults/Results";
 import { BlockDisplayMode } from "cdtn-types";
-import { icons, theme } from "@socialgouv/cdtn-ui";
+import { theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 import useWindowDimensions from "../../common/WindowDimension";
-import { getContentById } from "../content.service";
 import { ContentItem } from "./ContentItem";
 
 export const ContentList = ({ block, key }) => {

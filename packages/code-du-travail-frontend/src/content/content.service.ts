@@ -1,7 +1,5 @@
 import getConfig from "next/config";
 import { SOURCES } from "@socialgouv/cdtn-sources";
-import { Content, ContentType, EditorialContentData } from "cdtn-types";
-import { getToolByIds } from "../outils";
 
 const {
   publicRuntimeConfig: { API_URL },

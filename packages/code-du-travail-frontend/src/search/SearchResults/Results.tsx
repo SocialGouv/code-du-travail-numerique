@@ -57,6 +57,7 @@ type ListLinkProps = {
   showTheme?: boolean;
   query?: string;
   centerTitle?: boolean;
+  noReport?: boolean;
 };
 
 export const ListLink = ({
@@ -75,6 +76,7 @@ export const ListLink = ({
   showTheme = true,
   query,
   centerTitle,
+  noReport = false,
 }: ListLinkProps) => {
   let subtitle = "";
   if (showTheme && !icon) {
@@ -98,9 +100,12 @@ export const ListLink = ({
         </StyledParagraphContainer>
       </>
     ),
-    onClick: () => reportSelectionToMatomo(source, slug, url, algo),
+    onClick: () =>
+      !noReport && reportSelectionToMatomo(source, slug, url, algo),
     onKeyPress: (e) =>
-      e.keyCode === 13 && reportSelectionToMatomo(source, slug, url, algo),
+      !noReport &&
+      e.keyCode === 13 &&
+      reportSelectionToMatomo(source, slug, url, algo),
     subtitle,
     title,
     wide: true,

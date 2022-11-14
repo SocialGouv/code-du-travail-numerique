@@ -13,6 +13,7 @@ export const ContentItem = ({ item, centerTitle, key }) => {
             icon: icons[item?.icon],
           }}
           centerTitle={centerTitle}
+          noReport
         ></ListLink>
       </ListLinkContainer>
     </div>
