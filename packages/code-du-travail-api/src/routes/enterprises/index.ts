@@ -116,7 +116,9 @@ router.get("/enterprises", async (ctx) => {
   if (query) {
     const url = makeSearchUrl(query, address);
 
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      headers: { referer: "cdtn-api" },
+    });
 
     if (response.status === 200) {
       const jsonResponse: EnterpriseApiResponse = await response.json();
