@@ -146,7 +146,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
 
 const { breakpoints, spacings } = theme;
 
-const StyledSection = styled(Section)`
+const StyledSection = styled.div`
   padding-top: 0;
 `;
 
