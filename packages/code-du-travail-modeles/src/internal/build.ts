@@ -49,7 +49,7 @@ function copyJSFile() {
 function writeSupportedCCFile() {
   const ccn = extractSupportedCc(new Engine(mergeCommonModels()));
   fs.writeFileSync(
-    path.resolve(outDir, "modeles/ccn-supported.json"),
+    path.resolve(outDir, "modeles/common/utils/ccn-supported.json"),
     JSON.stringify(ccn, null, 2)
   );
 }
