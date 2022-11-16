@@ -21,6 +21,7 @@ exports[`<Title /> heading should default to H6 1`] = `
 <div>
   <h6
     class="c0"
+    data-testid="heading"
   />
 </div>
 `;
@@ -46,6 +47,7 @@ exports[`<Title /> should render a H{x} whose {x} is headingLevel + 2 1`] = `
 <div>
   <h4
     class="c0"
+    data-testid="heading"
   />
 </div>
 `;

@@ -259,6 +259,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
       >
         <h2
           class="c8"
+          data-testid="heading"
         >
           CDI
         </h2>
@@ -268,6 +269,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
       >
         <h3
           class="c8"
+          data-testid="heading"
         >
           titre 1
         </h3>
@@ -545,6 +547,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
       >
         <h3
           class="c8"
+          data-testid="heading"
         >
           CDI
         </h3>
@@ -554,6 +557,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
       >
         <h4
           class="c8"
+          data-testid="heading"
         >
           titre 1
         </h4>
@@ -831,6 +835,7 @@ exports[`<Tabulator /> should render 1`] = `
       >
         <h4
           class="c8"
+          data-testid="heading"
         >
           CDI
         </h4>
@@ -840,6 +845,7 @@ exports[`<Tabulator /> should render 1`] = `
       >
         <h5
           class="c8"
+          data-testid="heading"
         >
           titre 1
         </h5>

@@ -699,11 +699,12 @@ exports[`<SearchResults/> should render results 1`] = `
     class="c0"
     role="region"
   >
-    <p
+    <h2
       class="c1"
+      data-testid="heading"
     >
       Résultats de recherche pour “search test”
-    </p>
+    </h2>
     <ul
       class="c2"
     >

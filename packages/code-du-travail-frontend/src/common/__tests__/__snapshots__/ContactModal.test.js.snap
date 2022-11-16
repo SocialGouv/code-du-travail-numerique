@@ -384,11 +384,12 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
             role="dialog"
             tabindex="-1"
           >
-            <p
+            <h1
               class="c4"
+              data-testid="heading"
             >
               Contact
-            </p>
+            </h1>
             <div
               class="c5"
             >

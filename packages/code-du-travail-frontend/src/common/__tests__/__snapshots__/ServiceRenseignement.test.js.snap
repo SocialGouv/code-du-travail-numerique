@@ -323,6 +323,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 <div>
   <p
     class="c0"
+    data-testid="heading"
   >
     Contact téléphonique
   </p>
@@ -346,6 +347,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   </a>
   <p
     class="c0"
+    data-testid="heading"
   >
     Contact par email et prise de rendez-vous
   </p>
