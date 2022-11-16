@@ -1,7 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] = `
-.c3 {
+.c5 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c6 {
   position: relative;
   display: block;
   margin: 3.2rem 0 2rem 0;
@@ -74,7 +87,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   cursor: not-allowed;
 }
 
-.c11 {
+.c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -112,14 +125,14 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   will-change: transform;
 }
 
-.c11:link,
-.c11:visited {
+.c14:link,
+.c14:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c11:not([disabled]):hover {
+.c14:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -128,7 +141,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   border-color: transparent;
 }
 
-.c11[disabled] {
+.c14[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -136,7 +149,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   cursor: not-allowed;
 }
 
-.c16 {
+.c19 {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
@@ -174,19 +187,19 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   outline: none;
 }
 
-.c15 {
+.c18 {
   position: absolute;
   top: 0;
   right: 0;
   color: #7994d4;
 }
 
-.c8 {
+.c11 {
   position: relative;
   display: inline-block;
 }
 
-.c10 {
+.c13 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -208,57 +221,75 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   appearance: none;
 }
 
-.c10[type="number"] {
+.c13[type="number"] {
   -moz-appearance: textfield;
 }
 
-.c10::-webkit-outer-spin-button,
-.c10::-webkit-inner-spin-button {
+.c13::-webkit-outer-spin-button,
+.c13::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.c10:invalid {
+.c13:invalid {
   border-color: #eb5757;
 }
 
-.c10::-webkit-input-placeholder {
+.c13::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c10::-moz-placeholder {
+.c13::-moz-placeholder {
   color: #9298af;
 }
 
-.c10:-ms-input-placeholder {
+.c13:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c10::placeholder {
+.c13::placeholder {
   color: #9298af;
 }
 
-.c10:focus {
+.c13:focus {
   border-color: #7994d4;
 }
 
-.c10:focus::-webkit-input-placeholder {
+.c13:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c10:focus::-moz-placeholder {
+.c13:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c10:focus:-ms-input-placeholder {
+.c13:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c10:focus::placeholder {
+.c13:focus::placeholder {
   color: transparent;
+}
+
+.c3 {
+  margin-top: 0;
+  margin-bottom: 4rem;
+  margin-left: auto;
+  text-align: center;
 }
 
 .c4 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+}
+
+.c7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -274,14 +305,14 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   border: 1px solid #9298af;
 }
 
-.c5 {
+.c8 {
   padding: 0 1rem;
   color: #9298af;
   font-size: 2.8rem;
   text-align: center;
 }
 
-.c6 {
+.c9 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -302,7 +333,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   background-color: #9298af;
 }
 
-.c6:before {
+.c9:before {
   position: absolute;
   top: 50%;
   left: 0;
@@ -317,7 +348,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   content: "";
 }
 
-.c6:after {
+.c9:after {
   position: absolute;
   top: 0;
   left: 0.9rem;
@@ -330,7 +361,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   content: "";
 }
 
-.c7 {
+.c10 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -339,12 +370,12 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   padding-bottom: 1rem;
 }
 
-.c9 {
+.c12 {
   width: 250px;
   margin-left: 1rem;
 }
 
-.c12 {
+.c15 {
   position: absolute;
   top: 1rem;
   right: 0;
@@ -353,18 +384,18 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   color: #7994d4;
 }
 
-.c13 {
+.c16 {
   width: 3rem;
   height: 3rem;
 }
 
-.c14 {
+.c17 {
   font-size: 1.2rem;
   margin-top: 2rem;
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c6 {
     font-size: 1.6rem;
   }
 }
@@ -388,13 +419,13 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c14 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c11 {
+  .c14 {
     display: none;
   }
 }
@@ -420,7 +451,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c18 {
     position: fixed;
     top: 1rem;
     right: 1rem;
@@ -428,20 +459,33 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c11 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c13 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
+  .c3 {
+    margin-bottom: 3.2rem;
+    margin-left: auto;
+  }
+}
+
+@media (max-width:600px) {
   .c4 {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -450,7 +494,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c9 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -462,13 +506,13 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 @media (max-width:600px) {
-  .c6:before {
+  .c9:before {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c6:after {
+  .c9:after {
     display: block;
   }
 }
@@ -510,23 +554,35 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
             role="dialog"
             tabindex="-1"
           >
-            <p
+            <header
               class="c3"
+            >
+              <h1
+                class="c4"
+              >
+                <span
+                  class="c5"
+                />
+                Les services du ministère du Travail
+              </h1>
+            </header>
+            <h2
+              class="c6"
               data-testid="heading"
             >
               Contact téléphonique
-            </p>
+            </h2>
             <a
-              class="c4"
+              class="c7"
               href="tel:+0033806000126"
             >
               <strong
-                class="c5"
+                class="c8"
               >
                 0 806 000 126
               </strong>
               <em
-                class="c6"
+                class="c9"
               >
                 Service gratuit 
                 <span>
@@ -534,14 +590,14 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                 </span>
               </em>
             </a>
-            <p
-              class="c3"
+            <h2
+              class="c6"
               data-testid="heading"
             >
               Contact par email et prise de rendez-vous
-            </p>
+            </h2>
             <form
-              class="c7"
+              class="c10"
             >
               <label
                 for="search-service"
@@ -549,11 +605,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                 Saisissez votre numéro de département :
               </label>
               <span
-                class="c8 c9"
+                class="c11 c12"
               >
                 <input
                   autocomplete="off"
-                  class="c10"
+                  class="c13"
                   id="search-service"
                   maxlength="3"
                   name="departement"
@@ -564,13 +620,13 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </span>
               <button
                 aria-label="Recherchez le service"
-                class="c11 c12"
+                class="c14 c15"
                 title="Lancer une recherche"
                 type="submit"
               >
                 <svg
                   aria-hidden="true"
-                  class="c13"
+                  class="c16"
                   fill="none"
                   viewBox="0 0 32 32"
                   xmlns="http://www.w3.org/2000/svg"
@@ -583,7 +639,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </button>
             </form>
             <div
-              class="c14"
+              class="c17"
             >
               <p>
                 Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
@@ -604,11 +660,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </ul>
             </div>
             <button
-              class="c11 c15"
+              class="c14 c18"
               title="fermer la modale"
             >
               <div
-                class="c16"
+                class="c19"
               >
                 fermer la modale
               </div>

@@ -726,11 +726,11 @@ exports[`<SearchResults/> should render results 1`] = `
               >
                 test theme content
               </p>
-              <p
+              <h3
                 class="c8"
               >
                 Mer il est fou!
-              </p>
+              </h3>
             </div>
           </div>
           <div
@@ -793,11 +793,11 @@ exports[`<SearchResults/> should render results 1`] = `
               >
                 Outils
               </p>
-              <p
+              <h3
                 class="c8"
               >
                 simulateur de prime de précarite
-              </p>
+              </h3>
             </div>
           </div>
           <div
@@ -953,11 +953,11 @@ exports[`<SearchResults/> should render results 1`] = `
               >
                 test root content
               </p>
-              <p
+              <h3
                 class="c8"
               >
                 Mer il est fou 2!
-              </p>
+              </h3>
             </div>
           </div>
           <div
@@ -1045,11 +1045,11 @@ exports[`<SearchResults/> should render results 1`] = `
               >
                 test theme content
               </p>
-              <p
+              <h3
                 class="c8"
               >
                 Mer il est fou 4!
-              </p>
+              </h3>
             </div>
           </div>
           <div
