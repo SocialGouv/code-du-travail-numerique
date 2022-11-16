@@ -25,7 +25,7 @@ const YesNoQuestion = ({
   ...otherProps
 }: Props): JSX.Element => (
   <>
-    <Question required={required} tooltip={tooltip}>
+    <Question required={required} tooltip={tooltip} data-testid={name}>
       {label}
     </Question>
     <RadioContainer {...otherProps}>
@@ -39,6 +39,7 @@ const YesNoQuestion = ({
         {(props) => (
           <InputRadio
             id={`${props.input.name}-oui`}
+            data-testid={`${props.input.name}-oui`}
             label="Oui"
             {...props.input}
           />
@@ -55,6 +56,7 @@ const YesNoQuestion = ({
           <InputRadio
             label="Non"
             id={`${props.input.name}-non`}
+            data-testid={`${props.input.name}-non`}
             {...props.input}
           />
         )}
