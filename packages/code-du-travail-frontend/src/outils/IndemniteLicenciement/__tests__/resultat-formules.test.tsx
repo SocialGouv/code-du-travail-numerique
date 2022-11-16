@@ -6,7 +6,7 @@ import {
 } from "../../../../src/outils";
 import { ui } from "./ui";
 import userEvent from "@testing-library/user-event";
-import { byTestId, byText } from "testing-library-selector";
+import { byTestId } from "testing-library-selector";
 
 jest.mock("../../../conventions/Search/api/agreements.service");
 jest.mock("../../../conventions/Search/api/enterprises.service");
