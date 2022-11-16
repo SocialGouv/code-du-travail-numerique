@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.85.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.84.1...v4.85.0) (2022-11-15)
+
+
+### Bug Fixes
+
+* **renovate:** go back to renovate ([#4660](https://github.com/SocialGouv/code-du-travail-numerique/issues/4660)) ([157f29d](https://github.com/SocialGouv/code-du-travail-numerique/commit/157f29dec6826ee8ebaafeadf76902fde2b0853b))
+
+
+### Features
+
+* **e2e:** migrate e2e test "Recherche de convention collective par entreprise" to cypress ([#4656](https://github.com/SocialGouv/code-du-travail-numerique/issues/4656)) ([338e9a2](https://github.com/SocialGouv/code-du-travail-numerique/commit/338e9a204d2948050c4c5cc09c0dbf8acb2c8880))
+* **outils:** retirer les notifications pour la CC 3239 ([#4628](https://github.com/SocialGouv/code-du-travail-numerique/issues/4628)) ([3c154c9](https://github.com/SocialGouv/code-du-travail-numerique/commit/3c154c9e3343912ba63528fadb9ea97c58c2857f))
+
+
+
+
+
+## [4.84.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.84.0...v4.84.1) (2022-11-14)
+
+
+### Bug Fixes
+
+* **k8s:** optimization of `requests` / `limits` in dev and production mode ([#4659](https://github.com/SocialGouv/code-du-travail-numerique/issues/4659)) ([c078145](https://github.com/SocialGouv/code-du-travail-numerique/commit/c078145e847a7fbed9f6b7ce408b8fd0d06a31b6))
+
+
+
+
+
 # [4.84.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.83.0...v4.84.0) (2022-11-07)
 
 

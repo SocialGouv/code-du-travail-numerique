@@ -79,7 +79,7 @@ class SearchPage extends React.Component {
                     variant="primary"
                     stripe="left"
                     role="heading"
-                    aria-level="2"
+                    ariaLevel="2"
                   >
                     Vous n’avez pas trouvé ce que vous cherchiez ? Essayez
                     &hellip;
