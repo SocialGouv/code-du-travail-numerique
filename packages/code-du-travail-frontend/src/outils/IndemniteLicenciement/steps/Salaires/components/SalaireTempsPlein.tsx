@@ -59,8 +59,8 @@ export const SalaireTempsPlein = ({
   };
 
   const onChangeLocalPrimes = (index: number, value: string) => {
-    const prime = parseFloat(value);
-    if (isNaN(prime) && value.length > 0) {
+    const prime = value.length > 0 ? parseFloat(value) : undefined;
+    if (prime && isNaN(prime)) {
       setErrorsPrimes({
         ...errorsPrimes,
         [`${index}`]: "Veuillez entrer un nombre",
@@ -73,7 +73,11 @@ export const SalaireTempsPlein = ({
       });
     }
     const newLocalSalaries = salaryPeriods.map((p, i) =>
-      i === index ? { ...p, prime } : p
+      i === index
+        ? prime
+          ? { ...p, prime }
+          : { month: p.month, value: p.value }
+        : p
     );
     onSalariesChange(newLocalSalaries);
   };
@@ -114,6 +118,7 @@ export const SalaireTempsPlein = ({
                   updateOnScrollDisabled
                   onChange={(e) => onChangeSalaries(index, e.target.value)}
                   onBlur={() => setIsFirstEdit(false)}
+                  data-testid={"salary-input"}
                 />
                 {errorsSalaries[`${index}`] && (
                   <ErrorWrapper>
@@ -138,6 +143,7 @@ export const SalaireTempsPlein = ({
                       }
                       value={sPeriod.prime ?? ""}
                       updateOnScrollDisabled
+                      data-testid={"prime-input"}
                     />
                     {errorsPrimes[`${index}`] && (
                       <ErrorWrapper>

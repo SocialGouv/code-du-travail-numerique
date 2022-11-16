@@ -5,15 +5,15 @@ contrat salarié . convention collective . commerces de détail fruits et légum
   cdtn:
     type: liste
     valeurs:
-      Ouvriers, Employés (Niveaux N1 à N4): "'Ouvriers, Employés (Niveaux N1 à N4)'"
-      Agents de maîtrise (Niveaux N5 et N6): "'Agents de maîtrise (Niveaux N5 et N6)'"
-      Cadres (Niveaux N7 et N8): "'Cadres (Niveaux N7 et N8)'"
+      Employés (E1 à E7): "'Employés (E1 à E7)'"
+      Agents de maîtrise (AM1 et AM2): "'Agents de maîtrise (AM1 et AM2)'"
+      Cadres (C1 et C2): "'Cadres (C1 et C2)'"
 
 contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . agents de maitrise:
-  applicable si: catégorie professionnelle = 'Agents de maîtrise (Niveaux N5 et N6)'
+  applicable si: catégorie professionnelle = 'Agents de maîtrise (AM1 et AM2)'
   valeur: oui
   références:
-    Article 3.10.3: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005874375/?idConteneur=KALICONT000005635421
+    Article 23.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562759#KALIARTI000043562759
 
 contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . agents de maitrise . départ ou mise à la retraite:
   applicable si:
@@ -24,10 +24,10 @@ contrat salarié . convention collective . commerces de détail fruits et légum
   valeur: 2 mois
 
 contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . ouvriers:
-  applicable si: catégorie professionnelle = 'Ouvriers, Employés (Niveaux N1 à N4)'
+  applicable si: catégorie professionnelle = 'Employés (E1 à E7)'
   valeur: oui
   références:
-    Article 3.10.3: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005874375/?idConteneur=KALICONT000005635421
+    Article 23.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562759#KALIARTI000043562759
 
 contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . ouvriers . départ à la retraite:
   applicable si: départ à la retraite
@@ -40,10 +40,10 @@ contrat salarié . convention collective . commerces de détail fruits et légum
   valeur: 2 mois
 
 contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . cadres:
-  applicable si: catégorie professionnelle = 'Cadres (Niveaux N7 et N8)'
+  applicable si: catégorie professionnelle = 'Cadres (C1 et C2)'
   valeur: oui
   références:
-    Article 3.10.3: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005874375/?idConteneur=KALICONT000005635421
+    Article 23.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562759#KALIARTI000043562759
 
 contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle . cadres . départ à la retraite:
   applicable si: départ à la retraite
@@ -59,7 +59,7 @@ contrat salarié . convention collective . commerces de détail fruits et légum
   applicable si:
     toutes ces conditions:
       - départ à la retraite
-      - catégorie professionnelle = 'Cadres (Niveaux N7 et N8)'
+      - catégorie professionnelle = 'Cadres (C1 et C2)'
   type: notification
   description: "Attention: L'article de la convention collective ou la convention collective saisie n’a pas été étendue au niveau national. Par conséquent, pour que ce résultat soit applicable à votre situation, il faut que l’employeur ait adhéré à l’organisation patronale signataire de cette convention. Sans cette adhésion, l'employeur n'a pas l'obligation d'appliquer les règles de la convention mais il applique le préavis prévu par le code du travail."
   valeur: oui

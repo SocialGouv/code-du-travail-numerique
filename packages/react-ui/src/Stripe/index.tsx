@@ -1,9 +1,15 @@
-import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
 import { box } from "../theme.js";
 
-export const Stripe = styled.span`
+interface StripeProps {
+  rounded: boolean;
+  variant: "primary" | "secondary";
+  position: "top" | "left";
+  length: string;
+}
+
+export const Stripe = styled.span<StripeProps>`
   position: absolute;
   background-color: ${({ variant, theme }) => theme[variant]};
   border-radius: ${({ rounded }) => (rounded ? box.borderRadius : "0")};
@@ -18,16 +24,9 @@ export const Stripe = styled.span`
   }}
 `;
 
-Stripe.propTypes = {
-  length: PropTypes.string,
-  position: PropTypes.oneOf(["top", "left"]),
-  rounded: PropTypes.bool,
-  variant: PropTypes.oneOf(["primary", "secondary"]),
-};
-
 Stripe.defaultProps = {
   length: "7rem",
   position: "top",
-  rounder: false,
+  rounded: false,
   variant: "secondary",
 };

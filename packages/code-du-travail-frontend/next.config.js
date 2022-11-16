@@ -61,7 +61,10 @@ const nextConfig = {
   },
   swcMinify: true,
   compiler: {
-    reactRemoveProperties: true,
+    reactRemoveProperties:
+      process.env.NODE_ENV === "production"
+        ? { properties: ["data-testid"] }
+        : false,
     styledComponents: true,
   },
 };

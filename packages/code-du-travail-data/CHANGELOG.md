@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.85.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.84.1...v4.85.0) (2022-11-15)
+
+
+### Features
+
+* **outils:** retirer les notifications pour la CC 3239 ([#4628](https://github.com/SocialGouv/code-du-travail-numerique/issues/4628)) ([3c154c9](https://github.com/SocialGouv/code-du-travail-numerique/commit/3c154c9e3343912ba63528fadb9ea97c58c2857f))
+
+
+
+
+
+## [4.84.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.84.0...v4.84.1) (2022-11-14)
+
+**Note:** Version bump only for package @cdt/data
+
+
+
+
+
+# [4.84.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.83.0...v4.84.0) (2022-11-07)
+
+
+### Features
+
+* **cc 1505:** changement de nom des catégories + mises à jour des références juridiques ([#4635](https://github.com/SocialGouv/code-du-travail-numerique/issues/4635)) ([5f1d1c5](https://github.com/SocialGouv/code-du-travail-numerique/commit/5f1d1c586f34b6ee2eaefd7ce37a24bb198dfd8a))
+
+
+
+
+
 # [4.83.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.82.0...v4.83.0) (2022-11-02)
 
 

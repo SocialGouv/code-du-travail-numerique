@@ -38,16 +38,8 @@ export default async () => {
           initialDelaySeconds: 0,
           timeoutSeconds: 15,
         },
-        resources: {
-          requests: {
-            cpu: "50m",
-            memory: "128Mi",
-          },
-          limits: {
-            cpu: "500m",
-            memory: "1Gi",
-          },
-        },
+        resources:
+          env.env === "prod" ? ressourcesConfigProd : ressourcesConfigDev,
         env: [
           {
             name: "ELASTIC_APM_ENVIRONMENT",
@@ -77,7 +69,7 @@ export default async () => {
     metadata: deployment.metadata,
     spec: {
       minReplicas: 2,
-      maxReplicas: 10,
+      maxReplicas: 20,
 
       metrics: [
         {
@@ -117,4 +109,26 @@ export default async () => {
   }
 
   return manifests;
+};
+
+const ressourcesConfigDev = {
+  requests: {
+    cpu: "50m",
+    memory: "128Mi",
+  },
+  limits: {
+    cpu: "100m",
+    memory: "256Mi",
+  },
+};
+
+const ressourcesConfigProd = {
+  requests: {
+    cpu: "100m",
+    memory: "256Mi",
+  },
+  limits: {
+    cpu: "300m",
+    memory: "768Mi",
+  },
 };

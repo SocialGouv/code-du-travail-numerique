@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Section } from "../layout/Section/index.js";
-import { Heading } from "../Titles/Heading/index.js";
+import { Heading } from "../Titles/Heading/index.tsx";
 import { PageTitle } from "../Titles/PageTitle/index.js";
 import { Title } from "../Titles/Title/index.js";
 import * as icons from "./index.js";
