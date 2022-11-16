@@ -1,15 +1,7 @@
-import {
-  Button,
-  Heading,
-  Modal,
-  PageTitle,
-  Title,
-  Wrapper,
-} from "@socialgouv/cdtn-ui";
+import { Button, Heading, Modal, Wrapper } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import React, { useCallback, useState } from "react";
-import styled from "styled-components";
 
 import { ServiceRenseignement } from "./ServiceRenseignement";
 
@@ -36,7 +28,7 @@ export const ContactModal = ({ children: renderProp }) => {
       <Modal isOpen={isModalVisible} onDismiss={closeModal} title="Contact">
         {(isServiceRenseignement && <ServiceRenseignement />) || (
           <>
-            <Heading stripe={"none"} as="p">
+            <Heading stripe={"none"} as="h1">
               Contact
             </Heading>
             <Wrapper variant="dark">

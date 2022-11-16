@@ -183,7 +183,7 @@ export const Results = ({ id, isSearch, items, query }) => {
     <Container narrow role="region" aria-label="Résultats de recherche">
       {isSearch ? (
         <Heading
-          as="p"
+          as="h2"
           id={id}
         >{`Résultats de recherche pour “${query}”`}</Heading>
       ) : (
