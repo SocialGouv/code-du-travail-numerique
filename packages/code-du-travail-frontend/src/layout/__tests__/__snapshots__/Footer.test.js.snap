@@ -491,6 +491,7 @@ exports[`<Footer /> should render 1`] = `
             <strong
               aria-level="2"
               class="c15 c16"
+              data-testid="heading"
               role="heading"
             >
               Code du travail numérique
@@ -570,6 +571,7 @@ exports[`<Footer /> should render 1`] = `
             <strong
               aria-level="2"
               class="c15 c16"
+              data-testid="heading"
               role="heading"
             >
               Aidez-nous à améliorer cet outil
@@ -614,6 +616,7 @@ exports[`<Footer /> should render 1`] = `
             <strong
               aria-level="2"
               class="c15 c16"
+              data-testid="heading"
               role="heading"
             >
               En collaboration avec

@@ -335,6 +335,18 @@ exports[`<FicheServicePublic /> should render 1`] = `
   margin-bottom: 0.4rem;
 }
 
+.c30 {
+  margin-bottom: 1.6rem;
+  padding: 3.2rem;
+  background-color: #e4e8ef;
+  border-radius: 0.6rem;
+}
+
+.c31 {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
 .c22 {
   margin-bottom: 1.6rem;
 }
@@ -454,6 +466,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c30 {
+    padding: 1rem 2rem;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -532,6 +550,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
         >
           <h2
             class="c10"
+            data-testid="heading"
           >
             CDI
           </h2>
@@ -584,6 +603,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
+                        data-testid="heading"
                         style="margin: 0px;"
                       >
                         De quoi s'agit-il ?
@@ -658,6 +678,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
+                        data-testid="heading"
                         style="margin: 0px;"
                       >
                         Conditions
@@ -775,6 +796,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
+                        data-testid="heading"
                         style="margin: 0px;"
                       >
                         Volonté de démissionner
@@ -876,6 +898,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
+                        data-testid="heading"
                         style="margin: 0px;"
                       >
                         Procédure
@@ -989,6 +1012,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
+                        data-testid="heading"
                         style="margin: 0px;"
                       >
                         Préavis
@@ -1011,6 +1035,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </p>
                     <h4
                       class="c10"
+                      data-testid="heading"
                     >
                       Durée
                     </h4>
@@ -1073,6 +1098,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         >
                           <h4
                             class="c10"
+                            data-testid="heading"
                           >
                             Cas général
                           </h4>
@@ -1123,6 +1149,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           >
                             <h5
                               class="c10"
+                              data-testid="heading"
                             >
                               À savoir
                             </h5>
@@ -1147,6 +1174,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </div>
                     <h4
                       class="c10"
+                      data-testid="heading"
                     >
                       Dispense de préavis
                     </h4>
@@ -1227,6 +1255,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         >
                           <h4
                             class="c10"
+                            data-testid="heading"
                           >
                             Vous demandez une dispense de préavis
                           </h4>
@@ -1282,6 +1311,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                     >
                                       <h5
                                         class="c10"
+                                        data-testid="heading"
                                         style="margin: 0px;"
                                       >
                                         Accord de l'employeur
@@ -1353,6 +1383,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                     >
                                       <h5
                                         class="c10"
+                                        data-testid="heading"
                                         style="margin: 0px;"
                                       >
                                         Refus de l'employeur
@@ -1389,6 +1420,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </div>
                     <h4
                       class="c10"
+                      data-testid="heading"
                     >
                       Report ou suspension du préavis
                     </h4>
@@ -1439,6 +1471,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </ul>
                     <h4
                       class="c10"
+                      data-testid="heading"
                     >
                       Absence pour recherche d'emploi
                     </h4>
@@ -1454,6 +1487,230 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     <p>
                       Toutefois, des dispositions conventionnelles ou, à défaut, un usage dans la localité ou la profession peuvent prévoir des temps d'absence pour rechercher un emploi pendant la durée du préavis.
                     </p>
+                    <div
+                      class="c30"
+                    >
+                      <strong
+                        class="c31"
+                      >
+                        Ou s'adresser ?
+                      </strong>
+                      <h3
+                        class="c10"
+                        data-testid="heading"
+                      >
+                        Agessa et Maison des artistes - Sécurité sociale
+                      </h3>
+                      <div
+                        class="c12"
+                        data-accordion-component="Accordion"
+                      >
+                        <div>
+                          <div
+                            class=""
+                            data-accordion-component="AccordionItem"
+                          >
+                            <div
+                              class="accordion__heading"
+                              data-accordion-component="AccordionItemHeading"
+                            >
+                              <div
+                                aria-controls="accordion__panel-raa-7"
+                                aria-disabled="false"
+                                aria-expanded="false"
+                                class="c13"
+                                data-accordion-component="AccordionItemButton"
+                                id="accordion__heading-raa-7"
+                                role="button"
+                                tabindex="0"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="c14 c15"
+                                  fill="none"
+                                  height="24"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  viewBox="0 0 24 24"
+                                  width="24"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <polyline
+                                    points="9 18 15 12 9 6"
+                                  />
+                                </svg>
+                                <div
+                                  class="c16"
+                                >
+                                  <h4
+                                    class="c10"
+                                    data-testid="heading"
+                                    style="margin: 0px;"
+                                  >
+                                    Par téléphone
+                                  </h4>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              aria-hidden="true"
+                              class="c17"
+                              data-accordion-component="AccordionItemPanel"
+                              hidden=""
+                              id="accordion__panel-raa-7"
+                            >
+                              <div
+                                class="c18"
+                              >
+                                <p>
+                                  Du lundi au vendredi : de 9h à 17h
+                                </p>
+                                <p>
+                                  0 806 804 208 (prix d'un appel local)
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div
+                            class="c19"
+                            data-accordion-component="AccordionItem"
+                          >
+                            <div
+                              class="accordion__heading"
+                              data-accordion-component="AccordionItemHeading"
+                            >
+                              <div
+                                aria-controls="accordion__panel-raa-8"
+                                aria-disabled="false"
+                                aria-expanded="false"
+                                class="c13"
+                                data-accordion-component="AccordionItemButton"
+                                id="accordion__heading-raa-8"
+                                role="button"
+                                tabindex="0"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="c14 c15"
+                                  fill="none"
+                                  height="24"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  viewBox="0 0 24 24"
+                                  width="24"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <polyline
+                                    points="9 18 15 12 9 6"
+                                  />
+                                </svg>
+                                <div
+                                  class="c16"
+                                >
+                                  <h4
+                                    class="c10"
+                                    data-testid="heading"
+                                    style="margin: 0px;"
+                                  >
+                                    Par messagerie
+                                  </h4>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              aria-hidden="true"
+                              class="c17"
+                              data-accordion-component="AccordionItemPanel"
+                              hidden=""
+                              id="accordion__panel-raa-8"
+                            >
+                              <div
+                                class="c18"
+                              >
+                                <p>
+                                  http://www.secu-artistes-auteurs.fr/contact
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div
+                            class="c19"
+                            data-accordion-component="AccordionItem"
+                          >
+                            <div
+                              class="accordion__heading"
+                              data-accordion-component="AccordionItemHeading"
+                            >
+                              <div
+                                aria-controls="accordion__panel-raa-9"
+                                aria-disabled="false"
+                                aria-expanded="false"
+                                class="c13"
+                                data-accordion-component="AccordionItemButton"
+                                id="accordion__heading-raa-9"
+                                role="button"
+                                tabindex="0"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="c14 c15"
+                                  fill="none"
+                                  height="24"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  viewBox="0 0 24 24"
+                                  width="24"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <polyline
+                                    points="9 18 15 12 9 6"
+                                  />
+                                </svg>
+                                <div
+                                  class="c16"
+                                >
+                                  <h4
+                                    class="c10"
+                                    data-testid="heading"
+                                    style="margin: 0px;"
+                                  >
+                                    Par courrier
+                                  </h4>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              aria-hidden="true"
+                              class="c17"
+                              data-accordion-component="AccordionItemPanel"
+                              hidden=""
+                              id="accordion__panel-raa-9"
+                            >
+                              <div
+                                class="c18"
+                              >
+                                <p>
+                                  60 rue du Faubourg Poissonnière
+                                </p>
+                                <p>
+                                  75010 Paris
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1468,12 +1725,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   data-accordion-component="AccordionItemHeading"
                 >
                   <div
-                    aria-controls="accordion__panel-raa-7"
+                    aria-controls="accordion__panel-raa-10"
                     aria-disabled="false"
                     aria-expanded="false"
                     class="c13"
                     data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-raa-7"
+                    id="accordion__heading-raa-10"
                     role="button"
                     tabindex="0"
                   >
@@ -1499,6 +1756,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
+                        data-testid="heading"
                         style="margin: 0px;"
                       >
                         Indemnisation
@@ -1511,7 +1769,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   class="c17"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
-                  id="accordion__panel-raa-7"
+                  id="accordion__panel-raa-10"
                 >
                   <div
                     class="c18"
@@ -1590,12 +1848,12 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   data-accordion-component="AccordionItemHeading"
                 >
                   <div
-                    aria-controls="accordion__panel-raa-8"
+                    aria-controls="accordion__panel-raa-11"
                     aria-disabled="false"
                     aria-expanded="false"
                     class="c13"
                     data-accordion-component="AccordionItemButton"
-                    id="accordion__heading-raa-8"
+                    id="accordion__heading-raa-11"
                     role="button"
                     tabindex="0"
                   >
@@ -1621,6 +1879,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
+                        data-testid="heading"
                         style="margin: 0px;"
                       >
                         Documents remis au salarié
@@ -1633,7 +1892,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   class="c17"
                   data-accordion-component="AccordionItemPanel"
                   hidden=""
-                  id="accordion__panel-raa-8"
+                  id="accordion__panel-raa-11"
                 >
                   <div
                     class="c18"

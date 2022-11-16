@@ -35,13 +35,13 @@ type AnswerProps = {
   children: any[] | null;
   className?: string;
   date?: string;
-  dateLabel: string;
+  dateLabel?: string;
   emptyMessage?: string;
   html?: string | null;
   intro?: string | null;
   metaDescription?: string;
   relatedItems?: string[];
-  source?: string;
+  source?: any;
   subtitle?: string;
   suptitle?: string;
   title: string;

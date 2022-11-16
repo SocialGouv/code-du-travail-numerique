@@ -30,8 +30,10 @@ export const AccessibilityModal = ({ children: renderProp }) => {
         onDismiss={closeModal}
         title="Accessibilité"
       >
-        <Title stripe="top">Accessibilité</Title>
-        <Heading>Couleurs</Heading>
+        <Title stripe="top" as="h1">
+          Accessibilité
+        </Title>
+        <Heading as="h2">Couleurs</Heading>
         <InputCheckbox
           label="Passer le site en noir et blanc"
           name="blackAndWhiteTheme"

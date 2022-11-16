@@ -1,4 +1,4 @@
-import { theme } from "@socialgouv/cdtn-ui";
+import { Heading, theme } from "@socialgouv/cdtn-ui";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
@@ -11,12 +11,13 @@ class OuSAdresser extends React.PureComponent {
     data: PropTypes.object.isRequired,
     headingLevel: PropTypes.number.isRequired,
   };
+
   render() {
     const { data, headingLevel } = this.props;
     const label = getText(
       data.children.find((child) => child.name === "Titre")
     );
-    let content = null;
+    let content;
     if (data.children.find((child) => child.name === "RessourceWeb")) {
       const url = data.children.find((child) => child.name === "RessourceWeb")
         .attributes.URL;
@@ -32,10 +33,13 @@ class OuSAdresser extends React.PureComponent {
       );
     } else {
       content = (
-        <ElementBuilder
-          data={data.children.find((child) => child.name === "Texte")}
-          headingLevel={headingLevel + 1}
-        />
+        <>
+          <Heading as={"h" + (headingLevel + 1)}>{label}</Heading>
+          <ElementBuilder
+            data={data.children.find((child) => child.name === "Texte")}
+            headingLevel={headingLevel}
+          />
+        </>
       );
     }
     return (
