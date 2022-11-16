@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.85.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.84.1...v4.85.0) (2022-11-15)
+
+
+### Features
+
+* **outils:** retirer les notifications pour la CC 3239 ([#4628](https://github.com/SocialGouv/code-du-travail-numerique/issues/4628)) ([3c154c9](https://github.com/SocialGouv/code-du-travail-numerique/commit/3c154c9e3343912ba63528fadb9ea97c58c2857f))
+
+
+
+
+
 ## [4.84.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.84.0...v4.84.1) (2022-11-14)
 
 **Note:** Version bump only for package @cdt/data

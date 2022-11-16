@@ -2508,7 +2508,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     class="c39"
                   >
                     <p
-                      aria-level="4"
+                      aria-level="3"
                       class="c40"
                       role="heading"
                     >

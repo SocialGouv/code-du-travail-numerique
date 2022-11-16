@@ -380,21 +380,21 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
             <div
               class="c3"
             >
-              <h2
+              <h1
                 class="c4"
               >
                 <span
                   class="c5"
                 />
                 Accessibilité
-              </h2>
+              </h1>
             </div>
-            <h3
+            <h2
               class="c6"
               data-testid="heading"
             >
               Couleurs
-            </h3>
+            </h2>
             <label
               class="c7"
               for="blackAndWhiteTheme"
