@@ -1492,6 +1492,7 @@ exports[`<Stats /> should render 1`] = `
                     >
                       <h2
                         class="c36"
+                        data-testid="heading"
                       >
                         Contenus référencés
                       </h2>
@@ -1510,6 +1511,7 @@ exports[`<Stats /> should render 1`] = `
                     >
                       <h2
                         class="c36"
+                        data-testid="heading"
                       >
                         Visites
                       </h2>
@@ -1528,6 +1530,7 @@ exports[`<Stats /> should render 1`] = `
                     >
                       <h2
                         class="c36"
+                        data-testid="heading"
                       >
                         Recherches
                       </h2>
@@ -1546,6 +1549,7 @@ exports[`<Stats /> should render 1`] = `
                     >
                       <h2
                         class="c36"
+                        data-testid="heading"
                       >
                         Consultations
                       </h2>
@@ -1630,6 +1634,7 @@ exports[`<Stats /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c51 c52"
+                data-testid="heading"
                 role="heading"
               >
                 Code du travail numérique
@@ -1709,6 +1714,7 @@ exports[`<Stats /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c51 c52"
+                data-testid="heading"
                 role="heading"
               >
                 Aidez-nous à améliorer cet outil
@@ -1753,6 +1759,7 @@ exports[`<Stats /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c51 c52"
+                data-testid="heading"
                 role="heading"
               >
                 En collaboration avec

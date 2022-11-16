@@ -646,9 +646,11 @@ exports[`<ConventionCollective /> should render 1`] = `
             >
               <h2
                 class="c17 c18"
+                data-testid="heading"
               >
                 <span
                   class="c19"
+                  data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>

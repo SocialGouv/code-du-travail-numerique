@@ -1357,10 +1357,12 @@ exports[`<Recherche /> should render 1`] = `
             <strong
               aria-level="2"
               class="c30"
+              data-testid="heading"
               role="heading"
             >
               <span
                 class="c31"
+                data-testid="stripe"
               />
               Vous n’avez pas trouvé ce que vous cherchiez ? Essayez …
             </strong>
@@ -1446,6 +1448,7 @@ exports[`<Recherche /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c46 c47"
+                data-testid="heading"
                 role="heading"
               >
                 Code du travail numérique
@@ -1525,6 +1528,7 @@ exports[`<Recherche /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c46 c47"
+                data-testid="heading"
                 role="heading"
               >
                 Aidez-nous à améliorer cet outil
@@ -1569,6 +1573,7 @@ exports[`<Recherche /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c46 c47"
+                data-testid="heading"
                 role="heading"
               >
                 En collaboration avec

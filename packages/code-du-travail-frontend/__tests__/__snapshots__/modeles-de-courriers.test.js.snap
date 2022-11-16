@@ -1525,6 +1525,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           >
             <h2
               class="c36 c37"
+              data-testid="heading"
             >
               Embauche et contrat de travail
             </h2>
@@ -1585,6 +1586,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             </li>
             <h2
               class="c36 c37"
+              data-testid="heading"
             >
               Départ de l'entreprise
             </h2>
@@ -1711,6 +1713,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c58 c59"
+                data-testid="heading"
                 role="heading"
               >
                 Code du travail numérique
@@ -1790,6 +1793,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c58 c59"
+                data-testid="heading"
                 role="heading"
               >
                 Aidez-nous à améliorer cet outil
@@ -1834,6 +1838,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c58 c59"
+                data-testid="heading"
                 role="heading"
               >
                 En collaboration avec

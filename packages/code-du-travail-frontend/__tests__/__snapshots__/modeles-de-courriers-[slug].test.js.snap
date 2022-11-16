@@ -2701,9 +2701,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 >
                   <h2
                     class="c71 c72"
+                    data-testid="heading"
                   >
                     <span
                       class="c73"
+                      data-testid="stripe"
                     />
                     Avez-vous trouvé la réponse à votre question ?
                   </h2>
@@ -2792,6 +2794,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c90 c91"
+                data-testid="heading"
                 role="heading"
               >
                 Code du travail numérique
@@ -2871,6 +2874,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c90 c91"
+                data-testid="heading"
                 role="heading"
               >
                 Aidez-nous à améliorer cet outil
@@ -2915,6 +2919,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c90 c91"
+                data-testid="heading"
                 role="heading"
               >
                 En collaboration avec
