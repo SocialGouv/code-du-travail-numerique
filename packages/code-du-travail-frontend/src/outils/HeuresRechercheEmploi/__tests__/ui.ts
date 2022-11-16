@@ -7,7 +7,7 @@ export const ui = {
     input: byTestId("typeRupture"),
   },
   agreement3239: {
-    searchResult: byText(/particuliers employeurs et emploi à domicile/i),
+    searchResult: byText(/Particuliers employeurs et emploi à domicile/i),
     categoryProInput: byTestId("criteria.catégorie professionnelle"),
     durationInput: byTestId("criteria.durée du travail"),
     seniorityInput: byTestId("criteria.ancienneté"),

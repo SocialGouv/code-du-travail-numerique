@@ -30,7 +30,7 @@ test(`
 
   fireEvent.change(ui.agreement3239.categoryProInput.get(), {
     target: {
-      value: "101| Assistants maternels du particulier employeur",
+      value: "100| Salariés du particulier employeur",
     },
   });
   fireEvent.click(ui.next.get());

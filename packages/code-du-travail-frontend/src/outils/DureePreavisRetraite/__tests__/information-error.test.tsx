@@ -34,13 +34,14 @@ test(`
   fireEvent.click(ui.agreement1351.searchResult.get());
   fireEvent.click(ui.next.get());
 
-  // fireEvent.change(ui.agreement1351.categoryProInput.get(), {
-  //   target: {
-  //     value: "'Agents de maîtrise'",
-  //   },
-  // });
+  fireEvent.change(ui.agreement1351.categoryProInput.get(), {
+    target: {
+      value: "'Agents de maîtrise'",
+    },
+  });
   fireEvent.click(ui.next.get());
   expect(
     screen.getByText(/vous devez répondre à cette question/i)
   ).toBeInTheDocument();
+  // verifier qu'il affiche plus le vous devez repondre a cette question
 });
