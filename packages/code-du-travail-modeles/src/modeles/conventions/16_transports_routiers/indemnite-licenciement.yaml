@@ -190,7 +190,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   valeur: oui
   cdtn:
     formule:
-      formula: ($formule) + (2 * Sref)
+      formula: $formule + (2 * Sref)
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . majoration . coeff 3:
   remplace: majoration
@@ -206,7 +206,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   valeur: oui
   cdtn:
     formule:
-      formula: ($formule) + (3 * Sref)
+      formula: $formule + (3 * Sref)
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . majoration . coeff 4:
   remplace: majoration
@@ -221,7 +221,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   valeur: oui
   cdtn:
     formule:
-      formula: ($formule) + (4 * Sref)
+      formula: $formule + (4 * Sref)
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . TAM:
   applicable si: catégorie professionnelle = 'TAM'

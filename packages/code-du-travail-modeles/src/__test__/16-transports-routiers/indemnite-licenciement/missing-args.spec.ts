@@ -98,12 +98,12 @@ describe("CC 16", () => {
                 "contrat salarié . convention collective": "'IDCC0016'",
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
                   "'Ingénieurs et cadres'",
+                "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age":
+                  "61",
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien":
                   "'Oui'",
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . date du statut cadre":
                   "01/01/2000",
-                "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age":
-                  "61",
               },
               "contrat salarié . indemnité de licenciement . résultat conventionnel"
             );
@@ -123,12 +123,12 @@ describe("CC 16", () => {
                 "contrat salarié . convention collective": "'IDCC0016'",
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
                   "'Ingénieurs et cadres'",
+                "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age":
+                  "60",
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien":
                   "'Oui'",
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . date du statut cadre":
                   "01/01/2000",
-                "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age":
-                  "60",
               },
               "contrat salarié . indemnité de licenciement . résultat conventionnel"
             );
@@ -167,10 +167,10 @@ describe("CC 16", () => {
                 "contrat salarié . convention collective": "'IDCC0016'",
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
                   "'Ingénieurs et cadres'",
-                "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien":
-                  "'Non'",
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age":
                   "61",
+                "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien":
+                  "'Non'",
               },
               "contrat salarié . indemnité de licenciement . résultat conventionnel"
             );
@@ -190,10 +190,10 @@ describe("CC 16", () => {
                 "contrat salarié . convention collective": "'IDCC0016'",
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
                   "'Ingénieurs et cadres'",
-                "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien":
-                  "'Non'",
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age":
                   "60",
+                "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien":
+                  "'Non'",
               },
               "contrat salarié . indemnité de licenciement . résultat conventionnel"
             );
