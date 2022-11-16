@@ -21,7 +21,7 @@ import { Highlights } from "../src/home/Highlights";
 import { Themes } from "../src/home/Themes";
 import { Layout } from "../src/layout/Layout";
 import SearchHero from "../src/search/SearchHero";
-import { getAllTools } from "../src/outils/service";
+import { fetchTools } from "../src/outils/service";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -68,38 +68,29 @@ const Home = ({ themes = [], highlights = [], tools }) => (
           Boîte à outils
         </PageTitle>
         <Grid>
-          {tools
-            .filter(
-              ({ slug }) =>
-                [
-                  "convention-collective",
-                  "preavis-demission",
-                  "simulateur-embauche",
-                ].indexOf(slug) !== -1
-            )
-            .map(({ action, description, href, icon, slug, title }) => {
-              const linkProps = {
-                href,
-                passHref: true,
-              };
-              if (!href) {
-                linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
-              }
-              return (
-                <Link {...linkProps} key={slug || href}>
-                  <CallToActionTile
-                    action={action}
-                    custom
-                    icon={icons[icon]}
-                    title={title}
-                    titleTagType="h3"
-                    centerTitle
-                  >
-                    <Paragraph noMargin>{description}</Paragraph>
-                  </CallToActionTile>
-                </Link>
-              );
-            })}
+          {tools.map(({ action, description, href, icon, slug, title }) => {
+            const linkProps = {
+              href,
+              passHref: true,
+            };
+            if (!href) {
+              linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
+            }
+            return (
+              <Link {...linkProps} key={slug || href}>
+                <CallToActionTile
+                  action={action}
+                  custom
+                  icon={icons[icon]}
+                  title={title}
+                  titleTagType="h3"
+                  centerTitle
+                >
+                  <Paragraph noMargin>{description}</Paragraph>
+                </CallToActionTile>
+              </Link>
+            );
+          })}
           {DocumentsTile}
         </Grid>
         <ButtonWrapper>
@@ -123,7 +114,13 @@ Home.getInitialProps = async () => {
       await Promise.all([
         fetch(`${API_URL}/themes`),
         fetch(`${API_URL}/highlights/homepage`),
-        getAllTools(),
+        fetchTools({
+          slugs: [
+            "convention-collective",
+            "preavis-demission",
+            "simulateur-embauche",
+          ],
+        }),
       ]);
     if (themesResponse.ok) {
       themes = await themesResponse.json().then((themes) => themes.children);

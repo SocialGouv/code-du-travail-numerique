@@ -4,15 +4,24 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-export const getToolByIds = async (ids: string[]): Promise<any> => {
-  const responseContainer = await fetch(
-    `${API_URL}/items?ids=${ids.join(",")}`
-  );
-  return await responseContainer.json();
+export type getToolsParams = {
+  ids?: string[];
+  slugs?: string[];
 };
 
-export const getAllTools = async (): Promise<any> => {
-  const responseContainer = await fetch(`${API_URL}/items?source=outils`);
+export const fetchTools = async ({
+  ids,
+  slugs,
+}: getToolsParams = {}): Promise<any> => {
+  let query = "";
+  if (ids) {
+    query += `ids=${ids.join(",")}`;
+  }
+  if (slugs) {
+    query += query ? "&" : "";
+    query += `slugs=${slugs.join(",")}`;
+  }
+  const responseContainer = await fetch(`${API_URL}/tools?${query}`);
   const result = await responseContainer.json();
   return result.map(({ _id, _source }) => ({ ..._source, _id }));
 };

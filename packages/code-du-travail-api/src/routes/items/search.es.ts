@@ -1,13 +1,28 @@
-export const getDocumentBody = ({
-  url,
-  source,
-  ids,
-}: {
+enum OrderDirection {
+  asc = "asc",
+  desc = "desc",
+}
+
+type ItemFilterType = {
   url?: string;
   source?: string;
   ids?: string;
-}): any => {
+};
+
+type ItemSortType = {
+  fieldName: string;
+  orderDirection: OrderDirection;
+};
+
+export const getDocumentBody = (
+  { url, source, ids }: ItemFilterType,
+  sortParam?: ItemSortType
+): any => {
   const filter: any[] = [{ term: { isPublished: true } }];
+  const sort: any[] = [];
+  if (sortParam) {
+    sort.push({ [sortParam.fieldName]: sortParam.orderDirection });
+  }
   if (url) {
     filter.push({ term: { url } });
   }
@@ -24,5 +39,6 @@ export const getDocumentBody = ({
       },
     },
     size: 200,
+    sort,
   };
 };

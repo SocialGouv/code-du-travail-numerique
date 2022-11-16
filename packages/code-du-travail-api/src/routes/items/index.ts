@@ -2,7 +2,6 @@ import elasticsearchClient from "../../conf/elasticsearch";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 import { getRelatedItems } from "./getRelatedItems";
 import { getDocumentBody } from "./search.es";
-import { getDocumentByIdsBody } from "./searchByIds.es";
 import { getSearchBySourceSlugBody } from "./searchBySourceSlug.es";
 
 const Router = require("koa-router");
@@ -91,7 +90,7 @@ router.get("/items", async (ctx: any) => {
   const body = getDocumentBody({ ids, source, url });
   const response = await elasticsearchClient.search({ body, index });
   if (response.body.hits.total.value === 0) {
-    ctx.throw(404, `there is no document that match ${url}`);
+    ctx.throw(404, `there is no document that match the query`);
   }
 
   ctx.body = response.body.hits.hits;
