@@ -29,6 +29,7 @@ exports[`<List /> should render and increment heading level of children by one 1
     >
       <h3
         class="c1"
+        data-testid="heading"
       >
         title
       </h3>

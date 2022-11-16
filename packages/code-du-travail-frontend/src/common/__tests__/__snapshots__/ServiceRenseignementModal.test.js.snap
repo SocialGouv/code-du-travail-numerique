@@ -512,6 +512,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
           >
             <h4
               class="c3"
+              data-testid="heading"
             >
               Contact téléphonique
             </h4>
@@ -535,6 +536,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
             </a>
             <h4
               class="c3"
+              data-testid="heading"
             >
               Contact par email et prise de rendez-vous
             </h4>

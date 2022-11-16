@@ -17,9 +17,9 @@
     "prebuild": "node -r @swc-node/register scripts/prebuild.ts",
     "build": "next build",
     "analyze-bundles": "ANALYZE=true next build",
-    "test": "NODE_ENV=test jest",
-    "test:watch": "NODE_ENV=test jest --watch",
-    "test:update": "NODE_ENV=test jest -u",
+    "test": "NODE_ENV=test jest --silent",
+    "test:watch": "NODE_ENV=test jest --watch --silent",
+    "test:update": "NODE_ENV=test jest -u --silent",
     "generate-sitemap": "node -r esm ./scripts/generate-sitemap",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch"

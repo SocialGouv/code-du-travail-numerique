@@ -2928,9 +2928,11 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                   >
                     <h2
                       class="c82 c83"
+                      data-testid="heading"
                     >
                       <span
                         class="c69"
+                        data-testid="stripe"
                       />
                       Avez-vous trouvé la réponse à votre question ?
                     </h2>
@@ -3019,6 +3021,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 <strong
                   aria-level="2"
                   class="c100 c101"
+                  data-testid="heading"
                   role="heading"
                 >
                   Code du travail numérique
@@ -3098,6 +3101,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 <strong
                   aria-level="2"
                   class="c100 c101"
+                  data-testid="heading"
                   role="heading"
                 >
                   Aidez-nous à améliorer cet outil
@@ -3142,6 +3146,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                 <strong
                   aria-level="2"
                   class="c100 c101"
+                  data-testid="heading"
                   role="heading"
                 >
                   En collaboration avec
@@ -6221,9 +6226,11 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                   >
                     <h2
                       class="c82 c83"
+                      data-testid="heading"
                     >
                       <span
                         class="c69"
+                        data-testid="stripe"
                       />
                       Avez-vous trouvé la réponse à votre question ?
                     </h2>
@@ -6312,6 +6319,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 <strong
                   aria-level="2"
                   class="c100 c101"
+                  data-testid="heading"
                   role="heading"
                 >
                   Code du travail numérique
@@ -6391,6 +6399,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 <strong
                   aria-level="2"
                   class="c100 c101"
+                  data-testid="heading"
                   role="heading"
                 >
                   Aidez-nous à améliorer cet outil
@@ -6435,6 +6444,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                 <strong
                   aria-level="2"
                   class="c100 c101"
+                  data-testid="heading"
                   role="heading"
                 >
                   En collaboration avec

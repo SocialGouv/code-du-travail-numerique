@@ -107,6 +107,7 @@ exports[`<RelatedItems /> should render 1`] = `
     <div
       aria-level="2"
       class="c1"
+      data-testid="heading"
       role="heading"
     >
       Modèles et outils liés
@@ -169,6 +170,7 @@ exports[`<RelatedItems /> should render 1`] = `
     <div
       aria-level="2"
       class="c1"
+      data-testid="heading"
       role="heading"
     >
       Articles liés

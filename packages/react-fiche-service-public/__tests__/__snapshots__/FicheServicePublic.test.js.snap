@@ -532,6 +532,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
         >
           <h2
             class="c10"
+            data-testid="heading"
           >
             CDI
           </h2>
@@ -584,6 +585,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
+                        data-testid="heading"
                         style="margin: 0px;"
                       >
                         De quoi s'agit-il ?
@@ -658,6 +660,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
+                        data-testid="heading"
                         style="margin: 0px;"
                       >
                         Conditions
@@ -775,6 +778,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
+                        data-testid="heading"
                         style="margin: 0px;"
                       >
                         Volonté de démissionner
@@ -876,6 +880,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
+                        data-testid="heading"
                         style="margin: 0px;"
                       >
                         Procédure
@@ -989,6 +994,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
+                        data-testid="heading"
                         style="margin: 0px;"
                       >
                         Préavis
@@ -1011,6 +1017,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </p>
                     <h4
                       class="c10"
+                      data-testid="heading"
                     >
                       Durée
                     </h4>
@@ -1073,6 +1080,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         >
                           <h4
                             class="c10"
+                            data-testid="heading"
                           >
                             Cas général
                           </h4>
@@ -1123,6 +1131,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                           >
                             <h5
                               class="c10"
+                              data-testid="heading"
                             >
                               À savoir
                             </h5>
@@ -1147,6 +1156,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </div>
                     <h4
                       class="c10"
+                      data-testid="heading"
                     >
                       Dispense de préavis
                     </h4>
@@ -1227,6 +1237,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                         >
                           <h4
                             class="c10"
+                            data-testid="heading"
                           >
                             Vous demandez une dispense de préavis
                           </h4>
@@ -1282,6 +1293,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                     >
                                       <h5
                                         class="c10"
+                                        data-testid="heading"
                                         style="margin: 0px;"
                                       >
                                         Accord de l'employeur
@@ -1353,6 +1365,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                     >
                                       <h5
                                         class="c10"
+                                        data-testid="heading"
                                         style="margin: 0px;"
                                       >
                                         Refus de l'employeur
@@ -1389,6 +1402,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </div>
                     <h4
                       class="c10"
+                      data-testid="heading"
                     >
                       Report ou suspension du préavis
                     </h4>
@@ -1439,6 +1453,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </ul>
                     <h4
                       class="c10"
+                      data-testid="heading"
                     >
                       Absence pour recherche d'emploi
                     </h4>
@@ -1499,6 +1514,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
+                        data-testid="heading"
                         style="margin: 0px;"
                       >
                         Indemnisation
@@ -1621,6 +1637,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
+                        data-testid="heading"
                         style="margin: 0px;"
                       >
                         Documents remis au salarié

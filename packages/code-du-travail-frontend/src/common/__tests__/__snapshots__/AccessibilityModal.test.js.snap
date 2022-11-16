@@ -391,6 +391,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
             </div>
             <h3
               class="c6"
+              data-testid="heading"
             >
               Couleurs
             </h3>
