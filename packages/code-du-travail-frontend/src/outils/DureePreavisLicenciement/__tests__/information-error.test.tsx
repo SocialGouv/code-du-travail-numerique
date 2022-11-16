@@ -38,6 +38,22 @@ test(`
   });
   fireEvent.click(ui.next.get());
   expect(
-    screen.getByText(/vous devez répondre à cette question/i)
+    screen.queryByText(/vous devez répondre à cette question/i)
   ).toBeInTheDocument();
+
+  fireEvent.change(ui.agreement1351.levelInput.get(), {
+    target: {
+      value: "4| III",
+    },
+  });
+  fireEvent.change(ui.agreement1351.seniorityInput.get(), {
+    target: {
+      value: "36| Plus de 6 mois à 2 ans",
+    },
+  });
+  expect(
+    screen.queryByText(/vous devez répondre à cette question/i)
+  ).not.toBeInTheDocument();
+  fireEvent.click(ui.next.get());
+  expect(ui.print.get()).toBeInTheDocument();
 });

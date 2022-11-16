@@ -32,6 +32,7 @@ const YesNoPubliQuestion = ({
             <InputRadio
               label="Oui"
               id={`${props.input.name}-oui`}
+              data-testid={`${props.input.name}-oui`}
               {...props.input}
             />
           )}
@@ -41,6 +42,7 @@ const YesNoPubliQuestion = ({
             <InputRadio
               label="Non"
               id={`${props.input.name}-non`}
+              data-testid={`${props.input.name}-non`}
               {...props.input}
             />
           )}

@@ -12,5 +12,11 @@ export const ui = {
     categoryProInput: byTestId(
       "infos.contrat salarié - convention collective - prevention sécurité entreprise - catégorie professionnelle"
     ),
+    disableWorkerYesInput: byTestId(
+      "infos.contrat salarié - travailleur handicapé-oui"
+    ),
+    disableWorkerNoInput: byTestId(
+      "infos.contrat salarié - travailleur handicapé-non"
+    ),
   },
 };

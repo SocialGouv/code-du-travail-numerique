@@ -41,7 +41,12 @@ test(`
   });
   fireEvent.click(ui.next.get());
   expect(
-    screen.getByText(/vous devez répondre à cette question/i)
+    screen.queryByText(/vous devez répondre à cette question/i)
   ).toBeInTheDocument();
-  // verifier qu'il affiche plus le vous devez repondre a cette question
+
+  fireEvent.click(ui.agreement1351.disableWorkerNoInput.get());
+  expect(
+    screen.queryByText(/vous devez répondre à cette question/i)
+  ).not.toBeInTheDocument();
+  fireEvent.click(ui.next.get());
 });

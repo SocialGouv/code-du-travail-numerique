@@ -35,6 +35,21 @@ test(`
   });
   fireEvent.click(ui.next.get());
   expect(
-    screen.getByText(/vous devez répondre à cette question/i)
+    screen.queryByText(/vous devez répondre à cette question/i)
   ).toBeInTheDocument();
+  fireEvent.change(ui.agreement3239.durationInput.get(), {
+    target: {
+      value: "124| Moins de 40 heures par semaine",
+    },
+  });
+  fireEvent.change(ui.agreement3239.seniorityInput.get(), {
+    target: {
+      value: "43| 2 ans ou plus",
+    },
+  });
+  expect(
+    screen.queryByText(/vous devez répondre à cette question/i)
+  ).not.toBeInTheDocument();
+  fireEvent.click(ui.next.get());
+  expect(ui.print.get()).toBeInTheDocument();
 });
