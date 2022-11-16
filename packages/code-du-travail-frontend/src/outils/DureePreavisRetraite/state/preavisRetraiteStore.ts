@@ -12,7 +12,7 @@ import {
 } from "./usecases";
 import { updateFormValues } from "./utils";
 import removeOldQuestions from "./usecases/removeOldQuestions";
-import validateInformationAgreement3239 from "./usecases/validateInformationAgreement3239";
+import resetInfosLastQuestionNotAnsweredOnOriginChange from "./usecases/resetInfosLastQuestionNotAnsweredOnOriginChange";
 
 export const initialState: PreavisRetraiteState = {
   title: "",
@@ -41,7 +41,14 @@ const createPreavisRetraiteStore = (rules: string, title: string) =>
         ...state,
         formValues: values,
       })),
-    onOriginChange: (type) => set((state) => showOriginWarning(state, type)),
+    onOriginChange: (oldType, newType) =>
+      set((state) =>
+        resetInfosLastQuestionNotAnsweredOnOriginChange(
+          oldType,
+          newType,
+          showOriginWarning(state, newType!!)
+        )
+      ),
     onAgreementChange: (newValue, oldValue, form) =>
       set((state) =>
         computeMinSeniorityYear(
