@@ -63,7 +63,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   private buildSituation(map: SituationElement[]): Record<string, string> {
     const situation: Record<string, string> = {};
     map.forEach((arg) => {
-      situation[arg.name] = arg.value;
+      situation[arg.rawNode.nom] = arg.value;
     });
     return situation;
   }
@@ -123,7 +123,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
         const publiKey = key.replace(/ - /g, " . ");
         const detail = this.engine.getRule(publiKey);
         newSituation.push({
-          name: publiKey,
+          name: key,
           rawNode: detail.rawNode,
           value: value,
         });
