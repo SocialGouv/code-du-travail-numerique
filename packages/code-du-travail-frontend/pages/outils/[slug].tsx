@@ -73,7 +73,7 @@ function Outils({
   return (
     <Layout>
       <Metas title={metaTitle} description={metaDescription} />
-      <StyledSection>
+      <div>
         <Container>
           <Flex>
             <Tool
@@ -89,7 +89,7 @@ function Outils({
           <RelatedItems items={relatedItems} />
           <Feedback url={router.asPath} />
         </Container>
-      </StyledSection>
+      </div>
       <EventTracker />
     </Layout>
   );
@@ -145,10 +145,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
 };
 
 const { breakpoints, spacings } = theme;
-
-const StyledSection = styled.div`
-  padding-top: 0;
-`;
 
 const ShareContainer = styled.div`
   display: flex;
