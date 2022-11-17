@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.86.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.2...v4.86.3) (2022-11-17)
+
+
+### Bug Fixes
+
+* **ci:** upgrade lerna to v6 ([#4679](https://github.com/SocialGouv/code-du-travail-numerique/issues/4679)) ([bcdff49](https://github.com/SocialGouv/code-du-travail-numerique/commit/bcdff491f5974911e9676e2e9bb48fe7d1d1ade5))
+* **lerna:** `--no-verify-access` is set by default ([#4680](https://github.com/SocialGouv/code-du-travail-numerique/issues/4680)) ([e4027cf](https://github.com/SocialGouv/code-du-travail-numerique/commit/e4027cf88ca42e20a8eef6e5c2deec382424c9e8))
+* **lerna:** token no verify access ([#4678](https://github.com/SocialGouv/code-du-travail-numerique/issues/4678)) ([5610baf](https://github.com/SocialGouv/code-du-travail-numerique/commit/5610baf26ea4730e0226bf0a3d4d665e6465f6ef))
+
+
+
+
+
 ## [4.86.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.1...v4.86.2) (2022-11-17)
 
 
