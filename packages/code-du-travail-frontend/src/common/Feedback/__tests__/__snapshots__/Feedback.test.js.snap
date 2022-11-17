@@ -290,9 +290,11 @@ exports[`<Feedback/> should render 1`] = `
         >
           <h2
             class="c5 c6"
+            data-testid="heading"
           >
             <span
               class="c7"
+              data-testid="stripe"
             />
             Avez-vous trouvé la réponse à votre question ?
           </h2>
@@ -827,9 +829,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
         >
           <h2
             class="c5 c6"
+            data-testid="heading"
           >
             <span
               class="c7"
+              data-testid="stripe"
             />
             Merci pour votre réponse.
           </h2>
@@ -1339,9 +1343,11 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
         >
           <h2
             class="c5 c6"
+            data-testid="heading"
           >
             <span
               class="c7"
+              data-testid="stripe"
             />
             Merci pour votre réponse.
           </h2>

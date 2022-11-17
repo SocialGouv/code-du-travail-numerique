@@ -7,10 +7,10 @@ describe("<TableOfContent />", () => {
   const observeMock = jest.fn();
   const disconnectMock = jest.fn();
   beforeAll(() => {
-    global.IntersectionObserver = () => ({
-      disconnect: disconnectMock,
-      observe: observeMock,
-    });
+    global.IntersectionObserver = class IntersectionObserver {
+      disconnect = disconnectMock;
+      observe = observeMock;
+    };
   });
   beforeEach(() => {
     observeMock.mockClear();

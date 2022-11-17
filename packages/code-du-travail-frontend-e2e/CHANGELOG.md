@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.85.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.84.1...v4.85.0) (2022-11-15)
+
+
+### Features
+
+* **e2e:** migrate e2e test "Recherche de convention collective par entreprise" to cypress ([#4656](https://github.com/SocialGouv/code-du-travail-numerique/issues/4656)) ([338e9a2](https://github.com/SocialGouv/code-du-travail-numerique/commit/338e9a204d2948050c4c5cc09c0dbf8acb2c8880))
+
+
+
+
+
+## [4.84.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.84.0...v4.84.1) (2022-11-14)
+
+**Note:** Version bump only for package @cdt/e2e
+
+
+
+
+
+# [4.84.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.83.0...v4.84.0) (2022-11-07)
+
+**Note:** Version bump only for package @cdt/e2e
+
+
+
+
+
+# [4.83.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.82.0...v4.83.0) (2022-11-02)
+
+
+### Bug Fixes
+
+* **lint:** cypress in typescript ([#4624](https://github.com/SocialGouv/code-du-travail-numerique/issues/4624)) ([eabca85](https://github.com/SocialGouv/code-du-travail-numerique/commit/eabca853443608509216cd8d387f4f57e1856888))
+* correction des tests e2e ([#4589](https://github.com/SocialGouv/code-du-travail-numerique/issues/4589)) ([e4e1e02](https://github.com/SocialGouv/code-du-travail-numerique/commit/e4e1e02b5115f41670a9ad6f45a5af73dc9a24fe))
+
+
+### Features
+
+* **cypress:** add cypress to project ([#4598](https://github.com/SocialGouv/code-du-travail-numerique/issues/4598)) ([764d6b7](https://github.com/SocialGouv/code-du-travail-numerique/commit/764d6b7c6b45146ae30cc6c554c46d5186dafe16))
+
+
+
+
+
 # [4.82.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.81.0...v4.82.0) (2022-09-27)
 
 **Note:** Version bump only for package @cdt/e2e

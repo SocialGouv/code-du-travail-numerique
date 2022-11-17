@@ -1595,6 +1595,26 @@ exports[`<CookiePolicy /> should render 1`] = `
                   <tbody>
                     <tr>
                       <td>
+                        Mesure d’audience
+                      </td>
+                      <td>
+                        Google Analytics
+                      </td>
+                      <td>
+                        13 mois
+                      </td>
+                      <td>
+                        Mesure d’audience et analyse comportementale
+                      </td>
+                      <td>
+                        Google
+                      </td>
+                      <td>
+                        Etats-Unis
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
                         Mesure d’audience anonymisée
                       </td>
                       <td>
@@ -1624,7 +1644,7 @@ exports[`<CookiePolicy /> should render 1`] = `
                         13 mois
                       </td>
                       <td>
-                        Mesure d’audience
+                        Mesure d’audience et analyse comportementale
                       </td>
                       <td>
                         AT Internet
@@ -1642,6 +1662,9 @@ exports[`<CookiePolicy /> should render 1`] = `
             </p>
             <p>
               À tout moment, vous pouvez refuser l’utilisation des cookies et désactiver le dépôt sur votre ordinateur en utilisant la fonction dédiée de votre navigateur (fonction disponible notamment sur Microsoft Internet Explorer 11, Google Chrome, Mozilla Firefox, Apple Safari et Opera).
+            </p>
+            <p>
+              Seules certaines pages du site sont concernées par la mesure d’audience et l’analyse comportementale avec Google Analytics et vous n’avez visité aucune de ces pages. Aucun cookie Google Analytics n’a donc été déposé sur votre terminal.
             </p>
             <p>
               Pour l’outil Matomo, vous pouvez décider de ne jamais être suivi, y compris anonymement :
@@ -1744,6 +1767,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c49 c50"
+                data-testid="heading"
                 role="heading"
               >
                 Code du travail numérique
@@ -1823,6 +1847,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c49 c50"
+                data-testid="heading"
                 role="heading"
               >
                 Aidez-nous à améliorer cet outil
@@ -1867,6 +1892,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c49 c50"
+                data-testid="heading"
                 role="heading"
               >
                 En collaboration avec

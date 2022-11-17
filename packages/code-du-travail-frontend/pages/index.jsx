@@ -14,12 +14,12 @@ import getConfig from "next/config";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-
 import Metas from "../src/common/Metas";
 import { CallToActionTile } from "../src/common/tiles/CallToAction";
 import { Highlights } from "../src/home/Highlights";
 import { Themes } from "../src/home/Themes";
 import { Layout } from "../src/layout/Layout";
+import { EventTracker } from "../src/lib";
 import SearchHero from "../src/search/SearchHero";
 import { fetchTools } from "../src/outils/service";
 
@@ -102,6 +102,7 @@ const Home = ({ themes = [], highlights = [], tools }) => (
         </ButtonWrapper>
       </Container>
     </Section>
+    <EventTracker />
   </Layout>
 );
 

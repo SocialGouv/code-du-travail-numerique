@@ -33,6 +33,7 @@ type CommonProps = {
   custom?: boolean;
   icon?: string;
   centerTitle?: boolean;
+  titleTagType?: string;
 };
 
 type HighlightProps = {
@@ -58,6 +59,7 @@ type ListLinkProps = {
   query?: string;
   centerTitle?: boolean;
   disableAnalytics?: boolean;
+  titleTagType?: string;
 };
 
 export const ListLink = ({
@@ -77,6 +79,7 @@ export const ListLink = ({
   query,
   centerTitle,
   disableAnalytics = false,
+  titleTagType,
 }: ListLinkProps) => {
   let subtitle = "";
   if (showTheme && !icon) {
@@ -111,6 +114,7 @@ export const ListLink = ({
     wide: true,
     icon,
     centerTitle,
+    titleTagType,
   };
 
   if (source === SOURCES.EXTERNALS) {
@@ -188,7 +192,7 @@ export const Results = ({ id, isSearch, items, query }) => {
     <Container narrow role="region" aria-label="Résultats de recherche">
       {isSearch ? (
         <Heading
-          as="p"
+          as="h2"
           id={id}
         >{`Résultats de recherche pour “${query}”`}</Heading>
       ) : (
@@ -212,7 +216,12 @@ export const Results = ({ id, isSearch, items, query }) => {
       >
         {items.map((item) => (
           <StyledListItem key={`${item.source}-${item.slug}`}>
-            <ListLink item={item} showTheme={Boolean(isSearch)} query={query} />
+            <ListLink
+              item={item}
+              showTheme={Boolean(isSearch)}
+              query={query}
+              titleTagType="h3"
+            />
           </StyledListItem>
         ))}
       </ViewMore>
@@ -228,8 +237,8 @@ const StyledListItem = styled.li`
 
 const StyledButton = styled(Button)`
   margin-top: ${spacings.xmedium};
-  ${(props) => props.styles && props.styles}
-  @media (max-width: ${breakpoints.mobile}) {
+  ${(props) =>
+    props.styles && props.styles} @media(max-width: ${breakpoints.mobile}) {
     flex: 1 0 auto;
   }
 `;

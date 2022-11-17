@@ -1,32 +1,47 @@
-import PropTypes from "prop-types";
 import React from "react";
 import styled, { css } from "styled-components";
 
 import { Stripe } from "../../Stripe";
 import { breakpoints, fonts, spacings } from "../../theme.js";
 
-export const Heading = ({ children, stripe, variant, ...props }) => (
-  <StyledHeading stripe={stripe} {...props}>
-    {stripe !== "none" && (
+type Props = {
+  children: React.ReactNode;
+  stripe?: "left" | "none";
+  variant?: "primary" | "secondary";
+  isFirst?: boolean;
+  shift?: string;
+  as?: React.ElementType;
+  style?: React.CSSProperties;
+  role?: string;
+  ariaLevel?: number | string;
+  id?: string;
+  dataTestid?: string;
+};
+
+export const Heading = (props: Props) => (
+  <StyledHeading
+    as={props.as}
+    stripe={props.stripe}
+    shift={props.shift}
+    isFirst={props.isFirst}
+    style={props.style}
+    role={props.role}
+    aria-level={props.ariaLevel}
+    id={props.id}
+    data-testid={props.dataTestid ?? "heading"}
+  >
+    {props.stripe !== "none" && (
       <Stripe
-        rounded={variant !== "primary"}
-        variant={variant}
-        position={stripe}
+        data-testid="stripe"
+        rounded={props.variant !== "primary"}
+        variant={props.variant ?? "primary"}
+        position={props.stripe ?? "top"}
         length="100%"
       />
     )}
-    {children}
+    {props.children}
   </StyledHeading>
 );
-
-Heading.propTypes = {
-  children: PropTypes.node,
-  "data-testid": PropTypes.string,
-  isFirst: PropTypes.bool,
-  shift: PropTypes.string,
-  stripe: PropTypes.oneOf(["left", "none"]),
-  variant: PropTypes.string,
-};
 
 Heading.defaultProps = {
   isFirst: false,
@@ -34,7 +49,14 @@ Heading.defaultProps = {
   variant: "secondary",
 };
 
-const StyledHeading = styled.h3`
+interface HeadingProps {
+  isFirst: boolean;
+  stripe: "left" | "none";
+  shift: string;
+  as?: React.ElementType;
+}
+
+const StyledHeading = styled.h3<HeadingProps>`
   position: relative;
   display: block;
   margin: ${({ isFirst }) => (isFirst ? 0 : spacings.large)} 0

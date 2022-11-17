@@ -392,11 +392,11 @@ exports[`<Highlights /> should render 1`] = `
                     >
                       Santé, sécurité et conditions de travail
                     </p>
-                    <p
+                    <h3
                       class="c14"
                     >
                       Coronavirus : je suis salarié
-                    </p>
+                    </h3>
                   </div>
                 </div>
                 <div
@@ -432,11 +432,11 @@ exports[`<Highlights /> should render 1`] = `
                     >
                       Santé, sécurité et conditions de travail
                     </p>
-                    <p
+                    <h3
                       class="c14"
                     >
                       Coronavirus : je suis employeur
-                    </p>
+                    </h3>
                   </div>
                 </div>
                 <div
