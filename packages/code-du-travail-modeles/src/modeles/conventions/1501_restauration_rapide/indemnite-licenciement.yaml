@@ -100,6 +100,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
     toutes ces conditions:
       - indemnité de licenciement . ancienneté conventionnelle en année > 2 an
       - indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
+  valeur: oui
   cdtn:
     formule:
       explanations:
@@ -112,6 +113,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
     toutes ces conditions:
       - indemnité de licenciement . ancienneté conventionnelle en année > 10 an
       - indemnité de licenciement . ancienneté conventionnelle en année <= 15 an
+  valeur: oui
   cdtn:
     formule:
       explanations:
@@ -122,6 +124,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . résultat conventionnel . plus de 15 ans résultat conventionnel:
   applicable si: indemnité de licenciement . ancienneté conventionnelle en année > 15 an
+  valeur: oui
   cdtn:
     formule:
       explanations:
@@ -247,6 +250,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
     toutes ces conditions:
       - indemnité de licenciement . ancienneté conventionnelle en année >= 1 an
       - indemnité de licenciement . ancienneté conventionnelle en année <= 5 an
+  valeur: oui
   cdtn:
     formule:
       explanations:
@@ -259,6 +263,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
     toutes ces conditions:
       - indemnité de licenciement . ancienneté conventionnelle en année > 5 an
       - indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
+  valeur: oui
   cdtn:
     formule:
       explanations:
@@ -272,6 +277,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
     toutes ces conditions:
       - indemnité de licenciement . ancienneté conventionnelle en année > 10 an
       - indemnité de licenciement . ancienneté conventionnelle en année <= 15 an
+  valeur: oui
   cdtn:
     formule:
       explanations:
@@ -283,6 +289,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . résultat conventionnel . plus de 15 ans:
   applicable si: indemnité de licenciement . ancienneté conventionnelle en année > 15 an
+  valeur: oui
   cdtn:
     formule:
       explanations:
