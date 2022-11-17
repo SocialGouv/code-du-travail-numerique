@@ -27,10 +27,6 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-      - name: Set npm token
-        run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Deploy
         run: |
           npm config set access public
@@ -40,12 +36,13 @@ jobs:
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           yarn --frozen-lockfile
           yarn build:npm
-          GH_TOKEN=${GITHUB_TOKEN} yarn lerna version --force-publish --yes --conventional-commits --create-release github
+          GH_TOKEN=${GITHUB_TOKEN} yarn lerna version --force-publish --yes --conventional-commits --create-release github --no-verify-access
           yarn lerna publish from-package --yes
         env:
           GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Rebase master to dev
         run: |
           git config --global user.name "${NAME}"
