@@ -1,11 +1,23 @@
 import { DureePreavisRetraite } from "..";
 
-import { render, fireEvent, waitFor, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 import { ui } from "./ui";
 import { loadPublicodesRules } from "../../api";
 
-jest.mock("../../../conventions/Search/api/agreements.service");
+jest.spyOn(Storage.prototype, "setItem");
+Storage.prototype.getItem = jest.fn(
+  () => `
+{
+  "num": 1351,
+  "shortTitle": "CC 1351",
+  "id": "KALICONT",
+  "title": "CC 1351",
+  "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT",
+  "slug": "cc-1351"
+}
+`
+);
 
 test(`
   - Vérifier qu'on ne peut pas passer à l'étape suivante sans avoir sélectionné toutes les informations de la CC
@@ -21,20 +33,11 @@ test(`
 
   fireEvent.click(ui.introduction.startButton.get());
 
-  fireEvent.click(ui.origin.departRetraiteOui.get());
+  fireEvent.click(ui.origin.depart.get());
+  fireEvent.click(ui.next.get());
   fireEvent.click(ui.next.get());
 
-  fireEvent.click(ui.agreement.agreement.get());
-  fireEvent.change(ui.agreement.agreementInput.get(), {
-    target: { value: "1351" },
-  });
-  await waitFor(() =>
-    expect(ui.agreement1351.searchResult.query()).toBeInTheDocument()
-  );
-  fireEvent.click(ui.agreement1351.searchResult.get());
-  fireEvent.click(ui.next.get());
-
-  fireEvent.change(ui.agreement1351.categoryProInput.get(), {
+  fireEvent.change(ui.information.agreement1351.categoryProInput.get(), {
     target: {
       value: "'Agents de maîtrise'",
     },
@@ -44,7 +47,7 @@ test(`
     screen.queryByText(/vous devez répondre à cette question/i)
   ).toBeInTheDocument();
 
-  fireEvent.click(ui.agreement1351.disableWorkerNoInput.get());
+  fireEvent.click(ui.information.agreement1351.disableWorkerNoInput.get());
   expect(
     screen.queryByText(/vous devez répondre à cette question/i)
   ).not.toBeInTheDocument();
