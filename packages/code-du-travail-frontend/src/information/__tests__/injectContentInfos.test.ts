@@ -1,10 +1,11 @@
 import { injectContentInfos } from "../information.service";
 import {
+  BlockDisplayMode,
   Content,
-  ContentBlock,
-  EditorialContent,
+  ContentBlockContent,
+  ContentBlockContentItem,
+  ContentType,
   EditorialContentData,
-  SectionDisplayMode,
 } from "cdtn-types";
 
 describe("function injectContentInfos", () => {
@@ -14,18 +15,18 @@ describe("function injectContentInfos", () => {
     references: [],
     title: "title",
   };
-  const mockedBlock: ContentBlock = {
-    type: "content",
+  const mockedBlock: ContentBlockContent = {
+    type: ContentType.content,
+    blockDisplayMode: BlockDisplayMode.line,
+    title: "title1",
+    contents: [],
   };
-  const mockedContentItem: EditorialContent = {
+  const mockedContentItem: ContentBlockContentItem = {
     cdtnId: "cdtnId",
     title: "title",
-    breadcrumbs: [],
-    contents: [],
-    date: "",
-    metaDescription: "",
-    references: [],
-    sectionDisplayMode: SectionDisplayMode.accordion,
+    description: "description",
+    slug: "slug",
+    source: "source",
   };
   let contentsProp: Content[];
   let fetchedContentsProp: EditorialContentData[];
@@ -62,6 +63,7 @@ describe("function injectContentInfos", () => {
             cdtnId: "id1",
             icon: "icon1",
           },
+          slug: "",
         },
         {
           _source: {
@@ -69,6 +71,7 @@ describe("function injectContentInfos", () => {
             cdtnId: "id2",
             icon: "icon2",
           },
+          slug: "",
         },
       ];
     });

@@ -11,18 +11,8 @@
     "stylelint-config-rational-order/plugin"
   ],
   "rules": {
-    "property-no-vendor-prefix": [
-      [],
-      {
-        "severity": "warning"
-      }
-    ],
-    "value-no-vendor-prefix": [
-      [],
-      {
-        "severity": "warning"
-      }
-    ],
+    "property-no-vendor-prefix": null,
+    "value-no-vendor-prefix": null,
     "order/properties-order": [
       [],
       {
@@ -37,11 +27,6 @@
         "severity": "warning"
       }
     ],
-    "no-descending-specificity": [
-      [],
-      {
-        "severity": "warning"
-      }
-    ]
+    "no-descending-specificity": null
   }
 }

@@ -255,7 +255,7 @@ exports[`<Button /> it renders a Button flat 1`] = `
 `;
 
 exports[`<Button /> it renders a Button link 1`] = `
-.c1 {
+.c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -296,48 +296,48 @@ exports[`<Button /> it renders a Button link 1`] = `
   overflow: visible;
 }
 
-.c1:hover {
+.c0:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c3 {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0 0.4rem 0 1rem;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c0:hover .c2 {
+.c0:hover svg {
   -webkit-transform: translateX(4px);
   -ms-transform: translateX(4px);
   transform: translateX(4px);
 }
 
+.c0 svg {
+  width: 2.6rem;
+  height: 1.4rem;
+  margin: 0;
+  -webkit-transition: -webkit-transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  transition: transform 250ms linear;
+  fill: #f66663;
+}
+
 @media (max-width:600px) {
-  .c1 {
+  .c0 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c1 {
+  .c0 {
     display: none;
   }
 }
 
 <div>
   <button
-    class="c0 c1"
+    class="c0"
   >
     this is a Button 
     link
      
     <svg
       aria-hidden="true"
-      class="c2 c3"
       fill="none"
       viewBox="0 0 28 15"
       xmlns="http://www.w3.org/2000/svg"
@@ -349,14 +349,13 @@ exports[`<Button /> it renders a Button link 1`] = `
     </svg>
   </button>
   <button
-    class="c0 c1"
+    class="c0"
   >
     this is a small Button 
     link
      
     <svg
       aria-hidden="true"
-      class="c2 c3"
       fill="none"
       viewBox="0 0 28 15"
       xmlns="http://www.w3.org/2000/svg"
@@ -368,14 +367,13 @@ exports[`<Button /> it renders a Button link 1`] = `
     </svg>
   </button>
   <button
-    class="c0 c1"
+    class="c0"
   >
     this is a narrow Button 
     link
      
     <svg
       aria-hidden="true"
-      class="c2 c3"
       fill="none"
       viewBox="0 0 28 15"
       xmlns="http://www.w3.org/2000/svg"

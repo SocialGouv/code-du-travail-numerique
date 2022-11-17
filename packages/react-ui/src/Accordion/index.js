@@ -41,6 +41,7 @@ export const Accordion = ({
                     as={"h" + titleLevel}
                     stripe="none"
                     style={{ margin: 0 }}
+                    dataTestid={`${props["data-testid"]}-${index}`}
                   >
                     {title}
                   </Heading>
@@ -60,6 +61,7 @@ export const Accordion = ({
 };
 
 Accordion.propTypes = {
+  "data-testid": PropTypes.string,
   disableStyles: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.shape({

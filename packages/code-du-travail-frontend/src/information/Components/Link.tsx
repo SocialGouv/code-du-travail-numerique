@@ -1,12 +1,12 @@
-import Link from "next/link";
+import NextLink from "next/link";
 import { A11yLink } from "../../common/A11yLink";
 
-export const InfoLink = ({ children, href }) => {
+export const Link = ({ children, href }) => {
   if (!href.includes("http")) {
     return (
-      <Link href={href} passHref>
+      <NextLink href={href} passHref>
         <a>{children}</a>
-      </Link>
+      </NextLink>
     );
   }
   return (

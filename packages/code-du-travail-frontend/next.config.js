@@ -71,21 +71,30 @@ const nextConfig = {
 
 module.exports = {
   async headers() {
+    let headers;
+    if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT) {
+      headers = [
+        {
+          key: "X-Robots-Tag",
+          value: "all",
+        },
+        {
+          key: "Content-Security-Policy",
+          value: ContentSecurityPolicy.replace(/\n/g, " ").trim(),
+        },
+      ];
+    } else {
+      headers = [
+        {
+          key: "X-Robots-Tag",
+          value: "noindex, nofollow, nosnippet",
+        },
+      ];
+    }
     return [
       {
         source: "/:path*",
-        headers: [
-          {
-            key: "Content-Security-Policy",
-            value: ContentSecurityPolicy.replace(/\n/g, " ").trim(),
-          },
-          {
-            key: "X-Robots-Tag",
-            value: process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
-              ? "all"
-              : "noindex, nofollow, nosnippet",
-          },
-        ],
+        headers,
       },
     ];
   },
