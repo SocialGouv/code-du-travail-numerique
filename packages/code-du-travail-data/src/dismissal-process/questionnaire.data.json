@@ -17,7 +17,7 @@
                         "statement": "Vous êtes concerné par un licenciement pour motif personnel",
                         "neutralStatementRef": true,
                         "trackingName": "licenciement_personnel",
-                        "info": "Licenciement dont le motif est lié à votre personne. Par exemple : faute, inaptitude constatée par le médecin du travail, insuffisance professionnelle...",
+                        "info": "Licenciement dont le motif est lié à votre personne. Par exemple : faute, inaptitude constatée par le médecin du travail...",
                         "question": {
                             "text": "Quel est le motif de ce licenciement ?",
                             "trackingName": "motif_de_licenciement",
@@ -123,7 +123,7 @@
                                                 "neutralStatement": "Dans une entreprise avec un CSE",
                                                 "question": {
                                                     "text": "Votre entreprise emploie :",
-                                                    "trackingName": "moins_de_1000_salaries",
+                                                    "trackingName": "nombre_de_salariés_dans_l_entreprise",
                                                     "responses": [
                                                         {
                                                             "text": "Moins de 1000 salariés",
@@ -132,7 +132,7 @@
                                                             "trackingName": "moins_de_1000_salaries",
                                                             "question": {
                                                                 "text": "Votre entreprise appartient-elle à un groupe français ou européen d’au moins 1000 salariés ?",
-                                                                "trackingName": "nombre_de_salariés_dans_l_entreprise",
+                                                                "trackingName": "appartenance_groupe",
                                                                 "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
                                                                 "responses": [
                                                                     {
@@ -396,7 +396,7 @@
                         "text": "Un licenciement pour motif personnel",
                         "statement": "Vous êtes concerné par un licenciement pour motif personnel",
                         "trackingName": "licenciement_personnel",
-                        "info": "Licenciement dont le motif est lié à la personne. Par exemple : faute, inaptitude constatée par le médecin du travail, insuffisance professionnelle...",
+                        "info": "Licenciement dont le motif est lié à la personne. Par exemple : faute, inaptitude constatée par le médecin du travail...",
                         "question": {
                             "text": "Quel est le motif de ce licenciement ?",
                             "trackingName": "motif_de_licenciement",
