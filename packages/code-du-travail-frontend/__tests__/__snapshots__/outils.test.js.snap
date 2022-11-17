@@ -2955,6 +2955,7 @@ exports[`<Outils /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c58 c59"
+                data-testid="heading"
                 role="heading"
               >
                 Code du travail numérique
@@ -3034,6 +3035,7 @@ exports[`<Outils /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c58 c59"
+                data-testid="heading"
                 role="heading"
               >
                 Aidez-nous à améliorer cet outil
@@ -3078,6 +3080,7 @@ exports[`<Outils /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c58 c59"
+                data-testid="heading"
                 role="heading"
               >
                 En collaboration avec

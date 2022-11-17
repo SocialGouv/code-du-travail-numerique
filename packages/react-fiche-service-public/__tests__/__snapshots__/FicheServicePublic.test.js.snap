@@ -1554,7 +1554,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                 >
                                   <h4
                                     class="c10"
-                                    data-testid="heading"
+                                    data-testid="undefined-0"
                                     style="margin: 0px;"
                                   >
                                     Par téléphone
@@ -1623,7 +1623,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                 >
                                   <h4
                                     class="c10"
-                                    data-testid="heading"
+                                    data-testid="undefined-1"
                                     style="margin: 0px;"
                                   >
                                     Par messagerie
@@ -1689,7 +1689,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                 >
                                   <h4
                                     class="c10"
-                                    data-testid="heading"
+                                    data-testid="undefined-2"
                                     style="margin: 0px;"
                                   >
                                     Par courrier

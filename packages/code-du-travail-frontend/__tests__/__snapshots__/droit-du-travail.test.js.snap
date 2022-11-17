@@ -2509,7 +2509,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     class="c38"
                   >
                     <p
-                      aria-level="4"
+                      aria-level="3"
                       class="c39"
                       role="heading"
                     >
@@ -4071,6 +4071,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   >
                     <h4
                       class="c55"
+                      data-testid="heading"
                     >
                       Hiérarchie entre le Code du travail et les conventions et accords collectifs
                     </h4>
@@ -4456,6 +4457,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     </p>
                     <h4
                       class="c55"
+                      data-testid="heading"
                     >
                       Hiérarchie entre convention collective de branche et accord d’entreprise
                     </h4>
@@ -4542,6 +4544,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     </p>
                     <h4
                       class="c55"
+                      data-testid="heading"
                     >
                       Hiérarchie entre accord de groupe et accord d’entreprise
                     </h4>
@@ -4550,6 +4553,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     </p>
                     <h4
                       class="c55"
+                      data-testid="heading"
                     >
                       Hiérarchie entre accord d’entreprise et accord d’établissement
                     </h4>
@@ -4965,6 +4969,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c100 c101"
+                data-testid="heading"
                 role="heading"
               >
                 Code du travail numérique
@@ -5044,6 +5049,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c100 c101"
+                data-testid="heading"
                 role="heading"
               >
                 Aidez-nous à améliorer cet outil
@@ -5088,6 +5094,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c100 c101"
+                data-testid="heading"
                 role="heading"
               >
                 En collaboration avec
