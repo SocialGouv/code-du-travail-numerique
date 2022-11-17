@@ -21,12 +21,12 @@ describe("CC 843", () => {
               seniority,
             "contrat salarié . indemnité de licenciement . ancienneté en année":
               seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salaireRef,
-            "contrat salarié . indemnité de licenciement . salaire de référence":
-              salaireRef,
             "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
               "non",
+            "contrat salarié . indemnité de licenciement . salaire de référence":
+              salaireRef,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salaireRef,
           })
           .evaluate(
             "contrat salarié . indemnité de licenciement . résultat conventionnel"

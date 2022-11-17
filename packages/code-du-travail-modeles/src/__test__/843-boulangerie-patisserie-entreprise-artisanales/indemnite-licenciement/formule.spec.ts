@@ -1,6 +1,7 @@
-import { getFormule } from "../../../utils";
 import Engine from "publicodes";
+
 import { mergeIndemniteLicenciementModels } from "../../../internal/merger";
+import { getFormule } from "../../../utils";
 
 describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 843", () => {
   const engine = new Engine(mergeIndemniteLicenciementModels());
@@ -23,10 +24,10 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
           seniority,
         "contrat salarié . indemnité de licenciement . ancienneté en année":
           seniority,
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-        "contrat salarié . indemnité de licenciement . salaire de référence": 1000,
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
           "non",
+        "contrat salarié . indemnité de licenciement . salaire de référence": 1000,
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
       });
       const result = getFormule(situation);
       expect(result.formula).toEqual(expectedFormula);
