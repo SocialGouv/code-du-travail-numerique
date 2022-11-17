@@ -1041,6 +1041,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       >
         <input
           class="c4"
+          data-testid="cttFormation-oui"
           id="cttFormation-oui"
           name="cttFormation"
           type="radio"
@@ -1058,6 +1059,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       >
         <input
           class="c4"
+          data-testid="cttFormation-non"
           id="cttFormation-non"
           name="cttFormation"
           type="radio"
@@ -1095,6 +1097,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       >
         <input
           class="c4"
+          data-testid="ruptureContratFauteGrave-oui"
           id="ruptureContratFauteGrave-oui"
           name="ruptureContratFauteGrave"
           type="radio"
@@ -1112,6 +1115,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       >
         <input
           class="c4"
+          data-testid="ruptureContratFauteGrave-non"
           id="ruptureContratFauteGrave-non"
           name="ruptureContratFauteGrave"
           type="radio"
@@ -1149,6 +1153,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       >
         <input
           class="c4"
+          data-testid="propositionCDIFinContrat-oui"
           id="propositionCDIFinContrat-oui"
           name="propositionCDIFinContrat"
           type="radio"
@@ -1166,6 +1171,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       >
         <input
           class="c4"
+          data-testid="propositionCDIFinContrat-non"
           id="propositionCDIFinContrat-non"
           name="propositionCDIFinContrat"
           type="radio"
@@ -1203,6 +1209,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       >
         <input
           class="c4"
+          data-testid="refusSouplesse-oui"
           id="refusSouplesse-oui"
           name="refusSouplesse"
           type="radio"
@@ -1220,6 +1227,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       >
         <input
           class="c4"
+          data-testid="refusSouplesse-non"
           id="refusSouplesse-non"
           name="refusSouplesse"
           type="radio"
