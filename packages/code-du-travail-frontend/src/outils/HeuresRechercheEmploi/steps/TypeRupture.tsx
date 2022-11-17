@@ -16,9 +16,7 @@ const question = questions.find((q) => q.name === "type de rupture");
 function StepTypeRupture({ form }) {
   const { values } = form.getState();
   const { ccn } = values;
-  useEffect(() => {
-    values.criteria = {};
-  });
+
   const idcc = ccn?.selected ? ccn.selected.num : 0;
 
   const initialSituations = getSituationsFor(allSituations, { idcc });
