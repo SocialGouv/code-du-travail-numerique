@@ -1,4 +1,4 @@
-import { Section, theme, Wrapper } from "@socialgouv/cdtn-ui";
+import { Section, Wrapper } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
@@ -7,12 +7,7 @@ import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
 import { EditorialContentDataWrapper } from "cdtn-types";
-import {
-  getContentBySlug,
-  getContentByIds,
-  getContentBlockIds,
-  injectContentInfos,
-} from "../../src/information";
+import { getInformationBySlug } from "../../src/information";
 import { Contents } from "../../src/information/Components";
 import { QuestionnaireWrapper } from "../../src/questionnaire";
 
@@ -86,26 +81,7 @@ export default Information;
 Information.getInitialProps = async ({ query: { slug }, asPath }) => {
   // beware, this one is undefined when rendered server-side
   const anchor = asPath.split("#")[1];
-  const contentBySlug = await getContentBySlug(slug);
-
-  const cdtnIdToFetch = getContentBlockIds(contentBySlug._source.contents);
-  let contents;
-
-  if (cdtnIdToFetch && cdtnIdToFetch.length) {
-    const fetchedContents = await getContentByIds(cdtnIdToFetch);
-    contents = injectContentInfos(
-      contentBySlug._source.contents,
-      fetchedContents
-    );
-  } else {
-    contents = contentBySlug._source.contents;
-  }
-
-  const information = {
-    ...contentBySlug,
-    _source: { ...contentBySlug._source, contents },
-    slug,
-  };
+  const information = await getInformationBySlug(slug);
 
   return { anchor, information };
 };

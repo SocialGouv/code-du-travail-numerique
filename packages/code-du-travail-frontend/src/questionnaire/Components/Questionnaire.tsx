@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "@socialgouv/cdtn-ui";
 import { Summary } from "./Summary";
 import { Question } from "./Question";
 import { useStore } from "../store";
@@ -44,7 +45,12 @@ export const Questionnaire = ({
   );
 };
 
+const { breakpoints } = theme;
+
 const StyledTitle = styled.div`
   font-weight: 600;
   font-size: 22px;
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: 18px;
+  }
 `;

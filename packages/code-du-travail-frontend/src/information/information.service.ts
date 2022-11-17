@@ -1,24 +1,20 @@
+import { Content, ContentType, EditorialContentData } from "cdtn-types";
+import { getContents } from "../content";
 import getConfig from "next/config";
 import { SOURCES } from "@socialgouv/cdtn-sources";
-import { Content, ContentType, EditorialContentData } from "cdtn-types";
 
 const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-export const getContentByIds = async (ids: string[]): Promise<any> => {
-  const responseContainer = await fetch(
-    `${API_URL}/items?ids=${ids.join(",")}&all=true`
-  );
-  return await responseContainer.json();
-};
-
-export const getContentBySlug = async (slug: string): Promise<any> => {
+export const getEditorialContentBySlug = async (
+  slug: string
+): Promise<EditorialContentData> => {
   const responseContainer = await fetch(
     `${API_URL}/items/${SOURCES.EDITORIAL_CONTENT}/${slug}`
   );
   if (!responseContainer.ok) {
-    return { statusCode: responseContainer.status };
+    throw new Error("Error while fetching editorial content");
   }
   return await responseContainer.json();
 };
@@ -56,4 +52,29 @@ export const injectContentInfos = (
     });
     return { ...content, blocks };
   });
+};
+
+export const getInformationBySlug = async (slug: string) => {
+  const contentBySlug = await getEditorialContentBySlug(slug);
+  let contents;
+
+  if (contentBySlug._source?.contents) {
+    const cdtnIdToFetch = getContentBlockIds(contentBySlug._source?.contents);
+
+    if (cdtnIdToFetch && cdtnIdToFetch.length) {
+      const fetchedContents = await getContents({ ids: cdtnIdToFetch });
+      contents = injectContentInfos(
+        contentBySlug._source.contents,
+        fetchedContents
+      );
+    } else {
+      contents = contentBySlug._source.contents;
+    }
+  }
+
+  return {
+    ...contentBySlug,
+    _source: { ...contentBySlug._source, contents },
+    slug,
+  };
 };

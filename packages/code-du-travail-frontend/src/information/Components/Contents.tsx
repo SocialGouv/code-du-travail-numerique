@@ -2,7 +2,7 @@ import { theme, Tabs, Accordion } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 import { Content, SectionDisplayMode } from "cdtn-types";
 
-import { ContentBlocks } from "./ContentBlocks";
+import { BlockList } from "./BlockList";
 
 import { trackClickInfoPageTab } from "../../questionnaire";
 
@@ -22,9 +22,7 @@ export const Contents = ({
   contents = [],
 }: ContentsParameters) => {
   let editorialContent = contents?.map(({ name, blocks }) => {
-    return (
-      <ContentBlocks key={name} name={name} blocks={blocks}></ContentBlocks>
-    );
+    return <BlockList key={name} name={name} blocks={blocks}></BlockList>;
   });
   let contentWrapper;
   if (editorialContent && editorialContent.length > 1) {
