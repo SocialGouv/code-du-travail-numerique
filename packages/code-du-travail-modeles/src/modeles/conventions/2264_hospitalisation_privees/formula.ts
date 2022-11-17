@@ -34,12 +34,10 @@ export class Formula2264
         );
       } else {
         formula = `(1/5 * Sref * A1) + (2/5 * Sref * A2)`;
-        explanations.push(
-          `A1 : Années d'ancienneté de 10 ans ou moins (10 ans)`
-        );
+        explanations.push(`A1 : Ancienneté de 10 ans ou moins (10 ans)`);
         const yearAfterDiff = round(seniority - 10) < 2 ? "an" : "ans";
         explanations.push(
-          `A2 : Ancienneté au delà de 10 ans (${round(
+          `A2 : Ancienneté au-delà de 10 ans (${round(
             seniority - 10
           )} ${yearAfterDiff})`
         );
@@ -82,13 +80,11 @@ export class Formula2264
         );
       } else {
         formula = `(1/5 * Sref * A1) + (2/5 * Sref * A2)`;
-        explanations.push(
-          `A1 : Années d'ancienneté de 10 ans ou moins (10 ans)`
-        );
+        explanations.push(`A1 : Ancienneté de 10 ans ou moins (10 ans)`);
         const yearAfterDiffNonCadre =
           round(seniorityNonCadre - 10) < 2 ? "an" : "ans";
         explanations.push(
-          `A2 : Ancienneté au delà de 10 ans (${round(
+          `A2 : Ancienneté au-delà de 10 ans (${round(
             seniorityNonCadre - 10
           )} ${yearAfterDiffNonCadre})`
         );
