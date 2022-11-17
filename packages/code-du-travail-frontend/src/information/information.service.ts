@@ -1,5 +1,5 @@
 import { Content, ContentType, EditorialContentData } from "cdtn-types";
-import { fetchTools } from "../outils";
+import { getContents } from "../content";
 import getConfig from "next/config";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 
@@ -62,7 +62,7 @@ export const getInformationBySlug = async (slug: string) => {
     const cdtnIdToFetch = getContentBlockIds(contentBySlug._source?.contents);
 
     if (cdtnIdToFetch && cdtnIdToFetch.length) {
-      const fetchedContents = await fetchTools({ ids: cdtnIdToFetch });
+      const fetchedContents = await getContents({ ids: cdtnIdToFetch });
       contents = injectContentInfos(
         contentBySlug._source.contents,
         fetchedContents
