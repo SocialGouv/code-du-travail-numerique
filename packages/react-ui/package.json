@@ -1,5 +1,8 @@
 {
   "name": "@socialgouv/cdtn-ui",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "4.86.10",
   "description": "Composants ReactJS",
   "main": "lib/index.js",

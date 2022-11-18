@@ -1,5 +1,8 @@
 {
   "name": "cdtn-types",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "4.86.10",
   "private": false,
   "main": "build/index.js",
