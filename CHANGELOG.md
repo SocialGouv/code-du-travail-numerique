@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.86.12](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.11...v4.86.12) (2022-11-18)
+
+### Bug Fixes
+
+- **workflow:** set registry to yarn ([d9f330b](https://github.com/SocialGouv/code-du-travail-numerique/commit/d9f330bbd14597bf5214eff198461c0b666a92b2))
+
 ## [4.86.11](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.10...v4.86.11) (2022-11-18)
 
 ### Bug Fixes
