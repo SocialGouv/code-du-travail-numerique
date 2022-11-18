@@ -61,6 +61,7 @@ const TextQuestion = ({
                     {...input}
                     {...props}
                     id={id}
+                    data-testid={name}
                     invalid={touched && invalid}
                   />
                   {invalid &&

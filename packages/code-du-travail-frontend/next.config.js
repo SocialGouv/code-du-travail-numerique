@@ -59,7 +59,7 @@ const nextConfig = {
     disableClientWebpackPlugin: true,
     disableServerWebpackPlugin: true,
   },
-  swcMinify: true,
+  swcMinify: false,
   compiler: {
     reactRemoveProperties:
       process.env.NODE_ENV === "production"

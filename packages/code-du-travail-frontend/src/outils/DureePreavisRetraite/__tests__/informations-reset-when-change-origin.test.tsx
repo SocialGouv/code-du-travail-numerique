@@ -47,7 +47,7 @@ test(`
   expect(
     ui.information.agreement1517.categoryPro.query()
   ).not.toBeInTheDocument();
-  expect(ui.information.handicap.query()).toBeInTheDocument();
+  expect(ui.information.handicap.label.query()).toBeInTheDocument();
 
   fireEvent.click(ui.previous.get());
   fireEvent.click(ui.previous.get());
@@ -72,5 +72,5 @@ test(`
   expect(ui.information.agreement1517.categoryProInput.query()).toHaveValue(
     "'Agents de maîtrise (Niveau VI)'"
   );
-  expect(ui.information.handicap.query()).toBeInTheDocument();
+  expect(ui.information.handicap.label.query()).toBeInTheDocument();
 });

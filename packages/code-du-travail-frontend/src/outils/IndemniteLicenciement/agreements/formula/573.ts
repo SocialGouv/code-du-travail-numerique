@@ -30,7 +30,7 @@ export class AgreementFormula573 implements AgreementFormula {
     const yearAgent = get().informationsData.input.publicodesInformations.find(
       (v) =>
         v.question.rule.nom ===
-        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . oui . age"
+        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age"
     )?.info;
 
     const parseYearAgent = yearAgent ? parseInt(yearAgent) : 0;
@@ -38,7 +38,7 @@ export class AgreementFormula573 implements AgreementFormula {
     const yearCadre = get().informationsData.input.publicodesInformations.find(
       (v) =>
         v.question.rule.nom ===
-        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . oui . age"
+        "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age"
     )?.info;
 
     const parseYearCadre = yearCadre ? parseInt(yearCadre) : 0;

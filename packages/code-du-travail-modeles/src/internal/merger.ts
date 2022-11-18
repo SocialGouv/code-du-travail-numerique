@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import yaml from "yaml";
+import { parse } from "yaml";
 
 import {
   commonFilenameFilter,
@@ -23,7 +23,7 @@ export function mergeCommonModels(): any {
 }
 
 function mergeModels(filenameFilter: string[]): any {
-  return yaml.parse(concatenateFilesInDir(publicodesDir, filenameFilter));
+  return parse(concatenateFilesInDir(publicodesDir, filenameFilter));
 }
 
 function concatenateFilesInDir(

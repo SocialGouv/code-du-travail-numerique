@@ -50,12 +50,7 @@ const createCommonInformationsStore: StoreSlice<
         const missingArgs = publicodes
           .setSituation(
             mapToPublicodesSituationForIndemniteLicenciementConventionnel(
-              agreement.num,
-              { value: 0 },
-              0,
-              { value: 0 },
-              0,
-              "01/01/2022"
+              agreement.num
             ),
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           )
@@ -118,11 +113,6 @@ const createCommonInformationsStore: StoreSlice<
           .setSituation(
             mapToPublicodesSituationForIndemniteLicenciementConventionnel(
               agreement.num,
-              { value: 0 },
-              0,
-              { value: 0 },
-              0,
-              "01/01/2022",
               rules
             ),
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
@@ -189,11 +179,6 @@ const createCommonInformationsStore: StoreSlice<
         const isStepSalaryHidden = publicodes.setSituation(
           mapToPublicodesSituationForIndemniteLicenciementConventionnel(
             agreement.num,
-            { value: 0 },
-            0,
-            { value: 0 },
-            0,
-            "01/01/2022",
             rules
           ),
           "contrat salarié . indemnité de licenciement . étape salaire désactivée"
