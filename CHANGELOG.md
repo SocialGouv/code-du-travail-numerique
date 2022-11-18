@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.87.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.22...v4.87.0) (2022-11-18)
+
+### Features
+
+- **versionning:** add version in `/api/health` ([#4687](https://github.com/SocialGouv/code-du-travail-numerique/issues/4687)) ([26abd72](https://github.com/SocialGouv/code-du-travail-numerique/commit/26abd72a1fef22087157bf68affae9581c70ebea))
+
 ## [4.86.22](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.21...v4.86.22) (2022-11-18)
 
 ### Features
