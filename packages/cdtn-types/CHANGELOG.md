@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.86.11](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.10...v4.86.11) (2022-11-18)
+
+### Bug Fixes
+
+- **lerna:** add scope ([9d49823](https://github.com/SocialGouv/code-du-travail-numerique/commit/9d498232bdbe3b210d6800a5da95eb72f1c1ce3d))
+- **package.json:** useless info ([d7f1b1c](https://github.com/SocialGouv/code-du-travail-numerique/commit/d7f1b1c3537301734ff1efcd5bdf81946bc3d668))
+
 ## [4.86.10](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.9...v4.86.10) (2022-11-18)
 
 **Note:** Version bump only for package cdtn-types
