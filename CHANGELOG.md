@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.86.16](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.15...v4.86.16) (2022-11-18)
+
+### Bug Fixes
+
+- **workflow:** remove npm whoami ([bf5755b](https://github.com/SocialGouv/code-du-travail-numerique/commit/bf5755bacf03e732d5a8d8c79e3acf2176746fac))
+
 ## [4.86.15](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.14...v4.86.15) (2022-11-18)
 
 ### Bug Fixes
