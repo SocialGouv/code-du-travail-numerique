@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.86.6](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.5...v4.86.6) (2022-11-18)
+
+### Bug Fixes
+
+- workflow ([ab92aec](https://github.com/SocialGouv/code-du-travail-numerique/commit/ab92aec801124ba82873c8530fa9d667ec585679))
+
+### Features
+
+- **workflow:** publish ([#4683](https://github.com/SocialGouv/code-du-travail-numerique/issues/4683)) ([257b6a2](https://github.com/SocialGouv/code-du-travail-numerique/commit/257b6a200cc7df29d51b47487bb9edd9680ac32f))
+
 ## [4.86.5](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.4...v4.86.5) (2022-11-18)
 
 ### Bug Fixes

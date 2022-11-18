@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.86.6](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.5...v4.86.6) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/e2e
+
 ## [4.86.5](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.4...v4.86.5) (2022-11-18)
 
 **Note:** Version bump only for package @cdt/e2e
