@@ -66,10 +66,3 @@ jobs:
       - name: Remove .npmrc
         if: always()
         run: rm .npmrc
-      # - name: Deploy
-      #   run: |
-      #     npm config set access public
-      #     npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-      #     yarn lerna publish from-package --yes
-      #   env:
-      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
