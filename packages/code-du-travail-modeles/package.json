@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/modeles-social",
-  "version": "4.86.9",
+  "version": "4.86.10",
   "description": "Les règles publicodes des simulateurs de code du travail numérique",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
