@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.86.19](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.18...v4.86.19) (2022-11-18)
+
+### Bug Fixes
+
+- **npm:** authentification and registration set ([22cd7b6](https://github.com/SocialGouv/code-du-travail-numerique/commit/22cd7b60e04a6450dca1d46bfae7738aa04d66f0))
+
 ## [4.86.18](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.17...v4.86.18) (2022-11-18)
 
 ### Bug Fixes
