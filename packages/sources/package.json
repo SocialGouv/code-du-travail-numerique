@@ -3,9 +3,6 @@
   "version": "4.86.9",
   "main": "index.js",
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
   "types": "index.d.ts",
   "repository": {
     "type": "git",
