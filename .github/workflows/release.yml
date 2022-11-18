@@ -58,11 +58,11 @@ jobs:
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
       - name: Setup token
-        run: echo //registry.npmjs.com/:_authToken=${NPM_TOKEN} > .npmrc
+        run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Deploy to npm
-        run: lerna publish from-package --yes
+        run: npx lerna publish from-package --yes
       - name: Remove .npmrc
         if: always()
         run: rm .npmrc
