@@ -61,8 +61,15 @@ jobs:
         run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Whoami npm
+        run: npm whoami
       - name: Deploy to npm
-        run: lerna publish from-package --yes
+        run: |
+          cd packages/cdtn-types && npm publish
+          cd ../../packages/code-du-travail-modeles && npm publish
+          cd ../../packages/react-ui && npm publish
+          cd ../../packages/slugify && npm publish
+          cd ../../packages/sources && npm publish
       - name: Remove .npmrc
         if: always()
         run: rm .npmrc
