@@ -1,6 +1,6 @@
 {
   "name": "@cdt/e2e",
-  "version": "4.86.6",
+  "version": "4.86.7",
   "private": true,
   "description": "",
   "main": "codecept/codecept.conf.js",

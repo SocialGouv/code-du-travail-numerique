@@ -1,6 +1,6 @@
 {
   "name": "cdtn-types",
-  "version": "4.86.6",
+  "version": "4.86.7",
   "private": false,
   "main": "build/index.js",
   "module": "build/index.js",
