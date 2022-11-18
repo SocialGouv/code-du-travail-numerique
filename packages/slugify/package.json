@@ -1,7 +1,8 @@
 {
   "name": "@socialgouv/cdtn-slugify",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "version": "4.86.18",
   "main": "index.js",

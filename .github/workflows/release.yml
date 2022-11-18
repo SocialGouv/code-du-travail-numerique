@@ -59,12 +59,11 @@ jobs:
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
       - name: Deploy to npm
         run: |
-          npm config set access public
-          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+          npm config set //registry.npmjs.org/:_authToken ${NODE_AUTH_TOKEN}
           cd packages/cdtn-types && npm publish
           cd ../../packages/code-du-travail-modeles && npm publish
           cd ../../packages/react-ui && npm publish
           cd ../../packages/slugify && npm publish
           cd ../../packages/sources && npm publish
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
