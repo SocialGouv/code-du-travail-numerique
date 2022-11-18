@@ -57,17 +57,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
-      - name: Setup token
-        run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Deploy to npm
         run: |
-          cd packages/cdtn-types && npm publish
-          cd ../../packages/code-du-travail-modeles && npm publish
-          cd ../../packages/react-ui && npm publish
-          cd ../../packages/slugify && npm publish
-          cd ../../packages/sources && npm publish
-      - name: Remove .npmrc
-        if: always()
-        run: rm .npmrc
+          cd packages/cdtn-types && echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc && npm publish && rm .npmrc
+          cd ../../packages/code-du-travail-modeles && echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc &&  npm publish && rm .npmrc
+          cd ../../packages/react-ui && echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc && npm publish && rm .npmrc
+          cd ../../packages/slugify && echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc && npm publish && rm .npmrc
+          cd ../../packages/sources && echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc && npm publish && rm .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
