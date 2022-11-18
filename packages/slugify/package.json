@@ -4,7 +4,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "version": "4.86.20",
+  "version": "4.86.21",
   "main": "index.js",
   "license": "MIT",
   "repository": {
