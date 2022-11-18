@@ -1,5 +1,8 @@
 {
   "name": "@socialgouv/cdtn-sources",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "4.86.13",
   "main": "index.js",
   "license": "MIT",
