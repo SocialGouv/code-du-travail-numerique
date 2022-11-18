@@ -37,7 +37,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
-          EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }
+          EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
       - name: Build for npm
         run: yarn build:npm
       - name: Versionning code
