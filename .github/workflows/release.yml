@@ -57,13 +57,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
-      - name: Deploy to npm
-        run: |
-          npm config set -- '//registry.npmjs.org/:_authToken' "${NODE_AUTH_TOKEN}"
-          cd packages/cdtn-types && npm publish
-          cd ../../packages/code-du-travail-modeles && npm publish
-          cd ../../packages/react-ui && npm publish
-          cd ../../packages/slugify && npm publish
-          cd ../../packages/sources && npm publish
+      - name: Setup token
+        run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.SOCIALGROOVYBOT_NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Deploy to npm
+        run: lerna publish from-package --yes
+      - name: Remove .npmrc
+        if: always()
+        run: rm .npmrc
