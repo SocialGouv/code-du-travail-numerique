@@ -60,16 +60,9 @@ jobs:
       - name: Setup token
         run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
         env:
-          NPM_TOKEN: ${{ secrets.SOCIALGROOVYBOT_NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Deploy to npm
         run: lerna publish from-package --yes
       - name: Remove .npmrc
         if: always()
         run: rm .npmrc
-      # - name: Deploy
-      #   run: |
-      #     npm config set access public
-      #     npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-      #     yarn lerna publish from-package --yes
-      #   env:
-      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
