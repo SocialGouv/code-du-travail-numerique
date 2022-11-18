@@ -4,7 +4,6 @@
     "access": "public"
   },
   "version": "4.86.10",
-  "private": false,
   "main": "build/index.js",
   "module": "build/index.js",
   "types": "build/index.d.ts",
