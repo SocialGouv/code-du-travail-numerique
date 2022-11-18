@@ -274,7 +274,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2rem;
   padding-bottom: 1.6rem;
   border-bottom: 1px solid #bbcadf;
 }
@@ -906,7 +906,7 @@ exports[`<Wizard /> should handle initialState.stepIndex 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2rem;
   padding-bottom: 1.6rem;
   border-bottom: 1px solid #bbcadf;
 }
@@ -1483,7 +1483,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2rem;
   padding-bottom: 1.6rem;
   border-bottom: 1px solid #bbcadf;
 }
@@ -2105,7 +2105,7 @@ exports[`<Wizard /> should navigate to the second step when click on Commencer 1
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2rem;
   padding-bottom: 1.6rem;
   border-bottom: 1px solid #bbcadf;
 }
@@ -2694,7 +2694,7 @@ exports[`<Wizard /> should render a step 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2rem;
   padding-bottom: 1.6rem;
   border-bottom: 1px solid #bbcadf;
 }
