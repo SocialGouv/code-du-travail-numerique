@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.86.22](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.21...v4.86.22) (2022-11-18)
+
+### Features
+
+- **lerna:** go back to lerna ([ade1ff5](https://github.com/SocialGouv/code-du-travail-numerique/commit/ade1ff5a566330fa007596af8d6961d7d8d86900))
+
 ## [4.86.21](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.20...v4.86.21) (2022-11-18)
 
 ### Bug Fixes
