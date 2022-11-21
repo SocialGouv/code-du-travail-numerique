@@ -1,4 +1,7 @@
-import { externals as externalTools, internals as tools } from "@socialgouv/modeles-social";
+import {
+  externals as externalTools,
+  internals as tools,
+} from "@socialgouv/modeles-social";
 import { NextApiRequest, NextApiResponse } from "next";
 
 interface Tools {
@@ -20,3 +23,12 @@ export function getTools(): Tools {
     ),
   };
 }
+
+// {
+//   "title": "Mon compte formation",
+//   "description": "Consultez en ligne vos droits à la formation, cherchez et réservez une formation",
+//   "url": "https://www.moncompteformation.gouv.fr",
+//   "icon": "Formation",
+//   "action": "Consulter",
+//   "id": "30b4832d-7584-44de-9b93-2ae5ce9dc57c"
+// }
