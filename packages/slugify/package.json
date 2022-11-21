@@ -1,11 +1,12 @@
 {
   "name": "@socialgouv/cdtn-slugify",
-  "version": "4.84.1",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "version": "4.87.0",
   "main": "index.js",
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/SocialGouv/code-du-travail-numerique.git",

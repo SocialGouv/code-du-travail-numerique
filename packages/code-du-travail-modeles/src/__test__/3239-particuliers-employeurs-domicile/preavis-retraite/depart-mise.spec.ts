@@ -138,7 +138,7 @@ describe("Préavis de retraite de la CC 3239", () => {
 });
 
 describe("Vérification des notifications", () => {
-  test("Pour une assistante maternelle  en départ à la retraite, une notification doit s'afficher", () => {
+  test("Pour une assistante maternelle  en départ à la retraite, aucune notification ne doit s'afficher", () => {
     const notifications = getNotifications(
       engine.setSituation({
         "contrat salarié . ancienneté": 5,
@@ -148,10 +148,7 @@ describe("Vérification des notifications", () => {
         "contrat salarié . travailleur handicapé": "non",
       })
     );
-    expect(notifications).toHaveLength(1);
-    expect(notifications[0].description).toBe(
-      'Si la lettre de départ à la retraite a été présentée avant le 01/01/2022, la durée de préavis peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2021 c’est la convention collective "Assistants maternels du particulier employeur (IDCC 2395)" qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable depuis le 01/01/2022.'
-    );
+    expect(notifications).toHaveLength(0);
   });
 
   test("Pour une salariée du particulier employeur en mise à la retraite, aucune  notification doit s'afficher", () => {

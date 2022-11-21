@@ -152,6 +152,7 @@ exports[`<TextQuestion /> should render 1`] = `
     >
       <input
         class="c5"
+        data-testid="test"
         id="1"
         name="test"
         value="hello"

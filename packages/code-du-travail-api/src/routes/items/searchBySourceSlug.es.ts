@@ -44,6 +44,7 @@ export const getSearchBySourceSlugBody = ({
       "source",
       "highlight", // convention-collective,
       "sectionDisplayMode",
+      "dismissalProcess",
       "meta_title",
       "type",
     ],

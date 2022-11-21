@@ -11,7 +11,7 @@ import {
 } from "@socialgouv/modeles-social";
 import { StoreSlice } from "../../../../types";
 import {
-  mapToPublicodesSituationForIndemniteLicenciementConventionnel,
+  mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues,
   mapToPublicodesSituationForIndemniteLicenciementLegal,
 } from "../../../../publicodes";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
@@ -44,6 +44,16 @@ const initialState: ResultStoreData = {
   hasBeenSubmit: true,
   isStepValid: true,
 };
+
+const isConventionnelBetter = (
+  publicodesSituationLegal: PublicodesIndemniteLicenciementResult,
+  publicodesSituationConventionnel: PublicodesIndemniteLicenciementResult
+) =>
+  publicodesSituationLegal.value !== undefined &&
+  publicodesSituationLegal.value !== null &&
+  publicodesSituationConventionnel.value !== undefined &&
+  publicodesSituationConventionnel.value !== null &&
+  publicodesSituationConventionnel.value > publicodesSituationLegal.value;
 
 const createResultStore: StoreSlice<
   ResultStoreSlice,
@@ -133,7 +143,7 @@ const createResultStore: StoreSlice<
           get as GetState<MainStore>
         );
         publicodesSituationConventionnel = publicodes.setSituation(
-          mapToPublicodesSituationForIndemniteLicenciementConventionnel(
+          mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
             agreement.num,
             agreementSeniority,
             agreementRefSalary,
@@ -162,10 +172,10 @@ const createResultStore: StoreSlice<
 
         if (
           agreementHasNoLegalIndemnity ||
-          (publicodesSituationConventionnel.value !== null &&
-            publicodesSituationLegal.value !== null &&
-            publicodesSituationConventionnel.value >
-              publicodesSituationLegal.value)
+          isConventionnelBetter(
+            publicodesSituationLegal,
+            publicodesSituationConventionnel
+          )
         ) {
           isAgreementBetter = true;
         }

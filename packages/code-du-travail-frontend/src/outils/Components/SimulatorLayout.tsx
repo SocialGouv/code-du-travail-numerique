@@ -196,6 +196,7 @@ const StyledForm = styled.form`
   }
   display: grid;
   grid-template-columns: fit-content(100%) 1fr;
+  grid-template-rows: 130px;
   grid-template-areas:
     "a b"
     "a c"
@@ -222,7 +223,7 @@ const StyledStepList = styled(StepList)`
 
 const StyledTitle = styled(Title)`
   grid-area: b;
-  margin-top: 42px;
+  margin-top: 40px;
 `;
 
 const StepWrapper = styled.div`

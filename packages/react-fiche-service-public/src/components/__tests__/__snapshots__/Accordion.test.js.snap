@@ -218,6 +218,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             >
               <h2
                 class="c8"
+                data-testid="undefined-0"
                 style="margin: 0px;"
               >
                 titre 1
@@ -286,6 +287,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             >
               <h2
                 class="c8"
+                data-testid="undefined-1"
                 style="margin: 0px;"
               >
                 titre 2
@@ -311,6 +313,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             </p>
             <h3
               class="c8"
+              data-testid="heading"
             >
               titre 2-1
             </h3>
@@ -359,6 +362,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
             >
               <h2
                 class="c8"
+                data-testid="undefined-2"
                 style="margin: 0px;"
               >
                 titre 3
@@ -499,6 +503,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
 <div>
   <h5
     class="c0"
+    data-testid="heading"
   >
     titre 0
   </h5>
@@ -550,6 +555,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             >
               <h5
                 class="c0"
+                data-testid="undefined-0"
                 style="margin: 0px;"
               >
                 titre 1
@@ -618,6 +624,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             >
               <h5
                 class="c0"
+                data-testid="undefined-1"
                 style="margin: 0px;"
               >
                 titre 2
@@ -643,6 +650,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             </p>
             <h6
               class="c0"
+              data-testid="heading"
             >
               titre 2-1
             </h6>
@@ -691,6 +699,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
             >
               <h5
                 class="c0"
+                data-testid="undefined-2"
                 style="margin: 0px;"
               >
                 titre 3

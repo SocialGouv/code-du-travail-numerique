@@ -1380,6 +1380,7 @@ exports[`<About /> should render 1`] = `
             </p>
             <h3
               class="c34"
+              data-testid="heading"
             >
               Pourquoi le Code du travail numérique ?
             </h3>
@@ -1398,6 +1399,7 @@ exports[`<About /> should render 1`] = `
             </p>
             <h3
               class="c34"
+              data-testid="heading"
             >
               À qui ce service s’adresse-t-il ?
             </h3>
@@ -1413,6 +1415,7 @@ exports[`<About /> should render 1`] = `
             </p>
             <h3
               class="c34"
+              data-testid="heading"
             >
               Que peut-on trouver sur le site ?
             </h3>
@@ -1450,6 +1453,7 @@ exports[`<About /> should render 1`] = `
             </div>
             <h3
               class="c34"
+              data-testid="heading"
             >
               Notre équipe
             </h3>
@@ -1486,6 +1490,7 @@ exports[`<About /> should render 1`] = `
             </p>
             <h3
               class="c34"
+              data-testid="heading"
             >
               Nos méthodes
             </h3>
@@ -1572,6 +1577,7 @@ exports[`<About /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c47 c48"
+                data-testid="heading"
                 role="heading"
               >
                 Code du travail numérique
@@ -1651,6 +1657,7 @@ exports[`<About /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c47 c48"
+                data-testid="heading"
                 role="heading"
               >
                 Aidez-nous à améliorer cet outil
@@ -1695,6 +1702,7 @@ exports[`<About /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c47 c48"
+                data-testid="heading"
                 role="heading"
               >
                 En collaboration avec

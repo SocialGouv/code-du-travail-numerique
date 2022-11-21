@@ -1,6 +1,10 @@
 {
   "name": "@socialgouv/modeles-social",
-  "version": "4.84.1",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "version": "4.87.0",
   "description": "Les règles publicodes des simulateurs de code du travail numérique",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -23,7 +27,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "prebuild": "tsc",
-    "test": "jest",
+    "test": "jest --silent=true",
     "lint": "eslint \"./src/**/*.{js,ts}\"",
     "dev": "nodemon --exec 'npm run build' --watch 'src/**' --ext 'ts,yaml'",
     "test:watch": "nodemon --exec 'jest' --watch 'src/**' --ext 'ts,yaml'",
@@ -35,7 +39,7 @@
   "dependencies": {
     "date-fns": "^2.28.0",
     "fs-extra": "^10.0.0",
-    "publicodes": "^1.0.0-beta.16",
+    "publicodes": "^1.0.0-beta.60",
     "yaml": "^1.10.2"
   },
   "lint-staged": {

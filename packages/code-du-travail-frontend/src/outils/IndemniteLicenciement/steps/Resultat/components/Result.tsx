@@ -15,7 +15,7 @@ type Props = {
 export default function Result(props: Props) {
   return (
     <>
-      <SectionTitle>Indemnité</SectionTitle>
+      <SectionTitle hasSmallMarginTop>Indemnité</SectionTitle>
       <p>
         À partir des éléments que vous avez saisis, l’indemnité de licenciement
         est estimée à&nbsp;:&nbsp;

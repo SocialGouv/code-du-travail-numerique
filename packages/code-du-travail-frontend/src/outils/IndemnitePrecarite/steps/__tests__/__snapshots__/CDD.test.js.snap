@@ -134,6 +134,7 @@ exports[`<StepCDD /> should render 1`] = `
       >
         <input
           class="c5"
+          data-testid="finContratPeriodeDessai-oui"
           id="finContratPeriodeDessai-oui"
           name="finContratPeriodeDessai"
           type="radio"
@@ -151,6 +152,7 @@ exports[`<StepCDD /> should render 1`] = `
       >
         <input
           class="c5"
+          data-testid="finContratPeriodeDessai-non"
           id="finContratPeriodeDessai-non"
           name="finContratPeriodeDessai"
           type="radio"
@@ -188,6 +190,7 @@ exports[`<StepCDD /> should render 1`] = `
       >
         <input
           class="c5"
+          data-testid="propositionCDIFindeContrat-oui"
           id="propositionCDIFindeContrat-oui"
           name="propositionCDIFindeContrat"
           type="radio"
@@ -205,6 +208,7 @@ exports[`<StepCDD /> should render 1`] = `
       >
         <input
           class="c5"
+          data-testid="propositionCDIFindeContrat-non"
           id="propositionCDIFindeContrat-non"
           name="propositionCDIFindeContrat"
           type="radio"
@@ -242,6 +246,7 @@ exports[`<StepCDD /> should render 1`] = `
       >
         <input
           class="c5"
+          data-testid="interruptionFauteGrave-oui"
           id="interruptionFauteGrave-oui"
           name="interruptionFauteGrave"
           type="radio"
@@ -259,6 +264,7 @@ exports[`<StepCDD /> should render 1`] = `
       >
         <input
           class="c5"
+          data-testid="interruptionFauteGrave-non"
           id="interruptionFauteGrave-non"
           name="interruptionFauteGrave"
           type="radio"
@@ -296,6 +302,7 @@ exports[`<StepCDD /> should render 1`] = `
       >
         <input
           class="c5"
+          data-testid="refusRenouvellementAuto-oui"
           id="refusRenouvellementAuto-oui"
           name="refusRenouvellementAuto"
           type="radio"
@@ -313,6 +320,7 @@ exports[`<StepCDD /> should render 1`] = `
       >
         <input
           class="c5"
+          data-testid="refusRenouvellementAuto-non"
           id="refusRenouvellementAuto-non"
           name="refusRenouvellementAuto"
           type="radio"

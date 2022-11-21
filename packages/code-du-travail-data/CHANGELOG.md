@@ -3,623 +3,434 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.87.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.22...v4.87.0) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.22](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.21...v4.86.22) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.21](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.20...v4.86.21) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.20](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.19...v4.86.20) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.19](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.18...v4.86.19) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.18](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.17...v4.86.18) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.17](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.16...v4.86.17) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.16](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.15...v4.86.16) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.15](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.14...v4.86.15) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.14](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.13...v4.86.14) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.13](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.12...v4.86.13) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.12](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.11...v4.86.12) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.11](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.10...v4.86.11) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.10](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.9...v4.86.10) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.9](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.8...v4.86.9) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.8](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.7...v4.86.8) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.7](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.6...v4.86.7) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.6](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.5...v4.86.6) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.5](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.4...v4.86.5) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.3...v4.86.4) (2022-11-18)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.2...v4.86.3) (2022-11-17)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.1...v4.86.2) (2022-11-17)
+
+**Note:** Version bump only for package @cdt/data
+
+## [4.86.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.0...v4.86.1) (2022-11-17)
+
+**Note:** Version bump only for package @cdt/data
+
+# [4.86.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.85.0...v4.86.0) (2022-11-17)
+
+### Features
+
+- **outils:** ajout de l'outils comprendre sa procédure de licenciement ([#4524](https://github.com/SocialGouv/code-du-travail-numerique/issues/4524)) ([e9fffe6](https://github.com/SocialGouv/code-du-travail-numerique/commit/e9fffe6444b41ac41439b3ad7da7b72fd6dcf1ec)), closes [#4525](https://github.com/SocialGouv/code-du-travail-numerique/issues/4525) [#4531](https://github.com/SocialGouv/code-du-travail-numerique/issues/4531) [#4542](https://github.com/SocialGouv/code-du-travail-numerique/issues/4542) [#4552](https://github.com/SocialGouv/code-du-travail-numerique/issues/4552) [#4559](https://github.com/SocialGouv/code-du-travail-numerique/issues/4559) [#4567](https://github.com/SocialGouv/code-du-travail-numerique/issues/4567) [#4621](https://github.com/SocialGouv/code-du-travail-numerique/issues/4621) [#4647](https://github.com/SocialGouv/code-du-travail-numerique/issues/4647)
+
+# [4.85.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.84.1...v4.85.0) (2022-11-15)
+
+### Features
+
+- **outils:** retirer les notifications pour la CC 3239 ([#4628](https://github.com/SocialGouv/code-du-travail-numerique/issues/4628)) ([3c154c9](https://github.com/SocialGouv/code-du-travail-numerique/commit/3c154c9e3343912ba63528fadb9ea97c58c2857f))
+
 ## [4.84.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.84.0...v4.84.1) (2022-11-14)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 # [4.84.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.83.0...v4.84.0) (2022-11-07)
-
 
 ### Features
 
-* **cc 1505:** changement de nom des catégories + mises à jour des références juridiques ([#4635](https://github.com/SocialGouv/code-du-travail-numerique/issues/4635)) ([5f1d1c5](https://github.com/SocialGouv/code-du-travail-numerique/commit/5f1d1c586f34b6ee2eaefd7ce37a24bb198dfd8a))
-
-
-
-
+- **cc 1505:** changement de nom des catégories + mises à jour des références juridiques ([#4635](https://github.com/SocialGouv/code-du-travail-numerique/issues/4635)) ([5f1d1c5](https://github.com/SocialGouv/code-du-travail-numerique/commit/5f1d1c586f34b6ee2eaefd7ce37a24bb198dfd8a))
 
 # [4.83.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.82.0...v4.83.0) (2022-11-02)
 
-
 ### Bug Fixes
 
-* **deps:** update all dependencies (patch) ([#4579](https://github.com/SocialGouv/code-du-travail-numerique/issues/4579)) ([395e51b](https://github.com/SocialGouv/code-du-travail-numerique/commit/395e51b38a7f9cebee8914a83a211bc28cf0971f))
-* **heure recherche emploi:** CC 275 / Cadres / Licenciement-Démission => "50 heures par mois" ([#4597](https://github.com/SocialGouv/code-du-travail-numerique/issues/4597)) ([9d24e74](https://github.com/SocialGouv/code-du-travail-numerique/commit/9d24e74fd6c706a8968f6062f6a9ef796db4c153))
-* **simulateur:** filtre des questions sur le type de rupture ([#4569](https://github.com/SocialGouv/code-du-travail-numerique/issues/4569)) ([f43f969](https://github.com/SocialGouv/code-du-travail-numerique/commit/f43f969edb4cead5e6a02d78b78719bf315763db))
-
-
-
-
+- **deps:** update all dependencies (patch) ([#4579](https://github.com/SocialGouv/code-du-travail-numerique/issues/4579)) ([395e51b](https://github.com/SocialGouv/code-du-travail-numerique/commit/395e51b38a7f9cebee8914a83a211bc28cf0971f))
+- **heure recherche emploi:** CC 275 / Cadres / Licenciement-Démission => "50 heures par mois" ([#4597](https://github.com/SocialGouv/code-du-travail-numerique/issues/4597)) ([9d24e74](https://github.com/SocialGouv/code-du-travail-numerique/commit/9d24e74fd6c706a8968f6062f6a9ef796db4c153))
+- **simulateur:** filtre des questions sur le type de rupture ([#4569](https://github.com/SocialGouv/code-du-travail-numerique/issues/4569)) ([f43f969](https://github.com/SocialGouv/code-du-travail-numerique/commit/f43f969edb4cead5e6a02d78b78719bf315763db))
 
 # [4.82.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.81.0...v4.82.0) (2022-09-27)
 
-
 ### Bug Fixes
 
-* **heure-absence:** cc 16 resultat ([#4564](https://github.com/SocialGouv/code-du-travail-numerique/issues/4564)) ([4129eef](https://github.com/SocialGouv/code-du-travail-numerique/commit/4129eef5988a4a48715bef1fa77590e5adbe5c9a))
-* **preavis-demission:** cc 16 ([#4533](https://github.com/SocialGouv/code-du-travail-numerique/issues/4533)) ([48c0048](https://github.com/SocialGouv/code-du-travail-numerique/commit/48c0048131287916f1c9638fa47abec1d3cd62ea))
-
-
-
-
+- **heure-absence:** cc 16 resultat ([#4564](https://github.com/SocialGouv/code-du-travail-numerique/issues/4564)) ([4129eef](https://github.com/SocialGouv/code-du-travail-numerique/commit/4129eef5988a4a48715bef1fa77590e5adbe5c9a))
+- **preavis-demission:** cc 16 ([#4533](https://github.com/SocialGouv/code-du-travail-numerique/issues/4533)) ([48c0048](https://github.com/SocialGouv/code-du-travail-numerique/commit/48c0048131287916f1c9638fa47abec1d3cd62ea))
 
 # [4.81.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.80.0...v4.81.0) (2022-08-22)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 # [4.80.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.79.2...v4.80.0) (2022-08-02)
 
 **Note:** Version bump only for package @cdt/data
-
-
-
-
 
 ## [4.79.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.79.1...v4.79.2) (2022-07-01)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 ## [4.79.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.79.0...v4.79.1) (2022-07-01)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 # [4.79.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.78.1...v4.79.0) (2022-07-01)
-
 
 ### Features
 
-* **tools:** modification des règles du préavis de démission pour la CC 3239 ([#4449](https://github.com/SocialGouv/code-du-travail-numerique/issues/4449)) ([6242448](https://github.com/SocialGouv/code-du-travail-numerique/commit/62424484a4cc06811c5f713e892d8a7156c7df42))
-* **tools:** modification des résultats de l'indemnité de licenciement pour la CC 3239 ([#4446](https://github.com/SocialGouv/code-du-travail-numerique/issues/4446)) ([685d578](https://github.com/SocialGouv/code-du-travail-numerique/commit/685d57842c1d8132b6bab47c2c8ea970a8a33e6b))
-
-
-
-
+- **tools:** modification des règles du préavis de démission pour la CC 3239 ([#4449](https://github.com/SocialGouv/code-du-travail-numerique/issues/4449)) ([6242448](https://github.com/SocialGouv/code-du-travail-numerique/commit/62424484a4cc06811c5f713e892d8a7156c7df42))
+- **tools:** modification des résultats de l'indemnité de licenciement pour la CC 3239 ([#4446](https://github.com/SocialGouv/code-du-travail-numerique/issues/4446)) ([685d578](https://github.com/SocialGouv/code-du-travail-numerique/commit/685d57842c1d8132b6bab47c2c8ea970a8a33e6b))
 
 ## [4.78.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.78.0...v4.78.1) (2022-06-17)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 # [4.78.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.77.1...v4.78.0) (2022-06-16)
 
 **Note:** Version bump only for package @cdt/data
-
-
-
-
 
 ## [4.77.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.77.0...v4.77.1) (2022-05-18)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 # [4.77.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.76.0...v4.77.0) (2022-05-12)
-
 
 ### Bug Fixes
 
-* **simulator metadata:** update simulators metadata for SEO purpose ([#4403](https://github.com/SocialGouv/code-du-travail-numerique/issues/4403)) ([6c71ecd](https://github.com/SocialGouv/code-du-travail-numerique/commit/6c71ecdf5be00b082061bd1dc09475737e624903))
-
-
-
-
+- **simulator metadata:** update simulators metadata for SEO purpose ([#4403](https://github.com/SocialGouv/code-du-travail-numerique/issues/4403)) ([6c71ecd](https://github.com/SocialGouv/code-du-travail-numerique/commit/6c71ecdf5be00b082061bd1dc09475737e624903))
 
 # [4.76.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.4...v4.76.0) (2022-04-27)
 
-
 ### Bug Fixes
 
-* **hooks:** add diff to dev ([#4369](https://github.com/SocialGouv/code-du-travail-numerique/issues/4369)) ([73bbb4f](https://github.com/SocialGouv/code-du-travail-numerique/commit/73bbb4f5ab355ffa3b5a91dce758aa54922eb2da))
-
-
-
-
+- **hooks:** add diff to dev ([#4369](https://github.com/SocialGouv/code-du-travail-numerique/issues/4369)) ([73bbb4f](https://github.com/SocialGouv/code-du-travail-numerique/commit/73bbb4f5ab355ffa3b5a91dce758aa54922eb2da))
 
 ## [4.75.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.0...v4.75.4) (2022-04-06)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 ## [4.75.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.2...v4.75.3) (2022-04-06)
 
 **Note:** Version bump only for package @cdt/data
-
-
-
-
 
 ## [4.75.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.1...v4.75.2) (2022-04-04)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 ## [4.75.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.75.0...v4.75.1) (2022-04-04)
 
 **Note:** Version bump only for package @cdt/data
-
-
-
-
 
 # [4.75.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.74.0...v4.75.0) (2022-03-30)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 # [4.74.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.73.0...v4.74.0) (2022-03-28)
-
 
 ### Features
 
-* **outil - heures-recherche-emploi:** outil "heures pour recherche d'emploi" by "Heures d'absence pour rechercher un emploi" ([#4308](https://github.com/SocialGouv/code-du-travail-numerique/issues/4308)) ([4410f39](https://github.com/SocialGouv/code-du-travail-numerique/commit/4410f39dd029d860e3851e681f548b66a8f457fa))
-
-
-
-
+- **outil - heures-recherche-emploi:** outil "heures pour recherche d'emploi" by "Heures d'absence pour rechercher un emploi" ([#4308](https://github.com/SocialGouv/code-du-travail-numerique/issues/4308)) ([4410f39](https://github.com/SocialGouv/code-du-travail-numerique/commit/4410f39dd029d860e3851e681f548b66a8f457fa))
 
 # [4.73.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.72.0...v4.73.0) (2022-03-16)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 # [4.72.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.71.0...v4.72.0) (2022-03-11)
 
 **Note:** Version bump only for package @cdt/data
-
-
-
-
 
 # [4.71.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.70.0...v4.71.0) (2022-02-28)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 # [4.70.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.69.1...v4.70.0) (2022-02-28)
 
 **Note:** Version bump only for package @cdt/data
-
-
-
-
 
 ## [4.69.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.69.0...v4.69.1) (2022-02-25)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 # [4.69.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.68.0...v4.69.0) (2022-02-10)
-
 
 ### Bug Fixes
 
-* **affichage preavis demission:** Pb affichage résultat préavis de dé… ([#4229](https://github.com/SocialGouv/code-du-travail-numerique/issues/4229)) ([98fde15](https://github.com/SocialGouv/code-du-travail-numerique/commit/98fde15e3663902b5ef59db0d8d1f7c2896db000))
-
-
-
-
+- **affichage preavis demission:** Pb affichage résultat préavis de dé… ([#4229](https://github.com/SocialGouv/code-du-travail-numerique/issues/4229)) ([98fde15](https://github.com/SocialGouv/code-du-travail-numerique/commit/98fde15e3663902b5ef59db0d8d1f7c2896db000))
 
 # [4.68.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.1...v4.68.0) (2022-02-02)
 
-
 ### Features
 
-* **simulator:** add help button + events ([#4210](https://github.com/SocialGouv/code-du-travail-numerique/issues/4210)) ([253bbd8](https://github.com/SocialGouv/code-du-travail-numerique/commit/253bbd80d2cbf6b8607981cab52614489358d16f))
-
-
-
-
+- **simulator:** add help button + events ([#4210](https://github.com/SocialGouv/code-du-travail-numerique/issues/4210)) ([253bbd8](https://github.com/SocialGouv/code-du-travail-numerique/commit/253bbd80d2cbf6b8607981cab52614489358d16f))
 
 ## [4.67.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.67.0...v4.67.1) (2022-01-24)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 # [4.67.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.2...v4.67.0) (2022-01-24)
-
 
 ### Bug Fixes
 
-* **modeles:** question order for CC 650 ([#4185](https://github.com/SocialGouv/code-du-travail-numerique/issues/4185)) ([1f5a32f](https://github.com/SocialGouv/code-du-travail-numerique/commit/1f5a32fa466bf399e811e29c612709fe33dedd28))
-
-
-
-
+- **modeles:** question order for CC 650 ([#4185](https://github.com/SocialGouv/code-du-travail-numerique/issues/4185)) ([1f5a32f](https://github.com/SocialGouv/code-du-travail-numerique/commit/1f5a32fa466bf399e811e29c612709fe33dedd28))
 
 ## [4.66.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.1...v4.66.2) (2022-01-14)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 ## [4.66.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.66.0...v4.66.1) (2022-01-14)
 
 **Note:** Version bump only for package @cdt/data
-
-
-
-
 
 # [4.66.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.4...v4.66.0) (2022-01-14)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 ## [4.65.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.3...v4.65.4) (2022-01-05)
-
 
 ### Bug Fixes
 
-* **simulator:** message + tests for 3239 ([#4148](https://github.com/SocialGouv/code-du-travail-numerique/issues/4148)) ([40c7b16](https://github.com/SocialGouv/code-du-travail-numerique/commit/40c7b1627940b67488b501fea820fb8621bb94a6))
-
-
-
-
+- **simulator:** message + tests for 3239 ([#4148](https://github.com/SocialGouv/code-du-travail-numerique/issues/4148)) ([40c7b16](https://github.com/SocialGouv/code-du-travail-numerique/commit/40c7b1627940b67488b501fea820fb8621bb94a6))
 
 ## [4.65.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.2...v4.65.3) (2022-01-04)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 ## [4.65.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.1...v4.65.2) (2021-12-31)
 
 **Note:** Version bump only for package @cdt/data
-
-
-
-
 
 ## [4.65.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.65.0...v4.65.1) (2021-12-31)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 # [4.65.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.64.0...v4.65.0) (2021-12-30)
-
 
 ### Bug Fixes
 
-* **frontend:** redirection from last to new cc ([#4140](https://github.com/SocialGouv/code-du-travail-numerique/issues/4140)) ([7e932cf](https://github.com/SocialGouv/code-du-travail-numerique/commit/7e932cf02bb3dd41764b53b30790a7ceef6344dc))
-
+- **frontend:** redirection from last to new cc ([#4140](https://github.com/SocialGouv/code-du-travail-numerique/issues/4140)) ([7e932cf](https://github.com/SocialGouv/code-du-travail-numerique/commit/7e932cf02bb3dd41764b53b30790a7ceef6344dc))
 
 ### Features
 
-* **simulator:** add CC 3239 for all simulators ([#4122](https://github.com/SocialGouv/code-du-travail-numerique/issues/4122)) ([4f251d6](https://github.com/SocialGouv/code-du-travail-numerique/commit/4f251d6f179b74ad08eb8ba0da2e3a8057d19d22))
-
-
-
-
+- **simulator:** add CC 3239 for all simulators ([#4122](https://github.com/SocialGouv/code-du-travail-numerique/issues/4122)) ([4f251d6](https://github.com/SocialGouv/code-du-travail-numerique/commit/4f251d6f179b74ad08eb8ba0da2e3a8057d19d22))
 
 # [4.64.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.63.1...v4.64.0) (2021-12-30)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 ## [4.63.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.63.0...v4.63.1) (2021-12-22)
 
 **Note:** Version bump only for package @cdt/data
-
-
-
-
 
 # [4.63.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.62.0...v4.63.0) (2021-12-22)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 # [4.62.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.61.0...v4.62.0) (2021-12-21)
 
 **Note:** Version bump only for package @cdt/data
-
-
-
-
 
 # [4.61.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.3...v4.61.0) (2021-12-20)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 ## [4.60.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.2...v4.60.3) (2021-12-07)
 
 **Note:** Version bump only for package @cdt/data
-
-
-
-
 
 ## [4.60.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.1...v4.60.2) (2021-12-06)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 ## [4.60.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.60.0...v4.60.1) (2021-12-06)
 
 **Note:** Version bump only for package @cdt/data
-
-
-
-
 
 # [4.60.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.59.0...v4.60.0) (2021-11-24)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 # [4.59.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.2...v4.59.0) (2021-11-18)
 
 **Note:** Version bump only for package @cdt/data
-
-
-
-
 
 ## [4.58.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.1...v4.58.2) (2021-11-17)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 ## [4.58.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.58.0...v4.58.1) (2021-11-17)
-
 
 ### Bug Fixes
 
-* **simulator:** enable preavis retraite simulator on prod ([#4017](https://github.com/SocialGouv/code-du-travail-numerique/issues/4017)) ([232c99a](https://github.com/SocialGouv/code-du-travail-numerique/commit/232c99a090126b6e95462735233c7768cfbc425d))
-
-
-
-
+- **simulator:** enable preavis retraite simulator on prod ([#4017](https://github.com/SocialGouv/code-du-travail-numerique/issues/4017)) ([232c99a](https://github.com/SocialGouv/code-du-travail-numerique/commit/232c99a090126b6e95462735233c7768cfbc425d))
 
 # [4.58.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.57.1...v4.58.0) (2021-11-17)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 ## [4.57.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.57.0...v4.57.1) (2021-11-09)
-
 
 ### Bug Fixes
 
-* **simulators:** fix on preavis de retraite after review ([#3956](https://github.com/SocialGouv/code-du-travail-numerique/issues/3956)) ([511a72f](https://github.com/SocialGouv/code-du-travail-numerique/commit/511a72f49bb65fbc485ce50d1e0520f2bd93963b))
-
-
-
-
+- **simulators:** fix on preavis de retraite after review ([#3956](https://github.com/SocialGouv/code-du-travail-numerique/issues/3956)) ([511a72f](https://github.com/SocialGouv/code-du-travail-numerique/commit/511a72f49bb65fbc485ce50d1e0520f2bd93963b))
 
 # [4.57.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.5...v4.57.0) (2021-11-09)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 ## [4.56.5](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.4...v4.56.5) (2021-11-05)
 
 **Note:** Version bump only for package @cdt/data
-
-
-
-
 
 ## [4.56.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.3...v4.56.4) (2021-11-05)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 ## [4.56.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.2...v4.56.3) (2021-11-05)
 
 **Note:** Version bump only for package @cdt/data
-
-
-
-
 
 ## [4.56.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.1...v4.56.2) (2021-11-05)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 ## [4.56.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.56.0...v4.56.1) (2021-11-04)
 
 **Note:** Version bump only for package @cdt/data
-
-
-
-
 
 # [4.56.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.55.1...v4.56.0) (2021-11-04)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 ## [4.55.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.55.0...v4.55.1) (2021-10-26)
 
 **Note:** Version bump only for package @cdt/data
-
-
-
-
 
 # [4.55.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.54.1...v4.55.0) (2021-10-26)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 ## [4.54.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.54.0...v4.54.1) (2021-10-15)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 # 4.54.0 (2021-10-14)
-
 
 ### Bug Fixes
 
-* **data:** linter and reference about Code du travail ([#3831](https://github.com/SocialGouv/code-du-travail-numerique/issues/3831)) ([0cb2fbf](https://github.com/SocialGouv/code-du-travail-numerique/commit/0cb2fbf4f0adba1ea6aea52e5265c349f0f4946b))
-* **data:** linter is now effective ([#3859](https://github.com/SocialGouv/code-du-travail-numerique/issues/3859)) ([e7d046c](https://github.com/SocialGouv/code-du-travail-numerique/commit/e7d046c6a730785cc10b33ca0783afeb212557f6))
-* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.206.0 ([#3793](https://github.com/SocialGouv/code-du-travail-numerique/issues/3793)) ([3ea1d20](https://github.com/SocialGouv/code-du-travail-numerique/commit/3ea1d2066e7b0b62f7ac6157338fea1ff8223d66))
-
-
-
-
+- **data:** linter and reference about Code du travail ([#3831](https://github.com/SocialGouv/code-du-travail-numerique/issues/3831)) ([0cb2fbf](https://github.com/SocialGouv/code-du-travail-numerique/commit/0cb2fbf4f0adba1ea6aea52e5265c349f0f4946b))
+- **data:** linter is now effective ([#3859](https://github.com/SocialGouv/code-du-travail-numerique/issues/3859)) ([e7d046c](https://github.com/SocialGouv/code-du-travail-numerique/commit/e7d046c6a730785cc10b33ca0783afeb212557f6))
+- **deps:** update dependency @socialgouv/fiches-travail-data to ^4.206.0 ([#3793](https://github.com/SocialGouv/code-du-travail-numerique/issues/3793)) ([3ea1d20](https://github.com/SocialGouv/code-du-travail-numerique/commit/3ea1d2066e7b0b62f7ac6157338fea1ff8223d66))
 
 ## [4.53.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.53.0...v4.53.1) (2021-09-24)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 # 4.53.0 (2021-09-17)
-
 
 ### Bug Fixes
 
-* **deps:** update dependency @socialgouv/fiches-travail-data to ^4.181.0 ([#3638](https://github.com/SocialGouv/code-du-travail-numerique/issues/3638)) ([6a97857](https://github.com/SocialGouv/code-du-travail-numerique/commit/6a97857d35b493b11ab98fffe990c6087c471de3))
-
+- **deps:** update dependency @socialgouv/fiches-travail-data to ^4.181.0 ([#3638](https://github.com/SocialGouv/code-du-travail-numerique/issues/3638)) ([6a97857](https://github.com/SocialGouv/code-du-travail-numerique/commit/6a97857d35b493b11ab98fffe990c6087c471de3))
 
 ### Features
 
-* **frontend:** add canonical link to contributions ([#3735](https://github.com/SocialGouv/code-du-travail-numerique/issues/3735)) ([33b74e8](https://github.com/SocialGouv/code-du-travail-numerique/commit/33b74e8f926a32ab7af43a726c6dfa674351202e))
-
-
-
-
+- **frontend:** add canonical link to contributions ([#3735](https://github.com/SocialGouv/code-du-travail-numerique/issues/3735)) ([33b74e8](https://github.com/SocialGouv/code-du-travail-numerique/commit/33b74e8f926a32ab7af43a726c6dfa674351202e))
 
 ## [4.52.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.52.1...v4.52.2) (2021-08-02)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 ## [4.52.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.52.0...v4.52.1) (2021-07-20)
-
 
 ### Bug Fixes
 
-* **deps:** update all dependencies ([#3570](https://github.com/SocialGouv/code-du-travail-numerique/issues/3570)) ([e45f56e](https://github.com/SocialGouv/code-du-travail-numerique/commit/e45f56e51b11a620a652c96334390b0069080c2f))
-
-
-
-
+- **deps:** update all dependencies ([#3570](https://github.com/SocialGouv/code-du-travail-numerique/issues/3570)) ([e45f56e](https://github.com/SocialGouv/code-du-travail-numerique/commit/e45f56e51b11a620a652c96334390b0069080c2f))
 
 # [4.52.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.51.3...v4.52.0) (2021-07-15)
 
 **Note:** Version bump only for package @cdt/data
 
-
-
-
-
 # [4.49.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.48.1...v4.49.0) (2021-05-17)
-
 
 ### Features
 
-* **frontend:** add new search cc tool ([#3469](https://github.com/SocialGouv/code-du-travail-numerique/issues/3469)) ([ca59da1](https://github.com/SocialGouv/code-du-travail-numerique/commit/ca59da196a7743069f115a09dce55880fc5a6c1c))
-
-
-
-
+- **frontend:** add new search cc tool ([#3469](https://github.com/SocialGouv/code-du-travail-numerique/issues/3469)) ([ca59da1](https://github.com/SocialGouv/code-du-travail-numerique/commit/ca59da196a7743069f115a09dce55880fc5a6c1c))
 
 # [4.46.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.45.2...v4.46.0) (2021-04-13)
 
-
 ### Features
 
-* **simulator:** initialise business retirement simulator ([#3423](https://github.com/SocialGouv/code-du-travail-numerique/issues/3423)) ([0d677ff](https://github.com/SocialGouv/code-du-travail-numerique/commit/0d677ff3bee260a99508d896f380719b34c8d6bf))
+- **simulator:** initialise business retirement simulator ([#3423](https://github.com/SocialGouv/code-du-travail-numerique/issues/3423)) ([0d677ff](https://github.com/SocialGouv/code-du-travail-numerique/commit/0d677ff3bee260a99508d896f380719b34c8d6bf))
