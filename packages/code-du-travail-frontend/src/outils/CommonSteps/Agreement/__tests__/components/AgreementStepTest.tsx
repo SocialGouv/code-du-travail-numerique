@@ -46,7 +46,7 @@ const AgreementStepComponentTest = () => {
 export const AgreementStepTest = () => {
   return (
     <AgreementTestProvider
-      createStore={() => createAgreementTestStore(JSON.stringify(modeles))}
+      createStore={() => createAgreementTestStore(modeles)}
     >
       <AgreementStepComponentTest />
     </AgreementTestProvider>

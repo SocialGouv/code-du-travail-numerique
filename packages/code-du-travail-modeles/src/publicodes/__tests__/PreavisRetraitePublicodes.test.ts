@@ -77,7 +77,7 @@ describe("PreavisRetraitePublicodes::class", () => {
     );
   });
   it("ne doit pas retourner de résultat", () => {
-    expect(publicodes.data.result.value).toBe(0);
+    expect(publicodes.data.result.value).toBe(undefined);
   });
 
   it("doit mettre à jour la situation avec l'ancienneté", () => {

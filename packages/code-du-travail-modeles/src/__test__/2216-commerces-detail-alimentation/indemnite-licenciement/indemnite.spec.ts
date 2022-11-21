@@ -89,11 +89,11 @@ describe("Indemnité conventionnel de licenciement pour la CC 2216", () => {
             isEconomicFiring ? `'Oui'` : `'Non'`,
           "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
             age,
+          "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             salary,
-          "indemnité de licenciement": "oui",
         });
 
         const result = situation.evaluate(

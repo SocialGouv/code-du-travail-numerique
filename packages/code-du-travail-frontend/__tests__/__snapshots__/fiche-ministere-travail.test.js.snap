@@ -2407,6 +2407,7 @@ exports[`<FicheMT /> should render 1`] = `
                           >
                             <h2
                               class="c62"
+                              data-testid="heading"
                               style="margin: 0px;"
                             >
                               1) Visite d’information et de prévention : pour qui ?
@@ -2614,9 +2615,11 @@ exports[`<FicheMT /> should render 1`] = `
                 >
                   <h2
                     class="c71 c72"
+                    data-testid="heading"
                   >
                     <span
                       class="c73"
+                      data-testid="stripe"
                     />
                     Avez-vous trouvé la réponse à votre question ?
                   </h2>
@@ -2705,6 +2708,7 @@ exports[`<FicheMT /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c90 c91"
+                data-testid="heading"
                 role="heading"
               >
                 Code du travail numérique
@@ -2784,6 +2788,7 @@ exports[`<FicheMT /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c90 c91"
+                data-testid="heading"
                 role="heading"
               >
                 Aidez-nous à améliorer cet outil
@@ -2828,6 +2833,7 @@ exports[`<FicheMT /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c90 c91"
+                data-testid="heading"
                 role="heading"
               >
                 En collaboration avec

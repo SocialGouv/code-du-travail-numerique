@@ -34,7 +34,7 @@ export default function CallToActionWidget({
 }
 
 const Image = styled.img`
-  margin: auto;
+  margin: ${theme.spacings.small} auto;
   height: auto;
   width: auto;
   max-width: 90%;

@@ -1762,9 +1762,11 @@ exports[`<CodeDuTravail /> should render 1`] = `
                 >
                   <h2
                     class="c40 c41"
+                    data-testid="heading"
                   >
                     <span
                       class="c42"
+                      data-testid="stripe"
                     />
                     Avez-vous trouvé la réponse à votre question ?
                   </h2>
@@ -1853,6 +1855,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c59 c60"
+                data-testid="heading"
                 role="heading"
               >
                 Code du travail numérique
@@ -1932,6 +1935,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c59 c60"
+                data-testid="heading"
                 role="heading"
               >
                 Aidez-nous à améliorer cet outil
@@ -1976,6 +1980,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c59 c60"
+                data-testid="heading"
                 role="heading"
               >
                 En collaboration avec

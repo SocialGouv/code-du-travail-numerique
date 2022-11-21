@@ -35,6 +35,7 @@ function StepTypeRupture({ form }) {
 
       <SelectQuestion
         name="typeRupture"
+        data-test-id="typeRupture"
         label={question?.question ?? ""}
         options={nextQuestionOptions}
       />

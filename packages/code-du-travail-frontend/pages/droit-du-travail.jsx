@@ -64,9 +64,9 @@ const DroitDuTravail = ({ hash }) => (
             </p>
             <Wrapper variant="dark">
               <IconStripe icon={icons.Warning}>
-                <StyledInsertTitle>
+                <InsertTitle aria-level="3" role={"heading"}>
                   Le droit du travail, ce n’est pas…
-                </StyledInsertTitle>
+                </InsertTitle>
                 <Paragraph noMargin>
                   Le droit du travail ne concerne pas les travailleurs qui sont
                   soumis au droit public (par exemple, les fonctionnaires), les
@@ -92,11 +92,6 @@ DroitDuTravail.getInitialProps = ({ asPath }) => {
 };
 
 const { breakpoints, spacings } = theme;
-
-const StyledInsertTitle = styled(InsertTitle).attrs({
-  "aria-level": "4",
-  role: "heading",
-})``;
 
 const DesktopOnlyLineBreak = styled.br`
   @media (max-width: ${breakpoints.desktop}) {
