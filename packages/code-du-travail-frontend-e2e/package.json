@@ -18,7 +18,7 @@
     "@codeceptjs/helper": "^1.0.2",
     "@codeceptjs/ui": "^0.4.6",
     "codeceptjs": "^3.0.7",
-    "puppeteer": "^10.4.0"
+    "puppeteer": "^19.0.0"
   },
   "devDependencies": {
     "@socialgouv/eslint-config-typescript": "^1.93.0",
