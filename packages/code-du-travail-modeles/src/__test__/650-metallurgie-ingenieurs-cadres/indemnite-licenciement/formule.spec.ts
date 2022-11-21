@@ -7,6 +7,7 @@ describe("Formule pour l'indemnité conventionnel de licenciement pour la CC 650
   const formula = new FormuleFactory().create(
     SupportedCcIndemniteLicenciement.IDCC650
   );
+  if (!formula) throw new Error("Formula should be defined");
   describe("Cas standard", () => {
     test.each`
       age   | seniority | expectedFormula                                           | expectedExplanations
@@ -46,7 +47,7 @@ describe("Formule pour l'indemnité conventionnel de licenciement pour la CC 650
       ${64} | ${8}      | ${"[ (1 / 5 * Sref * A1) + (3 / 5 * Sref * A2) ] * 0.6"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
       ${64} | ${19}     | ${"[ (1 / 5 * Sref * A1) + (3 / 5 * Sref * A2) ] * 0.6"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (12 ans)", "Sref : Salaire de référence (1000 €)"]}
     `(
-      "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
+      "$#) ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
       ({ seniority, age, expectedFormula, expectedExplanations }) => {
         const result = formula.computeFormula({
           age,

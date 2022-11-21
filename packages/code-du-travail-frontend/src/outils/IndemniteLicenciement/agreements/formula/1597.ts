@@ -17,14 +17,14 @@ export class AgreementFormula1597 implements AgreementFormula {
     const agreementFactoryFormula = new FormuleFactory().create(
       SupportedCcIndemniteLicenciement.IDCC1597
     );
+    if (!agreementFactoryFormula) throw new Error("Formula should be defined");
+
     let hasMoreThan55Years = false;
-    const year = get()
-      .informationsData.input.publicodesInformations.find(
-        (v) =>
-          v.question.rule.nom ===
-          "contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age"
-      )
-      ?.info as string
+    const year = get().informationsData.input.publicodesInformations.find(
+      (v) =>
+        v.question.rule.nom ===
+        "contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age"
+    )?.info as string;
     if (year && parseInt(year) > 55) {
       hasMoreThan55Years = true;
     } else {

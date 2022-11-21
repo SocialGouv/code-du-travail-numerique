@@ -161,6 +161,9 @@ export const ui = {
     salaries: byTestId("salary-input"),
     primes: byTestId("prime-input"),
   },
+  result: {
+    formula: byTestId("formula"),
+  },
   next: byText("Suivant"),
   previous: byText("Précédent"),
   activeStep: byTitle("onglet actif"),

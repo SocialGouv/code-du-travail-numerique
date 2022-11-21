@@ -6,17 +6,12 @@ import {
 } from "@socialgouv/modeles-social";
 import { GetState } from "zustand";
 import { MainStore } from "../../store";
-import { AgreementFormula1486 } from "./1486";
 import { AgreementFormula1596 } from "./1596";
 import { AgreementFormula1597 } from "./1597";
-import { AgreementFormula2216 } from "./2216";
 import { AgreementFormula2264 } from "./2264";
-import { AgreementFormula3239 } from "./3239";
 import { AgreementFormula413 } from "./413";
 import { AgreementFormula650 } from "./650";
-import { AgreementFormula16 } from "./16";
 import { AgreementFormula573 } from "./573";
-import { AgreementFormula1501 } from "./1501";
 import { AgreementFormula44 } from "./44";
 
 const getAgreementFormula = (
@@ -24,7 +19,7 @@ const getAgreementFormula = (
   agreementSeniority: SeniorityResult,
   agreementRefSalary: number,
   get: GetState<MainStore>
-): Formula => {
+): Formula | undefined => {
   switch (true) {
     case SupportedCcIndemniteLicenciement.IDCC2264 === idcc:
       return new AgreementFormula2264().computeFormula(
@@ -50,44 +45,14 @@ const getAgreementFormula = (
         agreementRefSalary,
         get
       );
-    case SupportedCcIndemniteLicenciement.IDCC1486 === idcc:
-      return new AgreementFormula1486().computeFormula(
-        agreementSeniority,
-        agreementRefSalary,
-        get
-      );
-    case SupportedCcIndemniteLicenciement.IDCC3239 === idcc:
-      return new AgreementFormula3239().computeFormula(
-        agreementSeniority,
-        agreementRefSalary,
-        get
-      );
     case SupportedCcIndemniteLicenciement.IDCC650 === idcc:
       return new AgreementFormula650().computeFormula(
         agreementSeniority,
         agreementRefSalary,
         get
       );
-    case SupportedCcIndemniteLicenciement.IDCC2216 === idcc:
-      return new AgreementFormula2216().computeFormula(
-        agreementSeniority,
-        agreementRefSalary,
-        get
-      );
-    case SupportedCcIndemniteLicenciement.IDCC0016 === idcc:
-      return new AgreementFormula16().computeFormula(
-        agreementSeniority,
-        agreementRefSalary,
-        get
-      );
     case SupportedCcIndemniteLicenciement.IDCC0573 === idcc:
       return new AgreementFormula573().computeFormula(
-        agreementSeniority,
-        agreementRefSalary,
-        get
-      );
-    case SupportedCcIndemniteLicenciement.IDCC1501 === idcc:
-      return new AgreementFormula1501().computeFormula(
         agreementSeniority,
         agreementRefSalary,
         get
@@ -100,6 +65,7 @@ const getAgreementFormula = (
       );
     default: {
       const agreementFactoryFormula = new FormuleFactory().create(idcc);
+      if (!agreementFactoryFormula) return undefined;
       return agreementFactoryFormula.computeFormula({
         seniority: agreementSeniority.value,
         refSalary: agreementRefSalary,

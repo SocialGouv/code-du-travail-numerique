@@ -33,7 +33,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
       const formula = new FormuleFactory().create(
         SupportedCcIndemniteLicenciement.IDCC413
       );
-
+      if (!formula) throw new Error("Formula should be defined");
       const result = formula.computeFormula({
         category,
         refSalary: 1000,

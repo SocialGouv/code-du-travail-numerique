@@ -19,19 +19,20 @@ describe("CC 16", () => {
       ${2.08}   | ${0}                | ${61} | ${true}               | ${3374}    | ${0}
       ${3.67}   | ${0}                | ${61} | ${true}               | ${3374}    | ${3962.43}
       ${10}     | ${0}                | ${61} | ${true}               | ${3374}    | ${10796.8}
-      ${5}      | ${6}                | ${61} | ${true}               | ${3374}    | ${17004.96}
-      ${20}     | ${0}                | ${61} | ${true}               | ${3374}    | ${28341.6}
-      ${23}     | ${0}                | ${61} | ${true}               | ${3374}    | ${34954.64}
-      ${20}     | ${10}               | ${61} | ${true}               | ${3374}    | ${39813.2}
-      ${35}     | ${0}                | ${61} | ${true}               | ${3374}    | ${51284.8}
+      ${5}      | ${6}                | ${61} | ${true}               | ${3374}    | ${12821.2}
+      ${20}     | ${0}                | ${61} | ${true}               | ${3374}    | ${26992}
+      ${23}     | ${0}                | ${61} | ${true}               | ${3374}    | ${31040.8}
+      ${20}     | ${10}               | ${61} | ${true}               | ${3374}    | ${37114}
+      ${35}     | ${0}                | ${61} | ${true}               | ${3374}    | ${47236}
       ${5}      | ${0}                | ${66} | ${true}               | ${3374}    | ${0}
       ${3.67}   | ${0}                | ${61} | ${false}              | ${3374}    | ${4953.03}
       ${10}     | ${0}                | ${61} | ${false}              | ${3374}    | ${13496}
-      ${20}     | ${0}                | ${61} | ${false}              | ${3374}    | ${33740}
-      ${23}     | ${0}                | ${61} | ${false}              | ${3374}    | ${41162.8}
-      ${35}     | ${0}                | ${61} | ${false}              | ${3374}    | ${60732}
+      ${20}     | ${0}                | ${61} | ${false}              | ${3374}    | ${26992}
+      ${23}     | ${0}                | ${61} | ${false}              | ${3374}    | ${31040.8}
+      ${35}     | ${0}                | ${61} | ${false}              | ${3374}    | ${47236}
+      ${12}     | ${10}               | ${64} | ${true}               | ${3000}    | ${13680}
     `(
-      "Avec une ancienneté $seniority ans (plus $seniorityEmployeTAM en tant que non cadre), un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
+      "Avec une ancienneté $seniority ans (plus $seniorityEmployeTAM en tant que non cadre), droit de retraite: $haveRightToRetirement, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
       ({
         salaireRef,
         expectedCompensation,
@@ -72,9 +73,10 @@ describe("CC 16", () => {
           .evaluate(
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           );
-        expect(result.unit?.numerators).toEqual(["€"]);
+
         expect(result.missingVariables).toEqual({});
         expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(result.unit?.numerators).toEqual(["€"]);
       }
     );
   });
@@ -90,6 +92,8 @@ describe("CC 16", () => {
       ${1.67}   | ${63} | ${false}              | ${2738}    | ${0}
       ${2.75}   | ${63} | ${false}              | ${2738}    | ${752.95}
       ${6}      | ${63} | ${false}              | ${2738}    | ${4928.4}
+      ${6}      | ${66} | ${false}              | ${2738}    | ${0}
+      ${6}      | ${66} | ${true}               | ${2738}    | ${0}
     `(
       "ancienneté: $seniority ans, sref: $salaireRef €, age: $age, droit à la retraite: $haveRightToRetirement => une compensation de base de $expectedCompensation €",
       ({
@@ -212,7 +216,7 @@ describe("CC 16", () => {
     test.each`
       seniority | salaireRef | expectedCompensation
       ${2.75}   | ${2600}    | ${0}
-      ${3}      | ${2600}    | ${2600}
+      ${4}      | ${2600}    | ${2600}
       ${12}     | ${2600}    | ${2600}
     `(
       "Avec une ancienneté $seniority ans, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
