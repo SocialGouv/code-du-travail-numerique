@@ -58,6 +58,7 @@ type ListLinkProps = {
   showTheme?: boolean;
   query?: string;
   centerTitle?: boolean;
+  disableAnalytics?: boolean;
   titleTagType?: string;
 };
 
@@ -77,6 +78,7 @@ export const ListLink = ({
   showTheme = true,
   query,
   centerTitle,
+  disableAnalytics = false,
   titleTagType,
 }: ListLinkProps) => {
   let subtitle = "";
@@ -101,9 +103,12 @@ export const ListLink = ({
         </StyledParagraphContainer>
       </>
     ),
-    onClick: () => reportSelectionToMatomo(source, slug, url, algo),
+    onClick: () =>
+      !disableAnalytics && reportSelectionToMatomo(source, slug, url, algo),
     onKeyPress: (e) =>
-      e.keyCode === 13 && reportSelectionToMatomo(source, slug, url, algo),
+      !disableAnalytics &&
+      e.keyCode === 13 &&
+      reportSelectionToMatomo(source, slug, url, algo),
     subtitle,
     title,
     wide: true,

@@ -32,7 +32,7 @@ exports[`<CallToActionTile /> should render 1`] = `
   height: 3rem;
 }
 
-.c12 {
+.c11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -73,24 +73,25 @@ exports[`<CallToActionTile /> should render 1`] = `
   overflow: visible;
 }
 
-.c12:hover {
+.c11:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c14 {
+.c11:hover svg {
+  -webkit-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  transform: translateX(4px);
+}
+
+.c11 svg {
   width: 2.6rem;
   height: 1.4rem;
   margin: 0 0.4rem 0 1rem;
   -webkit-transition: -webkit-transform 250ms linear;
   -webkit-transition: transform 250ms linear;
   transition: transform 250ms linear;
-}
-
-.c11:hover .c13 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
+  fill: #f66663;
 }
 
 .c0 {
@@ -225,13 +226,13 @@ exports[`<CallToActionTile /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c11 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c12 {
+  .c11 {
     display: none;
   }
 }
@@ -335,12 +336,11 @@ exports[`<CallToActionTile /> should render 1`] = `
           class="c10"
         >
           <button
-            class="c11 c12"
+            class="c11"
           >
             Bonjour
             <svg
               aria-hidden="true"
-              class="c13 c14"
               fill="none"
               viewBox="0 0 28 15"
               xmlns="http://www.w3.org/2000/svg"

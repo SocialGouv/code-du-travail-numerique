@@ -25,6 +25,7 @@ import {
   loadPublicodesRules,
   SimulateurEmbauche,
   SimulateurIndemnitePrecarite,
+  DismissalProcess,
 } from "../../src/outils";
 
 const {
@@ -40,6 +41,7 @@ const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
   "preavis-retraite": DureePreavisRetraite,
   "simulateur-embauche": SimulateurEmbauche,
+  "procedure-licenciement": DismissalProcess,
 };
 
 export interface Props {
@@ -73,7 +75,7 @@ function Outils({
   return (
     <Layout>
       <Metas title={metaTitle} description={metaDescription} />
-      <StyledSection>
+      <div>
         <Container>
           <Flex>
             <Tool
@@ -89,7 +91,7 @@ function Outils({
           <RelatedItems items={relatedItems} />
           <Feedback url={router.asPath} />
         </Container>
-      </StyledSection>
+      </div>
       <EventTracker />
     </Layout>
   );
@@ -145,10 +147,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
 };
 
 const { breakpoints, spacings } = theme;
-
-const StyledSection = styled(Section)`
-  padding-top: 0;
-`;
 
 const ShareContainer = styled.div`
   display: flex;

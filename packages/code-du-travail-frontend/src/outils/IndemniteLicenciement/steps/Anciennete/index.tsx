@@ -57,7 +57,9 @@ const StepAnciennete = () => {
 
   return (
     <>
-      <SectionTitle>Dates d’entrée et de sortie de l’entreprise</SectionTitle>
+      <SectionTitle hasSmallMarginTop>
+        Dates d’entrée et de sortie de l’entreprise
+      </SectionTitle>
       <TextQuestion
         label="Quelle est la date d’entrée dans l’entreprise&nbsp;?"
         inputType="date"

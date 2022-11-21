@@ -13,6 +13,8 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
+const { version } = require("./package.json");
+
 const ContentSecurityPolicy = `
 default-src 'self' *.travail.gouv.fr *.data.gouv.fr *.fabrique.social.gouv.fr;
 img-src 'self' data: *.fabrique.social.gouv.fr https://travail-emploi.gouv.fr https://mon-entreprise.urssaf.fr https://cdtnadminprod.blob.core.windows.net https://cdtnadmindev.blob.core.windows.net https://logs1412.xiti.com *.xiti.com *.doubleclick.net;
@@ -54,6 +56,7 @@ const nextConfig = {
     PACKAGE_VERSION: process.env.VERSION || require("./package.json").version,
     PIWIK_SITE_ID: process.env.PIWIK_SITE_ID,
     PIWIK_URL: process.env.PIWIK_URL,
+    APP_VERSION: version,
   },
   sentry: {
     disableClientWebpackPlugin: true,
@@ -71,21 +74,30 @@ const nextConfig = {
 
 module.exports = {
   async headers() {
+    let headers;
+    if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT) {
+      headers = [
+        {
+          key: "X-Robots-Tag",
+          value: "all",
+        },
+        {
+          key: "Content-Security-Policy",
+          value: ContentSecurityPolicy.replace(/\n/g, " ").trim(),
+        },
+      ];
+    } else {
+      headers = [
+        {
+          key: "X-Robots-Tag",
+          value: "noindex, nofollow, nosnippet",
+        },
+      ];
+    }
     return [
       {
         source: "/:path*",
-        headers: [
-          {
-            key: "Content-Security-Policy",
-            value: ContentSecurityPolicy.replace(/\n/g, " ").trim(),
-          },
-          {
-            key: "X-Robots-Tag",
-            value: process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
-              ? "all"
-              : "noindex, nofollow, nosnippet",
-          },
-        ],
+        headers,
       },
     ];
   },

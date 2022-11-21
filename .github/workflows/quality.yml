@@ -1,6 +1,13 @@
 name: Code quality
 
-on: [pull_request]
+on:
+  push:
+    branches:
+      - master
+      - dev
+  pull_request:
+    branches:
+      - dev
 
 concurrency:
   cancel-in-progress: true

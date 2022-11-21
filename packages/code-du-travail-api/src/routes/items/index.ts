@@ -1,9 +1,8 @@
 import elasticsearchClient from "../../conf/elasticsearch";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 import { getRelatedItems } from "./getRelatedItems";
-import { getDocumentByIdsBody } from "./searchByIds.es";
+import { getDocumentBody } from "./search.es";
 import { getSearchBySourceSlugBody } from "./searchBySourceSlug.es";
-import { getDocumentByUrlBody } from "./searchByUrl.es";
 
 const Router = require("koa-router");
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
@@ -27,7 +26,6 @@ router.get("/items/:source/:slug", async (ctx: any) => {
   const { source, slug } = ctx.params;
   const body = getSearchBySourceSlugBody({ slug, source });
   const response = await elasticsearchClient.search({ body, index });
-
   if (response.body.hits.total.value === 0) {
     ctx.throw(404, `there is no documents that match ${slug} in ${source}`);
   }
@@ -80,27 +78,22 @@ router.get("/items/:id", async (ctx: any) => {
  * Return document matching the given url.
  *
  * @example
- * http://localhost:1337/api/v1/items?url=:url&ids=:ids&all=:all
+ * http://localhost:1337/api/v1/items?url=:url&ids=:ids
  *
  * @param {string} :url The item url.
  * @param {string[]} :ids The item id array.
- * @param {string} :all The response type array or object.
  * @returns {Object} Result.
  */
 router.get("/items", async (ctx: any) => {
-  const { url, ids, all } = ctx.query;
-  const body = ids
-    ? getDocumentByIdsBody(ids.split(","))
-    : getDocumentByUrlBody({ url });
+  const { url, source, ids: idsString } = ctx.query;
+  const ids = idsString?.split(",");
+  const body = getDocumentBody({ ids, source, url });
   const response = await elasticsearchClient.search({ body, index });
-
   if (response.body.hits.total.value === 0) {
-    ctx.throw(404, `there is no document that match ${url}`);
+    ctx.throw(404, `there is no document that match the query`);
   }
 
-  const [item] = response.body.hits.hits;
-  delete item.title_vector;
-  ctx.body = all === "true" ? response.body.hits.hits : { ...item };
+  ctx.body = response.body.hits.hits;
 });
 
 export default router;

@@ -510,6 +510,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               aria-disabled="false"
               aria-selected="true"
               class="c7 react-tabs__tab--selected"
+              data-testid="undefined-0"
               id="react-tabs-0"
               role="tab"
               tabindex="0"
@@ -521,6 +522,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               aria-disabled="false"
               aria-selected="false"
               class="c7"
+              data-testid="undefined-1"
               id="react-tabs-2"
               role="tab"
             >
@@ -531,6 +533,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               aria-disabled="false"
               aria-selected="false"
               class="c7"
+              data-testid="undefined-2"
               id="react-tabs-4"
               role="tab"
             >
@@ -603,7 +606,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
-                        data-testid="heading"
+                        data-testid="undefined-0"
                         style="margin: 0px;"
                       >
                         De quoi s'agit-il ?
@@ -678,7 +681,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
-                        data-testid="heading"
+                        data-testid="undefined-1"
                         style="margin: 0px;"
                       >
                         Conditions
@@ -796,7 +799,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
-                        data-testid="heading"
+                        data-testid="undefined-2"
                         style="margin: 0px;"
                       >
                         Volonté de démissionner
@@ -898,7 +901,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
-                        data-testid="heading"
+                        data-testid="undefined-3"
                         style="margin: 0px;"
                       >
                         Procédure
@@ -1012,7 +1015,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
-                        data-testid="heading"
+                        data-testid="undefined-4"
                         style="margin: 0px;"
                       >
                         Préavis
@@ -1058,6 +1061,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               aria-disabled="false"
                               aria-selected="true"
                               class="c7 react-tabs__tab--selected"
+                              data-testid="undefined-0"
                               id="react-tabs-6"
                               role="tab"
                               tabindex="0"
@@ -1069,6 +1073,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               aria-disabled="false"
                               aria-selected="false"
                               class="c7"
+                              data-testid="undefined-1"
                               id="react-tabs-8"
                               role="tab"
                             >
@@ -1079,6 +1084,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               aria-disabled="false"
                               aria-selected="false"
                               class="c7"
+                              data-testid="undefined-2"
                               id="react-tabs-10"
                               role="tab"
                             >
@@ -1225,6 +1231,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               aria-disabled="false"
                               aria-selected="true"
                               class="c7 react-tabs__tab--selected"
+                              data-testid="undefined-0"
                               id="react-tabs-12"
                               role="tab"
                               tabindex="0"
@@ -1236,6 +1243,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               aria-disabled="false"
                               aria-selected="false"
                               class="c7"
+                              data-testid="undefined-1"
                               id="react-tabs-14"
                               role="tab"
                             >
@@ -1311,7 +1319,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                     >
                                       <h5
                                         class="c10"
-                                        data-testid="heading"
+                                        data-testid="undefined-0"
                                         style="margin: 0px;"
                                       >
                                         Accord de l'employeur
@@ -1383,7 +1391,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                     >
                                       <h5
                                         class="c10"
-                                        data-testid="heading"
+                                        data-testid="undefined-1"
                                         style="margin: 0px;"
                                       >
                                         Refus de l'employeur
@@ -1546,7 +1554,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                 >
                                   <h4
                                     class="c10"
-                                    data-testid="heading"
+                                    data-testid="undefined-0"
                                     style="margin: 0px;"
                                   >
                                     Par téléphone
@@ -1615,7 +1623,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                 >
                                   <h4
                                     class="c10"
-                                    data-testid="heading"
+                                    data-testid="undefined-1"
                                     style="margin: 0px;"
                                   >
                                     Par messagerie
@@ -1681,7 +1689,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                                 >
                                   <h4
                                     class="c10"
-                                    data-testid="heading"
+                                    data-testid="undefined-2"
                                     style="margin: 0px;"
                                   >
                                     Par courrier
@@ -1756,7 +1764,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
-                        data-testid="heading"
+                        data-testid="undefined-5"
                         style="margin: 0px;"
                       >
                         Indemnisation
@@ -1879,7 +1887,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     >
                       <h3
                         class="c10"
-                        data-testid="heading"
+                        data-testid="undefined-6"
                         style="margin: 0px;"
                       >
                         Documents remis au salarié

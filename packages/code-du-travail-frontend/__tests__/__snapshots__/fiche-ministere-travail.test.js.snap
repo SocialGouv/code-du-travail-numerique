@@ -2407,7 +2407,7 @@ exports[`<FicheMT /> should render 1`] = `
                           >
                             <h2
                               class="c62"
-                              data-testid="heading"
+                              data-testid="undefined-0"
                               style="margin: 0px;"
                             >
                               1) Visite d’information et de prévention : pour qui ?
