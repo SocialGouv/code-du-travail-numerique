@@ -13,7 +13,6 @@ type Props = {
   target?: string;
   rel?: string;
   className?: string;
-  custom?: boolean;
   centerTitle?: boolean;
   custom?: boolean;
 };
