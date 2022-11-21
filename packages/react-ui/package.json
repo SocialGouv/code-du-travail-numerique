@@ -65,7 +65,7 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/styled-components": "^5.1.26",
     "babel-jest": "^27.0.6",
-    "babel-loader": "^8.2.2",
+    "babel-loader": "^9.0.0",
     "eslint": "^7.31.0",
     "gh-pages": "^3.2.3",
     "jest": "^27.0.6",
