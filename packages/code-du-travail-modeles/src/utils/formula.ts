@@ -16,7 +16,7 @@ function getRulesWithFormuleAndNodeValue(engine: Engine) {
     if (rule.rawNode.cdtn?.formule === undefined) return false;
 
     const value = engine.evaluate(rule.dottedName).nodeValue;
-    return value !== false && value !== null;
+    return value !== false && value !== null && value !== undefined;
   });
 }
 
@@ -64,11 +64,13 @@ export function getFormule(engine: Engine): Formula {
 
         const result = engine.evaluate(element);
         if (!result.unit) {
-          throw Error(`L'unité est manquante pour la règle ${result.name}`);
+          throw Error(
+            `L'unité est manquante pour la règle ${result.rawNode.name}`
+          );
         }
         const unit = result.unit.numerators[0];
-        return `${text} (${round(result.nodeValue)} ${unit}${pluralize(
-          unit as string,
+        return `${text} (${round(Number(result.nodeValue))} ${unit}${pluralize(
+          unit,
           result.nodeValue as number
         )})`;
       });

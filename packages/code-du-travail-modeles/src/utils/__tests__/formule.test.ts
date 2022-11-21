@@ -27,12 +27,12 @@ describe("Formula", () => {
           "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique": `'Oui'`,
           "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age":
             age,
+          "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté en année":
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2300,
-          "indemnité de licenciement": "oui",
         });
         const formule = getFormule(situation);
 
@@ -66,10 +66,10 @@ describe("Formula", () => {
           }`,
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
             "'Non'",
+          "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-          "indemnité de licenciement": "oui",
         });
 
         const formule = getFormule(situation);
@@ -94,13 +94,13 @@ describe("Formula", () => {
       ({ seniority, expectedFormula, expectedExplanations, inaptitude }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1090'",
+          "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté en année":
             seniority,
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             inaptitude,
           "contrat salarié . indemnité de licenciement . salaire de référence": 2300,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2300,
-          "indemnité de licenciement": "oui",
         });
         const formule = getFormule(situation);
 

@@ -33,10 +33,10 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
           }`,
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
             "'Non'",
+          "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-          "indemnité de licenciement": "oui",
         });
 
         const formule = getFormule(situation);
@@ -62,10 +62,10 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
             "'Oui'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite définitive":
             "'Non'",
+          "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-          "indemnité de licenciement": "oui",
         });
 
         const formule = getFormule(situation);
@@ -95,10 +95,10 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
             "'Oui'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite définitive":
             "'Oui'",
+          "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-          "indemnité de licenciement": "oui",
         });
         const formule = getFormule(situation);
 
@@ -135,10 +135,10 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${
             haveRightToRetirement ? "'Oui'" : "'Non'"
           }`,
+          "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-          "indemnité de licenciement": "oui",
         });
 
         const formule = getFormule(situation);
@@ -178,10 +178,10 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${
             haveRightToRetirement ? "'Oui'" : "'Non'"
           }`,
+          "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-          "indemnité de licenciement": "oui",
         });
 
         const formule = getFormule(situation);
@@ -261,10 +261,10 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${
             haveRightToRetirement ? "'Oui'" : "'Non'"
           }`,
+          "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-          "indemnité de licenciement": "oui",
           ...cadreBeforeTAM,
         });
 

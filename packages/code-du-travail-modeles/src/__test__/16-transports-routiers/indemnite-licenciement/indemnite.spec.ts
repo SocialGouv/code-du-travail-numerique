@@ -74,9 +74,9 @@ describe("CC 16", () => {
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
           );
 
-        expect(result.unit?.numerators).toEqual(["€"]);
         expect(result.missingVariables).toEqual({});
         expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(result.unit?.numerators).toEqual(["€"]);
       }
     );
   });

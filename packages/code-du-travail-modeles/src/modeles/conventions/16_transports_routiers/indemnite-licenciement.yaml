@@ -103,15 +103,13 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   unité: €
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . base:
-  applicable si:
-    toutes ces conditions:
-      - age < 65 # Hack pour afficher la question sur l'age
-      - age > 60 # Hack pour afficher la question sur l'age
-      - droit à la retraite au titre du régime en vigueur dans l'entreprise # Hack pour afficher la question sur l'age qui s'affichera que si age compris entre 60 et 65 ans
+  valeur: calcul
+
+contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . base . calcul:
   valeur: 0 €
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . base . pas d'indemnité:
-  remplace: base
+  remplace: calcul
   applicable si:
     une de ces conditions:
       - age > 65 ans
@@ -119,7 +117,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   valeur: 0 €
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . base . seulement cadre:
-  remplace: base
+  remplace: calcul
   applicable si:
     toutes ces conditions:
       - ancienneté totale >= 3 an
@@ -135,7 +133,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . base . cadre et employé:
-  remplace: base
+  remplace: calcul
   applicable si:
     toutes ces conditions:
       - ancienneté totale >= 3 an
