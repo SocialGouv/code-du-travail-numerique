@@ -8,3 +8,9 @@ contrat salarié . convention collective . prevention sécurité entreprise . in
   valeur: 0
   unité: €
   arrondi: 2 décimales
+
+contrat salarié . convention collective . prevention sécurité entreprise . indemnité de licenciement . formule résultat conventionnel:
+  valeur: oui
+  cdtn:
+    formule:
+      formula: ""

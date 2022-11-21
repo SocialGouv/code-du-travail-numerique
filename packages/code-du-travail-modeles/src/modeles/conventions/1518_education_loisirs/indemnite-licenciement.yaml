@@ -28,7 +28,6 @@ contrat salarié . convention collective . éducation et loisirs . indemnité de
       facteur: 1 / 3
   unité: €
 
-# Même formule que le légal
 contrat salarié . convention collective . éducation et loisirs . indemnité de licenciement . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   variations:
