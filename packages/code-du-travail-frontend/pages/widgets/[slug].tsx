@@ -1,4 +1,4 @@
-import { internals as tools } from "@cdt/data";
+import { internals as tools } from "@socialgouv/modeles-social";
 import { Container, icons, theme } from "@socialgouv/cdtn-ui";
 import { GetServerSideProps } from "next";
 import Link from "next/link";

@@ -1,4 +1,4 @@
-import { externals as externalTools, internals as tools } from "@cdt/data";
+import { externals as externalTools, internals as tools } from "@socialgouv/modeles-social";
 import { NextApiRequest, NextApiResponse } from "next";
 
 interface Tools {

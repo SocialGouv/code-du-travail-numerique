@@ -1,4 +1,4 @@
-import { QuestionnaireQuestion } from "@cdt/data";
+import { QuestionnaireQuestion } from "@socialgouv/modeles-social";
 
 export const getQuestionnaire = (): QuestionnaireQuestion => {
   return {

@@ -1,4 +1,7 @@
-import { QuestionnaireQuestion, QuestionnaireResponse } from "@cdt/data";
+import {
+  QuestionnaireQuestion,
+  QuestionnaireResponse,
+} from "@socialgouv/modeles-social";
 
 import { PreviousResponse, SlugResponses } from "./type";
 

@@ -1,7 +1,7 @@
 import {
   dismissalProcessQuestionnaire,
   QuestionnaireQuestion,
-} from "@cdt/data";
+} from "@socialgouv/modeles-social";
 
 export const getQuestionnaire = (name: string): QuestionnaireQuestion => {
   return dismissalProcessQuestionnaire;

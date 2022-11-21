@@ -1,4 +1,4 @@
-import { internals as tools } from "@cdt/data";
+import { internals as tools } from "@socialgouv/modeles-social";
 import * as Sentry from "@sentry/nextjs";
 import { SOURCES } from "@socialgouv/cdtn-sources";
 import { Container, Section, theme } from "@socialgouv/cdtn-ui";

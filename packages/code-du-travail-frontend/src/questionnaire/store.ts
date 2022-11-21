@@ -4,7 +4,7 @@ import {
   dismissalProcessQuestionnaire,
   QuestionnaireQuestion,
   QuestionnaireResponse,
-} from "@cdt/data";
+} from "@socialgouv/modeles-social";
 import { getCurrentQuestion, slugSummaryRecursive } from "./utils";
 import { getQuestionnaire } from "./service";
 import { SlugResponses, PreviousResponse } from "./type";

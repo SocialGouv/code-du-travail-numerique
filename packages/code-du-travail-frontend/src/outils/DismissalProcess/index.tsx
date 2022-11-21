@@ -1,7 +1,7 @@
 import React from "react";
 import { Alert, Wrapper } from "@socialgouv/cdtn-ui";
 import { Title } from "../Components/SimulatorDecorator/Components";
-import { internals as tools } from "@cdt/data";
+import { internals as tools } from "@socialgouv/modeles-social";
 import { QuestionnaireWrapper } from "../../questionnaire";
 import styled from "styled-components";
 
