@@ -1,4 +1,3 @@
-import { internals as tools } from "@socialgouv/modeles-social";
 import { Container, icons, theme } from "@socialgouv/cdtn-ui";
 import { GetServerSideProps } from "next";
 import Link from "next/link";
@@ -8,6 +7,7 @@ import styled from "styled-components";
 import {
   DureePreavisLicenciement,
   DureePreavisRetraite,
+  fetchTool,
   loadPublicodesRules,
 } from "../../src/outils";
 
@@ -29,7 +29,7 @@ function Widgets({
   slug,
   title,
   displayTitle,
-  publicodesRules
+  publicodesRules,
 }: Props): JSX.Element {
   const Tool = toolsBySlug[slug];
 
@@ -63,7 +63,7 @@ export default Widgets;
 export const getServerSideProps: GetServerSideProps<Props> = async ({
   query,
 }) => {
-  const tool = tools.find((tool) => tool.slug === query.slug);
+  const tool = await fetchTool(query.slug as string);
   if (!tool) {
     return {
       notFound: true,
