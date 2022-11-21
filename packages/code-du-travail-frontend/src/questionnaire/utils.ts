@@ -1,8 +1,4 @@
-import {
-  QuestionnaireQuestion,
-  QuestionnaireResponse,
-} from "@socialgouv/modeles-social";
-
+import { QuestionnaireQuestion, QuestionnaireResponse } from "./data";
 import { PreviousResponse, SlugResponses } from "./type";
 
 export const getCurrentQuestion = (

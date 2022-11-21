@@ -1,14 +1,10 @@
 import create, { StoreApi } from "zustand";
 import createContext from "zustand/context";
-import {
-  dismissalProcessQuestionnaire,
-  QuestionnaireQuestion,
-  QuestionnaireResponse,
-} from "@socialgouv/modeles-social";
 import { getCurrentQuestion, slugSummaryRecursive } from "./utils";
 import { getQuestionnaire } from "./service";
 import { SlugResponses, PreviousResponse } from "./type";
 import { trackSelectResponse, trackViewQuestion } from "./tracking";
+import { QuestionnaireQuestion, QuestionnaireResponse } from "./data";
 
 export type Store = {
   questionTree?: QuestionnaireQuestion;

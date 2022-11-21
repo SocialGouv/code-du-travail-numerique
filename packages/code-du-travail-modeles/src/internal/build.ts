@@ -34,6 +34,7 @@ function copyJSFile() {
   );
   fse.copySync(`${inDir}/utils`, `${outDir}/utils`);
   fse.copySync(`${inDir}/publicodes`, `${outDir}/publicodes`);
+  fse.copySync(`${inDir}/simulators`, `${outDir}/simulators`);
 }
 
 function writeSupportedCCFile() {

@@ -1,11 +1,10 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { InputRadio, theme } from "@socialgouv/cdtn-ui";
-import { QuestionnaireResponse } from "@socialgouv/modeles-social";
 import { useStore } from "../../store";
 import { Tooltip } from "../../../common/Tooltip";
 import { trackClickHelp } from "../../tracking";
-const { breakpoints } = theme;
+import { QuestionnaireResponse } from "../../data";
 
 export const Response = ({
   response: { text, description, info, trackingName },
