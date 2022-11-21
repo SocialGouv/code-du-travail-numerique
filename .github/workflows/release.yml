@@ -27,22 +27,23 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-      - name: Deploy
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Set git
         run: |
-          npm config set access public
-          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
           git config --global user.name "${NAME}"
           git config --global user.email "${EMAIL}"
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          yarn --frozen-lockfile
-          yarn build:npm
-          GH_TOKEN=${GITHUB_TOKEN} yarn lerna version --force-publish --yes --conventional-commits --create-release github
-          yarn lerna publish from-package --yes
         env:
           GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
-          NPM_TOKEN: ${{ secrets.SOCIALGROOVYBOT_NPM_TOKEN }}
+      - name: Build for npm
+        run: yarn build:npm
+      - name: Versionning code
+        run: GH_TOKEN=${GITHUB_TOKEN} yarn lerna version --force-publish --yes --conventional-commits --create-release github
+        env:
+          GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
       - name: Rebase master to dev
         run: |
           git config --global user.name "${NAME}"
@@ -56,3 +57,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.SOCIALGROOVYBOT_BOTO_PAT }}
           NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           EMAIL: ${{ secrets.SOCIALGROOVYBOT_EMAIL }}
+      - name: Setup token
+        run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Deploy to npm
+        run: lerna publish from-package --yes
+      - name: Remove .npmrc
+        if: always()
+        run: rm .npmrc

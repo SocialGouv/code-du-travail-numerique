@@ -1,6 +1,6 @@
 import unified from "unified";
 import React from "react";
-import { InfoLink } from "./Components";
+import { Link } from "../information/Components";
 import htmlToHtmlAst from "rehype-parse";
 import htmlAstToReact from "rehype-react";
 
@@ -11,11 +11,11 @@ const processor = unified()
   .use(htmlAstToReact, {
     Fragment: React.Fragment,
     components: {
-      a: InfoLink,
+      a: Link,
     },
     createElement: React.createElement,
   });
 
-export const processToHtml = (html: string) => {
-  return processor.processSync(html).result;
+export const processToHtml = (html: string): string => {
+  return processor.processSync(html).result as string;
 };

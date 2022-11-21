@@ -15,6 +15,7 @@ type Props = {
   role?: string;
   ariaLevel?: number | string;
   id?: string;
+  dataTestid?: string;
 };
 
 export const Heading = (props: Props) => (
@@ -27,7 +28,7 @@ export const Heading = (props: Props) => (
     role={props.role}
     aria-level={props.ariaLevel}
     id={props.id}
-    data-testid="heading"
+    data-testid={props.dataTestid ?? "heading"}
   >
     {props.stripe !== "none" && (
       <Stripe

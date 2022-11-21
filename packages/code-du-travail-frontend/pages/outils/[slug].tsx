@@ -25,6 +25,7 @@ import {
   loadPublicodesRules,
   SimulateurEmbauche,
   SimulateurIndemnitePrecarite,
+  DismissalProcess,
 } from "../../src/outils";
 
 const {
@@ -40,6 +41,7 @@ const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
   "preavis-retraite": DureePreavisRetraite,
   "simulateur-embauche": SimulateurEmbauche,
+  "procedure-licenciement": DismissalProcess,
 };
 
 export interface Props {

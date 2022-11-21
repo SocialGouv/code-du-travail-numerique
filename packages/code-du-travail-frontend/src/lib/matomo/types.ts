@@ -1,6 +1,13 @@
 export enum MatomoBaseEvent {
   TRACK_EVENT = "trackEvent",
   OUTIL = "outil",
+  PAGE_INFORMATION = "page_information",
+}
+
+export enum MatomoBaseAction {
+  SELECT = "select",
+  CLICK = "click",
+  VIEW = "view",
 }
 
 export enum MatomoSearchAgreementCategory {
