@@ -1,4 +1,4 @@
-import { Accordion, Tabs, Section, theme, Wrapper } from "@socialgouv/cdtn-ui";
+import { Section, Wrapper } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 import EventTracker from "../../src/lib/tracking/EventTracker";
@@ -8,13 +8,9 @@ import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
 import { EditorialContentDataWrapper } from "cdtn-types";
-import {
-  getContentBySlug,
-  getContentByIds,
-  getContentBlockIds,
-  injectContentInfos,
-} from "../../src/information";
-import { ContentBlocks } from "../../src/information/Components";
+import { getInformationBySlug } from "../../src/information";
+import { Contents } from "../../src/information/Components";
+import { QuestionnaireWrapper } from "../../src/questionnaire";
 
 const Information = ({
   anchor,
@@ -28,51 +24,12 @@ const Information = ({
       intro,
       references = [],
       title = "",
+      dismissalProcess = false,
     },
     relatedItems,
-  } = { _source: {} },
+    slug,
+  } = { _source: {}, slug: "" },
 }: EditorialContentDataWrapper) => {
-  let editorialContent = contents?.map(({ name, references = [], blocks }) => {
-    return (
-      <ContentBlocks
-        key={name}
-        name={name}
-        references={references}
-        blocks={blocks}
-      ></ContentBlocks>
-    );
-  });
-  let contentWrapper;
-  if (editorialContent && editorialContent.length > 1) {
-    contentWrapper =
-      sectionDisplayMode === "tab" ? (
-        <Tabs
-          data={contents?.map(({ title }, index) => ({
-            panel: editorialContent?.[index],
-            tab: title,
-          }))}
-        />
-      ) : (
-        <Accordion
-          titleLevel={2}
-          preExpanded={[anchor]}
-          items={contents?.map(({ title, name }, index) => ({
-            body: editorialContent?.[index],
-            id: name,
-            title,
-          }))}
-        />
-      );
-  }
-  let sectionTitleStyleWrapper =
-    sectionDisplayMode === "tab" ? (
-      <TabStylesWrapper data-testid="tabs">{contentWrapper}</TabStylesWrapper>
-    ) : (
-      <GlobalStylesWrapper data-testid="accordion">
-        {contentWrapper}
-      </GlobalStylesWrapper>
-    );
-
   return (
     <Layout>
       <Metas title={title} description={metaDescription} />
@@ -84,7 +41,22 @@ const Information = ({
         relatedItems={relatedItems}
         title={title}
       >
-        {sectionTitleStyleWrapper}
+        {dismissalProcess && (
+          <SlugSummaryWrapper variant="dark">
+            <QuestionnaireWrapper
+              name="dismissalProcess"
+              personnalizedTitle="Votre situation"
+              slug={slug}
+              title={"Cette procédure concerne le cas suivant :"}
+            ></QuestionnaireWrapper>
+          </SlugSummaryWrapper>
+        )}
+        <Contents
+          anchor={anchor}
+          sectionDisplayMode={sectionDisplayMode}
+          dismissalProcess={dismissalProcess}
+          contents={contents}
+        ></Contents>
         {references.map(
           ({ label, links }) =>
             links.length > 0 && (
@@ -111,65 +83,10 @@ export default Information;
 Information.getInitialProps = async ({ query: { slug }, asPath }) => {
   // beware, this one is undefined when rendered server-side
   const anchor = asPath.split("#")[1];
-  const contentBySlug = await getContentBySlug(slug);
-
-  const cdtnIdToFetch = getContentBlockIds(contentBySlug._source.contents);
-  let contents;
-
-  if (cdtnIdToFetch && cdtnIdToFetch.length) {
-    const fetchedContents = await getContentByIds(cdtnIdToFetch);
-    contents = injectContentInfos(
-      contentBySlug._source.contents,
-      fetchedContents
-    );
-  } else {
-    contents = contentBySlug._source.contents;
-  }
-
-  const information = {
-    ...contentBySlug,
-    _source: { ...contentBySlug._source, contents },
-    slug,
-  };
+  const information = await getInformationBySlug(slug);
 
   return { anchor, information };
 };
-
-const { breakpoints, spacings } = theme;
-
-const TabStylesWrapper = styled.div`
-  & > div > div > div {
-    overflow-x: auto;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  li {
-    flex: 1;
-    font-size: 16px;
-  }
-`;
-
-const GlobalStylesWrapper = styled.div`
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  ul,
-  ol {
-    padding-left: ${spacings.larger};
-  }
-
-  li + li {
-    margin-top: ${spacings.base};
-    @media (max-width: ${breakpoints.mobile}) {
-      margin-top: ${spacings.small};
-    }
-  }
-`;
 
 const SlugSummaryWrapper = styled(Wrapper)`
   margin-bottom: 29px;

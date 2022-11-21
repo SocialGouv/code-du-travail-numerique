@@ -1,6 +1,10 @@
 {
   "name": "@socialgouv/cdtn-ui",
-  "version": "4.84.1",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "version": "4.87.0",
   "description": "Composants ReactJS",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",

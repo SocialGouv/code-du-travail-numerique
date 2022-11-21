@@ -11,15 +11,11 @@ const mockedProps: EditorialContentDataWrapper = {
       breadcrumbs: [],
       contents: [],
     },
+    slug: "",
   },
 };
 
-jest.mock(
-  "../src/information",
-  jest.fn(() => {
-    processToHtml: () => "myHtml";
-  })
-);
+jest.mock("../src/information/htmlProcess.service");
 
 describe("Information Page", () => {
   let renderResult: RenderResult;

@@ -1,3 +1,4 @@
+/* eslint-disable jest/valid-expect */
 describe("Not found", () => {
   it("page should returns 404", () => {
     cy.request({
