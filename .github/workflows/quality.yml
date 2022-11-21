@@ -6,8 +6,6 @@ on:
       - master
       - dev
   pull_request:
-    branches:
-      - dev
 
 concurrency:
   cancel-in-progress: true
