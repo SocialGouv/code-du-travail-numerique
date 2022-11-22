@@ -19,39 +19,43 @@ export const Tile = React.forwardRef(
       title,
       wide,
       titleTagType,
+      centerTitle,
       ...props
     },
     ref
-  ) => (
-    <StyledTile
-      as={props.href ? "a" : "button"}
-      ref={ref}
-      wide={wide}
-      {...props}
-    >
-      {custom && <Badge />}
-      <TopWrapper>
-        {striped && <Stripe length="5rem" />}
-        {Icon && (
-          <IconWrapper>
-            <Icon />
-          </IconWrapper>
-        )}
-        <HeadingWrapper custom>
-          {subtitle && (
-            <StyledSubtitle noTitle={!title}>{subtitle}</StyledSubtitle>
+  ) => {
+    return (
+      <StyledTile
+        as={props.href ? "a" : "button"}
+        ref={ref}
+        wide={wide}
+        {...props}
+      >
+        {custom && <Badge />}
+        <TopWrapper>
+          {striped && <Stripe length="5rem" />}
+          {Icon && (
+            <IconWrapper>
+              <Icon />
+            </IconWrapper>
           )}
-          {title && <StyledHeading as={titleTagType}>{title}</StyledHeading>}
-        </HeadingWrapper>
-      </TopWrapper>
-      {children && <ChildrenWrapper>{children}</ChildrenWrapper>}
-    </StyledTile>
-  )
+          <HeadingWrapper custom centerTitle={centerTitle}>
+            {subtitle && (
+              <StyledSubtitle noTitle={!title}>{subtitle}</StyledSubtitle>
+            )}
+            {title && <StyledHeading as={titleTagType}>{title}</StyledHeading>}
+          </HeadingWrapper>
+        </TopWrapper>
+        {children && <ChildrenWrapper>{children}</ChildrenWrapper>}
+      </StyledTile>
+    );
+  }
 );
 
 Tile.displayName = "Tile";
 
 Tile.propTypes = {
+  centerTitle: PropTypes.bool,
   children: PropTypes.node,
   custom: PropTypes.bool,
   href: PropTypes.string,
@@ -64,6 +68,7 @@ Tile.propTypes = {
 };
 
 Tile.defaultProps = {
+  centerTitle: false,
   custom: false,
   href: undefined,
   icon: null,
@@ -122,7 +127,7 @@ const IconWrapper = styled.div`
   display: ${({ theme }) => (theme.noColors ? "none" : "block")};
   width: 7.2rem;
   height: 7.2rem;
-  margin: 0 auto ${spacings.base};
+  margin: 0 auto ${spacings.tiny};
   padding: 1.4rem;
   background-color: ${({ theme }) => theme.bgSecondary};
   border-radius: 50%;
@@ -130,10 +135,16 @@ const IconWrapper = styled.div`
 
 const TopWrapper = styled.div`
   flex: 0 0 auto;
+  width: 100%;
 `;
 
 const HeadingWrapper = styled.div`
   padding-right: ${({ custom }) => (custom ? spacings.small : "0")};
+  height: ${({ centerTitle }) => (centerTitle ? "45px" : "auto")};
+  display: ${({ centerTitle }) => (centerTitle ? "flex" : "block")};
+  align-items: ${({ centerTitle }) => (centerTitle ? "center" : "start")};
+  justify-content: ${({ centerTitle }) => (centerTitle ? "center" : "start")};
+  margin: ${({ centerTitle }) => (centerTitle ? "0" : "inherit")};
 `;
 
 const StyledSubtitle = styled(Subtitle)`

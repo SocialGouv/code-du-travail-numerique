@@ -71,6 +71,19 @@ exports[`<Tabs /> renders 1`] = `
 }
 
 .c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
@@ -160,6 +173,10 @@ exports[`<Tabs /> renders 1`] = `
 @media (max-width:600px) {
   .c5 {
     font-size: 1.6rem;
+    max-width: 150px;
+    -webkit-flex: none !important;
+    -ms-flex: none !important;
+    flex: none !important;
   }
 }
 
@@ -195,6 +212,7 @@ exports[`<Tabs /> renders 1`] = `
             aria-disabled="false"
             aria-selected="true"
             class="c5 react-tabs__tab--selected"
+            data-testid="undefined-0"
             id="react-tabs-0"
             role="tab"
             tabindex="0"
@@ -206,6 +224,7 @@ exports[`<Tabs /> renders 1`] = `
             aria-disabled="false"
             aria-selected="false"
             class="c5"
+            data-testid="undefined-1"
             id="react-tabs-2"
             role="tab"
           >

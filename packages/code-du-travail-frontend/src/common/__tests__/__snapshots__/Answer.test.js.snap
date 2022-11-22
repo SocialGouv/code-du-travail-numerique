@@ -1048,9 +1048,11 @@ exports[`<Answer /> should renders 1`] = `
             >
               <h2
                 class="c29 c30"
+                data-testid="heading"
               >
                 <span
                   class="c31"
+                  data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -2375,9 +2377,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             >
               <h2
                 class="c39 c40"
+                data-testid="heading"
               >
                 <span
                   class="c41"
+                  data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -3452,9 +3456,11 @@ exports[`<Answer /> should renders back to results link 1`] = `
             >
               <h2
                 class="c29 c30"
+                data-testid="heading"
               >
                 <span
                   class="c31"
+                  data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -4640,9 +4646,11 @@ exports[`<Answer /> should renders related content 1`] = `
             >
               <h2
                 class="c29 c30"
+                data-testid="heading"
               >
                 <span
                   class="c31"
+                  data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -4674,6 +4682,7 @@ exports[`<Answer /> should renders related content 1`] = `
         <div
           aria-level="2"
           class="c36"
+          data-testid="heading"
           role="heading"
         >
           Modèles et outils liés
@@ -4738,6 +4747,7 @@ exports[`<Answer /> should renders related content 1`] = `
         <div
           aria-level="2"
           class="c36"
+          data-testid="heading"
           role="heading"
         >
           Articles liés
@@ -5880,9 +5890,11 @@ exports[`<Answer /> should renders tooltip 1`] = `
             >
               <h2
                 class="c29 c30"
+                data-testid="heading"
               >
                 <span
                   class="c31"
+                  data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -6958,9 +6970,11 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             >
               <h2
                 class="c29 c30"
+                data-testid="heading"
               >
                 <span
                   class="c31"
+                  data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -8037,9 +8051,11 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             >
               <h2
                 class="c29 c30"
+                data-testid="heading"
               >
                 <span
                   class="c31"
+                  data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
@@ -9111,9 +9127,11 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             >
               <h2
                 class="c29 c30"
+                data-testid="heading"
               >
                 <span
                   class="c31"
+                  data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>

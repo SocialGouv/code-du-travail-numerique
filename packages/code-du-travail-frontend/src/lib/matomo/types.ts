@@ -1,6 +1,13 @@
 export enum MatomoBaseEvent {
   TRACK_EVENT = "trackEvent",
   OUTIL = "outil",
+  PAGE_INFORMATION = "page_information",
+}
+
+export enum MatomoBaseAction {
+  SELECT = "select",
+  CLICK = "click",
+  VIEW = "view",
 }
 
 export enum MatomoSearchAgreementCategory {
@@ -36,6 +43,7 @@ export enum MatomoSimulatorEvent {
 export enum MatomoAgreementEvent {
   CC_TREATED = "cc_select_traitée",
   CC_UNTREATED = "cc_select_non_traitée",
+  CC_BLOCK_USER = "user_blocked_info_cc",
 }
 
 export enum MatomoRetirementEvent {

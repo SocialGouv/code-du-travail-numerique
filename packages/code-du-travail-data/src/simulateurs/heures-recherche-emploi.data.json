@@ -89,6 +89,10 @@
       "question": "Quel est l'âge du salarié ?"
     },
     {
+      "name": "personnels des entreprises de transport routier de marchandises",
+      "question": "Le salarié fait-il partie des personnels de transport routier de marchandises ou d'activités auxiliaires du transport ?"
+    },
+    {
       "name": "secteur d'activité",
       "question": "Quel est le secteur d'activité de l'entreprise ?"
     },
@@ -212,13 +216,28 @@
     },
     {
       "criteria": {
-        "catégorie professionnelle": "4| Ouvriers"
+        "catégorie professionnelle": "4| Ouvriers",
+        "personnels des entreprises de transport routier de marchandises": "1| Oui"
+      },
+      "type": "heures pour recherche d'emploi",
+      "idcc": 16,
+      "typeRupture": "1| Démission",
+      "answer": "12 heures",
+      "answer2": "Le salaire est maintenu sur la base du salaire effectif du salarié.",
+      "answer3": "Ces heures sont fixées d'un commun accord par l'employeur et le salarié. En l'absence d'accord, 6 heures sont fixées par l’employeur et 6 heures par le salarié.",
+      "ref": "Accord du 16 juin 1961 relatifs aux ouvriers - annexe I, article 5",
+      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849372&cidTexte=KALITEXT000005678895&dateTexte=29990101&categorieLien=id"
+    },
+    {
+      "criteria": {
+        "catégorie professionnelle": "4| Ouvriers",
+        "personnels des entreprises de transport routier de marchandises": "1| Non"
       },
       "type": "heures pour recherche d'emploi",
       "idcc": 16,
       "typeRupture": "1| Démission",
       "answer": "2 heures par jour",
-      "answer2": "Le salaire est maintenu sur la base du salaire effectif du salarié et jusqu'à 12 heures d'absence au maximum.\n",
+      "answer2": "Le salaire est maintenu sur la base du salaire effectif du salarié et jusqu'à 12 heures d'absence au maximum.",
       "answer3": "Les heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider de bloquer ces heures avant la fin du préavis. En l'absence d'accord, elles sont fixées un jour par l'employeur et le suivant par le salarié.",
       "ref": "Accord du 16 juin 1961 relatifs aux ouvriers - annexe I, article 5",
       "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=9D32D1AB24BC5ACF016410CDFEE667F3.tplgfr24s_3?idArticle=KALIARTI000005849372&cidTexte=KALITEXT000005678895&dateTexte=29990101&categorieLien=id"
@@ -801,7 +820,7 @@
       "type": "heures pour recherche d'emploi",
       "idcc": 275,
       "typeRupture": "3| Licenciement",
-      "answer": "50 heures",
+      "answer": "50 heures par mois",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absences peuvent être prises en une ou plusieurs fois en accord avec l'employeur.",
       "ref": "Annexe 1, Article 10",
@@ -866,7 +885,7 @@
       "type": "heures pour recherche d'emploi",
       "idcc": 275,
       "typeRupture": "1| Démission",
-      "answer": "50 heures",
+      "answer": "50 heures par mois",
       "answer2": "Le salaire est maintenu.",
       "answer3": "Les heures d'absences peuvent être prises en une ou plusieurs fois en accord avec l'employeur.",
       "ref": "Annexe 1, Article 10",
@@ -1858,8 +1877,8 @@
       "answer": null,
       "answer2": null,
       "answer3": null,
-      "ref": "Article 3.7.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005874369&cidTexte=KALITEXT000005689370"
+      "ref": "Article 20.1",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562750#KALIARTI000043562750"
     },
     {
       "criteria": {},
@@ -1869,8 +1888,8 @@
       "answer": "2 heures par jour travaillé",
       "answer2": null,
       "answer3": "Les 2 heures sont fixées un jour par l'employeur et le jour suivant par le salarié. Si l'employeur et le salarié sont d'accord, ces heures peuvent être cumulées. Ce droit d'absence cesse quand le salarié a trouvé un emploi.",
-      "ref": "Article 3.7.1",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005874369&cidTexte=KALITEXT000005689370"
+      "ref": "Article 20.1",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562750#KALIARTI000043562750"
     },
     {
       "criteria": {},
@@ -1880,8 +1899,8 @@
       "answer": null,
       "answer2": null,
       "answer3": null,
-      "ref": "Article 3.3",
-      "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005874363&cidTexte=KALITEXT000005689370&dateTexte=20200206"
+      "ref": "Article 16",
+      "refUrl": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562743#KALIARTI000043562743"
     },
     {
       "criteria": {},

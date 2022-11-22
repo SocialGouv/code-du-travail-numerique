@@ -95,11 +95,11 @@ spec:
             timeoutSeconds: 3
           resources:
             limits:
-              cpu: 500m
-              memory: 1Gi
-            requests:
               cpu: 100m
-              memory: 320Mi
+              memory: 256Mi
+            requests:
+              cpu: 50m
+              memory: 128Mi
           startupProbe:
             failureThreshold: 12
             httpGet:
@@ -355,11 +355,11 @@ spec:
             timeoutSeconds: 3
           resources:
             limits:
-              cpu: 500m
-              memory: 768Mi
-            requests:
-              cpu: 300m
+              cpu: 250m
               memory: 512Mi
+            requests:
+              cpu: 50m
+              memory: 256Mi
           startupProbe:
             failureThreshold: 12
             httpGet:
@@ -416,7 +416,7 @@ metadata:
   namespace: code-du-travail-numerique-mybranch
 data:
   AZURE_BASE_URL: https://cdtnadmindev.blob.core.windows.net
-  AZURE_CONTAINER: cdtn-dev
+  AZURE_CONTAINER: cdtn
   NODE_ENV: production
   PIWIK_SITE_ID: '3'
   PIWIK_URL: https://matomo.fabrique.social.gouv.fr

@@ -26,7 +26,7 @@ exports[`<Highlights /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c16 {
+.c17 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
@@ -176,10 +176,22 @@ exports[`<Highlights /> should render 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  width: 100%;
 }
 
 .c12 {
   padding-right: 1rem;
+  height: auto;
+  display: block;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin: inherit;
 }
 
 .c14 {
@@ -211,6 +223,12 @@ exports[`<Highlights /> should render 1`] = `
   font-family: "Merriweather",serif;
   line-height: 1.25;
   padding-top: 1.6rem;
+}
+
+.c16 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 @media (max-width:600px) {
@@ -374,21 +392,25 @@ exports[`<Highlights /> should render 1`] = `
                     >
                       Santé, sécurité et conditions de travail
                     </p>
-                    <p
+                    <h3
                       class="c14"
                     >
                       Coronavirus : je suis salarié
-                    </p>
+                    </h3>
                   </div>
                 </div>
                 <div
                   class="c15"
                 >
-                  <p
+                  <div
                     class="c16"
                   >
-                    1. Dois-je prévenir mon employeur si je reviens, ou si...
-                  </p>
+                    <p
+                      class="c17"
+                    >
+                      1. Dois-je prévenir mon employeur si je reviens, ou si...
+                    </p>
+                  </div>
                 </div>
               </a>
             </div>
@@ -410,21 +432,25 @@ exports[`<Highlights /> should render 1`] = `
                     >
                       Santé, sécurité et conditions de travail
                     </p>
-                    <p
+                    <h3
                       class="c14"
                     >
                       Coronavirus : je suis employeur
-                    </p>
+                    </h3>
                   </div>
                 </div>
                 <div
                   class="c15"
                 >
-                  <p
+                  <div
                     class="c16"
                   >
-                    9. Quelles sont les recommandations sanitaires pour...
-                  </p>
+                    <p
+                      class="c17"
+                    >
+                      9. Quelles sont les recommandations sanitaires pour...
+                    </p>
+                  </div>
                 </div>
               </a>
             </div>

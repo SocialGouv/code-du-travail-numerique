@@ -131,6 +131,7 @@ exports[`<StepStatus /> should render 1`] = `
     >
       <input
         class="c5"
+        data-testid="seriousMisconduct-oui"
         id="seriousMisconduct-oui"
         name="seriousMisconduct"
         type="radio"
@@ -148,6 +149,7 @@ exports[`<StepStatus /> should render 1`] = `
     >
       <input
         class="c5"
+        data-testid="seriousMisconduct-non"
         id="seriousMisconduct-non"
         name="seriousMisconduct"
         type="radio"
@@ -471,6 +473,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     >
       <input
         class="c5"
+        data-testid="seriousMisconduct-oui"
         id="seriousMisconduct-oui"
         name="seriousMisconduct"
         type="radio"
@@ -489,6 +492,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       <input
         checked=""
         class="c5"
+        data-testid="seriousMisconduct-non"
         id="seriousMisconduct-non"
         name="seriousMisconduct"
         type="radio"
@@ -525,6 +529,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       <input
         checked=""
         class="c5"
+        data-testid="disabledWorker-oui"
         id="disabledWorker-oui"
         name="disabledWorker"
         type="radio"
@@ -542,6 +547,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     >
       <input
         class="c5"
+        data-testid="disabledWorker-non"
         id="disabledWorker-non"
         name="disabledWorker"
         type="radio"
@@ -617,6 +623,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
     >
       <select
         class="c13"
+        data-testid="cdt.ancienneté"
         id="input-cdt.ancienneté"
         name="cdt.ancienneté"
       >
@@ -627,16 +634,19 @@ exports[`<StepStatus /> should render coefficient 1`] = `
           ...
         </option>
         <option
+          data-testid="15| Moins de 6 mois"
           value="15| Moins de 6 mois"
         >
           Moins de 6 mois
         </option>
         <option
+          data-testid="33| 6 mois à moins de 2 ans"
           value="33| 6 mois à moins de 2 ans"
         >
           6 mois à moins de 2 ans
         </option>
         <option
+          data-testid="43| Plus de 2 ans"
           value="43| Plus de 2 ans"
         >
           Plus de 2 ans
@@ -808,6 +818,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
     >
       <input
         class="c5"
+        data-testid="seriousMisconduct-oui"
         id="seriousMisconduct-oui"
         name="seriousMisconduct"
         type="radio"
@@ -826,6 +837,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
       <input
         checked=""
         class="c5"
+        data-testid="seriousMisconduct-non"
         id="seriousMisconduct-non"
         name="seriousMisconduct"
         type="radio"
@@ -861,6 +873,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
     >
       <input
         class="c5"
+        data-testid="disabledWorker-oui"
         id="disabledWorker-oui"
         name="disabledWorker"
         type="radio"
@@ -878,6 +891,7 @@ exports[`<StepStatus /> should render seriousMisconduct 1`] = `
     >
       <input
         class="c5"
+        data-testid="disabledWorker-non"
         id="disabledWorker-non"
         name="disabledWorker"
         type="radio"

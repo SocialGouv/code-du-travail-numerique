@@ -253,7 +253,7 @@ exports[`<Themes /> should render 1`] = `
   display: block;
   width: 7.2rem;
   height: 7.2rem;
-  margin: 0 auto 1.6rem;
+  margin: 0 auto 0.4rem;
   padding: 1.4rem;
   background-color: #f2f5fa;
   border-radius: 50%;
@@ -263,10 +263,22 @@ exports[`<Themes /> should render 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  width: 100%;
 }
 
 .c26 {
   padding-right: 1rem;
+  height: auto;
+  display: block;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin: inherit;
 }
 
 .c27 {

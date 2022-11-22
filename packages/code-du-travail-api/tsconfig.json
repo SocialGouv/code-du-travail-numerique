@@ -19,7 +19,8 @@
     // Generate .d.ts files from TypeScript and JavaScript files in your project
     "declaration": true,
     // Skip type checking all .d.ts files.
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "noImplicitAny": false
   },
   "include": ["src"]
 }

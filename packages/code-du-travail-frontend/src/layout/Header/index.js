@@ -1,4 +1,5 @@
 import { Container, icons, keyframes, theme } from "@socialgouv/cdtn-ui";
+import { lightFormat } from "date-fns";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
@@ -12,7 +13,7 @@ export const HEADER_HEIGHT = "13.5rem";
 export const MOBILE_HEADER_HEIGHT = "9rem";
 
 const printDate = () => {
-  const currentDate = new Date(Date.now()).toLocaleString("fr-FR");
+  const currentDate = lightFormat(new Date(Date.now()), "dd/MM/yyyy, HH:mm:ss");
   return `le ${currentDate}`;
 };
 

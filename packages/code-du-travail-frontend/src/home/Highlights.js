@@ -1,7 +1,7 @@
 import { Container, Grid, PageTitle, Section } from "@socialgouv/cdtn-ui";
 import React from "react";
 
-import { ListLink } from "../../src/search/SearchResults/Results.js";
+import { ListLink } from "../../src/search/SearchResults/Results";
 
 export const Highlights = ({ highlights = [] }) => {
   if (!highlights.length) return null;
@@ -13,7 +13,7 @@ export const Highlights = ({ highlights = [] }) => {
         </PageTitle>
         <Grid columns={2}>
           {highlights.map((highlight) => (
-            <ListLink item={highlight} key={highlight.slug} />
+            <ListLink item={highlight} key={highlight.slug} titleTagType="h3" />
           ))}
         </Grid>
       </Container>

@@ -11,22 +11,8 @@
     "stylelint-config-rational-order/plugin"
   ],
   "rules": {
-    "property-no-vendor-prefix": [
-      true,
-      {
-        "ignoreProperties": [
-          "/grid/"
-        ]
-      }
-    ],
-    "value-no-vendor-prefix": [
-      true,
-      {
-        "ignoreValues": [
-          "grid"
-        ]
-      }
-    ],
+    "property-no-vendor-prefix": null,
+    "value-no-vendor-prefix": null,
     "order/properties-order": [
       [],
       {
@@ -40,6 +26,7 @@
         "empty-line-between-groups": false,
         "severity": "warning"
       }
-    ]
+    ],
+    "no-descending-specificity": null
   }
 }

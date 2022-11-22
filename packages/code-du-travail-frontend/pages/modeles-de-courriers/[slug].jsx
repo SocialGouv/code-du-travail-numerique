@@ -18,6 +18,7 @@ import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { toUrl } from "../../src/lib";
+import EventTracker from "../../src/lib/tracking/EventTracker";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -49,6 +50,8 @@ class ModeleCourrier extends React.Component {
           fileUrl,
           html,
           title,
+          meta_title,
+          type,
         },
         relatedItems,
         status,
@@ -60,17 +63,20 @@ class ModeleCourrier extends React.Component {
     const [filename] = fileUrl.match(/[^/]+$/);
     const [, extension] = filename.split(/\.([a-z]{2,4})$/);
     const filesizeFormated = Math.round((filesize / 1000) * 100) / 100;
+    const category = `Modèle ${
+      type !== "fichier" ? `de ${type}` : "à télécharger"
+    }`;
     return (
       <Layout>
         <Metas
-          title={`Modèle de document :  ${title}`}
+          title={`${category} :  ${meta_title ?? title}`}
           description={
             metaDescription ||
             description.slice(0, description.indexOf(" ", 150)) + "…"
           }
         />
         <Answer
-          title={title}
+          title={`Modèle - ${title}`}
           relatedItems={relatedItems}
           emptyMessage="Modèle de document introuvable"
           intro={description}
@@ -124,6 +130,7 @@ class ModeleCourrier extends React.Component {
             </Button>
           </Centered>
         </Answer>
+        <EventTracker />
       </Layout>
     );
   }

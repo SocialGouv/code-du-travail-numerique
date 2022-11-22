@@ -4,7 +4,7 @@ import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
 import styled from "styled-components";
 
-import { Error } from "./ErrorField";
+import { Error, ErrorField } from "./ErrorField";
 import { Question, Tooltip } from "./Question";
 import { required } from "./validators";
 
@@ -62,7 +62,7 @@ const SelectQuestion = ({
                 {label}
               </Question>
               {subLabel && <SubLabel>{subLabel}</SubLabel>}
-              <StyledSelect {...input} id={uid}>
+              <StyledSelect {...input} id={uid} data-testid={name}>
                 <option disabled value="">
                   ...
                 </option>
@@ -75,17 +75,18 @@ const SelectQuestion = ({
                   }
 
                   return (
-                    <option value={key} key={key}>
+                    <option value={key} key={key} data-testid={key}>
                       {label}
                     </option>
                   );
                 })}
               </StyledSelect>
-              {error && dirty && <Error>{error}</Error>}
+              {error && <ErrorField name={name} errorText={error} />}
             </Wrapper>
           );
         }}
       </Field>
+
       <OnChange name={name}>
         {(values, _previous) => {
           onChange?.(values);

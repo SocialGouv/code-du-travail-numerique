@@ -25,7 +25,12 @@ export const Tabs = (props) => {
         <StyledOverflowWrapper>
           <StyledTabList>
             {data.map(({ tab }, index) => (
-              <StyledTab key={index}>{getTextFromComponent(tab)}</StyledTab>
+              <StyledTab
+                key={index}
+                data-testid={`${props["data-testid"]}-${index}`}
+              >
+                {getTextFromComponent(tab)}
+              </StyledTab>
             ))}
           </StyledTabList>
         </StyledOverflowWrapper>
@@ -47,6 +52,7 @@ Tabs.propTypes = {
       tab: PropTypes.node.isRequired,
     })
   ).isRequired,
+  "data-testid": PropTypes.string,
   defaultIndex: PropTypes.number,
   onSelect: PropTypes.func,
   selectedIndex: PropTypes.number,
@@ -82,6 +88,10 @@ const StyledTabList = styled(TabList)`
 `;
 
 const StyledTab = styled(Tab)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   flex: 1 0 auto;
   max-height: 11rem;
   margin-left: ${spacings.tiny};
@@ -112,6 +122,8 @@ const StyledTab = styled(Tab)`
   }
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};
+    max-width: 150px;
+    flex: none !important;
   }
 `;
 

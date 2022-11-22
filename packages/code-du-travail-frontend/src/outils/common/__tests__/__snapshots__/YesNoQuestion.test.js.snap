@@ -131,6 +131,7 @@ exports[`<YesNoQuestion /> should render 1`] = `
     >
       <input
         class="c5"
+        data-testid="test-oui"
         id="test-oui"
         name="test"
         type="radio"
@@ -148,6 +149,7 @@ exports[`<YesNoQuestion /> should render 1`] = `
     >
       <input
         class="c5"
+        data-testid="test-non"
         id="test-non"
         name="test"
         type="radio"

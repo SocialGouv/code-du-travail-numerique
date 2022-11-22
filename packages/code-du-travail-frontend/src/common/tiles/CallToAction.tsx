@@ -5,23 +5,36 @@ import styled from "styled-components";
 type Props = {
   children: React.ReactNode | null;
   action: string;
-  title: string;
+  title?: string;
   icon?: string;
   titleTagType: string;
   noCustom?: boolean;
+  href?: string;
+  target?: string;
+  rel?: string;
+  className?: string;
+  centerTitle?: boolean;
+  custom?: boolean;
 };
 
 export const CallToActionTile = React.forwardRef<HTMLAnchorElement, Props>(
   function _CallToActionTile(
-    { action = "", noCustom, children, ...props }: Props,
+    { action = "", noCustom, children, centerTitle, ...props }: Props,
     ref: ForwardedRef<any>
   ): JSX.Element {
     return (
-      <StyledTile custom={!noCustom} {...props} ref={ref}>
+      <StyledTile
+        custom={!noCustom}
+        centerTitle={centerTitle}
+        {...props}
+        ref={ref}
+      >
         <TileChildren>
           {children}
           <StyledDiv hasContentAbove={Boolean(children)}>
-            <Button variant="link">{action}</Button>
+            <Button variant="link" hasText>
+              {action}
+            </Button>
           </StyledDiv>
         </TileChildren>
       </StyledTile>
@@ -36,8 +49,13 @@ const { spacings, breakpoints, fonts } = theme;
 const TileChildren = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
+  flex: 1 1 auto;
+  p {
+    margin: 0 auto;
+    flex: 1 0 auto;
+    display: flex;
+  }
 `;
 
 const StyledTile = styled(Tile)`
@@ -52,6 +70,6 @@ const StyledTile = styled(Tile)`
 `;
 
 const StyledDiv = styled.div`
-  margin-top: ${({ hasContentAbove }) =>
+  padding-top: ${({ hasContentAbove }) =>
     hasContentAbove ? spacings.base : spacings.small};
 `;

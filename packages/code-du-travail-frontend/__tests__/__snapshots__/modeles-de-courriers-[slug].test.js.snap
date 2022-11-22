@@ -2318,7 +2318,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     </button>
                     <a
                       class="c41 spacing-left"
-                      href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Courrier%20Epistolaire&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+                      href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Mod%C3%A8le%20-%20Courrier%20Epistolaire&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                       title="Envoyer par email"
                     >
                       <span
@@ -2414,7 +2414,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     <span
                       class="c48"
                     />
-                    Courrier Epistolaire
+                    Modèle - Courrier Epistolaire
                   </h1>
                 </header>
                 <div
@@ -2605,7 +2605,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               </button>
               <a
                 class="c41 spacing-left"
-                href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Courrier%20Epistolaire&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
+                href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Mod%C3%A8le%20-%20Courrier%20Epistolaire&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                 title="Envoyer par email"
               >
                 <span
@@ -2701,9 +2701,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 >
                   <h2
                     class="c71 c72"
+                    data-testid="heading"
                   >
                     <span
                       class="c73"
+                      data-testid="stripe"
                     />
                     Avez-vous trouvé la réponse à votre question ?
                   </h2>
@@ -2792,6 +2794,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c90 c91"
+                data-testid="heading"
                 role="heading"
               >
                 Code du travail numérique
@@ -2871,6 +2874,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c90 c91"
+                data-testid="heading"
                 role="heading"
               >
                 Aidez-nous à améliorer cet outil
@@ -2915,6 +2919,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               <strong
                 aria-level="2"
                 class="c90 c91"
+                data-testid="heading"
                 role="heading"
               >
                 En collaboration avec

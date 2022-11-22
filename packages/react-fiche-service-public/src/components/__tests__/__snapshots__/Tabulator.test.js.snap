@@ -82,6 +82,19 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 }
 
 .c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
@@ -177,6 +190,10 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 @media (max-width:600px) {
   .c5 {
     font-size: 1.6rem;
+    max-width: 150px;
+    -webkit-flex: none !important;
+    -ms-flex: none !important;
+    flex: none !important;
   }
 }
 
@@ -212,6 +229,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
             aria-disabled="false"
             aria-selected="true"
             class="c5 react-tabs__tab--selected"
+            data-testid="undefined-0"
             id="react-tabs-0"
             role="tab"
             tabindex="0"
@@ -223,6 +241,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
             aria-disabled="false"
             aria-selected="false"
             class="c5"
+            data-testid="undefined-1"
             id="react-tabs-2"
             role="tab"
           >
@@ -242,6 +261,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
       >
         <h2
           class="c8"
+          data-testid="heading"
         >
           CDI
         </h2>
@@ -251,6 +271,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
       >
         <h3
           class="c8"
+          data-testid="heading"
         >
           titre 1
         </h3>
@@ -351,6 +372,19 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 }
 
 .c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
@@ -446,6 +480,10 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 @media (max-width:600px) {
   .c5 {
     font-size: 1.6rem;
+    max-width: 150px;
+    -webkit-flex: none !important;
+    -ms-flex: none !important;
+    flex: none !important;
   }
 }
 
@@ -481,6 +519,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
             aria-disabled="false"
             aria-selected="true"
             class="c5 react-tabs__tab--selected"
+            data-testid="undefined-0"
             id="react-tabs-4"
             role="tab"
             tabindex="0"
@@ -492,6 +531,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
             aria-disabled="false"
             aria-selected="false"
             class="c5"
+            data-testid="undefined-1"
             id="react-tabs-6"
             role="tab"
           >
@@ -511,6 +551,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
       >
         <h3
           class="c8"
+          data-testid="heading"
         >
           CDI
         </h3>
@@ -520,6 +561,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
       >
         <h4
           class="c8"
+          data-testid="heading"
         >
           titre 1
         </h4>
@@ -620,6 +662,19 @@ exports[`<Tabulator /> should render 1`] = `
 }
 
 .c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
@@ -715,6 +770,10 @@ exports[`<Tabulator /> should render 1`] = `
 @media (max-width:600px) {
   .c5 {
     font-size: 1.6rem;
+    max-width: 150px;
+    -webkit-flex: none !important;
+    -ms-flex: none !important;
+    flex: none !important;
   }
 }
 
@@ -750,6 +809,7 @@ exports[`<Tabulator /> should render 1`] = `
             aria-disabled="false"
             aria-selected="true"
             class="c5 react-tabs__tab--selected"
+            data-testid="undefined-0"
             id="react-tabs-8"
             role="tab"
             tabindex="0"
@@ -761,6 +821,7 @@ exports[`<Tabulator /> should render 1`] = `
             aria-disabled="false"
             aria-selected="false"
             class="c5"
+            data-testid="undefined-1"
             id="react-tabs-10"
             role="tab"
           >
@@ -780,6 +841,7 @@ exports[`<Tabulator /> should render 1`] = `
       >
         <h4
           class="c8"
+          data-testid="heading"
         >
           CDI
         </h4>
@@ -789,6 +851,7 @@ exports[`<Tabulator /> should render 1`] = `
       >
         <h5
           class="c8"
+          data-testid="heading"
         >
           titre 1
         </h5>
