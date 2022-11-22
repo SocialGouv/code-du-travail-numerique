@@ -28,7 +28,7 @@ export const StyledButton = styled.button`
   @media print {
     display: none;
   }
-  ${({ narrow, theme, small, variant }) => {
+  ${({ narrow, theme, small, variant, xsmall }) => {
     if (variant === "link") {
       return css`
         padding: 0;
@@ -44,6 +44,18 @@ export const StyledButton = styled.button`
         overflow: visible;
         &:hover {
           text-decoration: underline;
+          svg {
+            transform: translateX(4px);
+          }
+        }
+        svg {
+          width: 2.6rem;
+          height: 1.4rem;
+          margin: ${({ hasText }) =>
+            hasText ? `0 ${spacings.tiny} 0 ${spacings.small}` : "0"};
+          transition: transform ${animations.transitionTiming} linear;
+          /* stylelint-disable-next-line */
+          fill: ${theme.primary};
         }
       `;
     }
@@ -90,6 +102,11 @@ export const StyledButton = styled.button`
 
     if (narrow) {
       padding = small ? "0 1rem" : "0 1.9rem";
+    }
+
+    if (xsmall) {
+      height = "2.8rem";
+      padding = "0 3rem";
     }
 
     if (variant === "flat") {
@@ -159,8 +176,8 @@ export const StyledButton = styled.button`
 `;
 
 // eslint-disable-next-line no-unused-vars
-const StyledArrowRight = styled(({ hasText, ...props }) => (
-  <DirectionRight {...props} />
+const StyledIcon = (Icon) => styled(({ hasText, ...props }) => (
+  <Icon {...props} />
 ))`
   width: 2.6rem;
   height: 1.4rem;
@@ -171,20 +188,31 @@ const StyledArrowRight = styled(({ hasText, ...props }) => (
   ${StyledButton}:hover & {
     transform: translateX(4px);
   }
+  ${({ theme }) => {
+    return css`
+      fill: ${theme.primary};
+    `;
+  }}
 `;
 
-export const Button = React.forwardRef(({ children, ...props }, ref) => (
-  <StyledButton {...props} ref={ref}>
-    {children}
-    {props.variant === "link" && (
-      <StyledArrowRight hasText={Boolean(children)} />
-    )}
-  </StyledButton>
-));
+export const Button = React.forwardRef(
+  ({ children, icon: Icon, ...props }, ref) => {
+    const StyledCustomIcon = Icon || DirectionRight;
+    return (
+      <StyledButton {...props} ref={ref}>
+        {children}
+        {props.variant === "link" && (
+          <StyledCustomIcon hasText={Boolean(children)} />
+        )}
+      </StyledButton>
+    );
+  }
+);
 Button.displayName = "Button";
 
 Button.propTypes = {
   children: PropTypes.node,
+  icon: PropTypes.elementType,
   narrow: PropTypes.bool,
   onClick: PropTypes.func,
   small: PropTypes.bool,
@@ -204,4 +232,5 @@ Button.defaultProps = {
   onClick: () => {},
   small: false,
   variant: "secondary",
+  xsmall: false,
 };

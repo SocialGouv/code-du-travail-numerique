@@ -1,7 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ServiceRenseignement /> should render suggestions 1`] = `
-.c0 {
+.c2 {
+  position: absolute;
+  background-color: #7994d4;
+  border-radius: 0.6rem;
+  top: 0;
+  left: 50%;
+  width: 7rem;
+  height: 0.4rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c3 {
   position: relative;
   display: block;
   margin: 3.2rem 0 2rem 0;
@@ -12,7 +25,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   line-height: 1.625;
 }
 
-.c8 {
+.c11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -50,14 +63,14 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   will-change: transform;
 }
 
-.c8:link,
-.c8:visited {
+.c11:link,
+.c11:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c8:not([disabled]):hover {
+.c11:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -66,7 +79,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   border-color: transparent;
 }
 
-.c8[disabled] {
+.c11[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -74,12 +87,12 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   cursor: not-allowed;
 }
 
-.c5 {
+.c8 {
   position: relative;
   display: inline-block;
 }
 
-.c7 {
+.c10 {
   width: 100%;
   height: 5.4rem;
   padding: 0 2rem;
@@ -101,57 +114,75 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   appearance: none;
 }
 
-.c7[type="number"] {
+.c10[type="number"] {
   -moz-appearance: textfield;
 }
 
-.c7::-webkit-outer-spin-button,
-.c7::-webkit-inner-spin-button {
+.c10::-webkit-outer-spin-button,
+.c10::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.c7:invalid {
+.c10:invalid {
   border-color: #eb5757;
 }
 
-.c7::-webkit-input-placeholder {
+.c10::-webkit-input-placeholder {
   color: #9298af;
 }
 
-.c7::-moz-placeholder {
+.c10::-moz-placeholder {
   color: #9298af;
 }
 
-.c7:-ms-input-placeholder {
+.c10:-ms-input-placeholder {
   color: #9298af;
 }
 
-.c7::placeholder {
+.c10::placeholder {
   color: #9298af;
 }
 
-.c7:focus {
+.c10:focus {
   border-color: #7994d4;
 }
 
-.c7:focus::-webkit-input-placeholder {
+.c10:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.c7:focus::-moz-placeholder {
+.c10:focus::-moz-placeholder {
   color: transparent;
 }
 
-.c7:focus:-ms-input-placeholder {
+.c10:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.c7:focus::placeholder {
+.c10:focus::placeholder {
   color: transparent;
+}
+
+.c0 {
+  margin-top: 0;
+  margin-bottom: 4rem;
+  margin-left: auto;
+  text-align: center;
 }
 
 .c1 {
+  position: relative;
+  margin: 0;
+  color: #2f3b6c;
+  font-weight: normal;
+  font-size: 3.2rem;
+  font-family: "Merriweather",serif;
+  line-height: 1.25;
+  padding-top: 1.6rem;
+}
+
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -167,14 +198,14 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   border: 1px solid #9298af;
 }
 
-.c2 {
+.c5 {
   padding: 0 1rem;
   color: #9298af;
   font-size: 2.8rem;
   text-align: center;
 }
 
-.c3 {
+.c6 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -195,7 +226,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   background-color: #9298af;
 }
 
-.c3:before {
+.c6:before {
   position: absolute;
   top: 50%;
   left: 0;
@@ -210,7 +241,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   content: "";
 }
 
-.c3:after {
+.c6:after {
   position: absolute;
   top: 0;
   left: 0.9rem;
@@ -223,7 +254,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   content: "";
 }
 
-.c4 {
+.c7 {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -232,12 +263,12 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   padding-bottom: 1rem;
 }
 
-.c6 {
+.c9 {
   width: 250px;
   margin-left: 1rem;
 }
 
-.c9 {
+.c12 {
   position: absolute;
   top: 1rem;
   right: 0;
@@ -246,49 +277,62 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
   color: #7994d4;
 }
 
-.c10 {
+.c13 {
   width: 3rem;
   height: 3rem;
 }
 
-.c11 {
+.c14 {
   font-size: 1.2rem;
   margin-top: 2rem;
 }
 
 @media (max-width:600px) {
-  .c0 {
+  .c3 {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c11 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c8 {
+  .c11 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c8 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c10 {
     padding: 0 1rem;
     padding-right: 2rem;
   }
 }
 
 @media (max-width:600px) {
+  .c0 {
+    margin-bottom: 3.2rem;
+    margin-left: auto;
+  }
+}
+
+@media (max-width:600px) {
   .c1 {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -297,7 +341,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c6 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -309,34 +353,47 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
 }
 
 @media (max-width:600px) {
-  .c3:before {
+  .c6:before {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c3:after {
+  .c6:after {
     display: block;
   }
 }
 
 <div>
-  <h4
+  <header
     class="c0"
   >
+    <h1
+      class="c1"
+    >
+      <span
+        class="c2"
+      />
+      Les services du ministère du Travail
+    </h1>
+  </header>
+  <h2
+    class="c3"
+    data-testid="heading"
+  >
     Contact téléphonique
-  </h4>
+  </h2>
   <a
-    class="c1"
+    class="c4"
     href="tel:+0033806000126"
   >
     <strong
-      class="c2"
+      class="c5"
     >
       0 806 000 126
     </strong>
     <em
-      class="c3"
+      class="c6"
     >
       Service gratuit 
       <span>
@@ -344,13 +401,14 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
       </span>
     </em>
   </a>
-  <h4
-    class="c0"
+  <h2
+    class="c3"
+    data-testid="heading"
   >
     Contact par email et prise de rendez-vous
-  </h4>
+  </h2>
   <form
-    class="c4"
+    class="c7"
   >
     <label
       for="search-service"
@@ -358,11 +416,11 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
       Saisissez votre numéro de département :
     </label>
     <span
-      class="c5 c6"
+      class="c8 c9"
     >
       <input
         autocomplete="off"
-        class="c7"
+        class="c10"
         id="search-service"
         maxlength="3"
         name="departement"
@@ -373,13 +431,13 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     </span>
     <button
       aria-label="Recherchez le service"
-      class="c8 c9"
+      class="c11 c12"
       title="Lancer une recherche"
       type="submit"
     >
       <svg
         aria-hidden="true"
-        class="c10"
+        class="c13"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -392,7 +450,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     </button>
   </form>
   <div
-    class="c11"
+    class="c14"
   >
     <p>
       Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :

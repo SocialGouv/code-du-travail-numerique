@@ -63,6 +63,13 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
   valeur: 0
   unité: €
 
+contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . désactiver formule résultat conventionnel:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 2 ans
+  valeur: oui
+  cdtn:
+    formule:
+      formula: ""
+
 # Etam
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . etam:
   applicable si: catégorie professionnelle = 'ETAM'
@@ -205,6 +212,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
 
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . refus . résultat conventionnel . formule moins de 10ans:
   applicable si: contrat salarié . indemnité de licenciement . ancienneté en année <= 10ans
+  valeur: oui
   cdtn:
     formule:
       explanations:
@@ -214,6 +222,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
 
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . refus . résultat conventionnel . formule plus de 10ans:
   applicable si: contrat salarié . indemnité de licenciement . ancienneté en année > 10ans
+  valeur: oui
   cdtn:
     formule:
       explanations:

@@ -2,9 +2,9 @@ import {
   add,
   areIntervalsOverlapping,
   getOverlappingDaysInIntervals,
+  isAfter,
   isWithinInterval,
   parse,
-  set,
   sub,
 } from "date-fns";
 
@@ -21,29 +21,24 @@ export type AbsencePerYear = {
 };
 
 export const splitBySeniorityYear = (begin: Date, end: Date): YearDetail[] => {
-  const startYear = begin.getFullYear();
-  const endYear = end.getFullYear();
-  if (endYear < startYear) {
+  if (isAfter(begin, end)) {
     return [];
   }
-  if (startYear === endYear) {
-    return [{ begin, end }];
-  }
-
-  const years = createYearArray(startYear, endYear);
-  return years.reduce<YearDetail[]>((periods, current) => {
-    const beginFromYear = set(begin, { year: current });
-    if (current === endYear) {
-      return periods.concat({
-        begin: set(beginFromYear, { year: current }),
-        end: end,
-      });
-    }
-    return periods.concat({
-      begin: beginFromYear,
-      end: sub(add(beginFromYear, { years: 1 }), { days: 1 }),
+  let periods: YearDetail[] = [];
+  let currentYear = begin;
+  let nextYear = sub(add(currentYear, { years: 1 }), { days: 1 });
+  while (!isAfter(nextYear, end)) {
+    periods = periods.concat({
+      begin: currentYear,
+      end: nextYear,
     });
-  }, []);
+    currentYear = add(nextYear, { days: 1 });
+    nextYear = add(nextYear, { years: 1 });
+  }
+  return periods.concat({
+    begin: currentYear,
+    end: end,
+  });
 };
 
 export const accumulateAbsenceByYear = (
@@ -138,12 +133,4 @@ const absenceDurationRatio = (absence: Absence, year: YearDetail): number => {
       { end: year.end, start: year.begin }
     ) / DAYS_IN_ONE_MONTH
   );
-};
-
-const createYearArray = (start: number, end: number): number[] => {
-  const initialYear: number[] = [];
-  for (let i = start; i <= end; i++) {
-    initialYear.push(i);
-  }
-  return initialYear;
 };

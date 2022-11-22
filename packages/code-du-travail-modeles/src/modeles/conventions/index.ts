@@ -6,7 +6,6 @@ export * from "./573_commerces_de_gros";
 export * from "./650_metallurgie_ingenieurs_cadres";
 export * from "./1090_automobiles";
 export * from "./1486_bureaux_etudes_techniques";
-export * from "./1501_restauration_rapide";
 export * from "./1516_organismes_formation";
 export * from "./1518_education_loisirs";
 export * from "./1527_immobilier";

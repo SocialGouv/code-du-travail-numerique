@@ -14,15 +14,15 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
     ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.refus} | ${8}      | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (8 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.refus} | ${12}     | ${"(1/4 * Sref * A1) + (1/3 * Sref * A2)"} | ${["A1 : Ancienneté de 10 ans ou moins (10 ans)", "A2 : Ancienneté au-delà de 10 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${CatPro1486.ingeCadre}     | ${TypeLicenciement1486.autre} | ${0}      | ${""}                                      | ${[]}
-    ${CatPro1486.ingeCadre}     | ${TypeLicenciement1486.autre} | ${1.99}   | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (1.99 an)", "Sref : Salaire de référence (1000 €)"]}
+    ${CatPro1486.ingeCadre}     | ${TypeLicenciement1486.autre} | ${1.99}   | ${""}                                      | ${[]}
     ${CatPro1486.ingeCadre}     | ${TypeLicenciement1486.autre} | ${2}      | ${"1/3 * Sref * A"}                        | ${["A : Ancienneté totale (2 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${CatPro1486.ingeCadre}     | ${TypeLicenciement1486.autre} | ${19}     | ${"1/3 * Sref * A"}                        | ${["A : Ancienneté totale (19 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.autre} | ${0}      | ${""}                                      | ${[]}
-    ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.autre} | ${1.99}   | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (1.99 an)", "Sref : Salaire de référence (1000 €)"]}
+    ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.autre} | ${1.99}   | ${""}                                      | ${[]}
     ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.autre} | ${2}      | ${"1/5 * Sref * A"}                        | ${["A : Ancienneté totale (2 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.autre} | ${19}     | ${"1/5 * Sref * A"}                        | ${["A : Ancienneté totale (19 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${CatPro1486.etam}          | ${TypeLicenciement1486.autre} | ${0}      | ${""}                                      | ${[]}
-    ${CatPro1486.etam}          | ${TypeLicenciement1486.autre} | ${1.99}   | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (1.99 an)", "Sref : Salaire de référence (1000 €)"]}
+    ${CatPro1486.etam}          | ${TypeLicenciement1486.autre} | ${1.99}   | ${""}                                      | ${[]}
     ${CatPro1486.etam}          | ${TypeLicenciement1486.autre} | ${2}      | ${"0.25 * Sref * A"}                       | ${["A : Ancienneté totale (2 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${CatPro1486.etam}          | ${TypeLicenciement1486.autre} | ${19}     | ${"0.25 * Sref * A"}                       | ${["A : Ancienneté totale (19 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${CatPro1486.etam}          | ${TypeLicenciement1486.autre} | ${20}     | ${"0.30 * Sref * A"}                       | ${["A : Ancienneté totale (20 ans)", "Sref : Salaire de référence (1000 €)"]}

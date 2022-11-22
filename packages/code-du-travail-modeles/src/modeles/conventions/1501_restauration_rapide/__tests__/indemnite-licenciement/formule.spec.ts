@@ -26,10 +26,10 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
           "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique": `'Oui'`,
           "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age": 42,
+          "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2300,
-          "indemnité de licenciement": "oui",
         });
         const formule = getFormule(situation);
 
@@ -62,10 +62,10 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
           "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique": `'Oui'`,
           "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age":
             age,
+          "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2300,
-          "indemnité de licenciement": "oui",
         });
         const formule = getFormule(situation);
 

@@ -27,13 +27,51 @@ describe("Formula", () => {
           "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique": `'Oui'`,
           "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age":
             age,
+          "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
             seniority,
           "contrat salarié . indemnité de licenciement . ancienneté en année":
             seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2300,
-          "indemnité de licenciement": "oui",
         });
+        const formule = getFormule(situation);
+
+        expect(formule.formula).toEqual(expectedFormula);
+        expect(formule.explanations).toEqual(expectedExplanations);
+      }
+    );
+  });
+
+  describe("Check formula for a CC (16)", () => {
+    test.each`
+      seniority | age   | haveRightToRetirement | expectedFormula                                               | expectedExplanations
+      ${3}      | ${61} | ${true}               | ${"(2 / 10 * Sref * A1) - (20% * A2 * (2 / 10 * Sref * A1))"} | ${["A1 : Ancienneté totale (3 ans)", "A2 : Années entre 60 et 65 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
+    `(
+      "Valide l'ordonnancement des explanations par ordre alphabétique",
+      ({
+        seniority,
+        age,
+        haveRightToRetirement,
+        expectedFormula,
+        expectedExplanations,
+      }) => {
+        const situation = engine.setSituation({
+          "contrat salarié . convention collective": "'IDCC0016'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
+            "'Ouvriers'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . age":
+            age,
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${
+            haveRightToRetirement ? "'Oui'" : "'Non'"
+          }`,
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
+            "'Non'",
+          "contrat salarié . indemnité de licenciement": "oui",
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+        });
+
         const formule = getFormule(situation);
 
         expect(formule.formula).toEqual(expectedFormula);
@@ -56,13 +94,13 @@ describe("Formula", () => {
       ({ seniority, expectedFormula, expectedExplanations, inaptitude }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1090'",
+          "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté en année":
             seniority,
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             inaptitude,
           "contrat salarié . indemnité de licenciement . salaire de référence": 2300,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2300,
-          "indemnité de licenciement": "oui",
         });
         const formule = getFormule(situation);
 

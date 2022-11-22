@@ -212,6 +212,7 @@ exports[`<Tabs /> renders 1`] = `
             aria-disabled="false"
             aria-selected="true"
             class="c5 react-tabs__tab--selected"
+            data-testid="undefined-0"
             id="react-tabs-0"
             role="tab"
             tabindex="0"
@@ -223,6 +224,7 @@ exports[`<Tabs /> renders 1`] = `
             aria-disabled="false"
             aria-selected="false"
             class="c5"
+            data-testid="undefined-1"
             id="react-tabs-2"
             role="tab"
           >

@@ -3,7 +3,6 @@ import type { CC0016SeniorityProps } from "../../conventions";
 import type { MotifKeys } from "../motif-keys";
 
 export enum SupportedCcIndemniteLicenciement {
-  IDCC1501 = "IDCC1501",
   IDCC1516 = "IDCC1516",
   IDCC1518 = "IDCC1518",
   IDCC2511 = "IDCC2511",
@@ -27,7 +26,6 @@ export enum SupportedCcIndemniteLicenciement {
   IDCC0029 = "IDCC29",
   IDCC0044 = "IDCC44",
   default = "default",
-  legal = "legal",
 }
 
 export enum QuestionOuiNon {

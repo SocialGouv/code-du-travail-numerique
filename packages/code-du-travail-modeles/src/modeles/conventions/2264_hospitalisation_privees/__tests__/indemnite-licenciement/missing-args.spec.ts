@@ -16,7 +16,7 @@ describe("Missing args pour la CC 2264", () => {
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
     expect(result.missingVariables).toEqual({
-      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle": 20.0031,
+      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle": 21,
     });
   });
   test("Non cadre durant une période", () => {
@@ -32,8 +32,7 @@ describe("Missing args pour la CC 2264", () => {
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
     expect(result.missingVariables).toEqual({
-      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période": 602.0817999999999,
-      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif": 240.02149999999997,
+      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période": 920,
     });
   });
 
@@ -67,7 +66,7 @@ describe("Missing args pour la CC 2264", () => {
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
     expect(result.missingVariables).toEqual({
-      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif": 240.02149999999997,
+      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif": 595,
     });
   });
   test("Aucune variable", () => {

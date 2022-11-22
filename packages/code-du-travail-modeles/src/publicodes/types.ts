@@ -1,6 +1,5 @@
 import type Engine from "publicodes";
-import type { Evaluation, Unit } from "publicodes";
-import type { Rule as PubliRule } from "publicodes/dist/types/rule";
+import type { Evaluation, Rule as PubliRule, Unit } from "publicodes";
 
 import type { Notification, References } from "../modeles/common";
 

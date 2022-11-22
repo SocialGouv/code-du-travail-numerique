@@ -22,7 +22,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     situation: [],
   };
 
-  protected constructor(rules: string, targetRule: string) {
+  protected constructor(rules: any, targetRule: string) {
     this.engine = new Engine(rules);
     this.targetRule = targetRule;
   }

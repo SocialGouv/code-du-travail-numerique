@@ -15,6 +15,7 @@ import sheetMTRoutes from "./routes/sheets-mt";
 import statsRoute from "./routes/stats";
 import suggestRoute from "./routes/suggest";
 import themesRoute from "./routes/themes";
+import toolsRoutes from "./routes/tools";
 import versionRoutes from "./routes/version";
 
 const Koa = require("koa");
@@ -69,6 +70,7 @@ app.use(dossiersRoute.routes());
 app.use(glossaryRoute.routes());
 app.use(versionRoutes.routes());
 app.use(indexRoute.routes());
+app.use(toolsRoutes.routes());
 
 if (process.env.NODE_ENV !== "production") {
   logger.info("--- DEV MODE ---");

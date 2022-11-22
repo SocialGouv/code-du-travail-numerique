@@ -11,7 +11,7 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
     ${6}      | ${2}
     ${24}     | ${3}
   `(
-    "En ayant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
+    "Mise à la retraite: en ayant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
     ({ seniority, expectedNotice }) => {
       const result = engine
         .setSituation({
@@ -23,8 +23,8 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
         .evaluate("contrat salarié . préavis de retraite");
 
       expect(result.nodeValue).toEqual(expectedNotice);
-      expect(result.unit?.numerators).toEqual(["mois"]);
       expect(result.missingVariables).toEqual({});
+      expect(result.unit?.numerators).toEqual(["mois"]);
     }
   );
 
@@ -34,7 +34,7 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
     ${6}      | ${2}
     ${24}     | ${3}
   `(
-    "En ayant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
+    "Depart à la retraite: en ayant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
     ({ seniority, expectedNotice }) => {
       const result = engine
         .setSituation({

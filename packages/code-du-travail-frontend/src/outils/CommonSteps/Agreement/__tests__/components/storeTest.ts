@@ -22,7 +22,7 @@ const createRootSlice = (
   ...createCommonAgreementStore(set, get, publicodesRules),
 });
 
-const createStore = (publicodesRules: string) =>
+const createStore = (publicodesRules: any) =>
   create((set: SetState<MainStore>, get: GetState<MainStore>) =>
     createRootSlice(set, get, publicodesRules)
   );

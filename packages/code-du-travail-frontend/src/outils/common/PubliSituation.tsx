@@ -42,7 +42,7 @@ const PubliSituation = ({
         .map((element) => {
           const overriden = onOverrideInput && onOverrideInput(element);
           return (
-            <li key={element.name}>
+            <li key={element.name} data-testid={`situation-${element.name}`}>
               {element.rawNode.titre}&nbsp;:&nbsp;
               <strong>
                 {overriden ? overriden : <SituationInput element={element} />}

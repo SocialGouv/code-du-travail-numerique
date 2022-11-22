@@ -1,0 +1,10 @@
+contrat salarié . convention collective . comptables . indemnité de licenciement:
+  applicable si: indemnité de licenciement
+  valeur: oui
+
+contrat salarié . convention collective . comptables . indemnité de licenciement . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 24 mois
+  valeur: contrat salarié . indemnité de licenciement . résultat légal
+  références:
+    Article 6.2.1: https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005719412/?idConteneur=KALICONT000005635826

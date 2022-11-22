@@ -1,7 +1,10 @@
 {
   "name": "cdtn-types",
-  "version": "4.83.0",
-  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "version": "4.87.0",
   "main": "build/index.js",
   "module": "build/index.js",
   "types": "build/index.d.ts",

@@ -13,10 +13,10 @@ function round(num: number): number {
 
 function getRulesWithFormuleAndNodeValue(engine: Engine) {
   return Object.values(engine.getParsedRules()).filter((rule: any) => {
-    return (
-      rule.rawNode.cdtn?.formule &&
-      engine.evaluate(rule.dottedName).nodeValue !== false
-    );
+    if (rule.rawNode.cdtn?.formule === undefined) return false;
+
+    const value = engine.evaluate(rule.dottedName).nodeValue;
+    return value !== false && value !== null && value !== undefined;
   });
 }
 
@@ -55,18 +55,26 @@ export function getFormule(engine: Engine): Formula {
       formula: "",
     }
   );
-  formula.explanations = formula.explanations.flatMap((explanation: any) => {
-    return Object.keys(explanation).map((text) => {
-      const element = explanation[text];
-      if (element === "NONE") return text;
 
-      const result = engine.evaluate(element);
-      const unit = result.unit.numerators[0];
-      return `${text} (${round(result.nodeValue)} ${unit}${pluralize(
-        unit as string,
-        result.nodeValue as number
-      )})`;
-    });
-  });
+  formula.explanations = formula.explanations
+    .flatMap((explanation: any) => {
+      return Object.keys(explanation).map((text) => {
+        const element = explanation[text];
+        if (element === "NONE") return text;
+
+        const result = engine.evaluate(element);
+        if (!result.unit) {
+          throw Error(
+            `L'unité est manquante pour la règle ${result.rawNode.name}`
+          );
+        }
+        const unit = result.unit.numerators[0];
+        return `${text} (${round(Number(result.nodeValue))} ${unit}${pluralize(
+          unit,
+          result.nodeValue as number
+        )})`;
+      });
+    })
+    .sort((a, b) => a.localeCompare(b));
   return formula;
 }

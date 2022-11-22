@@ -10,7 +10,7 @@ class PreavisRetraitePublicodes
   extends PublicodesBase<PublicodesPreavisRetraiteResult>
   implements Publicodes<PublicodesPreavisRetraiteResult>
 {
-  constructor(rules: string) {
+  constructor(rules: any) {
     super(rules, PublicodesDefaultRules[PublicodesSimulator.PREAVIS_RETRAITE]);
   }
 
