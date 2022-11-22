@@ -103,7 +103,6 @@ export async function getServerSideProps() {
           id: "30b4832d-7584-44de-9b93-2ae5ce9dc57c",
         },
       ],
-      tools,
     },
   };
 }
