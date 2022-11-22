@@ -1,4 +1,4 @@
-import type { Notification, References } from "../utils";
+import type { Notification, References } from "../modeles/common";
 import type { PublicodesData } from "./types";
 
 export interface Publicodes<TResult> {
