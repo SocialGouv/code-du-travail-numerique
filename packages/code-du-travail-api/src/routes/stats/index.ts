@@ -2,7 +2,7 @@ import type { Context } from "koa";
 import type { Response } from "node-fetch";
 import fetch from "node-fetch";
 
-import elasticsearchClient from "../../conf/elasticsearch";
+import elasticsearchClient from "../../elasticsearch";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 
 const Router = require("koa-router");

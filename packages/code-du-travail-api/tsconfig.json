@@ -15,12 +15,16 @@
     // Import non-ES modules as default imports.
     "esModuleInterop": true,
     // Specify what module code is generated.
-    "module": "es6",
+    "module": "nodenext",
     // Generate .d.ts files from TypeScript and JavaScript files in your project
     "declaration": true,
     // Skip type checking all .d.ts files.
     "skipLibCheck": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "resolveJsonModule": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "ts-node": {
+    "swc": true
+  }
 }

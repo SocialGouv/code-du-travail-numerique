@@ -7,21 +7,19 @@
   "scripts": {
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "prebuild": "rimraf dist",
-    "build": "babel src -d babel-dist --copy-files --extensions \".ts,.js\"",
+    "build": "tsc",
     "build:types": "tsc --emitDeclarationOnly",
     "postbuild": "ncc build ./babel-dist/index.js -o dist --source-map && rimraf babel-dist",
     "lint": "eslint \"./src/**/*.{js,ts}\"",
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=dev",
     "start": "ELASTIC_APM_USE_PATH_AS_TRANSACTION_NAME=true NODE_ENV=production node -r elastic-apm-node/start ./dist/index.js",
-    "dev": "nodemon --inspect=0.0.0.0:9229 --exec babel-node ./src/index.js --extensions \".ts,.js\"",
-    "update-mock-data": "ES_INDEX_PREFIX=cdtn babel-node src/tests/fetch_mock_data.js",
-    "pretest": "NODE_ENV=test swc src -d build && NODE_OPTIONS=\"--experimental-specifier-resolution=node\" node build/test/create_index.js",
+    "dev": "nodemon --inspect=0.0.0.0:9229 --exec ts-node-esm ./src/index.js",
+    "update-mock-data": "ES_INDEX_PREFIX=cdtn ts-node-esm src/scripts/fetch_mock_data.ts",
+    "pretest": "NODE_ENV=test ts-node-esm src/scripts/create_indexes.ts",
     "test:search": "jest -t 'Search - Snapshot result' --testPathIgnorePatterns=[]",
     "test": "ES_INDEX_PREFIX=cdtn_test jest",
-    "test:update": "yarn pretest && ES_INDEX_PREFIX=cdtn_test jest --updateSnapshot",
-    "clean": "rimraf dist && rimraf babel-dist"
+    "test:update": "yarn pretest && ES_INDEX_PREFIX=cdtn_test jest --updateSnapshot"
   },
   "repository": {
     "type": "git",
@@ -58,8 +56,8 @@
     "@babel/preset-env": "^7.15.6",
     "@babel/preset-typescript": "^7.15.0",
     "@socialgouv/eslint-config-typescript": "^1.93.0",
-    "@swc/cli": "^0.1.57",
     "@swc/core": "^1.3.14",
+    "@swc/helpers": "^0.4.14",
     "@swc/jest": "^0.2.23",
     "@types/koa": "^2.13.4",
     "@types/koa-router": "^7.4.4",
@@ -74,14 +72,18 @@
     "jest": "^27.0.6",
     "lint-staged": "^12.1.2",
     "nodemon": "^2.0.12",
+    "regenerator-runtime": "^0.13.11",
     "rimraf": "^3.0.2",
     "supertest": "^6.2.2",
     "ts-node": "^10.7.0",
-    "typescript": "^4.4.3"
+    "typescript": "^5.0.0-dev.20221122"
   },
   "lint-staged": {
     "*.{js,ts}": [
       "yarn lint --fix"
     ]
+  },
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   }
 }

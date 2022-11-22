@@ -2,7 +2,7 @@ import Koa from "koa";
 import fetch from "node-fetch";
 import request from "supertest";
 
-import Data from "../../tests/cdtn_document.data.json";
+import Data from "../../scripts/cdtn_document.data.json";
 import routes from "../enterprises";
 
 const app = new Koa();

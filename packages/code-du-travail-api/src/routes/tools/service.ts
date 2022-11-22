@@ -1,4 +1,4 @@
-import elasticsearchClient from "../../conf/elasticsearch";
+import elasticsearchClient from "../../elasticsearch";
 import { CDTN_ADMIN_VERSION } from "../v1.prefix";
 
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");

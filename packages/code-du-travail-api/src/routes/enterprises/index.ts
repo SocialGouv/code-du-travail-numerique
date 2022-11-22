@@ -2,7 +2,7 @@ import { DOCUMENTS } from "@socialgouv/cdtn-elasticsearch";
 import Router from "koa-router";
 import fetch from "node-fetch";
 
-import elasticsearchClient from "../../conf/elasticsearch";
+import elasticsearchClient from "../../elasticsearch";
 import type { SearchResponse } from "../type";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 import getAgreements from "./enterprises.elastic";
@@ -121,7 +121,8 @@ router.get("/enterprises", async (ctx) => {
     });
 
     if (response.status === 200) {
-      const jsonResponse: EnterpriseApiResponse = await response.json();
+      const jsonResponse: EnterpriseApiResponse =
+        (await response.json()) as any;
       ctx.body = await populateAgreements(jsonResponse);
     } else {
       ctx.status = response.status;

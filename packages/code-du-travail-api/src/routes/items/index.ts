@@ -1,4 +1,4 @@
-import elasticsearchClient from "../../conf/elasticsearch";
+import elasticsearchClient from "../../elasticsearch";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 import { getRelatedItems } from "./getRelatedItems";
 import { getDocumentBody } from "./search.es";

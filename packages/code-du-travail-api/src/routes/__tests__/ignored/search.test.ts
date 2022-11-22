@@ -2,7 +2,7 @@ import fs from "fs";
 import type { SuperTest } from "supertest";
 import supertest from "supertest";
 
-import { app } from "../..";
+import { app } from "../../..";
 
 const mostSearches = [
   "3239", // popular

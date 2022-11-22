@@ -16,7 +16,7 @@ const ELASTICSEARCH_URL =
 const client = new Client({
   log: [{ levels: ["error", "warning"], type: "stdio" }],
   node: `${ELASTICSEARCH_URL}`,
-});
+} as any);
 
 const getDataFromUrl = (url) => {
   const [, sourceRoute, slug] = url.split("/");
@@ -111,7 +111,7 @@ async function updateDocumentsData(slugs) {
   }, []);
   try {
     const { body } = await client.msearch({ body: requests });
-    const data = [];
+    const data: any = [];
     for (const res of body.responses) {
       if (res.hits.hits.length === 1) {
         const [item] = res.hits.hits;
@@ -162,9 +162,9 @@ async function updateDocumentsData(slugs) {
     );
     await writeFile(
       join(__dirname, "./cdtn_document.data.json"),
-      JSON.stringify(data, 0, 2)
+      JSON.stringify(data, null, 2)
     );
-  } catch (error) {
+  } catch (error: any) {
     console.error(error.meta || error);
   }
 }

@@ -1,4 +1,4 @@
-import elasticsearchClient from "../../conf/elasticsearch";
+import elasticsearchClient from "../../elasticsearch";
 import { getRelatedItemsBody } from "./relatedItems.es";
 import { getSearchBySourceSlugBody } from "./searchBySourceSlug.es";
 

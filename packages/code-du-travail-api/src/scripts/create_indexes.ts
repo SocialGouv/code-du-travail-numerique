@@ -8,7 +8,7 @@ import {
   version,
 } from "@socialgouv/cdtn-elasticsearch";
 
-import client from "../conf/elasticsearch";
+import client from "../elasticsearch";
 import { CDTN_ADMIN_VERSION } from "../routes/v1.prefix";
 import documents from "./cdtn_document.data.json";
 import suggestions from "./suggestions_data.json";
