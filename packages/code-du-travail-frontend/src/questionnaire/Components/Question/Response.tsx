@@ -4,7 +4,7 @@ import { InputRadio, theme } from "@socialgouv/cdtn-ui";
 import { useStore } from "../../store";
 import { Tooltip } from "../../../common/Tooltip";
 import { trackClickHelp } from "../../tracking";
-import { QuestionnaireResponse } from "../../data";
+import { QuestionnaireResponse } from "../../type";
 
 export const Response = ({
   response: { text, description, info, trackingName },

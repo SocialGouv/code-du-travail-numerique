@@ -21,7 +21,7 @@ interface Props {
   publicodesRules: any;
   slug: string;
   title: string;
-  displayTitle: string;
+  displayTitle?: string;
 }
 
 function Widgets({
@@ -38,7 +38,7 @@ function Widgets({
       <Tool
         icon={icon}
         title={title}
-        displayTitle={displayTitle}
+        displayTitle={displayTitle ?? title}
         publicodesRules={publicodesRules}
       />
 

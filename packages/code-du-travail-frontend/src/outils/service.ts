@@ -9,10 +9,33 @@ export type getToolsParams = {
   slugs?: string[];
 };
 
-export const fetchTools = async ({
-  ids,
-  slugs,
-}: getToolsParams = {}): Promise<any> => {
+export type Tool = {
+  date: string;
+  icon: string;
+  order: number;
+  action: string;
+  metaTitle?: string;
+  questions?: string[];
+  description: string;
+  displayTitle?: string;
+  breadcrumbs: Record<string, string | number>[];
+  cdtnId: string;
+  excludeFromSearch: boolean;
+  id: string;
+  isPublished: boolean;
+  metaDescription: string;
+  slug: string;
+  source: string;
+  text: string;
+  title: string;
+  title_vector: number[];
+  _id: string;
+  enable?: boolean;
+};
+
+export const fetchTools = async ({ ids, slugs }: getToolsParams = {}): Promise<
+  Tool[]
+> => {
   let query = "";
   if (ids) {
     query += `ids=${ids.join(",")}`;
@@ -26,7 +49,8 @@ export const fetchTools = async ({
   return result.map(({ _id, _source }) => ({ ..._source, _id }));
 };
 
-export const fetchTool = async (slug: string): Promise<any> => {
+export const fetchTool = async (slug: string): Promise<Tool> => {
   const responseContainer = await fetch(`${API_URL}/items/outils/${slug}`);
-  return await responseContainer.json();
+  const result = await responseContainer.json();
+  return { ...result._source, _id: result._id };
 };

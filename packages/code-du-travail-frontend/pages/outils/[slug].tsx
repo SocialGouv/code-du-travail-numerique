@@ -51,8 +51,8 @@ interface Props {
   relatedItems: Array<any>;
   slug: string;
   title: string;
-  displayTitle: string;
-  metaTitle: string;
+  displayTitle?: string;
+  metaTitle?: string;
   metaDescription: string;
 }
 
@@ -74,14 +74,14 @@ function Outils({
   const router = useRouter();
   return (
     <Layout>
-      <Metas title={metaTitle} description={metaDescription} />
+      <Metas title={metaTitle ?? title} description={metaDescription} />
       <StyledSection>
         <Container>
           <Flex>
             <Tool
               icon={icon}
               title={title}
-              displayTitle={displayTitle}
+              displayTitle={displayTitle ?? title}
               publicodesRules={publicodesRules}
             />
             <ShareContainer>

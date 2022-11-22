@@ -51,8 +51,7 @@
   },
   "workspaces": {
     "packages": [
-      "packages/*",
-      "packages/code-du-travail-data/*"
+      "packages/*"
     ]
   },
   "engines": {

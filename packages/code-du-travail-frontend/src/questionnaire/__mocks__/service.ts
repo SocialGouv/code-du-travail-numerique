@@ -1,4 +1,4 @@
-import { QuestionnaireQuestion } from "@socialgouv/modeles-social";
+import { QuestionnaireQuestion } from "../type";
 
 export const getQuestionnaire = (): QuestionnaireQuestion => {
   return {
