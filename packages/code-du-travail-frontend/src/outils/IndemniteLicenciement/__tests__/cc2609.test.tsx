@@ -1,5 +1,4 @@
 import { fireEvent, render, RenderResult } from "@testing-library/react";
-import { UserAction } from "../../../common";
 import React from "react";
 import {
   CalculateurIndemnite,
@@ -55,12 +54,38 @@ describe("Indemnité licenciement - CC 2609", () => {
     });
 
     test(`
-     - vérification que l'on demande si le salaire comporte une partie de variable sur l'étape salaire
+     - vérification que l'on ne demande pas si le salaire comporte une partie de variable si salaire fixe
+     - vérification que l'on n'affiche pas le partie variable sur le résultat
+     - vérification que l'on demande si le salaire comporte une partie de variable si salaires différents
      - vérification que l'on affiche la réponse du salaire variable sur l'étape de résultat
      `, () => {
-      // vérification que l'on demande si le salaire comporte une partie de variable sur l'étape salaire
       fireEvent.click(ui.salary.hasPartialTime.non.get());
+
+      // vérification que l'on ne demande pas si le salaire comporte une partie de variable si salaire fixe
       fireEvent.click(ui.salary.hasSameSalary.oui.get());
+
+      expect(
+        rendering.queryByText(
+          "Les salaires indiqués comportent-ils une partie variable ?"
+        )
+      ).not.toBeInTheDocument();
+
+      // vérification que l'on n'affiche pas le partie variable sur le résultat
+      fireEvent.change(ui.salary.sameSalaryValue.get(), {
+        target: { value: "2500" },
+      });
+      fireEvent.click(ui.next.get());
+
+      expect(ui.activeStep.query()).toHaveTextContent("Indemnité");
+      expect(
+        rendering.queryByText(
+          /Les salaires indiqués comportent une partie variable/
+        )
+      ).not.toBeInTheDocument();
+
+      // vérification que l'on demande si le salaire comporte une partie de variable si salaires différents
+      fireEvent.click(ui.previous.get());
+      fireEvent.click(ui.salary.hasSameSalary.non.get());
 
       expect(
         rendering.queryByText(
@@ -69,7 +94,7 @@ describe("Indemnité licenciement - CC 2609", () => {
       ).toBeInTheDocument();
 
       // vérification que l'on affiche la réponse du salaire variable sur l'étape de résultat
-      fireEvent.change(ui.salary.sameSalaryValue.get(), {
+      fireEvent.change(ui.salary.salaries.getAll()[0], {
         target: { value: "2500" },
       });
       fireEvent.click(ui.salary.variablePart.oui.get());

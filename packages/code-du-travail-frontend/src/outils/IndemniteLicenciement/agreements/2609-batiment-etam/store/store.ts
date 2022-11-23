@@ -39,7 +39,8 @@ const applyGenericValidation = (
       draft.agreement2609Data.input[paramName] = value;
     });
     const { isValid, errorState } = validateStep(
-      nextState.agreement2609Data.input
+      nextState.agreement2609Data.input,
+      nextState.salairesData.input
     );
     set(
       produce((state: Agreement2609StoreSlice) => {
