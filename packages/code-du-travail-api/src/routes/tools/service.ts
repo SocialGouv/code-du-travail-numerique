@@ -15,6 +15,7 @@ export const getTools = async ({ ids, slugs }: ToolsFilterType) => {
   const filter: any[] = [
     { term: { isPublished: true } },
     { term: { source: "outils" } },
+    { term: { source: "external" } },
   ];
   if (ids) {
     filter.push({ ids: { values: ids } });

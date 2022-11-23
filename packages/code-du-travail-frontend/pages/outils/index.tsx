@@ -42,7 +42,12 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
                 href: `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`,
               };
               return (
-                <Link {...linkProps} passHref key={id}>
+                <Link
+                  {...linkProps}
+                  passHref
+                  key={id}
+                  data-testid="tools-list-items-internal"
+                >
                   <CallToActionTile
                     action={action}
                     custom
@@ -89,20 +94,11 @@ export async function getServerSideProps() {
   return {
     props: {
       cdtnSimulators: tools.filter(
-        (tool) =>
-          tool.enable || !process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
+        (tool) => !tool.disable && tool.source !== SOURCES.EXTERNALS
       ),
-      externalTools: [
-        {
-          title: "Mon compte formation",
-          description:
-            "Consultez en ligne vos droits à la formation, cherchez et réservez une formation",
-          url: "https://www.moncompteformation.gouv.fr",
-          icon: "Formation",
-          action: "Consulter",
-          id: "30b4832d-7584-44de-9b93-2ae5ce9dc57c",
-        },
-      ],
+      externalTools: tools.filter(
+        (tool) => !tool.disable && tool.source === SOURCES.EXTERNALS
+      ),
     },
   };
 }

@@ -1,3 +1,4 @@
+import { Tool } from "cdtn-types";
 import getConfig from "next/config";
 
 const {
@@ -7,30 +8,6 @@ const {
 export type getToolsParams = {
   ids?: string[];
   slugs?: string[];
-};
-
-export type Tool = {
-  date: string;
-  icon: string;
-  order: number;
-  action: string;
-  metaTitle?: string;
-  questions?: string[];
-  description: string;
-  displayTitle?: string;
-  breadcrumbs: Record<string, string | number>[];
-  cdtnId: string;
-  excludeFromSearch: boolean;
-  id: string;
-  isPublished: boolean;
-  metaDescription: string;
-  slug: string;
-  source: string;
-  text: string;
-  title: string;
-  title_vector: number[];
-  _id: string;
-  enable?: boolean;
 };
 
 export const fetchTools = async ({ ids, slugs }: getToolsParams = {}): Promise<
