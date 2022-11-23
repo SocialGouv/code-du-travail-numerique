@@ -25,6 +25,6 @@ export class ReferenceSalary2609
       return lastSalary;
     }
 
-    return lastSalary + (1 / 12) * sum(salaryValues);
+    return sum(salaryValues) / 12;
   }
 }
