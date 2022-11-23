@@ -2,12 +2,12 @@ import router from "../stats";
 
 const request = require("supertest");
 const Koa = require("koa");
-const fetch = require("node-fetch");
+const fetch = require("node-fetch-commonjs");
 
 const app = new Koa();
 app.use(router.routes());
 
-jest.mock("node-fetch");
+jest.mock("node-fetch-commonjs");
 
 describe("Stats", () => {
   it("should return data", async () => {
