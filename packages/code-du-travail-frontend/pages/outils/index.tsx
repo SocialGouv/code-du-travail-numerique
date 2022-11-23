@@ -42,12 +42,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
                 href: `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`,
               };
               return (
-                <Link
-                  {...linkProps}
-                  passHref
-                  key={id}
-                  data-testid="tools-list-items-internal"
-                >
+                <Link {...linkProps} passHref key={id}>
                   <CallToActionTile
                     action={action}
                     custom
@@ -55,6 +50,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
                     icon={icons[icon]}
                     titleTagType="h2"
                     centerTitle
+                    data-testid="tools-list-items-internal"
                   >
                     <Paragraph noMargin>
                       {description ?? metaDescription}
@@ -94,7 +90,7 @@ export async function getServerSideProps() {
   return {
     props: {
       cdtnSimulators: tools.filter(
-        (tool) => !tool.disable && tool.source !== SOURCES.EXTERNALS
+        (tool) => !tool.disable && tool.source === SOURCES.TOOLS
       ),
       externalTools: tools.filter(
         (tool) => !tool.disable && tool.source === SOURCES.EXTERNALS

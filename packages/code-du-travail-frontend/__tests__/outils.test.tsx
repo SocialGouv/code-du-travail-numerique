@@ -13,10 +13,7 @@ describe("<Outils />", () => {
   });
 
   it("should display a list of tools", () => {
-    const { queryAllByTestId, debug } = render(
-      <Outils {...serverSideProps.props} />
-    );
-    debug();
+    const { queryAllByTestId } = render(<Outils {...serverSideProps.props} />);
     const items = queryAllByTestId("tools-list-items-internal");
     expect(items).toHaveLength(2);
   });

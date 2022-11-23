@@ -13,9 +13,21 @@ type ToolsFilterType = {
 
 export const getTools = async ({ ids, slugs }: ToolsFilterType) => {
   const filter: any[] = [
-    { term: { isPublished: true } },
-    { term: { source: "outils" } },
-    { term: { source: "external" } },
+    {
+      bool: {
+        must: [
+          { term: { isPublished: true } },
+          {
+            bool: {
+              should: [
+                { term: { source: "external" } },
+                { term: { source: "outils" } },
+              ],
+            },
+          },
+        ],
+      },
+    },
   ];
   if (ids) {
     filter.push({ ids: { values: ids } });

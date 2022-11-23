@@ -51,8 +51,8 @@ interface Props {
   relatedItems: Array<any>;
   slug: string;
   title: string;
-  displayTitle?: string;
-  metaTitle?: string;
+  displayTitle: string | null;
+  metaTitle: string | null;
   metaDescription: string;
 }
 
@@ -139,8 +139,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
       relatedItems,
       slug,
       title,
-      displayTitle,
-      metaTitle,
+      displayTitle: displayTitle ?? null,
+      metaTitle: metaTitle ?? null,
       metaDescription,
     },
   };

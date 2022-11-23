@@ -21,7 +21,7 @@ interface Props {
   publicodesRules: any;
   slug: string;
   title: string;
-  displayTitle?: string;
+  displayTitle: string | null;
 }
 
 function Widgets({
@@ -80,7 +80,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
       publicodesRules,
       slug,
       title,
-      displayTitle,
+      displayTitle: displayTitle ?? null,
     },
   };
 };
