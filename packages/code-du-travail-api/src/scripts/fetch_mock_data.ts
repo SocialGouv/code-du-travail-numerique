@@ -1,5 +1,5 @@
 import { Client } from "@elastic/elasticsearch";
-import { DOCUMENTS } from "@socialgouv/cdtn-elasticsearch";
+import pkg from "@socialgouv/cdtn-elasticsearch";
 import { getSourceByRoute, SOURCES } from "@socialgouv/cdtn-sources";
 import { writeFile as _writeFile } from "fs";
 import { join } from "path";
@@ -7,6 +7,8 @@ import { promisify } from "util";
 
 import { CDTN_ADMIN_VERSION } from "../routes/v1.prefix";
 import versions from "./versions.json";
+
+const { DOCUMENTS } = pkg;
 
 const writeFile = promisify(_writeFile);
 

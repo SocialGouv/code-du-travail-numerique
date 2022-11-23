@@ -3,7 +3,7 @@ import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 
 const getVersionsBody = require("./versions.elastic");
 
-const Router = require("koa-router");
+import Router from "koa-router";
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
 const memoizee = require("memoizee");
 

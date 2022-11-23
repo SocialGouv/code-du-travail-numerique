@@ -4,7 +4,7 @@ import { getRelatedItems } from "./getRelatedItems";
 import { getDocumentBody } from "./search.es";
 import { getSearchBySourceSlugBody } from "./searchBySourceSlug.es";
 
-const Router = require("koa-router");
+import Router from "koa-router";
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX || "cdtn";

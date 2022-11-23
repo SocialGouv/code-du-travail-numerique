@@ -1,7 +1,7 @@
+import Router from "koa-router";
+
 import { API_BASE_URL } from "../v1.prefix";
 import { getTools } from "./service";
-
-const Router = require("koa-router");
 
 const router = new Router({ prefix: API_BASE_URL });
 

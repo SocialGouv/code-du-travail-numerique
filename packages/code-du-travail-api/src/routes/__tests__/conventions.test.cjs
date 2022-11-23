@@ -1,4 +1,4 @@
-import router from "../conventions";
+import router from "../conventions/index.cjs";
 
 const request = require("supertest");
 const Koa = require("koa");

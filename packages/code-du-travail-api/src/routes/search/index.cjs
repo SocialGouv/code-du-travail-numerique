@@ -1,7 +1,7 @@
 import elasticsearchClient from "../../elasticsearch";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 
-const Router = require("koa-router");
+import Router from "koa-router";
 const { SOURCES } = require("@socialgouv/cdtn-sources");
 const { DOCUMENTS, vectorizeQuery } = require("@socialgouv/cdtn-elasticsearch");
 const getPrequalifiedResults = require("./searchPrequalifiedResults");

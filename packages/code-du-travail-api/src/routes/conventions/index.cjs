@@ -1,7 +1,8 @@
+import Router from "koa-router";
+
 import elasticsearchClient from "../../elasticsearch";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 
-const Router = require("koa-router");
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
 
 const getAgreementBody = require("./getAgreementBySlug.elastic");

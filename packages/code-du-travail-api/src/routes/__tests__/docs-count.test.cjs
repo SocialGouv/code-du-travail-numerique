@@ -1,4 +1,4 @@
-import routes from "../docs-count";
+import routes from "../docs-count/index.cjs";
 
 const request = require("supertest");
 const Koa = require("koa");

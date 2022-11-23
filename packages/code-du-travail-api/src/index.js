@@ -1,7 +1,7 @@
 import { logger } from "@socialgouv/cdtn-logger";
 
-import conventionsRoutes from "./routes/conventions";
-import docsCountRoutes from "./routes/docs-count";
+import conventionsRoutes from "./routes/conventions/index.cjs";
+import docsCountRoutes from "./routes/docs-count/index.cjs";
 import dossiersRoute from "./routes/dossiers";
 import enterprisesRoute from "./routes/enterprises";
 import glossaryRoute from "./routes/glossary";

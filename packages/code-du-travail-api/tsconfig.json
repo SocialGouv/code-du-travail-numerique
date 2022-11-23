@@ -1,27 +1,17 @@
 {
   "compilerOptions": {
-    // Target latest version of ECMAScript.
-    "target": "es2021",
-    // Search under node_modules for non-relative imports.
-    "moduleResolution": "node",
-    // Process & infer types from .js files.
-    "allowJs": true,
-    // Don't emit; allow Babel to transform files.
-    "noEmit": true,
-    // Enable strictest settings like strictNullChecks & noImplicitAny.
-    "strict": true,
-    // Disallow features that require cross-file information for emit.
-    "isolatedModules": false,
-    // Import non-ES modules as default imports.
-    "esModuleInterop": true,
-    // Specify what module code is generated.
-    "module": "nodenext",
-    // Generate .d.ts files from TypeScript and JavaScript files in your project
-    "declaration": true,
-    // Skip type checking all .d.ts files.
-    "skipLibCheck": true,
+    "target": "es2021", // Target latest version of ECMAScript.
+    "moduleResolution": "node", // Search under node_modules for non-relative imports.
+    "allowJs": true, // Process & infer types from .js files.
+    "strict": true, // Enable strictest settings like strictNullChecks & noImplicitAny.
+    "isolatedModules": false, // Disallow features that require cross-file information for emit.
+    "esModuleInterop": true, // Import non-ES modules as default imports.
+    "module": "ESNext", // Specify what module code is generated.
+    "declaration": true, // Generate .d.ts files from TypeScript and JavaScript files in your project
+    "skipLibCheck": true, // Skip type checking all .d.ts files.
     "noImplicitAny": false,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "outDir": "dist"
   },
   "include": ["src"],
   "ts-node": {

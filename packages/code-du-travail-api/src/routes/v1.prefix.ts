@@ -1,7 +1,8 @@
-const cdtnAdminVersion =
-  require("../../package.json").dependencies["@socialgouv/cdtn-elasticsearch"];
+import pkg from "../../package.json";
 
-const [, major] = cdtnAdminVersion.match(/^(?:\^|~)?(\d+)/);
+const cdtnAdminVersion = pkg.version;
+
+const [, major] = cdtnAdminVersion.match(/^(?:\^|~)?(\d+)/) as any;
 
 if (!major) {
   throw new Error("[prefix]: cdtnAdminVersion major not found");
