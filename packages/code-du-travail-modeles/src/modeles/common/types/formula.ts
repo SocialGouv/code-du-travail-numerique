@@ -1,6 +1,5 @@
 import type {
   Formula44Props,
-  Formula413Props,
   Formula573Props,
   Formula650Props,
   Formula1596Props,
@@ -32,8 +31,6 @@ export interface IFormula<T extends SupportedCcIndemniteLicenciement> {
 export type FormulaProps<T> =
   T extends SupportedCcIndemniteLicenciement.IDCC2264
     ? Formula2264Props
-    : T extends SupportedCcIndemniteLicenciement.IDCC413
-    ? Formula413Props
     : T extends SupportedCcIndemniteLicenciement.IDCC1596
     ? Formula1596Props
     : T extends SupportedCcIndemniteLicenciement.IDCC1597
