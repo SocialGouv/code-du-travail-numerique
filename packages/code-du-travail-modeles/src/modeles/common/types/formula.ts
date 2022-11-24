@@ -17,6 +17,7 @@ export type DefaultFormulaProps = {
 export type Formula = {
   formula: string;
   explanations: string[];
+  annotations?: string[];
 };
 
 export type CategoryPro16 =
