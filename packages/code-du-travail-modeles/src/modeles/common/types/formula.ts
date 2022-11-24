@@ -4,7 +4,6 @@ import type {
   Formula650Props,
   Formula1596Props,
   Formula1597Props,
-  Formula2264Props,
 } from "../../conventions";
 import type { SupportedCcIndemniteLicenciement } from "..";
 
@@ -29,9 +28,7 @@ export interface IFormula<T extends SupportedCcIndemniteLicenciement> {
 }
 
 export type FormulaProps<T> =
-  T extends SupportedCcIndemniteLicenciement.IDCC2264
-    ? Formula2264Props
-    : T extends SupportedCcIndemniteLicenciement.IDCC1596
+  T extends SupportedCcIndemniteLicenciement.IDCC1596
     ? Formula1596Props
     : T extends SupportedCcIndemniteLicenciement.IDCC1597
     ? Formula1597Props

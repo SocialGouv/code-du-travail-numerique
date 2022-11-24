@@ -12,7 +12,6 @@ export * from "./1527_immobilier";
 export * from "./1596_batiment_ouvriers_employes";
 export * from "./1597_batiment_employes_ouvriers_bis";
 export * from "./2216_commerces_detail_alimentation";
-export * from "./2264_hospitalisation_privees";
 export * from "./2511_sport";
 export * from "./2941_aide_accompagnement_soins_services_domicile";
 export * from "./3043_entreprises_proprete";
