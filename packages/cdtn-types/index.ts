@@ -133,5 +133,5 @@ export type Tool = {
   title: string;
   title_vector: number[];
   _id: string;
-  disable?: boolean;
+  displayTool?: boolean;
 };
