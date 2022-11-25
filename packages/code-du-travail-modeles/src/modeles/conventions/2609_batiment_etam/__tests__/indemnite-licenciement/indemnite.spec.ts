@@ -12,6 +12,7 @@ describe("CC 2609", () => {
       ${4}      | ${50} | ${2450}    | ${2450}
       ${15}     | ${50} | ${2450}    | ${9187.5}
       ${25}     | ${50} | ${2450}    | ${17762.5}
+      ${35}     | ${54} | ${2450}    | ${24500}
       ${1.75}   | ${58} | ${2450}    | ${0}
       ${4}      | ${58} | ${2450}    | ${2695}
       ${15}     | ${58} | ${2450}    | ${10106.25}
@@ -20,6 +21,7 @@ describe("CC 2609", () => {
       ${4}      | ${66} | ${2450}    | ${1470}
       ${15}     | ${66} | ${2450}    | ${6737.5}
       ${25}     | ${66} | ${2450}    | ${12862.5}
+      ${50}     | ${66} | ${2450}    | ${19600}
     `(
       "Avec une ancienneté $seniority ans (plus $seniorityEmployeTAM en tant que non cadre), droit de retraite: $haveRightToRetirement, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
       ({ salaireRef, expectedCompensation, age, seniority }) => {

@@ -72,6 +72,7 @@ contrat salarié . convention collective . batiment etam . indemnité de licenci
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 15 an
   remplace: base
   valeur: calcul avant 15 ans
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 10
   unité: €
   cdtn:
     formule:
@@ -84,6 +85,7 @@ contrat salarié . convention collective . batiment etam . indemnité de licenci
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 15 an
   remplace: base
   valeur: calcul avant 15 ans + calcul après 15 ans
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 10
   unité: €
   cdtn:
     formule:
@@ -91,6 +93,15 @@ contrat salarié . convention collective . batiment etam . indemnité de licenci
       explanations:
         - "A1 : Années d'ancienneté jusqu'à 15 ans d'ancienneté": contrat salarié . convention collective . batiment etam . indemnité de licenciement . jusqu'à 15 ans ou moins
         - "A2 : Années d'ancienneté au-delà de 15 ans d'ancienneté": contrat salarié . convention collective . batiment etam . indemnité de licenciement . au dela de 15 ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel . base . formule plafond maximum:
+  applicable si: base = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 10
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 10 * Sref
+      explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel . majoration:
@@ -152,6 +163,7 @@ contrat salarié . convention collective . batiment etam . indemnité de licenci
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: calcul avant 10 ans
   unité: €
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 8
   cdtn:
     formule:
       formula: 1.5 / 10 * Sref * A
@@ -164,10 +176,20 @@ contrat salarié . convention collective . batiment etam . indemnité de licenci
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: calcul avant 10 ans + calcul après 10 ans
   unité: €
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 8
   cdtn:
     formule:
       formula: (1.5 / 10 * Sref * A1) + (2.5 / 10 * Sref * A2)
       explanations:
         - "A1 : Années d'ancienneté jusqu'à 10 ans d'ancienneté": contrat salarié . convention collective . batiment etam . indemnité de licenciement . jusqu'à 10 ans ou moins
         - "A2 : Années d'ancienneté pour les années au-delà de 10 ans d'ancienneté": contrat salarié . convention collective . batiment etam . indemnité de licenciement . au dela de 10 ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel pour plus de 65 ans . formule plafond maximum:
+  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 8
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 8 * Sref
+      explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
