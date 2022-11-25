@@ -45,6 +45,7 @@ export const fetchTools = async (_params: getToolsParams): Promise<Tool[]> => {
       title: "Indemnité de licenciement",
       title_vector: [],
       _id: "d8a3605790",
+      displayTool: true,
     },
     {
       date: "24/07/2019",
@@ -83,6 +84,7 @@ export const fetchTools = async (_params: getToolsParams): Promise<Tool[]> => {
       title: "Préavis de démission",
       _id: "1eea193273",
       title_vector: [],
+      displayTool: false,
     },
   ]);
 };

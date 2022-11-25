@@ -50,3 +50,31 @@ export const getTools = async ({ ids, slugs }: ToolsFilterType) => {
   };
   return elasticsearchClient.search({ body, index });
 };
+
+export const getTool = async (slug: string) => {
+  const filter: any[] = [
+    {
+      bool: {
+        must: [
+          { term: { isPublished: true } },
+          { term: { source: "outils" } },
+          { term: { slug } },
+        ],
+      },
+    },
+  ];
+  const body = {
+    query: {
+      bool: {
+        filter,
+      },
+    },
+    size: 200,
+    sort: [
+      {
+        order: "asc",
+      },
+    ],
+  };
+  return elasticsearchClient.search({ body, index });
+};

@@ -1,4 +1,4 @@
-import { prettyDOM, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import React from "react";
 
 import Outils, { getServerSideProps } from "../pages/outils";
@@ -15,6 +15,6 @@ describe("<Outils />", () => {
   it("should display a list of tools", () => {
     const { queryAllByTestId } = render(<Outils {...serverSideProps.props} />);
     const items = queryAllByTestId("tools-list-items-internal");
-    expect(items).toHaveLength(2);
+    expect(items).toHaveLength(1);
   });
 });
