@@ -161,8 +161,8 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
     formule:
       formula: (1 / 2 * Sref * A1) + (Sref * A2)
       explanations:
-        - "A1: Années d'ancienneté dans la fonction de cadre jusqu'à 5 ans": contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . ancienneté jusqu'à 5 ans
-        - "A2: Années d'ancienneté dans la fonction de cadre supérieures à 5 ans": contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . ancienneté supérieur à 5 ans
+        - "A1 : Années d'ancienneté dans la fonction de cadre jusqu'à 5 ans": contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . ancienneté jusqu'à 5 ans
+        - "A2 : Années d'ancienneté dans la fonction de cadre supérieures à 5 ans": contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . ancienneté supérieur à 5 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . résultat conventionnel avec ancienneté de plus de 15 ans:
@@ -181,16 +181,16 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
     formule:
       formula: (1 / 2 * Sref * A1) + (Sref * A2)
       explanations:
-        - "A1: Années d'ancienneté dans la fonction de cadre jusqu'à 5 ans": contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . ancienneté jusqu'à 5 ans
-        - "A2: Années d'ancienneté dans la fonction de cadre supérieures à 5 ans": contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . ancienneté supérieur à 5 ans
+        - "A1 : Années d'ancienneté dans la fonction de cadre jusqu'à 5 ans": contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . ancienneté jusqu'à 5 ans
+        - "A2 : Années d'ancienneté dans la fonction de cadre supérieures à 5 ans": contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . ancienneté supérieur à 5 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-
 ## Mixte ##
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période:
   titre: Fonctions de non-cadres durant le contrat de travail
   question: Le salarié a-t-il précédemment occupé des fonctions non-cadres durant le contrat de travail&nbsp;?
   cdtn:
     type: oui-non
+  valeur: non
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps:
   valeur: 0 an
