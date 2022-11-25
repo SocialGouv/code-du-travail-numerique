@@ -390,8 +390,8 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
   arrondi: 2 décimales
   cdtn:
    formule:
-      explanations:
-        - "20% : majoration pour motif économique": NONE
+      annotations:
+        - "20% : majoration pour motif économique"
       formula: $formule + (20% * ($formule))
 
 ### Cadres
@@ -420,7 +420,8 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
       explanations:
         - "A : Ancienneté totale": contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . jusqu'à dix ans ou moins
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-        - "20% : majoration pour motif économique": NONE
+      annotations:
+        - "20% : majoration pour motif économique"
       formula: 1/4 * Sref * A + (20% * (1/4 * Sref * A))
 
 # (3/10*Sref*A1)+(4/10*Sref*A2)+(5/10*Sref*A3)+ (1/3*Sref*A4) + 20%
@@ -449,6 +450,6 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
     Article 3.13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111891?idConteneur=KALICONT000005635085&origin=list#KALIARTI000039111891
   cdtn:
     formule:
-      explanations:
-        - "20% : majoration pour motif économique": NONE
+      annotations:
+        - "20% : majoration pour motif économique"
       formula: ($formule) + (20% * ($formule))

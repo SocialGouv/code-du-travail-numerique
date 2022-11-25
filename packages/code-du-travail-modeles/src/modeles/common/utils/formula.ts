@@ -1,6 +1,21 @@
 import type Engine from "publicodes";
+import type { RuleNode } from "publicodes";
 
-import type { Formula } from "..";
+import type { Formula } from "../types";
+
+export type NodeFormula = {
+  formula: string;
+  explanations?: Record<string, string>[];
+  annotations?: string[];
+};
+
+type RuleNodeOptionalFormula = RuleNode & {
+  rawNode: { cdtn?: { formule?: NodeFormula } };
+};
+
+type RuleNodeFormula = RuleNode & {
+  rawNode: { cdtn: { formule: NodeFormula } };
+};
 
 function pluralize(word: string, value: number): string {
   if (word.endsWith("s") || value < 2 || word === "€") return "";
@@ -11,32 +26,47 @@ function round(num: number): number {
   return Math.round(num * 100) / 100;
 }
 
-function getRulesWithFormuleAndNodeValue(engine: Engine) {
-  return Object.values(engine.getParsedRules()).filter((rule: any) => {
-    if (rule.rawNode.cdtn?.formule === undefined) return false;
+function getRulesWithFormuleAndNodeValue(engine: Engine): RuleNodeFormula[] {
+  return Object.values(engine.getParsedRules()).filter(
+    (rule: RuleNodeOptionalFormula) => {
+      if (rule.rawNode.cdtn?.formule === undefined) return false;
 
-    const value = engine.evaluate(rule.dottedName).nodeValue;
-    return value !== false && value !== null && value !== undefined;
-  });
+      const value = engine.evaluate(rule.dottedName).nodeValue;
+      return value !== false && value !== null && value !== undefined;
+    }
+  ) as RuleNodeFormula[];
 }
 
 const FORMULE_VAR_REGEX = /\$formule/g;
 
-export function getFormule(engine: Engine): Formula {
+export function filterIndemniteLicenciement(
+  rules: RuleNodeFormula[]
+): RuleNodeFormula[] {
+  if (
+    rules.some((rule) => rule.dottedName.includes("résultat conventionnel"))
+  ) {
+    return rules.filter((rule) => !rule.dottedName.includes("résultat légal"));
+  }
+  return rules;
+}
+
+export function getFormule(
+  engine: Engine,
+  filter:
+    | ((rules: RuleNodeFormula[]) => RuleNodeFormula[])
+    | null = filterIndemniteLicenciement
+): Formula {
   let rules = getRulesWithFormuleAndNodeValue(engine);
 
-  if (
-    rules.find((rule) => rule.dottedName.includes("résultat conventionnel"))
-  ) {
-    rules = rules.filter((rule) => !rule.dottedName.includes("résultat légal"));
+  if (filter !== null) {
+    rules = filter(rules);
   }
 
   const formula = rules.reduce(
-    (formule: any, rule: any): Formula => {
-      formule.explanations = formule.explanations.concat(
-        rule.rawNode.cdtn.formule.explanations || []
-      );
-
+    (
+      formule: Required<NodeFormula>,
+      rule: RuleNodeFormula
+    ): Required<NodeFormula> => {
       const nodeFormule = rule.rawNode.cdtn.formule.formula;
       if (nodeFormule.includes("$formule")) {
         if (formule.formula.length) {
@@ -45,27 +75,36 @@ export function getFormule(engine: Engine): Formula {
             formule.formula
           );
         }
+        formule.explanations = formule.explanations.concat(
+          rule.rawNode.cdtn.formule.explanations ?? []
+        );
+        formule.annotations = formule.annotations.concat(
+          rule.rawNode.cdtn.formule.annotations ?? []
+        );
       } else {
-        formule.formula += nodeFormule;
+        formule.formula = nodeFormule;
+        formule.explanations = rule.rawNode.cdtn.formule.explanations ?? [];
+        formule.annotations = rule.rawNode.cdtn.formule.annotations ?? [];
       }
-      return formule as Formula;
+      return formule;
     },
     {
+      annotations: [],
       explanations: [],
       formula: "",
     }
   );
 
-  formula.explanations = formula.explanations
-    .flatMap((explanation: any) => {
+  const explanations = formula.explanations
+    .flatMap((explanation) => {
       return Object.keys(explanation).map((text) => {
         const element = explanation[text];
-        if (element === "NONE") return text;
-
         const result = engine.evaluate(element);
         if (!result.unit) {
           throw Error(
-            `L'unité est manquante pour la règle ${result.rawNode.name}`
+            `L'unité est manquante pour la règle '${
+              (result as any).dottedName
+            }'`
           );
         }
         const unit = result.unit.numerators[0];
@@ -76,5 +115,10 @@ export function getFormule(engine: Engine): Formula {
       });
     })
     .sort((a, b) => a.localeCompare(b));
-  return formula;
+
+  return {
+    annotations: formula.annotations,
+    explanations,
+    formula: formula.formula,
+  };
 }

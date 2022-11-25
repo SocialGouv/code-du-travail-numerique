@@ -164,9 +164,6 @@ export const ui = {
   result: {
     formula: byTestId("formula"),
   },
-  result: {
-    formula: byTestId("formula"),
-  },
   next: byText("Suivant"),
   previous: byText("Précédent"),
   activeStep: byTitle("onglet actif"),
