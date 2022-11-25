@@ -22,7 +22,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
     "Formule $expectedFormula avec $seniority ans",
     ({ seniority, expectedFormula, expectedExplanations }) => {
       const situation = engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC1979'",
+        "contrat salarié . convention collective": "'IDCC3043'",
         "contrat salarié . indemnité de licenciement": "oui",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           seniority,
