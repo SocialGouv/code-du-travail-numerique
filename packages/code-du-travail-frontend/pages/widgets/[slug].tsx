@@ -21,7 +21,7 @@ interface Props {
   publicodesRules: any;
   slug: string;
   title: string;
-  displayTitle: string | null;
+  displayTitle: string;
 }
 
 function Widgets({
@@ -38,7 +38,7 @@ function Widgets({
       <Tool
         icon={icon}
         title={title}
-        displayTitle={displayTitle ?? title}
+        displayTitle={displayTitle}
         publicodesRules={publicodesRules}
       />
 
@@ -80,7 +80,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
       publicodesRules,
       slug,
       title,
-      displayTitle: displayTitle ?? null,
+      displayTitle,
     },
   };
 };

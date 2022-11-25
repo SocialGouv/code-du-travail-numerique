@@ -51,8 +51,8 @@ interface Props {
   relatedItems: Array<any>;
   slug: string;
   title: string;
-  displayTitle: string | null;
-  metaTitle: string | null;
+  displayTitle: string;
+  metaTitle: string;
   metaDescription: string;
 }
 
@@ -74,14 +74,14 @@ function Outils({
   const router = useRouter();
   return (
     <Layout>
-      <Metas title={metaTitle ?? title} description={metaDescription} />
+      <Metas title={metaTitle} description={metaDescription} />
       <StyledSection>
         <Container>
           <Flex>
             <Tool
               icon={icon}
               title={title}
-              displayTitle={displayTitle ?? title}
+              displayTitle={displayTitle}
               publicodesRules={publicodesRules}
             />
             <ShareContainer>
@@ -139,8 +139,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
       relatedItems,
       slug,
       title,
-      displayTitle: displayTitle ?? null,
-      metaTitle: metaTitle ?? null,
+      displayTitle,
+      metaTitle,
       metaDescription,
     },
   };

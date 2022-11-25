@@ -117,10 +117,10 @@ export type Tool = {
   icon: string;
   order: number;
   action: string;
-  metaTitle?: string;
+  metaTitle: string;
   questions?: string[];
   description: string;
-  displayTitle?: string;
+  displayTitle: string;
   breadcrumbs: Record<string, string | number>[];
   cdtnId: string;
   excludeFromSearch: boolean;
