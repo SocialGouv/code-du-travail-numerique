@@ -8,14 +8,14 @@ const engine = new Engine(mergeIndemniteLicenciementModels());
 describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 2264", () => {
   describe("Cas normal", () => {
     test.each`
-      category        | seniority  | expectedFormula                            | expectedExplanations
-      ${"Non-cadres"} | ${11 / 12} | ${""}                                      | ${[]}
-      ${"Non-cadres"} | ${1.5}     | ${"1/5 * Sref * A"}                        | ${["A : Ancienneté totale (1.5 an)", "Sref : Salaire de référence (1000 €)"]}
-      ${"Non-cadres"} | ${12}      | ${"(1/5 * Sref * A1) + (2/5 * Sref * A2)"} | ${["A1 : Ancienneté de 10 ans ou moins (10 ans)", "A2 : Ancienneté au-delà de 10 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-      ${"Cadres"}     | ${11 / 12} | ${""}                                      | ${[]}
-      ${"Cadres"}     | ${1.5}     | ${"1/5 * Sref * A"}                        | ${["A : Années d'ancienneté dans la fonction de cadre (1.5 an)", "Sref : Salaire de référence (1000 €)"]}
-      ${"Cadres"}     | ${5}       | ${"(1/2 * Sref * A1)+ (1 * Sref * A2)"}    | ${["A1 : Années d'ancienneté dans la fonction de cadre jusqu'à 5 ans (5 ans)", "A2 : Années d'ancienneté dans la fonction de cadre supérieures à 5 ans (0 an)", "Sref : Salaire de référence (1000 €)"]}
-      ${"Cadres"}     | ${12}      | ${"(1/2 * Sref * A1)+ (1 * Sref * A2)"}    | ${["A1 : Années d'ancienneté dans la fonction de cadre jusqu'à 5 ans (5 ans)", "A2 : Années d'ancienneté dans la fonction de cadre supérieures à 5 ans (7 ans)", "Sref : Salaire de référence (1000 €)"]}
+      category        | seniority  | expectedFormula                                | expectedExplanations
+      ${"Non-cadres"} | ${11 / 12} | ${""}                                          | ${[]}
+      ${"Non-cadres"} | ${1.5}     | ${"(1 / 5 * Sref * A)"}                        | ${["A : Ancienneté totale (1.5 an)", "Sref : Salaire de référence (1000 €)"]}
+      ${"Non-cadres"} | ${12}      | ${"(1 / 5 * Sref * A1) + (2 / 5 * Sref * A2)"} | ${["A1 : Années d'ancienneté de 10 ans ou moins (10 ans)", "A2 : Années d'ancienneté au delà de 10 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${"Cadres"}     | ${11 / 12} | ${""}                                          | ${[]}
+      ${"Cadres"}     | ${1.5}     | ${"(1 / 5 * Sref * A)"}                        | ${["A : Années d'ancienneté dans la fonction de cadre (1.5 an)", "Sref : Salaire de référence (1000 €)"]}
+      ${"Cadres"}     | ${5}       | ${"(1 / 2 * Sref * A1)+ (1 * Sref * A2)"}      | ${["A1 : Années d'ancienneté dans la fonction de cadre jusqu'à 5 ans (5 ans)", "A2 : Années d'ancienneté dans la fonction de cadre supérieures à 5 ans (0 an)", "Sref : Salaire de référence (1000 €)"]}
+      ${"Cadres"}     | ${12}      | ${"(1 / 2 * Sref * A1)+ (1 * Sref * A2)"}      | ${["A1 : Années d'ancienneté dans la fonction de cadre jusqu'à 5 ans (5 ans)", "A2 : Années d'ancienneté dans la fonction de cadre supérieures à 5 ans (7 ans)", "Sref : Salaire de référence (1000 €)"]}
     `(
       "Formule $expectedFormula avec $seniority ans et comme catégorie $category, et ancienneté non cadre : $seniorityNonCadre",
       ({ category, seniority, expectedFormula, expectedExplanations }) => {
