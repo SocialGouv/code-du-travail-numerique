@@ -191,7 +191,6 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
   question: Le salarié a-t-il précédemment occupé des fonctions non-cadres durant le contrat de travail&nbsp;?
   cdtn:
     type: oui-non
-  valeur: non
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps:
   valeur: non

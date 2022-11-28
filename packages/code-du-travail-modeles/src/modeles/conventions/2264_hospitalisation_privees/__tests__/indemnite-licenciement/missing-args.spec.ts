@@ -32,7 +32,7 @@ describe("Missing args pour la CC 2264", () => {
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
     expect(result.missingVariables).toEqual({
-      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période": 1836,
+      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période": 3044,
     });
   });
 
