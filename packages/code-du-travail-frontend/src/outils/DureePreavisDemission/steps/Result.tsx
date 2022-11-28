@@ -1,4 +1,4 @@
-import { preavisDemissionData as data } from "@cdt/data";
+import { preavisDemissionData as data } from "@socialgouv/modeles-social";
 import PropTypes from "prop-types";
 import React from "react";
 import Disclaimer from "../../common/Disclaimer";

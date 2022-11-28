@@ -64,7 +64,6 @@ jobs:
             "@socialgouv/cdtn-ui",
             "@socialgouv/react-fiche-service-public",
             "@cdt/frontend",
-            "@cdt/data",
             "@socialgouv/modeles-social",
             "@cdt/api",
           ]
@@ -86,12 +85,7 @@ jobs:
       fail-fast: false
       matrix:
         repositories:
-          [
-            "@cdt/frontend",
-            "@cdt/data",
-            "@socialgouv/modeles-social",
-            "@cdt/api",
-          ]
+          ["@cdt/frontend", "@socialgouv/modeles-social", "@cdt/api"]
     steps:
       - uses: actions/cache@v3
         name: Restore build
@@ -126,7 +120,6 @@ jobs:
             "@socialgouv/cdtn-ui",
             "@socialgouv/react-fiche-service-public",
             "@cdt/frontend",
-            "@cdt/data",
             "@socialgouv/modeles-social",
             "@cdt/api",
           ]

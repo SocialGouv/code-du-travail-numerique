@@ -1,4 +1,4 @@
-import { Criteria, Situation } from "@cdt/data";
+import { Criteria, Situation } from "@socialgouv/modeles-social";
 
 const createValuesMatcher = (values: Criteria) => (item: Situation) => {
   function swallowEqual(a: Criteria, b: Criteria) {
