@@ -127,7 +127,7 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an
-  non applicable si: non cadre durant une période
+  non applicable si: contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif = 'Oui'
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: cadre . facteur 1
@@ -147,7 +147,7 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 15 an
-  non applicable si: non cadre durant une période
+  non applicable si: contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif = 'Oui'
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
   somme:
@@ -167,7 +167,7 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
 
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . résultat conventionnel avec ancienneté de plus de 15 ans:
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 15 an
-  non applicable si: non cadre durant une période
+  non applicable si: contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif = 'Oui'
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - cadre . facteur 2
