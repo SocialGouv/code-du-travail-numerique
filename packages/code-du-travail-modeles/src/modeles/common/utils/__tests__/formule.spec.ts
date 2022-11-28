@@ -99,4 +99,36 @@ describe("Formula", () => {
       expect(formule.annotations).toEqual(["20% de majoration"]);
     });
   });
+
+  describe("règle contenant un non applicable", () => {
+    beforeEach(() => {
+      engine = new Engine(parseData("formule_avec_non_applicable.yaml"));
+    });
+
+    test("doit remonter les annotations par défaut", () => {
+      const situation = engine.setSituation({});
+      const formule = getFormule(situation, null);
+
+      expect(formule.formula).toEqual("30% * Prix * Quantité");
+      expect(formule.explanations).toEqual([
+        "Prix (18 €)",
+        "Quantité (12 litres)",
+      ]);
+      expect(formule.annotations).toEqual(["30% de majoration"]);
+    });
+
+    test("doit remonter les annotations si non applicable", () => {
+      const situation = engine.setSituation({
+        ["non applicable"]: "non",
+      });
+      const formule = getFormule(situation, null);
+
+      expect(formule.formula).toEqual("20% * Prix * Quantité");
+      expect(formule.explanations).toEqual([
+        "Prix (18 €)",
+        "Quantité (12 litres)",
+      ]);
+      expect(formule.annotations).toEqual(["20% de majoration"]);
+    });
+  });
 });

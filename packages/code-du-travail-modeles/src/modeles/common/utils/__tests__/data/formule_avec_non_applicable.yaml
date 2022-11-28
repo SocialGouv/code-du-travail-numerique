@@ -1,0 +1,30 @@
+prix: 18 €
+
+panier: oui
+
+panier . quantité: 12 litre
+
+non applicable: oui
+
+panier . montant:
+  valeur: 20 / 100 * prix * panier . quantité
+  non applicable si: non applicable
+  cdtn:
+    formule:
+      formula: 20% * Prix * Quantité
+      explanations:
+        - "Prix": prix
+        - "Quantité": panier . quantité
+      annotations:
+        - "20% de majoration"
+
+panier . montant avec non applicable:
+  valeur: 30 / 100 * prix * panier . quantité
+  cdtn:
+    formule:
+      formula: 30% * Prix * Quantité
+      explanations:
+        - "Prix": prix
+        - "Quantité": panier . quantité
+      annotations:
+        - "30% de majoration"
