@@ -137,4 +137,25 @@ describe("Formula", () => {
       ]);
     });
   });
+
+  describe("règle contenant des 0 dans le résultat", () => {
+    beforeEach(() => {
+      engine = new Engine(parseData("formule_avec_zero.yaml"));
+    });
+
+    test("doit remonter les annotations par défaut", () => {
+      const situation = engine.setSituation({
+        ["frais de livraison"]: "0",
+      });
+      const formule = getFormule(situation, null);
+
+      expect(formule.formula).toEqual("20% * A1 * A2 + A3");
+      expect(formule.explanations).toEqual([
+        "A1 : Prix (18 €)",
+        "A2 : Quantité (12 litres)",
+        "A3 : Frais bancaire (1 €)",
+      ]);
+      expect(formule.annotations).toEqual(["20% de majoration"]);
+    });
+  });
 });
