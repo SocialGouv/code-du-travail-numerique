@@ -297,7 +297,7 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
     Article 47: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000020981961?idConteneur=KALICONT000005635813
   cdtn:
     formule:
-      formula: (1 / 5 * Sref * A1) + (2 / 5 * Sref * A2)
+      formula: "[(1 / 5 * Sref * A1)][ + (2 / 5 * Sref * A2)]"
       explanations:
         - "A1 : Ancienneté de 10 ans ou moins dans la fonction de non-cadre": contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . ancienneté 10 ans ou moins
         - "A2 : Ancienneté au delà de 10 ans dans la fonction non-cadre": contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . ancienneté de plus de 10 ans
@@ -320,7 +320,7 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
     Article 47: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000020981961?idConteneur=KALICONT000005635813
   cdtn:
     formule:
-      formula: (1 / 5 * Sref * A1) + (2 / 5 * Sref * A2) + (1 / 5 * Sref * A3)
+      formula: "[(1 / 5 * Sref * A1)][ + (2 / 5 * Sref * A2)][ + (1 / 5 * Sref * A3)]"
       explanations:
         - "A1 : Ancienneté de 10 ans ou moins dans la fonction de non-cadre": contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . ancienneté 10 ans ou moins
         - "A2 : Ancienneté au delà de 10 ans dans la fonction non-cadre": contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . ancienneté de plus de 10 ans
@@ -349,7 +349,7 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
     Article 47: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000020981961?idConteneur=KALICONT000005635813
   cdtn:
     formule:
-      formula: (1 / 5 * Sref * A1) + (2 / 5 * Sref * A2) + (1 / 2 * Sref * A3) + (Sref * A4)
+      formula: "[(1 / 5 * Sref * A1)][ + (2 / 5 * Sref * A2)][ + (1 / 2 * Sref * A3)][ + (Sref * A4)]"
       explanations:
         - "A1 : Ancienneté de 10 ans ou moins dans la fonction de non-cadre": contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . ancienneté 10 ans ou moins
         - "A2 : Ancienneté au delà de 10 ans dans la fonction non-cadre": contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . ancienneté de plus de 10 ans
@@ -373,8 +373,7 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
     Article 47: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000020981961?idConteneur=KALICONT000005635813
   cdtn:
     formule:
-      # formula: "[(1 / 5 * Sref * A1)][ + (2 / 5 * Sref * A2)][ + (1 / 2 * Sref * A3)][ + (Sref * A4)]"
-      formula: (1 / 5 * Sref * A1) + (2 / 5 * Sref * A2) + (1 / 2 * Sref * A3) + (Sref * A4)
+      formula: "[(1 / 5 * Sref * A1)][ + (2 / 5 * Sref * A2)][ + (1 / 2 * Sref * A3)][ + (Sref * A4)]"
       explanations:
         - "A1 : Ancienneté de 10 ans ou moins dans la fonction de non-cadre": contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . ancienneté 10 ans ou moins
         - "A2 : Ancienneté au delà de 10 ans dans la fonction non-cadre": contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . ancienneté de plus de 10 ans

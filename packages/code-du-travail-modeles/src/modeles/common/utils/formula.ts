@@ -130,7 +130,8 @@ export function getFormule(
 
 export const cleanFormula = (
   formule: string,
-  explanation: string[]
+  explanation: string[],
+  omitKeys: string[] = ["Sref"]
 ): string => {
   // get all parts of the formula that are in [ ]
   const parts = formule.match(/\[.*?\]/g) ?? [];
@@ -140,7 +141,12 @@ export const cleanFormula = (
       exp.split(":")[0].replace(" ", "")
     );
 
-    formulaKeys.forEach((key) => {
+    // remove omitKeys from formulaKeys
+    const formulaKeysFiltered = formulaKeys.filter(
+      (key) => !omitKeys.includes(key)
+    );
+
+    formulaKeysFiltered.forEach((key) => {
       parts.forEach((part) => {
         if (part.includes(key) && !formulaResult.includes(part)) {
           formulaResult += part;
