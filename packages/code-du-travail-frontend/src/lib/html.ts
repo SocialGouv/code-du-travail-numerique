@@ -1,4 +1,4 @@
-import cheerio from "cheerio";
+import * as cheerio from "cheerio";
 
 export const htmlParser = (html: string): string => {
   const $ = cheerio.load(html, null, false);
@@ -9,13 +9,13 @@ export const htmlParser = (html: string): string => {
   $("button").remove();
   $(".oembed-source").remove();
 
-  // @ts-ignore
-  $("dl").replaceWith(function () {
+  // https://travail-emploi.gouv.fr/emploi-et-insertion/accompagnement-des-mutations-economiques/activite-partielle-chomage-partiel/article/activite-partielle-chomage-partiel
+  $("picture").replaceWith(function () {
     const src = $(this).find("source").attr("srcset");
     return src
       ? `<img src="${src}" style="width:100%;height:auto;"/>`
       : $(this).html();
-  });
+  } as any);
 
   // FIXME: Admin regex
   $("webcomponent-tooltip").each(function (_i, elem) {
