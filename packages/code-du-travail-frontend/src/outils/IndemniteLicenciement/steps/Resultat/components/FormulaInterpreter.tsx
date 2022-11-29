@@ -11,13 +11,16 @@ export default function FormulaInterpreter(props: Props) {
   return (
     <>
       {props.formula.explanations.length > 0 && (
-        <>
+        <div data-testid="formula">
           <SectionTitle>Formule</SectionTitle>
           <MathFormula formula={props.formula.formula} />
           {props.formula.explanations.map((explanation, index) => (
             <Paragraph key={"explanation-" + index}>{explanation}</Paragraph>
           ))}
-        </>
+          {props.formula.annotations?.map((annotation, index) => (
+            <Paragraph key={"annotations-" + index}>{annotation}</Paragraph>
+          ))}
+        </div>
       )}
     </>
   );

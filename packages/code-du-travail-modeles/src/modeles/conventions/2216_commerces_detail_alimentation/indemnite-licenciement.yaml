@@ -183,82 +183,125 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
 
 # Résultat conventionnel
 
+## Défaut
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . résultat conventionnel défaut:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 8 mois
+  valeur: 0
+  unité: €
+
 ## Basique
 
-### Employés
-#  (1/4 * Sref * A1) + (1/3 * Sref * A2)
-#  A1 : Ancienneté de 10 ans ou moins
-#  A2 : Ancienneté au delà de 10 ans
-contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . employés résultat conventionnel:
+### Employés ou Agents
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . employés ou agents:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
+      - une de ces conditions:
+        - catégorie professionnelle = 'Employés et ouvriers, personnel de livraison'
+        - catégorie professionnelle = 'Agents de maîtrise et techniciens'
+  valeur: oui
+
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . employés ou agents . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     une de ces conditions:
+      - catégorie professionnelle . licenciement économique = 'Non'
       - toutes ces conditions:
-          - catégorie professionnelle = 'Employés et ouvriers, personnel de livraison'
-          - catégorie professionnelle . licenciement économique = 'Non'
-      - toutes ces conditions:
-          - catégorie professionnelle = 'Employés et ouvriers, personnel de livraison'
           - catégorie professionnelle . licenciement économique = 'Oui'
           - catégorie professionnelle . licenciement économique . age <= 50 ans
-  variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
-      alors:
-        somme:
-          - dix ans ou moins
-          - plus de dix ans
-    - sinon: 0
+  valeur:
+    somme:
+      - dix ans ou moins
+      - plus de dix ans
   unité: €
   arrondi: 2 décimales
+
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . employés ou agents . résultat conventionnel référence employés:
+  applicable si: catégorie professionnelle = 'Employés et ouvriers, personnel de livraison'
+  valeur: oui
   références:
     Article 7 de l’Annexe I Employés et ouvriers, personnel de livraison: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517490?idConteneur=KALICONT000005635085
     Article 6 de l’Annexe I Employés et ouvriers, personnel de livraison: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517485?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517485
     Article 3.13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111891?idConteneur=KALICONT000005635085&origin=list#KALIARTI000039111891
 
-### Agents
-#  (1/4 * Sref * A1) + (1/3 * Sref * A2)
-#  A1 : Ancienneté de 10 ans ou moins
-#  A2 : Ancienneté au delà de 10 ans
-contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . agent résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si:
-    une de ces conditions:
-      - toutes ces conditions:
-          - catégorie professionnelle = 'Agents de maîtrise et techniciens'
-          - catégorie professionnelle . licenciement économique = 'Non'
-      - toutes ces conditions:
-          - catégorie professionnelle = 'Agents de maîtrise et techniciens'
-          - catégorie professionnelle . licenciement économique = 'Oui'
-          - catégorie professionnelle . licenciement économique . age <= 50 ans
-  variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
-      alors:
-        somme:
-          - dix ans ou moins
-          - plus de dix ans
-    - sinon: 0
-  unité: €
-  arrondi: 2 décimales
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . employés ou agents . résultat conventionnel référence agents:
+  applicable si: catégorie professionnelle = 'Agents de maîtrise et techniciens'
+  valeur: oui
   références:
     Article 7 de l’Annexe II relative aux agents de maîtrise et techniciens: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517524
     Article 6 de l’Annexe II relative aux agents de maîtrise et techniciens: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517519?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517519
     Article 3.13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111891?idConteneur=KALICONT000005635085&origin=list#KALIARTI000039111891
 
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . employés ou agents . résultat conventionnel moins de 10ans:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . jusqu'à dix ans ou moins
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 1/4 * Sref * A
+
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . employés ou agents . résultat conventionnel au dela de 10ans:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Ancienneté de 10 ans ou moins": contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . jusqu'à dix ans ou moins
+        - "A2 : Ancienneté au-delà de 10 ans": contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . au delà de dix ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (1/4 * Sref * A1) + (1/3 * Sref * A2)
+
 ### Cadres
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres:
+  applicable si:
+    toutes ces conditions:
+    - catégorie professionnelle = 'Cadres'
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
+  valeur: oui
+
+# 5ans ou moins
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres . avec moins de 5 ans résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    une de ces conditions:
+      - toutes ces conditions:
+          - catégorie professionnelle . licenciement économique = 'Non'
+          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5 ans
+      - toutes ces conditions:
+          - catégorie professionnelle . licenciement économique = 'Oui'
+          - catégorie professionnelle . licenciement économique . age < 50 ans
+          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5 ans
+  valeur: un quart du salaire de référence avec l'ancienneté totale
+  unité: €
+  arrondi: 2 décimales
+  cdtn:
+    formule:
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . jusqu'à dix ans ou moins
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 1/4 * Sref * A
+  références:
+    Article 7 de l’Annexe III Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517561
+    Article 6 de l’Annexe III Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517556?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517556
+    Article 3.13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111891?idConteneur=KALICONT000005635085&origin=list#KALIARTI000039111891
+
 # (3/10*Sref*A1)+(4/10*Sref*A2)+(5/10*Sref*A3)+(1/3*Sref*A4)
 # A1 : Années de présence, pour la tranche jusqu'à 10 ans
 # A2 : Années de présence, pour la tranche de 10 à 20 ans
 # A3 : Années de présence, pour la tranche au-delà de 20 ans
 # A4 : Années de présence, pour la tranche au-delà de 40 ans
-contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres résultat conventionnel:
+
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     une de ces conditions:
       - toutes ces conditions:
-          - catégorie professionnelle = 'Cadres'
           - catégorie professionnelle . licenciement économique = 'Non'
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5 ans
       - toutes ces conditions:
-          - catégorie professionnelle = 'Cadres'
           - catégorie professionnelle . licenciement économique = 'Oui'
           - catégorie professionnelle . licenciement économique . age < 50 ans
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5 ans
@@ -273,124 +316,123 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
     Article 6 de l’Annexe III Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517556?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517556
     Article 3.13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111891?idConteneur=KALICONT000005635085&origin=list#KALIARTI000039111891
 
-# (1/4*Sref*A)
-# A : Années de présence
-contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres avec moins de 5 ans résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres . résultat conventionnel jusqu'à 10ans:
   applicable si:
-    une de ces conditions:
-      - toutes ces conditions:
-          - catégorie professionnelle = 'Cadres'
-          - catégorie professionnelle . licenciement économique = 'Non'
-          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5 ans
-      - toutes ces conditions:
-          - catégorie professionnelle = 'Cadres'
-          - catégorie professionnelle . licenciement économique = 'Oui'
-          - catégorie professionnelle . licenciement économique . age < 50 ans
-          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5 ans
-  variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
-      alors: un quart du salaire de référence avec l'ancienneté totale
-    - sinon: 0
-  unité: €
-  arrondi: 2 décimales
-  références:
-    Article 7 de l’Annexe III Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517561
-    Article 6 de l’Annexe III Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517556?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517556
-    Article 3.13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111891?idConteneur=KALICONT000005635085&origin=list#KALIARTI000039111891
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "A : Ancienneté total": contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . jusqu'à dix ans ou moins
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 3/10 * Sref * A
+
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres . résultat conventionnel jusqu'à 20ans:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 20 an
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Années de présence pour la tranche jusqu'à 10 ans": contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . jusqu'à dix ans ou moins
+        - "A2 : Années de présence pour la tranche de 10 à 20 ans": contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . de dix à vingt ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (3/10 * Sref * A1) + (4/10 * Sref * A2)
+
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres . résultat conventionnel jusqu'à 40ans:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 20 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 40 an
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Années de présence pour la tranche jusqu'à 10 ans": contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . jusqu'à dix ans ou moins
+        - "A2 : Années de présence pour la tranche de 10 à 20 ans": contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . de dix à vingt ans
+        - "A3 : Années de présence pour la tranche de 20 à 40 ans": contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . de vingt à quarante ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (3/10 * Sref * A1) + (4/10 * Sref * A2) + (5/10 * Sref * A3)
+
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres . résultat conventionnel au-delà de 40ans:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 40 an
+  valeur: oui
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Années de présence pour la tranche jusqu'à 10 ans": contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . jusqu'à dix ans ou moins
+        - "A2 : Années de présence pour la tranche de 10 à 20 ans": contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . de dix à vingt ans
+        - "A3 : Années de présence pour la tranche de 20 à 40 ans": contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . de vingt à quarante ans
+        - "A4 : Années de présence pour la tranche au-delà de 40 ans": contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . au delà de quarante ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (3/10 * Sref * A1) + (4/10 * Sref * A2) + (5/10 * Sref * A3) + (1/3 * Sref * A4)
 
 ## Avec majoration 20%
 
-### Employés
-#  (1/4 * Sref * A1) + (1/3 * Sref * A2) + 20%
-#  A1 : Ancienneté de 10 ans ou moins
-#  A2 : Ancienneté au delà de 10 ans
-contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . employés avec 20 pourcent résultat conventionnel:
+### Employés ou Agents
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . employés ou agents . avec 20 pourcent résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - catégorie professionnelle = 'Employés et ouvriers, personnel de livraison'
       - catégorie professionnelle . licenciement économique = 'Oui'
       - catégorie professionnelle . licenciement économique . age > 50 ans
-  variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
-      alors:
-        somme:
-          - dix ans ou moins
-          - plus de dix ans
-          - dix ans ou moins avec 20 pourcent
-          - plus de dix ans avec 20 pourcent
-    - sinon: 0
+  valeur:
+    somme:
+      - dix ans ou moins
+      - plus de dix ans
+      - dix ans ou moins avec 20 pourcent
+      - plus de dix ans avec 20 pourcent
   unité: €
   arrondi: 2 décimales
-  références:
-    Article 7 de l’Annexe I Employés et ouvriers, personnel de livraison: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517490?idConteneur=KALICONT000005635085
-    Article 6 de l’Annexe I Employés et ouvriers, personnel de livraison: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517485?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517485
-    Article 3.13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111891?idConteneur=KALICONT000005635085&origin=list#KALIARTI000039111891
-
-### Agents
-#  (1/4 * Sref * A1) + (1/3 * Sref * A2) + 20%
-#  A1 : Ancienneté de 10 ans ou moins
-#  A2 : Ancienneté au delà de 10 ans
-contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . agent avec 20 pourcent résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si:
-    toutes ces conditions:
-      - catégorie professionnelle = 'Agents de maîtrise et techniciens'
-      - catégorie professionnelle . licenciement économique = 'Oui'
-      - catégorie professionnelle . licenciement économique . age > 50 ans
-  variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
-      alors:
-        somme:
-          - dix ans ou moins
-          - plus de dix ans
-          - dix ans ou moins avec 20 pourcent
-          - plus de dix ans avec 20 pourcent
-    - sinon: 0
-  unité: €
-  arrondi: 2 décimales
-  références:
-    Article 7 de l’Annexe II relative aux agents de maîtrise et techniciens: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517524
-    Article 6 de l’Annexe II relative aux agents de maîtrise et techniciens: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517519?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517519
-    Article 3.13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111891?idConteneur=KALICONT000005635085&origin=list#KALIARTI000039111891
+  cdtn:
+   formule:
+      annotations:
+        - "20% : majoration pour motif économique"
+      formula: $formule + (20% * ($formule))
 
 ### Cadres
 
 # (1/4*Sref*A) + 20%
-# A : Années de présence
-contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres avec 20 pourcent avec anciennete de moins de 5 ans résultat conventionnel:
+# A: Années de présence
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres . avec 20 pourcent avec anciennete de moins de 5 ans résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - catégorie professionnelle = 'Cadres'
       - catégorie professionnelle . licenciement économique = 'Oui'
       - catégorie professionnelle . licenciement économique . age >= 50 ans
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5 ans
-  variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
-      alors:
-        somme:
-          - un quart du salaire de référence avec l'ancienneté totale
-          - vingt pourcent un quart du salaire de référence avec l'ancienneté totale
-    - sinon: 0
+  valeur:
+    somme:
+      - un quart du salaire de référence avec l'ancienneté totale
+      - vingt pourcent un quart du salaire de référence avec l'ancienneté totale
   unité: €
   arrondi: 2 décimales
   références:
     Article 7 de l’Annexe III Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517561
     Article 6 de l’Annexe III Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517556?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517556
     Article 3.13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111891?idConteneur=KALICONT000005635085&origin=list#KALIARTI000039111891
+  cdtn:
+    formule:
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . jusqu'à dix ans ou moins
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      annotations:
+        - "20% : majoration pour motif économique"
+      formula: 1/4 * Sref * A + (20% * (1/4 * Sref * A))
 
 # (3/10*Sref*A1)+(4/10*Sref*A2)+(5/10*Sref*A3)+ (1/3*Sref*A4) + 20%
 # A1 : Années de présence, pour la tranche jusqu'à 10 ans
 # A2 : Années de présence, pour la tranche de 10 à 20 ans
 # A3 : Années de présence, pour la tranche au-delà de 20 ans
 # A4 : Années de présence, pour la tranche au-delà de 40 ans
-contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres avec 20 pourcent résultat conventionnel:
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres . avec 20 pourcent résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - catégorie professionnelle = 'Cadres'
       - catégorie professionnelle . licenciement économique = 'Oui'
       - catégorie professionnelle . licenciement économique . age >= 50 ans
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5 ans
@@ -406,3 +448,8 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
     Article 7 de l’Annexe III Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517561
     Article 6 de l’Annexe III Cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517556?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517556
     Article 3.13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039111891?idConteneur=KALICONT000005635085&origin=list#KALIARTI000039111891
+  cdtn:
+    formule:
+      annotations:
+        - "20% : majoration pour motif économique"
+      formula: ($formule) + (20% * ($formule))

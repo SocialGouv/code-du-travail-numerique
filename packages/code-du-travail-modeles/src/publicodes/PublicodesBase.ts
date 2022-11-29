@@ -1,12 +1,13 @@
 import type { EvaluatedNode } from "publicodes";
 import Engine from "publicodes";
 
-import type { Notification, References } from "../utils";
+import type { Formula, Notification, References } from "../modeles/common";
 import {
+  getFormule,
   getNotifications,
   getNotificationsBloquantes,
   getReferences,
-} from "../utils";
+} from "../modeles/common";
 import type { Publicodes } from "./Publicodes";
 import type { MissingArgs, PublicodesData, SituationElement } from "./types";
 
@@ -58,6 +59,10 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
 
   getReferences(specificRule?: string): References[] {
     return getReferences(this.engine, specificRule);
+  }
+
+  getFormule(): Formula {
+    return getFormule(this.engine);
   }
 
   private buildSituation(map: SituationElement[]): Record<string, string> {

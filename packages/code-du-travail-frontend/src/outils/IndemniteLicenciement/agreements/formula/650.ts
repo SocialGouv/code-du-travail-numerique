@@ -17,6 +17,7 @@ export class AgreementFormula650 implements AgreementFormula {
     const agreementFactoryFormula = new FormuleFactory().create(
       SupportedCcIndemniteLicenciement.IDCC650
     );
+    if (!agreementFactoryFormula) throw new Error("Formula should be defined");
     const year = get().informationsData.input.publicodesInformations.find(
       (v) =>
         v.question.rule.nom ===

@@ -28,9 +28,6 @@ contrat salarié . convention collective . éducation et loisirs . indemnité de
       facteur: 1 / 3
   unité: €
 
-#  (1/5*Sref*A1) + (2/15*Sref*A2)
-#  A1 : Ancienneté de 10 ans ou moins
-#  A2 : Ancienneté au delà de 10 ans
 contrat salarié . convention collective . éducation et loisirs . indemnité de licenciement . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   variations:

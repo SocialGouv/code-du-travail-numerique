@@ -1,5 +1,4 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { UserAction } from "../../../common";
 import React from "react";
 import {
   CalculateurIndemnite,

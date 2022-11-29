@@ -1,4 +1,4 @@
-import { formatIdcc } from "@cdt/data";
+import { formatIdcc } from "@socialgouv/modeles-social";
 import { InputRadio, Text } from "@socialgouv/cdtn-ui";
 import React, { useState } from "react";
 import { Field } from "react-final-form";

@@ -42,15 +42,15 @@ function copyJSFile() {
     path.resolve(inDir, "index.d.ts"),
     path.resolve(outDir, "index.d.ts")
   );
-  fse.copySync(`${inDir}/utils`, `${outDir}/utils`);
   fse.copySync(`${inDir}/publicodes`, `${outDir}/publicodes`);
-  fse.copySync(`${inDir}/plugins`, `${outDir}/plugins`);
+  fse.copySync(`${inDir}/modeles`, `${outDir}/modeles`);
+  fse.copySync(`${inDir}/simulators`, `${outDir}/simulators`);
 }
 
 function writeSupportedCCFile() {
   const ccn = extractSupportedCc(new Engine(mergeCommonModels()));
   fs.writeFileSync(
-    path.resolve(outDir, "utils/ccn-supported.json"),
+    path.resolve(outDir, "modeles/common/utils/ccn-supported.json"),
     JSON.stringify(ccn, null, 2)
   );
 }

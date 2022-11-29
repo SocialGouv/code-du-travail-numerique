@@ -17,7 +17,7 @@ export class AgreementFormula44 implements AgreementFormula {
     const agreementFactoryFormula = new FormuleFactory().create(
       SupportedCcIndemniteLicenciement.IDCC0044
     );
-
+    if (!agreementFactoryFormula) throw new Error("Formula should be defined");
     const category = get()
       .informationsData.input.publicodesInformations.find(
         (v) =>

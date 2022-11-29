@@ -25,6 +25,8 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnel = (
     ...agreementParameters,
     ...{
       "contrat salarié . indemnité de licenciement": "oui",
+      "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+        "non",
       "contrat salarié . convention collective": `'IDCC${ccn
         .toString()
         .padStart(4, "0")}'`,
@@ -56,6 +58,8 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithVa
           formatNumberAsString(agreementSalaireRef),
         "contrat salarié . indemnité de licenciement . date de notification":
           notificationDate,
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
       },
     });
   };

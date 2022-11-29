@@ -4,8 +4,6 @@ dist
 /.env
 docker-compose.override.yml
 __pycache__
-packages/code-du-travail-data/dump.json
-packages/code-du-travail-data/dataset/suggestions.txt
 package-lock.json
 yarn-error.log
 packages/code-du-travail-modeles/bin
