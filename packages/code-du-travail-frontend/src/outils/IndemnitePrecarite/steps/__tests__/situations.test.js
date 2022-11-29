@@ -1,4 +1,4 @@
-import { primePrecariteData as data } from "@cdt/data";
+import { primePrecariteData as data } from "@socialgouv/modeles-social";
 
 import { getSituationsFor } from "../../../common/situations.utils";
 import {
@@ -6,7 +6,7 @@ import {
   validateSituation,
 } from "../situation";
 
-jest.mock("@cdt/data", () => ({
+jest.mock("@socialgouv/modeles-social", () => ({
   primePrecariteData: [
     { criteria: { cddType: "1| foo", hasCdiProposal: "baz" }, idcc: 10 },
     { criteria: { cddType: "1| foo", hasCdiRenewal: "bar" }, idcc: 10 },

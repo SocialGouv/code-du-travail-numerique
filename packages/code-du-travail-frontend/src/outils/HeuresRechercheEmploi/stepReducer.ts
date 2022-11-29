@@ -1,4 +1,4 @@
-import { heuresRechercheEmploiData as data } from "@cdt/data";
+import { heuresRechercheEmploiData as data } from "@socialgouv/modeles-social";
 
 import { MatomoActionEvent } from "../../lib";
 import { pushAgreementEvents } from "../common";
