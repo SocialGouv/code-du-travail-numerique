@@ -27,12 +27,11 @@ yarn build
 
 #### Packages
 
-| Package                                                              | description                                   |
-| -------------------------------------------------------------------- | --------------------------------------------- |
-| [code-du-travail-api](./packages/code-du-travail-api)                | NodeJS koa API                                |
-| [code-du-travail-frontend](./packages/code-du-travail-frontend)      | Next.js frontend application                  |
-| [react-ui](./packages/react-ui)                                      | React components and styleguide               |
-| [react-fiches-service-public](./packages/react-fiche-service-public) | React components for fiches service-public.fr |
+| Package                                                         | description                     |
+| --------------------------------------------------------------- | ------------------------------- |
+| [code-du-travail-api](./packages/code-du-travail-api)           | NodeJS koa API                  |
+| [code-du-travail-frontend](./packages/code-du-travail-frontend) | Next.js frontend application    |
+| [react-ui](./packages/react-ui)                                 | React components and styleguide |
 
 #### Frontend
 

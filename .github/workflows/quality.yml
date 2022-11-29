@@ -62,7 +62,6 @@ jobs:
         repositories:
           [
             "@socialgouv/cdtn-ui",
-            "@socialgouv/react-fiche-service-public",
             "@cdt/frontend",
             "@socialgouv/modeles-social",
             "@cdt/api",
@@ -118,7 +117,6 @@ jobs:
         repositories:
           [
             "@socialgouv/cdtn-ui",
-            "@socialgouv/react-fiche-service-public",
             "@cdt/frontend",
             "@socialgouv/modeles-social",
             "@cdt/api",
