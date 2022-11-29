@@ -6,10 +6,6 @@ import styled from "styled-components";
 import { getText } from "../utils.js";
 
 class ServiceEnLigne extends React.PureComponent {
-  static propTypes = {
-    data: PropTypes.object.isRequired,
-  };
-
   render() {
     const { data } = this.props;
     const type = data.attributes.type;
@@ -32,6 +28,10 @@ class ServiceEnLigne extends React.PureComponent {
     );
   }
 }
+
+ServiceEnLigne.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export default ServiceEnLigne;
 const { spacings } = theme;

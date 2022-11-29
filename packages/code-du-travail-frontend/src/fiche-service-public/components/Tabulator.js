@@ -6,11 +6,6 @@ import { getText } from "../utils.js";
 import { ElementBuilder } from "./ElementBuilder.js";
 
 class Tabulator extends React.PureComponent {
-  static propTypes = {
-    data: PropTypes.object.isRequired,
-    headingLevel: PropTypes.number.isRequired,
-  };
-
   render() {
     const { data, headingLevel: previousHeadingLevel } = this.props;
     const headingLevel =
@@ -34,5 +29,10 @@ class Tabulator extends React.PureComponent {
     return <Tabs data={tabsData} />;
   }
 }
+
+Tabulator.propTypes = {
+  data: PropTypes.object.isRequired,
+  headingLevel: PropTypes.number.isRequired,
+};
 
 export default Tabulator;

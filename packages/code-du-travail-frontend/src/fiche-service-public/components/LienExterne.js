@@ -4,9 +4,6 @@ import React from "react";
 import { getText } from "../utils.js";
 
 export class LienExterneCommente extends React.PureComponent {
-  static propTypes = {
-    data: PropTypes.object.isRequired,
-  };
   render() {
     const { data } = this.props;
     const commentaire = data.children.find(
@@ -27,9 +24,6 @@ export class LienExterneCommente extends React.PureComponent {
 }
 
 export class LienExterne extends React.PureComponent {
-  static propTypes = {
-    data: PropTypes.object.isRequired,
-  };
   render() {
     const { data } = this.props;
     const url = data.attributes.URL;
@@ -46,3 +40,7 @@ export class LienExterne extends React.PureComponent {
     );
   }
 }
+
+LienExterne.propTypes = {
+  data: PropTypes.object.isRequired,
+};
