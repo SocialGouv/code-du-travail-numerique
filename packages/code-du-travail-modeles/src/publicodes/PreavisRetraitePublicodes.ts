@@ -8,8 +8,7 @@ import { convertDaysIntoBetterUnit } from "./utils";
 
 class PreavisRetraitePublicodes
   extends PublicodesBase<PublicodesPreavisRetraiteResult>
-  implements Publicodes<PublicodesPreavisRetraiteResult>
-{
+  implements Publicodes<PublicodesPreavisRetraiteResult> {
   constructor(rules: string) {
     super(rules, PublicodesSimulator.PREAVIS_RETRAITE);
   }
@@ -18,7 +17,7 @@ class PreavisRetraitePublicodes
     evaluatedNode: EvaluatedNode
   ): PublicodesPreavisRetraiteResult {
     return convertDaysIntoBetterUnit(
-      evaluatedNode.nodeValue as unknown as string
+      (evaluatedNode.nodeValue as unknown) as string
     );
   }
 }
