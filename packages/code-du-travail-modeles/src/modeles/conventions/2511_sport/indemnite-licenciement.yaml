@@ -34,7 +34,7 @@ contrat salarié . convention collective . sport . indemnité de licenciement . 
 contrat salarié . convention collective . sport . indemnité de licenciement . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > (7 mois / 12)
+    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 7 mois
       alors:
         somme:
           - dix ans ou moins
