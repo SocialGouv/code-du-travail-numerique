@@ -13,6 +13,7 @@ import { validateStep } from "./validator";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
 import { Absence } from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
+import { customSeniorityValidator } from "../../../agreements/seniority";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
@@ -66,7 +67,7 @@ const createAncienneteStore: StoreSlice<
       applyGenericValidation(get, set, "hasAbsenceProlonge", value);
     },
     onValidateStepAnciennete: () => {
-      const { isValid, errorState } = validateStep(
+      const { isValid, errorState } = customSeniorityValidator(
         get().ancienneteData.input,
         get().informationsData.input,
         get().agreementData.input.agreement
@@ -102,7 +103,8 @@ const applyGenericValidation = (
     const nextState = produce(get(), (draft) => {
       draft.ancienneteData.input[paramName as string] = value;
     });
-    const { isValid, errorState } = validateStep(
+
+    const { isValid, errorState } = customSeniorityValidator(
       nextState.ancienneteData.input,
       get().informationsData.input,
       get().agreementData.input.agreement
