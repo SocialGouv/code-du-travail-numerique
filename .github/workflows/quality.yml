@@ -142,6 +142,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Lint Dockerfile
-        uses: hadolint/hadolint-action@v1.6.0
+        uses: hadolint/hadolint-action@v1.7.0
         with:
           recursive: true
