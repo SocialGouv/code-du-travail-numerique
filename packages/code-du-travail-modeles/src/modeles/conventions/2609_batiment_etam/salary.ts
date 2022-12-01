@@ -6,7 +6,7 @@ import type {
 } from "../../common";
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
-export type CC2906ReferenceSalaryProps = {
+export type CC2609ReferenceSalaryProps = {
   salaires: SalaryPeriods[];
   hasVariablePay: boolean;
 };

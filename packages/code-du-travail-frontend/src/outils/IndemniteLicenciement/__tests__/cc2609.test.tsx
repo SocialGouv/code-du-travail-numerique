@@ -49,13 +49,12 @@ describe("Indemnité licenciement - CC 2609", () => {
       });
       fireEvent.click(ui.seniority.hasAbsence.non.get());
       fireEvent.click(ui.next.get());
-      // Validation que l'on est bien sur l'étape ancienneté
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
     });
 
     test(`
      - vérification que l'on ne demande pas si le salaire comporte une partie de variable si salaire fixe
-     - vérification que l'on n'affiche pas le partie variable sur le résultat
+     - vérification que l'on n'affiche pas la partie variable sur le résultat
      - vérification que l'on demande si le salaire comporte une partie de variable si salaires différents
      - vérification que l'on affiche la réponse du salaire variable sur l'étape de résultat
      `, () => {
@@ -70,7 +69,7 @@ describe("Indemnité licenciement - CC 2609", () => {
         )
       ).not.toBeInTheDocument();
 
-      // vérification que l'on n'affiche pas le partie variable sur le résultat
+      // vérification que l'on n'affiche pas la partie variable sur le résultat
       fireEvent.change(ui.salary.sameSalaryValue.get(), {
         target: { value: "2500" },
       });
