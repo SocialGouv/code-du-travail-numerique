@@ -12,13 +12,15 @@ const engine = new Engine(mergeModels());
 const MiseRetraiteMetallurgieReferences = [
   {
     article: "Article 32.2",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023173750/?idConteneur=KALICONT000005635842",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023173750/?idConteneur=KALICONT000005635842",
   },
 ];
 const DepartRetraiteMetallurgieReferences = [
   {
     article: "Article 31.2",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023173739/?idConteneur=KALICONT000005635842",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023173739/?idConteneur=KALICONT000005635842",
   },
 ];
 

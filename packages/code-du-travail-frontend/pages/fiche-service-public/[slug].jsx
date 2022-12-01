@@ -1,9 +1,9 @@
 import { Container, Section } from "@socialgouv/cdtn-ui";
-import { FicheServicePublic } from "@socialgouv/react-fiche-service-public";
 import getConfig from "next/config";
 import { withRouter } from "next/router";
 import React from "react";
 
+import { FicheServicePublic } from "../../src/fiche-service-public";
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";

@@ -12,7 +12,8 @@ const engine = new Engine(mergeModels());
 const OuvriersReferences = [
   {
     article: "Annexe III article 15",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872211/?idConteneur=KALICONT000005635872",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872211/?idConteneur=KALICONT000005635872",
   },
 ];
 
@@ -21,7 +22,8 @@ const EmployeesReferences = OuvriersReferences;
 const TechniciensReferences = [
   {
     article: "Annexe II article 11",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872146/?idConteneur=KALICONT000005635872",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872146/?idConteneur=KALICONT000005635872",
   },
 ];
 
@@ -30,7 +32,8 @@ const AgentDeMaitriseReferences = TechniciensReferences;
 const CadresReferences = [
   {
     article: "Annexe I article 10",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872089/?idConteneur=KALICONT000005635872",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872089/?idConteneur=KALICONT000005635872",
   },
 ];
 

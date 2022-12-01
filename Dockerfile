@@ -14,7 +14,6 @@ ENV NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=$NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
 
 # Copy all package.json
 COPY ./package.json ./package.json
-COPY ./packages/react-fiche-service-public/package.json ./packages/react-fiche-service-public/package.json
 COPY ./packages/sources/package.json ./packages/sources/package.json
 COPY ./packages/slugify/package.json ./packages/slugify/package.json
 COPY ./packages/react-ui/package.json ./packages/react-ui/package.json

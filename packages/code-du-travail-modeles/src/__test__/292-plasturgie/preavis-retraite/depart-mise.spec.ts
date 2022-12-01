@@ -80,8 +80,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0292'",
         "contrat salarié . convention collective . plasturgie . catégorie professionnelle":
           "'Collaborateurs'",
-        "contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient":
-          coefficient,
+        "contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient": coefficient,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
         "préavis de retraite": "oui",
@@ -111,8 +110,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0292'",
         "contrat salarié . convention collective . plasturgie . catégorie professionnelle":
           "'Collaborateurs'",
-        "contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient":
-          coefficient,
+        "contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient": coefficient,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
         "préavis de retraite": "oui",

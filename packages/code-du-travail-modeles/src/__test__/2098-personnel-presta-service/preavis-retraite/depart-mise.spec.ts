@@ -12,7 +12,8 @@ const engine = new Engine(mergeModels());
 const CommonReferences = [
   {
     article: "Article 19.1",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005850366/?idConteneur=KALICONT000005635550",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005850366/?idConteneur=KALICONT000005635550",
   },
 ];
 
