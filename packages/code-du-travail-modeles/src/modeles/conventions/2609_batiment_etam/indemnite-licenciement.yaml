@@ -10,8 +10,8 @@ contrat salarié . convention collective . batiment etam . indemnité de licenci
 
 contrat salarié . convention collective . batiment etam . indemnité de licenciement . plus de 55 ans avant la fin de son préavis:
   applicable si: age = 55
-  titre: Le salarié aura plus de 55 ans avant la fin de son préavis (que le préavis soit effectué ou non)
-  question: Le salarié aura-t-il plus de 55 ans avant la fin de son préavis (que le préavis soit effectué ou non) ?
+  titre: Le salarié aura 56 ans avant la fin de son préavis (que le préavis soit effectué ou non)
+  question: Le salarié aura-t-il 56 ans avant la fin de son préavis (que le préavis soit effectué ou non)&nbsp;?
   cdtn:
     type: oui-non
 
@@ -74,6 +74,7 @@ contrat salarié . convention collective . batiment etam . indemnité de licenci
   valeur: calcul avant 15 ans
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 10
   unité: €
+  arrondi: 2 décimales
   cdtn:
     formule:
       formula: 2.5 / 10 * Sref * A
@@ -87,6 +88,7 @@ contrat salarié . convention collective . batiment etam . indemnité de licenci
   valeur: calcul avant 15 ans + calcul après 15 ans
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 10
   unité: €
+  arrondi: 2 décimales
   cdtn:
     formule:
       formula: (2.5 / 10 * Sref * A1) + (3.5 / 10 * Sref * A2)
@@ -116,6 +118,7 @@ contrat salarié . convention collective . batiment etam . indemnité de licenci
       assiette: base
       facteur: 10 / 100
   unité: €
+  arrondi: 2 décimales
   cdtn:
     formule:
       formula: ($formule) + (10% * ($formule))
@@ -163,6 +166,7 @@ contrat salarié . convention collective . batiment etam . indemnité de licenci
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: calcul avant 10 ans
   unité: €
+  arrondi: 2 décimales
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 8
   cdtn:
     formule:
@@ -176,6 +180,7 @@ contrat salarié . convention collective . batiment etam . indemnité de licenci
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: calcul avant 10 ans + calcul après 10 ans
   unité: €
+  arrondi: 2 décimales
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 8
   cdtn:
     formule:
