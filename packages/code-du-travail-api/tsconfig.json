@@ -10,6 +10,7 @@
     "noEmit": true,
     // Enable strictest settings like strictNullChecks & noImplicitAny.
     "strict": true,
+    "skipLibCheck": true,
     // Disallow features that require cross-file information for emit.
     "isolatedModules": false,
     // Import non-ES modules as default imports.
@@ -17,5 +18,5 @@
     "noImplicitAny": false
   },
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "../../node_modules"]
 }
