@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import xss, { escapeAttrValue } from "xss";
 
-import { htmlParser } from "../lib/html";
-
 type Props = {
   children: string;
   inline?: boolean;
