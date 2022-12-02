@@ -44,6 +44,9 @@ test(`
   expect(ui.contract.fauteGrave.question.query()).toBeInTheDocument();
   expect(ui.contract.fauteGrave.oui.query()).toBeInTheDocument();
   expect(ui.contract.fauteGrave.non.query()).toBeInTheDocument();
+  expect(ui.contract.inaptitude.question.query()).not.toBeInTheDocument();
+  expect(ui.contract.inaptitude.oui.query()).not.toBeInTheDocument();
+  expect(ui.contract.inaptitude.non.query()).not.toBeInTheDocument();
   fireEvent.click(ui.contract.fauteGrave.oui.get());
   expect(ui.contract.fauteGrave.alert.query()).toBeInTheDocument();
   fireEvent.click(ui.contract.fauteGrave.non.get());
