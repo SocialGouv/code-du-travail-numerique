@@ -39,7 +39,7 @@
   "dependencies": {
     "fs-extra": "^10.0.0",
     "publicodes": "^1.0.0-beta.16",
-    "yaml": "^1.10.2"
+    "yaml": "^2.0.0"
   },
   "lint-staged": {
     "*.{ts,js}": [
