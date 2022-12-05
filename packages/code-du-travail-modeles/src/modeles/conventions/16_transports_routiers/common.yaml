@@ -6,3 +6,4 @@ contrat salarié . convention collective . transports routiers:
     idcc: 16
     préavis-retraite: true
     indemnité-licenciement: true
+    indemnité-licenciement-sans-heritage-formule-legal: true

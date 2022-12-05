@@ -1,5 +1,6 @@
 import type Engine from "publicodes";
 import type { RuleNode } from "publicodes";
+import { extractSupportedCc } from "../../../internal/extractSupportedCc";
 
 import type { Formula } from "../types";
 
@@ -40,10 +41,12 @@ function getRulesWithFormuleAndNodeValue(engine: Engine): RuleNodeFormula[] {
 const FORMULE_VAR_REGEX = /\$formule/g;
 
 export function filterIndemniteLicenciement(
-  rules: RuleNodeFormula[]
+  rules: RuleNodeFormula[],
+  isDisabled = false
 ): RuleNodeFormula[] {
   if (
-    rules.some((rule) => rule.dottedName.includes("résultat conventionnel"))
+    rules.some((rule) => rule.dottedName.includes("résultat conventionnel")) ||
+    isDisabled
   ) {
     return rules.filter(
       (rule) => !rule.dottedName.includes("résultat identique au légal")
@@ -52,16 +55,28 @@ export function filterIndemniteLicenciement(
   return rules;
 }
 
+export const isFormuleLegalDisabled = (engine: Engine): boolean => {
+  const idcc = engine.evaluate("contrat salarié . convention collective")
+    .nodeValue as string;
+  const idccNumber = Number(idcc.replace("IDCC", ""));
+  const supportedCc = extractSupportedCc(engine);
+  const isCcSansLegal = supportedCc.some(
+    (cc) =>
+      cc.idcc === idccNumber && cc.indemniteLicenciementSansHeritageFormuleLegal
+  );
+  return isCcSansLegal;
+};
+
 export function getFormule(
   engine: Engine,
   filter:
-    | ((rules: RuleNodeFormula[]) => RuleNodeFormula[])
+    | ((rules: RuleNodeFormula[], isDisabled: boolean) => RuleNodeFormula[])
     | null = filterIndemniteLicenciement
 ): Formula {
   let rules = getRulesWithFormuleAndNodeValue(engine);
 
   if (filter !== null) {
-    rules = filter(rules);
+    rules = filter(rules, isFormuleLegalDisabled(engine));
   }
 
   const formula = rules.reduce(
