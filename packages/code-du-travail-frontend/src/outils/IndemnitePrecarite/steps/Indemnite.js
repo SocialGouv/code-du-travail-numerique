@@ -1,4 +1,4 @@
-import { primePrecariteData as data } from "@cdt/data";
+import { primePrecariteData as data } from "@socialgouv/modeles-social";
 import React from "react";
 
 import { A11yLink } from "../../../common/A11yLink";

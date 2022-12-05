@@ -2,7 +2,7 @@ import {
   heuresRechercheEmploiData,
   preavisDemissionData,
   preavisLicenciementData,
-} from "@cdt/data";
+} from "@socialgouv/modeles-social";
 import { FormApi } from "final-form";
 import React, { useMemo } from "react";
 

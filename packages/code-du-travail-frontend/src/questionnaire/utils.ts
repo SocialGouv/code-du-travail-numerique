@@ -1,6 +1,9 @@
-import { QuestionnaireQuestion, QuestionnaireResponse } from "@cdt/data";
-
-import { PreviousResponse, SlugResponses } from "./type";
+import {
+  PreviousResponse,
+  QuestionnaireQuestion,
+  QuestionnaireResponse,
+  SlugResponses,
+} from "./type";
 
 export const getCurrentQuestion = (
   questionTree: QuestionnaireQuestion,

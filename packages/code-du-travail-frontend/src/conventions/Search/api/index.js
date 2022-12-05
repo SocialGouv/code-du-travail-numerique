@@ -1,4 +1,4 @@
-import { parseIdcc } from "@cdt/data";
+import { parseIdcc } from "@socialgouv/modeles-social";
 
 import { searchAgreement } from "./agreement.service";
 import {

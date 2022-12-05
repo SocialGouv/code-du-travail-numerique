@@ -1,5 +1,7 @@
+import type { Tool } from "cdtn-types";
+
 import { API_BASE_URL } from "../v1.prefix";
-import { getTools } from "./service";
+import { getTool, getTools } from "./service";
 
 const Router = require("koa-router");
 
@@ -13,7 +15,18 @@ router.get("/tools", async (ctx: any) => {
   if (tools.body.hits.total.value === 0) {
     ctx.throw(404, `there is no tools that match query`);
   }
-  ctx.body = tools.body.hits.hits;
+  ctx.body = tools.body.hits.hits as Tool[];
+});
+
+router.get("/tools/:slug", async (ctx: any) => {
+  const tool = await getTool(ctx.params.slug);
+  if (tool.body.hits.total.value === 0) {
+    ctx.throw(404, `there is no tools that match query`);
+  }
+  if (tool.body.hits.total.value > 1) {
+    ctx.throw(500, `there is more than one tool that match query`);
+  }
+  ctx.body = tool.body.hits.hits[0] as Tool;
 });
 
 export default router;

@@ -1,4 +1,4 @@
-import { preavisLicenciementData as data } from "@cdt/data";
+import { preavisLicenciementData as data } from "@socialgouv/modeles-social";
 import { Toast } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
 import React from "react";
