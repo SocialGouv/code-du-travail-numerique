@@ -12,32 +12,38 @@ const engine = new Engine(mergeModels());
 const DepartRetraitePharmaReferences = [
   {
     article: "Article 34",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022189666?idConteneur=KALICONT000005635184",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022189666?idConteneur=KALICONT000005635184",
   },
   {
     article: "Article 32.2",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022189662?idConteneur=KALICONT000005635184",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022189662?idConteneur=KALICONT000005635184",
   },
 ];
 const MiseRetraitePharmaReferences = [
   {
     article: "Article 35",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005857748?idConteneur=KALICONT000005635184",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005857748?idConteneur=KALICONT000005635184",
   },
   {
     article: "Article 32.2",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022189662?idConteneur=KALICONT000005635184",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022189662?idConteneur=KALICONT000005635184",
   },
 ];
 
 const MiseRetraiteGroup1a3PharmaReferences = [
   {
     article: "Article 35",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000039117109",
   },
   {
     article: "Article 32.2",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022189662?idConteneur=KALICONT000005635184",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022189662?idConteneur=KALICONT000005635184",
   },
 ];
 

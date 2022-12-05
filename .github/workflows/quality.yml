@@ -62,7 +62,6 @@ jobs:
         repositories:
           [
             "@socialgouv/cdtn-ui",
-            "@socialgouv/react-fiche-service-public",
             "@cdt/frontend",
             "@socialgouv/modeles-social",
             "@cdt/api",
@@ -118,7 +117,6 @@ jobs:
         repositories:
           [
             "@socialgouv/cdtn-ui",
-            "@socialgouv/react-fiche-service-public",
             "@cdt/frontend",
             "@socialgouv/modeles-social",
             "@cdt/api",
@@ -142,6 +140,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Lint Dockerfile
-        uses: hadolint/hadolint-action@v1.6.0
+        uses: hadolint/hadolint-action@v3.0.0
         with:
           recursive: true

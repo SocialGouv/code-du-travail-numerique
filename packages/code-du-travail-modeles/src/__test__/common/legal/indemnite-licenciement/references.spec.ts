@@ -55,7 +55,8 @@ describe("Vérification des références juridiques pour Indemnité légale de l
         expect.arrayContaining([
           {
             article: "Article L1226-14",
-            url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006900981/",
+            url:
+              "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006900981/",
           },
         ])
       );

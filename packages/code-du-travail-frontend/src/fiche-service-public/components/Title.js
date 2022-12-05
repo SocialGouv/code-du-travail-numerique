@@ -5,11 +5,6 @@ import PropTypes from "prop-types";
 import React from "react";
 
 class Title extends React.PureComponent {
-  static propTypes = {
-    children: PropTypes.node,
-    date: PropTypes.string,
-    level: PropTypes.number,
-  };
   render() {
     const { level, children, date } = this.props;
     // the whole date thing here is related to the "Avertissement" element and only it.
@@ -55,5 +50,11 @@ class Title extends React.PureComponent {
     }
   }
 }
+
+Title.propTypes = {
+  children: PropTypes.node,
+  date: PropTypes.string,
+  level: PropTypes.number,
+};
 
 export default Title;

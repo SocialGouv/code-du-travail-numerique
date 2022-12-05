@@ -21,8 +21,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC1090'",
         "contrat salarié . convention collective . automobiles . catégorie professionnelle":
           "'Ouvriers'",
-        "contrat salarié . convention collective . automobiles . catégorie professionnelle . ouvriers . échelon":
-          grade,
+        "contrat salarié . convention collective . automobiles . catégorie professionnelle . ouvriers . échelon": grade,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
         "préavis de retraite": "oui",
@@ -52,8 +51,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC1090'",
         "contrat salarié . convention collective . automobiles . catégorie professionnelle":
           "'Agents de maîtrise'",
-        "contrat salarié . convention collective . automobiles . catégorie professionnelle . agents de maîtrise . échelon":
-          grade,
+        "contrat salarié . convention collective . automobiles . catégorie professionnelle . agents de maîtrise . échelon": grade,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
         "préavis de retraite": "oui",

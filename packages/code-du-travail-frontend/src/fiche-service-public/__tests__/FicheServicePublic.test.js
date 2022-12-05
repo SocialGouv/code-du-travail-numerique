@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-import { FicheServicePublic } from "../src";
+import { FicheServicePublic } from "..";
 import ficheDataMock from "./ficheData.mock.json";
 
 describe("<FicheServicePublic />", () => {

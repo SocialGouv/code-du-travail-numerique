@@ -1,12 +1,13 @@
 import { DOCUMENTS } from "@socialgouv/cdtn-elasticsearch";
 import Router from "koa-router";
-import fetch from "node-fetch";
 
 import elasticsearchClient from "../../conf/elasticsearch";
 import type { SearchResponse } from "../type";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 import getAgreements from "./enterprises.elastic";
 import type { Agreement, ApiEnterpriseData, Enterprise } from "./types";
+
+const fetch = require("node-fetch-commonjs");
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX ?? "cdtn";
 const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
