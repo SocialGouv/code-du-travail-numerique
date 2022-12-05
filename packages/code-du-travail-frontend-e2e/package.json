@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@socialgouv/eslint-config-typescript": "^1.93.0",
-    "cypress": "^10.10.0",
+    "cypress": "^11.0.0",
     "eslint": "^7.31.0",
     "eslint-plugin-cypress": "^2.12.1",
     "lint-staged": "^13.0.0"
