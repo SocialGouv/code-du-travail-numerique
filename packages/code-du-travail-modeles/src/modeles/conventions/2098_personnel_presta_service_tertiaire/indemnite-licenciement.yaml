@@ -123,12 +123,6 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . non cadres:
   applicable si: catégorie professionnelle = 'Non-cadres'
 
-#(1/10*Sref*A1)+(1/7*Sref*A2)+(1/5*Sref*A3)+(1/4*Sref*A4)+(1/3*Sref*A5)
-#A1: Années d'ancienneté à compter de la 1re année (tranche de 0 à 5 ans)
-#A2: Années d'ancienneté au-delà de la 5e année (tranche de 6 à 10 ans)
-#A3: Années d'ancienneté au-delà de la 10e année (tranche de 11 à 20 ans)
-#A4: Années d'ancienneté au-delà de la 20e année (tranche de 21 à 30 ans)
-#A5: Années d'ancienneté au-delà de la 30e année (tranche au-delà de 30 ans)
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . non cadres . résultat conventionnel:
   applicable si: indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -142,6 +136,27 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
   références:
     Article 19: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005850366?idConteneur=KALICONT000005635550
     Article 16: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000024922383?idConteneur=KALICONT000005635550&origin=list#KALIARTI000024922383
+  cdtn:
+    formule:
+      formula: "1/10 * Sref * A"
+      explanations:
+        - "A: Années d'ancienneté à compter de la 1re année": contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . nombre d'années entre 0 et 5ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . non cadres . résultat conventionnel . formule plus de 5ans:
+  applicable si: indemnité de licenciement . ancienneté conventionnelle en année > 5 an
+  valeur: oui
+  unité: €
+  cdtn:
+    formule:
+      formula: "[(1/10 * Sref * A1)][ + (1/7 * Sref * A2)][ + (1/5 * Sref * A3)][ + (1/4 * Sref * A4)][ + (1/3 * Sref * A5)]"
+      explanations:
+        - "A1: Années d'ancienneté à compter de la 1re année": contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . nombre d'années entre 0 et 5ans
+        - "A2: Années d'ancienneté au-delà de la 5e année": contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . nombre d'années entre 6 et 10ans
+        - "A3: Années d'ancienneté au-delà de la 10e année": contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . nombre d'années entre 11 et 20ans
+        - "A4: Années d'ancienneté au-delà de la 20e année": contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . nombre d'années entre 21 et 30ans
+        - "A5: Années d'ancienneté au-delà de la 30e année": contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . nombre d'années au dessus de 30ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres:
   applicable si: catégorie professionnelle = 'Cadres'
@@ -153,11 +168,6 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
   cdtn:
     type: entier
 
-#(3/10*Sref*A1)+(4/10*Sref*A2)+(5/10*Sref*A3)+(6/10*Sref*A4)
-#A1: Années d'ancienneté à compter de la 1re année (tranche de 0 à 5 ans)
-#A2: Années d'ancienneté au-delà de la 5e année (tranche de 6 à 10 ans)
-#A3: Années d'ancienneté au-delà de la 10e année (tranche de 11 à 15 ans)
-#A4: Années d'ancienneté au-delà de la 15e année (tranche au-delà de 15 ans)
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . base:
   applicable si: indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
   somme:
@@ -189,3 +199,23 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
   références:
     Article 3.1 de l’Avenant cadres Convention collective nationale du 13 août 1999: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005850668?idConteneur=KALICONT000005635550
     Article 16: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000024922383?idConteneur=KALICONT000005635550&origin=list#KALIARTI000024922383
+  cdtn:
+    formule:
+      formula: "3/10 * Sref * A"
+      explanations:
+        - "A: Années d'ancienneté à compter de la 1re année": contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . nombre d'années entre 0 et 5ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . résultat conventionnel . formule plus de 5ans:
+  applicable si: indemnité de licenciement . ancienneté conventionnelle en année > 5 an
+  valeur: oui
+  unité: €
+  cdtn:
+    formule:
+      formula: "(3/10 * Sref * A1)[ + (4/10 * Sref * A2)][ + (5/10 * Sref * A3)][ + (6/10 * Sref * A4)]"
+      explanations:
+        - "A1: Années d'ancienneté à compter de la 1re année": contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . nombre d'années entre 0 et 5ans
+        - "A2: Années d'ancienneté au-delà de la 5e année": contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . nombre d'années entre 6 et 10ans
+        - "A3: Années d'ancienneté au-delà de la 10e année": contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . nombre d'années entre 11 et 15ans
+        - "A4: Années d'ancienneté au-delà de la 15e année": contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . nombre d'années au dessus de 15ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
