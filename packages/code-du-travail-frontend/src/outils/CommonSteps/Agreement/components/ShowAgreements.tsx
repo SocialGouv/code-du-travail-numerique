@@ -1,4 +1,4 @@
-import { formatIdcc } from "@cdt/data";
+import { formatIdcc } from "@socialgouv/modeles-social";
 import React from "react";
 
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";

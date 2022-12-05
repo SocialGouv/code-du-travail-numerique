@@ -6,7 +6,7 @@ import PubliReferences from "../../../common/PubliReferences";
 import { formatRefs } from "../../../publicodes";
 import Disclaimer from "../../../common/Disclaimer";
 import React from "react";
-import { preavisLicenciementData as data } from "@cdt/data";
+import { preavisLicenciementData as data } from "@socialgouv/modeles-social";
 import { DisplayResult, DurationResult, DisclaimerText } from "./Components";
 import { buildRecap, getRefs, getResult, getSituations } from "./utils";
 

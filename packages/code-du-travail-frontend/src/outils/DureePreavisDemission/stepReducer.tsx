@@ -1,4 +1,4 @@
-import { preavisDemissionData as data } from "@cdt/data";
+import { preavisDemissionData as data } from "@socialgouv/modeles-social";
 
 import { MatomoActionEvent } from "../../lib";
 import { pushAgreementEvents } from "../common";

@@ -1,5 +1,5 @@
-import { Criteria, Situation } from "@cdt/data";
 import { AgreementSupportInfo } from "./Agreement/types";
+import { Criteria, Situation } from "@socialgouv/modeles-social";
 
 const createValuesMatcher = (values: Criteria) => (item: Situation) => {
   function swallowEqual(a: Criteria, b: Criteria) {

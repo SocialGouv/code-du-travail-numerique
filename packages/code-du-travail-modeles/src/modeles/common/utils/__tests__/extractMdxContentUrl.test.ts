@@ -1,4 +1,4 @@
-import { extractMdxContentUrl } from "../";
+import { extractMdxContentUrl } from "..";
 
 const tests = [
   {

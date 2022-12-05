@@ -1,4 +1,4 @@
-import { Criteria } from "@cdt/data";
+import { Criteria } from "@socialgouv/modeles-social";
 
 export type LicenciementSituation = {
   criteria: Criteria;

@@ -1,3 +1,4 @@
+import { Tool } from "cdtn-types";
 import getConfig from "next/config";
 
 const {
@@ -9,10 +10,9 @@ export type getToolsParams = {
   slugs?: string[];
 };
 
-export const fetchTools = async ({
-  ids,
-  slugs,
-}: getToolsParams = {}): Promise<any> => {
+export const fetchTools = async ({ ids, slugs }: getToolsParams = {}): Promise<
+  Tool[]
+> => {
   let query = "";
   if (ids) {
     query += `ids=${ids.join(",")}`;
@@ -24,4 +24,10 @@ export const fetchTools = async ({
   const responseContainer = await fetch(`${API_URL}/tools?${query}`);
   const result = await responseContainer.json();
   return result.map(({ _id, _source }) => ({ ..._source, _id }));
+};
+
+export const fetchTool = async (slug: string): Promise<Tool> => {
+  const responseContainer = await fetch(`${API_URL}/tools/${slug}`);
+  const result = await responseContainer.json();
+  return { ...result._source, _id: result._id };
 };

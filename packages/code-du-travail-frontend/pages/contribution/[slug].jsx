@@ -1,4 +1,4 @@
-import { extractMdxContentUrl } from "@cdt/data";
+import { extractMdxContentUrl } from "@socialgouv/modeles-social";
 import getConfig from "next/config";
 import { withRouter } from "next/router";
 import React from "react";
