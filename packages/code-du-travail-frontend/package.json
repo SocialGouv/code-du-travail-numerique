@@ -64,7 +64,7 @@
     "react-uid": "^2.3.1",
     "rehype-parse": "^8.0.3",
     "rehype-raw": "^5.1.0",
-    "rehype-react": "^6.2.1",
+    "rehype-react": "^7.0.0",
     "remark-parse": "^9.0.0",
     "remark-rehype": "^8.1.0",
     "styled-components": "^5.3.0",
