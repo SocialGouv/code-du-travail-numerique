@@ -45,7 +45,9 @@ export function filterIndemniteLicenciement(
   if (
     rules.some((rule) => rule.dottedName.includes("résultat conventionnel"))
   ) {
-    return rules.filter((rule) => !rule.dottedName.includes("résultat légal"));
+    return rules.filter(
+      (rule) => !rule.dottedName.includes("résultat identique au légal")
+    );
   }
   return rules;
 }

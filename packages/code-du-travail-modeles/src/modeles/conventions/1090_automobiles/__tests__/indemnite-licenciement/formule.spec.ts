@@ -3,7 +3,7 @@ import Engine from "publicodes";
 import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getFormule } from "../../../../common";
 
-describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 1518", () => {
+describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 1090", () => {
   test.each`
     seniority | expectedFormula                            | expectedExplanations
     ${7 / 12} | ${""}                                      | ${[]}
@@ -18,7 +18,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
       const engine = new Engine(mergeIndemniteLicenciementModels());
 
       const situation = engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC1518'",
+        "contrat salarié . convention collective": "'IDCC1090'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           seniority,
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
