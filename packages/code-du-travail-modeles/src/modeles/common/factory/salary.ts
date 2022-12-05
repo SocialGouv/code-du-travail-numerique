@@ -7,6 +7,7 @@ import { ReferenceSalary573 } from "../../conventions/573_commerces_de_gros";
 import { ReferenceSalary1486 } from "../../conventions/1486_bureaux_etudes_techniques";
 import { ReferenceSalary1516 } from "../../conventions/1516_organismes_formation";
 import { ReferenceSalary1527 } from "../../conventions/1527_immobilier";
+import { ReferenceSalary2098 } from "../../conventions/2098_personnel_presta_service_tertiaire";
 import { ReferenceSalary3239 } from "../../conventions/3239_particuliers_employeurs_domicile";
 import type { IReferenceSalary } from "..";
 import { SupportedCcIndemniteLicenciement } from "..";
@@ -34,6 +35,8 @@ export class ReferenceSalaryFactory {
         return new ReferenceSalary573() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.IDCC0029:
         return new ReferenceSalary0029() as IReferenceSalary<T>;
+      case SupportedCcIndemniteLicenciement.IDCC2098:
+        return new ReferenceSalary2098() as IReferenceSalary<T>;
       case SupportedCcIndemniteLicenciement.default:
       default:
         return new ReferenceSalaryLegal() as IReferenceSalary<T>;

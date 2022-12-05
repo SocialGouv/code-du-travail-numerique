@@ -1,16 +1,19 @@
 import { LEGAL_MOTIFS } from "../base";
-import type { Motif } from "../common";
-import { SupportedCcIndemniteLicenciement } from "../common";
-import { MOTIFS_16 } from "../conventions/16_transports_routiers";
-import { MOTIFS_44 } from "../conventions/44_industries_chimiques";
-import { MOTIFS_650 } from "../conventions/650_metallurgie_ingenieurs_cadres";
-import { MOTIFS_1518 } from "../conventions/1518_education_loisirs";
-import { MOTIFS_1527 } from "../conventions/1527_immobilier";
-import { MOTIFS_2216 } from "../conventions/2216_commerces_detail_alimentation";
-import { MOTIFS_2511 } from "../conventions/2511_sport";
-import { MOTIFS_2941 } from "../conventions/2941_aide_accompagnement_soins_services_domicile";
-import { MOTIFS_3043 } from "../conventions/3043_entreprises_proprete";
-import { MOTIFS_3239 } from "../conventions/3239_particuliers_employeurs_domicile";
+import {
+  MOTIFS_16,
+  MOTIFS_44,
+  MOTIFS_650,
+  MOTIFS_1518,
+  MOTIFS_1527,
+  MOTIFS_2098,
+  MOTIFS_2216,
+  MOTIFS_2511,
+  MOTIFS_2941,
+  MOTIFS_3043,
+  MOTIFS_3239,
+} from "../conventions";
+import type { Motif } from "./types";
+import { SupportedCcIndemniteLicenciement } from "./types";
 
 export const getMotifs = (idcc: SupportedCcIndemniteLicenciement): Motif[] => {
   switch (idcc) {
@@ -34,6 +37,8 @@ export const getMotifs = (idcc: SupportedCcIndemniteLicenciement): Motif[] => {
       return MOTIFS_16;
     case SupportedCcIndemniteLicenciement.IDCC0044:
       return MOTIFS_44;
+    case SupportedCcIndemniteLicenciement.IDCC2098:
+      return MOTIFS_2098;
     case SupportedCcIndemniteLicenciement.default:
     default:
       return LEGAL_MOTIFS;
