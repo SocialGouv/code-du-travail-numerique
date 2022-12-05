@@ -1,7 +1,7 @@
-export {};
+export {}
 
 declare global {
-  interface Window {
+  interface window {
     gtag: any;
   }
 }

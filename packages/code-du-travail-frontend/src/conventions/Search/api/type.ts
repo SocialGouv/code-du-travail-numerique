@@ -1,13 +1,13 @@
-export type Agreement = {
+export type agreement = {
   id: string;
   num: number;
-  shortTitle: string;
+  shorttitle: string;
   slug: string;
   title: string;
   url?: string;
   highlight?: {
     title: string;
     content: string;
-    searchInfo?: string;
+    searchinfo?: string;
   };
-};
+}

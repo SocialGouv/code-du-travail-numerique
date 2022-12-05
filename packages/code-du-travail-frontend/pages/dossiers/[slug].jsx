@@ -199,7 +199,7 @@ const H3 = styled.h3`
   color: ${({ theme }) => theme.title};
   font-weight: normal;
   font-size: ${fonts.sizes.headings.medium};
-  font-family: "Merriweather", serif;
+  font-family: Merriweather, serif;
   line-height: ${fonts.lineHeightTitle};
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.headings.xmedium};
