@@ -46,7 +46,7 @@
     "fuzzball": "^2.0.2",
     "koa": "^2.13.1",
     "koa-bodyparser": "^4.3.0",
-    "koa-router": "^10.0.0",
+    "koa-router": "^12.0.0",
     "lodash.deburr": "^4.1.0",
     "memoizee": "^0.4.15",
     "node-fetch-commonjs": "^3.2.4",
