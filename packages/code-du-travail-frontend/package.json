@@ -63,7 +63,7 @@
     "react-svg-spinner": "^1.0.4",
     "react-uid": "^2.3.1",
     "rehype-parse": "^8.0.3",
-    "rehype-raw": "^5.1.0",
+    "rehype-raw": "^6.0.0",
     "rehype-react": "^6.2.1",
     "remark-parse": "^9.0.0",
     "remark-rehype": "^8.1.0",
