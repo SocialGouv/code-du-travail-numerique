@@ -1,7 +1,7 @@
 import type Engine from "publicodes";
 import type { RuleNode } from "publicodes";
-import { extractSupportedCc } from "../../../internal/extractSupportedCc";
 
+import { extractSupportedCc } from "../../../internal/extractSupportedCc";
 import type { Formula } from "../types";
 
 export type NodeFormula = {

@@ -24,12 +24,12 @@ export function extractSupportedCc(engine: Engine): Partial<AgreementInfo>[] {
           return {
             idcc,
             indemniteLicenciement: cdtnNode["indemnité-licenciement"] ?? false,
-            indemniteLicenciementSansLegal:
-              cdtnNode["indemnité-licenciement-sans-legal"] ?? false,
-            preavisRetraite: cdtnNode["préavis-retraite"] ?? false,
             indemniteLicenciementSansHeritageFormuleLegal:
               cdtnNode["indemnité-licenciement-sans-heritage-formule-legal"] ??
               false,
+            indemniteLicenciementSansLegal:
+              cdtnNode["indemnité-licenciement-sans-legal"] ?? false,
+            preavisRetraite: cdtnNode["préavis-retraite"] ?? false,
           };
         }
       }
