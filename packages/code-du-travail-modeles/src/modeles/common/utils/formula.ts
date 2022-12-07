@@ -41,7 +41,6 @@ const FORMULE_VAR_REGEX = /\$formule/g;
 
 export function getFormule(engine: Engine): Formula {
   const rules = getRulesWithFormuleAndNodeValue(engine);
-  // engine.evaluate("contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal").nodeValue
   const formula = rules.reduce(
     (
       formule: Required<NodeFormula>,
