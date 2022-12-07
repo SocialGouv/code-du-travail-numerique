@@ -143,7 +143,6 @@ describe("Formula", () => {
       engine = new Engine(parseData("formule_avec_zero.yaml"));
     });
 
-<<<<<<< HEAD
     test("doit afficher toutes les parties de la formule si elles sont positives", () => {
       const situation = engine.setSituation({
         ["frais de livraison"]: "2",
@@ -159,28 +158,17 @@ describe("Formula", () => {
       ]);
     });
     test("doit cacher les parties de la formule qui valent 0", () => {
-=======
-    test("doit remonter les annotations par défaut", () => {
->>>>>>> feat/indemnite-licenciement
       const situation = engine.setSituation({
         ["frais de livraison"]: "0",
       });
       const formule = getFormule(situation, null);
 
-<<<<<<< HEAD
       expect(formule.formula).toEqual("A + 20% * A1 * A2 + A3");
-=======
-      expect(formule.formula).toEqual("20% * A1 * A2 + A3");
->>>>>>> feat/indemnite-licenciement
       expect(formule.explanations).toEqual([
         "A1 : Prix (18 €)",
         "A2 : Quantité (12 litres)",
         "A3 : Frais bancaire (1 €)",
       ]);
-<<<<<<< HEAD
-=======
-      expect(formule.annotations).toEqual(["20% de majoration"]);
->>>>>>> feat/indemnite-licenciement
     });
   });
 });
