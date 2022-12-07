@@ -140,7 +140,7 @@ contrat salarié . indemnité de licenciement . résultat conventionnel identiqu
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: 1/4 * Sref * A
 
-contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal au dela de 10ans:
+contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal au dela de 10 ans:
   applicable si:
     toutes ces conditions:
       - ancienneté conventionnelle en année > 10 an
