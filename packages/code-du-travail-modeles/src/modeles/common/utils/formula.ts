@@ -2,6 +2,7 @@ import type Engine from "publicodes";
 import type { RuleNode } from "publicodes";
 
 import type { Formula } from "../types";
+import { nonNullable } from "./array";
 
 export type NodeFormula = {
   formula: string;
@@ -107,18 +108,56 @@ export function getFormule(
             }'`
           );
         }
-        const unit = result.unit.numerators[0];
-        return `${text} (${round(Number(result.nodeValue))} ${unit}${pluralize(
-          unit,
-          result.nodeValue as number
-        )})`;
+        const nodeValue = Number(result.nodeValue);
+        if (nodeValue && nodeValue !== 0) {
+          const unit = result.unit.numerators[0];
+          return `${text} (${round(nodeValue)} ${unit}${pluralize(
+            unit,
+            result.nodeValue as number
+          )})`;
+        }
       });
     })
+    .filter(nonNullable)
     .sort((a, b) => a.localeCompare(b));
 
   return {
     annotations: formula.annotations,
     explanations,
-    formula: formula.formula,
+    formula: cleanFormula(formula.formula, explanations),
   };
 }
+
+export const cleanFormula = (
+  formule: string,
+  explanation: string[],
+  omitKeys: string[] = ["Sref"]
+): string => {
+  // get all parts of the formula that are in [ ]
+  const parts = formule.match(/\[.*?\]/g) ?? [];
+  let formulaResult = "";
+  if (formule.includes("[") && formule.includes("]")) {
+    const formulaKeys = explanation.map((exp) =>
+      exp.split(":")[0].replace(" ", "")
+    );
+
+    // remove omitKeys from formulaKeys
+    const formulaKeysFiltered = formulaKeys.filter(
+      (key) => !omitKeys.includes(key)
+    );
+
+    formulaKeysFiltered.forEach((key) => {
+      parts.forEach((part) => {
+        if (part.includes(key) && !formulaResult.includes(part)) {
+          formulaResult += part;
+        }
+      });
+    });
+    // remove all the [ ] from the formula
+    const formulaWithoutCrochet = formulaResult.replace(/\[|\]/g, "");
+    // remove space and + at the beginning of the formula
+    const formulaWithoutSpace = formulaWithoutCrochet.replace(/^(\s|\+)+/, "");
+    return formulaWithoutSpace;
+  }
+  return formule;
+};

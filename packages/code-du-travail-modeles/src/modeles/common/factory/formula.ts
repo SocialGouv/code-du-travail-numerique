@@ -1,12 +1,8 @@
 import { Formula44 } from "../../conventions/44_industries_chimiques";
-import { Formula413 } from "../../conventions/413_handicap";
 import { Formula573 } from "../../conventions/573_commerces_de_gros";
 import { Formula650 } from "../../conventions/650_metallurgie_ingenieurs_cadres";
 import { Formula1596 } from "../../conventions/1596_batiment_ouvriers_employes";
 import { Formula1597 } from "../../conventions/1597_batiment_employes_ouvriers_bis";
-import { Formula1979 } from "../../conventions/1979_hotels_cafes_restaurants";
-import { Formula2264 } from "../../conventions/2264_hospitalisation_privees";
-import { Formula3043 } from "../../conventions/3043_entreprises_proprete";
 import type { IFormula } from "..";
 import { SupportedCcIndemniteLicenciement } from "../types";
 
@@ -15,14 +11,6 @@ export class FormuleFactory {
     idcc: T
   ): IFormula<T> | undefined {
     switch (idcc) {
-      case SupportedCcIndemniteLicenciement.IDCC2264:
-        return new Formula2264() as IFormula<T>;
-      case SupportedCcIndemniteLicenciement.IDCC1979:
-        return new Formula1979() as IFormula<T>;
-      case SupportedCcIndemniteLicenciement.IDCC3043:
-        return new Formula3043() as IFormula<T>;
-      case SupportedCcIndemniteLicenciement.IDCC413:
-        return new Formula413() as IFormula<T>;
       case SupportedCcIndemniteLicenciement.IDCC1596:
         return new Formula1596() as IFormula<T>;
       case SupportedCcIndemniteLicenciement.IDCC1597:
