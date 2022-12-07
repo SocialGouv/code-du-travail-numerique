@@ -72,7 +72,7 @@
   "lint-staged": {
     "{__mocks__,__tests__,src}/**/*.js": [
       "yarn lint-css",
-      "yarn lint-js --fix"
+      "yarn lint-js --fix --quiet"
     ]
   },
   "jest": {

@@ -17,5 +17,4 @@ export * from "./2264_hospitalisation_privees";
 export * from "./2511_sport";
 export * from "./2941_aide_accompagnement_soins_services_domicile";
 export * from "./3043_entreprises_proprete";
-export * from "./3127_entreprises_services_a_la_personne";
 export * from "./3239_particuliers_employeurs_domicile";
