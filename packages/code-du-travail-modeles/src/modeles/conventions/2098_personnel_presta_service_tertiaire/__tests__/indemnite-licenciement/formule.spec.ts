@@ -40,6 +40,7 @@ describe("Formule de l'indemnité de licenciement - CC 2098", () => {
   describe("Autre licenciement", () => {
     test.each`
       seniority | expectedFormula                                                                                         | expectedExplanations
+      ${1}      | ${""}                                                                                                   | ${[]}
       ${2}      | ${"1/10 * Sref * A"}                                                                                    | ${["A: Années d'ancienneté à compter de la 1re année (2 ans)", "Sref : Salaire de référence (2800 €)"]}
       ${7}      | ${"(1/10 * Sref * A1) + (1/7 * Sref * A2)"}                                                             | ${["A1: Années d'ancienneté à compter de la 1re année (5 ans)", "A2: Années d'ancienneté au-delà de la 5e année (2 ans)", "Sref : Salaire de référence (2800 €)"]}
       ${14}     | ${"(1/10 * Sref * A1) + (1/7 * Sref * A2) + (1/5 * Sref * A3)"}                                         | ${["A1: Années d'ancienneté à compter de la 1re année (5 ans)", "A2: Années d'ancienneté au-delà de la 5e année (5 ans)", "A3: Années d'ancienneté au-delà de la 10e année (4 ans)", "Sref : Salaire de référence (2800 €)"]}
@@ -68,6 +69,7 @@ describe("Formule de l'indemnité de licenciement - CC 2098", () => {
 
     test.each`
       seniority | age   | expectedFormula                                                                        | expectedExplanations
+      ${1}      | ${35} | ${""}                                                                                  | ${[]}
       ${2}      | ${35} | ${"3/10 * Sref * A"}                                                                   | ${["A: Années d'ancienneté à compter de la 1re année (2 ans)", "Sref : Salaire de référence (2800 €)"]}
       ${7}      | ${35} | ${"(3/10 * Sref * A1) + (4/10 * Sref * A2)"}                                           | ${["A1: Années d'ancienneté à compter de la 1re année (5 ans)", "A2: Années d'ancienneté au-delà de la 5e année (2 ans)", "Sref : Salaire de référence (2800 €)"]}
       ${14}     | ${35} | ${"(3/10 * Sref * A1) + (4/10 * Sref * A2) + (5/10 * Sref * A3)"}                      | ${["A1: Années d'ancienneté à compter de la 1re année (5 ans)", "A2: Années d'ancienneté au-delà de la 5e année (5 ans)", "A3: Années d'ancienneté au-delà de la 10e année (4 ans)", "Sref : Salaire de référence (2800 €)"]}

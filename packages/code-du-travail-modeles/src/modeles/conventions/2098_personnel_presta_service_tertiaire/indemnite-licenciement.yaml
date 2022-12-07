@@ -59,6 +59,12 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement:
   applicable si: inaptitude suite à un accident non professionnelle = 'Non'
 
+contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . résultat conventionnel moins de 2ans:
+  applicable si: indemnité de licenciement . ancienneté conventionnelle en année < 2 an
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: 0
+  unité: €
+
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle:
   titre: Catégorie professionnelle
   description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
