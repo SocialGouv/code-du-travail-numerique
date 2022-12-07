@@ -4,7 +4,7 @@ import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger
 import { getFormule } from "../../../../common";
 import { CatPro3239 } from "../../salary";
 
-describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 3239", () => {
+describe("Formule indemnité licenciement - CC 3239", () => {
   const engine = new Engine(mergeIndemniteLicenciementModels());
 
   test.each`
@@ -21,7 +21,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
     ${CatPro3239.assistantMaternel}           | ${10}     | ${"1/80 * S"}                              | ${["S : total des salaires perçus depuis l'engagement (10000 €)"]}
     ${CatPro3239.assistantMaternel}           | ${12}     | ${"1/80 * S"}                              | ${["S : total des salaires perçus depuis l'engagement (10000 €)"]}
   `(
-    "Formule $expectedFormula avec $seniority ans, catégorie $category, type de licenciement $typeLicenciement et ancienneté non cadre : $seniorityNonCadre",
+    "Formule $expectedFormula avec $seniority ans, catégorie $category",
     ({ category, seniority, expectedFormula, expectedExplanations }) => {
       const situation = engine.setSituation({
         "contrat salarié . convention collective": "'IDCC3239'",

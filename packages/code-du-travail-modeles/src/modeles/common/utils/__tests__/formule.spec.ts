@@ -19,7 +19,7 @@ describe("Formula", () => {
 
     test("doit afficher la formule attachée à la règle active", () => {
       const situation = engine.setSituation({});
-      const formule = getFormule(situation, null);
+      const formule = getFormule(situation);
 
       expect(formule.formula).toEqual("Prix * Quantité");
       expect(formule.explanations).toEqual([
@@ -38,7 +38,7 @@ describe("Formula", () => {
       const situation = engine.setSituation({
         participants: 5,
       });
-      const formule = getFormule(situation, null);
+      const formule = getFormule(situation);
 
       expect(formule.formula).toEqual("Prix * Quantité * Participants");
       expect(formule.explanations).toEqual([
@@ -58,7 +58,7 @@ describe("Formula", () => {
       const situation = engine.setSituation({
         tva: 20,
       });
-      const formule = getFormule(situation, null);
+      const formule = getFormule(situation);
 
       expect(formule.formula).toEqual("Prix * Quantité * TVA");
       expect(formule.explanations).toEqual([
@@ -77,7 +77,7 @@ describe("Formula", () => {
     test("doit remonter une erreur avec le nom de la règle où manque l'unité", () => {
       const situation = engine.setSituation({});
       expect(() => {
-        getFormule(situation, null);
+        getFormule(situation);
       }).toThrow(/L'unité est manquante pour la règle 'panier . quantité'/);
     });
   });
@@ -89,7 +89,7 @@ describe("Formula", () => {
 
     test("doit remonter les annotations", () => {
       const situation = engine.setSituation({});
-      const formule = getFormule(situation, null);
+      const formule = getFormule(situation);
 
       expect(formule.formula).toEqual("20% * Prix * Quantité");
       expect(formule.explanations).toEqual([

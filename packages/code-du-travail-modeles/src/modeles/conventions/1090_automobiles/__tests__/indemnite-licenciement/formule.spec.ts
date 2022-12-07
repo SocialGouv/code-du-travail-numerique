@@ -3,10 +3,10 @@ import Engine from "publicodes";
 import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getFormule } from "../../../../common";
 
-describe("Formule indemnité de licenciement - CC 1527", () => {
+describe("Formule indemnité licenciement - CC 1090", () => {
   test.each`
     seniority | expectedFormula                            | expectedExplanations
-    ${6 / 12} | ${""}                                      | ${[]}
+    ${7 / 12} | ${""}                                      | ${[]}
     ${8 / 12} | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (0.67 an)", "Sref : Salaire de référence (1000 €)"]}
     ${7}      | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (7 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${10}     | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (10 ans)", "Sref : Salaire de référence (1000 €)"]}
@@ -18,9 +18,11 @@ describe("Formule indemnité de licenciement - CC 1527", () => {
       const engine = new Engine(mergeIndemniteLicenciementModels());
 
       const situation = engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC1527'",
+        "contrat salarié . convention collective": "'IDCC1090'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           seniority,
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
       });
       const result = getFormule(situation);

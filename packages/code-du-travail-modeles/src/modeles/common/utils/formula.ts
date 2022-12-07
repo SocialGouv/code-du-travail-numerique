@@ -40,29 +40,8 @@ function getRulesWithFormuleAndNodeValue(engine: Engine): RuleNodeFormula[] {
 
 const FORMULE_VAR_REGEX = /\$formule/g;
 
-export function filterIndemniteLicenciement(
-  rules: RuleNodeFormula[]
-): RuleNodeFormula[] {
-  if (
-    rules.some((rule) => rule.dottedName.includes("résultat conventionnel"))
-  ) {
-    return rules.filter((rule) => !rule.dottedName.includes("résultat légal"));
-  }
-  return rules;
-}
-
-export function getFormule(
-  engine: Engine,
-  filter:
-    | ((rules: RuleNodeFormula[]) => RuleNodeFormula[])
-    | null = filterIndemniteLicenciement
-): Formula {
-  let rules = getRulesWithFormuleAndNodeValue(engine);
-
-  if (filter !== null) {
-    rules = filter(rules);
-  }
-
+export function getFormule(engine: Engine): Formula {
+  const rules = getRulesWithFormuleAndNodeValue(engine);
   const formula = rules.reduce(
     (
       formule: Required<NodeFormula>,
