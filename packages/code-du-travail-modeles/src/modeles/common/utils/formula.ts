@@ -94,6 +94,8 @@ export function getFormule(engine: Engine): Formula {
             unit,
             result.nodeValue as number
           )})`;
+        } else {
+          formula.formula = removePartFromFormula(formula.formula, text);
         }
       });
     })
@@ -103,40 +105,31 @@ export function getFormule(engine: Engine): Formula {
   return {
     annotations: formula.annotations,
     explanations,
-    formula: cleanFormula(formula.formula, explanations),
+    formula: cleanFormula(formula.formula),
   };
 }
 
-export const cleanFormula = (
+const ANY_CHARS_BUT_BRACKET = "[^[]*";
+export const removePartFromFormula = (
   formule: string,
-  explanation: string[],
-  omitKeys: string[] = ["Sref"]
+  explanation: string
 ): string => {
-  // get all parts of the formula that are in [ ]
-  const parts = formule.match(/\[.*?\]/g) ?? [];
-  let formulaResult = "";
   if (formule.includes("[") && formule.includes("]")) {
-    const formulaKeys = explanation.map((exp) =>
-      exp.split(":")[0].replace(" ", "")
+    const formulaKey = explanation.split(":")[0].replace(" ", "");
+    return formule.replace(
+      new RegExp(
+        `\\[${ANY_CHARS_BUT_BRACKET}${formulaKey}${ANY_CHARS_BUT_BRACKET}?\\]`,
+        "g"
+      ),
+      ""
     );
-
-    // remove omitKeys from formulaKeys
-    const formulaKeysFiltered = formulaKeys.filter(
-      (key) => !omitKeys.includes(key)
-    );
-
-    formulaKeysFiltered.forEach((key) => {
-      parts.forEach((part) => {
-        if (part.includes(key) && !formulaResult.includes(part)) {
-          formulaResult += part;
-        }
-      });
-    });
-    // remove all the [ ] from the formula
-    const formulaWithoutCrochet = formulaResult.replace(/\[|\]/g, "");
-    // remove space and + at the beginning of the formula
-    const formulaWithoutSpace = formulaWithoutCrochet.replace(/^(\s|\+)+/, "");
-    return formulaWithoutSpace;
   }
   return formule;
+};
+
+export const cleanFormula = (formule: string): string => {
+  // remove all the [ ] from the formula
+  const formulaWithoutCrochet = formule.replace(/\[|\]/g, "");
+  // remove space and + at the beginning of the formula
+  return formulaWithoutCrochet.replace(/^(\s|\+)+/, "");
 };
