@@ -21,10 +21,10 @@ export default function EventTracker(): JSX.Element {
   React.useEffect(() => {
     if (
       typeof window !== "undefined" &&
-      typeof window.gtag !== "undefined" &&
+      typeof (window as any).gtag !== "undefined" &&
       urlToTrack
     ) {
-      window.gtag("event", "conversion", {
+      (window as any).gtag("event", "conversion", {
         allow_custom_scripts: true,
         send_to: `DC-3048978/emplo253/ttspages+unique`,
         u1: `${window.location.origin}${urlToTrack.url}`,

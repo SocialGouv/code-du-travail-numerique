@@ -12,24 +12,28 @@ const engine = new Engine(mergePreavisRetraiteModels());
 const CadresReferences = {
   article:
     "Accord du 30 octobre 1951 relatif aux ingénieurs et cadres - Annexe IV, article 18",
-  url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005849573/?idConteneur=KALICONT000005635624",
+  url:
+    "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005849573/?idConteneur=KALICONT000005635624",
 };
 
 const OuvriersReferences = {
   article: "Accord du 16 juin 1961 relatifs aux ouvriers - annexe I, article 5",
-  url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005849372/?idConteneur=KALICONT000005635624",
+  url:
+    "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005849372/?idConteneur=KALICONT000005635624",
 };
 
 const EmployersReferences = {
   article:
     "Accord du 27 février 1951 relatif aux employés Annexe II, article 13",
-  url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005849509/?idConteneur=KALICONT000005635624",
+  url:
+    "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005849509/?idConteneur=KALICONT000005635624",
 };
 
 const TAMReferences = {
   article:
     "Accord du 30 mars 1951 relatif aux techniciens et agents de maîtrise Annexe III, article 17",
-  url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005849262/?idConteneur=KALICONT000005635624",
+  url:
+    "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005849262/?idConteneur=KALICONT000005635624",
 };
 
 test.each`

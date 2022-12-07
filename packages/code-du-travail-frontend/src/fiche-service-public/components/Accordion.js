@@ -14,11 +14,6 @@ const isItemOfAccordion = (element) =>
   element.children.find((child) => child.name === "Titre");
 
 class AccordionWrapper extends React.PureComponent {
-  static propTypes = {
-    data: PropTypes.object.isRequired,
-    headingLevel: PropTypes.number.isRequired,
-  };
-
   render() {
     const { data, headingLevel } = this.props;
     const firstIndexOfAccordionItem =
@@ -76,6 +71,11 @@ class AccordionWrapper extends React.PureComponent {
     );
   }
 }
+
+AccordionWrapper.propTypes = {
+  data: PropTypes.object.isRequired,
+  headingLevel: PropTypes.number.isRequired,
+};
 
 export default AccordionWrapper;
 

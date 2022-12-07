@@ -27,8 +27,11 @@ export const OverflowWrapper = ({
     }
 
     function onScroll() {
-      const { offsetWidth, scrollLeft, scrollWidth } =
-        scrollableElement.current;
+      const {
+        offsetWidth,
+        scrollLeft,
+        scrollWidth,
+      } = scrollableElement.current;
       const scrolled = scrollLeft + offsetWidth;
       if (scrollLeft !== 0) {
         if (isAtFarLeft) setIsAtFarLeft(false);

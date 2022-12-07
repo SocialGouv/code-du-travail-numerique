@@ -22,7 +22,7 @@ export const DepartRetraiteReferences = [
 
 export const IndemniteLicenciementReferences = [
   {
-    article: "Art. L. 1234-9 à L. 1234-11",
+    article: "Article L. 1234-9 à L. 1234-11",
     url: "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006195623/#LEGISCTA000006195623",
   },
   {

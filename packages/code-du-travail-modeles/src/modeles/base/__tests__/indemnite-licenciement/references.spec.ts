@@ -34,9 +34,9 @@ describe("Vérification des références juridiques pour Indemnité légale de l
   );
   test.each`
     seniority | expectedReferences
-    ${5}      | ${IndemniteLicenciementReferences.concat()}
-    ${6}      | ${IndemniteLicenciementReferences}
-    ${24}     | ${IndemniteLicenciementReferences}
+    ${5}      | ${[...IndemniteLicenciementReferences, ...IndemniteLicenciementInaptitudeReferences]}
+    ${6}      | ${[...IndemniteLicenciementReferences, ...IndemniteLicenciementInaptitudeReferences]}
+    ${24}     | ${[...IndemniteLicenciementReferences, ...IndemniteLicenciementInaptitudeReferences]}
   `(
     "pour un employé avec une ancienneté de $seniority mois licencié pour inaptitude",
     ({ seniority, expectedReferences }) => {
@@ -51,10 +51,7 @@ describe("Vérification des références juridiques pour Indemnité légale de l
       );
 
       expect(result).toHaveLength(6);
-      expect(result).toEqual(expect.arrayContaining(expectedReferences));
-      expect(result).toEqual(
-        expect.arrayContaining(IndemniteLicenciementInaptitudeReferences)
-      );
+      expect(result).toEqual(expectedReferences);
     }
   );
 });

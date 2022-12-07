@@ -1,9 +1,9 @@
 import { Accordion, Alert, Heading, theme, Wrapper } from "@socialgouv/cdtn-ui";
-import { FicheServicePublic } from "@socialgouv/react-fiche-service-public";
 import React from "react";
 import styled from "styled-components";
 
-import Html from "../../src/common/Html";
+import Html from "../common/Html";
+import { FicheServicePublic } from "../fiche-service-public";
 
 //Custom MDX component
 const Tab = (props) => (
