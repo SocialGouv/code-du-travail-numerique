@@ -8,7 +8,7 @@ import CallToActionWidget from "../../src/common/tiles/CallToActionWidget";
 const FindAnswerPage = (): JSX.Element => (
   <Layout>
     <Metas
-      title="Widget pour intégrer le Code du travail numérique à votre site"
+      title="Widgets pour intégrer le Code du travail numérique à votre site"
       description="L’équipe du Code du travail numérique vous propose d’intégrer son moteur de recherche et certains de ses simulateurs sur votre site grâce à un module (widget)."
     />
 
