@@ -109,7 +109,7 @@ describe("Formula", () => {
       const situation = engine.setSituation({
         dimanche: "non",
       });
-      const formule = getFormule(situation, null);
+      const formule = getFormule(situation);
 
       expect(formule.formula).toEqual("20% * Prix * Quantité");
       expect(formule.explanations).toEqual([
@@ -123,7 +123,7 @@ describe("Formula", () => {
       const situation = engine.setSituation({
         dimanche: "oui",
       });
-      const formule = getFormule(situation, null);
+      const formule = getFormule(situation);
 
       expect(formule.formula).toEqual("20% * Prix * Quantité");
       expect(formule.explanations).toEqual([
@@ -147,7 +147,7 @@ describe("Formula", () => {
       const situation = engine.setSituation({
         ["frais de livraison"]: "2",
       });
-      const formule = getFormule(situation, null);
+      const formule = getFormule(situation);
 
       expect(formule.formula).toEqual("A + 20% * A1 * A2 + A3 + A4");
       expect(formule.explanations).toEqual([
@@ -161,7 +161,7 @@ describe("Formula", () => {
       const situation = engine.setSituation({
         ["frais de livraison"]: "0",
       });
-      const formule = getFormule(situation, null);
+      const formule = getFormule(situation);
 
       expect(formule.formula).toEqual("A + 20% * A1 * A2 + A3");
       expect(formule.explanations).toEqual([

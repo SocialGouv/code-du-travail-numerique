@@ -19,8 +19,10 @@ describe("Calcul de l'indemnité de licenciement CC 2098", () => {
             "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle":
               "'Oui'",
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté en année":
+              seniority,
             "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
               "non",
             "contrat salarié . indemnité de licenciement . salaire de référence": 2800,
@@ -57,7 +59,8 @@ describe("Calcul de l'indemnité de licenciement CC 2098", () => {
             "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle":
               "'Non'",
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2800,
           })
           .evaluate(
@@ -96,14 +99,17 @@ describe("Calcul de l'indemnité de licenciement CC 2098", () => {
         const result = engine
           .setSituation({
             "contrat salarié . convention collective": "'IDCC2098'",
-            "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age": age,
+            "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age":
+              age,
             "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle":
               "'Cadres'",
             "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle":
               "'Non'",
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salaireRef,
           })
           .evaluate(
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
