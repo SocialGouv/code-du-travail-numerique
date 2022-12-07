@@ -15,9 +15,6 @@ const references = [
 describe("Indemnité conventionnel de licenciement pour la CC 1979", () => {
   test.each`
     seniority | salary
-    ${0}      | ${2000}
-    ${1}      | ${2000}
-    ${1.99}   | ${2000}
     ${2}      | ${2000}
     ${5}      | ${2000}
     ${8}      | ${2000}

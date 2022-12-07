@@ -15,29 +15,11 @@ contrat salarié . convention collective . hospitalisation privée à but non lu
 # Autres salariés
 contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle . Autres salariés:
   applicable si: catégorie professionnelle = 'Autres salariés'
-  valeur: oui
 
-contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle . Autres salariés . résultat conventionnel moins de 8 mois:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 8 mois
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  valeur: 0 €
-
-# (1/4*Sref*A1) + (1/3*Sref*A2)
-# A1 : Ancienneté de 10 ans ou moins
-# A2 : Ancienneté au delà de 10 ans
 contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle . Autres salariés . résultat conventionnel plus de 8 mois:
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  valeur:
-    somme:
-      - produit:
-          assiette: contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins cc * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-          facteur: 1 / 4
-      - produit:
-          assiette: contrat salarié . indemnité de licenciement . au dela de dix ans cc * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-          facteur: 1 / 3
-  arrondi: 2 décimales
-  unité: €
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
+  valeur: oui
   références:
     Article 15.02.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000030464087?idConteneur=KALICONT000005635234&origin=list#KALIARTI000030464087
     Article 08.01.6.1: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952730?idConteneur=KALICONT000005635234&origin=list#KALIARTI000029952730
@@ -45,29 +27,11 @@ contrat salarié . convention collective . hospitalisation privée à but non lu
 # Médecins pharmaciens et biologistes exerçant à titre permanent
 contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle . Médecins pharmaciens et biologistes exerçant à titre permanent:
   applicable si: catégorie professionnelle = 'Médecins, pharmaciens et biologistes exerçant à titre permanent'
-  valeur: oui
 
-contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle . Médecins pharmaciens et biologistes exerçant à titre permanent . résultat conventionnel moins de 8 mois:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 8 mois
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  valeur: 0 €
-
-# (1/4*Sref*A1) + (1/3*Sref*A2)
-# A1 : Ancienneté de 10 ans ou moins
-# A2 : Ancienneté au delà de 10 ans
 contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle . Médecins pharmaciens et biologistes exerçant à titre permanent . résultat conventionnel plus de 8 mois:
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  valeur:
-    somme:
-      - produit:
-          assiette: contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins cc * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-          facteur: 1 / 4
-      - produit:
-          assiette: contrat salarié . indemnité de licenciement . au dela de dix ans cc * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-          facteur: 1 / 3
-  arrondi: 2 décimales
-  unité: €
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
+  valeur: oui
   références:
     Article 15.02.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000030464087?idConteneur=KALICONT000005635234&origin=list#KALIARTI000030464087
     Article 20.05/20.04: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952874?idConteneur=KALICONT000005635234#KALIARTI000029952874
@@ -76,26 +40,11 @@ contrat salarié . convention collective . hospitalisation privée à but non lu
 # Assistants familiaux des services de placements familiaux spécialisés
 contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle . Assistants familiaux des services de placements familiaux spécialisés:
   applicable si: catégorie professionnelle = 'Assistants familiaux des services de placements familiaux spécialisés'
-  valeur: oui
 
-# (1/4*Sref*A1) + (1/3*Sref*A2)
-# A1 : Ancienneté de 10 ans ou moins
-# A2 : Ancienneté au delà de 10 ans
 contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle . Assistants familiaux des services de placements familiaux spécialisés . résultat conventionnel plus de 8 mois:
-  variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
-      alors:
-        somme:
-          - produit:
-              assiette: contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins cc * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-              facteur: 1 / 4
-          - produit:
-              assiette: contrat salarié . indemnité de licenciement . au dela de dix ans cc * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-              facteur: 1 / 3
-    - sinon: 0
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  arrondi: 2 décimales
-  unité: €
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
+  valeur: oui
   références:
     Article 15.02.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000030464087?idConteneur=KALICONT000005635234&origin=list#KALIARTI000030464087
     Article A 10.12 de l'Annexe X Assistants familiaux des services de placements familiaux spécialisés / Annexe VI, art. A6.12: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029953093?idConteneur=KALICONT000005635234&origin=list#KALIARTI000029953093

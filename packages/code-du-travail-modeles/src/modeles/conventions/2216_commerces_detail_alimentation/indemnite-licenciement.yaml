@@ -198,8 +198,8 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
       - une de ces conditions:
-        - catégorie professionnelle = 'Employés et ouvriers, personnel de livraison'
-        - catégorie professionnelle = 'Agents de maîtrise et techniciens'
+          - catégorie professionnelle = 'Employés et ouvriers, personnel de livraison'
+          - catégorie professionnelle = 'Agents de maîtrise et techniciens'
   valeur: oui
 
 contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . employés ou agents . résultat conventionnel:
@@ -258,8 +258,8 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
 contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres:
   applicable si:
     toutes ces conditions:
-    - catégorie professionnelle = 'Cadres'
-    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
+      - catégorie professionnelle = 'Cadres'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
   valeur: oui
 
 # 5ans ou moins
@@ -389,7 +389,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
   unité: €
   arrondi: 2 décimales
   cdtn:
-   formule:
+    formule:
       annotations:
         - "20% : majoration pour motif économique"
       formula: $formule + (20% * ($formule))
