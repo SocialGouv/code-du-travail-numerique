@@ -13,12 +13,20 @@ jest.mock("../../../conventions/Search/api/enterprises.service");
 
 describe("Page résultat: vérification de la formule affichée", () => {
   describe.each`
-    ccNum   | ccTitle                                                                                                                         | select                                                                                                                                                 | selectOption         | expectedFormula
-    ${2264} | ${"Hospitalisation privée"}                                                                                                     | ${"infos.contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle"}                   | ${"Non-cadres"}      | ${"(15×Sref×A1)+(25×Sref×A2)(\\frac{1}{5} \\times Sref \\times A1) + (\\frac{2}{5} \\times Sref \\times A2)(51​×Sref×A1)+(52​×Sref×A2)"}
-    ${29}   | ${"Hospitalisation privée : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)"} | ${"infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle"} | ${"Autres salariés"} | ${"(14×Sref×A1)+(13×Sref×A2)(\\frac{1}{4} \\times Sref \\times A1) + (\\frac{1}{3} \\times Sref \\times A2)(41​×Sref×A1)+(31​×Sref×A2)"}
+    ccNum   | ccTitle                                                                                                                         | select                                                                                                                                                 | selectOption         | expectedA1                                                | expectedA2                                                  | expectedFormula
+    ${2264} | ${"Hospitalisation privée"}                                                                                                     | ${"infos.contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle"}                   | ${"Non-cadres"}      | ${"A1 : Années d'ancienneté de 10 ans ou moins (10 ans)"} | ${"A2 : Années d'ancienneté au delà de 10 ans (12.17 ans)"} | ${"(15×Sref×A1)+(25×Sref×A2)(\\frac{1}{5} \\times Sref \\times A1) + (\\frac{2}{5} \\times Sref \\times A2)(51​×Sref×A1)+(52​×Sref×A2)"}
+    ${29}   | ${"Hospitalisation privée : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)"} | ${"infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle"} | ${"Autres salariés"} | ${"A1 : Ancienneté de 10 ans ou moins (10 ans)"}          | ${"A2 : Ancienneté au-delà de 10 ans (12.17 ans)"}          | ${"(14×Sref×A1)+(13×Sref×A2)(\\frac{1}{4} \\times Sref \\times A1) + (\\frac{1}{3} \\times Sref \\times A2)(41​×Sref×A1)+(31​×Sref×A2)"}
   `(
     "pour la CC $ccNum",
-    ({ ccNum, ccTitle, expectedFormula, select, selectOption }) => {
+    ({
+      ccNum,
+      ccTitle,
+      expectedFormula,
+      select,
+      selectOption,
+      expectedA1,
+      expectedA2,
+    }) => {
       beforeEach(async () => {
         jest.spyOn(Storage.prototype, "setItem");
         Storage.prototype.getItem = jest.fn(
@@ -68,12 +76,8 @@ describe("Page résultat: vérification de la formule affichée", () => {
       test("should show formula", async () => {
         expect(ui.result.formula.get()).toHaveTextContent("Formule");
         expect(ui.result.formula.get()).toHaveTextContent(expectedFormula);
-        expect(ui.result.formula.get()).toHaveTextContent(
-          "A1 : Ancienneté de 10 ans ou moins (10 ans)"
-        );
-        expect(ui.result.formula.get()).toHaveTextContent(
-          "A2 : Ancienneté au-delà de 10 ans (12.17 ans)"
-        );
+        expect(ui.result.formula.get()).toHaveTextContent(expectedA1);
+        expect(ui.result.formula.get()).toHaveTextContent(expectedA2);
         expect(ui.result.formula.get()).toHaveTextContent(
           "Sref : Salaire de référence (2500 €)"
         );

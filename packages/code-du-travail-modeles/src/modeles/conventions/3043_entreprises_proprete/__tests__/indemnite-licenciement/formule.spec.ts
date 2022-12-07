@@ -1,7 +1,9 @@
-import {
-  FormuleFactory,
-  SupportedCcIndemniteLicenciement,
-} from "../../../../common";
+import Engine from "publicodes";
+
+import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
+import { getFormule } from "../../../../common";
+
+const engine = new Engine(mergeIndemniteLicenciementModels());
 
 describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 3043", () => {
   test.each`
@@ -19,18 +21,17 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
   `(
     "Formule $expectedFormula avec $seniority ans",
     ({ seniority, expectedFormula, expectedExplanations }) => {
-      const formula = new FormuleFactory().create(
-        SupportedCcIndemniteLicenciement.IDCC3043
-      );
-      if (!formula) throw new Error("Formula should be defined");
-
-      const result = formula.computeFormula({
-        refSalary: 1000,
-        seniority,
+      const situation = engine.setSituation({
+        "contrat salarié . convention collective": "'IDCC3043'",
+        "contrat salarié . indemnité de licenciement": "oui",
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
       });
+      const formule = getFormule(situation);
 
-      expect(result.formula).toEqual(expectedFormula);
-      expect(result.explanations).toEqual(expectedExplanations);
+      expect(formule.formula).toEqual(expectedFormula);
+      expect(formule.explanations).toEqual(expectedExplanations);
     }
   );
 });

@@ -8,8 +8,6 @@ import { GetState } from "zustand";
 import { MainStore } from "../../store";
 import { AgreementFormula1596 } from "./1596";
 import { AgreementFormula1597 } from "./1597";
-import { AgreementFormula2264 } from "./2264";
-import { AgreementFormula413 } from "./413";
 import { AgreementFormula650 } from "./650";
 import { AgreementFormula573 } from "./573";
 import { AgreementFormula44 } from "./44";
@@ -21,18 +19,6 @@ const getAgreementFormula = (
   get: GetState<MainStore>
 ): Formula | undefined => {
   switch (true) {
-    case SupportedCcIndemniteLicenciement.IDCC2264 === idcc:
-      return new AgreementFormula2264().computeFormula(
-        agreementSeniority,
-        agreementRefSalary,
-        get
-      );
-    case SupportedCcIndemniteLicenciement.IDCC413 === idcc:
-      return new AgreementFormula413().computeFormula(
-        agreementSeniority,
-        agreementRefSalary,
-        get
-      );
     case SupportedCcIndemniteLicenciement.IDCC1596 === idcc:
       return new AgreementFormula1596().computeFormula(
         agreementSeniority,
