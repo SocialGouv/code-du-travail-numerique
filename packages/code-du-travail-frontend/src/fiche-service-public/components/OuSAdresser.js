@@ -7,11 +7,6 @@ import { getText } from "../utils.js";
 import { ElementBuilder } from "./ElementBuilder.js";
 
 class OuSAdresser extends React.PureComponent {
-  static propTypes = {
-    data: PropTypes.object.isRequired,
-    headingLevel: PropTypes.number.isRequired,
-  };
-
   render() {
     const { data, headingLevel } = this.props;
     const label = getText(
@@ -50,6 +45,11 @@ class OuSAdresser extends React.PureComponent {
     );
   }
 }
+
+OuSAdresser.propTypes = {
+  data: PropTypes.object.isRequired,
+  headingLevel: PropTypes.number.isRequired,
+};
 
 export default OuSAdresser;
 

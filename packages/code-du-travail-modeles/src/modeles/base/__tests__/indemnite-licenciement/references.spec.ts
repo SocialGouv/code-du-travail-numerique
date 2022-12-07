@@ -1,9 +1,6 @@
 import Engine from "publicodes";
 
-import {
-  IndemniteLicenciementInaptitudeReferences,
-  IndemniteLicenciementReferences,
-} from "../../../../__test__/common/legal-references";
+import { IndemniteLicenciementReferences } from "../../../../__test__/common/legal-references";
 import { mergeIndemniteLicenciementModels } from "../../../../internal/merger";
 import { getReferences } from "../../../common";
 
@@ -53,7 +50,12 @@ describe("Vérification des références juridiques pour Indemnité légale de l
       expect(result).toHaveLength(6);
       expect(result).toEqual(expect.arrayContaining(expectedReferences));
       expect(result).toEqual(
-        expect.arrayContaining(IndemniteLicenciementInaptitudeReferences)
+        expect.arrayContaining([
+          {
+            article: "Article L1226-14",
+            url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006900981/",
+          },
+        ])
       );
     }
   );

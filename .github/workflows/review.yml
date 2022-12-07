@@ -6,6 +6,9 @@ on:
       - "**"
     tags-ignore:
       - v*
+  push:
+    branches:
+      - dev
 
 concurrency:
   cancel-in-progress: true
@@ -100,7 +103,7 @@ jobs:
         with:
           name: manifests-dev.yml
       - name: Get deployment url
-        uses: mikefarah/yq@v4.13.5
+        uses: mikefarah/yq@v4.30.5
         id: url
         with:
           cmd: echo $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1)

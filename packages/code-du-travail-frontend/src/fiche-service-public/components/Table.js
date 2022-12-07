@@ -8,10 +8,6 @@ import { ElementBuilder } from "./ElementBuilder.js";
 const ROW_HEADER = "header";
 
 class Table extends React.PureComponent {
-  static propTypes = {
-    data: PropTypes.object.isRequired,
-    headingLevel: PropTypes.number.isRequired,
-  };
   render() {
     const { data, headingLevel } = this.props;
 
@@ -86,5 +82,10 @@ class Table extends React.PureComponent {
     );
   }
 }
+
+Table.propTypes = {
+  data: PropTypes.object.isRequired,
+  headingLevel: PropTypes.number.isRequired,
+};
 
 export default Table;

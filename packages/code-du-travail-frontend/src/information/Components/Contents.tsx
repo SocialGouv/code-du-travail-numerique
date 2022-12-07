@@ -66,9 +66,6 @@ export const Contents = ({
 };
 
 const TabStylesWrapper = styled.div`
-  & > div > div > div {
-    overflow-x: auto;
-  }
   img {
     max-width: 100%;
     height: auto;
