@@ -16,11 +16,13 @@ const Mdx: React.FC<Props> = ({ markdown, components = {} }) => {
     /(<Content [^>]+><\/Content>)/,
     "<div>$1</div>"
   );
+
+  // add "as any" : https://github.com/orgs/rehypejs/discussions/63
   return unified()
     .use(markdownParser)
-    .use(remark2rehype, { allowDangerousHtml: true })
-    .use(raw)
-    .use(rehype2react, {
+    .use(remark2rehype as any, { allowDangerousHtml: true })
+    .use(raw as any)
+    .use(rehype2react as any, {
       components,
       createElement,
     })
