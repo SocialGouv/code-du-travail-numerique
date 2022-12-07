@@ -130,14 +130,12 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
   applicable si: catégorie professionnelle = 'Non-cadres'
 
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . non cadres . résultat conventionnel:
-  applicable si: indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
+  applicable si:
+    toutes ces conditions:
+      - indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
+      - indemnité de licenciement . ancienneté conventionnelle en année <= 5 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  somme:
-    - (1 / 10) * indemnité de licenciement . salaire de référence conventionnel * nombre d'années entre 0 et 5ans
-    - (1 / 7) * indemnité de licenciement . salaire de référence conventionnel * nombre d'années entre 6 et 10ans
-    - (1 / 5) * indemnité de licenciement . salaire de référence conventionnel * nombre d'années entre 11 et 20ans
-    - (1 / 4) * indemnité de licenciement . salaire de référence conventionnel * nombre d'années entre 21 et 30ans
-    - (1 / 3) * indemnité de licenciement . salaire de référence conventionnel * nombre d'années au dessus de 30ans
+  valeur: (1 / 10) * indemnité de licenciement . salaire de référence conventionnel * nombre d'années entre 0 et 5ans
   unité: €
   arrondi: 2 décimales
   références:
@@ -150,9 +148,20 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
         - "A: Années d'ancienneté à compter de la 1re année": contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . nombre d'années entre 0 et 5ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
-contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . non cadres . résultat conventionnel . formule plus de 5ans:
+contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . non cadres . résultat conventionnel plus de 5ans:
   applicable si: indemnité de licenciement . ancienneté conventionnelle en année > 5 an
-  valeur: oui
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  somme:
+    - (1 / 10) * indemnité de licenciement . salaire de référence conventionnel * nombre d'années entre 0 et 5ans
+    - (1 / 7) * indemnité de licenciement . salaire de référence conventionnel * nombre d'années entre 6 et 10ans
+    - (1 / 5) * indemnité de licenciement . salaire de référence conventionnel * nombre d'années entre 11 et 20ans
+    - (1 / 4) * indemnité de licenciement . salaire de référence conventionnel * nombre d'années entre 21 et 30ans
+    - (1 / 3) * indemnité de licenciement . salaire de référence conventionnel * nombre d'années au dessus de 30ans
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 19: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005850366?idConteneur=KALICONT000005635550
+    Article 16: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000024922383?idConteneur=KALICONT000005635550&origin=list#KALIARTI000024922383
   cdtn:
     formule:
       formula: "[(1/10 * Sref * A1)][ + (1/7 * Sref * A2)][ + (1/5 * Sref * A3)][ + (1/4 * Sref * A4)][ + (1/3 * Sref * A5)]"
