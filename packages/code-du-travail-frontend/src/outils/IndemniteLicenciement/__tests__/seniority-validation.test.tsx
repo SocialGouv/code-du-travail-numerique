@@ -201,48 +201,4 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
     });
   });
-  describe("parcours sans la convention collective valider les erreurs", () => {
-    let rendering: RenderResult;
-    let userAction: UserAction;
-    beforeEach(() => {
-      rendering = render(
-        <CalculateurIndemnite
-          icon={""}
-          title={""}
-          displayTitle={""}
-          publicodesRules={loadPublicodesRules("indemnite-licenciement")}
-        />
-      );
-      userAction = new UserAction();
-      userAction
-        .click(ui.introduction.startButton.get())
-        .click(ui.contract.type.cdi.get())
-        .click(ui.contract.fauteGrave.non.get())
-        .click(ui.contract.inaptitude.non.get())
-        .click(ui.next.get())
-        .click(ui.agreement.noAgreement.get())
-        .click(ui.next.get());
-      // Validation que l'on est bien sur l'étape ancienneté
-      expect(ui.activeStep.query()).toHaveTextContent("Ancienneté");
-    });
-
-    it("Parcours particulier reproduisant un bug sur l'erreur concernant les 8 mois d'ancienneté", () => {
-      // validation que l'erreur est toujours présente si je change la période et la durée de l'absence
-      userAction
-        .setInput(ui.seniority.startDate.get(), "01/01/2022")
-        .setInput(ui.seniority.notificationDate.get(), "01/09/2022")
-        .setInput(ui.seniority.endDate.get(), "01/09/2022")
-        .click(ui.seniority.hasAbsence.oui.get())
-        .setInput(ui.seniority.absences.duration(0).get(), "1")
-        .click(ui.next.get())
-        .setInput(ui.seniority.notificationDate.get(), "01/10/2022")
-        .setInput(ui.seniority.endDate.get(), "01/10/2022")
-        .setInput(ui.seniority.absences.duration(0).get(), "6");
-      expect(
-        rendering.queryByText(
-          "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté"
-        )
-      ).toBeInTheDocument();
-    });
-  });
 });

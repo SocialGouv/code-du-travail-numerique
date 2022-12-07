@@ -11,10 +11,9 @@ import {
 } from "../Simulator/createContext";
 import SimulatorNavigation from "./SimulatorNavigation";
 
-const { spacings } = theme;
-
 type Validator<StepName extends string> = {
   validator: () => boolean;
+  validatorElligibility?: () => boolean;
   stepName: StepName;
   isStepValid: boolean;
 };
@@ -41,7 +40,6 @@ const SimulatorContent = <StepName extends string>({
   hiddenStep,
 }: Props<StepName>): JSX.Element => {
   const anchorRef = React.createRef<HTMLLIElement>();
-
   const { currentStepIndex, previousStep, nextStep } = useSimulatorStepStore(
     (state) => state
   );
@@ -79,16 +77,20 @@ const SimulatorContent = <StepName extends string>({
       throw Error("Can't show the next step with index more than steps");
     } else {
       let isValid: boolean | undefined;
-      if (currentStepIndex === 0) {
-        isValid = true;
-      } else {
-        isValid = validators
-          .find(
-            (validator) =>
-              validator.stepName === visibleSteps[currentStepIndex].name
-          )
-          ?.validator();
+      const stepValidator = validators.find(
+        (validator) =>
+          validator.stepName === visibleSteps[currentStepIndex].name
+      );
+      if (
+        stepValidator?.validatorElligibility &&
+        !stepValidator?.validatorElligibility()
+      ) {
+        nextStep(visibleSteps.length - 1);
+        return;
       }
+
+      isValid = currentStepIndex === 0 || stepValidator?.validator();
+
       if (isValid) {
         nextStep();
         matopush([

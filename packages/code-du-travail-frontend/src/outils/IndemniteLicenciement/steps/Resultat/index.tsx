@@ -14,6 +14,7 @@ import {
   ForMoreInfo,
   FormulaInterpreter,
   Result,
+  Inelligible,
 } from "./components";
 
 const StepResult = () => {
@@ -43,6 +44,8 @@ const StepResult = () => {
     agreementNotifications,
     agreementHasNoLegalIndemnity,
     isStepSalaryHidden,
+    onElligibilityCheckStepInfo,
+    onElligibilityCheckStepAnciennete,
   } = useIndemniteLicenciementStore((state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -72,11 +75,20 @@ const StepResult = () => {
     agreementHasNoLegalIndemnity:
       state.resultData.input.agreementHasNoLegalIndemnity,
     isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
+    onElligibilityCheckStepInfo:
+      state.contratTravailFunction.onElligibilityCheckStepInfo,
+    onElligibilityCheckStepAnciennete:
+      state.ancienneteFunction.onElligibilityCheckStepAnciennete,
   }));
 
+  const elligible =
+    onElligibilityCheckStepInfo() && onElligibilityCheckStepAnciennete();
+
   React.useEffect(() => {
-    getPublicodesResult();
-  }, []);
+    if (elligible) {
+      getPublicodesResult();
+    }
+  }, [elligible]);
 
   const supportedCc = React.useMemo(
     () =>
@@ -85,6 +97,20 @@ const StepResult = () => {
       ),
     [agreement]
   );
+
+  if (!elligible) {
+    return (
+      <>
+        <Inelligible></Inelligible>
+        {!agreementHasNoLegalIndemnity && (
+          <AgreementInfo
+            hasSelectedAgreement={route !== "none"}
+            isAgreementSupported={!!supportedCc}
+          />
+        )}
+      </>
+    );
+  }
 
   return (
     <>

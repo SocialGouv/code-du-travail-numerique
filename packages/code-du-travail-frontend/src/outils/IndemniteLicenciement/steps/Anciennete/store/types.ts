@@ -19,6 +19,7 @@ export type AncienneteStoreError = {
     global?: string;
     absences?: AncienneteAbsenceStoreError[];
   };
+  errorLegal?: string;
 };
 
 export type AncienneteAbsenceStoreError = {
@@ -38,6 +39,7 @@ export type AncienneteStoreFn = {
   onChangeDateNotification: (value: string) => void;
   onChangeAbsencePeriods: (value: Absence[]) => void;
   onValidateStepAnciennete: () => boolean;
+  onElligibilityCheckStepAnciennete: () => boolean;
   onChangeHasAbsenceProlonge: (value: OuiNon) => void;
 };
 

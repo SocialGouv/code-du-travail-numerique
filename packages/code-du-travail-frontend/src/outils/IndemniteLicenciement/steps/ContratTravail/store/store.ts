@@ -7,6 +7,7 @@ import {
 import produce from "immer";
 import { StoreSlice } from "../../../../types";
 import { validateStep } from "./validator";
+import { getErrorLegal } from "./elligibility";
 
 const initialState: ContratTravailStoreData = {
   input: {},
@@ -46,6 +47,17 @@ const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
         })
       );
       return isValid;
+    },
+    onElligibilityCheckStepInfo: () => {
+      const state = get().contratTravailData.input;
+      const errorLegal = getErrorLegal(state);
+
+      set(
+        produce((state: ContratTravailStoreSlice) => {
+          state.contratTravailData.error.errorLegal = errorLegal;
+        })
+      );
+      return !errorLegal;
     },
   },
 });

@@ -4,3 +4,4 @@ export { default as AgreementInfo } from "./AgreementInfo";
 export { default as FormulaInterpreter } from "./FormulaInterpreter";
 export { default as FilledElements } from "./FilledElements";
 export { default as Result } from "./Result";
+export { default as Inelligible } from "./Inelligible";

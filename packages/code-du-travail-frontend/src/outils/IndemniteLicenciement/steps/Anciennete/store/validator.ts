@@ -14,11 +14,37 @@ import {
 import frLocale from "date-fns/locale/fr";
 import { Agreement } from "../../../../../conventions/Search/api/type";
 import {
+  Absence,
   DISABLE_ABSENCE,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { CommonInformationsStoreInput } from "../../../../CommonSteps/Informations/store";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
+
+export const getTotalAbsence = (
+  absencePeriods: Absence[],
+  agreement?: Agreement
+): number => {
+  return agreement &&
+    DISABLE_ABSENCE.includes(
+      `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement
+    )
+    ? 0
+    : absencePeriods
+        .filter((period) => Boolean(period.durationInMonth))
+        .reduce((total, item) => {
+          if (!item.durationInMonth) {
+            return total;
+          }
+          return total + item.durationInMonth * item.motif.value;
+        }, 0);
+};
+
+export const hasMinimalSeniority = (
+  dNotification: Date,
+  dEntree: Date,
+  totalAbsence: number
+) => differenceInMonths(dNotification, dEntree) - totalAbsence >= 8;
 
 export const validateStep = (
   state: AncienneteStoreInput,
@@ -34,20 +60,7 @@ export const validateStep = (
     information.publicodesInformations
   );
 
-  const totalAbsence: number =
-    agreeement &&
-    DISABLE_ABSENCE.includes(
-      `IDCC${agreeement.num}` as SupportedCcIndemniteLicenciement
-    )
-      ? 0
-      : absencePeriods
-          .filter((period) => Boolean(period.durationInMonth))
-          .reduce((total, item) => {
-            if (!item.durationInMonth) {
-              return total;
-            }
-            return total + item.durationInMonth * item.motif.value;
-          }, 0);
+  const totalAbsence: number = getTotalAbsence(absencePeriods, agreeement);
 
   // Date d'entrée
   if (!state.dateEntree) {
@@ -105,7 +118,7 @@ export const validateStep = (
   } else if (
     state.dateEntree &&
     state.dateNotification &&
-    differenceInMonths(dNotification, dEntree) - totalAbsence < 8
+    !hasMinimalSeniority(dNotification, dEntree, totalAbsence)
   ) {
     errors.errorDateNotification =
       "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté";

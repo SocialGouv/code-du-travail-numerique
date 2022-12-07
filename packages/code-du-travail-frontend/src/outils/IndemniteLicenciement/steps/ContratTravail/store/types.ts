@@ -13,8 +13,9 @@ export type ContratTravailStoreError = {
   errorTypeContratTravail?: string;
   errorLicenciementFauteGrave?: string;
   errorLicenciementInaptitude?: string;
-  errorCdd: boolean;
-  errorFauteGrave: boolean;
+  errorCdd?: boolean;
+  errorFauteGrave?: boolean;
+  errorLegal?: string;
 };
 
 export type ContratTravailStoreData = StepData<
@@ -27,6 +28,7 @@ export type ContratTravailStoreFn = {
   onChangeLicenciementFauteGrave: (value: OuiNon) => void;
   onChangeLicenciementInaptitude: (value: OuiNon) => void;
   onValidateStepInfo: () => boolean;
+  onElligibilityCheckStepInfo: () => boolean;
 };
 
 export type ContratTravailStoreSlice = {
