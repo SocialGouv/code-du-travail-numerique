@@ -143,7 +143,7 @@ describe("Formula", () => {
       engine = new Engine(parseData("formule_avec_zero.yaml"));
     });
 
-    test("doit afficher toutes les parties de le formule si elle sont positives", () => {
+    test("doit afficher toutes les parties de la formule si elles sont positives", () => {
       const situation = engine.setSituation({
         ["frais de livraison"]: "2",
       });
