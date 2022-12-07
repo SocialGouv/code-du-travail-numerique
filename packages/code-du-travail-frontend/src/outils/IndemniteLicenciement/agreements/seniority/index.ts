@@ -43,3 +43,5 @@ export interface AgreementSeniority {
     get: GetState<MainStore>;
   }) => SeniorityResult;
 }
+
+export * from "./validator";

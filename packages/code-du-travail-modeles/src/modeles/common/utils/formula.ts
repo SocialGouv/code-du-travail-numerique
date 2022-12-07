@@ -40,29 +40,8 @@ function getRulesWithFormuleAndNodeValue(engine: Engine): RuleNodeFormula[] {
 
 const FORMULE_VAR_REGEX = /\$formule/g;
 
-export function filterIndemniteLicenciement(
-  rules: RuleNodeFormula[]
-): RuleNodeFormula[] {
-  if (
-    rules.some((rule) => rule.dottedName.includes("résultat conventionnel"))
-  ) {
-    return rules.filter((rule) => !rule.dottedName.includes("résultat légal"));
-  }
-  return rules;
-}
-
-export function getFormule(
-  engine: Engine,
-  filter:
-    | ((rules: RuleNodeFormula[]) => RuleNodeFormula[])
-    | null = filterIndemniteLicenciement
-): Formula {
-  let rules = getRulesWithFormuleAndNodeValue(engine);
-
-  if (filter !== null) {
-    rules = filter(rules);
-  }
-
+export function getFormule(engine: Engine): Formula {
+  const rules = getRulesWithFormuleAndNodeValue(engine);
   const formula = rules.reduce(
     (
       formule: Required<NodeFormula>,
@@ -115,6 +94,8 @@ export function getFormule(
             unit,
             result.nodeValue as number
           )})`;
+        } else {
+          formula.formula = removePartFromFormula(formula.formula, text);
         }
       });
     })
@@ -124,40 +105,31 @@ export function getFormule(
   return {
     annotations: formula.annotations,
     explanations,
-    formula: cleanFormula(formula.formula, explanations),
+    formula: cleanFormula(formula.formula),
   };
 }
 
-export const cleanFormula = (
+const ANY_CHARS_BUT_BRACKET = "[^[]*";
+export const removePartFromFormula = (
   formule: string,
-  explanation: string[],
-  omitKeys: string[] = ["Sref"]
+  explanation: string
 ): string => {
-  // get all parts of the formula that are in [ ]
-  const parts = formule.match(/\[.*?\]/g) ?? [];
-  let formulaResult = "";
   if (formule.includes("[") && formule.includes("]")) {
-    const formulaKeys = explanation.map((exp) =>
-      exp.split(":")[0].replace(" ", "")
+    const formulaKey = explanation.split(":")[0].replace(" ", "");
+    return formule.replace(
+      new RegExp(
+        `\\[${ANY_CHARS_BUT_BRACKET}${formulaKey}${ANY_CHARS_BUT_BRACKET}?\\]`,
+        "g"
+      ),
+      ""
     );
-
-    // remove omitKeys from formulaKeys
-    const formulaKeysFiltered = formulaKeys.filter(
-      (key) => !omitKeys.includes(key)
-    );
-
-    formulaKeysFiltered.forEach((key) => {
-      parts.forEach((part) => {
-        if (part.includes(key) && !formulaResult.includes(part)) {
-          formulaResult += part;
-        }
-      });
-    });
-    // remove all the [ ] from the formula
-    const formulaWithoutCrochet = formulaResult.replace(/\[|\]/g, "");
-    // remove space and + at the beginning of the formula
-    const formulaWithoutSpace = formulaWithoutCrochet.replace(/^(\s|\+)+/, "");
-    return formulaWithoutSpace;
   }
   return formule;
+};
+
+export const cleanFormula = (formule: string): string => {
+  // remove all the [ ] from the formula
+  const formulaWithoutCrochet = formule.replace(/\[|\]/g, "");
+  // remove space and + at the beginning of the formula
+  return formulaWithoutCrochet.replace(/^(\s|\+)+/, "");
 };

@@ -12,11 +12,9 @@ panier . montant:
   valeur: 20 / 100 * prix * panier . quantité + frais bancaire + frais de livraison
   cdtn:
     formule:
-      formula: "[20% * A1 * A2][ + A3][ + A4]"
+      formula: "A + [20% * A1 * A2][ + A3][ + A4]"
       explanations:
         - "A1 : Prix": prix
         - "A2 : Quantité": panier . quantité
         - "A3 : Frais bancaire": frais bancaire
         - "A4 : Frais de livraison": frais de livraison
-      annotations:
-        - "20% de majoration"

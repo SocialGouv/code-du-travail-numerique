@@ -47,12 +47,12 @@ describe("Indemnité conventionnel de licenciement pour la CC 3239", () => {
     describe("Assistante maternelle qui a sélectionné comme motif un retrait d'agrément", () => {
       test.each`
         seniority | salary  | expectedCompensation
-        ${0}      | ${2000} | ${false}
-        ${8 / 12} | ${2000} | ${false}
-        ${9 / 12} | ${2000} | ${false}
-        ${2}      | ${2000} | ${false}
-        ${10}     | ${2000} | ${false}
-        ${12}     | ${2000} | ${false}
+        ${0}      | ${2000} | ${0}
+        ${8 / 12} | ${2000} | ${0}
+        ${9 / 12} | ${2000} | ${0}
+        ${2}      | ${2000} | ${0}
+        ${10}     | ${2000} | ${0}
+        ${12}     | ${2000} | ${0}
       `(
         "ancienneté: $seniority an, salaire de référence: $salary, => $expectedCompensation €",
         ({ seniority, salary, expectedCompensation }) => {
