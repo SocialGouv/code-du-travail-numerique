@@ -3,7 +3,7 @@ import Engine from "publicodes";
 import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getFormule } from "../../../../common";
 
-describe("Formule indemnité licenciement - CC 2511", () => {
+describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 1517", () => {
   test.each`
     seniority | expectedFormula                            | expectedExplanations
     ${7 / 12} | ${""}                                      | ${[]}
@@ -18,9 +18,14 @@ describe("Formule indemnité licenciement - CC 2511", () => {
       const engine = new Engine(mergeIndemniteLicenciementModels());
 
       const situation = engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC2511'",
+        "contrat salarié . convention collective": "'IDCC1517'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
+        "contrat salarié . indemnité de licenciement . salaire de référence": 1000,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
       });
       const result = getFormule(situation);
