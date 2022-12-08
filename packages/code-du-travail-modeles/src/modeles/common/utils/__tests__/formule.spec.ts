@@ -67,6 +67,20 @@ describe("Formula", () => {
         "TVA (20 pourcents)",
       ]);
     });
+
+    test("doit arrondir le montant", () => {
+      const situation = engine.setSituation({
+        tva: 19.9777777,
+      });
+      const formule = getFormule(situation);
+
+      expect(formule.formula).toEqual("Prix * Quantité * TVA");
+      expect(formule.explanations).toEqual([
+        "Prix (18 €)",
+        "Quantité (12 litres)",
+        "TVA (~19.98 pourcents: valeur arrondi)",
+      ]);
+    });
   });
 
   describe("règle active contenant des explications mais avec l'unité manquante sur la valeur d'une explication", () => {

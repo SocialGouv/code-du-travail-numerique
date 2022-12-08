@@ -1,4 +1,8 @@
-import { cleanFormula, removePartFromFormula } from "../formula";
+import {
+  cleanFormula,
+  removePartFromFormula,
+  roundValueAndAddMessage,
+} from "../formula";
 
 describe("formule utils", () => {
   describe("cleanFormula", () => {
@@ -45,6 +49,23 @@ describe("formule utils", () => {
         "[(1 / 5 * Sref * A1)][ + (2 / 5 * Sref * A2)][ + (1 / 2 * Sref * A3)][ + (Sref * A4)]";
       expect(removePartFromFormula(formula, "A2: Années")).toEqual(
         "[(1 / 5 * Sref * A1)][ + (1 / 2 * Sref * A3)][ + (Sref * A4)]"
+      );
+    });
+  });
+  describe("roundValueAndAddMessage", () => {
+    test("should pluralize if needed", () => {
+      expect(roundValueAndAddMessage(10, "an")).toEqual("10 ans");
+    });
+    test("should ignore € in plurialize", () => {
+      expect(roundValueAndAddMessage(10, "€")).toEqual("10 €");
+    });
+    test("should not change the value if it does not need to be rounded", () => {
+      expect(roundValueAndAddMessage(1, "an")).toEqual("1 an");
+    });
+
+    test("should ground value and add message if needed", () => {
+      expect(roundValueAndAddMessage(100.6666666666666, "mois")).toEqual(
+        "~100.67 mois: valeur arrondi"
       );
     });
   });

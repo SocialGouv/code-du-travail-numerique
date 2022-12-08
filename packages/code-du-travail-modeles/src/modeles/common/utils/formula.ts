@@ -27,6 +27,27 @@ function round(num: number): number {
   return Math.round(num * 100) / 100;
 }
 
+function hasToBeRounded(num: number): boolean {
+  if (Number.isInteger(num)) {
+    return false;
+  }
+
+  const numberOfDigits = num.toString().split(".")[1].length;
+  return numberOfDigits > 2;
+}
+
+export const roundValueAndAddMessage = (
+  value: number,
+  unit: string
+): string => {
+  const unitWithPlurial = `${unit}${pluralize(unit, value)}`;
+
+  if (!hasToBeRounded(value)) {
+    return `${value} ${unitWithPlurial}`;
+  }
+  return `~${round(value)} ${unitWithPlurial}: valeur arrondi`;
+};
+
 function getRulesWithFormuleAndNodeValue(engine: Engine): RuleNodeFormula[] {
   return Object.values(engine.getParsedRules()).filter(
     (rule: RuleNodeOptionalFormula) => {
@@ -89,11 +110,8 @@ export function getFormule(engine: Engine): Formula {
         }
         const nodeValue = Number(result.nodeValue);
         if (nodeValue && nodeValue !== 0) {
-          const unit = result.unit.numerators[0];
-          return `${text} (${round(nodeValue)} ${unit}${pluralize(
-            unit,
-            result.nodeValue as number
-          )})`;
+          const unit: string = result.unit.numerators[0];
+          return `${text} (${roundValueAndAddMessage(nodeValue, unit)})`;
         } else {
           formula.formula = removePartFromFormula(formula.formula, text);
         }
