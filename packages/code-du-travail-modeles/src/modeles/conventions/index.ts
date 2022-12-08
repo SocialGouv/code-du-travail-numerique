@@ -10,7 +10,6 @@ export * from "./1516_organismes_formation";
 export * from "./1518_education_loisirs";
 export * from "./1527_immobilier";
 export * from "./1596_batiment_ouvriers_employes";
-export * from "./1597_batiment_employes_ouvriers_bis";
 export * from "./2098_personnel_presta_service_tertiaire";
 export * from "./2216_commerces_detail_alimentation";
 export * from "./2511_sport";

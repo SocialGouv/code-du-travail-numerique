@@ -94,12 +94,38 @@ contrat salarié . convention collective . batiment ouvriers employés bis . ind
     Article 10.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776857
     Article 10.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776858?idConteneur=KALICONT000005635220
     Article 10.5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776860
+  cdtn:
+    formule:
+      explanations:
+        - "A : Années d'ancienneté": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (1/10 * Sref * A) + (10% * (1/10 * Sref * A))
 
 contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . plus de 55 ans . plus de 5 ans d'ancienneté:
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5
   valeur: oui
 
 contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . plus de 55 ans . plus de 5 ans d'ancienneté . résultat conventionnel:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 15
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  somme:
+    - trois vingtième du salaire de reference
+    - trois deux centième du salaire de reference
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 10.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776857
+    Article 10.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776858?idConteneur=KALICONT000005635220
+    Article 10.5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776860
+  cdtn:
+    formule:
+      explanations:
+        - "A : Années d'ancienneté": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (3/20 * Sref * A) + (10% * (3/20 * Sref * A))
+
+contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . plus de 55 ans . plus de 5 ans d'ancienneté . résultat conventionnel plus de 15ans:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 15
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - trois vingtième du salaire de reference
@@ -112,6 +138,13 @@ contrat salarié . convention collective . batiment ouvriers employés bis . ind
     Article 10.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776857
     Article 10.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776858?idConteneur=KALICONT000005635220
     Article 10.5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776860
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Années d'ancienneté": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "A2 : Années d'ancienneté au-delà de 15 ans": contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . ancienneté supérieur à 15 ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (3/20 * Sref * A1) + (1/20 * Sref * A2) + (10% * ((3/20 * Sref * A1) + (1/20 * Sref * A2)))
 
 ## MOINS DE 55 ANS ##
 contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . moins de 55 ans:
@@ -138,12 +171,36 @@ contrat salarié . convention collective . batiment ouvriers employés bis . ind
     Article 10.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776857
     Article 10.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776858?idConteneur=KALICONT000005635220
     Article 10.5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776860
+  cdtn:
+    formule:
+      explanations:
+        - "A : Années d'ancienneté": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 1/10 * Sref * A
 
 contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . moins de 55 ans . plus de 5 ans d'ancienneté:
   applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5
   valeur: oui
 
 contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . moins de 55 ans . plus de 5 ans d'ancienneté . résultat conventionnel:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 15
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: trois vingtième du salaire de reference
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 10.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776857
+    Article 10.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776858?idConteneur=KALICONT000005635220
+    Article 10.5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776860
+  cdtn:
+    formule:
+      explanations:
+        - "A : Années d'ancienneté": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: 3/20 * Sref * A
+
+contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . moins de 55 ans . plus de 5 ans d'ancienneté . résultat conventionnel plus de 15ans:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 15
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - trois vingtième du salaire de reference
@@ -154,15 +211,10 @@ contrat salarié . convention collective . batiment ouvriers employés bis . ind
     Article 10.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776857
     Article 10.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776858?idConteneur=KALICONT000005635220
     Article 10.5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776860
-
-# Inférieur à 2 ans d'ancienneté
-contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 2
-  valeur: 0
-  unité: €
-  arrondi: 2 décimales
-  références:
-    Article 10.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776857
-    Article 10.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776858?idConteneur=KALICONT000005635220
-    Article 10.5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005776860
+  cdtn:
+    formule:
+      explanations:
+        - "A1 : Années d'ancienneté": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "A2 : Années d'ancienneté au-delà de 15 ans": contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . ancienneté supérieur à 15 ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      formula: (3/20 * Sref * A1) + (1/20 * Sref * A2)

@@ -1,40 +1,33 @@
-import {
-  FormuleFactory,
-  SupportedCcIndemniteLicenciement,
-} from "../../../../common";
+import { getFormule } from "../../../../common";
+import Engine from "publicodes";
+import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 
 describe("Formule indemnité licenciement - 1597", () => {
+  const engine = new Engine(mergeIndemniteLicenciementModels());
+
   test.each`
-    hasMoreThan55Years | seniority | expectedFormula                                                                          | expectedExplanations
-    ${false}           | ${0}      | ${""}                                                                                    | ${[]}
-    ${true}            | ${0}      | ${""}                                                                                    | ${[]}
-    ${false}           | ${2}      | ${"1/10 * Sref * A"}                                                                     | ${["A : Ancienneté totale (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-    ${true}            | ${2}      | ${"(1/10 * Sref * A) + (1/100 * Sref * A)"}                                              | ${["A : Ancienneté totale (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-    ${false}           | ${5}      | ${"1/10 * Sref * A"}                                                                     | ${["A : Ancienneté totale (5 ans)", "Sref : Salaire de référence (1000 €)"]}
-    ${true}            | ${5}      | ${"(1/10 * Sref * A) + (1/100 * Sref * A)"}                                              | ${["A : Ancienneté totale (5 ans)", "Sref : Salaire de référence (1000 €)"]}
-    ${false}           | ${6}      | ${"3/20 * Sref * A"}                                                                     | ${["A : Ancienneté totale (6 ans)", "Sref : Salaire de référence (1000 €)"]}
-    ${true}            | ${6}      | ${"(3/20 * Sref * A) + (3/200 * Sref * A)"}                                              | ${["A : Ancienneté totale (6 ans)", "Sref : Salaire de référence (1000 €)"]}
-    ${false}           | ${16}     | ${"(3/20 * Sref * A1) + (1/20 * Sref * A2)"}                                             | ${["A1 : Ancienneté totale (16 ans)", "A2 : Ancienneté au delà de 15 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
-    ${true}            | ${16}     | ${"(3/20 * Sref * A1) + (1/20 * Sref * A2) + (3/200 * Sref * A1) + (1/200 * Sref * A2)"} | ${["A1 : Ancienneté totale (16 ans)", "A2 : Ancienneté au delà de 15 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
+    age   | seniority | expectedFormula                                                                                  | expectedExplanations
+    ${32} | ${0}      | ${""}                                                                                            | ${[]}
+    ${58} | ${0}      | ${""}                                                                                            | ${[]}
+    ${32} | ${2}      | ${"1/10 * Sref * A"}                                                                             | ${["A : Années d'ancienneté (2 ans)", "Sref : Salaire de référence (1000 €)"]}
+    ${58} | ${2}      | ${"(1/10 * Sref * A) + (10% * (1/10 * Sref * A))"}                                               | ${["A : Années d'ancienneté (2 ans)", "Sref : Salaire de référence (1000 €)"]}
+    ${32} | ${5}      | ${"1/10 * Sref * A"}                                                                             | ${["A : Années d'ancienneté (5 ans)", "Sref : Salaire de référence (1000 €)"]}
+    ${58} | ${5}      | ${"(1/10 * Sref * A) + (10% * (1/10 * Sref * A))"}                                               | ${["A : Années d'ancienneté (5 ans)", "Sref : Salaire de référence (1000 €)"]}
+    ${32} | ${6}      | ${"3/20 * Sref * A"}                                                                             | ${["A : Années d'ancienneté (6 ans)", "Sref : Salaire de référence (1000 €)"]}
+    ${58} | ${6}      | ${"(3/20 * Sref * A) + (10% * (3/20 * Sref * A))"}                                               | ${["A : Années d'ancienneté (6 ans)", "Sref : Salaire de référence (1000 €)"]}
+    ${32} | ${16}     | ${"(3/20 * Sref * A1) + (1/20 * Sref * A2)"}                                                     | ${["A1 : Années d'ancienneté (16 ans)", "A2 : Années d'ancienneté au-delà de 15 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
+    ${58} | ${16}     | ${"(3/20 * Sref * A1) + (1/20 * Sref * A2) + (10% * ((3/20 * Sref * A1) + (1/20 * Sref * A2)))"} | ${["A1 : Années d'ancienneté (16 ans)", "A2 : Années d'ancienneté au-delà de 15 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
   `(
     "Formule $expectedFormula avec $seniority ans et age : $age",
-    ({
-      hasMoreThan55Years,
-      seniority,
-      expectedFormula,
-      expectedExplanations,
-    }) => {
-      const formula = new FormuleFactory().create(
-        SupportedCcIndemniteLicenciement.IDCC1597
-      );
-      if (!formula) throw new Error("Formula should be defined");
-
-      const result = formula.computeFormula({
-        hasMoreThan55Years,
-        refSalary: 1000,
-        seniority,
+    ({ age, seniority, expectedFormula, expectedExplanations }) => {
+      const situation = engine.setSituation({
+        "contrat salarié . convention collective": "'IDCC1597'",
+        "contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age": age,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
       });
 
+      const result = getFormule(situation);
       expect(result.formula).toEqual(expectedFormula);
       expect(result.explanations).toEqual(expectedExplanations);
     }

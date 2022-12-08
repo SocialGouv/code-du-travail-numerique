@@ -13,8 +13,6 @@ export class FormuleFactory {
     switch (idcc) {
       case SupportedCcIndemniteLicenciement.IDCC1596:
         return new Formula1596() as IFormula<T>;
-      case SupportedCcIndemniteLicenciement.IDCC1597:
-        return new Formula1597() as IFormula<T>;
       case SupportedCcIndemniteLicenciement.IDCC650:
         return new Formula650() as IFormula<T>;
       case SupportedCcIndemniteLicenciement.IDCC0573:
