@@ -12,8 +12,7 @@ export type CC2609ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary2609
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC2609>
-{
+  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC2609> {
   computeReferenceSalary({
     hasVariablePay,
     salaires,
