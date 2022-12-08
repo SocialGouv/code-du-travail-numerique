@@ -106,5 +106,10 @@
     "stylelint-processor-styled-components": "^1.10.0",
     "supertest": "^6.1.6",
     "testing-library-selector": "0.2.1"
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "yarn lint --fix --quiet"
+    ]
   }
 }

@@ -27,7 +27,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "prebuild": "tsc",
-    "test": "jest",
+    "test": "jest --silent=true",
     "lint": "eslint \"./src/**/*.{js,ts}\"",
     "dev": "nodemon --exec 'npm run build' --watch 'src/**' --ext 'ts,yaml'",
     "test:watch": "nodemon --exec 'jest' --watch 'src/**' --ext 'ts,yaml'",
@@ -43,7 +43,7 @@
   },
   "lint-staged": {
     "*.{ts,js}": [
-      "yarn lint --fix"
+      "yarn lint --fix --quiet"
     ]
   }
 }
