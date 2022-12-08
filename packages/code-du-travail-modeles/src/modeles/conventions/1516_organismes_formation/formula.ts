@@ -7,8 +7,7 @@ import type {
 import { round } from "../../common";
 
 export class Formula1516
-  implements IFormula<SupportedCcIndemniteLicenciement.IDCC1516>
-{
+  implements IFormula<SupportedCcIndemniteLicenciement.IDCC1516> {
   computeFormula({
     seniority,
     refSalary,

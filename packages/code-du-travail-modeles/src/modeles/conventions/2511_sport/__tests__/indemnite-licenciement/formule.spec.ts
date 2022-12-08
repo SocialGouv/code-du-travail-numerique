@@ -19,8 +19,7 @@ describe("Formule indemnité licenciement - CC 2511", () => {
 
       const situation = engine.setSituation({
         "contrat salarié . convention collective": "'IDCC2511'",
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-          seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
       });
       const result = getFormule(situation);

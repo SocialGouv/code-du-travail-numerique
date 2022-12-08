@@ -52,10 +52,11 @@ export interface ISeniority<T extends SupportedCcIndemniteLicenciement> {
   computeSeniority: (args: SeniorityProps<T>) => SeniorityResult;
 }
 
-export type SeniorityProps<T> =
-  T extends SupportedCcIndemniteLicenciement.IDCC0016
-    ? CC0016SeniorityProps
-    : LegalSeniorityProps;
+export type SeniorityProps<
+  T
+> = T extends SupportedCcIndemniteLicenciement.IDCC0016
+  ? CC0016SeniorityProps
+  : LegalSeniorityProps;
 
 export type SeniorityResult = {
   value: number;

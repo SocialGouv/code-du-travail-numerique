@@ -9,17 +9,20 @@ const engine = new Engine(mergeIndemniteLicenciementModels());
 const refAutres = [
   {
     article: "Article 37",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373",
   },
   {
     article:
       "Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur alimentaire",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802068?idConteneur=KALICONT000005635373",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802068?idConteneur=KALICONT000005635373",
   },
   {
     article:
       "Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur non alimentaire",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802084?idConteneur=KALICONT000005635373",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802084?idConteneur=KALICONT000005635373",
   },
 ];
 
@@ -27,23 +30,27 @@ const refAgentMajoration = [
   {
     article:
       "Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur alimentaire",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802068?idConteneur=KALICONT000005635373",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802068?idConteneur=KALICONT000005635373",
   },
   {
     article:
       "Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur non alimentaire",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802084?idConteneur=KALICONT000005635373",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802084?idConteneur=KALICONT000005635373",
   },
 ];
 
 const refCadres = [
   {
     article: "Article 37",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373",
   },
   {
     article: "Article 4 de l’Avenant I relatif aux cadres",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373",
   },
 ];
 
@@ -59,10 +66,8 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0573'",
           "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-            seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            salary,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
         const result = getReferences(situation, "résultat conventionnel");
@@ -97,12 +102,9 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
           "contrat salarié . convention collective": "'IDCC0573'",
           "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique": `'${typeLicenciement}'`,
-          "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age":
-            age,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-            seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            salary,
+          "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age": age,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
         const result = getReferences(situation, "résultat conventionnel");
@@ -141,12 +143,9 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
           "contrat salarié . convention collective": "'IDCC0573'",
           "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans": `'${auMoins15AnsCadre}'`,
-          "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age":
-            age,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-            seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            salary,
+          "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age": age,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
         const result = getReferences(situation, "résultat conventionnel");

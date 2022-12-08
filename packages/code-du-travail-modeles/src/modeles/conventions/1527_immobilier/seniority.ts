@@ -15,8 +15,7 @@ import {
 import { MotifKeys } from "../../common/motif-keys";
 
 export class SenioritY1527
-  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC1527>
-{
+  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC1527> {
   protected motifs: Motif[];
 
   constructor(motifs: Motif[]) {
@@ -60,14 +59,13 @@ export class SenioritY1527
       congesSansSoldeAbsences,
       years
     );
-    const totalCongesSansSoldesAbsence =
-      congesSansSoldesAbsencesBySeniorityYear.reduce(
-        (total, item) =>
-          item.totalAbsenceInMonth >= 1
-            ? total + item.totalAbsenceInMonth
-            : total,
-        0
-      );
+    const totalCongesSansSoldesAbsence = congesSansSoldesAbsencesBySeniorityYear.reduce(
+      (total, item) =>
+        item.totalAbsenceInMonth >= 1
+          ? total + item.totalAbsenceInMonth
+          : total,
+      0
+    );
 
     const totalAbsence =
       totalAbsenceWithoutCongesSansSoldesAbsence + totalCongesSansSoldesAbsence;

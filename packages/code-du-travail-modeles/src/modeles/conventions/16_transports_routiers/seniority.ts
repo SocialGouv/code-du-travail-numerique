@@ -18,8 +18,7 @@ export type CC0016SeniorityProps = LegalSeniorityProps & {
 };
 
 export class Seniority16
-  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC0016>
-{
+  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC0016> {
   protected motifs: Motif[];
 
   constructor(motifs: Motif[]) {
@@ -80,8 +79,7 @@ export class Seniority16
       12;
     return {
       extraInfos: {
-        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . ancienneté avant cadre":
-          seniorityBeforeExecutive,
+        "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . ancienneté avant cadre": seniorityBeforeExecutive,
       },
       value: seniorityExecutive,
     };

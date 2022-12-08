@@ -12,8 +12,7 @@ import { accumulateAbsenceByYear, splitBySeniorityYear } from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
 
 export class Seniority2941
-  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC2941>
-{
+  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC2941> {
   protected motifs: Motif[];
 
   constructor(motifs: Motif[]) {
