@@ -13,6 +13,14 @@ describe("CC 2609", () => {
       ${15}     | ${50} | ${2450}    | ${9187.5}
       ${25}     | ${50} | ${2450}    | ${17762.5}
       ${35}     | ${54} | ${2450}    | ${24500}
+      ${1.75}   | ${55} | ${2450}    | ${0}
+      ${4}      | ${55} | ${2450}    | ${2450}
+      ${15}     | ${55} | ${2450}    | ${9187.5}
+      ${25}     | ${55} | ${2450}    | ${17762.5}
+      ${1.75}   | ${56} | ${2450}    | ${0}
+      ${4}      | ${56} | ${2450}    | ${2695}
+      ${15}     | ${56} | ${2450}    | ${10106.25}
+      ${25}     | ${56} | ${2450}    | ${19538.75}
       ${1.75}   | ${58} | ${2450}    | ${0}
       ${4}      | ${58} | ${2450}    | ${2695}
       ${15}     | ${58} | ${2450}    | ${10106.25}
@@ -28,44 +36,13 @@ describe("CC 2609", () => {
         const result = engine
           .setSituation({
             "contrat salarié . convention collective": "'IDCC2609'",
-            "contrat salarié . convention collective . batiment etam . indemnité de licenciement . age": age,
+            "contrat salarié . convention collective . batiment etam . indemnité de licenciement . age à la fin de son préavis":
+              age,
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
-
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedCompensation);
-        expect(result.unit?.numerators).toEqual(["€"]);
-      }
-    );
-  });
-
-  describe("Calcul de l'indemnité de licenciement pour une personne ayant 55 ans", () => {
-    test.each`
-      seniority | moreThan55 | salaireRef | expectedCompensation
-      ${1.75}   | ${"Non"}   | ${2450}    | ${0}
-      ${4}      | ${"Non"}   | ${2450}    | ${2450}
-      ${15}     | ${"Non"}   | ${2450}    | ${9187.5}
-      ${25}     | ${"Non"}   | ${2450}    | ${17762.5}
-      ${1.75}   | ${"Oui"}   | ${2450}    | ${0}
-      ${4}      | ${"Oui"}   | ${2450}    | ${2695}
-      ${15}     | ${"Oui"}   | ${2450}    | ${10106.25}
-      ${25}     | ${"Oui"}   | ${2450}    | ${19538.75}
-    `(
-      "Avec une ancienneté $seniority ans (plus $seniorityEmployeTAM en tant que non cadre), droit de retraite: $haveRightToRetirement, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
-      ({ salaireRef, expectedCompensation, moreThan55, seniority }) => {
-        const result = engine
-          .setSituation({
-            "contrat salarié . convention collective": "'IDCC2609'",
-            "contrat salarié . convention collective . batiment etam . indemnité de licenciement . age": 55,
-            "contrat salarié . convention collective . batiment etam . indemnité de licenciement . plus de 55 ans avant la fin de son préavis": `'${moreThan55}'`,
-            "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salaireRef,
           })
           .evaluate(
             "contrat salarié . indemnité de licenciement . résultat conventionnel"

@@ -2,18 +2,11 @@ contrat salarié . convention collective . batiment etam . indemnité de licenci
   applicable si: indemnité de licenciement
   valeur: oui
 
-contrat salarié . convention collective . batiment etam . indemnité de licenciement . age:
-  titre: Âge du salarié
-  question: Quel est l'âge du salarié&nbsp;?
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . age à la fin de son préavis:
+  titre: Âge du salarié à la fin de son préavis (exécuté ou non)
+  question: Quel est l’âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?
   cdtn:
     type: entier
-
-contrat salarié . convention collective . batiment etam . indemnité de licenciement . plus de 55 ans avant la fin de son préavis:
-  applicable si: age = 55
-  titre: Le salarié aura 56 ans avant la fin de son préavis (que le préavis soit effectué ou non)
-  question: Le salarié aura-t-il 56 ans avant la fin de son préavis (que le préavis soit effectué ou non)&nbsp;?
-  cdtn:
-    type: oui-non
 
 contrat salarié . convention collective . batiment etam . indemnité de licenciement . jusqu'à 15 ans ou moins:
   valeur:
@@ -55,7 +48,7 @@ contrat salarié . convention collective . batiment etam . indemnité de licenci
   applicable si:
     toutes ces conditions:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 an
-      - age <= 65
+      - age à la fin de son préavis <= 65
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: base + majoration
   références:
@@ -109,10 +102,7 @@ contrat salarié . convention collective . batiment etam . indemnité de licenci
 contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel . majoration:
   applicable si:
     une de ces conditions:
-      - age > 55
-      - toutes ces conditions:
-        - age = 55
-        - plus de 55 ans avant la fin de son préavis = 'Oui'
+      - age à la fin de son préavis > 55
   valeur:
     produit:
       assiette: base
@@ -152,7 +142,7 @@ contrat salarié . convention collective . batiment etam . indemnité de licenci
 contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel pour plus de 65 ans:
   applicable si:
     toutes ces conditions:
-      - age > 65
+      - age à la fin de son préavis > 65
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 an
   valeur: oui
   références:

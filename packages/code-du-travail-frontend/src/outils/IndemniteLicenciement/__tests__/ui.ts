@@ -131,7 +131,7 @@ export const ui = {
     },
     agreement2609: {
       age: byTestId(
-        "infos.contrat salarié - convention collective - batiment etam - indemnité de licenciement - age"
+        "infos.contrat salarié - convention collective - batiment etam - indemnité de licenciement - age à la fin de son préavis"
       ),
     },
   },
