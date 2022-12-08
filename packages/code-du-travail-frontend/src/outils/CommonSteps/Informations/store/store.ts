@@ -1,4 +1,4 @@
-import { GetState, SetState } from "zustand";
+import { StoreApi } from "zustand";
 import produce from "immer";
 import { validateStep } from "./validator";
 
@@ -85,8 +85,8 @@ const createCommonInformationsStore: StoreSlice<
     onInformationsChange: (key, value) => {
       const publicodes = get().informationsData.publicodes!;
       const agreement = get().agreementData.input.agreement!;
-      const publicodesInformations =
-        get().informationsData.input.publicodesInformations;
+      const publicodesInformations = get().informationsData.input
+        .publicodesInformations;
       const questionAnswered = publicodesInformations.find(
         (question) => question.question.rule.nom === key
       );
@@ -127,8 +127,7 @@ const createCommonInformationsStore: StoreSlice<
       }
       set(
         produce((state: CommonInformationsStoreSlice) => {
-          state.informationsData.input.blockingNotification =
-            blockingNotification;
+          state.informationsData.input.blockingNotification = blockingNotification;
         })
       );
       const newQuestions = missingArgs
@@ -144,10 +143,9 @@ const createCommonInformationsStore: StoreSlice<
         }))[0];
       let newPublicodesInformationsForNextQuestions: PublicodesInformation[];
       if (missingArgs.length === 0) {
-        newPublicodesInformationsForNextQuestions =
-          newPublicodesInformations.filter(
-            (el) => el.order <= questionAnswered.order
-          );
+        newPublicodesInformationsForNextQuestions = newPublicodesInformations.filter(
+          (el) => el.order <= questionAnswered.order
+        );
       } else {
         newPublicodesInformationsForNextQuestions = removeDuplicateObject(
           [newQuestions, ...newPublicodesInformations].sort(
@@ -172,8 +170,8 @@ const createCommonInformationsStore: StoreSlice<
     onSetStepHidden: () => {
       try {
         const publicodes = get().informationsData.publicodes!;
-        const publicodesInformations =
-          get().informationsData.input.publicodesInformations;
+        const publicodesInformations = get().informationsData.input
+          .publicodesInformations;
         const agreement = get().agreementData.input.agreement!;
         const rules = informationToSituation(publicodesInformations);
         const isStepSalaryHidden = publicodes.setSituation(
@@ -185,8 +183,7 @@ const createCommonInformationsStore: StoreSlice<
         ).result.value as boolean;
         set(
           produce((state: CommonInformationsStoreSlice) => {
-            state.informationsData.input.isStepSalaryHidden =
-              isStepSalaryHidden;
+            state.informationsData.input.isStepSalaryHidden = isStepSalaryHidden;
           })
         );
       } catch (e) {
@@ -212,8 +209,8 @@ const createCommonInformationsStore: StoreSlice<
 });
 
 const applyGenericValidation = (
-  get: GetState<CommonInformationsStoreSlice>,
-  set: SetState<CommonInformationsStoreSlice>,
+  get: StoreApi<CommonInformationsStoreSlice>["getState"],
+  set: StoreApi<CommonInformationsStoreSlice>["setState"],
   paramName: string,
   value: any
 ) => {

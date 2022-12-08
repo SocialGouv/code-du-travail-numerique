@@ -4,7 +4,7 @@ import {
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import produce from "immer";
-import { GetState, SetState } from "zustand";
+import { StoreApi } from "zustand";
 import { deepMergeArray } from "../../../../../lib";
 import { computeSalaryPeriods } from "../../../common";
 import { AncienneteStoreSlice } from "../../../steps/Anciennete/store";
@@ -45,9 +45,9 @@ export const createAgreement1516StoreSalaires: StoreSlice<
         Object.assign(
           { month: v },
           withDefaultSalaryPeriod &&
-          defaultSalaryPeriod[0].value && {
-            value: defaultSalaryPeriod[0].value,
-          },
+            defaultSalaryPeriod[0].value && {
+              value: defaultSalaryPeriod[0].value,
+            },
           withDefaultSalaryPeriod && {
             prime: 0,
           }
@@ -75,8 +75,8 @@ export const createAgreement1516StoreSalaires: StoreSlice<
 });
 
 const applyGenericValidation = (
-  get: GetState<Agreement1516StoreSlice & SalairesStoreSlice>,
-  set: SetState<Agreement1516StoreSlice & SalairesStoreSlice>,
+  get: StoreApi<Agreement1516StoreSlice & SalairesStoreSlice>["getState"],
+  set: StoreApi<Agreement1516StoreSlice & SalairesStoreSlice>["setState"],
   paramName: keyof Agreement1516StoreInput,
   value: any
 ) => {

@@ -1,5 +1,5 @@
 import produce from "immer";
-import { GetState, SetState } from "zustand";
+import { StoreApi } from "zustand";
 import { AncienneteStoreSlice } from "../../../steps/Anciennete/store";
 import { SalairesStoreSlice } from "../../../steps/Salaires/store";
 import { StoreSlice } from "../../../../types";
@@ -27,12 +27,11 @@ export const createAgreement16StoreSalaires: StoreSlice<
   agreement16Data: { ...initialState },
   agreement16Function: {
     onInit: () => {
-      const categoryPro =
-        get().informationsData.input.publicodesInformations.find(
-          (item) =>
-            item.question.name ===
-            "contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle"
-        )?.info;
+      const categoryPro = get().informationsData.input.publicodesInformations.find(
+        (item) =>
+          item.question.name ===
+          "contrat salarié - convention collective - transports routiers - indemnité de licenciement - catégorie professionnelle"
+      )?.info;
       set(
         produce((state: Agreement16StoreSlice) => {
           state.agreement16Data.input.showVariablePay =
@@ -49,8 +48,8 @@ export const createAgreement16StoreSalaires: StoreSlice<
 });
 
 const applyGenericValidation = (
-  get: GetState<Agreement16StoreSlice & SalairesStoreSlice>,
-  set: SetState<Agreement16StoreSlice & SalairesStoreSlice>,
+  get: StoreApi<Agreement16StoreSlice & SalairesStoreSlice>["getState"],
+  set: StoreApi<Agreement16StoreSlice & SalairesStoreSlice>["setState"],
   paramName: keyof Agreement16StoreInput,
   value: any
 ) => {

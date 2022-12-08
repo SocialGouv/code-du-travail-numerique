@@ -1,4 +1,4 @@
-import { GetState, SetState } from "zustand";
+import { StoreApi } from "zustand";
 import produce from "immer";
 import { validateStep } from "./validator";
 
@@ -77,8 +77,8 @@ const createCommonAgreementStore: StoreSlice<
 });
 
 const applyGenericValidation = (
-  get: GetState<CommonAgreementStoreSlice>,
-  set: SetState<CommonAgreementStoreSlice>,
+  get: StoreApi<CommonAgreementStoreSlice>["getState"],
+  set: StoreApi<CommonAgreementStoreSlice>["setState"],
   paramName: keyof CommonAgreementStoreInput,
   value: any
 ) => {

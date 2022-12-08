@@ -5,14 +5,14 @@ import {
   SalaryPeriods,
   Absence,
 } from "@socialgouv/modeles-social";
-import { GetState } from "zustand";
+import { StoreApi } from "zustand";
 import { MainStore } from "../../store";
 import { AgreementSalary1527 } from "../salary/1527";
 import { AgreementSeniority16 } from "./16";
 
 const getAgreementSeniority = (
   idcc: SupportedCcIndemniteLicenciement,
-  get: GetState<MainStore>
+  get: StoreApi<MainStore>["getState"]
 ): SeniorityResult => {
   const dateEntree = get().ancienneteData.input.dateEntree!;
   const dateSortie = get().ancienneteData.input.dateSortie!;
@@ -40,7 +40,7 @@ export interface AgreementSeniority {
     dateEntree: string;
     dateSortie: string;
     absencePeriods: Absence[];
-    get: GetState<MainStore>;
+    get: StoreApi<MainStore>["getState"];
   }) => SeniorityResult;
 }
 

@@ -1,4 +1,4 @@
-import { GetState, SetState } from "zustand";
+import { StoreApi } from "zustand";
 import produce from "immer";
 import {
   SalairesStoreData,
@@ -134,8 +134,8 @@ const createSalairesStore: StoreSlice<
 });
 
 const applyGenericValidation = (
-  get: GetState<SalairesStoreSlice & CommonAgreementStoreSlice>,
-  set: SetState<SalairesStoreSlice & CommonAgreementStoreSlice>,
+  get: StoreApi<SalairesStoreSlice & CommonAgreementStoreSlice>["getState"],
+  set: StoreApi<SalairesStoreSlice & CommonAgreementStoreSlice>["setState"],
   paramName: keyof SalairesStoreInput,
   value: any
 ) => {
