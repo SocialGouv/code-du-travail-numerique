@@ -16,8 +16,7 @@ export type CC2098ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary2098
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC2098>
-{
+  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC2098> {
   computeReferenceSalary(
     props: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC2098>
   ): number {

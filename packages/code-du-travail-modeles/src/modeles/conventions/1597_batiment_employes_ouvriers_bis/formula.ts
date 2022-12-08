@@ -13,8 +13,7 @@ export type Formula1597Props = {
 };
 
 export class Formula1597
-  implements IFormula<SupportedCcIndemniteLicenciement.IDCC1597>
-{
+  implements IFormula<SupportedCcIndemniteLicenciement.IDCC1597> {
   computeFormula({
     seniority,
     refSalary,

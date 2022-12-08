@@ -8,11 +8,13 @@ const engine = new Engine(mergeIndemniteLicenciementModels());
 const References = [
   {
     article: "Article 5 Avenant n°5",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046043857",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046043857",
   },
   {
     article: "Article 4, Chapitre VI",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000042110596/?idConteneur=KALICONT000017577652&origin=list",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000042110596/?idConteneur=KALICONT000017577652&origin=list",
   },
 ];
 
@@ -31,10 +33,8 @@ describe("Vérification des références juridiques pour la CC 1517", () => {
       const result = getReferences(
         engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1517'",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-            seniority,
-          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-            inaptitude,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": inaptitude,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
         }),
         "résultat conventionnel"

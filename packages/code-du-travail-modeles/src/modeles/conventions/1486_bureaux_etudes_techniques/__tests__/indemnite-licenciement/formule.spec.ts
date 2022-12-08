@@ -40,10 +40,8 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
         "contrat salarié . convention collective": "'IDCC1486'",
         "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${typeLicenciement}'`,
         "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-          seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté en année":
-          seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence": 1000,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
       });

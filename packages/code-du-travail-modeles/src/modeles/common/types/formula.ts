@@ -28,15 +28,16 @@ export interface IFormula<T extends SupportedCcIndemniteLicenciement> {
   computeFormula: (args: FormulaProps<T>) => Formula;
 }
 
-export type FormulaProps<T> =
-  T extends SupportedCcIndemniteLicenciement.IDCC1596
-    ? Formula1596Props
-    : T extends SupportedCcIndemniteLicenciement.IDCC1597
-    ? Formula1597Props
-    : T extends SupportedCcIndemniteLicenciement.IDCC650
-    ? Formula650Props
-    : T extends SupportedCcIndemniteLicenciement.IDCC0573
-    ? Formula573Props
-    : T extends SupportedCcIndemniteLicenciement.IDCC0044
-    ? Formula44Props
-    : DefaultFormulaProps;
+export type FormulaProps<
+  T
+> = T extends SupportedCcIndemniteLicenciement.IDCC1596
+  ? Formula1596Props
+  : T extends SupportedCcIndemniteLicenciement.IDCC1597
+  ? Formula1597Props
+  : T extends SupportedCcIndemniteLicenciement.IDCC650
+  ? Formula650Props
+  : T extends SupportedCcIndemniteLicenciement.IDCC0573
+  ? Formula573Props
+  : T extends SupportedCcIndemniteLicenciement.IDCC0044
+  ? Formula44Props
+  : DefaultFormulaProps;

@@ -20,8 +20,7 @@ describe("Vérification des références juridiques pour Indemnité légale de l
     ({ seniority, expectedReferences }) => {
       const result = getReferences(
         engine.setSituation({
-          "contrat salarié . indemnité de licenciement . ancienneté en année":
-            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             "non",
           "contrat salarié . indemnité de licenciement . salaire de référence": 1000,
@@ -42,8 +41,7 @@ describe("Vérification des références juridiques pour Indemnité légale de l
     ({ seniority, expectedReferences }) => {
       const result = getReferences(
         engine.setSituation({
-          "contrat salarié . indemnité de licenciement . ancienneté en année":
-            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             "oui",
           "contrat salarié . indemnité de licenciement . salaire de référence": 1000,
