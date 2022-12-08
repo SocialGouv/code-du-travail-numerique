@@ -78,7 +78,7 @@ describe("Formula", () => {
       expect(formule.explanations).toEqual([
         "Prix (18 €)",
         "Quantité (12 litres)",
-        "TVA (~19.98 pourcents: valeur arrondi)",
+        "TVA (≈19.98 pourcents: valeur arrondie)",
       ]);
     });
   });

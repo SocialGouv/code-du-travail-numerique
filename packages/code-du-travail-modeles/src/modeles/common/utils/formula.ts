@@ -45,7 +45,7 @@ export const roundValueAndAddMessage = (
   if (!hasToBeRounded(value)) {
     return `${value} ${unitWithPlurial}`;
   }
-  return `~${round(value)} ${unitWithPlurial}: valeur arrondi`;
+  return `≈${round(value)} ${unitWithPlurial}: valeur arrondie`;
 };
 
 function getRulesWithFormuleAndNodeValue(engine: Engine): RuleNodeFormula[] {
