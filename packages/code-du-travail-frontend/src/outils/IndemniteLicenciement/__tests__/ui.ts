@@ -155,8 +155,8 @@ export const ui = {
     },
     sameSalaryValue: byTestId("same-salary-value"),
     variablePart: {
-      oui: byTestId("hasVariablePart - Oui"),
-      non: byTestId("hasVariablePart - Non"),
+      oui: byTestId("hasVariablePay - Oui"),
+      non: byTestId("hasVariablePay - Non"),
     },
     salaries: byTestId("salary-input"),
     primes: byTestId("prime-input"),
