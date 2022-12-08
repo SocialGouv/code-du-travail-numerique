@@ -22,7 +22,7 @@ describe("Calcul du salaire pour la CC 2609", () => {
     salaries         | hasVariablePay | expectedResult
     ${[]}            | ${false}       | ${0}
     ${inputSalaries} | ${false}       | ${2450}
-    ${inputSalaries} | ${true}        | ${4982}
+    ${inputSalaries} | ${true}        | ${2532}
   `(
     "Salaires : $salaries.length (avec variable: $hasVariablePay) => $expectedResult €",
     ({ salaries, hasVariablePay, expectedResult }) => {

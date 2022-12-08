@@ -1,4 +1,4 @@
-import { LEGAL_MOTIFS } from "../../base";
+import { LEGAL_MOTIFS } from "../../base/seniority";
 import { MotifKeys } from "../../common/motif-keys";
 
 export const MOTIFS_2609 = LEGAL_MOTIFS.map((item) => {

@@ -129,6 +129,11 @@ export const ui = {
         "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle - licenciement économique - age"
       ),
     },
+    agreement2609: {
+      age: byTestId(
+        "infos.contrat salarié - convention collective - batiment etam - indemnité de licenciement - age"
+      ),
+    },
   },
   seniority: {
     startDate: byTestId("date-entree"),

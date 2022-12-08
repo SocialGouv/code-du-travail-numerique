@@ -38,6 +38,23 @@ describe("Indemnité licenciement - CC 2609", () => {
       fireEvent.click(ui.contract.inaptitude.non.get());
       fireEvent.click(ui.next.get());
       fireEvent.click(ui.next.get());
+      expect(ui.activeStep.query()).toHaveTextContent("Informations");
+    });
+
+    test(`
+     - vérification que l'on demande l'age
+     - vérification que l'on ne demande pas si le salaire comporte une partie de variable si salaire fixe
+     - vérification que l'on n'affiche pas la partie variable sur le résultat
+     - vérification que l'on demande si le salaire comporte une partie de variable si salaires différents
+     - vérification que l'on affiche la réponse du salaire variable sur l'étape de résultat
+     `, () => {
+      // vérification que l'on demande l'age
+      expect(ui.information.agreement2609.age.query()).toBeInTheDocument();
+
+      fireEvent.change(ui.information.agreement2609.age.get(), {
+        target: { value: "45" },
+      });
+      fireEvent.click(ui.next.get());
       fireEvent.change(ui.seniority.startDate.get(), {
         target: { value: "01/01/2000" },
       });
@@ -50,14 +67,7 @@ describe("Indemnité licenciement - CC 2609", () => {
       fireEvent.click(ui.seniority.hasAbsence.non.get());
       fireEvent.click(ui.next.get());
       expect(ui.activeStep.query()).toHaveTextContent("Salaires");
-    });
 
-    test(`
-     - vérification que l'on ne demande pas si le salaire comporte une partie de variable si salaire fixe
-     - vérification que l'on n'affiche pas la partie variable sur le résultat
-     - vérification que l'on demande si le salaire comporte une partie de variable si salaires différents
-     - vérification que l'on affiche la réponse du salaire variable sur l'étape de résultat
-     `, () => {
       fireEvent.click(ui.salary.hasPartialTime.non.get());
 
       // vérification que l'on ne demande pas si le salaire comporte une partie de variable si salaire fixe
