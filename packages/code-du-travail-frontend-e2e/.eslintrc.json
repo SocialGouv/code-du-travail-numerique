@@ -4,7 +4,7 @@
   ],
   "extends": [
     "@socialgouv/eslint-config-typescript",
-    "plugin:cypress/recommended",
+    "plugin:cypress/recommended"
   ],
   "parserOptions": {
     "project": "tsconfig.json",
