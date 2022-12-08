@@ -3,7 +3,7 @@ import Engine from "publicodes";
 import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getFormule } from "../../../../common";
 
-describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 1501", () => {
+describe("Formule indemnité licenciement - 1501", () => {
   const engine = new Engine(mergeIndemniteLicenciementModels());
   describe("Autres licenciements", () => {
     test.each`

@@ -3,7 +3,7 @@ import Engine from "publicodes";
 import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getFormule } from "../../../../common";
 
-describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 1351", () => {
+describe("Formule indemnité licenciement - 1351", () => {
   test.each`
     seniority | expectedFormula | expectedExplanations
     ${7 / 12} | ${""}           | ${[]}

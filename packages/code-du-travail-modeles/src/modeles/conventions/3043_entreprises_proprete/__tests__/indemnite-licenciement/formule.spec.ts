@@ -5,7 +5,7 @@ import { getFormule } from "../../../../common";
 
 const engine = new Engine(mergeIndemniteLicenciementModels());
 
-describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 3043", () => {
+describe("Formule indemnité licenciement - 3043", () => {
   test.each`
     seniority | expectedFormula                                                       | expectedExplanations
     ${0}      | ${""}                                                                 | ${[]}
