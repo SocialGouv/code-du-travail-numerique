@@ -46,7 +46,7 @@
   },
   "lint-staged": {
     "*.{ts,js}": [
-      "yarn lint --fix --quiet"
+      "yarn lint --fix"
     ]
   }
 }

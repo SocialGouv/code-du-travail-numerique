@@ -20,7 +20,6 @@
     "k8s": "yarn --silent --cwd .k8s",
     "lint": "lerna run lint",
     "lint:fix": "lerna run lint -- --fix",
-    "lint:quiet": "lerna run lint -- --quiet",
     "start": "lerna run start --scope=@cdt/frontend --stream",
     "storybook:run": "lerna run start --scope=@socialgouv/cdtn-ui",
     "storybook:deploy": "lerna run deploy-storybook --scope=@socialgouv/cdtn-ui",

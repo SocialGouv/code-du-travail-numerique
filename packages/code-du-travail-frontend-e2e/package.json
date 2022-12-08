@@ -29,7 +29,7 @@
   },
   "lint-staged": {
     "*.{ts,js}": [
-      "yarn lint --fix --quiet"
+      "yarn lint --fix"
     ]
   },
   "license": "Apache-2.0"

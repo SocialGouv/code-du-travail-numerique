@@ -80,7 +80,7 @@
   },
   "lint-staged": {
     "*.{js,ts}": [
-      "yarn lint --fix --quiet"
+      "yarn lint --fix"
     ]
   },
   "jest": {
