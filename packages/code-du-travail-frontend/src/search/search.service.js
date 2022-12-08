@@ -12,8 +12,7 @@ const fetchSearchResults = async (query = "", excludeSources = "") => {
   )}&excludeSources=${encodeURIComponent(excludeSources)}`;
   const response = await fetch(url);
   if (!response.ok) {
-
-         throw new Error("Un problème est survenu.");
+    throw new Error("Un problème est survenu.");
   }
   return await response.json();
 };
