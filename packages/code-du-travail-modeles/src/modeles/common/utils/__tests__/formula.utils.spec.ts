@@ -65,7 +65,7 @@ describe("formule utils", () => {
 
     test("should ground value and add message if needed", () => {
       expect(roundValueAndAddMessage(100.6666666666666, "mois")).toEqual(
-        "≈100.67 mois: valeur arrondie"
+        "≈ 100.67 mois : valeur arrondie"
       );
     });
   });
