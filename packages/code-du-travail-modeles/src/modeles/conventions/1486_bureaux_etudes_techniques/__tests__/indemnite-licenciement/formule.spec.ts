@@ -6,7 +6,7 @@ import { CatPro1486, TypeLicenciement1486 } from "../../salary";
 
 const engine = new Engine(mergeIndemniteLicenciementModels());
 
-describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 1486", () => {
+describe("Formule indemnité licenciement - 1486", () => {
   test.each`
     category                    | typeLicenciement              | seniority | expectedFormula                            | expectedExplanations
     ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.refus} | ${0}      | ${""}                                      | ${[]}

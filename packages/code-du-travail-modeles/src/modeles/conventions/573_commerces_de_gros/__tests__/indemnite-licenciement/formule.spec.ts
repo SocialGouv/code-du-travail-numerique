@@ -5,7 +5,7 @@ import {
 } from "../../../../common";
 import { CatPro573 } from "../../formula";
 
-describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 573", () => {
+describe("Formule indemnité licenciement - 573", () => {
   test.each`
     age   | category            | licenciementEco       | cadreAuMoins15ans     | seniority | expectedFormula                                                                                                                          | expectedExplanations
     ${32} | ${CatPro573.autres} | ${QuestionOuiNon.non} | ${QuestionOuiNon.oui} | ${0.91}   | ${""}                                                                                                                                    | ${[]}
