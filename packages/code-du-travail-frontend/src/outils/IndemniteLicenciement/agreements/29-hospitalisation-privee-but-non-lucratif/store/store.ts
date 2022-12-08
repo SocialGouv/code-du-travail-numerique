@@ -1,5 +1,5 @@
 import produce from "immer";
-import { GetState, SetState } from "zustand";
+import { StoreApi } from "zustand";
 import { AncienneteStoreSlice } from "../../../steps/Anciennete/store";
 import { SalairesStoreSlice } from "../../../steps/Salaires/store";
 import { StoreSlice } from "../../../../types";
@@ -36,8 +36,7 @@ export const createAgreement29StoreSalaires: StoreSlice<
         "'Assistants familiaux des services de placements familiaux spécialisés'";
       set(
         produce((state: Agreement29StoreSlice) => {
-          state.agreement29Data.input.shouldAskSixBestSalaries =
-            shouldAskSixBestSalaries;
+          state.agreement29Data.input.shouldAskSixBestSalaries = shouldAskSixBestSalaries;
         })
       );
     },
@@ -51,8 +50,8 @@ export const createAgreement29StoreSalaires: StoreSlice<
 });
 
 const applyGenericValidation = (
-  get: GetState<Agreement29StoreSlice & SalairesStoreSlice>,
-  set: SetState<Agreement29StoreSlice & SalairesStoreSlice>,
+  get: StoreApi<Agreement29StoreSlice & SalairesStoreSlice>["getState"],
+  set: StoreApi<Agreement29StoreSlice & SalairesStoreSlice>["setState"],
   paramName: keyof Agreement29StoreInput,
   value: any
 ) => {

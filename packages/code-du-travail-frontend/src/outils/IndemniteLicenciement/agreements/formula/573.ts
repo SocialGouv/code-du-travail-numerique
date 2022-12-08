@@ -5,7 +5,7 @@ import {
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
-import { GetState } from "zustand";
+import { StoreApi } from "zustand";
 import { AgreementFormula } from ".";
 import { MainStore } from "../../store";
 
@@ -13,7 +13,7 @@ export class AgreementFormula573 implements AgreementFormula {
   computeFormula = (
     agreementSeniority: SeniorityResult,
     agreementRefSalary: number,
-    get: GetState<MainStore>
+    get: StoreApi<MainStore>["getState"]
   ): Formula => {
     const agreementFactoryFormula = new FormuleFactory().create(
       SupportedCcIndemniteLicenciement.IDCC0573

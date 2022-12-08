@@ -52,10 +52,11 @@ switch (idcc) {
 Enfin si on souhaite pimper les types, on peut le faire dans `types`.
 
 ```ts
-export type SeniorityProps<T> =
-  T extends SupportedCcIndemniteLicenciement.IDCC2511
-    ? LegalSeniorityProps
-    : LegalSeniorityProps;
+export type SeniorityProps<
+  T
+> = T extends SupportedCcIndemniteLicenciement.IDCC2511
+  ? LegalSeniorityProps
+  : LegalSeniorityProps;
 ```
 
 ### 3. Ajouter la formule de calcul (`code-du-travail-modeles`)
@@ -132,27 +133,27 @@ contrat salarié . convention collective . sport . indemnité de licenciement:
   applicable si: indemnité de licenciement
   valeur: oui
 
-contrat salarié . convention collective . sport . indemnité de licenciement . jusqu'à dix ans ou moins:
-  valeur:
+? contrat salarié . convention collective . sport . indemnité de licenciement . jusqu'à dix ans ou moins
+: valeur:
     le minimum de:
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
       - 10 an
 
-contrat salarié . convention collective . sport . indemnité de licenciement . au dela de dix ans:
-  somme:
+? contrat salarié . convention collective . sport . indemnité de licenciement . au dela de dix ans
+: somme:
     - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
     - (- 10 an)
   plancher: 0 an
 
-contrat salarié . convention collective . sport . indemnité de licenciement . dix ans ou moins:
-  valeur:
+? contrat salarié . convention collective . sport . indemnité de licenciement . dix ans ou moins
+: valeur:
     produit:
       assiette: jusqu'à dix ans ou moins * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       facteur: 1 / 4
   unité: €
 
-contrat salarié . convention collective . sport . indemnité de licenciement . plus de dix ans:
-  valeur:
+? contrat salarié . convention collective . sport . indemnité de licenciement . plus de dix ans
+: valeur:
     produit:
       assiette: au dela de dix ans * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       facteur: 1 / 3
@@ -161,8 +162,8 @@ contrat salarié . convention collective . sport . indemnité de licenciement . 
 #  (1/4*Sref*A1) + (1/3*Sref*A2)
 #  A1 : Ancienneté de 10 ans ou moins
 #  A2 : Ancienneté au delà de 10 ans
-contrat salarié . convention collective . sport . indemnité de licenciement . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+? contrat salarié . convention collective . sport . indemnité de licenciement . résultat conventionnel
+: remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   variations:
     - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > (7 mois / 12)
       alors:
@@ -207,8 +208,8 @@ export type AgreementStoreSlice =
   | MaConventionCollectiveSlice;
 
 export const createRootAgreementsStore = (
-  set: SetState<MainStore>,
-  get: GetState<MainStore>
+  set: StoreApi<MainStore>["setState"],
+  get: StoreApi<MainStore>["getState"]
 ) => ({
   ...createAgreement1516StoreSalaires(set, get),
   ...createMaCCStore(set, get),
@@ -221,8 +222,8 @@ Puis, il faut ajouter le validator dans `src/outils/IndemniteLicenciement/valida
 export const validateAgreement = (
   idcc: SupportedCcIndemniteLicenciement,
   step: IndemniteLicenciementStepName,
-  get: GetState<any>,
-  set: SetState<MainStore>
+  get: StoreApi<any>["getState"],
+  set: StoreApi<MainStore>["setState"]
 ): boolean => {
   switch (true) {
     case SupportedCcIndemniteLicenciement.IDCC1516 === idcc &&
