@@ -10,8 +10,8 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
     seniority | isForInaptitude | expectedFormula                                  | expectedExplanations
     ${7 / 12} | ${"non"}        | ${""}                                            | ${[]}
     ${7 / 12} | ${"oui"}        | ${""}                                            | ${[]}
-    ${8 / 12} | ${"non"}        | ${"1/4 * Sref * A"}                              | ${["A : Ancienneté totale (0.67 an)", "Sref : Salaire de référence (1000 €)"]}
-    ${8 / 12} | ${"oui"}        | ${"(1/4 * Sref * A) * 2"}                        | ${["A : Ancienneté totale (0.67 an)", "Sref : Salaire de référence (1000 €)"]}
+    ${8 / 12} | ${"non"}        | ${"1/4 * Sref * A"}                              | ${["A : Ancienneté totale (~0.67 an: valeur arrondi)", "Sref : Salaire de référence (1000 €)"]}
+    ${8 / 12} | ${"oui"}        | ${"(1/4 * Sref * A) * 2"}                        | ${["A : Ancienneté totale (~0.67 an: valeur arrondi)", "Sref : Salaire de référence (1000 €)"]}
     ${7}      | ${"oui"}        | ${"(1/4 * Sref * A) * 2"}                        | ${["A : Ancienneté totale (7 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${7}      | ${"non"}        | ${"1/4 * Sref * A"}                              | ${["A : Ancienneté totale (7 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${10}     | ${"oui"}        | ${"(1/4 * Sref * A) * 2"}                        | ${["A : Ancienneté totale (10 ans)", "Sref : Salaire de référence (1000 €)"]}

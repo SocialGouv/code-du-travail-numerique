@@ -10,7 +10,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
   test.each`
     category                    | typeLicenciement              | seniority | expectedFormula                            | expectedExplanations
     ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.refus} | ${0}      | ${""}                                      | ${[]}
-    ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.refus} | ${8 / 12} | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (0.67 an)", "Sref : Salaire de référence (1000 €)"]}
+    ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.refus} | ${8 / 12} | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (~0.67 an: valeur arrondi)", "Sref : Salaire de référence (1000 €)"]}
     ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.refus} | ${8}      | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (8 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.refus} | ${12}     | ${"(1/4 * Sref * A1) + (1/3 * Sref * A2)"} | ${["A1 : Ancienneté de 10 ans ou moins (10 ans)", "A2 : Ancienneté au-delà de 10 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${CatPro1486.ingeCadre}     | ${TypeLicenciement1486.autre} | ${0}      | ${""}                                      | ${[]}
