@@ -1,6 +1,7 @@
-import { getFormule } from "../../../../common";
 import Engine from "publicodes";
+
 import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
+import { getFormule } from "../../../../common";
 
 describe("Formule indemnité licenciement - 1597", () => {
   const engine = new Engine(mergeIndemniteLicenciementModels());
