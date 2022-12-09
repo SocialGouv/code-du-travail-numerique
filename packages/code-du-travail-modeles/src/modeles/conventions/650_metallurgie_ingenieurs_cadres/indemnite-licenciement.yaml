@@ -30,6 +30,18 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
   cdtn:
     type: oui-non
 
+contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age plus de 60 ans:
+  applicable si:
+    une de ces conditions:
+      - age = 61
+      - age = 62
+      - age = 63
+      - age = 64
+  titre: Le salarié remplit les conditions pour partir à la retraite
+  question: Le salarié remplit-il les conditions pour partir à la retraite ?
+  cdtn:
+    type: oui-non
+
 # Formules
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . jusqu'à sept ans ou moins:
   valeur:
@@ -117,19 +129,22 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
           - age >= 50
           - age < 55
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
-          - age 55 ans = 'Non'
-  variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
-      alors:
-        le maximum de:
-          - somme formule plus 20 pourcent
-          - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 3
-    - sinon: 0
+  valeur:
+    le maximum de:
+      - somme formule plus 20 pourcent
+      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 3
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
   arrondi: 2 décimales
   références:
     Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
+  cdtn:
+    formule:
+      formula: ((1 / 5 * Sref * A1)[ + (3 / 5 * Sref * A2)]) * 1.2
+      explanations:
+        - "A1 : Ancienneté de 1 ans à 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . jusqu'à sept ans ou moins
+        - "A2 : Ancienneté au delà de 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . au dela de sept ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 2:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -150,18 +165,22 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
           - age 60 ans = 'Non'
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an
-  variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
-      alors:
-        le maximum de:
-          - somme formule
-          - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
-    - sinon: 0
+  valeur:
+    le maximum de:
+      - somme formule
+      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
   arrondi: 2 décimales
   références:
     Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
+  cdtn:
+    formule:
+      formula: (1 / 5 * Sref * A1)[ + (3 / 5 * Sref * A2)]
+      explanations:
+        - "A1 : Ancienneté de 1 ans à 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . jusqu'à sept ans ou moins
+        - "A2 : Ancienneté au delà de 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . au dela de sept ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 3:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -179,73 +198,133 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
           - age = 59
           - age 60 ans = 'Non'
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
-  variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
-      alors:
-        le maximum de:
-          - somme formule plus 30 pourcent
-          - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
-    - sinon: 0
+  valeur:
+    le maximum de:
+      - somme formule plus 30 pourcent
+      - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
   arrondi: 2 décimales
   références:
     Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
+  cdtn:
+    formule:
+      formula: ((1 / 5 * Sref * A1)[ + (3 / 5 * Sref * A2)]) * 1.3
+      explanations:
+        - "A1 : Ancienneté de 1 ans à 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . jusqu'à sept ans ou moins
+        - "A2 : Ancienneté au delà de 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . au dela de sept ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 4:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: age = 61
-  variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
-      alors: somme formule moins 5 pourcent
-    - sinon: 0
+  applicable si:
+    toutes ces conditions:
+      - age = 61
+      - age plus de 60 ans = 'Oui'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
+  valeur: somme formule moins 5 pourcent
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
   arrondi: 2 décimales
   références:
     Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
+  cdtn:
+    formule:
+      formula: ((1 / 5 * Sref * A1)[ + (3 / 5 * Sref * A2)]) * 0.95
+      explanations:
+        - "A1 : Ancienneté de 1 ans à 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . jusqu'à sept ans ou moins
+        - "A2 : Ancienneté au delà de 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . au dela de sept ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 5:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: age = 62
-  variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
-      alors: somme formule moins 10 pourcent
-    - sinon: 0
+  applicable si:
+    toutes ces conditions:
+      - age = 62
+      - age plus de 60 ans = 'Oui'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
+  valeur: somme formule moins 10 pourcent
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
   arrondi: 2 décimales
   références:
     Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
+  cdtn:
+    formule:
+      formula: ((1 / 5 * Sref * A1)[ + (3 / 5 * Sref * A2)]) * 0.9
+      explanations:
+        - "A1 : Ancienneté de 1 ans à 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . jusqu'à sept ans ou moins
+        - "A2 : Ancienneté au delà de 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . au dela de sept ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 6:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: age = 63
-  variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
-      alors: somme formule moins 20 pourcent
-    - sinon: 0
+  applicable si:
+    toutes ces conditions:
+      - age = 63
+      - age plus de 60 ans = 'Oui'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
+  valeur: somme formule moins 20 pourcent
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
   arrondi: 2 décimales
   références:
     Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
+  cdtn:
+    formule:
+      formula: ((1 / 5 * Sref * A1)[ + (3 / 5 * Sref * A2)]) * 0.8
+      explanations:
+        - "A1 : Ancienneté de 1 ans à 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . jusqu'à sept ans ou moins
+        - "A2 : Ancienneté au delà de 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . au dela de sept ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 7:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: age = 64
-  variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
-      alors: somme formule moins 40 pourcent
-    - sinon: 0
+  applicable si:
+    toutes ces conditions:
+      - age = 64
+      - age plus de 60 ans = 'Oui'
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
+  valeur: somme formule moins 40 pourcent
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
   arrondi: 2 décimales
   références:
     Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
+  cdtn:
+    formule:
+      formula: ((1 / 5 * Sref * A1)[ + (3 / 5 * Sref * A2)]) * 0.6
+      explanations:
+        - "A1 : Ancienneté de 1 ans à 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . jusqu'à sept ans ou moins
+        - "A2 : Ancienneté au delà de 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . au dela de sept ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 8:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - age plus de 60 ans = 'Non'
+      - age = 61
+      - age = 62
+      - age = 63
+      - age = 64
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
+  valeur: somme formule
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
+  cdtn:
+    formule:
+      formula: (1 / 5 * Sref * A1)[ + (3 / 5 * Sref * A2)]
+      explanations:
+        - "A1 : Ancienneté de 1 ans à 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . jusqu'à sept ans ou moins
+        - "A2 : Ancienneté au delà de 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . au dela de sept ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 ## Par défaut
-contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 8:
+contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 9:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si:
     une de ces conditions:
@@ -256,6 +335,7 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
       - résultat conventionnel 5
       - résultat conventionnel 6
       - résultat conventionnel 7
+      - résultat conventionnel 8
   variations:
     - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
       alors: somme formule
@@ -265,3 +345,10 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
   arrondi: 2 décimales
   références:
     Article 29 de la Convention collective nationale des ingénieurs et cadres de la métallurgie du 13 mars 1972: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173732?idConteneur=KALICONT000005635842&origin=list#KALIARTI000023173732
+  cdtn:
+    formule:
+      formula: (1 / 5 * Sref * A1)[ + (3 / 5 * Sref * A2)]
+      explanations:
+        - "A1 : Ancienneté de 1 ans à 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . jusqu'à sept ans ou moins
+        - "A2 : Ancienneté au delà de 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . au dela de sept ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
