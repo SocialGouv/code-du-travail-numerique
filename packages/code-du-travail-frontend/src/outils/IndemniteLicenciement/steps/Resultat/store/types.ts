@@ -30,6 +30,8 @@ export type ResultStoreData = StepData<ResultStoreInput, ResultStoreError>;
 
 export type ResultStoreFn = {
   getPublicodesResult: () => void;
+  isEligible: () => boolean;
+  getEligibilityError: () => string | undefined;
 };
 
 export type ResultStoreSlice = {

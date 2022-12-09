@@ -13,7 +13,7 @@ import SimulatorNavigation from "./SimulatorNavigation";
 
 type Validator<StepName extends string> = {
   validator: () => boolean;
-  validatorElligibility?: () => boolean;
+  validatorEligibility?: () => boolean;
   stepName: StepName;
   isStepValid: boolean;
 };
@@ -82,8 +82,8 @@ const SimulatorContent = <StepName extends string>({
           validator.stepName === visibleSteps[currentStepIndex].name
       );
       if (
-        stepValidator?.validatorElligibility &&
-        !stepValidator?.validatorElligibility()
+        stepValidator?.validatorEligibility &&
+        !stepValidator?.validatorEligibility()
       ) {
         nextStep(visibleSteps.length - 1);
         return;

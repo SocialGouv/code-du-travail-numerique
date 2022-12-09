@@ -78,8 +78,8 @@ const IndemniteLicenciementSimulator = ({
 }: Omit<Props, "publicodesRules">): JSX.Element => {
   const {
     onValidateStepContratTravail,
-    onElligibilityCheckStepInfo,
-    onElligibilityCheckStepAnciennete,
+    onEligibilityCheckStepInfo,
+    onEligibilityCheckStepAnciennete,
     isStepContratTravailValid,
     onValidateStepAnciennete,
     isStepAncienneteValid,
@@ -94,10 +94,10 @@ const IndemniteLicenciementSimulator = ({
   } = useIndemniteLicenciementStore((state) => ({
     onValidateStepContratTravail:
       state.contratTravailFunction.onValidateStepInfo,
-    onElligibilityCheckStepInfo:
-      state.contratTravailFunction.onElligibilityCheckStepInfo,
-    onElligibilityCheckStepAnciennete:
-      state.ancienneteFunction.onElligibilityCheckStepAnciennete,
+    onEligibilityCheckStepInfo:
+      state.contratTravailFunction.onEligibilityCheckStepInfo,
+    onEligibilityCheckStepAnciennete:
+      state.ancienneteFunction.onEligibilityCheckStepAnciennete,
     isStepContratTravailValid: state.contratTravailData.isStepValid,
     onValidateStepAnciennete: state.ancienneteFunction.onValidateStepAnciennete,
     isStepAncienneteValid: state.ancienneteData.isStepValid,
@@ -153,7 +153,7 @@ const IndemniteLicenciementSimulator = ({
           stepName: IndemniteLicenciementStepName.ContratTravail,
           isStepValid: isStepContratTravailValid,
           validator: onValidateStepContratTravail,
-          validatorElligibility: onElligibilityCheckStepInfo,
+          validatorEligibility: onEligibilityCheckStepInfo,
         },
         {
           stepName: IndemniteLicenciementStepName.Agreement,
@@ -164,7 +164,7 @@ const IndemniteLicenciementSimulator = ({
           stepName: IndemniteLicenciementStepName.Anciennete,
           isStepValid: isStepAncienneteValid,
           validator: onValidateStepAnciennete,
-          validatorElligibility: onElligibilityCheckStepAnciennete,
+          validatorEligibility: onEligibilityCheckStepAnciennete,
         },
         {
           stepName: IndemniteLicenciementStepName.Salaires,

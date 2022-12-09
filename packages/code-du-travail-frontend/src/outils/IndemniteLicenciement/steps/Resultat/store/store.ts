@@ -67,6 +67,19 @@ const createResultStore: StoreSlice<
     publicodes: new IndemniteLicenciementPublicodes(publicodesRules!),
   },
   resultFunction: {
+    isEligible: () => {
+      const contratTravailEligibility =
+        !get().contratTravailData.error.errorEligibility;
+      const ancienneteEligibility =
+        !get().ancienneteData.error.errorEligibility;
+      return contratTravailEligibility && ancienneteEligibility;
+    },
+    getEligibilityError: () => {
+      const contratTravailEligibility =
+        get().contratTravailData.error.errorEligibility;
+      const ancienneteEligibility = get().ancienneteData.error.errorEligibility;
+      return contratTravailEligibility || ancienneteEligibility;
+    },
     getPublicodesResult: () => {
       const refSalary = get().salairesData.input.refSalary;
       const agreement = get().agreementData.input.agreement;

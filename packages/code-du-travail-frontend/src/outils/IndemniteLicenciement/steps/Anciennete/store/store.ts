@@ -13,7 +13,7 @@ import { validateStep } from "./validator";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
 import { Absence } from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
-import { getErrorLegal } from "./elligibility";
+import { getErrorEligibility } from "./eligibility";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
@@ -82,18 +82,18 @@ const createAncienneteStore: StoreSlice<
       );
       return isValid;
     },
-    onElligibilityCheckStepAnciennete: () => {
-      const errorLegal = getErrorLegal(
+    onEligibilityCheckStepAnciennete: () => {
+      const errorEligibility = getErrorEligibility(
         get().ancienneteData.input,
         get().agreementData.input.agreement
       );
 
       set(
         produce((state: AncienneteStoreSlice) => {
-          state.ancienneteData.error.errorLegal = errorLegal;
+          state.ancienneteData.error.errorEligibility = errorEligibility;
         })
       );
-      return !errorLegal;
+      return !errorEligibility;
     },
   },
 });
