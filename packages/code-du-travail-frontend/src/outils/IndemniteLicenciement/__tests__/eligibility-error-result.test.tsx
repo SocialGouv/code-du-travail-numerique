@@ -1,7 +1,4 @@
-import {
-  CalculateurIndemnite,
-  loadPublicodesRules,
-} from "../../../../src/outils";
+import { CalculateurIndemnite, loadPublicodesRules } from "../..";
 import { ui } from "./ui";
 
 import { render, fireEvent, waitFor } from "@testing-library/react";
@@ -25,6 +22,8 @@ test(`
 
   // Vérifier l'affichage de l'erreur légal cdd
   fireEvent.click(ui.introduction.startButton.get());
+  fireEvent.click(ui.contract.type.cdi.get());
+  fireEvent.click(ui.next.get());
   fireEvent.click(ui.contract.type.cdd.get());
   fireEvent.click(ui.next.get());
   expect(ui.result.legalError.cdd.get()).toBeInTheDocument();
@@ -32,6 +31,8 @@ test(`
   // Vérifier l'affichage de l'erreur légal cdd
   fireEvent.click(ui.previous.get());
   fireEvent.click(ui.contract.type.cdi.get());
+  fireEvent.click(ui.contract.fauteGrave.non.get());
+  fireEvent.click(ui.next.get());
   fireEvent.click(ui.contract.fauteGrave.oui.get());
   fireEvent.click(ui.next.get());
   expect(ui.result.legalError.fauteGrave.get()).toBeInTheDocument();

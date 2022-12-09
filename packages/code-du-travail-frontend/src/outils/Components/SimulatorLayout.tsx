@@ -120,6 +120,9 @@ const SimulatorContent = <StepName extends string>({
     }
   };
 
+  const validator = validators.find(
+    (validator) => validator.stepName === visibleSteps[currentStepIndex].name
+  );
   return (
     <StyledWrapper variant="main">
       <StyledForm>
@@ -141,12 +144,9 @@ const SimulatorContent = <StepName extends string>({
         </StepWrapper>
         <SimulatorNavigationWrapper
           hasError={
-            validators.find(
-              (validator) =>
-                validator.stepName === visibleSteps[currentStepIndex].name
-            )?.isStepValid === false
-              ? true
-              : false
+            (!validator?.validatorEligibility ||
+              validator?.validatorEligibility()) &&
+            validator?.isStepValid === false
           }
           showNext={currentStepIndex < visibleSteps.length - 1}
           onPrint={
