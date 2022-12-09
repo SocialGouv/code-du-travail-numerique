@@ -102,7 +102,7 @@ contrat salarié . convention collective . batiment etam . indemnité de licenci
 contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel . majoration:
   applicable si:
     une de ces conditions:
-      - age à la fin de son préavis > 55
+      - age à la fin de son préavis >= 55
   valeur:
     produit:
       assiette: base

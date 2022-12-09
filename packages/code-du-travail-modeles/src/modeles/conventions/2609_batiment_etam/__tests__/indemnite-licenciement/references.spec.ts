@@ -49,7 +49,7 @@ describe("Vérification des références juridiques pour la CC 2609", () => {
       const result = getReferences(
         engine.setSituation({
           "contrat salarié . convention collective": "'IDCC2609'",
-          "contrat salarié . convention collective . batiment etam . indemnité de licenciement . age": age,
+          "contrat salarié . convention collective . batiment etam . indemnité de licenciement . age à la fin de son préavis": age,
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
