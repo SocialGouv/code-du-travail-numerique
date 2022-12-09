@@ -19,11 +19,11 @@ describe("Formule pour l'indemnité conventionnel de licenciement pour la CC 650
       ${54} | ${7.91}   | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 1.2"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (0.91 an)", "Sref : Salaire de référence (1000 €)"]}
       ${54} | ${8}      | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 1.2"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
       ${54} | ${19}     | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 1.2"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (12 ans)", "Sref : Salaire de référence (1000 €)"]}
-      ${59} | ${0.91}   | ${""}                                                   | ${[]}
-      ${59} | ${1}      | ${"(1 / 5 * Sref * A1)"}                                | ${["A1 : Ancienneté de 1 ans à 7 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
-      ${59} | ${7.91}   | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 1.3"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (0.91 an)", "Sref : Salaire de référence (1000 €)"]}
-      ${59} | ${8}      | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 1.3"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
-      ${59} | ${19}     | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 1.3"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (12 ans)", "Sref : Salaire de référence (1000 €)"]}
+      ${58} | ${0.91}   | ${""}                                                   | ${[]}
+      ${58} | ${1}      | ${"(1 / 5 * Sref * A1)"}                                | ${["A1 : Ancienneté de 1 ans à 7 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
+      ${58} | ${7.91}   | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 1.3"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (0.91 an)", "Sref : Salaire de référence (1000 €)"]}
+      ${58} | ${8}      | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 1.3"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
+      ${58} | ${19}     | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 1.3"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (12 ans)", "Sref : Salaire de référence (1000 €)"]}
       ${61} | ${0.91}   | ${""}                                                   | ${[]}
       ${61} | ${1}      | ${"(1 / 5 * Sref * A1) * 0.95"}                         | ${["A1 : Ancienneté de 1 ans à 7 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
       ${61} | ${7.91}   | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 0.95"} | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (0.91 an)", "Sref : Salaire de référence (1000 €)"]}

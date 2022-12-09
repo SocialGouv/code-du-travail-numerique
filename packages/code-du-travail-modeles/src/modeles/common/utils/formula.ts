@@ -134,9 +134,14 @@ export const cleanFormula = (formule: string): string => {
   const withoutSpaceAndPlus = formulaWithoutCrochet.replace(/^(\s|\+)+/, "");
   // detect if there is a + in the formula
   const hasPlus = withoutSpaceAndPlus.includes("+");
+  // detect if there is (( and )) in the formula
+  const hasDuplicateParenthesisStart = withoutSpaceAndPlus.includes("((");
+  const hasDuplicateParenthesisEnd = withoutSpaceAndPlus.includes("))");
   // remove duplicate (( and ))
   const withoutDuplicateParenthesis = withoutSpaceAndPlus
     .replace(/\(\(/g, "(")
     .replace(/\)\)/g, ")");
-  return hasPlus ? withoutSpaceAndPlus : withoutDuplicateParenthesis;
+  return !hasPlus && hasDuplicateParenthesisStart && hasDuplicateParenthesisEnd
+    ? withoutDuplicateParenthesis
+    : withoutSpaceAndPlus;
 };
