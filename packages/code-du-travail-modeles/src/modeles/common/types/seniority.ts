@@ -25,6 +25,8 @@ export enum SupportedCcIndemniteLicenciement {
   IDCC1596 = "IDCC1596",
   IDCC0029 = "IDCC29",
   IDCC0044 = "IDCC44",
+  IDCC1517 = "IDCC1517",
+  IDCC2098 = "IDCC2098",
   default = "default",
 }
 
@@ -50,10 +52,11 @@ export interface ISeniority<T extends SupportedCcIndemniteLicenciement> {
   computeSeniority: (args: SeniorityProps<T>) => SeniorityResult;
 }
 
-export type SeniorityProps<T> =
-  T extends SupportedCcIndemniteLicenciement.IDCC0016
-    ? CC0016SeniorityProps
-    : LegalSeniorityProps;
+export type SeniorityProps<
+  T
+> = T extends SupportedCcIndemniteLicenciement.IDCC0016
+  ? CC0016SeniorityProps
+  : LegalSeniorityProps;
 
 export type SeniorityResult = {
   value: number;

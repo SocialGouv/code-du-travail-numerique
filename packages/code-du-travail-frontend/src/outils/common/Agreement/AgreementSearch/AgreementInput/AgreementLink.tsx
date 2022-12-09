@@ -1,4 +1,4 @@
-import { formatIdcc } from "@cdt/data";
+import { formatIdcc } from "@socialgouv/modeles-social";
 import { Paragraph } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";

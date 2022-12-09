@@ -10,8 +10,7 @@ import type {
 import { MotifKeys } from "../../common";
 
 export class Seniority1486
-  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC1486>
-{
+  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC1486> {
   protected motifs: Motif[];
 
   constructor(motifs: Motif[]) {

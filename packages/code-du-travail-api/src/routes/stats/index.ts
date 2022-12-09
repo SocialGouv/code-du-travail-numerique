@@ -5,7 +5,7 @@ import elasticsearchClient from "../../conf/elasticsearch";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 
 const Router = require("koa-router");
-const fetch = require("node-fetch");
+const fetch = require("node-fetch-commonjs");
 
 const { DOCUMENTS } = require("@socialgouv/cdtn-elasticsearch");
 const docsCountBody = require("../docs-count/docCount.elastic");

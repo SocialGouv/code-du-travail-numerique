@@ -4,7 +4,7 @@ import {
 } from "../../../../common";
 import { CategoryPro44 } from "../../salary";
 
-describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 44", () => {
+describe("Formule indemnité licenciement - 44", () => {
   test.each`
     category                     | isEconomicFiring | age   | seniority | expectedFormula                                                              | expectedExplanations
     ${CategoryPro44.ouvrier}     | ${false}         | ${45} | ${0}      | ${""}                                                                        | ${[]}

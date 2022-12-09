@@ -17,10 +17,8 @@ describe("CC 1351", () => {
         const result = engine
           .setSituation({
             "contrat salarié . convention collective": "'IDCC1351'",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salaireRef,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
           })
           .evaluate(
             "contrat salarié . indemnité de licenciement . résultat conventionnel"

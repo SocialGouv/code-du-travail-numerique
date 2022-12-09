@@ -2,6 +2,7 @@ import type Engine from "publicodes";
 import type { RuleNode } from "publicodes";
 
 import type { Formula } from "../types";
+import { nonNullable } from "./array";
 
 export type NodeFormula = {
   formula: string;
@@ -39,29 +40,8 @@ function getRulesWithFormuleAndNodeValue(engine: Engine): RuleNodeFormula[] {
 
 const FORMULE_VAR_REGEX = /\$formule/g;
 
-export function filterIndemniteLicenciement(
-  rules: RuleNodeFormula[]
-): RuleNodeFormula[] {
-  if (
-    rules.some((rule) => rule.dottedName.includes("résultat conventionnel"))
-  ) {
-    return rules.filter((rule) => !rule.dottedName.includes("résultat légal"));
-  }
-  return rules;
-}
-
-export function getFormule(
-  engine: Engine,
-  filter:
-    | ((rules: RuleNodeFormula[]) => RuleNodeFormula[])
-    | null = filterIndemniteLicenciement
-): Formula {
-  let rules = getRulesWithFormuleAndNodeValue(engine);
-
-  if (filter !== null) {
-    rules = filter(rules);
-  }
-
+export function getFormule(engine: Engine): Formula {
+  const rules = getRulesWithFormuleAndNodeValue(engine);
   const formula = rules.reduce(
     (
       formule: Required<NodeFormula>,
@@ -107,18 +87,49 @@ export function getFormule(
             }'`
           );
         }
-        const unit = result.unit.numerators[0];
-        return `${text} (${round(Number(result.nodeValue))} ${unit}${pluralize(
-          unit,
-          result.nodeValue as number
-        )})`;
+        const nodeValue = Number(result.nodeValue);
+        if (nodeValue && nodeValue !== 0) {
+          const unit = result.unit.numerators[0];
+          return `${text} (${round(nodeValue)} ${unit}${pluralize(
+            unit,
+            result.nodeValue as number
+          )})`;
+        } else {
+          formula.formula = removePartFromFormula(formula.formula, text);
+        }
       });
     })
+    .filter(nonNullable)
     .sort((a, b) => a.localeCompare(b));
 
   return {
     annotations: formula.annotations,
     explanations,
-    formula: formula.formula,
+    formula: cleanFormula(formula.formula),
   };
 }
+
+const ANY_CHARS_BUT_BRACKET = "[^[]*";
+export const removePartFromFormula = (
+  formule: string,
+  explanation: string
+): string => {
+  if (formule.includes("[") && formule.includes("]")) {
+    const formulaKey = explanation.split(":")[0].replace(" ", "");
+    return formule.replace(
+      new RegExp(
+        `\\[${ANY_CHARS_BUT_BRACKET}${formulaKey}${ANY_CHARS_BUT_BRACKET}?\\]`,
+        "g"
+      ),
+      ""
+    );
+  }
+  return formule;
+};
+
+export const cleanFormula = (formule: string): string => {
+  // remove all the [ ] from the formula
+  const formulaWithoutCrochet = formule.replace(/\[|\]/g, "");
+  // remove space and + at the beginning of the formula
+  return formulaWithoutCrochet.replace(/^(\s|\+)+/, "");
+};

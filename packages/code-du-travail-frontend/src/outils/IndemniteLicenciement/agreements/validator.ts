@@ -1,5 +1,5 @@
 import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
-import { GetState, SetState } from "zustand";
+import { StoreApi } from "zustand";
 import { IndemniteLicenciementStepName } from "..";
 import { MainStore } from "../store";
 import { validateAgreement1516 } from "./1516-organismes-formation";
@@ -11,8 +11,8 @@ import { validateAgreement44 } from "./44-industries-chimiques";
 const validatorAgreement = (
   idcc: SupportedCcIndemniteLicenciement,
   step: IndemniteLicenciementStepName,
-  get: GetState<any>,
-  set: SetState<MainStore>
+  get: StoreApi<any>["getState"],
+  set: StoreApi<MainStore>["setState"]
 ): boolean => {
   switch (true) {
     case SupportedCcIndemniteLicenciement.IDCC1516 === idcc &&

@@ -13,7 +13,6 @@ import React from "react";
 import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 import { Layout } from "../../src/layout/Layout";
-import { getTools } from "../api/simulateurs/index";
 import { DocumentsTile } from "../index";
 import { fetchTools } from "../../src/outils/service";
 
@@ -26,7 +25,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
     <Section>
       <Container>
         <PageTitle>Retrouvez tous nos outils</PageTitle>
-        <Grid>
+        <Grid data-testid="tools-list">
           {DocumentsTile}
           {cdtnSimulators.map(
             ({
@@ -51,6 +50,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
                     icon={icons[icon]}
                     titleTagType="h2"
                     centerTitle
+                    data-testid="tools-list-items-internal"
                   >
                     <Paragraph noMargin>
                       {description ?? metaDescription}
@@ -88,7 +88,14 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
 export async function getServerSideProps() {
   const tools = await fetchTools();
   return {
-    props: { ...getTools(), cdtnSimulators: tools },
+    props: {
+      cdtnSimulators: tools.filter(
+        (tool) => tool.displayTool && tool.source === SOURCES.TOOLS
+      ),
+      externalTools: tools.filter(
+        (tool) => tool.displayTool && tool.source === SOURCES.EXTERNALS
+      ),
+    },
   };
 }
 

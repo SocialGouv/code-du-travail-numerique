@@ -9,8 +9,7 @@ import type {
 } from "../../common";
 
 export class Seniority1090
-  implements ISeniority<SupportedCcIndemniteLicenciement.default>
-{
+  implements ISeniority<SupportedCcIndemniteLicenciement.default> {
   protected motifs: Motif[];
 
   constructor(motifs: Motif[]) {

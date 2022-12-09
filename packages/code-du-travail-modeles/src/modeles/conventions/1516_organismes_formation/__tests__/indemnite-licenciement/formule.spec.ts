@@ -3,7 +3,7 @@ import {
   SupportedCcIndemniteLicenciement,
 } from "../../../../common";
 
-describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 1516", () => {
+describe("Formule indemnité licenciement - 1516", () => {
   test.each`
     seniority | expectedFormula                                 | expectedExplanations
     ${7 / 12} | ${""}                                           | ${[]}

@@ -11,8 +11,7 @@ export type CC1516ReferenceSalaryProps = {
   salairesPendantPreavis: SalaryPeriods[];
 };
 export class ReferenceSalary1516
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1516>
-{
+  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1516> {
   /**
    * Règle :
    * - soit 1/12*S

@@ -26,10 +26,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 1090", () => {
       const result = engine
         .setSituation({
           "contrat salarié . convention collective": "'IDCC1090'",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-            seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            salary,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         })
         .evaluate(
           "contrat salarié . indemnité de licenciement . résultat conventionnel"

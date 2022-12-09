@@ -52,10 +52,11 @@ switch (idcc) {
 Enfin si on souhaite pimper les types, on peut le faire dans `types`.
 
 ```ts
-export type SeniorityProps<T> =
-  T extends SupportedCcIndemniteLicenciement.IDCC2511
-    ? LegalSeniorityProps
-    : LegalSeniorityProps;
+export type SeniorityProps<
+  T
+> = T extends SupportedCcIndemniteLicenciement.IDCC2511
+  ? LegalSeniorityProps
+  : LegalSeniorityProps;
 ```
 
 ### 3. Ajouter la formule de calcul (`code-du-travail-modeles`)
@@ -207,8 +208,8 @@ export type AgreementStoreSlice =
   | MaConventionCollectiveSlice;
 
 export const createRootAgreementsStore = (
-  set: SetState<MainStore>,
-  get: GetState<MainStore>
+  set: StoreApi<MainStore>["setState"],
+  get: StoreApi<MainStore>["getState"]
 ) => ({
   ...createAgreement1516StoreSalaires(set, get),
   ...createMaCCStore(set, get),
@@ -221,8 +222,8 @@ Puis, il faut ajouter le validator dans `src/outils/IndemniteLicenciement/valida
 export const validateAgreement = (
   idcc: SupportedCcIndemniteLicenciement,
   step: IndemniteLicenciementStepName,
-  get: GetState<any>,
-  set: SetState<MainStore>
+  get: StoreApi<any>["getState"],
+  set: StoreApi<MainStore>["setState"]
 ): boolean => {
   switch (true) {
     case SupportedCcIndemniteLicenciement.IDCC1516 === idcc &&

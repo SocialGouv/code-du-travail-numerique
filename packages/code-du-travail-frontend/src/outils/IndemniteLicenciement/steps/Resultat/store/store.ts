@@ -27,7 +27,7 @@ import {
   getAgreementReferenceSalary,
 } from "../../../agreements";
 import { MainStore } from "../../../store";
-import { GetState } from "zustand";
+import { StoreApi } from "zustand";
 import getAgreementSeniority from "../../../agreements/seniority";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 
@@ -127,7 +127,7 @@ const createResultStore: StoreSlice<
 
         agreementRefSalary = getAgreementReferenceSalary(
           `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
-          get as GetState<MainStore>
+          get as StoreApi<MainStore>["getState"]
         );
 
         agreementInformations = get()
@@ -144,7 +144,7 @@ const createResultStore: StoreSlice<
 
         agreementSeniority = getAgreementSeniority(
           `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
-          get as GetState<MainStore>
+          get as StoreApi<MainStore>["getState"]
         );
         publicodesSituationConventionnel = publicodes.setSituation(
           mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
@@ -168,7 +168,7 @@ const createResultStore: StoreSlice<
             `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
             agreementSeniority,
             agreementRefSalary,
-            get as GetState<MainStore>
+            get as StoreApi<MainStore>["getState"]
           ) || publicodes.getFormule();
 
         agreementNotifications = publicodes.getNotifications();
@@ -191,19 +191,15 @@ const createResultStore: StoreSlice<
           state.resultData.input.legalSeniority = legalSeniority.value;
           state.resultData.input.legalFormula = legalFormula;
           state.resultData.input.legalReferences = legalReferences;
-          state.resultData.input.publicodesLegalResult =
-            publicodesSituationLegal;
-          state.resultData.input.publicodesAgreementResult =
-            publicodesSituationConventionnel;
+          state.resultData.input.publicodesLegalResult = publicodesSituationLegal;
+          state.resultData.input.publicodesAgreementResult = publicodesSituationConventionnel;
           state.resultData.input.agreementSeniority = agreementSeniority;
           state.resultData.input.agreementReferences = agreementReferences;
           state.resultData.input.agreementFormula = agreementFormula;
           state.resultData.input.isAgreementBetter = isAgreementBetter;
           state.resultData.input.agreementInformations = agreementInformations;
-          state.resultData.input.agreementNotifications =
-            agreementNotifications;
-          state.resultData.input.agreementHasNoLegalIndemnity =
-            agreementHasNoLegalIndemnity;
+          state.resultData.input.agreementNotifications = agreementNotifications;
+          state.resultData.input.agreementHasNoLegalIndemnity = agreementHasNoLegalIndemnity;
         })
       );
     },

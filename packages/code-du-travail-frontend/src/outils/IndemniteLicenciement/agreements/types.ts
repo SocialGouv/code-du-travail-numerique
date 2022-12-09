@@ -1,4 +1,4 @@
-import { GetState, SetState } from "zustand";
+import { StoreApi } from "zustand";
 import { MainStore } from "../store";
 import {
   Agreement1516StoreError,
@@ -50,8 +50,8 @@ export type AgreementStoreSlice = Agreement1516StoreSlice &
   Agreement29StoreSlice;
 
 export const createRootAgreementsStore = (
-  set: SetState<MainStore>,
-  get: GetState<MainStore>
+  set: StoreApi<MainStore>["setState"],
+  get: StoreApi<MainStore>["getState"]
 ) => ({
   ...createAgreement1516StoreSalaires(set, get),
   ...createAgreement1527StoreSalaires(set, get),

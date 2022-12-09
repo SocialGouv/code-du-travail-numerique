@@ -26,12 +26,10 @@ describe("Indemnité légale de licenciement pour un employé", () => {
     ({ seniority, salary, expectedCompensation }) => {
       const result = engine
         .setSituation({
-          "contrat salarié . indemnité de licenciement . ancienneté en année":
-            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             "non",
-          "contrat salarié . indemnité de licenciement . salaire de référence":
-            salary,
+          "contrat salarié . indemnité de licenciement . salaire de référence": salary,
         })
         .evaluate(
           "contrat salarié . indemnité de licenciement . résultat légal"
@@ -62,12 +60,10 @@ describe("Indemnité légale de licenciement pour un employé", () => {
     ({ seniority, salary, expectedCompensation }) => {
       const result = engine
         .setSituation({
-          "contrat salarié . indemnité de licenciement . ancienneté en année":
-            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
             "oui",
-          "contrat salarié . indemnité de licenciement . salaire de référence":
-            salary,
+          "contrat salarié . indemnité de licenciement . salaire de référence": salary,
         })
         .evaluate(
           "contrat salarié . indemnité de licenciement . résultat légal"

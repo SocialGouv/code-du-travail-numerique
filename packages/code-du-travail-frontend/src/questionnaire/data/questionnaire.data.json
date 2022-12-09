@@ -1,0 +1,730 @@
+{
+    "text": "Vous êtes :",
+    "trackingName": "profil",
+    "description": "Quel que soit votre profil, les informations données sont identiques.\nSeule la formulation des questions peut être différente afin de vous guider au mieux dans ce parcours.",
+    "responses": [
+        {
+            "text": "Salarié",
+            "statement": "Vous êtes salarié",
+            "trackingName": "salarie",
+            "neutralStatementRef": true,
+            "question": {
+                "text": "Par quel type de licenciement êtes-vous concerné ?",
+                "trackingName": "type_de_licenciement",
+                "responses": [
+                    {
+                        "text": "Un licenciement pour motif personnel",
+                        "statement": "Vous êtes concerné par un licenciement pour motif personnel",
+                        "neutralStatementRef": true,
+                        "trackingName": "licenciement_personnel",
+                        "info": "Licenciement dont le motif est lié à votre personne. Par exemple : faute, inaptitude constatée par le médecin du travail ou autres causes réelles et sérieuses",
+                        "question": {
+                            "text": "Quel est le motif de ce licenciement ?",
+                            "trackingName": "motif_de_licenciement",
+                            "responses": [
+                                {
+                                    "trackingName": "licenciement_disciplinaire",
+                                    "text": "Une faute qui vous est reprochée",
+                                    "statement": "Vous êtes concerné par un licenciement pour motif disciplinaire",
+                                    "neutralStatement": "Un licenciement suite à une faute qui est reprochée au salarié",
+                                    "description": "motif disciplinaire",
+                                    "slug": "licenciement-pour-motif-disciplinaire"
+                                },
+                                {
+                                    "trackingName": "licenciement_inaptitude",
+                                    "text": "Une inaptitude constatée par le médecin du travail",
+                                    "statement": "Vous êtes concerné par un licenciement suite à une inaptitude constatée par le médecin du travail",
+                                    "neutralStatement": "Un licenciement suite à une inaptitude du salarié constatée par le médecin du travail",
+                                    "slug": "licenciement-pour-inaptitude-medicale"
+                                },
+                                {
+                                    "trackingName": "licenciement_non_disciplinaire",
+                                    "text": "Vous n'êtes concerné par aucun de ces cas",
+                                    "statement": "Vous êtes concerné par un licenciement pour motif non disciplinaire",
+                                    "neutralStatement": "Un licenciement qui n'est pas fondé sur une faute du salarié",
+                                    "description": "motif non disciplinaire",
+                                    "slug": "licenciement-pour-motif-non-disciplinaire",
+                                    "info": "Le licenciement pour motif non disciplinaire n’est pas fondé sur une faute du salarié. Attention : l’employeur doit toujours justifier d’une cause réelle et sérieuse afin de procéder au licenciement du salarié"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "text": "Un licenciement pour motif économique",
+                        "statement": "Vous êtes concerné par un licenciement pour motif économique",
+                        "neutralStatement": "Un licenciement pour motif économique",
+                        "trackingName": "licenciement_economique",
+                        "info": "Licenciement dont le motif n’est pas lié à votre personne mais à l’activité économique de l’entreprise. Par exemple : difficultés économiques, réorganisation de l’entreprise, cessation d’activité de l’entreprise...",
+                        "question": {
+                            "text": "Combien de personnes sont concernées par ce licenciement ?",
+                            "trackingName": "nombre_de_salariés_licenciés",
+                            "responses": [
+                                {
+                                    "text": "Seulement vous",
+                                    "trackingName": "1_seul_salarié",
+                                    "statement": "Seulement vous êtes concerné par ce licenciement",
+                                    "neutralStatement": "1 seul salarié est concerné par ce licenciement",
+                                    "question": {
+                                        "text": "Votre entreprise emploie :",
+                                        "trackingName": "nombre_de_salariés_dans_l_entreprise",
+                                        "responses": [
+                                            {
+                                                "text": "Moins de 1000 salariés",
+                                                "statement": "Votre entreprise emploie moins de 1000 salariés",
+                                                "neutralStatement": "Dans une entreprise qui emploie moins de 1000 salariés",
+                                                "trackingName": "moins_de_1000_salaries",
+                                                "question": {
+                                                    "text": "Votre entreprise appartient-elle à un groupe français ou européen d’au moins 1000 salariés ?",
+                                                    "trackingName": "appartenance_groupe",
+                                                    "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Oui",
+                                                            "trackingName": "appartenance_groupe",
+                                                            "statement": "Votre entreprise appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                            "slug": "licenciement-individuel-pour-motif-economique-le-conge-de-reclassement-cr"
+                                                        },
+                                                        {
+                                                            "text": "Non",
+                                                            "trackingName": "pas_d_appartenance_groupe",
+                                                            "statement": "Votre entreprise n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                            "neutralStatement": "Dans une entreprise qui n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                            "slug": "licenciement-individuel-pour-motif-economique-le-contrat-de-securisation-professionnelle-csp"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "text": "Au moins 1000 salariés",
+                                                "statement": "Votre entreprise emploie au moins 1000 salariés",
+                                                "neutralStatement": "Dans une entreprise ou un groupe qui emploie au moins 1000 salariés",
+                                                "neutralStatementInfo": "Soit une entreprise d'au moins 1000 salariés soit une entreprise de moins de 1000 salariés mais qui appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                "trackingName": "plus_de_1000_salaries",
+                                                "slug": "licenciement-individuel-pour-motif-economique-le-conge-de-reclassement-cr"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "text": "Entre 2 et 9 salariés",
+                                    "trackingName": "entre_2_et_9_salariés",
+                                    "statement": "Entre 2 et 9 salariés sont concernés par ce licenciement",
+                                    "neutralStatement": "Entre 2 et 9 salariés sont concernés par ce licenciement",
+                                    "description": "vous inclus",
+                                    "question": {
+                                        "text": "Votre entreprise dispose-t-elle d’un Comité Social et Economique (CSE) ?",
+                                        "trackingName": "CSE",
+                                        "info": "Le CSE est une instance unique chargée de représenter le personnel dans une entreprise. Elle remplace les anciennes instances représentatives du personnel dans l’entreprise qui étaient les délégués du personnel, le comité d’entreprise et le CHSCT. Sa mise en place est obligatoire dans les entreprises dont l’effectif atteint 11 salariés pendant 12 mois consécutifs.",
+                                        "responses": [
+                                            {
+                                                "text": "Oui",
+                                                "trackingName": "CSE",
+                                                "statement": "Votre entreprise dispose d'un CSE",
+                                                "neutralStatement": "Dans une entreprise avec un CSE",
+                                                "question": {
+                                                    "text": "Votre entreprise emploie :",
+                                                    "trackingName": "nombre_de_salariés_dans_l_entreprise",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Moins de 1000 salariés",
+                                                            "statement": "Votre entreprise emploie moins de 1000 salariés",
+                                                            "neutralStatement": "Dans une entreprise qui emploie moins de 1000 salariés",
+                                                            "trackingName": "moins_de_1000_salaries",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe français ou européen d’au moins 1000 salariés ?",
+                                                                "trackingName": "appartenance_groupe",
+                                                                "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "trackingName": "appartenance_groupe",
+                                                                        "statement": "Votre entreprise appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "petit-licenciement-collectif-2-a-9-salaries-pour-motif-economique-dans-une-entreprise-avec-cse-le-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "trackingName": "pas_d_appartenance_groupe",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "neutralStatement": "Dans une entreprise qui n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "petit-licenciement-collectif-2-a-9-salaries-pour-motif-economique-dans-une-entreprise-avec-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "Au moins 1000 salariés",
+                                                            "statement": "Votre entreprise emploie au moins 1000 salariés",
+                                                            "neutralStatement": "Dans une entreprise ou un groupe qui emploie au moins 1000 salariés",
+                                                            "neutralStatementInfo": "Soit une entreprise d'au moins 1000 salariés soit une entreprise de moins de 1000 salariés mais qui appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                            "trackingName": "plus_de_1000_salaries",
+                                                            "slug": "petit-licenciement-collectif-2-a-9-salaries-pour-motif-economique-dans-une-entreprise-avec-cse-le-conge-de-reclassement"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "text": "Non",
+                                                "trackingName": "pas_de_CSE",
+                                                "statement": "Votre entreprise ne dispose pas d'un CSE",
+                                                "neutralStatement": "Dans une entreprise sans CSE",
+                                                "question": {
+                                                    "text": "Votre entreprise emploie :",
+                                                    "trackingName": "nombre_de_salariés_dans_l_entreprise",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Moins de 1000 salariés",
+                                                            "statement": "Votre entreprise emploie moins de 1000 salariés",
+                                                            "neutralStatement": "Dans une entreprise qui emploie moins de 1000 salariés",
+                                                            "trackingName": "moins_de_1000_salaries",
+                                                            "question": {
+                                                                "trackingName": "appartenance_groupe",
+                                                                "text": "Votre entreprise appartient-elle à un groupe français ou européen d’au moins 1000 salariés ?",
+                                                                "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "trackingName": "appartenance_groupe",
+                                                                        "statement": "Votre entreprise appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "petit-licenciement-collectif-pour-motif-economique-dans-une-entreprise-sans-cse-la-mise-en-place-du-conge-de-reclassement-cr"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "trackingName": "pas_d_appartenance_groupe",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "neutralStatement": "Dans une entreprise qui n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "petit-licenciement-collectif-pour-motif-economique-dans-une-entreprise-sans-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "Au moins 1000 salariés",
+                                                            "statement": "Votre entreprise emploie au moins 1000 salariés",
+                                                            "neutralStatement": "Dans une entreprise ou un groupe qui emploie au moins 1000 salariés",
+                                                            "neutralStatementInfo": "Soit une entreprise d'au moins 1000 salariés soit une entreprise de moins de 1000 salariés mais qui appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                            "trackingName": "plus_de_1000_salaries",
+                                                            "slug": "petit-licenciement-collectif-pour-motif-economique-dans-une-entreprise-sans-cse-la-mise-en-place-du-conge-de-reclassement-cr"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "text": "Au minimum 10 salariés",
+                                    "trackingName": "au_minimum_10_salaries",
+                                    "statement": "Au minimum 10 salariés sont concernés par ce licenciement",
+                                    "neutralStatement": "Au minimum 10 salariés sont concernés par ce licenciement",
+                                    "description": "vous inclus",
+                                    "question": {
+                                        "trackingName": "CSE",
+                                        "text": "Votre entreprise dispose-t-elle d’un Comité Social et Economique (CSE) ?",
+                                        "info": "Le CSE est une instance unique chargée de représenter le personnel dans une entreprise. Elle remplace les anciennes instances représentatives du personnel dans l’entreprise qui étaient les délégués du personnel, le comité d’entreprise et le CHSCT. Sa mise en place est obligatoire dans les entreprises dont l’effectif atteint 11 salariés pendant 12 mois consécutifs.",
+                                        "responses": [
+                                            {
+                                                "text": "Oui",
+                                                "trackingName": "CSE",
+                                                "statement": "Votre entreprise dispose d'un CSE",
+                                                "neutralStatement": "Dans une entreprise avec un CSE",
+                                                "question": {
+                                                    "text": "Votre entreprise emploie :",
+                                                    "trackingName": "nombre_de_salariés_dans_l_entreprise",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Moins de 50 salariés",
+                                                            "statement": "Votre entreprise emploie moins de 50 salariés",
+                                                            "neutralStatement": "Dans une entreprise qui emploie moins de 50 salariés",
+                                                            "trackingName": "moins_de_50_salaries",
+                                                            "question": {
+                                                                "trackingName": "appartenance_groupe",
+                                                                "text": "Votre entreprise appartient-elle à un groupe français ou européen d’au moins 1000 salariés ?",
+                                                                "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "trackingName": "appartenance_groupe",
+                                                                        "statement": "Votre entreprise appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "neutralStatement": "Dans une entreprise qui appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-moins-de-50-salaries-avec-cse-le-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "trackingName": "pas_d_appartenance_groupe",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "neutralStatement": "Dans une entreprise qui n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-moins-de-50-salaries-avec-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "Entre 50 et 999 salariés",
+                                                            "statement": "Votre entreprise emploie entre 50 et 999 salariés",
+                                                            "neutralStatement": "Dans une entreprise qui emploie entre 50 et 999 salariés",
+                                                            "trackingName": "entre_50_et_999_salaries",
+                                                            "question": {
+                                                                "trackingName": "appartenance_groupe",
+                                                                "text": "Votre entreprise appartient-elle à un groupe français ou européen d’au moins 1000 salariés ?",
+                                                                "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "trackingName": "appartenance_groupe",
+                                                                        "statement": "Votre entreprise appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-avec-cse-le-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "trackingName": "pas_d_appartenance_groupe",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "neutralStatement": "Dans une entreprise qui n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-avec-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "Au moins 1000 salariés",
+                                                            "statement": "Votre entreprise emploie au moins 1000 salariés",
+                                                            "neutralStatement": "Dans une entreprise de 50 salariés et plus appartenant à un groupe français ou européen d'au moins 1000 salariés OU dans une entreprise d'au moins 1000 salariés",
+                                                            "trackingName": "plus_de_1000_salaries",
+                                                            "slug": "grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-avec-cse-le-conge-de-reclassement"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "text": "Non",
+                                                "trackingName": "pas_de_CSE",
+                                                "statement": "Votre entreprise ne dispose pas d'un CSE",
+                                                "neutralStatement": "Dans une entreprise sans CSE",
+                                                "question": {
+                                                    "trackingName": "nombre_de_salariés_dans_l_entreprise",
+                                                    "text": "Votre entreprise emploie :",
+                                                    "responses": [
+                                                        {
+                                                            "trackingName": "moins_de_50_salaries",
+                                                            "text": "Moins de 50 salariés",
+                                                            "statement": "Votre entreprise emploie moins de 50 salariés",
+                                                            "neutralStatement": "Dans une entreprise qui emploie moins de 50 salariés",
+                                                            "question": {
+                                                                "trackingName": "appartenance_groupe",
+                                                                "text": "Votre entreprise appartient-elle à un groupe français ou européen d’au moins 1000 salariés ?",
+                                                                "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
+                                                                "responses": [
+                                                                    {
+                                                                        "trackingName": "appartenance_groupe",
+                                                                        "text": "Oui",
+                                                                        "statement": "Votre entreprise appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "neutralStatement": "Dans une entreprise qui appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-moins-de-50-salaries-sans-cse-le-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "trackingName": "pas_d_appartenance_groupe",
+                                                                        "text": "Non",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "neutralStatement": "Dans une entreprise qui n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-moins-de-50-salaries-sans-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "trackingName": "entre_50_et_999_salaries",
+                                                            "text": "Entre 50 et 999 salariés",
+                                                            "statement": "Votre entreprise emploie entre 50 et 999 salariés",
+                                                            "neutralStatement": "Dans une entreprise qui emploie entre 50 et 999 salariés",
+                                                            "question": {
+                                                                "trackingName": "appartenance_groupe",
+                                                                "text": "Votre entreprise appartient-elle à un groupe français ou européen d’au moins 1000 salariés ?",
+                                                                "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
+                                                                "responses": [
+                                                                    {
+                                                                        "trackingName": "appartenance_groupe",
+                                                                        "text": "Oui",
+                                                                        "statement": "Votre entreprise appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-sans-cse-le-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "trackingName": "pas_d_appartenance_groupe",
+                                                                        "text": "Non",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "neutralStatement": "Dans une entreprise qui n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-sans-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "trackingName": "plus_de_1000_salaries",
+                                                            "text": "Au moins 1000 salariés",
+                                                            "statement": "Votre entreprise emploie au moins 1000 salariés",
+                                                            "neutralStatement": "Dans une entreprise de 50 salariés et plus appartenant à un groupe français ou européen d'au moins 1000 salariés OU dans une entreprise d'au moins 1000 salariés",
+                                                            "slug": "grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-sans-cse-le-conge-de-reclassement"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "text": "Un licenciement suite à un accord de performance collective",
+                        "statement": "Vous êtes concerné par un licenciement suite à un accord de performance collective",
+                        "neutralStatement": "Un licenciement déclenché car le salarié a refusé qu’un accord de performance collective lui soit appliqué",
+                        "trackingName": "licenciement_apc",
+                        "description": "APC",
+                        "info": "Licenciement déclenché car vous avez refusé qu’un accord de performance collective vous soit appliqué.",
+                        "slug": "licenciement-suite-a-un-accord-de-performance-collective-apc"
+                    }
+                ]
+            }
+        },
+        {
+            "text": "Employeur",
+            "statement": "Vous êtes employeur",
+            "trackingName": "employeur",
+            "question": {
+                "trackingName": "type_de_licenciement",
+                "text": "Par quel type de licenciement êtes-vous concerné ?",
+                "responses": [
+                    {
+                        "text": "Un licenciement pour motif personnel",
+                        "statement": "Vous êtes concerné par un licenciement pour motif personnel",
+                        "trackingName": "licenciement_personnel",
+                        "info": "Licenciement dont le motif est lié à la personne. Par exemple : faute, inaptitude constatée par le médecin du travail ou autres causes réelles et sérieuses",
+                        "question": {
+                            "text": "Quel est le motif de ce licenciement ?",
+                            "trackingName": "motif_de_licenciement",
+                            "responses": [
+                                {
+                                    "text": "Une faute qui est reprochée au salarié",
+                                    "trackingName": "licenciement_disciplinaire",
+                                    "statement": "Vous êtes concerné par un licenciement pour motif disciplinaire",
+                                    "description": "motif disciplinaire",
+                                    "slug": "licenciement-pour-motif-disciplinaire"
+                                },
+                                {
+                                    "text": "Une inaptitude du salarié constatée par le médecin du travail",
+                                    "trackingName": "licenciement_inaptitude",
+                                    "statement": "Vous êtes concerné par un licenciement suite à une inaptitude constatée par le médecin du travail",
+                                    "slug": "licenciement-pour-inaptitude-medicale"
+                                },
+                                {
+                                    "text": "Aucun de ces cas",
+                                    "trackingName": "licenciement_non_disciplinaire",
+                                    "statement": "Vous êtes concerné par un licenciement pour motif non disciplinaire",
+                                    "info": "Le licenciement pour motif non disciplinaire n’est pas fondé sur une faute du salarié. Attention : l’employeur doit toujours justifier d’une cause réelle et sérieuse afin de procéder au licenciement du salarié",
+                                    "description": "motif non disciplinaire",
+                                    "slug": "licenciement-pour-motif-non-disciplinaire"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "text": "Un licenciement pour motif économique",
+                        "statement": "Vous êtes concerné par un licenciement pour motif économique",
+                        "response": "Vous êtes concerné par un licenciement pour motif économique",
+                        "trackingName": "licenciement_economique",
+                        "info": "Licenciement dont le motif n’est pas lié à la personne mais à l’activité économique de l’entreprise. Par exemple : difficultés économiques, réorganisation de l’entreprise, cessation d’activité de l’entreprise...",
+                        "question": {
+                            "trackingName": "nombre_de_salariés_licenciés",
+                            "text": "Combien de salariés sont concernés par ce licenciement ?",
+                            "responses": [
+                                {
+                                    "text": "1 seul salarié",
+                                    "trackingName": "1_seul_salarié",
+                                    "statement": "1 seul salarié est concerné par ce licenciement",
+                                    "question": {
+                                        "text": "Votre entreprise emploie :",
+                                        "trackingName": "nombre_de_salariés_dans_l_entreprise",
+                                        "responses": [
+                                            {
+                                                "text": "Moins de 1000 salariés",
+                                                "statement": "Votre entreprise emploie moins de 1000 salariés",
+                                                "trackingName": "moins_de_1000_salaries",
+                                                "question": {
+                                                    "text": "Votre entreprise appartient-elle à un groupe français ou européen d’au moins 1000 salariés ?",
+                                                    "trackingName": "appartenance_groupe",
+                                                    "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Oui",
+                                                            "trackingName": "appartenance_groupe",
+                                                            "statement": "Votre entreprise appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                            "slug": "licenciement-individuel-pour-motif-economique-le-conge-de-reclassement-cr"
+                                                        },
+                                                        {
+                                                            "text": "Non",
+                                                            "trackingName": "pas_d_appartenance_groupe",
+                                                            "statement": "Votre entreprise n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                            "slug": "licenciement-individuel-pour-motif-economique-le-contrat-de-securisation-professionnelle-csp"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "text": "Au moins 1000 salariés",
+                                                "statement": "Votre entreprise emploie au moins 1000 salariés",
+                                                "trackingName": "plus_de_1000_salaries",
+                                                "slug": "licenciement-individuel-pour-motif-economique-le-conge-de-reclassement-cr"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "text": "Entre 2 et 9 salariés",
+                                    "trackingName": "entre_2_et_9_salariés",
+                                    "statement": "Entre 2 et 9 salariés sont concernés par ce licenciement",
+                                    "question": {
+                                        "text": "Votre entreprise dispose-t-elle d’un Comité Social et Economique (CSE) ?",
+                                        "trackingName": "CSE",
+                                        "info": "Le CSE est une instance unique chargée de représenter le personnel dans une entreprise. Elle remplace les anciennes instances représentatives du personnel dans l’entreprise qui étaient les délégués du personnel, le comité d’entreprise et le CHSCT. Sa mise en place est obligatoire dans les entreprises dont l’effectif atteint 11 salariés pendant 12 mois consécutifs.",
+                                        "responses": [
+                                            {
+                                                "text": "Oui",
+                                                "trackingName": "CSE",
+                                                "statement": "Votre entreprise dispose d'un CSE",
+                                                "question": {
+                                                    "text": "Votre entreprise emploie :",
+                                                    "trackingName": "nombre_de_salariés_dans_l_entreprise",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Moins de 1000 salariés",
+                                                            "statement": "Votre entreprise emploie moins de 1000 salariés",
+                                                            "trackingName": "moins_de_1000_salaries",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe français ou européen d’au moins 1000 salariés ?",
+                                                                "trackingName": "appartenance_groupe",
+                                                                "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "trackingName": "appartenance_groupe",
+                                                                        "statement": "Votre entreprise appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "petit-licenciement-collectif-2-a-9-salaries-pour-motif-economique-dans-une-entreprise-avec-cse-le-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "trackingName": "pas_d_appartenance_groupe",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "petit-licenciement-collectif-2-a-9-salaries-pour-motif-economique-dans-une-entreprise-avec-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "Au moins 1000 salariés",
+                                                            "statement": "Votre entreprise emploie au moins 1000 salariés",
+                                                            "trackingName": "plus_de_1000_salaries",
+                                                            "slug": "petit-licenciement-collectif-2-a-9-salaries-pour-motif-economique-dans-une-entreprise-avec-cse-le-conge-de-reclassement"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "text": "Non",
+                                                "trackingName": "pas_de_CSE",
+                                                "statement": "Votre entreprise ne dispose pas d'un CSE",
+                                                "question": {
+                                                    "text": "Votre entreprise emploie :",
+                                                    "trackingName": "nombre_de_salariés_dans_l_entreprise",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Moins de 1000 salariés",
+                                                            "statement": "Votre entreprise emploie moins de 1000 salariés",
+                                                            "trackingName": "moins_de_1000_salaries",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe français ou européen d’au moins 1000 salariés ?",
+                                                                "trackingName": "appartenance_groupe",
+                                                                "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "trackingName": "appartenance_groupe",
+                                                                        "statement": "Votre entreprise appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "petit-licenciement-collectif-pour-motif-economique-dans-une-entreprise-sans-cse-la-mise-en-place-du-conge-de-reclassement-cr"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "trackingName": "pas_d_appartenance_groupe",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "petit-licenciement-collectif-pour-motif-economique-dans-une-entreprise-sans-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "Au moins 1000 salariés",
+                                                            "statement": "Votre entreprise emploie au moins 1000 salariés",
+                                                            "trackingName": "plus_de_1000_salaries",
+                                                            "slug": "petit-licenciement-collectif-pour-motif-economique-dans-une-entreprise-sans-cse-la-mise-en-place-du-conge-de-reclassement-cr"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "text": "Au minimum 10 salariés",
+                                    "trackingName": "au_minimum_10_salaries",
+                                    "statement": "Au minimum 10 salariés sont concernés par ce licenciement",
+                                    "question": {
+                                        "text": "Votre entreprise dispose-t-elle d’un Comité Social et Economique (CSE) ?",
+                                        "trackingName": "CSE",
+                                        "info": "Le CSE est une instance unique chargée de représenter le personnel dans une entreprise. Elle remplace les anciennes instances représentatives du personnel dans l’entreprise qui étaient les délégués du personnel, le comité d’entreprise et le CHSCT. Sa mise en place est obligatoire dans les entreprises dont l’effectif atteint 11 salariés pendant 12 mois consécutifs.",
+                                        "responses": [
+                                            {
+                                                "text": "Oui",
+                                                "trackingName": "CSE",
+                                                "statement": "Votre entreprise dispose d'un CSE",
+                                                "question": {
+                                                    "text": "Votre entreprise emploie :",
+                                                    "trackingName": "nombre_de_salariés_dans_l_entreprise",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Moins de 50 salariés",
+                                                            "statement": "Votre entreprise emploie moins de 50 salariés",
+                                                            "trackingName": "moins_de_50_salaries",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe français ou européen d’au moins 1000 salariés ?",
+                                                                "trackingName": "appartenance_groupe",
+                                                                "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "trackingName": "appartenance_groupe",
+                                                                        "statement": "Votre entreprise appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-moins-de-50-salaries-avec-cse-le-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "trackingName": "pas_d_appartenance_groupe",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-moins-de-50-salaries-avec-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "Entre 50 et 999 salariés",
+                                                            "statement": "Votre entreprise emploie entre 50 et 999 salariés",
+                                                            "trackingName": "entre_50_et_999_salaries",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe français ou européen d’au moins 1000 salariés ?",
+                                                                "trackingName": "appartenance_groupe",
+                                                                "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "trackingName": "appartenance_groupe",
+                                                                        "statement": "Votre entreprise appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-avec-cse-le-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "trackingName": "pas_d_appartenance_groupe",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-avec-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "Au moins 1000 salariés",
+                                                            "statement": "Votre entreprise emploie au moins 1000 salariés",
+                                                            "trackingName": "plus_de_1000_salaries",
+                                                            "slug": "grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-avec-cse-le-conge-de-reclassement"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "text": "Non",
+                                                "trackingName": "pas_de_CSE",
+                                                "statement": "Votre entreprise ne dispose pas d'un CSE",
+                                                "question": {
+                                                    "text": "Votre entreprise emploie :",
+                                                    "trackingName": "nombre_de_salariés_dans_l_entreprise",
+                                                    "responses": [
+                                                        {
+                                                            "text": "Moins de 50 salariés",
+                                                            "statement": "Votre entreprise emploie moins de 50 salariés",
+                                                            "trackingName": "moins_de_50_salaries",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe français ou européen d’au moins 1000 salariés ?",
+                                                                "trackingName": "appartenance_groupe",
+                                                                "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "trackingName": "appartenance_groupe",
+                                                                        "statement": "Votre entreprise appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-moins-de-50-salaries-sans-cse-le-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "trackingName": "pas_d_appartenance_groupe",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "grand-licenciement-collectif-au-moins-10-salaries-pour-motif-economique-dans-une-entreprise-de-moins-de-50-salaries-sans-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "Entre 50 et 999 salariés",
+                                                            "statement": "Votre entreprise emploie entre 50 et 999 salariés",
+                                                            "trackingName": "entre_50_et_999_salaries",
+                                                            "question": {
+                                                                "text": "Votre entreprise appartient-elle à un groupe français ou européen d’au moins 1000 salariés ?",
+                                                                "trackingName": "appartenance_groupe",
+                                                                "info": "Un groupe de sociétés est une entité économique formée par une société contrôlante (siège) et l’ensemble des sociétés qu’elle contrôle (filiales)",
+                                                                "responses": [
+                                                                    {
+                                                                        "text": "Oui",
+                                                                        "trackingName": "appartenance_groupe",
+                                                                        "statement": "Votre entreprise appartient à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-sans-cse-le-conge-de-reclassement"
+                                                                    },
+                                                                    {
+                                                                        "text": "Non",
+                                                                        "trackingName": "pas_d_appartenance_groupe",
+                                                                        "statement": "Votre entreprise n'appartient pas à un groupe français ou européen d'au moins 1000 salariés",
+                                                                        "slug": "grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-sans-cse-le-contrat-de-securisation-professionnelle-csp"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "text": "Au moins 1000 salariés",
+                                                            "statement": "Votre entreprise emploie au moins 1000 salariés",
+                                                            "trackingName": "plus_de_1000_salaries",
+                                                            "slug": "grand-licenciement-collectif-pour-motif-economique-dans-une-entreprise-de-50-salaries-et-plus-sans-cse-le-conge-de-reclassement"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "text": "Un licenciement suite à un accord de performance collective",
+                        "statement": "Vous êtes concerné par un licenciement suite à un accord de performance collective",
+                        "trackingName": "licenciement_apc",
+                        "description": "APC",
+                        "info": "Licenciement déclenché car le salarié a refusé qu’un accord de performance collective lui soit appliqué.",
+                        "slug": "licenciement-suite-a-un-accord-de-performance-collective-apc"
+                    }
+                ]
+            }
+        }
+    ]
+}

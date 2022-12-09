@@ -12,19 +12,22 @@ const engine = new Engine(mergePreavisRetraiteModels());
 const CadreReferences = [
   {
     article: 'Articles 17 de l\'avenant "Cadres"',
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851149/?idConteneur=KALICONT000005635617",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851149/?idConteneur=KALICONT000005635617",
   },
 ];
 const RetraiteEmployesReferences = [
   {
     article: "Article 38",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851078/?idConteneur=KALICONT000005635617",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851078/?idConteneur=KALICONT000005635617",
   },
 ];
 const RetraiteAgentsMaitriseReferences = [
   {
     article: "Article 9 de l'avenant maitrise",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851119/?idConteneur=KALICONT000005635617",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851119/?idConteneur=KALICONT000005635617",
   },
 ];
 

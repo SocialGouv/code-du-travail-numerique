@@ -16,8 +16,7 @@ export type Formula44Props = {
 };
 
 export class Formula44
-  implements IFormula<SupportedCcIndemniteLicenciement.IDCC0044>
-{
+  implements IFormula<SupportedCcIndemniteLicenciement.IDCC0044> {
   computeFormula({
     seniority,
     refSalary,
