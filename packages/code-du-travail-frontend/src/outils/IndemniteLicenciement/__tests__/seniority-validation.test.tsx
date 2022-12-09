@@ -112,34 +112,10 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
         )
       ).toBeInTheDocument();
 
-      // validation de l'erreur quand on a saisi une période (entrée -> notification) inférieure à 8 mois
       userAction
         .setInput(ui.seniority.startDate.get(), "01/01/2022")
-        .setInput(ui.seniority.notificationDate.get(), "01/03/2022")
-        .setInput(ui.seniority.endDate.get(), "01/03/2022");
-
-      expect(
-        rendering.queryByText(
-          "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté"
-        )
-      ).toBeInTheDocument();
-
-      // validation de l'erreur quand on a saisi une période (entrée -> notification) inférieure à 8 mois et que l'on change la date de sortie
-      userAction.setInput(ui.seniority.endDate.get(), "01/10/2022");
-
-      expect(
-        rendering.queryByText(
-          "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté"
-        )
-      ).toBeInTheDocument();
-
-      // validation de la disparition de l'erreur quand on a change la période  (entrée -> notification) pour plus de 8 mois
-      userAction.setInput(ui.seniority.notificationDate.get(), "01/09/2022");
-      expect(
-        rendering.queryByText(
-          "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté"
-        )
-      ).not.toBeInTheDocument();
+        .setInput(ui.seniority.notificationDate.get(), "01/09/2022")
+        .setInput(ui.seniority.endDate.get(), "01/10/2022");
 
       // validation de l'erreur quand on a pas répondu à présence de périodes d'absence
       expect(
@@ -189,11 +165,6 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
           "La date de l'absence doit être comprise entre le 01/01/2022 et le 01/10/2022 (dates d'entrée et de sortie de l'entreprise)"
         )
       ).not.toBeInTheDocument();
-      expect(
-        rendering.queryByText(
-          "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté"
-        )
-      ).toBeInTheDocument();
 
       // validation de la disparition des erreurs quand on a tout renseigné
       userAction.setInput(ui.seniority.startDate.get(), "01/02/2000");
