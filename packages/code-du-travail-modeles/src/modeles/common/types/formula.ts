@@ -1,11 +1,9 @@
 import type {
   Formula44Props,
-  Formula413Props,
   Formula573Props,
   Formula650Props,
   Formula1596Props,
   Formula1597Props,
-  Formula2264Props,
 } from "../../conventions";
 import type { SupportedCcIndemniteLicenciement } from "..";
 
@@ -17,6 +15,7 @@ export type DefaultFormulaProps = {
 export type Formula = {
   formula: string;
   explanations: string[];
+  annotations?: string[];
 };
 
 export type CategoryPro16 =
@@ -29,19 +28,16 @@ export interface IFormula<T extends SupportedCcIndemniteLicenciement> {
   computeFormula: (args: FormulaProps<T>) => Formula;
 }
 
-export type FormulaProps<T> =
-  T extends SupportedCcIndemniteLicenciement.IDCC2264
-    ? Formula2264Props
-    : T extends SupportedCcIndemniteLicenciement.IDCC413
-    ? Formula413Props
-    : T extends SupportedCcIndemniteLicenciement.IDCC1596
-    ? Formula1596Props
-    : T extends SupportedCcIndemniteLicenciement.IDCC1597
-    ? Formula1597Props
-    : T extends SupportedCcIndemniteLicenciement.IDCC650
-    ? Formula650Props
-    : T extends SupportedCcIndemniteLicenciement.IDCC0573
-    ? Formula573Props
-    : T extends SupportedCcIndemniteLicenciement.IDCC0044
-    ? Formula44Props
-    : DefaultFormulaProps;
+export type FormulaProps<
+  T
+> = T extends SupportedCcIndemniteLicenciement.IDCC1596
+  ? Formula1596Props
+  : T extends SupportedCcIndemniteLicenciement.IDCC1597
+  ? Formula1597Props
+  : T extends SupportedCcIndemniteLicenciement.IDCC650
+  ? Formula650Props
+  : T extends SupportedCcIndemniteLicenciement.IDCC0573
+  ? Formula573Props
+  : T extends SupportedCcIndemniteLicenciement.IDCC0044
+  ? Formula44Props
+  : DefaultFormulaProps;

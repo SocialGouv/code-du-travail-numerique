@@ -19,8 +19,7 @@ export type CC44ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary44
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0044>
-{
+  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0044> {
   /**
    * (si le salaire ne comporte pas une partie fixe et une partie variable et Ouvriers et collaborateurs & Agents de maîtrise et techniciens) ou (Ingénieurs et Cadres)
    * - S1 (si >= S2/12)

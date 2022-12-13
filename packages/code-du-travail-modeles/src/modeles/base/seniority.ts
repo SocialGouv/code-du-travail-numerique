@@ -45,8 +45,7 @@ export type LegalSeniorityProps = {
 };
 
 export class SeniorityLegal
-  implements ISeniority<SupportedCcIndemniteLicenciement.default>
-{
+  implements ISeniority<SupportedCcIndemniteLicenciement.default> {
   protected motifs: Motif[];
 
   constructor(motifs: Motif[]) {

@@ -8,7 +8,8 @@ const engine = new Engine(mergeIndemniteLicenciementModels());
 const references = [
   {
     article: "Article 47",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000020981961?idConteneur=KALICONT000005635813",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000020981961?idConteneur=KALICONT000005635813",
   },
 ];
 
@@ -16,7 +17,6 @@ describe("Références jurdiques pour l'indemnité conventionnel de licenciement
   describe("Cas standard", () => {
     test.each`
       category        | seniority | salary
-      ${"Non-cadres"} | ${0}      | ${2000}
       ${"Non-cadres"} | ${1}      | ${2000}
       ${"Non-cadres"} | ${2}      | ${2000}
       ${"Non-cadres"} | ${5}      | ${2000}
@@ -26,7 +26,6 @@ describe("Références jurdiques pour l'indemnité conventionnel de licenciement
       ${"Non-cadres"} | ${13}     | ${2000}
       ${"Non-cadres"} | ${15}     | ${2000}
       ${"Non-cadres"} | ${42}     | ${2000}
-      ${"Cadres"}     | ${0}      | ${2000}
       ${"Cadres"}     | ${1}      | ${2000}
       ${"Cadres"}     | ${2}      | ${2000}
       ${"Cadres"}     | ${4.25}   | ${2000}
@@ -45,10 +44,8 @@ describe("Références jurdiques pour l'indemnité conventionnel de licenciement
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
             "'Non'",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-            seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            salary,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
         const result = getReferences(situation, "résultat conventionnel");
@@ -62,28 +59,24 @@ describe("Références jurdiques pour l'indemnité conventionnel de licenciement
   describe("Cas mixte", () => {
     test.each`
       seniorityNonCadres | seniority | salary
-      ${0}               | ${0}      | ${2000}
       ${0}               | ${1}      | ${2000}
       ${0}               | ${2}      | ${2000}
       ${0}               | ${5}      | ${2000}
       ${0}               | ${10}     | ${2000}
       ${0}               | ${15}     | ${2000}
       ${0}               | ${42}     | ${2000}
-      ${2}               | ${0}      | ${2000}
       ${2}               | ${1}      | ${2000}
       ${2}               | ${2}      | ${2000}
       ${2}               | ${5}      | ${2000}
       ${2}               | ${10}     | ${2000}
       ${2}               | ${15}     | ${2000}
       ${2}               | ${42}     | ${2000}
-      ${5}               | ${0}      | ${2000}
       ${5}               | ${1}      | ${2000}
       ${5}               | ${2}      | ${2000}
       ${5}               | ${5}      | ${2000}
       ${5}               | ${10}     | ${2000}
       ${5}               | ${15}     | ${2000}
       ${5}               | ${42}     | ${2000}
-      ${5}               | ${0}      | ${2000}
       ${10}              | ${10}     | ${2000}
       ${10}              | ${15}     | ${2000}
       ${10}              | ${42}     | ${2000}
@@ -101,12 +94,9 @@ describe("Références jurdiques pour l'indemnité conventionnel de licenciement
             "'Cadres'",
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
             "'Oui'",
-          "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif":
-            seniorityNonCadres,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-            seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            salary,
+          "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif": seniorityNonCadres,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
         const result = getReferences(situation, "résultat conventionnel");
 

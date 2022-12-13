@@ -13,11 +13,13 @@ const DepartRetraiteCcReferences = [
   ...DepartRetraiteReferences,
   {
     article: "Article 20",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851451/?idConteneur=KALICONT000005635173",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851451/?idConteneur=KALICONT000005635173",
   },
   {
     article: "Annexe « Enquêteurs », article 26",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851324/?idConteneur=KALICONT000005635173",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851324/?idConteneur=KALICONT000005635173",
   },
 ];
 
@@ -25,7 +27,8 @@ const MiseRetraiteCCReferencesAutre = [
   ...MiseRetraiteReferences,
   {
     article: "Article 20",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851451/?idConteneur=KALICONT000005635173",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851451/?idConteneur=KALICONT000005635173",
   },
 ];
 
@@ -33,7 +36,8 @@ const MiseRetraiteCCReferencesCharge = [
   ...MiseRetraiteReferences,
   {
     article: "Annexe « Enquêteurs », article 26",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851324/?idConteneur=KALICONT000005635173",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005851324/?idConteneur=KALICONT000005635173",
   },
 ];
 

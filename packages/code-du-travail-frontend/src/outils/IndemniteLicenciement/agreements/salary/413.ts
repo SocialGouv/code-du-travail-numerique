@@ -3,14 +3,14 @@ import {
   SalaryPeriods,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
-import { GetState } from "zustand";
+import { StoreApi } from "zustand";
 import { AgreementSalary } from ".";
 import { MainStore } from "../../store";
 
 export class AgreementSalary413 implements AgreementSalary {
   computeSalary = (
     salaryPeriods: SalaryPeriods[],
-    _get: GetState<MainStore>
+    _get: StoreApi<MainStore>["getState"]
   ): number => {
     const sReference = new ReferenceSalaryFactory().create(
       SupportedCcIndemniteLicenciement.IDCC413

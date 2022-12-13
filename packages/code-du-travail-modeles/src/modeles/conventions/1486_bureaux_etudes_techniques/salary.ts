@@ -24,8 +24,7 @@ export type CC1486ReferenceSalaryProps = {
   catPro: CatPro1486;
 };
 export class ReferenceSalary1486
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1486>
-{
+  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1486> {
   /**
    * Règle :
    * ETAM, Ingénieurs et Cadres - Autres licenciements :

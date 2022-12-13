@@ -1,6 +1,22 @@
 import type Engine from "publicodes";
+import type { RuleNode } from "publicodes";
 
-import type { Formula } from "..";
+import type { Formula } from "../types";
+import { nonNullable } from "./array";
+
+export type NodeFormula = {
+  formula: string;
+  explanations?: Record<string, string>[];
+  annotations?: string[];
+};
+
+type RuleNodeOptionalFormula = RuleNode & {
+  rawNode: { cdtn?: { formule?: NodeFormula } };
+};
+
+type RuleNodeFormula = RuleNode & {
+  rawNode: { cdtn: { formule: NodeFormula } };
+};
 
 function pluralize(word: string, value: number): string {
   if (word.endsWith("s") || value < 2 || word === "€") return "";
@@ -11,32 +27,26 @@ function round(num: number): number {
   return Math.round(num * 100) / 100;
 }
 
-function getRulesWithFormuleAndNodeValue(engine: Engine) {
-  return Object.values(engine.getParsedRules()).filter((rule: any) => {
-    if (rule.rawNode.cdtn?.formule === undefined) return false;
+function getRulesWithFormuleAndNodeValue(engine: Engine): RuleNodeFormula[] {
+  return Object.values(engine.getParsedRules()).filter(
+    (rule: RuleNodeOptionalFormula) => {
+      if (rule.rawNode.cdtn?.formule === undefined) return false;
 
-    const value = engine.evaluate(rule.dottedName).nodeValue;
-    return value !== false && value !== null && value !== undefined;
-  });
+      const value = engine.evaluate(rule.dottedName).nodeValue;
+      return value !== false && value !== null && value !== undefined;
+    }
+  ) as RuleNodeFormula[];
 }
 
 const FORMULE_VAR_REGEX = /\$formule/g;
 
 export function getFormule(engine: Engine): Formula {
-  let rules = getRulesWithFormuleAndNodeValue(engine);
-
-  if (
-    rules.find((rule) => rule.dottedName.includes("résultat conventionnel"))
-  ) {
-    rules = rules.filter((rule) => !rule.dottedName.includes("résultat légal"));
-  }
-
+  const rules = getRulesWithFormuleAndNodeValue(engine);
   const formula = rules.reduce(
-    (formule: any, rule: any): Formula => {
-      formule.explanations = formule.explanations.concat(
-        rule.rawNode.cdtn.formule.explanations || []
-      );
-
+    (
+      formule: Required<NodeFormula>,
+      rule: RuleNodeFormula
+    ): Required<NodeFormula> => {
       const nodeFormule = rule.rawNode.cdtn.formule.formula;
       if (nodeFormule.includes("$formule")) {
         if (formule.formula.length) {
@@ -45,36 +55,81 @@ export function getFormule(engine: Engine): Formula {
             formule.formula
           );
         }
+        formule.explanations = formule.explanations.concat(
+          rule.rawNode.cdtn.formule.explanations ?? []
+        );
+        formule.annotations = formule.annotations.concat(
+          rule.rawNode.cdtn.formule.annotations ?? []
+        );
       } else {
-        formule.formula += nodeFormule;
+        formule.formula = nodeFormule;
+        formule.explanations = rule.rawNode.cdtn.formule.explanations ?? [];
+        formule.annotations = rule.rawNode.cdtn.formule.annotations ?? [];
       }
-      return formule as Formula;
+      return formule;
     },
     {
+      annotations: [],
       explanations: [],
       formula: "",
     }
   );
 
-  formula.explanations = formula.explanations
-    .flatMap((explanation: any) => {
+  const explanations = formula.explanations
+    .flatMap((explanation) => {
       return Object.keys(explanation).map((text) => {
         const element = explanation[text];
-        if (element === "NONE") return text;
-
         const result = engine.evaluate(element);
         if (!result.unit) {
           throw Error(
-            `L'unité est manquante pour la règle ${result.rawNode.name}`
+            `L'unité est manquante pour la règle '${
+              (result as any).dottedName
+            }'`
           );
         }
-        const unit = result.unit.numerators[0];
-        return `${text} (${round(Number(result.nodeValue))} ${unit}${pluralize(
-          unit,
-          result.nodeValue as number
-        )})`;
+        const nodeValue = Number(result.nodeValue);
+        if (nodeValue && nodeValue !== 0) {
+          const unit = result.unit.numerators[0];
+          return `${text} (${round(nodeValue)} ${unit}${pluralize(
+            unit,
+            result.nodeValue as number
+          )})`;
+        } else {
+          formula.formula = removePartFromFormula(formula.formula, text);
+        }
       });
     })
+    .filter(nonNullable)
     .sort((a, b) => a.localeCompare(b));
-  return formula;
+
+  return {
+    annotations: formula.annotations,
+    explanations,
+    formula: cleanFormula(formula.formula),
+  };
 }
+
+const ANY_CHARS_BUT_BRACKET = "[^[]*";
+export const removePartFromFormula = (
+  formule: string,
+  explanation: string
+): string => {
+  if (formule.includes("[") && formule.includes("]")) {
+    const formulaKey = explanation.split(":")[0].replace(" ", "");
+    return formule.replace(
+      new RegExp(
+        `\\[${ANY_CHARS_BUT_BRACKET}${formulaKey}${ANY_CHARS_BUT_BRACKET}?\\]`,
+        "g"
+      ),
+      ""
+    );
+  }
+  return formule;
+};
+
+export const cleanFormula = (formule: string): string => {
+  // remove all the [ ] from the formula
+  const formulaWithoutCrochet = formule.replace(/\[|\]/g, "");
+  // remove space and + at the beginning of the formula
+  return formulaWithoutCrochet.replace(/^(\s|\+)+/, "");
+};

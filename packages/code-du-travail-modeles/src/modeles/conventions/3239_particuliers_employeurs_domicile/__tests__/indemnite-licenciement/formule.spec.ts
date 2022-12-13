@@ -4,7 +4,7 @@ import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger
 import { getFormule } from "../../../../common";
 import { CatPro3239 } from "../../salary";
 
-describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 3239", () => {
+describe("Formule indemnité licenciement - CC 3239", () => {
   const engine = new Engine(mergeIndemniteLicenciementModels());
 
   test.each`
@@ -21,17 +21,15 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
     ${CatPro3239.assistantMaternel}           | ${10}     | ${"1/80 * S"}                              | ${["S : total des salaires perçus depuis l'engagement (10000 €)"]}
     ${CatPro3239.assistantMaternel}           | ${12}     | ${"1/80 * S"}                              | ${["S : total des salaires perçus depuis l'engagement (10000 €)"]}
   `(
-    "Formule $expectedFormula avec $seniority ans, catégorie $category, type de licenciement $typeLicenciement et ancienneté non cadre : $seniorityNonCadre",
+    "Formule $expectedFormula avec $seniority ans, catégorie $category",
     ({ category, seniority, expectedFormula, expectedExplanations }) => {
       const situation = engine.setSituation({
         "contrat salarié . convention collective": "'IDCC3239'",
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Non'`,
         "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires": 10000,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-          seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté en année":
-          seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
 
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
           "non",

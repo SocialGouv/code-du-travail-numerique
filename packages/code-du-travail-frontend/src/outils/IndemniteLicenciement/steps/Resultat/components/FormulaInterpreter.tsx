@@ -17,6 +17,9 @@ export default function FormulaInterpreter(props: Props) {
           {props.formula.explanations.map((explanation, index) => (
             <Paragraph key={"explanation-" + index}>{explanation}</Paragraph>
           ))}
+          {props.formula.annotations?.map((annotation, index) => (
+            <Paragraph key={"annotations-" + index}>{annotation}</Paragraph>
+          ))}
         </div>
       )}
     </>

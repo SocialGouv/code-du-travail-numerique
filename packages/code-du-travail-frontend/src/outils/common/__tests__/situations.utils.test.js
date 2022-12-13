@@ -1,4 +1,4 @@
-import { primePrecariteData as data } from "@cdt/data";
+import { primePrecariteData as data } from "@socialgouv/modeles-social";
 
 import {
   filterSituations,
@@ -40,7 +40,7 @@ const ccList = [
   },
 ];
 
-jest.mock("@cdt/data", () => ({
+jest.mock("@socialgouv/modeles-social", () => ({
   primePrecariteData: [
     { criteria: { bar: "baz", foo: "1| foo" }, idcc: 10 },
     { criteria: { bar: "bar", foo: "1| foo" }, idcc: 10 },

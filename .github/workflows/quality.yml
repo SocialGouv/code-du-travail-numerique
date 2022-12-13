@@ -6,8 +6,6 @@ on:
       - master
       - dev
   pull_request:
-    branches:
-      - dev
 
 concurrency:
   cancel-in-progress: true
@@ -64,9 +62,7 @@ jobs:
         repositories:
           [
             "@socialgouv/cdtn-ui",
-            "@socialgouv/react-fiche-service-public",
             "@cdt/frontend",
-            "@cdt/data",
             "@socialgouv/modeles-social",
             "@cdt/api",
           ]
@@ -88,12 +84,7 @@ jobs:
       fail-fast: false
       matrix:
         repositories:
-          [
-            "@cdt/frontend",
-            "@cdt/data",
-            "@socialgouv/modeles-social",
-            "@cdt/api",
-          ]
+          ["@cdt/frontend", "@socialgouv/modeles-social", "@cdt/api"]
     steps:
       - uses: actions/cache@v3
         name: Restore build
@@ -126,9 +117,7 @@ jobs:
         repositories:
           [
             "@socialgouv/cdtn-ui",
-            "@socialgouv/react-fiche-service-public",
             "@cdt/frontend",
-            "@cdt/data",
             "@socialgouv/modeles-social",
             "@cdt/api",
           ]
@@ -151,6 +140,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Lint Dockerfile
-        uses: hadolint/hadolint-action@v1.6.0
+        uses: hadolint/hadolint-action@v3.0.0
         with:
           recursive: true

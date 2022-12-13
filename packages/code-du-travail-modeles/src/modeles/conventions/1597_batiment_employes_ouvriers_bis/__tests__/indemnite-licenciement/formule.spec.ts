@@ -3,7 +3,7 @@ import {
   SupportedCcIndemniteLicenciement,
 } from "../../../../common";
 
-describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 1597", () => {
+describe("Formule indemnité licenciement - 1597", () => {
   test.each`
     hasMoreThan55Years | seniority | expectedFormula                                                                          | expectedExplanations
     ${false}           | ${0}      | ${""}                                                                                    | ${[]}

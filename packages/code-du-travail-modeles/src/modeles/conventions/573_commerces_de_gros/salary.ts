@@ -18,8 +18,7 @@ export type CC573ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary573
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0573>
-{
+  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0573> {
   /**
    * Règle :
    * - si le licenciement est pour des raisons économiques

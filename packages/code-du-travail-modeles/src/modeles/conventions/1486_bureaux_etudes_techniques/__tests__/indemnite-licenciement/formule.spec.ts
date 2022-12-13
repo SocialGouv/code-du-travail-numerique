@@ -6,7 +6,7 @@ import { CatPro1486, TypeLicenciement1486 } from "../../salary";
 
 const engine = new Engine(mergeIndemniteLicenciementModels());
 
-describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 1486", () => {
+describe("Formule indemnité licenciement - 1486", () => {
   test.each`
     category                    | typeLicenciement              | seniority | expectedFormula                            | expectedExplanations
     ${CatPro1486.chargeEnquete} | ${TypeLicenciement1486.refus} | ${0}      | ${""}                                      | ${[]}
@@ -40,10 +40,8 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
         "contrat salarié . convention collective": "'IDCC1486'",
         "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${typeLicenciement}'`,
         "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-          seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté en année":
-          seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence": 1000,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
       });

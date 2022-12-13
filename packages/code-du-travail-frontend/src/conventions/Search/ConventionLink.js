@@ -1,4 +1,4 @@
-import { formatIdcc } from "@cdt/data";
+import { formatIdcc } from "@socialgouv/modeles-social";
 import slugify from "@socialgouv/cdtn-slugify";
 import { Button, Paragraph, theme } from "@socialgouv/cdtn-ui";
 import { push as matopush } from "@socialgouv/matomo-next";
@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
 
-// following @cdt/data/indexing/cdtnDocuments.js slug rules
+// following @socialgouv/modeles-social/indexing/cdtnDocuments.js slug rules
 const getConventionSlug = (convention) =>
   slugify(`${convention.num}-${convention.shortTitle}`.substring(0, 80));
 

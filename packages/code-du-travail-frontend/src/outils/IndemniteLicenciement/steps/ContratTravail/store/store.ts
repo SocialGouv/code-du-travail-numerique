@@ -1,4 +1,4 @@
-import { GetState, SetState } from "zustand";
+import { StoreApi } from "zustand";
 import {
   ContratTravailStoreData,
   ContratTravailStoreInput,
@@ -51,8 +51,8 @@ const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
 });
 
 const applyGenericValidation = (
-  get: GetState<ContratTravailStoreSlice>,
-  set: SetState<ContratTravailStoreSlice>,
+  get: StoreApi<ContratTravailStoreSlice>["getState"],
+  set: StoreApi<ContratTravailStoreSlice>["setState"],
   paramName: keyof ContratTravailStoreInput,
   value: any
 ) => {

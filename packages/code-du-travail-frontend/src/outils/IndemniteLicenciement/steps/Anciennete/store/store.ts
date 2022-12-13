@@ -1,5 +1,5 @@
 import produce from "immer";
-import { GetState, SetState } from "zustand";
+import { StoreApi } from "zustand";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { StoreSlice } from "../../../../types";
 import { SalairesStoreSlice } from "../../Salaires/store";
@@ -13,6 +13,7 @@ import { validateStep } from "./validator";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
 import { Absence } from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
+import { customSeniorityValidator } from "../../../agreements/seniority";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
@@ -66,7 +67,7 @@ const createAncienneteStore: StoreSlice<
       applyGenericValidation(get, set, "hasAbsenceProlonge", value);
     },
     onValidateStepAnciennete: () => {
-      const { isValid, errorState } = validateStep(
+      const { isValid, errorState } = customSeniorityValidator(
         get().ancienneteData.input,
         get().informationsData.input,
         get().agreementData.input.agreement
@@ -85,16 +86,16 @@ const createAncienneteStore: StoreSlice<
 });
 
 const applyGenericValidation = (
-  get: GetState<
+  get: StoreApi<
     AncienneteStoreSlice &
       CommonAgreementStoreSlice &
       CommonInformationsStoreSlice
-  >,
-  set: SetState<
+  >["getState"],
+  set: StoreApi<
     AncienneteStoreSlice &
       CommonAgreementStoreSlice &
       CommonInformationsStoreSlice
-  >,
+  >["setState"],
   paramName: keyof AncienneteStoreInput,
   value: any
 ) => {
@@ -102,7 +103,8 @@ const applyGenericValidation = (
     const nextState = produce(get(), (draft) => {
       draft.ancienneteData.input[paramName as string] = value;
     });
-    const { isValid, errorState } = validateStep(
+
+    const { isValid, errorState } = customSeniorityValidator(
       nextState.ancienneteData.input,
       get().informationsData.input,
       get().agreementData.input.agreement

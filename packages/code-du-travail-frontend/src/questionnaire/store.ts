@@ -1,13 +1,13 @@
 import create, { StoreApi } from "zustand";
 import createContext from "zustand/context";
-import {
-  dismissalProcessQuestionnaire,
-  QuestionnaireQuestion,
-  QuestionnaireResponse,
-} from "@cdt/data";
 import { getCurrentQuestion, slugSummaryRecursive } from "./utils";
 import { getQuestionnaire } from "./service";
-import { SlugResponses, PreviousResponse } from "./type";
+import {
+  SlugResponses,
+  PreviousResponse,
+  QuestionnaireQuestion,
+  QuestionnaireResponse,
+} from "./type";
 import { trackSelectResponse, trackViewQuestion } from "./tracking";
 
 export type Store = {
