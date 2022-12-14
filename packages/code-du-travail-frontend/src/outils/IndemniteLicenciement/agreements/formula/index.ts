@@ -8,7 +8,6 @@ import { StoreApi } from "zustand";
 import { MainStore } from "../../store";
 import { AgreementFormula1596 } from "./1596";
 import { AgreementFormula1597 } from "./1597";
-import { AgreementFormula650 } from "./650";
 import { AgreementFormula573 } from "./573";
 import { AgreementFormula44 } from "./44";
 
@@ -27,12 +26,6 @@ const getAgreementFormula = (
       );
     case SupportedCcIndemniteLicenciement.IDCC1597 === idcc:
       return new AgreementFormula1597().computeFormula(
-        agreementSeniority,
-        agreementRefSalary,
-        get
-      );
-    case SupportedCcIndemniteLicenciement.IDCC650 === idcc:
-      return new AgreementFormula650().computeFormula(
         agreementSeniority,
         agreementRefSalary,
         get

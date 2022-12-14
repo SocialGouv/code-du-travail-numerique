@@ -39,6 +39,7 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
       - age = 64
   titre: Le salarié remplit les conditions pour partir à la retraite
   question: Le salarié remplit-il les conditions pour partir à la retraite ?
+  description: Répondre oui si le salarié a les trimestres suffisants pour bénéficier d’une retraite à taux plein et s’il peut bénéficier d’une retraite complémentaire sans abattement
   cdtn:
     type: oui-non
 
@@ -351,3 +352,8 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
         - "A1 : Ancienneté de 1 ans à 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . jusqu'à sept ans ou moins
         - "A2 : Ancienneté au delà de 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . au dela de sept ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . notification:
+  type: notification
+  description: "Le montant de l'indemnité pourrait être plus important si, avant le CDI, sous certaines conditions, le salarié a été lié à l’employeur par d'autres contrats."
+  valeur: oui
