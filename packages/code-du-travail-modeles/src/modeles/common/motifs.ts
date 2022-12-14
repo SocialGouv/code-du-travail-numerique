@@ -1,16 +1,16 @@
 import { LEGAL_MOTIFS } from "../base";
 import {
-  MOTIFS_16,
-  MOTIFS_44,
-  MOTIFS_650,
   MOTIFS_1518,
   MOTIFS_1527,
+  MOTIFS_16,
   MOTIFS_2098,
   MOTIFS_2216,
   MOTIFS_2511,
   MOTIFS_2941,
   MOTIFS_3043,
   MOTIFS_3239,
+  MOTIFS_44,
+  MOTIFS_650,
 } from "../conventions";
 import type { Motif } from "./types";
 import { SupportedCcIndemniteLicenciement } from "./types";

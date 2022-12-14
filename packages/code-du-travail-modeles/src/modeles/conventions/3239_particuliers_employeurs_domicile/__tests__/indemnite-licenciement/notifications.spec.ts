@@ -1,11 +1,14 @@
-import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 import {
   getNotifications,
   getNotificationsBloquantes,
 } from "../../../../common";
 import { CatPro3239 } from "../../salary";
 
-const engine = SingletonEnginePublicodes.getInstance();
+import Engine from "publicodes";
+
+import modeles from "../../../../../../src/__test__/output/modeles-indemnite-licenciement.json";
+
+const engine = new Engine(modeles as any);
 
 const notification =
   "Si la rupture du contrat de travail a été notifiée avant le 01/01/2022, l’indemnité de licenciement peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2021 c’est la convention collective “Assistants maternels du particulier employeur (IDCC 2395)” qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable depuis le 01/01/2022.";

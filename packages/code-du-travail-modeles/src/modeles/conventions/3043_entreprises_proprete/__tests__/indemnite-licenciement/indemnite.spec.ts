@@ -1,6 +1,8 @@
-import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
+import Engine from "publicodes";
 
-const engine = SingletonEnginePublicodes.getInstance();
+import modeles from "../../../../../../src/__test__/output/modeles-indemnite-licenciement.json";
+
+const engine = new Engine(modeles as any);
 
 describe("Indemnité conventionnel de licenciement pour la CC 3043", () => {
   test.each`

@@ -4,8 +4,8 @@ import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
+import modeles from "../../../../../../src/__test__/output/modeles-preavis-retraite.json";
 
 const DepartRetraite = [
   ...DepartRetraiteReferences,
@@ -43,7 +43,7 @@ const MiseRetraiteMoins6Mois = [
   },
 ];
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 test.each`
   retirement  | seniority | expectedReferences

@@ -1,8 +1,11 @@
-import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 import { QuestionOuiNon } from "../../../../common";
 import { CatPro573 } from "../../formula";
 
-const engine = SingletonEnginePublicodes.getInstance();
+import Engine from "publicodes";
+
+import modeles from "../../../../../../src/__test__/output/modeles-indemnite-licenciement.json";
+
+const engine = new Engine(modeles as any);
 
 describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
   describe("Autres", () => {

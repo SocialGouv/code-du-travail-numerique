@@ -1,7 +1,10 @@
-import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 import { CatPro1486, TypeLicenciement1486 } from "../../salary";
 
-const engine = SingletonEnginePublicodes.getInstance();
+import Engine from "publicodes";
+
+import modeles from "../../../../../../src/__test__/output/modeles-indemnite-licenciement.json";
+
+const engine = new Engine(modeles as any);
 describe("Indemnité conventionnel de licenciement pour la CC 1486", () => {
   describe("Cas standard", () => {
     test.each`

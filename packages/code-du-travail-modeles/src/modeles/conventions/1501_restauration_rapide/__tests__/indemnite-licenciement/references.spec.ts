@@ -1,7 +1,10 @@
-import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 import { getReferences } from "../../../../common";
 
-const engine = SingletonEnginePublicodes.getInstance();
+import Engine from "publicodes";
+
+import modeles from "../../../../../../src/__test__/output/modeles-indemnite-licenciement.json";
+
+const engine = new Engine(modeles as any);
 
 describe("Références juridique pour l'indemnité conventionnel de licenciement pour la CC 1501", () => {
   test.each`

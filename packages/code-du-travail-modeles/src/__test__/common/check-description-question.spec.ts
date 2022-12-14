@@ -1,8 +1,8 @@
 import Engine from "publicodes";
 
-import { mergePreavisRetraiteModels } from "../../internal/merger";
+import modeles from "../../../src/__test__/output/modeles-preavis-retraite.json";
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 describe("Validation de la présence des descriptions pour afficher des aides", () => {
   describe.each`

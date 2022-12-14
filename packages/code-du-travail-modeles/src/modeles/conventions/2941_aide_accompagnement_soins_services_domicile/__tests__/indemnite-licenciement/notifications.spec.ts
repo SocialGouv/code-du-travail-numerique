@@ -1,7 +1,10 @@
-import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 import { getNotifications } from "../../../../common";
 
-const engine = SingletonEnginePublicodes.getInstance();
+import Engine from "publicodes";
+
+import modeles from "../../../../../../src/__test__/output/modeles-indemnite-licenciement.json";
+
+const engine = new Engine(modeles as any);
 
 describe("Vérification des notifications pour la CC 2941", () => {
   test("aucune notification ne doit remonter", () => {

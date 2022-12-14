@@ -1,9 +1,9 @@
 import type {
+  Formula1596Props,
+  Formula1597Props,
   Formula44Props,
   Formula573Props,
   Formula650Props,
-  Formula1596Props,
-  Formula1597Props,
 } from "../../conventions";
 import type { SupportedCcIndemniteLicenciement } from "..";
 

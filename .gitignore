@@ -12,3 +12,5 @@ lerna-debug.log
 .vscode
 .DS_Store
 *.tsbuildinfo
+packages/code-du-travail-modeles/src/__test__/output/*
+

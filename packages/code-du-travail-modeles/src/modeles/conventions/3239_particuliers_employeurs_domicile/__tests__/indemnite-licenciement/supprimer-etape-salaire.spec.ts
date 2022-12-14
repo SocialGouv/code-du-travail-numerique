@@ -1,7 +1,10 @@
-import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 import { CatPro3239 } from "../../salary";
 
-const engine = SingletonEnginePublicodes.getInstance();
+import Engine from "publicodes";
+
+import modeles from "../../../../../../src/__test__/output/modeles-indemnite-licenciement.json";
+
+const engine = new Engine(modeles as any);
 
 describe("Suppression de l'étape indemnité de licenciement pour la CC 3239", () => {
   test("Avec des informations basiques", () => {

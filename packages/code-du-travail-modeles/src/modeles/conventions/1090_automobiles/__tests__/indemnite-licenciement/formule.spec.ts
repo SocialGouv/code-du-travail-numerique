@@ -1,9 +1,10 @@
-import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
+import Engine from "publicodes";
+
+import modeles from "../../../../../../src/__test__/output/modeles-indemnite-licenciement.json";
 import { getFormule } from "../../../../common";
 
+const engine = new Engine(modeles as any);
 describe("Formule indemnité licenciement - CC 1090", () => {
-  const engine = SingletonEnginePublicodes.getInstance();
-
   test.each`
     seniority | expectedFormula                            | expectedExplanations
     ${7 / 12} | ${""}                                      | ${[]}

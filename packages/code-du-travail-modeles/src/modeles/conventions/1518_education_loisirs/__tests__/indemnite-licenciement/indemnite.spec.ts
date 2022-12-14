@@ -1,6 +1,8 @@
-import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
+import Engine from "publicodes";
 
-const engine = SingletonEnginePublicodes.getInstance();
+import modeles from "../../../../../../src/__test__/output/modeles-indemnite-licenciement.json";
+
+const engine = new Engine(modeles as any);
 
 describe("CC 1518", () => {
   describe("Calcul de l'indemnité de licenciement", () => {
