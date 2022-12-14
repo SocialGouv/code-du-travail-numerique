@@ -4,7 +4,7 @@ import {
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
-import { GetState } from "zustand";
+import { StoreApi } from "zustand";
 import { MainStore } from "../../store";
 import { AgreementFormula1596 } from "./1596";
 import { AgreementFormula650 } from "./650";
@@ -15,7 +15,7 @@ const getAgreementFormula = (
   idcc: SupportedCcIndemniteLicenciement,
   agreementSeniority: SeniorityResult,
   agreementRefSalary: number,
-  get: GetState<MainStore>
+  get: StoreApi<MainStore>["getState"]
 ): Formula | undefined => {
   switch (true) {
     case SupportedCcIndemniteLicenciement.IDCC1596 === idcc:
@@ -59,6 +59,6 @@ export interface AgreementFormula {
   computeFormula: (
     agreementSeniority: SeniorityResult,
     agreementRefSalary: number,
-    get: GetState<MainStore>
+    get: StoreApi<MainStore>["getState"]
   ) => Formula;
 }

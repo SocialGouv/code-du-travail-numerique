@@ -1,12 +1,12 @@
 import produce from "immer";
-import { GetState, SetState } from "zustand";
+import { StoreApi } from "zustand";
 import { deepEqualObject } from "../../../../../lib";
 import { MainStore } from "../../../store";
 import { Agreement44StoreInput, Agreement44StoreSlice } from "./types";
 
 export const validateAgreement44 = (
-  get: GetState<MainStore>,
-  set: SetState<MainStore>
+  get: StoreApi<MainStore>["getState"],
+  set: StoreApi<MainStore>["setState"]
 ) => {
   const { isValid, errorState } = validateStep(get().agreement44Data.input);
   set(

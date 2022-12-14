@@ -1,4 +1,4 @@
-import create, { SetState, GetState, StoreApi } from "zustand";
+import create, { StoreApi } from "zustand";
 
 import createContext from "zustand/context";
 import {
@@ -77,8 +77,8 @@ export type StepData<
 };
 
 const createRootSlice = (
-  set: SetState<MainStore>,
-  get: GetState<MainStore>,
+  set: StoreApi<MainStore>["setState"],
+  get: StoreApi<MainStore>["getState"],
   publicodesRules: string
 ) => ({
   ...createContratTravailStore(set, get),
@@ -91,8 +91,11 @@ const createRootSlice = (
 });
 
 const createStore = (publicodesRules: string) =>
-  create((set: SetState<MainStore>, get: GetState<MainStore>) =>
-    createRootSlice(set, get, publicodesRules)
+  create(
+    (
+      set: StoreApi<MainStore>["setState"],
+      get: StoreApi<MainStore>["getState"]
+    ) => createRootSlice(set, get, publicodesRules)
   );
 
 const { Provider, useStore } = createContext<StoreApi<MainStore>>();

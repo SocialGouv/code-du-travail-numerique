@@ -1,8 +1,8 @@
-import { GetState, SetState } from "zustand";
+import { StoreApi } from "zustand";
 
 export type StoreSlice<T extends object, E extends object = T> = (
-  set: SetState<E extends T ? E : E & T>,
-  get: GetState<E extends T ? E : E & T>,
+  set: StoreApi<E extends T ? E : E & T>["setState"],
+  get: StoreApi<E extends T ? E : E & T>["getState"],
   publicodesRules?: string
 ) => T;
 
