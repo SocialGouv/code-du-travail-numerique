@@ -1,3 +1,4 @@
+import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 import { getFormule } from "../../../../common";
 
 describe("Formule indemnité licenciement - CC 2941", () => {

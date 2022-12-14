@@ -1,3 +1,4 @@
+import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 import { getReferences } from "../../../../common";
 import { CatPro3239 } from "../../salary";
 

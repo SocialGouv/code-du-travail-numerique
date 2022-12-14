@@ -1,3 +1,4 @@
+import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 import { getFormule } from "../../../../common";
 import { CatPro3239 } from "../../salary";
 

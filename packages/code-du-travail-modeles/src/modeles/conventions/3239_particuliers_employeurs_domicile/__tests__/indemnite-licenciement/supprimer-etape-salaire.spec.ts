@@ -1,3 +1,4 @@
+import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 import { CatPro3239 } from "../../salary";
 
 const engine = SingletonEnginePublicodes.getInstance();

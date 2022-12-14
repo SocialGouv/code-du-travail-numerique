@@ -1,3 +1,5 @@
+import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
+
 const engine = SingletonEnginePublicodes.getInstance();
 
 describe("Indemnité conventionnel de licenciement pour la CC 3043", () => {

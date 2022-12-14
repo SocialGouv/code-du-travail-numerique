@@ -1,3 +1,4 @@
+import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 import { CategoryPro44 } from "../../salary";
 
 const engine = SingletonEnginePublicodes.getInstance();
