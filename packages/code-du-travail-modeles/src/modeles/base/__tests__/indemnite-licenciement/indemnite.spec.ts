@@ -1,8 +1,4 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../internal/merger";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
+const engine = globalThis.__engine__;
 
 describe("Indemnité légale de licenciement pour un employé", () => {
   test.each`

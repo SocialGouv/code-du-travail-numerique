@@ -3,7 +3,7 @@ import Engine from "publicodes";
 import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getFormule } from "../../../../common";
 
-const engine = new Engine(mergeIndemniteLicenciementModels());
+const engine = global.__engine__;
 
 describe("Formule indemnité licenciement - 2264", () => {
   describe("Cas normal", () => {

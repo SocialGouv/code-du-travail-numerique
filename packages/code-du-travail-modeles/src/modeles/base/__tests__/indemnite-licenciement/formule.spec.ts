@@ -1,11 +1,7 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../internal/merger";
 import { getFormule } from "../../../common";
+const engine = globalThis.__engine__;
 
 describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée", () => {
-  const engine = new Engine(mergeIndemniteLicenciementModels());
-
   test.each`
     seniority | isForInaptitude | expectedFormula                                  | expectedExplanations
     ${7 / 12} | ${"non"}        | ${""}                                            | ${[]}

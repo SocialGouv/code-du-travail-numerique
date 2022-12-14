@@ -2,7 +2,7 @@ import Engine from "publicodes";
 
 import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 
-const engine = new Engine(mergeIndemniteLicenciementModels());
+const engine = global.__engine__;
 
 describe("Indemnité conventionnel de licenciement pour la CC 2216", () => {
   describe("Cas standard", () => {

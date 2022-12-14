@@ -1,13 +1,9 @@
-import Engine from "publicodes";
-
 import {
   IndemniteLicenciementInaptitudeReferences,
   IndemniteLicenciementReferences,
 } from "../../../../__test__/common/legal-references";
-import { mergeIndemniteLicenciementModels } from "../../../../internal/merger";
 import { getReferences } from "../../../common";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
+const engine = globalThis.__engine__;
 
 describe("Vérification des références juridiques pour Indemnité légale de licenciement", () => {
   test.each`

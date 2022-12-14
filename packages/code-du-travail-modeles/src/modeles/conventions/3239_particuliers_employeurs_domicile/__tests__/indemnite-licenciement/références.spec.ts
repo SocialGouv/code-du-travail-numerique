@@ -4,7 +4,7 @@ import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger
 import { getReferences } from "../../../../common";
 import { CatPro3239 } from "../../salary";
 
-const engine = new Engine(mergeIndemniteLicenciementModels());
+const engine = global.__engine__;
 
 const ReferencesPe = [
   {

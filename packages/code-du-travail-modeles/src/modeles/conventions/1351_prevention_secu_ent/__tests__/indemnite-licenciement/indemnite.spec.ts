@@ -2,7 +2,7 @@ import Engine from "publicodes";
 
 import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 
-const engine = new Engine(mergeIndemniteLicenciementModels());
+const engine = global.__engine__;
 
 describe("CC 1351", () => {
   describe("Calcul de l'indemnité de licenciement", () => {

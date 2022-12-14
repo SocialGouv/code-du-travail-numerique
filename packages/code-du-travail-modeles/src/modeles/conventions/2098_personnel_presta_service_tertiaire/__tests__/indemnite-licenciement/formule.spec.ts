@@ -4,7 +4,7 @@ import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger
 import { getFormule } from "../../../../common";
 
 describe("Formule de l'indemnité de licenciement - CC 2098", () => {
-  const engine = new Engine(mergeIndemniteLicenciementModels());
+  const engine = global.__engine__;
 
   describe("Licenciement pour inaptitude non professionnelle", () => {
     test.each`

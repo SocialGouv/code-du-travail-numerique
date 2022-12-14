@@ -4,7 +4,7 @@ import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger
 import { getFormule } from "../../../../common";
 
 describe("Formule indemnité licenciement - 2216", () => {
-  const engine = new Engine(mergeIndemniteLicenciementModels());
+  const engine = global.__engine__;
 
   test.each`
     category                                          | isEconomicFiring | age   | seniority | expectedFormula                                                                                                                                                                      | expectedExplanations                                                                                                                                                                                                                                                                                                      | expectedAnnotations

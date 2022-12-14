@@ -5,7 +5,9 @@
     /* Basic Options */
     "target": "es5",
     "module": "commonjs",
-    "lib": ["es2019"],
+    "lib": [
+      "es2019"
+    ],
     "outDir": "./bin",
     "rootDir": "src",
     "declaration": true,
@@ -17,6 +19,6 @@
     /* Advanced Options */
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
   }
 }

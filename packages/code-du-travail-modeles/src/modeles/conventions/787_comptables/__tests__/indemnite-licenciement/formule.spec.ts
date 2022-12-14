@@ -4,7 +4,7 @@ import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger
 import { getFormule } from "../../../../common";
 
 describe("Formule indemnité licenciement - 787", () => {
-  const engine = new Engine(mergeIndemniteLicenciementModels());
+  const engine = global.__engine__;
 
   test.each`
     seniority | expectedFormula                            | expectedExplanations

@@ -4,7 +4,7 @@ import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger
 import { getFormule } from "../../../../common";
 
 describe("Formule indemnité licenciement - CC 16", () => {
-  const engine = new Engine(mergeIndemniteLicenciementModels());
+  const engine = global.__engine__;
   describe("Pour un ouvrier (autres licenciements)", () => {
     test.each`
       seniority | age   | haveRightToRetirement | expectedFormula                                               | expectedExplanations
