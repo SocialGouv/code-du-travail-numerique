@@ -1,11 +1,11 @@
 import Engine from "publicodes";
 
+import modeles from "../../../../../../src/__test__/output/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
 import { getNotifications, getReferences } from "../../../../common";
-import modeles from "../../../../../../src/__test__/output/modeles-preavis-retraite.json";
 
 const ArticleCc = {
   article: "Article 23.3",

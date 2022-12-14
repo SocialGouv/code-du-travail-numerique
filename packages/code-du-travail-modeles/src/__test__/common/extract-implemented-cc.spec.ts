@@ -1,8 +1,7 @@
 import Engine from "publicodes";
 
-import type { RuleNodeIdcc } from "../../internal/extractSupportedCc";
-
 import modeles from "../../../src/__test__/output/modeles-preavis-retraite.json";
+import type { RuleNodeIdcc } from "../../internal/extractSupportedCc";
 
 const engine = new Engine(modeles as any);
 

@@ -2,9 +2,8 @@ import "./publicode-matcher";
 
 import Engine from "publicodes";
 
-import { extractCcnIds } from "../../internal/extractor";
-
 import modeles from "../../../src/__test__/output/modeles-preavis-retraite.json";
+import { extractCcnIds } from "../../internal/extractor";
 
 const engine = new Engine(modeles as any);
 const allCc = extractCcnIds(engine).concat("");

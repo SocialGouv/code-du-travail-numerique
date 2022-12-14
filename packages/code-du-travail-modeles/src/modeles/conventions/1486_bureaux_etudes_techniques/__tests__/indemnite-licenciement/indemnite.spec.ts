@@ -1,8 +1,7 @@
-import { CatPro1486, TypeLicenciement1486 } from "../../salary";
-
 import Engine from "publicodes";
 
 import modeles from "../../../../../../src/__test__/output/modeles-indemnite-licenciement.json";
+import { CatPro1486, TypeLicenciement1486 } from "../../salary";
 
 const engine = new Engine(modeles as any);
 describe("Indemnité conventionnel de licenciement pour la CC 1486", () => {

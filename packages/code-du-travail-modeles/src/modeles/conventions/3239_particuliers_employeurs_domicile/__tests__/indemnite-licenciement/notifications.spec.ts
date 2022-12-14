@@ -1,12 +1,11 @@
+import Engine from "publicodes";
+
+import modeles from "../../../../../../src/__test__/output/modeles-indemnite-licenciement.json";
 import {
   getNotifications,
   getNotificationsBloquantes,
 } from "../../../../common";
 import { CatPro3239 } from "../../salary";
-
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/__test__/output/modeles-indemnite-licenciement.json";
 
 const engine = new Engine(modeles as any);
 

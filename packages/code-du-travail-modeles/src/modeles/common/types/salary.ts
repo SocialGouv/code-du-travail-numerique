@@ -1,14 +1,14 @@
 import type { LegalReferenceSalaryProps } from "../../base";
 import type {
+  CC16ReferenceSalaryProps,
+  CC29ReferenceSalaryProps,
+  CC44ReferenceSalaryProps,
+  CC573ReferenceSalaryProps,
   CC1486ReferenceSalaryProps,
   CC1516ReferenceSalaryProps,
   CC1527ReferenceSalaryProps,
-  CC16ReferenceSalaryProps,
   CC2098ReferenceSalaryProps,
-  CC29ReferenceSalaryProps,
   CC3239ReferenceSalaryProps,
-  CC44ReferenceSalaryProps,
-  CC573ReferenceSalaryProps,
 } from "../../conventions";
 import type { SupportedCcIndemniteLicenciement } from "..";
 

@@ -1,8 +1,7 @@
-import { getNotifications } from "../../../../common";
-
 import Engine from "publicodes";
 
 import modeles from "../../../../../../src/__test__/output/modeles-indemnite-licenciement.json";
+import { getNotifications } from "../../../../common";
 
 const engine = new Engine(modeles as any);
 

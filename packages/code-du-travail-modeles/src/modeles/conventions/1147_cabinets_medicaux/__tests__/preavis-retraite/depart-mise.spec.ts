@@ -1,7 +1,7 @@
 import Engine from "publicodes";
-import { getNotifications } from "../../../../common";
 
 import modeles from "../../../../../../src/__test__/output/modeles-preavis-retraite.json";
+import { getNotifications } from "../../../../common";
 
 const engine = new Engine(modeles as any);
 describe("Mise à la retraite", () => {

@@ -1,9 +1,8 @@
-import { getReferences, QuestionOuiNon } from "../../../../common";
-import { CatPro573 } from "../../formula";
-
 import Engine from "publicodes";
 
 import modeles from "../../../../../../src/__test__/output/modeles-indemnite-licenciement.json";
+import { getReferences, QuestionOuiNon } from "../../../../common";
+import { CatPro573 } from "../../formula";
 
 const engine = new Engine(modeles as any);
 

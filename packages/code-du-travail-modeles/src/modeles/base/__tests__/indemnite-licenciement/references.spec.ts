@@ -1,12 +1,11 @@
+import Engine from "publicodes";
+
+import modeles from "../../../../../src/__test__/output/modeles-indemnite-licenciement.json";
 import {
   IndemniteLicenciementInaptitudeReferences,
   IndemniteLicenciementReferences,
 } from "../../../../__test__/common/legal-references";
 import { getReferences } from "../../../common";
-
-import Engine from "publicodes";
-
-import modeles from "../../../../../src/__test__/output/modeles-indemnite-licenciement.json";
 
 const engine = new Engine(modeles as any);
 
