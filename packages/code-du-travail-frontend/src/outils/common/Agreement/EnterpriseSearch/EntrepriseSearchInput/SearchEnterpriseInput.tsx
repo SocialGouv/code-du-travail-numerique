@@ -1,4 +1,4 @@
-import { Button, Input, Label, Text, theme } from "@socialgouv/cdtn-ui";
+import { Button, Input, Label, theme } from "@socialgouv/cdtn-ui";
 import React, { useState } from "react";
 import styled from "styled-components";
 import {
@@ -57,6 +57,20 @@ export const SearchEnterpriseInput = ({
     <>
       <Flex>
         <Box>
+          <InlineLabel htmlFor="enterprise-search-address">
+            Code postal ou ville
+          </InlineLabel>
+          <BlockInput
+            placeholder="31000 ou Toulouse "
+            value={address}
+            type="text"
+            name="address"
+            id="enterprise-search-address"
+            onChange={(e) => setAddress(e.target.value)}
+            autoComplete="off"
+          />
+        </Box>
+        <Box>
           <InlineLabel htmlFor="enterprise-search">
             Nom de votre entreprise ou numéro Siret{" "}
           </InlineLabel>
@@ -76,20 +90,6 @@ export const SearchEnterpriseInput = ({
             name="query"
             id="enterprise-search"
             onChange={(e) => setQuery(e.target.value)}
-            autoComplete="off"
-          />
-        </Box>
-        <Box>
-          <InlineLabel htmlFor="enterprise-search-address">
-            Code postal ou ville
-          </InlineLabel>
-          <BlockInput
-            placeholder="31000 ou Toulouse "
-            value={address}
-            type="text"
-            name="address"
-            id="enterprise-search-address"
-            onChange={(e) => setAddress(e.target.value)}
             autoComplete="off"
           />
         </Box>
