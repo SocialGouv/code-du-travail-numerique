@@ -3,7 +3,6 @@ import type {
   Formula573Props,
   Formula650Props,
   Formula1596Props,
-  Formula1597Props,
 } from "../../conventions";
 import type { SupportedCcIndemniteLicenciement } from "..";
 
@@ -32,8 +31,6 @@ export type FormulaProps<
   T
 > = T extends SupportedCcIndemniteLicenciement.IDCC1596
   ? Formula1596Props
-  : T extends SupportedCcIndemniteLicenciement.IDCC1597
-  ? Formula1597Props
   : T extends SupportedCcIndemniteLicenciement.IDCC650
   ? Formula650Props
   : T extends SupportedCcIndemniteLicenciement.IDCC0573
