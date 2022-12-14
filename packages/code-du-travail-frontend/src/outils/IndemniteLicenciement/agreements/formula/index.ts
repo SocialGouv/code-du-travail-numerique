@@ -7,7 +7,6 @@ import {
 import { StoreApi } from "zustand";
 import { MainStore } from "../../store";
 import { AgreementFormula1596 } from "./1596";
-import { AgreementFormula1597 } from "./1597";
 import { AgreementFormula573 } from "./573";
 import { AgreementFormula44 } from "./44";
 
@@ -20,12 +19,6 @@ const getAgreementFormula = (
   switch (true) {
     case SupportedCcIndemniteLicenciement.IDCC1596 === idcc:
       return new AgreementFormula1596().computeFormula(
-        agreementSeniority,
-        agreementRefSalary,
-        get
-      );
-    case SupportedCcIndemniteLicenciement.IDCC1597 === idcc:
-      return new AgreementFormula1597().computeFormula(
         agreementSeniority,
         agreementRefSalary,
         get
