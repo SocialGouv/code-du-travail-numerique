@@ -4,6 +4,8 @@ import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger
 import { getFormule } from "../../../../common";
 
 describe("Formule indemnité licenciement - CC 2511", () => {
+  const engine = new Engine(mergeIndemniteLicenciementModels());
+
   test.each`
     seniority | expectedFormula                            | expectedExplanations
     ${7 / 12} | ${""}                                      | ${[]}
@@ -15,8 +17,6 @@ describe("Formule indemnité licenciement - CC 2511", () => {
   `(
     "Formule $expectedFormula avec $seniority ans et inaptitude $isForInaptitude",
     ({ seniority, expectedFormula, expectedExplanations }) => {
-      const engine = new Engine(mergeIndemniteLicenciementModels());
-
       const situation = engine.setSituation({
         "contrat salarié . convention collective": "'IDCC2511'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,

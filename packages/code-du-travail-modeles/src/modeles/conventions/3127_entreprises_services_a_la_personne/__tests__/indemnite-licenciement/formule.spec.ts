@@ -4,6 +4,7 @@ import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger
 import { getFormule } from "../../../../common";
 
 describe("Formule indemnité licenciement - 3127", () => {
+  const engine = new Engine(mergeIndemniteLicenciementModels());
   test.each`
     seniority  | expectedFormula                             | expectedExplanations
     ${11 / 12} | ${""}                                       | ${[]}
@@ -15,8 +16,6 @@ describe("Formule indemnité licenciement - 3127", () => {
   `(
     "Formule $expectedFormula avec $seniority ans",
     ({ seniority, expectedFormula, expectedExplanations }) => {
-      const engine = new Engine(mergeIndemniteLicenciementModels());
-
       const situation = engine.setSituation({
         "contrat salarié . convention collective": "'IDCC3127'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
