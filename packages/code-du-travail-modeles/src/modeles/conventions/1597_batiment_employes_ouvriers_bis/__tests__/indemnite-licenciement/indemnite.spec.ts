@@ -1,8 +1,6 @@
-import Engine from "publicodes";
+import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
-
-const engine = global.__engine__;
+const engine = SingletonEnginePublicodes.getInstance();
 
 describe("Indemnité conventionnel de licenciement pour la CC 1597", () => {
   describe("Cas standard", () => {

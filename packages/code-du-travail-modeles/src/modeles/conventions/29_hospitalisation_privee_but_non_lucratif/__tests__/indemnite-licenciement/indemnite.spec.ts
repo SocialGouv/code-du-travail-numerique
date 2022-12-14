@@ -2,7 +2,7 @@ import Engine from "publicodes";
 
 import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 
-const engine = global.__engine__;
+const engine = SingletonEnginePublicodes.getInstance();
 
 describe("CC 29", () => {
   describe("Calcul de l'indemnité de licenciement pour Autres salariés", () => {

@@ -2,8 +2,10 @@ import {
   IndemniteLicenciementInaptitudeReferences,
   IndemniteLicenciementReferences,
 } from "../../../../__test__/common/legal-references";
+import SingletonEnginePublicodes from "../../../../internal/SingletonEngine";
 import { getReferences } from "../../../common";
-const engine = globalThis.__engine__;
+
+const engine = SingletonEnginePublicodes.getInstance();
 
 describe("Vérification des références juridiques pour Indemnité légale de licenciement", () => {
   test.each`

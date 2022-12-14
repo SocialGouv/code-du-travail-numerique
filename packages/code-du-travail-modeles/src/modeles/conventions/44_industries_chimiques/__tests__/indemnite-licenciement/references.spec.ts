@@ -4,7 +4,7 @@ import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger
 import { getReferences } from "../../../../common";
 import { CategoryPro44 } from "../../salary";
 
-const engine = global.__engine__;
+const engine = SingletonEnginePublicodes.getInstance();
 
 const referencesOuvrierLicenciementNormal = [
   {

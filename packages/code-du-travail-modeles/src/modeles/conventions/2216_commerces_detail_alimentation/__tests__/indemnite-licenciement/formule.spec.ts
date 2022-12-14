@@ -1,11 +1,9 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
+import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 import { getFormule } from "../../../../common";
 
-describe("Formule indemnité licenciement - 2216", () => {
-  const engine = global.__engine__;
+const engine = SingletonEnginePublicodes.getInstance();
 
+describe("Formule indemnité licenciement - 2216", () => {
   test.each`
     category                                          | isEconomicFiring | age   | seniority | expectedFormula                                                                                                                                                                      | expectedExplanations                                                                                                                                                                                                                                                                                                      | expectedAnnotations
     ${"Employés et ouvriers, personnel de livraison"} | ${false}         | ${50} | ${0}      | ${""}                                                                                                                                                                                | ${[]}                                                                                                                                                                                                                                                                                                                     | ${[]}

@@ -1,4 +1,6 @@
-const engine = globalThis.__engine__;
+import SingletonEnginePublicodes from "../../../../internal/SingletonEngine";
+
+const engine = SingletonEnginePublicodes.getInstance();
 
 describe("Indemnité légale de licenciement pour un employé", () => {
   test.each`

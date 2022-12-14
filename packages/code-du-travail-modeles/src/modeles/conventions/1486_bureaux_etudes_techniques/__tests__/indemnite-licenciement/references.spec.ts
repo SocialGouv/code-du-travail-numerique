@@ -1,10 +1,8 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
+import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 import { getReferences } from "../../../../common";
 import { CatPro1486, TypeLicenciement1486 } from "../../salary";
 
-const engine = global.__engine__;
+const engine = SingletonEnginePublicodes.getInstance();
 
 const refEtamMoins20OuInge = [
   {

@@ -3,7 +3,7 @@ import Engine from "publicodes";
 import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { CatPro3239 } from "../../salary";
 
-const engine = global.__engine__;
+const engine = SingletonEnginePublicodes.getInstance();
 
 describe("Indemnité conventionnel de licenciement pour la CC 3239", () => {
   describe("Cas standard", () => {

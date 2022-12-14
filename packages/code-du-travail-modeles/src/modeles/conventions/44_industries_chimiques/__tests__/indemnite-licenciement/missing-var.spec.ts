@@ -3,7 +3,7 @@ import Engine from "publicodes";
 import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { CategoryPro44 } from "../../salary";
 
-const engine = global.__engine__;
+const engine = SingletonEnginePublicodes.getInstance();
 
 describe("Missing variables pour l'indemnité conventionnel de licenciement pour la CC 44", () => {
   describe("Aucune", () => {

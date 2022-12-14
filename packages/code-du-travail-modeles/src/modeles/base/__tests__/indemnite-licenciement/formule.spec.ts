@@ -1,5 +1,7 @@
+import SingletonEnginePublicodes from "../../../../internal/SingletonEngine";
 import { getFormule } from "../../../common";
-const engine = globalThis.__engine__;
+
+const engine = SingletonEnginePublicodes.getInstance();
 
 describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée", () => {
   test.each`

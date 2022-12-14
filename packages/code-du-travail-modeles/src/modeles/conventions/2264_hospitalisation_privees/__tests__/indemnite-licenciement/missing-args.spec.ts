@@ -2,7 +2,7 @@ import Engine from "publicodes";
 
 import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 
-const engine = global.__engine__;
+const engine = SingletonEnginePublicodes.getInstance();
 
 describe("Missing args pour la CC 2264", () => {
   test("Catégorie professionnelle", () => {

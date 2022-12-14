@@ -1,10 +1,9 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
+import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 import { getFormule } from "../../../../common";
 
+const engine = SingletonEnginePublicodes.getInstance();
+
 describe("Formule indemnité licenciement - 1351", () => {
-  const engine = global.__engine__;
   test.each`
     seniority | expectedFormula | expectedExplanations
     ${7 / 12} | ${""}           | ${[]}

@@ -4,7 +4,7 @@ import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger
 import { QuestionOuiNon } from "../../../../common";
 import { CatPro573 } from "../../formula";
 
-const engine = global.__engine__;
+const engine = SingletonEnginePublicodes.getInstance();
 
 describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
   describe("Autres", () => {

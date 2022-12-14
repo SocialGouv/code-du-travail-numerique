@@ -2,7 +2,7 @@ import Engine from "publicodes";
 
 import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 
-const engine = global.__engine__;
+const engine = SingletonEnginePublicodes.getInstance();
 
 describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
   describe("35 ans", () => {

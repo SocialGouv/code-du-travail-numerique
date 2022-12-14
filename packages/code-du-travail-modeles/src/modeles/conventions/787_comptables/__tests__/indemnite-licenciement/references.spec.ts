@@ -3,7 +3,7 @@ import Engine from "publicodes";
 import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
 
-const engine = global.__engine__;
+const engine = SingletonEnginePublicodes.getInstance();
 
 const References = [
   {

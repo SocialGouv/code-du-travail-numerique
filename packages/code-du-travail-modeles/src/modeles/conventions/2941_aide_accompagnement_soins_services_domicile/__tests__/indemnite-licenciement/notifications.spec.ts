@@ -3,7 +3,7 @@ import Engine from "publicodes";
 import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getNotifications } from "../../../../common";
 
-const engine = global.__engine__;
+const engine = SingletonEnginePublicodes.getInstance();
 
 describe("Vérification des notifications pour la CC 2941", () => {
   test("aucune notification ne doit remonter", () => {

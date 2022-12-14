@@ -1,11 +1,9 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
+import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 import { getFormule } from "../../../../common";
 
-describe("Formule de l'indemnité de licenciement - CC 2098", () => {
-  const engine = global.__engine__;
+const engine = SingletonEnginePublicodes.getInstance();
 
+describe("Formule de l'indemnité de licenciement - CC 2098", () => {
   describe("Licenciement pour inaptitude non professionnelle", () => {
     test.each`
       seniority | expectedFormula                            | expectedExplanations

@@ -4,7 +4,7 @@ import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger
 import { getFormule } from "../../../../common";
 
 describe("Formule indemnité licenciement - CC 2511", () => {
-  const engine = global.__engine__;
+  const engine = SingletonEnginePublicodes.getInstance();
 
   test.each`
     seniority | expectedFormula                            | expectedExplanations
