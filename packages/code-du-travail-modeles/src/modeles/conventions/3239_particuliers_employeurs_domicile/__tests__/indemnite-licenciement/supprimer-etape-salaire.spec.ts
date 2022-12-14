@@ -1,6 +1,3 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { CatPro3239 } from "../../salary";
 
 const engine = SingletonEnginePublicodes.getInstance();

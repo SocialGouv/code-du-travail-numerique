@@ -1,6 +1,7 @@
 import Engine from "publicodes";
 
 import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
+
 const engine = new Engine(mergeIndemniteLicenciementModels());
 
 describe("CC 16", () => {

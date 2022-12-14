@@ -1,7 +1,3 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
-
 const engine = SingletonEnginePublicodes.getInstance();
 
 describe("CC 3127", () => {

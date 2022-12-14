@@ -1,7 +1,5 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getFormule } from "../../../../common";
+import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 
 describe("Formule indemnité licenciement - CC 29", () => {
   const engine = SingletonEnginePublicodes.getInstance();

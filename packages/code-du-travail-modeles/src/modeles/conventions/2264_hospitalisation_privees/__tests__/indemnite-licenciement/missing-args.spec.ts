@@ -1,7 +1,3 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
-
 const engine = SingletonEnginePublicodes.getInstance();
 
 describe("Missing args pour la CC 2264", () => {

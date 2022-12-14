@@ -1,6 +1,4 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
+import SingletonEnginePublicodes from "../../../../../internal/SingletonEngine";
 
 const engine = SingletonEnginePublicodes.getInstance();
 
