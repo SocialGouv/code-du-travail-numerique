@@ -59,9 +59,6 @@ export const SearchEnterpriseInput = ({
         <Box>
           <InlineLabel htmlFor="enterprise-search">
             Nom de votre entreprise ou numéro Siret{" "}
-            <Text fontWeight="400" fontSize="small">
-              (obligatoire)
-            </Text>
           </InlineLabel>
           <InfoBulle title={"Qu’est ce qu’un n°siret ?"}>
             <p>
@@ -133,6 +130,7 @@ const Flex = styled.div`
 
 const Box = styled.div`
   flex-grow: 2;
+
   & + & {
     flex-grow: 1;
     padding-left: ${theme.spacings.xmedium};
