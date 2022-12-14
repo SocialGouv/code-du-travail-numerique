@@ -29,17 +29,17 @@ const getTotalAbsence = (
 
 export const getErrorEligibility = (
   state: AncienneteStoreInput,
+  isInaptitude: boolean,
   agreement?: Agreement
 ) => {
+  if (isInaptitude || !state.dateEntree || !state.dateNotification) {
+    return "";
+  }
   const dEntree = parse(state.dateEntree);
   const dNotification = parse(state.dateNotification);
   const totalAbsence = getTotalAbsence(state.absencePeriods, agreement);
   const diff = differenceInMonths(dNotification, dEntree);
-  const isEligible =
-    !state.dateEntree ||
-    !state.dateNotification ||
-    diff < 0 ||
-    diff - totalAbsence >= 8;
+  const isEligible = diff < 0 || diff - totalAbsence >= 8;
   return !isEligible
     ? `L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois.`
     : "";
