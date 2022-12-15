@@ -15,7 +15,7 @@ import { Layout } from "../../src/layout/Layout";
 const FindAnswerPage = (): JSX.Element => (
   <Layout>
     <Metas
-      title="Widget pour intégrer le Code du travail numérique à votre site"
+      title="Intégrez le moteur de recherche du Code du travail numérique"
       description="Intégrez le moteur de recherche du Code du travail numérique sur votre site grâce à un module (widget)."
     />
 
