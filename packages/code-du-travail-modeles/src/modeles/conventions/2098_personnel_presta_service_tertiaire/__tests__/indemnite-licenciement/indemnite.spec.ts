@@ -1,9 +1,3 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-indemnite-licenciement.json";
-
-const engine = new Engine(modeles as any);
-
 describe("Calcul de l'indemnité de licenciement CC 2098", () => {
   describe("Licenciement pour inaptitude non professionnelle", () => {
     test.each`

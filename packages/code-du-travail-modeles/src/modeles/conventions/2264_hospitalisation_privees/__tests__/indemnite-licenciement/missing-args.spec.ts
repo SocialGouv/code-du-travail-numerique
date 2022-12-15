@@ -1,9 +1,3 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-indemnite-licenciement.json";
-
-const engine = new Engine(modeles as any);
-
 describe("Missing args pour la CC 2264", () => {
   test("Catégorie professionnelle", () => {
     const result = engine

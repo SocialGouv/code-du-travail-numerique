@@ -7,8 +7,6 @@ import {
 } from "../../../../__test__/common/legal-references";
 import { getReferences } from "../../../common";
 
-const engine = new Engine(modeles as any);
-
 describe("Vérification des références juridiques pour Indemnité légale de licenciement", () => {
   test.each`
     seniority | expectedReferences

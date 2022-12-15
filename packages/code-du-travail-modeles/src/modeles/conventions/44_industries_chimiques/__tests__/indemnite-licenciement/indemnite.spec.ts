@@ -1,9 +1,4 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-indemnite-licenciement.json";
 import { CategoryPro44 } from "../../salary";
-
-const engine = new Engine(modeles as any);
 
 describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
   describe("Défaut", () => {

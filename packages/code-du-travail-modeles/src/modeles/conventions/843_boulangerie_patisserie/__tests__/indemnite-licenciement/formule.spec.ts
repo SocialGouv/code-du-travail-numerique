@@ -1,6 +1,3 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-indemnite-licenciement.json";
 import { getFormule } from "../../../../common";
 
 const engine = new Engine(modeles as any);

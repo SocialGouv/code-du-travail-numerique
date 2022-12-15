@@ -1,10 +1,5 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-indemnite-licenciement.json";
 import { getReferences, QuestionOuiNon } from "../../../../common";
 import { CatPro573 } from "../../formula";
-
-const engine = new Engine(modeles as any);
 
 const refAutres = [
   {

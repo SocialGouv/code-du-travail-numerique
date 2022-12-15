@@ -1,9 +1,4 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-indemnite-licenciement.json";
 import { getReferences } from "../../../../common";
-
-const engine = new Engine(modeles as any);
 
 describe("Vérification des références juridiques pour la CC 2098", () => {
   test("Licenciement pour inaptitude non professionnelle", () => {

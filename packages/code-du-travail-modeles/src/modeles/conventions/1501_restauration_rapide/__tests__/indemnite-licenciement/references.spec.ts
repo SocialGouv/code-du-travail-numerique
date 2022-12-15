@@ -1,9 +1,4 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-indemnite-licenciement.json";
 import { getReferences } from "../../../../common";
-
-const engine = new Engine(modeles as any);
 
 describe("Références juridique pour l'indemnité conventionnel de licenciement pour la CC 1501", () => {
   test.each`

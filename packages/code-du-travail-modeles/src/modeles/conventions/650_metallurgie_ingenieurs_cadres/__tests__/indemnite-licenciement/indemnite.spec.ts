@@ -1,9 +1,3 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-indemnite-licenciement.json";
-
-const engine = new Engine(modeles as any);
-
 describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
   describe("35 ans", () => {
     test.each`

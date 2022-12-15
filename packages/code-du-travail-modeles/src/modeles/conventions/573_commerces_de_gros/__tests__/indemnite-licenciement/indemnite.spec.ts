@@ -1,10 +1,5 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-indemnite-licenciement.json";
 import { QuestionOuiNon } from "../../../../common";
 import { CatPro573 } from "../../formula";
-
-const engine = new Engine(modeles as any);
 
 describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
   describe("Autres", () => {

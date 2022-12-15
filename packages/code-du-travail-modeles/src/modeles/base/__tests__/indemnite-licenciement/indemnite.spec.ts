@@ -1,9 +1,3 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../src/modeles/modeles-indemnite-licenciement.json";
-
-const engine = new Engine(modeles as any);
-
 describe("Indemnité légale de licenciement pour un employé", () => {
   test.each`
     seniority             | salary  | expectedCompensation

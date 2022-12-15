@@ -1,10 +1,5 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-indemnite-licenciement.json";
 import { getReferences } from "../../../../common";
 import { CategoryPro44 } from "../../salary";
-
-const engine = new Engine(modeles as any);
 
 const referencesOuvrierLicenciementNormal = [
   {

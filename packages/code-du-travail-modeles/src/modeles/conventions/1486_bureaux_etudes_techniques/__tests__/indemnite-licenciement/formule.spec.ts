@@ -1,10 +1,5 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-indemnite-licenciement.json";
 import { getFormule } from "../../../../common";
 import { CatPro1486, TypeLicenciement1486 } from "../../salary";
-
-const engine = new Engine(modeles as any);
 
 describe("Formule indemnité licenciement - 1486", () => {
   test.each`
