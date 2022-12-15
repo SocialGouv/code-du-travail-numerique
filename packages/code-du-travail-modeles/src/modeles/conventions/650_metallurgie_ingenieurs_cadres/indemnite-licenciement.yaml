@@ -87,14 +87,10 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 1:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
-    une de ces conditions:
-      - toutes ces conditions:
-          - age = 49
-          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
-      - toutes ces conditions:
-          - age >= 50
-          - age < 55
-          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+    toutes ces conditions:
+      - age >= 50
+      - age < 55
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
   variations:
     - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
       alors:
@@ -111,20 +107,11 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 2:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
-    une de ces conditions:
-      - toutes ces conditions:
-          - age = 54
-          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
-          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an
-      - toutes ces conditions:
-          - age >= 55
-          - age < 59
-          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
-          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an
-      - toutes ces conditions:
-          - age = 59
-          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
-          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an
+    toutes ces conditions:
+      - age >= 55
+      - age < 59
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an
   variations:
     - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
       alors:
@@ -141,17 +128,10 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 3:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
-    une de ces conditions:
-      - toutes ces conditions:
-          - age = 54
-          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
-      - toutes ces conditions:
-          - age >= 55
-          - age < 59
-          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
-      - toutes ces conditions:
-          - age = 59
-          - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
+    toutes ces conditions:
+      - age >= 55
+      - age < 59
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
   variations:
     - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
       alors:
