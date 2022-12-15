@@ -1,6 +1,5 @@
 import { getFormule } from "../../../../common";
 
-const engine = new Engine(modeles as any);
 describe("Formule indemnité licenciement - 787", () => {
   test.each`
     seniority | expectedFormula                            | expectedExplanations

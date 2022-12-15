@@ -1,7 +1,6 @@
 import { getFormule } from "../../../../common";
 import { CatPro3239 } from "../../salary";
 
-const engine = new Engine(modeles as any);
 describe("Formule indemnité licenciement - CC 3239", () => {
   test.each`
     category                                  | seniority | expectedFormula                            | expectedExplanations

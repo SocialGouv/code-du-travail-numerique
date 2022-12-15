@@ -1,9 +1,3 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-indemnite-licenciement.json";
-
-const engine = new Engine(modeles as any);
-
 describe("CC 16", () => {
   describe("Calcul de l'indemnité de licenciement pour un Ingénieur et cadre", () => {
     test.each`

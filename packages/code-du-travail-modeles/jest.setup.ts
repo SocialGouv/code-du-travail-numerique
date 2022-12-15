@@ -1,5 +1,5 @@
 import Engine from "publicodes";
 
-import { mergeIndemniteLicenciementModels } from "./src/internal/merger";
+import modeles from "./src/modeles/modeles-indemnite-licenciement.json";
 
-(global as any).engine = new Engine(mergeIndemniteLicenciementModels());
+(global as any).engine = new Engine(modeles as any);
