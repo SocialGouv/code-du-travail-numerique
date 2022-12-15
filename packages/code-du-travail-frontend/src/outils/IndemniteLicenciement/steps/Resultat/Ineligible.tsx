@@ -1,8 +1,8 @@
 import React from "react";
-import { HighlightResult, SectionTitle } from "../../../../common/stepStyles";
-import { useIndemniteLicenciementStore } from "../../../store";
-import { AgreementInfo } from ".";
-import { getSupportedCcIndemniteLicenciement } from "../../../common";
+import { HighlightResult, SectionTitle } from "../../../common/stepStyles";
+import { useIndemniteLicenciementStore } from "../../store";
+import { AgreementInfo } from "./components";
+import { getSupportedCcIndemniteLicenciement } from "../../common";
 
 export default function Ineligible() {
   const {

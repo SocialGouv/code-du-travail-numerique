@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { useIndemniteLicenciementStore } from "../../store";
-import { Ineligible, Eligible } from "./components";
+import Eligible from "./Eligible";
+import Ineligible from "./Ineligible";
 
 const StepResult = () => {
-  const { isEligible } = useIndemniteLicenciementStore((state) => ({
-    isEligible: state.resultFunction.isEligible,
+  const { isEligible, init } = useIndemniteLicenciementStore((state) => ({
+    isEligible: state.resultData.input.isEligible,
+    init: state.resultFunction.init
   }));
 
-  const eligible = isEligible();
+  useEffect(() => {
+    init();
+  }, [])
 
   return (
     <>
-      {eligible && <Eligible></Eligible>}
-      {!eligible && <Ineligible></Ineligible>}
+      {isEligible && <Eligible></Eligible>}
+      {!isEligible && <Ineligible></Ineligible>}
     </>
   );
 };
