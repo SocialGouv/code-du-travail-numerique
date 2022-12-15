@@ -2,7 +2,7 @@ describe("CC 787", () => {
   describe("Calcul de l'indemnité de licenciement", () => {
     test.each`
       seniority | salaireRef | expectedCompensation
-      ${0}      | ${3000}    | ${0}
+      ${7 / 12} | ${3000}    | ${0}
       ${8 / 12} | ${3000}    | ${500}
       ${2}      | ${3000}    | ${1500}
       ${12}     | ${3000}    | ${9500}
@@ -14,10 +14,6 @@ describe("CC 787", () => {
           .setSituation({
             "contrat salarié . convention collective": "'IDCC0787'",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
-            "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-              "non",
-            "contrat salarié . indemnité de licenciement . salaire de référence": salaireRef,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
           })
           .evaluate(

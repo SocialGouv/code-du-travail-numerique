@@ -3,7 +3,7 @@ import { getFormule } from "../../../../common";
 describe("Formule indemnité de licenciement - CC 1527", () => {
   test.each`
     seniority | expectedFormula                            | expectedExplanations
-    ${6 / 12} | ${""}                                      | ${[]}
+    ${7 / 12} | ${""}                                      | ${[]}
     ${8 / 12} | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (≈ 0.67 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
     ${7}      | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (7 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${10}     | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (10 ans)", "Sref : Salaire de référence (1000 €)"]}
