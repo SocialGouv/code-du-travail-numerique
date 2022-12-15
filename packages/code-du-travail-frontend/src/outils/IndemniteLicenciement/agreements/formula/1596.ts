@@ -19,7 +19,6 @@ export class AgreementFormula1596 implements AgreementFormula {
     );
     if (!agreementFactoryFormula) throw new Error("Formula should be defined");
 
-    let hasMoreThan55Years = false;
     const year = get().informationsData.input.publicodesInformations.find(
       (v) =>
         v.question.rule.nom ===
