@@ -25,24 +25,10 @@ export class AgreementFormula1596 implements AgreementFormula {
         v.question.rule.nom ===
         "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age"
     )?.info as string;
-    if (year && parseInt(year) > 55) {
-      hasMoreThan55Years = true;
-    } else {
-      const moreThan55YearsQuestion = get()
-        .informationsData.input.publicodesInformations.find(
-          (v) =>
-            v.question.rule.nom ===
-            "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age plus de 55 ans"
-        )
-        ?.info?.slice(1, -1);
-      if (moreThan55YearsQuestion && moreThan55YearsQuestion === "Oui") {
-        hasMoreThan55Years = true;
-      }
-    }
     return agreementFactoryFormula.computeFormula({
       seniority: agreementSeniority.value,
       refSalary: agreementRefSalary,
-      hasMoreThan55Years,
+      hasMoreThan55Years: parseInt(year) > 55,
     });
   };
 }

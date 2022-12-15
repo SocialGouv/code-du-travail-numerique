@@ -23,7 +23,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
 contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age:
   applicable si: licenciement économique = 'Oui'
   titre: Âge du salarié
-  question: Quel est l'âge du salarié ?
+  question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
   cdtn:
     type: entier
 
@@ -379,7 +379,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle . licenciement économique = 'Oui'
-      - catégorie professionnelle . licenciement économique . age > 50 ans
+      - catégorie professionnelle . licenciement économique . age >= 50 ans
   valeur:
     somme:
       - dix ans ou moins

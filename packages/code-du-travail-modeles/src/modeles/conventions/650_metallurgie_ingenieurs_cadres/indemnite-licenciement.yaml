@@ -5,30 +5,9 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
 # Questions à poser
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age:
   titre: Âge du salarié
-  question: Quel est l'âge du salarié ?
+  question: Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?
   cdtn:
     type: entier
-
-contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age 50 ans:
-  applicable si: age = 49
-  titre: Le salarié aura 50 ans avant la fin de son préavis
-  question: Le salarié aura-t-il 50 ans avant la fin de son préavis (que le préavis soit effectué ou non) ?
-  cdtn:
-    type: oui-non
-
-contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age 55 ans:
-  applicable si: age = 54
-  titre: Le salarié aura 55 ans avant la fin de son préavis
-  question: Le salarié aura-t-il 55 ans avant la fin de son préavis (que le préavis soit effectué ou non) ?
-  cdtn:
-    type: oui-non
-
-contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age 60 ans:
-  applicable si: age = 59
-  titre: Le salarié aura 60 ans avant la fin de son préavis
-  question: Le salarié aura-t-il 60 ans avant la fin de son préavis (que le préavis soit effectué ou non) ?
-  cdtn:
-    type: oui-non
 
 # Formules
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . jusqu'à sept ans ou moins:
@@ -111,13 +90,11 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
     une de ces conditions:
       - toutes ces conditions:
           - age = 49
-          - age 50 ans = 'Oui'
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
       - toutes ces conditions:
           - age >= 50
           - age < 55
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
-          - age 55 ans = 'Non'
   variations:
     - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
       alors:
@@ -137,7 +114,6 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
     une de ces conditions:
       - toutes ces conditions:
           - age = 54
-          - age 55 ans = 'Oui'
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an
       - toutes ces conditions:
@@ -147,7 +123,6 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an
       - toutes ces conditions:
           - age = 59
-          - age 60 ans = 'Non'
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an
   variations:
@@ -169,7 +144,6 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
     une de ces conditions:
       - toutes ces conditions:
           - age = 54
-          - age 55 ans = 'Oui'
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
       - toutes ces conditions:
           - age >= 55
@@ -177,7 +151,6 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
       - toutes ces conditions:
           - age = 59
-          - age 60 ans = 'Non'
           - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an
   variations:
     - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
