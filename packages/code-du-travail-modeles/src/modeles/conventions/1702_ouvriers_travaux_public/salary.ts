@@ -6,8 +6,7 @@ import type {
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
 export class ReferenceSalary1702
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1702>
-{
+  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1702> {
   /**
    * Règle :
    * Pour la catégorie pro :
