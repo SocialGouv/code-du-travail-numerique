@@ -1,4 +1,5 @@
-import type Engine, { Rule } from "publicodes";
+import type { Rule } from "publicodes";
+import type Engine from "publicodes";
 
 import type { AgreementInfo } from "../modeles/common";
 
