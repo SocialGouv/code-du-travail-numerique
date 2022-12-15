@@ -74,11 +74,11 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
   describe("Cas avec une réponse Non", () => {
     test.each`
       age   | seniority | salary
-      ${54} | ${1}      | ${2562}
-      ${54} | ${5}      | ${2562}
-      ${54} | ${7.91}   | ${2562}
-      ${54} | ${8}      | ${2668}
-      ${54} | ${19}     | ${2668}
+      ${55} | ${1}      | ${2562}
+      ${55} | ${5}      | ${2562}
+      ${55} | ${7.91}   | ${2562}
+      ${55} | ${8}      | ${2668}
+      ${55} | ${19}     | ${2668}
     `(
       "age: $age, ancienneté: $seniority an, salaire de référence: $salary, catégorie $category",
       ({ seniority, salary, age }) => {

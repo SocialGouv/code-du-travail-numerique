@@ -66,7 +66,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 1597", () => {
           .setSituation({
             "contrat salarié . convention collective": "'IDCC1597'",
             "contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age":
-              "55",
+              "54",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
           })
