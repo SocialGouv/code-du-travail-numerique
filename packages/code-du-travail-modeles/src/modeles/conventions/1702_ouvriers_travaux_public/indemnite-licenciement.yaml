@@ -4,7 +4,7 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
 
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age:
   titre: Âge du salarié
-  question: Quel est l'âge du salarié à la date d'expiration du préavis, effectué ou non&nbsp;?
+  question: Quel est l'âge du salarié à la fin de son préavis (exécuté ou non) &nbsp;?
   cdtn:
     type: entier
 
