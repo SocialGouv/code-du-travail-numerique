@@ -12,5 +12,6 @@ lerna-debug.log
 .vscode
 .DS_Store
 *.tsbuildinfo
-packages/code-du-travail-modeles/src/__test__/output/*
+packages/code-du-travail-modeles/src/modeles/modeles-preavis-retraite.json
+packages/code-du-travail-modeles/src/modeles/modeles-indemnite-licenciement.json
 

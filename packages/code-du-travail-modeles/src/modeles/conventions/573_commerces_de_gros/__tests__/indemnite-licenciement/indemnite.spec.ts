@@ -1,6 +1,6 @@
 import Engine from "publicodes";
 
-import modeles from "../../../../../../src/__test__/output/modeles-indemnite-licenciement.json";
+import modeles from "../../../../../../src/modeles/modeles-indemnite-licenciement.json";
 import { QuestionOuiNon } from "../../../../common";
 import { CatPro573 } from "../../formula";
 

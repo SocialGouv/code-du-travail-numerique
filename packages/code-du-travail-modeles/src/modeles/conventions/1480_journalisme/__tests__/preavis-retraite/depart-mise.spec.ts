@@ -1,6 +1,6 @@
 import Engine from "publicodes";
 
-import modeles from "../../../../../../src/__test__/output/modeles-preavis-retraite.json";
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 
 const engine = new Engine(modeles as any);
 
