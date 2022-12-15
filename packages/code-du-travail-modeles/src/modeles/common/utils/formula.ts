@@ -27,25 +27,16 @@ function round(num: number): number {
   return Math.round(num * 100) / 100;
 }
 
-function hasToBeRounded(num: number): boolean {
-  if (Number.isInteger(num)) {
-    return false;
-  }
-
-  const numberOfDigits = num.toString().split(".")[1].length;
-  return numberOfDigits > 2;
-}
-
 export const roundValueAndAddMessage = (
   value: number,
   unit: string
 ): string => {
   const unitWithPlurial = `${unit}${pluralize(unit, value)}`;
-
-  if (!hasToBeRounded(value)) {
-    return `${value} ${unitWithPlurial}`;
-  }
-  return `≈ ${round(value)} ${unitWithPlurial} : valeur arrondie`;
+  const roundedValue = round(value);
+  const isRounded = roundedValue !== value;
+  return isRounded
+    ? `≈ ${roundedValue} ${unitWithPlurial} : valeur arrondie`
+    : `${roundedValue} ${unitWithPlurial}`;
 };
 
 function getRulesWithFormuleAndNodeValue(engine: Engine): RuleNodeFormula[] {
