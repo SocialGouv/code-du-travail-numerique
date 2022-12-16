@@ -33,7 +33,7 @@ export const getErrorEligibility = (
   agreement?: Agreement
 ) => {
   if (isInaptitude || !state.dateEntree || !state.dateNotification) {
-    return "";
+    return;
   }
   const dEntree = parse(state.dateEntree);
   const dNotification = parse(state.dateNotification);
