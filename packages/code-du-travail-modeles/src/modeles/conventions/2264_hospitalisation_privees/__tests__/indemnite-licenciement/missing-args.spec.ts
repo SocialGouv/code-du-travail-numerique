@@ -1,9 +1,3 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
-
 describe("Missing args pour la CC 2264", () => {
   test("Catégorie professionnelle", () => {
     const result = engine

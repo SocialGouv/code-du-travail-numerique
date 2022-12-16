@@ -1,9 +1,3 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
-
 describe("Indemnité conventionnel de licenciement pour la CC 1090", () => {
   test.each`
     seniority | salary  | expectedCompensation

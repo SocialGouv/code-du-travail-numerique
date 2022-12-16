@@ -1,6 +1,3 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getFormule } from "../../../../common";
 
 describe("Formule indemnité licenciement - CC 2941", () => {
@@ -15,8 +12,6 @@ describe("Formule indemnité licenciement - CC 2941", () => {
   `(
     "Formule $expectedFormula avec $seniority ans",
     ({ seniority, expectedFormula, expectedExplanations }) => {
-      const engine = new Engine(mergeIndemniteLicenciementModels());
-
       const situation = engine.setSituation({
         "contrat salarié . convention collective": "'IDCC2941'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
