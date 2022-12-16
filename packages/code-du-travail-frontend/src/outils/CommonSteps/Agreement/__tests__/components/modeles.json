@@ -915,7 +915,7 @@
       "toutes ces conditions": ["age >= 61", "age <= 65"]
     },
     "titre": "Le salarié remplit les conditions pour partir à la retraite",
-    "question": "Le salarié remplit-il les conditions pour partir à la retraite ?",
+    "question": "Le salarié a-t-il atteint l'âge qui lui permet de bénéficier d'une retraite ?",
     "cdtn": {
       "type": "oui-non"
     }
