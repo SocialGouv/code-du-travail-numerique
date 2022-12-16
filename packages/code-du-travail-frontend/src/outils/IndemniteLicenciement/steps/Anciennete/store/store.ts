@@ -9,10 +9,10 @@ import {
   AncienneteStoreInput,
   AncienneteStoreSlice,
 } from "./types";
-import { validateStep } from "./validator";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
 import { Absence } from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
+import { getErrorEligibility } from "./eligibility";
 import { customSeniorityValidator } from "../../../agreements/seniority";
 
 const initialState: AncienneteStoreData = {
@@ -81,6 +81,19 @@ const createAncienneteStore: StoreSlice<
         })
       );
       return isValid;
+    },
+    onEligibilityCheckStepAnciennete: () => {
+      const errorEligibility = getErrorEligibility(
+        get().ancienneteData.input,
+        get().agreementData.input.agreement
+      );
+
+      set(
+        produce((state: AncienneteStoreSlice) => {
+          state.ancienneteData.error.errorEligibility = errorEligibility;
+        })
+      );
+      return !errorEligibility;
     },
   },
 });
