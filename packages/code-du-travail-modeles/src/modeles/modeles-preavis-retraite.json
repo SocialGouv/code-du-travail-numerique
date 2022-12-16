@@ -3055,7 +3055,8 @@
     "valeur": "oui",
     "cdtn": {
       "idcc": 2609,
-      "préavis-retraite": true
+      "préavis-retraite": true,
+      "indemnité-licenciement": true
     }
   },
   "contrat salarié . convention collective . batiment etam . préavis de mise à la retraite": {
