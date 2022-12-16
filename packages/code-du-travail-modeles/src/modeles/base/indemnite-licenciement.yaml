@@ -45,6 +45,11 @@ contrat salarié . indemnité de licenciement . résultat légal:
         somme:
           - facteur dix ans ou moins
           - facteur plus de dix ans
+    - si: inaptitude suite à un accident ou maladie professionnelle = oui
+      alors:
+        somme:
+          - facteur dix ans ou moins
+          - facteur plus de dix ans
     - sinon: 0
   unité: €
   arrondi: 2 décimales
