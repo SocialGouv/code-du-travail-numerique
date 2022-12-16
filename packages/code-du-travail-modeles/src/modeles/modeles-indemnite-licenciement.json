@@ -6757,6 +6757,22 @@
       "type": "entier"
     }
   },
+  "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age plus de 60 ans": {
+    "applicable si": {
+      "une de ces conditions": [
+        "age = 61",
+        "age = 62",
+        "age = 63",
+        "age = 64"
+      ]
+    },
+    "titre": "Le salarié remplit les conditions pour partir à la retraite",
+    "question": "Le salarié remplit-il les conditions pour partir à la retraite ?",
+    "description": "Répondre oui si le salarié a les trimestres suffisants pour bénéficier d’une retraite à taux plein et s’il peut bénéficier d’une retraite complémentaire sans abattement",
+    "cdtn": {
+      "type": "oui-non"
+    }
+  },
   "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . jusqu'à sept ans ou moins": {
     "valeur": {
       "le minimum de": [
@@ -6968,6 +6984,7 @@
     "applicable si": {
       "toutes ces conditions": [
         "age = 61",
+        "age plus de 60 ans = 'Oui'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois"
       ]
     },
@@ -7000,6 +7017,7 @@
     "applicable si": {
       "toutes ces conditions": [
         "age = 62",
+        "age plus de 60 ans = 'Oui'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois"
       ]
     },
@@ -7032,6 +7050,7 @@
     "applicable si": {
       "toutes ces conditions": [
         "age = 63",
+        "age plus de 60 ans = 'Oui'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois"
       ]
     },
@@ -7064,6 +7083,7 @@
     "applicable si": {
       "toutes ces conditions": [
         "age = 64",
+        "age plus de 60 ans = 'Oui'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois"
       ]
     },
@@ -7095,6 +7115,7 @@
     "remplace": "contrat salarié . indemnité de licenciement . résultat conventionnel",
     "applicable si": {
       "toutes ces conditions": [
+        "age plus de 60 ans = 'Non'",
         "age = 61",
         "age = 62",
         "age = 63",
