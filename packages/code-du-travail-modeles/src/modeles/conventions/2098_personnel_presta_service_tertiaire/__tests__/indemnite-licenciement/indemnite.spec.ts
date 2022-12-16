@@ -1,9 +1,3 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
-
 describe("Calcul de l'indemnité de licenciement CC 2098", () => {
   describe("Licenciement pour inaptitude non professionnelle", () => {
     test.each`

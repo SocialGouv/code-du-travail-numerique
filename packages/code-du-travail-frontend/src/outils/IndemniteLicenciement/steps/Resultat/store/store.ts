@@ -38,6 +38,7 @@ const initialState: ResultStoreData = {
     legalReferences: [],
     publicodesLegalResult: { value: "" },
     isAgreementBetter: false,
+    isEligible: true,
   },
   error: {},
   hasBeenSubmit: true,
@@ -67,6 +68,23 @@ const createResultStore: StoreSlice<
     publicodes: new IndemniteLicenciementPublicodes(publicodesRules!),
   },
   resultFunction: {
+    init: () => {
+      const contratTravailEligibility =
+        !get().contratTravailData.error.errorEligibility;
+      const ancienneteEligibility =
+        !get().ancienneteData.error.errorEligibility;
+        set(
+          produce((state: ResultStoreSlice) => {
+            state.resultData.input.isEligible = contratTravailEligibility && ancienneteEligibility;
+          })
+        );
+    },
+    getEligibilityError: () => {
+      const contratTravailEligibility =
+        get().contratTravailData.error.errorEligibility;
+      const ancienneteEligibility = get().ancienneteData.error.errorEligibility;
+      return contratTravailEligibility || ancienneteEligibility;
+    },
     getPublicodesResult: () => {
       const refSalary = get().salairesData.input.refSalary;
       const agreement = get().agreementData.input.agreement;

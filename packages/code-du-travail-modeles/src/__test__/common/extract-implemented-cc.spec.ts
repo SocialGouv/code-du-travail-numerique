@@ -1,9 +1,9 @@
 import Engine from "publicodes";
 
+import modeles from "../../../src/modeles/modeles-preavis-retraite.json";
 import type { RuleNodeIdcc } from "../../internal/extractSupportedCc";
-import { mergePreavisRetraiteModels } from "../../internal/merger";
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 test("Check all agreements have an cdtn with idcc property", () => {
   Object.values(engine.getParsedRules())

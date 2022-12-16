@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`api entreprise can get entreprise data by name 1`] = `
-Array [
-  Object {
+[
+  {
     "closed": false,
-    "conventions": Array [],
+    "conventions": [],
     "id": 112277319,
     "label": "CORSO BALARD 75004 PARIS 4E ARRONDISSEMENT",
     "siret": "80258570300035",
     "type": "entreprise",
   },
-  Object {
+  {
     "closed": false,
-    "conventions": Array [
-      Object {
+    "conventions": [
+      {
         "active": true,
         "date_publi": "1997-12-07T00:00:00.000Z",
         "effectif": 580085,
@@ -37,11 +37,11 @@ Array [
 `;
 
 exports[`api entreprise can get entreprise data by siren and reuse memoized call from previous siret2idcc 1`] = `
-Array [
-  Object {
+[
+  {
     "closed": false,
-    "conventions": Array [
-      Object {
+    "conventions": [
+      {
         "active": true,
         "date_publi": "1997-12-07T00:00:00.000Z",
         "effectif": 580085,
@@ -61,17 +61,17 @@ Array [
     "siret": "80258570300027",
     "type": "entreprise",
   },
-  Object {
+  {
     "closed": false,
-    "conventions": Array [],
+    "conventions": [],
     "id": 113238717,
     "label": "CORSO BALARD 75004 PARIS 4",
     "siret": "80258570300035",
     "type": "entreprise",
   },
-  Object {
+  {
     "closed": true,
-    "conventions": Array [],
+    "conventions": [],
     "id": 113118965,
     "label": "CORSO BALARD 75002 PARIS 2",
     "siret": "80258570300019",
@@ -81,11 +81,11 @@ Array [
 `;
 
 exports[`api entreprise can get entreprise data by siren and reuse memoized call from previous siret2idcc 2`] = `
-Array [
-  Object {
+[
+  {
     "closed": false,
-    "conventions": Array [
-      Object {
+    "conventions": [
+      {
         "active": true,
         "date_publi": "1997-12-07T00:00:00.000Z",
         "effectif": 580085,
@@ -105,17 +105,17 @@ Array [
     "siret": "80258570300027",
     "type": "entreprise",
   },
-  Object {
+  {
     "closed": false,
-    "conventions": Array [],
+    "conventions": [],
     "id": 113238717,
     "label": "CORSO BALARD 75004 PARIS 4",
     "siret": "80258570300035",
     "type": "entreprise",
   },
-  Object {
+  {
     "closed": true,
-    "conventions": Array [],
+    "conventions": [],
     "id": 113118965,
     "label": "CORSO BALARD 75002 PARIS 2",
     "siret": "80258570300019",
@@ -125,11 +125,11 @@ Array [
 `;
 
 exports[`api entreprise can get entreprise data by siret and reuse memoized call from previous siret2idcc 1`] = `
-Array [
-  Object {
+[
+  {
     "closed": false,
-    "conventions": Array [
-      Object {
+    "conventions": [
+      {
         "active": true,
         "date_publi": "1997-12-07T00:00:00.000Z",
         "effectif": 580085,
@@ -153,11 +153,11 @@ Array [
 `;
 
 exports[`api entreprise can get entreprise data by siret and reuse memoized call from previous siret2idcc 2`] = `
-Array [
-  Object {
+[
+  {
     "closed": false,
-    "conventions": Array [
-      Object {
+    "conventions": [
+      {
         "active": true,
         "date_publi": "1997-12-07T00:00:00.000Z",
         "effectif": 580085,
@@ -181,19 +181,19 @@ Array [
 `;
 
 exports[`api entreprise strip accents 1`] = `
-Array [
-  Object {
+[
+  {
     "closed": false,
-    "conventions": Array [],
+    "conventions": [],
     "id": 112277319,
     "label": "CORSO BALARD 75004 PARIS 4E ARRONDISSEMENT",
     "siret": "80258570300035",
     "type": "entreprise",
   },
-  Object {
+  {
     "closed": false,
-    "conventions": Array [
-      Object {
+    "conventions": [
+      {
         "active": true,
         "date_publi": "1997-12-07T00:00:00.000Z",
         "effectif": 580085,

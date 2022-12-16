@@ -57,32 +57,6 @@ describe("Contrat de travail store", () => {
     ).toBe("non");
   });
 
-  it("should render an error for cdd", () => {
-    expect(store.getState().contratTravailData.error.errorCdd).toBe(false);
-    store.getState().contratTravailFunction.onChangeTypeContratTravail("cdd");
-    const isValid = store
-      .getState()
-      .contratTravailFunction.onValidateStepInfo();
-    expect(isValid).toBe(false);
-    expect(store.getState().contratTravailData.error.errorCdd).toBe(true);
-  });
-
-  it("should render an error for faute grave", () => {
-    expect(store.getState().contratTravailData.error.errorFauteGrave).toBe(
-      false
-    );
-    store
-      .getState()
-      .contratTravailFunction.onChangeLicenciementFauteGrave("oui");
-    const isValid = store
-      .getState()
-      .contratTravailFunction.onValidateStepInfo();
-    expect(isValid).toBe(false);
-    expect(store.getState().contratTravailData.error.errorFauteGrave).toBe(
-      true
-    );
-  });
-
   it("should render an error for field uncompleted", () => {
     const isValid = store
       .getState()
@@ -120,9 +94,5 @@ describe("Contrat de travail store", () => {
     expect(
       store.getState().contratTravailData.error.errorTypeContratTravail
     ).toBe(undefined);
-    expect(store.getState().contratTravailData.error.errorFauteGrave).toBe(
-      false
-    );
-    expect(store.getState().contratTravailData.error.errorCdd).toBe(false);
   });
 });

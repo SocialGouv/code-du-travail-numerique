@@ -1,542 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ConventionCollective /> should render 1`] = `
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c13 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c15 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c15 > *:first-child {
-  margin-top: 0;
-}
-
-.c15 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c19 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c18 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c4 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c4 > *:first-child {
-  margin-top: 0;
-}
-
-.c4 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c21 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c21:link,
-.c21:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c21:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
-}
-
-.c21[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c6 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c12 {
-  position: relative;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c2 {
-  width: 80%;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-}
-
-.c8:hover,
-.c8:focus {
-  color: #f66663;
-}
-
-.c8.spacing-left {
-  margin-left: 1rem;
-}
-
-.c8.spacing-top {
-  margin-top: 1rem;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c11:hover,
-.c11:focus {
-  color: #f66663;
-}
-
-.c11.spacing-left {
-  margin-left: 1rem;
-}
-
-.c11.spacing-top {
-  margin-top: 1rem;
-}
-
-.c9 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding: 0.8rem;
-  background-color: transparent;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-}
-
-.c10 {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-}
-
-.c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c17 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.c20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.c22 + .c22 {
-  margin-left: 4rem;
-}
-
-.c3 {
-  margin: 20%;
-  font-size: 3.2rem;
-  text-align: center;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin-top: 1rem;
-  margin-bottom: 1.6rem;
-  font-weight: bold;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c15 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c15 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c21 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c21 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c21 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c2 {
-    width: 100%;
-  }
-}
-
-@media print {
-  .c7 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c11 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c14 {
-    display: none;
-  }
-}
-
-@media (max-width:1180px) {
-  .c16 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:1180px) {
-  .c17 {
-    margin-bottom: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-@media (max-width:1180px) {
-  .c20 {
-    -webkit-box-pack: space-around;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: space-around;
-    justify-content: space-around;
-  }
-}
-
-@media (max-width:1180px) {
-  .c22 + .c22 {
-    margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-}
-
-@media print {
-  .c5 {
-    display: none;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="sc-bdnxRM sc-cGKJhA bCGhmq iSRmyO"
   >
     <div
-      class="c2"
+      class="sc-JsfZP fsqcrV"
     >
       <div
-        class="c0 c3"
+        class="sc-bdnxRM sc-bTJQgd bCGhmq iQnJIj"
       >
         <div
-          class="c4"
+          class="sc-lmgQwP kHzGur"
         >
           Cette convention collective n'a pas été trouvée
         </div>
       </div>
       <div
-        class="c0 c5"
+        class="sc-bdnxRM sc-fTFMiz bCGhmq jwRxHg"
       >
         <p
-          class="c6"
+          class="sc-cOifOu jBNwUz"
         >
           Partager ce contenu : 
         </p>
         <div
-          class="c7"
+          class="sc-dksuTV eYCuDt"
         >
           <button
-            class="c8 no-after spacing-left"
+            class="sc-jhGUec eqGXHT no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
             <span
-              class="c9"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c10"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -549,16 +51,16 @@ exports[`<ConventionCollective /> should render 1`] = `
             </span>
           </button>
           <a
-            class="c11 spacing-left"
+            class="sc-hkoqWr kZjrEK spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20undefined&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
             <span
-              class="c9"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c10"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -575,15 +77,15 @@ exports[`<ConventionCollective /> should render 1`] = `
             </span>
           </a>
           <button
-            class="c8 spacing-left"
+            class="sc-jhGUec eqGXHT spacing-left"
             title="Partager sur LinkedIn"
           >
             <span
-              class="c9"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c10"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -596,18 +98,18 @@ exports[`<ConventionCollective /> should render 1`] = `
             </span>
           </button>
           <div
-            class="c12"
+            class="sc-laZMeE dRGEWO"
           >
             <button
-              class="c8 spacing-left"
+              class="sc-jhGUec eqGXHT spacing-left"
               title="Plus d’options"
             >
               <span
-                class="c9"
+                class="sc-bShgHC coizkz"
               >
                 <svg
                   aria-hidden="true"
-                  class="c10"
+                  class="sc-juXuNZ dtcTbp"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -633,37 +135,37 @@ exports[`<ConventionCollective /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c13 c14"
+        class="sc-gtsrHT dDJuxj sc-Jgsit fIMTgx"
       >
         <div
-          class="c0"
+          class="sc-bdnxRM bCGhmq"
         >
           <div
-            class="c15"
+            class="sc-jSFjdj dftIwI"
           >
             <div
-              class="c16"
+              class="sc-dbXCOC ezzCbW"
             >
               <h2
-                class="c17 c18"
+                class="sc-ehALMs jjAgxk sc-iCoGMd jQIZyR"
                 data-testid="heading"
               >
                 <span
-                  class="c19"
+                  class="sc-gKAaRy hLlvoX"
                   data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="c20"
+                class="sc-hGwcmR kSUGFz"
               >
                 <button
-                  class="c21 c22 "
+                  class="sc-hiKfDv fEdXfT sc-iuImSO bHvjOX"
                 >
                   Non
                 </button>
                 <button
-                  class="c21 c22 "
+                  class="sc-hiKfDv fEdXfT sc-iuImSO bHvjOX"
                 >
                   Oui
                 </button>

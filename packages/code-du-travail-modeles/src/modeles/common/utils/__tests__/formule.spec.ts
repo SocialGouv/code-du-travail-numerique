@@ -3,7 +3,7 @@ import path from "path";
 import Engine from "publicodes";
 import { parse } from "yaml";
 
-import { getFormule } from "../formula";
+import { cleanFormula, getFormule } from "../formula";
 
 const parseData = (filename: string): any =>
   parse(
@@ -65,6 +65,20 @@ describe("Formula", () => {
         "Prix (18 €)",
         "Quantité (12 litres)",
         "TVA (20 pourcents)",
+      ]);
+    });
+
+    test("doit arrondir le montant", () => {
+      const situation = engine.setSituation({
+        tva: 19.9777777,
+      });
+      const formule = getFormule(situation);
+
+      expect(formule.formula).toEqual("Prix * Quantité * TVA");
+      expect(formule.explanations).toEqual([
+        "Prix (18 €)",
+        "Quantité (12 litres)",
+        "TVA (≈ 19.98 pourcents : valeur arrondie)",
       ]);
     });
   });
@@ -170,5 +184,16 @@ describe("Formula", () => {
         "A3 : Frais bancaire (1 €)",
       ]);
     });
+  });
+});
+
+describe("cleanFormula", () => {
+  test.each([
+    ["[A1]", "A1"],
+    ["  +  A1", "A1"],
+    ["((A1))", "(A1)"],
+    ["A1", "A1"],
+  ])("should clean the formula correctly", (formula, expected) => {
+    expect(cleanFormula(formula)).toEqual(expected);
   });
 });

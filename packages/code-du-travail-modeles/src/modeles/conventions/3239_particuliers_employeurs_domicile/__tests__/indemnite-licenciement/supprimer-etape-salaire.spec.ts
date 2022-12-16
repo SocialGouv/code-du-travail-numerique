@@ -1,9 +1,4 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { CatPro3239 } from "../../salary";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
 
 describe("Suppression de l'étape indemnité de licenciement pour la CC 3239", () => {
   test("Avec des informations basiques", () => {

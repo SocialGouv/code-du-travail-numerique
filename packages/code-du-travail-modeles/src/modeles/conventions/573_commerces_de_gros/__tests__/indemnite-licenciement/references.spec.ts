@@ -1,10 +1,5 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getReferences, QuestionOuiNon } from "../../../../common";
 import { CatPro573 } from "../../formula";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
 
 const refAutres = [
   {

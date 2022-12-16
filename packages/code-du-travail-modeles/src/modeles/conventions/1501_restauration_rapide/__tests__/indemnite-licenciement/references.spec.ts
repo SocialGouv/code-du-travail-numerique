@@ -1,9 +1,4 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
 
 describe("Références juridique pour l'indemnité conventionnel de licenciement pour la CC 1501", () => {
   test.each`
