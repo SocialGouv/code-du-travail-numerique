@@ -22,6 +22,7 @@ export type ResultStoreInput = {
   agreementInformations?: AgreementInformation[];
   agreementNotifications?: Notification[];
   agreementHasNoLegalIndemnity?: boolean;
+  isEligible: boolean;
 };
 
 export type ResultStoreError = {};
@@ -30,7 +31,7 @@ export type ResultStoreData = StepData<ResultStoreInput, ResultStoreError>;
 
 export type ResultStoreFn = {
   getPublicodesResult: () => void;
-  isEligible: () => boolean;
+  init: () => void;
   getEligibilityError: () => string | undefined;
 };
 

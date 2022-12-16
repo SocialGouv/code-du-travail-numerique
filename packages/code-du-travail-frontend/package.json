@@ -8,8 +8,8 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "next dev",
-    "lint-js": "next lint",
-    "lint-css": "stylelint './{src,pages}/**/*.{js,ts,tsx,jsx,css}'",
+    "lint-js": "next lint --quiet",
+    "lint-css": "stylelint './{src,pages}/**/*.{js,ts,tsx,jsx,css}' --quiet",
     "lint": "yarn lint-css && next lint",
     "precommit": "lint-staged",
     "prepush": "yarn test --bail --changedSince=dev",

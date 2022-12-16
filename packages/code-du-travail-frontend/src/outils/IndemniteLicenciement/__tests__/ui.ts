@@ -129,6 +129,11 @@ export const ui = {
         "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle - licenciement économique - age"
       ),
     },
+    agreement2609: {
+      age: byTestId(
+        "infos.contrat salarié - convention collective - batiment etam - indemnité de licenciement - age à la fin de son préavis"
+      ),
+    },
   },
   seniority: {
     startDate: byTestId("date-entree"),
@@ -155,8 +160,8 @@ export const ui = {
     },
     sameSalaryValue: byTestId("same-salary-value"),
     variablePart: {
-      oui: byTestId("hasVariablePart - Oui"),
-      non: byTestId("hasVariablePart - Non"),
+      oui: byTestId("hasVariablePay - Oui"),
+      non: byTestId("hasVariablePay - Non"),
     },
     salaries: byTestId("salary-input"),
     primes: byTestId("prime-input"),
