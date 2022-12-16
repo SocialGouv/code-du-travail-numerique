@@ -94,7 +94,7 @@ export default function Eligible() {
             ? publicodesAgreementResult?.value?.toString() ?? ""
             : publicodesLegalResult.value?.toString() ?? ""
         }
-        notifications={agreementNotifications}
+        notifications={isAgreementBetter ? agreementNotifications : []}
       />
       <ShowDetails>
         <FilledElements

@@ -1,528 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] = `
-.c5 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c6 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #7994d4;
-  border-color: #7994d4;
-  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
-  opacity: 1;
-  will-change: transform;
-}
-
-.c0:link,
-.c0:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c0:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #a0b3e0;
-  border-color: #a0b3e0;
-}
-
-.c0[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c14 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 1rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c14:link,
-.c14:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c14:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c14[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c19 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
-.c1 {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-  overflow: auto;
-  background: rgba(0,0,0,0.5);
-}
-
-.c2 {
-  position: relative;
-  width: 50vw;
-  max-width: 74rem;
-  max-height: calc(100vh - 2 * 10vh);
-  margin: 10vh auto;
-  padding: 2rem;
-  overflow-y: auto;
-  color: #3e486e;
-  background: #fff;
-  border-radius: 0.6rem;
-  outline: none;
-}
-
-.c18 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #7994d4;
-}
-
-.c11 {
-  position: relative;
-  display: inline-block;
-}
-
-.c13 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c13[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c13::-webkit-outer-spin-button,
-.c13::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.c13:invalid {
-  border-color: #eb5757;
-}
-
-.c13::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c13::-moz-placeholder {
-  color: #9298af;
-}
-
-.c13:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c13::placeholder {
-  color: #9298af;
-}
-
-.c13:focus {
-  border-color: #7994d4;
-}
-
-.c13:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c13:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c13:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c13:focus::placeholder {
-  color: transparent;
-}
-
-.c3 {
-  margin-top: 0;
-  margin-bottom: 4rem;
-  margin-left: auto;
-  text-align: center;
-}
-
-.c4 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-}
-
-.c7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 1.6rem 0 3.2rem;
-  padding-right: 1rem;
-  font-weight: bold;
-  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
-  line-height: 1.3;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #fff;
-  border: 1px solid #9298af;
-}
-
-.c8 {
-  padding: 0 1rem;
-  color: #9298af;
-  font-size: 2.8rem;
-  text-align: center;
-}
-
-.c9 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: -3px 0 -3px 0;
-  padding: 0 1rem 0 2rem;
-  color: #fff;
-  font-size: 1.6rem;
-  font-style: normal;
-  background-color: #9298af;
-}
-
-.c9:before {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-color: transparent transparent transparent #fff;
-  border-style: solid;
-  border-width: 10px 0 10px 10px;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  content: "";
-}
-
-.c9:after {
-  position: absolute;
-  top: 0;
-  left: 0.9rem;
-  display: none;
-  width: 0;
-  height: 0;
-  border-color: #fff transparent transparent transparent;
-  border-style: solid;
-  border-width: 8px 8px 0 8px;
-  content: "";
-}
-
-.c10 {
-  position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.c12 {
-  width: 250px;
-  margin-left: 1rem;
-}
-
-.c15 {
-  position: absolute;
-  top: 1rem;
-  right: 0;
-  width: 3rem;
-  height: 5.4rem;
-  color: #7994d4;
-}
-
-.c16 {
-  width: 3rem;
-  height: 3rem;
-}
-
-.c17 {
-  font-size: 1.2rem;
-  margin-top: 2rem;
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c14 {
-    display: none;
-  }
-}
-
-@media (max-width:1180px) {
-  .c2 {
-    width: 60vw;
-  }
-}
-
-@media (max-width:980px) {
-  .c2 {
-    width: 80vw;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    width: calc(100% - 2 * 1.6rem);
-    max-height: calc(100vh - 2 * 1.6rem);
-    margin: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c11 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    margin-bottom: 3.2rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    font-size: 2.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding-right: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    margin: 0;
-    padding: 0 1rem 0 1.6rem;
-    font-size: 1.2rem;
-    line-height: 1.8;
-  }
-}
-
-@media (max-width:600px) {
-  .c9:before {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c9:after {
-    display: block;
-  }
-}
-
 <body>
   <div
     aria-hidden="true"
   >
     <button
-      class="c0"
+      class="sc-hiKfDv fABUwE"
     >
       texte dans le bouton
     </button>
@@ -543,46 +27,46 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
     >
       <div>
         <div
-          class="c1"
+          class="sc-FRrlG hNWtxs"
           data-reach-dialog-overlay=""
         >
           <div
             aria-label="Service de renseignement"
             aria-modal="true"
-            class="c2"
+            class="sc-fXazdy lhbBKM"
             data-reach-dialog-content=""
             role="dialog"
             tabindex="-1"
           >
             <header
-              class="c3"
+              class="sc-eXuyPJ ZSyvw"
             >
               <h1
-                class="c4"
+                class="sc-irKDMX ehzKBH"
               >
                 <span
-                  class="c5"
+                  class="sc-gKAaRy iDZwD"
                 />
                 Les services du ministère du Travail
               </h1>
             </header>
             <h2
-              class="c6"
+              class="sc-iCoGMd gaXVHn"
               data-testid="heading"
             >
               Contact téléphonique
             </h2>
             <a
-              class="c7"
+              class="sc-kTCsyW dqkqFD"
               href="tel:+0033806000126"
             >
               <strong
-                class="c8"
+                class="sc-dvUynV icOeld"
               >
                 0 806 000 126
               </strong>
               <em
-                class="c9"
+                class="sc-jtiXyc aModT"
               >
                 Service gratuit 
                 <span>
@@ -591,13 +75,13 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </em>
             </a>
             <h2
-              class="c6"
+              class="sc-iCoGMd gaXVHn"
               data-testid="heading"
             >
               Contact par email et prise de rendez-vous
             </h2>
             <form
-              class="c10"
+              class="sc-ellfGf OxVHP"
             >
               <label
                 for="search-service"
@@ -605,11 +89,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                 Saisissez votre numéro de département :
               </label>
               <span
-                class="c11 c12"
+                class="sc-bQCEYZ iOBpgY sc-kizEQm iDiVji"
               >
                 <input
                   autocomplete="off"
-                  class="c13"
+                  class="sc-fXgAZx esWNAb"
                   id="search-service"
                   maxlength="3"
                   name="departement"
@@ -620,13 +104,13 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </span>
               <button
                 aria-label="Recherchez le service"
-                class="c14 c15"
+                class="sc-hiKfDv jbMTFD sc-cKRKFl ktLPBo"
                 title="Lancer une recherche"
                 type="submit"
               >
                 <svg
                   aria-hidden="true"
-                  class="c16"
+                  class="sc-iIgjPs dVwoMR"
                   fill="none"
                   viewBox="0 0 32 32"
                   xmlns="http://www.w3.org/2000/svg"
@@ -639,7 +123,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </button>
             </form>
             <div
-              class="c17"
+              class="sc-gstuGz jHSKrq"
             >
               <p>
                 Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
@@ -660,11 +144,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </ul>
             </div>
             <button
-              class="c14 c18"
+              class="sc-hiKfDv jbMTFD sc-dvXYtj kMeFfA"
               title="fermer la modale"
             >
               <div
-                class="c19"
+                class="sc-gXfVKN gNNUJi"
               >
                 fermer la modale
               </div>

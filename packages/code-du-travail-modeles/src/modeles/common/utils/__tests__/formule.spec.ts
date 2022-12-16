@@ -3,7 +3,7 @@ import path from "path";
 import Engine from "publicodes";
 import { parse } from "yaml";
 
-import { getFormule } from "../formula";
+import { cleanFormula, getFormule } from "../formula";
 
 const parseData = (filename: string): any =>
   parse(
@@ -184,5 +184,16 @@ describe("Formula", () => {
         "A3 : Frais bancaire (1 €)",
       ]);
     });
+  });
+});
+
+describe("cleanFormula", () => {
+  test.each([
+    ["[A1]", "A1"],
+    ["  +  A1", "A1"],
+    ["((A1))", "(A1)"],
+    ["A1", "A1"],
+  ])("should clean the formula correctly", (formula, expected) => {
+    expect(cleanFormula(formula)).toEqual(expected);
   });
 });

@@ -1,4 +1,14 @@
-describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
+import Engine from "publicodes";
+
+import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
+import { getNotifications } from "../../../../common";
+
+const engine = new Engine(mergeIndemniteLicenciementModels());
+
+const notification =
+  "Le montant de l'indemnité pourrait être plus important si, avant le CDI, sous certaines conditions, le salarié a été lié à l’employeur par d'autres contrats.";
+
+describe("Notifications pour la CC 650", () => {
   describe("35 ans", () => {
     test.each`
       age   | seniority | salary  | expectedCompensation
@@ -8,8 +18,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
       ${35} | ${8}      | ${2668} | ${5336}
       ${35} | ${19}     | ${2668} | ${22944.8}
     `(
-      "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
-      ({ seniority, salary, expectedCompensation, age }) => {
+      "ancienneté: $seniority an, salaire de référence: $salary",
+      ({ seniority, salary, age }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
@@ -18,12 +28,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const result = situation.evaluate(
-          "contrat salarié . indemnité de licenciement . résultat conventionnel"
-        );
-        expect(result.missingVariables).toEqual({});
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        const notifs = getNotifications(situation);
+        expect(notifs).toHaveLength(1);
+        expect(notifs[0].description).toBe(notification);
       }
     );
   });
@@ -39,7 +46,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
       ${54} | ${19}     | ${2668} | ${27533.76}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
-      ({ seniority, salary, expectedCompensation, age }) => {
+      ({ seniority, salary, age }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
@@ -50,12 +57,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const result = situation.evaluate(
-          "contrat salarié . indemnité de licenciement . résultat conventionnel"
-        );
-        expect(result.missingVariables).toEqual({});
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        const notifs = getNotifications(situation);
+        expect(notifs).toHaveLength(1);
+        expect(notifs[0].description).toBe(notification);
       }
     );
   });
@@ -72,7 +76,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
       ${54} | ${19}     | ${2668} | ${29828.24}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
-      ({ seniority, salary, expectedCompensation, age }) => {
+      ({ seniority, salary, age }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
@@ -83,12 +87,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const result = situation.evaluate(
-          "contrat salarié . indemnité de licenciement . résultat conventionnel"
-        );
-        expect(result.missingVariables).toEqual({});
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        const notifs = getNotifications(situation);
+        expect(notifs).toHaveLength(1);
+        expect(notifs[0].description).toBe(notification);
       }
     );
   });
@@ -105,7 +106,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
       ${55} | ${19}     | ${2668} | ${29828.24}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
-      ({ seniority, salary, expectedCompensation, age }) => {
+      ({ seniority, salary, age }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
@@ -114,12 +115,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const result = situation.evaluate(
-          "contrat salarié . indemnité de licenciement . résultat conventionnel"
-        );
-        expect(result.missingVariables).toEqual({});
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        const notifs = getNotifications(situation);
+        expect(notifs).toHaveLength(1);
+        expect(notifs[0].description).toBe(notification);
       }
     );
   });
@@ -136,7 +134,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
       ${61} | ${19}     | ${2668} | ${21797.56}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
-      ({ seniority, salary, expectedCompensation, age }) => {
+      ({ seniority, salary, age }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
@@ -147,12 +145,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const result = situation.evaluate(
-          "contrat salarié . indemnité de licenciement . résultat conventionnel"
-        );
-        expect(result.missingVariables).toEqual({});
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        const notifs = getNotifications(situation);
+        expect(notifs).toHaveLength(1);
+        expect(notifs[0].description).toBe(notification);
       }
     );
   });
@@ -169,7 +164,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
       ${62} | ${19}     | ${2668} | ${20650.32}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
-      ({ seniority, salary, expectedCompensation, age }) => {
+      ({ seniority, salary, age }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
@@ -180,12 +175,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const result = situation.evaluate(
-          "contrat salarié . indemnité de licenciement . résultat conventionnel"
-        );
-        expect(result.missingVariables).toEqual({});
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        const notifs = getNotifications(situation);
+        expect(notifs).toHaveLength(1);
+        expect(notifs[0].description).toBe(notification);
       }
     );
   });
@@ -202,7 +194,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
       ${63} | ${19}     | ${2668} | ${18355.84}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
-      ({ seniority, salary, expectedCompensation, age }) => {
+      ({ seniority, salary, age }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
@@ -213,12 +205,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const result = situation.evaluate(
-          "contrat salarié . indemnité de licenciement . résultat conventionnel"
-        );
-        expect(result.missingVariables).toEqual({});
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        const notifs = getNotifications(situation);
+        expect(notifs).toHaveLength(1);
+        expect(notifs[0].description).toBe(notification);
       }
     );
   });
@@ -235,7 +224,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
       ${64} | ${19}     | ${2668} | ${13766.88}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
-      ({ seniority, salary, expectedCompensation, age }) => {
+      ({ seniority, salary, age }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
@@ -246,12 +235,9 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const result = situation.evaluate(
-          "contrat salarié . indemnité de licenciement . résultat conventionnel"
-        );
-        expect(result.missingVariables).toEqual({});
-        expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        const notifs = getNotifications(situation);
+        expect(notifs).toHaveLength(1);
+        expect(notifs[0].description).toBe(notification);
       }
     );
   });
