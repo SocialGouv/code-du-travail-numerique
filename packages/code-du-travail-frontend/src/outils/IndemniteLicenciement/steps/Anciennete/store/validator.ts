@@ -14,6 +14,7 @@ import {
 import frLocale from "date-fns/locale/fr";
 import { Agreement } from "../../../../../conventions/Search/api/type";
 import {
+  Absence,
   DISABLE_ABSENCE,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
@@ -33,21 +34,6 @@ export const validateStep = (
   const informationData = informationToSituation(
     information.publicodesInformations
   );
-
-  const totalAbsence: number =
-    agreeement &&
-    DISABLE_ABSENCE.includes(
-      `IDCC${agreeement.num}` as SupportedCcIndemniteLicenciement
-    )
-      ? 0
-      : absencePeriods
-          .filter((period) => Boolean(period.durationInMonth))
-          .reduce((total, item) => {
-            if (!item.durationInMonth) {
-              return total;
-            }
-            return total + item.durationInMonth * item.motif.value;
-          }, 0);
 
   // Date d'entrée
   if (!state.dateEntree) {
@@ -102,13 +88,6 @@ export const validateStep = (
   ) {
     errors.errorDateNotification =
       "La date de notification doit se situer après la date d’entrée";
-  } else if (
-    state.dateEntree &&
-    state.dateNotification &&
-    differenceInMonths(dNotification, dEntree) - totalAbsence < 8
-  ) {
-    errors.errorDateNotification =
-      "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté";
   } else if (!isValidDate(state.dateNotification)) {
     errors.errorDateNotification = "La date de notification est invalide";
   } else {

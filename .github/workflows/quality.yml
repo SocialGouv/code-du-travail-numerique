@@ -74,7 +74,7 @@ jobs:
           key: ${{ github.sha }}
       - name: Lint ${{ matrix.repositories }}
         run: |
-          yarn workspace ${{ matrix.repositories }} lint
+          yarn workspace ${{ matrix.repositories }} lint --quiet
 
   type-check:
     name: Check typescript types

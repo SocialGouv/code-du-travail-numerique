@@ -78,6 +78,8 @@ const IndemniteLicenciementSimulator = ({
 }: Omit<Props, "publicodesRules">): JSX.Element => {
   const {
     onValidateStepContratTravail,
+    onEligibilityCheckStepInfo,
+    onEligibilityCheckStepAnciennete,
     isStepContratTravailValid,
     onValidateStepAnciennete,
     isStepAncienneteValid,
@@ -92,6 +94,10 @@ const IndemniteLicenciementSimulator = ({
   } = useIndemniteLicenciementStore((state) => ({
     onValidateStepContratTravail:
       state.contratTravailFunction.onValidateStepInfo,
+    onEligibilityCheckStepInfo:
+      state.contratTravailFunction.onEligibilityCheckStepInfo,
+    onEligibilityCheckStepAnciennete:
+      state.ancienneteFunction.onEligibilityCheckStepAnciennete,
     isStepContratTravailValid: state.contratTravailData.isStepValid,
     onValidateStepAnciennete: state.ancienneteFunction.onValidateStepAnciennete,
     isStepAncienneteValid: state.ancienneteData.isStepValid,
@@ -147,6 +153,7 @@ const IndemniteLicenciementSimulator = ({
           stepName: IndemniteLicenciementStepName.ContratTravail,
           isStepValid: isStepContratTravailValid,
           validator: onValidateStepContratTravail,
+          validatorEligibility: onEligibilityCheckStepInfo,
         },
         {
           stepName: IndemniteLicenciementStepName.Agreement,
@@ -157,6 +164,7 @@ const IndemniteLicenciementSimulator = ({
           stepName: IndemniteLicenciementStepName.Anciennete,
           isStepValid: isStepAncienneteValid,
           validator: onValidateStepAnciennete,
+          validatorEligibility: onEligibilityCheckStepAnciennete,
         },
         {
           stepName: IndemniteLicenciementStepName.Salaires,

@@ -14,7 +14,7 @@ import { Layout } from "../../src/layout/Layout";
 const PreavisLicenciementPage = (): JSX.Element => (
   <Layout>
     <Metas
-      title="Widget pour intégrer le Code du travail numérique à votre site"
+      title="Intégrer l’outil de calcul du préavis de licenciement du Code du travail numérique"
       description="Intégrez l’outil de calcul du préavis de licenciement du Code du travail numérique sur votre site grâce à un module (widget)."
     />
 
