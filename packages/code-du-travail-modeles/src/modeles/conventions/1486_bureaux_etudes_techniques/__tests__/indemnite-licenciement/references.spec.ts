@@ -1,10 +1,5 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
 import { CatPro1486, TypeLicenciement1486 } from "../../salary";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
 
 const refEtamMoins20OuInge = [
   {

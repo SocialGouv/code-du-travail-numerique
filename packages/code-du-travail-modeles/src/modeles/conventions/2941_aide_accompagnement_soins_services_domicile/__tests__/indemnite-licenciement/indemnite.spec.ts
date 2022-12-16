@@ -1,9 +1,3 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
-
 describe("CC 2941", () => {
   describe("Calcul de l'indemnité de licenciement", () => {
     test.each`

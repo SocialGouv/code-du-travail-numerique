@@ -1,10 +1,5 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getFormule } from "../../../../common";
 import { CatPro1486, TypeLicenciement1486 } from "../../salary";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
 
 describe("Formule indemnité licenciement - 1486", () => {
   test.each`

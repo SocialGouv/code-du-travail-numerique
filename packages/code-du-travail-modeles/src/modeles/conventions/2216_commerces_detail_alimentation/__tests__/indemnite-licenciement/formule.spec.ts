@@ -1,11 +1,6 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getFormule } from "../../../../common";
 
 describe("Formule indemnité licenciement - 2216", () => {
-  const engine = new Engine(mergeIndemniteLicenciementModels());
-
   test.each`
     category                                          | isEconomicFiring | age   | seniority | expectedFormula                                                                                                                                                                      | expectedExplanations                                                                                                                                                                                                                                                                                                      | expectedAnnotations
     ${"Employés et ouvriers, personnel de livraison"} | ${false}         | ${50} | ${0}      | ${""}                                                                                                                                                                                | ${[]}                                                                                                                                                                                                                                                                                                                     | ${[]}

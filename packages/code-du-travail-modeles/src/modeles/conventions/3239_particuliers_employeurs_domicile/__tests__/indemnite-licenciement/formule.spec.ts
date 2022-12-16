@@ -1,12 +1,7 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getFormule } from "../../../../common";
 import { CatPro3239 } from "../../salary";
 
 describe("Formule indemnité licenciement - CC 3239", () => {
-  const engine = new Engine(mergeIndemniteLicenciementModels());
-
   test.each`
     category                                  | seniority | expectedFormula                            | expectedExplanations
     ${CatPro3239.salarieParticulierEmployeur} | ${0}      | ${""}                                      | ${[]}
