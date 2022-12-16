@@ -1,5 +1,3 @@
-import Engine from "publicodes";
-
 import { getFormule } from "../../../../common";
 
 describe("Formule indemnité licenciement - CC 29", () => {
