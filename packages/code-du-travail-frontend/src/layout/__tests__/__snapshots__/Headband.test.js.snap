@@ -1,53 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Headband /> should render 1`] = `
-.c0 {
-  position: absolute;
-  top: 13.5rem;
-  z-index: 2;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 5rem;
-  padding: 1rem;
-  color: #2f3b6c;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-}
-
-.c0:hover,
-.c0:active,
-.c0:focus {
-  color: #2f3b6c;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  -webkit-text-decoration-color: #2f3b6c;
-  text-decoration-color: #2f3b6c;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    top: 9rem;
-  }
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
-}
-
 <div>
   <a
-    class="c0"
+    class="sc-gGGFjW jsDOYf"
     href="/"
   />
 </div>

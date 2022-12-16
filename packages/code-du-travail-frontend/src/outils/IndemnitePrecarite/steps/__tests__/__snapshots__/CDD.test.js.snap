@@ -1,139 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepCDD /> should render 1`] = `
-.c1 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.c2 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.c5 {
-  position: relative;
-  display: inline-block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: calc(1.6rem * 1.25);
-  height: calc(1.6rem * 1.25);
-  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
-  padding: 0;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-  box-shadow: none;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c5:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-  width: calc(1.6rem / 1.5);
-  height: calc(1.6rem / 1.5);
-  background-color: #f66663;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  content: "";
-}
-
-.c5:checked {
-  background-color: #fff;
-  border-color: #f66663;
-}
-
-.c5:checked:before {
-  display: block;
-}
-
-.c0 {
-  display: block;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 1.6rem;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <form>
     <label
-      class="c0"
+      class="sc-dvUynV faTIvj"
       data-testid="question-label"
     >
       <span
-        class="c1"
+        class="sc-bBjRSN fzTfxR"
       >
         Le CDD a-t-il été rompu pendant la période d’essai du salarié ?
         <span
-          class="c2"
+          class="sc-bBjRSN jPMLlF"
         >
            (obligatoire)
         </span>
       </span>
     </label>
     <div
-      class="c3"
+      class="sc-ellfGf encMXk"
       data-testid="finContratPeriodeDessai"
     >
       <div
-        class="c4"
+        class="sc-hkeOVe ghkjZk"
       >
         <input
-          class="c5"
+          class="sc-gVFcvn gCGLUB"
           data-testid="finContratPeriodeDessai-oui"
           id="finContratPeriodeDessai-oui"
           name="finContratPeriodeDessai"
@@ -141,17 +34,17 @@ exports[`<StepCDD /> should render 1`] = `
           value="true"
         />
         <label
-          class="c6"
+          class="sc-cbeScs iWkDcx"
           for="finContratPeriodeDessai-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c4"
+        class="sc-hkeOVe ghkjZk"
       >
         <input
-          class="c5"
+          class="sc-gVFcvn gCGLUB"
           data-testid="finContratPeriodeDessai-non"
           id="finContratPeriodeDessai-non"
           name="finContratPeriodeDessai"
@@ -159,7 +52,7 @@ exports[`<StepCDD /> should render 1`] = `
           value="false"
         />
         <label
-          class="c6"
+          class="sc-cbeScs iWkDcx"
           for="finContratPeriodeDessai-non"
         >
           Non
@@ -167,29 +60,29 @@ exports[`<StepCDD /> should render 1`] = `
       </div>
     </div>
     <label
-      class="c0"
+      class="sc-dvUynV faTIvj"
       data-testid="question-label"
     >
       <span
-        class="c1"
+        class="sc-bBjRSN fzTfxR"
       >
         À la fin du CDD, le salarié a-t-il été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?
         <span
-          class="c2"
+          class="sc-bBjRSN jPMLlF"
         >
            (obligatoire)
         </span>
       </span>
     </label>
     <div
-      class="c3"
+      class="sc-ellfGf encMXk"
       data-testid="propositionCDIFindeContrat"
     >
       <div
-        class="c4"
+        class="sc-hkeOVe ghkjZk"
       >
         <input
-          class="c5"
+          class="sc-gVFcvn gCGLUB"
           data-testid="propositionCDIFindeContrat-oui"
           id="propositionCDIFindeContrat-oui"
           name="propositionCDIFindeContrat"
@@ -197,17 +90,17 @@ exports[`<StepCDD /> should render 1`] = `
           value="true"
         />
         <label
-          class="c6"
+          class="sc-cbeScs iWkDcx"
           for="propositionCDIFindeContrat-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c4"
+        class="sc-hkeOVe ghkjZk"
       >
         <input
-          class="c5"
+          class="sc-gVFcvn gCGLUB"
           data-testid="propositionCDIFindeContrat-non"
           id="propositionCDIFindeContrat-non"
           name="propositionCDIFindeContrat"
@@ -215,7 +108,7 @@ exports[`<StepCDD /> should render 1`] = `
           value="false"
         />
         <label
-          class="c6"
+          class="sc-cbeScs iWkDcx"
           for="propositionCDIFindeContrat-non"
         >
           Non
@@ -223,29 +116,29 @@ exports[`<StepCDD /> should render 1`] = `
       </div>
     </div>
     <label
-      class="c0"
+      class="sc-dvUynV faTIvj"
       data-testid="question-label"
     >
       <span
-        class="c1"
+        class="sc-bBjRSN fzTfxR"
       >
         Le CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes : la propre initiative du salarié, la faute grave ou faute lourde du salarié, cas de force majeure ?
         <span
-          class="c2"
+          class="sc-bBjRSN jPMLlF"
         >
            (obligatoire)
         </span>
       </span>
     </label>
     <div
-      class="c3"
+      class="sc-ellfGf encMXk"
       data-testid="interruptionFauteGrave"
     >
       <div
-        class="c4"
+        class="sc-hkeOVe ghkjZk"
       >
         <input
-          class="c5"
+          class="sc-gVFcvn gCGLUB"
           data-testid="interruptionFauteGrave-oui"
           id="interruptionFauteGrave-oui"
           name="interruptionFauteGrave"
@@ -253,17 +146,17 @@ exports[`<StepCDD /> should render 1`] = `
           value="true"
         />
         <label
-          class="c6"
+          class="sc-cbeScs iWkDcx"
           for="interruptionFauteGrave-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c4"
+        class="sc-hkeOVe ghkjZk"
       >
         <input
-          class="c5"
+          class="sc-gVFcvn gCGLUB"
           data-testid="interruptionFauteGrave-non"
           id="interruptionFauteGrave-non"
           name="interruptionFauteGrave"
@@ -271,7 +164,7 @@ exports[`<StepCDD /> should render 1`] = `
           value="false"
         />
         <label
-          class="c6"
+          class="sc-cbeScs iWkDcx"
           for="interruptionFauteGrave-non"
         >
           Non
@@ -279,29 +172,29 @@ exports[`<StepCDD /> should render 1`] = `
       </div>
     </div>
     <label
-      class="c0"
+      class="sc-dvUynV faTIvj"
       data-testid="question-label"
     >
       <span
-        class="c1"
+        class="sc-bBjRSN fzTfxR"
       >
         Le salarié a-t-il refusé de renouveler le CDD alors que le renouvellement et ses modalités étaient prévus dès l’origine dans son contrat ?
         <span
-          class="c2"
+          class="sc-bBjRSN jPMLlF"
         >
            (obligatoire)
         </span>
       </span>
     </label>
     <div
-      class="c3"
+      class="sc-ellfGf encMXk"
       data-testid="refusRenouvellementAuto"
     >
       <div
-        class="c4"
+        class="sc-hkeOVe ghkjZk"
       >
         <input
-          class="c5"
+          class="sc-gVFcvn gCGLUB"
           data-testid="refusRenouvellementAuto-oui"
           id="refusRenouvellementAuto-oui"
           name="refusRenouvellementAuto"
@@ -309,17 +202,17 @@ exports[`<StepCDD /> should render 1`] = `
           value="true"
         />
         <label
-          class="c6"
+          class="sc-cbeScs iWkDcx"
           for="refusRenouvellementAuto-oui"
         >
           Oui
         </label>
       </div>
       <div
-        class="c4"
+        class="sc-hkeOVe ghkjZk"
       >
         <input
-          class="c5"
+          class="sc-gVFcvn gCGLUB"
           data-testid="refusRenouvellementAuto-non"
           id="refusRenouvellementAuto-non"
           name="refusRenouvellementAuto"
@@ -327,7 +220,7 @@ exports[`<StepCDD /> should render 1`] = `
           value="false"
         />
         <label
-          class="c6"
+          class="sc-cbeScs iWkDcx"
           for="refusRenouvellementAuto-non"
         >
           Non
