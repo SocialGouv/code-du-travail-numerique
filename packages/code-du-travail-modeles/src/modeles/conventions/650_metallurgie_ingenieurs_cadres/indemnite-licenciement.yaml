@@ -162,7 +162,6 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
   applicable si:
     toutes ces conditions:
       - age = 61
-      - age plus de 60 ans = 'Oui'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
   valeur: somme formule moins 5 pourcent
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
@@ -183,7 +182,6 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
   applicable si:
     toutes ces conditions:
       - age = 62
-      - age plus de 60 ans = 'Oui'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
   valeur: somme formule moins 10 pourcent
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
@@ -204,7 +202,6 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
   applicable si:
     toutes ces conditions:
       - age = 63
-      - age plus de 60 ans = 'Oui'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
   valeur: somme formule moins 20 pourcent
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
@@ -225,7 +222,6 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
   applicable si:
     toutes ces conditions:
       - age = 64
-      - age plus de 60 ans = 'Oui'
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 12 mois
   valeur: somme formule moins 40 pourcent
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
@@ -245,7 +241,6 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - age plus de 60 ans = 'Non'
       - age = 61
       - age = 62
       - age = 63
