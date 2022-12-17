@@ -6,7 +6,7 @@ describe("Formule indemnité licenciement - 1516", () => {
     ${7 / 12}  | ${""}                                       | ${[]}
     ${8 / 12}  | ${""}                                       | ${[]}
     ${2}       | ${""}                                       | ${[]}
-    ${25 / 12} | ${"1/5 * Sref * A"}                         | ${["A : Ancienneté totale (2.08 ans)", "Sref : Salaire de référence (1000 €)"]}
+    ${25 / 12} | ${"1/5 * Sref * A"}                         | ${["A : Ancienneté totale (≈ 2.08 ans : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
     ${7}       | ${"1/5 * Sref * A"}                         | ${["A : Ancienneté totale (7 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${12}      | ${"1/5 * Sref * A"}                         | ${["A : Ancienneté totale (12 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${15}      | ${"1/5 * Sref * A"}                         | ${["A : Ancienneté totale (15 ans)", "Sref : Salaire de référence (1000 €)"]}
