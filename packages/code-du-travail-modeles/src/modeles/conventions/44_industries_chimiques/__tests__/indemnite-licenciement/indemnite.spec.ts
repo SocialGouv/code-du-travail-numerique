@@ -44,6 +44,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
       test.each`
         category                 | isEconomicFiring | age   | seniority | salary  | expectedCompensation
         ${CategoryPro44.ouvrier} | ${false}         | ${50} | ${1.25}   | ${2719} | ${0}
+        ${CategoryPro44.ouvrier} | ${false}         | ${50} | ${1.99}   | ${2719} | ${0}
         ${CategoryPro44.ouvrier} | ${false}         | ${50} | ${2}      | ${2719} | ${1631.4}
         ${CategoryPro44.ouvrier} | ${false}         | ${50} | ${5}      | ${2719} | ${6797.5}
         ${CategoryPro44.ouvrier} | ${false}         | ${55} | ${1.25}   | ${2719} | ${0}
@@ -88,6 +89,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
       test.each`
         category                     | isEconomicFiring | age   | seniority | salary  | expectedCompensation
         ${CategoryPro44.techniciens} | ${false}         | ${50} | ${1.33}   | ${3140} | ${0}
+        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${1.99}   | ${3140} | ${0}
+        ${CategoryPro44.techniciens} | ${false}         | ${50} | ${2}      | ${3140} | ${1884}
         ${CategoryPro44.techniciens} | ${false}         | ${50} | ${3}      | ${3140} | ${2826}
         ${CategoryPro44.techniciens} | ${false}         | ${50} | ${5}      | ${3140} | ${7850}
         ${CategoryPro44.techniciens} | ${false}         | ${50} | ${10}     | ${3140} | ${15700}
@@ -138,6 +141,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
       test.each`
         category              | isEconomicFiring | age   | seniority | salary  | expectedCompensation
         ${CategoryPro44.inge} | ${false}         | ${40} | ${0.67}   | ${3541} | ${0}
+        ${CategoryPro44.inge} | ${false}         | ${40} | ${1.99}   | ${3541} | ${0}
+        ${CategoryPro44.inge} | ${false}         | ${40} | ${2}      | ${3541} | ${2832.8}
         ${CategoryPro44.inge} | ${false}         | ${40} | ${2.5}    | ${3541} | ${3541}
         ${CategoryPro44.inge} | ${false}         | ${40} | ${5}      | ${3541} | ${7082}
         ${CategoryPro44.inge} | ${false}         | ${40} | ${10}     | ${3541} | ${14164}
@@ -193,6 +198,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
       test.each`
         category                 | isEconomicFiring | age   | seniority | salary  | expectedCompensation
         ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${0.75}   | ${2500} | ${0}
+        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${0.99}   | ${2500} | ${0}
+        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${1}      | ${2500} | ${2500}
         ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${1.5}    | ${2500} | ${2500}
         ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${2}      | ${2500} | ${5000}
         ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${5}      | ${2500} | ${5000}
@@ -240,6 +247,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
       test.each`
         category                     | isEconomicFiring | age   | seniority | salary  | expectedCompensation
         ${CategoryPro44.techniciens} | ${true}          | ${30} | ${0.75}   | ${2500} | ${0}
+        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${0.99}   | ${2500} | ${0}
+        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${1}      | ${2500} | ${2500}
         ${CategoryPro44.techniciens} | ${true}          | ${30} | ${1.5}    | ${2500} | ${2500}
         ${CategoryPro44.techniciens} | ${true}          | ${30} | ${2}      | ${2500} | ${5000}
         ${CategoryPro44.techniciens} | ${true}          | ${30} | ${5}      | ${2500} | ${5000}
@@ -287,6 +296,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 44", () => {
       test.each`
         category              | isEconomicFiring | age   | seniority | salary  | expectedCompensation
         ${CategoryPro44.inge} | ${true}          | ${30} | ${0.75}   | ${2500} | ${0}
+        ${CategoryPro44.inge} | ${true}          | ${30} | ${0.99}   | ${2500} | ${0}
+        ${CategoryPro44.inge} | ${true}          | ${30} | ${1}      | ${2500} | ${2500}
         ${CategoryPro44.inge} | ${true}          | ${30} | ${1.5}    | ${2500} | ${2500}
         ${CategoryPro44.inge} | ${true}          | ${30} | ${2}      | ${2500} | ${5000}
         ${CategoryPro44.inge} | ${true}          | ${30} | ${5}      | ${2500} | ${5000}

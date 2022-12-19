@@ -17,7 +17,6 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
     ${"Cadres"}     | ${51} | ${1}       | ${3100} | ${"Oui"}
     ${"Cadres"}     | ${51} | ${5}       | ${3100} | ${"Oui"}
     ${"Cadres"}     | ${51} | ${23}      | ${3100} | ${"Oui"}
-    ${"Non-cadres"} | ${50} | ${1}       | ${2300} | ${"Non"}
     ${"Non-cadres"} | ${50} | ${3}       | ${2300} | ${"Non"}
     ${"Non-cadres"} | ${50} | ${15}      | ${2300} | ${"Non"}
     ${"Non-cadres"} | ${50} | ${17}      | ${2300} | ${"Non"}

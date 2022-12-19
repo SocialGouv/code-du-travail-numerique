@@ -33,6 +33,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
     test.each`
       age   | category            | typeLicenciement      | seniority | salary  | expectedCompensation
       ${32} | ${CatPro573.agents} | ${QuestionOuiNon.non} | ${0.5}    | ${2700} | ${0}
+      ${32} | ${CatPro573.agents} | ${QuestionOuiNon.non} | ${0.99}   | ${2700} | ${0}
       ${32} | ${CatPro573.agents} | ${QuestionOuiNon.non} | ${1}      | ${2700} | ${540}
       ${32} | ${CatPro573.agents} | ${QuestionOuiNon.non} | ${15}     | ${2700} | ${9900}
       ${40} | ${CatPro573.agents} | ${QuestionOuiNon.oui} | ${1}      | ${2700} | ${540}
@@ -73,6 +74,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
   describe("Cadres", () => {
     test.each`
       age   | category            | auMoins15AnsCadre     | seniority | salary  | expectedCompensation
+      ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${0.99}   | ${3200} | ${0}
+      ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}      | ${3200} | ${640}
       ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${4}      | ${3200} | ${2560}
       ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${5}      | ${3200} | ${3200}
       ${40} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${6}      | ${3200} | ${5760}
