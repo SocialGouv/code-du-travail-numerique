@@ -1,21 +1,18 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
 import { CategoryPro44 } from "../../salary";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
 
 const referencesOuvrierLicenciementNormal = [
   {
     article:
       "Article 28 de l’Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846396?idConteneur=KALICONT000005635613",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846396?idConteneur=KALICONT000005635613",
   },
   {
     article:
       "Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022",
   },
 ];
 
@@ -23,12 +20,14 @@ const referencesLicenciementEco = [
   {
     article:
       "Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu)",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613",
   },
   {
     article:
       "Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022",
   },
 ];
 
@@ -36,12 +35,14 @@ const referencesTechniciensLicenciementNormal = [
   {
     article:
       "Article 21 de l’ Avenant n° 2 du 14 mars 1955 relatif aux agents de maîtrise et certains techniciens",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846463?idConteneur=KALICONT000005635613",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846463?idConteneur=KALICONT000005635613",
   },
   {
     article:
       "Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022",
   },
 ];
 
@@ -49,12 +50,14 @@ const referencesIngeLicenciementNormal = [
   {
     article:
       "Article 14 de l’Avenant n° 3 du 16 juin 1955 relatif aux ingénieurs et cadres",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846317?idConteneur=KALICONT000005635613",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846317?idConteneur=KALICONT000005635613",
   },
   {
     article:
       "Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022",
   },
 ];
 
@@ -62,17 +65,20 @@ const referencesLicenciementEcoInge = [
   {
     article:
       "Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu)",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613",
   },
   {
     article:
       "Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022",
   },
   {
     article:
       "Article 14 de l’Avenant n° 3 du 16 juin 1955 relatif aux ingénieurs et cadres",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846317?idConteneur=KALICONT000005635613",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846317?idConteneur=KALICONT000005635613",
   },
 ];
 
@@ -80,17 +86,20 @@ const referencesLicenciementEcoAgents = [
   {
     article:
       "Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu)",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613",
   },
   {
     article:
       "Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022",
   },
   {
     article:
       "Article 21 de l’ Avenant n° 2 du 14 mars 1955 relatif aux agents de maîtrise et certains techniciens",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846463?idConteneur=KALICONT000005635613",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846463?idConteneur=KALICONT000005635613",
   },
 ];
 
@@ -98,17 +107,20 @@ const referencesLicenciementEcoOuvriers = [
   {
     article:
       "Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu)",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613",
   },
   {
     article:
       "Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022",
   },
   {
     article:
       "Article 28 de l’Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846396?idConteneur=KALICONT000005635613",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846396?idConteneur=KALICONT000005635613",
   },
 ];
 
@@ -129,15 +141,13 @@ describe("Références juridiques pour l'indemnité conventionnel de licenciemen
           const situation = engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-              isEconomicFiring ? `'Oui'` : `'Non'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-              age,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
+              ? `'Oui'`
+              : `'Non'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
           });
 
           const result = getReferences(situation, "résultat conventionnel");
@@ -172,15 +182,13 @@ describe("Références juridiques pour l'indemnité conventionnel de licenciemen
           const situation = engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-              isEconomicFiring ? `'Oui'` : `'Non'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-              age,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
+              ? `'Oui'`
+              : `'Non'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
           });
 
           const result = getReferences(situation, "résultat conventionnel");
@@ -218,15 +226,13 @@ describe("Références juridiques pour l'indemnité conventionnel de licenciemen
           const situation = engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-              isEconomicFiring ? `'Oui'` : `'Non'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-              age,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
+              ? `'Oui'`
+              : `'Non'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
           });
 
           const result = getReferences(situation, "résultat conventionnel");
@@ -275,15 +281,13 @@ describe("Références juridiques pour l'indemnité conventionnel de licenciemen
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0044'",
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
-            isEconomicFiring ? `'Oui'` : `'Non'`,
-          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
-            age,
+          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
+            ? `'Oui'`
+            : `'Non'`,
+          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
           "contrat salarié . indemnité de licenciement": "oui",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-            seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-            salary,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
         const result = getReferences(situation, "résultat conventionnel");

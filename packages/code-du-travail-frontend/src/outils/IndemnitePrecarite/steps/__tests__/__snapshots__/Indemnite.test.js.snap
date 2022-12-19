@@ -1,192 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepIndemnite /> should render cdd indemnite with conventional provision message 1`] = `
-.c5 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c5 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c10 > *:first-child {
-  margin-top: 0;
-}
-
-.c10 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c6 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.c15 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c8 {
-  max-height: 0px;
-  opacity: 0;
-  overflow: auto;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.c3 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c7 {
-  margin-left: 1rem;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c13 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c13 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c14 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: "fit-content";
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 1rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c11 {
-  margin-top: 3.2rem;
-}
-
-.c16 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
-@media (max-width:600px) {
-  .c13 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c13 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <h2
-    class="c0"
+    class="sc-iIgjPs keqpsO"
   >
     Montant
   </h2>
@@ -194,7 +11,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     La prime d'intervention
      est estimée à : 
     <strong
-      class="c1 c2"
+      class="sc-gstuGz sc-amkrK iHDSLD bgpuze"
     >
       180
        €
@@ -204,12 +21,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   <div>
     <div
       aria-expanded="false"
-      class="c3"
+      class="sc-khIgEk ceBxWI"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="c4 c5"
+        class="sc-fujyAs BrylG"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -225,16 +42,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         />
       </svg>
       <p
-        class="c6 c7"
+        class="sc-cOifOu XEwmn sc-hTRkXV jAbsFO"
       >
         Voir le détail du calcul
       </p>
     </div>
     <div
-      class="c8"
+      class="sc-Arkif eVwpCw"
     >
       <h2
-        class="c0"
+        class="sc-iIgjPs keqpsO"
       >
         Éléments saisis
       </h2>
@@ -255,12 +72,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-iIgjPs keqpsO"
       >
         Formule
       </h2>
       <div
-        class="c9"
+        class="sc-ellfGf jJDlwA"
       >
         <div
           style="overflow: auto;"
@@ -533,7 +350,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         </div>
       </div>
       <h2
-        class="c0"
+        class="sc-iIgjPs keqpsO"
       >
         Sources
       </h2>
@@ -575,13 +392,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="sc-lmgQwP sc-cwiweh kHzGur lgHAVk"
   >
     <div
-      class="c12"
+      class="sc-gGLxEB kEYfsY"
     >
       <div
-        class="c13"
+        class="sc-ckTSus eGIUDO"
       >
         <svg
           aria-hidden="true"
@@ -601,10 +418,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         </svg>
       </div>
       <div
-        class="c14"
+        class="sc-fbIWvP itJXQd"
       >
         <p
-          class="c15 c16"
+          class="sc-cOifOu gIgAxs sc-dkuGKe gKpSPA"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -630,192 +447,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 `;
 
 exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] = `
-.c5 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c5 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c10 > *:first-child {
-  margin-top: 0;
-}
-
-.c10 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c6 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.c15 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c8 {
-  max-height: 0px;
-  opacity: 0;
-  overflow: auto;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.c3 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c7 {
-  margin-left: 1rem;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c13 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c13 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c14 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: "fit-content";
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 1rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c11 {
-  margin-top: 3.2rem;
-}
-
-.c16 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
-@media (max-width:600px) {
-  .c13 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c13 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <h2
-    class="c0"
+    class="sc-iIgjPs keqpsO"
   >
     Montant
   </h2>
@@ -823,7 +457,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     La prime de précarité
      est estimée à : 
     <strong
-      class="c1 c2"
+      class="sc-gstuGz sc-amkrK iHDSLD bgpuze"
     >
       300
        €
@@ -833,12 +467,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   <div>
     <div
       aria-expanded="false"
-      class="c3"
+      class="sc-khIgEk ceBxWI"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="c4 c5"
+        class="sc-fujyAs BrylG"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -854,16 +488,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         />
       </svg>
       <p
-        class="c6 c7"
+        class="sc-cOifOu XEwmn sc-hTRkXV jAbsFO"
       >
         Voir le détail du calcul
       </p>
     </div>
     <div
-      class="c8"
+      class="sc-Arkif eVwpCw"
     >
       <h2
-        class="c0"
+        class="sc-iIgjPs keqpsO"
       >
         Éléments saisis
       </h2>
@@ -884,12 +518,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-iIgjPs keqpsO"
       >
         Formule
       </h2>
       <div
-        class="c9"
+        class="sc-ellfGf jJDlwA"
       >
         <div
           style="overflow: auto;"
@@ -1162,7 +796,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         </div>
       </div>
       <h2
-        class="c0"
+        class="sc-iIgjPs keqpsO"
       >
         Sources
       </h2>
@@ -1193,13 +827,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="sc-lmgQwP sc-cwiweh kHzGur lgHAVk"
   >
     <div
-      class="c12"
+      class="sc-gGLxEB kEYfsY"
     >
       <div
-        class="c13"
+        class="sc-ckTSus eGIUDO"
       >
         <svg
           aria-hidden="true"
@@ -1219,10 +853,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         </svg>
       </div>
       <div
-        class="c14"
+        class="sc-fbIWvP itJXQd"
       >
         <p
-          class="c15 c16"
+          class="sc-cOifOu gIgAxs sc-dkuGKe gKpSPA"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -1251,192 +885,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 `;
 
 exports[`<StepIndemnite /> should render cdd indemnite with no conventional provision message 1`] = `
-.c5 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c5 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c10 > *:first-child {
-  margin-top: 0;
-}
-
-.c10 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c6 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.c15 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c8 {
-  max-height: 0px;
-  opacity: 0;
-  overflow: auto;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.c3 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c7 {
-  margin-left: 1rem;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c13 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c13 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c14 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: "fit-content";
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 1rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c11 {
-  margin-top: 3.2rem;
-}
-
-.c16 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
-@media (max-width:600px) {
-  .c13 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c13 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <h2
-    class="c0"
+    class="sc-iIgjPs keqpsO"
   >
     Montant
   </h2>
@@ -1444,7 +895,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     La prime de précarité
      est estimée à : 
     <strong
-      class="c1 c2"
+      class="sc-gstuGz sc-amkrK iHDSLD bgpuze"
     >
       300
        €
@@ -1454,12 +905,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   <div>
     <div
       aria-expanded="false"
-      class="c3"
+      class="sc-khIgEk ceBxWI"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="c4 c5"
+        class="sc-fujyAs BrylG"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -1475,16 +926,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         />
       </svg>
       <p
-        class="c6 c7"
+        class="sc-cOifOu XEwmn sc-hTRkXV jAbsFO"
       >
         Voir le détail du calcul
       </p>
     </div>
     <div
-      class="c8"
+      class="sc-Arkif eVwpCw"
     >
       <h2
-        class="c0"
+        class="sc-iIgjPs keqpsO"
       >
         Éléments saisis
       </h2>
@@ -1505,12 +956,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-iIgjPs keqpsO"
       >
         Formule
       </h2>
       <div
-        class="c9"
+        class="sc-ellfGf jJDlwA"
       >
         <div
           style="overflow: auto;"
@@ -1783,7 +1234,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         </div>
       </div>
       <h2
-        class="c0"
+        class="sc-iIgjPs keqpsO"
       >
         Sources
       </h2>
@@ -1825,13 +1276,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="sc-lmgQwP sc-cwiweh kHzGur lgHAVk"
   >
     <div
-      class="c12"
+      class="sc-gGLxEB kEYfsY"
     >
       <div
-        class="c13"
+        class="sc-ckTSus eGIUDO"
       >
         <svg
           aria-hidden="true"
@@ -1851,10 +1302,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         </svg>
       </div>
       <div
-        class="c14"
+        class="sc-fbIWvP itJXQd"
       >
         <p
-          class="c15 c16"
+          class="sc-cOifOu gIgAxs sc-dkuGKe gKpSPA"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -1883,192 +1334,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 `;
 
 exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message 1`] = `
-.c5 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c5 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c10 > *:first-child {
-  margin-top: 0;
-}
-
-.c10 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c6 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.c15 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c8 {
-  max-height: 0px;
-  opacity: 0;
-  overflow: auto;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.c3 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c7 {
-  margin-left: 1rem;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c13 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c13 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c14 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: "fit-content";
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 1rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c11 {
-  margin-top: 3.2rem;
-}
-
-.c16 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
-@media (max-width:600px) {
-  .c13 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c13 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <h2
-    class="c0"
+    class="sc-iIgjPs keqpsO"
   >
     Montant
   </h2>
@@ -2076,7 +1344,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     La prime de précarité
      est estimée à : 
     <strong
-      class="c1 c2"
+      class="sc-gstuGz sc-amkrK iHDSLD bgpuze"
     >
       300
        €
@@ -2086,12 +1354,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   <div>
     <div
       aria-expanded="false"
-      class="c3"
+      class="sc-khIgEk ceBxWI"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="c4 c5"
+        class="sc-fujyAs BrylG"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -2107,16 +1375,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         />
       </svg>
       <p
-        class="c6 c7"
+        class="sc-cOifOu XEwmn sc-hTRkXV jAbsFO"
       >
         Voir le détail du calcul
       </p>
     </div>
     <div
-      class="c8"
+      class="sc-Arkif eVwpCw"
     >
       <h2
-        class="c0"
+        class="sc-iIgjPs keqpsO"
       >
         Éléments saisis
       </h2>
@@ -2137,12 +1405,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-iIgjPs keqpsO"
       >
         Formule
       </h2>
       <div
-        class="c9"
+        class="sc-ellfGf jJDlwA"
       >
         <div
           style="overflow: auto;"
@@ -2415,7 +1683,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         </div>
       </div>
       <h2
-        class="c0"
+        class="sc-iIgjPs keqpsO"
       >
         Sources
       </h2>
@@ -2446,13 +1714,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="sc-lmgQwP sc-cwiweh kHzGur lgHAVk"
   >
     <div
-      class="c12"
+      class="sc-gGLxEB kEYfsY"
     >
       <div
-        class="c13"
+        class="sc-ckTSus eGIUDO"
       >
         <svg
           aria-hidden="true"
@@ -2472,10 +1740,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         </svg>
       </div>
       <div
-        class="c14"
+        class="sc-fbIWvP itJXQd"
       >
         <p
-          class="c15 c16"
+          class="sc-cOifOu gIgAxs sc-dkuGKe gKpSPA"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -2504,192 +1772,9 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 `;
 
 exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
-.c5 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c5 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c10 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c10 > *:first-child {
-  margin-top: 0;
-}
-
-.c10 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c6 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.c15 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c8 {
-  max-height: 0px;
-  opacity: 0;
-  overflow: auto;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.c3 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c7 {
-  margin-left: 1rem;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c13 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c13 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c14 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: "fit-content";
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 1rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-.c11 {
-  margin-top: 3.2rem;
-}
-
-.c16 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
-@media (max-width:600px) {
-  .c13 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c13 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <h2
-    class="c0"
+    class="sc-iIgjPs keqpsO"
   >
     Montant
   </h2>
@@ -2697,7 +1782,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     La prime de précarité
      est estimée à : 
     <strong
-      class="c1 c2"
+      class="sc-gstuGz sc-amkrK iHDSLD bgpuze"
     >
       300
        €
@@ -2707,12 +1792,12 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   <div>
     <div
       aria-expanded="false"
-      class="c3"
+      class="sc-khIgEk ceBxWI"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="c4 c5"
+        class="sc-fujyAs BrylG"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -2728,16 +1813,16 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         />
       </svg>
       <p
-        class="c6 c7"
+        class="sc-cOifOu XEwmn sc-hTRkXV jAbsFO"
       >
         Voir le détail du calcul
       </p>
     </div>
     <div
-      class="c8"
+      class="sc-Arkif eVwpCw"
     >
       <h2
-        class="c0"
+        class="sc-iIgjPs keqpsO"
       >
         Éléments saisis
       </h2>
@@ -2758,12 +1843,12 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-iIgjPs keqpsO"
       >
         Formule
       </h2>
       <div
-        class="c9"
+        class="sc-ellfGf jJDlwA"
       >
         <div
           style="overflow: auto;"
@@ -3036,7 +2121,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         </div>
       </div>
       <h2
-        class="c0"
+        class="sc-iIgjPs keqpsO"
       >
         Sources
       </h2>
@@ -3067,13 +2152,13 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="sc-lmgQwP sc-cwiweh kHzGur lgHAVk"
   >
     <div
-      class="c12"
+      class="sc-gGLxEB kEYfsY"
     >
       <div
-        class="c13"
+        class="sc-ckTSus eGIUDO"
       >
         <svg
           aria-hidden="true"
@@ -3093,10 +2178,10 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         </svg>
       </div>
       <div
-        class="c14"
+        class="sc-fbIWvP itJXQd"
       >
         <p
-          class="c15 c16"
+          class="sc-cOifOu gIgAxs sc-dkuGKe gKpSPA"
         >
           Attention il peut exister un montant plus favorable
         </p>

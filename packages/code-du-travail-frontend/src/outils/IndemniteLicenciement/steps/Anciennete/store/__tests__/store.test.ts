@@ -147,18 +147,6 @@ describe("Ancienneté store", () => {
     );
   });
 
-  it("should render an error for date de notification > 8 mois d'ancienneté", () => {
-    store.getState().ancienneteFunction.onChangeDateNotification("05/06/2021");
-    store.getState().ancienneteFunction.onChangeDateEntree("05/05/2021");
-    const isValid = store
-      .getState()
-      .ancienneteFunction.onValidateStepAnciennete();
-    expect(isValid).toBe(false);
-    expect(store.getState().ancienneteData.error.errorDateNotification).toBe(
-      "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté"
-    );
-  });
-
   it("should render an error for uncompleted absences", () => {
     store.getState().ancienneteFunction.onChangeHasAbsenceProlonge("oui");
     const isValid = store

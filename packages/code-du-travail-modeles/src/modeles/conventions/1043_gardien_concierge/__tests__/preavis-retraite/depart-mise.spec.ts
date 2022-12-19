@@ -1,8 +1,8 @@
 import Engine from "publicodes";
 
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 test.each`
   accommodation | coefficient | expectedResult | expectedPeriod | seniority
@@ -31,8 +31,7 @@ test.each`
       .setSituation({
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC1043'",
-        "contrat salarié . convention collective . gardien concierge . coefficient":
-          coefficient,
+        "contrat salarié . convention collective . gardien concierge . coefficient": coefficient,
         "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",

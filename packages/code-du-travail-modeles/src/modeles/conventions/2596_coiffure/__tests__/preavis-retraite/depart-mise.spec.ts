@@ -1,17 +1,18 @@
 import Engine from "publicodes";
 
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 const CommonReference = {
   article: "Article 7.4.1",
-  url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018563843/?idConteneur=KALICONT000018563755",
+  url:
+    "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018563843/?idConteneur=KALICONT000018563755",
 };
 
 const MiseRetraiteCcReferences = [...MiseRetraiteReferences, CommonReference];

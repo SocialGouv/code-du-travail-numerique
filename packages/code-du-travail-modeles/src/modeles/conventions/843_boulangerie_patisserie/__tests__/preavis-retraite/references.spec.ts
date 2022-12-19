@@ -1,17 +1,18 @@
 import Engine from "publicodes";
 
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
 
 const DepartRetraite = [
   ...DepartRetraiteReferences,
   {
     article: "Article 34.2",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732935/?idConteneur=KALICONT000005635886",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732935/?idConteneur=KALICONT000005635886",
   },
 ];
 
@@ -19,7 +20,8 @@ const DepartRetraiteMoins6Mois = [
   ...DepartRetraite,
   {
     article: "Article 32",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873153/?idConteneur=KALICONT000005635886",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005873153/?idConteneur=KALICONT000005635886",
   },
 ];
 
@@ -27,7 +29,8 @@ const MiseRetraite = [
   ...MiseRetraiteReferences,
   {
     article: "Article 34.2",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000030582626/?idConteneur=KALICONT000005635886",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000030582626/?idConteneur=KALICONT000005635886",
   },
 ];
 
@@ -35,11 +38,12 @@ const MiseRetraiteMoins6Mois = [
   ...MiseRetraite,
   {
     article: "Article 32",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732933/?idConteneur=KALICONT000005635886",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005732933/?idConteneur=KALICONT000005635886",
   },
 ];
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 test.each`
   retirement  | seniority | expectedReferences

@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OuSAdresser /> should render a ressource web component 1`] = `
+<div>
+  <div
+    class="sc-cKRKFl knTSOO"
+  >
+    <strong
+      class="sc-iIgjPs fRFHOw"
+    >
+      Ou s'adresser ?
+    </strong>
+    <a
+      aria-label="Label du lien ! (nouvelle fenêtre)"
+      href="url du lien"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Label du lien !
+    </a>
+  </div>
+</div>
+`;
+
+exports[`<OuSAdresser /> should render a simple case 1`] = `
+<div>
+  <div
+    class="sc-cKRKFl knTSOO"
+  >
+    <strong
+      class="sc-iIgjPs fRFHOw"
+    >
+      Ou s'adresser ?
+    </strong>
+    <h2
+      class="sc-iCoGMd gaXVHn"
+      data-testid="heading"
+    >
+      Nom du centre
+    </h2>
+    <p>
+      Un paragraphe tout bête
+    </p>
+  </div>
+</div>
+`;

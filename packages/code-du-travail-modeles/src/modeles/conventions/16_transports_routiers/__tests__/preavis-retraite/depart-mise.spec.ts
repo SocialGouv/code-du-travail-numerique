@@ -1,9 +1,9 @@
 import Engine from "publicodes";
 
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import { getNotifications } from "../../../../common";
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 test.each`
   seniority | category                  | expectedNotice
@@ -76,8 +76,7 @@ test.each`
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0016'",
         "contrat salarié . convention collective . transports routiers . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe":
-          group,
+        "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe": group,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
       })
@@ -134,8 +133,7 @@ test.each`
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0016'",
         "contrat salarié . convention collective . transports routiers . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe":
-          group,
+        "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe": group,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
       })

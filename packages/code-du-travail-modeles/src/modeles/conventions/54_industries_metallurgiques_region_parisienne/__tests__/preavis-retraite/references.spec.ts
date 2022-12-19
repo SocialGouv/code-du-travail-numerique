@@ -1,33 +1,37 @@
 import Engine from "publicodes";
 
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 const MiseRetraiteCCReferences = [
   {
     article: "Article 34 bis de l'avenant mensuel",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036772209/?idConteneur=KALICONT000005635149",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036772209/?idConteneur=KALICONT000005635149",
   },
   {
     article: "Article 11 bis de l'accord national du 10 juillet 1970",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173509?idConteneur=KALICONT000005635602",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173509?idConteneur=KALICONT000005635602",
   },
 ];
 
 const DepartRetraiteCCReferences = [
   {
     article: "Article 34 de l'avenant mensuel",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000032062291/?idConteneur=KALICONT000005635149",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000032062291/?idConteneur=KALICONT000005635149",
   },
   {
     article: "Article 11 de l'accord national du 10 juillet 1970",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173503",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000023173503",
   },
 ];
 

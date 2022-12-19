@@ -1,14 +1,10 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
 
 const References = [
   {
     article: "Partie II, Chapitre 4, section 1, article 1.2",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000027029046/?idConteneur=KALICONT000027084096",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000027029046/?idConteneur=KALICONT000027084096",
   },
 ];
 
@@ -27,10 +23,8 @@ describe("Vérification des références juridiques pour la CC 3127", () => {
       const result = getReferences(
         engine.setSituation({
           "contrat salarié . convention collective": "'IDCC3127'",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-            seniority,
-          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-            inaptitude,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": inaptitude,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
         }),
         "résultat conventionnel"

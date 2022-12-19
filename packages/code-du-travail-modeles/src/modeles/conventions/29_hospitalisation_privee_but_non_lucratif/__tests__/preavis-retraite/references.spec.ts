@@ -1,25 +1,27 @@
 import Engine from "publicodes";
 
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 const Article_15_03_1_3 = [
   {
     article: "Article 15.03.1.3",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952839",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952839",
   },
 ];
 
 const Article_15_02_2_1 = [
   {
     article: "Article 15.02.2.1",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952849",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952849",
   },
 ];
 

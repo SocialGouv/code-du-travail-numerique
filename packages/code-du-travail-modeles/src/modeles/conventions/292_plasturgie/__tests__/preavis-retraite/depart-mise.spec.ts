@@ -1,8 +1,8 @@
 import Engine from "publicodes";
 
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 test.each`
   seniority | expectedNotice
@@ -78,8 +78,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0292'",
         "contrat salarié . convention collective . plasturgie . catégorie professionnelle":
           "'Collaborateurs'",
-        "contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient":
-          coefficient,
+        "contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient": coefficient,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
       })
@@ -108,8 +107,7 @@ test.each`
         "contrat salarié . convention collective": "'IDCC0292'",
         "contrat salarié . convention collective . plasturgie . catégorie professionnelle":
           "'Collaborateurs'",
-        "contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient":
-          coefficient,
+        "contrat salarié . convention collective . plasturgie . catégorie professionnelle . Collaborateurs . coefficient": coefficient,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
       })

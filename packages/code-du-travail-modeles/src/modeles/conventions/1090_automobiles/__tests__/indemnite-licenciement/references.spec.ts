@@ -1,18 +1,15 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
 
 const References = [
   {
     article: "Article 1.13",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005755339/?idConteneur=KALICONT000005635191",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005755339/?idConteneur=KALICONT000005635191",
   },
   {
     article: "Article 2.13",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000037964084?idConteneur=KALICONT000005635191&origin=list#KALIARTI000037964084",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000037964084?idConteneur=KALICONT000005635191&origin=list#KALIARTI000037964084",
   },
 ];
 
@@ -31,10 +28,8 @@ describe("Vérification des références juridiques pour la CC 1090", () => {
       const result = getReferences(
         engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1090'",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-            seniority,
-          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-            inaptitude,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": inaptitude,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
         }),
         "résultat conventionnel"

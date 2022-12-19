@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import xss, { escapeAttrValue } from "xss";
 
-import { htmlParser } from "../lib/html";
-
 type Props = {
   children: string;
   as?: string;
@@ -30,7 +28,7 @@ const Html = ({ children, as = "div", ...props }: Props): JSX.Element => {
       {...props}
       as={as}
       dangerouslySetInnerHTML={{
-        __html: xss(htmlParser(children), {
+        __html: xss(children, {
           onIgnoreTag: function (tag, html, _options) {
             if (whiteListTags.some((whiteTag) => whiteTag === tag)) {
               return html;

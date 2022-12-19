@@ -2,6 +2,7 @@ import type Engine from "publicodes";
 import type { RuleNode } from "publicodes";
 
 import type { Formula } from "../types";
+import { nonNullable } from "./array";
 
 export type NodeFormula = {
   formula: string;
@@ -26,6 +27,18 @@ function round(num: number): number {
   return Math.round(num * 100) / 100;
 }
 
+export const roundValueAndAddMessage = (
+  value: number,
+  unit: string
+): string => {
+  const unitWithPlurial = `${unit}${pluralize(unit, value)}`;
+  const roundedValue = round(value);
+  const isRounded = roundedValue !== value;
+  return isRounded
+    ? `≈ ${roundedValue} ${unitWithPlurial} : valeur arrondie`
+    : `${roundedValue} ${unitWithPlurial}`;
+};
+
 function getRulesWithFormuleAndNodeValue(engine: Engine): RuleNodeFormula[] {
   return Object.values(engine.getParsedRules()).filter(
     (rule: RuleNodeOptionalFormula) => {
@@ -39,29 +52,8 @@ function getRulesWithFormuleAndNodeValue(engine: Engine): RuleNodeFormula[] {
 
 const FORMULE_VAR_REGEX = /\$formule/g;
 
-export function filterIndemniteLicenciement(
-  rules: RuleNodeFormula[]
-): RuleNodeFormula[] {
-  if (
-    rules.some((rule) => rule.dottedName.includes("résultat conventionnel"))
-  ) {
-    return rules.filter((rule) => !rule.dottedName.includes("résultat légal"));
-  }
-  return rules;
-}
-
-export function getFormule(
-  engine: Engine,
-  filter:
-    | ((rules: RuleNodeFormula[]) => RuleNodeFormula[])
-    | null = filterIndemniteLicenciement
-): Formula {
-  let rules = getRulesWithFormuleAndNodeValue(engine);
-
-  if (filter !== null) {
-    rules = filter(rules);
-  }
-
+export function getFormule(engine: Engine): Formula {
+  const rules = getRulesWithFormuleAndNodeValue(engine);
   const formula = rules.reduce(
     (
       formule: Required<NodeFormula>,
@@ -107,18 +99,58 @@ export function getFormule(
             }'`
           );
         }
-        const unit = result.unit.numerators[0];
-        return `${text} (${round(Number(result.nodeValue))} ${unit}${pluralize(
-          unit,
-          result.nodeValue as number
-        )})`;
+        const nodeValue = Number(result.nodeValue);
+        if (nodeValue && nodeValue !== 0) {
+          const unit: string = result.unit.numerators[0];
+          return `${text} (${roundValueAndAddMessage(nodeValue, unit)})`;
+        } else {
+          formula.formula = removePartFromFormula(formula.formula, text);
+        }
       });
     })
+    .filter(nonNullable)
     .sort((a, b) => a.localeCompare(b));
 
   return {
     annotations: formula.annotations,
     explanations,
-    formula: formula.formula,
+    formula: cleanFormula(formula.formula),
   };
 }
+
+const ANY_CHARS_BUT_BRACKET = "[^[]*";
+export const removePartFromFormula = (
+  formule: string,
+  explanation: string
+): string => {
+  if (formule.includes("[") && formule.includes("]")) {
+    const formulaKey = explanation.split(":")[0].replace(" ", "");
+    return formule.replace(
+      new RegExp(
+        `\\[${ANY_CHARS_BUT_BRACKET}${formulaKey}${ANY_CHARS_BUT_BRACKET}?\\]`,
+        "g"
+      ),
+      ""
+    );
+  }
+  return formule;
+};
+
+export const cleanFormula = (formule: string): string => {
+  // remove all the [ ] from the formula
+  const formulaWithoutCrochet = formule.replace(/\[|\]/g, "");
+  // remove space and + at the beginning of the formula
+  const withoutSpaceAndPlus = formulaWithoutCrochet.replace(/^(\s|\+)+/, "");
+  // detect if there is a + in the formula
+  const hasPlus = withoutSpaceAndPlus.includes("+");
+  // detect if there is (( and )) in the formula
+  const hasDuplicateParenthesisStart = withoutSpaceAndPlus.includes("((");
+  const hasDuplicateParenthesisEnd = withoutSpaceAndPlus.includes("))");
+  // remove duplicate (( and ))
+  const withoutDuplicateParenthesis = withoutSpaceAndPlus
+    .replace(/\(\(/g, "(")
+    .replace(/\)\)/g, ")");
+  return !hasPlus && hasDuplicateParenthesisStart && hasDuplicateParenthesisEnd
+    ? withoutDuplicateParenthesis
+    : withoutSpaceAndPlus;
+};

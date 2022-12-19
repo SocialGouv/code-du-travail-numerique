@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tabulator /> should have two different levels of headings 1`] = `
+<div>
+  <div
+    class="sc-daBunf iQXCse"
+    data-tabs="true"
+  >
+    <div
+      class="sc-eJocfa lolEuP sc-jUfyBS ekpEBY"
+    >
+      <div
+        class="sc-oeezt lplLxT"
+      >
+        <ul
+          class="sc-jQAxuV dZYJWp"
+          role="tablist"
+        >
+          <li
+            aria-controls="react-tabs-1"
+            aria-disabled="false"
+            aria-selected="true"
+            class="sc-fuISkM jGCXXj react-tabs__tab--selected"
+            data-testid="undefined-0"
+            id="react-tabs-0"
+            role="tab"
+            tabindex="0"
+          >
+            CDI
+          </li>
+          <li
+            aria-controls="react-tabs-3"
+            aria-disabled="false"
+            aria-selected="false"
+            class="sc-fuISkM jGCXXj"
+            data-testid="undefined-1"
+            id="react-tabs-2"
+            role="tab"
+          >
+            CDD
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      aria-labelledby="react-tabs-0"
+      class="sc-fcmMJX bWRMqJ react-tabs__tab-panel--selected"
+      id="react-tabs-1"
+      role="tabpanel"
+    >
+      <div
+        class="sc-gXfVKN gNNUJi"
+      >
+        <h2
+          class="sc-iCoGMd gaXVHn"
+          data-testid="heading"
+        >
+          CDI
+        </h2>
+      </div>
+      <div
+        class="sc-GvhzO vQcFG"
+      >
+        <h3
+          class="sc-iCoGMd gaXVHn"
+          data-testid="heading"
+        >
+          titre 1
+        </h3>
+        <p>
+          paragraphe 1
+        </p>
+      </div>
+    </div>
+    <div
+      aria-labelledby="react-tabs-2"
+      class="sc-fcmMJX bWRMqJ"
+      id="react-tabs-3"
+      role="tabpanel"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
+<div>
+  <div
+    class="sc-daBunf iQXCse"
+    data-tabs="true"
+  >
+    <div
+      class="sc-eJocfa lolEuP sc-jUfyBS ekpEBY"
+    >
+      <div
+        class="sc-oeezt lplLxT"
+      >
+        <ul
+          class="sc-jQAxuV dZYJWp"
+          role="tablist"
+        >
+          <li
+            aria-controls="react-tabs-5"
+            aria-disabled="false"
+            aria-selected="true"
+            class="sc-fuISkM jGCXXj react-tabs__tab--selected"
+            data-testid="undefined-0"
+            id="react-tabs-4"
+            role="tab"
+            tabindex="0"
+          >
+            CDI
+          </li>
+          <li
+            aria-controls="react-tabs-7"
+            aria-disabled="false"
+            aria-selected="false"
+            class="sc-fuISkM jGCXXj"
+            data-testid="undefined-1"
+            id="react-tabs-6"
+            role="tab"
+          >
+            CDD
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      aria-labelledby="react-tabs-4"
+      class="sc-fcmMJX bWRMqJ react-tabs__tab-panel--selected"
+      id="react-tabs-5"
+      role="tabpanel"
+    >
+      <div
+        class="sc-gXfVKN gNNUJi"
+      >
+        <h3
+          class="sc-iCoGMd gaXVHn"
+          data-testid="heading"
+        >
+          CDI
+        </h3>
+      </div>
+      <div
+        class="sc-GvhzO vQcFG"
+      >
+        <h4
+          class="sc-iCoGMd gaXVHn"
+          data-testid="heading"
+        >
+          titre 1
+        </h4>
+        <p>
+          paragraphe 1
+        </p>
+      </div>
+    </div>
+    <div
+      aria-labelledby="react-tabs-6"
+      class="sc-fcmMJX bWRMqJ"
+      id="react-tabs-7"
+      role="tabpanel"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Tabulator /> should render 1`] = `
+<div>
+  <div
+    class="sc-daBunf iQXCse"
+    data-tabs="true"
+  >
+    <div
+      class="sc-eJocfa lolEuP sc-jUfyBS ekpEBY"
+    >
+      <div
+        class="sc-oeezt lplLxT"
+      >
+        <ul
+          class="sc-jQAxuV dZYJWp"
+          role="tablist"
+        >
+          <li
+            aria-controls="react-tabs-9"
+            aria-disabled="false"
+            aria-selected="true"
+            class="sc-fuISkM jGCXXj react-tabs__tab--selected"
+            data-testid="undefined-0"
+            id="react-tabs-8"
+            role="tab"
+            tabindex="0"
+          >
+            CDI
+          </li>
+          <li
+            aria-controls="react-tabs-11"
+            aria-disabled="false"
+            aria-selected="false"
+            class="sc-fuISkM jGCXXj"
+            data-testid="undefined-1"
+            id="react-tabs-10"
+            role="tab"
+          >
+            CDD
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      aria-labelledby="react-tabs-8"
+      class="sc-fcmMJX bWRMqJ react-tabs__tab-panel--selected"
+      id="react-tabs-9"
+      role="tabpanel"
+    >
+      <div
+        class="sc-gXfVKN gNNUJi"
+      >
+        <h4
+          class="sc-iCoGMd gaXVHn"
+          data-testid="heading"
+        >
+          CDI
+        </h4>
+      </div>
+      <div
+        class="sc-GvhzO vQcFG"
+      >
+        <h5
+          class="sc-iCoGMd gaXVHn"
+          data-testid="heading"
+        >
+          titre 1
+        </h5>
+        <p>
+          paragraphe 1
+        </p>
+      </div>
+    </div>
+    <div
+      aria-labelledby="react-tabs-10"
+      class="sc-fcmMJX bWRMqJ"
+      id="react-tabs-11"
+      role="tabpanel"
+    />
+  </div>
+</div>
+`;

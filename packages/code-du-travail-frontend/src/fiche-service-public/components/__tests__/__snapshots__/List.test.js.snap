@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> should render and increment heading level of children by one 1`] = `
+<div>
+  <ul>
+    <li
+      class="sc-iIgjPs dSOKOE"
+    >
+      <h3
+        class="sc-iCoGMd gaXVHn"
+        data-testid="heading"
+      >
+        title
+      </h3>
+    </li>
+    <li
+      class="sc-iIgjPs dSOKOE"
+    >
+      <p>
+        ok
+      </p>
+    </li>
+  </ul>
+</div>
+`;

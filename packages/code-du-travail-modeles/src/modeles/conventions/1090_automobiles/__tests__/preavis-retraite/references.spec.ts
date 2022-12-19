@@ -1,21 +1,23 @@
 import Engine from "publicodes";
 
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
 
 const DepartRetraiteOuvriers = [
   ...DepartRetraiteReferences,
   {
     article: "Article 1.23",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000037964029/?idConteneur=KALICONT000005635191",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000037964029/?idConteneur=KALICONT000005635191",
   },
   {
     article: "Article 2.12 pour les ouvriers et employés",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926886/?idConteneur=KALICONT000005635191",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926886/?idConteneur=KALICONT000005635191",
   },
 ];
 
@@ -23,11 +25,13 @@ const DepartRetraiteAgentsMaitrisesCadres = [
   ...DepartRetraiteReferences,
   {
     article: "Article 1.23",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000037964029/?idConteneur=KALICONT000005635191",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000037964029/?idConteneur=KALICONT000005635191",
   },
   {
     article: "Article 4.10 pour les agents de maîtrise et cadres",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926890/?idConteneur=KALICONT000005635191",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926890/?idConteneur=KALICONT000005635191",
   },
 ];
 
@@ -35,11 +39,13 @@ const MiseRetraiteOuvriers = [
   ...MiseRetraiteReferences,
   {
     article: "Article 1.23",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000037964029/?idConteneur=KALICONT000005635191",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000037964029/?idConteneur=KALICONT000005635191",
   },
   {
     article: "Article 2.12 pour les ouvriers et employés",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926886/?idConteneur=KALICONT000005635191",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926886/?idConteneur=KALICONT000005635191",
   },
 ];
 
@@ -47,15 +53,17 @@ const MiseRetraiteAgentsMaitrisesCadres = [
   ...MiseRetraiteReferences,
   {
     article: "Article 1.23",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000037964029/?idConteneur=KALICONT000005635191",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000037964029/?idConteneur=KALICONT000005635191",
   },
   {
     article: "Article 4.10 pour les agents de maîtrise et cadres",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926890/?idConteneur=KALICONT000005635191",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000024926890/?idConteneur=KALICONT000005635191",
   },
 ];
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 test.each`
   retirement  | category                | expectedReferences

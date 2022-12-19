@@ -1,18 +1,19 @@
 import Engine from "publicodes";
 
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 const OuvriersReferences = [
   {
     article: "Annexe III article 15",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872211/?idConteneur=KALICONT000005635872",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872211/?idConteneur=KALICONT000005635872",
   },
 ];
 
@@ -21,7 +22,8 @@ const EmployeesReferences = OuvriersReferences;
 const TechniciensReferences = [
   {
     article: "Annexe II article 11",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872146/?idConteneur=KALICONT000005635872",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872146/?idConteneur=KALICONT000005635872",
   },
 ];
 
@@ -30,7 +32,8 @@ const AgentDeMaitriseReferences = TechniciensReferences;
 const CadresReferences = [
   {
     article: "Annexe I article 10",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872089/?idConteneur=KALICONT000005635872",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005872089/?idConteneur=KALICONT000005635872",
   },
 ];
 

@@ -81,6 +81,7 @@ const PubliQuestion: React.FC<Props> = ({
           name={name}
           label={question}
           selectedOption={value}
+          tooltip={tooltip}
           onChangeSelectedOption={onChange}
           error={error}
           showRequired

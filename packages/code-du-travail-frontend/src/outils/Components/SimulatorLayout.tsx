@@ -11,10 +11,9 @@ import {
 } from "../Simulator/createContext";
 import SimulatorNavigation from "./SimulatorNavigation";
 
-const { spacings } = theme;
-
 type Validator<StepName extends string> = {
   validator: () => boolean;
+  validatorEligibility?: () => boolean;
   stepName: StepName;
   isStepValid: boolean;
 };
@@ -41,7 +40,6 @@ const SimulatorContent = <StepName extends string>({
   hiddenStep,
 }: Props<StepName>): JSX.Element => {
   const anchorRef = React.createRef<HTMLLIElement>();
-
   const { currentStepIndex, previousStep, nextStep } = useSimulatorStepStore(
     (state) => state
   );
@@ -79,16 +77,20 @@ const SimulatorContent = <StepName extends string>({
       throw Error("Can't show the next step with index more than steps");
     } else {
       let isValid: boolean | undefined;
-      if (currentStepIndex === 0) {
-        isValid = true;
-      } else {
-        isValid = validators
-          .find(
-            (validator) =>
-              validator.stepName === visibleSteps[currentStepIndex].name
-          )
-          ?.validator();
+      const stepValidator = validators.find(
+        (validator) =>
+          validator.stepName === visibleSteps[currentStepIndex].name
+      );
+      if (
+        stepValidator?.validatorEligibility &&
+        !stepValidator?.validatorEligibility()
+      ) {
+        nextStep(visibleSteps.length - 1);
+        return;
       }
+
+      isValid = currentStepIndex === 0 || stepValidator?.validator();
+
       if (isValid) {
         nextStep();
         matopush([
@@ -118,6 +120,9 @@ const SimulatorContent = <StepName extends string>({
     }
   };
 
+  const validator = validators.find(
+    (validator) => validator.stepName === visibleSteps[currentStepIndex].name
+  );
   return (
     <StyledWrapper variant="main">
       <StyledForm>
@@ -139,12 +144,9 @@ const SimulatorContent = <StepName extends string>({
         </StepWrapper>
         <SimulatorNavigationWrapper
           hasError={
-            validators.find(
-              (validator) =>
-                validator.stepName === visibleSteps[currentStepIndex].name
-            )?.isStepValid === false
-              ? true
-              : false
+            (!validator?.validatorEligibility ||
+              validator?.validatorEligibility()) &&
+            validator?.isStepValid === false
           }
           showNext={currentStepIndex < visibleSteps.length - 1}
           onPrint={

@@ -1,10 +1,5 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { QuestionOuiNon } from "../../../../common";
 import { CatPro573 } from "../../formula";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
 
 describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
   describe("Autres", () => {
@@ -20,10 +15,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
           .setSituation({
             "contrat salarié . convention collective": "'IDCC0573'",
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
           })
           .evaluate(
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
@@ -40,6 +33,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
     test.each`
       age   | category            | typeLicenciement      | seniority | salary  | expectedCompensation
       ${32} | ${CatPro573.agents} | ${QuestionOuiNon.non} | ${0.5}    | ${2700} | ${0}
+      ${32} | ${CatPro573.agents} | ${QuestionOuiNon.non} | ${0.99}   | ${2700} | ${0}
       ${32} | ${CatPro573.agents} | ${QuestionOuiNon.non} | ${1}      | ${2700} | ${540}
       ${32} | ${CatPro573.agents} | ${QuestionOuiNon.non} | ${15}     | ${2700} | ${9900}
       ${40} | ${CatPro573.agents} | ${QuestionOuiNon.oui} | ${1}      | ${2700} | ${540}
@@ -61,13 +55,10 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
           .setSituation({
             "contrat salarié . convention collective": "'IDCC0573'",
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age":
-              age,
+            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age": age,
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique question": `'${typeLicenciement}'`,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
           })
           .evaluate(
             "contrat salarié . indemnité de licenciement . résultat conventionnel"
@@ -83,6 +74,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
   describe("Cadres", () => {
     test.each`
       age   | category            | auMoins15AnsCadre     | seniority | salary  | expectedCompensation
+      ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${0.99}   | ${3200} | ${0}
+      ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${1}      | ${3200} | ${640}
       ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${4}      | ${3200} | ${2560}
       ${32} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${5}      | ${3200} | ${3200}
       ${40} | ${CatPro573.cadres} | ${QuestionOuiNon.oui} | ${6}      | ${3200} | ${5760}
@@ -111,13 +104,10 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
           .setSituation({
             "contrat salarié . convention collective": "'IDCC0573'",
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age":
-              age,
+            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age": age,
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans question": `'${auMoins15AnsCadre}'`,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
           })
           .evaluate(
             "contrat salarié . indemnité de licenciement . résultat conventionnel"

@@ -1,9 +1,9 @@
 import Engine from "publicodes";
 
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import { getNotifications } from "../../../../common";
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 test.each`
   seniority | category                 | expectedNotice
@@ -69,8 +69,7 @@ test.each`
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0029'",
         "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'Cadres administratifs et de gestion'`,
-        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient":
-          coefficient,
+        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient": coefficient,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
       })
@@ -125,8 +124,7 @@ test.each`
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0029'",
         "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient":
-          coefficient,
+        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient": coefficient,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
       })

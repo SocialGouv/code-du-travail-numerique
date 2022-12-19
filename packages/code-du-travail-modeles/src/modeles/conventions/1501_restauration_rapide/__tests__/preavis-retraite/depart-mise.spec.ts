@@ -1,22 +1,24 @@
 import Engine from "publicodes";
 
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 describe("restauration rapide", () => {
   const CCReferences = [
     {
       article: "Article 28",
-      url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005833486/?idConteneur=KALICONT000005635596",
+      url:
+        "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005833486/?idConteneur=KALICONT000005635596",
     },
     {
       article: "Article 12",
-      url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005833465/?idConteneur=KALICONT000005635596",
+      url:
+        "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005833465/?idConteneur=KALICONT000005635596",
     },
   ];
   const DepartRetraiteRefs = [...DepartRetraiteReferences, ...CCReferences];

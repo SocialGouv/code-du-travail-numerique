@@ -3,7 +3,8 @@ export const searchAgreements = (query: string) => {
     case "16":
       return Promise.resolve([
         {
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
+          url:
+            "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
           id: "KALICONT000005635624",
           num: 16,
           shortTitle:
@@ -15,7 +16,8 @@ export const searchAgreements = (query: string) => {
     case "1351":
       return Promise.resolve([
         {
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635405",
+          url:
+            "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635405",
           id: "KALICONT000005635405",
           num: 1351,
           shortTitle: "Entreprises de prévention et de sécurité",
@@ -26,7 +28,8 @@ export const searchAgreements = (query: string) => {
     case "3239":
       return Promise.resolve([
         {
-          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
+          url:
+            "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
           id: "KALICONT000044594539",
           num: 3239,
           shortTitle: "Particuliers employeurs et emploi à domicile",

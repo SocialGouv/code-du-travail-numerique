@@ -1,9 +1,9 @@
 import Engine from "publicodes";
 
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import { getNotifications } from "../../../../common";
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 describe("Mise à la retraite", () => {
   test.each`
     seniority | category        | expectedNotice | expectedUnit

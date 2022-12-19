@@ -2,21 +2,10 @@ contrat salarié . convention collective . automobiles . indemnité de licenciem
   applicable si: indemnité de licenciement
   valeur: oui
 
-# Cette convention collective se base sur celle du légal
-# (1/4*Sref*A1) + (1/3*Sref*A2)
-# A1 : Ancienneté de 10 ans ou moins
-# A2 : Ancienneté au delà de 10 ans
 contrat salarié . convention collective . automobiles . indemnité de licenciement . résultat conventionnel:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
-      alors:
-        somme:
-          - contrat salarié . indemnité de licenciement . facteur dix ans ou moins cc
-          - contrat salarié . indemnité de licenciement . facteur plus de dix ans cc
-    - sinon: 0
-  unité: €
-  arrondi: 2 décimales
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
+  valeur: oui
   références:
     Article 1.13: https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005755339/?idConteneur=KALICONT000005635191
     Article 2.13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000037964084?idConteneur=KALICONT000005635191&origin=list#KALIARTI000037964084

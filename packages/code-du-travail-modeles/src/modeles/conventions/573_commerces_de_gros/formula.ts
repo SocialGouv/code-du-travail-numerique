@@ -22,8 +22,7 @@ export type Formula573Props = {
 };
 
 export class Formula573
-  implements IFormula<SupportedCcIndemniteLicenciement.IDCC0573>
-{
+  implements IFormula<SupportedCcIndemniteLicenciement.IDCC0573> {
   computeFormula({
     seniority,
     refSalary,

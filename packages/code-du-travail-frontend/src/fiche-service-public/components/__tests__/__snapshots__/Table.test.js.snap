@@ -1,0 +1,639 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Table /> should render with th, td, colspan etc. 1`] = `
+<div>
+  <div
+    class="sc-eJocfa lolEuP"
+  >
+    <div
+      class="sc-oeezt lplLxT"
+    >
+      <table
+        class="sc-kHWWYL cLVVkI"
+      >
+        <caption>
+          Conditions ouvrant droit à la retraite anticipée pour carrière longue
+        </caption>
+        <thead>
+          <tr>
+            <th
+              colspan="1"
+              rowspan="2"
+            >
+              Année de naissance
+            </th>
+            <th
+              colspan="1"
+              rowspan="2"
+            >
+              Âge de départ à la retraite envisagé (à partir de)
+            </th>
+            <th
+              colspan="1"
+              rowspan="2"
+            >
+              Durée d'assurance minimale cotisée (en trimestres)
+            </th>
+            <th
+              colspan="2"
+              rowspan="1"
+            >
+              Durée d'assurance minimale en début de carrière
+            </th>
+          </tr>
+          <tr>
+            <th
+              colspan="1"
+              rowspan="1"
+            >
+              Si vous êtes né entre janvier et septembre
+            </th>
+            <th
+              colspan="1"
+              rowspan="1"
+            >
+              Si vous êtes né entre octobre et décembre
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th
+              colspan="1"
+              rowspan="2"
+            >
+              1959
+            </th>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              57 ans et 8 mois
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              175
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                5
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                16 ans
+              </strong>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                4
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                16 ans
+              </strong>
+            </td>
+          </tr>
+          <tr>
+            <th
+              colspan="1"
+              rowspan="1"
+            >
+              60 ans
+            </th>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              167
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                5
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                20 ans
+              </strong>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                4
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                20 ans
+              </strong>
+            </td>
+          </tr>
+          <tr>
+            <th
+              colspan="1"
+              rowspan="2"
+            >
+              1960
+            </th>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              58 ans
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              175
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                5
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                16 ans
+              </strong>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                4
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                16 ans
+              </strong>
+            </td>
+          </tr>
+          <tr>
+            <th
+              colspan="1"
+              rowspan="1"
+            >
+              60 ans
+            </th>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              167
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                5
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                20 ans
+              </strong>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                4
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                20 ans
+              </strong>
+            </td>
+          </tr>
+          <tr>
+            <th
+              colspan="1"
+              rowspan="2"
+            >
+              1961, 1962 ou 1963
+            </th>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              58 ans
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              176
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                5
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                16 ans
+              </strong>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                4
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                16 ans
+              </strong>
+            </td>
+          </tr>
+          <tr>
+            <th
+              colspan="1"
+              rowspan="1"
+            >
+              60 ans
+            </th>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              168
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                5
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                20 ans
+              </strong>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                4
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                20 ans
+              </strong>
+            </td>
+          </tr>
+          <tr>
+            <th
+              colspan="1"
+              rowspan="2"
+            >
+              1964, 1965 ou 1966
+            </th>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              58 ans
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              177
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                5
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                16 ans
+              </strong>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                4
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                16 ans
+              </strong>
+            </td>
+          </tr>
+          <tr>
+            <th
+              colspan="1"
+              rowspan="1"
+            >
+              60 ans
+            </th>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              169
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                5
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                20 ans
+              </strong>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                4
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                20 ans
+              </strong>
+            </td>
+          </tr>
+          <tr>
+            <th
+              colspan="1"
+              rowspan="2"
+            >
+              1967, 1968 ou 1969
+            </th>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              58 ans
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              178
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                5
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                16 ans
+              </strong>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                4
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                16 ans
+              </strong>
+            </td>
+          </tr>
+          <tr>
+            <th
+              colspan="1"
+              rowspan="1"
+            >
+              60 ans
+            </th>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              170
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                5
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                20 ans
+              </strong>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                4
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                20 ans
+              </strong>
+            </td>
+          </tr>
+          <tr>
+            <th
+              colspan="1"
+              rowspan="2"
+            >
+              1970, 1971 ou 1972
+            </th>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              58 ans
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              179
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                5
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                16 ans
+              </strong>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                4
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                16 ans
+              </strong>
+            </td>
+          </tr>
+          <tr>
+            <th
+              colspan="1"
+              rowspan="1"
+            >
+              60 ans
+            </th>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              171
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                5
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                20 ans
+              </strong>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                4
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                20 ans
+              </strong>
+            </td>
+          </tr>
+          <tr>
+            <th
+              colspan="1"
+              rowspan="2"
+            >
+              À partir de 1973
+            </th>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              58 ans
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              180
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                5
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                16 ans
+              </strong>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                4
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                16 ans
+              </strong>
+            </td>
+          </tr>
+          <tr>
+            <th
+              colspan="1"
+              rowspan="1"
+            >
+              60 ans
+            </th>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              172
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                5
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                20 ans
+              </strong>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <strong>
+                4
+              </strong>
+               trimestres à la fin de l'année des 
+              <strong>
+                20 ans
+              </strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;

@@ -1,573 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> should render 1`] = `
-.c2 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c12 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 1rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c12:link,
-.c12:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c12:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c12[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c17 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c17:link,
-.c17:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c17:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c17[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c9 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
-.c18 {
-  height: auto;
-  padding: 0;
-}
-
-.c20 {
-  width: 5.4rem;
-  height: 5.4rem;
-  color: #7994d4;
-}
-
-.c11 ul {
-  z-index: 1;
-}
-
-.c11 li[role="option"]:nth-child(2n + 1) {
-  background: #f2f5fa;
-}
-
-.c8 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c14 {
-  width: 3rem;
-  height: 3rem;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 5.4rem;
-  margin: 0;
-  padding: 1rem 5.5rem 1rem 1.6rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c10::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c10::-moz-placeholder {
-  color: #9298af;
-}
-
-.c10:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c10::placeholder {
-  color: #9298af;
-}
-
-.c13 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 3rem;
-  height: 5.4rem;
-  color: #7994d4;
-}
-
-.c19 {
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c0 {
-  position: absolute;
-  top: 0;
-  z-index: 3;
-  width: 100%;
-  height: 13.5rem;
-  background-color: #fff;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-}
-
-.c1 {
-  display: none;
-  text-align: right;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 1rem 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5 {
-  display: inline-block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 13.5rem;
-  height: 11.5rem;
-  background-color: white;
-}
-
-.c6 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 17.4rem;
-  height: 7rem;
-  margin-left: 4rem;
-  color: #f66663;
-}
-
-.c15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.c16 {
-  display: none;
-  color: #7994d4;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 30rem;
-  margin-left: 1.6rem;
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c12 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-
-}
-
-@media print {
-
-}
-
-@media (max-width:600px) {
-  .c17 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c17 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:980px) {
-
-}
-
-@media (max-width:600px) {
-  .c20 {
-    width: 4.2rem;
-    height: 4.2rem;
-  }
-}
-
-@media (max-width:980px) {
-
-}
-
-@media (max-width:600px) {
-  .c8 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    height: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    height: 5.4rem;
-    padding: 1rem 5.5rem 1rem 1.6rem;
-  }
-}
-
-@media (max-width:980px) {
-
-}
-
-@media (max-width:980px) {
-
-}
-
-@media (max-width:980px) {
-
-}
-
-@media (max-width:600px) {
-  .c0 {
-    height: 9rem;
-  }
-}
-
-@media print {
-  .c0 {
-    position: relative;
-    height: auto;
-    box-shadow: none;
-  }
-}
-
-@media print {
-  .c1 {
-    display: block;
-  }
-}
-
-@media (max-width:980px) {
-  .c4 {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    width: calc(50% + 9.5rem);
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: calc(50% + 6.2rem);
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    width: auto;
-    height: 7.5rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    height: 5rem;
-    width: auto;
-    margin-left: 1rem;
-  }
-}
-
-@media print {
-  .c15 {
-    display: none;
-  }
-}
-
-@media (max-width:980px) {
-  .c16 {
-    display: block;
-    width: 3.4rem;
-    height: 3.4rem;
-    margin-left: 2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    width: 2.2rem;
-    height: 2.2rem;
-    margin-left: 1rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c7 {
-    display: none;
-  }
-}
-
-@media print {
-  .c7 {
-    display: none;
-  }
-}
-
 <div>
   <header
-    class="c0"
+    class="sc-fyjqAk NKsFT"
   >
     <div
-      class="c1"
+      class="sc-iXeHaJ eZyGkD"
       id="printDate"
     >
       le 04/01/2020, 00:00:00
     </div>
     <div
-      class="c2 c3"
+      class="sc-bdnxRM sc-jLqRGG bCGhmq igzAnk"
     >
       <a
-        class="c4"
+        class="sc-bUQyIj izlsBQ"
         href="/"
         title="Code du travail numérique - retour à l'accueil"
       >
         <img
           alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-          class="c5"
+          class="sc-tsGVs eZFHQe"
           height="115"
           src="/static/assets/img/logo-rf.svg"
           width="135"
         />
         <svg
           aria-label="Code du travail numérique"
-          class="c6"
+          class="sc-dSnXvR iFMWGh"
           fill="none"
           viewBox="0 0 657 265"
           xmlns="http://www.w3.org/2000/svg"
@@ -591,15 +52,15 @@ exports[`<Header /> should render 1`] = `
         </svg>
       </a>
       <div
-        class="c7"
+        class="sc-JsfZP fKQXNs"
       >
         <form
           action="/recherche"
-          class="c8"
+          class="sc-ellfGf bAscX"
           role="search"
         >
           <div
-            class="c9"
+            class="sc-gXfVKN gNNUJi"
           >
             <label
               for="floating-search"
@@ -619,7 +80,7 @@ exports[`<Header /> should render 1`] = `
               aria-controls="react-autowhatever-1"
               aria-label="recherchez par mots-clés"
               autocomplete="off"
-              class="c10"
+              class="sc-iIgjPs edChZz"
               id="floating-search"
               name="q"
               placeholder="Rechercher"
@@ -628,20 +89,20 @@ exports[`<Header /> should render 1`] = `
               value=""
             />
             <div
-              class="c11"
+              class="sc-jtiXyc epYyJZ"
               id="react-autowhatever-1"
               role="listbox"
             />
           </div>
           <button
             aria-label="Lancer ma recherche"
-            class="c12 c13"
+            class="sc-hiKfDv jbMTFD sc-amkrK ctiiva"
             title="Lancer ma recherche"
             type="submit"
           >
             <svg
               aria-hidden="true"
-              class="c14"
+              class="sc-kizEQm jMSoYK"
               fill="none"
               viewBox="0 0 32 32"
               xmlns="http://www.w3.org/2000/svg"
@@ -655,10 +116,10 @@ exports[`<Header /> should render 1`] = `
         </form>
       </div>
       <div
-        class="c15"
+        class="sc-hYRTwp dvHvuk"
       >
         <a
-          class="c16"
+          class="sc-cGKJhA gLoGEX"
           href="/recherche"
         >
           <svg
@@ -675,11 +136,11 @@ exports[`<Header /> should render 1`] = `
         </a>
         <button
           aria-label="menu principal"
-          class="c17 c18 c19"
+          class="sc-hiKfDv ismPOA sc-ciSkZP dAZGnz sc-kmIPcE MOmxc"
         >
           <svg
             aria-hidden="true"
-            class="c20"
+            class="sc-jcwpoC gzqLpW"
             fill="none"
             viewBox="0 0 32 32"
             xmlns="http://www.w3.org/2000/svg"

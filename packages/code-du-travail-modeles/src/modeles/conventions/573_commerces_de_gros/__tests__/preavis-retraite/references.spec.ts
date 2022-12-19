@@ -1,24 +1,26 @@
 import Engine from "publicodes";
 
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 const MiseRetraiteNonCadresReferences = [
   {
     article: "Article 41",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000026801989/?idConteneur=KALICONT000005635373",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000026801989/?idConteneur=KALICONT000005635373",
   },
 ];
 const MiseRetraiteCadresReferences = [
   {
     article: "Avenant n°I relatif aux cadres Article 5",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005836506/?idConteneur=KALICONT000005635373",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005836506/?idConteneur=KALICONT000005635373",
   },
 ];
 

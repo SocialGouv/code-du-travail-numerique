@@ -1,455 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Contribution /> should NOT render invalid preselected convention 1`] = `
-.c12 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c11 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c17 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c0 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 5rem;
-  height: 5rem;
-  overflow: hidden;
-  color: #fff;
-  border-radius: 0 0.6rem 0 0;
-}
-
-.c0:before {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border-color: transparent #f66663 transparent transparent;
-  border-style: solid;
-  border-width: 0 5rem 5rem 0;
-  content: "";
-}
-
-.c1 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 3rem;
-  height: 3rem;
-}
-
-.c24 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c24:focus {
-  color: #f66663;
-}
-
-.c8 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c5 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c5 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c6 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c19 {
-  position: relative;
-  display: inline-block;
-}
-
-.c21 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c21[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c21::-webkit-outer-spin-button,
-.c21::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.c21:invalid {
-  border-color: #eb5757;
-}
-
-.c21::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c21::-moz-placeholder {
-  color: #9298af;
-}
-
-.c21:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c21::placeholder {
-  color: #9298af;
-}
-
-.c21:focus {
-  border-color: #7994d4;
-}
-
-.c21:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c21:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c21:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c21:focus::placeholder {
-  color: transparent;
-}
-
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c7 {
-  margin: 0 0 1rem 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c9 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  text-align: left;
-}
-
-.c14 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  margin-left: -2.4rem;
-  text-align: left;
-}
-
-.c10 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c16 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 2.4rem;
-  text-align: left;
-}
-
-.c20 {
-  width: 100%;
-}
-
-.c22 {
-  margin-top: 2.4rem;
-}
-
-.c23 {
-  display: block;
-  margin-top: 1.6rem;
-}
-
-.c25 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c13 {
-  padding-bottom: 0;
-}
-
-.c3 {
-  margin-bottom: 3.2rem;
-}
-
-.c15 {
-  margin-top: 3.2rem;
-}
-
-@media (max-width:600px) {
-  .c12 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c24 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c24 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c5 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c21 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    margin-bottom: 1rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    margin-bottom: 1rem;
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    margin-bottom: 2rem;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-iklJeh biSgUS"
   >
     <div
-      class="c1"
+      class="sc-jJMGnK ihofWp"
     >
       <svg
         aria-hidden="true"
@@ -473,13 +30,13 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
     </div>
   </div>
   <div
-    class="c2 c3"
+    class="sc-jSFjdj sc-fyGvY dWteEK hjmglL"
   >
     <div
-      class="c4"
+      class="sc-gGLxEB bZfRQU"
     >
       <div
-        class="c5"
+        class="sc-ckTSus eGIUDO"
       >
         <svg
           aria-hidden="true"
@@ -516,17 +73,17 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         </svg>
       </div>
       <div
-        class="c6"
+        class="sc-fbIWvP itJXQd"
       >
         <p
           aria-level="2"
-          class="c7"
+          class="sc-flUlpA sc-bFSbwS eovlvg"
           role="heading"
         >
           Page personnalisable
         </p>
         <p
-          class="c8"
+          class="sc-cOifOu jBNwUz"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -542,13 +99,13 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   </div>
   <section>
     <div
-      class="c9"
+      class="sc-eXuyPJ jPObHZ"
     >
       <h2
-        class="c10"
+        class="sc-eWnToP iHpQsB"
       >
         <span
-          class="c11"
+          class="sc-gKAaRy jNbrvj"
         />
         Que dit le code du travail ?
       </h2>
@@ -563,35 +120,35 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
     </div>
   </section>
   <div
-    class="c12 c13"
+    class="sc-gtsrHT dDJuxj sc-fxFQKN fHdZvC"
   >
     <div
-      class="c2"
+      class="sc-jSFjdj dWteEK"
     >
       <div
-        class="c14 c15"
+        class="sc-eXuyPJ bHFRAw sc-Jgsit gZFxUk"
         id="customisation"
       >
         <h2
-          class="c16"
+          class="sc-eWnToP iJmfOu"
         >
           <span
-            class="c17"
+            class="sc-gKAaRy hLlvoX"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
       <label
-        class="c18"
+        class="sc-dTSzeu btJghr"
         for="convention-search"
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
-        class="c19 c20"
+        class="sc-bQCEYZ iOBpgY sc-jLqRGG jXoiKy"
       >
         <input
-          class="c21"
+          class="sc-fXgAZx esWNAb"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -601,16 +158,16 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
       </span>
       
       <p
-        class="c22"
+        class="sc-bUQyIj eqjFlE"
       >
         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
         <span
-          class="c23"
+          class="sc-tsGVs cQiTYY"
         >
           Consultez
            
           <button
-            class="c24 c25"
+            class="sc-hiKfDv fruFDR sc-dSnXvR fivlYt"
             type="button"
           >
             notre aide
@@ -624,455 +181,12 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 `;
 
 exports[`<Contribution /> should render answer references 1`] = `
-.c12 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c11 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c17 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c0 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 5rem;
-  height: 5rem;
-  overflow: hidden;
-  color: #fff;
-  border-radius: 0 0.6rem 0 0;
-}
-
-.c0:before {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border-color: transparent #f66663 transparent transparent;
-  border-style: solid;
-  border-width: 0 5rem 5rem 0;
-  content: "";
-}
-
-.c1 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 3rem;
-  height: 3rem;
-}
-
-.c24 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c24:focus {
-  color: #f66663;
-}
-
-.c8 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c5 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c5 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c6 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c19 {
-  position: relative;
-  display: inline-block;
-}
-
-.c21 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c21[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c21::-webkit-outer-spin-button,
-.c21::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.c21:invalid {
-  border-color: #eb5757;
-}
-
-.c21::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c21::-moz-placeholder {
-  color: #9298af;
-}
-
-.c21:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c21::placeholder {
-  color: #9298af;
-}
-
-.c21:focus {
-  border-color: #7994d4;
-}
-
-.c21:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c21:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c21:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c21:focus::placeholder {
-  color: transparent;
-}
-
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c7 {
-  margin: 0 0 1rem 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c9 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  text-align: left;
-}
-
-.c14 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  margin-left: -2.4rem;
-  text-align: left;
-}
-
-.c10 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c16 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 2.4rem;
-  text-align: left;
-}
-
-.c20 {
-  width: 100%;
-}
-
-.c22 {
-  margin-top: 2.4rem;
-}
-
-.c23 {
-  display: block;
-  margin-top: 1.6rem;
-}
-
-.c25 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c13 {
-  padding-bottom: 0;
-}
-
-.c3 {
-  margin-bottom: 3.2rem;
-}
-
-.c15 {
-  margin-top: 3.2rem;
-}
-
-@media (max-width:600px) {
-  .c12 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c24 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c24 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c5 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c21 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    margin-bottom: 1rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    margin-bottom: 1rem;
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    margin-bottom: 2rem;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-iklJeh biSgUS"
   >
     <div
-      class="c1"
+      class="sc-jJMGnK ihofWp"
     >
       <svg
         aria-hidden="true"
@@ -1096,13 +210,13 @@ exports[`<Contribution /> should render answer references 1`] = `
     </div>
   </div>
   <div
-    class="c2 c3"
+    class="sc-jSFjdj sc-fyGvY dWteEK hjmglL"
   >
     <div
-      class="c4"
+      class="sc-gGLxEB bZfRQU"
     >
       <div
-        class="c5"
+        class="sc-ckTSus eGIUDO"
       >
         <svg
           aria-hidden="true"
@@ -1139,17 +253,17 @@ exports[`<Contribution /> should render answer references 1`] = `
         </svg>
       </div>
       <div
-        class="c6"
+        class="sc-fbIWvP itJXQd"
       >
         <p
           aria-level="2"
-          class="c7"
+          class="sc-flUlpA sc-bFSbwS eovlvg"
           role="heading"
         >
           Page personnalisable
         </p>
         <p
-          class="c8"
+          class="sc-cOifOu jBNwUz"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -1165,13 +279,13 @@ exports[`<Contribution /> should render answer references 1`] = `
   </div>
   <section>
     <div
-      class="c9"
+      class="sc-eXuyPJ jPObHZ"
     >
       <h2
-        class="c10"
+        class="sc-eWnToP iHpQsB"
       >
         <span
-          class="c11"
+          class="sc-gKAaRy jNbrvj"
         />
         Que dit le code du travail ?
       </h2>
@@ -1186,35 +300,35 @@ exports[`<Contribution /> should render answer references 1`] = `
     </div>
   </section>
   <div
-    class="c12 c13"
+    class="sc-gtsrHT dDJuxj sc-fxFQKN fHdZvC"
   >
     <div
-      class="c2"
+      class="sc-jSFjdj dWteEK"
     >
       <div
-        class="c14 c15"
+        class="sc-eXuyPJ bHFRAw sc-Jgsit gZFxUk"
         id="customisation"
       >
         <h2
-          class="c16"
+          class="sc-eWnToP iJmfOu"
         >
           <span
-            class="c17"
+            class="sc-gKAaRy hLlvoX"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
       <label
-        class="c18"
+        class="sc-dTSzeu btJghr"
         for="convention-search"
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
-        class="c19 c20"
+        class="sc-bQCEYZ iOBpgY sc-jLqRGG jXoiKy"
       >
         <input
-          class="c21"
+          class="sc-fXgAZx esWNAb"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -1224,16 +338,16 @@ exports[`<Contribution /> should render answer references 1`] = `
       </span>
       
       <p
-        class="c22"
+        class="sc-bUQyIj eqjFlE"
       >
         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
         <span
-          class="c23"
+          class="sc-tsGVs cQiTYY"
         >
           Consultez
            
           <button
-            class="c24 c25"
+            class="sc-hiKfDv fruFDR sc-dSnXvR fivlYt"
             type="button"
           >
             notre aide
@@ -1247,455 +361,12 @@ exports[`<Contribution /> should render answer references 1`] = `
 `;
 
 exports[`<Contribution /> should render preselected convention 1`] = `
-.c12 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c11 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c17 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c0 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 5rem;
-  height: 5rem;
-  overflow: hidden;
-  color: #fff;
-  border-radius: 0 0.6rem 0 0;
-}
-
-.c0:before {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border-color: transparent #f66663 transparent transparent;
-  border-style: solid;
-  border-width: 0 5rem 5rem 0;
-  content: "";
-}
-
-.c1 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 3rem;
-  height: 3rem;
-}
-
-.c24 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c24:focus {
-  color: #f66663;
-}
-
-.c8 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c5 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c5 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c6 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c19 {
-  position: relative;
-  display: inline-block;
-}
-
-.c21 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c21[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c21::-webkit-outer-spin-button,
-.c21::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.c21:invalid {
-  border-color: #eb5757;
-}
-
-.c21::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c21::-moz-placeholder {
-  color: #9298af;
-}
-
-.c21:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c21::placeholder {
-  color: #9298af;
-}
-
-.c21:focus {
-  border-color: #7994d4;
-}
-
-.c21:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c21:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c21:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c21:focus::placeholder {
-  color: transparent;
-}
-
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c7 {
-  margin: 0 0 1rem 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c9 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  text-align: left;
-}
-
-.c14 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  margin-left: -2.4rem;
-  text-align: left;
-}
-
-.c10 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c16 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 2.4rem;
-  text-align: left;
-}
-
-.c20 {
-  width: 100%;
-}
-
-.c22 {
-  margin-top: 2.4rem;
-}
-
-.c23 {
-  display: block;
-  margin-top: 1.6rem;
-}
-
-.c25 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c13 {
-  padding-bottom: 0;
-}
-
-.c3 {
-  margin-bottom: 3.2rem;
-}
-
-.c15 {
-  margin-top: 3.2rem;
-}
-
-@media (max-width:600px) {
-  .c12 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c24 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c24 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c5 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c21 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    margin-bottom: 1rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    margin-bottom: 1rem;
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    margin-bottom: 2rem;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-iklJeh biSgUS"
   >
     <div
-      class="c1"
+      class="sc-jJMGnK ihofWp"
     >
       <svg
         aria-hidden="true"
@@ -1719,13 +390,13 @@ exports[`<Contribution /> should render preselected convention 1`] = `
     </div>
   </div>
   <div
-    class="c2 c3"
+    class="sc-jSFjdj sc-fyGvY dWteEK hjmglL"
   >
     <div
-      class="c4"
+      class="sc-gGLxEB bZfRQU"
     >
       <div
-        class="c5"
+        class="sc-ckTSus eGIUDO"
       >
         <svg
           aria-hidden="true"
@@ -1762,17 +433,17 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         </svg>
       </div>
       <div
-        class="c6"
+        class="sc-fbIWvP itJXQd"
       >
         <p
           aria-level="2"
-          class="c7"
+          class="sc-flUlpA sc-bFSbwS eovlvg"
           role="heading"
         >
           Page personnalisable
         </p>
         <p
-          class="c8"
+          class="sc-cOifOu jBNwUz"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -1788,13 +459,13 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   </div>
   <section>
     <div
-      class="c9"
+      class="sc-eXuyPJ jPObHZ"
     >
       <h2
-        class="c10"
+        class="sc-eWnToP iHpQsB"
       >
         <span
-          class="c11"
+          class="sc-gKAaRy jNbrvj"
         />
         Que dit le code du travail ?
       </h2>
@@ -1809,35 +480,35 @@ exports[`<Contribution /> should render preselected convention 1`] = `
     </div>
   </section>
   <div
-    class="c12 c13"
+    class="sc-gtsrHT dDJuxj sc-fxFQKN fHdZvC"
   >
     <div
-      class="c2"
+      class="sc-jSFjdj dWteEK"
     >
       <div
-        class="c14 c15"
+        class="sc-eXuyPJ bHFRAw sc-Jgsit gZFxUk"
         id="customisation"
       >
         <h2
-          class="c16"
+          class="sc-eWnToP iJmfOu"
         >
           <span
-            class="c17"
+            class="sc-gKAaRy hLlvoX"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
       <label
-        class="c18"
+        class="sc-dTSzeu btJghr"
         for="convention-search"
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
-        class="c19 c20"
+        class="sc-bQCEYZ iOBpgY sc-jLqRGG jXoiKy"
       >
         <input
-          class="c21"
+          class="sc-fXgAZx esWNAb"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -1847,16 +518,16 @@ exports[`<Contribution /> should render preselected convention 1`] = `
       </span>
       
       <p
-        class="c22"
+        class="sc-bUQyIj eqjFlE"
       >
         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
         <span
-          class="c23"
+          class="sc-tsGVs cQiTYY"
         >
           Consultez
            
           <button
-            class="c24 c25"
+            class="sc-hiKfDv fruFDR sc-dSnXvR fivlYt"
             type="button"
           >
             notre aide
@@ -1870,455 +541,12 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 `;
 
 exports[`<Contribution /> should render with both answers 1`] = `
-.c12 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c11 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c17 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c0 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 5rem;
-  height: 5rem;
-  overflow: hidden;
-  color: #fff;
-  border-radius: 0 0.6rem 0 0;
-}
-
-.c0:before {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border-color: transparent #f66663 transparent transparent;
-  border-style: solid;
-  border-width: 0 5rem 5rem 0;
-  content: "";
-}
-
-.c1 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 3rem;
-  height: 3rem;
-}
-
-.c24 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c24:focus {
-  color: #f66663;
-}
-
-.c8 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c5 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c5 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c6 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c19 {
-  position: relative;
-  display: inline-block;
-}
-
-.c21 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c21[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c21::-webkit-outer-spin-button,
-.c21::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.c21:invalid {
-  border-color: #eb5757;
-}
-
-.c21::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c21::-moz-placeholder {
-  color: #9298af;
-}
-
-.c21:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c21::placeholder {
-  color: #9298af;
-}
-
-.c21:focus {
-  border-color: #7994d4;
-}
-
-.c21:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c21:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c21:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c21:focus::placeholder {
-  color: transparent;
-}
-
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c7 {
-  margin: 0 0 1rem 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c9 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  text-align: left;
-}
-
-.c14 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  margin-left: -2.4rem;
-  text-align: left;
-}
-
-.c10 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c16 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 2.4rem;
-  text-align: left;
-}
-
-.c20 {
-  width: 100%;
-}
-
-.c22 {
-  margin-top: 2.4rem;
-}
-
-.c23 {
-  display: block;
-  margin-top: 1.6rem;
-}
-
-.c25 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c13 {
-  padding-bottom: 0;
-}
-
-.c3 {
-  margin-bottom: 3.2rem;
-}
-
-.c15 {
-  margin-top: 3.2rem;
-}
-
-@media (max-width:600px) {
-  .c12 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c24 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c24 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c5 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c21 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    margin-bottom: 1rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    margin-bottom: 1rem;
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    margin-bottom: 2rem;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-iklJeh biSgUS"
   >
     <div
-      class="c1"
+      class="sc-jJMGnK ihofWp"
     >
       <svg
         aria-hidden="true"
@@ -2342,13 +570,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
     </div>
   </div>
   <div
-    class="c2 c3"
+    class="sc-jSFjdj sc-fyGvY dWteEK hjmglL"
   >
     <div
-      class="c4"
+      class="sc-gGLxEB bZfRQU"
     >
       <div
-        class="c5"
+        class="sc-ckTSus eGIUDO"
       >
         <svg
           aria-hidden="true"
@@ -2385,17 +613,17 @@ exports[`<Contribution /> should render with both answers 1`] = `
         </svg>
       </div>
       <div
-        class="c6"
+        class="sc-fbIWvP itJXQd"
       >
         <p
           aria-level="2"
-          class="c7"
+          class="sc-flUlpA sc-bFSbwS eovlvg"
           role="heading"
         >
           Page personnalisable
         </p>
         <p
-          class="c8"
+          class="sc-cOifOu jBNwUz"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -2411,13 +639,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
   </div>
   <section>
     <div
-      class="c9"
+      class="sc-eXuyPJ jPObHZ"
     >
       <h2
-        class="c10"
+        class="sc-eWnToP iHpQsB"
       >
         <span
-          class="c11"
+          class="sc-gKAaRy jNbrvj"
         />
         Que dit le code du travail ?
       </h2>
@@ -2432,35 +660,35 @@ exports[`<Contribution /> should render with both answers 1`] = `
     </div>
   </section>
   <div
-    class="c12 c13"
+    class="sc-gtsrHT dDJuxj sc-fxFQKN fHdZvC"
   >
     <div
-      class="c2"
+      class="sc-jSFjdj dWteEK"
     >
       <div
-        class="c14 c15"
+        class="sc-eXuyPJ bHFRAw sc-Jgsit gZFxUk"
         id="customisation"
       >
         <h2
-          class="c16"
+          class="sc-eWnToP iJmfOu"
         >
           <span
-            class="c17"
+            class="sc-gKAaRy hLlvoX"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
       <label
-        class="c18"
+        class="sc-dTSzeu btJghr"
         for="convention-search"
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
-        class="c19 c20"
+        class="sc-bQCEYZ iOBpgY sc-jLqRGG jXoiKy"
       >
         <input
-          class="c21"
+          class="sc-fXgAZx esWNAb"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -2470,16 +698,16 @@ exports[`<Contribution /> should render with both answers 1`] = `
       </span>
       
       <p
-        class="c22"
+        class="sc-bUQyIj eqjFlE"
       >
         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
         <span
-          class="c23"
+          class="sc-tsGVs cQiTYY"
         >
           Consultez
            
           <button
-            class="c24 c25"
+            class="sc-hiKfDv fruFDR sc-dSnXvR fivlYt"
             type="button"
           >
             notre aide
@@ -2493,404 +721,12 @@ exports[`<Contribution /> should render with both answers 1`] = `
 `;
 
 exports[`<Contribution /> should render with conventions answer 1`] = `
-.c9 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c2 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c14 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c0 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 5rem;
-  height: 5rem;
-  overflow: hidden;
-  color: #fff;
-  border-radius: 0 0.6rem 0 0;
-}
-
-.c0:before {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border-color: transparent #f66663 transparent transparent;
-  border-style: solid;
-  border-width: 0 5rem 5rem 0;
-  content: "";
-}
-
-.c1 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 3rem;
-  height: 3rem;
-}
-
-.c21 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
-  transition: color 250ms linear, text-decoration 250ms linear;
-}
-
-.c21:focus {
-  color: #f66663;
-}
-
-.c8 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c5 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c5 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c6 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c16 {
-  position: relative;
-  display: inline-block;
-}
-
-.c18 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c18[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c18::-webkit-outer-spin-button,
-.c18::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.c18:invalid {
-  border-color: #eb5757;
-}
-
-.c18::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c18::-moz-placeholder {
-  color: #9298af;
-}
-
-.c18:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c18::placeholder {
-  color: #9298af;
-}
-
-.c18:focus {
-  border-color: #7994d4;
-}
-
-.c18:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c18:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c18:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c18:focus::placeholder {
-  color: transparent;
-}
-
-.c15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 0.4rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.c7 {
-  margin: 0 0 1rem 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c11 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  margin-left: -2.4rem;
-  text-align: left;
-}
-
-.c13 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 2.4rem;
-  text-align: left;
-}
-
-.c17 {
-  width: 100%;
-}
-
-.c19 {
-  margin-top: 2.4rem;
-}
-
-.c20 {
-  display: block;
-  margin-top: 1.6rem;
-}
-
-.c22 {
-  color: #7994d4;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c10 {
-  padding-bottom: 0;
-}
-
-.c3 {
-  margin-bottom: 3.2rem;
-}
-
-.c12 {
-  margin-top: 0;
-}
-
-@media (max-width:600px) {
-  .c9 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c21 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c21 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c5 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c11 {
-    margin-bottom: 1rem;
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    margin-bottom: 2rem;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-iklJeh biSgUS"
   >
     <div
-      class="c1"
+      class="sc-jJMGnK ihofWp"
     >
       <svg
         aria-hidden="true"
@@ -2914,13 +750,13 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
     </div>
   </div>
   <div
-    class="c2 c3"
+    class="sc-jSFjdj sc-fyGvY dWteEK hjmglL"
   >
     <div
-      class="c4"
+      class="sc-gGLxEB bZfRQU"
     >
       <div
-        class="c5"
+        class="sc-ckTSus eGIUDO"
       >
         <svg
           aria-hidden="true"
@@ -2957,17 +793,17 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         </svg>
       </div>
       <div
-        class="c6"
+        class="sc-fbIWvP itJXQd"
       >
         <p
           aria-level="2"
-          class="c7"
+          class="sc-flUlpA sc-bFSbwS eovlvg"
           role="heading"
         >
           Page personnalisable
         </p>
         <p
-          class="c8"
+          class="sc-cOifOu jBNwUz"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -2982,35 +818,35 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
     </div>
   </div>
   <div
-    class="c9 c10"
+    class="sc-gtsrHT dDJuxj sc-fxFQKN fHdZvC"
   >
     <div
-      class="c2"
+      class="sc-jSFjdj dWteEK"
     >
       <div
-        class="c11 c12"
+        class="sc-eXuyPJ bHFRAw sc-Jgsit gSsFTJ"
         id="customisation"
       >
         <h2
-          class="c13"
+          class="sc-eWnToP iJmfOu"
         >
           <span
-            class="c14"
+            class="sc-gKAaRy hLlvoX"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
       <label
-        class="c15"
+        class="sc-dTSzeu btJghr"
         for="convention-search"
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
-        class="c16 c17"
+        class="sc-bQCEYZ iOBpgY sc-jLqRGG jXoiKy"
       >
         <input
-          class="c18"
+          class="sc-fXgAZx esWNAb"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -3020,16 +856,16 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
       </span>
       
       <p
-        class="c19"
+        class="sc-bUQyIj eqjFlE"
       >
         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
         <span
-          class="c20"
+          class="sc-tsGVs cQiTYY"
         >
           Consultez
            
           <button
-            class="c21 c22"
+            class="sc-hiKfDv fruFDR sc-dSnXvR fivlYt"
             type="button"
           >
             notre aide
@@ -3043,67 +879,16 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 `;
 
 exports[`<Contribution /> should render with generic answer 1`] = `
-.c2 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  text-align: left;
-}
-
-.c1 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    margin-bottom: 1rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 2.2rem;
-  }
-}
-
 <div>
   <section>
     <div
-      class="c0"
+      class="sc-eXuyPJ jPObHZ"
     >
       <h2
-        class="c1"
+        class="sc-eWnToP iHpQsB"
       >
         <span
-          class="c2"
+          class="sc-gKAaRy jNbrvj"
         />
         Que dit le code du travail ?
       </h2>
@@ -3121,202 +906,22 @@ exports[`<Contribution /> should render with generic answer 1`] = `
 `;
 
 exports[`<Contribution /> should render with generic answer and content 1`] = `
-.c5 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c5 > *:first-child {
-  margin-top: 0;
-}
-
-.c5 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c2 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c14 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  width: auto;
-  margin: 0;
-}
-
-.c13 {
-  -webkit-flex: 0 0 2.8rem;
-  -ms-flex: 0 0 2.8rem;
-  flex: 0 0 2.8rem;
-  width: 2.8rem;
-  height: 2.1rem;
-  margin: 0 1.6rem 0 0;
-  padding-top: 0.6rem;
-  color: #f66663;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c9:hover .c12 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
-}
-
-.c7 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  text-align: left;
-}
-
-.c1 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c11 {
-  padding: 0.8rem 0;
-  font-weight: normal;
-}
-
-.c8 {
-  padding-left: 0;
-}
-
-.c6 {
-  margin-bottom: 2rem;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 2rem;
-  font-size: 1.4rem;
-}
-
-@media (max-width:600px) {
-  .c5 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c5 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
-    -webkit-flex: 0 0 2rem;
-    -ms-flex: 0 0 2rem;
-    flex: 0 0 2rem;
-    width: 2rem;
-    height: 1.7rem;
-    margin: 0 1rem 0 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    margin-bottom: 1rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c6 {
-    margin-bottom: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    display: none;
-  }
-}
-
 <div>
   <section>
     <div
-      class="c0"
+      class="sc-eXuyPJ jPObHZ"
     >
       <h2
-        class="c1"
+        class="sc-eWnToP iHpQsB"
       >
         <span
-          class="c2"
+          class="sc-gKAaRy jNbrvj"
         />
         Que dit le code du travail ?
       </h2>
     </div>
     <div
-      class="c3"
+      class="sc-kHVIJG hNdRYi"
     >
       <span>
         Source :
@@ -3332,7 +937,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
       </span>
       <span
         aria-hidden="true"
-        class="c4"
+        class="sc-ktvWjP iOlJGa"
       >
          - 
       </span>
@@ -3350,24 +955,24 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
       </p>
     </div>
     <div
-      class="c5"
+      class="sc-jSFjdj dftIwI"
     >
       <div
-        class="c6"
+        class="sc-dksuTV iqBBW"
       >
         Références
       </div>
       <ul
-        class="c7 c8"
+        class="sc-jffHpj sc-gGGFjW jAxtJd jIOzfa"
       >
         <li>
           <a
-            class="c9 c10 c11"
+            class="sc-ezzafa eFglTD sc-JsfZP ccMmAk"
             href="/code-du-travail/l-1243"
           >
             <svg
               aria-hidden="true"
-              class="c12 c13"
+              class="sc-kLojOw kpfGeG"
               fill="none"
               viewBox="0 0 28 15"
               xmlns="http://www.w3.org/2000/svg"
@@ -3378,7 +983,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
               />
             </svg>
             <p
-              class="c14"
+              class="sc-bYwzuL jTtUkg"
             >
               Article L-1243 du Code du travail
             </p>

@@ -14,10 +14,11 @@ export type Step<Name extends string> = {
 
 export type SimulatorState = {
   currentStepIndex: number;
+  previousStepIndex: number[];
 };
 
 export type SimulatorActions = {
-  nextStep: () => void;
+  nextStep: (stepIndex?: number) => void;
   previousStep: () => void;
 };
 

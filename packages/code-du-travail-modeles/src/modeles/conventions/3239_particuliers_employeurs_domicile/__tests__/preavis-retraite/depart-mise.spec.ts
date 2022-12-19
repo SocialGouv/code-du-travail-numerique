@@ -1,29 +1,32 @@
 import Engine from "publicodes";
 
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
 import { getNotifications, getReferences } from "../../../../common";
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 const ReferencesParticulierEmployeur = [
   {
     article: "Article 162-5",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942454?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942454",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942454?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942454",
   },
   {
     article: "Article 162-4-1",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942452?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942452",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942452?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942452",
   },
 ];
 
 const ReferencesAssistantsMaternels = [
   {
     article: "Article 120",
-    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942318?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942318",
   },
 ];
 

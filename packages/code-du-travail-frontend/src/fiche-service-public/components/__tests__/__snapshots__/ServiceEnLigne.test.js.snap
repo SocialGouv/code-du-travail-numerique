@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ServiceEnLigne /> should render 1`] = `
+<div>
+  <a
+    aria-label="Se retrouve dans en entête Texte qui se retrouve dans le lien (nouvelle fenêtre)"
+    class="sc-eGJWMs dxHVWB sc-kTCsyW ivNBtM no-after"
+    href="url à retoruver dans le lien"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <div
+      class="sc-dFRpbK cbvMFR"
+    >
+      <div
+        class="sc-bsatvv iePphK"
+      >
+        <p
+          class="sc-bXexck sc-gIvpjk haepIh glQsRy"
+        >
+          Se retrouve dans en entête
+        </p>
+        <p
+          class="sc-euEtCV fbieFC"
+        >
+          Texte qui se retrouve dans le lien
+        </p>
+      </div>
+    </div>
+    <div
+      class="sc-fHCHyC fOtBFh"
+    >
+      Source: 
+      Source qui se retrouve sous le lien
+    </div>
+  </a>
+</div>
+`;

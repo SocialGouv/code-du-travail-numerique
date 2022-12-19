@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Title /> heading should default to H6 1`] = `
+<div>
+  <h6
+    class="sc-iCoGMd gaXVHn"
+    data-testid="heading"
+  />
+</div>
+`;
+
+exports[`<Title /> should render a H{x} whose {x} is headingLevel + 2 1`] = `
+<div>
+  <h4
+    class="sc-iCoGMd gaXVHn"
+    data-testid="heading"
+  />
+</div>
+`;

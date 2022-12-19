@@ -1,22 +1,23 @@
 import Engine from "publicodes";
 
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
 import { getNotifications, getReferences } from "../../../../common";
 
 const ArticleCc = {
   article: "Article 23.3",
-  url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562759#KALIARTI000043562759",
+  url:
+    "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562759#KALIARTI000043562759",
 };
 
 const DepartRetraiteCcReferences = [...DepartRetraiteReferences, ArticleCc];
 
 const MiseRetraiteCCReferences = [...MiseRetraiteReferences, ArticleCc];
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 describe("Vérification juridique pour la CC 1505", () => {
   describe("Départ à la retraite", () => {

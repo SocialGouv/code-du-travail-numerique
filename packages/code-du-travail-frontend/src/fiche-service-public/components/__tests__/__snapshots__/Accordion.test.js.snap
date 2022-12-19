@@ -1,0 +1,471 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Accordion /> should have two different levels of headings 1`] = `
+<div>
+  <div
+    class="sc-eXuyPJ jPObHZ"
+  >
+    <h2
+      class="sc-eWnToP iHpQsB"
+    >
+      <span
+        class="sc-gKAaRy jNbrvj"
+      />
+      titre 0
+    </h2>
+  </div>
+  <p>
+    paragraphe 0
+  </p>
+  <div
+    class="sc-iIgjPs ecRsHh"
+    data-accordion-component="Accordion"
+  >
+    <div>
+      <div
+        class="sc-pNWdM dWeapX"
+        data-accordion-component="AccordionItem"
+      >
+        <div
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+        >
+          <div
+            aria-controls="accordion__panel-raa-0"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="sc-kEqXSa cKGQBU"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-0"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-fujyAs BrylG"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="sc-iqAclL jtzpz"
+            >
+              <h2
+                class="sc-iCoGMd gaXVHn"
+                data-testid="undefined-0"
+                style="margin: 0px;"
+              >
+                titre 1
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="sc-jrsJWt dhwIib"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-0"
+        >
+          <div
+            class="sc-cxNHIi gHfkKN"
+          >
+            <p>
+              paragraphe 1-1
+            </p>
+            <p>
+              paragraphe 1-2
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="sc-pNWdM curnhv"
+        data-accordion-component="AccordionItem"
+      >
+        <div
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+        >
+          <div
+            aria-controls="accordion__panel-raa-1"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="sc-kEqXSa cKGQBU"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-1"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-fujyAs BrylG"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="sc-iqAclL jtzpz"
+            >
+              <h2
+                class="sc-iCoGMd gaXVHn"
+                data-testid="undefined-1"
+                style="margin: 0px;"
+              >
+                titre 2
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="sc-jrsJWt dhwIib"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-1"
+        >
+          <div
+            class="sc-cxNHIi gHfkKN"
+          >
+            <p>
+              paragraphe 2-1
+            </p>
+            <p>
+              paragraphe 2-2
+            </p>
+            <h3
+              class="sc-iCoGMd gaXVHn"
+              data-testid="heading"
+            >
+              titre 2-1
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="sc-pNWdM curnhv"
+        data-accordion-component="AccordionItem"
+      >
+        <div
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+        >
+          <div
+            aria-controls="accordion__panel-raa-2"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="sc-kEqXSa cKGQBU"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-2"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-fujyAs BrylG"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="sc-iqAclL jtzpz"
+            >
+              <h2
+                class="sc-iCoGMd gaXVHn"
+                data-testid="undefined-2"
+                style="margin: 0px;"
+              >
+                titre 3
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="sc-jrsJWt dhwIib"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-2"
+        >
+          <div
+            class="sc-cxNHIi gHfkKN"
+          >
+            <p>
+              paragraphe 3-1
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>
+    paragraphe 4
+  </p>
+</div>
+`;
+
+exports[`<Accordion /> should render all, siblings included 1`] = `
+<div>
+  <h5
+    class="sc-iCoGMd gaXVHn"
+    data-testid="heading"
+  >
+    titre 0
+  </h5>
+  <p>
+    paragraphe 0
+  </p>
+  <div
+    class="sc-iIgjPs ecRsHh"
+    data-accordion-component="Accordion"
+  >
+    <div>
+      <div
+        class="sc-pNWdM dWeapX"
+        data-accordion-component="AccordionItem"
+      >
+        <div
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+        >
+          <div
+            aria-controls="accordion__panel-raa-3"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="sc-kEqXSa cKGQBU"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-3"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-fujyAs BrylG"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="sc-iqAclL jtzpz"
+            >
+              <h5
+                class="sc-iCoGMd gaXVHn"
+                data-testid="undefined-0"
+                style="margin: 0px;"
+              >
+                titre 1
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="sc-jrsJWt dhwIib"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-3"
+        >
+          <div
+            class="sc-cxNHIi gHfkKN"
+          >
+            <p>
+              paragraphe 1-1
+            </p>
+            <p>
+              paragraphe 1-2
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="sc-pNWdM curnhv"
+        data-accordion-component="AccordionItem"
+      >
+        <div
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+        >
+          <div
+            aria-controls="accordion__panel-raa-4"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="sc-kEqXSa cKGQBU"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-4"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-fujyAs BrylG"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="sc-iqAclL jtzpz"
+            >
+              <h5
+                class="sc-iCoGMd gaXVHn"
+                data-testid="undefined-1"
+                style="margin: 0px;"
+              >
+                titre 2
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="sc-jrsJWt dhwIib"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-4"
+        >
+          <div
+            class="sc-cxNHIi gHfkKN"
+          >
+            <p>
+              paragraphe 2-1
+            </p>
+            <p>
+              paragraphe 2-2
+            </p>
+            <h6
+              class="sc-iCoGMd gaXVHn"
+              data-testid="heading"
+            >
+              titre 2-1
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="sc-pNWdM curnhv"
+        data-accordion-component="AccordionItem"
+      >
+        <div
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+        >
+          <div
+            aria-controls="accordion__panel-raa-5"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="sc-kEqXSa cKGQBU"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-5"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-fujyAs BrylG"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="sc-iqAclL jtzpz"
+            >
+              <h5
+                class="sc-iCoGMd gaXVHn"
+                data-testid="undefined-2"
+                style="margin: 0px;"
+              >
+                titre 3
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="sc-jrsJWt dhwIib"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-5"
+        >
+          <div
+            class="sc-cxNHIi gHfkKN"
+          >
+            <p>
+              paragraphe 3-1
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>
+    paragraphe 4
+  </p>
+</div>
+`;

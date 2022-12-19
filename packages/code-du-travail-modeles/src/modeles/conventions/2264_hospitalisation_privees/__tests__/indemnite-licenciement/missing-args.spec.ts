@@ -1,9 +1,3 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
-
 describe("Missing args pour la CC 2264", () => {
   test("Catégorie professionnelle", () => {
     const result = engine
@@ -32,7 +26,7 @@ describe("Missing args pour la CC 2264", () => {
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
     expect(result.missingVariables).toEqual({
-      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période": 920,
+      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période": 3044,
     });
   });
 
@@ -66,7 +60,7 @@ describe("Missing args pour la CC 2264", () => {
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
     expect(result.missingVariables).toEqual({
-      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif": 595,
+      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif": 1920,
     });
   });
   test("Aucune variable", () => {

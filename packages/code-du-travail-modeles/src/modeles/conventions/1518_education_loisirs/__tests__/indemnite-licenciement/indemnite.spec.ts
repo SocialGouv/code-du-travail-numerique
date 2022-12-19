@@ -1,14 +1,9 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
-
 describe("CC 1518", () => {
   describe("Calcul de l'indemnité de licenciement", () => {
     test.each`
       seniority     | salaireRef | expectedCompensation
       ${8 / 12}     | ${2500}    | ${0}
+      ${9 / 12}     | ${2500}    | ${468.75}
       ${1}          | ${2500}    | ${625}
       ${0.75}       | ${2500}    | ${468.75}
       ${2 - 1 / 12} | ${2500}    | ${1197.92}
@@ -19,10 +14,8 @@ describe("CC 1518", () => {
         const result = engine
           .setSituation({
             "contrat salarié . convention collective": "'IDCC1518'",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
-              seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
-              salaireRef,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
           })
           .evaluate(
             "contrat salarié . indemnité de licenciement . résultat conventionnel"

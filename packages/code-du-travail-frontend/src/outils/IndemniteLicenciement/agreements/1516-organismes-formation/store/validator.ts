@@ -1,5 +1,5 @@
 import produce from "immer";
-import { GetState, SetState } from "zustand";
+import { StoreApi } from "zustand";
 import {
   detectNullOrUndefinedOrNaNInArray,
   deepEqualObject,
@@ -12,8 +12,8 @@ import {
 } from "./types";
 
 export const validateAgreement1516 = (
-  get: GetState<MainStore>,
-  set: SetState<MainStore>
+  get: StoreApi<MainStore>["getState"],
+  set: StoreApi<MainStore>["setState"]
 ) => {
   const { isValid, errorState } = validateStep(get().agreement1516Data.input);
   set(

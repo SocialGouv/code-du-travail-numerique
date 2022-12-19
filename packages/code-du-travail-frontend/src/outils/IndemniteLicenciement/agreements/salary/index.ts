@@ -3,7 +3,7 @@ import {
   SalaryPeriods,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
-import { GetState } from "zustand";
+import { StoreApi } from "zustand";
 import { MainStore } from "../../store";
 import { AgreementSalary1486 } from "./1486";
 import { AgreementSalary1516 } from "./1516";
@@ -14,10 +14,11 @@ import { AgreementSalary16 } from "./16";
 import { AgreementSalary44 } from "./44";
 import { AgreementSalary29 } from "./29";
 import { AgreementSalary573 } from "./573";
+import { AgreementSalary2609 } from "./2609";
 
 const getAgreementReferenceSalary = (
   idcc: SupportedCcIndemniteLicenciement,
-  get: GetState<MainStore>
+  get: StoreApi<MainStore>["getState"]
 ): number => {
   const salaryInput = get().salairesData.input;
   let salaries = salaryInput.salaryPeriods;
@@ -51,6 +52,8 @@ const getAgreementReferenceSalary = (
       return new AgreementSalary44().computeSalary(salaries, get);
     case SupportedCcIndemniteLicenciement.IDCC0573 === idcc:
       return new AgreementSalary573().computeSalary(salaries, get);
+    case SupportedCcIndemniteLicenciement.IDCC2609 === idcc:
+      return new AgreementSalary2609().computeSalary(salaries, get);
     default: {
       const sReference = new ReferenceSalaryFactory().create(
         SupportedCcIndemniteLicenciement.default
@@ -67,6 +70,6 @@ export default getAgreementReferenceSalary;
 export interface AgreementSalary {
   computeSalary: (
     salaryPeriods: SalaryPeriods[],
-    get: GetState<MainStore>
+    get: StoreApi<MainStore>["getState"]
   ) => number;
 }

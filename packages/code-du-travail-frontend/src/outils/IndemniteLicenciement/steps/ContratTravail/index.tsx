@@ -1,7 +1,6 @@
 import React from "react";
 import { RadioQuestion } from "../../../Components";
 
-import { FauteGrave, TypeContratMessage } from "./components";
 import { useIndemniteLicenciementStore } from "../../store";
 
 const StepContratTravail = (): JSX.Element => {
@@ -57,48 +56,50 @@ const StepContratTravail = (): JSX.Element => {
         error={errorTypeContratTravail}
         showRequired
       />
-      {typeContratTravail === "cdd" && <TypeContratMessage />}
-      <RadioQuestion
-        questions={[
-          {
-            label: "Oui",
-            value: "oui",
-            id: "fauteGrave-oui",
-          },
-          {
-            label: "Non",
-            value: "non",
-            id: "fauteGrave-non",
-          },
-        ]}
-        name="licenciementFauteGrave"
-        label="Le licenciement est-il dû à une faute grave (ou lourde)&nbsp;?"
-        selectedOption={licenciementFauteGrave}
-        onChangeSelectedOption={onChangeLicenciementFauteGrave}
-        error={errorLicenciementFauteGrave}
-        showRequired
-      />
-      {licenciementFauteGrave === "oui" && <FauteGrave />}
-      <RadioQuestion
-        questions={[
-          {
-            label: "Oui",
-            value: "oui",
-            id: "inaptitude-oui",
-          },
-          {
-            label: "Non",
-            value: "non",
-            id: "inaptitude-non",
-          },
-        ]}
-        name="licenciementInaptitude"
-        label="Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue&nbsp;?"
-        selectedOption={licenciementInaptitude}
-        onChangeSelectedOption={onChangeLicenciementInaptitude}
-        error={errorLicenciementInaptitude}
-        showRequired
-      />
+      {typeContratTravail === "cdi" && (
+        <RadioQuestion
+          questions={[
+            {
+              label: "Oui",
+              value: "oui",
+              id: "fauteGrave-oui",
+            },
+            {
+              label: "Non",
+              value: "non",
+              id: "fauteGrave-non",
+            },
+          ]}
+          name="licenciementFauteGrave"
+          label="Le licenciement est-il dû à une faute grave (ou lourde)&nbsp;?"
+          selectedOption={licenciementFauteGrave}
+          onChangeSelectedOption={onChangeLicenciementFauteGrave}
+          error={errorLicenciementFauteGrave}
+          showRequired
+        />
+      )}
+      {typeContratTravail === "cdi" && licenciementFauteGrave === "non" && (
+        <RadioQuestion
+          questions={[
+            {
+              label: "Oui",
+              value: "oui",
+              id: "inaptitude-oui",
+            },
+            {
+              label: "Non",
+              value: "non",
+              id: "inaptitude-non",
+            },
+          ]}
+          name="licenciementInaptitude"
+          label="Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue&nbsp;?"
+          selectedOption={licenciementInaptitude}
+          onChangeSelectedOption={onChangeLicenciementInaptitude}
+          error={errorLicenciementInaptitude}
+          showRequired
+        />
+      )}
     </>
   );
 };

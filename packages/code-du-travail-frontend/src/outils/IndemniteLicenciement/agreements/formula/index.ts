@@ -4,13 +4,9 @@ import {
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
-import { GetState } from "zustand";
+import { StoreApi } from "zustand";
 import { MainStore } from "../../store";
 import { AgreementFormula1596 } from "./1596";
-import { AgreementFormula1597 } from "./1597";
-import { AgreementFormula2264 } from "./2264";
-import { AgreementFormula413 } from "./413";
-import { AgreementFormula650 } from "./650";
 import { AgreementFormula573 } from "./573";
 import { AgreementFormula44 } from "./44";
 
@@ -18,35 +14,11 @@ const getAgreementFormula = (
   idcc: SupportedCcIndemniteLicenciement,
   agreementSeniority: SeniorityResult,
   agreementRefSalary: number,
-  get: GetState<MainStore>
+  get: StoreApi<MainStore>["getState"]
 ): Formula | undefined => {
   switch (true) {
-    case SupportedCcIndemniteLicenciement.IDCC2264 === idcc:
-      return new AgreementFormula2264().computeFormula(
-        agreementSeniority,
-        agreementRefSalary,
-        get
-      );
-    case SupportedCcIndemniteLicenciement.IDCC413 === idcc:
-      return new AgreementFormula413().computeFormula(
-        agreementSeniority,
-        agreementRefSalary,
-        get
-      );
     case SupportedCcIndemniteLicenciement.IDCC1596 === idcc:
       return new AgreementFormula1596().computeFormula(
-        agreementSeniority,
-        agreementRefSalary,
-        get
-      );
-    case SupportedCcIndemniteLicenciement.IDCC1597 === idcc:
-      return new AgreementFormula1597().computeFormula(
-        agreementSeniority,
-        agreementRefSalary,
-        get
-      );
-    case SupportedCcIndemniteLicenciement.IDCC650 === idcc:
-      return new AgreementFormula650().computeFormula(
         agreementSeniority,
         agreementRefSalary,
         get
@@ -80,6 +52,6 @@ export interface AgreementFormula {
   computeFormula: (
     agreementSeniority: SeniorityResult,
     agreementRefSalary: number,
-    get: GetState<MainStore>
+    get: StoreApi<MainStore>["getState"]
   ) => Formula;
 }

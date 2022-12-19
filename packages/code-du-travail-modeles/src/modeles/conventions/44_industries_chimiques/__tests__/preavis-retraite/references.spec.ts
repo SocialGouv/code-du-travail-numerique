@@ -1,19 +1,20 @@
 import Engine from "publicodes";
 
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 const MiseRetraiteOuvrierCollaborateurReferences = [
   {
     article:
       "Avenant n° 1 Ouvriers et collaborateurs du 11 février 1971 Article 27",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005846394/?idConteneur=KALICONT000005635613",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005846394/?idConteneur=KALICONT000005635613",
   },
 ];
 
@@ -21,14 +22,16 @@ const MiseRetraiteTechniciensReferences = [
   {
     article:
       "Avenant n° 2 Agents de maîtrise et techniciens du 14 mars 1955 Article 20",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005846461/?idConteneur=KALICONT000005635613",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005846461/?idConteneur=KALICONT000005635613",
   },
 ];
 
 const MiseRetraiteCadresReferences = [
   {
     article: "Avenant n°3 Ingénieurs et cadres du 16 juin 1955 Article 4",
-    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005846301/?idConteneur=KALICONT000005635613",
+    url:
+      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005846301/?idConteneur=KALICONT000005635613",
   },
 ];
 
