@@ -61,11 +61,10 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
   unité: €
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . résultat conventionnel:
+  applicable si: indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
   grille:
     assiette: indemnité de licenciement . ancienneté conventionnelle en année
     tranches:
-      - montant: 0
-        plafond: 2 an
       - montant:
           somme:
             - dix ans ou moins
@@ -98,7 +97,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . résultat conventionnel . moins de 10 ans résultat conventionnel:
   applicable si:
     toutes ces conditions:
-      - indemnité de licenciement . ancienneté conventionnelle en année > 2 an
+      - indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
       - indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
   valeur: oui
   cdtn:
