@@ -38,7 +38,7 @@ const initialState: ResultStoreData = {
     legalReferences: [],
     publicodesLegalResult: { value: "" },
     isAgreementBetter: false,
-    isEligible: true,
+    isEligible: false,
   },
   error: {},
   hasBeenSubmit: true,
@@ -69,21 +69,32 @@ const createResultStore: StoreSlice<
   },
   resultFunction: {
     init: () => {
-      const contratTravailEligibility =
-        !get().contratTravailData.error.errorEligibility;
-      const ancienneteEligibility =
-        !get().ancienneteData.error.errorEligibility;
-        set(
-          produce((state: ResultStoreSlice) => {
-            state.resultData.input.isEligible = contratTravailEligibility && ancienneteEligibility;
-          })
-        );
+      const contratTravailEligibility = !get().contratTravailData.error
+        .errorEligibility;
+      const ancienneteEligibility = !get().ancienneteData.error
+        .errorEligibility;
+      const informationEligibility = !get().informationsData.error
+        .errorEligibility;
+      set(
+        produce((state: ResultStoreSlice) => {
+          state.resultData.input.isEligible =
+            contratTravailEligibility &&
+            ancienneteEligibility &&
+            informationEligibility;
+        })
+      );
     },
     getEligibilityError: () => {
-      const contratTravailEligibility =
-        get().contratTravailData.error.errorEligibility;
+      const contratTravailEligibility = get().contratTravailData.error
+        .errorEligibility;
       const ancienneteEligibility = get().ancienneteData.error.errorEligibility;
-      return contratTravailEligibility || ancienneteEligibility;
+      const informationEligibility = get().informationsData.error
+        .errorEligibility;
+      return (
+        contratTravailEligibility ||
+        ancienneteEligibility ||
+        informationEligibility
+      );
     },
     getPublicodesResult: () => {
       const refSalary = get().salairesData.input.refSalary;

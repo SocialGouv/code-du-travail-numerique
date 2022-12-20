@@ -16,6 +16,7 @@ import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from ".
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
 import { informationToSituation } from "../utils";
+import { getErrorEligibility } from "./eligibility";
 
 const initialState: CommonInformationsStoreData = {
   input: {
@@ -204,6 +205,17 @@ const createCommonInformationsStore: StoreSlice<
       );
       get().informationsFunction.onSetStepHidden();
       return isValid;
+    },
+    onEligibilityCheckCommonInfo: () => {
+      const state = get().informationsData.input;
+      const errorEligibility = getErrorEligibility(state);
+
+      set(
+        produce((state: CommonInformationsStoreSlice) => {
+          state.informationsData.error.errorEligibility = errorEligibility;
+        })
+      );
+      return !errorEligibility;
     },
   },
 });

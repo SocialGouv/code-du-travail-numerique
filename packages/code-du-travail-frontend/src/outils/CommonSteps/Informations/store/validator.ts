@@ -16,16 +16,11 @@ export const validateStep = (state: CommonInformationsStoreInput) => {
 
   let errorState: CommonInformationsStoreError = {
     errorInformations,
-    errorNotificationBloquante: state.blockingNotification
-      ? "Impossible de continuer la simulation avec ce paramètre"
-      : undefined,
   };
 
-  return {
-    isValid: deepEqualObject(errorState, {
-      errorInformations: {},
-      errorNotificationBloquante: undefined,
-    }),
-    errorState,
-  };
+  const isValid = deepEqualObject(errorState, {
+    errorInformations: {},
+  });
+  console.log(isValid);
+  return { isValid, errorState };
 };

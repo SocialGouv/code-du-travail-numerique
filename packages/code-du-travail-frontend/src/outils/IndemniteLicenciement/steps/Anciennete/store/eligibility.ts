@@ -34,13 +34,20 @@ export const getErrorEligibility = (
   const dEntree = parse(state.dateEntree);
   const dNotification = parse(state.dateNotification);
   const totalAbsence = getTotalAbsence(state.absencePeriods, agreement);
+  let minimalSeniority = 8;
+  let minimalSeniorityError =
+    "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois.";
+  switch (agreement?.num) {
+    case 3239:
+      minimalSeniority = 9;
+      minimalSeniorityError =
+        "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 9 mois.";
+  }
   const diff = differenceInMonths(dNotification, dEntree);
   const isEligible =
     !state.dateEntree ||
     !state.dateNotification ||
     diff < 0 ||
-    diff - totalAbsence >= 8;
-  return !isEligible
-    ? `L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois.`
-    : "";
+    diff - totalAbsence >= minimalSeniority;
+  return !isEligible ? minimalSeniorityError : undefined;
 };
