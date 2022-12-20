@@ -8,7 +8,7 @@
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "build:ui": "lerna run build --scope={@socialgouv/cdtn-ui,@socialgouv/modeles-social,@cdt/frontend} --stream",
-    "build:npm": "lerna run build --scope={@socialgouv/cdtn-ui} --stream",
+    "build:npm": "lerna run build --scope @socialgouv/cdtn-ui",
     "clean": "lerna clean",
     "dev:docker": "docker-compose up elasticsearch",
     "dev": "lerna run dev --parallel",
