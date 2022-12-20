@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.88.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.87.0...v4.88.0) (2022-12-20)
+
+### Features
+
+- **modeles:** suppression du package data + fetching simulator information from api ([#4741](https://github.com/SocialGouv/code-du-travail-numerique/issues/4741)) ([f52190e](https://github.com/SocialGouv/code-du-travail-numerique/commit/f52190eddb893f1e083e10efdedb2392dc5c3702))
+
 # [4.87.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.22...v4.87.0) (2022-11-18)
 
 **Note:** Version bump only for package cdtn-types
