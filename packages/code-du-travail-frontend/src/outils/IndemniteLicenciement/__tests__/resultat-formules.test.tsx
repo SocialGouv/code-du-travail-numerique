@@ -12,13 +12,72 @@ jest.mock("../../../conventions/Search/api/agreements.service");
 jest.mock("../../../conventions/Search/api/enterprises.service");
 
 describe("Page résultat: vérification de la formule affichée", () => {
-  describe.each`
-    inaptitude | startDate       | notifDate       | endDate         | ccNum   | ccTitle                                                                                                                         | select                                                                                                                                                 | selectOption         | expectedA1                                                | expectedA2                                                                      | expectedFormula
-    ${false}   | ${"01/01/2000"} | ${"01/03/2022"} | ${"01/03/2022"} | ${2264} | ${"Hospitalisation privée"}                                                                                                     | ${"infos.contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle"}                   | ${"Non-cadres"}      | ${"A1 : Années d'ancienneté de 10 ans ou moins (10 ans)"} | ${"A2 : Années d'ancienneté au delà de 10 ans (≈ 12.17 ans : valeur arrondie)"} | ${"(15×Sref×A1)+(25×Sref×A2)(\\frac{1}{5} \\times Sref \\times A1) + (\\frac{2}{5} \\times Sref \\times A2)(51​×Sref×A1)+(52​×Sref×A2)"}
-    ${false}   | ${"01/01/2000"} | ${"01/03/2022"} | ${"01/03/2022"} | ${29}   | ${"Hospitalisation privée : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)"} | ${"infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle"} | ${"Autres salariés"} | ${"A1 : Ancienneté de 10 ans ou moins (10 ans)"}          | ${"A2 : Ancienneté au-delà de 10 ans (≈ 12.17 ans : valeur arrondie)"}          | ${"(14×Sref×A1)+(13×Sref×A2)(\\frac{1}{4} \\times Sref \\times A1) + (\\frac{1}{3} \\times Sref \\times A2)(41​×Sref×A1)+(31​×Sref×A2)"}
-    ${true}    | ${"01/11/2021"} | ${"01/01/2022"} | ${"01/01/2022"} | ${29}   | ${"Hospitalisation privée : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)"} | ${"infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle"} | ${"Autres salariés"} | ${"A : Ancienneté totale (≈ 0.17 an : valeur arrondie)"}                      | ${"A : Ancienneté totale (≈ 0.17 an : valeur arrondie)"}                                            | ${"(14×Sref×A)×2(\\frac{1}{4} \\times Sref \\times A) \\times 2(41​×Sref×A)×2"}
-  `(
-    "pour la CC $ccNum avec inaptitude $inaptitude",
+  describe.each([
+    {
+      inaptitude: false,
+      startDate: "01/01/2000",
+      notifDate: "01/03/2022",
+      endDate: "01/03/2022",
+      ccNum: 2264,
+      ccTitle: "Hospitalisation privée",
+      select:
+        "infos.contrat salarié - convention collective - hospitalisation privées - indemnité de licenciement - catégorie professionnelle",
+      selectOption: "Non-cadres",
+      expectedA1: "A1 : Années d'ancienneté de 10 ans ou moins (10 ans)",
+      expectedA2:
+        "A2 : Années d'ancienneté au delà de 10 ans (≈ 12.17 ans : valeur arrondie)",
+      expectedFormula:
+        "(15×Sref×A1)+(25×Sref×A2)(\\frac{1}{5} \\times Sref \\times A1) + (\\frac{2}{5} \\times Sref \\times A2)(51​×Sref×A1)+(52​×Sref×A2)",
+    },
+    {
+      inaptitude: false,
+      startDate: "01/01/2000",
+      notifDate: "01/03/2022",
+      endDate: "01/03/2022",
+      ccNum: 29,
+      ccTitle:
+        " : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)",
+      select:
+        "infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle",
+      selectOption: "Autres salariés",
+      expectedA1: "A1 : Ancienneté de 10 ans ou moins (10 ans)",
+      expectedA2:
+        "A2 : Ancienneté au-delà de 10 ans (≈ 12.17 ans : valeur arrondie)",
+      expectedFormula:
+        "(14×Sref×A1)+(13×Sref×A2)(\\frac{1}{4} \\times Sref \\times A1) + (\\frac{1}{3} \\times Sref \\times A2)(41​×Sref×A1)+(31​×Sref×A2)",
+    },
+    {
+      inaptitude: false,
+      startDate: "01/01/2022",
+      notifDate: "31/12/2022",
+      endDate: "31/12/2022",
+      ccNum: 29,
+      ccTitle:
+        " : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)",
+      select:
+        "infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle",
+      selectOption: "Autres salariés",
+      expectedA1: "A : Ancienneté totale (1 an)",
+      expectedA2: "A : Ancienneté totale (1 an)",
+      expectedFormula: "14×Sref×A",
+    },
+    {
+      inaptitude: true,
+      startDate: "01/11/2021",
+      notifDate: "01/01/2022",
+      endDate: "01/01/2022",
+      ccNum: 29,
+      ccTitle:
+        " : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)",
+      select:
+        "infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle",
+      selectOption: "Autres salariés",
+      expectedA1: "A : Ancienneté totale (≈ 0.17 an : valeur arrondie)",
+      expectedA2: "A : Ancienneté totale (≈ 0.17 an : valeur arrondie)",
+      expectedFormula: "(14×Sref×A)×2",
+    },
+  ])(
+    "pour la CC $ccNum avec inaptitude $inaptitude de $startDate à $endDate",
     ({
       inaptitude,
       startDate,

@@ -50,21 +50,20 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
 
   describe("Cas complexe", () => {
     test.each`
-      moreThan55 | seniority | salary
-      ${"Non"}   | ${2}      | ${2000}
-      ${"Oui"}   | ${2}      | ${2000}
-      ${"Non"}   | ${5}      | ${2000}
-      ${"Oui"}   | ${5}      | ${2000}
-      ${"Non"}   | ${6}      | ${2000}
-      ${"Oui"}   | ${6}      | ${2000}
+      seniority | salary
+      ${2}      | ${2000}
+      ${2}      | ${2000}
+      ${5}      | ${2000}
+      ${5}      | ${2000}
+      ${6}      | ${2000}
+      ${6}      | ${2000}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary",
-      ({ seniority, salary, moreThan55 }) => {
+      ({ seniority, salary }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1597'",
           "contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age":
             "55",
-          "contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age plus de 55 ans": `'${moreThan55}'`,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });

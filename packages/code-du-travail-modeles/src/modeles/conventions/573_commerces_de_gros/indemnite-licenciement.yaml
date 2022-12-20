@@ -26,7 +26,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age:
   titre: Âge du salarié
-  question: Quel est l'âge du salarié ?
+  question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
   cdtn:
     type: entier
 
@@ -46,7 +46,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age:
   titre: Âge du salarié
-  question: Quel est l'âge du salarié ?
+  question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
   cdtn:
     type: entier
 

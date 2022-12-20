@@ -178,7 +178,7 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
 
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age:
   titre: Âge du salarié
-  question: Quel est l'âge du salarié ?
+  question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
   unité: an
   cdtn:
     type: entier
@@ -193,7 +193,7 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
   unité: €
 
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . majoration:
-  applicable si: age > 50 ans
+  applicable si: age >= 50 ans
   grille:
     assiette: age
     tranches:
