@@ -61,6 +61,21 @@ describe("Page résultat: vérification de la formule affichée", () => {
       expectedA2: "A : Ancienneté totale (1 an)",
       expectedFormula: "14×Sref×A",
     },
+    {
+      inaptitude: true,
+      startDate: "01/11/2021",
+      notifDate: "01/01/2022",
+      endDate: "01/01/2022",
+      ccNum: 29,
+      ccTitle:
+        " : établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP)",
+      select:
+        "infos.contrat salarié - convention collective - hospitalisation privée à but non lucratif - indemnité de licenciement - catégorie professionnelle",
+      selectOption: "Autres salariés",
+      expectedA1: "A : Ancienneté totale (≈ 0.17 an : valeur arrondie)",
+      expectedA2: "A : Ancienneté totale (≈ 0.17 an : valeur arrondie)",
+      expectedFormula: "(14×Sref×A)×2",
+    },
   ])(
     "pour la CC $ccNum avec inaptitude $inaptitude de $startDate à $endDate",
     ({
