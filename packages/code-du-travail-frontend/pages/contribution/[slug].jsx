@@ -7,7 +7,6 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import Contribution from "../../src/contributions/Contribution";
 import { Layout } from "../../src/layout/Layout";
-import EventTracker from "../../src/lib/tracking/EventTracker";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -96,7 +95,6 @@ class PageContribution extends React.Component {
             />
           </Answer>
         </Layout>
-        <EventTracker />
       </div>
     );
   }
