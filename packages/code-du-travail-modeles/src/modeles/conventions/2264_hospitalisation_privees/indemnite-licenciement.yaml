@@ -142,6 +142,16 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
         - "A : Années d'ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
+contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . résultat conventionnel avec ancienneté jusqu'à 5 ans avec plafond:
+  applicable si: résultat conventionnel avec ancienneté jusqu'à 5 ans = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 12 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+## TODO
 contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . résultat conventionnel avec ancienneté de plus de 5 ans:
   applicable si:
     toutes ces conditions:

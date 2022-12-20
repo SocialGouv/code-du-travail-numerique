@@ -67,6 +67,7 @@ describe("Formule de l'indemnité de licenciement - CC 2098", () => {
       ${7}       | ${54} | ${"(3/10 * Sref * A1) + (4/10 * Sref * A2)"}                                           | ${["A1: Années d'ancienneté à compter de la 1re année (5 ans)", "A2: Années d'ancienneté au-delà de la 5e année (2 ans)", "Sref : Salaire de référence (2800 €)"]}
       ${14}      | ${54} | ${"(3/10 * Sref * A1) + (4/10 * Sref * A2) + (5/10 * Sref * A3)"}                      | ${["A1: Années d'ancienneté à compter de la 1re année (5 ans)", "A2: Années d'ancienneté au-delà de la 5e année (5 ans)", "A3: Années d'ancienneté au-delà de la 10e année (4 ans)", "Sref : Salaire de référence (2800 €)"]}
       ${22}      | ${54} | ${"(3/10 * Sref * A1) + (4/10 * Sref * A2) + (5/10 * Sref * A3) + (6/10 * Sref * A4)"} | ${["A1: Années d'ancienneté à compter de la 1re année (5 ans)", "A2: Années d'ancienneté au-delà de la 5e année (5 ans)", "A3: Années d'ancienneté au-delà de la 10e année (5 ans)", "A4: Années d'ancienneté au-delà de la 15e année (7 ans)", "Sref : Salaire de référence (2800 €)"]}
+      ${35}      | ${55} | ${"18 * Sref"}                                                                         | ${["Sref : Salaire de référence (2800 €)"]}
     `(
       "Cadres, avec une ancienneté $seniority ans, un age $age ans => $expectedFormula",
       ({ seniority, age, expectedFormula, expectedExplanations }) => {
