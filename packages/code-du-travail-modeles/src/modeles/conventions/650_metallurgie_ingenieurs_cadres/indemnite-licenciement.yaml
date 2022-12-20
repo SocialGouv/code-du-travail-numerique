@@ -311,3 +311,22 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
   type: notification
   description: "Le montant de l'indemnité pourrait être plus important si, avant le CDI, sous certaines conditions, le salarié a été lié à l’employeur par d'autres contrats."
   valeur: oui
+
+contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 2 avec plafond:
+  applicable si:
+    une de ces conditions:
+      - résultat conventionnel 1 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+      - résultat conventionnel 2 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+      - résultat conventionnel 3 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+      - résultat conventionnel 4 = contrat salarié . indemnité de licaciement . salaire de référence conventionnel * 18
+      - résultat conventionnel 5 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+      - résultat conventionnel 6 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+      - résultat conventionnel 7 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+      - résultat conventionnel 8 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+      - résultat conventionnel 9 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 18 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel

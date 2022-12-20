@@ -344,3 +344,23 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
   références:
     Article 37: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373
     Article 4 de l’Avenant I relatif aux cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373
+
+
+contrat salarié . convention collective . commerces de gros . formule max 6:
+  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 6 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+
+contrat salarié . convention collective . commerces de gros . formule max 12:
+  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 12 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
