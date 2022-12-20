@@ -2188,7 +2188,8 @@
     "valeur": "oui",
     "cdtn": {
       "idcc": 1702,
-      "préavis-retraite": true
+      "préavis-retraite": true,
+      "indemnité-licenciement": true
     }
   },
   "contrat salarié . convention collective . ouvriers travaux public . mise ou départ à la retraite": {
