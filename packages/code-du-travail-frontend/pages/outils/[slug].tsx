@@ -13,7 +13,6 @@ import Metas from "../../src/common/Metas";
 import { RelatedItems } from "../../src/common/RelatedItems";
 import { Share } from "../../src/common/Share";
 import { Layout } from "../../src/layout/Layout";
-import { EventTracker } from "../../src/lib";
 import {
   AgreementSearch,
   CalculateurIndemnite,
@@ -92,7 +91,6 @@ function Outils({
           <Feedback url={router.asPath} />
         </Container>
       </div>
-      <EventTracker />
     </Layout>
   );
 }
