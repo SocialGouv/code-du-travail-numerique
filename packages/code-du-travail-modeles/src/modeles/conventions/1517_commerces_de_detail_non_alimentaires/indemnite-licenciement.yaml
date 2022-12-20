@@ -28,20 +28,43 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
       facteur: 1 / 3
   unité: €
 
-#  (1/4*Sref*A1) + (1/3*Sref*A2)
-#  A1 : Ancienneté de 10 ans ou moins
-#  A2 : Ancienneté au delà de 10 ans
 contrat salarié . convention collective . commerces de detail non alimentaires . indemnité de licenciement . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  variations:
-    - si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 7 mois
-      alors:
-        somme:
-          - dix ans ou moins
-          - plus de dix ans
-    - sinon: 0
+  valeur: calcul
   unité: €
   arrondi: 2 décimales
   références:
     Article 5 Avenant n°5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046043857
     Article 4, Chapitre VI: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000042110596/?idConteneur=KALICONT000017577652&origin=list
+
+contrat salarié . convention collective . commerces de detail non alimentaires . indemnité de licenciement . calcul:
+  valeur: 0 €
+
+contrat salarié . convention collective . commerces de detail non alimentaires . indemnité de licenciement . calcul moins de 10 ans:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
+  remplace: calcul
+  valeur: dix ans ou moins
+  cdtn:
+    formule:
+      formula: 1/4 * Sref * A
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . convention collective . commerces de detail non alimentaires . indemnité de licenciement . jusqu'à dix ans ou moins
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . commerces de detail non alimentaires . indemnité de licenciement . calcul plus de 10 ans:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
+  remplace: calcul
+  valeur:
+    somme:
+      - dix ans ou moins
+      - plus de dix ans
+  cdtn:
+    formule:
+      formula: (1/4 * Sref * A1) + (1/3 * Sref * A2) + (1/15 * Sref * A2)
+      explanations:
+        - "A1 : Ancienneté de 10 ans ou moins": contrat salarié . convention collective . commerces de detail non alimentaires . indemnité de licenciement . jusqu'à dix ans ou moins
+        - "A2 : Ancienneté au-delà de 10 ans": contrat salarié . convention collective . commerces de detail non alimentaires . indemnité de licenciement . au dela de dix ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel

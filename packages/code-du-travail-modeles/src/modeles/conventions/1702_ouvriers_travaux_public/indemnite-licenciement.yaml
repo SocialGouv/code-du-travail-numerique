@@ -1,0 +1,107 @@
+contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement:
+  applicable si: indemnité de licenciement
+  valeur: oui
+
+contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age:
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié à la fin de son préavis (exécuté ou non) &nbsp;?
+  cdtn:
+    type: entier
+
+contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . licenciement économique:
+  titre: Licenciement pour motif économique
+  question: Le motif du licenciement est-il économique ?
+  cdtn:
+    type: oui-non
+
+contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . ancienneté au-dela de 15 ans:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 15 an)
+  plancher: 0 an
+  unité: an
+
+contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . base:
+  applicable si: indemnité de licenciement . ancienneté conventionnelle en année <= 5
+  valeur: indemnité de licenciement . salaire de référence conventionnel * indemnité de licenciement . ancienneté conventionnelle en année * 0.1
+  unité: €
+  cdtn:
+    formule:
+      formula: 1/10 * Sref * A
+      explanations:
+        - "A : Années d'ancienneté": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . base moins de 15 ans:
+  remplace : base
+  applicable si:
+    toutes ces conditions:
+      - indemnité de licenciement . ancienneté conventionnelle en année > 5
+      - indemnité de licenciement . ancienneté conventionnelle en année < 15
+  valeur: indemnité de licenciement . salaire de référence conventionnel * indemnité de licenciement . ancienneté conventionnelle en année * 0.15
+  unité: €
+  cdtn:
+    formule:
+      formula: 3/20 * Sref * A
+      explanations:
+        - "A : Années d'ancienneté": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . base plus de 15 ans:
+  remplace : base
+  applicable si: indemnité de licenciement . ancienneté conventionnelle en année > 15
+  somme:
+      - indemnité de licenciement . salaire de référence conventionnel * indemnité de licenciement . ancienneté conventionnelle en année * 0.15
+      - indemnité de licenciement . salaire de référence conventionnel * ancienneté au-dela de 15 ans * 0.05
+  unité: €
+  cdtn:
+    formule:
+      formula: (3/20 * Sref * A1) + (1/20 * Sref * A2)
+      explanations:
+        - "A1 : Années d'ancienneté": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "A2 : Années d'ancienneté au-delà de 15 ans": contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . ancienneté au-dela de 15 ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . résultat conventionnel:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si: indemnité de licenciement . ancienneté conventionnelle en année >= 2
+  valeur: base + majoration plus de 55ans + majoration licenciement économique
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 10.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005801849?idConteneur=KALICONT000005635467
+    Article 10.5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005801851?idConteneur=KALICONT000005635467
+    Article 10.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005801850?idConteneur=KALICONT000005635467&origin=list#KALIARTI000005801850
+  cdtn:
+    formule:
+      formula: $formule
+
+contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . résultat conventionnel . majoration plus de 55ans:
+  applicable si: age >= 55
+  valeur: base * 0.1
+  cdtn:
+    formule:
+      formula: ($formule) + (10% * ($formule))
+
+
+contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . majoration licenciement économique:
+  applicable si: licenciement économique = 'Oui'
+  valeur: 0
+
+contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . majoration licenciement économique . moins de 5 ans:
+  remplace: majoration licenciement économique
+  applicable si: indemnité de licenciement . ancienneté conventionnelle en année < 5
+  valeur: base * 0.7
+  unité: €
+  cdtn:
+    formule:
+      formula: ($formule) + (70% * (1/10 * Sref * A))
+
+contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . majoration licenciement économique . plus de 5 ans:
+  remplace: majoration licenciement économique
+  applicable si: indemnité de licenciement . ancienneté conventionnelle en année >= 5
+  valeur: indemnité de licenciement . salaire de référence conventionnel * 0.35
+  unité: €
+  cdtn:
+    formule:
+      formula: ($formule) + (35% * Sref)

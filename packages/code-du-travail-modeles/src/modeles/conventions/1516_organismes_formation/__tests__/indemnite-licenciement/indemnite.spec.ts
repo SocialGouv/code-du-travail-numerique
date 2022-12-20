@@ -1,17 +1,12 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
-
 describe("Indemnité conventionnel de licenciement pour la CC 1516", () => {
   test.each`
-    seniority | salary  | expectedCompensation
-    ${0}      | ${0}    | ${0}
-    ${2}      | ${1000} | ${0}
-    ${5}      | ${1000} | ${1000}
-    ${10}     | ${2000} | ${4000}
-    ${42}     | ${3000} | ${33300}
+    seniority  | salary  | expectedCompensation
+    ${0}       | ${0}    | ${0}
+    ${2}       | ${1000} | ${0}
+    ${25 / 12} | ${1000} | ${416.67}
+    ${5}       | ${1000} | ${1000}
+    ${10}      | ${2000} | ${4000}
+    ${42}      | ${3000} | ${33300}
   `(
     "ancienneté: $seniority an, salaire de référence: $salary, => $expectedCompensation €",
     ({ seniority, salary, expectedCompensation }) => {

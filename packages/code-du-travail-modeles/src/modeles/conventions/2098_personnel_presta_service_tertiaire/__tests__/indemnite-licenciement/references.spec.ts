@@ -1,9 +1,4 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
 
 describe("Vérification des références juridiques pour la CC 2098", () => {
   test("Licenciement pour inaptitude non professionnelle", () => {

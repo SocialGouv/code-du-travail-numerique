@@ -1,14 +1,9 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
-
 describe("Indemnité conventionnel de licenciement pour la CC 1501", () => {
   describe("Autres licenciements", () => {
     test.each`
       category        | seniority  | salary  | expectedCompensation
       ${"Non-cadres"} | ${1}       | ${2300} | ${0}
+      ${"Non-cadres"} | ${2}       | ${2300} | ${460}
       ${"Non-cadres"} | ${3}       | ${2300} | ${690}
       ${"Non-cadres"} | ${15}      | ${2300} | ${4216.67}
       ${"Non-cadres"} | ${17}      | ${2300} | ${6056.67}
@@ -40,6 +35,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 1501", () => {
   describe("Licenciement économique", () => {
     test.each`
       category        | age   | seniority  | salary  | expectedCompensation
+      ${"Non-cadres"} | ${50} | ${23 / 12} | ${2600} | ${0}
+      ${"Non-cadres"} | ${50} | ${2}       | ${2600} | ${520}
       ${"Non-cadres"} | ${50} | ${7}       | ${2600} | ${1820}
       ${"Non-cadres"} | ${50} | ${13}      | ${2600} | ${3900}
       ${"Non-cadres"} | ${50} | ${16}      | ${2600} | ${6240}

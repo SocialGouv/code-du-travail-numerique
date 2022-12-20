@@ -1,386 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ContactModal /> renders a popup when click on button 1`] = `
-.c6 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-}
-
-.c6 > *:first-child {
-  margin-top: 0;
-}
-
-.c6 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c5 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #7994d4;
-  border-color: #7994d4;
-  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
-  opacity: 1;
-  will-change: transform;
-}
-
-.c0:link,
-.c0:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c0:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #a0b3e0;
-  border-color: #a0b3e0;
-}
-
-.c0[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-}
-
-.c7:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7:hover svg {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
-}
-
-.c7 svg {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-  fill: #f66663;
-}
-
-.c8 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 1rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c8:link,
-.c8:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c8:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c8[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c10 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
-.c1 {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-  overflow: auto;
-  background: rgba(0,0,0,0.5);
-}
-
-.c2 {
-  position: relative;
-  width: 50vw;
-  max-width: 74rem;
-  max-height: calc(100vh - 2 * 10vh);
-  margin: 10vh auto;
-  padding: 2rem;
-  overflow-y: auto;
-  color: #3e486e;
-  background: #fff;
-  border-radius: 0.6rem;
-  outline: none;
-}
-
-.c9 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #7994d4;
-}
-
-.c3 {
-  margin-top: 0;
-  margin-bottom: 4rem;
-  margin-left: auto;
-  text-align: center;
-}
-
-.c4 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-}
-
-@media (max-width:600px) {
-  .c6 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c6 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c7 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c8 {
-    display: none;
-  }
-}
-
-@media (max-width:1180px) {
-  .c2 {
-    width: 60vw;
-  }
-}
-
-@media (max-width:980px) {
-  .c2 {
-    width: 80vw;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    width: calc(100% - 2 * 1.6rem);
-    max-height: calc(100vh - 2 * 1.6rem);
-    margin: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    margin-bottom: 3.2rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    font-size: 2.6rem;
-  }
-}
-
 <body>
   <div
     aria-hidden="true"
   >
     <button
-      class="c0"
+      class="sc-hiKfDv fABUwE"
     >
       texte dans le bouton
     </button>
@@ -401,37 +27,37 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
     >
       <div>
         <div
-          class="c1"
+          class="sc-FRrlG hNWtxs"
           data-reach-dialog-overlay=""
         >
           <div
             aria-label="Contact"
             aria-modal="true"
-            class="c2"
+            class="sc-fXazdy lhbBKM"
             data-reach-dialog-content=""
             role="dialog"
             tabindex="-1"
           >
             <header
-              class="c3"
+              class="sc-eXuyPJ ZSyvw"
             >
               <h1
-                class="c4"
+                class="sc-irKDMX ehzKBH"
               >
                 <span
-                  class="c5"
+                  class="sc-gKAaRy iDZwD"
                 />
                 Contact
               </h1>
             </header>
             <div
-              class="c6"
+              class="sc-jSFjdj dWteEK"
             >
               <p>
                 Si vous souhaitez nous interroger sur vos droits ou sur des dispositions en droit du travail, nous vous invitons à contacter
                  
                 <button
-                  class="c7"
+                  class="sc-hiKfDv kQaPVm"
                 >
                   les services du ministère du Travail
                   <svg
@@ -473,11 +99,11 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
               </a>
             </p>
             <button
-              class="c8 c9"
+              class="sc-hiKfDv jbMTFD sc-dvXYtj kMeFfA"
               title="fermer la modale"
             >
               <div
-                class="c10"
+                class="sc-gXfVKN gNNUJi"
               >
                 fermer la modale
               </div>

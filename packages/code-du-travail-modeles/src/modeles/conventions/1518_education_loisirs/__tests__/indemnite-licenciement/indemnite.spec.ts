@@ -1,14 +1,9 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
-
 describe("CC 1518", () => {
   describe("Calcul de l'indemnité de licenciement", () => {
     test.each`
       seniority     | salaireRef | expectedCompensation
       ${8 / 12}     | ${2500}    | ${0}
+      ${9 / 12}     | ${2500}    | ${468.75}
       ${1}          | ${2500}    | ${625}
       ${0.75}       | ${2500}    | ${468.75}
       ${2 - 1 / 12} | ${2500}    | ${1197.92}

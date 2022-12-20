@@ -1,10 +1,5 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
 import { CatPro1486, TypeLicenciement1486 } from "../../salary";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
 
 const refEtamMoins20OuInge = [
   {
@@ -95,8 +90,6 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${typeLicenciement}'`,
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle": `'${category}'`,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence": salary,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 

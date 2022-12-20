@@ -1,313 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Feedback/> should render 1`] = `
-.c2 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c0 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c3 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c7 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c6 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c9:link,
-.c9:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c9:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
-}
-
-.c9[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c5 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.c10 + .c10 {
-  margin-left: 4rem;
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c3 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c9 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    padding: 0 3rem;
-  }
-}
-
-@media print {
-  .c1 {
-    display: none;
-  }
-}
-
-@media (max-width:1180px) {
-  .c4 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:1180px) {
-  .c5 {
-    margin-bottom: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-@media (max-width:1180px) {
-  .c8 {
-    -webkit-box-pack: space-around;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: space-around;
-    justify-content: space-around;
-  }
-}
-
-@media (max-width:1180px) {
-  .c10 + .c10 {
-    margin-left: 0;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="sc-gtsrHT dDJuxj sc-amkrK gNdCMk"
   >
     <div
-      class="c2"
+      class="sc-bdnxRM bCGhmq"
     >
       <div
-        class="c3"
+        class="sc-jSFjdj dftIwI"
       >
         <div
-          class="c4"
+          class="sc-dkuGKe fEiSsE"
         >
           <h2
-            class="c5 c6"
+            class="sc-gJpXkD iUHkCs sc-iCoGMd jQIZyR"
             data-testid="heading"
           >
             <span
-              class="c7"
+              class="sc-gKAaRy hLlvoX"
               data-testid="stripe"
             />
             Avez-vous trouvé la réponse à votre question ?
           </h2>
           <p
-            class="c8"
+            class="sc-fyjqAk enUuZt"
           >
             <button
-              class="c9 c10 "
+              class="sc-hiKfDv fEdXfT sc-iXeHaJ bA-dtBg"
             >
               Non
             </button>
             <button
-              class="c9 c10 "
+              class="sc-hiKfDv fEdXfT sc-iXeHaJ bA-dtBg"
             >
               Oui
             </button>
@@ -320,519 +46,25 @@ exports[`<Feedback/> should render 1`] = `
 `;
 
 exports[`<Feedback/> should render form once user answer no 1`] = `
-.c2 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c0 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c3 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c7 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c6 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c18 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 3rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c18:link,
-.c18:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c18:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
-}
-
-.c18[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c20 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-}
-
-.c20:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c20:hover svg {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
-}
-
-.c20 svg {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-  fill: #f66663;
-}
-
-.c16 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
-.c15 {
-  color: #9298af;
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-.c11 {
-  position: relative;
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: calc(1.6rem * 1.25);
-  height: calc(1.6rem * 1.25);
-  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
-  background: #fff;
-  border: 1px solid #bbcadf;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c11:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-  width: calc(1.6rem / 3);
-  height: calc(1.6rem / 1.7);
-  border: 1px solid #fff;
-  border-width: 0 calc(1.6rem / 10) calc(1.6rem / 10) 0;
-  -webkit-transform: translate(-50%,-60%) rotate(45deg);
-  -ms-transform: translate(-50%,-60%) rotate(45deg);
-  transform: translate(-50%,-60%) rotate(45deg);
-  content: "";
-}
-
-.c11:checked {
-  background-color: #f66663;
-}
-
-.c11:checked:before {
-  display: block;
-}
-
-.c13 {
-  width: 100%;
-  min-height: 12rem;
-  padding: 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c13::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c13::-moz-placeholder {
-  color: #9298af;
-}
-
-.c13:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c13::placeholder {
-  color: #9298af;
-}
-
-.c13::-webkit-outer-spin-button,
-.c13::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c13:focus {
-  border-color: #7994d4;
-}
-
-.c13:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c13:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c13:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c13:focus::placeholder {
-  color: transparent;
-}
-
-.c8 {
-  border: none;
-  padding: 0;
-}
-
-.c9 {
-  font-weight: 600;
-  padding: 1rem 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c5 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.c19 + .c19 {
-  margin-left: 4rem;
-}
-
-.c14 {
-  max-width: 100%;
-}
-
-.c12 {
-  font-weight: 600;
-  display: block;
-  margin: 2rem 0 1rem 0;
-}
-
-.c17 {
-  margin: 3.2rem 0;
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c3 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-
-}
-
-@media print {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-  .c18 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c18 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c20 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c20 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
-    width: 100%;
-  }
-}
-
-@media print {
-  .c1 {
-    display: none;
-  }
-}
-
-@media (max-width:1180px) {
-  .c4 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:1180px) {
-  .c5 {
-    margin-bottom: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-@media (max-width:1180px) {
-
-}
-
-@media (max-width:1180px) {
-  .c19 + .c19 {
-    margin-left: 0;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="sc-gtsrHT dDJuxj sc-amkrK gNdCMk"
   >
     <div
-      class="c2"
+      class="sc-bdnxRM bCGhmq"
     >
       <div
-        class="c3"
+        class="sc-jSFjdj dftIwI"
       >
         <div
-          class="c4"
+          class="sc-dkuGKe fEiSsE"
         >
           <h2
-            class="c5 c6"
+            class="sc-gJpXkD iUHkCs sc-iCoGMd jQIZyR"
             data-testid="heading"
           >
             <span
-              class="c7"
+              class="sc-gKAaRy hLlvoX"
               data-testid="stripe"
             />
             Merci pour votre réponse.
@@ -840,19 +72,19 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
         </div>
         <form>
           <fieldset
-            class="c8"
+            class="sc-kmIPcE giONAY"
           >
             <legend
-              class="c9"
+              class="sc-cwiweh eDMgNg"
             >
               Pouvez-vous nous en dire plus ?
             </legend>
             <label
-              class="c10"
+              class="sc-xGAEC bynoea"
               for="unclear"
             >
               <input
-                class="c11"
+                class="sc-dWBRfb cbFWSR"
                 id="unclear"
                 name="category"
                 type="checkbox"
@@ -861,11 +93,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               Les informations ne sont pas claires.
             </label>
             <label
-              class="c10"
+              class="sc-xGAEC bynoea"
               for="unrelated"
             >
               <input
-                class="c11"
+                class="sc-dWBRfb cbFWSR"
                 id="unrelated"
                 name="category"
                 type="checkbox"
@@ -874,11 +106,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               Cette page ne correspond pas à ma recherche ou à ma situation.
             </label>
             <label
-              class="c10"
+              class="sc-xGAEC bynoea"
               for="unsatisfied"
             >
               <input
-                class="c11"
+                class="sc-dWBRfb cbFWSR"
                 id="unsatisfied"
                 name="category"
                 type="checkbox"
@@ -887,11 +119,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               Je ne suis pas satisfait de cette réglementation.
             </label>
             <label
-              class="c10"
+              class="sc-xGAEC bynoea"
               for="wrong"
             >
               <input
-                class="c11"
+                class="sc-dWBRfb cbFWSR"
                 id="wrong"
                 name="category"
                 type="checkbox"
@@ -901,13 +133,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             </label>
           </fieldset>
           <label
-            class="c12"
+            class="sc-tsGVs kmoLfe"
             for="suggestion"
           >
             Faire une suggestion pour améliorer cette page
           </label>
           <textarea
-            class="c13 c14"
+            class="sc-gkCoMD hEtVyO sc-bUQyIj lbcyhC"
             cols="50"
             id="suggestion"
             maxlength="150"
@@ -917,13 +149,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           />
           <div>
             <span
-              class="c15"
+              class="sc-bBjRSN kXKqEt"
             >
               150
                caractères restants
             </span>
             <div
-              class="c16"
+              class="sc-gXfVKN gNNUJi"
               role="status"
             >
               150
@@ -931,10 +163,10 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             </div>
           </div>
           <div
-            class="c17"
+            class="sc-dSnXvR kYyBno"
           >
             <button
-              class="c18 c19 "
+              class="sc-hiKfDv jPHFJK sc-iXeHaJ bA-dtBg"
             >
               Envoyer
             </button>
@@ -944,7 +176,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           Pour obtenir une réponse à votre question de droit du travail, nous vous invitons à joindre
            
           <button
-            class="c20"
+            class="sc-hiKfDv kQaPVm"
             type="button"
           >
             les services du ministère du Travail en région
@@ -968,385 +200,25 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 `;
 
 exports[`<Feedback/> should render form once user answer yes 1`] = `
-.c2 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c0 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c3 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c7 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c6 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c14 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 3rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c14:link,
-.c14:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c14:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
-}
-
-.c14[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c12 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
-.c11 {
-  color: #9298af;
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-
-.c9 {
-  width: 100%;
-  min-height: 12rem;
-  padding: 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c9::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c9::-moz-placeholder {
-  color: #9298af;
-}
-
-.c9:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c9::placeholder {
-  color: #9298af;
-}
-
-.c9::-webkit-outer-spin-button,
-.c9::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c9:focus {
-  border-color: #7994d4;
-}
-
-.c9:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c9:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c9:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c9:focus::placeholder {
-  color: transparent;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c5 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.c15 + .c15 {
-  margin-left: 4rem;
-}
-
-.c10 {
-  max-width: 100%;
-}
-
-.c8 {
-  font-weight: 600;
-  display: block;
-  margin: 2rem 0 1rem 0;
-}
-
-.c13 {
-  margin: 3.2rem 0;
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c3 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-
-}
-
-@media print {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-  .c14 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c14 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    width: 100%;
-  }
-}
-
-@media print {
-  .c1 {
-    display: none;
-  }
-}
-
-@media (max-width:1180px) {
-  .c4 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:1180px) {
-  .c5 {
-    margin-bottom: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-@media (max-width:1180px) {
-
-}
-
-@media (max-width:1180px) {
-  .c15 + .c15 {
-    margin-left: 0;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="sc-gtsrHT dDJuxj sc-amkrK gNdCMk"
   >
     <div
-      class="c2"
+      class="sc-bdnxRM bCGhmq"
     >
       <div
-        class="c3"
+        class="sc-jSFjdj dftIwI"
       >
         <div
-          class="c4"
+          class="sc-dkuGKe fEiSsE"
         >
           <h2
-            class="c5 c6"
+            class="sc-gJpXkD iUHkCs sc-iCoGMd jQIZyR"
             data-testid="heading"
           >
             <span
-              class="c7"
+              class="sc-gKAaRy hLlvoX"
               data-testid="stripe"
             />
             Merci pour votre réponse.
@@ -1354,13 +226,13 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
         </div>
         <form>
           <label
-            class="c8"
+            class="sc-tsGVs kmoLfe"
             for="suggestion"
           >
             Faire une suggestion pour améliorer cette page
           </label>
           <textarea
-            class="c9 c10"
+            class="sc-gkCoMD hEtVyO sc-bUQyIj lbcyhC"
             cols="50"
             id="suggestion"
             maxlength="150"
@@ -1370,13 +242,13 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
           />
           <div>
             <span
-              class="c11"
+              class="sc-bBjRSN kXKqEt"
             >
               150
                caractères restants
             </span>
             <div
-              class="c12"
+              class="sc-gXfVKN gNNUJi"
               role="status"
             >
               150
@@ -1384,10 +256,10 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
             </div>
           </div>
           <div
-            class="c13"
+            class="sc-dSnXvR kYyBno"
           >
             <button
-              class="c14 c15 "
+              class="sc-hiKfDv jPHFJK sc-iXeHaJ bA-dtBg"
             >
               Envoyer
             </button>
