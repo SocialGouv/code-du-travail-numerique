@@ -82,8 +82,6 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
-          "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age 55 ans":
-            "'Non'",
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
@@ -100,19 +98,17 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
   describe("Cas avec une réponse Oui", () => {
     test.each`
       age   | seniority | salary
-      ${54} | ${1}      | ${2562}
-      ${54} | ${5}      | ${2562}
-      ${54} | ${7.91}   | ${2562}
-      ${54} | ${8}      | ${2668}
-      ${54} | ${19}     | ${2668}
+      ${55} | ${1}      | ${2562}
+      ${55} | ${5}      | ${2562}
+      ${55} | ${7.91}   | ${2562}
+      ${55} | ${8}      | ${2668}
+      ${55} | ${19}     | ${2668}
     `(
       "age: $age, ancienneté: $seniority an, salaire de référence: $salary, catégorie $category",
       ({ seniority, salary, age }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
-          "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age 55 ans":
-            "'Oui'",
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,

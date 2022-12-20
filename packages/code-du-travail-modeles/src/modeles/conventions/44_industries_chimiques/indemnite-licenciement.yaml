@@ -22,7 +22,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age:
   titre: Âge du salarié
-  question: Quel est l'âge du salarié ?
+  question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
   cdtn:
     type: entier
 
