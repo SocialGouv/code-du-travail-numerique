@@ -1,0 +1,192 @@
+contrat salarié . convention collective . batiment etam . indemnité de licenciement:
+  applicable si: indemnité de licenciement
+  valeur: oui
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . age à la fin de son préavis:
+  titre: Âge du salarié à la fin de son préavis (exécuté ou non)
+  question: Quel est l’âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?
+  cdtn:
+    type: entier
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . jusqu'à 15 ans ou moins:
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - 15 an
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . au dela de 15 ans:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 15 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel . calcul avant 15 ans:
+  valeur:
+    produit:
+      assiette: jusqu'à 15 ans ou moins * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      facteur: 2.5 / 10
+  unité: €
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel . calcul après 15 ans:
+  valeur:
+    produit:
+      assiette: au dela de 15 ans * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      facteur: 3.5 / 10
+  unité: €
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel moins de deux ans d'ancienneté:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 2 an
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: 0 €
+  références:
+    Article 8.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773860?idConteneur=KALICONT000018773893
+    Article 8.5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773861?idConteneur=KALICONT000018773893
+    Article 8.13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773880?idConteneur=KALICONT000018773893&origin=list#KALIARTI000018773880
+    Article 8.7: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773870?idConteneur=KALICONT000018773893#KALIARTI000018773870
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel:
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 an
+      - age à la fin de son préavis <= 65
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: base + majoration
+  arrondi: 2 décimales
+  unité: €
+  références:
+    Article 8.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773860?idConteneur=KALICONT000018773893
+    Article 8.5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773861?idConteneur=KALICONT000018773893
+    Article 8.13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773880?idConteneur=KALICONT000018773893&origin=list#KALIARTI000018773880
+    Article 8.7: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773870?idConteneur=KALICONT000018773893#KALIARTI000018773870
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel . base:
+  valeur: 0
+  unité: €
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel . base . moins de 15 ans d'ancienneté:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 15 an
+  remplace: base
+  valeur: calcul avant 15 ans
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 10
+  unité: €
+  arrondi: 2 décimales
+  cdtn:
+    formule:
+      formula: 2.5 / 10 * Sref * A
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel . base . plus de 15 ans d'ancienneté:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 15 an
+  remplace: base
+  valeur: calcul avant 15 ans + calcul après 15 ans
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 10
+  unité: €
+  arrondi: 2 décimales
+  cdtn:
+    formule:
+      formula: (2.5 / 10 * Sref * A1) + (3.5 / 10 * Sref * A2)
+      explanations:
+        - "A1 : Années d'ancienneté jusqu'à 15 ans d'ancienneté": contrat salarié . convention collective . batiment etam . indemnité de licenciement . jusqu'à 15 ans ou moins
+        - "A2 : Années d'ancienneté au-delà de 15 ans d'ancienneté": contrat salarié . convention collective . batiment etam . indemnité de licenciement . au dela de 15 ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel . base . formule plafond maximum:
+  applicable si: base = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 10
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 10 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel . majoration:
+  applicable si:
+    une de ces conditions:
+      - age à la fin de son préavis >= 55
+  valeur:
+    produit:
+      assiette: base
+      facteur: 10 / 100
+  unité: €
+  arrondi: 2 décimales
+  cdtn:
+    formule:
+      formula: ($formule) + (10% * ($formule))
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . jusqu'à 10 ans ou moins:
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - 10 an
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . au dela de 10 ans:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 10 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel pour plus de 65 ans . calcul avant 10 ans:
+  valeur:
+    produit:
+      assiette: jusqu'à 10 ans ou moins * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      facteur: 1.5 / 10
+  unité: €
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel pour plus de 65 ans . calcul après 10 ans:
+  valeur:
+    produit:
+      assiette: au dela de 10 ans * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      facteur: 2.5 / 10
+  unité: €
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel pour plus de 65 ans:
+  applicable si:
+    toutes ces conditions:
+      - age à la fin de son préavis > 65
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 an
+  valeur: oui
+  références:
+    Article 8.4: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773860?idConteneur=KALICONT000018773893
+    Article 8.5: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773861?idConteneur=KALICONT000018773893
+    Article 8.13: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773880?idConteneur=KALICONT000018773893&origin=list#KALIARTI000018773880
+    Article 8.7: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773870?idConteneur=KALICONT000018773893#KALIARTI000018773870
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel pour plus de 65 ans . avec moins de 10 ans d'ancienneté:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: calcul avant 10 ans
+  unité: €
+  arrondi: 2 décimales
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 8
+  cdtn:
+    formule:
+      formula: 1.5 / 10 * Sref * A
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel pour plus de 65 ans . avec plus de 10 ans d'ancienneté:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 10 an
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  valeur: calcul avant 10 ans + calcul après 10 ans
+  unité: €
+  arrondi: 2 décimales
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 8
+  cdtn:
+    formule:
+      formula: (1.5 / 10 * Sref * A1) + (2.5 / 10 * Sref * A2)
+      explanations:
+        - "A1 : Années d'ancienneté jusqu'à 10 ans d'ancienneté": contrat salarié . convention collective . batiment etam . indemnité de licenciement . jusqu'à 10 ans ou moins
+        - "A2 : Années d'ancienneté pour les années au-delà de 10 ans d'ancienneté": contrat salarié . convention collective . batiment etam . indemnité de licenciement . au dela de 10 ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . batiment etam . indemnité de licenciement . résultat conventionnel pour plus de 65 ans . formule plafond maximum:
+  applicable si: contrat salarié . indemnité de licenciement . résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 8
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 8 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel

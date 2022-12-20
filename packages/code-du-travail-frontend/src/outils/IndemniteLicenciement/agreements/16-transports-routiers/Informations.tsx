@@ -1,16 +1,16 @@
 import { useIndemniteLicenciementStore } from "../../store";
 
 export default function Agreement16Informations() {
-  const { hasSameSalary, hasVariablePay } = useIndemniteLicenciementStore(
+  const { showVariablePay, hasVariablePay } = useIndemniteLicenciementStore(
     (state) => ({
-      hasSameSalary: state.salairesData.input.hasSameSalary,
+      showVariablePay: state.agreement16Data.input.showVariablePay,
       hasVariablePay: state.agreement16Data.input.hasVariablePay,
     })
   );
 
   return (
     <>
-      {hasSameSalary === "non" && (
+      {showVariablePay && (
         <li>
           Les salaires indiqués comportent une partie variable &nbsp;:&nbsp;
           {hasVariablePay === "oui" ? "Oui" : "Non"}

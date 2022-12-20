@@ -129,6 +129,11 @@ export const ui = {
         "infos.contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle - licenciement économique - age"
       ),
     },
+    agreement2609: {
+      age: byTestId(
+        "infos.contrat salarié - convention collective - batiment etam - indemnité de licenciement - age à la fin de son préavis"
+      ),
+    },
   },
   seniority: {
     startDate: byTestId("date-entree"),
@@ -155,14 +160,26 @@ export const ui = {
     },
     sameSalaryValue: byTestId("same-salary-value"),
     variablePart: {
-      oui: byTestId("hasVariablePart - Oui"),
-      non: byTestId("hasVariablePart - Non"),
+      oui: byTestId("hasVariablePay - Oui"),
+      non: byTestId("hasVariablePay - Non"),
     },
     salaries: byTestId("salary-input"),
     primes: byTestId("prime-input"),
   },
   result: {
     formula: byTestId("formula"),
+    legalError: {
+      title: byText(
+        "Il n'y a pas d'indemnité de licenciement dans cette situation"
+      ),
+      cdd: byText(/L’indemnité de licenciement n’est pas due pour les CDD/),
+      fauteGrave: byText(
+        /L’indemnité de licenciement n’est pas due en cas de faute grave/
+      ),
+      seniorityToLow: byText(
+        /L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois/
+      ),
+    },
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),

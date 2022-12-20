@@ -35,10 +35,7 @@ test(`
   expect(ui.contract.inaptitude.question.query()).not.toBeInTheDocument();
   expect(ui.contract.inaptitude.oui.query()).not.toBeInTheDocument();
   expect(ui.contract.inaptitude.non.query()).not.toBeInTheDocument();
-  fireEvent.click(ui.contract.type.cdd.get());
-  expect(ui.contract.type.alert.query()).toBeInTheDocument();
   fireEvent.click(ui.contract.type.cdi.get());
-  expect(ui.contract.type.alert.query()).not.toBeInTheDocument();
 
   // Vérifier l'affichage de la question faute grave
   expect(ui.contract.fauteGrave.question.query()).toBeInTheDocument();
@@ -47,10 +44,7 @@ test(`
   expect(ui.contract.inaptitude.question.query()).not.toBeInTheDocument();
   expect(ui.contract.inaptitude.oui.query()).not.toBeInTheDocument();
   expect(ui.contract.inaptitude.non.query()).not.toBeInTheDocument();
-  fireEvent.click(ui.contract.fauteGrave.oui.get());
-  expect(ui.contract.fauteGrave.alert.query()).toBeInTheDocument();
   fireEvent.click(ui.contract.fauteGrave.non.get());
-  expect(ui.contract.fauteGrave.alert.query()).not.toBeInTheDocument();
 
   // Vérifier l'affichage de la question inaptitude
   expect(ui.contract.inaptitude.question.query()).toBeInTheDocument();

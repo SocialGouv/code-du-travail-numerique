@@ -1,191 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SearchBar /> should render 1`] = `
-.c4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 1rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c4:link,
-.c4:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c4:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c4[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c1 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
-.c3 ul {
-  z-index: 1;
-}
-
-.c3 li[role="option"]:nth-child(2n + 1) {
-  background: #f2f5fa;
-}
-
-.c0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c6 {
-  width: 3rem;
-  height: 3rem;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 5.4rem;
-  margin: 0;
-  padding: 1rem 5.5rem 1rem 1.6rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c2::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c2::-moz-placeholder {
-  color: #9298af;
-}
-
-.c2:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c2::placeholder {
-  color: #9298af;
-}
-
-.c5 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 3rem;
-  height: 5.4rem;
-  color: #7994d4;
-}
-
-@media (max-width:600px) {
-  .c4 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c4 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    height: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    height: 5.4rem;
-    padding: 1rem 5.5rem 1rem 1.6rem;
-  }
-}
-
 <div>
   <form
     action="/recherche"
-    class="c0"
+    class="sc-ellfGf bAscX"
     role="search"
   >
     <div
-      class="c1"
+      class="sc-gXfVKN gNNUJi"
     >
       <label>
         Rechercher
@@ -203,7 +26,7 @@ exports[`<SearchBar /> should render 1`] = `
         aria-controls="react-autowhatever-1"
         aria-label="recherchez par mots-clés"
         autocomplete="off"
-        class="c2"
+        class="sc-iIgjPs edChZz"
         id="main-search-input"
         name="q"
         placeholder="Rechercher"
@@ -212,20 +35,20 @@ exports[`<SearchBar /> should render 1`] = `
         value=""
       />
       <div
-        class="c3"
+        class="sc-jtiXyc epYyJZ"
         id="react-autowhatever-1"
         role="listbox"
       />
     </div>
     <button
       aria-label="Lancer ma recherche"
-      class="c4 c5"
+      class="sc-hiKfDv jbMTFD sc-amkrK ctiiva"
       title="Lancer ma recherche"
       type="submit"
     >
       <svg
         aria-hidden="true"
-        class="c6"
+        class="sc-kizEQm jMSoYK"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -241,195 +64,14 @@ exports[`<SearchBar /> should render 1`] = `
 `;
 
 exports[`<SearchBar /> should render suggestions 1`] = `
-.c5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 1rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c5:link,
-.c5:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c5:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c5[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c1 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
-.c4 p {
-  margin: 0;
-}
-
-.c3 ul {
-  z-index: 1;
-}
-
-.c3 li[role="option"]:nth-child(2n + 1) {
-  background: #f2f5fa;
-}
-
-.c0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c7 {
-  width: 3rem;
-  height: 3rem;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 5.4rem;
-  margin: 0;
-  padding: 1rem 5.5rem 1rem 1.6rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c2::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c2::-moz-placeholder {
-  color: #9298af;
-}
-
-.c2:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c2::placeholder {
-  color: #9298af;
-}
-
-.c6 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 3rem;
-  height: 5.4rem;
-  color: #7994d4;
-}
-
-@media (max-width:600px) {
-  .c5 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c5 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    height: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    height: 5.4rem;
-    padding: 1rem 5.5rem 1rem 1.6rem;
-  }
-}
-
 <div>
   <form
     action="/recherche"
-    class="c0"
+    class="sc-ellfGf bAscX"
     role="search"
   >
     <div
-      class="c1"
+      class="sc-gXfVKN gNNUJi"
     >
       <label>
         Rechercher
@@ -447,7 +89,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
         aria-controls="react-autowhatever-1"
         aria-label="recherchez par mots-clés"
         autocomplete="off"
-        class="c2"
+        class="sc-iIgjPs edChZz"
         id="main-search-input"
         name="q"
         placeholder="Rechercher"
@@ -456,7 +98,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
         value="yolo"
       />
       <div
-        class="c3"
+        class="sc-jtiXyc epYyJZ"
         id="react-autowhatever-1"
         role="listbox"
       >
@@ -472,10 +114,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
           >
             <div
-              class="c4"
+              class="sc-dvUynV ddAQyb"
             >
               <span
-                class=""
+                class="sc-kTCsyW"
               >
                 foo
               </span>
@@ -489,10 +131,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
           >
             <div
-              class="c4"
+              class="sc-dvUynV ddAQyb"
             >
               <span
-                class=""
+                class="sc-kTCsyW"
               >
                 foobar
               </span>
@@ -506,10 +148,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
           >
             <div
-              class="c4"
+              class="sc-dvUynV ddAQyb"
             >
               <span
-                class=""
+                class="sc-kTCsyW"
               >
                 foo bar ?
               </span>
@@ -523,10 +165,10 @@ exports[`<SearchBar /> should render suggestions 1`] = `
             style="border-radius: 3px; cursor: pointer; line-height: 2rem; list-style-type: none; padding: 5px;"
           >
             <div
-              class="c4"
+              class="sc-dvUynV ddAQyb"
             >
               <span
-                class=""
+                class="sc-kTCsyW"
               >
                 foo bazzz
               </span>
@@ -537,13 +179,13 @@ exports[`<SearchBar /> should render suggestions 1`] = `
     </div>
     <button
       aria-label="Lancer ma recherche"
-      class="c5 c6"
+      class="sc-hiKfDv jbMTFD sc-amkrK ctiiva"
       title="Lancer ma recherche"
       type="submit"
     >
       <svg
         aria-hidden="true"
-        class="c7"
+        class="sc-kizEQm jMSoYK"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"

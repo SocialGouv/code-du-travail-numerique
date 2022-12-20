@@ -1,7 +1,6 @@
 import React from "react";
 import { RadioQuestion } from "../../../Components";
 
-import { FauteGrave, TypeContratMessage } from "./components";
 import { useIndemniteLicenciementStore } from "../../store";
 
 const StepContratTravail = (): JSX.Element => {
@@ -57,7 +56,6 @@ const StepContratTravail = (): JSX.Element => {
         error={errorTypeContratTravail}
         showRequired
       />
-      {typeContratTravail === "cdd" && <TypeContratMessage />}
       {typeContratTravail === "cdi" && (
         <RadioQuestion
           questions={[
@@ -79,9 +77,6 @@ const StepContratTravail = (): JSX.Element => {
           error={errorLicenciementFauteGrave}
           showRequired
         />
-      )}
-      {typeContratTravail === "cdi" && licenciementFauteGrave === "oui" && (
-        <FauteGrave />
       )}
       {typeContratTravail === "cdi" && licenciementFauteGrave === "non" && (
         <RadioQuestion

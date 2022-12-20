@@ -1,10 +1,10 @@
 import Engine from "publicodes";
 
+import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { mergePreavisRetraiteModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
 
 const DepartRetraite = [
@@ -43,7 +43,7 @@ const MiseRetraiteMoins6Mois = [
   },
 ];
 
-const engine = new Engine(mergePreavisRetraiteModels());
+const engine = new Engine(modeles as any);
 
 test.each`
   retirement  | seniority | expectedReferences

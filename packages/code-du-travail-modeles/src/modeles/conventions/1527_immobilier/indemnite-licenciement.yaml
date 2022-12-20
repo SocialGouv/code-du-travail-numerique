@@ -3,7 +3,7 @@ contrat salarié . convention collective . immobilier . indemnité de licencieme
   valeur: oui
 
 contrat salarié . convention collective . immobilier . indemnité de licenciement . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 7 mois
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
   valeur: oui
   références:

@@ -1,9 +1,4 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { CategoryPro44 } from "../../salary";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
 
 describe("Missing variables pour l'indemnité conventionnel de licenciement pour la CC 44", () => {
   describe("Aucune", () => {

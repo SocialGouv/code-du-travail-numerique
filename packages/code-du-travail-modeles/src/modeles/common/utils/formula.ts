@@ -27,6 +27,18 @@ function round(num: number): number {
   return Math.round(num * 100) / 100;
 }
 
+export const roundValueAndAddMessage = (
+  value: number,
+  unit: string
+): string => {
+  const unitWithPlurial = `${unit}${pluralize(unit, value)}`;
+  const roundedValue = round(value);
+  const isRounded = roundedValue !== value;
+  return isRounded
+    ? `≈ ${roundedValue} ${unitWithPlurial} : valeur arrondie`
+    : `${roundedValue} ${unitWithPlurial}`;
+};
+
 function getRulesWithFormuleAndNodeValue(engine: Engine): RuleNodeFormula[] {
   return Object.values(engine.getParsedRules()).filter(
     (rule: RuleNodeOptionalFormula) => {
@@ -89,11 +101,8 @@ export function getFormule(engine: Engine): Formula {
         }
         const nodeValue = Number(result.nodeValue);
         if (nodeValue && nodeValue !== 0) {
-          const unit = result.unit.numerators[0];
-          return `${text} (${round(nodeValue)} ${unit}${pluralize(
-            unit,
-            result.nodeValue as number
-          )})`;
+          const unit: string = result.unit.numerators[0];
+          return `${text} (${roundValueAndAddMessage(nodeValue, unit)})`;
         } else {
           formula.formula = removePartFromFormula(formula.formula, text);
         }
@@ -131,5 +140,17 @@ export const cleanFormula = (formule: string): string => {
   // remove all the [ ] from the formula
   const formulaWithoutCrochet = formule.replace(/\[|\]/g, "");
   // remove space and + at the beginning of the formula
-  return formulaWithoutCrochet.replace(/^(\s|\+)+/, "");
+  const withoutSpaceAndPlus = formulaWithoutCrochet.replace(/^(\s|\+)+/, "");
+  // detect if there is a + in the formula
+  const hasPlus = withoutSpaceAndPlus.includes("+");
+  // detect if there is (( and )) in the formula
+  const hasDuplicateParenthesisStart = withoutSpaceAndPlus.includes("((");
+  const hasDuplicateParenthesisEnd = withoutSpaceAndPlus.includes("))");
+  // remove duplicate (( and ))
+  const withoutDuplicateParenthesis = withoutSpaceAndPlus
+    .replace(/\(\(/g, "(")
+    .replace(/\)\)/g, ")");
+  return !hasPlus && hasDuplicateParenthesisStart && hasDuplicateParenthesisEnd
+    ? withoutDuplicateParenthesis
+    : withoutSpaceAndPlus;
 };

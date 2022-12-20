@@ -1,9 +1,4 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getReferences } from "../../../../common";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
 
 const references = [
   {
@@ -27,8 +22,6 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
   describe("Cas standard", () => {
     test.each`
       age     | seniority | salary
-      ${"54"} | ${0}      | ${2000}
-      ${"56"} | ${0}      | ${2000}
       ${"54"} | ${2}      | ${2000}
       ${"56"} | ${2}      | ${2000}
       ${"54"} | ${5}      | ${2000}
@@ -58,8 +51,6 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
   describe("Cas complexe", () => {
     test.each`
       moreThan55 | seniority | salary
-      ${"Non"}   | ${0}      | ${2000}
-      ${"Oui"}   | ${0}      | ${2000}
       ${"Non"}   | ${2}      | ${2000}
       ${"Oui"}   | ${2}      | ${2000}
       ${"Non"}   | ${5}      | ${2000}

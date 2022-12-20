@@ -1,6 +1,3 @@
-import Engine from "publicodes";
-
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import { getFormule } from "../../../../common";
 
 describe("Formule indemnité licenciement - 1351", () => {
@@ -15,13 +12,9 @@ describe("Formule indemnité licenciement - 1351", () => {
   `(
     "Formule $expectedFormula avec $seniority ans",
     ({ seniority, expectedFormula, expectedExplanations }) => {
-      const engine = new Engine(mergeIndemniteLicenciementModels());
-
       const situation = engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1351'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
-        "contrat salarié . indemnité de licenciement . salaire de référence": 1000,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
       });
       const result = getFormule(situation);

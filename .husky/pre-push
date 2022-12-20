@@ -4,7 +4,7 @@
 yarn lerna run \
   --exclude-dependents \
   --parallel prepush \
-  --since dev \
+  --since origin/HEAD \
   --stream \
   ;
 
