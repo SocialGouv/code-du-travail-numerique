@@ -1,6 +1,5 @@
 import { ReferenceSalaryLegal } from "../../base";
 import type {
-  CategoryPro16,
   IReferenceSalary,
   ReferenceSalaryProps,
   SalaryPeriods,
@@ -15,6 +14,11 @@ export type CC16ReferenceSalaryProps = {
   driveInability?: "definitive" | "temporary";
 };
 
+export type CategoryPro16 =
+  | "'Employés'"
+  | "'Ingénieurs et cadres'"
+  | "'Ouvriers'"
+  | "'TAM'";
 export class ReferenceSalary16
   implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0016> {
   computeReferenceSalary(
