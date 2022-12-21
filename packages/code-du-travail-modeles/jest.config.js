@@ -1,5 +1,4 @@
 module.exports = {
-  globalSetup: "<rootDir>/src/setup-jest.ts",
   roots: ["<rootDir>/src"],
   setupFilesAfterEnv: ["./jest.setup.ts"],
   testMatch: [

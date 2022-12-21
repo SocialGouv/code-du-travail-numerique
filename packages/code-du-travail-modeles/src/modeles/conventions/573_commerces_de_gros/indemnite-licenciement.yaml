@@ -262,8 +262,8 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
     formule:
       formula: 1 / 5 * Sref * A1[ + 2 / 15 * Sref * A2]
       explanations:
-        - "A1: Années d'ancienneté au total": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-        - "A2: Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . au delà de dix ans
+        - "A1 : Années d'ancienneté au total": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "A2 : Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . au delà de dix ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . résultat conventionnel:
@@ -281,8 +281,8 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
     formule:
       formula: 2 / 10 * Sref * A1[ + 2 / 15 * Sref * A2]
       explanations:
-        - "A1: Années d'ancienneté au total": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-        - "A2: Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . au delà de dix ans
+        - "A1 : Années d'ancienneté au total": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "A2 : Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . au delà de dix ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age . résultat conventionnel 55 ans:
@@ -302,8 +302,8 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
     formule:
       formula: 2 / 10 * Sref * A1[ + 3 / 10 * Sref * A2]+ 20% * 2 / 10 * Sref * A1[ + 20% * 3 / 10 * Sref * A2]
       explanations:
-        - "A1: Années d'ancienneté au total": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-        - "A2: Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . au delà de dix ans
+        - "A1 : Années d'ancienneté au total": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "A2 : Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . au delà de dix ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . résultat conventionnel moins 5 ans:
@@ -342,9 +342,9 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
     formule:
       formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3]+ 20% * 3 / 10 * Sref * A1[ + 20% * 4 / 10 * Sref * A2][ + 20% * 5 / 10 * Sref * A3]
       explanations:
-        - "A1: Années d'ancienneté au total": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
-        - "A2: Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
-        - "A3: Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
+        - "A1 : Années d'ancienneté au total": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
+        - "A2 : Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
+        - "A3 : Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age . résultat conventionnel 50 ans:
@@ -364,9 +364,9 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
     formule:
       formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3]+ 15% * 3 / 10 * Sref * A1[ + 15% * 4 / 10 * Sref * A2][ + 15% * 5 / 10 * Sref * A3]
       explanations:
-        - "A1: Années d'ancienneté au total": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
-        - "A2: Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
-        - "A3: Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
+        - "A1 : Années d'ancienneté au total": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
+        - "A2 : Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
+        - "A3 : Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . résultat conventionnel plus 5 ans:
@@ -387,9 +387,9 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
     formule:
       formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3]
       explanations:
-        - "A1: Années d'ancienneté au total": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
-        - "A2: Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
-        - "A3: Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
+        - "A1 : Années d'ancienneté au total": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
+        - "A2 : Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
+        - "A3 : Années d'ancienneté au delà de 10 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . commerces de gros . formule max 6:
