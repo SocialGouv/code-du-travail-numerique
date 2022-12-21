@@ -244,7 +244,7 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Ouvriers et collaborateurs (Groupes I à III)'
-      - contrat salarié . indemnité de licenciement .ancienneté requise en année >= 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté requise en année >= 2 an
       - catégorie professionnelle . licenciement économique = 'Non'
   valeur: trois dixième sref
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 14

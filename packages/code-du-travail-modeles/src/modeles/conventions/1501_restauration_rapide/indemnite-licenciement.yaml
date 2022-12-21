@@ -275,7 +275,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
   applicable si:
     toutes ces conditions:
       - indemnité de licenciement . ancienneté requise en année > 10 an
-      - indemnité de licenciement . ancienneté requise en année<= 15 an
+      - indemnité de licenciement . ancienneté requise en année <= 15 an
   valeur: oui
   cdtn:
     formule:

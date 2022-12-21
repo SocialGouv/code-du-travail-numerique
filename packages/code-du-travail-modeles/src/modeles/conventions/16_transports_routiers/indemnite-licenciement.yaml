@@ -532,7 +532,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité définitive de conduite . résultat conventionnel . formule coeff 3:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année< 10 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année < 10 ans
   non applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année < 5 ans
   valeur: 3 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
   unité: €

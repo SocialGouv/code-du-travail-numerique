@@ -14,6 +14,7 @@ describe("CC 2511", () => {
           .setSituation({
             "contrat salarié . convention collective": "'IDCC2511'",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
           })
           .evaluate(

@@ -29,6 +29,7 @@ describe("Vérification des références juridiques pour la CC 1090", () => {
         engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1090'",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
           "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": inaptitude,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
         }),

@@ -17,6 +17,7 @@ describe("Formule indemnité licenciement - 1516", () => {
       const situation = engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1516'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
       });
 
