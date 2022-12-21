@@ -21,6 +21,5 @@ export const validateStep = (state: CommonInformationsStoreInput) => {
   const isValid = deepEqualObject(errorState, {
     errorInformations: {},
   });
-  console.log(isValid);
   return { isValid, errorState };
 };
