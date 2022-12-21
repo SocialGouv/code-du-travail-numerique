@@ -7,6 +7,7 @@ describe("Vérification des références juridiques pour la CC 2098", () => {
       "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle":
         "'Oui'",
       "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 10,
+      "contrat salarié . indemnité de licenciement . ancienneté requise en année": 10,
       "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2800,
     });
     const result = getReferences(situation, "résultat conventionnel");
@@ -36,6 +37,7 @@ describe("Vérification des références juridiques pour la CC 2098", () => {
         "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle":
           "'Non'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 10,
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année": 10,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2800,
       });
 
@@ -66,6 +68,7 @@ describe("Vérification des références juridiques pour la CC 2098", () => {
         "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle":
           "'Non'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 10,
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année": 10,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2800,
       });
 
