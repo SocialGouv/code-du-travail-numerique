@@ -7,6 +7,7 @@ import { differenceInMonths } from "date-fns";
 import { AncienneteStoreInput } from "./types";
 import { Agreement } from "../../../../../conventions/Search/api/type";
 import { parse } from "../../../../common/utils";
+import { CommonInformationsStoreInput } from "../../../../CommonSteps/Informations/store";
 
 const getTotalAbsence = (
   absencePeriods: Absence[],
@@ -29,6 +30,7 @@ const getTotalAbsence = (
 
 export const getErrorEligibility = (
   state: AncienneteStoreInput,
+  stateInfo: CommonInformationsStoreInput,
   agreement?: Agreement
 ) => {
   const dEntree = parse(state.dateEntree);
@@ -37,13 +39,18 @@ export const getErrorEligibility = (
   let minimalSeniority = 8;
   let minimalSeniorityError =
     "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois.";
-  switch (agreement?.num) {
-    case 3239:
-      minimalSeniority = 9;
-      minimalSeniorityError =
-        "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 9 mois.";
+  let diff = differenceInMonths(dNotification, dEntree);
+  if (
+    agreement?.num === 3239 &&
+    stateInfo.publicodesInformations[0].info === "'Assistant maternel'"
+  ) {
+    minimalSeniority = 9;
+    minimalSeniorityError =
+      "L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois.";
+  } else if (agreement?.num === 1517) {
+    const dSortie = parse(state.dateSortie);
+    diff = differenceInMonths(dSortie, dEntree);
   }
-  const diff = differenceInMonths(dNotification, dEntree);
   const isEligible =
     !state.dateEntree ||
     !state.dateNotification ||

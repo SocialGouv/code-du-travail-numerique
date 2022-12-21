@@ -85,6 +85,7 @@ const createAncienneteStore: StoreSlice<
     onEligibilityCheckStepAnciennete: () => {
       const errorEligibility = getErrorEligibility(
         get().ancienneteData.input,
+        get().informationsData.input,
         get().agreementData.input.agreement
       );
 
