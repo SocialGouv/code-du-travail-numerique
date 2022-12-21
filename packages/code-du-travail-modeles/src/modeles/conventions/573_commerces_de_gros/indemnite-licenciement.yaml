@@ -340,7 +340,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
     Article 4 de l’Avenant I relatif aux cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373
   cdtn:
     formule:
-      formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3]+ 20% * 3 / 10 * Sref * A1[ + 20% * 4 / 10 * Sref * A2][ + 20% * 5 / 10 * Sref * A3]
+      formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3] + 20% * (3 / 10 * Sref * A1)[ + 20% * (4 / 10 * Sref * A2)][ + 20% * (5 / 10 * Sref * A3)]
       explanations:
         - "A1 : Années de présence dans la tranche de 0 à 9 ans inclus": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
         - "A2 : Années de présence dans la tranche de 10 à 19 ans inclus": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
@@ -362,7 +362,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
     Article 4 de l’Avenant I relatif aux cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373
   cdtn:
     formule:
-      formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3]+ 15% * 3 / 10 * Sref * A1[ + 15% * 4 / 10 * Sref * A2][ + 15% * 5 / 10 * Sref * A3]
+      formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3] + 15% * (3 / 10 * Sref * A1)[ + 15% * (4 / 10 * Sref * A2)][ + 15% * (5 / 10 * Sref * A3)]
       explanations:
         - "A1 : Années de présence dans la tranche de 0 à 9 ans inclus": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
         - "A2 : Années de présence dans la tranche de 10 à 19 ans inclus": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
