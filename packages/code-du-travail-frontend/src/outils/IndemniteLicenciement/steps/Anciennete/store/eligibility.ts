@@ -55,6 +55,6 @@ export const getErrorEligibility = (
     const dSortie = parse(state.dateSortie);
     diff = differenceInMonths(dSortie, dEntree);
   }
-  const isEligible = diff < 0 || diff - totalAbsence >= 8;
+  const isEligible = diff < 0 || diff - totalAbsence >= minimalSeniority;
   return !isEligible ? minimalSeniorityError : undefined;
 };
