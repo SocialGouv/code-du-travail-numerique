@@ -1,8 +1,13 @@
 import type Engine from "publicodes";
 import type { RuleNode } from "publicodes";
 
-import type { Formula } from "../types";
 import { nonNullable } from "./array";
+
+export type Formula = {
+  formula: string;
+  explanations: string[];
+  annotations?: string[];
+};
 
 export type NodeFormula = {
   formula: string;
