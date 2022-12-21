@@ -39,7 +39,7 @@ const initialState: ResultStoreData = {
     legalReferences: [],
     publicodesLegalResult: { value: "" },
     isAgreementBetter: false,
-    isEligible: true,
+    isEligible: false,
   },
   error: {},
   hasBeenSubmit: true,
@@ -74,10 +74,14 @@ const createResultStore: StoreSlice<
         .errorEligibility;
       const ancienneteEligibility = !get().ancienneteData.error
         .errorEligibility;
+      const informationEligibility = !get().informationsData.error
+        .errorEligibility;
       set(
         produce((state: ResultStoreSlice) => {
           state.resultData.input.isEligible =
-            contratTravailEligibility && ancienneteEligibility;
+            contratTravailEligibility &&
+            ancienneteEligibility &&
+            informationEligibility;
         })
       );
     },
@@ -85,7 +89,13 @@ const createResultStore: StoreSlice<
       const contratTravailEligibility = get().contratTravailData.error
         .errorEligibility;
       const ancienneteEligibility = get().ancienneteData.error.errorEligibility;
-      return contratTravailEligibility || ancienneteEligibility;
+      const informationEligibility = get().informationsData.error
+        .errorEligibility;
+      return (
+        contratTravailEligibility ||
+        ancienneteEligibility ||
+        informationEligibility
+      );
     },
     getPublicodesResult: () => {
       const refSalary = get().salairesData.input.refSalary;

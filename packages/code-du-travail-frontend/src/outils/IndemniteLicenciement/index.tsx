@@ -80,6 +80,7 @@ const IndemniteLicenciementSimulator = ({
     onValidateStepContratTravail,
     onEligibilityCheckStepInfo,
     onEligibilityCheckStepAnciennete,
+    onEligibilityCheckCommonInfo,
     isStepContratTravailValid,
     onValidateStepAnciennete,
     isStepAncienneteValid,
@@ -98,6 +99,8 @@ const IndemniteLicenciementSimulator = ({
       state.contratTravailFunction.onEligibilityCheckStepInfo,
     onEligibilityCheckStepAnciennete:
       state.ancienneteFunction.onEligibilityCheckStepAnciennete,
+    onEligibilityCheckCommonInfo:
+      state.informationsFunction.onEligibilityCheckCommonInfo,
     isStepContratTravailValid: state.contratTravailData.isStepValid,
     onValidateStepAnciennete: state.ancienneteFunction.onValidateStepAnciennete,
     isStepAncienneteValid: state.ancienneteData.isStepValid,
@@ -175,6 +178,7 @@ const IndemniteLicenciementSimulator = ({
           stepName: IndemniteLicenciementStepName.Informations,
           isStepValid: isStepInformationsValid,
           validator: onValidateStepInformations,
+          validatorEligibility: onEligibilityCheckCommonInfo,
         },
       ]}
       hiddenStep={getHiddenSteps()}

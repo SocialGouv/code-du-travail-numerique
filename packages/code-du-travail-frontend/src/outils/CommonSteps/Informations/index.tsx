@@ -8,14 +8,12 @@ import { PublicodesInformation } from "./store";
 import Html from "../../../common/Html";
 
 export type InformationStepProps = {
-  blockingNotification?: string;
   onChange: (key: string, value: unknown) => void;
   informations: PublicodesInformation[];
   errors: Record<string, string>;
 };
 
 const CommonInformationStep = ({
-  blockingNotification,
   onChange,
   informations,
   errors,
@@ -34,25 +32,7 @@ const CommonInformationStep = ({
         />
       );
     })}
-    {blockingNotification && (
-      <StyledAlert variant="primary">
-        <Paragraph noMargin>
-          <Text variant="primary" fontSize="hsmall" fontWeight="700">
-            À noter
-          </Text>
-          <br />
-          <Html>{blockingNotification}</Html>
-        </Paragraph>
-      </StyledAlert>
-    )}
   </>
 );
-
-const { spacings } = theme;
-
-const StyledAlert = styled(Alert)`
-  margin-top: ${spacings.medium};
-  width: 100%;
-`;
 
 export default CommonInformationStep;

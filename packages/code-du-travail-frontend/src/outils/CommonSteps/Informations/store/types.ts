@@ -18,7 +18,7 @@ export type CommonInformationsStoreInput = {
 
 export type CommonInformationsStoreError = {
   errorInformations: Record<string, string>;
-  errorNotificationBloquante?: string;
+  errorEligibility?: string;
 };
 
 export type CommonInformationsStoreData = {
@@ -32,6 +32,7 @@ export type CommonInformationsStoreFn = {
   onInformationsChange: (questionKey: string, value: string) => void;
   generatePublicodesQuestions: () => void;
   onValidateStep: () => boolean;
+  onEligibilityCheckCommonInfo: () => boolean;
   onSetStepHidden: () => void;
 };
 

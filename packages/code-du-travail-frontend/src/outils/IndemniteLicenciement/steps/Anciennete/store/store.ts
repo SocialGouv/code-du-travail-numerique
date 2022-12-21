@@ -27,7 +27,10 @@ const initialState: AncienneteStoreData = {
 
 const createAncienneteStore: StoreSlice<
   AncienneteStoreSlice,
-  SalairesStoreSlice & CommonAgreementStoreSlice & CommonInformationsStoreSlice & ContratTravailStoreSlice
+  SalairesStoreSlice &
+    CommonAgreementStoreSlice &
+    CommonInformationsStoreSlice &
+    ContratTravailStoreSlice
 > = (set, get) => ({
   ancienneteData: { ...initialState },
   ancienneteFunction: {
@@ -86,6 +89,7 @@ const createAncienneteStore: StoreSlice<
     onEligibilityCheckStepAnciennete: () => {
       const errorEligibility = getErrorEligibility(
         get().ancienneteData.input,
+        get().informationsData.input,
         get().contratTravailData.input.licenciementInaptitude === "oui",
         get().agreementData.input.agreement
       );

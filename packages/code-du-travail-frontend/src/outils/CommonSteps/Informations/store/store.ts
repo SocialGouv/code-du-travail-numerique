@@ -205,6 +205,17 @@ const createCommonInformationsStore: StoreSlice<
       get().informationsFunction.onSetStepHidden();
       return isValid;
     },
+    onEligibilityCheckCommonInfo: () => {
+      const state = get().informationsData.input;
+      const errorEligibility = state.blockingNotification;
+
+      set(
+        produce((state: CommonInformationsStoreSlice) => {
+          state.informationsData.error.errorEligibility = errorEligibility;
+        })
+      );
+      return !errorEligibility;
+    },
   },
 });
 
