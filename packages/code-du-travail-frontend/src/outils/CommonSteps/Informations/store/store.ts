@@ -16,7 +16,6 @@ import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from ".
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
 import { informationToSituation } from "../utils";
-import { getErrorEligibility } from "./eligibility";
 
 const initialState: CommonInformationsStoreData = {
   input: {
@@ -208,7 +207,7 @@ const createCommonInformationsStore: StoreSlice<
     },
     onEligibilityCheckCommonInfo: () => {
       const state = get().informationsData.input;
-      const errorEligibility = getErrorEligibility(state);
+      const errorEligibility = state.blockingNotification;
 
       set(
         produce((state: CommonInformationsStoreSlice) => {
