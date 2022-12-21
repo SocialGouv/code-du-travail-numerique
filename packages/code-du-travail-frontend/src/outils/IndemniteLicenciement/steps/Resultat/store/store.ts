@@ -22,10 +22,7 @@ import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
 import { AgreementInformation, hasNoLegalIndemnity } from "../../../common";
-import {
-  getAgreementFormula,
-  getAgreementReferenceSalary,
-} from "../../../agreements";
+import { getAgreementReferenceSalary } from "../../../agreements";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
 import getAgreementSeniority from "../../../agreements/seniority";
@@ -173,13 +170,7 @@ const createResultStore: StoreSlice<
           "résultat conventionnel"
         );
 
-        agreementFormula =
-          getAgreementFormula(
-            `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
-            agreementSeniority,
-            agreementRefSalary,
-            get as StoreApi<MainStore>["getState"]
-          ) || publicodes.getFormule();
+        agreementFormula = publicodes.getFormule();
 
         agreementNotifications = publicodes.getNotifications();
 

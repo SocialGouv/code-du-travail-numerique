@@ -1,7 +1,4 @@
-import {
-  FormuleFactory,
-  SupportedCcIndemniteLicenciement,
-} from "../../../../common";
+import { SupportedCcIndemniteLicenciement } from "../../../../common";
 import { CategoryPro44 } from "../../salary";
 
 describe("Formule indemnité licenciement - 44", () => {
@@ -131,18 +128,6 @@ describe("Formule indemnité licenciement - 44", () => {
       age,
       isEconomicFiring,
     }) => {
-      const formula = new FormuleFactory().create(
-        SupportedCcIndemniteLicenciement.IDCC0044
-      );
-      if (!formula) throw new Error("Formula should be defined");
-      const result = formula.computeFormula({
-        age,
-        category,
-        isEconomicFiring,
-        refSalary: 1000,
-        seniority,
-      });
-
       expect(result.formula).toEqual(expectedFormula);
       expect(result.explanations).toEqual(expectedExplanations);
     }

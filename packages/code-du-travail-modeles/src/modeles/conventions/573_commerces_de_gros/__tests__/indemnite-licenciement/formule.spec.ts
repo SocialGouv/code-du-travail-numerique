@@ -1,9 +1,5 @@
-import {
-  FormuleFactory,
-  QuestionOuiNon,
-  SupportedCcIndemniteLicenciement,
-} from "../../../../common";
-import { CatPro573 } from "../../formula";
+import { getFormule, QuestionOuiNon } from "../../../../common";
+import { CatPro573 } from "../../salary";
 
 describe("Formule indemnité licenciement - 573", () => {
   test.each`
@@ -46,18 +42,14 @@ describe("Formule indemnité licenciement - 573", () => {
       age,
       cadreAuMoins15ans,
     }) => {
-      const formula = new FormuleFactory().create(
-        SupportedCcIndemniteLicenciement.IDCC0573
-      );
-      if (!formula) throw new Error("Formula should be defined");
-      const result = formula.computeFormula({
-        age,
-        cadreAuMoins15ans,
-        category,
-        licenciementEco,
-        refSalary: 1000,
-        seniority,
+      const situation = engine.setSituation({
+        "contrat salarié . convention collective": "'IDCC1596'",
+        "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age": age,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
       });
+
+      const result = getFormule(situation);
 
       expect(result.formula).toEqual(expectedFormula);
       expect(result.explanations).toEqual(expectedExplanations);

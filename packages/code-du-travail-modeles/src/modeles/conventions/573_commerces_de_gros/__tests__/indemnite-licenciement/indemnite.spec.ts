@@ -1,5 +1,5 @@
 import { QuestionOuiNon } from "../../../../common";
-import { CatPro573 } from "../../formula";
+import { CatPro573 } from "../../salary";
 
 describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
   describe("Autres", () => {
