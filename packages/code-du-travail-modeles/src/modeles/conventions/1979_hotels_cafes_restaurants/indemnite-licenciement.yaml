@@ -29,8 +29,8 @@ contrat salarié . convention collective . hotels cafes restaurants . indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 ans
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 10 ans
+      - contrat salarié . indemnité de licenciement . ancienneté requise en année >= 2 ans
+      - contrat salarié . indemnité de licenciement . ancienneté requise en année < 10 ans
   somme:
     - facteur 1
     - facteur 2
@@ -47,7 +47,7 @@ contrat salarié . convention collective . hotels cafes restaurants . indemnité
 
 contrat salarié . convention collective . hotels cafes restaurants . indemnité de licenciement . résultat conventionnel 2:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 10 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année >= 10 ans
   somme:
     - facteur 1
     - facteur 2
@@ -65,6 +65,6 @@ contrat salarié . convention collective . hotels cafes restaurants . indemnité
 
 contrat salarié . convention collective . hotels cafes restaurants . indemnité de licenciement . résultat conventionnel 3:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 2 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année < 2 ans
   valeur: 0
   unité: €

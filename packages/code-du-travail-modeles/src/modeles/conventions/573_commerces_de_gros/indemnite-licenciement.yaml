@@ -250,7 +250,7 @@ contrat salarié . convention collective . commerces de gros . somme cadre avec 
 # Résultats
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . autres . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année >= 1
   valeur: somme autre
   unité: €
   arrondi: 2 décimales
@@ -268,7 +268,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année >= 1
   non applicable si: contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age . résultat conventionnel 55 ans
   valeur: somme agent sans majoration
   unité: €
@@ -289,7 +289,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15
+      - contrat salarié . indemnité de licenciement . ancienneté requise en année >= 15
       - age >= 55
   valeur: somme agent avec majoration
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
@@ -310,8 +310,8 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5
+      - contrat salarié . indemnité de licenciement . ancienneté requise en année >= 1
+      - contrat salarié . indemnité de licenciement . ancienneté requise en année <= 5
   valeur: formule 3 agent
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
   unité: €
@@ -330,7 +330,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15
+      - contrat salarié . indemnité de licenciement . ancienneté requise en année >= 15
       - age >= 55
   valeur: somme cadre avec majoration 20%
   unité: €
@@ -351,7 +351,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 15
+      - contrat salarié . indemnité de licenciement . ancienneté requise en année >= 15
       - age >= 50
       - age < 55
   valeur: somme cadre avec majoration 15%
@@ -375,7 +375,7 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
     une de ces conditions:
       - cadre durant au moins de 15 ans . age . résultat conventionnel 55 ans
       - cadre durant au moins de 15 ans . age . résultat conventionnel 50 ans
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année > 5
   valeur: somme cadre sans majoration
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
   unité: €

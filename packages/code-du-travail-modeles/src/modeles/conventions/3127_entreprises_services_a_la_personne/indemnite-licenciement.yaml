@@ -32,8 +32,8 @@ contrat salarié . convention collective . entreprises de services à la personn
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - indemnité de licenciement . ancienneté conventionnelle en année >= 1 an
-      - indemnité de licenciement . ancienneté conventionnelle en année <= 10 ans
+      - indemnité de licenciement . ancienneté requise en année >= 1 an
+      - indemnité de licenciement . ancienneté requise en année <= 10 ans
   valeur: dix ans ou moins
   unité: €
   arrondi: 2 décimales
@@ -48,7 +48,7 @@ contrat salarié . convention collective . entreprises de services à la personn
 
 contrat salarié . convention collective . entreprises de services à la personne . indemnité de licenciement . résultat conventionnel plus de 10ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: indemnité de licenciement . ancienneté conventionnelle en année > 10 ans
+  applicable si: indemnité de licenciement . ancienneté requise en année > 10 ans
   somme:
     - dix ans ou moins
     - plus de dix ans

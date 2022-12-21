@@ -67,8 +67,8 @@ contrat salarié . convention collective . batiment ouvriers employés . indemni
 contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . plus de 55 ans . entre 2 et 5 ans d'ancienneté:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5
+      - contrat salarié . indemnité de licenciement . ancienneté requise en année >= 2
+      - contrat salarié . indemnité de licenciement . ancienneté requise en année <= 5
   valeur: oui
 
 contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . plus de 55 ans . entre 2 et 5 ans d'ancienneté . résultat conventionnel:
@@ -90,7 +90,7 @@ contrat salarié . convention collective . batiment ouvriers employés . indemni
       formula: (1/10 * Sref * A) + (1/100 * Sref * A)
 
 contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . plus de 55 ans . plus de 5 ans d'ancienneté:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année > 5
   valeur: oui
 
 contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . plus de 55 ans . plus de 5 ans d'ancienneté . résultat conventionnel:
@@ -122,8 +122,8 @@ contrat salarié . convention collective . batiment ouvriers employés . indemni
 contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . moins de 55 ans . entre 2 et 5 ans d'ancienneté:
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année <= 5
+      - contrat salarié . indemnité de licenciement . ancienneté requise en année >= 2
+      - contrat salarié . indemnité de licenciement . ancienneté requise en année <= 5
   valeur: oui
 
 contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . moins de 55 ans . entre 2 et 5 ans d'ancienneté . résultat conventionnel:
@@ -144,7 +144,7 @@ contrat salarié . convention collective . batiment ouvriers employés . indemni
       formula: 1/10 * Sref * A
 
 contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . moins de 55 ans . plus de 5 ans d'ancienneté:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 5
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année > 5
   valeur: oui
 
 contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . moins de 55 ans . plus de 5 ans d'ancienneté . résultat conventionnel:
@@ -169,7 +169,7 @@ contrat salarié . convention collective . batiment ouvriers employés . indemni
 # Inférieur à 2 ans d'ancienneté
 contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 2
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année < 2
   valeur: 0
   unité: €
   arrondi: 2 décimales
