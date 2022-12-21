@@ -148,7 +148,12 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   références:
     Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
-
+  cdtn:
+    formule:
+      formula: 3 / 10 * Sref * A
+      explanations:
+        - "A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 2:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -164,6 +169,11 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   références:
     Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+  cdtn:
+    formule:
+      formula: Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 3:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -185,6 +195,12 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   références:
     Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+  cdtn:
+    formule:
+      formula: 2 * Sref + 3 / 10 * Sref * A
+      explanations:
+        - "A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 3 bis:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -205,6 +221,12 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
     Article 28 de l’Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846396?idConteneur=KALICONT000005635613
+  cdtn:
+    formule:
+      formula: 2 * Sref + 3 / 10 * Sref * A
+      explanations:
+        - "A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 ### Autres licenciement
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 4:
@@ -225,6 +247,12 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   références:
     Article 28 de l’Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846396?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+  cdtn:
+    formule:
+      formula: 3 / 10 * Sref * A
+      explanations:
+        - "A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 5:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -245,6 +273,12 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   références:
     Article 28 de l’Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846396?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+  cdtn:
+    formule:
+      formula: Sref + 3 / 10 * Sref * A
+      explanations:
+        - "A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 6:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -264,6 +298,12 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   références:
     Article 28 de l’Avenant n° 1 du 11 février 1971 relatif aux ouvriers et collaborateurs: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846396?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+  cdtn:
+    formule:
+      formula: 2 * Sref + 3 / 10 * Sref * A
+      explanations:
+        - "A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 ## Agents de maîtrise
 
@@ -302,6 +342,14 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   références:
     Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+  cdtn:
+    formule:
+      formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3] + 15% * (3 / 10 * Sref * A1)[ + 15% * (4 / 10 * Sref * A2)][ + 15% * (5 / 10 * Sref * A3)]
+      explanations:
+        - "A1 : Années de présence dans la tranche de 0 à 9 ans inclus": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
+        - "A2 : Années de présence dans la tranche de 10 à 19 ans inclus": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
+        - "A3 : Années de présence dans la tranche à partir de 20 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 9:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -323,6 +371,14 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   références:
     Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+  cdtn:
+    formule:
+      formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3] + 15% * (3 / 10 * Sref * A1)[ + 15% * (4 / 10 * Sref * A2)][ + 15% * (5 / 10 * Sref * A3)]
+      explanations:
+        - "A1 : Années de présence dans la tranche de 0 à 9 ans inclus": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
+        - "A2 : Années de présence dans la tranche de 10 à 19 ans inclus": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
+        - "A3 : Années de présence dans la tranche à partir de 20 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 9 bis:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -343,6 +399,14 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
     Article 21 de l’ Avenant n° 2 du 14 mars 1955 relatif aux agents de maîtrise et certains techniciens: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846463?idConteneur=KALICONT000005635613
+  cdtn:
+    formule:
+      formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3] + 15% * (3 / 10 * Sref * A1)[ + 15% * (4 / 10 * Sref * A2)][ + 15% * (5 / 10 * Sref * A3)]
+      explanations:
+        - "A1 : Années de présence dans la tranche de 0 à 9 ans inclus": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
+        - "A2 : Années de présence dans la tranche de 10 à 19 ans inclus": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
+        - "A3 : Années de présence dans la tranche à partir de 20 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 ### Autres licenciement
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 10:
@@ -363,6 +427,14 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   références:
     Article 21 de l’ Avenant n° 2 du 14 mars 1955 relatif aux agents de maîtrise et certains techniciens: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846463?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+  cdtn:
+    formule:
+      formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3] + 15% * (3 / 10 * Sref * A1)[ + 15% * (4 / 10 * Sref * A2)][ + 15% * (5 / 10 * Sref * A3)]
+      explanations:
+        - "A1 : Années de présence dans la tranche de 0 à 9 ans inclus": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
+        - "A2 : Années de présence dans la tranche de 10 à 19 ans inclus": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
+        - "A3 : Années de présence dans la tranche à partir de 20 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 11:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -383,6 +455,14 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   références:
     Article 21 de l’ Avenant n° 2 du 14 mars 1955 relatif aux agents de maîtrise et certains techniciens: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846463?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+  cdtn:
+    formule:
+      formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3] + 15% * (3 / 10 * Sref * A1)[ + 15% * (4 / 10 * Sref * A2)][ + 15% * (5 / 10 * Sref * A3)]
+      explanations:
+        - "A1 : Années de présence dans la tranche de 0 à 9 ans inclus": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
+        - "A2 : Années de présence dans la tranche de 10 à 19 ans inclus": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
+        - "A3 : Années de présence dans la tranche à partir de 20 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 12:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -402,6 +482,14 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   références:
     Article 21 de l’ Avenant n° 2 du 14 mars 1955 relatif aux agents de maîtrise et certains techniciens: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846463?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+  cdtn:
+    formule:
+      formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3] + 15% * (3 / 10 * Sref * A1)[ + 15% * (4 / 10 * Sref * A2)][ + 15% * (5 / 10 * Sref * A3)]
+      explanations:
+        - "A1 : Années de présence dans la tranche de 0 à 9 ans inclus": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
+        - "A2 : Années de présence dans la tranche de 10 à 19 ans inclus": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
+        - "A3 : Années de présence dans la tranche à partir de 20 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 ## Ingénieur
 
@@ -424,6 +512,14 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   références:
     Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+  cdtn:
+    formule:
+      formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3] + 15% * (3 / 10 * Sref * A1)[ + 15% * (4 / 10 * Sref * A2)][ + 15% * (5 / 10 * Sref * A3)]
+      explanations:
+        - "A1 : Années de présence dans la tranche de 0 à 9 ans inclus": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
+        - "A2 : Années de présence dans la tranche de 10 à 19 ans inclus": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
+        - "A3 : Années de présence dans la tranche à partir de 20 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 14:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -439,6 +535,14 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   références:
     Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+  cdtn:
+    formule:
+      formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3] + 15% * (3 / 10 * Sref * A1)[ + 15% * (4 / 10 * Sref * A2)][ + 15% * (5 / 10 * Sref * A3)]
+      explanations:
+        - "A1 : Années de présence dans la tranche de 0 à 9 ans inclus": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
+        - "A2 : Années de présence dans la tranche de 10 à 19 ans inclus": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
+        - "A3 : Années de présence dans la tranche à partir de 20 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 15:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -460,6 +564,14 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   références:
     Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+  cdtn:
+    formule:
+      formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3] + 15% * (3 / 10 * Sref * A1)[ + 15% * (4 / 10 * Sref * A2)][ + 15% * (5 / 10 * Sref * A3)]
+      explanations:
+        - "A1 : Années de présence dans la tranche de 0 à 9 ans inclus": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
+        - "A2 : Années de présence dans la tranche de 10 à 19 ans inclus": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
+        - "A3 : Années de présence dans la tranche à partir de 20 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 15 bis:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -480,6 +592,14 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
     Article 11 de l’Accord du 15 janvier 1991 relatif à la politique de l'emploi (En vigueur non étendu): https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846081?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
     Article 14 de l’Avenant n° 3 du 16 juin 1955 relatif aux ingénieurs et cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846317?idConteneur=KALICONT000005635613
+  cdtn:
+    formule:
+      formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3] + 15% * (3 / 10 * Sref * A1)[ + 15% * (4 / 10 * Sref * A2)][ + 15% * (5 / 10 * Sref * A3)]
+      explanations:
+        - "A1 : Années de présence dans la tranche de 0 à 9 ans inclus": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
+        - "A2 : Années de présence dans la tranche de 10 à 19 ans inclus": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
+        - "A3 : Années de présence dans la tranche à partir de 20 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 ### Autres licenciement
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 16:
@@ -500,6 +620,14 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   références:
     Article 14 de l’Avenant n° 3 du 16 juin 1955 relatif aux ingénieurs et cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846317?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+  cdtn:
+    formule:
+      formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3] + 15% * (3 / 10 * Sref * A1)[ + 15% * (4 / 10 * Sref * A2)][ + 15% * (5 / 10 * Sref * A3)]
+      explanations:
+        - "A1 : Années de présence dans la tranche de 0 à 9 ans inclus": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
+        - "A2 : Années de présence dans la tranche de 10 à 19 ans inclus": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
+        - "A3 : Années de présence dans la tranche à partir de 20 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 17:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -520,6 +648,14 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   références:
     Article 14 de l’Avenant n° 3 du 16 juin 1955 relatif aux ingénieurs et cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846317?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+  cdtn:
+    formule:
+      formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3] + 15% * (3 / 10 * Sref * A1)[ + 15% * (4 / 10 * Sref * A2)][ + 15% * (5 / 10 * Sref * A3)]
+      explanations:
+        - "A1 : Années de présence dans la tranche de 0 à 9 ans inclus": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
+        - "A2 : Années de présence dans la tranche de 10 à 19 ans inclus": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
+        - "A3 : Années de présence dans la tranche à partir de 20 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 18:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -539,6 +675,14 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   références:
     Article 14 de l’Avenant n° 3 du 16 juin 1955 relatif aux ingénieurs et cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846317?idConteneur=KALICONT000005635613
     Article 10 de la Convention collective nationale des industries chimiques et connexes du 30 décembre 1952: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005846022?idConteneur=KALICONT000005635613&origin=list#KALIARTI000005846022
+  cdtn:
+    formule:
+      formula: 3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3] + 15% * (3 / 10 * Sref * A1)[ + 15% * (4 / 10 * Sref * A2)][ + 15% * (5 / 10 * Sref * A3)]
+      explanations:
+        - "A1 : Années de présence dans la tranche de 0 à 9 ans inclus": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
+        - "A2 : Années de présence dans la tranche de 10 à 19 ans inclus": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
+        - "A3 : Années de présence dans la tranche à partir de 20 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 ### Fallback
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 19:
