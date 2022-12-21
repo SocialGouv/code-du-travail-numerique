@@ -1,4 +1,4 @@
-import { theme, Tabs, Accordion } from "@socialgouv/cdtn-ui";
+import { theme, Tabs, Accordion, Heading } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 import { Content, SectionDisplayMode } from "cdtn-types";
 
@@ -31,7 +31,7 @@ export const Contents = ({
         <Tabs
           data={contents?.map(({ title }, index) => ({
             panel: editorialContent?.[index],
-            tab: title,
+            tab: (<Heading as="h2">{title}</Heading>),
           }))}
           onSelect={(index) => {
             if (dismissalProcess && contents) {

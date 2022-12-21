@@ -2,7 +2,7 @@ describe("CC 3127", () => {
   describe("Calcul de l'indemnité de licenciement", () => {
     test.each`
       seniority  | salaireRef | expectedCompensation
-      ${0.75}    | ${2600}    | ${0}
+      ${11 / 12} | ${2600}    | ${0}
       ${1}       | ${2600}    | ${520}
       ${13 / 12} | ${2600}    | ${563.33}
       ${13}      | ${2600}    | ${6240}

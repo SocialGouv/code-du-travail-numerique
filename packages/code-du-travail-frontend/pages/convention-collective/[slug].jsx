@@ -6,7 +6,6 @@ import frLocale from "date-fns/locale/fr";
 import getConfig from "next/config";
 import { withRouter } from "next/router";
 import React from "react";
-import EventTracker from "../../src/lib/tracking/EventTracker";
 
 import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
@@ -93,7 +92,6 @@ class ConventionCollective extends React.Component {
         >
           <Convention convention={convention} />
         </Answer>
-        <EventTracker />
       </Layout>
     );
   }

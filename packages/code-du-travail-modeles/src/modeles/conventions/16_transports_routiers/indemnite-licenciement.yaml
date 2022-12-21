@@ -4,7 +4,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . age:
   titre: Âge du salarié
-  question: Quel est l'âge du salarié&nbsp;?
+  question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
   cdtn:
     type: entier
 
@@ -14,7 +14,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
       - age >= 60
       - age <= 65
   titre: Le salarié remplit les conditions pour partir à la retraite
-  question: Le salarié remplit-il les conditions pour partir à la retraite&nbsp;?
+  question: Le salarié a-t-il atteint l'âge qui lui permet de bénéficier d'une retraite&nbsp;?
   cdtn:
     type: oui-non
 
@@ -66,13 +66,13 @@ contrat salarié . convention collective . transports routiers . indemnité de l
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age:
   titre: Âge du salarié
-  question: Quel est l'âge du salarié&nbsp;?
+  question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
   cdtn:
     type: entier
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . droit à la retraite au titre du régime en vigueur dans l'entreprise:
   titre: Le salarié remplit les conditions pour partir à la retraite
-  question: Le salarié remplit-il les conditions pour partir à la retraite&nbsp;?
+  question: Le salarié a-t-il atteint l'âge qui lui permet de bénéficier d'une retraite&nbsp;?
   cdtn:
     type: oui-non
 
@@ -404,7 +404,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . age:
   applicable si: incapacité de conduite = 'Non'
   titre: Âge du salarié
-  question: Quel est l'âge du salarié&nbsp;?
+  question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
   cdtn:
     type: entier
 
@@ -414,7 +414,7 @@ contrat salarié . convention collective . transports routiers . indemnité de l
       - age >= 60
       - age <= 65
   titre: Le salarié remplit les conditions pour partir à la retraite
-  question: Le salarié remplit-il les conditions pour partir à la retraite&nbsp;?
+  question: Le salarié a-t-il atteint l'âge qui lui permet de bénéficier d'une retraite&nbsp;?
   cdtn:
     type: oui-non
 

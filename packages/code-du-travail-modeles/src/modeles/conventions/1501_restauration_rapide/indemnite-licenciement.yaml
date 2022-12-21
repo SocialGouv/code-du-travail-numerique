@@ -22,7 +22,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age:
   applicable si: licenciement économique = 'Oui'
   titre: Âge du salarié
-  question: Quel est l'âge du salarié ?
+  question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
   unité: an
   cdtn:
     type: entier
@@ -61,11 +61,10 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
   unité: €
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . résultat conventionnel:
+  applicable si: indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
   grille:
     assiette: indemnité de licenciement . ancienneté conventionnelle en année
     tranches:
-      - montant: 0
-        plafond: 2 an
       - montant:
           somme:
             - dix ans ou moins
@@ -91,14 +90,14 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
           - licenciement économique . age <= 50 an
       - toutes ces conditions:
           - licenciement économique = 'Oui'
-          - licenciement économique . age > 50 an
+          - licenciement économique . age >= 50 an
           - indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
   valeur: non cadre . résultat conventionnel
 
 contrat salarié . convention collective . restauration rapide . indemnité de licenciement . non cadre . résultat conventionnel . moins de 10 ans résultat conventionnel:
   applicable si:
     toutes ces conditions:
-      - indemnité de licenciement . ancienneté conventionnelle en année > 2 an
+      - indemnité de licenciement . ancienneté conventionnelle en année >= 2 an
       - indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
   valeur: oui
   cdtn:
@@ -138,7 +137,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
   applicable si:
     toutes ces conditions:
       - licenciement économique = 'Oui'
-      - licenciement économique . age > 50 an
+      - licenciement économique . age >= 50 an
       - indemnité de licenciement . ancienneté conventionnelle en année > 10 an
   valeur:
     somme:
@@ -162,7 +161,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
   somme:
     - le minimum de:
         - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-        - 10an
+        - 10 an
     - (- 5 an)
   plancher: 0 an
 
@@ -241,7 +240,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
           - licenciement économique . age <= 50 an
       - toutes ces conditions:
           - licenciement économique = 'Oui'
-          - licenciement économique . age > 50 an
+          - licenciement économique . age >= 50 an
           - indemnité de licenciement . ancienneté conventionnelle en année <= 10 an
   valeur: contrat salarié . convention collective . restauration rapide . indemnité de licenciement . cadre . résultat conventionnel
 
@@ -305,7 +304,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
   applicable si:
     toutes ces conditions:
       - licenciement économique = 'Oui'
-      - licenciement économique . age > 50 an
+      - licenciement économique . age >= 50 an
       - indemnité de licenciement . ancienneté conventionnelle en année >= 10 an
   valeur:
     somme:

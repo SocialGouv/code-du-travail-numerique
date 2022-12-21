@@ -31,8 +31,12 @@ const getTotalAbsence = (
 export const getErrorEligibility = (
   state: AncienneteStoreInput,
   stateInfo: CommonInformationsStoreInput,
+  isInaptitude: boolean,
   agreement?: Agreement
 ) => {
+  if (isInaptitude || !state.dateEntree || !state.dateNotification) {
+    return;
+  }
   const dEntree = parse(state.dateEntree);
   const dNotification = parse(state.dateNotification);
   const totalAbsence = getTotalAbsence(state.absencePeriods, agreement);
@@ -51,10 +55,6 @@ export const getErrorEligibility = (
     const dSortie = parse(state.dateSortie);
     diff = differenceInMonths(dSortie, dEntree);
   }
-  const isEligible =
-    !state.dateEntree ||
-    !state.dateNotification ||
-    diff < 0 ||
-    diff - totalAbsence >= minimalSeniority;
+  const isEligible = diff < 0 || diff - totalAbsence >= 8;
   return !isEligible ? minimalSeniorityError : undefined;
 };

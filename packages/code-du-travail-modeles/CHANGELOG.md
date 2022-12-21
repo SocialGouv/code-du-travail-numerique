@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.88.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.87.0...v4.88.0) (2022-12-20)
+
+### Bug Fixes
+
+- **deps:** update dependency yaml to v2 ([#4735](https://github.com/SocialGouv/code-du-travail-numerique/issues/4735)) ([e3b4263](https://github.com/SocialGouv/code-du-travail-numerique/commit/e3b42633966187bcea331cefe7042266a48da342))
+- **lint:** remove warnings from lint staged ([#4780](https://github.com/SocialGouv/code-du-travail-numerique/issues/4780)) ([9c3a98d](https://github.com/SocialGouv/code-du-travail-numerique/commit/9c3a98da031af79448ccc9630ae5a16959a9726a))
+- **package:** migration de `react-fiche-service-public` ([#4759](https://github.com/SocialGouv/code-du-travail-numerique/issues/4759)) ([b76eba5](https://github.com/SocialGouv/code-du-travail-numerique/commit/b76eba54ab62c81d6f0c8df57fcfbb9e75f96d75))
+
+### Features
+
+- **modeles:** suppression du package data + fetching simulator information from api ([#4741](https://github.com/SocialGouv/code-du-travail-numerique/issues/4741)) ([f52190e](https://github.com/SocialGouv/code-du-travail-numerique/commit/f52190eddb893f1e083e10efdedb2392dc5c3702))
+
 # [4.87.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.22...v4.87.0) (2022-11-18)
 
 **Note:** Version bump only for package @socialgouv/modeles-social

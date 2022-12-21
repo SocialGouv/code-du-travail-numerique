@@ -30,6 +30,7 @@ import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
 import getAgreementSeniority from "../../../agreements/seniority";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
+import { dateOneDayLater } from "../../../common/date";
 
 const initialState: ResultStoreData = {
   input: {
@@ -102,6 +103,9 @@ const createResultStore: StoreSlice<
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
       const publicodes = get().resultData.publicodes;
+      const dateSortie = dateOneDayLater(
+        get().ancienneteData.input.dateSortie!
+      );
       if (!publicodes) {
         throw new Error("Publicodes is not defined");
       }
@@ -111,7 +115,7 @@ const createResultStore: StoreSlice<
       );
       const legalSeniority = factory.computeSeniority({
         dateEntree: get().ancienneteData.input.dateEntree!,
-        dateSortie: get().ancienneteData.input.dateSortie!,
+        dateSortie,
         absencePeriods: get().ancienneteData.input.absencePeriods,
       });
 
