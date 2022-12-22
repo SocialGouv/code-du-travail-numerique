@@ -205,6 +205,28 @@ export const ui = {
         },
       },
     },
+    infoWarning: {
+      title: {
+        eligible: byText("Attention il peut exister un montant plus favorable"),
+        ineligible: byText(
+          "Attention il peut quand même exister une indemnité pour le salarié"
+        ),
+      },
+      message: {
+        mayBeMoreFavorableCC: byText(
+          /Une convention collective, un accord d’entreprise, le contrat de travail ou un usage peut prévoir un montant plus favorable pour le salarié. Dans ce cas, c’est ce montant plus favorable qui s’applique au salarié./
+        ),
+        mayBeMoreFavorableFirmAgreement: byText(
+          /Un accord d’entreprise, le contrat de travail ou un usage peut prévoir un montant plus favorable pour le salarié. Dans ce cas, c’est ce montant plus favorable qui s’applique au salarié./
+        ),
+        mayBeCC: byText(
+          /Une convention collective, un accord d’entreprise, le contrat de travail ou un usage peut prévoir une indemnité pour le salarié./
+        ),
+        maybeFirmAgreement: byText(
+          /Un accord d’entreprise, le contrat de travail ou un usage peut prévoir une indemnité pour le salarié./
+        ),
+      },
+    },
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),

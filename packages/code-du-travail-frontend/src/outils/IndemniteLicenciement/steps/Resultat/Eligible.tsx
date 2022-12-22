@@ -2,13 +2,13 @@ import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 import React from "react";
 import { IndemniteLicenciementStepName } from "../..";
 import PubliReferences from "../../../common/PubliReferences";
+import Disclaimer from "../../../common/Disclaimer";
 import ShowDetails from "../../../common/ShowDetails";
 import { AgreementsInjector } from "../../agreements";
 import { getSupportedCcIndemniteLicenciement } from "../../common";
 
 import { useIndemniteLicenciementStore } from "../../store";
 import {
-  AgreementInfo,
   DecryptResult,
   FilledElements,
   ForMoreInfo,
@@ -43,6 +43,7 @@ export default function Eligible() {
     agreementNotifications,
     agreementHasNoLegalIndemnity,
     isStepSalaryHidden,
+    infoWarning,
   } = useIndemniteLicenciementStore((state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -72,6 +73,7 @@ export default function Eligible() {
     agreementHasNoLegalIndemnity:
       state.resultData.input.agreementHasNoLegalIndemnity,
     isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
+    infoWarning: state.resultData.input.infoWarning,
   }));
 
   React.useEffect(() => {
@@ -145,11 +147,10 @@ export default function Eligible() {
           }
         />
       </ShowDetails>
-      {!agreementHasNoLegalIndemnity && (
-        <AgreementInfo
-          hasSelectedAgreement={route !== "none"}
-          isAgreementSupported={!!supportedCc}
-        />
+      {!agreementHasNoLegalIndemnity && infoWarning && (
+        <Disclaimer title={infoWarning.title}>
+          <p>{infoWarning.message}</p>
+        </Disclaimer>
       )}
       <ForMoreInfo />
     </>
