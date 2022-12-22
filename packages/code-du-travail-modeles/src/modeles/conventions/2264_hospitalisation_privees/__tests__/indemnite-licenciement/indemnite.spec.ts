@@ -33,6 +33,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 2264", () => {
             "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
               "'Non'",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
           })
           .evaluate(
@@ -90,6 +91,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 2264", () => {
               "'Oui'",
             "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif": seniorityNonCadres,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
           })
           .evaluate(

@@ -34,7 +34,7 @@ contrat salarié . convention collective . établissement handicap . indemnité 
 # A : Année d'ancienneté
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année >= 2 ans
   valeur: non cadre . facteur 1 avec plafond
   unité: €
   arrondi: 2 décimales
@@ -60,7 +60,7 @@ contrat salarié . convention collective . établissement handicap . indemnité 
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . cadre . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si: non cadre durant une période = 'Oui'
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année > 2 ans
   valeur: cadre . facteur 1 avec plafond
   unité: €
   arrondi: 2 décimales
@@ -87,7 +87,7 @@ contrat salarié . convention collective . établissement handicap . indemnité 
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . cadre directeur . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si: non cadre durant une période = 'Oui'
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année > 2 ans
   valeur: cadre directeur . facteur 1 avec plafond
   unité: €
   arrondi: 2 décimales

@@ -34,6 +34,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
         "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age": age,
         "contrat salarié . indemnité de licenciement": "oui",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
       });
 

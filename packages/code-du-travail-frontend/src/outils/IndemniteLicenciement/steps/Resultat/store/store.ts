@@ -1,4 +1,5 @@
 import {
+  computeRequiredSeniority,
   Formula,
   IndemniteLicenciementPublicodes,
   Notification,
@@ -103,6 +104,10 @@ const createResultStore: StoreSlice<
       const dateSortie = dateOneDayLater(
         get().ancienneteData.input.dateSortie!
       );
+      const requiredSeniority = computeRequiredSeniority({
+        dateEntree: get().ancienneteData.input.dateEntree!,
+        dateNotification: get().ancienneteData.input.dateNotification!,
+      });
       if (!publicodes) {
         throw new Error("Publicodes is not defined");
       }
@@ -169,6 +174,7 @@ const createResultStore: StoreSlice<
             agreementSeniority,
             agreementRefSalary,
             legalSeniority,
+            requiredSeniority,
             refSalary,
             get().ancienneteData.input.dateNotification!,
             infos

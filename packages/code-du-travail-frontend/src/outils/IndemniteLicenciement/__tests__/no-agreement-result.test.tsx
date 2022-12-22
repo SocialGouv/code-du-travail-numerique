@@ -47,7 +47,7 @@ describe("Indemnité licenciement", () => {
         target: { value: "01/01/2021" },
       });
       fireEvent.change(ui.seniority.notificationDate.get(), {
-        target: { value: "01/01/2022" },
+        target: { value: "01/03/2022" },
       });
       fireEvent.change(ui.seniority.endDate.get(), {
         target: { value: "01/03/2022" },

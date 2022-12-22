@@ -18,7 +18,7 @@ contrat salarié . convention collective . hospitalisation privée à but non lu
   valeur: oui
 
 contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle . Autres salariés . résultat conventionnel plus de 8 mois:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année >= 8 mois
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
   valeur: oui
   références:
@@ -31,7 +31,7 @@ contrat salarié . convention collective . hospitalisation privée à but non lu
   valeur: oui
 
 contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle . Médecins pharmaciens et biologistes exerçant à titre permanent . résultat conventionnel plus de 8 mois:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année >= 8 mois
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
   valeur: oui
   références:
@@ -45,7 +45,7 @@ contrat salarié . convention collective . hospitalisation privée à but non lu
   valeur: oui
 
 contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle . Assistants familiaux des services de placements familiaux spécialisés . résultat conventionnel plus de 8 mois:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 8 mois
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année >= 8 mois
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
   valeur: oui
   références:

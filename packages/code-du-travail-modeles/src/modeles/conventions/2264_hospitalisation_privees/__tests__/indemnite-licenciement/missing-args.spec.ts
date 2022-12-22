@@ -4,6 +4,7 @@ describe("Missing args pour la CC 2264", () => {
       .setSituation({
         "contrat salarié . convention collective": "'IDCC2264'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 3,
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année": 3,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
       })
       .evaluate(
@@ -20,6 +21,7 @@ describe("Missing args pour la CC 2264", () => {
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle":
           "'Cadres'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 3,
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année": 3,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
       })
       .evaluate(
@@ -37,6 +39,7 @@ describe("Missing args pour la CC 2264", () => {
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle":
           "'Non-cadres'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 3,
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année": 3,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
       })
       .evaluate(
@@ -54,6 +57,7 @@ describe("Missing args pour la CC 2264", () => {
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
           "'Oui'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 3,
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année": 3,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
       })
       .evaluate(
@@ -73,6 +77,7 @@ describe("Missing args pour la CC 2264", () => {
           "'Oui'",
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif": 1,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 3,
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année": 3,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
       })
       .evaluate(
