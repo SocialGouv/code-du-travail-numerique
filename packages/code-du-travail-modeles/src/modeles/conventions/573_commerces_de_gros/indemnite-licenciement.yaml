@@ -305,6 +305,8 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
         - "A1 : Années de présence dans la tranche de 0 à 9 ans inclus": contrat salarié . convention collective . commerces de gros . de zero à neuf ans
         - "A2 : Années de présence dans la tranche à partir de 10 ans": contrat salarié . convention collective . commerces de gros . au delà de neuf ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      annotations:
+        - "20% : majoration pour motif économique"
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . résultat conventionnel moins 5 ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -346,6 +348,8 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
         - "A2 : Années de présence dans la tranche de 10 à 19 ans inclus": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
         - "A3 : Années de présence dans la tranche à partir de 20 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      annotations:
+        - "20% : majoration pour motif économique"
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age . résultat conventionnel 50 ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
@@ -368,6 +372,8 @@ contrat salarié . convention collective . commerces de gros . catégorie profes
         - "A2 : Années de présence dans la tranche de 10 à 19 ans inclus": contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans
         - "A3 : Années de présence dans la tranche à partir de 20 ans": contrat salarié . convention collective . commerces de gros . au delà de vingt ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+      annotations:
+        - "15% : majoration pour motif économique"
 
 contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . résultat conventionnel plus 5 ans:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
