@@ -22,13 +22,18 @@ import produce from "immer";
 import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
-import { AgreementInformation, hasNoLegalIndemnity } from "../../../common";
+import {
+  AgreementInformation,
+  hasNoLegalIndemnity,
+  getSupportedCcIndemniteLicenciement,
+} from "../../../common";
 import { getAgreementReferenceSalary } from "../../../agreements";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
 import getAgreementSeniority from "../../../agreements/seniority";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { dateOneDayLater } from "../../../common/date";
+import { getInfoWarning } from "./service";
 
 const initialState: ResultStoreData = {
   input: {
@@ -70,16 +75,36 @@ const createResultStore: StoreSlice<
     init: () => {
       const contratTravailEligibility = !get().contratTravailData.error
         .errorEligibility;
+      const isCdd = get().contratTravailData.input.typeContratTravail === "cdd";
       const ancienneteEligibility = !get().ancienneteData.error
         .errorEligibility;
       const informationEligibility = !get().informationsData.error
         .errorEligibility;
+      const agreement = get().agreementData.input.agreement;
+      const hasSelectedAgreement = get().agreementData.input.route !== "none";
+      const isAgreementSupported = !!getSupportedCcIndemniteLicenciement().find(
+        (v) =>
+          v.fullySupported &&
+          v.idcc === get().agreementData.input.agreement?.num
+      );
+      const isEligible =
+        contratTravailEligibility &&
+        ancienneteEligibility &&
+        informationEligibility;
+      const infoWarning = getInfoWarning({
+        isEligible,
+        hasSelectedAgreement,
+        isAgreementSupported,
+        isCdd,
+        agreement,
+      });
       set(
         produce((state: ResultStoreSlice) => {
           state.resultData.input.isEligible =
             contratTravailEligibility &&
             ancienneteEligibility &&
             informationEligibility;
+          state.resultData.input.infoWarning = infoWarning;
         })
       );
     },
