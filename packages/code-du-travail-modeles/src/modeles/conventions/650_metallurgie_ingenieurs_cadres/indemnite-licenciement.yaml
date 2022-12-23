@@ -127,7 +127,7 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
   applicable si:
     toutes ces conditions:
       - age >= 55
-      - age < 59
+      - age < 60
       - contrat salarié . indemnité de licenciement . ancienneté requise en année >= 2 an
       - contrat salarié . indemnité de licenciement . ancienneté requise en année < 5 an
   valeur:
@@ -152,7 +152,7 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
   applicable si:
     toutes ces conditions:
       - age >= 55
-      - age < 59
+      - age < 60
       - contrat salarié . indemnité de licenciement . ancienneté requise en année >= 5 an
   valeur:
     le maximum de:
@@ -307,11 +307,13 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
         - "A2 : Ancienneté au delà de 7 ans": contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . au dela de sept ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
+## Notifications
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . notification:
   type: notification
   description: "Le montant de l'indemnité pourrait être plus important si, avant le CDI, sous certaines conditions, le salarié a été lié à l’employeur par d'autres contrats."
   valeur: oui
 
+## Plafond / plancher formules
 contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel avec plafond 1:
   applicable si:
     une de ces conditions:
