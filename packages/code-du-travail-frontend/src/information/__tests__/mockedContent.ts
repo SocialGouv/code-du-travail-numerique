@@ -1,6 +1,6 @@
 import { ContentType, BlockDisplayMode, Content } from "cdtn-types";
 
-export const mockedContents: Omit<Content, "references">[] = [
+export const mockedContents: Content[] = [
   {
     name: "tab1",
     title: "Tab1",
@@ -9,17 +9,6 @@ export const mockedContents: Omit<Content, "references">[] = [
         type: ContentType.markdown,
         markdown: "myText1",
         html: "myText1",
-      },
-    ],
-  },
-  {
-    name: "tab2",
-    title: "Tab2",
-    blocks: [
-      {
-        type: ContentType.markdown,
-        markdown: "myText2",
-        html: "myText2",
       },
       {
         type: ContentType.graphic,
@@ -52,5 +41,38 @@ export const mockedContents: Omit<Content, "references">[] = [
         ],
       },
     ],
+    references: [
+      {
+        label: "referenceLabel",
+        links: [
+          {
+            id: "id1",
+            slug: "slug1",
+            title: "referenceLink1",
+            type: "external",
+            url: "url1",
+          },
+          {
+            id: "id2",
+            slug: "slug2",
+            title: "referenceLink2",
+            type: "external",
+            url: "url2",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "tab2",
+    title: "Tab2",
+    blocks: [
+      {
+        type: ContentType.markdown,
+        markdown: "myText2",
+        html: "myText2",
+      },
+    ],
+    references: [],
   },
 ];
