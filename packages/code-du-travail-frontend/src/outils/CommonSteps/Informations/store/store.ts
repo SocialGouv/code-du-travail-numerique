@@ -79,6 +79,7 @@ const createCommonInformationsStore: StoreSlice<
       set(
         produce((state: CommonInformationsStoreSlice) => {
           state.informationsData.input = initialState.input;
+          state.informationsData.error = initialState.error;
         })
       );
     },

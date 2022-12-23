@@ -23,6 +23,7 @@ export type ResultStoreInput = {
   agreementNotifications?: Notification[];
   agreementHasNoLegalIndemnity?: boolean;
   isEligible: boolean;
+  infoWarning?: { message: string; title: string };
 };
 
 export type ResultStoreError = {};
