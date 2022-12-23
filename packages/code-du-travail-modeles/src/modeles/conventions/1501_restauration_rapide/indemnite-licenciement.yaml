@@ -87,7 +87,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
           - licenciement économique = 'Non'
       - toutes ces conditions:
           - licenciement économique = 'Oui'
-          - licenciement économique . age <= 50 an
+          - licenciement économique . age < 50 an
       - toutes ces conditions:
           - licenciement économique = 'Oui'
           - licenciement économique . age >= 50 an
@@ -150,6 +150,8 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
   cdtn:
     formule:
       formula: $formule + (15% * ($formule))
+    annotations:
+        - "15% : majoration pour motif économique"
 
 ## CADRES
 
@@ -237,7 +239,7 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
           - licenciement économique = 'Non'
       - toutes ces conditions:
           - licenciement économique = 'Oui'
-          - licenciement économique . age <= 50 an
+          - licenciement économique . age < 50 an
       - toutes ces conditions:
           - licenciement économique = 'Oui'
           - licenciement économique . age >= 50 an
@@ -312,9 +314,10 @@ contrat salarié . convention collective . restauration rapide . indemnité de l
       - produit:
           assiette: cadre . résultat conventionnel
           facteur: 15 / 100
-
   unité: €
   arrondi: 2 décimales
   cdtn:
     formule:
       formula: $formule + (15% * ($formule))
+    annotations:
+        - "15% : majoration pour motif économique"

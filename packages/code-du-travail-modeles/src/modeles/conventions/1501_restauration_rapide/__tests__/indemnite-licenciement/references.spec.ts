@@ -24,6 +24,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
     ${"Cadres"}     | ${50} | ${1}       | ${3100} | ${"Non"}
     ${"Cadres"}     | ${50} | ${5}       | ${3100} | ${"Non"}
     ${"Cadres"}     | ${50} | ${23}      | ${3100} | ${"Non"}
+    ${"Cadres"}     | ${50} | ${23}      | ${3100} | ${"Oui"}
   `(
     "licenciement eco: $economicFiring, ancienneté: $seniority an, salaire de référence: $salary, age: $age an, catégorie $category",
     ({ seniority, salary, economicFiring, category, age }) => {

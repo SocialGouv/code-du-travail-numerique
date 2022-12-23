@@ -70,4 +70,4 @@ export const DISABLE_ABSENCE = [
   "IDCC1527",
   "IDCC2216",
   "IDCC2941",
-];
+] as const;
