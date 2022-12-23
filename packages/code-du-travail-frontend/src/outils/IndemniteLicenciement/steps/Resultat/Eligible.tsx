@@ -148,7 +148,10 @@ export default function Eligible() {
         />
       </ShowDetails>
       {!agreementHasNoLegalIndemnity && infoWarning && (
-        <Disclaimer title={infoWarning.title}>
+        <Disclaimer
+          title={infoWarning.title}
+          dataTestId="eligible-cc-disclaimer"
+        >
           <p>{infoWarning.message}</p>
         </Disclaimer>
       )}

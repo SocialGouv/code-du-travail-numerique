@@ -1,8 +1,11 @@
+import { Agreement } from "../../../../../conventions/Search/api/type";
+
 type InfoWarningProps = {
   isEligible: boolean;
   hasSelectedAgreement: boolean;
   isAgreementSupported: boolean;
   isCdd: boolean;
+  agreement?: Agreement;
 };
 
 export const getInfoWarning = ({
@@ -10,6 +13,7 @@ export const getInfoWarning = ({
   hasSelectedAgreement,
   isAgreementSupported,
   isCdd,
+  agreement,
 }: InfoWarningProps) => {
   let message;
   let title;
@@ -25,7 +29,7 @@ export const getInfoWarning = ({
   } else {
     title =
       "Attention il peut quand même exister une indemnité pour le salarié";
-    if (isCdd) {
+    if (isCdd || agreement?.num === 3239) {
       return;
     } else if (hasSelectedAgreement && isAgreementSupported) {
       message =

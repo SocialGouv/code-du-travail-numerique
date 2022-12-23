@@ -46,7 +46,12 @@ describe("Indemnité licenciement - CC 3239", () => {
     expect(
       ui.result.legalError.specific.agreement3239.suspendedNotEligible.get()
     ).toBeInTheDocument();
-    fireEvent.click(ui.previous.get());
+    expect(
+      ui.result.infoWarning.eligibleInfoWarningblock.query()
+    ).not.toBeInTheDocument();
+    expect(
+      ui.result.infoWarning.ineligibleInfoWarningblock.query()
+    ).not.toBeInTheDocument();
   });
   test("vérifier l'ineligibilite des ass mat pour ancienneté < 9mois", async () => {
     fireEvent.change(ui.information.agreement3239.proCategory.get(), {
@@ -71,6 +76,12 @@ describe("Indemnité licenciement - CC 3239", () => {
     expect(
       ui.result.legalError.specific.agreement3239.lessThan9month.get()
     ).toBeInTheDocument();
+    expect(
+      ui.result.infoWarning.eligibleInfoWarningblock.query()
+    ).not.toBeInTheDocument();
+    expect(
+      ui.result.infoWarning.ineligibleInfoWarningblock.query()
+    ).not.toBeInTheDocument();
   });
   test("vérifier l'eligibilite des autres salariés pour ancienneté compris entre 8 et 9 mois", async () => {
     fireEvent.change(ui.information.agreement3239.proCategory.get(), {

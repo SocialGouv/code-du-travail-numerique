@@ -206,6 +206,8 @@ export const ui = {
       },
     },
     infoWarning: {
+      eligibleInfoWarningblock: byTestId("eligible-cc-disclaimer"),
+      ineligibleInfoWarningblock: byTestId("ineligible-cc-disclaimer"),
       title: {
         eligible: byText("Attention il peut exister un montant plus favorable"),
         ineligible: byText(

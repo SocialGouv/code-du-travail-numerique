@@ -26,22 +26,10 @@ describe(`Tests des erreurs d'éligibilité`, () => {
     fireEvent.click(ui.next.get());
     expect(ui.result.legalError.cdd.query()).toBeInTheDocument();
     expect(
-      ui.result.infoWarning.title.eligible.query()
+      ui.result.infoWarning.eligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
     expect(
-      ui.result.infoWarning.title.ineligible.query()
-    ).not.toBeInTheDocument();
-    expect(
-      ui.result.infoWarning.message.mayBeCC.query()
-    ).not.toBeInTheDocument();
-    expect(
-      ui.result.infoWarning.message.maybeFirmAgreement.query()
-    ).not.toBeInTheDocument();
-    expect(
-      ui.result.infoWarning.message.mayBeMoreFavorableCC.query()
-    ).not.toBeInTheDocument();
-    expect(
-      ui.result.infoWarning.message.mayBeMoreFavorableFirmAgreement.query()
+      ui.result.infoWarning.ineligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
   });
 
@@ -52,7 +40,7 @@ describe(`Tests des erreurs d'éligibilité`, () => {
     fireEvent.click(ui.contract.fauteGrave.oui.get());
     fireEvent.click(ui.next.get());
     expect(
-      ui.result.infoWarning.title.eligible.query()
+      ui.result.infoWarning.eligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
     expect(ui.result.infoWarning.title.ineligible.query()).toBeInTheDocument();
     expect(ui.result.legalError.fauteGrave.query()).toBeInTheDocument();
@@ -96,7 +84,7 @@ describe(`Tests des erreurs d'éligibilité`, () => {
     fireEvent.click(ui.seniority.hasAbsence.non.get());
     fireEvent.click(ui.next.get());
     expect(
-      ui.result.infoWarning.title.eligible.query()
+      ui.result.infoWarning.eligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
     expect(ui.result.infoWarning.title.ineligible.query()).toBeInTheDocument();
     expect(ui.result.legalError.seniorityToLow.query()).toBeInTheDocument();

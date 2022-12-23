@@ -22,7 +22,10 @@ export default function Ineligible() {
       </HighlightResult>
       <p>{getEligibilityError()}</p>
       {!agreementHasNoLegalIndemnity && infoWarning && (
-        <Disclaimer title={infoWarning.title}>
+        <Disclaimer
+          title={infoWarning.title}
+          dataTestId="ineligible-cc-disclaimer"
+        >
           <p>{infoWarning.message}</p>
         </Disclaimer>
       )}

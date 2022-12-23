@@ -80,6 +80,7 @@ const createResultStore: StoreSlice<
         .errorEligibility;
       const informationEligibility = !get().informationsData.error
         .errorEligibility;
+      const agreement = get().agreementData.input.agreement;
       const hasSelectedAgreement = get().agreementData.input.route !== "none";
       const isAgreementSupported = !!getSupportedCcIndemniteLicenciement().find(
         (v) =>
@@ -95,6 +96,7 @@ const createResultStore: StoreSlice<
         hasSelectedAgreement,
         isAgreementSupported,
         isCdd,
+        agreement,
       });
       set(
         produce((state: ResultStoreSlice) => {
