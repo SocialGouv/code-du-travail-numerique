@@ -114,8 +114,8 @@ export const validateStep = (
 
   // Check all absences
   if (state.hasAbsenceProlonge === "oui") {
-    const absenceErrors: AncienneteAbsenceStoreError[] =
-      state.absencePeriods.map((item): AncienneteAbsenceStoreError => {
+    const absenceErrors: AncienneteAbsenceStoreError[] = state.absencePeriods.map(
+      (item): AncienneteAbsenceStoreError => {
         if (
           !item.durationInMonth ||
           (item.motif.startAt &&
@@ -150,7 +150,8 @@ export const validateStep = (
           };
         }
         return {};
-      });
+      }
+    );
     if (absenceErrors.length === 0) {
       errors.errorAbsencePeriods = {
         global: "Vous devez renseigner tous les champs",
