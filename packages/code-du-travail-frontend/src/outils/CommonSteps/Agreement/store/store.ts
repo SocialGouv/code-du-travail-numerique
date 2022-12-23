@@ -43,6 +43,9 @@ const createCommonAgreementStore: StoreSlice<
       }
     },
     onRouteChange: (value) => {
+      if (value === Route.none && window.localStorage) {
+        window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
+      }
       set(
         produce((state: CommonAgreementStoreSlice) => {
           state.agreementData.input.enterprise = undefined;

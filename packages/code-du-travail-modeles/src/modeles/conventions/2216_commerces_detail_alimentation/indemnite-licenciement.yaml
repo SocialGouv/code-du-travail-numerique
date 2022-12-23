@@ -209,7 +209,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
       - catégorie professionnelle . licenciement économique = 'Non'
       - toutes ces conditions:
           - catégorie professionnelle . licenciement économique = 'Oui'
-          - catégorie professionnelle . licenciement économique . age <= 50 ans
+          - catégorie professionnelle . licenciement économique . age < 50 ans
   valeur:
     somme:
       - dix ans ou moins
