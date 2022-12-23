@@ -312,7 +312,7 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
   description: "Le montant de l'indemnité pourrait être plus important si, avant le CDI, sous certaines conditions, le salarié a été lié à l’employeur par d'autres contrats."
   valeur: oui
 
-contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 2 avec plafond:
+contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel avec plafond 1:
   applicable si:
     une de ces conditions:
       - résultat conventionnel 1 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
@@ -328,5 +328,32 @@ contrat salarié . convention collective . métallurgie ingénieurs et cadres . 
   cdtn:
     formule:
       formula: 18 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel avec plafond 2:
+  applicable si: résultat conventionnel 1 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 3
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 3 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel avec plafond 3:
+  applicable si: résultat conventionnel 2 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 2 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel avec plafond 4:
+  applicable si: résultat conventionnel 3 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 6 * Sref
       explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
