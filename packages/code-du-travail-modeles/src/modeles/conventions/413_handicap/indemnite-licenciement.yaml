@@ -144,7 +144,9 @@ contrat salarié . convention collective . établissement handicap . indemnité 
     type: date
 
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif:
+  applicable si: temps
   valeur: 0 an
+  unité: an
 
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif . ancienneté cadre:
   valeur: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année - temps effectif
