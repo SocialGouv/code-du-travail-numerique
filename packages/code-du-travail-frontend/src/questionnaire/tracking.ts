@@ -11,8 +11,7 @@ export enum MatomoDismissalProcessAction {
   AGREEMENT_SEARCH_TYPE_OF_USERS = "cc_search_type_of_users",
 }
 
-const questionnaireTrackingName =
-  "view_step_Comprendre sa procédure de licenciement";
+const questionnaireTrackingName = "comprendre_sa_procedure_de_licenciement";
 const infoPageTrackingName = "procedures_licenciement";
 
 export const trackViewQuestion = (trackingName: string) => {
