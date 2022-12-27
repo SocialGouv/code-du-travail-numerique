@@ -70,6 +70,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 413", () => {
             "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
             "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période":
               "'Oui'",
+            "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps":
+              "01/01/2010",
             "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif": seniorityNonCadres,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
