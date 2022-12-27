@@ -20,11 +20,11 @@ export class AgreementSeniority413 implements AgreementSeniority {
     const becameExecutiveAt = get().informationsData.input.publicodesInformations.find(
       (item) =>
         item.question.rule.nom ===
-        "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période"
+        "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps"
     )?.info;
 
     const seniority = new SeniorityFactory().create(
-      SupportedCcIndemniteLicenciement.IDCC0016
+      SupportedCcIndemniteLicenciement.IDCC413
     );
     return seniority.computeSeniority({
       dateEntree,

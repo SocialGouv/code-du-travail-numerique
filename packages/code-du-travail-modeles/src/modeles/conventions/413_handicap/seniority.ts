@@ -1,6 +1,7 @@
 import { differenceInMonths, isBefore, parse } from "date-fns";
 
 import type { LegalSeniorityProps } from "../../base/seniority";
+import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
   ISeniority,
   Motif,
@@ -55,7 +56,7 @@ export class Seniority413
     if (isBefore(becameExecutiveDate, dEntree)) {
       return {
         extraInfos: {
-          "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps": 0,
+          "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif": 0,
         },
         value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
       };
@@ -66,21 +67,34 @@ export class Seniority413
     ];
     const result = accumulateAbsenceByYear(absencePeriods, periods);
     const totalAbsenceBeforeExecutive = result[0].totalAbsenceInMonth;
-    const totalAbsenceExecutive = result[1].totalAbsenceInMonth;
 
-    const seniorityExecutive =
-      (differenceInMonths(dSortie, becameExecutiveDate) -
-        totalAbsenceExecutive) /
-      12;
     const seniorityBeforeExecutive =
       (differenceInMonths(becameExecutiveDate, dEntree) -
         totalAbsenceBeforeExecutive) /
       12;
     return {
       extraInfos: {
-        "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps": seniorityBeforeExecutive,
+        "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif": seniorityBeforeExecutive,
       },
-      value: seniorityExecutive,
+      value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
     };
   }
 }
+
+export const MOTIFS_413: Motif[] = LEGAL_MOTIFS.map((item) => ({
+  ...item,
+  startAt: (data) => {
+    return (
+      (data[
+        "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle"
+      ] === "'Cadres'" ||
+        data[
+          "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle"
+        ] ===
+          "'Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service'") &&
+      data[
+        "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période"
+      ] === "'Oui'"
+    );
+  },
+}));
