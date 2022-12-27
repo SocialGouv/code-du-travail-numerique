@@ -1,5 +1,8 @@
 import type { LegalSeniorityProps } from "../../base";
-import type { CC0016SeniorityProps } from "../../conventions";
+import type {
+  CC0016SeniorityProps,
+  CC0413SeniorityProps,
+} from "../../conventions";
 import type { MotifKeys } from "../motif-keys";
 
 export enum SupportedCcIndemniteLicenciement {
@@ -57,6 +60,8 @@ export type SeniorityProps<
   T
 > = T extends SupportedCcIndemniteLicenciement.IDCC0016
   ? CC0016SeniorityProps
+  : T extends SupportedCcIndemniteLicenciement.IDCC413
+  ? CC0413SeniorityProps
   : LegalSeniorityProps;
 
 export type SeniorityResult = {

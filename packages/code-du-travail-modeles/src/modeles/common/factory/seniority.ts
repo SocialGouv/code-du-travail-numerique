@@ -1,4 +1,5 @@
 import { SeniorityLegal } from "../../base";
+import { Seniority413 } from "../../conventions";
 import { Seniority16 } from "../../conventions/16_transports_routiers";
 import { Seniority44 } from "../../conventions/44_industries_chimiques";
 import { Seniority1090 } from "../../conventions/1090_automobiles";
@@ -68,6 +69,10 @@ export class SeniorityFactory {
       case SupportedCcIndemniteLicenciement.IDCC2609:
         return new SeniorityLegal(
           getMotifs(SupportedCcIndemniteLicenciement.IDCC2609)
+        ) as ISeniority<T>;
+      case SupportedCcIndemniteLicenciement.IDCC413:
+        return new Seniority413(
+          getMotifs(SupportedCcIndemniteLicenciement.IDCC413)
         ) as ISeniority<T>;
       case SupportedCcIndemniteLicenciement.default:
       default:

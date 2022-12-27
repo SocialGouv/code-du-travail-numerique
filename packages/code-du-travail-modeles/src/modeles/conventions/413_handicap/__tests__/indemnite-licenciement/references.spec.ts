@@ -47,14 +47,6 @@ const refNonCadrePuisCadres = [
   },
 ];
 
-const refNonCadresPuisCadresDirecteur = [
-  {
-    article: "Article 47",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000020981961?idConteneur=KALICONT000005635813",
-  },
-];
-
 describe("Références juridique pour l'indemnité conventionnel de licenciement pour la CC 413", () => {
   describe("Cas standard", () => {
     test.each`
@@ -87,7 +79,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
     test.each`
       category                                                                                                                         | seniority | salary  | expectedReferences
       ${"Cadres"}                                                                                                                      | ${20}     | ${2000} | ${refNonCadrePuisCadres}
-      ${"Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service"} | ${20}     | ${2000} | ${refNonCadresPuisCadresDirecteur}
+      ${"Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service"} | ${20}     | ${2000} | ${refNonCadrePuisCadres}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, => $expectedReferences",
       ({ seniority, salary, expectedReferences, category }) => {

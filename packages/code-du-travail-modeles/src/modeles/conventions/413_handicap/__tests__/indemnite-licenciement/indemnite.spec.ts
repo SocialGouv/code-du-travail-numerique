@@ -52,8 +52,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 413", () => {
     test.each`
       seniorityNonCadres | category                                                                                                                         | seniority | salary     | expectedCompensation
       ${9}               | ${"Cadres"}                                                                                                                      | ${13}     | ${3650}    | ${31025}
-      ${10}              | ${"Cadres"}                                                                                                                      | ${25}     | ${3650}    | ${62050}
-      ${13}              | ${"Cadres"}                                                                                                                      | ${26}     | ${3650}    | ${65700}
+      ${10}              | ${"Cadres"}                                                                                                                      | ${25}     | ${3650}    | ${43800}
+      ${13}              | ${"Cadres"}                                                                                                                      | ${26}     | ${3650}    | ${43800}
       ${4}               | ${"Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service"} | ${8}      | ${3633.33} | ${21799.98}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, seniorityNonCadres: $seniorityNonCadres => $expectedCompensation €",
