@@ -6,6 +6,7 @@ import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 import { IndemniteLicenciementStepName } from "../..";
 import { AgreementsInjector } from "../../agreements";
 import { icons } from "@socialgouv/cdtn-ui";
+import Html from "../../../../common/Html";
 
 const StepSalaires = () => {
   const {
@@ -23,6 +24,7 @@ const StepSalaires = () => {
     salary,
     onChangeSalary,
     errorSalary,
+    licenciementInaptitude,
   } = useIndemniteLicenciementStore((state) => ({
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     onChangeHasTempsPartiel: state.salairesFunction.onChangeHasTempsPartiel,
@@ -38,6 +40,8 @@ const StepSalaires = () => {
     salary: state.salairesData.input.salary,
     onChangeSalary: state.salairesFunction.onChangeSalary,
     errorSalary: state.salairesData.error.errorSalary,
+    licenciementInaptitude:
+      state.contratTravailData.input.licenciementInaptitude,
   }));
 
   React.useEffect(() => {
@@ -88,6 +92,19 @@ const StepSalaires = () => {
             onChangeSelectedOption={onChangeHasSameSalary}
             error={errorHasSameSalary}
             showRequired
+            tooltip={
+              licenciementInaptitude === "oui"
+                ? undefined
+                : {
+                    content: (
+                      <Html>
+                        Pour les salariés en arrêt de travail au moment du
+                        licenciement ce sont les 12 mois précédant l&apos;arrêt
+                        de travail qui doivent être pris en compte.
+                      </Html>
+                    ),
+                  }
+            }
           />
           {hasSameSalary === "oui" && (
             <TextQuestion

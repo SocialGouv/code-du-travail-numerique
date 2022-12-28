@@ -98,7 +98,7 @@ const StepAnciennete = () => {
             <Html>
               Si le licenciement intervient à la suite d’un avis d’inaptitude
               non professionnelle, indiquer la date de fin du préavis «
-              théorique » non effectué
+              théorique » non effectué.
             </Html>
           ),
         }}
