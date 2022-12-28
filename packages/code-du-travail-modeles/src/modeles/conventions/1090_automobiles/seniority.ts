@@ -41,9 +41,24 @@ export class Seniority1090
           }
           return total + item.durationInMonth * m.value;
         }, 0) / 12;
-    return {
-      value: differenceInMonths(dSortie, dEntree) / 12 - totalAbsence,
-    };
+    return Object.assign(
+      absencePeriods
+        .filter((period) => Boolean(period.durationInMonth))
+        .find(
+          (period) =>
+            period.motif.key === MotifKeys.congesParentalEducationTotal
+        )
+        ? {
+            extraInfos: {
+              "contrat salarié . convention collective . automobiles . indemnité de licenciement . congé parental d'éducation total":
+                "oui",
+            },
+          }
+        : {},
+      {
+        value: differenceInMonths(dSortie, dEntree) / 12 - totalAbsence,
+      }
+    );
   }
 }
 

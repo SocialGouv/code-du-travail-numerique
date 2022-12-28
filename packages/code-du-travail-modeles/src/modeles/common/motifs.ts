@@ -4,6 +4,7 @@ import {
   MOTIFS_44,
   MOTIFS_413,
   MOTIFS_650,
+  MOTIFS_1090,
   MOTIFS_1518,
   MOTIFS_1527,
   MOTIFS_2098,
@@ -45,6 +46,8 @@ export const getMotifs = (idcc: SupportedCcIndemniteLicenciement): Motif[] => {
       return MOTIFS_2098;
     case SupportedCcIndemniteLicenciement.IDCC2609:
       return MOTIFS_2609;
+    case SupportedCcIndemniteLicenciement.IDCC1090:
+      return MOTIFS_1090;
     case SupportedCcIndemniteLicenciement.default:
     default:
       return LEGAL_MOTIFS;
