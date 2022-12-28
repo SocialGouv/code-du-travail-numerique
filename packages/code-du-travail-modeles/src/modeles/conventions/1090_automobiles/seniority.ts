@@ -81,7 +81,7 @@ export const MOTIFS_1090: Motif[] = [
   },
   {
     key: MotifKeys.congesParentalEducationTotal,
-    label: "congé parental d'éducation total",
+    label: "Congé parental d'éducation total",
     value: 0.5,
   },
   { key: MotifKeys.congesSansSolde, label: "Congés sans solde", value: 0 },
