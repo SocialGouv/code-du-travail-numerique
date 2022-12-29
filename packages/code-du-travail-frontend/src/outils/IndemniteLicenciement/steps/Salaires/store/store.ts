@@ -40,11 +40,10 @@ const createSalairesStore: StoreSlice<
       const ancienneteInput = get().ancienneteData.input;
       const contratTravailInput = get().contratTravailData.input;
       const periods = computeSalaryPeriods({
-        dateEntree: ancienneteInput.dateEntree ?? "",
+        dateEntree: ancienneteInput.dateEntree!,
         dateNotification:
           contratTravailInput.dateArretTravail ??
-          ancienneteInput.dateNotification ??
-          "",
+          ancienneteInput.dateNotification!,
       });
       const p: SalaryPeriods[] = periods.map((v) => ({
         month: v,
