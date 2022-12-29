@@ -83,7 +83,7 @@ describe("Arrêt de travail", () => {
         target: { value: "01/05/2022" },
       });
       fireEvent.change(ui.seniority.endDate.get(), {
-        target: { value: "01/10/2022" },
+        target: { value: "01/09/2022" },
       });
       userEvent.click(ui.seniority.hasAbsence.non.get());
       userEvent.click(ui.next.get());
@@ -111,7 +111,7 @@ describe("Arrêt de travail", () => {
         target: { value: "01/05/2022" },
       });
       fireEvent.change(ui.seniority.endDate.get(), {
-        target: { value: "01/10/2022" },
+        target: { value: "01/09/2022" },
       });
       userEvent.click(ui.seniority.hasAbsence.non.get());
       userEvent.click(ui.next.get());
