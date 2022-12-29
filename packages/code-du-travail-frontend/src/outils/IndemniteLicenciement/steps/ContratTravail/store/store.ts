@@ -34,6 +34,12 @@ const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
     onChangeLicenciementInaptitude: (value) => {
       applyGenericValidation(get, set, "licenciementInaptitude", value);
     },
+    onChangeArretTravail: (value) => {
+      applyGenericValidation(get, set, "arretTravail", value);
+    },
+    onChangeDateArretTravail: (value) => {
+      applyGenericValidation(get, set, "dateArretTravail", value);
+    },
     onValidateStepInfo: () => {
       const { isValid, errorState } = validateStep(
         get().contratTravailData.input
