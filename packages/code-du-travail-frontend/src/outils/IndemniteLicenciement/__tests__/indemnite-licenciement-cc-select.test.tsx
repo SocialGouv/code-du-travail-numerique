@@ -26,6 +26,7 @@ test(`
   fireEvent.click(ui.contract.type.cdi.get());
   fireEvent.click(ui.contract.fauteGrave.non.get());
   fireEvent.click(ui.contract.inaptitude.non.get());
+  fireEvent.click(ui.contract.arretTravail.non.get());
   fireEvent.click(ui.next.get());
 
   // Vérifier la recherche par cc

@@ -13,7 +13,7 @@ export const validateStep = (state: ContratTravailStoreInput) => {
       ? "Vous devez répondre à cette question"
       : undefined,
     errorArretTravail:
-      state.licenciementInaptitude === "oui" && !state.arretTravail
+      state.licenciementInaptitude === "non" && !state.arretTravail
         ? "Vous devez répondre à cette question"
         : undefined,
     errorDateArretTravail:

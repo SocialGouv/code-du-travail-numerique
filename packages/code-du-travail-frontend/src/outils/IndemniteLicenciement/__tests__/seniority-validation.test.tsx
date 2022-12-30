@@ -40,6 +40,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
         .click(ui.contract.type.cdi.get())
         .click(ui.contract.fauteGrave.non.get())
         .click(ui.contract.inaptitude.non.get())
+        .click(ui.contract.arretTravail.non.get())
         .click(ui.next.get())
         .click(ui.next.get())
         .changeInputList(
@@ -190,6 +191,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
         .click(ui.contract.type.cdi.get())
         .click(ui.contract.fauteGrave.non.get())
         .click(ui.contract.inaptitude.non.get())
+        .click(ui.contract.arretTravail.non.get())
         .click(ui.next.get())
         .click(ui.agreement.noAgreement.get())
         .click(ui.next.get());

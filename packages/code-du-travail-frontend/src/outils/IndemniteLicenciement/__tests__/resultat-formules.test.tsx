@@ -111,7 +111,7 @@ describe("Page résultat: vérification de la formule affichée", () => {
         userEvent.click(
           ui.contract.inaptitude[inaptitude ? "oui" : "non"].get()
         );
-        inaptitude && userEvent.click(ui.contract.arretTravail.non.get());
+        !inaptitude && userEvent.click(ui.contract.arretTravail.non.get());
         userEvent.click(ui.next.get());
         userEvent.click(ui.next.get());
 

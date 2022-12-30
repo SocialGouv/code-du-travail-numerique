@@ -115,7 +115,7 @@ const StepContratTravail = (): JSX.Element => {
       )}
       {typeContratTravail === "cdi" &&
         licenciementFauteGrave === "non" &&
-        licenciementInaptitude === "oui" && (
+        licenciementInaptitude === "non" && (
           <RadioQuestion
             questions={[
               {
@@ -139,7 +139,7 @@ const StepContratTravail = (): JSX.Element => {
         )}
       {typeContratTravail === "cdi" &&
         licenciementFauteGrave === "non" &&
-        licenciementInaptitude === "oui" &&
+        licenciementInaptitude === "non" &&
         arretTravail === "oui" && (
           <TextQuestion
             label="Depuis quelle date le salarié est-il en arrêt&nbsp;?"

@@ -34,6 +34,7 @@ describe("Indemnité licenciement - CC 3239", () => {
     fireEvent.click(ui.contract.type.cdi.get());
     fireEvent.click(ui.contract.fauteGrave.non.get());
     fireEvent.click(ui.contract.inaptitude.non.get());
+    fireEvent.click(ui.contract.arretTravail.non.get());
     fireEvent.click(ui.next.get());
     fireEvent.click(ui.next.get());
   });
