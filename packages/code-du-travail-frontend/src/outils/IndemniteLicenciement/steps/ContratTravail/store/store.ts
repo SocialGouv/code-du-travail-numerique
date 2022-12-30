@@ -33,11 +33,12 @@ const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
     },
     onChangeLicenciementInaptitude: (value) => {
       applyGenericValidation(get, set, "licenciementInaptitude", value);
+      applyGenericValidation(get, set, "dateArretTravail", undefined);
+      applyGenericValidation(get, set, "arretTravail", undefined);
     },
     onChangeArretTravail: (value) => {
       applyGenericValidation(get, set, "arretTravail", value);
-      if (value === "non")
-        applyGenericValidation(get, set, "dateArretTravail", undefined);
+      applyGenericValidation(get, set, "dateArretTravail", undefined);
     },
     onChangeDateArretTravail: (value) => {
       applyGenericValidation(get, set, "dateArretTravail", value);
