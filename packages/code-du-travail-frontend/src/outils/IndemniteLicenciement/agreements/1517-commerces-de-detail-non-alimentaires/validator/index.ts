@@ -7,11 +7,14 @@ import {
 } from "../../../steps/Anciennete/store";
 import { getAbsencePeriodsErrors } from "../../../steps/Anciennete/store/validator/absencePeriods";
 import { getAbsenceProlongeErrors } from "../../../steps/Anciennete/store/validator/absenceProlonge";
+import { getDateArretTravailErrors } from "../../../steps/Anciennete/store/validator/dateArretTravail";
 import { getDateEntreeErrors } from "../../../steps/Anciennete/store/validator/dateEntree";
+import { ContratTravailStoreInput } from "../../../steps/ContratTravail/store";
 import { getDateSortieErrors } from "./dateSortie";
 
 export const validateStep = (
   state: AncienneteStoreInput,
+  stateContratTravail: ContratTravailStoreInput,
   information: CommonInformationsStoreInput,
   agreeement: Agreement
 ) => {
@@ -20,6 +23,7 @@ export const validateStep = (
     ...getDateSortieErrors(state, agreeement),
     ...getAbsencePeriodsErrors(state, information),
     ...getAbsenceProlongeErrors(state),
+    ...getDateArretTravailErrors(state, stateContratTravail),
   };
 
   return {

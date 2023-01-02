@@ -1,4 +1,4 @@
-import { deepEqualObject, isValidDate } from "../../../../../../lib";
+import { deepEqualObject } from "../../../../../../lib";
 import { AncienneteStoreError, AncienneteStoreInput } from "../types";
 import { CommonInformationsStoreInput } from "../../../../../CommonSteps/Informations/store";
 
@@ -7,9 +7,12 @@ import { getDateSortieErrors } from "./dateSortie";
 import { getDateNotificationErrors } from "./dateNotification";
 import { getAbsencePeriodsErrors } from "./absencePeriods";
 import { getAbsenceProlongeErrors } from "./absenceProlonge";
+import { getDateArretTravailErrors } from "./dateArretTravail";
+import { ContratTravailStoreInput } from "../../../ContratTravail/store";
 
 export const validateStep = (
   state: AncienneteStoreInput,
+  stateContratTravail: ContratTravailStoreInput,
   information: CommonInformationsStoreInput
 ) => {
   const errors: AncienneteStoreError = {
@@ -18,6 +21,7 @@ export const validateStep = (
     ...getDateNotificationErrors(state),
     ...getAbsencePeriodsErrors(state, information),
     ...getAbsenceProlongeErrors(state),
+    ...getDateArretTravailErrors(state, stateContratTravail),
   };
 
   return {
