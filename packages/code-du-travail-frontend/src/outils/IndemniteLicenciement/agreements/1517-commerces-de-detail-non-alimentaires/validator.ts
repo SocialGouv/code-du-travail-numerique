@@ -19,6 +19,11 @@ import {
   AncienneteStoreError,
   AncienneteAbsenceStoreError,
 } from "../../steps/Anciennete/store";
+import { getAbsencePeriodsErrors } from "../../steps/Anciennete/store/validator/absencePeriods";
+import { getAbsenceProlongeErrors } from "../../steps/Anciennete/store/validator/absenceProlonge";
+import { getDateEntreeErrors } from "../../steps/Anciennete/store/validator/dateEntree";
+import { getDateNotificationErrors } from "../../steps/Anciennete/store/validator/dateNotification";
+import { getDateSortieErrors } from "../../steps/Anciennete/store/validator/dateSortie";
 
 export const validateStep = (
   state: AncienneteStoreInput,
@@ -171,6 +176,25 @@ export const validateStep = (
   } else {
     errors.errorAbsencePeriods = undefined;
   }
+
+  const errors: AncienneteStoreError = {
+    ...getDateEntreeErrors(state),
+    ...getDateSortieErrors(state),
+    ...getDateNotificationErrors(state),
+    ...getAbsencePeriodsErrors(state, information),
+    ...getAbsenceProlongeErrors(state),
+  };
+
+  return {
+    isValid: deepEqualObject(errors, {
+      errorAbsenceProlonge: undefined,
+      errorDateSortie: undefined,
+      errorDateNotification: undefined,
+      errorDateEntree: undefined,
+      errorAbsencePeriods: undefined,
+    }),
+    errorState: errors,
+  };
 
   return {
     isValid: deepEqualObject(errors, {
