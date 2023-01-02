@@ -95,6 +95,7 @@ const createResultStore: StoreSlice<
         isEligible,
         hasSelectedAgreement,
         isAgreementSupported,
+        informationEligibility,
         isCdd,
         agreement,
       });
@@ -111,13 +112,13 @@ const createResultStore: StoreSlice<
     getEligibilityError: () => {
       const contratTravailEligibility = get().contratTravailData.error
         .errorEligibility;
-      const ancienneteEligibility = get().ancienneteData.error.errorEligibility;
       const informationEligibility = get().informationsData.error
         .errorEligibility;
+      const ancienneteEligibility = get().ancienneteData.error.errorEligibility;
       return (
         contratTravailEligibility ||
-        ancienneteEligibility ||
-        informationEligibility
+        informationEligibility ||
+        ancienneteEligibility
       );
     },
     getPublicodesResult: () => {
