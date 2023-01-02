@@ -87,15 +87,13 @@ const createResultStore: StoreSlice<
           v.fullySupported &&
           v.idcc === get().agreementData.input.agreement?.num
       );
-      const isEligible =
-        contratTravailEligibility &&
-        ancienneteEligibility &&
-        informationEligibility;
+
       const infoWarning = getInfoWarning({
-        isEligible,
         hasSelectedAgreement,
         isAgreementSupported,
         informationEligibility,
+        contratTravailEligibility,
+        ancienneteEligibility,
         isCdd,
         agreement,
       });

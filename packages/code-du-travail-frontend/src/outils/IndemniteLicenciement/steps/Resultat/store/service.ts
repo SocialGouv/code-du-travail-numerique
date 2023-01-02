@@ -1,22 +1,28 @@
 import { Agreement } from "../../../../../conventions/Search/api/type";
 
 type InfoWarningProps = {
-  isEligible: boolean;
   hasSelectedAgreement: boolean;
   isAgreementSupported: boolean;
   informationEligibility: boolean;
+  contratTravailEligibility: boolean;
+  ancienneteEligibility: boolean;
   isCdd: boolean;
   agreement?: Agreement;
 };
 
 export const getInfoWarning = ({
-  isEligible,
   hasSelectedAgreement,
   isAgreementSupported,
   isCdd,
   informationEligibility,
+  contratTravailEligibility,
+  ancienneteEligibility,
   agreement,
 }: InfoWarningProps) => {
+  const isEligible =
+    contratTravailEligibility &&
+    ancienneteEligibility &&
+    informationEligibility;
   let message;
   let title;
   if (isEligible) {
@@ -31,7 +37,12 @@ export const getInfoWarning = ({
   } else {
     title =
       "Attention il peut quand même exister une indemnité pour le salarié";
-    if (isCdd || (!informationEligibility && agreement?.num === 3239)) {
+    if (
+      isCdd ||
+      (contratTravailEligibility &&
+        !informationEligibility &&
+        agreement?.num === 3239)
+    ) {
       return;
     } else if (hasSelectedAgreement && isAgreementSupported) {
       message =
