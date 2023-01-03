@@ -30,7 +30,6 @@ export const validateStep = (
     isValid: deepEqualObject(errors, {
       errorAbsenceProlonge: undefined,
       errorDateSortie: undefined,
-      errorDateNotification: undefined,
       errorDateEntree: undefined,
       errorAbsencePeriods: undefined,
     }),
