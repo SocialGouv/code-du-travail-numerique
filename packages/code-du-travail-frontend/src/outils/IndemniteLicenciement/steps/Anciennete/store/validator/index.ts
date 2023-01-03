@@ -13,7 +13,7 @@ import { ContratTravailStoreInput } from "../../../ContratTravail/store";
 export const validateStep = (
   state: AncienneteStoreInput,
   stateContratTravail: ContratTravailStoreInput,
-  information: CommonInformationsStoreInput
+  information?: CommonInformationsStoreInput
 ) => {
   const errors: AncienneteStoreError = {
     ...getDateEntreeErrors(state),

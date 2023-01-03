@@ -16,7 +16,7 @@ export const validateStep = (
   state: AncienneteStoreInput,
   stateContratTravail: ContratTravailStoreInput,
   information: CommonInformationsStoreInput,
-  agreeement: Agreement
+  agreeement?: Agreement
 ) => {
   const errors: AncienneteStoreError = {
     ...getDateEntreeErrors(state),

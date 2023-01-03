@@ -22,7 +22,7 @@ export const customSeniorityValidator = (
         state,
         stateContratTravail,
         information,
-        agreeement!
+        agreeement
       );
     default: {
       return validateStep(state, stateContratTravail, information);

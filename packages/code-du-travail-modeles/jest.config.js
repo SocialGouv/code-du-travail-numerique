@@ -5,6 +5,7 @@ module.exports = {
     "**/__tests__/**/*.+(ts|tsx|js)",
     "**/?(*.)+(spec|test).+(ts|tsx|js)",
   ],
+  testTimeout: 10000,
   transform: {
     "^.+\\.(ts|tsx)$": "@swc/jest",
   },

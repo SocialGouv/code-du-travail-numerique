@@ -10,11 +10,13 @@ import { informationToSituation } from "../../../../../CommonSteps/Informations/
 
 export const getAbsencePeriodsErrors = (
   state: AncienneteStoreInput,
-  information: CommonInformationsStoreInput
+  information?: CommonInformationsStoreInput
 ): Partial<AncienneteStoreError> => {
   const dEntree = parse(state.dateEntree);
   const dSortie = parse(state.dateSortie);
   let errors: AncienneteStoreError = {};
+
+  if (!information) return errors;
 
   const informationData = informationToSituation(
     information.publicodesInformations

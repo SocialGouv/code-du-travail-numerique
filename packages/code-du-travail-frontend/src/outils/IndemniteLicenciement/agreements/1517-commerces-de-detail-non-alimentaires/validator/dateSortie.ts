@@ -13,7 +13,7 @@ import { parse } from "../../../../common/utils";
 
 export const getDateSortieErrors = (
   state: AncienneteStoreInput,
-  agreeement: Agreement
+  agreeement?: Agreement
 ): Partial<AncienneteStoreError> => {
   const dEntree = parse(state.dateEntree);
   const dSortie = parse(state.dateSortie);
