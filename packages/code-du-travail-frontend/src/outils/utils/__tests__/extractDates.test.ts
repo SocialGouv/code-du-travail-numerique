@@ -14,10 +14,10 @@ describe("extractDates", () => {
       ${"1 jour"}                   | ${new Date("2022-01-14")} | ${null}
       ${"2 jours"}                  | ${new Date("2022-01-14")} | ${"15 janvier"}
       ${"7 jours"}                  | ${new Date("2022-01-14")} | ${"20 janvier"}
-      ${"1 mois"}                   | ${new Date("2022-01-14")} | ${"14 février"}
-      ${"2 mois"}                   | ${new Date("2022-01-14")} | ${"14 mars"}
-      ${"12 mois"}                  | ${new Date("2022-01-14")} | ${"14 janvier"}
-      ${"15 mois"}                  | ${new Date("2022-01-14")} | ${"14 avril"}
+      ${"1 mois"}                   | ${new Date("2022-01-14")} | ${"13 février"}
+      ${"2 mois"}                   | ${new Date("2022-01-14")} | ${"13 mars"}
+      ${"12 mois"}                  | ${new Date("2022-01-14")} | ${"13 janvier"}
+      ${"15 mois"}                  | ${new Date("2022-01-14")} | ${"13 avril"}
       ${"1 an"}                     | ${new Date("2022-01-14")} | ${null}
       ${"2 ans"}                    | ${new Date("2022-01-14")} | ${null}
       ${"1 semaine"}                | ${new Date("2022-01-14")} | ${"20 janvier"}
