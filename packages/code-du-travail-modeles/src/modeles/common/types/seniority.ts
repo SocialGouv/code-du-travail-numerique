@@ -66,7 +66,7 @@ export type SeniorityProps<
 
 export type SeniorityResult = {
   value: number;
-  extraInfos?: Record<string, number>;
+  extraInfos?: Record<string, number | string>;
 };
 
 export const DISABLE_ABSENCE = [

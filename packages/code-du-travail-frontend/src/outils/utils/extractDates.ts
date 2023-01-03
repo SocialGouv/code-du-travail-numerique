@@ -28,6 +28,8 @@ export const convertPeriodToHumanDate = (
   ) {
     return null;
   }
+  // Retirer un jour si on a une unité en mois
+  if (unit === Unit.MONTH && !extra) date = convertDate(date, -1, Unit.DAY);
   return dateToString(date, withDay);
 };
 

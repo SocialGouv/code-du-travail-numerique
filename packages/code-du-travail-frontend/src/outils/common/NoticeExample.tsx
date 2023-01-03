@@ -58,6 +58,7 @@ export const NoticeExample = ({
               )}
             </SmallText>
           )}
+          <CommunAccord />
         </SmallText>
       );
     case Simulator.PREAVIS_LICENCIEMENT:
@@ -79,7 +80,8 @@ export const NoticeExample = ({
               effectuera son dernier jour dans l’entreprise le jour ouvrable
               suivant.
             </SmallText>
-          )}{" "}
+          )}
+          <CommunAccord />
         </SmallText>
       );
     case Simulator.PREAVIS_DEPART_RETRAITE:
@@ -92,6 +94,7 @@ export const NoticeExample = ({
             la retraite en main propre ou à la date de première présentation de
             la lettre recommandée, peu importe le jour de son retrait par
             l’employeur.
+            <CommunAccord />
           </SmallText>
         </>
       );
@@ -104,6 +107,7 @@ export const NoticeExample = ({
             Le préavis débute à la date de première présentation de la
             notification de la mise à la retraite par lettre recommandée, peu
             importe le jour de son retrait par le salarié.
+            <CommunAccord />
           </SmallText>
         </>
       );
@@ -137,5 +141,14 @@ const PrecisionCalendarDay = (): JSX.Element => (
     l’année civile, du 1er janvier au 31 décembre, y compris les jours fériés ou
     chômés.
     <br />
+  </SmallText>
+);
+
+const CommunAccord = (): JSX.Element => (
+  <SmallText as="span">
+    <br />
+    L’employeur et le salarié peuvent fixer d’un commun accord une date de
+    départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou
+    d’une partie du préavis.
   </SmallText>
 );
