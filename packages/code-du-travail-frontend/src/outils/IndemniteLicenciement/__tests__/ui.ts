@@ -30,6 +30,14 @@ export const ui = {
       oui: byTestId("licenciementInaptitude - Oui"),
       non: byTestId("licenciementInaptitude - Non"),
     },
+    arretTravail: {
+      question: byText(
+        "Le salarié est-il en arrêt de travail au moment du licenciement ?"
+      ),
+      oui: byTestId("licenciementArretTravail - Oui"),
+      non: byTestId("licenciementArretTravail - Non"),
+    },
+    dateArretTravail: byTestId("date-arret-travail"),
   },
   agreement: {
     noAgreement: byTestId(
@@ -55,6 +63,7 @@ export const ui = {
       agreement16: byText(
         "Transports routiers et activités auxiliaires du transport"
       ),
+      agreement3239: byText("Particuliers employeurs et emploi à domicile"),
       carrefour: byText("CARREFOUR HYPERMARCHES"),
     },
     ccChoice: {
@@ -106,6 +115,20 @@ export const ui = {
     agreement3239: {
       proCategory: byTestId(
         "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - indemnité de licenciement - catégorie professionnelle"
+      ),
+      radioCongeMatRupture: byText(
+        "La rupture du contrat de travail fait-elle suite à la suspension, à la modification ou au retrait de l'agrément de l'assistant maternel ?"
+      ),
+      congeMatSuspension: {
+        oui: byTestId(
+          "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - indemnité de licenciement - catégorie professionnelle - assistante maternelle - type de licenciement - Oui"
+        ),
+        non: byTestId(
+          "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - indemnité de licenciement - catégorie professionnelle - assistante maternelle - type de licenciement - Non"
+        ),
+      },
+      salaryInput: byTestId(
+        "infos.contrat salarié - convention collective - particuliers employeurs et emploi à domicile - indemnité de licenciement - catégorie professionnelle - assistante maternelle - type de licenciement - autres - total salaires"
       ),
     },
     agreement413: {
@@ -179,6 +202,40 @@ export const ui = {
       seniorityToLow: byText(
         /L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois/
       ),
+      specific: {
+        agreement3239: {
+          suspendedNotEligible: byText(
+            /L’indemnité de licenciement n’est pas due en cas de suspension, modification ou retrait de l'agrément de l'assistant maternel./
+          ),
+          lessThan9month: byText(
+            /L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois./
+          ),
+        },
+      },
+    },
+    infoWarning: {
+      eligibleInfoWarningblock: byTestId("eligible-cc-disclaimer"),
+      ineligibleInfoWarningblock: byTestId("ineligible-cc-disclaimer"),
+      title: {
+        eligible: byText("Attention il peut exister un montant plus favorable"),
+        ineligible: byText(
+          "Attention il peut quand même exister une indemnité pour le salarié"
+        ),
+      },
+      message: {
+        mayBeMoreFavorableCC: byText(
+          /Une convention collective, un accord d’entreprise, le contrat de travail ou un usage peut prévoir un montant plus favorable pour le salarié. Dans ce cas, c’est ce montant plus favorable qui s’applique au salarié./
+        ),
+        mayBeMoreFavorableFirmAgreement: byText(
+          /Un accord d’entreprise, le contrat de travail ou un usage peut prévoir un montant plus favorable pour le salarié. Dans ce cas, c’est ce montant plus favorable qui s’applique au salarié./
+        ),
+        mayBeCC: byText(
+          /Une convention collective, un accord d’entreprise, le contrat de travail ou un usage peut prévoir une indemnité pour le salarié./
+        ),
+        maybeFirmAgreement: byText(
+          /Un accord d’entreprise, le contrat de travail ou un usage peut prévoir une indemnité pour le salarié./
+        ),
+      },
     },
   },
   next: byText("Suivant"),

@@ -1,5 +1,8 @@
 import type { LegalSeniorityProps } from "../../base";
-import type { CC0016SeniorityProps } from "../../conventions";
+import type {
+  CC0016SeniorityProps,
+  CC0413SeniorityProps,
+} from "../../conventions";
 import type { MotifKeys } from "../motif-keys";
 
 export enum SupportedCcIndemniteLicenciement {
@@ -22,6 +25,7 @@ export enum SupportedCcIndemniteLicenciement {
   IDCC0016 = "IDCC16",
   IDCC0573 = "IDCC573",
   IDCC1596 = "IDCC1596",
+  IDCC1702 = "IDCC1702",
   IDCC0029 = "IDCC29",
   IDCC0044 = "IDCC44",
   IDCC1517 = "IDCC1517",
@@ -56,11 +60,13 @@ export type SeniorityProps<
   T
 > = T extends SupportedCcIndemniteLicenciement.IDCC0016
   ? CC0016SeniorityProps
+  : T extends SupportedCcIndemniteLicenciement.IDCC413
+  ? CC0413SeniorityProps
   : LegalSeniorityProps;
 
 export type SeniorityResult = {
   value: number;
-  extraInfos?: Record<string, number>;
+  extraInfos?: Record<string, number | string>;
 };
 
 export const DISABLE_ABSENCE = [

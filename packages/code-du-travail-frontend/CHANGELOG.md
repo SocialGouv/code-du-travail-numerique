@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.88.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.88.0...v4.88.1) (2022-12-23)
+
+### Bug Fixes
+
+- références manquante dans les sections page info ([#4822](https://github.com/SocialGouv/code-du-travail-numerique/issues/4822)) ([04d9d29](https://github.com/SocialGouv/code-du-travail-numerique/commit/04d9d29b368745f09b89478343d897b9913817ed))
+
+# [4.88.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.87.0...v4.88.0) (2022-12-20)
+
+### Bug Fixes
+
+- **deps:** update dependency @sentry/nextjs to v7 ([#4726](https://github.com/SocialGouv/code-du-travail-numerique/issues/4726)) ([eb513b6](https://github.com/SocialGouv/code-du-travail-numerique/commit/eb513b68d5d5ab49abc8166acf3b0d703485e681))
+- **deps:** update dependency @socialgouv/cdtn-logger to v2 ([#4727](https://github.com/SocialGouv/code-du-travail-numerique/issues/4727)) ([8228719](https://github.com/SocialGouv/code-du-travail-numerique/commit/8228719107b9f4a21209152fac9be939d5487ed9))
+- **deps:** update dependency husky to v8 ([#4728](https://github.com/SocialGouv/code-du-travail-numerique/issues/4728)) ([be210eb](https://github.com/SocialGouv/code-du-travail-numerique/commit/be210eb23d355f46751b75316d31f0e8ae5a01d9))
+- **deps:** update dependency next-transpile-modules to v10 ([#4731](https://github.com/SocialGouv/code-du-travail-numerique/issues/4731)) ([c52dda0](https://github.com/SocialGouv/code-du-travail-numerique/commit/c52dda061a405c49326d92a9fd9a0df82c5aec0d))
+- **deps:** update dependency uuid to v9 ([#4734](https://github.com/SocialGouv/code-du-travail-numerique/issues/4734)) ([dc29912](https://github.com/SocialGouv/code-du-travail-numerique/commit/dc29912f6c64ce8df483b7b8f105c9c82b7a6caa))
+- **deps:** upgrade stylelint ([#4765](https://github.com/SocialGouv/code-du-travail-numerique/issues/4765)) ([796fede](https://github.com/SocialGouv/code-du-travail-numerique/commit/796fede1fdc8e71cfc361f198cfa01f3038c3a94))
+- **fiche-mt:** passer la logique de process html côté `fiche-travail-data` ([#4756](https://github.com/SocialGouv/code-du-travail-numerique/issues/4756)) ([7bf756e](https://github.com/SocialGouv/code-du-travail-numerique/commit/7bf756eb91b2945d993b9d598a0b5dfbf262aa6d))
+- glossary display page info ([#4751](https://github.com/SocialGouv/code-du-travail-numerique/issues/4751)) ([896da42](https://github.com/SocialGouv/code-du-travail-numerique/commit/896da4245c748ad3ae5aea057aa66ac8589380d6))
+- info page tabs h2 ([#4802](https://github.com/SocialGouv/code-du-travail-numerique/issues/4802)) ([98bd6c7](https://github.com/SocialGouv/code-du-travail-numerique/commit/98bd6c75253ecd4d827aeac6c9e12f99cb264ef1))
+- **lint:** remove warnings from lint staged ([#4780](https://github.com/SocialGouv/code-du-travail-numerique/issues/4780)) ([9c3a98d](https://github.com/SocialGouv/code-du-travail-numerique/commit/9c3a98da031af79448ccc9630ae5a16959a9726a))
+- **package:** migration de `react-fiche-service-public` ([#4759](https://github.com/SocialGouv/code-du-travail-numerique/issues/4759)) ([b76eba5](https://github.com/SocialGouv/code-du-travail-numerique/commit/b76eba54ab62c81d6f0c8df57fcfbb9e75f96d75))
+- **sea:** remove tarteaucitron / cookie ([#4813](https://github.com/SocialGouv/code-du-travail-numerique/issues/4813)) ([aab4017](https://github.com/SocialGouv/code-du-travail-numerique/commit/aab40177fb26b8d299eaed015643622f14ff802d))
+- **seo:** remove duplicated titles ([#4776](https://github.com/SocialGouv/code-du-travail-numerique/issues/4776)) ([dd114b7](https://github.com/SocialGouv/code-du-travail-numerique/commit/dd114b74ba638a81a23794d7f9ce052a81dcd6b3))
+
+### Features
+
+- **modeles:** suppression du package data + fetching simulator information from api ([#4741](https://github.com/SocialGouv/code-du-travail-numerique/issues/4741)) ([f52190e](https://github.com/SocialGouv/code-du-travail-numerique/commit/f52190eddb893f1e083e10efdedb2392dc5c3702))
+- update wording for questionnaire ([#4758](https://github.com/SocialGouv/code-du-travail-numerique/issues/4758)) ([cd98993](https://github.com/SocialGouv/code-du-travail-numerique/commit/cd98993eb638e8e4ce51c8ae911ab8073fe56c44))
+
 # [4.87.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.22...v4.87.0) (2022-11-18)
 
 ### Features

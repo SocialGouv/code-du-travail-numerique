@@ -3,7 +3,7 @@ import { ContratTravailStoreInput } from "./types";
 export const getErrorEligibility = (state: ContratTravailStoreInput) => {
   const elligibilityCheck: {
     errorEligibility: string;
-    isIneligible: (ContratTravailStoreInput) => boolean;
+    isIneligible: (input: ContratTravailStoreInput) => boolean;
   }[] = [
     {
       isIneligible: ({ typeContratTravail }) => typeContratTravail === "cdd",

@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.88.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.88.0...v4.88.1) (2022-12-23)
+
+**Note:** Version bump only for package @cdt/api
+
+# [4.88.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.87.0...v4.88.0) (2022-12-20)
+
+### Bug Fixes
+
+- **api:** send referer when calling recherche-entreprises ([#4667](https://github.com/SocialGouv/code-du-travail-numerique/issues/4667)) ([ca8e1d3](https://github.com/SocialGouv/code-du-travail-numerique/commit/ca8e1d3e56c7cf3c4f3e0897748635c297696800))
+- **deps:** update dependency @socialgouv/cdtn-logger to v2 ([#4727](https://github.com/SocialGouv/code-du-travail-numerique/issues/4727)) ([8228719](https://github.com/SocialGouv/code-du-travail-numerique/commit/8228719107b9f4a21209152fac9be939d5487ed9))
+- **deps:** update dependency husky to v8 ([#4728](https://github.com/SocialGouv/code-du-travail-numerique/issues/4728)) ([be210eb](https://github.com/SocialGouv/code-du-travail-numerique/commit/be210eb23d355f46751b75316d31f0e8ae5a01d9))
+- **lint:** remove warnings from lint staged ([#4780](https://github.com/SocialGouv/code-du-travail-numerique/issues/4780)) ([9c3a98d](https://github.com/SocialGouv/code-du-travail-numerique/commit/9c3a98da031af79448ccc9630ae5a16959a9726a))
+- **package:** migration de `react-fiche-service-public` ([#4759](https://github.com/SocialGouv/code-du-travail-numerique/issues/4759)) ([b76eba5](https://github.com/SocialGouv/code-du-travail-numerique/commit/b76eba54ab62c81d6f0c8df57fcfbb9e75f96d75))
+- **security:** use `node-fetch` in cjs builder ([#4746](https://github.com/SocialGouv/code-du-travail-numerique/issues/4746)) ([c7c2742](https://github.com/SocialGouv/code-du-travail-numerique/commit/c7c27420d4e737988a861d8e827b29b8ca944777))
+
+### Features
+
+- **modeles:** suppression du package data + fetching simulator information from api ([#4741](https://github.com/SocialGouv/code-du-travail-numerique/issues/4741)) ([f52190e](https://github.com/SocialGouv/code-du-travail-numerique/commit/f52190eddb893f1e083e10efdedb2392dc5c3702))
+
 # [4.87.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.86.22...v4.87.0) (2022-11-18)
 
 **Note:** Version bump only for package @cdt/api

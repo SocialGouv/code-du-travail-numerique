@@ -1,4 +1,5 @@
 import {
+  computeRequiredSeniority,
   Formula,
   IndemniteLicenciementPublicodes,
   Notification,
@@ -21,15 +22,18 @@ import produce from "immer";
 import { ResultStoreData, ResultStoreSlice } from "./types";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
-import { AgreementInformation, hasNoLegalIndemnity } from "../../../common";
 import {
-  getAgreementFormula,
-  getAgreementReferenceSalary,
-} from "../../../agreements";
+  AgreementInformation,
+  hasNoLegalIndemnity,
+  getSupportedCcIndemniteLicenciement,
+} from "../../../common";
+import { getAgreementReferenceSalary } from "../../../agreements";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
 import getAgreementSeniority from "../../../agreements/seniority";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
+import { dateOneDayLater } from "../../../common/date";
+import { getInfoWarning } from "./service";
 
 const initialState: ResultStoreData = {
   input: {
@@ -38,7 +42,7 @@ const initialState: ResultStoreData = {
     legalReferences: [],
     publicodesLegalResult: { value: "" },
     isAgreementBetter: false,
-    isEligible: true,
+    isEligible: false,
   },
   error: {},
   hasBeenSubmit: true,
@@ -69,21 +73,52 @@ const createResultStore: StoreSlice<
   },
   resultFunction: {
     init: () => {
-      const contratTravailEligibility =
-        !get().contratTravailData.error.errorEligibility;
-      const ancienneteEligibility =
-        !get().ancienneteData.error.errorEligibility;
-        set(
-          produce((state: ResultStoreSlice) => {
-            state.resultData.input.isEligible = contratTravailEligibility && ancienneteEligibility;
-          })
-        );
+      const contratTravailEligibility = !get().contratTravailData.error
+        .errorEligibility;
+      const isCdd = get().contratTravailData.input.typeContratTravail === "cdd";
+      const ancienneteEligibility = !get().ancienneteData.error
+        .errorEligibility;
+      const informationEligibility = !get().informationsData.error
+        .errorEligibility;
+      const agreement = get().agreementData.input.agreement;
+      const hasSelectedAgreement = get().agreementData.input.route !== "none";
+      const isAgreementSupported = !!getSupportedCcIndemniteLicenciement().find(
+        (v) =>
+          v.fullySupported &&
+          v.idcc === get().agreementData.input.agreement?.num
+      );
+      const isEligible =
+        contratTravailEligibility &&
+        ancienneteEligibility &&
+        informationEligibility;
+      const infoWarning = getInfoWarning({
+        isEligible,
+        hasSelectedAgreement,
+        isAgreementSupported,
+        isCdd,
+        agreement,
+      });
+      set(
+        produce((state: ResultStoreSlice) => {
+          state.resultData.input.isEligible =
+            contratTravailEligibility &&
+            ancienneteEligibility &&
+            informationEligibility;
+          state.resultData.input.infoWarning = infoWarning;
+        })
+      );
     },
     getEligibilityError: () => {
-      const contratTravailEligibility =
-        get().contratTravailData.error.errorEligibility;
+      const contratTravailEligibility = get().contratTravailData.error
+        .errorEligibility;
       const ancienneteEligibility = get().ancienneteData.error.errorEligibility;
-      return contratTravailEligibility || ancienneteEligibility;
+      const informationEligibility = get().informationsData.error
+        .errorEligibility;
+      return (
+        contratTravailEligibility ||
+        ancienneteEligibility ||
+        informationEligibility
+      );
     },
     getPublicodesResult: () => {
       const refSalary = get().salairesData.input.refSalary;
@@ -91,6 +126,13 @@ const createResultStore: StoreSlice<
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
       const publicodes = get().resultData.publicodes;
+      const dateSortie = dateOneDayLater(
+        get().ancienneteData.input.dateSortie!
+      );
+      const requiredSeniority = computeRequiredSeniority({
+        dateEntree: get().ancienneteData.input.dateEntree!,
+        dateNotification: get().ancienneteData.input.dateNotification!,
+      });
       if (!publicodes) {
         throw new Error("Publicodes is not defined");
       }
@@ -100,7 +142,7 @@ const createResultStore: StoreSlice<
       );
       const legalSeniority = factory.computeSeniority({
         dateEntree: get().ancienneteData.input.dateEntree!,
-        dateSortie: get().ancienneteData.input.dateSortie!,
+        dateSortie,
         absencePeriods: get().ancienneteData.input.absencePeriods,
       });
 
@@ -157,6 +199,7 @@ const createResultStore: StoreSlice<
             agreementSeniority,
             agreementRefSalary,
             legalSeniority,
+            requiredSeniority,
             refSalary,
             get().ancienneteData.input.dateNotification!,
             infos
@@ -168,13 +211,7 @@ const createResultStore: StoreSlice<
           "résultat conventionnel"
         );
 
-        agreementFormula =
-          getAgreementFormula(
-            `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
-            agreementSeniority,
-            agreementRefSalary,
-            get as StoreApi<MainStore>["getState"]
-          ) || publicodes.getFormule();
+        agreementFormula = publicodes.getFormule();
 
         agreementNotifications = publicodes.getNotifications();
 

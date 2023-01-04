@@ -36,6 +36,7 @@ describe("Indemnité licenciement", () => {
       userEvent.click(ui.contract.type.cdi.get());
       userEvent.click(ui.contract.fauteGrave.non.get());
       userEvent.click(ui.contract.inaptitude.non.get());
+      userEvent.click(ui.contract.arretTravail.non.get());
       userEvent.click(ui.next.get());
       userEvent.click(ui.next.get());
       userEvent.selectOptions(
@@ -47,7 +48,7 @@ describe("Indemnité licenciement", () => {
         target: { value: "01/01/2021" },
       });
       fireEvent.change(ui.seniority.notificationDate.get(), {
-        target: { value: "01/01/2022" },
+        target: { value: "01/03/2022" },
       });
       fireEvent.change(ui.seniority.endDate.get(), {
         target: { value: "01/03/2022" },

@@ -14,6 +14,7 @@ import { Absence } from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { getErrorEligibility } from "./eligibility";
 import { customSeniorityValidator } from "../../../agreements/seniority";
+import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
@@ -26,7 +27,10 @@ const initialState: AncienneteStoreData = {
 
 const createAncienneteStore: StoreSlice<
   AncienneteStoreSlice,
-  SalairesStoreSlice & CommonAgreementStoreSlice & CommonInformationsStoreSlice
+  SalairesStoreSlice &
+    CommonAgreementStoreSlice &
+    CommonInformationsStoreSlice &
+    ContratTravailStoreSlice
 > = (set, get) => ({
   ancienneteData: { ...initialState },
   ancienneteFunction: {
@@ -85,6 +89,8 @@ const createAncienneteStore: StoreSlice<
     onEligibilityCheckStepAnciennete: () => {
       const errorEligibility = getErrorEligibility(
         get().ancienneteData.input,
+        get().informationsData.input,
+        get().contratTravailData.input.licenciementInaptitude === "oui",
         get().agreementData.input.agreement
       );
 

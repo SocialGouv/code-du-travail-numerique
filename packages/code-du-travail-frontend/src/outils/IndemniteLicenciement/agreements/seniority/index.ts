@@ -2,26 +2,31 @@ import {
   SeniorityFactory,
   SupportedCcIndemniteLicenciement,
   SeniorityResult,
-  SalaryPeriods,
   Absence,
 } from "@socialgouv/modeles-social";
 import { StoreApi } from "zustand";
 import { MainStore } from "../../store";
-import { AgreementSalary1527 } from "../salary/1527";
 import { AgreementSeniority16 } from "./16";
+import { dateOneDayLater } from "../../common";
+import { AgreementSeniority413 } from "./413";
 
 const getAgreementSeniority = (
   idcc: SupportedCcIndemniteLicenciement,
   get: StoreApi<MainStore>["getState"]
 ): SeniorityResult => {
   const dateEntree = get().ancienneteData.input.dateEntree!;
-  const dateSortie = get().ancienneteData.input.dateSortie!;
+  const dateSortie = dateOneDayLater(get().ancienneteData.input.dateSortie!);
   const absencePeriods = get().ancienneteData.input.absencePeriods;
   const defaultValues = { dateEntree, dateSortie, absencePeriods };
 
   switch (true) {
     case SupportedCcIndemniteLicenciement.IDCC0016 === idcc:
       return new AgreementSeniority16().computeSeniority({
+        ...defaultValues,
+        get,
+      });
+    case SupportedCcIndemniteLicenciement.IDCC413 === idcc:
+      return new AgreementSeniority413().computeSeniority({
         ...defaultValues,
         get,
       });

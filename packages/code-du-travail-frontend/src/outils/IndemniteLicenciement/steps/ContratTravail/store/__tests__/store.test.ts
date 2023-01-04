@@ -24,6 +24,12 @@ describe("Contrat de travail store", () => {
     expect(
       store.getState().contratTravailData.input.licenciementInaptitude
     ).toBe(undefined);
+    expect(store.getState().contratTravailData.input.arretTravail).toBe(
+      undefined
+    );
+    expect(store.getState().contratTravailData.input.dateArretTravail).toBe(
+      undefined
+    );
   });
 
   it("should init errors", () => {
@@ -36,6 +42,12 @@ describe("Contrat de travail store", () => {
     expect(
       store.getState().contratTravailData.error.errorTypeContratTravail
     ).toBe(undefined);
+    expect(
+      store.getState().contratTravailData.error.errorDateArretTravail
+    ).toBe(undefined);
+    expect(store.getState().contratTravailData.error.errorArretTravail).toBe(
+      undefined
+    );
   });
 
   it("should update properties", () => {
@@ -81,6 +93,7 @@ describe("Contrat de travail store", () => {
     store
       .getState()
       .contratTravailFunction.onChangeLicenciementInaptitude("non");
+    store.getState().contratTravailFunction.onChangeArretTravail("non");
     const isValid = store
       .getState()
       .contratTravailFunction.onValidateStepInfo();

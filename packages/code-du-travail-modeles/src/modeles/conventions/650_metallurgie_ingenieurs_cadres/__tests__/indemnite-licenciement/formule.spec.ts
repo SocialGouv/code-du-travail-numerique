@@ -11,13 +11,13 @@ describe("Formule pour l'indemnité conventionnel de licenciement pour la CC 650
       ${35} | ${19}     | ${"(1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)"}          | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (12 ans)", "Sref : Salaire de référence (1000 €)"]}
       ${54} | ${0.91}   | ${""}                                                   | ${[]}
       ${54} | ${1}      | ${"(1 / 5 * Sref * A1)"}                                | ${["A1 : Ancienneté de 1 ans à 7 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
-      ${54} | ${7.91}   | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 1.2"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (≈ 0.91 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
-      ${54} | ${8}      | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 1.2"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
+      ${54} | ${7.91}   | ${"3 * Sref"}                                           | ${["Sref : Salaire de référence (1000 €)"]}
+      ${54} | ${8}      | ${"3 * Sref"}                                           | ${["Sref : Salaire de référence (1000 €)"]}
       ${54} | ${19}     | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 1.2"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (12 ans)", "Sref : Salaire de référence (1000 €)"]}
       ${58} | ${0.91}   | ${""}                                                   | ${[]}
       ${58} | ${1}      | ${"(1 / 5 * Sref * A1)"}                                | ${["A1 : Ancienneté de 1 ans à 7 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
-      ${58} | ${7.91}   | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 1.3"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (≈ 0.91 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
-      ${58} | ${8}      | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 1.3"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
+      ${58} | ${7.91}   | ${"6 * Sref"}                                           | ${["Sref : Salaire de référence (1000 €)"]}
+      ${58} | ${8}      | ${"6 * Sref"}                                           | ${["Sref : Salaire de référence (1000 €)"]}
       ${58} | ${19}     | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 1.3"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (12 ans)", "Sref : Salaire de référence (1000 €)"]}
       ${61} | ${0.91}   | ${""}                                                   | ${[]}
       ${61} | ${1}      | ${"(1 / 5 * Sref * A1) * 0.95"}                         | ${["A1 : Ancienneté de 1 ans à 7 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
@@ -40,17 +40,16 @@ describe("Formule pour l'indemnité conventionnel de licenciement pour la CC 650
       ${64} | ${8}      | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 0.6"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (1 an)", "Sref : Salaire de référence (1000 €)"]}
       ${64} | ${19}     | ${"((1 / 5 * Sref * A1) + (3 / 5 * Sref * A2)) * 0.6"}  | ${["A1 : Ancienneté de 1 ans à 7 ans (7 ans)", "A2 : Ancienneté au delà de 7 ans (12 ans)", "Sref : Salaire de référence (1000 €)"]}
     `(
-      "$#) ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
+      "$#) ancienneté: $seniority an, age $age, salaire de référence: $salary => $expectedCompensation €",
       ({ seniority, age, expectedFormula, expectedExplanations }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
-          "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age 55 ans":
-            "'Non'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age plus de 60 ans":
             "'Oui'",
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
         });
 

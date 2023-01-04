@@ -25,6 +25,7 @@ describe("Notifications pour la CC 650", () => {
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
@@ -50,40 +51,9 @@ describe("Notifications pour la CC 650", () => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
-          "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age 55 ans":
-            "'Non'",
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
-        });
-
-        const notifs = getNotifications(situation);
-        expect(notifs).toHaveLength(1);
-        expect(notifs[0].description).toBe(notification);
-      }
-    );
-  });
-
-  describe("54 ans et oui", () => {
-    test.each`
-      age   | seniority | salary  | expectedCompensation
-      ${54} | ${0.91}   | ${2562} | ${0}
-      ${54} | ${1}      | ${2562} | ${512.4}
-      ${54} | ${2}      | ${2562} | ${5124}
-      ${54} | ${5}      | ${2562} | ${15372}
-      ${54} | ${7.91}   | ${2562} | ${15372}
-      ${54} | ${8}      | ${2668} | ${16008}
-      ${54} | ${19}     | ${2668} | ${29828.24}
-    `(
-      "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
-      ({ seniority, salary, age }) => {
-        const situation = engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC0650'",
-          "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
-          "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age 55 ans":
-            "'Oui'",
-          "contrat salarié . indemnité de licenciement": "oui",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
@@ -112,6 +82,7 @@ describe("Notifications pour la CC 650", () => {
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
@@ -142,6 +113,7 @@ describe("Notifications pour la CC 650", () => {
             "'Oui'",
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
@@ -172,6 +144,7 @@ describe("Notifications pour la CC 650", () => {
             "'Oui'",
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
@@ -202,6 +175,7 @@ describe("Notifications pour la CC 650", () => {
             "'Oui'",
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
@@ -232,6 +206,7 @@ describe("Notifications pour la CC 650", () => {
             "'Oui'",
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 

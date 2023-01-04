@@ -63,6 +63,15 @@
         }
       },
       {
+        "si": "inaptitude suite à un accident ou maladie professionnelle = oui",
+        "alors": {
+          "somme": [
+            "facteur dix ans ou moins",
+            "facteur plus de dix ans"
+          ]
+        }
+      },
+      {
         "sinon": 0
       }
     ],
@@ -74,6 +83,23 @@
       "Art. L. 1226-7": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000023272293",
       "Art. L. 1225-54": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018764621",
       "Art. L. 1225-65": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038219280"
+    }
+  },
+  "contrat salarié . indemnité de licenciement . résultat légal inaptitude": {
+    "applicable si": "inaptitude suite à un accident ou maladie professionnelle = oui",
+    "valeur": "résultat légal",
+    "cdtn": {
+      "formule": {
+        "explanations": [
+          {
+            "A : Ancienneté totale": "contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins"
+          },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence"
+          }
+        ],
+        "formula": "1/4 * Sref * A"
+      }
     }
   },
   "contrat salarié . indemnité de licenciement . résultat légal moins de 10ans": {
@@ -621,7 +647,7 @@
   "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age": {
     "applicable si": "licenciement économique = 'Oui'",
     "titre": "Âge du salarié",
-    "question": "Quel est l'âge du salarié ?",
+    "question": "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?",
     "unité": "an",
     "cdtn": {
       "type": "entier"
@@ -713,7 +739,7 @@
         {
           "toutes ces conditions": [
             "licenciement économique = 'Oui'",
-            "licenciement économique . age > 50 an",
+            "licenciement économique . age >= 50 an",
             "indemnité de licenciement . ancienneté conventionnelle en année <= 10 an"
           ]
         }
@@ -793,7 +819,7 @@
     "applicable si": {
       "toutes ces conditions": [
         "licenciement économique = 'Oui'",
-        "licenciement économique . age > 50 an",
+        "licenciement économique . age >= 50 an",
         "indemnité de licenciement . ancienneté conventionnelle en année > 10 an"
       ]
     },
@@ -825,7 +851,7 @@
       {
         "le minimum de": [
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année",
-          "10an"
+          "10 an"
         ]
       },
       "(- 5 an)"
@@ -940,7 +966,7 @@
         {
           "toutes ces conditions": [
             "licenciement économique = 'Oui'",
-            "licenciement économique . age > 50 an",
+            "licenciement économique . age >= 50 an",
             "indemnité de licenciement . ancienneté conventionnelle en année <= 10 an"
           ]
         }
@@ -1054,7 +1080,7 @@
     "applicable si": {
       "toutes ces conditions": [
         "licenciement économique = 'Oui'",
-        "licenciement économique . age > 50 an",
+        "licenciement économique . age >= 50 an",
         "indemnité de licenciement . ancienneté conventionnelle en année >= 10 an"
       ]
     },
@@ -1354,21 +1380,9 @@
   },
   "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age": {
     "titre": "Âge du salarié",
-    "question": "Quel est l'âge du salarié ?",
+    "question": "Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?",
     "cdtn": {
       "type": "entier"
-    }
-  },
-  "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age plus de 55 ans": {
-    "applicable si": "age = 55",
-    "titre": "Le salarié aura 56 ans avant la fin de son préavis",
-    "question": "Le salarié aura-t-il 56 ans avant la fin de son préavis (que le préavis soit effectué ou non)&nbsp;?",
-    "cdtn": {
-      "type": "liste",
-      "valeurs": {
-        "Oui": "'Oui'",
-        "Non": "'Non'"
-      }
     }
   },
   "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . un dixième du salaire de reference": {
@@ -1433,12 +1447,7 @@
     "unité": "€"
   },
   "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . plus de 55 ans": {
-    "applicable si": {
-      "une de ces conditions": [
-        "age plus de 55 ans = 'Oui'",
-        "age > 55"
-      ]
-    },
+    "applicable si": "age >= 55",
     "valeur": "oui"
   },
   "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . plus de 55 ans . entre 2 et 5 ans d'ancienneté": {
@@ -1462,6 +1471,19 @@
       "Article 10.3": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778355?idConteneur=KALICONT000005635221#KALIARTI000005778355",
       "Article 10.4": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778357?idConteneur=KALICONT000005635221#KALIARTI000005778357",
       "Article 10.5": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778358?idConteneur=KALICONT000005635221#KALIARTI000005778358"
+    },
+    "cdtn": {
+      "formule": {
+        "explanations": [
+          {
+            "A : Années d'ancienneté": "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
+          },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ],
+        "formula": "(1/10 * Sref * A) + (1/100 * Sref * A)"
+      }
     }
   },
   "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . plus de 55 ans . plus de 5 ans d'ancienneté": {
@@ -1482,15 +1504,26 @@
       "Article 10.3": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778355?idConteneur=KALICONT000005635221#KALIARTI000005778355",
       "Article 10.4": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778357?idConteneur=KALICONT000005635221#KALIARTI000005778357",
       "Article 10.5": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778358?idConteneur=KALICONT000005635221#KALIARTI000005778358"
+    },
+    "cdtn": {
+      "formule": {
+        "explanations": [
+          {
+            "A1 : Années d'ancienneté": "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
+          },
+          {
+            "A2 : Années d'ancienneté au-delà de 15 ans": "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . ancienneté supérieur à 15 ans"
+          },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ],
+        "formula": "(3/20 * Sref * A1)[ + (1/20 * Sref * A2)] + (3/200 * Sref * A1)[ + (1/200 * Sref * A2)]"
+      }
     }
   },
   "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . moins de 55 ans": {
-    "applicable si": {
-      "une de ces conditions": [
-        "age plus de 55 ans = 'Non'",
-        "age < 55"
-      ]
-    },
+    "applicable si": "age < 55",
     "valeur": "oui"
   },
   "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . moins de 55 ans . entre 2 et 5 ans d'ancienneté": {
@@ -1513,6 +1546,19 @@
       "Article 10.3": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778355?idConteneur=KALICONT000005635221#KALIARTI000005778355",
       "Article 10.4": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778357?idConteneur=KALICONT000005635221#KALIARTI000005778357",
       "Article 10.5": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778358?idConteneur=KALICONT000005635221#KALIARTI000005778358"
+    },
+    "cdtn": {
+      "formule": {
+        "explanations": [
+          {
+            "A : Années d'ancienneté": "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
+          },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ],
+        "formula": "1/10 * Sref * A"
+      }
     }
   },
   "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . moins de 55 ans . plus de 5 ans d'ancienneté": {
@@ -1531,6 +1577,22 @@
       "Article 10.3": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778355?idConteneur=KALICONT000005635221#KALIARTI000005778355",
       "Article 10.4": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778357?idConteneur=KALICONT000005635221#KALIARTI000005778357",
       "Article 10.5": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005778358?idConteneur=KALICONT000005635221#KALIARTI000005778358"
+    },
+    "cdtn": {
+      "formule": {
+        "explanations": [
+          {
+            "A1 : Années d'ancienneté": "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
+          },
+          {
+            "A2 : Années d'ancienneté au-delà de 15 ans": "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . ancienneté supérieur à 15 ans"
+          },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ],
+        "formula": "(3/20 * Sref * A1)[ + (1/20 * Sref * A2)]"
+      }
     }
   },
   "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age . résultat conventionnel": {
@@ -1561,21 +1623,9 @@
   },
   "contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age": {
     "titre": "Âge du salarié",
-    "question": "Quel est l'âge du salarié ?",
+    "question": "Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?",
     "cdtn": {
       "type": "entier"
-    }
-  },
-  "contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age plus de 55 ans": {
-    "applicable si": "age = 55",
-    "titre": "Le salarié aura 56 ans avant la fin de son préavis",
-    "question": "Le salarié aura-t-il 56 ans avant la fin de son préavis (que le préavis soit effectué ou non)&nbsp;?",
-    "cdtn": {
-      "type": "liste",
-      "valeurs": {
-        "Oui": "'Oui'",
-        "Non": "'Non'"
-      }
     }
   },
   "contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . un dixième du salaire de reference": {
@@ -1640,12 +1690,7 @@
     "unité": "€"
   },
   "contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . plus de 55 ans": {
-    "applicable si": {
-      "une de ces conditions": [
-        "age plus de 55 ans = 'Oui'",
-        "age > 55"
-      ]
-    },
+    "applicable si": "age >= 55",
     "valeur": "oui"
   },
   "contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . plus de 55 ans . entre 2 et 5 ans d'ancienneté": {
@@ -1750,12 +1795,7 @@
     }
   },
   "contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . moins de 55 ans": {
-    "applicable si": {
-      "une de ces conditions": [
-        "age plus de 55 ans = 'Non'",
-        "age < 55"
-      ]
-    },
+    "applicable si": "age < 55",
     "valeur": "oui"
   },
   "contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age . moins de 55 ans . entre 2 et 5 ans d'ancienneté": {
@@ -1887,7 +1927,7 @@
   },
   "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age": {
     "titre": "Âge du salarié",
-    "question": "Quel est l'âge du salarié&nbsp;?",
+    "question": "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?",
     "cdtn": {
       "type": "entier"
     }
@@ -1900,7 +1940,7 @@
       ]
     },
     "titre": "Le salarié remplit les conditions pour partir à la retraite",
-    "question": "Le salarié remplit-il les conditions pour partir à la retraite&nbsp;?",
+    "question": "Le salarié a-t-il atteint l'âge qui lui permet de bénéficier d'une retraite&nbsp;?",
     "cdtn": {
       "type": "oui-non"
     }
@@ -1964,14 +2004,14 @@
   },
   "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . age": {
     "titre": "Âge du salarié",
-    "question": "Quel est l'âge du salarié&nbsp;?",
+    "question": "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?",
     "cdtn": {
       "type": "entier"
     }
   },
   "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . droit à la retraite au titre du régime en vigueur dans l'entreprise": {
     "titre": "Le salarié remplit les conditions pour partir à la retraite",
-    "question": "Le salarié remplit-il les conditions pour partir à la retraite&nbsp;?",
+    "question": "Le salarié a-t-il atteint l'âge qui lui permet de bénéficier d'une retraite&nbsp;?",
     "cdtn": {
       "type": "oui-non"
     }
@@ -2413,7 +2453,7 @@
   "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . autres licenciement . age": {
     "applicable si": "incapacité de conduite = 'Non'",
     "titre": "Âge du salarié",
-    "question": "Quel est l'âge du salarié&nbsp;?",
+    "question": "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?",
     "cdtn": {
       "type": "entier"
     }
@@ -2426,7 +2466,7 @@
       ]
     },
     "titre": "Le salarié remplit les conditions pour partir à la retraite",
-    "question": "Le salarié remplit-il les conditions pour partir à la retraite&nbsp;?",
+    "question": "Le salarié a-t-il atteint l'âge qui lui permet de bénéficier d'une retraite&nbsp;?",
     "cdtn": {
       "type": "oui-non"
     }
@@ -2667,7 +2707,153 @@
     "valeur": "oui",
     "cdtn": {
       "idcc": 1702,
-      "préavis-retraite": true
+      "préavis-retraite": true,
+      "indemnité-licenciement": true
+    }
+  },
+  "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement": {
+    "applicable si": "indemnité de licenciement",
+    "valeur": "oui"
+  },
+  "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age": {
+    "titre": "Âge du salarié",
+    "question": "Quel est l'âge du salarié à la fin de son préavis (exécuté ou non) &nbsp;?",
+    "cdtn": {
+      "type": "entier"
+    }
+  },
+  "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . licenciement économique": {
+    "titre": "Licenciement pour motif économique",
+    "question": "Le motif du licenciement est-il économique ?",
+    "cdtn": {
+      "type": "oui-non"
+    }
+  },
+  "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . ancienneté au-dela de 15 ans": {
+    "somme": [
+      "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année",
+      "(- 15 an)"
+    ],
+    "plancher": "0 an",
+    "unité": "an"
+  },
+  "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . base": {
+    "applicable si": "indemnité de licenciement . ancienneté conventionnelle en année <= 5",
+    "valeur": "indemnité de licenciement . salaire de référence conventionnel * indemnité de licenciement . ancienneté conventionnelle en année * 0.1",
+    "unité": "€",
+    "cdtn": {
+      "formule": {
+        "formula": "1/10 * Sref * A",
+        "explanations": [
+          {
+            "A : Années d'ancienneté": "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
+          },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
+    }
+  },
+  "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . base moins de 15 ans": {
+    "remplace": "base",
+    "applicable si": {
+      "toutes ces conditions": [
+        "indemnité de licenciement . ancienneté conventionnelle en année > 5",
+        "indemnité de licenciement . ancienneté conventionnelle en année < 15"
+      ]
+    },
+    "valeur": "indemnité de licenciement . salaire de référence conventionnel * indemnité de licenciement . ancienneté conventionnelle en année * 0.15",
+    "unité": "€",
+    "cdtn": {
+      "formule": {
+        "formula": "3/20 * Sref * A",
+        "explanations": [
+          {
+            "A : Années d'ancienneté": "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
+          },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
+    }
+  },
+  "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . base plus de 15 ans": {
+    "remplace": "base",
+    "applicable si": "indemnité de licenciement . ancienneté conventionnelle en année > 15",
+    "somme": [
+      "indemnité de licenciement . salaire de référence conventionnel * indemnité de licenciement . ancienneté conventionnelle en année * 0.15",
+      "indemnité de licenciement . salaire de référence conventionnel * ancienneté au-dela de 15 ans * 0.05"
+    ],
+    "unité": "€",
+    "cdtn": {
+      "formule": {
+        "formula": "(3/20 * Sref * A1) + (1/20 * Sref * A2)",
+        "explanations": [
+          {
+            "A1 : Années d'ancienneté": "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
+          },
+          {
+            "A2 : Années d'ancienneté au-delà de 15 ans": "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . ancienneté au-dela de 15 ans"
+          },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
+    }
+  },
+  "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . résultat conventionnel": {
+    "remplace": "contrat salarié . indemnité de licenciement . résultat conventionnel",
+    "applicable si": "indemnité de licenciement . ancienneté conventionnelle en année >= 2",
+    "valeur": "base + majoration plus de 55ans + majoration licenciement économique",
+    "unité": "€",
+    "arrondi": "2 décimales",
+    "références": {
+      "Article 10.3": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005801849?idConteneur=KALICONT000005635467",
+      "Article 10.5": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005801851?idConteneur=KALICONT000005635467",
+      "Article 10.4": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005801850?idConteneur=KALICONT000005635467&origin=list#KALIARTI000005801850"
+    },
+    "cdtn": {
+      "formule": {
+        "formula": "$formule"
+      }
+    }
+  },
+  "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . résultat conventionnel . majoration plus de 55ans": {
+    "applicable si": "age >= 55",
+    "valeur": "base * 0.1",
+    "cdtn": {
+      "formule": {
+        "formula": "($formule) + (10% * ($formule))"
+      }
+    }
+  },
+  "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . majoration licenciement économique": {
+    "applicable si": "licenciement économique = 'Oui'",
+    "valeur": 0
+  },
+  "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . majoration licenciement économique . moins de 5 ans": {
+    "remplace": "majoration licenciement économique",
+    "applicable si": "indemnité de licenciement . ancienneté conventionnelle en année < 5",
+    "valeur": "base * 0.7",
+    "unité": "€",
+    "cdtn": {
+      "formule": {
+        "formula": "($formule) + (70% * (1/10 * Sref * A))"
+      }
+    }
+  },
+  "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . majoration licenciement économique . plus de 5 ans": {
+    "remplace": "majoration licenciement économique",
+    "applicable si": "indemnité de licenciement . ancienneté conventionnelle en année >= 5",
+    "valeur": "indemnité de licenciement . salaire de référence conventionnel * 0.35",
+    "unité": "€",
+    "cdtn": {
+      "formule": {
+        "formula": "($formule) + (35% * Sref)"
+      }
     }
   },
   "contrat salarié . convention collective . ouvriers bâtiment région parisienne": {
@@ -3067,7 +3253,7 @@
   },
   "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age": {
     "titre": "Âge du salarié",
-    "question": "Quel est l'âge du salarié ?",
+    "question": "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?",
     "unité": "an",
     "cdtn": {
       "type": "entier"
@@ -3084,7 +3270,7 @@
     "unité": "€"
   },
   "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . majoration": {
-    "applicable si": "age > 50 ans",
+    "applicable si": "age >= 50 ans",
     "grille": {
       "assiette": "age",
       "tranches": [
@@ -3127,8 +3313,27 @@
       }
     }
   },
+  "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . résultat conventionnel avec plafond": {
+    "applicable si": "résultat conventionnel = indemnité de licenciement . salaire de référence conventionnel * 18",
+    "valeur": "oui",
+    "cdtn": {
+      "formule": {
+        "formula": "18 * Sref",
+        "explanations": [
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
+    }
+  },
   "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . résultat conventionnel . formule plus de 5 ans": {
-    "applicable si": "indemnité de licenciement . ancienneté conventionnelle en année > 5 an",
+    "applicable si": {
+      "toutes ces conditions": [
+        "indemnité de licenciement . ancienneté conventionnelle en année > 5 an",
+        "résultat conventionnel != indemnité de licenciement . salaire de référence conventionnel * 18"
+      ]
+    },
     "valeur": "oui",
     "cdtn": {
       "formule": {
@@ -3208,7 +3413,7 @@
   "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": {
     "applicable si": "licenciement économique = 'Oui'",
     "titre": "Âge du salarié",
-    "question": "Quel est l'âge du salarié ?",
+    "question": "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?",
     "cdtn": {
       "type": "entier"
     }
@@ -3655,6 +3860,20 @@
       }
     }
   },
+  "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres . résultat conventionnel formule  plafond": {
+    "applicable si": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12 = trois facteurs avec plafond",
+    "valeur": "oui",
+    "cdtn": {
+      "formule": {
+        "explanations": [
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ],
+        "formula": "12 * Sref"
+      }
+    }
+  },
   "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres . résultat conventionnel au-delà de 40ans": {
     "applicable si": "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 40 an",
     "valeur": "oui",
@@ -3662,22 +3881,10 @@
       "formule": {
         "explanations": [
           {
-            "A1 : Années de présence pour la tranche jusqu'à 10 ans": "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . jusqu'à dix ans ou moins"
-          },
-          {
-            "A2 : Années de présence pour la tranche de 10 à 20 ans": "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . de dix à vingt ans"
-          },
-          {
-            "A3 : Années de présence pour la tranche de 20 à 40 ans": "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . de vingt à quarante ans"
-          },
-          {
             "A4 : Années de présence pour la tranche au-delà de 40 ans": "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . au delà de quarante ans"
-          },
-          {
-            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
           }
         ],
-        "formula": "(3/10 * Sref * A1) + (4/10 * Sref * A2) + (5/10 * Sref * A3) + (1/3 * Sref * A4)"
+        "formula": "($formule) + (1/3 * Sref * A4)"
       }
     }
   },
@@ -3686,7 +3893,7 @@
     "applicable si": {
       "toutes ces conditions": [
         "catégorie professionnelle . licenciement économique = 'Oui'",
-        "catégorie professionnelle . licenciement économique . age > 50 ans"
+        "catégorie professionnelle . licenciement économique . age >= 50 ans"
       ]
     },
     "valeur": {
@@ -3979,6 +4186,20 @@
       }
     }
   },
+  "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . résultat conventionnel avec ancienneté jusqu'à 5 ans avec plafond": {
+    "applicable si": "résultat conventionnel avec ancienneté jusqu'à 5 ans = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12",
+    "valeur": "oui",
+    "cdtn": {
+      "formule": {
+        "formula": "12 * Sref",
+        "explanations": [
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
+    }
+  },
   "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . résultat conventionnel avec ancienneté de plus de 5 ans": {
     "applicable si": {
       "toutes ces conditions": [
@@ -4015,6 +4236,20 @@
       }
     }
   },
+  "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . résultat conventionnel avec ancienneté de plus de 5 ans avec plafond": {
+    "applicable si": "résultat conventionnel avec ancienneté de plus de 5 ans = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12",
+    "valeur": "oui",
+    "cdtn": {
+      "formule": {
+        "formula": "12 * Sref",
+        "explanations": [
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
+    }
+  },
   "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . résultat conventionnel avec ancienneté de plus de 15 ans": {
     "applicable si": "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 15 an",
     "non applicable si": "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps",
@@ -4039,6 +4274,20 @@
           {
             "A2 : Années d'ancienneté dans la fonction de cadre supérieures à 5 ans": "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . ancienneté supérieur à 5 ans"
           },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
+    }
+  },
+  "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . résultat conventionnel avec ancienneté de plus de 15 ans avec plafond": {
+    "applicable si": "résultat conventionnel avec ancienneté de plus de 15 ans = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 25",
+    "valeur": "oui",
+    "cdtn": {
+      "formule": {
+        "formula": "25 * Sref",
+        "explanations": [
           {
             "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
           }
@@ -4199,6 +4448,20 @@
       }
     }
   },
+  "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . résultat conventionnel avec ancienneté moins de 12 mois avec plafond": {
+    "applicable si": "résultat conventionnel avec ancienneté moins de 12 mois = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12",
+    "valeur": "oui",
+    "cdtn": {
+      "formule": {
+        "formula": "12 * Sref",
+        "explanations": [
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
+    }
+  },
   "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . résultat conventionnel avec ancienneté jusqu'à 5 ans": {
     "applicable si": {
       "toutes ces conditions": [
@@ -4233,6 +4496,20 @@
           {
             "A3 : Années d'ancienneté dans la fonction de cadre": "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . ancienneté cadre"
           },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
+    }
+  },
+  "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . résultat conventionnel avec ancienneté jusqu'à 5 ans avec plafond": {
+    "applicable si": "résultat conventionnel avec ancienneté jusqu'à 5 ans = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12",
+    "valeur": "oui",
+    "cdtn": {
+      "formule": {
+        "formula": "12 * Sref",
+        "explanations": [
           {
             "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
           }
@@ -4290,6 +4567,20 @@
       }
     }
   },
+  "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . résultat conventionnel avec ancienneté de plus de 5 ans avec plafond": {
+    "applicable si": "résultat conventionnel avec ancienneté jusqu'à 5 ans = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12",
+    "valeur": "oui",
+    "cdtn": {
+      "formule": {
+        "formula": "12 * Sref",
+        "explanations": [
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
+    }
+  },
   "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . résultat conventionnel avec ancienneté de plus de 15 ans": {
     "applicable si": "ancienneté cadre > 15 an",
     "remplace": "contrat salarié . indemnité de licenciement . résultat conventionnel",
@@ -4323,6 +4614,20 @@
           {
             "A4 : Années d'ancienneté dans la fonction de cadre supérieures à 5 ans": "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . ancienneté supérieur à 5 ans en tant que cadre"
           },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
+    }
+  },
+  "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . résultat conventionnel avec ancienneté de plus de 15 ans avec plafond": {
+    "applicable si": "résultat conventionnel avec ancienneté de plus de 15 ans = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 25",
+    "valeur": "oui",
+    "cdtn": {
+      "formule": {
+        "formula": "25 * Sref",
+        "explanations": [
           {
             "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
           }
@@ -5652,7 +5957,7 @@
   },
   "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": {
     "titre": "Âge du salarié",
-    "question": "Quel est l'âge du salarié ?",
+    "question": "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?",
     "cdtn": {
       "type": "entier"
     }
@@ -6367,7 +6672,7 @@
   },
   "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age": {
     "titre": "Âge du salarié",
-    "question": "Quel est l'âge du salarié ?",
+    "question": "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?",
     "cdtn": {
       "type": "entier"
     }
@@ -6389,7 +6694,7 @@
   },
   "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age": {
     "titre": "Âge du salarié",
-    "question": "Quel est l'âge du salarié ?",
+    "question": "Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?",
     "cdtn": {
       "type": "entier"
     }
@@ -6635,41 +6940,59 @@
   },
   "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . autres . résultat conventionnel": {
     "remplace": "contrat salarié . indemnité de licenciement . résultat conventionnel",
-    "variations": [
-      {
-        "si": "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1",
-        "alors": "somme autre"
-      },
-      {
-        "sinon": 0
-      }
-    ],
+    "applicable si": "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1",
+    "valeur": "somme autre",
     "unité": "€",
     "arrondi": "2 décimales",
     "références": {
       "Article 37": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373",
       "Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur alimentaire": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802068?idConteneur=KALICONT000005635373",
       "Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur non alimentaire": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802084?idConteneur=KALICONT000005635373"
+    },
+    "cdtn": {
+      "formule": {
+        "formula": "1 / 5 * Sref * A1[ + 2 / 15 * Sref * A2]",
+        "explanations": [
+          {
+            "A1 : Années d'ancienneté au total": "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
+          },
+          {
+            "A2 : Années d'ancienneté au delà de 10 ans": "contrat salarié . convention collective . commerces de gros . au delà de dix ans"
+          },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
     }
   },
   "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . résultat conventionnel": {
     "remplace": "contrat salarié . indemnité de licenciement . résultat conventionnel",
+    "applicable si": "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1",
     "non applicable si": "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age . résultat conventionnel 55 ans",
-    "variations": [
-      {
-        "si": "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 1",
-        "alors": "somme agent sans majoration"
-      },
-      {
-        "sinon": 0
-      }
-    ],
+    "valeur": "somme agent sans majoration",
     "unité": "€",
     "arrondi": "2 décimales",
     "références": {
       "Article 37": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373",
       "Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur alimentaire": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802068?idConteneur=KALICONT000005635373",
       "Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur non alimentaire": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802084?idConteneur=KALICONT000005635373"
+    },
+    "cdtn": {
+      "formule": {
+        "formula": "2 / 10 * Sref * A1[ + 2 / 15 * Sref * A2]",
+        "explanations": [
+          {
+            "A1 : Années d'ancienneté au total": "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
+          },
+          {
+            "A2 : Années d'ancienneté au delà de 10 ans": "contrat salarié . convention collective . commerces de gros . au delà de dix ans"
+          },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
     }
   },
   "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age . résultat conventionnel 55 ans": {
@@ -6687,6 +7010,22 @@
     "références": {
       "Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur alimentaire": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802068?idConteneur=KALICONT000005635373",
       "Article 4 de l’Avenant II relatif aux agents de maîtrise et techniciens, secteur non alimentaire": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802084?idConteneur=KALICONT000005635373"
+    },
+    "cdtn": {
+      "formule": {
+        "formula": "2 / 10 * Sref * A1[ + 3 / 10 * Sref * A2]+ 20% * 2 / 10 * Sref * A1[ + 20% * 3 / 10 * Sref * A2]",
+        "explanations": [
+          {
+            "A1 : Années d'ancienneté au total": "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
+          },
+          {
+            "A2 : Années d'ancienneté au delà de 10 ans": "contrat salarié . convention collective . commerces de gros . au delà de dix ans"
+          },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
     }
   },
   "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . résultat conventionnel moins 5 ans": {
@@ -6704,6 +7043,19 @@
     "références": {
       "Article 37": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373",
       "Article 4 de l’Avenant I relatif aux cadres": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373"
+    },
+    "cdtn": {
+      "formule": {
+        "formula": "2 / 10 * Sref * A",
+        "explanations": [
+          {
+            "A: Années d'ancienneté au total": "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année"
+          },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
     }
   },
   "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age . résultat conventionnel 55 ans": {
@@ -6720,6 +7072,25 @@
     "références": {
       "Article 37": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373",
       "Article 4 de l’Avenant I relatif aux cadres": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373"
+    },
+    "cdtn": {
+      "formule": {
+        "formula": "3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3]+ 20% * 3 / 10 * Sref * A1[ + 20% * 4 / 10 * Sref * A2][ + 20% * 5 / 10 * Sref * A3]",
+        "explanations": [
+          {
+            "A1 : Années d'ancienneté au total": "contrat salarié . convention collective . commerces de gros . de zero à neuf ans"
+          },
+          {
+            "A2 : Années d'ancienneté au delà de 10 ans": "contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans"
+          },
+          {
+            "A3 : Années d'ancienneté au delà de 10 ans": "contrat salarié . convention collective . commerces de gros . au delà de vingt ans"
+          },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
     }
   },
   "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age . résultat conventionnel 50 ans": {
@@ -6737,6 +7108,25 @@
     "références": {
       "Article 37": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373",
       "Article 4 de l’Avenant I relatif aux cadres": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373"
+    },
+    "cdtn": {
+      "formule": {
+        "formula": "3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3]+ 15% * 3 / 10 * Sref * A1[ + 15% * 4 / 10 * Sref * A2][ + 15% * 5 / 10 * Sref * A3]",
+        "explanations": [
+          {
+            "A1 : Années d'ancienneté au total": "contrat salarié . convention collective . commerces de gros . de zero à neuf ans"
+          },
+          {
+            "A2 : Années d'ancienneté au delà de 10 ans": "contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans"
+          },
+          {
+            "A3 : Années d'ancienneté au delà de 10 ans": "contrat salarié . convention collective . commerces de gros . au delà de vingt ans"
+          },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
     }
   },
   "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . résultat conventionnel plus 5 ans": {
@@ -6755,6 +7145,53 @@
     "références": {
       "Article 37": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802009?idConteneur=KALICONT000005635373",
       "Article 4 de l’Avenant I relatif aux cadres": "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000026802057?idConteneur=KALICONT000005635373"
+    },
+    "cdtn": {
+      "formule": {
+        "formula": "3 / 10 * Sref * A1[ + 4 / 10 * Sref * A2][ + 5 / 10 * Sref * A3]",
+        "explanations": [
+          {
+            "A1 : Années d'ancienneté au total": "contrat salarié . convention collective . commerces de gros . de zero à neuf ans"
+          },
+          {
+            "A2 : Années d'ancienneté au delà de 10 ans": "contrat salarié . convention collective . commerces de gros . de dix à dix-neuf ans"
+          },
+          {
+            "A3 : Années d'ancienneté au delà de 10 ans": "contrat salarié . convention collective . commerces de gros . au delà de vingt ans"
+          },
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
+    }
+  },
+  "contrat salarié . convention collective . commerces de gros . formule max 6": {
+    "applicable si": "contrat salarié . indemnité de licenciement . résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6",
+    "valeur": "oui",
+    "cdtn": {
+      "formule": {
+        "formula": "6 * Sref",
+        "explanations": [
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
+    }
+  },
+  "contrat salarié . convention collective . commerces de gros . formule max 12": {
+    "applicable si": "contrat salarié . indemnité de licenciement . résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12",
+    "valeur": "oui",
+    "cdtn": {
+      "formule": {
+        "formula": "12 * Sref",
+        "explanations": [
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
     }
   },
   "contrat salarié . convention collective . métallurgie ingénieurs et cadres": {
@@ -6773,33 +7210,9 @@
   },
   "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": {
     "titre": "Âge du salarié",
-    "question": "Quel est l'âge du salarié ?",
+    "question": "Quel est l'âge du salarié à la fin de son préavis (exécuté ou non)&nbsp;?",
     "cdtn": {
       "type": "entier"
-    }
-  },
-  "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age 50 ans": {
-    "applicable si": "age = 49",
-    "titre": "Le salarié aura 50 ans avant la fin de son préavis",
-    "question": "Le salarié aura-t-il 50 ans avant la fin de son préavis (que le préavis soit effectué ou non) ?",
-    "cdtn": {
-      "type": "oui-non"
-    }
-  },
-  "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age 55 ans": {
-    "applicable si": "age = 54",
-    "titre": "Le salarié aura 55 ans avant la fin de son préavis",
-    "question": "Le salarié aura-t-il 55 ans avant la fin de son préavis (que le préavis soit effectué ou non) ?",
-    "cdtn": {
-      "type": "oui-non"
-    }
-  },
-  "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age 60 ans": {
-    "applicable si": "age = 59",
-    "titre": "Le salarié aura 60 ans avant la fin de son préavis",
-    "question": "Le salarié aura-t-il 60 ans avant la fin de son préavis (que le préavis soit effectué ou non) ?",
-    "cdtn": {
-      "type": "oui-non"
     }
   },
   "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age plus de 60 ans": {
@@ -6912,22 +7325,10 @@
   "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 1": {
     "remplace": "contrat salarié . indemnité de licenciement . résultat conventionnel",
     "applicable si": {
-      "une de ces conditions": [
-        {
-          "toutes ces conditions": [
-            "age = 49",
-            "age 50 ans = 'Oui'",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an"
-          ]
-        },
-        {
-          "toutes ces conditions": [
-            "age >= 50",
-            "age < 55",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an",
-            "age 55 ans = 'Non'"
-          ]
-        }
+      "toutes ces conditions": [
+        "age >= 50",
+        "age < 55",
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an"
       ]
     },
     "valeur": {
@@ -6962,31 +7363,11 @@
   "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 2": {
     "remplace": "contrat salarié . indemnité de licenciement . résultat conventionnel",
     "applicable si": {
-      "une de ces conditions": [
-        {
-          "toutes ces conditions": [
-            "age = 54",
-            "age 55 ans = 'Oui'",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an"
-          ]
-        },
-        {
-          "toutes ces conditions": [
-            "age >= 55",
-            "age < 59",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an"
-          ]
-        },
-        {
-          "toutes ces conditions": [
-            "age = 59",
-            "age 60 ans = 'Non'",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an"
-          ]
-        }
+      "toutes ces conditions": [
+        "age >= 55",
+        "age < 59",
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 an",
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 5 an"
       ]
     },
     "valeur": {
@@ -7021,28 +7402,10 @@
   "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 3": {
     "remplace": "contrat salarié . indemnité de licenciement . résultat conventionnel",
     "applicable si": {
-      "une de ces conditions": [
-        {
-          "toutes ces conditions": [
-            "age = 54",
-            "age 55 ans = 'Oui'",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an"
-          ]
-        },
-        {
-          "toutes ces conditions": [
-            "age >= 55",
-            "age < 59",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an"
-          ]
-        },
-        {
-          "toutes ces conditions": [
-            "age = 59",
-            "age 60 ans = 'Non'",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an"
-          ]
-        }
+      "toutes ces conditions": [
+        "age >= 55",
+        "age < 59",
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 5 an"
       ]
     },
     "valeur": {
@@ -7285,6 +7648,32 @@
     "type": "notification",
     "description": "Le montant de l'indemnité pourrait être plus important si, avant le CDI, sous certaines conditions, le salarié a été lié à l’employeur par d'autres contrats.",
     "valeur": "oui"
+  },
+  "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . résultat conventionnel 2 avec plafond": {
+    "applicable si": {
+      "une de ces conditions": [
+        "résultat conventionnel 1 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18",
+        "résultat conventionnel 2 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18",
+        "résultat conventionnel 3 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18",
+        "résultat conventionnel 4 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18",
+        "résultat conventionnel 5 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18",
+        "résultat conventionnel 6 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18",
+        "résultat conventionnel 7 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18",
+        "résultat conventionnel 8 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18",
+        "résultat conventionnel 9 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18"
+      ]
+    },
+    "valeur": "oui",
+    "cdtn": {
+      "formule": {
+        "formula": "18 * Sref",
+        "explanations": [
+          {
+            "Sref : Salaire de référence": "contrat salarié . indemnité de licenciement . salaire de référence conventionnel"
+          }
+        ]
+      }
+    }
   },
   "contrat salarié . convention collective . habillement commerce succursales": {
     "titre": "Convention collective nationale des maisons à succursales de vente au détail d'habillement du 30 juin 1972.",

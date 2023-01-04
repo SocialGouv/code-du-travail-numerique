@@ -1,6 +1,6 @@
 {
   "name": "@cdt/api",
-  "version": "4.87.0",
+  "version": "4.88.1",
   "description": "",
   "private": true,
   "main": "dist/index.js",
@@ -36,11 +36,11 @@
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "dependencies": {
     "@elastic/elasticsearch": "7",
-    "@koa/cors": "^3.1.0",
+    "@koa/cors": "^4.0.0",
     "@socialgouv/cdtn-elasticsearch": "2.0.1",
     "@socialgouv/cdtn-logger": "^2.0.0",
-    "@socialgouv/cdtn-sources": "^4.87.0",
-    "cdtn-types": "^4.87.0",
+    "@socialgouv/cdtn-sources": "^4.88.1",
+    "cdtn-types": "^4.88.1",
     "date-fns": "^2.22.1",
     "elastic-apm-node": "^3.17.0",
     "fuzzball": "^2.0.2",

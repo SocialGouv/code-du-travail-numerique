@@ -1,15 +1,16 @@
-import { theme, Tabs, Accordion } from "@socialgouv/cdtn-ui";
+import { theme, Tabs, Accordion, Heading, Section } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 import { Content, SectionDisplayMode } from "cdtn-types";
 
 import { BlockList } from "./BlockList";
 
 import { trackClickInfoPageTab } from "../../questionnaire";
+import References from "../../common/References";
 
 const { breakpoints, spacings } = theme;
 
 type ContentsParameters = {
-  contents?: Omit<Content, "references">[];
+  contents?: Content[];
   dismissalProcess: boolean;
   sectionDisplayMode?: SectionDisplayMode;
   anchor: string[];
@@ -21,8 +22,27 @@ export const Contents = ({
   dismissalProcess,
   contents = [],
 }: ContentsParameters) => {
-  let editorialContent = contents?.map(({ name, blocks }) => {
-    return <BlockList key={name} name={name} blocks={blocks}></BlockList>;
+  let editorialContent = contents?.map(({ name, blocks, references }) => {
+    return (
+      <>
+        <BlockList key={name} name={name} blocks={blocks}></BlockList>
+        {references.map(
+          ({ label, links }) =>
+            links.length > 0 && (
+              <Section>
+                <References
+                  label={label}
+                  accordionDisplay={1}
+                  references={links.map((reference, index) => ({
+                    ...reference,
+                    id: reference.id || `${name}-${index}`,
+                  }))}
+                />
+              </Section>
+            )
+        )}
+      </>
+    );
   });
   let contentWrapper;
   if (editorialContent && editorialContent.length > 1) {
@@ -31,7 +51,7 @@ export const Contents = ({
         <Tabs
           data={contents?.map(({ title }, index) => ({
             panel: editorialContent?.[index],
-            tab: title,
+            tab: <Heading as="h2">{title}</Heading>,
           }))}
           onSelect={(index) => {
             if (dismissalProcess && contents) {

@@ -1,4 +1,5 @@
 import { SeniorityLegal } from "../../base";
+import { Seniority413 } from "../../conventions";
 import { Seniority16 } from "../../conventions/16_transports_routiers";
 import { Seniority44 } from "../../conventions/44_industries_chimiques";
 import { Seniority1090 } from "../../conventions/1090_automobiles";
@@ -23,7 +24,7 @@ export class SeniorityFactory {
         ) as ISeniority<T>;
       case SupportedCcIndemniteLicenciement.IDCC1090:
         return new Seniority1090(
-          getMotifs(SupportedCcIndemniteLicenciement.default)
+          getMotifs(SupportedCcIndemniteLicenciement.IDCC1090)
         ) as ISeniority<T>;
       case SupportedCcIndemniteLicenciement.IDCC1518:
         return new SeniorityLegal(
@@ -35,7 +36,7 @@ export class SeniorityFactory {
         ) as ISeniority<T>;
       case SupportedCcIndemniteLicenciement.IDCC1486:
         return new Seniority1486(
-          getMotifs(SupportedCcIndemniteLicenciement.default)
+          getMotifs(SupportedCcIndemniteLicenciement.IDCC1486)
         ) as ISeniority<T>;
       case SupportedCcIndemniteLicenciement.IDCC1527:
         return new SenioritY1527(
@@ -68,6 +69,10 @@ export class SeniorityFactory {
       case SupportedCcIndemniteLicenciement.IDCC2609:
         return new SeniorityLegal(
           getMotifs(SupportedCcIndemniteLicenciement.IDCC2609)
+        ) as ISeniority<T>;
+      case SupportedCcIndemniteLicenciement.IDCC413:
+        return new Seniority413(
+          getMotifs(SupportedCcIndemniteLicenciement.IDCC413)
         ) as ISeniority<T>;
       case SupportedCcIndemniteLicenciement.default:
       default:

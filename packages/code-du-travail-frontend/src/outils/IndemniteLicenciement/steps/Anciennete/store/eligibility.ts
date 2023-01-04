@@ -7,6 +7,7 @@ import { differenceInMonths } from "date-fns";
 import { AncienneteStoreInput } from "./types";
 import { Agreement } from "../../../../../conventions/Search/api/type";
 import { parse } from "../../../../common/utils";
+import { CommonInformationsStoreInput } from "../../../../CommonSteps/Informations/store";
 
 const getTotalAbsence = (
   absencePeriods: Absence[],
@@ -29,18 +30,33 @@ const getTotalAbsence = (
 
 export const getErrorEligibility = (
   state: AncienneteStoreInput,
+  stateInfo: CommonInformationsStoreInput,
+  isInaptitude: boolean,
   agreement?: Agreement
 ) => {
+  if (isInaptitude || !state.dateEntree || !state.dateNotification) {
+    return;
+  }
   const dEntree = parse(state.dateEntree);
   const dNotification = parse(state.dateNotification);
   const totalAbsence = getTotalAbsence(state.absencePeriods, agreement);
-  const diff = differenceInMonths(dNotification, dEntree);
-  const isEligible =
-    !state.dateEntree ||
-    !state.dateNotification ||
-    diff < 0 ||
-    diff - totalAbsence >= 8;
-  return !isEligible
-    ? `L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois.`
-    : "";
+  let minimalSeniority = 8;
+  let minimalSeniorityError =
+    "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois.";
+  let diff = differenceInMonths(dNotification, dEntree);
+  switch (agreement?.num) {
+    case 3239:
+      if (stateInfo.publicodesInformations[0].info === "'Assistant maternel'") {
+        minimalSeniority = 9;
+        minimalSeniorityError =
+          "L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois.";
+      }
+      break;
+    case 1517:
+      const dSortie = parse(state.dateSortie);
+      diff = differenceInMonths(dSortie, dEntree);
+      break;
+  }
+  const isEligible = diff < 0 || diff - totalAbsence >= minimalSeniority;
+  return !isEligible ? minimalSeniorityError : undefined;
 };

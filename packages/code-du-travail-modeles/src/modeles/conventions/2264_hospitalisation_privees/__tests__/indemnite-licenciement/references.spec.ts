@@ -40,6 +40,7 @@ describe("Références jurdiques pour l'indemnité conventionnel de licenciement
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
             "'Non'",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
@@ -91,6 +92,7 @@ describe("Références jurdiques pour l'indemnité conventionnel de licenciement
             "'Oui'",
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif": seniorityNonCadres,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
         const result = getReferences(situation, "résultat conventionnel");

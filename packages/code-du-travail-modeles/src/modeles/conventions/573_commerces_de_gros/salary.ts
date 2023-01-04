@@ -12,6 +12,12 @@ import {
   sum,
 } from "../../common";
 
+export enum CatPro573 {
+  autres = "Autres salariés",
+  agents = "Agents de maîtrise, techniciens et assimilés",
+  cadres = "Cadres",
+}
+
 export type CC573ReferenceSalaryProps = {
   salaires: SalaryPeriods[];
   licenciementEco: QuestionOuiNon;

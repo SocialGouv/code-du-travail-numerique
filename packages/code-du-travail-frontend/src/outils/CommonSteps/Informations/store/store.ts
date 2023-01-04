@@ -79,6 +79,7 @@ const createCommonInformationsStore: StoreSlice<
       set(
         produce((state: CommonInformationsStoreSlice) => {
           state.informationsData.input = initialState.input;
+          state.informationsData.error = initialState.error;
         })
       );
     },
@@ -204,6 +205,17 @@ const createCommonInformationsStore: StoreSlice<
       );
       get().informationsFunction.onSetStepHidden();
       return isValid;
+    },
+    onEligibilityCheckCommonInfo: () => {
+      const state = get().informationsData.input;
+      const errorEligibility = state.blockingNotification;
+
+      set(
+        produce((state: CommonInformationsStoreSlice) => {
+          state.informationsData.error.errorEligibility = errorEligibility;
+        })
+      );
+      return !errorEligibility;
     },
   },
 });

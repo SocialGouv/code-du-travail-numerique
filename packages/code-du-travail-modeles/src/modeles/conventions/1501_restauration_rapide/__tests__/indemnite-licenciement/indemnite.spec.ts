@@ -20,6 +20,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 1501", () => {
           "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique": `'Non'`,
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
@@ -38,8 +39,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 1501", () => {
       ${"Non-cadres"} | ${50} | ${23 / 12} | ${2600} | ${0}
       ${"Non-cadres"} | ${50} | ${2}       | ${2600} | ${520}
       ${"Non-cadres"} | ${50} | ${7}       | ${2600} | ${1820}
-      ${"Non-cadres"} | ${50} | ${13}      | ${2600} | ${3900}
-      ${"Non-cadres"} | ${50} | ${16}      | ${2600} | ${6240}
+      ${"Non-cadres"} | ${49} | ${13}      | ${2600} | ${3900}
+      ${"Non-cadres"} | ${49} | ${16}      | ${2600} | ${6240}
       ${"Non-cadres"} | ${55} | ${7}       | ${2600} | ${1820}
       ${"Non-cadres"} | ${55} | ${13}      | ${2600} | ${4485}
       ${"Non-cadres"} | ${55} | ${16}      | ${2600} | ${7176}
@@ -51,6 +52,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 1501", () => {
       ${"Cadres"}     | ${51} | ${1}       | ${3100} | ${310}
       ${"Cadres"}     | ${51} | ${5}       | ${3100} | ${1550}
       ${"Cadres"}     | ${51} | ${23}      | ${3100} | ${25668}
+      ${"Cadres"}     | ${50} | ${23}      | ${3100} | ${25668}
+      ${"Cadres"}     | ${55} | ${23}      | ${3100} | ${25668}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, age: $age an, catégorie $category => $expectedCompensation €",
       ({ category, age, seniority, salary, expectedCompensation }) => {
@@ -61,6 +64,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 1501", () => {
           "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age": age,
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 

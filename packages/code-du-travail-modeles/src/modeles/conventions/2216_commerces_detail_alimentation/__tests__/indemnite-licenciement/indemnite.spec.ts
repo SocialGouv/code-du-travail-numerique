@@ -6,19 +6,23 @@ describe("Indemnité conventionnel de licenciement pour la CC 2216", () => {
       ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${50} | ${7 / 12} | ${2000} | ${0}
       ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${51} | ${7 / 12} | ${2000} | ${0}
       ${"Employés et ouvriers, personnel de livraison"} | ${false}         | ${50} | ${8 / 12} | ${2000} | ${333.33}
-      ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${50} | ${8 / 12} | ${2000} | ${333.33}
+      ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${49} | ${8 / 12} | ${2000} | ${333.33}
+      ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${50} | ${8 / 12} | ${2000} | ${400}
       ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${51} | ${8 / 12} | ${2000} | ${400}
       ${"Employés et ouvriers, personnel de livraison"} | ${false}         | ${50} | ${11}     | ${2000} | ${5666.67}
-      ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${50} | ${11}     | ${2000} | ${5666.67}
+      ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${49} | ${11}     | ${2000} | ${5666.67}
+      ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${50} | ${11}     | ${2000} | ${6800}
       ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${51} | ${11}     | ${2000} | ${6800}
       ${"Agents de maîtrise et techniciens"}            | ${false}         | ${50} | ${7 / 12} | ${2000} | ${0}
       ${"Agents de maîtrise et techniciens"}            | ${true}          | ${50} | ${7 / 12} | ${2000} | ${0}
       ${"Agents de maîtrise et techniciens"}            | ${true}          | ${51} | ${7 / 12} | ${2000} | ${0}
       ${"Agents de maîtrise et techniciens"}            | ${false}         | ${50} | ${8 / 12} | ${2000} | ${333.33}
-      ${"Agents de maîtrise et techniciens"}            | ${true}          | ${50} | ${8 / 12} | ${2000} | ${333.33}
+      ${"Agents de maîtrise et techniciens"}            | ${false}         | ${49} | ${8 / 12} | ${2000} | ${333.33}
+      ${"Agents de maîtrise et techniciens"}            | ${true}          | ${50} | ${8 / 12} | ${2000} | ${400}
       ${"Agents de maîtrise et techniciens"}            | ${true}          | ${51} | ${8 / 12} | ${2000} | ${400}
       ${"Agents de maîtrise et techniciens"}            | ${false}         | ${50} | ${11}     | ${2000} | ${5666.67}
-      ${"Agents de maîtrise et techniciens"}            | ${true}          | ${50} | ${11}     | ${2000} | ${5666.67}
+      ${"Agents de maîtrise et techniciens"}            | ${true}          | ${49} | ${11}     | ${2000} | ${5666.67}
+      ${"Agents de maîtrise et techniciens"}            | ${true}          | ${50} | ${11}     | ${2000} | ${6800}
       ${"Agents de maîtrise et techniciens"}            | ${true}          | ${51} | ${11}     | ${2000} | ${6800}
       ${"Cadres"}                                       | ${false}         | ${50} | ${7 / 12} | ${2000} | ${0}
       ${"Cadres"}                                       | ${true}          | ${50} | ${7 / 12} | ${2000} | ${0}
@@ -42,14 +46,16 @@ describe("Indemnité conventionnel de licenciement pour la CC 2216", () => {
       ${"Employés et ouvriers, personnel de livraison"} | ${false}         | ${45} | ${0.67}   | ${2500} | ${418.75}
       ${"Employés et ouvriers, personnel de livraison"} | ${false}         | ${45} | ${10}     | ${2500} | ${6250}
       ${"Employés et ouvriers, personnel de livraison"} | ${false}         | ${45} | ${11}     | ${2500} | ${7083.33}
-      ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${50} | ${20}     | ${2500} | ${14583.33}
+      ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${49} | ${20}     | ${2500} | ${14583.33}
+      ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${50} | ${20}     | ${2500} | ${17500}
       ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${51} | ${20}     | ${2500} | ${17500}
       ${"Employés et ouvriers, personnel de livraison"} | ${true}          | ${53} | ${8}      | ${2500} | ${6000}
       ${"Agents de maîtrise et techniciens"}            | ${false}         | ${45} | ${7 / 12} | ${2500} | ${0}
       ${"Agents de maîtrise et techniciens"}            | ${false}         | ${45} | ${0.67}   | ${2500} | ${418.75}
       ${"Agents de maîtrise et techniciens"}            | ${false}         | ${45} | ${10}     | ${2500} | ${6250}
       ${"Agents de maîtrise et techniciens"}            | ${false}         | ${45} | ${11}     | ${2500} | ${7083.33}
-      ${"Agents de maîtrise et techniciens"}            | ${true}          | ${50} | ${20}     | ${2500} | ${14583.33}
+      ${"Agents de maîtrise et techniciens"}            | ${true}          | ${49} | ${20}     | ${2500} | ${14583.33}
+      ${"Agents de maîtrise et techniciens"}            | ${true}          | ${50} | ${20}     | ${2500} | ${17500}
       ${"Agents de maîtrise et techniciens"}            | ${true}          | ${51} | ${20}     | ${2500} | ${17500}
       ${"Agents de maîtrise et techniciens"}            | ${true}          | ${53} | ${8}      | ${2500} | ${6000}
       ${"Cadres"}                                       | ${false}         | ${45} | ${0.91}   | ${2500} | ${568.75}
@@ -67,7 +73,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 2216", () => {
       ${"Cadres"}                                       | ${true}          | ${55} | ${40}     | ${2500} | ${36000}
       ${"Cadres"}                                       | ${true}          | ${50} | ${41}     | ${2500} | ${37000}
     `(
-      "ancienneté: $seniority an, age $age ans, salaire de référence: $salary, catégorie $category & licenciement économique: $isEconomicFiring => $expectedCompensation €",
+      "$#) ancienneté: $seniority an, age $age ans, salaire de référence: $salary, catégorie $category & licenciement économique: $isEconomicFiring => $expectedCompensation €",
       ({
         category,
         isEconomicFiring,
@@ -85,6 +91,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 2216", () => {
           "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 

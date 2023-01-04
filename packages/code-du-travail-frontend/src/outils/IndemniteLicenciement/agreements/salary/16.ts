@@ -1,4 +1,5 @@
 import {
+  CategoryPro16,
   ReferenceSalaryFactory,
   SalaryPeriods,
   SupportedCcIndemniteLicenciement,
@@ -6,7 +7,6 @@ import {
 import { StoreApi } from "zustand";
 import { AgreementSalary } from ".";
 import { MainStore } from "../../store";
-import { CategoryPro16 } from "@socialgouv/modeles-social/bin";
 
 export class AgreementSalary16 implements AgreementSalary {
   computeSalary = (

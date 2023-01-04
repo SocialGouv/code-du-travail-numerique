@@ -26,15 +26,14 @@ contrat salarié . convention collective . établissement handicap . indemnité 
   unité: €
 
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre . facteur 1 avec plafond:
-  le minimum de:
-    - non cadre . facteur 1
-    - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
+  valeur: non cadre . facteur 1
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
 
 # (1/2*Sref*A)
 # A : Année d'ancienneté
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 2 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année >= 2 ans
   valeur: non cadre . facteur 1 avec plafond
   unité: €
   arrondi: 2 décimales
@@ -47,20 +46,28 @@ contrat salarié . convention collective . établissement handicap . indemnité 
         - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
+contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 6 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
 ## CADRES ##
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . cadre:
   applicable si: catégorie professionnelle = 'Cadres'
   valeur: oui
 
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . cadre . facteur 1 avec plafond:
-  le minimum de:
-    - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-    - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
+  valeur: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
 
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . cadre . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si: non cadre durant une période = 'Oui'
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année > 2 ans
   valeur: cadre . facteur 1 avec plafond
   unité: €
   arrondi: 2 décimales
@@ -74,20 +81,28 @@ contrat salarié . convention collective . établissement handicap . indemnité 
         - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
+contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . cadre . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 12 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
 ## CADRES DIRECTEUR ##
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . cadre directeur:
   applicable si: catégorie professionnelle = 'Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service'
   valeur: oui
 
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . cadre directeur . facteur 1 avec plafond:
-  le minimum de:
-    - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
-    - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  valeur: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
 
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . cadre directeur . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   non applicable si: non cadre durant une période = 'Oui'
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année > 2 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année > 2 ans
   valeur: cadre directeur . facteur 1 avec plafond
   unité: €
   arrondi: 2 décimales
@@ -99,6 +114,15 @@ contrat salarié . convention collective . établissement handicap . indemnité 
       formula: Sref * A
       explanations:
         - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . cadre directeur . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 18 * Sref
+      explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 ## MIXTE CADRE ET DIRECTEUR ##
@@ -113,43 +137,40 @@ contrat salarié . convention collective . établissement handicap . indemnité 
     type: oui-non
 
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps:
-  valeur: 0 an
+  applicable si: non cadre durant une période = 'Oui'
+  titre: Date du changement de catégorie
+  question: A quelle date le salarié a-t-il changé de catégorie&nbsp;?
+  cdtn:
+    type: date
 
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif:
-  remplace: temps
-  titre: Durée en tant que non-cadres
-  question: Pendant combien de temps a-t-il occupé des fonctions non-cadres durant le contrat de travail&nbsp;?
-  applicable si: non cadre durant une période = 'Oui'
+  applicable si: temps
+  valeur: 0 an
   unité: an
-  cdtn:
-    type: entier
-    precision: Durée (en année)
 
-contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps . ancienneté cadre:
-  valeur: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année - temps
+contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif . ancienneté cadre:
+  valeur: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année - temps effectif
   unité: an
   plancher: 0 an
 
-contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps . facteur 1 avec plafond:
-  le minimum de:
-    - 0.5 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel * temps
-    - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
+contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif . facteur 1 avec plafond:
+  valeur: 0.5 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel * temps effectif
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
   unité: €
 
-contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps . facteur 1 sans plafond:
+contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif . facteur 1 sans plafond:
   valeur:
     produit:
-      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * temps
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * temps effectif
       facteur: 1 / 2
   unité: €
 
-contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps . facteur 2 avec plafond:
-  le minimum de:
-    - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * ancienneté cadre
-    - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
+contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif . facteur 2 avec plafond:
+  valeur: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * ancienneté cadre
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
   unité: €
 
-contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps . résultat conventionnel cadre:
+contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif . résultat conventionnel cadre:
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Cadres'
@@ -158,6 +179,7 @@ contrat salarié . convention collective . établissement handicap . indemnité 
   somme:
     - facteur 1 avec plafond
     - facteur 2 avec plafond
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
   unité: €
   arrondi: 2 décimales
   références:
@@ -168,28 +190,48 @@ contrat salarié . convention collective . établissement handicap . indemnité 
       formula: (1 / 2 * Sref * A1) + (Sref * A2)
       explanations:
         - "A1 : Année de service en qualité de non-cadres": contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif
-        - "A2 : Année de service en qualité de cadre": contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps . ancienneté cadre
+        - "A2 : Année de service en qualité de cadre": contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif . ancienneté cadre
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
-contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps . résultat conventionnel cadre directeur:
+contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif . résultat conventionnel cadre avec plafond:
+  applicable si: résultat conventionnel cadre = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 12 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif . résultat conventionnel cadre directeur:
   applicable si:
     toutes ces conditions:
       - catégorie professionnelle = 'Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service'
       - temps effectif > 0 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  le minimum de:
-    - facteur 1 sans plafond + contrat salarié . indemnité de licenciement . salaire de référence conventionnel * ancienneté cadre
-    - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  somme:
+    - facteur 1 sans plafond
+    - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * ancienneté cadre
+  plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
   arrondi: 2 décimales
   références:
-    Article 47: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000020981961?idConteneur=KALICONT000005635813
+    Article 17: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005863126?idConteneur=KALICONT000005635407
+    Article 10 de l'Annexe n°6 Dispositions spéciales aux cadres: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022837395?idConteneur=KALICONT000005635407
   cdtn:
     formule:
       formula: (1 / 2 * Sref * A1) + (Sref * A2)
       explanations:
         - "A1 : Année de service en qualité de non-cadres": contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif
-        - "A2 : Année de service en qualité de cadre": contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps . ancienneté cadre
+        - "A2 : Année de service en qualité de cadre": contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif . ancienneté cadre
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif . résultat conventionnel cadre directeur avec plafond:
+  applicable si: résultat conventionnel cadre directeur = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 18 * Sref
+      explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . établissement handicap . résultat conventionnel fallback:
@@ -199,7 +241,7 @@ contrat salarié . convention collective . établissement handicap . résultat c
       - contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . cadre directeur . résultat conventionnel
       - contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . cadre . résultat conventionnel
       - contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre . résultat conventionnel
-      - contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps . résultat conventionnel cadre directeur
-      - contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps . résultat conventionnel cadre
+      - contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif . résultat conventionnel cadre directeur
+      - contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif . résultat conventionnel cadre
   valeur: 0
   unité: €

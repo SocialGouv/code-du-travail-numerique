@@ -34,6 +34,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 1596", () => {
               age
             ),
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
           })
           .evaluate(
@@ -47,25 +48,21 @@ describe("Indemnité conventionnel de licenciement pour la CC 1596", () => {
   });
   describe("Cas complexe", () => {
     test.each`
-      moreThan55 | seniority  | salary  | expectedCompensation
-      ${"Non"}   | ${23 / 12} | ${2000} | ${0}
-      ${"Oui"}   | ${23 / 12} | ${2000} | ${0}
-      ${"Non"}   | ${2}       | ${2000} | ${400}
-      ${"Oui"}   | ${2}       | ${2000} | ${440}
-      ${"Non"}   | ${5}       | ${2000} | ${1000}
-      ${"Oui"}   | ${5}       | ${2000} | ${1100}
-      ${"Non"}   | ${6}       | ${2000} | ${1800}
-      ${"Oui"}   | ${6}       | ${2000} | ${1980}
+      seniority | salary  | expectedCompensation
+      ${0}      | ${2000} | ${0}
+      ${2}      | ${2000} | ${400}
+      ${5}      | ${2000} | ${1000}
+      ${6}      | ${2000} | ${1800}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, => $expectedCompensation €",
-      ({ seniority, salary, expectedCompensation, moreThan55 }) => {
+      ({ seniority, salary, expectedCompensation }) => {
         const result = engine
           .setSituation({
             "contrat salarié . convention collective": "'IDCC1596'",
             "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age":
-              "55",
-            "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age plus de 55 ans": `'${moreThan55}'`,
+              "54",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
           })
           .evaluate(
