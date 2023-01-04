@@ -131,7 +131,9 @@ const createResultStore: StoreSlice<
       );
       const requiredSeniority = computeRequiredSeniority({
         dateEntree: get().ancienneteData.input.dateEntree!,
-        dateNotification: get().ancienneteData.input.dateNotification!,
+        dateNotification: dateOneDayLater(
+          get().ancienneteData.input.dateNotification!
+        ),
       });
       if (!publicodes) {
         throw new Error("Publicodes is not defined");
