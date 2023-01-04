@@ -1,4 +1,7 @@
-import type { LegalSeniorityProps } from "../../base";
+import type {
+  LegalSeniorityProps,
+  LegalSeniorityRequiredProps,
+} from "../../base";
 import type {
   CC0016SeniorityProps,
   CC0413SeniorityProps,
@@ -54,7 +57,13 @@ export type Motif = {
 
 export interface ISeniority<T extends SupportedCcIndemniteLicenciement> {
   computeSeniority: (args: SeniorityProps<T>) => SeniorityResult;
+  computeRequiredSeniority: (
+    args: SeniorityRequiredProps
+  ) => RequiredSeniorityResult;
+  getMotifs: () => Motif[];
 }
+
+export type SeniorityRequiredProps = LegalSeniorityRequiredProps;
 
 export type SeniorityProps<
   T
@@ -69,10 +78,6 @@ export type SeniorityResult = {
   extraInfos?: Record<string, number | string>;
 };
 
-export const DISABLE_ABSENCE = [
-  "IDCC1090",
-  "IDCC1486",
-  "IDCC1527",
-  "IDCC2216",
-  "IDCC2941",
-];
+export type RequiredSeniorityResult = {
+  value: number;
+};

@@ -1,9 +1,12 @@
 import { differenceInMonths, parse } from "date-fns";
 
 import type {
+  Absence,
   ISeniority,
   Motif,
+  RequiredSeniorityResult,
   SeniorityProps,
+  SeniorityRequiredProps,
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
@@ -11,24 +14,40 @@ import { MotifKeys } from "../../common/motif-keys";
 
 export class Seniority1090
   implements ISeniority<SupportedCcIndemniteLicenciement.default> {
-  protected motifs: Motif[];
-
-  constructor(motifs: Motif[]) {
-    this.motifs = motifs;
-  }
-
   computeSeniority({
     dateEntree,
     dateSortie,
     absencePeriods = [],
   }: SeniorityProps<SupportedCcIndemniteLicenciement.default>): SeniorityResult {
-    const dEntree = parse(dateEntree, "dd/MM/yyyy", new Date());
-    const dSortie = parse(dateSortie, "dd/MM/yyyy", new Date());
+    return this.compute(dateEntree, dateSortie, absencePeriods);
+  }
+
+  computeRequiredSeniority({
+    dateEntree,
+    dateNotification,
+    absencePeriods = [],
+  }: SeniorityRequiredProps): RequiredSeniorityResult {
+    return this.compute(dateEntree, dateNotification, absencePeriods);
+  }
+
+  getMotifs(): Motif[] {
+    return MOTIFS_1090;
+  }
+
+  private compute(
+    from: string,
+    to: string,
+    absences: Absence[]
+  ): SeniorityResult {
+    const dEntree = parse(from, "dd/MM/yyyy", new Date());
+    const dSortie = parse(to, "dd/MM/yyyy", new Date());
     const totalAbsence =
-      absencePeriods
+      absences
         .filter((period) => Boolean(period.durationInMonth))
         .reduce<number>((total, item) => {
-          const m = this.motifs.find((motif) => motif.key === item.motif.key);
+          const m = this.getMotifs().find(
+            (motif) => motif.key === item.motif.key
+          );
           if (!m || !item.durationInMonth) {
             return total;
           }
@@ -42,7 +61,7 @@ export class Seniority1090
           return total + item.durationInMonth * m.value;
         }, 0) / 12;
     return Object.assign(
-      absencePeriods
+      absences
         .filter((period) => Boolean(period.durationInMonth))
         .find(
           (period) =>
@@ -62,7 +81,7 @@ export class Seniority1090
   }
 }
 
-export const MOTIFS_1090: Motif[] = [
+const MOTIFS_1090: Motif[] = [
   {
     key: MotifKeys.maladieNonPro,
     label: "Absence pour maladie non professionnelle",

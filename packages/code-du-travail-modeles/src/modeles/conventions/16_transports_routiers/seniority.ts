@@ -1,11 +1,13 @@
 import { differenceInMonths, isBefore, parse } from "date-fns";
 
-import type { LegalSeniorityProps } from "../../base/seniority";
+import type { LegalSeniorityProps } from "../../base";
 import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
   ISeniority,
   Motif,
+  RequiredSeniorityResult,
   SeniorityProps,
+  SeniorityRequiredProps,
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
   YearDetail,
@@ -19,12 +21,6 @@ export type CC0016SeniorityProps = LegalSeniorityProps & {
 
 export class Seniority16
   implements ISeniority<SupportedCcIndemniteLicenciement.IDCC0016> {
-  protected motifs: Motif[];
-
-  constructor(motifs: Motif[]) {
-    this.motifs = motifs;
-  }
-
   computeSeniority({
     dateEntree,
     dateSortie,
@@ -37,7 +33,9 @@ export class Seniority16
     const totalAbsence = absencePeriods
       .filter((period) => Boolean(period.durationInMonth))
       .reduce((total, item) => {
-        const m = this.motifs.find((motif) => motif.key === item.motif.key);
+        const m = this.getMotifs().find(
+          (motif) => motif.key === item.motif.key
+        );
         if (!m || !item.durationInMonth) {
           return total;
         }
@@ -84,9 +82,36 @@ export class Seniority16
       value: seniorityExecutive,
     };
   }
+
+  computeRequiredSeniority({
+    dateEntree,
+    dateNotification,
+    absencePeriods = [],
+  }: SeniorityRequiredProps): RequiredSeniorityResult {
+    const dEntree = parse(dateEntree, "dd/MM/yyyy", new Date());
+    const dSortie = parse(dateNotification, "dd/MM/yyyy", new Date());
+    const totalAbsence = absencePeriods
+      .filter((period) => Boolean(period.durationInMonth))
+      .reduce((total, item) => {
+        const m = this.getMotifs().find(
+          (motif) => motif.key === item.motif.key
+        );
+        if (!m || !item.durationInMonth) {
+          return total;
+        }
+        return total + Number(item.durationInMonth) * m.value;
+      }, 0);
+    return {
+      value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
+    };
+  }
+
+  getMotifs(): Motif[] {
+    return MOTIFS_16;
+  }
 }
 
-export const MOTIFS_16: Motif[] = LEGAL_MOTIFS.map((item) => ({
+const MOTIFS_16: Motif[] = LEGAL_MOTIFS.map((item) => ({
   ...item,
   startAt: (data) => {
     return (

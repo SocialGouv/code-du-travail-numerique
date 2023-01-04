@@ -1,9 +1,13 @@
 import { differenceInMonths, parse } from "date-fns";
 
+import { LEGAL_MOTIFS } from "../../base";
 import type {
+  Absence,
   ISeniority,
   Motif,
+  RequiredSeniorityResult,
   SeniorityProps,
+  SeniorityRequiredProps,
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
@@ -11,23 +15,39 @@ import { MotifKeys } from "../../common";
 
 export class Seniority1486
   implements ISeniority<SupportedCcIndemniteLicenciement.IDCC1486> {
-  protected motifs: Motif[];
-
-  constructor(motifs: Motif[]) {
-    this.motifs = motifs;
-  }
-
   computeSeniority({
     dateEntree,
     dateSortie,
     absencePeriods = [],
   }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC1486>): SeniorityResult {
-    const dEntree = parse(dateEntree, "dd/MM/yyyy", new Date());
-    const dSortie = parse(dateSortie, "dd/MM/yyyy", new Date());
+    return this.compute(dateEntree, dateSortie, absencePeriods);
+  }
+
+  computeRequiredSeniority({
+    dateEntree,
+    dateNotification,
+    absencePeriods = [],
+  }: SeniorityRequiredProps): RequiredSeniorityResult {
+    return this.compute(dateEntree, dateNotification, absencePeriods);
+  }
+
+  getMotifs(): Motif[] {
+    return LEGAL_MOTIFS;
+  }
+
+  private compute(
+    from: string,
+    to: string,
+    absences: Absence[]
+  ): SeniorityResult {
+    const dEntree = parse(from, "dd/MM/yyyy", new Date());
+    const dSortie = parse(to, "dd/MM/yyyy", new Date());
 
     const totalAbsence =
-      absencePeriods.reduce((total, item) => {
-        const m = this.motifs.find((motif) => motif.key === item.motif.key);
+      absences.reduce((total, item) => {
+        const m = this.getMotifs().find(
+          (motif) => motif.key === item.motif.key
+        );
         if (
           item.durationInMonth === undefined ||
           !m ||
