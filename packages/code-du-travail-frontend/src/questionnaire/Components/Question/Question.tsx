@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useStore } from "../../store";
 import { Response } from "./Response";
 import { Tooltip } from "../../../common/Tooltip";
