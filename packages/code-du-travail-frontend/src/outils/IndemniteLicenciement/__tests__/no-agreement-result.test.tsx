@@ -36,6 +36,7 @@ describe("Indemnité licenciement", () => {
       userEvent.click(ui.contract.type.cdi.get());
       userEvent.click(ui.contract.fauteGrave.non.get());
       userEvent.click(ui.contract.inaptitude.non.get());
+      userEvent.click(ui.contract.arretTravail.non.get());
       userEvent.click(ui.next.get());
       userEvent.click(ui.next.get());
       userEvent.selectOptions(

@@ -30,6 +30,14 @@ export const ui = {
       oui: byTestId("licenciementInaptitude - Oui"),
       non: byTestId("licenciementInaptitude - Non"),
     },
+    arretTravail: {
+      question: byText(
+        "Le salarié est-il en arrêt de travail au moment du licenciement ?"
+      ),
+      oui: byTestId("licenciementArretTravail - Oui"),
+      non: byTestId("licenciementArretTravail - Non"),
+    },
+    dateArretTravail: byTestId("date-arret-travail"),
   },
   agreement: {
     noAgreement: byTestId(

@@ -45,7 +45,8 @@ global.fetch = jest.fn(() =>
                 id: "KALICONT000044594539",
                 title: "Particuliers employeurs et emploi à domicile",
                 slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
-                url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
+                url:
+                  "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
               },
             },
           ],
@@ -73,6 +74,7 @@ describe("Indemnité licenciement - Validation de la page information", () => {
         .click(ui.contract.type.cdi.get())
         .click(ui.contract.fauteGrave.non.get())
         .click(ui.contract.inaptitude.non.get())
+        .click(ui.contract.arretTravail.non.get())
         .click(ui.next.get())
         .click(ui.next.get());
       // Validation que l'on est bien sur l'étape ancienneté

@@ -98,6 +98,7 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
 
 contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle . autre licenciement . catégorie professionnelle:
   titre: Catégorie professionnelle
+  applicable si: inaptitude suite à un accident non professionnelle = 'Non'
   description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
   question: Quelle est la catégorie professionnelle du salarié ?
   cdtn:
@@ -114,6 +115,7 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
 
 contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle . autre licenciement . catégorie professionnelle . cadres . age:
   titre: Âge du salarié
+  applicable si: catégorie professionnelle = 'Cadres'
   question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
   unité: an
   cdtn:
