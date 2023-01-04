@@ -76,7 +76,7 @@ const SearchBar = ({
       <ScreenReaderOnly>
         <label htmlFor={inputId}>Rechercher</label>
       </ScreenReaderOnly>
-      {hasButton && !hasSearchIcon && <SearchIconLeft />}
+      {hasButton && !hasSearchIcon && <SearchIconLeft aria-hidden="true" />}
       <SearchInput
         inputId={inputId}
         hasFocus={hasFocus}
