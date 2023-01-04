@@ -7,6 +7,7 @@ describe("Outil - Indemnité de licenciement", () => {
     cy.contains("Contrat à durée indeterminé (CDI)").click();
     cy.get('label:contains("Non")').first().click();
     cy.get('label:contains("Non")').eq(1).click();
+    cy.get('label:contains("Non")').eq(2).click();
     cy.contains("Suivant").click();
 
     cy.get("#route-none").check();
