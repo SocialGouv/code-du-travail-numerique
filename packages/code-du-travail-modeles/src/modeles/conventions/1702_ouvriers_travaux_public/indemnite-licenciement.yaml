@@ -9,6 +9,7 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
     type: oui-non
 
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age:
+  applicable si: licenciement économique
   titre: Âge du salarié
   question: Quel est l'âge du salarié à la fin de son préavis (exécuté ou non) &nbsp;?
   cdtn:
