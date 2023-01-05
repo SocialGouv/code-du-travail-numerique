@@ -4,7 +4,19 @@ import { ui } from "./ui";
 import { render, fireEvent, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-jest.mock("../../../conventions/Search/api/agreements.service");
+jest.spyOn(Storage.prototype, "setItem");
+Storage.prototype.getItem = jest.fn(
+  () => `
+{
+  "num": 16,
+  "shortTitle": "Transports routiers et activités auxiliaires du transport",
+  "id": "KALICONT000005635624",
+  "title": "Transports routiers et activités auxiliaires du transport",
+  "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635624",
+  "slug": "16-transports-routiers-et-activites-auxiliaires-du-transport"
+}
+`
+);
 
 describe(`Tests des erreurs d'éligibilité`, () => {
   beforeEach(async () => {
@@ -53,13 +65,6 @@ describe(`Tests des erreurs d'éligibilité`, () => {
     fireEvent.click(ui.contract.inaptitude.non.get());
     fireEvent.click(ui.contract.arretTravail.non.get());
     fireEvent.click(ui.next.get());
-    fireEvent.click(ui.agreement.agreement.get());
-    fireEvent.change(ui.agreement.agreementInput.get(), {
-      target: { value: "16" },
-    });
-    await waitFor(() =>
-      fireEvent.click(ui.agreement.searchItem.agreement16.get())
-    );
     fireEvent.click(ui.next.get());
     userEvent.selectOptions(
       ui.information.agreement16.proCategory.get(),

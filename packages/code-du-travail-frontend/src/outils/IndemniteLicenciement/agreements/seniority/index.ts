@@ -1,8 +1,9 @@
 import {
-  SeniorityFactory,
-  SupportedCcIndemniteLicenciement,
-  SeniorityResult,
   Absence,
+  RequiredSeniorityResult,
+  SeniorityFactory,
+  SeniorityResult,
+  SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { StoreApi } from "zustand";
 import { MainStore } from "../../store";
@@ -10,7 +11,7 @@ import { AgreementSeniority16 } from "./16";
 import { dateOneDayLater } from "../../common";
 import { AgreementSeniority413 } from "./413";
 
-const getAgreementSeniority = (
+export const getAgreementSeniority = (
   idcc: SupportedCcIndemniteLicenciement,
   get: StoreApi<MainStore>["getState"]
 ): SeniorityResult => {
@@ -38,7 +39,27 @@ const getAgreementSeniority = (
   }
 };
 
-export default getAgreementSeniority;
+export const getAgreementRequiredSeniority = (
+  idcc: SupportedCcIndemniteLicenciement,
+  get: StoreApi<MainStore>["getState"]
+): RequiredSeniorityResult => {
+  const dateEntree = get().ancienneteData.input.dateEntree!;
+  const dateSortie = dateOneDayLater(get().ancienneteData.input.dateSortie!);
+  const dateNotification = dateOneDayLater(
+    get().ancienneteData.input.dateNotification!
+  );
+  const absencePeriods = get().ancienneteData.input.absencePeriods;
+  const defaultValues = {
+    dateEntree,
+    dateNotification,
+    dateSortie,
+    absencePeriods,
+  };
+
+  return new SeniorityFactory()
+    .create(idcc)
+    .computeRequiredSeniority(defaultValues);
+};
 
 export interface AgreementSeniority {
   computeSeniority: (data: {
