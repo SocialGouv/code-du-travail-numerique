@@ -1,4 +1,35 @@
 {
-  "enabled": true,
-  "extends": ["github>SocialGouv/renovate-config:light"]
+  "enable": true,
+  "extends": [
+    ":label(renovate)",
+    ":prConcurrentLimit10",
+    ":prNotPending",
+    ":timezone(Europe/Paris)",
+    ":automergePr",
+    ":disableDevDependencies",
+    ":disableMajorUpdates"
+  ],
+  "npm": {
+    "extends": [
+      ":automergePatch",
+      ":noUnscheduledUpdates",
+      ":separatePatchReleases"
+    ],
+    "schedule": ["after 9pm", "before 9am"],
+    "rangeStrategy": "bump",
+    "lockFileMaintenance": {
+      "enabled": true,
+      "schedule": ["before 3am on the first day of the month"]
+    },
+    "packageRules": [
+      {
+        "matchPackagePatterns": ["*"],
+        "semanticCommitType": "chore"
+      },
+      {
+        "matchDepTypes": ["dependencies", "peerDependencies"],
+        "semanticCommitType": "fix"
+      }
+    ]
+  }
 }
