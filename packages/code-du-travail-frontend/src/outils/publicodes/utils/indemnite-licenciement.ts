@@ -3,6 +3,7 @@ import { SeniorityResult } from "@socialgouv/modeles-social";
 
 export const mapToPublicodesSituationForIndemniteLicenciementLegal = (
   seniority: number,
+  requiredSeniority: number,
   salaireRef: number,
   inaptitude: boolean
 ): Record<string, string> => {
@@ -13,6 +14,9 @@ export const mapToPublicodesSituationForIndemniteLicenciementLegal = (
     ),
     "contrat salarié . indemnité de licenciement . ancienneté en année": formatNumberAsString(
       seniority
+    ),
+    "contrat salarié . indemnité de licenciement . ancienneté requise en année": formatNumberAsString(
+      requiredSeniority
     ),
     "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": inaptitude
       ? "oui"
@@ -41,9 +45,7 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithVa
   ccn: number,
   agreementSeniority: SeniorityResult,
   agreementSalaireRef: number,
-  legalSeniority: SeniorityResult,
   requiredSeniority: number,
-  legalSalaireRef: number,
   notificationDate: string,
   agreementParameters?: Record<string, any>
 ): Record<string, string> => {
@@ -51,12 +53,6 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithVa
     ...agreementParameters,
     ...(agreementSeniority?.extraInfos ?? {}),
     ...{
-      "contrat salarié . indemnité de licenciement . salaire de référence": formatNumberAsString(
-        legalSalaireRef
-      ),
-      "contrat salarié . indemnité de licenciement . ancienneté en année": formatNumberAsString(
-        legalSeniority.value
-      ),
       "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": formatNumberAsString(
         agreementSeniority.value
       ),
@@ -64,9 +60,7 @@ export const mapToPublicodesSituationForIndemniteLicenciementConventionnelWithVa
         agreementSalaireRef
       ),
       "contrat salarié . indemnité de licenciement . date de notification": notificationDate,
-      "contrat salarié . indemnité de licenciement . ancienneté requise en année": requiredSeniority,
-      "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-        "non",
+      "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": requiredSeniority,
     },
   });
 };
