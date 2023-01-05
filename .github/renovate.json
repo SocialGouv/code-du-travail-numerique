@@ -5,18 +5,12 @@
     ":prConcurrentLimit10",
     ":prNotPending",
     ":timezone(Europe/Paris)",
-    ":automergePr",
-    ":disableDevDependencies",
-    ":disableMajorUpdates"
+    ":disableDevDependencies"
   ],
   "npm": {
-    "extends": [
-      ":automergePatch",
-      ":noUnscheduledUpdates",
-      ":separatePatchReleases"
-    ],
+    "extends": [":automergePatch", ":automergeMinor"],
     "schedule": ["after 9pm", "before 9am"],
-    "rangeStrategy": "bump",
+    "rangeStrategy": "pin",
     "lockFileMaintenance": {
       "enabled": true,
       "schedule": ["before 3am on the first day of the month"]
