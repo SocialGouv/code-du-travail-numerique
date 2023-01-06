@@ -126,8 +126,10 @@ exports[`<FicheContribution /> should render with external content 1`] = `
             class="sc-cxxZvF dvKvwR"
           >
             <a
+              aria-label="Lancer ma recherche"
               class="sc-bnFVBq iLbZkY"
               href="/recherche"
+              rel="nofollow"
             >
               <svg
                 aria-hidden="true"
@@ -1295,8 +1297,10 @@ exports[`<FicheContribution /> should render without external content 1`] = `
             class="sc-cxxZvF dvKvwR"
           >
             <a
+              aria-label="Lancer ma recherche"
               class="sc-bnFVBq iLbZkY"
               href="/recherche"
+              rel="nofollow"
             >
               <svg
                 aria-hidden="true"

@@ -46,8 +46,8 @@ describe("<NoticeExample />", () => {
 
   it.each`
     period                        | expected
-    ${"1 mois"}                   | ${/22 mai/}
-    ${"6 mois"}                   | ${/22 octobre/}
+    ${"1 mois"}                   | ${/21 mai/}
+    ${"6 mois"}                   | ${/21 octobre/}
     ${"2 jours"}                  | ${/23 avril/}
     ${"2 semaines"}               | ${/5 mai/}
     ${"15 jours"}                 | ${/6 mai/}

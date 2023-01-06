@@ -38,17 +38,23 @@ exports[`<StepResult /> should render CC answer 1`] = `
        
       5 avril
        alors le salarié effectuera son dernier jour dans l’entreprise le 
-      5 juin
+      4 juin
       .
       <span
         class="sc-gstuGz hIxFVT"
       >
          
         Si le 
-        5 juin
+        4 juin
          tombe un samedi, un dimanche, un jour férié ou un jour qui n’est habituellement pas travaillé dans l’entreprise, le salarié effectuera son dernier jour dans l’entreprise le jour ouvré précédent.
       </span>
     </i>
+    <span
+      class="sc-gstuGz hIxFVT"
+    >
+      <br />
+      L’employeur et le salarié peuvent fixer d’un commun accord une date de départ anticipée, libérant ainsi le salarié de l’exécution de la totalité ou d’une partie du préavis.
+    </span>
   </p>
   <div>
     <div

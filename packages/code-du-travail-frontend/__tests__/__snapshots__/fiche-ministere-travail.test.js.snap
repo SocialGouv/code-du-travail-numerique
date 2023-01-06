@@ -125,8 +125,10 @@ exports[`<FicheMT /> should render 1`] = `
           class="sc-hcmsbg hykUfM"
         >
           <a
+            aria-label="Lancer ma recherche"
             class="sc-ojivU bJBoRU"
             href="/recherche"
+            rel="nofollow"
           >
             <svg
               aria-hidden="true"

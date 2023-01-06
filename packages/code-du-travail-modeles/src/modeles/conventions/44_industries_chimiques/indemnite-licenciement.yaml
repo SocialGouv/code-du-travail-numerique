@@ -721,3 +721,63 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
   valeur: 0
   unité: €
   arrondi: 2 décimales
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel avec plafond 1:
+  applicable si:
+    une de ces conditions:
+      - résultat conventionnel 3 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 14
+      - résultat conventionnel 3 bis = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 14
+      - résultat conventionnel 4 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 14
+      - résultat conventionnel 5 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 14
+      - résultat conventionnel 6 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 14
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 14 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel avec plafond 2:
+  applicable si:
+    une de ces conditions:
+      - résultat conventionnel 9 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+      - résultat conventionnel 9 bis = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+      - résultat conventionnel 10 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+      - résultat conventionnel 11 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+      - résultat conventionnel 12 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 18 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel avec plafond 3:
+  applicable si:
+    une de ces conditions:
+      - résultat conventionnel 15 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 20
+      - résultat conventionnel 15 bis = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 20
+      - résultat conventionnel 16 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 20
+      - résultat conventionnel 17 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 20
+      - résultat conventionnel 18 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 20
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 20 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel avec plancher:
+  applicable si:
+    une de ces conditions:
+      - résultat conventionnel 1 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
+      - résultat conventionnel 7 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
+      - résultat conventionnel 13 = contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 2
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 2 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel

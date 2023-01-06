@@ -67,7 +67,7 @@ export const Header = ({ currentPage = "" }) => {
               }}
               passHref
             >
-              <StyledLink>
+              <StyledLink rel="nofollow" aria-label="Lancer ma recherche">
                 <icons.Search />
               </StyledLink>
             </Link>

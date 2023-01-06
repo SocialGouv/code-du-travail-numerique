@@ -6,6 +6,7 @@ import { AbsencePeriods } from "./components";
 import { useIndemniteLicenciementStore } from "../../store";
 import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../../CommonSteps/Informations/utils";
+import Html from "../../../../common/Html";
 
 const StepAnciennete = () => {
   const {
@@ -92,6 +93,15 @@ const StepAnciennete = () => {
         id="dateSortie"
         showRequired
         dataTestId={"date-sortie"}
+        tooltip={{
+          content: (
+            <Html>
+              Si le licenciement intervient à la suite d’un avis d’inaptitude
+              non professionnelle, indiquer la date de fin du préavis
+              «&nbsp;théorique&nbsp;» non effectué.
+            </Html>
+          ),
+        }}
       />
       <SectionTitle>Période d’absence prolongée</SectionTitle>
       <RadioQuestion

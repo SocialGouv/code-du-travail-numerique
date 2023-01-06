@@ -150,14 +150,6 @@ const CookiePolicy = (): JSX.Element => {
                   <td>Matomo & Fabrique numérique</td>
                   <td>France</td>
                 </tr>
-                <tr>
-                  <td>Mesure d’audience anonymisée</td>
-                  <td>AT Internet</td>
-                  <td>13 mois</td>
-                  <td>Mesure d’audience</td>
-                  <td>AT Internet</td>
-                  <td>France</td>
-                </tr>
               </tbody>
             </Table>
             <p>

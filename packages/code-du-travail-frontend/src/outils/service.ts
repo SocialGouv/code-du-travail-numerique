@@ -26,8 +26,10 @@ export const fetchTools = async ({ ids, slugs }: getToolsParams = {}): Promise<
   return result.map(({ _id, _source }) => ({ ..._source, _id }));
 };
 
-export const fetchTool = async (slug: string): Promise<Tool> => {
+export const fetchTool = async (slug: string): Promise<Tool | undefined> => {
   const responseContainer = await fetch(`${API_URL}/tools/${slug}`);
-  const result = await responseContainer.json();
-  return { ...result._source, _id: result._id };
+  if (responseContainer.ok) {
+    const result = await responseContainer.json();
+    return { ...result._source, _id: result._id };
+  }
 };

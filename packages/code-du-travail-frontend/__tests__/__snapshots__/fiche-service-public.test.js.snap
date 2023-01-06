@@ -125,8 +125,10 @@ exports[`<FicheSP /> should render 1`] = `
           class="sc-enrZtP fTbBZX"
         >
           <a
+            aria-label="Lancer ma recherche"
             class="sc-bwcZwS cEyeIL"
             href="/recherche"
+            rel="nofollow"
           >
             <svg
               aria-hidden="true"

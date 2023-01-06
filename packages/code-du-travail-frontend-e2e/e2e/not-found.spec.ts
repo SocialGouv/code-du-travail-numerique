@@ -19,4 +19,14 @@ describe("Not found", () => {
       .should("have.prop", "href")
       .and("equal", Cypress.config().baseUrl + "/");
   });
+
+  it("page outils should returns 404 if does not exist", () => {
+    cy.request({
+      failOnStatusCode: false,
+      method: "GET",
+      url: "/outils/banane",
+    }).then((response) => {
+      expect(response.status).to.equal(404);
+    });
+  });
 });
