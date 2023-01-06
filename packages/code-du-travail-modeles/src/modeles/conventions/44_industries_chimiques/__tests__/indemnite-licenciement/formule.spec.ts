@@ -208,19 +208,19 @@ describe("Formule indemnité licenciement -  CC 44", () => {
         ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${0.99}   | ${""}                             | ${[]}
         ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${1}      | ${"Sref"}                         | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${1.5}    | ${"Sref"}                         | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${2}      | ${"3 / 10 * Sref * A"}            | ${["A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${5}      | ${"3 / 10 * Sref * A"}            | ${["A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise (5 ans)", "Sref : Salaire de référence (1000 €)"]}
+        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${2}      | ${"2 * Sref"}                     | ${["Sref : Salaire de référence (1000 €)"]}
+        ${CategoryPro44.ouvrier} | ${true}          | ${30} | ${5}      | ${"2 * Sref"}                     | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${0.75}   | ${""}                             | ${[]}
         ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${0.99}   | ${""}                             | ${[]}
         ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${1}      | ${"Sref"}                         | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${1.5}    | ${"Sref"}                         | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${2}      | ${"3 / 10 * Sref * A"}            | ${["A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise (2 ans)", "Sref : Salaire de référence (1000 €)"]}
+        ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${2}      | ${"2 * Sref"}                     | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.ouvrier} | ${true}          | ${52} | ${5}      | ${"2 * Sref + 3 / 10 * Sref * A"} | ${["A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise (5 ans)", "Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${0.75}   | ${""}                             | ${[]}
         ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${0.99}   | ${""}                             | ${[]}
         ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${1}      | ${"Sref"}                         | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${1.5}    | ${"Sref"}                         | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${2}      | ${"3 / 10 * Sref * A"}            | ${["A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise (2 ans)", "Sref : Salaire de référence (1000 €)"]}
+        ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${2}      | ${"2 * Sref"}                     | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.ouvrier} | ${true}          | ${56} | ${5}      | ${"2 * Sref + 3 / 10 * Sref * A"} | ${["A : Année d'ancienneté à compter de la date d'entrée dans l'entreprise (5 ans)", "Sref : Salaire de référence (1000 €)"]}
       `(
         "$#) Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring",
@@ -260,19 +260,19 @@ describe("Formule indemnité licenciement -  CC 44", () => {
         ${CategoryPro44.techniciens} | ${true}          | ${30} | ${0.99}   | ${""}                              | ${[]}
         ${CategoryPro44.techniciens} | ${true}          | ${30} | ${1}      | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.techniciens} | ${true}          | ${30} | ${1.5}    | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${2}      | ${"3 / 10 * Sref * A1"}            | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${5}      | ${"3 / 10 * Sref * A1"}            | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (5 ans)", "Sref : Salaire de référence (1000 €)"]}
+        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${2}      | ${"2 * Sref"}                      | ${["Sref : Salaire de référence (1000 €)"]}
+        ${CategoryPro44.techniciens} | ${true}          | ${30} | ${5}      | ${"2 * Sref"}                      | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.techniciens} | ${true}          | ${52} | ${0.75}   | ${""}                              | ${[]}
         ${CategoryPro44.techniciens} | ${true}          | ${52} | ${0.99}   | ${""}                              | ${[]}
         ${CategoryPro44.techniciens} | ${true}          | ${52} | ${1}      | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.techniciens} | ${true}          | ${52} | ${1.5}    | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${true}          | ${52} | ${2}      | ${"3 / 10 * Sref * A1"}            | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (2 ans)", "Sref : Salaire de référence (1000 €)"]}
+        ${CategoryPro44.techniciens} | ${true}          | ${52} | ${2}      | ${"2 * Sref"}                      | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.techniciens} | ${true}          | ${52} | ${5}      | ${"2 * Sref + 3 / 10 * Sref * A1"} | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (5 ans)", "Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.techniciens} | ${true}          | ${56} | ${0.75}   | ${""}                              | ${[]}
         ${CategoryPro44.techniciens} | ${true}          | ${56} | ${0.99}   | ${""}                              | ${[]}
         ${CategoryPro44.techniciens} | ${true}          | ${56} | ${1}      | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.techniciens} | ${true}          | ${56} | ${1.5}    | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${2}      | ${"3 / 10 * Sref * A1"}            | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (2 ans)", "Sref : Salaire de référence (1000 €)"]}
+        ${CategoryPro44.techniciens} | ${true}          | ${56} | ${2}      | ${"2 * Sref"}                      | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.techniciens} | ${true}          | ${56} | ${5}      | ${"2 * Sref + 3 / 10 * Sref * A1"} | ${["A1 : Années à compter de la date d'entrée dans l'entreprise (5 ans)", "Sref : Salaire de référence (1000 €)"]}
       `(
         "$#) Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring",
@@ -312,19 +312,19 @@ describe("Formule indemnité licenciement -  CC 44", () => {
         ${CategoryPro44.inge} | ${true}          | ${30} | ${0.99}   | ${""}                              | ${[]}
         ${CategoryPro44.inge} | ${true}          | ${30} | ${1}      | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.inge} | ${true}          | ${30} | ${1.5}    | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${true}          | ${30} | ${2}      | ${"4 / 10 * Sref * A1"}            | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${true}          | ${30} | ${5}      | ${"4 / 10 * Sref * A1"}            | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (5 ans)", "Sref : Salaire de référence (1000 €)"]}
+        ${CategoryPro44.inge} | ${true}          | ${30} | ${2}      | ${"2 * Sref"}                      | ${["Sref : Salaire de référence (1000 €)"]}
+        ${CategoryPro44.inge} | ${true}          | ${30} | ${5}      | ${"2 * Sref"}                      | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.inge} | ${true}          | ${52} | ${0.75}   | ${""}                              | ${[]}
         ${CategoryPro44.inge} | ${true}          | ${52} | ${0.99}   | ${""}                              | ${[]}
         ${CategoryPro44.inge} | ${true}          | ${52} | ${1}      | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.inge} | ${true}          | ${52} | ${1.5}    | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${true}          | ${52} | ${2}      | ${"4 / 10 * Sref * A1"}            | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
+        ${CategoryPro44.inge} | ${true}          | ${52} | ${2}      | ${"2 * Sref"}                      | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.inge} | ${true}          | ${52} | ${5}      | ${"2 * Sref + 4 / 10 * Sref * A1"} | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (5 ans)", "Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.inge} | ${true}          | ${56} | ${0.75}   | ${""}                              | ${[]}
         ${CategoryPro44.inge} | ${true}          | ${56} | ${0.99}   | ${""}                              | ${[]}
         ${CategoryPro44.inge} | ${true}          | ${56} | ${1}      | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.inge} | ${true}          | ${56} | ${1.5}    | ${"Sref"}                          | ${["Sref : Salaire de référence (1000 €)"]}
-        ${CategoryPro44.inge} | ${true}          | ${56} | ${2}      | ${"4 / 10 * Sref * A1"}            | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (2 ans)", "Sref : Salaire de référence (1000 €)"]}
+        ${CategoryPro44.inge} | ${true}          | ${56} | ${2}      | ${"2 * Sref"}                      | ${["Sref : Salaire de référence (1000 €)"]}
         ${CategoryPro44.inge} | ${true}          | ${56} | ${5}      | ${"2 * Sref + 4 / 10 * Sref * A1"} | ${["A1 : Années à compter de la date d'entrée dans l'entreprise pour la tranche 0 à 10 ans (5 ans)", "Sref : Salaire de référence (1000 €)"]}
       `(
         "$#) Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring",
