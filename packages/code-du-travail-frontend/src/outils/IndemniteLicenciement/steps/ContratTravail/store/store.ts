@@ -8,6 +8,7 @@ import produce from "immer";
 import { StoreSlice } from "../../../../types";
 import { validateStep } from "./validator";
 import { getErrorEligibility } from "./eligibility";
+import { AncienneteStoreSlice } from "../../Anciennete/store";
 
 const initialState: ContratTravailStoreData = {
   input: {},
@@ -19,10 +20,10 @@ const initialState: ContratTravailStoreData = {
   isStepValid: true,
 };
 
-const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
-  set,
-  get
-) => ({
+const createContratTravailStore: StoreSlice<
+  ContratTravailStoreSlice,
+  AncienneteStoreSlice
+> = (set, get) => ({
   contratTravailData: { ...initialState },
   contratTravailFunction: {
     onChangeTypeContratTravail: (value) => {
@@ -42,6 +43,9 @@ const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
     },
     onChangeDateArretTravail: (value) => {
       applyGenericValidation(get, set, "dateArretTravail", value);
+      if (get().ancienneteData.hasBeenSubmit) {
+        get().ancienneteFunction.onValidateStepAnciennete();
+      }
     },
     onValidateStepInfo: () => {
       const { isValid, errorState } = validateStep(

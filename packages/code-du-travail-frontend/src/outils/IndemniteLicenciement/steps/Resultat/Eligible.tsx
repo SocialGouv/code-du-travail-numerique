@@ -44,6 +44,8 @@ export default function Eligible() {
     agreementHasNoLegalIndemnity,
     isStepSalaryHidden,
     infoWarning,
+    dateArretTravail,
+    arretTravail,
   } = useIndemniteLicenciementStore((state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -74,6 +76,8 @@ export default function Eligible() {
       state.resultData.input.agreementHasNoLegalIndemnity,
     isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
     infoWarning: state.resultData.input.infoWarning,
+    dateArretTravail: state.contratTravailData.input.dateArretTravail,
+    arretTravail: state.contratTravailData.input.arretTravail,
   }));
 
   React.useEffect(() => {
@@ -105,6 +109,8 @@ export default function Eligible() {
           typeContrat={typeContratTravail!.toString()}
           isLicenciementFauteGrave={licenciementFauteGrave === "oui"}
           isLicenciementInaptitude={licenciementInaptitude === "oui"}
+          isArretTravail={arretTravail === "oui"}
+          dateArretTravail={dateArretTravail}
           dateEntree={dateEntree!}
           dateSortie={dateSortie!}
           dateNotification={dateNotification!}
