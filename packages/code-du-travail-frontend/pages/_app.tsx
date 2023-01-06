@@ -12,7 +12,6 @@ import getConfig from "next/config";
 import React, { useEffect } from "react";
 
 import { A11y } from "../src/a11y";
-import { initATInternetService } from "../src/lib";
 import {
   clientSideRedirectMiddleware,
   serverSideRedirectMiddleware,
@@ -51,9 +50,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     init({ siteId: PIWIK_SITE_ID, url: PIWIK_URL });
     clientSideRedirectMiddleware();
-    if (process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT) {
-      initATInternetService();
-    }
   }, []);
 
   return (
