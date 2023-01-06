@@ -1354,8 +1354,10 @@ exports[`<CookiePolicy /> should render 1`] = `
           class="c17"
         >
           <a
+            aria-label="Lancer ma recherche"
             class="c18"
             href="/recherche"
+            rel="nofollow"
           >
             <svg
               aria-hidden="true"
