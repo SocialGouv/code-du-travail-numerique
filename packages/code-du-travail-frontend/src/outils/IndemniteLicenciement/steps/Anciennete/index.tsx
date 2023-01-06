@@ -96,8 +96,9 @@ const StepAnciennete = () => {
         tooltip={{
           content: (
             <Html>
-              Si le licenciement intervient à la suite d’un avis d’inaptitude
-              non professionnelle, indiquer la date de fin du préavis
+              En cas de dispense à l&apos;initiative de l&apos;employeur, ou si
+              le licenciement intervient à la suite d’un avis d’inaptitude non
+              professionnelle, indiquer la date de fin du préavis
               «&nbsp;théorique&nbsp;» non effectué.
             </Html>
           ),
