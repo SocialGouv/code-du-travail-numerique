@@ -125,8 +125,10 @@ exports[`<CookiePolicy /> should render 1`] = `
           class="sc-Jgsit ddXmHL"
         >
           <a
+            aria-label="Lancer ma recherche"
             class="sc-gGuRsA gPosVK"
             href="/recherche"
+            rel="nofollow"
           >
             <svg
               aria-hidden="true"
@@ -379,26 +381,6 @@ exports[`<CookiePolicy /> should render 1`] = `
                       </td>
                       <td>
                         Matomo & Fabrique numérique
-                      </td>
-                      <td>
-                        France
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Mesure d’audience anonymisée
-                      </td>
-                      <td>
-                        AT Internet
-                      </td>
-                      <td>
-                        13 mois
-                      </td>
-                      <td>
-                        Mesure d’audience
-                      </td>
-                      <td>
-                        AT Internet
                       </td>
                       <td>
                         France

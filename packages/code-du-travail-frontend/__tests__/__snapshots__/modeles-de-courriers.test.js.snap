@@ -125,8 +125,10 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           class="sc-Jgsit ddXmHL"
         >
           <a
+            aria-label="Lancer ma recherche"
             class="sc-gGuRsA gPosVK"
             href="/recherche"
+            rel="nofollow"
           >
             <svg
               aria-hidden="true"

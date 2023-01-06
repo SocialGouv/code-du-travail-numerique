@@ -125,8 +125,10 @@ exports[`<Theme /> should render 1`] = `
           class="sc-iuImSO esmUXQ"
         >
           <a
+            aria-label="Lancer ma recherche"
             class="sc-EhTUr jSJMDx"
             href="/recherche"
+            rel="nofollow"
           >
             <svg
               aria-hidden="true"
