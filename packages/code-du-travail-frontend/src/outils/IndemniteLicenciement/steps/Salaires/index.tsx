@@ -95,7 +95,7 @@ const StepSalaires = () => {
             error={errorHasSameSalary}
             showRequired
             tooltip={
-              licenciementInaptitude === "oui" || arretTravail === "oui"
+              licenciementInaptitude === "oui" || arretTravail === "non"
                 ? undefined
                 : {
                     content: (
