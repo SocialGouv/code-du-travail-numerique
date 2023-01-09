@@ -158,13 +158,6 @@ contrat salarié . convention collective . établissement handicap . indemnité 
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 6
   unité: €
 
-contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif . facteur 1 sans plafond:
-  valeur:
-    produit:
-      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * temps effectif
-      facteur: 1 / 2
-  unité: €
-
 contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif . facteur 2 avec plafond:
   valeur: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * ancienneté cadre
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
@@ -209,7 +202,7 @@ contrat salarié . convention collective . établissement handicap . indemnité 
       - temps effectif > 0 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
-    - facteur 1 sans plafond
+    - facteur 1 avec plafond
     - contrat salarié . indemnité de licenciement . salaire de référence conventionnel * ancienneté cadre
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 18
   unité: €
