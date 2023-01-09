@@ -84,7 +84,8 @@ export default function FilledElements(props: Props) {
             <ul>
               {props.agreementInformations.map((info, index) => (
                 <li key={"agreement-" + index}>
-                  {info.label}&nbsp;:&nbsp;{info.value.replace(/'/g, "")}&nbsp;
+                  {info.label}&nbsp;:&nbsp;{info.value.replace(/^'|'$/g, "")}
+                  &nbsp;
                   {publicodesUnitTranslator(
                     info.value.replace(/'/g, ""),
                     info.unit
