@@ -18,12 +18,7 @@ const PubliReferences: React.FC<Props> = ({ references }) => (
             .filter(({ article }) => article !== null)
             .map(({ article, url }, id) => (
               <li key={`${url}-${id}`}>
-                <A11yLink
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={`Consultez l’${article.toLowerCase()}`}
-                >
+                <A11yLink href={url} target="_blank" rel="noopener noreferrer">
                   {article}
                 </A11yLink>
               </li>
