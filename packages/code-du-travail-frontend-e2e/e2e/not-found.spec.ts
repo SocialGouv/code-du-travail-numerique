@@ -47,4 +47,86 @@ describe("Not found", () => {
       expect(response.status).to.equal(404);
     });
   });
+
+  it("page code-du-travail should returns 404 if does not exist", () => {
+    cy.request({
+      failOnStatusCode: false,
+      method: "GET",
+      url: "/code-du-travail/banane",
+    }).then((response) => {
+      expect(response.status).to.equal(404);
+    });
+  });
+  it("page contribution should returns 404 if does not exist", () => {
+    cy.request({
+      failOnStatusCode: false,
+      method: "GET",
+      url: "/contribution/banane",
+    }).then((response) => {
+      expect(response.status).to.equal(404);
+    });
+  });
+  it("page convention-collective should returns 404 if does not exist", () => {
+    cy.request({
+      failOnStatusCode: false,
+      method: "GET",
+      url: "/convention-collective/banane",
+    }).then((response) => {
+      expect(response.status).to.equal(404);
+    });
+  });
+  it("page dossiers should returns 404 if does not exist", () => {
+    cy.request({
+      failOnStatusCode: false,
+      method: "GET",
+      url: "/dossiers/banane",
+    }).then((response) => {
+      expect(response.status).to.equal(404);
+    });
+  });
+  it("page glossaire should returns 404 if does not exist", () => {
+    cy.request({
+      failOnStatusCode: false,
+      method: "GET",
+      url: "/glossaire/banane",
+    }).then((response) => {
+      expect(response.status).to.equal(404);
+    });
+  });
+  it("page information should returns 404 if does not exist", () => {
+    cy.request({
+      failOnStatusCode: false,
+      method: "GET",
+      url: "/information/banane",
+    }).then((response) => {
+      expect(response.status).to.equal(404);
+    });
+  });
+  it("page modeles-de-courriers should returns 404 if does not exist", () => {
+    cy.request({
+      failOnStatusCode: false,
+      method: "GET",
+      url: "/modeles-de-courriers/banane",
+    }).then((response) => {
+      expect(response.status).to.equal(404);
+    });
+  });
+  it("page themes should returns 404 if does not exist", () => {
+    cy.request({
+      failOnStatusCode: false,
+      method: "GET",
+      url: "/themes/banane",
+    }).then((response) => {
+      expect(response.status).to.equal(404);
+    });
+  });
+  it("page widgets should returns 404 if does not exist", () => {
+    cy.request({
+      failOnStatusCode: false,
+      method: "GET",
+      url: "/widgets/banane",
+    }).then((response) => {
+      expect(response.status).to.equal(404);
+    });
+  });
 });

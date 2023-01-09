@@ -29,4 +29,14 @@ describe("Landing pages", () => {
     //   .first()
     //   .should("have.text", "Avez-vous droit aux congés payés");
   });
+  it("je vois une page convention collective", () => {
+    cy.visit(
+      "/convention-collective/1686-commerces-et-services-de-laudiovisuel-de-lelectronique-et-de-lequipemen"
+    );
+    cy.get("h1").should(
+      "have.text",
+      "Commerces et services de l'audiovisuel, de l'électronique et de l'équipement ménager"
+    );
+    cy.get("body").should("contain", "Source: Légifrance");
+  });
 });
