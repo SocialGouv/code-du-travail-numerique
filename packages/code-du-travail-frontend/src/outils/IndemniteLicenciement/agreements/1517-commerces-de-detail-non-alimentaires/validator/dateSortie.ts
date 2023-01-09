@@ -49,13 +49,6 @@ export const getDateSortieErrors = (
   ) {
     errors.errorDateSortie =
       "La date de sortie doit se situer après la date d’entrée";
-  } else if (
-    state.dateEntree &&
-    state.dateSortie &&
-    differenceInMonths(dSortie, dEntree) - totalAbsence < 8
-  ) {
-    errors.errorDateSortie =
-      "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté";
   } else if (!isValidDate(state.dateSortie)) {
     errors.errorDateSortie = "La date de sortie est invalide";
   } else {
