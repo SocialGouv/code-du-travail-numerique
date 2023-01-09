@@ -89,7 +89,6 @@ exports[`<StepResult /> should render no results 1`] = `
             href="https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753582&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article 33"
           >
             Article 33
           </a>
@@ -245,7 +244,6 @@ exports[`<StepResult /> should render with duration 1`] = `
             href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857303&cidTexte=KALITEXT000005682357&dateTexte=19740607"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article 29"
           >
             Article 29
           </a>
