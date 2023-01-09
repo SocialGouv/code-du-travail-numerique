@@ -29,4 +29,22 @@ describe("Not found", () => {
       expect(response.status).to.equal(404);
     });
   });
+  it("page fiche-ministere-travail should returns 404 if does not exist", () => {
+    cy.request({
+      failOnStatusCode: false,
+      method: "GET",
+      url: "/fiche-ministere-travail/banane",
+    }).then((response) => {
+      expect(response.status).to.equal(404);
+    });
+  });
+  it("page fiche-service-public should returns 404 if does not exist", () => {
+    cy.request({
+      failOnStatusCode: false,
+      method: "GET",
+      url: "/fiche-service-public/banane",
+    }).then((response) => {
+      expect(response.status).to.equal(404);
+    });
+  });
 });

@@ -16,8 +16,6 @@ import {
   clientSideRedirectMiddleware,
   serverSideRedirectMiddleware,
 } from "../src/middleware/redirect";
-import CustomError from "./_error";
-import Custom404 from "./404";
 
 if (typeof window !== "undefined") {
   import("../src/web-components/tooltip")
@@ -54,28 +52,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      {pageProps.statusCode ? (
+      <React.StrictMode>
         <ThemeProvider>
-          <>
-            <GlobalStyles />
-            {pageProps.statusCode === 404 ? (
-              <Custom404 />
-            ) : (
-              <CustomError {...pageProps} />
-            )}
-          </>
+          <GlobalStyles />
+          <A11y />
+          <Component {...pageProps} />
         </ThemeProvider>
-      ) : (
-        <React.StrictMode>
-          <ThemeProvider>
-            <>
-              <GlobalStyles />
-              <A11y />
-              <Component {...pageProps} />
-            </>
-          </ThemeProvider>
-        </React.StrictMode>
-      )}
+      </React.StrictMode>
     </>
   );
 }
