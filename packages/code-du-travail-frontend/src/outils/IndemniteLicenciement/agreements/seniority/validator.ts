@@ -18,12 +18,7 @@ export const customSeniorityValidator = (
   }
   switch (idcc) {
     case SupportedCcIndemniteLicenciement.IDCC1517:
-      return validateStep1517(
-        state,
-        stateContratTravail,
-        information,
-        agreeement
-      );
+      return validateStep1517(state, stateContratTravail, information);
     default: {
       return validateStep(state, stateContratTravail, information);
     }
