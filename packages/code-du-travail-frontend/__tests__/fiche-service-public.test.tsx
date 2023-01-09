@@ -5,7 +5,10 @@ import FicheSP from "../pages/fiche-service-public/[slug]";
 
 describe("<FicheSP />", () => {
   it("should render", () => {
-    const { container } = render(<FicheSP />);
+    const { container } = render(
+      // @ts-ignore
+      <FicheSP />
+    );
     expect(container).toMatchSnapshot();
   });
 });

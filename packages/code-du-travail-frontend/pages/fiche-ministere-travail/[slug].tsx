@@ -10,6 +10,7 @@ import Answer from "../../src/common/Answer";
 import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
+import { Breadcrumb } from "cdtn-types";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -27,29 +28,25 @@ const buildAccordionSections = (sections) =>
     }));
 
 interface Props {
-  _source: {
-    breadcrumbs: string;
-    date: string;
-    description: string;
-    intro: string;
-    sections: Array<any>;
-    title: string;
-    url: string;
-  };
+  breadcrumbs: Breadcrumb[];
+  date: string;
+  description: string;
+  intro: string;
+  sections: Array<any>;
+  title: string;
+  url: string;
   relatedItems: Array<any>;
 }
 
 function Fiche(props: Props): JSX.Element {
   const {
-    _source: {
-      breadcrumbs,
-      date,
-      description,
-      intro,
-      sections = [],
-      title,
-      url,
-    },
+    breadcrumbs,
+    date,
+    description,
+    intro,
+    sections = [],
+    title,
+    url,
     relatedItems,
   } = props;
   const [titledSections, setTitledSections] = useState(
@@ -100,10 +97,8 @@ export const getServerSideProps = async ({ query }) => {
   if (!response.ok) {
     return { notFound: true };
   }
-
-  return {
-    props: await response.json(),
-  };
+  const data = await response.json();
+  return { props: { relatedItems: data.relatedItems, ...data._source } };
 };
 
 export default Fiche;

@@ -17,29 +17,25 @@ const fetchFiche = ({ slug }) =>
   fetch(`${API_URL}/items/fiches_service_public/${slug}`);
 
 interface Props {
-  _source: {
-    breadcrumbs: Breadcrumb[];
-    date: string;
-    description: string;
-    title: string;
-    url: string;
-    raw;
-    referencedTexts;
-  };
+  breadcrumbs: Breadcrumb[];
+  date: string;
+  description: string;
+  title: string;
+  url: string;
+  raw;
+  referencedTexts;
   relatedItems: Array<any>;
 }
 
 function Fiche(props: Props): JSX.Element {
   const {
-    _source: {
-      breadcrumbs,
-      date,
-      description,
-      raw,
-      referencedTexts,
-      title,
-      url,
-    },
+    breadcrumbs,
+    date,
+    description,
+    raw,
+    referencedTexts,
+    title,
+    url,
     relatedItems,
   } = props;
 
@@ -81,6 +77,6 @@ export const getServerSideProps = async ({ query }) => {
   if (data._source.raw) {
     data._source.raw = JSON.parse(data._source.raw);
   }
-  return { props: data };
+  return { props: { relatedItems: data.relatedItems, ...data._source } };
 };
 export default Fiche;
