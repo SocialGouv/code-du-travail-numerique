@@ -66,10 +66,9 @@ const createResultStore: StoreSlice<
     SalairesStoreSlice &
     CommonAgreementStoreSlice &
     CommonInformationsStoreSlice
-> = (set, get, publicodesRules) => ({
+> = (set, get) => ({
   resultData: {
     ...initialState,
-    publicodes: new IndemniteLicenciementPublicodes(publicodesRules!),
   },
   resultFunction: {
     init: () => {
@@ -125,7 +124,7 @@ const createResultStore: StoreSlice<
       const agreement = get().agreementData.input.agreement;
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
-      const publicodes = get().resultData.publicodes;
+      const publicodes = get().agreementData.publicodes;
       const dateSortie = dateOneDayLater(
         get().ancienneteData.input.dateSortie!
       );

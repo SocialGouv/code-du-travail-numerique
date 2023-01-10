@@ -8,7 +8,6 @@ import {
   DureePreavisLicenciement,
   DureePreavisRetraite,
   fetchTool,
-  loadPublicodesRules,
 } from "../../src/outils";
 
 const toolsBySlug = {
@@ -18,29 +17,17 @@ const toolsBySlug = {
 
 interface Props {
   icon: string;
-  publicodesRules: any;
   slug: string;
   title: string;
   displayTitle: string;
 }
 
-function Widgets({
-  icon,
-  slug,
-  title,
-  displayTitle,
-  publicodesRules,
-}: Props): JSX.Element {
+function Widgets({ icon, slug, title, displayTitle }: Props): JSX.Element {
   const Tool = toolsBySlug[slug];
 
   return (
     <Container>
-      <Tool
-        icon={icon}
-        title={title}
-        displayTitle={displayTitle}
-        publicodesRules={publicodesRules}
-      />
+      <Tool icon={icon} title={title} displayTitle={displayTitle} slug={slug} />
 
       <StyledFooter>
         <Link passHref href="/politique-confidentialite">
@@ -72,12 +59,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
 
   const { slug, icon, title, displayTitle } = tool;
 
-  const publicodesRules = loadPublicodesRules(slug);
-
   return {
     props: {
       icon,
-      publicodesRules,
       slug,
       title,
       displayTitle,

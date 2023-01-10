@@ -13,6 +13,8 @@ import {
 import { updateFormValues } from "./utils";
 import removeOldQuestions from "./usecases/removeOldQuestions";
 import resetInfosLastQuestionNotAnsweredOnOriginChange from "./usecases/resetInfosLastQuestionNotAnsweredOnOriginChange";
+import produce from "immer";
+import { loadPublicodes } from "../../api";
 
 export const initialState: PreavisRetraiteState = {
   title: "",
@@ -31,11 +33,11 @@ export const initialState: PreavisRetraiteState = {
   formValues: {},
 };
 
-const createPreavisRetraiteStore = (rules: string, title: string) =>
+const createPreavisRetraiteStore = (title: string, slug: string) =>
   create<PreavisRetraiteStore>((set) => ({
     ...initialState,
     title: title,
-    publicodes: new PreavisRetraitePublicodes(rules),
+    publicodes: loadPublicodes(slug),
     onFormValuesChange: (values) =>
       set((state) => ({
         ...state,
@@ -50,13 +52,18 @@ const createPreavisRetraiteStore = (rules: string, title: string) =>
         )
       ),
     onAgreementChange: (newValue, oldValue, form) =>
-      set((state) =>
-        computeMinSeniorityYear(
-          computeNextQuestion(
-            resetInfos(newValue, oldValue, state, updateFormValues(form))
-          )
-        )
-      ),
+      set((state) => {
+        return {
+          ...computeMinSeniorityYear(
+            computeNextQuestion(
+              resetInfos(newValue, oldValue, state, updateFormValues(form))
+            )
+          ),
+          publicodes: slug
+            ? loadPublicodes(slug, newValue?.num?.toString())
+            : undefined,
+        };
+      }),
     onInformationChange: (name, form) =>
       set((state) =>
         computeNextQuestion(

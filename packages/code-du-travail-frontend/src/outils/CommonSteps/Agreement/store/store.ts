@@ -11,8 +11,9 @@ import {
 import { STORAGE_KEY_AGREEMENT, StoreSlice } from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { Agreement } from "../../../../conventions/Search/api/type";
+import { loadPublicodes } from "../../../api";
 
-const initialState: CommonAgreementStoreData = {
+const initialState: Omit<CommonAgreementStoreData, "publicodes"> = {
   input: {},
   error: {},
   hasBeenSubmit: false,
@@ -22,8 +23,8 @@ const initialState: CommonAgreementStoreData = {
 const createCommonAgreementStore: StoreSlice<
   CommonAgreementStoreSlice,
   CommonInformationsStoreSlice
-> = (set, get) => ({
-  agreementData: { ...initialState },
+> = (set, get, slug) => ({
+  agreementData: { ...initialState, publicodes: loadPublicodes(slug!) },
   agreementFunction: {
     onInitAgreementPage: () => {
       try {
@@ -63,7 +64,15 @@ const createCommonAgreementStore: StoreSlice<
           JSON.stringify(agreement)
         );
       applyGenericValidation(get, set, "enterprise", enterprise);
-      get().informationsFunction.generatePublicodesQuestions();
+      const idcc = agreement?.num?.toString();
+      if (idcc && slug) {
+        set(
+          produce((state: CommonAgreementStoreSlice) => {
+            state.agreementData.publicodes = loadPublicodes(slug, idcc);
+          })
+        );
+        get().informationsFunction.generatePublicodesQuestions();
+      }
     },
     onValidateStep: () => {
       const { isValid, errorState } = validateStep(get().agreementData.input);

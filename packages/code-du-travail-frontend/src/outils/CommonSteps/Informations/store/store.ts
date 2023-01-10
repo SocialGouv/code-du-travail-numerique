@@ -8,10 +8,7 @@ import {
   PublicodesInformation,
 } from "./types";
 import { StoreSlice } from "../../../types";
-import {
-  IndemniteLicenciementPublicodes,
-  MissingArgs,
-} from "@socialgouv/modeles-social";
+import { MissingArgs } from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../publicodes";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
@@ -34,16 +31,15 @@ const initialState: CommonInformationsStoreData = {
 const createCommonInformationsStore: StoreSlice<
   CommonInformationsStoreSlice,
   CommonAgreementStoreSlice
-> = (set, get, publicodesRules) => ({
+> = (set, get) => ({
   informationsData: {
     ...initialState,
-    publicodes: new IndemniteLicenciementPublicodes(publicodesRules!),
   },
   informationsFunction: {
     generatePublicodesQuestions: () => {
-      const publicodes = get().informationsData.publicodes;
+      const publicodes = get().agreementData.publicodes;
       if (!publicodes) {
-        throw new Error("Publicodes is not defined");
+        return;
       }
       const agreement = get().agreementData.input.agreement;
       if (agreement) {
@@ -84,7 +80,7 @@ const createCommonInformationsStore: StoreSlice<
       );
     },
     onInformationsChange: (key, value) => {
-      const publicodes = get().informationsData.publicodes!;
+      const publicodes = get().agreementData.publicodes!;
       const agreement = get().agreementData.input.agreement!;
       const publicodesInformations = get().informationsData.input
         .publicodesInformations;
@@ -170,7 +166,7 @@ const createCommonInformationsStore: StoreSlice<
     },
     onSetStepHidden: () => {
       try {
-        const publicodes = get().informationsData.publicodes!;
+        const publicodes = get().agreementData.publicodes!;
         const publicodesInformations = get().informationsData.input
           .publicodesInformations;
         const agreement = get().agreementData.input.agreement!;
