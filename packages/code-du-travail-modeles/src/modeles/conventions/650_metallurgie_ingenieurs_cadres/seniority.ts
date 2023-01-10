@@ -1,4 +1,4 @@
-import { LEGAL_MOTIFS } from "../../base";
+import { LEGAL_MOTIFS } from "../../base/seniority";
 import type { Motif, SupportedCcIndemniteLicenciement } from "../../common";
 import { SeniorityDefault } from "../../common/seniority";
 

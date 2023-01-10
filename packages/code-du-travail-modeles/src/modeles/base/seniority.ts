@@ -1,6 +1,6 @@
 import type { Motif, SupportedCcIndemniteLicenciement } from "../common";
-import { SeniorityDefault } from "../common/seniority";
 import { MotifKeys } from "../common/motif-keys";
+import { SeniorityDefault } from "../common/seniority";
 
 export const LEGAL_MOTIFS: Motif[] = [
   {
