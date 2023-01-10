@@ -44,22 +44,22 @@ export const getErrorEligibility = (
     }).value;
   }
 
-  let minimalSeniority = 8;
+  let minimalSeniorityInMonth = 8;
   let minimalSeniorityError =
     "L’indemnité de licenciement n’est pas due lorsque l’ancienneté dans l’entreprise est inférieure à 8 mois.";
-  let requiredSeniority = Math.max(
+  let requiredSeniorityInYear = Math.max(
     requiredSeniorityLegal,
     requiredSeniorityAgreement
   );
   switch (agreement?.num) {
     case 3239:
       if (stateInfo.publicodesInformations[0].info === "'Assistant maternel'") {
-        minimalSeniority = 9;
+        minimalSeniorityInMonth = 9;
         minimalSeniorityError =
           "L’indemnité de licenciement n’est pas due lorsque l’ancienneté de l'assistant maternel est inférieure à 9 mois.";
       }
       break;
   }
-  const isEligible = requiredSeniority >= minimalSeniority / 12;
+  const isEligible = requiredSeniorityInYear >= minimalSeniorityInMonth / 12;
   return !isEligible ? minimalSeniorityError : undefined;
 };
