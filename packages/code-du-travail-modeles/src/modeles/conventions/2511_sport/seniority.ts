@@ -1,7 +1,7 @@
-import { LEGAL_MOTIFS } from "../../base";
+import { LEGAL_MOTIFS } from "../../base/seniority";
 import type { Motif, SupportedCcIndemniteLicenciement } from "../../common";
-import { SeniorityDefault } from "../../common/seniority";
 import { MotifKeys } from "../../common/motif-keys";
+import { SeniorityDefault } from "../../common/seniority";
 
 const MOTIFS_2511: Motif[] = LEGAL_MOTIFS.map((item) => {
   if (
