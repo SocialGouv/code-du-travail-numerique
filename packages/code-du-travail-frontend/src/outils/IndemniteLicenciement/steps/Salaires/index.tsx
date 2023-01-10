@@ -25,6 +25,7 @@ const StepSalaires = () => {
     onChangeSalary,
     errorSalary,
     licenciementInaptitude,
+    arretTravail,
   } = useIndemniteLicenciementStore((state) => ({
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     onChangeHasTempsPartiel: state.salairesFunction.onChangeHasTempsPartiel,
@@ -42,6 +43,7 @@ const StepSalaires = () => {
     errorSalary: state.salairesData.error.errorSalary,
     licenciementInaptitude:
       state.contratTravailData.input.licenciementInaptitude,
+    arretTravail: state.contratTravailData.input.arretTravail,
   }));
 
   React.useEffect(() => {
@@ -93,7 +95,7 @@ const StepSalaires = () => {
             error={errorHasSameSalary}
             showRequired
             tooltip={
-              licenciementInaptitude === "oui"
+              licenciementInaptitude === "oui" || arretTravail === "non"
                 ? undefined
                 : {
                     content: (
