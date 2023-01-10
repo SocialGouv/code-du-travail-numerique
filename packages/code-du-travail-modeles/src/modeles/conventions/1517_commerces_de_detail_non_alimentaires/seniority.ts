@@ -5,7 +5,7 @@ import type {
   SeniorityRequiredProps,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
-import { SeniorityDefault } from "../../common";
+import { SeniorityDefault } from "../../common/seniority";
 
 export class Seniority1517 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC1517> {
   computeRequiredSeniority({
