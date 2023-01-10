@@ -1,8 +1,9 @@
-import { LEGAL_MOTIFS } from "../../base/seniority";
-import type { Motif } from "../../common";
+import { LEGAL_MOTIFS } from "../../base";
+import type { Motif, SupportedCcIndemniteLicenciement } from "../../common";
+import { SeniorityDefault } from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
 
-export const MOTIFS_1518: Motif[] = LEGAL_MOTIFS.map((item) => {
+const MOTIFS_1518: Motif[] = LEGAL_MOTIFS.map((item) => {
   if (item.key === MotifKeys.congesParentalEducation) {
     return {
       ...item,
@@ -11,3 +12,9 @@ export const MOTIFS_1518: Motif[] = LEGAL_MOTIFS.map((item) => {
   }
   return item;
 });
+
+export class Seniority1518 extends SeniorityDefault<SupportedCcIndemniteLicenciement.IDCC1518> {
+  getMotifs(): Motif[] {
+    return MOTIFS_1518;
+  }
+}
