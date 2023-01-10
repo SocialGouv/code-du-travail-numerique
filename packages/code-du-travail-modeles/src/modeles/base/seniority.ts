@@ -1,14 +1,5 @@
-import { differenceInMonths, parse } from "date-fns";
-
-import type {
-  Absence,
-  ISeniority,
-  Motif,
-  RequiredSeniorityResult,
-  SeniorityProps,
-  SeniorityResult,
-  SupportedCcIndemniteLicenciement,
-} from "../common";
+import type { Motif, SupportedCcIndemniteLicenciement } from "../common";
+import { SeniorityDefault } from "../common";
 import { MotifKeys } from "../common/motif-keys";
 
 export const LEGAL_MOTIFS: Motif[] = [
@@ -39,63 +30,8 @@ export const LEGAL_MOTIFS: Motif[] = [
   { key: MotifKeys.congesPaternite, label: "Congé de paternité", value: 1 },
 ];
 
-export type LegalSeniorityProps = {
-  dateEntree: string;
-  dateSortie: string;
-  absencePeriods?: Absence[];
-};
-
-export type LegalSeniorityRequiredProps = LegalSeniorityProps & {
-  dateNotification: string;
-};
-
-export class SeniorityLegal
-  implements ISeniority<SupportedCcIndemniteLicenciement.default> {
-  protected motifs: Motif[];
-
-  constructor(motifs: Motif[]) {
-    this.motifs = motifs;
-  }
-
-  computeSeniority({
-    dateEntree,
-    dateSortie,
-    absencePeriods = [],
-  }: SeniorityProps<SupportedCcIndemniteLicenciement.default>): SeniorityResult {
-    return this.compute(dateEntree, dateSortie, absencePeriods);
-  }
-
-  computeRequiredSeniority({
-    dateEntree,
-    dateNotification,
-    absencePeriods = [],
-  }: LegalSeniorityRequiredProps): RequiredSeniorityResult {
-    return this.compute(dateEntree, dateNotification, absencePeriods);
-  }
-
+export class SeniorityLegal extends SeniorityDefault<SupportedCcIndemniteLicenciement.default> {
   getMotifs(): Motif[] {
-    return this.motifs;
-  }
-
-  protected compute(
-    from: string,
-    to: string,
-    absences: Absence[]
-  ): SeniorityResult {
-    const dEntree = parse(from, "dd/MM/yyyy", new Date());
-    const dSortie = parse(to, "dd/MM/yyyy", new Date());
-    const totalAbsence =
-      absences
-        .filter((period) => Boolean(period.durationInMonth))
-        .reduce((total, item) => {
-          const m = this.motifs.find((motif) => motif.key === item.motif.key);
-          if (!m || !item.durationInMonth) {
-            return total;
-          }
-          return total + item.durationInMonth * m.value;
-        }, 0) / 12;
-    return {
-      value: differenceInMonths(dSortie, dEntree) / 12 - totalAbsence,
-    };
+    return LEGAL_MOTIFS;
   }
 }

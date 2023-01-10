@@ -1,8 +1,8 @@
 import { differenceInMonths, isBefore, parse } from "date-fns";
 
-import type { LegalSeniorityProps } from "../../base";
-import { LEGAL_MOTIFS } from "../../base/seniority";
+import { LEGAL_MOTIFS } from "../../base";
 import type {
+  DefaultSeniorityProps,
   ISeniority,
   Motif,
   RequiredSeniorityResult,
@@ -14,7 +14,7 @@ import type {
 } from "../../common";
 import { accumulateAbsenceByYear } from "../../common";
 
-export type CC0413SeniorityProps = LegalSeniorityProps & {
+export type CC0413SeniorityProps = DefaultSeniorityProps & {
   isExecutive: boolean;
   becameExecutiveAt?: string;
 };

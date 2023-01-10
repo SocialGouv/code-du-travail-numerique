@@ -1,12 +1,12 @@
 import type {
-  LegalSeniorityProps,
-  LegalSeniorityRequiredProps,
-} from "../../base";
-import type {
   CC0016SeniorityProps,
   CC0413SeniorityProps,
 } from "../../conventions";
 import type { MotifKeys } from "../motif-keys";
+import type {
+  DefaultSeniorityProps,
+  DefaultSeniorityRequiredProps,
+} from "../seniority";
 
 export enum SupportedCcIndemniteLicenciement {
   IDCC1516 = "IDCC1516",
@@ -63,7 +63,7 @@ export interface ISeniority<T extends SupportedCcIndemniteLicenciement> {
   getMotifs: () => Motif[];
 }
 
-export type SeniorityRequiredProps = LegalSeniorityRequiredProps;
+export type SeniorityRequiredProps = DefaultSeniorityRequiredProps;
 
 export type SeniorityProps<
   T
@@ -71,7 +71,7 @@ export type SeniorityProps<
   ? CC0016SeniorityProps
   : T extends SupportedCcIndemniteLicenciement.IDCC413
   ? CC0413SeniorityProps
-  : LegalSeniorityProps;
+  : DefaultSeniorityProps;
 
 export type SeniorityResult = {
   value: number;
