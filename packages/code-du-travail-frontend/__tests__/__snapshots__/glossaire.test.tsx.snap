@@ -14,7 +14,7 @@ exports[`<Glossaire /> should render 1`] = `
   max-width: 74rem;
 }
 
-.c43 {
+.c41 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -85,7 +85,7 @@ exports[`<Glossaire /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c51 {
+.c49 {
   position: relative;
   display: block;
   margin: 0 0 2rem 0;
@@ -158,7 +158,7 @@ exports[`<Glossaire /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c54 {
+.c52 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -203,11 +203,11 @@ exports[`<Glossaire /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c54:focus {
+.c52:focus {
   color: #f66663;
 }
 
-.c45 {
+.c43 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -245,14 +245,14 @@ exports[`<Glossaire /> should render 1`] = `
   will-change: transform;
 }
 
-.c45:link,
-.c45:visited {
+.c43:link,
+.c43:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c45:not([disabled]):hover {
+.c43:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -261,7 +261,7 @@ exports[`<Glossaire /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c45[disabled] {
+.c43[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -375,7 +375,7 @@ exports[`<Glossaire /> should render 1`] = `
   text-align: left;
 }
 
-.c41 {
+.c39 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
@@ -411,7 +411,7 @@ exports[`<Glossaire /> should render 1`] = `
   text-align: left;
 }
 
-.c42 {
+.c40 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -423,13 +423,13 @@ exports[`<Glossaire /> should render 1`] = `
   text-align: center;
 }
 
-.c38 {
+.c36 {
   width: 100%;
   padding-top: 4rem;
   overflow-x: hidden;
 }
 
-.c39 {
+.c37 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -437,7 +437,7 @@ exports[`<Glossaire /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c39:before {
+.c37:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -449,27 +449,27 @@ exports[`<Glossaire /> should render 1`] = `
   content: "";
 }
 
-.c40 {
+.c38 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c44 {
+.c42 {
   margin-bottom: 2rem;
 }
 
-.c46 {
+.c44 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c47 {
+.c45 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c48 {
+.c46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -480,15 +480,15 @@ exports[`<Glossaire /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c49 + .c49 {
+.c47 + .c47 {
   padding-left: 1.6rem;
 }
 
-.c50 {
+.c48 {
   font-size: 1.6rem;
 }
 
-.c53 {
+.c51 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -497,11 +497,11 @@ exports[`<Glossaire /> should render 1`] = `
   display: inline-block;
 }
 
-.c55 {
+.c53 {
   padding: 0.4rem 0;
 }
 
-.c56 {
+.c54 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -523,11 +523,11 @@ exports[`<Glossaire /> should render 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c57 {
+.c55 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c58 {
+.c56 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -763,15 +763,6 @@ exports[`<Glossaire /> should render 1`] = `
   font-size: 1.8rem;
 }
 
-.c36 {
-  margin: 1rem 0;
-}
-
-.c37 {
-  padding: 0.4rem 0;
-  display: block;
-}
-
 @media (max-width:600px) {
   .c4 {
     padding: 0 1rem;
@@ -799,13 +790,13 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c43 {
+  .c41 {
     padding: 0;
   }
 }
 
 @media print {
-  .c43 {
+  .c41 {
     max-width: 100%;
     padding: 0;
   }
@@ -837,7 +828,7 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c51 {
+  .c49 {
     font-size: 1.6rem;
   }
 }
@@ -855,31 +846,31 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c54 {
+  .c52 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c54 {
+  .c52 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c45 {
+  .c43 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c45 {
+  .c43 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c45 {
+  .c43 {
     padding: 0 3rem;
   }
 }
@@ -932,7 +923,7 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c41 {
+  .c39 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
@@ -963,32 +954,32 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c42 {
+  .c40 {
     font-size: 2.2rem;
   }
 }
 
 @media print {
-  .c39 {
+  .c37 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c40 {
+  .c38 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c47 {
+  .c45 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c48 {
+  .c46 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -996,26 +987,26 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c49 + .c49 {
+  .c47 + .c47 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c52 {
+  .c50 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c48 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c58 {
+  .c56 {
     display: none;
   }
 }
@@ -1563,15 +1554,16 @@ exports[`<Glossaire /> should render 1`] = `
                 </h2>
               </div>
               <ul
-                class="c35 c36"
+                class="c35"
               >
                 <li>
-                  <a
-                    class="c37"
-                    href="/glossaire/accord-dentreprise"
-                  >
-                    Accord d'entreprise
-                  </a>
+                  <p>
+                    <a
+                      href="/glossaire/accord-dentreprise"
+                    >
+                      Accord d'entreprise
+                    </a>
+                  </p>
                 </li>
               </ul>
             </div>
@@ -1580,24 +1572,24 @@ exports[`<Glossaire /> should render 1`] = `
       </div>
     </main>
     <div
-      class="c38"
+      class="c36"
     >
       <footer
-        class="c39"
+        class="c37"
       >
         <div
-          class="c24 c40"
+          class="c24 c38"
         >
           <div
             class="c4"
           >
             <div
               aria-level="2"
-              class="c41"
+              class="c39"
               role="heading"
             >
               <p
-                class="c42"
+                class="c40"
               >
                 <span
                   class="c28"
@@ -1606,19 +1598,19 @@ exports[`<Glossaire /> should render 1`] = `
               </p>
             </div>
             <div
-              class="c43 c44"
+              class="c41 c42"
             >
               <p>
                 Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
               </p>
             </div>
             <button
-              class="c45"
+              class="c43"
             >
               Contacter nos services en région
               <svg
                 aria-hidden="true"
-                class="c46"
+                class="c44"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1632,28 +1624,28 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c24 c47"
+          class="c24 c45"
         >
           <div
-            class="c4 c48"
+            class="c4 c46"
           >
             <div
-              class="c49 "
+              class="c47 "
             >
               <strong
                 aria-level="2"
-                class="c50 c51"
+                class="c48 c49"
                 data-testid="heading"
                 role="heading"
               >
                 Code du travail numérique
               </strong>
               <ul
-                class="c35 c52"
+                class="c35 c50"
               >
                 <li>
                   <a
-                    class="c53"
+                    class="c51"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
@@ -1661,7 +1653,7 @@ exports[`<Glossaire /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c53"
+                    class="c51"
                     href="/glossaire"
                   >
                     Glossaire
@@ -1669,7 +1661,7 @@ exports[`<Glossaire /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c53"
+                    class="c51"
                     href="/a-propos"
                   >
                     À propos
@@ -1677,7 +1669,7 @@ exports[`<Glossaire /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c53"
+                    class="c51"
                     href="/mentions-legales"
                   >
                     Mentions légales
@@ -1685,7 +1677,7 @@ exports[`<Glossaire /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c53"
+                    class="c51"
                     href="/accessibilite"
                   >
                     Accessibilité : partiellement conforme
@@ -1693,7 +1685,7 @@ exports[`<Glossaire /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c53"
+                    class="c51"
                     href="/politique-confidentialite"
                   >
                     Politique de confidentialité
@@ -1701,7 +1693,7 @@ exports[`<Glossaire /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c53"
+                    class="c51"
                     href="/stats"
                   >
                     Statistiques d’utilisation
@@ -1709,7 +1701,7 @@ exports[`<Glossaire /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c53"
+                    class="c51"
                     href="/integration"
                   >
                     Intégrer les outils du Code du travail numérique
@@ -1718,22 +1710,22 @@ exports[`<Glossaire /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c49 "
+              class="c47 "
             >
               <strong
                 aria-level="2"
-                class="c50 c51"
+                class="c48 c49"
                 data-testid="heading"
                 role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="c35 c52"
+                class="c35 c50"
               >
                 <li>
                   <button
-                    class="c54 c55"
+                    class="c52 c53"
                   >
                     Contact
                   </button>
@@ -1741,7 +1733,7 @@ exports[`<Glossaire /> should render 1`] = `
                 <li>
                   <a
                     aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                    class="c53"
+                    class="c51"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1752,7 +1744,7 @@ exports[`<Glossaire /> should render 1`] = `
                 <li>
                   <a
                     aria-label="Journal des modifications (Nouvelle fenêtre)"
-                    class="c53"
+                    class="c51"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1763,23 +1755,23 @@ exports[`<Glossaire /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c49 "
+              class="c47 "
             >
               <strong
                 aria-level="2"
-                class="c50 c51"
+                class="c48 c49"
                 data-testid="heading"
                 role="heading"
               >
                 En collaboration avec
               </strong>
               <ul
-                class="c35 c52"
+                class="c35 c50"
               >
                 <li>
                   <a
                     aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                    class="c53"
+                    class="c51"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1790,7 +1782,7 @@ exports[`<Glossaire /> should render 1`] = `
                 <li>
                   <a
                     aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                    class="c53"
+                    class="c51"
                     href="https://fabrique.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1801,7 +1793,7 @@ exports[`<Glossaire /> should render 1`] = `
                 <li>
                   <a
                     aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                    class="c53"
+                    class="c51"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1814,12 +1806,12 @@ exports[`<Glossaire /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="c56"
+          class="c54"
         >
           <li>
             <a
               aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="c53 c57"
+              class="c51 c55"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1828,7 +1820,7 @@ exports[`<Glossaire /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c58"
+              class="c56"
             >
               |
             </span>
@@ -1836,7 +1828,7 @@ exports[`<Glossaire /> should render 1`] = `
           <li>
             <a
               aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="c53 c57"
+              class="c51 c55"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1845,7 +1837,7 @@ exports[`<Glossaire /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c58"
+              class="c56"
             >
               |
             </span>
@@ -1853,7 +1845,7 @@ exports[`<Glossaire /> should render 1`] = `
           <li>
             <a
               aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="c53 c57"
+              class="c51 c55"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1862,7 +1854,7 @@ exports[`<Glossaire /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c58"
+              class="c56"
             >
               |
             </span>
@@ -1870,7 +1862,7 @@ exports[`<Glossaire /> should render 1`] = `
           <li>
             <a
               aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="c53 c57"
+              class="c51 c55"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1879,7 +1871,7 @@ exports[`<Glossaire /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c58"
+              class="c56"
             >
               |
             </span>
@@ -1887,7 +1879,7 @@ exports[`<Glossaire /> should render 1`] = `
           <li>
             <a
               aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="c53 c57"
+              class="c51 c55"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1896,7 +1888,7 @@ exports[`<Glossaire /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c58"
+              class="c56"
             >
               |
             </span>
@@ -1904,7 +1896,7 @@ exports[`<Glossaire /> should render 1`] = `
           <li>
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="c53 c57"
+              class="c51 c55"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"
