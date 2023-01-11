@@ -243,3 +243,20 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
         - "A3: Années d'ancienneté au-delà de la 10e année": contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . nombre d'années entre 11 et 15 ans
         - "A4: Années d'ancienneté au-delà de la 15e année": contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . nombre d'années au dessus de 15 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . résultat conventionnel . formule plus de 50 ans:
+  applicable si:
+    toutes ces conditions:
+      - age >= 50 ans
+      - age < 55 ans
+  valeur: oui
+  cdtn:
+    formule:
+      formula: "($formule) + (10% * ($formule))"
+
+contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . résultat conventionnel . formule plus de 55 ans:
+  applicable si: age >= 55 ans
+  valeur: oui
+  cdtn:
+    formule:
+      formula: "($formule) + (25% * ($formule))"
