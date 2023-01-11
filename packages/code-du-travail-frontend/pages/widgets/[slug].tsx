@@ -5,6 +5,7 @@ import React from "react";
 import styled from "styled-components";
 
 import {
+  DismissalProcess,
   DureePreavisLicenciement,
   DureePreavisRetraite,
   fetchTool,
@@ -14,6 +15,7 @@ import {
 const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
   "preavis-retraite": DureePreavisRetraite,
+  "procedure-licenciement": DismissalProcess,
 };
 
 interface Props {
