@@ -113,14 +113,14 @@ contrat salarié . convention collective . transports routiers . indemnité de l
   applicable si:
     une de ces conditions:
       - age > 65 ans
-      - ancienneté totale < 3 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année < 3 an
   valeur: 0 €
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . base . seulement cadre:
   remplace: calcul
   applicable si:
     toutes ces conditions:
-      - ancienneté totale >= 3 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 3 an
       - age < 65
   non applicable si: ancienneté avant cadre
   valeur: cadre - minoration + majoration
