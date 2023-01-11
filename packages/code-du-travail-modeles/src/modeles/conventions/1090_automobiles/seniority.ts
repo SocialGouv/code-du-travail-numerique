@@ -50,7 +50,7 @@ export class Seniority1090
         )
         ? {
             extraInfos: {
-              "contrat salarié . convention collective . automobiles . indemnité de licenciement . congé parental d'éducation total":
+              "contrat salarié . convention collective . automobiles . indemnité de licenciement . congé parental d'éducation à temps plein":
                 "oui",
             },
           }
@@ -81,7 +81,7 @@ export const MOTIFS_1090: Motif[] = [
   },
   {
     key: MotifKeys.congesParentalEducationTotal,
-    label: "Congé parental d'éducation total",
+    label: "Congé parental d'éducation à temps plein",
     value: 0.5,
   },
   { key: MotifKeys.congesSansSolde, label: "Congés sans solde", value: 0 },

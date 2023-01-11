@@ -62,7 +62,7 @@ describe("CC 1090", () => {
 
         expect(result.value).toEqual(expectedAnciennete);
         expect(result.extraInfos).toEqual({
-          "contrat salarié . convention collective . automobiles . indemnité de licenciement . congé parental d'éducation total":
+          "contrat salarié . convention collective . automobiles . indemnité de licenciement . congé parental d'éducation à temps plein":
             "oui",
         });
       }
