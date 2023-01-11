@@ -8,7 +8,6 @@ import {
 import { StoreApi } from "zustand";
 import { MainStore } from "../../store";
 import { AgreementSeniority16 } from "./16";
-import { dateOneDayLater } from "../../common";
 import { AgreementSeniority413 } from "./413";
 
 export const getAgreementSeniority = (
@@ -16,7 +15,7 @@ export const getAgreementSeniority = (
   get: StoreApi<MainStore>["getState"]
 ): SeniorityResult => {
   const dateEntree = get().ancienneteData.input.dateEntree!;
-  const dateSortie = dateOneDayLater(get().ancienneteData.input.dateSortie!);
+  const dateSortie = get().ancienneteData.input.dateSortie!;
   const absencePeriods = get().ancienneteData.input.absencePeriods;
   const defaultValues = { dateEntree, dateSortie, absencePeriods };
 
@@ -44,10 +43,8 @@ export const getAgreementRequiredSeniority = (
   get: StoreApi<MainStore>["getState"]
 ): RequiredSeniorityResult => {
   const dateEntree = get().ancienneteData.input.dateEntree!;
-  const dateSortie = dateOneDayLater(get().ancienneteData.input.dateSortie!);
-  const dateNotification = dateOneDayLater(
-    get().ancienneteData.input.dateNotification!
-  );
+  const dateSortie = get().ancienneteData.input.dateSortie!;
+  const dateNotification = get().ancienneteData.input.dateNotification!;
   const absencePeriods = get().ancienneteData.input.absencePeriods;
   const defaultValues = {
     dateEntree,

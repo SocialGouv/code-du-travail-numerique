@@ -1,4 +1,4 @@
-import { differenceInMonths, parse } from "date-fns";
+import { addDays, differenceInMonths, parse } from "date-fns";
 
 import type {
   Absence,
@@ -40,7 +40,7 @@ export class Seniority1090
     absences: Absence[]
   ): SeniorityResult {
     const dEntree = parse(from, "dd/MM/yyyy", new Date());
-    const dSortie = parse(to, "dd/MM/yyyy", new Date());
+    const dSortie = addDays(parse(to, "dd/MM/yyyy", new Date()), 1);
     const totalAbsence =
       absences
         .filter((period) => Boolean(period.durationInMonth))

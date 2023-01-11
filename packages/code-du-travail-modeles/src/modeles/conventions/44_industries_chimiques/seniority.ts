@@ -1,4 +1,4 @@
-import { differenceInMonths, parse } from "date-fns";
+import { addDays, differenceInMonths, parse } from "date-fns";
 
 import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
@@ -41,7 +41,7 @@ export class Seniority44
     absences: Absence[]
   ): SeniorityResult {
     const dEntree = parse(from, "dd/MM/yyyy", new Date());
-    const dSortie = parse(to, "dd/MM/yyyy", new Date());
+    const dSortie = addDays(parse(to, "dd/MM/yyyy", new Date()), 1);
 
     const totalAbsence =
       absences.reduce((total, item) => {

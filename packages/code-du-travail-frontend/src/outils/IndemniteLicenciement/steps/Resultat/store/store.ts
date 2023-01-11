@@ -25,7 +25,6 @@ import {
   AgreementInformation,
   getSupportedCcIndemniteLicenciement,
   hasNoLegalIndemnity,
-  dateOneDayLater,
 } from "../../../common";
 import { getAgreementReferenceSalary } from "../../../agreements";
 import { MainStore } from "../../../store";
@@ -127,12 +126,8 @@ const createResultStore: StoreSlice<
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
       const publicodes = get().resultData.publicodes;
-      const dateNotification = dateOneDayLater(
-        get().ancienneteData.input.dateNotification!
-      );
-      const dateSortie = dateOneDayLater(
-        get().ancienneteData.input.dateSortie!
-      );
+      const dateNotification = get().ancienneteData.input.dateNotification!;
+      const dateSortie = get().ancienneteData.input.dateSortie!;
       if (!publicodes) {
         throw new Error("Publicodes is not defined");
       }
