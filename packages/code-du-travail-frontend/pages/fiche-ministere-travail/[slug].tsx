@@ -75,7 +75,6 @@ function Fiche(props: Props): JSX.Element {
       <StyledAnswer
         title={title}
         relatedItems={relatedItems}
-        emptyMessage="Cette fiche n'a pas été trouvée"
         intro={intro}
         date={date}
         source={{ name: "Fiche Ministère du travail", url }}

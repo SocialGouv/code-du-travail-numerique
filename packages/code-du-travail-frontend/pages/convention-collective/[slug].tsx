@@ -42,7 +42,6 @@ function ConventionCollective(props: Props): JSX.Element {
           })
         }
         dateLabel="Entrée en vigueur le"
-        emptyMessage="Cette convention collective n'a pas été trouvée"
         relatedItems={[
           {
             reco: "static",

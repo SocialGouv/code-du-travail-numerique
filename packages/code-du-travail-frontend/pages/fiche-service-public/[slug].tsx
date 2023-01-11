@@ -45,7 +45,6 @@ function Fiche(props: Props): JSX.Element {
       <Answer
         title={title}
         relatedItems={relatedItems}
-        emptyMessage="Cette fiche n'a pas été trouvée"
         date={date}
         source={{ name: "Fiche service-public.fr", url }}
         additionalContent={

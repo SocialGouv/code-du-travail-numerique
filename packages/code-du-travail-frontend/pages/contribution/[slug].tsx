@@ -70,7 +70,6 @@ function PageContribution(props: Props): JSX.Element {
           title={title}
           relatedItems={relatedItems}
           breadcrumbs={breadcrumbs}
-          emptyMessage="Cette question n'a pas été trouvée"
         >
           <Contribution
             answers={answers}
