@@ -42,13 +42,14 @@ function Glossaire({ glossary }) {
   );
 }
 
-Glossaire.getInitialProps = async () => {
-  const responseContainer = await fetch(`${API_URL}/glossary`);
-  if (!responseContainer.ok) {
-    return { statusCode: responseContainer.status };
+export const getServerSideProps = async () => {
+  const response = await fetch(`${API_URL}/glossary`);
+  if (!response.ok) {
+    return { notFound: true };
   }
-  const glossary = await responseContainer.json();
-  return { glossary };
+
+  const glossary = await response.json();
+  return { props: { glossary } };
 };
 
 export default Glossaire;
@@ -83,13 +84,15 @@ function Glossary({ letters }) {
     return (
       <div key={letter}>
         <LetterTitle letter={letter} />
-        <StyledList>
+        <FlatList>
           {terms.map(({ term, slug }) => (
             <li key={slug}>
-              <StyledLink href={`/glossaire/${slug}`}>{term}</StyledLink>
+              <p>
+                <a href={`/glossaire/${slug}`}>{term}</a>
+              </p>
             </li>
           ))}
-        </StyledList>
+        </FlatList>
       </div>
     );
   });
@@ -125,12 +128,4 @@ const Item = styled.li`
   @media (max-width: ${breakpoints.mobile}) {
     font-size: ${fonts.sizes.default};
   }
-`;
-
-const StyledList = styled(FlatList)`
-  margin: ${spacings.small} 0;
-`;
-const StyledLink = styled.a`
-  padding: ${spacings.tiny} 0;
-  display: block;
 `;

@@ -75,13 +75,14 @@ const ThemesPage = ({ children = [] }) => (
   </Layout>
 );
 
-ThemesPage.getInitialProps = async () => {
+export const getServerSideProps = async () => {
   const response = await fetch(`${API_URL}/themes`);
   if (!response.ok) {
-    return { statusCode: response.status };
+    return { notFound: true };
   }
+
   const { children } = await response.json();
-  return { children };
+  return { props: { children } };
 };
 
 export default ThemesPage;

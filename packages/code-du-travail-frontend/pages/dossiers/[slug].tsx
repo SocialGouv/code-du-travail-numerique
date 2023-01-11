@@ -16,8 +16,6 @@ import getConfig from "next/config";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-
-import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 
@@ -27,17 +25,22 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-function DossierThematique({ dossier }) {
-  if (!dossier) {
-    return <Answer emptyMessage="Ce dossier thématique n'a pas été trouvé" />;
-  }
+interface Props {
+  description: string;
+  metaDescription: string;
+  populars: any;
+  sections: Array<any>;
+  title: string;
+}
+
+function DossierThematique(props: Props): JSX.Element {
   const {
     description = "",
     metaDescription,
     populars,
     sections = [],
     title,
-  } = dossier;
+  } = props;
 
   return (
     <Layout>
@@ -82,7 +85,14 @@ function DossierThematique({ dossier }) {
               <React.Fragment key={label || "sans-label"}>
                 <H2>{label}</H2>
                 {categories.map(({ id, ...props }) => (
-                  <Category key={id} id={id} {...props} />
+                  <Category
+                    icon={props.icon}
+                    title={props.title}
+                    shortTitle={props.shortTitle}
+                    key={id}
+                    id={id}
+                    {...props}
+                  />
                 ))}
               </React.Fragment>
             ))}
@@ -93,13 +103,13 @@ function DossierThematique({ dossier }) {
   );
 }
 
-DossierThematique.getInitialProps = async ({ query: { slug } }) => {
+export const getServerSideProps = async ({ query: { slug } }) => {
   const responseContainer = await fetch(`${API_URL}/dossiers/${slug}`);
   if (!responseContainer.ok) {
-    return { statusCode: responseContainer.status };
+    return { notFound: true };
   }
   const dossier = await responseContainer.json();
-  return { dossier };
+  return { props: dossier };
 };
 
 const Category = ({ id, icon, title, shortTitle, refs = [] }) => {
@@ -126,6 +136,7 @@ const Category = ({ id, icon, title, shortTitle, refs = [] }) => {
         )}
       >
         {refs.map((ref) => (
+          // @ts-ignore
           <Li key={ref.url || ref.externalUrl}>
             <DossierLink {...ref} />
           </Li>
@@ -219,9 +230,11 @@ const StyledFlatList = styled(FlatList)`
 const Li = styled.li`
   width: 48%;
   padding-bottom: ${spacings.small};
+
   &:nth-child(even) {
     margin-left: 4%;
   }
+
   @media (max-width: ${breakpoints.mobile}) {
     width: 100%;
     &:nth-child(even) {

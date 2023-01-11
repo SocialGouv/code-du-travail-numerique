@@ -21,7 +21,15 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-function Term({ term: { term, definition, references } }) {
+interface Props {
+  term: string;
+  definition: string;
+  references: Array<any>;
+}
+
+function Term(props: Props): JSX.Element {
+  const { term, definition, references } = props;
+
   return (
     <Layout>
       <Metas title={term} description={definition} />
@@ -71,14 +79,16 @@ function Term({ term: { term, definition, references } }) {
     </Layout>
   );
 }
-Term.getInitialProps = async ({ query: { slug } }) => {
+
+export const getServerSideProps = async ({ query: { slug } }) => {
   const responseContainer = await fetch(`${API_URL}/glossary/${slug}`);
   if (!responseContainer.ok) {
-    return { statusCode: responseContainer.status };
+    return { notFound: true };
   }
   const term = await responseContainer.json();
-  return { term };
+  return { props: term };
 };
+
 export default Term;
 
 const { spacings } = theme;
