@@ -91,6 +91,7 @@ function DossierThematique(props: Props): JSX.Element {
                     shortTitle={props.shortTitle}
                     key={id}
                     id={id}
+                    refs={props.refs}
                     {...props}
                   />
                 ))}
@@ -112,7 +113,21 @@ export const getServerSideProps = async ({ query: { slug } }) => {
   return { props: dossier };
 };
 
-const Category = ({ id, icon, title, shortTitle, refs = [] }) => {
+interface CategoryProps {
+  id: string;
+  icon: string;
+  title: string;
+  shortTitle: string;
+  refs: any[];
+}
+
+const Category = ({
+  id,
+  icon,
+  title,
+  shortTitle,
+  refs = [],
+}: CategoryProps) => {
   return (
     <StyledWrapper>
       {icon ? (
@@ -136,7 +151,6 @@ const Category = ({ id, icon, title, shortTitle, refs = [] }) => {
         )}
       >
         {refs.map((ref) => (
-          // @ts-ignore
           <Li key={ref.url || ref.externalUrl}>
             <DossierLink {...ref} />
           </Li>
