@@ -20,113 +20,31 @@ describe("Not found", () => {
       .and("equal", Cypress.config().baseUrl + "/");
   });
 
-  it("page outils should returns 404 if does not exist", () => {
-    cy.request({
-      failOnStatusCode: false,
-      method: "GET",
-      url: "/outils/banane",
-    }).then((response) => {
-      expect(response.status).to.equal(404);
-    });
-  });
-  it("page fiche-ministere-travail should returns 404 if does not exist", () => {
-    cy.request({
-      failOnStatusCode: false,
-      method: "GET",
-      url: "/fiche-ministere-travail/banane",
-    }).then((response) => {
-      expect(response.status).to.equal(404);
-    });
-  });
-  it("page fiche-service-public should returns 404 if does not exist", () => {
-    cy.request({
-      failOnStatusCode: false,
-      method: "GET",
-      url: "/fiche-service-public/banane",
-    }).then((response) => {
-      expect(response.status).to.equal(404);
-    });
-  });
-
-  it("page code-du-travail should returns 404 if does not exist", () => {
-    cy.request({
-      failOnStatusCode: false,
-      method: "GET",
-      url: "/code-du-travail/banane",
-    }).then((response) => {
-      expect(response.status).to.equal(404);
-    });
-  });
-  it("page contribution should returns 404 if does not exist", () => {
-    cy.request({
-      failOnStatusCode: false,
-      method: "GET",
-      url: "/contribution/banane",
-    }).then((response) => {
-      expect(response.status).to.equal(404);
-    });
-  });
-  it("page convention-collective should returns 404 if does not exist", () => {
-    cy.request({
-      failOnStatusCode: false,
-      method: "GET",
-      url: "/convention-collective/banane",
-    }).then((response) => {
-      expect(response.status).to.equal(404);
-    });
-  });
-  it("page dossiers should returns 404 if does not exist", () => {
-    cy.request({
-      failOnStatusCode: false,
-      method: "GET",
-      url: "/dossiers/banane",
-    }).then((response) => {
-      expect(response.status).to.equal(404);
-    });
-  });
-  it("page glossaire should returns 404 if does not exist", () => {
-    cy.request({
-      failOnStatusCode: false,
-      method: "GET",
-      url: "/glossaire/banane",
-    }).then((response) => {
-      expect(response.status).to.equal(404);
-    });
-  });
-  it("page information should returns 404 if does not exist", () => {
-    cy.request({
-      failOnStatusCode: false,
-      method: "GET",
-      url: "/information/banane",
-    }).then((response) => {
-      expect(response.status).to.equal(404);
-    });
-  });
-  it("page modeles-de-courriers should returns 404 if does not exist", () => {
-    cy.request({
-      failOnStatusCode: false,
-      method: "GET",
-      url: "/modeles-de-courriers/banane",
-    }).then((response) => {
-      expect(response.status).to.equal(404);
-    });
-  });
-  it("page themes should returns 404 if does not exist", () => {
-    cy.request({
-      failOnStatusCode: false,
-      method: "GET",
-      url: "/themes/banane",
-    }).then((response) => {
-      expect(response.status).to.equal(404);
-    });
-  });
-  it("page widgets should returns 404 if does not exist", () => {
-    cy.request({
-      failOnStatusCode: false,
-      method: "GET",
-      url: "/widgets/banane",
-    }).then((response) => {
-      expect(response.status).to.equal(404);
+  describe("page should return 404 if does not exists", () => {
+    [
+      "/outils",
+      "/fiche-ministere-travail",
+      "/fiche-service-public",
+      "/code-du-travail",
+      "/contribution",
+      "/convention-collective",
+      "/dossiers",
+      "/glossaire",
+      "/information",
+      "/modeles-de-courriers",
+      "/themes",
+      "/widgets",
+      "",
+    ].forEach((fragment) => {
+      it("page: " + fragment + "/banane", () => {
+        cy.request({
+          failOnStatusCode: false,
+          method: "GET",
+          url: fragment + "/banane",
+        }).then((response) => {
+          expect(response.status).to.equal(404);
+        });
+      });
     });
   });
 });

@@ -1357,6 +1357,7 @@ exports[`<Term /> should render 1`] = `
               <span
                 class="c28"
               />
+              Accord d'entreprise
             </h1>
           </header>
           <div
@@ -1379,7 +1380,11 @@ exports[`<Term /> should render 1`] = `
                       <td>
                         <div
                           class=""
-                        />
+                        >
+                          <p>
+                            Accord collectif de travail conclu au niveau d'une entreprise.
+                          </p>
+                        </div>
                       </td>
                     </tr>
                   </tbody>

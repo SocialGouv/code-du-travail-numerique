@@ -17,17 +17,15 @@ describe("Landing pages", () => {
     cy.visit("/fiche-ministere-travail/entreprises-dinsertion-ei");
     cy.get("h1").should("have.text", "Entreprises d’insertion (EI)");
     cy.get("body").should("contain", "Source: Fiche Ministère du travail");
-    // cy.get("h2")
-    //   .first()
-    //   .should("have.text", "Qu’est-ce qu’une entreprise d’insertion ?");
+    cy.get("h2")
+      .first()
+      .should("contain", "Qu’est-ce qu’une entreprise d’insertion");
   });
   it("je vois une page fiche service public", () => {
     cy.visit("/fiche-service-public/conges-payes");
     cy.get("h1").should("have.text", "Congés payés");
     cy.get("body").should("contain", "Source: Fiche service-public.fr");
-    // cy.get("h2")
-    //   .first()
-    //   .should("have.text", "Avez-vous droit aux congés payés");
+    cy.get("h2").first().should("contain", "Avez-vous droit aux congés payés");
   });
   it("je vois une page convention collective", () => {
     cy.visit(
