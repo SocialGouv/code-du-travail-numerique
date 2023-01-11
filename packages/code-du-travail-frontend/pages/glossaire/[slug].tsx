@@ -24,7 +24,7 @@ const {
 interface Props {
   term: string;
   definition: string;
-  references: Array<any>;
+  references?: Array<any>;
 }
 
 function Term(props: Props): JSX.Element {
