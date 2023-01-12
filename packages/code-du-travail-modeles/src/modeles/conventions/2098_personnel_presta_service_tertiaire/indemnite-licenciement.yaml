@@ -176,7 +176,7 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age:
   applicable si: catégorie professionnelle = 'Cadres'
   titre: Âge du salarié
-  question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;? TATA
+  question: Quel est l'âge du salarié à la date de notification de son licenciement&nbsp;?
   unité: an
   cdtn:
     type: entier
