@@ -219,15 +219,6 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
         - "A: Années d'ancienneté à compter de la 1re année": contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . nombre d'années entre 0 et 5 ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
-contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . résultat conventionnel avec plafond:
-  applicable si: résultat conventionnel = indemnité de licenciement . salaire de référence conventionnel * 18
-  valeur: oui
-  cdtn:
-    formule:
-      formula: 18 * Sref
-      explanations:
-        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . résultat conventionnel . formule plus de 5 ans:
   applicable si:
     toutes ces conditions:
@@ -260,3 +251,12 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
   cdtn:
     formule:
       formula: "($formule) + (25% * ($formule))"
+
+contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . résultat conventionnel avec plafond:
+  applicable si: résultat conventionnel = indemnité de licenciement . salaire de référence conventionnel * 18
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 18 * Sref
+      explanations:
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
