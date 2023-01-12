@@ -1,9 +1,12 @@
-import { differenceInMonths, parse } from "date-fns";
+import { addDays, differenceInMonths, parse } from "date-fns";
 
 import type {
+  Absence,
   ISeniority,
   Motif,
+  RequiredSeniorityResult,
   SeniorityProps,
+  SeniorityRequiredProps,
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
@@ -11,38 +14,63 @@ import { MotifKeys } from "../../common/motif-keys";
 
 export class Seniority1090
   implements ISeniority<SupportedCcIndemniteLicenciement.default> {
-  protected motifs: Motif[];
-
-  constructor(motifs: Motif[]) {
-    this.motifs = motifs;
-  }
-
   computeSeniority({
     dateEntree,
     dateSortie,
     absencePeriods = [],
   }: SeniorityProps<SupportedCcIndemniteLicenciement.default>): SeniorityResult {
-    const dEntree = parse(dateEntree, "dd/MM/yyyy", new Date());
-    const dSortie = parse(dateSortie, "dd/MM/yyyy", new Date());
-    const totalAbsence =
-      absencePeriods
-        .filter((period) => Boolean(period.durationInMonth))
-        .reduce<number>((total, item) => {
-          const m = this.motifs.find((motif) => motif.key === item.motif.key);
-          if (!m || !item.durationInMonth) {
-            return total;
-          }
-          if (
-            m.key === MotifKeys.maladieNonPro ||
-            m.key === MotifKeys.accidentTrajet
-          ) {
-            const newValue = Math.max(0, (item.durationInMonth - 6) * m.value);
-            return total + newValue;
-          }
-          return total + item.durationInMonth * m.value;
-        }, 0) / 12;
+    return this.compute(dateEntree, dateSortie, absencePeriods);
+  }
+
+  computeRequiredSeniority({
+    dateEntree,
+    dateNotification,
+    absencePeriods = [],
+  }: SeniorityRequiredProps): RequiredSeniorityResult {
+    return this.compute(dateEntree, dateNotification, absencePeriods);
+  }
+
+  getMotifs(): Motif[] {
+    return MOTIFS_1090;
+  }
+
+  private compute(
+    from: string,
+    to: string,
+    absences: Absence[]
+  ): SeniorityResult {
+    const dEntree = parse(from, "dd/MM/yyyy", new Date());
+    const dSortie = addDays(parse(to, "dd/MM/yyyy", new Date()), 1);
+    const totalAbsencePerMotif = absences.reduce<Map<string, number>>(
+      (total, item) => {
+        const m = this.getMotifs().find(
+          (motif) => motif.key === item.motif.key
+        );
+        if (!m || !item.durationInMonth) {
+          return total;
+        }
+        total.set(
+          m.key,
+          (total.get(m.key) ?? 0) + (item.durationInMonth ?? 0) * m.value
+        );
+        return total;
+      },
+      new Map()
+    );
+    totalAbsencePerMotif.set(
+      MotifKeys.maladieNonPro,
+      Math.max(0, (totalAbsencePerMotif.get(MotifKeys.maladieNonPro) ?? 0) - 6)
+    );
+    totalAbsencePerMotif.set(
+      MotifKeys.accidentTrajet,
+      Math.max(0, (totalAbsencePerMotif.get(MotifKeys.accidentTrajet) ?? 0) - 6)
+    );
+    const totalAbsence = Array.from(totalAbsencePerMotif.values()).reduce(
+      (sum, value) => sum + value,
+      0
+    );
     return Object.assign(
-      absencePeriods
+      absences
         .filter((period) => Boolean(period.durationInMonth))
         .find(
           (period) =>
@@ -56,22 +84,22 @@ export class Seniority1090
           }
         : {},
       {
-        value: differenceInMonths(dSortie, dEntree) / 12 - totalAbsence,
+        value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
       }
     );
   }
 }
 
-export const MOTIFS_1090: Motif[] = [
+const MOTIFS_1090: Motif[] = [
   {
     key: MotifKeys.maladieNonPro,
     label: "Absence pour maladie non professionnelle",
-    value: 0,
+    value: 1,
   },
   {
     key: MotifKeys.accidentTrajet,
     label: "Arrêt maladie lié à un accident de trajet",
-    value: 0,
+    value: 1,
   },
   { key: MotifKeys.congesSabbatique, label: "Congé sabbatique", value: 0 },
   {

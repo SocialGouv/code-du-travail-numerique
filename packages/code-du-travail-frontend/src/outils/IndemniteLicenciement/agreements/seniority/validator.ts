@@ -3,10 +3,12 @@ import { Agreement } from "../../../../conventions/Search/api/type";
 import { CommonInformationsStoreInput } from "../../../CommonSteps/Informations/store";
 import { AncienneteStoreInput } from "../../steps/Anciennete/store";
 import { validateStep } from "../../steps/Anciennete/store/validator";
+import { ContratTravailStoreInput } from "../../steps/ContratTravail/store";
 import { validateStep1517 } from "../1517-commerces-de-detail-non-alimentaires";
 
 export const customSeniorityValidator = (
   state: AncienneteStoreInput,
+  stateContratTravail: ContratTravailStoreInput,
   information: CommonInformationsStoreInput,
   agreeement?: Agreement
 ): any => {
@@ -16,9 +18,9 @@ export const customSeniorityValidator = (
   }
   switch (idcc) {
     case SupportedCcIndemniteLicenciement.IDCC1517:
-      return validateStep1517(state, information, agreeement);
+      return validateStep1517(state, stateContratTravail, information);
     default: {
-      return validateStep(state, information, agreeement);
+      return validateStep(state, stateContratTravail, information);
     }
   }
 };

@@ -81,15 +81,17 @@ const SimulatorContent = <StepName extends string>({
         (validator) =>
           validator.stepName === visibleSteps[currentStepIndex].name
       );
+
+      isValid = currentStepIndex === 0 || stepValidator?.validator();
+
       if (
+        isValid &&
         stepValidator?.validatorEligibility &&
         !stepValidator?.validatorEligibility()
       ) {
         nextStep(visibleSteps.length - 1);
         return;
       }
-
-      isValid = currentStepIndex === 0 || stepValidator?.validator();
 
       if (isValid) {
         nextStep();

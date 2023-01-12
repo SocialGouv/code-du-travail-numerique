@@ -1,10 +1,13 @@
-import { differenceInMonths, parse } from "date-fns";
+import { addDays, differenceInMonths, parse } from "date-fns";
 
 import { LEGAL_MOTIFS } from "../../base/seniority";
 import type {
+  Absence,
   ISeniority,
   Motif,
+  RequiredSeniorityResult,
   SeniorityProps,
+  SeniorityRequiredProps,
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "../../common";
@@ -14,28 +17,44 @@ import {
 } from "../../common";
 import { MotifKeys } from "../../common/motif-keys";
 
-export class SenioritY1527
+export class Seniority1527
   implements ISeniority<SupportedCcIndemniteLicenciement.IDCC1527> {
-  protected motifs: Motif[];
-
-  constructor(motifs: Motif[]) {
-    this.motifs = motifs;
-  }
-
   computeSeniority({
     dateEntree,
     dateSortie,
     absencePeriods = [],
   }: SeniorityProps<SupportedCcIndemniteLicenciement.IDCC1527>): SeniorityResult {
-    const dEntree = parse(dateEntree, "dd/MM/yyyy", new Date());
-    const dSortie = parse(dateSortie, "dd/MM/yyyy", new Date());
+    return this.compute(dateEntree, dateSortie, absencePeriods);
+  }
 
-    const totalAbsenceWithoutCongesSansSoldesAbsence = absencePeriods.reduce(
+  computeRequiredSeniority({
+    dateEntree,
+    dateNotification,
+    absencePeriods = [],
+  }: SeniorityRequiredProps): RequiredSeniorityResult {
+    return this.compute(dateEntree, dateNotification, absencePeriods);
+  }
+
+  getMotifs(): Motif[] {
+    return MOTIFS_1527;
+  }
+
+  private compute(
+    from: string,
+    to: string,
+    absences: Absence[]
+  ): SeniorityResult {
+    const dEntree = parse(from, "dd/MM/yyyy", new Date());
+    const dSortie = addDays(parse(to, "dd/MM/yyyy", new Date()), 1);
+
+    const totalAbsenceWithoutCongesSansSoldesAbsence = absences.reduce(
       (total, item) => {
         if (item.durationInMonth === undefined) {
           return 0;
         }
-        const m = this.motifs.find((motif) => motif.key === item.motif.key);
+        const m = this.getMotifs().find(
+          (motif) => motif.key === item.motif.key
+        );
         if (!m) {
           return total;
         }
@@ -48,7 +67,7 @@ export class SenioritY1527
       0
     );
 
-    const congesSansSoldeAbsences = absencePeriods.filter(
+    const congesSansSoldeAbsences = absences.filter(
       (absence) =>
         Boolean(absence.durationInMonth) &&
         absence.motif.key === "absenceCongesSansSolde"
@@ -75,7 +94,7 @@ export class SenioritY1527
   }
 }
 
-export const MOTIFS_1527: Motif[] = LEGAL_MOTIFS.map((item) => {
+const MOTIFS_1527: Motif[] = LEGAL_MOTIFS.map((item) => {
   if (item.key === MotifKeys.congesSansSolde) {
     return {
       ...item,

@@ -62,8 +62,8 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté requise en année >= 2 ans
-      - contrat salarié . indemnité de licenciement . ancienneté requise en année < 20 ans
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 ans
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année < 20 ans
   valeur: un quart du salaire de référence
   unité: €
   arrondi: 2 décimales
@@ -80,7 +80,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
 
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . etam . résultat conventionnel pour 20 ans et plus:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année >= 20 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 20 ans
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 10
   valeur: presque un tiers du salaire de référence
   unité: €
@@ -112,7 +112,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . ingé . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année >= 2 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 ans
   valeur: un tiers du salaire de référence
   unité: €
   arrondi: 2 décimales
@@ -144,7 +144,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle . chargés d'enquête . résultat conventionnel:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   plafond: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 7
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année >= 2 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 ans
   valeur: un cinquième du salaire de référence
   unité: €
   arrondi: 2 décimales
@@ -174,7 +174,7 @@ contrat salarié . convention collective . bureaux études techniques . indemnit
   valeur: oui
 
 contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . refus . résultat conventionnel:
-  applicable si: indemnité de licenciement . ancienneté requise en année >= 8 mois
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
   remplace: indemnité de licenciement . résultat conventionnel identique au légal
   valeur: oui
   références:

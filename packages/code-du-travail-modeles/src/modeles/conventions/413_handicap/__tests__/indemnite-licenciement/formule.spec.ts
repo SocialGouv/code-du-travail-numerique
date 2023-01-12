@@ -24,7 +24,7 @@ describe("Formule indemnité licenciement - 413", () => {
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période":
             "non",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
         });
         const formule = getFormule(situation);
@@ -60,7 +60,7 @@ describe("Formule indemnité licenciement - 413", () => {
             "01/01/2010",
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif": seniorityNonCadre,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
         });
         const formule = getFormule(situation);

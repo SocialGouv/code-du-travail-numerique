@@ -1,4 +1,4 @@
-import { Absence, getMotifs } from "@socialgouv/modeles-social";
+import { Absence, SeniorityFactory } from "@socialgouv/modeles-social";
 import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social/bin";
 import React from "react";
 import styled from "styled-components";
@@ -28,7 +28,9 @@ const AbsencePeriods = ({
   idcc,
   informationData,
 }: Props) => {
-  const motifs = getMotifs(idcc ?? SupportedCcIndemniteLicenciement.default);
+  const motifs = new SeniorityFactory()
+    .create(idcc ?? SupportedCcIndemniteLicenciement.default)
+    .getMotifs();
   const [localAbsences, setLocalAbsences] = React.useState<Absence[]>(
     absences.length > 0
       ? absences

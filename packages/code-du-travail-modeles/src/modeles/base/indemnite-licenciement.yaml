@@ -10,6 +10,19 @@ contrat salarié . indemnité de licenciement . salaire de référence conventio
   unité: €
 
 contrat salarié . indemnité de licenciement . ancienneté en année:
+  titre: Ancienneté calculée pour le calcul de l'indemnité de licenciement
+  unité: an
+
+contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année:
+  titre: Ancienneté calculée pour le calcul de l'indemnité de licenciement conventionnelle
+  unité: an
+
+contrat salarié . indemnité de licenciement . ancienneté requise en année:
+  titre: Ancienneté calculée pour le droit à l'indemnité de licenciement
+  unité: an
+
+contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année:
+  titre: Ancienneté calculée pour le droit à l'indemnité de licenciement conventionnelle
   unité: an
 
 contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins:
@@ -40,7 +53,7 @@ contrat salarié . indemnité de licenciement . facteur plus de dix ans:
 
 contrat salarié . indemnité de licenciement . résultat légal:
   variations:
-    - si: ancienneté en année >= 8 mois
+    - si: ancienneté requise en année >= 8 mois
       alors:
         somme:
           - facteur dix ans ou moins
@@ -73,7 +86,7 @@ contrat salarié . indemnité de licenciement . résultat légal inaptitude:
 contrat salarié . indemnité de licenciement . résultat légal moins de 10ans:
   applicable si:
     toutes ces conditions:
-      - ancienneté en année >= 8 mois
+      - ancienneté requise en année >= 8 mois
       - ancienneté en année <= 10 an
   valeur: résultat légal
   cdtn:
@@ -108,9 +121,6 @@ contrat salarié . indemnité de licenciement . résultat légal si inaptitude s
     formule:
       formula: ($formule) * 2
 
-contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année:
-  unité: an
-
 contrat salarié . indemnité de licenciement . jusqu'à dix ans ou moins cc:
   valeur:
     le minimum de:
@@ -142,7 +152,7 @@ contrat salarié . indemnité de licenciement . résultat conventionnel identiqu
 contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal moins de 10ans formule:
   applicable si:
     toutes ces conditions:
-      - ancienneté requise en année <= 10 an
+      - ancienneté conventionnelle en année <= 10 an
       - résultat conventionnel identique au légal
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: indemnité de licenciement . facteur dix ans ou moins cc
@@ -158,7 +168,7 @@ contrat salarié . indemnité de licenciement . résultat conventionnel identiqu
 contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal au dela de 10 ans:
   applicable si:
     toutes ces conditions:
-      - ancienneté requise en année > 10 an
+      - ancienneté conventionnelle en année > 10 an
       - résultat conventionnel identique au légal
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
@@ -183,7 +193,3 @@ contrat salarié . indemnité de licenciement . étape salaire désactivée:
 
 contrat salarié . indemnité de licenciement . date de notification:
   valeur: non
-
-
-contrat salarié . indemnité de licenciement . ancienneté requise en année:
-  unité: an

@@ -1,8 +1,4 @@
-import {
-  getMotifs,
-  SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
-} from "@socialgouv/modeles-social";
+import { SalaryPeriods } from "@socialgouv/modeles-social";
 import produce from "immer";
 import { StoreApi } from "zustand";
 import { deepMergeArray } from "../../../../../lib";

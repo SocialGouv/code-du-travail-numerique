@@ -1,35 +1,39 @@
 describe("CC 16", () => {
   describe("Calcul de l'indemnité de licenciement pour un Ingénieur et cadre", () => {
     test.each`
-      seniority | seniorityEmployeTAM | age   | haveRightToRetirement | salaireRef | expectedCompensation
-      ${2.08}   | ${0}                | ${45} | ${false}              | ${3374}    | ${0}
-      ${2.99}   | ${0}                | ${45} | ${false}              | ${3374}    | ${0}
-      ${3}      | ${0}                | ${45} | ${false}              | ${3374}    | ${4048.8}
-      ${3.67}   | ${0}                | ${45} | ${false}              | ${3374}    | ${4953.03}
-      ${10}     | ${0}                | ${45} | ${false}              | ${3374}    | ${13496.0}
-      ${5}      | ${6}                | ${45} | ${false}              | ${3374}    | ${12821.2}
-      ${20}     | ${0}                | ${45} | ${false}              | ${3374}    | ${26992.0}
-      ${23}     | ${0}                | ${45} | ${false}              | ${3374}    | ${31040.8}
-      ${20}     | ${10}               | ${45} | ${false}              | ${3374}    | ${37114.0}
-      ${35}     | ${0}                | ${45} | ${false}              | ${3374}    | ${47236.0}
-      ${2.08}   | ${0}                | ${61} | ${true}               | ${3374}    | ${0}
-      ${3.67}   | ${0}                | ${61} | ${true}               | ${3374}    | ${3962.43}
-      ${10}     | ${0}                | ${61} | ${true}               | ${3374}    | ${10796.8}
-      ${5}      | ${6}                | ${61} | ${true}               | ${3374}    | ${12821.2}
-      ${20}     | ${0}                | ${61} | ${true}               | ${3374}    | ${26992}
-      ${23}     | ${0}                | ${61} | ${true}               | ${3374}    | ${31040.8}
-      ${20}     | ${10}               | ${61} | ${true}               | ${3374}    | ${37114}
-      ${35}     | ${0}                | ${61} | ${true}               | ${3374}    | ${47236}
-      ${5}      | ${0}                | ${66} | ${true}               | ${3374}    | ${0}
-      ${3.67}   | ${0}                | ${61} | ${false}              | ${3374}    | ${4953.03}
-      ${10}     | ${0}                | ${61} | ${false}              | ${3374}    | ${13496}
-      ${20}     | ${0}                | ${61} | ${false}              | ${3374}    | ${26992}
-      ${23}     | ${0}                | ${61} | ${false}              | ${3374}    | ${31040.8}
-      ${35}     | ${0}                | ${61} | ${false}              | ${3374}    | ${47236}
-      ${12}     | ${10}               | ${64} | ${true}               | ${3000}    | ${13680}
+      seniorityRight | seniority | seniorityEmployeTAM | age   | haveRightToRetirement | salaireRef | expectedCompensation
+      ${2.08}        | ${2.08}   | ${0}                | ${45} | ${false}              | ${3374}    | ${0}
+      ${2.99}        | ${2.99}   | ${0}                | ${45} | ${false}              | ${3374}    | ${0}
+      ${2}           | ${3}      | ${0}                | ${45} | ${false}              | ${3374}    | ${0}
+      ${3}           | ${3}      | ${0}                | ${45} | ${false}              | ${3374}    | ${4048.8}
+      ${3.67}        | ${3.67}   | ${0}                | ${45} | ${false}              | ${3374}    | ${4953.03}
+      ${10}          | ${10}     | ${0}                | ${45} | ${false}              | ${3374}    | ${13496.0}
+      ${11}          | ${5}      | ${6}                | ${45} | ${false}              | ${3374}    | ${12821.2}
+      ${20}          | ${20}     | ${0}                | ${45} | ${false}              | ${3374}    | ${26992.0}
+      ${23}          | ${23}     | ${0}                | ${45} | ${false}              | ${3374}    | ${31040.8}
+      ${30}          | ${20}     | ${10}               | ${45} | ${false}              | ${3374}    | ${37114.0}
+      ${35}          | ${35}     | ${0}                | ${45} | ${false}              | ${3374}    | ${47236.0}
+      ${2.08}        | ${2.08}   | ${0}                | ${61} | ${true}               | ${3374}    | ${0}
+      ${2.08}        | ${4}      | ${0}                | ${61} | ${true}               | ${3374}    | ${0}
+      ${3.67}        | ${3.67}   | ${0}                | ${61} | ${true}               | ${3374}    | ${3962.43}
+      ${10}          | ${10}     | ${0}                | ${61} | ${true}               | ${3374}    | ${10796.8}
+      ${11}          | ${5}      | ${6}                | ${61} | ${true}               | ${3374}    | ${12821.2}
+      ${20}          | ${20}     | ${0}                | ${61} | ${true}               | ${3374}    | ${26992}
+      ${23}          | ${23}     | ${0}                | ${61} | ${true}               | ${3374}    | ${31040.8}
+      ${30}          | ${20}     | ${10}               | ${61} | ${true}               | ${3374}    | ${37114}
+      ${35}          | ${35}     | ${0}                | ${61} | ${true}               | ${3374}    | ${47236}
+      ${5}           | ${5}      | ${0}                | ${66} | ${true}               | ${3374}    | ${0}
+      ${2}           | ${3.67}   | ${0}                | ${61} | ${false}              | ${3374}    | ${0}
+      ${3.67}        | ${3.67}   | ${0}                | ${61} | ${false}              | ${3374}    | ${4953.03}
+      ${10}          | ${10}     | ${0}                | ${61} | ${false}              | ${3374}    | ${13496}
+      ${20}          | ${20}     | ${0}                | ${61} | ${false}              | ${3374}    | ${26992}
+      ${23}          | ${23}     | ${0}                | ${61} | ${false}              | ${3374}    | ${31040.8}
+      ${35}          | ${35}     | ${0}                | ${61} | ${false}              | ${3374}    | ${47236}
+      ${22}          | ${12}     | ${10}               | ${64} | ${true}               | ${3000}    | ${13680}
     `(
       "Avec une ancienneté $seniority ans (plus $seniorityEmployeTAM en tant que non cadre), droit de retraite: $haveRightToRetirement, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
       ({
+        seniorityRight,
         salaireRef,
         expectedCompensation,
         age,
@@ -59,7 +63,7 @@ describe("CC 16", () => {
             }`,
             "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniorityRight,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
             ...dateCadre,
           })
@@ -109,7 +113,7 @@ describe("CC 16", () => {
             }`,
             "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
           })
           .evaluate(
@@ -154,7 +158,7 @@ describe("CC 16", () => {
             }`,
             "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
           })
           .evaluate(
@@ -192,7 +196,7 @@ describe("CC 16", () => {
               "'Oui'",
             "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
           })
           .evaluate(
@@ -226,7 +230,7 @@ describe("CC 16", () => {
               "'Non'",
             "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
           })
           .evaluate(
@@ -273,7 +277,7 @@ describe("CC 16", () => {
               "'Non'",
             "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
           })
           .evaluate(

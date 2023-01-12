@@ -11,6 +11,8 @@ type Props = {
   isLicenciementFauteGrave: boolean;
   agreementName?: string;
   isLicenciementInaptitude: boolean;
+  isArretTravail: boolean;
+  dateArretTravail?: string;
   agreementInformations?: AgreementInformation[];
   agreementRefSalaryInfo: React.ReactNode;
   dateEntree: string;
@@ -57,6 +59,16 @@ export default function FilledElements(props: Props) {
                     doublée
                   </i>
                 </>
+              )}
+              <li>
+                Arrêt de travail au moment du licenciement&nbsp;:&nbsp;
+                {props.isArretTravail ? "Oui" : "Non"}
+              </li>
+              {props.dateArretTravail && (
+                <li>
+                  Date de début de l&apos;arrêt de travail &nbsp;:&nbsp;
+                  {props.dateArretTravail}
+                </li>
               )}
             </li>
           </ul>

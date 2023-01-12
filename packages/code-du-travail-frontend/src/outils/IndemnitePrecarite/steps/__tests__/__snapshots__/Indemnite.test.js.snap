@@ -361,7 +361,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
             href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005851689&cidTexte=KALITEXT000005679946&dateTexte=20190918"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’chapitre iii : contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès"
           >
             Chapitre III : Contrat d'intervention à durée déterminée de l'accord du 5 juillet 2001 relatif au statut des salariés du secteur d'activité d'organisation des foires, salons et congrès
           </a>
@@ -372,7 +371,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-8 du code du travail"
           >
             Article L1243-8 du code du travail
           </a>
@@ -383,7 +381,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-9 du code du travail"
           >
             Article L1243-9 du code du travail
           </a>
@@ -807,7 +804,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-8 du code du travail"
           >
             Article L1243-8 du code du travail
           </a>
@@ -818,7 +814,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-9 du code du travail"
           >
             Article L1243-9 du code du travail
           </a>
@@ -1245,7 +1240,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
             href="https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=B2ED091AF8ACCF6952BB5EA67D9DE5AE.tplgfr27s_1?idArticle=KALIARTI000005787408&cidTexte=KALITEXT000029787837&dateTexte=29990101&categorieLien=id"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article 16.03 de la convention collective"
           >
             Article 16.03 de la convention collective
           </a>
@@ -1256,7 +1250,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-8 du code du travail"
           >
             Article L1243-8 du code du travail
           </a>
@@ -1267,7 +1260,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-9 du code du travail"
           >
             Article L1243-9 du code du travail
           </a>
@@ -1694,7 +1686,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-8 du code du travail"
           >
             Article L1243-8 du code du travail
           </a>
@@ -1705,7 +1696,6 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-9 du code du travail"
           >
             Article L1243-9 du code du travail
           </a>
@@ -2132,7 +2122,6 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901219&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-8 du code du travail"
           >
             Article L1243-8 du code du travail
           </a>
@@ -2143,7 +2132,6 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
             href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=0FA35871C82B78139407AE9BD9480D9B.tplgfr31s_2?idArticle=LEGIARTI000006901220&cidTexte=LEGITEXT000006072050&dateTexte=20080501&categorieLien=id&oldAction=&nbResultRech="
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article l1243-9 du code du travail"
           >
             Article L1243-9 du code du travail
           </a>

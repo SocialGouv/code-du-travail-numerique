@@ -73,6 +73,7 @@ const createAncienneteStore: StoreSlice<
     onValidateStepAnciennete: () => {
       const { isValid, errorState } = customSeniorityValidator(
         get().ancienneteData.input,
+        get().contratTravailData.input,
         get().informationsData.input,
         get().agreementData.input.agreement
       );
@@ -108,12 +109,14 @@ const applyGenericValidation = (
   get: StoreApi<
     AncienneteStoreSlice &
       CommonAgreementStoreSlice &
-      CommonInformationsStoreSlice
+      CommonInformationsStoreSlice &
+      ContratTravailStoreSlice
   >["getState"],
   set: StoreApi<
     AncienneteStoreSlice &
       CommonAgreementStoreSlice &
-      CommonInformationsStoreSlice
+      CommonInformationsStoreSlice &
+      ContratTravailStoreSlice
   >["setState"],
   paramName: keyof AncienneteStoreInput,
   value: any
@@ -125,6 +128,7 @@ const applyGenericValidation = (
 
     const { isValid, errorState } = customSeniorityValidator(
       nextState.ancienneteData.input,
+      nextState.contratTravailData.input,
       get().informationsData.input,
       get().agreementData.input.agreement
     );
