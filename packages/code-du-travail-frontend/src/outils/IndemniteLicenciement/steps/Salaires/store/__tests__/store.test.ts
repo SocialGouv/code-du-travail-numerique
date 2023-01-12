@@ -1,5 +1,6 @@
 import { loadPublicodesRules } from "../../../../../api";
 import { createIndemniteLicenciementStore } from "../../../../store";
+import { ValidationResponse } from "../../../../../Components/SimulatorLayout";
 
 describe("Store", () => {
   let store: ReturnType<typeof createIndemniteLicenciementStore>;
@@ -65,8 +66,8 @@ describe("Store", () => {
   });
 
   it("should render an error if no fields are completed", () => {
-    const isValid = store.getState().salairesFunction.onValidateStepSalaires();
-    expect(isValid).toBe(false);
+    const isValid = store.getState().salairesFunction.onValidateStep();
+    expect(isValid).toBe(ValidationResponse.NotValid);
     expect(store.getState().salairesData.error.errorHasTempsPartiel).toBe(
       "Vous devez répondre à cette question"
     );
@@ -74,22 +75,22 @@ describe("Store", () => {
 
   it("should render an error if partial time has been completed", () => {
     store.getState().salairesFunction.onChangeHasTempsPartiel("non");
-    const isValid = store.getState().salairesFunction.onValidateStepSalaires();
-    expect(isValid).toBe(false);
+    const isValid = store.getState().salairesFunction.onValidateStep();
+    expect(isValid).toBe(ValidationResponse.NotValid);
   });
 
   it("should render an error if partial time has been set to yes", () => {
     store.getState().salairesFunction.onChangeHasTempsPartiel("oui");
-    const isValid = store.getState().salairesFunction.onValidateStepSalaires();
-    expect(isValid).toBe(false);
+    const isValid = store.getState().salairesFunction.onValidateStep();
+    expect(isValid).toBe(ValidationResponse.NotValid);
     expect(store.getState().salairesData.error.errorTempsPartiel).toBe(true);
   });
 
   it("should render an error if brut salary is not completed", () => {
     store.getState().salairesFunction.onChangeHasTempsPartiel("non");
     store.getState().salairesFunction.onChangeHasSameSalary("oui");
-    const isValid = store.getState().salairesFunction.onValidateStepSalaires();
-    expect(isValid).toBe(false);
+    const isValid = store.getState().salairesFunction.onValidateStep();
+    expect(isValid).toBe(ValidationResponse.NotValid);
     expect(store.getState().salairesData.error.errorSalary).toBe(
       "Vous devez répondre à cette question"
     );
@@ -98,8 +99,8 @@ describe("Store", () => {
   it("should render an error if salaries are not completed if it is not the same salary", () => {
     store.getState().salairesFunction.onChangeHasTempsPartiel("non");
     store.getState().salairesFunction.onChangeHasSameSalary("non");
-    const isValid = store.getState().salairesFunction.onValidateStepSalaires();
-    expect(isValid).toBe(false);
+    const isValid = store.getState().salairesFunction.onValidateStep();
+    expect(isValid).toBe(ValidationResponse.NotValid);
     expect(store.getState().salairesData.error.errorSalaryPeriods).toBe(
       "Vous devez compléter l'ensemble des champs"
     );
@@ -109,8 +110,8 @@ describe("Store", () => {
     store.getState().salairesFunction.onChangeHasTempsPartiel("non");
     store.getState().salairesFunction.onChangeHasSameSalary("oui");
     store.getState().salairesFunction.onChangeSalary("2000");
-    const isValid = store.getState().salairesFunction.onValidateStepSalaires();
-    expect(isValid).toBe(true);
+    const isValid = store.getState().salairesFunction.onValidateStep();
+    expect(isValid).toBe(ValidationResponse.Valid);
     expect(store.getState().salairesData.error.errorHasTempsPartiel).toBe(
       undefined
     );
@@ -134,8 +135,8 @@ describe("Store", () => {
         value: 2000,
       },
     ]);
-    const isValid = store.getState().salairesFunction.onValidateStepSalaires();
-    expect(isValid).toBe(true);
+    const isValid = store.getState().salairesFunction.onValidateStep();
+    expect(isValid).toBe(ValidationResponse.Valid);
     expect(store.getState().salairesData.error.errorHasTempsPartiel).toBe(
       undefined
     );

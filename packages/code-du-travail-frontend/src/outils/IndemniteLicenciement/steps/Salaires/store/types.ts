@@ -1,6 +1,7 @@
 import { StepData } from "../../../store";
 import { OuiNon } from "../../../common/types";
 import { SalaryPeriods } from "@socialgouv/modeles-social";
+import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 
 export type SalairesStoreInput = {
   hasTempsPartiel?: OuiNon;
@@ -28,7 +29,7 @@ export type SalairesStoreFn = {
   initFieldSalaries: () => void;
   onChangeHasTempsPartiel: (value: OuiNon) => void;
   onSalariesChange: (value: SalaryPeriods[]) => void;
-  onValidateStepSalaires: () => boolean;
+  onValidateStep: () => ValidationResponse;
   onChangeHasSameSalary: (value: OuiNon) => void;
   onChangeSalary: (value: string) => void;
 };

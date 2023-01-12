@@ -160,7 +160,7 @@ describe("Informations store", () => {
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle",
         "'Non-cadres'"
       );
-    store.getState().informationsFunction.onValidateStep();
+    store.getState().informationsFunction.onValidateWithEligibility();
     expect(store.getState().informationsData.isStepValid).toBe(true);
   });
 
@@ -178,7 +178,7 @@ describe("Informations store", () => {
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle",
         "'Cadres'"
       );
-    store.getState().informationsFunction.onValidateStep();
+    store.getState().informationsFunction.onValidateWithEligibility();
     expect(store.getState().informationsData.isStepValid).toBe(false);
   });
 });

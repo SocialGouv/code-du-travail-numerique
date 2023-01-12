@@ -1,8 +1,9 @@
 import { CalculateurIndemnite, loadPublicodesRules } from "../..";
 import { ui } from "./ui";
 
-import { render, fireEvent, waitFor } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import expect from "expect";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
@@ -19,8 +20,8 @@ Storage.prototype.getItem = jest.fn(
 );
 
 describe(`Tests des erreurs d'éligibilité`, () => {
-  beforeEach(async () => {
-    await render(
+  beforeEach(() => {
+    render(
       <CalculateurIndemnite
         icon={""}
         title={""}
@@ -31,12 +32,12 @@ describe(`Tests des erreurs d'éligibilité`, () => {
     fireEvent.click(ui.introduction.startButton.get());
   });
 
-  test("Vérifier l'affichage de l'erreur légal cdd", async () => {
+  test("Vérifier l'affichage de l'erreur légal cdd", () => {
     fireEvent.click(ui.contract.type.cdi.get());
     fireEvent.click(ui.next.get());
     fireEvent.click(ui.contract.type.cdd.get());
     fireEvent.click(ui.next.get());
-    expect(ui.result.legalError.cdd.find()).toBeInTheDocument();
+    expect(ui.result.legalError.cdd.query()).toBeInTheDocument();
     expect(
       ui.result.infoWarning.eligibleInfoWarningblock.query()
     ).not.toBeInTheDocument();
@@ -45,7 +46,7 @@ describe(`Tests des erreurs d'éligibilité`, () => {
     ).not.toBeInTheDocument();
   });
 
-  test("Vérifier l'affichage de l'erreur légal faute grave", async () => {
+  test("Vérifier l'affichage de l'erreur légal faute grave", () => {
     fireEvent.click(ui.contract.type.cdi.get());
     fireEvent.click(ui.contract.fauteGrave.non.get());
     fireEvent.click(ui.next.get());
@@ -59,7 +60,7 @@ describe(`Tests des erreurs d'éligibilité`, () => {
     expect(ui.result.infoWarning.message.mayBeCC.query()).toBeInTheDocument();
   });
 
-  test("Vérifier l'affichage de l'erreur ancienneté < 8 mois", async () => {
+  test("Vérifier l'affichage de l'erreur ancienneté < 8 mois", () => {
     fireEvent.click(ui.contract.type.cdi.get());
     fireEvent.click(ui.contract.fauteGrave.non.get());
     fireEvent.click(ui.contract.inaptitude.non.get());

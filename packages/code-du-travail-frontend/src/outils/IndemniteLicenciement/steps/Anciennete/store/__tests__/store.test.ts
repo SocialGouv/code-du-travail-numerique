@@ -1,6 +1,7 @@
 import { loadPublicodesRules } from "../../../../../api";
 import { createIndemniteLicenciementStore } from "../../../../store";
 import { MotifKeys } from "@socialgouv/modeles-social";
+import { ValidationResponse } from "../../../../../Components/SimulatorLayout";
 
 describe("Ancienneté store", () => {
   let store = createIndemniteLicenciementStore(
@@ -90,8 +91,8 @@ describe("Ancienneté store", () => {
     store.getState().ancienneteFunction.onChangeDateEntree("05/05/1821");
     const isValid = store
       .getState()
-      .ancienneteFunction.onValidateStepAnciennete();
-    expect(isValid).toBe(false);
+      .ancienneteFunction.onValidateWithEligibility();
+    expect(isValid).toBe(ValidationResponse.NotValid);
     expect(store.getState().ancienneteData.error.errorDateEntree).toBe(
       "La date d'entrée est invalide"
     );
@@ -102,8 +103,8 @@ describe("Ancienneté store", () => {
     store.getState().ancienneteFunction.onChangeDateSortie("05/05/2021");
     const isValid = store
       .getState()
-      .ancienneteFunction.onValidateStepAnciennete();
-    expect(isValid).toBe(false);
+      .ancienneteFunction.onValidateWithEligibility();
+    expect(isValid).toBe(ValidationResponse.NotValid);
     const hasMessageError = store
       .getState()
       .ancienneteData.error.errorDateSortie!.includes(
@@ -116,8 +117,8 @@ describe("Ancienneté store", () => {
     store.getState().ancienneteFunction.onChangeDateNotification("05/05/2018");
     const isValid = store
       .getState()
-      .ancienneteFunction.onValidateStepAnciennete();
-    expect(isValid).toBe(false);
+      .ancienneteFunction.onValidateWithEligibility();
+    expect(isValid).toBe(ValidationResponse.NotValid);
     expect(store.getState().ancienneteData.error.errorDateNotification).toBe(
       "La date de notification doit se situer dans les 18 derniers mois"
     );
@@ -128,8 +129,8 @@ describe("Ancienneté store", () => {
     store.getState().ancienneteFunction.onChangeDateSortie("05/05/2020");
     const isValid = store
       .getState()
-      .ancienneteFunction.onValidateStepAnciennete();
-    expect(isValid).toBe(false);
+      .ancienneteFunction.onValidateWithEligibility();
+    expect(isValid).toBe(ValidationResponse.NotValid);
     expect(store.getState().ancienneteData.error.errorDateNotification).toBe(
       "La date de notification doit se situer avant la date de sortie"
     );
@@ -140,8 +141,8 @@ describe("Ancienneté store", () => {
     store.getState().ancienneteFunction.onChangeDateEntree("05/05/2021");
     const isValid = store
       .getState()
-      .ancienneteFunction.onValidateStepAnciennete();
-    expect(isValid).toBe(false);
+      .ancienneteFunction.onValidateWithEligibility();
+    expect(isValid).toBe(ValidationResponse.NotValid);
     expect(store.getState().ancienneteData.error.errorDateNotification).toBe(
       "La date de notification doit se situer après la date d’entrée"
     );
@@ -151,8 +152,8 @@ describe("Ancienneté store", () => {
     store.getState().ancienneteFunction.onChangeHasAbsenceProlonge("oui");
     const isValid = store
       .getState()
-      .ancienneteFunction.onValidateStepAnciennete();
-    expect(isValid).toBe(false);
+      .ancienneteFunction.onValidateWithEligibility();
+    expect(isValid).toBe(ValidationResponse.NotValid);
     expect(
       store.getState().ancienneteData.error.errorAbsencePeriods?.global
     ).toBe("Vous devez renseigner tous les champs");
@@ -175,8 +176,8 @@ describe("Ancienneté store", () => {
     ]);
     const isValid = store
       .getState()
-      .ancienneteFunction.onValidateStepAnciennete();
-    expect(isValid).toBe(true);
+      .ancienneteFunction.onValidateWithEligibility();
+    expect(isValid).toBe(ValidationResponse.Valid);
     expect(store.getState().ancienneteData.error.errorAbsencePeriods).toBe(
       undefined
     );
