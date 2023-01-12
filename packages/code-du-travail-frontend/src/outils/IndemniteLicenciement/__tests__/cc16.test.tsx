@@ -31,7 +31,7 @@ describe("Indemnité licenciement - CC 16", () => {
           icon={""}
           title={""}
           displayTitle={""}
-          publicodesRules={loadPublicodesRules("indemnite-licenciement")}
+          slug={"indemnite-licenciement"}
         />
       );
       userAction = new UserAction();

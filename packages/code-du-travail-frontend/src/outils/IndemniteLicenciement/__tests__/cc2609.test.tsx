@@ -29,7 +29,7 @@ describe("Indemnité licenciement - CC 2609", () => {
           icon={""}
           title={""}
           displayTitle={""}
-          publicodesRules={loadPublicodesRules("indemnite-licenciement")}
+          slug={"indemnite-licenciement"}
         />
       );
       fireEvent.click(ui.introduction.startButton.get());

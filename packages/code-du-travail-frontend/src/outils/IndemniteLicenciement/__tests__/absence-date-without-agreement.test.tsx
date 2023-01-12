@@ -20,7 +20,7 @@ describe("Indemnité licenciement - Validation du comportement avec l'absence de
           icon={""}
           title={""}
           displayTitle={""}
-          publicodesRules={loadPublicodesRules("indemnite-licenciement")}
+          slug={"indemnite-licenciement"}
         />
       );
       userAction = new UserAction();

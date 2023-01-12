@@ -31,7 +31,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
           icon={""}
           title={""}
           displayTitle={""}
-          publicodesRules={loadPublicodesRules("indemnite-licenciement")}
+          slug={"indemnite-licenciement"}
         />
       );
       userAction = new UserAction();
@@ -182,7 +182,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
           icon={""}
           title={""}
           displayTitle={""}
-          publicodesRules={loadPublicodesRules("indemnite-licenciement")}
+          slug={"indemnite-licenciement"}
         />
       );
       userAction = new UserAction();

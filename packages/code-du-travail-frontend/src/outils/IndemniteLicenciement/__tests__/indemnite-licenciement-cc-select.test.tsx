@@ -19,7 +19,7 @@ test(`
       icon={""}
       title={""}
       displayTitle={""}
-      publicodesRules={loadPublicodesRules("indemnite-licenciement")}
+      slug={"indemnite-licenciement"}
     />
   );
   fireEvent.click(ui.introduction.startButton.get());

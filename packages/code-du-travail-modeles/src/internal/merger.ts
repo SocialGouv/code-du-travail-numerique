@@ -11,11 +11,13 @@ import {
 export const publicodesDir = path.resolve(__dirname, "../../src/modeles");
 
 export function mergePreavisRetraiteModels(): any {
-  return mergeModelsWithKeys(preavisRetraiteFilenameFilter);
+  return mergeModels(preavisRetraiteFilenameFilter);
 }
 
-export function mergeIndemniteLicenciementModels(): any {
-  return mergeModelsWithKeys(indemniteLicenciementFilenameFilter);
+export function mergeIndemniteLicenciementModels(withKeys?: boolean): any {
+  return withKeys
+    ? mergeModelsWithKeys(indemniteLicenciementFilenameFilter)
+    : mergeModels(indemniteLicenciementFilenameFilter);
 }
 
 export function mergeCommonModels(): any {

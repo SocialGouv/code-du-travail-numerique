@@ -17,7 +17,7 @@ test(`
       icon={""}
       title={""}
       displayTitle={""}
-      publicodesRules={loadPublicodesRules("indemnite-licenciement")}
+      slug={"indemnite-licenciement"}
     />
   );
 

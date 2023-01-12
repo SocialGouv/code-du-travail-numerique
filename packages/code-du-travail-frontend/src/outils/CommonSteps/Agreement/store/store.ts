@@ -36,7 +36,15 @@ const createCommonAgreementStore: StoreSlice<
           if (parsedData.num !== get().agreementData.input.agreement?.num) {
             applyGenericValidation(get, set, "agreement", parsedData);
             applyGenericValidation(get, set, "route", Route.agreement);
-            get().informationsFunction.generatePublicodesQuestions();
+            const idcc = parsedData?.num?.toString();
+            if (idcc && slug) {
+              set(
+                produce((state: CommonAgreementStoreSlice) => {
+                  state.agreementData.publicodes = loadPublicodes(slug, idcc);
+                })
+              );
+              get().informationsFunction.generatePublicodesQuestions();
+            }
           }
         }
       } catch (e) {

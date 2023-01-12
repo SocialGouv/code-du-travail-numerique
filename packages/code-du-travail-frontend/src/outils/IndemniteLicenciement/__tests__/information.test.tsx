@@ -65,7 +65,7 @@ describe("Indemnité licenciement - Validation de la page information", () => {
           icon={""}
           title={""}
           displayTitle={""}
-          publicodesRules={loadPublicodesRules("indemnite-licenciement")}
+          slug={"indemnite-licenciement"}
         />
       );
       userAction = new UserAction();

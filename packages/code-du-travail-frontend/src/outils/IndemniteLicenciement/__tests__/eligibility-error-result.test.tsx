@@ -13,7 +13,7 @@ describe(`Tests des erreurs d'éligibilité`, () => {
         icon={""}
         title={""}
         displayTitle={""}
-        publicodesRules={loadPublicodesRules("indemnite-licenciement")}
+        slug={"indemnite-licenciement"}
       />
     );
     fireEvent.click(ui.introduction.startButton.get());

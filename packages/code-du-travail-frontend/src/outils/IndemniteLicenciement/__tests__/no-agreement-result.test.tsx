@@ -29,7 +29,7 @@ describe("Indemnité licenciement", () => {
           icon={""}
           title={""}
           displayTitle={""}
-          publicodesRules={loadPublicodesRules("indemnite-licenciement")}
+          slug={"indemnite-licenciement"}
         />
       );
       userEvent.click(ui.introduction.startButton.get());
