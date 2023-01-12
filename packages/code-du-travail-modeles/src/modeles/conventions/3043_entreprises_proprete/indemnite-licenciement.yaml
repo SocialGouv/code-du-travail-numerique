@@ -20,7 +20,7 @@ contrat salarié . convention collective . entreprises de propreté . indemnité
       - 5 an
 
 contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . entre 5 ans et 10 ans:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 6
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 6 an
   somme:
     - le minimum de:
         - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
@@ -29,7 +29,7 @@ contrat salarié . convention collective . entreprises de propreté . indemnité
   plancher: 0 an
 
 contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . au dela de dix ans:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 10
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 10 an
   somme:
     - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
     - (- 10 an)
@@ -71,8 +71,8 @@ contrat salarié . convention collective . entreprises de propreté . indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 2 ans
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année < 6 ans
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année < 6 an
   somme:
     - facteur moins de 5 ans
     - facteur jusqu'à 5 ans
@@ -94,8 +94,8 @@ contrat salarié . convention collective . entreprises de propreté . indemnité
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 6 ans
-      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année <= 10 ans
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 6 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année <= 10 an
   somme:
     - facteur moins de 5 ans
     - facteur jusqu'à 5 ans
@@ -115,7 +115,7 @@ contrat salarié . convention collective . entreprises de propreté . indemnité
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . résultat conventionnel 3:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 10 ans
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 10 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - facteur moins de 5 ans
