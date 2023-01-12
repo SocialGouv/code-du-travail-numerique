@@ -5,7 +5,7 @@ import {
   MatomoActionEvent,
   MatomoAgreementEvent,
 } from "../../../../lib";
-import { matopush } from "../../../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 type Props = {
   agreementUrl?: string;
