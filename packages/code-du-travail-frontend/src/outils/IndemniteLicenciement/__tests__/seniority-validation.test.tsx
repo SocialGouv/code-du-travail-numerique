@@ -1,10 +1,7 @@
 import { render, RenderResult } from "@testing-library/react";
 import { UserAction } from "../../../common";
 import React from "react";
-import {
-  CalculateurIndemnite,
-  loadPublicodesRules,
-} from "../../../../src/outils";
+import { CalculateurIndemnite } from "../../../../src/outils";
 import { ui } from "./ui";
 
 jest.spyOn(Storage.prototype, "setItem");

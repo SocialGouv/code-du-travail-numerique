@@ -1,9 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
-import {
-  CalculateurIndemnite,
-  loadPublicodesRules,
-} from "../../../../src/outils";
+import { CalculateurIndemnite } from "../../../../src/outils";
 import { ui } from "./ui";
 import userEvent from "@testing-library/user-event";
 
