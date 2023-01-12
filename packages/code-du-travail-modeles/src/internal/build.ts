@@ -22,8 +22,6 @@ function writeJsonModel({
   outputName: string;
 }) {
   const modeles = merger();
-  console.log("outputName", outputName);
-  console.log("outDir", outDir);
   fs.mkdirSync(`${outDir}/modeles`, { recursive: true });
   fs.writeFileSync(
     path.resolve(outDir, `modeles/${outputName}.json`),

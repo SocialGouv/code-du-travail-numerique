@@ -23,8 +23,6 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   };
 
   protected constructor(rules: any, targetRule: string) {
-    console.log("rules", rules);
-    console.log("targetRule", targetRule);
     this.engine = new Engine(rules);
     this.targetRule = targetRule;
   }
