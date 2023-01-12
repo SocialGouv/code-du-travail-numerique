@@ -74,7 +74,7 @@ export class Seniority1090
         .filter((period) => Boolean(period.durationInMonth))
         .find(
           (period) =>
-            period.motif.key === MotifKeys.congesParentalEducationTotal
+            period.motif.key === MotifKeys.congesParentalEducationTempsPlein
         )
         ? {
             extraInfos: {
@@ -108,7 +108,7 @@ const MOTIFS_1090: Motif[] = [
     value: 0,
   },
   {
-    key: MotifKeys.congesParentalEducationTotal,
+    key: MotifKeys.congesParentalEducationTempsPlein,
     label: "Congé parental d'éducation à temps plein",
     value: 0.5,
   },
