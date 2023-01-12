@@ -30,14 +30,14 @@ const Information = ({
   } = { _source: {}, slug: "" },
 }: EditorialContentDataWrapper) => {
   return (
-    <Layout>
+    <>
       <Metas title={title} description={metaDescription} />
       <Answer
-        breadcrumbs={breadcrumbs}
+        breadcrumbs={[]}
         date={date}
         dateLabel="Mise à jour le"
         intro={intro}
-        relatedItems={relatedItems}
+        relatedItems={[]}
         title={title}
       >
         {dismissalProcess && (
@@ -72,7 +72,7 @@ const Information = ({
             )
         )}
       </Answer>
-    </Layout>
+    </>
   );
 };
 

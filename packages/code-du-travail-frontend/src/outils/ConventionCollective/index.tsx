@@ -86,14 +86,11 @@ function AgreementSearchTool({
     setSearchParams(params);
 
     router.push(
-      `/${SOURCES.TOOLS}/convention-collective#${ScreenType.agreementSelection}`
+      `/widgets/convention-collective#${ScreenType.agreementSelection}`
     );
   }
 
   useEffect(() => {
-    router.replace(`/${SOURCES.TOOLS}/convention-collective`, undefined, {
-      shallow: true,
-    });
     router.events.on("hashChangeStart", handleHashNavigation);
     return () => {
       router.events.off("hashChangeStart", handleHashNavigation);

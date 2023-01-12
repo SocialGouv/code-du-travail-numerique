@@ -5,6 +5,7 @@ import React from "react";
 import styled from "styled-components";
 
 import {
+  AgreementSearch,
   DismissalProcess,
   DureePreavisLicenciement,
   DureePreavisRetraite,
@@ -16,6 +17,7 @@ const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
   "preavis-retraite": DureePreavisRetraite,
   "procedure-licenciement": DismissalProcess,
+  "convention-collective": AgreementSearch,
 };
 
 interface Props {

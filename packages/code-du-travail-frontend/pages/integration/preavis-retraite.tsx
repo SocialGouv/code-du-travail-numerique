@@ -45,7 +45,6 @@ const PreavisRetraitePage = (): JSX.Element => (
             style={{ border: "none" }}
           />
           <p>Comment intégrer ce module à votre site ?</p>
-
           <p>
             Avec l’iframe, il suffit d’ajouter le code suivant à l’endroit où
             vous souhaitez voir apparaître le module&nbsp;:
@@ -60,7 +59,6 @@ const PreavisRetraitePage = (): JSX.Element => (
 ></iframe>
 `}
           </CodeSnippet>
-
           <p>
             En cas de difficulté, nous vous invitons à nous contacter à
             l’adresse suivante&nbsp;:{" "}

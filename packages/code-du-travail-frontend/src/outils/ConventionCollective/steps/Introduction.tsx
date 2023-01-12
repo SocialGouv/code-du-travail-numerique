@@ -33,7 +33,7 @@ const IntroductionStep = ({ onUserAction }: Props): JSX.Element => {
       </AlertWithIcon>
       <Flex>
         <Link
-          href={`/${SOURCES.TOOLS}/convention-collective#${ScreenType.agreement}`}
+          href={`/widgets/convention-collective#${ScreenType.agreement}`}
           passHref
         >
           <Tile onClick={() => onUserAction(UserAction.SelectAgreementRoute)}>
@@ -49,7 +49,7 @@ const IntroductionStep = ({ onUserAction }: Props): JSX.Element => {
           </Tile>
         </Link>
         <Link
-          href={`/${SOURCES.TOOLS}/convention-collective#${ScreenType.enterprise}`}
+          href={`/widgets/convention-collective#${ScreenType.enterprise}`}
           passHref
         >
           <Tile onClick={() => onUserAction(UserAction.SelectEnterpriseRoute)}>
