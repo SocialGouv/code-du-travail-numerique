@@ -4,7 +4,7 @@ describe("Formule indemnité licenciement - CC 1518", () => {
   test.each`
     seniority | expectedFormula                            | expectedExplanations
     ${7 / 12} | ${""}                                      | ${[]}
-    ${8 / 12} | ${""}                                      | ${[]}
+    ${8 / 12} | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (≈ 0.67 an : valeur arrondie)", "Sref : Salaire de référence (1000 €)"]}
     ${9 / 12} | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (0.75 an)", "Sref : Salaire de référence (1000 €)"]}
     ${7}      | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (7 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${10}     | ${"1/4 * Sref * A"}                        | ${["A : Ancienneté totale (10 ans)", "Sref : Salaire de référence (1000 €)"]}
