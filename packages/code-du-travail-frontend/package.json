@@ -33,7 +33,7 @@
     "@socialgouv/cdtn-sources": "^4.88.1",
     "@socialgouv/cdtn-ui": "^4.88.1",
     "@socialgouv/fiches-travail-data": "^4.241.0",
-    "@socialgouv/matomo-next": "^1.5.0",
+    "@socialgouv/matomo-next": "^1.6.0",
     "@socialgouv/modeles-social": "^4.88.1",
     "@socialgouv/reference-article": "^1.0.1",
     "@ungap/url-search-params": "^0.2.2",

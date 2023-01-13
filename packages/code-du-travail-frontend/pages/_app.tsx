@@ -18,7 +18,8 @@ import {
 } from "../src/middleware/redirect";
 import CustomError from "./_error";
 import Custom404 from "./404";
-import { onRouteChangeStart } from "../src/lib";
+import { onInitialization } from "../src/lib";
+import { useRouter } from "next/router";
 
 if (typeof window !== "undefined") {
   import("../src/web-components/tooltip")
@@ -48,11 +49,15 @@ const {
 } = getConfig();
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
   useEffect(() => {
     init({
       siteId: PIWIK_SITE_ID,
       url: PIWIK_URL,
-      onRouteChangeStart,
+      onInitialization: () => {
+        onInitialization("http://localhost:3000" + router.asPath);
+      },
     });
     clientSideRedirectMiddleware();
   }, []);

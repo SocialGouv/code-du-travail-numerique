@@ -1,4 +1,4 @@
-import { onRouteChangeStart } from "../hooks";
+import { onInitialization } from "../hooks";
 import { push } from "@socialgouv/matomo-next";
 
 jest.mock("@socialgouv/matomo-next", () => {
@@ -14,7 +14,7 @@ describe("hooks matomo", () => {
     ${"code.travail.gouv.fr/outils/indemnite-licenciement?src_url=https://www.service-public.fr"}                         | ${"https://www.service-public.fr"}
     ${"code.travail.gouv.fr/outils/indemnite-licenciement?src_url=https://service-public.fr/particuliers/vosdroits/F987"} | ${"https://service-public.fr"}
   `("should do something", ({ path, referrerUrl }) => {
-    onRouteChangeStart(path);
+    onInitialization(path);
     expect(push).toHaveBeenCalledWith(["setReferrerUrl", referrerUrl]);
   });
 });
