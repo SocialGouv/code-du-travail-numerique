@@ -6,7 +6,7 @@ describe("Formule indemnité licenciement - 3043", () => {
     ${0}      | ${""}                                                                 | ${[]}
     ${1}      | ${""}                                                                 | ${[]}
     ${1.99}   | ${""}                                                                 | ${[]}
-    ${2}      | ${""}                                                                 | ${[]}
+    ${2}      | ${"1 / 10 * Sref * A"}                                                | ${["A : Ancienneté totale (2 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${2.1}    | ${"1 / 10 * Sref * A"}                                                | ${["A : Ancienneté totale (2.1 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${5}      | ${"1 / 10 * Sref * A"}                                                | ${["A : Ancienneté totale (5 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${5.91}   | ${"1 / 10 * Sref * A"}                                                | ${["A : Ancienneté totale (5.91 ans)", "Sref : Salaire de référence (1000 €)"]}
