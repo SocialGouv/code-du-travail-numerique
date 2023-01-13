@@ -3,7 +3,6 @@ import { ui } from "./ui";
 
 import { render, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import expect from "expect";
 
 jest.spyOn(Storage.prototype, "setItem");
 Storage.prototype.getItem = jest.fn(
