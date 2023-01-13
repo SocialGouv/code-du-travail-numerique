@@ -18,6 +18,7 @@ import {
 } from "../src/middleware/redirect";
 import CustomError from "./_error";
 import Custom404 from "./404";
+import { onRouteChangeStart } from "../src/lib";
 
 if (typeof window !== "undefined") {
   import("../src/web-components/tooltip")
@@ -48,7 +49,11 @@ const {
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    init({ siteId: PIWIK_SITE_ID, url: PIWIK_URL });
+    init({
+      siteId: PIWIK_SITE_ID,
+      url: PIWIK_URL,
+      onRouteChangeStart,
+    });
     clientSideRedirectMiddleware();
   }, []);
 
