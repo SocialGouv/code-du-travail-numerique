@@ -74,11 +74,11 @@ export class Seniority1090
         .filter((period) => Boolean(period.durationInMonth))
         .find(
           (period) =>
-            period.motif.key === MotifKeys.congesParentalEducationTotal
+            period.motif.key === MotifKeys.congesParentalEducationTempsPlein
         )
         ? {
             extraInfos: {
-              "contrat salarié . convention collective . automobiles . indemnité de licenciement . congé parental d'éducation total":
+              "contrat salarié . convention collective . automobiles . indemnité de licenciement . congé parental d'éducation à temps plein":
                 "oui",
             },
           }
@@ -108,8 +108,8 @@ const MOTIFS_1090: Motif[] = [
     value: 0,
   },
   {
-    key: MotifKeys.congesParentalEducationTotal,
-    label: "Congé parental d'éducation total",
+    key: MotifKeys.congesParentalEducationTempsPlein,
+    label: "Congé parental d'éducation à temps plein",
     value: 0.5,
   },
   { key: MotifKeys.congesSansSolde, label: "Congés sans solde", value: 0 },

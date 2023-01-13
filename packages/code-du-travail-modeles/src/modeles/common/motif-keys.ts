@@ -4,7 +4,7 @@ export enum MotifKeys {
   congesSabbatique = "absenceCongesSabbatique",
   congesCreationEntreprise = "absenceCongesCreationEntreprise",
   congesParentalEducation = "absenceCongesParentalEducation",
-  congesParentalEducationTotal = "absenceCongesParentalEducationTotal",
+  congesParentalEducationTempsPlein = "absenceCongesParentalEducationTotal",
   congesSansSolde = "absenceCongesSansSolde",
   greve = "absenceGreve",
   miseAPied = "absenceMiseAPied",
