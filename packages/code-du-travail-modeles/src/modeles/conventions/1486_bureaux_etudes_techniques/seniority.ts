@@ -43,24 +43,37 @@ export class Seniority1486
     const dEntree = parse(from, "dd/MM/yyyy", new Date());
     const dSortie = addDays(parse(to, "dd/MM/yyyy", new Date()), 1);
 
-    const totalAbsence =
-      absences.reduce((total, item) => {
+    const totalAbsence = this.getTotalAbsences(absences);
+
+    return {
+      value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
+    };
+  }
+
+  private getTotalAbsences(absences: Absence[]) {
+    const totalAbsencePerMotif = absences.reduce<Map<string, number>>(
+      (total, item) => {
         const m = this.getMotifs().find(
           (motif) => motif.key === item.motif.key
         );
-        if (
-          item.durationInMonth === undefined ||
-          !m ||
-          (item.motif.key === MotifKeys.maladieNonPro &&
-            item.durationInMonth < 6)
-        ) {
+        if (!m || !item.durationInMonth) {
           return total;
         }
-        return total + item.durationInMonth * m.value;
-      }, 0) / 12;
-
-    return {
-      value: differenceInMonths(dSortie, dEntree) / 12 - totalAbsence,
-    };
+        total.set(
+          m.key,
+          (total.get(m.key) ?? 0) + (item.durationInMonth ?? 0) * m.value
+        );
+        return total;
+      },
+      new Map()
+    );
+    totalAbsencePerMotif.set(
+      MotifKeys.maladieNonPro,
+      Math.max(0, (totalAbsencePerMotif.get(MotifKeys.maladieNonPro) ?? 0) - 6)
+    );
+    return Array.from(totalAbsencePerMotif.values()).reduce(
+      (sum, value) => sum + value,
+      0
+    );
   }
 }

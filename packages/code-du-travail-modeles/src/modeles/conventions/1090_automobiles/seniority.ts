@@ -41,6 +41,29 @@ export class Seniority1090
   ): SeniorityResult {
     const dEntree = parse(from, "dd/MM/yyyy", new Date());
     const dSortie = addDays(parse(to, "dd/MM/yyyy", new Date()), 1);
+    const totalAbsence = this.getTotalAbsences(absences);
+
+    return Object.assign(
+      absences
+        .filter((period) => Boolean(period.durationInMonth))
+        .find(
+          (period) =>
+            period.motif.key === MotifKeys.congesParentalEducationTempsPlein
+        )
+        ? {
+            extraInfos: {
+              "contrat salarié . convention collective . automobiles . indemnité de licenciement . congé parental d'éducation à temps plein":
+                "oui",
+            },
+          }
+        : {},
+      {
+        value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
+      }
+    );
+  }
+
+  private getTotalAbsences(absences: Absence[]) {
     const totalAbsencePerMotif = absences.reduce<Map<string, number>>(
       (total, item) => {
         const m = this.getMotifs().find(
@@ -65,27 +88,9 @@ export class Seniority1090
       MotifKeys.accidentTrajet,
       Math.max(0, (totalAbsencePerMotif.get(MotifKeys.accidentTrajet) ?? 0) - 6)
     );
-    const totalAbsence = Array.from(totalAbsencePerMotif.values()).reduce(
+    return Array.from(totalAbsencePerMotif.values()).reduce(
       (sum, value) => sum + value,
       0
-    );
-    return Object.assign(
-      absences
-        .filter((period) => Boolean(period.durationInMonth))
-        .find(
-          (period) =>
-            period.motif.key === MotifKeys.congesParentalEducationTempsPlein
-        )
-        ? {
-            extraInfos: {
-              "contrat salarié . convention collective . automobiles . indemnité de licenciement . congé parental d'éducation à temps plein":
-                "oui",
-            },
-          }
-        : {},
-      {
-        value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
-      }
     );
   }
 }
