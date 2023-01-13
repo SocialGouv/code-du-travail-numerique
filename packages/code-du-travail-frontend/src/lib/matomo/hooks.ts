@@ -1,7 +1,6 @@
 import { push } from "@socialgouv/matomo-next";
 
 export const onInitialization = (path: string) => {
-  console.log("init");
   const url = new URL(!path.startsWith("https://") ? "https://" + path : path);
   const srcUrl = url.searchParams.get("src_url");
   const srcUrlBasePath = srcUrl

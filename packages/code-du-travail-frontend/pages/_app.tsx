@@ -21,6 +21,10 @@ import Custom404 from "./404";
 import { onInitialization } from "../src/lib";
 import { useRouter } from "next/router";
 
+const {
+  publicRuntimeConfig: { FRONTEND_HOST },
+} = getConfig();
+
 if (typeof window !== "undefined") {
   import("../src/web-components/tooltip")
     .then((module) => {
@@ -56,7 +60,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       siteId: PIWIK_SITE_ID,
       url: PIWIK_URL,
       onInitialization: () => {
-        onInitialization("http://localhost:3000" + router.asPath);
+        onInitialization(FRONTEND_HOST + router.asPath);
       },
     });
     clientSideRedirectMiddleware();
