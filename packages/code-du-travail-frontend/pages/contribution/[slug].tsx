@@ -7,6 +7,7 @@ import Metas from "../../src/common/Metas";
 import Contribution from "../../src/contributions/Contribution";
 import { Layout } from "../../src/layout/Layout";
 import { Breadcrumb } from "cdtn-types";
+import { handleError } from "../../src/lib/fetch-error";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -84,7 +85,7 @@ function PageContribution(props: Props): JSX.Element {
 export const getServerSideProps = async ({ query }) => {
   const response = await fetchQuestion(query);
   if (!response.ok) {
-    return { notFound: true };
+    return handleError(response);
   }
   const data = await response.json();
 

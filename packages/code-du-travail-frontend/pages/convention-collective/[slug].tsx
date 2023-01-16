@@ -10,6 +10,7 @@ import Answer from "../../src/common/Answer";
 import Metas from "../../src/common/Metas";
 import Convention from "../../src/conventions/Convention";
 import { Layout } from "../../src/layout/Layout";
+import { handleError } from "../../src/lib/fetch-error";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -85,9 +86,8 @@ function ConventionCollective(props: Props): JSX.Element {
 
 export const getServerSideProps = async ({ query }) => {
   const responseContainer = await fetch(`${API_URL}/conventions/${query.slug}`);
-  console.log(responseContainer);
   if (!responseContainer.ok) {
-    return { notFound: true };
+    return handleError(responseContainer);
   }
   const convention = await responseContainer.json();
   return { props: { convention } };

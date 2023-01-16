@@ -16,6 +16,7 @@ import { A11yLink } from "../../src/common/A11yLink";
 import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
+import { handleError } from "../../src/lib/fetch-error";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -83,7 +84,7 @@ function Term(props: Props): JSX.Element {
 export const getServerSideProps = async ({ query: { slug } }) => {
   const responseContainer = await fetch(`${API_URL}/glossary/${slug}`);
   if (!responseContainer.ok) {
-    return { notFound: true };
+    return handleError(responseContainer);
   }
   const term = await responseContainer.json();
   return { props: term };

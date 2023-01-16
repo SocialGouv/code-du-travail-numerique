@@ -8,6 +8,7 @@ import Metas from "../../src/common/Metas";
 import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
 import { Breadcrumb } from "cdtn-types";
+import { handleError } from "../../src/lib/fetch-error";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -69,7 +70,7 @@ function Fiche(props: Props): JSX.Element {
 export const getServerSideProps = async ({ query }) => {
   const response = await fetchFiche(query);
   if (!response.ok) {
-    return { notFound: true };
+    return handleError(response);
   }
 
   const data = await response.json();

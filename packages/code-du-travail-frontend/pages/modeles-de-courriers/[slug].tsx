@@ -18,6 +18,7 @@ import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { toUrl } from "../../src/lib";
 import { Breadcrumb } from "cdtn-types";
+import { handleError } from "../../src/lib/fetch-error";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -131,7 +132,7 @@ function ModeleCourrier(props: Props): JSX.Element {
 export const getServerSideProps = async ({ query }) => {
   const response = await fetchCourrier(query);
   if (!response.ok) {
-    return { notFound: true };
+    return handleError(response);
   }
 
   const data = await response.json();

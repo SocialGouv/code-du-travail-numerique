@@ -13,6 +13,7 @@ import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
+import { handleError } from "../../src/lib/fetch-error";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -45,7 +46,7 @@ function Glossaire({ glossary }) {
 export const getServerSideProps = async () => {
   const response = await fetch(`${API_URL}/glossary`);
   if (!response.ok) {
-    return { notFound: true };
+    return handleError(response);
   }
 
   const glossary = await response.json();

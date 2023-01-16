@@ -13,6 +13,7 @@ import Breadcrumbs from "../../src/common/Breadcrumbs";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { SearchResults } from "../../src/search/SearchResults";
+import { handleError } from "../../src/lib/fetch-error";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -61,7 +62,7 @@ export const getServerSideProps = async ({ query }) => {
   const searchThemeResponse = await fetch(`${API_URL}/themes/${query.slug}`);
 
   if (!searchThemeResponse.ok) {
-    return { notFound: true };
+    return handleError(searchThemeResponse);
   }
 
   const theme = await searchThemeResponse.json();
