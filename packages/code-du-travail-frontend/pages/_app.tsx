@@ -49,28 +49,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      {pageProps.statusCode ? (
+      <React.StrictMode>
         <ThemeProvider>
-          <>
-            <GlobalStyles />
-            {pageProps.statusCode === 404 ? (
-              <Custom404 />
-            ) : (
-              <CustomError {...pageProps} />
-            )}
-          </>
+          <GlobalStyles />
+          <A11y />
+          <Component {...pageProps} />
         </ThemeProvider>
-      ) : (
-        <React.StrictMode>
-          <ThemeProvider>
-            <>
-              <GlobalStyles />
-              <A11y />
-              <Component {...pageProps} />
-            </>
-          </ThemeProvider>
-        </React.StrictMode>
-      )}
+      </React.StrictMode>
     </>
   );
 }

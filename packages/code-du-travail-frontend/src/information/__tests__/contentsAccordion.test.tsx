@@ -9,7 +9,7 @@ describe("Information Contents", () => {
   beforeEach(() => {
     render(
       <Contents
-        anchor={[]}
+        anchor={""}
         dismissalProcess={false}
         sectionDisplayMode={SectionDisplayMode.accordion}
         contents={[
