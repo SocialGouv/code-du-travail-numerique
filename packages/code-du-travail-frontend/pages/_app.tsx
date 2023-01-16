@@ -16,14 +16,6 @@ import {
   clientSideRedirectMiddleware,
   serverSideRedirectMiddleware,
 } from "../src/middleware/redirect";
-import CustomError from "./_error";
-import Custom404 from "./404";
-import { onInitialization } from "../src/lib";
-import { useRouter } from "next/router";
-
-const {
-  publicRuntimeConfig: { FRONTEND_HOST },
-} = getConfig();
 
 if (typeof window !== "undefined") {
   import("../src/web-components/tooltip")
@@ -53,43 +45,23 @@ const {
 } = getConfig();
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-
   useEffect(() => {
     init({
       siteId: PIWIK_SITE_ID,
       url: PIWIK_URL,
-      onInitialization: () => {
-        onInitialization(FRONTEND_HOST + router.asPath);
-      },
     });
     clientSideRedirectMiddleware();
   }, []);
 
   return (
     <>
-      {pageProps.statusCode ? (
+      <React.StrictMode>
         <ThemeProvider>
-          <>
-            <GlobalStyles />
-            {pageProps.statusCode === 404 ? (
-              <Custom404 />
-            ) : (
-              <CustomError {...pageProps} />
-            )}
-          </>
+          <GlobalStyles />
+          <A11y />
+          <Component {...pageProps} />
         </ThemeProvider>
-      ) : (
-        <React.StrictMode>
-          <ThemeProvider>
-            <>
-              <GlobalStyles />
-              <A11y />
-              <Component {...pageProps} />
-            </>
-          </ThemeProvider>
-        </React.StrictMode>
-      )}
+      </React.StrictMode>
     </>
   );
 }

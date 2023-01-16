@@ -55,7 +55,7 @@ export enum MatomoRetirementEvent {
 
 export enum MatomoActionEvent {
   PREAVIS_RETRAITE = "view_step_Préavis de départ ou de mise à la retraite",
-  HEURE_RECHERCHE_EMPLOI = "view_step_Heure recherche emploi",
+  HEURE_RECHERCHE_EMPLOI = "view_step_Heures d'absence pour rechercher un emploi",
   PREAVIS_DEMISSION = "view_step_Préavis de démission",
   PREAVIS_LICENCIEMENT = "view_step_Préavis de licenciement",
 }

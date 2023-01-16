@@ -7,11 +7,16 @@ import { Law } from "./Law";
 import { Results } from "./Results";
 import { Themes } from "./Themes";
 
+type Props = {
+  items: { documents; themes; articles };
+  isSearch?: boolean;
+  query?: any;
+};
 const SearchResults = ({
   items: { documents, themes, articles },
   isSearch,
   query,
-}) => {
+}: Props) => {
   useEffect(() => {
     // distinction between actual search and theme search when logging
     if (isSearch) {
@@ -35,7 +40,12 @@ const SearchResults = ({
         </Section>
       )}
       {!isArticleSearch && documents.length > 0 && (
-        <Results isSearch={isSearch} items={documents} query={query} />
+        <Results
+          isSearch={isSearch}
+          items={documents}
+          query={query}
+          id="SearchResults"
+        />
       )}
       {!isArticleSearch && (articles.length > 0 || themes.length > 0) && (
         <Section decorated variant="light">
