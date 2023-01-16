@@ -19,9 +19,7 @@ const term = {
 
 describe("<Term />", () => {
   it("should render", () => {
-    const { container } = render(
-      <Term term={term} slug="accord-dentreprise" />
-    );
+    const { container } = render(<Term {...term} />);
     expect(container).toMatchSnapshot();
   });
 });

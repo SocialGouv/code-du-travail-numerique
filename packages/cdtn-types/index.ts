@@ -108,7 +108,6 @@ export type EditorialContentData = {
 };
 
 export type EditorialContentDataWrapper = {
-  anchor: string[];
   information: EditorialContentData;
 };
 
