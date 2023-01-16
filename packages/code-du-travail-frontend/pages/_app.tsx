@@ -12,10 +12,6 @@ import getConfig from "next/config";
 import React, { useEffect } from "react";
 
 import { A11y } from "../src/a11y";
-import {
-  clientSideRedirectMiddleware,
-  serverSideRedirectMiddleware,
-} from "../src/middleware/redirect";
 import CustomError from "./_error";
 import Custom404 from "./404";
 
@@ -49,7 +45,6 @@ const {
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     init({ siteId: PIWIK_SITE_ID, url: PIWIK_URL });
-    clientSideRedirectMiddleware();
   }, []);
 
   return (
@@ -79,20 +74,5 @@ function MyApp({ Component, pageProps }: AppProps) {
     </>
   );
 }
-
-MyApp.getInitialProps = async ({ Component, ctx }) => {
-  let pageProps = {};
-  serverSideRedirectMiddleware(ctx.req, ctx.res);
-
-  if (Component.getInitialProps) {
-    try {
-      pageProps = await Component.getInitialProps(ctx);
-    } catch (err) {
-      console.log(err);
-      pageProps = { message: err.message, statusCode: 500 };
-    }
-  }
-  return { pageProps };
-};
 
 export default MyApp;
