@@ -16,6 +16,8 @@ import {
   clientSideRedirectMiddleware,
   serverSideRedirectMiddleware,
 } from "../src/middleware/redirect";
+import { getSourceUrlFromPath } from "../src/lib";
+import { useRouter } from "next/router";
 
 if (typeof window !== "undefined") {
   import("../src/web-components/tooltip")
@@ -41,14 +43,18 @@ if (typeof window !== "undefined") {
 }
 
 const {
-  publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID },
+  publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID, FRONTEND_HOST },
 } = getConfig();
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
   useEffect(() => {
     init({
       siteId: PIWIK_SITE_ID,
       url: PIWIK_URL,
+      onInitialization: () => {
+        getSourceUrlFromPath(FRONTEND_HOST + router.asPath);
+      },
     });
     clientSideRedirectMiddleware();
   }, []);
