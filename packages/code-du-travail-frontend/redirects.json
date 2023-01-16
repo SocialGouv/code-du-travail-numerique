@@ -10,14 +10,14 @@
     "source": "/health"
   },
   {
-    "destination": "/contribution/3239",
+    "destination": "/contribution/3239-:slug",
     "permanent": true,
-    "source": "/contribution/2111"
+    "source": "/contribution/2111-:slug"
   },
   {
-    "destination": "/contribution/3239",
+    "destination": "/contribution/3239-:slug",
     "permanent": true,
-    "source": "/contribution/2395"
+    "source": "/contribution/2395-:slug"
   },
   {
     "destination": "/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile",
@@ -35,9 +35,9 @@
     "source": "/convention-collective/3239-secteur-des-particuliers-employeurs-et-de-lemploi-a-domicile"
   },
   {
-    "destination": "/contribution/3209",
+    "destination": "/contribution/3209-:slug",
     "permanent": true,
-    "source": "/contribution/1375"
+    "source": "/contribution/1375-:slug"
   },
   {
     "destination": "/convention-collective/3209-convention-collective-metallurgie-doubs",
@@ -45,9 +45,9 @@
     "source": "/convention-collective/1375-convention-collective-metallurgie-doubs"
   },
   {
-    "destination": "/contribution/3231",
+    "destination": "/contribution/3231-:slug",
     "permanent": true,
-    "source": "/contribution/1809"
+    "source": "/contribution/1809-:slug"
   },
   {
     "destination": "/convention-collective/3231-convention-collective-territoriale-de-la-metallurgie-du-jura",
