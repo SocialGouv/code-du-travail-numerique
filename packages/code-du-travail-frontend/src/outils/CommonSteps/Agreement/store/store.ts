@@ -8,7 +8,7 @@ import {
   CommonAgreementStoreSlice,
   Route,
 } from "./types";
-import { STORAGE_KEY_AGREEMENT, StoreSlice } from "../../../types";
+import { STORAGE_KEY_AGREEMENT, StoreSlicePublicode } from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { Agreement } from "../../../../conventions/Search/api/type";
 import { loadPublicodes } from "../../../api";
@@ -20,11 +20,11 @@ const initialState: Omit<CommonAgreementStoreData, "publicodes"> = {
   isStepValid: true,
 };
 
-const createCommonAgreementStore: StoreSlice<
+const createCommonAgreementStore: StoreSlicePublicode<
   CommonAgreementStoreSlice,
   CommonInformationsStoreSlice
 > = (set, get, slug) => ({
-  agreementData: { ...initialState, publicodes: loadPublicodes(slug!) },
+  agreementData: { ...initialState, publicodes: loadPublicodes(slug) },
   agreementFunction: {
     onInitAgreementPage: () => {
       try {
@@ -37,7 +37,7 @@ const createCommonAgreementStore: StoreSlice<
             applyGenericValidation(get, set, "agreement", parsedData);
             applyGenericValidation(get, set, "route", Route.agreement);
             const idcc = parsedData?.num?.toString();
-            if (idcc && slug) {
+            if (idcc) {
               set(
                 produce((state: CommonAgreementStoreSlice) => {
                   state.agreementData.publicodes = loadPublicodes(slug, idcc);
@@ -73,7 +73,7 @@ const createCommonAgreementStore: StoreSlice<
         );
       applyGenericValidation(get, set, "enterprise", enterprise);
       const idcc = agreement?.num?.toString();
-      if (idcc && slug) {
+      if (idcc) {
         set(
           produce((state: CommonAgreementStoreSlice) => {
             state.agreementData.publicodes = loadPublicodes(slug, idcc);

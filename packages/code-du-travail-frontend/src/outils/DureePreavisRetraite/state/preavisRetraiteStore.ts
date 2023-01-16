@@ -1,6 +1,5 @@
 import create from "zustand";
 import { PreavisRetraiteState, PreavisRetraiteStore } from "./types";
-import { PreavisRetraitePublicodes } from "@socialgouv/modeles-social";
 import {
   askAccurateSeniority,
   computeMinSeniorityYear,
@@ -13,7 +12,6 @@ import {
 import { updateFormValues } from "./utils";
 import removeOldQuestions from "./usecases/removeOldQuestions";
 import resetInfosLastQuestionNotAnsweredOnOriginChange from "./usecases/resetInfosLastQuestionNotAnsweredOnOriginChange";
-import produce from "immer";
 import { loadPublicodes } from "../../api";
 
 export const initialState: PreavisRetraiteState = {
@@ -59,9 +57,7 @@ const createPreavisRetraiteStore = (title: string, slug: string) =>
               resetInfos(newValue, oldValue, state, updateFormValues(form))
             )
           ),
-          publicodes: slug
-            ? loadPublicodes(slug, newValue?.num?.toString())
-            : undefined,
+          publicodes: loadPublicodes(slug, newValue?.num?.toString()),
         };
       }),
     onInformationChange: (name, form) =>

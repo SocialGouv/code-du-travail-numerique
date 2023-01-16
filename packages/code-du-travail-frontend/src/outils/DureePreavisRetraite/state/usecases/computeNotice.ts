@@ -6,13 +6,13 @@ const computeNotice = (state: PreavisRetraiteStore): PreavisRetraiteStore => {
   const values = state.formValues;
   const publicodes = state.publicodes;
   const result = publicodes.setSituation(stateToPublicode(values));
-  const legalResult = publicodes!.execute(
+  const legalResult = publicodes.execute(
     "contrat salarié . préavis de retraite légale en jours"
   );
-  let agreementResult = publicodes!.execute(
+  let agreementResult = publicodes.execute(
     "contrat salarié . préavis de retraite collective en jours"
   );
-  const agreementMaximumResult = publicodes!.execute(
+  const agreementMaximumResult = publicodes.execute(
     "contrat salarié . préavis de retraite collective maximum en jours"
   );
 

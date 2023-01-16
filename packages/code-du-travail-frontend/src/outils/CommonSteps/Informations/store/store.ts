@@ -38,9 +38,6 @@ const createCommonInformationsStore: StoreSlice<
   informationsFunction: {
     generatePublicodesQuestions: () => {
       const publicodes = get().agreementData.publicodes;
-      if (!publicodes) {
-        return;
-      }
       const agreement = get().agreementData.input.agreement;
       if (agreement) {
         const missingArgs = publicodes
