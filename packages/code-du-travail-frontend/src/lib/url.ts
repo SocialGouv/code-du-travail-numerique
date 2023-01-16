@@ -33,3 +33,17 @@ export const urlRulesReplacement = (url: string): string => {
   });
   return res;
 };
+
+export const getSourceUrlFromPath = (
+  path: string | undefined,
+  paramName = "src_url"
+): string | null => {
+  if (!path) return null;
+  const url = new URL(!path.startsWith("https://") ? "https://" + path : path);
+  const srcUrl = url.searchParams.get(paramName);
+  const srcUrlBasePath = srcUrl
+    ? new URL(!srcUrl.startsWith("https://") ? "https://" + srcUrl : srcUrl)
+        .origin
+    : null;
+  return srcUrlBasePath;
+};

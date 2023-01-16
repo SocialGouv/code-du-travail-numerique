@@ -1,4 +1,9 @@
-import { removeQueryParameters, toUrl, urlRulesReplacement } from "..";
+import {
+  getSourceUrlFromPath,
+  removeQueryParameters,
+  toUrl,
+  urlRulesReplacement,
+} from "..";
 
 describe("toUrl", () => {
   test.each`
@@ -46,4 +51,19 @@ describe("replaceSlug", () => {
       expect(urlRulesReplacement(url)).toBe(expected);
     }
   );
+});
+
+describe("getSourceUrlFromPath", () => {
+  it.each`
+    path                                                                                                                  | referrerUrl
+    ${"https://code.travail.gouv.fr/outils/indemnite-licenciement?src_url=https://www.service-public.fr"}                 | ${"https://www.service-public.fr"}
+    ${"code.travail.gouv.fr/outils/indemnite-licenciement?src_url=https://www.service-public.fr"}                         | ${"https://www.service-public.fr"}
+    ${"code.travail.gouv.fr/outils/indemnite-licenciement?src_url=https://service-public.fr/particuliers/vosdroits/F987"} | ${"https://service-public.fr"}
+    ${""}                                                                                                                 | ${null}
+    ${"blabla"}                                                                                                           | ${null}
+    ${undefined}                                                                                                          | ${null}
+  `("should give $referrerUrl from $path", ({ path, referrerUrl }) => {
+    const result = getSourceUrlFromPath(path);
+    expect(result).toBe(referrerUrl);
+  });
 });
