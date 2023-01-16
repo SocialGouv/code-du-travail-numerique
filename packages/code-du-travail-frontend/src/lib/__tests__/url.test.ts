@@ -58,7 +58,7 @@ describe("getSourceUrlFromPath", () => {
     path                                                                                                                  | referrerUrl
     ${"https://code.travail.gouv.fr/outils/indemnite-licenciement?src_url=https://www.service-public.fr"}                 | ${"https://www.service-public.fr"}
     ${"code.travail.gouv.fr/outils/indemnite-licenciement?src_url=https://www.service-public.fr"}                         | ${"https://www.service-public.fr"}
-    ${"code.travail.gouv.fr/outils/indemnite-licenciement?src_url=https://service-public.fr/particuliers/vosdroits/F987"} | ${"https://service-public.fr"}
+    ${"code.travail.gouv.fr/outils/indemnite-licenciement?src_url=https://service-public.fr/particuliers/vosdroits/F987"} | ${"https://service-public.fr/particuliers/vosdroits/F987"}
     ${""}                                                                                                                 | ${null}
     ${"blabla"}                                                                                                           | ${null}
     ${undefined}                                                                                                          | ${null}

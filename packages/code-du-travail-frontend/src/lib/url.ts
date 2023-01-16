@@ -40,10 +40,5 @@ export const getSourceUrlFromPath = (
 ): string | null => {
   if (!path) return null;
   const url = new URL(!path.startsWith("https://") ? "https://" + path : path);
-  const srcUrl = url.searchParams.get(paramName);
-  const srcUrlBasePath = srcUrl
-    ? new URL(!srcUrl.startsWith("https://") ? "https://" + srcUrl : srcUrl)
-        .origin
-    : null;
-  return srcUrlBasePath;
+  return url.searchParams.get(paramName);
 };
