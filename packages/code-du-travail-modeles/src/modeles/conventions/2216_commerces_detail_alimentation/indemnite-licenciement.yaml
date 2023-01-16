@@ -358,7 +358,7 @@ contrat salarié . convention collective . commerce gros et detail alimentation 
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (3/10 * Sref * A1) + (4/10 * Sref * A2) + (5/10 * Sref * A3)
 
-contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres . résultat conventionnel formule  plafond:
+contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . cadres . résultat conventionnel formule plafond:
   applicable si: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * 12 = trois facteurs avec plafond
   valeur: oui
   cdtn:
