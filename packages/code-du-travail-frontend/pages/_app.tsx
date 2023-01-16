@@ -7,7 +7,7 @@ import "../public/static/modeles.css";
 import * as Sentry from "@sentry/nextjs";
 import { GlobalStyles, ThemeProvider } from "@socialgouv/cdtn-ui";
 import { AppProps } from "next/app";
-import { init } from "@socialgouv/matomo-next";
+import { init, push } from "@socialgouv/matomo-next";
 import getConfig from "next/config";
 import React, { useEffect } from "react";
 
@@ -53,7 +53,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       siteId: PIWIK_SITE_ID,
       url: PIWIK_URL,
       onInitialization: () => {
-        getSourceUrlFromPath(FRONTEND_HOST + router.asPath);
+        const referrerUrl = getSourceUrlFromPath(FRONTEND_HOST + router.asPath);
+        if (referrerUrl) {
+          push(["setReferrerUrl", referrerUrl]);
+        }
       },
     });
     clientSideRedirectMiddleware();
