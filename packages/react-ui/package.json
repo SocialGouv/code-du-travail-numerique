@@ -26,8 +26,7 @@
     "watch": "yarn build --watch",
     "test": "jest",
     "test:update": "jest -u",
-    "dev": "rollup --config --watch",
-    "build:vite": "vite build"
+    "dev": "rollup --config --watch"
   },
   "dependencies": {
     "@maxgfr/react-accessible-accordion": "4.0.1",
@@ -59,7 +58,6 @@
     "@testing-library/react-hooks": "8.0.1",
     "@testing-library/user-event": "^14.4.3",
     "@types/styled-components": "^5.1.26",
-    "@vitejs/plugin-react": "^3.0.1",
     "babel-jest": "^27.0.6",
     "babel-loader": "^8.2.2",
     "eslint": "^7.31.0",
@@ -83,9 +81,7 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-order": "^5.0.0",
     "stylelint-processor-styled-components": "^1.10.0",
-    "svgo": "^2.3.1",
-    "vite": "^4.0.4",
-    "vite-plugin-dts": "^1.7.1"
+    "svgo": "^2.3.1"
   },
   "license": "MIT",
   "keywords": [
