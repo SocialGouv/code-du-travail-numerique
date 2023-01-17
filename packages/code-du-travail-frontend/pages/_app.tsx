@@ -1,6 +1,4 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import "katex/dist/katex.min.css";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import "react-image-lightbox/style.css";
 import "../public/static/modeles.css";
 
