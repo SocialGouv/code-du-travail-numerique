@@ -39,7 +39,7 @@ function Theme(props: Props): JSX.Element {
           {theme.children && theme.children.length > 0 && (
             <StyledContainer>
               {theme.children.map(({ slug, label }) => (
-                <Link key={slug} href={slug} passHref>
+                <Link key={slug} href={slug} passHref legacyBehavior>
                   <Button as={StyledLink}>{label}</Button>
                 </Link>
               ))}

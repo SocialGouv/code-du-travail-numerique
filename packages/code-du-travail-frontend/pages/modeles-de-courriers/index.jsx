@@ -90,6 +90,7 @@ function Modeles(props) {
                     <Link
                       href={`${getRouteBySource(SOURCES.LETTERS)}/${slug}`}
                       passHref
+                      legacyBehavior
                     >
                       <Tile
                         wide

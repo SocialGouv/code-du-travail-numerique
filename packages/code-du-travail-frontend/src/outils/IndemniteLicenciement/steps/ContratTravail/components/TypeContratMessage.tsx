@@ -16,6 +16,7 @@ const TypeContratMessage = (): JSX.Element => {
         <Link
           href={`${getRouteBySource(SOURCES.TOOLS)}/imdemnite-precarite`}
           passHref
+          legacyBehavior
         >
           <A11yLink
             href="/fiche-service-public/le-salarie-touche-t-il-la-prime-de-precarite-a-la-fin-dun-contrat-de-travail"

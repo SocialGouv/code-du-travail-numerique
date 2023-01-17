@@ -27,7 +27,7 @@ const {
 } = getConfig();
 
 export const DocumentsTile = (
-  <Link href={`/${getRouteBySource(SOURCES.LETTERS)}`} passHref>
+  <Link href={`/${getRouteBySource(SOURCES.LETTERS)}`} passHref legacyBehavior>
     <CallToActionTile
       action="Découvrir"
       custom
@@ -76,7 +76,7 @@ const Home = ({ themes = [], highlights = [], tools }) => (
               linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
             }
             return (
-              <Link {...linkProps} key={slug || href}>
+              <Link {...linkProps} key={slug || href} legacyBehavior>
                 <CallToActionTile
                   action={action}
                   custom
@@ -93,7 +93,7 @@ const Home = ({ themes = [], highlights = [], tools }) => (
           {DocumentsTile}
         </Grid>
         <ButtonWrapper>
-          <Link href="/outils" passHref>
+          <Link href="/outils" passHref legacyBehavior>
             <Button variant="primary" as="a">
               Voir tous les outils <StyledArrowRight />
             </Button>

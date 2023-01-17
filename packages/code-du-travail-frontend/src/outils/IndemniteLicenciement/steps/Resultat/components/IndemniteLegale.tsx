@@ -33,7 +33,7 @@ const IndemniteLegale = ({ result, unit, infoCalcul }: Props): JSX.Element => (
       <Link
         href={`/fiche-service-public/indemnite-de-licenciement-du-salarie-en-cdi`}
       >
-        <a>cet article</a>
+        cet article
       </Link>
       .
     </p>

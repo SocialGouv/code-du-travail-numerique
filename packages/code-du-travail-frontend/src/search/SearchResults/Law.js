@@ -16,6 +16,7 @@ export const Law = ({ items, query }) => (
             query ? `?q=${query}` : ""
           }`}
           passHref
+          legacyBehavior
         >
           <Tile
             wide

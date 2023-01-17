@@ -20,7 +20,7 @@ export default function Breadcrumbs({ items }: Props): JSX.Element {
         <StyledContainer as="ol">
           {[
             <NavItem key="home" as="li">
-              <Link href="/" passHref>
+              <Link href="/" passHref legacyBehavior>
                 <StyledLink title="Retour à l'accueil">
                   <StyledHomeIcon />
                   Accueil
@@ -30,7 +30,7 @@ export default function Breadcrumbs({ items }: Props): JSX.Element {
             ...items.map(({ label, slug }) => (
               <NavItem key={`${slug}`} as="li">
                 <StyledArrowRight />{" "}
-                <Link key={slug} href={slug} passHref>
+                <Link key={slug} href={slug} passHref legacyBehavior>
                   <StyledLink>{label}</StyledLink>
                 </Link>
               </NavItem>

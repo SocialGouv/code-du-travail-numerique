@@ -47,6 +47,7 @@ export const ConventionLink = ({
         shortTitle,
       })}`}
       passHref
+      legacyBehavior
     >
       <StyledLink {...commonProps}>
         {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>

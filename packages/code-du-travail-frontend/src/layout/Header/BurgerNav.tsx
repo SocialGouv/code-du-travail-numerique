@@ -26,7 +26,7 @@ const HeaderBurgerNav = ({ currentPage }: Props): JSX.Element => {
         <Ul>
           {currentPage !== "tools" ? (
             <Li>
-              <Link href="/outils" passHref>
+              <Link href="/outils" passHref legacyBehavior>
                 <NavAnchor>Boîte&nbsp;à&nbsp;outils</NavAnchor>
               </Link>
             </Li>
@@ -37,7 +37,7 @@ const HeaderBurgerNav = ({ currentPage }: Props): JSX.Element => {
           )}
           {currentPage !== "themes" ? (
             <Li>
-              <Link href="/themes" passHref>
+              <Link href="/themes" passHref legacyBehavior>
                 <NavAnchor>Thèmes</NavAnchor>
               </Link>
             </Li>

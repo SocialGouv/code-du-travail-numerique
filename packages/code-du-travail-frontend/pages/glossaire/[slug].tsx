@@ -70,9 +70,7 @@ function Term(props: Props): JSX.Element {
               </tbody>
             </Table>
             <p>
-              <Link href="/glossaire">
-                <a>Retour</a>
-              </Link>
+              <Link href="/glossaire">Retour</Link>
             </p>
           </Wrapper>
         </Container>
