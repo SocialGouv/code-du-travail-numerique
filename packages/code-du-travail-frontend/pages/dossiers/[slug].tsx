@@ -261,7 +261,7 @@ const Li = styled.li`
 const DossierLink = ({ url, title }) => {
   if (!url.includes("http")) {
     return (
-      <Link href={url} passHref>
+      <Link href={url} passHref legacyBehavior>
         <LeftArrowLink>{title}</LeftArrowLink>
       </Link>
     );
