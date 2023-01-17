@@ -220,7 +220,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     fill="currentColor"
                   />
                 </svg>
-
+                 
                 <a
                   class="sc-fyGvY hrpgr"
                   href="/themes/theme"
@@ -276,7 +276,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                       </span>
                     </button>
                     <a
-                      class="c41 spacing-left"
+                      class="sc-hkoqWr kZjrEK spacing-left"
                       href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Mod%C3%A8le%20-%20Courrier%20Epistolaire&body=un%20description%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                       title="Envoyer par email"
                     >
@@ -461,7 +461,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                         >
                           Télécharger le document (
                           pdf
-                           -
+                           - 
                           12.35
                           Ko)
                         </div>
@@ -487,13 +487,13 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 <p
                   class="sc-jhDJEt kYeuXj"
                 >
-                  Type: Modèle de document - Format:
+                  Type: Modèle de document - Format: 
                   pdf
                    - Taille:
-
+                   
                   12.35
                   Ko
-
+                   
                 </p>
                 <p
                   class="sc-jSFjdj sc-jCPRHX dWteEK bmnUmc"
@@ -509,7 +509,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   >
                     Télécharger le modèle (
                     pdf
-                     -
+                     - 
                     12.35
                     Ko)  
                     <svg
@@ -563,7 +563,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                 </span>
               </button>
               <a
-                class="c41 spacing-left"
+                class="sc-hkoqWr kZjrEK spacing-left"
                 href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Mod%C3%A8le%20-%20Courrier%20Epistolaire&body=un%20description%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                 title="Envoyer par email"
               >
