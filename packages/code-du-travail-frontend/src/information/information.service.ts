@@ -9,12 +9,12 @@ const {
 
 export const getEditorialContentBySlug = async (
   slug: string
-): Promise<EditorialContentData> => {
+): Promise<EditorialContentData | undefined> => {
   const responseContainer = await fetch(
     `${API_URL}/items/${SOURCES.EDITORIAL_CONTENT}/${slug}`
   );
   if (!responseContainer.ok) {
-    throw new Error("Error while fetching editorial content");
+    return;
   }
   return await responseContainer.json();
 };
@@ -58,6 +58,7 @@ export const getInformationBySlug = async (slug: string) => {
   const contentBySlug = await getEditorialContentBySlug(slug);
   let contents;
 
+  if (!contentBySlug) return;
   if (contentBySlug._source?.contents) {
     const cdtnIdToFetch = getContentBlockIds(contentBySlug._source?.contents);
 
@@ -75,6 +76,5 @@ export const getInformationBySlug = async (slug: string) => {
   return {
     ...contentBySlug,
     _source: { ...contentBySlug._source, contents },
-    slug,
   };
 };

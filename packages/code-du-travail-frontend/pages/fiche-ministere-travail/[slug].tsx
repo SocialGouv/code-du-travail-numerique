@@ -1,7 +1,8 @@
 import { Accordion } from "@socialgouv/cdtn-ui";
+// @ts-ignore
 import { decode } from "@socialgouv/fiches-travail-data";
 import getConfig from "next/config";
-import { withRouter } from "next/router";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
@@ -9,6 +10,8 @@ import Answer from "../../src/common/Answer";
 import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
+import { Breadcrumb } from "cdtn-types";
+import { handleError } from "../../src/lib/fetch-error";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -25,20 +28,28 @@ const buildAccordionSections = (sections) =>
       title,
     }));
 
-const Fiche = ({ data = { _source: {} }, anchor }) => {
-  const {
-    _source: {
-      breadcrumbs,
-      date,
-      description,
-      intro,
-      sections = [],
-      title,
-      url,
-    },
-    relatedItems,
-  } = data;
+interface Props {
+  breadcrumbs: Breadcrumb[];
+  date: string;
+  description: string;
+  intro: string;
+  sections: Array<any>;
+  title: string;
+  url: string;
+  relatedItems: Array<any>;
+}
 
+function Fiche(props: Props): JSX.Element {
+  const {
+    breadcrumbs,
+    date,
+    description,
+    intro,
+    sections = [],
+    title,
+    url,
+    relatedItems,
+  } = props;
   const [titledSections, setTitledSections] = useState(
     buildAccordionSections(sections)
   );
@@ -54,6 +65,9 @@ const Fiche = ({ data = { _source: {} }, anchor }) => {
     );
   }, [sections]);
 
+  const { asPath } = useRouter();
+  const anchor = asPath.split("#")[1];
+
   // titleless section have the page title but no anchor.
   const untitledSection = sections.find((section) => !section.anchor);
   return (
@@ -62,7 +76,6 @@ const Fiche = ({ data = { _source: {} }, anchor }) => {
       <StyledAnswer
         title={title}
         relatedItems={relatedItems}
-        emptyMessage="Cette fiche n'a pas été trouvée"
         intro={intro}
         date={date}
         source={{ name: "Fiche Ministère du travail", url }}
@@ -77,21 +90,18 @@ const Fiche = ({ data = { _source: {} }, anchor }) => {
       </StyledAnswer>
     </Layout>
   );
-};
+}
 
-Fiche.getInitialProps = async ({ query, asPath }) => {
-  // beware, this one is undefined when rendered server-side
-  const anchor = asPath.split("#")[1];
+export const getServerSideProps = async ({ query }) => {
   const response = await fetchSheetMT(query);
   if (!response.ok) {
-    return { statusCode: response.status };
+    return handleError(response);
   }
-
   const data = await response.json();
-  return { anchor, data };
+  return { props: { relatedItems: data.relatedItems, ...data._source } };
 };
 
-export default withRouter(Fiche);
+export default Fiche;
 
 const TabContent = styled(Html)`
   & > *:first-child {

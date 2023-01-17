@@ -2,7 +2,7 @@ import React, { useEffect, useMemo } from "react";
 import { SimulatorDecorator } from "../Components";
 import { printResult } from "../common/utils";
 import { createSimulatorStore } from "./useSimulatorStore";
-import { matopush } from "../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { SimulatorStepProvider, useSimulatorStepStore } from "./createContext";
 import { Step } from "./type";
 
