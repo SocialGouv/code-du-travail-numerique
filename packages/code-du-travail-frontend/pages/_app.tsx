@@ -12,10 +12,6 @@ import getConfig from "next/config";
 import React, { useEffect } from "react";
 
 import { A11y } from "../src/a11y";
-import {
-  clientSideRedirectMiddleware,
-  serverSideRedirectMiddleware,
-} from "../src/middleware/redirect";
 import { getSourceUrlFromPath } from "../src/lib";
 import { useRouter } from "next/router";
 
@@ -48,6 +44,7 @@ const {
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
+
   useEffect(() => {
     init({
       siteId: PIWIK_SITE_ID,
@@ -59,35 +56,17 @@ function MyApp({ Component, pageProps }: AppProps) {
         }
       },
     });
-    clientSideRedirectMiddleware();
   }, []);
 
   return (
-    <>
-      <React.StrictMode>
-        <ThemeProvider>
-          <GlobalStyles />
-          <A11y />
-          <Component {...pageProps} />
-        </ThemeProvider>
-      </React.StrictMode>
-    </>
+    <React.StrictMode>
+      <ThemeProvider>
+        <GlobalStyles />
+        <A11y />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </React.StrictMode>
   );
 }
-
-MyApp.getInitialProps = async ({ Component, ctx }) => {
-  let pageProps = {};
-  serverSideRedirectMiddleware(ctx.req, ctx.res);
-
-  if (Component.getInitialProps) {
-    try {
-      pageProps = await Component.getInitialProps(ctx);
-    } catch (err) {
-      console.log(err);
-      pageProps = { message: err.message, statusCode: 500 };
-    }
-  }
-  return { pageProps };
-};
 
 export default MyApp;
