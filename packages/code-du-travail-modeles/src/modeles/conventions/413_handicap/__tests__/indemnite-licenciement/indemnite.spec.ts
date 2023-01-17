@@ -57,7 +57,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 413", () => {
       ${4}               | ${"Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service"} | ${8}      | ${3633.33} | ${21799.98}
       ${13}              | ${"Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service"} | ${22.5}   | ${3000}    | ${46500}
       ${36}              | ${"Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service"} | ${40}     | ${1000}    | ${10000}
-      ${2}               | ${"Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service"} | ${15}     | ${1000}    | ${13000}
+      ${2}               | ${"Cadres directeurs généraux, directeurs de centre de formation en travail social et directeurs d'établissement ou de service"} | ${20}     | ${1000}    | ${18000}
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, seniorityNonCadres: $seniorityNonCadres => $expectedCompensation €",
       ({
