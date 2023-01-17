@@ -34,14 +34,11 @@ const MyError = ({ statusCode, hasGetInitialPropsRun, err }) => {
 MyError.getInitialProps = async ({ res, err, asPath }) => {
   const errorInitialProps = {
     message: err && err.message,
-    statusCode,
     ...(await NextErrorComponent.getInitialProps({
       err,
       res,
     })),
   };
-
-  const statusCode = res ? res.statusCode : err ? err.statusCode : null;
 
   // Workaround for https://github.com/vercel/next.js/issues/8592, mark when
   // getInitialProps has run
