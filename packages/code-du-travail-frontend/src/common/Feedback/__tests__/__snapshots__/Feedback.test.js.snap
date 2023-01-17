@@ -1399,6 +1399,6 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 </div>
 `;
 
-exports[`<Feedback/> should send piwik event when click no 1`] = `"[]"`;
+exports[`<Feedback/> should send matomo event when click no 1`] = `"[]"`;
 
-exports[`<Feedback/> should send piwik event when click yes 1`] = `"[]"`;
+exports[`<Feedback/> should send matomo event when click yes 1`] = `"[]"`;

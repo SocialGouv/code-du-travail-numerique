@@ -1,5 +1,5 @@
 import { MatomoBaseEvent, MatomoSimulatorEvent } from "../../../lib";
-import { matopush } from "../../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 export default function printResult(simulatorTitle: string): void {
   matopush([
