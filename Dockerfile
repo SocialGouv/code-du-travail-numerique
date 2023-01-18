@@ -1,4 +1,4 @@
-ARG NODE_VERSION=14.18-alpine3.13
+ARG NODE_VERSION=14.18.3-alpine
 # dist
 FROM node:$NODE_VERSION AS dist
 
