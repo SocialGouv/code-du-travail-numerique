@@ -32,6 +32,7 @@ const spanPropTypes = {
   ]),
   fontWeight: PropTypes.oneOf(["300", "400", "500", "600", "700"]),
   noMargin: PropTypes.bool,
+  role: PropTypes.string,
   variant: PropTypes.oneOf(["primary", "secondary", "error", "placeholder"]),
 };
 
