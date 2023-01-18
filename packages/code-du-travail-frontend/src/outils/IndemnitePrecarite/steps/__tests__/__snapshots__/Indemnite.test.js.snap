@@ -355,7 +355,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                 >
                   <span
                     class="strut"
-                    style="height:2.00744em;vertical-align:-0.686em;"
+                    style="height:2.0074em;vertical-align:-0.686em;"
                   />
                   <span
                     class="mord"
@@ -374,7 +374,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                         >
                           <span
                             class="vlist"
-                            style="height:1.32144em;"
+                            style="height:1.3214em;"
                           >
                             <span
                               style="top:-2.314em;"
@@ -447,7 +447,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                   <span
                     class="mbin"
@@ -456,7 +456,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                 </span>
                 <span
@@ -464,7 +464,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
                 >
                   <span
                     class="strut"
-                    style="height:0.69444em;vertical-align:0em;"
+                    style="height:0.6944em;"
                   />
                   <span
                     class="mord"
@@ -981,7 +981,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                 >
                   <span
                     class="strut"
-                    style="height:2.00744em;vertical-align:-0.686em;"
+                    style="height:2.0074em;vertical-align:-0.686em;"
                   />
                   <span
                     class="mord"
@@ -1000,7 +1000,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                         >
                           <span
                             class="vlist"
-                            style="height:1.32144em;"
+                            style="height:1.3214em;"
                           >
                             <span
                               style="top:-2.314em;"
@@ -1073,7 +1073,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                   <span
                     class="mbin"
@@ -1082,7 +1082,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                 </span>
                 <span
@@ -1090,7 +1090,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
                 >
                   <span
                     class="strut"
-                    style="height:0.69444em;vertical-align:0em;"
+                    style="height:0.6944em;"
                   />
                   <span
                     class="mord"
@@ -1599,7 +1599,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                 >
                   <span
                     class="strut"
-                    style="height:2.00744em;vertical-align:-0.686em;"
+                    style="height:2.0074em;vertical-align:-0.686em;"
                   />
                   <span
                     class="mord"
@@ -1618,7 +1618,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                         >
                           <span
                             class="vlist"
-                            style="height:1.32144em;"
+                            style="height:1.3214em;"
                           >
                             <span
                               style="top:-2.314em;"
@@ -1691,7 +1691,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                   <span
                     class="mbin"
@@ -1700,7 +1700,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                 </span>
                 <span
@@ -1708,7 +1708,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
                 >
                   <span
                     class="strut"
-                    style="height:0.69444em;vertical-align:0em;"
+                    style="height:0.6944em;"
                   />
                   <span
                     class="mord"
@@ -2228,7 +2228,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                 >
                   <span
                     class="strut"
-                    style="height:2.00744em;vertical-align:-0.686em;"
+                    style="height:2.0074em;vertical-align:-0.686em;"
                   />
                   <span
                     class="mord"
@@ -2247,7 +2247,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                         >
                           <span
                             class="vlist"
-                            style="height:1.32144em;"
+                            style="height:1.3214em;"
                           >
                             <span
                               style="top:-2.314em;"
@@ -2320,7 +2320,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                   <span
                     class="mbin"
@@ -2329,7 +2329,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                 </span>
                 <span
@@ -2337,7 +2337,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
                 >
                   <span
                     class="strut"
-                    style="height:0.69444em;vertical-align:0em;"
+                    style="height:0.6944em;"
                   />
                   <span
                     class="mord"
@@ -2846,7 +2846,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                 >
                   <span
                     class="strut"
-                    style="height:2.00744em;vertical-align:-0.686em;"
+                    style="height:2.0074em;vertical-align:-0.686em;"
                   />
                   <span
                     class="mord"
@@ -2865,7 +2865,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                         >
                           <span
                             class="vlist"
-                            style="height:1.32144em;"
+                            style="height:1.3214em;"
                           >
                             <span
                               style="top:-2.314em;"
@@ -2938,7 +2938,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                   <span
                     class="mbin"
@@ -2947,7 +2947,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                   </span>
                   <span
                     class="mspace"
-                    style="margin-right:0.2222222222222222em;"
+                    style="margin-right:0.2222em;"
                   />
                 </span>
                 <span
@@ -2955,7 +2955,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
                 >
                   <span
                     class="strut"
-                    style="height:0.69444em;vertical-align:0em;"
+                    style="height:0.6944em;"
                   />
                   <span
                     class="mord"

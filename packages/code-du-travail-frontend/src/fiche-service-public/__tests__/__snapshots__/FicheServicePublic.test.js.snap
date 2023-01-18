@@ -493,7 +493,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
     </p>
     <div
       class="c2"
-      data-tabs="true"
+      data-rttabs="true"
     >
       <div
         class="c3 c4"
@@ -510,6 +510,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               aria-disabled="false"
               aria-selected="true"
               class="c7 react-tabs__tab--selected"
+              data-rttab="true"
               data-testid="undefined-0"
               id="react-tabs-0"
               role="tab"
@@ -522,6 +523,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               aria-disabled="false"
               aria-selected="false"
               class="c7"
+              data-rttab="true"
               data-testid="undefined-1"
               id="react-tabs-2"
               role="tab"
@@ -533,6 +535,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               aria-disabled="false"
               aria-selected="false"
               class="c7"
+              data-rttab="true"
               data-testid="undefined-2"
               id="react-tabs-4"
               role="tab"
@@ -1044,7 +1047,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </h4>
                     <div
                       class="c2"
-                      data-tabs="true"
+                      data-rttabs="true"
                     >
                       <div
                         class="c3 c4"
@@ -1061,6 +1064,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               aria-disabled="false"
                               aria-selected="true"
                               class="c7 react-tabs__tab--selected"
+                              data-rttab="true"
                               data-testid="undefined-0"
                               id="react-tabs-6"
                               role="tab"
@@ -1073,6 +1077,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               aria-disabled="false"
                               aria-selected="false"
                               class="c7"
+                              data-rttab="true"
                               data-testid="undefined-1"
                               id="react-tabs-8"
                               role="tab"
@@ -1084,6 +1089,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               aria-disabled="false"
                               aria-selected="false"
                               class="c7"
+                              data-rttab="true"
                               data-testid="undefined-2"
                               id="react-tabs-10"
                               role="tab"
@@ -1214,7 +1220,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </p>
                     <div
                       class="c2"
-                      data-tabs="true"
+                      data-rttabs="true"
                     >
                       <div
                         class="c3 c4"
@@ -1231,6 +1237,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               aria-disabled="false"
                               aria-selected="true"
                               class="c7 react-tabs__tab--selected"
+                              data-rttab="true"
                               data-testid="undefined-0"
                               id="react-tabs-12"
                               role="tab"
@@ -1243,6 +1250,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                               aria-disabled="false"
                               aria-selected="false"
                               class="c7"
+                              data-rttab="true"
                               data-testid="undefined-1"
                               id="react-tabs-14"
                               role="tab"
