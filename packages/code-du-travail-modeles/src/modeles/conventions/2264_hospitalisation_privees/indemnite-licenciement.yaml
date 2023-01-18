@@ -443,14 +443,3 @@ contrat salarié . convention collective . hospitalisation privées . indemnité
       formula: 25 * Sref
       explanations:
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-
-contrat salarié . convention collective . hospitalisation privées . résultat conventionnel fallback:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  non applicable si:
-    une de ces conditions:
-      - contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . résultat conventionnel avec ancienneté jusqu'à 5 ans
-      - contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . résultat conventionnel avec ancienneté moins de 12 mois
-      - contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . résultat conventionnel avec ancienneté de plus de 5 ans
-      - contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps . résultat conventionnel avec ancienneté de plus de 15 ans
-  valeur: 0
-  unité: €
