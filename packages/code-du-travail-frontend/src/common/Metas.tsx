@@ -1,13 +1,9 @@
-import getConfig from "next/config";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
+import { FRONTEND_HOST } from "../config";
 
 import { removeQueryParameters } from "../lib";
-
-const {
-  publicRuntimeConfig: { FRONTEND_HOST },
-} = getConfig();
 
 type Props = {
   title: string;

@@ -5,7 +5,6 @@ import {
   Section,
   theme,
 } from "@socialgouv/cdtn-ui";
-import getConfig from "next/config";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
@@ -14,10 +13,7 @@ import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { SearchResults } from "../../src/search/SearchResults";
 import { handleError } from "../../src/lib/fetch-error";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { API_URL } from "../../src/config";
 
 interface Props {
   theme;

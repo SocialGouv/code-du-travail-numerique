@@ -1,8 +1,4 @@
-import getConfig from "next/config";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { API_URL } from "../config";
 
 export const getContentById = async (id: string): Promise<any> => {
   const responseContainer = await fetch(`${API_URL}/items/${id}`);

@@ -12,8 +12,6 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
-const { version } = require("./package.json");
-
 const ContentSecurityPolicy = `
 default-src 'self' *.travail.gouv.fr *.data.gouv.fr *.fabrique.social.gouv.fr;
 img-src 'self' data: *.fabrique.social.gouv.fr https://travail-emploi.gouv.fr https://mon-entreprise.urssaf.fr https://cdtnadminprod.blob.core.windows.net https://cdtnadmindev.blob.core.windows.net;
@@ -29,33 +27,16 @@ prefetch-src 'self' *.fabrique.social.gouv.fr;
 const { withSentryConfig } = require("@sentry/nextjs");
 const MappingReplacement = require("./redirects");
 
-const compose = (...fns) => (args) =>
-  fns.reduceRight((arg, fn) => fn(arg), args);
+const compose =
+  (...fns) =>
+  (args) =>
+    fns.reduceRight((arg, fn) => fn(arg), args);
 
 const nextConfig = {
   devIndicators: {
     autoPrerender: false,
   },
   poweredByHeader: false,
-  publicRuntimeConfig: {
-    API_ENTREPRISE_URL:
-      process.env.API_ENTREPRISE_URL ||
-      "https://entreprise.data.gouv.fr/api/sirene",
-    API_SIRET2IDCC_URL:
-      process.env.API_SIRET2IDCC_URL ||
-      "https://siret2idcc.fabrique.social.gouv.fr/api/v2",
-    API_URL: process.env.API_URL || "http://127.0.0.1:1337/api/v1",
-    AZURE_BASE_URL: process.env.AZURE_BASE_URL,
-    AZURE_CONTAINER: process.env.AZURE_CONTAINER,
-    COMMIT: process.env.COMMIT,
-    FRONTEND_HOST: process.env.FRONTEND_HOST
-      ? `https://${process.env.FRONTEND_HOST}`
-      : `http://localhost:${process.env.FRONTEND_PORT || 3000}`,
-    PACKAGE_VERSION: process.env.VERSION || require("./package.json").version,
-    PIWIK_SITE_ID: process.env.PIWIK_SITE_ID,
-    PIWIK_URL: process.env.PIWIK_URL,
-    APP_VERSION: version,
-  },
   sentry: {
     disableClientWebpackPlugin: true,
     disableServerWebpackPlugin: true,

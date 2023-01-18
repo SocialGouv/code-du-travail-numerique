@@ -1,6 +1,6 @@
 import debounce from "debounce-promise";
 import memoizee from "memoizee";
-import getConfig from "next/config";
+import { API_URL } from "../../../config";
 
 import { Agreement } from "./type";
 
@@ -34,10 +34,6 @@ const siretLengthError =
 
 const siretNumberError =
   "Veuillez indiquer un numéro Siret (14 chiffres uniquement)";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
 
 const apiEnterprises = memoizee(function createFetcher(query, address) {
   if (/^\d{2,8}$/.test(query.replace(/\s/g, ""))) {

@@ -6,12 +6,12 @@ import * as Sentry from "@sentry/nextjs";
 import { GlobalStyles, ThemeProvider } from "@socialgouv/cdtn-ui";
 import { AppProps } from "next/app";
 import { init, push } from "@socialgouv/matomo-next";
-import getConfig from "next/config";
 import React, { useEffect } from "react";
 
 import { A11y } from "../src/a11y";
 import { getSourceUrlFromPath } from "../src/lib";
 import { useRouter } from "next/router";
+import { PIWIK_SITE_ID, PIWIK_URL, FRONTEND_HOST } from "../src/config";
 
 if (typeof window !== "undefined") {
   import("../src/web-components/tooltip")
@@ -35,10 +35,6 @@ if (typeof window !== "undefined") {
       Sentry.captureException(err);
     });
 }
-
-const {
-  publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID, FRONTEND_HOST },
-} = getConfig();
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();

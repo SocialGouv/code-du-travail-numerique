@@ -1,11 +1,7 @@
 import slugify from "@socialgouv/cdtn-slugify";
 import debounce from "debounce-promise";
 import memoizee from "memoizee";
-import getConfig from "next/config";
-
-const {
-  publicRuntimeConfig: { API_SIRET2IDCC_URL, API_ENTREPRISE_URL },
-} = getConfig();
+import { API_SIRET2IDCC_URL, API_ENTREPRISE_URL } from "../../../config";
 
 // api siret2idcc call
 const apiSiret2idcc = memoizee(

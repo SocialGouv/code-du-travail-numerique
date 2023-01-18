@@ -1,5 +1,3 @@
-import getConfig from "next/config";
-
 import { fetchResponse } from "../../../../../test/mockFetch";
 import {
   searchEntrepriseByName,
@@ -12,10 +10,7 @@ import {
   siretIdccPayload,
   siretPayload,
 } from "./entretrise.mock";
-
-const {
-  publicRuntimeConfig: { API_SIRET2IDCC_URL, API_ENTREPRISE_URL },
-} = getConfig();
+import { API_SIRET2IDCC_URL, API_ENTREPRISE_URL } from "../../../../config";
 
 global.fetch = jest.fn();
 

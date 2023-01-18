@@ -1,5 +1,4 @@
 import { extractMdxContentUrl } from "@socialgouv/modeles-social";
-import getConfig from "next/config";
 import React from "react";
 
 import Answer from "../../src/common/Answer";
@@ -8,10 +7,7 @@ import Contribution from "../../src/contributions/Contribution";
 import { Layout } from "../../src/layout/Layout";
 import { Breadcrumb } from "cdtn-types";
 import { handleError } from "../../src/lib/fetch-error";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { API_URL } from "../../src/config";
 
 const fetchQuestion = ({ slug }) =>
   fetch(`${API_URL}/items/contributions/${slug}`);
@@ -48,14 +44,8 @@ function PageContribution(props: Props): JSX.Element {
     };
   };
 
-  const {
-    breadcrumbs,
-    title,
-    answers,
-    description,
-    relatedItems,
-    content,
-  } = props;
+  const { breadcrumbs, title, answers, description, relatedItems, content } =
+    props;
 
   const metas = buildTitleAndDescription(
     breadcrumbs,

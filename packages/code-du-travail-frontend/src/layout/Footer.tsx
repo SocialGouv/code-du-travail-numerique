@@ -9,7 +9,6 @@ import {
   Title,
 } from "@socialgouv/cdtn-ui";
 import { push as matopush } from "@socialgouv/matomo-next";
-import getConfig from "next/config";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
@@ -17,10 +16,10 @@ import styled from "styled-components";
 
 import { ContactModal } from "../common/ContactModal";
 import { ServiceRenseignementModal } from "../common/ServiceRenseignementModal";
+import { PACKAGE_VERSION } from "../config";
 import { Partners } from "../home/Partners";
 
 const { DirectionRight: DirectionRightIcon } = icons;
-const { publicRuntimeConfig } = getConfig();
 
 const GITHUB_REPO = "https://github.com/SocialGouv/code-du-travail-numerique";
 
@@ -141,11 +140,11 @@ const Footer = (): JSX.Element => {
                 <li>
                   <Link
                     passHref
-                    href={`${GITHUB_REPO}/tree/${publicRuntimeConfig.PACKAGE_VERSION}`}
+                    href={`${GITHUB_REPO}/tree/${PACKAGE_VERSION}`}
                     legacyBehavior
                   >
                     <StyledLink
-                      href={`${GITHUB_REPO}/tree/${publicRuntimeConfig.PACKAGE_VERSION}`}
+                      href={`${GITHUB_REPO}/tree/${PACKAGE_VERSION}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -155,8 +154,7 @@ const Footer = (): JSX.Element => {
                 </li>
                 <li>
                   {(() => {
-                    const packageVersion =
-                      publicRuntimeConfig.PACKAGE_VERSION || "";
+                    const packageVersion = PACKAGE_VERSION || "";
                     const isTag = packageVersion[0] === "v";
                     const path = isTag
                       ? "releases/tag"

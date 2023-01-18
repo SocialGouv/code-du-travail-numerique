@@ -7,7 +7,6 @@ import {
   theme,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
-import getConfig from "next/config";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
@@ -15,12 +14,9 @@ import styled from "styled-components";
 import { A11yLink } from "../../src/common/A11yLink";
 import Html from "../../src/common/Html";
 import Metas from "../../src/common/Metas";
+import { API_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import { handleError } from "../../src/lib/fetch-error";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
 
 interface Props {
   term: string;

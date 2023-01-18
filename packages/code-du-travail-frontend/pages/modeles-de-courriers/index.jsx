@@ -9,7 +9,6 @@ import {
   theme,
   Tile,
 } from "@socialgouv/cdtn-ui";
-import getConfig from "next/config";
 import Link from "next/link";
 import React, { useCallback, useState } from "react";
 import styled from "styled-components";
@@ -17,10 +16,7 @@ import styled from "styled-components";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { summarize } from "../../src/search/utils";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { API_URL } from "../../src/config";
 
 const title = "Modèles de documents";
 const subtitle =

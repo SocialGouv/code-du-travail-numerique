@@ -10,7 +10,6 @@ import {
   Section,
   theme,
 } from "@socialgouv/cdtn-ui";
-import getConfig from "next/config";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
@@ -21,10 +20,7 @@ import { Themes } from "../src/home/Themes";
 import { Layout } from "../src/layout/Layout";
 import SearchHero from "../src/search/SearchHero";
 import { fetchTools } from "../src/outils/service";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { API_URL } from "../src/config";
 
 export const DocumentsTile = (
   <Link href={`/${getRouteBySource(SOURCES.LETTERS)}`} passHref legacyBehavior>
