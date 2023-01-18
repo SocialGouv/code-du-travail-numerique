@@ -163,7 +163,6 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
       <div
         class="c4"
       >
-        
         <p
           class="c5"
         >
@@ -301,7 +300,6 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
       <div
         class="c3"
       >
-        
         <p
           class="c4"
         >
@@ -462,7 +460,6 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
       <div
         class="c3"
       >
-        
         <p
           class="c4"
         >
@@ -584,7 +581,6 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
       <div
         class="c2"
       >
-        
         <p
           class="c3"
         >
