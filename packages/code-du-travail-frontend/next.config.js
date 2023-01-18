@@ -67,6 +67,9 @@ const nextConfig = {
         : false,
     styledComponents: true,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = {

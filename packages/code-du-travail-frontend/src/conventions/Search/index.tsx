@@ -41,8 +41,9 @@ const Search = ({ onSelectConvention }: Props): JSX.Element => {
   };
 
   //@ts-ignore
-  const [status, { conventions = [], entreprises = [] } = {}] =
-    useSearchCC(query);
+  const [status, { conventions = [], entreprises = [] } = {}] = useSearchCC(
+    query
+  );
 
   return (
     <>

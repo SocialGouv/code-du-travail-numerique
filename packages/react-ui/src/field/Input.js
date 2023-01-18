@@ -28,6 +28,7 @@ export const Input = ({
 Input.propTypes = {
   className: PropTypes.string,
   icon: PropTypes.elementType,
+  id: PropTypes.string,
   name: PropTypes.string.isRequired,
   updateOnScrollDisabled: PropTypes.bool,
 };

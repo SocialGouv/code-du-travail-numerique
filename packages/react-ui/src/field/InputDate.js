@@ -126,6 +126,7 @@ export const InputDate = ({ value, onChange, invalid, ...props }) => {
 };
 
 InputDate.propTypes = {
+  id: PropTypes.string,
   invalid: PropTypes.bool,
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func,
