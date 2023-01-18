@@ -54,6 +54,7 @@ const ThemesPage = ({ children = [] }) => (
               <Link
                 key={slug}
                 href={`/${getRouteBySource(SOURCES.THEMES)}/${slug}`}
+                legacyBehavior
               >
                 <StyledTile icon={icons[icon]} title={title} titleTagType="h2">
                   <TileChildren>
