@@ -71,6 +71,10 @@ export class Seniority1486
       MotifKeys.maladieNonPro,
       Math.max(0, (totalAbsencePerMotif.get(MotifKeys.maladieNonPro) ?? 0) - 6)
     );
+    totalAbsencePerMotif.set(
+      MotifKeys.accidentTrajet,
+      Math.max(0, (totalAbsencePerMotif.get(MotifKeys.accidentTrajet) ?? 0) - 6)
+    );
     return Array.from(totalAbsencePerMotif.values()).reduce(
       (sum, value) => sum + value,
       0
