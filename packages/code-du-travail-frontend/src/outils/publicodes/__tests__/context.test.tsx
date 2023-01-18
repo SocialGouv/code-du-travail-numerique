@@ -69,10 +69,9 @@ describe("Publicodes Context", () => {
                 }}
               />
               <p data-testid="text">
-                {
-                  result?.execute("contrat salarié . indemnité de licenciement")
-                    ?.value
-                }
+                {result
+                  ?.execute("contrat salarié . indemnité de licenciement")
+                  ?.value?.toString()}
               </p>
             </>
           )}
