@@ -2775,7 +2775,6 @@ exports[`<FicheContribution /> should render with external content 1`] = `
                           value=""
                         />
                       </span>
-                      
                       <p
                         class="c74"
                       >
@@ -3285,7 +3284,7 @@ exports[`<FicheContribution /> should render with external content 1`] = `
               <a
                 aria-label="cnil.fr (Nouvelle fenêtre)"
                 class="c104 c107"
-                href="https://www.cnil.fr/"
+                href="https://www.cnil.fr"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -6075,7 +6074,6 @@ exports[`<FicheContribution /> should render without external content 1`] = `
                           value=""
                         />
                       </span>
-                      
                       <p
                         class="c74"
                       >
@@ -6585,7 +6583,7 @@ exports[`<FicheContribution /> should render without external content 1`] = `
               <a
                 aria-label="cnil.fr (Nouvelle fenêtre)"
                 class="c104 c107"
-                href="https://www.cnil.fr/"
+                href="https://www.cnil.fr"
                 rel="noopener noreferrer"
                 target="_blank"
               >

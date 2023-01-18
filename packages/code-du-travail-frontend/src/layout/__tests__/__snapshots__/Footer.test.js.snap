@@ -753,7 +753,7 @@ exports[`<Footer /> should render 1`] = `
           <a
             aria-label="cnil.fr (Nouvelle fenêtre)"
             class="c19 c23"
-            href="https://www.cnil.fr/"
+            href="https://www.cnil.fr"
             rel="noopener noreferrer"
             target="_blank"
           >

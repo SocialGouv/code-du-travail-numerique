@@ -397,7 +397,6 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                 value=""
               />
             </span>
-            
             <p
               class="c6"
             >

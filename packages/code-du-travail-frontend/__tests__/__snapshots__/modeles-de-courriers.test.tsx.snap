@@ -1536,7 +1536,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             >
               <a
                 class="c39"
-                href="/modeles-de-courriers/rupture-de-periode-dessai-a-linitiative-de-lemployeur"
+                href="modeles-de-courriers/rupture-de-periode-dessai-a-linitiative-de-lemployeur"
               >
                 <div
                   class="c40"
@@ -1571,7 +1571,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                   <div
                     class="c43"
                   >
-                    
                     <h3
                       class="c44"
                     >
@@ -1597,7 +1596,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             >
               <a
                 class="c39"
-                href="/modeles-de-courriers/demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle"
+                href="modeles-de-courriers/demande-de-rendez-vous-en-vue-dune-rupture-conventionnelle"
               >
                 <div
                   class="c40"
@@ -1632,7 +1631,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                   <div
                     class="c43"
                   >
-                    
                     <h3
                       class="c44"
                     >
@@ -1977,7 +1975,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
               class="c61 c65"
-              href="https://www.cnil.fr/"
+              href="https://www.cnil.fr"
               rel="noopener noreferrer"
               target="_blank"
             >

@@ -13,7 +13,7 @@ export const A11yLink = React.forwardRef<HTMLAnchorElement, Props>(
   function A11yLink({ children, ...props }, ref) {
     if (props.target === "_blank") {
       return (
-        <Link href={new URL(props.href!)} passHref legacyBehavior>
+        <Link href={props.href!} passHref legacyBehavior>
           <a {...props} ref={ref} aria-label={`${children} (nouvelle fenêtre)`}>
             {children}
           </a>
@@ -21,7 +21,7 @@ export const A11yLink = React.forwardRef<HTMLAnchorElement, Props>(
       );
     }
     return (
-      <Link href={new URL(props.href!)} passHref legacyBehavior>
+      <Link href={props.href!} passHref legacyBehavior>
         <a {...props} ref={ref}>
           {children}
         </a>

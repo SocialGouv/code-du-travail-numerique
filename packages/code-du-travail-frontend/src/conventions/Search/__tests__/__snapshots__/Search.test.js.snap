@@ -550,7 +550,6 @@ exports[`<Search /> should render 1`] = `
       value=""
     />
   </span>
-  
   <p
     class="c4"
   >

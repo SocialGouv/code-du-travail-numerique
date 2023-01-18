@@ -4696,7 +4696,7 @@ exports[`<Answer /> should renders related content 1`] = `
           >
             <a
               class="c39 c40"
-              href="/url.extrenal/tool"
+              href="url.extrenal/tool"
             >
               <svg
                 aria-hidden="true"
