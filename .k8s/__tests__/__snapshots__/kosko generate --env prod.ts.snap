@@ -374,13 +374,13 @@ spec:
             initialDelaySeconds: 10
             timeoutSeconds: 15
           env:
-            - name: API_URL
+            - name: NEXT_PUBLIC_API_URL
               value: https://api.cdtn.fabrique.social.gouv.fr/api/v1
-            - name: COMMIT
+            - name: NEXT_PUBLIC_COMMIT
               value: 0123456789abcdefghijklmnopqrstuvwxyz0123
-            - name: VERSION
+            - name: NEXT_PUBLIC_VERSION
               value: refs/tags/v1.2.3
-            - name: FRONTEND_HOST
+            - name: NEXT_PUBLIC_FRONTEND_HOST
               value: code.travail.gouv.fr
           envFrom:
             - configMapRef:
@@ -418,14 +418,15 @@ metadata:
     team: cdtn
   namespace: cdtn
 data:
-  AZURE_BASE_URL: https://cdtnadminprod.blob.core.windows.net
-  AZURE_CONTAINER: cdtn
+  NEXT_PUBLIC_AZURE_BASE_URL: https://cdtnadminprod.blob.core.windows.net
+  NEXT_PUBLIC_AZURE_CONTAINER: cdtn
   NODE_ENV: production
-  PIWIK_SITE_ID: '4'
-  PIWIK_URL: https://matomo.fabrique.social.gouv.fr
-  PROD_HOSTNAME: code.travail.gouv.fr
-  SENTRY_PUBLIC_DSN: https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
-  SENTRY_ENV: production
+  NEXT_PUBLIC_PIWIK_SITE_ID: '4'
+  NEXT_PUBLIC_PIWIK_URL: https://matomo.fabrique.social.gouv.fr
+  NEXT_PUBLIC_SENTRY_PUBLIC_DSN: https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+  NEXT_PUBLIC_SENTRY_ENV: production
+  NEXT_PUBLIC_API_ENTREPRISE_URL: https://entreprise.data.gouv.fr/api/sirene
+  NEXT_PUBLIC_API_SIRET2IDCC_URL: https://siret2idcc.fabrique.social.gouv.fr/api/v2
 ---
 apiVersion: v1
 kind: Service

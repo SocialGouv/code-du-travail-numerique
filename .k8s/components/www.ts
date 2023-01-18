@@ -58,15 +58,15 @@ export default async () => {
           env.env === "prod" ? ressourcesConfigProd : ressourcesConfigDev,
         env: [
           {
-            name: "API_URL",
+            name: "NEXT_PUBLIC_API_URL",
             value: String(API_URL),
           },
           {
-            name: "COMMIT",
+            name: "NEXT_PUBLIC_COMMIT",
             value: process.env.GITHUB_SHA,
           },
           {
-            name: "VERSION",
+            name: "NEXT_PUBLIC_VERSION",
             value: process.env.GITHUB_REF,
           },
         ],
@@ -86,7 +86,7 @@ export default async () => {
 
   // get frontend computed url and assign the env var
   const ingressHost = new EnvVar({
-    name: "FRONTEND_HOST",
+    name: "NEXT_PUBLIC_FRONTEND_HOST",
     value: getIngressHost(manifests),
   });
 

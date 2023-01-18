@@ -16,7 +16,7 @@
     "type-check": "lerna run type-check --scope={@cdt/api,@socialgouv/modeles-social,@cdt/frontend} --stream",
     "dev:frontend": "lerna run dev --parallel --scope={@cdt/frontend,@socialgouv/cdtn-ui,@socialgouv/modeles-social} --stream",
     "test:frontend": "lerna run test --scope={@socialgouv/cdtn-ui,@cdt/frontend} --stream",
-    "dev:frontend:preprod-api": "API_URL=https://api-code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/api/v1 yarn dev:frontend",
+    "dev:frontend:preprod-api": "NEXT_PUBLIC_API_URL=https://api-code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/api/v1 yarn dev:frontend",
     "k8s": "yarn --silent --cwd .k8s",
     "lint": "lerna run lint",
     "lint:fix": "lerna run lint -- --fix",

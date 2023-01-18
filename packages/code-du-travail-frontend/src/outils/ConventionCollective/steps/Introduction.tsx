@@ -52,6 +52,7 @@ const IntroductionStep = ({ onUserAction }: Props): JSX.Element => {
         <Link
           href={`/${SOURCES.TOOLS}/convention-collective#${ScreenType.enterprise}`}
           passHref
+          legacyBehavior
         >
           <Tile onClick={() => onUserAction(UserAction.SelectEnterpriseRoute)}>
             <Paragraph noMargin fontWeight="700">
