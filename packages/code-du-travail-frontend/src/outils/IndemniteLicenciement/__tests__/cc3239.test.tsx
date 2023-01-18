@@ -82,7 +82,7 @@ describe("Indemnité licenciement - CC 3239", () => {
     ).not.toBeInTheDocument();
     expect(
       ui.result.infoWarning.ineligibleInfoWarningblock.query()
-    ).not.toBeInTheDocument();
+    ).toBeInTheDocument();
   });
   test("vérifier l'eligibilite des autres salariés pour ancienneté compris entre 8 et 9 mois", async () => {
     fireEvent.change(ui.information.agreement3239.proCategory.get(), {
@@ -125,5 +125,30 @@ describe("Indemnité licenciement - CC 3239", () => {
     fireEvent.click(ui.seniority.hasAbsence.non.get());
     fireEvent.click(ui.next.get());
     expect(ui.result.legalError.seniorityToLow.get()).toBeInTheDocument();
+    expect(
+      ui.result.infoWarning.ineligibleInfoWarningblock.query()
+    ).toBeInTheDocument();
+  });
+  test("vérifier que la CC 3239 n'affecte pas les autres inéligibilités", async () => {
+    fireEvent.click(ui.previous.get());
+    fireEvent.click(ui.previous.get());
+    fireEvent.click(ui.contract.type.cdd.get());
+    fireEvent.click(ui.next.get());
+    expect(
+      ui.result.infoWarning.eligibleInfoWarningblock.query()
+    ).not.toBeInTheDocument();
+    expect(
+      ui.result.infoWarning.ineligibleInfoWarningblock.query()
+    ).not.toBeInTheDocument();
+    fireEvent.click(ui.previous.get());
+    fireEvent.click(ui.contract.type.cdi.get());
+    fireEvent.click(ui.contract.fauteGrave.oui.get());
+    fireEvent.click(ui.next.get());
+    expect(
+      ui.result.infoWarning.eligibleInfoWarningblock.query()
+    ).not.toBeInTheDocument();
+    expect(
+      ui.result.infoWarning.ineligibleInfoWarningblock.query()
+    ).toBeInTheDocument();
   });
 });

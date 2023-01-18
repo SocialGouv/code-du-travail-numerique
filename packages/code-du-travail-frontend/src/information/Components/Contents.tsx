@@ -13,7 +13,7 @@ type ContentsParameters = {
   contents?: Content[];
   dismissalProcess: boolean;
   sectionDisplayMode?: SectionDisplayMode;
-  anchor: string[];
+  anchor: string;
 };
 
 export const Contents = ({

@@ -16,7 +16,7 @@ const { version } = require("./package.json");
 
 const ContentSecurityPolicy = `
 default-src 'self' *.travail.gouv.fr *.data.gouv.fr *.fabrique.social.gouv.fr;
-img-src 'self' data: *.fabrique.social.gouv.fr https://travail-emploi.gouv.fr https://mon-entreprise.urssaf.fr https://cdtnadminprod.blob.core.windows.net https://cdtnadmindev.blob.core.windows.net https://logs1412.xiti.com *.xiti.com;
+img-src 'self' data: *.fabrique.social.gouv.fr https://travail-emploi.gouv.fr https://mon-entreprise.urssaf.fr https://cdtnadminprod.blob.core.windows.net https://cdtnadmindev.blob.core.windows.net;
 script-src 'self' https://mon-entreprise.urssaf.fr *.fabrique.social.gouv.fr https://cdnjs.cloudflare.com ${
   process.env.NODE_ENV !== "production" && "'unsafe-eval'"
 };
@@ -27,6 +27,7 @@ prefetch-src 'self' *.fabrique.social.gouv.fr;
 `;
 
 const { withSentryConfig } = require("@sentry/nextjs");
+const MappingReplacement = require("./redirects");
 
 const compose = (...fns) => (args) =>
   fns.reduceRight((arg, fn) => fn(arg), args);
@@ -99,18 +100,7 @@ module.exports = {
     ];
   },
   async redirects() {
-    return [
-      {
-        destination: "/themes/:slug",
-        permanent: true,
-        source: "/themes/(\\d{1,}-):slug",
-      },
-      {
-        destination: "/api/health",
-        permanent: true,
-        source: "/health",
-      },
-    ];
+    return MappingReplacement;
   },
   ...compose(
     withBundleAnalyzer,

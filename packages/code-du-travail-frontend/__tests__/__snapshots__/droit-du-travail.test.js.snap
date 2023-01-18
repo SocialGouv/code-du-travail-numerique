@@ -125,8 +125,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
           class="sc-dwxYdI bBWkZj"
         >
           <a
+            aria-label="Lancer ma recherche"
             class="sc-gVtoEh cSmArU"
             href="/recherche"
+            rel="nofollow"
           >
             <svg
               aria-hidden="true"

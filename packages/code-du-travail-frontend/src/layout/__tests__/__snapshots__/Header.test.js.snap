@@ -119,8 +119,10 @@ exports[`<Header /> should render 1`] = `
         class="sc-hYRTwp dvHvuk"
       >
         <a
+          aria-label="Lancer ma recherche"
           class="sc-cGKJhA gLoGEX"
           href="/recherche"
+          rel="nofollow"
         >
           <svg
             aria-hidden="true"

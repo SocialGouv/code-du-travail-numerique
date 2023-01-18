@@ -15,7 +15,7 @@ export enum TypeLicenciement1486 {
 export enum CatPro1486 {
   etam = "ETAM",
   ingeCadre = "Ingénieurs et cadres",
-  chargeEnquete = "Chargés d'enquête intermittent",
+  chargeEnquete = "Chargés d'enquête intermittents",
 }
 
 export type CC1486ReferenceSalaryProps = {

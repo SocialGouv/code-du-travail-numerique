@@ -10,9 +10,9 @@ import { EditorialContentDataWrapper } from "cdtn-types";
 import { getInformationBySlug } from "../../src/information";
 import { Contents } from "../../src/information/Components";
 import { QuestionnaireWrapper } from "../../src/questionnaire";
+import { useRouter } from "next/router";
 
 const Information = ({
-  anchor,
   information: {
     _source: {
       breadcrumbs,
@@ -29,6 +29,8 @@ const Information = ({
     slug,
   } = { _source: {}, slug: "" },
 }: EditorialContentDataWrapper) => {
+  const { asPath } = useRouter();
+  const anchor = asPath.split("#")[1];
   return (
     <Layout>
       <Metas title={title} description={metaDescription} />
@@ -78,12 +80,13 @@ const Information = ({
 
 export default Information;
 
-Information.getInitialProps = async ({ query: { slug }, asPath }) => {
-  // beware, this one is undefined when rendered server-side
-  const anchor = asPath.split("#")[1];
-  const information = await getInformationBySlug(slug);
+export const getServerSideProps = async ({ query }) => {
+  const information = await getInformationBySlug(query.slug);
+  if (!information) {
+    return { notFound: true };
+  }
 
-  return { anchor, information };
+  return { props: { information, slug: query.slug } };
 };
 
 const SlugSummaryWrapper = styled(Wrapper)`

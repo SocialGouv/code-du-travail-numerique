@@ -2,17 +2,18 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
   applicable si: indemnité de licenciement
   valeur: oui
 
-contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age:
-  titre: Âge du salarié
-  question: Quel est l'âge du salarié à la fin de son préavis (exécuté ou non) &nbsp;?
-  cdtn:
-    type: entier
-
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . licenciement économique:
   titre: Licenciement pour motif économique
   question: Le motif du licenciement est-il économique ?
   cdtn:
     type: oui-non
+
+contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age:
+  applicable si: licenciement économique
+  titre: Âge du salarié
+  question: Quel est l'âge du salarié à la fin de son préavis (exécuté ou non) &nbsp;?
+  cdtn:
+    type: entier
 
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . ancienneté au-dela de 15 ans:
   somme:
@@ -33,7 +34,7 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . base moins de 15 ans:
-  remplace : base
+  remplace: base
   applicable si:
     toutes ces conditions:
       - indemnité de licenciement . ancienneté requise en année > 5
@@ -48,11 +49,11 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . base plus de 15 ans:
-  remplace : base
+  remplace: base
   applicable si: indemnité de licenciement . ancienneté requise en année > 15
   somme:
-      - indemnité de licenciement . salaire de référence conventionnel * indemnité de licenciement . ancienneté conventionnelle en année * 0.15
-      - indemnité de licenciement . salaire de référence conventionnel * ancienneté au-dela de 15 ans * 0.05
+    - indemnité de licenciement . salaire de référence conventionnel * indemnité de licenciement . ancienneté conventionnelle en année * 0.15
+    - indemnité de licenciement . salaire de référence conventionnel * ancienneté au-dela de 15 ans * 0.05
   unité: €
   cdtn:
     formule:
