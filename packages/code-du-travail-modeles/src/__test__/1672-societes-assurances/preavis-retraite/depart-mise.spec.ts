@@ -11,21 +11,18 @@ const engine = new Engine(mergeModels());
 
 const CommonDepartRetraiteReference = {
   article: "Article 93 a",
-  url:
-    "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005792106/?idConteneur=KALICONT000005635918",
+  url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005792106/?idConteneur=KALICONT000005635918",
 };
 
 const MiseRetraiteNonCadresReferences = [
   ...MiseRetraiteReferences,
   {
     article: "Article 93 b",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005792106/?idConteneur=KALICONT000005635918",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005792106/?idConteneur=KALICONT000005635918",
   },
   {
     article: "Article 91 a",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005792102/?idConteneur=KALICONT000005635918",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005792102/?idConteneur=KALICONT000005635918",
   },
 ];
 
@@ -34,8 +31,7 @@ const MiseRetraiteCadresReferences = [
   {
     article:
       'Article II. 6, accord relatif aux dispositions particulières "Cadres"',
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000026688804/?idConteneur=KALICONT000005635918",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000026688804/?idConteneur=KALICONT000005635918",
   },
 ];
 

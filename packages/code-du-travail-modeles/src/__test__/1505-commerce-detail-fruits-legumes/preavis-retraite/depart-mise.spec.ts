@@ -9,8 +9,7 @@ import {
 
 const ArticleCc = {
   article: "Article 23.3",
-  url:
-    "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562759#KALIARTI000043562759",
+  url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043562759#KALIARTI000043562759",
 };
 
 const DepartRetraiteCcReferences = [...DepartRetraiteReferences, ArticleCc];

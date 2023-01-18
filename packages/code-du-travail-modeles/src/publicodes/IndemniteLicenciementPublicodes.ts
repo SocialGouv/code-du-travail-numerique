@@ -7,7 +7,8 @@ import { PublicodesSimulator } from "./types";
 
 class IndemniteLicenciementPublicodes
   extends PublicodesBase<PublicodesIndemniteLicenciementResult>
-  implements Publicodes<PublicodesIndemniteLicenciementResult> {
+  implements Publicodes<PublicodesIndemniteLicenciementResult>
+{
   constructor(rules: string) {
     super(rules, PublicodesSimulator.INDEMNITE_LICENCIEMENT);
   }

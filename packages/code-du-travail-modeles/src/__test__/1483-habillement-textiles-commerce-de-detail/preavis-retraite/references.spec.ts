@@ -12,13 +12,11 @@ const DepartRetraite = [
   ...DepartRetraiteReferences,
   {
     article: "Chapitre I Article 19. a",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005840267/?idConteneur=KALICONT000005635594",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005840267/?idConteneur=KALICONT000005635594",
   },
   {
     article: "Chapitre II Article 12",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023097315/?idConteneur=KALICONT000005635594",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023097315/?idConteneur=KALICONT000005635594",
   },
 ];
 
@@ -26,13 +24,11 @@ const MiseRetraite = [
   ...MiseRetraiteReferences,
   {
     article: "Chapitre I Article 19. b",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005840267/?idConteneur=KALICONT000005635594",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005840267/?idConteneur=KALICONT000005635594",
   },
   {
     article: "Chapitre II Article 12",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023097315/?idConteneur=KALICONT000005635594",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023097315/?idConteneur=KALICONT000005635594",
   },
 ];
 

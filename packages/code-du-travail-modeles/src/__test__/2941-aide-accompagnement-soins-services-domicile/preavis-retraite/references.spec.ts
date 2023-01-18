@@ -12,8 +12,7 @@ const engine = new Engine(mergeModels());
 const MiseRetraiteReferencesBad = [
   {
     article: "Titre IV, article 26.1 et Titre IV, article 29",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000025805633/?idConteneur=KALICONT000025805800",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000025805633/?idConteneur=KALICONT000025805800",
   },
 ].concat(MiseRetraiteReferences);
 test("Vérification des références juridiques pour un employéen en depart à la retraite", () => {

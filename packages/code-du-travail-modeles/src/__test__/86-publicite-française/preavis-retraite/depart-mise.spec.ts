@@ -14,13 +14,11 @@ const DepartRetraiteReferencesEmployes = [
   ...DepartRetraiteReferences,
   {
     article: "Article 32.1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832772/?idConteneur=KALICONT000005635630",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832772/?idConteneur=KALICONT000005635630",
   },
   {
     article: "Article 30",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005857304?idConteneur=KALICONT000005635",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005857304?idConteneur=KALICONT000005635",
   },
 ];
 
@@ -28,13 +26,11 @@ const DepartRetraiteReferencesTechniciens = [
   ...DepartRetraiteReferences,
   {
     article: "Article 51.1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832767/?idConteneur=KALICONT000005635630",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832767/?idConteneur=KALICONT000005635630",
   },
   {
     article: "Article 49",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023734748/?idConteneur=KALICONT000005635630",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023734748/?idConteneur=KALICONT000005635630",
   },
 ];
 
@@ -42,13 +38,11 @@ const DepartRetraiteReferencesCadres = [
   ...DepartRetraiteReferences,
   {
     article: "Article 70.1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832762/?idConteneur=KALICONT000005635630",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832762/?idConteneur=KALICONT000005635630",
   },
   {
     article: "Article 68",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005857360/?idConteneur=KALICONT000005635630",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005857360/?idConteneur=KALICONT000005635630",
   },
 ];
 
@@ -56,13 +50,11 @@ const MiseRetraiteReferencesEmployes = [
   ...MiseRetraiteReferences,
   {
     article: "Article 32.2",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832772/?idConteneur=KALICONT000005635630",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832772/?idConteneur=KALICONT000005635630",
   },
   {
     article: "Article 30",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005857304?idConteneur=KALICONT000005635",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005857304?idConteneur=KALICONT000005635",
   },
 ];
 
@@ -70,13 +62,11 @@ const MiseRetraiteReferencesTechniciens = [
   ...MiseRetraiteReferences,
   {
     article: "Article 51.2",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832767/?idConteneur=KALICONT000005635630",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832767/?idConteneur=KALICONT000005635630",
   },
   {
     article: "Article 49",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023734748/?idConteneur=KALICONT000005635630",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000023734748/?idConteneur=KALICONT000005635630",
   },
 ];
 
@@ -84,13 +74,11 @@ const MiseRetraiteReferencesCadres = [
   ...MiseRetraiteReferences,
   {
     article: "Article 70.2",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832762/?idConteneur=KALICONT000005635630",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000036832762/?idConteneur=KALICONT000005635630",
   },
   {
     article: "Article 68",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005857360/?idConteneur=KALICONT000005635630",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005857360/?idConteneur=KALICONT000005635630",
   },
 ];
 

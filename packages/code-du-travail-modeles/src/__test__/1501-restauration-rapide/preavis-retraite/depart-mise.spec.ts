@@ -12,13 +12,11 @@ describe("restauration rapide", () => {
   const CCReferences = [
     {
       article: "Article 28",
-      url:
-        "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005833486/?idConteneur=KALICONT000005635596",
+      url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005833486/?idConteneur=KALICONT000005635596",
     },
     {
       article: "Article 12",
-      url:
-        "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005833465/?idConteneur=KALICONT000005635596",
+      url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005833465/?idConteneur=KALICONT000005635596",
     },
   ];
   const DepartRetraiteRefs = [...DepartRetraiteReferences, ...CCReferences];

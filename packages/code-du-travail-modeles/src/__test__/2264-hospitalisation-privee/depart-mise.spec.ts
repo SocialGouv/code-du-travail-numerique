@@ -11,8 +11,7 @@ const engine = new Engine(mergeModels());
 
 const CommonReference = {
   article: "Article 50.3",
-  url:
-    "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005802016/?idConteneur=KALICONT000005635813",
+  url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005802016/?idConteneur=KALICONT000005635813",
 };
 
 const DepartRetraiteCcReferences = [

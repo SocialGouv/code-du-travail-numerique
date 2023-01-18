@@ -12,8 +12,7 @@ const engine = new Engine(mergeModels());
 const DepartReferences = [
   {
     article: "Article 9.3.1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005870737/?idConteneur=KALICONT000005635871",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005870737/?idConteneur=KALICONT000005635871",
   },
 ];
 
@@ -25,8 +24,7 @@ const DepartRetraiteCcReferences = [
 const MiseRetraiteEmployesReferences = [
   {
     article: "Article 9.2.1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005870734?idConteneur=KALICONT000005635871",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005870734?idConteneur=KALICONT000005635871",
   },
 ];
 
@@ -38,8 +36,7 @@ const MiseRetraiteEmployesCcReferences = [
 const MiseRetraiteAgentsReferences = [
   {
     article: `Annexe "agents de maîtrise", article 9`,
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005870772/?idConteneur=KALICONT000005635871",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005870772/?idConteneur=KALICONT000005635871",
   },
 ];
 
@@ -51,8 +48,7 @@ const MiseRetraiteAgentsCcReferences = [
 const MiseRetraiteCadresReferences = [
   {
     article: `Annexe "cadres", article 9`,
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005870787/?idConteneur=KALICONT000005635871",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005870787/?idConteneur=KALICONT000005635871",
   },
 ];
 

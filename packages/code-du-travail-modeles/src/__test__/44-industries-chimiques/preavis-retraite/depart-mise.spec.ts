@@ -60,7 +60,8 @@ test.each`
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0044'",
         "contrat salarié . convention collective . industries chimiques . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . convention collective . industries chimiques . catégorie professionnelle . ouvriers et collaborateurs . coefficient": coefficient,
+        "contrat salarié . convention collective . industries chimiques . catégorie professionnelle . ouvriers et collaborateurs . coefficient":
+          coefficient,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
         "préavis de retraite": "oui",
@@ -95,7 +96,8 @@ test.each`
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0044'",
         "contrat salarié . convention collective . industries chimiques . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . convention collective . industries chimiques . catégorie professionnelle . agents de maitrise et techniciens . coefficient": coefficient,
+        "contrat salarié . convention collective . industries chimiques . catégorie professionnelle . agents de maitrise et techniciens . coefficient":
+          coefficient,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
         "préavis de retraite": "oui",

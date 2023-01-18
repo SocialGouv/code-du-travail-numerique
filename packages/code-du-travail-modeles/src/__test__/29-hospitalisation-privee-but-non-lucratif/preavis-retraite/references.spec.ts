@@ -12,16 +12,14 @@ const engine = new Engine(mergeModels());
 const Article_15_03_1_3 = [
   {
     article: "Article 15.03.1.3",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952839",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952839",
   },
 ];
 
 const Article_15_02_2_1 = [
   {
     article: "Article 15.02.2.1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952849",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000029952849",
   },
 ];
 

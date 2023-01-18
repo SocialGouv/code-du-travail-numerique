@@ -11,8 +11,7 @@ const engine = new Engine(mergeModels());
 
 const CommonReference = {
   article: "Chapitre VI, article 1er",
-  url:
-    "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000026803725/?idConteneur=KALICONT000005635870",
+  url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000026803725/?idConteneur=KALICONT000005635870",
 };
 
 const DepartRetraiteCcReferences = [

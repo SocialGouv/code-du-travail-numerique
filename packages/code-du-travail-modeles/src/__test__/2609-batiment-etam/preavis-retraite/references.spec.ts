@@ -12,15 +12,13 @@ const engine = new Engine(mergeModels());
 const MiseRetraite = [
   {
     article: "Article 8.12",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773877?idConteneur=KALICONT000018773893",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773877?idConteneur=KALICONT000018773893",
   },
 ];
 const DepartRetraite = [
   {
     article: "Article 8.9",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018773872/?idConteneur=KALICONT000018773893",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018773872/?idConteneur=KALICONT000018773893",
   },
 ];
 
