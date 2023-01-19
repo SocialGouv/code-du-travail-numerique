@@ -42,8 +42,6 @@ const orderByAlphaAndMetalurgieLast = (a, b) => {
  */
 router.get("/conventions", async (ctx) => {
   const body = getAllAgreements();
-  console.log(JSON.stringify(body));
-
   const response = await elasticsearchClient.search<SearchResponse<Agreement>>({
     body,
     index,

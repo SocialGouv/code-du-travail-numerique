@@ -1,5 +1,6 @@
 import { logger } from "@socialgouv/cdtn-logger";
 
+import contributionsRoutes from "./routes/contributions";
 import conventionsRoutes from "./routes/conventions";
 import docsCountRoutes from "./routes/docs-count";
 import dossiersRoute from "./routes/dossiers";
@@ -55,6 +56,7 @@ app.use(async (ctx, next) => {
 app.use(bodyParser());
 
 app.use(enterprisesRoute.routes());
+app.use(contributionsRoutes.routes());
 app.use(conventionsRoutes.routes());
 app.use(docsCountRoutes.routes());
 app.use(highlightRoutes.routes());
