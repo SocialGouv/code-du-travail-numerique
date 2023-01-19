@@ -9,6 +9,7 @@ export const getAllContributions = (): any => {
       "url",
       "slug",
       "breadcrumbs",
+      "source",
     ],
     query: {
       bool: {
