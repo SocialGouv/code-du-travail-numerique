@@ -1,5 +1,5 @@
-import { Button, Input, Label, Text, theme } from "@socialgouv/cdtn-ui";
-import React, { useState } from "react";
+import { Input, Label, Text, theme } from "@socialgouv/cdtn-ui";
+import React from "react";
 import styled from "styled-components";
 import {
   createSuggesterHook,
@@ -44,13 +44,10 @@ export const SearchEnterpriseInput = ({
     searchParams.query,
     searchParams.address
   );
-
-  const [query, setQuery] = useState("");
-  const [address, setAddress] = useState("");
   const searchInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const name = event.target.name;
     const value = event.target.value;
-    onSearchParamsChange({ ...searchParams, query: query, address: address });
+    onSearchParamsChange({ ...searchParams, [name]: value });
   };
 
   return (
@@ -73,12 +70,12 @@ export const SearchEnterpriseInput = ({
           </InfoBulle>
 
           <BlockInput
-            placeholder="Café de la gare ou 40123778000127"
-            value={query}
+            placeholder="Ex : Café de la gare ou 40123778000127"
+            value={searchParams.query}
             type="text"
             name="query"
             id="enterprise-search"
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={searchInputHandler}
             autoComplete="off"
           />
         </Box>
@@ -87,24 +84,14 @@ export const SearchEnterpriseInput = ({
             Code postal ou ville
           </InlineLabel>
           <BlockInput
-            placeholder="31000 ou Toulouse "
-            value={address}
+            placeholder="Ex : 31000 ou Toulouse "
+            value={searchParams.address}
             type="text"
             name="address"
             id="enterprise-search-address"
-            onChange={(e) => setAddress(e.target.value)}
+            onChange={searchInputHandler}
             autoComplete="off"
           />
-        </Box>
-        <Box>
-          <Button
-            variant="primary"
-            type="submit"
-            aria-label="Lancer ma recherche"
-            onClick={searchInputHandler}
-          >
-            Rechercher
-          </Button>
         </Box>
       </Flex>
 
@@ -132,9 +119,10 @@ const Flex = styled.div`
 `;
 
 const Box = styled.div`
-  flex-grow: 2;
+  flex: 1;
+
   & + & {
-    flex-grow: 1;
+    flex: 0 1 25rem;
     padding-left: ${theme.spacings.xmedium};
     @media (max-width: ${theme.breakpoints.mobile}) {
       padding-top: ${theme.spacings.xmedium};

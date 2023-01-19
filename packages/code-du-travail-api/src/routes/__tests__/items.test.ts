@@ -1,9 +1,7 @@
+import Koa from "koa";
+import request from "supertest";
+
 import router from "../items";
-
-const request = require("supertest");
-const Koa = require("koa");
-
-require("./__mocking__/mockNLP");
 
 jest.mock("@socialgouv/cdtn-elasticsearch");
 
