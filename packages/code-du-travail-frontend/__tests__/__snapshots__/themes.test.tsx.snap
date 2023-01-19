@@ -1453,31 +1453,36 @@ exports[`<Theme /> should render 1`] = `
           >
             <a
               class="c38 c39"
-              href="/themes/121-cdi"
+              data-testid="theme-item"
+              href="/themes//themes/121-cdi"
             >
               CDI
             </a>
             <a
               class="c38 c39"
-              href="/themes/122-cdd"
+              data-testid="theme-item"
+              href="/themes//themes/122-cdd"
             >
               CDD
             </a>
             <a
               class="c38 c39"
-              href="/themes/123-interim"
+              data-testid="theme-item"
+              href="/themes//themes/123-interim"
             >
               Intérim
             </a>
             <a
               class="c38 c39"
-              href="/themes/124-contrat-dapprentissage"
+              data-testid="theme-item"
+              href="/themes//themes/124-contrat-dapprentissage"
             >
               Contrat d'apprentissage
             </a>
             <a
               class="c38 c39"
-              href="/themes/125-contrat-de-professionnalisation"
+              data-testid="theme-item"
+              href="/themes//themes/125-contrat-de-professionnalisation"
             >
               Contrat de professionnalisation
             </a>
