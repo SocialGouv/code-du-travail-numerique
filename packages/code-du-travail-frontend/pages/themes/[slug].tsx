@@ -14,6 +14,7 @@ import { Layout } from "../../src/layout/Layout";
 import { SearchResults } from "../../src/search/SearchResults";
 import { handleError } from "../../src/lib/fetch-error";
 import { API_URL } from "../../src/config";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 
 interface Props {
   theme;
@@ -35,8 +36,15 @@ function Theme(props: Props): JSX.Element {
           {theme.children && theme.children.length > 0 && (
             <StyledContainer>
               {theme.children.map(({ slug, label }) => (
-                <Link key={slug} href={slug} passHref legacyBehavior>
-                  <Button as={StyledLink}>{label}</Button>
+                <Link
+                  key={slug}
+                  href={`/${getRouteBySource(SOURCES.THEMES)}/${slug}`}
+                  passHref
+                  legacyBehavior
+                >
+                  <Button as={StyledLink} data-testid="theme-item">
+                    {label}
+                  </Button>
                 </Link>
               ))}
             </StyledContainer>
