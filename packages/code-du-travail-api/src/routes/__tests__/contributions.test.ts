@@ -13,13 +13,13 @@ describe("Contributions", () => {
         "/api/v1/contributions"
       );
       expect(response.status).toBe(200);
-      expect(response.body.length).toEqual(42);
-      expect(response.body[0].title).toEqual(
-        "Arrêt maladie pendant la période d'essai : quelles sont les règles ?"
-      );
-      expect(response.body[0].theme).toEqual("Embauche et contrat de travail");
-      expect(response.body[response.body.length - 1].title).toEqual(
-        "À quelles indemnités peut prétendre un salarié qui part à la retraite ?"
+      const contribs = response.body;
+      const themes = Object.keys(contribs);
+      expect(themes.length).toEqual(15);
+      expect(themes[0]).toEqual("Embauche et contrat de travail");
+      expect(contribs[themes[0]].length).toEqual(15);
+      expect(contribs[themes[0]][0].title).toEqual(
+        "La période d’essai peut-elle être renouvelée ?"
       );
     });
   });

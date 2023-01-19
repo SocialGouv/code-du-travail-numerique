@@ -10,6 +10,9 @@ const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
 const router = new Router({ prefix: API_BASE_URL });
 
+const getBreadcrumbInFirstPosition = (a, b) =>
+  a.position < b.position ? a : b;
+
 /**
  * Return a list of all the generic contributions
  *
@@ -29,11 +32,16 @@ router.get("/contributions", async (ctx) => {
     .map(({ _source }) => _source)
     .map((contrib) => {
       const { breadcrumbs, ...contribWithTheme } = contrib;
-      contribWithTheme.theme = breadcrumbs.find(
-        (breadcrumb) => breadcrumb.position === 1
+      contribWithTheme.theme = breadcrumbs.reduce(
+        getBreadcrumbInFirstPosition
       ).label;
       return contribWithTheme;
-    });
+    })
+    .reduce(function (prev, item) {
+      if (item.theme in prev) prev[item.theme].push(item);
+      else prev[item.theme] = [item];
+      return prev;
+    }, {});
 });
 
 export default router;
