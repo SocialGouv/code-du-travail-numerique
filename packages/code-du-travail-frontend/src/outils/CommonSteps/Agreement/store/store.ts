@@ -11,6 +11,7 @@ import {
 import { STORAGE_KEY_AGREEMENT, StoreSlice } from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { Agreement } from "../../../../conventions/Search/api/type";
+import { ValidationResponse } from "../../../Components/SimulatorLayout";
 
 const initialState: CommonAgreementStoreData = {
   input: {},
@@ -74,7 +75,7 @@ const createCommonAgreementStore: StoreSlice<
           state.agreementData.error = errorState;
         })
       );
-      return isValid;
+      return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
     },
   },
 });

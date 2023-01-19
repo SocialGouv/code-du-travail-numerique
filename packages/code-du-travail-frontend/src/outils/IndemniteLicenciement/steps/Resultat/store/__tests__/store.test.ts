@@ -40,7 +40,7 @@ describe("Result store", () => {
         },
       },
     ]);
-    store.getState().ancienneteFunction.onValidateStepAnciennete();
+    store.getState().ancienneteFunction.onValidateWithEligibility();
 
     // Salaire ref
     store.getState().salairesFunction.onChangeHasTempsPartiel("non");
@@ -97,7 +97,7 @@ describe("Result store", () => {
         value: 2000,
       },
     ]);
-    store.getState().salairesFunction.onValidateStepSalaires();
+    store.getState().salairesFunction.onValidateStep();
 
     // Contrat de travail
     store

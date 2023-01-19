@@ -1,4 +1,3 @@
-import { Agreement } from "../../../../../conventions/Search/api/type";
 import { deepEqualObject } from "../../../../../lib";
 import { CommonInformationsStoreInput } from "../../../../CommonSteps/Informations/store";
 import {
@@ -15,12 +14,11 @@ import { getDateSortieErrors } from "./dateSortie";
 export const validateStep = (
   state: AncienneteStoreInput,
   stateContratTravail: ContratTravailStoreInput,
-  information: CommonInformationsStoreInput,
-  agreeement?: Agreement
+  information: CommonInformationsStoreInput
 ) => {
   const errors: AncienneteStoreError = {
     ...getDateEntreeErrors(state),
-    ...getDateSortieErrors(state, agreeement),
+    ...getDateSortieErrors(state),
     ...getAbsencePeriodsErrors(state, information),
     ...getAbsenceProlongeErrors(state),
     ...getDateArretTravailErrors(state, stateContratTravail),

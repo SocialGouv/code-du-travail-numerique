@@ -1,5 +1,6 @@
 import { StepData } from "../../../store";
 import { OuiNon } from "../../../common/types";
+import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 
 type CdiCdd = "cdi" | "cdd";
 
@@ -33,8 +34,7 @@ export type ContratTravailStoreFn = {
   onChangeLicenciementInaptitude: (value: OuiNon) => void;
   onChangeArretTravail: (value: OuiNon) => void;
   onChangeDateArretTravail: (value: string) => void;
-  onValidateStepInfo: () => boolean;
-  onEligibilityCheckStepInfo: () => boolean;
+  onValidateWithEligibility: () => ValidationResponse;
 };
 
 export type ContratTravailStoreSlice = {

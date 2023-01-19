@@ -1,5 +1,4 @@
 import {
-  computeRequiredSeniority,
   Formula,
   IndemniteLicenciementPublicodes,
   Notification,
@@ -24,15 +23,17 @@ import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/sto
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
 import {
   AgreementInformation,
-  hasNoLegalIndemnity,
   getSupportedCcIndemniteLicenciement,
+  hasNoLegalIndemnity,
 } from "../../../common";
 import { getAgreementReferenceSalary } from "../../../agreements";
 import { MainStore } from "../../../store";
 import { StoreApi } from "zustand";
-import getAgreementSeniority from "../../../agreements/seniority";
+import {
+  getAgreementSeniority,
+  getAgreementRequiredSeniority,
+} from "../../../agreements/seniority";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
-import { dateOneDayLater } from "../../../common/date";
 import { getInfoWarning } from "./service";
 
 const initialState: ResultStoreData = {
@@ -125,13 +126,8 @@ const createResultStore: StoreSlice<
       const isLicenciementInaptitude =
         get().contratTravailData.input.licenciementInaptitude === "oui";
       const publicodes = get().resultData.publicodes;
-      const dateSortie = dateOneDayLater(
-        get().ancienneteData.input.dateSortie!
-      );
-      const requiredSeniority = computeRequiredSeniority({
-        dateEntree: get().ancienneteData.input.dateEntree!,
-        dateNotification: get().ancienneteData.input.dateNotification!,
-      });
+      const dateNotification = get().ancienneteData.input.dateNotification!;
+      const dateSortie = get().ancienneteData.input.dateSortie!;
       if (!publicodes) {
         throw new Error("Publicodes is not defined");
       }
@@ -145,9 +141,17 @@ const createResultStore: StoreSlice<
         absencePeriods: get().ancienneteData.input.absencePeriods,
       });
 
+      const legalRequiredSeniority = factory.computeRequiredSeniority({
+        dateEntree: get().ancienneteData.input.dateEntree!,
+        dateNotification,
+        dateSortie: get().ancienneteData.input.dateSortie!,
+        absencePeriods: get().ancienneteData.input.absencePeriods,
+      });
+
       const publicodesSituationLegal = publicodes.setSituation(
         mapToPublicodesSituationForIndemniteLicenciementLegal(
           legalSeniority.value,
+          legalRequiredSeniority.value,
           refSalary,
           isLicenciementInaptitude
         )
@@ -192,14 +196,16 @@ const createResultStore: StoreSlice<
           `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
           get as StoreApi<MainStore>["getState"]
         );
+        const agreementRequiredSeniority = getAgreementRequiredSeniority(
+          `IDCC${agreement.num}` as SupportedCcIndemniteLicenciement,
+          get as StoreApi<MainStore>["getState"]
+        );
         publicodesSituationConventionnel = publicodes.setSituation(
           mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues(
             agreement.num,
             agreementSeniority,
             agreementRefSalary,
-            legalSeniority,
-            requiredSeniority,
-            refSalary,
+            agreementRequiredSeniority.value,
             get().ancienneteData.input.dateNotification!,
             infos
           ),

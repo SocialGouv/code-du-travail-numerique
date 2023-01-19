@@ -23,7 +23,7 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
 contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle . résultat conventionnel:
   applicable si:
     toutes ces conditions:
-      - indemnité de licenciement . ancienneté requise en année >= 8 mois
+      - indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
       - inaptitude suite à un accident non professionnelle = 'Oui'
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
@@ -36,7 +36,7 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
     Article 16: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000024922383?idConteneur=KALICONT000005635550&origin=list#KALIARTI000024922383
 
 contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle . résultat conventionnel . formule moins de 10 ans:
-  applicable si: indemnité de licenciement . ancienneté requise en année <= 10 an
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année <= 10 an
   valeur: oui
   cdtn:
     formule:
@@ -46,7 +46,7 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
       formula: 1/4 * Sref * A
 
 contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle . résultat conventionnel . formule au dela de 10 ans:
-  applicable si: indemnité de licenciement . ancienneté requise en année > 10 an
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année > 10 an
   valeur: oui
   cdtn:
     formule:
@@ -128,8 +128,8 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . non cadres . résultat conventionnel:
   applicable si:
     toutes ces conditions:
-      - indemnité de licenciement . ancienneté requise en année >= 2 an
-      - indemnité de licenciement . ancienneté requise en année <= 5 an
+      - indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
+      - indemnité de licenciement . ancienneté conventionnelle requise en année <= 5 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   valeur: (1 / 10) * indemnité de licenciement . salaire de référence conventionnel * nombre d'années entre 0 et 5 ans
   unité: €
@@ -145,7 +145,7 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . non cadres . résultat conventionnel plus de 5 ans:
-  applicable si: indemnité de licenciement . ancienneté requise en année > 5 an
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année > 5 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - (1 / 10) * indemnité de licenciement . salaire de référence conventionnel * nombre d'années entre 0 et 5 ans
@@ -182,7 +182,7 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
     type: entier
 
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . base:
-  applicable si: indemnité de licenciement . ancienneté requise en année >= 2 an
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
   somme:
     - (3 / 10) * indemnité de licenciement . salaire de référence conventionnel * nombre d'années entre 0 et 5 ans
     - (4 / 10) * indemnité de licenciement . salaire de référence conventionnel * nombre d'années entre 6 et 10 ans
@@ -201,7 +201,7 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
   unité: €
 
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . résultat conventionnel:
-  applicable si: indemnité de licenciement . ancienneté requise en année >= 2 an
+  applicable si: indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   somme:
     - base
@@ -222,7 +222,7 @@ contrat salarié . convention collective . personnel presta service tertiaire . 
 contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . résultat conventionnel . formule plus de 5 ans:
   applicable si:
     toutes ces conditions:
-      - indemnité de licenciement . ancienneté requise en année > 5 an
+      - indemnité de licenciement . ancienneté conventionnelle requise en année > 5 an
       - résultat conventionnel != indemnité de licenciement . salaire de référence conventionnel * 18
   valeur: oui
   cdtn:

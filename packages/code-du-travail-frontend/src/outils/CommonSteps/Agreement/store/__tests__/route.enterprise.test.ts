@@ -1,6 +1,7 @@
 import { Route } from "../types";
 import { createIndemniteLicenciementStore } from "../../../../IndemniteLicenciement/store";
 import { loadPublicodesRules } from "../../../../api";
+import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 
 describe("[Store] Un utilisateur souhaite trouver sa convention collective", () => {
   let store: ReturnType<typeof createIndemniteLicenciementStore>;
@@ -30,7 +31,7 @@ describe("[Store] Un utilisateur souhaite trouver sa convention collective", () 
 
   it("should render an error for field uncompleted", () => {
     const isValid = store.getState().agreementFunction.onValidateStep();
-    expect(isValid).toBe(false);
+    expect(isValid).toBe(ValidationResponse.NotValid);
     expect(store.getState().agreementData.error.route).toBe(
       "Vous devez répondre à cette question"
     );
@@ -57,7 +58,7 @@ describe("[Store] Un utilisateur souhaite trouver sa convention collective", () 
       }
     );
     const isValid = store.getState().agreementFunction.onValidateStep();
-    expect(isValid).toBe(true);
+    expect(isValid).toBe(ValidationResponse.Valid);
     expect(store.getState().agreementData.error.route).toBe(undefined);
   });
 });
