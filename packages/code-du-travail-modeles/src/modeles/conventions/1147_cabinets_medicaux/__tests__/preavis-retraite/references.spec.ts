@@ -1,13 +1,10 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { getReferences } from "../../../../common";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 const MiseRetraite = [
   {
@@ -25,16 +22,15 @@ test.each`
 `(
   "Vérification des références juridiques pour un $category en $retirement à la retraite",
   ({ retirement, expectedReferences, category }) => {
-    const result = getReferences(
-      engine.setSituation({
-        "contrat salarié . ancienneté": 5,
-        "contrat salarié . convention collective": "'IDCC1147'",
-        "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . mise à la retraite":
-          retirement === "mise" ? "oui" : "non",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
+    engine.setSituation({
+      "contrat salarié . ancienneté": "5",
+      "contrat salarié . convention collective": "'IDCC1147'",
+      "contrat salarié . convention collective . cabinets médicaux . catégorie professionnelle": `'${category}'`,
+      "contrat salarié . mise à la retraite":
+        retirement === "mise" ? "oui" : "non",
+      "contrat salarié . travailleur handicapé": "non",
+    });
+    const result = engine.getReferences();
 
     expect(result).toHaveLength(expectedReferences.length);
     expect(result).toEqual(expect.arrayContaining(expectedReferences));

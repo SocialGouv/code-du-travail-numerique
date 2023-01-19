@@ -1,11 +1,11 @@
-import Engine from "publicodes";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
-import { getFormule } from "../../../../common";
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "1702"
+);
 
 describe("Formule indemnité licenciement - 1702", () => {
-  const engine = new Engine(mergeIndemniteLicenciementModels());
-
   test.each`
     seniority | age   | salaireRef | expectedFormula                                                                                    | expectedExplanations
     ${3}      | ${54} | ${2700}    | ${"1/10 * Sref * A"}                                                                               | ${["A : Années d'ancienneté (3 ans)", "Sref : Salaire de référence (2700 €)"]}
@@ -19,7 +19,7 @@ describe("Formule indemnité licenciement - 1702", () => {
   `(
     "Autre licenciement: Formule avec ancienneté: $seniority ans et age : $age",
     ({ age, seniority, salaireRef, expectedFormula, expectedExplanations }) => {
-      const situation = engine.setSituation({
+      engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1702'",
         "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age": age,
         "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . licenciement économique": `'Non'`,
@@ -27,7 +27,7 @@ describe("Formule indemnité licenciement - 1702", () => {
         "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
       });
-      const result = getFormule(situation);
+      const result = engine.getFormule();
 
       expect(result.formula).toEqual(expectedFormula);
       expect(result.explanations).toEqual(expectedExplanations);
@@ -47,7 +47,7 @@ describe("Formule indemnité licenciement - 1702", () => {
   `(
     "Licenciement éco: Formule avec $seniority ans et age : $age",
     ({ age, seniority, salaireRef, expectedFormula, expectedExplanations }) => {
-      const situation = engine.setSituation({
+      engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1702'",
         "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age": age,
         "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . licenciement économique": `'Oui'`,
@@ -55,7 +55,7 @@ describe("Formule indemnité licenciement - 1702", () => {
         "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
       });
-      const result = getFormule(situation);
+      const result = engine.getFormule();
 
       expect(result.formula).toEqual(expectedFormula);
       expect(result.explanations).toEqual(expectedExplanations);

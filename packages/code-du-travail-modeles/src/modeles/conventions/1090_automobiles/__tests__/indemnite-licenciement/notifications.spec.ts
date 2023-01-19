@@ -1,4 +1,9 @@
-import { getNotifications } from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "1090"
+);
 
 const notification =
   "Si le congé parental a été pris entre le 23/07/2011 et le 31/12/2013, le montant de l’indemnité pourrait être plus important car l’ancienneté retenue peut-être plus importante.";
@@ -15,14 +20,14 @@ describe("Notification pour la CC 1090", () => {
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, catégorie $category => $expectedCompensation €",
       ({ seniority, salary }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1090'",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
           "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const notifications = getNotifications(situation);
+        const notifications = engine.getNotifications();
         expect(notifications).toHaveLength(0);
       }
     );
@@ -39,7 +44,7 @@ describe("Notification pour la CC 1090", () => {
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, catégorie $category => $expectedCompensation €",
       ({ seniority, salary }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1090'",
           "contrat salarié . convention collective . automobiles . indemnité de licenciement . congé parental d'éducation total":
             "oui",
@@ -48,7 +53,7 @@ describe("Notification pour la CC 1090", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const notifications = getNotifications(situation);
+        const notifications = engine.getNotifications();
         expect(notifications).toHaveLength(1);
         expect(notifications[0].description).toBe(notification);
       }

@@ -1,13 +1,10 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { getReferences } from "../../../../common";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 const DepartRetraiteCcReferences = [
   ...DepartRetraiteReferences,
@@ -43,14 +40,13 @@ const MiseRetraiteCCReferencesCharge = [
 
 describe("Références juridiques pour le préavis de retraite de la CC 1486", () => {
   test("Départ à la retraite", () => {
-    const result = getReferences(
-      engine.setSituation({
-        "contrat salarié . ancienneté": 6,
-        "contrat salarié . convention collective": "'IDCC1486'",
-        "contrat salarié . mise à la retraite": "non",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
+    engine.setSituation({
+      "contrat salarié . ancienneté": "6",
+      "contrat salarié . convention collective": "'IDCC1486'",
+      "contrat salarié . mise à la retraite": "non",
+      "contrat salarié . travailleur handicapé": "non",
+    });
+    const result = engine.getReferences();
     expect(result).toHaveLength(DepartRetraiteCcReferences.length);
     expect(result).toEqual(expect.arrayContaining(DepartRetraiteCcReferences));
   });
@@ -60,15 +56,14 @@ describe("Références juridiques pour le préavis de retraite de la CC 1486", (
     ${"Autres salariés"}                 | ${MiseRetraiteCCReferencesAutre}
     ${"Chargés d'enquête intermittents"} | ${MiseRetraiteCCReferencesCharge}
   `("Mise à la retraite", ({ category, expectedReferences }) => {
-    const result = getReferences(
-      engine.setSituation({
-        "contrat salarié . ancienneté": 6,
-        "contrat salarié . convention collective": "'IDCC1486'",
-        "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
+    engine.setSituation({
+      "contrat salarié . ancienneté": "6",
+      "contrat salarié . convention collective": "'IDCC1486'",
+      "contrat salarié . convention collective . bureaux études techniques . catégorie professionnelle": `'${category}'`,
+      "contrat salarié . mise à la retraite": "oui",
+      "contrat salarié . travailleur handicapé": "non",
+    });
+    const result = engine.getReferences();
 
     expect(result).toHaveLength(expectedReferences.length);
     expect(result).toEqual(expect.arrayContaining(expectedReferences));

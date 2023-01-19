@@ -1,9 +1,6 @@
-import Engine from "publicodes";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
-import { getNotifications } from "../../../../common";
-
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 test.each`
   seniority | category                 | expectedNotice
@@ -37,19 +34,20 @@ test.each`
 `(
   "Pour un $category possédant $seniority mois d'ancienneté, son préavis de mise à la retraite devrait être de $expectedNotice mois",
   ({ seniority, category, expectedNotice }) => {
-    const result = engine
-      .setSituation({
+    const { result, missingArgs } = engine.setSituation(
+      {
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0029'",
         "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-      })
-      .evaluate("contrat salarié . préavis de retraite");
+      },
+      "contrat salarié . préavis de retraite en jours"
+    );
 
-    expect(result.nodeValue).toEqual(expectedNotice);
-    expect(result.unit?.numerators).toEqual(["mois"]);
-    expect(result.missingVariables).toEqual({});
+    expect(result.value).toEqual(expectedNotice);
+    expect(result.unit).toEqual("mois");
+    expect(missingArgs).toEqual([]);
   }
 );
 
@@ -64,20 +62,21 @@ test.each`
 `(
   "Pour un Cadres administratifs et de gestion possédant (coefficient: $coefficient) $seniority mois d'ancienneté, son préavis de mise à la retraite devrait être de $expectedNotice mois",
   ({ seniority, coefficient, expectedNotice }) => {
-    const result = engine
-      .setSituation({
+    const { result, missingArgs } = engine.setSituation(
+      {
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0029'",
         "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'Cadres administratifs et de gestion'`,
         "contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient": coefficient,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-      })
-      .evaluate("contrat salarié . préavis de retraite");
+      },
+      "contrat salarié . préavis de retraite en jours"
+    );
 
-    expect(result.nodeValue).toEqual(expectedNotice);
-    expect(result.unit?.numerators).toEqual(["mois"]);
-    expect(result.missingVariables).toEqual({});
+    expect(result.value).toEqual(expectedNotice);
+    expect(result.unit).toEqual("mois");
+    expect(missingArgs).toEqual([]);
   }
 );
 
@@ -119,16 +118,15 @@ test.each`
 `(
   "Pour un employé d'une mise à la retraite, on attend une notification",
   ({ seniority, category, coefficient }) => {
-    const notifications = getNotifications(
-      engine.setSituation({
-        "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective": "'IDCC0029'",
-        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient": coefficient,
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
+    engine.setSituation({
+      "contrat salarié . ancienneté": seniority,
+      "contrat salarié . convention collective": "'IDCC0029'",
+      "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
+      "contrat salarié . convention collective . hospitalisation privée à but non lucratif . coefficient": coefficient,
+      "contrat salarié . mise à la retraite": "oui",
+      "contrat salarié . travailleur handicapé": "non",
+    });
+    const notifications = engine.getNotifications();
 
     expect(notifications).toHaveLength(1);
     expect(notifications[0].description).toBe(

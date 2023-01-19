@@ -1,3 +1,7 @@
+import { IndemniteLicenciementPublicodes } from "../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(modelsIndemniteLicenciement);
+
 describe("Indemnité légale de licenciement pour un employé", () => {
   test.each`
     seniority             | salary  | expectedCompensation
@@ -18,19 +22,15 @@ describe("Indemnité légale de licenciement pour un employé", () => {
   `(
     "ancienneté: $seniority mois, salaire de référence: $salary => $expectedCompensation €",
     ({ seniority, salary, expectedCompensation }) => {
-      const result = engine
-        .setSituation({
-          "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
-          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-            "non",
-          "contrat salarié . indemnité de licenciement . salaire de référence": salary,
-        })
-        .evaluate(
-          "contrat salarié . indemnité de licenciement . résultat légal"
-        );
-      expect(result.nodeValue).toEqual(expectedCompensation);
+      const { result, missingArgs } = engine.setSituation({
+        "contrat salarié . indemnité de licenciement . ancienneté en année": seniority.toString(),
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
+        "contrat salarié . indemnité de licenciement . salaire de référence": salary.toString(),
+      });
+      expect(result.value).toEqual(expectedCompensation);
       expect(result.unit?.numerators).toEqual(["€"]);
-      expect(result.missingVariables).toEqual({});
+      expect(missingArgs).toEqual([]);
     }
   );
   test.each`
@@ -52,19 +52,15 @@ describe("Indemnité légale de licenciement pour un employé", () => {
   `(
     "licenciement pour inaptitude : ancienneté: $seniority mois, salaire de référence: $salary => $expectedCompensation €",
     ({ seniority, salary, expectedCompensation }) => {
-      const result = engine
-        .setSituation({
-          "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
-          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-            "oui",
-          "contrat salarié . indemnité de licenciement . salaire de référence": salary,
-        })
-        .evaluate(
-          "contrat salarié . indemnité de licenciement . résultat légal"
-        );
-      expect(result.nodeValue).toEqual(expectedCompensation);
+      const { result, missingArgs } = engine.setSituation({
+        "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "oui",
+        "contrat salarié . indemnité de licenciement . salaire de référence": salary,
+      });
+      expect(result.value).toEqual(expectedCompensation);
       expect(result.unit?.numerators).toEqual(["€"]);
-      expect(result.missingVariables).toEqual({});
+      expect(missingArgs).toEqual([]);
     }
   );
 });

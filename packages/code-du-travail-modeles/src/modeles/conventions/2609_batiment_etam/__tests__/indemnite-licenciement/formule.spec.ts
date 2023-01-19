@@ -1,10 +1,11 @@
-import Engine from "publicodes";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
-import { getFormule } from "../../../../common";
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "2609"
+);
 
 describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée pour la CC 2609", () => {
-  const engine = new Engine(mergeIndemniteLicenciementModels());
   test.each`
     seniority  | age   | expectedFormula                                                                                                    | expectedExplanations
     ${2}       | ${50} | ${""}                                                                                                              | ${[]}
@@ -28,7 +29,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
   `(
     "Ancienneté: $seniority ans, catégorie: $category, age: $age, droit à la retraite: $haveRightToRetirement => $expectedFormula",
     ({ seniority, age, expectedFormula, expectedExplanations }) => {
-      const situation = engine.setSituation({
+      engine.setSituation({
         "contrat salarié . convention collective": "'IDCC2609'",
         "contrat salarié . convention collective . batiment etam . indemnité de licenciement . age à la fin de son préavis": age,
         "contrat salarié . indemnité de licenciement": "oui",
@@ -38,7 +39,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
           "1000",
       });
 
-      const formule = getFormule(situation);
+      const formule = engine.getFormule();
 
       expect(formule.formula).toEqual(expectedFormula);
       expect(formule.explanations).toEqual(expectedExplanations);

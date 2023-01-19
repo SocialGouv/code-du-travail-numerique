@@ -1,13 +1,10 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { getReferences } from "../../../../common";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 const DépartRetraiteNonLogéInférieur602References = [
   ...DepartRetraiteReferences,
@@ -87,16 +84,15 @@ describe("Vérification juridiques de la CC 1043", () => {
     `(
       "Vérification des références juridiques pour un salarié $category en $retirement à la retraite ayant un logement : $accommodation et avec ce coefficient $coefficient",
       ({ category, expectedReferences, accommodation, coefficient }) => {
-        const result = getReferences(
-          engine.setSituation({
-            "contrat salarié . convention collective": "'IDCC1043'",
-            "contrat salarié . convention collective . gardien concierge . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . gardien concierge . coefficient": `'${coefficient}'`,
-            "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
-            "contrat salarié . mise à la retraite": "non",
-            "contrat salarié . travailleur handicapé": "non",
-          })
-        );
+        engine.setSituation({
+          "contrat salarié . convention collective": "'IDCC1043'",
+          "contrat salarié . convention collective . gardien concierge . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . gardien concierge . coefficient": `'${coefficient}'`,
+          "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
+          "contrat salarié . mise à la retraite": "non",
+          "contrat salarié . travailleur handicapé": "non",
+        });
+        const result = engine.getReferences();
 
         expect(result).toHaveLength(expectedReferences.length);
         expect(result).toEqual(expect.arrayContaining(expectedReferences));
@@ -118,16 +114,15 @@ describe("Vérification juridiques de la CC 1043", () => {
     `(
       "Vérification des références juridiques pour un salarié $category en $retirement à la retraite ayant un logement : $accommodation et avec ce coefficient $coefficient",
       ({ category, expectedReferences, accommodation, coefficient }) => {
-        const result = getReferences(
-          engine.setSituation({
-            "contrat salarié . convention collective": "'IDCC1043'",
-            "contrat salarié . convention collective . gardien concierge . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . gardien concierge . coefficient": `'${coefficient}'`,
-            "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
-            "contrat salarié . mise à la retraite": "oui",
-            "contrat salarié . travailleur handicapé": "non",
-          })
-        );
+        engine.setSituation({
+          "contrat salarié . convention collective": "'IDCC1043'",
+          "contrat salarié . convention collective . gardien concierge . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . convention collective . gardien concierge . coefficient": `'${coefficient}'`,
+          "contrat salarié . convention collective . gardien concierge . logement": `'${accommodation}'`,
+          "contrat salarié . mise à la retraite": "oui",
+          "contrat salarié . travailleur handicapé": "non",
+        });
+        const result = engine.getReferences();
 
         expect(result).toHaveLength(expectedReferences.length);
         expect(result).toEqual(expect.arrayContaining(expectedReferences));

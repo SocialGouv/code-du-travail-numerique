@@ -33,7 +33,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
   }
 
   setSituation(
-    args: Record<string, string>,
+    args: Record<string, string | undefined>,
     targetRule?: string
   ): PublicodesData<TResult> {
     const { missingArgs, result, situation } = this.updateSituation(
@@ -65,8 +65,10 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     return getFormule(this.engine);
   }
 
-  private buildSituation(map: SituationElement[]): Record<string, string> {
-    const situation: Record<string, string> = {};
+  private buildSituation(
+    map: SituationElement[]
+  ): Record<string, string | undefined> {
+    const situation: Record<string, string | undefined> = {};
     map.forEach((arg) => {
       situation[arg.rawNode.nom] = arg.value;
     });
@@ -99,7 +101,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
 
   private updateSituation(
     situation: SituationElement[],
-    args: Record<string, string>,
+    args: Record<string, string | undefined>,
     targetRule: string
   ): {
     missingArgs: MissingArgs[];

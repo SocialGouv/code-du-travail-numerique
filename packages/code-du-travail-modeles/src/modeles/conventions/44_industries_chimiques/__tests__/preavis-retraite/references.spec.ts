@@ -1,13 +1,10 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { getReferences } from "../../../../common";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 const MiseRetraiteOuvrierCollaborateurReferences = [
   {
@@ -36,14 +33,13 @@ const MiseRetraiteCadresReferences = [
 ];
 
 test("Vérification des références juridiques pour un employé en départ à la retraite", () => {
-  const result = getReferences(
-    engine.setSituation({
-      "contrat salarié . ancienneté": 6,
-      "contrat salarié . convention collective": "'IDCC0044'",
-      "contrat salarié . mise à la retraite": "non",
-      "contrat salarié . travailleur handicapé": "non",
-    })
-  );
+  engine.setSituation({
+    "contrat salarié . ancienneté": "6",
+    "contrat salarié . convention collective": "'IDCC0044'",
+    "contrat salarié . mise à la retraite": "non",
+    "contrat salarié . travailleur handicapé": "non",
+  });
+  const result = engine.getReferences();
 
   expect(result).toEqual(expect.arrayContaining(DepartRetraiteReferences));
 });
@@ -60,16 +56,16 @@ test.each`
 `(
   "Vérification des références juridiques pour un $category en mise à la retraite",
   ({ category, expectedReferences }) => {
-    const result = getReferences(
-      engine.setSituation({
-        "contrat salarié . ancienneté": 5,
-        "contrat salarié . convention collective": "'IDCC0044'",
-        "contrat salarié . convention collective . industries chimiques . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . convention collective . industries chimiques . catégorie professionnelle . ouvriers et collaborateurs . coefficient": 200,
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
+    engine.setSituation({
+      "contrat salarié . ancienneté": "5",
+      "contrat salarié . convention collective": "'IDCC0044'",
+      "contrat salarié . convention collective . industries chimiques . catégorie professionnelle": `'${category}'`,
+      "contrat salarié . convention collective . industries chimiques . catégorie professionnelle . ouvriers et collaborateurs . coefficient":
+        "200",
+      "contrat salarié . mise à la retraite": "oui",
+      "contrat salarié . travailleur handicapé": "non",
+    });
+    const result = engine.getReferences();
 
     expect(result).toHaveLength(expectedReferences.length);
     expect(result).toEqual(expect.arrayContaining(expectedReferences));

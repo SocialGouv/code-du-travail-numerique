@@ -1,3 +1,10 @@
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "16"
+);
+
 describe("CC 16", () => {
   describe("Calcul de l'indemnité de licenciement pour un Ingénieur et cadre", () => {
     test.each`
@@ -44,8 +51,8 @@ describe("CC 16", () => {
                   "01/01/2010",
               }
             : {};
-        const result = engine
-          .setSituation({
+        const { missingArgs, result } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC0016'",
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
               "'Ingénieurs et cadres'",
@@ -62,13 +69,12 @@ describe("CC 16", () => {
             "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
             ...dateCadre,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
 
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedCompensation);
         expect(result.unit?.numerators).toEqual(["€"]);
       }
     );
@@ -98,8 +104,8 @@ describe("CC 16", () => {
         haveRightToRetirement,
         seniority,
       }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC0016'",
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age": age,
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
@@ -111,13 +117,12 @@ describe("CC 16", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
         expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -143,8 +148,8 @@ describe("CC 16", () => {
         haveRightToRetirement,
         seniority,
       }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC0016'",
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age": age,
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
@@ -156,13 +161,12 @@ describe("CC 16", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
         expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -181,8 +185,8 @@ describe("CC 16", () => {
     `(
       "Avec une ancienneté $seniority ans, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
       ({ salaireRef, expectedCompensation, seniority }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC0016'",
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
               "'Ouvriers'",
@@ -194,13 +198,12 @@ describe("CC 16", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
         expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -215,8 +218,8 @@ describe("CC 16", () => {
     `(
       "Avec une ancienneté $seniority ans, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
       ({ salaireRef, expectedCompensation, seniority }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC0016'",
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
               "'Ouvriers'",
@@ -228,13 +231,12 @@ describe("CC 16", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
         expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -260,8 +262,8 @@ describe("CC 16", () => {
         haveRightToRetirement,
         seniority,
       }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC0016'",
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
               "'Ouvriers'",
@@ -275,13 +277,12 @@ describe("CC 16", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
         expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });

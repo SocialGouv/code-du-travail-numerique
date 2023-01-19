@@ -1,4 +1,6 @@
-import { getFormule } from "../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(modelsIndemniteLicenciement);
 
 describe("Indemnité légale de licenciement avec une formule personnalisée et expliquée", () => {
   test.each`
@@ -17,13 +19,14 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
   `(
     "Formule $expectedFormula avec $seniority ans et inaptitude $isForInaptitude",
     ({ seniority, isForInaptitude, expectedFormula, expectedExplanations }) => {
-      const situation = engine.setSituation({
+      engine.setSituation({
         "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": isForInaptitude,
-        "contrat salarié . indemnité de licenciement . salaire de référence": 1000,
+        "contrat salarié . indemnité de licenciement . salaire de référence":
+          "1000",
       });
 
-      const result = getFormule(situation);
+      const result = engine.getFormule();
 
       expect(result.formula).toEqual(expectedFormula);
       expect(result.explanations).toEqual(expectedExplanations);
