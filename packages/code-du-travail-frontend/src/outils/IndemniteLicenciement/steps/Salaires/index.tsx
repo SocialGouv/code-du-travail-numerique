@@ -6,11 +6,10 @@ import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 import { IndemniteLicenciementStepName } from "../..";
 import { AgreementsInjector } from "../../agreements";
 import { icons } from "@socialgouv/cdtn-ui";
-import Html from "../../../../common/Html";
 import {
   generateSalaireTempsPleinQuestion,
   generateSameSalaryQuestion,
-} from "./store/utils";
+} from "../../utils/question";
 
 const StepSalaires = () => {
   const {
@@ -98,19 +97,6 @@ const StepSalaires = () => {
             onChangeSelectedOption={onChangeHasSameSalary}
             error={errorHasSameSalary}
             showRequired
-            tooltip={
-              licenciementInaptitude === "oui" || arretTravail === "non"
-                ? undefined
-                : {
-                    content: (
-                      <Html>
-                        Pour les salariés en arrêt de travail au moment du
-                        licenciement ce sont les 12 mois précédant l&apos;arrêt
-                        de travail qui doivent être pris en compte.
-                      </Html>
-                    ),
-                  }
-            }
           />
           {hasSameSalary === "oui" && (
             <TextQuestion

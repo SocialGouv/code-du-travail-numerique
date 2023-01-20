@@ -1,7 +1,7 @@
 import {
   generateSalaireTempsPleinQuestion,
   generateSameSalaryQuestion,
-} from "../utils";
+} from "../../../../utils/question";
 import { OuiNon } from "../../../../common";
 
 describe("generateSameSalaryQuestion", () => {
