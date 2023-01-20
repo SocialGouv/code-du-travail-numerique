@@ -58,10 +58,10 @@ export const createAgreement44StoreSalaires: StoreSlice<
             categoryPro === "'Ingénieurs et cadres (Groupe V)'"
               ? undefined
               : state.agreement44Data.input.hasVariablePay;
-          if (!get().agreement44Data.input.showLastMonthSalary) {
-            state.agreement44Data.input.lastMonthSalary =
-              lastMonthSalaryProcess;
-          }
+          state.agreement44Data.input.showKnowingLastSalary = false;
+          state.agreement44Data.input.knowingLastSalary = undefined;
+          state.agreement44Data.input.showLastMonthSalary = false;
+          state.agreement44Data.input.lastMonthSalary = lastMonthSalaryProcess;
         })
       );
     },

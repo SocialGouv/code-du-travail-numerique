@@ -65,7 +65,7 @@ export default function Agreement44() {
           showRequired
         />
       )}
-      {showKnowingLastSalary && (
+      {showVariablePay && showKnowingLastSalary && (
         <RadioQuestion
           questions={[
             {
@@ -85,10 +85,14 @@ export default function Agreement44() {
           onChangeSelectedOption={onChangeKnowingLastSalary}
           error={errorKnowingLastSalary}
           showRequired
-          note="Le calcul de l’indemnité nécessite le dernier salaire perçu (incluant le préavis). Pour réaliser cette simulation nous prendrons en considération la moyenne des salaires perçus au cours des 12 derniers mois précédant la notification du licenciement. En conséquence, le résultat obtenu pourrait ne pas correspondre exactement à votre situation."
+          note={
+            knowingLastSalary === "non"
+              ? "Le calcul de l’indemnité nécessite le dernier salaire perçu (incluant le préavis). Pour réaliser cette simulation nous prendrons en considération la moyenne des salaires perçus au cours des 12 derniers mois précédant la notification du licenciement. En conséquence, le résultat obtenu pourrait ne pas correspondre exactement à votre situation."
+              : undefined
+          }
         />
       )}
-      {showLastMonthSalary && (
+      {showVariablePay && showKnowingLastSalary && showLastMonthSalary && (
         <SalaireTempsPlein
           title="Salaire et primes perçus au cours du dernier mois"
           subTitle="Renseignez le montant du dernier salaire perçu (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ."

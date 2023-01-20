@@ -30,7 +30,7 @@ export default function Agreement44Informations() {
           licenciement est de&nbsp;:&nbsp;
           {lastMonthSalary.value} €{" "}
           {lastMonthSalary.prime
-            ? "dont (${lastMonthSalary.prime} € de prime)"
+            ? `dont (${lastMonthSalary.prime} € de prime)`
             : ""}
         </li>
       )}

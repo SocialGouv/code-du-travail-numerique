@@ -68,7 +68,7 @@ export default function RadioQuestion({
           </ErrorWrapper>
         )}
       </RadioContainer>
-      {note && <SmallText>{note}</SmallText>}
+      {note && <SmallText as="i">{note}</SmallText>}
     </>
   );
 }
