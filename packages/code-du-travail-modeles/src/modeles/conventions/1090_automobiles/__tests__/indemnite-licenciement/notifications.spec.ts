@@ -4,7 +4,7 @@ const notification =
   "Si le congé parental a été pris entre le 23/07/2011 et le 31/12/2013, le montant de l’indemnité pourrait être plus important car l’ancienneté retenue peut-être plus importante.";
 
 describe("Notification pour la CC 1090", () => {
-  describe("Si l'utilisateur ne sélectionne pas un congé parental d'éducation total", () => {
+  describe("Si l'utilisateur ne sélectionne pas un congé parental d'éducation à temps plein", () => {
     test.each`
       seniority | salary
       ${0}      | ${2000}
@@ -18,7 +18,7 @@ describe("Notification pour la CC 1090", () => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1090'",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
@@ -28,7 +28,7 @@ describe("Notification pour la CC 1090", () => {
     );
   });
 
-  describe("Si l'utilisateur sélectionne un congé parental d'éducation total", () => {
+  describe("Si l'utilisateur sélectionne un congé parental d'éducation à temps plein", () => {
     test.each`
       seniority | salary
       ${0}      | ${2000}
@@ -41,10 +41,10 @@ describe("Notification pour la CC 1090", () => {
       ({ seniority, salary }) => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1090'",
-          "contrat salarié . convention collective . automobiles . indemnité de licenciement . congé parental d'éducation total":
+          "contrat salarié . convention collective . automobiles . indemnité de licenciement . congé parental d'éducation à temps plein":
             "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 

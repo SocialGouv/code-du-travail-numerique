@@ -35,8 +35,8 @@ contrat salarié . convention collective . sport . indemnité de licenciement . 
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
   applicable si:
     toutes ces conditions:
-      - contrat salarié . indemnité de licenciement . ancienneté requise en année >= 8 mois
-      - contrat salarié . indemnité de licenciement . ancienneté requise en année <= 10 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année <= 10 an
   valeur: dix ans ou moins
   unité: €
   arrondi: 2 décimales
@@ -52,7 +52,7 @@ contrat salarié . convention collective . sport . indemnité de licenciement . 
 
 contrat salarié . convention collective . sport . indemnité de licenciement . résultat conventionnel 2:
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année > 10 an
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 10 an
   somme:
     - plus de dix ans
     - dix ans ou moins
@@ -68,13 +68,3 @@ contrat salarié . convention collective . sport . indemnité de licenciement . 
         - "A2 : Ancienneté au-delà de 10 ans": contrat salarié . convention collective . sport . indemnité de licenciement . au dela de dix ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
       formula: (1/4 * Sref * A1) + (1/3 * Sref * A2)
-
-contrat salarié . convention collective . sport . indemnité de licenciement . résultat conventionnel fallback:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  unité: €
-  arrondi: 2 décimales
-  non applicable si:
-    une de ces conditions:
-      - résultat conventionnel 1
-      - résultat conventionnel 2
-  valeur: 0

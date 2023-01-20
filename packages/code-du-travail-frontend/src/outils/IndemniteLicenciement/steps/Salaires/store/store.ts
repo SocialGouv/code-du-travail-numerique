@@ -19,6 +19,7 @@ import { IndemniteLicenciementStepName } from "../../..";
 import { deepMergeArray } from "../../../../../lib";
 import { computeSalaryPeriods } from "../../../common";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
+import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 
 const initialState: SalairesStoreData = {
   input: {
@@ -75,7 +76,7 @@ const createSalairesStore: StoreSlice<
     onChangeSalary(value) {
       applyGenericValidation(get, set, "salary", value);
     },
-    onValidateStepSalaires: () => {
+    onValidateStep: () => {
       const { isValid, errorState } = validateStep(get().salairesData.input);
 
       if (isValid) {
@@ -131,7 +132,9 @@ const createSalairesStore: StoreSlice<
           state.salairesData.error = errorState;
         })
       );
-      return isStepValid;
+      return isStepValid
+        ? ValidationResponse.Valid
+        : ValidationResponse.NotValid;
     },
   },
 });

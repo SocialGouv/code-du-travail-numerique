@@ -1,5 +1,6 @@
 import { IndemniteLicenciementPublicodes } from "@socialgouv/modeles-social";
 import { Question } from "../../../DureePreavisRetraite/state";
+import { ValidationResponse } from "../../../Components/SimulatorLayout";
 
 export type PublicodesInformation = {
   info: string | undefined;
@@ -31,8 +32,7 @@ export type CommonInformationsStoreData = {
 export type CommonInformationsStoreFn = {
   onInformationsChange: (questionKey: string, value: string) => void;
   generatePublicodesQuestions: () => void;
-  onValidateStep: () => boolean;
-  onEligibilityCheckCommonInfo: () => boolean;
+  onValidateWithEligibility: () => ValidationResponse;
   onSetStepHidden: () => void;
 };
 

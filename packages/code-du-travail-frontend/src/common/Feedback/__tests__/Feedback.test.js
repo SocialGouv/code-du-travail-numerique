@@ -43,7 +43,7 @@ describe("<Feedback/>", () => {
     button.click();
     expect(container).toMatchSnapshot();
   });
-  it("should send piwik event when click yes", () => {
+  it("should send matomo event when click yes", () => {
     const { getByText } = render(
       <Feedback url="http://server/fiches/fiche1" />
     );
@@ -52,7 +52,7 @@ describe("<Feedback/>", () => {
     expect(JSON.stringify(events)).toMatchSnapshot();
     flushEvents();
   });
-  it("should send piwik event when click no", () => {
+  it("should send matomo event when click no", () => {
     const { getByText } = render(
       <Feedback url="http://server/fiches/fiche1" />
     );

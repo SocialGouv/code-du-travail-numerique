@@ -5,7 +5,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         "contrat salarié . convention collective": "'IDCC2098'",
         "contrat salarié . indemnité de licenciement": "oui",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 38,
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année": 38,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": 38,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2800,
       })
       .evaluate(
@@ -26,7 +26,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle":
           "'Non'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 38,
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année": 38,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": 38,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2800,
       })
       .evaluate(
@@ -49,7 +49,7 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
         "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle":
           "'Cadres'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 38,
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année": 38,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": 38,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2800,
       })
       .evaluate(
