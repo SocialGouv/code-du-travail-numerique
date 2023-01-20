@@ -273,7 +273,7 @@ describe("CC 44", () => {
   }, {
     durationInMonth: 0,
     motif: { key: MotifKeys.congesPaternite },
-  }]} | ${"01/01/1979"} | ${"01/01/2021"} | ${38.916666666666664}
+  }]} | ${"01/01/1979"} | ${"01/01/2021"} | ${41.916666666666664}
     `(
       "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {

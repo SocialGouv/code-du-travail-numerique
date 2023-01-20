@@ -10,10 +10,15 @@ import {
 } from "./types";
 import { validateStep } from "./validator";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
+import { computeSalaryPeriods } from "../../../common";
+import { parse } from "../../../../common/utils";
+import { SalaryPeriods } from "@socialgouv/modeles-social";
 
 const initialState: Agreement44StoreData = {
   input: {
     showVariablePay: false,
+    showKnowingLastSalary: false,
+    showLastMonthSalary: false,
   },
   error: {},
   hasBeenSubmit: false,
@@ -27,11 +32,20 @@ export const createAgreement44StoreSalaires: StoreSlice<
   agreement44Data: { ...initialState },
   agreement44Function: {
     onInit: () => {
-      const categoryPro = get().informationsData.input.publicodesInformations.find(
-        (item) =>
-          item.question.name ===
-          "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
-      )?.info;
+      const categoryPro =
+        get().informationsData.input.publicodesInformations.find(
+          (item) =>
+            item.question.name ===
+            "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
+        )?.info;
+      const ancienneteInput = get().ancienneteData.input;
+      const periods = computeSalaryPeriods({
+        dateEntree: parse(ancienneteInput.dateSortie!)
+          .setMonth(parse(ancienneteInput.dateSortie!).getMonth() - 1)
+          .toString(),
+        dateNotification: ancienneteInput.dateSortie!,
+      });
+      const lastMonthSalaryProcess: SalaryPeriods = { month: periods[0] };
       set(
         produce((state: Agreement44StoreSlice) => {
           state.agreement44Data.input.showVariablePay =
@@ -44,11 +58,42 @@ export const createAgreement44StoreSalaires: StoreSlice<
             categoryPro === "'Ingénieurs et cadres (Groupe V)'"
               ? undefined
               : state.agreement44Data.input.hasVariablePay;
+          if (!get().agreement44Data.input.showLastMonthSalary) {
+            state.agreement44Data.input.lastMonthSalary =
+              lastMonthSalaryProcess;
+          }
         })
       );
     },
     onChangeHasVariablePay: (value) => {
-      applyGenericValidation(get, set, "hasVariablePay", value);
+      const categoryPro =
+        get().informationsData.input.publicodesInformations.find(
+          (item) =>
+            item.question.name ===
+            "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
+        )?.info;
+      applyGenericValidation(get, set, [
+        { paramName: "hasVariablePay", value: value },
+        {
+          paramName: "showKnowingLastSalary",
+          value:
+            value === "non" &&
+            (categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
+              categoryPro ===
+                "'Agents de maîtrise et techniciens (Groupe IV)'"),
+        },
+      ]);
+    },
+    onChangeKnowingLastSalary: (value) => {
+      applyGenericValidation(get, set, [
+        { paramName: "showLastMonthSalary", value: value === "oui" },
+        { paramName: "knowingLastSalary", value },
+      ]);
+    },
+    onChangeLastMonthSalary: (value) => {
+      applyGenericValidation(get, set, [
+        { paramName: "lastMonthSalary", value },
+      ]);
     },
   },
 });
@@ -56,12 +101,13 @@ export const createAgreement44StoreSalaires: StoreSlice<
 const applyGenericValidation = (
   get: StoreApi<Agreement44StoreSlice & SalairesStoreSlice>["getState"],
   set: StoreApi<Agreement44StoreSlice & SalairesStoreSlice>["setState"],
-  paramName: keyof Agreement44StoreInput,
-  value: any
+  arrParam: { paramName: keyof Agreement44StoreInput; value: any }[]
 ) => {
   if (get().agreement44Data.hasBeenSubmit) {
     const nextState = produce(get(), (draft) => {
-      draft.agreement44Data.input[paramName] = value;
+      arrParam.forEach(({ paramName, value }) => {
+        draft.agreement44Data.input[paramName] = value;
+      });
     });
     const { isValid, errorState } = validateStep(
       nextState.agreement44Data.input
@@ -70,14 +116,18 @@ const applyGenericValidation = (
       produce((state: Agreement44StoreSlice) => {
         state.agreement44Data.error = errorState;
         state.agreement44Data.isStepValid = isValid;
-        state.agreement44Data.input[paramName] = value;
+        arrParam.forEach(({ paramName, value }) => {
+          state.agreement44Data.input[paramName] = value;
+        });
       })
     );
     get().salairesFunction.onValidateStep();
   } else {
     set(
       produce((state: Agreement44StoreSlice) => {
-        state.agreement44Data.input[paramName] = value;
+        arrParam.forEach(({ paramName, value }) => {
+          state.agreement44Data.input[paramName] = value;
+        });
       })
     );
   }

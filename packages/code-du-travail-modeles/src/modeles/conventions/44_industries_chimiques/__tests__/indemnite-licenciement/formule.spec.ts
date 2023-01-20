@@ -21,13 +21,15 @@ describe("Formule indemnité licenciement -  CC 44", () => {
         const situation = engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0044'",
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
-            ? `'Oui'`
-            : `'Non'`,
-          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
+          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
+            isEconomicFiring ? `'Oui'` : `'Non'`,
+          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
+            age,
           "contrat salarié . indemnité de licenciement": "oui",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
         });
 
@@ -68,13 +70,15 @@ describe("Formule indemnité licenciement -  CC 44", () => {
           const situation = engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
-              ? `'Oui'`
-              : `'Non'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
+              isEconomicFiring ? `'Oui'` : `'Non'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
+              age,
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
           });
 
@@ -123,13 +127,15 @@ describe("Formule indemnité licenciement -  CC 44", () => {
           const situation = engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
-              ? `'Oui'`
-              : `'Non'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
+              isEconomicFiring ? `'Oui'` : `'Non'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
+              age,
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
           });
 
@@ -181,13 +187,15 @@ describe("Formule indemnité licenciement -  CC 44", () => {
           const situation = engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
-              ? `'Oui'`
-              : `'Non'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
+              isEconomicFiring ? `'Oui'` : `'Non'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
+              age,
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
           });
 
@@ -235,13 +243,15 @@ describe("Formule indemnité licenciement -  CC 44", () => {
           const situation = engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
-              ? `'Oui'`
-              : `'Non'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
+              isEconomicFiring ? `'Oui'` : `'Non'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
+              age,
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
           });
 
@@ -287,13 +297,15 @@ describe("Formule indemnité licenciement -  CC 44", () => {
           const situation = engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
-              ? `'Oui'`
-              : `'Non'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
+              isEconomicFiring ? `'Oui'` : `'Non'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
+              age,
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
           });
 
@@ -339,13 +351,15 @@ describe("Formule indemnité licenciement -  CC 44", () => {
           const situation = engine.setSituation({
             "contrat salarié . convention collective": "'IDCC0044'",
             "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
-              ? `'Oui'`
-              : `'Non'`,
-            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique":
+              isEconomicFiring ? `'Oui'` : `'Non'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age":
+              age,
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
           });
 

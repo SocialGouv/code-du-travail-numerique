@@ -26,6 +26,14 @@ export const validateStep = (state: Agreement44StoreInput) => {
       state.showVariablePay && !state.hasVariablePay
         ? "Vous devez répondre à cette question"
         : undefined,
+    errorKnowingLastSalary:
+      state.showKnowingLastSalary && !state.knowingLastSalary
+        ? "Vous devez répondre à cette question"
+        : undefined,
+    errorLastMonthSalary:
+      state.showLastMonthSalary && !state.lastMonthSalary
+        ? "Vous devez répondre à cette question"
+        : undefined,
   };
 
   return {
