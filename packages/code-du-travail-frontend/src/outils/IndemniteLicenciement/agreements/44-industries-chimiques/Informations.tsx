@@ -19,15 +19,13 @@ export default function Agreement44Informations() {
 
       {knowingLastSalary && (
         <li>
-          Le salarié connaissait le salaire du mois précédent la date de sortie
-          de son licenciement&nbsp;:&nbsp;
+          Connaissance du montant du dernier salaire perçu&nbsp;:&nbsp;
           {knowingLastSalary === "oui" ? "Oui" : "Non"}
         </li>
       )}
       {lastMonthSalary && (
         <li>
-          Le salaire du mois précédent la date de sortie de son licenciement est
-          de&nbsp;:&nbsp;
+          Salaire perçu au cours du dernier mois&nbsp;:&nbsp;
           {lastMonthSalary.value} €{" "}
           {lastMonthSalary.prime
             ? `(dont ${lastMonthSalary.prime} € de prime)`
