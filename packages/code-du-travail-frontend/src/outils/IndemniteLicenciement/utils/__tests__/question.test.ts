@@ -54,12 +54,12 @@ describe("question.ts", () => {
       [
         "non" as OuiNon,
         [{ month: "janvier" }, { month: "février" }],
-        "Salaire mensuel brut des 2 derniers mois et primes des 2 derniers mois précédant la notification du licenciement",
+        "Salaires mensuels bruts des 2 derniers mois et primes des 2 derniers mois précédant la notification du licenciement",
       ],
       [
         "oui" as OuiNon,
         [{ month: "janvier" }, { month: "février" }, { month: "mars" }],
-        "Salaire mensuel brut des 3 derniers mois et primes des 3 derniers mois précédant l'arrêt de travail",
+        "Salaires mensuels bruts des 3 derniers mois et primes des 3 derniers mois précédant l'arrêt de travail",
       ],
     ])(
       "should return the correct question",

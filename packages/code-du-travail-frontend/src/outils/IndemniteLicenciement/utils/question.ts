@@ -20,10 +20,10 @@ export const generateSalaireTempsPleinQuestion = (
   arretTravail: OuiNon | undefined,
   salaryPeriods: SalaryPeriods[]
 ): string => {
-  return `Salaire mensuel brut ${
+  return `${
     salaryPeriods.length === 1
-      ? "du dernier mois"
-      : `des ${salaryPeriods.length} derniers mois`
+      ? "Salaire mensuel brut du dernier mois"
+      : `Salaires mensuels bruts des ${salaryPeriods.length} derniers mois`
   } et ${
     Math.min(salaryPeriods.length, 3) === 1
       ? "primes du dernier mois"
