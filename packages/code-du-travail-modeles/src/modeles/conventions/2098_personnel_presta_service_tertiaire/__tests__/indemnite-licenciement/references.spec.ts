@@ -32,10 +32,10 @@ describe("Vérification des références juridiques pour la CC 2098", () => {
     test("Autre licenciement - Non-cadres", () => {
       const situation = engine.setSituation({
         "contrat salarié . convention collective": "'IDCC2098'",
-        "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle":
-          "'Non'",
         "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle":
           "'Non-cadres'",
+        "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle":
+          "'Non'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 10,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": 10,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2800,
@@ -62,11 +62,11 @@ describe("Vérification des références juridiques pour la CC 2098", () => {
     test("Autre licenciement - Cadres", () => {
       const situation = engine.setSituation({
         "contrat salarié . convention collective": "'IDCC2098'",
-        "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle":
-          "'Non'",
+        "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age": 35,
         "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle":
           "'Cadres'",
-        "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age": 35,
+        "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle":
+          "'Non'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 10,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": 10,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2800,

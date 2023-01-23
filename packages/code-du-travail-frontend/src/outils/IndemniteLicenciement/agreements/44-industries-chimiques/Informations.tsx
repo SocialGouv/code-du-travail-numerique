@@ -12,25 +12,25 @@ export default function Agreement44Informations() {
     <>
       {hasVariablePay && (
         <li>
-          Les salaires indiqués comportent une partie variable &nbsp;:&nbsp;
+          Les salaires indiqués comportent une partie variable&nbsp;:&nbsp;
           {hasVariablePay === "oui" ? "Oui" : "Non"}
         </li>
       )}
 
       {knowingLastSalary && (
         <li>
-          Le salarié connaissait le salaire du mois précédent la date de
-          notification de son licenciement&nbsp;?&nbsp;
+          Le salarié connaissait le salaire du mois précédent la date de sortie
+          de son licenciement&nbsp;:&nbsp;
           {knowingLastSalary === "oui" ? "Oui" : "Non"}
         </li>
       )}
       {lastMonthSalary && (
         <li>
-          Le salaire du mois précédent la date de notification de son
-          licenciement est de&nbsp;:&nbsp;
+          Le salaire du mois précédent la date de sortie de son licenciement est
+          de&nbsp;:&nbsp;
           {lastMonthSalary.value} €{" "}
           {lastMonthSalary.prime
-            ? `dont (${lastMonthSalary.prime} € de prime)`
+            ? `(dont ${lastMonthSalary.prime} € de prime)`
             : ""}
         </li>
       )}

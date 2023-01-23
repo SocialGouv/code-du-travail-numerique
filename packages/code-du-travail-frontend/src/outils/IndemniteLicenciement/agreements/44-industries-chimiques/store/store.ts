@@ -13,6 +13,7 @@ import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informatio
 import { computeSalaryPeriods } from "../../../common";
 import { parse } from "../../../../common/utils";
 import { SalaryPeriods } from "@socialgouv/modeles-social";
+import { generateFrenchDate } from "../../../../utils";
 
 const initialState: Agreement44StoreData = {
   input: {
@@ -40,9 +41,13 @@ export const createAgreement44StoreSalaires: StoreSlice<
         )?.info;
       const ancienneteInput = get().ancienneteData.input;
       const periods = computeSalaryPeriods({
-        dateEntree: parse(ancienneteInput.dateSortie!)
-          .setMonth(parse(ancienneteInput.dateSortie!).getMonth() - 1)
-          .toString(),
+        dateEntree: generateFrenchDate(
+          new Date(
+            parse(ancienneteInput.dateSortie!).setMonth(
+              parse(ancienneteInput.dateSortie!).getMonth() - 1
+            )
+          )
+        ),
         dateNotification: ancienneteInput.dateSortie!,
       });
       const lastMonthSalaryProcess: SalaryPeriods = { month: periods[0] };
