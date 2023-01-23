@@ -38,6 +38,7 @@ describe("Calcul de l'indemnité de licenciement CC 2098", () => {
       ${14}      | ${5640}
       ${22}      | ${10400}
       ${33}      | ${18800}
+      ${52}      | ${33600}
     `(
       "Non-cadres, Avec une ancienneté $seniority ans et salaire de ref 2800€ => une compensation de base de $expectedCompensation €",
       ({ expectedCompensation, seniority }) => {
