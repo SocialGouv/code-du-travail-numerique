@@ -99,7 +99,7 @@ export default function FilledElements(props: Props) {
           <strong>Ancienneté (A)</strong>
           <ul>
             <li>
-              Date d&apos;entrée dans l&apos;entreprise&nbsp;:&nbsp;
+              Date de début du contrat de travail&nbsp;:&nbsp;
               {props.dateEntree}
             </li>
             <li>
@@ -107,7 +107,7 @@ export default function FilledElements(props: Props) {
               {props.dateNotification}
             </li>
             <li>
-              Date de sortie de l&apos;entreprise&nbsp;:&nbsp;
+              Date de fin du contrat de travail&nbsp;:&nbsp;
               {props.dateSortie}
             </li>
             <li>

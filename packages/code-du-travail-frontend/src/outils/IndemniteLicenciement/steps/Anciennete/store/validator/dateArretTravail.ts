@@ -16,14 +16,14 @@ export const getDateArretTravailErrors = (
 
   if (dArret && state.dateEntree && isBefore(dArret, dEntree)) {
     errors.errorDateEntree =
-      "La date d'entrée doit se situer avant la date d'arrêt de travail indiquée à l'étape n°2";
+      "La date de début de contrat doit se situer avant la date d'arrêt de travail indiquée à l'étape n°2";
   } else if (dArret && state.dateEntree && isAfter(dArret, dEntree)) {
     errors.errorDateEntree = undefined;
   }
 
   if (dArret && state.dateSortie && isAfter(dArret, dSortie)) {
     errors.errorDateSortie =
-      "La date de sortie doit se situer après la date d'arrêt de travail indiquée à l'étape n°2";
+      "La date de fin de contrat doit se situer après la date d'arrêt de travail indiquée à l'étape n°2";
   } else if (dArret && state.dateSortie && isBefore(dArret, dSortie)) {
     errors.errorDateSortie = undefined;
   }

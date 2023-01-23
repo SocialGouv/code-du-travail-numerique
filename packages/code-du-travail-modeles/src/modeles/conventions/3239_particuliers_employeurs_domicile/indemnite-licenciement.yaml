@@ -37,7 +37,7 @@ contrat salarié . convention collective . particuliers employeurs et emploi à 
 
 contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires:
   titre: Total des salaires perçus pendant la totalité du contrat de travail
-  question: Indiquez le total des salaires perçus pendant la totalité du contrat de travail ?
+  question: Indiquez le total des salaires bruts perçus pendant la totalité du contrat de travail ?
   unité: €
   cdtn:
     type: montant

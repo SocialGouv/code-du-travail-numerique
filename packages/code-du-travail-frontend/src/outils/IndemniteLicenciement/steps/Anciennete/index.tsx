@@ -62,7 +62,7 @@ const StepAnciennete = () => {
         Dates d’entrée et de sortie de l’entreprise
       </SectionTitle>
       <TextQuestion
-        label="Quelle est la date d’entrée dans l’entreprise&nbsp;?"
+        label="Quelle est la date de début du contrat de travail&nbsp;?"
         inputType="date"
         placeholder="jj/mm/aaaa"
         value={dateEntree}
@@ -84,7 +84,7 @@ const StepAnciennete = () => {
         dataTestId={"date-notification"}
       />
       <TextQuestion
-        label="Quelle est la date de sortie de l’entreprise&nbsp;?"
+        label="Quelle est la date de fin du contrat de travail&nbsp;?"
         inputType="date"
         placeholder="jj/mm/aaaa"
         value={dateSortie}
