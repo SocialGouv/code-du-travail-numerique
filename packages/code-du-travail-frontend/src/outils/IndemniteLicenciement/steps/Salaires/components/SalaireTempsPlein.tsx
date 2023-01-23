@@ -16,6 +16,8 @@ type Props = {
   error?: string;
   note?: string;
   tooltip?: Tooltip;
+  dataTestidSalaries?: string;
+  dataTestidPrimes?: string;
 };
 
 export const SalaireTempsPlein = ({
@@ -26,6 +28,8 @@ export const SalaireTempsPlein = ({
   note,
   subTitle,
   tooltip,
+  dataTestidSalaries,
+  dataTestidPrimes,
 }: Props): JSX.Element => {
   const [isFirstEdit, setIsFirstEdit] = React.useState(true);
   const [errorsSalaries, setErrorsSalaries] = React.useState({});
@@ -118,7 +122,7 @@ export const SalaireTempsPlein = ({
                   updateOnScrollDisabled
                   onChange={(e) => onChangeSalaries(index, e.target.value)}
                   onBlur={() => setIsFirstEdit(false)}
-                  data-testid={"salary-input"}
+                  data-testid={dataTestidSalaries ?? "salary-input"}
                 />
                 {errorsSalaries[`${index}`] && (
                   <ErrorWrapper>
@@ -143,7 +147,7 @@ export const SalaireTempsPlein = ({
                       }
                       value={sPeriod.prime ?? ""}
                       updateOnScrollDisabled
-                      data-testid={"prime-input"}
+                      data-testid={dataTestidPrimes ?? "prime-input"}
                     />
                     {errorsPrimes[`${index}`] && (
                       <ErrorWrapper>
