@@ -1,9 +1,6 @@
-import Engine from "publicodes";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
-import { getNotifications } from "../../../../common";
-
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 test.each`
   seniority | category                                                 | expectedNotice
@@ -29,19 +26,20 @@ test.each`
 `(
   "Pour un $category possédant $seniority mois d'ancienneté, son préavis de départ la retraite devrait être $expectedNotice mois",
   ({ seniority, category, expectedNotice }) => {
-    const result = engine
-      .setSituation({
+    const { result, missingArgs } = engine.setSituation(
+      {
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0413'",
         "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-      })
-      .evaluate("contrat salarié . préavis de retraite");
+      },
+      "contrat salarié . préavis de retraite en jours"
+    );
 
-    expect(result.nodeValue).toEqual(expectedNotice);
-    expect(result.unit?.numerators).toEqual(["mois"]);
-    expect(result.missingVariables).toEqual({});
+    expect(result.value).toEqual(expectedNotice);
+    expect(result.unit).toEqual("mois");
+    expect(missingArgs).toEqual([]);
   }
 );
 
@@ -69,19 +67,20 @@ test.each`
 `(
   "Pour un $category possédant $seniority mois d'ancienneté, son préavis de mise à la retraite devrait être $expectedNotice mois",
   ({ seniority, category, expectedNotice }) => {
-    const result = engine
-      .setSituation({
+    const { result, missingArgs } = engine.setSituation(
+      {
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0413'",
         "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-      })
-      .evaluate("contrat salarié . préavis de retraite");
+      },
+      "contrat salarié . préavis de retraite en jours"
+    );
 
-    expect(result.nodeValue).toEqual(expectedNotice);
-    expect(result.unit?.numerators).toEqual(["mois"]);
-    expect(result.missingVariables).toEqual({});
+    expect(result.value).toEqual(expectedNotice);
+    expect(result.unit).toEqual("mois");
+    expect(missingArgs).toEqual([]);
   }
 );
 
@@ -109,15 +108,14 @@ test.each`
 `(
   "Pour un $category possédant $seniority mois d'ancienneté, on attend une notification",
   ({ seniority, category }) => {
-    const notifications = getNotifications(
-      engine.setSituation({
-        "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective": "'IDCC0413'",
-        "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
+    engine.setSituation({
+      "contrat salarié . ancienneté": seniority,
+      "contrat salarié . convention collective": "'IDCC0413'",
+      "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
+      "contrat salarié . mise à la retraite": "oui",
+      "contrat salarié . travailleur handicapé": "non",
+    });
+    const notifications = engine.getNotifications();
 
     expect(notifications).toHaveLength(1);
     expect(notifications[0].description).toBe(
@@ -150,15 +148,14 @@ test.each`
 `(
   "Pour un $category possédant $seniority mois d'ancienneté, on attend une notification",
   ({ seniority, category }) => {
-    const notifications = getNotifications(
-      engine.setSituation({
-        "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective": "'IDCC0413'",
-        "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . départ à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
+    engine.setSituation({
+      "contrat salarié . ancienneté": seniority,
+      "contrat salarié . convention collective": "'IDCC0413'",
+      "contrat salarié . convention collective . établissement handicap . catégorie professionnelle": `'${category}'`,
+      "contrat salarié . départ à la retraite": "oui",
+      "contrat salarié . travailleur handicapé": "non",
+    });
+    const notifications = engine.getNotifications();
 
     expect(notifications).toHaveLength(1);
     expect(notifications[0].description).toBe(

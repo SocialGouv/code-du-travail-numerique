@@ -62,6 +62,6 @@ writeJsonModel({
   outputName: "modeles-preavis-retraite",
 });
 writeJsonModel({
-  merger: mergeIndemniteLicenciementModels,
+  merger: () => mergeIndemniteLicenciementModels(),
   outputName: "modeles-indemnite-licenciement",
 });

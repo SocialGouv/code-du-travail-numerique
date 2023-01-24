@@ -1,4 +1,9 @@
-import { getReferences } from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "787"
+);
 
 const References = [
   {
@@ -17,15 +22,14 @@ describe("Vérification des références juridiques pour la CC 787", () => {
   `(
     "pour un employé avec une ancienneté de $seniority mois",
     ({ seniority, expectedReferences }) => {
-      const result = getReferences(
-        engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC0787'",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-        }),
-        "résultat conventionnel"
-      );
+      engine.setSituation({
+        "contrat salarié . convention collective": "'IDCC0787'",
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          "1000",
+      });
+      const result = engine.getReferences("résultat conventionnel");
 
       expect(result).toHaveLength(expectedReferences.length);
       expect(result).toEqual(expect.arrayContaining(expectedReferences));

@@ -2,7 +2,9 @@ import {
   IndemniteLicenciementInaptitudeReferences,
   IndemniteLicenciementReferences,
 } from "../../../../__test__/common/legal-references";
-import { getReferences } from "../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(modelsIndemniteLicenciement);
 
 describe("Vérification des références juridiques pour Indemnité légale de licenciement", () => {
   test.each`
@@ -13,15 +15,15 @@ describe("Vérification des références juridiques pour Indemnité légale de l
   `(
     "pour un employé avec une ancienneté de $seniority mois",
     ({ seniority, expectedReferences }) => {
-      const result = getReferences(
-        engine.setSituation({
-          "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-            "non",
-          "contrat salarié . indemnité de licenciement . salaire de référence": 1000,
-        })
-      );
+      engine.setSituation({
+        "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
+        "contrat salarié . indemnité de licenciement . salaire de référence":
+          "1000",
+      });
+      const result = engine.getReferences();
 
       expect(result).toHaveLength(expectedReferences.length);
       expect(result).toEqual(expect.arrayContaining(expectedReferences));
@@ -35,15 +37,15 @@ describe("Vérification des références juridiques pour Indemnité légale de l
   `(
     "pour un employé avec une ancienneté de $seniority mois licencié pour inaptitude",
     ({ seniority, expectedReferences }) => {
-      const result = getReferences(
-        engine.setSituation({
-          "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
-            "oui",
-          "contrat salarié . indemnité de licenciement . salaire de référence": 1000,
-        })
-      );
+      engine.setSituation({
+        "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "oui",
+        "contrat salarié . indemnité de licenciement . salaire de référence":
+          "1000",
+      });
+      const result = engine.getReferences();
 
       expect(result).toHaveLength(6);
       expect(result).toEqual(expectedReferences);

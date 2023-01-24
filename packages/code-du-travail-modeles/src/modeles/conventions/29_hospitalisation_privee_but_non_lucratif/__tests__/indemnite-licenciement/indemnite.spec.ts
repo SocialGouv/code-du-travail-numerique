@@ -1,3 +1,10 @@
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "29"
+);
+
 describe("CC 29", () => {
   describe("Calcul de l'indemnité de licenciement pour Autres salariés", () => {
     test.each`
@@ -10,21 +17,20 @@ describe("CC 29", () => {
     `(
       "Avec une ancienneté $seniority ans, un salaire de référence $salaireRef € => une compensation de base de $expectedCompensation €",
       ({ salaireRef, expectedCompensation, seniority }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC0029'",
             "contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle":
               "'Autres salariés'",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
         expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -40,21 +46,20 @@ describe("CC 29", () => {
     `(
       "Avec une ancienneté $seniority ans, un salaire de référence $salaireRef € => une compensation de base de $expectedCompensation €",
       ({ salaireRef, expectedCompensation, seniority }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC0029'",
             "contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle":
               "'Médecins, pharmaciens et biologistes exerçant à titre permanent'",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
         expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -70,21 +75,20 @@ describe("CC 29", () => {
     `(
       "Avec une ancienneté $seniority ans, un salaire de référence $salaireRef € => une compensation de base de $expectedCompensation €",
       ({ salaireRef, expectedCompensation, seniority }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC0029'",
             "contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle":
               "'Assistants familiaux des services de placements familiaux spécialisés'",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
         expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });

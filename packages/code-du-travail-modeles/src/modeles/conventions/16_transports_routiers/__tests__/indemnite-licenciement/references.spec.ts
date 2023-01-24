@@ -1,4 +1,9 @@
-import { getReferences } from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "16"
+);
 
 describe("Vérification des références juridiques pour la CC 16", () => {
   describe("Ouvriers (Autres licenciements)", () => {
@@ -19,23 +24,23 @@ describe("Vérification des références juridiques pour la CC 16", () => {
     `(
       "avec une ancienneté de $seniority ans",
       ({ seniority, expectedReferences }) => {
-        const result = getReferences(
-          engine.setSituation({
-            "contrat salarié . convention collective": "'IDCC0016'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age": 45,
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
-              "'Ouvriers'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
-              "'Non'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise":
-              "'Oui'",
-            "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-          }),
-          "résultat conventionnel"
-        );
+        engine.setSituation({
+          "contrat salarié . convention collective": "'IDCC0016'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age":
+            "45",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
+            "'Ouvriers'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
+            "'Non'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise":
+            "'Oui'",
+          "contrat salarié . indemnité de licenciement": "oui",
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
+        });
+        const result = engine.getReferences("résultat conventionnel");
 
         expect(result).toHaveLength(expectedReferences.length);
         expect(result).toEqual(expect.arrayContaining(expectedReferences));
@@ -60,25 +65,25 @@ describe("Vérification des références juridiques pour la CC 16", () => {
     `(
       "avec une ancienneté de $seniority ans",
       ({ seniority, expectedReferences }) => {
-        const result = getReferences(
-          engine.setSituation({
-            "contrat salarié . convention collective": "'IDCC0016'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age": 45,
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
-              "'Ouvriers'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
-              "'Oui'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite définitive":
-              "'Non'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise":
-              "'Oui'",
-            "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-          }),
-          "résultat conventionnel"
-        );
+        engine.setSituation({
+          "contrat salarié . convention collective": "'IDCC0016'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age":
+            "45",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
+            "'Ouvriers'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
+            "'Oui'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite définitive":
+            "'Non'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise":
+            "'Oui'",
+          "contrat salarié . indemnité de licenciement": "oui",
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
+        });
+        const result = engine.getReferences("résultat conventionnel");
 
         expect(result).toHaveLength(expectedReferences.length);
         expect(result).toEqual(expect.arrayContaining(expectedReferences));
@@ -103,25 +108,25 @@ describe("Vérification des références juridiques pour la CC 16", () => {
     `(
       "avec une ancienneté de $seniority ans",
       ({ seniority, expectedReferences }) => {
-        const result = getReferences(
-          engine.setSituation({
-            "contrat salarié . convention collective": "'IDCC0016'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age": 45,
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
-              "'Ouvriers'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
-              "'Oui'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite définitive":
-              "'Oui'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise":
-              "'Oui'",
-            "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-          }),
-          "résultat conventionnel"
-        );
+        engine.setSituation({
+          "contrat salarié . convention collective": "'IDCC0016'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age":
+            "45",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
+            "'Ouvriers'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite":
+            "'Oui'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ouvriers . incapacité de conduite définitive":
+            "'Oui'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise":
+            "'Oui'",
+          "contrat salarié . indemnité de licenciement": "oui",
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
+        });
+        const result = engine.getReferences("résultat conventionnel");
 
         expect(result).toHaveLength(expectedReferences.length);
         expect(result).toEqual(expect.arrayContaining(expectedReferences));
@@ -146,22 +151,23 @@ describe("Vérification des références juridiques pour la CC 16", () => {
     `(
       "avec une ancienneté de $seniority ans",
       ({ seniority, expectedReferences }) => {
-        const result = getReferences(
-          engine.setSituation({
-            "contrat salarié . convention collective": "'IDCC0016'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age": 60,
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
-              "'Ingénieurs et cadres'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . ancienneté avant cadre": 0,
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien": `${"'Non'"}`,
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${"'Oui'"}`,
-            "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-          }),
-          "résultat conventionnel"
-        );
+        engine.setSituation({
+          "contrat salarié . convention collective": "'IDCC0016'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age":
+            "60",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
+            "'Ingénieurs et cadres'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . ancienneté avant cadre":
+            "0",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien": `${"'Non'"}`,
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${"'Oui'"}`,
+          "contrat salarié . indemnité de licenciement": "oui",
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
+        });
+        const result = engine.getReferences("résultat conventionnel");
 
         expect(result).toHaveLength(expectedReferences.length);
         expect(result).toEqual(expect.arrayContaining(expectedReferences));
@@ -186,20 +192,20 @@ describe("Vérification des références juridiques pour la CC 16", () => {
     `(
       "avec une ancienneté de $seniority ans",
       ({ seniority, expectedReferences }) => {
-        const result = getReferences(
-          engine.setSituation({
-            "contrat salarié . convention collective": "'IDCC0016'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age": 45,
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
-              "'TAM'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${"'Oui'"}`,
-            "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-          }),
-          "résultat conventionnel"
-        );
+        engine.setSituation({
+          "contrat salarié . convention collective": "'IDCC0016'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age":
+            "45",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
+            "'TAM'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${"'Oui'"}`,
+          "contrat salarié . indemnité de licenciement": "oui",
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
+        });
+        const result = engine.getReferences("résultat conventionnel");
 
         expect(result).toHaveLength(expectedReferences.length);
         expect(result).toEqual(expect.arrayContaining(expectedReferences));
@@ -224,20 +230,20 @@ describe("Vérification des références juridiques pour la CC 16", () => {
     `(
       "avec une ancienneté de $seniority ans",
       ({ seniority, expectedReferences }) => {
-        const result = getReferences(
-          engine.setSituation({
-            "contrat salarié . convention collective": "'IDCC0016'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age": 45,
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
-              "'Employés'",
-            "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${"'Oui'"}`,
-            "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
-          }),
-          "résultat conventionnel"
-        );
+        engine.setSituation({
+          "contrat salarié . convention collective": "'IDCC0016'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age":
+            "45",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
+            "'Employés'",
+          "contrat salarié . convention collective . transports routiers . indemnité de licenciement . droit à la retraite au titre du régime en vigueur dans l'entreprise": `${"'Oui'"}`,
+          "contrat salarié . indemnité de licenciement": "oui",
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
+        });
+        const result = engine.getReferences("résultat conventionnel");
 
         expect(result).toHaveLength(expectedReferences.length);
         expect(result).toEqual(expect.arrayContaining(expectedReferences));

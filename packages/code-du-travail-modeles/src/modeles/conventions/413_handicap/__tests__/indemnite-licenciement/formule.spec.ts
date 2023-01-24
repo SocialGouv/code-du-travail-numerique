@@ -1,4 +1,9 @@
-import { getFormule } from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "413"
+);
 
 describe("Formule indemnité licenciement - 413", () => {
   describe("Cas général", () => {
@@ -18,16 +23,17 @@ describe("Formule indemnité licenciement - 413", () => {
     `(
       "Formule $expectedFormula avec $seniority ans et comme catégorie $category",
       ({ category, seniority, expectedFormula, expectedExplanations }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0413'",
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période":
             "non",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
         });
-        const formule = getFormule(situation);
+        const formule = engine.getFormule();
 
         expect(formule.formula).toEqual(expectedFormula);
         expect(formule.explanations).toEqual(expectedExplanations);
@@ -55,7 +61,7 @@ describe("Formule indemnité licenciement - 413", () => {
         expectedFormula,
         expectedExplanations,
       }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0413'",
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période":
@@ -65,9 +71,10 @@ describe("Formule indemnité licenciement - 413", () => {
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif": seniorityNonCadre,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
         });
-        const formule = getFormule(situation);
+        const formule = engine.getFormule();
 
         expect(formule.formula).toEqual(expectedFormula);
         expect(formule.explanations).toEqual(expectedExplanations);

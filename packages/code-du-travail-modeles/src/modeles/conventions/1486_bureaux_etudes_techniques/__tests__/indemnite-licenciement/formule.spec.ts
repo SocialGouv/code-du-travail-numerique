@@ -1,5 +1,10 @@
-import { getFormule } from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 import { CatPro1486, TypeLicenciement1486 } from "../../salary";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "1486"
+);
 
 describe("Formule indemnité licenciement - 1486", () => {
   describe("Pour un Licenciement en raison d'un refus de respecter une clause de mobilité", () => {
@@ -12,15 +17,16 @@ describe("Formule indemnité licenciement - 1486", () => {
     `(
       "Formule $expectedFormula avec $seniority ans, catégorie $category",
       ({ seniority, expectedFormula, expectedExplanations }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1486'",
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${TypeLicenciement1486.refus}'`,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
         });
 
-        const result = getFormule(situation);
+        const result = engine.getFormule();
 
         expect(result.formula).toEqual(expectedFormula);
         expect(result.explanations).toEqual(expectedExplanations);
@@ -51,16 +57,17 @@ describe("Formule indemnité licenciement - 1486", () => {
     `(
       "Formule $expectedFormula avec $seniority ans, catégorie $category",
       ({ category, seniority, expectedFormula, expectedExplanations }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC1486'",
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${TypeLicenciement1486.autre}'`,
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle": `'${category}'`,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
         });
 
-        const result = getFormule(situation);
+        const result = engine.getFormule();
 
         expect(result.formula).toEqual(expectedFormula);
         expect(result.explanations).toEqual(expectedExplanations);

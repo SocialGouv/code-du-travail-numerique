@@ -1,13 +1,10 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { getNotifications, getReferences } from "../../../../common";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 const ReferencesCc = [
   {
@@ -74,21 +71,21 @@ describe("Préavis de retraite de la CC 2148", () => {
     `(
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ category, seniority, expectedResult }: InputType) => {
-        const situation = engine.setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "'IDCC2148'",
-          "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . mise à la retraite": "non",
-          "contrat salarié . travailleur handicapé": "non",
-        });
-        const result = situation.evaluate(
-          "contrat salarié . préavis de retraite"
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . ancienneté": seniority.toString(),
+            "contrat salarié . convention collective": "'IDCC2148'",
+            "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . mise à la retraite": "non",
+            "contrat salarié . travailleur handicapé": "non",
+          },
+          "contrat salarié . préavis de retraite en jours"
         );
-        const references = getReferences(situation);
+        const references = engine.getReferences();
 
-        expect(result.nodeValue).toEqual(expectedResult);
-        expect(result.unit?.numerators).toEqual(["mois"]);
-        expect(result.missingVariables).toEqual({});
+        expect(result.value).toEqual(expectedResult);
+        expect(result.unit).toEqual("mois");
+        expect(missingArgs).toEqual([]);
         expect(references).toHaveLength(DepartRetraiteCcReferences.length);
         expect(references).toEqual(
           expect.arrayContaining(DepartRetraiteCcReferences)
@@ -123,21 +120,21 @@ describe("Préavis de retraite de la CC 2148", () => {
     `(
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ category, seniority, expectedResult }: InputType) => {
-        const situation = engine.setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "'IDCC2148'",
-          "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . mise à la retraite": "oui",
-          "contrat salarié . travailleur handicapé": "non",
-        });
-        const result = situation.evaluate(
-          "contrat salarié . préavis de retraite"
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . ancienneté": seniority.toString(),
+            "contrat salarié . convention collective": "'IDCC2148'",
+            "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . mise à la retraite": "oui",
+            "contrat salarié . travailleur handicapé": "non",
+          },
+          "contrat salarié . préavis de retraite en jours"
         );
-        const references = getReferences(situation);
+        const references = engine.getReferences();
 
-        expect(result.nodeValue).toEqual(expectedResult);
-        expect(result.unit?.numerators).toEqual(["mois"]);
-        expect(result.missingVariables).toEqual({});
+        expect(result.value).toEqual(expectedResult);
+        expect(result.unit).toEqual("mois");
+        expect(missingArgs).toEqual([]);
         expect(references).toHaveLength(MiseRetraiteCcReferences.length);
         expect(references).toEqual(
           expect.arrayContaining(MiseRetraiteCcReferences)
@@ -147,15 +144,14 @@ describe("Préavis de retraite de la CC 2148", () => {
   });
   describe("Vérification des notifications", () => {
     test("Pour une salarié hors classifié, en cas de mise à la retraite, une notification doit s'afficher", () => {
-      const notifications = getNotifications(
-        engine.setSituation({
-          "contrat salarié . ancienneté": 5,
-          "contrat salarié . convention collective": "'IDCC2148'",
-          "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${Category.autre}'`,
-          "contrat salarié . mise à la retraite": "oui",
-          "contrat salarié . travailleur handicapé": "non",
-        })
-      );
+      engine.setSituation({
+        "contrat salarié . ancienneté": "5",
+        "contrat salarié . convention collective": "'IDCC2148'",
+        "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${Category.autre}'`,
+        "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
+      });
+      const notifications = engine.getNotifications();
       expect(notifications).toHaveLength(1);
       expect(notifications[0].description).toBe(NotificationMiseRetraiteAutre);
     });
@@ -168,29 +164,27 @@ describe("Préavis de retraite de la CC 2148", () => {
     `(
       "Pour un $category en mise à la retraite, aucune notification doit s'afficher",
       ({ category }) => {
-        const notifications = getNotifications(
-          engine.setSituation({
-            "contrat salarié . ancienneté": 5,
-            "contrat salarié . convention collective": "'IDCC2148'",
-            "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . mise à la retraite": "oui",
-            "contrat salarié . travailleur handicapé": "non",
-          })
-        );
+        engine.setSituation({
+          "contrat salarié . ancienneté": "5",
+          "contrat salarié . convention collective": "'IDCC2148'",
+          "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . mise à la retraite": "oui",
+          "contrat salarié . travailleur handicapé": "non",
+        });
+        const notifications = engine.getNotifications();
         expect(notifications).toHaveLength(0);
       }
     );
 
     test("Pour une salarié hors classifié avec une ancienneté < 6 mois en cas de départ à la retraite, une notification doit s'afficher", () => {
-      const notifications = getNotifications(
-        engine.setSituation({
-          "contrat salarié . ancienneté": 5,
-          "contrat salarié . convention collective": "'IDCC2148'",
-          "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${Category.autre}'`,
-          "contrat salarié . mise à la retraite": "non",
-          "contrat salarié . travailleur handicapé": "non",
-        })
-      );
+      engine.setSituation({
+        "contrat salarié . ancienneté": "5",
+        "contrat salarié . convention collective": "'IDCC2148'",
+        "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${Category.autre}'`,
+        "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
+      });
+      const notifications = engine.getNotifications();
       expect(notifications).toHaveLength(1);
       expect(notifications[0].description).toBe(
         NotificationDepartRetraiteAutre
@@ -198,15 +192,14 @@ describe("Préavis de retraite de la CC 2148", () => {
     });
 
     test("Pour une salarié hors classifié avec une ancienneté > 6 mois en cas de départ à la retraite, aucune notification doit s'afficher", () => {
-      const notifications = getNotifications(
-        engine.setSituation({
-          "contrat salarié . ancienneté": 6,
-          "contrat salarié . convention collective": "'IDCC2148'",
-          "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${Category.autre}'`,
-          "contrat salarié . mise à la retraite": "non",
-          "contrat salarié . travailleur handicapé": "non",
-        })
-      );
+      engine.setSituation({
+        "contrat salarié . ancienneté": "6",
+        "contrat salarié . convention collective": "'IDCC2148'",
+        "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${Category.autre}'`,
+        "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
+      });
+      const notifications = engine.getNotifications();
       expect(notifications).toHaveLength(0);
     });
 
@@ -218,15 +211,14 @@ describe("Préavis de retraite de la CC 2148", () => {
     `(
       "Pour un $category en départ à la retraite, aucune notification doit s'afficher",
       ({ category }) => {
-        const notifications = getNotifications(
-          engine.setSituation({
-            "contrat salarié . ancienneté": 5,
-            "contrat salarié . convention collective": "'IDCC2148'",
-            "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . mise à la retraite": "non",
-            "contrat salarié . travailleur handicapé": "non",
-          })
-        );
+        engine.setSituation({
+          "contrat salarié . ancienneté": "5",
+          "contrat salarié . convention collective": "'IDCC2148'",
+          "contrat salarié . convention collective . télécommunications . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . mise à la retraite": "non",
+          "contrat salarié . travailleur handicapé": "non",
+        });
+        const notifications = engine.getNotifications();
         expect(notifications).toHaveLength(0);
       }
     );
