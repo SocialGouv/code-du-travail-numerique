@@ -64,10 +64,10 @@ export const createAgreement44StoreSalaires: StoreSlice<
             categoryPro === "'Ingénieurs et cadres (Groupe V)'"
               ? undefined
               : state.agreement44Data.input.hasVariablePay;
-          state.agreement44Data.input.showKnowingLastSalary = false;
-          state.agreement44Data.input.knowingLastSalary = undefined;
-          state.agreement44Data.input.showLastMonthSalary = false;
-          state.agreement44Data.input.lastMonthSalary = lastMonthSalaryProcess;
+          state.agreement44Data.input.lastMonthSalary = get().agreement44Data
+            .input.showLastMonthSalary
+            ? get().agreement44Data.input.lastMonthSalary
+            : lastMonthSalaryProcess;
           state.agreement44Data.input.sameDateNotificationDateSortie =
             ancienneteInput.dateNotification === ancienneteInput.dateSortie;
         })
