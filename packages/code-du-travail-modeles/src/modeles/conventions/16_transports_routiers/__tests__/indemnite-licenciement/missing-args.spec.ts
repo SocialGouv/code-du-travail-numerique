@@ -1,4 +1,3 @@
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
 import type {
   MissingArgs,
   PublicodesData,
@@ -6,8 +5,9 @@ import type {
 } from "../../../../../publicodes";
 import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 
-const publicodes = new IndemniteLicenciementPublicodes(
-  mergeIndemniteLicenciementModels()
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "16"
 );
 
 describe("CC 16", () => {
@@ -16,7 +16,7 @@ describe("CC 16", () => {
     let result: PublicodesData<PublicodesIndemniteLicenciementResult>;
 
     beforeEach(() => {
-      result = publicodes.setSituation(
+      result = engine.setSituation(
         {
           "contrat salarié . convention collective": "'IDCC0016'",
         },
@@ -32,7 +32,7 @@ describe("CC 16", () => {
 
     describe("pour un ingénieur et cadre", () => {
       beforeEach(() => {
-        result = publicodes.setSituation(
+        result = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC0016'",
             "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
@@ -50,7 +50,7 @@ describe("CC 16", () => {
 
       describe("si il n'a pas toujours été cadre", () => {
         beforeEach(() => {
-          result = publicodes.setSituation(
+          result = engine.setSituation(
             {
               "contrat salarié . convention collective": "'IDCC0016'",
               "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
@@ -70,7 +70,7 @@ describe("CC 16", () => {
 
         describe("une fois la date du changement de status remplie", () => {
           beforeEach(() => {
-            result = publicodes.setSituation(
+            result = engine.setSituation(
               {
                 "contrat salarié . convention collective": "'IDCC0016'",
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
@@ -93,7 +93,7 @@ describe("CC 16", () => {
 
         describe("si il a plus de 60 ans", () => {
           beforeEach(() => {
-            result = publicodes.setSituation(
+            result = engine.setSituation(
               {
                 "contrat salarié . convention collective": "'IDCC0016'",
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
@@ -118,7 +118,7 @@ describe("CC 16", () => {
 
         describe("si il a 60 ans ou moins", () => {
           beforeEach(() => {
-            result = publicodes.setSituation(
+            result = engine.setSituation(
               {
                 "contrat salarié . convention collective": "'IDCC0016'",
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
@@ -142,7 +142,7 @@ describe("CC 16", () => {
 
       describe("si il a toujours été cadre", () => {
         beforeEach(() => {
-          result = publicodes.setSituation(
+          result = engine.setSituation(
             {
               "contrat salarié . convention collective": "'IDCC0016'",
               "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
@@ -162,7 +162,7 @@ describe("CC 16", () => {
 
         describe("si il a plus de 60 ans", () => {
           beforeEach(() => {
-            result = publicodes.setSituation(
+            result = engine.setSituation(
               {
                 "contrat salarié . convention collective": "'IDCC0016'",
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
@@ -185,7 +185,7 @@ describe("CC 16", () => {
 
         describe("si il a 60 ans ou moins", () => {
           beforeEach(() => {
-            result = publicodes.setSituation(
+            result = engine.setSituation(
               {
                 "contrat salarié . convention collective": "'IDCC0016'",
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":

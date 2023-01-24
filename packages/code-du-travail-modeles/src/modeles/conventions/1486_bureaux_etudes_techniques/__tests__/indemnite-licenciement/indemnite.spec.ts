@@ -1,4 +1,10 @@
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 import { CatPro1486, TypeLicenciement1486 } from "../../salary";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "1486"
+);
 
 describe("Indemnité conventionnel de licenciement pour la CC 1486", () => {
   describe("Pour un Licenciement en raison d'un refus de respecter une clause de mobilité", () => {
@@ -12,20 +18,19 @@ describe("Indemnité conventionnel de licenciement pour la CC 1486", () => {
     `(
       "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
       ({ seniority, salary, expectedCompensation }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC1486'",
             "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${TypeLicenciement1486.refus}'`,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
-        expect(result.missingVariables).toEqual({});
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+        expect(missingArgs).toEqual([]);
         expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -70,21 +75,20 @@ describe("Indemnité conventionnel de licenciement pour la CC 1486", () => {
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, catégorie $category => $expectedCompensation €",
       ({ seniority, salary, category, expectedCompensation }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC1486'",
             "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'Non'`,
             "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle": `'${category}'`,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
-        expect(result.missingVariables).toEqual({});
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+        expect(missingArgs).toEqual([]);
         expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });

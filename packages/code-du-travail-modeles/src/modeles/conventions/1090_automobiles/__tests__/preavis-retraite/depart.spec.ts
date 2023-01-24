@@ -1,22 +1,20 @@
-import Engine from "publicodes";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
-
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 test.each`
   seniority | grade | expectedNotice | expectedUnit
-  ${5}      | ${1}  | ${14}          | ${"jour"}
-  ${10}     | ${1}  | ${14}          | ${"jour"}
-  ${24}     | ${1}  | ${14}          | ${"jour"}
+  ${5}      | ${1}  | ${2}           | ${"semaines"}
+  ${10}     | ${1}  | ${2}           | ${"semaines"}
+  ${24}     | ${1}  | ${2}           | ${"semaines"}
   ${5}      | ${3}  | ${1}           | ${"mois"}
   ${10}     | ${3}  | ${1}           | ${"mois"}
   ${24}     | ${3}  | ${1}           | ${"mois"}
 `(
   "Pour un ouvrier avec un échelon $grade possédant $seniority mois d'ancienneté, son préavis de départ à la retraite doit être $expectedNotice $expectedUnit",
   ({ seniority, grade, expectedNotice, expectedUnit }) => {
-    const result = engine
-      .setSituation({
+    const { result, missingArgs } = engine.setSituation(
+      {
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC1090'",
         "contrat salarié . convention collective . automobiles . catégorie professionnelle":
@@ -24,12 +22,13 @@ test.each`
         "contrat salarié . convention collective . automobiles . catégorie professionnelle . ouvriers . échelon": grade,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-      })
-      .evaluate("contrat salarié . préavis de retraite");
+      },
+      "contrat salarié . préavis de retraite en jours"
+    );
 
-    expect(result.nodeValue).toEqual(expectedNotice);
-    expect(result.unit?.numerators).toEqual([expectedUnit]);
-    expect(result.missingVariables).toEqual({});
+    expect(result.value).toEqual(expectedNotice);
+    expect(result.unit).toEqual(expectedUnit);
+    expect(missingArgs).toEqual([]);
   }
 );
 
@@ -44,8 +43,8 @@ test.each`
 `(
   "Pour un agents de maîtrise avec un échelon $grade possédant $seniority mois d'ancienneté, son préavis de départ à la retraite doit être $expectedNotice mois",
   ({ seniority, grade, expectedNotice }) => {
-    const result = engine
-      .setSituation({
+    const { result, missingArgs } = engine.setSituation(
+      {
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC1090'",
         "contrat salarié . convention collective . automobiles . catégorie professionnelle":
@@ -53,12 +52,13 @@ test.each`
         "contrat salarié . convention collective . automobiles . catégorie professionnelle . agents de maîtrise . échelon": grade,
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-      })
-      .evaluate("contrat salarié . préavis de retraite");
+      },
+      "contrat salarié . préavis de retraite en jours"
+    );
 
-    expect(result.nodeValue).toEqual(expectedNotice);
-    expect(result.unit?.numerators).toEqual(["mois"]);
-    expect(result.missingVariables).toEqual({});
+    expect(result.value).toEqual(expectedNotice);
+    expect(result.unit).toEqual("mois");
+    expect(missingArgs).toEqual([]);
   }
 );
 
@@ -70,19 +70,20 @@ test.each`
 `(
   "Pour un cadre avec $expectedNotice mois d'ancienneté, son préavis de mise à la retraite doit être de $expectedNotice mois",
   ({ expectedNotice, seniority }) => {
-    const result = engine
-      .setSituation({
+    const { result, missingArgs } = engine.setSituation(
+      {
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC1090'",
         "contrat salarié . convention collective . automobiles . catégorie professionnelle":
           "'Cadres'",
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-      })
-      .evaluate("contrat salarié . préavis de retraite");
+      },
+      "contrat salarié . préavis de retraite en jours"
+    );
 
-    expect(result.nodeValue).toEqual(expectedNotice);
-    expect(result.unit?.numerators).toEqual(["mois"]);
-    expect(result.missingVariables).toEqual({});
+    expect(result.value).toEqual(expectedNotice);
+    expect(result.unit).toEqual("mois");
+    expect(missingArgs).toEqual([]);
   }
 );

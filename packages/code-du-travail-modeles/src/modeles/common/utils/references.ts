@@ -9,7 +9,8 @@ export function getReferences(
   engine: Engine,
   specificRule?: string
 ): References[] {
-  return Object.values(engine.getParsedRules())
+  const refs = Object.values(engine.getParsedRules());
+  return refs
     .filter(
       (rule) =>
         rule.rawNode.références &&

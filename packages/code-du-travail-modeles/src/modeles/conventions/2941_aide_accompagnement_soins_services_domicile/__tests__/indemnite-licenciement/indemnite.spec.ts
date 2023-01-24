@@ -1,3 +1,10 @@
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "2941"
+);
+
 describe("CC 2941", () => {
   describe("Calcul de l'indemnité de licenciement", () => {
     test.each`
@@ -11,19 +18,18 @@ describe("CC 2941", () => {
     `(
       "Avec une ancienneté $seniority ans, un salaire de référence $salaireRef € => une compensation de base de $expectedCompensation €",
       ({ salaireRef, expectedCompensation, seniority }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC2941'",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
         expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });

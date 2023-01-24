@@ -1,7 +1,6 @@
-import type Engine from "publicodes";
-
 declare global {
-  const engine: Engine;
+  const modelsIndemniteLicenciement: Record<string, any>;
+  const modelsPreavisRetraite: Record<string, any>;
 }
 
 export {};

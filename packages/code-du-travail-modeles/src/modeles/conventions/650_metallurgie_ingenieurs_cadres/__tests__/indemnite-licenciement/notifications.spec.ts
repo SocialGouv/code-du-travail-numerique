@@ -1,9 +1,9 @@
-import Engine from "publicodes";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
-import { getNotifications } from "../../../../common";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "650"
+);
 
 const notification =
   "Le montant de l'indemnité pourrait être plus important si, avant le CDI, sous certaines conditions, le salarié a été lié à l’employeur par d'autres contrats.";
@@ -20,7 +20,7 @@ describe("Notifications pour la CC 650", () => {
     `(
       "ancienneté: $seniority an, salaire de référence: $salary",
       ({ seniority, salary, age }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
           "contrat salarié . indemnité de licenciement": "oui",
@@ -29,7 +29,7 @@ describe("Notifications pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const notifs = getNotifications(situation);
+        const notifs = engine.getNotifications();
         expect(notifs).toHaveLength(1);
         expect(notifs[0].description).toBe(notification);
       }
@@ -48,7 +48,7 @@ describe("Notifications pour la CC 650", () => {
     `(
       "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
       ({ seniority, salary, age }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
           "contrat salarié . indemnité de licenciement": "oui",
@@ -57,7 +57,7 @@ describe("Notifications pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const notifs = getNotifications(situation);
+        const notifs = engine.getNotifications();
         expect(notifs).toHaveLength(1);
         expect(notifs[0].description).toBe(notification);
       }
@@ -77,7 +77,7 @@ describe("Notifications pour la CC 650", () => {
     `(
       "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
       ({ seniority, salary, age }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
           "contrat salarié . indemnité de licenciement": "oui",
@@ -86,7 +86,7 @@ describe("Notifications pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const notifs = getNotifications(situation);
+        const notifs = engine.getNotifications();
         expect(notifs).toHaveLength(1);
         expect(notifs[0].description).toBe(notification);
       }
@@ -106,7 +106,7 @@ describe("Notifications pour la CC 650", () => {
     `(
       "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
       ({ seniority, salary, age }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age plus de 60 ans":
@@ -117,7 +117,7 @@ describe("Notifications pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const notifs = getNotifications(situation);
+        const notifs = engine.getNotifications();
         expect(notifs).toHaveLength(1);
         expect(notifs[0].description).toBe(notification);
       }
@@ -137,7 +137,7 @@ describe("Notifications pour la CC 650", () => {
     `(
       "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
       ({ seniority, salary, age }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age plus de 60 ans":
@@ -148,7 +148,7 @@ describe("Notifications pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const notifs = getNotifications(situation);
+        const notifs = engine.getNotifications();
         expect(notifs).toHaveLength(1);
         expect(notifs[0].description).toBe(notification);
       }
@@ -168,7 +168,7 @@ describe("Notifications pour la CC 650", () => {
     `(
       "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
       ({ seniority, salary, age }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age plus de 60 ans":
@@ -179,7 +179,7 @@ describe("Notifications pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const notifs = getNotifications(situation);
+        const notifs = engine.getNotifications();
         expect(notifs).toHaveLength(1);
         expect(notifs[0].description).toBe(notification);
       }
@@ -199,7 +199,7 @@ describe("Notifications pour la CC 650", () => {
     `(
       "ancienneté: $seniority an, salaire de référence: $salary => $expectedCompensation €",
       ({ seniority, salary, age }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0650'",
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
           "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age plus de 60 ans":
@@ -210,7 +210,7 @@ describe("Notifications pour la CC 650", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const notifs = getNotifications(situation);
+        const notifs = engine.getNotifications();
         expect(notifs).toHaveLength(1);
         expect(notifs[0].description).toBe(notification);
       }

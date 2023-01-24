@@ -3,25 +3,23 @@ import path from "path";
 import { parse } from "yaml";
 
 import {
-  commonFilenameFilter,
-  indemniteLicenciementFilenameFilter,
-  preavisRetraiteFilenameFilter,
+  commonFile,
+  indemniteLicenciementFile,
+  preavisRetraiteFile,
 } from "./constants";
 
 export const publicodesDir = path.resolve(__dirname, "../../src/modeles");
 
 export function mergePreavisRetraiteModels(): any {
-  return mergeModels(preavisRetraiteFilenameFilter);
+  return mergeModels([commonFile, preavisRetraiteFile]);
 }
 
-export function mergeIndemniteLicenciementModels(withKeys?: boolean): any {
-  return withKeys
-    ? mergeModelsWithKeys(indemniteLicenciementFilenameFilter)
-    : mergeModels(indemniteLicenciementFilenameFilter);
+export function mergeIndemniteLicenciementModels(): any {
+  return mergeModelsWithKeys([commonFile, indemniteLicenciementFile]);
 }
 
 export function mergeCommonModels(): any {
-  return mergeModels(commonFilenameFilter);
+  return mergeModels([commonFile]);
 }
 
 function mergeModels(filenameFilter: string[]): any {

@@ -1,4 +1,9 @@
-import { getFormule } from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "2511"
+);
 
 describe("Formule indemnité licenciement - CC 2511", () => {
   test.each`
@@ -12,13 +17,14 @@ describe("Formule indemnité licenciement - CC 2511", () => {
   `(
     "Formule $expectedFormula avec $seniority ans et inaptitude $isForInaptitude",
     ({ seniority, expectedFormula, expectedExplanations }) => {
-      const situation = engine.setSituation({
+      engine.setSituation({
         "contrat salarié . convention collective": "'IDCC2511'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
         "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          "1000",
       });
-      const result = getFormule(situation);
+      const result = engine.getFormule();
       expect(result.formula).toEqual(expectedFormula);
       expect(result.explanations).toEqual(expectedExplanations);
     }

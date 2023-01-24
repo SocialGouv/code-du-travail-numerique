@@ -1,13 +1,10 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { getReferences } from "../../../../common";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 const DepartRetraitePharmaReferences = [
   {
@@ -54,18 +51,18 @@ test.each`
 `(
   "Vérification des références juridiques pour un employé en $retirement à la retraite",
   ({ retirement, expectedReferences }) => {
-    const result = getReferences(
-      engine.setSituation({
-        "contrat salarié . ancienneté": 6,
-        "contrat salarié . convention collective": "'IDCC0176'",
-        "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
-          "oui",
-        "contrat salarié . convention collective . industrie pharmaceutique . groupe": 5,
-        "contrat salarié . mise à la retraite":
-          retirement === "mise" ? "oui" : "non",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
+    engine.setSituation({
+      "contrat salarié . ancienneté": "6",
+      "contrat salarié . convention collective": "'IDCC0176'",
+      "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
+        "oui",
+      "contrat salarié . convention collective . industrie pharmaceutique . groupe":
+        "5",
+      "contrat salarié . mise à la retraite":
+        retirement === "mise" ? "oui" : "non",
+      "contrat salarié . travailleur handicapé": "non",
+    });
+    const result = engine.getReferences();
 
     expect(result).toHaveLength(expectedReferences.length);
     expect(result).toEqual(expect.arrayContaining(expectedReferences));
@@ -73,17 +70,17 @@ test.each`
 );
 
 test("Vérification des références juridiques pour un employé du groupe 4 en mise à la retraite", () => {
-  const result = getReferences(
-    engine.setSituation({
-      "contrat salarié . ancienneté": 6,
-      "contrat salarié . convention collective": "'IDCC0176'",
-      "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
-        "non",
-      "contrat salarié . convention collective . industrie pharmaceutique . groupe": 4,
-      "contrat salarié . mise à la retraite": "oui",
-      "contrat salarié . travailleur handicapé": "non",
-    })
-  );
+  engine.setSituation({
+    "contrat salarié . ancienneté": "6",
+    "contrat salarié . convention collective": "'IDCC0176'",
+    "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
+      "non",
+    "contrat salarié . convention collective . industrie pharmaceutique . groupe":
+      "4",
+    "contrat salarié . mise à la retraite": "oui",
+    "contrat salarié . travailleur handicapé": "non",
+  });
+  const result = engine.getReferences();
 
   const expectedReferences = MiseRetraiteReferences.concat(
     MiseRetraitePharmaReferences
@@ -93,17 +90,17 @@ test("Vérification des références juridiques pour un employé du groupe 4 en 
 });
 
 test("Vérification des références juridiques pour un employé du groupe 1 à 3 en mise à la retraite", () => {
-  const result = getReferences(
-    engine.setSituation({
-      "contrat salarié . ancienneté": 6,
-      "contrat salarié . convention collective": "'IDCC0176'",
-      "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
-        "non",
-      "contrat salarié . convention collective . industrie pharmaceutique . groupe": 3,
-      "contrat salarié . mise à la retraite": "oui",
-      "contrat salarié . travailleur handicapé": "non",
-    })
-  );
+  engine.setSituation({
+    "contrat salarié . ancienneté": "6",
+    "contrat salarié . convention collective": "'IDCC0176'",
+    "contrat salarié . convention collective . industrie pharmaceutique . conclu après 1 juillet 2019":
+      "non",
+    "contrat salarié . convention collective . industrie pharmaceutique . groupe":
+      "3",
+    "contrat salarié . mise à la retraite": "oui",
+    "contrat salarié . travailleur handicapé": "non",
+  });
+  const result = engine.getReferences();
 
   const expectedReferences = MiseRetraiteReferences.concat(
     MiseRetraiteGroup1a3PharmaReferences

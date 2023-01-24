@@ -1,8 +1,10 @@
-import {
-  getNotifications,
-  getNotificationsBloquantes,
-} from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 import { CatPro3239 } from "../../salary";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "3239"
+);
 
 const notification =
   "Si la rupture du contrat de travail a été notifiée avant le 01/01/2022, l’indemnité de licenciement peut ne pas correspondre au résultat donné. En effet, jusqu’au 31/12/2021 c’est la convention collective “Assistants maternels du particulier employeur (IDCC 2395)” qui s’appliquait. Celle-ci a fusionné avec la convention collective “Salariés du particulier employeur (IDCC 2111)” pour former la convention collective “Particuliers employeurs et emploi à domicile (IDCC 3239)” applicable depuis le 01/01/2022.";
@@ -22,7 +24,7 @@ describe("Notification bloquante et non bloquante pour la CC 3239", () => {
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, catégorie $category => $expectedCompensation €",
       ({ seniority, salary, category }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC3239'",
           "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Non'`,
@@ -31,10 +33,10 @@ describe("Notification bloquante et non bloquante pour la CC 3239", () => {
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const notificationsBloquantes = getNotificationsBloquantes(situation);
+        const notificationsBloquantes = engine.getNotificationsBloquantes();
         expect(notificationsBloquantes).toHaveLength(0);
 
-        const notifications = getNotifications(situation);
+        const notifications = engine.getNotifications();
         expect(notifications).toHaveLength(0);
       }
     );
@@ -51,7 +53,7 @@ describe("Notification bloquante et non bloquante pour la CC 3239", () => {
       `(
         "ancienneté: $seniority an, salaire de référence: $salary, catégorie $category => $expectedCompensation €",
         ({ seniority, salary, category }) => {
-          const situation = engine.setSituation({
+          engine.setSituation({
             "contrat salarié . convention collective": "'IDCC3239'",
             "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
             "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Non'`,
@@ -62,10 +64,10 @@ describe("Notification bloquante et non bloquante pour la CC 3239", () => {
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
           });
 
-          const notificationsBloquantes = getNotificationsBloquantes(situation);
+          const notificationsBloquantes = engine.getNotificationsBloquantes();
           expect(notificationsBloquantes).toHaveLength(0);
 
-          const notifications = getNotifications(situation);
+          const notifications = engine.getNotifications();
           expect(notifications).toHaveLength(1);
           expect(notifications[0].description).toBe(notification);
         }
@@ -83,7 +85,7 @@ describe("Notification bloquante et non bloquante pour la CC 3239", () => {
         `(
           "ancienneté: $seniority an, salaire de référence: $salary, => $expectedCompensation €",
           ({ seniority, salary }) => {
-            const situation = engine.setSituation({
+            engine.setSituation({
               "contrat salarié . convention collective": "'IDCC3239'",
               "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${CatPro3239.assistantMaternel}'`,
               "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Oui'`,
@@ -94,15 +96,13 @@ describe("Notification bloquante et non bloquante pour la CC 3239", () => {
               "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
             });
 
-            const notificationsBloquantes = getNotificationsBloquantes(
-              situation
-            );
+            const notificationsBloquantes = engine.getNotificationsBloquantes();
             expect(notificationsBloquantes).toHaveLength(1);
             expect(notificationsBloquantes[0].description).toBe(
               blockingNotification
             );
 
-            const notifications = getNotifications(situation);
+            const notifications = engine.getNotifications();
             expect(notifications).toHaveLength(1);
             expect(notifications[0].description).toBe(notification);
           }
@@ -121,7 +121,7 @@ describe("Notification bloquante et non bloquante pour la CC 3239", () => {
         `(
           "ancienneté: $seniority an, salaire de référence: $salary, => $expectedCompensation €",
           ({ seniority, salary }) => {
-            const situation = engine.setSituation({
+            engine.setSituation({
               "contrat salarié . convention collective": "'IDCC3239'",
               "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${CatPro3239.assistantMaternel}'`,
               "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Oui'`,
@@ -133,15 +133,13 @@ describe("Notification bloquante et non bloquante pour la CC 3239", () => {
               "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
             });
 
-            const notificationsBloquantes = getNotificationsBloquantes(
-              situation
-            );
+            const notificationsBloquantes = engine.getNotificationsBloquantes();
             expect(notificationsBloquantes).toHaveLength(1);
             expect(notificationsBloquantes[0].description).toBe(
               blockingNotification
             );
 
-            const notifications = getNotifications(situation);
+            const notifications = engine.getNotifications();
             expect(notifications).toHaveLength(0);
           }
         );

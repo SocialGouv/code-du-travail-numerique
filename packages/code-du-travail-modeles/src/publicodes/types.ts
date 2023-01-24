@@ -37,7 +37,7 @@ export interface Rule extends PubliRule {
 export interface SituationElement {
   name: string;
   rawNode: Rule;
-  value: string;
+  value?: string;
 }
 
 export type PublicodesState = {

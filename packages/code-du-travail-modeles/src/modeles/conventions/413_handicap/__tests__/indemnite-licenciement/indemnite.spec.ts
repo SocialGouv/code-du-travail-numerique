@@ -1,3 +1,10 @@
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "413"
+);
+
 describe("Indemnité conventionnel de licenciement pour la CC 413", () => {
   describe("Cas standard", () => {
     test.each`
@@ -28,8 +35,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 413", () => {
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, => $expectedCompensation €",
       ({ seniority, salary, expectedCompensation, category }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC0413'",
             "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
             "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période":
@@ -37,13 +44,12 @@ describe("Indemnité conventionnel de licenciement pour la CC 413", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
-        expect(result.missingVariables).toEqual({});
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+        expect(missingArgs).toEqual([]);
         expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });
@@ -64,8 +70,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 413", () => {
         seniorityNonCadres,
         category,
       }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC0413'",
             "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
             "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période":
@@ -76,13 +82,12 @@ describe("Indemnité conventionnel de licenciement pour la CC 413", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
-        expect(result.missingVariables).toEqual({});
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
+        expect(missingArgs).toEqual([]);
         expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });

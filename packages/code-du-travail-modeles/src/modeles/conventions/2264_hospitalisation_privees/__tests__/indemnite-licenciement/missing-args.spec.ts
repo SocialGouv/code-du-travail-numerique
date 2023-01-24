@@ -1,88 +1,109 @@
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "2264"
+);
+
 describe("Missing args pour la CC 2264", () => {
   test("Catégorie professionnelle", () => {
-    const result = engine
-      .setSituation({
+    const { missingArgs } = engine.setSituation(
+      {
         "contrat salarié . convention collective": "'IDCC2264'",
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 3,
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année": 3,
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
-      })
-      .evaluate(
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
-    expect(result.missingVariables).toEqual({
-      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle": 21,
-    });
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          "3",
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année":
+          "3",
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          "2000",
+      },
+      "contrat salarié . indemnité de licenciement . résultat conventionnel"
+    );
+    const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
+    expect(keys).toEqual([
+      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle",
+    ]);
   });
   test("Non cadre durant une période", () => {
-    const result = engine
-      .setSituation({
+    const { missingArgs } = engine.setSituation(
+      {
         "contrat salarié . convention collective": "'IDCC2264'",
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle":
           "'Cadres'",
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 3,
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année": 3,
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
-      })
-      .evaluate(
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
-    expect(result.missingVariables).toEqual({
-      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période": 3044,
-    });
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          "3",
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année":
+          "3",
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          "2000",
+      },
+      "contrat salarié . indemnité de licenciement . résultat conventionnel"
+    );
+    const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
+    expect(keys).toEqual([
+      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période",
+    ]);
   });
 
   test("Non cadre", () => {
-    const result = engine
-      .setSituation({
+    const { missingArgs } = engine.setSituation(
+      {
         "contrat salarié . convention collective": "'IDCC2264'",
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle":
           "'Non-cadres'",
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 3,
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année": 3,
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
-      })
-      .evaluate(
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
-    expect(result.missingVariables).toEqual({});
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          "3",
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année":
+          "3",
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          "2000",
+      },
+      "contrat salarié . indemnité de licenciement . résultat conventionnel"
+    );
+    expect(missingArgs).toEqual([]);
   });
 
   test("Durée de la période non cadre", () => {
-    const result = engine
-      .setSituation({
+    const { missingArgs } = engine.setSituation(
+      {
         "contrat salarié . convention collective": "'IDCC2264'",
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle":
           "'Cadres'",
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
           "'Oui'",
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 3,
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année": 3,
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
-      })
-      .evaluate(
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
-    expect(result.missingVariables).toEqual({
-      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif": 1920,
-    });
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          "3",
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année":
+          "3",
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          "2000",
+      },
+      "contrat salarié . indemnité de licenciement . résultat conventionnel"
+    );
+    const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
+    expect(keys).toEqual([
+      "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif",
+    ]);
   });
   test("Aucune variable", () => {
-    const result = engine
-      .setSituation({
+    const { missingArgs } = engine.setSituation(
+      {
         "contrat salarié . convention collective": "'IDCC2264'",
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle":
           "'Cadres'",
         "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
           "'Oui'",
-        "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif": 1,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 3,
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année": 3,
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
-      })
-      .evaluate(
-        "contrat salarié . indemnité de licenciement . résultat conventionnel"
-      );
-    expect(result.missingVariables).toEqual({});
+        "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif":
+          "1",
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          "3",
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année":
+          "3",
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          "2000",
+      },
+      "contrat salarié . indemnité de licenciement . résultat conventionnel"
+    );
+    expect(missingArgs).toEqual([]);
   });
 });

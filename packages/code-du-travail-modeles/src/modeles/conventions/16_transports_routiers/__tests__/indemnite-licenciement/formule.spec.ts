@@ -1,4 +1,9 @@
-import { getFormule } from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "16"
+);
 
 describe("Formule indemnité licenciement - CC 16", () => {
   describe("Pour un ouvrier (autres licenciements)", () => {
@@ -18,7 +23,7 @@ describe("Formule indemnité licenciement - CC 16", () => {
         expectedFormula,
         expectedExplanations,
       }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0016'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
             "'Ouvriers'",
@@ -31,10 +36,11 @@ describe("Formule indemnité licenciement - CC 16", () => {
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
           "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
         });
 
-        const formule = getFormule(situation);
+        const formule = engine.getFormule();
 
         expect(formule.formula).toEqual(expectedFormula);
         expect(formule.explanations).toEqual(expectedExplanations);
@@ -49,7 +55,7 @@ describe("Formule indemnité licenciement - CC 16", () => {
     `(
       "Ancienneté $seniority ans, age: $age => $expectedFormula",
       ({ seniority, expectedFormula, expectedExplanations }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0016'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
             "'Ouvriers'",
@@ -60,10 +66,11 @@ describe("Formule indemnité licenciement - CC 16", () => {
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
           "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
         });
 
-        const formule = getFormule(situation);
+        const formule = engine.getFormule();
 
         expect(formule.formula).toEqual(expectedFormula);
         expect(formule.explanations).toEqual(expectedExplanations);
@@ -82,7 +89,7 @@ describe("Formule indemnité licenciement - CC 16", () => {
     `(
       "Ancienneté: $seniority ans => $expectedFormula",
       ({ seniority, expectedFormula, expectedExplanations }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0016'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
             "'Ouvriers'",
@@ -93,9 +100,10 @@ describe("Formule indemnité licenciement - CC 16", () => {
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
           "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
         });
-        const formule = getFormule(situation);
+        const formule = engine.getFormule();
 
         expect(formule.formula).toEqual(expectedFormula);
         expect(formule.explanations).toEqual(expectedExplanations);
@@ -121,7 +129,7 @@ describe("Formule indemnité licenciement - CC 16", () => {
         expectedFormula,
         expectedExplanations,
       }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0016'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age": age,
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
@@ -132,10 +140,11 @@ describe("Formule indemnité licenciement - CC 16", () => {
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
           "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
         });
 
-        const formule = getFormule(situation);
+        const formule = engine.getFormule();
 
         expect(formule.formula).toEqual(expectedFormula);
         expect(formule.explanations).toEqual(expectedExplanations);
@@ -163,7 +172,7 @@ describe("Formule indemnité licenciement - CC 16", () => {
         expectedFormula,
         expectedExplanations,
       }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0016'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . age": age,
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
@@ -174,10 +183,11 @@ describe("Formule indemnité licenciement - CC 16", () => {
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
           "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
         });
 
-        const formule = getFormule(situation);
+        const formule = engine.getFormule();
 
         expect(formule.formula).toEqual(expectedFormula);
         expect(formule.explanations).toEqual(expectedExplanations);
@@ -244,7 +254,7 @@ describe("Formule indemnité licenciement - CC 16", () => {
             : {
                 "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . avant employé ou technicien": `${"'Non'"}`,
               };
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0016'",
           "contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle":
             "'Ingénieurs et cadres'",
@@ -255,11 +265,12 @@ describe("Formule indemnité licenciement - CC 16", () => {
           "contrat salarié . indemnité de licenciement": "oui",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
           "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "1000",
           ...cadreBeforeTAM,
         });
 
-        const formule = getFormule(situation);
+        const formule = engine.getFormule();
 
         expect(formule.formula).toEqual(expectedFormula);
         expect(formule.explanations).toEqual(expectedExplanations);
