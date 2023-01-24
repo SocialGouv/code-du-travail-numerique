@@ -10,6 +10,9 @@ type PublicodesInputProps = {
 };
 
 const SituationInput = ({ element }: PublicodesInputProps): JSX.Element => {
+  if (!element.value) {
+    return <></>;
+  }
   switch (element.rawNode.cdtn?.type) {
     case RuleType.Liste:
       return <>{reverseValues(element.rawNode.cdtn.valeurs)[element.value]}</>;

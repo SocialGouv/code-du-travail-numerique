@@ -1,5 +1,11 @@
-import { getReferences, QuestionOuiNon } from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+import { QuestionOuiNon } from "../../../../common";
 import { CatPro573 } from "../../salary";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "573"
+);
 
 const refAutres = [
   {
@@ -58,7 +64,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, age $age, type de licenciement $typeLicenciement, catégorie $category => $expectedCompensation €",
       ({ seniority, salary, expectedReferences, category }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0573'",
           "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
@@ -66,7 +72,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const result = getReferences(situation, "résultat conventionnel");
+        const result = engine.getReferences("résultat conventionnel");
 
         expect(result).toHaveLength(expectedReferences.length);
         expect(result).toEqual(expect.arrayContaining(expectedReferences));
@@ -94,7 +100,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
         typeLicenciement,
         age,
       }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0573'",
           "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique": `'${typeLicenciement}'`,
@@ -104,7 +110,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const result = getReferences(situation, "résultat conventionnel");
+        const result = engine.getReferences("résultat conventionnel");
 
         expect(result).toHaveLength(expectedReferences.length);
         expect(result).toEqual(expect.arrayContaining(expectedReferences));
@@ -136,7 +142,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
         auMoins15AnsCadre,
         age,
       }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0573'",
           "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans": `'${auMoins15AnsCadre}'`,
@@ -146,7 +152,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
-        const result = getReferences(situation, "résultat conventionnel");
+        const result = engine.getReferences("résultat conventionnel");
 
         expect(result).toHaveLength(expectedReferences.length);
         expect(result).toEqual(expect.arrayContaining(expectedReferences));

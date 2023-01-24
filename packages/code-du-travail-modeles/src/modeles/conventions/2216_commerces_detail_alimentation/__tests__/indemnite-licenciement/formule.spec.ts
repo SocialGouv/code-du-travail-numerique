@@ -1,4 +1,9 @@
-import { getFormule } from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "2216"
+);
 
 describe("Formule indemnité licenciement - 2216", () => {
   test.each`
@@ -51,7 +56,7 @@ describe("Formule indemnité licenciement - 2216", () => {
       age,
       isEconomicFiring,
     }) => {
-      const situation = engine.setSituation({
+      engine.setSituation({
         "contrat salarié . convention collective": "'IDCC2216'",
         "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
         "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
@@ -61,9 +66,10 @@ describe("Formule indemnité licenciement - 2216", () => {
         "contrat salarié . indemnité de licenciement": "oui",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 1000,
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          "1000",
       });
-      const result = getFormule(situation);
+      const result = engine.getFormule();
 
       expect(result.formula).toEqual(expectedFormula);
       expect(result.explanations).toEqual(expectedExplanations);

@@ -2,6 +2,7 @@ import { icons, Input, theme } from "@socialgouv/cdtn-ui";
 import { SalaryPeriods } from "@socialgouv/modeles-social";
 import React from "react";
 import styled from "styled-components";
+import Html from "../../../../../common/Html";
 
 import { InlineError } from "../../../../common/ErrorField";
 import { Question, Tooltip } from "../../../../common/Question";
@@ -91,7 +92,7 @@ export const SalaireTempsPlein = ({
       <Table>
         <Caption>
           <Question required tooltip={tooltip}>
-            {title}
+            <Html as="span">{title}</Html>
           </Question>
           {subTitle && <SmallText>{subTitle}</SmallText>}
         </Caption>

@@ -1,5 +1,10 @@
-import { getReferences } from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 import { CategoryPro29 } from "../../salary";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "29"
+);
 
 const refOther = [
   {
@@ -61,14 +66,16 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, type de licenciement $typeLicenciement, catégorie $category => $expectedReferences",
       ({ expectedReferences, category }) => {
-        const situation = engine.setSituation({
+        engine.setSituation({
           "contrat salarié . convention collective": "'IDCC0029'",
           "contrat salarié . convention collective . hospitalisation privée à but non lucratif . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 10,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            "10",
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            "2000",
         });
 
-        const result = getReferences(situation, "résultat conventionnel");
+        const result = engine.getReferences("résultat conventionnel");
 
         expect(result).toHaveLength(expectedReferences.length);
         expect(result).toEqual(expect.arrayContaining(expectedReferences));

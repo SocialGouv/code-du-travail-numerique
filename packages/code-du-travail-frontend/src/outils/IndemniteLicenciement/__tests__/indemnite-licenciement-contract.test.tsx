@@ -1,7 +1,4 @@
-import {
-  CalculateurIndemnite,
-  loadPublicodesRules,
-} from "../../../../src/outils";
+import { CalculateurIndemnite } from "../../../../src/outils";
 import { ui } from "./ui";
 
 import { render, fireEvent } from "@testing-library/react";
@@ -17,7 +14,7 @@ test(`
       icon={""}
       title={""}
       displayTitle={""}
-      publicodesRules={loadPublicodesRules("indemnite-licenciement")}
+      slug={"indemnite-licenciement"}
     />
   );
 

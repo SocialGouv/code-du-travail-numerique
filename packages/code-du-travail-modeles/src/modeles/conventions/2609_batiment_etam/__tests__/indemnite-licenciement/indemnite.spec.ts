@@ -1,3 +1,10 @@
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "2609"
+);
+
 describe("CC 2609", () => {
   describe("Calcul de l'indemnité de licenciement", () => {
     test.each`
@@ -32,21 +39,20 @@ describe("CC 2609", () => {
     `(
       "Avec une ancienneté $seniority ans (plus $seniorityEmployeTAM en tant que non cadre), droit de retraite: $haveRightToRetirement, un salaire de référence $salaireRef € et un age de $age => une compensation de base de $expectedCompensation €",
       ({ salaireRef, expectedCompensation, age, seniority }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC2609'",
             "contrat salarié . convention collective . batiment etam . indemnité de licenciement . age à la fin de son préavis": age,
             "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
 
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedCompensation);
         expect(result.unit?.numerators).toEqual(["€"]);
       }
     );

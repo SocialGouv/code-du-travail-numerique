@@ -1,13 +1,10 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { getReferences } from "../../../../common";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 const DepartRetraiteCadresReferences = [
   ...DepartRetraiteReferences,
@@ -52,14 +49,13 @@ test.each`
 `(
   "Vérification des références juridiques pour un $category en départ à la retraite",
   ({ category, expectedReferences }) => {
-    const result = getReferences(
-      engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC2216'",
-        "contrat salarié . convention collective . commerce gros et detail alimentation . départ à la retraite . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . mise à la retraite": "non",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
+    engine.setSituation({
+      "contrat salarié . convention collective": "'IDCC2216'",
+      "contrat salarié . convention collective . commerce gros et detail alimentation . départ à la retraite . catégorie professionnelle": `'${category}'`,
+      "contrat salarié . mise à la retraite": "non",
+      "contrat salarié . travailleur handicapé": "non",
+    });
+    const result = engine.getReferences();
 
     expect(result).toHaveLength(expectedReferences.length);
     expect(result).toEqual(expect.arrayContaining(expectedReferences));
@@ -74,14 +70,13 @@ test.each`
 `(
   "Vérification des références juridiques pour un $category en mise à la retraite",
   ({ category, expectedReferences }) => {
-    const result = getReferences(
-      engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC2216'",
-        "contrat salarié . convention collective . commerce gros et detail alimentation . mise à la retraite . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
+    engine.setSituation({
+      "contrat salarié . convention collective": "'IDCC2216'",
+      "contrat salarié . convention collective . commerce gros et detail alimentation . mise à la retraite . catégorie professionnelle": `'${category}'`,
+      "contrat salarié . mise à la retraite": "oui",
+      "contrat salarié . travailleur handicapé": "non",
+    });
+    const result = engine.getReferences();
 
     expect(result).toHaveLength(expectedReferences.length);
     expect(result).toEqual(expect.arrayContaining(expectedReferences));

@@ -1,53 +1,47 @@
-import Engine from "publicodes";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
-
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 describe("Travailleur handicapé - Depart et mise à la retraite", () => {
   test.each`
-    seniority | expectedNotice
-    ${3}      | ${0}
-    ${6}      | ${2}
-    ${24}     | ${3}
+    seniority | expectedNotice | expectedUnit
+    ${3}      | ${0}           | ${"semaines"}
+    ${6}      | ${2}           | ${"mois"}
+    ${24}     | ${3}           | ${"mois"}
   `(
     "Mise à la retraite: en ayant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
-    ({ seniority, expectedNotice }) => {
-      const result = engine
-        .setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "''",
-          "contrat salarié . mise à la retraite": "oui",
-          "contrat salarié . travailleur handicapé": "oui",
-        })
-        .evaluate("contrat salarié . préavis de retraite");
+    ({ seniority, expectedNotice, expectedUnit }) => {
+      const { result, missingArgs } = engine.setSituation({
+        "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "''",
+        "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "oui",
+      });
 
-      expect(result.nodeValue).toEqual(expectedNotice);
-      expect(result.missingVariables).toEqual({});
-      expect(result.unit?.numerators).toEqual(["mois"]);
+      expect(result.value).toEqual(expectedNotice);
+      expect(missingArgs).toEqual([]);
+      expect(result.unit).toEqual(expectedUnit);
     }
   );
 
   test.each`
-    seniority | expectedNotice
-    ${3}      | ${0}
-    ${6}      | ${2}
-    ${24}     | ${3}
+    seniority | expectedNotice | expectedUnit
+    ${3}      | ${0}           | ${"semaines"}
+    ${6}      | ${2}           | ${"mois"}
+    ${24}     | ${3}           | ${"mois"}
   `(
     "Depart à la retraite: en ayant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
-    ({ seniority, expectedNotice }) => {
-      const result = engine
-        .setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "''",
-          "contrat salarié . mise à la retraite": "non",
-          "contrat salarié . travailleur handicapé": "oui",
-        })
-        .evaluate("contrat salarié . préavis de retraite");
+    ({ seniority, expectedNotice, expectedUnit }) => {
+      const { result, missingArgs } = engine.setSituation({
+        "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "''",
+        "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "oui",
+      });
 
-      expect(result.nodeValue).toEqual(expectedNotice);
-      expect(result.unit?.numerators).toEqual(["mois"]);
-      expect(result.missingVariables).toEqual({});
+      expect(result.value).toEqual(expectedNotice);
+      expect(result.unit).toEqual(expectedUnit);
+      expect(missingArgs).toEqual([]);
     }
   );
 
@@ -58,19 +52,17 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
   `(
     "En ayant $seniority mois d'ancienneté (CC: Hopital), son préavis devrait être $expectedNotice mois",
     ({ seniority, expectedNotice }) => {
-      const result = engine
-        .setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": `'IDCC0029'`,
-          "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'Médecins'`,
-          "contrat salarié . mise à la retraite": "oui",
-          "contrat salarié . travailleur handicapé": "oui",
-        })
-        .evaluate("contrat salarié . préavis de retraite");
+      const { result, missingArgs } = engine.setSituation({
+        "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": `'IDCC0029'`,
+        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'Médecins'`,
+        "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "oui",
+      });
 
-      expect(result.nodeValue).toEqual(expectedNotice);
-      expect(result.unit?.numerators).toEqual(["mois"]);
-      expect(result.missingVariables).toEqual({});
+      expect(result.value).toEqual(expectedNotice);
+      expect(result.unit).toEqual("mois");
+      expect(missingArgs).toEqual([]);
     }
   );
 
@@ -83,19 +75,17 @@ describe("Travailleur handicapé - Depart et mise à la retraite", () => {
   `(
     "En ayant $seniority mois d'ancienneté (CC: Hopital), son préavis devrait être $expectedNotice mois",
     ({ seniority, category, expectedNotice }) => {
-      const result = engine
-        .setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": `'IDCC0029'`,
-          "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . mise à la retraite": "non",
-          "contrat salarié . travailleur handicapé": "oui",
-        })
-        .evaluate("contrat salarié . préavis de retraite");
+      const { result, missingArgs } = engine.setSituation({
+        "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": `'IDCC0029'`,
+        "contrat salarié . convention collective . hospitalisation privée à but non lucratif . catégorie professionnelle": `'${category}'`,
+        "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "oui",
+      });
 
-      expect(result.nodeValue).toEqual(expectedNotice);
-      expect(result.unit?.numerators).toEqual(["mois"]);
-      expect(result.missingVariables).toEqual({});
+      expect(result.value).toEqual(expectedNotice);
+      expect(result.unit).toEqual("mois");
+      expect(missingArgs).toEqual([]);
     }
   );
 });

@@ -5,6 +5,10 @@ import { Table, theme } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 import { publicodesUnitTranslator } from "../../../../publicodes";
 import AbsenceTable from "./AbsenceTable";
+import {
+  generateResultSalaireTempsPlein,
+  generateResultSameSalary,
+} from "../../../utils/question";
 
 type Props = {
   typeContrat: string;
@@ -127,8 +131,11 @@ export default function FilledElements(props: Props) {
                 {props.hasTempsPartiel ? "Oui" : "Non"}
               </li>
               <li>
-                Salaire mensuel brut identique durant les 12 derniers mois
-                précédant la notification du licenciement&nbsp;:&nbsp;
+                {generateResultSameSalary(
+                  props.isArretTravail ? "oui" : "non",
+                  props.salaryPeriods
+                )}
+                &nbsp;:&nbsp;
                 {props.hasSameSalary ? "Oui" : "Non"}
               </li>
               {props.hasSameSalary && props.salary && (
@@ -140,8 +147,11 @@ export default function FilledElements(props: Props) {
               )}
               {props.salaryPeriods.length > 0 && !props.hasSameSalary && (
                 <li>
-                  Salaires mensuels bruts perçus au cours des 12 mois précédant
-                  la notification du licenciement&nbsp;:&nbsp;
+                  {generateResultSalaireTempsPlein(
+                    props.isArretTravail ? "oui" : "non",
+                    props.salaryPeriods
+                  )}
+                  &nbsp;:&nbsp;
                   <StyledFilledElementTable>
                     <thead>
                       <tr>

@@ -1,30 +1,28 @@
-import Engine from "publicodes";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
-import { getNotifications } from "../../../../common";
-
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 describe("Départ à la retraite", () => {
   test.each`
     seniority | expectedNotice | expectedUnit
-    ${5}      | ${15}          | ${"jour"}
+    ${5}      | ${15}          | ${"jours"}
     ${10}     | ${1}           | ${"mois"}
     ${25}     | ${2}           | ${"mois"}
   `(
     "Pour un employé avec $seniority mois d'ancienneté, son préavis est $expectedNotice $expectedUnit",
     ({ seniority, expectedNotice, expectedUnit }) => {
-      const result = engine
-        .setSituation({
+      const { result, missingArgs } = engine.setSituation(
+        {
           "contrat salarié . ancienneté": seniority,
           "contrat salarié . convention collective": "'IDCC1483'",
           "contrat salarié . mise à la retraite": "non",
           "contrat salarié . travailleur handicapé": "non",
-        })
-        .evaluate("contrat salarié . préavis de retraite");
+        },
+        "contrat salarié . préavis de retraite en jours"
+      );
 
-      expect(result.nodeValue).toEqual(expectedNotice);
-      expect(result.unit?.numerators).toEqual([expectedUnit]);
-      expect(result.missingVariables).toEqual({});
+      expect(result.value).toEqual(expectedNotice);
+      expect(result.unit).toEqual(expectedUnit);
+      expect(missingArgs).toEqual([]);
     }
   );
 });
@@ -32,24 +30,25 @@ describe("Départ à la retraite", () => {
 describe("Mise à la retraite", () => {
   test.each`
     seniority | expectedNotice | expectedUnit
-    ${5}      | ${15}          | ${"jour"}
+    ${5}      | ${15}          | ${"jours"}
     ${10}     | ${1}           | ${"mois"}
     ${25}     | ${3}           | ${"mois"}
   `(
     "Pour un employé possédant $seniority mois d'ancienneté, son préavis est $expectedNotice $expectedUnit",
     ({ seniority, expectedNotice, expectedUnit }) => {
-      const result = engine
-        .setSituation({
+      const { result, missingArgs } = engine.setSituation(
+        {
           "contrat salarié . ancienneté": seniority,
           "contrat salarié . convention collective": "'IDCC1483'",
           "contrat salarié . mise à la retraite": "oui",
           "contrat salarié . travailleur handicapé": "non",
-        })
-        .evaluate("contrat salarié . préavis de retraite");
+        },
+        "contrat salarié . préavis de retraite en jours"
+      );
 
-      expect(result.nodeValue).toEqual(expectedNotice);
-      expect(result.unit?.numerators).toEqual([expectedUnit]);
-      expect(result.missingVariables).toEqual({});
+      expect(result.value).toEqual(expectedNotice);
+      expect(result.unit).toEqual(expectedUnit);
+      expect(missingArgs).toEqual([]);
     }
   );
 });
@@ -61,27 +60,25 @@ describe("Notifications", () => {
   `(
     "Pour un employé possédant $seniority mois d'ancienneté en départ à la retraite, on ne doit pas afficher de notification",
     ({ seniority }) => {
-      const notifications = getNotifications(
-        engine.setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "'IDCC1483'",
-          "contrat salarié . mise à la retraite": "non",
-          "contrat salarié . travailleur handicapé": "non",
-        })
-      );
+      engine.setSituation({
+        "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC1483'",
+        "contrat salarié . mise à la retraite": "non",
+        "contrat salarié . travailleur handicapé": "non",
+      });
+      const notifications = engine.getNotifications();
 
       expect(notifications).toHaveLength(0);
     }
   );
   test("Pour un employé possédant 2 mois d'ancienneté en départ à la retraite, on ne doit pas afficher de notification", () => {
-    const notifications = getNotifications(
-      engine.setSituation({
-        "contrat salarié . ancienneté": 2,
-        "contrat salarié . convention collective": "'IDCC1483'",
-        "contrat salarié . mise à la retraite": "non",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
+    engine.setSituation({
+      "contrat salarié . ancienneté": "2",
+      "contrat salarié . convention collective": "'IDCC1483'",
+      "contrat salarié . mise à la retraite": "non",
+      "contrat salarié . travailleur handicapé": "non",
+    });
+    const notifications = engine.getNotifications();
 
     expect(notifications).toHaveLength(1);
     expect(notifications[0].description).toBe(`Il s'agit d'un délai minimum.`);
@@ -94,14 +91,13 @@ describe("Notifications", () => {
   `(
     "Pour un employé possédant $seniority mois d'ancienneté en mise à la retraite, on ne doit pas afficher de notification",
     ({ seniority }) => {
-      const notifications = getNotifications(
-        engine.setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "'IDCC1483'",
-          "contrat salarié . mise à la retraite": "oui",
-          "contrat salarié . travailleur handicapé": "non",
-        })
-      );
+      engine.setSituation({
+        "contrat salarié . ancienneté": seniority,
+        "contrat salarié . convention collective": "'IDCC1483'",
+        "contrat salarié . mise à la retraite": "oui",
+        "contrat salarié . travailleur handicapé": "non",
+      });
+      const notifications = engine.getNotifications();
 
       expect(notifications).toHaveLength(1);
       expect(notifications[0].description).toBe(

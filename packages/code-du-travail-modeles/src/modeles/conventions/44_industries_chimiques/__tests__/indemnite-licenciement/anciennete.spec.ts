@@ -23,7 +23,7 @@ describe("CC 44", () => {
     durationInMonth: 0,
     motif: { key: MotifKeys.miseAPied },
   }, { durationInMonth: 0, motif: { key: MotifKeys.congesPaternite } }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${1}
-      ${[{ durationInMonth: 1, motif: { key: MotifKeys.maladieNonPro } }, {
+      ${[{ durationInMonth: "1", motif: { key: MotifKeys.maladieNonPro } }, {
     durationInMonth: 0,
     motif: { key: MotifKeys.accidentTrajet },
   }, { durationInMonth: 0, motif: { key: MotifKeys.congesSabbatique } }, {
@@ -37,7 +37,7 @@ describe("CC 44", () => {
     motif: { key: MotifKeys.miseAPied },
   }, { durationInMonth: 0, motif: { key: MotifKeys.congesPaternite } }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${1}
       ${[{ durationInMonth: 0, motif: { key: MotifKeys.maladieNonPro } }, {
-    durationInMonth: 1,
+    durationInMonth: "1",
     motif: { key: MotifKeys.accidentTrajet },
   }, { durationInMonth: 0, motif: { key: MotifKeys.congesSabbatique } }, {
     durationInMonth: 0,
@@ -55,7 +55,7 @@ describe("CC 44", () => {
       ${[{ durationInMonth: 0, motif: { key: MotifKeys.maladieNonPro } }, {
     durationInMonth: 0,
     motif: { key: MotifKeys.accidentTrajet },
-  }, { durationInMonth: 1, motif: { key: MotifKeys.congesSabbatique } }, {
+  }, { durationInMonth: "1", motif: { key: MotifKeys.congesSabbatique } }, {
     durationInMonth: 0,
     motif: { key: MotifKeys.congesCreationEntreprise },
   }, { durationInMonth: 0, motif: { key: MotifKeys.congesParentalEducation } }, {
@@ -72,7 +72,7 @@ describe("CC 44", () => {
     durationInMonth: 0,
     motif: { key: MotifKeys.accidentTrajet },
   }, { durationInMonth: 0, motif: { key: MotifKeys.congesSabbatique } }, {
-    durationInMonth: 1,
+    durationInMonth: "1",
     motif: { key: MotifKeys.congesCreationEntreprise },
   }, { durationInMonth: 0, motif: { key: MotifKeys.congesParentalEducation } }, {
     durationInMonth: 0,
@@ -90,7 +90,7 @@ describe("CC 44", () => {
   }, { durationInMonth: 0, motif: { key: MotifKeys.congesSabbatique } }, {
     durationInMonth: 0,
     motif: { key: MotifKeys.congesCreationEntreprise },
-  }, { durationInMonth: 1, motif: { key: MotifKeys.congesParentalEducation } }, {
+  }, { durationInMonth: "1", motif: { key: MotifKeys.congesParentalEducation } }, {
     durationInMonth: 0,
     motif: { key: MotifKeys.congesSansSolde },
   }, { durationInMonth: 0, motif: { key: MotifKeys.greve } }, {
@@ -107,7 +107,7 @@ describe("CC 44", () => {
     durationInMonth: 0,
     motif: { key: MotifKeys.congesCreationEntreprise },
   }, { durationInMonth: 0, motif: { key: MotifKeys.congesParentalEducation } }, {
-    durationInMonth: 1,
+    durationInMonth: "1",
     motif: { key: MotifKeys.congesSansSolde },
   }, { durationInMonth: 0, motif: { key: MotifKeys.greve } }, {
     durationInMonth: 0,
@@ -125,7 +125,7 @@ describe("CC 44", () => {
   }, { durationInMonth: 0, motif: { key: MotifKeys.congesParentalEducation } }, {
     durationInMonth: 0,
     motif: { key: MotifKeys.congesSansSolde },
-  }, { durationInMonth: 1, motif: { key: MotifKeys.greve } }, {
+  }, { durationInMonth: "1", motif: { key: MotifKeys.greve } }, {
     durationInMonth: 0,
     motif: { key: MotifKeys.miseAPied },
   }, {
@@ -142,7 +142,7 @@ describe("CC 44", () => {
     durationInMonth: 0,
     motif: { key: MotifKeys.congesSansSolde },
   }, { durationInMonth: 0, motif: { key: MotifKeys.greve } }, {
-    durationInMonth: 1,
+    durationInMonth: "1",
     motif: { key: MotifKeys.miseAPied },
   }, {
     durationInMonth: 0,
@@ -161,36 +161,36 @@ describe("CC 44", () => {
     durationInMonth: 0,
     motif: { key: MotifKeys.miseAPied },
   }, {
-    durationInMonth: 1,
+    durationInMonth: "1",
     motif: { key: MotifKeys.congesPaternite },
   }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${0.9166666666666666}
-      ${[{ durationInMonth: 1, motif: { key: MotifKeys.maladieNonPro } }, {
-    durationInMonth: 1,
+      ${[{ durationInMonth: "1", motif: { key: MotifKeys.maladieNonPro } }, {
+    durationInMonth: "1",
     motif: { key: MotifKeys.accidentTrajet },
-  }, { durationInMonth: 1, motif: { key: MotifKeys.congesSabbatique } }, {
-    durationInMonth: 1,
+  }, { durationInMonth: "1", motif: { key: MotifKeys.congesSabbatique } }, {
+    durationInMonth: "1",
     motif: { key: MotifKeys.congesCreationEntreprise },
-  }, { durationInMonth: 1, motif: { key: MotifKeys.congesParentalEducation } }, {
-    durationInMonth: 1,
+  }, { durationInMonth: "1", motif: { key: MotifKeys.congesParentalEducation } }, {
+    durationInMonth: "1",
     motif: { key: MotifKeys.congesSansSolde },
-  }, { durationInMonth: 1, motif: { key: MotifKeys.greve } }, {
-    durationInMonth: 1,
+  }, { durationInMonth: "1", motif: { key: MotifKeys.greve } }, {
+    durationInMonth: "1",
     motif: { key: MotifKeys.miseAPied },
-  }, { durationInMonth: 1, motif: { key: MotifKeys.congesPaternite } }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${0.375}
-      ${[{ durationInMonth: 1, motif: { key: MotifKeys.maladieNonPro } }, {
-    durationInMonth: 1,
+  }, { durationInMonth: "1", motif: { key: MotifKeys.congesPaternite } }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${0.375}
+      ${[{ durationInMonth: "1", motif: { key: MotifKeys.maladieNonPro } }, {
+    durationInMonth: "1",
     motif: { key: MotifKeys.accidentTrajet },
-  }, { durationInMonth: 1, motif: { key: MotifKeys.congesSabbatique } }, {
-    durationInMonth: 1,
+  }, { durationInMonth: "1", motif: { key: MotifKeys.congesSabbatique } }, {
+    durationInMonth: "1",
     motif: { key: MotifKeys.congesCreationEntreprise },
-  }, { durationInMonth: 1, motif: { key: MotifKeys.congesParentalEducation } }, {
-    durationInMonth: 1,
+  }, { durationInMonth: "1", motif: { key: MotifKeys.congesParentalEducation } }, {
+    durationInMonth: "1",
     motif: { key: MotifKeys.congesSansSolde },
-  }, { durationInMonth: 1, motif: { key: MotifKeys.greve } }, {
-    durationInMonth: 1,
+  }, { durationInMonth: "1", motif: { key: MotifKeys.greve } }, {
+    durationInMonth: "1",
     motif: { key: MotifKeys.miseAPied },
   }, {
-    durationInMonth: 1,
+    durationInMonth: "1",
     motif: { key: MotifKeys.congesPaternite },
   }]} | ${"20/01/2021"} | ${"20/02/2021"} | ${-0.5416666666666666}
       ${[{ durationInMonth: 0, motif: { key: MotifKeys.maladieNonPro } }, {

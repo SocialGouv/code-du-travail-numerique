@@ -1,3 +1,10 @@
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "2098"
+);
+
 describe("Calcul de l'indemnité de licenciement CC 2098", () => {
   describe("Licenciement pour inaptitude non professionnelle", () => {
     test.each`
@@ -8,22 +15,22 @@ describe("Calcul de l'indemnité de licenciement CC 2098", () => {
     `(
       "Avec une ancienneté $seniority ans et salaire de ref 2800€ => une compensation de base de $expectedCompensation €",
       ({ expectedCompensation, seniority }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC2098'",
             "contrat salarié . convention collective . personnel presta service tertiaire . inaptitude suite à un accident non professionnelle":
               "'Oui'",
             "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2800,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              "2800",
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
 
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedCompensation);
         expect(result.unit?.numerators).toEqual(["€"]);
       }
     );
@@ -41,8 +48,8 @@ describe("Calcul de l'indemnité de licenciement CC 2098", () => {
     `(
       "Non-cadres, Avec une ancienneté $seniority ans et salaire de ref 2800€ => une compensation de base de $expectedCompensation €",
       ({ expectedCompensation, seniority }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC2098'",
             "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle":
               "'Non-cadres'",
@@ -51,14 +58,14 @@ describe("Calcul de l'indemnité de licenciement CC 2098", () => {
             "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2800,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              "2800",
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
 
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedCompensation);
         expect(result.unit?.numerators).toEqual(["€"]);
       }
     );
@@ -86,8 +93,8 @@ describe("Calcul de l'indemnité de licenciement CC 2098", () => {
     `(
       "Cadres, avec une ancienneté $seniority ans, un age $age ans, un salaire de référence 3706€ => une compensation de base de $expectedCompensation €",
       ({ salaireRef, expectedCompensation, seniority, age }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC2098'",
             "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . cadres . age": age,
             "contrat salarié . convention collective . personnel presta service tertiaire . autre licenciement . catégorie professionnelle":
@@ -98,13 +105,12 @@ describe("Calcul de l'indemnité de licenciement CC 2098", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
 
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedCompensation);
         expect(result.unit?.numerators).toEqual(["€"]);
       }
     );

@@ -1,8 +1,6 @@
-import Engine from "publicodes";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
-
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 test.each`
   seniority | expectedNotice
@@ -12,18 +10,19 @@ test.each`
 `(
   "Pour un employé dans la convention collective Bâtiment Etam possédant $seniority mois d'ancienneté, son préavis de mise à la retraite devrait être $expectedNotice mois",
   ({ seniority, expectedNotice }) => {
-    const result = engine
-      .setSituation({
+    const { result, missingArgs } = engine.setSituation(
+      {
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC2609'",
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
-      })
-      .evaluate("contrat salarié . préavis de retraite");
+      },
+      "contrat salarié . préavis de retraite en jours"
+    );
 
-    expect(result.nodeValue).toEqual(expectedNotice);
-    expect(result.unit?.numerators).toEqual(["mois"]);
-    expect(result.missingVariables).toEqual({});
+    expect(result.value).toEqual(expectedNotice);
+    expect(result.unit).toEqual("mois");
+    expect(missingArgs).toEqual([]);
   }
 );
 
@@ -35,17 +34,18 @@ test.each`
 `(
   "Pour un employé dans la convention collective Bâtiment Etam possédant $seniority mois d'ancienneté, son préavis de départ à la retraite devrait être $expectedNotice mois",
   ({ seniority, expectedNotice }) => {
-    const result = engine
-      .setSituation({
+    const { result, missingArgs } = engine.setSituation(
+      {
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC2609'",
         "contrat salarié . mise à la retraite": "non",
         "contrat salarié . travailleur handicapé": "non",
-      })
-      .evaluate("contrat salarié . préavis de retraite");
+      },
+      "contrat salarié . préavis de retraite en jours"
+    );
 
-    expect(result.nodeValue).toEqual(expectedNotice);
-    expect(result.unit?.numerators).toEqual(["mois"]);
-    expect(result.missingVariables).toEqual({});
+    expect(result.value).toEqual(expectedNotice);
+    expect(result.unit).toEqual("mois");
+    expect(missingArgs).toEqual([]);
   }
 );

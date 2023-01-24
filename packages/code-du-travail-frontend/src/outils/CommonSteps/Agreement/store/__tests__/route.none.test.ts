@@ -7,9 +7,7 @@ describe("[Store] Un utilisateur choisit de ne pas renseigner sa convention coll
   let store: ReturnType<typeof createIndemniteLicenciementStore>;
 
   beforeEach(() => {
-    store = createIndemniteLicenciementStore(
-      loadPublicodesRules("indemnite-licenciement")
-    );
+    store = createIndemniteLicenciementStore("indemnite-licenciement");
   });
 
   it("doit pouvoir passer à l'étape suivante 🚀", () => {
