@@ -100,7 +100,6 @@ describe("Indemnité licenciement - CC 3239", () => {
     });
     fireEvent.click(ui.seniority.hasAbsence.non.get());
     fireEvent.click(ui.next.get());
-    fireEvent.click(ui.salary.hasPartialTime.non.get());
     fireEvent.click(ui.salary.hasSameSalary.oui.get());
     fireEvent.change(ui.salary.sameSalaryValue.get(), {
       target: { value: "3000" },
