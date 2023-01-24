@@ -55,10 +55,10 @@ Alors je vois "La date de notification doit se situer dans les 18 derniers mois"
 Quand je renseigne "01/01/2022" dans le champ "la date de notification"
 Alors je ne vois pas "La date de notification doit se situer dans les 18 derniers mois"
 
-Quand je renseigne "01/01/2000" dans le champ "la date de sortie"
-Alors je vois "La date de notification doit se situer avant la date de sortie"
-Quand je renseigne "01/01/2022" dans le champ "la date de sortie"
-Alors je ne vois pas "La date de notification doit se situer avant la date de sortie"
+Quand je renseigne "01/01/2000" dans le champ "la date de fin de contrat"
+Alors je vois "La date de notification doit se situer avant la date de fin de contrat"
+Quand je renseigne "01/01/2022" dans le champ "la date de fin de contrat"
+Alors je ne vois pas "La date de notification doit se situer avant la date de fin de contrat"
 
 
 Alors je vois "Période d’absence prolongée"

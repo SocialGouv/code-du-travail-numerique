@@ -24,8 +24,8 @@ export const getAbsencePeriodsErrors = (
 
   // Check all absences
   if (state.hasAbsenceProlonge === "oui") {
-    const absenceErrors: AncienneteAbsenceStoreError[] = state.absencePeriods.map(
-      (item): AncienneteAbsenceStoreError => {
+    const absenceErrors: AncienneteAbsenceStoreError[] =
+      state.absencePeriods.map((item): AncienneteAbsenceStoreError => {
         if (
           !item.durationInMonth ||
           (item.motif.startAt &&
@@ -56,12 +56,11 @@ export const getAbsencePeriodsErrors = (
           })
         ) {
           return {
-            errorDate: `La date de l'absence doit être comprise entre le ${state.dateEntree} et le ${state.dateSortie} (dates d'entrée et de sortie de l'entreprise)`,
+            errorDate: `La date de l'absence doit être comprise entre le ${state.dateEntree} et le ${state.dateSortie} (dates de début et de fin de contrat)`,
           };
         }
         return {};
-      }
-    );
+      });
     if (absenceErrors.length === 0) {
       errors.errorAbsencePeriods = {
         global: "Vous devez renseigner tous les champs",
