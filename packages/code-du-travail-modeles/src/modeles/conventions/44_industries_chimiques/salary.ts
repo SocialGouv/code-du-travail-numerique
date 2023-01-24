@@ -20,7 +20,8 @@ export type CC44ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary44
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0044> {
+  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0044>
+{
   /**
    * (si le salaire ne comporte pas une partie fixe et une partie variable et Ouvriers et collaborateurs & Agents de maîtrise et techniciens) ou (Ingénieurs et Cadres)
    * - S1 + P / 12 (si >= S2/12)
@@ -45,6 +46,8 @@ export class ReferenceSalary44
     const salaireMoyen = sum(salaryValues) / 12;
     let dernierSalaire = rankedSalaires[0]?.value ?? 0;
     let dernierePrimeProraterise = (rankedSalaires[0]?.prime ?? 0) / 12;
+    let dernierSalaireSansPrimes =
+      dernierSalaire - (rankedSalaires[0]?.prime ?? 0);
 
     if (
       !hasVariablePay &&
@@ -54,6 +57,7 @@ export class ReferenceSalary44
     ) {
       dernierSalaire = lastMonthSalary.value ?? 0;
       dernierePrimeProraterise = (lastMonthSalary.prime ?? 0) / 12;
+      dernierSalaireSansPrimes = dernierSalaire - (lastMonthSalary.prime ?? 0);
     }
 
     if (
@@ -63,7 +67,10 @@ export class ReferenceSalary44
     ) {
       return salaireMoyen;
     } else {
-      return Math.max(dernierSalaire + dernierePrimeProraterise, salaireMoyen);
+      return Math.max(
+        dernierSalaireSansPrimes + dernierePrimeProraterise,
+        salaireMoyen
+      );
     }
   }
 }

@@ -20,6 +20,7 @@ const initialState: Agreement44StoreData = {
     showVariablePay: false,
     showKnowingLastSalary: false,
     showLastMonthSalary: false,
+    sameDateNotificationDateSortie: false,
   },
   error: {},
   hasBeenSubmit: false,
@@ -54,7 +55,7 @@ export const createAgreement44StoreSalaires: StoreSlice<
       set(
         produce((state: Agreement44StoreSlice) => {
           state.agreement44Data.input.showVariablePay =
-            get().salairesData.input.hasSameSalary === "non" &&
+            get().salairesData.input.hasSameSalary &&
             (categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
               categoryPro ===
                 "'Agents de maîtrise et techniciens (Groupe IV)'");
@@ -67,6 +68,8 @@ export const createAgreement44StoreSalaires: StoreSlice<
           state.agreement44Data.input.knowingLastSalary = undefined;
           state.agreement44Data.input.showLastMonthSalary = false;
           state.agreement44Data.input.lastMonthSalary = lastMonthSalaryProcess;
+          state.agreement44Data.input.sameDateNotificationDateSortie =
+            ancienneteInput.dateNotification === ancienneteInput.dateSortie;
         })
       );
     },
@@ -85,7 +88,8 @@ export const createAgreement44StoreSalaires: StoreSlice<
             value === "non" &&
             (categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
               categoryPro ===
-                "'Agents de maîtrise et techniciens (Groupe IV)'"),
+                "'Agents de maîtrise et techniciens (Groupe IV)'") &&
+            !get().agreement44Data.input.sameDateNotificationDateSortie,
         },
       ]);
     },

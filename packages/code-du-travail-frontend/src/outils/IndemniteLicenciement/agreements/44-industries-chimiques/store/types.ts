@@ -9,6 +9,7 @@ export type Agreement44StoreInput = {
   lastMonthSalary?: SalaryPeriods;
   knowingLastSalary?: OuiNon;
   showLastMonthSalary?: boolean;
+  sameDateNotificationDateSortie?: boolean;
 };
 
 export type Agreement44StoreError = {

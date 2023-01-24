@@ -142,7 +142,7 @@ describe("Indemnité licenciement - CC 44", () => {
       userEvent.click(ui.salary.variablePart.non.get());
       expect(
         screen.queryByText(
-          "Connaissez-vous le montant du dernier salaire perçu (préavis-inclus) ?"
+          "Connaissez-vous le montant du dernier salaire perçu (préavis inclus) ?"
         )
       ).toBeInTheDocument();
       userEvent.click(ui.salary.agreement44.knowingLastSalary.oui.get());

@@ -80,7 +80,7 @@ export default function Agreement44() {
             },
           ]}
           name="knowingLastSalary"
-          label="Connaissez-vous le montant du dernier salaire perçu (préavis-inclus) ?"
+          label="Connaissez-vous le montant du dernier salaire perçu (préavis inclus) ?"
           selectedOption={knowingLastSalary}
           onChangeSelectedOption={onChangeKnowingLastSalary}
           error={errorKnowingLastSalary}
