@@ -1,5 +1,6 @@
 import { StoreApi } from "zustand";
 import produce from "immer";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { validateStep } from "./validator";
 
 import {
@@ -12,6 +13,8 @@ import { STORAGE_KEY_AGREEMENT, StoreSlice } from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { Agreement } from "../../../../conventions/Search/api/type";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
+import { IndemniteLicenciementStepName } from "../../../IndemniteLicenciement";
+import { MatomoBaseEvent } from "../../../../lib/matomo/types";
 
 const initialState: CommonAgreementStoreData = {
   input: {},
@@ -23,7 +26,7 @@ const initialState: CommonAgreementStoreData = {
 const createCommonAgreementStore: StoreSlice<
   CommonAgreementStoreSlice,
   CommonInformationsStoreSlice
-> = (set, get) => ({
+> = (set, get, { toolName }) => ({
   agreementData: { ...initialState },
   agreementFunction: {
     onInitAgreementPage: () => {
@@ -66,8 +69,16 @@ const createCommonAgreementStore: StoreSlice<
       applyGenericValidation(get, set, "enterprise", enterprise);
       get().informationsFunction.generatePublicodesQuestions();
     },
-    onValidateStep: () => {
+    onNextStep: () => {
       const { isValid, errorState } = validateStep(get().agreementData.input);
+      if (isValid) {
+        matopush([
+          MatomoBaseEvent.TRACK_EVENT,
+          "outil",
+          `view_step_${toolName}`,
+          IndemniteLicenciementStepName.Agreement,
+        ]);
+      }
       set(
         produce((state: CommonAgreementStoreSlice) => {
           state.agreementData.hasBeenSubmit = isValid ? false : true;
@@ -76,6 +87,14 @@ const createCommonAgreementStore: StoreSlice<
         })
       );
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
+    },
+    onPrevStep: () => {
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        "outil",
+        `click_previous_${toolName}`,
+        IndemniteLicenciementStepName.Agreement,
+      ]);
     },
   },
 });

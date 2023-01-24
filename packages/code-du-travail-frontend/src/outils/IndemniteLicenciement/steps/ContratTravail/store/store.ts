@@ -1,4 +1,5 @@
 import { StoreApi } from "zustand";
+import { push as matopush } from "@socialgouv/matomo-next";
 import {
   ContratTravailStoreData,
   ContratTravailStoreInput,
@@ -10,6 +11,8 @@ import { validateStep } from "./validator";
 import { getErrorEligibility } from "./eligibility";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
+import { MatomoBaseEvent } from "../../../../../lib/matomo/types";
+import { IndemniteLicenciementStepName } from "../../../../IndemniteLicenciement";
 
 const initialState: ContratTravailStoreData = {
   input: {},
@@ -24,7 +27,7 @@ const initialState: ContratTravailStoreData = {
 const createContratTravailStore: StoreSlice<
   ContratTravailStoreSlice,
   AncienneteStoreSlice
-> = (set, get) => ({
+> = (set, get, { toolName }) => ({
   contratTravailData: { ...initialState },
   contratTravailFunction: {
     onChangeTypeContratTravail: (value) => {
@@ -45,16 +48,22 @@ const createContratTravailStore: StoreSlice<
     onChangeDateArretTravail: (value) => {
       applyGenericValidation(get, set, "dateArretTravail", value);
       if (get().ancienneteData.hasBeenSubmit) {
-        get().ancienneteFunction.onValidateWithEligibility();
+        get().ancienneteFunction.onNextStep();
       }
     },
-    onValidateWithEligibility: () => {
+    onNextStep: () => {
       const state = get().contratTravailData.input;
       const { isValid, errorState } = validateStep(state);
       let errorEligibility;
 
       if (isValid) {
         errorEligibility = getErrorEligibility(state);
+        matopush([
+          MatomoBaseEvent.TRACK_EVENT,
+          "outil",
+          `view_step_${toolName}`,
+          IndemniteLicenciementStepName.ContratTravail,
+        ]);
       }
 
       set(
@@ -70,6 +79,14 @@ const createContratTravailStore: StoreSlice<
         : isValid
         ? ValidationResponse.Valid
         : ValidationResponse.NotValid;
+    },
+    onPrevStep: () => {
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        "outil",
+        `click_previous_${toolName}`,
+        IndemniteLicenciementStepName.ContratTravail,
+      ]);
     },
   },
 });

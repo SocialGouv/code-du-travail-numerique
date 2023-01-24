@@ -52,7 +52,7 @@ const applyGenericValidation = (
         state.agreement1527Data.input[paramName] = value;
       })
     );
-    get().salairesFunction.onValidateStep();
+    get().salairesFunction.onNextStep();
   } else {
     set(
       produce((state: Agreement1527StoreSlice) => {

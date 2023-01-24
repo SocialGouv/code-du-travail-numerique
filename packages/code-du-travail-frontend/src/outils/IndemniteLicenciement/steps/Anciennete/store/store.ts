@@ -1,5 +1,6 @@
 import produce from "immer";
 import { StoreApi } from "zustand";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { StoreSlice } from "../../../../types";
 import { SalairesStoreSlice } from "../../Salaires/store";
@@ -16,6 +17,8 @@ import { getErrorEligibility } from "./eligibility";
 import { customSeniorityValidator } from "../../../agreements/seniority";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
+import { IndemniteLicenciementStepName } from "../../..";
+import { MatomoBaseEvent } from "../../../../../lib/matomo/types";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
@@ -32,7 +35,7 @@ const createAncienneteStore: StoreSlice<
     CommonAgreementStoreSlice &
     CommonInformationsStoreSlice &
     ContratTravailStoreSlice
-> = (set, get) => ({
+> = (set, get, { toolName }) => ({
   ancienneteData: { ...initialState },
   ancienneteFunction: {
     init: () => {
@@ -71,7 +74,7 @@ const createAncienneteStore: StoreSlice<
       );
       applyGenericValidation(get, set, "hasAbsenceProlonge", value);
     },
-    onValidateWithEligibility: () => {
+    onNextStep: () => {
       const { isValid, errorState } = customSeniorityValidator(
         get().ancienneteData.input,
         get().contratTravailData.input,
@@ -87,6 +90,12 @@ const createAncienneteStore: StoreSlice<
           get().contratTravailData.input.licenciementInaptitude === "oui",
           get().agreementData.input.agreement
         );
+        matopush([
+          MatomoBaseEvent.TRACK_EVENT,
+          "outil",
+          `view_step_${toolName}`,
+          IndemniteLicenciementStepName.Agreement,
+        ]);
       }
 
       set(
@@ -102,6 +111,14 @@ const createAncienneteStore: StoreSlice<
         : isValid
         ? ValidationResponse.Valid
         : ValidationResponse.NotValid;
+    },
+    onPrevStep: () => {
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        "outil",
+        `click_previous_${toolName}`,
+        IndemniteLicenciementStepName.Agreement,
+      ]);
     },
   },
 });

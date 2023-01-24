@@ -34,6 +34,7 @@ export type ResultStoreFn = {
   getPublicodesResult: () => void;
   init: () => void;
   getEligibilityError: () => string | undefined;
+  onPrevStep: () => void;
 };
 
 export type ResultStoreSlice = {

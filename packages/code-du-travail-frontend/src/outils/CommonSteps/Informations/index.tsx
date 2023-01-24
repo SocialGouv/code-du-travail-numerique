@@ -1,11 +1,8 @@
 import React from "react";
 
-import { Alert, Paragraph, Text, theme } from "@socialgouv/cdtn-ui";
-import styled from "styled-components";
 import { PubliQuestion } from "./components";
 import { MatomoActionEvent } from "../../../lib";
 import { PublicodesInformation } from "./store";
-import Html from "../../../common/Html";
 
 export type InformationStepProps = {
   onChange: (key: string, value: unknown) => void;

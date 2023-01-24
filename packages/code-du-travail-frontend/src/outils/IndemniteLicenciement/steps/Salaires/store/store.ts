@@ -1,5 +1,6 @@
 import { StoreApi } from "zustand";
 import produce from "immer";
+import { push as matopush } from "@socialgouv/matomo-next";
 import {
   SalairesStoreData,
   SalairesStoreInput,
@@ -16,7 +17,7 @@ import {
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { IndemniteLicenciementStepName } from "../../..";
-import { deepMergeArray } from "../../../../../lib";
+import { deepMergeArray, MatomoBaseEvent } from "../../../../../lib";
 import { computeSalaryPeriods } from "../../../common";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
@@ -34,7 +35,7 @@ const initialState: SalairesStoreData = {
 const createSalairesStore: StoreSlice<
   SalairesStoreSlice,
   AncienneteStoreSlice & ContratTravailStoreSlice & CommonAgreementStoreSlice
-> = (set, get) => ({
+> = (set, get, { toolName }) => ({
   salairesData: { ...initialState },
   salairesFunction: {
     initFieldSalaries: () => {
@@ -76,7 +77,7 @@ const createSalairesStore: StoreSlice<
     onChangeSalary(value) {
       applyGenericValidation(get, set, "salary", value);
     },
-    onValidateStep: () => {
+    onNextStep: () => {
       const { isValid, errorState } = validateStep(get().salairesData.input);
 
       if (isValid) {
@@ -108,6 +109,12 @@ const createSalairesStore: StoreSlice<
             state.salairesData.input.refSalary = refSalary;
           })
         );
+        matopush([
+          MatomoBaseEvent.TRACK_EVENT,
+          "outil",
+          `view_step_${toolName}`,
+          IndemniteLicenciementStepName.Salaires,
+        ]);
       }
 
       const agreement = get().agreementData.input.agreement;
@@ -135,6 +142,14 @@ const createSalairesStore: StoreSlice<
       return isStepValid
         ? ValidationResponse.Valid
         : ValidationResponse.NotValid;
+    },
+    onPrevStep: () => {
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        "outil",
+        `click_previous_${toolName}`,
+        IndemniteLicenciementStepName.Salaires,
+      ]);
     },
   },
 });

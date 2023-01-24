@@ -29,7 +29,8 @@ export type SalairesStoreFn = {
   initFieldSalaries: () => void;
   onChangeHasTempsPartiel: (value: OuiNon) => void;
   onSalariesChange: (value: SalaryPeriods[]) => void;
-  onValidateStep: () => ValidationResponse;
+  onNextStep: (nextStepName?: string) => ValidationResponse;
+  onPrevStep: (prevStepName?: string) => void;
   onChangeHasSameSalary: (value: OuiNon) => void;
   onChangeSalary: (value: string) => void;
 };

@@ -71,9 +71,7 @@ describe("Contrat de travail store", () => {
   });
 
   it("should render an error for field uncompleted", () => {
-    const isValid = store
-      .getState()
-      .contratTravailFunction.onValidateWithEligibility();
+    const isValid = store.getState().contratTravailFunction.onNextStep();
     expect(isValid).toBe(ValidationResponse.NotValid);
     expect(
       store.getState().contratTravailData.error.errorTypeContratTravail
@@ -89,9 +87,7 @@ describe("Contrat de travail store", () => {
       .getState()
       .contratTravailFunction.onChangeLicenciementInaptitude("non");
     store.getState().contratTravailFunction.onChangeArretTravail("non");
-    const isValid = store
-      .getState()
-      .contratTravailFunction.onValidateWithEligibility();
+    const isValid = store.getState().contratTravailFunction.onNextStep();
     expect(isValid).toBe(ValidationResponse.Valid);
     expect(
       store.getState().contratTravailData.error.errorLicenciementFauteGrave

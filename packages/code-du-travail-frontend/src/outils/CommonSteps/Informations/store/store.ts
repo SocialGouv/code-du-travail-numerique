@@ -1,5 +1,6 @@
 import { StoreApi } from "zustand";
 import produce from "immer";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { validateStep } from "./validator";
 
 import {
@@ -14,9 +15,10 @@ import {
 } from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../publicodes";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
-import { removeDuplicateObject } from "../../../../lib";
+import { MatomoBaseEvent, removeDuplicateObject } from "../../../../lib";
 import { informationToSituation } from "../utils";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
+import { IndemniteLicenciementStepName } from "../../../IndemniteLicenciement";
 
 const initialState: CommonInformationsStoreData = {
   input: {
@@ -35,7 +37,7 @@ const initialState: CommonInformationsStoreData = {
 const createCommonInformationsStore: StoreSlice<
   CommonInformationsStoreSlice,
   CommonAgreementStoreSlice
-> = (set, get, publicodesRules) => ({
+> = (set, get, { toolName, publicodesRules }) => ({
   informationsData: {
     ...initialState,
     publicodes: new IndemniteLicenciementPublicodes(publicodesRules!),
@@ -192,13 +194,19 @@ const createCommonInformationsStore: StoreSlice<
         console.error(e);
       }
     },
-    onValidateWithEligibility: () => {
+    onNextStep: () => {
       const state = get().informationsData.input;
       const { isValid, errorState } = validateStep(state);
       let errorEligibility;
 
       if (isValid) {
         errorEligibility = state.blockingNotification;
+        matopush([
+          MatomoBaseEvent.TRACK_EVENT,
+          "outil",
+          `view_step_${toolName}`,
+          IndemniteLicenciementStepName.Informations,
+        ]);
       }
 
       set(
@@ -216,6 +224,14 @@ const createCommonInformationsStore: StoreSlice<
         : isValid
         ? ValidationResponse.Valid
         : ValidationResponse.NotValid;
+    },
+    onPrevStep: () => {
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        "outil",
+        `click_previous_${toolName}`,
+        IndemniteLicenciementStepName.Informations,
+      ]);
     },
   },
 });

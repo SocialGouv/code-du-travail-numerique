@@ -39,7 +39,8 @@ export type AncienneteStoreFn = {
   onChangeDateSortie: (value: string) => void;
   onChangeDateNotification: (value: string) => void;
   onChangeAbsencePeriods: (value: Absence[]) => void;
-  onValidateWithEligibility: () => ValidationResponse;
+  onNextStep: () => ValidationResponse;
+  onPrevStep: () => void;
   onChangeHasAbsenceProlonge: (value: OuiNon) => void;
 };
 

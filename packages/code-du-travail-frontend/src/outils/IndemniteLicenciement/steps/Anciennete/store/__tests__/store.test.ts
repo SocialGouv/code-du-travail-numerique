@@ -89,9 +89,7 @@ describe("Ancienneté store", () => {
 
   it("should render an error for a date", () => {
     store.getState().ancienneteFunction.onChangeDateEntree("05/05/1821");
-    const isValid = store
-      .getState()
-      .ancienneteFunction.onValidateWithEligibility();
+    const isValid = store.getState().ancienneteFunction.onNextStep();
     expect(isValid).toBe(ValidationResponse.NotValid);
     expect(store.getState().ancienneteData.error.errorDateEntree).toBe(
       "La date d'entrée est invalide"
@@ -101,9 +99,7 @@ describe("Ancienneté store", () => {
   it("should render an error for date d'entrée > date de sortie", () => {
     store.getState().ancienneteFunction.onChangeDateEntree("05/05/2022");
     store.getState().ancienneteFunction.onChangeDateSortie("05/05/2021");
-    const isValid = store
-      .getState()
-      .ancienneteFunction.onValidateWithEligibility();
+    const isValid = store.getState().ancienneteFunction.onNextStep();
     expect(isValid).toBe(ValidationResponse.NotValid);
     const hasMessageError = store
       .getState()
@@ -115,9 +111,7 @@ describe("Ancienneté store", () => {
 
   it("should render an error for date de notification > 18 last months", () => {
     store.getState().ancienneteFunction.onChangeDateNotification("05/05/2018");
-    const isValid = store
-      .getState()
-      .ancienneteFunction.onValidateWithEligibility();
+    const isValid = store.getState().ancienneteFunction.onNextStep();
     expect(isValid).toBe(ValidationResponse.NotValid);
     expect(store.getState().ancienneteData.error.errorDateNotification).toBe(
       "La date de notification doit se situer dans les 18 derniers mois"
@@ -127,9 +121,7 @@ describe("Ancienneté store", () => {
   it("should render an error for date de notification < date de sortie", () => {
     store.getState().ancienneteFunction.onChangeDateNotification("05/05/2021");
     store.getState().ancienneteFunction.onChangeDateSortie("05/05/2020");
-    const isValid = store
-      .getState()
-      .ancienneteFunction.onValidateWithEligibility();
+    const isValid = store.getState().ancienneteFunction.onNextStep();
     expect(isValid).toBe(ValidationResponse.NotValid);
     expect(store.getState().ancienneteData.error.errorDateNotification).toBe(
       "La date de notification doit se situer avant la date de sortie"
@@ -139,9 +131,7 @@ describe("Ancienneté store", () => {
   it("should render an error for date de notification > date d'entrée", () => {
     store.getState().ancienneteFunction.onChangeDateNotification("05/05/2020");
     store.getState().ancienneteFunction.onChangeDateEntree("05/05/2021");
-    const isValid = store
-      .getState()
-      .ancienneteFunction.onValidateWithEligibility();
+    const isValid = store.getState().ancienneteFunction.onNextStep();
     expect(isValid).toBe(ValidationResponse.NotValid);
     expect(store.getState().ancienneteData.error.errorDateNotification).toBe(
       "La date de notification doit se situer après la date d’entrée"
@@ -150,9 +140,7 @@ describe("Ancienneté store", () => {
 
   it("should render an error for uncompleted absences", () => {
     store.getState().ancienneteFunction.onChangeHasAbsenceProlonge("oui");
-    const isValid = store
-      .getState()
-      .ancienneteFunction.onValidateWithEligibility();
+    const isValid = store.getState().ancienneteFunction.onNextStep();
     expect(isValid).toBe(ValidationResponse.NotValid);
     expect(
       store.getState().ancienneteData.error.errorAbsencePeriods?.global
@@ -174,9 +162,7 @@ describe("Ancienneté store", () => {
         },
       },
     ]);
-    const isValid = store
-      .getState()
-      .ancienneteFunction.onValidateWithEligibility();
+    const isValid = store.getState().ancienneteFunction.onNextStep();
     expect(isValid).toBe(ValidationResponse.Valid);
     expect(store.getState().ancienneteData.error.errorAbsencePeriods).toBe(
       undefined

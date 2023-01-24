@@ -1,7 +1,6 @@
 import { theme, Wrapper } from "@socialgouv/cdtn-ui";
 import React, { useEffect, useMemo } from "react";
 import styled from "styled-components";
-import { push as matopush } from "@socialgouv/matomo-next";
 import { printResult } from "../common/utils";
 import { StepList, Title } from "./SimulatorDecorator/Components";
 import { createSimulatorStore, Step } from "../Simulator";
@@ -17,10 +16,11 @@ export enum ValidationResponse {
   Valid = "valid",
 }
 
-type Validator<StepName extends string> = {
-  validatorWithEligibility: () => ValidationResponse;
+type StepChange<StepName extends string> = {
+  onNextStep?: () => ValidationResponse;
+  onPrevStep?: () => void;
   stepName: StepName;
-  isStepValid: boolean;
+  isStepValid?: boolean;
 };
 
 type Props<StepName extends string> = {
@@ -30,7 +30,7 @@ type Props<StepName extends string> = {
   duration: string;
   debug?: JSX.Element;
   steps: Step<StepName>[];
-  validators: Validator<StepName>[];
+  onStepChange: StepChange<StepName>[];
   hiddenStep?: StepName[];
 };
 
@@ -41,7 +41,7 @@ const SimulatorContent = <StepName extends string>({
   duration,
   debug,
   steps,
-  validators,
+  onStepChange,
   hiddenStep,
 }: Props<StepName>): JSX.Element => {
   const anchorRef = React.createRef<HTMLLIElement>();
@@ -81,16 +81,16 @@ const SimulatorContent = <StepName extends string>({
     if (nextStepIndex >= visibleSteps.length) {
       throw Error("Can't show the next step with index more than steps");
     } else {
-      const stepValidator = validators.find(
-        (validator) =>
-          validator.stepName === visibleSteps[currentStepIndex].name
+      const nextStepName = visibleSteps[currentStepIndex].name;
+      const stepChange = onStepChange.find(
+        (validator) => validator.stepName === nextStepName
       );
 
-      let validationResponse =
-        currentStepIndex === 0
-          ? ValidationResponse.Valid
-          : stepValidator?.validatorWithEligibility() ??
-            ValidationResponse.NotValid;
+      let validationResponse = ValidationResponse.Valid;
+      if (stepChange?.onNextStep) {
+        validationResponse =
+          stepChange?.onNextStep() ?? ValidationResponse.NotValid;
+      }
 
       switch (validationResponse) {
         case ValidationResponse.NotEligible:
@@ -98,12 +98,6 @@ const SimulatorContent = <StepName extends string>({
           break;
         case ValidationResponse.Valid:
           nextStep();
-          matopush([
-            "trackEvent",
-            "outil",
-            `view_step_${title}`,
-            visibleSteps[nextStepIndex].name,
-          ]);
           window?.scrollTo(0, 0);
           break;
       }
@@ -112,21 +106,23 @@ const SimulatorContent = <StepName extends string>({
 
   const onPrevStep = () => {
     const previousStepIndex = currentStepIndex - 1;
+    const prevStepName = visibleSteps[previousStepIndex].name;
+    const stepChange = onStepChange.find(
+      (validator) => validator.stepName === prevStepName
+    );
+    if (stepChange?.onPrevStep) {
+      stepChange.onPrevStep();
+    }
+
     if (previousStepIndex >= 0) {
       previousStep();
-      matopush([
-        "trackEvent",
-        "outil",
-        `click_previous_${title}`,
-        visibleSteps[previousStepIndex].name,
-      ]);
       window?.scrollTo(0, 0);
     } else {
       throw Error("Can't show the previous step with index less than 0");
     }
   };
 
-  const validator = validators.find(
+  const validator = onStepChange.find(
     (validator) => validator.stepName === visibleSteps[currentStepIndex].name
   );
   return (

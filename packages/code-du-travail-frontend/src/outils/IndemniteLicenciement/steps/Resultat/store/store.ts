@@ -8,6 +8,7 @@ import {
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { StoreSlice } from "../../../../types";
 import {
   mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues,
@@ -35,6 +36,8 @@ import {
 } from "../../../agreements/seniority";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { getInfoWarning } from "./service";
+import { IndemniteLicenciementStepName } from "../../..";
+import { MatomoBaseEvent } from "../../../../../lib";
 
 const initialState: ResultStoreData = {
   input: {
@@ -67,7 +70,7 @@ const createResultStore: StoreSlice<
     SalairesStoreSlice &
     CommonAgreementStoreSlice &
     CommonInformationsStoreSlice
-> = (set, get, publicodesRules) => ({
+> = (set, get, { toolName, publicodesRules }) => ({
   resultData: {
     ...initialState,
     publicodes: new IndemniteLicenciementPublicodes(publicodesRules!),
@@ -249,6 +252,14 @@ const createResultStore: StoreSlice<
           state.resultData.input.agreementHasNoLegalIndemnity = agreementHasNoLegalIndemnity;
         })
       );
+    },
+    onPrevStep: () => {
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        "outil",
+        `click_previous_${toolName}`,
+        IndemniteLicenciementStepName.Salaires,
+      ]);
     },
   },
 });

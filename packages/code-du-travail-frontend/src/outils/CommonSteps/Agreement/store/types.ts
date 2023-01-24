@@ -34,7 +34,8 @@ export type CommonAgreementStoreFn = {
     agreement: Agreement | null,
     enterprise?: Enterprise
   ) => void;
-  onValidateStep: () => ValidationResponse;
+  onNextStep: () => ValidationResponse;
+  onPrevStep: () => void;
 };
 
 export type CommonAgreementStoreSlice = {

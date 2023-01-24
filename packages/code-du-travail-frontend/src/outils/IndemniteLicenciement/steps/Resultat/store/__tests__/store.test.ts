@@ -40,7 +40,7 @@ describe("Result store", () => {
         },
       },
     ]);
-    store.getState().ancienneteFunction.onValidateWithEligibility();
+    store.getState().ancienneteFunction.onNextStep();
 
     // Salaire ref
     store.getState().salairesFunction.onChangeHasTempsPartiel("non");

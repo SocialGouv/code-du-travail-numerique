@@ -63,12 +63,6 @@ const SimulatorContent = <FormState, StepName extends string>({
     } else {
       nextStep();
       onStepChange(currentStep, steps[nextStepIndex]);
-      matopush([
-        "trackEvent",
-        "outil",
-        `view_step_${title}`,
-        steps[nextStepIndex].name,
-      ]);
       window?.scrollTo(0, 0);
     }
   };
