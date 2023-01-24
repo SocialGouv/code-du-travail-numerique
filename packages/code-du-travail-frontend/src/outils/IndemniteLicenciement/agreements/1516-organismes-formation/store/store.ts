@@ -1,8 +1,4 @@
-import {
-  getMotifs,
-  SalaryPeriods,
-  SupportedCcIndemniteLicenciement,
-} from "@socialgouv/modeles-social";
+import { SalaryPeriods } from "@socialgouv/modeles-social";
 import produce from "immer";
 import { StoreApi } from "zustand";
 import { deepMergeArray } from "../../../../../lib";
@@ -94,7 +90,7 @@ const applyGenericValidation = (
         state.agreement1516Data.input[paramName] = value;
       })
     );
-    get().salairesFunction.onValidateStepSalaires();
+    get().salairesFunction.onValidateStep();
   } else {
     set(
       produce((state: Agreement1516StoreSlice) => {

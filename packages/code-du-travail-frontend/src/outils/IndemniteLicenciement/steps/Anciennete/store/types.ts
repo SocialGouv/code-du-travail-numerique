@@ -1,6 +1,7 @@
 import { StepData } from "../../../store";
 import { OuiNon } from "../../../common";
 import { Absence } from "@socialgouv/modeles-social";
+import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 
 export type AncienneteStoreInput = {
   dateEntree?: string;
@@ -38,8 +39,7 @@ export type AncienneteStoreFn = {
   onChangeDateSortie: (value: string) => void;
   onChangeDateNotification: (value: string) => void;
   onChangeAbsencePeriods: (value: Absence[]) => void;
-  onValidateStepAnciennete: () => boolean;
-  onEligibilityCheckStepAnciennete: () => boolean;
+  onValidateWithEligibility: () => ValidationResponse;
   onChangeHasAbsenceProlonge: (value: OuiNon) => void;
 };
 

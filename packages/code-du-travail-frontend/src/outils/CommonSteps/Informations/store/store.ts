@@ -13,6 +13,7 @@ import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from ".
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
 import { informationToSituation } from "../utils";
+import { ValidationResponse } from "../../../Components/SimulatorLayout";
 
 const initialState: CommonInformationsStoreData = {
   input: {
@@ -184,31 +185,30 @@ const createCommonInformationsStore: StoreSlice<
         console.error(e);
       }
     },
-    onValidateStep: () => {
-      const { isValid, errorState } = validateStep(
-        get().informationsData.input
-      );
+    onValidateWithEligibility: () => {
+      const state = get().informationsData.input;
+      const { isValid, errorState } = validateStep(state);
+      let errorEligibility;
+
+      if (isValid) {
+        errorEligibility = state.blockingNotification;
+      }
+
       set(
         produce((state: CommonInformationsStoreSlice) => {
           state.informationsData.hasBeenSubmit = isValid ? false : true;
           state.informationsData.isStepValid =
             isValid && get().informationsData.input.hasNoMissingQuestions;
           state.informationsData.error = errorState;
-        })
-      );
-      get().informationsFunction.onSetStepHidden();
-      return isValid;
-    },
-    onEligibilityCheckCommonInfo: () => {
-      const state = get().informationsData.input;
-      const errorEligibility = state.blockingNotification;
-
-      set(
-        produce((state: CommonInformationsStoreSlice) => {
           state.informationsData.error.errorEligibility = errorEligibility;
         })
       );
-      return !errorEligibility;
+      get().informationsFunction.onSetStepHidden();
+      return errorEligibility
+        ? ValidationResponse.NotEligible
+        : isValid
+        ? ValidationResponse.Valid
+        : ValidationResponse.NotValid;
     },
   },
 });

@@ -31,7 +31,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 3239", () => {
             "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Non'`,
             "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires": salary,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
@@ -61,7 +61,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 3239", () => {
               "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Oui'`,
               "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires": salary,
               "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-              "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+              "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
               "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
             },
             "contrat salarié . indemnité de licenciement . résultat conventionnel"

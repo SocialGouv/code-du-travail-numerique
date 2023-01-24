@@ -12,6 +12,7 @@ import { STORAGE_KEY_AGREEMENT, StoreSlicePublicode } from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { Agreement } from "../../../../conventions/Search/api/type";
 import { loadPublicodes } from "../../../api";
+import { ValidationResponse } from "../../../Components/SimulatorLayout";
 
 const initialState: Omit<CommonAgreementStoreData, "publicodes"> = {
   input: {},
@@ -91,7 +92,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
           state.agreementData.error = errorState;
         })
       );
-      return isValid;
+      return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
     },
   },
 });

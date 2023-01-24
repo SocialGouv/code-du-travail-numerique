@@ -21,7 +21,7 @@ describe("Formule indemnité licenciement - 1486", () => {
           "contrat salarié . convention collective": "'IDCC1486'",
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${TypeLicenciement1486.refus}'`,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle equise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "1000",
         });
@@ -62,7 +62,7 @@ describe("Formule indemnité licenciement - 1486", () => {
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement": `'${TypeLicenciement1486.autre}'`,
           "contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . type de licenciement . autres . catégorie professionnelle": `'${category}'`,
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "1000",
         });

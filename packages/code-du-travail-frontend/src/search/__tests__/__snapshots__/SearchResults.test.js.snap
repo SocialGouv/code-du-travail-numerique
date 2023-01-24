@@ -12,6 +12,7 @@ exports[`<SearchResults/> should render results 1`] = `
     <h2
       class="sc-iCoGMd gaXVHn"
       data-testid="heading"
+      id="SearchResults"
     >
       Résultats de recherche pour “search test”
     </h2>

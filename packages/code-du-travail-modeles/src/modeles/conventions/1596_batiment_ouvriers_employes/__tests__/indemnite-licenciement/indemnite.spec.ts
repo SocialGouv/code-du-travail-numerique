@@ -41,7 +41,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 1596", () => {
               age
             ).toString(),
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
@@ -68,7 +68,7 @@ describe("Indemnité conventionnel de licenciement pour la CC 1596", () => {
             "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age":
               "54",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"

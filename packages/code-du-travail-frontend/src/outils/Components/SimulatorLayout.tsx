@@ -1,7 +1,7 @@
 import { theme, Wrapper } from "@socialgouv/cdtn-ui";
 import React, { useEffect, useMemo } from "react";
 import styled from "styled-components";
-import { matopush } from "../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { printResult } from "../common/utils";
 import { StepList, Title } from "./SimulatorDecorator/Components";
 import { createSimulatorStore, Step } from "../Simulator";
@@ -11,9 +11,14 @@ import {
 } from "../Simulator/createContext";
 import SimulatorNavigation from "./SimulatorNavigation";
 
+export enum ValidationResponse {
+  NotValid = "not_valid",
+  NotEligible = "not_eligible",
+  Valid = "valid",
+}
+
 type Validator<StepName extends string> = {
-  validator: () => boolean;
-  validatorEligibility?: () => boolean;
+  validatorWithEligibility: () => ValidationResponse;
   stepName: StepName;
   isStepValid: boolean;
 };
@@ -76,30 +81,31 @@ const SimulatorContent = <StepName extends string>({
     if (nextStepIndex >= visibleSteps.length) {
       throw Error("Can't show the next step with index more than steps");
     } else {
-      let isValid: boolean | undefined;
       const stepValidator = validators.find(
         (validator) =>
           validator.stepName === visibleSteps[currentStepIndex].name
       );
-      if (
-        stepValidator?.validatorEligibility &&
-        !stepValidator?.validatorEligibility()
-      ) {
-        nextStep(visibleSteps.length - 1);
-        return;
-      }
 
-      isValid = currentStepIndex === 0 || stepValidator?.validator();
+      let validationResponse =
+        currentStepIndex === 0
+          ? ValidationResponse.Valid
+          : stepValidator?.validatorWithEligibility() ??
+            ValidationResponse.NotValid;
 
-      if (isValid) {
-        nextStep();
-        matopush([
-          "trackEvent",
-          "outil",
-          `view_step_${title}`,
-          visibleSteps[nextStepIndex].name,
-        ]);
-        window?.scrollTo(0, 0);
+      switch (validationResponse) {
+        case ValidationResponse.NotEligible:
+          nextStep(visibleSteps.length - 1);
+          break;
+        case ValidationResponse.Valid:
+          nextStep();
+          matopush([
+            "trackEvent",
+            "outil",
+            `view_step_${title}`,
+            visibleSteps[nextStepIndex].name,
+          ]);
+          window?.scrollTo(0, 0);
+          break;
       }
     }
   };
@@ -143,11 +149,7 @@ const SimulatorContent = <StepName extends string>({
           <Step />
         </StepWrapper>
         <SimulatorNavigationWrapper
-          hasError={
-            (!validator?.validatorEligibility ||
-              validator?.validatorEligibility()) &&
-            validator?.isStepValid === false
-          }
+          hasError={validator?.isStepValid === false}
           showNext={currentStepIndex < visibleSteps.length - 1}
           onPrint={
             currentStepIndex === visibleSteps.length - 1

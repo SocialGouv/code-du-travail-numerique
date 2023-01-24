@@ -55,18 +55,4 @@ describe("Indemnité licenciement - CC 1517", () => {
     fireEvent.click(ui.next.get());
     expect(ui.result.formula.get()).toHaveTextContent("Formule");
   });
-  test("vérifier l'ineligibilite pour ancienneté (entree -> sortie) < 8mois", async () => {
-    fireEvent.change(ui.seniority.startDate.get(), {
-      target: { value: "01/01/2022" },
-    });
-    fireEvent.change(ui.seniority.notificationDate.get(), {
-      target: { value: "01/10/2022" },
-    });
-    fireEvent.change(ui.seniority.endDate.get(), {
-      target: { value: "15/08/2022" },
-    });
-    fireEvent.click(ui.seniority.hasAbsence.non.get());
-    fireEvent.click(ui.next.get());
-    expect(ui.result.legalError.seniorityToLow.get()).toBeInTheDocument();
-  });
 });

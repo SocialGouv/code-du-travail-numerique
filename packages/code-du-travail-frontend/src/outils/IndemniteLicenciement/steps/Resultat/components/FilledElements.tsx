@@ -5,12 +5,18 @@ import { Table, theme } from "@socialgouv/cdtn-ui";
 import styled from "styled-components";
 import { publicodesUnitTranslator } from "../../../../publicodes";
 import AbsenceTable from "./AbsenceTable";
+import {
+  generateResultSalaireTempsPlein,
+  generateResultSameSalary,
+} from "../../../utils/question";
 
 type Props = {
   typeContrat: string;
   isLicenciementFauteGrave: boolean;
   agreementName?: string;
   isLicenciementInaptitude: boolean;
+  isArretTravail: boolean;
+  dateArretTravail?: string;
   agreementInformations?: AgreementInformation[];
   agreementRefSalaryInfo: React.ReactNode;
   dateEntree: string;
@@ -58,6 +64,16 @@ export default function FilledElements(props: Props) {
                   </i>
                 </>
               )}
+              <li>
+                Arrêt de travail au moment du licenciement&nbsp;:&nbsp;
+                {props.isArretTravail ? "Oui" : "Non"}
+              </li>
+              {props.dateArretTravail && (
+                <li>
+                  Date de début de l&apos;arrêt de travail &nbsp;:&nbsp;
+                  {props.dateArretTravail}
+                </li>
+              )}
             </li>
           </ul>
         </li>
@@ -72,7 +88,8 @@ export default function FilledElements(props: Props) {
             <ul>
               {props.agreementInformations.map((info, index) => (
                 <li key={"agreement-" + index}>
-                  {info.label}&nbsp;:&nbsp;{info.value.replace(/'/g, "")}&nbsp;
+                  {info.label}&nbsp;:&nbsp;{info.value.replace(/^'|'$/g, "")}
+                  &nbsp;
                   {publicodesUnitTranslator(
                     info.value.replace(/'/g, ""),
                     info.unit
@@ -114,8 +131,11 @@ export default function FilledElements(props: Props) {
                 {props.hasTempsPartiel ? "Oui" : "Non"}
               </li>
               <li>
-                Salaire mensuel brut identique durant les 12 derniers mois
-                précédant la notification du licenciement&nbsp;:&nbsp;
+                {generateResultSameSalary(
+                  props.isArretTravail ? "oui" : "non",
+                  props.salaryPeriods
+                )}
+                &nbsp;:&nbsp;
                 {props.hasSameSalary ? "Oui" : "Non"}
               </li>
               {props.hasSameSalary && props.salary && (
@@ -127,8 +147,11 @@ export default function FilledElements(props: Props) {
               )}
               {props.salaryPeriods.length > 0 && !props.hasSameSalary && (
                 <li>
-                  Salaires mensuels bruts perçus au cours des 12 mois précédant
-                  la notification du licenciement&nbsp;:&nbsp;
+                  {generateResultSalaireTempsPlein(
+                    props.isArretTravail ? "oui" : "non",
+                    props.salaryPeriods
+                  )}
+                  &nbsp;:&nbsp;
                   <StyledFilledElementTable>
                     <thead>
                       <tr>

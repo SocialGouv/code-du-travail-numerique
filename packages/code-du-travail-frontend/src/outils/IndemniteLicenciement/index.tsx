@@ -2,13 +2,13 @@ import React from "react";
 import { DebugInfo, SimulatorLayout } from "../Components";
 import { Step } from "../Simulator";
 import {
-  StepIntro,
-  StepContratTravail,
-  StepAnciennete,
-  StepSalaires,
-  StepResultat,
   StepAgreement,
+  StepAnciennete,
+  StepContratTravail,
   StepInformations,
+  StepIntro,
+  StepResultat,
+  StepSalaires,
 } from "./steps";
 import {
   createIndemniteLicenciementStore,
@@ -77,38 +77,31 @@ const IndemniteLicenciementSimulator = ({
   displayTitle,
 }: Omit<Props, "publicodesRules" | "slug">): JSX.Element => {
   const {
-    onValidateStepContratTravail,
-    onEligibilityCheckStepInfo,
-    onEligibilityCheckStepAnciennete,
-    onEligibilityCheckCommonInfo,
+    onValidateWithEligibilityContratTravail,
     isStepContratTravailValid,
-    onValidateStepAnciennete,
+    onValidateWithEligibilityAnciennete,
     isStepAncienneteValid,
-    onValidateStepSalaires,
+    onValidateSalaires,
     isStepSalairesValid,
     onValidateStepAgreement,
     isStepAgreementValid,
-    onValidateStepInformations,
+    onValidateWithEligibilityInformations,
     isStepInformationsValid,
     isStepInformationsHidden,
     isStepSalaryHidden,
   } = useIndemniteLicenciementStore((state) => ({
-    onValidateStepContratTravail:
-      state.contratTravailFunction.onValidateStepInfo,
-    onEligibilityCheckStepInfo:
-      state.contratTravailFunction.onEligibilityCheckStepInfo,
-    onEligibilityCheckStepAnciennete:
-      state.ancienneteFunction.onEligibilityCheckStepAnciennete,
-    onEligibilityCheckCommonInfo:
-      state.informationsFunction.onEligibilityCheckCommonInfo,
+    onValidateWithEligibilityContratTravail:
+      state.contratTravailFunction.onValidateWithEligibility,
     isStepContratTravailValid: state.contratTravailData.isStepValid,
-    onValidateStepAnciennete: state.ancienneteFunction.onValidateStepAnciennete,
+    onValidateWithEligibilityAnciennete:
+      state.ancienneteFunction.onValidateWithEligibility,
     isStepAncienneteValid: state.ancienneteData.isStepValid,
-    onValidateStepSalaires: state.salairesFunction.onValidateStepSalaires,
+    onValidateSalaires: state.salairesFunction.onValidateStep,
     isStepSalairesValid: state.salairesData.isStepValid,
     onValidateStepAgreement: state.agreementFunction.onValidateStep,
     isStepAgreementValid: state.agreementData.isStepValid,
-    onValidateStepInformations: state.informationsFunction.onValidateStep,
+    onValidateWithEligibilityInformations:
+      state.informationsFunction.onValidateWithEligibility,
     isStepInformationsValid: state.informationsData.isStepValid,
     isStepInformationsHidden: state.informationsData.input.isStepHidden,
     isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
@@ -155,30 +148,27 @@ const IndemniteLicenciementSimulator = ({
         {
           stepName: IndemniteLicenciementStepName.ContratTravail,
           isStepValid: isStepContratTravailValid,
-          validator: onValidateStepContratTravail,
-          validatorEligibility: onEligibilityCheckStepInfo,
+          validatorWithEligibility: onValidateWithEligibilityContratTravail,
         },
         {
           stepName: IndemniteLicenciementStepName.Agreement,
           isStepValid: isStepAgreementValid,
-          validator: onValidateStepAgreement,
+          validatorWithEligibility: onValidateStepAgreement,
         },
         {
           stepName: IndemniteLicenciementStepName.Anciennete,
           isStepValid: isStepAncienneteValid,
-          validator: onValidateStepAnciennete,
-          validatorEligibility: onEligibilityCheckStepAnciennete,
+          validatorWithEligibility: onValidateWithEligibilityAnciennete,
         },
         {
           stepName: IndemniteLicenciementStepName.Salaires,
           isStepValid: isStepSalairesValid,
-          validator: onValidateStepSalaires,
+          validatorWithEligibility: onValidateSalaires,
         },
         {
           stepName: IndemniteLicenciementStepName.Informations,
           isStepValid: isStepInformationsValid,
-          validator: onValidateStepInformations,
-          validatorEligibility: onEligibilityCheckCommonInfo,
+          validatorWithEligibility: onValidateWithEligibilityInformations,
         },
       ]}
       hiddenStep={getHiddenSteps()}

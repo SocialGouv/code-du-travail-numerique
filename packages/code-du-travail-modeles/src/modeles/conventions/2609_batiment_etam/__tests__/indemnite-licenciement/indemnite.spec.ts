@@ -45,7 +45,7 @@ describe("CC 2609", () => {
             "contrat salarié . convention collective . batiment etam . indemnité de licenciement . age à la fin de son préavis": age,
             "contrat salarié . indemnité de licenciement": "oui",
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salaireRef,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"

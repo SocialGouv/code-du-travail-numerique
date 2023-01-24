@@ -24,6 +24,7 @@ describe("Indemnité légale de licenciement pour un employé", () => {
     ({ seniority, salary, expectedCompensation }) => {
       const { result, missingArgs } = engine.setSituation({
         "contrat salarié . indemnité de licenciement . ancienneté en année": seniority.toString(),
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
           "non",
         "contrat salarié . indemnité de licenciement . salaire de référence": salary.toString(),
@@ -54,6 +55,7 @@ describe("Indemnité légale de licenciement pour un employé", () => {
     ({ seniority, salary, expectedCompensation }) => {
       const { result, missingArgs } = engine.setSituation({
         "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
           "oui",
         "contrat salarié . indemnité de licenciement . salaire de référence": salary,
@@ -63,4 +65,39 @@ describe("Indemnité légale de licenciement pour un employé", () => {
       expect(missingArgs).toEqual([]);
     }
   );
+
+  describe("Cas limites pour le droit à l'indemnité de licenciement", () => {
+    test("Ancienneté requise pas atteinte et ancienneté de calcul atteinte", () => {
+      const { result, missingArgs } = engine.setSituation({
+        "contrat salarié . indemnité de licenciement . ancienneté en année":
+          "1",
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année":
+          "0.6",
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
+        "contrat salarié . indemnité de licenciement . salaire de référence":
+          "2000",
+      });
+      expect(result.value).toEqual("0");
+      expect(result.unit?.numerators).toEqual(["€"]);
+      expect(missingArgs).toEqual({});
+    });
+
+    test("Ancienneté requise atteinte et ancienneté de calcul atteinte", () => {
+      const { result, missingArgs } = engine.setSituation({
+        "contrat salarié . indemnité de licenciement . ancienneté en année":
+          "1",
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année": `${
+          8 / 12
+        }`,
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          "non",
+        "contrat salarié . indemnité de licenciement . salaire de référence":
+          "2000",
+      });
+      expect(result.value).toEqual(500);
+      expect(result.unit?.numerators).toEqual(["€"]);
+      expect(missingArgs).toEqual({});
+    });
+  });
 });

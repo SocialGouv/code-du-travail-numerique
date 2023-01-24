@@ -11,7 +11,7 @@ describe("Formule indemnité licenciement - 3043", () => {
     ${0}      | ${""}                                                                 | ${[]}
     ${1}      | ${""}                                                                 | ${[]}
     ${1.99}   | ${""}                                                                 | ${[]}
-    ${2}      | ${""}                                                                 | ${[]}
+    ${2}      | ${"1 / 10 * Sref * A"}                                                | ${["A : Ancienneté totale (2 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${2.1}    | ${"1 / 10 * Sref * A"}                                                | ${["A : Ancienneté totale (2.1 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${5}      | ${"1 / 10 * Sref * A"}                                                | ${["A : Ancienneté totale (5 ans)", "Sref : Salaire de référence (1000 €)"]}
     ${5.91}   | ${"1 / 10 * Sref * A"}                                                | ${["A : Ancienneté totale (5.91 ans)", "Sref : Salaire de référence (1000 €)"]}
@@ -25,7 +25,7 @@ describe("Formule indemnité licenciement - 3043", () => {
         "contrat salarié . convention collective": "'IDCC3043'",
         "contrat salarié . indemnité de licenciement": "oui",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
       });

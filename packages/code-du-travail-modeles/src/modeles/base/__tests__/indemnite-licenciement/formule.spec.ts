@@ -21,6 +21,7 @@ describe("Indemnité légale de licenciement avec une formule personnalisée et 
     ({ seniority, isForInaptitude, expectedFormula, expectedExplanations }) => {
       engine.setSituation({
         "contrat salarié . indemnité de licenciement . ancienneté en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": isForInaptitude,
         "contrat salarié . indemnité de licenciement . salaire de référence":
           "1000",

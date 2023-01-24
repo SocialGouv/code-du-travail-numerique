@@ -65,7 +65,7 @@ describe("Formule indemnité licenciement - 2216", () => {
         "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
         "contrat salarié . indemnité de licenciement": "oui",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
       });

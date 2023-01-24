@@ -12,7 +12,7 @@ describe("Missing args pour la CC 2264", () => {
         "contrat salarié . convention collective": "'IDCC2264'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           "3",
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année":
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
           "3",
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "2000",
@@ -32,7 +32,7 @@ describe("Missing args pour la CC 2264", () => {
           "'Cadres'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           "3",
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année":
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
           "3",
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "2000",
@@ -53,7 +53,7 @@ describe("Missing args pour la CC 2264", () => {
           "'Non-cadres'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           "3",
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année":
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
           "3",
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "2000",
@@ -73,7 +73,7 @@ describe("Missing args pour la CC 2264", () => {
           "'Oui'",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           "3",
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année":
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
           "3",
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "2000",
@@ -97,7 +97,7 @@ describe("Missing args pour la CC 2264", () => {
           "1",
         "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
           "3",
-        "contrat salarié . indemnité de licenciement . ancienneté requise en année":
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
           "3",
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "2000",

@@ -3,7 +3,7 @@ contrat salarié . convention collective . comptables . indemnité de licencieme
   valeur: oui
 
 contrat salarié . convention collective . comptables . indemnité de licenciement . résultat conventionnel:
-  applicable si: contrat salarié . indemnité de licenciement . ancienneté requise en année >= 8 mois
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 8 mois
   remplace: contrat salarié . indemnité de licenciement . résultat conventionnel identique au légal
   valeur: oui
   références:

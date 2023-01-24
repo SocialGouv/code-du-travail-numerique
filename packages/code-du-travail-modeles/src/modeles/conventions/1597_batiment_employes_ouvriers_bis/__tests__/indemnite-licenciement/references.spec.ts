@@ -42,7 +42,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
             age
           ).toString(),
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 
@@ -71,7 +71,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
           "contrat salarié . convention collective . batiment ouvriers employés bis . indemnité de licenciement . age":
             "55",
           "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
         });
 

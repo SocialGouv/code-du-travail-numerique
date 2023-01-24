@@ -1,6 +1,6 @@
 import { Step } from "../../../Simulator";
 import { StepName } from "../../steps";
-import { matopush } from "../../../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { MatomoBaseEvent, MatomoRetirementEvent } from "../../../../lib";
 import { pushAgreementEvents } from "../../../common";
 import { getSupportedCC } from "../../steps/AgreementStep/RenderStep";

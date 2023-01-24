@@ -1,5 +1,6 @@
 import { Agreement } from "../../../../conventions/Search/api/type";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
+import { ValidationResponse } from "../../../Components/SimulatorLayout";
 
 export enum Route {
   agreement = "agreement",
@@ -34,7 +35,7 @@ export type CommonAgreementStoreFn = {
     agreement: Agreement | null,
     enterprise?: Enterprise
   ) => void;
-  onValidateStep: () => boolean;
+  onValidateStep: () => ValidationResponse;
 };
 
 export type CommonAgreementStoreSlice = {

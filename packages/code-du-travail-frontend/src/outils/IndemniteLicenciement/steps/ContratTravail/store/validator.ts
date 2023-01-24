@@ -3,15 +3,17 @@ import { ContratTravailStoreInput, ContratTravailStoreError } from "./types";
 
 export const validateStep = (state: ContratTravailStoreInput) => {
   const errorState: ContratTravailStoreError = {
-    errorLicenciementInaptitude: !state.licenciementInaptitude
-      ? "Vous devez répondre à cette question"
-      : undefined,
-    errorLicenciementFauteGrave: !state.licenciementFauteGrave
-      ? "Vous devez répondre à cette question"
-      : undefined,
     errorTypeContratTravail: !state.typeContratTravail
       ? "Vous devez répondre à cette question"
       : undefined,
+    errorLicenciementFauteGrave:
+      !state.licenciementFauteGrave && state.typeContratTravail === "cdi"
+        ? "Vous devez répondre à cette question"
+        : undefined,
+    errorLicenciementInaptitude:
+      !state.licenciementInaptitude && state.licenciementFauteGrave === "non"
+        ? "Vous devez répondre à cette question"
+        : undefined,
     errorArretTravail:
       state.licenciementInaptitude === "non" && !state.arretTravail
         ? "Vous devez répondre à cette question"
@@ -25,6 +27,7 @@ export const validateStep = (state: ContratTravailStoreInput) => {
         ? "La date doit être valide"
         : undefined,
   };
+  console.log("Errors:", errorState);
   return {
     isValid: deepEqualObject(errorState, {
       errorLicenciementInaptitude: undefined,

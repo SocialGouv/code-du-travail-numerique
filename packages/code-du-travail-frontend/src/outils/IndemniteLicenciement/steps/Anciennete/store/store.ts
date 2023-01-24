@@ -15,6 +15,7 @@ import { informationToSituation } from "../../../../CommonSteps/Informations/uti
 import { getErrorEligibility } from "./eligibility";
 import { customSeniorityValidator } from "../../../agreements/seniority";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
+import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
@@ -70,36 +71,37 @@ const createAncienneteStore: StoreSlice<
       );
       applyGenericValidation(get, set, "hasAbsenceProlonge", value);
     },
-    onValidateStepAnciennete: () => {
+    onValidateWithEligibility: () => {
       const { isValid, errorState } = customSeniorityValidator(
         get().ancienneteData.input,
+        get().contratTravailData.input,
         get().informationsData.input,
         get().agreementData.input.agreement
       );
+
+      let errorEligibility;
+      if (isValid) {
+        errorEligibility = getErrorEligibility(
+          get().ancienneteData.input,
+          get().informationsData.input,
+          get().contratTravailData.input.licenciementInaptitude === "oui",
+          get().agreementData.input.agreement
+        );
+      }
 
       set(
         produce((state: AncienneteStoreSlice) => {
           state.ancienneteData.hasBeenSubmit = isValid ? false : true;
           state.ancienneteData.isStepValid = isValid;
           state.ancienneteData.error = errorState;
-        })
-      );
-      return isValid;
-    },
-    onEligibilityCheckStepAnciennete: () => {
-      const errorEligibility = getErrorEligibility(
-        get().ancienneteData.input,
-        get().informationsData.input,
-        get().contratTravailData.input.licenciementInaptitude === "oui",
-        get().agreementData.input.agreement
-      );
-
-      set(
-        produce((state: AncienneteStoreSlice) => {
           state.ancienneteData.error.errorEligibility = errorEligibility;
         })
       );
-      return !errorEligibility;
+      return errorEligibility
+        ? ValidationResponse.NotEligible
+        : isValid
+        ? ValidationResponse.Valid
+        : ValidationResponse.NotValid;
     },
   },
 });
@@ -108,12 +110,14 @@ const applyGenericValidation = (
   get: StoreApi<
     AncienneteStoreSlice &
       CommonAgreementStoreSlice &
-      CommonInformationsStoreSlice
+      CommonInformationsStoreSlice &
+      ContratTravailStoreSlice
   >["getState"],
   set: StoreApi<
     AncienneteStoreSlice &
       CommonAgreementStoreSlice &
-      CommonInformationsStoreSlice
+      CommonInformationsStoreSlice &
+      ContratTravailStoreSlice
   >["setState"],
   paramName: keyof AncienneteStoreInput,
   value: any
@@ -125,6 +129,7 @@ const applyGenericValidation = (
 
     const { isValid, errorState } = customSeniorityValidator(
       nextState.ancienneteData.input,
+      nextState.contratTravailData.input,
       get().informationsData.input,
       get().agreementData.input.agreement
     );
