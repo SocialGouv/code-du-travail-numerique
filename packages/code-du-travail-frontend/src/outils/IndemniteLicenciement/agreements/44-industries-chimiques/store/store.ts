@@ -59,11 +59,6 @@ export const createAgreement44StoreSalaires: StoreSlice<
             (categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
               categoryPro ===
                 "'Agents de maîtrise et techniciens (Groupe IV)'");
-          state.agreement44Data.input.hasVariablePay =
-            get().salairesData.input.hasSameSalary === "oui" ||
-            categoryPro === "'Ingénieurs et cadres (Groupe V)'"
-              ? undefined
-              : state.agreement44Data.input.hasVariablePay;
           state.agreement44Data.input.lastMonthSalary = get().agreement44Data
             .input.showLastMonthSalary
             ? get().agreement44Data.input.lastMonthSalary
