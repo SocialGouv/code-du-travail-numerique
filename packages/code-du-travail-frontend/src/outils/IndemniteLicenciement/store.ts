@@ -79,23 +79,23 @@ export type StepData<
 const createRootSlice = (
   set: StoreApi<MainStore>["setState"],
   get: StoreApi<MainStore>["getState"],
-  publicodesRules: string
+  slug: string
 ) => ({
   ...createContratTravailStore(set, get),
   ...createAncienneteStore(set, get),
   ...createSalairesStore(set, get),
-  ...createResultStore(set, get, publicodesRules),
+  ...createResultStore(set, get),
   ...createRootAgreementsStore(set, get),
-  ...createCommonAgreementStore(set, get),
-  ...createCommonInformationsStore(set, get, publicodesRules),
+  ...createCommonAgreementStore(set, get, slug),
+  ...createCommonInformationsStore(set, get),
 });
 
-const createStore = (publicodesRules: string) =>
+const createStore = (slug: string) =>
   create(
     (
       set: StoreApi<MainStore>["setState"],
       get: StoreApi<MainStore>["getState"]
-    ) => createRootSlice(set, get, publicodesRules)
+    ) => createRootSlice(set, get, slug)
   );
 
 const { Provider, useStore } = createContext<StoreApi<MainStore>>();

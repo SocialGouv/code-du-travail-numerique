@@ -25,7 +25,7 @@ test(`
       icon=""
       title=""
       displayTitle=""
-      publicodesRules={loadPublicodesRules("preavis-retraite")}
+      slug={"preavis-retraite"}
     />
   );
 
@@ -47,12 +47,12 @@ test(`
     exact: false,
   });
   expect(situations).toHaveLength(5);
-  expect(situations[0]).toHaveTextContent("Origine du départ à la retraite");
-  expect(situations[0]).toHaveTextContent("Mise à la retraite");
-  expect(situations[1]).toHaveTextContent("Convention collective");
-  expect(situations[1]).toHaveTextContent(
+  expect(situations[0]).toHaveTextContent("Convention collective");
+  expect(situations[0]).toHaveTextContent(
     "Transports routiers et activités auxiliaires du transport"
   );
+  expect(situations[1]).toHaveTextContent("Origine du départ à la retraite");
+  expect(situations[1]).toHaveTextContent("Mise à la retraite");
   expect(situations[2]).toHaveTextContent("Catégorie professionnelle");
   expect(situations[2]).toHaveTextContent("Ingénieurs et cadres");
   expect(situations[3]).toHaveTextContent("Travailleur handicapé");
@@ -86,12 +86,12 @@ test(`
     exact: false,
   });
   expect(situations2).toHaveLength(5);
-  expect(situations2[0]).toHaveTextContent("Origine du départ à la retraite");
-  expect(situations2[0]).toHaveTextContent("Mise à la retraite");
-  expect(situations2[1]).toHaveTextContent("Convention collective");
-  expect(situations2[1]).toHaveTextContent(
+  expect(situations2[0]).toHaveTextContent("Convention collective");
+  expect(situations2[0]).toHaveTextContent(
     "Transports routiers et activités auxiliaires du transport"
   );
+  expect(situations2[1]).toHaveTextContent("Origine du départ à la retraite");
+  expect(situations2[1]).toHaveTextContent("Mise à la retraite");
   expect(situations2[2]).toHaveTextContent("Catégorie professionnelle");
   expect(situations2[2]).toHaveTextContent("Ingénieurs et cadres");
   expect(situations2[3]).toHaveTextContent("Travailleur handicapé");

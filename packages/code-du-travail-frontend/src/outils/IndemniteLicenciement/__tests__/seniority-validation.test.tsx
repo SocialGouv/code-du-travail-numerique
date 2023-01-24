@@ -1,10 +1,7 @@
 import { render, RenderResult } from "@testing-library/react";
 import { UserAction } from "../../../common";
 import React from "react";
-import {
-  CalculateurIndemnite,
-  loadPublicodesRules,
-} from "../../../../src/outils";
+import { CalculateurIndemnite } from "../../../../src/outils";
 import { ui } from "./ui";
 
 jest.spyOn(Storage.prototype, "setItem");
@@ -31,7 +28,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
           icon={""}
           title={""}
           displayTitle={""}
-          publicodesRules={loadPublicodesRules("indemnite-licenciement")}
+          slug={"indemnite-licenciement"}
         />
       );
       userAction = new UserAction();
@@ -182,7 +179,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
           icon={""}
           title={""}
           displayTitle={""}
-          publicodesRules={loadPublicodesRules("indemnite-licenciement")}
+          slug={"indemnite-licenciement"}
         />
       );
       userAction = new UserAction();

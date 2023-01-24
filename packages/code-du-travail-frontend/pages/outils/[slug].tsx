@@ -20,7 +20,6 @@ import {
   DureePreavisLicenciement,
   DureePreavisRetraite,
   HeuresRechercheEmploi,
-  loadPublicodesRules,
   SimulateurEmbauche,
   SimulateurIndemnitePrecarite,
   DismissalProcess,
@@ -46,7 +45,6 @@ const toolsBySlug = {
 export interface Props {
   description: string;
   icon: string;
-  publicodesRules: any;
   relatedItems: Array<any>;
   slug: string;
   title: string;
@@ -64,7 +62,6 @@ function Outils({
   metaTitle,
   metaDescription,
   displayTitle,
-  publicodesRules,
 }: Props): JSX.Element {
   const Tool = toolsBySlug[slug];
   useEffect(() => {
@@ -81,7 +78,7 @@ function Outils({
               icon={icon}
               title={title}
               displayTitle={displayTitle}
-              publicodesRules={publicodesRules}
+              slug={slug}
             />
             <ShareContainer>
               <Share title={title} metaDescription={description} />
@@ -127,13 +124,10 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     Sentry.captureException(e);
   }
 
-  const publicodesRules = loadPublicodesRules(slug);
-
   return {
     props: {
       description,
       icon,
-      publicodesRules,
       relatedItems,
       slug,
       title,

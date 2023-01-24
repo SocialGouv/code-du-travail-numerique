@@ -7,9 +7,7 @@ describe("[Store] Convention collective", () => {
   let store: ReturnType<typeof createIndemniteLicenciementStore>;
 
   beforeEach(() => {
-    store = createIndemniteLicenciementStore(
-      loadPublicodesRules("indemnite-licenciement")
-    );
+    store = createIndemniteLicenciementStore("indemnite-licenciement");
   });
 
   it("should be defined and init", () => {

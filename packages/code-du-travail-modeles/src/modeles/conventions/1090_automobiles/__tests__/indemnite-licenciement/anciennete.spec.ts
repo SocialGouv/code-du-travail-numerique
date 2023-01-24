@@ -73,8 +73,8 @@ describe("CC 1090", () => {
 
   describe("Sans congé parental total", () => {
     test.each`
-      absences                                                                | entryDate       | exitDate        | expectedAnciennete
-      ${[{ durationInMonth: 1, motif: { key: MotifKeys.congesSabbatique } }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${1}
+      absences                                                                  | entryDate       | exitDate        | expectedAnciennete
+      ${[{ durationInMonth: "1", motif: { key: MotifKeys.congesSabbatique } }]} | ${"20/02/2020"} | ${"20/02/2021"} | ${1}
     `(
       "Calcul de l'ancienneté avec $entryDate et $exitDate en attendant $expectedAnciennete an",
       ({ absences, entryDate, exitDate, expectedAnciennete }) => {

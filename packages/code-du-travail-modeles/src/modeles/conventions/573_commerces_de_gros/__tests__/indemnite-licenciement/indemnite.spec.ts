@@ -1,5 +1,11 @@
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 import { QuestionOuiNon } from "../../../../common";
 import { CatPro573 } from "../../salary";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "573"
+);
 
 describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
   describe("Autres", () => {
@@ -11,20 +17,19 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
     `(
       "ancienneté: $seniority an, salaire de référence: $salary, catégorie $category => $expectedCompensation €",
       ({ seniority, salary, expectedCompensation, category }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC0573'",
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
 
-        expect(result.nodeValue).toEqual(expectedCompensation);
-        expect(result.missingVariables).toEqual({});
+        expect(result.value).toEqual(expectedCompensation);
+        expect(missingArgs).toEqual([]);
         expect(result.unit?.numerators).toEqual(["€"]);
       }
     );
@@ -52,8 +57,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
         category,
         age,
       }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC0573'",
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age": age,
@@ -61,13 +66,12 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
 
-        expect(result.nodeValue).toEqual(expectedCompensation);
-        expect(result.missingVariables).toEqual({});
+        expect(result.value).toEqual(expectedCompensation);
+        expect(missingArgs).toEqual([]);
         expect(result.unit?.numerators).toEqual(["€"]);
       }
     );
@@ -102,8 +106,8 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
         auMoins15AnsCadre,
         age,
       }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . convention collective": "'IDCC0573'",
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age": age,
@@ -111,13 +115,12 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
             "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
             "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
-          })
-          .evaluate(
-            "contrat salarié . indemnité de licenciement . résultat conventionnel"
-          );
+          },
+          "contrat salarié . indemnité de licenciement . résultat conventionnel"
+        );
 
-        expect(result.nodeValue).toEqual(expectedCompensation);
-        expect(result.missingVariables).toEqual({});
+        expect(result.value).toEqual(expectedCompensation);
+        expect(missingArgs).toEqual([]);
         expect(result.unit?.numerators).toEqual(["€"]);
       }
     );

@@ -1,13 +1,10 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { getReferences } from "../../../../common";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 const MiseRetraiteReferencesBad = [
   {
@@ -17,15 +14,14 @@ const MiseRetraiteReferencesBad = [
   },
 ].concat(MiseRetraiteReferences);
 test("Vérification des références juridiques pour un employéen en depart à la retraite", () => {
-  const result = getReferences(
-    engine.setSituation({
-      "contrat salarié . ancienneté": 6,
-      "contrat salarié . convention collective": "'IDCC2941'",
-      "contrat salarié . convention collective . bad . catégorie professionnelle": `'A, B, C ou D'`,
-      "contrat salarié . mise à la retraite": "non",
-      "contrat salarié . travailleur handicapé": "non",
-    })
-  );
+  engine.setSituation({
+    "contrat salarié . ancienneté": "6",
+    "contrat salarié . convention collective": "'IDCC2941'",
+    "contrat salarié . convention collective . bad . catégorie professionnelle": `'A, B, C ou D'`,
+    "contrat salarié . mise à la retraite": "non",
+    "contrat salarié . travailleur handicapé": "non",
+  });
+  const result = engine.getReferences();
 
   expect(result).toHaveLength(DepartRetraiteReferences.length);
   expect(result).toEqual(expect.arrayContaining(DepartRetraiteReferences));
@@ -39,15 +35,14 @@ test.each`
 `(
   "Vérification des références juridiques pour un $category mise à la retraite",
   ({ category, expectedReferences }) => {
-    const result = getReferences(
-      engine.setSituation({
-        "contrat salarié . ancienneté": 6,
-        "contrat salarié . convention collective": "'IDCC2941'",
-        "contrat salarié . convention collective . bad . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
-      })
-    );
+    engine.setSituation({
+      "contrat salarié . ancienneté": "6",
+      "contrat salarié . convention collective": "'IDCC2941'",
+      "contrat salarié . convention collective . bad . catégorie professionnelle": `'${category}'`,
+      "contrat salarié . mise à la retraite": "oui",
+      "contrat salarié . travailleur handicapé": "non",
+    });
+    const result = engine.getReferences();
 
     expect(result).toHaveLength(expectedReferences.length);
     expect(result).toEqual(expect.arrayContaining(expectedReferences));

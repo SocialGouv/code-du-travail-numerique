@@ -1,15 +1,12 @@
 import { Route } from "../types";
 import { createIndemniteLicenciementStore } from "../../../../IndemniteLicenciement/store";
-import { loadPublicodesRules } from "../../../../api";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 
 describe("[Store] Un utilisateur souhaite trouver sa convention collective", () => {
   let store: ReturnType<typeof createIndemniteLicenciementStore>;
 
   beforeEach(() => {
-    store = createIndemniteLicenciementStore(
-      loadPublicodesRules("indemnite-licenciement")
-    );
+    store = createIndemniteLicenciementStore("indemnite-licenciement");
   });
 
   it("should be defined and init", () => {
