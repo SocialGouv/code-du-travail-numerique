@@ -78,9 +78,9 @@ describe("Indemnité légale de licenciement pour un employé", () => {
         "contrat salarié . indemnité de licenciement . salaire de référence":
           "2000",
       });
-      expect(result.value).toEqual("0");
+      expect(result.value).toEqual(0);
       expect(result.unit?.numerators).toEqual(["€"]);
-      expect(missingArgs).toEqual({});
+      expect(missingArgs).toEqual([]);
     });
 
     test("Ancienneté requise atteinte et ancienneté de calcul atteinte", () => {
@@ -97,7 +97,7 @@ describe("Indemnité légale de licenciement pour un employé", () => {
       });
       expect(result.value).toEqual(500);
       expect(result.unit?.numerators).toEqual(["€"]);
-      expect(missingArgs).toEqual({});
+      expect(missingArgs).toEqual([]);
     });
   });
 });
