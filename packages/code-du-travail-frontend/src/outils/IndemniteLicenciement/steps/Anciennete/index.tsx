@@ -7,6 +7,7 @@ import { useIndemniteLicenciementStore } from "../../store";
 import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../../CommonSteps/Informations/utils";
 import Html from "../../../../common/Html";
+import { getMessageMotifExample } from "../../agreements";
 
 const StepAnciennete = () => {
   const {
@@ -28,6 +29,7 @@ const StepAnciennete = () => {
     errorAbsencePeriods,
     agreement,
     informationData,
+    publicodesInformations,
   } = useIndemniteLicenciementStore((state) => ({
     init: state.ancienneteFunction.init,
     onChangeAbsencePeriods: state.ancienneteFunction.onChangeAbsencePeriods,
@@ -50,6 +52,7 @@ const StepAnciennete = () => {
     informationData: informationToSituation(
       state.informationsData.input.publicodesInformations
     ),
+    publicodesInformations: state.informationsData.input.publicodesInformations,
   }));
 
   useEffect(() => {
@@ -136,6 +139,7 @@ const StepAnciennete = () => {
           absences={absencePeriods}
           error={errorAbsencePeriods}
           informationData={informationData}
+          messageMotifExample={getMessageMotifExample(publicodesInformations)}
         />
       )}
     </>
