@@ -10,9 +10,6 @@ const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
 
 const router = new Router({ prefix: API_BASE_URL });
 
-const getBreadcrumbInFirstPosition = (a, b) =>
-  a.position < b.position ? a : b;
-
 const groupByThemes = (acc, item) => {
   if (item.theme in acc) acc[item.theme].push(item);
   else acc[item.theme] = [item];
@@ -38,9 +35,7 @@ router.get("/contributions", async (ctx) => {
     .map(({ _source }) => _source)
     .map((contrib) => {
       const { breadcrumbs, ...contribWithTheme } = contrib;
-      contribWithTheme.theme = breadcrumbs.reduce(
-        getBreadcrumbInFirstPosition
-      ).label;
+      contribWithTheme.theme = breadcrumbs[0].label;
       return contribWithTheme;
     })
     .reduce(groupByThemes, {});

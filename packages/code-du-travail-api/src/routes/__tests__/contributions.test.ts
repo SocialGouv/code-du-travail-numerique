@@ -16,7 +16,7 @@ describe("Contributions", () => {
       const contribs = response.body;
       const themes = Object.keys(contribs);
       expect(themes.length).toEqual(2);
-      expect(themes[0]).toEqual("Congés");
+      expect(themes[0]).toEqual("Congés et repos");
       expect(contribs[themes[0]].length).toEqual(1);
       expect(contribs[themes[0]][0].title).toEqual(
         "Les congés pour événements familiaux"
