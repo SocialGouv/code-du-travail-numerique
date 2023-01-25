@@ -135,7 +135,7 @@ const VerticallyAligned = styled.div`
 
 const NavButtonWithIcon = styled(NavButton)`
   padding: 0 0 0 30px;
-  background: url("/static/assets/img/user-settings-line.svg") 0.5rem center
+  background: url("/static/assets/img/acceccibility-logo.svg") 6px center
     no-repeat;
   display: block !important;
   @media (max-width: ${breakpoints.tablet}) {

@@ -317,6 +317,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
 .c26 {
   margin: 0;
   font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
   font-weight: 600;
 }
 

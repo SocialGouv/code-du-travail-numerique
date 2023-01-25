@@ -4,7 +4,7 @@ describe("Conventions collectives", () => {
     cy.get("#navigation").contains("Conventions Collectives").click();
     cy.url().should("include", "/convention-collective");
 
-    cy.get("h1").should("have.text", "Ma convention collective");
+    cy.get("h1").should("have.text", "Votre convention collective");
     cy.get("body").should(
       "contain",
       "Retrouvez les questions/réponses fréquentes organisées par thème pour votre convention collective"

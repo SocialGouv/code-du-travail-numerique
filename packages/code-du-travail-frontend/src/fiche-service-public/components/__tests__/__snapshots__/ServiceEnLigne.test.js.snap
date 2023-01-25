@@ -88,6 +88,7 @@ exports[`<ServiceEnLigne /> should render 1`] = `
 .c5 {
   margin: 0;
   font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
   font-weight: 600;
 }
 

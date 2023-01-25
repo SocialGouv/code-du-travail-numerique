@@ -16,15 +16,15 @@ import { Layout } from "../../src/layout/Layout";
 import {
   AgreementSearch,
   CalculateurIndemnite,
+  DismissalProcess,
   DureePreavisDemission,
   DureePreavisLicenciement,
   DureePreavisRetraite,
+  fetchTool,
   HeuresRechercheEmploi,
   loadPublicodesRules,
   SimulateurEmbauche,
   SimulateurIndemnitePrecarite,
-  DismissalProcess,
-  fetchTool,
 } from "../../src/outils";
 
 const {
@@ -72,7 +72,7 @@ function Outils({
   }, [title]);
   const router = useRouter();
   return (
-    <Layout currentPage="tools">
+    <Layout>
       <Metas title={metaTitle} description={metaDescription} />
       <StyledSection>
         <Container>

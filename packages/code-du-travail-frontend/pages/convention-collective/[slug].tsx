@@ -24,7 +24,7 @@ function ConventionCollective(props: Props): JSX.Element {
   const { convention } = props;
   const { shortTitle, longTitle } = convention;
   return (
-    <Layout currentPage={SOURCES.CCN}>
+    <Layout>
       <Metas
         title={`Convention collective ${shortTitle}`}
         description={longTitle}

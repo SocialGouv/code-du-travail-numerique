@@ -157,6 +157,7 @@ const StyledSubtitle = styled(Subtitle)`
 const StyledHeading = styled(Heading)`
   margin: 0;
   font-size: ${fonts.sizes.headings.small};
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
 `;
 

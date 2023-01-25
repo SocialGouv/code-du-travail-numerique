@@ -180,6 +180,7 @@ exports[`<CallToActionTile /> should render 1`] = `
 .c7 {
   margin: 0;
   font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
   font-weight: 600;
 }
 

@@ -12,8 +12,8 @@ export const BurgerNavButton = styled(Button).attrs(() => ({
   display: flex !important;
   align-items: center;
   height: 100%;
-  padding: 0 ${spacings.base};
-  font-weight: 600;
+  padding: 0 ${spacings.medium};
+  font-weight: normal;
   font-size: ${fonts.sizes.default};
   font-family: "Open Sans", sans-serif;
   border: none;
@@ -22,6 +22,7 @@ export const BurgerNavButton = styled(Button).attrs(() => ({
     width: 100%;
     height: 5.4rem;
     padding: 0;
+    font-weight: 600;
     font-size: ${fonts.sizes.headings.small};
   }
 `;
@@ -44,6 +45,7 @@ const BurgerNavCurrent = styled(BurgerNavButton).attrs(() => ({
   as: "span",
 }))`
   cursor: inherit;
+
   &:after {
     position: absolute;
     bottom: 0;

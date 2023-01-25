@@ -15,7 +15,7 @@ export const SUB_MENU_HEIGHT = "5.5rem";
 type Props = {
   currentPage: string;
 };
-const HeaderBurgerNav = ({currentPage}: Props): JSX.Element => {
+const HeaderBurgerNav = ({ currentPage }: Props): JSX.Element => {
   return (
     <StyledBurgerNav>
       <Nav id="navigation" aria-label="Navigation du site">
@@ -65,18 +65,20 @@ const HeaderBurgerNav = ({currentPage}: Props): JSX.Element => {
     </StyledBurgerNav>
   );
 };
-const {breakpoints, spacings} = theme;
+const { breakpoints, spacings } = theme;
 
 const StyledBurgerNav = styled(RootBurgerNav)`
-  :before {
-    @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: ${breakpoints.tablet}) {
+    width: 100%;
+
+    :before {
       display: block;
       position: absolute;
       bottom: ${SUB_MENU_HEIGHT};
       left: 0;
       right: 0;
       height: 1px;
-      background-color: ${({theme}) => theme.border};
+      background-color: ${({ theme }) => theme.bgTertiary};
       content: "";
     }
   }
@@ -85,8 +87,10 @@ const StyledBurgerNav = styled(RootBurgerNav)`
 const Nav = styled.nav`
   height: ${SUB_MENU_HEIGHT};
   margin-top: ${spacings.small};
+  width: 100%;
   @media (max-width: ${breakpoints.tablet}) {
     height: auto;
+    width: auto;
   }
 `;
 
@@ -97,7 +101,7 @@ const Ul = styled.ul`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 100%;
   @media (max-width: ${breakpoints.tablet}) {
     flex-direction: column;

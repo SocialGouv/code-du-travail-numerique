@@ -19,7 +19,6 @@ import { Layout } from "../../src/layout/Layout";
 import { toUrl } from "../../src/lib";
 import { Breadcrumb } from "cdtn-types";
 import { handleError } from "../../src/lib/fetch-error";
-import {SOURCES} from "@socialgouv/cdtn-sources";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -63,7 +62,7 @@ function ModeleCourrier(props: Props): JSX.Element {
     type !== "fichier" ? `de ${type}` : "à télécharger"
   }`;
   return (
-    <Layout currentPage={SOURCES.LETTERS}>
+    <Layout>
       <Metas
         title={`${category} :  ${meta_title ?? title}`}
         description={

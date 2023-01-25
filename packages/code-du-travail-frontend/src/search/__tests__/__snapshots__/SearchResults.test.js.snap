@@ -417,6 +417,7 @@ exports[`<SearchResults/> should render results 1`] = `
 .c8 {
   margin: 0;
   font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
   font-weight: 600;
 }
 

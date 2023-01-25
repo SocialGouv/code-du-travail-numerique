@@ -8,7 +8,6 @@ import Contribution from "../../src/contributions/Contribution";
 import { Layout } from "../../src/layout/Layout";
 import { Breadcrumb } from "cdtn-types";
 import { handleError } from "../../src/lib/fetch-error";
-import {SOURCES} from "@socialgouv/cdtn-sources";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -49,14 +48,8 @@ function PageContribution(props: Props): JSX.Element {
     };
   };
 
-  const {
-    breadcrumbs,
-    title,
-    answers,
-    description,
-    relatedItems,
-    content,
-  } = props;
+  const { breadcrumbs, title, answers, description, relatedItems, content } =
+    props;
 
   const metas = buildTitleAndDescription(
     breadcrumbs,
@@ -66,7 +59,7 @@ function PageContribution(props: Props): JSX.Element {
   );
   return (
     <div>
-      <Layout currentPage={SOURCES.CONTRIBUTIONS}>
+      <Layout>
         <Metas title={metas.title} description={metas.description} />
         <Answer
           title={title}
