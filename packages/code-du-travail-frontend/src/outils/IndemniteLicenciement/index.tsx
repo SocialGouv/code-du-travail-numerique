@@ -21,7 +21,7 @@ type Props = {
   icon: string;
   title: string;
   displayTitle: string;
-  publicodesRules: any;
+  slug: string;
 };
 
 export enum IndemniteLicenciementStepName {
@@ -76,7 +76,7 @@ const IndemniteLicenciementSimulator = ({
   title,
   icon,
   displayTitle,
-}: Omit<Props, "publicodesRules">): JSX.Element => {
+}: Omit<Props, "publicodesRules" | "slug">): JSX.Element => {
   const {
     onNextStepContratTravail,
     onPrevStepContratTravail,
@@ -199,15 +199,12 @@ export const CalculateurIndemnite = ({
   icon,
   title,
   displayTitle,
-  publicodesRules,
+  slug,
 }: Props): JSX.Element => {
   return (
     <IndemniteLicenciementProvider
       createStore={() =>
-        createIndemniteLicenciementStore(
-          publicodesRules,
-          ToolName.INDEMNITE_LICENCIEMENT
-        )
+        createIndemniteLicenciementStore(slug, ToolName.INDEMNITE_LICENCIEMENT)
       }
     >
       <IndemniteLicenciementSimulator

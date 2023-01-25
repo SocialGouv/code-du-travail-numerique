@@ -9,25 +9,26 @@ import {
   CommonAgreementStoreSlice,
   Route,
 } from "./types";
-import { STORAGE_KEY_AGREEMENT, StoreSlice } from "../../../types";
+import { STORAGE_KEY_AGREEMENT, StoreSlicePublicode } from "../../../types";
 import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { Agreement } from "../../../../conventions/Search/api/type";
+import { loadPublicodes } from "../../../api";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
 import { IndemniteLicenciementStepName } from "../../../IndemniteLicenciement";
 import { MatomoBaseEvent } from "../../../../lib/matomo/types";
 
-const initialState: CommonAgreementStoreData = {
+const initialState: Omit<CommonAgreementStoreData, "publicodes"> = {
   input: {},
   error: {},
   hasBeenSubmit: false,
   isStepValid: true,
 };
 
-const createCommonAgreementStore: StoreSlice<
+const createCommonAgreementStore: StoreSlicePublicode<
   CommonAgreementStoreSlice,
   CommonInformationsStoreSlice
-> = (set, get, { toolName }) => ({
-  agreementData: { ...initialState },
+> = (set, get, { slug, toolName }) => ({
+  agreementData: { ...initialState, publicodes: loadPublicodes(slug) },
   agreementFunction: {
     onInitAgreementPage: () => {
       try {
@@ -39,7 +40,15 @@ const createCommonAgreementStore: StoreSlice<
           if (parsedData.num !== get().agreementData.input.agreement?.num) {
             applyGenericValidation(get, set, "agreement", parsedData);
             applyGenericValidation(get, set, "route", Route.agreement);
-            get().informationsFunction.generatePublicodesQuestions();
+            const idcc = parsedData?.num?.toString();
+            if (idcc) {
+              set(
+                produce((state: CommonAgreementStoreSlice) => {
+                  state.agreementData.publicodes = loadPublicodes(slug, idcc);
+                })
+              );
+              get().informationsFunction.generatePublicodesQuestions();
+            }
           }
         }
       } catch (e) {
@@ -67,7 +76,15 @@ const createCommonAgreementStore: StoreSlice<
           JSON.stringify(agreement)
         );
       applyGenericValidation(get, set, "enterprise", enterprise);
-      get().informationsFunction.generatePublicodesQuestions();
+      const idcc = agreement?.num?.toString();
+      if (idcc) {
+        set(
+          produce((state: CommonAgreementStoreSlice) => {
+            state.agreementData.publicodes = loadPublicodes(slug, idcc);
+          })
+        );
+        get().informationsFunction.generatePublicodesQuestions();
+      }
     },
     onNextStep: () => {
       const { isValid, errorState } = validateStep(get().agreementData.input);

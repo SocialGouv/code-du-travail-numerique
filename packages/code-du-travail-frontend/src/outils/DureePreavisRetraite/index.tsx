@@ -6,17 +6,17 @@ interface Props {
   icon: string;
   title: string;
   displayTitle: string;
-  publicodesRules: any;
+  slug: string;
 }
 
 const DureePreavisRetraite = ({
   icon,
   title,
   displayTitle,
-  publicodesRules,
+  slug,
 }: Props): JSX.Element => (
   <PreavisRetraiteProvider
-    createStore={() => createPreavisRetraiteStore(publicodesRules, title)}
+    createStore={() => createPreavisRetraiteStore(title, slug)}
   >
     <PreavisRetraiteSimulator
       icon={icon}

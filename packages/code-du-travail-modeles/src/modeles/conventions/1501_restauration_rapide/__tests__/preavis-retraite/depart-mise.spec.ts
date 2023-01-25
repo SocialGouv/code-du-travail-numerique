@@ -1,13 +1,10 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { getReferences } from "../../../../common";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 describe("restauration rapide", () => {
   const CCReferences = [
     {
@@ -28,13 +25,13 @@ describe("restauration rapide", () => {
   describe("départ à la retraite", () => {
     test.each`
       seniority | category                | expectedNotice | expectedUnit | expectedReferences
-      ${4}      | ${"Ouvriers"}           | ${8}           | ${"jour"}    | ${DepartRetraiteRefs}
+      ${4}      | ${"Ouvriers"}           | ${8}           | ${"jours"}   | ${DepartRetraiteRefs}
       ${8}      | ${"Ouvriers"}           | ${1}           | ${"mois"}    | ${DepartRetraiteRefs}
       ${24}     | ${"Ouvriers"}           | ${1}           | ${"mois"}    | ${DepartRetraiteRefs}
       ${25}     | ${"Ouvriers"}           | ${1}           | ${"mois"}    | ${DepartRetraiteRefs}
-      ${4}      | ${"Employés"}           | ${8}           | ${"jour"}    | ${DepartRetraiteRefs}
-      ${8}      | ${"Employés"}           | ${15}          | ${"jour"}    | ${DepartRetraiteRefs}
-      ${24}     | ${"Employés"}           | ${15}          | ${"jour"}    | ${DepartRetraiteRefs}
+      ${4}      | ${"Employés"}           | ${8}           | ${"jours"}   | ${DepartRetraiteRefs}
+      ${8}      | ${"Employés"}           | ${15}          | ${"jours"}   | ${DepartRetraiteRefs}
+      ${24}     | ${"Employés"}           | ${15}          | ${"jours"}   | ${DepartRetraiteRefs}
       ${25}     | ${"Employés"}           | ${1}           | ${"mois"}    | ${DepartRetraiteRefs}
       ${4}      | ${"Agents de maîtrise"} | ${1}           | ${"mois"}    | ${DepartRetraiteRefs}
       ${8}      | ${"Agents de maîtrise"} | ${1}           | ${"mois"}    | ${DepartRetraiteRefs}
@@ -52,20 +49,21 @@ describe("restauration rapide", () => {
         expectedUnit,
         expectedReferences,
       }) => {
-        engine.setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "'IDCC1501'",
-          "contrat salarié . convention collective . restauration rapide . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . mise à la retraite": "non",
-          "contrat salarié . travailleur handicapé": "non",
-        });
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . ancienneté": seniority,
+            "contrat salarié . convention collective": "'IDCC1501'",
+            "contrat salarié . convention collective . restauration rapide . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . mise à la retraite": "non",
+            "contrat salarié . travailleur handicapé": "non",
+          },
+          "contrat salarié . préavis de retraite en jours"
+        );
+        expect(result.value).toEqual(expectedNotice);
+        expect(result.unit).toEqual(expectedUnit);
+        expect(missingArgs).toEqual([]);
 
-        const result = engine.evaluate("contrat salarié . préavis de retraite");
-        expect(result.nodeValue).toEqual(expectedNotice);
-        expect(result.unit?.numerators).toEqual([expectedUnit]);
-        expect(result.missingVariables).toEqual({});
-
-        const references = getReferences(engine);
+        const references = engine.getReferences();
         expect(references).toHaveLength(expectedReferences.length);
         expect(references).toEqual(expect.arrayContaining(expectedReferences));
       }
@@ -75,11 +73,11 @@ describe("restauration rapide", () => {
   describe("mise à la retraite", () => {
     test.each`
       seniority | category                | expectedNotice | expectedUnit | expectedReferences
-      ${4}      | ${"Ouvriers"}           | ${8}           | ${"jour"}    | ${MiseRetraiteRefs}
+      ${4}      | ${"Ouvriers"}           | ${8}           | ${"jours"}   | ${MiseRetraiteRefs}
       ${8}      | ${"Ouvriers"}           | ${1}           | ${"mois"}    | ${MiseRetraiteRefs}
       ${24}     | ${"Ouvriers"}           | ${2}           | ${"mois"}    | ${MiseRetraiteRefs}
       ${25}     | ${"Ouvriers"}           | ${2}           | ${"mois"}    | ${MiseRetraiteRefs}
-      ${4}      | ${"Employés"}           | ${8}           | ${"jour"}    | ${MiseRetraiteRefs}
+      ${4}      | ${"Employés"}           | ${8}           | ${"jours"}   | ${MiseRetraiteRefs}
       ${8}      | ${"Employés"}           | ${1}           | ${"mois"}    | ${MiseRetraiteRefs}
       ${24}     | ${"Employés"}           | ${2}           | ${"mois"}    | ${MiseRetraiteRefs}
       ${25}     | ${"Employés"}           | ${2}           | ${"mois"}    | ${MiseRetraiteRefs}
@@ -100,21 +98,22 @@ describe("restauration rapide", () => {
         expectedUnit,
         expectedReferences,
       }) => {
-        engine.setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "'IDCC1501'",
-          "contrat salarié . convention collective . restauration rapide . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . mise à la retraite": "oui",
-          "contrat salarié . travailleur handicapé": "non",
-        });
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . ancienneté": seniority,
+            "contrat salarié . convention collective": "'IDCC1501'",
+            "contrat salarié . convention collective . restauration rapide . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . mise à la retraite": "oui",
+            "contrat salarié . travailleur handicapé": "non",
+          },
+          "contrat salarié . préavis de retraite en jours"
+        );
 
-        const result = engine.evaluate("contrat salarié . préavis de retraite");
+        expect(result.value).toEqual(expectedNotice);
+        expect(result.unit).toEqual(expectedUnit);
+        expect(missingArgs).toEqual([]);
 
-        expect(result.nodeValue).toEqual(expectedNotice);
-        expect(result.unit?.numerators).toEqual([expectedUnit]);
-        expect(result.missingVariables).toEqual({});
-
-        const references = getReferences(engine);
+        const references = engine.getReferences();
         expect(references).toHaveLength(expectedReferences.length);
         expect(references).toEqual(expect.arrayContaining(expectedReferences));
       }

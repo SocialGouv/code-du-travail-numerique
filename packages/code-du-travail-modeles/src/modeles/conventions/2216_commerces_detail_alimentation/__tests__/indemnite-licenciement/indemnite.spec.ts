@@ -1,3 +1,10 @@
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "2216"
+);
+
 describe("Indemnité conventionnel de licenciement pour la CC 2216", () => {
   describe("Cas standard", () => {
     test.each`
@@ -82,25 +89,24 @@ describe("Indemnité conventionnel de licenciement pour la CC 2216", () => {
         salary,
         expectedCompensation,
       }) => {
-        const situation = engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC2216'",
-          "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
-            ? `'Oui'`
-            : `'Non'`,
-          "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
-          "contrat salarié . indemnité de licenciement": "oui",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
-        });
-
-        const result = situation.evaluate(
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . convention collective": "'IDCC2216'",
+            "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
+              ? `'Oui'`
+              : `'Non'`,
+            "contrat salarié . convention collective . commerce gros et detail alimentation . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
+            "contrat salarié . indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+          },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
-        expect(result.missingVariables).toEqual({});
+        expect(missingArgs).toEqual([]);
         expect(result.unit?.numerators).toEqual(["€"]);
-        expect(result.nodeValue).toEqual(expectedCompensation);
+        expect(result.value).toEqual(expectedCompensation);
       }
     );
   });

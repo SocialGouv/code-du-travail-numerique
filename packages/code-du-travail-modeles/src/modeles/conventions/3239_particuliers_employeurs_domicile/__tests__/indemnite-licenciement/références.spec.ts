@@ -1,5 +1,10 @@
-import { getReferences } from "../../../../common";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 import { CatPro3239 } from "../../salary";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "3239"
+);
 
 const ReferencesPe = [
   {
@@ -89,29 +94,33 @@ const ReferencesAssMat = [
 
 describe("Références juridiques pour la CC 3239", () => {
   test("Notifications de l'assistante maternelle", () => {
-    const situation = engine.setSituation({
+    engine.setSituation({
       "contrat salarié . convention collective": "'IDCC3239'",
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${CatPro3239.assistantMaternel}'`,
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement": `'Non'`,
-      "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires": 20000,
-      "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 2,
+      "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle . assistante maternelle . type de licenciement . autres . total salaires":
+        "2000",
+      "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+        "2",
     });
 
-    const result = getReferences(situation, "résultat conventionnel");
+    const result = engine.getReferences("résultat conventionnel");
 
     expect(result).toHaveLength(ReferencesAssMat.length);
     expect(result).toEqual(expect.arrayContaining(ReferencesAssMat));
   });
 
   test("Notifications du salarié du particulier employeur", () => {
-    const situation = engine.setSituation({
+    engine.setSituation({
       "contrat salarié . convention collective": "'IDCC3239'",
       "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": `'${CatPro3239.salarieParticulierEmployeur}'`,
-      "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 2,
-      "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
+      "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+        "2",
+      "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+        "2000",
     });
 
-    const result = getReferences(situation, "résultat conventionnel");
+    const result = engine.getReferences("résultat conventionnel");
 
     expect(result).toHaveLength(ReferencesPe.length);
     expect(result).toEqual(expect.arrayContaining(ReferencesPe));

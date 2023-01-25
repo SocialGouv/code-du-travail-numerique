@@ -6,7 +6,10 @@ import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 import { IndemniteLicenciementStepName } from "../..";
 import { AgreementsInjector } from "../../agreements";
 import { icons } from "@socialgouv/cdtn-ui";
-import Html from "../../../../common/Html";
+import {
+  generateSalaireTempsPleinQuestion,
+  generateSameSalaryQuestion,
+} from "../../utils/question";
 
 const StepSalaires = () => {
   const {
@@ -89,24 +92,11 @@ const StepSalaires = () => {
               },
             ]}
             name="hasSameSalary"
-            label="Le salaire mensuel brut a-t-il été le même durant les 12 derniers mois précédant la notification du licenciement ?"
+            label={generateSameSalaryQuestion(arretTravail, salaryPeriods)}
             selectedOption={hasSameSalary}
             onChangeSelectedOption={onChangeHasSameSalary}
             error={errorHasSameSalary}
             showRequired
-            tooltip={
-              licenciementInaptitude === "oui" || arretTravail === "non"
-                ? undefined
-                : {
-                    content: (
-                      <Html>
-                        Pour les salariés en arrêt de travail au moment du
-                        licenciement ce sont les 12 mois précédant l&apos;arrêt
-                        de travail qui doivent être pris en compte.
-                      </Html>
-                    ),
-                  }
-            }
           />
           {hasSameSalary === "oui" && (
             <TextQuestion
@@ -124,7 +114,10 @@ const StepSalaires = () => {
           )}
           {hasSameSalary === "non" && (
             <SalaireTempsPlein
-              title="Salaires mensuels bruts des 12 derniers mois et primes des 3 derniers mois précédant la notification du licenciement"
+              title={generateSalaireTempsPleinQuestion(
+                arretTravail,
+                salaryPeriods
+              )}
               subTitle="Indiquez le montant des salaires (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ (uniquement pour les 3 derniers mois)              "
               tooltip={{
                 content: <TooltipSalary />,

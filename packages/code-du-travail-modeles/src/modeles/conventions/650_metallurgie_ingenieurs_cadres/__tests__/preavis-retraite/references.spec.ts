@@ -1,13 +1,10 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { getReferences } from "../../../../common";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 const MiseRetraiteMetallurgieReferences = [
   {
@@ -25,14 +22,13 @@ const DepartRetraiteMetallurgieReferences = [
 ];
 
 test("Vérification des références juridiques pour un employé en départ à la retraite", () => {
-  const result = getReferences(
-    engine.setSituation({
-      "contrat salarié . ancienneté": 6,
-      "contrat salarié . convention collective": "'IDCC0650'",
-      "contrat salarié . mise à la retraite": "non",
-      "contrat salarié . travailleur handicapé": "non",
-    })
-  );
+  engine.setSituation({
+    "contrat salarié . ancienneté": "6",
+    "contrat salarié . convention collective": "'IDCC0650'",
+    "contrat salarié . mise à la retraite": "non",
+    "contrat salarié . travailleur handicapé": "non",
+  });
+  const result = engine.getReferences();
 
   const expectedReferences = DepartRetraiteReferences.concat(
     DepartRetraiteMetallurgieReferences
@@ -42,14 +38,13 @@ test("Vérification des références juridiques pour un employé en départ à l
 });
 
 test("Vérification des références juridiques pour un employé en mise à la retraite", () => {
-  const result = getReferences(
-    engine.setSituation({
-      "contrat salarié . ancienneté": 6,
-      "contrat salarié . convention collective": "'IDCC0650'",
-      "contrat salarié . mise à la retraite": "oui",
-      "contrat salarié . travailleur handicapé": "non",
-    })
-  );
+  engine.setSituation({
+    "contrat salarié . ancienneté": "6",
+    "contrat salarié . convention collective": "'IDCC0650'",
+    "contrat salarié . mise à la retraite": "oui",
+    "contrat salarié . travailleur handicapé": "non",
+  });
+  const result = engine.getReferences();
 
   const expectedReferences = MiseRetraiteReferences.concat(
     MiseRetraiteMetallurgieReferences

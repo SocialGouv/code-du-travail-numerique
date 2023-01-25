@@ -1,11 +1,8 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { getNotifications, getReferences } from "../../../../common";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
 const ArticleCc = {
   article: "Article 23.3",
@@ -17,7 +14,7 @@ const DepartRetraiteCcReferences = [...DepartRetraiteReferences, ArticleCc];
 
 const MiseRetraiteCCReferences = [...MiseRetraiteReferences, ArticleCc];
 
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 describe("Vérification juridique pour la CC 1505", () => {
   describe("Départ à la retraite", () => {
@@ -38,20 +35,20 @@ describe("Vérification juridique pour la CC 1505", () => {
     `(
       "Pour un $category disposant d'une ancienneté $seniority, son préavis devrait être $expectedResult mois",
       ({ expectedResult, seniority, category, expectedReferences }) => {
-        const situation = engine.setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "'IDCC1505'",
-          "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . mise à la retraite": "non",
-          "contrat salarié . travailleur handicapé": "non",
-        });
-        const result = situation.evaluate(
-          "contrat salarié . préavis de retraite"
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . ancienneté": seniority,
+            "contrat salarié . convention collective": "'IDCC1505'",
+            "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . mise à la retraite": "non",
+            "contrat salarié . travailleur handicapé": "non",
+          },
+          "contrat salarié . préavis de retraite en jours"
         );
-        const references = getReferences(situation);
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedResult);
-        expect(result.unit?.numerators).toEqual(["mois"]);
+        const references = engine.getReferences();
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedResult);
+        expect(result.unit).toEqual("mois");
         expect(references).toHaveLength(expectedReferences.length);
         expect(references).toEqual(expect.arrayContaining(expectedReferences));
       }
@@ -76,21 +73,20 @@ describe("Vérification juridique pour la CC 1505", () => {
     `(
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ seniority, category, expectedResult, expectedReferences }) => {
-        const situation = engine.setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "'IDCC1505'",
-          "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . mise à la retraite": "oui",
-          "contrat salarié . travailleur handicapé": "non",
-        });
-
-        const result = situation.evaluate(
-          "contrat salarié . préavis de retraite"
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . ancienneté": seniority,
+            "contrat salarié . convention collective": "'IDCC1505'",
+            "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . mise à la retraite": "oui",
+            "contrat salarié . travailleur handicapé": "non",
+          },
+          "contrat salarié . préavis de retraite en jours"
         );
-        const references = getReferences(situation);
-        expect(result.missingVariables).toEqual({});
-        expect(result.nodeValue).toEqual(expectedResult);
-        expect(result.unit?.numerators).toEqual(["mois"]);
+        const references = engine.getReferences();
+        expect(missingArgs).toEqual([]);
+        expect(result.value).toEqual(expectedResult);
+        expect(result.unit).toEqual("mois");
         expect(references).toHaveLength(expectedReferences.length);
         expect(references).toEqual(expect.arrayContaining(expectedReferences));
       }
@@ -113,15 +109,14 @@ describe("Vérification juridique pour la CC 1505", () => {
       `(
         "Pour un $category possédant $seniority mois d'ancienneté en départ à la retraite, le nombre de notification a affiché est de $expectedNotification.length",
         ({ seniority, category }) => {
-          const result = getNotifications(
-            engine.setSituation({
-              "contrat salarié . ancienneté": seniority,
-              "contrat salarié . convention collective": "'IDCC1505'",
-              "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
-              "contrat salarié . départ à la retraite": "oui",
-              "contrat salarié . travailleur handicapé": "non",
-            })
-          );
+          engine.setSituation({
+            "contrat salarié . ancienneté": seniority,
+            "contrat salarié . convention collective": "'IDCC1505'",
+            "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . départ à la retraite": "oui",
+            "contrat salarié . travailleur handicapé": "non",
+          });
+          const result = engine.getNotifications();
 
           expect(result).toHaveLength(0);
         }
@@ -137,15 +132,14 @@ describe("Vérification juridique pour la CC 1505", () => {
       `(
         "Pour un $category possédant $seniority mois d'ancienneté en départ à la retraite, le nombre de notification a affiché est de $expectedNotification.length",
         ({ seniority, category, expectedNotification }) => {
-          const result = getNotifications(
-            engine.setSituation({
-              "contrat salarié . ancienneté": seniority,
-              "contrat salarié . convention collective": "'IDCC1505'",
-              "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
-              "contrat salarié . départ à la retraite": "oui",
-              "contrat salarié . travailleur handicapé": "non",
-            })
-          );
+          engine.setSituation({
+            "contrat salarié . ancienneté": seniority,
+            "contrat salarié . convention collective": "'IDCC1505'",
+            "contrat salarié . convention collective . commerces de détail fruits et légumes . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . départ à la retraite": "oui",
+            "contrat salarié . travailleur handicapé": "non",
+          });
+          const result = engine.getNotifications();
 
           expect(result).toHaveLength(expectedNotification.length);
           expect(result[0].description).toBe(expectedNotification[0]);

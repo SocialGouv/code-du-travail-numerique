@@ -1,9 +1,9 @@
-import Engine from "publicodes";
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 
-import { mergeIndemniteLicenciementModels } from "../../../../../internal/merger";
-import { getReferences } from "../../../../common";
-
-const engine = new Engine(mergeIndemniteLicenciementModels());
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "1702"
+);
 
 const refs = [
   {
@@ -25,15 +25,18 @@ const refs = [
 
 describe("Références juridique pour l'indemnité conventionnel de licenciement pour la CC 1702", () => {
   test("ancienneté: $seniority an, salaire de référence: $salary, type de licenciement $typeLicenciement, catégorie $category => $expectedReferences", () => {
-    const situation = engine.setSituation({
+    engine.setSituation({
       "contrat salarié . convention collective": "'IDCC1702'",
-      "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age": 38,
+      "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . age":
+        "38",
       "contrat salarié . convention collective . ouvriers travaux public . indemnité de licenciement . licenciement économique": `'Oui'`,
-      "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": 10,
-      "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": 2000,
+      "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+        "10",
+      "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+        "2000",
     });
 
-    const result = getReferences(situation, "résultat conventionnel");
+    const result = engine.getReferences("résultat conventionnel");
 
     expect(result).toHaveLength(refs.length);
     expect(result).toEqual(expect.arrayContaining(refs));

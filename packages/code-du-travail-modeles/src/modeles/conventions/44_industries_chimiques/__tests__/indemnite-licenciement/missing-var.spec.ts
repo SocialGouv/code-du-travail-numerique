@@ -1,4 +1,10 @@
+import { IndemniteLicenciementPublicodes } from "../../../../../publicodes";
 import { CategoryPro44 } from "../../salary";
+
+const engine = new IndemniteLicenciementPublicodes(
+  modelsIndemniteLicenciement,
+  "44"
+);
 
 describe("Missing variables pour l'indemnité conventionnel de licenciement pour la CC 44", () => {
   describe("Aucune", () => {
@@ -13,23 +19,22 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
     `(
       "Avec $seniority ans, catégorie $category, age $age, isEconomicFiring $isEconomicFiring et sref : $salary",
       ({ category, isEconomicFiring, seniority, salary, age }) => {
-        const situation = engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC0044'",
-          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
-            ? `'Oui'`
-            : `'Non'`,
-          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
-          "contrat salarié . indemnité de licenciement": "oui",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
-        });
-
-        const result = situation.evaluate(
+        const { missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . convention collective": "'IDCC0044'",
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
+              ? `'Oui'`
+              : `'Non'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age": age,
+            "contrat salarié . indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+          },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
-        expect(result.missingVariables).toEqual({});
+        expect(missingArgs).toEqual([]);
       }
     );
   });
@@ -46,22 +51,21 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
     `(
       "Avec $seniority ans, catégorie $category, isEconomicFiring $isEconomicFiring et sref : $salary",
       ({ category, isEconomicFiring, seniority, salary }) => {
-        const situation = engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC0044'",
-          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
-            ? `'Oui'`
-            : `'Non'`,
-          "contrat salarié . indemnité de licenciement": "oui",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
-        });
-
-        const result = situation.evaluate(
+        const { missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . convention collective": "'IDCC0044'",
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique": isEconomicFiring
+              ? `'Oui'`
+              : `'Non'`,
+            "contrat salarié . indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+          },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
-        const keys = Object.keys(result.missingVariables);
+        const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
         expect(keys).toEqual([
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age",
         ]);
@@ -78,19 +82,18 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
     `(
       "Avec $seniority ans, catégorie $category $isEconomicFiring et sref : $salary",
       ({ category, seniority, salary }) => {
-        const situation = engine.setSituation({
-          "contrat salarié . convention collective": "'IDCC0044'",
-          "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . indemnité de licenciement": "oui",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
-        });
-
-        const result = situation.evaluate(
+        const { missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . convention collective": "'IDCC0044'",
+            "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . indemnité de licenciement": "oui",
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+          },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
-        const keys = Object.keys(result.missingVariables);
+        const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
         expect(keys).toEqual([
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique",
           "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age",
@@ -106,18 +109,17 @@ describe("Missing variables pour l'indemnité conventionnel de licenciement pour
       ${7}      | ${2500}
       ${7}      | ${2500}
     `("Avec $seniority ans et sref : $salary", ({ seniority, salary }) => {
-      const situation = engine.setSituation({
-        "contrat salarié . convention collective": "'IDCC0044'",
-        "contrat salarié . indemnité de licenciement": "oui",
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
-      });
-
-      const result = situation.evaluate(
+      const { missingArgs } = engine.setSituation(
+        {
+          "contrat salarié . convention collective": "'IDCC0044'",
+          "contrat salarié . indemnité de licenciement": "oui",
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+        },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );
-      const keys = Object.keys(result.missingVariables);
+      const keys = missingArgs.map(({ name }) => name.replace(/(-)/g, "."));
       expect(keys).toEqual([
         "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle",
         "contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique",

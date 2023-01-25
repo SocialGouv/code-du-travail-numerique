@@ -1,13 +1,10 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { getReferences } from "../../../../common";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 const DepartRetraiteSaufCadres = [
   ...DepartRetraiteReferences,
@@ -47,49 +44,59 @@ describe("Préavis de départ à la retraite", () => {
   `(
     "Pour un ouvrier ou employé de niveau $level possédant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
     ({ seniority, level, expectedNotice, expectedReferences }) => {
-      engine.setSituation({
-        "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective": "'IDCC1404'",
-        "contrat salarié . convention collective . sedima . Ouvriers et Employés . niveau": level,
-        "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Ouvriers et Employés'`,
-        "contrat salarié . mise à la retraite": "non",
-        "contrat salarié . travailleur handicapé": "non",
-      });
-      const result = engine.evaluate("contrat salarié . préavis de retraite");
-      const references = getReferences(engine);
+      const { missingArgs, result } = engine.setSituation(
+        {
+          "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1404'",
+          "contrat salarié . convention collective . sedima . Ouvriers et Employés . niveau": level,
+          "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Ouvriers et Employés'`,
+          "contrat salarié . mise à la retraite": "non",
+          "contrat salarié . travailleur handicapé": "non",
+        },
+        "contrat salarié . préavis de retraite en jours"
+      );
+      const references = engine.getReferences();
 
-      expect(result.missingVariables).toEqual({});
-      expect(result.nodeValue).toEqual(expectedNotice);
-      expect(result.unit?.numerators).toEqual(["mois"]);
+      expect(missingArgs).toEqual([]);
+      expect(result.value).toEqual(expectedNotice);
+      expect(result.unit).toEqual("mois");
       expect(references).toHaveLength(expectedReferences.length);
       expect(references).toEqual(expect.arrayContaining(expectedReferences));
     }
   );
 
   test.each`
-    seniority | category                               | expectedNotice | expectedReferences
-    ${1}      | ${"Techniciens et agents de maîtrise"} | ${3}           | ${DepartRetraiteSaufCadres}
-    ${6}      | ${"Techniciens et agents de maîtrise"} | ${1}           | ${DepartRetraiteSaufCadres}
-    ${24}     | ${"Techniciens et agents de maîtrise"} | ${2}           | ${DepartRetraiteSaufCadres}
-    ${1}      | ${"Cadres"}                            | ${0}           | ${DepartRetraiteCadres}
-    ${6}      | ${"Cadres"}                            | ${1}           | ${DepartRetraiteCadres}
-    ${24}     | ${"Cadres"}                            | ${2}           | ${DepartRetraiteCadres}
+    seniority | category                               | expectedNotice | expectedReferences          | expectedUnit
+    ${1}      | ${"Techniciens et agents de maîtrise"} | ${3}           | ${DepartRetraiteSaufCadres} | ${"mois"}
+    ${6}      | ${"Techniciens et agents de maîtrise"} | ${1}           | ${DepartRetraiteSaufCadres} | ${"mois"}
+    ${24}     | ${"Techniciens et agents de maîtrise"} | ${2}           | ${DepartRetraiteSaufCadres} | ${"mois"}
+    ${1}      | ${"Cadres"}                            | ${0}           | ${DepartRetraiteCadres}     | ${"semaines"}
+    ${6}      | ${"Cadres"}                            | ${1}           | ${DepartRetraiteCadres}     | ${"mois"}
+    ${24}     | ${"Cadres"}                            | ${2}           | ${DepartRetraiteCadres}     | ${"mois"}
   `(
     "Pour un $category de niveau $level possédant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
-    ({ seniority, category, expectedNotice, expectedReferences }) => {
-      engine.setSituation({
-        "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective": "'IDCC1404'",
-        "contrat salarié . convention collective . sedima . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . mise à la retraite": "non",
-        "contrat salarié . travailleur handicapé": "non",
-      });
-      const result = engine.evaluate("contrat salarié . préavis de retraite");
-      const references = getReferences(engine);
+    ({
+      seniority,
+      category,
+      expectedNotice,
+      expectedReferences,
+      expectedUnit,
+    }) => {
+      const { missingArgs, result } = engine.setSituation(
+        {
+          "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1404'",
+          "contrat salarié . convention collective . sedima . catégorie professionnelle": `'${category}'`,
+          "contrat salarié . mise à la retraite": "non",
+          "contrat salarié . travailleur handicapé": "non",
+        },
+        "contrat salarié . préavis de retraite en jours"
+      );
+      const references = engine.getReferences();
 
-      expect(result.missingVariables).toEqual({});
-      expect(result.nodeValue).toEqual(expectedNotice);
-      expect(result.unit?.numerators).toEqual(["mois"]);
+      expect(missingArgs).toEqual([]);
+      expect(result.value).toEqual(expectedNotice);
+      expect(result.unit).toEqual(expectedUnit);
       expect(references).toHaveLength(expectedReferences.length);
       expect(references).toEqual(expect.arrayContaining(expectedReferences));
     }
@@ -108,20 +115,23 @@ describe("Préavis de mise à la retraite", () => {
   `(
     "Pour un Ouvriers et Employés de niveau $level possédant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
     ({ seniority, level, expectedNotice, expectedReferences }) => {
-      engine.setSituation({
-        "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective": "'IDCC1404'",
-        "contrat salarié . convention collective . sedima . Ouvriers et Employés . niveau": level,
-        "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Ouvriers et Employés'`,
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
-      });
-      const result = engine.evaluate("contrat salarié . préavis de retraite");
-      const references = getReferences(engine);
+      const { missingArgs, result } = engine.setSituation(
+        {
+          "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1404'",
+          "contrat salarié . convention collective . sedima . Ouvriers et Employés . niveau": level,
+          "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Ouvriers et Employés'`,
+          "contrat salarié . mise à la retraite": "oui",
+          "contrat salarié . travailleur handicapé": "non",
+        },
+        "contrat salarié . préavis de retraite en jours"
+      );
 
-      expect(result.missingVariables).toEqual({});
-      expect(result.nodeValue).toEqual(expectedNotice);
-      expect(result.unit?.numerators).toEqual(["mois"]);
+      const references = engine.getReferences();
+
+      expect(missingArgs).toEqual([]);
+      expect(result.value).toEqual(expectedNotice);
+      expect(result.unit).toEqual("mois");
       expect(references).toHaveLength(expectedReferences.length);
       expect(references).toEqual(expect.arrayContaining(expectedReferences));
     }
@@ -138,20 +148,22 @@ describe("Préavis de mise à la retraite", () => {
   `(
     "Pour un Techniciens et agents de maîtrise de niveau $level possédant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
     ({ seniority, level, expectedNotice, expectedReferences }) => {
-      engine.setSituation({
-        "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective": "'IDCC1404'",
-        "contrat salarié . convention collective . sedima . Techniciens et agents de maîtrise . niveau": level,
-        "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Techniciens et agents de maîtrise'`,
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
-      });
-      const result = engine.evaluate("contrat salarié . préavis de retraite");
-      const references = getReferences(engine);
+      const { missingArgs, result } = engine.setSituation(
+        {
+          "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1404'",
+          "contrat salarié . convention collective . sedima . Techniciens et agents de maîtrise . niveau": level,
+          "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Techniciens et agents de maîtrise'`,
+          "contrat salarié . mise à la retraite": "oui",
+          "contrat salarié . travailleur handicapé": "non",
+        },
+        "contrat salarié . préavis de retraite en jours"
+      );
+      const references = engine.getReferences();
 
-      expect(result.missingVariables).toEqual({});
-      expect(result.nodeValue).toEqual(expectedNotice);
-      expect(result.unit?.numerators).toEqual(["mois"]);
+      expect(missingArgs).toEqual([]);
+      expect(result.value).toEqual(expectedNotice);
+      expect(result.unit).toEqual("mois");
       expect(references).toHaveLength(expectedReferences.length);
       expect(references).toEqual(expect.arrayContaining(expectedReferences));
     }
@@ -165,19 +177,21 @@ describe("Préavis de mise à la retraite", () => {
   `(
     "Pour un Cadres possédant $seniority mois d'ancienneté, son préavis devrait être $expectedNotice mois",
     ({ seniority, expectedNotice, expectedReferences }) => {
-      engine.setSituation({
-        "contrat salarié . ancienneté": seniority,
-        "contrat salarié . convention collective": "'IDCC1404'",
-        "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Cadres'`,
-        "contrat salarié . mise à la retraite": "oui",
-        "contrat salarié . travailleur handicapé": "non",
-      });
-      const result = engine.evaluate("contrat salarié . préavis de retraite");
-      const references = getReferences(engine);
+      const { missingArgs, result } = engine.setSituation(
+        {
+          "contrat salarié . ancienneté": seniority,
+          "contrat salarié . convention collective": "'IDCC1404'",
+          "contrat salarié . convention collective . sedima . catégorie professionnelle": `'Cadres'`,
+          "contrat salarié . mise à la retraite": "oui",
+          "contrat salarié . travailleur handicapé": "non",
+        },
+        "contrat salarié . préavis de retraite en jours"
+      );
+      const references = engine.getReferences();
 
-      expect(result.missingVariables).toEqual({});
-      expect(result.nodeValue).toEqual(expectedNotice);
-      expect(result.unit?.numerators).toEqual(["mois"]);
+      expect(missingArgs).toEqual([]);
+      expect(result.value).toEqual(expectedNotice);
+      expect(result.unit).toEqual("mois");
       expect(references).toHaveLength(expectedReferences.length);
       expect(references).toEqual(expect.arrayContaining(expectedReferences));
     }

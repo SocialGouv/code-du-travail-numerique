@@ -1,35 +1,34 @@
-import Engine from "publicodes";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
-
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 describe("Préavis de retraite pour la CC 2216", () => {
   describe("Départ à la retraite", () => {
     test.each`
-      seniority | category        | expectedNotice
-      ${1}      | ${"Non-cadres"} | ${0}
-      ${6}      | ${"Non-cadres"} | ${1}
-      ${24}     | ${"Non-cadres"} | ${2}
-      ${1}      | ${"Cadres"}     | ${6}
-      ${6}      | ${"Cadres"}     | ${1}
-      ${24}     | ${"Cadres"}     | ${2}
+      seniority | category        | expectedNotice | expectedUnit
+      ${1}      | ${"Non-cadres"} | ${0}           | ${"semaines"}
+      ${6}      | ${"Non-cadres"} | ${1}           | ${"mois"}
+      ${24}     | ${"Non-cadres"} | ${2}           | ${"mois"}
+      ${1}      | ${"Cadres"}     | ${6}           | ${"mois"}
+      ${6}      | ${"Cadres"}     | ${1}           | ${"mois"}
+      ${24}     | ${"Cadres"}     | ${2}           | ${"mois"}
     `(
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis de départ à la retraite devrait être $expectedNotice $expectedNoticeUnit",
-      ({ seniority, category, expectedNotice }) => {
-        const result = engine
-          .setSituation({
+      ({ seniority, category, expectedNotice, expectedUnit }) => {
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . ancienneté": seniority,
             "contrat salarié . convention collective": "'IDCC2216'",
             "contrat salarié . convention collective . commerce gros et detail alimentation . départ à la retraite . catégorie professionnelle": `'${category}'`,
             "contrat salarié . mise à la retraite": "non",
             "contrat salarié . travailleur handicapé": "non",
-          })
-          .evaluate("contrat salarié . préavis de retraite");
+          },
+          "contrat salarié . préavis de retraite en jours"
+        );
 
-        expect(result.nodeValue).toEqual(expectedNotice);
-        expect(result.unit?.numerators).toEqual(["mois"]);
-        expect(result.missingVariables).toEqual({});
+        expect(result.value).toEqual(expectedNotice);
+        expect(result.unit).toEqual(expectedUnit);
+        expect(missingArgs).toEqual([]);
       }
     );
   });
@@ -49,19 +48,20 @@ describe("Préavis de retraite pour la CC 2216", () => {
     `(
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis de mise à la retraite devrait être $expectedNotice $expectedNoticeUnit",
       ({ seniority, category, expectedNotice }) => {
-        const result = engine
-          .setSituation({
+        const { result, missingArgs } = engine.setSituation(
+          {
             "contrat salarié . ancienneté": seniority,
             "contrat salarié . convention collective": "'IDCC2216'",
             "contrat salarié . convention collective . commerce gros et detail alimentation . mise à la retraite . catégorie professionnelle": `'${category}'`,
             "contrat salarié . mise à la retraite": "oui",
             "contrat salarié . travailleur handicapé": "non",
-          })
-          .evaluate("contrat salarié . préavis de retraite");
+          },
+          "contrat salarié . préavis de retraite en jours"
+        );
 
-        expect(result.nodeValue).toEqual(expectedNotice);
-        expect(result.unit?.numerators).toEqual(["mois"]);
-        expect(result.missingVariables).toEqual({});
+        expect(result.value).toEqual(expectedNotice);
+        expect(result.unit).toEqual("mois");
+        expect(missingArgs).toEqual([]);
       }
     );
   });

@@ -86,23 +86,23 @@ export type StoreOptions = {
 const createRootSlice = (
   set: StoreApi<MainStore>["setState"],
   get: StoreApi<MainStore>["getState"],
-  { publicodesRules, toolName }
+  { slug, toolName }
 ) => ({
   ...createContratTravailStore(set, get, { toolName }),
   ...createAncienneteStore(set, get, { toolName }),
   ...createSalairesStore(set, get, { toolName }),
-  ...createResultStore(set, get, { toolName, publicodesRules }),
+  ...createResultStore(set, get, { toolName }),
   ...createRootAgreementsStore(set, get, { toolName }),
-  ...createCommonAgreementStore(set, get, { toolName, publicodesRules }),
+  ...createCommonAgreementStore(set, get, { toolName, slug }),
   ...createCommonInformationsStore(set, get, { toolName }),
 });
 
-const createStore = (publicodesRules: string, toolName: ToolName) =>
+const createStore = (slug: string, toolName: ToolName) =>
   create(
     (
       set: StoreApi<MainStore>["setState"],
       get: StoreApi<MainStore>["getState"]
-    ) => createRootSlice(set, get, { publicodesRules, toolName })
+    ) => createRootSlice(set, get, { slug, toolName })
   );
 
 const { Provider, useStore } = createContext<StoreApi<MainStore>>();

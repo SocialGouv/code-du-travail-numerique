@@ -1,13 +1,10 @@
-import Engine from "publicodes";
-
-import modeles from "../../../../../../src/modeles/modeles-preavis-retraite.json";
 import {
   DepartRetraiteReferences,
   MiseRetraiteReferences,
 } from "../../../../../__test__/common/legal-references";
-import { getReferences } from "../../../../common";
+import { PreavisRetraitePublicodes } from "../../../../../publicodes";
 
-const engine = new Engine(modeles as any);
+const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 const CommonReference = {
   article: "Article 7.4.1",
@@ -20,45 +17,45 @@ const MiseRetraiteCcReferences = [...MiseRetraiteReferences, CommonReference];
 describe("Préavis de retraite de la CC 2596", () => {
   describe("Vérification des départs à la retraite et des références juridiques", () => {
     test.each`
-      category                                                      | seniority | expectedResult
-      ${"Salariés occupant un emploi technique de la coiffure"}     | ${2}      | ${0}
-      ${"Salariés occupant un emploi technique de la coiffure"}     | ${12}     | ${1}
-      ${"Salariés occupant un emploi technique de la coiffure"}     | ${24}     | ${2}
-      ${"Salariés occupant un emploi technique de la coiffure"}     | ${25}     | ${2}
-      ${"Salariés occupant un emploi non technique de la coiffure"} | ${2}      | ${0}
-      ${"Salariés occupant un emploi non technique de la coiffure"} | ${12}     | ${1}
-      ${"Salariés occupant un emploi non technique de la coiffure"} | ${24}     | ${2}
-      ${"Salariés occupant un emploi non technique de la coiffure"} | ${25}     | ${2}
-      ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${2}      | ${0}
-      ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${12}     | ${1}
-      ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${24}     | ${2}
-      ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${25}     | ${2}
-      ${"Agents de maîtrise"}                                       | ${2}      | ${0}
-      ${"Agents de maîtrise"}                                       | ${12}     | ${1}
-      ${"Agents de maîtrise"}                                       | ${24}     | ${2}
-      ${"Agents de maîtrise"}                                       | ${25}     | ${2}
-      ${"Cadres"}                                                   | ${2}      | ${0}
-      ${"Cadres"}                                                   | ${12}     | ${1}
-      ${"Cadres"}                                                   | ${24}     | ${2}
-      ${"Cadres"}                                                   | ${25}     | ${2}
+      category                                                      | seniority | expectedResult | expectedUnit
+      ${"Salariés occupant un emploi technique de la coiffure"}     | ${2}      | ${0}           | ${"semaines"}
+      ${"Salariés occupant un emploi technique de la coiffure"}     | ${12}     | ${1}           | ${"mois"}
+      ${"Salariés occupant un emploi technique de la coiffure"}     | ${24}     | ${2}           | ${"mois"}
+      ${"Salariés occupant un emploi technique de la coiffure"}     | ${25}     | ${2}           | ${"mois"}
+      ${"Salariés occupant un emploi non technique de la coiffure"} | ${2}      | ${0}           | ${"semaines"}
+      ${"Salariés occupant un emploi non technique de la coiffure"} | ${12}     | ${1}           | ${"mois"}
+      ${"Salariés occupant un emploi non technique de la coiffure"} | ${24}     | ${2}           | ${"mois"}
+      ${"Salariés occupant un emploi non technique de la coiffure"} | ${25}     | ${2}           | ${"mois"}
+      ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${2}      | ${0}           | ${"semaines"}
+      ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${12}     | ${1}           | ${"mois"}
+      ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${24}     | ${2}           | ${"mois"}
+      ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${25}     | ${2}           | ${"mois"}
+      ${"Agents de maîtrise"}                                       | ${2}      | ${0}           | ${"semaines"}
+      ${"Agents de maîtrise"}                                       | ${12}     | ${1}           | ${"mois"}
+      ${"Agents de maîtrise"}                                       | ${24}     | ${2}           | ${"mois"}
+      ${"Agents de maîtrise"}                                       | ${25}     | ${2}           | ${"mois"}
+      ${"Cadres"}                                                   | ${2}      | ${0}           | ${"semaines"}
+      ${"Cadres"}                                                   | ${12}     | ${1}           | ${"mois"}
+      ${"Cadres"}                                                   | ${24}     | ${2}           | ${"mois"}
+      ${"Cadres"}                                                   | ${25}     | ${2}           | ${"mois"}
     `(
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
-      ({ category, seniority, expectedResult }) => {
-        const situation = engine.setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "'IDCC2596'",
-          "contrat salarié . convention collective . coiffure . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . mise à la retraite": "non",
-          "contrat salarié . travailleur handicapé": "non",
-        });
-        const result = situation.evaluate(
-          "contrat salarié . préavis de retraite"
+      ({ category, seniority, expectedResult, expectedUnit }) => {
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . ancienneté": seniority,
+            "contrat salarié . convention collective": "'IDCC2596'",
+            "contrat salarié . convention collective . coiffure . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . mise à la retraite": "non",
+            "contrat salarié . travailleur handicapé": "non",
+          },
+          "contrat salarié . préavis de retraite en jours"
         );
-        const references = getReferences(situation);
+        const references = engine.getReferences();
 
-        expect(result.nodeValue).toEqual(expectedResult);
-        expect(result.unit?.numerators).toEqual(["mois"]);
-        expect(result.missingVariables).toEqual({});
+        expect(result.value).toEqual(expectedResult);
+        expect(result.unit).toEqual(expectedUnit);
+        expect(missingArgs).toEqual([]);
         expect(references).toHaveLength(DepartRetraiteReferences.length);
         expect(references).toEqual(
           expect.arrayContaining(DepartRetraiteReferences)
@@ -70,15 +67,15 @@ describe("Préavis de retraite de la CC 2596", () => {
   describe("Vérification des mises à la retraite et des références juridiques", () => {
     test.each`
       category                                                      | seniority | expectedResult | expectedPeriod
-      ${"Salariés occupant un emploi technique de la coiffure"}     | ${2}      | ${7}           | ${"jour"}
+      ${"Salariés occupant un emploi technique de la coiffure"}     | ${2}      | ${1}           | ${"semaine"}
       ${"Salariés occupant un emploi technique de la coiffure"}     | ${12}     | ${1}           | ${"mois"}
       ${"Salariés occupant un emploi technique de la coiffure"}     | ${24}     | ${2}           | ${"mois"}
       ${"Salariés occupant un emploi technique de la coiffure"}     | ${25}     | ${2}           | ${"mois"}
-      ${"Salariés occupant un emploi non technique de la coiffure"} | ${2}      | ${7}           | ${"jour"}
+      ${"Salariés occupant un emploi non technique de la coiffure"} | ${2}      | ${1}           | ${"semaine"}
       ${"Salariés occupant un emploi non technique de la coiffure"} | ${12}     | ${1}           | ${"mois"}
       ${"Salariés occupant un emploi non technique de la coiffure"} | ${24}     | ${2}           | ${"mois"}
       ${"Salariés occupant un emploi non technique de la coiffure"} | ${25}     | ${2}           | ${"mois"}
-      ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${2}      | ${7}           | ${"jour"}
+      ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${2}      | ${1}           | ${"semaine"}
       ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${12}     | ${1}           | ${"mois"}
       ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${24}     | ${2}           | ${"mois"}
       ${"Salariés occupant un emploi de l'esthétique cosmétique"}   | ${25}     | ${2}           | ${"mois"}
@@ -93,21 +90,21 @@ describe("Préavis de retraite de la CC 2596", () => {
     `(
       "Pour un $category possédant $seniority mois d'ancienneté, son préavis devrait être $expectedResult mois",
       ({ category, seniority, expectedResult, expectedPeriod }) => {
-        const situation = engine.setSituation({
-          "contrat salarié . ancienneté": seniority,
-          "contrat salarié . convention collective": "'IDCC2596'",
-          "contrat salarié . convention collective . coiffure . catégorie professionnelle": `'${category}'`,
-          "contrat salarié . mise à la retraite": "oui",
-          "contrat salarié . travailleur handicapé": "non",
-        });
-        const result = situation.evaluate(
-          "contrat salarié . préavis de retraite"
+        const { result, missingArgs } = engine.setSituation(
+          {
+            "contrat salarié . ancienneté": seniority,
+            "contrat salarié . convention collective": "'IDCC2596'",
+            "contrat salarié . convention collective . coiffure . catégorie professionnelle": `'${category}'`,
+            "contrat salarié . mise à la retraite": "oui",
+            "contrat salarié . travailleur handicapé": "non",
+          },
+          "contrat salarié . préavis de retraite en jours"
         );
-        const references = getReferences(situation);
+        const references = engine.getReferences();
 
-        expect(result.nodeValue).toEqual(expectedResult);
-        expect(result.unit?.numerators).toEqual([expectedPeriod]);
-        expect(result.missingVariables).toEqual({});
+        expect(result.value).toEqual(expectedResult);
+        expect(result.unit).toEqual(expectedPeriod);
+        expect(missingArgs).toEqual([]);
         expect(references).toHaveLength(MiseRetraiteCcReferences.length);
         expect(references).toEqual(
           expect.arrayContaining(MiseRetraiteCcReferences)

@@ -25,6 +25,7 @@ export type CommonAgreementStoreData = {
   error: CommonAgreementStoreError;
   hasBeenSubmit: boolean;
   isStepValid: boolean;
+  publicodes: any;
 };
 
 export type CommonAgreementStoreFn = {
