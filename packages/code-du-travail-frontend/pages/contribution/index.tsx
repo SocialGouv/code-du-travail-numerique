@@ -15,6 +15,7 @@ import { Layout } from "../../src/layout/Layout";
 import { handleError } from "../../src/lib/fetch-error";
 import styled from "styled-components";
 import { ListLink } from "../../src/search/SearchResults/Results";
+import {SOURCES} from "@socialgouv/cdtn-sources";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -36,7 +37,7 @@ function Page({ contribs }) {
     [contribs, setDocuments, setSelectedTheme]
   );
   return (
-    <Layout>
+    <Layout currentPage={SOURCES.CONTRIBUTIONS}>
       <Metas
         title="Articles personnalisés"
         description="Obtenez une réponses personnalisée selon votre convention collective"

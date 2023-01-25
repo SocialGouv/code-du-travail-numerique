@@ -74,13 +74,6 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
     },
     Object {
-      "description": "Le certificat de travail est un document obligatoire remis par l’employeur au salarié à la date de fin du contrat de travail.",
-      "reco": "search",
-      "slug": "certificat-de-travail",
-      "source": "modeles_de_courriers",
-      "title": "Certificat de travail",
-    },
-    Object {
       "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
       "reco": "search",
       "slug": "demission-dun-salarie",
@@ -89,12 +82,19 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
     },
     Object {
-      "action": "Calculer",
-      "description": "Calculez le nombre d'heures d'absence autorisée pour rechercher un emploi pendant un préavis",
+      "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
       "reco": "search",
-      "slug": "heures-recherche-emploi",
-      "source": "outils",
-      "title": "Heures d'absence pour rechercher un emploi",
+      "slug": "quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
+      "source": "contributions",
+      "title": "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
+    },
+    Object {
+      "description": "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis. À la fin de celui-ci, l'employeur remet les documents de fin de contrat.",
+      "reco": "search",
+      "slug": "demission-dune-assistante-maternelle",
+      "source": "fiches_service_public",
+      "title": "Démission d'une assistante maternelle",
+      "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
     },
   ],
 }

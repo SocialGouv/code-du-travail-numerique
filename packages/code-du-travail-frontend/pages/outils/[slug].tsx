@@ -72,7 +72,7 @@ function Outils({
   }, [title]);
   const router = useRouter();
   return (
-    <Layout>
+    <Layout currentPage="tools">
       <Metas title={metaTitle} description={metaDescription} />
       <StyledSection>
         <Container>

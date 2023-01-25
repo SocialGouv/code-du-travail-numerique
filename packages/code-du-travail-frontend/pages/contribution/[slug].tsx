@@ -8,6 +8,7 @@ import Contribution from "../../src/contributions/Contribution";
 import { Layout } from "../../src/layout/Layout";
 import { Breadcrumb } from "cdtn-types";
 import { handleError } from "../../src/lib/fetch-error";
+import {SOURCES} from "@socialgouv/cdtn-sources";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -65,7 +66,7 @@ function PageContribution(props: Props): JSX.Element {
   );
   return (
     <div>
-      <Layout>
+      <Layout currentPage={SOURCES.CONTRIBUTIONS}>
         <Metas title={metas.title} description={metas.description} />
         <Answer
           title={title}

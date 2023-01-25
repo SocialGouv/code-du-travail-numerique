@@ -15,6 +15,7 @@ import { handleError } from "../../src/lib/fetch-error";
 import { ListLink } from "../../src/search/SearchResults/Results";
 import styled from "styled-components";
 import Link from "next/link";
+import {SOURCES} from "@socialgouv/cdtn-sources";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -22,7 +23,7 @@ const {
 
 function Page({ ccs }) {
   return (
-    <Layout>
+    <Layout currentPage={SOURCES.CCN}>
       <Metas
         title="Ma convention collective"
         description="Retrouvez les questions/réponses fréquentes organisées par thème pour votre convention collective"

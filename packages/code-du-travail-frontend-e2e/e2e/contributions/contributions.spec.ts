@@ -1,20 +1,19 @@
 describe("Contributions", () => {
   it("je vois la liste de toutes les contributions par thèmes", () => {
-    cy.visit("/contribution");
-    cy.get("h1").should("have.text", "Ma convention collective");
+    cy.visit("/");
+    cy.get("#navigation").contains("Articles personnalisés").click();
+    cy.url().should("include", "/contribution");
+    cy.get("h1").should("have.text", "Articles personnalisés");
     cy.get("body").should(
       "contain",
-      "Retrouvez les questions/réponses fréquentes organisées par thème pour votre convention collective"
+      "Obtenez une réponses personnalisée selon votre convention collective"
     );
-    cy.get('h2[class^="contribution__"]').should("have.length", 126);
-    cy.get('ul *[class^="convention-collective__ListItem"]').should(
-      "have.length",
-      126
-    );
-    cy.get('ul *[class^="convention-collective__ListItem"]').first().click();
+    cy.get('h2[class^="contribution__"]').should("have.length", 16);
+    cy.get('li[class^="contribution__ListItem"]').should("have.length", 42);
+    cy.get('li[class^="contribution__ListItem"]').first().click();
     cy.url().should(
       "include",
-      "/contribution/quelle-peut-etre-la-duree-maximale-dun-cdd"
+      "/contribution/la-periode-dessai-peut-elle-etre-renouvelee"
     );
   });
   it("je vois une page contribution", () => {

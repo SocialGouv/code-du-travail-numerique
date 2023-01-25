@@ -16,11 +16,7 @@ export { Alert, AlertWithIcon } from "./Alert/index.js";
 export { ArrowLink } from "./ArrowLink/index.js";
 export { Badge } from "./Badge/index.js";
 export { BurgerNav } from "./BurgerNav/index.js";
-export {
-  BurgerNavButton,
-  BurgerNavCurrent,
-  BurgerNavLink,
-} from "./BurgerNav/NavItems.js";
+export { BurgerNavButton, BurgerNavItem } from "./BurgerNav/NavItems.js";
 export { Button } from "./Button/index.js";
 export { CodeSnippet } from "./CodeSnippet/index.js";
 export { Collapse } from "./Collapse/index.js";

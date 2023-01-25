@@ -11,12 +11,10 @@ describe("Conventions", () => {
     it("returns the list of all cc order by alpha and regionnal metalurgie last", async () => {
       const response = await request(app.callback()).get("/api/v1/conventions");
       expect(response.status).toBe(200);
-      expect(response.body.length).toEqual(126);
-      expect(response.body[0].title).toEqual(
-        "Aide, accompagnement, soins et services à domicile (BAD)"
-      );
+      expect(response.body.length).toEqual(3);
+      expect(response.body[0].title).toEqual("Banque");
       expect(response.body[response.body.length - 1].title).toEqual(
-        "Convention collective territoriale de la métallurgie du Jura"
+        "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)"
       );
     });
   });
