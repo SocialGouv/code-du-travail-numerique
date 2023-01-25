@@ -92,7 +92,7 @@ export default function Agreement44() {
           }
         />
       )}
-      {showVariablePay && showKnowingLastSalary && showLastMonthSalary && (
+      {showKnowingLastSalary && showLastMonthSalary && (
         <SalaireTempsPlein
           title="Salaire et primes perçus au cours du dernier mois"
           subTitle="Renseignez le montant du dernier salaire perçu (en incluant les primes et avantages en nature) dans le premier champ et le montant des primes dans le second champ."
