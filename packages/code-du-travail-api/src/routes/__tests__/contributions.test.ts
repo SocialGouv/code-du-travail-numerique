@@ -15,11 +15,11 @@ describe("Contributions", () => {
       expect(response.status).toBe(200);
       const contribs = response.body;
       const themes = Object.keys(contribs);
-      expect(themes.length).toEqual(15);
-      expect(themes[0]).toEqual("Embauche et contrat de travail");
-      expect(contribs[themes[0]].length).toEqual(15);
+      expect(themes.length).toEqual(2);
+      expect(themes[0]).toEqual("Congés");
+      expect(contribs[themes[0]].length).toEqual(1);
       expect(contribs[themes[0]][0].title).toEqual(
-        "La période d’essai peut-elle être renouvelée ?"
+        "Les congés pour événements familiaux"
       );
     });
   });
