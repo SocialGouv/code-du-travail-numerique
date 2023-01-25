@@ -8,7 +8,7 @@ describe("Contributions", () => {
       "contain",
       "Obtenez une réponses personnalisée selon votre convention collective"
     );
-    cy.get('h2[class^="contribution__"]').should("have.length", 16);
+    cy.get('h2[class^="contribution__"]').should("have.length", 6);
     cy.get('li[class^="contribution__ListItem"]').should("have.length", 42);
     cy.get('li[class^="contribution__ListItem"]').first().click();
     cy.url().should(

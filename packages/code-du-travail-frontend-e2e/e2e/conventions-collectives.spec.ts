@@ -1,13 +1,13 @@
 describe("Conventions collectives", () => {
   it("je vois la liste de toutes les cc", () => {
     cy.visit("/");
-    cy.get("#navigation").contains("Conventions Collectives").click();
+    cy.get("#navigation").contains("Votre convention collective").click();
     cy.url().should("include", "/convention-collective");
 
     cy.get("h1").should("have.text", "Votre convention collective");
     cy.get("body").should(
       "contain",
-      "Retrouvez les questions/réponses fréquentes organisées par thème pour votre convention collective"
+      "Retrouvez les questions/réponses fréquentes organisées par thème"
     );
     cy.get('ul *[class^="convention-collective__ListItem"]').should(
       "have.length",
