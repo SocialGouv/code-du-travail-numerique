@@ -36,7 +36,7 @@ describe("Stats", () => {
     expect(response.status).toBe(200);
     expect(response.body).toMatchInlineSnapshot(`
       Object {
-        "nbDocuments": 25,
+        "nbDocuments": 27,
         "nbPageViews": 10,
         "nbSearches": 4,
         "nbVisits": 20,
