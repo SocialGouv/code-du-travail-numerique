@@ -7,14 +7,14 @@ exports[`<Term /> should render 1`] = `
   padding: 0 2rem;
 }
 
-.c25 {
+.c29 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
   max-width: 74rem;
 }
 
-.c38 {
+.c42 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -22,13 +22,13 @@ exports[`<Term /> should render 1`] = `
   max-width: 74rem;
 }
 
-.c24 {
+.c28 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c29 {
+.c33 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -37,7 +37,7 @@ exports[`<Term /> should render 1`] = `
   background-color: #fff;
 }
 
-.c29:before {
+.c33:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -51,15 +51,15 @@ exports[`<Term /> should render 1`] = `
   content: "";
 }
 
-.c29 > *:first-child {
+.c33 > *:first-child {
   margin-top: 0;
 }
 
-.c29 > *:last-child {
+.c33 > *:last-child {
   margin-bottom: 0;
 }
 
-.c28 {
+.c32 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -72,7 +72,7 @@ exports[`<Term /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c46 {
+.c50 {
   position: relative;
   display: block;
   margin: 0 0 2rem 0;
@@ -145,7 +145,7 @@ exports[`<Term /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c50 {
+.c20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -190,11 +190,11 @@ exports[`<Term /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c50:focus {
+.c20:focus {
   color: #f66663;
 }
 
-.c40 {
+.c44 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -232,14 +232,14 @@ exports[`<Term /> should render 1`] = `
   will-change: transform;
 }
 
-.c40:link,
-.c40:visited {
+.c44:link,
+.c44:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c40:not([disabled]):hover {
+.c44:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -248,7 +248,7 @@ exports[`<Term /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c40[disabled] {
+.c44[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -256,7 +256,7 @@ exports[`<Term /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c19 {
+.c23 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -294,14 +294,14 @@ exports[`<Term /> should render 1`] = `
   will-change: transform;
 }
 
-.c19:link,
-.c19:visited {
+.c23:link,
+.c23:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c19:not([disabled]):hover {
+.c23:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -310,7 +310,7 @@ exports[`<Term /> should render 1`] = `
   border-color: transparent;
 }
 
-.c19[disabled] {
+.c23[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -331,30 +331,48 @@ exports[`<Term /> should render 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
-.c20 {
+.c24 {
   height: auto;
   padding: 0;
 }
 
-.c22 {
+.c26 {
   width: 5.4rem;
   height: 5.4rem;
   color: #7994d4;
 }
 
-.c47 {
+.c21 {
+  position: relative;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 1.6rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  border: none;
+}
+
+.c51 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c30 {
+.c34 {
   position: relative;
   overflow: hidden;
 }
 
-.c30:before,
-.c30:after {
+.c34:before,
+.c34:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -369,19 +387,19 @@ exports[`<Term /> should render 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c30:before {
+.c34:before {
   left: -2rem;
 }
 
-.c30:after {
+.c34:after {
   right: -2rem;
 }
 
-.c31 {
+.c35 {
   overflow-x: auto;
 }
 
-.c32 {
+.c36 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
@@ -390,50 +408,50 @@ exports[`<Term /> should render 1`] = `
   border-spacing: 0;
 }
 
-.c32 caption {
+.c36 caption {
   padding: 1rem 0;
   font-style: italic;
   text-align: center;
 }
 
-.c32 td,
-.c32 th {
+.c36 td,
+.c36 th {
   padding: 1rem 1.6rem;
   border: 1px solid #bbcadf;
 }
 
-.c32 th {
+.c36 th {
   color: #2f3b6c;
   font-weight: 600;
   background: #e4e8ef;
 }
 
-.c32 thead,
-.c32 tfoot {
+.c36 thead,
+.c36 tfoot {
   padding: 1rem 1.6rem;
   vertical-align: bottom;
   background: #f2f5fa;
 }
 
-.c32 tfoot {
+.c36 tfoot {
   vertical-align: top;
 }
 
-.c26 {
+.c30 {
   margin-top: 0;
   margin-bottom: 4rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c36 {
+.c40 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c27 {
+.c31 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -444,7 +462,7 @@ exports[`<Term /> should render 1`] = `
   padding-top: 1.6rem;
 }
 
-.c37 {
+.c41 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -456,13 +474,13 @@ exports[`<Term /> should render 1`] = `
   text-align: center;
 }
 
-.c33 {
+.c37 {
   width: 100%;
   padding-top: 4rem;
   overflow-x: hidden;
 }
 
-.c34 {
+.c38 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -470,7 +488,7 @@ exports[`<Term /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c34:before {
+.c38:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -482,27 +500,27 @@ exports[`<Term /> should render 1`] = `
   content: "";
 }
 
-.c35 {
+.c39 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c39 {
+.c43 {
   margin-bottom: 2rem;
 }
 
-.c41 {
+.c45 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c42 {
+.c46 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c43 {
+.c47 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -513,15 +531,15 @@ exports[`<Term /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c44 + .c44 {
+.c48 + .c48 {
   padding-left: 1.6rem;
 }
 
-.c45 {
+.c49 {
   font-size: 1.6rem;
 }
 
-.c49 {
+.c53 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -530,11 +548,11 @@ exports[`<Term /> should render 1`] = `
   display: inline-block;
 }
 
-.c51 {
+.c54 {
   padding: 0.4rem 0;
 }
 
-.c52 {
+.c55 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -556,11 +574,11 @@ exports[`<Term /> should render 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c53 {
+.c56 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c54 {
+.c57 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -642,33 +660,11 @@ exports[`<Term /> should render 1`] = `
   color: #7994d4;
 }
 
-.c21 {
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c2 {
   position: absolute;
   top: 0;
   z-index: 3;
   width: 100%;
-  height: 13.5rem;
   background-color: #fff;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
 }
@@ -676,6 +672,23 @@ exports[`<Term /> should render 1`] = `
 .c3 {
   display: none;
   text-align: right;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c22 {
+  padding: 0 0 0 30px;
+  background: url("/static/assets/img/user-settings-line.svg") 0.5rem center no-repeat;
+  display: block !important;
 }
 
 .c5 {
@@ -691,6 +704,9 @@ exports[`<Term /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
 }
@@ -733,22 +749,8 @@ exports[`<Term /> should render 1`] = `
   color: #f66663;
 }
 
-.c17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+.c19 {
+  display: none;
 }
 
 .c18 {
@@ -765,13 +767,13 @@ exports[`<Term /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 30rem;
+  width: 38rem;
   margin-left: 1.6rem;
 }
 
 .c0 {
   position: relative;
-  padding-top: calc(13.5rem);
+  padding-top: calc(20rem);
 }
 
 .c1 {
@@ -785,7 +787,7 @@ exports[`<Term /> should render 1`] = `
   background: linear-gradient( #f2f5fa 40rem, #fff );
 }
 
-.c23 {
+.c27 {
   position: relative;
   margin-top: 6rem;
 }
@@ -804,58 +806,58 @@ exports[`<Term /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c25 {
+  .c29 {
     padding: 0 1rem;
   }
 }
 
 @media print {
-  .c25 {
+  .c29 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c38 {
+  .c42 {
     padding: 0;
   }
 }
 
 @media print {
-  .c38 {
+  .c42 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c24 {
+  .c28 {
     padding: 2.4rem 0;
   }
 }
 
 @media print {
-  .c29:before {
+  .c33:before {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c33 {
     padding: 1.6rem 1rem;
   }
 }
 
 @media print {
-  .c29 {
+  .c33 {
     padding: 0 5pt;
     border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c46 {
+  .c50 {
     font-size: 1.6rem;
   }
 }
@@ -873,49 +875,49 @@ exports[`<Term /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c20 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c50 {
+  .c20 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c40 {
+  .c44 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c40 {
+  .c44 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c40 {
+  .c44 {
     padding: 0 3rem;
   }
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c23 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c19 {
+  .c23 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c23 {
     padding: 0 3rem;
   }
 }
@@ -925,82 +927,91 @@ exports[`<Term /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c22 {
+  .c26 {
     width: 4.2rem;
     height: 4.2rem;
   }
 }
 
 @media (max-width:980px) {
-
+  .c21 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 5.4rem;
+    padding: 0;
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width:600px) {
-  .c30 {
+  .c34 {
     overflow-x: hidden;
   }
 }
 
 @media (max-width:600px) {
-  .c30:before,
-  .c30:after {
+  .c34:before,
+  .c34:after {
     display: block;
   }
 }
 
 @media (max-width:600px) {
-  .c31 {
+  .c35 {
     overflow-x: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c30 {
     margin-bottom: 3.2rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c36 {
+  .c40 {
     margin-bottom: 1rem;
     margin-left: auto;
   }
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c31 {
     font-size: 2.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c37 {
+  .c41 {
     font-size: 2.2rem;
   }
 }
 
 @media print {
-  .c34 {
+  .c38 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c35 {
+  .c39 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c42 {
+  .c46 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c43 {
+  .c47 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1008,26 +1019,26 @@ exports[`<Term /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c44 + .c44 {
+  .c48 + .c48 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c48 {
+  .c52 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c45 {
+  .c49 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c54 {
+  .c57 {
     display: none;
   }
 }
@@ -1046,6 +1057,23 @@ exports[`<Term /> should render 1`] = `
     height: 5.4rem;
     padding: 1rem 5.5rem 1rem 1.6rem;
   }
+}
+
+@media (min-width:980px) {
+  .c25:before {
+    display: block;
+    position: absolute;
+    bottom: 5.5rem;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #bbcadf;
+    content: "";
+  }
+}
+
+@media (max-width:980px) {
+
 }
 
 @media (max-width:980px) {
@@ -1077,6 +1105,12 @@ exports[`<Term /> should render 1`] = `
 @media print {
   .c3 {
     display: block;
+  }
+}
+
+@media (max-width:980px) {
+  .c22 {
+    display: none !important;
   }
 }
 
@@ -1115,8 +1149,14 @@ exports[`<Term /> should render 1`] = `
   }
 }
 
+@media (min-width:980px) {
+  .c19 {
+    display: block;
+  }
+}
+
 @media print {
-  .c17 {
+  .c19 {
     display: none;
   }
 }
@@ -1141,6 +1181,7 @@ exports[`<Term /> should render 1`] = `
 @media (max-width:980px) {
   .c9 {
     display: none;
+    width: 80%;
   }
 }
 
@@ -1169,7 +1210,7 @@ exports[`<Term /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c27 {
     margin-top: 3.2rem;
   }
 }
@@ -1315,62 +1356,71 @@ exports[`<Term /> should render 1`] = `
               />
             </svg>
           </a>
+        </div>
+        <div
+          class="c19"
+        >
           <button
-            aria-label="menu principal"
-            class="c19 c20 c21"
+            class="c20 c21 c22"
           >
-            <svg
-              aria-hidden="true"
-              class="c22"
-              fill="none"
-              viewBox="0 0 32 32"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-            </svg>
+            Accessibilité
           </button>
         </div>
+        <button
+          aria-label="menu principal"
+          class="c23 c24 c25"
+        >
+          <svg
+            aria-hidden="true"
+            class="c26"
+            fill="none"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
       </div>
     </header>
     <main
-      class="c23"
+      class="c27"
       id="content"
       tabindex="-1"
     >
       <div
-        class="c24"
+        class="c28"
       >
         <div
-          class="c25"
+          class="c29"
         >
           <header
-            class="c26"
+            class="c30"
           >
             <h1
-              class="c27"
+              class="c31"
             >
               <span
-                class="c28"
+                class="c32"
               />
               Accord d'entreprise
             </h1>
           </header>
           <div
-            class="c29"
+            class="c33"
           >
             <div
-              class="c30"
+              class="c34"
             >
               <div
-                class="c31"
+                class="c35"
               >
                 <table
-                  class="c32"
+                  class="c36"
                 >
                   <tbody>
                     <tr>
@@ -1403,45 +1453,45 @@ exports[`<Term /> should render 1`] = `
       </div>
     </main>
     <div
-      class="c33"
+      class="c37"
     >
       <footer
-        class="c34"
+        class="c38"
       >
         <div
-          class="c24 c35"
+          class="c28 c39"
         >
           <div
             class="c4"
           >
             <div
               aria-level="2"
-              class="c36"
+              class="c40"
               role="heading"
             >
               <p
-                class="c37"
+                class="c41"
               >
                 <span
-                  class="c28"
+                  class="c32"
                 />
                 Besoin de plus d’informations ?
               </p>
             </div>
             <div
-              class="c38 c39"
+              class="c42 c43"
             >
               <p>
                 Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
               </p>
             </div>
             <button
-              class="c40"
+              class="c44"
             >
               Contacter nos services en région
               <svg
                 aria-hidden="true"
-                class="c41"
+                class="c45"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1455,28 +1505,28 @@ exports[`<Term /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c24 c42"
+          class="c28 c46"
         >
           <div
-            class="c4 c43"
+            class="c4 c47"
           >
             <div
-              class="c44 "
+              class="c48 "
             >
               <strong
                 aria-level="2"
-                class="c45 c46"
+                class="c49 c50"
                 data-testid="heading"
                 role="heading"
               >
                 Code du travail numérique
               </strong>
               <ul
-                class="c47 c48"
+                class="c51 c52"
               >
                 <li>
                   <a
-                    class="c49"
+                    class="c53"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
@@ -1484,7 +1534,7 @@ exports[`<Term /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c49"
+                    class="c53"
                     href="/glossaire"
                   >
                     Glossaire
@@ -1492,7 +1542,7 @@ exports[`<Term /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c49"
+                    class="c53"
                     href="/a-propos"
                   >
                     À propos
@@ -1500,7 +1550,7 @@ exports[`<Term /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c49"
+                    class="c53"
                     href="/mentions-legales"
                   >
                     Mentions légales
@@ -1508,7 +1558,7 @@ exports[`<Term /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c49"
+                    class="c53"
                     href="/accessibilite"
                   >
                     Accessibilité : partiellement conforme
@@ -1516,7 +1566,7 @@ exports[`<Term /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c49"
+                    class="c53"
                     href="/politique-confidentialite"
                   >
                     Politique de confidentialité
@@ -1524,7 +1574,7 @@ exports[`<Term /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c49"
+                    class="c53"
                     href="/stats"
                   >
                     Statistiques d’utilisation
@@ -1532,7 +1582,7 @@ exports[`<Term /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c49"
+                    class="c53"
                     href="/integration"
                   >
                     Intégrer les outils du Code du travail numérique
@@ -1541,22 +1591,22 @@ exports[`<Term /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c44 "
+              class="c48 "
             >
               <strong
                 aria-level="2"
-                class="c45 c46"
+                class="c49 c50"
                 data-testid="heading"
                 role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="c47 c48"
+                class="c51 c52"
               >
                 <li>
                   <button
-                    class="c50 c51"
+                    class="c20 c54"
                   >
                     Contact
                   </button>
@@ -1564,7 +1614,7 @@ exports[`<Term /> should render 1`] = `
                 <li>
                   <a
                     aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                    class="c49"
+                    class="c53"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1575,7 +1625,7 @@ exports[`<Term /> should render 1`] = `
                 <li>
                   <a
                     aria-label="Journal des modifications (Nouvelle fenêtre)"
-                    class="c49"
+                    class="c53"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1586,23 +1636,23 @@ exports[`<Term /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c44 "
+              class="c48 "
             >
               <strong
                 aria-level="2"
-                class="c45 c46"
+                class="c49 c50"
                 data-testid="heading"
                 role="heading"
               >
                 En collaboration avec
               </strong>
               <ul
-                class="c47 c48"
+                class="c51 c52"
               >
                 <li>
                   <a
                     aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                    class="c49"
+                    class="c53"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1613,7 +1663,7 @@ exports[`<Term /> should render 1`] = `
                 <li>
                   <a
                     aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                    class="c49"
+                    class="c53"
                     href="https://fabrique.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1624,7 +1674,7 @@ exports[`<Term /> should render 1`] = `
                 <li>
                   <a
                     aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                    class="c49"
+                    class="c53"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -1637,12 +1687,12 @@ exports[`<Term /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="c52"
+          class="c55"
         >
           <li>
             <a
               aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="c49 c53"
+              class="c53 c56"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1651,7 +1701,7 @@ exports[`<Term /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c54"
+              class="c57"
             >
               |
             </span>
@@ -1659,7 +1709,7 @@ exports[`<Term /> should render 1`] = `
           <li>
             <a
               aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="c49 c53"
+              class="c53 c56"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1668,7 +1718,7 @@ exports[`<Term /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c54"
+              class="c57"
             >
               |
             </span>
@@ -1676,7 +1726,7 @@ exports[`<Term /> should render 1`] = `
           <li>
             <a
               aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="c49 c53"
+              class="c53 c56"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1685,7 +1735,7 @@ exports[`<Term /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c54"
+              class="c57"
             >
               |
             </span>
@@ -1693,7 +1743,7 @@ exports[`<Term /> should render 1`] = `
           <li>
             <a
               aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="c49 c53"
+              class="c53 c56"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1702,7 +1752,7 @@ exports[`<Term /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c54"
+              class="c57"
             >
               |
             </span>
@@ -1710,7 +1760,7 @@ exports[`<Term /> should render 1`] = `
           <li>
             <a
               aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="c49 c53"
+              class="c53 c56"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -1719,7 +1769,7 @@ exports[`<Term /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c54"
+              class="c57"
             >
               |
             </span>
@@ -1727,7 +1777,7 @@ exports[`<Term /> should render 1`] = `
           <li>
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="c49 c53"
+              class="c53 c56"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"

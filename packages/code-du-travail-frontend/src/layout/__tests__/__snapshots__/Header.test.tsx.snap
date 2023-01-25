@@ -69,7 +69,56 @@ exports[`<Header /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c17 {
+.c18 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.125em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
+  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  color: #3e486e;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  vertical-align: baseline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  -webkit-transition: color 250ms linear, text-decoration 250ms linear;
+  transition: color 250ms linear, text-decoration 250ms linear;
+}
+
+.c18:focus {
+  color: #f66663;
+}
+
+.c21 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -107,14 +156,14 @@ exports[`<Header /> should render 1`] = `
   will-change: transform;
 }
 
-.c17:link,
-.c17:visited {
+.c21:link,
+.c21:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c17:not([disabled]):hover {
+.c21:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -123,7 +172,7 @@ exports[`<Header /> should render 1`] = `
   border-color: transparent;
 }
 
-.c17[disabled] {
+.c21[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -144,15 +193,33 @@ exports[`<Header /> should render 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
-.c18 {
+.c22 {
   height: auto;
   padding: 0;
 }
 
-.c20 {
+.c24 {
   width: 5.4rem;
   height: 5.4rem;
   color: #7994d4;
+}
+
+.c19 {
+  position: relative;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 1.6rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  border: none;
 }
 
 .c11 ul {
@@ -229,33 +296,11 @@ exports[`<Header /> should render 1`] = `
   color: #7994d4;
 }
 
-.c19 {
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c0 {
   position: absolute;
   top: 0;
   z-index: 3;
   width: 100%;
-  height: 13.5rem;
   background-color: #fff;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
 }
@@ -263,6 +308,23 @@ exports[`<Header /> should render 1`] = `
 .c1 {
   display: none;
   text-align: right;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c20 {
+  padding: 0 0 0 30px;
+  background: url("/static/assets/img/user-settings-line.svg") 0.5rem center no-repeat;
+  display: block !important;
 }
 
 .c3 {
@@ -278,6 +340,9 @@ exports[`<Header /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
 }
@@ -320,22 +385,8 @@ exports[`<Header /> should render 1`] = `
   color: #f66663;
 }
 
-.c15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+.c17 {
+  display: none;
 }
 
 .c16 {
@@ -352,7 +403,7 @@ exports[`<Header /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 30rem;
+  width: 38rem;
   margin-left: 1.6rem;
 }
 
@@ -382,27 +433,31 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-
-}
-
-@media print {
-
-}
-
-@media (max-width:600px) {
-  .c17 {
+  .c18 {
     font-size: 1.4rem;
   }
 }
 
 @media print {
-  .c17 {
+  .c18 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c21 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c21 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c21 {
     padding: 0 3rem;
   }
 }
@@ -412,14 +467,23 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c24 {
     width: 4.2rem;
     height: 4.2rem;
   }
 }
 
 @media (max-width:980px) {
-
+  .c19 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 5.4rem;
+    padding: 0;
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -436,6 +500,23 @@ exports[`<Header /> should render 1`] = `
     height: 5.4rem;
     padding: 1rem 5.5rem 1rem 1.6rem;
   }
+}
+
+@media (min-width:980px) {
+  .c23:before {
+    display: block;
+    position: absolute;
+    bottom: 5.5rem;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #bbcadf;
+    content: "";
+  }
+}
+
+@media (max-width:980px) {
+
 }
 
 @media (max-width:980px) {
@@ -467,6 +548,12 @@ exports[`<Header /> should render 1`] = `
 @media print {
   .c1 {
     display: block;
+  }
+}
+
+@media (max-width:980px) {
+  .c20 {
+    display: none !important;
   }
 }
 
@@ -505,8 +592,14 @@ exports[`<Header /> should render 1`] = `
   }
 }
 
+@media (min-width:980px) {
+  .c17 {
+    display: block;
+  }
+}
+
 @media print {
-  .c15 {
+  .c17 {
     display: none;
   }
 }
@@ -531,6 +624,7 @@ exports[`<Header /> should render 1`] = `
 @media (max-width:980px) {
   .c7 {
     display: none;
+    width: 80%;
   }
 }
 
@@ -675,26 +769,35 @@ exports[`<Header /> should render 1`] = `
             />
           </svg>
         </a>
+      </div>
+      <div
+        class="c17"
+      >
         <button
-          aria-label="menu principal"
-          class="c17 c18 c19"
+          class="c18 c19 c20"
         >
-          <svg
-            aria-hidden="true"
-            class="c20"
-            fill="none"
-            viewBox="0 0 32 32"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-          </svg>
+          Accessibilité
         </button>
       </div>
+      <button
+        aria-label="menu principal"
+        class="c21 c22 c23"
+      >
+        <svg
+          aria-hidden="true"
+          class="c24"
+          fill="none"
+          viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
     </div>
   </header>
 </div>
