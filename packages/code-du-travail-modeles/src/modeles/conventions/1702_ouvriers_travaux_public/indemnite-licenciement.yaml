@@ -38,7 +38,7 @@ contrat salarié . convention collective . ouvriers travaux public . indemnité 
   applicable si:
     toutes ces conditions:
       - indemnité de licenciement . ancienneté conventionnelle requise en année > 5
-      - indemnité de licenciement . ancienneté conventionnelle requise en année < 15
+      - indemnité de licenciement . ancienneté conventionnelle requise en année <= 15
   valeur: indemnité de licenciement . salaire de référence conventionnel * indemnité de licenciement . ancienneté conventionnelle en année * 0.15
   unité: €
   cdtn:
