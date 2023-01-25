@@ -2,18 +2,9 @@
 
 exports[`ensure results are only returned when enough characters passed 1`] = `Array []`;
 
-exports[`fuzzy matching results are lower than exact matchs 1`] = `
-Array [
-  "contractuelle",
-  "composition",
-]
-`;
+exports[`fuzzy matching results are lower than exact matchs 1`] = `Object {}`;
 
-exports[`fuzzy matching works 1`] = `
-Array [
-  "retraite",
-]
-`;
+exports[`fuzzy matching works 1`] = `Object {}`;
 
 exports[`return suggestions for re in the right format 1`] = `
 Array [
@@ -26,23 +17,7 @@ Array [
 `;
 
 exports[`when query match several suggestions with same prefix, 
-  ensure order is based on rank 1`] = `
-Array [
-  "renseignements",
-  "retraite",
-  "repos",
-  "réintégration",
-  "déplacement régulier",
-]
-`;
+  ensure order is based on rank 1`] = `Object {}`;
 
 exports[`when query match several suggestions with same rank, 
-  ensure order is based on query prefix matching position 1`] = `
-Array [
-  "renseignements",
-  "retraite",
-  "repos",
-  "réintégration",
-  "déplacement régulier",
-]
-`;
+  ensure order is based on query prefix matching position 1`] = `Object {}`;

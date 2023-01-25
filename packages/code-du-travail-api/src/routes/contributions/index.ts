@@ -13,6 +13,12 @@ const router = new Router({ prefix: API_BASE_URL });
 const getBreadcrumbInFirstPosition = (a, b) =>
   a.position < b.position ? a : b;
 
+const groupByThemes = (acc, item) => {
+  if (item.theme in acc) acc[item.theme].push(item);
+  else acc[item.theme] = [item];
+  return acc;
+};
+
 /**
  * Return a list of all the generic contributions
  *
@@ -37,11 +43,7 @@ router.get("/contributions", async (ctx) => {
       ).label;
       return contribWithTheme;
     })
-    .reduce(function (prev, item) {
-      if (item.theme in prev) prev[item.theme].push(item);
-      else prev[item.theme] = [item];
-      return prev;
-    }, {});
+    .reduce(groupByThemes, {});
 });
 
 export default router;
