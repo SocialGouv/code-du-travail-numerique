@@ -20,7 +20,6 @@ const initialState: Agreement44StoreData = {
     showVariablePay: false,
     showKnowingLastSalary: false,
     showLastMonthSalary: false,
-    sameDateNotificationDateSortie: false,
   },
   error: {},
   hasBeenSubmit: false,
@@ -34,12 +33,11 @@ export const createAgreement44StoreSalaires: StoreSlice<
   agreement44Data: { ...initialState },
   agreement44Function: {
     onInit: () => {
-      const categoryPro =
-        get().informationsData.input.publicodesInformations.find(
-          (item) =>
-            item.question.name ===
-            "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
-        )?.info;
+      const categoryPro = get().informationsData.input.publicodesInformations.find(
+        (item) =>
+          item.question.name ===
+          "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
+      )?.info;
       const ancienneteInput = get().ancienneteData.input;
       const periods = computeSalaryPeriods({
         dateEntree: generateFrenchDate(
@@ -52,29 +50,36 @@ export const createAgreement44StoreSalaires: StoreSlice<
         dateNotification: ancienneteInput.dateSortie!,
       });
       const lastMonthSalaryProcess: SalaryPeriods = { month: periods[0] };
+      const sameDateNotificationDateSortie =
+        ancienneteInput.dateNotification !== ancienneteInput.dateSortie;
+      const isOuvrierOrAgent =
+        categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
+        categoryPro === "'Agents de maîtrise et techniciens (Groupe IV)'";
       set(
         produce((state: Agreement44StoreSlice) => {
           state.agreement44Data.input.showVariablePay =
-            get().salairesData.input.hasSameSalary &&
-            (categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
-              categoryPro ===
-                "'Agents de maîtrise et techniciens (Groupe IV)'");
-          state.agreement44Data.input.lastMonthSalary = get().agreement44Data
-            .input.showLastMonthSalary
-            ? get().agreement44Data.input.lastMonthSalary
-            : lastMonthSalaryProcess;
-          state.agreement44Data.input.sameDateNotificationDateSortie =
-            ancienneteInput.dateNotification === ancienneteInput.dateSortie;
+            isOuvrierOrAgent &&
+            get().salairesData.input.hasSameSalary === "non";
+          if (sameDateNotificationDateSortie) {
+            state.agreement44Data.input.showLastMonthSalary = false;
+            state.agreement44Data.input.showKnowingLastSalary = false;
+            state.agreement44Data.input.lastMonthSalary = lastMonthSalaryProcess;
+            state.agreement44Data.input.knowingLastSalary = undefined;
+          } else {
+            state.agreement44Data.input.lastMonthSalary = get().agreement44Data
+              .input.showLastMonthSalary
+              ? get().agreement44Data.input.lastMonthSalary
+              : lastMonthSalaryProcess;
+          }
         })
       );
     },
     onChangeHasVariablePay: (value) => {
-      const categoryPro =
-        get().informationsData.input.publicodesInformations.find(
-          (item) =>
-            item.question.name ===
-            "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
-        )?.info;
+      const categoryPro = get().informationsData.input.publicodesInformations.find(
+        (item) =>
+          item.question.name ===
+          "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
+      )?.info;
       applyGenericValidation(get, set, [
         { paramName: "hasVariablePay", value: value },
         {
@@ -84,14 +89,33 @@ export const createAgreement44StoreSalaires: StoreSlice<
             (categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
               categoryPro ===
                 "'Agents de maîtrise et techniciens (Groupe IV)'") &&
-            !get().agreement44Data.input.sameDateNotificationDateSortie,
+            get().agreement44Data.input.showVariablePay,
         },
       ]);
     },
     onChangeKnowingLastSalary: (value) => {
+      const ancienneteInput = get().ancienneteData.input;
+      const periods = computeSalaryPeriods({
+        dateEntree: generateFrenchDate(
+          new Date(
+            parse(ancienneteInput.dateSortie!).setMonth(
+              parse(ancienneteInput.dateSortie!).getMonth() - 1
+            )
+          )
+        ),
+        dateNotification: ancienneteInput.dateSortie!,
+      });
+      const lastMonthSalaryProcess: SalaryPeriods = { month: periods[0] };
       applyGenericValidation(get, set, [
         { paramName: "showLastMonthSalary", value: value === "oui" },
         { paramName: "knowingLastSalary", value },
+        {
+          paramName: "lastMonthSalary",
+          value:
+            value === "non"
+              ? lastMonthSalaryProcess
+              : get().agreement44Data.input.lastMonthSalary,
+        },
       ]);
     },
     onChangeLastMonthSalary: (value) => {

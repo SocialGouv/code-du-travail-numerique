@@ -65,7 +65,7 @@ export default function Agreement44() {
           showRequired
         />
       )}
-      {showVariablePay && showKnowingLastSalary && (
+      {showKnowingLastSalary && (
         <RadioQuestion
           questions={[
             {
