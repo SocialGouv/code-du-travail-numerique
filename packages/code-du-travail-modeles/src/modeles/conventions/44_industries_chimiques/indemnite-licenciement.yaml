@@ -692,35 +692,6 @@ contrat salarié . convention collective . industries chimiques . indemnité de 
         - "A3 : Années au-delà de 15 ans": contrat salarié . convention collective . industries chimiques . indemnité de licenciement . au delà de quinze ans
         - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
-### Fallback
-contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel 19:
-  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
-  non applicable si:
-    une de ces conditions:
-      - résultat conventionnel 1
-      - résultat conventionnel 2
-      - résultat conventionnel 3
-      - résultat conventionnel 3 bis
-      - résultat conventionnel 4
-      - résultat conventionnel 5
-      - résultat conventionnel 6
-      - résultat conventionnel 7
-      - résultat conventionnel 8
-      - résultat conventionnel 9
-      - résultat conventionnel 9 bis
-      - résultat conventionnel 10
-      - résultat conventionnel 11
-      - résultat conventionnel 12
-      - résultat conventionnel 13
-      - résultat conventionnel 14
-      - résultat conventionnel 15
-      - résultat conventionnel 15 bis
-      - résultat conventionnel 16
-      - résultat conventionnel 17
-      - résultat conventionnel 18
-  valeur: 0
-  unité: €
-  arrondi: 2 décimales
 
 contrat salarié . convention collective . industries chimiques . indemnité de licenciement . catégorie professionnelle . licenciement économique . age . résultat conventionnel avec plafond 1:
   applicable si:
