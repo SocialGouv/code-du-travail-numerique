@@ -15,7 +15,7 @@ import { handleError } from "../../src/lib/fetch-error";
 import { ListLink } from "../../src/search/SearchResults/Results";
 import styled from "styled-components";
 import Link from "next/link";
-import {SOURCES} from "@socialgouv/cdtn-sources";
+import { SOURCES } from "@socialgouv/cdtn-sources";
 
 const {
   publicRuntimeConfig: { API_URL },
@@ -38,6 +38,16 @@ function Page({ ccs }) {
           >
             Ma convention collective
           </PageTitle>
+          <p>
+            La convention collective est un texte qui adapte les règles du Code
+            du travail sur des points précis (primes, congés, salaires minima,
+            préavis, prévoyance…) pour un secteur d’activité. L’activité
+            économique principale exercée par l’employeur détermine la
+            convention collective applicable. Elle est négociée et conclue d’une
+            part par les organisations syndicales représentatives des salariés
+            et d’autre part par les employeurs, éventuellement réunis en
+            organisations syndicales ou associations.
+          </p>
           <p>
             Vous ne connaissez pas votre convention collective ?{" "}
             <Link href={`/outils/convention-collective`} passHref>

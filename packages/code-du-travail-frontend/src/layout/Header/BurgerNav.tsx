@@ -15,7 +15,7 @@ export const SUB_MENU_HEIGHT = "5.5rem";
 type Props = {
   currentPage: string;
 };
-const HeaderBurgerNav = ({ currentPage }: Props): JSX.Element => {
+const HeaderBurgerNav = ({currentPage}: Props): JSX.Element => {
   return (
     <StyledBurgerNav>
       <Nav id="navigation" aria-label="Navigation du site">
@@ -44,14 +44,14 @@ const HeaderBurgerNav = ({ currentPage }: Props): JSX.Element => {
           <Li>
             <Link href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}`} passHref>
               <NavAnchor isCurrent={currentPage === SOURCES.CONTRIBUTIONS}>
-                Articles personnalisés
+                Vos fiches pratiques
               </NavAnchor>
             </Link>
           </Li>
           <Li>
             <Link href={`/${getRouteBySource(SOURCES.CCN)}`} passHref>
               <NavAnchor isCurrent={currentPage === SOURCES.CCN}>
-                Conventions Collectives
+                Votre convention collective
               </NavAnchor>
             </Link>
           </Li>
@@ -65,7 +65,7 @@ const HeaderBurgerNav = ({ currentPage }: Props): JSX.Element => {
     </StyledBurgerNav>
   );
 };
-const { breakpoints, spacings } = theme;
+const {breakpoints, spacings} = theme;
 
 const StyledBurgerNav = styled(RootBurgerNav)`
   :before {
@@ -76,7 +76,7 @@ const StyledBurgerNav = styled(RootBurgerNav)`
       left: 0;
       right: 0;
       height: 1px;
-      background-color: ${({ theme }) => theme.border};
+      background-color: ${({theme}) => theme.border};
       content: "";
     }
   }

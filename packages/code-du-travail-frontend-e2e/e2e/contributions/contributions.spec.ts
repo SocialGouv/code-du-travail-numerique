@@ -1,9 +1,9 @@
 describe("Contributions", () => {
   it("je vois la liste de toutes les contributions par thèmes", () => {
     cy.visit("/");
-    cy.get("#navigation").contains("Articles personnalisés").click();
+    cy.get("#navigation").contains("Vos fiches pratiques").click();
     cy.url().should("include", "/contribution");
-    cy.get("h1").should("have.text", "Articles personnalisés");
+    cy.get("h1").should("have.text", "Vos fiches pratiques");
     cy.get("body").should(
       "contain",
       "Obtenez une réponses personnalisée selon votre convention collective"
