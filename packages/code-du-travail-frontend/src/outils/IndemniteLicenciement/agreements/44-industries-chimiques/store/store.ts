@@ -15,12 +15,14 @@ import { parse } from "../../../../common/utils";
 import { SalaryPeriods } from "@socialgouv/modeles-social";
 import { generateFrenchDate } from "../../../../utils";
 
+const initialInputState = {
+  showVariablePay: false,
+  showKnowingLastSalary: false,
+  showLastMonthSalary: false,
+};
+
 const initialState: Agreement44StoreData = {
-  input: {
-    showVariablePay: false,
-    showKnowingLastSalary: false,
-    showLastMonthSalary: false,
-  },
+  input: initialInputState,
   error: {},
   hasBeenSubmit: false,
   isStepValid: false,
@@ -51,7 +53,7 @@ export const createAgreement44StoreSalaires: StoreSlice<
       });
       const lastMonthSalaryProcess: SalaryPeriods = { month: periods[0] };
       const sameDateNotificationDateSortie =
-        ancienneteInput.dateNotification !== ancienneteInput.dateSortie;
+        ancienneteInput.dateNotification === ancienneteInput.dateSortie;
       const isOuvrierOrAgent =
         categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
         categoryPro === "'Agents de maîtrise et techniciens (Groupe IV)'";
@@ -71,6 +73,12 @@ export const createAgreement44StoreSalaires: StoreSlice<
               ? get().agreement44Data.input.lastMonthSalary
               : lastMonthSalaryProcess;
           }
+          if (state.agreement44Data.input.hasVariablePay === "non") {
+            get().agreement44Function.onChangeHasVariablePay("non");
+          }
+          if (!isOuvrierOrAgent) {
+            state.agreement44Data.input = initialInputState;
+          }
         })
       );
     },
@@ -80,16 +88,21 @@ export const createAgreement44StoreSalaires: StoreSlice<
           item.question.name ===
           "contrat salarié - convention collective - industries chimiques - indemnité de licenciement - catégorie professionnelle"
       )?.info;
+      const ancienneteInput = get().ancienneteData.input;
+      const sameDateNotificationDateSortie =
+        ancienneteInput.dateNotification === ancienneteInput.dateSortie;
+      const isOuvrierOrAgent =
+        categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
+        categoryPro === "'Agents de maîtrise et techniciens (Groupe IV)'";
       applyGenericValidation(get, set, [
         { paramName: "hasVariablePay", value: value },
         {
           paramName: "showKnowingLastSalary",
           value:
             value === "non" &&
-            (categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
-              categoryPro ===
-                "'Agents de maîtrise et techniciens (Groupe IV)'") &&
-            get().agreement44Data.input.showVariablePay,
+            isOuvrierOrAgent &&
+            get().agreement44Data.input.showVariablePay &&
+            !sameDateNotificationDateSortie,
         },
       ]);
     },
