@@ -19,7 +19,7 @@ type Props = {
     absences?: AncienneteAbsenceStoreError[];
   };
   idcc?: SupportedCcIndemniteLicenciement;
-  messageMotifExample: string;
+  messageMotifExample?: string;
 };
 
 const AbsencePeriods = ({
@@ -104,7 +104,7 @@ const AbsencePeriods = ({
 
   return (
     <>
-      <p>{messageMotifExample}</p>
+      {messageMotifExample && <p>{messageMotifExample}</p>}
       <Question>
         Quels sont le motif et la durée de ces absences prolongées&nbsp;?
       </Question>
