@@ -14,7 +14,7 @@ import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
 import { informationToSituation } from "../utils";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
-import { CatPro3239 } from "@socialgouv/modeles-social/lib/modeles/conventions";
+import { CatPro3239 } from "@socialgouv/modeles-social";
 
 const initialState: CommonInformationsStoreData = {
   input: {
@@ -81,8 +81,8 @@ const createCommonInformationsStore: StoreSlice<
     onInformationsChange: (key, value) => {
       const publicodes = get().agreementData.publicodes!;
       const agreement = get().agreementData.input.agreement!;
-      const publicodesInformations =
-        get().informationsData.input.publicodesInformations;
+      const publicodesInformations = get().informationsData.input
+        .publicodesInformations;
       const questionAnswered = publicodesInformations.find(
         (question) => question.question.rule.nom === key
       );
@@ -123,8 +123,7 @@ const createCommonInformationsStore: StoreSlice<
       }
       set(
         produce((state: CommonInformationsStoreSlice) => {
-          state.informationsData.input.blockingNotification =
-            blockingNotification;
+          state.informationsData.input.blockingNotification = blockingNotification;
         })
       );
       const newQuestions = missingArgs
@@ -140,10 +139,9 @@ const createCommonInformationsStore: StoreSlice<
         }))[0];
       let newPublicodesInformationsForNextQuestions: PublicodesInformation[];
       if (missingArgs.length === 0) {
-        newPublicodesInformationsForNextQuestions =
-          newPublicodesInformations.filter(
-            (el) => el.order <= questionAnswered.order
-          );
+        newPublicodesInformationsForNextQuestions = newPublicodesInformations.filter(
+          (el) => el.order <= questionAnswered.order
+        );
       } else {
         newPublicodesInformationsForNextQuestions = removeDuplicateObject(
           [newQuestions, ...newPublicodesInformations].sort(
@@ -166,8 +164,8 @@ const createCommonInformationsStore: StoreSlice<
       );
     },
     onSetStepHidden: () => {
-      const publicodesInformations =
-        get().informationsData.input.publicodesInformations;
+      const publicodesInformations = get().informationsData.input
+        .publicodesInformations;
       const agreement = get().agreementData.input.agreement!;
       let isStepHidden = false;
       if (

@@ -1,4 +1,4 @@
-import { CatPro3239 } from "@socialgouv/modeles-social/lib/modeles/conventions";
+import { CatPro3239 } from "@socialgouv/modeles-social";
 import { getMessageMotifExample } from "../messageMotifExample";
 
 const informations = [

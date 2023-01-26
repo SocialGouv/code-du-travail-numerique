@@ -59,10 +59,10 @@ const StepAnciennete = () => {
     init();
   }, [init]);
 
-  // const messageMotifsExample = React.useMemo(
-  //   () => getMessageMotifExample(publicodesInformations),
-  //   [publicodesInformations]
-  // );
+  const messageMotifsExample = React.useMemo(
+    () => getMessageMotifExample(publicodesInformations),
+    [publicodesInformations]
+  );
 
   return (
     <>
@@ -144,7 +144,7 @@ const StepAnciennete = () => {
           absences={absencePeriods}
           error={errorAbsencePeriods}
           informationData={informationData}
-          messageMotifExample={"messageMotifsExample"}
+          messageMotifExample={messageMotifsExample}
         />
       )}
     </>
