@@ -148,7 +148,7 @@ describe("Indemnité licenciement - CC 3239", () => {
     ).toBeInTheDocument();
   });
 
-  test("vérifier qu'on a pas la question sur le temps partiel en tant que salarié du partiel employeur", async () => {
+  test("vérifier qu'on a pas la question sur le temps partiel en tant que salarié du particulier employeur", async () => {
     fireEvent.change(ui.information.agreement3239.proCategory.get(), {
       target: { value: "'Salarié du particulier employeur'" },
     });
