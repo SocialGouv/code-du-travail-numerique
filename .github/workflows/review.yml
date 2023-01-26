@@ -97,9 +97,7 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install dependencies
         run: |
-          cd packages/code-du-travail-frontend-e2e
-          yarn install --prefer-offline --frozen-lockfile --focus
-          cd ../..
+          yarn install --prefer-offline --frozen-lockfile
       - name: Download k8s manifests
         uses: actions/download-artifact@v3
         with:

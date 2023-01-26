@@ -9,11 +9,8 @@ describe("Conventions collectives", () => {
       "contain",
       "Retrouvez les questions/réponses fréquentes organisées par thème"
     );
-    cy.get('ul *[class^="convention-collective__ListItem"]').should(
-      "have.length",
-      126
-    );
-    cy.get('ul *[class^="convention-collective__ListItem"]').first().click();
+    cy.get("#content li").should("have.length", 126);
+    cy.get("#content li").first().click();
     cy.url().should(
       "include",
       "/convention-collective/2941-aide-accompagnement-soins-et-services-a-domicile-bad"

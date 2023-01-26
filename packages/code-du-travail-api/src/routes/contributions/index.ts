@@ -34,9 +34,8 @@ router.get("/contributions", async (ctx) => {
   ctx.body = response.body.hits.hits
     .map(({ _source }) => _source)
     .map((contrib) => {
-      const { breadcrumbs, ...contribWithTheme } = contrib;
-      contribWithTheme.theme = breadcrumbs[0].label;
-      return contribWithTheme;
+      contrib.theme = contrib.breadcrumbs[0].label;
+      return contrib;
     })
     .reduce(groupByThemes, {});
 });
