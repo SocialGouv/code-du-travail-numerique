@@ -59,6 +59,11 @@ const StepAnciennete = () => {
     init();
   }, [init]);
 
+  const messageMotifsExample = React.useMemo(
+    () => getMessageMotifExample(publicodesInformations),
+    [publicodesInformations]
+  );
+
   return (
     <>
       <SectionTitle hasSmallMarginTop>
@@ -139,7 +144,7 @@ const StepAnciennete = () => {
           absences={absencePeriods}
           error={errorAbsencePeriods}
           informationData={informationData}
-          messageMotifExample={getMessageMotifExample(publicodesInformations)}
+          messageMotifExample={messageMotifsExample}
         />
       )}
     </>
