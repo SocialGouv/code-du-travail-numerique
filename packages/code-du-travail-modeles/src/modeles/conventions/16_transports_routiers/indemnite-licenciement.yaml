@@ -208,6 +208,27 @@ contrat salarié . convention collective . transports routiers . indemnité de l
     formule:
       formula: $formule + (4 * Sref)
 
+contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . base . seulement cadre . formule plafond:
+  applicable si: seulement cadre = cadre
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 4 / 10 * Sref * A1
+      explanations:
+        - "A1 : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . base . cadre et employé . formule plafond:
+  applicable si: cadre et employé = cadre + avant cadre
+  valeur: oui
+  cdtn:
+    formule:
+      formula: (4 / 10 * Sref * A1) + (3 / 10 * Sref * A2)
+      explanations:
+        - "A1 : Ancienneté dans la catégorie Ingénieurs et cadres": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "A2 : Ancienneté dans les catégories Techniciens et agents de maîtrise et Employés": contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . ancienneté avant cadre
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . TAM:
   applicable si: catégorie professionnelle = 'TAM'
   valeur: oui
