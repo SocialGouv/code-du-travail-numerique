@@ -19,7 +19,6 @@ export class AgreementSalary1527 implements AgreementSalary {
     return sReference.computeReferenceSalary({
       salaires: salaryPeriods,
       hasCommission: ccInput.hasCommission === "oui",
-      salaryContract: Number(ccInput.contractSalary),
     });
   };
 }
