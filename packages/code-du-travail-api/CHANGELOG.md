@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.89.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.88.1...v4.89.0) (2023-01-18)
+
+### Bug Fixes
+
+- **deps:** update dependency @koa/cors to v4 ([#4725](https://github.com/SocialGouv/code-du-travail-numerique/issues/4725)) ([b408b86](https://github.com/SocialGouv/code-du-travail-numerique/commit/b408b8684de7b79e720cc3cd2bef7eb4324f7e8b))
+
 ## [4.88.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.88.0...v4.88.1) (2022-12-23)
 
 **Note:** Version bump only for package @cdt/api
