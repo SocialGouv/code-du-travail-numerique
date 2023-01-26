@@ -18,17 +18,10 @@ describe("CC 1527 store", () => {
     expect(store.getState().agreement1527Data.input.hasCommission).toBe(
       undefined
     );
-    expect(store.getState().agreement1527Data.input.contractSalary).toEqual(
-      undefined
-    );
   });
 
   it("should change data input", () => {
     store.getState().agreement1527Function.onChangeHasCommission("non");
     expect(store.getState().agreement1527Data.input.hasCommission).toBe("non");
-    store.getState().agreement1527Function.onChangeContractSalary("1000");
-    expect(store.getState().agreement1527Data.input.contractSalary).toEqual(
-      "1000"
-    );
   });
 });
