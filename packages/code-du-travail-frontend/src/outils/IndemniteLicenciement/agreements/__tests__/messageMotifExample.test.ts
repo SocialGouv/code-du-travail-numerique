@@ -1,18 +1,6 @@
 import { CatPro3239 } from "@socialgouv/modeles-social";
 import { getMessageMotifExample } from "../messageMotifExample";
 
-const informations = [
-  {
-    question: {
-      rule: {
-        nom:
-          "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle",
-      },
-    },
-    info: "some value",
-  },
-];
-
 describe("getMessageMotifExample", () => {
   test.each`
     categoryPro3239                                  | expected
@@ -22,8 +10,11 @@ describe("getMessageMotifExample", () => {
   `(
     "getMessageMotifExample returns $expected when categoryPro3239 is $categoryPro3239",
     ({ categoryPro3239, expected }) => {
-      informations[0].info = categoryPro3239;
-      expect(getMessageMotifExample(informations as any)).toBe(expected);
+      expect(
+        getMessageMotifExample({
+          "contrat salarié . convention collective . particuliers employeurs et emploi à domicile . indemnité de licenciement . catégorie professionnelle": categoryPro3239,
+        })
+      ).toBe(expected);
     }
   );
 
