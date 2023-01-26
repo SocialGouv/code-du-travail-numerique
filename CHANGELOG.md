@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.89.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.88.1...v4.89.0) (2023-01-18)
+
+### Bug Fixes
+
+- **404:** make all landing pages return status code 404 if page does not exist ([#4872](https://github.com/SocialGouv/code-du-travail-numerique/issues/4872)) ([187748b](https://github.com/SocialGouv/code-du-travail-numerique/commit/187748b12944c11463a1e2c4edd38e4e8d1de50f))
+- **accessibility issues:** make html valid ([#4853](https://github.com/SocialGouv/code-du-travail-numerique/issues/4853)) ([3472475](https://github.com/SocialGouv/code-du-travail-numerique/commit/3472475419de549a56406337f66ceb54209e57b6))
+- **deps:** update dependency @koa/cors to v4 ([#4725](https://github.com/SocialGouv/code-du-travail-numerique/issues/4725)) ([b408b86](https://github.com/SocialGouv/code-du-travail-numerique/commit/b408b8684de7b79e720cc3cd2bef7eb4324f7e8b))
+- **metrics:** remove at internet 🎉 ([#4849](https://github.com/SocialGouv/code-du-travail-numerique/issues/4849)) ([3a9547f](https://github.com/SocialGouv/code-du-travail-numerique/commit/3a9547fd73515ace3a1d5b4c55e7bdd181fef1bc))
+- **perf:** remove getInitialProps from \_app.tsx ([#4886](https://github.com/SocialGouv/code-du-travail-numerique/issues/4886)) ([0825ab2](https://github.com/SocialGouv/code-du-travail-numerique/commit/0825ab21bee656f65ec9420c894780161db60eb0))
+- **procedure-licenciement:** event qui ne dispose pas de `view_step_` ([#4827](https://github.com/SocialGouv/code-du-travail-numerique/issues/4827)) ([9e87ea9](https://github.com/SocialGouv/code-du-travail-numerique/commit/9e87ea93a128f2b2f16a96c8be8a93b3f9bf143c))
+- **procedure-licenciement:** rollback sur le nom du questionnaire aux niveaux des events ([#4829](https://github.com/SocialGouv/code-du-travail-numerique/issues/4829)) ([5cbf0f8](https://github.com/SocialGouv/code-du-travail-numerique/commit/5cbf0f8199b05c2975b59b98876a6be4a13dc351))
+- renommé l'event matomo pour recherche emploi ([#4868](https://github.com/SocialGouv/code-du-travail-numerique/issues/4868)) ([5207d7e](https://github.com/SocialGouv/code-du-travail-numerique/commit/5207d7e15555bd11ea69dc46415391dd10a8f457))
+- **renovate:** configuration ([#4861](https://github.com/SocialGouv/code-du-travail-numerique/issues/4861)) ([d49a82b](https://github.com/SocialGouv/code-du-travail-numerique/commit/d49a82be00eb202e72cd5973cc830458be8d0d8c))
+- **seo issues:** search header link should be nofollow so it is not crawled by search engine & tools should return 404 if does not exist ([#4846](https://github.com/SocialGouv/code-du-travail-numerique/issues/4846)) ([454c5fe](https://github.com/SocialGouv/code-du-travail-numerique/commit/454c5fe6b048cae6b04d87461423b8dd6f35126a))
+- **simulateurs:** changement au niveau des dates de préavis ([#4838](https://github.com/SocialGouv/code-du-travail-numerique/issues/4838)) ([fbd398d](https://github.com/SocialGouv/code-du-travail-numerique/commit/fbd398decdc355cea89ad940fca728528e84a50c))
+
+### Features
+
+- remove piwik + track service public link ([#4884](https://github.com/SocialGouv/code-du-travail-numerique/issues/4884)) ([93ff8f1](https://github.com/SocialGouv/code-du-travail-numerique/commit/93ff8f18ec15d70cdcb9770df3094d3889b37ebd))
+
 ## [4.88.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.88.0...v4.88.1) (2022-12-23)
 
 ### Bug Fixes
