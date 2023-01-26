@@ -1,5 +1,5 @@
 import React from "react";
-import { DebugInfo, SimulatorLayout } from "../Components";
+import { SimulatorLayout } from "../Components";
 import { Step } from "../Simulator";
 import {
   StepAgreement,
@@ -107,25 +107,6 @@ const IndemniteLicenciementSimulator = ({
     isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
   }));
 
-  const data = useIndemniteLicenciementStore((state) => {
-    let resultDataWithoutPublicodes = { ...state.resultData };
-    delete resultDataWithoutPublicodes.publicodes;
-    let informationsDataWithoutPublicodes = { ...state.informationsData };
-    delete informationsDataWithoutPublicodes.publicodes;
-    return {
-      contratTravailData: { ...state.contratTravailData },
-      agreementData: { ...state.agreementData },
-      informationsData: informationsDataWithoutPublicodes,
-      ancienneteData: { ...state.ancienneteData },
-      salairesData: { ...state.salairesData },
-      resultData: resultDataWithoutPublicodes,
-      agreement1516Data: { ...state.agreement1516Data },
-      agreement1527Data: { ...state.agreement1527Data },
-      agreement16Data: { ...state.agreement16Data },
-      agreement44Data: { ...state.agreement44Data },
-    };
-  });
-
   const getHiddenSteps = (): IndemniteLicenciementStepName[] => {
     const hiddenSteps: IndemniteLicenciementStepName[] = [];
     if (isStepInformationsHidden) {
@@ -143,7 +124,6 @@ const IndemniteLicenciementSimulator = ({
       displayTitle={displayTitle}
       icon={icon}
       duration="5 à 10 min"
-      debug={<DebugInfo data={data} />}
       steps={steps}
       validators={[
         {
