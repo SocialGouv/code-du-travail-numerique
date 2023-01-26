@@ -111,7 +111,10 @@ jobs:
         run: |
           CODECEPT_BASEURL=https://${{ steps.url.outputs.result }} yarn test:e2e
       - name: Archive generated screenshots
+        if: failure()
         uses: actions/upload-artifact@v3
         with:
           name: e2e-screenshots
-          path: packages/code-du-travail-frontend-e2e/cypress/screenshots
+          path: |
+            packages/code-du-travail-frontend-e2e/cypress/screenshots
+            packages/code-du-travail-frontend-e2e/codecept/output
