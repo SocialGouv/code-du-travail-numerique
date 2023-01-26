@@ -18,7 +18,10 @@ import { customSeniorityValidator } from "../../../agreements/seniority";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
 import { IndemniteLicenciementStepName } from "../../..";
-import { MatomoBaseEvent } from "../../../../../lib/matomo/types";
+import {
+  MatomoBaseEvent,
+  MatomoSearchAgreementCategory,
+} from "../../../../../lib/matomo/types";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
@@ -94,7 +97,7 @@ const createAncienneteStore: StoreSlice<
           MatomoBaseEvent.TRACK_EVENT,
           "outil",
           `view_step_${toolName}`,
-          IndemniteLicenciementStepName.Agreement,
+          IndemniteLicenciementStepName.Anciennete,
         ]);
       }
 
@@ -117,7 +120,23 @@ const createAncienneteStore: StoreSlice<
         MatomoBaseEvent.TRACK_EVENT,
         "outil",
         `click_previous_${toolName}`,
-        IndemniteLicenciementStepName.Agreement,
+        IndemniteLicenciementStepName.Anciennete,
+      ]);
+    },
+    onEnterpriseSearch: (value) => {
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoSearchAgreementCategory.ENTERPRISE_SEARCH,
+        toolName,
+        JSON.stringify(value),
+      ]);
+    },
+    onAgreementSearch: (value) => {
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoSearchAgreementCategory.AGREEMENT_SEARCH,
+        toolName,
+        JSON.stringify(value),
       ]);
     },
   },

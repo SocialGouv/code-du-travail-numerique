@@ -78,6 +78,7 @@ const IndemniteLicenciementSimulator = ({
   displayTitle,
 }: Omit<Props, "publicodesRules" | "slug">): JSX.Element => {
   const {
+    onNextStepIntroduction,
     onNextStepContratTravail,
     onPrevStepContratTravail,
     isStepContratTravailValid,
@@ -97,6 +98,7 @@ const IndemniteLicenciementSimulator = ({
     isStepSalaryHidden,
     onPrevStepResults,
   } = useIndemniteLicenciementStore((state) => ({
+    onNextStepIntroduction: state.introductionFunction.onNextStep,
     onNextStepContratTravail: state.contratTravailFunction.onNextStep,
     onPrevStepContratTravail: state.contratTravailFunction.onPrevStep,
     isStepContratTravailValid: state.contratTravailData.isStepValid,
@@ -155,6 +157,10 @@ const IndemniteLicenciementSimulator = ({
       debug={<DebugInfo data={data} />}
       steps={steps}
       onStepChange={[
+        {
+          stepName: IndemniteLicenciementStepName.Introduction,
+          onNextStep: onNextStepIntroduction,
+        },
         {
           stepName: IndemniteLicenciementStepName.ContratTravail,
           isStepValid: isStepContratTravailValid,

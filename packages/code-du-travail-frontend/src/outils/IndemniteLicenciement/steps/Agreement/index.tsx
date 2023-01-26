@@ -10,7 +10,9 @@ const AgreementStep = (): JSX.Element => {
     route,
     onAgreementChange,
     enterprise,
+    onEnterpriseSearch,
     agreement,
+    onAgreementSearch,
     onInitAgreementPage,
   } = useIndemniteLicenciementStore((state) => ({
     error: state.agreementData.error,
@@ -18,7 +20,9 @@ const AgreementStep = (): JSX.Element => {
     route: state.agreementData.input.route,
     onAgreementChange: state.agreementFunction.onAgreementChange,
     enterprise: state.agreementData.input.enterprise,
+    onEnterpriseSearch: state.agreementFunction.onEnterpriseSearch,
     agreement: state.agreementData.input.agreement,
+    onAgreementSearch: state.agreementFunction.onAgreementSearch,
     onInitAgreementPage: state.agreementFunction.onInitAgreementPage,
   }));
 
@@ -33,6 +37,8 @@ const AgreementStep = (): JSX.Element => {
       selectedAgreement={agreement}
       supportedAgreements={getSupportedCcIndemniteLicenciement()}
       simulator={PublicodesSimulator.INDEMNITE_LICENCIEMENT}
+      onAgreementSearch={onAgreementSearch}
+      onEnterpriseSearch={onEnterpriseSearch}
     />
   );
 };

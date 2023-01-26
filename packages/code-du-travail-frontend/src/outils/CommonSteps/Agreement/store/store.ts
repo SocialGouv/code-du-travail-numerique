@@ -15,7 +15,12 @@ import { Agreement } from "../../../../conventions/Search/api/type";
 import { loadPublicodes } from "../../../api";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
 import { IndemniteLicenciementStepName } from "../../../IndemniteLicenciement";
-import { MatomoBaseEvent } from "../../../../lib/matomo/types";
+import { indemniteLicenciementModeles } from "@socialgouv/modeles-social";
+import {
+  MatomoAgreementEvent,
+  MatomoBaseEvent,
+  MatomoSearchAgreementCategory,
+} from "../../../../lib/matomo/types";
 
 const initialState: Omit<CommonAgreementStoreData, "publicodes"> = {
   input: {},
@@ -87,7 +92,11 @@ const createCommonAgreementStore: StoreSlicePublicode<
       }
     },
     onNextStep: () => {
-      const { isValid, errorState } = validateStep(get().agreementData.input);
+      const input = get().agreementData.input;
+      const { isValid, errorState } = validateStep(input);
+      const { route, agreement } = input;
+      const agreementIndex = agreement?.num.toString() ?? "";
+      const isTreated = !!indemniteLicenciementModeles[agreementIndex];
       if (isValid) {
         matopush([
           MatomoBaseEvent.TRACK_EVENT,
@@ -95,6 +104,45 @@ const createCommonAgreementStore: StoreSlicePublicode<
           `view_step_${toolName}`,
           IndemniteLicenciementStepName.Agreement,
         ]);
+        let clickEvent;
+        let selectEvent;
+        switch (route) {
+          case Route.agreement:
+            clickEvent = "click_p1";
+            selectEvent = MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1;
+            break;
+          case Route.enterprise:
+            clickEvent = "click_p2";
+            selectEvent = MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2;
+            break;
+          case Route.none:
+            clickEvent = "click_p3";
+            break;
+        }
+        matopush([
+          MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+          clickEvent,
+          toolName,
+          agreement?.num ? `idcc${agreement?.num}` : "legal",
+        ]);
+        if (agreement?.num) {
+          matopush([
+            selectEvent,
+            toolName,
+            `idcc${agreement?.num}`,
+            `idcc${agreement?.num}`,
+          ]);
+        }
+        if (agreement?.num) {
+          matopush([
+            MatomoBaseEvent.TRACK_EVENT,
+            MatomoBaseEvent.OUTIL,
+            isTreated
+              ? MatomoAgreementEvent.CC_TREATED
+              : MatomoAgreementEvent.CC_UNTREATED,
+            `idcc${agreement?.num}`,
+          ]);
+        }
       }
       set(
         produce((state: CommonAgreementStoreSlice) => {
@@ -111,6 +159,22 @@ const createCommonAgreementStore: StoreSlicePublicode<
         "outil",
         `click_previous_${toolName}`,
         IndemniteLicenciementStepName.Agreement,
+      ]);
+    },
+    onAgreementSearch: (data) => {
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoSearchAgreementCategory.AGREEMENT_SEARCH,
+        toolName,
+        JSON.stringify(data),
+      ]);
+    },
+    onEnterpriseSearch: (data) => {
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoSearchAgreementCategory.ENTERPRISE_SEARCH,
+        toolName,
+        JSON.stringify(data),
       ]);
     },
   },

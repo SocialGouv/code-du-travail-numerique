@@ -28,6 +28,11 @@ export type CommonAgreementStoreData = {
   publicodes: any;
 };
 
+export type AgreementSearchValue = {
+  address: string;
+  query: string;
+};
+
 export type CommonAgreementStoreFn = {
   onRouteChange: (value: Route) => void;
   onInitAgreementPage: () => void;
@@ -37,6 +42,8 @@ export type CommonAgreementStoreFn = {
   ) => void;
   onNextStep: () => ValidationResponse;
   onPrevStep: () => void;
+  onEnterpriseSearch: (value: AgreementSearchValue) => void;
+  onAgreementSearch: (value: AgreementSearchValue) => void;
 };
 
 export type CommonAgreementStoreSlice = {

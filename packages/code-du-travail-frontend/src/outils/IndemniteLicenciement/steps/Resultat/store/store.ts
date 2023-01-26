@@ -37,7 +37,7 @@ import {
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { getInfoWarning } from "./service";
 import { IndemniteLicenciementStepName } from "../../..";
-import { MatomoBaseEvent } from "../../../../../lib";
+import { MatomoBaseEvent, MatomoSimulatorEvent } from "../../../../../lib";
 
 const initialState: ResultStoreData = {
   input: {
