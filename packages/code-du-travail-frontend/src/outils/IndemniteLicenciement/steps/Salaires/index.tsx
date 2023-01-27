@@ -9,6 +9,7 @@ import { icons } from "@socialgouv/cdtn-ui";
 import {
   generateSalaireTempsPleinQuestion,
   generateSameSalaryQuestion,
+  generateSmallText,
 } from "../../utils/question";
 
 const StepSalaires = () => {
@@ -106,7 +107,7 @@ const StepSalaires = () => {
           {hasSameSalary === "oui" && (
             <TextQuestion
               label="Quel a été le montant du salaire mensuel brut ?"
-              smallText="Prendre en compte les primes et avantages en nature."
+              smallText={generateSmallText(agreement)}
               inputType="number"
               value={salary}
               onChange={onChangeSalary}

@@ -19,7 +19,7 @@ const MOTIFS_3239: Motif[] = [
   {
     key: MotifKeys.convenancePro,
     label: "Congé pour convenance personnelle",
-    value: 0,
+    value: 1,
   },
 ];
 
