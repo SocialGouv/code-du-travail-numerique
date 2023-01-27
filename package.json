@@ -17,6 +17,7 @@
     "dev:frontend": "lerna run dev --parallel --scope={@cdt/frontend,@socialgouv/cdtn-ui,@socialgouv/modeles-social} --stream",
     "test:frontend": "lerna run test --scope={@socialgouv/cdtn-ui,@cdt/frontend} --stream",
     "dev:frontend:preprod-api": "AZURE_BASE_URL=https://cdtnadmindev.blob.core.windows.net AZURE_CONTAINER=cdtn-dev API_URL=https://api-code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/api/v1 yarn dev:frontend",
+    "dev:simulate-deployment": "yarn workspace @cdt/frontend build && API_URL=https://api-code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/api/v1 yarn workspace @cdt/frontend start",
     "k8s": "yarn --silent --cwd .k8s",
     "lint": "lerna run lint",
     "lint:fix": "lerna run lint -- --fix",

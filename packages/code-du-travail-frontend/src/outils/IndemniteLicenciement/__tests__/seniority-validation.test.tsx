@@ -62,7 +62,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
        - validation de l'erreur quand on a saisi une date de notification avant la date de d'entrée
        - validation de l'erreur quand on a saisi une date de sortie avant la date de notification
        - validation de l'erreur quand on a saisi une période (entrée -> notification) inférieure à 8 mois
-       - validation de l'erreur quand on a saisi une période (entrée -> notification) inférieure à 8 mois et que l'on change la date de sortie
+       - validation de l'erreur quand on a saisi une période (entrée -> notification) inférieure à 8 mois et que l'on change la date de fin de contrat
        - validation de la disparition de l'erreur quand on a change la période  (entrée -> notification) pour plus de 8 mois
        - validation de l'erreur quand on a pas répondu à présence de périodes d'absence
        - validation de l'erreur quand on a des périodes d'absence mais que l'on a pas saisi le motif de l'absence
@@ -95,7 +95,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
 
       expect(
         rendering.queryByText(
-          "La date de notification doit se situer après la date d’entrée"
+          "La date de notification doit se situer après la date de début de contrat"
         )
       ).toBeInTheDocument();
 
@@ -106,7 +106,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
 
       expect(
         rendering.queryByText(
-          "La date de notification doit se situer avant la date de sortie"
+          "La date de notification doit se situer avant la date de fin de contrat"
         )
       ).toBeInTheDocument();
 
@@ -152,7 +152,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       userAction.setInput(ui.seniority.absences.date(0).get(), "01/03/1999");
       expect(
         rendering.queryByText(
-          "La date de l'absence doit être comprise entre le 01/01/2022 et le 01/10/2022 (dates d'entrée et de sortie de l'entreprise)"
+          "La date de l'absence doit être comprise entre le 01/01/2022 et le 01/10/2022 (dates de début et de fin de contrat)"
         )
       ).toBeInTheDocument();
 
@@ -160,7 +160,7 @@ describe("Indemnité licenciement - Validation des erreurs sur l'étape ancienne
       userAction.setInput(ui.seniority.absences.date(0).get(), "01/02/2022");
       expect(
         rendering.queryByText(
-          "La date de l'absence doit être comprise entre le 01/01/2022 et le 01/10/2022 (dates d'entrée et de sortie de l'entreprise)"
+          "La date de l'absence doit être comprise entre le 01/01/2022 et le 01/10/2022 (dates de début et de fin de contrat)"
         )
       ).not.toBeInTheDocument();
 

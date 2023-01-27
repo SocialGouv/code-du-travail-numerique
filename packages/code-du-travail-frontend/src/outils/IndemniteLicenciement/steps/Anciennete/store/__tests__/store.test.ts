@@ -94,7 +94,7 @@ describe("Ancienneté store", () => {
       .ancienneteFunction.onValidateWithEligibility();
     expect(isValid).toBe(ValidationResponse.NotValid);
     expect(store.getState().ancienneteData.error.errorDateEntree).toBe(
-      "La date d'entrée est invalide"
+      "La date de début de contrat est invalide"
     );
   });
 
@@ -108,7 +108,7 @@ describe("Ancienneté store", () => {
     const hasMessageError = store
       .getState()
       .ancienneteData.error.errorDateSortie!.includes(
-        "La date de sortie doit se situer après le <strong>"
+        "La date de fin de contrat doit se situer après le <strong>"
       );
     expect(hasMessageError).toBe(true);
   });
@@ -132,7 +132,7 @@ describe("Ancienneté store", () => {
       .ancienneteFunction.onValidateWithEligibility();
     expect(isValid).toBe(ValidationResponse.NotValid);
     expect(store.getState().ancienneteData.error.errorDateNotification).toBe(
-      "La date de notification doit se situer avant la date de sortie"
+      "La date de notification doit se situer avant la date de fin de contrat"
     );
   });
 
@@ -144,7 +144,7 @@ describe("Ancienneté store", () => {
       .ancienneteFunction.onValidateWithEligibility();
     expect(isValid).toBe(ValidationResponse.NotValid);
     expect(store.getState().ancienneteData.error.errorDateNotification).toBe(
-      "La date de notification doit se situer après la date d’entrée"
+      "La date de notification doit se situer après la date de début de contrat"
     );
   });
 

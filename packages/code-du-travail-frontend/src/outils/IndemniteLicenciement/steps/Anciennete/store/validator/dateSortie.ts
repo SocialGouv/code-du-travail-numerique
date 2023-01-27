@@ -18,7 +18,7 @@ export const getDateSortieErrors = (
     state.dateSortie &&
     isAfter(dEntree, dSortie)
   ) {
-    errors.errorDateSortie = `La date de sortie doit se situer après le <strong>${format(
+    errors.errorDateSortie = `La date de fin de contrat doit se situer après le <strong>${format(
       dEntree,
       "dd MMMM yyyy",
       {
@@ -26,7 +26,7 @@ export const getDateSortieErrors = (
       }
     )}</strong>`;
   } else if (!isValidDate(state.dateSortie)) {
-    errors.errorDateSortie = "La date de sortie est invalide";
+    errors.errorDateSortie = "La date de fin de contrat est invalide";
   } else {
     errors.errorDateSortie = undefined;
   }

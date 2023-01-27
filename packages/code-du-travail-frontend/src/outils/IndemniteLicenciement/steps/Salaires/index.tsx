@@ -9,6 +9,7 @@ import { icons } from "@socialgouv/cdtn-ui";
 import {
   generateSalaireTempsPleinQuestion,
   generateSameSalaryQuestion,
+  generateSmallText,
 } from "../../utils/question";
 
 const StepSalaires = () => {
@@ -27,8 +28,9 @@ const StepSalaires = () => {
     salary,
     onChangeSalary,
     errorSalary,
-    licenciementInaptitude,
     arretTravail,
+    showHasTempsPartiel,
+    initShowHasTempsPartiel,
   } = useIndemniteLicenciementStore((state) => ({
     hasTempsPartiel: state.salairesData.input.hasTempsPartiel,
     onChangeHasTempsPartiel: state.salairesFunction.onChangeHasTempsPartiel,
@@ -44,37 +46,41 @@ const StepSalaires = () => {
     salary: state.salairesData.input.salary,
     onChangeSalary: state.salairesFunction.onChangeSalary,
     errorSalary: state.salairesData.error.errorSalary,
-    licenciementInaptitude:
-      state.contratTravailData.input.licenciementInaptitude,
     arretTravail: state.contratTravailData.input.arretTravail,
+    showHasTempsPartiel: state.salairesData.input.showHasTempsPartiel,
+    initShowHasTempsPartiel: state.salairesFunction.initShowHasTempsPartiel,
   }));
 
   React.useEffect(() => {
     initFieldSalaries();
+    initShowHasTempsPartiel();
   }, []);
 
   return (
     <>
-      <RadioQuestion
-        questions={[
-          {
-            label: "Oui",
-            value: "oui",
-            id: "hasTempsPartiel-oui",
-          },
-          {
-            label: "Non",
-            value: "non",
-            id: "hasTempsPartiel-non",
-          },
-        ]}
-        name="hasTempsPartiel"
-        label="Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail&nbsp;?"
-        selectedOption={hasTempsPartiel}
-        onChangeSelectedOption={onChangeHasTempsPartiel}
-        error={errorHasTempsPartiel}
-        showRequired
-      />
+      {showHasTempsPartiel && (
+        <RadioQuestion
+          questions={[
+            {
+              label: "Oui",
+              value: "oui",
+              id: "hasTempsPartiel-oui",
+            },
+            {
+              label: "Non",
+              value: "non",
+              id: "hasTempsPartiel-non",
+            },
+          ]}
+          name="hasTempsPartiel"
+          label="Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail&nbsp;?"
+          selectedOption={hasTempsPartiel}
+          onChangeSelectedOption={onChangeHasTempsPartiel}
+          error={errorHasTempsPartiel}
+          showRequired
+        />
+      )}
+
       {hasTempsPartiel === "oui" && <TempsPartiel />}
       {hasTempsPartiel === "non" && (
         <>
@@ -101,7 +107,7 @@ const StepSalaires = () => {
           {hasSameSalary === "oui" && (
             <TextQuestion
               label="Quel a été le montant du salaire mensuel brut ?"
-              smallText="Prendre en compte les primes et avantages en nature."
+              smallText={generateSmallText(agreement)}
               inputType="number"
               value={salary}
               onChange={onChangeSalary}
