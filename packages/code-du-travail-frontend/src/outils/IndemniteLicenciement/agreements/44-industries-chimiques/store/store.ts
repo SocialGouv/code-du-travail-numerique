@@ -57,21 +57,24 @@ export const createAgreement44StoreSalaires: StoreSlice<
       const isOuvrierOrAgent =
         categoryPro === "'Ouvriers et collaborateurs (Groupes I à III)'" ||
         categoryPro === "'Agents de maîtrise et techniciens (Groupe IV)'";
+      const showVariablePay =
+        isOuvrierOrAgent && get().salairesData.input.hasSameSalary === "non";
       set(
         produce((state: Agreement44StoreSlice) => {
-          state.agreement44Data.input.showVariablePay =
-            isOuvrierOrAgent &&
-            get().salairesData.input.hasSameSalary === "non";
+          state.agreement44Data.input.showVariablePay = showVariablePay;
+          state.agreement44Data.input.showKnowingLastSalary = !showVariablePay;
           if (sameDateNotificationDateSortie) {
             state.agreement44Data.input.showLastMonthSalary = false;
             state.agreement44Data.input.showKnowingLastSalary = false;
             state.agreement44Data.input.lastMonthSalary = lastMonthSalaryProcess;
             state.agreement44Data.input.knowingLastSalary = undefined;
           } else {
-            state.agreement44Data.input.lastMonthSalary = get().agreement44Data
-              .input.showLastMonthSalary
-              ? get().agreement44Data.input.lastMonthSalary
-              : lastMonthSalaryProcess;
+            state.agreement44Data.input.lastMonthSalary =
+              get().agreement44Data.input.showLastMonthSalary &&
+              lastMonthSalaryProcess.month ===
+                get().agreement44Data.input.lastMonthSalary?.month
+                ? get().agreement44Data.input.lastMonthSalary
+                : lastMonthSalaryProcess;
           }
           if (state.agreement44Data.input.hasVariablePay === "non") {
             get().agreement44Function.onChangeHasVariablePay("non");
