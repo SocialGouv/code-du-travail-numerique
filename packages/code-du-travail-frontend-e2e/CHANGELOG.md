@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.89.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.88.1...v4.89.0) (2023-01-18)
+
+### Bug Fixes
+
+- **404:** make all landing pages return status code 404 if page does not exist ([#4872](https://github.com/SocialGouv/code-du-travail-numerique/issues/4872)) ([187748b](https://github.com/SocialGouv/code-du-travail-numerique/commit/187748b12944c11463a1e2c4edd38e4e8d1de50f))
+- **seo issues:** search header link should be nofollow so it is not crawled by search engine & tools should return 404 if does not exist ([#4846](https://github.com/SocialGouv/code-du-travail-numerique/issues/4846)) ([454c5fe](https://github.com/SocialGouv/code-du-travail-numerique/commit/454c5fe6b048cae6b04d87461423b8dd6f35126a))
+
 ## [4.88.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.88.0...v4.88.1) (2022-12-23)
 
 **Note:** Version bump only for package @cdt/e2e
