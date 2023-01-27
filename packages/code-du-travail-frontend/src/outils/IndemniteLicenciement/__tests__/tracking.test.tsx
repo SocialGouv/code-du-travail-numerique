@@ -199,15 +199,15 @@ describe("Indemnité licenciement - Tracking", () => {
     );
     fireEvent.click(ui.next.get());
     expect(push).toHaveBeenCalledWith([
+      "trackEvent",
       "cc_search_type_of_users",
       "click_p1",
       "Indemnité de licenciement",
-      "idcc16",
     ]);
     expect(push).toHaveBeenCalledWith([
+      "trackEvent",
       "cc_select_p1",
       "Indemnité de licenciement",
-      "idcc16",
       "idcc16",
     ]);
     fireEvent.click(ui.previous.get());
@@ -221,25 +221,25 @@ describe("Indemnité licenciement - Tracking", () => {
     fireEvent.click(ui.agreement.ccChoice.commerce.get());
     fireEvent.click(ui.next.get());
     expect(push).toHaveBeenCalledWith([
+      "trackEvent",
       "cc_search_type_of_users",
       "click_p2",
       "Indemnité de licenciement",
-      "idcc2216",
     ]);
     expect(push).toHaveBeenCalledWith([
+      "trackEvent",
       "cc_select_p2",
       "Indemnité de licenciement",
-      "idcc2216",
       "idcc2216",
     ]);
     fireEvent.click(ui.previous.get());
     fireEvent.click(ui.agreement.noAgreement.get());
     fireEvent.click(ui.next.get());
     expect(push).toHaveBeenCalledWith([
+      "trackEvent",
       "cc_search_type_of_users",
       "click_p3",
       "Indemnité de licenciement",
-      "legal",
     ]);
   });
 

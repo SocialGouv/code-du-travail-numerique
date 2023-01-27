@@ -120,16 +120,16 @@ const createCommonAgreementStore: StoreSlicePublicode<
             break;
         }
         matopush([
+          MatomoBaseEvent.TRACK_EVENT,
           MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
           clickEvent,
           toolName,
-          agreement?.num ? `idcc${agreement?.num}` : "legal",
         ]);
         if (agreement?.num) {
           matopush([
+            MatomoBaseEvent.TRACK_EVENT,
             selectEvent,
             toolName,
-            `idcc${agreement?.num}`,
             `idcc${agreement?.num}`,
           ]);
         }
