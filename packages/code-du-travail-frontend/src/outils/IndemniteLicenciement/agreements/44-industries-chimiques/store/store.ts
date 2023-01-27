@@ -82,6 +82,12 @@ export const createAgreement44StoreSalaires: StoreSlice<
           if (!isOuvrierOrAgent) {
             state.agreement44Data.input = initialInputState;
           }
+          if (
+            get().agreement44Data.input.hasVariablePay === "non" &&
+            !sameDateNotificationDateSortie
+          ) {
+            state.agreement44Data.input.showKnowingLastSalary = true;
+          }
         })
       );
     },
