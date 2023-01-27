@@ -10,7 +10,7 @@ export const getDateEntreeErrors = (
   if (!state.dateEntree) {
     errors.errorDateEntree = "Veuillez saisir cette date";
   } else if (!isValidDate(state.dateEntree)) {
-    errors.errorDateEntree = "La date d'entrée est invalide";
+    errors.errorDateEntree = "La date de début de contrat est invalide";
   } else {
     errors.errorDateEntree = undefined;
   }

@@ -27,7 +27,6 @@ export const validateStep = (state: ContratTravailStoreInput) => {
         ? "La date doit être valide"
         : undefined,
   };
-  console.log("Errors:", errorState);
   return {
     isValid: deepEqualObject(errorState, {
       errorLicenciementInaptitude: undefined,
