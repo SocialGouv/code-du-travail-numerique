@@ -195,6 +195,9 @@ const Caption = styled.caption`
 
 const Th = styled.th`
   font-size: ${fonts.sizes.small};
+  &:first-child {
+    min-width: 100px;
+  }
 `;
 
 const StyledInlineWrapperError = styled.div`
