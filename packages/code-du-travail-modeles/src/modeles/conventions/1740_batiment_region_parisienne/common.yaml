@@ -5,3 +5,4 @@ contrat salarié . convention collective . ouvriers bâtiment région parisienne
   cdtn:
     idcc: 1740
     préavis-retraite: true
+    indemnité-licenciement: false

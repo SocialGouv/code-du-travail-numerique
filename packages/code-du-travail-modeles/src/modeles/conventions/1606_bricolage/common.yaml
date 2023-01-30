@@ -5,3 +5,4 @@ contrat salarié . convention collective . bricolage:
   cdtn:
     idcc: 1606
     préavis-retraite: true
+    indemnité-licenciement: false

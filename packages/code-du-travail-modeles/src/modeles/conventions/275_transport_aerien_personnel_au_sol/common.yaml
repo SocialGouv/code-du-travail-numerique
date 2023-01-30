@@ -6,3 +6,4 @@ contrat salarié . convention collective . transport aérien personnel au sol:
   cdtn:
     idcc: 275
     préavis-retraite: true
+    indemnité-licenciement: false

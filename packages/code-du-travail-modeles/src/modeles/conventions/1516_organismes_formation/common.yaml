@@ -5,3 +5,4 @@ contrat salarié . convention collective . organismes de formation:
   cdtn:
     idcc: 1516
     préavis-retraite: true
+    indemnité-licenciement: false

@@ -6,3 +6,4 @@ contrat salarié . convention collective . gardien concierge:
   cdtn:
     idcc: 1043
     préavis-retraite: true
+    indemnité-licenciement: false
