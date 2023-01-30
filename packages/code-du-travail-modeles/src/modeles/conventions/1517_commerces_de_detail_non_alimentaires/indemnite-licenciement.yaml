@@ -23,9 +23,13 @@ contrat salarié . convention collective . commerces de detail non alimentaires 
 
 contrat salarié . convention collective . commerces de detail non alimentaires . indemnité de licenciement . plus de dix ans:
   valeur:
-    produit:
-      assiette: au dela de dix ans * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-      facteur: 1 / 3
+    somme:
+      - produit:
+          assiette: au dela de dix ans * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+          facteur: 1 / 3
+      - produit:
+          assiette: au dela de dix ans * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+          facteur: 1 / 15
   unité: €
 
 contrat salarié . convention collective . commerces de detail non alimentaires . indemnité de licenciement . résultat conventionnel:
