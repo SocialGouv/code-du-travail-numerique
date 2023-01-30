@@ -71,15 +71,9 @@ function Page({ contribs }) {
               <Heading as={HeadingBlue}>{theme}</Heading>
               <FlatList>
                 {contribs[theme].map((item) => (
-                  <>
-                    <ListItem key={`${item.source}-${item.slug}`}>
-                      <ListLink
-                        item={item}
-                        showTheme={true}
-                        titleTagType="h3"
-                      />
-                    </ListItem>
-                  </>
+                  <ListItem key={`${item.source}-${item.slug}`}>
+                    <ListLink item={item} showTheme={true} titleTagType="h3" />
+                  </ListItem>
                 ))}
               </FlatList>
             </>
