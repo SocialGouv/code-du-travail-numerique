@@ -7,9 +7,11 @@ const app = new Koa();
 app.use(router.routes());
 
 describe("Conventions", () => {
-  describe("/conventions", () => {
-    it("returns the list of all cc order by alpha and regionnal metalurgie last", async () => {
-      const response = await request(app.callback()).get("/api/v1/conventions");
+  describe("/conventions/with-contributions", () => {
+    it("retourne la liste de toutes les conventions collectives qui ont des contributions ordonnées par ordre alpha avec les métallurgies régionales à la fin", async () => {
+      const response = await request(app.callback()).get(
+        "/api/v1/conventions/with-contributions"
+      );
       expect(response.status).toBe(200);
       expect(response.body.length).toEqual(3);
       expect(response.body[0].title).toEqual("Banque");

@@ -87,7 +87,7 @@ function Page({ contribs }) {
 export default Page;
 
 export const getServerSideProps = async () => {
-  const response = await fetch(`${API_URL}/contributions`);
+  const response = await fetch(`${API_URL}/contributions/generics`);
   if (!response.ok) {
     return handleError(response);
   }

@@ -76,7 +76,7 @@ function Page({ ccs }) {
 export default Page;
 
 export const getServerSideProps = async () => {
-  const response = await fetch(`${API_URL}/conventions`);
+  const response = await fetch(`${API_URL}/conventions/with-contributions`);
   if (!response.ok) {
     return handleError(response);
   }

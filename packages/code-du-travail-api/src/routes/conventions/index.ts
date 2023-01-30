@@ -7,7 +7,7 @@ import type { SearchResponse } from "../type";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
 import {
   getAgreementBySlugBody,
-  getAllAgreements,
+  getAllAgreementsWithContributions,
 } from "./getAgreements.elastic";
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX ?? "cdtn";
@@ -40,8 +40,8 @@ const orderByAlphaAndMetalurgieLast = (a, b) => {
  *
  * @returns {Array} all the conventions.
  */
-router.get("/conventions", async (ctx) => {
-  const body = getAllAgreements();
+router.get("/conventions/with-contributions", async (ctx) => {
+  const body = getAllAgreementsWithContributions();
   const response = await elasticsearchClient.search<SearchResponse<Agreement>>({
     body,
     index,

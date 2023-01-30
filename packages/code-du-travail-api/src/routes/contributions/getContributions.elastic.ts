@@ -1,6 +1,6 @@
 import { SOURCES } from "@socialgouv/cdtn-sources";
 
-export const getAllContributions = (): any => {
+export const getAllGenericsContributions = (): any => {
   return {
     _source: [
       "title",

@@ -3,7 +3,7 @@ import Router from "koa-router";
 
 import elasticsearchClient from "../../conf/elasticsearch";
 import { API_BASE_URL, CDTN_ADMIN_VERSION } from "../v1.prefix";
-import { getAllContributions } from "./getContributions.elastic";
+import { getAllGenericsContributions } from "./getContributions.elastic";
 
 const ES_INDEX_PREFIX = process.env.ES_INDEX_PREFIX ?? "cdtn";
 const index = `${ES_INDEX_PREFIX}-${CDTN_ADMIN_VERSION}_${DOCUMENTS}`;
@@ -24,8 +24,8 @@ const groupByThemes = (acc, item) => {
  *
  * @returns {Array} all the generic contributions.
  */
-router.get("/contributions", async (ctx) => {
-  const body = getAllContributions();
+router.get("/contributions/generics", async (ctx) => {
+  const body = getAllGenericsContributions();
   const response = await elasticsearchClient.search({
     body,
     index,

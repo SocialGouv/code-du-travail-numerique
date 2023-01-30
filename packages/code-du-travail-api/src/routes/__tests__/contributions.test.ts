@@ -7,10 +7,10 @@ const app = new Koa();
 app.use(router.routes());
 
 describe("Contributions", () => {
-  describe("/contributions", () => {
-    it("returns the list of all top level contributions", async () => {
+  describe("/contributions/generics", () => {
+    it("retourne la liste de toutes les contributions génériques", async () => {
       const response = await request(app.callback()).get(
-        "/api/v1/contributions"
+        "/api/v1/contributions/generics"
       );
       expect(response.status).toBe(200);
       const contribs = response.body;
