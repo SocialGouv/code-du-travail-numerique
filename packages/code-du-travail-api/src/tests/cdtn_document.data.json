@@ -13197,6 +13197,23 @@
     "contributions": true
   },
   {
+    "description": "Retrouvez les questions-réponses les plus fréquentes organisées par thème et élaborées par le ministère du Travail concernant cette convention collective.",
+    "longTitle": "Convention collective régionale test métallurgie",
+    "shortTitle": "Convention collective régionale test métallurgie",
+    "title": "Convention collective régionale test métallurgie",
+    "num": 1234,
+    "date_publi": "1981-04-01T00:00:00.000Z",
+    "cdtnId": "98b9c85aaaa",
+    "excludeFromSearch": false,
+    "id": "KALICONT000005635191",
+    "isPublished": true,
+    "metaDescription": "Idcc 1234 : test",
+    "slug": "1234-cc-metalurgie-rest",
+    "source": "conventions_collectives",
+    "text": "Convention collective régionale test métallurgie",
+    "contributions": true
+  },
+  {
     "index": 50,
     "description": "Le code du travail prévoit que le salarié bénéficie de congés à l’occasion de certains événements familiaux. Ils n’entrainent aucune diminution de la rémunération…",
     "cdtnId": "eba7a4592f",
@@ -13272,7 +13289,7 @@
         "id": "875f5b33-5464-4eac-83d0-8ec51b92268f",
         "text": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.\nLorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :\n\nPoursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;\n\nVendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.\n\nFermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.\n\nLorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.",
         "markdown": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur particulier.\n\nLorsque l’employeur est une entreprise individuelle (artisan, etc.),  les héritiers de l'entrepreneur peuvent décider de :\n\n- Poursuivre l’activité : dans ce cas, il n’y a aucune conséquence sur les contrats de travail ;\n\n- Vendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.\n\n- Fermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L1233-3 du code du travail.\n\nLorsque l’employeur est un particulier, son décès peut entraîner la fin du contrat de travail. La convention collective applicable en définit les conditions.",
-        "references":[],
+        "references": [],
         "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…"
       },
       "conventions": [

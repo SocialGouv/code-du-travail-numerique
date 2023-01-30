@@ -21,14 +21,16 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
+const ALL = "all";
+
 function Page({ contribs }) {
-  const [selectedTheme, setSelectedTheme] = useState("all");
+  const [selectedTheme, setSelectedTheme] = useState(ALL);
   const [documents, setDocuments] = useState(contribs);
   const selectThemeHandler = useCallback(
     (event) => {
       const themeSlug = event.target.value;
       setSelectedTheme(event.target.value);
-      if (themeSlug === "all") {
+      if (themeSlug === ALL) {
         setDocuments(contribs);
       } else {
         setDocuments({ [themeSlug]: contribs[themeSlug] });
@@ -55,7 +57,7 @@ function Page({ contribs }) {
           <LargeSelect value={selectedTheme} onChange={selectThemeHandler}>
             {Object.keys(contribs) &&
               [
-                <option key="all" value="all">
+                <option key={ALL} value={ALL}>
                   Tous les thèmes
                 </option>,
               ].concat(

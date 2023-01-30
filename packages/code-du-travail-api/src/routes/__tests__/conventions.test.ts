@@ -13,10 +13,10 @@ describe("Conventions", () => {
         "/api/v1/conventions/with-contributions"
       );
       expect(response.status).toBe(200);
-      expect(response.body.length).toEqual(3);
+      expect(response.body.length).toEqual(4);
       expect(response.body[0].title).toEqual("Banque");
       expect(response.body[response.body.length - 1].title).toEqual(
-        "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)"
+        "Convention collective régionale test métallurgie"
       );
     });
   });

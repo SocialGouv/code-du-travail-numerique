@@ -53,13 +53,12 @@ router.get("/conventions/with-contributions", async (ctx) => {
 });
 
 /**
- * Return the convention collective data that matches the given idcc and type
+ * Return the convention collective data that matches the given idcc
  *
  * @example
- * http://localhost:1337/api/v1/conventions/200/base
+ * http://localhost:1337/api/v1/conventions/200
  *
  * @param {string} :idcc the IDCC number
- * @param {string} :type the type of texte requested (either none or "base", "attache", "salaire")
  * @returns {Object} some convention data.
  */
 router.get("/conventions/:slug", async (ctx) => {
