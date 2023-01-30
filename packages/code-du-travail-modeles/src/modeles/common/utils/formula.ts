@@ -52,7 +52,7 @@ function getRulesWithFormuleAndNodeValue(engine: Engine): RuleNodeFormula[] {
       const value = engine.evaluate(rule.dottedName).nodeValue;
       return value !== false && value !== null && value !== undefined;
     }
-  ) as RuleNodeFormula[];
+  );
 }
 
 const FORMULE_VAR_REGEX = /\$formule/g;
