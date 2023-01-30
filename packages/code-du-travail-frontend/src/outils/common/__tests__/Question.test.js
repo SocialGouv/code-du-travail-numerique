@@ -8,30 +8,12 @@ describe("<Question />", () => {
   it("should render question", () => {
     const { container } = render(<Question>ma question</Question>);
     expect(container).toMatchInlineSnapshot(`
-      .c1 {
-        color: #3e486e;
-        font-size: 1.8rem;
-        font-weight: 600;
-      }
-
-      .c0 {
-        display: block;
-        margin: 1rem 0;
-        cursor: pointer;
-      }
-
-      @media (max-width:600px) {
-        .c0 {
-          font-size: 1.6rem;
-        }
-      }
-
       <div>
         <label
-          class="c0"
+          class="sc-kTCsyW jLHhUc"
         >
           <span
-            class="c1"
+            class="sc-bBjRSN fzTfxR"
           >
             ma question
           </span>
@@ -44,41 +26,17 @@ describe("<Question />", () => {
       <Question required>ma question obligatoire</Question>
     );
     expect(container).toMatchInlineSnapshot(`
-      .c1 {
-        color: #3e486e;
-        font-size: 1.8rem;
-        font-weight: 600;
-      }
-
-      .c2 {
-        color: #3e486e;
-        font-size: 1.6rem;
-        font-weight: 400;
-      }
-
-      .c0 {
-        display: block;
-        margin: 1rem 0;
-        cursor: pointer;
-      }
-
-      @media (max-width:600px) {
-        .c0 {
-          font-size: 1.6rem;
-        }
-      }
-
       <div>
         <label
-          class="c0"
+          class="sc-kTCsyW jLHhUc"
         >
           <span
-            class="c1"
+            class="sc-bBjRSN fzTfxR"
           >
             ma question obligatoire
           </span>
           <span
-            class="c2"
+            class="sc-bBjRSN jPMLlF"
           >
              (obligatoire)
           </span>

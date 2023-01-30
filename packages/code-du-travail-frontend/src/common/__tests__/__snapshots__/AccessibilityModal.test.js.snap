@@ -1,351 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
-.c5 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c6 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #7994d4;
-  border-color: #7994d4;
-  box-shadow: 0px 10px 20px rgba(121,148,212,0.26),0px 5px 7px rgba(121,148,212,0.35);
-  opacity: 1;
-  will-change: transform;
-}
-
-.c0:link,
-.c0:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c0:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #a0b3e0;
-  border-color: #a0b3e0;
-}
-
-.c0[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 1rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c9:link,
-.c9:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c9:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c9[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c11 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
-.c1 {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-  overflow: auto;
-  background: rgba(0,0,0,0.5);
-}
-
-.c2 {
-  position: relative;
-  width: 50vw;
-  max-width: 74rem;
-  max-height: calc(100vh - 2 * 10vh);
-  margin: 10vh auto;
-  padding: 2rem;
-  overflow-y: auto;
-  color: #3e486e;
-  background: #fff;
-  border-radius: 0.6rem;
-  outline: none;
-}
-
-.c10 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #7994d4;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-.c8 {
-  position: relative;
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: calc(1.6rem * 1.25);
-  height: calc(1.6rem * 1.25);
-  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
-  background: #fff;
-  border: 1px solid #bbcadf;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c8:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-  width: calc(1.6rem / 3);
-  height: calc(1.6rem / 1.7);
-  border: 1px solid #fff;
-  border-width: 0 calc(1.6rem / 10) calc(1.6rem / 10) 0;
-  -webkit-transform: translate(-50%,-60%) rotate(45deg);
-  -ms-transform: translate(-50%,-60%) rotate(45deg);
-  transform: translate(-50%,-60%) rotate(45deg);
-  content: "";
-}
-
-.c8:checked {
-  background-color: #f66663;
-}
-
-.c8:checked:before {
-  display: block;
-}
-
-.c3 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  text-align: center;
-}
-
-.c4 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-  text-align: center;
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c9 {
-    display: none;
-  }
-}
-
-@media (max-width:1180px) {
-  .c2 {
-    width: 60vw;
-  }
-}
-
-@media (max-width:980px) {
-  .c2 {
-    width: 80vw;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    width: calc(100% - 2 * 1.6rem);
-    max-height: calc(100vh - 2 * 1.6rem);
-    margin: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    margin-bottom: 1rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    font-size: 2.2rem;
-  }
-}
-
 <body>
   <div
     aria-hidden="true"
   >
     <button
-      class="c0"
+      class="sc-hiKfDv cdukKM"
     >
       texte dans le bouton
     </button>
@@ -366,41 +27,41 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
     >
       <div>
         <div
-          class="c1"
+          class="sc-FRrlG hNWtxs"
           data-reach-dialog-overlay=""
         >
           <div
             aria-label="Accessibilité"
             aria-modal="true"
-            class="c2"
+            class="sc-fXazdy lhbBKM"
             data-reach-dialog-content=""
             role="dialog"
             tabindex="-1"
           >
             <div
-              class="c3"
+              class="sc-eXuyPJ HWDDZ"
             >
               <h1
-                class="c4"
+                class="sc-eWnToP OQZgA"
               >
                 <span
-                  class="c5"
+                  class="sc-gKAaRy iDZwD"
                 />
                 Accessibilité
               </h1>
             </div>
             <h2
-              class="c6"
+              class="sc-iCoGMd gaXVHn"
               data-testid="heading"
             >
               Couleurs
             </h2>
             <label
-              class="c7"
+              class="sc-xGAEC bynoea"
               for="blackAndWhiteTheme"
             >
               <input
-                class="c8"
+                class="sc-dWBRfb cbFWSR"
                 id="blackAndWhiteTheme"
                 name="blackAndWhiteTheme"
                 type="checkbox"
@@ -408,11 +69,11 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
               Passer le site en noir et blanc
             </label>
             <button
-              class="c9 c10"
+              class="sc-hiKfDv dNqnKz sc-dvXYtj kMeFfA"
               title="fermer la modale"
             >
               <div
-                class="c11"
+                class="sc-gXfVKN gNNUJi"
               >
                 fermer la modale
               </div>

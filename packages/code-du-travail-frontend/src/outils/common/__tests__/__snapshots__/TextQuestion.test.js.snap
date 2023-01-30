@@ -1,156 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextQuestion /> should render 1`] = `
-.c1 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.c2 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c4 {
-  position: relative;
-  display: inline-block;
-}
-
-.c5 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: left;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c5[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c5::-webkit-outer-spin-button,
-.c5::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.c5:invalid {
-  border-color: #eb5757;
-}
-
-.c5::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c5::-moz-placeholder {
-  color: #9298af;
-}
-
-.c5:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c5::placeholder {
-  color: #9298af;
-}
-
-.c5:focus {
-  border-color: #7994d4;
-}
-
-.c5:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c5:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c5:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c5:focus::placeholder {
-  color: transparent;
-}
-
-.c0 {
-  display: block;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 1.6rem;
-}
-
-@media (max-width:600px) {
-  .c4 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    padding: 0 1rem;
-    padding-right: 2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <label
-    class="c0"
+    class="sc-dvUynV faTIvj"
     for="1"
   >
     <span
-      class="c1"
+      class="sc-bBjRSN fzTfxR"
     >
       lorem ipsum
     </span>
     <span
-      class="c2"
+      class="sc-bBjRSN jPMLlF"
     >
        (obligatoire)
     </span>
   </label>
   <div
-    class="c3"
+    class="sc-jtiXyc eRvBTY"
   >
     <span
-      class="c4"
+      class="sc-bQCEYZ iOBpgY"
     >
       <input
-        class="c5"
+        class="sc-fXgAZx esWNAb"
         id="1"
         name="test"
         value="hello"

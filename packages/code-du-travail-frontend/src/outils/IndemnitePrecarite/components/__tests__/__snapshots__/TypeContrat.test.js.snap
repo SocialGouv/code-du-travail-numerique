@@ -1,138 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TypeContrat /> should render 1`] = `
-.c1 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.c2 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.c4 {
-  position: relative;
-  display: inline-block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: calc(1.6rem * 1.25);
-  height: calc(1.6rem * 1.25);
-  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
-  padding: 0;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-  box-shadow: none;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c4:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-  width: calc(1.6rem / 1.5);
-  height: calc(1.6rem / 1.5);
-  background-color: #f66663;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  content: "";
-}
-
-.c4:checked {
-  background-color: #fff;
-  border-color: #f66663;
-}
-
-.c4:checked:before {
-  display: block;
-}
-
-.c0 {
-  display: block;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <label
-    class="c0"
+    class="sc-dvUynV faTIvj"
   >
     <span
-      class="c1"
+      class="sc-bBjRSN fzTfxR"
     >
       Quel est le type du contrat de travail ?
     </span>
     <span
-      class="c2"
+      class="sc-bBjRSN jPMLlF"
     >
        (obligatoire)
     </span>
   </label>
   <div
-    class="c3"
+    class="sc-hkeOVe ghkjZk"
   >
     <input
-      class="c4"
+      class="sc-gVFcvn gCGLUB"
       id="contrat-cdd"
       name="contrat"
       type="radio"
       value="CDD"
     />
     <label
-      class="c5"
+      class="sc-cbeScs iWkDcx"
       for="contrat-cdd"
     >
       Contrat à durée déterminée (CDD)
     </label>
   </div>
   <div
-    class="c3"
+    class="sc-hkeOVe ghkjZk"
   >
     <input
-      class="c4"
+      class="sc-gVFcvn gCGLUB"
       id="contrat-ci"
       name="contrat"
       type="radio"
       value="CTT"
     />
     <label
-      class="c5"
+      class="sc-cbeScs iWkDcx"
       for="contrat-ci"
     >
       Contrat de travail temporaire (Contrat d’intérim)

@@ -1,413 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Highlights /> should render 1`] = `
-.c1 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c0 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c4 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c17 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c5 {
-  position: relative;
-  overflow: visible;
-}
-
-.c5:before,
-.c5:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: none;
-  width: 4rem;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  content: "";
-  pointer-events: none;
-  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
-}
-
-.c5:before {
-  left: -2rem;
-}
-
-.c5:after {
-  right: -2rem;
-}
-
-.c7 {
-  overflow-x: visible;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-top: 0;
-  margin-right: calc(-1 * 1rem);
-  margin-bottom: 4rem;
-  margin-left: calc(-1 * 1rem);
-  padding: 0;
-  list-style-type: none;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  margin: 1rem;
-  padding: 0;
-  width: calc(100% / 2 - 2 * 1rem - 1px);
-}
-
-.c13 {
-  display: block;
-  margin: 0 0 1rem 0;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  text-transform: uppercase;
-}
-
-.c10 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1;
-  -ms-flex: 1 1;
-  flex: 1 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  width: 100%;
-  margin: 0;
-  padding: 2rem 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #fff;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  cursor: pointer;
-  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
-  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
-  transition: box-shadow 250ms linear, transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c10:hover,
-.c10:active,
-.c10:focus {
-  color: #3e486e;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-}
-
-.c11 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 100%;
-}
-
-.c12 {
-  padding-right: 1rem;
-  height: auto;
-  display: block;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: start;
-  -ms-flex-pack: start;
-  justify-content: start;
-  margin: inherit;
-}
-
-.c14 {
-  margin: 0;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  font-weight: 600;
-}
-
-.c15 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  margin-top: 1rem;
-}
-
-.c2 {
-  margin-top: 0;
-  margin-bottom: 4rem;
-  margin-left: auto;
-  text-align: center;
-}
-
-.c3 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-}
-
-.c16 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-@media (max-width:600px) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c1 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    overflow-x: hidden;
-  }
-}
-
-@media (max-width:600px) {
-  .c5:before,
-  .c5:after {
-    display: block;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    overflow-x: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    margin-bottom: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    margin-right: 0;
-    margin-bottom: 2rem;
-    margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    min-width: 23rem;
-  }
-
-  .c9:first-of-type {
-    margin-left: 2rem;
-  }
-
-  .c9:last-of-type:after {
-    display: block;
-    width: 2rem;
-    height: 100%;
-    background-color: transparent;
-    content: "";
-  }
-}
-
-@media (max-width:1180px) {
-  .c9 {
-    width: calc( 100% / 2 - 2 * 1rem - 1px );
-  }
-}
-
-@media (max-width:980px) {
-  .c9 {
-    width: calc( 100% / 1 - 2 * 1rem - 1px );
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    width: 80%;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    padding: 1.6rem 1.6rem;
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    margin-bottom: 3.2rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    font-size: 2.6rem;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-gtsrHT dDJuxj"
   >
     <div
-      class="c1"
+      class="sc-bdnxRM bCGhmq"
     >
       <header
-        class="c2"
+        class="sc-eXuyPJ ZSyvw"
         id="a-la-une"
       >
         <h2
-          class="c3"
+          class="sc-irKDMX ehzKBH"
         >
           <span
-            class="c4"
+            class="sc-gKAaRy iDZwD"
           />
           À la une
         </h2>
       </header>
       <div
-        class="c5 c6"
+        class="sc-eJocfa dnvrjA sc-hhIiOg gEtbSe"
       >
         <div
-          class="c7"
+          class="sc-oeezt hgDFVm"
         >
           <div
-            class="c8"
+            class="sc-eirqVv gqRdkL"
           >
             <div
-              class="c9"
+              class="sc-lbVvki fGGtFB"
             >
               <a
-                class="c10"
+                class="sc-eGJWMs dxHVWB"
                 href="/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie"
               >
                 <div
-                  class="c11"
+                  class="sc-dFRpbK cbvMFR"
                 >
                   <div
-                    class="c12"
+                    class="sc-bsatvv iePphK"
                   >
                     <p
-                      class="c13 "
+                      class="sc-bXexck sc-gIvpjk haepIh glQsRy"
                     >
                       Santé, sécurité et conditions de travail
                     </p>
                     <h3
-                      class="c14"
+                      class="sc-euEtCV ionzWf"
                     >
                       Coronavirus : je suis salarié
                     </h3>
                   </div>
                 </div>
                 <div
-                  class="c15"
+                  class="sc-fHCHyC fOtBFh"
                 >
                   <div
-                    class="c16"
+                    class="sc-iIgjPs bMUDt"
                   >
                     <p
-                      class="c17"
+                      class="sc-cOifOu jBNwUz"
                     >
                       1. Dois-je prévenir mon employeur si je reviens, ou si...
                     </p>
@@ -416,38 +71,38 @@ exports[`<Highlights /> should render 1`] = `
               </a>
             </div>
             <div
-              class="c9"
+              class="sc-lbVvki fGGtFB"
             >
               <a
-                class="c10"
+                class="sc-eGJWMs dxHVWB"
                 href="/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-employeur"
               >
                 <div
-                  class="c11"
+                  class="sc-dFRpbK cbvMFR"
                 >
                   <div
-                    class="c12"
+                    class="sc-bsatvv iePphK"
                   >
                     <p
-                      class="c13 "
+                      class="sc-bXexck sc-gIvpjk haepIh glQsRy"
                     >
                       Santé, sécurité et conditions de travail
                     </p>
                     <h3
-                      class="c14"
+                      class="sc-euEtCV ionzWf"
                     >
                       Coronavirus : je suis employeur
                     </h3>
                   </div>
                 </div>
                 <div
-                  class="c15"
+                  class="sc-fHCHyC fOtBFh"
                 >
                   <div
-                    class="c16"
+                    class="sc-iIgjPs bMUDt"
                   >
                     <p
-                      class="c17"
+                      class="sc-cOifOu jBNwUz"
                     >
                       9. Quelles sont les recommandations sanitaires pour...
                     </p>
