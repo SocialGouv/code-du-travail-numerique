@@ -7,8 +7,7 @@ const engine = new IndemniteLicenciementPublicodes(
 
 const References = [
   {
-    article:
-      "Article 4, Chapitre VI (issu de l'Article 5 Avenant n°5 - lien dans l'article 4)",
+    article: "Article 4, Chapitre VI",
     url:
       "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046093607?idConteneur=KALICONT000005635870&origin=list#KALIARTI000046093607",
   },
