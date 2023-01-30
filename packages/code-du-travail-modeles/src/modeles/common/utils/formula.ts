@@ -1,5 +1,4 @@
-import type Engine from "publicodes";
-import type { RuleNode } from "publicodes";
+import type Engine, { RuleNode } from "publicodes";
 
 import { nonNullable } from "./array";
 
