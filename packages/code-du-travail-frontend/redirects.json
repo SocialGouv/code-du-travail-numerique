@@ -118,5 +118,10 @@
     "destination": "/modeles-de-courriers/rupture-dun-contrat-dapprentissage-dun-commun-accord",
     "permanent": true,
     "source": "/modeles-de-courriers/rupture-dun-commun-accord-dun-contrat-dapprentissage"
+  },
+  {
+    "destination": "/information/covid-19-le-regime-post-crise-sanitaire-a-compter-du-14-mars-2022",
+    "permanent": true,
+    "source": "/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-infographies"
   }
 ]
