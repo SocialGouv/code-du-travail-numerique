@@ -21,7 +21,7 @@ exports[`<ServiceEnLigne /> should render 1`] = `
           Se retrouve dans en entête
         </p>
         <p
-          class="sc-euEtCV fbieFC"
+          class="sc-euEtCV ionzWf"
         >
           Texte qui se retrouve dans le lien
         </p>

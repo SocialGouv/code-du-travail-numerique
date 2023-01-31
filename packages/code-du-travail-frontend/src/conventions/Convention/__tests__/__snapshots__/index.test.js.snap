@@ -4797,7 +4797,7 @@ exports[`<Convention /> renders 1`] = `
       />
       <button
         aria-label="Recherchez dans la collection collective"
-        class="sc-hiKfDv jbMTFD sc-amkrK ctiiva"
+        class="sc-hiKfDv dNqnKz sc-amkrK ctiiva"
         title="Lancer une recherche"
         type="submit"
       >

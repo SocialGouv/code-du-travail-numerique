@@ -68,7 +68,7 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
     </span>
     <button
       aria-label="Recherchez le service"
-      class="sc-hiKfDv jbMTFD sc-cKRKFl ktLPBo"
+      class="sc-hiKfDv dNqnKz sc-cKRKFl ktLPBo"
       title="Lancer une recherche"
       type="submit"
     >

@@ -473,7 +473,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                             Modèle de document
                           </p>
                           <p
-                            class="sc-euEtCV fbieFC"
+                            class="sc-euEtCV ionzWf"
                           >
                             Lettre de démission du salarié
                           </p>
@@ -1506,7 +1506,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
             Modèle de document
           </p>
           <p
-            class="sc-euEtCV fbieFC"
+            class="sc-euEtCV ionzWf"
           >
             Lettre de démission du salarié
           </p>

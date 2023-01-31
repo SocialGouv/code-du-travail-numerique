@@ -38,7 +38,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 test theme content
               </p>
               <h3
-                class="sc-euEtCV fbieFC"
+                class="sc-euEtCV ionzWf"
               >
                 Mer il est fou!
               </h3>
@@ -105,7 +105,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 Outils
               </p>
               <h3
-                class="sc-euEtCV fbieFC"
+                class="sc-euEtCV ionzWf"
               >
                 simulateur de prime de précarite
               </h3>
@@ -130,7 +130,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-jtiXyc cgUMTP"
               >
                 <button
-                  class="sc-hiKfDv eMETnV"
+                  class="sc-hiKfDv hvWLsX"
                 >
                   Consulter
                   <svg
@@ -172,7 +172,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 Outils externes
               </p>
               <h3
-                class="sc-euEtCV fbieFC"
+                class="sc-euEtCV ionzWf"
               >
                 telerc
               </h3>
@@ -197,7 +197,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-jtiXyc cgUMTP"
               >
                 <button
-                  class="sc-hiKfDv eMETnV"
+                  class="sc-hiKfDv hvWLsX"
                 >
                   Consulter
                   <svg
@@ -263,7 +263,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 test root content
               </p>
               <h3
-                class="sc-euEtCV fbieFC"
+                class="sc-euEtCV ionzWf"
               >
                 Mer il est fou 2!
               </h3>
@@ -288,7 +288,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 class="sc-jtiXyc cgUMTP"
               >
                 <button
-                  class="sc-hiKfDv eMETnV"
+                  class="sc-hiKfDv hvWLsX"
                 >
                   Consulter
                   <svg
@@ -354,7 +354,7 @@ exports[`<SearchResults/> should render results 1`] = `
                 test theme content
               </p>
               <h3
-                class="sc-euEtCV fbieFC"
+                class="sc-euEtCV ionzWf"
               >
                 Mer il est fou 4!
               </h3>
@@ -425,7 +425,7 @@ exports[`<SearchResults/> should render results 1`] = `
                     >
                       
                       <p
-                        class="sc-euEtCV fbieFC"
+                        class="sc-euEtCV ionzWf"
                       >
                         L1243-1
                       </p>
@@ -480,7 +480,7 @@ exports[`<SearchResults/> should render results 1`] = `
                     >
                       
                       <p
-                        class="sc-euEtCV fbieFC"
+                        class="sc-euEtCV ionzWf"
                       >
                         Contrat
                       </p>

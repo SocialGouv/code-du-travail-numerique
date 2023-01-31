@@ -119,7 +119,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </span>
     </div>
     <button
-      class="sc-hiKfDv jbMTFD sc-fyjqAk iXuofz"
+      class="sc-hiKfDv dNqnKz sc-fyjqAk iXuofz"
       type="button"
     >
       Supprimer
@@ -179,7 +179,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </span>
     </div>
     <button
-      class="sc-hiKfDv jbMTFD sc-fyjqAk iXuofz"
+      class="sc-hiKfDv dNqnKz sc-fyjqAk iXuofz"
       type="button"
     >
       Supprimer
@@ -200,7 +200,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </button>
   </div>
   <button
-    class="sc-hiKfDv jbMTFD sc-kmIPcE eZUDAz"
+    class="sc-hiKfDv dNqnKz sc-kmIPcE eZUDAz"
     type="button"
   >
     <svg

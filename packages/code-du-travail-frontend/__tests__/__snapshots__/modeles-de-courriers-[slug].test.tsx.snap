@@ -3,38 +3,38 @@
 exports[`<ModelesDeCourrier /> should render 1`] = `
 <div>
   <div
-    class="sc-cQDFzS khmWfh"
+    class="sc-havuDZ fAHhCD"
   >
     <div
-      class="sc-knSFqH cFiWlP"
+      class="sc-cfARRi icssoj"
     />
     <header
-      class="sc-iiBnNu dZQzRu"
+      class="sc-dYXZXt dkZCdu"
     >
       <div
-        class="sc-dYXZXt kkJTrD"
+        class="sc-eVedaM ewSAfi"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-bdnxRM sc-eVedaM bCGhmq eoaPKv"
+        class="sc-bdnxRM sc-gggoXN bCGhmq dILgGK"
       >
         <a
-          class="sc-gBsxbr hNsNGu"
+          class="sc-hcmsbg hAAfbg"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-hxyAeK hVIjIN"
+            class="sc-ojivU eulIns"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-gggoXN kYEXSC"
+            class="sc-hLyimJ hnbjZf"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-hLyimJ bKrYnK"
+          class="sc-kSCemg lgNDBB"
         >
           <form
             action="/recherche"
@@ -102,7 +102,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hiKfDv jbMTFD sc-kBqmDu caaoKU"
+              class="sc-hiKfDv dNqnKz sc-kBqmDu caaoKU"
               title="Lancer ma recherche"
               type="submit"
             >
@@ -122,11 +122,11 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-hcmsbg hykUfM"
+          class="sc-gBsxbr hIDeTg"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-ojivU bJBoRU"
+            class="sc-knSFqH fBNqiS"
             href="/recherche"
             rel="nofollow"
           >
@@ -142,30 +142,39 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               />
             </svg>
           </a>
+        </div>
+        <div
+          class="sc-cQDFzS eJCJVi"
+        >
           <button
-            aria-label="menu principal"
-            class="sc-hiKfDv ismPOA sc-ciSkZP dAZGnz sc-gJjCVn geMgA-d"
+            class="sc-hiKfDv eWfpdP sc-efHYUO sc-hxyAeK jCFqKB gJHivx"
           >
-            <svg
-              aria-hidden="true"
-              class="sc-jcwpoC gzqLpW"
-              fill="none"
-              viewBox="0 0 32 32"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-            </svg>
+            Accessibilité
           </button>
         </div>
+        <button
+          aria-label="menu principal"
+          class="sc-hiKfDv eYOUOk sc-ciSkZP dAZGnz sc-gJjCVn hcCgUG"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-jcwpoC gzqLpW"
+            fill="none"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
       </div>
     </header>
     <main
-      class="sc-kSCemg fWHmXV"
+      class="sc-jCPRHX bwYyKC"
       id="content"
       tabindex="-1"
     >
@@ -435,18 +444,18 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   class="sc-gtsrHT dDJuxj"
                 >
                   <div
-                    class="sc-jSFjdj sc-cfARRi dftIwI irOLdj"
+                    class="sc-jSFjdj sc-jhDJEt dftIwI bjnvDr"
                   >
                     <div
-                      class="sc-havuDZ bqoTqW"
+                      class="sc-bKoJNE mfJzp"
                     >
                       <a
-                        class="sc-hiKfDv kARaxd no-after"
+                        class="sc-hiKfDv gvNTzR no-after"
                         href="azure.url/cdtn/filename.pdf"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-bKoJNE dunaVl"
+                          class="sc-bwcZwS eEFSkq"
                           fill="none"
                           viewBox="0 0 32 32"
                           xmlns="http://www.w3.org/2000/svg"
@@ -485,7 +494,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                   </div>
                 </div>
                 <p
-                  class="sc-jhDJEt kYeuXj"
+                  class="sc-ekA-drt cEZqNu"
                 >
                   Type: Modèle de document - Format: 
                   pdf
@@ -496,15 +505,15 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                    
                 </p>
                 <p
-                  class="sc-jSFjdj sc-jCPRHX dWteEK bmnUmc"
+                  class="sc-jSFjdj sc-enrZtP dWteEK chORxY"
                 >
                   Attention, chaque modèle de document proposé est à personnaliser selon votre situation et est susceptible d’évoluer suite à des changements de règlementation. Assurez-vous d’avoir la dernière version mise à jour avant toute utilisation.
                 </p>
                 <p
-                  class="sc-enrZtP lntvkN"
+                  class="sc-btlduw hGSBnq"
                 >
                   <a
-                    class="sc-hiKfDv eGHUCM no-after"
+                    class="sc-hiKfDv dOLmw no-after"
                     href="azure.url/cdtn/filename.pdf"
                   >
                     Télécharger le modèle (
@@ -514,7 +523,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     Ko)  
                     <svg
                       aria-hidden="true"
-                      class="sc-bKoJNE dunaVl"
+                      class="sc-bwcZwS eEFSkq"
                       fill="none"
                       viewBox="0 0 32 32"
                       xmlns="http://www.w3.org/2000/svg"
@@ -672,12 +681,12 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
                     class="sc-hGwcmR kSUGFz"
                   >
                     <button
-                      class="sc-hiKfDv fEdXfT sc-iuImSO bHvjOX"
+                      class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                     >
                       Non
                     </button>
                     <button
-                      class="sc-hiKfDv fEdXfT sc-iuImSO bHvjOX"
+                      class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                     >
                       Oui
                     </button>
@@ -723,7 +732,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               </p>
             </div>
             <button
-              class="sc-hiKfDv fABUwE"
+              class="sc-hiKfDv cdukKM"
             >
               Contacter nos services en région
               <svg
@@ -843,7 +852,7 @@ exports[`<ModelesDeCourrier /> should render 1`] = `
               >
                 <li>
                   <button
-                    class="sc-hiKfDv fruFDR sc-jVSGNQ RMAs"
+                    class="sc-hiKfDv eWfpdP sc-jVSGNQ RMAs"
                   >
                     Contact
                   </button>

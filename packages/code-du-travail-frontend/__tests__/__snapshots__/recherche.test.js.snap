@@ -3,38 +3,38 @@
 exports[`<Recherche /> should render 1`] = `
 <div>
   <div
-    class="sc-hQYpqk HmiHe"
+    class="sc-biHcxt cAyfuL"
   >
     <div
-      class="sc-fTFMiz ijNNXc"
+      class="sc-hfVBHA bzizyp"
     />
     <header
-      class="sc-iuImSO ibTqhN"
+      class="sc-EhTUr kDIorj"
     >
       <div
-        class="sc-EhTUr bbnpPi"
+        class="sc-dwxYdI gncmNb"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-bdnxRM sc-dwxYdI bCGhmq ezNcNi"
+        class="sc-bdnxRM sc-liAPKD bCGhmq bQpMmr"
       >
         <a
-          class="sc-gVtoEh bwPzqn"
+          class="sc-cvdZrU juiCvs"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-hJFzke cTFrLv"
+            class="sc-fTZpSt bqmTns"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-liAPKD gxgLsb"
+            class="sc-bTJQgd iqdGAe"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,32 +58,37 @@ exports[`<Recherche /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-cvdZrU sIAIo"
+          class="sc-hQYpqk IOLcF"
         >
           <button
-            aria-label="menu principal"
-            class="sc-hiKfDv ismPOA sc-ciSkZP dAZGnz sc-iueNdr gwSdTc"
+            class="sc-hiKfDv eWfpdP sc-efHYUO sc-hJFzke jCFqKB clyhBb"
           >
-            <svg
-              aria-hidden="true"
-              class="sc-jcwpoC gzqLpW"
-              fill="none"
-              viewBox="0 0 32 32"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-            </svg>
+            Accessibilité
           </button>
         </div>
+        <button
+          aria-label="menu principal"
+          class="sc-hiKfDv eYOUOk sc-ciSkZP dAZGnz sc-iueNdr jQmSOf"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-jcwpoC gzqLpW"
+            fill="none"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
       </div>
     </header>
     <main
-      class="sc-ByBTK iGnqkP"
+      class="sc-fiCYzP jgqbDu"
       id="content"
       tabindex="-1"
     >
@@ -103,7 +108,7 @@ exports[`<Recherche /> should render 1`] = `
           </h1>
         </header>
         <div
-          class="sc-kJNqyW eYNAtg"
+          class="sc-bA-DTon iXOcTP"
         >
           <form
             action="/recherche"
@@ -147,7 +152,7 @@ exports[`<Recherche /> should render 1`] = `
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hiKfDv eGHUCM sc-Jgsit gsEITo"
+              class="sc-hiKfDv dOLmw sc-Jgsit gsEITo"
               title="Lancer ma recherche"
               type="submit"
             >
@@ -177,7 +182,7 @@ exports[`<Recherche /> should render 1`] = `
           class="sc-bdnxRM bCGhmq"
         >
           <div
-            class="sc-jSFjdj sc-ciOKUB dftIwI jQbUDP"
+            class="sc-jSFjdj sc-jYKCQm dftIwI huyvKZ"
           >
             <strong
               aria-level="2"
@@ -192,15 +197,15 @@ exports[`<Recherche /> should render 1`] = `
               Vous n’avez pas trouvé ce que vous cherchiez ? Essayez …
             </strong>
             <div
-              class="sc-kGVuwA enIKSa"
+              class="sc-bxLXlR bLMrZT"
             >
               <button
-                class="sc-hiKfDv fEdXfT"
+                class="sc-hiKfDv kLCUsz"
               >
                 Consulter les thèmes
               </button>
               <button
-                class="sc-hiKfDv fEdXfT"
+                class="sc-hiKfDv kLCUsz"
               >
                 Chercher une convention collective
               </button>
@@ -243,7 +248,7 @@ exports[`<Recherche /> should render 1`] = `
               </p>
             </div>
             <button
-              class="sc-hiKfDv fABUwE"
+              class="sc-hiKfDv cdukKM"
             >
               Contacter nos services en région
               <svg
@@ -363,7 +368,7 @@ exports[`<Recherche /> should render 1`] = `
               >
                 <li>
                   <button
-                    class="sc-hiKfDv fruFDR sc-eiQWpL cMAhCB"
+                    class="sc-hiKfDv eWfpdP sc-eiQWpL cMAhCB"
                   >
                     Contact
                   </button>

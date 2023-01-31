@@ -92,7 +92,7 @@ exports[`<SearchHero /> should render 1`] = `
           </div>
           <button
             aria-label="Lancer ma recherche"
-            class="sc-hiKfDv eGHUCM sc-gstuGz eNAoDg"
+            class="sc-hiKfDv dOLmw sc-gstuGz eNAoDg"
             title="Lancer ma recherche"
             type="submit"
           >

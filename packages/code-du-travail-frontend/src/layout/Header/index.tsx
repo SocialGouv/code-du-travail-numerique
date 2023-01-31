@@ -1,4 +1,10 @@
-import { Container, icons, keyframes, theme } from "@socialgouv/cdtn-ui";
+import {
+  BurgerNavButton as NavButton,
+  Container,
+  icons,
+  keyframes,
+  theme,
+} from "@socialgouv/cdtn-ui";
 import { lightFormat } from "date-fns";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -8,8 +14,9 @@ import styled, { css } from "styled-components";
 import { useWindowScrollPosition } from "../../lib/useScrollLocation";
 import SearchBar from "../../search/SearchBar";
 import HeaderBurgerNav from "./BurgerNav";
+import { AccessibilityModal } from "../../common/AccessibilityModal";
 
-export const HEADER_HEIGHT = "13.5rem";
+export const HEADER_HEIGHT = "20rem";
 export const MOBILE_HEADER_HEIGHT = "9rem";
 
 const printDate = () => {
@@ -18,7 +25,7 @@ const printDate = () => {
 };
 
 export const Header = ({ currentPage = "" }) => {
-  const [currentDate, setDate] = useState();
+  const [currentDate, setDate] = useState("");
   useEffect(() => {
     setDate(printDate());
   }, []);
@@ -58,22 +65,28 @@ export const Header = ({ currentPage = "" }) => {
           </SearchBarWrapper>
         )}
 
-        <RightSide>
-          {isContentPage && !overThreshold && (
+        {isContentPage && !overThreshold && (
+          <VerticallyAligned>
             <Link
-              href={{
-                pathname: "/recherche",
-                ...(q && { query: { q } }),
-              }}
+              href={{ pathname: "/recherche", ...(q && { query: { q } }) }}
               passHref
             >
               <StyledLink rel="nofollow" aria-label="Lancer ma recherche">
                 <icons.Search />
               </StyledLink>
             </Link>
-          )}
-          <HeaderBurgerNav currentPage={currentPage} />
-        </RightSide>
+          </VerticallyAligned>
+        )}
+        <DesktopOnly overThreshold={overThreshold}>
+          <AccessibilityModal>
+            {(openModal) => (
+              <NavButtonWithIcon onClick={openModal}>
+                Accessibilité
+              </NavButtonWithIcon>
+            )}
+          </AccessibilityModal>
+        </DesktopOnly>
+        <HeaderBurgerNav currentPage={currentPage} />
       </StyledContainer>
     </StyledHeader>
   );
@@ -86,18 +99,14 @@ const StyledHeader = styled.header`
   top: 0;
   z-index: 3;
   width: 100%;
-  height: ${HEADER_HEIGHT};
   background-color: ${({ theme }) => theme.white};
   box-shadow: ${({ theme }) => box.shadow.default(theme.secondary)};
   ${({ floating, overThreshold }) => {
-    if (overThreshold) {
-      if (floating) {
-        return css`
-          position: fixed;
-          animation: ${keyframes.fromTop} 250ms ease-out;
-          height: ${MOBILE_HEADER_HEIGHT};
-        `;
-      }
+    if (overThreshold && floating) {
+      return css`
+        position: fixed;
+        animation: ${keyframes.fromTop} 250ms ease-out;
+      `;
     }
   }};
 
@@ -119,10 +128,25 @@ const StyledPrintDate = styled.div`
   }
 `;
 
+const VerticallyAligned = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const NavButtonWithIcon = styled(NavButton)`
+  padding: 0 0 0 30px;
+  background: url("/static/assets/img/acceccibility-logo.svg") 6px center
+    no-repeat;
+  display: block !important;
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none !important;
+  }
+`;
 const StyledContainer = styled(Container)`
   display: flex;
   align-items: stretch;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
 `;
@@ -169,11 +193,11 @@ const Logo = styled(icons.Logo)`
   }
 `;
 
-const RightSide = styled.div`
-  display: flex;
-  flex: 0 1 auto;
-  align-items: center;
-  justify-content: flex-end;
+const DesktopOnly = styled.div`
+  display: none;
+  @media (min-width: ${breakpoints.tablet}) {
+    display: block;
+  }
   @media print {
     display: none;
   }
@@ -198,10 +222,11 @@ const StyledLink = styled.a`
 const SearchBarWrapper = styled.div`
   display: flex;
   align-items: center;
-  width: 30rem;
+  width: 38rem;
   margin-left: ${spacings.base};
   @media (max-width: ${breakpoints.tablet}) {
     display: ${({ overThreshold }) => (overThreshold ? "flex" : "none")};
+    width: 80%;
   }
   @media print {
     display: none;

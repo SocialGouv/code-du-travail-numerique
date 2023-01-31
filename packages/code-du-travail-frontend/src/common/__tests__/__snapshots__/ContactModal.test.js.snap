@@ -6,7 +6,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
     aria-hidden="true"
   >
     <button
-      class="sc-hiKfDv fABUwE"
+      class="sc-hiKfDv cdukKM"
     >
       texte dans le bouton
     </button>
@@ -57,7 +57,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
                 Si vous souhaitez nous interroger sur vos droits ou sur des dispositions en droit du travail, nous vous invitons à contacter
                  
                 <button
-                  class="sc-hiKfDv kQaPVm"
+                  class="sc-hiKfDv cKEotg"
                 >
                   les services du ministère du Travail
                   <svg
@@ -99,7 +99,7 @@ exports[`<ContactModal /> renders a popup when click on button 1`] = `
               </a>
             </p>
             <button
-              class="sc-hiKfDv jbMTFD sc-dvXYtj kMeFfA"
+              class="sc-hiKfDv dNqnKz sc-dvXYtj kMeFfA"
               title="fermer la modale"
             >
               <div

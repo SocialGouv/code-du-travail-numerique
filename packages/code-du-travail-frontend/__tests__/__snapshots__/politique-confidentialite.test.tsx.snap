@@ -3,38 +3,38 @@
 exports[`<CookiePolicy /> should render 1`] = `
 <div>
   <div
-    class="sc-dbXCOC jfJzVN"
+    class="sc-iuImSO eVkiTj"
   >
     <div
-      class="sc-ehALMs gYMiOs"
+      class="sc-EhTUr bFrgrE"
     />
     <header
-      class="sc-gXZlLH dMuyAY"
+      class="sc-bFSbwS glTMfU"
     >
       <div
-        class="sc-bFSbwS bxHLEB"
+        class="sc-fxFQKN jZnCUM"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-bdnxRM sc-fxFQKN bCGhmq iJzrJ"
+        class="sc-bdnxRM sc-igOmtu bCGhmq hjFfON"
       >
         <a
-          class="sc-fyGvY NbhqD"
+          class="sc-Jgsit jvLFVD"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-cjzNjn hgeoMO"
+            class="sc-gGuRsA lhXitW"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-igOmtu bdtiGp"
+            class="sc-iueNdr gXJqhx"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ exports[`<CookiePolicy /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-iueNdr edyUc"
+          class="sc-hGwcmR IqREp"
         >
           <form
             action="/recherche"
@@ -102,7 +102,7 @@ exports[`<CookiePolicy /> should render 1`] = `
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hiKfDv jbMTFD sc-eiQWpL ivEMam"
+              class="sc-hiKfDv dNqnKz sc-eiQWpL ivEMam"
               title="Lancer ma recherche"
               type="submit"
             >
@@ -122,11 +122,11 @@ exports[`<CookiePolicy /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-Jgsit ddXmHL"
+          class="sc-fyGvY kLxvEB"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-gGuRsA gPosVK"
+            class="sc-ehALMs ldTHEZ"
             href="/recherche"
             rel="nofollow"
           >
@@ -142,30 +142,39 @@ exports[`<CookiePolicy /> should render 1`] = `
               />
             </svg>
           </a>
+        </div>
+        <div
+          class="sc-dbXCOC cQdJqC"
+        >
           <button
-            aria-label="menu principal"
-            class="sc-hiKfDv ismPOA sc-ciSkZP dAZGnz sc-dkiSSI caVllS"
+            class="sc-hiKfDv eWfpdP sc-efHYUO sc-cjzNjn jCFqKB kzMsMm"
           >
-            <svg
-              aria-hidden="true"
-              class="sc-jcwpoC gzqLpW"
-              fill="none"
-              viewBox="0 0 32 32"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-            </svg>
+            Accessibilité
           </button>
         </div>
+        <button
+          aria-label="menu principal"
+          class="sc-hiKfDv eYOUOk sc-ciSkZP dAZGnz sc-dkiSSI HAPvx"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-jcwpoC gzqLpW"
+            fill="none"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
       </div>
     </header>
     <main
-      class="sc-hGwcmR PNYdx"
+      class="sc-dwxYdI eaCtmO"
       id="content"
       tabindex="-1"
     >
@@ -230,7 +239,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               ou par voie postale :
             </p>
             <address
-              class="sc-iuImSO hvpsrY"
+              class="sc-gVtoEh fiZtAn"
             >
               Direction des systèmes d’information
               <br />
@@ -467,7 +476,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               </p>
             </div>
             <button
-              class="sc-hiKfDv fABUwE"
+              class="sc-hiKfDv cdukKM"
             >
               Contacter nos services en région
               <svg
@@ -587,7 +596,7 @@ exports[`<CookiePolicy /> should render 1`] = `
               >
                 <li>
                   <button
-                    class="sc-hiKfDv fruFDR sc-gGGFjW cdZoeH"
+                    class="sc-hiKfDv eWfpdP sc-gGGFjW cdZoeH"
                   >
                     Contact
                   </button>

@@ -77,7 +77,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                 Consultez
                  
                 <button
-                  class="sc-hiKfDv fruFDR sc-dSnXvR fivlYt"
+                  class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
                   type="button"
                 >
                   notre aide
@@ -86,7 +86,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               </span>
             </p>
             <button
-              class="sc-hiKfDv jbMTFD sc-dvXYtj kMeFfA"
+              class="sc-hiKfDv dNqnKz sc-dvXYtj kMeFfA"
               title="fermer la modale"
             >
               <div

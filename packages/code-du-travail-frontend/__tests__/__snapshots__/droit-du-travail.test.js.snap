@@ -3,38 +3,38 @@
 exports[`<DroitDuTravail /> should render 1`] = `
 <div>
   <div
-    class="sc-liAPKD hPLSGP"
+    class="sc-bTJQgd hstQcF"
   >
     <div
-      class="sc-cvdZrU gxPBua"
+      class="sc-hQYpqk daeA-dQ"
     />
     <header
-      class="sc-iueNdr ckXaeM"
+      class="sc-dbXCOC dFJVRM"
     >
       <div
-        class="sc-dbXCOC gQqTaZ"
+        class="sc-ehALMs cMTvIu"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-bdnxRM sc-ehALMs bCGhmq udlgT"
+        class="sc-bdnxRM sc-EhTUr bCGhmq fJiJFi"
       >
         <a
-          class="sc-hGwcmR imKRxI"
+          class="sc-dwxYdI ytzQT"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-iuImSO vQMBb"
+            class="sc-gVtoEh kQJPrA"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-EhTUr dULUny"
+            class="sc-hJFzke bUkwiY"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-hJFzke jAUZYZ"
+          class="sc-fTZpSt liNWHy"
         >
           <form
             action="/recherche"
@@ -102,7 +102,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hiKfDv jbMTFD sc-fyGvY juKGUv"
+              class="sc-hiKfDv dNqnKz sc-fyGvY juKGUv"
               title="Lancer ma recherche"
               type="submit"
             >
@@ -122,11 +122,11 @@ exports[`<DroitDuTravail /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-dwxYdI bBWkZj"
+          class="sc-hGwcmR da-dvzS"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-gVtoEh cSmArU"
+            class="sc-cvdZrU jLSUsH"
             href="/recherche"
             rel="nofollow"
           >
@@ -142,30 +142,39 @@ exports[`<DroitDuTravail /> should render 1`] = `
               />
             </svg>
           </a>
+        </div>
+        <div
+          class="sc-liAPKD ebBJJA"
+        >
           <button
-            aria-label="menu principal"
-            class="sc-hiKfDv ismPOA sc-ciSkZP dAZGnz sc-cjzNjn SGKJs"
+            class="sc-hiKfDv eWfpdP sc-efHYUO sc-iuImSO jCFqKB jPVUyz"
           >
-            <svg
-              aria-hidden="true"
-              class="sc-jcwpoC gzqLpW"
-              fill="none"
-              viewBox="0 0 32 32"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-            </svg>
+            Accessibilité
           </button>
         </div>
+        <button
+          aria-label="menu principal"
+          class="sc-hiKfDv eYOUOk sc-ciSkZP dAZGnz sc-cjzNjn fjQoHj"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-jcwpoC gzqLpW"
+            fill="none"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
       </div>
     </header>
     <main
-      class="sc-fTZpSt yYmOO"
+      class="sc-fTFMiz fNiufz"
       id="content"
       tabindex="-1"
     >
@@ -191,7 +200,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
             >
               Retrouvez la définition du droit du travail, les textes qui en sont à l’origine 
               <br
-                class="sc-bTJQgd eyXdLq"
+                class="sc-ByBTK dLjoiS"
               />
               ainsi que leur articulation.
             </p>
@@ -2245,7 +2254,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             Ce principe ne s’applique pas dans
                              
                             <button
-                              class="sc-hiKfDv kQaPVm"
+                              class="sc-hiKfDv cKEotg"
                             >
                               13 matières
                               <svg
@@ -2264,7 +2273,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                             où la loi reconnaît la primauté à la convention collective de branche et
                              
                             <button
-                              class="sc-hiKfDv kQaPVm"
+                              class="sc-hiKfDv cKEotg"
                             >
                               4 matières
                               <svg
@@ -2685,7 +2694,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               </p>
             </div>
             <button
-              class="sc-hiKfDv fABUwE"
+              class="sc-hiKfDv cdukKM"
             >
               Contacter nos services en région
               <svg
@@ -2805,7 +2814,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               >
                 <li>
                   <button
-                    class="sc-hiKfDv fruFDR sc-iXquSf kxARyD"
+                    class="sc-hiKfDv eWfpdP sc-iXquSf kxARyD"
                   >
                     Contact
                   </button>

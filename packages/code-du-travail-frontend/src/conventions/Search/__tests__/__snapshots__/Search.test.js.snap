@@ -41,7 +41,7 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
           class="sc-iXeHaJ gxasLI"
         >
           <button
-            class="sc-hiKfDv fruFDR sc-kTCsyW jThxDW"
+            class="sc-hiKfDv eWfpdP sc-kTCsyW jThxDW"
           >
             small title 1
              
@@ -67,7 +67,7 @@ exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
       Consultez
        
       <button
-        class="sc-hiKfDv fruFDR sc-dSnXvR fivlYt"
+        class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
         type="button"
       >
         notre aide
@@ -109,7 +109,7 @@ exports[`<Search /> should render 1`] = `
       Consultez
        
       <button
-        class="sc-hiKfDv fruFDR sc-dSnXvR fivlYt"
+        class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
         type="button"
       >
         notre aide
@@ -159,7 +159,7 @@ exports[`<Search /> should show no results when no result 1`] = `
       Consultez
        
       <button
-        class="sc-hiKfDv fruFDR sc-dSnXvR fivlYt"
+        class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
         type="button"
       >
         notre aide
@@ -254,7 +254,7 @@ exports[`<Search /> should show spinner when loading 1`] = `
       Consultez
        
       <button
-        class="sc-hiKfDv fruFDR sc-dSnXvR fivlYt"
+        class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
         type="button"
       >
         notre aide
@@ -351,7 +351,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
       Consultez
        
       <button
-        class="sc-hiKfDv fruFDR sc-dSnXvR fivlYt"
+        class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
         type="button"
       >
         notre aide
@@ -430,7 +430,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
       Consultez
        
       <button
-        class="sc-hiKfDv fruFDR sc-dSnXvR fivlYt"
+        class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
         type="button"
       >
         notre aide
@@ -487,7 +487,7 @@ exports[`<Search /> when searching SIREN, should use API SIREN and siret2idcc 1`
             Entreprise 2 93100 Commune test 1
           </div>
           <button
-            class="sc-hiKfDv fruFDR sc-kTCsyW kZZWQL"
+            class="sc-hiKfDv eWfpdP sc-kTCsyW kZZWQL"
           >
              
             <span
@@ -512,7 +512,7 @@ exports[`<Search /> when searching SIREN, should use API SIREN and siret2idcc 1`
       Consultez
        
       <button
-        class="sc-hiKfDv fruFDR sc-dSnXvR fivlYt"
+        class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
         type="button"
       >
         notre aide
@@ -562,7 +562,7 @@ exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`
       Consultez
        
       <button
-        class="sc-hiKfDv fruFDR sc-dSnXvR fivlYt"
+        class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
         type="button"
       >
         notre aide
@@ -614,7 +614,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
           class="sc-iXeHaJ gxasLI"
         >
           <button
-            class="sc-hiKfDv fruFDR sc-kTCsyW jThxDW"
+            class="sc-hiKfDv eWfpdP sc-kTCsyW jThxDW"
           >
             titre convention 1
              
@@ -652,7 +652,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
             Entreprise 1 93100 Commune test
           </div>
           <button
-            class="sc-hiKfDv fruFDR sc-kTCsyW kZZWQL"
+            class="sc-hiKfDv eWfpdP sc-kTCsyW kZZWQL"
           >
             Short Convention 1
              
@@ -678,7 +678,7 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
       Consultez
        
       <button
-        class="sc-hiKfDv fruFDR sc-dSnXvR fivlYt"
+        class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
         type="button"
       >
         notre aide

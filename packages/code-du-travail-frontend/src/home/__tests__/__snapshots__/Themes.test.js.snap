@@ -133,7 +133,7 @@ exports[`<Themes /> should render 1`] = `
                     >
                       
                       <h3
-                        class="sc-euEtCV fbieFC"
+                        class="sc-euEtCV ionzWf"
                       >
                         Embauche et contrat de travail
                       </h3>
@@ -183,7 +183,7 @@ exports[`<Themes /> should render 1`] = `
                     >
                       
                       <h3
-                        class="sc-euEtCV fbieFC"
+                        class="sc-euEtCV ionzWf"
                       >
                         Salaire et Rémunération
                       </h3>
@@ -801,7 +801,7 @@ exports[`<Themes /> should render 1`] = `
                     >
                       
                       <h3
-                        class="sc-euEtCV fbieFC"
+                        class="sc-euEtCV ionzWf"
                       >
                         Temps de travail
                       </h3>
@@ -813,7 +813,7 @@ exports[`<Themes /> should render 1`] = `
           </div>
         </div>
         <a
-          class="sc-hiKfDv eGHUCM"
+          class="sc-hiKfDv dOLmw"
           href="/themes"
         >
           Voir tous les thèmes 

@@ -6,7 +6,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
     aria-hidden="true"
   >
     <button
-      class="sc-hiKfDv fABUwE"
+      class="sc-hiKfDv cdukKM"
     >
       texte dans le bouton
     </button>
@@ -69,7 +69,7 @@ exports[`<AccessibilityModal /> renders a popup when click on button 1`] = `
               Passer le site en noir et blanc
             </label>
             <button
-              class="sc-hiKfDv jbMTFD sc-dvXYtj kMeFfA"
+              class="sc-hiKfDv dNqnKz sc-dvXYtj kMeFfA"
               title="fermer la modale"
             >
               <div

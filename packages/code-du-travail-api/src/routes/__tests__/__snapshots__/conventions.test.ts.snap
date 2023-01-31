@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`returns the agreement document from idcc 843 1`] = `
+exports[`Conventions /conventions/:slug returns the agreement document from idcc 843 1`] = `
 Object {
   "answers": Array [
     Object {

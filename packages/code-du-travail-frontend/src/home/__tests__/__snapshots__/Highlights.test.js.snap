@@ -49,7 +49,7 @@ exports[`<Highlights /> should render 1`] = `
                       Santé, sécurité et conditions de travail
                     </p>
                     <h3
-                      class="sc-euEtCV fbieFC"
+                      class="sc-euEtCV ionzWf"
                     >
                       Coronavirus : je suis salarié
                     </h3>
@@ -89,7 +89,7 @@ exports[`<Highlights /> should render 1`] = `
                       Santé, sécurité et conditions de travail
                     </p>
                     <h3
-                      class="sc-euEtCV fbieFC"
+                      class="sc-euEtCV ionzWf"
                     >
                       Coronavirus : je suis employeur
                     </h3>

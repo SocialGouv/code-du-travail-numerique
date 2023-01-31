@@ -48,14 +48,8 @@ function PageContribution(props: Props): JSX.Element {
     };
   };
 
-  const {
-    breadcrumbs,
-    title,
-    answers,
-    description,
-    relatedItems,
-    content,
-  } = props;
+  const { breadcrumbs, title, answers, description, relatedItems, content } =
+    props;
 
   const metas = buildTitleAndDescription(
     breadcrumbs,

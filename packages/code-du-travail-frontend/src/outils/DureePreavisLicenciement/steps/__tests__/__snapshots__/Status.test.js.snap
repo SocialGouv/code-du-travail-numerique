@@ -194,7 +194,7 @@ exports[`<StepStatus /> should render coefficient 1`] = `
       </span>
       <button
         aria-label="Plus d'informations"
-        class="sc-hiKfDv fruFDR sc-jgPyTC bxvCsc"
+        class="sc-hiKfDv eWfpdP sc-jgPyTC bxvCsc"
         title="Plus d'informations"
         type="button"
       >

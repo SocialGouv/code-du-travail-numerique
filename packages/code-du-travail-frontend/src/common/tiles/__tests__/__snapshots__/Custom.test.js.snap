@@ -68,7 +68,7 @@ exports[`<CallToActionTile /> should render 1`] = `
       >
         
         <p
-          class="sc-euEtCV fbieFC"
+          class="sc-euEtCV ionzWf"
         >
           Saluez moi
         </p>
@@ -87,7 +87,7 @@ exports[`<CallToActionTile /> should render 1`] = `
           class="sc-jtiXyc cgUMTP"
         >
           <button
-            class="sc-hiKfDv eMETnV"
+            class="sc-hiKfDv hvWLsX"
           >
             Bonjour
             <svg

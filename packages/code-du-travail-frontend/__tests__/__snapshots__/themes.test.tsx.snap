@@ -3,38 +3,38 @@
 exports[`<Theme /> should render 1`] = `
 <div>
   <div
-    class="sc-gVtoEh bNdPtj"
+    class="sc-cvdZrU iBIlMD"
   >
     <div
-      class="sc-hJFzke kIuLXy"
+      class="sc-fTZpSt cDmNhx"
     />
     <header
-      class="sc-Jgsit jOUenW"
+      class="sc-gGuRsA iHbfvI"
     >
       <div
-        class="sc-gGuRsA dnwBxl"
+        class="sc-iueNdr dYLHDF"
         id="printDate"
       >
         le 04/01/2020, 00:00:00
       </div>
       <div
-        class="sc-bdnxRM sc-iueNdr bCGhmq cDtfhU"
+        class="sc-bdnxRM sc-hGwcmR bCGhmq hJojLk"
       >
         <a
-          class="sc-dbXCOC jXZgLh"
+          class="sc-iuImSO gKRDOo"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="République française, site officiel du gouvernement. Liberté, égalité, fraternité"
-            class="sc-ehALMs ePFqwp"
+            class="sc-EhTUr bBVDkV"
             height="115"
             src="/static/assets/img/logo-rf.svg"
             width="135"
           />
           <svg
             aria-label="Code du travail numérique"
-            class="sc-hGwcmR jMaXzI"
+            class="sc-dwxYdI bknJLj"
             fill="none"
             viewBox="0 0 657 265"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ exports[`<Theme /> should render 1`] = `
           </svg>
         </a>
         <div
-          class="sc-dwxYdI gqOIJO"
+          class="sc-liAPKD dhHFwG"
         >
           <form
             action="/recherche"
@@ -102,7 +102,7 @@ exports[`<Theme /> should render 1`] = `
             </div>
             <button
               aria-label="Lancer ma recherche"
-              class="sc-hiKfDv jbMTFD sc-bFSbwS kROClp"
+              class="sc-hiKfDv dNqnKz sc-bFSbwS kROClp"
               title="Lancer ma recherche"
               type="submit"
             >
@@ -122,11 +122,11 @@ exports[`<Theme /> should render 1`] = `
           </form>
         </div>
         <div
-          class="sc-iuImSO esmUXQ"
+          class="sc-dbXCOC gOTfwD"
         >
           <a
             aria-label="Lancer ma recherche"
-            class="sc-EhTUr jSJMDx"
+            class="sc-hJFzke fHPcNP"
             href="/recherche"
             rel="nofollow"
           >
@@ -142,30 +142,39 @@ exports[`<Theme /> should render 1`] = `
               />
             </svg>
           </a>
+        </div>
+        <div
+          class="sc-gVtoEh fVmRNE"
+        >
           <button
-            aria-label="menu principal"
-            class="sc-hiKfDv ismPOA sc-ciSkZP dAZGnz sc-fxFQKN hyXziR"
+            class="sc-hiKfDv eWfpdP sc-efHYUO sc-ehALMs jCFqKB dcnWa-d"
           >
-            <svg
-              aria-hidden="true"
-              class="sc-jcwpoC gzqLpW"
-              fill="none"
-              viewBox="0 0 32 32"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-            </svg>
+            Accessibilité
           </button>
         </div>
+        <button
+          aria-label="menu principal"
+          class="sc-hiKfDv eYOUOk sc-ciSkZP dAZGnz sc-fxFQKN jXPlga"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-jcwpoC gzqLpW"
+            fill="none"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
       </div>
     </header>
     <main
-      class="sc-liAPKD jQTHPO"
+      class="sc-bTJQgd eSiTAb"
       id="content"
       tabindex="-1"
     >
@@ -256,34 +265,34 @@ exports[`<Theme /> should render 1`] = `
             </p>
           </header>
           <div
-            class="sc-bdnxRM sc-hfVBHA bCGhmq cMvweQ"
+            class="sc-bdnxRM sc-hndLF bCGhmq bsrBkP"
           >
             <a
-              class="sc-fiCYzP fipvaQ sc-hiKfDv fABUwE"
+              class="sc-geBCVM beEByn sc-hiKfDv cdukKM"
               href="/themes/121-cdi"
             >
               CDI
             </a>
             <a
-              class="sc-fiCYzP fipvaQ sc-hiKfDv fABUwE"
+              class="sc-geBCVM beEByn sc-hiKfDv cdukKM"
               href="/themes/122-cdd"
             >
               CDD
             </a>
             <a
-              class="sc-fiCYzP fipvaQ sc-hiKfDv fABUwE"
+              class="sc-geBCVM beEByn sc-hiKfDv cdukKM"
               href="/themes/123-interim"
             >
               Intérim
             </a>
             <a
-              class="sc-fiCYzP fipvaQ sc-hiKfDv fABUwE"
+              class="sc-geBCVM beEByn sc-hiKfDv cdukKM"
               href="/themes/124-contrat-dapprentissage"
             >
               Contrat d'apprentissage
             </a>
             <a
-              class="sc-fiCYzP fipvaQ sc-hiKfDv fABUwE"
+              class="sc-geBCVM beEByn sc-hiKfDv cdukKM"
               href="/themes/125-contrat-de-professionnalisation"
             >
               Contrat de professionnalisation
@@ -326,7 +335,7 @@ exports[`<Theme /> should render 1`] = `
               </p>
             </div>
             <button
-              class="sc-hiKfDv fABUwE"
+              class="sc-hiKfDv cdukKM"
             >
               Contacter nos services en région
               <svg
@@ -446,7 +455,7 @@ exports[`<Theme /> should render 1`] = `
               >
                 <li>
                   <button
-                    class="sc-hiKfDv fruFDR sc-ecQkzk gxwSW"
+                    class="sc-hiKfDv eWfpdP sc-ecQkzk gxwSW"
                   >
                     Contact
                   </button>

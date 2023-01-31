@@ -16,14 +16,14 @@ import { Layout } from "../../src/layout/Layout";
 import {
   AgreementSearch,
   CalculateurIndemnite,
+  DismissalProcess,
   DureePreavisDemission,
   DureePreavisLicenciement,
   DureePreavisRetraite,
+  fetchTool,
   HeuresRechercheEmploi,
   SimulateurEmbauche,
   SimulateurIndemnitePrecarite,
-  DismissalProcess,
-  fetchTool,
 } from "../../src/outils";
 
 const {
