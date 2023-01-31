@@ -109,30 +109,6 @@ const createAncienneteStore: StoreSlice<
         ? ValidationResponse.Valid
         : ValidationResponse.NotValid;
     },
-    onPrevStep: () => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        "outil",
-        `click_previous_${toolName}`,
-        IndemniteLicenciementStepName.Anciennete,
-      ]);
-    },
-    onEnterpriseSearch: (value) => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.ENTERPRISE_SEARCH,
-        toolName,
-        JSON.stringify(value),
-      ]);
-    },
-    onAgreementSearch: (value) => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        MatomoSearchAgreementCategory.AGREEMENT_SEARCH,
-        toolName,
-        JSON.stringify(value),
-      ]);
-    },
   },
 });
 
