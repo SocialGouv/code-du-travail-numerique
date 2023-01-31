@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`return item from its id 1`] = `
+exports[`Items return item from its id 1`] = `
 Object {
   "_id": "9",
   "_index": "cdtn_test-v2_documents",
@@ -36,7 +36,7 @@ Object {
 }
 `;
 
-exports[`return item from its url 1`] = `
+exports[`Items return item from its url 1`] = `
 Array [
   Object {
     "_id": "4",
@@ -657,7 +657,7 @@ Array [
 ]
 `;
 
-exports[`return item from source and slug 1`] = `
+exports[`Items return item from source and slug 1`] = `
 Object {
   "_id": "4",
   "_index": "cdtn_test-v2_documents",
@@ -732,12 +732,18 @@ Object {
       "url": "https://www.service-public.fr/particuliers/vosdroits/F87",
     },
     Object {
-      "action": "Estimer",
-      "description": "Estimez simplement le montant de l’indemnité de licenciement",
+      "description": "Le code du travail prévoit que le salarié bénéficie de congés à l’occasion de certains événements familiaux. Ils n’entrainent aucune diminution de la rémunération…",
       "reco": "search",
-      "slug": "indemnite-licenciement",
-      "source": "outils",
-      "title": "Indemnité de licenciement",
+      "slug": "les-conges-pour-evenements-familiaux",
+      "source": "contributions",
+      "title": "Les congés pour événements familiaux",
+    },
+    Object {
+      "description": "Le décès de l’employeur a des conséquences différentes sur le contrat de travail, selon que l’employeur est une entreprise individuelle ou un employeur…",
+      "reco": "search",
+      "slug": "quelles-sont-les-consequences-du-deces-de-lemployeur-sur-le-contrat-de-travail",
+      "source": "contributions",
+      "title": "Quelles sont les conséquences du décès de l’employeur sur le contrat de travail ?",
     },
   ],
 }

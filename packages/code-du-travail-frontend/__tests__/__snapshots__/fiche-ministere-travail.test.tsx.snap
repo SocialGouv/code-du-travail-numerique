@@ -7,7 +7,7 @@ exports[`<FicheMT /> should render 1`] = `
   padding: 0 2rem;
 }
 
-.c83 {
+.c87 {
   max-width: 124rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -15,13 +15,13 @@ exports[`<FicheMT /> should render 1`] = `
   max-width: 74rem;
 }
 
-.c67 {
+.c71 {
   padding: 3.2rem 0;
   background-color: transparent;
   color: #3e486e;
 }
 
-.c35 {
+.c39 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -30,7 +30,7 @@ exports[`<FicheMT /> should render 1`] = `
   background-color: #fff;
 }
 
-.c35:before {
+.c39:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -44,15 +44,15 @@ exports[`<FicheMT /> should render 1`] = `
   content: "";
 }
 
-.c35 > *:first-child {
+.c39 > *:first-child {
   margin-top: 0;
 }
 
-.c35 > *:last-child {
+.c39 > *:last-child {
   margin-bottom: 0;
 }
 
-.c55 {
+.c59 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -60,15 +60,15 @@ exports[`<FicheMT /> should render 1`] = `
   border: 1px solid #f2f5fa;
 }
 
-.c55 > *:first-child {
+.c59 > *:first-child {
   margin-top: 0;
 }
 
-.c55 > *:last-child {
+.c59 > *:last-child {
   margin-bottom: 0;
 }
 
-.c69 {
+.c73 {
   padding: 2rem 2.4rem;
   color: #3e486e;
   border-radius: 0.6rem;
@@ -76,15 +76,15 @@ exports[`<FicheMT /> should render 1`] = `
   background-color: #fff;
 }
 
-.c69 > *:first-child {
+.c73 > *:first-child {
   margin-top: 0;
 }
 
-.c69 > *:last-child {
+.c73 > *:last-child {
   margin-bottom: 0;
 }
 
-.c49 {
+.c53 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -97,7 +97,7 @@ exports[`<FicheMT /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c73 {
+.c77 {
   position: absolute;
   background-color: #f66663;
   border-radius: 0;
@@ -110,7 +110,7 @@ exports[`<FicheMT /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c82 {
+.c86 {
   position: absolute;
   background-color: #7994d4;
   border-radius: 0.6rem;
@@ -123,7 +123,7 @@ exports[`<FicheMT /> should render 1`] = `
   transform: translateX(-50%);
 }
 
-.c62 {
+.c66 {
   position: relative;
   display: block;
   margin: 3.2rem 0 2rem 0;
@@ -134,7 +134,7 @@ exports[`<FicheMT /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c72 {
+.c76 {
   position: relative;
   display: block;
   margin: 3.2rem 0 2rem 0;
@@ -147,7 +147,7 @@ exports[`<FicheMT /> should render 1`] = `
   padding-left: 2.4rem;
 }
 
-.c91 {
+.c95 {
   position: relative;
   display: block;
   margin: 0 0 2rem 0;
@@ -158,7 +158,7 @@ exports[`<FicheMT /> should render 1`] = `
   line-height: 1.625;
 }
 
-.c60 {
+.c64 {
   position: relative;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -172,20 +172,20 @@ exports[`<FicheMT /> should render 1`] = `
   transition: transform 250ms linear;
 }
 
-[aria-expanded="true"] .c59,
-[aria-selected="true"] .c60 {
+[aria-expanded="true"] .c63,
+[aria-selected="true"] .c64 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.c63 {
+.c67 {
   padding: 1.6rem;
   -webkit-animation: iHsNqv 250ms ease-in;
   animation: iHsNqv 250ms ease-in;
 }
 
-.c58 {
+.c62 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -202,14 +202,14 @@ exports[`<FicheMT /> should render 1`] = `
   cursor: pointer;
 }
 
-.c58:hover,
-.c58:focus,
-.c58:focus-within,
-.c58[aria-expanded="true"] {
+.c62:hover,
+.c62:focus,
+.c62:focus-within,
+.c62[aria-expanded="true"] {
   color: #3e486e;
 }
 
-.c61 {
+.c65 {
   margin: 2rem 0 2rem 1rem;
   color: #2f3b6c;
   font-weight: 600;
@@ -218,11 +218,11 @@ exports[`<FicheMT /> should render 1`] = `
   line-height: 1.25;
 }
 
-.c64 > *:first-child {
+.c68 > *:first-child {
   margin-top: 0;
 }
 
-.c64 > *:last-child {
+.c68 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -288,7 +288,7 @@ exports[`<FicheMT /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c95 {
+.c20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -333,11 +333,11 @@ exports[`<FicheMT /> should render 1`] = `
   transition: color 250ms linear, text-decoration 250ms linear;
 }
 
-.c95:focus {
+.c20:focus {
   color: #f66663;
 }
 
-.c75 {
+.c79 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -375,14 +375,14 @@ exports[`<FicheMT /> should render 1`] = `
   will-change: transform;
 }
 
-.c75:link,
-.c75:visited {
+.c79:link,
+.c79:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c75:not([disabled]):hover {
+.c79:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -391,7 +391,7 @@ exports[`<FicheMT /> should render 1`] = `
   border-color: #dee5ef;
 }
 
-.c75[disabled] {
+.c79[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -399,7 +399,7 @@ exports[`<FicheMT /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c85 {
+.c89 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -437,14 +437,14 @@ exports[`<FicheMT /> should render 1`] = `
   will-change: transform;
 }
 
-.c85:link,
-.c85:visited {
+.c89:link,
+.c89:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #fff;
 }
 
-.c85:not([disabled]):hover {
+.c89:not([disabled]):hover {
   opacity: 1;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -453,7 +453,7 @@ exports[`<FicheMT /> should render 1`] = `
   border-color: #a0b3e0;
 }
 
-.c85[disabled] {
+.c89[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -461,7 +461,7 @@ exports[`<FicheMT /> should render 1`] = `
   cursor: not-allowed;
 }
 
-.c19 {
+.c23 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -499,14 +499,14 @@ exports[`<FicheMT /> should render 1`] = `
   will-change: transform;
 }
 
-.c19:link,
-.c19:visited {
+.c23:link,
+.c23:visited {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #3e486e;
 }
 
-.c19:not([disabled]):hover {
+.c23:not([disabled]):hover {
   opacity: 0.6;
   -webkit-transform: translateY(-2px);
   -ms-transform: translateY(-2px);
@@ -515,7 +515,7 @@ exports[`<FicheMT /> should render 1`] = `
   border-color: transparent;
 }
 
-.c19[disabled] {
+.c23[disabled] {
   background-color: #e4e8ef;
   border-color: #e4e8ef;
   color: #9298af;
@@ -536,48 +536,66 @@ exports[`<FicheMT /> should render 1`] = `
   clip: rect(0,0,0,0) !important;
 }
 
-.c20 {
+.c24 {
   height: auto;
   padding: 0;
 }
 
-.c22 {
+.c26 {
   width: 5.4rem;
   height: 5.4rem;
   color: #7994d4;
 }
 
-.c51 {
+.c21 {
+  position: relative;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 2rem;
+  font-weight: normal;
+  font-size: 1.6rem;
+  font-family: "Open Sans",sans-serif;
+  border: none;
+}
+
+.c55 {
   color: #3e486e;
   font-size: 1.4rem;
   font-weight: 400;
   margin: 0;
 }
 
-.c57 {
+.c61 {
   color: #3e486e;
   font-size: 1.6rem;
   font-weight: 400;
   margin: 0;
 }
 
-.c43 {
+.c47 {
   position: relative;
 }
 
-.c92 {
+.c96 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c25 {
+.c29 {
   position: relative;
   overflow: hidden;
 }
 
-.c25:before,
-.c25:after {
+.c29:before,
+.c29:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -592,19 +610,19 @@ exports[`<FicheMT /> should render 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c25:before {
+.c29:before {
   left: -2rem;
 }
 
-.c25:after {
+.c29:after {
   right: -2rem;
 }
 
-.c26 {
+.c30 {
   overflow-x: auto;
 }
 
-.c44 {
+.c48 {
   display: block;
   margin: 0 0 1rem 0;
   color: #4d73b8;
@@ -615,21 +633,21 @@ exports[`<FicheMT /> should render 1`] = `
   text-transform: uppercase;
 }
 
-.c46 {
+.c50 {
   margin-top: 0;
   margin-bottom: 4rem;
   margin-left: -4rem;
   text-align: left;
 }
 
-.c80 {
+.c84 {
   margin-top: 0;
   margin-bottom: 2rem;
   margin-left: auto;
   text-align: center;
 }
 
-.c48 {
+.c52 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -640,7 +658,7 @@ exports[`<FicheMT /> should render 1`] = `
   padding-left: 4rem;
 }
 
-.c81 {
+.c85 {
   position: relative;
   margin: 0;
   color: #2f3b6c;
@@ -652,7 +670,7 @@ exports[`<FicheMT /> should render 1`] = `
   text-align: center;
 }
 
-.c32 {
+.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -671,11 +689,11 @@ exports[`<FicheMT /> should render 1`] = `
   padding: 0;
 }
 
-.c33 {
+.c37 {
   width: 80%;
 }
 
-.c38 {
+.c42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -686,7 +704,7 @@ exports[`<FicheMT /> should render 1`] = `
   align-items: center;
 }
 
-.c39 {
+.c43 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -707,20 +725,20 @@ exports[`<FicheMT /> should render 1`] = `
   transition: color 0.3s linear;
 }
 
-.c39:hover,
-.c39:focus {
+.c43:hover,
+.c43:focus {
   color: #f66663;
 }
 
-.c39.spacing-left {
+.c43.spacing-left {
   margin-left: 1rem;
 }
 
-.c39.spacing-top {
+.c43.spacing-top {
   margin-top: 1rem;
 }
 
-.c42 {
+.c46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -743,20 +761,20 @@ exports[`<FicheMT /> should render 1`] = `
   text-decoration: none;
 }
 
-.c42:hover,
-.c42:focus {
+.c46:hover,
+.c46:focus {
   color: #f66663;
 }
 
-.c42.spacing-left {
+.c46.spacing-left {
   margin-left: 1rem;
 }
 
-.c42.spacing-top {
+.c46.spacing-top {
   margin-top: 1rem;
 }
 
-.c40 {
+.c44 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -766,13 +784,13 @@ exports[`<FicheMT /> should render 1`] = `
   border-radius: 50%;
 }
 
-.c41 {
+.c45 {
   display: block;
   width: 2rem;
   height: 2rem;
 }
 
-.c36 {
+.c40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -782,7 +800,7 @@ exports[`<FicheMT /> should render 1`] = `
   flex-direction: column;
 }
 
-.c37 {
+.c41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -801,13 +819,13 @@ exports[`<FicheMT /> should render 1`] = `
   margin-bottom: 1rem;
 }
 
-.c45 {
+.c49 {
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
 }
 
-.c47 {
+.c51 {
   -webkit-order: 3;
   -ms-flex-order: 3;
   order: 3;
@@ -815,7 +833,7 @@ exports[`<FicheMT /> should render 1`] = `
   outline: none;
 }
 
-.c50 {
+.c54 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -826,15 +844,15 @@ exports[`<FicheMT /> should render 1`] = `
   font-size: 1.4rem;
 }
 
-.c54 {
+.c58 {
   margin: 3.2rem 0 0 0;
 }
 
-.c24 {
+.c28 {
   margin-bottom: 1rem;
 }
 
-.c27 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -845,7 +863,7 @@ exports[`<FicheMT /> should render 1`] = `
   align-items: center;
 }
 
-.c28 {
+.c32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -858,11 +876,11 @@ exports[`<FicheMT /> should render 1`] = `
   white-space: nowrap;
 }
 
-.c28:first-of-type {
+.c32:first-of-type {
   padding-left: 0;
 }
 
-.c29 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -875,28 +893,28 @@ exports[`<FicheMT /> should render 1`] = `
   text-decoration: none;
 }
 
-.c29:focus,
-.c29:hover,
-.c29:active {
+.c33:focus,
+.c33:hover,
+.c33:active {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c30 {
+.c34 {
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
   color: #7994d4;
 }
 
-.c31 {
+.c35 {
   width: 1.2rem;
   height: 1.2rem;
   margin-right: 1rem;
   color: #7994d4;
 }
 
-.c70 {
+.c74 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -914,7 +932,7 @@ exports[`<FicheMT /> should render 1`] = `
   justify-content: stretch;
 }
 
-.c71 {
+.c75 {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -924,7 +942,7 @@ exports[`<FicheMT /> should render 1`] = `
   padding-bottom: 1rem;
 }
 
-.c74 {
+.c78 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -939,23 +957,23 @@ exports[`<FicheMT /> should render 1`] = `
   margin: 0;
 }
 
-.c76 + .c76 {
+.c80 + .c80 {
   margin-left: 4rem;
 }
 
-.c56 {
+.c60 {
   margin: 1.6rem auto;
 }
 
-.c56 div > *:first-child {
+.c60 div > *:first-child {
   margin-top: 0;
 }
 
-.c56 div > *:last-child {
+.c60 div > *:last-child {
   margin-bottom: 0;
 }
 
-.c66 {
+.c70 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -973,13 +991,13 @@ exports[`<FicheMT /> should render 1`] = `
   font-weight: bold;
 }
 
-.c77 {
+.c81 {
   width: 100%;
   padding-top: 4rem;
   overflow-x: hidden;
 }
 
-.c78 {
+.c82 {
   position: relative;
   z-index: 1;
   margin-top: 4rem;
@@ -987,7 +1005,7 @@ exports[`<FicheMT /> should render 1`] = `
   background-color: #f2f5fa;
 }
 
-.c78:before {
+.c82:before {
   position: absolute;
   top: -27px;
   left: -50%;
@@ -999,27 +1017,27 @@ exports[`<FicheMT /> should render 1`] = `
   content: "";
 }
 
-.c79 {
+.c83 {
   position: relative;
   padding-bottom: 7rem;
   text-align: center;
 }
 
-.c84 {
+.c88 {
   margin-bottom: 2rem;
 }
 
-.c86 {
+.c90 {
   width: 1.5em;
   margin-left: 1.6rem;
 }
 
-.c87 {
+.c91 {
   padding: 5rem 0;
   background-color: #e4e8ef;
 }
 
-.c88 {
+.c92 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1030,15 +1048,15 @@ exports[`<FicheMT /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c89 + .c89 {
+.c93 + .c93 {
   padding-left: 1.6rem;
 }
 
-.c90 {
+.c94 {
   font-size: 1.6rem;
 }
 
-.c94 {
+.c98 {
   font-weight: normal;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1047,11 +1065,11 @@ exports[`<FicheMT /> should render 1`] = `
   display: inline-block;
 }
 
-.c96 {
+.c99 {
   padding: 0.4rem 0;
 }
 
-.c97 {
+.c100 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1073,11 +1091,11 @@ exports[`<FicheMT /> should render 1`] = `
   padding-bottom: 1.6rem;
 }
 
-.c98 {
+.c101 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.c99 {
+.c102 {
   margin-bottom: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1159,33 +1177,11 @@ exports[`<FicheMT /> should render 1`] = `
   color: #7994d4;
 }
 
-.c21 {
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c2 {
   position: absolute;
   top: 0;
   z-index: 3;
   width: 100%;
-  height: 13.5rem;
   background-color: #fff;
   box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
 }
@@ -1193,6 +1189,23 @@ exports[`<FicheMT /> should render 1`] = `
 .c3 {
   display: none;
   text-align: right;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c22 {
+  padding: 0 0 0 30px;
+  background: url("/static/assets/img/acceccibility-logo.svg") 6px center no-repeat;
+  display: block !important;
 }
 
 .c5 {
@@ -1208,6 +1221,9 @@ exports[`<FicheMT /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
 }
@@ -1250,22 +1266,8 @@ exports[`<FicheMT /> should render 1`] = `
   color: #f66663;
 }
 
-.c17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+.c19 {
+  display: none;
 }
 
 .c18 {
@@ -1282,13 +1284,13 @@ exports[`<FicheMT /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 30rem;
+  width: 38rem;
   margin-left: 1.6rem;
 }
 
 .c0 {
   position: relative;
-  padding-top: calc(13.5rem);
+  padding-top: calc(20rem);
 }
 
 .c1 {
@@ -1302,20 +1304,20 @@ exports[`<FicheMT /> should render 1`] = `
   background: linear-gradient( #f2f5fa 40rem, #fff );
 }
 
-.c23 {
+.c27 {
   position: relative;
   margin-top: 6rem;
 }
 
-.c65 > *:first-child {
+.c69 > *:first-child {
   margin-top: 0;
 }
 
-.c65 > *:last-child {
+.c69 > *:last-child {
   margin-bottom: 0;
 }
 
-.c34 img {
+.c38 img {
   max-width: 100%;
   height: auto;
 }
@@ -1334,282 +1336,292 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c83 {
+  .c87 {
     padding: 0;
   }
 }
 
 @media print {
-  .c83 {
+  .c87 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c67 {
+  .c71 {
     padding: 2.4rem 0;
   }
 }
 
 @media print {
-  .c35:before {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c35 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c35 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c55 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c55 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c69 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c69 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c62 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c72 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c72 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c91 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c63 {
-    padding: 1rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c61 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c14 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c95 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c95 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c75 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c75 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c75 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c85 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c85 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c85 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c19 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:980px) {
-
-}
-
-@media (max-width:600px) {
-  .c22 {
-    width: 4.2rem;
-    height: 4.2rem;
-  }
-}
-
-@media (max-width:980px) {
-
-}
-
-@media (max-width:600px) {
-  .c25 {
-    overflow-x: hidden;
-  }
-}
-
-@media (max-width:600px) {
-  .c25:before,
-  .c25:after {
-    display: block;
-  }
-}
-
-@media (max-width:600px) {
-  .c26 {
-    overflow-x: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c46 {
-    margin-bottom: 3.2rem;
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c80 {
-    margin-bottom: 1rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c48 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c48 {
-    font-size: 2.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c81 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c32 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c33 {
-    width: 100%;
-  }
-}
-
-@media print {
-  .c38 {
+  .c39:before {
     display: none;
   }
 }
 
 @media (max-width:600px) {
   .c39 {
-    font-size: 1.4rem;
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media print {
+  .c39 {
+    padding: 0 5pt;
+    border: none;
   }
 }
 
 @media (max-width:600px) {
-  .c42 {
-    font-size: 1.4rem;
+  .c59 {
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media print {
+  .c59 {
+    padding: 0 5pt;
+    border: none;
   }
 }
 
 @media (max-width:600px) {
+  .c73 {
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media print {
+  .c73 {
+    padding: 0 5pt;
+    border: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c66 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c76 {
+    margin-left: -1rem;
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c76 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c95 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c67 {
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c65 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c14 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c14 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c20 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c20 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c79 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c79 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c79 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c89 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c89 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c89 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    font-size: 1.4rem;
+  }
+}
+
+@media print {
+  .c23 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c23 {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width:980px) {
+
+}
+
+@media (max-width:600px) {
+  .c26 {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c21 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 5.4rem;
+    padding: 0;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c29 {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width:600px) {
+  .c29:before,
+  .c29:after {
+    display: block;
+  }
+}
+
+@media (max-width:600px) {
+  .c30 {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c50 {
+    margin-bottom: 3.2rem;
+    margin-left: -1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c84 {
+    margin-bottom: 1rem;
+    margin-left: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c52 {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c52 {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c85 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c36 {
+    padding: 0;
+  }
+}
+
+@media (max-width:980px) {
   .c37 {
+    width: 100%;
+  }
+}
+
+@media print {
+  .c42 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c43 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c46 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c41 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
@@ -1623,13 +1635,13 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media print {
-  .c37 {
+  .c41 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c50 {
+  .c54 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -1641,41 +1653,41 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c54 {
+  .c58 {
     margin-top: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c53 {
+  .c57 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c52 {
+  .c56 {
     display: block;
   }
 }
 
 @media print {
-  .c24 {
+  .c28 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c28 {
+  .c32 {
     font-size: 1.2rem;
   }
 
-  .c28:not(:last-of-type) {
+  .c32:not(:last-of-type) {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c31 {
+  .c35 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
@@ -1683,13 +1695,13 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media print {
-  .c68 {
+  .c72 {
     display: none;
   }
 }
 
 @media (max-width:1180px) {
-  .c70 {
+  .c74 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1703,20 +1715,20 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c71 {
+  .c75 {
     margin-bottom: 1.6rem;
   }
 }
 
 @media (max-width:600px) {
-  .c71 {
+  .c75 {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (max-width:1180px) {
-  .c74 {
+  .c78 {
     -webkit-box-pack: space-around;
     -webkit-justify-content: space-around;
     -ms-flex-pack: space-around;
@@ -1725,13 +1737,13 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media (max-width:1180px) {
-  .c76 + .c76 {
+  .c80 + .c80 {
     margin-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c66 {
+  .c70 {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
@@ -1740,32 +1752,32 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media print {
-  .c66 {
+  .c70 {
     display: none;
   }
 }
 
 @media print {
-  .c78 {
+  .c82 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c79 {
+  .c83 {
     padding-top: 0;
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c87 {
+  .c91 {
     padding-bottom: 4rem;
   }
 }
 
 @media (max-width:600px) {
-  .c88 {
+  .c92 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1773,26 +1785,26 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c89 + .c89 {
+  .c93 + .c93 {
     padding-left: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c93 {
+  .c97 {
     text-align: center;
   }
 }
 
 @media (max-width:600px) {
-  .c90 {
+  .c94 {
     margin-top: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width:980px) {
-  .c99 {
+  .c102 {
     display: none;
   }
 }
@@ -1811,6 +1823,27 @@ exports[`<FicheMT /> should render 1`] = `
     height: 5.4rem;
     padding: 1rem 5.5rem 1rem 1.6rem;
   }
+}
+
+@media (min-width:980px) {
+  .c25 {
+    width: 100%;
+  }
+
+  .c25:before {
+    display: block;
+    position: absolute;
+    bottom: 5.5rem;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #e4e8ef;
+    content: "";
+  }
+}
+
+@media (max-width:980px) {
+
 }
 
 @media (max-width:980px) {
@@ -1842,6 +1875,12 @@ exports[`<FicheMT /> should render 1`] = `
 @media print {
   .c3 {
     display: block;
+  }
+}
+
+@media (max-width:980px) {
+  .c22 {
+    display: none !important;
   }
 }
 
@@ -1880,8 +1919,14 @@ exports[`<FicheMT /> should render 1`] = `
   }
 }
 
+@media (min-width:980px) {
+  .c19 {
+    display: block;
+  }
+}
+
 @media print {
-  .c17 {
+  .c19 {
     display: none;
   }
 }
@@ -1906,6 +1951,7 @@ exports[`<FicheMT /> should render 1`] = `
 @media (max-width:980px) {
   .c9 {
     display: none;
+    width: 80%;
   }
 }
 
@@ -1934,7 +1980,7 @@ exports[`<FicheMT /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c27 {
     margin-top: 3.2rem;
   }
 }
@@ -2080,57 +2126,66 @@ exports[`<FicheMT /> should render 1`] = `
               />
             </svg>
           </a>
+        </div>
+        <div
+          class="c19"
+        >
           <button
-            aria-label="menu principal"
-            class="c19 c20 c21"
+            class="c20 c21 c22"
           >
-            <svg
-              aria-hidden="true"
-              class="c22"
-              fill="none"
-              viewBox="0 0 32 32"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-            </svg>
+            Accessibilité
           </button>
         </div>
+        <button
+          aria-label="menu principal"
+          class="c23 c24 c25"
+        >
+          <svg
+            aria-hidden="true"
+            class="c26"
+            fill="none"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M7 11a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm1 4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H8z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
       </div>
     </header>
     <main
-      class="c23"
+      class="c27"
       id="content"
       tabindex="-1"
     >
       <nav
         aria-label="Fil d'ariane"
-        class="c24"
+        class="c28"
       >
         <div
-          class="c25"
+          class="c29"
         >
           <div
-            class="c26"
+            class="c30"
           >
             <ol
-              class="c4 c27"
+              class="c4 c31"
             >
               <li
-                class="c28"
+                class="c32"
               >
                 <a
-                  class="c29"
+                  class="c33"
                   href="/"
                   title="Retour à l'accueil"
                 >
                   <svg
                     aria-hidden="true"
-                    class="c30"
+                    class="c34"
                     fill="none"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
@@ -2144,11 +2199,11 @@ exports[`<FicheMT /> should render 1`] = `
                 </a>
               </li>
               <li
-                class="c28"
+                class="c32"
               >
                 <svg
                   aria-hidden="true"
-                  class="c31"
+                  class="c35"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2160,7 +2215,7 @@ exports[`<FicheMT /> should render 1`] = `
                 </svg>
                  
                 <a
-                  class="c29"
+                  class="c33"
                   href="/themes/6-sante-securite-et-conditions-de-travail"
                 >
                   Santé, sécurité et conditions de travail
@@ -2171,37 +2226,37 @@ exports[`<FicheMT /> should render 1`] = `
         </div>
       </nav>
       <div
-        class="c4 c32"
+        class="c4 c36"
       >
         <div
-          class="c33 c34"
+          class="c37 c38"
         >
           <div
             class="c4"
           >
             <div
-              class="c35"
+              class="c39"
             >
               <div
-                class="c36"
+                class="c40"
               >
                 <div
-                  class="c37"
+                  class="c41"
                 >
                   <div
-                    class="c38"
+                    class="c42"
                   >
                     <button
-                      class="c39 no-after spacing-left"
+                      class="c43 no-after spacing-left"
                       title="Partager sur Facebook"
                       type="button"
                     >
                       <span
-                        class="c40"
+                        class="c44"
                       >
                         <svg
                           aria-hidden="true"
-                          class="c41"
+                          class="c45"
                           fill="none"
                           viewBox="0 0 16 16"
                           xmlns="http://www.w3.org/2000/svg"
@@ -2214,16 +2269,16 @@ exports[`<FicheMT /> should render 1`] = `
                       </span>
                     </button>
                     <a
-                      class="c42 spacing-left"
+                      class="c46 spacing-left"
                       href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Fiche%20MT%20test&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                       title="Envoyer par email"
                     >
                       <span
-                        class="c40"
+                        class="c44"
                       >
                         <svg
                           aria-hidden="true"
-                          class="c41"
+                          class="c45"
                           fill="none"
                           viewBox="0 0 16 16"
                           xmlns="http://www.w3.org/2000/svg"
@@ -2240,15 +2295,15 @@ exports[`<FicheMT /> should render 1`] = `
                       </span>
                     </a>
                     <button
-                      class="c39 spacing-left"
+                      class="c43 spacing-left"
                       title="Partager sur LinkedIn"
                     >
                       <span
-                        class="c40"
+                        class="c44"
                       >
                         <svg
                           aria-hidden="true"
-                          class="c41"
+                          class="c45"
                           fill="none"
                           viewBox="0 0 16 16"
                           xmlns="http://www.w3.org/2000/svg"
@@ -2261,18 +2316,18 @@ exports[`<FicheMT /> should render 1`] = `
                       </span>
                     </button>
                     <div
-                      class="c43"
+                      class="c47"
                     >
                       <button
-                        class="c39 spacing-left"
+                        class="c43 spacing-left"
                         title="Plus d’options"
                       >
                         <span
-                          class="c40"
+                          class="c44"
                         >
                           <svg
                             aria-hidden="true"
-                            class="c41"
+                            class="c45"
                             fill="none"
                             viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg"
@@ -2298,30 +2353,30 @@ exports[`<FicheMT /> should render 1`] = `
                   </div>
                 </div>
                 <p
-                  class="c44 c45"
+                  class="c48 c49"
                 >
                   Santé, sécurité et conditions de travail
                 </p>
                 <header
-                  class="c46 c47"
+                  class="c50 c51"
                 >
                   <h1
-                    class="c48"
+                    class="c52"
                   >
                     <span
-                      class="c49"
+                      class="c53"
                     />
                     Fiche MT test
                   </h1>
                 </header>
                 <div
-                  class="c50"
+                  class="c54"
                 >
                   <p
-                    class="c51"
+                    class="c55"
                   >
                     <span
-                      class="c52"
+                      class="c56"
                     >
                       Source:
                        
@@ -2336,12 +2391,12 @@ exports[`<FicheMT /> should render 1`] = `
                     </span>
                     <span
                       aria-hidden="true"
-                      class="c53"
+                      class="c57"
                     >
                        - 
                     </span>
                     <span
-                      class="c52"
+                      class="c56"
                     >
                       Mis à jour le
                        : 
@@ -2351,13 +2406,13 @@ exports[`<FicheMT /> should render 1`] = `
                 </div>
               </div>
               <div
-                class="c54"
+                class="c58"
               >
                 <div
-                  class="c55 c56"
+                  class="c59 c60"
                 >
                   <p
-                    class="c57"
+                    class="c61"
                   >
                     lorem ipsum intro
                   </p>
@@ -2381,7 +2436,7 @@ exports[`<FicheMT /> should render 1`] = `
                           aria-controls="accordion__panel-t1-Visite-d-information-et-de-prevention-pour-qui"
                           aria-disabled="false"
                           aria-expanded="false"
-                          class="c58"
+                          class="c62"
                           data-accordion-component="AccordionItemButton"
                           id="accordion__heading-t1-Visite-d-information-et-de-prevention-pour-qui"
                           role="button"
@@ -2389,7 +2444,7 @@ exports[`<FicheMT /> should render 1`] = `
                         >
                           <svg
                             aria-hidden="true"
-                            class="c59 c60"
+                            class="c63 c64"
                             fill="none"
                             height="24"
                             stroke="currentColor"
@@ -2405,10 +2460,10 @@ exports[`<FicheMT /> should render 1`] = `
                             />
                           </svg>
                           <div
-                            class="c61"
+                            class="c65"
                           >
                             <h2
-                              class="c62"
+                              class="c66"
                               data-testid="undefined-0"
                               style="margin: 0px;"
                             >
@@ -2419,16 +2474,16 @@ exports[`<FicheMT /> should render 1`] = `
                       </div>
                       <div
                         aria-hidden="true"
-                        class="c63"
+                        class="c67"
                         data-accordion-component="AccordionItemPanel"
                         hidden=""
                         id="accordion__panel-t1-Visite-d-information-et-de-prevention-pour-qui"
                       >
                         <div
-                          class="c64"
+                          class="c68"
                         >
                           <div
-                            class="c65"
+                            class="c69"
                           >
                             <p>
                               Depuis le 1er janvier 2017, la 
@@ -2487,27 +2542,27 @@ exports[`<FicheMT /> should render 1`] = `
             </div>
           </div>
           <div
-            class="c4 c66"
+            class="c4 c70"
           >
             <p
-              class="c57"
+              class="c61"
             >
               Partager ce contenu : 
             </p>
             <div
-              class="c38"
+              class="c42"
             >
               <button
-                class="c39 no-after spacing-left"
+                class="c43 no-after spacing-left"
                 title="Partager sur Facebook"
                 type="button"
               >
                 <span
-                  class="c40"
+                  class="c44"
                 >
                   <svg
                     aria-hidden="true"
-                    class="c41"
+                    class="c45"
                     fill="none"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
@@ -2520,16 +2575,16 @@ exports[`<FicheMT /> should render 1`] = `
                 </span>
               </button>
               <a
-                class="c42 spacing-left"
+                class="c46 spacing-left"
                 href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Fiche%20MT%20test&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                 title="Envoyer par email"
               >
                 <span
-                  class="c40"
+                  class="c44"
                 >
                   <svg
                     aria-hidden="true"
-                    class="c41"
+                    class="c45"
                     fill="none"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
@@ -2546,15 +2601,15 @@ exports[`<FicheMT /> should render 1`] = `
                 </span>
               </a>
               <button
-                class="c39 spacing-left"
+                class="c43 spacing-left"
                 title="Partager sur LinkedIn"
               >
                 <span
-                  class="c40"
+                  class="c44"
                 >
                   <svg
                     aria-hidden="true"
-                    class="c41"
+                    class="c45"
                     fill="none"
                     viewBox="0 0 16 16"
                     xmlns="http://www.w3.org/2000/svg"
@@ -2567,18 +2622,18 @@ exports[`<FicheMT /> should render 1`] = `
                 </span>
               </button>
               <div
-                class="c43"
+                class="c47"
               >
                 <button
-                  class="c39 spacing-left"
+                  class="c43 spacing-left"
                   title="Plus d’options"
                 >
                   <span
-                    class="c40"
+                    class="c44"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c41"
+                      class="c45"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2604,37 +2659,37 @@ exports[`<FicheMT /> should render 1`] = `
             </div>
           </div>
           <div
-            class="c67 c68"
+            class="c71 c72"
           >
             <div
               class="c4"
             >
               <div
-                class="c69"
+                class="c73"
               >
                 <div
-                  class="c70"
+                  class="c74"
                 >
                   <h2
-                    class="c71 c72"
+                    class="c75 c76"
                     data-testid="heading"
                   >
                     <span
-                      class="c73"
+                      class="c77"
                       data-testid="stripe"
                     />
                     Avez-vous trouvé la réponse à votre question ?
                   </h2>
                   <p
-                    class="c74"
+                    class="c78"
                   >
                     <button
-                      class="c75 c76 "
+                      class="c79 c80 "
                     >
                       Non
                     </button>
                     <button
-                      class="c75 c76 "
+                      class="c79 c80 "
                     >
                       Oui
                     </button>
@@ -2647,45 +2702,45 @@ exports[`<FicheMT /> should render 1`] = `
       </div>
     </main>
     <div
-      class="c77"
+      class="c81"
     >
       <footer
-        class="c78"
+        class="c82"
       >
         <div
-          class="c67 c79"
+          class="c71 c83"
         >
           <div
             class="c4"
           >
             <div
               aria-level="2"
-              class="c80"
+              class="c84"
               role="heading"
             >
               <p
-                class="c81"
+                class="c85"
               >
                 <span
-                  class="c82"
+                  class="c86"
                 />
                 Besoin de plus d’informations ?
               </p>
             </div>
             <div
-              class="c83 c84"
+              class="c87 c88"
             >
               <p>
                 Les services du ministère du Travail en région informent, conseillent et orientent les salariés et les employeurs du secteur privé sur leurs questions en droit du travail.
               </p>
             </div>
             <button
-              class="c85"
+              class="c89"
             >
               Contacter nos services en région
               <svg
                 aria-hidden="true"
-                class="c86"
+                class="c90"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2699,28 +2754,28 @@ exports[`<FicheMT /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c67 c87"
+          class="c71 c91"
         >
           <div
-            class="c4 c88"
+            class="c4 c92"
           >
             <div
-              class="c89 "
+              class="c93 "
             >
               <strong
                 aria-level="2"
-                class="c90 c91"
+                class="c94 c95"
                 data-testid="heading"
                 role="heading"
               >
                 Code du travail numérique
               </strong>
               <ul
-                class="c92 c93"
+                class="c96 c97"
               >
                 <li>
                   <a
-                    class="c94"
+                    class="c98"
                     href="/droit-du-travail"
                   >
                     Le droit du travail
@@ -2728,7 +2783,7 @@ exports[`<FicheMT /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c94"
+                    class="c98"
                     href="/glossaire"
                   >
                     Glossaire
@@ -2736,7 +2791,7 @@ exports[`<FicheMT /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c94"
+                    class="c98"
                     href="/a-propos"
                   >
                     À propos
@@ -2744,7 +2799,7 @@ exports[`<FicheMT /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c94"
+                    class="c98"
                     href="/mentions-legales"
                   >
                     Mentions légales
@@ -2752,7 +2807,7 @@ exports[`<FicheMT /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c94"
+                    class="c98"
                     href="/accessibilite"
                   >
                     Accessibilité : partiellement conforme
@@ -2760,7 +2815,7 @@ exports[`<FicheMT /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c94"
+                    class="c98"
                     href="/politique-confidentialite"
                   >
                     Politique de confidentialité
@@ -2768,7 +2823,7 @@ exports[`<FicheMT /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c94"
+                    class="c98"
                     href="/stats"
                   >
                     Statistiques d’utilisation
@@ -2776,7 +2831,7 @@ exports[`<FicheMT /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c94"
+                    class="c98"
                     href="/integration"
                   >
                     Intégrer les outils du Code du travail numérique
@@ -2785,22 +2840,22 @@ exports[`<FicheMT /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c89 "
+              class="c93 "
             >
               <strong
                 aria-level="2"
-                class="c90 c91"
+                class="c94 c95"
                 data-testid="heading"
                 role="heading"
               >
                 Aidez-nous à améliorer cet outil
               </strong>
               <ul
-                class="c92 c93"
+                class="c96 c97"
               >
                 <li>
                   <button
-                    class="c95 c96"
+                    class="c20 c99"
                   >
                     Contact
                   </button>
@@ -2808,7 +2863,7 @@ exports[`<FicheMT /> should render 1`] = `
                 <li>
                   <a
                     aria-label="Contribuer sur Github (Nouvelle fenêtre)"
-                    class="c94"
+                    class="c98"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2819,7 +2874,7 @@ exports[`<FicheMT /> should render 1`] = `
                 <li>
                   <a
                     aria-label="Journal des modifications (Nouvelle fenêtre)"
-                    class="c94"
+                    class="c98"
                     href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2830,23 +2885,23 @@ exports[`<FicheMT /> should render 1`] = `
               </ul>
             </div>
             <div
-              class="c89 "
+              class="c93 "
             >
               <strong
                 aria-level="2"
-                class="c90 c91"
+                class="c94 c95"
                 data-testid="heading"
                 role="heading"
               >
                 En collaboration avec
               </strong>
               <ul
-                class="c92 c93"
+                class="c96 c97"
               >
                 <li>
                   <a
                     aria-label="La Direction Générale du Travail (Nouvelle fenêtre)"
-                    class="c94"
+                    class="c98"
                     href="https://travail-emploi.gouv.fr/ministere/organisation/organisation-des-directions-et-services/article/organisation-de-la-direction-generale-du-travail-dgt"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2857,7 +2912,7 @@ exports[`<FicheMT /> should render 1`] = `
                 <li>
                   <a
                     aria-label="La fabrique des Ministères sociaux (Nouvelle fenêtre)"
-                    class="c94"
+                    class="c98"
                     href="https://fabrique.social.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2868,7 +2923,7 @@ exports[`<FicheMT /> should render 1`] = `
                 <li>
                   <a
                     aria-label="beta.gouv.fr (Nouvelle fenêtre)"
-                    class="c94"
+                    class="c98"
                     href="https://beta.gouv.fr/"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -2881,12 +2936,12 @@ exports[`<FicheMT /> should render 1`] = `
           </div>
         </div>
         <ul
-          class="c97"
+          class="c100"
         >
           <li>
             <a
               aria-label="travail-emploi.gouv.fr (Nouvelle fenêtre)"
-              class="c94 c98"
+              class="c98 c101"
               href="https://travail-emploi.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2895,7 +2950,7 @@ exports[`<FicheMT /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c99"
+              class="c102"
             >
               |
             </span>
@@ -2903,7 +2958,7 @@ exports[`<FicheMT /> should render 1`] = `
           <li>
             <a
               aria-label="service-public.fr (Nouvelle fenêtre)"
-              class="c94 c98"
+              class="c98 c101"
               href="https://www.service-public.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2912,7 +2967,7 @@ exports[`<FicheMT /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c99"
+              class="c102"
             >
               |
             </span>
@@ -2920,7 +2975,7 @@ exports[`<FicheMT /> should render 1`] = `
           <li>
             <a
               aria-label="legifrance.gouv.fr (Nouvelle fenêtre)"
-              class="c94 c98"
+              class="c98 c101"
               href="https://www.legifrance.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2929,7 +2984,7 @@ exports[`<FicheMT /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c99"
+              class="c102"
             >
               |
             </span>
@@ -2937,7 +2992,7 @@ exports[`<FicheMT /> should render 1`] = `
           <li>
             <a
               aria-label="data.gouv.fr (Nouvelle fenêtre)"
-              class="c94 c98"
+              class="c98 c101"
               href="https://www.data.gouv.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2946,7 +3001,7 @@ exports[`<FicheMT /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c99"
+              class="c102"
             >
               |
             </span>
@@ -2954,7 +3009,7 @@ exports[`<FicheMT /> should render 1`] = `
           <li>
             <a
               aria-label="gouvernement.fr (Nouvelle fenêtre)"
-              class="c94 c98"
+              class="c98 c101"
               href="https://www.gouvernement.fr"
               rel="noopener noreferrer"
               target="_blank"
@@ -2963,7 +3018,7 @@ exports[`<FicheMT /> should render 1`] = `
             </a>
             <span
               aria-hidden="true"
-              class="c99"
+              class="c102"
             >
               |
             </span>
@@ -2971,7 +3026,7 @@ exports[`<FicheMT /> should render 1`] = `
           <li>
             <a
               aria-label="cnil.fr (Nouvelle fenêtre)"
-              class="c94 c98"
+              class="c98 c101"
               href="https://www.cnil.fr/"
               rel="noopener noreferrer"
               target="_blank"

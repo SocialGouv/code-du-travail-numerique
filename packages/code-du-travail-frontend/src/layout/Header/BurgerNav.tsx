@@ -1,8 +1,7 @@
 import {
   BurgerNav as RootBurgerNav,
   BurgerNavButton as NavButton,
-  BurgerNavCurrent as NavCurrent,
-  BurgerNavLink as NavAnchor,
+  BurgerNavItem as NavAnchor,
   theme,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
@@ -10,63 +9,88 @@ import React from "react";
 import styled from "styled-components";
 
 import { AccessibilityModal } from "../../common/AccessibilityModal";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 
+export const SUB_MENU_HEIGHT = "5.5rem";
 type Props = {
   currentPage: string;
 };
 const HeaderBurgerNav = ({ currentPage }: Props): JSX.Element => {
   return (
     <StyledBurgerNav>
-      <AccessibilityModal>
-        {(openModal) => (
-          <NavButton onClick={openModal}>Accessibilité</NavButton>
-        )}
-      </AccessibilityModal>
       <Nav id="navigation" aria-label="Navigation du site">
         <Ul>
-          {currentPage !== "tools" ? (
-            <Li>
-              <Link href="/outils" passHref>
-                <NavAnchor>Boîte&nbsp;à&nbsp;outils</NavAnchor>
-              </Link>
-            </Li>
-          ) : (
-            <Li title="Page courante">
-              <NavCurrent>Boîte&nbsp;à&nbsp;outils</NavCurrent>
-            </Li>
-          )}
-          {currentPage !== "themes" ? (
-            <Li>
-              <Link href="/themes" passHref>
-                <NavAnchor>Thèmes</NavAnchor>
-              </Link>
-            </Li>
-          ) : (
-            <Li title={currentPage === "themes" ? "Page courante" : null}>
-              <NavCurrent>Thèmes</NavCurrent>
-            </Li>
-          )}
+          <LiMobileOnly>
+            <AccessibilityModal>
+              {(openModal) => (
+                <NavButton onClick={openModal}>Accessibilité</NavButton>
+              )}
+            </AccessibilityModal>
+          </LiMobileOnly>
+          <Li>
+            <Link href="/outils" passHref>
+              <NavAnchor isCurrent={currentPage === "tools"}>
+                Boîte&nbsp;à&nbsp;outils
+              </NavAnchor>
+            </Link>
+          </Li>
+          <Li>
+            <Link href={`/${getRouteBySource(SOURCES.LETTERS)}`} passHref>
+              <NavAnchor isCurrent={currentPage === SOURCES.LETTERS}>
+                Modèles de documents
+              </NavAnchor>
+            </Link>
+          </Li>
+          <Li>
+            <Link href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}`} passHref>
+              <NavAnchor isCurrent={currentPage === SOURCES.CONTRIBUTIONS}>
+                Vos fiches pratiques
+              </NavAnchor>
+            </Link>
+          </Li>
+          <Li>
+            <Link href={`/${getRouteBySource(SOURCES.CCN)}`} passHref>
+              <NavAnchor isCurrent={currentPage === SOURCES.CCN}>
+                Votre convention collective
+              </NavAnchor>
+            </Link>
+          </Li>
+          <Li>
+            <Link href="/themes" passHref>
+              <NavAnchor isCurrent={currentPage === "themes"}>Thèmes</NavAnchor>
+            </Link>
+          </Li>
         </Ul>
       </Nav>
     </StyledBurgerNav>
   );
 };
-const { breakpoints } = theme;
+const { breakpoints, spacings } = theme;
 
 const StyledBurgerNav = styled(RootBurgerNav)`
-  order: 2;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @media (min-width: ${breakpoints.tablet}) {
+    width: 100%;
+
+    :before {
+      display: block;
+      position: absolute;
+      bottom: ${SUB_MENU_HEIGHT};
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: ${({ theme }) => theme.bgTertiary};
+      content: "";
+    }
+  }
 `;
 
 const Nav = styled.nav`
-  margin: 0;
-  padding: 0;
-  height: 100%;
+  height: ${SUB_MENU_HEIGHT};
+  margin-top: ${spacings.small};
+  width: 100%;
   @media (max-width: ${breakpoints.tablet}) {
     height: auto;
+    width: auto;
   }
 `;
 
@@ -77,7 +101,7 @@ const Ul = styled.ul`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 100%;
   @media (max-width: ${breakpoints.tablet}) {
     flex-direction: column;
@@ -94,7 +118,13 @@ const Li = styled.li`
   height: 100%;
   @media (max-width: ${breakpoints.tablet}) {
     height: auto;
+    width: 100%;
   }
 `;
-
+const LiMobileOnly = styled(Li)`
+  display: none;
+  @media (max-width: ${breakpoints.tablet}) {
+    display: block;
+  }
+`;
 export default HeaderBurgerNav;
