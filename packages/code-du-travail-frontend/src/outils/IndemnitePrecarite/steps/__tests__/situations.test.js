@@ -79,6 +79,7 @@ describe("situations", () => {
       expect(supportedCCResult.find((item) => item.idcc === 20)).toStrictEqual({
         fullySupported: true,
         idcc: 20,
+        withoutLegal: false,
       });
     });
   });

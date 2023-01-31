@@ -1,609 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Themes /> should render 1`] = `
-.c3 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c0 {
-  position: relative;
-  margin: 6rem 0;
-  padding: 6rem 0;
-  min-height: 10rem;
-  color: #3e486e;
-}
-
-.c1 {
-  position: absolute;
-  top: 0;
-  right: 30%;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  display: block;
-  background-color: #f2f5fa;
-  border-radius: 0 10rem 10rem 0;
-  content: "";
-}
-
-.c2 {
-  position: relative;
-  z-index: 0;
-}
-
-.c10 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 0;
-  left: 50%;
-  width: 7rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c21 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c29 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #f66663;
-  border-color: #f66663;
-  box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
-  opacity: 1;
-  will-change: transform;
-}
-
-.c29:link,
-.c29:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c29:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #f99593;
-  border-color: #f99593;
-}
-
-.c29[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c12 {
-  position: relative;
-  overflow: visible;
-}
-
-.c12:before,
-.c12:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: none;
-  width: 4rem;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  content: "";
-  pointer-events: none;
-  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
-}
-
-.c12:before {
-  left: -2rem;
-}
-
-.c12:after {
-  right: -2rem;
-}
-
-.c14 {
-  overflow-x: visible;
-}
-
-.c15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-top: 0;
-  margin-right: calc(-1 * 1rem);
-  margin-bottom: 4rem;
-  margin-left: calc(-1 * 1rem);
-  padding: 0;
-  list-style-type: none;
-}
-
-.c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  margin: 1rem;
-  padding: 0;
-  width: calc(100% / 4 - 2 * 1rem - 1px);
-}
-
-.c23 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1;
-  -ms-flex: 1 1;
-  flex: 1 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  max-width: 100%;
-  margin: 0;
-  padding: 3.2rem 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #fff;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  cursor: pointer;
-  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
-  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
-  transition: box-shadow 250ms linear, transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c23:hover,
-.c23:active,
-.c23:focus {
-  color: #3e486e;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-}
-
-.c25 {
-  display: block;
-  width: 7.2rem;
-  height: 7.2rem;
-  margin: 0 auto 0.4rem;
-  padding: 1.4rem;
-  background-color: #f2f5fa;
-  border-radius: 50%;
-}
-
-.c24 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 100%;
-}
-
-.c26 {
-  padding-right: 1rem;
-  height: auto;
-  display: block;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: start;
-  -ms-flex-pack: start;
-  justify-content: start;
-  margin: inherit;
-}
-
-.c27 {
-  margin: 0;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  font-weight: 600;
-}
-
-.c8 {
-  margin-top: 0;
-  margin-bottom: 4rem;
-  margin-left: auto;
-  text-align: center;
-}
-
-.c19 {
-  margin-top: 0;
-  margin-bottom: 4rem;
-  margin-left: auto;
-  text-align: left;
-}
-
-.c11 {
-  margin-top: 1rem;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-.c22 {
-  margin-top: 1rem;
-  margin-bottom: 0;
-  padding-left: 3.2rem;
-}
-
-.c9 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-top: 1.6rem;
-}
-
-.c20 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-}
-
-.c17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  max-height: 18rem;
-  overflow: visible;
-}
-
-.c7 {
-  display: none;
-}
-
-.c4 {
-  position: relative;
-  text-align: center;
-}
-
-.c5 {
-  position: absolute;
-  top: 13rem;
-  left: 3rem;
-  display: block;
-  width: 81rem;
-  height: 52rem;
-}
-
-.c6 {
-  width: 100%;
-  color: #7994d4;
-}
-
-.c18 {
-  width: 100%;
-  -webkit-transform: translateX(20%);
-  -ms-transform: translateX(20%);
-  transform: translateX(20%);
-}
-
-.c28 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  height: 115%;
-  overflow: visible;
-}
-
-.c30 {
-  width: 2.8rem;
-  height: 1.5rem;
-  margin-left: 1.6rem;
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c3 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    margin: 3.2rem 0 4rem;
-    padding: 3.2rem 0 4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    right: 2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c29 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c29 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c29 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
-    overflow-x: hidden;
-  }
-}
-
-@media (max-width:600px) {
-  .c12:before,
-  .c12:after {
-    display: block;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    overflow-x: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
-    margin-bottom: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c15 {
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    margin-right: 0;
-    margin-bottom: 2rem;
-    margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    min-width: 23rem;
-  }
-
-  .c16:first-of-type {
-    margin-left: 2rem;
-  }
-
-  .c16:last-of-type:after {
-    display: block;
-    width: 2rem;
-    height: 100%;
-    background-color: transparent;
-    content: "";
-  }
-}
-
-@media (max-width:1180px) {
-  .c16 {
-    width: calc( 100% / 3 - 2 * 1rem - 1px );
-  }
-}
-
-@media (max-width:980px) {
-  .c16 {
-    width: calc( 100% / 2 - 2 * 1rem - 1px );
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    width: 60%;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
-    padding: 2rem 1.6rem;
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
-    margin-bottom: 3.2rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    margin-bottom: 3.2rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c11 {
-    padding-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c22 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    font-size: 2.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c20 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c20 {
-    font-size: 2.6rem;
-  }
-}
-
-@media (max-width:1180px) {
-  .c17 {
-    display: none;
-  }
-}
-
-@media (max-width:1180px) {
-  .c7 {
-    display: block;
-  }
-}
-
-@media (max-width:1180px) {
-  .c5 {
-    display: none;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-gtsrHT duhDTG"
   >
     <div
-      class="c1"
+      class="sc-dlnjwi bheWDA"
     />
     <div
-      class="c2"
+      class="sc-eCApnc fhHpnM"
     >
       <div
-        class="c3 c4"
+        class="sc-bdnxRM sc-jtiXyc bCGhmq iBDFHw"
       >
         <div
-          class="c5"
+          class="sc-ellfGf jUErpi"
         >
           <svg
             aria-hidden="true"
-            class="c6"
+            class="sc-kizEQm fOTuP"
             fill="none"
             viewBox="0 0 807 518"
             xmlns="http://www.w3.org/2000/svg"
@@ -616,54 +32,54 @@ exports[`<Themes /> should render 1`] = `
           </svg>
         </div>
         <div
-          class="c7"
+          class="sc-dvUynV cuidbq"
         >
           <header
-            class="c8"
+            class="sc-eXuyPJ ZSyvw"
           >
             <h2
-              class="c9"
+              class="sc-irKDMX ehzKBH"
             >
               <span
-                class="c10"
+                class="sc-gKAaRy iDZwD"
               />
               Thèmes
             </h2>
             <p
-              class="c11"
+              class="sc-iGkqmO jhCYTj"
             >
               Retrouvez tous nos contenus organisés par thèmes
             </p>
           </header>
         </div>
         <div
-          class="c12 c13"
+          class="sc-eJocfa dnvrjA sc-hhIiOg gEtbSe"
         >
           <div
-            class="c14"
+            class="sc-oeezt hgDFVm"
           >
             <div
-              class="c15"
+              class="sc-eirqVv gqRdkL"
             >
               <div
-                class="c16 c17"
+                class="sc-lbVvki kpySAv sc-kTCsyW eboidf"
               >
                 <div
-                  class="c18"
+                  class="sc-cKRKFl dFpfPf"
                 >
                   <header
-                    class="c19"
+                    class="sc-eXuyPJ blFkeA"
                   >
                     <h2
-                      class="c20"
+                      class="sc-irKDMX hpJIym"
                     >
                       <span
-                        class="c21"
+                        class="sc-gKAaRy jNbrvj"
                       />
                       Thèmes
                     </h2>
                     <p
-                      class="c22"
+                      class="sc-iGkqmO ctZNp"
                     >
                       Retrouvez tous nos contenus organisés par thèmes
                     </p>
@@ -671,20 +87,20 @@ exports[`<Themes /> should render 1`] = `
                 </div>
               </div>
               <div
-                class="c16 c17"
+                class="sc-lbVvki kpySAv sc-kTCsyW eboidf"
               />
               <div
-                class="c16"
+                class="sc-lbVvki kpySAv"
               >
                 <a
-                  class="c23"
+                  class="sc-eGJWMs cMctpi"
                   href="/themes/1-embauche-et-contrat-de-travail"
                 >
                   <div
-                    class="c24"
+                    class="sc-dFRpbK cbvMFR"
                   >
                     <div
-                      class="c25"
+                      class="sc-csTbgd ddMWBg"
                     >
                       <svg
                         aria-hidden="true"
@@ -713,11 +129,11 @@ exports[`<Themes /> should render 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="c26"
+                      class="sc-bsatvv iePphK"
                     >
                       
                       <h3
-                        class="c27"
+                        class="sc-euEtCV ionzWf"
                       >
                         Embauche et contrat de travail
                       </h3>
@@ -726,17 +142,17 @@ exports[`<Themes /> should render 1`] = `
                 </a>
               </div>
               <div
-                class="c16"
+                class="sc-lbVvki kpySAv"
               >
                 <a
-                  class="c23"
+                  class="sc-eGJWMs cMctpi"
                   href="/themes/2-salaire-et-remuneration"
                 >
                   <div
-                    class="c24"
+                    class="sc-dFRpbK cbvMFR"
                   >
                     <div
-                      class="c25"
+                      class="sc-csTbgd ddMWBg"
                     >
                       <svg
                         aria-hidden="true"
@@ -763,11 +179,11 @@ exports[`<Themes /> should render 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="c26"
+                      class="sc-bsatvv iePphK"
                     >
                       
                       <h3
-                        class="c27"
+                        class="sc-euEtCV ionzWf"
                       >
                         Salaire et Rémunération
                       </h3>
@@ -776,11 +192,11 @@ exports[`<Themes /> should render 1`] = `
                 </a>
               </div>
               <div
-                class="c16 c17"
+                class="sc-lbVvki kpySAv sc-kTCsyW eboidf"
               >
                 <svg
                   aria-hidden="true"
-                  class="c28"
+                  class="sc-iIgjPs cAIrTG"
                   fill="none"
                   viewBox="0 0 236 208"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1342,17 +758,17 @@ exports[`<Themes /> should render 1`] = `
                 </svg>
               </div>
               <div
-                class="c16"
+                class="sc-lbVvki kpySAv"
               >
                 <a
-                  class="c23"
+                  class="sc-eGJWMs cMctpi"
                   href="/themes/3-temps-de-travail"
                 >
                   <div
-                    class="c24"
+                    class="sc-dFRpbK cbvMFR"
                   >
                     <div
-                      class="c25"
+                      class="sc-csTbgd ddMWBg"
                     >
                       <svg
                         aria-hidden="true"
@@ -1381,11 +797,11 @@ exports[`<Themes /> should render 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="c26"
+                      class="sc-bsatvv iePphK"
                     >
                       
                       <h3
-                        class="c27"
+                        class="sc-euEtCV ionzWf"
                       >
                         Temps de travail
                       </h3>
@@ -1397,13 +813,13 @@ exports[`<Themes /> should render 1`] = `
           </div>
         </div>
         <a
-          class="c29"
+          class="sc-hiKfDv dOLmw"
           href="/themes"
         >
           Voir tous les thèmes 
           <svg
             aria-hidden="true"
-            class="c30"
+            class="sc-gstuGz hqZxtm"
             fill="none"
             viewBox="0 0 28 15"
             xmlns="http://www.w3.org/2000/svg"

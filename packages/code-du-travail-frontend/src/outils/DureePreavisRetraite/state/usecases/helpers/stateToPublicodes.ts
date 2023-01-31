@@ -22,6 +22,5 @@ export const stateToPublicode = (
     ...senioritySituation,
     "contrat salarié - mise à la retraite":
       origin?.isRetirementMandatory ?? "non",
-    "préavis de retraite": "oui",
   };
 };

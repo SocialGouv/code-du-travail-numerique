@@ -1,12 +1,18 @@
-import { GetState, SetState } from "zustand";
+import { StoreApi } from "zustand";
+import { push as matopush } from "@socialgouv/matomo-next";
 import {
   ContratTravailStoreData,
   ContratTravailStoreInput,
   ContratTravailStoreSlice,
 } from "./types";
 import produce from "immer";
-import { StoreSlice } from "../../../store";
+import { StoreSlice } from "../../../../types";
 import { validateStep } from "./validator";
+import { getErrorEligibility } from "./eligibility";
+import { AncienneteStoreSlice } from "../../Anciennete/store";
+import { ValidationResponse } from "../../../../Components/SimulatorLayout";
+import { MatomoBaseEvent } from "../../../../../lib/matomo/types";
+import { IndemniteLicenciementStepName } from "../../../../IndemniteLicenciement";
 
 const initialState: ContratTravailStoreData = {
   input: {},
@@ -18,10 +24,10 @@ const initialState: ContratTravailStoreData = {
   isStepValid: true,
 };
 
-const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
-  set,
-  get
-) => ({
+const createContratTravailStore: StoreSlice<
+  ContratTravailStoreSlice,
+  AncienneteStoreSlice
+> = (set, get) => ({
   contratTravailData: { ...initialState },
   contratTravailFunction: {
     onChangeTypeContratTravail: (value) => {
@@ -32,26 +38,48 @@ const createContratTravailStore: StoreSlice<ContratTravailStoreSlice> = (
     },
     onChangeLicenciementInaptitude: (value) => {
       applyGenericValidation(get, set, "licenciementInaptitude", value);
+      applyGenericValidation(get, set, "dateArretTravail", undefined);
+      applyGenericValidation(get, set, "arretTravail", undefined);
     },
-    onValidateStepInfo: () => {
-      const { isValid, errorState } = validateStep(
-        get().contratTravailData.input
-      );
+    onChangeArretTravail: (value) => {
+      applyGenericValidation(get, set, "arretTravail", value);
+      applyGenericValidation(get, set, "dateArretTravail", undefined);
+    },
+    onChangeDateArretTravail: (value) => {
+      applyGenericValidation(get, set, "dateArretTravail", value);
+      if (get().ancienneteData.hasBeenSubmit) {
+        get().ancienneteFunction.onNextStep();
+      }
+    },
+    onNextStep: () => {
+      const state = get().contratTravailData.input;
+      const { isValid, errorState } = validateStep(state);
+      let errorEligibility;
+
+      if (isValid) {
+        errorEligibility = getErrorEligibility(state);
+      }
+
       set(
         produce((state: ContratTravailStoreSlice) => {
           state.contratTravailData.hasBeenSubmit = isValid ? false : true;
           state.contratTravailData.isStepValid = isValid;
           state.contratTravailData.error = errorState;
+          state.contratTravailData.error.errorEligibility = errorEligibility;
         })
       );
-      return isValid;
+      return errorEligibility
+        ? ValidationResponse.NotEligible
+        : isValid
+        ? ValidationResponse.Valid
+        : ValidationResponse.NotValid;
     },
   },
 });
 
 const applyGenericValidation = (
-  get: GetState<ContratTravailStoreSlice>,
-  set: SetState<ContratTravailStoreSlice>,
+  get: StoreApi<ContratTravailStoreSlice>["getState"],
+  set: StoreApi<ContratTravailStoreSlice>["setState"],
   paramName: keyof ContratTravailStoreInput,
   value: any
 ) => {

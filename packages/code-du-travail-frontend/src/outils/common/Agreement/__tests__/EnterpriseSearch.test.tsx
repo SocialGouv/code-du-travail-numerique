@@ -107,7 +107,7 @@ describe("EnterpriseSearch", () => {
       );
       getByText("Submit").click();
       expect(
-        queryByText(/Vous devez séléctionner une entreprise/)
+        queryByText(/Vous devez sélectionner une entreprise/)
       ).toBeInTheDocument();
     });
   });
@@ -329,6 +329,7 @@ describe("EnterpriseSearch", () => {
           {
             fullySupported: true,
             idcc: selectedEnterpriseOneAgreement.conventions[0].num,
+            withoutLegal: false,
           },
         ],
       };
@@ -349,6 +350,7 @@ describe("EnterpriseSearch", () => {
           {
             fullySupported: true,
             idcc: selectedEnterpriseTwoAgreements.conventions[0].num,
+            withoutLegal: false,
           },
         ],
       };

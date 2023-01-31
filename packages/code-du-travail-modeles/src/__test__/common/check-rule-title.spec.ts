@@ -2,10 +2,10 @@ import "./publicode-matcher";
 
 import Engine from "publicodes";
 
+import modeles from "../../../src/modeles/modeles-preavis-retraite.json";
 import { extractCcnIds } from "../../internal/extractor";
-import { mergeModels } from "../../internal/merger";
 
-const engine = new Engine(mergeModels());
+const engine = new Engine(modeles as any);
 const allCc = extractCcnIds(engine).concat("");
 allCc.forEach((idcc) => {
   test(`Vérification que l'ensemble des données manquantes pour la CC ${idcc} possède un titre avec un type cdtn`, () => {

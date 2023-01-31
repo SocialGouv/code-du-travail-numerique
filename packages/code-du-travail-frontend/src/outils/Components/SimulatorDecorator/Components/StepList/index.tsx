@@ -10,6 +10,7 @@ export type StepListProps = {
   }[];
   width: string;
   listRef?: React.Ref<HTMLLIElement>;
+  className?: string;
 };
 
 const StepList = ({
@@ -17,9 +18,10 @@ const StepList = ({
   steps,
   width,
   listRef,
+  className,
 }: StepListProps): JSX.Element => {
   return (
-    <StyledWrapper variant="dark" defaultWidth={width}>
+    <StyledWrapper variant="dark" defaultWidth={width} className={className}>
       <Title>
         Étape<HideOnMobile>s</HideOnMobile>
         <StepProgress>
@@ -60,7 +62,8 @@ const StyledWrapper = styled(Wrapper)<{ defaultWidth: string }>`
   display: flex;
   flex-direction: column;
   width: ${({ defaultWidth }) => defaultWidth};
-  padding: 6rem ${spacings.larger} ${spacings.larger} ${spacings.larger};
+  /*  prettier-ignore  */
+  padding: ${spacings.larger} ${spacings.larger} ${spacings.larger} ${spacings.larger};
   border-radius: ${box.borderRadius} 0 0 ${box.borderRadius};
   @media (max-width: ${breakpoints.tablet}) {
     position: relative;
@@ -92,6 +95,7 @@ const HideOnMobile = styled.span`
     display: none;
   }
 `;
+
 const StepProgress = styled.span`
   display: none;
   @media (max-width: ${breakpoints.tablet}) {

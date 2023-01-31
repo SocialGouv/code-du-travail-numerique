@@ -1,3 +1,48 @@
+contrat salarié . convention collective . transports routiers . catégorie professionnelle:
+  titre: Catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  cdtn:
+    type: liste
+    valeurs:
+      Ingénieurs et cadres: "'Ingénieurs et cadres'"
+      Ouvriers: "'Ouvriers'"
+      Employés: "'Employés'"
+      Technicien et agents de maîtrise (TAM): "'TAM'"
+
+contrat salarié . convention collective . transports routiers . catégorie professionnelle . Ingénieurs et cadres:
+  applicable si: catégorie professionnelle = 'Ingénieurs et cadres'
+  valeur: oui
+
+contrat salarié . convention collective . transports routiers . catégorie professionnelle . Ingénieurs et cadres . préavis de retaite:
+  titre: Préavis de retraite pour un ingénieurs et cadres
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 6 mois
+  références:
+    Accord du 30 octobre 1951 relatif aux ingénieurs et cadres - Annexe IV, article 18: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005849573/?idConteneur=KALICONT000005635624
+
+contrat salarié . convention collective . transports routiers . catégorie professionnelle . Ouvriers:
+  applicable si: catégorie professionnelle = 'Ouvriers'
+  valeur: oui
+
+contrat salarié . convention collective . transports routiers . catégorie professionnelle . Employés:
+  applicable si: catégorie professionnelle = 'Employés'
+  valeur: oui
+
+contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM:
+  applicable si: catégorie professionnelle = 'TAM'
+  valeur: oui
+
+contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe:
+  question: Quel est le groupe du salarié&nbsp;?
+  titre: Groupe
+  description: Le groupe du salarié est habituellement mentionné sur le <strong>bulletin de salaire</strong>.
+  cdtn:
+    type: liste
+    valeurs:
+      1 à 5: 5
+      6 à 8: 6
+
 contrat salarié . convention collective . transports routiers . catégorie professionnelle . Ouvriers . préavis de retraite tranche:
   applicable si: mise à la retraite
   remplace: contrat salarié . préavis de retraite collective

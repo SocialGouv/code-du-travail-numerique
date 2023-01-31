@@ -1,143 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SelectQuestion /> should render with default value 1`] = `
-.c2 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.c3 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c4 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  text-align: center;
-}
-
-.c7 {
-  position: absolute;
-  top: 1.6rem;
-  right: 1.6rem;
-  width: 1.6rem;
-  height: 1.6rem;
-  color: #f66663;
-  pointer-events: none;
-}
-
-.c6 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem 0;
-  padding-right: 5rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  vertical-align: middle;
-  background-color: #fff;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  cursor: pointer;
-  -webkit-transition: border-color 250ms ease;
-  transition: border-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c6::-ms-expand {
-  background-color: transparent;
-  border: 0 transparent;
-}
-
-.c6 *::-ms-backdrop,
-.c6 {
-  padding-right: 1.6rem;
-}
-
-.c6:invalid {
-  border-color: #eb5757;
-}
-
-.c6:disabled {
-  background-color: #e4e8ef;
-}
-
-.c1 {
-  display: block;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-.c5 {
-  width: 40rem;
-}
-
-.c0 {
-  margin-bottom: 1.6rem;
-}
-
-@media (max-width:600px) {
-  .c4 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    width: 100%;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-kizEQm jTjASI"
   >
     <label
-      class="c1"
+      class="sc-dvUynV faTIvj"
+      data-testid="question-label"
       for="input-foo"
     >
       <span
-        class="c2"
+        class="sc-bBjRSN fzTfxR"
       >
         Une question ?
-      </span>
-      <span
-        class="c3"
-      >
-         (obligatoire)
+        <span
+          class="sc-bBjRSN jPMLlF"
+        >
+           (obligatoire)
+        </span>
       </span>
     </label>
     <div
-      class="c4 c5"
+      class="sc-fWWYYk ggbdoe sc-ellfGf kuNbpl"
     >
       <select
-        class="c6"
+        class="sc-gzcbmu koAMcy"
         data-testid="foo"
         id="input-foo"
         name="foo"
@@ -163,7 +51,7 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="c7"
+        class="sc-fIxmyt gQnvnN"
       >
         <svg
           aria-hidden="true"
@@ -197,143 +85,31 @@ exports[`<SelectQuestion /> should render with default value 1`] = `
 `;
 
 exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
-.c2 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.c3 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c4 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  text-align: center;
-}
-
-.c7 {
-  position: absolute;
-  top: 1.6rem;
-  right: 1.6rem;
-  width: 1.6rem;
-  height: 1.6rem;
-  color: #f66663;
-  pointer-events: none;
-}
-
-.c6 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem 0;
-  padding-right: 5rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  vertical-align: middle;
-  background-color: #fff;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  cursor: pointer;
-  -webkit-transition: border-color 250ms ease;
-  transition: border-color 250ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c6::-ms-expand {
-  background-color: transparent;
-  border: 0 transparent;
-}
-
-.c6 *::-ms-backdrop,
-.c6 {
-  padding-right: 1.6rem;
-}
-
-.c6:invalid {
-  border-color: #eb5757;
-}
-
-.c6:disabled {
-  background-color: #e4e8ef;
-}
-
-.c1 {
-  display: block;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-.c5 {
-  width: 40rem;
-}
-
-.c0 {
-  margin-bottom: 1.6rem;
-}
-
-@media (max-width:600px) {
-  .c4 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    width: 100%;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-kizEQm jTjASI"
   >
     <label
-      class="c1"
+      class="sc-dvUynV faTIvj"
+      data-testid="question-label"
       for="input-foo"
     >
       <span
-        class="c2"
+        class="sc-bBjRSN fzTfxR"
       >
         Une question ?
-      </span>
-      <span
-        class="c3"
-      >
-         (obligatoire)
+        <span
+          class="sc-bBjRSN jPMLlF"
+        >
+           (obligatoire)
+        </span>
       </span>
     </label>
     <div
-      class="c4 c5"
+      class="sc-fWWYYk ggbdoe sc-ellfGf kuNbpl"
     >
       <select
-        class="c6"
+        class="sc-gzcbmu koAMcy"
         data-testid="foo"
         id="input-foo"
         name="foo"
@@ -359,7 +135,7 @@ exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
       </select>
       <div
         aria-hidden="true"
-        class="c7"
+        class="sc-fIxmyt gQnvnN"
       >
         <svg
           aria-hidden="true"

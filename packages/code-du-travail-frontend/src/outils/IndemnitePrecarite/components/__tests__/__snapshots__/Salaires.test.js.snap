@@ -1,328 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Salaires /> should add a salaire 1`] = `
-.c9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 1rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c9:link,
-.c9:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c9:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c9[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c1 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.c2 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c6 {
-  position: relative;
-  display: inline-block;
-}
-
-.c7 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 5rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: right;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c7[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c7::-webkit-outer-spin-button,
-.c7::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.c7:invalid {
-  border-color: #eb5757;
-}
-
-.c7::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c7::-moz-placeholder {
-  color: #9298af;
-}
-
-.c7:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c7::placeholder {
-  color: #9298af;
-}
-
-.c7:focus {
-  border-color: #7994d4;
-}
-
-.c7:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c7:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c7:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c7:focus::placeholder {
-  color: transparent;
-}
-
-.c8 {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 100%;
-  max-width: 3.2rem;
-  height: 100%;
-  max-height: 3.2rem;
-  color: #9298af;
-}
-
-.c12 {
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  margin: 1rem 0;
-  padding-left: 0;
-}
-
-.c11 {
-  width: 2rem;
-  margin-left: 0.4rem;
-  color: #f66663;
-}
-
-.c13 {
-  width: 2rem;
-  margin-right: 0.4rem;
-  color: #f66663;
-}
-
-.c0 {
-  display: block;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-.c5 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-  max-width: 40rem;
-}
-
-.c4 {
-  display: inline-block;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-right: 1rem;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 0.4rem;
-}
-
-@media (max-width:600px) {
-  .c9 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c9 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    padding: 0 1rem;
-    padding-right: 5rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
-    align-self: center;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
-}
-
 <div>
   <label
-    class="c0"
+    class="sc-kizEQm eyqPAY"
+    data-testid="question-label"
   >
     <span
-      class="c1"
+      class="sc-bBjRSN fzTfxR"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="sc-bBjRSN jPMLlF"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div
-    class="c3"
+    class="sc-amkrK havVrX"
   >
     <label
-      class="c4"
+      class="sc-iIgjPs bYjgwS"
       for="5"
     >
       Montant :
     </label>
     <div
-      class="c5"
+      class="sc-cKRKFl hQAFJK"
     >
       <span
-        class="c6"
+        class="sc-bQCEYZ iOBpgY"
       >
         <input
-          class="c7"
+          class="sc-fXgAZx diKTOs"
           id="5"
           name="salaires[0].salaire"
           type="number"
           value=""
         />
         <div
-          class="c8"
+          class="sc-EZqKI fxcivc"
         >
           <svg
             aria-hidden="true"
@@ -339,13 +57,13 @@ exports[`<Salaires /> should add a salaire 1`] = `
       </span>
     </div>
     <button
-      class="c9 c10"
+      class="sc-hiKfDv dNqnKz sc-gstuGz cPVpKB"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="c11"
+        class="sc-dvUynV cRzFhK"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -360,12 +78,12 @@ exports[`<Salaires /> should add a salaire 1`] = `
     </button>
   </div>
   <button
-    class="c9 c12"
+    class="sc-hiKfDv dNqnKz sc-kTCsyW gLwQqj"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="c13"
+      class="sc-jtiXyc FjHRC"
       fill="none"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
@@ -383,160 +101,29 @@ exports[`<Salaires /> should add a salaire 1`] = `
 `;
 
 exports[`<Salaires /> should delete a salaires 1`] = `
-.c3 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 1rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c3:link,
-.c3:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c3:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c3[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c1 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.c2 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c4 {
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  margin: 1rem 0;
-  padding-left: 0;
-}
-
-.c5 {
-  width: 2rem;
-  margin-right: 0.4rem;
-  color: #f66663;
-}
-
-.c0 {
-  display: block;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-@media (max-width:600px) {
-  .c3 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c3 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
-@media (max-width:600px) {
-
-}
-
 <div>
   <label
-    class="c0"
+    class="sc-kizEQm eyqPAY"
+    data-testid="question-label"
   >
     <span
-      class="c1"
+      class="sc-bBjRSN fzTfxR"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="sc-bBjRSN jPMLlF"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <button
-    class="c3 c4"
+    class="sc-hiKfDv dNqnKz sc-kTCsyW gLwQqj"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="c5"
+      class="sc-jtiXyc FjHRC"
       fill="none"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
@@ -554,328 +141,46 @@ exports[`<Salaires /> should delete a salaires 1`] = `
 `;
 
 exports[`<Salaires /> should render 1`] = `
-.c9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 1rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c9:link,
-.c9:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c9:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c9[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c1 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.c2 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c6 {
-  position: relative;
-  display: inline-block;
-}
-
-.c7 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 5rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: right;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c7[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c7::-webkit-outer-spin-button,
-.c7::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.c7:invalid {
-  border-color: #eb5757;
-}
-
-.c7::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c7::-moz-placeholder {
-  color: #9298af;
-}
-
-.c7:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c7::placeholder {
-  color: #9298af;
-}
-
-.c7:focus {
-  border-color: #7994d4;
-}
-
-.c7:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c7:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c7:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c7:focus::placeholder {
-  color: transparent;
-}
-
-.c8 {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 100%;
-  max-width: 3.2rem;
-  height: 100%;
-  max-height: 3.2rem;
-  color: #9298af;
-}
-
-.c12 {
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  margin: 1rem 0;
-  padding-left: 0;
-}
-
-.c11 {
-  width: 2rem;
-  margin-left: 0.4rem;
-  color: #f66663;
-}
-
-.c13 {
-  width: 2rem;
-  margin-right: 0.4rem;
-  color: #f66663;
-}
-
-.c0 {
-  display: block;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-.c5 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-  max-width: 40rem;
-}
-
-.c4 {
-  display: inline-block;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-right: 1rem;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 0.4rem;
-}
-
-@media (max-width:600px) {
-  .c9 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c9 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    padding: 0 1rem;
-    padding-right: 5rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
-    align-self: center;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
-}
-
 <div>
   <label
-    class="c0"
+    class="sc-kizEQm eyqPAY"
+    data-testid="question-label"
   >
     <span
-      class="c1"
+      class="sc-bBjRSN fzTfxR"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="sc-bBjRSN jPMLlF"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div
-    class="c3"
+    class="sc-amkrK havVrX"
   >
     <label
-      class="c4"
+      class="sc-iIgjPs bYjgwS"
       for="1"
     >
       Montant :
     </label>
     <div
-      class="c5"
+      class="sc-cKRKFl hQAFJK"
     >
       <span
-        class="c6"
+        class="sc-bQCEYZ iOBpgY"
       >
         <input
-          class="c7"
+          class="sc-fXgAZx diKTOs"
           id="1"
           name="salaires[0].salaire"
           type="number"
           value="3000"
         />
         <div
-          class="c8"
+          class="sc-EZqKI fxcivc"
         >
           <svg
             aria-hidden="true"
@@ -892,13 +197,13 @@ exports[`<Salaires /> should render 1`] = `
       </span>
     </div>
     <button
-      class="c9 c10"
+      class="sc-hiKfDv dNqnKz sc-gstuGz cPVpKB"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="c11"
+        class="sc-dvUynV cRzFhK"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -913,12 +218,12 @@ exports[`<Salaires /> should render 1`] = `
     </button>
   </div>
   <button
-    class="c9 c12"
+    class="sc-hiKfDv dNqnKz sc-kTCsyW gLwQqj"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="c13"
+      class="sc-jtiXyc FjHRC"
       fill="none"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"

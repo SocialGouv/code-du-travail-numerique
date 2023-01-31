@@ -62,13 +62,13 @@ const SimulatorContent = <FormState, StepName extends string>({
       throw Error("Can't show the next step with index more than steps");
     } else {
       nextStep();
-      onStepChange(currentStep, steps[nextStepIndex]);
       matopush([
         "trackEvent",
         "outil",
         `view_step_${title}`,
         steps[nextStepIndex].name,
       ]);
+      onStepChange(currentStep, steps[nextStepIndex]);
       window?.scrollTo(0, 0);
     }
   };

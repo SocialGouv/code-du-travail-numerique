@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { SectionTitle } from "../../../common/stepStyles";
 import { RadioQuestion, TextQuestion } from "../../../Components";
 import { AbsencePeriods } from "./components";
 import { useIndemniteLicenciementStore } from "../../store";
+import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
+import { informationToSituation } from "../../../CommonSteps/Informations/utils";
+import Html from "../../../../common/Html";
+import { getMessageMotifExample } from "../../agreements/messageMotifExample";
 
 const StepAnciennete = () => {
   const {
+    init,
     onChangeAbsencePeriods,
     absencePeriods,
     onChangeHasAbsenceProlonge,
@@ -22,7 +27,10 @@ const StepAnciennete = () => {
     errorAbsenceProlonge,
     errorDateEntree,
     errorAbsencePeriods,
+    agreement,
+    informationData,
   } = useIndemniteLicenciementStore((state) => ({
+    init: state.ancienneteFunction.init,
     onChangeAbsencePeriods: state.ancienneteFunction.onChangeAbsencePeriods,
     absencePeriods: state.ancienneteData.input.absencePeriods,
     onChangeHasAbsenceProlonge:
@@ -39,12 +47,28 @@ const StepAnciennete = () => {
     errorAbsenceProlonge: state.ancienneteData.error.errorAbsenceProlonge,
     errorDateEntree: state.ancienneteData.error.errorDateEntree,
     errorAbsencePeriods: state.ancienneteData.error.errorAbsencePeriods,
+    agreement: state.agreementData.input.agreement,
+    informationData: informationToSituation(
+      state.informationsData.input.publicodesInformations
+    ),
   }));
+
+  useEffect(() => {
+    init();
+  }, [init]);
+
+  const messageMotifsExample = React.useMemo(
+    () => getMessageMotifExample(informationData),
+    [informationData]
+  );
+
   return (
     <>
-      <SectionTitle>Dates d’entrée et de sortie de l’entreprise</SectionTitle>
+      <SectionTitle hasSmallMarginTop>
+        Dates de début et de fin de contrat
+      </SectionTitle>
       <TextQuestion
-        label="Quelle est la date d’entrée dans l’entreprise&nbsp;?"
+        label="Quelle est la date de début du contrat de travail&nbsp;?"
         inputType="date"
         placeholder="jj/mm/aaaa"
         value={dateEntree}
@@ -52,6 +76,7 @@ const StepAnciennete = () => {
         error={errorDateEntree}
         id="dateEntree"
         showRequired
+        dataTestId={"date-entree"}
       />
       <TextQuestion
         label="Quelle est la date de notification du licenciement&nbsp;?"
@@ -62,9 +87,10 @@ const StepAnciennete = () => {
         error={errorDateNotification}
         id="dateNotification"
         showRequired
+        dataTestId={"date-notification"}
       />
       <TextQuestion
-        label="Quelle est la date de sortie de l’entreprise&nbsp;?"
+        label="Quelle est la date de fin du contrat de travail&nbsp;?"
         inputType="date"
         placeholder="jj/mm/aaaa"
         value={dateSortie}
@@ -72,6 +98,17 @@ const StepAnciennete = () => {
         error={errorDateSortie}
         id="dateSortie"
         showRequired
+        dataTestId={"date-sortie"}
+        tooltip={{
+          content: (
+            <Html>
+              En cas de dispense de préavis à l&apos;initiative de
+              l&apos;employeur, ou si le licenciement intervient à la suite d’un
+              avis d’inaptitude non professionnelle, indiquer la date de fin du
+              préavis «&nbsp;théorique&nbsp;» non effectué.
+            </Html>
+          ),
+        }}
       />
       <SectionTitle>Période d’absence prolongée</SectionTitle>
       <RadioQuestion
@@ -96,9 +133,16 @@ const StepAnciennete = () => {
       />
       {hasAbsenceProlonge === "oui" && (
         <AbsencePeriods
+          idcc={
+            agreement
+              ? (`IDCC${agreement.num}` as SupportedCcIndemniteLicenciement)
+              : undefined
+          }
           onChange={onChangeAbsencePeriods}
           absences={absencePeriods}
           error={errorAbsencePeriods}
+          informationData={informationData}
+          messageMotifExample={messageMotifsExample}
         />
       )}
     </>

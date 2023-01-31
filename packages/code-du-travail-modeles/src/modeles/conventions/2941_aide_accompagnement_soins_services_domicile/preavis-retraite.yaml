@@ -1,0 +1,139 @@
+contrat salarié . convention collective . bad . catégorie professionnelle:
+  applicable si: mise à la retraite
+  titre: Catégorie professionnelle
+  question: Quelle est la catégorie professionnelle du salarié ?
+  description: La catégorie professionnelle du salarié est habituellement mentionnée sur le <strong>bulletin de salaire</strong>.
+  cdtn:
+    type: liste
+    valeurs:
+      A, B, C ou D: "'A, B, C ou D'"
+      E ou F: "'E ou F'"
+      G, H ou I: "'G, H ou I'"
+
+contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D:
+  applicable si: catégorie professionnelle = 'A, B, C ou D'
+  valeur: oui
+
+contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D . six mois:
+  applicable si: ancienneté < 6 mois
+  valeur: oui
+
+contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D . six mois . préavis de retaite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 7 jour
+  références:
+    Titre IV, article 26.1 et Titre IV, article 29: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000025805633/?idConteneur=KALICONT000025805800
+
+contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D . six mois . préavis de retaite . notification:
+  type: notification
+  description: "1 semaine de date à date"
+  valeur: oui
+
+contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D . moins de deux ans:
+  applicable si:
+    toutes ces conditions:
+      - ancienneté >= 6 mois
+      - ancienneté <= 24 mois
+  valeur: oui
+
+contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D . moins de deux ans . préavis de retaite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 1 mois
+  références:
+    Titre IV, article 26.1 et Titre IV, article 29: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000025805633/?idConteneur=KALICONT000025805800
+
+contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D . moins de deux ans . préavis de retaite . notification:
+  type: notification
+  applicable si: contrat salarié . préavis de retraite = contrat salarié . préavis de retraite collective
+  description: "1 mois de date à date"
+  valeur: oui
+
+contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D . plus de deux ans:
+  applicable si: ancienneté >= 25 mois
+  valeur: oui
+
+contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D . plus de deux ans . préavis de retaite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 2 mois
+  références:
+    Titre IV, article 26.1 et Titre IV, article 29: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000025805633/?idConteneur=KALICONT000025805800
+
+contrat salarié . convention collective . bad . catégorie professionnelle . A B C ou D . plus de deux ans . préavis de retaite . notification:
+  type: notification
+  description: "2 mois de date à date"
+  valeur: oui
+
+contrat salarié . convention collective . bad . catégorie professionnelle . E ou F:
+  applicable si: catégorie professionnelle = 'E ou F'
+  valeur: oui
+
+contrat salarié . convention collective . bad . catégorie professionnelle . E ou F . moins de deux ans:
+  applicable si: ancienneté < 24 mois
+  valeur: oui
+
+contrat salarié . convention collective . bad . catégorie professionnelle . E ou F . moins de deux ans . préavis de retaite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 1 mois
+  références:
+    Titre IV, article 26.1 et Titre IV, article 29: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000025805633/?idConteneur=KALICONT000025805800
+
+contrat salarié . convention collective . bad . catégorie professionnelle . E ou F . moins de deux ans . préavis de retaite . notification:
+  type: notification
+  description: "1 mois de date à date"
+  valeur: oui
+
+contrat salarié . convention collective . bad . catégorie professionnelle . E ou F . plus de deux ans:
+  applicable si: ancienneté >= 24 mois
+  valeur: oui
+
+contrat salarié . convention collective . bad . catégorie professionnelle . E ou F . plus de deux ans . préavis de retaite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 2 mois
+  références:
+    Titre IV, article 26.1 et Titre IV, article 29: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000025805633/?idConteneur=KALICONT000025805800
+
+contrat salarié . convention collective . bad . catégorie professionnelle . E ou F . plus de deux ans . préavis de retaite . notification:
+  type: notification
+  description: "2 mois de date à date"
+  valeur: oui
+
+contrat salarié . convention collective . bad . catégorie professionnelle . G H ou I:
+  applicable si: catégorie professionnelle = 'G, H ou I'
+  valeur: oui
+
+contrat salarié . convention collective . bad . catégorie professionnelle . G H ou I . moins de deux ans:
+  applicable si: ancienneté < 24 mois
+  valeur: oui
+
+contrat salarié . convention collective . bad . catégorie professionnelle . G H ou I . moins de deux ans . préavis de retaite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 2 mois
+  références:
+    Titre IV, article 26.1 et Titre IV, article 29: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000025805633/?idConteneur=KALICONT000025805800
+
+contrat salarié . convention collective . bad . catégorie professionnelle . G H ou I . moins de deux ans . préavis de retaite . notification:
+  type: notification
+  description: "2 mois de date à date"
+  valeur: oui
+
+contrat salarié . convention collective . bad . catégorie professionnelle . G H ou I . plus de deux ans:
+  applicable si: ancienneté >= 24 mois
+  valeur: oui
+
+contrat salarié . convention collective . bad . catégorie professionnelle . G H ou I . plus de deux ans . préavis de retaite:
+  applicable si: mise à la retraite
+  remplace: contrat salarié . préavis de retraite collective
+  valeur: 4 mois
+  références:
+    Titre IV, article 26.1 et Titre IV, article 29: https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000025805633/?idConteneur=KALICONT000025805800
+
+contrat salarié . convention collective . bad . catégorie professionnelle . G H ou I . plus de deux ans . préavis de retaite . notification:
+  type: notification
+  description: "4 mois de date à date"
+  valeur: oui
