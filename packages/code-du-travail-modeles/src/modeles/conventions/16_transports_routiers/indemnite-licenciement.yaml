@@ -160,10 +160,6 @@ contrat salarié . convention collective . transports routiers . indemnité de l
       - droit à la retraite au titre du régime en vigueur dans l'entreprise = 'Oui'
       - ancienneté totale >= 3 ans
   valeur: 0.20 * minoration A3 * (cadre + avant cadre)
-
-contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . minoration . formule sans plafond:
-  applicable si: cadre - minoration + majoration <= cadre
-  valeur: oui
   cdtn:
     formule:
       formula: ($formule) - (20% * A3 * ($formule))
@@ -181,11 +177,8 @@ contrat salarié . convention collective . transports routiers . indemnité de l
       - ancienneté totale > 10 an
       - ancienneté totale <= 20 an
       - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 5 an
+      - droit à la retraite au titre du régime en vigueur dans l'entreprise = 'Oui'
   valeur: 2 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-
-contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . majoration . coeff 2 . formule sans plafond:
-  applicable si: cadre - minoration + majoration <= cadre
-  valeur: oui
   cdtn:
     formule:
       formula: $formule + (2 * Sref)
@@ -197,11 +190,8 @@ contrat salarié . convention collective . transports routiers . indemnité de l
       - age >= 61
       - ancienneté totale > 20 an
       - ancienneté totale <= 30 an
+      - droit à la retraite au titre du régime en vigueur dans l'entreprise = 'Oui'
   valeur: 3 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-
-contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . majoration . coeff 3 . formule sans plafond:
-  applicable si: cadre - minoration + majoration <= cadre
-  valeur: oui
   cdtn:
     formule:
       formula: $formule + (3 * Sref)
@@ -212,14 +202,32 @@ contrat salarié . convention collective . transports routiers . indemnité de l
     toutes ces conditions:
       - age >= 61
       - ancienneté totale > 30 an
+      - droit à la retraite au titre du régime en vigueur dans l'entreprise = 'Oui'
   valeur: 4 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel
-
-contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . majoration . coeff 4 . formule sans plafond:
-  applicable si: cadre - minoration + majoration <= cadre
-  valeur: oui
   cdtn:
     formule:
       formula: $formule + (4 * Sref)
+
+contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . base . seulement cadre . formule plafond:
+  applicable si: seulement cadre = cadre
+  valeur: oui
+  cdtn:
+    formule:
+      formula: 4 / 10 * Sref * A1
+      explanations:
+        - "A1 : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . résultat conventionnel . base . cadre et employé . formule plafond:
+  applicable si: cadre et employé = cadre + avant cadre
+  valeur: oui
+  cdtn:
+    formule:
+      formula: (4 / 10 * Sref * A1) + (3 / 10 * Sref * A2)
+      explanations:
+        - "A1 : Ancienneté dans la catégorie Ingénieurs et cadres": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "A2 : Ancienneté dans les catégories Techniciens et agents de maîtrise et Employés": contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . Ingénieurs et cadres . ancienneté avant cadre
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
 
 contrat salarié . convention collective . transports routiers . indemnité de licenciement . catégorie professionnelle . TAM:
   applicable si: catégorie professionnelle = 'TAM'

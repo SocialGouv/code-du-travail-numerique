@@ -1,4 +1,5 @@
 import { SalaryPeriods } from "@socialgouv/modeles-social";
+import { Agreement } from "../../../conventions/Search/api/type";
 import { OuiNon } from "../common";
 
 export const generateSameSalaryQuestion = (
@@ -63,4 +64,12 @@ export const generateResultSalaireTempsPlein = (
       ? "l'arrêt de travail"
       : "la notification du licenciement"
   }`;
+};
+
+export const generateSmallText = (
+  agreement?: Agreement
+): string | undefined => {
+  return agreement && agreement.num === 3239
+    ? undefined
+    : "Prendre en compte les primes et avantages en nature.";
 };

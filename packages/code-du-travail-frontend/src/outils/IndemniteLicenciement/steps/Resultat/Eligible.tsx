@@ -46,6 +46,7 @@ export default function Eligible() {
     infoWarning,
     dateArretTravail,
     arretTravail,
+    showHasTempsPartiel,
   } = useIndemniteLicenciementStore((state) => ({
     publicodesLegalResult: state.resultData.input.publicodesLegalResult,
     publicodesAgreementResult: state.resultData.input.publicodesAgreementResult,
@@ -78,6 +79,7 @@ export default function Eligible() {
     infoWarning: state.resultData.input.infoWarning,
     dateArretTravail: state.contratTravailData.input.dateArretTravail,
     arretTravail: state.contratTravailData.input.arretTravail,
+    showHasTempsPartiel: state.salairesData.input.showHasTempsPartiel,
   }));
 
   React.useEffect(() => {
@@ -104,6 +106,7 @@ export default function Eligible() {
       />
       <ShowDetails>
         <FilledElements
+          showHasTempsPartiel={showHasTempsPartiel}
           absencesPeriods={absencePeriods}
           agreementName={agreement?.shortTitle}
           typeContrat={typeContratTravail!.toString()}

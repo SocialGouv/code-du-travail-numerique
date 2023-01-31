@@ -26,14 +26,14 @@ export const getDateNotificationErrors = (
     isAfter(dNotification, dSortie)
   ) {
     errors.errorDateNotification =
-      "La date de notification doit se situer avant la date de sortie";
+      "La date de notification doit se situer avant la date de fin de contrat";
   } else if (
     state.dateNotification &&
     state.dateEntree &&
     isAfter(dEntree, dNotification)
   ) {
     errors.errorDateNotification =
-      "La date de notification doit se situer après la date d’entrée";
+      "La date de notification doit se situer après la date de début de contrat";
   } else if (!isValidDate(state.dateNotification)) {
     errors.errorDateNotification = "La date de notification est invalide";
   } else {

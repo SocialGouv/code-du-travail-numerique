@@ -26,6 +26,7 @@ const initialState: SalairesStoreData = {
   input: {
     salaryPeriods: [],
     refSalary: 0,
+    showHasTempsPartiel: true,
   },
   error: {},
   hasBeenSubmit: false,
@@ -61,6 +62,17 @@ const createSalairesStore: StoreSlice<
           state.salairesData.input.salaryPeriods = salaryPeriods;
         })
       );
+    },
+    initShowHasTempsPartiel: () => {
+      const idcc = get().agreementData.input.agreement?.num;
+      if (idcc && idcc === 3239) {
+        set(
+          produce((state: SalairesStoreSlice) => {
+            state.salairesData.input.showHasTempsPartiel = false;
+            state.salairesData.input.hasTempsPartiel = "non";
+          })
+        );
+      }
     },
     onChangeHasTempsPartiel: (value) => {
       applyGenericValidation(get, set, "hasTempsPartiel", value);

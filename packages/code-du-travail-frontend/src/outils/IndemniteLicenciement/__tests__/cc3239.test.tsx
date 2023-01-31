@@ -97,7 +97,6 @@ describe("Indemnité licenciement - CC 3239", () => {
     });
     fireEvent.click(ui.seniority.hasAbsence.non.get());
     fireEvent.click(ui.next.get());
-    fireEvent.click(ui.salary.hasPartialTime.non.get());
     fireEvent.click(ui.salary.hasSameSalary.oui.get());
     fireEvent.change(ui.salary.sameSalaryValue.get(), {
       target: { value: "3000" },
@@ -147,5 +146,28 @@ describe("Indemnité licenciement - CC 3239", () => {
     expect(
       ui.result.infoWarning.ineligibleInfoWarningblock.query()
     ).toBeInTheDocument();
+  });
+
+  test("vérifier qu'on a pas la question sur le temps partiel en tant que salarié du particulier employeur", async () => {
+    fireEvent.change(ui.information.agreement3239.proCategory.get(), {
+      target: { value: "'Salarié du particulier employeur'" },
+    });
+    fireEvent.click(ui.next.get());
+    fireEvent.change(ui.seniority.startDate.get(), {
+      target: { value: "01/01/2022" },
+    });
+    fireEvent.change(ui.seniority.notificationDate.get(), {
+      target: { value: "15/09/2022" },
+    });
+    fireEvent.change(ui.seniority.endDate.get(), {
+      target: { value: "15/09/2022" },
+    });
+    fireEvent.click(ui.seniority.hasAbsence.non.get());
+    fireEvent.click(ui.next.get());
+    expect(
+      screen.queryByText(
+        "Y a-t-il eu des périodes d'alternance à temps plein et à temps partiel durant le contrat de travail ?"
+      )
+    ).not.toBeInTheDocument();
   });
 });
