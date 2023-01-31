@@ -1,5 +1,6 @@
 import { StoreApi } from "zustand";
 import produce from "immer";
+import { push as matopush } from "@socialgouv/matomo-next";
 import {
   SalairesStoreData,
   SalairesStoreInput,
@@ -16,7 +17,7 @@ import {
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { IndemniteLicenciementStepName } from "../../..";
-import { deepMergeArray } from "../../../../../lib";
+import { deepMergeArray, MatomoBaseEvent } from "../../../../../lib";
 import { computeSalaryPeriods } from "../../../common";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
@@ -88,7 +89,7 @@ const createSalairesStore: StoreSlice<
     onChangeSalary(value) {
       applyGenericValidation(get, set, "salary", value);
     },
-    onValidateStep: () => {
+    onNextStep: () => {
       const { isValid, errorState } = validateStep(get().salairesData.input);
 
       if (isValid) {

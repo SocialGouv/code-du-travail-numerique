@@ -8,6 +8,7 @@ import {
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { StoreSlice } from "../../../../types";
 import {
   mapToPublicodesSituationForIndemniteLicenciementConventionnelWithValues,
@@ -35,6 +36,8 @@ import {
 } from "../../../agreements/seniority";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { getInfoWarning } from "./service";
+import { IndemniteLicenciementStepName } from "../../..";
+import { MatomoBaseEvent, MatomoSimulatorEvent } from "../../../../../lib";
 
 const initialState: ResultStoreData = {
   input: {
@@ -67,7 +70,7 @@ const createResultStore: StoreSlice<
     SalairesStoreSlice &
     CommonAgreementStoreSlice &
     CommonInformationsStoreSlice
-> = (set, get) => ({
+> = (set, get, { toolName }) => ({
   resultData: {
     ...initialState,
   },

@@ -67,7 +67,7 @@ const applyGenericValidation = (
         state.agreement16Data.input[paramName] = value;
       })
     );
-    get().salairesFunction.onValidateStep();
+    get().salairesFunction.onNextStep();
   } else {
     set(
       produce((state: Agreement16StoreSlice) => {

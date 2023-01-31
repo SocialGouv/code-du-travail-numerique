@@ -8,13 +8,12 @@ import {
   PublicodesInformation,
 } from "./types";
 import { StoreSlice } from "../../../types";
-import { MissingArgs } from "@socialgouv/modeles-social";
+import { MissingArgs, CatPro3239 } from "@socialgouv/modeles-social";
 import { mapToPublicodesSituationForIndemniteLicenciementConventionnel } from "../../../publicodes";
 import { CommonAgreementStoreSlice } from "../../Agreement/store";
 import { removeDuplicateObject } from "../../../../lib";
 import { informationToSituation } from "../utils";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
-import { CatPro3239 } from "@socialgouv/modeles-social";
 
 const initialState: CommonInformationsStoreData = {
   input: {
@@ -190,7 +189,7 @@ const createCommonInformationsStore: StoreSlice<
         })
       );
     },
-    onValidateWithEligibility: () => {
+    onNextStep: () => {
       const state = get().informationsData.input;
       const { isValid, errorState } = validateStep(state);
       let errorEligibility;

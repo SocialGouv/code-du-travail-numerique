@@ -44,6 +44,8 @@ import {
   createCommonInformationsStore,
 } from "../CommonSteps/Informations/store";
 
+import { ToolName } from "../types";
+
 export type MainStore = ContratTravailStoreSlice &
   AncienneteStoreSlice &
   SalairesStoreSlice &
@@ -76,26 +78,31 @@ export type StepData<
   isStepValid: boolean;
 };
 
+export type StoreOptions = {
+  publicodesRules?: string;
+  toolName: ToolName;
+};
+
 const createRootSlice = (
   set: StoreApi<MainStore>["setState"],
   get: StoreApi<MainStore>["getState"],
-  slug: string
+  { slug, toolName }
 ) => ({
-  ...createContratTravailStore(set, get),
-  ...createAncienneteStore(set, get),
-  ...createSalairesStore(set, get),
-  ...createResultStore(set, get),
-  ...createRootAgreementsStore(set, get),
-  ...createCommonAgreementStore(set, get, slug),
-  ...createCommonInformationsStore(set, get),
+  ...createContratTravailStore(set, get, { toolName }),
+  ...createAncienneteStore(set, get, { toolName }),
+  ...createSalairesStore(set, get, { toolName }),
+  ...createResultStore(set, get, { toolName }),
+  ...createRootAgreementsStore(set, get, { toolName }),
+  ...createCommonAgreementStore(set, get, { toolName, slug }),
+  ...createCommonInformationsStore(set, get, { toolName }),
 });
 
-const createStore = (slug: string) =>
+const createStore = (slug: string, toolName: ToolName) =>
   create(
     (
       set: StoreApi<MainStore>["setState"],
       get: StoreApi<MainStore>["getState"]
-    ) => createRootSlice(set, get, slug)
+    ) => createRootSlice(set, get, { slug, toolName })
   );
 
 const { Provider, useStore } = createContext<StoreApi<MainStore>>();

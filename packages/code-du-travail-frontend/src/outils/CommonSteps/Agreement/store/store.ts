@@ -1,5 +1,6 @@
 import { StoreApi } from "zustand";
 import produce from "immer";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { validateStep } from "./validator";
 
 import {
@@ -13,6 +14,12 @@ import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { Agreement } from "../../../../conventions/Search/api/type";
 import { loadPublicodes } from "../../../api";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
+import { supportedCcn } from "@socialgouv/modeles-social";
+import {
+  MatomoAgreementEvent,
+  MatomoBaseEvent,
+  MatomoSearchAgreementCategory,
+} from "../../../../lib/matomo/types";
 
 const initialState: Omit<CommonAgreementStoreData, "publicodes"> = {
   input: {},
@@ -24,7 +31,7 @@ const initialState: Omit<CommonAgreementStoreData, "publicodes"> = {
 const createCommonAgreementStore: StoreSlicePublicode<
   CommonAgreementStoreSlice,
   CommonInformationsStoreSlice
-> = (set, get, slug) => ({
+> = (set, get, { slug, toolName }) => ({
   agreementData: { ...initialState, publicodes: loadPublicodes(slug) },
   agreementFunction: {
     onInitAgreementPage: () => {
@@ -83,8 +90,53 @@ const createCommonAgreementStore: StoreSlicePublicode<
         get().informationsFunction.generatePublicodesQuestions();
       }
     },
-    onValidateStep: () => {
-      const { isValid, errorState } = validateStep(get().agreementData.input);
+    onNextStep: () => {
+      const input = get().agreementData.input;
+      const { isValid, errorState } = validateStep(input);
+      const { route, agreement } = input;
+      if (isValid) {
+        let clickEvent;
+        let selectEvent;
+        switch (route) {
+          case Route.agreement:
+            clickEvent = "click_p1";
+            selectEvent = MatomoSearchAgreementCategory.AGREEMENT_SELECT_P1;
+            break;
+          case Route.enterprise:
+            clickEvent = "click_p2";
+            selectEvent = MatomoSearchAgreementCategory.AGREEMENT_SELECT_P2;
+            break;
+          case Route.none:
+            clickEvent = "click_p3";
+            break;
+        }
+        matopush([
+          MatomoBaseEvent.TRACK_EVENT,
+          MatomoSearchAgreementCategory.AGREEMENT_SEARCH_TYPE_OF_USERS,
+          clickEvent,
+          toolName,
+        ]);
+        if (agreement?.num) {
+          const isTreated = !!supportedCcn.find(
+            ({ indemniteLicenciement, idcc }) =>
+              indemniteLicenciement && idcc === agreement?.num
+          );
+          matopush([
+            MatomoBaseEvent.TRACK_EVENT,
+            MatomoBaseEvent.OUTIL,
+            isTreated
+              ? MatomoAgreementEvent.CC_TREATED
+              : MatomoAgreementEvent.CC_UNTREATED,
+            `idcc${agreement?.num}`,
+          ]);
+          matopush([
+            MatomoBaseEvent.TRACK_EVENT,
+            selectEvent,
+            toolName,
+            `idcc${agreement?.num}`,
+          ]);
+        }
+      }
       set(
         produce((state: CommonAgreementStoreSlice) => {
           state.agreementData.hasBeenSubmit = isValid ? false : true;
@@ -93,6 +145,22 @@ const createCommonAgreementStore: StoreSlicePublicode<
         })
       );
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
+    },
+    onAgreementSearch: (data) => {
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoSearchAgreementCategory.AGREEMENT_SEARCH,
+        toolName,
+        JSON.stringify(data),
+      ]);
+    },
+    onEnterpriseSearch: (data) => {
+      matopush([
+        MatomoBaseEvent.TRACK_EVENT,
+        MatomoSearchAgreementCategory.ENTERPRISE_SEARCH,
+        toolName,
+        JSON.stringify(data),
+      ]);
     },
   },
 });

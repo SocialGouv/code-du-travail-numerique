@@ -32,7 +32,7 @@ export type CommonInformationsStoreData = {
 export type CommonInformationsStoreFn = {
   onInformationsChange: (questionKey: string, value: string) => void;
   generatePublicodesQuestions: () => void;
-  onValidateWithEligibility: () => ValidationResponse;
+  onNextStep: () => ValidationResponse;
   onSetStepHidden: () => void;
 };
 

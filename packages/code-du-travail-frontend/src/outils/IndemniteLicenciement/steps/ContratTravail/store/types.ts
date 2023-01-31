@@ -34,7 +34,7 @@ export type ContratTravailStoreFn = {
   onChangeLicenciementInaptitude: (value: OuiNon) => void;
   onChangeArretTravail: (value: OuiNon) => void;
   onChangeDateArretTravail: (value: string) => void;
-  onValidateWithEligibility: () => ValidationResponse;
+  onNextStep: () => ValidationResponse;
 };
 
 export type ContratTravailStoreSlice = {

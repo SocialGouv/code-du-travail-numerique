@@ -171,7 +171,7 @@ const applyGenericValidation = (
         });
       })
     );
-    get().salairesFunction.onValidateStep();
+    get().salairesFunction.onNextStep();
   } else {
     set(
       produce((state: Agreement44StoreSlice) => {
