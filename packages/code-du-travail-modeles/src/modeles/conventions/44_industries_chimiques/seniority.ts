@@ -55,7 +55,7 @@ export class Seniority44
           item.motif.key === MotifKeys.maladieNonPro &&
           item.durationInMonth > 36
         ) {
-          return total + item.durationInMonth;
+          return total + (item.durationInMonth - 36);
         }
         return total + item.durationInMonth * m.value;
       }, 0) / 12;

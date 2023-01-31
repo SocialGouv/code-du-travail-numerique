@@ -5,7 +5,7 @@ import Html from "../../common/Html";
 
 import { InlineError } from "../common/ErrorField";
 import { Question, Tooltip } from "../common/Question";
-import { RadioContainer } from "../common/stepStyles";
+import { RadioContainer, SmallText } from "../common/stepStyles";
 import { SubLabel } from "./SelectQuestion";
 
 type Question = {
@@ -24,6 +24,7 @@ type Props = {
   name: string;
   tooltip?: Tooltip;
   subLabel?: string;
+  note?: string;
 };
 
 export default function RadioQuestion({
@@ -36,6 +37,7 @@ export default function RadioQuestion({
   name,
   tooltip,
   subLabel,
+  note,
 }: Props) {
   const onChange = (value: string) => {
     onChangeSelectedOption(value);
@@ -66,6 +68,7 @@ export default function RadioQuestion({
           </ErrorWrapper>
         )}
       </RadioContainer>
+      {note && <SmallText as="i">{note}</SmallText>}
     </>
   );
 }

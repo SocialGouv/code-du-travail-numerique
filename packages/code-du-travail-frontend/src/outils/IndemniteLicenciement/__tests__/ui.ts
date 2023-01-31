@@ -188,6 +188,14 @@ export const ui = {
     },
     salaries: byTestId("salary-input"),
     primes: byTestId("prime-input"),
+    agreement44: {
+      knowingLastSalary: {
+        oui: byTestId("knowingLastSalary - Oui"),
+        non: byTestId("knowingLastSalary - Non"),
+      },
+      salaries: byTestId("last-month-salary"),
+      primes: byTestId("prime-last-month-salary"),
+    },
   },
   result: {
     formula: byTestId("formula"),
