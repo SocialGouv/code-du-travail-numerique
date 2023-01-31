@@ -5,3 +5,4 @@ contrat salarié . convention collective . banque:
   cdtn:
     idcc: 2120
     préavis-retraite: true
+    indemnité-licenciement: false

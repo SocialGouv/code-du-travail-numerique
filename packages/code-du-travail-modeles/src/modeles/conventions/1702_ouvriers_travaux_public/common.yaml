@@ -5,4 +5,4 @@ contrat salarié . convention collective . ouvriers travaux public:
   cdtn:
     idcc: 1702
     préavis-retraite: true
-    indemnité-licenciement: true
+    indemnité-licenciement: false

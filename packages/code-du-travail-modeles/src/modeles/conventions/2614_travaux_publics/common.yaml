@@ -5,3 +5,4 @@ contrat salarié . convention collective . travaux publics:
   cdtn:
     idcc: 2614
     préavis-retraite: true
+    indemnité-licenciement: false
