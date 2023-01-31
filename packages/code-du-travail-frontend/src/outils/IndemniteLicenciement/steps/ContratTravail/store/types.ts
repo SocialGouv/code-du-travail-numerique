@@ -35,7 +35,6 @@ export type ContratTravailStoreFn = {
   onChangeArretTravail: (value: OuiNon) => void;
   onChangeDateArretTravail: (value: string) => void;
   onNextStep: () => ValidationResponse;
-  onPrevStep: () => void;
 };
 
 export type ContratTravailStoreSlice = {

@@ -2,10 +2,6 @@ import create, { StoreApi } from "zustand";
 
 import createContext from "zustand/context";
 import {
-  createIntroductionStore,
-  IntroductionStoreSlice,
-} from "./steps/Introduction/store";
-import {
   AgreementStoreError,
   AgreementStoreInput,
   AgreementStoreSlice,
@@ -50,8 +46,7 @@ import {
 
 import { ToolName } from "../types";
 
-export type MainStore = IntroductionStoreSlice &
-  ContratTravailStoreSlice &
+export type MainStore = ContratTravailStoreSlice &
   AncienneteStoreSlice &
   SalairesStoreSlice &
   ResultStoreSlice &
@@ -93,7 +88,6 @@ const createRootSlice = (
   get: StoreApi<MainStore>["getState"],
   { slug, toolName }
 ) => ({
-  ...createIntroductionStore(set, get, { toolName }),
   ...createContratTravailStore(set, get, { toolName }),
   ...createAncienneteStore(set, get, { toolName }),
   ...createSalairesStore(set, get, { toolName }),

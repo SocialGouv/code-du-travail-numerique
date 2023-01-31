@@ -9,6 +9,7 @@ import {
   useSimulatorStepStore,
 } from "../Simulator/createContext";
 import SimulatorNavigation from "./SimulatorNavigation";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 export enum ValidationResponse {
   NotValid = "not_valid",
@@ -98,6 +99,12 @@ const SimulatorContent = <StepName extends string>({
           break;
         case ValidationResponse.Valid:
           nextStep();
+          matopush([
+            "trackEvent",
+            "outil",
+            `view_step_${title}`,
+            steps[nextStepIndex].name,
+          ]);
           window?.scrollTo(0, 0);
           break;
       }
@@ -116,6 +123,12 @@ const SimulatorContent = <StepName extends string>({
 
     if (previousStepIndex >= 0) {
       previousStep();
+      matopush([
+        "trackEvent",
+        "outil",
+        `click_previous_${title}`,
+        visibleSteps[previousStepIndex].name,
+      ]);
       window?.scrollTo(0, 0);
     } else {
       throw Error("Can't show the previous step with index less than 0");

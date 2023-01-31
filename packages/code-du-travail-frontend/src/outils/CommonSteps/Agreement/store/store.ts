@@ -14,8 +14,7 @@ import { CommonInformationsStoreSlice } from "../../Informations/store";
 import { Agreement } from "../../../../conventions/Search/api/type";
 import { loadPublicodes } from "../../../api";
 import { ValidationResponse } from "../../../Components/SimulatorLayout";
-import { IndemniteLicenciementStepName } from "../../../IndemniteLicenciement";
-import { indemniteLicenciementModeles } from "@socialgouv/modeles-social";
+import { supportedCcn } from "@socialgouv/modeles-social";
 import {
   MatomoAgreementEvent,
   MatomoBaseEvent,
@@ -95,15 +94,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
       const input = get().agreementData.input;
       const { isValid, errorState } = validateStep(input);
       const { route, agreement } = input;
-      const agreementIndex = agreement?.num.toString() ?? "";
-      const isTreated = !!indemniteLicenciementModeles[agreementIndex];
       if (isValid) {
-        matopush([
-          MatomoBaseEvent.TRACK_EVENT,
-          "outil",
-          `view_step_${toolName}`,
-          IndemniteLicenciementStepName.Agreement,
-        ]);
         let clickEvent;
         let selectEvent;
         switch (route) {
@@ -126,20 +117,22 @@ const createCommonAgreementStore: StoreSlicePublicode<
           toolName,
         ]);
         if (agreement?.num) {
-          matopush([
-            MatomoBaseEvent.TRACK_EVENT,
-            selectEvent,
-            toolName,
-            `idcc${agreement?.num}`,
-          ]);
-        }
-        if (agreement?.num) {
+          const isTreated = !!supportedCcn.find(
+            ({ indemniteLicenciement, idcc }) =>
+              indemniteLicenciement && idcc === agreement?.num
+          );
           matopush([
             MatomoBaseEvent.TRACK_EVENT,
             MatomoBaseEvent.OUTIL,
             isTreated
               ? MatomoAgreementEvent.CC_TREATED
               : MatomoAgreementEvent.CC_UNTREATED,
+            `idcc${agreement?.num}`,
+          ]);
+          matopush([
+            MatomoBaseEvent.TRACK_EVENT,
+            selectEvent,
+            toolName,
             `idcc${agreement?.num}`,
           ]);
         }
@@ -152,14 +145,6 @@ const createCommonAgreementStore: StoreSlicePublicode<
         })
       );
       return isValid ? ValidationResponse.Valid : ValidationResponse.NotValid;
-    },
-    onPrevStep: () => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        "outil",
-        `click_previous_${toolName}`,
-        IndemniteLicenciementStepName.Agreement,
-      ]);
     },
     onAgreementSearch: (data) => {
       matopush([

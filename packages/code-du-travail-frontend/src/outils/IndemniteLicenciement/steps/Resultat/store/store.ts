@@ -252,14 +252,6 @@ const createResultStore: StoreSlice<
         })
       );
     },
-    onPrevStep: () => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        "outil",
-        `click_previous_${toolName}`,
-        IndemniteLicenciementStepName.Salaires,
-      ]);
-    },
   },
 });
 

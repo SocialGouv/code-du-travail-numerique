@@ -41,7 +41,6 @@ export type CommonAgreementStoreFn = {
     enterprise?: Enterprise
   ) => void;
   onNextStep: () => ValidationResponse;
-  onPrevStep: () => void;
   onEnterpriseSearch: (value: AgreementSearchValue) => void;
   onAgreementSearch: (value: AgreementSearchValue) => void;
 };

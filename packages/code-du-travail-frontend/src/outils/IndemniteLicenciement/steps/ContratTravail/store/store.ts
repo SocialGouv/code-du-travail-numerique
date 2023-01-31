@@ -27,7 +27,7 @@ const initialState: ContratTravailStoreData = {
 const createContratTravailStore: StoreSlice<
   ContratTravailStoreSlice,
   AncienneteStoreSlice
-> = (set, get, { toolName }) => ({
+> = (set, get) => ({
   contratTravailData: { ...initialState },
   contratTravailFunction: {
     onChangeTypeContratTravail: (value) => {
@@ -58,12 +58,6 @@ const createContratTravailStore: StoreSlice<
 
       if (isValid) {
         errorEligibility = getErrorEligibility(state);
-        matopush([
-          MatomoBaseEvent.TRACK_EVENT,
-          "outil",
-          `view_step_${toolName}`,
-          IndemniteLicenciementStepName.ContratTravail,
-        ]);
       }
 
       set(
@@ -79,14 +73,6 @@ const createContratTravailStore: StoreSlice<
         : isValid
         ? ValidationResponse.Valid
         : ValidationResponse.NotValid;
-    },
-    onPrevStep: () => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        "outil",
-        `click_previous_${toolName}`,
-        IndemniteLicenciementStepName.ContratTravail,
-      ]);
     },
   },
 });

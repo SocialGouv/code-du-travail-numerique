@@ -78,45 +78,31 @@ const IndemniteLicenciementSimulator = ({
   displayTitle,
 }: Omit<Props, "publicodesRules" | "slug">): JSX.Element => {
   const {
-    onNextStepIntroduction,
     onNextStepContratTravail,
-    onPrevStepContratTravail,
     isStepContratTravailValid,
     onNextStepAnciennete,
-    onPrevStepAnciennete,
     isStepAncienneteValid,
     onNextStepSalaires,
-    onPrevStepSalaires,
     isStepSalairesValid,
     onNextStepAgreement,
-    onPrevStepAgreement,
     isStepAgreementValid,
     onNextStepInformations,
-    onPrevStepInformations,
     isStepInformationsValid,
     isStepInformationsHidden,
     isStepSalaryHidden,
-    onPrevStepResults,
   } = useIndemniteLicenciementStore((state) => ({
-    onNextStepIntroduction: state.introductionFunction.onNextStep,
     onNextStepContratTravail: state.contratTravailFunction.onNextStep,
-    onPrevStepContratTravail: state.contratTravailFunction.onPrevStep,
     isStepContratTravailValid: state.contratTravailData.isStepValid,
     onNextStepAnciennete: state.ancienneteFunction.onNextStep,
-    onPrevStepAnciennete: state.ancienneteFunction.onPrevStep,
     isStepAncienneteValid: state.ancienneteData.isStepValid,
     onNextStepSalaires: state.salairesFunction.onNextStep,
-    onPrevStepSalaires: state.salairesFunction.onPrevStep,
     isStepSalairesValid: state.salairesData.isStepValid,
     onNextStepAgreement: state.agreementFunction.onNextStep,
-    onPrevStepAgreement: state.agreementFunction.onPrevStep,
     isStepAgreementValid: state.agreementData.isStepValid,
     onNextStepInformations: state.informationsFunction.onNextStep,
-    onPrevStepInformations: state.informationsFunction.onPrevStep,
     isStepInformationsValid: state.informationsData.isStepValid,
     isStepInformationsHidden: state.informationsData.input.isStepHidden,
     isStepSalaryHidden: state.informationsData.input.isStepSalaryHidden,
-    onPrevStepResults: state.resultFunction.onPrevStep,
   }));
 
   const data = useIndemniteLicenciementStore((state) => {
@@ -158,42 +144,29 @@ const IndemniteLicenciementSimulator = ({
       steps={steps}
       onStepChange={[
         {
-          stepName: IndemniteLicenciementStepName.Introduction,
-          onNextStep: onNextStepIntroduction,
-        },
-        {
           stepName: IndemniteLicenciementStepName.ContratTravail,
           isStepValid: isStepContratTravailValid,
           onNextStep: onNextStepContratTravail,
-          onPrevStep: onPrevStepContratTravail,
         },
         {
           stepName: IndemniteLicenciementStepName.Agreement,
           isStepValid: isStepAgreementValid,
           onNextStep: onNextStepAgreement,
-          onPrevStep: onPrevStepAgreement,
         },
         {
           stepName: IndemniteLicenciementStepName.Anciennete,
           isStepValid: isStepAncienneteValid,
           onNextStep: onNextStepAnciennete,
-          onPrevStep: onPrevStepAnciennete,
         },
         {
           stepName: IndemniteLicenciementStepName.Salaires,
           isStepValid: isStepSalairesValid,
           onNextStep: onNextStepSalaires,
-          onPrevStep: onPrevStepSalaires,
         },
         {
           stepName: IndemniteLicenciementStepName.Informations,
           isStepValid: isStepInformationsValid,
           onNextStep: onNextStepInformations,
-          onPrevStep: onPrevStepInformations,
-        },
-        {
-          stepName: IndemniteLicenciementStepName.Resultat,
-          onPrevStep: onPrevStepResults,
         },
       ]}
       hiddenStep={getHiddenSteps()}

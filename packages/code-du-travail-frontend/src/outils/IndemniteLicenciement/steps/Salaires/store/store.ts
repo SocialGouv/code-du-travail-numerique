@@ -35,7 +35,7 @@ const initialState: SalairesStoreData = {
 const createSalairesStore: StoreSlice<
   SalairesStoreSlice,
   AncienneteStoreSlice & ContratTravailStoreSlice & CommonAgreementStoreSlice
-> = (set, get, { toolName }) => ({
+> = (set, get) => ({
   salairesData: { ...initialState },
   salairesFunction: {
     initFieldSalaries: () => {
@@ -109,12 +109,6 @@ const createSalairesStore: StoreSlice<
             state.salairesData.input.refSalary = refSalary;
           })
         );
-        matopush([
-          MatomoBaseEvent.TRACK_EVENT,
-          "outil",
-          `view_step_${toolName}`,
-          IndemniteLicenciementStepName.Salaires,
-        ]);
       }
 
       const agreement = get().agreementData.input.agreement;
@@ -142,14 +136,6 @@ const createSalairesStore: StoreSlice<
       return isStepValid
         ? ValidationResponse.Valid
         : ValidationResponse.NotValid;
-    },
-    onPrevStep: () => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        "outil",
-        `click_previous_${toolName}`,
-        IndemniteLicenciementStepName.Salaires,
-      ]);
     },
   },
 });

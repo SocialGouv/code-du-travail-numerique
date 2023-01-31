@@ -93,12 +93,6 @@ const createAncienneteStore: StoreSlice<
           get().contratTravailData.input.licenciementInaptitude === "oui",
           get().agreementData.input.agreement
         );
-        matopush([
-          MatomoBaseEvent.TRACK_EVENT,
-          "outil",
-          `view_step_${toolName}`,
-          IndemniteLicenciementStepName.Anciennete,
-        ]);
       }
 
       set(

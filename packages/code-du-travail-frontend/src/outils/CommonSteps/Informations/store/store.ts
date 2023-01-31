@@ -194,12 +194,6 @@ const createCommonInformationsStore: StoreSlice<
 
       if (isValid) {
         errorEligibility = state.blockingNotification;
-        matopush([
-          MatomoBaseEvent.TRACK_EVENT,
-          "outil",
-          `view_step_${toolName}`,
-          IndemniteLicenciementStepName.Informations,
-        ]);
       }
 
       set(
@@ -217,14 +211,6 @@ const createCommonInformationsStore: StoreSlice<
         : isValid
         ? ValidationResponse.Valid
         : ValidationResponse.NotValid;
-    },
-    onPrevStep: () => {
-      matopush([
-        MatomoBaseEvent.TRACK_EVENT,
-        "outil",
-        `click_previous_${toolName}`,
-        IndemniteLicenciementStepName.Informations,
-      ]);
     },
   },
 });

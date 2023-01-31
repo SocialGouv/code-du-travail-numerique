@@ -16,8 +16,8 @@ describe("Indemnité licenciement - Tracking", () => {
     render(
       <CalculateurIndemnite
         icon={""}
-        title={""}
-        displayTitle={""}
+        title={"Indemnité de licenciement"}
+        displayTitle={"Indemnité de licenciement"}
         slug={"indemnite-licenciement"}
       />
     );
@@ -33,7 +33,7 @@ describe("Indemnité licenciement - Tracking", () => {
       "trackEvent",
       "outil",
       `view_step_Indemnité de licenciement`,
-      "start",
+      "contrat_travail",
     ]);
     fireEvent.click(ui.contract.type.cdi.get());
     fireEvent.click(ui.contract.fauteGrave.non.get());
@@ -44,14 +44,14 @@ describe("Indemnité licenciement - Tracking", () => {
       "trackEvent",
       "outil",
       `view_step_Indemnité de licenciement`,
-      "contrat_travail",
+      "info_cc",
     ]);
     fireEvent.click(ui.next.get());
     expect(push).toHaveBeenCalledWith([
       "trackEvent",
       "outil",
       `view_step_Indemnité de licenciement`,
-      "info_cc",
+      "infos",
     ]);
     userEvent.selectOptions(
       ui.information.agreement16.proCategory.get(),
@@ -69,7 +69,7 @@ describe("Indemnité licenciement - Tracking", () => {
       "trackEvent",
       "outil",
       `view_step_Indemnité de licenciement`,
-      "infos",
+      "anciennete",
     ]);
     fireEvent.change(ui.seniority.startDate.get(), {
       target: { value: "01/01/2022" },
@@ -86,7 +86,7 @@ describe("Indemnité licenciement - Tracking", () => {
       "trackEvent",
       "outil",
       `view_step_Indemnité de licenciement`,
-      "anciennete",
+      "salaires",
     ]);
     fireEvent.click(ui.salary.hasPartialTime.non.get());
     fireEvent.click(ui.salary.hasSameSalary.oui.get());
@@ -98,7 +98,7 @@ describe("Indemnité licenciement - Tracking", () => {
       "trackEvent",
       "outil",
       `view_step_Indemnité de licenciement`,
-      "salaires",
+      "results",
     ]);
     fireEvent.click(ui.previous.get());
     expect(push).toHaveBeenCalledWith([
