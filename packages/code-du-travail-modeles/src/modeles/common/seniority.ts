@@ -8,7 +8,7 @@ import type {
   SeniorityProps,
   SeniorityResult,
   SupportedCcIndemniteLicenciement,
-} from "./types";
+} from "./index";
 
 export type DefaultSeniorityProps = {
   dateEntree: string;
