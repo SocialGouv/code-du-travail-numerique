@@ -69,7 +69,7 @@ const createSalairesStore: StoreSlice<
         produce((state: SalairesStoreSlice) => {
           state.salairesData.input.showHasTempsPartiel = showPartialTime;
           state.salairesData.input.hasTempsPartiel = showPartialTime
-            ? undefined
+            ? state.salairesData.input.hasTempsPartiel
             : "non";
         })
       );
