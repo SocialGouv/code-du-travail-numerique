@@ -41,7 +41,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
           window.localStorage.getItem(STORAGE_KEY_AGREEMENT);
         if (data) {
           const parsedData: Agreement = JSON.parse(data);
-          if (parsedData.num !== get().agreementData.input.agreement?.num) {
+          if (parsedData?.num !== get().agreementData.input.agreement?.num) {
             applyGenericValidation(get, set, "agreement", parsedData);
             applyGenericValidation(get, set, "route", Route.agreement);
             const idcc = parsedData?.num?.toString();
