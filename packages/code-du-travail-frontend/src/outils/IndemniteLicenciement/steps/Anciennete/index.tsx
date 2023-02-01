@@ -56,7 +56,7 @@ const StepAnciennete = () => {
 
   useEffect(() => {
     init();
-  }, []);
+  }, [init]);
 
   const messageMotifsExample = React.useMemo(
     () => getMessageMotifExample(informationData),
