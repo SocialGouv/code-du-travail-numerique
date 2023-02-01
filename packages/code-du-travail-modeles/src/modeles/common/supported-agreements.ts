@@ -1,0 +1,34 @@
+export enum SupportedCcIndemniteLicenciement {
+  IDCC1516 = "IDCC1516",
+  IDCC1518 = "IDCC1518",
+  IDCC2511 = "IDCC2511",
+  IDCC2264 = "IDCC2264",
+  IDCC1979 = "IDCC1979",
+  IDCC3043 = "IDCC3043",
+  IDCC1090 = "IDCC1090",
+  IDCC413 = "IDCC413",
+  IDCC3127 = "IDCC3127",
+  IDCC1351 = "IDCC1351",
+  IDCC2941 = "IDCC2941",
+  IDCC1486 = "IDCC1486",
+  IDCC1527 = "IDCC1527",
+  IDCC3239 = "IDCC3239",
+  IDCC650 = "IDCC650",
+  IDCC2216 = "IDCC2216",
+  IDCC0016 = "IDCC16",
+  IDCC0573 = "IDCC573",
+  IDCC1596 = "IDCC1596",
+  IDCC1702 = "IDCC1702",
+  IDCC0029 = "IDCC29",
+  IDCC0044 = "IDCC44",
+  IDCC1517 = "IDCC1517",
+  IDCC2098 = "IDCC2098",
+  IDCC2609 = "IDCC2609",
+  default = "default",
+}
+
+export const getSupportedAgreement = (
+  idcc: number
+): SupportedCcIndemniteLicenciement => {
+  return `IDCC${idcc}` as SupportedCcIndemniteLicenciement;
+};

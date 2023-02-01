@@ -17,8 +17,8 @@ import {
   Seniority3239,
 } from "../../conventions";
 import { Seniority1517 } from "../../conventions/1517_commerces_de_detail_non_alimentaires";
+import { SupportedCcIndemniteLicenciement } from "../index";
 import type { ISeniority } from "../types";
-import { SupportedCcIndemniteLicenciement } from "../types";
 
 export class SeniorityFactory {
   create<T extends SupportedCcIndemniteLicenciement>(idcc: T): ISeniority<T> {

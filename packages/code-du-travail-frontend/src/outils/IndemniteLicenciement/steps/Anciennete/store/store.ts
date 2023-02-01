@@ -1,6 +1,5 @@
 import produce from "immer";
 import { StoreApi } from "zustand";
-import { push as matopush } from "@socialgouv/matomo-next";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { StoreSlice } from "../../../../types";
 import { SalairesStoreSlice } from "../../Salaires/store";
@@ -11,17 +10,17 @@ import {
   AncienneteStoreSlice,
 } from "./types";
 import { CommonInformationsStoreSlice } from "../../../../CommonSteps/Informations/store";
-import { Absence } from "@socialgouv/modeles-social";
+import {
+  Absence,
+  getSupportedAgreement,
+  SeniorityFactory,
+  SupportedCcIndemniteLicenciement,
+} from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../../../CommonSteps/Informations/utils";
 import { getErrorEligibility } from "./eligibility";
 import { customSeniorityValidator } from "../../../agreements/seniority";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
-import { IndemniteLicenciementStepName } from "../../..";
-import {
-  MatomoBaseEvent,
-  MatomoSearchAgreementCategory,
-} from "../../../../../lib/matomo/types";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
@@ -38,16 +37,21 @@ const createAncienneteStore: StoreSlice<
     CommonAgreementStoreSlice &
     CommonInformationsStoreSlice &
     ContratTravailStoreSlice
-> = (set, get, { toolName }) => ({
+> = (set, get) => ({
   ancienneteData: { ...initialState },
   ancienneteFunction: {
     init: () => {
+      const selectedAgreementIdcc = get().agreementData.input.agreement?.num;
+      const idcc = selectedAgreementIdcc
+        ? getSupportedAgreement(selectedAgreementIdcc)
+        : SupportedCcIndemniteLicenciement.default;
       set(
         produce(
           (state: AncienneteStoreSlice & CommonInformationsStoreSlice) => {
-            state.ancienneteData.input.absencePeriods = cleanAbsenceDate(
-              state.ancienneteData.input.absencePeriods,
-              state
+            state.ancienneteData.input.absencePeriods = cleanAbsence(
+              get().ancienneteData.input.absencePeriods,
+              get(),
+              idcc
             );
           }
         )
@@ -63,7 +67,7 @@ const createAncienneteStore: StoreSlice<
       applyGenericValidation(get, set, "dateNotification", value);
     },
     onChangeAbsencePeriods: (value) => {
-      const absence = cleanAbsenceDate(value, get());
+      const absence = cleanAbsence(value, get());
       applyGenericValidation(get, set, "absencePeriods", absence);
     },
     onChangeHasAbsenceProlonge: (value) => {
@@ -97,7 +101,7 @@ const createAncienneteStore: StoreSlice<
 
       set(
         produce((state: AncienneteStoreSlice) => {
-          state.ancienneteData.hasBeenSubmit = isValid ? false : true;
+          state.ancienneteData.hasBeenSubmit = !isValid;
           state.ancienneteData.isStepValid = isValid;
           state.ancienneteData.error = errorState;
           state.ancienneteData.error.errorEligibility = errorEligibility;
@@ -155,10 +159,21 @@ const applyGenericValidation = (
   }
 };
 
-const cleanAbsenceDate = (
+const cleanAbsence = (
   absencePeriods: Absence[],
-  data: CommonInformationsStoreSlice
+  data: CommonInformationsStoreSlice,
+  idcc: SupportedCcIndemniteLicenciement | undefined = undefined
 ): Absence[] => {
+  if (idcc) {
+    // clean absence
+    const motifs = new SeniorityFactory()
+      .create(idcc ?? SupportedCcIndemniteLicenciement.default)
+      .getMotifs();
+    absencePeriods = absencePeriods.filter((absence) =>
+      motifs.some((motif) => motif.key === absence.motif.key)
+    );
+  }
+
   return absencePeriods.map((absence) => {
     const dateRequired = absence.motif.startAt
       ? absence.motif.startAt(

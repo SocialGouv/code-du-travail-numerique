@@ -19,7 +19,7 @@ import {
   MatomoAgreementEvent,
   MatomoBaseEvent,
   MatomoSearchAgreementCategory,
-} from "../../../../lib/matomo/types";
+} from "../../../../lib";
 
 const initialState: Omit<CommonAgreementStoreData, "publicodes"> = {
   input: {},
@@ -139,7 +139,7 @@ const createCommonAgreementStore: StoreSlicePublicode<
       }
       set(
         produce((state: CommonAgreementStoreSlice) => {
-          state.agreementData.hasBeenSubmit = isValid ? false : true;
+          state.agreementData.hasBeenSubmit = !isValid;
           state.agreementData.isStepValid = isValid;
           state.agreementData.error = errorState;
         })

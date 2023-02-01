@@ -7,7 +7,7 @@ import { useIndemniteLicenciementStore } from "../../store";
 import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social";
 import { informationToSituation } from "../../../CommonSteps/Informations/utils";
 import Html from "../../../../common/Html";
-import { getMessageMotifExample } from "../../agreements/messageMotifExample";
+import { getMessageMotifExample } from "../../agreements";
 
 const StepAnciennete = () => {
   const {
@@ -55,7 +55,7 @@ const StepAnciennete = () => {
 
   useEffect(() => {
     init();
-  }, [init]);
+  }, []);
 
   const messageMotifsExample = React.useMemo(
     () => getMessageMotifExample(informationData),

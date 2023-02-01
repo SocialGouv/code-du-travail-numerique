@@ -167,6 +167,7 @@ export const ui = {
       non: byTestId("hasAbsenceProlonge - Non"),
     },
     absences: {
+      motifs: byTestId(/absence-motif-[0-9]/),
       motif: (index: number) => byTestId(`absence-motif-${index}`),
       duration: (index: number) => byTestId(`absence-duree-${index}`),
       date: (index: number) => byTestId(`absence-date-${index}`),
@@ -245,6 +246,10 @@ export const ui = {
         ),
       },
     },
+    absences: {
+      motif: byTestId("absence-motif"),
+      duration: byTestId("absence-duration"),
+    }
   },
   next: byText("Suivant"),
   previous: byText("Précédent"),
