@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.90.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.89.0...v4.90.0) (2023-02-01)
+
+### Bug Fixes
+
+- **indemnite-licenciement:** remise à zéro des données propres à la CC 3239 ([#4926](https://github.com/SocialGouv/code-du-travail-numerique/issues/4926)) ([6948136](https://github.com/SocialGouv/code-du-travail-numerique/commit/6948136fcfc4e0361d9083532e0da8a25e49ea09))
+- **preavis-retraite:** ne supporte pas les espaces insécables ([#4929](https://github.com/SocialGouv/code-du-travail-numerique/issues/4929)) ([251c309](https://github.com/SocialGouv/code-du-travail-numerique/commit/251c309ad6407c0f266ffd3fed83383466bab671))
+
+### Features
+
+- **licenciement:** support CC pour le simulateur ([#4469](https://github.com/SocialGouv/code-du-travail-numerique/issues/4469)) ([bb42c53](https://github.com/SocialGouv/code-du-travail-numerique/commit/bb42c53403000d679227905b7dd1664aa0e38bb6))
+
 # [4.89.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.88.1...v4.89.0) (2023-01-18)
 
 **Note:** Version bump only for package @socialgouv/modeles-social
