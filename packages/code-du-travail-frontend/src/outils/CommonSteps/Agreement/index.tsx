@@ -11,7 +11,7 @@ import { Enterprise } from "../../../conventions/Search/api/enterprises.service"
 import { InlineError } from "../../common/ErrorField";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import ShowAlert from "../../common/Agreement/RouteSelection/ShowAlert";
-import { AgreementSearchValue } from "./store/types";
+import { AgreementSearchValue } from "./store";
 
 type Props = {
   selectedRoute?: Route;
@@ -112,6 +112,7 @@ function AgreementStep({
             onUserAction={(action, value: AgreementSearchValue) =>
               onEnterpriseSearch(value)
             }
+            simulator={simulator}
           />
           {error?.enterprise && <InlineError>{error.enterprise}</InlineError>}
         </>
