@@ -1,6 +1,5 @@
 import produce from "immer";
 import { StoreApi } from "zustand";
-import { push as matopush } from "@socialgouv/matomo-next";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { StoreSlice } from "../../../../types";
 import { SalairesStoreSlice } from "../../Salaires/store";
@@ -17,11 +16,6 @@ import { getErrorEligibility } from "./eligibility";
 import { customSeniorityValidator } from "../../../agreements/seniority";
 import { ContratTravailStoreSlice } from "../../ContratTravail/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
-import { IndemniteLicenciementStepName } from "../../..";
-import {
-  MatomoBaseEvent,
-  MatomoSearchAgreementCategory,
-} from "../../../../../lib/matomo/types";
 
 const initialState: AncienneteStoreData = {
   hasBeenSubmit: false,
@@ -51,6 +45,12 @@ const createAncienneteStore: StoreSlice<
             );
           }
         )
+      );
+      applyGenericValidation(
+        get,
+        set,
+        "dateEntree",
+        get().ancienneteData.input.dateEntree
       );
     },
     onChangeDateEntree: (value) => {
