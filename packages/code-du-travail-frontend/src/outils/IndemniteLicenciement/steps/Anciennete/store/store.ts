@@ -167,7 +167,7 @@ const cleanAbsence = (
   if (idcc) {
     // clean absence
     const motifs = new SeniorityFactory()
-      .create(idcc ?? SupportedCcIndemniteLicenciement.default)
+      .create(idcc)
       .getMotifs();
     absencePeriods = absencePeriods.filter((absence) =>
       motifs.some((motif) => motif.key === absence.motif.key)
