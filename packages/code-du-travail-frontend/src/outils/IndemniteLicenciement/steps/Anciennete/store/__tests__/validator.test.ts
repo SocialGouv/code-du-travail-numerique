@@ -166,6 +166,7 @@ describe("Ancienneté store", () => {
         },
         {
           dateArretTravail: "01/01/2019",
+          arretTravail: "oui",
         },
         {
           publicodesInformations: [],
@@ -202,6 +203,7 @@ describe("Ancienneté store", () => {
         },
         {
           dateArretTravail: "01/01/2023",
+          arretTravail: "oui",
         },
         {
           publicodesInformations: [],
@@ -214,6 +216,39 @@ describe("Ancienneté store", () => {
       expect(result.errorState.errorDateSortie).toStrictEqual(
         "La date de fin de contrat doit se situer après la date d'arrêt de travail indiquée à l'étape n°2"
       );
+    });
+    it("ne doit retourner d'erreur si la date d'arrêt de travail est après la date de fin de contrat mais que l'utilisateur à coché non sur à la question arrêt de travail", () => {
+      const result = validateStep(
+        {
+          dateEntree: "01/01/2020",
+          dateSortie: "01/03/2022",
+          dateNotification: "01/01/2022",
+          absencePeriods: [
+            {
+              motif: {
+                label: "",
+                startAt: () => true,
+                key: MotifKeys.maladieNonPro,
+                value: 1,
+              },
+              startedAt: "01/01/2021",
+              durationInMonth: 2,
+            },
+          ],
+          hasAbsenceProlonge: "oui",
+        },
+        {
+          dateArretTravail: "01/01/2023",
+          arretTravail: "non",
+        },
+        {
+          publicodesInformations: [],
+          isStepHidden: false,
+          isStepSalaryHidden: false,
+          hasNoMissingQuestions: true,
+        }
+      );
+      expect(result.isValid).toBe(true);
     });
   });
 });

@@ -3,15 +3,20 @@ import { parse } from "../../../../../common/utils";
 import { ContratTravailStoreInput } from "../../../ContratTravail/store";
 import { AncienneteStoreError, AncienneteStoreInput } from "../types";
 
+function getDateArret(stateContratTravail: ContratTravailStoreInput) {
+  return stateContratTravail.arretTravail === "oui" &&
+    stateContratTravail.dateArretTravail
+    ? parse(stateContratTravail.dateArretTravail)
+    : null;
+}
+
 export const getDateArretTravailErrors = (
   state: AncienneteStoreInput,
   stateContratTravail: ContratTravailStoreInput
 ): Partial<AncienneteStoreError> => {
   const dEntree = parse(state.dateEntree);
   const dSortie = parse(state.dateSortie);
-  const dArret = stateContratTravail.dateArretTravail
-    ? parse(stateContratTravail.dateArretTravail)
-    : null;
+  const dArret = getDateArret(stateContratTravail);
   let errors: AncienneteStoreError = {};
 
   if (dArret && state.dateEntree && isBefore(dArret, dEntree)) {
