@@ -13,8 +13,11 @@ import { ServiceRenseignementModal } from "../../common/ServiceRenseignementModa
 
 const { spacings } = theme;
 
-export const HelpModal = ({ children: renderProp }) => {
-  const [isHelpModalVisible, setModalVisibility] = useState(false);
+type Props = {
+  children: (openModal: () => void) => JSX.Element;
+};
+export const HelpModal = ({ children: renderProp }: Props): JSX.Element => {
+  const [isHelpModalVisible, setModalVisibility] = useState<boolean>(false);
   const openHelpModal = useCallback(() => {
     setModalVisibility(true);
   }, []);
