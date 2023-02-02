@@ -99,12 +99,12 @@ export type EditorialContent = {
   title_vector?: number[];
   icon?: string;
   dismissalProcess?: boolean;
+  slug: string;
 };
 
 export type EditorialContentData = {
   _source: Partial<EditorialContent>;
   relatedItems?: string[];
-  slug: string;
 };
 
 export type EditorialContentDataWrapper = {
