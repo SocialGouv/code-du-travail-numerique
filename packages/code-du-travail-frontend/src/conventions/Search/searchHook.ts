@@ -1,41 +1,54 @@
 import { useEffect, useState } from "react";
 
-import { getResults } from "./api";
+import { getResults, ResultType } from "./api";
+
+export enum Status {
+  IDLE = "idle",
+  LOADING = "loading",
+  EMPTY = "empty",
+  ERROR = "error",
+  SUCCESS = "success",
+}
 
 // a hook that return [status, searchResults]
 // todo: package as a module
-const useSearchCC = (query) => {
-  const [results, setResults] = useState();
-  const [status, setStatus] = useState("idle");
+const useSearchCC = (query: string): [Status, ResultType] => {
+  const [results, setResults] = useState<ResultType>({
+    conventions: [],
+    entreprises: [],
+  });
+  const [status, setStatus] = useState<Status>(Status.IDLE);
   // load results when query change
   useEffect(() => {
     let shouldUpdate = true;
+
     async function load(query) {
       if (query) {
-        setStatus("loading");
-        setResults();
+        setStatus(Status.LOADING);
+        setResults({ conventions: [], entreprises: [] });
         try {
           const results = await getResults(query);
           if (shouldUpdate) {
             if (results) {
               if (results.conventions.length || results.entreprises.length) {
-                setStatus("success");
+                setStatus(Status.SUCCESS);
               } else {
-                setStatus("empty");
+                setStatus(Status.EMPTY);
               }
               setResults(results);
             } else {
-              setStatus("empty");
+              setStatus(Status.EMPTY);
             }
           }
         } catch (e) {
-          setStatus("error");
+          setStatus(Status.ERROR);
         }
       } else {
-        setResults();
-        setStatus("idle");
+        setResults({ conventions: [], entreprises: [] });
+        setStatus(Status.IDLE);
       }
     }
+
     load(query);
     return function () {
       shouldUpdate = false;

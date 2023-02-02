@@ -3,8 +3,19 @@ import React from "react";
 import styled from "styled-components";
 
 import { ConventionLink } from "./ConventionLink";
+import { Agreement } from "./api/type";
 
-export const CompanyTile = ({ conventions = [], label, onClick }) => (
+type Props = {
+  conventions: Agreement[];
+  label: string;
+  onClick: (agreement: Agreement) => void;
+};
+
+export const CompanyTile = ({
+  conventions = [],
+  label,
+  onClick,
+}: Props): JSX.Element => (
   <>
     <Entreprise>{label}</Entreprise>
     {conventions.length ? (
