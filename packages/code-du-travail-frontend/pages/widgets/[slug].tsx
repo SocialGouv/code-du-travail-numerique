@@ -9,11 +9,13 @@ import {
   DureePreavisRetraite,
   fetchTool,
   loadPublicodesRules,
+  DismissalProcess,
 } from "../../src/outils";
 
 const toolsBySlug = {
   "preavis-licenciement": DureePreavisLicenciement,
   "preavis-retraite": DureePreavisRetraite,
+  "procedure-licenciement": DismissalProcess,
 };
 
 interface Props {
@@ -40,8 +42,11 @@ function Widgets({
         title={title}
         displayTitle={displayTitle}
         publicodesRules={publicodesRules}
+        widgetMode={true}
+        onChange={() => {
+          window.parent?.postMessage({ kind: "onChange" }, "*");
+        }}
       />
-
       <StyledFooter>
         <Link passHref href="/politique-confidentialite">
           <a target="_blank" rel="noopener noreferrer">

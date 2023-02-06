@@ -43,6 +43,12 @@ const FindAnswerPage = (): JSX.Element => (
             image="preavis-licenciement.png"
             description="Calculer la durée de préavis à respecter en cas de licenciement"
           />
+          <CallToActionWidget
+            title="Procedure de licenciement"
+            link="/integration/procedure-licenciement"
+            image="procedure-licenciement.png"
+            description="Calculer la durée de préavis à respecter en cas de licenciement"
+          />
         </Grid>
       </Container>
     </Section>
