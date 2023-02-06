@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.90.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.90.0...v4.90.1) (2023-02-06)
+
+### Bug Fixes
+
+- affichage du résumé de questionnaire sur page info ([#4932](https://github.com/SocialGouv/code-du-travail-numerique/issues/4932)) ([4fa6f9c](https://github.com/SocialGouv/code-du-travail-numerique/commit/4fa6f9cefd43eadaa5bbe7cbd4632f22a3c4dfe1))
+- **contribution:** utilisation de la nouvelle API entreprise ([#4931](https://github.com/SocialGouv/code-du-travail-numerique/issues/4931)) ([9bb15c5](https://github.com/SocialGouv/code-du-travail-numerique/commit/9bb15c5d01cc84df1fb1ff0c72adbee1d225aebd))
+
 # [4.90.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.89.0...v4.90.0) (2023-02-01)
 
 ### Bug Fixes
