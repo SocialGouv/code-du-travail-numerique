@@ -6,29 +6,39 @@ function linkToNewTab(iframe) {
   }
 }
 
+function insertStyles(iframe) {
+  const cssLink = document.createElement("link");
+  cssLink.href = "/widget.css";
+  cssLink.rel = "stylesheet";
+  cssLink.type = "text/css";
+  iframe.contentWindow.document.body.appendChild(cssLink);
+}
+
+function setHeight(iframe) {
+  const height = iframe.contentWindow.document.body.scrollHeight || 800;
+  iframe.style.height = height + "px";
+}
+
 function addWidget(info) {
+  const iframePrefix = "cdtn-iframe-";
   const target = document.querySelector("#cdtn-" + info.name);
   if (!target) {
     return;
   }
-  const targetIframe = document.querySelector("#cdtn-iframe-" + info.name);
+  const targetIframe = document.querySelector("#" + iframePrefix + info.name);
   if (targetIframe) {
     return;
   }
   const iframe = document.createElement("iframe");
   target.insertAdjacentElement("afterbegin", iframe);
-  const isIE = /MSIE/.test(window.navigator.userAgent);
-  iframe.id = "cdtn-iframe-" + info.name;
+
+  iframe.id = iframePrefix + info.name;
   iframe.width = "100%";
   iframe.style = "border:none;";
   iframe.onload = function () {
-    const cssLink = document.createElement("link");
-    cssLink.href = "/widget.css";
-    cssLink.rel = "stylesheet";
-    cssLink.type = "text/css";
-    iframe.contentWindow.document.body.appendChild(cssLink);
-    const height = iframe.contentWindow.document.body.scrollHeight || 800;
-    iframe.style.height = height + "px";
+    insertStyles(iframe);
+    setHeight(iframe);
+    linkToNewTab(iframe);
     iframe.contentWindow.document.addEventListener(
       "DOMNodeInserted",
       function () {
@@ -37,6 +47,7 @@ function addWidget(info) {
     );
   };
 
+  const isIE = /MSIE/.test(window.navigator.userAgent);
   iframe.src = isIE
     ? `javascript:
   <script>
@@ -49,7 +60,7 @@ function addWidget(info) {
 }
 
 function loadWidgets() {
-  const cdtnHost = "http://localhost:3000"; //"https://code.travail.gouv.fr";
+  const cdtnHost = "https://code.travail.gouv.fr";
   [
     {
       name: "widget",

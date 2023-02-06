@@ -1,11 +1,11 @@
-div {
+#__next > div > div {
   box-shadow: none !important;
 }
 
-div:before {
+#__next > div > div:before {
   box-shadow: none !important;
 }
 
-#next > div {
+#__next > div {
   padding: 0;
 }
