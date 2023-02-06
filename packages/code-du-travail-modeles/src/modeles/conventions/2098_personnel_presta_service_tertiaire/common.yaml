@@ -1,0 +1,8 @@
+contrat salarié . convention collective . personnel presta service tertiaire:
+  description: Convention collective nationale du personnel des prestataires de services dans le domaine du secteur tertiaire du 13 août 1999.
+  applicable si: convention collective = 'IDCC2098'
+  valeur: oui
+  cdtn:
+    idcc: 2098
+    préavis-retraite: true
+    indemnité-licenciement: false

@@ -24,10 +24,10 @@ const Information = ({
       references = [],
       title = "",
       dismissalProcess = false,
+      slug = "",
     },
     relatedItems,
-    slug,
-  } = { _source: {}, slug: "" },
+  } = { _source: {} },
 }: EditorialContentDataWrapper) => {
   const { asPath } = useRouter();
   const anchor = asPath.split("#")[1];

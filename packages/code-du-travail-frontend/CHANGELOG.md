@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.90.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.90.0...v4.90.1) (2023-02-06)
+
+### Bug Fixes
+
+- affichage du résumé de questionnaire sur page info ([#4932](https://github.com/SocialGouv/code-du-travail-numerique/issues/4932)) ([4fa6f9c](https://github.com/SocialGouv/code-du-travail-numerique/commit/4fa6f9cefd43eadaa5bbe7cbd4632f22a3c4dfe1))
+- **contribution:** utilisation de la nouvelle API entreprise ([#4931](https://github.com/SocialGouv/code-du-travail-numerique/issues/4931)) ([9bb15c5](https://github.com/SocialGouv/code-du-travail-numerique/commit/9bb15c5d01cc84df1fb1ff0c72adbee1d225aebd))
+
+# [4.90.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.89.0...v4.90.0) (2023-02-01)
+
+### Bug Fixes
+
+- **indemnité de licenciement:** when user select arret de travail with invalid date and then de-select ([#4921](https://github.com/SocialGouv/code-du-travail-numerique/issues/4921)) ([937d05c](https://github.com/SocialGouv/code-du-travail-numerique/commit/937d05c727dd22c990681023ef4e338d23e94339))
+- **indemnite-licenciement:** message pour une CC non traité ([#4922](https://github.com/SocialGouv/code-du-travail-numerique/issues/4922)) ([3c28ec9](https://github.com/SocialGouv/code-du-travail-numerique/commit/3c28ec9c57b9d4f58e98faa4cdf1390cfd48d800))
+- **indemnite-licenciement:** remise à zéro des données propres à la CC 3239 ([#4926](https://github.com/SocialGouv/code-du-travail-numerique/issues/4926)) ([6948136](https://github.com/SocialGouv/code-du-travail-numerique/commit/6948136fcfc4e0361d9083532e0da8a25e49ea09))
+
+### Features
+
+- ajout d'une redirection ([#4917](https://github.com/SocialGouv/code-du-travail-numerique/issues/4917)) ([7cab3f8](https://github.com/SocialGouv/code-du-travail-numerique/commit/7cab3f8e5dd5f5a9fe7afc71cd54229328ad3ef9))
+- **header:** add new header menu ([#4895](https://github.com/SocialGouv/code-du-travail-numerique/issues/4895)) ([e752709](https://github.com/SocialGouv/code-du-travail-numerique/commit/e75270908acf648e2262b1f404f45541b0db2534))
+- **licenciement:** support CC pour le simulateur ([#4469](https://github.com/SocialGouv/code-du-travail-numerique/issues/4469)) ([bb42c53](https://github.com/SocialGouv/code-du-travail-numerique/commit/bb42c53403000d679227905b7dd1664aa0e38bb6))
+
 # [4.89.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.88.1...v4.89.0) (2023-01-18)
 
 ### Bug Fixes

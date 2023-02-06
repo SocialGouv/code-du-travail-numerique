@@ -93,6 +93,7 @@ describe("Push agreement events on click next", () => {
           {
             fullySupported: true,
             idcc: agreement.num,
+            withoutLegal: false,
           },
         ]);
         expect(matopush).toHaveBeenCalledTimes(3);

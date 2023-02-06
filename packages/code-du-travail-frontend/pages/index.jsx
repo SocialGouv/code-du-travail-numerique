@@ -22,7 +22,7 @@ import SearchHero from "../src/search/SearchHero";
 import { fetchTools } from "../src/outils/service";
 import { API_URL } from "../src/config";
 
-export const DocumentsTile = (
+const DocumentsTile = (
   <Link href={`/${getRouteBySource(SOURCES.LETTERS)}`} passHref legacyBehavior>
     <CallToActionTile
       action="Découvrir"

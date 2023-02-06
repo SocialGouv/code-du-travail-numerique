@@ -3,3 +3,4 @@ export { default as DebugInfo } from "./DebugInfo";
 export { default as RadioQuestion } from "./RadioQuestion";
 export { default as TextQuestion } from "./TextQuestion";
 export { default as SimulatorLayout } from "./SimulatorLayout";
+export { default as SelectQuestion } from "./SelectQuestion";

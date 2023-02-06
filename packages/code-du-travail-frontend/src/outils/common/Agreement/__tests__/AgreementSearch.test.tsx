@@ -56,6 +56,7 @@ const dataWithSelectedAgreementNotFullySupported: Props = {
     {
       fullySupported: false,
       idcc: selectedAgreement.num,
+      withoutLegal: false,
     },
   ],
 };
@@ -67,6 +68,7 @@ const dataWithSelectedAgreementSupported: Props = {
     {
       fullySupported: true,
       idcc: selectedAgreement.num,
+      withoutLegal: false,
     },
   ],
 };
@@ -107,7 +109,7 @@ describe("AgreementSearch", () => {
       );
       getByText("Submit").click();
       expect(
-        getByText(/Vous devez séléctionner une convention collective/)
+        getByText(/Vous devez sélectionner une convention collective/)
       ).toBeDefined();
     });
   });

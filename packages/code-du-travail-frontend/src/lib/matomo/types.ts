@@ -58,6 +58,7 @@ export enum MatomoActionEvent {
   HEURE_RECHERCHE_EMPLOI = "view_step_Heures d'absence pour rechercher un emploi",
   PREAVIS_DEMISSION = "view_step_Préavis de démission",
   PREAVIS_LICENCIEMENT = "view_step_Préavis de licenciement",
+  INDEMNITE_LICENCIEMENT = "view_step_Indemnité de licenciement",
 }
 
 type Mapping = Array<{

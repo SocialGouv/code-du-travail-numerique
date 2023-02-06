@@ -1,0 +1,8 @@
+contrat salarié . convention collective . coiffure:
+  description: Convention collective nationale de la coiffure et des professions connexes du 10 juillet 2006.
+  applicable si: convention collective = 'IDCC2596'
+  valeur: oui
+  cdtn:
+    idcc: 2596
+    préavis-retraite: true
+    indemnité-licenciement: false

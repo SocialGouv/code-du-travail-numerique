@@ -16,6 +16,7 @@ export const getSupportedCC = (): AgreementSupportInfo[] =>
   supportedCcn.map((item) => ({
     fullySupported: item.preavisRetraite,
     idcc: item.idcc,
+    withoutLegal: false,
   }));
 
 const RenderAgreementStep = (): JSX.Element => {

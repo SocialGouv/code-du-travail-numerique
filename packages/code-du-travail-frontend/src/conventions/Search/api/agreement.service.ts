@@ -16,7 +16,7 @@ const formatCCn = ({ num, id, slug, title, shortTitle, highlight }) => ({
 // memoize search results
 
 const apiIdcc = memoizee(
-  function createFetcher(query: string) {
+  function createFetcher(query: string): Promise<Agreement[]> {
     const url = `${API_URL}/idcc?q=${encodeURIComponent(query)}`;
 
     return fetch(url).then(async (response) => {

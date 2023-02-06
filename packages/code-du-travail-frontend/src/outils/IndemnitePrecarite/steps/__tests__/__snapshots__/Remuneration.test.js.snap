@@ -1,386 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepRemuneration /> should render multiple inputs 1`] = `
-.c12 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 4rem;
-  padding: 0 1rem;
-  color: #3e486e;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c12:link,
-.c12:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c12:not([disabled]):hover {
-  opacity: 0.6;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: transparent;
-  border-color: transparent;
-}
-
-.c12[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c1 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.c2 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c9 {
-  position: relative;
-  display: inline-block;
-}
-
-.c10 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 5rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: right;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c10[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c10::-webkit-outer-spin-button,
-.c10::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.c10:invalid {
-  border-color: #eb5757;
-}
-
-.c10::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c10::-moz-placeholder {
-  color: #9298af;
-}
-
-.c10:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c10::placeholder {
-  color: #9298af;
-}
-
-.c10:focus {
-  border-color: #7994d4;
-}
-
-.c10:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c10:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c10:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c10:focus::placeholder {
-  color: transparent;
-}
-
-.c11 {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 100%;
-  max-width: 3.2rem;
-  height: 100%;
-  max-height: 3.2rem;
-  color: #9298af;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.c4 {
-  position: relative;
-  display: inline-block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: calc(1.6rem * 1.25);
-  height: calc(1.6rem * 1.25);
-  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
-  padding: 0;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-  box-shadow: none;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c4:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-  width: calc(1.6rem / 1.5);
-  height: calc(1.6rem / 1.5);
-  background-color: #f66663;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  content: "";
-}
-
-.c4:checked {
-  background-color: #fff;
-  border-color: #f66663;
-}
-
-.c4:checked:before {
-  display: block;
-}
-
-.c0 {
-  display: block;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-.c8 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-  max-width: 40rem;
-}
-
-.c17 {
-  color: #3e486e;
-  font-size: 1.4rem;
-  margin-top: 0.8rem;
-}
-
-.c15 {
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  margin: 1rem 0;
-  padding-left: 0;
-}
-
-.c14 {
-  width: 2rem;
-  margin-left: 0.4rem;
-  color: #f66663;
-}
-
-.c16 {
-  width: 2rem;
-  margin-right: 0.4rem;
-  color: #f66663;
-}
-
-.c7 {
-  display: inline-block;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-right: 1rem;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 0.4rem;
-}
-
-@media (max-width:600px) {
-  .c12 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c12 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    padding: 0 1rem;
-    padding-right: 5rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
-    align-self: center;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
-}
-
 <div>
   <label
-    class="c0"
+    class="sc-dvUynV faTIvj"
+    data-testid="question-label"
   >
     <span
-      class="c1"
+      class="sc-bBjRSN fzTfxR"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="sc-bBjRSN jPMLlF"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div
-    class="c3"
+    class="sc-hkeOVe ghkjZk"
   >
     <input
-      class="c4"
+      class="sc-gVFcvn gCGLUB"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
       value="total"
     />
     <label
-      class="c5"
+      class="sc-cbeScs iWkDcx"
       for="typeRemuneration-amount"
     >
       <span>
@@ -393,18 +41,18 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </label>
   </div>
   <div
-    class="c3"
+    class="sc-hkeOVe ghkjZk"
   >
     <input
       checked=""
-      class="c4"
+      class="sc-gVFcvn gCGLUB"
       id="typeRemuneration-pay"
       name="typeRemuneration"
       type="radio"
       value="mensuel"
     />
     <label
-      class="c5"
+      class="sc-cbeScs iWkDcx"
       for="typeRemuneration-pay"
     >
       <span>
@@ -417,43 +65,44 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </label>
   </div>
   <label
-    class="c0"
+    class="sc-dvUynV faTIvj"
+    data-testid="question-label"
   >
     <span
-      class="c1"
+      class="sc-bBjRSN fzTfxR"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="sc-bBjRSN jPMLlF"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div
-    class="c6"
+    class="sc-iXeHaJ eVIYuS"
   >
     <label
-      class="c7"
+      class="sc-gJpXkD jwoXHC"
       for="2"
     >
       Montant :
     </label>
     <div
-      class="c8"
+      class="sc-jtiXyc yWfZs"
     >
       <span
-        class="c9"
+        class="sc-bQCEYZ iOBpgY"
       >
         <input
-          class="c10"
+          class="sc-fXgAZx diKTOs"
           id="2"
           name="salaires[0].salaire"
           type="number"
           value="2000"
         />
         <div
-          class="c11"
+          class="sc-EZqKI fxcivc"
         >
           <svg
             aria-hidden="true"
@@ -470,13 +119,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </span>
     </div>
     <button
-      class="c12 c13"
+      class="sc-hiKfDv dNqnKz sc-fyjqAk iXuofz"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="c14"
+        class="sc-cwiweh hgedxL"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -491,29 +140,29 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </button>
   </div>
   <div
-    class="c6"
+    class="sc-iXeHaJ eVIYuS"
   >
     <label
-      class="c7"
+      class="sc-gJpXkD jwoXHC"
       for="4"
     >
       Montant :
     </label>
     <div
-      class="c8"
+      class="sc-jtiXyc yWfZs"
     >
       <span
-        class="c9"
+        class="sc-bQCEYZ iOBpgY"
       >
         <input
-          class="c10"
+          class="sc-fXgAZx diKTOs"
           id="4"
           name="salaires[1].salaire"
           type="number"
           value="1500"
         />
         <div
-          class="c11"
+          class="sc-EZqKI fxcivc"
         >
           <svg
             aria-hidden="true"
@@ -530,13 +179,13 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </span>
     </div>
     <button
-      class="c12 c13"
+      class="sc-hiKfDv dNqnKz sc-fyjqAk iXuofz"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="c14"
+        class="sc-cwiweh hgedxL"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -551,12 +200,12 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </button>
   </div>
   <button
-    class="c12 c15"
+    class="sc-hiKfDv dNqnKz sc-kmIPcE eZUDAz"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="c16"
+      class="sc-dkuGKe dmBYPA"
       fill="none"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
@@ -571,7 +220,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     Ajouter un salaire
   </button>
   <p
-    class="c17"
+    class="sc-amkrK egWjJZ"
   >
     Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
   </p>
@@ -579,249 +228,35 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
 `;
 
 exports[`<StepRemuneration /> should render one input 1`] = `
-.c1 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.c2 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c7 {
-  position: relative;
-  display: inline-block;
-}
-
-.c8 {
-  width: 100%;
-  height: 5.4rem;
-  padding: 0 2rem;
-  padding-right: 5rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  text-align: right;
-  background: #fff;
-  border: 1px solid transparent;
-  border-color: transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c8[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c8::-webkit-outer-spin-button,
-.c8::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.c8:invalid {
-  border-color: #eb5757;
-}
-
-.c8::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c8::-moz-placeholder {
-  color: #9298af;
-}
-
-.c8:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c8::placeholder {
-  color: #9298af;
-}
-
-.c8:focus {
-  border-color: #7994d4;
-}
-
-.c8:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.c8:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.c8:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.c8:focus::placeholder {
-  color: transparent;
-}
-
-.c9 {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 100%;
-  max-width: 3.2rem;
-  height: 100%;
-  max-height: 3.2rem;
-  color: #9298af;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.c4 {
-  position: relative;
-  display: inline-block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: calc(1.6rem * 1.25);
-  height: calc(1.6rem * 1.25);
-  margin: calc(1.6rem / 5) calc(2 * 1.6rem / 3) 0 0;
-  padding: 0;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-  box-shadow: none;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c4:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-  width: calc(1.6rem / 1.5);
-  height: calc(1.6rem / 1.5);
-  background-color: #f66663;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  content: "";
-}
-
-.c4:checked {
-  background-color: #fff;
-  border-color: #f66663;
-}
-
-.c4:checked:before {
-  display: block;
-}
-
-.c0 {
-  display: block;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-.c6 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-  max-width: 40rem;
-}
-
-.c10 {
-  color: #3e486e;
-  font-size: 1.4rem;
-  margin-top: 0.8rem;
-}
-
-@media (max-width:600px) {
-  .c7 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
-    padding: 0 1rem;
-    padding-right: 5rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
 <div>
   <label
-    class="c0"
+    class="sc-dvUynV faTIvj"
+    data-testid="question-label"
   >
     <span
-      class="c1"
+      class="sc-bBjRSN fzTfxR"
     >
       Comment souhaitez-vous indiquer la rémunération perçue pendant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="sc-bBjRSN jPMLlF"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div
-    class="c3"
+    class="sc-hkeOVe ghkjZk"
   >
     <input
       checked=""
-      class="c4"
+      class="sc-gVFcvn gCGLUB"
       id="typeRemuneration-amount"
       name="typeRemuneration"
       type="radio"
       value="total"
     />
     <label
-      class="c5"
+      class="sc-cbeScs iWkDcx"
       for="typeRemuneration-amount"
     >
       <span>
@@ -834,17 +269,17 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </label>
   </div>
   <div
-    class="c3"
+    class="sc-hkeOVe ghkjZk"
   >
     <input
-      class="c4"
+      class="sc-gVFcvn gCGLUB"
       id="typeRemuneration-pay"
       name="typeRemuneration"
       type="radio"
       value="mensuel"
     />
     <label
-      class="c5"
+      class="sc-cbeScs iWkDcx"
       for="typeRemuneration-pay"
     >
       <span>
@@ -857,35 +292,36 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </label>
   </div>
   <label
-    class="c0"
+    class="sc-dvUynV faTIvj"
+    data-testid="question-label"
     for="currency-1"
   >
     <span
-      class="c1"
+      class="sc-bBjRSN fzTfxR"
     >
       Quelle est la rémunération totale brute perçue durant le contrat de travail ?
-    </span>
-    <span
-      class="c2"
-    >
-       (obligatoire)
+      <span
+        class="sc-bBjRSN jPMLlF"
+      >
+         (obligatoire)
+      </span>
     </span>
   </label>
   <div
-    class="c6"
+    class="sc-jtiXyc yWfZs"
   >
     <span
-      class="c7"
+      class="sc-bQCEYZ iOBpgY"
     >
       <input
-        class="c8"
+        class="sc-fXgAZx diKTOs"
         id="currency-1"
         name="salaire"
         type="number"
         value="3000"
       />
       <div
-        class="c9"
+        class="sc-EZqKI fxcivc"
       >
         <svg
           aria-hidden="true"
@@ -902,7 +338,7 @@ exports[`<StepRemuneration /> should render one input 1`] = `
     </span>
   </div>
   <p
-    class="c10"
+    class="sc-amkrK egWjJZ"
   >
     Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
   </p>

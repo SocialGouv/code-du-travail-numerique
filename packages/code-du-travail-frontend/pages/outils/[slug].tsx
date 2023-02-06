@@ -16,15 +16,14 @@ import { Layout } from "../../src/layout/Layout";
 import {
   AgreementSearch,
   CalculateurIndemnite,
+  DismissalProcess,
   DureePreavisDemission,
   DureePreavisLicenciement,
   DureePreavisRetraite,
+  fetchTool,
   HeuresRechercheEmploi,
-  loadPublicodesRules,
   SimulateurEmbauche,
   SimulateurIndemnitePrecarite,
-  DismissalProcess,
-  fetchTool,
 } from "../../src/outils";
 
 const toolsBySlug = {
@@ -39,10 +38,9 @@ const toolsBySlug = {
   "procedure-licenciement": DismissalProcess,
 };
 
-interface Props {
+export interface Props {
   description: string;
   icon: string;
-  publicodesRules: any;
   relatedItems: Array<any>;
   slug: string;
   title: string;
@@ -60,7 +58,6 @@ function Outils({
   metaTitle,
   metaDescription,
   displayTitle,
-  publicodesRules,
 }: Props): JSX.Element {
   const Tool = toolsBySlug[slug];
   useEffect(() => {
@@ -70,14 +67,14 @@ function Outils({
   return (
     <Layout>
       <Metas title={metaTitle} description={metaDescription} />
-      <StyledSection>
+      <div>
         <Container>
           <Flex>
             <Tool
               icon={icon}
               title={title}
               displayTitle={displayTitle}
-              publicodesRules={publicodesRules}
+              slug={slug}
             />
             <ShareContainer>
               <Share title={title} metaDescription={description} />
@@ -86,7 +83,7 @@ function Outils({
           <RelatedItems items={relatedItems} />
           <Feedback url={router.asPath} />
         </Container>
-      </StyledSection>
+      </div>
     </Layout>
   );
 }
@@ -123,13 +120,10 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     Sentry.captureException(e);
   }
 
-  const publicodesRules = loadPublicodesRules(slug);
-
   return {
     props: {
       description,
       icon,
-      publicodesRules,
       relatedItems,
       slug,
       title,
@@ -141,10 +135,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
 };
 
 const { breakpoints, spacings } = theme;
-
-const StyledSection = styled(Section)`
-  padding-top: 0;
-`;
 
 const ShareContainer = styled.div`
   display: flex;

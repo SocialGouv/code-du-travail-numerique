@@ -13,7 +13,6 @@ import React from "react";
 import Metas from "../../src/common/Metas";
 import { CallToActionTile } from "../../src/common/tiles/CallToAction";
 import { Layout } from "../../src/layout/Layout";
-import { DocumentsTile } from "../index";
 import { fetchTools } from "../../src/outils/service";
 
 const Outils = ({ cdtnSimulators, externalTools }) => (
@@ -26,7 +25,6 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
       <Container>
         <PageTitle>Retrouvez tous nos outils</PageTitle>
         <Grid data-testid="tools-list">
-          {DocumentsTile}
           {cdtnSimulators.map(
             ({
               id,

@@ -1,0 +1,7 @@
+contrat salarié . convention collective . pharmacie:
+  description: Convention collective nationale de la pharmacie d'officine du 3 décembre 1997. Etendue par arrêté du 13 août 1998 (JO du 8 septembre 1998).
+  applicable si: convention collective = 'IDCC1996'
+  valeur: oui
+  cdtn:
+    idcc: 1996
+    préavis-retraite: true

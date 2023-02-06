@@ -219,7 +219,7 @@ export const Results = ({ id, isSearch, items, query }) => {
           <StyledListItem key={`${item.source}-${item.slug}`}>
             <ListLink
               item={item}
-              showTheme={Boolean(isSearch)}
+              showTheme={isSearch}
               query={query}
               titleTagType="h3"
             />

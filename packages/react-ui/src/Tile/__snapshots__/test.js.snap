@@ -108,6 +108,7 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
 .c5 {
   margin: 0;
   font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
   font-weight: 600;
 }
 
@@ -269,6 +270,7 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
 .c4 {
   margin: 0;
   font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
   font-weight: 600;
 }
 
@@ -403,6 +405,7 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
 .c4 {
   margin: 0;
   font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
   font-weight: 600;
 }
 
@@ -553,6 +556,7 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
 .c3 {
   margin: 0;
   font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
   font-weight: 600;
 }
 
@@ -685,6 +689,7 @@ exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
 .c4 {
   margin: 0;
   font-size: 1.8rem;
+  font-family: "Open Sans",sans-serif;
   font-weight: 600;
 }
 

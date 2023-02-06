@@ -1,757 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Answer /> should renders 1`] = `
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c25 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c3 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  position: relative;
-  padding: 4rem;
-  background-color: #fff;
-}
-
-.c3:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  max-height: 30rem;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  content: "";
-}
-
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c21 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-}
-
-.c21 > *:first-child {
-  margin-top: 0;
-}
-
-.c21 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c27 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c27 > *:first-child {
-  margin-top: 0;
-}
-
-.c27 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c15 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c31 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c30 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c33 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c33:link,
-.c33:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c33:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
-}
-
-.c33[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c17 {
-  color: #3e486e;
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c23 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c11 {
-  position: relative;
-}
-
-.c12 {
-  margin-top: 0;
-  margin-bottom: 4rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c14 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c2 {
-  width: 80%;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-}
-
-.c7:hover,
-.c7:focus {
-  color: #f66663;
-}
-
-.c7.spacing-left {
-  margin-left: 1rem;
-}
-
-.c7.spacing-top {
-  margin-top: 1rem;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c10:hover,
-.c10:focus {
-  color: #f66663;
-}
-
-.c10.spacing-left {
-  margin-left: 1rem;
-}
-
-.c10.spacing-top {
-  margin-top: 1rem;
-}
-
-.c8 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding: 0.8rem;
-  background-color: transparent;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-}
-
-.c9 {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  margin-bottom: 1rem;
-}
-
-.c13 {
-  -webkit-order: 3;
-  -ms-flex-order: 3;
-  order: 3;
-  margin-bottom: 1rem;
-  outline: none;
-}
-
-.c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-order: 4;
-  -ms-flex-order: 4;
-  order: 4;
-  font-size: 1.4rem;
-}
-
-.c20 {
-  margin: 3.2rem 0 0 0;
-}
-
-.c28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c29 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.c32 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.c34 + .c34 {
-  margin-left: 4rem;
-}
-
-.c22 {
-  margin: 1.6rem auto;
-}
-
-.c22 div > *:first-child {
-  margin-top: 0;
-}
-
-.c22 div > *:last-child {
-  margin-bottom: 0;
-}
-
-.c24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin-top: 1rem;
-  margin-bottom: 1.6rem;
-  font-weight: bold;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c25 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media print {
-  .c3:before {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c3 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c21 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c21 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c27 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c27 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c33 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c33 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c33 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
-    margin-bottom: 3.2rem;
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    font-size: 2.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c2 {
-    width: 100%;
-  }
-}
-
-@media print {
-  .c6 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-order: 5;
-    -ms-flex-order: 5;
-    order: 5;
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c5 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width:600px) {
-  .c20 {
-    margin-top: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    display: block;
-  }
-}
-
-@media print {
-  .c26 {
-    display: none;
-  }
-}
-
-@media (max-width:1180px) {
-  .c28 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:1180px) {
-  .c29 {
-    margin-bottom: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c29 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-@media (max-width:1180px) {
-  .c32 {
-    -webkit-box-pack: space-around;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: space-around;
-    justify-content: space-around;
-  }
-}
-
-@media (max-width:1180px) {
-  .c34 + .c34 {
-    margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c24 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-}
-
-@media print {
-  .c24 {
-    display: none;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="sc-bdnxRM sc-cGKJhA bCGhmq iSRmyO"
   >
     <div
-      class="c2"
+      class="sc-JsfZP fsqcrV"
     >
       <div
-        class="c0"
+        class="sc-bdnxRM bCGhmq"
       >
         <div
-          class="c3"
+          class="sc-jSFjdj cnDzUD"
         >
           <div
-            class="c4"
+            class="sc-hYIrvc bShXzl"
           >
             <div
-              class="c5"
+              class="sc-hKiEVl cNRPtY"
             >
               <div
-                class="c6"
+                class="sc-dksuTV eYCuDt"
               >
                 <button
-                  class="c7 no-after spacing-left"
+                  class="sc-jhGUec eqGXHT no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -764,16 +46,16 @@ exports[`<Answer /> should renders 1`] = `
                   </span>
                 </button>
                 <a
-                  class="c10 spacing-left"
+                  class="sc-hkoqWr kZjrEK spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -790,15 +72,15 @@ exports[`<Answer /> should renders 1`] = `
                   </span>
                 </a>
                 <button
-                  class="c7 spacing-left"
+                  class="sc-jhGUec eqGXHT spacing-left"
                   title="Partager sur LinkedIn"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -811,18 +93,18 @@ exports[`<Answer /> should renders 1`] = `
                   </span>
                 </button>
                 <div
-                  class="c11"
+                  class="sc-laZMeE dRGEWO"
                 >
                   <button
-                    class="c7 spacing-left"
+                    class="sc-jhGUec eqGXHT spacing-left"
                     title="Plus d’options"
                   >
                     <span
-                      class="c8"
+                      class="sc-bShgHC coizkz"
                     >
                       <svg
                         aria-hidden="true"
-                        class="c9"
+                        class="sc-juXuNZ dtcTbp"
                         fill="none"
                         viewBox="0 0 16 16"
                         xmlns="http://www.w3.org/2000/svg"
@@ -848,37 +130,37 @@ exports[`<Answer /> should renders 1`] = `
               </div>
             </div>
             <header
-              class="c12 c13"
+              class="sc-eXuyPJ YEPUN sc-eiQWpL dravOA"
             >
               <h1
-                class="c14"
+                class="sc-irKDMX dVIwbd"
               >
                 <span
-                  class="c15"
+                  class="sc-gKAaRy jNbrvj"
                 />
                 Article du code
               </h1>
             </header>
             <div
-              class="c16"
+              class="sc-dkiSSI zvucl"
             >
               <p
-                class="c17"
+                class="sc-cOifOu gZvkoB"
               >
                 <span
-                  class="c18"
+                  class="sc-ktvWjP itVlOd"
                 >
-                  Source: 
+                  Source:
                   social groove
                 </span>
                 <span
                   aria-hidden="true"
-                  class="c19"
+                  class="sc-kHVIJG hmrWtj"
                 >
                    - 
                 </span>
                 <span
-                  class="c18"
+                  class="sc-ktvWjP itVlOd"
                 >
                   Mis à jour le
                    : 
@@ -888,24 +170,24 @@ exports[`<Answer /> should renders 1`] = `
             </div>
           </div>
           <div
-            class="c20"
+            class="sc-cVJgsR eMAcUQ"
           >
             <div
-              class="c21 c22"
+              class="sc-jSFjdj sc-hQYpqk dWteEK PsYwi"
             >
               <p
-                class="c23"
+                class="sc-cOifOu jBNwUz"
               >
                 intro de l'article
               </p>
             </div>
             <div
-              class=""
+              class="sc-cvdZrU"
             >
               <p
                 class="test-content"
               >
-                Contenu au format 
+                Contenu au format
                 <strong>
                   html
                 </strong>
@@ -918,27 +200,27 @@ exports[`<Answer /> should renders 1`] = `
         </div>
       </div>
       <div
-        class="c0 c24"
+        class="sc-bdnxRM sc-fTFMiz bCGhmq jwRxHg"
       >
         <p
-          class="c23"
+          class="sc-cOifOu jBNwUz"
         >
           Partager ce contenu : 
         </p>
         <div
-          class="c6"
+          class="sc-dksuTV eYCuDt"
         >
           <button
-            class="c7 no-after spacing-left"
+            class="sc-jhGUec eqGXHT no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -951,16 +233,16 @@ exports[`<Answer /> should renders 1`] = `
             </span>
           </button>
           <a
-            class="c10 spacing-left"
+            class="sc-hkoqWr kZjrEK spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -977,15 +259,15 @@ exports[`<Answer /> should renders 1`] = `
             </span>
           </a>
           <button
-            class="c7 spacing-left"
+            class="sc-jhGUec eqGXHT spacing-left"
             title="Partager sur LinkedIn"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -998,18 +280,18 @@ exports[`<Answer /> should renders 1`] = `
             </span>
           </button>
           <div
-            class="c11"
+            class="sc-laZMeE dRGEWO"
           >
             <button
-              class="c7 spacing-left"
+              class="sc-jhGUec eqGXHT spacing-left"
               title="Plus d’options"
             >
               <span
-                class="c8"
+                class="sc-bShgHC coizkz"
               >
                 <svg
                   aria-hidden="true"
-                  class="c9"
+                  class="sc-juXuNZ dtcTbp"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1035,37 +317,37 @@ exports[`<Answer /> should renders 1`] = `
         </div>
       </div>
       <div
-        class="c25 c26"
+        class="sc-gtsrHT dDJuxj sc-Jgsit fIMTgx"
       >
         <div
-          class="c0"
+          class="sc-bdnxRM bCGhmq"
         >
           <div
-            class="c27"
+            class="sc-jSFjdj dftIwI"
           >
             <div
-              class="c28"
+              class="sc-dbXCOC ezzCbW"
             >
               <h2
-                class="c29 c30"
+                class="sc-ehALMs jjAgxk sc-iCoGMd jQIZyR"
                 data-testid="heading"
               >
                 <span
-                  class="c31"
+                  class="sc-gKAaRy hLlvoX"
                   data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="c32"
+                class="sc-hGwcmR kSUGFz"
               >
                 <button
-                  class="c33 c34 "
+                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                 >
                   Non
                 </button>
                 <button
-                  class="c33 c34 "
+                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                 >
                   Oui
                 </button>
@@ -1080,908 +362,31 @@ exports[`<Answer /> should renders 1`] = `
 `;
 
 exports[`<Answer /> should renders a breadcrumbs 1`] = `
-.c3 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c35 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c11 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  position: relative;
-  padding: 4rem;
-  background-color: #fff;
-}
-
-.c11:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  max-height: 30rem;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  content: "";
-}
-
-.c11 > *:first-child {
-  margin-top: 0;
-}
-
-.c11 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c31 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-}
-
-.c31 > *:first-child {
-  margin-top: 0;
-}
-
-.c31 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c37 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c37 > *:first-child {
-  margin-top: 0;
-}
-
-.c37 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c25 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c41 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c40 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c43 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c43:link,
-.c43:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c43:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
-}
-
-.c43[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c27 {
-  color: #3e486e;
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c33 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c19 {
-  position: relative;
-}
-
-.c1 {
-  position: relative;
-  overflow: hidden;
-}
-
-.c1:before,
-.c1:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: block;
-  width: 4rem;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  content: "";
-  pointer-events: none;
-  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
-}
-
-.c1:before {
-  left: -2rem;
-}
-
-.c1:after {
-  right: -2rem;
-}
-
-.c2 {
-  overflow-x: auto;
-}
-
-.c20 {
-  display: block;
-  margin: 0 0 1rem 0;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  text-transform: uppercase;
-}
-
-.c22 {
-  margin-top: 0;
-  margin-bottom: 4rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c24 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c10 {
-  width: 80%;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-}
-
-.c15:hover,
-.c15:focus {
-  color: #f66663;
-}
-
-.c15.spacing-left {
-  margin-left: 1rem;
-}
-
-.c15.spacing-top {
-  margin-top: 1rem;
-}
-
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c18:hover,
-.c18:focus {
-  color: #f66663;
-}
-
-.c18.spacing-left {
-  margin-left: 1rem;
-}
-
-.c18.spacing-top {
-  margin-top: 1rem;
-}
-
-.c16 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding: 0.8rem;
-  background-color: transparent;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-}
-
-.c17 {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  margin-bottom: 1rem;
-}
-
-.c21 {
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
-}
-
-.c23 {
-  -webkit-order: 3;
-  -ms-flex-order: 3;
-  order: 3;
-  margin-bottom: 1rem;
-  outline: none;
-}
-
-.c26 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-order: 4;
-  -ms-flex-order: 4;
-  order: 4;
-  font-size: 1.4rem;
-}
-
-.c30 {
-  margin: 3.2rem 0 0 0;
-}
-
-.c0 {
-  margin-bottom: 1rem;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 1rem 0 0;
-  white-space: nowrap;
-}
-
-.c5:first-of-type {
-  padding-left: 0;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c6:focus,
-.c6:hover,
-.c6:active {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7 {
-  width: 2rem;
-  height: 2rem;
-  margin-right: 1rem;
-  color: #7994d4;
-}
-
-.c8 {
-  width: 1.2rem;
-  height: 1.2rem;
-  margin-right: 1rem;
-  color: #7994d4;
-}
-
-.c38 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c39 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.c42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.c44 + .c44 {
-  margin-left: 4rem;
-}
-
-.c32 {
-  margin: 1.6rem auto;
-}
-
-.c32 div > *:first-child {
-  margin-top: 0;
-}
-
-.c32 div > *:last-child {
-  margin-bottom: 0;
-}
-
-.c34 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin-top: 1rem;
-  margin-bottom: 1.6rem;
-  font-weight: bold;
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c3 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c35 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media print {
-  .c11:before {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c11 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c11 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c31 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c31 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c37 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c37 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c40 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c40 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c43 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c43 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c43 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    overflow-x: hidden;
-  }
-}
-
-@media (max-width:600px) {
-  .c1:before,
-  .c1:after {
-    display: block;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    overflow-x: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c22 {
-    margin-bottom: 3.2rem;
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c24 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c24 {
-    font-size: 2.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c10 {
-    width: 100%;
-  }
-}
-
-@media print {
-  .c14 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c15 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-order: 5;
-    -ms-flex-order: 5;
-    order: 5;
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c13 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c26 {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    margin-top: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c29 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
-    display: block;
-  }
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    font-size: 1.2rem;
-  }
-
-  .c5:not(:last-of-type) {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-}
-
-@media print {
-  .c36 {
-    display: none;
-  }
-}
-
-@media (max-width:1180px) {
-  .c38 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:1180px) {
-  .c39 {
-    margin-bottom: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c39 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-@media (max-width:1180px) {
-  .c42 {
-    -webkit-box-pack: space-around;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: space-around;
-    justify-content: space-around;
-  }
-}
-
-@media (max-width:1180px) {
-  .c44 + .c44 {
-    margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c34 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-}
-
-@media print {
-  .c34 {
-    display: none;
-  }
-}
-
 <div>
   <nav
     aria-label="Fil d'ariane"
-    class="c0"
+    class="sc-gXZlLH MffoM"
   >
     <div
-      class="c1"
+      class="sc-eJocfa lolEuP"
     >
       <div
-        class="c2"
+        class="sc-oeezt lplLxT"
       >
         <ol
-          class="c3 c4"
+          class="sc-bdnxRM sc-bFSbwS bCGhmq cFzcBj"
         >
           <li
-            class="c5"
+            class="sc-fxFQKN eoeThm"
           >
             <a
-              class="c6"
+              class="sc-fyGvY hrpgr"
               href="/"
               title="Retour à l'accueil"
             >
               <svg
                 aria-hidden="true"
-                class="c7"
+                class="sc-cjzNjn hUZEJP"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1995,11 +400,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             </a>
           </li>
           <li
-            class="c5"
+            class="sc-fxFQKN eoeThm"
           >
             <svg
               aria-hidden="true"
-              class="c8"
+              class="sc-igOmtu OyNrM"
               fill="none"
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
@@ -2009,20 +414,20 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 fill="currentColor"
               />
             </svg>
-             
+
             <a
-              class="c6"
+              class="sc-fyGvY hrpgr"
               href="/themes/tag-1"
             >
               tag1
             </a>
           </li>
           <li
-            class="c5"
+            class="sc-fxFQKN eoeThm"
           >
             <svg
               aria-hidden="true"
-              class="c8"
+              class="sc-igOmtu OyNrM"
               fill="none"
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
@@ -2032,9 +437,9 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 fill="currentColor"
               />
             </svg>
-             
+
             <a
-              class="c6"
+              class="sc-fyGvY hrpgr"
               href="/themes/tag-2"
             >
               tag2
@@ -2045,37 +450,37 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
     </div>
   </nav>
   <div
-    class="c3 c9"
+    class="sc-bdnxRM sc-cGKJhA bCGhmq iSRmyO"
   >
     <div
-      class="c10"
+      class="sc-JsfZP fsqcrV"
     >
       <div
-        class="c3"
+        class="sc-bdnxRM bCGhmq"
       >
         <div
-          class="c11"
+          class="sc-jSFjdj cnDzUD"
         >
           <div
-            class="c12"
+            class="sc-hYIrvc bShXzl"
           >
             <div
-              class="c13"
+              class="sc-hKiEVl cNRPtY"
             >
               <div
-                class="c14"
+                class="sc-dksuTV eYCuDt"
               >
                 <button
-                  class="c15 no-after spacing-left"
+                  class="sc-jhGUec eqGXHT no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
                   <span
-                    class="c16"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c17"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2088,16 +493,16 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                   </span>
                 </button>
                 <a
-                  class="c18 spacing-left"
+                  class="sc-hkoqWr kZjrEK spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
-                    class="c16"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c17"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2114,15 +519,15 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                   </span>
                 </a>
                 <button
-                  class="c15 spacing-left"
+                  class="sc-jhGUec eqGXHT spacing-left"
                   title="Partager sur LinkedIn"
                 >
                   <span
-                    class="c16"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c17"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2135,18 +540,18 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                   </span>
                 </button>
                 <div
-                  class="c19"
+                  class="sc-laZMeE dRGEWO"
                 >
                   <button
-                    class="c15 spacing-left"
+                    class="sc-jhGUec eqGXHT spacing-left"
                     title="Plus d’options"
                   >
                     <span
-                      class="c16"
+                      class="sc-bShgHC coizkz"
                     >
                       <svg
                         aria-hidden="true"
-                        class="c17"
+                        class="sc-juXuNZ dtcTbp"
                         fill="none"
                         viewBox="0 0 16 16"
                         xmlns="http://www.w3.org/2000/svg"
@@ -2172,42 +577,42 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               </div>
             </div>
             <p
-              class="c20 c21"
+              class="sc-bXexck sc-exqIPC haepIh lnhpif"
             >
               tag2
             </p>
             <header
-              class="c22 c23"
+              class="sc-eXuyPJ YEPUN sc-eiQWpL dravOA"
             >
               <h1
-                class="c24"
+                class="sc-irKDMX dVIwbd"
               >
                 <span
-                  class="c25"
+                  class="sc-gKAaRy jNbrvj"
                 />
                 Article du code
               </h1>
             </header>
             <div
-              class="c26"
+              class="sc-dkiSSI zvucl"
             >
               <p
-                class="c27"
+                class="sc-cOifOu gZvkoB"
               >
                 <span
-                  class="c28"
+                  class="sc-ktvWjP itVlOd"
                 >
-                  Source: 
+                  Source:
                   social groove
                 </span>
                 <span
                   aria-hidden="true"
-                  class="c29"
+                  class="sc-kHVIJG hmrWtj"
                 >
                    - 
                 </span>
                 <span
-                  class="c28"
+                  class="sc-ktvWjP itVlOd"
                 >
                   Mis à jour le
                    : 
@@ -2217,24 +622,24 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             </div>
           </div>
           <div
-            class="c30"
+            class="sc-cVJgsR eMAcUQ"
           >
             <div
-              class="c31 c32"
+              class="sc-jSFjdj sc-hQYpqk dWteEK PsYwi"
             >
               <p
-                class="c33"
+                class="sc-cOifOu jBNwUz"
               >
                 intro de l'article
               </p>
             </div>
             <div
-              class=""
+              class="sc-cvdZrU"
             >
               <p
                 class="test-content"
               >
-                Contenu au format 
+                Contenu au format
                 <strong>
                   html
                 </strong>
@@ -2247,27 +652,27 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
         </div>
       </div>
       <div
-        class="c3 c34"
+        class="sc-bdnxRM sc-fTFMiz bCGhmq jwRxHg"
       >
         <p
-          class="c33"
+          class="sc-cOifOu jBNwUz"
         >
           Partager ce contenu : 
         </p>
         <div
-          class="c14"
+          class="sc-dksuTV eYCuDt"
         >
           <button
-            class="c15 no-after spacing-left"
+            class="sc-jhGUec eqGXHT no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
             <span
-              class="c16"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c17"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2280,16 +685,16 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             </span>
           </button>
           <a
-            class="c18 spacing-left"
+            class="sc-hkoqWr kZjrEK spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
             <span
-              class="c16"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c17"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2306,15 +711,15 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             </span>
           </a>
           <button
-            class="c15 spacing-left"
+            class="sc-jhGUec eqGXHT spacing-left"
             title="Partager sur LinkedIn"
           >
             <span
-              class="c16"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c17"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2327,18 +732,18 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             </span>
           </button>
           <div
-            class="c19"
+            class="sc-laZMeE dRGEWO"
           >
             <button
-              class="c15 spacing-left"
+              class="sc-jhGUec eqGXHT spacing-left"
               title="Plus d’options"
             >
               <span
-                class="c16"
+                class="sc-bShgHC coizkz"
               >
                 <svg
                   aria-hidden="true"
-                  class="c17"
+                  class="sc-juXuNZ dtcTbp"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2364,37 +769,37 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
         </div>
       </div>
       <div
-        class="c35 c36"
+        class="sc-gtsrHT dDJuxj sc-Jgsit fIMTgx"
       >
         <div
-          class="c3"
+          class="sc-bdnxRM bCGhmq"
         >
           <div
-            class="c37"
+            class="sc-jSFjdj dftIwI"
           >
             <div
-              class="c38"
+              class="sc-dbXCOC ezzCbW"
             >
               <h2
-                class="c39 c40"
+                class="sc-ehALMs jjAgxk sc-iCoGMd jQIZyR"
                 data-testid="heading"
               >
                 <span
-                  class="c41"
+                  class="sc-gKAaRy hLlvoX"
                   data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="c42"
+                class="sc-hGwcmR kSUGFz"
               >
                 <button
-                  class="c43 c44 "
+                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                 >
                   Non
                 </button>
                 <button
-                  class="c43 c44 "
+                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                 >
                   Oui
                 </button>
@@ -2409,757 +814,39 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 `;
 
 exports[`<Answer /> should renders back to results link 1`] = `
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c25 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c3 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  position: relative;
-  padding: 4rem;
-  background-color: #fff;
-}
-
-.c3:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  max-height: 30rem;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  content: "";
-}
-
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c21 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-}
-
-.c21 > *:first-child {
-  margin-top: 0;
-}
-
-.c21 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c27 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c27 > *:first-child {
-  margin-top: 0;
-}
-
-.c27 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c15 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c31 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c30 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c33 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c33:link,
-.c33:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c33:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
-}
-
-.c33[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c17 {
-  color: #3e486e;
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c23 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c11 {
-  position: relative;
-}
-
-.c12 {
-  margin-top: 0;
-  margin-bottom: 4rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c14 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c2 {
-  width: 80%;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-}
-
-.c7:hover,
-.c7:focus {
-  color: #f66663;
-}
-
-.c7.spacing-left {
-  margin-left: 1rem;
-}
-
-.c7.spacing-top {
-  margin-top: 1rem;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c10:hover,
-.c10:focus {
-  color: #f66663;
-}
-
-.c10.spacing-left {
-  margin-left: 1rem;
-}
-
-.c10.spacing-top {
-  margin-top: 1rem;
-}
-
-.c8 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding: 0.8rem;
-  background-color: transparent;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-}
-
-.c9 {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  margin-bottom: 1rem;
-}
-
-.c13 {
-  -webkit-order: 3;
-  -ms-flex-order: 3;
-  order: 3;
-  margin-bottom: 1rem;
-  outline: none;
-}
-
-.c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-order: 4;
-  -ms-flex-order: 4;
-  order: 4;
-  font-size: 1.4rem;
-}
-
-.c20 {
-  margin: 3.2rem 0 0 0;
-}
-
-.c28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c29 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.c32 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.c34 + .c34 {
-  margin-left: 4rem;
-}
-
-.c22 {
-  margin: 1.6rem auto;
-}
-
-.c22 div > *:first-child {
-  margin-top: 0;
-}
-
-.c22 div > *:last-child {
-  margin-bottom: 0;
-}
-
-.c24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin-top: 1rem;
-  margin-bottom: 1.6rem;
-  font-weight: bold;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c25 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media print {
-  .c3:before {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c3 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c21 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c21 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c27 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c27 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c33 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c33 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c33 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
-    margin-bottom: 3.2rem;
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    font-size: 2.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c2 {
-    width: 100%;
-  }
-}
-
-@media print {
-  .c6 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-order: 5;
-    -ms-flex-order: 5;
-    order: 5;
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c5 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width:600px) {
-  .c20 {
-    margin-top: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    display: block;
-  }
-}
-
-@media print {
-  .c26 {
-    display: none;
-  }
-}
-
-@media (max-width:1180px) {
-  .c28 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:1180px) {
-  .c29 {
-    margin-bottom: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c29 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-@media (max-width:1180px) {
-  .c32 {
-    -webkit-box-pack: space-around;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: space-around;
-    justify-content: space-around;
-  }
-}
-
-@media (max-width:1180px) {
-  .c34 + .c34 {
-    margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c24 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-}
-
-@media print {
-  .c24 {
-    display: none;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="sc-bdnxRM sc-cGKJhA bCGhmq iSRmyO"
   >
     <div
-      class="c2"
+      class="sc-JsfZP fsqcrV"
     >
       <div
-        class="c0"
+        class="sc-bdnxRM bCGhmq"
       >
         <div
-          class="c3"
+          class="sc-jSFjdj cnDzUD"
         >
           <div
-            class="c4"
+            class="sc-hYIrvc bShXzl"
           >
             <div
-              class="c5"
+              class="sc-hKiEVl cNRPtY"
             >
               <div
-                class="c6"
+                class="sc-dksuTV eYCuDt"
               >
                 <button
-                  class="c7 no-after spacing-left"
+                  class="sc-jhGUec eqGXHT no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -3172,16 +859,16 @@ exports[`<Answer /> should renders back to results link 1`] = `
                   </span>
                 </button>
                 <a
-                  class="c10 spacing-left"
+                  class="sc-hkoqWr kZjrEK spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -3198,15 +885,15 @@ exports[`<Answer /> should renders back to results link 1`] = `
                   </span>
                 </a>
                 <button
-                  class="c7 spacing-left"
+                  class="sc-jhGUec eqGXHT spacing-left"
                   title="Partager sur LinkedIn"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -3219,18 +906,18 @@ exports[`<Answer /> should renders back to results link 1`] = `
                   </span>
                 </button>
                 <div
-                  class="c11"
+                  class="sc-laZMeE dRGEWO"
                 >
                   <button
-                    class="c7 spacing-left"
+                    class="sc-jhGUec eqGXHT spacing-left"
                     title="Plus d’options"
                   >
                     <span
-                      class="c8"
+                      class="sc-bShgHC coizkz"
                     >
                       <svg
                         aria-hidden="true"
-                        class="c9"
+                        class="sc-juXuNZ dtcTbp"
                         fill="none"
                         viewBox="0 0 16 16"
                         xmlns="http://www.w3.org/2000/svg"
@@ -3256,37 +943,37 @@ exports[`<Answer /> should renders back to results link 1`] = `
               </div>
             </div>
             <header
-              class="c12 c13"
+              class="sc-eXuyPJ YEPUN sc-eiQWpL dravOA"
             >
               <h1
-                class="c14"
+                class="sc-irKDMX dVIwbd"
               >
                 <span
-                  class="c15"
+                  class="sc-gKAaRy jNbrvj"
                 />
                 Article du code
               </h1>
             </header>
             <div
-              class="c16"
+              class="sc-dkiSSI zvucl"
             >
               <p
-                class="c17"
+                class="sc-cOifOu gZvkoB"
               >
                 <span
-                  class="c18"
+                  class="sc-ktvWjP itVlOd"
                 >
-                  Source: 
+                  Source:
                   social groove
                 </span>
                 <span
                   aria-hidden="true"
-                  class="c19"
+                  class="sc-kHVIJG hmrWtj"
                 >
                    - 
                 </span>
                 <span
-                  class="c18"
+                  class="sc-ktvWjP itVlOd"
                 >
                   Mis à jour le
                    : 
@@ -3296,24 +983,24 @@ exports[`<Answer /> should renders back to results link 1`] = `
             </div>
           </div>
           <div
-            class="c20"
+            class="sc-cVJgsR eMAcUQ"
           >
             <div
-              class="c21 c22"
+              class="sc-jSFjdj sc-hQYpqk dWteEK PsYwi"
             >
               <p
-                class="c23"
+                class="sc-cOifOu jBNwUz"
               >
                 intro de l'article
               </p>
             </div>
             <div
-              class=""
+              class="sc-cvdZrU"
             >
               <p
                 class="test-content"
               >
-                Contenu au format 
+                Contenu au format
                 <strong>
                   html
                 </strong>
@@ -3326,27 +1013,27 @@ exports[`<Answer /> should renders back to results link 1`] = `
         </div>
       </div>
       <div
-        class="c0 c24"
+        class="sc-bdnxRM sc-fTFMiz bCGhmq jwRxHg"
       >
         <p
-          class="c23"
+          class="sc-cOifOu jBNwUz"
         >
           Partager ce contenu : 
         </p>
         <div
-          class="c6"
+          class="sc-dksuTV eYCuDt"
         >
           <button
-            class="c7 no-after spacing-left"
+            class="sc-jhGUec eqGXHT no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -3359,16 +1046,16 @@ exports[`<Answer /> should renders back to results link 1`] = `
             </span>
           </button>
           <a
-            class="c10 spacing-left"
+            class="sc-hkoqWr kZjrEK spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -3385,15 +1072,15 @@ exports[`<Answer /> should renders back to results link 1`] = `
             </span>
           </a>
           <button
-            class="c7 spacing-left"
+            class="sc-jhGUec eqGXHT spacing-left"
             title="Partager sur LinkedIn"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -3406,18 +1093,18 @@ exports[`<Answer /> should renders back to results link 1`] = `
             </span>
           </button>
           <div
-            class="c11"
+            class="sc-laZMeE dRGEWO"
           >
             <button
-              class="c7 spacing-left"
+              class="sc-jhGUec eqGXHT spacing-left"
               title="Plus d’options"
             >
               <span
-                class="c8"
+                class="sc-bShgHC coizkz"
               >
                 <svg
                   aria-hidden="true"
-                  class="c9"
+                  class="sc-juXuNZ dtcTbp"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3443,37 +1130,37 @@ exports[`<Answer /> should renders back to results link 1`] = `
         </div>
       </div>
       <div
-        class="c25 c26"
+        class="sc-gtsrHT dDJuxj sc-Jgsit fIMTgx"
       >
         <div
-          class="c0"
+          class="sc-bdnxRM bCGhmq"
         >
           <div
-            class="c27"
+            class="sc-jSFjdj dftIwI"
           >
             <div
-              class="c28"
+              class="sc-dbXCOC ezzCbW"
             >
               <h2
-                class="c29 c30"
+                class="sc-ehALMs jjAgxk sc-iCoGMd jQIZyR"
                 data-testid="heading"
               >
                 <span
-                  class="c31"
+                  class="sc-gKAaRy hLlvoX"
                   data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="c32"
+                class="sc-hGwcmR kSUGFz"
               >
                 <button
-                  class="c33 c34 "
+                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                 >
                   Non
                 </button>
                 <button
-                  class="c33 c34 "
+                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                 >
                   Oui
                 </button>
@@ -3488,871 +1175,39 @@ exports[`<Answer /> should renders back to results link 1`] = `
 `;
 
 exports[`<Answer /> should renders related content 1`] = `
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c25 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c3 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  position: relative;
-  padding: 4rem;
-  background-color: #fff;
-}
-
-.c3:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  max-height: 30rem;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  content: "";
-}
-
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c21 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-}
-
-.c21 > *:first-child {
-  margin-top: 0;
-}
-
-.c21 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c27 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c27 > *:first-child {
-  margin-top: 0;
-}
-
-.c27 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c15 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c31 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c30 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c36 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c40 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c43 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  width: auto;
-  margin: 0;
-}
-
-.c42 {
-  -webkit-flex: 0 0 2.8rem;
-  -ms-flex: 0 0 2.8rem;
-  flex: 0 0 2.8rem;
-  width: 2.8rem;
-  height: 2.1rem;
-  margin: 0 1.6rem 0 0;
-  padding-top: 0.6rem;
-  color: #f66663;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c39:hover .c41 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
-}
-
-.c33 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c33:link,
-.c33:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c33:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
-}
-
-.c33[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c17 {
-  color: #3e486e;
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c23 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c11 {
-  position: relative;
-}
-
-.c37 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c12 {
-  margin-top: 0;
-  margin-bottom: 4rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c14 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c2 {
-  width: 70%;
-}
-
-.c35 {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 16rem;
-  z-index: 1;
-  width: calc(30% - 4rem);
-  margin-left: 4rem;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-}
-
-.c7:hover,
-.c7:focus {
-  color: #f66663;
-}
-
-.c7.spacing-left {
-  margin-left: 1rem;
-}
-
-.c7.spacing-top {
-  margin-top: 1rem;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c10:hover,
-.c10:focus {
-  color: #f66663;
-}
-
-.c10.spacing-left {
-  margin-left: 1rem;
-}
-
-.c10.spacing-top {
-  margin-top: 1rem;
-}
-
-.c8 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding: 0.8rem;
-  background-color: transparent;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-}
-
-.c9 {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  margin-bottom: 1rem;
-}
-
-.c13 {
-  -webkit-order: 3;
-  -ms-flex-order: 3;
-  order: 3;
-  margin-bottom: 1rem;
-  outline: none;
-}
-
-.c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-order: 4;
-  -ms-flex-order: 4;
-  order: 4;
-  font-size: 1.4rem;
-}
-
-.c20 {
-  margin: 3.2rem 0 0 0;
-}
-
-.c28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c29 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.c32 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.c34 + .c34 {
-  margin-left: 4rem;
-}
-
-.c38 {
-  margin: 0 0 1.6rem 0;
-  padding: 0;
-}
-
-.c22 {
-  margin: 1.6rem auto;
-}
-
-.c22 div > *:first-child {
-  margin-top: 0;
-}
-
-.c22 div > *:last-child {
-  margin-bottom: 0;
-}
-
-.c24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin-top: 1rem;
-  margin-bottom: 1.6rem;
-  font-weight: bold;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c25 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media print {
-  .c3:before {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c3 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c21 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c21 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c27 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c27 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c36 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c42 {
-    -webkit-flex: 0 0 2rem;
-    -ms-flex: 0 0 2rem;
-    flex: 0 0 2rem;
-    width: 2rem;
-    height: 1.7rem;
-    margin: 0 1rem 0 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c33 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c33 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c33 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
-    margin-bottom: 3.2rem;
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    font-size: 2.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c2 {
-    width: 100%;
-  }
-}
-
-@media (min-width:980px) {
-  .c35 {
-    padding-top: 0;
-  }
-}
-
-@media (max-width:1180px) {
-  .c35 {
-    width: 30%;
-    margin: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c35 {
-    width: 100%;
-  }
-}
-
-@media print {
-  .c35 {
-    display: none;
-  }
-}
-
-@media print {
-  .c6 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-order: 5;
-    -ms-flex-order: 5;
-    order: 5;
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c5 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width:600px) {
-  .c20 {
-    margin-top: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    display: block;
-  }
-}
-
-@media print {
-  .c26 {
-    display: none;
-  }
-}
-
-@media (max-width:1180px) {
-  .c28 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:1180px) {
-  .c29 {
-    margin-bottom: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c29 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-@media (max-width:1180px) {
-  .c32 {
-    -webkit-box-pack: space-around;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: space-around;
-    justify-content: space-around;
-  }
-}
-
-@media (max-width:1180px) {
-  .c34 + .c34 {
-    margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c24 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-}
-
-@media print {
-  .c24 {
-    display: none;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="sc-bdnxRM sc-cGKJhA bCGhmq iSRmyO"
   >
     <div
-      class="c2"
+      class="sc-JsfZP iHBDny"
     >
       <div
-        class="c0"
+        class="sc-bdnxRM bCGhmq"
       >
         <div
-          class="c3"
+          class="sc-jSFjdj cnDzUD"
         >
           <div
-            class="c4"
+            class="sc-hYIrvc bShXzl"
           >
             <div
-              class="c5"
+              class="sc-hKiEVl cNRPtY"
             >
               <div
-                class="c6"
+                class="sc-dksuTV eYCuDt"
               >
                 <button
-                  class="c7 no-after spacing-left"
+                  class="sc-jhGUec eqGXHT no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -4365,16 +1220,16 @@ exports[`<Answer /> should renders related content 1`] = `
                   </span>
                 </button>
                 <a
-                  class="c10 spacing-left"
+                  class="sc-hkoqWr kZjrEK spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -4391,15 +1246,15 @@ exports[`<Answer /> should renders related content 1`] = `
                   </span>
                 </a>
                 <button
-                  class="c7 spacing-left"
+                  class="sc-jhGUec eqGXHT spacing-left"
                   title="Partager sur LinkedIn"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -4412,18 +1267,18 @@ exports[`<Answer /> should renders related content 1`] = `
                   </span>
                 </button>
                 <div
-                  class="c11"
+                  class="sc-laZMeE dRGEWO"
                 >
                   <button
-                    class="c7 spacing-left"
+                    class="sc-jhGUec eqGXHT spacing-left"
                     title="Plus d’options"
                   >
                     <span
-                      class="c8"
+                      class="sc-bShgHC coizkz"
                     >
                       <svg
                         aria-hidden="true"
-                        class="c9"
+                        class="sc-juXuNZ dtcTbp"
                         fill="none"
                         viewBox="0 0 16 16"
                         xmlns="http://www.w3.org/2000/svg"
@@ -4449,37 +1304,37 @@ exports[`<Answer /> should renders related content 1`] = `
               </div>
             </div>
             <header
-              class="c12 c13"
+              class="sc-eXuyPJ YEPUN sc-eiQWpL dravOA"
             >
               <h1
-                class="c14"
+                class="sc-irKDMX dVIwbd"
               >
                 <span
-                  class="c15"
+                  class="sc-gKAaRy jNbrvj"
                 />
                 Article du code
               </h1>
             </header>
             <div
-              class="c16"
+              class="sc-dkiSSI zvucl"
             >
               <p
-                class="c17"
+                class="sc-cOifOu gZvkoB"
               >
                 <span
-                  class="c18"
+                  class="sc-ktvWjP itVlOd"
                 >
-                  Source: 
+                  Source:
                   social groove
                 </span>
                 <span
                   aria-hidden="true"
-                  class="c19"
+                  class="sc-kHVIJG hmrWtj"
                 >
                    - 
                 </span>
                 <span
-                  class="c18"
+                  class="sc-ktvWjP itVlOd"
                 >
                   Mis à jour le
                    : 
@@ -4489,19 +1344,19 @@ exports[`<Answer /> should renders related content 1`] = `
             </div>
           </div>
           <div
-            class="c20"
+            class="sc-cVJgsR eMAcUQ"
           >
             <div
-              class="c21 c22"
+              class="sc-jSFjdj sc-hQYpqk dWteEK PsYwi"
             >
               <p
-                class="c23"
+                class="sc-cOifOu jBNwUz"
               >
                 intro de l'article
               </p>
             </div>
             <div
-              class=""
+              class="sc-cvdZrU"
             >
               <p
                 class="test-content"
@@ -4516,27 +1371,27 @@ exports[`<Answer /> should renders related content 1`] = `
         </div>
       </div>
       <div
-        class="c0 c24"
+        class="sc-bdnxRM sc-fTFMiz bCGhmq jwRxHg"
       >
         <p
-          class="c23"
+          class="sc-cOifOu jBNwUz"
         >
           Partager ce contenu : 
         </p>
         <div
-          class="c6"
+          class="sc-dksuTV eYCuDt"
         >
           <button
-            class="c7 no-after spacing-left"
+            class="sc-jhGUec eqGXHT no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -4549,16 +1404,16 @@ exports[`<Answer /> should renders related content 1`] = `
             </span>
           </button>
           <a
-            class="c10 spacing-left"
+            class="sc-hkoqWr kZjrEK spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -4575,15 +1430,15 @@ exports[`<Answer /> should renders related content 1`] = `
             </span>
           </a>
           <button
-            class="c7 spacing-left"
+            class="sc-jhGUec eqGXHT spacing-left"
             title="Partager sur LinkedIn"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -4596,18 +1451,18 @@ exports[`<Answer /> should renders related content 1`] = `
             </span>
           </button>
           <div
-            class="c11"
+            class="sc-laZMeE dRGEWO"
           >
             <button
-              class="c7 spacing-left"
+              class="sc-jhGUec eqGXHT spacing-left"
               title="Plus d’options"
             >
               <span
-                class="c8"
+                class="sc-bShgHC coizkz"
               >
                 <svg
                   aria-hidden="true"
-                  class="c9"
+                  class="sc-juXuNZ dtcTbp"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -4633,37 +1488,37 @@ exports[`<Answer /> should renders related content 1`] = `
         </div>
       </div>
       <div
-        class="c25 c26"
+        class="sc-gtsrHT dDJuxj sc-Jgsit fIMTgx"
       >
         <div
-          class="c0"
+          class="sc-bdnxRM bCGhmq"
         >
           <div
-            class="c27"
+            class="sc-jSFjdj dftIwI"
           >
             <div
-              class="c28"
+              class="sc-dbXCOC ezzCbW"
             >
               <h2
-                class="c29 c30"
+                class="sc-ehALMs jjAgxk sc-iCoGMd jQIZyR"
                 data-testid="heading"
               >
                 <span
-                  class="c31"
+                  class="sc-gKAaRy hLlvoX"
                   data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="c32"
+                class="sc-hGwcmR kSUGFz"
               >
                 <button
-                  class="c33 c34 "
+                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                 >
                   Non
                 </button>
                 <button
-                  class="c33 c34 "
+                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                 >
                   Oui
                 </button>
@@ -4674,14 +1529,14 @@ exports[`<Answer /> should renders related content 1`] = `
       </div>
     </div>
     <div
-      class="c25 c35"
+      class="sc-gtsrHT dDJuxj sc-gGGFjW cPDQCk"
     >
       <div
-        class="c0"
+        class="sc-bdnxRM bCGhmq"
       >
         <div
           aria-level="2"
-          class="c36"
+          class="sc-iCoGMd gaXVHn"
           data-testid="heading"
           role="heading"
         >
@@ -4689,18 +1544,18 @@ exports[`<Answer /> should renders related content 1`] = `
            :
         </div>
         <ul
-          class="c37"
+          class="sc-jffHpj jAxtJd"
         >
           <li
-            class="c38"
+            class="sc-fTZpSt cxgQnq"
           >
             <a
-              class="c39 c40"
-              href="url.extrenal/tool"
+              class="sc-ezzafa eFglTD"
+              href="/url.extrenal/tool"
             >
               <svg
                 aria-hidden="true"
-                class="c41 c42"
+                class="sc-kLojOw kpfGeG"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -4711,22 +1566,22 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <p
-                class="c43"
+                class="sc-bYwzuL jTtUkg"
               >
                 related external title 1
               </p>
             </a>
           </li>
           <li
-            class="c38"
+            class="sc-fTZpSt cxgQnq"
           >
             <a
-              class="c39 c40"
+              class="sc-ezzafa eFglTD"
               href="/outils/TOOL_1"
             >
               <svg
                 aria-hidden="true"
-                class="c41 c42"
+                class="sc-kLojOw kpfGeG"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -4737,7 +1592,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <p
-                class="c43"
+                class="sc-bYwzuL jTtUkg"
               >
                 related tool title 1
               </p>
@@ -4746,7 +1601,7 @@ exports[`<Answer /> should renders related content 1`] = `
         </ul>
         <div
           aria-level="2"
-          class="c36"
+          class="sc-iCoGMd gaXVHn"
           data-testid="heading"
           role="heading"
         >
@@ -4754,18 +1609,18 @@ exports[`<Answer /> should renders related content 1`] = `
            :
         </div>
         <ul
-          class="c37"
+          class="sc-jffHpj jAxtJd"
         >
           <li
-            class="c38"
+            class="sc-fTZpSt cxgQnq"
           >
             <a
-              class="c39 c40"
+              class="sc-ezzafa eFglTD"
               href="/fiche-service-public/LINK_1"
             >
               <svg
                 aria-hidden="true"
-                class="c41 c42"
+                class="sc-kLojOw kpfGeG"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -4776,22 +1631,22 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <p
-                class="c43"
+                class="sc-bYwzuL jTtUkg"
               >
                 related sheet sp title 1
               </p>
             </a>
           </li>
           <li
-            class="c38"
+            class="sc-fTZpSt cxgQnq"
           >
             <a
-              class="c39 c40"
+              class="sc-ezzafa eFglTD"
               href="/fiche-ministere-travail/LINK_2"
             >
               <svg
                 aria-hidden="true"
-                class="c41 c42"
+                class="sc-kLojOw kpfGeG"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -4802,22 +1657,22 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <p
-                class="c43"
+                class="sc-bYwzuL jTtUkg"
               >
                 related sheet mt title 1
               </p>
             </a>
           </li>
           <li
-            class="c38"
+            class="sc-fTZpSt cxgQnq"
           >
             <a
-              class="c39 c40"
+              class="sc-ezzafa eFglTD"
               href="/fiche-service-public/LINK_4"
             >
               <svg
                 aria-hidden="true"
-                class="c41 c42"
+                class="sc-kLojOw kpfGeG"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -4828,7 +1683,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <p
-                class="c43"
+                class="sc-bYwzuL jTtUkg"
               >
                 related sheet sp title 2
               </p>
@@ -4842,757 +1697,39 @@ exports[`<Answer /> should renders related content 1`] = `
 `;
 
 exports[`<Answer /> should renders tooltip 1`] = `
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c25 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c3 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  position: relative;
-  padding: 4rem;
-  background-color: #fff;
-}
-
-.c3:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  max-height: 30rem;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  content: "";
-}
-
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c21 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-}
-
-.c21 > *:first-child {
-  margin-top: 0;
-}
-
-.c21 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c27 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c27 > *:first-child {
-  margin-top: 0;
-}
-
-.c27 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c15 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c31 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c30 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c33 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c33:link,
-.c33:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c33:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
-}
-
-.c33[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c17 {
-  color: #3e486e;
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c23 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c11 {
-  position: relative;
-}
-
-.c12 {
-  margin-top: 0;
-  margin-bottom: 4rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c14 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c2 {
-  width: 80%;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-}
-
-.c7:hover,
-.c7:focus {
-  color: #f66663;
-}
-
-.c7.spacing-left {
-  margin-left: 1rem;
-}
-
-.c7.spacing-top {
-  margin-top: 1rem;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c10:hover,
-.c10:focus {
-  color: #f66663;
-}
-
-.c10.spacing-left {
-  margin-left: 1rem;
-}
-
-.c10.spacing-top {
-  margin-top: 1rem;
-}
-
-.c8 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding: 0.8rem;
-  background-color: transparent;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-}
-
-.c9 {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  margin-bottom: 1rem;
-}
-
-.c13 {
-  -webkit-order: 3;
-  -ms-flex-order: 3;
-  order: 3;
-  margin-bottom: 1rem;
-  outline: none;
-}
-
-.c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-order: 4;
-  -ms-flex-order: 4;
-  order: 4;
-  font-size: 1.4rem;
-}
-
-.c20 {
-  margin: 3.2rem 0 0 0;
-}
-
-.c28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c29 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.c32 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.c34 + .c34 {
-  margin-left: 4rem;
-}
-
-.c22 {
-  margin: 1.6rem auto;
-}
-
-.c22 div > *:first-child {
-  margin-top: 0;
-}
-
-.c22 div > *:last-child {
-  margin-bottom: 0;
-}
-
-.c24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin-top: 1rem;
-  margin-bottom: 1.6rem;
-  font-weight: bold;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c25 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media print {
-  .c3:before {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c3 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c21 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c21 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c27 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c27 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c33 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c33 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c33 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
-    margin-bottom: 3.2rem;
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    font-size: 2.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c2 {
-    width: 100%;
-  }
-}
-
-@media print {
-  .c6 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-order: 5;
-    -ms-flex-order: 5;
-    order: 5;
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c5 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width:600px) {
-  .c20 {
-    margin-top: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    display: block;
-  }
-}
-
-@media print {
-  .c26 {
-    display: none;
-  }
-}
-
-@media (max-width:1180px) {
-  .c28 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:1180px) {
-  .c29 {
-    margin-bottom: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c29 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-@media (max-width:1180px) {
-  .c32 {
-    -webkit-box-pack: space-around;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: space-around;
-    justify-content: space-around;
-  }
-}
-
-@media (max-width:1180px) {
-  .c34 + .c34 {
-    margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c24 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-}
-
-@media print {
-  .c24 {
-    display: none;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="sc-bdnxRM sc-cGKJhA bCGhmq iSRmyO"
   >
     <div
-      class="c2"
+      class="sc-JsfZP fsqcrV"
     >
       <div
-        class="c0"
+        class="sc-bdnxRM bCGhmq"
       >
         <div
-          class="c3"
+          class="sc-jSFjdj cnDzUD"
         >
           <div
-            class="c4"
+            class="sc-hYIrvc bShXzl"
           >
             <div
-              class="c5"
+              class="sc-hKiEVl cNRPtY"
             >
               <div
-                class="c6"
+                class="sc-dksuTV eYCuDt"
               >
                 <button
-                  class="c7 no-after spacing-left"
+                  class="sc-jhGUec eqGXHT no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -5605,16 +1742,16 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   </span>
                 </button>
                 <a
-                  class="c10 spacing-left"
+                  class="sc-hkoqWr kZjrEK spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -5631,15 +1768,15 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   </span>
                 </a>
                 <button
-                  class="c7 spacing-left"
+                  class="sc-jhGUec eqGXHT spacing-left"
                   title="Partager sur LinkedIn"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -5652,18 +1789,18 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   </span>
                 </button>
                 <div
-                  class="c11"
+                  class="sc-laZMeE dRGEWO"
                 >
                   <button
-                    class="c7 spacing-left"
+                    class="sc-jhGUec eqGXHT spacing-left"
                     title="Plus d’options"
                   >
                     <span
-                      class="c8"
+                      class="sc-bShgHC coizkz"
                     >
                       <svg
                         aria-hidden="true"
-                        class="c9"
+                        class="sc-juXuNZ dtcTbp"
                         fill="none"
                         viewBox="0 0 16 16"
                         xmlns="http://www.w3.org/2000/svg"
@@ -5689,37 +1826,37 @@ exports[`<Answer /> should renders tooltip 1`] = `
               </div>
             </div>
             <header
-              class="c12 c13"
+              class="sc-eXuyPJ YEPUN sc-eiQWpL dravOA"
             >
               <h1
-                class="c14"
+                class="sc-irKDMX dVIwbd"
               >
                 <span
-                  class="c15"
+                  class="sc-gKAaRy jNbrvj"
                 />
                 Article du code
               </h1>
             </header>
             <div
-              class="c16"
+              class="sc-dkiSSI zvucl"
             >
               <p
-                class="c17"
+                class="sc-cOifOu gZvkoB"
               >
                 <span
-                  class="c18"
+                  class="sc-ktvWjP itVlOd"
                 >
-                  Source: 
+                  Source:
                   social groove
                 </span>
                 <span
                   aria-hidden="true"
-                  class="c19"
+                  class="sc-kHVIJG hmrWtj"
                 >
                    - 
                 </span>
                 <span
-                  class="c18"
+                  class="sc-ktvWjP itVlOd"
                 >
                   Mis à jour le
                    : 
@@ -5729,24 +1866,24 @@ exports[`<Answer /> should renders tooltip 1`] = `
             </div>
           </div>
           <div
-            class="c20"
+            class="sc-cVJgsR eMAcUQ"
           >
             <div
-              class="c21 c22"
+              class="sc-jSFjdj sc-hQYpqk dWteEK PsYwi"
             >
               <p
-                class="c23"
+                class="sc-cOifOu jBNwUz"
               >
                 intro de l'article
               </p>
             </div>
             <div
-              class=""
+              class="sc-cvdZrU"
             >
               <p
                 class="test-content"
               >
-                Contenu au format 
+                Contenu au format
                 <strong>
                   html
                 </strong>
@@ -5760,27 +1897,27 @@ exports[`<Answer /> should renders tooltip 1`] = `
         </div>
       </div>
       <div
-        class="c0 c24"
+        class="sc-bdnxRM sc-fTFMiz bCGhmq jwRxHg"
       >
         <p
-          class="c23"
+          class="sc-cOifOu jBNwUz"
         >
           Partager ce contenu : 
         </p>
         <div
-          class="c6"
+          class="sc-dksuTV eYCuDt"
         >
           <button
-            class="c7 no-after spacing-left"
+            class="sc-jhGUec eqGXHT no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -5793,16 +1930,16 @@ exports[`<Answer /> should renders tooltip 1`] = `
             </span>
           </button>
           <a
-            class="c10 spacing-left"
+            class="sc-hkoqWr kZjrEK spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -5819,15 +1956,15 @@ exports[`<Answer /> should renders tooltip 1`] = `
             </span>
           </a>
           <button
-            class="c7 spacing-left"
+            class="sc-jhGUec eqGXHT spacing-left"
             title="Partager sur LinkedIn"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -5840,18 +1977,18 @@ exports[`<Answer /> should renders tooltip 1`] = `
             </span>
           </button>
           <div
-            class="c11"
+            class="sc-laZMeE dRGEWO"
           >
             <button
-              class="c7 spacing-left"
+              class="sc-jhGUec eqGXHT spacing-left"
               title="Plus d’options"
             >
               <span
-                class="c8"
+                class="sc-bShgHC coizkz"
               >
                 <svg
                   aria-hidden="true"
-                  class="c9"
+                  class="sc-juXuNZ dtcTbp"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -5877,37 +2014,37 @@ exports[`<Answer /> should renders tooltip 1`] = `
         </div>
       </div>
       <div
-        class="c25 c26"
+        class="sc-gtsrHT dDJuxj sc-Jgsit fIMTgx"
       >
         <div
-          class="c0"
+          class="sc-bdnxRM bCGhmq"
         >
           <div
-            class="c27"
+            class="sc-jSFjdj dftIwI"
           >
             <div
-              class="c28"
+              class="sc-dbXCOC ezzCbW"
             >
               <h2
-                class="c29 c30"
+                class="sc-ehALMs jjAgxk sc-iCoGMd jQIZyR"
                 data-testid="heading"
               >
                 <span
-                  class="c31"
+                  class="sc-gKAaRy hLlvoX"
                   data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="c32"
+                class="sc-hGwcmR kSUGFz"
               >
                 <button
-                  class="c33 c34 "
+                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                 >
                   Non
                 </button>
                 <button
-                  class="c33 c34 "
+                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                 >
                   Oui
                 </button>
@@ -5922,757 +2059,39 @@ exports[`<Answer /> should renders tooltip 1`] = `
 `;
 
 exports[`<Answer /> should renders tooltip for words with diacritics without breaking html 1`] = `
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c25 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c3 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  position: relative;
-  padding: 4rem;
-  background-color: #fff;
-}
-
-.c3:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  max-height: 30rem;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  content: "";
-}
-
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c21 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-}
-
-.c21 > *:first-child {
-  margin-top: 0;
-}
-
-.c21 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c27 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c27 > *:first-child {
-  margin-top: 0;
-}
-
-.c27 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c15 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c31 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c30 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c33 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c33:link,
-.c33:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c33:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
-}
-
-.c33[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c17 {
-  color: #3e486e;
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c23 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c11 {
-  position: relative;
-}
-
-.c12 {
-  margin-top: 0;
-  margin-bottom: 4rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c14 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c2 {
-  width: 80%;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-}
-
-.c7:hover,
-.c7:focus {
-  color: #f66663;
-}
-
-.c7.spacing-left {
-  margin-left: 1rem;
-}
-
-.c7.spacing-top {
-  margin-top: 1rem;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c10:hover,
-.c10:focus {
-  color: #f66663;
-}
-
-.c10.spacing-left {
-  margin-left: 1rem;
-}
-
-.c10.spacing-top {
-  margin-top: 1rem;
-}
-
-.c8 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding: 0.8rem;
-  background-color: transparent;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-}
-
-.c9 {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  margin-bottom: 1rem;
-}
-
-.c13 {
-  -webkit-order: 3;
-  -ms-flex-order: 3;
-  order: 3;
-  margin-bottom: 1rem;
-  outline: none;
-}
-
-.c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-order: 4;
-  -ms-flex-order: 4;
-  order: 4;
-  font-size: 1.4rem;
-}
-
-.c20 {
-  margin: 3.2rem 0 0 0;
-}
-
-.c28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c29 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.c32 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.c34 + .c34 {
-  margin-left: 4rem;
-}
-
-.c22 {
-  margin: 1.6rem auto;
-}
-
-.c22 div > *:first-child {
-  margin-top: 0;
-}
-
-.c22 div > *:last-child {
-  margin-bottom: 0;
-}
-
-.c24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin-top: 1rem;
-  margin-bottom: 1.6rem;
-  font-weight: bold;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c25 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media print {
-  .c3:before {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c3 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c21 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c21 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c27 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c27 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c33 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c33 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c33 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
-    margin-bottom: 3.2rem;
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    font-size: 2.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c2 {
-    width: 100%;
-  }
-}
-
-@media print {
-  .c6 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-order: 5;
-    -ms-flex-order: 5;
-    order: 5;
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c5 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width:600px) {
-  .c20 {
-    margin-top: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    display: block;
-  }
-}
-
-@media print {
-  .c26 {
-    display: none;
-  }
-}
-
-@media (max-width:1180px) {
-  .c28 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:1180px) {
-  .c29 {
-    margin-bottom: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c29 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-@media (max-width:1180px) {
-  .c32 {
-    -webkit-box-pack: space-around;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: space-around;
-    justify-content: space-around;
-  }
-}
-
-@media (max-width:1180px) {
-  .c34 + .c34 {
-    margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c24 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-}
-
-@media print {
-  .c24 {
-    display: none;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="sc-bdnxRM sc-cGKJhA bCGhmq iSRmyO"
   >
     <div
-      class="c2"
+      class="sc-JsfZP fsqcrV"
     >
       <div
-        class="c0"
+        class="sc-bdnxRM bCGhmq"
       >
         <div
-          class="c3"
+          class="sc-jSFjdj cnDzUD"
         >
           <div
-            class="c4"
+            class="sc-hYIrvc bShXzl"
           >
             <div
-              class="c5"
+              class="sc-hKiEVl cNRPtY"
             >
               <div
-                class="c6"
+                class="sc-dksuTV eYCuDt"
               >
                 <button
-                  class="c7 no-after spacing-left"
+                  class="sc-jhGUec eqGXHT no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -6685,16 +2104,16 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   </span>
                 </button>
                 <a
-                  class="c10 spacing-left"
+                  class="sc-hkoqWr kZjrEK spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -6711,15 +2130,15 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   </span>
                 </a>
                 <button
-                  class="c7 spacing-left"
+                  class="sc-jhGUec eqGXHT spacing-left"
                   title="Partager sur LinkedIn"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -6732,18 +2151,18 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   </span>
                 </button>
                 <div
-                  class="c11"
+                  class="sc-laZMeE dRGEWO"
                 >
                   <button
-                    class="c7 spacing-left"
+                    class="sc-jhGUec eqGXHT spacing-left"
                     title="Plus d’options"
                   >
                     <span
-                      class="c8"
+                      class="sc-bShgHC coizkz"
                     >
                       <svg
                         aria-hidden="true"
-                        class="c9"
+                        class="sc-juXuNZ dtcTbp"
                         fill="none"
                         viewBox="0 0 16 16"
                         xmlns="http://www.w3.org/2000/svg"
@@ -6769,37 +2188,37 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               </div>
             </div>
             <header
-              class="c12 c13"
+              class="sc-eXuyPJ YEPUN sc-eiQWpL dravOA"
             >
               <h1
-                class="c14"
+                class="sc-irKDMX dVIwbd"
               >
                 <span
-                  class="c15"
+                  class="sc-gKAaRy jNbrvj"
                 />
                 Article du code
               </h1>
             </header>
             <div
-              class="c16"
+              class="sc-dkiSSI zvucl"
             >
               <p
-                class="c17"
+                class="sc-cOifOu gZvkoB"
               >
                 <span
-                  class="c18"
+                  class="sc-ktvWjP itVlOd"
                 >
-                  Source: 
+                  Source:
                   social groove
                 </span>
                 <span
                   aria-hidden="true"
-                  class="c19"
+                  class="sc-kHVIJG hmrWtj"
                 >
                    - 
                 </span>
                 <span
-                  class="c18"
+                  class="sc-ktvWjP itVlOd"
                 >
                   Mis à jour le
                    : 
@@ -6809,24 +2228,24 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             </div>
           </div>
           <div
-            class="c20"
+            class="sc-cVJgsR eMAcUQ"
           >
             <div
-              class="c21 c22"
+              class="sc-jSFjdj sc-hQYpqk dWteEK PsYwi"
             >
               <p
-                class="c23"
+                class="sc-cOifOu jBNwUz"
               >
                 intro de l'article
               </p>
             </div>
             <div
-              class=""
+              class="sc-cvdZrU"
             >
               <p
                 class="test-content"
               >
-                Contenu au format 
+                Contenu au format
                 <strong>
                   indemnités
                 </strong>
@@ -6840,27 +2259,27 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
         </div>
       </div>
       <div
-        class="c0 c24"
+        class="sc-bdnxRM sc-fTFMiz bCGhmq jwRxHg"
       >
         <p
-          class="c23"
+          class="sc-cOifOu jBNwUz"
         >
           Partager ce contenu : 
         </p>
         <div
-          class="c6"
+          class="sc-dksuTV eYCuDt"
         >
           <button
-            class="c7 no-after spacing-left"
+            class="sc-jhGUec eqGXHT no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -6873,16 +2292,16 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             </span>
           </button>
           <a
-            class="c10 spacing-left"
+            class="sc-hkoqWr kZjrEK spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -6899,15 +2318,15 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             </span>
           </a>
           <button
-            class="c7 spacing-left"
+            class="sc-jhGUec eqGXHT spacing-left"
             title="Partager sur LinkedIn"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -6920,18 +2339,18 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             </span>
           </button>
           <div
-            class="c11"
+            class="sc-laZMeE dRGEWO"
           >
             <button
-              class="c7 spacing-left"
+              class="sc-jhGUec eqGXHT spacing-left"
               title="Plus d’options"
             >
               <span
-                class="c8"
+                class="sc-bShgHC coizkz"
               >
                 <svg
                   aria-hidden="true"
-                  class="c9"
+                  class="sc-juXuNZ dtcTbp"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -6957,37 +2376,37 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
         </div>
       </div>
       <div
-        class="c25 c26"
+        class="sc-gtsrHT dDJuxj sc-Jgsit fIMTgx"
       >
         <div
-          class="c0"
+          class="sc-bdnxRM bCGhmq"
         >
           <div
-            class="c27"
+            class="sc-jSFjdj dftIwI"
           >
             <div
-              class="c28"
+              class="sc-dbXCOC ezzCbW"
             >
               <h2
-                class="c29 c30"
+                class="sc-ehALMs jjAgxk sc-iCoGMd jQIZyR"
                 data-testid="heading"
               >
                 <span
-                  class="c31"
+                  class="sc-gKAaRy hLlvoX"
                   data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="c32"
+                class="sc-hGwcmR kSUGFz"
               >
                 <button
-                  class="c33 c34 "
+                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                 >
                   Non
                 </button>
                 <button
-                  class="c33 c34 "
+                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                 >
                   Oui
                 </button>
@@ -7002,757 +2421,39 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 `;
 
 exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c25 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c3 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  position: relative;
-  padding: 4rem;
-  background-color: #fff;
-}
-
-.c3:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  max-height: 30rem;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  content: "";
-}
-
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c21 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-}
-
-.c21 > *:first-child {
-  margin-top: 0;
-}
-
-.c21 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c27 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c27 > *:first-child {
-  margin-top: 0;
-}
-
-.c27 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c15 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c31 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c30 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c33 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c33:link,
-.c33:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c33:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
-}
-
-.c33[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c17 {
-  color: #3e486e;
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c23 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c11 {
-  position: relative;
-}
-
-.c12 {
-  margin-top: 0;
-  margin-bottom: 4rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c14 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c2 {
-  width: 80%;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-}
-
-.c7:hover,
-.c7:focus {
-  color: #f66663;
-}
-
-.c7.spacing-left {
-  margin-left: 1rem;
-}
-
-.c7.spacing-top {
-  margin-top: 1rem;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c10:hover,
-.c10:focus {
-  color: #f66663;
-}
-
-.c10.spacing-left {
-  margin-left: 1rem;
-}
-
-.c10.spacing-top {
-  margin-top: 1rem;
-}
-
-.c8 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding: 0.8rem;
-  background-color: transparent;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-}
-
-.c9 {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  margin-bottom: 1rem;
-}
-
-.c13 {
-  -webkit-order: 3;
-  -ms-flex-order: 3;
-  order: 3;
-  margin-bottom: 1rem;
-  outline: none;
-}
-
-.c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-order: 4;
-  -ms-flex-order: 4;
-  order: 4;
-  font-size: 1.4rem;
-}
-
-.c20 {
-  margin: 3.2rem 0 0 0;
-}
-
-.c28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c29 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.c32 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.c34 + .c34 {
-  margin-left: 4rem;
-}
-
-.c22 {
-  margin: 1.6rem auto;
-}
-
-.c22 div > *:first-child {
-  margin-top: 0;
-}
-
-.c22 div > *:last-child {
-  margin-bottom: 0;
-}
-
-.c24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin-top: 1rem;
-  margin-bottom: 1.6rem;
-  font-weight: bold;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c25 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media print {
-  .c3:before {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c3 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c21 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c21 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c27 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c27 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c33 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c33 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c33 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
-    margin-bottom: 3.2rem;
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    font-size: 2.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c2 {
-    width: 100%;
-  }
-}
-
-@media print {
-  .c6 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-order: 5;
-    -ms-flex-order: 5;
-    order: 5;
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c5 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width:600px) {
-  .c20 {
-    margin-top: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    display: block;
-  }
-}
-
-@media print {
-  .c26 {
-    display: none;
-  }
-}
-
-@media (max-width:1180px) {
-  .c28 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:1180px) {
-  .c29 {
-    margin-bottom: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c29 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-@media (max-width:1180px) {
-  .c32 {
-    -webkit-box-pack: space-around;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: space-around;
-    justify-content: space-around;
-  }
-}
-
-@media (max-width:1180px) {
-  .c34 + .c34 {
-    margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c24 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-}
-
-@media print {
-  .c24 {
-    display: none;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="sc-bdnxRM sc-cGKJhA bCGhmq iSRmyO"
   >
     <div
-      class="c2"
+      class="sc-JsfZP fsqcrV"
     >
       <div
-        class="c0"
+        class="sc-bdnxRM bCGhmq"
       >
         <div
-          class="c3"
+          class="sc-jSFjdj cnDzUD"
         >
           <div
-            class="c4"
+            class="sc-hYIrvc bShXzl"
           >
             <div
-              class="c5"
+              class="sc-hKiEVl cNRPtY"
             >
               <div
-                class="c6"
+                class="sc-dksuTV eYCuDt"
               >
                 <button
-                  class="c7 no-after spacing-left"
+                  class="sc-jhGUec eqGXHT no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -7765,16 +2466,16 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   </span>
                 </button>
                 <a
-                  class="c10 spacing-left"
+                  class="sc-hkoqWr kZjrEK spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -7791,15 +2492,15 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   </span>
                 </a>
                 <button
-                  class="c7 spacing-left"
+                  class="sc-jhGUec eqGXHT spacing-left"
                   title="Partager sur LinkedIn"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -7812,18 +2513,18 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   </span>
                 </button>
                 <div
-                  class="c11"
+                  class="sc-laZMeE dRGEWO"
                 >
                   <button
-                    class="c7 spacing-left"
+                    class="sc-jhGUec eqGXHT spacing-left"
                     title="Plus d’options"
                   >
                     <span
-                      class="c8"
+                      class="sc-bShgHC coizkz"
                     >
                       <svg
                         aria-hidden="true"
-                        class="c9"
+                        class="sc-juXuNZ dtcTbp"
                         fill="none"
                         viewBox="0 0 16 16"
                         xmlns="http://www.w3.org/2000/svg"
@@ -7849,37 +2550,37 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               </div>
             </div>
             <header
-              class="c12 c13"
+              class="sc-eXuyPJ YEPUN sc-eiQWpL dravOA"
             >
               <h1
-                class="c14"
+                class="sc-irKDMX dVIwbd"
               >
                 <span
-                  class="c15"
+                  class="sc-gKAaRy jNbrvj"
                 />
                 Article du code
               </h1>
             </header>
             <div
-              class="c16"
+              class="sc-dkiSSI zvucl"
             >
               <p
-                class="c17"
+                class="sc-cOifOu gZvkoB"
               >
                 <span
-                  class="c18"
+                  class="sc-ktvWjP itVlOd"
                 >
-                  Source: 
+                  Source:
                   social groove
                 </span>
                 <span
                   aria-hidden="true"
-                  class="c19"
+                  class="sc-kHVIJG hmrWtj"
                 >
                    - 
                 </span>
                 <span
-                  class="c18"
+                  class="sc-ktvWjP itVlOd"
                 >
                   Mis à jour le
                    : 
@@ -7889,19 +2590,19 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             </div>
           </div>
           <div
-            class="c20"
+            class="sc-cVJgsR eMAcUQ"
           >
             <div
-              class="c21 c22"
+              class="sc-jSFjdj sc-hQYpqk dWteEK PsYwi"
             >
               <p
-                class="c23"
+                class="sc-cOifOu jBNwUz"
               >
                 intro de l'article
               </p>
             </div>
             <div
-              class=""
+              class="sc-cvdZrU"
             >
               <p
                 class="test-content"
@@ -7921,27 +2622,27 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
         </div>
       </div>
       <div
-        class="c0 c24"
+        class="sc-bdnxRM sc-fTFMiz bCGhmq jwRxHg"
       >
         <p
-          class="c23"
+          class="sc-cOifOu jBNwUz"
         >
           Partager ce contenu : 
         </p>
         <div
-          class="c6"
+          class="sc-dksuTV eYCuDt"
         >
           <button
-            class="c7 no-after spacing-left"
+            class="sc-jhGUec eqGXHT no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -7954,16 +2655,16 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             </span>
           </button>
           <a
-            class="c10 spacing-left"
+            class="sc-hkoqWr kZjrEK spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -7980,15 +2681,15 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             </span>
           </a>
           <button
-            class="c7 spacing-left"
+            class="sc-jhGUec eqGXHT spacing-left"
             title="Partager sur LinkedIn"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -8001,18 +2702,18 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             </span>
           </button>
           <div
-            class="c11"
+            class="sc-laZMeE dRGEWO"
           >
             <button
-              class="c7 spacing-left"
+              class="sc-jhGUec eqGXHT spacing-left"
               title="Plus d’options"
             >
               <span
-                class="c8"
+                class="sc-bShgHC coizkz"
               >
                 <svg
                   aria-hidden="true"
-                  class="c9"
+                  class="sc-juXuNZ dtcTbp"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -8038,37 +2739,37 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
         </div>
       </div>
       <div
-        class="c25 c26"
+        class="sc-gtsrHT dDJuxj sc-Jgsit fIMTgx"
       >
         <div
-          class="c0"
+          class="sc-bdnxRM bCGhmq"
         >
           <div
-            class="c27"
+            class="sc-jSFjdj dftIwI"
           >
             <div
-              class="c28"
+              class="sc-dbXCOC ezzCbW"
             >
               <h2
-                class="c29 c30"
+                class="sc-ehALMs jjAgxk sc-iCoGMd jQIZyR"
                 data-testid="heading"
               >
                 <span
-                  class="c31"
+                  class="sc-gKAaRy hLlvoX"
                   data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="c32"
+                class="sc-hGwcmR kSUGFz"
               >
                 <button
-                  class="c33 c34 "
+                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                 >
                   Non
                 </button>
                 <button
-                  class="c33 c34 "
+                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                 >
                   Oui
                 </button>
@@ -8083,757 +2784,39 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 `;
 
 exports[`<Answer /> should renders tooltip without breaking previous word 1`] = `
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c25 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c3 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  position: relative;
-  padding: 4rem;
-  background-color: #fff;
-}
-
-.c3:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  max-height: 30rem;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  content: "";
-}
-
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c21 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-}
-
-.c21 > *:first-child {
-  margin-top: 0;
-}
-
-.c21 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c27 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c27 > *:first-child {
-  margin-top: 0;
-}
-
-.c27 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c15 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c31 {
-  position: absolute;
-  background-color: #f66663;
-  border-radius: 0;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c30 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  margin-left: -2.4rem;
-  padding-left: 2.4rem;
-}
-
-.c33 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #3e486e;
-  background: #fff;
-  border-color: #bbcadf;
-  box-shadow: none;
-  opacity: 1;
-  will-change: transform;
-}
-
-.c33:link,
-.c33:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e486e;
-}
-
-.c33:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #fff;
-  border-color: #dee5ef;
-}
-
-.c33[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c17 {
-  color: #3e486e;
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c23 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c11 {
-  position: relative;
-}
-
-.c12 {
-  margin-top: 0;
-  margin-bottom: 4rem;
-  margin-left: -4rem;
-  text-align: left;
-}
-
-.c14 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 3.2rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 4rem;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.c2 {
-  width: 80%;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-}
-
-.c7:hover,
-.c7:focus {
-  color: #f66663;
-}
-
-.c7.spacing-left {
-  margin-left: 1rem;
-}
-
-.c7.spacing-top {
-  margin-top: 1rem;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  color: #7994d4;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c10:hover,
-.c10:focus {
-  color: #f66663;
-}
-
-.c10.spacing-left {
-  margin-left: 1rem;
-}
-
-.c10.spacing-top {
-  margin-top: 1rem;
-}
-
-.c8 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding: 0.8rem;
-  background-color: transparent;
-  border: 1px solid #bbcadf;
-  border-radius: 50%;
-}
-
-.c9 {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  margin-bottom: 1rem;
-}
-
-.c13 {
-  -webkit-order: 3;
-  -ms-flex-order: 3;
-  order: 3;
-  margin-bottom: 1rem;
-  outline: none;
-}
-
-.c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-order: 4;
-  -ms-flex-order: 4;
-  order: 4;
-  font-size: 1.4rem;
-}
-
-.c20 {
-  margin: 3.2rem 0 0 0;
-}
-
-.c28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c29 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.c32 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.c34 + .c34 {
-  margin-left: 4rem;
-}
-
-.c22 {
-  margin: 1.6rem auto;
-}
-
-.c22 div > *:first-child {
-  margin-top: 0;
-}
-
-.c22 div > *:last-child {
-  margin-bottom: 0;
-}
-
-.c24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin-top: 1rem;
-  margin-bottom: 1.6rem;
-  font-weight: bold;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c25 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media print {
-  .c3:before {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c3 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c21 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c21 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c27 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c27 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    margin-left: -1rem;
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c33 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c33 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c33 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
-    margin-bottom: 3.2rem;
-    margin-left: -1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    font-size: 2.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    padding: 0;
-  }
-}
-
-@media (max-width:980px) {
-  .c2 {
-    width: 100%;
-  }
-}
-
-@media print {
-  .c6 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-order: 5;
-    -ms-flex-order: 5;
-    order: 5;
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c5 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width:600px) {
-  .c20 {
-    margin-top: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c18 {
-    display: block;
-  }
-}
-
-@media print {
-  .c26 {
-    display: none;
-  }
-}
-
-@media (max-width:1180px) {
-  .c28 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:1180px) {
-  .c29 {
-    margin-bottom: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c29 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-@media (max-width:1180px) {
-  .c32 {
-    -webkit-box-pack: space-around;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: space-around;
-    justify-content: space-around;
-  }
-}
-
-@media (max-width:1180px) {
-  .c34 + .c34 {
-    margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c24 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-}
-
-@media print {
-  .c24 {
-    display: none;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="sc-bdnxRM sc-cGKJhA bCGhmq iSRmyO"
   >
     <div
-      class="c2"
+      class="sc-JsfZP fsqcrV"
     >
       <div
-        class="c0"
+        class="sc-bdnxRM bCGhmq"
       >
         <div
-          class="c3"
+          class="sc-jSFjdj cnDzUD"
         >
           <div
-            class="c4"
+            class="sc-hYIrvc bShXzl"
           >
             <div
-              class="c5"
+              class="sc-hKiEVl cNRPtY"
             >
               <div
-                class="c6"
+                class="sc-dksuTV eYCuDt"
               >
                 <button
-                  class="c7 no-after spacing-left"
+                  class="sc-jhGUec eqGXHT no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -8846,16 +2829,16 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   </span>
                 </button>
                 <a
-                  class="c10 spacing-left"
+                  class="sc-hkoqWr kZjrEK spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -8872,15 +2855,15 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   </span>
                 </a>
                 <button
-                  class="c7 spacing-left"
+                  class="sc-jhGUec eqGXHT spacing-left"
                   title="Partager sur LinkedIn"
                 >
                   <span
-                    class="c8"
+                    class="sc-bShgHC coizkz"
                   >
                     <svg
                       aria-hidden="true"
-                      class="c9"
+                      class="sc-juXuNZ dtcTbp"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -8893,18 +2876,18 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   </span>
                 </button>
                 <div
-                  class="c11"
+                  class="sc-laZMeE dRGEWO"
                 >
                   <button
-                    class="c7 spacing-left"
+                    class="sc-jhGUec eqGXHT spacing-left"
                     title="Plus d’options"
                   >
                     <span
-                      class="c8"
+                      class="sc-bShgHC coizkz"
                     >
                       <svg
                         aria-hidden="true"
-                        class="c9"
+                        class="sc-juXuNZ dtcTbp"
                         fill="none"
                         viewBox="0 0 16 16"
                         xmlns="http://www.w3.org/2000/svg"
@@ -8930,37 +2913,37 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               </div>
             </div>
             <header
-              class="c12 c13"
+              class="sc-eXuyPJ YEPUN sc-eiQWpL dravOA"
             >
               <h1
-                class="c14"
+                class="sc-irKDMX dVIwbd"
               >
                 <span
-                  class="c15"
+                  class="sc-gKAaRy jNbrvj"
                 />
                 Article du code
               </h1>
             </header>
             <div
-              class="c16"
+              class="sc-dkiSSI zvucl"
             >
               <p
-                class="c17"
+                class="sc-cOifOu gZvkoB"
               >
                 <span
-                  class="c18"
+                  class="sc-ktvWjP itVlOd"
                 >
-                  Source: 
+                  Source:
                   social groove
                 </span>
                 <span
                   aria-hidden="true"
-                  class="c19"
+                  class="sc-kHVIJG hmrWtj"
                 >
                    - 
                 </span>
                 <span
-                  class="c18"
+                  class="sc-ktvWjP itVlOd"
                 >
                   Mis à jour le
                    : 
@@ -8970,19 +2953,19 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             </div>
           </div>
           <div
-            class="c20"
+            class="sc-cVJgsR eMAcUQ"
           >
             <div
-              class="c21 c22"
+              class="sc-jSFjdj sc-hQYpqk dWteEK PsYwi"
             >
               <p
-                class="c23"
+                class="sc-cOifOu jBNwUz"
               >
                 intro de l'article
               </p>
             </div>
             <div
-              class=""
+              class="sc-cvdZrU"
             >
               <p
                 class="test-content"
@@ -8997,27 +2980,27 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
         </div>
       </div>
       <div
-        class="c0 c24"
+        class="sc-bdnxRM sc-fTFMiz bCGhmq jwRxHg"
       >
         <p
-          class="c23"
+          class="sc-cOifOu jBNwUz"
         >
           Partager ce contenu : 
         </p>
         <div
-          class="c6"
+          class="sc-dksuTV eYCuDt"
         >
           <button
-            class="c7 no-after spacing-left"
+            class="sc-jhGUec eqGXHT no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -9030,16 +3013,16 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             </span>
           </button>
           <a
-            class="c10 spacing-left"
+            class="sc-hkoqWr kZjrEK spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -9056,15 +3039,15 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             </span>
           </a>
           <button
-            class="c7 spacing-left"
+            class="sc-jhGUec eqGXHT spacing-left"
             title="Partager sur LinkedIn"
           >
             <span
-              class="c8"
+              class="sc-bShgHC coizkz"
             >
               <svg
                 aria-hidden="true"
-                class="c9"
+                class="sc-juXuNZ dtcTbp"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -9077,18 +3060,18 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             </span>
           </button>
           <div
-            class="c11"
+            class="sc-laZMeE dRGEWO"
           >
             <button
-              class="c7 spacing-left"
+              class="sc-jhGUec eqGXHT spacing-left"
               title="Plus d’options"
             >
               <span
-                class="c8"
+                class="sc-bShgHC coizkz"
               >
                 <svg
                   aria-hidden="true"
-                  class="c9"
+                  class="sc-juXuNZ dtcTbp"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -9114,37 +3097,37 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
         </div>
       </div>
       <div
-        class="c25 c26"
+        class="sc-gtsrHT dDJuxj sc-Jgsit fIMTgx"
       >
         <div
-          class="c0"
+          class="sc-bdnxRM bCGhmq"
         >
           <div
-            class="c27"
+            class="sc-jSFjdj dftIwI"
           >
             <div
-              class="c28"
+              class="sc-dbXCOC ezzCbW"
             >
               <h2
-                class="c29 c30"
+                class="sc-ehALMs jjAgxk sc-iCoGMd jQIZyR"
                 data-testid="heading"
               >
                 <span
-                  class="c31"
+                  class="sc-gKAaRy hLlvoX"
                   data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="c32"
+                class="sc-hGwcmR kSUGFz"
               >
                 <button
-                  class="c33 c34 "
+                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                 >
                   Non
                 </button>
                 <button
-                  class="c33 c34 "
+                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
                 >
                   Oui
                 </button>

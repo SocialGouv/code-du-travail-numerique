@@ -1,4 +1,4 @@
-import { formatIdcc } from "@socialgouv/modeles-social";
+import { formatIdcc, PublicodesSimulator } from "@socialgouv/modeles-social";
 import { Text } from "@socialgouv/cdtn-ui";
 import React from "react";
 
@@ -11,12 +11,14 @@ type Props = {
   agreement: Agreement;
   supportedAgreements: AgreementSupportInfo[];
   alertAgreementNotSupported?: (string) => JSX.Element;
+  simulator: PublicodesSimulator;
 };
 
 const ShowAgreement = ({
   agreement,
   supportedAgreements,
   alertAgreementNotSupported,
+  simulator,
 }: Props): JSX.Element => {
   return (
     <>
@@ -30,6 +32,7 @@ const ShowAgreement = ({
         currentAgreement={agreement}
         supportedAgreements={supportedAgreements}
         alertAgreementNotSupported={alertAgreementNotSupported}
+        simulator={simulator}
       />
     </>
   );

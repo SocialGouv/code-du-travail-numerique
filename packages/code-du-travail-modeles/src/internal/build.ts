@@ -5,16 +5,26 @@ import path from "path";
 import Engine from "publicodes";
 
 import { extractSupportedCc } from "./extractSupportedCc";
-import { mergeModels } from "./merger";
+import {
+  mergeCommonModels,
+  mergeIndemniteLicenciementModels,
+  mergePreavisRetraiteModels,
+} from "./merger";
 
 const inDir = path.resolve(__dirname, "../../bin");
 const outDir = path.resolve(__dirname, "../../lib");
 
-function writeJsonModel() {
-  const modeles = mergeModels();
+function writeJsonModel({
+  merger,
+  outputName,
+}: {
+  merger: () => any;
+  outputName: string;
+}) {
+  const modeles = merger();
   fs.mkdirSync(`${outDir}/modeles`, { recursive: true });
   fs.writeFileSync(
-    path.resolve(outDir, "modeles/modeles.json"),
+    path.resolve(outDir, `modeles/${outputName}.json`),
     JSON.stringify(modeles, null, 2)
   );
 }
@@ -32,19 +42,26 @@ function copyJSFile() {
     path.resolve(inDir, "index.d.ts"),
     path.resolve(outDir, "index.d.ts")
   );
-  fse.copySync(`${inDir}/utils`, `${outDir}/utils`);
   fse.copySync(`${inDir}/publicodes`, `${outDir}/publicodes`);
+  fse.copySync(`${inDir}/modeles`, `${outDir}/modeles`);
   fse.copySync(`${inDir}/simulators`, `${outDir}/simulators`);
 }
 
 function writeSupportedCCFile() {
-  const ccn = extractSupportedCc(new Engine(mergeModels()));
+  const ccn = extractSupportedCc(new Engine(mergeCommonModels()));
   fs.writeFileSync(
-    path.resolve(outDir, "utils/ccn-supported.json"),
+    path.resolve(outDir, "modeles/common/utils/ccn-supported.json"),
     JSON.stringify(ccn, null, 2)
   );
 }
 
 copyJSFile();
 writeSupportedCCFile();
-writeJsonModel();
+writeJsonModel({
+  merger: mergePreavisRetraiteModels,
+  outputName: "modeles-preavis-retraite",
+});
+writeJsonModel({
+  merger: () => mergeIndemniteLicenciementModels(),
+  outputName: "modeles-indemnite-licenciement",
+});

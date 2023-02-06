@@ -58,7 +58,7 @@ function Modeles(props) {
     [modelesByTheme, setDocuments, setSelectedTheme]
   );
   return (
-    <Layout>
+    <Layout currentPage={SOURCES.LETTERS}>
       <Metas title={title} description={subtitle} />
       <Section>
         <Container narrow>
