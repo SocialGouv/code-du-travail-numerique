@@ -1,8 +1,7 @@
 const withTranspileModule = require("next-transpile-modules")([
   "@socialgouv/cdtn-sources",
   "@socialgouv/cdtn-slugify",
-  "lit-element",
-  "lit-html",
+  "lit",
   "parse5",
   "p-debounce",
   "is-plain-obj",
@@ -29,8 +28,10 @@ prefetch-src 'self' *.fabrique.social.gouv.fr;
 const { withSentryConfig } = require("@sentry/nextjs");
 const MappingReplacement = require("./redirects");
 
-const compose = (...fns) => (args) =>
-  fns.reduceRight((arg, fn) => fn(arg), args);
+const compose =
+  (...fns) =>
+  (args) =>
+    fns.reduceRight((arg, fn) => fn(arg), args);
 
 const nextConfig = {
   devIndicators: {
