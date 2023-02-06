@@ -1,0 +1,11 @@
+div {
+  box-shadow: none !important;
+}
+
+div:before {
+  box-shadow: none !important;
+}
+
+#next > div {
+  padding: 0;
+}

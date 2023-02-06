@@ -1,3 +1,11 @@
+function linkToNewTab(iframe) {
+  const links = iframe.contentWindow.document.getElementsByTagName("a");
+  if (!links.length) return;
+  for (let i = 0; i < links.length; i++) {
+    links[i].target = "_blank";
+  }
+}
+
 function addWidget(info) {
   const target = document.querySelector("#cdtn-" + info.name);
   if (!target) {
@@ -12,28 +20,37 @@ function addWidget(info) {
   const isIE = /MSIE/.test(window.navigator.userAgent);
   iframe.id = "cdtn-iframe-" + info.name;
   iframe.width = "100%";
-  iframe.style = "border:none;box-shadow:none; body {overflow: hidden;}";
+  iframe.style = "border:none;";
   iframe.onload = function () {
-    iframe.contentWindow.document.body.style = "overflow: hidden;";
+    const cssLink = document.createElement("link");
+    cssLink.href = "/widget.css";
+    cssLink.rel = "stylesheet";
+    cssLink.type = "text/css";
+    iframe.contentWindow.document.body.appendChild(cssLink);
     const height = iframe.contentWindow.document.body.scrollHeight || 800;
     iframe.style.height = height + "px";
+    iframe.contentWindow.document.addEventListener(
+      "DOMNodeInserted",
+      function () {
+        linkToNewTab(iframe);
+      }
+    );
   };
 
   iframe.src = isIE
     ? `javascript:
-<script>
-  window.onload = function() { document.domain = "domain.io"}
-</script>`
+  <script>
+    window.onload = function() { document.domain = "domain.io"}
+  </script>`
     : "about:blank";
 
-  const host = window.location.host;
-  iframe.src = info.url + "?url_from=" + host;
+  iframe.src = info.url;
   return iframe;
 }
 
 function loadWidgets() {
   const cdtnHost = "http://localhost:3000"; //"https://code.travail.gouv.fr";
-  const widgets = [
+  [
     {
       name: "widget",
       url: cdtnHost + "/widget.html",
@@ -50,20 +67,8 @@ function loadWidgets() {
       name: "procedure-licenciement",
       url: cdtnHost + "/widgets/procedure-licenciement",
     },
-  ].map((widget) => {
-    const iframe = addWidget(widget);
-    return { ...widget, iframe };
-  });
-  window.addEventListener("message", function (evt) {
-    if (evt.data.kind === "onChange") {
-      widgets.forEach(({ iframe }) => {
-        if (!iframe) {
-          return;
-        }
-        const height = iframe.contentWindow.document.body.scrollHeight || 800;
-        iframe.style.height = height + "px";
-      });
-    }
+  ].forEach((widget) => {
+    addWidget(widget);
   });
 }
 
