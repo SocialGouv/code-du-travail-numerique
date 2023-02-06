@@ -3,745 +3,55 @@
 exports[`<SearchResults/> should render no results 1`] = `<div />`;
 
 exports[`<SearchResults/> should render results 1`] = `
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  max-width: 74rem;
-}
-
-.c21 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c18 {
-  position: relative;
-  margin: 5rem 0;
-  padding: 3.2rem 0;
-  min-height: 10rem;
-  color: #3e486e;
-}
-
-.c19 {
-  position: absolute;
-  top: 0;
-  right: 30%;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  display: block;
-  background-color: #f2f5fa;
-  border-radius: 0 10rem 10rem 0;
-  content: "";
-}
-
-.c20 {
-  position: relative;
-  z-index: 0;
-}
-
-.c24 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0.6rem;
-  top: 50%;
-  left: 0;
-  width: 0.4rem;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.c32 {
-  position: absolute;
-  background-color: #7994d4;
-  border-radius: 0;
-  top: 0;
-  left: 50%;
-  width: 5rem;
-  height: 0.4rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c1 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c13 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 5rem;
-  height: 5rem;
-  overflow: hidden;
-  color: #fff;
-  border-radius: 0 0.6rem 0 0;
-}
-
-.c13:before {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border-color: transparent #f66663 transparent transparent;
-  border-style: solid;
-  border-width: 0 5rem 5rem 0;
-  content: "";
-}
-
-.c14 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 3rem;
-  height: 3rem;
-}
-
-.c17 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-}
-
-.c17:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c17:hover svg {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
-}
-
-.c17 svg {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0 0.4rem 0 1rem;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-  fill: #f66663;
-}
-
-.c11 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.c2 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c25 {
-  position: relative;
-  overflow: visible;
-}
-
-.c25:before,
-.c25:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: none;
-  width: 4rem;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  content: "";
-  pointer-events: none;
-  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
-}
-
-.c25:before {
-  left: -2rem;
-}
-
-.c25:after {
-  right: -2rem;
-}
-
-.c27 {
-  overflow-x: visible;
-}
-
-.c28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-top: 0;
-  margin-right: calc(-1 * 1rem);
-  margin-bottom: 4rem;
-  margin-left: calc(-1 * 1rem);
-  padding: 0;
-  list-style-type: none;
-}
-
-.c29 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  margin: 1rem;
-  padding: 0;
-  width: calc(100% / 3 - 2 * 1rem - 1px);
-}
-
-.c30 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  margin: 1rem;
-  padding: 0;
-  width: calc(100% / 4 - 2 * 1rem - 1px);
-}
-
-.c7 {
-  display: block;
-  margin: 0 0 1rem 0;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-  text-transform: uppercase;
-}
-
-.c4 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1;
-  -ms-flex: 1 1;
-  flex: 1 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  width: 100%;
-  margin: 0;
-  padding: 2rem 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  text-align: left;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #fff;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  cursor: pointer;
-  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
-  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
-  transition: box-shadow 250ms linear, transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c4:hover,
-.c4:active,
-.c4:focus {
-  color: #3e486e;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-}
-
-.c31 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1;
-  -ms-flex: 1 1;
-  flex: 1 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  max-width: 100%;
-  margin: 0;
-  padding: 3.2rem 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #fff;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  cursor: pointer;
-  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
-  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
-  transition: box-shadow 250ms linear, transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c31:hover,
-.c31:active,
-.c31:focus {
-  color: #3e486e;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-}
-
-.c5 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 100%;
-}
-
-.c6 {
-  padding-right: 1rem;
-  height: auto;
-  display: block;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: start;
-  -ms-flex-pack: start;
-  justify-content: start;
-  margin: inherit;
-}
-
-.c8 {
-  margin: 0;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.c9 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  margin-top: 1rem;
-}
-
-.c22 {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  text-align: left;
-}
-
-.c23 {
-  position: relative;
-  margin: 0;
-  color: #2f3b6c;
-  font-weight: normal;
-  font-size: 2.8rem;
-  font-family: "Merriweather",serif;
-  line-height: 1.25;
-  padding-left: 3.2rem;
-  text-align: left;
-}
-
-.c15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c15 p {
-  margin: 0 auto;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c12 h2 {
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c16 {
-  padding-top: 1.6rem;
-}
-
-.c3 {
-  margin-bottom: 2rem;
-}
-
-.c10 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c21 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c21 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c19 {
-    right: 2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c17 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c25 {
-    overflow-x: hidden;
-  }
-}
-
-@media (max-width:600px) {
-  .c25:before,
-  .c25:after {
-    display: block;
-  }
-}
-
-@media (max-width:600px) {
-  .c27 {
-    overflow-x: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c26 {
-    margin-bottom: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c28 {
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    margin-right: 0;
-    margin-bottom: 2rem;
-    margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c29 {
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    min-width: 23rem;
-  }
-
-  .c29:first-of-type {
-    margin-left: 2rem;
-  }
-
-  .c29:last-of-type:after {
-    display: block;
-    width: 2rem;
-    height: 100%;
-    background-color: transparent;
-    content: "";
-  }
-}
-
-@media (max-width:1180px) {
-  .c29 {
-    width: calc( 100% / 2 - 2 * 1rem - 1px );
-  }
-}
-
-@media (max-width:980px) {
-  .c29 {
-    width: calc( 100% / 1 - 2 * 1rem - 1px );
-  }
-}
-
-@media (max-width:600px) {
-  .c29 {
-    width: 80%;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    min-width: 23rem;
-  }
-
-  .c30:first-of-type {
-    margin-left: 2rem;
-  }
-
-  .c30:last-of-type:after {
-    display: block;
-    width: 2rem;
-    height: 100%;
-    background-color: transparent;
-    content: "";
-  }
-}
-
-@media (max-width:1180px) {
-  .c30 {
-    width: calc( 100% / 3 - 2 * 1rem - 1px );
-  }
-}
-
-@media (max-width:980px) {
-  .c30 {
-    width: calc( 100% / 2 - 2 * 1rem - 1px );
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    width: 60%;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    padding: 1.6rem 1.6rem;
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c31 {
-    padding: 2rem 1.6rem;
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c22 {
-    margin-bottom: 1rem;
-    margin-left: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
-    padding-left: 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c23 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 h2 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <div
     aria-label="Résultats de recherche"
-    class="c0"
+    class="sc-bdnxRM etdrsf"
     role="region"
   >
     <h2
-      class="c1"
+      class="sc-iCoGMd gaXVHn"
       data-testid="heading"
+      id="SearchResults"
     >
       Résultats de recherche pour “search test”
     </h2>
     <ul
-      class="c2"
+      class="sc-jffHpj jAxtJd"
     >
       <li
-        class="c3"
+        class="sc-ellfGf jLpLnw"
       >
         <a
-          class="c4"
+          class="sc-eGJWMs dxHVWB"
           href="/fiche-service-public/mer-il-est-fou?q=search%20test"
         >
           <div
-            class="c5"
+            class="sc-dFRpbK cbvMFR"
           >
             <div
-              class="c6"
+              class="sc-bsatvv iePphK"
             >
               <p
-                class="c7 "
+                class="sc-bXexck sc-gIvpjk haepIh glQsRy"
               >
                 test theme content
               </p>
               <h3
-                class="c8"
+                class="sc-euEtCV ionzWf"
               >
                 Mer il est fou!
               </h3>
             </div>
           </div>
           <div
-            class="c9"
+            class="sc-fHCHyC fOtBFh"
           >
             <div
-              class="c10"
+              class="sc-iIgjPs bMUDt"
             >
               <p
-                class="c11"
+                class="sc-cOifOu jBNwUz"
               >
                 description
               </p>
@@ -750,17 +60,17 @@ exports[`<SearchResults/> should render results 1`] = `
         </a>
       </li>
       <li
-        class="c3"
+        class="sc-ellfGf jLpLnw"
       >
         <a
-          class="c4 c12"
+          class="sc-eGJWMs dxHVWB sc-dvUynV bSsRsj"
           href="/outils/simulateur-precarite?q=search%20test"
         >
           <div
-            class="c13"
+            class="sc-iklJeh biSgUS"
           >
             <div
-              class="c14"
+              class="sc-jJMGnK ihofWp"
             >
               <svg
                 aria-hidden="true"
@@ -784,43 +94,43 @@ exports[`<SearchResults/> should render results 1`] = `
             </div>
           </div>
           <div
-            class="c5"
+            class="sc-dFRpbK cbvMFR"
           >
             <div
-              class="c6"
+              class="sc-bsatvv iePphK"
             >
               <p
-                class="c7 "
+                class="sc-bXexck sc-gIvpjk haepIh glQsRy"
               >
                 Outils
               </p>
               <h3
-                class="c8"
+                class="sc-euEtCV ionzWf"
               >
                 simulateur de prime de précarite
               </h3>
             </div>
           </div>
           <div
-            class="c9"
+            class="sc-fHCHyC fOtBFh"
           >
             <div
-              class="c15"
+              class="sc-kTCsyW iKvxSk"
             >
               <div
-                class="c10"
+                class="sc-iIgjPs bMUDt"
               >
                 <p
-                  class="c11"
+                  class="sc-cOifOu jBNwUz"
                 >
                   description
                 </p>
               </div>
               <div
-                class="c16"
+                class="sc-jtiXyc cgUMTP"
               >
                 <button
-                  class="c17"
+                  class="sc-hiKfDv hvWLsX"
                 >
                   Consulter
                   <svg
@@ -841,53 +151,53 @@ exports[`<SearchResults/> should render results 1`] = `
         </a>
       </li>
       <li
-        class="c3"
+        class="sc-ellfGf jLpLnw"
       >
         <a
           aria-label="Outils externes telerc description undefined (nouvelle fenêtre)"
-          class="c4 c12 no-after"
+          class="sc-eGJWMs dxHVWB sc-dvUynV bSsRsj no-after"
           href="https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14"
           rel="noreferer noopener"
           target="_blank"
         >
           <div
-            class="c5"
+            class="sc-dFRpbK cbvMFR"
           >
             <div
-              class="c6"
+              class="sc-bsatvv iePphK"
             >
               <p
-                class="c7 "
+                class="sc-bXexck sc-gIvpjk haepIh glQsRy"
               >
                 Outils externes
               </p>
               <h3
-                class="c8"
+                class="sc-euEtCV ionzWf"
               >
                 telerc
               </h3>
             </div>
           </div>
           <div
-            class="c9"
+            class="sc-fHCHyC fOtBFh"
           >
             <div
-              class="c15"
+              class="sc-kTCsyW iKvxSk"
             >
               <div
-                class="c10"
+                class="sc-iIgjPs bMUDt"
               >
                 <p
-                  class="c11"
+                  class="sc-cOifOu jBNwUz"
                 >
                   description
                 </p>
               </div>
               <div
-                class="c16"
+                class="sc-jtiXyc cgUMTP"
               >
                 <button
-                  class="c17"
+                  class="sc-hiKfDv hvWLsX"
                 >
                   Consulter
                   <svg
@@ -908,17 +218,17 @@ exports[`<SearchResults/> should render results 1`] = `
         </a>
       </li>
       <li
-        class="c3"
+        class="sc-ellfGf jLpLnw"
       >
         <a
-          class="c4 c12"
+          class="sc-eGJWMs dxHVWB sc-dvUynV bSsRsj"
           href="/outils/mer-il-est-fou2?q=search%20test"
         >
           <div
-            class="c13"
+            class="sc-iklJeh biSgUS"
           >
             <div
-              class="c14"
+              class="sc-jJMGnK ihofWp"
             >
               <svg
                 aria-hidden="true"
@@ -942,43 +252,43 @@ exports[`<SearchResults/> should render results 1`] = `
             </div>
           </div>
           <div
-            class="c5"
+            class="sc-dFRpbK cbvMFR"
           >
             <div
-              class="c6"
+              class="sc-bsatvv iePphK"
             >
               <p
-                class="c7 "
+                class="sc-bXexck sc-gIvpjk haepIh glQsRy"
               >
                 test root content
               </p>
               <h3
-                class="c8"
+                class="sc-euEtCV ionzWf"
               >
                 Mer il est fou 2!
               </h3>
             </div>
           </div>
           <div
-            class="c9"
+            class="sc-fHCHyC fOtBFh"
           >
             <div
-              class="c15"
+              class="sc-kTCsyW iKvxSk"
             >
               <div
-                class="c10"
+                class="sc-iIgjPs bMUDt"
               >
                 <p
-                  class="c11"
+                  class="sc-cOifOu jBNwUz"
                 >
                   description
                 </p>
               </div>
               <div
-                class="c16"
+                class="sc-jtiXyc cgUMTP"
               >
                 <button
-                  class="c17"
+                  class="sc-hiKfDv hvWLsX"
                 >
                   Consulter
                   <svg
@@ -999,17 +309,17 @@ exports[`<SearchResults/> should render results 1`] = `
         </a>
       </li>
       <li
-        class="c3"
+        class="sc-ellfGf jLpLnw"
       >
         <a
-          class="c4"
+          class="sc-eGJWMs dxHVWB"
           href="/contribution/mer-il-est-fou4?q=search%20test"
         >
           <div
-            class="c13"
+            class="sc-iklJeh biSgUS"
           >
             <div
-              class="c14"
+              class="sc-jJMGnK ihofWp"
             >
               <svg
                 aria-hidden="true"
@@ -1033,31 +343,31 @@ exports[`<SearchResults/> should render results 1`] = `
             </div>
           </div>
           <div
-            class="c5"
+            class="sc-dFRpbK cbvMFR"
           >
             <div
-              class="c6"
+              class="sc-bsatvv iePphK"
             >
               <p
-                class="c7 "
+                class="sc-bXexck sc-gIvpjk haepIh glQsRy"
               >
                 test theme content
               </p>
               <h3
-                class="c8"
+                class="sc-euEtCV ionzWf"
               >
                 Mer il est fou 4!
               </h3>
             </div>
           </div>
           <div
-            class="c9"
+            class="sc-fHCHyC fOtBFh"
           >
             <div
-              class="c10"
+              class="sc-iIgjPs bMUDt"
             >
               <p
-                class="c11"
+                class="sc-cOifOu jBNwUz"
               >
                 description
               </p>
@@ -1068,61 +378,61 @@ exports[`<SearchResults/> should render results 1`] = `
     </ul>
   </div>
   <div
-    class="c18"
+    class="sc-gtsrHT cpCFeZ"
   >
     <div
-      class="c19"
+      class="sc-dlnjwi bheWDA"
     />
     <div
-      class="c20"
+      class="sc-eCApnc fhHpnM"
     >
       <div
-        class="c21"
+        class="sc-bdnxRM bCGhmq"
       >
         <div
-          class="c22"
+          class="sc-eXuyPJ jPObHZ"
         >
           <h2
-            class="c23"
+            class="sc-eWnToP iHpQsB"
           >
             <span
-              class="c24"
+              class="sc-gKAaRy jNbrvj"
             />
             Que dit le code du travail ?
           </h2>
         </div>
         <div
-          class="c25 c26"
+          class="sc-eJocfa dnvrjA sc-hhIiOg gEtbSe"
         >
           <div
-            class="c27"
+            class="sc-oeezt hgDFVm"
           >
             <div
-              class="c28"
+              class="sc-eirqVv gqRdkL"
             >
               <div
-                class="c29"
+                class="sc-lbVvki kVdhdQ"
               >
                 <a
-                  class="c4"
+                  class="sc-eGJWMs dxHVWB"
                   href="/code-du-travail/L1243-1?q=search%20test"
                 >
                   <div
-                    class="c5"
+                    class="sc-dFRpbK cbvMFR"
                   >
                     <div
-                      class="c6"
+                      class="sc-bsatvv iePphK"
                     >
                       
                       <p
-                        class="c8"
+                        class="sc-euEtCV ionzWf"
                       >
                         L1243-1
                       </p>
                     </div>
                   </div>
                   <div
-                    class="c9"
+                    class="sc-fHCHyC fOtBFh"
                   >
                     la description
                   </div>
@@ -1132,45 +442,45 @@ exports[`<SearchResults/> should render results 1`] = `
           </div>
         </div>
         <div
-          class="c22"
+          class="sc-eXuyPJ jPObHZ"
         >
           <h2
-            class="c23"
+            class="sc-eWnToP iHpQsB"
           >
             <span
-              class="c24"
+              class="sc-gKAaRy jNbrvj"
             />
             Les thèmes suivants peuvent vous intéresser
           </h2>
         </div>
         <div
-          class="c25 c26"
+          class="sc-eJocfa dnvrjA sc-hhIiOg gEtbSe"
         >
           <div
-            class="c27"
+            class="sc-oeezt hgDFVm"
           >
             <div
-              class="c28"
+              class="sc-eirqVv gqRdkL"
             >
               <div
-                class="c30"
+                class="sc-lbVvki kpySAv"
               >
                 <a
-                  class="c31"
+                  class="sc-eGJWMs cMctpi"
                   href="/themes/1-contrat?q=search%20test"
                 >
                   <div
-                    class="c5"
+                    class="sc-dFRpbK cbvMFR"
                   >
                     <span
-                      class="c32"
+                      class="sc-gKAaRy bPcSTH"
                     />
                     <div
-                      class="c6"
+                      class="sc-bsatvv iePphK"
                     >
                       
                       <p
-                        class="c8"
+                        class="sc-euEtCV ionzWf"
                       >
                         Contrat
                       </p>
@@ -1188,7 +498,7 @@ exports[`<SearchResults/> should render results 1`] = `
 `;
 
 exports[`<SearchResults/> should track event candidateResults 1`] = `
-Array [
+[
   "trackEvent",
   "candidateResults",
   "search test",

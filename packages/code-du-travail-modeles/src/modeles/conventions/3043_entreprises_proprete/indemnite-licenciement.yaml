@@ -1,0 +1,137 @@
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement:
+  applicable si: indemnité de licenciement
+  valeur: oui
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . moins de 5 ans:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année < 6 an
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - 6 an
+
+# ATTENTION: C'est un hack pour gérer le cas de 5.91 et de 6 ans d'ancienneté
+# Avec 5.91 d'années d'ancienneté => 1/10 * SREF * 5.91
+# Avec 6 années d'ancienneté => 1/10 * SREF * 5 + 1/6 * SREF * 1
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . jusqu'à 5 ans:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 6 an
+  valeur:
+    le minimum de:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      - 5 an
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . entre 5 ans et 10 ans:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 6 an
+  somme:
+    - le minimum de:
+        - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - 10an
+    - (- 5 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . au dela de dix ans:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année >= 10 an
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 10 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . facteur moins de 5 ans:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * moins de 5 ans
+      facteur: 1 / 10
+  unité: €
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . facteur jusqu'à 5 ans:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * jusqu'à 5 ans
+      facteur: 1 / 10
+  unité: €
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . facteur 2:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * entre 5 ans et 10 ans
+      facteur: 1 / 6
+  unité: €
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . facteur 3:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * au dela de dix ans
+      facteur: 1 / 5
+  unité: €
+
+# (1/10*Sref*A1)+(1/6*Sref*A2)+(1/5*Sref*A3)
+# A1 : Années d'ancienneté pour la fraction des 5 premières années
+# A2 : Années d'ancienneté pour la fraction de 6 ans à 10 ans révolus
+# A3 : Années d'ancienneté au-delà de 10 ans révolus
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . résultat conventionnel 1:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année < 6 an
+  somme:
+    - facteur moins de 5 ans
+    - facteur jusqu'à 5 ans
+    - facteur 2
+    - facteur 3
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 4.11.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027172424
+    Article 4.2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027172405?idConteneur=KALICONT000027172335&origin=list#KALIARTI000027172405
+  cdtn:
+    formule:
+      formula: 1 / 10 * Sref * A
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . moins de 5 ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . résultat conventionnel 2:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 6 an
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année <= 10 an
+  somme:
+    - facteur moins de 5 ans
+    - facteur jusqu'à 5 ans
+    - facteur 2
+    - facteur 3
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 4.11.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027172424
+    Article 4.2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027172405?idConteneur=KALICONT000027172335&origin=list#KALIARTI000027172405
+  cdtn:
+    formule:
+      formula: (1 / 10 * Sref * A1) + (1 / 6 * Sref * A2)
+      explanations:
+        - "A1 : Années d'ancienneté pour la fraction des 5 premières années": contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . jusqu'à 5 ans
+        - "A2 : Années d'ancienneté pour la fraction de 6 ans à 10 ans révolus": contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . entre 5 ans et 10 ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . résultat conventionnel 3:
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année > 10 an
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  somme:
+    - facteur moins de 5 ans
+    - facteur jusqu'à 5 ans
+    - facteur 2
+    - facteur 3
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 4.11.3: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027172424
+    Article 4.2: https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027172405?idConteneur=KALICONT000027172335&origin=list#KALIARTI000027172405
+  cdtn:
+    formule:
+      formula: (1 / 10 * Sref * A1) + (1 / 6 * Sref * A2) + (1 / 5 * Sref * A3)
+      explanations:
+        - "A1 : Années d'ancienneté pour la fraction des 5 premières années": contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . jusqu'à 5 ans
+        - "A2 : Années d'ancienneté pour la fraction de 6 ans à 10 ans révolus": contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . entre 5 ans et 10 ans
+        - "A3 : Années d'ancienneté au-delà de 10 ans révolus": contrat salarié . convention collective . entreprises de propreté . indemnité de licenciement . au dela de dix ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel

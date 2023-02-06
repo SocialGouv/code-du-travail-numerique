@@ -1,265 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CallToActionTile /> should render 1`] = `
-.c2 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 5rem;
-  height: 5rem;
-  overflow: hidden;
-  color: #fff;
-  border-radius: 0 0.6rem 0 0;
-}
-
-.c2:before {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border-color: transparent #f66663 transparent transparent;
-  border-style: solid;
-  border-width: 0 5rem 5rem 0;
-  content: "";
-}
-
-.c3 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 3rem;
-  height: 3rem;
-}
-
-.c11 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  color: #f66663;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  vertical-align: baseline;
-  text-align: left;
-  background: none;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-}
-
-.c11:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c11:hover svg {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
-}
-
-.c11 svg {
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: 0 0.4rem 0 1rem;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-  fill: #f66663;
-}
-
-.c0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1;
-  -ms-flex: 1 1;
-  flex: 1 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  max-width: 100%;
-  margin: 0;
-  padding: 3.2rem 2rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #fff;
-  border: none;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.2);
-  cursor: pointer;
-  -webkit-transition: box-shadow 250ms linear, -webkit-transform 100ms linear;
-  -webkit-transition: box-shadow 250ms linear, transform 100ms linear;
-  transition: box-shadow 250ms linear, transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c0:hover,
-.c0:active,
-.c0:focus {
-  color: #3e486e;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-}
-
-.c5 {
-  display: block;
-  width: 7.2rem;
-  height: 7.2rem;
-  margin: 0 auto 0.4rem;
-  padding: 1.4rem;
-  background-color: #f2f5fa;
-  border-radius: 50%;
-}
-
-.c4 {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 100%;
-}
-
-.c6 {
-  padding-right: 1rem;
-  height: auto;
-  display: block;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: start;
-  -ms-flex-pack: start;
-  justify-content: start;
-  margin: inherit;
-}
-
-.c7 {
-  margin: 0;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.c8 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  margin-top: 1rem;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c9 p {
-  margin: 0 auto;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c1 h2 {
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c10 {
-  padding-top: 1.6rem;
-}
-
-@media (max-width:600px) {
-  .c11 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c11 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 2rem 1.6rem;
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 h2 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <a
-    class="c0 c1"
+    class="sc-eGJWMs cMctpi sc-dvUynV bSsRsj"
     href="/test"
   >
     <div
-      class="c2"
+      class="sc-iklJeh biSgUS"
     >
       <div
-        class="c3"
+        class="sc-jJMGnK ihofWp"
       >
         <svg
           aria-hidden="true"
@@ -283,10 +34,10 @@ exports[`<CallToActionTile /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c4"
+      class="sc-dFRpbK cbvMFR"
     >
       <div
-        class="c5"
+        class="sc-csTbgd ddMWBg"
       >
         <svg
           aria-hidden="true"
@@ -313,30 +64,30 @@ exports[`<CallToActionTile /> should render 1`] = `
         </svg>
       </div>
       <div
-        class="c6"
+        class="sc-bsatvv iePphK"
       >
         
         <p
-          class="c7"
+          class="sc-euEtCV ionzWf"
         >
           Saluez moi
         </p>
       </div>
     </div>
     <div
-      class="c8"
+      class="sc-fHCHyC fOtBFh"
     >
       <div
-        class="c9"
+        class="sc-kTCsyW iKvxSk"
       >
         <p>
           Cette tuile vous fera dire bonjour !
         </p>
         <div
-          class="c10"
+          class="sc-jtiXyc cgUMTP"
         >
           <button
-            class="c11"
+            class="sc-hiKfDv hvWLsX"
           >
             Bonjour
             <svg

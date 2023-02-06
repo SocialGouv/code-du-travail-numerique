@@ -1,10 +1,11 @@
 import type Engine from "publicodes";
-import type { Evaluation, Unit } from "publicodes";
-import type { Rule as PubliRule } from "publicodes/dist/types/rule";
+import type { Evaluation, Rule as PubliRule, Unit } from "publicodes";
+
+import type { Notification, References } from "../modeles/common";
 
 export type OldReference = {
-  ref: string;
-  refUrl: string;
+  ref: string | null;
+  refUrl: string | null;
 };
 
 export interface MissingArgs {
@@ -16,12 +17,15 @@ export interface MissingArgs {
 export enum RuleType {
   Liste = "liste",
   OuiNon = "oui-non",
+  Date = "date",
   SalaireMensuel = "salaire-mensuel",
+  Montant = "montant",
 }
 
 export interface RuleListe {
   type: RuleType;
   valeurs: Record<string, string>;
+  precision?: string;
 }
 
 export type RuleCdtn = RuleListe;
@@ -33,7 +37,7 @@ export interface Rule extends PubliRule {
 export interface SituationElement {
   name: string;
   rawNode: Rule;
-  value: string;
+  value?: string;
 }
 
 export type PublicodesState = {
@@ -62,9 +66,16 @@ export enum PublicodesUnit {
 }
 
 export enum PublicodesSimulator {
-  INDEMNITE_LICENCIEMENT = "contrat salarié . indemnité de licenciement",
-  PREAVIS_RETRAITE = "contrat salarié . préavis de retraite en jours",
+  INDEMNITE_LICENCIEMENT = "INDEMNITE_LICENCIEMENT",
+  PREAVIS_RETRAITE = "PREAVIS_RETRAITE",
 }
+
+export const PublicodesDefaultRules = {
+  [PublicodesSimulator.INDEMNITE_LICENCIEMENT]:
+    "contrat salarié . indemnité de licenciement . résultat légal",
+  [PublicodesSimulator.PREAVIS_RETRAITE]:
+    "contrat salarié . préavis de retraite en jours",
+};
 
 export enum PublicodesConvertedUnit {
   DAY = "jour",
@@ -84,4 +95,14 @@ export type PublicodesPreavisRetraiteResult = {
 export type PublicodesIndemniteLicenciementResult = {
   value: Evaluation;
   unit?: Unit;
+};
+
+export type PublicodesContextType = {
+  execute: (rule: string) => PublicodesIndemniteLicenciementResult;
+  getNotifications: () => Notification[];
+  getReferences: () => References[];
+  result: PublicodesIndemniteLicenciementResult;
+  missingArgs: MissingArgs[];
+  situation: SituationElement[];
+  setSituation: (values: Record<string, string>) => void;
 };

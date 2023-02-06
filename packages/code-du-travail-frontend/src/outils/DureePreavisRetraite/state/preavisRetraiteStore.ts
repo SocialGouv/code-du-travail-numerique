@@ -1,6 +1,5 @@
 import create from "zustand";
 import { PreavisRetraiteState, PreavisRetraiteStore } from "./types";
-import { PreavisRetraitePublicodes } from "@socialgouv/modeles-social";
 import {
   askAccurateSeniority,
   computeMinSeniorityYear,
@@ -13,6 +12,7 @@ import {
 import { updateFormValues } from "./utils";
 import removeOldQuestions from "./usecases/removeOldQuestions";
 import resetInfosLastQuestionNotAnsweredOnOriginChange from "./usecases/resetInfosLastQuestionNotAnsweredOnOriginChange";
+import { loadPublicodes } from "../../api";
 
 export const initialState: PreavisRetraiteState = {
   title: "",
@@ -31,11 +31,11 @@ export const initialState: PreavisRetraiteState = {
   formValues: {},
 };
 
-const createPreavisRetraiteStore = (rules: string, title: string) =>
+const createPreavisRetraiteStore = (title: string, slug: string) =>
   create<PreavisRetraiteStore>((set) => ({
     ...initialState,
     title: title,
-    publicodes: new PreavisRetraitePublicodes(rules),
+    publicodes: loadPublicodes(slug),
     onFormValuesChange: (values) =>
       set((state) => ({
         ...state,
@@ -50,13 +50,16 @@ const createPreavisRetraiteStore = (rules: string, title: string) =>
         )
       ),
     onAgreementChange: (newValue, oldValue, form) =>
-      set((state) =>
-        computeMinSeniorityYear(
-          computeNextQuestion(
-            resetInfos(newValue, oldValue, state, updateFormValues(form))
-          )
-        )
-      ),
+      set((state) => {
+        return {
+          ...computeMinSeniorityYear(
+            computeNextQuestion(
+              resetInfos(newValue, oldValue, state, updateFormValues(form))
+            )
+          ),
+          publicodes: loadPublicodes(slug, newValue?.num?.toString()),
+        };
+      }),
     onInformationChange: (name, form) =>
       set((state) =>
         computeNextQuestion(

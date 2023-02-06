@@ -8,9 +8,13 @@ export const ui = {
     depart: byTestId("depart-a-la-retraite"),
   },
   information: {
-    handicap: byText(
-      /Le salarié concerné est-il reconnu en tant que travailleur handicapé/
-    ),
+    handicap: {
+      label: byText(
+        /Le salarié concerné est-il reconnu en tant que travailleur handicapé/
+      ),
+      oui: byTestId("infos.contrat salarié - travailleur handicapé-oui"),
+      non: byTestId("infos.contrat salarié - travailleur handicapé-non"),
+    },
     agreement1517: {
       categoryPro: byText(/Quelle est la catégorie professionnelle du salarié/),
       categoryProInput: byTestId(
@@ -27,6 +31,19 @@ export const ui = {
       disableWorkerNoInput: byTestId(
         "infos.contrat salarié - travailleur handicapé-non"
       ),
-    }
+    },
+    agreement16: {
+      categoryPro: byText(/Quelle est la catégorie professionnelle du salarié/),
+      categoryProInput: byTestId(
+        "infos.contrat salarié - convention collective - transports routiers - catégorie professionnelle"
+      ),
+    },
+  },
+  seniority: {
+    moreThanXYear: {
+      oui: byTestId("seniority.moreThanXYear-oui"),
+      non: byTestId("seniority.moreThanXYear-non"),
+    },
+    input: byTestId("seniority.value"),
   },
 };

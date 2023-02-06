@@ -1,0 +1,9 @@
+# Convention collective nationale des établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif du 31 octobre 1951.
+contrat salarié . convention collective . hospitalisation privée à but non lucratif:
+  titre: Convention collective nationale des établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif du 31 octobre 1951.
+  applicable si: convention collective = 'IDCC0029'
+  valeur: oui
+  cdtn:
+    idcc: 29
+    préavis-retraite: true
+    indemnité-licenciement: true

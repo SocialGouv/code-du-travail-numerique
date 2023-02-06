@@ -2,7 +2,7 @@ import React, { useEffect, useMemo } from "react";
 import { SimulatorDecorator } from "../Components";
 import { printResult } from "../common/utils";
 import { createSimulatorStore } from "./useSimulatorStore";
-import { matopush } from "../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { SimulatorStepProvider, useSimulatorStepStore } from "./createContext";
 import { Step } from "./type";
 
@@ -62,13 +62,13 @@ const SimulatorContent = <FormState, StepName extends string>({
       throw Error("Can't show the next step with index more than steps");
     } else {
       nextStep();
-      onStepChange(currentStep, steps[nextStepIndex]);
       matopush([
         "trackEvent",
         "outil",
         `view_step_${title}`,
         steps[nextStepIndex].name,
       ]);
+      onStepChange(currentStep, steps[nextStepIndex]);
       window?.scrollTo(0, 0);
     }
   };

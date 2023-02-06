@@ -1,7 +1,6 @@
 import React from "react";
-import { RadioQuestion } from "../../../Components";
+import { RadioQuestion, TextQuestion } from "../../../Components";
 
-import { FauteGrave, TypeContratMessage } from "./components";
 import { useIndemniteLicenciementStore } from "../../store";
 
 const StepContratTravail = (): JSX.Element => {
@@ -15,6 +14,12 @@ const StepContratTravail = (): JSX.Element => {
     errorLicenciementFauteGrave,
     errorLicenciementInaptitude,
     errorTypeContratTravail,
+    arretTravail,
+    onChangeArretTravail,
+    errorArretTravail,
+    dateArretTravail,
+    onChangeDateArretTravail,
+    errorDateArretTravail,
   } = useIndemniteLicenciementStore((state) => ({
     licenciementFauteGrave:
       state.contratTravailData.input.licenciementFauteGrave,
@@ -33,6 +38,13 @@ const StepContratTravail = (): JSX.Element => {
       state.contratTravailData.error.errorLicenciementInaptitude,
     errorTypeContratTravail:
       state.contratTravailData.error.errorTypeContratTravail,
+    arretTravail: state.contratTravailData.input.arretTravail,
+    dateArretTravail: state.contratTravailData.input.dateArretTravail,
+    onChangeArretTravail: state.contratTravailFunction.onChangeArretTravail,
+    onChangeDateArretTravail:
+      state.contratTravailFunction.onChangeDateArretTravail,
+    errorArretTravail: state.contratTravailData.error.errorArretTravail,
+    errorDateArretTravail: state.contratTravailData.error.errorDateArretTravail,
   }));
 
   return (
@@ -57,48 +69,90 @@ const StepContratTravail = (): JSX.Element => {
         error={errorTypeContratTravail}
         showRequired
       />
-      {typeContratTravail === "cdd" && <TypeContratMessage />}
-      <RadioQuestion
-        questions={[
-          {
-            label: "Oui",
-            value: "oui",
-            id: "fauteGrave-oui",
-          },
-          {
-            label: "Non",
-            value: "non",
-            id: "fauteGrave-non",
-          },
-        ]}
-        name="licenciementFauteGrave"
-        label="Le licenciement est-il dû à une faute grave (ou lourde)&nbsp;?"
-        selectedOption={licenciementFauteGrave}
-        onChangeSelectedOption={onChangeLicenciementFauteGrave}
-        error={errorLicenciementFauteGrave}
-        showRequired
-      />
-      {licenciementFauteGrave === "oui" && <FauteGrave />}
-      <RadioQuestion
-        questions={[
-          {
-            label: "Oui",
-            value: "oui",
-            id: "inaptitude-oui",
-          },
-          {
-            label: "Non",
-            value: "non",
-            id: "inaptitude-non",
-          },
-        ]}
-        name="licenciementInaptitude"
-        label="Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue&nbsp;?"
-        selectedOption={licenciementInaptitude}
-        onChangeSelectedOption={onChangeLicenciementInaptitude}
-        error={errorLicenciementInaptitude}
-        showRequired
-      />
+      {typeContratTravail === "cdi" && (
+        <RadioQuestion
+          questions={[
+            {
+              label: "Oui",
+              value: "oui",
+              id: "fauteGrave-oui",
+            },
+            {
+              label: "Non",
+              value: "non",
+              id: "fauteGrave-non",
+            },
+          ]}
+          name="licenciementFauteGrave"
+          label="Le licenciement est-il dû à une faute grave (ou lourde)&nbsp;?"
+          selectedOption={licenciementFauteGrave}
+          onChangeSelectedOption={onChangeLicenciementFauteGrave}
+          error={errorLicenciementFauteGrave}
+          showRequired
+        />
+      )}
+      {typeContratTravail === "cdi" && licenciementFauteGrave === "non" && (
+        <RadioQuestion
+          questions={[
+            {
+              label: "Oui",
+              value: "oui",
+              id: "inaptitude-oui",
+            },
+            {
+              label: "Non",
+              value: "non",
+              id: "inaptitude-non",
+            },
+          ]}
+          name="licenciementInaptitude"
+          label="Le licenciement est-il dû à une inaptitude suite à un accident du travail ou maladie professionnelle reconnue&nbsp;?"
+          selectedOption={licenciementInaptitude}
+          onChangeSelectedOption={onChangeLicenciementInaptitude}
+          error={errorLicenciementInaptitude}
+          showRequired
+        />
+      )}
+      {typeContratTravail === "cdi" &&
+        licenciementFauteGrave === "non" &&
+        licenciementInaptitude === "non" && (
+          <RadioQuestion
+            questions={[
+              {
+                label: "Oui",
+                value: "oui",
+                id: "arretTravail-oui",
+              },
+              {
+                label: "Non",
+                value: "non",
+                id: "arretTravail-non",
+              },
+            ]}
+            name="licenciementArretTravail"
+            label="Le salarié est-il en arrêt de travail au moment du licenciement&nbsp;?"
+            selectedOption={arretTravail}
+            onChangeSelectedOption={onChangeArretTravail}
+            error={errorArretTravail}
+            showRequired
+          />
+        )}
+      {typeContratTravail === "cdi" &&
+        licenciementFauteGrave === "non" &&
+        licenciementInaptitude === "non" &&
+        arretTravail === "oui" && (
+          <TextQuestion
+            label="Depuis quelle date le salarié est-il en arrêt&nbsp;?"
+            inputType="date"
+            placeholder="jj/mm/aaaa"
+            value={dateArretTravail}
+            onChange={onChangeDateArretTravail}
+            error={errorDateArretTravail}
+            id="dateArretTravail"
+            showRequired
+            dataTestId={"date-arret-travail"}
+          />
+        )}
     </>
   );
 };

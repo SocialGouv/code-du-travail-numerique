@@ -27,6 +27,7 @@ prefetch-src 'self' *.fabrique.social.gouv.fr;
 `;
 
 const { withSentryConfig } = require("@sentry/nextjs");
+const MappingReplacement = require("./redirects");
 
 const compose = (...fns) => (args) =>
   fns.reduceRight((arg, fn) => fn(arg), args);
@@ -59,7 +60,7 @@ const nextConfig = {
     disableClientWebpackPlugin: true,
     disableServerWebpackPlugin: true,
   },
-  swcMinify: true,
+  swcMinify: false,
   compiler: {
     reactRemoveProperties:
       process.env.NODE_ENV === "production"
@@ -99,18 +100,7 @@ module.exports = {
     ];
   },
   async redirects() {
-    return [
-      {
-        destination: "/themes/:slug",
-        permanent: true,
-        source: "/themes/(\\d{1,}-):slug",
-      },
-      {
-        destination: "/api/health",
-        permanent: true,
-        source: "/health",
-      },
-    ];
+    return MappingReplacement;
   },
   ...compose(
     withBundleAnalyzer,

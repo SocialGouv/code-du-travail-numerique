@@ -1,0 +1,127 @@
+[
+  {
+    "destination": "/themes/:slug",
+    "permanent": true,
+    "source": "/themes/(\\d{1,}-):slug"
+  },
+  {
+    "destination": "/api/health",
+    "permanent": true,
+    "source": "/health"
+  },
+  {
+    "destination": "/contribution/3239-:slug",
+    "permanent": true,
+    "source": "/contribution/2111-:slug"
+  },
+  {
+    "destination": "/contribution/3239-:slug",
+    "permanent": true,
+    "source": "/contribution/2395-:slug"
+  },
+  {
+    "destination": "/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile",
+    "permanent": true,
+    "source": "/convention-collective/2111-salaries-du-particulier-employeur"
+  },
+  {
+    "destination": "/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile",
+    "permanent": true,
+    "source": "/convention-collective/2395-assistants-maternels-du-particulier-employeur"
+  },
+  {
+    "destination": "/convention-collective/3239-particuliers-employeurs-et-emploi-a-domicile",
+    "permanent": true,
+    "source": "/convention-collective/3239-secteur-des-particuliers-employeurs-et-de-lemploi-a-domicile"
+  },
+  {
+    "destination": "/contribution/3209-:slug",
+    "permanent": true,
+    "source": "/contribution/1375-:slug"
+  },
+  {
+    "destination": "/convention-collective/3209-convention-collective-metallurgie-doubs",
+    "permanent": true,
+    "source": "/convention-collective/1375-convention-collective-metallurgie-doubs"
+  },
+  {
+    "destination": "/contribution/3231-:slug",
+    "permanent": true,
+    "source": "/contribution/1809-:slug"
+  },
+  {
+    "destination": "/convention-collective/3231-convention-collective-territoriale-de-la-metallurgie-du-jura",
+    "permanent": true,
+    "source": "/convention-collective/1809-convention-collective-departementale-des-industries-metallurgiques-mecaniq"
+  },
+  {
+    "destination": "/information/covid-19-pass-vaccinal-et-contrat-de-travail-infographie",
+    "permanent": true,
+    "source": "/information/pass-sanitaire-et-contrat-de-travail"
+  },
+  {
+    "destination": "/information/pass-vaccinal-les-dates-a-retenir-infographie",
+    "permanent": true,
+    "source": "/information/vaccination-et-pass-sanitaire-les-dates-a-retenir"
+  },
+  {
+    "destination": "/information/covid-19-le-regime-post-crise-sanitaire-a-compter-du-14-mars-2022",
+    "permanent": true,
+    "source": "/information/pass-vaccinal-les-dates-a-retenir-infographie"
+  },
+  {
+    "destination": "/information/covid-19-le-regime-post-crise-sanitaire-a-compter-du-14-mars-2022",
+    "permanent": true,
+    "source": "/information/covid-19-pass-vaccinal-et-contrat-de-travail-infographie"
+  },
+  {
+    "destination": "/information/en-pratique-que-doivent-faire-les-entreprises-a-partir-du-14-mars-2022-dans-le-cadre-de-lallegement-des-mesures-de-prevention-des-risques-de-contamination-au-covid-19",
+    "permanent": true,
+    "source": "/information/covid-19-les-mesures-de-protection-en-entreprise-protocole-national"
+  },
+  {
+    "destination": "/information/en-pratique-que-doivent-faire-les-entreprises-a-partir-du-14-mars-2022-dans-le-cadre-de-lallegement-des-mesures-de-prevention-des-risques-de-contamination-au-covid-19",
+    "permanent": true,
+    "source": "/information/covid-19-integrer-le-risque-sanitaire-dans-lentreprise-protocole-national"
+  },
+  {
+    "destination": "/information/en-pratique-que-doivent-faire-les-entreprises-a-partir-du-14-mars-2022-dans-le-cadre-de-lallegement-des-mesures-de-prevention-des-risques-de-contamination-au-covid-19",
+    "permanent": true,
+    "source": "/information/services-de-sante-au-travail-nouveautes-covid-19"
+  },
+  {
+    "destination": "/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-infographies",
+    "permanent": true,
+    "source": "/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-protocole-national"
+  },
+  {
+    "destination": "/convention-collective/1505-commerce-de-detail-alimentaire-non-specialise",
+    "permanent": true,
+    "source": "/convention-collective/1505-commerce-de-detail-des-fruits-et-legumes-epicerie-et-produits-laitiers"
+  },
+  {
+    "destination": "/modeles-de-courriers/rupture-dun-contrat-de-travail-a-duree-determinee-dun-commun-accord",
+    "permanent": true,
+    "source": "/modeles-de-courriers/rupture-dun-commun-accord-dun-contrat-de-travail-a-duree-determinee"
+  },
+  {
+    "destination": "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-par-le-salarie",
+    "permanent": true,
+    "source": "/modeles-de-courriers/rupture-du-contrat-en-periode-dessai-a-linitiative-du-salarie"
+  },
+  {
+    "destination": "/modeles-de-courriers/rupture-de-periode-dessai-par-lemployeur",
+    "permanent": true,
+    "source": "/modeles-de-courriers/rupture-de-periode-dessai-a-linitiative-de-lemployeur"
+  },
+  {
+    "destination": "/modeles-de-courriers/rupture-dun-contrat-dapprentissage-dun-commun-accord",
+    "permanent": true,
+    "source": "/modeles-de-courriers/rupture-dun-commun-accord-dun-contrat-dapprentissage"
+  },
+  {
+    "destination": "/information/covid-19-le-regime-post-crise-sanitaire-a-compter-du-14-mars-2022",
+    "permanent": true,
+    "source": "/information/covid-19-reagir-en-cas-de-contamination-dans-lentreprise-infographies"
+  }
+]

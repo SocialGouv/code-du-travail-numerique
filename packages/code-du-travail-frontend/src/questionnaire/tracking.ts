@@ -1,5 +1,5 @@
 import { MatomoBaseEvent, MatomoBaseAction } from "../lib/matomo";
-import { matopush } from "../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 
 export enum MatomoDismissalProcessAction {
   AGREEMENT_SEARCH_HELP = "cc_search_help",

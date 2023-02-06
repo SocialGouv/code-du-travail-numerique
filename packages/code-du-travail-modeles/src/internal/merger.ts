@@ -1,25 +1,73 @@
 import fs from "fs";
 import path from "path";
-import yaml from "yaml";
+import { parse } from "yaml";
 
-const publicodesDir = path.resolve(__dirname, "../../src/modeles");
+import {
+  commonFile,
+  indemniteLicenciementFile,
+  preavisRetraiteFile,
+} from "./constants";
 
-export function mergeModels(): any {
-  return yaml.parse(concatenateFilesInDir(publicodesDir));
+export const publicodesDir = path.resolve(__dirname, "../../src/modeles");
+
+export function mergePreavisRetraiteModels(): any {
+  return mergeModels([commonFile, preavisRetraiteFile]);
 }
 
-function concatenateFilesInDir(dirPath: string): string {
+export function mergeIndemniteLicenciementModels(): any {
+  return mergeModelsWithKeys([commonFile, indemniteLicenciementFile]);
+}
+
+export function mergeCommonModels(): any {
+  return mergeModels([commonFile]);
+}
+
+function mergeModels(filenameFilter: string[]): any {
+  return parse(concatenateFilesInDir(publicodesDir, filenameFilter));
+}
+
+function mergeModelsWithKeys(filenameFilter: string[]): any {
+  return concatenateFilesInDirWithKeys(publicodesDir, filenameFilter);
+}
+
+function concatenateFilesInDir(
+  dirPath: string,
+  filenameFilter: string[]
+): string {
   return fs
     .readdirSync(dirPath)
     .map((filename) => {
       const fullpath = path.join(dirPath, filename);
       if (fs.statSync(fullpath).isDirectory()) {
-        return concatenateFilesInDir(fullpath);
+        return concatenateFilesInDir(fullpath, filenameFilter);
       } else {
-        return filename.endsWith(".yaml")
+        return filename.endsWith(".yaml") && filenameFilter.includes(filename)
           ? fs.readFileSync(fullpath).toString()
           : "";
       }
     })
     .join("\n");
+}
+
+function concatenateFilesInDirWithKeys(
+  dirPath: string,
+  filenameFilter: string[]
+): any {
+  const dirName = path.basename(dirPath);
+  const result = fs
+    .readdirSync(dirPath)
+    .reduce<Record<string, any>>((obj, filename) => {
+      const fullpath = path.join(dirPath, filename);
+      if (fs.statSync(fullpath).isDirectory()) {
+        const dirData = concatenateFilesInDirWithKeys(fullpath, filenameFilter);
+        return { ...obj, ...dirData };
+      }
+      if (filename.endsWith(".yaml") && filenameFilter.includes(filename)) {
+        const data = parse(fs.readFileSync(fullpath).toString());
+        const idcc = dirName.split("_")[0];
+        return { ...obj, [idcc]: { ...obj[idcc], ...data } };
+      }
+      return obj;
+    }, {});
+  return result;
 }

@@ -1,0 +1,28 @@
+prix: 18 €
+
+panier: oui
+
+panier . quantité: 12 litre
+
+panier . montant:
+  valeur: prix * quantité
+  cdtn:
+    formule:
+      formula: Prix * Quantité
+      explanations:
+        - "Prix": prix
+        - "Quantité": panier . quantité
+
+participants:
+  valeur: 5
+  unité: personne
+
+panier . montant . participant:
+  valeur: prix * panier . quantité * participants
+  cdtn:
+    formule:
+      formula: Prix * Quantité * Participants
+      explanations:
+        - "Prix": prix
+        - "Quantité": panier . quantité
+        - "Participant": participants

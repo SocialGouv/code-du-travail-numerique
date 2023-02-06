@@ -1,6 +1,6 @@
 import React from "react";
 import { Paragraph } from "@socialgouv/cdtn-ui";
-import { matopush } from "../../../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 import {
   MatomoActionEvent,
   MatomoAgreementEvent,

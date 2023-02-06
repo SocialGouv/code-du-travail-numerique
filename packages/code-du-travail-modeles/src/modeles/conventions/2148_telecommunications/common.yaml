@@ -1,0 +1,8 @@
+contrat salarié . convention collective . télécommunications:
+  description: Convention collective nationale des télécommunications du 26 avril 2000.
+  applicable si: convention collective = 'IDCC2148'
+  valeur: oui
+  cdtn:
+    idcc: 2148
+    préavis-retraite: true
+    indemnité-licenciement: false

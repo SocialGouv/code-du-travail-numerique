@@ -26,7 +26,7 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-export const DocumentsTile = (
+const DocumentsTile = (
   <Link href={`/${getRouteBySource(SOURCES.LETTERS)}`} passHref>
     <CallToActionTile
       action="Découvrir"
