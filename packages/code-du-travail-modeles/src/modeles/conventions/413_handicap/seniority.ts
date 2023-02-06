@@ -20,7 +20,8 @@ export type CC0413SeniorityProps = DefaultSeniorityProps & {
 };
 
 export class Seniority413
-  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC413> {
+  implements ISeniority<SupportedCcIndemniteLicenciement.IDCC413>
+{
   computeSeniority({
     dateEntree,
     dateSortie,
@@ -72,7 +73,8 @@ export class Seniority413
       12;
     return {
       extraInfos: {
-        "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif": seniorityBeforeExecutive,
+        "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif":
+          seniorityBeforeExecutive,
       },
       value: (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12,
     };

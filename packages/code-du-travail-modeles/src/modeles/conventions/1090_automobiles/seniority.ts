@@ -13,7 +13,8 @@ import type {
 import { MotifKeys } from "../../common/motif-keys";
 
 export class Seniority1090
-  implements ISeniority<SupportedCcIndemniteLicenciement.default> {
+  implements ISeniority<SupportedCcIndemniteLicenciement.default>
+{
   computeSeniority({
     dateEntree,
     dateSortie,

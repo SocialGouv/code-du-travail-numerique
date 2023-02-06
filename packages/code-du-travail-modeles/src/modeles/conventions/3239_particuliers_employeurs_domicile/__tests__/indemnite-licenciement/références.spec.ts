@@ -9,86 +9,70 @@ const engine = new IndemniteLicenciementPublicodes(
 const ReferencesPe = [
   {
     article: "Article 47-1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942116?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942116",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942116?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942116",
   },
   {
     article: "Article 47-2",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942117?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942117",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942117?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942117",
   },
   {
     article: "Article 48-1-3-1-1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942139?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942139",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942139?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942139",
   },
   {
     article: "Article 48-1-3-4",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942144?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942144",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942144?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942144",
   },
   {
     article: "Article 49",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942151?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942151",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942151?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942151",
   },
   {
     article: "Article 60",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942169?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942169",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942169?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942169",
   },
   {
     article: "Article 142",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942377?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942377",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942377?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942377",
   },
   {
     article: "Article 163-1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942458?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942458",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942458?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942458",
   },
 ];
 
 const ReferencesAssMat = [
   {
     article: "Article 47-1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942116?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942116",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942116?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942116",
   },
   {
     article: "Article 47-2",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942117?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942117",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942117?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942117",
   },
   {
     article: "Article 48-1-3-1-1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942139?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942139",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942139?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942139",
   },
   {
     article: "Article 48-1-3-4",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942144?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942144",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942144?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942144",
   },
   {
     article: "Article 49",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942151?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942151",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942151?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942151",
   },
   {
     article: "Article 60",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942169?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942169",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942169?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942169",
   },
   {
     article: "Article 90-1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942236?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942236",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942236?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942236",
   },
   {
     article: "Article 121-1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942321?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942321",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000043942321?idConteneur=KALICONT000044594539&origin=list#KALIARTI000043942321",
   },
 ];
 
