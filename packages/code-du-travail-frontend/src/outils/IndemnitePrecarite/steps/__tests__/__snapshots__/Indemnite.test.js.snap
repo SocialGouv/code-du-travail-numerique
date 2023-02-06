@@ -3,7 +3,7 @@
 exports[`<StepIndemnite /> should render cdd indemnite with conventional provision message 1`] = `
 <div>
   <h2
-    class="sc-iIgjPs keqpsO"
+    class="sc-iJbNxu dKlwtU"
   >
     Montant
   </h2>
@@ -11,7 +11,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     La prime d'intervention
      est estimée à : 
     <strong
-      class="sc-gstuGz sc-amkrK iHDSLD bgpuze"
+      class="sc-grxQYx sc-ZqGJI itwhbo crLpbR"
     >
       180
        €
@@ -21,12 +21,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
   <div>
     <div
       aria-expanded="false"
-      class="sc-khIgEk ceBxWI"
+      class="sc-khsqcC jyDCrc"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-fujyAs BrylG"
+        class="sc-ftTHYK jiFzuu"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -42,16 +42,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         />
       </svg>
       <p
-        class="sc-cOifOu XEwmn sc-hTRkXV jAbsFO"
+        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
       >
         Voir le détail du calcul
       </p>
     </div>
     <div
-      class="sc-Arkif eVwpCw"
+      class="sc-AHaJN dhcrLx"
     >
       <h2
-        class="sc-iIgjPs keqpsO"
+        class="sc-iJbNxu dKlwtU"
       >
         Éléments saisis
       </h2>
@@ -72,12 +72,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         </li>
       </ul>
       <h2
-        class="sc-iIgjPs keqpsO"
+        class="sc-iJbNxu dKlwtU"
       >
         Formule
       </h2>
       <div
-        class="sc-ellfGf jJDlwA"
+        class="sc-elAWhN iCDbqV"
       >
         <div
           style="overflow: auto;"
@@ -350,7 +350,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         </div>
       </div>
       <h2
-        class="sc-iIgjPs keqpsO"
+        class="sc-iJbNxu dKlwtU"
       >
         Sources
       </h2>
@@ -389,13 +389,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
     </div>
   </div>
   <div
-    class="sc-lmgQwP sc-cwiweh kHzGur lgHAVk"
+    class="sc-lllmON sc-cxdZMj hrCOuh hopsiv"
   >
     <div
-      class="sc-gGLxEB kEYfsY"
+      class="sc-gGvHcT hSOEAU"
     >
       <div
-        class="sc-ckTSus eGIUDO"
+        class="sc-ckEbSK fTbCHa"
       >
         <svg
           aria-hidden="true"
@@ -415,10 +415,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
         </svg>
       </div>
       <div
-        class="sc-fbIWvP itJXQd"
+        class="sc-fbYMXx dVfpRL"
       >
         <p
-          class="sc-cOifOu gIgAxs sc-dkuGKe gKpSPA"
+          class="sc-cOxWqc fjmwyW sc-dkKxlM JtcaM"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -446,7 +446,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with conventional provisi
 exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] = `
 <div>
   <h2
-    class="sc-iIgjPs keqpsO"
+    class="sc-iJbNxu dKlwtU"
   >
     Montant
   </h2>
@@ -454,7 +454,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     La prime de précarité
      est estimée à : 
     <strong
-      class="sc-gstuGz sc-amkrK iHDSLD bgpuze"
+      class="sc-grxQYx sc-ZqGJI itwhbo crLpbR"
     >
       300
        €
@@ -464,12 +464,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
   <div>
     <div
       aria-expanded="false"
-      class="sc-khIgEk ceBxWI"
+      class="sc-khsqcC jyDCrc"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-fujyAs BrylG"
+        class="sc-ftTHYK jiFzuu"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -485,16 +485,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         />
       </svg>
       <p
-        class="sc-cOifOu XEwmn sc-hTRkXV jAbsFO"
+        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
       >
         Voir le détail du calcul
       </p>
     </div>
     <div
-      class="sc-Arkif eVwpCw"
+      class="sc-AHaJN dhcrLx"
     >
       <h2
-        class="sc-iIgjPs keqpsO"
+        class="sc-iJbNxu dKlwtU"
       >
         Éléments saisis
       </h2>
@@ -515,12 +515,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         </li>
       </ul>
       <h2
-        class="sc-iIgjPs keqpsO"
+        class="sc-iJbNxu dKlwtU"
       >
         Formule
       </h2>
       <div
-        class="sc-ellfGf jJDlwA"
+        class="sc-elAWhN iCDbqV"
       >
         <div
           style="overflow: auto;"
@@ -793,7 +793,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         </div>
       </div>
       <h2
-        class="sc-iIgjPs keqpsO"
+        class="sc-iJbNxu dKlwtU"
       >
         Sources
       </h2>
@@ -822,13 +822,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
     </div>
   </div>
   <div
-    class="sc-lmgQwP sc-cwiweh kHzGur lgHAVk"
+    class="sc-lllmON sc-cxdZMj hrCOuh hopsiv"
   >
     <div
-      class="sc-gGLxEB kEYfsY"
+      class="sc-gGvHcT hSOEAU"
     >
       <div
-        class="sc-ckTSus eGIUDO"
+        class="sc-ckEbSK fTbCHa"
       >
         <svg
           aria-hidden="true"
@@ -848,10 +848,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
         </svg>
       </div>
       <div
-        class="sc-fbIWvP itJXQd"
+        class="sc-fbYMXx dVfpRL"
       >
         <p
-          class="sc-cOifOu gIgAxs sc-dkuGKe gKpSPA"
+          class="sc-cOxWqc fjmwyW sc-dkKxlM JtcaM"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -882,7 +882,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no ccn message 1`] =
 exports[`<StepIndemnite /> should render cdd indemnite with no conventional provision message 1`] = `
 <div>
   <h2
-    class="sc-iIgjPs keqpsO"
+    class="sc-iJbNxu dKlwtU"
   >
     Montant
   </h2>
@@ -890,7 +890,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     La prime de précarité
      est estimée à : 
     <strong
-      class="sc-gstuGz sc-amkrK iHDSLD bgpuze"
+      class="sc-grxQYx sc-ZqGJI itwhbo crLpbR"
     >
       300
        €
@@ -900,12 +900,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
   <div>
     <div
       aria-expanded="false"
-      class="sc-khIgEk ceBxWI"
+      class="sc-khsqcC jyDCrc"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-fujyAs BrylG"
+        class="sc-ftTHYK jiFzuu"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -921,16 +921,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         />
       </svg>
       <p
-        class="sc-cOifOu XEwmn sc-hTRkXV jAbsFO"
+        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
       >
         Voir le détail du calcul
       </p>
     </div>
     <div
-      class="sc-Arkif eVwpCw"
+      class="sc-AHaJN dhcrLx"
     >
       <h2
-        class="sc-iIgjPs keqpsO"
+        class="sc-iJbNxu dKlwtU"
       >
         Éléments saisis
       </h2>
@@ -951,12 +951,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         </li>
       </ul>
       <h2
-        class="sc-iIgjPs keqpsO"
+        class="sc-iJbNxu dKlwtU"
       >
         Formule
       </h2>
       <div
-        class="sc-ellfGf jJDlwA"
+        class="sc-elAWhN iCDbqV"
       >
         <div
           style="overflow: auto;"
@@ -1229,7 +1229,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         </div>
       </div>
       <h2
-        class="sc-iIgjPs keqpsO"
+        class="sc-iJbNxu dKlwtU"
       >
         Sources
       </h2>
@@ -1268,13 +1268,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
     </div>
   </div>
   <div
-    class="sc-lmgQwP sc-cwiweh kHzGur lgHAVk"
+    class="sc-lllmON sc-cxdZMj hrCOuh hopsiv"
   >
     <div
-      class="sc-gGLxEB kEYfsY"
+      class="sc-gGvHcT hSOEAU"
     >
       <div
-        class="sc-ckTSus eGIUDO"
+        class="sc-ckEbSK fTbCHa"
       >
         <svg
           aria-hidden="true"
@@ -1294,10 +1294,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
         </svg>
       </div>
       <div
-        class="sc-fbIWvP itJXQd"
+        class="sc-fbYMXx dVfpRL"
       >
         <p
-          class="sc-cOifOu gIgAxs sc-dkuGKe gKpSPA"
+          class="sc-cOxWqc fjmwyW sc-dkKxlM JtcaM"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -1328,7 +1328,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with no conventional prov
 exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message 1`] = `
 <div>
   <h2
-    class="sc-iIgjPs keqpsO"
+    class="sc-iJbNxu dKlwtU"
   >
     Montant
   </h2>
@@ -1336,7 +1336,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     La prime de précarité
      est estimée à : 
     <strong
-      class="sc-gstuGz sc-amkrK iHDSLD bgpuze"
+      class="sc-grxQYx sc-ZqGJI itwhbo crLpbR"
     >
       300
        €
@@ -1346,12 +1346,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
   <div>
     <div
       aria-expanded="false"
-      class="sc-khIgEk ceBxWI"
+      class="sc-khsqcC jyDCrc"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-fujyAs BrylG"
+        class="sc-ftTHYK jiFzuu"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -1367,16 +1367,16 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         />
       </svg>
       <p
-        class="sc-cOifOu XEwmn sc-hTRkXV jAbsFO"
+        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
       >
         Voir le détail du calcul
       </p>
     </div>
     <div
-      class="sc-Arkif eVwpCw"
+      class="sc-AHaJN dhcrLx"
     >
       <h2
-        class="sc-iIgjPs keqpsO"
+        class="sc-iJbNxu dKlwtU"
       >
         Éléments saisis
       </h2>
@@ -1397,12 +1397,12 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         </li>
       </ul>
       <h2
-        class="sc-iIgjPs keqpsO"
+        class="sc-iJbNxu dKlwtU"
       >
         Formule
       </h2>
       <div
-        class="sc-ellfGf jJDlwA"
+        class="sc-elAWhN iCDbqV"
       >
         <div
           style="overflow: auto;"
@@ -1675,7 +1675,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         </div>
       </div>
       <h2
-        class="sc-iIgjPs keqpsO"
+        class="sc-iJbNxu dKlwtU"
       >
         Sources
       </h2>
@@ -1704,13 +1704,13 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
     </div>
   </div>
   <div
-    class="sc-lmgQwP sc-cwiweh kHzGur lgHAVk"
+    class="sc-lllmON sc-cxdZMj hrCOuh hopsiv"
   >
     <div
-      class="sc-gGLxEB kEYfsY"
+      class="sc-gGvHcT hSOEAU"
     >
       <div
-        class="sc-ckTSus eGIUDO"
+        class="sc-ckEbSK fTbCHa"
       >
         <svg
           aria-hidden="true"
@@ -1730,10 +1730,10 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
         </svg>
       </div>
       <div
-        class="sc-fbIWvP itJXQd"
+        class="sc-fbYMXx dVfpRL"
       >
         <p
-          class="sc-cOifOu gIgAxs sc-dkuGKe gKpSPA"
+          class="sc-cOxWqc fjmwyW sc-dkKxlM JtcaM"
         >
           Attention il peut exister un montant plus favorable
         </p>
@@ -1764,7 +1764,7 @@ exports[`<StepIndemnite /> should render cdd indemnite with unhandled cc message
 exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
 <div>
   <h2
-    class="sc-iIgjPs keqpsO"
+    class="sc-iJbNxu dKlwtU"
   >
     Montant
   </h2>
@@ -1772,7 +1772,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     La prime de précarité
      est estimée à : 
     <strong
-      class="sc-gstuGz sc-amkrK iHDSLD bgpuze"
+      class="sc-grxQYx sc-ZqGJI itwhbo crLpbR"
     >
       300
        €
@@ -1782,12 +1782,12 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
   <div>
     <div
       aria-expanded="false"
-      class="sc-khIgEk ceBxWI"
+      class="sc-khsqcC jyDCrc"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-fujyAs BrylG"
+        class="sc-ftTHYK jiFzuu"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -1803,16 +1803,16 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         />
       </svg>
       <p
-        class="sc-cOifOu XEwmn sc-hTRkXV jAbsFO"
+        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
       >
         Voir le détail du calcul
       </p>
     </div>
     <div
-      class="sc-Arkif eVwpCw"
+      class="sc-AHaJN dhcrLx"
     >
       <h2
-        class="sc-iIgjPs keqpsO"
+        class="sc-iJbNxu dKlwtU"
       >
         Éléments saisis
       </h2>
@@ -1833,12 +1833,12 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         </li>
       </ul>
       <h2
-        class="sc-iIgjPs keqpsO"
+        class="sc-iJbNxu dKlwtU"
       >
         Formule
       </h2>
       <div
-        class="sc-ellfGf jJDlwA"
+        class="sc-elAWhN iCDbqV"
       >
         <div
           style="overflow: auto;"
@@ -2111,7 +2111,7 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         </div>
       </div>
       <h2
-        class="sc-iIgjPs keqpsO"
+        class="sc-iJbNxu dKlwtU"
       >
         Sources
       </h2>
@@ -2140,13 +2140,13 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
     </div>
   </div>
   <div
-    class="sc-lmgQwP sc-cwiweh kHzGur lgHAVk"
+    class="sc-lllmON sc-cxdZMj hrCOuh hopsiv"
   >
     <div
-      class="sc-gGLxEB kEYfsY"
+      class="sc-gGvHcT hSOEAU"
     >
       <div
-        class="sc-ckTSus eGIUDO"
+        class="sc-ckEbSK fTbCHa"
       >
         <svg
           aria-hidden="true"
@@ -2166,10 +2166,10 @@ exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
         </svg>
       </div>
       <div
-        class="sc-fbIWvP itJXQd"
+        class="sc-fbYMXx dVfpRL"
       >
         <p
-          class="sc-cOifOu gIgAxs sc-dkuGKe gKpSPA"
+          class="sc-cOxWqc fjmwyW sc-dkKxlM JtcaM"
         >
           Attention il peut exister un montant plus favorable
         </p>

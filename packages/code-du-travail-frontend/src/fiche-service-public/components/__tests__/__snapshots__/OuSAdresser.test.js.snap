@@ -3,10 +3,10 @@
 exports[`<OuSAdresser /> should render a ressource web component 1`] = `
 <div>
   <div
-    class="sc-cKRKFl knTSOO"
+    class="sc-cLNonn bPVfqR"
   >
     <strong
-      class="sc-iIgjPs fRFHOw"
+      class="sc-iJbNxu TbgRq"
     >
       Ou s'adresser ?
     </strong>
@@ -25,15 +25,15 @@ exports[`<OuSAdresser /> should render a ressource web component 1`] = `
 exports[`<OuSAdresser /> should render a simple case 1`] = `
 <div>
   <div
-    class="sc-cKRKFl knTSOO"
+    class="sc-cLNonn bPVfqR"
   >
     <strong
-      class="sc-iIgjPs fRFHOw"
+      class="sc-iJbNxu TbgRq"
     >
       Ou s'adresser ?
     </strong>
     <h2
-      class="sc-iCoGMd gaXVHn"
+      class="sc-iBYQkv iDmZxg"
       data-testid="heading"
     >
       Nom du centre

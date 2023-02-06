@@ -6,7 +6,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
     aria-hidden="true"
   >
     <button
-      class="sc-hiKfDv cdukKM"
+      class="sc-hhOBVt irUZZv"
     >
       texte dans le bouton
     </button>
@@ -22,46 +22,46 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
     >
       <div>
         <div
-          class="sc-FRrlG hNWtxs"
+          class="sc-GhhNo iFhTCd"
           data-reach-dialog-overlay=""
         >
           <div
             aria-label="Service de renseignement"
             aria-modal="true"
-            class="sc-fXazdy lhbBKM"
+            class="sc-fXqpFg fffGxA"
             data-reach-dialog-content=""
             role="dialog"
             tabindex="-1"
           >
             <header
-              class="sc-eXuyPJ ZSyvw"
+              class="sc-eYqcxL hMutTz"
             >
               <h1
-                class="sc-irKDMX ehzKBH"
+                class="sc-iqPaeV fejMbm"
               >
                 <span
-                  class="sc-gKAaRy iDZwD"
+                  class="sc-gKPRtg efbYAr"
                 />
                 Les services du ministère du Travail
               </h1>
             </header>
             <h2
-              class="sc-iCoGMd gaXVHn"
+              class="sc-iBYQkv iDmZxg"
               data-testid="heading"
             >
               Contact téléphonique
             </h2>
             <a
-              class="sc-kTCsyW dqkqFD"
+              class="sc-kSGOQU izOznM"
               href="tel:+0033806000126"
             >
               <strong
-                class="sc-dvUynV icOeld"
+                class="sc-dvEHMn kVzqkB"
               >
                 0 806 000 126
               </strong>
               <em
-                class="sc-jtiXyc aModT"
+                class="sc-jsTgWu cUgWIk"
               >
                 Service gratuit 
                 <span>
@@ -70,13 +70,13 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </em>
             </a>
             <h2
-              class="sc-iCoGMd gaXVHn"
+              class="sc-iBYQkv iDmZxg"
               data-testid="heading"
             >
               Contact par email et prise de rendez-vous
             </h2>
             <form
-              class="sc-ellfGf OxVHP"
+              class="sc-elAWhN ccrGUy"
             >
               <label
                 for="search-service"
@@ -84,11 +84,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
                 Saisissez votre numéro de département :
               </label>
               <span
-                class="sc-bQCEYZ iOBpgY sc-kizEQm iDiVji"
+                class="sc-bQmOxr iqEHsz sc-kiPvrU dKtVbe"
               >
                 <input
                   autocomplete="off"
-                  class="sc-fXgAZx esWNAb"
+                  class="sc-fWQKxP iaRXHc"
                   id="search-service"
                   maxlength="3"
                   name="departement"
@@ -99,13 +99,13 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </span>
               <button
                 aria-label="Recherchez le service"
-                class="sc-hiKfDv dNqnKz sc-cKRKFl ktLPBo"
+                class="sc-hhOBVt cizsts sc-cLNonn iNvkZn"
                 title="Lancer une recherche"
                 type="submit"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-iIgjPs dVwoMR"
+                  class="sc-iJbNxu jZHjAr"
                   fill="none"
                   viewBox="0 0 32 32"
                   xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +118,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </button>
             </form>
             <div
-              class="sc-gstuGz jHSKrq"
+              class="sc-grxQYx jwxfll"
             >
               <p>
                 Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
@@ -139,11 +139,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </ul>
             </div>
             <button
-              class="sc-hiKfDv dNqnKz sc-dvXYtj kMeFfA"
+              class="sc-hhOBVt cizsts sc-dwnOUR jGPyvm"
               title="fermer la modale"
             >
               <div
-                class="sc-gXfVKN gNNUJi"
+                class="sc-gYbzsP fCavdH"
               >
                 fermer la modale
               </div>

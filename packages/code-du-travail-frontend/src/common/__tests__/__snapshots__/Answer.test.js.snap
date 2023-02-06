@@ -3,37 +3,37 @@
 exports[`<Answer /> should renders 1`] = `
 <div>
   <div
-    class="sc-bdnxRM sc-cGKJhA bCGhmq iSRmyO"
+    class="sc-bcXHqe sc-cHGmPC evAMOC fLHwdu"
   >
     <div
-      class="sc-JsfZP fsqcrV"
+      class="sc-JHWBx dimRpJ"
     >
       <div
-        class="sc-bdnxRM bCGhmq"
+        class="sc-bcXHqe evAMOC"
       >
         <div
-          class="sc-jSFjdj cnDzUD"
+          class="sc-jSUZER heYtoX"
         >
           <div
-            class="sc-hYIrvc bShXzl"
+            class="sc-hZDVde dNacWx"
           >
             <div
-              class="sc-hKiEVl cNRPtY"
+              class="sc-hLeiDn kmHFlJ"
             >
               <div
-                class="sc-dksuTV eYCuDt"
+                class="sc-dkcEsn dYCEMw"
               >
                 <button
-                  class="sc-jhGUec eqGXHT no-after spacing-left"
+                  class="sc-jhrdCu cYiOyd no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -46,16 +46,16 @@ exports[`<Answer /> should renders 1`] = `
                   </span>
                 </button>
                 <a
-                  class="sc-hkoqWr kZjrEK spacing-left"
+                  class="sc-hjsNop fmhJOc spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -72,15 +72,15 @@ exports[`<Answer /> should renders 1`] = `
                   </span>
                 </a>
                 <button
-                  class="sc-jhGUec eqGXHT spacing-left"
+                  class="sc-jhrdCu cYiOyd spacing-left"
                   title="Partager sur LinkedIn"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -93,18 +93,18 @@ exports[`<Answer /> should renders 1`] = `
                   </span>
                 </button>
                 <div
-                  class="sc-laZMeE dRGEWO"
+                  class="sc-lbVpMG fQidUo"
                 >
                   <button
-                    class="sc-jhGUec eqGXHT spacing-left"
+                    class="sc-jhrdCu cYiOyd spacing-left"
                     title="Plus d’options"
                   >
                     <span
-                      class="sc-bShgHC coizkz"
+                      class="sc-bRlCZA hRmWgU"
                     >
                       <svg
                         aria-hidden="true"
-                        class="sc-juXuNZ dtcTbp"
+                        class="sc-jvSYwb fFsEOq"
                         fill="none"
                         viewBox="0 0 16 16"
                         xmlns="http://www.w3.org/2000/svg"
@@ -130,37 +130,37 @@ exports[`<Answer /> should renders 1`] = `
               </div>
             </div>
             <header
-              class="sc-eXuyPJ YEPUN sc-eiQWpL dravOA"
+              class="sc-eYqcxL iNvldS sc-ehVsHJ cmCpXm"
             >
               <h1
-                class="sc-irKDMX dVIwbd"
+                class="sc-iqPaeV dscZbM"
               >
                 <span
-                  class="sc-gKAaRy jNbrvj"
+                  class="sc-gKPRtg fPkQGb"
                 />
                 Article du code
               </h1>
             </header>
             <div
-              class="sc-dkiSSI zvucl"
+              class="sc-djTcra gCMvWG"
             >
               <p
-                class="sc-cOifOu gZvkoB"
+                class="sc-cOxWqc imOahr"
               >
                 <span
-                  class="sc-ktvWjP itVlOd"
+                  class="sc-ktLMLx bCcQHN"
                 >
-                  Source:
+                  Source: 
                   social groove
                 </span>
                 <span
                   aria-hidden="true"
-                  class="sc-kHVIJG hmrWtj"
+                  class="sc-kIlzlo dIeHrH"
                 >
                    - 
                 </span>
                 <span
-                  class="sc-ktvWjP itVlOd"
+                  class="sc-ktLMLx bCcQHN"
                 >
                   Mis à jour le
                    : 
@@ -170,24 +170,24 @@ exports[`<Answer /> should renders 1`] = `
             </div>
           </div>
           <div
-            class="sc-cVJgsR eMAcUQ"
+            class="sc-cVtpRj fyFDvG"
           >
             <div
-              class="sc-jSFjdj sc-hQYpqk dWteEK PsYwi"
+              class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
             >
               <p
-                class="sc-cOifOu jBNwUz"
+                class="sc-cOxWqc bBCaVZ"
               >
                 intro de l'article
               </p>
             </div>
             <div
-              class="sc-cvdZrU"
+              class="sc-cuOiQm"
             >
               <p
                 class="test-content"
               >
-                Contenu au format
+                Contenu au format 
                 <strong>
                   html
                 </strong>
@@ -200,27 +200,27 @@ exports[`<Answer /> should renders 1`] = `
         </div>
       </div>
       <div
-        class="sc-bdnxRM sc-fTFMiz bCGhmq jwRxHg"
+        class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
       >
         <p
-          class="sc-cOifOu jBNwUz"
+          class="sc-cOxWqc bBCaVZ"
         >
           Partager ce contenu : 
         </p>
         <div
-          class="sc-dksuTV eYCuDt"
+          class="sc-dkcEsn dYCEMw"
         >
           <button
-            class="sc-jhGUec eqGXHT no-after spacing-left"
+            class="sc-jhrdCu cYiOyd no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -233,16 +233,16 @@ exports[`<Answer /> should renders 1`] = `
             </span>
           </button>
           <a
-            class="sc-hkoqWr kZjrEK spacing-left"
+            class="sc-hjsNop fmhJOc spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -259,15 +259,15 @@ exports[`<Answer /> should renders 1`] = `
             </span>
           </a>
           <button
-            class="sc-jhGUec eqGXHT spacing-left"
+            class="sc-jhrdCu cYiOyd spacing-left"
             title="Partager sur LinkedIn"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -280,18 +280,18 @@ exports[`<Answer /> should renders 1`] = `
             </span>
           </button>
           <div
-            class="sc-laZMeE dRGEWO"
+            class="sc-lbVpMG fQidUo"
           >
             <button
-              class="sc-jhGUec eqGXHT spacing-left"
+              class="sc-jhrdCu cYiOyd spacing-left"
               title="Plus d’options"
             >
               <span
-                class="sc-bShgHC coizkz"
+                class="sc-bRlCZA hRmWgU"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-juXuNZ dtcTbp"
+                  class="sc-jvSYwb fFsEOq"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -317,37 +317,37 @@ exports[`<Answer /> should renders 1`] = `
         </div>
       </div>
       <div
-        class="sc-gtsrHT dDJuxj sc-Jgsit fIMTgx"
+        class="sc-gswNZR uUAJC sc-IQBGL fVauIJ"
       >
         <div
-          class="sc-bdnxRM bCGhmq"
+          class="sc-bcXHqe evAMOC"
         >
           <div
-            class="sc-jSFjdj dftIwI"
+            class="sc-jSUZER kEfUQE"
           >
             <div
-              class="sc-dbXCOC ezzCbW"
+              class="sc-dcntqk dFbKTq"
             >
               <h2
-                class="sc-ehALMs jjAgxk sc-iCoGMd jQIZyR"
+                class="sc-ehkVkK jmJlfk sc-iBYQkv lfpFWy"
                 data-testid="heading"
               >
                 <span
-                  class="sc-gKAaRy hLlvoX"
+                  class="sc-gKPRtg lhzWfH"
                   data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-hGwcmR kSUGFz"
+                class="sc-hGglLj imOAZj"
               >
                 <button
-                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
+                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
+                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                 >
                   Oui
                 </button>
@@ -365,28 +365,28 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 <div>
   <nav
     aria-label="Fil d'ariane"
-    class="sc-gXZlLH MffoM"
+    class="sc-gYpcnp bjipqg"
   >
     <div
-      class="sc-eJocfa lolEuP"
+      class="sc-eJDSGI dCXocf"
     >
       <div
-        class="sc-oeezt lplLxT"
+        class="sc-oZIhv bFEaYe"
       >
         <ol
-          class="sc-bdnxRM sc-bFSbwS bCGhmq cFzcBj"
+          class="sc-bcXHqe sc-bGhRYA evAMOC iIZCtz"
         >
           <li
-            class="sc-fxFQKN eoeThm"
+            class="sc-fyBusP jElWLf"
           >
             <a
-              class="sc-fyGvY hrpgr"
+              class="sc-gukea eKkZz"
               href="/"
               title="Retour à l'accueil"
             >
               <svg
                 aria-hidden="true"
-                class="sc-cjzNjn hUZEJP"
+                class="sc-ciEjBl hQiFmr"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -400,11 +400,11 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             </a>
           </li>
           <li
-            class="sc-fxFQKN eoeThm"
+            class="sc-fyBusP jElWLf"
           >
             <svg
               aria-hidden="true"
-              class="sc-igOmtu OyNrM"
+              class="sc-ifSILs jXbxMJ"
               fill="none"
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
@@ -414,20 +414,20 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 fill="currentColor"
               />
             </svg>
-
+             
             <a
-              class="sc-fyGvY hrpgr"
+              class="sc-gukea eKkZz"
               href="/themes/tag-1"
             >
               tag1
             </a>
           </li>
           <li
-            class="sc-fxFQKN eoeThm"
+            class="sc-fyBusP jElWLf"
           >
             <svg
               aria-hidden="true"
-              class="sc-igOmtu OyNrM"
+              class="sc-ifSILs jXbxMJ"
               fill="none"
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
@@ -437,9 +437,9 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                 fill="currentColor"
               />
             </svg>
-
+             
             <a
-              class="sc-fyGvY hrpgr"
+              class="sc-gukea eKkZz"
               href="/themes/tag-2"
             >
               tag2
@@ -450,37 +450,37 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
     </div>
   </nav>
   <div
-    class="sc-bdnxRM sc-cGKJhA bCGhmq iSRmyO"
+    class="sc-bcXHqe sc-cHGmPC evAMOC fLHwdu"
   >
     <div
-      class="sc-JsfZP fsqcrV"
+      class="sc-JHWBx dimRpJ"
     >
       <div
-        class="sc-bdnxRM bCGhmq"
+        class="sc-bcXHqe evAMOC"
       >
         <div
-          class="sc-jSFjdj cnDzUD"
+          class="sc-jSUZER heYtoX"
         >
           <div
-            class="sc-hYIrvc bShXzl"
+            class="sc-hZDVde dNacWx"
           >
             <div
-              class="sc-hKiEVl cNRPtY"
+              class="sc-hLeiDn kmHFlJ"
             >
               <div
-                class="sc-dksuTV eYCuDt"
+                class="sc-dkcEsn dYCEMw"
               >
                 <button
-                  class="sc-jhGUec eqGXHT no-after spacing-left"
+                  class="sc-jhrdCu cYiOyd no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -493,16 +493,16 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                   </span>
                 </button>
                 <a
-                  class="sc-hkoqWr kZjrEK spacing-left"
+                  class="sc-hjsNop fmhJOc spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -519,15 +519,15 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                   </span>
                 </a>
                 <button
-                  class="sc-jhGUec eqGXHT spacing-left"
+                  class="sc-jhrdCu cYiOyd spacing-left"
                   title="Partager sur LinkedIn"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -540,18 +540,18 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
                   </span>
                 </button>
                 <div
-                  class="sc-laZMeE dRGEWO"
+                  class="sc-lbVpMG fQidUo"
                 >
                   <button
-                    class="sc-jhGUec eqGXHT spacing-left"
+                    class="sc-jhrdCu cYiOyd spacing-left"
                     title="Plus d’options"
                   >
                     <span
-                      class="sc-bShgHC coizkz"
+                      class="sc-bRlCZA hRmWgU"
                     >
                       <svg
                         aria-hidden="true"
-                        class="sc-juXuNZ dtcTbp"
+                        class="sc-jvSYwb fFsEOq"
                         fill="none"
                         viewBox="0 0 16 16"
                         xmlns="http://www.w3.org/2000/svg"
@@ -577,42 +577,42 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
               </div>
             </div>
             <p
-              class="sc-bXexck sc-exqIPC haepIh lnhpif"
+              class="sc-bWOGAC sc-ewvfhA hCTtvv dCjsWo"
             >
               tag2
             </p>
             <header
-              class="sc-eXuyPJ YEPUN sc-eiQWpL dravOA"
+              class="sc-eYqcxL iNvldS sc-ehVsHJ cmCpXm"
             >
               <h1
-                class="sc-irKDMX dVIwbd"
+                class="sc-iqPaeV dscZbM"
               >
                 <span
-                  class="sc-gKAaRy jNbrvj"
+                  class="sc-gKPRtg fPkQGb"
                 />
                 Article du code
               </h1>
             </header>
             <div
-              class="sc-dkiSSI zvucl"
+              class="sc-djTcra gCMvWG"
             >
               <p
-                class="sc-cOifOu gZvkoB"
+                class="sc-cOxWqc imOahr"
               >
                 <span
-                  class="sc-ktvWjP itVlOd"
+                  class="sc-ktLMLx bCcQHN"
                 >
-                  Source:
+                  Source: 
                   social groove
                 </span>
                 <span
                   aria-hidden="true"
-                  class="sc-kHVIJG hmrWtj"
+                  class="sc-kIlzlo dIeHrH"
                 >
                    - 
                 </span>
                 <span
-                  class="sc-ktvWjP itVlOd"
+                  class="sc-ktLMLx bCcQHN"
                 >
                   Mis à jour le
                    : 
@@ -622,24 +622,24 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             </div>
           </div>
           <div
-            class="sc-cVJgsR eMAcUQ"
+            class="sc-cVtpRj fyFDvG"
           >
             <div
-              class="sc-jSFjdj sc-hQYpqk dWteEK PsYwi"
+              class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
             >
               <p
-                class="sc-cOifOu jBNwUz"
+                class="sc-cOxWqc bBCaVZ"
               >
                 intro de l'article
               </p>
             </div>
             <div
-              class="sc-cvdZrU"
+              class="sc-cuOiQm"
             >
               <p
                 class="test-content"
               >
-                Contenu au format
+                Contenu au format 
                 <strong>
                   html
                 </strong>
@@ -652,27 +652,27 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
         </div>
       </div>
       <div
-        class="sc-bdnxRM sc-fTFMiz bCGhmq jwRxHg"
+        class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
       >
         <p
-          class="sc-cOifOu jBNwUz"
+          class="sc-cOxWqc bBCaVZ"
         >
           Partager ce contenu : 
         </p>
         <div
-          class="sc-dksuTV eYCuDt"
+          class="sc-dkcEsn dYCEMw"
         >
           <button
-            class="sc-jhGUec eqGXHT no-after spacing-left"
+            class="sc-jhrdCu cYiOyd no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -685,16 +685,16 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             </span>
           </button>
           <a
-            class="sc-hkoqWr kZjrEK spacing-left"
+            class="sc-hjsNop fmhJOc spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -711,15 +711,15 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             </span>
           </a>
           <button
-            class="sc-jhGUec eqGXHT spacing-left"
+            class="sc-jhrdCu cYiOyd spacing-left"
             title="Partager sur LinkedIn"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -732,18 +732,18 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
             </span>
           </button>
           <div
-            class="sc-laZMeE dRGEWO"
+            class="sc-lbVpMG fQidUo"
           >
             <button
-              class="sc-jhGUec eqGXHT spacing-left"
+              class="sc-jhrdCu cYiOyd spacing-left"
               title="Plus d’options"
             >
               <span
-                class="sc-bShgHC coizkz"
+                class="sc-bRlCZA hRmWgU"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-juXuNZ dtcTbp"
+                  class="sc-jvSYwb fFsEOq"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -769,37 +769,37 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
         </div>
       </div>
       <div
-        class="sc-gtsrHT dDJuxj sc-Jgsit fIMTgx"
+        class="sc-gswNZR uUAJC sc-IQBGL fVauIJ"
       >
         <div
-          class="sc-bdnxRM bCGhmq"
+          class="sc-bcXHqe evAMOC"
         >
           <div
-            class="sc-jSFjdj dftIwI"
+            class="sc-jSUZER kEfUQE"
           >
             <div
-              class="sc-dbXCOC ezzCbW"
+              class="sc-dcntqk dFbKTq"
             >
               <h2
-                class="sc-ehALMs jjAgxk sc-iCoGMd jQIZyR"
+                class="sc-ehkVkK jmJlfk sc-iBYQkv lfpFWy"
                 data-testid="heading"
               >
                 <span
-                  class="sc-gKAaRy hLlvoX"
+                  class="sc-gKPRtg lhzWfH"
                   data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-hGwcmR kSUGFz"
+                class="sc-hGglLj imOAZj"
               >
                 <button
-                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
+                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
+                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                 >
                   Oui
                 </button>
@@ -816,37 +816,37 @@ exports[`<Answer /> should renders a breadcrumbs 1`] = `
 exports[`<Answer /> should renders back to results link 1`] = `
 <div>
   <div
-    class="sc-bdnxRM sc-cGKJhA bCGhmq iSRmyO"
+    class="sc-bcXHqe sc-cHGmPC evAMOC fLHwdu"
   >
     <div
-      class="sc-JsfZP fsqcrV"
+      class="sc-JHWBx dimRpJ"
     >
       <div
-        class="sc-bdnxRM bCGhmq"
+        class="sc-bcXHqe evAMOC"
       >
         <div
-          class="sc-jSFjdj cnDzUD"
+          class="sc-jSUZER heYtoX"
         >
           <div
-            class="sc-hYIrvc bShXzl"
+            class="sc-hZDVde dNacWx"
           >
             <div
-              class="sc-hKiEVl cNRPtY"
+              class="sc-hLeiDn kmHFlJ"
             >
               <div
-                class="sc-dksuTV eYCuDt"
+                class="sc-dkcEsn dYCEMw"
               >
                 <button
-                  class="sc-jhGUec eqGXHT no-after spacing-left"
+                  class="sc-jhrdCu cYiOyd no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -859,16 +859,16 @@ exports[`<Answer /> should renders back to results link 1`] = `
                   </span>
                 </button>
                 <a
-                  class="sc-hkoqWr kZjrEK spacing-left"
+                  class="sc-hjsNop fmhJOc spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -885,15 +885,15 @@ exports[`<Answer /> should renders back to results link 1`] = `
                   </span>
                 </a>
                 <button
-                  class="sc-jhGUec eqGXHT spacing-left"
+                  class="sc-jhrdCu cYiOyd spacing-left"
                   title="Partager sur LinkedIn"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -906,18 +906,18 @@ exports[`<Answer /> should renders back to results link 1`] = `
                   </span>
                 </button>
                 <div
-                  class="sc-laZMeE dRGEWO"
+                  class="sc-lbVpMG fQidUo"
                 >
                   <button
-                    class="sc-jhGUec eqGXHT spacing-left"
+                    class="sc-jhrdCu cYiOyd spacing-left"
                     title="Plus d’options"
                   >
                     <span
-                      class="sc-bShgHC coizkz"
+                      class="sc-bRlCZA hRmWgU"
                     >
                       <svg
                         aria-hidden="true"
-                        class="sc-juXuNZ dtcTbp"
+                        class="sc-jvSYwb fFsEOq"
                         fill="none"
                         viewBox="0 0 16 16"
                         xmlns="http://www.w3.org/2000/svg"
@@ -943,37 +943,37 @@ exports[`<Answer /> should renders back to results link 1`] = `
               </div>
             </div>
             <header
-              class="sc-eXuyPJ YEPUN sc-eiQWpL dravOA"
+              class="sc-eYqcxL iNvldS sc-ehVsHJ cmCpXm"
             >
               <h1
-                class="sc-irKDMX dVIwbd"
+                class="sc-iqPaeV dscZbM"
               >
                 <span
-                  class="sc-gKAaRy jNbrvj"
+                  class="sc-gKPRtg fPkQGb"
                 />
                 Article du code
               </h1>
             </header>
             <div
-              class="sc-dkiSSI zvucl"
+              class="sc-djTcra gCMvWG"
             >
               <p
-                class="sc-cOifOu gZvkoB"
+                class="sc-cOxWqc imOahr"
               >
                 <span
-                  class="sc-ktvWjP itVlOd"
+                  class="sc-ktLMLx bCcQHN"
                 >
-                  Source:
+                  Source: 
                   social groove
                 </span>
                 <span
                   aria-hidden="true"
-                  class="sc-kHVIJG hmrWtj"
+                  class="sc-kIlzlo dIeHrH"
                 >
                    - 
                 </span>
                 <span
-                  class="sc-ktvWjP itVlOd"
+                  class="sc-ktLMLx bCcQHN"
                 >
                   Mis à jour le
                    : 
@@ -983,24 +983,24 @@ exports[`<Answer /> should renders back to results link 1`] = `
             </div>
           </div>
           <div
-            class="sc-cVJgsR eMAcUQ"
+            class="sc-cVtpRj fyFDvG"
           >
             <div
-              class="sc-jSFjdj sc-hQYpqk dWteEK PsYwi"
+              class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
             >
               <p
-                class="sc-cOifOu jBNwUz"
+                class="sc-cOxWqc bBCaVZ"
               >
                 intro de l'article
               </p>
             </div>
             <div
-              class="sc-cvdZrU"
+              class="sc-cuOiQm"
             >
               <p
                 class="test-content"
               >
-                Contenu au format
+                Contenu au format 
                 <strong>
                   html
                 </strong>
@@ -1013,27 +1013,27 @@ exports[`<Answer /> should renders back to results link 1`] = `
         </div>
       </div>
       <div
-        class="sc-bdnxRM sc-fTFMiz bCGhmq jwRxHg"
+        class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
       >
         <p
-          class="sc-cOifOu jBNwUz"
+          class="sc-cOxWqc bBCaVZ"
         >
           Partager ce contenu : 
         </p>
         <div
-          class="sc-dksuTV eYCuDt"
+          class="sc-dkcEsn dYCEMw"
         >
           <button
-            class="sc-jhGUec eqGXHT no-after spacing-left"
+            class="sc-jhrdCu cYiOyd no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1046,16 +1046,16 @@ exports[`<Answer /> should renders back to results link 1`] = `
             </span>
           </button>
           <a
-            class="sc-hkoqWr kZjrEK spacing-left"
+            class="sc-hjsNop fmhJOc spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1072,15 +1072,15 @@ exports[`<Answer /> should renders back to results link 1`] = `
             </span>
           </a>
           <button
-            class="sc-jhGUec eqGXHT spacing-left"
+            class="sc-jhrdCu cYiOyd spacing-left"
             title="Partager sur LinkedIn"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1093,18 +1093,18 @@ exports[`<Answer /> should renders back to results link 1`] = `
             </span>
           </button>
           <div
-            class="sc-laZMeE dRGEWO"
+            class="sc-lbVpMG fQidUo"
           >
             <button
-              class="sc-jhGUec eqGXHT spacing-left"
+              class="sc-jhrdCu cYiOyd spacing-left"
               title="Plus d’options"
             >
               <span
-                class="sc-bShgHC coizkz"
+                class="sc-bRlCZA hRmWgU"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-juXuNZ dtcTbp"
+                  class="sc-jvSYwb fFsEOq"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1130,37 +1130,37 @@ exports[`<Answer /> should renders back to results link 1`] = `
         </div>
       </div>
       <div
-        class="sc-gtsrHT dDJuxj sc-Jgsit fIMTgx"
+        class="sc-gswNZR uUAJC sc-IQBGL fVauIJ"
       >
         <div
-          class="sc-bdnxRM bCGhmq"
+          class="sc-bcXHqe evAMOC"
         >
           <div
-            class="sc-jSFjdj dftIwI"
+            class="sc-jSUZER kEfUQE"
           >
             <div
-              class="sc-dbXCOC ezzCbW"
+              class="sc-dcntqk dFbKTq"
             >
               <h2
-                class="sc-ehALMs jjAgxk sc-iCoGMd jQIZyR"
+                class="sc-ehkVkK jmJlfk sc-iBYQkv lfpFWy"
                 data-testid="heading"
               >
                 <span
-                  class="sc-gKAaRy hLlvoX"
+                  class="sc-gKPRtg lhzWfH"
                   data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-hGwcmR kSUGFz"
+                class="sc-hGglLj imOAZj"
               >
                 <button
-                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
+                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
+                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                 >
                   Oui
                 </button>
@@ -1177,37 +1177,37 @@ exports[`<Answer /> should renders back to results link 1`] = `
 exports[`<Answer /> should renders related content 1`] = `
 <div>
   <div
-    class="sc-bdnxRM sc-cGKJhA bCGhmq iSRmyO"
+    class="sc-bcXHqe sc-cHGmPC evAMOC fLHwdu"
   >
     <div
-      class="sc-JsfZP iHBDny"
+      class="sc-JHWBx emGHnC"
     >
       <div
-        class="sc-bdnxRM bCGhmq"
+        class="sc-bcXHqe evAMOC"
       >
         <div
-          class="sc-jSFjdj cnDzUD"
+          class="sc-jSUZER heYtoX"
         >
           <div
-            class="sc-hYIrvc bShXzl"
+            class="sc-hZDVde dNacWx"
           >
             <div
-              class="sc-hKiEVl cNRPtY"
+              class="sc-hLeiDn kmHFlJ"
             >
               <div
-                class="sc-dksuTV eYCuDt"
+                class="sc-dkcEsn dYCEMw"
               >
                 <button
-                  class="sc-jhGUec eqGXHT no-after spacing-left"
+                  class="sc-jhrdCu cYiOyd no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1220,16 +1220,16 @@ exports[`<Answer /> should renders related content 1`] = `
                   </span>
                 </button>
                 <a
-                  class="sc-hkoqWr kZjrEK spacing-left"
+                  class="sc-hjsNop fmhJOc spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1246,15 +1246,15 @@ exports[`<Answer /> should renders related content 1`] = `
                   </span>
                 </a>
                 <button
-                  class="sc-jhGUec eqGXHT spacing-left"
+                  class="sc-jhrdCu cYiOyd spacing-left"
                   title="Partager sur LinkedIn"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1267,18 +1267,18 @@ exports[`<Answer /> should renders related content 1`] = `
                   </span>
                 </button>
                 <div
-                  class="sc-laZMeE dRGEWO"
+                  class="sc-lbVpMG fQidUo"
                 >
                   <button
-                    class="sc-jhGUec eqGXHT spacing-left"
+                    class="sc-jhrdCu cYiOyd spacing-left"
                     title="Plus d’options"
                   >
                     <span
-                      class="sc-bShgHC coizkz"
+                      class="sc-bRlCZA hRmWgU"
                     >
                       <svg
                         aria-hidden="true"
-                        class="sc-juXuNZ dtcTbp"
+                        class="sc-jvSYwb fFsEOq"
                         fill="none"
                         viewBox="0 0 16 16"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1304,37 +1304,37 @@ exports[`<Answer /> should renders related content 1`] = `
               </div>
             </div>
             <header
-              class="sc-eXuyPJ YEPUN sc-eiQWpL dravOA"
+              class="sc-eYqcxL iNvldS sc-ehVsHJ cmCpXm"
             >
               <h1
-                class="sc-irKDMX dVIwbd"
+                class="sc-iqPaeV dscZbM"
               >
                 <span
-                  class="sc-gKAaRy jNbrvj"
+                  class="sc-gKPRtg fPkQGb"
                 />
                 Article du code
               </h1>
             </header>
             <div
-              class="sc-dkiSSI zvucl"
+              class="sc-djTcra gCMvWG"
             >
               <p
-                class="sc-cOifOu gZvkoB"
+                class="sc-cOxWqc imOahr"
               >
                 <span
-                  class="sc-ktvWjP itVlOd"
+                  class="sc-ktLMLx bCcQHN"
                 >
-                  Source:
+                  Source: 
                   social groove
                 </span>
                 <span
                   aria-hidden="true"
-                  class="sc-kHVIJG hmrWtj"
+                  class="sc-kIlzlo dIeHrH"
                 >
                    - 
                 </span>
                 <span
-                  class="sc-ktvWjP itVlOd"
+                  class="sc-ktLMLx bCcQHN"
                 >
                   Mis à jour le
                    : 
@@ -1344,19 +1344,19 @@ exports[`<Answer /> should renders related content 1`] = `
             </div>
           </div>
           <div
-            class="sc-cVJgsR eMAcUQ"
+            class="sc-cVtpRj fyFDvG"
           >
             <div
-              class="sc-jSFjdj sc-hQYpqk dWteEK PsYwi"
+              class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
             >
               <p
-                class="sc-cOifOu jBNwUz"
+                class="sc-cOxWqc bBCaVZ"
               >
                 intro de l'article
               </p>
             </div>
             <div
-              class="sc-cvdZrU"
+              class="sc-cuOiQm"
             >
               <p
                 class="test-content"
@@ -1371,27 +1371,27 @@ exports[`<Answer /> should renders related content 1`] = `
         </div>
       </div>
       <div
-        class="sc-bdnxRM sc-fTFMiz bCGhmq jwRxHg"
+        class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
       >
         <p
-          class="sc-cOifOu jBNwUz"
+          class="sc-cOxWqc bBCaVZ"
         >
           Partager ce contenu : 
         </p>
         <div
-          class="sc-dksuTV eYCuDt"
+          class="sc-dkcEsn dYCEMw"
         >
           <button
-            class="sc-jhGUec eqGXHT no-after spacing-left"
+            class="sc-jhrdCu cYiOyd no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1404,16 +1404,16 @@ exports[`<Answer /> should renders related content 1`] = `
             </span>
           </button>
           <a
-            class="sc-hkoqWr kZjrEK spacing-left"
+            class="sc-hjsNop fmhJOc spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1430,15 +1430,15 @@ exports[`<Answer /> should renders related content 1`] = `
             </span>
           </a>
           <button
-            class="sc-jhGUec eqGXHT spacing-left"
+            class="sc-jhrdCu cYiOyd spacing-left"
             title="Partager sur LinkedIn"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1451,18 +1451,18 @@ exports[`<Answer /> should renders related content 1`] = `
             </span>
           </button>
           <div
-            class="sc-laZMeE dRGEWO"
+            class="sc-lbVpMG fQidUo"
           >
             <button
-              class="sc-jhGUec eqGXHT spacing-left"
+              class="sc-jhrdCu cYiOyd spacing-left"
               title="Plus d’options"
             >
               <span
-                class="sc-bShgHC coizkz"
+                class="sc-bRlCZA hRmWgU"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-juXuNZ dtcTbp"
+                  class="sc-jvSYwb fFsEOq"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1488,37 +1488,37 @@ exports[`<Answer /> should renders related content 1`] = `
         </div>
       </div>
       <div
-        class="sc-gtsrHT dDJuxj sc-Jgsit fIMTgx"
+        class="sc-gswNZR uUAJC sc-IQBGL fVauIJ"
       >
         <div
-          class="sc-bdnxRM bCGhmq"
+          class="sc-bcXHqe evAMOC"
         >
           <div
-            class="sc-jSFjdj dftIwI"
+            class="sc-jSUZER kEfUQE"
           >
             <div
-              class="sc-dbXCOC ezzCbW"
+              class="sc-dcntqk dFbKTq"
             >
               <h2
-                class="sc-ehALMs jjAgxk sc-iCoGMd jQIZyR"
+                class="sc-ehkVkK jmJlfk sc-iBYQkv lfpFWy"
                 data-testid="heading"
               >
                 <span
-                  class="sc-gKAaRy hLlvoX"
+                  class="sc-gKPRtg lhzWfH"
                   data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-hGwcmR kSUGFz"
+                class="sc-hGglLj imOAZj"
               >
                 <button
-                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
+                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
+                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                 >
                   Oui
                 </button>
@@ -1529,14 +1529,14 @@ exports[`<Answer /> should renders related content 1`] = `
       </div>
     </div>
     <div
-      class="sc-gtsrHT dDJuxj sc-gGGFjW cPDQCk"
+      class="sc-gswNZR uUAJC sc-gGWvLE eSBAVC"
     >
       <div
-        class="sc-bdnxRM bCGhmq"
+        class="sc-bcXHqe evAMOC"
       >
         <div
           aria-level="2"
-          class="sc-iCoGMd gaXVHn"
+          class="sc-iBYQkv iDmZxg"
           data-testid="heading"
           role="heading"
         >
@@ -1544,18 +1544,18 @@ exports[`<Answer /> should renders related content 1`] = `
            :
         </div>
         <ul
-          class="sc-jffHpj jAxtJd"
+          class="sc-jfvxQR gwhdUi"
         >
           <li
-            class="sc-fTZpSt cxgQnq"
+            class="sc-fTJzqL bdwlqI"
           >
             <a
-              class="sc-ezzafa eFglTD"
-              href="/url.extrenal/tool"
+              class="sc-ezOQGI cmgTaR"
+              href="url.extrenal/tool"
             >
               <svg
                 aria-hidden="true"
-                class="sc-kLojOw kpfGeG"
+                class="sc-kMjNwy dtEtzi"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1566,22 +1566,22 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <p
-                class="sc-bYwzuL jTtUkg"
+                class="sc-bYMpWt gakFNM"
               >
                 related external title 1
               </p>
             </a>
           </li>
           <li
-            class="sc-fTZpSt cxgQnq"
+            class="sc-fTJzqL bdwlqI"
           >
             <a
-              class="sc-ezzafa eFglTD"
+              class="sc-ezOQGI cmgTaR"
               href="/outils/TOOL_1"
             >
               <svg
                 aria-hidden="true"
-                class="sc-kLojOw kpfGeG"
+                class="sc-kMjNwy dtEtzi"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1592,7 +1592,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <p
-                class="sc-bYwzuL jTtUkg"
+                class="sc-bYMpWt gakFNM"
               >
                 related tool title 1
               </p>
@@ -1601,7 +1601,7 @@ exports[`<Answer /> should renders related content 1`] = `
         </ul>
         <div
           aria-level="2"
-          class="sc-iCoGMd gaXVHn"
+          class="sc-iBYQkv iDmZxg"
           data-testid="heading"
           role="heading"
         >
@@ -1609,18 +1609,18 @@ exports[`<Answer /> should renders related content 1`] = `
            :
         </div>
         <ul
-          class="sc-jffHpj jAxtJd"
+          class="sc-jfvxQR gwhdUi"
         >
           <li
-            class="sc-fTZpSt cxgQnq"
+            class="sc-fTJzqL bdwlqI"
           >
             <a
-              class="sc-ezzafa eFglTD"
+              class="sc-ezOQGI cmgTaR"
               href="/fiche-service-public/LINK_1"
             >
               <svg
                 aria-hidden="true"
-                class="sc-kLojOw kpfGeG"
+                class="sc-kMjNwy dtEtzi"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1631,22 +1631,22 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <p
-                class="sc-bYwzuL jTtUkg"
+                class="sc-bYMpWt gakFNM"
               >
                 related sheet sp title 1
               </p>
             </a>
           </li>
           <li
-            class="sc-fTZpSt cxgQnq"
+            class="sc-fTJzqL bdwlqI"
           >
             <a
-              class="sc-ezzafa eFglTD"
+              class="sc-ezOQGI cmgTaR"
               href="/fiche-ministere-travail/LINK_2"
             >
               <svg
                 aria-hidden="true"
-                class="sc-kLojOw kpfGeG"
+                class="sc-kMjNwy dtEtzi"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1657,22 +1657,22 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <p
-                class="sc-bYwzuL jTtUkg"
+                class="sc-bYMpWt gakFNM"
               >
                 related sheet mt title 1
               </p>
             </a>
           </li>
           <li
-            class="sc-fTZpSt cxgQnq"
+            class="sc-fTJzqL bdwlqI"
           >
             <a
-              class="sc-ezzafa eFglTD"
+              class="sc-ezOQGI cmgTaR"
               href="/fiche-service-public/LINK_4"
             >
               <svg
                 aria-hidden="true"
-                class="sc-kLojOw kpfGeG"
+                class="sc-kMjNwy dtEtzi"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1683,7 +1683,7 @@ exports[`<Answer /> should renders related content 1`] = `
                 />
               </svg>
               <p
-                class="sc-bYwzuL jTtUkg"
+                class="sc-bYMpWt gakFNM"
               >
                 related sheet sp title 2
               </p>
@@ -1699,37 +1699,37 @@ exports[`<Answer /> should renders related content 1`] = `
 exports[`<Answer /> should renders tooltip 1`] = `
 <div>
   <div
-    class="sc-bdnxRM sc-cGKJhA bCGhmq iSRmyO"
+    class="sc-bcXHqe sc-cHGmPC evAMOC fLHwdu"
   >
     <div
-      class="sc-JsfZP fsqcrV"
+      class="sc-JHWBx dimRpJ"
     >
       <div
-        class="sc-bdnxRM bCGhmq"
+        class="sc-bcXHqe evAMOC"
       >
         <div
-          class="sc-jSFjdj cnDzUD"
+          class="sc-jSUZER heYtoX"
         >
           <div
-            class="sc-hYIrvc bShXzl"
+            class="sc-hZDVde dNacWx"
           >
             <div
-              class="sc-hKiEVl cNRPtY"
+              class="sc-hLeiDn kmHFlJ"
             >
               <div
-                class="sc-dksuTV eYCuDt"
+                class="sc-dkcEsn dYCEMw"
               >
                 <button
-                  class="sc-jhGUec eqGXHT no-after spacing-left"
+                  class="sc-jhrdCu cYiOyd no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1742,16 +1742,16 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   </span>
                 </button>
                 <a
-                  class="sc-hkoqWr kZjrEK spacing-left"
+                  class="sc-hjsNop fmhJOc spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1768,15 +1768,15 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   </span>
                 </a>
                 <button
-                  class="sc-jhGUec eqGXHT spacing-left"
+                  class="sc-jhrdCu cYiOyd spacing-left"
                   title="Partager sur LinkedIn"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1789,18 +1789,18 @@ exports[`<Answer /> should renders tooltip 1`] = `
                   </span>
                 </button>
                 <div
-                  class="sc-laZMeE dRGEWO"
+                  class="sc-lbVpMG fQidUo"
                 >
                   <button
-                    class="sc-jhGUec eqGXHT spacing-left"
+                    class="sc-jhrdCu cYiOyd spacing-left"
                     title="Plus d’options"
                   >
                     <span
-                      class="sc-bShgHC coizkz"
+                      class="sc-bRlCZA hRmWgU"
                     >
                       <svg
                         aria-hidden="true"
-                        class="sc-juXuNZ dtcTbp"
+                        class="sc-jvSYwb fFsEOq"
                         fill="none"
                         viewBox="0 0 16 16"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1826,37 +1826,37 @@ exports[`<Answer /> should renders tooltip 1`] = `
               </div>
             </div>
             <header
-              class="sc-eXuyPJ YEPUN sc-eiQWpL dravOA"
+              class="sc-eYqcxL iNvldS sc-ehVsHJ cmCpXm"
             >
               <h1
-                class="sc-irKDMX dVIwbd"
+                class="sc-iqPaeV dscZbM"
               >
                 <span
-                  class="sc-gKAaRy jNbrvj"
+                  class="sc-gKPRtg fPkQGb"
                 />
                 Article du code
               </h1>
             </header>
             <div
-              class="sc-dkiSSI zvucl"
+              class="sc-djTcra gCMvWG"
             >
               <p
-                class="sc-cOifOu gZvkoB"
+                class="sc-cOxWqc imOahr"
               >
                 <span
-                  class="sc-ktvWjP itVlOd"
+                  class="sc-ktLMLx bCcQHN"
                 >
-                  Source:
+                  Source: 
                   social groove
                 </span>
                 <span
                   aria-hidden="true"
-                  class="sc-kHVIJG hmrWtj"
+                  class="sc-kIlzlo dIeHrH"
                 >
                    - 
                 </span>
                 <span
-                  class="sc-ktvWjP itVlOd"
+                  class="sc-ktLMLx bCcQHN"
                 >
                   Mis à jour le
                    : 
@@ -1866,24 +1866,24 @@ exports[`<Answer /> should renders tooltip 1`] = `
             </div>
           </div>
           <div
-            class="sc-cVJgsR eMAcUQ"
+            class="sc-cVtpRj fyFDvG"
           >
             <div
-              class="sc-jSFjdj sc-hQYpqk dWteEK PsYwi"
+              class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
             >
               <p
-                class="sc-cOifOu jBNwUz"
+                class="sc-cOxWqc bBCaVZ"
               >
                 intro de l'article
               </p>
             </div>
             <div
-              class="sc-cvdZrU"
+              class="sc-cuOiQm"
             >
               <p
                 class="test-content"
               >
-                Contenu au format
+                Contenu au format 
                 <strong>
                   html
                 </strong>
@@ -1897,27 +1897,27 @@ exports[`<Answer /> should renders tooltip 1`] = `
         </div>
       </div>
       <div
-        class="sc-bdnxRM sc-fTFMiz bCGhmq jwRxHg"
+        class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
       >
         <p
-          class="sc-cOifOu jBNwUz"
+          class="sc-cOxWqc bBCaVZ"
         >
           Partager ce contenu : 
         </p>
         <div
-          class="sc-dksuTV eYCuDt"
+          class="sc-dkcEsn dYCEMw"
         >
           <button
-            class="sc-jhGUec eqGXHT no-after spacing-left"
+            class="sc-jhrdCu cYiOyd no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1930,16 +1930,16 @@ exports[`<Answer /> should renders tooltip 1`] = `
             </span>
           </button>
           <a
-            class="sc-hkoqWr kZjrEK spacing-left"
+            class="sc-hjsNop fmhJOc spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1956,15 +1956,15 @@ exports[`<Answer /> should renders tooltip 1`] = `
             </span>
           </a>
           <button
-            class="sc-jhGUec eqGXHT spacing-left"
+            class="sc-jhrdCu cYiOyd spacing-left"
             title="Partager sur LinkedIn"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1977,18 +1977,18 @@ exports[`<Answer /> should renders tooltip 1`] = `
             </span>
           </button>
           <div
-            class="sc-laZMeE dRGEWO"
+            class="sc-lbVpMG fQidUo"
           >
             <button
-              class="sc-jhGUec eqGXHT spacing-left"
+              class="sc-jhrdCu cYiOyd spacing-left"
               title="Plus d’options"
             >
               <span
-                class="sc-bShgHC coizkz"
+                class="sc-bRlCZA hRmWgU"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-juXuNZ dtcTbp"
+                  class="sc-jvSYwb fFsEOq"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2014,37 +2014,37 @@ exports[`<Answer /> should renders tooltip 1`] = `
         </div>
       </div>
       <div
-        class="sc-gtsrHT dDJuxj sc-Jgsit fIMTgx"
+        class="sc-gswNZR uUAJC sc-IQBGL fVauIJ"
       >
         <div
-          class="sc-bdnxRM bCGhmq"
+          class="sc-bcXHqe evAMOC"
         >
           <div
-            class="sc-jSFjdj dftIwI"
+            class="sc-jSUZER kEfUQE"
           >
             <div
-              class="sc-dbXCOC ezzCbW"
+              class="sc-dcntqk dFbKTq"
             >
               <h2
-                class="sc-ehALMs jjAgxk sc-iCoGMd jQIZyR"
+                class="sc-ehkVkK jmJlfk sc-iBYQkv lfpFWy"
                 data-testid="heading"
               >
                 <span
-                  class="sc-gKAaRy hLlvoX"
+                  class="sc-gKPRtg lhzWfH"
                   data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-hGwcmR kSUGFz"
+                class="sc-hGglLj imOAZj"
               >
                 <button
-                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
+                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
+                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                 >
                   Oui
                 </button>
@@ -2061,37 +2061,37 @@ exports[`<Answer /> should renders tooltip 1`] = `
 exports[`<Answer /> should renders tooltip for words with diacritics without breaking html 1`] = `
 <div>
   <div
-    class="sc-bdnxRM sc-cGKJhA bCGhmq iSRmyO"
+    class="sc-bcXHqe sc-cHGmPC evAMOC fLHwdu"
   >
     <div
-      class="sc-JsfZP fsqcrV"
+      class="sc-JHWBx dimRpJ"
     >
       <div
-        class="sc-bdnxRM bCGhmq"
+        class="sc-bcXHqe evAMOC"
       >
         <div
-          class="sc-jSFjdj cnDzUD"
+          class="sc-jSUZER heYtoX"
         >
           <div
-            class="sc-hYIrvc bShXzl"
+            class="sc-hZDVde dNacWx"
           >
             <div
-              class="sc-hKiEVl cNRPtY"
+              class="sc-hLeiDn kmHFlJ"
             >
               <div
-                class="sc-dksuTV eYCuDt"
+                class="sc-dkcEsn dYCEMw"
               >
                 <button
-                  class="sc-jhGUec eqGXHT no-after spacing-left"
+                  class="sc-jhrdCu cYiOyd no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2104,16 +2104,16 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   </span>
                 </button>
                 <a
-                  class="sc-hkoqWr kZjrEK spacing-left"
+                  class="sc-hjsNop fmhJOc spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2130,15 +2130,15 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   </span>
                 </a>
                 <button
-                  class="sc-jhGUec eqGXHT spacing-left"
+                  class="sc-jhrdCu cYiOyd spacing-left"
                   title="Partager sur LinkedIn"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2151,18 +2151,18 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
                   </span>
                 </button>
                 <div
-                  class="sc-laZMeE dRGEWO"
+                  class="sc-lbVpMG fQidUo"
                 >
                   <button
-                    class="sc-jhGUec eqGXHT spacing-left"
+                    class="sc-jhrdCu cYiOyd spacing-left"
                     title="Plus d’options"
                   >
                     <span
-                      class="sc-bShgHC coizkz"
+                      class="sc-bRlCZA hRmWgU"
                     >
                       <svg
                         aria-hidden="true"
-                        class="sc-juXuNZ dtcTbp"
+                        class="sc-jvSYwb fFsEOq"
                         fill="none"
                         viewBox="0 0 16 16"
                         xmlns="http://www.w3.org/2000/svg"
@@ -2188,37 +2188,37 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
               </div>
             </div>
             <header
-              class="sc-eXuyPJ YEPUN sc-eiQWpL dravOA"
+              class="sc-eYqcxL iNvldS sc-ehVsHJ cmCpXm"
             >
               <h1
-                class="sc-irKDMX dVIwbd"
+                class="sc-iqPaeV dscZbM"
               >
                 <span
-                  class="sc-gKAaRy jNbrvj"
+                  class="sc-gKPRtg fPkQGb"
                 />
                 Article du code
               </h1>
             </header>
             <div
-              class="sc-dkiSSI zvucl"
+              class="sc-djTcra gCMvWG"
             >
               <p
-                class="sc-cOifOu gZvkoB"
+                class="sc-cOxWqc imOahr"
               >
                 <span
-                  class="sc-ktvWjP itVlOd"
+                  class="sc-ktLMLx bCcQHN"
                 >
-                  Source:
+                  Source: 
                   social groove
                 </span>
                 <span
                   aria-hidden="true"
-                  class="sc-kHVIJG hmrWtj"
+                  class="sc-kIlzlo dIeHrH"
                 >
                    - 
                 </span>
                 <span
-                  class="sc-ktvWjP itVlOd"
+                  class="sc-ktLMLx bCcQHN"
                 >
                   Mis à jour le
                    : 
@@ -2228,24 +2228,24 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             </div>
           </div>
           <div
-            class="sc-cVJgsR eMAcUQ"
+            class="sc-cVtpRj fyFDvG"
           >
             <div
-              class="sc-jSFjdj sc-hQYpqk dWteEK PsYwi"
+              class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
             >
               <p
-                class="sc-cOifOu jBNwUz"
+                class="sc-cOxWqc bBCaVZ"
               >
                 intro de l'article
               </p>
             </div>
             <div
-              class="sc-cvdZrU"
+              class="sc-cuOiQm"
             >
               <p
                 class="test-content"
               >
-                Contenu au format
+                Contenu au format 
                 <strong>
                   indemnités
                 </strong>
@@ -2259,27 +2259,27 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
         </div>
       </div>
       <div
-        class="sc-bdnxRM sc-fTFMiz bCGhmq jwRxHg"
+        class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
       >
         <p
-          class="sc-cOifOu jBNwUz"
+          class="sc-cOxWqc bBCaVZ"
         >
           Partager ce contenu : 
         </p>
         <div
-          class="sc-dksuTV eYCuDt"
+          class="sc-dkcEsn dYCEMw"
         >
           <button
-            class="sc-jhGUec eqGXHT no-after spacing-left"
+            class="sc-jhrdCu cYiOyd no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2292,16 +2292,16 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             </span>
           </button>
           <a
-            class="sc-hkoqWr kZjrEK spacing-left"
+            class="sc-hjsNop fmhJOc spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2318,15 +2318,15 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             </span>
           </a>
           <button
-            class="sc-jhGUec eqGXHT spacing-left"
+            class="sc-jhrdCu cYiOyd spacing-left"
             title="Partager sur LinkedIn"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2339,18 +2339,18 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
             </span>
           </button>
           <div
-            class="sc-laZMeE dRGEWO"
+            class="sc-lbVpMG fQidUo"
           >
             <button
-              class="sc-jhGUec eqGXHT spacing-left"
+              class="sc-jhrdCu cYiOyd spacing-left"
               title="Plus d’options"
             >
               <span
-                class="sc-bShgHC coizkz"
+                class="sc-bRlCZA hRmWgU"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-juXuNZ dtcTbp"
+                  class="sc-jvSYwb fFsEOq"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2376,37 +2376,37 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
         </div>
       </div>
       <div
-        class="sc-gtsrHT dDJuxj sc-Jgsit fIMTgx"
+        class="sc-gswNZR uUAJC sc-IQBGL fVauIJ"
       >
         <div
-          class="sc-bdnxRM bCGhmq"
+          class="sc-bcXHqe evAMOC"
         >
           <div
-            class="sc-jSFjdj dftIwI"
+            class="sc-jSUZER kEfUQE"
           >
             <div
-              class="sc-dbXCOC ezzCbW"
+              class="sc-dcntqk dFbKTq"
             >
               <h2
-                class="sc-ehALMs jjAgxk sc-iCoGMd jQIZyR"
+                class="sc-ehkVkK jmJlfk sc-iBYQkv lfpFWy"
                 data-testid="heading"
               >
                 <span
-                  class="sc-gKAaRy hLlvoX"
+                  class="sc-gKPRtg lhzWfH"
                   data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-hGwcmR kSUGFz"
+                class="sc-hGglLj imOAZj"
               >
                 <button
-                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
+                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
+                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                 >
                   Oui
                 </button>
@@ -2423,37 +2423,37 @@ exports[`<Answer /> should renders tooltip for words with diacritics without bre
 exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 <div>
   <div
-    class="sc-bdnxRM sc-cGKJhA bCGhmq iSRmyO"
+    class="sc-bcXHqe sc-cHGmPC evAMOC fLHwdu"
   >
     <div
-      class="sc-JsfZP fsqcrV"
+      class="sc-JHWBx dimRpJ"
     >
       <div
-        class="sc-bdnxRM bCGhmq"
+        class="sc-bcXHqe evAMOC"
       >
         <div
-          class="sc-jSFjdj cnDzUD"
+          class="sc-jSUZER heYtoX"
         >
           <div
-            class="sc-hYIrvc bShXzl"
+            class="sc-hZDVde dNacWx"
           >
             <div
-              class="sc-hKiEVl cNRPtY"
+              class="sc-hLeiDn kmHFlJ"
             >
               <div
-                class="sc-dksuTV eYCuDt"
+                class="sc-dkcEsn dYCEMw"
               >
                 <button
-                  class="sc-jhGUec eqGXHT no-after spacing-left"
+                  class="sc-jhrdCu cYiOyd no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2466,16 +2466,16 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   </span>
                 </button>
                 <a
-                  class="sc-hkoqWr kZjrEK spacing-left"
+                  class="sc-hjsNop fmhJOc spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2492,15 +2492,15 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   </span>
                 </a>
                 <button
-                  class="sc-jhGUec eqGXHT spacing-left"
+                  class="sc-jhrdCu cYiOyd spacing-left"
                   title="Partager sur LinkedIn"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2513,18 +2513,18 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
                   </span>
                 </button>
                 <div
-                  class="sc-laZMeE dRGEWO"
+                  class="sc-lbVpMG fQidUo"
                 >
                   <button
-                    class="sc-jhGUec eqGXHT spacing-left"
+                    class="sc-jhrdCu cYiOyd spacing-left"
                     title="Plus d’options"
                   >
                     <span
-                      class="sc-bShgHC coizkz"
+                      class="sc-bRlCZA hRmWgU"
                     >
                       <svg
                         aria-hidden="true"
-                        class="sc-juXuNZ dtcTbp"
+                        class="sc-jvSYwb fFsEOq"
                         fill="none"
                         viewBox="0 0 16 16"
                         xmlns="http://www.w3.org/2000/svg"
@@ -2550,37 +2550,37 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
               </div>
             </div>
             <header
-              class="sc-eXuyPJ YEPUN sc-eiQWpL dravOA"
+              class="sc-eYqcxL iNvldS sc-ehVsHJ cmCpXm"
             >
               <h1
-                class="sc-irKDMX dVIwbd"
+                class="sc-iqPaeV dscZbM"
               >
                 <span
-                  class="sc-gKAaRy jNbrvj"
+                  class="sc-gKPRtg fPkQGb"
                 />
                 Article du code
               </h1>
             </header>
             <div
-              class="sc-dkiSSI zvucl"
+              class="sc-djTcra gCMvWG"
             >
               <p
-                class="sc-cOifOu gZvkoB"
+                class="sc-cOxWqc imOahr"
               >
                 <span
-                  class="sc-ktvWjP itVlOd"
+                  class="sc-ktLMLx bCcQHN"
                 >
-                  Source:
+                  Source: 
                   social groove
                 </span>
                 <span
                   aria-hidden="true"
-                  class="sc-kHVIJG hmrWtj"
+                  class="sc-kIlzlo dIeHrH"
                 >
                    - 
                 </span>
                 <span
-                  class="sc-ktvWjP itVlOd"
+                  class="sc-ktLMLx bCcQHN"
                 >
                   Mis à jour le
                    : 
@@ -2590,19 +2590,19 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             </div>
           </div>
           <div
-            class="sc-cVJgsR eMAcUQ"
+            class="sc-cVtpRj fyFDvG"
           >
             <div
-              class="sc-jSFjdj sc-hQYpqk dWteEK PsYwi"
+              class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
             >
               <p
-                class="sc-cOifOu jBNwUz"
+                class="sc-cOxWqc bBCaVZ"
               >
                 intro de l'article
               </p>
             </div>
             <div
-              class="sc-cvdZrU"
+              class="sc-cuOiQm"
             >
               <p
                 class="test-content"
@@ -2622,27 +2622,27 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
         </div>
       </div>
       <div
-        class="sc-bdnxRM sc-fTFMiz bCGhmq jwRxHg"
+        class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
       >
         <p
-          class="sc-cOifOu jBNwUz"
+          class="sc-cOxWqc bBCaVZ"
         >
           Partager ce contenu : 
         </p>
         <div
-          class="sc-dksuTV eYCuDt"
+          class="sc-dkcEsn dYCEMw"
         >
           <button
-            class="sc-jhGUec eqGXHT no-after spacing-left"
+            class="sc-jhrdCu cYiOyd no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2655,16 +2655,16 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             </span>
           </button>
           <a
-            class="sc-hkoqWr kZjrEK spacing-left"
+            class="sc-hjsNop fmhJOc spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2681,15 +2681,15 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             </span>
           </a>
           <button
-            class="sc-jhGUec eqGXHT spacing-left"
+            class="sc-jhrdCu cYiOyd spacing-left"
             title="Partager sur LinkedIn"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2702,18 +2702,18 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
             </span>
           </button>
           <div
-            class="sc-laZMeE dRGEWO"
+            class="sc-lbVpMG fQidUo"
           >
             <button
-              class="sc-jhGUec eqGXHT spacing-left"
+              class="sc-jhrdCu cYiOyd spacing-left"
               title="Plus d’options"
             >
               <span
-                class="sc-bShgHC coizkz"
+                class="sc-bRlCZA hRmWgU"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-juXuNZ dtcTbp"
+                  class="sc-jvSYwb fFsEOq"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2739,37 +2739,37 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
         </div>
       </div>
       <div
-        class="sc-gtsrHT dDJuxj sc-Jgsit fIMTgx"
+        class="sc-gswNZR uUAJC sc-IQBGL fVauIJ"
       >
         <div
-          class="sc-bdnxRM bCGhmq"
+          class="sc-bcXHqe evAMOC"
         >
           <div
-            class="sc-jSFjdj dftIwI"
+            class="sc-jSUZER kEfUQE"
           >
             <div
-              class="sc-dbXCOC ezzCbW"
+              class="sc-dcntqk dFbKTq"
             >
               <h2
-                class="sc-ehALMs jjAgxk sc-iCoGMd jQIZyR"
+                class="sc-ehkVkK jmJlfk sc-iBYQkv lfpFWy"
                 data-testid="heading"
               >
                 <span
-                  class="sc-gKAaRy hLlvoX"
+                  class="sc-gKPRtg lhzWfH"
                   data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-hGwcmR kSUGFz"
+                class="sc-hGglLj imOAZj"
               >
                 <button
-                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
+                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
+                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                 >
                   Oui
                 </button>
@@ -2786,37 +2786,37 @@ exports[`<Answer /> should renders tooltip without breaking a tag 1`] = `
 exports[`<Answer /> should renders tooltip without breaking previous word 1`] = `
 <div>
   <div
-    class="sc-bdnxRM sc-cGKJhA bCGhmq iSRmyO"
+    class="sc-bcXHqe sc-cHGmPC evAMOC fLHwdu"
   >
     <div
-      class="sc-JsfZP fsqcrV"
+      class="sc-JHWBx dimRpJ"
     >
       <div
-        class="sc-bdnxRM bCGhmq"
+        class="sc-bcXHqe evAMOC"
       >
         <div
-          class="sc-jSFjdj cnDzUD"
+          class="sc-jSUZER heYtoX"
         >
           <div
-            class="sc-hYIrvc bShXzl"
+            class="sc-hZDVde dNacWx"
           >
             <div
-              class="sc-hKiEVl cNRPtY"
+              class="sc-hLeiDn kmHFlJ"
             >
               <div
-                class="sc-dksuTV eYCuDt"
+                class="sc-dkcEsn dYCEMw"
               >
                 <button
-                  class="sc-jhGUec eqGXHT no-after spacing-left"
+                  class="sc-jhrdCu cYiOyd no-after spacing-left"
                   title="Partager sur Facebook"
                   type="button"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2829,16 +2829,16 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   </span>
                 </button>
                 <a
-                  class="sc-hkoqWr kZjrEK spacing-left"
+                  class="sc-hjsNop fmhJOc spacing-left"
                   href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
                   title="Envoyer par email"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2855,15 +2855,15 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   </span>
                 </a>
                 <button
-                  class="sc-jhGUec eqGXHT spacing-left"
+                  class="sc-jhrdCu cYiOyd spacing-left"
                   title="Partager sur LinkedIn"
                 >
                   <span
-                    class="sc-bShgHC coizkz"
+                    class="sc-bRlCZA hRmWgU"
                   >
                     <svg
                       aria-hidden="true"
-                      class="sc-juXuNZ dtcTbp"
+                      class="sc-jvSYwb fFsEOq"
                       fill="none"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2876,18 +2876,18 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
                   </span>
                 </button>
                 <div
-                  class="sc-laZMeE dRGEWO"
+                  class="sc-lbVpMG fQidUo"
                 >
                   <button
-                    class="sc-jhGUec eqGXHT spacing-left"
+                    class="sc-jhrdCu cYiOyd spacing-left"
                     title="Plus d’options"
                   >
                     <span
-                      class="sc-bShgHC coizkz"
+                      class="sc-bRlCZA hRmWgU"
                     >
                       <svg
                         aria-hidden="true"
-                        class="sc-juXuNZ dtcTbp"
+                        class="sc-jvSYwb fFsEOq"
                         fill="none"
                         viewBox="0 0 16 16"
                         xmlns="http://www.w3.org/2000/svg"
@@ -2913,37 +2913,37 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
               </div>
             </div>
             <header
-              class="sc-eXuyPJ YEPUN sc-eiQWpL dravOA"
+              class="sc-eYqcxL iNvldS sc-ehVsHJ cmCpXm"
             >
               <h1
-                class="sc-irKDMX dVIwbd"
+                class="sc-iqPaeV dscZbM"
               >
                 <span
-                  class="sc-gKAaRy jNbrvj"
+                  class="sc-gKPRtg fPkQGb"
                 />
                 Article du code
               </h1>
             </header>
             <div
-              class="sc-dkiSSI zvucl"
+              class="sc-djTcra gCMvWG"
             >
               <p
-                class="sc-cOifOu gZvkoB"
+                class="sc-cOxWqc imOahr"
               >
                 <span
-                  class="sc-ktvWjP itVlOd"
+                  class="sc-ktLMLx bCcQHN"
                 >
-                  Source:
+                  Source: 
                   social groove
                 </span>
                 <span
                   aria-hidden="true"
-                  class="sc-kHVIJG hmrWtj"
+                  class="sc-kIlzlo dIeHrH"
                 >
                    - 
                 </span>
                 <span
-                  class="sc-ktvWjP itVlOd"
+                  class="sc-ktLMLx bCcQHN"
                 >
                   Mis à jour le
                    : 
@@ -2953,19 +2953,19 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             </div>
           </div>
           <div
-            class="sc-cVJgsR eMAcUQ"
+            class="sc-cVtpRj fyFDvG"
           >
             <div
-              class="sc-jSFjdj sc-hQYpqk dWteEK PsYwi"
+              class="sc-jSUZER sc-hQIyOC cbQucy gNKUOj"
             >
               <p
-                class="sc-cOifOu jBNwUz"
+                class="sc-cOxWqc bBCaVZ"
               >
                 intro de l'article
               </p>
             </div>
             <div
-              class="sc-cvdZrU"
+              class="sc-cuOiQm"
             >
               <p
                 class="test-content"
@@ -2980,27 +2980,27 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
         </div>
       </div>
       <div
-        class="sc-bdnxRM sc-fTFMiz bCGhmq jwRxHg"
+        class="sc-bcXHqe sc-fSKiAx evAMOC jErPjK"
       >
         <p
-          class="sc-cOifOu jBNwUz"
+          class="sc-cOxWqc bBCaVZ"
         >
           Partager ce contenu : 
         </p>
         <div
-          class="sc-dksuTV eYCuDt"
+          class="sc-dkcEsn dYCEMw"
         >
           <button
-            class="sc-jhGUec eqGXHT no-after spacing-left"
+            class="sc-jhrdCu cYiOyd no-after spacing-left"
             title="Partager sur Facebook"
             type="button"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -3013,16 +3013,16 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             </span>
           </button>
           <a
-            class="sc-hkoqWr kZjrEK spacing-left"
+            class="sc-hjsNop fmhJOc spacing-left"
             href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20Article%20du%20code&body=%0A%0Ahttp%3A%2F%2Flocalhost%2F"
             title="Envoyer par email"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -3039,15 +3039,15 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             </span>
           </a>
           <button
-            class="sc-jhGUec eqGXHT spacing-left"
+            class="sc-jhrdCu cYiOyd spacing-left"
             title="Partager sur LinkedIn"
           >
             <span
-              class="sc-bShgHC coizkz"
+              class="sc-bRlCZA hRmWgU"
             >
               <svg
                 aria-hidden="true"
-                class="sc-juXuNZ dtcTbp"
+                class="sc-jvSYwb fFsEOq"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -3060,18 +3060,18 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
             </span>
           </button>
           <div
-            class="sc-laZMeE dRGEWO"
+            class="sc-lbVpMG fQidUo"
           >
             <button
-              class="sc-jhGUec eqGXHT spacing-left"
+              class="sc-jhrdCu cYiOyd spacing-left"
               title="Plus d’options"
             >
               <span
-                class="sc-bShgHC coizkz"
+                class="sc-bRlCZA hRmWgU"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-juXuNZ dtcTbp"
+                  class="sc-jvSYwb fFsEOq"
                   fill="none"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3097,37 +3097,37 @@ exports[`<Answer /> should renders tooltip without breaking previous word 1`] = 
         </div>
       </div>
       <div
-        class="sc-gtsrHT dDJuxj sc-Jgsit fIMTgx"
+        class="sc-gswNZR uUAJC sc-IQBGL fVauIJ"
       >
         <div
-          class="sc-bdnxRM bCGhmq"
+          class="sc-bcXHqe evAMOC"
         >
           <div
-            class="sc-jSFjdj dftIwI"
+            class="sc-jSUZER kEfUQE"
           >
             <div
-              class="sc-dbXCOC ezzCbW"
+              class="sc-dcntqk dFbKTq"
             >
               <h2
-                class="sc-ehALMs jjAgxk sc-iCoGMd jQIZyR"
+                class="sc-ehkVkK jmJlfk sc-iBYQkv lfpFWy"
                 data-testid="heading"
               >
                 <span
-                  class="sc-gKAaRy hLlvoX"
+                  class="sc-gKPRtg lhzWfH"
                   data-testid="stripe"
                 />
                 Avez-vous trouvé la réponse à votre question ?
               </h2>
               <p
-                class="sc-hGwcmR kSUGFz"
+                class="sc-hGglLj imOAZj"
               >
                 <button
-                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
+                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                 >
                   Non
                 </button>
                 <button
-                  class="sc-hiKfDv kLCUsz sc-iuImSO bHvjOX"
+                  class="sc-hhOBVt gQDoEE sc-itMJkM dOgRBt"
                 >
                   Oui
                 </button>

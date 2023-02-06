@@ -19,6 +19,7 @@ const sharedStyle = css`
 `;
 
 const spanPropTypes = {
+  as: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
   children: PropTypes.node,
   fontSize: PropTypes.oneOf([
     "default",
