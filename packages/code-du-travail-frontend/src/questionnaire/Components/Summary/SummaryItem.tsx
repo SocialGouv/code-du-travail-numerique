@@ -25,7 +25,7 @@ export const SummaryItem = ({
   const { width } = useWindowDimensions();
   const [openedTooltip, setOpenedTooltip] = useState(false);
   return (
-    <div>
+    <>
       <SummaryItemWrapper>
         {!noCheck && (
           <StyledIcon>
@@ -60,18 +60,14 @@ export const SummaryItem = ({
         )}
       </SummaryItemWrapper>
       {openedTooltip && <InformationWrapper>{info}</InformationWrapper>}
-    </div>
+    </>
   );
 };
 
-const SummaryItemWrapper = styled.li`
-  list-style-type: none;
+const SummaryItemWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: 6px;
-  &:last-child {
-    margin-bottom: 0;
-  }
 `;
 
 const StyledIcon = styled.div`

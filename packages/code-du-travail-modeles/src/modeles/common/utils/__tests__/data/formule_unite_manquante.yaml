@@ -1,0 +1,14 @@
+prix: 18 €
+
+panier: oui
+
+panier . quantité: 12
+
+panier . montant:
+  valeur: prix * quantité
+  cdtn:
+    formule:
+      formula: Prix * Quantité
+      explanations:
+        - "Prix": prix
+        - "Quantité": panier . quantité

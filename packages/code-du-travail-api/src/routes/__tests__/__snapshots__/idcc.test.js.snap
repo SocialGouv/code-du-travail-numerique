@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`return idcc for number 27 1`] = `
+exports[`IDCC return idcc for number 27 1`] = `
 Object {
   "hits": Array [
     Object {
       "_id": "19",
       "_index": "cdtn_test-v2_documents",
-      "_score": 6.779922,
+      "_score": 6.9340725,
       "_source": Object {
         "cdtnId": "ceb38cca3c",
         "effectif": 219,
@@ -20,7 +20,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 6.779922,
+  "max_score": 6.9340725,
   "total": Object {
     "relation": "eq",
     "value": 1,
@@ -28,13 +28,13 @@ Object {
 }
 `;
 
-exports[`return idcc results for boulangerie 1`] = `
+exports[`IDCC return idcc results for boulangerie 1`] = `
 Object {
   "hits": Array [
     Object {
       "_id": "18",
       "_index": "cdtn_test-v2_documents",
-      "_score": 14.944416,
+      "_score": 15.212333,
       "_source": Object {
         "cdtnId": "647c224c9b",
         "effectif": 134889,
@@ -50,7 +50,7 @@ Object {
     Object {
       "_id": "17",
       "_index": "cdtn_test-v2_documents",
-      "_score": 13.841055,
+      "_score": 14.108972,
       "_source": Object {
         "cdtnId": "16752da066",
         "effectif": 44699,
@@ -64,7 +64,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 14.944416,
+  "max_score": 15.212333,
   "total": Object {
     "relation": "eq",
     "value": 2,
@@ -72,13 +72,13 @@ Object {
 }
 `;
 
-exports[`return idcc results for pati 1`] = `
+exports[`IDCC return idcc results for pati 1`] = `
 Object {
   "hits": Array [
     Object {
       "_id": "18",
       "_index": "cdtn_test-v2_documents",
-      "_score": 14.728075,
+      "_score": 14.958836,
       "_source": Object {
         "cdtnId": "647c224c9b",
         "effectif": 134889,
@@ -94,7 +94,7 @@ Object {
     Object {
       "_id": "17",
       "_index": "cdtn_test-v2_documents",
-      "_score": 13.624714,
+      "_score": 13.855474,
       "_source": Object {
         "cdtnId": "16752da066",
         "effectif": 44699,
@@ -108,7 +108,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 14.728075,
+  "max_score": 14.958836,
   "total": Object {
     "relation": "eq",
     "value": 2,
@@ -116,13 +116,13 @@ Object {
 }
 `;
 
-exports[`return idcc results in correct order for banque 1`] = `
+exports[`IDCC return idcc results in correct order for banque 1`] = `
 Object {
   "hits": Array [
     Object {
       "_id": "20",
       "_index": "cdtn_test-v2_documents",
-      "_score": 16.495073,
+      "_score": 16.831963,
       "_source": Object {
         "cdtnId": "a25dfc974f",
         "effectif": 216431,
@@ -138,7 +138,7 @@ Object {
     Object {
       "_id": "19",
       "_index": "cdtn_test-v2_documents",
-      "_score": 9.741608,
+      "_score": 10.097626,
       "_source": Object {
         "cdtnId": "ceb38cca3c",
         "effectif": 219,
@@ -152,7 +152,7 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 16.495073,
+  "max_score": 16.831963,
   "total": Object {
     "relation": "eq",
     "value": 2,

@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`search service should make a request once 1`] = `
-Object {
+{
   "foo": "bar",
 }
 `;
 
 exports[`suggest service should make a request once 1`] = `
-Object {
+{
   "foo": "bar",
 }
 `;
 
 exports[`suggest service should make a request unless debounce time is ellapsed 1`] = `
-Object {
+{
   "foo": "bar",
 }
 `;

@@ -1,41 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<List /> should render and increment heading level of children by one 1`] = `
-.c1 {
-  position: relative;
-  display: block;
-  margin: 3.2rem 0 2rem 0;
-  color: #2f3b6c;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c0 {
-  margin-bottom: 0.4rem;
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <ul>
     <li
-      class="c0"
+      class="sc-iIgjPs dSOKOE"
     >
       <h3
-        class="c1"
+        class="sc-iCoGMd gaXVHn"
         data-testid="heading"
       >
         title
       </h3>
     </li>
     <li
-      class="c0"
+      class="sc-iIgjPs dSOKOE"
     >
       <p>
         ok

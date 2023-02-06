@@ -42,12 +42,15 @@ export const StyledButton = styled.button`
         border: none;
         border-radius: 0;
         overflow: visible;
+
         &:hover {
           text-decoration: underline;
+
           svg {
             transform: translateX(4px);
           }
         }
+
         svg {
           width: 2.6rem;
           height: 1.4rem;
@@ -75,6 +78,7 @@ export const StyledButton = styled.button`
         overflow: visible;
         transition: color ${animations.transitionTiming} linear,
           text-decoration ${animations.transitionTiming} linear;
+
         &:focus {
           color: ${({ theme }) => theme.primary};
         }
@@ -146,6 +150,7 @@ export const StyledButton = styled.button`
         text-decoration: none;
         color: ${color};
       }
+
       :not([disabled]) {
         &:hover {
           opacity: ${opacity};
@@ -154,7 +159,9 @@ export const StyledButton = styled.button`
           border-color: ${lighten(0.1, borderColor)};
         }
       }
+
       /* keep it last so it overrides other styles */
+
       &[disabled] {
         background-color: ${theme.bgTertiary};
         border-color: ${theme.bgTertiary};
@@ -162,6 +169,7 @@ export const StyledButton = styled.button`
         box-shadow: none;
         cursor: not-allowed;
       }
+
       ${({ narrow, small, variant }) => {
         if (variant !== "link" && !small && !narrow) {
           return css`
@@ -171,26 +179,6 @@ export const StyledButton = styled.button`
           `;
         }
       }}
-    `;
-  }}
-`;
-
-// eslint-disable-next-line no-unused-vars
-const StyledIcon = (Icon) => styled(({ hasText, ...props }) => (
-  <Icon {...props} />
-))`
-  width: 2.6rem;
-  height: 1.4rem;
-  margin: ${({ hasText }) =>
-    hasText ? `0 ${spacings.tiny} 0 ${spacings.small}` : "0"};
-  transition: transform ${animations.transitionTiming} linear;
-  /* stylelint-disable-next-line */
-  ${StyledButton}:hover & {
-    transform: translateX(4px);
-  }
-  ${({ theme }) => {
-    return css`
-      fill: ${theme.primary};
     `;
   }}
 `;
@@ -212,6 +200,7 @@ Button.displayName = "Button";
 
 Button.propTypes = {
   children: PropTypes.node,
+  hasText: PropTypes.bool,
   icon: PropTypes.elementType,
   narrow: PropTypes.bool,
   onClick: PropTypes.func,

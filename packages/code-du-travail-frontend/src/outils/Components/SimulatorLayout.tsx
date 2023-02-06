@@ -1,8 +1,6 @@
 import { theme, Wrapper } from "@socialgouv/cdtn-ui";
 import React, { useEffect, useMemo } from "react";
 import styled from "styled-components";
-import { IndemniteLicenciementStepName } from "../IndemniteLicenciement";
-import { matopush } from "../../piwik";
 import { printResult } from "../common/utils";
 import { StepList, Title } from "./SimulatorDecorator/Components";
 import { createSimulatorStore, Step } from "../Simulator";
@@ -11,50 +9,63 @@ import {
   useSimulatorStepStore,
 } from "../Simulator/createContext";
 import SimulatorNavigation from "./SimulatorNavigation";
+import { push as matopush } from "@socialgouv/matomo-next";
 
-type StepName = IndemniteLicenciementStepName;
+export enum ValidationResponse {
+  NotValid = "not_valid",
+  NotEligible = "not_eligible",
+  Valid = "valid",
+}
 
-type Validator = {
-  validator: () => boolean;
+type StepChange<StepName extends string> = {
+  onNextStep?: () => ValidationResponse;
+  onPrevStep?: () => void;
   stepName: StepName;
-  isStepValid: boolean;
+  isStepValid?: boolean;
 };
 
-type Props = {
+type Props<StepName extends string> = {
   title: string;
   displayTitle: string;
   icon: string;
   duration: string;
   debug?: JSX.Element;
   steps: Step<StepName>[];
-  validators: Validator[];
+  onStepChange: StepChange<StepName>[];
+  hiddenStep?: StepName[];
 };
 
-const SimulatorContent = ({
+const SimulatorContent = <StepName extends string>({
   title,
   displayTitle,
   icon,
   duration,
   debug,
   steps,
-  validators,
-}: Props): JSX.Element => {
+  onStepChange,
+  hiddenStep,
+}: Props<StepName>): JSX.Element => {
   const anchorRef = React.createRef<HTMLLIElement>();
-
   const { currentStepIndex, previousStep, nextStep } = useSimulatorStepStore(
     (state) => state
   );
 
-  const Step = steps[currentStepIndex].Component;
+  const visibleSteps = useMemo(
+    () =>
+      steps.filter((step) => !hiddenStep || !hiddenStep.includes(step.name)),
+    [steps, hiddenStep]
+  );
+
+  const Step = visibleSteps[currentStepIndex].Component;
 
   const stepItems = useMemo(
     () =>
-      steps.map(({ name, label }) => ({
+      visibleSteps.map(({ name, label }) => ({
         isValid: false,
         label,
         name,
       })),
-    [steps]
+    [visibleSteps]
   );
 
   useEffect(() => {
@@ -68,41 +79,55 @@ const SimulatorContent = ({
 
   const onNextStep = () => {
     const nextStepIndex = currentStepIndex + 1;
-    if (nextStepIndex >= steps.length) {
+    if (nextStepIndex >= visibleSteps.length) {
       throw Error("Can't show the next step with index more than steps");
     } else {
-      let isValid: boolean | undefined;
-      if (currentStepIndex === 0) {
-        isValid = true;
-      } else {
-        isValid = validators
-          .find(
-            (validator) => validator.stepName === steps[currentStepIndex].name
-          )
-          ?.validator();
+      const nextStepName = visibleSteps[currentStepIndex].name;
+      const stepChange = onStepChange.find(
+        (validator) => validator.stepName === nextStepName
+      );
+
+      let validationResponse = ValidationResponse.Valid;
+      if (stepChange?.onNextStep) {
+        validationResponse =
+          stepChange?.onNextStep() ?? ValidationResponse.NotValid;
       }
-      if (isValid) {
-        nextStep();
-        matopush([
-          "trackEvent",
-          "outil",
-          `view_step_${title}`,
-          steps[nextStepIndex].name,
-        ]);
-        window?.scrollTo(0, 0);
+
+      switch (validationResponse) {
+        case ValidationResponse.NotEligible:
+          nextStep(visibleSteps.length - 1);
+          break;
+        case ValidationResponse.Valid:
+          nextStep();
+          matopush([
+            "trackEvent",
+            "outil",
+            `view_step_${title}`,
+            steps[nextStepIndex].name,
+          ]);
+          window?.scrollTo(0, 0);
+          break;
       }
     }
   };
 
   const onPrevStep = () => {
     const previousStepIndex = currentStepIndex - 1;
+    const prevStepName = visibleSteps[previousStepIndex].name;
+    const stepChange = onStepChange.find(
+      (validator) => validator.stepName === prevStepName
+    );
+    if (stepChange?.onPrevStep) {
+      stepChange.onPrevStep();
+    }
+
     if (previousStepIndex >= 0) {
       previousStep();
       matopush([
         "trackEvent",
         "outil",
         `click_previous_${title}`,
-        steps[previousStepIndex].name,
+        visibleSteps[previousStepIndex].name,
       ]);
       window?.scrollTo(0, 0);
     } else {
@@ -110,32 +135,33 @@ const SimulatorContent = ({
     }
   };
 
+  const validator = onStepChange.find(
+    (validator) => validator.stepName === visibleSteps[currentStepIndex].name
+  );
   return (
-    <Wrapper variant="main">
+    <StyledWrapper variant="main">
       <StyledForm>
-        <Title
-          title={displayTitle}
-          duration={currentStepIndex === 0 ? duration : undefined}
-          icon={icon}
-          hasNoMarginBottom={steps[currentStepIndex].options?.hasNoMarginBottom}
-        />
-        <StepList
+        <StyledStepList
           activeIndex={currentStepIndex}
           steps={stepItems}
           width={STEP_LIST_WIDTH}
         />
-        <Step />
-        <SimulatorNavigation
-          hasError={
-            validators.find(
-              (validator) => validator.stepName === steps[currentStepIndex].name
-            )?.isStepValid === false
-              ? true
-              : false
+        <StyledTitle
+          title={displayTitle}
+          duration={currentStepIndex === 0 ? duration : undefined}
+          icon={icon}
+          hasNoMarginBottom={
+            visibleSteps[currentStepIndex].options?.hasNoMarginBottom
           }
-          showNext={currentStepIndex < steps.length - 1}
+        />
+        <StepWrapper>
+          <Step />
+        </StepWrapper>
+        <SimulatorNavigationWrapper
+          hasError={validator?.isStepValid === false}
+          showNext={currentStepIndex < visibleSteps.length - 1}
           onPrint={
-            currentStepIndex === steps.length - 1
+            currentStepIndex === visibleSteps.length - 1
               ? () => printResult(title)
               : undefined
           }
@@ -143,18 +169,20 @@ const SimulatorContent = ({
           onNext={onNextStep}
           onStart={onNextStep}
         />
-        {steps[currentStepIndex].options?.annotation && (
-          <p>{steps[currentStepIndex].options?.annotation}</p>
+        {visibleSteps[currentStepIndex].options?.annotation && (
+          <p>{visibleSteps[currentStepIndex].options?.annotation}</p>
         )}
-        {process.env.NODE_ENV !== "production" &&
-          process.env.NODE_ENV !== "test" &&
-          debug}
       </StyledForm>
-    </Wrapper>
+      {process.env.NODE_ENV !== "production" &&
+        process.env.NODE_ENV !== "test" &&
+        debug}
+    </StyledWrapper>
   );
 };
 
-const SimulatorLayout = (props: Props): JSX.Element => {
+const SimulatorLayout = <StepName extends string>(
+  props: Props<StepName>
+): JSX.Element => {
   return (
     <SimulatorStepProvider createStore={() => createSimulatorStore()}>
       <SimulatorContent {...props} />
@@ -166,8 +194,12 @@ const STEP_LIST_WIDTH = "28rem";
 
 const { breakpoints } = theme;
 
+const StyledWrapper = styled(Wrapper)`
+  padding: 0 !important;
+`;
+
 const StyledForm = styled.form`
-  padding: 0 0 0 ${STEP_LIST_WIDTH};
+  padding: 0 0 0 0;
   overflow: visible;
   @media (max-width: ${breakpoints.tablet}) {
     padding: 0;
@@ -175,6 +207,45 @@ const StyledForm = styled.form`
   @media print {
     border: 0;
   }
+  display: grid;
+  grid-template-columns: fit-content(100%) 1fr;
+  grid-template-rows: 130px;
+  grid-template-areas:
+    "a b"
+    "a c"
+    "a d";
+  column-gap: 42px;
+  padding-right: 42px;
+  @media (max-width: ${breakpoints.tablet}) {
+    grid-template-areas:
+      "b b"
+      "a a"
+      "c c"
+      "d d";
+    padding: 12px;
+  }
+`;
+
+const StyledStepList = styled(StepList)`
+  position: relative !important;
+  grid-area: a;
+  @media (max-width: ${breakpoints.tablet}) {
+    border-radius: 0.6rem;
+  }
+`;
+
+const StyledTitle = styled(Title)`
+  grid-area: b;
+  margin-top: 40px;
+`;
+
+const StepWrapper = styled.div`
+  grid-area: c;
+  grid-template-columns: 17.5% 31.25% auto;
+`;
+
+const SimulatorNavigationWrapper = styled(SimulatorNavigation)`
+  grid-area: d;
 `;
 
 export default SimulatorLayout;

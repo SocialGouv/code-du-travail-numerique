@@ -16,5 +16,6 @@
   },
   "env": {
     "cypress/globals": true
-  }
+  },
+  "ignorePatterns": ["*.js"]
 }

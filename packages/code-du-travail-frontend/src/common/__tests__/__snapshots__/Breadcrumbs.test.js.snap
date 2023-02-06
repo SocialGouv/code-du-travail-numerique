@@ -1,192 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
-.c3 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c1 {
-  position: relative;
-  overflow: hidden;
-}
-
-.c1:before,
-.c1:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: block;
-  width: 4rem;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
-  content: "";
-  pointer-events: none;
-  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
-}
-
-.c1:before {
-  left: -2rem;
-}
-
-.c1:after {
-  right: -2rem;
-}
-
-.c2 {
-  overflow-x: auto;
-}
-
-.c0 {
-  margin-bottom: 1rem;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 1rem 0 0;
-  white-space: nowrap;
-}
-
-.c5:first-of-type {
-  padding-left: 0;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c6:focus,
-.c6:hover,
-.c6:active {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c7 {
-  width: 2rem;
-  height: 2rem;
-  margin-right: 1rem;
-  color: #7994d4;
-}
-
-.c8 {
-  width: 1.2rem;
-  height: 1.2rem;
-  margin-right: 1rem;
-  color: #7994d4;
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c3 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    overflow-x: hidden;
-  }
-}
-
-@media (max-width:600px) {
-  .c1:before,
-  .c1:after {
-    display: block;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    overflow-x: auto;
-  }
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    font-size: 1.2rem;
-  }
-
-  .c5:not(:last-of-type) {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-}
-
 <div>
   <nav
     aria-label="Fil d'ariane"
-    class="c0"
+    class="sc-kTCsyW ksSTcQ"
   >
     <div
-      class="c1"
+      class="sc-eJocfa lolEuP"
     >
       <div
-        class="c2"
+        class="sc-oeezt lplLxT"
       >
         <ol
-          class="c3 c4"
+          class="sc-bdnxRM sc-dvUynV bCGhmq hvOsyY"
         >
           <li
-            class="c5"
+            class="sc-jtiXyc gARJUj"
           >
             <a
-              class="c6"
+              class="sc-ellfGf jVUOuC"
               href="/"
               title="Retour à l'accueil"
             >
               <svg
                 aria-hidden="true"
-                class="c7"
+                class="sc-kizEQm hYghvj"
                 fill="none"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -200,11 +39,11 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
             </a>
           </li>
           <li
-            class="c5"
+            class="sc-jtiXyc gARJUj"
           >
             <svg
               aria-hidden="true"
-              class="c8"
+              class="sc-cKRKFl jzuRG"
               fill="none"
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
@@ -216,18 +55,18 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
             </svg>
              
             <a
-              class="c6"
+              class="sc-ellfGf jVUOuC"
               href="/themes/item-1"
             >
               item 1
             </a>
           </li>
           <li
-            class="c5"
+            class="sc-jtiXyc gARJUj"
           >
             <svg
               aria-hidden="true"
-              class="c8"
+              class="sc-cKRKFl jzuRG"
               fill="none"
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
@@ -239,7 +78,7 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
             </svg>
              
             <a
-              class="c6"
+              class="sc-ellfGf jVUOuC"
               href="/themes/item-2"
             >
               item 2

@@ -7,6 +7,7 @@ export type TitleProps = {
   hasNoMarginBottom?: boolean;
   icon?: string;
   title: string;
+  className?: string;
 };
 
 const Duration = ({ duration }: { duration: string }): JSX.Element => {
@@ -23,10 +24,11 @@ const Index = ({
   icon,
   duration,
   hasNoMarginBottom,
+  className,
 }: TitleProps): JSX.Element => {
   const Icon = icons[icon];
   return (
-    <ToolTitle hasNoMarginBottom={hasNoMarginBottom}>
+    <ToolTitle hasNoMarginBottom={hasNoMarginBottom} className={className}>
       <StyledTitleBox>
         {Icon && (
           <IconWrapper>
@@ -49,7 +51,7 @@ const ToolTitle = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: ${(props) =>
-    props.hasNoMarginBottom ? "0px" : spacings.large};
+    props.hasNoMarginBottom ? "0px" : spacings.medium};
   padding-bottom: ${spacings.base};
   border-bottom: 1px solid ${({ theme }) => theme.border};
   @media (max-width: ${breakpoints.tablet}) {

@@ -1,0 +1,9 @@
+# Convention collective nationale du personnel des entreprises de restauration de collectivités du 20 juin 1983. Etendue par arrêté du 2 février 1984 JONC 17 février 1984
+contrat salarié . convention collective . restauration collectivités:
+  description: Convention collective nationale du personnel des entreprises de restauration de collectivités du 20 juin 1983. Etendue par arrêté du 2 février 1984 JONC 17 février 1984
+  applicable si: convention collective = 'IDCC1266'
+  valeur: oui
+  cdtn:
+    idcc: 1266
+    préavis-retraite: true
+    indemnité-licenciement: false

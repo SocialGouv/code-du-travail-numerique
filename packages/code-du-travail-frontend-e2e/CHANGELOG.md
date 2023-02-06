@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.90.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.90.0...v4.90.1) (2023-02-06)
+
+**Note:** Version bump only for package @cdt/e2e
+
+# [4.90.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.89.0...v4.90.0) (2023-02-01)
+
+### Bug Fixes
+
+- **indemnite-licenciement:** message pour une CC non traité ([#4922](https://github.com/SocialGouv/code-du-travail-numerique/issues/4922)) ([3c28ec9](https://github.com/SocialGouv/code-du-travail-numerique/commit/3c28ec9c57b9d4f58e98faa4cdf1390cfd48d800))
+
+### Features
+
+- **header:** add new header menu ([#4895](https://github.com/SocialGouv/code-du-travail-numerique/issues/4895)) ([e752709](https://github.com/SocialGouv/code-du-travail-numerique/commit/e75270908acf648e2262b1f404f45541b0db2534))
+- **licenciement:** support CC pour le simulateur ([#4469](https://github.com/SocialGouv/code-du-travail-numerique/issues/4469)) ([bb42c53](https://github.com/SocialGouv/code-du-travail-numerique/commit/bb42c53403000d679227905b7dd1664aa0e38bb6))
+
+# [4.89.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.88.1...v4.89.0) (2023-01-18)
+
+### Bug Fixes
+
+- **404:** make all landing pages return status code 404 if page does not exist ([#4872](https://github.com/SocialGouv/code-du-travail-numerique/issues/4872)) ([187748b](https://github.com/SocialGouv/code-du-travail-numerique/commit/187748b12944c11463a1e2c4edd38e4e8d1de50f))
+- **seo issues:** search header link should be nofollow so it is not crawled by search engine & tools should return 404 if does not exist ([#4846](https://github.com/SocialGouv/code-du-travail-numerique/issues/4846)) ([454c5fe](https://github.com/SocialGouv/code-du-travail-numerique/commit/454c5fe6b048cae6b04d87461423b8dd6f35126a))
+
 ## [4.88.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.88.0...v4.88.1) (2022-12-23)
 
 **Note:** Version bump only for package @cdt/e2e

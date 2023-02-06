@@ -27,7 +27,7 @@ test(`
       icon=""
       title=""
       displayTitle=""
-      publicodesRules={loadPublicodesRules("preavis-retraite")}
+      slug={"preavis-retraite"}
     />
   );
 

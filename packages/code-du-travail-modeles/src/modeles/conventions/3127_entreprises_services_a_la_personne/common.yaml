@@ -1,0 +1,8 @@
+contrat salarié . convention collective . entreprises de services à la personne:
+  description: Convention collective nationale des entreprises de services à la personne du 20 septembre 2012.
+  applicable si: convention collective = 'IDCC3127'
+  valeur: oui
+  cdtn:
+    idcc: 3127
+    préavis-retraite: true
+    indemnité-licenciement: true

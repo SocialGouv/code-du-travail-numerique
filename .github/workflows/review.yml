@@ -68,7 +68,7 @@ jobs:
   deploy:
     name: Deploy application
     runs-on: ubuntu-latest
-    needs: [register, manifests]
+    needs: [ register, manifests ]
     steps:
       - name: Use autodevops deployment
         uses: SocialGouv/actions/autodevops-deploy@v1
@@ -81,7 +81,7 @@ jobs:
   e2e:
     name: End-to-end testing
     runs-on: ubuntu-latest
-    needs: [deploy]
+    needs: [ deploy ]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -110,3 +110,11 @@ jobs:
       - name: Run test e2e
         run: |
           CODECEPT_BASEURL=https://${{ steps.url.outputs.result }} yarn test:e2e
+      - name: Archive generated screenshots
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: e2e-screenshots
+          path: |
+            packages/code-du-travail-frontend-e2e/cypress/screenshots
+            packages/code-du-travail-frontend-e2e/codecept/output

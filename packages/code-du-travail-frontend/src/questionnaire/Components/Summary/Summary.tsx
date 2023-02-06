@@ -54,8 +54,7 @@ export const Summary = ({
   );
 };
 
-const SummaryWrapper = styled.ul`
-  margin: 0;
+const SummaryWrapper = styled.div`
   padding: 12px 0;
 `;
 

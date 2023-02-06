@@ -121,7 +121,7 @@ const renderSuggestion = (suggestion, query) => {
   const title = suggestion.replace(query, `<strong>${query}</strong>`);
   return (
     <SuggestionContainer>
-      <Html inline>{title}</Html>
+      <Html as="span">{title}</Html>
     </SuggestionContainer>
   );
 };

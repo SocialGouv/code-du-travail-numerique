@@ -1,34 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-import { IndemniteLegale } from "./components";
 import { useIndemniteLicenciementStore } from "../../store";
+import Eligible from "./Eligible";
+import Ineligible from "./Ineligible";
 
 const StepResult = () => {
-  const { publicodesResult, getPublicodesResult, infoCalcul } =
-    useIndemniteLicenciementStore((state) => ({
-      infoCalcul: state.resultData.input.infoCalcul,
-      publicodesResult: state.resultData.input.publicodesResult,
-      getPublicodesResult: state.resultFunction.getPublicodesResult,
-    }));
+  const { isEligible, init } = useIndemniteLicenciementStore((state) => ({
+    isEligible: state.resultData.input.isEligible,
+    init: state.resultFunction.init,
+  }));
 
-  React.useEffect(() => {
-    getPublicodesResult();
+  useEffect(() => {
+    init();
   }, []);
 
-  return (
-    <IndemniteLegale
-      result={
-        publicodesResult?.value
-          ? (Number(publicodesResult.value) + 0.004).toLocaleString("fr-FR", {
-              minimumFractionDigits: 2,
-              maximumFractionDigits: 2,
-            })
-          : "0"
-      }
-      unit={publicodesResult?.unit?.denominators[0] ?? "€"}
-      infoCalcul={infoCalcul}
-    />
-  );
+  return <>{isEligible ? <Eligible /> : <Ineligible />}</>;
 };
 
 export default StepResult;

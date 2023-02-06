@@ -11,10 +11,11 @@ import styled from "styled-components";
 type Props = {
   title: string;
   children: React.ReactNode;
+  dataTestId?: string;
 };
 
-const Disclaimer = ({ title, children }: Props): JSX.Element => (
-  <Warning>
+const Disclaimer = ({ title, children, dataTestId }: Props): JSX.Element => (
+  <Warning data-testid={dataTestId}>
     <IconStripe centered icon={icons.Warning}>
       <WarningTitle>{title}</WarningTitle>
     </IconStripe>

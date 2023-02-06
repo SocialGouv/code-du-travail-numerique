@@ -2,7 +2,7 @@ import {
   MatomoBaseEvent,
   MatomoSearchAgreementCategory,
 } from "../../../../lib";
-import { matopush } from "../../../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { UserAction } from "../../../ConventionCollective/types";
 
 const handleTrackEvent = (

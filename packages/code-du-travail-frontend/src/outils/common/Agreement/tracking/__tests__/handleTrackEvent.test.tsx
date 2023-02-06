@@ -2,12 +2,12 @@ import {
   MatomoBaseEvent,
   MatomoSearchAgreementCategory,
 } from "../../../../../lib";
-import { matopush } from "../../../../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { UserAction } from "../../../../ConventionCollective/types";
 import { handleTrackEvent } from "../index";
 
-jest.mock("../../../../../piwik", () => ({
-  matopush: jest.fn(),
+jest.mock("@socialgouv/matomo-next", () => ({
+  push: jest.fn(),
 }));
 
 describe("Handle event on user action", () => {

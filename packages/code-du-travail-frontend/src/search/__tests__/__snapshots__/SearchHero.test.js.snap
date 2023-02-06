@@ -1,428 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SearchHero /> should render 1`] = `
-.c2 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c0 {
-  padding: 3.2rem 0;
-  background-color: transparent;
-  color: #3e486e;
-}
-
-.c16 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: content-box;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.125em;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,-webkit-transform 100ms linear;
-  -webkit-transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  transition: background-color 250ms linear, border-color 250ms linear,transform 100ms linear;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5.2rem;
-  padding: 0 4.4rem;
-  color: #fff;
-  background: #f66663;
-  border-color: #f66663;
-  box-shadow: 0px 10px 20px rgba(246,102,99,0.26),0px 5px 7px rgba(246,102,99,0.35);
-  opacity: 1;
-  will-change: transform;
-}
-
-.c16:link,
-.c16:visited {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-}
-
-.c16:not([disabled]):hover {
-  opacity: 1;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
-  background: #f99593;
-  border-color: #f99593;
-}
-
-.c16[disabled] {
-  background-color: #e4e8ef;
-  border-color: #e4e8ef;
-  color: #9298af;
-  box-shadow: none;
-  cursor: not-allowed;
-}
-
-.c11 {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  -webkit-clip: rect(0,0,0,0) !important;
-  clip: rect(0,0,0,0) !important;
-}
-
-.c15 ul {
-  z-index: 1;
-}
-
-.c15 li[role="option"]:nth-child(2n + 1) {
-  background: #f2f5fa;
-}
-
-.c10 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c12 {
-  width: 3rem;
-  height: 3rem;
-}
-
-.c13 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 2rem 0 0 2rem;
-  color: #9298af;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 7rem;
-  margin: 0;
-  padding: 2rem 18.5rem 2rem 6rem;
-  color: #3e486e;
-  font-weight: normal;
-  font-size: 1.6rem;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  line-height: inherit;
-  background: #fff;
-  border: 1px solid transparent;
-  border-radius: 0.6rem;
-  box-shadow: 0 1rem 2rem rgba(121,148,212,0.4);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c14::-webkit-input-placeholder {
-  color: #9298af;
-}
-
-.c14::-moz-placeholder {
-  color: #9298af;
-}
-
-.c14:-ms-input-placeholder {
-  color: #9298af;
-}
-
-.c14::placeholder {
-  color: #9298af;
-}
-
-.c17 {
-  position: absolute;
-  top: 0.8rem;
-  right: 0.8rem;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding-bottom: 10rem;
-}
-
-.c3 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 100%;
-  padding-left: 12rem;
-}
-
-.c4 {
-  margin-top: 0;
-  color: #3e486e;
-  line-height: 1.625;
-}
-
-.c5 {
-  font-size: 2.8rem;
-}
-
-.c7 {
-  margin-top: 0.8rem;
-  margin-bottom: 3.2rem;
-  font-size: 1.6rem;
-  font-weight: 400;
-  font-family: "Open Sans",sans-serif;
-  line-height: 1.625;
-}
-
-.c6 {
-  display: inline-block;
-  margin-top: 1rem;
-  font-weight: bold;
-  font-size: 4.6rem;
-}
-
-.c18 {
-  position: absolute;
-  top: -8rem;
-  right: -1rem;
-  z-index: -1;
-  width: 47rem;
-  height: 39.2rem;
-  overflow: visible;
-}
-
-.c19 {
-  display: block;
-  overflow: visible;
-}
-
-.c8 {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 0.8rem;
-  color: #3e486e;
-  font-weight: bold;
-  font-size: 1.6rem;
-}
-
-.c9 {
-  max-width: 77rem;
-  margin: 0;
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c2 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 2.4rem 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    font-size: 1.4rem;
-  }
-}
-
-@media print {
-  .c16 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c16 {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    height: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c14 {
-    height: 5.4rem;
-    padding: 1rem 1.6rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    position: static;
-    margin-top: 1rem;
-    margin-left: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    padding-bottom: 7rem;
-  }
-}
-
-@media print {
-  .c1 {
-    display: none;
-  }
-}
-
-@media (max-width:980px) {
-  .c3 {
-    padding-left: 2rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c3 {
-    padding-left: 1rem;
-  }
-}
-
-@media (max-width:1180px) {
-  .c4 {
-    max-width: 50rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    max-width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c5 {
-    width: 100%;
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    font-size: 3.2rem;
-  }
-}
-
-@media (max-width:1180px) {
-  .c18 {
-    top: -5rem;
-    right: 3rem;
-    width: 40rem;
-    height: 33.4rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c18 {
-    display: none;
-  }
-}
-
-@media (max-width:980px) {
-  .c9 {
-    width: 100%;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="sc-gtsrHT dDJuxj sc-kmIPcE kxSidW"
   >
     <div
-      class="c2 c3"
+      class="sc-bdnxRM sc-cwiweh bCGhmq kMOoMU"
     >
       <header
-        class="c4"
+        class="sc-dkuGKe fRJMKm"
       >
         <h1
-          class="c5"
+          class="sc-gJpXkD zuCFV"
         >
           Bienvenue sur 
           <br />
           <span
-            class="c6"
+            class="sc-iXeHaJ jIqbuR"
           >
             le Code du travail numérique
           </span>
         </h1>
         <h2
-          class="c7"
+          class="sc-fyjqAk drKmcr"
         >
           Obtenez les réponses à vos questions sur le droit du travail.
         </h2>
       </header>
       <label
-        class="c8"
+        class="sc-tsGVs ghIEDf"
         for="searchbar"
         id="search"
       >
         Recherchez par mots-clés
       </label>
       <div
-        class="c9"
+        class="sc-dSnXvR jwWJFC"
       >
         <form
           action="/recherche"
-          class="c10"
+          class="sc-ellfGf bAscX"
           role="search"
         >
           <div
-            class="c11"
+            class="sc-gXfVKN gNNUJi"
           >
             <label
               for="searchbar"
@@ -432,7 +54,7 @@ exports[`<SearchHero /> should render 1`] = `
           </div>
           <svg
             aria-hidden="true"
-            class="c12 c13"
+            class="sc-kizEQm sc-cKRKFl jMSoYK jdota"
             fill="none"
             viewBox="0 0 32 32"
             xmlns="http://www.w3.org/2000/svg"
@@ -454,7 +76,7 @@ exports[`<SearchHero /> should render 1`] = `
               aria-controls="react-autowhatever-1"
               aria-label="recherchez par mots-clés"
               autocomplete="off"
-              class="c14"
+              class="sc-iIgjPs kYfEXT"
               id="searchbar"
               name="q"
               placeholder="congés payés, durée de préavis"
@@ -463,14 +85,14 @@ exports[`<SearchHero /> should render 1`] = `
               value=""
             />
             <div
-              class="c15"
+              class="sc-jtiXyc epYyJZ"
               id="react-autowhatever-1"
               role="listbox"
             />
           </div>
           <button
             aria-label="Lancer ma recherche"
-            class="c16 c17"
+            class="sc-hiKfDv dOLmw sc-gstuGz eNAoDg"
             title="Lancer ma recherche"
             type="submit"
           >
@@ -479,11 +101,11 @@ exports[`<SearchHero /> should render 1`] = `
         </form>
       </div>
       <div
-        class="c18"
+        class="sc-jLqRGG fLRqm"
       >
         <svg
           aria-hidden="true"
-          class="c19"
+          class="sc-bUQyIj ghbzeQ"
           fill="none"
           viewBox="0 0 616 514"
           xmlns="http://www.w3.org/2000/svg"

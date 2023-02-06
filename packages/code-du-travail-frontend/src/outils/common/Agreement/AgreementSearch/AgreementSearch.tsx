@@ -70,7 +70,7 @@ const AgreementSearch = ({
       />
       <ErrorField
         name={AGREEMENT_NAME}
-        errorText={"Vous devez séléctionner une convention collective"}
+        errorText={"Vous devez sélectionner une convention collective"}
       />
       <Field
         type="input"

@@ -4,6 +4,7 @@ import { Agreement } from "../../../conventions/Search/api/type";
 export type AgreementSupportInfo = {
   fullySupported: boolean;
   idcc: number;
+  withoutLegal: boolean;
 };
 
 export type OnSelectAgreementFn = (

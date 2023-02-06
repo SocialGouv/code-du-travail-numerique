@@ -1,0 +1,9 @@
+# Convention collective nationale du commerce de détail de l'habillement et des articles textiles du 25 novembre 1987, révisée par avenant du 17 juin 2004
+contrat salarié . convention collective . habillement textiles commerce de detail:
+  description: Convention collective nationale du commerce de détail de l'habillement et des articles textiles du 25 novembre 1987, révisée par avenant du 17 juin 2004.
+  applicable si: convention collective = 'IDCC1483'
+  valeur: oui
+  cdtn:
+    idcc: 1483
+    préavis-retraite: true
+    indemnité-licenciement: false

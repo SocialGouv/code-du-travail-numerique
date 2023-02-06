@@ -20,13 +20,31 @@ describe("Not found", () => {
       .and("equal", Cypress.config().baseUrl + "/");
   });
 
-  it("page outils should returns 404 if does not exist", () => {
-    cy.request({
-      failOnStatusCode: false,
-      method: "GET",
-      url: "/outils/banane",
-    }).then((response) => {
-      expect(response.status).to.equal(404);
+  describe("page should return 404 if does not exists", () => {
+    [
+      "/outils",
+      "/fiche-ministere-travail",
+      "/fiche-service-public",
+      "/code-du-travail",
+      "/contribution",
+      "/convention-collective",
+      "/dossiers",
+      "/glossaire",
+      "/information",
+      "/modeles-de-courriers",
+      "/themes",
+      "/widgets",
+      "",
+    ].forEach((fragment) => {
+      it("page: " + fragment + "/banane", () => {
+        cy.request({
+          failOnStatusCode: false,
+          method: "GET",
+          url: fragment + "/banane",
+        }).then((response) => {
+          expect(response.status).to.equal(404);
+        });
+      });
     });
   });
 });

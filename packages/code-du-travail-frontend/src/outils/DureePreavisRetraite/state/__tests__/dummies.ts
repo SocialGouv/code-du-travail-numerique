@@ -52,6 +52,7 @@ class PublicodesStub implements Publicodes<PublicodesPreavisRetraiteResult> {
     args: Record<string, any>
   ) => PublicodesData<PublicodesPreavisRetraiteResult> = () => this.data;
   getNotifications: () => [];
+  getNotificationsBloquantes: () => [];
   getReferences: () => [];
 }
 

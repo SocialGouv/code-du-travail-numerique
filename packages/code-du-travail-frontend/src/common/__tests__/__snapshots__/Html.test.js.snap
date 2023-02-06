@@ -3,7 +3,7 @@
 exports[`<Html /> should render 1`] = `
 <div>
   <div
-    class=""
+    class="sc-kTCsyW"
   >
     <strong>
       Hello

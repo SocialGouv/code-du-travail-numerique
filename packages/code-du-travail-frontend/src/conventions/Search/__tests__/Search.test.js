@@ -66,7 +66,7 @@ describe("<Search />", () => {
                 id: "KALICONT000000000001",
                 num: 275,
                 shortTitle: "small titre",
-                slug: "slug-convention-1",
+                slug: "275-small-titre",
                 title: "titre convention 1",
               },
             },
@@ -75,7 +75,7 @@ describe("<Search />", () => {
                 id: "KALICONT000000000002",
                 num: 276,
                 shortTitle: "smaller convention 2",
-                slug: "slug-convention-2",
+                slug: "276-smaller-convention-2",
                 title: "titre convention 2",
               },
             },
@@ -108,7 +108,7 @@ describe("<Search />", () => {
                 id: "KALICONT000000000001",
                 num: 275,
                 shortTitle: "small titre",
-                slug: "slug-convention-1",
+                slug: "275-small-titre",
                 title: "titre convention 1",
               },
             },
@@ -117,7 +117,7 @@ describe("<Search />", () => {
                 id: "KALICONT000000000002",
                 num: 4567,
                 shortTitle: "smaller convention 2",
-                slug: "slug-convention-2",
+                slug: "4567-smaller-convention-2",
                 title: "titre convention 2",
               },
             },
@@ -215,9 +215,9 @@ describe("<Search />", () => {
     });
   });
 
-  it("when searching by text, should use ES, api SIREN and siret2idcc", async () => {
+  it("when searching by text, should use enterprise API", async () => {
     mockFetch({
-      "api-entreprises.url": {
+      "api.url": {
         etablissement: [
           {
             code_postal: 93100,
@@ -228,38 +228,6 @@ describe("<Search />", () => {
           },
         ],
       },
-      "api.url/idcc": {
-        hits: {
-          hits: [
-            {
-              _source: {
-                id: "KALICONT000000000001",
-                num: 275,
-                shortTitle: "titre convention 1",
-                slug: "slug-convention-1",
-                title: "titre convention 1",
-              },
-            },
-          ],
-        },
-      },
-      "siret2idcc.url": [
-        {
-          conventions: [
-            {
-              active: true,
-              date_publi: "1976-04-01T00:00:00.000Z",
-              etat: "VIGUEUR_ETEN",
-              id: "KALICONT000005635886",
-              nature: "IDCC",
-              num: 843,
-              shortTitle: "Short Convention 1",
-              title: "Convention 1",
-            },
-          ],
-          siret: "44144914700020",
-        },
-      ],
     });
 
     const onSelectConvention = jest.fn();
@@ -271,150 +239,6 @@ describe("<Search />", () => {
         "Nom de la convention collective, de l’entreprise ou son SIRET"
       ),
       { target: { value: "hello" } }
-    );
-    jest.runOnlyPendingTimers(); // run debounce timer
-    await waitFor(() => expect(fetch).toHaveBeenCalledTimes(3));
-    expect(container).toMatchSnapshot();
-  });
-
-  it("should not use siret2idcc when no entreprise result", async () => {
-    mockFetch({
-      "api.url/idcc": {
-        hits: {
-          hits: [
-            {
-              _source: {
-                id: "KALICONT000000000001",
-                num: 275,
-                shortTitle: "small title 1",
-                slug: "slug-convention-1",
-                title: "titre convention 1",
-              },
-            },
-          ],
-        },
-      },
-      "entreprise.data.gouv.fr": {
-        message: "no results found",
-      },
-    });
-
-    const onSelectConvention = jest.fn();
-    const { container, getByPlaceholderText } = renderSearchForm({
-      onSelectConvention,
-    });
-    fireEvent.change(
-      getByPlaceholderText(
-        "Nom de la convention collective, de l’entreprise ou son SIRET"
-      ),
-      { target: { value: "xxxx" } }
-    );
-    jest.runOnlyPendingTimers(); // run debounce timer
-    await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));
-    expect(container).toMatchSnapshot();
-  });
-
-  it("when searching SIRET, should use API SIREN and siret2idcc", async () => {
-    mockFetch({
-      "api-entreprises": {
-        etablissement: {
-          code_postal: 93100,
-          id: 199308119,
-          libelle_commune: "Commune test",
-          nom_raison_sociale: "Entreprise 1",
-          siret: "01234567891011",
-        },
-      },
-      "siret2idcc.url": [
-        {
-          conventions: [
-            {
-              active: true,
-              date_publi: "1976-04-01T00:00:00.000Z",
-              etat: "VIGUEUR_ETEN",
-              id: "KALICONT000005635886",
-              nature: "IDCC",
-              num: "843",
-              title: "Convention 1",
-            },
-          ],
-          siret: "01234567891011",
-        },
-      ],
-    });
-
-    const onSelectConvention = jest.fn();
-    const { container, getByPlaceholderText } = renderSearchForm({
-      onSelectConvention,
-    });
-    fireEvent.change(
-      getByPlaceholderText(
-        "Nom de la convention collective, de l’entreprise ou son SIRET"
-      ),
-      {
-        target: { value: "01234567891011" },
-      }
-    );
-    jest.runOnlyPendingTimers(); // run debounce timer
-    await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));
-    expect(container).toMatchSnapshot();
-  });
-
-  it("when searching SIREN, should use API SIREN and siret2idcc", async () => {
-    mockFetch({
-      "api-entreprises": {
-        unite_legale: {
-          denomination: "Entreprise 2",
-          etablissements: [
-            {
-              code_postal: 93100,
-              id: 199308120,
-              libelle_commune: "Commune test 1",
-              siret: "01234567891011",
-            },
-            {
-              code_postal: 93120,
-              etat_administratif: "F",
-              id: 199308121,
-              libelle_commune: "Commune test 2",
-              siret: "01234567891012",
-            },
-          ],
-        },
-      },
-      "siret2idcc.url": [
-        {
-          conventions: [
-            {
-              active: true,
-              date_publi: "1976-04-01T00:00:00.000Z",
-              etat: "VIGUEUR_ETEN",
-              id: "KALICONT000005635886",
-              nature: "IDCC",
-              num: "843",
-              title: "Convention 1",
-            },
-          ],
-          siret: "01234567891011",
-        },
-        {
-          conventions: [],
-          siret: "01234567891012",
-        },
-      ],
-    });
-
-    const onSelectConvention = jest.fn();
-    const { container, getByPlaceholderText } = renderSearchForm({
-      onSelectConvention,
-    });
-    fireEvent.change(
-      getByPlaceholderText(
-        "Nom de la convention collective, de l’entreprise ou son SIRET"
-      ),
-      {
-        target: { value: "012345678" },
-      }
     );
     jest.runOnlyPendingTimers(); // run debounce timer
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));

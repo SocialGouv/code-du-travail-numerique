@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`rehypeToReact should replace MDX tags to React components 1`] = `
-Object {
+{
   "content": [Function],
   "hdn": [Function],
   "tab": [Function],

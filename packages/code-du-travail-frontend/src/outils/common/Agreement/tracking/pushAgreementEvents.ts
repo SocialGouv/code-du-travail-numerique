@@ -3,7 +3,7 @@ import {
   MatomoBaseEvent,
   MatomoSearchAgreementCategory,
 } from "../../../../lib";
-import { matopush } from "../../../../piwik";
+import { push as matopush } from "@socialgouv/matomo-next";
 import { ConventionCollective } from "../../type/WizardType";
 import { AgreementSupportInfo } from "../types";
 

@@ -1,8 +1,13 @@
 import type { EvaluatedNode } from "publicodes";
 import Engine from "publicodes";
 
-import type { Notification, References } from "../utils";
-import { getNotifications, getReferences } from "../utils";
+import type { Formula, Notification, References } from "../modeles/common";
+import {
+  getFormule,
+  getNotifications,
+  getNotificationsBloquantes,
+  getReferences,
+} from "../modeles/common";
 import type { Publicodes } from "./Publicodes";
 import type { MissingArgs, PublicodesData, SituationElement } from "./types";
 
@@ -17,7 +22,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     situation: [],
   };
 
-  protected constructor(rules: string, targetRule: string) {
+  protected constructor(rules: any, targetRule: string) {
     this.engine = new Engine(rules);
     this.targetRule = targetRule;
   }
@@ -27,10 +32,14 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     return this.convertedResult(result);
   }
 
-  setSituation(args: Record<string, string>): PublicodesData<TResult> {
+  setSituation(
+    args: Record<string, string | undefined>,
+    targetRule?: string
+  ): PublicodesData<TResult> {
     const { missingArgs, result, situation } = this.updateSituation(
       this.data.situation,
-      args
+      args,
+      targetRule ?? this.targetRule
     );
     this.data = {
       missingArgs,
@@ -44,12 +53,22 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     return getNotifications(this.engine);
   }
 
-  getReferences(): References[] {
-    return getReferences(this.engine);
+  getNotificationsBloquantes(): Notification[] {
+    return getNotificationsBloquantes(this.engine);
   }
 
-  private buildSituation(map: SituationElement[]): Record<string, string> {
-    const situation: Record<string, string> = {};
+  getReferences(specificRule?: string): References[] {
+    return getReferences(this.engine, specificRule);
+  }
+
+  getFormule(): Formula {
+    return getFormule(this.engine);
+  }
+
+  private buildSituation(
+    map: SituationElement[]
+  ): Record<string, string | undefined> {
+    const situation: Record<string, string | undefined> = {};
     map.forEach((arg) => {
       situation[arg.rawNode.nom] = arg.value;
     });
@@ -82,7 +101,8 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
 
   private updateSituation(
     situation: SituationElement[],
-    args: Record<string, string>
+    args: Record<string, string | undefined>,
+    targetRule: string
   ): {
     missingArgs: MissingArgs[];
     result: EvaluatedNode;
@@ -118,7 +138,7 @@ export abstract class PublicodesBase<TResult> implements Publicodes<TResult> {
     });
 
     this.engine.setSituation(this.buildSituation(newSituation));
-    const result = this.engine.evaluate(this.targetRule);
+    const result = this.engine.evaluate(targetRule);
 
     return {
       missingArgs: this.buildMissingArgs(this.engine, result.missingVariables),

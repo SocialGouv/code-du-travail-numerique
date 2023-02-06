@@ -5,13 +5,12 @@ import InformationPage from "../pages/information/[slug]";
 import { EditorialContentDataWrapper, SectionDisplayMode } from "cdtn-types";
 
 const mockedProps: EditorialContentDataWrapper = {
-  anchor: [],
   information: {
     _source: {
       breadcrumbs: [],
       contents: [],
+      slug: "",
     },
-    slug: "",
   },
 };
 

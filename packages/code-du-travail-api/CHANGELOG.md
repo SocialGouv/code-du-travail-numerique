@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.90.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.90.0...v4.90.1) (2023-02-06)
+
+**Note:** Version bump only for package @cdt/api
+
+# [4.90.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.89.0...v4.90.0) (2023-02-01)
+
+### Bug Fixes
+
+- seach enteprise with employer only ([#4908](https://github.com/SocialGouv/code-du-travail-numerique/issues/4908)) ([a3504ea](https://github.com/SocialGouv/code-du-travail-numerique/commit/a3504eac42fb66ae9a0c1a9a8017bca7fb86a066))
+
+### Features
+
+- **header:** add new header menu ([#4895](https://github.com/SocialGouv/code-du-travail-numerique/issues/4895)) ([e752709](https://github.com/SocialGouv/code-du-travail-numerique/commit/e75270908acf648e2262b1f404f45541b0db2534))
+
+# [4.89.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.88.1...v4.89.0) (2023-01-18)
+
+### Bug Fixes
+
+- **deps:** update dependency @koa/cors to v4 ([#4725](https://github.com/SocialGouv/code-du-travail-numerique/issues/4725)) ([b408b86](https://github.com/SocialGouv/code-du-travail-numerique/commit/b408b8684de7b79e720cc3cd2bef7eb4324f7e8b))
+
 ## [4.88.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.88.0...v4.88.1) (2022-12-23)
 
 **Note:** Version bump only for package @cdt/api

@@ -62,16 +62,16 @@ describe("function injectContentInfos", () => {
             ...mockedContentItem,
             cdtnId: "id1",
             icon: "icon1",
+            slug: "",
           },
-          slug: "",
         },
         {
           _source: {
             ...mockedContentItem,
             cdtnId: "id2",
             icon: "icon2",
+            slug: "",
           },
-          slug: "",
         },
       ];
     });

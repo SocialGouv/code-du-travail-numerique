@@ -1,0 +1,70 @@
+contrat salarié . convention collective . hotels cafes restaurants . indemnité de licenciement:
+  applicable si: indemnité de licenciement
+  valeur: oui
+
+contrat salarié . convention collective . hotels cafes restaurants . indemnité de licenciement . au dela de dix ans:
+  somme:
+    - contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+    - (- 10 an)
+  plancher: 0 an
+
+contrat salarié . convention collective . hotels cafes restaurants . indemnité de licenciement . facteur 1:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+      facteur: 1 / 10
+  unité: €
+
+contrat salarié . convention collective . hotels cafes restaurants . indemnité de licenciement . facteur 2:
+  valeur:
+    produit:
+      assiette: contrat salarié . indemnité de licenciement . salaire de référence conventionnel * au dela de dix ans
+      facteur: 1 / 15
+  unité: €
+
+# (1/10*Sref*A1) + (1/15*Sref *A2)
+# A1 : Ancienneté totale
+# A2 : Ancienneté au delà de 10 ans
+contrat salarié . convention collective . hotels cafes restaurants . indemnité de licenciement . résultat conventionnel 1:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si:
+    toutes ces conditions:
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 2 ans
+      - contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année < 10 ans
+  somme:
+    - facteur 1
+    - facteur 2
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 32: https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005747401/?idConteneur=KALICONT000005635534
+  cdtn:
+    formule:
+      formula: 1 / 10 * Sref * A
+      explanations:
+        - "A : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . hotels cafes restaurants . indemnité de licenciement . résultat conventionnel 2:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année >= 10 ans
+  somme:
+    - facteur 1
+    - facteur 2
+  unité: €
+  arrondi: 2 décimales
+  références:
+    Article 32: https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005747401/?idConteneur=KALICONT000005635534
+  cdtn:
+    formule:
+      formula: (1 / 10 * Sref * A1) + (1 / 15 * Sref * A2)
+      explanations:
+        - "A1 : Ancienneté totale": contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année
+        - "A2 : Ancienneté au delà de 10 ans": contrat salarié . convention collective . hotels cafes restaurants . indemnité de licenciement . au dela de dix ans
+        - "Sref : Salaire de référence": contrat salarié . indemnité de licenciement . salaire de référence conventionnel
+
+contrat salarié . convention collective . hotels cafes restaurants . indemnité de licenciement . résultat conventionnel 3:
+  remplace: contrat salarié . indemnité de licenciement . résultat conventionnel
+  applicable si: contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année < 2 ans
+  valeur: 0
+  unité: €

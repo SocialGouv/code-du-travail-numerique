@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.90.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.90.0...v4.90.1) (2023-02-06)
+
+### Bug Fixes
+
+- affichage du résumé de questionnaire sur page info ([#4932](https://github.com/SocialGouv/code-du-travail-numerique/issues/4932)) ([4fa6f9c](https://github.com/SocialGouv/code-du-travail-numerique/commit/4fa6f9cefd43eadaa5bbe7cbd4632f22a3c4dfe1))
+
+# [4.90.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.89.0...v4.90.0) (2023-02-01)
+
+**Note:** Version bump only for package cdtn-types
+
+# [4.89.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.88.1...v4.89.0) (2023-01-18)
+
+### Bug Fixes
+
+- **404:** make all landing pages return status code 404 if page does not exist ([#4872](https://github.com/SocialGouv/code-du-travail-numerique/issues/4872)) ([187748b](https://github.com/SocialGouv/code-du-travail-numerique/commit/187748b12944c11463a1e2c4edd38e4e8d1de50f))
+
 ## [4.88.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v4.88.0...v4.88.1) (2022-12-23)
 
 **Note:** Version bump only for package cdtn-types

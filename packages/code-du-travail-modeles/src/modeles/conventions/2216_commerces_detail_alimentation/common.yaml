@@ -1,0 +1,9 @@
+# Convention collective nationale du commerce de détail et de gros à prédominance alimentaire du 12 juillet 2001.
+contrat salarié . convention collective . commerce gros et detail alimentation:
+  description: Convention collective nationale du commerce de détail et de gros à prédominance alimentaire du 12 juillet 2001.
+  applicable si: convention collective = 'IDCC2216'
+  valeur: oui
+  cdtn:
+    idcc: 2216
+    préavis-retraite: true
+    indemnité-licenciement: true

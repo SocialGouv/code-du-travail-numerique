@@ -7,6 +7,8 @@ describe("<SalaireTempsPlein />", () => {
     expect(
       render(
         <SalaireTempsPlein
+          title="Yo"
+          subTitle="Wesh"
           onSalariesChange={jest.fn()}
           salaryPeriods={[]}
           error={undefined}
@@ -16,8 +18,10 @@ describe("<SalaireTempsPlein />", () => {
   });
 
   it("should render salaries period by default", () => {
-    const { getAllByTitle } = render(
+    const { queryByText } = render(
       <SalaireTempsPlein
+        title="Indiquez le montant des salaires mensuels brut blabla"
+        subTitle="Wesh"
         onSalariesChange={jest.fn()}
         salaryPeriods={[
           {
@@ -27,39 +31,69 @@ describe("<SalaireTempsPlein />", () => {
         ]}
       />
     );
-    expect(getAllByTitle(/Salaire mensuel brut pour le mois/i)).toHaveLength(1);
+    const item = queryByText("Indiquez le montant des salaires mensuels brut", {
+      exact: false,
+    });
+    expect(item).toBeTruthy();
   });
 
   it("should modify a value of the month", () => {
-    const onSalariesChange = jest.fn();
+    let initObject = [
+      {
+        month: "janvier",
+        value: 2000,
+      },
+    ];
+    const onSalariesChange = (salaries: any) => {
+      initObject = salaries;
+    };
     const { getByTitle } = render(
       <SalaireTempsPlein
+        title="Yo"
+        subTitle="Wesh"
         onSalariesChange={onSalariesChange}
-        salaryPeriods={[
-          {
-            month: "janvier",
-            value: 2000,
-          },
-        ]}
+        salaryPeriods={initObject}
       />
     );
     const input1 = getByTitle(
       /Salaire mensuel brut pour le mois/i
     ) as HTMLInputElement;
     fireEvent.change(input1, { target: { value: "1500" } });
-    expect(input1.value).toBe("1500");
-    expect(onSalariesChange).toHaveBeenCalledTimes(1);
-    expect(onSalariesChange).toHaveBeenCalledWith([
+    expect(initObject[0].value).toBe(1500);
+  });
+
+  it("should add a prime", () => {
+    let initObject = [
       {
         month: "janvier",
-        value: 1500,
+        value: 2000,
+        prime: undefined,
       },
-    ]);
+    ];
+    const onSalariesChange = (salaries: any) => {
+      initObject = salaries;
+    };
+    const { getByTitle } = render(
+      <SalaireTempsPlein
+        title="Yo"
+        subTitle="Wesh"
+        onSalariesChange={onSalariesChange}
+        salaryPeriods={initObject}
+      />
+    );
+    const input1 = getByTitle(
+      /Renseignez la prime exceptionnelle pour le mois 1 ici/i
+    ) as HTMLInputElement;
+    expect(input1).toBeTruthy();
+    fireEvent.change(input1, { target: { value: "6000" } });
+    expect(initObject[0].prime).toBe(6000);
   });
 
   it("should render error", () => {
     const { getByText } = render(
       <SalaireTempsPlein
+        title="Yo"
+        subTitle="Wesh"
         onSalariesChange={jest.fn()}
         salaryPeriods={[
           {

@@ -1,0 +1,9 @@
+# Convention collective nationale de l'industrie pharmaceutique
+contrat salarié . convention collective . industrie pharmaceutique:
+  titre: Convention collective nationale de l'industrie pharmaceutique
+  applicable si: convention collective = 'IDCC0176'
+  valeur: oui
+  cdtn:
+    idcc: 176
+    préavis-retraite: true
+    indemnité-licenciement: false

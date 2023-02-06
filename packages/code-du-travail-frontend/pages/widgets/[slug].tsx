@@ -7,9 +7,8 @@ import styled from "styled-components";
 import {
   DureePreavisLicenciement,
   DureePreavisRetraite,
-  fetchTool,
-  loadPublicodesRules,
   DismissalProcess,
+  fetchTool,
 } from "../../src/outils";
 
 const toolsBySlug = {
@@ -20,19 +19,12 @@ const toolsBySlug = {
 
 interface Props {
   icon: string;
-  publicodesRules: any;
   slug: string;
   title: string;
   displayTitle: string;
 }
 
-function Widgets({
-  icon,
-  slug,
-  title,
-  displayTitle,
-  publicodesRules,
-}: Props): JSX.Element {
+function Widgets({ icon, slug, title, displayTitle }: Props): JSX.Element {
   const Tool = toolsBySlug[slug];
 
   return (
@@ -41,7 +33,7 @@ function Widgets({
         icon={icon}
         title={title}
         displayTitle={displayTitle}
-        publicodesRules={publicodesRules}
+        slug={slug}
         widgetMode={true}
       />
       <StyledFooter>
@@ -74,12 +66,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
 
   const { slug, icon, title, displayTitle } = tool;
 
-  const publicodesRules = loadPublicodesRules(slug);
-
   return {
     props: {
       icon,
-      publicodesRules,
       slug,
       title,
       displayTitle,

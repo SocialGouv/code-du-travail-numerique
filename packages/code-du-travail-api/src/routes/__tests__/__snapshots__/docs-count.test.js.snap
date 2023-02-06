@@ -9,7 +9,11 @@ Object {
         "key": "code_du_travail",
       },
       Object {
-        "doc_count": 5,
+        "doc_count": 2,
+        "key": "contributions",
+      },
+      Object {
+        "doc_count": 6,
         "key": "conventions_collectives",
       },
       Object {

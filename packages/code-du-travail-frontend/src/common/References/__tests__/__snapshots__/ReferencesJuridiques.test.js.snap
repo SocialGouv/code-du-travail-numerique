@@ -1,179 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ReferencesJuridiques /> should render 1`] = `
-.c0 {
-  padding: 2rem 2.4rem;
-  color: #3e486e;
-  border-radius: 0.6rem;
-  border: 1px solid #bbcadf;
-  background-color: #fff;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c3 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c2,
-[aria-selected="true"] .c3 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c14 {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  width: auto;
-  margin: 0;
-}
-
-.c13 {
-  -webkit-flex: 0 0 2.8rem;
-  -ms-flex: 0 0 2.8rem;
-  flex: 0 0 2.8rem;
-  width: 2.8rem;
-  height: 2.1rem;
-  margin: 0 1.6rem 0 0;
-  padding-top: 0.6rem;
-  color: #f66663;
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-.c9:hover .c12 {
-  -webkit-transform: translateX(4px);
-  -ms-transform: translateX(4px);
-  transform: translateX(4px);
-}
-
-.c4 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.c6 {
-  max-height: 0px;
-  opacity: 0;
-  overflow: auto;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.c1 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-
-.c1:hover,
-.c1:focus,
-.c1:focus-within,
-.c1[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c5 {
-  margin-left: 1rem;
-}
-
-.c7 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c11 {
-  padding: 0.8rem 0;
-  font-weight: normal;
-}
-
-.c8 {
-  padding-left: 0;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 1.6rem 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    padding: 0 5pt;
-    border: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
-    -webkit-flex: 0 0 2rem;
-    -ms-flex: 0 0 2rem;
-    flex: 0 0 2rem;
-    width: 2rem;
-    height: 1.7rem;
-    margin: 0 1rem 0 0;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-jSFjdj dftIwI"
   >
     <div>
       <div
         aria-expanded="false"
-        class="c1"
+        class="sc-khIgEk ceBxWI"
         role="button"
       >
         <svg
           aria-hidden="true"
-          class="c2 c3"
+          class="sc-fujyAs BrylG"
           fill="none"
           height="24"
           stroke="currentColor"
@@ -190,26 +30,26 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
         </svg>
         <p
           aria-level="2"
-          class="c4 c5"
+          class="sc-cOifOu XEwmn sc-hTRkXV jAbsFO"
           role="heading"
         >
           Références juridiques concernées :
         </p>
       </div>
       <div
-        class="c6"
+        class="sc-Arkif eVwpCw"
       >
         <ul
-          class="c7 c8"
+          class="sc-jffHpj sc-dvUynV jAxtJd kvMIHA"
         >
           <li>
             <a
-              class="c9 c10 c11"
+              class="sc-ezzafa eFglTD sc-kTCsyW hFlLVk"
               href="/code-du-travail/l1244-3"
             >
               <svg
                 aria-hidden="true"
-                class="c12 c13"
+                class="sc-kLojOw kpfGeG"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -220,7 +60,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 />
               </svg>
               <p
-                class="c14"
+                class="sc-bYwzuL jTtUkg"
               >
                 Article L1244-3 du Code du travail
               </p>
@@ -228,12 +68,12 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           </li>
           <li>
             <a
-              class="c9 c10 c11"
+              class="sc-ezzafa eFglTD sc-kTCsyW hFlLVk"
               href="/code-du-travail/r1244-4"
             >
               <svg
                 aria-hidden="true"
-                class="c12 c13"
+                class="sc-kLojOw kpfGeG"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -244,7 +84,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 />
               </svg>
               <p
-                class="c14"
+                class="sc-bYwzuL jTtUkg"
               >
                 Article R1244-4 du Code du travail
               </p>
@@ -253,14 +93,14 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           <li>
             <a
               aria-label="Article L3121-44 du JO (Nouvelle fenêtre)"
-              class="c9 c10 c11 no-after"
+              class="sc-ezzafa eFglTD sc-kTCsyW hFlLVk no-after"
               href="https://article.jo/L3121-44"
               rel="noopener noreferrer nofollow"
               target="_blank"
             >
               <svg
                 aria-hidden="true"
-                class="c12 c13"
+                class="sc-kLojOw kpfGeG"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -271,7 +111,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 />
               </svg>
               <p
-                class="c14"
+                class="sc-bYwzuL jTtUkg"
               >
                 Article L3121-44 du JO
               </p>
@@ -280,14 +120,14 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           <li>
             <a
               aria-label="Article foo du JPO (Nouvelle fenêtre)"
-              class="c9 c10 c11 no-after"
+              class="sc-ezzafa eFglTD sc-kTCsyW hFlLVk no-after"
               href="https://article.jo/foo"
               rel="noopener noreferrer nofollow"
               target="_blank"
             >
               <svg
                 aria-hidden="true"
-                class="c12 c13"
+                class="sc-kLojOw kpfGeG"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -298,7 +138,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 />
               </svg>
               <p
-                class="c14"
+                class="sc-bYwzuL jTtUkg"
               >
                 Article foo du JPO
               </p>
@@ -307,14 +147,14 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           <li>
             <a
               aria-label="Convention foo (Nouvelle fenêtre)"
-              class="c9 c10 c11 no-after"
+              class="sc-ezzafa eFglTD sc-kTCsyW hFlLVk no-after"
               href="https://ma-convention-collective/ccc-foo"
               rel="noopener noreferrer nofollow"
               target="_blank"
             >
               <svg
                 aria-hidden="true"
-                class="c12 c13"
+                class="sc-kLojOw kpfGeG"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -325,7 +165,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 />
               </svg>
               <p
-                class="c14"
+                class="sc-bYwzuL jTtUkg"
               >
                 Convention foo
               </p>

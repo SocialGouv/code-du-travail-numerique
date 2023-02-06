@@ -10,6 +10,9 @@ type PublicodesInputProps = {
 };
 
 const SituationInput = ({ element }: PublicodesInputProps): JSX.Element => {
+  if (!element.value) {
+    return <></>;
+  }
   switch (element.rawNode.cdtn?.type) {
     case RuleType.Liste:
       return <>{reverseValues(element.rawNode.cdtn.valeurs)[element.value]}</>;
@@ -42,7 +45,7 @@ const PubliSituation = ({
         .map((element) => {
           const overriden = onOverrideInput && onOverrideInput(element);
           return (
-            <li key={element.name}>
+            <li key={element.name} data-testid={`situation-${element.name}`}>
               {element.rawNode.titre}&nbsp;:&nbsp;
               <strong>
                 {overriden ? overriden : <SituationInput element={element} />}

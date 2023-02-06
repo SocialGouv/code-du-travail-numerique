@@ -1,0 +1,1 @@
+export { informationToSituation } from "./informationToSituation";

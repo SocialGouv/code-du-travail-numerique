@@ -39,7 +39,10 @@ const {
   publicRuntimeConfig: { API_URL },
 } = getConfig();
 
-const apiEnterprises = memoizee(function createFetcher(query, address) {
+const apiEnterprises = memoizee(function createFetcher(
+  query: string,
+  address: string | undefined | null = undefined
+): Promise<Enterprise[]> {
   if (/^\d{2,8}$/.test(query.replace(/\s/g, ""))) {
     return Promise.reject(siretSirenError);
   }
@@ -74,7 +77,7 @@ const apiEnterprises = memoizee(function createFetcher(query, address) {
       const errorMessage = await response.text();
       return Promise.reject(errorMessage);
     })
-    .then((result) => {
+    .then((result: ApiEnterpriseData) => {
       return result.entreprises;
     });
 });

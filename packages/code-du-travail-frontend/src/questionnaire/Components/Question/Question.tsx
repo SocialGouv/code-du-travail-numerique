@@ -5,6 +5,7 @@ import { Response } from "./Response";
 import { Tooltip } from "../../../common/Tooltip";
 import { ShowInfo } from "./ShowInfo";
 import { trackClickHelp } from "../../tracking";
+import { Text } from "@socialgouv/cdtn-ui";
 
 type QuestionProps = {
   widgetMode: boolean;
@@ -20,9 +21,11 @@ export const Question = ({ widgetMode }: QuestionProps) => {
   return lastResponse?.slug ? (
     <ShowInfo slug={lastResponse.slug} widgetMode={widgetMode}></ShowInfo>
   ) : (
-    <QuestionWrapper>
+    <div>
       <QuestionHeaderWrapper>
-        <QuestionHeader>{currentQuestion?.text}</QuestionHeader>
+        <Text fontWeight="600" fontSize="default">
+          {currentQuestion?.text}
+        </Text>
         {currentQuestion?.info && (
           <Tooltip
             onChange={(opened) => {
@@ -38,31 +41,18 @@ export const Question = ({ widgetMode }: QuestionProps) => {
       {openedTooltip && (
         <InformationWrapper>{currentQuestion?.info}</InformationWrapper>
       )}
-      <RadioWrapper>
-        {currentQuestion?.responses.map((response, index: number) => (
-          <Response
-            key={`${response.text}${index}`}
-            response={response}
-            index={index}
-          ></Response>
-        ))}
-      </RadioWrapper>
+
+      {currentQuestion?.responses.map((response, index: number) => (
+        <Response
+          key={`${response.text}${index}`}
+          response={response}
+          index={index}
+        ></Response>
+      ))}
       <Description>{currentQuestion?.description}</Description>
-    </QuestionWrapper>
+    </div>
   );
 };
-
-const QuestionWrapper = styled.div``;
-
-const QuestionHeader = styled.div`
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 25px;
-  display: flex;
-  align-items: center;
-  color: #3e486e;
-  margin-right: 8px;
-`;
 
 const QuestionHeaderWrapper = styled.div`
   display: flex;
@@ -73,12 +63,6 @@ const QuestionHeaderWrapper = styled.div`
 const Description = styled.i`
   display: block;
   margin-top: 7px;
-`;
-
-const RadioWrapper = styled.div`
-  > div {
-    margin: 4px 0;
-  }
 `;
 
 const InformationWrapper = styled.div`

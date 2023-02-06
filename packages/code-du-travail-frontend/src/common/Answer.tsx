@@ -32,7 +32,7 @@ const BigError = ({ children }) => (
 type AnswerProps = {
   additionalContent?: any;
   breadcrumbs?: Breadcrumb[];
-  children: any[] | null;
+  children: any[] | any | null;
   className?: string;
   date?: string;
   dateLabel?: string;
@@ -40,9 +40,9 @@ type AnswerProps = {
   html?: string | null;
   intro?: string | null;
   metaDescription?: string;
-  relatedItems?: string[];
+  relatedItems?: any[];
   source?: any;
-  subtitle?: string;
+  subtitle?: any;
   suptitle?: string;
   title: string;
 };

@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import { Field } from "react-final-form";
-import {
-  Input,
-  Label,
-  Paragraph,
-  Section as SectionUi,
-  Text,
-  theme,
-} from "@socialgouv/cdtn-ui";
+import { Paragraph, Section as SectionUi } from "@socialgouv/cdtn-ui";
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
 import { Agreement } from "../../../../conventions/Search/api/type";
 import { SearchParams } from "../../../ConventionCollective/common/NavContext";
@@ -22,6 +15,7 @@ import ShowAgreements from "./ShowAgreements";
 import { renderResults } from "./EntrepriseSearchResult";
 import { SearchEnterpriseInput } from "./EntrepriseSearchInput/SearchEnterpriseInput";
 import styled from "styled-components";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 export type Props = {
   supportedAgreements: AgreementSupportInfo[];
@@ -61,6 +55,7 @@ const EnterpriseSearch = ({
             agreement={enterprise.conventions[0]}
             supportedAgreements={supportedAgreements}
             alertAgreementNotSupported={alertAgreementNotSupported}
+            simulator={PublicodesSimulator.PREAVIS_RETRAITE}
           />
         ) : (
           <ShowAgreements
@@ -97,7 +92,7 @@ const EnterpriseSearch = ({
       />
       <ErrorField
         name={ENTERPRISE_NAME}
-        errorText={"Vous devez séléctionner une entreprise"}
+        errorText={"Vous devez sélectionner une entreprise"}
       />
       <Field
         type="input"
@@ -116,6 +111,7 @@ export default EnterpriseSearch;
 
 const Section = styled(SectionUi)`
   padding-top: 0;
+
   label {
     font-weight: 400;
   }

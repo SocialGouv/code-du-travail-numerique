@@ -1,167 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepResult /> should render no results 1`] = `
-.c3 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c2,
-[aria-selected="true"] .c3 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c7 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c7 > *:first-child {
-  margin-top: 0;
-}
-
-.c7 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c4 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.c12 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c6 {
-  max-height: 0px;
-  opacity: 0;
-  overflow: auto;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.c1 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-
-.c1:hover,
-.c1:focus,
-.c1:focus-within,
-.c1[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c5 {
-  margin-left: 1rem;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c10 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c10 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c11 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c8 {
-  margin-top: 3.2rem;
-}
-
-.c13 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 1rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-@media (max-width:600px) {
-  .c10 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c10 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
 <div>
   <h2
-    class="c0"
+    class="sc-kizEQm hCdZfB"
   >
     Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
@@ -171,12 +13,12 @@ exports[`<StepResult /> should render no results 1`] = `
   <div>
     <div
       aria-expanded="false"
-      class="c1"
+      class="sc-khIgEk ceBxWI"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="c2 c3"
+        class="sc-fujyAs BrylG"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -192,16 +34,16 @@ exports[`<StepResult /> should render no results 1`] = `
         />
       </svg>
       <p
-        class="c4 c5"
+        class="sc-cOifOu XEwmn sc-hTRkXV jAbsFO"
       >
         Voir le détail du calcul
       </p>
     </div>
     <div
-      class="c6"
+      class="sc-Arkif eVwpCw"
     >
       <h2
-        class="c0"
+        class="sc-kizEQm hCdZfB"
       >
         Éléments saisis
       </h2>
@@ -236,7 +78,7 @@ exports[`<StepResult /> should render no results 1`] = `
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-kizEQm hCdZfB"
       >
         Sources
       </h2>
@@ -247,7 +89,6 @@ exports[`<StepResult /> should render no results 1`] = `
             href="https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005753582&cidTexte=KALITEXT000005682357&idConvention=KALICONT000005635630&dateTexte=29990101"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article 33"
           >
             Article 33
           </a>
@@ -256,13 +97,13 @@ exports[`<StepResult /> should render no results 1`] = `
     </div>
   </div>
   <div
-    class="c7 c8"
+    class="sc-lmgQwP sc-kTCsyW kHzGur jwKwCa"
   >
     <div
-      class="c9"
+      class="sc-gGLxEB kEYfsY"
     >
       <div
-        class="c10"
+        class="sc-ckTSus eGIUDO"
       >
         <svg
           aria-hidden="true"
@@ -282,10 +123,10 @@ exports[`<StepResult /> should render no results 1`] = `
         </svg>
       </div>
       <div
-        class="c11"
+        class="sc-fbIWvP itJXQd"
       >
         <p
-          class="c12 c13"
+          class="sc-cOifOu gIgAxs sc-dvUynV WDTQd"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -299,184 +140,9 @@ exports[`<StepResult /> should render no results 1`] = `
 `;
 
 exports[`<StepResult /> should render with duration 1`] = `
-.c5 {
-  position: relative;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  color: #7994d4;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  -webkit-transition: transform 250ms linear;
-  transition: transform 250ms linear;
-}
-
-[aria-expanded="true"] .c4,
-[aria-selected="true"] .c5 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.c9 {
-  margin-bottom: 1.6rem;
-  padding: 1.6rem 2rem;
-  color: #3e486e;
-  font-size: 1.6rem;
-  background-color: #f2f5fa;
-  border: 1px solid #f2f5fa;
-  border-radius: 0.6rem;
-}
-
-.c9 > *:first-child {
-  margin-top: 0;
-}
-
-.c9 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c6 {
-  color: #3e486e;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.c14 {
-  color: #3e486e;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.c8 {
-  max-height: 0px;
-  opacity: 0;
-  overflow: auto;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.c3 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
-  color: #3e486e;
-}
-
-.c7 {
-  margin-left: 1rem;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
-  -ms-flex-pack: stretch;
-  justify-content: stretch;
-}
-
-.c12 {
-  display: block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 2rem;
-}
-
-.c12 svg {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.c13 {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c10 {
-  margin-top: 3.2rem;
-}
-
-.c15 {
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-  margin: 0;
-}
-
-.c0 {
-  margin-top: 3.2rem;
-  margin-bottom: 1rem;
-  color: #4d73b8;
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-family: "Open Sans",sans-serif;
-}
-
-.c1 {
-  color: #f66663;
-  font-weight: 700;
-  font-size: 1.8rem;
-  white-space: pre-line;
-}
-
-.c2 {
-  font-size: 1.5em;
-}
-
-@media (max-width:600px) {
-  .c12 {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-  }
-
-  .c12 svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c1 {
-    font-size: 1.6rem;
-  }
-}
-
 <div>
   <h2
-    class="c0"
+    class="sc-kizEQm hCdZfB"
   >
     Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
@@ -484,14 +150,14 @@ exports[`<StepResult /> should render with duration 1`] = `
     D’après les éléments saisis, durant son préavis, le salarié peut s’absenter pour rechercher un emploi pendant
      : 
     <strong
-      class="c1 c2"
+      class="sc-cKRKFl sc-iIgjPs llsdRM ivEQAG"
     >
       2 heures par jour
     </strong>
     .
   </p>
   <h2
-    class="c0"
+    class="sc-kizEQm hCdZfB"
   >
     Rémunération pendant les heures d’absence autorisée
   </h2>
@@ -499,7 +165,7 @@ exports[`<StepResult /> should render with duration 1`] = `
     Le salaire est maintenu.
   </p>
   <h2
-    class="c0"
+    class="sc-kizEQm hCdZfB"
   >
     Conditions d’utilisation
   </h2>
@@ -509,12 +175,12 @@ exports[`<StepResult /> should render with duration 1`] = `
   <div>
     <div
       aria-expanded="false"
-      class="c3"
+      class="sc-khIgEk ceBxWI"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="c4 c5"
+        class="sc-fujyAs BrylG"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -530,16 +196,16 @@ exports[`<StepResult /> should render with duration 1`] = `
         />
       </svg>
       <p
-        class="c6 c7"
+        class="sc-cOifOu XEwmn sc-hTRkXV jAbsFO"
       >
         Voir le détail du calcul
       </p>
     </div>
     <div
-      class="c8"
+      class="sc-Arkif eVwpCw"
     >
       <h2
-        class="c0"
+        class="sc-kizEQm hCdZfB"
       >
         Éléments saisis
       </h2>
@@ -567,7 +233,7 @@ exports[`<StepResult /> should render with duration 1`] = `
         </li>
       </ul>
       <h2
-        class="c0"
+        class="sc-kizEQm hCdZfB"
       >
         Sources
       </h2>
@@ -578,7 +244,6 @@ exports[`<StepResult /> should render with duration 1`] = `
             href="https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005857303&cidTexte=KALITEXT000005682357&dateTexte=19740607"
             rel="noopener noreferrer"
             target="_blank"
-            title="Consultez l’article 29"
           >
             Article 29
           </a>
@@ -587,13 +252,13 @@ exports[`<StepResult /> should render with duration 1`] = `
     </div>
   </div>
   <div
-    class="c9 c10"
+    class="sc-lmgQwP sc-kTCsyW kHzGur jwKwCa"
   >
     <div
-      class="c11"
+      class="sc-gGLxEB kEYfsY"
     >
       <div
-        class="c12"
+        class="sc-ckTSus eGIUDO"
       >
         <svg
           aria-hidden="true"
@@ -613,10 +278,10 @@ exports[`<StepResult /> should render with duration 1`] = `
         </svg>
       </div>
       <div
-        class="c13"
+        class="sc-fbIWvP itJXQd"
       >
         <p
-          class="c14 c15"
+          class="sc-cOifOu gIgAxs sc-dvUynV WDTQd"
         >
           Attention il peut exister une durée plus favorable
         </p>
