@@ -3,6 +3,8 @@ export type Widget = {
   metaDescription: string;
   title: string;
   description: string;
+  shortTitle: string;
+  shortDescription: string;
   url: string;
   id: string;
 };

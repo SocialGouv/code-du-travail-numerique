@@ -4,6 +4,8 @@
         "metaDescription": "Intégrez le moteur de recherche du Code du travail numérique sur votre site grâce à un module (widget).",
         "title": "Intégrez le moteur de recherche du Code du travail numérique",
         "description": "Vous pouvez intégrer le moteur de recherche du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de faire une recherche depuis votre site dans la barre de recherche du module. Une fois la recherche lancée, cela ouvrira la page de recherche sur le site du Code du travail numérique.",
+        "shortTitle": "Moteur de recherche du Code du travail numérique",
+        "shortDescription": "Effectuer une recherche depuis votre site sur le Code du travail numérique",
         "url": "/widget.html",
         "id": "widget"
     },
@@ -12,6 +14,8 @@
         "metaDescription": "Intégrez l’outil de calcul du préavis de licenciement du Code du travail numérique sur votre site grâce à un module (widget).",
         "title": "Intégrer l’outil de calcul du préavis de licenciement du Code du travail numérique",
         "description": "Vous pouvez intégrer l’outil de calcul du préavis de licenciement du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de calculer la durée du préavis accordée au salarié en cas de licenciement. Afin de personnaliser le résultat, l’utilisateur pourra, s’il le souhaite, renseigner ou rechercher (à partir du nom de l’entreprise) sa convention collective.",
+        "shortTitle": "Préavis de départ ou mise à la retraite",
+        "shortDescription": "Calculer la durée de préavis à respecter en cas de départ à la retraite ou de mise à la retraite",
         "url": "/widgets/preavis-licenciement",
         "id": "preavis-licenciement"
     },
@@ -20,6 +24,8 @@
         "metaDescription": "Intégrez l’outil de calcul du préavis de retraite du Code du travail numérique sur votre site grâce à un module (widget).",
         "title": "Intégrez l’outil de calcul du préavis de retraite du Code du travail numérique",
         "description": "Vous pouvez intégrer l’outil de calcul du préavis de retraite du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l’utilisateur de calculer la durée de préavis à respecter en cas de départ ou de mise à la retraite. Afin de personnaliser le résultat, l’utilisateur pourra, s’il le souhaite, renseigner ou rechercher (à partir du nom de l’entreprise) sa convention collective.",
+        "shortTitle": "Préavis de licenciement",
+        "shortDescription": "Calculer la durée de préavis à respecter en cas de licenciement",
         "url": "/widgets/preavis-retraite",
         "id": "preavis-retraite"
     },
@@ -28,6 +34,8 @@
         "metaDescription": "Intégrez l’outil de procédure de licenciement de retraite du Code du travail numérique sur votre site grâce à un module (widget).",
         "title": "Intégrez l’outil de procédure de licenciement du Code du travail numérique",
         "description": "Vous pouvez intégrer l’outil de procédure de licenciement du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l'utilisateur de trouver toutes les informations liés à sa procédure de licenciement grâce à un questionnaire détaillé.",
+        "shortTitle": "Procedure de licenciement",
+        "shortDescription": "Trouver les informations liés à votre cas de licenciement",
         "url": "/widgets/procedure-licenciement",
         "id": "procedure-licenciement"
     }
