@@ -43,9 +43,6 @@ function Widgets({
         displayTitle={displayTitle}
         publicodesRules={publicodesRules}
         widgetMode={true}
-        onChange={() => {
-          window.parent?.postMessage({ kind: "onChange" }, "*");
-        }}
       />
       <StyledFooter>
         <Link passHref href="/politique-confidentialite">
