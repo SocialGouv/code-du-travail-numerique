@@ -75,7 +75,7 @@ jobs:
   deploy-preprod:
     name: Deploy preproduction
     runs-on: ubuntu-latest
-    needs: [register, manifests]
+    needs: [register, manifests, branch-info]
     environment:
       name: preproduction
       url: https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/
