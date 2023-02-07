@@ -6,10 +6,8 @@ import Breadcrumbs from "../../src/common/Breadcrumbs";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { integrationData, IntegrationContainer } from "../../src/integration";
-import { useRouter } from "next/router";
 
-const IntegrationPage = (): JSX.Element => {
-  const router = useRouter();
+const IntegrationPage = ({ slug }): JSX.Element => {
   const {
     description,
     metaDescription,
@@ -17,7 +15,7 @@ const IntegrationPage = (): JSX.Element => {
     title,
     url,
     id,
-  } = integrationData[router.asPath];
+  } = integrationData[slug];
   return (
     <Layout>
       <Metas title={metaTitle} description={metaDescription} />
@@ -33,6 +31,15 @@ const IntegrationPage = (): JSX.Element => {
       </Section>
     </Layout>
   );
+};
+
+export const getServerSideProps = async ({ query }) => {
+  const slug: string = query.slug;
+  return {
+    props: {
+      slug,
+    },
+  };
 };
 
 export default IntegrationPage;
