@@ -1,13 +1,3 @@
-const withTranspileModule = require("next-transpile-modules")([
-  "@socialgouv/cdtn-sources",
-  "@socialgouv/cdtn-slugify",
-  "lit-element",
-  "lit-html",
-  "parse5",
-  "p-debounce",
-  "is-plain-obj",
-]);
-
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
@@ -85,9 +75,5 @@ module.exports = {
   async redirects() {
     return MappingReplacement;
   },
-  ...compose(
-    withBundleAnalyzer,
-    withTranspileModule,
-    withSentryConfig
-  )(nextConfig),
+  ...compose(withBundleAnalyzer, withSentryConfig)(nextConfig),
 };
