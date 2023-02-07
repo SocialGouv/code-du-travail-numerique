@@ -28,13 +28,13 @@ function Widgets({ icon, slug, title, displayTitle }: Props): JSX.Element {
   const Tool = toolsBySlug[slug];
 
   return (
-    <Container>
+    <StyledContainer>
       <Tool
         icon={icon}
         title={title}
         displayTitle={displayTitle}
         slug={slug}
-        widgetMode={true}
+        widgetMode
       />
       <StyledFooter>
         <Link passHref href="/politique-confidentialite">
@@ -48,7 +48,7 @@ function Widgets({ icon, slug, title, displayTitle }: Props): JSX.Element {
           </LeftLink>
         </Link>
       </StyledFooter>
-    </Container>
+    </StyledContainer>
   );
 }
 
@@ -75,6 +75,13 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
     },
   };
 };
+
+const StyledContainer = styled(Container)`
+  padding: 0;
+  & > div:before {
+    box-shadow: none;
+  }
+`;
 
 const StyledFooter = styled.footer`
   display: flex;

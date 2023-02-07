@@ -43,7 +43,7 @@ function addWidget(info) {
 }
 
 function loadWidgets() {
-  const cdtnHost = "http://localhost:3000";
+  const cdtnHost = "__HOST__";
   [
     {
       name: "widget",
