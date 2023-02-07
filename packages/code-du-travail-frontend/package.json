@@ -46,7 +46,7 @@
     "katex": "^0.13.13",
     "lit-element": "3.0.2",
     "memoizee": "^0.4.15",
-    "next": "^13.1.2",
+    "next": "^13.1.6",
     "next-transpile-modules": "^10.0.0",
     "p-debounce": "^2.1.0",
     "prop-types": "^15.8.1",
