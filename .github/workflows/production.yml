@@ -10,8 +10,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  branch-info:
-    name: Get branch slug and commit sha
+  register-frontend:
+    name: Register frontend
     runs-on: ubuntu-latest
     steps:
       - name: Get branch slug and commit sha
@@ -20,18 +20,16 @@ jobs:
           BRANCH_SLUG=$(npx @socialgouv/env-slug ${BRANCH_NAME})
           echo "BRANCH_SLUG=${BRANCH_SLUG}" >> $GITHUB_ENV
           echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
-
-  register:
-    name: Register images
-    runs-on: ubuntu-latest
-    needs: [ branch-info ]
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - images: "code-du-travail-frontend"
-            path: "."
-            args: |
+      - name: Register docker images
+        uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
+        with:
+          environment: prod
+          project: "cdtn"
+          imageName: "cdtn/code-du-travail-frontend"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: "./Dockerfile"
+          dockercontext: "."
+          dockerbuildargs: |
               NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
               NEXT_PUBLIC_SENTRY_ENV=production
               NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT=true
@@ -43,24 +41,25 @@ jobs:
               NEXT_PUBLIC_API_SIRET2IDCC_URL=https://siret2idcc.fabrique.social.gouv.fr/api/v2
               NEXT_PUBLIC_API_URL=https://api.cdtn.fabrique.social.gouv.fr/api/v1
               NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
-          - images: "code-du-travail-api"
-            path: "./packages/code-du-travail-api/"
+
+  register-api:
+    name: Register api
+    runs-on: ubuntu-latest
     steps:
       - name: Register docker images
         uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
         with:
           environment: prod
           project: "cdtn"
-          imageName: cdtn/${{ matrix.images }}
+          imageName: "cdtn/code-du-travail-api"
           token: ${{ secrets.GITHUB_TOKEN }}
-          dockerfile: "${{ matrix.path }}/Dockerfile"
-          dockercontext: "${{ matrix.path }}"
-          dockerbuildargs: ${{ matrix.args }}
+          dockerfile: "./packages/code-du-travail-api//Dockerfile"
+          dockercontext: "./packages/code-du-travail-api"
 
   deploy-prod:
     name: Deploy production
     runs-on: ubuntu-latest
-    needs: [register, branch-info]
+    needs: [register-frontend, register-api, branch-info]
     environment:
       name: production
       url: https://code.travail.gouv.fr/
