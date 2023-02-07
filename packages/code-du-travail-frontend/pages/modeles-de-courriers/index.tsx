@@ -6,7 +6,7 @@ import {
   PageTitle,
   Section,
   Select,
-  theme,
+  theme as th,
   Tile,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
@@ -24,7 +24,7 @@ const subtitle =
 
 function Modeles(props) {
   const { data = [] } = props;
-  const themes = [];
+  const themes: any = [];
   const modelesByTheme = data.reduce((state, templateDoc) => {
     const other = {
       label: "Autres",
@@ -88,13 +88,7 @@ function Modeles(props) {
                       passHref
                       legacyBehavior
                     >
-                      <Tile
-                        wide
-                        custom
-                        title={title}
-                        subtitle={theme.title}
-                        titleTagType="h3"
-                      >
+                      <Tile wide custom title={title} titleTagType="h3">
                         {summarize(description)}
                       </Tile>
                     </Link>
@@ -118,7 +112,7 @@ Modeles.getInitialProps = async function () {
   return { data };
 };
 
-const { spacings } = theme;
+const { spacings } = th;
 
 const StyledList = styled(FlatList)`
   margin: ${spacings.small} 0;
