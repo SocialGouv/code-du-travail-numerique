@@ -7,7 +7,7 @@ describe("Dossiers", () => {
     cy.contains("Covid-19 : le régime post-crise sanitaire").click();
     cy.get("h1").should(
       "have.text",
-      "Covid-19 : le régime post-crise sanitaire."
+      "Covid-19 : le régime post-crise sanitaire"
     );
     cy.get("body").should(
       "contain",
