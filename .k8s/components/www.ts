@@ -56,20 +56,6 @@ export default async () => {
         },
         resources:
           env.env === "prod" ? ressourcesConfigProd : ressourcesConfigDev,
-        env: [
-          {
-            name: "NEXT_PUBLIC_API_URL",
-            value: String(API_URL),
-          },
-          {
-            name: "NEXT_PUBLIC_COMMIT",
-            value: process.env.GITHUB_SHA,
-          },
-          {
-            name: "NEXT_PUBLIC_VERSION",
-            value: process.env.GITHUB_REF,
-          },
-        ],
       },
     },
   });

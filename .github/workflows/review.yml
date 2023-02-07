@@ -15,6 +15,17 @@ concurrency:
   group: review-${{ github.ref }}
 
 jobs:
+  branch-info:
+    name: Get branch slug and commit sha
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get branch slug and commit sha
+        run: |
+          BRANCH_NAME=${GITHUB_REF#refs/heads/}
+          BRANCH_SLUG=$(npx @socialgouv/env-slug ${BRANCH_NAME})
+          echo "BRANCH_SLUG=${BRANCH_SLUG}" >> $GITHUB_ENV
+          echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
+
   register:
     name: Register images
     runs-on: ubuntu-latest
@@ -27,6 +38,14 @@ jobs:
             args: |
               NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
               NEXT_PUBLIC_SENTRY_ENV=dev
+              NEXT_PUBLIC_AZURE_BASE_URL=https://cdtnadmindev.blob.core.windows.net
+              NEXT_PUBLIC_AZURE_CONTAINER=cdtn
+              NEXT_PUBLIC_PIWIK_SITE_ID=3
+              NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
+              NEXT_PUBLIC_API_ENTREPRISE_URL=https://entreprise.data.gouv.fr/api/sirene
+              NEXT_PUBLIC_API_SIRET2IDCC_URL=https://siret2idcc.fabrique.social.gouv.fr/api/v2
+              NEXT_PUBLIC_API_URL=https://api-code-du-travail-numerique-${{ env.BRANCH_SLUG }}.dev.fabrique.social.gouv.fr/api/v1
+              NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
           - images: "code-du-travail-api"
             path: "./packages/code-du-travail-api/"
     steps:
