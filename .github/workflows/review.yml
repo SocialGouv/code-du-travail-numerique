@@ -19,11 +19,10 @@ jobs:
     name: Register frontend
     runs-on: ubuntu-latest
     steps:
-      # Note : we need to use Kontinuous to get the branch slug
       - name: Get branch slug and commit sha
         run: |
-          BRANCH_NAME=${GITHUB_REF#refs/heads/}
-          BRANCH_SLUG=$(npx @socialgouv/env-slug ${BRANCH_NAME})
+          RAW_BRANCH=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
+          BRANCH_SLUG=$(npx @socialgouv/env-slug "${RAW_BRANCH}")
           echo "BRANCH_SLUG=${BRANCH_SLUG}" >> $GITHUB_ENV
           echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
 
@@ -44,9 +43,9 @@ jobs:
               NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
               NEXT_PUBLIC_API_ENTREPRISE_URL=https://entreprise.data.gouv.fr/api/sirene
               NEXT_PUBLIC_API_SIRET2IDCC_URL=https://siret2idcc.fabrique.social.gouv.fr/api/v2
-              NEXT_PUBLIC_API_URL=https://api-code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr/api/v1
+              NEXT_PUBLIC_API_URL=https://api-code-du-travail-numerique-${{ env.BRANCH_SLUG }}.dev.fabrique.social.gouv.fr/api/v1
               NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
-              NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-preprod.dev.fabrique.social.gouv.fr
+              NEXT_PUBLIC_SITE_URL=https://code-du-travail-numerique-${{ env.BRANCH_SLUG }}.dev.fabrique.social.gouv.fr
 
   register-api:
     name: Register api
