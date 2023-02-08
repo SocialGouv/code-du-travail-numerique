@@ -22,15 +22,15 @@ type Props = {
 } & TrackingProps;
 
 export const SearchAgreementInput = ({
-  onUserAction,
-  renderResults,
-}: Props): JSX.Element => {
+                                       onUserAction,
+                                       renderResults,
+                                     }: Props): JSX.Element => {
   const [query, setQuery] = useState("");
 
   const useAgreementSuggester = createSuggesterHook(
     searchAgreements,
     (query) => {
-      onUserAction(UserAction.SearchAgreement, { query });
+      onUserAction(UserAction.SearchAgreement, {query});
     }
   );
 
@@ -42,7 +42,11 @@ export const SearchAgreementInput = ({
   };
   return (
     <>
-      <InlineLabel htmlFor="agreement-search">
+      <InlineLabel
+        htmlFor="agreement-search"
+        id="agreement-search-label"
+        for="agreement-search"
+      >
         Nom de la convention collective ou son numéro d’identification{" "}
         <abbr title="Identifiant de la Convention Collective">IDCC</abbr>{" "}
         <Text fontWeight="400" fontSize="small">
@@ -72,6 +76,12 @@ export const SearchAgreementInput = ({
         onChange={searchInputHandler}
         autoComplete="off"
         data-testid="agreement-search-input"
+        role="combobox"
+        aria-autocomplete="list"
+        aria-haspopup="listbox"
+        aria-expanded="true"
+        aria-controls="popup_listbox"
+        aria-activedescendant="selected_option"
       />
 
       {renderResults(state, query)}

@@ -2,9 +2,11 @@ import { SOURCES } from "@socialgouv/cdtn-sources";
 import {
   AlertWithIcon,
   Button,
+  FlatList,
   Heading,
   ScreenReaderOnly,
   Section as SectionUi,
+  theme,
   Title,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
@@ -17,7 +19,7 @@ import { Agreement } from "../../../../conventions/Search/api/type";
 import { FetchReducerState } from "../components/Suggester";
 import { TrackingProps, UserAction } from "../../../ConventionCollective/types";
 import { InlineError } from "../../ErrorField";
-import { ListItem, ResultList } from "../components/ResultList";
+import { ListItem } from "../components/ResultList";
 import { AgreementLink } from "./AgreementInput/AgreementLink";
 import { HelpModal } from "../components/Modal";
 
@@ -63,8 +65,12 @@ const renderResults = ({
       return <></>;
     }
     return state.data.length > 0 ? (
-      <Section>
-        <ResultList query={query}>
+      <WrapperNoPadding variant="light">
+        <FlatList
+          role="listbox"
+          id="search-results"
+          aria-labelledby="agreement-search-label"
+        >
           {state.data.map((item, index) => {
             return (
               <ListItem key={item.id}>
@@ -76,8 +82,8 @@ const renderResults = ({
               </ListItem>
             );
           })}
-        </ResultList>
-      </Section>
+        </FlatList>
+      </WrapperNoPadding>
     ) : (
       <Section>
         <ScreenReaderOnly role="status">
@@ -154,7 +160,10 @@ const renderResults = ({
 };
 
 export { renderResults };
-
+const WrapperNoPadding = styled(Wrapper)`
+  padding: 0;
+  margin-top: ${theme.spacings.base};
+`;
 const Section = styled(SectionUi)`
   padding-top: 1rem;
 `;

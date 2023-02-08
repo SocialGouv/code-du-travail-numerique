@@ -29,11 +29,12 @@ export function ResultList({ query, children }: Props): JSX.Element {
 }
 
 export const ListItem: React.FC = ({ children }) => {
-  return <Li>{children}</Li>;
+  return <Li role="option">{children}</Li>;
 };
 
 const Li = styled.li`
   margin-left: 0;
+
   & + &::before {
     content: "";
     display: block;
@@ -72,6 +73,7 @@ export const ResultItem = styled.button.attrs({
   text-decoration: none;
   cursor: pointer;
   position: relative;
+
   &:hover {
     color: ${({ theme }) => theme.title};
     background-color: ${({ theme }) => theme.bgTertiary};
