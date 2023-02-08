@@ -13,16 +13,26 @@ function setHeight(iframe) {
 
 function addWidget(info) {
   const iframePrefix = "cdtn-iframe-";
-  const target = document.querySelector("#cdtn-" + info.name);
-  if (!target) {
-    return;
-  }
   const targetIframe = document.querySelector("#" + iframePrefix + info.name);
   if (targetIframe) {
     return;
   }
+  let target;
+  if (info.name === "widget") {
+    target = document.querySelector("#cdtn-" + info.name);
+  }
+  if (!target) {
+    const links = document.querySelectorAll("a[href='" + info.url + "']");
+    if (links.length) {
+      target = links[0];
+    } else {
+      return;
+    }
+  }
+
   const iframe = document.createElement("iframe");
-  target.insertAdjacentElement("afterbegin", iframe);
+  target.parentNode.insertBefore(iframe, target);
+  target.remove();
 
   iframe.id = iframePrefix + info.name;
   iframe.width = "100%";
@@ -43,23 +53,22 @@ function addWidget(info) {
 }
 
 function loadWidgets() {
-  const cdtnHost = "__HOST__";
   [
     {
       name: "widget",
-      url: cdtnHost + "/widget.html",
+      url: "__HOST__/widget.html",
     },
     {
       name: "preavis-licenciement",
-      url: cdtnHost + "/widgets/preavis-licenciement",
+      url: "__HOST__/widgets/preavis-licenciement",
     },
     {
       name: "preavis-retraite",
-      url: cdtnHost + "/widgets/preavis-retraite",
+      url: "__HOST__/widgets/preavis-retraite",
     },
     {
       name: "procedure-licenciement",
-      url: cdtnHost + "/widgets/procedure-licenciement",
+      url: "__HOST__/widgets/procedure-licenciement",
     },
   ].forEach((widget) => {
     addWidget(widget);

@@ -5,19 +5,25 @@ import {
   PageTitle,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
+import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 
 type IntegrationContainerProps = {
   id: string;
   description: string;
   title: string;
+  shortTitle: string;
   url: string;
+  host: string;
 };
 
 const IntegrationContainer = ({
   id,
   description,
   title,
+  shortTitle,
+  url,
+  host,
 }: IntegrationContainerProps) => {
   const useScript = () => {
     useEffect(() => {
@@ -34,12 +40,13 @@ const IntegrationContainer = ({
     }, []);
   };
   useScript();
+  // const router = useRouter();
   return (
     <Container narrow>
       <PageTitle>{title}</PageTitle>
       <Wrapper variant="main">
         <p>{description}</p>
-        <div id={`cdtn-${id}`}></div>
+        <a href={`${host}${url}`}>{shortTitle}</a>
         <p>
           Comment faire ? Voici la méthode pour intégrer ce module à votre site
           :
@@ -65,7 +72,7 @@ const IntegrationContainer = ({
                     souhaitez voir le module s’afficher&nbsp;:
                   </p>
 
-                  <CodeSnippet>{`<div id="cdtn-${id}"></div>`}</CodeSnippet>
+                  <CodeSnippet>{`<a href="https://code.travail.gouv.fr${url}">${shortTitle}</a>`}</CodeSnippet>
                 </>
               ),
               id: "id-js",

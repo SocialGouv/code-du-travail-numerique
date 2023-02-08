@@ -27,14 +27,14 @@ export const generateWidgetScript = (isOnProduction: boolean, host: string) => {
   if (!data) return;
   const protocol = isOnProduction ? "https://" : "http://";
 
-  const hostedData = data.replace("__HOST__", protocol + host);
+  const hostedData = data.replace(/__HOST__/g, protocol + host);
 
   fs.writeFileSync(widgetOutputScriptPath, hostedData);
 };
 
 const run = () => {
   const isOnProduction = !!process.env.PRODUCTION;
-  const host = process.env.FRONTEND_HOST ?? "localhost:3000";
+  const host = process.env.NEXT_PUBLIC_SITE_URL ?? "localhost:3000";
   generateRobotsTxt(isOnProduction, host);
   console.log("Robots.txt generated.");
   generateWidgetScript(isOnProduction, host);
