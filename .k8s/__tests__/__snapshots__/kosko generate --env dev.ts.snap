@@ -368,9 +368,6 @@ spec:
             periodSeconds: 5
             initialDelaySeconds: 10
             timeoutSeconds: 15
-          env:
-            - name: NEXT_PUBLIC_FRONTEND_HOST
-              value: code-du-travail-numerique-mybranch.dev2.fabrique.social.gouv.fr
       initContainers:
         - args:
             - http://api

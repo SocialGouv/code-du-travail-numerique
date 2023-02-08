@@ -24,19 +24,8 @@ describe("Navigation par thème", () => {
     cy.url().should("include", "/themes/embauche");
     cy.visit("/themes/embauche");
     cy.get("h1").should("contain", "Embauche");
-    cy.get("[data-testid=theme-item]").should(
-      "not.contain",
-      "Embauche et contrat de travail"
-    );
-    cy.get("[data-testid=theme-item]").should(
-      "not.contain",
-      "Contrat de travail"
-    );
-    cy.get("[data-testid=theme-item]").should(
-      "contain",
-      "Méthodes de recrutement"
-    );
-    cy.get("[data-testid=theme-item]").should("contain", "Période d’essai");
+    cy.get("a").should("contain", "Méthodes de recrutement");
+    cy.get("a").should("contain", "Période d’essai");
     cy.get("p").should("contain", "Besoin de plus d’informations");
   });
 

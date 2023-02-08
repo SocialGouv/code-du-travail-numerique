@@ -42,9 +42,7 @@ function Theme(props: Props): JSX.Element {
                   passHref
                   legacyBehavior
                 >
-                  <Button as={StyledLink} data-testid="theme-item">
-                    {label}
-                  </Button>
+                  <Button as={StyledLink}>{label}</Button>
                 </Link>
               ))}
             </StyledContainer>

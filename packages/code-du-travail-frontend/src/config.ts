@@ -14,9 +14,8 @@ export const AZURE_BASE_URL =
 export const AZURE_CONTAINER =
   process.env.NEXT_PUBLIC_AZURE_CONTAINER ?? "cdtn-dev";
 export const COMMIT = process.env.NEXT_PUBLIC_COMMIT ?? "";
-export const FRONTEND_HOST = process.env.NEXT_PUBLIC_FRONTEND_HOST
-  ? `https://${process.env.NEXT_PUBLIC_FRONTEND_HOST}`
-  : `http://localhost:${process.env.NEXT_PUBLIC_FRONTEND_PORT ?? 3000}`;
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? `http://localhost:3000`;
 export const PACKAGE_VERSION = process.env.NEXT_PUBLIC_VERSION ?? version;
 export const PIWIK_SITE_ID = process.env.NEXT_PUBLIC_PIWIK_SITE_ID ?? "";
 export const PIWIK_URL = process.env.NEXT_PUBLIC_PIWIK_URL ?? "";
