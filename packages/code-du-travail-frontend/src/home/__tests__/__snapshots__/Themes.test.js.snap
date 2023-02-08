@@ -92,9 +92,8 @@ exports[`<Themes /> should render 1`] = `
               <div
                 class="sc-lbVvki kpySAv"
               >
-                <a
+                <div
                   class="sc-eGJWMs cMctpi"
-                  href="/themes/1-embauche-et-contrat-de-travail"
                 >
                   <div
                     class="sc-dFRpbK cbvMFR"
@@ -139,14 +138,13 @@ exports[`<Themes /> should render 1`] = `
                       </h3>
                     </div>
                   </div>
-                </a>
+                </div>
               </div>
               <div
                 class="sc-lbVvki kpySAv"
               >
-                <a
+                <div
                   class="sc-eGJWMs cMctpi"
-                  href="/themes/2-salaire-et-remuneration"
                 >
                   <div
                     class="sc-dFRpbK cbvMFR"
@@ -189,7 +187,7 @@ exports[`<Themes /> should render 1`] = `
                       </h3>
                     </div>
                   </div>
-                </a>
+                </div>
               </div>
               <div
                 class="sc-lbVvki kpySAv sc-kTCsyW eboidf"
@@ -760,9 +758,8 @@ exports[`<Themes /> should render 1`] = `
               <div
                 class="sc-lbVvki kpySAv"
               >
-                <a
+                <div
                   class="sc-eGJWMs cMctpi"
-                  href="/themes/3-temps-de-travail"
                 >
                   <div
                     class="sc-dFRpbK cbvMFR"
@@ -807,7 +804,7 @@ exports[`<Themes /> should render 1`] = `
                       </h3>
                     </div>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
           </div>

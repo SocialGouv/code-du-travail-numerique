@@ -33,9 +33,8 @@ exports[`<Highlights /> should render 1`] = `
             <div
               class="sc-lbVvki fGGtFB"
             >
-              <a
+              <div
                 class="sc-eGJWMs dxHVWB"
-                href="/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie"
               >
                 <div
                   class="sc-dFRpbK cbvMFR"
@@ -68,14 +67,13 @@ exports[`<Highlights /> should render 1`] = `
                     </p>
                   </div>
                 </div>
-              </a>
+              </div>
             </div>
             <div
               class="sc-lbVvki fGGtFB"
             >
-              <a
+              <div
                 class="sc-eGJWMs dxHVWB"
-                href="/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-employeur"
               >
                 <div
                   class="sc-dFRpbK cbvMFR"
@@ -108,7 +106,7 @@ exports[`<Highlights /> should render 1`] = `
                     </p>
                   </div>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>
