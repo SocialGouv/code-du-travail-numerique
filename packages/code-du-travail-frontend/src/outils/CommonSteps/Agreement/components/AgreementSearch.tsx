@@ -79,7 +79,7 @@ const Section = styled(SectionUi)`
     font-weight: 400;
   }
 `;
-const SelectedAgreement = styled(Toast)`
+export const SelectedAgreement = styled(Toast)`
   margin-bottom: ${spacings.base};
 `;
 

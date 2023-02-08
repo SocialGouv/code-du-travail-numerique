@@ -1,9 +1,9 @@
 import React from "react";
-import { Paragraph } from "@socialgouv/cdtn-ui";
 import { RadioQuestion } from "../../Components";
 import { Route } from "./store";
 import { AgreementSearch, EnterpriseSearch } from "./components";
 import { Agreement } from "../../../conventions/Search/api/type";
+import { Toast, Button } from "@socialgouv/cdtn-ui";
 import {
   AgreementSupportInfo,
   OnSelectAgreementFn,
@@ -13,7 +13,8 @@ import { InlineError } from "../../common/ErrorField";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import ShowAlert from "../../common/Agreement/RouteSelection/ShowAlert";
 import { AgreementSearchValue } from "./store";
-import { SectionTitle } from "../../common/stepStyles";
+import { Question } from "../../common/Question";
+import { SelectedAgreement } from "./components/AgreementSearch";
 
 type Props = {
   selectedRoute?: Route;
@@ -50,7 +51,7 @@ function AgreementStep({
     onInitAgreementPage();
   }, [onInitAgreementPage]);
 
-  const [is3239, setIs3239] = React.useState("");
+  const [isCCSelected, setIsCcSelected] = React.useState(false);
 
   return (
     <>
@@ -108,25 +109,50 @@ function AgreementStep({
       )}
       {selectedRoute === Route.enterprise && (
         <>
-          <RadioQuestion
-            questions={[
-              {
-                label: "Oui",
-                value: "Oui",
-                id: "oui-3239",
-              },
-              {
-                label: "Non",
-                value: "Non",
-                id: "non-3239",
-              },
-            ]}
-            name="oui-non"
-            label="Êtes-vous particulier employeur ou salarié d’un particulier employeur (assistant maternel, employé de maison)&nbsp;?"
-            selectedOption={is3239}
-            onChangeSelectedOption={(v) => {
-              setIs3239(v as string);
-              if (v === "Oui") {
+          {isCCSelected ? (
+            <>
+              <Question required={false} as="p">
+                Vous avez sélectionné la convention collective&nbsp;:&nbsp;
+              </Question>
+              <SelectedAgreement
+                variant="secondary"
+                onRemove={(event) => {
+                  event.preventDefault();
+                  onAgreementChange(null);
+                  setIsCcSelected(false);
+                }}
+              >
+                {selectedAgreement?.shortTitle}
+              </SelectedAgreement>
+            </>
+          ) : (
+            <>
+              <EnterpriseSearch
+                supportedAgreements={supportedAgreements}
+                selectedAgreement={selectedAgreement}
+                selectedEnterprise={selectedEnterprise}
+                onSelectAgreement={onAgreementChange}
+                onUserAction={(action, value: AgreementSearchValue) =>
+                  onEnterpriseSearch(value)
+                }
+                simulator={simulator}
+                isDisabled={selectedAgreement?.num === 3239}
+              />
+              {error?.enterprise && (
+                <InlineError>{error.enterprise}</InlineError>
+              )}
+            </>
+          )}
+
+          <Toast>
+            Vous êtes particuliers employeurs ou salarié du particulier
+            employeur (assistant maternel, employé de maison) ?
+            <br />
+            Sélectionnez{" "}
+            <Button
+              variant="link"
+              onClick={(e) => {
+                e.preventDefault();
                 onAgreementChange({
                   url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
                   id: "KALICONT000044594539",
@@ -135,45 +161,12 @@ function AgreementStep({
                   slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
                   title: "Particuliers employeurs et emploi à domicile",
                 });
-              } else {
-                onAgreementChange(null);
-              }
-            }}
-            showRequired
-            tooltip={{
-              content: (
-                <p>
-                  Sont des salariés du particulier employeur : les personnes
-                  travaillant au domicile privé d'un particulier (garde
-                  d’enfants ou d’une personne dépendante, ménage, travaux de
-                  jardinage, soutien scolaire...) et les assistants maternels
-                  (qui accueillent des enfants à leur domicile).
-                </p>
-              ),
-            }}
-          />
-          {is3239 === "Non" && (
-            <EnterpriseSearch
-              supportedAgreements={supportedAgreements}
-              selectedAgreement={selectedAgreement}
-              selectedEnterprise={selectedEnterprise}
-              onSelectAgreement={onAgreementChange}
-              onUserAction={(action, value: AgreementSearchValue) =>
-                onEnterpriseSearch(value)
-              }
-              simulator={simulator}
-              isDisabled={selectedAgreement?.num === 3239}
-            />
-          )}
-          {selectedAgreement?.num === 3239 && (
-            <>
-              <SectionTitle>Votre convention collective est :</SectionTitle>
-              <Paragraph noMargin fontWeight="600" fontSize="default">
-                Particulier employeur et emploi à domicile
-              </Paragraph>
-            </>
-          )}
-          {error?.enterprise && <InlineError>{error.enterprise}</InlineError>}
+                setIsCcSelected(true);
+              }}
+            >
+              votre convention collective ici
+            </Button>
+          </Toast>
         </>
       )}
     </>
