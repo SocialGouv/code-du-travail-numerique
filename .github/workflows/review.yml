@@ -64,7 +64,7 @@ jobs:
         uses: mikefarah/yq@v4.30.5
         id: apiurl
         with:
-          cmd: echo $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 0)
+          cmd: echo $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | head -n 1)
 
       - name: Register docker images
         uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
