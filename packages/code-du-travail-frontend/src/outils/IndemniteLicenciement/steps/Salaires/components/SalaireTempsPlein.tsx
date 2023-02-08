@@ -50,7 +50,7 @@ export const SalaireTempsPlein = ({
         [`${index}`]: undefined,
       });
     }
-    let newLocalSalaries: SalaryPeriods[] = [];
+    let newLocalSalaries: SalaryPeriods[];
     if (isFirstEdit) {
       newLocalSalaries = salaryPeriods.map((p, i) =>
         i >= index ? { ...p, value: salary } : p
@@ -195,6 +195,7 @@ const Caption = styled.caption`
 
 const Th = styled.th`
   font-size: ${fonts.sizes.small};
+
   &:first-child {
     min-width: 100px;
   }

@@ -14,6 +14,7 @@ import ShowAgreement from "../../../common/Agreement/EnterpriseSearch/ShowAgreem
 import SelectedEnterprise from "../../../common/Agreement/EnterpriseSearch/SelectedEnterprise";
 import { SearchEnterpriseInput } from "../../../common/Agreement/EnterpriseSearch/EntrepriseSearchInput/SearchEnterpriseInput";
 import { renderResults } from "../../../common/Agreement/EnterpriseSearch/EntrepriseSearchResult";
+import { PublicodesSimulator } from "@socialgouv/modeles-social";
 
 export type Props = {
   supportedAgreements: AgreementSupportInfo[];
@@ -21,6 +22,7 @@ export type Props = {
   selectedAgreement?: Agreement;
   onSelectAgreement: OnSelectAgreementFn;
   alertAgreementNotSupported?: (string) => JSX.Element;
+  simulator: PublicodesSimulator;
 } & TrackingProps;
 
 const EnterpriseSearch = ({
@@ -30,6 +32,7 @@ const EnterpriseSearch = ({
   onSelectAgreement,
   onUserAction,
   alertAgreementNotSupported,
+  simulator,
 }: Props): JSX.Element => {
   const [enterprise, setEnterprise] = useState<Enterprise | undefined>(
     selectedEnterprise
@@ -54,6 +57,7 @@ const EnterpriseSearch = ({
             agreement={enterprise.conventions[0]}
             supportedAgreements={supportedAgreements}
             alertAgreementNotSupported={alertAgreementNotSupported}
+            simulator={simulator}
           />
         ) : (
           <ShowAgreements
@@ -64,6 +68,7 @@ const EnterpriseSearch = ({
             }}
             supportedAgreements={supportedAgreements}
             alertAgreementNotSupported={alertAgreementNotSupported}
+            simulator={simulator}
           />
         )}
       </>
@@ -99,6 +104,7 @@ export default EnterpriseSearch;
 
 const Section = styled(SectionUi)`
   padding-top: 0;
+
   label {
     font-weight: 400;
   }

@@ -1,6 +1,6 @@
 import { Absence, SeniorityFactory } from "@socialgouv/modeles-social";
 import { SupportedCcIndemniteLicenciement } from "@socialgouv/modeles-social/bin";
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import { AddButton } from "../../../../common/Buttons";
@@ -43,6 +43,19 @@ const AbsencePeriods = ({
           },
         ]
   );
+
+  useEffect(() => {
+    setLocalAbsences(
+      absences.length > 0
+        ? absences
+        : [
+            {
+              motif: motifs[0],
+              durationInMonth: undefined,
+            },
+          ]
+    );
+  }, [absences, motifs]);
 
   const [errorsInput, setErrorsInput] = React.useState({});
 
@@ -115,7 +128,7 @@ const AbsencePeriods = ({
       </SmallText>
       {localAbsences.map((value, index) => (
         <AbsencePeriod
-          key={index}
+          key={`${index}-${value.motif.key}-${value.durationInMonth}`}
           index={index}
           onSelectMotif={onSelectMotif}
           onSetDurationDate={onSetDurationDate}

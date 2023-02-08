@@ -1,5 +1,4 @@
 import { StoreApi } from "zustand";
-import { push as matopush } from "@socialgouv/matomo-next";
 import {
   ContratTravailStoreData,
   ContratTravailStoreInput,
@@ -11,8 +10,6 @@ import { validateStep } from "./validator";
 import { getErrorEligibility } from "./eligibility";
 import { AncienneteStoreSlice } from "../../Anciennete/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
-import { MatomoBaseEvent } from "../../../../../lib/matomo/types";
-import { IndemniteLicenciementStepName } from "../../../../IndemniteLicenciement";
 
 const initialState: ContratTravailStoreData = {
   input: {},

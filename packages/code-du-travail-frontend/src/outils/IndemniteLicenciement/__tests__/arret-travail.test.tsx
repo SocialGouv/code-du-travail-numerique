@@ -3,6 +3,7 @@ import React from "react";
 import { CalculateurIndemnite } from "../../../../src/outils";
 import { ui } from "./ui";
 import userEvent from "@testing-library/user-event";
+import { byText } from "testing-library-selector";
 
 describe("Arrêt de travail", () => {
   describe("Page contrat de travail: vérification des questions affichées", () => {
@@ -49,6 +50,39 @@ describe("Arrêt de travail", () => {
       });
       userEvent.click(ui.next.get());
       expect(ui.agreement.agreement.query()).toBeInTheDocument();
+    });
+
+    test("user can put an invalid date and then click 'no'", async () => {
+      userEvent.click(ui.contract.arretTravail.oui.get());
+      fireEvent.change(ui.contract.dateArretTravail.get(), {
+        target: { value: "15/09/2000" },
+      });
+      userEvent.click(ui.next.get());
+      userEvent.click(ui.agreement.noAgreement.get());
+      userEvent.click(ui.next.get());
+      expect(ui.seniority.startDate.query()).toBeInTheDocument();
+
+      fireEvent.change(ui.seniority.startDate.get(), {
+        target: { value: "01/01/2022" },
+      });
+      userEvent.click(ui.next.get());
+      expect(
+        byText(
+          "La date de début de contrat doit se situer avant la date d'arrêt de travail indiquée à l'étape n°2"
+        ).query()
+      ).toBeInTheDocument();
+      userEvent.click(ui.previous.get());
+      userEvent.click(ui.previous.get());
+      userEvent.click(ui.contract.arretTravail.non.get());
+      userEvent.click(ui.next.get());
+      userEvent.click(ui.next.get());
+      expect(ui.seniority.startDate.query()).toBeInTheDocument();
+
+      expect(
+        byText(
+          "La date de début de contrat doit se situer avant la date d'arrêt de travail indiquée à l'étape n°2"
+        ).query()
+      ).not.toBeInTheDocument();
     });
   });
 

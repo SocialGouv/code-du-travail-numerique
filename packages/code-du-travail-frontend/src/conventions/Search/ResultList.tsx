@@ -3,7 +3,13 @@ import React from "react";
 import { useUIDSeed } from "react-uid";
 import styled from "styled-components";
 
-export const ResultList = ({ items, query, title }) => {
+type Props = {
+  query: string;
+  title: string;
+  items: JSX.Element[];
+};
+
+export const ResultList = ({ items, query, title }: Props): JSX.Element => {
   const seedId = useUIDSeed();
   return (
     <StyledWrapper variant="light">
@@ -32,6 +38,7 @@ const StyledListItem = styled.li`
   & + & {
     border-top: ${({ theme }) => box.border(theme.border)};
   }
+
   &:last-of-type {
     & > *:last-child {
       margin-bottom: 0;

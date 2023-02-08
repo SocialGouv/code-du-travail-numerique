@@ -1,6 +1,5 @@
 import { StoreApi } from "zustand";
 import produce from "immer";
-import { push as matopush } from "@socialgouv/matomo-next";
 import {
   SalairesStoreData,
   SalairesStoreInput,
@@ -17,7 +16,7 @@ import {
   SupportedCcIndemniteLicenciement,
 } from "@socialgouv/modeles-social";
 import { IndemniteLicenciementStepName } from "../../..";
-import { deepMergeArray, MatomoBaseEvent } from "../../../../../lib";
+import { deepMergeArray } from "../../../../../lib";
 import { computeSalaryPeriods } from "../../../common";
 import { CommonAgreementStoreSlice } from "../../../../CommonSteps/Agreement/store";
 import { ValidationResponse } from "../../../../Components/SimulatorLayout";
@@ -65,14 +64,15 @@ const createSalairesStore: StoreSlice<
     },
     initShowHasTempsPartiel: () => {
       const idcc = get().agreementData.input.agreement?.num;
-      if (idcc && idcc === 3239) {
-        set(
-          produce((state: SalairesStoreSlice) => {
-            state.salairesData.input.showHasTempsPartiel = false;
-            state.salairesData.input.hasTempsPartiel = "non";
-          })
-        );
-      }
+      const showPartialTime = idcc !== 3239;
+      set(
+        produce((state: SalairesStoreSlice) => {
+          state.salairesData.input.showHasTempsPartiel = showPartialTime;
+          state.salairesData.input.hasTempsPartiel = showPartialTime
+            ? state.salairesData.input.hasTempsPartiel
+            : "non";
+        })
+      );
     },
     onChangeHasTempsPartiel: (value) => {
       applyGenericValidation(get, set, "hasTempsPartiel", value);
@@ -140,7 +140,7 @@ const createSalairesStore: StoreSlice<
 
       set(
         produce((state: SalairesStoreSlice) => {
-          state.salairesData.hasBeenSubmit = isStepValid ? false : true;
+          state.salairesData.hasBeenSubmit = !isStepValid;
           state.salairesData.isStepValid = isStepValid;
           state.salairesData.error = errorState;
         })

@@ -1,22 +1,25 @@
 import { formatIdcc } from "@socialgouv/modeles-social";
-import slugify from "@socialgouv/cdtn-slugify";
 import { Button, Paragraph, theme } from "@socialgouv/cdtn-ui";
 import { push as matopush } from "@socialgouv/matomo-next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
+import { Agreement } from "./api/type";
 
-// following @socialgouv/modeles-social/indexing/cdtnDocuments.js slug rules
-const getConventionSlug = (convention) =>
-  slugify(`${convention.num}-${convention.shortTitle}`.substring(0, 80));
+type Props = {
+  convention: Agreement;
+  isFirst?: boolean;
+  onClick?: (agreement: Agreement) => void;
+  small?: boolean;
+};
 
 export const ConventionLink = ({
   convention,
   isFirst,
   onClick,
   small = false,
-}) => {
+}: Props): JSX.Element => {
   const { num, shortTitle, highlight } = convention;
   const router = useRouter();
 
@@ -41,13 +44,7 @@ export const ConventionLink = ({
       )}
     </StyledLink>
   ) : (
-    <Link
-      href={`/convention-collective/${getConventionSlug({
-        num,
-        shortTitle,
-      })}`}
-      passHref
-    >
+    <Link href={`/convention-collective/${convention.slug}`} passHref>
       <StyledLink {...commonProps}>
         {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
         {highlight && highlight.searchInfo && (

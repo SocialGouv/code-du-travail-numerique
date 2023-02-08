@@ -1,4 +1,4 @@
-import { formatIdcc } from "@socialgouv/modeles-social";
+import { formatIdcc, PublicodesSimulator } from "@socialgouv/modeles-social";
 import React from "react";
 
 import { Enterprise } from "../../../../conventions/Search/api/enterprises.service";
@@ -14,6 +14,7 @@ type Props = {
   supportedAgreements: AgreementSupportInfo[];
   error?: string;
   alertAgreementNotSupported?: (string) => JSX.Element;
+  simulator: PublicodesSimulator;
 };
 
 const ShowAgreements = ({
@@ -23,6 +24,7 @@ const ShowAgreements = ({
   supportedAgreements,
   error,
   alertAgreementNotSupported,
+  simulator,
 }: Props): JSX.Element => {
   const onAgreementChange = (idcc: string) => {
     const agreement = enterprise.conventions.find(
@@ -50,6 +52,7 @@ const ShowAgreements = ({
           currentAgreement={agreement}
           supportedAgreements={supportedAgreements}
           alertAgreementNotSupported={alertAgreementNotSupported}
+          simulator={simulator}
         />
       )}
     </>

@@ -1,83 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
-<div>
-  <label
-    class="sc-dTSzeu btJghr"
-    for="convention-search"
-  >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="sc-bQCEYZ iOBpgY sc-jLqRGG jXoiKy"
-  >
-    <input
-      class="sc-fXgAZx esWNAb"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      type="search"
-      value="xxxx"
-    />
-  </span>
-  <div
-    class="sc-hYRTwp jhQINW"
-  >
-    <div
-      class="sc-jSFjdj sc-fyjqAk dftIwI bUpYYm"
-    >
-      <h3
-        class="sc-iCoGMd gaXVHn"
-        data-testid="heading"
-      >
-        CONVENTIONS COLLECTIVES (1
-         
-        résultat)
-      </h3>
-      <ul
-        class="sc-jffHpj jAxtJd"
-      >
-        <li
-          class="sc-iXeHaJ gxasLI"
-        >
-          <button
-            class="sc-hiKfDv eWfpdP sc-kTCsyW jThxDW"
-          >
-            small title 1
-             
-            <span
-              class="sc-dvUynV kVDqau"
-            >
-              (IDCC 
-              0275
-              )
-            </span>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <p
-    class="sc-bUQyIj eqjFlE"
-  >
-    Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
-    <span
-      class="sc-tsGVs cQiTYY"
-    >
-      Consultez
-       
-      <button
-        class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
-        type="button"
-      >
-        notre aide
-      </button>
-      .
-    </span>
-  </p>
-</div>
-`;
-
 exports[`<Search /> should render 1`] = `
 <div>
   <label
@@ -303,7 +225,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
         class="sc-jffHpj jAxtJd"
       >
         <li
-          class="sc-iXeHaJ gxasLI"
+          class="sc-iXeHaJ iFoHge"
         >
           <a
             class="sc-kTCsyW jThxDW"
@@ -321,7 +243,7 @@ exports[`<Search /> when input is IDCC, should search conventions 1`] = `
           </a>
         </li>
         <li
-          class="sc-iXeHaJ gxasLI"
+          class="sc-iXeHaJ iFoHge"
         >
           <a
             class="sc-kTCsyW fmREus"
@@ -400,7 +322,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
         class="sc-jffHpj jAxtJd"
       >
         <li
-          class="sc-iXeHaJ gxasLI"
+          class="sc-iXeHaJ iFoHge"
         >
           <a
             class="sc-kTCsyW jThxDW"
@@ -441,139 +363,7 @@ exports[`<Search /> when input is a valid IDCC, should show only the perfect mat
 </div>
 `;
 
-exports[`<Search /> when searching SIREN, should use API SIREN and siret2idcc 1`] = `
-<div>
-  <label
-    class="sc-dTSzeu btJghr"
-    for="convention-search"
-  >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="sc-bQCEYZ iOBpgY sc-jLqRGG jXoiKy"
-  >
-    <input
-      class="sc-fXgAZx esWNAb"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      type="search"
-      value="012345678"
-    />
-  </span>
-  <div
-    class="sc-hYRTwp jhQINW"
-  >
-    <div
-      class="sc-jSFjdj sc-fyjqAk dftIwI bUpYYm"
-    >
-      <h3
-        class="sc-iCoGMd gaXVHn"
-        data-testid="heading"
-      >
-        ENTREPRISES (1
-         
-        résultat)
-      </h3>
-      <ul
-        class="sc-jffHpj jAxtJd"
-      >
-        <li
-          class="sc-iXeHaJ gxasLI"
-        >
-          <div
-            class="sc-jtiXyc eMnDEJ"
-          >
-            Entreprise 2 93100 Commune test 1
-          </div>
-          <button
-            class="sc-hiKfDv eWfpdP sc-kTCsyW kZZWQL"
-          >
-             
-            <span
-              class="sc-dvUynV kVDqau"
-            >
-              (IDCC 
-              0843
-              )
-            </span>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <p
-    class="sc-bUQyIj eqjFlE"
-  >
-    Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
-    <span
-      class="sc-tsGVs cQiTYY"
-    >
-      Consultez
-       
-      <button
-        class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
-        type="button"
-      >
-        notre aide
-      </button>
-      .
-    </span>
-  </p>
-</div>
-`;
-
-exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`] = `
-<div>
-  <label
-    class="sc-dTSzeu btJghr"
-    for="convention-search"
-  >
-    Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
-  </label>
-  <span
-    class="sc-bQCEYZ iOBpgY sc-jLqRGG jXoiKy"
-  >
-    <input
-      class="sc-fXgAZx esWNAb"
-      id="convention-search"
-      name="q"
-      placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
-      type="search"
-      value="01234567891011"
-    />
-  </span>
-  <div
-    class="sc-hYRTwp jhQINW"
-  >
-    <p
-      class="sc-cOifOu jBNwUz"
-    >
-      Le service de recherche est indisponible.
-    </p>
-  </div>
-  <p
-    class="sc-bUQyIj eqjFlE"
-  >
-    Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
-    <span
-      class="sc-tsGVs cQiTYY"
-    >
-      Consultez
-       
-      <button
-        class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
-        type="button"
-      >
-        notre aide
-      </button>
-      .
-    </span>
-  </p>
-</div>
-`;
-
-exports[`<Search /> when searching by text, should use ES, api SIREN and siret2idcc 1`] = `
+exports[`<Search /> when searching by text, should use enterprise API 1`] = `
 <div>
   <label
     class="sc-dTSzeu btJghr"
@@ -596,77 +386,11 @@ exports[`<Search /> when searching by text, should use ES, api SIREN and siret2i
   <div
     class="sc-hYRTwp jhQINW"
   >
-    <div
-      class="sc-jSFjdj sc-fyjqAk dftIwI bUpYYm"
+    <p
+      class="sc-cOifOu jBNwUz"
     >
-      <h3
-        class="sc-iCoGMd gaXVHn"
-        data-testid="heading"
-      >
-        CONVENTIONS COLLECTIVES (1
-         
-        résultat)
-      </h3>
-      <ul
-        class="sc-jffHpj jAxtJd"
-      >
-        <li
-          class="sc-iXeHaJ gxasLI"
-        >
-          <button
-            class="sc-hiKfDv eWfpdP sc-kTCsyW jThxDW"
-          >
-            titre convention 1
-             
-            <span
-              class="sc-dvUynV kVDqau"
-            >
-              (IDCC 
-              0275
-              )
-            </span>
-          </button>
-        </li>
-      </ul>
-    </div>
-    <div
-      class="sc-jSFjdj sc-fyjqAk dftIwI bUpYYm"
-    >
-      <h3
-        class="sc-iCoGMd gaXVHn"
-        data-testid="heading"
-      >
-        ENTREPRISES (1
-         
-        résultat)
-      </h3>
-      <ul
-        class="sc-jffHpj jAxtJd"
-      >
-        <li
-          class="sc-iXeHaJ gxasLI"
-        >
-          <div
-            class="sc-jtiXyc eMnDEJ"
-          >
-            Entreprise 1 93100 Commune test
-          </div>
-          <button
-            class="sc-hiKfDv eWfpdP sc-kTCsyW kZZWQL"
-          >
-            Short Convention 1
-             
-            <span
-              class="sc-dvUynV kVDqau"
-            >
-              (IDCC 
-              0843
-              )
-            </span>
-          </button>
-        </li>
-      </ul>
-    </div>
+      Le service de recherche est indisponible.
+    </p>
   </div>
   <p
     class="sc-bUQyIj eqjFlE"
