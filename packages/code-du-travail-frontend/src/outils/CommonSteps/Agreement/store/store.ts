@@ -74,11 +74,15 @@ const createCommonAgreementStore: StoreSlicePublicode<
     },
     onAgreementChange: (agreement, enterprise) => {
       applyGenericValidation(get, set, "agreement", agreement);
-      if (window.localStorage)
+      if (window.localStorage) {
         window.localStorage.setItem(
           STORAGE_KEY_AGREEMENT,
           JSON.stringify(agreement)
         );
+        if (!agreement && !enterprise) {
+          window.localStorage.removeItem(STORAGE_KEY_AGREEMENT);
+        }
+      }
       applyGenericValidation(get, set, "enterprise", enterprise);
       const idcc = agreement?.num?.toString();
       if (idcc) {
@@ -87,8 +91,8 @@ const createCommonAgreementStore: StoreSlicePublicode<
             state.agreementData.publicodes = loadPublicodes(slug, idcc);
           })
         );
-        get().informationsFunction.generatePublicodesQuestions();
       }
+      get().informationsFunction.generatePublicodesQuestions();
     },
     onNextStep: () => {
       const input = get().agreementData.input;

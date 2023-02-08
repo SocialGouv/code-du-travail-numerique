@@ -23,6 +23,7 @@ export type Props = {
   onSelectAgreement: OnSelectAgreementFn;
   alertAgreementNotSupported?: (string) => JSX.Element;
   simulator: PublicodesSimulator;
+  isDisabled?: boolean;
 } & TrackingProps;
 
 const EnterpriseSearch = ({
@@ -33,10 +34,10 @@ const EnterpriseSearch = ({
   onUserAction,
   alertAgreementNotSupported,
   simulator,
+  isDisabled,
 }: Props): JSX.Element => {
-  const [enterprise, setEnterprise] = useState<Enterprise | undefined>(
-    selectedEnterprise
-  );
+  const [enterprise, setEnterprise] =
+    useState<Enterprise | undefined>(selectedEnterprise);
   const [searchParams, setSearchParams] = useState<SearchParams>({
     address: "",
     query: "",
@@ -95,6 +96,7 @@ const EnterpriseSearch = ({
           handleEnterpriseSelection,
           onUserAction,
         })}
+        isDisabled={isDisabled}
       />
     </Section>
   );

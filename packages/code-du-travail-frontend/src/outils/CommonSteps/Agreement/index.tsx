@@ -1,4 +1,11 @@
 import React from "react";
+import {
+  InputCheckbox,
+  Paragraph,
+  icons,
+  Alert,
+  theme,
+} from "@socialgouv/cdtn-ui";
 import { RadioQuestion } from "../../Components";
 import { Route } from "./store";
 import { AgreementSearch, EnterpriseSearch } from "./components";
@@ -12,6 +19,8 @@ import { InlineError } from "../../common/ErrorField";
 import { PublicodesSimulator } from "@socialgouv/modeles-social";
 import ShowAlert from "../../common/Agreement/RouteSelection/ShowAlert";
 import { AgreementSearchValue } from "./store";
+import { SectionTitle } from "../../common/stepStyles";
+import styled from "styled-components";
 
 type Props = {
   selectedRoute?: Route;
@@ -47,6 +56,8 @@ function AgreementStep({
   React.useEffect(() => {
     onInitAgreementPage();
   }, [onInitAgreementPage]);
+
+  const [isInputVisible, setIsInputVisible] = React.useState(false);
 
   return (
     <>
@@ -113,7 +124,63 @@ function AgreementStep({
               onEnterpriseSearch(value)
             }
             simulator={simulator}
+            isDisabled={selectedAgreement?.num === 3239}
           />
+          <RowWrapper>
+            <InputWrapper>
+              <InputCheckbox
+                label={
+                  <span>
+                    <strong>
+                      Je suis particulier employeur ou salarié du particulier
+                      employeur
+                    </strong>{" "}
+                    (assistant maternel, employé maison)
+                  </span>
+                }
+                name="salarieParticulierEmployeur"
+                id="salarieParticulierEmployeur"
+                onChange={() => {
+                  onAgreementChange(
+                    selectedAgreement?.num === 3239
+                      ? null
+                      : {
+                          url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000044594539",
+                          id: "KALICONT000044594539",
+                          num: 3239,
+                          shortTitle:
+                            "Particuliers employeurs et emploi à domicile",
+                          slug: "3239-particuliers-employeurs-et-emploi-a-domicile",
+                          title: "Particuliers employeurs et emploi à domicile",
+                        }
+                  );
+                }}
+                checked={selectedAgreement?.num === 3239}
+              />
+            </InputWrapper>
+            <ButtonClicker onClick={() => setIsInputVisible(!isInputVisible)}>
+              <icons.HelpCircle size="20" aria-label="?" />
+            </ButtonClicker>
+          </RowWrapper>
+          {isInputVisible && (
+            <AlertWithMargin>
+              <p>
+                Sont des salariés du particulier employeur : les personnes
+                travaillant au domicile privé d&apos;un particulier (garde
+                d’enfants ou d’une personne dépendante, ménage, travaux de
+                jardinage, soutien scolaire...) et les assistants maternels (qui
+                accueillent des enfants à leur domicile).
+              </p>
+            </AlertWithMargin>
+          )}
+          {selectedAgreement?.num === 3239 && (
+            <>
+              <SectionTitle>Votre convention collective est :</SectionTitle>
+              <Paragraph noMargin fontWeight="600" fontSize="default">
+                Particulier employeur et emploi à domicile
+              </Paragraph>
+            </>
+          )}
           {error?.enterprise && <InlineError>{error.enterprise}</InlineError>}
         </>
       )}
@@ -122,3 +189,35 @@ function AgreementStep({
 }
 
 export default AgreementStep;
+
+const { spacings } = theme;
+
+const RowWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
+const InputWrapper = styled.div`
+  display: flex;
+  flex-basis: max-content;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ButtonClicker = styled.button`
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${({ theme }) => theme.secondary};
+`;
+
+const AlertWithMargin = styled(Alert)`
+  margin-top: ${spacings.base};
+`;

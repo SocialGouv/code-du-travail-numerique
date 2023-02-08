@@ -23,6 +23,7 @@ type Props = {
     state: FetchReducerState<Enterprise[]>,
     params: SearchParams
   ) => JSX.Element;
+  isDisabled?: boolean;
 } & TrackingProps;
 export type SearchParams = {
   address: string;
@@ -33,6 +34,7 @@ export const SearchEnterpriseInput = ({
   onUserAction,
   onSearchParamsChange,
   renderResults,
+  isDisabled,
 }: Props): JSX.Element => {
   const useEnterpriseSuggester = createSuggesterHook(
     searchEnterprises,
