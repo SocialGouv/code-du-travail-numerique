@@ -24,13 +24,16 @@ export const Tile = React.forwardRef(
     },
     ref
   ) => {
+    const { href, onClick, ...propsLink } = props;
+    const goToUrl = (e) => {
+      if (onClick) onClick();
+      if (!href) return;
+      e.preventDefault();
+      window.location.href = href;
+    };
+
     return (
-      <StyledTile
-        as={props.href ? "a" : "button"}
-        ref={ref}
-        wide={wide}
-        {...props}
-      >
+      <StyledTile ref={ref} wide={wide} {...propsLink} onClick={goToUrl}>
         {custom && <Badge />}
         <TopWrapper>
           {striped && <Stripe length="5rem" />}
@@ -60,6 +63,7 @@ Tile.propTypes = {
   custom: PropTypes.bool,
   href: PropTypes.string,
   icon: PropTypes.elementType,
+  onClick: PropTypes.elementType,
   striped: PropTypes.bool,
   subtitle: PropTypes.string,
   title: PropTypes.string,
@@ -79,7 +83,7 @@ Tile.defaultProps = {
   wide: false,
 };
 
-const StyledTile = styled.a`
+const StyledTile = styled.div`
   position: relative;
   display: inline-flex;
   flex: 1 1; /* adding auto here breaks IE11 on card list, beware */

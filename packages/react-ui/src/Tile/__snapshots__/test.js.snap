@@ -127,9 +127,8 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
 }
 
 <div>
-  <a
+  <div
     class="c0"
-    href="#"
   >
     <div
       class="c1"
@@ -177,7 +176,7 @@ exports[`<Tile /> renders a tile with a custom badge 1`] = `
     >
       There is text inside
     </div>
-  </a>
+  </div>
 </div>
 `;
 
@@ -290,9 +289,8 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
 }
 
 <div>
-  <a
+  <div
     class="c0"
-    href="#"
   >
     <div
       class="c1"
@@ -316,7 +314,7 @@ exports[`<Tile /> renders a tile with a stripe 1`] = `
     >
       There is text inside
     </div>
-  </a>
+  </div>
 </div>
 `;
 
@@ -426,9 +424,8 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
 }
 
 <div>
-  <a
+  <div
     class="c0"
-    href="#"
   >
     <div
       class="c1"
@@ -478,7 +475,7 @@ exports[`<Tile /> renders a tile with an icon 1`] = `
     >
       There is text inside
     </div>
-  </a>
+  </div>
 </div>
 `;
 
@@ -578,9 +575,8 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
 }
 
 <div>
-  <a
+  <div
     class="c0"
-    href="#"
   >
     <div
       class="c1"
@@ -601,7 +597,7 @@ exports[`<Tile /> renders a tile with text inside 1`] = `
     >
       There is text inside
     </div>
-  </a>
+  </div>
 </div>
 `;
 
@@ -712,7 +708,7 @@ exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
 }
 
 <div>
-  <button
+  <div
     class="c0"
   >
     <div
@@ -738,6 +734,6 @@ exports[`<Tile /> renders a wide tile as a button with a subtitle 1`] = `
     >
       There is text inside
     </div>
-  </button>
+  </div>
 </div>
 `;

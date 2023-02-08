@@ -23,6 +23,7 @@ export default function CallToActionWidget({
         action="Installer"
         title={title}
         titleTagType="h2"
+        href={link}
       >
         <>
           <Image src={`/static/assets/img/${image}`} alt={"Widget " + title} />

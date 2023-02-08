@@ -27,21 +27,20 @@ const {
 } = getConfig();
 
 const DocumentsTile = (
-  <Link href={`/${getRouteBySource(SOURCES.LETTERS)}`} passHref>
-    <CallToActionTile
-      action="Découvrir"
-      custom
-      icon={icons.Document}
-      title="Modèles de documents"
-      titleTagType="h2"
-      centerTitle
-    >
-      <Paragraph noMargin>
-        Téléchargez et utilisez des modèles de lettres et de documents
-        personnalisables
-      </Paragraph>
-    </CallToActionTile>
-  </Link>
+  <CallToActionTile
+    action="Découvrir"
+    custom
+    icon={icons.Document}
+    title="Modèles de documents"
+    titleTagType="h2"
+    centerTitle
+    href={`/${getRouteBySource(SOURCES.LETTERS)}`}
+  >
+    <Paragraph noMargin>
+      Téléchargez et utilisez des modèles de lettres et de documents
+      personnalisables
+    </Paragraph>
+  </CallToActionTile>
 );
 
 const Home = ({ themes = [], highlights = [], tools }) => (
@@ -68,26 +67,22 @@ const Home = ({ themes = [], highlights = [], tools }) => (
         </PageTitle>
         <Grid>
           {tools.map(({ action, description, href, icon, slug, title }) => {
-            const linkProps = {
-              href,
-              passHref: true,
-            };
             if (!href) {
-              linkProps.href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
+              href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
             }
             return (
-              <Link {...linkProps} key={slug || href}>
-                <CallToActionTile
-                  action={action}
-                  custom
-                  icon={icons[icon]}
-                  title={title}
-                  titleTagType="h3"
-                  centerTitle
-                >
-                  <Paragraph noMargin>{description}</Paragraph>
-                </CallToActionTile>
-              </Link>
+              <CallToActionTile
+                action={action}
+                custom
+                icon={icons[icon]}
+                title={title}
+                titleTagType="h3"
+                centerTitle
+                href={href}
+                key={slug || href}
+              >
+                <Paragraph noMargin>{description}</Paragraph>
+              </CallToActionTile>
             );
           })}
           {DocumentsTile}

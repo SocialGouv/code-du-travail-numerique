@@ -137,11 +137,7 @@ export const ListLink = ({
 
   // external links
   if (!slug) {
-    return (
-      <Link href={url ?? ""} passHref>
-        <Tile {...tileCommonProps} />
-      </Link>
-    );
+    return <Tile {...tileCommonProps} href={url ?? ""} />;
   }
 
   let rootSlug = slug;

@@ -7,7 +7,6 @@ import {
   Paragraph,
   Section,
 } from "@socialgouv/cdtn-ui";
-import Link from "next/link";
 import React from "react";
 
 import Metas from "../../src/common/Metas";
@@ -35,26 +34,24 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
               slug,
               title,
             }) => {
-              const linkProps = {
-                passHref: true,
-                href: `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`,
-              };
+              const href = `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`;
+
               return (
-                <Link {...linkProps} passHref key={id}>
-                  <CallToActionTile
-                    action={action}
-                    custom
-                    title={title}
-                    icon={icons[icon]}
-                    titleTagType="h2"
-                    centerTitle
-                    data-testid="tools-list-items-internal"
-                  >
-                    <Paragraph noMargin>
-                      {description ?? metaDescription}
-                    </Paragraph>
-                  </CallToActionTile>
-                </Link>
+                <CallToActionTile
+                  action={action}
+                  custom
+                  title={title}
+                  icon={icons[icon]}
+                  titleTagType="h2"
+                  centerTitle
+                  data-testid="tools-list-items-internal"
+                  href={href}
+                  key={id}
+                >
+                  <Paragraph noMargin>
+                    {description ?? metaDescription}
+                  </Paragraph>
+                </CallToActionTile>
               );
             }
           )}

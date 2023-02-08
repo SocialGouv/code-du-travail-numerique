@@ -10,7 +10,6 @@ import {
   Tile,
 } from "@socialgouv/cdtn-ui";
 import getConfig from "next/config";
-import Link from "next/link";
 import React, { useCallback, useState } from "react";
 import styled from "styled-components";
 
@@ -87,20 +86,16 @@ function Modeles(props) {
                 <Heading as={HeadingBlue}>{title}</Heading>
                 {items.map(({ description, slug, title }) => (
                   <StyledListItem key={slug}>
-                    <Link
+                    <Tile
+                      wide
+                      custom
+                      title={title}
+                      subtitle={theme.title}
+                      titleTagType="h3"
                       href={`${getRouteBySource(SOURCES.LETTERS)}/${slug}`}
-                      passHref
                     >
-                      <Tile
-                        wide
-                        custom
-                        title={title}
-                        subtitle={theme.title}
-                        titleTagType="h3"
-                      >
-                        {summarize(description)}
-                      </Tile>
-                    </Link>
+                      {summarize(description)}
+                    </Tile>
                   </StyledListItem>
                 ))}
               </React.Fragment>
