@@ -269,35 +269,30 @@ exports[`<Theme /> should render 1`] = `
           >
             <a
               class="sc-gelMue jAkAiq sc-hhOBVt irUZZv"
-              data-testid="theme-item"
               href="/themes//themes/121-cdi"
             >
               CDI
             </a>
             <a
               class="sc-gelMue jAkAiq sc-hhOBVt irUZZv"
-              data-testid="theme-item"
               href="/themes//themes/122-cdd"
             >
               CDD
             </a>
             <a
               class="sc-gelMue jAkAiq sc-hhOBVt irUZZv"
-              data-testid="theme-item"
               href="/themes//themes/123-interim"
             >
               Intérim
             </a>
             <a
               class="sc-gelMue jAkAiq sc-hhOBVt irUZZv"
-              data-testid="theme-item"
               href="/themes//themes/124-contrat-dapprentissage"
             >
               Contrat d'apprentissage
             </a>
             <a
               class="sc-gelMue jAkAiq sc-hhOBVt irUZZv"
-              data-testid="theme-item"
               href="/themes//themes/125-contrat-de-professionnalisation"
             >
               Contrat de professionnalisation
