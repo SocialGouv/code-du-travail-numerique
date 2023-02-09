@@ -39,6 +39,7 @@ const renderResults = ({
   return function renderResults(
     state: FetchReducerState<Agreement[]>
   ): JSX.Element {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     if (state.isLoading) {
