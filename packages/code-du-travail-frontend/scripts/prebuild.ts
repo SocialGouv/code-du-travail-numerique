@@ -17,7 +17,7 @@ export const generateRobotsTxt = (isOnProduction: boolean, host: string) => {
   fs.writeFileSync(filePath, robot);
 };
 
-export const generateWidgetScript = (isOnProduction: boolean, host: string) => {
+export const generateWidgetScript = (host: string) => {
   const widgetInputScriptPath = path.join(__dirname, "widget-template.js");
   const widgetOutputScriptPath = path.join(__dirname, "../public/widget.js");
   const data = fs.readFileSync(widgetInputScriptPath, {
@@ -25,9 +25,7 @@ export const generateWidgetScript = (isOnProduction: boolean, host: string) => {
     flag: "r",
   });
   if (!data) return;
-  const protocol = isOnProduction ? "https://" : "http://";
-
-  const hostedData = data.replace(/__HOST__/g, protocol + host);
+  const hostedData = data.replace(/__HOST__/g, host);
 
   fs.writeFileSync(widgetOutputScriptPath, hostedData);
 };
@@ -37,7 +35,7 @@ const run = () => {
   const host = process.env.NEXT_PUBLIC_SITE_URL ?? "localhost:3000";
   generateRobotsTxt(isOnProduction, host);
   console.log("Robots.txt generated.");
-  generateWidgetScript(isOnProduction, host);
+  generateWidgetScript(host);
   console.log("widget.js generated.");
 };
 

@@ -40,7 +40,6 @@ const IntegrationContainer = ({
     }, []);
   };
   useScript();
-  // const router = useRouter();
   return (
     <Container narrow>
       <PageTitle>{title}</PageTitle>
