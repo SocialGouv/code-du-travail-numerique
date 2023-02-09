@@ -34,7 +34,7 @@
         "metaDescription": "Intégrez l’outil de procédure de licenciement de retraite du Code du travail numérique sur votre site grâce à un module (widget).",
         "title": "Intégrez l’outil de procédure de licenciement du Code du travail numérique",
         "description": "Vous pouvez intégrer l’outil de procédure de licenciement du Code du travail numérique sur votre site grâce à un module (widget). Ce module permettra à l'utilisateur de trouver toutes les informations liés à sa procédure de licenciement grâce à un questionnaire détaillé.",
-        "shortTitle": "Procedure de licenciement",
+        "shortTitle": "Procédure de licenciement",
         "shortDescription": "Trouver les informations liés à votre cas de licenciement",
         "url": "/widgets/procedure-licenciement",
         "id": "procedure-licenciement"
