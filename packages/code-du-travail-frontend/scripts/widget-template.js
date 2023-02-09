@@ -1,6 +1,5 @@
 function linkToNewTab(iframe) {
   const links = iframe.contentWindow.document.getElementsByTagName("a");
-  if (!links.length) return;
   for (let i = 0; i < links.length; i++) {
     links[i].target = "_blank";
   }
