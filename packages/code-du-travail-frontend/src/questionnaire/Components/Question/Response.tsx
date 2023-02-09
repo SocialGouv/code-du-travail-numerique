@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { InputRadio, theme } from "@socialgouv/cdtn-ui";
+import { InputRadio } from "@socialgouv/cdtn-ui";
 import { useStore } from "../../store";
 import { Tooltip } from "../../../common/Tooltip";
 import { trackClickHelp } from "../../tracking";

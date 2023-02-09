@@ -5,6 +5,7 @@ type Props = {
   title: string;
   children: React.ReactNode;
   isTooltipOpen?: boolean;
+  className?: string;
   onVisibilityChange?: () => void;
 };
 
@@ -12,6 +13,7 @@ export const InfoBulle = ({
   children,
   title,
   isTooltipOpen,
+  className,
   onVisibilityChange,
 }: Props): JSX.Element => {
   const [isLocalTooltipOpen, setIsLocalToolTipOpen] = React.useState(false);
@@ -19,6 +21,7 @@ export const InfoBulle = ({
   return (
     <DisclosureIcon
       icon={<icons.HelpCircle size="20" aria-label="?" />}
+      className={className}
       iconTitle={title}
       isTooltipOpen={
         isTooltipOpen === undefined ? isLocalTooltipOpen : isTooltipOpen

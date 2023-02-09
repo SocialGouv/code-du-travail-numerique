@@ -1,42 +1,25 @@
 import styled from "styled-components";
-import { useEffect, useState } from "react";
 import { useStore } from "../../store";
 import { Response } from "./Response";
-import { Tooltip } from "../../../common/Tooltip";
 import { ShowInfo } from "./ShowInfo";
-import { trackClickHelp } from "../../tracking";
-import { Text } from "@socialgouv/cdtn-ui";
+import { Fieldset, Legend } from "@socialgouv/cdtn-ui";
+import { InfoBulle } from "../../../outils/common/InfoBulle";
 
 export const Question = () => {
   const currentQuestion = useStore((state) => state.currentQuestion);
   const lastResponse = useStore((state) => state.lastResponse);
-  const [openedTooltip, setOpenedTooltip] = useState(false);
-  useEffect(() => {
-    setOpenedTooltip(false);
-  }, [currentQuestion]);
   return lastResponse?.slug ? (
     <ShowInfo slug={lastResponse.slug}></ShowInfo>
   ) : (
-    <div>
+    <Fieldset>
       <QuestionHeaderWrapper>
-        <Text fontWeight="600" fontSize="default">
-          {currentQuestion?.text}
-        </Text>
+        <LegendWrapper>{currentQuestion?.text}</LegendWrapper>
         {currentQuestion?.info && (
-          <Tooltip
-            onChange={(opened) => {
-              setOpenedTooltip(opened);
-              if (opened) {
-                trackClickHelp(currentQuestion.trackingName);
-              }
-            }}
-            data-testid={`Tooltip-${currentQuestion?.text}`}
-          />
+          <StyledInfoBulle title={"Plus d'informations"}>
+            {currentQuestion?.info}
+          </StyledInfoBulle>
         )}
       </QuestionHeaderWrapper>
-      {openedTooltip && (
-        <InformationWrapper>{currentQuestion?.info}</InformationWrapper>
-      )}
 
       {currentQuestion?.responses.map((response, index: number) => (
         <Response
@@ -46,14 +29,25 @@ export const Question = () => {
         ></Response>
       ))}
       <Description>{currentQuestion?.description}</Description>
-    </div>
+    </Fieldset>
   );
 };
 
-const QuestionHeaderWrapper = styled.div`
+const StyledInfoBulle = styled(InfoBulle)`
+  padding: 0;
+`;
+
+const LegendWrapper = styled(Legend)`
+  font-weight: 600;
+  float: left;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
+
+const QuestionHeaderWrapper = styled.div`
   margin: 0 0 11px;
+  display: inline-block;
 `;
 
 const Description = styled.i`

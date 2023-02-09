@@ -1,4 +1,4 @@
-import { Text, theme } from "@socialgouv/cdtn-ui";
+import { Legend, Text, theme } from "@socialgouv/cdtn-ui";
 import React from "react";
 import styled from "styled-components";
 
@@ -30,42 +30,46 @@ export const Question = ({
 }: Props): JSX.Element => {
   const [isLocalTooltipOpen, setIsLocalToolTipOpen] = React.useState(false);
   return (
-    <LabelBlock
-      htmlFor={htmlFor}
-      {...otherProps}
-      data-testid={"question-label"}
-    >
+    <Legend htmlFor={htmlFor} {...otherProps} data-testid={"question-label"}>
       <Text
         fontWeight="600"
         fontSize={otherProps.as === "p" ? "default" : "hsmall"}
       >
         {children}
         {required && <Text as="span">&nbsp;(obligatoire)</Text>}
+        {tooltip && (
+          <InfoBulle
+            title={tooltip.help ?? "Plus d'informations"}
+            isTooltipOpen={
+              isTooltipOpen === undefined ? isLocalTooltipOpen : isTooltipOpen
+            }
+            onVisibilityChange={() => {
+              tooltip.trackableFn?.(
+                isTooltipOpen === undefined
+                  ? !isLocalTooltipOpen
+                  : isTooltipOpen
+              );
+              setIsLocalToolTipOpen(
+                isTooltipOpen === undefined
+                  ? !isLocalTooltipOpen
+                  : isTooltipOpen
+              );
+              onSwitchTooltip?.();
+            }}
+          >
+            {tooltip.content}
+          </InfoBulle>
+        )}
       </Text>
-      {tooltip && (
-        <InfoBulle
-          title={tooltip.help ?? "Plus d'informations"}
-          isTooltipOpen={
-            isTooltipOpen === undefined ? isLocalTooltipOpen : isTooltipOpen
-          }
-          onVisibilityChange={() => {
-            tooltip.trackableFn?.(
-              isTooltipOpen === undefined ? !isLocalTooltipOpen : isTooltipOpen
-            );
-            setIsLocalToolTipOpen(
-              isTooltipOpen === undefined ? !isLocalTooltipOpen : isTooltipOpen
-            );
-            onSwitchTooltip?.();
-          }}
-        >
-          {tooltip.content}
-        </InfoBulle>
-      )}
-    </LabelBlock>
+    </Legend>
   );
 };
 
 const { breakpoints, fonts, spacings } = theme;
+
+const StyledLegend = styled(Legend)`
+  font-weight: 600;
+`;
 
 const LabelBlock = styled.label`
   display: block;
