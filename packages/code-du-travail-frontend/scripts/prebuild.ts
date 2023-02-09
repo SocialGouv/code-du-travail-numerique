@@ -32,7 +32,7 @@ export const generateWidgetScript = (host: string) => {
 
 const run = () => {
   const isOnProduction = !!process.env.PRODUCTION;
-  const host = process.env.NEXT_PUBLIC_SITE_URL ?? "localhost:3000";
+  const host = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
   generateRobotsTxt(isOnProduction, host);
   console.log("Robots.txt generated.");
   generateWidgetScript(host);
