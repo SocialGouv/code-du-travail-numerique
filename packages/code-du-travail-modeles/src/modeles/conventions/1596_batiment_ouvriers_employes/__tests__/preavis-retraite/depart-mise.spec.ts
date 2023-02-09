@@ -9,8 +9,7 @@ const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 const CommonReference = {
   article:
     "Accord collectif national du 13 avril 2004 relatif au départ et à la mise à la retraite dans le bâtiment et les travaux publics, article 4",
-  url:
-    "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005706582/?idConteneur=KALICONT000005635120",
+  url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000005706582/?idConteneur=KALICONT000005635120",
 };
 
 const DepartRetraiteCcReferences = [

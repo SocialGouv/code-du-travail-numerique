@@ -20,11 +20,15 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
         const { result, missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC0650'",
-            "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
+            "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age":
+              age,
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -50,11 +54,15 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
         const { result, missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC0650'",
-            "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
+            "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age":
+              age,
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -81,11 +89,15 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
         const { result, missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC0650'",
-            "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
+            "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age":
+              age,
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -112,11 +124,15 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
         const { result, missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC0650'",
-            "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
+            "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age":
+              age,
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -143,13 +159,17 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
         const { result, missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC0650'",
-            "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
+            "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age":
+              age,
             "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age plus de 60 ans":
               "'Oui'",
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -176,13 +196,17 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
         const { result, missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC0650'",
-            "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
+            "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age":
+              age,
             "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age plus de 60 ans":
               "'Oui'",
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -209,13 +233,17 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
         const { result, missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC0650'",
-            "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
+            "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age":
+              age,
             "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age plus de 60 ans":
               "'Oui'",
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -242,13 +270,17 @@ describe("Indemnité conventionnel de licenciement pour la CC 650", () => {
         const { result, missingArgs } = engine.setSituation(
           {
             "contrat salarié . convention collective": "'IDCC0650'",
-            "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age": age,
+            "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age":
+              age,
             "contrat salarié . convention collective . métallurgie ingénieurs et cadres . indemnité de licenciement . age plus de 60 ans":
               "'Oui'",
             "contrat salarié . indemnité de licenciement": "oui",
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );

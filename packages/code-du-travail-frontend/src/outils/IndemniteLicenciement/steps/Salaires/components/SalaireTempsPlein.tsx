@@ -141,7 +141,7 @@ export const SalaireTempsPlein = ({
                       id={`prime.${index}`}
                       name={`prime.${index}`}
                       type="number"
-                      error={errorsPrimes[`${index}`]}
+                      invalid={errorsPrimes[`${index}`]}
                       icon={icons.Euro}
                       onChange={(e) =>
                         onChangeLocalPrimes(index, e.target.value)

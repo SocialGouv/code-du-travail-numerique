@@ -8,8 +8,7 @@ const engine = new IndemniteLicenciementPublicodes(
 const References = [
   {
     article: "Article 9.2",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005775560?idConteneur=KALICONT000005635435",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005775560?idConteneur=KALICONT000005635435",
   },
 ];
 
@@ -27,9 +26,12 @@ describe("Vérification des références juridiques pour la CC 2511", () => {
     ({ seniority, inaptitude, expectedReferences }) => {
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1516'",
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": inaptitude,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          inaptitude,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
       });

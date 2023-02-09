@@ -3,7 +3,7 @@
 exports[`<Title /> heading should default to H6 1`] = `
 <div>
   <h6
-    class="sc-iCoGMd gaXVHn"
+    class="sc-iBYQkv iDmZxg"
     data-testid="heading"
   />
 </div>
@@ -12,7 +12,7 @@ exports[`<Title /> heading should default to H6 1`] = `
 exports[`<Title /> should render a H{x} whose {x} is headingLevel + 2 1`] = `
 <div>
   <h4
-    class="sc-iCoGMd gaXVHn"
+    class="sc-iBYQkv iDmZxg"
     data-testid="heading"
   />
 </div>

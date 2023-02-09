@@ -28,8 +28,8 @@ export function ResultList({ query, children }: Props): JSX.Element {
   );
 }
 
-export const ListItem: React.FC = ({ children }) => {
-  return <Li>{children}</Li>;
+export const ListItem = (props: any) => {
+  return <Li {...props}>{props.children}</Li>;
 };
 
 const Li = styled.li`

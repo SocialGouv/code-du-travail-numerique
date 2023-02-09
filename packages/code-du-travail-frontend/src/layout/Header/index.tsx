@@ -44,7 +44,7 @@ export const Header = ({ currentPage = "" }) => {
     >
       <StyledPrintDate id="printDate">{currentDate}</StyledPrintDate>
       <StyledContainer>
-        <Link href="/" passHref>
+        <Link href="/" passHref legacyBehavior>
           <LogoLink
             overThreshold={overThreshold}
             title="Code du travail numérique - retour à l'accueil"
@@ -70,6 +70,7 @@ export const Header = ({ currentPage = "" }) => {
             <Link
               href={{ pathname: "/recherche", ...(q && { query: { q } }) }}
               passHref
+              legacyBehavior
             >
               <StyledLink rel="nofollow" aria-label="Lancer ma recherche">
                 <icons.Search />

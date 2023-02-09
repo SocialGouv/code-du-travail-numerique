@@ -46,7 +46,11 @@ const EnterpriseSearchStep = ({
           />
         </form>
       </Section>
-      <Link href={`/${SOURCES.TOOLS}/convention-collective`} passHref>
+      <Link
+        href={`/${SOURCES.TOOLS}/convention-collective`}
+        passHref
+        legacyBehavior
+      >
         <Button as="a" small type="button" onClick={onBackClick} variant="flat">
           Précédent
         </Button>

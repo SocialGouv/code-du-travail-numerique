@@ -9,16 +9,14 @@ const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 const DepartReferences = [
   {
     article: "Article 8.12",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018926442?idConteneur=KALICONT000018926209",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018926442?idConteneur=KALICONT000018926209",
   },
 ];
 
 const MiseReferences = [
   {
     article: "Article 8.9",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018926437/?idConteneur=KALICONT000018926209",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000018926437/?idConteneur=KALICONT000018926209",
   },
 ];
 

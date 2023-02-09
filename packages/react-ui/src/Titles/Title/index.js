@@ -46,8 +46,10 @@ export const Title = ({
 Title.propTypes = {
   as: PropTypes.string,
   children: PropTypes.node,
+  id: PropTypes.string,
   isFirst: PropTypes.bool,
   isHeader: PropTypes.bool,
+  role: PropTypes.string,
   shift: PropTypes.string,
   stripe: PropTypes.oneOf(["left", "top", "none"]),
   subtitle: PropTypes.node,

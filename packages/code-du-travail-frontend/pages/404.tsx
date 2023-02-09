@@ -14,12 +14,10 @@ export default function Custom404() {
   }, []);
   return (
     <>
-      <Head>
-        <Metas
-          title="Page non trouvée"
-          description="La page que vous cherchez n'a pas été trouvée..."
-        />
-      </Head>
+      <Metas
+        title="Page non trouvée"
+        description="La page que vous cherchez n'a pas été trouvée..."
+      />
       <Layout>
         <CenteredContainer>
           <Suptitle>ERREUR 404</Suptitle>
@@ -34,7 +32,7 @@ export default function Custom404() {
               Nous vous invitons à revenir sur notre page d’accueil et à
               effectuer une recherche.
             </p>
-            <Link href="/" passHref>
+            <Link href="/" passHref legacyBehavior>
               <Button variant="primary" as="a">
                 Revenir à la page d’accueil
               </Button>

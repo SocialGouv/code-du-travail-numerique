@@ -19,8 +19,10 @@ describe("Formule indemnité licenciement - CC 2941", () => {
     ({ seniority, expectedFormula, expectedExplanations }) => {
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC2941'",
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+          seniority,
         "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
           "non",
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
