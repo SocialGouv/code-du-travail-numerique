@@ -37,11 +37,15 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
         "contrat salarié . convention collective": "'IDCC1501'",
         "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
         "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique": `'${economicFiring}'`,
-        "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age": age,
+        "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age":
+          age,
         "contrat salarié . indemnité de licenciement": "oui",
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+          salary,
       });
 
       const result = engine.getReferences("résultat conventionnel");
@@ -51,8 +55,7 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
         expect.arrayContaining([
           {
             article: "Article 13",
-            url:
-              "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005833468?idConteneur=KALICONT000005635596",
+            url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005833468?idConteneur=KALICONT000005635596",
           },
         ])
       );

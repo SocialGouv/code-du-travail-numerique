@@ -12,13 +12,11 @@ const engine = new Engine(modeles as any);
 const CommonReferences = [
   {
     article: "Article 4.4.2.1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000021063914/?idConteneur=KALICONT000017577652",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000021063914/?idConteneur=KALICONT000017577652",
   },
   {
     article: "Article 4.4.1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000021063914/?idConteneur=KALICONT000017577652",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000021063914/?idConteneur=KALICONT000017577652",
   },
 ];
 

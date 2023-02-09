@@ -195,7 +195,7 @@ exports[`<Tabs /> renders 1`] = `
 <div>
   <div
     class="c0"
-    data-tabs="true"
+    data-rttabs="true"
   >
     <div
       class="c1 c2"
@@ -212,6 +212,7 @@ exports[`<Tabs /> renders 1`] = `
             aria-disabled="false"
             aria-selected="true"
             class="c5 react-tabs__tab--selected"
+            data-rttab="true"
             data-testid="undefined-0"
             id="react-tabs-0"
             role="tab"
@@ -224,6 +225,7 @@ exports[`<Tabs /> renders 1`] = `
             aria-disabled="false"
             aria-selected="false"
             class="c5"
+            data-rttab="true"
             data-testid="undefined-1"
             id="react-tabs-2"
             role="tab"

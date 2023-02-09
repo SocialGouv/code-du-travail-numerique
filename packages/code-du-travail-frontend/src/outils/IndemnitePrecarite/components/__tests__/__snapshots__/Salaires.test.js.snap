@@ -3,44 +3,44 @@
 exports[`<Salaires /> should add a salaire 1`] = `
 <div>
   <label
-    class="sc-kizEQm eyqPAY"
+    class="sc-kiPvrU lppfVs"
     data-testid="question-label"
   >
     <span
-      class="sc-bBjRSN fzTfxR"
+      class="sc-bCfvAP iHaZba"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
       <span
-        class="sc-bBjRSN jPMLlF"
+        class="sc-bCfvAP hEXzCO"
       >
          (obligatoire)
       </span>
     </span>
   </label>
   <div
-    class="sc-amkrK havVrX"
+    class="sc-ZqGJI eTHaMk"
   >
     <label
-      class="sc-iIgjPs bYjgwS"
+      class="sc-iJbNxu gJJDFs"
       for="5"
     >
       Montant :
     </label>
     <div
-      class="sc-cKRKFl hQAFJK"
+      class="sc-cLNonn hjsQlh"
     >
       <span
-        class="sc-bQCEYZ iOBpgY"
+        class="sc-bQmOxr iqEHsz"
       >
         <input
-          class="sc-fXgAZx diKTOs"
+          class="sc-fWQKxP iOpVQL"
           id="5"
           name="salaires[0].salaire"
           type="number"
           value=""
         />
         <div
-          class="sc-EZqKI fxcivc"
+          class="sc-EJAja kKkiFD"
         >
           <svg
             aria-hidden="true"
@@ -57,13 +57,13 @@ exports[`<Salaires /> should add a salaire 1`] = `
       </span>
     </div>
     <button
-      class="sc-hiKfDv dNqnKz sc-gstuGz cPVpKB"
+      class="sc-hhOBVt cizsts sc-grxQYx gEVZbe"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="sc-dvUynV cRzFhK"
+        class="sc-dvEHMn fEcSSS"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -78,12 +78,12 @@ exports[`<Salaires /> should add a salaire 1`] = `
     </button>
   </div>
   <button
-    class="sc-hiKfDv dNqnKz sc-kTCsyW gLwQqj"
+    class="sc-hhOBVt cizsts sc-kSGOQU byxAuQ"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="sc-jtiXyc FjHRC"
+      class="sc-jsTgWu dcCoNh"
       fill="none"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
@@ -103,27 +103,27 @@ exports[`<Salaires /> should add a salaire 1`] = `
 exports[`<Salaires /> should delete a salaires 1`] = `
 <div>
   <label
-    class="sc-kizEQm eyqPAY"
+    class="sc-kiPvrU lppfVs"
     data-testid="question-label"
   >
     <span
-      class="sc-bBjRSN fzTfxR"
+      class="sc-bCfvAP iHaZba"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
       <span
-        class="sc-bBjRSN jPMLlF"
+        class="sc-bCfvAP hEXzCO"
       >
          (obligatoire)
       </span>
     </span>
   </label>
   <button
-    class="sc-hiKfDv dNqnKz sc-kTCsyW gLwQqj"
+    class="sc-hhOBVt cizsts sc-kSGOQU byxAuQ"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="sc-jtiXyc FjHRC"
+      class="sc-jsTgWu dcCoNh"
       fill="none"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
@@ -143,44 +143,44 @@ exports[`<Salaires /> should delete a salaires 1`] = `
 exports[`<Salaires /> should render 1`] = `
 <div>
   <label
-    class="sc-kizEQm eyqPAY"
+    class="sc-kiPvrU lppfVs"
     data-testid="question-label"
   >
     <span
-      class="sc-bBjRSN fzTfxR"
+      class="sc-bCfvAP iHaZba"
     >
       Quels sont les salaires mensuels bruts perçus durant le contrat de travail ?
       <span
-        class="sc-bBjRSN jPMLlF"
+        class="sc-bCfvAP hEXzCO"
       >
          (obligatoire)
       </span>
     </span>
   </label>
   <div
-    class="sc-amkrK havVrX"
+    class="sc-ZqGJI eTHaMk"
   >
     <label
-      class="sc-iIgjPs bYjgwS"
+      class="sc-iJbNxu gJJDFs"
       for="1"
     >
       Montant :
     </label>
     <div
-      class="sc-cKRKFl hQAFJK"
+      class="sc-cLNonn hjsQlh"
     >
       <span
-        class="sc-bQCEYZ iOBpgY"
+        class="sc-bQmOxr iqEHsz"
       >
         <input
-          class="sc-fXgAZx diKTOs"
+          class="sc-fWQKxP iOpVQL"
           id="1"
           name="salaires[0].salaire"
           type="number"
           value="3000"
         />
         <div
-          class="sc-EZqKI fxcivc"
+          class="sc-EJAja kKkiFD"
         >
           <svg
             aria-hidden="true"
@@ -197,13 +197,13 @@ exports[`<Salaires /> should render 1`] = `
       </span>
     </div>
     <button
-      class="sc-hiKfDv dNqnKz sc-gstuGz cPVpKB"
+      class="sc-hhOBVt cizsts sc-grxQYx gEVZbe"
       type="button"
     >
       Supprimer
       <svg
         aria-hidden="true"
-        class="sc-dvUynV cRzFhK"
+        class="sc-dvEHMn fEcSSS"
         fill="none"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -218,12 +218,12 @@ exports[`<Salaires /> should render 1`] = `
     </button>
   </div>
   <button
-    class="sc-hiKfDv dNqnKz sc-kTCsyW gLwQqj"
+    class="sc-hhOBVt cizsts sc-kSGOQU byxAuQ"
     type="button"
   >
     <svg
       aria-hidden="true"
-      class="sc-jtiXyc FjHRC"
+      class="sc-jsTgWu dcCoNh"
       fill="none"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"

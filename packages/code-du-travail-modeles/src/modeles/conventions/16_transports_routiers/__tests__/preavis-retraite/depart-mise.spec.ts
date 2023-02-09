@@ -74,7 +74,8 @@ test.each`
         "contrat salarié . ancienneté": seniority,
         "contrat salarié . convention collective": "'IDCC0016'",
         "contrat salarié . convention collective . transports routiers . catégorie professionnelle": `'${category}'`,
-        "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe": group,
+        "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe":
+          group,
         "contrat salarié . mise à la retraite": "oui",
         "contrat salarié . travailleur handicapé": "non",
       },
@@ -131,7 +132,8 @@ test.each`
       "contrat salarié . ancienneté": seniority,
       "contrat salarié . convention collective": "'IDCC0016'",
       "contrat salarié . convention collective . transports routiers . catégorie professionnelle": `'${category}'`,
-      "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe": group,
+      "contrat salarié . convention collective . transports routiers . catégorie professionnelle . TAM . groupe":
+        group,
       "contrat salarié . mise à la retraite": "oui",
       "contrat salarié . travailleur handicapé": "non",
     });

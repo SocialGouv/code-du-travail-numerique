@@ -3,29 +3,29 @@
 exports[`<TextQuestion /> should render 1`] = `
 <div>
   <label
-    class="sc-dvUynV faTIvj"
+    class="sc-dvEHMn eummWX"
     data-testid="question-label"
     for="1"
   >
     <span
-      class="sc-bBjRSN fzTfxR"
+      class="sc-bCfvAP iHaZba"
     >
       lorem ipsum
       <span
-        class="sc-bBjRSN jPMLlF"
+        class="sc-bCfvAP hEXzCO"
       >
          (obligatoire)
       </span>
     </span>
   </label>
   <div
-    class="sc-jtiXyc eRvBTY"
+    class="sc-jsTgWu fXTGDz"
   >
     <span
-      class="sc-bQCEYZ iOBpgY"
+      class="sc-bQmOxr iqEHsz"
     >
       <input
-        class="sc-fXgAZx esWNAb"
+        class="sc-fWQKxP iaRXHc"
         data-testid="test"
         id="1"
         name="test"

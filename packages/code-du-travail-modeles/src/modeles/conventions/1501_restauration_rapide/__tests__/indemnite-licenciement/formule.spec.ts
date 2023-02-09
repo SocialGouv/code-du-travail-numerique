@@ -30,8 +30,10 @@ describe("Formule indemnité licenciement - 1501", () => {
           "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age":
             "42",
           "contrat salarié . indemnité de licenciement": "oui",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "2300",
         });
@@ -64,10 +66,13 @@ describe("Formule indemnité licenciement - 1501", () => {
           "contrat salarié . convention collective": "'IDCC1501'",
           "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique": `'Oui'`,
-          "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age": age,
+          "contrat salarié . convention collective . restauration rapide . indemnité de licenciement . licenciement économique . age":
+            age,
           "contrat salarié . indemnité de licenciement": "oui",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniority,
           "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
             "2300",
         });

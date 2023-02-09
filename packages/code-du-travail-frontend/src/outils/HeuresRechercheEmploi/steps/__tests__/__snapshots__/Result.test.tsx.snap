@@ -3,7 +3,7 @@
 exports[`<StepResult /> should render no results 1`] = `
 <div>
   <h2
-    class="sc-kizEQm hCdZfB"
+    class="sc-kiPvrU ceZDKl"
   >
     Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
@@ -13,12 +13,12 @@ exports[`<StepResult /> should render no results 1`] = `
   <div>
     <div
       aria-expanded="false"
-      class="sc-khIgEk ceBxWI"
+      class="sc-khsqcC jyDCrc"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-fujyAs BrylG"
+        class="sc-ftTHYK jiFzuu"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -34,16 +34,16 @@ exports[`<StepResult /> should render no results 1`] = `
         />
       </svg>
       <p
-        class="sc-cOifOu XEwmn sc-hTRkXV jAbsFO"
+        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
       >
         Voir le détail du calcul
       </p>
     </div>
     <div
-      class="sc-Arkif eVwpCw"
+      class="sc-AHaJN dhcrLx"
     >
       <h2
-        class="sc-kizEQm hCdZfB"
+        class="sc-kiPvrU ceZDKl"
       >
         Éléments saisis
       </h2>
@@ -78,7 +78,7 @@ exports[`<StepResult /> should render no results 1`] = `
         </li>
       </ul>
       <h2
-        class="sc-kizEQm hCdZfB"
+        class="sc-kiPvrU ceZDKl"
       >
         Sources
       </h2>
@@ -97,13 +97,13 @@ exports[`<StepResult /> should render no results 1`] = `
     </div>
   </div>
   <div
-    class="sc-lmgQwP sc-kTCsyW kHzGur jwKwCa"
+    class="sc-lllmON sc-kSGOQU hrCOuh bqQeuZ"
   >
     <div
-      class="sc-gGLxEB kEYfsY"
+      class="sc-gGvHcT hSOEAU"
     >
       <div
-        class="sc-ckTSus eGIUDO"
+        class="sc-ckEbSK fTbCHa"
       >
         <svg
           aria-hidden="true"
@@ -123,10 +123,10 @@ exports[`<StepResult /> should render no results 1`] = `
         </svg>
       </div>
       <div
-        class="sc-fbIWvP itJXQd"
+        class="sc-fbYMXx dVfpRL"
       >
         <p
-          class="sc-cOifOu gIgAxs sc-dvUynV WDTQd"
+          class="sc-cOxWqc fjmwyW sc-dvEHMn jfRMop"
         >
           Attention il peut exister une durée plus favorable
         </p>
@@ -142,7 +142,7 @@ exports[`<StepResult /> should render no results 1`] = `
 exports[`<StepResult /> should render with duration 1`] = `
 <div>
   <h2
-    class="sc-kizEQm hCdZfB"
+    class="sc-kiPvrU ceZDKl"
   >
     Nombre d’heures d’absence autorisée pour rechercher un emploi
   </h2>
@@ -150,14 +150,14 @@ exports[`<StepResult /> should render with duration 1`] = `
     D’après les éléments saisis, durant son préavis, le salarié peut s’absenter pour rechercher un emploi pendant
      : 
     <strong
-      class="sc-cKRKFl sc-iIgjPs llsdRM ivEQAG"
+      class="sc-cLNonn sc-iJbNxu jeljMz dcxqHU"
     >
       2 heures par jour
     </strong>
     .
   </p>
   <h2
-    class="sc-kizEQm hCdZfB"
+    class="sc-kiPvrU ceZDKl"
   >
     Rémunération pendant les heures d’absence autorisée
   </h2>
@@ -165,7 +165,7 @@ exports[`<StepResult /> should render with duration 1`] = `
     Le salaire est maintenu.
   </p>
   <h2
-    class="sc-kizEQm hCdZfB"
+    class="sc-kiPvrU ceZDKl"
   >
     Conditions d’utilisation
   </h2>
@@ -175,12 +175,12 @@ exports[`<StepResult /> should render with duration 1`] = `
   <div>
     <div
       aria-expanded="false"
-      class="sc-khIgEk ceBxWI"
+      class="sc-khsqcC jyDCrc"
       role="button"
     >
       <svg
         aria-hidden="true"
-        class="sc-fujyAs BrylG"
+        class="sc-ftTHYK jiFzuu"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -196,16 +196,16 @@ exports[`<StepResult /> should render with duration 1`] = `
         />
       </svg>
       <p
-        class="sc-cOifOu XEwmn sc-hTRkXV jAbsFO"
+        class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
       >
         Voir le détail du calcul
       </p>
     </div>
     <div
-      class="sc-Arkif eVwpCw"
+      class="sc-AHaJN dhcrLx"
     >
       <h2
-        class="sc-kizEQm hCdZfB"
+        class="sc-kiPvrU ceZDKl"
       >
         Éléments saisis
       </h2>
@@ -233,7 +233,7 @@ exports[`<StepResult /> should render with duration 1`] = `
         </li>
       </ul>
       <h2
-        class="sc-kizEQm hCdZfB"
+        class="sc-kiPvrU ceZDKl"
       >
         Sources
       </h2>
@@ -252,13 +252,13 @@ exports[`<StepResult /> should render with duration 1`] = `
     </div>
   </div>
   <div
-    class="sc-lmgQwP sc-kTCsyW kHzGur jwKwCa"
+    class="sc-lllmON sc-kSGOQU hrCOuh bqQeuZ"
   >
     <div
-      class="sc-gGLxEB kEYfsY"
+      class="sc-gGvHcT hSOEAU"
     >
       <div
-        class="sc-ckTSus eGIUDO"
+        class="sc-ckEbSK fTbCHa"
       >
         <svg
           aria-hidden="true"
@@ -278,10 +278,10 @@ exports[`<StepResult /> should render with duration 1`] = `
         </svg>
       </div>
       <div
-        class="sc-fbIWvP itJXQd"
+        class="sc-fbYMXx dVfpRL"
       >
         <p
-          class="sc-cOifOu gIgAxs sc-dvUynV WDTQd"
+          class="sc-cOxWqc fjmwyW sc-dvEHMn jfRMop"
         >
           Attention il peut exister une durée plus favorable
         </p>
