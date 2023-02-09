@@ -12,7 +12,8 @@ export type CC1527ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary1527
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1527> {
+  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC1527>
+{
   /**
    * Règle :
    * - si les commissions ne constituent pas un élément contractuel de rémunération : S

@@ -56,20 +56,6 @@ export default async () => {
         },
         resources:
           env.env === "prod" ? ressourcesConfigProd : ressourcesConfigDev,
-        env: [
-          {
-            name: "API_URL",
-            value: String(API_URL),
-          },
-          {
-            name: "COMMIT",
-            value: process.env.GITHUB_SHA,
-          },
-          {
-            name: "VERSION",
-            value: process.env.GITHUB_REF,
-          },
-        ],
       },
     },
   });
@@ -83,14 +69,6 @@ export default async () => {
 
   // add a wait condition on the API service with an initContainer
   addWaitForHttp(deployment, "http://api");
-
-  // get frontend computed url and assign the env var
-  const ingressHost = new EnvVar({
-    name: "FRONTEND_HOST",
-    value: getIngressHost(manifests),
-  });
-
-  addEnv({ deployment, data: ingressHost });
 
   const hpa = new HorizontalPodAutoscaler({
     metadata: deployment.metadata,

@@ -1,5 +1,4 @@
 import { Container, Section } from "@socialgouv/cdtn-ui";
-import getConfig from "next/config";
 import React from "react";
 
 import { FicheServicePublic } from "../../src/fiche-service-public";
@@ -9,10 +8,7 @@ import References from "../../src/common/References";
 import { Layout } from "../../src/layout/Layout";
 import { Breadcrumb } from "cdtn-types";
 import { handleError } from "../../src/lib/fetch-error";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { API_URL } from "../../src/config";
 
 const fetchFiche = ({ slug }) =>
   fetch(`${API_URL}/items/fiches_service_public/${slug}`);

@@ -8,7 +8,6 @@ import {
   theme,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
-import getConfig from "next/config";
 import React from "react";
 import styled from "styled-components";
 
@@ -19,10 +18,7 @@ import { Layout } from "../../src/layout/Layout";
 import { toUrl } from "../../src/lib";
 import { Breadcrumb } from "cdtn-types";
 import { handleError } from "../../src/lib/fetch-error";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { API_URL } from "../../src/config";
 
 const fetchCourrier = ({ slug }) =>
   fetch(`${API_URL}/items/modeles_de_courriers/${slug}`);

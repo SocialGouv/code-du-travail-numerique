@@ -9,13 +9,11 @@ const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 const ReferencesCc = [
   {
     article: "Article 4.4.2",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000021550694/?idConteneur=KALICONT000005635557",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000021550694/?idConteneur=KALICONT000005635557",
   },
   {
     article: "Article 4.4.1.1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000022416125/?idConteneur=KALICONT000005635557",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000022416125/?idConteneur=KALICONT000005635557",
   },
 ];
 

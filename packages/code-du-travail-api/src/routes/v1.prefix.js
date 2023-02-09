@@ -1,6 +1,5 @@
-const cdtnAdminVersion = require("../../package.json").dependencies[
-  "@socialgouv/cdtn-elasticsearch"
-];
+const cdtnAdminVersion =
+  require("../../package.json").dependencies["@socialgouv/cdtn-elasticsearch"];
 
 const [, major] = cdtnAdminVersion.match(/^(?:\^|~)?(\d+)/);
 

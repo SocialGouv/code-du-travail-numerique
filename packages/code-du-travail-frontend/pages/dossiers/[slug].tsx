@@ -12,19 +12,15 @@ import {
   ViewMore,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
-import getConfig from "next/config";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import Metas from "../../src/common/Metas";
+import { API_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import { handleError } from "../../src/lib/fetch-error";
 
 const { breakpoints, fonts, spacings } = theme;
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
 
 interface Props {
   description: string;
@@ -261,7 +257,7 @@ const Li = styled.li`
 const DossierLink = ({ url, title }) => {
   if (!url.includes("http")) {
     return (
-      <Link href={url} passHref>
+      <Link href={url} passHref legacyBehavior>
         <LeftArrowLink>{title}</LeftArrowLink>
       </Link>
     );

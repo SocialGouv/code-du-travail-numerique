@@ -20,7 +20,8 @@ export enum CategoryPro29 {
 }
 
 export class ReferenceSalary0029
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0029> {
+  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0029>
+{
   /**
    * Règle :
    * Pour la catégorie pro :

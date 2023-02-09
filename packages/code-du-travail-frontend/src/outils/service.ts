@@ -1,9 +1,5 @@
 import { Tool } from "cdtn-types";
-import getConfig from "next/config";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { API_URL } from "../config";
 
 export type getToolsParams = {
   ids?: string[];

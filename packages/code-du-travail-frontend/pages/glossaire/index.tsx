@@ -7,17 +7,13 @@ import {
   Title,
   Wrapper,
 } from "@socialgouv/cdtn-ui";
-import getConfig from "next/config";
 import React from "react";
 import styled from "styled-components";
 
 import Metas from "../../src/common/Metas";
+import { API_URL } from "../../src/config";
 import { Layout } from "../../src/layout/Layout";
 import { handleError } from "../../src/lib/fetch-error";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
 
 const subtitle =
   "Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses, ont pour objectif d’améliorer la compréhension des termes juridiques. Elles ne se substituent pas à la définition juridique exacte de ces termes.";

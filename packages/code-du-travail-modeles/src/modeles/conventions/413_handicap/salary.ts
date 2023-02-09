@@ -6,7 +6,8 @@ import type {
 import { nonNullable, rankByMonthArrayDescFrench, sum } from "../../common";
 
 export class ReferenceSalary413
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC413> {
+  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC413>
+{
   // Formule: S/3
   // S : total des salaires perçus lors des 3 derniers mois précédant le jour de l'envoi de la lettre de licenciement (brut)
   computeReferenceSalary({

@@ -33,7 +33,7 @@ function validate({ seriousMisconduct }): Validate {
         d’obligation de respecter un préavis. Vous pouvez trouver plus
         d’informations sur le préavis de licenciement sur{" "}
         <Link href={`/fiche-service-public/preavis-de-licenciement`}>
-          <a>cette fiche</a>
+          cette fiche
         </Link>
         .
       </Toast>

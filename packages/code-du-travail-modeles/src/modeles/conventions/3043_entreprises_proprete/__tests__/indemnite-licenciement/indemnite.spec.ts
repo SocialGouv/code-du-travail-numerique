@@ -24,9 +24,12 @@ describe("Indemnité conventionnel de licenciement pour la CC 3043", () => {
       const { result, missingArgs } = engine.setSituation(
         {
           "contrat salarié . convention collective": "'IDCC3043'",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            salary,
         },
         "contrat salarié . indemnité de licenciement . résultat conventionnel"
       );

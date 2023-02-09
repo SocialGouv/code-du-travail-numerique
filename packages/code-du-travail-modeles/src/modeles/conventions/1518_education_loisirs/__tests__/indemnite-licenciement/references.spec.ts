@@ -8,13 +8,11 @@ const engine = new IndemniteLicenciementPublicodes(
 const References = [
   {
     article: "Article 4.4.3",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000018072830/?idConteneur=KALICONT000005635177",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALISCTA000018072830/?idConteneur=KALICONT000005635177",
   },
   {
     article: "Article 6.3.4",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027717742?idConteneur=KALICONT000005635177&origin=list#KALIARTI000027717742",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027717742?idConteneur=KALICONT000005635177&origin=list#KALIARTI000027717742",
   },
 ];
 
@@ -32,9 +30,12 @@ describe("Vérification des références juridiques pour la CC 1518", () => {
     ({ seniority, inaptitude, expectedReferences }) => {
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1518'",
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": inaptitude,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          inaptitude,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
       });
