@@ -21,9 +21,12 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
           {
             "contrat salarié . convention collective": "'IDCC0573'",
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -61,11 +64,15 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
           {
             "contrat salarié . convention collective": "'IDCC0573'",
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age": age,
+            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique . age":
+              age,
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . agents . licenciement économique question": `'${typeLicenciement}'`,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );
@@ -110,11 +117,15 @@ describe("Indemnité conventionnel de licenciement pour la CC 573", () => {
           {
             "contrat salarié . convention collective": "'IDCC0573'",
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle": `'${category}'`,
-            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age": age,
+            "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans . age":
+              age,
             "contrat salarié . convention collective . commerces de gros . catégorie professionnelle . cadres . cadre durant au moins de 15 ans question": `'${auMoins15AnsCadre}'`,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+              seniority,
+            "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+              salary,
           },
           "contrat salarié . indemnité de licenciement . résultat conventionnel"
         );

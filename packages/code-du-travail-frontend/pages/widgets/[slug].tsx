@@ -37,12 +37,14 @@ function Widgets({ icon, slug, title, displayTitle }: Props): JSX.Element {
         widgetMode
       />
       <StyledFooter>
-        <Link passHref href="/politique-confidentialite">
-          <a target="_blank" rel="noopener noreferrer">
-            Politique de confidentialité
-          </a>
+        <Link
+          href="/politique-confidentialite"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Politique de confidentialité
         </Link>
-        <Link passHref href="https://code.travail.gouv.fr/">
+        <Link passHref href="https://code.travail.gouv.fr/" legacyBehavior>
           <LeftLink target="_blank">
             <Logo />
           </LeftLink>

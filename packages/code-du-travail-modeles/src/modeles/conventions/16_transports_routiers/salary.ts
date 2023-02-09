@@ -21,7 +21,8 @@ export type CategoryPro16 =
   | "'TAM'";
 
 export class ReferenceSalary16
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0016> {
+  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC0016>
+{
   computeReferenceSalary(
     props: ReferenceSalaryProps<SupportedCcIndemniteLicenciement.IDCC0016>
   ): number {

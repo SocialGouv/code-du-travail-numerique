@@ -3,7 +3,6 @@ import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import { Text } from "@socialgouv/cdtn-ui";
 import { format, parseISO } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-import getConfig from "next/config";
 import React from "react";
 
 import Answer from "../../src/common/Answer";
@@ -11,10 +10,7 @@ import Metas from "../../src/common/Metas";
 import Convention from "../../src/conventions/Convention";
 import { Layout } from "../../src/layout/Layout";
 import { handleError } from "../../src/lib/fetch-error";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { API_URL } from "../../src/config";
 
 interface Props {
   convention;

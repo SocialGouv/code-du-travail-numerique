@@ -6,52 +6,52 @@ exports[`<SearchResults/> should render results 1`] = `
 <div>
   <div
     aria-label="Résultats de recherche"
-    class="sc-bdnxRM etdrsf"
+    class="sc-bcXHqe ePDXDD"
     role="region"
   >
     <h2
-      class="sc-iCoGMd gaXVHn"
+      class="sc-iBYQkv iDmZxg"
       data-testid="heading"
       id="SearchResults"
     >
       Résultats de recherche pour “search test”
     </h2>
     <ul
-      class="sc-jffHpj jAxtJd"
+      class="sc-jfvxQR gwhdUi"
     >
       <li
-        class="sc-ellfGf jLpLnw"
+        class="sc-elAWhN hPRVLd"
       >
         <a
-          class="sc-eGJWMs dxHVWB"
-          href="/fiche-service-public/mer-il-est-fou?q=search%20test"
+          class="sc-eGugkK cJzHzy"
+          href="/fiche-service-public/mer-il-est-fou?q=search test"
         >
           <div
-            class="sc-dFRpbK cbvMFR"
+            class="sc-dEVLtI ijCjkg"
           >
             <div
-              class="sc-bsatvv iePphK"
+              class="sc-brePNt jDJZCD"
             >
               <p
-                class="sc-bXexck sc-gIvpjk haepIh glQsRy"
+                class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
               >
                 test theme content
               </p>
               <h3
-                class="sc-euEtCV ionzWf"
+                class="sc-evzXkX dtQFbH"
               >
                 Mer il est fou!
               </h3>
             </div>
           </div>
           <div
-            class="sc-fHCHyC fOtBFh"
+            class="sc-fHSyak ehflbW"
           >
             <div
-              class="sc-iIgjPs bMUDt"
+              class="sc-iJbNxu hWSYxX"
             >
               <p
-                class="sc-cOifOu jBNwUz"
+                class="sc-cOxWqc bBCaVZ"
               >
                 description
               </p>
@@ -60,17 +60,17 @@ exports[`<SearchResults/> should render results 1`] = `
         </a>
       </li>
       <li
-        class="sc-ellfGf jLpLnw"
+        class="sc-elAWhN hPRVLd"
       >
         <a
-          class="sc-eGJWMs dxHVWB sc-dvUynV bSsRsj"
-          href="/outils/simulateur-precarite?q=search%20test"
+          class="sc-eGugkK cJzHzy sc-dvEHMn jfDXTj"
+          href="/outils/simulateur-precarite?q=search test"
         >
           <div
-            class="sc-iklJeh biSgUS"
+            class="sc-ilhmMj gZOXXO"
           >
             <div
-              class="sc-jJMGnK ihofWp"
+              class="sc-jIRcFI ibhsCB"
             >
               <svg
                 aria-hidden="true"
@@ -94,43 +94,43 @@ exports[`<SearchResults/> should render results 1`] = `
             </div>
           </div>
           <div
-            class="sc-dFRpbK cbvMFR"
+            class="sc-dEVLtI ijCjkg"
           >
             <div
-              class="sc-bsatvv iePphK"
+              class="sc-brePNt jDJZCD"
             >
               <p
-                class="sc-bXexck sc-gIvpjk haepIh glQsRy"
+                class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
               >
                 Outils
               </p>
               <h3
-                class="sc-euEtCV ionzWf"
+                class="sc-evzXkX dtQFbH"
               >
                 simulateur de prime de précarite
               </h3>
             </div>
           </div>
           <div
-            class="sc-fHCHyC fOtBFh"
+            class="sc-fHSyak ehflbW"
           >
             <div
-              class="sc-kTCsyW iKvxSk"
+              class="sc-kSGOQU dwhzBT"
             >
               <div
-                class="sc-iIgjPs bMUDt"
+                class="sc-iJbNxu hWSYxX"
               >
                 <p
-                  class="sc-cOifOu jBNwUz"
+                  class="sc-cOxWqc bBCaVZ"
                 >
                   description
                 </p>
               </div>
               <div
-                class="sc-jtiXyc cgUMTP"
+                class="sc-jsTgWu kNvrCw"
               >
                 <button
-                  class="sc-hiKfDv hvWLsX"
+                  class="sc-hhOBVt bxVHUw"
                 >
                   Consulter
                   <svg
@@ -151,53 +151,53 @@ exports[`<SearchResults/> should render results 1`] = `
         </a>
       </li>
       <li
-        class="sc-ellfGf jLpLnw"
+        class="sc-elAWhN hPRVLd"
       >
         <a
           aria-label="Outils externes telerc description undefined (nouvelle fenêtre)"
-          class="sc-eGJWMs dxHVWB sc-dvUynV bSsRsj no-after"
+          class="sc-eGugkK cJzHzy sc-dvEHMn jfDXTj no-after"
           href="https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14"
           rel="noreferer noopener"
           target="_blank"
         >
           <div
-            class="sc-dFRpbK cbvMFR"
+            class="sc-dEVLtI ijCjkg"
           >
             <div
-              class="sc-bsatvv iePphK"
+              class="sc-brePNt jDJZCD"
             >
               <p
-                class="sc-bXexck sc-gIvpjk haepIh glQsRy"
+                class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
               >
                 Outils externes
               </p>
               <h3
-                class="sc-euEtCV ionzWf"
+                class="sc-evzXkX dtQFbH"
               >
                 telerc
               </h3>
             </div>
           </div>
           <div
-            class="sc-fHCHyC fOtBFh"
+            class="sc-fHSyak ehflbW"
           >
             <div
-              class="sc-kTCsyW iKvxSk"
+              class="sc-kSGOQU dwhzBT"
             >
               <div
-                class="sc-iIgjPs bMUDt"
+                class="sc-iJbNxu hWSYxX"
               >
                 <p
-                  class="sc-cOifOu jBNwUz"
+                  class="sc-cOxWqc bBCaVZ"
                 >
                   description
                 </p>
               </div>
               <div
-                class="sc-jtiXyc cgUMTP"
+                class="sc-jsTgWu kNvrCw"
               >
                 <button
-                  class="sc-hiKfDv hvWLsX"
+                  class="sc-hhOBVt bxVHUw"
                 >
                   Consulter
                   <svg
@@ -218,17 +218,17 @@ exports[`<SearchResults/> should render results 1`] = `
         </a>
       </li>
       <li
-        class="sc-ellfGf jLpLnw"
+        class="sc-elAWhN hPRVLd"
       >
         <a
-          class="sc-eGJWMs dxHVWB sc-dvUynV bSsRsj"
-          href="/outils/mer-il-est-fou2?q=search%20test"
+          class="sc-eGugkK cJzHzy sc-dvEHMn jfDXTj"
+          href="/outils/mer-il-est-fou2?q=search test"
         >
           <div
-            class="sc-iklJeh biSgUS"
+            class="sc-ilhmMj gZOXXO"
           >
             <div
-              class="sc-jJMGnK ihofWp"
+              class="sc-jIRcFI ibhsCB"
             >
               <svg
                 aria-hidden="true"
@@ -252,43 +252,43 @@ exports[`<SearchResults/> should render results 1`] = `
             </div>
           </div>
           <div
-            class="sc-dFRpbK cbvMFR"
+            class="sc-dEVLtI ijCjkg"
           >
             <div
-              class="sc-bsatvv iePphK"
+              class="sc-brePNt jDJZCD"
             >
               <p
-                class="sc-bXexck sc-gIvpjk haepIh glQsRy"
+                class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
               >
                 test root content
               </p>
               <h3
-                class="sc-euEtCV ionzWf"
+                class="sc-evzXkX dtQFbH"
               >
                 Mer il est fou 2!
               </h3>
             </div>
           </div>
           <div
-            class="sc-fHCHyC fOtBFh"
+            class="sc-fHSyak ehflbW"
           >
             <div
-              class="sc-kTCsyW iKvxSk"
+              class="sc-kSGOQU dwhzBT"
             >
               <div
-                class="sc-iIgjPs bMUDt"
+                class="sc-iJbNxu hWSYxX"
               >
                 <p
-                  class="sc-cOifOu jBNwUz"
+                  class="sc-cOxWqc bBCaVZ"
                 >
                   description
                 </p>
               </div>
               <div
-                class="sc-jtiXyc cgUMTP"
+                class="sc-jsTgWu kNvrCw"
               >
                 <button
-                  class="sc-hiKfDv hvWLsX"
+                  class="sc-hhOBVt bxVHUw"
                 >
                   Consulter
                   <svg
@@ -309,17 +309,17 @@ exports[`<SearchResults/> should render results 1`] = `
         </a>
       </li>
       <li
-        class="sc-ellfGf jLpLnw"
+        class="sc-elAWhN hPRVLd"
       >
         <a
-          class="sc-eGJWMs dxHVWB"
-          href="/contribution/mer-il-est-fou4?q=search%20test"
+          class="sc-eGugkK cJzHzy"
+          href="/contribution/mer-il-est-fou4?q=search test"
         >
           <div
-            class="sc-iklJeh biSgUS"
+            class="sc-ilhmMj gZOXXO"
           >
             <div
-              class="sc-jJMGnK ihofWp"
+              class="sc-jIRcFI ibhsCB"
             >
               <svg
                 aria-hidden="true"
@@ -343,31 +343,31 @@ exports[`<SearchResults/> should render results 1`] = `
             </div>
           </div>
           <div
-            class="sc-dFRpbK cbvMFR"
+            class="sc-dEVLtI ijCjkg"
           >
             <div
-              class="sc-bsatvv iePphK"
+              class="sc-brePNt jDJZCD"
             >
               <p
-                class="sc-bXexck sc-gIvpjk haepIh glQsRy"
+                class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
               >
                 test theme content
               </p>
               <h3
-                class="sc-euEtCV ionzWf"
+                class="sc-evzXkX dtQFbH"
               >
                 Mer il est fou 4!
               </h3>
             </div>
           </div>
           <div
-            class="sc-fHCHyC fOtBFh"
+            class="sc-fHSyak ehflbW"
           >
             <div
-              class="sc-iIgjPs bMUDt"
+              class="sc-iJbNxu hWSYxX"
             >
               <p
-                class="sc-cOifOu jBNwUz"
+                class="sc-cOxWqc bBCaVZ"
               >
                 description
               </p>
@@ -378,61 +378,60 @@ exports[`<SearchResults/> should render results 1`] = `
     </ul>
   </div>
   <div
-    class="sc-gtsrHT cpCFeZ"
+    class="sc-gswNZR bPmTxc"
   >
     <div
-      class="sc-dlnjwi bheWDA"
+      class="sc-dkrFOg biaJUX"
     />
     <div
-      class="sc-eCApnc fhHpnM"
+      class="sc-eDvSVe dfRDwP"
     >
       <div
-        class="sc-bdnxRM bCGhmq"
+        class="sc-bcXHqe evAMOC"
       >
         <div
-          class="sc-eXuyPJ jPObHZ"
+          class="sc-eYqcxL cojNYi"
         >
           <h2
-            class="sc-eWnToP iHpQsB"
+            class="sc-eVspGN fSOkVF"
           >
             <span
-              class="sc-gKAaRy jNbrvj"
+              class="sc-gKPRtg fPkQGb"
             />
             Que dit le code du travail ?
           </h2>
         </div>
         <div
-          class="sc-eJocfa dnvrjA sc-hhIiOg gEtbSe"
+          class="sc-eJDSGI hWSwY sc-hiDMwi gAYklG"
         >
           <div
-            class="sc-oeezt hgDFVm"
+            class="sc-oZIhv grJGZr"
           >
             <div
-              class="sc-eirqVv gqRdkL"
+              class="sc-ehvNnt jkVqcZ"
             >
               <div
-                class="sc-lbVvki kVdhdQ"
+                class="sc-laZRCg FkEKn"
               >
                 <a
-                  class="sc-eGJWMs dxHVWB"
-                  href="/code-du-travail/L1243-1?q=search%20test"
+                  class="sc-eGugkK cJzHzy"
+                  href="/code-du-travail/L1243-1?q=search test"
                 >
                   <div
-                    class="sc-dFRpbK cbvMFR"
+                    class="sc-dEVLtI ijCjkg"
                   >
                     <div
-                      class="sc-bsatvv iePphK"
+                      class="sc-brePNt jDJZCD"
                     >
-                      
                       <p
-                        class="sc-euEtCV ionzWf"
+                        class="sc-evzXkX dtQFbH"
                       >
                         L1243-1
                       </p>
                     </div>
                   </div>
                   <div
-                    class="sc-fHCHyC fOtBFh"
+                    class="sc-fHSyak ehflbW"
                   >
                     la description
                   </div>
@@ -442,45 +441,44 @@ exports[`<SearchResults/> should render results 1`] = `
           </div>
         </div>
         <div
-          class="sc-eXuyPJ jPObHZ"
+          class="sc-eYqcxL cojNYi"
         >
           <h2
-            class="sc-eWnToP iHpQsB"
+            class="sc-eVspGN fSOkVF"
           >
             <span
-              class="sc-gKAaRy jNbrvj"
+              class="sc-gKPRtg fPkQGb"
             />
             Les thèmes suivants peuvent vous intéresser
           </h2>
         </div>
         <div
-          class="sc-eJocfa dnvrjA sc-hhIiOg gEtbSe"
+          class="sc-eJDSGI hWSwY sc-hiDMwi gAYklG"
         >
           <div
-            class="sc-oeezt hgDFVm"
+            class="sc-oZIhv grJGZr"
           >
             <div
-              class="sc-eirqVv gqRdkL"
+              class="sc-ehvNnt jkVqcZ"
             >
               <div
-                class="sc-lbVvki kpySAv"
+                class="sc-laZRCg cupBig"
               >
                 <a
-                  class="sc-eGJWMs cMctpi"
-                  href="/themes/1-contrat?q=search%20test"
+                  class="sc-eGugkK gnEaJx"
+                  href="/themes/1-contrat?q=search test"
                 >
                   <div
-                    class="sc-dFRpbK cbvMFR"
+                    class="sc-dEVLtI ijCjkg"
                   >
                     <span
-                      class="sc-gKAaRy bPcSTH"
+                      class="sc-gKPRtg hxXVnL"
                     />
                     <div
-                      class="sc-bsatvv iePphK"
+                      class="sc-brePNt jDJZCD"
                     >
-                      
                       <p
-                        class="sc-euEtCV ionzWf"
+                        class="sc-evzXkX dtQFbH"
                       >
                         Contrat
                       </p>

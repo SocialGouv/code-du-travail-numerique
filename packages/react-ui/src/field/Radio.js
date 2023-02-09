@@ -14,10 +14,13 @@ export const InputRadio = ({ label, name, id, size, ...props }) => (
 );
 
 InputRadio.propTypes = {
+  checked: PropTypes.bool,
   id: PropTypes.string.isRequired,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   name: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
   size: PropTypes.string.isRequired,
+  value: PropTypes.string,
 };
 
 InputRadio.defaultProps = {

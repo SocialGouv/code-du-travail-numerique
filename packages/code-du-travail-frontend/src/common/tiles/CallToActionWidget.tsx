@@ -17,17 +17,15 @@ export default function CallToActionWidget({
   image,
 }: Props): JSX.Element {
   return (
-    <Link href={link} passHref>
+    <Link href={link} passHref legacyBehavior>
       <CallToActionTile
         noCustom
         action="Installer"
         title={title}
         titleTagType="h2"
       >
-        <>
-          <Image src={`/static/assets/img/${image}`} alt={"Widget " + title} />
-          <ParagraphNarrow>{description}</ParagraphNarrow>
-        </>
+        <Image src={`/static/assets/img/${image}`} alt={"Widget " + title} />
+        <ParagraphNarrow>{description}</ParagraphNarrow>
       </CallToActionTile>
     </Link>
   );

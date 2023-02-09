@@ -15,6 +15,7 @@ export const Themes = ({ items, query }) => (
           href={`/${getRouteBySource(source)}/${slug}${
             query ? `?q=${query}` : ""
           }`}
+          legacyBehavior
           passHref
         >
           <Tile

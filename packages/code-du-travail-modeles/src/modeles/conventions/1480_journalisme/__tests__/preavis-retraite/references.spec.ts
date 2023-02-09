@@ -8,8 +8,7 @@ const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 const CommonReference = {
   article: "Article 51",
-  url:
-    "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005786650/?idConteneur=KALICONT000005635444",
+  url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005786650/?idConteneur=KALICONT000005635444",
 };
 
 const DepartRetraiteJournalismeReferences = [

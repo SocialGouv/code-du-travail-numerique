@@ -9,8 +9,7 @@ const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 const MiseRetraite = [
   {
     article: "Article 25 § 1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000027745280/?idConteneur=KALICONT000005635409",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000027745280/?idConteneur=KALICONT000005635409",
   },
 ];
 

@@ -3,10 +3,10 @@
 exports[`<Contribution /> should NOT render invalid preselected convention 1`] = `
 <div>
   <div
-    class="sc-iklJeh biSgUS"
+    class="sc-ilhmMj gZOXXO"
   >
     <div
-      class="sc-jJMGnK ihofWp"
+      class="sc-jIRcFI ibhsCB"
     >
       <svg
         aria-hidden="true"
@@ -30,13 +30,13 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
     </div>
   </div>
   <div
-    class="sc-jSFjdj sc-fyGvY dWteEK hjmglL"
+    class="sc-jSUZER sc-gukea cbQucy juPNNr"
   >
     <div
-      class="sc-gGLxEB bZfRQU"
+      class="sc-gGvHcT fhtJMY"
     >
       <div
-        class="sc-ckTSus eGIUDO"
+        class="sc-ckEbSK fTbCHa"
       >
         <svg
           aria-hidden="true"
@@ -73,17 +73,17 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
         </svg>
       </div>
       <div
-        class="sc-fbIWvP itJXQd"
+        class="sc-fbYMXx dVfpRL"
       >
         <p
           aria-level="2"
-          class="sc-flUlpA sc-bFSbwS eovlvg"
+          class="sc-fmPOXC sc-bGhRYA gDdYSH"
           role="heading"
         >
           Page personnalisable
         </p>
         <p
-          class="sc-cOifOu jBNwUz"
+          class="sc-cOxWqc bBCaVZ"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -99,13 +99,13 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
   </div>
   <section>
     <div
-      class="sc-eXuyPJ jPObHZ"
+      class="sc-eYqcxL cojNYi"
     >
       <h2
-        class="sc-eWnToP iHpQsB"
+        class="sc-eVspGN fSOkVF"
       >
         <span
-          class="sc-gKAaRy jNbrvj"
+          class="sc-gKPRtg fPkQGb"
         />
         Que dit le code du travail ?
       </h2>
@@ -120,35 +120,35 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
     </div>
   </section>
   <div
-    class="sc-gtsrHT dDJuxj sc-fxFQKN fHdZvC"
+    class="sc-gswNZR uUAJC sc-fyBusP pQAub"
   >
     <div
-      class="sc-jSFjdj dWteEK"
+      class="sc-jSUZER cbQucy"
     >
       <div
-        class="sc-eXuyPJ bHFRAw sc-Jgsit gZFxUk"
+        class="sc-eYqcxL kwhHqj sc-IQBGL ewtwfI"
         id="customisation"
       >
         <h2
-          class="sc-eWnToP iJmfOu"
+          class="sc-eVspGN gDCVsu"
         >
           <span
-            class="sc-gKAaRy hLlvoX"
+            class="sc-gKPRtg lhzWfH"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
       <label
-        class="sc-dTSzeu btJghr"
+        class="sc-dUipGc hgoSmo"
         for="convention-search"
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
-        class="sc-bQCEYZ iOBpgY sc-jLqRGG jXoiKy"
+        class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
       >
         <input
-          class="sc-fXgAZx esWNAb"
+          class="sc-fWQKxP iaRXHc"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -156,18 +156,17 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
           value=""
         />
       </span>
-      
       <p
-        class="sc-bUQyIj eqjFlE"
+        class="sc-bTUVah hXbUfO"
       >
         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
         <span
-          class="sc-tsGVs cQiTYY"
+          class="sc-uokDu isqtOz"
         >
           Consultez
            
           <button
-            class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
+            class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
             type="button"
           >
             notre aide
@@ -183,10 +182,10 @@ exports[`<Contribution /> should NOT render invalid preselected convention 1`] =
 exports[`<Contribution /> should render answer references 1`] = `
 <div>
   <div
-    class="sc-iklJeh biSgUS"
+    class="sc-ilhmMj gZOXXO"
   >
     <div
-      class="sc-jJMGnK ihofWp"
+      class="sc-jIRcFI ibhsCB"
     >
       <svg
         aria-hidden="true"
@@ -210,13 +209,13 @@ exports[`<Contribution /> should render answer references 1`] = `
     </div>
   </div>
   <div
-    class="sc-jSFjdj sc-fyGvY dWteEK hjmglL"
+    class="sc-jSUZER sc-gukea cbQucy juPNNr"
   >
     <div
-      class="sc-gGLxEB bZfRQU"
+      class="sc-gGvHcT fhtJMY"
     >
       <div
-        class="sc-ckTSus eGIUDO"
+        class="sc-ckEbSK fTbCHa"
       >
         <svg
           aria-hidden="true"
@@ -253,17 +252,17 @@ exports[`<Contribution /> should render answer references 1`] = `
         </svg>
       </div>
       <div
-        class="sc-fbIWvP itJXQd"
+        class="sc-fbYMXx dVfpRL"
       >
         <p
           aria-level="2"
-          class="sc-flUlpA sc-bFSbwS eovlvg"
+          class="sc-fmPOXC sc-bGhRYA gDdYSH"
           role="heading"
         >
           Page personnalisable
         </p>
         <p
-          class="sc-cOifOu jBNwUz"
+          class="sc-cOxWqc bBCaVZ"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -279,13 +278,13 @@ exports[`<Contribution /> should render answer references 1`] = `
   </div>
   <section>
     <div
-      class="sc-eXuyPJ jPObHZ"
+      class="sc-eYqcxL cojNYi"
     >
       <h2
-        class="sc-eWnToP iHpQsB"
+        class="sc-eVspGN fSOkVF"
       >
         <span
-          class="sc-gKAaRy jNbrvj"
+          class="sc-gKPRtg fPkQGb"
         />
         Que dit le code du travail ?
       </h2>
@@ -300,35 +299,35 @@ exports[`<Contribution /> should render answer references 1`] = `
     </div>
   </section>
   <div
-    class="sc-gtsrHT dDJuxj sc-fxFQKN fHdZvC"
+    class="sc-gswNZR uUAJC sc-fyBusP pQAub"
   >
     <div
-      class="sc-jSFjdj dWteEK"
+      class="sc-jSUZER cbQucy"
     >
       <div
-        class="sc-eXuyPJ bHFRAw sc-Jgsit gZFxUk"
+        class="sc-eYqcxL kwhHqj sc-IQBGL ewtwfI"
         id="customisation"
       >
         <h2
-          class="sc-eWnToP iJmfOu"
+          class="sc-eVspGN gDCVsu"
         >
           <span
-            class="sc-gKAaRy hLlvoX"
+            class="sc-gKPRtg lhzWfH"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
       <label
-        class="sc-dTSzeu btJghr"
+        class="sc-dUipGc hgoSmo"
         for="convention-search"
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
-        class="sc-bQCEYZ iOBpgY sc-jLqRGG jXoiKy"
+        class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
       >
         <input
-          class="sc-fXgAZx esWNAb"
+          class="sc-fWQKxP iaRXHc"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -336,18 +335,17 @@ exports[`<Contribution /> should render answer references 1`] = `
           value=""
         />
       </span>
-      
       <p
-        class="sc-bUQyIj eqjFlE"
+        class="sc-bTUVah hXbUfO"
       >
         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
         <span
-          class="sc-tsGVs cQiTYY"
+          class="sc-uokDu isqtOz"
         >
           Consultez
            
           <button
-            class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
+            class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
             type="button"
           >
             notre aide
@@ -363,10 +361,10 @@ exports[`<Contribution /> should render answer references 1`] = `
 exports[`<Contribution /> should render preselected convention 1`] = `
 <div>
   <div
-    class="sc-iklJeh biSgUS"
+    class="sc-ilhmMj gZOXXO"
   >
     <div
-      class="sc-jJMGnK ihofWp"
+      class="sc-jIRcFI ibhsCB"
     >
       <svg
         aria-hidden="true"
@@ -390,13 +388,13 @@ exports[`<Contribution /> should render preselected convention 1`] = `
     </div>
   </div>
   <div
-    class="sc-jSFjdj sc-fyGvY dWteEK hjmglL"
+    class="sc-jSUZER sc-gukea cbQucy juPNNr"
   >
     <div
-      class="sc-gGLxEB bZfRQU"
+      class="sc-gGvHcT fhtJMY"
     >
       <div
-        class="sc-ckTSus eGIUDO"
+        class="sc-ckEbSK fTbCHa"
       >
         <svg
           aria-hidden="true"
@@ -433,17 +431,17 @@ exports[`<Contribution /> should render preselected convention 1`] = `
         </svg>
       </div>
       <div
-        class="sc-fbIWvP itJXQd"
+        class="sc-fbYMXx dVfpRL"
       >
         <p
           aria-level="2"
-          class="sc-flUlpA sc-bFSbwS eovlvg"
+          class="sc-fmPOXC sc-bGhRYA gDdYSH"
           role="heading"
         >
           Page personnalisable
         </p>
         <p
-          class="sc-cOifOu jBNwUz"
+          class="sc-cOxWqc bBCaVZ"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -459,13 +457,13 @@ exports[`<Contribution /> should render preselected convention 1`] = `
   </div>
   <section>
     <div
-      class="sc-eXuyPJ jPObHZ"
+      class="sc-eYqcxL cojNYi"
     >
       <h2
-        class="sc-eWnToP iHpQsB"
+        class="sc-eVspGN fSOkVF"
       >
         <span
-          class="sc-gKAaRy jNbrvj"
+          class="sc-gKPRtg fPkQGb"
         />
         Que dit le code du travail ?
       </h2>
@@ -480,35 +478,35 @@ exports[`<Contribution /> should render preselected convention 1`] = `
     </div>
   </section>
   <div
-    class="sc-gtsrHT dDJuxj sc-fxFQKN fHdZvC"
+    class="sc-gswNZR uUAJC sc-fyBusP pQAub"
   >
     <div
-      class="sc-jSFjdj dWteEK"
+      class="sc-jSUZER cbQucy"
     >
       <div
-        class="sc-eXuyPJ bHFRAw sc-Jgsit gZFxUk"
+        class="sc-eYqcxL kwhHqj sc-IQBGL ewtwfI"
         id="customisation"
       >
         <h2
-          class="sc-eWnToP iJmfOu"
+          class="sc-eVspGN gDCVsu"
         >
           <span
-            class="sc-gKAaRy hLlvoX"
+            class="sc-gKPRtg lhzWfH"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
       <label
-        class="sc-dTSzeu btJghr"
+        class="sc-dUipGc hgoSmo"
         for="convention-search"
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
-        class="sc-bQCEYZ iOBpgY sc-jLqRGG jXoiKy"
+        class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
       >
         <input
-          class="sc-fXgAZx esWNAb"
+          class="sc-fWQKxP iaRXHc"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -516,18 +514,17 @@ exports[`<Contribution /> should render preselected convention 1`] = `
           value=""
         />
       </span>
-      
       <p
-        class="sc-bUQyIj eqjFlE"
+        class="sc-bTUVah hXbUfO"
       >
         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
         <span
-          class="sc-tsGVs cQiTYY"
+          class="sc-uokDu isqtOz"
         >
           Consultez
            
           <button
-            class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
+            class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
             type="button"
           >
             notre aide
@@ -543,10 +540,10 @@ exports[`<Contribution /> should render preselected convention 1`] = `
 exports[`<Contribution /> should render with both answers 1`] = `
 <div>
   <div
-    class="sc-iklJeh biSgUS"
+    class="sc-ilhmMj gZOXXO"
   >
     <div
-      class="sc-jJMGnK ihofWp"
+      class="sc-jIRcFI ibhsCB"
     >
       <svg
         aria-hidden="true"
@@ -570,13 +567,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
     </div>
   </div>
   <div
-    class="sc-jSFjdj sc-fyGvY dWteEK hjmglL"
+    class="sc-jSUZER sc-gukea cbQucy juPNNr"
   >
     <div
-      class="sc-gGLxEB bZfRQU"
+      class="sc-gGvHcT fhtJMY"
     >
       <div
-        class="sc-ckTSus eGIUDO"
+        class="sc-ckEbSK fTbCHa"
       >
         <svg
           aria-hidden="true"
@@ -613,17 +610,17 @@ exports[`<Contribution /> should render with both answers 1`] = `
         </svg>
       </div>
       <div
-        class="sc-fbIWvP itJXQd"
+        class="sc-fbYMXx dVfpRL"
       >
         <p
           aria-level="2"
-          class="sc-flUlpA sc-bFSbwS eovlvg"
+          class="sc-fmPOXC sc-bGhRYA gDdYSH"
           role="heading"
         >
           Page personnalisable
         </p>
         <p
-          class="sc-cOifOu jBNwUz"
+          class="sc-cOxWqc bBCaVZ"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -639,13 +636,13 @@ exports[`<Contribution /> should render with both answers 1`] = `
   </div>
   <section>
     <div
-      class="sc-eXuyPJ jPObHZ"
+      class="sc-eYqcxL cojNYi"
     >
       <h2
-        class="sc-eWnToP iHpQsB"
+        class="sc-eVspGN fSOkVF"
       >
         <span
-          class="sc-gKAaRy jNbrvj"
+          class="sc-gKPRtg fPkQGb"
         />
         Que dit le code du travail ?
       </h2>
@@ -660,35 +657,35 @@ exports[`<Contribution /> should render with both answers 1`] = `
     </div>
   </section>
   <div
-    class="sc-gtsrHT dDJuxj sc-fxFQKN fHdZvC"
+    class="sc-gswNZR uUAJC sc-fyBusP pQAub"
   >
     <div
-      class="sc-jSFjdj dWteEK"
+      class="sc-jSUZER cbQucy"
     >
       <div
-        class="sc-eXuyPJ bHFRAw sc-Jgsit gZFxUk"
+        class="sc-eYqcxL kwhHqj sc-IQBGL ewtwfI"
         id="customisation"
       >
         <h2
-          class="sc-eWnToP iJmfOu"
+          class="sc-eVspGN gDCVsu"
         >
           <span
-            class="sc-gKAaRy hLlvoX"
+            class="sc-gKPRtg lhzWfH"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
       <label
-        class="sc-dTSzeu btJghr"
+        class="sc-dUipGc hgoSmo"
         for="convention-search"
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
-        class="sc-bQCEYZ iOBpgY sc-jLqRGG jXoiKy"
+        class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
       >
         <input
-          class="sc-fXgAZx esWNAb"
+          class="sc-fWQKxP iaRXHc"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -696,18 +693,17 @@ exports[`<Contribution /> should render with both answers 1`] = `
           value=""
         />
       </span>
-      
       <p
-        class="sc-bUQyIj eqjFlE"
+        class="sc-bTUVah hXbUfO"
       >
         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
         <span
-          class="sc-tsGVs cQiTYY"
+          class="sc-uokDu isqtOz"
         >
           Consultez
            
           <button
-            class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
+            class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
             type="button"
           >
             notre aide
@@ -723,10 +719,10 @@ exports[`<Contribution /> should render with both answers 1`] = `
 exports[`<Contribution /> should render with conventions answer 1`] = `
 <div>
   <div
-    class="sc-iklJeh biSgUS"
+    class="sc-ilhmMj gZOXXO"
   >
     <div
-      class="sc-jJMGnK ihofWp"
+      class="sc-jIRcFI ibhsCB"
     >
       <svg
         aria-hidden="true"
@@ -750,13 +746,13 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
     </div>
   </div>
   <div
-    class="sc-jSFjdj sc-fyGvY dWteEK hjmglL"
+    class="sc-jSUZER sc-gukea cbQucy juPNNr"
   >
     <div
-      class="sc-gGLxEB bZfRQU"
+      class="sc-gGvHcT fhtJMY"
     >
       <div
-        class="sc-ckTSus eGIUDO"
+        class="sc-ckEbSK fTbCHa"
       >
         <svg
           aria-hidden="true"
@@ -793,17 +789,17 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
         </svg>
       </div>
       <div
-        class="sc-fbIWvP itJXQd"
+        class="sc-fbYMXx dVfpRL"
       >
         <p
           aria-level="2"
-          class="sc-flUlpA sc-bFSbwS eovlvg"
+          class="sc-fmPOXC sc-bGhRYA gDdYSH"
           role="heading"
         >
           Page personnalisable
         </p>
         <p
-          class="sc-cOifOu jBNwUz"
+          class="sc-cOxWqc bBCaVZ"
         >
           Le contenu de cette page peut être personnalisé en fonction de votre situation.
           <br />
@@ -818,35 +814,35 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
     </div>
   </div>
   <div
-    class="sc-gtsrHT dDJuxj sc-fxFQKN fHdZvC"
+    class="sc-gswNZR uUAJC sc-fyBusP pQAub"
   >
     <div
-      class="sc-jSFjdj dWteEK"
+      class="sc-jSUZER cbQucy"
     >
       <div
-        class="sc-eXuyPJ bHFRAw sc-Jgsit gSsFTJ"
+        class="sc-eYqcxL kwhHqj sc-IQBGL eqYWWJ"
         id="customisation"
       >
         <h2
-          class="sc-eWnToP iJmfOu"
+          class="sc-eVspGN gDCVsu"
         >
           <span
-            class="sc-gKAaRy hLlvoX"
+            class="sc-gKPRtg lhzWfH"
           />
           Que dit votre convention collective ?
         </h2>
       </div>
       <label
-        class="sc-dTSzeu btJghr"
+        class="sc-dUipGc hgoSmo"
         for="convention-search"
       >
         Renseignez le nom de votre convention collective, le nom de votre entreprise ou son SIRET.
       </label>
       <span
-        class="sc-bQCEYZ iOBpgY sc-jLqRGG jXoiKy"
+        class="sc-bQmOxr iqEHsz sc-jKvnYE gFVDMM"
       >
         <input
-          class="sc-fXgAZx esWNAb"
+          class="sc-fWQKxP iaRXHc"
           id="convention-search"
           name="q"
           placeholder="Nom de la convention collective, de l’entreprise ou son SIRET"
@@ -854,18 +850,17 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
           value=""
         />
       </span>
-      
       <p
-        class="sc-bUQyIj eqjFlE"
+        class="sc-bTUVah hXbUfO"
       >
         Vous ne connaissez pas ou ne trouvez pas votre convention collective ?
         <span
-          class="sc-tsGVs cQiTYY"
+          class="sc-uokDu isqtOz"
         >
           Consultez
            
           <button
-            class="sc-hiKfDv eWfpdP sc-dSnXvR fivlYt"
+            class="sc-hhOBVt eyKsVw sc-dTjBdT gTGAtK"
             type="button"
           >
             notre aide
@@ -882,13 +877,13 @@ exports[`<Contribution /> should render with generic answer 1`] = `
 <div>
   <section>
     <div
-      class="sc-eXuyPJ jPObHZ"
+      class="sc-eYqcxL cojNYi"
     >
       <h2
-        class="sc-eWnToP iHpQsB"
+        class="sc-eVspGN fSOkVF"
       >
         <span
-          class="sc-gKAaRy jNbrvj"
+          class="sc-gKPRtg fPkQGb"
         />
         Que dit le code du travail ?
       </h2>
@@ -909,19 +904,19 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
 <div>
   <section>
     <div
-      class="sc-eXuyPJ jPObHZ"
+      class="sc-eYqcxL cojNYi"
     >
       <h2
-        class="sc-eWnToP iHpQsB"
+        class="sc-eVspGN fSOkVF"
       >
         <span
-          class="sc-gKAaRy jNbrvj"
+          class="sc-gKPRtg fPkQGb"
         />
         Que dit le code du travail ?
       </h2>
     </div>
     <div
-      class="sc-kHVIJG hNdRYi"
+      class="sc-kIlzlo OZGbS"
     >
       <span>
         Source :
@@ -937,7 +932,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
       </span>
       <span
         aria-hidden="true"
-        class="sc-ktvWjP iOlJGa"
+        class="sc-ktLMLx hcOhaO"
       >
          - 
       </span>
@@ -955,24 +950,24 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
       </p>
     </div>
     <div
-      class="sc-jSFjdj dftIwI"
+      class="sc-jSUZER kEfUQE"
     >
       <div
-        class="sc-dksuTV iqBBW"
+        class="sc-dkcEsn dbegZj"
       >
         Références
       </div>
       <ul
-        class="sc-jffHpj sc-gGGFjW jAxtJd jIOzfa"
+        class="sc-jfvxQR sc-gGWvLE gwhdUi kAmmUU"
       >
         <li>
           <a
-            class="sc-ezzafa eFglTD sc-JsfZP ccMmAk"
+            class="sc-ezOQGI cmgTaR sc-JHWBx bRXQVI"
             href="/code-du-travail/l-1243"
           >
             <svg
               aria-hidden="true"
-              class="sc-kLojOw kpfGeG"
+              class="sc-kMjNwy dtEtzi"
               fill="none"
               viewBox="0 0 28 15"
               xmlns="http://www.w3.org/2000/svg"
@@ -983,7 +978,7 @@ exports[`<Contribution /> should render with generic answer and content 1`] = `
               />
             </svg>
             <p
-              class="sc-bYwzuL jTtUkg"
+              class="sc-bYMpWt gakFNM"
             >
               Article L-1243 du Code du travail
             </p>
