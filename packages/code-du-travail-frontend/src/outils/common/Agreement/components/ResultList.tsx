@@ -29,7 +29,11 @@ export function ResultList({ query, children }: Props): JSX.Element {
 }
 
 export const ListItem = (props: any) => {
-  return <Li role="option" {...props}>{props.children}</Li>;
+  return (
+    <Li role="option" {...props}>
+      {props.children}
+    </Li>
+  );
 };
 
 const Li = styled.li`
@@ -74,7 +78,10 @@ export const ResultItem = styled.button.attrs({
   cursor: pointer;
   position: relative;
 
-  &:hover {
+  &:active,
+  &:focus,
+  &:hover,
+  &[aria-selected="true"] {
     color: ${({ theme }) => theme.title};
     background-color: ${({ theme }) => theme.bgTertiary};
   }

@@ -15,22 +15,19 @@ import {
 } from "../../../../ConventionCollective/types";
 
 type Props = {
-  renderResults: (
-    renderProps: FetchReducerState<Agreement[]>,
-    query: string
-  ) => JSX.Element;
+  renderResults: (renderProps: FetchReducerState<Agreement[]>) => JSX.Element;
 } & TrackingProps;
 
 export const SearchAgreementInput = ({
-                                       onUserAction,
-                                       renderResults,
-                                     }: Props): JSX.Element => {
+  onUserAction,
+  renderResults,
+}: Props): JSX.Element => {
   const [query, setQuery] = useState("");
 
   const useAgreementSuggester = createSuggesterHook(
     searchAgreements,
     (query) => {
-      onUserAction(UserAction.SearchAgreement, {query});
+      onUserAction(UserAction.SearchAgreement, { query });
     }
   );
 
@@ -39,6 +36,9 @@ export const SearchAgreementInput = ({
   const searchInputHandler = (keyEvent) => {
     const value = keyEvent.target.value;
     setQuery(value);
+  };
+  const getFirstResultId = () => {
+    return state?.data?.length && state.data[0].id;
   };
   return (
     <>
@@ -79,12 +79,12 @@ export const SearchAgreementInput = ({
         role="combobox"
         aria-autocomplete="list"
         aria-haspopup="listbox"
-        aria-expanded="true"
-        aria-controls="popup_listbox"
-        aria-activedescendant="selected_option"
+        aria-expanded={!!query}
+        aria-controls="search-results"
+        aria-activedescendant={getFirstResultId()}
       />
 
-      {renderResults(state, query)}
+      {renderResults(state)}
     </>
   );
 };
