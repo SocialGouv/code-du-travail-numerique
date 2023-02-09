@@ -10,8 +10,7 @@ const DepartRetraiteToutesCategoriesReferences = [
   ...DepartRetraiteReferences,
   {
     article: "Article 4.11.2",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027172424?idConteneur=KALICONT000027172335",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027172424?idConteneur=KALICONT000027172335",
   },
 ];
 
@@ -19,13 +18,11 @@ const MiseRetraiteToutesCategoriesReferences = [
   ...MiseRetraiteReferences,
   {
     article: "Article 4.11.2",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027172424?idConteneur=KALICONT000027172335",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027172424?idConteneur=KALICONT000027172335",
   },
   {
     article: "Article 4.12.2",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027172426?idConteneur=KALICONT000027172335",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000027172426?idConteneur=KALICONT000027172335",
   },
 ];
 

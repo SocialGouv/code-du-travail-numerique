@@ -162,6 +162,7 @@ export const ListLink = ({
         query ? `?q=${query}` : ""
       }${anchor ? `#${anchor}` : ""}`}
       passHref
+      legacyBehavior
     >
       <ResultTile {...tileCommonProps} />
     </Link>

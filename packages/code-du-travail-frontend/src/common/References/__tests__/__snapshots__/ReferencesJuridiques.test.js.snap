@@ -3,17 +3,17 @@
 exports[`<ReferencesJuridiques /> should render 1`] = `
 <div>
   <div
-    class="sc-jSFjdj dftIwI"
+    class="sc-jSUZER kEfUQE"
   >
     <div>
       <div
         aria-expanded="false"
-        class="sc-khIgEk ceBxWI"
+        class="sc-khsqcC jyDCrc"
         role="button"
       >
         <svg
           aria-hidden="true"
-          class="sc-fujyAs BrylG"
+          class="sc-ftTHYK jiFzuu"
           fill="none"
           height="24"
           stroke="currentColor"
@@ -30,26 +30,26 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
         </svg>
         <p
           aria-level="2"
-          class="sc-cOifOu XEwmn sc-hTRkXV jAbsFO"
+          class="sc-cOxWqc elKvSZ sc-hTBuwn dTsEeB"
           role="heading"
         >
           Références juridiques concernées :
         </p>
       </div>
       <div
-        class="sc-Arkif eVwpCw"
+        class="sc-AHaJN dhcrLx"
       >
         <ul
-          class="sc-jffHpj sc-dvUynV jAxtJd kvMIHA"
+          class="sc-jfvxQR sc-dvEHMn gwhdUi iZxhbo"
         >
           <li>
             <a
-              class="sc-ezzafa eFglTD sc-kTCsyW hFlLVk"
+              class="sc-ezOQGI cmgTaR sc-kSGOQU dRHaJz"
               href="/code-du-travail/l1244-3"
             >
               <svg
                 aria-hidden="true"
-                class="sc-kLojOw kpfGeG"
+                class="sc-kMjNwy dtEtzi"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 />
               </svg>
               <p
-                class="sc-bYwzuL jTtUkg"
+                class="sc-bYMpWt gakFNM"
               >
                 Article L1244-3 du Code du travail
               </p>
@@ -68,12 +68,12 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           </li>
           <li>
             <a
-              class="sc-ezzafa eFglTD sc-kTCsyW hFlLVk"
+              class="sc-ezOQGI cmgTaR sc-kSGOQU dRHaJz"
               href="/code-du-travail/r1244-4"
             >
               <svg
                 aria-hidden="true"
-                class="sc-kLojOw kpfGeG"
+                class="sc-kMjNwy dtEtzi"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +84,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 />
               </svg>
               <p
-                class="sc-bYwzuL jTtUkg"
+                class="sc-bYMpWt gakFNM"
               >
                 Article R1244-4 du Code du travail
               </p>
@@ -93,14 +93,14 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           <li>
             <a
               aria-label="Article L3121-44 du JO (Nouvelle fenêtre)"
-              class="sc-ezzafa eFglTD sc-kTCsyW hFlLVk no-after"
+              class="sc-ezOQGI cmgTaR sc-kSGOQU dRHaJz no-after"
               href="https://article.jo/L3121-44"
               rel="noopener noreferrer nofollow"
               target="_blank"
             >
               <svg
                 aria-hidden="true"
-                class="sc-kLojOw kpfGeG"
+                class="sc-kMjNwy dtEtzi"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +111,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 />
               </svg>
               <p
-                class="sc-bYwzuL jTtUkg"
+                class="sc-bYMpWt gakFNM"
               >
                 Article L3121-44 du JO
               </p>
@@ -120,14 +120,14 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           <li>
             <a
               aria-label="Article foo du JPO (Nouvelle fenêtre)"
-              class="sc-ezzafa eFglTD sc-kTCsyW hFlLVk no-after"
+              class="sc-ezOQGI cmgTaR sc-kSGOQU dRHaJz no-after"
               href="https://article.jo/foo"
               rel="noopener noreferrer nofollow"
               target="_blank"
             >
               <svg
                 aria-hidden="true"
-                class="sc-kLojOw kpfGeG"
+                class="sc-kMjNwy dtEtzi"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +138,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 />
               </svg>
               <p
-                class="sc-bYwzuL jTtUkg"
+                class="sc-bYMpWt gakFNM"
               >
                 Article foo du JPO
               </p>
@@ -147,14 +147,14 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           <li>
             <a
               aria-label="Convention foo (Nouvelle fenêtre)"
-              class="sc-ezzafa eFglTD sc-kTCsyW hFlLVk no-after"
+              class="sc-ezOQGI cmgTaR sc-kSGOQU dRHaJz no-after"
               href="https://ma-convention-collective/ccc-foo"
               rel="noopener noreferrer nofollow"
               target="_blank"
             >
               <svg
                 aria-hidden="true"
-                class="sc-kLojOw kpfGeG"
+                class="sc-kMjNwy dtEtzi"
                 fill="none"
                 viewBox="0 0 28 15"
                 xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +165,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 />
               </svg>
               <p
-                class="sc-bYwzuL jTtUkg"
+                class="sc-bYMpWt gakFNM"
               >
                 Convention foo
               </p>

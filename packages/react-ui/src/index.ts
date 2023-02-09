@@ -32,7 +32,7 @@ export { MoreContent } from "./MoreContent/index.js";
 export { OverflowWrapper } from "./OverflowWrapper/index.js";
 export { Progress } from "./Progress/index.js";
 export { ScreenReaderOnly } from "./ScreenReaderOnly/index.js";
-export { Stripe } from "./Stripe/";
+export { Stripe } from "./Stripe";
 export { Table } from "./Table/index.js";
 export { TableOfContent } from "./TableOfContent/index.js";
 export { Tabs } from "./Tabs/index.js";

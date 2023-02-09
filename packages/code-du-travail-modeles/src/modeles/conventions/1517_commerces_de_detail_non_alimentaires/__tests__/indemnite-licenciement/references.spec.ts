@@ -8,8 +8,7 @@ const engine = new IndemniteLicenciementPublicodes(
 const References = [
   {
     article: "Article 4, Chapitre VI",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046093607?idConteneur=KALICONT000005635870&origin=list#KALIARTI000046093607",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000046093607?idConteneur=KALICONT000005635870&origin=list#KALIARTI000046093607",
   },
 ];
 
@@ -27,9 +26,12 @@ describe("Vérification des références juridiques pour la CC 1517", () => {
     ({ seniority, inaptitude, expectedReferences }) => {
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1517'",
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle": inaptitude,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . inaptitude suite à un accident ou maladie professionnelle":
+          inaptitude,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
       });

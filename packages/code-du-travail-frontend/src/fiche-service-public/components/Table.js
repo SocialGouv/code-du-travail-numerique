@@ -64,7 +64,7 @@ class Table extends React.PureComponent {
               {tr.children.map((td, columnIndex) => {
                 const Cell = isHeaderCell(columnIndex) ? "th" : "td";
                 if (!td.children) {
-                  return <Cell />;
+                  return <Cell key={columnIndex} />;
                 }
                 return (
                   <Cell key={columnIndex} {...handleSpan(td)}>

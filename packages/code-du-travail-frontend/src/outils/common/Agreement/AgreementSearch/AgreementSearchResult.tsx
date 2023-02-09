@@ -140,6 +140,7 @@ const renderResults = ({
               <Link
                 passHref
                 href={`/${SOURCES.TOOLS}/convention-collective#entreprise`}
+                legacyBehavior
               >
                 <Button as="a" variant="link" narrow small>
                   Je recherche avec le nom de l’entreprise

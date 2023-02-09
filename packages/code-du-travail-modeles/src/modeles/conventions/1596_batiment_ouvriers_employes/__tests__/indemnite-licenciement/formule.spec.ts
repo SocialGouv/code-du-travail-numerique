@@ -23,9 +23,12 @@ describe("Formule indemnité licenciement - 1596", () => {
     ({ age, seniority, expectedFormula, expectedExplanations }) => {
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC1596'",
-        "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age": age,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+        "contrat salarié . convention collective . batiment ouvriers employés . indemnité de licenciement . age":
+          age,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+          seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
       });

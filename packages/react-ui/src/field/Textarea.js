@@ -18,9 +18,10 @@ export const Textarea = ({
   const [a11yCounter, setA11Counter] = useState(maxLength);
   const hasOverflowed = maxLength ? maxLength - value.length <= 0 : false;
 
-  const a11yCounterUpdate = useMemo(() => debounce(setA11Counter, 500), [
-    setA11Counter,
-  ]);
+  const a11yCounterUpdate = useMemo(
+    () => debounce(setA11Counter, 500),
+    [setA11Counter]
+  );
 
   useEffect(() => {
     return () => {

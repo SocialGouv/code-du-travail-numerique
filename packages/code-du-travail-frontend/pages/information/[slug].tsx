@@ -59,9 +59,9 @@ const Information = ({
           contents={contents}
         ></Contents>
         {references.map(
-          ({ label, links }) =>
+          ({ label, links }, index) =>
             links.length > 0 && (
-              <Section>
+              <Section key={`section-info-${index}`}>
                 <References
                   label={label}
                   accordionDisplay={1}

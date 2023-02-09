@@ -9,13 +9,11 @@ const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 const CommonReferences = [
   {
     article: "Article 34",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000042096649#KALIARTI000042096649",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000042096649#KALIARTI000042096649",
   },
   {
     article: "Article 32",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000042096655#KALIARTI000042096655",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000042096655#KALIARTI000042096655",
   },
 ];
 
