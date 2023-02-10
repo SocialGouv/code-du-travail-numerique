@@ -1,28 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Container /> renders 1`] = `
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-bcXHqe evAMOC"
   >
     One Aside title
   </div>
@@ -30,29 +11,9 @@ exports[`<Container /> renders 1`] = `
 `;
 
 exports[`<Container /> renders narrow 1`] = `
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  max-width: 74rem;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-bcXHqe ePDXDD"
   >
     Narrow contained
   </div>
@@ -60,30 +21,9 @@ exports[`<Container /> renders narrow 1`] = `
 `;
 
 exports[`<Container /> renders narrow without padding 1`] = `
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  padding: 0;
-  max-width: 74rem;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-bcXHqe ljCEtE"
   >
     noPadding prop can only be used with the narrow prop
   </div>
@@ -91,28 +31,9 @@ exports[`<Container /> renders narrow without padding 1`] = `
 `;
 
 exports[`<Container /> renders without padding even if the prop is specified, because the narrow prop is not 1`] = `
-.c0 {
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-@media (max-width:600px) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-bcXHqe evAMOC"
   >
     noPadding prop can only be used with the narrow prop
   </div>
