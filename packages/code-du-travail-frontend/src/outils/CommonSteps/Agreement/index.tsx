@@ -160,7 +160,10 @@ function AgreementStep({
                   checked={selectedAgreement?.num === 3239}
                 />
               </InputWrapper>
-              <ButtonClicker onClick={() => setIsInputVisible(!isInputVisible)}>
+              <ButtonClicker
+                onClick={() => setIsInputVisible(!isInputVisible)}
+                type="button"
+              >
                 <icons.HelpCircle size="20" aria-label="?" />
               </ButtonClicker>
             </RowWrapper>
