@@ -182,6 +182,9 @@ function AgreementStep({
               <Paragraph noMargin fontWeight="600" fontSize="default">
                 Particulier employeur et emploi à domicile
               </Paragraph>
+              <StyledParagraph>
+                Cliquez sur Suivant pour poursuivre la simulation.
+              </StyledParagraph>
             </>
           )}
           {error?.enterprise && <InlineError>{error.enterprise}</InlineError>}
@@ -200,6 +203,10 @@ const RowWrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+`;
+
+const StyledParagraph = styled(Paragraph)`
+  margin-top: ${theme.spacings.large};
 `;
 
 const InputWrapper = styled.div`
