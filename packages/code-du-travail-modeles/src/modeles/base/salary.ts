@@ -11,7 +11,8 @@ export type LegalReferenceSalaryProps = {
 };
 
 export class ReferenceSalaryLegal
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.default> {
+  implements IReferenceSalary<SupportedCcIndemniteLicenciement.default>
+{
   /**
    * Règle :
    * - soit 1/12*S1

@@ -10,6 +10,7 @@ export const Label = ({ children, ...props }) => (
 
 Label.propTypes = {
   children: PropTypes.node.isRequired,
+  htmlFor: PropTypes.string,
 };
 
 const StyledLabel = styled.label`

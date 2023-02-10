@@ -28,35 +28,47 @@ const HeaderBurgerNav = ({ currentPage }: Props): JSX.Element => {
             </AccessibilityModal>
           </LiMobileOnly>
           <Li>
-            <Link href="/outils" passHref>
+            <Link href="/outils" passHref legacyBehavior>
               <NavAnchor isCurrent={currentPage === "tools"}>
                 Boîte&nbsp;à&nbsp;outils
               </NavAnchor>
             </Link>
           </Li>
           <Li>
-            <Link href={`/${getRouteBySource(SOURCES.LETTERS)}`} passHref>
+            <Link
+              href={`/${getRouteBySource(SOURCES.LETTERS)}`}
+              passHref
+              legacyBehavior
+            >
               <NavAnchor isCurrent={currentPage === SOURCES.LETTERS}>
                 Modèles de documents
               </NavAnchor>
             </Link>
           </Li>
           <Li>
-            <Link href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}`} passHref>
+            <Link
+              href={`/${getRouteBySource(SOURCES.CONTRIBUTIONS)}`}
+              passHref
+              legacyBehavior
+            >
               <NavAnchor isCurrent={currentPage === SOURCES.CONTRIBUTIONS}>
                 Vos fiches pratiques
               </NavAnchor>
             </Link>
           </Li>
           <Li>
-            <Link href={`/${getRouteBySource(SOURCES.CCN)}`} passHref>
+            <Link
+              href={`/${getRouteBySource(SOURCES.CCN)}`}
+              passHref
+              legacyBehavior
+            >
               <NavAnchor isCurrent={currentPage === SOURCES.CCN}>
                 Votre convention collective
               </NavAnchor>
             </Link>
           </Li>
           <Li>
-            <Link href="/themes" passHref>
+            <Link href="/themes" passHref legacyBehavior>
               <NavAnchor isCurrent={currentPage === "themes"}>Thèmes</NavAnchor>
             </Link>
           </Li>

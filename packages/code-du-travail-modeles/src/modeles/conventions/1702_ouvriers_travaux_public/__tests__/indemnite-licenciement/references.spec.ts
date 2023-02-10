@@ -8,18 +8,15 @@ const engine = new IndemniteLicenciementPublicodes(
 const refs = [
   {
     article: "Article 10.3",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005801849?idConteneur=KALICONT000005635467",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005801849?idConteneur=KALICONT000005635467",
   },
   {
     article: "Article 10.5",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005801851?idConteneur=KALICONT000005635467",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005801851?idConteneur=KALICONT000005635467",
   },
   {
     article: "Article 10.4",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005801850?idConteneur=KALICONT000005635467&origin=list#KALIARTI000005801850",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005801850?idConteneur=KALICONT000005635467&origin=list#KALIARTI000005801850",
   },
 ];
 

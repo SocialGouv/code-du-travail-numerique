@@ -10,8 +10,7 @@ const DepartRetraiteCadresReferences = [
   ...DepartRetraiteReferences,
   {
     article: "Article 8 de l'annexe III",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517566?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517566=",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517566?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517566=",
   },
 ];
 
@@ -19,8 +18,7 @@ const MiseRetraiteOuvriersReferences = [
   ...MiseRetraiteReferences,
   {
     article: "Article 5 de l'annexe I",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517480?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517480",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517480?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517480",
   },
 ];
 
@@ -28,8 +26,7 @@ const MiseRetraiteTechniciensReferences = [
   ...MiseRetraiteReferences,
   {
     article: "Article 5.1 de l'annexe II",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000041517514/?idConteneur=KALICONT000005635085",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000041517514/?idConteneur=KALICONT000005635085",
   },
 ];
 
@@ -37,8 +34,7 @@ const MiseRetraiteCadresReferences = [
   ...MiseRetraiteReferences,
   {
     article: "Article 8 de l'annexe III",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517566?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517566=",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000041517566?idConteneur=KALICONT000005635085&origin=list#KALIARTI000041517566=",
   },
 ];
 

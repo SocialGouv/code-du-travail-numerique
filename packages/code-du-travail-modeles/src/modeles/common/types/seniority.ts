@@ -37,13 +37,12 @@ export interface ISeniority<T extends SupportedCcIndemniteLicenciement> {
 
 export type SeniorityRequiredProps = DefaultSeniorityRequiredProps;
 
-export type SeniorityProps<
-  T
-> = T extends SupportedCcIndemniteLicenciement.IDCC0016
-  ? CC0016SeniorityProps
-  : T extends SupportedCcIndemniteLicenciement.IDCC413
-  ? CC0413SeniorityProps
-  : DefaultSeniorityProps;
+export type SeniorityProps<T> =
+  T extends SupportedCcIndemniteLicenciement.IDCC0016
+    ? CC0016SeniorityProps
+    : T extends SupportedCcIndemniteLicenciement.IDCC413
+    ? CC0413SeniorityProps
+    : DefaultSeniorityProps;
 
 export type SeniorityResult = {
   value: number;

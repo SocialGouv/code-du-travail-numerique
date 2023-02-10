@@ -6,10 +6,9 @@ import {
   theme,
   Title,
   Wrapper,
-  Button,
 } from "@socialgouv/cdtn-ui";
 import Link from "next/link";
-import React, { useCallback } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import Metas from "../src/common/Metas";
@@ -41,9 +40,7 @@ const CookiePolicy = (): JSX.Element => {
               analyser les usages, améliorer la précision des réponses apportées
               et améliorer le service et ainsi réaliser la mission d’intérêt
               public telle que présentée dans la page{" "}
-              <Link href="/a-propos">
-                <a>à propos.</a>
-              </Link>
+              <Link href="/a-propos">à propos.</Link>
             </p>
             <p>
               Nous nous engageons à ne jamais céder ces informations à des

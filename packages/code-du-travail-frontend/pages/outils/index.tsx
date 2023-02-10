@@ -40,7 +40,7 @@ const Outils = ({ cdtnSimulators, externalTools }) => (
                 href: `/${getRouteBySource(SOURCES.TOOLS)}/${slug}`,
               };
               return (
-                <Link {...linkProps} passHref key={id}>
+                <Link {...linkProps} passHref key={id} legacyBehavior>
                   <CallToActionTile
                     action={action}
                     custom

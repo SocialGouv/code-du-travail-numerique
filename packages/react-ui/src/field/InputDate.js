@@ -1,9 +1,8 @@
-import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
 import { box, breakpoints, fonts, spacings } from "../theme.js";
-import { INPUT_HEIGHT } from "./Input";
+import { DefaultInputProps, INPUT_HEIGHT } from "./Input";
 
 function addSlashIfNeeded(newValue) {
   if (newValue.length === 2 || newValue.length === 5) {
@@ -125,12 +124,7 @@ export const InputDate = ({ value, onChange, invalid, ...props }) => {
   );
 };
 
-InputDate.propTypes = {
-  invalid: PropTypes.bool,
-  name: PropTypes.string.isRequired,
-  onChange: PropTypes.func,
-  value: PropTypes.string,
-};
+InputDate.propTypes = DefaultInputProps;
 
 const StyledWrapper = styled.div`
   display: flex;
