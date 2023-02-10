@@ -8,5 +8,10 @@
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-export-namespace-from"
   ],
-  "exclude": ["**/*.stories.js", "**/*.stories.ts", "story.js", "story.ts"]
+  "exclude": [
+    "**/*.stories.js",
+    "**/*.stories.ts",
+    "story.js",
+    "story.ts"
+  ]
 }
