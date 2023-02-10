@@ -185,10 +185,10 @@ exports[`<Glossaire /> should render 1`] = `
           class="sc-bcXHqe ePDXDD"
         >
           <header
-            class="sc-eYqcxL hMutTz"
+            class="sc-eYqcxL EeUrP"
           >
             <h1
-              class="sc-iqPaeV fejMbm"
+              class="sc-iqPaeV kEALzb"
             >
               <span
                 class="sc-gKPRtg efbYAr"
@@ -196,7 +196,7 @@ exports[`<Glossaire /> should render 1`] = `
               Glossaire
             </h1>
             <p
-              class="sc-iFoMEM keKtyi"
+              class="sc-iFoMEM fYKBww"
             >
               Les définitions de ce glossaire, disponibles en surbrillance dans les textes des réponses, ont pour objectif d’améliorer la compréhension des termes juridiques. Elles ne se substituent pas à la définition juridique exacte de ces termes.
             </p>

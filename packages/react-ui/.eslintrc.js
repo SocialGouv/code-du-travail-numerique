@@ -1,25 +1,24 @@
 module.exports = {
-  extends: [
-    "@socialgouv/eslint-config-react",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
-  ],
-  overrides: [
-    {
-      env: {
-        jest: true,
-      },
-      files: ["test.js"],
-    },
-  ],
-  parserOptions: {
-    project: "tsconfig.json",
-    sourceType: "module",
-    tsconfigRootDir: __dirname,
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+    jest: true,
   },
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint", "jest"],
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+  ],
   rules: {
-    "import/no-extraneous-dependencies": "error",
-    "react/react-in-jsx-scope:": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "import/namespace": "off",
+    "import/no-extraneous-dependencies": "off",
+    "@typescript-eslint/no-var-requires": "off",
   },
 };

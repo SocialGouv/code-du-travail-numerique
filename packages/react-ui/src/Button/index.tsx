@@ -1,12 +1,11 @@
 import { lighten, rgba } from "polished";
-import PropTypes from "prop-types";
 import React from "react";
 import styled, { css } from "styled-components";
 
 import { DirectionRight } from "../icons/index.js";
 import { animations, box, breakpoints, fonts, spacings } from "../theme.js";
 
-export const StyledButton = styled.button`
+export const StyledButton = styled.button<ButtonProps>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +53,7 @@ export const StyledButton = styled.button`
         svg {
           width: 2.6rem;
           height: 1.4rem;
-          margin: ${({ hasText }) =>
+          margin: ${({ hasText }: any) =>
             hasText ? `0 ${spacings.tiny} 0 ${spacings.small}` : "0"};
           transition: transform ${animations.transitionTiming} linear;
           /* stylelint-disable-next-line */
@@ -86,12 +85,12 @@ export const StyledButton = styled.button`
     }
 
     let height = "5.2rem";
-    let backgroundColor = theme[variant];
-    let borderColor = theme[variant];
+    let backgroundColor = theme[variant ?? "primary"];
+    let borderColor = theme[variant ?? "primary"];
     let color = theme[variant + "Text"];
     const largeShadow = "0px 10px 20px";
     const smallShadow = "0px 5px 7px";
-    let boxShadow = `${largeShadow} ${rgba(
+    let boxShadow: any = `${largeShadow} ${rgba(
       theme.secondary,
       0.26
     )}, ${smallShadow} ${rgba(theme.secondary, 0.35)}`;
@@ -170,7 +169,7 @@ export const StyledButton = styled.button`
         cursor: not-allowed;
       }
 
-      ${({ narrow, small, variant }) => {
+      ${({ narrow, small, variant }: any) => {
         if (variant !== "link" && !small && !narrow) {
           return css`
             @media (max-width: ${breakpoints.mobile}) {
@@ -183,43 +182,40 @@ export const StyledButton = styled.button`
   }}
 `;
 
-export const Button = React.forwardRef(
-  ({ children, icon: Icon, ...props }, ref) => {
-    const StyledCustomIcon = Icon || DirectionRight;
-    return (
-      <StyledButton {...props} ref={ref}>
-        {children}
-        {props.variant === "link" && (
-          <StyledCustomIcon hasText={Boolean(children)} />
-        )}
-      </StyledButton>
-    );
-  }
-);
-Button.displayName = "Button";
-
-Button.propTypes = {
-  children: PropTypes.node,
-  hasText: PropTypes.bool,
-  icon: PropTypes.elementType,
-  narrow: PropTypes.bool,
-  onClick: PropTypes.func,
-  small: PropTypes.bool,
-  variant: PropTypes.oneOf([
-    "link",
-    "navLink",
-    "flat",
-    "naked",
-    "primary",
-    "secondary",
-  ]),
+type ButtonProps = {
+  children?: React.ReactNode;
+  hasText?: boolean;
+  icon?: React.ElementType;
+  narrow?: boolean;
+  onClick?: () => void;
+  small?: boolean;
+  variant?: "link" | "navLink" | "flat" | "naked" | "primary" | "secondary";
+  xsmall?: boolean;
+  as?: React.ElementType;
 };
 
-Button.defaultProps = {
+const defaultProps: ButtonProps = {
   children: "",
   narrow: false,
   onClick: () => {},
   small: false,
   variant: "secondary",
-  xsmall: false,
 };
+
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  (props, ref) => {
+    const StyledCustomIcon = props.icon || DirectionRight;
+    return (
+      <StyledButton {...props} ref={ref}>
+        {props.children}
+        {props.variant && props.variant === "link" && (
+          <StyledCustomIcon hasText={Boolean(props.children)} />
+        )}
+      </StyledButton>
+    );
+  }
+);
+
+Button.defaultProps = defaultProps;
+
+Button.displayName = "Button";

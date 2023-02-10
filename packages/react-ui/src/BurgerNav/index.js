@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { X } from "react-feather";
 import styled from "styled-components";
 
-import { Button } from "../Button/index.js";
+import { Button } from "../Button";
 import { Burger as BurgerIcon } from "../icons/index.js";
 import { ScreenReaderOnly } from "../ScreenReaderOnly/index.js";
 import { box, breakpoints, spacings } from "../theme.js";

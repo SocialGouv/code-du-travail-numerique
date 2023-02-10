@@ -185,10 +185,10 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           class="sc-bcXHqe ePDXDD"
         >
           <header
-            class="sc-eYqcxL hMutTz"
+            class="sc-eYqcxL EeUrP"
           >
             <h1
-              class="sc-iqPaeV fejMbm"
+              class="sc-iqPaeV kEALzb"
             >
               <span
                 class="sc-gKPRtg efbYAr"
@@ -196,7 +196,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               Modèles de documents
             </h1>
             <p
-              class="sc-iFoMEM keKtyi"
+              class="sc-iFoMEM fYKBww"
             >
               Téléchargez et personnalisez les modèles de documents et de lettres pour vos démarches en lien avec le droit du travail
             </p>

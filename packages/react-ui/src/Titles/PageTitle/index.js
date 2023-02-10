@@ -7,27 +7,19 @@ import { breakpoints, fonts, spacings } from "../../theme.js";
 import { Header } from "../common/Header.js";
 import { TitleParagraph } from "../common/TitleParagraph.js";
 
-export const PageTitle = ({
-  as,
-  children,
-  stripe,
-  shift = "",
-  subtitle,
-  variant,
-  ...props
-}) => (
-  <Header pageTitle stripe={stripe} shift={shift} {...props}>
-    <StyledPageTitle stripe={stripe} as={as} shift={shift}>
+export const PageTitle = (props) => (
+  <Header pageTitle stripe={props.stripe} shift={props.shift} {...props}>
+    <StyledPageTitle stripe={props.stripe} as={props.as} shift={props.shift}>
       <Stripe
-        rounded={variant !== "primary"}
-        variant={variant}
-        {...(stripe === "left" && { length: "100%", position: "left" })}
+        rounded={props.variant !== "primary"}
+        variant={props.variant}
+        {...(props.stripe === "left" && { length: "100%", position: "left" })}
       />
-      {children}
+      {props.children}
     </StyledPageTitle>
-    {subtitle && (
-      <TitleParagraph stripe={stripe} shift={shift}>
-        {subtitle}
+    {props.subtitle && (
+      <TitleParagraph stripe={props.stripe} shift={props.shift}>
+        {props.subtitle}
       </TitleParagraph>
     )}
   </Header>
@@ -40,11 +32,6 @@ PageTitle.propTypes = {
   stripe: PropTypes.oneOf(["left", "top"]),
   subtitle: PropTypes.node,
   variant: PropTypes.string,
-};
-
-PageTitle.defaultProps = {
-  stripe: "top",
-  variant: "secondary",
 };
 
 const StyledPageTitle = styled.h1`

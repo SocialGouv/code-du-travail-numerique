@@ -17,7 +17,7 @@ export { ArrowLink } from "./ArrowLink/index.js";
 export { Badge } from "./Badge/index.js";
 export { BurgerNav } from "./BurgerNav/index.js";
 export { BurgerNavButton, BurgerNavItem } from "./BurgerNav/NavItems.js";
-export { Button } from "./Button/index.js";
+export { Button } from "./Button";
 export { CodeSnippet } from "./CodeSnippet/index.js";
 export { Collapse } from "./Collapse/index.js";
 export { DisclosureIcon } from "./DisclosureIcon/index.js";

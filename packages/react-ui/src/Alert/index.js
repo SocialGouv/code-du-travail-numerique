@@ -35,14 +35,15 @@ Alert.defaultProps = {
   variant: "secondary",
 };
 
-export function AlertWithIcon({ variant, size, children, ...props }) {
+export const AlertWithIcon = ({ variant, size, children, ...props }) => {
   return (
     <Flex variant={variant} size={size} {...props}>
       <AlertCircle aria-hidden="true" />
       <Box>{children}</Box>
     </Flex>
   );
-}
+};
+
 AlertWithIcon.propTypes = {
   children: PropTypes.node.isRequired,
   size: PropTypes.oneOf(["small", "medium"]),

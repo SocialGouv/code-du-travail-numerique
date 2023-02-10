@@ -8,19 +8,19 @@ exports[`<Highlights /> should render 1`] = `
     <div
       class="sc-bcXHqe evAMOC"
     >
-      <header
-        class="sc-eYqcxL hMutTz"
+      <h2
+        class="sc-eYqcxL EeUrP"
         id="a-la-une"
       >
         <h2
-          class="sc-iqPaeV fejMbm"
+          class="sc-iqPaeV kEALzb"
         >
           <span
             class="sc-gKPRtg efbYAr"
           />
           À la une
         </h2>
-      </header>
+      </h2>
       <div
         class="sc-eJDSGI hWSwY sc-hiDMwi gAYklG"
       >

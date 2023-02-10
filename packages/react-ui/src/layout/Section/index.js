@@ -26,29 +26,22 @@ const assignBackgroundColor = ({ variant, theme }) => {
   `;
 };
 
-export const Section = ({
-  decorated,
-  large,
-  innerTopContent,
-  innerBottomContent,
-  variant,
-  ...props
-}) => {
-  if (decorated) {
+export const Section = (props) => {
+  if (props.decorated) {
     return (
-      <StyledSection large={large} decorated>
-        <Decoration variant={variant} />
-        {innerTopContent && (
-          <PaddedContainer>{innerTopContent}</PaddedContainer>
+      <StyledSection large={props.large} decorated>
+        <Decoration variant={props.variant} />
+        {props.innerTopContent && (
+          <PaddedContainer>{props.innerTopContent}</PaddedContainer>
         )}
         <Content {...props} />
-        {innerBottomContent && (
-          <PaddedContainer>{innerBottomContent}</PaddedContainer>
+        {props.innerBottomContent && (
+          <PaddedContainer>{props.innerBottomContent}</PaddedContainer>
         )}
       </StyledSection>
     );
   }
-  return <StyledSection variant={variant} {...props} />;
+  return <StyledSection variant={props.variant} {...props} />;
 };
 
 const StyledSection = styled.div`

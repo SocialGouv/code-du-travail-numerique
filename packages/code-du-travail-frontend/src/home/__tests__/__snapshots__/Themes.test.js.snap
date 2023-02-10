@@ -34,11 +34,11 @@ exports[`<Themes /> should render 1`] = `
         <div
           class="sc-dvEHMn bMAjqy"
         >
-          <header
-            class="sc-eYqcxL hMutTz"
+          <h2
+            class="sc-eYqcxL EeUrP"
           >
             <h2
-              class="sc-iqPaeV fejMbm"
+              class="sc-iqPaeV kEALzb"
             >
               <span
                 class="sc-gKPRtg efbYAr"
@@ -46,11 +46,11 @@ exports[`<Themes /> should render 1`] = `
               Thèmes
             </h2>
             <p
-              class="sc-iFoMEM keKtyi"
+              class="sc-iFoMEM fYKBww"
             >
               Retrouvez tous nos contenus organisés par thèmes
             </p>
-          </header>
+          </h2>
         </div>
         <div
           class="sc-eJDSGI hWSwY sc-hiDMwi gAYklG"
@@ -67,7 +67,7 @@ exports[`<Themes /> should render 1`] = `
                 <div
                   class="sc-cLNonn gVcJvM"
                 >
-                  <header
+                  <h2
                     class="sc-eYqcxL EeUrP"
                   >
                     <h2
@@ -83,7 +83,7 @@ exports[`<Themes /> should render 1`] = `
                     >
                       Retrouvez tous nos contenus organisés par thèmes
                     </p>
-                  </header>
+                  </h2>
                 </div>
               </div>
               <div

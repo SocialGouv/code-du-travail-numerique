@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import { X } from "react-feather";
 import styled from "styled-components";
 
-import { Button } from "../Button/index.js";
+import { Button } from "../Button";
 import { ScreenReaderOnly } from "../ScreenReaderOnly/index.js";
 import { box, breakpoints, spacings } from "../theme.js";
 

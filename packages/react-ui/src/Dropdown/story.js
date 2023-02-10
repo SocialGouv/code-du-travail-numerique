@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button } from "../Button/index.js";
+import { Button } from "../Button";
 import { Section } from "../layout/Section/index.js";
 import { Dropdown } from "./index.js";
 
