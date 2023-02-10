@@ -2,6 +2,7 @@ import React from "react";
 import { RadioQuestion } from "../../Components";
 import { Route } from "./store";
 import { AgreementSearch, EnterpriseSearch } from "./components";
+import { Paragraph, theme } from "@socialgouv/cdtn-ui";
 import { Agreement } from "../../../conventions/Search/api/type";
 import { Toast, Button } from "@socialgouv/cdtn-ui";
 import {
@@ -15,6 +16,7 @@ import ShowAlert from "../../common/Agreement/RouteSelection/ShowAlert";
 import { AgreementSearchValue } from "./store";
 import { Question } from "../../common/Question";
 import { SelectedAgreement } from "./components/AgreementSearch";
+import styled from "styled-components";
 
 type Props = {
   selectedRoute?: Route;
@@ -124,6 +126,9 @@ function AgreementStep({
               >
                 {selectedAgreement?.shortTitle}
               </SelectedAgreement>
+              <StyledParagraph>
+                Cliquez sur Suivant pour poursuivre la simulation.
+              </StyledParagraph>
             </>
           ) : (
             <>
@@ -175,3 +180,7 @@ function AgreementStep({
 }
 
 export default AgreementStep;
+
+const StyledParagraph = styled(Paragraph)`
+  margin-top: ${theme.spacings.large};
+`;
