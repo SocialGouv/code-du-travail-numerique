@@ -57,7 +57,7 @@ export const RelatedItems = ({ items = [] }) => {
 
                   return (
                     <StyledLinkItem key={href}>
-                      <Link href={href} passHref>
+                      <Link href={href} passHref legacyBehavior>
                         <ArrowLink
                           arrowPosition="left"
                           onClick={() =>

@@ -27,9 +27,9 @@ export const Contents = ({
       <>
         <BlockList key={name} name={name} blocks={blocks}></BlockList>
         {references.map(
-          ({ label, links }) =>
+          ({ label, links }, index) =>
             links.length > 0 && (
-              <Section>
+              <Section key={`section-${index}`}>
                 <References
                   label={label}
                   accordionDisplay={1}

@@ -3,19 +3,19 @@
 exports[`<Share /> renders 1`] = `
 <div>
   <div
-    class="sc-kTCsyW bBcUcv"
+    class="sc-kSGOQU fjTFqE"
   >
     <button
-      class="sc-dvUynV dBsnir no-after spacing-left"
+      class="sc-dvEHMn dyLewL no-after spacing-left"
       title="Partager sur Facebook"
       type="button"
     >
       <span
-        class="sc-ellfGf katmPY"
+        class="sc-elAWhN VzdIJ"
       >
         <svg
           aria-hidden="true"
-          class="sc-kizEQm gRBxrW"
+          class="sc-kiPvrU jIZWeG"
           fill="none"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
@@ -28,16 +28,16 @@ exports[`<Share /> renders 1`] = `
       </span>
     </button>
     <a
-      class="sc-jtiXyc bWctOX spacing-left"
+      class="sc-jsTgWu iidugI spacing-left"
       href="mailto:?subject=A%20lire%20sur%20le%20Code%20du%20travail%20num%C3%A9rique%20%3A%20undefined&body=undefined%0A%0Ahttp%3A%2F%2Flocalhost%2F"
       title="Envoyer par email"
     >
       <span
-        class="sc-ellfGf katmPY"
+        class="sc-elAWhN VzdIJ"
       >
         <svg
           aria-hidden="true"
-          class="sc-kizEQm gRBxrW"
+          class="sc-kiPvrU jIZWeG"
           fill="none"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
@@ -54,15 +54,15 @@ exports[`<Share /> renders 1`] = `
       </span>
     </a>
     <button
-      class="sc-dvUynV dBsnir spacing-left"
+      class="sc-dvEHMn dyLewL spacing-left"
       title="Partager sur LinkedIn"
     >
       <span
-        class="sc-ellfGf katmPY"
+        class="sc-elAWhN VzdIJ"
       >
         <svg
           aria-hidden="true"
-          class="sc-kizEQm gRBxrW"
+          class="sc-kiPvrU jIZWeG"
           fill="none"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
@@ -75,18 +75,18 @@ exports[`<Share /> renders 1`] = `
       </span>
     </button>
     <div
-      class="sc-laZMeE dRGEWO"
+      class="sc-lbVpMG fQidUo"
     >
       <button
-        class="sc-dvUynV dBsnir spacing-left"
+        class="sc-dvEHMn dyLewL spacing-left"
         title="Plus d’options"
       >
         <span
-          class="sc-ellfGf katmPY"
+          class="sc-elAWhN VzdIJ"
         >
           <svg
             aria-hidden="true"
-            class="sc-kizEQm gRBxrW"
+            class="sc-kiPvrU jIZWeG"
             fill="none"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"

@@ -15,31 +15,6 @@ concurrency:
   group: review-${{ github.ref }}
 
 jobs:
-  register:
-    name: Register images
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - images: "code-du-travail-frontend"
-            path: "."
-            args: |
-              NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
-              NEXT_PUBLIC_SENTRY_ENV=dev
-          - images: "code-du-travail-api"
-            path: "./packages/code-du-travail-api/"
-    steps:
-      - name: Register docker images
-        uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
-        with:
-          project: "cdtn"
-          imageName: cdtn/${{ matrix.images }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          dockerfile: "${{ matrix.path }}/Dockerfile"
-          dockercontext: "${{ matrix.path }}"
-          dockerbuildargs: ${{ matrix.args }}
-
   manifests:
     name: Generate k8s manifests
     runs-on: ubuntu-latest
@@ -65,10 +40,68 @@ jobs:
           ELASTIC_APM_ENVIRONMENT: cdtn-${{ steps.k8s.outputs.branch }}
           ES_INDEX_PREFIX: cdtn-preprod
 
+  register-frontend:
+    name: Register frontend
+    runs-on: ubuntu-latest
+    needs: [manifests]
+    steps:
+      - name: Get commit sha
+        run: |
+          echo "GITHUB_SHA=${GITHUB_SHA}" >> $GITHUB_ENV
+
+      - name: Download k8s manifests
+        uses: actions/download-artifact@v3
+        with:
+          name: manifests-dev.yml
+
+      - name: Get deployment url for site
+        uses: mikefarah/yq@v4.30.5
+        id: url
+        with:
+          cmd: echo $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | tail -n 1)
+
+      - name: Get api url for site
+        uses: mikefarah/yq@v4.30.5
+        id: apiurl
+        with:
+          cmd: echo $(cat manifests-dev.yml | yq eval-all '.spec.rules[] .host' - | head -n 1)
+
+      - name: Register docker images
+        uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
+        with:
+          project: "cdtn"
+          imageName: "cdtn/code-du-travail-frontend"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: "./Dockerfile"
+          dockercontext: "."
+          dockerbuildargs: |
+              NEXT_PUBLIC_SENTRY_DSN=https://c2aa7e731a494cfd8f7fb1ddabca11c9@sentry.fabrique.social.gouv.fr/5
+              NEXT_PUBLIC_SENTRY_ENV=dev
+              NEXT_PUBLIC_AZURE_BASE_URL=https://cdtnadmindev.blob.core.windows.net
+              NEXT_PUBLIC_AZURE_CONTAINER=cdtn
+              NEXT_PUBLIC_PIWIK_SITE_ID=3
+              NEXT_PUBLIC_PIWIK_URL=https://matomo.fabrique.social.gouv.fr
+              NEXT_PUBLIC_API_URL=https://${{ steps.apiurl.outputs.result }}/api/v1
+              NEXT_PUBLIC_COMMIT=${{ env.GITHUB_SHA }}
+              NEXT_PUBLIC_SITE_URL=https://${{ steps.url.outputs.result }}
+
+  register-api:
+    name: Register api
+    runs-on: ubuntu-latest
+    steps:
+      - name: Register docker images
+        uses: SocialGouv/actions/autodevops-build-register@local-cache-cdtn
+        with:
+          project: "cdtn"
+          imageName: "cdtn/code-du-travail-api"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: "./packages/code-du-travail-api/Dockerfile"
+          dockercontext: "./packages/code-du-travail-api"
+
   deploy:
     name: Deploy application
     runs-on: ubuntu-latest
-    needs: [ register, manifests ]
+    needs: [ register-frontend, register-api, manifests ]
     steps:
       - name: Use autodevops deployment
         uses: SocialGouv/actions/autodevops-deploy@v1

@@ -8,8 +8,7 @@ const engine = new IndemniteLicenciementPublicodes(
 const references = [
   {
     article: "Article 47",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000020981961?idConteneur=KALICONT000005635813",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000020981961?idConteneur=KALICONT000005635813",
   },
 ];
 
@@ -44,9 +43,12 @@ describe("Références jurdiques pour l'indemnité conventionnel de licenciement
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
             "'Non'",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            salary,
         });
 
         const result = engine.getReferences("résultat conventionnel");
@@ -95,10 +97,14 @@ describe("Références jurdiques pour l'indemnité conventionnel de licenciement
             "'Cadres'",
           "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période":
             "'Oui'",
-          "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif": seniorityNonCadres,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+          "contrat salarié . convention collective . hospitalisation privées . indemnité de licenciement . catégorie professionnelle . cadre . non cadre durant une période . temps effectif":
+            seniorityNonCadres,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            salary,
         });
         const result = engine.getReferences("résultat conventionnel");
 

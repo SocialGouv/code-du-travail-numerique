@@ -7,7 +7,6 @@ import {
   theme,
   Toast,
 } from "@socialgouv/cdtn-ui";
-import getConfig from "next/config";
 import React from "react";
 
 import Metas from "../../src/common/Metas";
@@ -17,10 +16,7 @@ import { ListLink } from "../../src/search/SearchResults/Results";
 import styled from "styled-components";
 import Link from "next/link";
 import { SOURCES } from "@socialgouv/cdtn-sources";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { API_URL } from "../../src/config";
 
 function Page({ ccs }) {
   return (

@@ -3,7 +3,7 @@
 exports[`<PrevNextBar /> should render 1`] = `
 <div>
   <div
-    class="sc-dvUynV bfOGaB"
+    class="sc-dvEHMn eogJxR"
   />
 </div>
 `;
@@ -11,7 +11,7 @@ exports[`<PrevNextBar /> should render 1`] = `
 exports[`<PrevNextBar /> should render a disabled button 1`] = `
 <div>
   <div
-    class="sc-dvUynV bfOGaB"
+    class="sc-dvEHMn eogJxR"
   />
 </div>
 `;
@@ -19,15 +19,15 @@ exports[`<PrevNextBar /> should render a disabled button 1`] = `
 exports[`<PrevNextBar /> should render only next button 1`] = `
 <div>
   <div
-    class="sc-dvUynV bfOGaB"
+    class="sc-dvEHMn eogJxR"
   >
     <button
-      class="sc-hiKfDv dOLmw sc-kTCsyW sc-jtiXyc gQmICt ismwYf"
+      class="sc-hhOBVt fRaRnn sc-kSGOQU sc-jsTgWu gbmcaq bUBxhA"
     >
       Commencer
       <svg
         aria-hidden="true"
-        class="sc-ellfGf ieKYEH"
+        class="sc-elAWhN jDOhcS"
         fill="none"
         viewBox="0 0 28 15"
         xmlns="http://www.w3.org/2000/svg"
@@ -45,10 +45,10 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 exports[`<PrevNextBar /> should render only prev button 1`] = `
 <div>
   <div
-    class="sc-dvUynV bfOGaB"
+    class="sc-dvEHMn eogJxR"
   >
     <button
-      class="sc-hiKfDv grdgxe sc-kTCsyW gQmICt"
+      class="sc-hhOBVt foDcLd sc-kSGOQU gbmcaq"
       type="button"
     >
       Précédent

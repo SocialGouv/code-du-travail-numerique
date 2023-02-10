@@ -6,10 +6,9 @@ import {
   PageTitle,
   Section,
   Select,
-  theme,
+  theme as th,
   Tile,
 } from "@socialgouv/cdtn-ui";
-import getConfig from "next/config";
 import Link from "next/link";
 import React, { useCallback, useState } from "react";
 import styled from "styled-components";
@@ -17,10 +16,7 @@ import styled from "styled-components";
 import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { summarize } from "../../src/search/utils";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { API_URL } from "../../src/config";
 
 const title = "Modèles de documents";
 const subtitle =
@@ -28,7 +24,7 @@ const subtitle =
 
 function Modeles(props) {
   const { data = [] } = props;
-  const themes = [];
+  const themes: any = [];
   const modelesByTheme = data.reduce((state, templateDoc) => {
     const other = {
       label: "Autres",
@@ -90,14 +86,9 @@ function Modeles(props) {
                     <Link
                       href={`${getRouteBySource(SOURCES.LETTERS)}/${slug}`}
                       passHref
+                      legacyBehavior
                     >
-                      <Tile
-                        wide
-                        custom
-                        title={title}
-                        subtitle={theme.title}
-                        titleTagType="h3"
-                      >
+                      <Tile wide custom title={title} titleTagType="h3">
                         {summarize(description)}
                       </Tile>
                     </Link>
@@ -121,7 +112,7 @@ Modeles.getInitialProps = async function () {
   return { data };
 };
 
-const { spacings } = theme;
+const { spacings } = th;
 
 const StyledList = styled(FlatList)`
   margin: ${spacings.small} 0;

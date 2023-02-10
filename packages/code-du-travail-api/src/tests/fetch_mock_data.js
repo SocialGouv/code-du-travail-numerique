@@ -151,15 +151,12 @@ async function updateDocumentsData(slugs) {
         num: 1090,
         shortTitle:
           "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
-        slug:
-          "1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle",
+        slug: "1090-services-de-lautomobile-commerce-et-reparation-de-lautomobile-du-cycle",
         source: "conventions_collectives",
-        text:
-          "IDCC 1090: Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981. Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
+        text: "IDCC 1090: Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981. Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
         title:
           "Services de l'automobile (Commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs)",
-        url:
-          "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635191",
+        url: "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635191",
       },
       versions
     );

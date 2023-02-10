@@ -9,23 +9,19 @@ describe("Vérification des références juridiques pour la CC 2609", () => {
   const references = [
     {
       article: "Article 8.4",
-      url:
-        "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773860?idConteneur=KALICONT000018773893",
+      url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773860?idConteneur=KALICONT000018773893",
     },
     {
       article: "Article 8.5",
-      url:
-        "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773861?idConteneur=KALICONT000018773893",
+      url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773861?idConteneur=KALICONT000018773893",
     },
     {
       article: "Article 8.13",
-      url:
-        "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773880?idConteneur=KALICONT000018773893&origin=list#KALIARTI000018773880",
+      url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773880?idConteneur=KALICONT000018773893&origin=list#KALIARTI000018773880",
     },
     {
       article: "Article 8.7",
-      url:
-        "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773870?idConteneur=KALICONT000018773893#KALIARTI000018773870",
+      url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000018773870?idConteneur=KALICONT000018773893#KALIARTI000018773870",
     },
   ];
 
@@ -48,10 +44,13 @@ describe("Vérification des références juridiques pour la CC 2609", () => {
     ({ seniority, age, expectedReferences }) => {
       engine.setSituation({
         "contrat salarié . convention collective": "'IDCC2609'",
-        "contrat salarié . convention collective . batiment etam . indemnité de licenciement . age à la fin de son préavis": age,
+        "contrat salarié . convention collective . batiment etam . indemnité de licenciement . age à la fin de son préavis":
+          age,
         "contrat salarié . indemnité de licenciement": "oui",
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+          seniority,
+        "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+          seniority,
         "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
           "1000",
       });
