@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Stripe /> renders with correct styles 1`] = `
+<div>
+  <span
+    class="sc-bcXHqe hvvIXl"
+  />
+</div>
+`;

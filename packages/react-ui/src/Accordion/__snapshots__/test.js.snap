@@ -1,0 +1,297 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Accordion /> renders 1`] = `
+<div>
+  <div
+    class="accordion"
+    data-accordion-component="Accordion"
+  >
+    <div>
+      <div
+        class="sc-hLBbgP fTgiIa"
+        data-accordion-component="AccordionItem"
+      >
+        <div
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+        >
+          <div
+            aria-controls="accordion__panel-raa-0"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="sc-jSUZER FOjkG"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-0"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-dkrFOg fpzKWB"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="sc-gKPRtg iLBxMm"
+            >
+              <h3
+                class="sc-gswNZR dDyrDL"
+                data-testid="undefined-0"
+                style="margin: 0px;"
+              >
+                This is the title
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="sc-eDvSVe gZVJSY"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-0"
+        >
+          <div
+            class="sc-hHTYSt jLyUcE"
+          >
+            this is the body
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Accordion /> renders as a hierarchy accordion with an icon 1`] = `
+<div>
+  <div
+    class="accordion"
+    data-accordion-component="Accordion"
+  >
+    <div>
+      <div
+        class="sc-hLBbgP fTgiIa"
+        data-accordion-component="AccordionItem"
+      >
+        <div
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+        >
+          <div
+            aria-controls="accordion__panel-raa-3"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="sc-jSUZER FOjkG"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-3"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-dkrFOg fpzKWB"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="sc-gKPRtg iLBxMm"
+            >
+              <h3
+                class="sc-gswNZR dDyrDL"
+                data-testid="undefined-0"
+                style="margin: 0px;"
+              >
+                This is the title
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="sc-eDvSVe gZVJSY"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-3"
+        >
+          <div
+            class="sc-hHTYSt jLyUcE"
+          >
+            this is the body
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Accordion /> renders as a tile accordion with an icon 1`] = `
+<div>
+  <div
+    class="accordion"
+    data-accordion-component="Accordion"
+  >
+    <div>
+      <div
+        class="sc-hLBbgP fTgiIa"
+        data-accordion-component="AccordionItem"
+      >
+        <div
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+        >
+          <div
+            aria-controls="accordion__panel-raa-2"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="sc-jSUZER FOjkG"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-2"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-dkrFOg fpzKWB"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="sc-gKPRtg iLBxMm"
+            >
+              <h1
+                class="sc-gswNZR dDyrDL"
+                data-testid="undefined-0"
+                style="margin: 0px;"
+              >
+                This is the title
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="sc-eDvSVe gZVJSY"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-2"
+        >
+          <div
+            class="sc-hHTYSt jLyUcE"
+          >
+            this is the body
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Accordion /> renders as h2 1`] = `
+<div>
+  <div
+    class="accordion"
+    data-accordion-component="Accordion"
+  >
+    <div>
+      <div
+        class="sc-hLBbgP fTgiIa"
+        data-accordion-component="AccordionItem"
+      >
+        <div
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+        >
+          <div
+            aria-controls="accordion__panel-raa-1"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="sc-jSUZER FOjkG"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-raa-1"
+            role="button"
+            tabindex="0"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-dkrFOg fpzKWB"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="9 18 15 12 9 6"
+              />
+            </svg>
+            <div
+              class="sc-gKPRtg iLBxMm"
+            >
+              <h2
+                class="sc-gswNZR dDyrDL"
+                data-testid="undefined-0"
+                style="margin: 0px;"
+              >
+                This is the title
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="sc-eDvSVe gZVJSY"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-raa-1"
+        >
+          <div
+            class="sc-hHTYSt jLyUcE"
+          >
+            this is the body
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

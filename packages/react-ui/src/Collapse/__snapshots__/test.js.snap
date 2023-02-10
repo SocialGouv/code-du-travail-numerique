@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Collapse /> renders 1`] = `
+<div>
+  <div>
+    <div
+      aria-expanded="false"
+      class="sc-bBABsx brxyKp"
+      role="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="sc-dkrFOg fpzKWB"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+      <p
+        class="sc-kgTSHT htBEDr sc-iveFHk cEsaJQ"
+      >
+        Hello
+      </p>
+    </div>
+    <div
+      class="sc-fLcnxK fOHigB"
+    >
+      <p>
+        Hi
+      </p>
+    </div>
+  </div>
+</div>
+`;
