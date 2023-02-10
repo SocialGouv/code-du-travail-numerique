@@ -24,13 +24,11 @@ describe("Vérification des références juridiques pour la CC 2098", () => {
       expect.arrayContaining([
         {
           article: "Article 18",
-          url:
-            "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005850355?idConteneur=KALICONT000005635550",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005850355?idConteneur=KALICONT000005635550",
         },
         {
           article: "Article 16",
-          url:
-            "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000024922383?idConteneur=KALICONT000005635550&origin=list#KALIARTI000024922383",
+          url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000024922383?idConteneur=KALICONT000005635550&origin=list#KALIARTI000024922383",
         },
       ])
     );
@@ -58,13 +56,11 @@ describe("Vérification des références juridiques pour la CC 2098", () => {
         expect.arrayContaining([
           {
             article: "Article 19",
-            url:
-              "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005850366?idConteneur=KALICONT000005635550",
+            url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005850366?idConteneur=KALICONT000005635550",
           },
           {
             article: "Article 16",
-            url:
-              "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000024922383?idConteneur=KALICONT000005635550&origin=list#KALIARTI000024922383",
+            url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000024922383?idConteneur=KALICONT000005635550&origin=list#KALIARTI000024922383",
           },
         ])
       );
@@ -94,13 +90,11 @@ describe("Vérification des références juridiques pour la CC 2098", () => {
           {
             article:
               "Article 3.1 de l’Avenant cadres Convention collective nationale du 13 août 1999",
-            url:
-              "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005850668?idConteneur=KALICONT000005635550",
+            url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005850668?idConteneur=KALICONT000005635550",
           },
           {
             article: "Article 16",
-            url:
-              "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000024922383?idConteneur=KALICONT000005635550&origin=list#KALIARTI000024922383",
+            url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000024922383?idConteneur=KALICONT000005635550&origin=list#KALIARTI000024922383",
           },
         ])
       );

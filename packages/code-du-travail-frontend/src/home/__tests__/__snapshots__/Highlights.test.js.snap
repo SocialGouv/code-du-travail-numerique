@@ -3,66 +3,66 @@
 exports[`<Highlights /> should render 1`] = `
 <div>
   <div
-    class="sc-gtsrHT dDJuxj"
+    class="sc-gswNZR uUAJC"
   >
     <div
-      class="sc-bdnxRM bCGhmq"
+      class="sc-bcXHqe evAMOC"
     >
       <header
-        class="sc-eXuyPJ ZSyvw"
+        class="sc-eYqcxL hMutTz"
         id="a-la-une"
       >
         <h2
-          class="sc-irKDMX ehzKBH"
+          class="sc-iqPaeV fejMbm"
         >
           <span
-            class="sc-gKAaRy iDZwD"
+            class="sc-gKPRtg efbYAr"
           />
           À la une
         </h2>
       </header>
       <div
-        class="sc-eJocfa dnvrjA sc-hhIiOg gEtbSe"
+        class="sc-eJDSGI hWSwY sc-hiDMwi gAYklG"
       >
         <div
-          class="sc-oeezt hgDFVm"
+          class="sc-oZIhv grJGZr"
         >
           <div
-            class="sc-eirqVv gqRdkL"
+            class="sc-ehvNnt jkVqcZ"
           >
             <div
-              class="sc-lbVvki fGGtFB"
+              class="sc-laZRCg iWIsUK"
             >
               <a
-                class="sc-eGJWMs dxHVWB"
+                class="sc-eGugkK cJzHzy"
                 href="/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-salarie"
               >
                 <div
-                  class="sc-dFRpbK cbvMFR"
+                  class="sc-dEVLtI ijCjkg"
                 >
                   <div
-                    class="sc-bsatvv iePphK"
+                    class="sc-brePNt jDJZCD"
                   >
                     <p
-                      class="sc-bXexck sc-gIvpjk haepIh glQsRy"
+                      class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
                     >
                       Santé, sécurité et conditions de travail
                     </p>
                     <h3
-                      class="sc-euEtCV ionzWf"
+                      class="sc-evzXkX dtQFbH"
                     >
                       Coronavirus : je suis salarié
                     </h3>
                   </div>
                 </div>
                 <div
-                  class="sc-fHCHyC fOtBFh"
+                  class="sc-fHSyak ehflbW"
                 >
                   <div
-                    class="sc-iIgjPs bMUDt"
+                    class="sc-iJbNxu hWSYxX"
                   >
                     <p
-                      class="sc-cOifOu jBNwUz"
+                      class="sc-cOxWqc bBCaVZ"
                     >
                       1. Dois-je prévenir mon employeur si je reviens, ou si...
                     </p>
@@ -71,38 +71,38 @@ exports[`<Highlights /> should render 1`] = `
               </a>
             </div>
             <div
-              class="sc-lbVvki fGGtFB"
+              class="sc-laZRCg iWIsUK"
             >
               <a
-                class="sc-eGJWMs dxHVWB"
+                class="sc-eGugkK cJzHzy"
                 href="/fiche-ministere-travail/coronavirus-questions-reponses-pour-les-entreprises-et-les-salaries#Je-suis-employeur"
               >
                 <div
-                  class="sc-dFRpbK cbvMFR"
+                  class="sc-dEVLtI ijCjkg"
                 >
                   <div
-                    class="sc-bsatvv iePphK"
+                    class="sc-brePNt jDJZCD"
                   >
                     <p
-                      class="sc-bXexck sc-gIvpjk haepIh glQsRy"
+                      class="sc-bWOGAC sc-gJqSRm hCTtvv lllGMZ"
                     >
                       Santé, sécurité et conditions de travail
                     </p>
                     <h3
-                      class="sc-euEtCV ionzWf"
+                      class="sc-evzXkX dtQFbH"
                     >
                       Coronavirus : je suis employeur
                     </h3>
                   </div>
                 </div>
                 <div
-                  class="sc-fHCHyC fOtBFh"
+                  class="sc-fHSyak ehflbW"
                 >
                   <div
-                    class="sc-iIgjPs bMUDt"
+                    class="sc-iJbNxu hWSYxX"
                   >
                     <p
-                      class="sc-cOifOu jBNwUz"
+                      class="sc-cOxWqc bBCaVZ"
                     >
                       9. Quelles sont les recommandations sanitaires pour...
                     </p>

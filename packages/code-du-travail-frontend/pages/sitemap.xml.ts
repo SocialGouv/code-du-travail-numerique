@@ -1,12 +1,7 @@
 import http from "http";
 import https from "https";
-import getConfig from "next/config";
+import { AZURE_BASE_URL } from "../src/config";
 
-const {
-  publicRuntimeConfig: {
-    AZURE_BASE_URL = "https://cdtnadminprod.blob.core.windows.net",
-  },
-} = getConfig();
 const Sitemap = () => {};
 
 export const getServerSideProps = async ({ res }) => {

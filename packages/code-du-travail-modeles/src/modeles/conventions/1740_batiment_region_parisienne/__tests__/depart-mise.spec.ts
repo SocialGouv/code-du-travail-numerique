@@ -8,8 +8,7 @@ const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 
 const CommonReference = {
   article: "Article 1.1.12.a",
-  url:
-    "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005801005?idConteneur=KALICONT000005635685",
+  url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005801005?idConteneur=KALICONT000005635685",
 };
 
 const DepartRetraiteCcReferences = [

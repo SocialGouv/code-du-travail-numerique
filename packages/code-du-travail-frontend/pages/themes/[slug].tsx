@@ -5,7 +5,6 @@ import {
   Section,
   theme,
 } from "@socialgouv/cdtn-ui";
-import getConfig from "next/config";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
@@ -14,10 +13,8 @@ import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { SearchResults } from "../../src/search/SearchResults";
 import { handleError } from "../../src/lib/fetch-error";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { API_URL } from "../../src/config";
+import { getRouteBySource, SOURCES } from "@socialgouv/cdtn-sources";
 
 interface Props {
   theme;
@@ -39,7 +36,12 @@ function Theme(props: Props): JSX.Element {
           {theme.children && theme.children.length > 0 && (
             <StyledContainer>
               {theme.children.map(({ slug, label }) => (
-                <Link key={slug} href={slug} passHref>
+                <Link
+                  key={slug}
+                  href={`/${getRouteBySource(SOURCES.THEMES)}/${slug}`}
+                  passHref
+                  legacyBehavior
+                >
                   <Button as={StyledLink}>{label}</Button>
                 </Link>
               ))}

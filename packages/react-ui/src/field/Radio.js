@@ -1,15 +1,8 @@
+import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
 import { box } from "../theme.js";
-
-type InputRadioProps = {
-  label?: string;
-  name?: string;
-  id?: string;
-  size?: number;
-  onChange?: () => void;
-};
 
 export const InputRadio = ({
   label,
@@ -17,14 +10,17 @@ export const InputRadio = ({
   id,
   size,
   onChange,
-}: InputRadioProps) => (
-  <StyledDiv>
+  className,
+  ...props
+}) => (
+  <StyledDiv className={className}>
     <StyledRadio
       type="radio"
       name={name}
       id={id}
       size={size}
       onChange={onChange}
+      {...props}
     />
     <StyledLabel htmlFor={id} size={size}>
       {label}
@@ -32,13 +28,24 @@ export const InputRadio = ({
   </StyledDiv>
 );
 
+InputRadio.propTypes = {
+  checked: PropTypes.bool,
+  className: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  name: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
+  size: PropTypes.string.isRequired,
+  value: PropTypes.string,
+};
+
 InputRadio.defaultProps = {
   size: "1.6rem",
 };
 
 const StyledLabel = styled.label`
   display: flex;
-  font-size: ${({ size }: InputRadioProps) => size};
+  font-size: ${({ size }) => size};
   cursor: pointer;
 `;
 

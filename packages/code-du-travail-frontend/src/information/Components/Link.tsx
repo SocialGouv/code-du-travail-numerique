@@ -3,11 +3,7 @@ import { A11yLink } from "../../common/A11yLink";
 
 export const Link = ({ children, href }) => {
   if (!href.includes("http")) {
-    return (
-      <NextLink href={href} passHref>
-        <a>{children}</a>
-      </NextLink>
-    );
+    return <NextLink href={href}>{children}</NextLink>;
   }
   return (
     <A11yLink href={href} rel="noopener noreferrer" target="_blank">

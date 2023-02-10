@@ -17,7 +17,8 @@ export type CC3239ReferenceSalaryProps = {
 };
 
 export class ReferenceSalary3239
-  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC3239> {
+  implements IReferenceSalary<SupportedCcIndemniteLicenciement.IDCC3239>
+{
   /**
    * Règle :
    * - si la catégorie professionnelle est "Assistant maternel" et que le licenciement n'est pas dû à un retrait d'Agrément

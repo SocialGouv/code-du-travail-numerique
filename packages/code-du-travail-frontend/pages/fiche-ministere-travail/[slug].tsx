@@ -1,7 +1,6 @@
 import { Accordion } from "@socialgouv/cdtn-ui";
 // @ts-ignore
 import { decode } from "@socialgouv/fiches-travail-data";
-import getConfig from "next/config";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
@@ -12,10 +11,7 @@ import Metas from "../../src/common/Metas";
 import { Layout } from "../../src/layout/Layout";
 import { Breadcrumb } from "cdtn-types";
 import { handleError } from "../../src/lib/fetch-error";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { API_URL } from "../../src/config";
 
 const fetchSheetMT = ({ slug }) => fetch(`${API_URL}/sheets-mt/${slug}`);
 
