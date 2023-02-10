@@ -10,8 +10,7 @@ const MiseRetraiteNonCadresReferences = [
   ...MiseRetraiteReferences,
   {
     article: "Article 20",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005829411",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005829411",
   },
 ];
 
@@ -19,8 +18,7 @@ const DepartRetraiteCadresReferences = [
   ...DepartRetraiteReferences,
   {
     article: "Dispositions particulières applicables aux cadres, article 6",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005829442?idConteneur=KALICONT000005635528",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005829442?idConteneur=KALICONT000005635528",
   },
 ];
 
@@ -28,8 +26,7 @@ const MiseRetraiteCadresReferences = [
   ...MiseRetraiteReferences,
   {
     article: "Dispositions particulières applicables aux cadres, article 6",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005829442?idConteneur=KALICONT000005635528",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005829442?idConteneur=KALICONT000005635528",
   },
 ];
 

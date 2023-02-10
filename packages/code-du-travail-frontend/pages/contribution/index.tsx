@@ -7,7 +7,6 @@ import {
   Select,
   theme,
 } from "@socialgouv/cdtn-ui";
-import getConfig from "next/config";
 import React, { useCallback, useState } from "react";
 
 import Metas from "../../src/common/Metas";
@@ -16,10 +15,7 @@ import { handleError } from "../../src/lib/fetch-error";
 import styled from "styled-components";
 import { ListLink } from "../../src/search/SearchResults/Results";
 import { SOURCES } from "@socialgouv/cdtn-sources";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { API_URL } from "../../src/config";
 
 const ALL = "all";
 

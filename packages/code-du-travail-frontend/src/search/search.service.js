@@ -1,10 +1,6 @@
 import memoizee from "memoizee";
-import getConfig from "next/config";
 import pDebounce from "p-debounce";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { API_URL } from "../config";
 
 const fetchSearchResults = async (query = "", excludeSources = "") => {
   const url = `${API_URL}/search?q=${encodeURIComponent(

@@ -1,13 +1,9 @@
 import debounce from "debounce-promise";
 import memoizee from "memoizee";
-import getConfig from "next/config";
+import { API_URL } from "../../../config";
 
 import { nafError } from "./error";
 import { Agreement } from "./type";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
 
 const formatCCn = ({ num, id, slug, url, title, shortTitle, highlight }) => ({
   ...(highlight ? { highlight } : {}),

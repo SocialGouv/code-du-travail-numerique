@@ -46,6 +46,7 @@ const AgreementSelectionStep = ({
       <Link
         href={`/${SOURCES.TOOLS}/convention-collective#entreprise`}
         passHref
+        legacyBehavior
       >
         <Button as="a" small type="button" onClick={onBackClick} variant="flat">
           Précédent

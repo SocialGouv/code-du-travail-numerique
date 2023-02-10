@@ -85,18 +85,9 @@ function Articles({ blocs, containerId, convention }) {
           </p>
           <p>
             Sources:{" "}
-            <Link href="/code-du-travail/l2253-1">
-              <a>Article L2253-1</a>
-            </Link>
-            ,{" "}
-            <Link href="/code-du-travail/l2253-2">
-              <a>Article L2253-2</a>
-            </Link>
-            ,{" "}
-            <Link href="/code-du-travail/l2253-3">
-              <a>Article L2253-3</a>
-            </Link>
-            .
+            <Link href="/code-du-travail/l2253-1">Article L2253-1</Link>,{" "}
+            <Link href="/code-du-travail/l2253-2">Article L2253-2</Link>,{" "}
+            <Link href="/code-du-travail/l2253-3">rticle L2253-3</Link>.
           </p>
         </>
       </MoreContent>

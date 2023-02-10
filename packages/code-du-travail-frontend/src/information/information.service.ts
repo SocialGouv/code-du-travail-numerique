@@ -1,11 +1,7 @@
 import { Content, ContentType, EditorialContentData } from "cdtn-types";
 import { getContents } from "../content";
-import getConfig from "next/config";
 import { SOURCES } from "@socialgouv/cdtn-sources";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { API_URL } from "../config";
 
 export const getEditorialContentBySlug = async (
   slug: string

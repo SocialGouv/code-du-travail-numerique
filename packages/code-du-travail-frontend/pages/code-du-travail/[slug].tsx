@@ -2,8 +2,6 @@ import { getLabelBySource, SOURCES } from "@socialgouv/cdtn-sources";
 import { Alert } from "@socialgouv/cdtn-ui";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-import getConfig from "next/config";
-import { withRouter } from "next/router";
 import React from "react";
 
 import Answer from "../../src/common/Answer";
@@ -13,10 +11,7 @@ import { Layout } from "../../src/layout/Layout";
 import { replaceArticlesRefs } from "../../src/lib/replaceArticlesRefs";
 import { Breadcrumb } from "cdtn-types";
 import { handleError } from "../../src/lib/fetch-error";
-
-const {
-  publicRuntimeConfig: { API_URL },
-} = getConfig();
+import { API_URL } from "../../src/config";
 
 const fetchFiche = ({ slug }) =>
   fetch(`${API_URL}/items/code_du_travail/${slug}`);
@@ -34,15 +29,8 @@ interface Props {
 }
 
 function Fiche(props: Props): JSX.Element {
-  const {
-    title,
-    description,
-    dateDebut,
-    html,
-    url,
-    notaHtml,
-    relatedItems,
-  } = props;
+  const { title, description, dateDebut, html, url, notaHtml, relatedItems } =
+    props;
 
   const fixedHtml = replaceArticlesRefs("https://legifrance.gouv.fr", html);
   return (

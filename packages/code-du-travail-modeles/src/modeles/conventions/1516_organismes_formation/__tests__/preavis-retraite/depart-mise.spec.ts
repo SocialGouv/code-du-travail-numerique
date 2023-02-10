@@ -9,8 +9,7 @@ const engine = new PreavisRetraitePublicodes(modelsPreavisRetraite);
 const CommonReferences = [
   {
     article: "Article 9.1",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005775560/?idConteneur=KALICONT000005635435",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000005775560/?idConteneur=KALICONT000005635435",
   },
 ];
 

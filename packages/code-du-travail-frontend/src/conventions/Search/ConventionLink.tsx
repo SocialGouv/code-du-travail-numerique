@@ -44,7 +44,11 @@ export const ConventionLink = ({
       )}
     </StyledLink>
   ) : (
-    <Link href={`/convention-collective/${convention.slug}`} passHref>
+    <Link
+      href={`/convention-collective/${convention.slug}`}
+      passHref
+      legacyBehavior
+    >
       <StyledLink {...commonProps}>
         {shortTitle} <IDCC>(IDCC {formatIdcc(num)})</IDCC>
         {highlight && highlight.searchInfo && (

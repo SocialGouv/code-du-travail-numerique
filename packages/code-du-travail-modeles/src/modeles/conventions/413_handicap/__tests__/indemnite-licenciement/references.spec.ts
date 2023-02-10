@@ -8,47 +8,40 @@ const engine = new IndemniteLicenciementPublicodes(
 const referencesNonCadres = [
   {
     article: "Article 17",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005863126?idConteneur=KALICONT000005635407",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005863126?idConteneur=KALICONT000005635407",
   },
 ];
 
 const referencesCadres = [
   {
     article: "Article 10 de l'Annexe n°6 Dispositions spéciales aux cadres",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022837395?idConteneur=KALICONT000005635407",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022837395?idConteneur=KALICONT000005635407",
   },
   {
     article: "Article 17",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005863126?idConteneur=KALICONT000005635407",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005863126?idConteneur=KALICONT000005635407",
   },
 ];
 
 const referencesCadresDirecteur = [
   {
     article: "Article 10 de l'Annexe n°6 Dispositions spéciales aux cadres",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022837395?idConteneur=KALICONT000005635407",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022837395?idConteneur=KALICONT000005635407",
   },
   {
     article: "Article 17",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005863126?idConteneur=KALICONT000005635407",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005863126?idConteneur=KALICONT000005635407",
   },
 ];
 
 const refNonCadrePuisCadres = [
   {
     article: "Article 17",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005863126?idConteneur=KALICONT000005635407",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000005863126?idConteneur=KALICONT000005635407",
   },
   {
     article: "Article 10 de l'Annexe n°6 Dispositions spéciales aux cadres",
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022837395?idConteneur=KALICONT000005635407",
+    url: "https://www.legifrance.gouv.fr/conv_coll/article/KALIARTI000022837395?idConteneur=KALICONT000005635407",
   },
 ];
 
@@ -67,9 +60,12 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle": `'${category}'`,
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période":
             "'Non'",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            salary,
         });
 
         const result = engine.getReferences("résultat conventionnel");
@@ -95,9 +91,12 @@ describe("Références juridique pour l'indemnité conventionnel de licenciement
             "'Oui'",
           "contrat salarié . convention collective . établissement handicap . indemnité de licenciement . catégorie professionnelle . non cadre durant une période . temps effectif":
             "10",
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année": seniority,
-          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année": seniority,
-          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel": salary,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . ancienneté conventionnelle requise en année":
+            seniority,
+          "contrat salarié . indemnité de licenciement . salaire de référence conventionnel":
+            salary,
         });
         const result = engine.getReferences("résultat conventionnel");
 

@@ -26,7 +26,7 @@ const Index = ({
   hasNoMarginBottom,
   className,
 }: TitleProps): JSX.Element => {
-  const Icon = icons[icon];
+  const Icon = icon ? icons[icon] : null;
   return (
     <ToolTitle hasNoMarginBottom={hasNoMarginBottom} className={className}>
       <StyledTitleBox>

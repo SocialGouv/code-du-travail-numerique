@@ -10,14 +10,12 @@ const CommonDepartReference = [
   {
     article:
       'Partie 2, chapitre IV, section 1 "Cessation du contrat à durée indéterminée", article 1.1',
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000027034201/?idConteneur=KALICONT000027084096",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000027034201/?idConteneur=KALICONT000027084096",
   },
   {
     article:
       'Partie 2, chapitre IV, section 1 "Cessation du contrat à durée indéterminée", article 4',
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000027034201/?idConteneur=KALICONT000027084096",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000027034201/?idConteneur=KALICONT000027084096",
   },
 ];
 
@@ -25,14 +23,12 @@ const CommonMiseReference = [
   {
     article:
       'Partie 2, chapitre IV, section 1 "Cessation du contrat à durée indéterminée", article 1.1',
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000027034201/?idConteneur=KALICONT000027084096",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000027034201/?idConteneur=KALICONT000027084096",
   },
   {
     article:
       'Partie 2, chapitre IV, section 1 "Cessation du contrat à durée indéterminée", article 3',
-    url:
-      "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000027034201/?idConteneur=KALICONT000027084096",
+    url: "https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000027034201/?idConteneur=KALICONT000027084096",
   },
 ];
 
