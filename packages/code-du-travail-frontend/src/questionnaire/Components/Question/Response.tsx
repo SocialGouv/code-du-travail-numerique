@@ -1,8 +1,6 @@
-import { useState } from "react";
 import styled from "styled-components";
 import { InputRadio } from "@socialgouv/cdtn-ui";
 import { useStore } from "../../store";
-import { Tooltip } from "../../../common/Tooltip";
 import { trackClickHelp } from "../../tracking";
 import { QuestionnaireResponse } from "../../type";
 import { InfoBulle } from "../../../outils/common/InfoBulle";
@@ -27,7 +25,13 @@ export const Response = ({
           }}
         />
         {info && (
-          <StyledInfoBulle title={"Plus d'informations"}>
+          <StyledInfoBulle
+            title={"Plus d'informations"}
+            dataTestid={`Tooltip-${text}`}
+            onVisibilityChange={() => {
+              trackClickHelp(trackingName);
+            }}
+          >
             {info}
           </StyledInfoBulle>
         )}

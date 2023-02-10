@@ -7,6 +7,7 @@ type Props = {
   isTooltipOpen?: boolean;
   className?: string;
   onVisibilityChange?: () => void;
+  dataTestid?: string;
 };
 
 export const InfoBulle = ({
@@ -15,6 +16,7 @@ export const InfoBulle = ({
   isTooltipOpen,
   className,
   onVisibilityChange,
+  dataTestid,
 }: Props): JSX.Element => {
   const [isLocalTooltipOpen, setIsLocalToolTipOpen] = React.useState(false);
 
@@ -32,6 +34,7 @@ export const InfoBulle = ({
         );
         onVisibilityChange?.();
       }}
+      dataTestid={dataTestid}
     >
       {children}
     </DisclosureIcon>

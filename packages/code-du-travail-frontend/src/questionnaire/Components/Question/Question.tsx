@@ -4,6 +4,7 @@ import { Response } from "./Response";
 import { ShowInfo } from "./ShowInfo";
 import { Fieldset, Legend } from "@socialgouv/cdtn-ui";
 import { InfoBulle } from "../../../outils/common/InfoBulle";
+import { trackClickHelp } from "../../tracking";
 
 export const Question = () => {
   const currentQuestion = useStore((state) => state.currentQuestion);
@@ -15,7 +16,13 @@ export const Question = () => {
       <QuestionHeaderWrapper>
         <LegendWrapper>{currentQuestion?.text}</LegendWrapper>
         {currentQuestion?.info && (
-          <StyledInfoBulle title={"Plus d'informations"}>
+          <StyledInfoBulle
+            title={"Plus d'informations"}
+            dataTestid={`Tooltip-${currentQuestion?.text}`}
+            onVisibilityChange={() => {
+              trackClickHelp(currentQuestion.trackingName);
+            }}
+          >
             {currentQuestion?.info}
           </StyledInfoBulle>
         )}

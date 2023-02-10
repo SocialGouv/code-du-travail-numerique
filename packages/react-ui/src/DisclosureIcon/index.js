@@ -13,6 +13,7 @@ export const DisclosureIcon = ({
   onVisibilityChange,
   isTooltipOpen,
   className,
+  dataTestid,
 }) => {
   return (
     <>
@@ -24,6 +25,7 @@ export const DisclosureIcon = ({
         type="button"
         onClick={onVisibilityChange}
         className={className}
+        data-testid={dataTestid}
       >
         {icon}
       </DisclosureIconButton>
@@ -55,6 +57,7 @@ const AlertWithMargin = styled(Alert)`
 DisclosureIcon.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  dataTestid: PropTypes.string,
   icon: PropTypes.node.isRequired,
   iconTitle: PropTypes.string.isRequired,
   isTooltipOpen: PropTypes.bool.isRequired,
